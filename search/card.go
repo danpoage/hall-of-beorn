@@ -1,4 +1,4 @@
-package search
+package card
 
 type CardMainType byte
 
@@ -35,6 +35,10 @@ type CardSet struct {
 	Name string
 }
 
+func (cs *CardSet) String() string {
+	return cs.Name
+}
+
 type EncounterSet struct {
 	Name string
 }
@@ -67,9 +71,9 @@ const (
 )
 
 type ScenarioInfo struct {
-	EncounterSet *EncounterSet
-	IncludedSets []*EncounterSet
-	Modes        map[GameMode]byte
+	EncounterSet   *EncounterSet
+	IncludedSets   []*EncounterSet
+	QuantityByMode map[GameMode]byte
 }
 
 type StatType byte
