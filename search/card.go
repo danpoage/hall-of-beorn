@@ -33,7 +33,38 @@ type CardType struct {
 
 type CardSet struct {
 	Name string
+	Type CardSetType
 }
+
+type CardSetType byte
+
+func (cst CardSetType) String() string {
+	switch cst {
+	case Core_Set:
+		return "Core Set"
+	case Adventure_Pack:
+		return "Adventure Pack"
+	case Deluxe_Expansion:
+		return "Deluxe Expansion"
+	case Saga_Expansion:
+		return "Saga Expansion"
+	case GenCon_Deck:
+		return "GenCon Deck"
+	case Nightmare_Deck:
+		return "Nightmare Deck"
+	default:
+		return ""
+	}
+}
+
+const (
+	Core_Set CardSetType = iota
+	Adventure_Pack
+	Deluxe_Expansion
+	Saga_Expansion
+	GenCon_Deck
+	Nightmare_Deck
+)
 
 func (cs *CardSet) String() string {
 	return cs.Name
@@ -57,8 +88,6 @@ type ReleaseInfo struct {
 	Set      *CardSet
 	Number   uint
 	Quantity byte
-	Year     uint
-	Artist   *ArtistInfo
 	Scenario *ScenarioInfo
 }
 
@@ -138,15 +167,22 @@ type Effect struct {
 }
 
 type Card struct {
-	Type       CardType
-	Title      string
-	Release    *ReleaseInfo
-	Stats      map[StatType]StatValue
-	Traits     []string
-	Text       []Effect
-	FlavorText []string
+	Type    CardType
+	Front   *CardSide
+	Back    *CardSide
+	Release *ReleaseInfo
 }
 
-func (c *Card) NormalizedTitle() string {
-	return c.Title
+type CardSide struct {
+	Title      CardTitle
+	Stats      map[StatType]StatValue
+	Traits     []string
+	Text       []*Effect
+	FlavorText []string
+	Artist     *ArtistInfo
+}
+
+type CardTitle struct {
+	MainTitle string
+	Subtitle  string
 }
