@@ -1,42 +1,102 @@
 package card
 
-type CardMainType byte
+type CardType byte
 
 const (
-	Quest CardMainType = iota
-	Enemy
-	Location
-	Treachery
-	Objective
-	ObjectiveAlly
-	Hero
-	Ally
-	Attachment
-	Event
-	Treasure
-	Campaign
-	Nightmare
+	Quest         CardType = 1
+	Campaign               = 2
+	Nightmare              = 3
+	Encounter              = 20
+	Enemy                  = 21
+	Location               = 22
+	Treachery              = 23
+	Objective              = 24
+	ObjectiveAlly          = 25
+	Player                 = 30
+	Character              = 31
+	Hero                   = 32
+	Ally                   = 33
+	Attachment             = 34
+	Event                  = 35
+	Treasure               = 36
 )
+
+func (ct CardType) String() string {
+	switch ct {
+	case Quest:
+		return "Quest"
+	case Campaign:
+		return "Campaign"
+	case Nightmare:
+		return "Nightmare"
+	case Encounter:
+		return "Encounter"
+	case Enemy:
+		return "Enemy"
+	case Location:
+		return "Location"
+	case Treachery:
+		return "Treachery"
+	case Objective:
+		return "Objective"
+	case ObjectiveAlly:
+		return "Objective-Ally"
+	case Player:
+		return "Player"
+	case Character:
+		return "Character"
+	case Hero:
+		return "Hero"
+	case Ally:
+		return "Ally"
+	case Attachment:
+		return "Attachment"
+	case Event:
+		return "Event"
+	case Treasure:
+		return "Treasure"
+	default:
+		return "Unknown Card Type"
+	}
+}
 
 type CardSubType byte
 
 const (
-	None CardSubType = iota
-	Boon
-	Burden
+	SubTypeNone CardSubType = 0
+	Boon                    = 1
+	Burden                  = 2
 )
 
-type CardType struct {
-	MainType CardMainType
-	SubType  CardSubType
+func (c CardSubType) String() string {
+	switch c {
+	case Boon:
+		return "Boon"
+	case Burden:
+		return "Burden"
+	default:
+		return ""
+	}
 }
 
 type CardSet struct {
-	Name string
-	Type CardSetType
+	Name   string
+	Year   uint16
+	Number byte
+	Type   CardSetType
+	Cards  []*Card
 }
 
 type CardSetType byte
+
+const (
+	Core_Set         CardSetType = 1
+	Adventure_Pack               = 2
+	Deluxe_Expansion             = 3
+	Saga_Expansion               = 4
+	GenCon_Deck                  = 5
+	Nightmare_Deck               = 6
+)
 
 func (cst CardSetType) String() string {
 	switch cst {
@@ -57,15 +117,6 @@ func (cst CardSetType) String() string {
 	}
 }
 
-const (
-	Core_Set CardSetType = iota
-	Adventure_Pack
-	Deluxe_Expansion
-	Saga_Expansion
-	GenCon_Deck
-	Nightmare_Deck
-)
-
 func (cs *CardSet) String() string {
 	return cs.Name
 }
@@ -74,19 +125,20 @@ type EncounterSet struct {
 	Name string
 }
 
-type ArtistInfo struct {
+type Artist struct {
 	Name  string
-	Links []LinkInfo
+	Links []Link
 }
 
-type LinkInfo struct {
+type Link struct {
 	URL   string
 	Title string
+	Rel   string
 }
 
-type ReleaseInfo struct {
+type Release struct {
 	Set      *CardSet
-	Number   uint
+	Number   byte
 	Quantity byte
 	Scenario *ScenarioInfo
 }
@@ -94,10 +146,23 @@ type ReleaseInfo struct {
 type GameMode byte
 
 const (
-	NormalMode GameMode = iota
-	NightmareMode
-	EasyMode
+	NormalMode    GameMode = 0
+	EasyMode               = 1
+	NightmareMode          = 2
 )
+
+func (g GameMode) String() string {
+	switch g {
+	case NormalMode:
+		return "Normal Mode"
+	case EasyMode:
+		return "Easy Mode"
+	case NightmareMode:
+		return "Nightmare Mode"
+	default:
+		return "Unknown Game Mode"
+	}
+}
 
 type ScenarioInfo struct {
 	EncounterSet   *EncounterSet
@@ -120,20 +185,38 @@ const (
 	ThreatCostStat
 	ResourceCostStat
 	EngagementCostStat
-	IsUniqueStat
 )
 
 type Sphere StatValue
 
 const (
-	NoSphere Sphere = iota
-	LeadershipSphere
-	TacticsSphere
-	SpiritSphere
-	LoreSphere
-	BagginsSphere
-	FellowshipSphere
+	NoSphere         Sphere = 0
+	LeadershipSphere        = 1
+	TacticsSphere           = 2
+	SpiritSphere            = 3
+	LoreSphere              = 4
+	BagginsSphere           = 5
+	FellowshipSphere        = 6
 )
+
+func (s Sphere) String() string {
+	switch s {
+	case LeadershipSphere:
+		return "[Leadership]"
+	case TacticsSphere:
+		return "[Tactics]"
+	case SpiritSphere:
+		return "[Spirit]"
+	case LoreSphere:
+		return "[Lore]"
+	case BagginsSphere:
+		return "[Baggins]"
+	case FellowshipSphere:
+		return "[Fellowship]"
+	default:
+		return "[Unknown]"
+	}
+}
 
 type Stat struct {
 	Type  StatType
@@ -143,22 +226,26 @@ type Stat struct {
 type EffectType byte
 
 const (
-	PassiveEffect EffectType = iota
-	ForcedEffect
-	ResponseEffect
-	KeywordEffect
-	ActionEffect
-	ResourceActionEffect
-	PlanningActionEffect
-	QuestActionEffect
-	TravelActionEffect
-	EncounterActionEffect
-	CombatActionEffect
-	RefreshActionEffect
-	SetupEffect
-	WhenRevealedEffect
-	VictoryConditionEffect
-	ShadowEffect
+	FlavorText             EffectType = 0
+	PassiveEffect                     = 1
+	ForcedEffect                      = 2
+	ResponseEffect                    = 3
+	KeywordEffect                     = 4
+	ActionEffect                      = 5
+	ResourceActionEffect              = 5
+	PlanningActionEffect              = 6
+	QuestActionEffect                 = 7
+	TravelActionEffect                = 8
+	EncounterActionEffect             = 9
+	CombatActionEffect                = 10
+	RefreshActionEffect               = 11
+	SetupEffect                       = 12
+	WhenRevealedEffect                = 13
+	VictoryConditionEffect            = 14
+	ShadowEffect                      = 15
+	BurgleEffect                      = 16
+	EscapeEffect                      = 17
+	HideEffect                        = 18
 )
 
 type Effect struct {
@@ -167,22 +254,24 @@ type Effect struct {
 }
 
 type Card struct {
+	Slug    string
 	Type    CardType
+	SubType CardSubType
 	Front   *CardSide
 	Back    *CardSide
-	Release *ReleaseInfo
+	Release *Release
 }
 
 type CardSide struct {
-	Title      CardTitle
-	Stats      map[StatType]StatValue
-	Traits     []string
-	Text       []*Effect
-	FlavorText []string
-	Artist     *ArtistInfo
+	Title   CardTitle
+	Stats   map[StatType]StatValue
+	Traits  []string
+	Text    []*Effect
+	Artists []*Artist
 }
 
 type CardTitle struct {
-	MainTitle string
-	Subtitle  string
+	Main     string
+	Subtitle string
+	IsUnique bool
 }

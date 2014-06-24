@@ -34,3 +34,18 @@ func Normalize(s string) (n string, err error) {
 
 	return
 }
+
+func Slugify(s string) (slug string, err error) {
+	if s == "" {
+		return s, nil
+	}
+
+	slug, err = Normalize(s)
+	if err != nil {
+		return
+	}
+
+	slug = strings.Replace(slug, " ", "-", -1)
+
+	return
+}
