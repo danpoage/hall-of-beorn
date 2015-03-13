@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <setParameter name="IIS Web Application Name" value="Default Web Site/HallOfBeorn_deploy" />
-  <setParameter name="DefaultConnection-Web.config Connection String" value="Data Source=(LocalDb)\v11.0;Initial Catalog=aspnet-HallOfBeorn-20130630140022;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnet-HallOfBeorn-20130630140022.mdf" />
-</parameters>
