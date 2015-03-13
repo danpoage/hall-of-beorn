@@ -1,0 +1,397 @@
+﻿@using HallOfBeorn.Models
+@model CardViewModel
+
+@{
+    ViewBag.Title = @Model.Title;
+}
+
+<h2>
+    @if (@Model.IsUnique)
+    {
+        <img src="/Images/unique.png" style="margin-right:-2px;margin-bottom:-2px;height:20px;width:20px;"/>
+    }
+    @Model.Title
+</h2>
+<div style="color:#616161;font-weight:bold;">
+    <div style="margin-top:4px;margin-bottom:2px;">
+        <span><a href="@Model.SetSearchUrl" title="Search for @Model.SetName">@Model.SetName</a></span><span style="margin-left:6px;">@string.Format("#{0} (x{1})", @Model.Number, @Model.Quantity)</span>
+        @if (!string.IsNullOrEmpty(@Model.EasyModeQuantity))
+        {
+            <span style="margin-left:8px;">@string.Format("(Easy Mode x{0})", @Model.EasyModeQuantity)</span>
+        }
+    </div>
+    @if (@Model.HasEncounterSet)
+    {
+        <div style="margin-top:8px;">
+            <span style="color:#616161;margin-right:4px;margin-left:2px;font-weight:normal;">Encounter Set</span>
+            <span style="color:black;">@Model.EncounterSet</span>
+            <img src="@Model.EncounterSetImagePath" style="margin-left:4px;margin-bottom:-4px;width:30px;height:30px;" />
+        </div>
+    }
+</div>
+@if (!string.IsNullOrEmpty(@Model.OppositeTitle))
+{
+    <h3>@Model.OppositeTitle</h3>
+}
+    <div>
+        @*<table>
+            <tr>
+                <td style="vertical-align:top;">*@
+                <div style="float:left;">
+                    @if (@Model.HasSecondImage)
+                    {
+                        <span>
+                            <img src="@Model.ImagePath1" style="max-height:200px;"/>
+                            <img src="@Model.ImagePath2" style="max-height:200px;"/>
+                        </span>
+                    }
+                    else
+                    {
+                        <img src="@Model.ImagePath" style="max-width: 285px;max-height: 400px;"/>
+                    }
+                </div>
+                @*</td>
+                <td style="vertical-align:top;">*@
+                <div style="display:inline-block;min-width:30px;min-height:300px;">
+                    <div>
+                        <table>
+                            <tr>
+                                <td>
+                                @if (@Model.HasSphere)
+                                {
+                                    <img style="margin-bottom:-4px;margin-right:8px;height:24px;width:24px;" src='@string.Format("/Images/{0}.png", @Model.Sphere)' />
+                                }
+                                <span style="font-weight:bold;font-size:14pt;">@Model.CardTypeName</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                @switch (@Model.CardType)
+                                {
+                                    case CardType.Hero:
+                                        {
+                                            <span style="margin-left:2px;width:40px;color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.ThreatCost</span><span style="color:#616161;">)</span>
+                                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Willpower</span><img style="margin-bottom:-3px;" src="/Images/willpower.gif" /></span>
+                                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Attack</span><img style="margin-bottom:-3px;" src="/Images/attack.gif" /></span>
+                                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Defense</span><img style="margin-bottom:-3px;" src="/Images/defense.gif" /></span>
+                                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.HitPoints</span><img style="margin-bottom:-4px;margin-left:-4px;width:20px;height:20px;" src="/Images/heart.png"/></span>
+                                        }
+                                        break;
+                                    case CardType.Ally:
+                                        {
+                                            <span style="margin-left:2px;width:40px;color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.ResourceCost</span><span style="color:#616161;">)</span>
+                                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Willpower</span><img style="margin-bottom:-3px;" src="/Images/willpower.gif" /></span>
+                                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Attack</span><img style="margin-bottom:-3px;" src="/Images/attack.gif" /></span>
+                                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Defense</span><img style="margin-bottom:-3px;" src="/Images/defense.gif" /></span>
+                                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.HitPoints</span><img style="margin-bottom:-4px;margin-left:-4px;width:20px;height:20px;" src="/Images/heart.png"/></span>
+                                        }
+                                        break;
+                                    case CardType.Attachment:
+                                        {
+                                            <span style="margin-left:2px;width:40px;color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.ResourceCost</span><span style="color:#616161;">)</span>
+                                        }
+                                        break;
+                                    case CardType.Event:
+                                        {
+                                            <span style="margin-left:2px;width:40px;color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.ResourceCost</span><span style="color:#616161;">)</span>
+                                        }
+                                        break;
+                                    case CardType.Enemy:
+                                        {
+                                            <span style="margin-left:2px;width:40px;color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.EngagementCost</span><span style="color:#616161;">)</span>
+                                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Threat</span><img style="margin-bottom:-3px;" src="/Images/threat.png" /></span>
+                                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Attack</span><img style="margin-bottom:-3px;" src="/Images/attack.gif" /></span>
+                                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Defense</span><img style="margin-bottom:-3px;" src="/Images/defense.gif" /></span>
+                                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.HitPoints</span><img style="margin-bottom:-4px;margin-left:-4px;width:20px;height:20px;" src="/Images/heart.png"/></span>
+                                        }
+                                        break;
+                                    case CardType.Location:
+                                        {
+                                            <span style="margin-left:2px;width:60px;color:#616161;">Quest Points</span><span style="margin-left:8px;font-weight:bold;">@Model.QuestPoints</span>
+                                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Threat</span><img style="margin-bottom:-3px;" src="/Images/threat.png" /></span>
+                                        }
+                                        break;
+                                    case CardType.Treachery:
+                                        {
+                                        }
+                                        break;
+                                    case CardType.Objective_Ally:
+                                    case CardType.Objective:
+                                        {
+                                            if (@Model.HasCharacterStats)
+                                            {
+                                                <span style="margin-left:2px;width:24px;"><span style="margin-right:2px;font-weight:bold;">@Model.Willpower</span><img style="margin-bottom:-3px;" src="/Images/willpower.gif" /></span>
+                                                <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Attack</span><img style="margin-bottom:-3px;" src="/Images/attack.gif" /></span>
+                                                <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Defense</span><img style="margin-bottom:-3px;" src="/Images/defense.gif" /></span>
+                                                <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.HitPoints</span><img style="margin-bottom:-4px;margin-left:-4px;width:20px;height:20px;" src="/Images/heart.png"/></span>
+                                            }
+                                        }
+                                        break;
+                                    case CardType.Quest:
+                                        {
+                                            <span style="margin-left:2px;width:40px;color:#616161;">Stage</span><span style="margin-left:4px;font-weight:bold;">@Model.StageNumber</span>
+                                            <span style="width:40px;color:#616161;margin-left:14px;">Quest Points</span><span style="margin-left:4px;font-weight:bold;">@Model.QuestPoints</span>
+                                        }
+                                        break;
+                                    case CardType.Treasure:
+                                        {
+                                            <span style="margin-left:2px;width:40px;color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.ResourceCost</span><span style="color:#616161;">)</span>
+                                        }
+                                        break;
+                                    case CardType.Nightmare_Setup:
+                                    case CardType.Campaign:
+                                    case CardType.Burden:
+                                        break;
+                                    default:
+                                        break;
+                                }
+                                </td>
+                            </tr>
+                        </table>
+                        <br />
+                        <div style="margin:2px;padding-top:0px;padding-left:6px;padding-right:6px;border: 1px solid gray;border-radius:4px;">
+
+                        @if (@Model.Traits.Count() > 0)
+                        {
+                            <div style="text-align:center;">
+                            @foreach (var trait in Model.Traits)
+                            {
+                                <a title="Trait Search" href='@string.Format("/Cards/Search?Trait={0}", @trait.Trim())'><b><i>@trait</i></b></a> @: &nbsp;
+                            }
+                            </div>
+                        }
+                        @if (@Model.Keywords.Count() > 0)
+                        {
+                            <span style="margin-left:6px;">
+                            @foreach (var keyword in Model.KeywordEffects)
+                            {
+                                foreach (var token in keyword.Tokens)
+                                {
+                                    if (token.IsTrait)
+                                    {
+                                        <a title="Trait Search" href='@string.Format("/Cards/Search?Trait={0}", @token.Text.Trim())'><b><i>@token.Text</i></b></a>
+                                
+                                        if (token.HasSuffix && token.Suffix != ".")
+                                        {
+                                            @: @token.Suffix
+                                        }
+                                    }
+                                    else if (token.IsIcon)
+                                    {
+                                        if (token.HasSuffix)
+                                        {
+                                            <img src="@token.ImagePath" style="height:16px;margin-left:2px;margin-right:-4px;margin-bottom:-2px;" />
+                                            @: @token.Suffix
+                                        }
+                                        else
+                                        {
+                                            <img src="@token.ImagePath" style="height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;" />
+                                        }
+                                    }
+                                    else if (token.IsTitleReference)
+                                    {
+                                        if (token.HasSuffix)
+                                        {
+                                            @: @string.Format("{0}{1}", @Model.Title, @token.Suffix)
+                                        }
+                                        else
+                                        {
+                                        @: @Model.Title
+                                        }
+                                    }
+                                    else
+                                    {
+                                        @: @token.Text
+                                    }
+                                }
+                            }
+                            </span>
+                            <br />
+                        }
+
+                        <div style="padding:4px;">
+                            @if (@Model.TextEffects.Count() > 0)
+                            {
+                                foreach (var effect in Model.TextEffects)
+                                {    
+                                    foreach (var token in effect.Tokens)
+                                    {
+                                        if (token.IsTrigger || effect.IsCritical)
+                                        {
+                                            <b>@token.Text</b>
+                                        }
+                                        else if (token.IsTrait)
+                                        {
+                                            <a title="Trait Search" href='@string.Format("/Cards/Search?Trait={0}.", @token.Text.Trim().TrimEnd('.'))'><b><i>@token.Text</i></b></a>
+                                
+                                            if (token.HasSuffix)
+                                            {
+                                                @: @token.Suffix
+                                            }
+                                        }
+                                        else if (token.IsIcon)
+                                        {
+                                            if (token.HasSuffix)
+                                            {
+                                                if (token.HasPrefix)
+                                                {
+                                                    <span style="margin-right:-6px;">@token.Prefix</span>
+                                                }
+                                                
+                                                <img src="@token.ImagePath" style="height:16px;margin-left:2px;margin-right:-4px;margin-bottom:-2px;" />
+                                                @: @token.Suffix
+                                            }
+                                            else
+                                            {
+                                                <img src="@token.ImagePath" style="height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;" />
+                                            }
+                                        }
+                                        else
+                                        {
+                                            @: @token.Text
+                                        }
+                                    }
+                                            
+                                    <br />
+                                    <br />
+                                }
+                            }
+                            
+                            @if (@Model.ShadowEffects.Count() > 0)
+                            {
+                                @* <hr style="margin-left:24px;margin-right:24px;"/> *@
+                                <img src="/Images/ShadowDivider.png" style="display:block;margin-left:auto;margin-right:auto;width:285px;"/>
+                                <br />
+                                
+                                foreach (var effect in Model.ShadowEffects)
+                                {
+                                    foreach (var token in effect.Tokens)
+                                    {
+                                        if (token.IsTrigger)
+                                        {
+                                            <b>@token.Text</b>
+                                        }
+                                        else if (token.IsTrait)
+                                        {
+                                            <b><i>@token.Text</i></b>
+                                
+                                            if (token.HasSuffix)
+                                            {
+                                                @: @token.Suffix
+                                            }
+                                        }
+                                        else if (token.IsIcon)
+                                        {
+                                            if (token.HasSuffix)
+                                            {
+                                                <img src="@token.ImagePath" style="height:16px;margin-left:2px;margin-right:-4px;margin-bottom:-2px;" />
+                                                @: @token.Suffix
+                                            }
+                                            else
+                                            {
+                                                <img src="@token.ImagePath" style="height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;" />
+                                            }
+                                        }
+                                        else
+                                        {
+                                            @: @token.Text
+                                        }
+                                    }
+                                }
+                            }
+
+                            @if (!string.IsNullOrEmpty(@Model.VictoryPoints))
+                            {
+                                <br />
+                                <span style="text-align:right;"><b>@Model.VictoryPoints</b></span>
+                            }
+                        </div>
+
+                        @if (@Model.HasFlavorText || @Model.HasOppositeFlavorText)
+                        {
+                            <br />
+                        
+                        <p style="text-align:center;">
+                            @if (@Model.HasFlavorText)
+                            {
+                                foreach (var line in @Model.FlavorText)
+                                {
+                                    <i>@line</i><br />
+                                }
+                            }
+                            @if (@Model.HasOppositeFlavorText)
+                            {
+                                if (@Model.HasFlavorText)
+                                {
+                                    <br />
+                                    <br />
+                                }
+                                
+                                foreach (var line in @Model.OppositeFlavorText)
+                                {
+                                    <i>@line</i><br />
+                                }
+                            }
+                        </p>
+                        }
+                        </div>
+                    </div>
+                 </div>  
+                @* 
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align:top;">*@
+        <div>
+                <div>
+                    <div style="margin-top:12px;margin-left:4px;margin-bottom:4px;"><a href="@Model.HallOfBeornBlogSearchUrl" target="_blank" title="Search Hall of Beorn for: @Model.Title">On Hall of Beorn Blog</a></div>
+                    <div style="margin-left:4px;margin-bottom:4px;"><a href="@Model.TalesFromTheCardsBlogSearchUrl" target="_blank" title="Search Tales From the Cards for: @Model.Title">On Tales From The Cards</a></div>
+                    <div style="margin-left:4px;margin-bottom:4px;"><a href="@Model.MasterOfLoreBlogSearchUrl" target="_blank" title="Search Master of Lore for: @Model.Title">On Master of Lore</a></div>
+                </div>
+                @*</td>
+                <td>*@
+                <div>
+                    @*
+                    <table>
+                        <tr>
+                            <td style="vertical-align:top;">*@
+                            <div>
+                                @if (@Model.Decks.Count > 0)
+                                {
+                                    <br />
+                                    <div style="margin-bottom:12px;color:#616161;font-weight:bold;">Featured Decks</div>
+                                    <div>
+                                    @foreach (var deck in @Model.Decks)
+                                    {
+                                        <div style="margin-bottom:4px;"><a title="@deck.Name" href="@deck.Url" target="_blank">@deck.Name</a></div>
+                                    }
+                                    </div>
+                                }
+                            </div>
+                            @*
+                            </td>
+                            <td style="vertical-align:top;">*@
+                            <div>
+                                @if (@Model.RelatedCards.Count > 0)
+                                {
+                                    <br />
+                                    <div style="margin-bottom:12px;color:#616161;font-weight:bold;">Related Cards</div>
+                                    <div>
+                                    
+                                    @foreach (var relatedCard in @Model.RelatedCards)
+                                    {
+                                        <div style="margin-bottom:4px;"><a title="@relatedCard.Title" href="@relatedCard.Url">@relatedCard.Description</a></div>
+                                    }
+                                    </div>
+                                }
+                            </div>
+                            @*
+                            </td>
+                        </tr>
+                    </table>*@
+                </div>
+            </div>
+                @*</td>
+            </tr>
+        </table>*@
+    </div>

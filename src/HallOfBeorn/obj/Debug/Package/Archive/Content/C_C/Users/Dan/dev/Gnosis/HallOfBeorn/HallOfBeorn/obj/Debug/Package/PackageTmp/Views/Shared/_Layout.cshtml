@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        @*<!--<title>@ViewBag.Title - Hall of Beorn</title>-->*@
+        <title>Hall of Beorn</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="~/Images/HallOfBeorn-AppleTouchIcon.png"/>
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <a href="/Home" style="text-align:center;display:inline-block;"><img src="/Images/Happy_Grizzly_Bear.jpg" width="64" height="48" /></a>
+                    <span class="site-title" style="color: brown; font-family:Tolkien;min-width:230px;display:inline-block;margin-left:0px;">HALL OF BEORN</span>
+                    <div style="min-width:230px;margin-bottom:6px;text-align:center;">The Lord of the Rings LCG Card Search</div>
+                </div>
+                <div class="float-right">
+                    <!--
+                    <section id="login">
+                        @Html.Partial("_LoginPartial")
+                    </section>
+                        -->
+                    <nav>
+                        <ul id="menu">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li><a title="Hall of Beorn Blog" href="http://hallofbeorn.wordpress.com" target="_blank">Blog</a></li>
+                            <li><a title="The Grey Company Podcast" href="http://greycompanypodcast.wordpress.com/" target="_blank">Podcast</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; @DateTime.Now.Year - Hall of Beorn</p>
+                </div>
+            </div>
+        </footer>
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

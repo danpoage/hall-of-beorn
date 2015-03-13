@@ -1,0 +1,33 @@
+﻿@using HallOfBeorn.Models
+@model AdvancedSearchViewModel
+
+@{
+    ViewBag.Title = "Advanced Search";
+}
+
+<h2>Advanced Search</h2>
+
+@using (Html.BeginForm("AdvancedSearch", "Cards", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.TextBoxFor(x => x.Query, new { style = "margin-right:2px;" })
+        <input type="submit" value="Search" style="border-radius:8px;background-color:lightgray;" />
+    </div>
+    
+    foreach (var filter in @Model.Filters)
+    {
+        if (filter.IsEnabled)
+        {
+        <div>
+            <span># @filter.Number</span>
+            
+            @Html.DropDownList("FilterType" + filter.Number, AdvancedSearchFilter.FilterTypes)
+
+            @if (@filter.Next != null)
+            {
+                <span id='@string.Format("enableFilter{0}", filter.Next.Number)'>Add Filter</span>
+            }
+        </div>
+        }
+    }
+}

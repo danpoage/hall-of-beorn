@@ -1,0 +1,38 @@
+﻿@using HallOfBeorn.Models
+@model SearchViewModel
+
+@{
+    ViewBag.Title = "Cards";
+}
+
+<h2>Cards</h2>
+
+@using (Html.BeginForm("Search", "Cards", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.TextBoxFor(x => x.Query)
+        <input type="submit" value="Search" />
+
+        <div>
+            <label>Advanced Search</label>
+            <br />
+            @Html.LabelFor(x => x.CardType, new { style="display:inline;"})
+            @Html.DropDownListFor(x => x.CardType, SearchViewModel.CardTypes)
+
+            @Html.LabelFor(x => x.CardSet, new { style="display:inline;"})
+            @Html.DropDownListFor(x => x.CardSet, SearchViewModel.CardSets)
+
+            @Html.LabelFor(x => x.Trait, new { style = "display:inline;"})
+            @Html.DropDownListFor(x => x.Trait, SearchViewModel.Traits)
+            <br />
+            <br />
+            @Html.LabelFor(x => x.Sphere, new { style = "display:inline;"})
+            @Html.DropDownListFor(x => x.Sphere, SearchViewModel.Spheres)
+
+            @Html.LabelFor(x => x.Cost, new { style = "display:inline;"})
+            @Html.DropDownListFor(x => x.Cost, SearchViewModel.Costs)
+        </div>
+        <br />
+        <br />
+    </div>
+}
