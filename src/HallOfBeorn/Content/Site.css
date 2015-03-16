@@ -721,6 +721,7 @@ tr.pager td {
 .seach-explanation-glyph {
     display: inline-block;
     text-align: center;
+    vertical-align: middle;
     font-family: Symbol;
     font-size: 12px;
     font-weight:bold;
@@ -733,7 +734,6 @@ tr.pager td {
     border-width:1px;
     border-radius: 14px;
     padding: 1px;
-    padding-bottom: 2px;
     margin-right: 6px;
 }
 

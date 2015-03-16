@@ -354,52 +354,9 @@
 
         </div>
     </div>
-    @*
-    <div style="margin-top:8px;" onclick="$(document).ready(function () { $('#advancedSearch').toggle(); });">Advanced Search</div>*@
-    @*<img src="/Images/close-button.png" onclick="@string.Format("$(document).ready(function () {{ $('#filterContainer_{0}').toggle(); }});", i)"/>*@
-    @*
-    <div id="advancedSearch">
-            <hr />
-          
-            <div id='filter1'>
-
-            <span style="display:inline-block;">
-            <span style="margin-right:2px;width:55px;display:inline-block;">Search</span>
-            @Html.TextBoxFor(x => x.Filter1Query, new { style = "margin-right:2px;" })
-            </span>
-            
-            <span style="display:inline-block;">
-            <span style="margin-right:2px;width:55px;display:inline-block;">Set</span>
-            @Html.DropDownListFor(x => x.Filter1CardSet, SearchViewModel.CardSets, new { style = "margin-right:12px;max-width:170px;" })
-            </span>
-
-            <span style="display:inline-block;">
-            <span style="margin-right:2px;width:55px;display:inline-block;">Type</span>
-            @Html.DropDownListFor(x => x.Filter1CardType, SearchViewModel.CardTypes, new { style = "margin-right:12px;" })
-            </span>
-            </div>
-
-            <div id='filter2'>
-
-            <span style="display:inline-block;">
-            <span style="margin-right:2px;width:55px;display:inline-block;">Search</span>
-            @Html.TextBoxFor(x => x.Filter2Query, new { style = "margin-right:2px;" })
-            </span>
-            
-            <span style="display:inline-block;">
-            <span style="margin-right:2px;width:55px;display:inline-block;">Set</span>
-            @Html.DropDownListFor(x => x.Filter2CardSet, SearchViewModel.CardSets, new { style = "margin-right:12px;max-width:170px;" })
-            </span>
-
-            <span style="display:inline-block;">
-            <span style="margin-right:2px;width:55px;display:inline-block;">Type</span>
-            @Html.DropDownListFor(x => x.Filter2CardType, SearchViewModel.CardTypes, new { style = "margin-right:12px;" })
-            </span>
-            </div>
-    </div>*@
 }
 
-<div ">
+<div>
 @foreach (var card in @Model.Cards)
 {    
     <hr style="color:#616161;" />
