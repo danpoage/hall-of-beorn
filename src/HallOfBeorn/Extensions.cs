@@ -42,6 +42,33 @@ namespace HallOfBeorn
             return value.Replace(' ', '+').Replace("!", string.Empty).Replace("?", string.Empty);
         }
 
+        public static string ToEnumDisplayString<T>(this T self)
+            where T: struct
+        {
+            if (typeof(T) == typeof(Models.NumericOperator))
+            {
+                var op = (Models.NumericOperator)((object)self);
+                switch (op)
+                {
+                    default:
+                    case Models.NumericOperator.eq:
+                        return " = ";
+                    case Models.NumericOperator.gt:
+                        return " > ";
+                    case Models.NumericOperator.gteq:
+                        return " >= ";
+                    case Models.NumericOperator.lt:
+                        return " < ";
+                    case Models.NumericOperator.lteq:
+                        return " <= ";
+                }
+            }
+            else
+            {
+                return self.ToString().Replace('_', ' ');
+            }
+        }
+
         public static IEnumerable<SelectListItem> GetSelectListItems(this Type enumType)
         {
             return enumType.GetSelectListItems(" ", false);

@@ -718,6 +718,31 @@ tr.pager td {
     width:60px;
 }
 
+.seach-explanation-glyph {
+    display: inline-block;
+    text-align: center;
+    font-family: Symbol;
+    font-size: 12px;
+    font-weight:bold;
+    height: 14px;
+    width: 14px;
+    color: black;
+    background-color:lightgray;
+    border-style:solid;
+    border-color:darkgray;
+    border-width:1px;
+    border-radius: 14px;
+    padding: 1px;
+    padding-bottom: 2px;
+    margin-right: 6px;
+}
+
+.search-explanation {
+    float:right;
+    margin-right:4px;
+    color: darkgray;
+}
+
 /********************
 *   Mobile Styles   *
 ********************/

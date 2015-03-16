@@ -8,14 +8,20 @@ namespace HallOfBeorn.Models
     public class CardViewModel
     {
         public CardViewModel(Card card)
-            : this(card, 0f)
+            : this(card, 0f, string.Empty)
         {
         }
 
-        public CardViewModel(Card card, float score)
+        public CardViewModel(CardScore score)
+            : this(score.Card, score.Score, score.Description)
+        {
+        }
+
+        public CardViewModel(Card card, float score, string searchDescription)
         {
             _card = card;
             _score = score;
+            _searchDescription = searchDescription;
 
             foreach (var encounterSet in _card.IncludedEncounterSets)
             {
@@ -25,6 +31,8 @@ namespace HallOfBeorn.Models
 
         private Card _card;
         private float _score;
+        private string _searchDescription;
+
         private readonly List<CardEffect> _keywordEffects = new List<CardEffect>();
         private readonly List<CardEffect> _textEffects = new List<CardEffect>();
         private readonly List<CardEffect> _shadowEffects = new List<CardEffect>();
@@ -40,6 +48,11 @@ namespace HallOfBeorn.Models
         public Card Card
         {
             get { return _card; }
+        }
+
+        public string SearchDescription
+        {
+            get { return _searchDescription; }
         }
 
         public float Score

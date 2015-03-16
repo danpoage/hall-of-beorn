@@ -81,6 +81,14 @@
             $('#moreOptionsContainer').show();
         }
 
+        $('.seach-explanation-glyph').click(function () {
+            $(this).parent().find('#search-explanation-text').toggle();
+        });
+
+        $('#search-explanation-text').click(function () {
+            $(this).toggle();
+        });
+
         $('#moreOptionsButton').click(function () {
             $('#moreOptionsContainer').toggle();
 
@@ -393,8 +401,12 @@
 
 <div ">
 @foreach (var card in @Model.Cards)
-{
+{    
     <hr style="color:#616161;" />
+    if (!string.IsNullOrEmpty(@card.SearchDescription))
+    {
+        <div class="search-explanation"><span class="seach-explanation-glyph">?</span><span id="search-explanation-text" style="display:none;">@card.SearchDescription (Score: @card.Score)</span></div>
+    }
     <div style="margin:6px;border: 0px solid gray;border-radius: 8px;min-height:220px;">
         <div>
             <div style="display:inline-block;">

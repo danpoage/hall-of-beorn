@@ -586,9 +586,9 @@ namespace HallOfBeorn.Controllers
         {
             InitializeSearch(model);
 
-            foreach (var card in _cardService.Search(model))
+            foreach (var score in _cardService.Search(model))
             {
-                model.Cards.Add(new CardViewModel(card));
+                model.Cards.Add(new CardViewModel(score));
             }
 
             return View(model);
