@@ -530,6 +530,7 @@
     <Content Include="Images\unique.png" />
     <Content Include="Images\willpower.gif" />
     <Content Include="Scripts\autocomplete.js" />
+    <Content Include="Scripts\cardSearch.js" />
     <Content Include="Scripts\highcharts.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
