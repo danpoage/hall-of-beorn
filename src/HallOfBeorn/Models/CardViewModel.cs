@@ -232,7 +232,7 @@ namespace HallOfBeorn.Models
 
         public string Willpower
         {
-            get { return _card.Willpower.ToString(); }
+            get { return _card.IsVariableWillpower ? "X" : _card.Willpower.ToString(); }
         }
 
         public string Attack

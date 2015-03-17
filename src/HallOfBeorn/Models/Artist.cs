@@ -319,6 +319,9 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Smirtouille);
             all.Add(Artist.Bill_Thompson);
 
+            //The Lost Realm
+            all.Add(Artist.Kim_Sokol);
+
             //First Age
             all.Add(Artist.Unknown);
             all.Add(Artist.Ted_Nasmith);
@@ -698,6 +701,7 @@ namespace HallOfBeorn.Models
         public static Artist Katherine_Dinger = new Artist { Name = "Katherine Dinger", URL = "http://jezebel.deviantart.com" };
         public static Artist Katy_Grierson = new Artist { Name = "Katy Grierson", URL = "http://kovah.deviantart.com" };
         public static Artist Kaya = new Artist { Name = "Kaya", URL = "http://gkb3rk.deviantart.com" };
+        public static Artist Kim_Sokol = new Artist { Name = "Kim Sokol", URL = "http://kimsokol.deviantart.com" };
         public static Artist Kristina_Gehrmann = new Artist { Name = "Kristina Gehrmann", URL = "http://kristinagehrmann.deviantart.com" };
         public static Artist Kristina_Carroll = new Artist { Name = "Kristina Carroll", URL = "http://kristinaecarroll.deviantart.com" };
         public static Artist Lane_Brown = new Artist { Name = "Lane Brown", URL = "http://wildweasel339.deviantart.com" };

@@ -143,6 +143,8 @@ namespace HallOfBeorn.Models
         public static CardSet TheDruadanForestNightmare = new Sets.TheDruadanForestNightmare();
         public static CardSet EncounterAtAmonDinNightmare = new Sets.EncounterAtAmonDinNightmare();
 
+        public static CardSet TheLostRealm = new Sets.TheLostRealm();
+
         public static CardSet FirstAge = new Sets.FirstAge();
     }
 }

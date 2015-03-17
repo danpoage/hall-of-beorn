@@ -149,6 +149,10 @@
                             <span style="margin-left:2px;width:40px;color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.ResourceCost</span><span style="color:#616161;">)</span>
                         }
                         break;
+                    case CardType.Player_Side_Quest:
+                    case CardType.Encounter_Side_Quest:
+                        <span style="width:40px;color:#616161;margin-left:14px;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.QuestPoints</span><span style="width:40px;color:#616161;">)</span>
+                        break;    
                     case CardType.Nightmare_Setup:
                     case CardType.Campaign:
                         break;

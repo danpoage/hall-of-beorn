@@ -18,7 +18,7 @@ namespace HallOfBeorn.Models
         Treachery = 14,
         Objective = 15,
         Objective_Ally = 16,
-        //Burden = 17,
+        Encounter_Side_Quest = 17,
         Player = 21,
         Character = 22,
         Hero = 23,
@@ -26,6 +26,6 @@ namespace HallOfBeorn.Models
         Attachment = 25,
         Event = 26,
         Treasure = 27,
-        //Boon = 28
+        Player_Side_Quest = 28
     }
 }

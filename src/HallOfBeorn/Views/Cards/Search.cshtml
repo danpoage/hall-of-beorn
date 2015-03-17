@@ -327,6 +327,10 @@
                         <span style="margin-left:4px;font-weight:bold;">@card.StageNumber</span><span style="width:40px;margin-left:2px;color:#616161;font-size:10px;font-weight:bold;">A-B</span>
                         <span style="width:40px;margin-left:14px;color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.QuestPoints</span><span style="width:40px;color:#616161;">)</span>
                         break;
+                    case CardType.Player_Side_Quest:
+                    case CardType.Encounter_Side_Quest:
+                        <span style="width:40px;margin-left:14px;color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.QuestPoints</span><span style="width:40px;color:#616161;">)</span>
+                        break;
                     default:
                         break;
                 }

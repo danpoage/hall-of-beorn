@@ -666,6 +666,7 @@ namespace HallOfBeorn.Services
             productGroups.Add(new TheDwarrowdelfProductGroup());
             productGroups.Add(new AgainstTheShadowProductGroup());
             productGroups.Add(new TheRingMakerProductGroup());
+            productGroups.Add(new AngmarAwakenedProductGroup());
 
             productGroups.Add(new TheHobbitSagaProductGroup());
             productGroups.Add(new TheLordOfTheRingsSagaProductGroup());
