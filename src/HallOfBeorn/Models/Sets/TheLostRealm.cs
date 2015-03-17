@@ -110,7 +110,7 @@ namespace HallOfBeorn.Models.Sets
                 Title = "Ranger Summons",
                 Id = "79A265E7-CD1B-4170-806A-C442B0F5D9DD",
                 CardType = CardType.Event,
-                Sphere = Sphere.Lore,
+                Sphere = Sphere.Leadership,
                 ResourceCost = 1,
                 Traits = new List<string> { "Signal." },
                 Text = "Play only if you control a Dúnedain hero.\r\nPlanning Action: Shuffle 1 of your set aside Ranger of th North allies with the encounter keyword into the encounter deck. Then, remove Ranger Summons from the game.",
