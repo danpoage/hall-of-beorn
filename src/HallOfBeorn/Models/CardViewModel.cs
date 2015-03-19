@@ -223,40 +223,34 @@ namespace HallOfBeorn.Models
 
         public string ResourceCost
         {
-            get { 
-                return _card.IsVariableCost ?
-                    "X"
-                    : _card.ResourceCost.ToString();
-            }
+            get { return _card.ResourceCost.Description(_card.IsVariableCost); }
         }
 
         public string Willpower
         {
-            get { return _card.IsVariableWillpower ? "X" : _card.Willpower.ToString(); }
+            get { return _card.Willpower.Description(_card.IsVariableWillpower); }
         }
 
         public string Attack
         {
-            get { return _card.IsVariableAttack ? "X" : _card.Attack.ToString(); }
+            get {
+                if (_card.Attack.HasValue && _card.Attack.Value == byte.MaxValue)
+                {
+                    return "-";
+                }
+
+                return _card.IsVariableAttack ? "X" : _card.Attack.ToString(); 
+            }
         }
 
         public string Defense
         {
-            get { return _card.IsVariableDefense ? "X" : _card.Defense.ToString(); }
+            get { return _card.Defense.Description(_card.IsVariableDefense);  }
         }
 
         public string HitPoints
         {
-            get
-            {
-                if (_card.IsVariableHitPoints) {
-                    return "X";
-                }
-
-                return _card.HitPoints.HasValue ?
-                _card.HitPoints.ToString()
-                : "-";
-            }
+            get { return _card.HitPoints.Description(_card.IsVariableHitPoints); }
         }
 
         public string EncounterSet
@@ -286,24 +280,12 @@ namespace HallOfBeorn.Models
 
         public string QuestPoints
         {
-            get {
-
-                if (_card.IsVariableQuestPoints)
-                    return "X";
-
-                return _card.QuestPoints.HasValue ?
-                    _card.QuestPoints.ToString()
-                    : "-";
-            }
+            get { return _card.QuestPoints.Description(_card.IsVariableQuestPoints); }
         }
 
         public string Threat
         {
-            get { return 
-                _card.IsVariableThreat ?
-                "X"
-                : _card.Threat.ToString(); 
-            }
+            get { return _card.Threat.Description(_card.IsVariableThreat); }
         }
 
         public string VictoryPoints
@@ -331,7 +313,7 @@ namespace HallOfBeorn.Models
 
         public string EngagementCost
         {
-            get { return _card.EngagementCost.ToString(); }
+            get { return _card.EngagementCost.HasValue ? _card.EngagementCost.ToString() : string.Empty; }
         }
 
         public string Text

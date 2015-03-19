@@ -335,5 +335,20 @@ namespace HallOfBeorn
                     return self <= result;
             }
         }
+
+        public static string Description(this byte? self, bool isVariable)
+        {
+            if (isVariable)
+            {
+                return "X";
+            }
+
+            if (!self.HasValue)
+            {
+                return string.Empty;
+            }
+
+            return self.Value == byte.MaxValue ? "-" : self.Value.ToString();
+        }
     }
 }

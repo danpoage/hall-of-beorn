@@ -192,6 +192,25 @@ namespace HallOfBeorn.Models.Sets
             });
             Cards.Add(new Card()
             {
+                Title = "Ranger of the North",
+                Id = "056C5C1A-D944-4734-835B-0EF3995EFC08",
+                CardType = CardType.Ally,
+                Sphere = Sphere.Neutral,
+                ResourceCost = byte.MaxValue,
+                Willpower = 2,
+                Attack = 2,
+                Defense = 2,
+                HitPoints = 3,
+                Traits = new List<string> { "Dúnedain.", "Ranger." },
+                NormalizedTraits = new List<string> { "Dunedain.", "Ranger." },
+                Keywords = new List<string> { "Encounter.", "Surge.", "Ranged.", "Sentinel." },
+                Text = "When Revealed: The first player chooses a player to take control of Ranger of the North. Then, either deal 2 damage to an enemy or place 2 progress tokens on a location.",
+                Artist = Artist.Alvaro_Calvo_Escudero,
+                Number = 15,
+                Quantity = 3,
+            });
+            Cards.Add(new Card()
+            {
                 Title = "Iârion",
                 NormalizedTitle = "Iarion",
                 Id = "93F6B7C3-2F83-4E1C-8E3E-E3C9F1044A18",
