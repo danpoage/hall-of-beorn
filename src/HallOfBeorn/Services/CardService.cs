@@ -1942,7 +1942,7 @@ namespace HallOfBeorn.Services
 
         public IEnumerable<string> ResourceCosts()
         {
-            return cards.Values.Where(x => !string.IsNullOrEmpty(x.ResourceCostLabel)).Select(x => x.ResourceCostLabel).Distinct().OrderBy(x => x).ToList();
+            return cards.Values.Where(x => !string.IsNullOrEmpty(x.ResourceCostLabel)).OrderBy(x => x.ResourceCost).Select(x => x.ResourceCostLabel).Distinct().ToList();
         }
 
         public IEnumerable<string> ThreatCosts()

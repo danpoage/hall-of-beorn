@@ -56,6 +56,7 @@ namespace HallOfBeorn.Models.Sets
                 Id = "a2d440c4-6150-4b6f-9a36-faa51ace7908",
                 CardType = CardType.Event,
                 Sphere = Sphere.Leadership,
+                ResourceCost = 254,
                 IsVariableCost = true,
                 Traits = new List<string>() { "Outlands." },
                 Text = "Action: Return X Outlands allies from your discard pile to your hand.",

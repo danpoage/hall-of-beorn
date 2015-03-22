@@ -64,31 +64,17 @@ namespace HallOfBeorn.Models
         
         public string ResourceCostLabel
         {
-            get
-            {
-                if (IsVariableCost)
-                    return "X";
-                else if (!ResourceCost.HasValue)
-                    return string.Empty;
-                else
-                    return ResourceCost.Value.ToString();
-            }
+            get { return ResourceCost.Description(IsVariableCost); }
         }
 
         public string ThreatCostLabel
         {
-            get
-            {
-                return ThreatCost.HasValue ? ThreatCost.Value.ToString() : string.Empty;
-            }
+            get { return ThreatCost.Description(false); }
         }
 
         public string EngagementCostLabel
         {
-            get
-            {
-                return EngagementCost.HasValue ? EngagementCost.Value.ToString() : string.Empty;
-            }
+            get { return EngagementCost.Description(false); }
         }
 
         public byte? EngagementCost { get; set; }

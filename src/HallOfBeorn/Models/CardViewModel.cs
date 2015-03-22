@@ -233,14 +233,7 @@ namespace HallOfBeorn.Models
 
         public string Attack
         {
-            get {
-                if (_card.Attack.HasValue && _card.Attack.Value == byte.MaxValue)
-                {
-                    return "-";
-                }
-
-                return _card.IsVariableAttack ? "X" : _card.Attack.ToString(); 
-            }
+            get {return _card.Attack.Description(_card.IsVariableAttack); }
         }
 
         public string Defense

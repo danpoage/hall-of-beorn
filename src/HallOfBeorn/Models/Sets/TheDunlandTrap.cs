@@ -179,7 +179,7 @@ in Mordor where the shadows are.
                 ImageType = ImageType.Jpg,
                 Id = "3D87FA7B-09A6-46C9-9117-E052902B842D",
                 CardType = CardType.Event,
-                ResourceCost = 0,
+                ResourceCost = 254,
                 IsVariableCost = true,
                 Sphere = Models.Sphere.Neutral,
                 Quantity = 3,
