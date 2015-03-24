@@ -252,7 +252,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Eric_Braddock
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Beyond Expectations",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-1801202c9016",
@@ -269,7 +269,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Through the Ruins",
                 StageNumber = 2,
                 Id = "51223bd0-ffd1-11df-a976-1801202c9018",
@@ -287,7 +287,7 @@ Each player cannot play or put into play more than 1 card from his hand each rou
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Anduin Crossing",
                 StageNumber = 3,
                 Id = "51223bd0-ffd1-11df-a976-1801202c9020",
@@ -307,7 +307,7 @@ In order to commit characters to the quest, a player must first choose a hero or
                 Artist = Artist.Marco_Caradonna
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Race to Minas Tirith",
                 StageNumber = 4,
                 Id = "51223bd0-ffd1-11df-a976-1801202c9022",

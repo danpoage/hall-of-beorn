@@ -123,7 +123,20 @@ namespace HallOfBeorn.Models
         public ushort Year { get; set; }
         public bool SlugIncludesOppositeTitle { get; set; }
         public bool SlugIncludesType { get; set; }
-        public bool HasSecondImage { get; set; }
+
+        private bool hasSecondImage;
+        public bool HasSecondImage {
+            get
+            {
+                if (CardType == Models.CardType.Quest)
+                {
+                    return true;
+                }
+
+                return hasSecondImage;
+            }
+            set { hasSecondImage = value; }
+        }
 
         private string publicSlug;
         public string PublicSlug

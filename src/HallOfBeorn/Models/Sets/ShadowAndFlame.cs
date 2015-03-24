@@ -257,7 +257,8 @@ Players cannot win the game while Durin's Bane is in play. If Durin's Bane leave
                 Text = "Response: After an enemy attacks you, put that enemy on the bottom of the encounter deck. If your threat is lower than that enemy's engagement cost, set your threat equal to the engagement cost of that enemy.",
                 Keywords = new List<string>() { "Secrecy 4." },
                 Number = 132,
-                Artist = Artist.Aaron_B_Miller
+                Artist = Artist.Aaron_B_Miller,
+                HasErrata = true
             });
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,
