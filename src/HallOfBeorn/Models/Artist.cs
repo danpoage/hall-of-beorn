@@ -319,6 +319,9 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Smirtouille);
             all.Add(Artist.Bill_Thompson);
 
+            //The Morgul Vale Nightmare
+            all.Add(Artist.Matthew_Cowdery);
+
             //The Lost Realm
             all.Add(Artist.Kim_Sokol);
 
@@ -734,6 +737,7 @@ namespace HallOfBeorn.Models
         public static Artist Matt_Smith = new Artist { Name = "Matt Smith", URL = "https://www.google.com/search?q=matt+smith+fantasy+art" };
         public static Artist Matt_Stawicki = new Artist { Name = "Matt Stawicki", URL = "http://www.mattstawicki.com" };
         public static Artist Matt_Stewart = new Artist { Name = "Matt Stewart", URL = "http://mattstewartartblog.blogspot.com" };
+        public static Artist Matthew_Cowdery = new Artist { Name = "Matthew Cowdery", URL = "http://mattcowdery.tumblr.com" };
         public static Artist Matthew_Starbuck = new Artist { Name = "Matthew Starbuck", URL = "http://faxtar.deviantart.com" };
         public static Artist Melanie_Maier = new Artist { Name = "Melanie Maier", URL = "http://melaniemaier.deviantart.com" };
         public static Artist Melissa_Findley = new Artist { Name = "Melissa Findley", URL = "http://melissafindley.deviantart.com" };

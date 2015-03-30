@@ -286,5 +286,135 @@ namespace HallOfBeorn.Models
 
             return false;
         }
+
+        public static Card Enemy(string title, bool isUnique, string id, string encounterSet, byte? engagementCost, byte? threat, byte? attack, byte? defense, byte? hitPoints)
+        {
+            var isVariableThreat = threat.HasValue && threat.Value == byte.MaxValue;
+            var isVariableAttack = attack.HasValue && attack.Value == byte.MaxValue;
+            var isVariableDefense = defense.HasValue && defense.Value == byte.MaxValue;
+            var isVariableHitPoints = hitPoints.HasValue && hitPoints.Value == byte.MaxValue;
+
+            return new Card()
+            {
+                CardType = Models.CardType.Enemy,
+                IsUnique = isUnique,
+                Title = title,
+                Id = id,
+                EngagementCost = engagementCost,
+                Threat = threat,
+                IsVariableThreat = isVariableThreat,
+                Attack = attack,
+                IsVariableAttack = isVariableAttack,
+                Defense = defense,
+                IsVariableDefense = isVariableDefense,
+                HitPoints = hitPoints,
+                IsVariableHitPoints = isVariableHitPoints,
+                EncounterSet = encounterSet
+            };
+        }
+
+        public static Card Location(string title, bool isUnique, string id, string encounterSet, byte? threat, byte questPoints)
+        {
+            return new Card()
+            {
+                CardType = Models.CardType.Location,
+                IsUnique = isUnique,
+                Title = title,
+                Id = id,
+                Threat = threat,
+                QuestPoints = questPoints,
+                EncounterSet = encounterSet
+            };
+        }
+
+        public static Card Treachery(string title, string id, string encounterSet)
+        {
+            return new Card()
+            {
+                CardType = Models.CardType.Treachery,
+                Title = title,
+                Id = id,
+                EncounterSet = encounterSet
+            };
+        }
+
+        public Card WithTraits(params string[] traits)
+        {
+            foreach (var trait in traits)
+                this.Traits.Add(trait);
+
+            return this;
+        }
+
+        public Card WithVictoryPoints(byte victoryPoints)
+        {
+            this.VictoryPoints = victoryPoints;
+            return this;
+        }
+
+        public Card WithNormalizedTitle(string normalizedTitle)
+        {
+            this.NormalizedTitle = normalizedTitle;
+            return this;
+        }
+
+        public Card WithKeywords(params string[] keywords)
+        {
+            foreach (var keyword in keywords)
+                this.Keywords.Add(keyword);
+
+            return this;
+        }
+
+        public Card WithText(string text)
+        {
+            this.Text = text;
+            return this;
+        }
+
+        public Card WithShadow(string shadow)
+        {
+            return this.WithEffect(CardEffectType.Shadow, shadow);
+        }
+
+        public Card WithEffect(CardEffectType type, string effect)
+        {
+            switch (type)
+            {
+                case CardEffectType.Shadow:
+                    this.Shadow = effect;
+                    break;
+                case CardEffectType.Flavor_Text:
+                    this.FlavorText = effect;
+                    break;
+                default:
+                case CardEffectType.None:
+                case CardEffectType.Passive:
+                    {
+                        if (string.IsNullOrEmpty(this.Text))
+                        {
+                            this.Text = string.Empty;
+                        }
+                        else
+                        {
+                            this.Text += "\r\n";
+                        }
+
+                        this.Text += effect;
+                    }
+                    break;
+            }
+
+            return this;
+        }
+
+        public Card WithInfo(byte number, byte quantity, Artist artist)
+        {
+            this.Number = number;
+            this.Quantity = quantity;
+            this.Artist = artist;
+
+            return this;
+        }
     }
 }

@@ -199,6 +199,7 @@
     <Compile Include="Models\AdvancedSearchViewModel.cs" />
     <Compile Include="Models\Artist.cs" />
     <Compile Include="Models\BrowseViewModel.cs" />
+    <Compile Include="Models\CardEffectType.cs" />
     <Compile Include="Models\CardSubtype.cs" />
     <Compile Include="Models\Card.cs" />
     <Compile Include="Models\CardEffect.cs" />
@@ -288,6 +289,7 @@
     <Compile Include="Models\Products\AJourneyToRhosgobelNightmareProduct.cs" />
     <Compile Include="Models\Products\AJourneyToRhosgobelProduct.cs" />
     <Compile Include="Models\Products\AngmarAwakenedProductGroup.cs" />
+    <Compile Include="Models\Products\AssaultOnOsgiliathNightmareProduct.cs" />
     <Compile Include="Models\Products\AssaultOnOsgiliathProduct.cs" />
     <Compile Include="Models\Products\CelebrimborsSecretProduct.cs" />
     <Compile Include="Models\Products\ConflictAtTheCarrockNightmareProduct.cs" />
@@ -307,8 +309,10 @@
     <Compile Include="Models\Products\JourneyAlongTheAnduinNightmareProduct.cs" />
     <Compile Include="Models\Products\KhazadDumProduct.cs" />
     <Compile Include="Models\Products\NightmareDeckProductGroup.cs" />
+    <Compile Include="Models\Products\TheBloodOfGondorNightmareProduct.cs" />
     <Compile Include="Models\Products\TheDruadanForestNightmareProduct.cs" />
     <Compile Include="Models\Products\TheLostRealmProduct.cs" />
+    <Compile Include="Models\Products\TheMorgulValeNightmareProduct.cs" />
     <Compile Include="Models\Products\TheStewardsFearNightmareProduct.cs" />
     <Compile Include="Models\Products\TheAntleredCrownProduct.cs" />
     <Compile Include="Models\Products\TheHobbitOnTheDoorstepNightmareProduct.cs" />
@@ -371,6 +375,7 @@
     <Compile Include="Models\Sets\AJourneyToRhosgobelNightmare.cs" />
     <Compile Include="Models\Sets\AssaultOnOsgiliath.cs" />
     <Compile Include="Models\Sets\AJourneyToRhosgobel.cs" />
+    <Compile Include="Models\Sets\AssaultOnOsgiliathNightmare.cs" />
     <Compile Include="Models\Sets\CelebrimborsSecret.cs" />
     <Compile Include="Models\Sets\ConflictAtTheCarrock.cs" />
     <Compile Include="Models\Sets\ConflictAtTheCarrockNightmare.cs" />
@@ -393,9 +398,11 @@
     <Compile Include="Models\Sets\PerilInPelargirNightmare.cs" />
     <Compile Include="Models\Sets\TheAntleredCrown.cs" />
     <Compile Include="Models\Sets\TheBattleOfFiveArmiesNightmare.cs" />
+    <Compile Include="Models\Sets\TheBloodOfGondorNightmare.cs" />
     <Compile Include="Models\Sets\TheDruadanForestNightmare.cs" />
     <Compile Include="Models\Sets\TheLonelyMountainNightmare.cs" />
     <Compile Include="Models\Sets\TheLostRealm.cs" />
+    <Compile Include="Models\Sets\TheMorgulValeNightmare.cs" />
     <Compile Include="Models\Sets\TheNinInEilph.cs" />
     <Compile Include="Models\Sets\OverTheMistyMountainsGrimNightmare.cs" />
     <Compile Include="Models\Sets\PassageThroughMirkwoodNightmare.cs" />

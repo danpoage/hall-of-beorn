@@ -142,6 +142,9 @@ namespace HallOfBeorn.Models
         public static CardSet TheStewardsFearNightmare = new Sets.TheStewardsFearNightmare();
         public static CardSet TheDruadanForestNightmare = new Sets.TheDruadanForestNightmare();
         public static CardSet EncounterAtAmonDinNightmare = new Sets.EncounterAtAmonDinNightmare();
+        public static CardSet AssaultOnOsgiliathNightmare = new Sets.AssaultOnOsgiliathNightmare();
+        public static CardSet TheBloodOfGondorNightmare = new Sets.TheBloodOfGondorNightmare();
+        public static CardSet TheMorgulValeNightmare = new Sets.TheMorgulValeNightmare();
 
         public static CardSet TheLostRealm = new Sets.TheLostRealm();
 

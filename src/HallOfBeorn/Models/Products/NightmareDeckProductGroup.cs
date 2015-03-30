@@ -37,6 +37,9 @@ namespace HallOfBeorn.Models.Products
             AddProduct(new TheStewardsFearNightmareProduct());
             AddProduct(new TheDruadanForestNightmareProduct());
             AddProduct(new EncounterAtAmonDinNightmareProduct());
+            AddProduct(new AssaultOnOsgiliathNightmareProduct());
+            AddProduct(new TheBloodOfGondorNightmareProduct());
+            AddProduct(new TheMorgulValeNightmareProduct());
         }
     }
 }
