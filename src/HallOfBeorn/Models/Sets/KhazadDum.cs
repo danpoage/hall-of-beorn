@@ -954,7 +954,7 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 EncounterSet = "Flight from Moria",
                 Quantity = 1,
                 Text = "While Search for an Exit is the active quest card, only flip it to side 2B at the beginning of the staging step.",
-                OppositeText = "Abandoned Tools gains: 'Refresh Action: Exhaust attached hero to put a progress token on Escape from Darkness.' Players may bypass this quest card at the end of the combat phase. Progress tokens cannot be placed on Escape from Darkness except by Abandoned Tools. If the players defeat this stage, they escape and win the game.",
+                OppositeText = "Abandoned ~Tools gains: \"Refresh Action: Exhaust attached hero to put a progress token on ~Escape from Darkness.\"\r\nPlayers may bypass this quest card at the end of the combat phase. Progress tokens cannot be placed on Escape from Darkness except by Abandoned Tools. If the players defeat this stage, they escape and win the game.",
                 FlavorText = "As the presence draws near, doubt and fear surround you like a vast shadow. You must find daylight, you must escape from the Black Pit...",
                 QuestPoints = 4,
                 Number = 76,
