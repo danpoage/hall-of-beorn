@@ -114,6 +114,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithKeywords("Archery X.")
                 .WithEffect(CardEffectType.Passive, "X is the number of locations controlled by the first player.")
                 .WithEffect(CardEffectType.Forced, "Forced: After Haradhrim Elite engages a player, it gets +X Attack and +X Defense until the end of the round.")
+                .WithShadow("Shadow: Deal 1 damage to defending character.")
                 .WithInfo(3, 3, Artist.Smirtouille));
             Cards.Add(Card.Location("Palace Remains", true, "3EAC42AA-A834-4590-9ED6-FAD6386B0641", "Assault on Osgiliath Nightmare", 0, 5)
                 .WithTraits("Osgiliath.")
