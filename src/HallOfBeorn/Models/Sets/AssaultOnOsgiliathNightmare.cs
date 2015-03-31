@@ -109,11 +109,11 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithTraits("Orc.", "Mordor.")
                 .WithEffect(CardEffectType.Forced, "Forced: After Invading ~Orc attacks and destroys a character, that character's controller returns a location he controls to the staging area.")
                 .WithShadow("Shadow: If this attack destroys a character, return a location you control to the staging area.").WithInfo(2, 3, Artist.Alvaro_Calvo_Escudero));
-            Cards.Add(Card.Enemy("Haradhrim Warrior", false, "39BF7B4D-81F2-404F-8F7D-4F10D8C32BE0", "Assault on Osgiliath Nightmare", 30, 255, 3, 3, 4)
+            Cards.Add(Card.Enemy("Haradrim Warrior", false, "39BF7B4D-81F2-404F-8F7D-4F10D8C32BE0", "Assault on Osgiliath Nightmare", 30, 255, 3, 3, 4)
                 .WithTraits("Harad.")
                 .WithKeywords("Archery X.")
                 .WithEffect(CardEffectType.Passive, "X is the number of locations controlled by the first player.")
-                .WithEffect(CardEffectType.Forced, "Forced: After Haradhrim Elite engages a player, it gets +X Attack and +X Defense until the end of the round.")
+                .WithEffect(CardEffectType.Forced, "Forced: After Haradrim ~Warrior engages a player, it gets +X Attack and +X Defense until the end of the round.")
                 .WithShadow("Shadow: Deal 1 damage to defending character.")
                 .WithInfo(3, 3, Artist.Smirtouille));
             Cards.Add(Card.Location("Palace Remains", true, "3EAC42AA-A834-4590-9ED6-FAD6386B0641", "Assault on Osgiliath Nightmare", 0, 5)
