@@ -350,5 +350,128 @@ namespace HallOfBeorn
 
             return self.Value == byte.MaxValue ? "-" : self.Value.ToString();
         }
+
+        public static string Normalize(this string self)
+        {
+            if (string.IsNullOrEmpty(self))
+            {
+                return self;
+            }
+
+            var tokensToNormalize = new Dictionary<string, string> {
+                {"À", "A"}, {"Â", "A"}, {"Á", "A"}, {"Æ", "AE"}, {"Ǣ", "AE"}, {"Å", "A"},
+                {"à", "A"}, {"â", "A"}, {"á", "A"}, {"æ", "AE"}, {"ǣ", "AE"}, {"ā", "A"},
+
+                {"Ç", "C"},
+                {"č", "C"},
+
+                {"Ð", "D"},
+                {"ð", "D"}, 
+
+                {"È", "E"}, {"Ê", "E"}, {"Ë", "E"}, {"É", "E"},
+                {"è", "E"}, {"ê", "E"}, {"ë", "E"}, {"ē", "E"}, {"é", "E"},
+
+                {"Ğ", "G"}, {"ѓ", "G"},
+                {"ģ", "G"}, {"ǧ", "G"},
+
+                {"ȟ", "H"},
+
+                {"Ï", "I"}, {"Î", "I"}, {"Í", "I"}, {"İ", "I"}, {"й", "I"}, {"ѝ", "I"},
+                {"ï", "I"}, {"î", "I"}, {"ī", "I"}, {"í", "I"},
+                
+                {"ќ", "K"},
+                {"ķ", "K"},
+
+                {"ļ", "L"},
+
+                {"Ñ", "N"},
+                {"ñ", "N"}, {"ņ", "N"}, {"ŋ", "N"},
+
+                {"Ô", "O"}, {"Ö", "O"}, {"Ó", "O"},
+                {"ô", "O"}, {"ö", "O"}, {"ø", "O"}, {"ó", "O"}, {"õ", "O"},
+                
+                {"ŗ", "R"},
+
+                {"Ş", "S"},
+                {"š", "S"},
+
+                {"Û", "U"}, {"Ù", "U"}, {"Ú", "U"}, {"Ü", "U"},
+                {"û", "U"}, {"ù", "U"}, {"ū", "U"}, {"ú", "U"},
+                
+                {"ў", "U"},
+                {"ž", "Z"}
+            };
+
+            var normalized = self;
+            foreach (var pair in tokensToNormalize)
+            {
+                normalized = normalized.Replace(pair.Key, pair.Value);
+            }
+            return normalized;
+        }
+
+        public static string Html(this Models.CardEffectType self)
+        {
+            switch (self)
+            {
+                case Models.CardEffectType.Action:
+                case Models.CardEffectType.Combat_Action:
+                case Models.CardEffectType.Encounter_Action:
+                case Models.CardEffectType.Forced:
+                case Models.CardEffectType.Planning_Action:
+                case Models.CardEffectType.Quest_Action:
+                case Models.CardEffectType.Refresh_Action:
+                case Models.CardEffectType.Resource_Action:
+                case Models.CardEffectType.Response:
+                case Models.CardEffectType.Setup:
+                case Models.CardEffectType.Shadow:
+                case Models.CardEffectType.Travel:
+                case Models.CardEffectType.Travel_Action:
+                case Models.CardEffectType.When_Revealed:
+                    return "<strong>" + self.ToEnumDisplayString() + ": </strong>";
+                case Models.CardEffectType.Flavor_Text:
+                case Models.CardEffectType.None:
+                case Models.CardEffectType.Passive:
+                default:
+                    return string.Empty;
+            }
+        }
+
+        public static string Text(this Models.CardEffectType self)
+        {
+            switch (self)
+            {
+                case Models.CardEffectType.Action:
+                case Models.CardEffectType.Combat_Action:
+                case Models.CardEffectType.Encounter_Action:
+                case Models.CardEffectType.Forced:
+                case Models.CardEffectType.Planning_Action:
+                case Models.CardEffectType.Quest_Action:
+                case Models.CardEffectType.Refresh_Action:
+                case Models.CardEffectType.Resource_Action:
+                case Models.CardEffectType.Response:
+                case Models.CardEffectType.Setup:
+                case Models.CardEffectType.Shadow:
+                case Models.CardEffectType.Travel:
+                case Models.CardEffectType.Travel_Action:
+                case Models.CardEffectType.When_Revealed:
+                    return self.ToEnumDisplayString() + ": ";
+                case Models.CardEffectType.Flavor_Text:
+                case Models.CardEffectType.None:
+                case Models.CardEffectType.Passive:
+                default:
+                    return string.Empty;
+            }
+        }
+
+        public static string Name(this Models.Keyword self)
+        {
+            return self != Models.Keyword.None ? self.ToString().Replace('_', ' ') : string.Empty;
+        }
+
+        public static string Name(this Models.Trait self)
+        {
+            return self != Models.Trait.None ? self.ToString().Replace("__", "-").Replace('_', ' ') : string.Empty;
+        }
     }
 }

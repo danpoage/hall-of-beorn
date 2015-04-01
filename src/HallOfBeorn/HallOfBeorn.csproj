@@ -273,11 +273,16 @@
     <Compile Include="Models\Decks\TalesFromTheCards\TrapsOfIthilien.cs" />
     <Compile Include="Models\Decks\TalesFromTheCards\WhereEaglesDare.cs" />
     <Compile Include="Models\DeckType.cs" />
+    <Compile Include="Models\Effect.cs" />
+    <Compile Include="Models\EffectToken.cs" />
+    <Compile Include="Models\EffectTokenType.cs" />
     <Compile Include="Models\EncounterCategory.cs" />
     <Compile Include="Models\EncounterSet.cs" />
     <Compile Include="Models\EncounterSetViewModel.cs" />
     <Compile Include="Models\HasShadow.cs" />
     <Compile Include="Models\ImageType.cs" />
+    <Compile Include="Models\Keyword.cs" />
+    <Compile Include="Models\LayoutType.cs" />
     <Compile Include="Models\NumericOperator.cs" />
     <Compile Include="Models\OCTGN\OctgnCard.cs" />
     <Compile Include="Models\OCTGN\OctgnProperty.cs" />
@@ -444,6 +449,7 @@
     <Compile Include="Models\Sets\TheWatcherInTheWaterNightmare.cs" />
     <Compile Include="Models\Sets\TroubleInTharbad.cs" />
     <Compile Include="Models\Sets\TheVoiceOfIsengard.cs" />
+    <Compile Include="Models\Trait.cs" />
     <Compile Include="Models\WeightedSearchFilter.cs" />
     <Compile Include="Models\Sets\WeMustAwayEreBreakOfDayNightmare.cs" />
     <Compile Include="Models\SetType.cs" />

@@ -21,7 +21,8 @@ namespace HallOfBeorn.Models
         Passive = 11,
         Setup = 12,
         When_Revealed = 13,
-        Shadow = 14,
-        Flavor_Text = 15
+        Travel = 14,
+        Shadow = 15,
+        Flavor_Text = 16
     }
 }
