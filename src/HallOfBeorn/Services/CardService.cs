@@ -1403,6 +1403,9 @@ namespace HallOfBeorn.Services
 
             switch (typeName)
             {
+                case "title":
+                    predicate = (score) => { return names.Any(y => score.Card.Title.MatchesWildcard(y)); };
+                    break;
                 case "cycle":
                     predicate = (score) => { return names.Any(y => score.Card.CardSet.Cycle.MatchesWildcard(y)); };
                     break;
@@ -1540,6 +1543,9 @@ namespace HallOfBeorn.Services
 
                 switch (field)
                 {
+                    case "title":
+                        results = FilterByString(field, value, results, negate);
+                        break;
                     case "cycle":
                         results = FilterByString(field, value, results, negate);
                         break;

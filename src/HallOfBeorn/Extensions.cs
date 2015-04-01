@@ -27,6 +27,14 @@ namespace HallOfBeorn
                 .Replace("!", string.Empty);
         }
 
+        public static string UrlEncode(this string self)
+        {
+            if (string.IsNullOrEmpty(self))
+                return string.Empty;
+
+            return HttpUtility.UrlEncode(self);
+        }
+
         public static string ToDisplayString(this string self, string title)
         {
             if (string.IsNullOrEmpty(self))

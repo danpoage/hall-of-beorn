@@ -942,7 +942,8 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 OppositeArtist = Artist.Magali_Villeneuve,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
             });
-            Cards.Add(new Card() {
+            var card = new Card()
+            {
                 ImageType = Models.ImageType.Png,
                 Title = "Search for an Exit",
                 SlugIncludesOppositeTitle = true,
@@ -961,7 +962,28 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 Artist = Artist.Cristi_Balanescu,
                 OppositeArtist = Artist.Magali_Villeneuve,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
-            });
+            };
+
+            /*
+            var refreshAction = new Effect(CardEffectType.Passive, LayoutType.Block)
+                .Text("Abandoned Tools gains:")
+                .Quote()
+                .Trigger(CardEffectType.Refresh_Action)
+                .Text("Exhaust attached hero to put a progress token on Escape from Darkness.")
+                .Quote();
+
+            card
+                .Flavor("As the presence draws near, doubt and fear surround you like a vast shadow. You must find daylight, you must escape from the Black Pit...")
+                .Important("While Search for an Exit is the active quest card, only flip it to side 2B at the beginning of the staging step.")
+                .Flavor("There is a weakness in the walls. You can practically taste the freedom beyond.")
+                .Effect(refreshAction)
+                .Important("Players may bypass this quest card at the end of the combat phase.")
+                .Important("Progress tokens cannot be placed on Escape from Darkness except by Abandoned Tools. If the players defeat this stage, they escape and win the game.");
+
+            card.RenderEffects();
+            var x = card.Html;*/
+
+            Cards.Add(card);
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,
                 Title = "Search for the Chamber",

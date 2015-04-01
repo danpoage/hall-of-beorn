@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 
 namespace HallOfBeorn.Models
@@ -22,7 +23,53 @@ namespace HallOfBeorn.Models
             IncludedEncounterSets = new List<EncounterSet>();
 
             UsePublicImageURL = true;
+            Html = string.Empty;
         }
+
+        #region Effect Functions
+
+        private readonly List<Effect> effects = new List<Effect>();
+        public void RenderEffects()
+        {
+            if (effects.Count == 0)
+            {
+                return;
+            }
+
+            var text = new StringBuilder();
+            var html = new StringBuilder();
+
+            foreach (var effect in effects)
+            {
+                text.Append(effect.ToText(this));
+                html.Append(effect.ToHtml(this));
+            }
+
+            //this.Text = text.ToString();
+            this.Html = html.ToString();
+        }
+
+        public string Html { get; set; }
+
+        public Card Flavor(string flavor)
+        {
+            effects.Add(new Effect(CardEffectType.Flavor_Text, LayoutType.Block).Flavor(flavor));
+            return this;
+        }
+
+        public Card Important(string important)
+        {
+            effects.Add(new Effect(CardEffectType.Flavor_Text, LayoutType.Important).Text(important));
+            return this;
+        }
+
+        public Card Effect(Effect effect)
+        {
+            effects.Add(effect);
+            return this;
+        }
+
+        #endregion
 
         private string scenarioTitle;
 

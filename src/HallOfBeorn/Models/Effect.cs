@@ -19,7 +19,37 @@ namespace HallOfBeorn.Models
         public LayoutType LayoutType { get; private set; }
         public List<EffectToken> Tokens { get; private set; }
 
-        public string ToHtml()
+        public Effect Text(string text)
+        {
+            Tokens.Add(new EffectToken(EffectTokenType.Text, string.Empty, text, string.Empty));
+            return this;
+        }
+
+        public Effect Flavor(string text)
+        {
+            Tokens.Add(new EffectToken(EffectTokenType.Flavor_Text, string.Empty, text, string.Empty));
+            return this;
+        }
+
+        public Effect InlineText(string text)
+        {
+            Tokens.Add(new EffectToken(EffectTokenType.Inline_Text, string.Empty, text, string.Empty));
+            return this;
+        }
+
+        public Effect Quote()
+        {
+            Tokens.Add(new EffectToken(EffectTokenType.Inline_Text, string.Empty, '"', string.Empty));
+            return this;
+        }
+
+        public Effect Trigger(CardEffectType trigger)
+        {
+            Tokens.Add(new EffectToken(EffectTokenType.Trigger, string.Empty, string.Format("{0}:", trigger.ToString().Replace('_', ' ')), string.Empty));
+            return this;
+        }
+
+        public string ToHtml(Card card)
         {
             var html = new StringBuilder();
 
@@ -38,9 +68,15 @@ namespace HallOfBeorn.Models
 
             html.Append(EffectType.Html());
 
+            var prefix = string.Empty;
             foreach (var token in Tokens)
             {
-                html.Append(token.Html());
+                if (token.TokenType != EffectTokenType.Inline_Text)
+                {
+                    html.Append(prefix);
+                }
+                html.Append(token.ToHtml(card));
+                prefix = " ";
             }
 
             switch (LayoutType)
@@ -59,7 +95,7 @@ namespace HallOfBeorn.Models
             return html.ToString();
         }
 
-        public string ToText()
+        public string ToText(Card card)
         {
             var text = new StringBuilder();
 
@@ -68,6 +104,17 @@ namespace HallOfBeorn.Models
             if (LayoutType == Models.LayoutType.Block || LayoutType == Models.LayoutType.Important)
             {
                 text.Append("\r\n");
+            }
+
+            var prefix = string.Empty;
+            foreach (var token in Tokens)
+            {
+                if (token.TokenType != EffectTokenType.Inline_Text)
+                {
+                    text.Append(prefix);
+                }
+                text.Append(token.ToText(card));
+                prefix = " ";
             }
 
             return text.ToString();
