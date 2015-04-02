@@ -323,6 +323,7 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Matthew_Cowdery);
 
             //The Lost Realm
+            all.Add(Artist.Alexandr_Elichev);
             all.Add(Artist.Kim_Sokol);
 
             //First Age
@@ -573,6 +574,7 @@ namespace HallOfBeorn.Models
         public static Artist Alex_Stone = new Artist { Name = "Alex Stone", URL = "http://alexstoneart.deviantart.com" };
         public static Artist Aleksander_Karcz = new Artist { Name = "Aleksander Karcz", URL = "http://aleksanderkarcz.deviantart.com" };
         public static Artist Alexander_Kozachenko = new Artist { Name = "Alexander Kozachenko", URL = "http://alexanderexorcist.deviantart.com" };
+        public static Artist Alexandr_Elichev = new Artist { Name = "Alexandr Elichev", URL = "http://kotnonekot.deviantart.com" };
         public static Artist Alexandr_Shaldin = new Artist { Name = "Alexandr Shaldin", URL = "http://twilight30.cgsociety.org/gallery" };
         public static Artist Alexandre_Dainche = new Artist { Name = "Alexandre Dainche", URL = "http://www.imaginales.fr/alexandre-dainche" };
         public static Artist Alexandru_Sabo = new Artist { Name = "Alexandru Sabo", URL = "http://alexandrusabo.ro" };

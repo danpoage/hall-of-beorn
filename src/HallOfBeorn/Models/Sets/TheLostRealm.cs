@@ -94,15 +94,41 @@ namespace HallOfBeorn.Models.Sets
             });
             Cards.Add(new Card()
             {
-                Title = "Tireless Hunters",
-                Id = "AE28E1EF-4359-4971-ABAA-435A44A3303B",
-                CardType = CardType.Event,
-                Sphere = Sphere.Tactics,
-                ResourceCost = 1,
-                Text = "Play only before the resolving enemy attacks step.\r\nCombat Action: Choose an enemy not engaged with you. Engage that enemy. Then, discard a shadow card from that enemy, if able.",
-                FlavorText = "\"Many evil things there are that your strong walls and bright swords do not stay.\" -Aragorn, The Fellowship of the Ring",
-                Artist = Artist.Ilich_Henriquez,
+                Title = "Sarn Ford Sentry",
+                Id = "CDEC0EB5-6C35-421A-9194-77CAAE3B539B",
+                CardType = CardType.Ally,
+                Sphere = Sphere.Lore,
+                ResourceCost = 3,
+                Willpower = 2,
+                Attack = 1,
+                Defense = 0,
+                HitPoints = 2,
+                Traits = new List<string> { "Dúnedain.", "Scout." },
+                NormalizedTraits = new List<string> { "Dunedain.", "Scout." },
+                Text = "Response: After Sarn Ford Sentry enters play, draw 1 card for each enemy engaged with you.",
+                FlavorText = "\"Lonely men are we, Rangers of the wild, hunters but hunters ever of the servants of the Enemy...\" -Aragorn, The Fellowship of the Ring",
+                Artist = Artist.Smirtouille,
                 Number = 5,
+                Quantity = 3
+            });
+            Cards.Add(new Card()
+            {
+                Title = "Warden of Annúminas",
+                NormalizedTitle = "Warden of Annuminas",
+                Id = "C9AB1B34-0511-4B08-A47A-4D0A64405449",
+                CardType = CardType.Ally,
+                Sphere = Sphere.Spirit,
+                ResourceCost = 4,
+                Willpower = 0,
+                Attack = 2,
+                Defense = 2,
+                HitPoints = 3,
+                Traits = new List<string> { "Dúnedain.", "Ranger." },
+                NormalizedTraits = new List<string> { "Dunedain.", "Ranger." },
+                Text = "Warden of Annúminas gets +1 Willpower for each enemy engaged with you.",
+                FlavorText = "Rangers passed at times beyond the hills, but they were few and did not stay. -The Fellowship of the Ring",
+                Artist = Artist.Smirtouille,
+                Number = 6,
                 Quantity = 3
             });
             Cards.Add(new Card()
@@ -117,6 +143,19 @@ namespace HallOfBeorn.Models.Sets
                 FlavorText = "\"We rode as swiftly as we might when your summons came.\" -Halbarad, The Return of the King",
                 Artist = Artist.Smirtouille,
                 Number = 7,
+                Quantity = 3
+            });
+            Cards.Add(new Card()
+            {
+                Title = "Tireless Hunters",
+                Id = "AE28E1EF-4359-4971-ABAA-435A44A3303B",
+                CardType = CardType.Event,
+                Sphere = Sphere.Tactics,
+                ResourceCost = 1,
+                Text = "Play only before the resolving enemy attacks step.\r\nCombat Action: Choose an enemy not engaged with you. Engage that enemy. Then, discard a shadow card from that enemy, if able.",
+                FlavorText = "\"Many evil things there are that your strong walls and bright swords do not stay.\" -Aragorn, The Fellowship of the Ring",
+                Artist = Artist.Ilich_Henriquez,
+                Number = 8,
                 Quantity = 3
             });
             Cards.Add(new Card()
@@ -173,6 +212,20 @@ namespace HallOfBeorn.Models.Sets
                 FlavorText = "\"If simple folk are free from care and fear, simple they will be, and we must be secret to keep them so.\" -Aragorn, The Fellowship of the Ring",
                 Artist = Artist.Piya_Wannachaiwong,
                 Number = 12,
+                Quantity = 3
+            });
+            Cards.Add(new Card()
+            {
+                Title = "Star Brooch",
+                Id = "18D8333D-8A53-4629-BF85-AFDB01536308",
+                CardType = CardType.Attachment,
+                Sphere = Sphere.Spirit,
+                ResourceCost = 1,
+                Traits = new List<string> { "Item." },
+                Text = "Attach to a Dúnedain or Noldor hero. Limit 1 per hero.\r\nWhile you are engaged with an enemy, attached hero gets +1 Willpower and cannot have its Willpower reduced.",
+                FlavorText = "...each cloak was pinned upon the left shoulder by a brooch of silver shaped like a rayed star. -The Return of the King",
+                Artist = Artist.Alexandr_Elichev,
+                Number = 13,
                 Quantity = 3
             });
             Cards.Add(new Card()

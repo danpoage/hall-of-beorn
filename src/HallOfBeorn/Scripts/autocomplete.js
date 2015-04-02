@@ -3,7 +3,7 @@
     "Mablung", "Bow of the Galadhrim", "Celduin Traveler", "Defender of the West", "Follow Me", "Galadhon Archer", "Island Amid Perils", "Mirkwood Pioneer", "Tighten Our Belts", "Wingfoot",
     "Galadriel", "Heir of Mardil", "Orophin", "Henneth Annun Guard", "Charge of the Rohirrim", "Galadriel's Handmaiden", "Mirror of Galadriel", "Wandering Ent", "Cloak of Lorien", "Nenya",
     "Erkenbrand", "Warden of Helm's Deep", "The Day's Rising", "Captain of Gondor", "Booming Ent", "Ride Them Down", "Shadows Give Way", "Don't Be Hasty!", "Waters of Nimrodel", "Treebeard",
-    "Halbarad", "Weather Hills Watchman", "Dunedain Hunter", "Tireless Hunters", "Ranger Summons", "Expert Trackers", "Heir of Valandil", "Secret Vigil", "Gather Information", "Ranger of the North", "Iarion",
+    "Halbarad", "Weather Hills Watchman", "Dunedain Hunter", "Tireless Hunters", "Ranger Summons", "Expert Trackers", "Heir of Valandil", "Secret Vigil", "Gather Information", "Ranger of the North", "Warden of Annuminas", "Sarn Ford Sentry", "Star Brooch", "Iarion",
           "+set:",
           "-set:",
           "+type:",
