@@ -105,34 +105,34 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                     return true;
                 }
             });
-            Cards.Add(Card.Enemy("Invading Orc", false, "4C4A8641-6C80-4BDD-9536-ECCA4B294F65", "Assault on Osgiliath Nightmare", 20, 2, 5, 3, 3)
+            Cards.Add(Card.Enemy("Invading Orc", "4C4A8641-6C80-4BDD-9536-ECCA4B294F65", "Assault on Osgiliath Nightmare", 20, 2, 5, 3, 3)
                 .WithTraits("Orc.", "Mordor.")
                 .WithEffect(CardEffectType.Forced, "Forced: After Invading ~Orc attacks and destroys a character, that character's controller returns a location he controls to the staging area.")
                 .WithShadow("Shadow: If this attack destroys a character, return a location you control to the staging area.").WithInfo(2, 3, Artist.Alvaro_Calvo_Escudero));
-            Cards.Add(Card.Enemy("Haradrim Warrior", false, "39BF7B4D-81F2-404F-8F7D-4F10D8C32BE0", "Assault on Osgiliath Nightmare", 30, 255, 3, 3, 4)
+            Cards.Add(Card.Enemy("Haradrim Warrior", "39BF7B4D-81F2-404F-8F7D-4F10D8C32BE0", "Assault on Osgiliath Nightmare", 30, 255, 3, 3, 4)
                 .WithTraits("Harad.")
                 .WithKeywords("Archery X.")
                 .WithEffect(CardEffectType.Passive, "X is the number of locations controlled by the first player.")
                 .WithEffect(CardEffectType.Forced, "Forced: After Haradrim ~Warrior engages a player, it gets +X Attack and +X Defense until the end of the round.")
                 .WithShadow("Shadow: Deal 1 damage to defending character.")
                 .WithInfo(3, 3, Artist.Smirtouille));
-            Cards.Add(Card.Location("Palace Remains", true, "3EAC42AA-A834-4590-9ED6-FAD6386B0641", "Assault on Osgiliath Nightmare", 0, 5)
+            Cards.Add(Card.Location("Palace Remains", "3EAC42AA-A834-4590-9ED6-FAD6386B0641", "Assault on Osgiliath Nightmare", 0, 5)
                 .WithTraits("Osgiliath.")
                 .WithEffect(CardEffectType.Passive, "Immune to player card effects. Palace Remains gets +1 Threat for each resource token on it.")
                 .WithEffect(CardEffectType.Passive, "The players cannot travel here unless there are at least 5 resource tokens on Palace Remains.")
                 .WithEffect(CardEffectType.Passive, "While Palace Remains is in the staging area, it gains \"Forced: After a player takes control of a location, place 1 resource token here.\"")
                 .WithInfo(4, 1, Artist.Mariusz_Gandzel));
-            Cards.Add(Card.Location("Crumbled Battlements", false, "EBB34447-9755-472D-B9BB-29C47B90ACE0", "Assault on Osgiliath Nightmare", 3, 2)
+            Cards.Add(Card.Location("Crumbled Battlements", "EBB34447-9755-472D-B9BB-29C47B90ACE0", "Assault on Osgiliath Nightmare", 3, 2)
                 .WithTraits("Osgiliath.")
                 .WithEffect(CardEffectType.Forced, "Forced: When you take control of Crumbled Battlements, shuffle the encounter discard pile into the encounter deck and discard cards from the encounter deck until an enemy is discarded. Put the discarded enemy into play engaged with you.")
                 .WithEffect(CardEffectType.Flavor_Text, "\"Here they come pouring through the breaches!\" -Man of Gondor, The Return of the King")
                 .WithInfo(5, 2, Artist.Mariusz_Gandzel));
-            Cards.Add(Card.Location("Eastern Quarter", false, "E15B0465-A247-4330-A96A-B9BC652665F1", "Assault on Osgiliath Nightmare", 3, 3)
+            Cards.Add(Card.Location("Eastern Quarter", "E15B0465-A247-4330-A96A-B9BC652665F1", "Assault on Osgiliath Nightmare", 3, 3)
                 .WithTraits("Osgiliath.")
                 .WithEffect(CardEffectType.Forced, "Forced: When you take control of Eastern Quarter, discard each event card in your hand.")
                 .WithEffect(CardEffectType.Passive, "While a player controls Eastern Quarter it gains: \"Forced: After the 'when revealed' effect of a treachery is canceled, return Easter Quarter to the staging area.\"")
                 .WithInfo(6, 2, Artist.Mariusz_Gandzel));
-            Cards.Add(Card.Location("Western Quarter", false, "40943618-9421-44B2-A863-F7D4D919DBD7", "Assault on Osgiliath Nightmare", 2, 4)
+            Cards.Add(Card.Location("Western Quarter", "40943618-9421-44B2-A863-F7D4D919DBD7", "Assault on Osgiliath Nightmare", 2, 4)
                 .WithTraits("Osgiliath.")
                 .WithEffect(CardEffectType.Forced, "Forced: When you take control of Western Quarter, discard the highest cost attachment you control.")
                 .WithEffect(CardEffectType.Passive, "While a player controls Western Quarter it gains: \"Forced: After the 'when revealed' effect of a treachery is canceled, return Western Quarter to the staging area.\"")

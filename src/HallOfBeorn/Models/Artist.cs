@@ -325,6 +325,7 @@ namespace HallOfBeorn.Models
             //The Lost Realm
             all.Add(Artist.Alexandr_Elichev);
             all.Add(Artist.Kim_Sokol);
+            all.Add(Artist.Michael_Wolmarans);
 
             //First Age
             all.Add(Artist.Unknown);
@@ -745,6 +746,7 @@ namespace HallOfBeorn.Models
         public static Artist Melissa_Findley = new Artist { Name = "Melissa Findley", URL = "http://melissafindley.deviantart.com" };
         public static Artist Michael_Komarck = new Artist { Name = "Michael Komarck", URL = "http://www.komarckart.com" };
         public static Artist Michael_Rasmussen = new Artist { Name = "Michael Rasmussen", URL = "http://www.rasmussenillustration.com" };
+        public static Artist Michael_Wolmarans = new Artist { Name = "Michael Wolmarans", URL = "https://artstation.com/artist/tenebrae" };
         public static Artist Mike_Capprotti = new Artist { Name = "Mike Capprotti", URL = "http://capprotti.deviantart.com" };
         public static Artist Mike_Nash = new Artist { Name = "Mike Nash", URL = "http://www.mike-nash.com/HOME.html" };
         public static Artist Mikhail_Yakovlev = new Artist { Name = "Mikhail Yakovlev", URL = "http://yakovlevart.blogspot.com" };

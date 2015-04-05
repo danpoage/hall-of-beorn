@@ -88,30 +88,31 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                     return true;
                 }
             });
-            Cards.Add(Card.Enemy("Black Númenorean", true, "07C0FBEC-771B-4FD2-AF0E-B9AC9165A500", "The Blood of Gondor Nightmare", 35, 255, 5, 4, 9)
+            Cards.Add(Card.Enemy("Black Númenorean", "07C0FBEC-771B-4FD2-AF0E-B9AC9165A500", "The Blood of Gondor Nightmare", 35, 255, 5, 4, 9)
+                .WithUnique()
                 .WithNormalizedTitle("Black Numenorean")
                 .WithTraits("Mordor.")
                 .WithEffect(CardEffectType.Passive, "X is the total number of hidden cards in the game.")
                 .WithEffect(CardEffectType.Forced, "Forced: When Black Númenórean engages you, turn all hidden cards in your play area faceup.")
                 .WithEffect(CardEffectType.Forced, "Forced: At the end of the round, each player must raise his threat by 1 for each hidden card in his play area.")
                 .WithInfo(2, 1, Artist.Melanie_Maier));
-            Cards.Add(Card.Enemy("Orc Trickster", false, "DCE1FD22-F5A2-46A6-8FEB-6B8A5D734487", "The Blood of Gondor Nightmare", 20, 3, 3, 2, 2)
+            Cards.Add(Card.Enemy("Orc Trickster", "DCE1FD22-F5A2-46A6-8FEB-6B8A5D734487", "The Blood of Gondor Nightmare", 20, 3, 3, 2, 2)
                 .WithTraits("Orc.")
                 .WithEffect(CardEffectType.Forced, "Forced: After Orc Trickster is turned faceup as a hidden card, it makes an immediate attack against the engaged player.")
                 .WithEffect(CardEffectType.Forced, "Forced: When Orc Trickster would be damaged, a random player takes it facedown as a hidden card in his play area instead.")
                 .WithInfo(3, 4, Artist.Piya_Wannachaiwong));
-            Cards.Add(Card.Enemy("Uruk Marksman", false, "6E305E73-B5F4-4F84-B718-28B86B1A335D", "The Blood of Gondor Nightmare", 40, 4, 2, 2, 4)
+            Cards.Add(Card.Enemy("Uruk Marksman", "6E305E73-B5F4-4F84-B718-28B86B1A335D", "The Blood of Gondor Nightmare", 40, 4, 2, 2, 4)
                 .WithTraits("Orc.", "Uruk.", "Mordor.")
                 .WithKeywords("Archery 3.")
                 .WithEffect(CardEffectType.Forced, "Forced: After Uruk Marksman is turned faceup as a hidden card, deal 3 damage to a character controlled by the engaged player and return Uruk Marksman to the staging area.")
                 .WithInfo(4, 3, Artist.Niten));
-            Cards.Add(Card.Location("Edge of Ithilien", false, "D78DB2CE-4A25-4B77-8CB5-A1E73BD6D314", "The Blood of Gondor Nightmare", 3, 6)
+            Cards.Add(Card.Location("Edge of Ithilien", "D78DB2CE-4A25-4B77-8CB5-A1E73BD6D314", "The Blood of Gondor Nightmare", 3, 6)
                 .WithTraits("Ithilien.", "Forest.")
                 .WithKeywords("Archery X.")
                 .WithEffect(CardEffectType.Passive, "X is the highest number of hidden cards in any player's play area.")
                 .WithShadow("Shadow: Turn 1 hidden card in your play area faceup. If it is a treachery card, attacking enemy makes an additional attack after this one.")
                 .WithInfo(5, 3, Artist.Jose_Vega));
-            Cards.Add(Card.Location("Mountains of Shadow", false, "F6F8BDC1-6D58-4B03-85A1-D0825145C839", "The Blood of Gondor Nightmare", 4, 4)
+            Cards.Add(Card.Location("Mountains of Shadow", "F6F8BDC1-6D58-4B03-85A1-D0825145C839", "The Blood of Gondor Nightmare", 4, 4)
                 .WithTraits("Mountain.")
                 .WithEffect(CardEffectType.Passive, "While Mountains of Shadow is the active location, it gains: \"Forced: After you turn 1 or more hidden cards faceup, take 1 hidden card.\"")
                 .WithShadow("Shadow: Either take 2 hidden cards, or this attack is considered undefended.")

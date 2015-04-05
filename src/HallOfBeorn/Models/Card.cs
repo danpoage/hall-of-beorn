@@ -51,7 +51,7 @@ namespace HallOfBeorn.Models
 
         public string Html { get; set; }
 
-        public Card Flavor(string flavor)
+        public Card WithFlavor(string flavor)
         {
             effects.Add(new Effect(CardEffectType.Flavor_Text, LayoutType.Block).Flavor(flavor));
             return this;
@@ -334,7 +334,7 @@ namespace HallOfBeorn.Models
             return false;
         }
 
-        public static Card Enemy(string title, bool isUnique, string id, string encounterSet, byte? engagementCost, byte? threat, byte? attack, byte? defense, byte? hitPoints)
+        public static Card Enemy(string title, string id, string encounterSet, byte? engagementCost, byte? threat, byte? attack, byte? defense, byte? hitPoints)
         {
             var isVariableThreat = threat.HasValue && threat.Value == byte.MaxValue;
             var isVariableAttack = attack.HasValue && attack.Value == byte.MaxValue;
@@ -344,9 +344,8 @@ namespace HallOfBeorn.Models
             return new Card()
             {
                 CardType = Models.CardType.Enemy,
-                IsUnique = isUnique,
                 Title = title,
-                Id = id,
+                Id = string.IsNullOrEmpty(id) ? Guid.NewGuid().ToString() : id,
                 EngagementCost = engagementCost,
                 Threat = threat,
                 IsVariableThreat = isVariableThreat,
@@ -360,14 +359,13 @@ namespace HallOfBeorn.Models
             };
         }
 
-        public static Card Location(string title, bool isUnique, string id, string encounterSet, byte? threat, byte questPoints)
+        public static Card Location(string title, string id, string encounterSet, byte? threat, byte questPoints)
         {
             return new Card()
             {
                 CardType = Models.CardType.Location,
-                IsUnique = isUnique,
                 Title = title,
-                Id = id,
+                Id = string.IsNullOrEmpty(id) ? Guid.NewGuid().ToString() : id,
                 Threat = threat,
                 QuestPoints = questPoints,
                 EncounterSet = encounterSet
@@ -380,9 +378,33 @@ namespace HallOfBeorn.Models
             {
                 CardType = Models.CardType.Treachery,
                 Title = title,
-                Id = id,
+                Id = string.IsNullOrEmpty(id) ? Guid.NewGuid().ToString() : id,
                 EncounterSet = encounterSet
             };
+        }
+
+        public static Card EncounterSideQuest(string title, string id, string encounterSet, byte questPoints)
+        {
+            return new Card()
+            {
+                CardType = CardType.Encounter_Side_Quest,
+                Title = title,
+                Id = string.IsNullOrEmpty(id) ? Guid.NewGuid().ToString() : id,
+                EncounterSet = encounterSet,
+                QuestPoints = questPoints
+            };
+        }
+
+        public Card WithUnique()
+        {
+            this.IsUnique = true;
+            return this;
+        }
+
+        public Card WithEasyModeQuantity(byte quantity)
+        {
+            this.EasyModeQuantity = quantity;
+            return this;
         }
 
         public Card WithTraits(params string[] traits)
