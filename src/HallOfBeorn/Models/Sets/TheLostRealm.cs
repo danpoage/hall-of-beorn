@@ -139,7 +139,7 @@ namespace HallOfBeorn.Models.Sets
                 Sphere = Sphere.Leadership,
                 ResourceCost = 1,
                 Traits = new List<string> { "Signal." },
-                Text = "Play only if you control a Dúnedain hero.\r\nPlanning Action: Shuffle 1 of your set aside Ranger of th North allies with the encounter keyword into the encounter deck. Then, remove Ranger Summons from the game.",
+                Text = "Play only if you control a Dúnedain hero.\r\nPlanning Action: Shuffle 1 of your set aside Ranger of the North allies with the encounter keyword into the encounter deck. Then, remove Ranger Summons from the game.",
                 FlavorText = "\"We rode as swiftly as we might when your summons came.\" -Halbarad, The Return of the King",
                 Artist = Artist.Smirtouille,
                 Number = 7,
