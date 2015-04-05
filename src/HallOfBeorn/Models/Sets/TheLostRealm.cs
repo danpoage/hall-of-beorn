@@ -352,7 +352,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithFlavor("While scouting ahead, Iârion is ambushed by several Orcs. The Ranger is knoced unconscious and dragged away by the Orcs. You must rescue him!")
                 .WithVictoryPoints(10)
                 .WithInfo(24, 1, Artist.JB_Casacop));
-            Cards.Add(Card.Enemy("Cornered Orc", "", "", 20, 2, 2, 1, 2)
+            Cards.Add(Card.Enemy("Cornered Orc", "88156181-C4C7-4B09-8F88-72AFA59C809B", "Intruders in Chetwood", 20, 2, 2, 1, 2)
                 .WithTraits("Orc.")
                 .WithText("Forced: After Corned Orc engages a player, it makes an immediate attack.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the defending character is damaged).")
@@ -381,7 +381,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithInfo(29, 2, Artist.Juan_Carlos_Barquet));
             Cards.Add(Card.Location("Concealed Orc-camp", "AF11F2AF-D9DC-4001-8375-99F7548C21A7", "The Weather Hills", 2, 2)
                 .WithTraits("Arnor.", "Hills.")
-                .WithText("While Concealed Orc-camp is the active location is gains: \"Response: When Concealed Orc-camp is explored, place 1 resource token on the Mission objective.\"\r\nTravel: The first player searches the encounter deck and discard pile for an Orc enemy and put it into playe engaged with him. Shuffle the encounter deck.")
+                .WithText("While Concealed Orc-camp is the active location is gains: \"Response: When Concealed Orc-camp is explored, place 1 resource token on the Mission objective.\"\r\nTravel: The first player searches the encounter deck and discard pile for an Orc enemy and put it into play engaged with him. Shuffle the encounter deck.")
                 .WithInfo(30, 3, Artist.Mariusz_Gandzel));
             Cards.Add(Card.Treachery("Ice Storm", "79EB9FDC-9806-4A6B-9F2A-025EF37F141D", "The Weather Hills")
                 .WithTraits("Weather.")
