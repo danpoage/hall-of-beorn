@@ -318,6 +318,7 @@ namespace HallOfBeorn.Models.Sets
                 EasyModeQuantity = 2,
                 EncounterSet = "Intruders in Chetwood"
             });
+            /*
             Cards.Add(Card.Location("Borders of Bree-land", "", "Intruders in Chetwood", 2, 4)
                 .WithTraits("Arnor.")
                 .WithText("While Borders of Bree-land is in the staging area it gains: \"Forced: At the beginning of the quest phase, return 1 enemy engaged with a player to the staging area.\"")
@@ -499,7 +500,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("When Revealed: Each player places all cards in his hand facedown underneath Lost in the Wilderness.\r\nForced: When Lost in the Wilderness is defeated, return each card underneath it to its owner's hand.")
                 .WithFlavor("You've lost your way in the vastness of Arnor. You must search around until you find your trail again.")
                 .WithVictoryPoints(10)
-                .WithInfo(51, 1, Artist.Alvaro_Calvo_Escudero));
+                .WithInfo(51, 1, Artist.Alvaro_Calvo_Escudero));*/
             Cards.Add(new Card()
             {
                 Title = "Make Camp",
