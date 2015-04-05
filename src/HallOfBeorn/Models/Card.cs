@@ -297,12 +297,14 @@ namespace HallOfBeorn.Models
                 case Models.CardType.Attachment:
                 case Models.CardType.Event:
                 case Models.CardType.Treasure:
+                case Models.CardType.Player_Side_Quest:
                     return DeckType.Player;
                 case Models.CardType.Enemy:
                 case Models.CardType.Location:
                 case Models.CardType.Treachery:
                 case Models.CardType.Objective:
                 case Models.CardType.Objective_Ally:
+                case Models.CardType.Encounter_Side_Quest:
                     return DeckType.Encounter;
                 case Models.CardType.Quest:
                 case Models.CardType.Campaign:
