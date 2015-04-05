@@ -281,7 +281,8 @@ namespace HallOfBeorn.Models.Sets
                 Text = "X is the number of quest cards in play.\r\nThe first player gains control of Iârion.\r\nResponse: After a side quest is revealed from the encounter deck, ready Iârion.\r\nIf Iârion leaves play, the players lose the game.",
                 Artist = Artist.JB_Casacop,
                 Number = 16,
-                Quantity = 1
+                Quantity = 1,
+                EncounterSet = "Iârion"
             });
             Cards.Add(new Card()
             {
@@ -318,189 +319,188 @@ namespace HallOfBeorn.Models.Sets
                 EasyModeQuantity = 2,
                 EncounterSet = "Intruders in Chetwood"
             });
-            /*
-            Cards.Add(Card.Location("Borders of Bree-land", "", "Intruders in Chetwood", 2, 4)
+            Cards.Add(Card.Location("Borders of Bree-land", "1999261E-2DEC-40EC-86DC-6874A803F5CD", "Intruders in Chetwood", 2, 4)
                 .WithTraits("Arnor.")
                 .WithText("While Borders of Bree-land is in the staging area it gains: \"Forced: At the beginning of the quest phase, return 1 enemy engaged with a player to the staging area.\"")
                 .WithShadow("Shadow: Defending character gets -1 Defense for each quest stage in play.")
                 .WithInfo(19, 2, Artist.Jake_Bullock));
-            Cards.Add(Card.Location("Outlying Homestead", "", "Intruders in Chetwood", 2, 8)
+            Cards.Add(Card.Location("Outlying Homestead", "BE8A5A2A-1190-4B23-A306-F95BC9265CC3", "Intruders in Chetwood", 2, 8)
                 .WithTraits("Arnor.")
                 .WithKeywords("Doomed 1.")
                 .WithText("While Outlying Homestead is in the staging area, players cannot reduce their threat.\r\nTravel: Reveal a card from the encounter deck.")
                 .WithFlavor("They were far beyond the borders of the Bree-land, out in the pathless wilderness... -The Fellowship of the Ring")
                 .WithInfo(20, 3, Artist.Ed_Mattinian)
                 .WithEasyModeQuantity(2));
-            Cards.Add(Card.Treachery("Sudden Assault", "", "Intruders in Chetwood")
+            Cards.Add(Card.Treachery("Sudden Assault", "8B9BD048-01E3-4941-88AB-51A2E29E91E1", "Intruders in Chetwood")
                 .WithText("When Revealed: If the total Willpower of character committed to the quest is greater than the total Threat in the staging area, each enemy in the staging area makes an immediate attack against the first player. If no attach is made this way, search the encounter deck and discard pile for an Orc War Party and add it to the staging area. Shuffle the encounter deck. This effect cannot be canceled.")
                 .WithInfo(21, 2, Artist.Jon_Bosco)
                 .WithEasyModeQuantity(0));
-            Cards.Add(Card.Treachery("Surprising Speed", "", "Intruders in Chetwood")
+            Cards.Add(Card.Treachery("Surprising Speed", "B933B8D3-3F5F-41AB-AAF3-E2BEC40D8DD6", "Intruders in Chetwood")
                 .WithText("When Revealed: Each player returns 1 enemy engaged with him to the staging area. If no enemy was returned to the staging area this way, Surprising Speed gains surge and doomed 1.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack. Return attacking enemy to the staging area after this attack.")
                 .WithInfo(22, 3, Artist.Matthew_Cowdery)
                 .WithEasyModeQuantity(2));
-            Cards.Add(Card.EncounterSideQuest("Orc Rearguard", "", "Intruders in Chetwood", 3)
+            Cards.Add(Card.EncounterSideQuest("Orc Rearguard", "8AA24D7D-EF41-44BA-9EC4-BF1A8337A39A", "Intruders in Chetwood", 3)
                 .WithText("No more than 3 progress tokens can be placed on the current quest each round.\r\nWhile Orc Rearguard is the current quest it gains: \"Forced: At the end of the staging step, reveal 1 card from the encounter deck.\"")
                 .WithFlavor("Some of the Orcs have broken from the war party to hinder your pursuit. Until you deal with them, it will be difficult to continue your chase...")
                 .WithVictoryPoints(10)
                 .WithInfo(23, 1, Artist.Jon_Bosco));
-            Cards.Add(Card.EncounterSideQuest("Rescue Iârion", "", "Intruders in Chetwood", 6)
+            Cards.Add(Card.EncounterSideQuest("Rescue Iârion", "EC970E93-A6A1-4BEC-9C36-DBCF8C6F27A5", "Intruders in Chetwood", 6)
                 .WithNormalizedTitle("Rescue Iarion")
                 .WithKeywords("Time 4.")
                 .WithText("When Revealed: The first player loses control of Iârion and places him facedown underneath this stage. When this stage is defeated, the first player takes control of Iârion and exhausts him.\r\nForced: After the last time counter is removed from this stage, discard Iârion.")
                 .WithFlavor("While scouting ahead, Iârion is ambushed by several Orcs. The Ranger is knoced unconscious and dragged away by the Orcs. You must rescue him!")
                 .WithVictoryPoints(10)
                 .WithInfo(24, 1, Artist.JB_Casacop));
-            Cards.Add(Card.Enemy("Cornered Orc", "", "Lightning", 20, 2, 2, 1, 2)
+            Cards.Add(Card.Enemy("Cornered Orc", "", "", 20, 2, 2, 1, 2)
                 .WithTraits("Orc.")
                 .WithText("Forced: After Corned Orc engages a player, it makes an immediate attack.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the defending character is damaged).")
                 .WithInfo(25, 5, Artist.Tey_Bartolome)
                 .WithEasyModeQuantity(4));
-            Cards.Add(Card.Location("Amon Forn", "", "Lightninh", 4, 6)
+            Cards.Add(Card.Location("Amon Forn", "0D0849D8-358C-4859-9337-CBB4DC949F35", "The Weather Hills", 4, 6)
                 .WithUnique()
                 .WithTraits("Arnor.", "Ruins.")
                 .WithText("Immune to player card effects.\r\nWhile Amon Forn is the active location, it gains: \"Forced: After an Orc enemy is added to the staging area, it makes an immediate attack against the first player.\"\r\nThe players cannot win while Amon Forn is in play.")
                 .WithVictoryPoints(3)
                 .WithInfo(26, 1, Artist.Dimitri_Bielak));
-            Cards.Add(Card.Location("Weathered Hilltop", "", "Lightning", 1, 5)
+            Cards.Add(Card.Location("Weathered Hilltop", "24F367E0-0664-4D44-8BE6-3F591A750376", "The Weather Hills", 1, 5)
                 .WithTraits("Arnor.", "Hills.")
                 .WithText("Weathered Hilltop gets +1 Threat for each resource token on it.\r\nForced: After a Weather treachery is revealed from the encounter deck, place 1 resource token here.")
                 .WithFlavor("\"There is little shelter or defence here...\" -Aragorn, The Fellowship of the Ring")
                 .WithInfo(27, 3, Artist.Ed_Mattinian));
-            Cards.Add(Card.Location("Exposed Ridge", "", "Lightning", 3, 3)
+            Cards.Add(Card.Location("Exposed Ridge", "E94ACE01-D2FF-4B0C-B652-0B6E3E0594B3", "The Weather Hills", 3, 3)
                 .WithTraits("Arnor.", "Hills.")
                 .WithText("While Exposed Ridge is the active location, it gains: \"Forced: At the end of the refresh phase, each player deals 1 damage to a character he controls.\"")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack for each damaged character the defending player controls.")
                 .WithInfo(28, 3, Artist.Alyn_Spiller)
                 .WithEasyModeQuantity(2));
-            Cards.Add(Card.Location("Sheltered Valley", "", "Lightninh", 2, 4)
+            Cards.Add(Card.Location("Sheltered Valley", "D5129DC3-C295-4A1C-A9C9-3A154F7C755A", "The Weather Hills", 2, 4)
                 .WithTraits("Arnor.", "Hills.")
                 .WithText("While Sheltered Valley is the active location, it gains: \"Response: When Sheltered Valley is explored, heal all damage from 1 character.\"\r\nTravel: Remove 1 resource token from the Mission objective.")
                 .WithInfo(29, 2, Artist.Juan_Carlos_Barquet));
-            Cards.Add(Card.Location("Concealed Orc-camp", "", "Lightning", 2, 2)
+            Cards.Add(Card.Location("Concealed Orc-camp", "AF11F2AF-D9DC-4001-8375-99F7548C21A7", "The Weather Hills", 2, 2)
                 .WithTraits("Arnor.", "Hills.")
                 .WithText("While Concealed Orc-camp is the active location is gains: \"Response: When Concealed Orc-camp is explored, place 1 resource token on the Mission objective.\"\r\nTravel: The first player searches the encounter deck and discard pile for an Orc enemy and put it into playe engaged with him. Shuffle the encounter deck.")
                 .WithInfo(30, 3, Artist.Mariusz_Gandzel));
-            Cards.Add(Card.Treachery("Ice Storm", "", "Lightning")
+            Cards.Add(Card.Treachery("Ice Storm", "79EB9FDC-9806-4A6B-9F2A-025EF37F141D", "The Weather Hills")
                 .WithTraits("Weather.")
                 .WithText("When Revealed: Each player assigns X damage among characters he controls, where X is the number of cards in play. Then, exhaust each damaged character.")
                 .WithShadow("Shadow: Assign X damage among characters you control. X is the number of quest cards in play.")
                 .WithInfo(31, 2, Artist.Romana_Kendelic)
                 .WithEasyModeQuantity(1));
-            Cards.Add(Card.EncounterSideQuest("Find Shelter", "", "Lightning", 6)
+            Cards.Add(Card.EncounterSideQuest("Find Shelter", "", "The Weather Hills", 6)
                 .WithKeywords("Surge.", "Time 4.")
                 .WithText("Forced: After the last time counter is removed from this quest cards, each player deals 4 damage to a hero he controls. Then, place 4 time counters on this quest card.")
                 .WithFlavor("The weather is growing steadily worse, and black clouds loom on the horizon. You must find a safe place to shelter or be caught in the storm...")
                 .WithVictoryPoints(10)
                 .WithInfo(32, 1, Artist.Smirtouille));
-            Cards.Add(Card.Enemy("Thaurdir", "", "Skull", 1, 4, 6, 4, 9)
+            Cards.Add(Card.Enemy("Thaurdir", "E4252842-3141-4279-A8D1-E73C913723DB", "Deadmen's Dike", 1, 4, 6, 4, 9)
                 .WithUnique()
                 .WithTraits("Undead.", "Wraith.")
                 .WithKeywords("Indestructible.")
                 .WithText("Cannot have attachments.\r\nForced: After a treachery card with the Sorcery trait is revealed from the encounter deck, Thaurdir makes an immediate attack against the first player.")
                 .WithInfo(33, 1, Artist.Joel_Hustak));
-            Cards.Add(Card.Enemy("Thaurdir's Damned", "", "Skull", 35, 3, 5, 2, 6)
+            Cards.Add(Card.Enemy("Thaurdir's Damned", "DB77627C-9B7B-455C-AFBA-E6116B80CCB3", "Deadmen's Dike", 35, 3, 5, 2, 6)
                 .WithTraits("Undead.", "Wraith.")
                 .WithText("Forced: After Thaurdir's Damned engages you, discard the top 2 cards of your deck and assign X damage among characters you control. X is the combined printed cost of the discarded cards.")
                 .WithFlavor("\"I saw them; grim faces and evil...\" -Frodo, The Two Towers")
                 .WithInfo(34, 3, Artist.Jim_Pavelec)
                 .WithEasyModeQuantity(1));
-            Cards.Add(Card.Enemy("Baleful Shade", "", "Skull", 30, 2, 2, 1, 5)
+            Cards.Add(Card.Enemy("Baleful Shade", "C8B1CA1C-E3FA-48CF-8FE2-850EDDCDFFD7", "Deadmen's Dike", 30, 2, 2, 1, 5)
                 .WithTraits("Undead.", "Wraith.")
                 .WithText("Forced: When Baleful Shade attacks, the defending player discards the top card of his deck. If the discarded card is an ally, Baleful Shade gets +2 Attack for this attack.")
                 .WithShadow("Shadow: Exhaust a character you control.")
                 .WithInfo(35, 4, Artist.Florian_Devos));
-            Cards.Add(Card.Location("Broken Battlements", "", "Skull", 2, 6)
+            Cards.Add(Card.Location("Broken Battlements", "010935A5-F579-4E39-B373-2C5D335241F1", "Deadmen's Dike", 2, 6)
                 .WithTraits("Fornost.", "Ruins.")
                 .WithKeywords("Time 3.")
                 .WithText("Forced: After the last time counter is removed from Broken Battlements, each player discards the top 5 cards of his deck and places 1 time counter here.\r\nTravel: Each player discard the top card of his deck.")
                 .WithFlavor("\"Men call it Deadman's Dike, and they fear to tread there.\" -Elrond, The Fellowship of the Ring")
                 .WithInfo(36, 3, Artist.Juan_Carlos_Barquet)
                 .WithEasyModeQuantity(2));
-            Cards.Add(Card.Location("Norbury Tombs", "", "Skull", 2, 5)
+            Cards.Add(Card.Location("Norbury Tombs", "30C0BBDB-E891-4277-9B52-F3045E20B8E3", "Deadmen's Dike", 2, 5)
                 .WithTraits("Fornost.", "Ruins.")
                 .WithText("While Norbury Tombs is the active location, it gains: \"Respnse: When Norbury Tombs is explored, each player shuffles the top 5 cards of his discard pile into his deck.\"\r\nTravel: Return the topmost enemy in the encounter discard pile to the staging area.")
                 .WithInfo(37, 2, Artist.Julian_Kok));
-            Cards.Add(Card.Location("Fornost Square", "", "Skull", 1, 4)
+            Cards.Add(Card.Location("Fornost Square", "57E770A2-8DD9-4EB8-9698-8DA7AC186D4D", "Deadmen's Dike", 1, 4)
                 .WithTraits("Fornost.", "Ruins.")
                 .WithText("Fornost Square gets +1 Threat for each resource token on it.\r\nForced: After the first player discards any number of cards from the top of his deck, place 1 resource token here.")
                 .WithFlavor("\"...the heirs of Valandil removed and dwelt at Fornost on the high North Downs, and that now too is desolate.\" -Elrond, The Fellowship of the Ring")
                 .WithInfo(38, 3, Artist.Mariusz_Gandzel));
-            Cards.Add(Card.Location("Haunted Keep", "", "Skull", 3, 3)
+            Cards.Add(Card.Location("Haunted Keep", "7FD9F281-8C01-4D7B-90F9-15DB53512B06", "Deadmen's Dike", 3, 3)
                 .WithTraits("Fornost.", "Ruins.")
                 .WithText("While Haunted Keep is the active location, the first Undead enemy revealed each round gains surge.")
                 .WithShadow("Shadow: Defending player discards the top card of his deck. Attacking enemy gets +X Attack where X is the discarded card's printed cost.")
                 .WithInfo(39, 3, Artist.Dimitri_Bielak)
                 .WithEasyModeQuantity(2));
-            Cards.Add(Card.Location("Deadmen's Gate", "", "Skull", 4, 4)
+            Cards.Add(Card.Location("Deadmen's Gate", "76181197-E3B1-4332-86CF-81034FCD05EC", "Deadmen's Dike", 4, 4)
                 .WithTraits("Fornost.", "Ruins.")
                 .WithText("While Deadmen's Gate is the active location, it gains: \"Forced: After a player triggers an 'Action' or 'Response' effect, he must discard the top card of his deck.\"")
                 .WithShadow("Shadow: Discard an attachment you control.")
                 .WithInfo(40, 2, Artist.Michael_Wolmarans)
                 .WithEasyModeQuantity(1));
-            Cards.Add(Card.Treachery("Unnatural Fog", "", "Skull")
+            Cards.Add(Card.Treachery("Unnatural Fog", "67D5DF46-8965-4A83-B2AE-620E4F8B9E62", "Deadmen's Dike")
                 .WithTraits("Sorcery.")
                 .WithKeywords("Doomed 2.")
                 .WithText("When Revealed: Each player must either discard 1 card from the top of his deck for each questing character he controls, or remove each character he controls from the quest.")
                 .WithFlavor("The mist was flowing past him now in shreds and tatters. -The Fellowship of the Ring")
                 .WithInfo(41, 2, Artist.Joel_Hustak)
                 .WithEasyModeQuantity(1));
-            Cards.Add(Card.EncounterSideQuest("The Shadow World", "", "Skull", 5)
+            Cards.Add(Card.EncounterSideQuest("The Shadow World", "FE6434AC-6D53-43DF-8C35-D9B171481D8D", "Deadmen's Dike", 5)
                 .WithKeywords("Surge.")
                 .WithText("Forced: At the end of the refresh phase, each player discards the top X cards of his deck, where X is the number of Undead enemies engaged with him.")
                 .WithFlavor("The more you struggle against the undead, the deeper you are drawn into the wraith-world. You must escape before madness or despair takes you...")
                 .WithVictoryPoints(10)
                 .WithInfo(42, 1, Artist.Guillaume_Ducos));
-            Cards.Add(Card.Enemy("Angmar Orc", "", "Axe", 25, 2, 2, 3, 3)
+            Cards.Add(Card.Enemy("Angmar Orc", "D01FE640-3D69-428E-B854-DFD83A4CDDB0", "Angmar Orcs", 25, 2, 2, 3, 3)
                 .WithTraits("Orc.")
                 .WithText("When Revealed: Either discard 1 ally from play, or reveal an additional encounter card.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack. If this attack destroys an ally, return attacking enemy to the staging area.")
                 .WithInfo(43, 3, Artist.Tey_Bartolome));
-            Cards.Add(Card.Enemy("Angmar Marauder", "", "Axe", 30, 3, 3, 2, 4)
+            Cards.Add(Card.Enemy("Angmar Marauder", "6DE617AC-669D-428C-8DCE-57FA54AC660B", "Angmar Orcs", 30, 3, 3, 2, 4)
                 .WithTraits("Orc.")
                 .WithText("Forced: After Angmar Marauder attacks and destroys an ally, return it to the staging area.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack for each ally the defending player controls.")
                 .WithInfo(44, 3, Artist.Anthony_Feliciano)
                 .WithEasyModeQuantity(2));
-            Cards.Add(Card.Enemy("Angmar Captain", "", "Axe", 35, 3, 5, 2, 5)
+            Cards.Add(Card.Enemy("Angmar Captain", "11588D48-BA35-446B-BBFC-8345DCEF9DBB", "Angmar Orcs", 35, 3, 5, 2, 5)
                 .WithTraits("Orc.")
                 .WithText("Forced: After Angmar Captain attacks and destroys an ally, discard the top card of the defending player's deck. If the discarded card is an ally, Angmar Captain makes an additional attack against the defending player.")
                 .WithFlavor("In the twilight he saw a large black Orc... -The Two Towers")
                 .WithInfo(45, 2, Artist.Joel_Hustak)
                 .WithEasyModeQuantity(1));
-            Cards.Add(Card.EncounterSideQuest("Orc Ambush", "", "Axe", 4)
+            Cards.Add(Card.EncounterSideQuest("Orc Ambush", "1A7EA85D-32F2-4F1E-A25A-3FB33A867017", "Angmar Orcs", 4)
                 .WithText("Each Orc enemy gets +1 Threat, +1 Attack and +1 Defense.\r\nWhen Revealed: Each player must search the encounter deck and discard pile for an Orc enemy and put it into play engaged with him. Shuffle the encounter deck.")
                 .WithFlavor("Several Orcs spring upon you from their hiding place! Their surprise attack puts you on the defensive. You must fight to gain the upper hand.")
                 .WithInfo(46, 1, Artist.Mark_Bulahao));
-            Cards.Add(Card.Location("Rugged Country", "", "Rollig Hills", 2, 3)
+            Cards.Add(Card.Location("Rugged Country", "EA214A25-E43E-4AC6-869D-1A79A0E56995", "Rollig Hills", 2, 3)
                 .WithTraits("Arnor.")
                 .WithText("If the current quest is a side quest, Rugged Country gets +2 Threat.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack for each quest card in play.")
                 .WithInfo(47, 3, Artist.Juan_Carlos_Barquet));
-            Cards.Add(Card.Location("Shrouded Hills", "", "Rolling Hills", 254, 5)
+            Cards.Add(Card.Location("Shrouded Hills", "013955B7-0138-43B4-B871-0C296C93FADE", "Eriador Wilds", 254, 5)
                 .WithTraits("Arnor.", "Hills.")
                 .WithText("X is the number of quest cards in play.\r\nWhile there is only 1 quest card in play, Shrouded Hills gains surge.")
                 .WithFlavor("As the sun rose and passed noon they glimpsed far off in the east the grey-green lines of the Downs... -The Fellowship of the Ring")
                 .WithInfo(48, 2, Artist.Alvaro_Calvo_Escudero)
                 .WithEasyModeQuantity(1));
-            Cards.Add(Card.Treachery("Pressing Needs", "", "Rolling Hills")
+            Cards.Add(Card.Treachery("Pressing Needs", "096615FE-29F3-4EF0-9862-3F9B351914E3", "Eriador Wilds")
                 .WithKeywords("Doomed 2.")
                 .WithText("When Revealed: Either search the encounter deck and discard pile for an encounter side quest and reveal it, or choose a different quest card in play to be the current quest until the end of the phase. Shuffe the encounter deck.")
                 .WithFlavor("\"But often I must put mirth aside.\" -Aragorn, The Fellowship of the Ring")
                 .WithInfo(49, 2, Artist.Mark_Bulahao)
                 .WithEasyModeQuantity(1));
-            Cards.Add(Card.Treachery("Weight of Responsibility", "", "Rolling Hills")
+            Cards.Add(Card.Treachery("Weight of Responsibility", "60CEC16F-7A19-4908-B2AD-7CD61599B6F9", "Eriador Wilds")
                 .WithText("When Revealed: Reveal 1 encounter card for each quest card in play.")
                 .WithShadow("Shadow: Defending player discards 1 attachment for each quest card in play.")
                 .WithInfo(50, 2, Artist.Dleoblack)
                 .WithEasyModeQuantity(1));
-            Cards.Add(Card.EncounterSideQuest("Lost in the Wilderness", "", "Rolling Hills", 4)
+            Cards.Add(Card.EncounterSideQuest("Lost in the Wilderness", "3C8C30DE-F17A-4191-A0DF-C3A079251583", "Eriador Wilds", 4)
                 .WithText("When Revealed: Each player places all cards in his hand facedown underneath Lost in the Wilderness.\r\nForced: When Lost in the Wilderness is defeated, return each card underneath it to its owner's hand.")
                 .WithFlavor("You've lost your way in the vastness of Arnor. You must search around until you find your trail again.")
                 .WithVictoryPoints(10)
-                .WithInfo(51, 1, Artist.Alvaro_Calvo_Escudero));*/
+                .WithInfo(51, 1, Artist.Alvaro_Calvo_Escudero));
             Cards.Add(new Card()
             {
                 Title = "Make Camp",
