@@ -324,8 +324,10 @@ namespace HallOfBeorn.Models
 
             //The Lost Realm
             all.Add(Artist.Alexandr_Elichev);
+            all.Add(Artist.Helge_C_Balzer);
             all.Add(Artist.Kim_Sokol);
             all.Add(Artist.Michael_Wolmarans);
+            all.Add(Artist.Tommy_Arnold);
 
             //First Age
             all.Add(Artist.Unknown);
@@ -671,6 +673,7 @@ namespace HallOfBeorn.Models
         public static Artist Grzegorz_Pedrycz = new Artist { Name = "Grzegorz Pedrycz", URL = "http://grzegorzpedrycz.deviantart.com" };
         public static Artist Guido_Kuip = new Artist { Name = "Guido Kuip", URL = "http://yoitisi.deviantart.com" };
         public static Artist Guillaume_Ducos = new Artist { Name = "Guillaume Ducos", URL = "http://herckeim.deviantart.com" };
+        public static Artist Helge_C_Balzer = new Artist { Name = "Helge C. Balzer", URL = "http://helgecbalzer.deviantart.com" };
         public static Artist Helmutt = new Artist { Name = "Helmutt", URL = "http://helmuttt.deviantart.com" };
         public static Artist Henning_Ludvigsen = new Artist { Name = "Henning Ludvigsen", URL = "http://henning.deviantart.com" };
         public static Artist Ignacio_Bazan_Lazcano = new Artist { Name = "Ignacio Bazan Lazcano", URL = "http://neisbeis.deviantart.com" };
@@ -808,6 +811,7 @@ namespace HallOfBeorn.Models
         public static Artist Tiziano_Baracchi = new Artist { Name = "Tiziano Baracchi", URL = "http://thaldir.deviantart.com" };
         public static Artist Tom_Garden = new Artist { Name = "Tom Garden", URL = " http://tgconceptart.deviantart.com" };
         public static Artist Tomasz_Jedruszek = new Artist { Name = "Tomasz Jedruszek", URL = "http://morano.deviantart.com" };
+        public static Artist Tommy_Arnold = new Artist { Name = "Tommy Arnold", URL = "http://www.tommyarnoldart.com" };
         public static Artist Toni_Justamante_Jacobs = new Artist { Name = "Toni Justamante Jacobs", URL = "http://artofjustaman.deviantart.com" };
         public static Artist Tony_Foti = new Artist { Name = "Tony Foti", URL = "http://anthonyfoti.deviantart.com" };
         public static Artist Trudi_Castle = new Artist { Name = "Trudi Castle", URL = "http://www.artcastles.com/trudi/commerical.html" };

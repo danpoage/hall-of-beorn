@@ -501,6 +501,25 @@ namespace HallOfBeorn.Models.Sets
                 .WithFlavor("You've lost your way in the vastness of Arnor. You must search around until you find your trail again.")
                 .WithVictoryPoints(10)
                 .WithInfo(51, 1, Artist.Alvaro_Calvo_Escudero));
+            Cards.Add(Card.Treachery("Biting Wind", "E2464F1A-BDE8-4837-B4DA-3CC7B2240F92", "Foul Weather")
+                .WithTraits("Weather.")
+                .WithText("When Revealed: Assign X damage among characters commited to the quest. X is the number of characters committed to the quest.")
+                .WithShadow("Shadow: Deal 1 damage to the defending character.")
+                .WithInfo(52, 3, Artist.Tommy_Arnold)
+                .WithEasyModeQuantity(2));
+            Cards.Add(Card.Treachery("Freezing Blast", "CF4FC541-FDB7-4FAD-BFF9-BDC0D7A05C5C", "Foul Weather")
+                .WithTraits("Weather.")
+                .WithKeywords("Doomed 2.")
+                .WithText("When Revealed: Remove each damaged character from the quest.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack for each damaged character the defending player controls.")
+                .WithInfo(53, 2, Artist.Bill_Thompson)
+                .WithEasyModeQuantity(1));
+            Cards.Add(Card.Treachery("Cold from Angmar", "60C47802-61D6-4893-8B07-1454E2B9746F", "Foul Weather")
+                .WithTraits("Weather.")
+                .WithText("When Revealed: Each player deals 1 damage to a hero he controls. Attach Cold from Angmar to the current quest. (Counts as a Condition attachment with the text: \"Treat each damaged character's printed text box as if it were blank, except for keywords and Traits.\")")
+                .WithFlavor("\"...the weather may prove a more deadly enemy than any.\" -Gandalf, The Fellowship of the Ring")
+                .WithInfo(54, 3, Artist.Florian_Devos)
+                .WithEasyModeQuantity(2));
             Cards.Add(new Card()
             {
                 Title = "Make Camp",
@@ -513,8 +532,30 @@ namespace HallOfBeorn.Models.Sets
                 VictoryPoints = 10,
                 Artist = Artist.Romana_Kendelic,
                 Number = 55,
-                Quantity = 1
+                Quantity = 1,
+                EncounterSet = "Foul Weather"
             });
+            Cards.Add(Card.Location("Ruins of Arnor", "F4A04A3D-114B-4A03-8895-55055B67CF18", "Ruins of Arnor", 2, 3)
+                .WithTraits("Arnor.", "Ruins.")
+                .WithText("Forced: After the \"when revealed\" effect of a treachery card is canceled, raise each player's threat by 2.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, the defending player raises his threat by 2.")
+                .WithInfo(56, 3, Artist.Dimitri_Bielak)
+                .WithEasyModeQuantity(2));
+            Cards.Add(Card.Location("Ancient Causeway", "C9B3FAAC-E771-4D21-A5CF-02C8467DDD5A", "Ruins of Arnor", 3, 2)
+                .WithTraits("Arnor.", "Ruins.")
+                .WithText("Forced: When Ancient Causeway is explored, raise each player's threat by 2.")
+                .WithFlavor("...on either side of it there were lines of large boulders and hewn stones that screened the travellers almost like a hedge. -The Fellowship of the Ring")
+                .WithInfo(57, 2, Artist.Trudi_Castle));
+            Cards.Add(Card.Treachery("Tragic Discovery", "3CD10956-077C-4FFF-BBAF-692A8E4C0129", "Ruins of Arnor")
+                .WithText("When Revealed: Raise each player's threat by the Threat of the active location.")
+                .WithShadow("Shadow: Defending player either raise his threat 3, or this attack is considered undefended.")
+                .WithInfo(58, 2, Artist.Dimitri_Bielak));
+            Cards.Add(Card.EncounterSideQuest("Search the Ruins", "588566BB-F1B9-4847-8EAC-6274B0C5E120", "Ruins of Arnor", 8)
+                .WithKeywords("Surge.")
+                .WithText("Forced: At the end of the refresh phase, raise each player's threat by 2.\r\nResponse: After Search the Ruins is defeated, reduce each player's threat by 3.")
+                .WithFlavor("Your enemies lurk somewhere in the decrepit ruins around you: a constant threat until you search them out...")
+                .WithVictoryPoints(10)
+                .WithInfo(59, 1, Artist.Alexandr_Elichev));
             Cards.Add(new Card()
             {
                 Title = "Dead Lord",
@@ -530,7 +571,9 @@ namespace HallOfBeorn.Models.Sets
                 Shadow = "Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, reveal 1 encounter card.",
                 Artist = Artist.Florian_Devos,
                 Number = 60,
-                Quantity = 3
+                Quantity = 2,
+                EasyModeQuantity = 1,
+                EncounterSet = "Cursed Dead"
             });
             Cards.Add(new Card()
             {
@@ -545,10 +588,16 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string> { "Undead." },
                 Text = "When Revealed: Put each copy of Cursed Dead in the discard pile into play in the staging area.",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if there is a copy of the defending character in its owner's discard pile).",
-                Artist = Artist.Unknown,
+                Artist = Artist.Helge_C_Balzer,
                 Number = 61,
-                Quantity = 3
+                Quantity = 5,
+                EasyModeQuantity = 4
             });
+            Cards.Add(Card.Treachery("Restless Evil", "1F572725-1BC8-4EBF-AB9A-67ABD8CEFA83", "Cursed Dead")
+                .WithText("When Revealed: Each Undead enemy gets +1 Threat, +1 Attack, and +1 Defense until the end of the round. If there are no Undead enemies in play, Restless Evil gains surge.")
+                .WithShadow("Shadow: Each Undead enemy engaged with you gets +1 Attack and +1 Defense until the end of the round.")
+                .WithInfo(62, 2, Artist.Alvaro_Calvo_Escudero)
+                .WithEasyModeQuantity(1));
             Cards.Add(new Card()
             {
                 Title = "Seal the Tomb",
@@ -561,6 +610,54 @@ namespace HallOfBeorn.Models.Sets
                 VictoryPoints = 10,
                 Artist = Artist.Guillaume_Ducos,
                 Number = 63,
+                Quantity = 1,
+                EncounterSet = "Cursed Dead"
+            });
+            Cards.Add(Card.Treachery("Terror of the North", "910146EA-5329-431B-AD76-D5652BE20282", "Dark Sorcery")
+                .WithTraits("Sorcery.")
+                .WithText("When Revealed: Each player discards the top 3 cards of his deck. Until the end of the round, add 2 to the total Threat in the staging area for each different card type discarded this way.")
+                .WithShadow("Shadow: Defending player discards the top 3 cards of his deck. Attacking enemy gets +1 Attack for each different card type discarded this way.")
+                .WithInfo(64, 3, Artist.Alvaro_Calvo_Escudero)
+                .WithEasyModeQuantity(2));
+            Cards.Add(Card.Treachery("Dark Sorcery", "B40DA3DE-205A-41EE-9527-C26FE130CD16", "Dark Sorcery")
+                .WithTraits("Sorcery.")
+                .WithKeywords("Doomed 2.")
+                .WithText("When Revealed: Each player discards each ally he controls that has the same title as a card in his discard pile.")
+                .WithInfo(65, 2, Artist.Lukasz_Jaskolski)
+                .WithEasyModeQuantity(1));
+            Cards.Add(Card.Treachery("Heavy Curse", "57974C19-8DEA-4FC6-9E7D-8A042BD1F05E", "Dark Sorcery")
+                .WithTraits("Sorcery.")
+                .WithKeywords("Surge.")
+                .WithText("When Revealed: Attach to the current quest. (Counts as a Condition attachment with the text: \"When a player plays a card, increase its cost by 1 if there is a card that has the same title in its owner's discard pile.\")")
+                .WithFlavor("\"Earth, air and water all seem accursed. But so our path is laid.\" -Frodo, The Two Towers")
+                .WithInfo(66, 3, Artist.Tommy_Arnold)
+                .WithEasyModeQuantity(1));
+            Cards.Add(Card.EncounterSideQuest("The Power of Angmar", "46B4528A-D307-4621-BF1E-FDB51EE7FDEB", "Dark Sorcery", 8)
+                .WithKeywords("Surge.")
+                .WithText("Cards in each player's discard pile cannot leave that player's discard pile by player card effect.\r\nForced: After this stage is defeated, each player shuffles the top 5 cards of his discard pile back into his deck.")
+                .WithFlavor("You must uncover the source of this evil that sets its will against yours.")
+                .WithVictoryPoints(10)
+                .WithInfo(67, 1, Artist.Matt_Stewart));
+            Cards.Add(new Card()
+            {
+                Title = "Hunting the Orcs",
+                Id = "7B7ADFA1-5309-4033-A7EF-D54BC558B187",
+                CardType = CardType.Objective,
+                Traits = new List<string> { "Mission." },
+                Text = "Forced: After an enemy is defeated, place 1 resource token here. Then, if there are at least X resource tokens here, flip Hunting the Orcs and place each resource token that was on it on Savage Counter-attack. X is 3 more than the number of players in the game.",
+                Artist = Artist.Jason_Ward,
+                Number = 71,
+                Quantity = 1
+            });
+            Cards.Add(new Card()
+            {
+                Title = "Savage Counter-attack",
+                Id = "E026FF39-00E3-478E-B7B3-DC01F7703302",
+                CardType = CardType.Objective,
+                Traits = new List<string> { "Mission." },
+                Text = "Forced: After Savage Counter-attack enters play, advance to stage 2A.\r\nForced: After an enemy attacks and destroys a character, discard 1 resource token from Savage Counter-attack.\r\nIf there are no resource tokens here, the players lose the game.",
+                Artist = Artist.Jon_Bosco,
+                Number = 72,
                 Quantity = 1
             });
         }
