@@ -349,7 +349,7 @@ namespace HallOfBeorn.Models
         {
             if (CardType == CardType.Player)
             {
-                return card.CardType == CardType.Hero || card.CardType == Models.CardType.Ally || card.CardType == Models.CardType.Attachment || card.CardType == Models.CardType.Event;
+                return card.CardType == CardType.Hero || card.CardType == Models.CardType.Ally || card.CardType == Models.CardType.Attachment || card.CardType == Models.CardType.Event || card.CardType == Models.CardType.Player_Side_Quest;
             }
             else if (CardType == CardType.Character)
             {
@@ -357,7 +357,7 @@ namespace HallOfBeorn.Models
             }
             else if (CardType == CardType.Encounter)
             {
-                return card.CardType == Models.CardType.Enemy || card.CardType == Models.CardType.Location || card.CardType == Models.CardType.Treachery || card.CardType == Models.CardType.Objective || card.CardType == Models.CardType.Objective_Ally;
+                return card.CardType == Models.CardType.Enemy || card.CardType == Models.CardType.Location || card.CardType == Models.CardType.Treachery || card.CardType == Models.CardType.Objective || card.CardType == Models.CardType.Objective_Ally || card.CardType == Models.CardType.Encounter_Side_Quest;
             }
             else if (CardType == CardType.Objective)
             {
