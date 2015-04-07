@@ -471,7 +471,7 @@ namespace HallOfBeorn.Models
             return this;
         }
 
-        public Card WithIncludedEncounterSet(params EncounterSet[] sets)
+        public Card WithIncludedEncounterSets(params EncounterSet[] sets)
         {
             foreach (var set in sets)
                 this.IncludedEncounterSets.Add(set);

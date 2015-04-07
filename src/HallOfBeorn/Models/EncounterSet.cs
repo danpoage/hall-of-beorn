@@ -17,7 +17,6 @@ namespace HallOfBeorn.Models
         }
         
         public string Name { get; set; }
-        public string NormalizedName { get; set; }
 
         private static List<EncounterSet> all = new List<EncounterSet>();
 
@@ -79,9 +78,13 @@ namespace HallOfBeorn.Models
         public static EncounterSet IntoFangorn = new EncounterSet { Name = "Into Fangorn", Set = "Voice of Isengard" };
         public static EncounterSet AncientForest = new EncounterSet { Name = "Ancient Forest", Set = "Voice of Isengard" };
         public static EncounterSet WearyTravelers = new EncounterSet { Name = "Weary Travelers", Set = "Voice of Isengard" };
-        public static EncounterSet Iarion = new EncounterSet { Name = "Iârion", NormalizedName = "Iarion", Set = "The Lost Realm" };
+        public static EncounterSet Iarion = new EncounterSet { Name = "Iârion", Set = "The Lost Realm" };
         public static EncounterSet EriadorWilds = new EncounterSet { Name = "Eriador Wilds", Set = "The Lost Realm" };
         public static EncounterSet AngmarOrcs = new EncounterSet { Name = "Angmar Orcs", Set = "The Lost Realm" };
+        public static EncounterSet RuinsOfArnor = new EncounterSet { Name = "Ruins of Arnor", Set = "The Lost Realm" };
+        public static EncounterSet TheWeatherHills = new EncounterSet { Name = "The Weather Hills", Set = "The Lost Realm" };
+        public static EncounterSet DarkSorcery = new EncounterSet { Name = "Dark Sorcery", Set = "The Lost Realm" };
+        public static EncounterSet CursedDead = new EncounterSet { Name = "Cursed Dead", Set = "The Lost Realm" };
 
         public static EncounterSet WeMustAwayEreBreakOfDay = new EncounterSet { Name = "We Must Away Ere Break of Day", Set = "The Hobbit: Over Hill and Under Hill" };
         public static EncounterSet WesternLands = new EncounterSet { Name = "Western Lands", Set = "The Hobbit: Over Hill and Under Hill" };

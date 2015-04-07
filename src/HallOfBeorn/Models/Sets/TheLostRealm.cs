@@ -643,8 +643,34 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Setup: Put Iârion into play. Add 1 ~Orc War Party to the staging area. Each players adds 1 different location to the staging area. Shuffle the encounter deck.")
                 .WithOppositeFlavor("You must move swiftly to prevent the Orcs from reaching Bree-land!")
                 .WithOppositeText("Enemies do not make engagement checks.\r\nForced: At the end of the refresh phase, raise each player's threat by 1 for each enemy in the staging area.\r\nThe players cannot defeat this stage unless the first player controls Iârion. If the players defeat this stage, they win the game.")
-                .WithIncludedEncounterSet(EncounterSet.Iarion, EncounterSet.EriadorWilds, EncounterSet.AngmarOrcs)
+                .WithIncludedEncounterSets(EncounterSet.Iarion, EncounterSet.EriadorWilds, EncounterSet.AngmarOrcs)
                 .WithInfo(68, 1, Artist.Nicholas_Gregory));
+            Cards.Add(Card.Quest("Scattered Among the Hills", "B023E649-14C9-48E1-B98B-982551391D94", 2, 1, "The Weather Hills", 255)
+                .WithFlavor("You've pursued the remnants of an Orc war party east from the borders of Bree-land and into the wilderness beyond. Their trail climbs out of the lowlands and into the Weather Hills.")
+                .WithText("Setup: Set Orc Ambush and Amon Forn aside, out of play. Create the Orc deck (see insert) and set it next to the quest deck. Make Exposed Ridge the active location. Add Hunting the Orcs and 1 Weather Hilltop to the staging area. Shuffle the encounter deck.")
+                .WithOppositeFlavor("As you pursue the Orcs, the weather itself turns against you. Now you must contend with the elements while you hunt the enemy.")
+                .WithOppositeText("The first Weather treachery card revealed each round gains surge.\r\nForced: After the active location is explored, reveal the top card of the Orc deck and resolve it as if it was just revealed from the encounter deck (reveal the top 2 cards instead if there are 3 or more players in the game).")
+                .WithIncludedEncounterSets(EncounterSet.AngmarOrcs, EncounterSet.Iarion, EncounterSet.RuinsOfArnor)
+                .WithInfo(69, 1, Artist.Juan_Carlos_Barquet));
+            Cards.Add(Card.Quest("Cornered Animals", "D1D67AFA-A946-4E30-B5DC-135146FF419B", 2, 2, "The Weather Hills", 20)
+                .WithText("When Revealed: End the current phase. Shuffle the encounter discard pile and the Orc deck into the encounter deck. Reveal Orc Ambush and Amon Forn and add them to the staging area.")
+                .WithFlavor("You've hunted the Orcs to their secret gathering place on the northern edge of the Weather Hills: the old Dúnedain border fort of Amon Forn. With nowhere left to run, the Orcs turn and fight with desperate savagery.")
+                .WithOppositeText("Each damaged character gets -1 Willpower.\r\nForced: At the beginning of the quest phase, either discard 1 resource token from Savage Counter-attack, or reveal an additional encounter card this phase.\r\nIf the players defeat this stage, they win the game.")
+                .WithOppositeFlavor("Already weary from days of travel through harsh weather, you are hard pressed to match the Orcs' ferocity. You must rally your men or see them fall!")
+                .WithIncludedEncounterSets(EncounterSet.AngmarOrcs, EncounterSet.Iarion, EncounterSet.RuinsOfArnor)
+                .WithInfo(70, 1, Artist.Anthony_Feliciano));
+            Cards.Add(Card.Quest("The Shades of Angmar", "C055DDF4-A4E3-4813-B133-44A244F7F5C5", 3, 1, "Deadmen's Dike", 11)
+                .WithFlavor("You've brought the prisoners you rescued from the Weather Hills to Fornost. The Rangers gathered there are shocked to hear what you discovered at Amon Forn. Before their Chieftain can decide what to do, an unnatural fog covers the ruins in darkness, and the spectres of dead warriors emerge from the mists to attack you!")
+                .WithText("Setup: Put Iârion into play. Set Thaurdir aside, out of play. Add 1 copy of Fornost square to the staging area. Shuffle the encounter deck.")
+                .WithOppositeText("When Revealed: Each player must search the encounter deck for a Baleful Shade and put it into play engaged with him. Shuffle the encounter deck and reveal 1 encounter card per player.\r\nForced: At the end of the refresh phase, each player discards the top card of his deck.\r\nIf a player has no cards in his deck, he is eliminated from the game.")
+                .WithIncludedEncounterSets(EncounterSet.Iarion, EncounterSet.DarkSorcery, EncounterSet.CursedDead)
+                .WithInfo(73, 1, Artist.Joel_Hustak));
+            Cards.Add(Card.Quest("A Fell Wraith", "5A6AA33F-82EA-407F-BC2D-AD3B2E0D8C43", 3, 2, "Deadmen's Dike", 13)
+                .WithFlavor("The foul sorcery that drives the ghouls against you attacks your mind as well, and you fight to master your fear in the face of an unrelenting enemy. The question of who works the evil spell is answered by the appearance of a dark figure. The old man you had thought to be the Orcs' prisoner has revealed himself to be a powerful wraith. He must be stopped!")
+                .WithText("When Revealed: Add Thaurdir to the staging area. Then, reveal 1 encounter card per player.")
+                .WithOppositeText("Forced: After Thaurdir attacks and destroys a character, that character's controller must either discard the top 3 cards of his deck, or return Thaurdir to the staging area.\r\nIf a player has no cards in his deck, he is eliminated from the game. The players cannot defeat this stage while Thaurdir has any hit points remaining. If the players defeat this stage, they win the game.")
+                .WithIncludedEncounterSets(EncounterSet.Iarion, EncounterSet.DarkSorcery, EncounterSet.CursedDead)
+                .WithInfo(74, 1, Artist.Sebastian_Giacobino));
             Cards.Add(new Card()
             {
                 Title = "Hunting the Orcs",
