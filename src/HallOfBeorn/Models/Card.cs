@@ -53,7 +53,14 @@ namespace HallOfBeorn.Models
 
         public Card WithFlavor(string flavor)
         {
-            effects.Add(new Effect(CardEffectType.Flavor_Text, LayoutType.Block).Flavor(flavor));
+            //effects.Add(new Effect(CardEffectType.Flavor_Text, LayoutType.Block).Flavor(flavor));
+            this.FlavorText = flavor;
+            return this;
+        }
+
+        public Card WithOppositeFlavor(string flavor)
+        {
+            this.OppositeFlavorText = flavor;
             return this;
         }
 
@@ -397,6 +404,21 @@ namespace HallOfBeorn.Models
             };
         }
 
+        public static Card Quest(string title, string id, int scenarioNumber, uint stageNumber, string encounterSet, byte questPoints)
+        {
+            return new Card()
+            {
+                CardType = CardType.Quest,
+                Title = title,
+                HasSecondImage = true,
+                Id = id,
+                EncounterSet = encounterSet,
+                QuestPoints = questPoints,
+                ScenarioNumber = scenarioNumber,
+                StageNumber = stageNumber
+            };
+        }
+
         public Card WithUnique()
         {
             this.IsUnique = true;
@@ -440,6 +462,20 @@ namespace HallOfBeorn.Models
         public Card WithText(string text)
         {
             this.Text = text;
+            return this;
+        }
+
+        public Card WithOppositeText(string text)
+        {
+            this.OppositeText = text;
+            return this;
+        }
+
+        public Card WithIncludedEncounterSet(params EncounterSet[] sets)
+        {
+            foreach (var set in sets)
+                this.IncludedEncounterSets.Add(set);
+
             return this;
         }
 

@@ -638,6 +638,13 @@ namespace HallOfBeorn.Models.Sets
                 .WithFlavor("You must uncover the source of this evil that sets its will against yours.")
                 .WithVictoryPoints(10)
                 .WithInfo(67, 1, Artist.Matt_Stewart));
+            Cards.Add(Card.Quest("Stop the War Party", "8486ABBA-3515-49DE-A404-CAADD158396A", 1, 1, "Intruders in Chetwood", 30)
+                .WithFlavor("Rangers have sighted a large group of Orcs making its way towards Bree-land. The Dúnedain, Iârion, has asked you to help him intercept the war party before it can reach the quiet village. The Orcs are a day ahead of you and moving fast, but there is hope you can catch them with the Ranger's tracking skill...")
+                .WithText("Setup: Put Iârion into play. Add 1 ~Orc War Party to the staging area. Each players adds 1 different location to the staging area. Shuffle the encounter deck.")
+                .WithOppositeFlavor("You must move swiftly to prevent the Orcs from reaching Bree-land!")
+                .WithOppositeText("Enemies do not make engagement checks.\r\nForced: At the end of the refresh phase, raise each player's threat by 1 for each enemy in the staging area.\r\nThe players cannot defeat this stage unless the first player controls Iârion. If the players defeat this stage, they win the game.")
+                .WithIncludedEncounterSet(EncounterSet.Iarion, EncounterSet.EriadorWilds, EncounterSet.AngmarOrcs)
+                .WithInfo(68, 1, Artist.Nicholas_Gregory));
             Cards.Add(new Card()
             {
                 Title = "Hunting the Orcs",
