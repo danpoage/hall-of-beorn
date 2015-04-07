@@ -680,7 +680,8 @@ namespace HallOfBeorn.Models.Sets
                 Text = "Forced: After an enemy is defeated, place 1 resource token here. Then, if there are at least X resource tokens here, flip Hunting the Orcs and place each resource token that was on it on Savage Counter-attack. X is 3 more than the number of players in the game.",
                 Artist = Artist.Jason_Ward,
                 Number = 71,
-                Quantity = 1
+                Quantity = 1,
+                EncounterSet = "The Weather Hills"
             });
             Cards.Add(new Card()
             {
@@ -691,7 +692,8 @@ namespace HallOfBeorn.Models.Sets
                 Text = "Forced: After Savage Counter-attack enters play, advance to stage 2A.\r\nForced: After an enemy attacks and destroys a character, discard 1 resource token from Savage Counter-attack.\r\nIf there are no resource tokens here, the players lose the game.",
                 Artist = Artist.Jon_Bosco,
                 Number = 72,
-                Quantity = 1
+                Quantity = 1,
+                EncounterSet = "The Weather Hills"
             });
         }
     }
