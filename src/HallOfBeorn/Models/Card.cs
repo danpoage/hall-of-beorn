@@ -376,6 +376,7 @@ namespace HallOfBeorn.Models
                 Title = title,
                 Id = string.IsNullOrEmpty(id) ? Guid.NewGuid().ToString() : id,
                 Threat = threat,
+                IsVariableThreat = threat.HasValue && threat.Value == (byte)254,
                 QuestPoints = questPoints,
                 EncounterSet = encounterSet
             };

@@ -474,7 +474,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Each Orc enemy gets +1 Threat, +1 Attack and +1 Defense.\r\nWhen Revealed: Each player must search the encounter deck and discard pile for an Orc enemy and put it into play engaged with him. Shuffle the encounter deck.")
                 .WithFlavor("Several Orcs spring upon you from their hiding place! Their surprise attack puts you on the defensive. You must fight to gain the upper hand.")
                 .WithInfo(46, 1, Artist.Mark_Bulahao));
-            Cards.Add(Card.Location("Rugged Country", "EA214A25-E43E-4AC6-869D-1A79A0E56995", "Rollig Hills", 2, 3)
+            Cards.Add(Card.Location("Rugged Country", "EA214A25-E43E-4AC6-869D-1A79A0E56995", "Eriador Wilds", 2, 3)
                 .WithTraits("Arnor.")
                 .WithText("If the current quest is a side quest, Rugged Country gets +2 Threat.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack for each quest card in play.")
