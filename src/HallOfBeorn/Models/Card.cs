@@ -53,7 +53,6 @@ namespace HallOfBeorn.Models
 
         public Card WithFlavor(string flavor)
         {
-            //effects.Add(new Effect(CardEffectType.Flavor_Text, LayoutType.Block).Flavor(flavor));
             this.FlavorText = flavor;
             return this;
         }
@@ -61,6 +60,12 @@ namespace HallOfBeorn.Models
         public Card WithOppositeFlavor(string flavor)
         {
             this.OppositeFlavorText = flavor;
+            return this;
+        }
+
+        public Card Flavor(string flavor)
+        {
+            effects.Add(new Effect(CardEffectType.Flavor_Text, LayoutType.Block).Flavor(flavor));
             return this;
         }
 

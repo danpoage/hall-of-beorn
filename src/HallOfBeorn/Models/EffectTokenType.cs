@@ -9,6 +9,7 @@ namespace HallOfBeorn.Models
     {
         Text,
         Inline_Text,
+        Inline_Prefix,
         Flavor_Text,
         Trigger,
         Sphere_Icon,

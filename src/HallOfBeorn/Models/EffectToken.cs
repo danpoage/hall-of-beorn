@@ -92,6 +92,7 @@ namespace HallOfBeorn.Models
                     break;
                 case EffectTokenType.Text:
                 case EffectTokenType.Inline_Text:
+                case EffectTokenType.Inline_Prefix:
                     html.Append(Body.ToString());
                     break;
                 case EffectTokenType.Flavor_Text:

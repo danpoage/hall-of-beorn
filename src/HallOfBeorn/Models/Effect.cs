@@ -19,6 +19,11 @@ namespace HallOfBeorn.Models
         public LayoutType LayoutType { get; private set; }
         public List<EffectToken> Tokens { get; private set; }
 
+        public static Effect New(CardEffectType effectType, LayoutType layoutType)
+        {
+            return new Effect(effectType, layoutType);
+        }
+
         public Effect Text(string text)
         {
             Tokens.Add(new EffectToken(EffectTokenType.Text, string.Empty, text, string.Empty));
@@ -37,9 +42,14 @@ namespace HallOfBeorn.Models
             return this;
         }
 
-        public Effect Quote()
+        public Effect Quote(Effect effect)
         {
-            Tokens.Add(new EffectToken(EffectTokenType.Inline_Text, string.Empty, '"', string.Empty));
+            Tokens.Add(new EffectToken(EffectTokenType.Inline_Prefix, string.Empty, "&ldquo;", string.Empty));
+            foreach (var token in effect.Tokens)
+            {
+                Tokens.Add(token);
+            }
+            Tokens.Add(new EffectToken(EffectTokenType.Inline_Text, string.Empty, "&rdquo;", string.Empty));
             return this;
         }
 
@@ -76,7 +86,13 @@ namespace HallOfBeorn.Models
                     html.Append(prefix);
                 }
                 html.Append(token.ToHtml(card));
-                prefix = " ";
+
+                if (token.TokenType == EffectTokenType.Inline_Prefix)
+                {
+                    prefix = string.Empty;
+                } else {
+                    prefix = " ";
+                }
             }
 
             switch (LayoutType)
