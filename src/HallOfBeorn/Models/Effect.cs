@@ -26,36 +26,37 @@ namespace HallOfBeorn.Models
 
         public Effect Text(string text)
         {
-            Tokens.Add(new EffectToken(EffectTokenType.Text, string.Empty, text, string.Empty));
+            Tokens.Add(new EffectToken(EffectTokenType.Text, string.Empty, text, text, string.Empty));
             return this;
         }
 
         public Effect Flavor(string text)
         {
-            Tokens.Add(new EffectToken(EffectTokenType.Flavor_Text, string.Empty, text, string.Empty));
+            Tokens.Add(new EffectToken(EffectTokenType.Flavor_Text, string.Empty, text, text, string.Empty));
             return this;
         }
 
         public Effect InlineText(string text)
         {
-            Tokens.Add(new EffectToken(EffectTokenType.Inline_Text, string.Empty, text, string.Empty));
+            Tokens.Add(new EffectToken(EffectTokenType.Inline_Text, string.Empty, text, text, string.Empty));
             return this;
         }
 
         public Effect Quote(Effect effect)
         {
-            Tokens.Add(new EffectToken(EffectTokenType.Inline_Prefix, string.Empty, "&ldquo;", string.Empty));
+            Tokens.Add(new EffectToken(EffectTokenType.Inline_Prefix, string.Empty, "\"", "&ldquo;", string.Empty));
             foreach (var token in effect.Tokens)
             {
                 Tokens.Add(token);
             }
-            Tokens.Add(new EffectToken(EffectTokenType.Inline_Text, string.Empty, "&rdquo;", string.Empty));
+            Tokens.Add(new EffectToken(EffectTokenType.Inline_Text, string.Empty, "\"", "&rdquo;", string.Empty));
             return this;
         }
 
         public Effect Trigger(CardEffectType trigger)
         {
-            Tokens.Add(new EffectToken(EffectTokenType.Trigger, string.Empty, string.Format("{0}:", trigger.ToString().Replace('_', ' ')), string.Empty));
+            var text = string.Format("{0}:", trigger.ToString().Replace('_', ' '));
+            Tokens.Add(new EffectToken(EffectTokenType.Trigger, string.Empty, text, text, string.Empty));
             return this;
         }
 

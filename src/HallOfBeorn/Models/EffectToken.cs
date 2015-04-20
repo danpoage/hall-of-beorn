@@ -8,17 +8,19 @@ namespace HallOfBeorn.Models
 {
     public class EffectToken
     {
-        public EffectToken(EffectTokenType tokenType, string prefix, object body, string suffix)
+        public EffectToken(EffectTokenType tokenType, string prefix, object textBody, object htmlBody, string suffix)
         {
             this.TokenType = tokenType;
             this.Prefix = prefix;
-            this.Body = body;
+            this.TextBody = textBody;
+            this.HtmlBody = htmlBody != null ? htmlBody : textBody;
             this.Suffix = suffix;
         }
 
         public EffectTokenType TokenType { get; private set; }
         public string Prefix { get; private set; }
-        public object Body { get; private set; }
+        public object TextBody { get; private set; }
+        public object HtmlBody { get; private set; }
         public string Suffix { get; private set; }
 
         public string ToText(Card card)
@@ -49,7 +51,7 @@ namespace HallOfBeorn.Models
                     break;
                 case EffectTokenType.Text:
                 case EffectTokenType.Inline_Text:
-                    text.Append(Body.ToString());
+                    text.Append(TextBody.ToString());
                     break;
                 default:
                     break;
@@ -93,13 +95,20 @@ namespace HallOfBeorn.Models
                 case EffectTokenType.Text:
                 case EffectTokenType.Inline_Text:
                 case EffectTokenType.Inline_Prefix:
-                    html.Append(Body.ToString());
+                    html.Append(HtmlBody.ToString());
                     break;
                 case EffectTokenType.Flavor_Text:
-                    html.AppendFormat("<i>{0}</i>", Body.ToString());
+                    html.AppendFormat("<i>{0}</i>", HtmlBody.ToString());
                     break;
                 case EffectTokenType.Trigger:
-                    html.AppendFormat("<strong>{0}</strong>", Body.ToString());
+                    {
+                        if (TextBody.ToString() == "Shadow:")
+                        {
+                            html.Append("<br/><img src='/Images/ShadowDivider.png' style='display:block;margin-left:auto;margin-right:auto;width:285px;'/><br/>");
+                        }
+
+                        html.AppendFormat("<strong>{0}</strong>", HtmlBody.ToString());
+                    }
                     break;
                 default:
                     break;
