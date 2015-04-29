@@ -638,5 +638,17 @@ namespace HallOfBeorn.Models
 
             return this;
         }
+
+        public Card WithBoon()
+        {
+            this.CardSubtype = CardSubtype.Boon;
+            return this;
+        }
+
+        public Card WithBurden()
+        {
+            this.CardSubtype = CardSubtype.Burden;
+            return this;
+        }
     }
 }

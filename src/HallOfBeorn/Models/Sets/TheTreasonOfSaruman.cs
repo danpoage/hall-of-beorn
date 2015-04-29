@@ -91,6 +91,41 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Attach to Gandalf.\r\nGandalf gains ranged and sentinel.\r\nAction: Exhaust Shadowfax to ready Gandalf.")
                 .WithFlavor("\"He is the chief of the Mearas, lords of horses, and not even Théoden, King of Rohan, has ever looked on a better.\" -Gandalf, The Two Towers")
                 .WithInfo(14, 3, Artist.Smirtouille));
+            Cards.Add(Card.Attachment("Intimidation", "11AD2994-C7E7-4A23-99BA-E6FCA169BA48", Sphere.Neutral, 0)
+                .WithBoon()
+                .WithTraits("Skill.")
+                .WithKeywords("Permanent.")
+                .WithText("Setup: Attach to a Warrior hero.\r\nResponse: After attached hero is declared as the only attacker against a non-unique enemy, exhaust Intimidation to give that enemy -2 Defense for this attack.")
+                .WithFlavor("\"None knows what the new day shall bring him,\" said Aragorn. \"Get you gone, ere it turn to your evil!\" -Aragorn, The Two Towers")
+                .WithInfo(15, 1, Artist.Matt_Stawicki));
+            Cards.Add(Card.Attachment("Forewarned", "BE84A618-AD39-4480-BCE2-B210C210C537", Sphere.Neutral, 0)
+                .WithBoon()
+                .WithTraits("Skill.")
+                .WithKeywords("Permanent.")
+                .WithText("Setup: Attach to a Ranger hero.\r\nResponse: After attached hero is declared as a defender against a non-unique enemy, exhaust Forewarned to discard 1 shadow card from that enemy.")
+                .WithFlavor("\"Faint and far are the feet of our enemies.\"\r\n-Aragorn, The Two Towers")
+                .WithInfo(17, 1, Artist.Carly_Janine_Mazur));
+            Cards.Add(Card.Attachment("Leader of Men", "FA99DB78-E091-44D8-B3BB-F1379E9BAE27", Sphere.Neutral, 0)
+                .WithBoon()
+                .WithTraits("Skill.")
+                .WithKeywords("Permanent.")
+                .WithText("Setup: Attach to a Noble hero.\r\nResponse: After attached hero quests successfully, exhaust Leader of Men to add 1 resource to attached hero's pool.")
+                .WithFlavor("\"Take this, dear lord!\" said a clear voice. \"It was ever at your service.\" -The Two Towers")
+                .WithInfo(18, 1, Artist.Arden_Beckwith));
+            Cards.Add(Card.Attachment("Beyond All Hope", "42EA5106-88D6-4E4B-B806-8684458AD7D9", Sphere.Neutral, 0)
+                .WithBoon()
+                .WithTraits("Favor.")
+                .WithKeywords("Permanent.")
+                .WithText("Setup: Attach to a hero.\r\nAttached hero gets +1 Willpower, +1 Attack, +1 Defense and cannot have treachery card attachments.")
+                .WithFlavor("\"Beyond all hope you return to us in our need!\" -Aragorn, The Two Towers")
+                .WithInfo(19, 1, Artist.Ilich_Henriquez));
+            Cards.Add(Card.Attachment("Palantír of Orthanc", "8D9A389B-C84A-48B4-9DBE-29076536B52C", Sphere.Neutral, 0)
+                .WithNormalizedTitle("Palantir of Orthanc")
+                .WithBoon()
+                .WithTraits("Artifact.", "Item.")
+                .WithText("Attach to Fellowship Aragorn.\r\nQuest Action: Exhaust Aragorn and Palantír of Orthanc to discard the top card of the encounter deck. If Aragorn's Willpower is greater than the discarded card's Threat, you may add Palantír of Orthanc to the victory display and remove it from the campaign pool to choose a player. That player reveals 1 fewer encounter card this phase (to a minimum of 0).")
+                .WithVictoryPoints(5)
+                .WithInfo(20, 1, Artist.Magali_Villeneuve));
         }
     }
 }

@@ -102,6 +102,7 @@ $(document).ready(function () {
             $('#moreOptionsButton').text('More Search Options');
         }
     });
+
     $('#resetButton').click(function () {
         $('#Sort').val('Any');
         $('#Query').focus().val('');
@@ -147,5 +148,12 @@ $(document).ready(function () {
         $('#QuestCategory').val('Any');
 
         $('#Artist').val('Any');
+    });
+
+    $('#Query').keypress(function (e) {
+        if (e.which == 13) {
+            $('form').submit();
+            return false;
+        }
     });
 });
