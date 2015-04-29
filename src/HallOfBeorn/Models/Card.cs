@@ -343,6 +343,67 @@ namespace HallOfBeorn.Models
             return false;
         }
 
+        public static Card Hero(string title, string id, Sphere sphere, byte threatCost, byte willpower, byte attack, byte defense, byte hitPoints)
+        {
+            return new Card()
+            {
+                CardType = Models.CardType.Hero,
+                Title = title,
+                NormalizedTitle = title.NormalizeString(),
+                Id = id,
+                IsUnique = true,
+                Sphere = sphere,
+                ThreatCost = threatCost,
+                Willpower = willpower,
+                Attack = attack,
+                Defense = defense,
+                HitPoints = hitPoints
+            };
+        }
+
+        public static Card Ally(string title, string id, Sphere sphere, byte resourceCost, byte willpower, byte attack, byte defense, byte hitPoints)
+        {
+            return new Card()
+            {
+                CardType = Models.CardType.Ally,
+                Title = title,
+                Id = id,
+                IsUnique = true,
+                Sphere = sphere,
+                ResourceCost = resourceCost,
+                Willpower = willpower,
+                Attack = attack,
+                Defense = defense,
+                HitPoints = hitPoints
+            };
+        }
+
+        public static Card Attachment(string title, string id, Sphere sphere, byte resourceCost)
+        {
+            return new Card()
+            {
+                CardType = Models.CardType.Attachment,
+                Title = title,
+                NormalizedTitle = title.NormalizeString(),
+                Id = id,
+                Sphere = sphere,
+                ResourceCost = resourceCost
+            };
+        }
+
+        public static Card Event(string title, string id, Sphere sphere, byte resourceCost)
+        {
+            return new Card()
+            {
+                CardType = Models.CardType.Event,
+                Title = title,
+                NormalizedTitle = title.NormalizeString(),
+                Id = id,
+                Sphere = sphere,
+                ResourceCost = resourceCost
+            };
+        }
+
         public static Card Enemy(string title, string id, string encounterSet, byte? engagementCost, byte? threat, byte? attack, byte? defense, byte? hitPoints)
         {
             var isVariableThreat = threat.HasValue && threat.Value == byte.MaxValue;
@@ -435,7 +496,14 @@ namespace HallOfBeorn.Models
         public Card WithTraits(params string[] traits)
         {
             foreach (var trait in traits)
+            {
+                if (trait != trait.NormalizeString())
+                {
+                    this.NormalizedTraits.Add(trait.NormalizeString());
+                }
+
                 this.Traits.Add(trait);
+            }
 
             return this;
         }

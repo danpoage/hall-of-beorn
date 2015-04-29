@@ -359,7 +359,7 @@ namespace HallOfBeorn
             return self.Value == byte.MaxValue ? "-" : self.Value.ToString();
         }
 
-        public static string Normalize(this string self)
+        public static string NormalizeString(this string self)
         {
             if (string.IsNullOrEmpty(self))
             {

@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.Products
         {
             AddProduct(new TheBlackRidersProduct());
             AddProduct(new TheRoadDarkensProduct());
+            AddProduct(new TheTreasonOfSarumanProduct());
         }
     }
 }
