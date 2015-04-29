@@ -173,215 +173,222 @@
                 }
                 </div>
             }
-                        
-            @if (@Model.Keywords.Count() > 0)
+       
+            @if (@Model.HasHtml)
             {
-                <span style="margin-left:6px;">
-                @foreach (var keyword in Model.KeywordEffects)
-                {
-                    if (keyword.Tokens.Count > 1 && !keyword.Tokens.Any(t => t.IsIcon))
-                    {
-                        <a title="Keyword Search" href='@string.Format("/Cards/Search?Keyword={0}", @keyword.GetText("[Card]"))'>@keyword.GetText(@Model.Title)</a>
-                    }
-                    else if (keyword.Tokens.Count > 1 && keyword.Tokens.Any(t => t.IsIcon))
-                    {
-                        <a title="Keyword Search" href='@string.Format("/Cards/Search?Keyword={0}", @keyword.GetText("[Card]"))'><span>@keyword.GetIconPrefix(@Model.Title) <img src="@keyword.GetIconPath()" style="height:16px;margin-left:2px;margin-right:-4px;margin-bottom:-2px;" /> @keyword.GetIconSuffix(@Model.Title)</span></a>
-                    }
-                    else
-                    {
-                        foreach (var token in keyword.Tokens)
-                        {
-                            if (token.IsTrait)
-                            {
-                                <a style="font-weight:bold;font-style:italic;" title="Trait Search" href='@string.Format("/Cards/Search?Trait={0}", @token.Text.Trim())'>@token.Text</a>
-                                
-                                if (token.HasSuffix && token.Suffix != ".")
-                                {
-                                    @: @token.Suffix
-                                }
-                            }
-                            else if (token.IsIcon)
-                            {
-                                if (token.HasSuffix)
-                                {
-                                    <img src="@token.ImagePath" style="height:16px;margin-left:2px;margin-right:-4px;margin-bottom:-2px;" />
-                                    @: @token.Suffix
-                                }
-                                else
-                                {
-                                    <img src="@token.ImagePath" style="height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;" />
-                                }
-                            }
-                            else if (token.IsTitleReference)
-                            {
-                                if (token.HasSuffix)
-                                {
-                                    @: @string.Format("{0}{1}", @Model.Title, @token.Suffix)
-                                }
-                                else
-                                {
-                                @: @Model.Title
-                                }
-                            }
-                            else
-                            {
-                                if (keyword.Tokens.Count == 1)
-                                {
-                                    <a title="Keyword Search" href='@string.Format("/Cards/Search?Keyword={0}", @token.Text)'>@token.Text</a>
-                                }
-                                else
-                                {
-                                    @: @token.Text
-                                }                    
-                            }
-                        }
-                    }
-                }
-                </span>
-                <br />
+                @Html.Raw(@Model.Html);
             }
-
-            <div style="padding:4px;">
-                @if (@Model.TextEffects.Count() > 0)
+            else
+            {                 
+                if (@Model.Keywords.Count() > 0)
                 {
-                    foreach (var effect in Model.TextEffects)
-                    {   
-                        var count = 0;
-                        foreach (var token in effect.Tokens)
+                    <span style="margin-left:6px;">
+                    @foreach (var keyword in Model.KeywordEffects)
+                    {
+                        if (keyword.Tokens.Count > 1 && !keyword.Tokens.Any(t => t.IsIcon))
                         {
-                            count++;
-                            if (token.IsTrigger || effect.IsCritical)
+                            <a title="Keyword Search" href='@string.Format("/Cards/Search?Keyword={0}", @keyword.GetText("[Card]"))'>@keyword.GetText(@Model.Title)</a>
+                        }
+                        else if (keyword.Tokens.Count > 1 && keyword.Tokens.Any(t => t.IsIcon))
+                        {
+                            <a title="Keyword Search" href='@string.Format("/Cards/Search?Keyword={0}", @keyword.GetText("[Card]"))'><span>@keyword.GetIconPrefix(@Model.Title) <img src="@keyword.GetIconPath()" style="height:16px;margin-left:2px;margin-right:-4px;margin-bottom:-2px;" /> @keyword.GetIconSuffix(@Model.Title)</span></a>
+                        }
+                        else
+                        {
+                            foreach (var token in keyword.Tokens)
                             {
-                                <b>@token.Text</b>
-                            }
-                            else if (token.IsStrong)
-                            {
-                                <strong>@token.Text</strong>
-                            }
-                            else if (token.IsEmphasized)
-                            {
-                                <em>@token.Text</em>
-                            }
-                            else if (token.IsTrait)
-                            {
-                                <a title="Trait Search" style="font-weight:bold;font-style:italic;" href='@string.Format("/Cards/Search?Trait={0}.", @token.Text.Trim().TrimEnd('.'))'>@token.Text</a>
-                                
-                                if (token.HasSuffix)
+                                if (token.IsTrait)
                                 {
-                                    if (token.Suffix != "." || count != effect.Tokens.Count)
+                                    <a style="font-weight:bold;font-style:italic;" title="Trait Search" href='@string.Format("/Cards/Search?Trait={0}", @token.Text.Trim())'>@token.Text</a>
+                                
+                                    if (token.HasSuffix && token.Suffix != ".")
                                     {
                                         @: @token.Suffix
                                     }
                                 }
-                            }
-                            else if (token.IsIcon)
-                            {
-                                if (token.HasSuffix)
+                                else if (token.IsIcon)
                                 {
-                                    if (token.HasPrefix)
+                                    if (token.HasSuffix)
                                     {
-                                        <span style="margin-right:-6px;">@token.Prefix</span>
+                                        <img src="@token.ImagePath" style="height:16px;margin-left:2px;margin-right:-4px;margin-bottom:-2px;" />
+                                        @: @token.Suffix
                                     }
+                                    else
+                                    {
+                                        <img src="@token.ImagePath" style="height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;" />
+                                    }
+                                }
+                                else if (token.IsTitleReference)
+                                {
+                                    if (token.HasSuffix)
+                                    {
+                                        @: @string.Format("{0}{1}", @Model.Title, @token.Suffix)
+                                    }
+                                    else
+                                    {
+                                    @: @Model.Title
+                                    }
+                                }
+                                else
+                                {
+                                    if (keyword.Tokens.Count == 1)
+                                    {
+                                        <a title="Keyword Search" href='@string.Format("/Cards/Search?Keyword={0}", @token.Text)'>@token.Text</a>
+                                    }
+                                    else
+                                    {
+                                        @: @token.Text
+                                    }                    
+                                }
+                            }
+                        }
+                    }
+                    </span>
+                    <br />
+                }
+
+                <div style="padding:4px;">
+                    @if (@Model.TextEffects.Count() > 0)
+                    {
+                        foreach (var effect in Model.TextEffects)
+                        {   
+                            var count = 0;
+                            foreach (var token in effect.Tokens)
+                            {
+                                count++;
+                                if (token.IsTrigger || effect.IsCritical)
+                                {
+                                    <b>@token.Text</b>
+                                }
+                                else if (token.IsStrong)
+                                {
+                                    <strong>@token.Text</strong>
+                                }
+                                else if (token.IsEmphasized)
+                                {
+                                    <em>@token.Text</em>
+                                }
+                                else if (token.IsTrait)
+                                {
+                                    <a title="Trait Search" style="font-weight:bold;font-style:italic;" href='@string.Format("/Cards/Search?Trait={0}.", @token.Text.Trim().TrimEnd('.'))'>@token.Text</a>
+                                
+                                    if (token.HasSuffix)
+                                    {
+                                        if (token.Suffix != "." || count != effect.Tokens.Count)
+                                        {
+                                            @: @token.Suffix
+                                        }
+                                    }
+                                }
+                                else if (token.IsIcon)
+                                {
+                                    if (token.HasSuffix)
+                                    {
+                                        if (token.HasPrefix)
+                                        {
+                                            <span style="margin-right:-6px;">@token.Prefix</span>
+                                        }
                                                 
-                                    <img src="@token.ImagePath" style="height:16px;margin-left:@token.LeftMargin;margin-right:-4px;margin-bottom:-2px;" />
-                                    @: @token.Suffix
+                                        <img src="@token.ImagePath" style="height:16px;margin-left:@token.LeftMargin;margin-right:-4px;margin-bottom:-2px;" />
+                                        @: @token.Suffix
+                                    }
+                                    else
+                                    {
+                                        <img src="@token.ImagePath" style="height:16px;margin-left:@token.LeftMargin;margin-right:2px;margin-bottom:-2px;" />
+                                    }
                                 }
                                 else
                                 {
-                                    <img src="@token.ImagePath" style="height:16px;margin-left:@token.LeftMargin;margin-right:2px;margin-bottom:-2px;" />
+                                    @: @token.Text
                                 }
                             }
-                            else
-                            {
-                                @: @token.Text
-                            }
-                        }
                                             
-                        <br />
-                        <br />
+                            <br />
+                            <br />
+                        }
                     }
-                }
                             
-                @if (@Model.ShadowEffects.Count() > 0)
-                {
-                    <img src="/Images/ShadowDivider.png" style="display:block;margin-left:auto;margin-right:auto;width:285px;"/>
-                    <br />
-                                
-                    foreach (var effect in Model.ShadowEffects)
+                    @if (@Model.ShadowEffects.Count() > 0)
                     {
-                        foreach (var token in effect.Tokens)
-                        {
-                            if (token.IsTrigger)
-                            {
-                                <b>@token.Text</b>
-                            }
-                            else if (token.IsTrait)
-                            {
-                                <b><i>@token.Text</i></b>
+                        <img src="/Images/ShadowDivider.png" style="display:block;margin-left:auto;margin-right:auto;width:285px;"/>
+                        <br />
                                 
-                                if (token.HasSuffix)
-                                {
-                                    @: @token.Suffix
-                                }
-                            }
-                            else if (token.IsIcon)
+                        foreach (var effect in Model.ShadowEffects)
+                        {
+                            foreach (var token in effect.Tokens)
                             {
-                                if (token.HasSuffix)
+                                if (token.IsTrigger)
                                 {
-                                    <img src="@token.ImagePath" style="height:16px;margin-left:2px;margin-right:-4px;margin-bottom:-2px;" />
-                                    @: @token.Suffix
+                                    <b>@token.Text</b>
+                                }
+                                else if (token.IsTrait)
+                                {
+                                    <b><i>@token.Text</i></b>
+                                
+                                    if (token.HasSuffix)
+                                    {
+                                        @: @token.Suffix
+                                    }
+                                }
+                                else if (token.IsIcon)
+                                {
+                                    if (token.HasSuffix)
+                                    {
+                                        <img src="@token.ImagePath" style="height:16px;margin-left:2px;margin-right:-4px;margin-bottom:-2px;" />
+                                        @: @token.Suffix
+                                    }
+                                    else
+                                    {
+                                        <img src="@token.ImagePath" style="height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;" />
+                                    }
                                 }
                                 else
                                 {
-                                    <img src="@token.ImagePath" style="height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;" />
+                                    @: @token.Text
                                 }
-                            }
-                            else
-                            {
-                                @: @token.Text
                             }
                         }
                     }
-                }
 
-                @if (!string.IsNullOrEmpty(@Model.VictoryPoints))
+                    @if (!string.IsNullOrEmpty(@Model.VictoryPoints))
+                    {
+                        <br />
+                        <div style="text-align:right;font-weight:bold;"><span style="padding-left:4px;padding-right:4px;border-style:solid;border-width:1px;border-color:black;">@Model.VictoryPoints.ToUpper()</span></div>
+                    }
+                    @if (!string.IsNullOrEmpty(@Model.PassValue))
+                    {
+                        <br />
+                        <div style="text-align:right;font-weight:bold;">@Model.PassValue</div>
+                    }
+                </div>
+
+                if (@Model.HasFlavorText || @Model.HasOppositeFlavorText)
                 {
                     <br />
-                    <div style="text-align:right;font-weight:bold;"><span style="padding-left:4px;padding-right:4px;border-style:solid;border-width:1px;border-color:black;">@Model.VictoryPoints.ToUpper()</span></div>
-                }
-                @if (!string.IsNullOrEmpty(@Model.PassValue))
-                {
-                    <br />
-                    <div style="text-align:right;font-weight:bold;">@Model.PassValue</div>
-                }
-            </div>
-
-            @if (@Model.HasFlavorText || @Model.HasOppositeFlavorText)
-            {
-                <br />
                         
-            <p style="text-align:center;">
-                @if (@Model.HasFlavorText)
-                {
-                    foreach (var line in @Model.FlavorText)
+                <p style="text-align:center;">
+                    @if (@Model.HasFlavorText)
                     {
-                        <i>@line</i><br />
+                        foreach (var line in @Model.FlavorText)
+                        {
+                            <i>@line</i><br />
+                        }
                     }
-                }
-                @if (@Model.HasOppositeFlavorText)
-                {
-                    if (@Model.HasFlavorText)
+                    @if (@Model.HasOppositeFlavorText)
                     {
-                        <br />
-                        <br />
-                    }
+                        if (@Model.HasFlavorText)
+                        {
+                            <br />
+                            <br />
+                        }
                                 
-                    foreach (var line in @Model.OppositeFlavorText)
-                    {
-                        <i>@line</i><br />
+                        foreach (var line in @Model.OppositeFlavorText)
+                        {
+                            <i>@line</i><br />
+                        }
                     }
+                </p>
                 }
-            </p>
             }
             </div>
         </div>

@@ -1331,7 +1331,8 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Number = 85,
                 Artist = Artist.Ryan_Barger
             });
-            Cards.Add(new Card() {
+            var despair = new Card()
+            {
                 ImageType = Models.ImageType.Png,
                 Title = "Despair",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9086",
@@ -1343,7 +1344,15 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 EasyModeQuantity = 0,
                 Number = 86,
                 Artist = Artist.Marc_Scheff
-            });
+            };
+
+            //despair
+            //    .ClearText()
+            //    .WithEffect(CardEffectType.When_Revealed, "Remove 4 progress tokens from the current quest card. (If there are fewer than 4 progress tokens on the quest, remove all progress tokens from that quest.)")
+            //    .WithShadow("Defending character does not count its Defense.")
+            //    .RenderEffects();
+
+            Cards.Add(despair);
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,
                 Title = "The Brown Lands",

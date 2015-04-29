@@ -45,7 +45,7 @@ namespace HallOfBeorn.Models
                 html.Append(effect.ToHtml(this));
             }
 
-            //this.Text = text.ToString();
+            this.Text = text.ToString();
             this.Html = html.ToString();
         }
 
@@ -53,7 +53,6 @@ namespace HallOfBeorn.Models
 
         public Card WithFlavor(string flavor)
         {
-            //effects.Add(new Effect(CardEffectType.Flavor_Text, LayoutType.Block).Flavor(flavor));
             this.FlavorText = flavor;
             return this;
         }
@@ -61,6 +60,12 @@ namespace HallOfBeorn.Models
         public Card WithOppositeFlavor(string flavor)
         {
             this.OppositeFlavorText = flavor;
+            return this;
+        }
+
+        public Card Flavor(string flavor)
+        {
+            effects.Add(new Effect(CardEffectType.Flavor_Text, LayoutType.Block).Flavor(flavor));
             return this;
         }
 
@@ -481,6 +486,12 @@ namespace HallOfBeorn.Models
             };
         }
 
+        public Card ClearText()
+        {
+            this.Text = string.Empty;
+            return this;
+        }
+
         public Card WithUnique()
         {
             this.IsUnique = true;
@@ -558,7 +569,42 @@ namespace HallOfBeorn.Models
             switch (type)
             {
                 case CardEffectType.Shadow:
-                    this.Shadow = effect;
+                    {
+                        var trigger = type.ToString().Replace('_', ' ') + ": ";
+                        if (!string.IsNullOrEmpty(effect) && !effect.StartsWith(trigger))
+                        {
+                            this.Shadow = string.Format("{0}{1}", trigger, effect);
+                        }
+                        else
+                        {
+                            this.Shadow = effect;
+                        }
+                    }
+                    break;
+                case CardEffectType.Action:
+                case CardEffectType.Combat_Action:
+                case CardEffectType.Encounter_Action:
+                case CardEffectType.Forced:
+                case CardEffectType.Planning_Action:
+                case CardEffectType.Quest_Action:
+                case CardEffectType.Refresh_Action:
+                case CardEffectType.Resource_Action:
+                case CardEffectType.Response:
+                case CardEffectType.Setup:
+                case CardEffectType.Travel:
+                case CardEffectType.Travel_Action:
+                case CardEffectType.When_Revealed:
+                    {
+                        var trigger = type.ToString().Replace('_', ' ') + ": ";
+                        if (!string.IsNullOrEmpty(effect) && !effect.StartsWith(trigger))
+                        {
+                            this.Text += string.Format("{0}{1}", trigger, effect);
+                        }
+                        else
+                        {
+                            this.Text += effect;
+                        }
+                    }
                     break;
                 case CardEffectType.Flavor_Text:
                     this.FlavorText = effect;

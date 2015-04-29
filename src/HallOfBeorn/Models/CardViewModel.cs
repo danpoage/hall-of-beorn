@@ -621,5 +621,15 @@ namespace HallOfBeorn.Models
                 return _card.RelatedCards.Select(x => new CardViewModel(x)).ToList();
             }
         }
+
+        public bool HasHtml
+        {
+            get { return !string.IsNullOrEmpty(_card.Html); }
+        }
+
+        public string Html
+        {
+            get { return _card.Html; }
+        }
     }
 }
