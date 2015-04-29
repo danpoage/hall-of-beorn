@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Products
     public class TheTreasonOfSarumanProduct : Product
     {
         public TheTreasonOfSarumanProduct()
-            : base("The Treason of Saruman", "MEC45", ImageType.Png)
+            : base("The Treason of Saruman", "MEC45", ImageType.Jpg)
         {
             CardSets.Add(CardSet.TheTreasonOfSaruman);
         }
