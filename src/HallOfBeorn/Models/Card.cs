@@ -481,8 +481,24 @@ namespace HallOfBeorn.Models
                 Id = id,
                 EncounterSet = encounterSet,
                 QuestPoints = questPoints,
+                IsVariableQuestPoints = questPoints == (byte)254,
                 ScenarioNumber = scenarioNumber,
                 StageNumber = stageNumber
+            };
+        }
+
+        public static Card Campaign(string title, string id, int scenarioNumber, string encounterSet, string oppositeTitle)
+        {
+            return new Card()
+            {
+                CardType = CardType.Campaign,
+                Title = title,
+                HasSecondImage = true,
+                Id = id,
+                EncounterSet = encounterSet,
+                ScenarioNumber = scenarioNumber,
+                SlugIncludesType = true,
+                OppositeTitle = oppositeTitle
             };
         }
 

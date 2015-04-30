@@ -462,6 +462,7 @@ namespace HallOfBeorn.Controllers
                     var objectiveAllyCounts = new Dictionary<int, int>() { { 0, 0 }, { 1, 0 }, { 2, 0 } };
                     var surgeCounts = new Dictionary<int, int>() { { 0, 0 }, { 1, 0 }, { 2, 0 } };
                     var shadowCounts = new Dictionary<int, int>() { { 0, 0 }, { 1, 0 }, { 2, 0 } };
+                    var encounterSideQuestCounts = new Dictionary<int, int> { { 0, 0 }, { 1, 0 }, { 2, 0 } };
                     var hasEasy = false;
                     var hasNightmare = false;
 
@@ -521,6 +522,11 @@ namespace HallOfBeorn.Controllers
                                 objectiveAllyCounts[1] += card.NormalQuantity;
                                 objectiveAllyCounts[2] += card.NightmareQuantity;
                                 break;
+                            case CardType.Encounter_Side_Quest:
+                                encounterSideQuestCounts[0] += card.EasyQuantity;
+                                encounterSideQuestCounts[1] += card.NormalQuantity;
+                                encounterSideQuestCounts[2] += card.NightmareQuantity;
+                                break;
                         }
                     }
 
@@ -550,6 +556,9 @@ namespace HallOfBeorn.Controllers
                         details[prefix + "Surges"] = surgeCounts[i];
                         details[prefix + "SurgePercentage"] = ((float)surgeCounts[i] / (float)cardCounts[i]); //*100;
                         details[prefix + "HasSurge"] = (surgeCounts[i] > 0);
+                        details[prefix + "EncounterSideQuests"] = encounterSideQuestCounts[i];
+                        details[prefix + "EncounterSideQuestPercentage"] = ((float)encounterSideQuestCounts[i] / (float)cardCounts[i]);
+                        details[prefix + "HasEncounterSideQuests"] = (encounterSideQuestCounts[i] > 0);
                     }
                 }
 

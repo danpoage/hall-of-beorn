@@ -178,11 +178,12 @@
             if (id != null && id.length > 0) {
 
                 $.get("/Cards/ScenarioDetails/" + id).success(function (result) {
+                    console.log(result);
                     var enemyData = [];
                     var locationData = [];
                     var treacheryData = [];
                     var shadowData = [];
-
+                    
                     if (result.HasEasy) {
                         enemyData.push(result.EasyEnemies);
                         locationData.push(result.EasyLocations);
@@ -266,6 +267,22 @@
                             data: surgeData
                         });
                     }
+                    if (result.EasyHasEncounterSideQuests || result.NormalHasEncounterSideQuests || result.NightmareHasEncounterSideQuests) {
+                        var encounterSideQuestData = [];
+
+                        if (result.HasEasy) {
+                            encounterSideQuestData.push(result.EasyEncounterSideQuests);
+                        }
+                        encounterSideQuestData.push(result.NormalEncounterSideQuests);
+                        if (result.HasNightmare) {
+                            encounterSideQuestData.push(result.NightmareEncounterSideQuests);
+                        }
+
+                        series.push({
+                            name: 'Side Quests',
+                            data: encounterSideQuestData
+                        });
+                    }
 
                     var categories = [];
 
@@ -331,6 +348,9 @@
                                                     break;
                                                 case 'Shadows':
                                                     hasShadow = 'Yes';
+                                                    break;
+                                                case 'Encounter Side Quests':
+                                                    cardType = 'Encounter_Side_Quest';
                                                     break;
                                             }
 

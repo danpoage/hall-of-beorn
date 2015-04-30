@@ -126,6 +126,85 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Attach to Fellowship Aragorn.\r\nQuest Action: Exhaust Aragorn and Palantír of Orthanc to discard the top card of the encounter deck. If Aragorn's Willpower is greater than the discarded card's Threat, you may add Palantír of Orthanc to the victory display and remove it from the campaign pool to choose a player. That player reveals 1 fewer encounter card this phase (to a minimum of 0).")
                 .WithVictoryPoints(5)
                 .WithInfo(20, 1, Artist.Magali_Villeneuve));
+
+            Cards.Add(Card.Quest("Follow the Orcs", "1AD0CFEB-9A20-4802-A2F9-6D8137967E53", 7, 1, "The Uruk-hai", 254)
+                .WithFlavor("The Orcs that attached the Fellowship at Amon Hen captured several members of the Company and are carrying them to Isengard. Aragorn and his companions decide to chase the Uruk-hai in an effort to rescue their friends...")
+                .WithText("Setup: Make Estemnet the active location. Add Uglúk and To Isengard! to the staging area. Each player chooses 1 non-Fellowship hero he controls to be a Captive and places it faceup underneath to Isengard! (If playing campaign mode, choose each \"captive\" from the Campaign Log instead). Set the pursuit value to 10.")
+                .WithOppositeFlavor("\"With hope or without hope we will follow the trail of our enemies. And woe to them, if we prove the swifter!\" -Aragorn, The Two Towers")
+                .WithOppositeText("X is the Pursuit value.\r\nUglúk cannot leave the staging area or take damage.\r\nForced: At the end of the combat phase, increase the pursuit value by 1 for each enemy in the staging area.")
+                .WithInfo(69, 1, Artist.Nicholas_Gregory));
+            Cards.Add(Card.Quest("Rescue the Captives", "76744E42-56C0-4B65-B13F-1984F9EAF248", 7, 2, "The Uruk-hai", 254)
+                .WithFlavor("As their pursuers close in on them, the Uruk-hai race towards the forest of Fangorn with redoubled speed. If the Orcs reach its borders, they will escape into the woods, taking their captives with them...")
+                .WithText("When Revealed: Each player searches the encounter deck and discard pile for an Uruk-hai enemy, reveals it, and adds it to the staging area. Shuffle the encounter deck.")
+                .WithOppositeFlavor("\"Run! There's the forest,\" he shouted, pointing ahead. \"Get to it! It's your best hope. Off you go!\" -Uglúk, The Two Towers")
+                .WithOppositeText("X is the pursuit value.\r\nResponse: After an enemy is defeated, reduce the pursuit value by 1.\r\nThe players cannot defeat this stage while Uglúk is in play. If the players defeat this stage, they have rescued each Captive hero and won the game.")
+                .WithInfo(70, 1, Artist.Romana_Kendelic));
+            Cards.Add(Card.Campaign("The Uruk-hai", "188132B7-CFF0-4803-8055-848343033A2D", 7, "The Uruk-hai", "The Lord of the Rings Part 7")
+                .WithText("You are playing campaign mode.\r\nSetup: Remove Gildor Inglorion and Mr. Underhill from the Campaign Pool. Remove each burder with the following burden set icons from the encounter deck:\r\nA ~Shadow of the Past, Flight to the Ford, The ~Ring Goes South")
+                .WithFlavor("They followed their enemies now by the clear light of day. It seemed that the Orcs had pressed on with all possible speed. -The Two Towers")
+                .WithOppositeText("Resolution: If the pursuit value is 25 or lower, the players must choose: either each player earns one of the Skill boons (Intimidation, Hands of a Healer, Forewarned, or Leader of Men) and attached it to a hero he controls, or one player ears the boon Beyond All Hope and chooses a hero from the list of fallen heroes. That player takes control of the chosen hero (removing it from the list of fallen heroes) and attaches Beyond All Hope to it. If a player controls more than 3 non-Fellowship heroes, he must remove heroes from the Campaign Log until he controls only 3 heroes. Changing heroes as a result of earning Beyond All Hope does not incur a +1 threat penalty. Add the earned cards to the Campaign Pool.")
+                .WithOppositeFlavor("Then when they had laid their fallen comrades in a mound and had sung their praises, the Riders made a great fire and scattered the ashes of their enemies. So ended the raid, and no news of it came ever back either to Mordor or Isengard; but the smoke of the burning rose hight ot heaven and was seen by many watchful eyes. -The Two Towers")
+                .WithInfo(71, 1, Artist.Nicholas_Gregory));
+            Cards.Add(Card.Quest("The King of the Golden Hall", "F80E3197-33B4-4132-8A2D-9203AB1CA181", 8, 1, "Helm's Deep", 255)
+                .WithFlavor("The pursuit of the Uruk-hai has brought the Heir of Elendil to Rohan just as Saruman declares war on that land. Aragorn and his companions travel to Edoras to aid King Théoden, but their arrival is met with suspicion...")
+                .WithText("Setup: Set The Defense of Helm's Deep and 1 copy of Deeping Wall aside, out of play. Each player sets 1 copy of Soldier of Isengard aside, out of play. Then, the players must choose: either each player shuffles 1 copy of Poisoned Counsels into his deck, or advance to stage 2A (bypassing stage 1B).")
+                .WithOppositeFlavor("\"Hail, Théoden son of Thengel! I have returned. For behold! the storm comes, and now all friends should gather together...\" -Gandalf, The Two Towers")
+                .WithOppositeText("When Revealed: Each player chooses 1 ally in his hand that matches the sphere of a hero he controls and puts it into play under his control.\r\nSkip the quest phase and combat phase.\r\nForced: At the end of the round, advance to stage 2A.")
+                .WithInfo(72, 1, Artist.Katy_Grierson));
+            Cards.Add(Card.Quest("Assault on Helm's Deep", "15F98A94-520E-4774-BBFF-9E331511A8BD", 8, 2, "Helm's Deep", 8)
+                .WithKeywords("Defense.")
+                .WithFlavor("At the behest of Gandalf, Aragorn and his companions ride to Helm's Deep with the men of Rohan and their King. As the sun goes down, the valley below the Deeping Wall fills with the approaching army of Isengard...")
+                .WithText("When Revealed: Add the Defense of Helm's Deep and each set aside copy of Soldier of Isengard to the staging area. Make Deeping Wall the active location. Shuffle the encounter deck. Then, each player reveals 1 encounter card.")
+                .WithOppositeText("Forced: At the end of the combat phase, if the number of enemies in the staging area is less than the number of players in the game, the first player reveals an encounter card.\r\nForced: At the end of the round place 1 progress here for each enemy in the staging area (bypassing the active location).")
+                .WithInfo(73, 1, Artist.Alvaro_Calvo_Escudero));
+            Cards.Add(Card.Quest("The Hosts of Isengard", "58BD7102-7CCB-4EA8-BE69-04C94081E1D9", 8, 3, "Helm's Deep", 8)
+                .WithKeywords("Defense.")
+                .WithFlavor("Against the Deeping Wall the hosts of Isengard roared like a sea. Orcs and hillmen swarmed about its feet from end to end. -The Two Towers")
+                .WithText("When Revealed: Search the encounter deck, discard pile, and victory display for Helm's Gate and add it to the staging area. Shuffle the encounter deck. Make Helm's Gate the active location, returning any previous active location to the staging area.")
+                .WithOppositeFlavor("Hundreds of long ladders were lifted up. Many were cast down in ruin, but many more replaced them... -The Two Towers")
+                .WithOppositeText("Forced: After resolving the quest, if the encounter deck did not place at least 1 progress on this stage as the result of questing, the first player reveals 1 encounter card.")
+                .WithInfo(74, 1, Artist.Jason_Ward));
+            Cards.Add(Card.Quest("The Wall is Breached!", "00995C4A-E4D7-487A-B1AA-084B9C2BE75C", 8, 4, "Helm's Deep", 8)
+                .WithKeywords("Defense.")
+                .WithFlavor("Then there was a crash and a flash of flame and smoke. The waters of the Deeping-stream poured out hissing and foaming: they were choked no longer, a gaping hole was blasted in the wall. A host of dark shapes poured in. -The Two Towers")
+                .WithText("When Revealed: Shuffle the encounter discard pile into the encounter deck. Discard cards from the encounter deck until X enemies are discarded. X is the number of players. Add each enemy discarded this way to the staging area.")
+                .WithOppositeFlavor("Over the wall and under the wall the last assault came sweeping like a dark wave upon a hill of sand. -The Two Towers")
+                .WithOppositeText("Forced: After a character is destroyed, place 1 progress on this stage (bypassing any active location).\r\nIf this stage is defeated, the players lose the game.")
+                .WithInfo(75, 1, Artist.Anthony_Devine));
+            Cards.Add(Card.Quest("The King Rides Out", "AC1A3051-5820-427D-AD95-B0858D52B264", 8, 5, "Helm's Deep", 255)
+                .WithFlavor("As dawn breaks in the East, a blast from Helm's Horn echoes in the valley and the Riders of Rohan charge out from Helm's Gate with King Théoden and Aragorn at their head.")
+                .WithText("When Revealed: Shuffle the encounter discard pile into the encounter deck. Discard cards from the encounter deck until X enemies are discarded. X is the number of players. Add each enemy discarded this way to the staging area.")
+                .WithOppositeFlavor("With a cry and a great noise they charged. Down from the gates they roared, over the causeway they swept, and they drove through the hosts of Isengard as a wind among grass. -The Two Towers")
+                .WithOppositeText("Skip the quest phase. Players cannot reduce their threat.\r\nIf there are no enemies in play, the players win the game.")
+                .WithInfo(76, 1, Artist.Smirtouille));
+            Cards.Add(Card.Campaign("Helm's Deep", "B0A17346-311F-4A71-A68F-EDBBD10493B9", 8, "Helm's Deep", "The Lord of the Rings Part 8")
+                .WithText("You are playing campaign mode.\r\nSetup: Each player may change hero cards without incurring the +1 threat penalty. Remove each burden with the following burden set icons from the encounter deck:\r\nA ~Shadow of the Past, Flight to the Ford, The ~Ring Goes South")
+                .WithFlavor("\"The shield-wall was broken. Erkenbrand of Westfold has drawn off those men he could gather towards his fastness in Helm's Deep.\" -Ceorl, The Two Towers")
+                .WithOppositeText("Resolution: Each player with a copy of Poisoned Counsels in his hand, deck or discard pile has earned that burden. Add the earned cards to the campaign pool.")
+                .WithOppositeFlavor("Down through the breach of the Dike charged the king's company. Down from the hills leaped Erkenbrand, lord of Westfold. Down leaped Shadowfax, like a deer that runs surefooted in the mountains. The White Rider was upon them, and the terror of his coming filled the enemy with madness. The wild men fell on their faces before him. The Orcs reeled and screamed and cast aside both sword and spear. Like a black smoke driven by a mounting wind they fled. -The Two Towers")
+                .WithInfo(77, 1, Artist.Katy_Grierson));
+            Cards.Add(Card.Quest("Rouse the Ents", "CA1724AC-2257-448A-A7E9-95DC747C875F", 9, 1, "The Road to Isengard", 255)
+                .WithFlavor("Saruman's army has been defeated at Helm's Deep, but the Wizard's fortress is beyond Rohan's power to capture. However, the Ents of Fangorn have also suffered great injury because of Saruman and his Orcs. They have the strength to break Isengard, but only if they can be roused to attack.")
+                .WithText("Setup: Set Gates of Isengard, Orthanc, Saruman, and Saruman's Staff aside, out of play. Add each copy of Ent of Fangorn to the staging area. Shuffle the encounter deck.")
+                .WithOppositeText("Players cannot draw cards or gain resources. Do not commit to the quest or reveal encounter cards during the quest phase.\r\nForced: At the end of the round, place 1 resource here. Then, the players may advance to stage 2. If the players advance, the first player shuffle the encounter discard pile into the encounter deck and reveals 1 encounter card for each resource here. Then, remove each Ent objective in the staging area from the game.")
+                .WithInfo(78, 1, Artist.Adam_Lane));
+            Cards.Add(Card.Quest("Breaking Isengard", "227838F9-061E-4A76-89DD-B471B67C01E1", 9, 2, "The Road to Isengard", 255)
+                .WithFlavor("\"To Isengard! Though Isengard be ringed and barred with doors of stone;\r\nThough Isengard be strong and hard, as cold as stone and bare as bone,\r\nWe go, we go, we go to war, to hew the stone and break the door;\r\nFor bole and bough are burning now, the furnace roars - we go to war!\"\r\n-The Ents, The Two Towers")
+                .WithText("When Revealed: Make Gates of Isengard the active location. Add Saruman and Orthanc to the staging area.")
+                .WithOppositeFlavor("The power of Saruman must be broken and the fortress of Isengard destroyed!")
+                .WithOppositeText("The players cannot travel to Orthanc.\r\nForced: After a non-unique location is explored, place 1 damage here. Then, if there are 5 damage tokens here, advance to stage 3A.\r\nQuest Action: Exhaust Ent of Fangorn to place 2 progress on a non-unique location.")
+                .WithInfo(79, 1, Artist.Mark_Behm));
+            Cards.Add(Card.Quest("The Voice of Saruman", "3D397200-CBF9-4195-A444-B4F4B8DE40EA", 9, 3, "The Road to Isengard", 15)
+                .WithFlavor("Suddenly another voice spoke, low and melodious, its very sound an enchantment. Those who listened unwarily to that voice could seldom report the words that they heard... -The Two Towers")
+                .WithText("When Revealed: Each player draws 6 cards. Each player witth more than 6 cards in his hand discards cards from his hand until he has only 6.\r\nAttach Saruman's Staff to Saruman.")
+                .WithText("While Orthanc is the active location, Saruman is considered to be engaged with the first player.\r\nForced: When Orthanc is explored, cancel any progress placed on the quest this phase and return Orthanc to the staging area.\r\nIf a player has 0 cards in his hand, he is eliminated from the game. If the players defeat this stage, they win the game.")
+                .WithInfo(80, 1, Artist.Tiziano_Baracchi));
+            Cards.Add(Card.Campaign("The Road to Isengard", "B0DE0027-1DAE-46E6-B6D4-E5BC123BB445", 9, "The Road to Isengard", "The Lord of the Rings Part 9")
+                .WithText("You are playing campaign mode.\r\nSetup: Shuffle Saruman's Voice into the encounter deck. Remove each burden with these burden set icons from the encounter deck:\r\nA ~Shadow of the Past, Flight to the Ford, The ~Ring Goes South")
+                .WithFlavor("\"Only lately did I guess that Saruman was to blame, and that long ago he had been spying out all the ways, and discovering my secrets. He and his folk are making havoc now.\" -Treebeard, The Two Towers")
+                .WithOppositeText("Resolution: If any player has 3 or fewer cards in his hand, the players have earned the Saruman's Voice burden card. If any player has 3 or more cards in his hand, the first player has earned the Palantír of Orthanc boon card. Add the earned cards to the Campaign Pool.")
+                .WithOppositeFlavor("\"You have become a fool, Saruman, and yet pitiable. You might still have turned away from folly and evil, and have been of service. But you choose to stay and gnaw the ends of your old plots. Stay then! But I warn you, you will not easily come out again. Not unless the dark hands of the East stretch out to take you.\"\r\n-Gandalf, The Two Towers")
+                .WithInfo(81, 1, Artist.Adam_Lane));
         }
     }
 }
