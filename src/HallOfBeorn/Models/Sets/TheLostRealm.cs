@@ -651,14 +651,14 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Setup: Set Orc Ambush and Amon Forn aside, out of play. Create the Orc deck (see insert) and set it next to the quest deck. Make Exposed Ridge the active location. Add Hunting the Orcs and 1 Weather Hilltop to the staging area. Shuffle the encounter deck.")
                 .WithOppositeFlavor("As you pursue the Orcs, the weather itself turns against you. Now you must contend with the elements while you hunt the enemy.")
                 .WithOppositeText("The first Weather treachery card revealed each round gains surge.\r\nForced: After the active location is explored, reveal the top card of the Orc deck and resolve it as if it was just revealed from the encounter deck (reveal the top 2 cards instead if there are 3 or more players in the game).")
-                .WithIncludedEncounterSets(EncounterSet.AngmarOrcs, EncounterSet.Iarion, EncounterSet.RuinsOfArnor)
+                .WithIncludedEncounterSets(EncounterSet.AngmarOrcs, EncounterSet.FoulWeather, EncounterSet.RuinsOfArnor)
                 .WithInfo(69, 1, Artist.Juan_Carlos_Barquet));
             Cards.Add(Card.Quest("Cornered Animals", "D1D67AFA-A946-4E30-B5DC-135146FF419B", 2, 2, "The Weather Hills", 20)
                 .WithText("When Revealed: End the current phase. Shuffle the encounter discard pile and the Orc deck into the encounter deck. Reveal Orc Ambush and Amon Forn and add them to the staging area.")
                 .WithFlavor("You've hunted the Orcs to their secret gathering place on the northern edge of the Weather Hills: the old Dúnedain border fort of Amon Forn. With nowhere left to run, the Orcs turn and fight with desperate savagery.")
                 .WithOppositeText("Each damaged character gets -1 Willpower.\r\nForced: At the beginning of the quest phase, either discard 1 resource token from Savage Counter-attack, or reveal an additional encounter card this phase.\r\nIf the players defeat this stage, they win the game.")
                 .WithOppositeFlavor("Already weary from days of travel through harsh weather, you are hard pressed to match the Orcs' ferocity. You must rally your men or see them fall!")
-                .WithIncludedEncounterSets(EncounterSet.AngmarOrcs, EncounterSet.Iarion, EncounterSet.RuinsOfArnor)
+                .WithIncludedEncounterSets(EncounterSet.AngmarOrcs, EncounterSet.FoulWeather, EncounterSet.RuinsOfArnor)
                 .WithInfo(70, 1, Artist.Anthony_Feliciano));
             Cards.Add(Card.Quest("The Shades of Angmar", "C055DDF4-A4E3-4813-B133-44A244F7F5C5", 3, 1, "Deadmen's Dike", 11)
                 .WithFlavor("You've brought the prisoners you rescued from the Weather Hills to Fornost. The Rangers gathered there are shocked to hear what you discovered at Amon Forn. Before their Chieftain can decide what to do, an unnatural fog covers the ruins in darkness, and the spectres of dead warriors emerge from the mists to attack you!")

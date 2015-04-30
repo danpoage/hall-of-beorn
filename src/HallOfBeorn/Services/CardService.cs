@@ -650,6 +650,18 @@ namespace HallOfBeorn.Services
                 }
             }
 
+            //Adds cards which comprise their own eponymous encounter set, but are included in multiple quests. (e.g. Iarion)
+            foreach (var card in cards.Values.Where(x => !string.IsNullOrEmpty(x.ScenarioTitle) && x.Title == x.EncounterSet && x.CardType == CardType.Objective_Ally))
+            {
+                foreach (var scenario in scenarios.Values)
+                {
+                    if (scenario.QuestCards.Any(x => x.IncludedEncounterSets.Any(y => y.Name == card.EncounterSet)))
+                    {
+                        scenario.AddScenarioCard(card);
+                    }
+                }
+            }
+
             //load nightmare setup cards
             foreach (var setupCard in cards.Values.Where(x => x.CardType == CardType.Nightmare_Setup))
             {

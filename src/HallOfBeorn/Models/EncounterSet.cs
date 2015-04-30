@@ -83,6 +83,7 @@ namespace HallOfBeorn.Models
         public static EncounterSet AngmarOrcs = new EncounterSet { Name = "Angmar Orcs", Set = "The Lost Realm" };
         public static EncounterSet RuinsOfArnor = new EncounterSet { Name = "Ruins of Arnor", Set = "The Lost Realm" };
         public static EncounterSet TheWeatherHills = new EncounterSet { Name = "The Weather Hills", Set = "The Lost Realm" };
+        public static EncounterSet FoulWeather = new EncounterSet { Name = "Foul Weather", Set = "The Lost Realm" };
         public static EncounterSet DarkSorcery = new EncounterSet { Name = "Dark Sorcery", Set = "The Lost Realm" };
         public static EncounterSet CursedDead = new EncounterSet { Name = "Cursed Dead", Set = "The Lost Realm" };
 
