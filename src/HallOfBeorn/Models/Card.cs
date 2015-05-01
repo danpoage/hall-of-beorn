@@ -502,6 +502,17 @@ namespace HallOfBeorn.Models
             };
         }
 
+        public static Card Objective(string title, string id, string encounterSet)
+        {
+            return new Card()
+            {
+                CardType = CardType.Objective,
+                Title = title,
+                Id = id,
+                EncounterSet = encounterSet
+            };
+        }
+
         public Card ClearText()
         {
             this.Text = string.Empty;

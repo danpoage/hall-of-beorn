@@ -126,6 +126,78 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Attach to Fellowship Aragorn.\r\nQuest Action: Exhaust Aragorn and Palantír of Orthanc to discard the top card of the encounter deck. If Aragorn's Willpower is greater than the discarded card's Threat, you may add Palantír of Orthanc to the victory display and remove it from the campaign pool to choose a player. That player reveals 1 fewer encounter card this phase (to a minimum of 0).")
                 .WithVictoryPoints(5)
                 .WithInfo(20, 1, Artist.Magali_Villeneuve));
+            Cards.Add(Card.Treachery("Poisoned Counsels", "C02E58E7-85D8-4CD1-A67C-09D3505B1BB0", "Helm's Deep")
+                .WithBurden()
+                .WithTraits("Corruption.")
+                .WithText("Poisoned Counsels functions like a player card.\r\nForced: After you draw this card, discard all other cards in your hand.")
+                .WithFlavor("\"And ever Wormtongue's whispering was in your ears, poisoning your thought, chilling your heart, weakening your limbs...\" -Gandalf, The Two Towers")
+                .WithInfo(21, 4, Artist.John_Gravato));
+            Cards.Add(Card.Objective("To Isengard!", "F3206311-AC23-4F14-A8F5-74D01E228F87", "The Uruk-hai")
+                .WithText("Treat each Captive's text box as blank. Captives are in play but are not under any player's control. If there are no Captives in play, the players lose the game.\r\nForced: At the end of the refresh phase, increase the pursuit value by 1. Then, if the pursuit value is 30 or greater, the players lose the game.")
+                .WithInfo(22, 1, Artist.Niten));
+            Cards.Add(Card.Enemy("Uglúk", "BA97CFE3-1F65-4497-8A29-EEF290EFF967", "The Uruk-hai", 10, 3, 5, 1, 6)
+                .WithNormalizedTitle("Ugluk")
+                .WithUnique()
+                .WithTraits("Orc.", "Uruk-hai.")
+                .WithKeywords("Toughness 3.")
+                .WithText("Cannot have attachments.\r\nAllies cannot be declared as attackers or defenders against Uglúk.")
+                .WithFlavor("\"I am Uglúk. I command.\" -The Two Towers")
+                .WithVictoryPoints(5)
+                .WithInfo(23, 1, Artist.Sebastian_Giacobino));
+            Cards.Add(Card.Enemy("Grishnákh", "0B7B42C9-EBD0-4FF2-81E2-50C331FBA1F3", "The Uruk-hai", 40, 4, 3, 4, 5)
+                .WithNormalizedTitle("Grishnakh")
+                .WithUnique()
+                .WithTraits("Orc.", "Mordor.")
+                .WithText("Forced: After Grishnákh enters play, the first player attached 1 of the Captives to him. If Grishnákh is defeated, place the attached Captive faceup underneath To Isengard!\r\nForced: At the end of the quest phase, deal 1 damage to the attached Captive.")
+                .WithVictoryPoints(5)
+                .WithInfo(24, 1, Artist.Claudio_Pozas));
+            Cards.Add(Card.Enemy("Uglúk's Uruk-hai", "BB6D77FC-4F47-48B2-B8FE-08FBDB5CDD83", "The Uruk-hai", 38, 2, 4, 2, 5)
+                .WithNormalizedTitle("Ugluk's Uruk-hai")
+                .WithTraits("Orc.", "Uruk-hai")
+                .WithKeywords("Peril.", "Toughness 1.", "Archery 1.")
+                .WithText("When Revealed: Either increase the pursuit value by 3, or reveal an additional encounter card.")
+                .WithFlavor("Uglúk shouted, and a number of other Orcs of nearly his own size ran up. -The Two Towers")
+                .WithInfo(25, 3, Artist.Aurelien_Hubert)
+                .WithEasyModeQuantity(1));
+            Cards.Add(Card.Location("The Wold", "C6D201E5-18DB-4FA9-8DA8-EF55E9A75F4D", "The Uruk-hai", 2, 2)
+                .WithTraits("Plains.", "Hills.")
+                .WithText("While the Wold is the active location, it gains: \"Response: After The Wold is explored, each player draws 1 card.\"\r\nTravel: Increase the pursuit value by 1.")
+                .WithFlavor("Ahead and eastward they saw the windy uplands of the Wold of Rohan that they had already glimpsed many days ago from the Great River. -The Two Towers")
+                .WithInfo(26, 3, Artist.Jake_Bullock));
+            Cards.Add(Card.Location("Eastemnet", "51E29BBB-3554-4051-BFFE-4FB2D2347BAB", "The Uruk-hai", 2, 3)
+                .WithTraits("Plains.")
+                .WithText("While Eastemnet is the active location, it gains: \"Response: After Eastemnet is explored, add 1 resource to each hero's resource pool.\"\r\nTravel: Increase the pursuit value by 1.")
+                .WithFlavor("...the Horse-lords had formerly kept many herds and studs in the Eastemnet, this easterly region of their realm... -The Two Towers")
+                .WithInfo(27, 3, Artist.Katy_Grierson));
+            Cards.Add(Card.Location("Plains of Rohan", "4F078A73-FD2E-4FAA-A720-6381C0FA35EC", "The Uruk-hai", 254, 4)
+                .WithTraits("Plains.")
+                .WithText("X is the number of locations in the staging area.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, increase the pursuit value by 1.")
+                .WithFlavor("...the green plains of the Rohirrim stretched away before them to the edge of sight. -The Two Towers")
+                .WithInfo(28, 4, Artist.Lino_Drieghe)
+                .WithEasyModeQuantity(3));
+            Cards.Add(Card.Location("Banks of Entwash", "4783FD54-EF89-4E03-80BE-38FB0F053484", "The Uruk-hai", 3, 5)
+                .WithTraits("Plains.", "River.")
+                .WithText("Forced: After any amount of progress is placed on Banks of Entwash, increase the pursuit value by 1.")
+                .WithShadow("Shadow: Either increase the pursuit value by 1, or this attack is considered undefended.")
+                .WithFlavor("\"...north-west to the issuing of the Entwash there lies still a wide land.\" -Aragorn, The Two Towers")
+                .WithInfo(29, 2, Artist.Katy_Grierson));
+            Cards.Add(Card.Treachery("Rest by Night?", "64C6F006-2121-4C80-BB94-FAC5ECB987BD", "The Uruk-hai")
+                .WithText("When Revealed: Either immediately end the quest phase and increase the pursuit value by 3, or deal 1 damage to each character commited to the quest. This effect cannot be canceled.")
+                .WithFlavor("\"We have come at last to a hard choice,\" he said. \"Shall we rest by night, or shall we go on while our will and strength hold?\" -Aragorn, The Two Towers")
+                .WithInfo(30, 2, Artist.Tey_Bartolome));
+            Cards.Add(Card.Treachery("Strange Weariness", "1B560500-2F4A-4271-9511-D018A358E52A", "The Uruk-hai")
+                .WithTraits("Enchantment.")
+                .WithText("When Revealed: Each character commited to the quest gets -1 Willpower until the end of the round.")
+                .WithShadow("Shadow: Attacking enemy makes an additional attack against you after this one.")
+                .WithFlavor("\"I am weary as I have seldom been before, weary as no Ranger should be with a clear trail to follow.\" -Aragorn, The Two Towers")
+                .WithInfo(31, 2, Artist.Romana_Kendelic)
+                .WithEasyModeQuantity(1));
+            Cards.Add(Card.Treachery("Unseen Barrier", "C150E16B-74EF-4363-BA93-3F2A5CFBF32D", "The Uruk-hai")
+                .WithTraits("Enchantment.")
+                .WithText("When Revealed: The players cannot place more than 3 progress on the current quest this round. (The does not count progress placed on the active location.)")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, increase the pursuit value by 1.")
+                .WithInfo(32, 2, Artist.Arden_Beckwith));
 
             Cards.Add(Card.Quest("Follow the Orcs", "1AD0CFEB-9A20-4802-A2F9-6D8137967E53", 7, 1, "The Uruk-hai", 254)
                 .WithFlavor("The Orcs that attached the Fellowship at Amon Hen captured several members of the Company and are carrying them to Isengard. Aragorn and his companions decide to chase the Uruk-hai in an effort to rescue their friends...")
