@@ -106,6 +106,8 @@ namespace HallOfBeorn.Models
         public static EncounterSet AKnifeInTheDark = new EncounterSet { Name = "A Knife in the Dark", Set = "The Black Riders" };
         public static EncounterSet TheNazgul = new EncounterSet { Name = "The Nazgûl", Set = "The Black Riders" };
         public static EncounterSet FlightToTheFord = new EncounterSet { Name = "Flight to the Ford", Set = "The Black Riders" };
+        public static EncounterSet OrcsOfTheWhiteHand = new EncounterSet { Name = "Orcs of the White Hand", Set = "The Treason of Saruman" };
+        public static EncounterSet SnagaOrcs = new EncounterSet { Name = "Snaga Orcs", Set = "The Treason of Saruman" };
 
         public static EncounterSet TheMassingAtOsgiliath = new EncounterSet { Name = "The Massing at Osgiliath", Set = "The Massing at Osgiliath" };
         public static EncounterSet TheBattleOfLakeTown = new EncounterSet { Name = "The Battle of Lake-town", Set = "The Battle of Lake-town" };
