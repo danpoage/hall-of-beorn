@@ -513,6 +513,21 @@ namespace HallOfBeorn.Models
             };
         }
 
+        public static Card ObjectiveAlly(string title, string id, string encounterSet, byte willpower, byte attack, byte defense, byte hitPoints)
+        {
+            return new Card()
+            {
+                CardType = CardType.Objective_Ally,
+                Title = title,
+                Id = id,
+                EncounterSet = encounterSet,
+                Willpower = willpower,
+                Attack = attack,
+                Defense = defense,
+                HitPoints = hitPoints
+            };
+        }
+
         public Card ClearText()
         {
             this.Text = string.Empty;

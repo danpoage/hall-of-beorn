@@ -268,7 +268,96 @@ namespace HallOfBeorn.Models.Sets
                 .WithShadow("Shadow: Return attacking enemy to the staging area after this attack.")
                 .WithInfo(45, 2, Artist.Arden_Beckwith)
                 .WithEasyModeQuantity(1));
-
+            Cards.Add(Card.ObjectiveAlly("Ent of Fangorn", "DF3BA169-E96C-4FAB-8A55-3FE37E15EB00", "The Road to Isengard", 2, 4, 3, 4)
+                .WithTraits("Ent.")
+                .WithText("While Ent of Fangorn is in the staging area, it gains: \"Quest Action: Exhaust a hero you control to discard the top card of the encounter deck. If that hero's Willpower is greater than the discarded card's Threat, place 1 resource here. Then, if there are 3 resources here, discard them to take control of Ent of Fangorn. Any player may trigger this effect.\"")
+                .WithInfo(46, 4, Artist.Mark_Bulahao));
+            Cards.Add(Card.Enemy("Saruman", "F43AB6C2-C388-4BE9-97A8-5B77E1487006", "The Road to Isengard", 50, 4, 6, 4, 6)
+                .WithUnique()
+                .WithTraits("Istari.", "Traitor.")
+                .WithKeywords("Indestructible.")
+                .WithText("Immune to player card effects. Cannot leave the staging area.\r\nForced: When Saruman is dealt a shadow card with a Wizardry effect, the defending player resolves that Wizardry effect as if he is the only player in the game.")
+                .WithInfo(47, 1, Artist.Sebastian_Giacobino));
+            Cards.Add(Card.Objective("Saruman's Staff", "8A3DAD61-F086-4812-BE4F-18CD1CCAAFB3", "The Road to Isengard")
+                .WithUnique()
+                .WithTraits("Artifact.", "Item.", "Staff.")
+                .WithText("Forced: After a player draws any number of cards, Saruman attacks that player. Deal and resolve 2 shadow cards for this attack. Then, remove 1 damage from Saruman.\r\nWhile Saruman has any hit points remaining, the players cannot win the game.")
+                .WithInfo(48, 1, Artist.Alexandr_Elichev));
+            Cards.Add(Card.Enemy("Gríma", "0A8093E8-3972-4794-9130-536038AD50B7", "The Road to Isengard", 1, 3, 2, 3, 3)
+                .WithUnique()
+                .WithKeywords("Doomed 2.")
+                .WithText("Forced: After Gríma attacks a player, that player shuffles Gríma back into the encounter deck and reveals an encounter card.")
+                .WithShadow("Shadow: This attack is considered undefended.")
+                .WithInfo(49, 1, Artist.Dleoblack)
+                .WithEasyModeQuantity(0));
+            Cards.Add(Card.Enemy("Lieutenant of Orthanc", "E803F5CF-C81A-4849-ADF9-B335D186A140", "The Road to Isengard", 36, 3, 4, 3, 5)
+                .WithTraits("Isengard.")
+                .WithText("Forced: After Lieutenant of Orthanc attacks and destroys a character, that character's controller discards 1 random card from his hand.")
+                .WithFlavor("\"Saruman kept enough wisdom not to trust his Orcs. He had Men to guard his gates...\" -Merry, The Two Towers")
+                .WithInfo(50, 2, Artist.Anthony_Devine));
+            Cards.Add(Card.Enemy("Isengard Orc", "B3971C60-FA49-4794-B6D1-C183FE5EA445", "The Road to Isengard", 29, 1, 2, 1, 3)
+                .WithTraits("Orc.")
+                .WithKeywords("Peril.", "Archery 1.")
+                .WithText("When Revealed: Either discard 1 random card from your hand, or reveal an encounter card.")
+                .WithShadow("Shadow: Until the end of the round, attacking enemy gets +2 Defense.")
+                .WithInfo(51, 2, Artist.Romana_Kendelic));
+            Cards.Add(Card.Enemy("Wolf of Isengard", "F019467F-5D25-4B93-8832-088C592A24AF", "The Road to Isengard", 25, 2, 3, 1, 4)
+                .WithTraits("Creature.")
+                .WithText("Forced: When Wolf of Isengard is dealt a shadow card with a Wizardry effect, either discard 1 card from your hand, or Wolf of Isengard makes an additional attack against you after this one.")
+                .WithShadow("Shadow: Deal 1 damage to the defending character.")
+                .WithInfo(52, 2, Artist.Piya_Wannachaiwong)
+                .WithEasyModeQuantity(1));
+            Cards.Add(Card.Location("Orthanc", "FDB4BC16-FC9D-4156-9285-78F728661AE8", "The Road to Isengard", 2, 1)
+                .WithUnique()
+                .WithTraits("Isengard.")
+                .WithText("Immune to player card effects.\r\nWhile Orthanc is in the staging area, it gains: \"Forced: After the players quest successfully, the first player looks at the top 3 cards of the encounter deck, reveals 1, and discards the others.\"")
+                .WithFlavor("Still dark and tall, unbroken by the storm, the tower of Orthanc stood. -The Two Towers")
+                .WithInfo(53, 1, Artist.Alvaro_Calvo_Escudero));
+            Cards.Add(Card.Location("Gates of Isengard", "2A16EB91-C479-4685-B813-E601D576339E", "The Road to Isengard", 3, 1)
+                .WithUnique()
+                .WithTraits("Isengard.")
+                .WithText("Immune to player card effects.\r\nForced: When the Gates of Isengard is explored, each player searches the encounter deck and discard pile for an enemy and puts it into play engaged with him. Shuffle the encounter deck.")
+                .WithFlavor("Here through the black rock a long tunnel had been hewn, close at either end with mighty doors of iron. -The Two Towers")
+                .WithVictoryPoints(1)
+                .WithInfo(54, 1, Artist.Lino_Drieghe));
+            Cards.Add(Card.Location("Ring-wall of Isengard", "C9CCDCBE-0ABB-44D6-B212-30DA75B0D285", "The Road to Isengard", 2, 2)
+                .WithTraits("Isengard.")
+                .WithText("While Ring-wall of Isengard is in the staging area, it gains: \"Forced: After any amount of damage is healed from a character, its owner discards 1 card from his hand.\"\r\nWizardry: Each player discards 1 random card from his hand.")
+                .WithInfo(55, 3, Artist.Ed_Mattinian));
+            Cards.Add(Card.Location("Underground Armoury", "4E53A901-DE33-47A3-87E4-CEDF50DE717B", "The Road to Isengard", 4, 3)
+                .WithTraits("Isengard.")
+                .WithText("While Underground Armoury is in the staging area, it gains: \"Forced: After an enemy engages a player, deal it a shadow card.\"\r\nWizardry: Each player exhausts a character he controls.")
+                .WithFlavor("The shafts ran down by many slopes and spiral stairs to caverns far under; there Saruman had treasuries, store-houses, armouries, smithies, and great furnaces. -The Two Towers")
+                .WithInfo(56, 2, Artist.Niten)
+                .WithEasyModeQuantity(1));
+            Cards.Add(Card.Location("Steaming Vent", "6E1D56E1-891D-4DA5-A91B-B9DD37351DAF", "The Road to Isengard", 3, 4)
+                .WithTraits("Isengard.")
+                .WithText("While Steaming Vent is in the staging area, it gains: \"Forced: After a player commits characters to the quest, he deals 1 damage to a questing character he controls.\"\r\nWizardry: Assign X damage among characters in play. X is 1 more than the number of players in the game.")
+                .WithInfo(57, 3, Artist.Mariusz_Gandzel)
+                .WithEasyModeQuantity(1));
+            Cards.Add(Card.Location("Plain of Isengard", "A70F9342-518C-4B97-B0D1-ACA88DD2B501", "The Road to Isengard", 254, 3)
+                .WithTraits("Isengard.")
+                .WithText("X is the number of players in the game.\r\nWhile Plain of Isengard is in the staging area, archery damage must be assigned to allies, if able.\r\nWizardry: Each player discards 1 ally he controls.")
+                .WithInfo(58, 2, Artist.Jose_Vega)
+                .WithEasyModeQuantity(1));
+            Cards.Add(Card.Location("Open Pit", "FACD13AB-F9E7-4C43-9816-4809361F6320", "The Road to Isengard", 2, 3)
+                .WithTraits("Isengard.")
+                .WithText("While Open Pit is in the staging area, it gains: \"Forced: After a player draws any number of cards from a player card effect, he raises his threat by 2.\"\r\nWizardry: Each player raises his threat by 2.")
+                .WithInfo(59, 2, Artist.Julian_Kok));
+            Cards.Add(Card.Treachery("Blast of Sorcery", "86676105-F496-4C63-878D-3B644DB0011C", "The Road to Isengard")
+                .WithText("When Revealed: Assign X damage among characters committed to the quest. X is one more than the number of players in the game.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the defending player has 1 or fewer cards in his hand).")
+                .WithInfo(60, 3, Artist.Alvaro_Calvo_Escudero));
+            Cards.Add(Card.Treachery("Poisoned Vapour", "BB0B9FEA-7127-46DD-850B-0E74F5849E03", "The Road to Isengard")
+                .WithKeywords("Surge.")
+                .WithText("When Revealed: Exhaust each damaged character. Until the end of the combat phase, treat each damaged character's text box as if it were blank (except for Traits).")
+                .WithShadow("Shadow: Discard a non-objective attachment you control.")
+                .WithInfo(61, 2, Artist.Romana_Kendelic)
+                .WithEasyModeQuantity(0));
+            Cards.Add(Card.Treachery("Machines of Isengard", "BD941241-91BA-434E-A0F3-E6138214703E", "The Road to Isengard")
+                .WithText("When Revealed: Trigger the Wizardry effect on the active location. If no Wizardry effect is triggered this way, Machines of Isengard gains surge.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, discard 1 random card from your hand.")
+                .WithInfo(62, 3, Artist.Julian_Kok));
             Cards.Add(Card.Enemy("Isengard Uruk", "163EC4D2-49F5-470D-AD11-22BEDE7028F4", "Orcs of the White Hand", 34, 2, 3, 1, 4)
                 .WithTraits("Orc.", "Uruk-hai")
                 .WithKeywords("Peril.", "Toughness 1.", "Archery 2.")
