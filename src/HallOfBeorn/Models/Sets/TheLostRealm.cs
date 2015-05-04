@@ -592,7 +592,8 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Helge_C_Balzer,
                 Number = 61,
                 Quantity = 5,
-                EasyModeQuantity = 4
+                EasyModeQuantity = 4,
+                EncounterSet = "Cursed Dead"
             });
             Cards.Add(Card.Treachery("Restless Evil", "1F572725-1BC8-4EBF-AB9A-67ABD8CEFA83", "Cursed Dead")
                 .WithText("When Revealed: Each Undead enemy gets +1 Threat, +1 Attack, and +1 Defense until the end of the round. If there are no Undead enemies in play, Restless Evil gains surge.")
