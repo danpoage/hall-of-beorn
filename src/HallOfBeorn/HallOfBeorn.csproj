@@ -314,6 +314,7 @@
     <Compile Include="Models\Products\JourneyAlongTheAnduinNightmareProduct.cs" />
     <Compile Include="Models\Products\KhazadDumProduct.cs" />
     <Compile Include="Models\Products\NightmareDeckProductGroup.cs" />
+    <Compile Include="Models\Products\TheBlackRidersNightmareProduct.cs" />
     <Compile Include="Models\Products\TheBloodOfGondorNightmareProduct.cs" />
     <Compile Include="Models\Products\TheDruadanForestNightmareProduct.cs" />
     <Compile Include="Models\Products\TheLostRealmProduct.cs" />
@@ -379,6 +380,7 @@
     <Compile Include="Models\SearchResult.cs" />
     <Compile Include="Models\SearchViewModel.cs" />
     <Compile Include="Models\Sets\AJourneyToRhosgobelNightmare.cs" />
+    <Compile Include="Models\Sets\AShadowOfThePastNightmare.cs" />
     <Compile Include="Models\Sets\AssaultOnOsgiliath.cs" />
     <Compile Include="Models\Sets\AJourneyToRhosgobel.cs" />
     <Compile Include="Models\Sets\AssaultOnOsgiliathNightmare.cs" />
@@ -547,7 +549,7 @@
     <Content Include="Images\unique-card.png" />
     <Content Include="Images\unique.png" />
     <Content Include="Images\willpower.gif" />
-    <Content Include="Scripts\autocomplete1.js" />
+    <Content Include="Scripts\autocomplete2.js" />
     <Content Include="Scripts\cardSearch.js" />
     <Content Include="Scripts\highcharts.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />

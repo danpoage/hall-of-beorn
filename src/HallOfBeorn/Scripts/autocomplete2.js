@@ -6,6 +6,7 @@
     "Halbarad", "Weather Hills Watchman", "Dunedain Hunter", "Tireless Hunters", "Ranger Summons", "Expert Trackers", "Heir of Valandil", "Secret Vigil", "Gather Information", "Ranger of the North", "Warden of Annuminas", "Sarn Ford Sentry", "Star Brooch", "Iarion",
     "Quickbeam", "Arod", "Ent Draught", "Herugrim", "Entmoot", "Helm! Helm!", "The Three Hunters", "Shadowfax", "Intimidation", "Hands of a Healer", "Forewarned", "Leader of Men", "Beyond All Hope", "Palantir of Orthanc",
     "Ugluk", "Grishnakh", "Ent of Fangorn", "Saruman's Staff", "Orthanc", "Gates of Isengard", "Saruman's Voice",
+    "Khamul the Easterling",
           "+set:",
           "-set:",
           "+type:",

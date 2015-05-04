@@ -40,6 +40,8 @@ namespace HallOfBeorn.Models.Products
             AddProduct(new AssaultOnOsgiliathNightmareProduct());
             AddProduct(new TheBloodOfGondorNightmareProduct());
             AddProduct(new TheMorgulValeNightmareProduct());
+
+            AddProduct(new TheBlackRidersNightmareProduct());
         }
     }
 }

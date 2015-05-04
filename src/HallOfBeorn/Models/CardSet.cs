@@ -122,6 +122,7 @@ namespace HallOfBeorn.Models
         public static CardSet WeMustAwayEreBreakOfDayNightmare = new Sets.WeMustAwayEreBreakOfDayNightmare();
         public static CardSet OverTheMistyMountainsGrimNightmare = new Sets.OverTheMistyMountainsGrimNightmare();
         public static CardSet DungeonsDeepAndCavernsDimNightmare = new Sets.DungeonsDeepAndCavernsDimNightmare();
+        public static CardSet AShadowOfThePastNightmare = new Sets.AShadowOfThePastNightmare();
 
         public static CardSet TheRedhornGateNightmare = new Sets.TheRedhornGateNightmare();
         public static CardSet RoadToRivendellNightmare = new Sets.RoadToRivendellNightmare();
