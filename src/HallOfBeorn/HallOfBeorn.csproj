@@ -380,6 +380,7 @@
     <Compile Include="Models\SearchResult.cs" />
     <Compile Include="Models\SearchViewModel.cs" />
     <Compile Include="Models\Sets\AJourneyToRhosgobelNightmare.cs" />
+    <Compile Include="Models\Sets\AKnifeInTheDarkNightmare.cs" />
     <Compile Include="Models\Sets\AShadowOfThePastNightmare.cs" />
     <Compile Include="Models\Sets\AssaultOnOsgiliath.cs" />
     <Compile Include="Models\Sets\AJourneyToRhosgobel.cs" />
