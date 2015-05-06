@@ -395,6 +395,7 @@
     <Compile Include="Models\Sets\EscapeFromDolGuldurNightmare.cs" />
     <Compile Include="Models\Sets\FliesAndSpidersNightmare.cs" />
     <Compile Include="Models\Sets\FlightFromMoriaNightmare.cs" />
+    <Compile Include="Models\Sets\FlightToTheFordNightmare.cs" />
     <Compile Include="Models\Sets\FogOnTheBarrowDowns.cs" />
     <Compile Include="Models\Sets\FoundationsOfStone.cs" />
     <Compile Include="Models\Sets\FoundationsOfStoneNightmare.cs" />

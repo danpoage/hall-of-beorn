@@ -13,6 +13,7 @@ namespace HallOfBeorn.Models.Products
             IsPremier = true;
             CardSets.Add(CardSet.AShadowOfThePastNightmare);
             CardSets.Add(CardSet.AKnifeInTheDarkNightmare);
+            CardSets.Add(CardSet.FlightToTheFordNightmare);
         }
     }
 }
