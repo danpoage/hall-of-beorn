@@ -184,7 +184,7 @@ namespace HallOfBeorn.Models.Sets
                 Defense = 3,
                 HitPoints = 6,
                 Traits = new List<string>() { "Wose." },
-                Text = "Allies cannot defend against Drû-buri-Drû.While Drû-buri-Drû is in the victory display, characters get +1 Willpower and +1 Defense.Unless Drû-buri-Drû is in the victory display, the players cannot win.",
+                Text = "Allies cannot defend against Drû-buri-Drû.\r\nWhile Drû-buri-Drû is in the victory display, characters get +1 Willpower and +1 Defense.\r\nUnless Drû-buri-Drû is in the victory display, the players cannot win.",
                 Threat = 4,
                 EncounterSet = "The Drúadan Forest",
                 Quantity = 1,

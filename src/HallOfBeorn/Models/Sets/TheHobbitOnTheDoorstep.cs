@@ -217,7 +217,7 @@ namespace HallOfBeorn.Models.Sets
                 ResourceCost = 2,
                 Quantity = 3,
                 Traits = new List<string>() { "Item.", "Weapon." },
-                Text = "Attach to a hero with printed Ranged keyword.\r\nCombat Action: Choose an enemy in the staging area. Exhaust Great Yew Bow and attached hero to make a ranged attack against that enemy. Declare attached hero as the attacker. No other attackers can be declared for this attack.",
+                Text = "Attach to a hero with the printed Ranged keyword.\r\nCombat Action: Choose an enemy in the staging area. Exhaust Great Yew Bow and attached hero to make a ranged attack against that enemy. Declare attached hero as the attacker. No other attackers can be declared for this attack.",
                 Number = 14,
                 Artist = Artist.Sara_Biddle
             });
