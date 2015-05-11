@@ -98,6 +98,13 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Setup: Attach to a Warrior hero.\r\nResponse: After attached hero is declared as the only attacker against a non-unique enemy, exhaust Intimidation to give that enemy -2 Defense for this attack.")
                 .WithFlavor("\"None knows what the new day shall bring him,\" said Aragorn. \"Get you gone, ere it turn to your evil!\" -Aragorn, The Two Towers")
                 .WithInfo(15, 1, Artist.Matt_Stawicki));
+            Cards.Add(Card.Attachment("Hands of a Healer", "FBD87A4E-DCE0-47DB-82D5-5D94B5741467", Sphere.Neutral, 0)
+                .WithBoon()
+                .WithTraits("Skill.")
+                .WithKeywords("Permanent.")
+                .WithText("Setup: Attach to a Healer hero.\r\nAction: Exhaust attached hero and Hands of a ~Healer to heal up to 3 damage from a hero.")
+                .WithFlavor("\"Life to the dying\r\nIn the king's hand lying!\"\r\n-Herb-master, The Return of the King")
+                .WithInfo(16, 1, Artist.Kristina_Gehrmann));
             Cards.Add(Card.Attachment("Forewarned", "BE84A618-AD39-4480-BCE2-B210C210C537", Sphere.Neutral, 0)
                 .WithBoon()
                 .WithTraits("Skill.")
