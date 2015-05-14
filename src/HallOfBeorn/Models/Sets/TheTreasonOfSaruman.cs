@@ -423,7 +423,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithInfo(71, 1, Artist.Nicholas_Gregory));
             Cards.Add(Card.Quest("The King of the Golden Hall", "F80E3197-33B4-4132-8A2D-9203AB1CA181", 8, 1, "Helm's Deep", 255)
                 .WithFlavor("The pursuit of the Uruk-hai has brought the Heir of Elendil to Rohan just as Saruman declares war on that land. Aragorn and his companions travel to Edoras to aid King Théoden, but their arrival is met with suspicion...")
-                .WithText("Setup: Set The Defense of Helm's Deep and 1 copy of Deeping Wall aside, out of play. Each player sets 1 copy of Soldier of Isengard aside, out of play. Then, the players must choose: either each player shuffles 1 copy of Poisoned Counsels into his deck, or advance to stage 2A (bypassing stage 1B).")
+                .WithText("Setup: Set The ~Defense of Helm's Deep and 1 copy of Deeping Wall aside, out of play. Each player sets 1 copy of Soldier of ~Isengard aside, out of play. Then, the players must choose: either each player shuffles 1 copy of Poisoned Counsels into his deck, or advance to stage 2A (bypassing stage 1B).")
                 .WithOppositeFlavor("\"Hail, Théoden son of Thengel! I have returned. For behold! the storm comes, and now all friends should gather together...\" -Gandalf, The Two Towers")
                 .WithOppositeText("When Revealed: Each player chooses 1 ally in his hand that matches the sphere of a hero he controls and puts it into play under his control.\r\nSkip the quest phase and combat phase.\r\nForced: At the end of the round, advance to stage 2A.")
                 .WithIncludedEncounterSets(EncounterSet.OrcsOfTheWhiteHand)
