@@ -279,6 +279,9 @@
     <Compile Include="Models\EncounterCategory.cs" />
     <Compile Include="Models\EncounterSet.cs" />
     <Compile Include="Models\EncounterSetViewModel.cs" />
+    <Compile Include="Models\Fluent\FluentCard.cs" />
+    <Compile Include="Models\Fluent\FluentSide.cs" />
+    <Compile Include="Models\Fluent\StatType.cs" />
     <Compile Include="Models\HasShadow.cs" />
     <Compile Include="Models\ImageType.cs" />
     <Compile Include="Models\Keyword.cs" />
