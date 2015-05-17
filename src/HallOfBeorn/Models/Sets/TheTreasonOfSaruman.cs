@@ -69,7 +69,7 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(Card.Attachment("Herugrim", "0E512381-7B67-45D3-BAE5-6CF0DDA4176B", Sphere.Spirit, 3)
                 .WithUnique()
                 .WithTraits("Item.", "Weapon.")
-                .WithText("Attach to a Rohan hero. Restricted.\r\nReduce the cost to play Herugrim on Théoden by 1.\r\nResponse: Aftr attached hero is declared as an attacker, exhaust Herugrim to add attached hero's Willpower to its Attack for this attack.")
+                .WithText("Attach to a Rohan hero. Restricted.\r\nReduce the cost to play Herugrim on Théoden by 1.\r\nResponse: After attached hero is declared as an attacker, exhaust Herugrim to add attached hero's Willpower to its Attack for this attack.")
                 .WithFlavor("\"Here, lord, is Herugrim, your ancient blade.\" -Háma, The Two Towers")
                 .WithInfo(10, 3, Artist.Jason_Ward));
             Cards.Add(Card.Event("Entmoot", "7A734E97-BADA-48B5-BF62-561C578B6791", Sphere.Lore, 0)
