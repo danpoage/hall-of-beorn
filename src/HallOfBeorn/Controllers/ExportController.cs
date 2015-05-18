@@ -40,16 +40,16 @@ namespace HallOfBeorn.Controllers
         {
             var sb = new StringBuilder();
 
-            sb.AppendLine("Title;ThreatCost;ResourceCost;EngagementCost;Willpower;Threat;Attack;Defense;HitPoints;Traits;Text");
+            sb.AppendLine("Title;ThreatCost;ResourceCost;EngagementCost;Willpower;Threat;Attack;Defense;HitPoints;Traits");
 
             var card = default(Card);
             foreach (var result in results)
             {
                 card = result.Card;
-                //var threatCost = card.ThreatCost.HasValue ? card.ThreatCost.Value.ToString() : "n/a";
+                var threatCost = card.ThreatCost.HasValue ? card.ThreatCost.Value.ToString() : "n/a";
                 //var resourceCost = card.ResourceCost.HasValue ? card.ResourceCost.Value.ToString() : "n/a";
-                //sb.AppendLine(string.Format("{0};{1};{2};{3};{4};{5};{6};{7};{8};{9};{10}", card.Title, threatCost, resourceCost, engagementCost, willpower, threatCost, attack, defense, hitPoints, traits, text);
-                sb.AppendLine(card.Title +  ";1");
+                //sb.AppendLine(string.Format("{0};{1};{2};{3};{4};{5};{6};{7};{8};{9}", card.Title, threatCost, resourceCost, engagementCost, willpower, threatCost, attack, defense, hitPoints, traits);
+                sb.AppendLine(string.Format("{0};{1}", card.Title, threatCost));
             }
 
             return sb.ToString();

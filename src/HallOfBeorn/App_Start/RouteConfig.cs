@@ -46,6 +46,12 @@ namespace HallOfBeorn
             );
 
             routes.MapRoute(
+                "ExportSearch",
+                "Export/Search",
+                new { controller = "Export", action = "Search" }
+            );
+
+            routes.MapRoute(
                 "Export",
                 "Export/{name}",
                 new { controller = "Export", action = "Get" }
