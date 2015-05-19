@@ -36,20 +36,42 @@ namespace HallOfBeorn.Controllers
             }
         }
 
-        private string ToString(IEnumerable<CardScore> results)
+        private string ToLabel(byte? stat)
+        {
+            if (!stat.HasValue)
+                return "n/a";
+
+            switch (stat.Value)
+            {
+                case 254:
+                    return "X";
+                case 255:
+                    return "-";
+                default:
+                    return stat.Value.ToString();
+            }
+        }
+
+        private string DelimitedText(IEnumerable<CardScore> results)
         {
             var sb = new StringBuilder();
 
-            sb.AppendLine("Title;ThreatCost;ResourceCost;EngagementCost;Willpower;Threat;Attack;Defense;HitPoints;Traits");
+            sb.AppendLine("Title|ThreatCost|ResourceCost|EngagementCost|Willpower|Threat|Attack|Defense|HitPoints|QuestPoints|Traits");
 
-            var card = default(Card);
             foreach (var result in results)
             {
-                card = result.Card;
-                var threatCost = card.ThreatCost.HasValue ? card.ThreatCost.Value.ToString() : "n/a";
-                //var resourceCost = card.ResourceCost.HasValue ? card.ResourceCost.Value.ToString() : "n/a";
-                //sb.AppendLine(string.Format("{0};{1};{2};{3};{4};{5};{6};{7};{8};{9}", card.Title, threatCost, resourceCost, engagementCost, willpower, threatCost, attack, defense, hitPoints, traits);
-                sb.AppendLine(string.Format("{0};{1}", card.Title, threatCost));
+                var title = result.Card.Title;
+                var threatCost = ToLabel(result.Card.Threat);
+                var resourceCost = ToLabel(result.Card.ResourceCost);
+                var engagementCost = ToLabel(result.Card.EngagementCost);
+                var willpower = ToLabel(result.Card.Willpower);
+                var threat = ToLabel(result.Card.Threat);
+                var attack = ToLabel(result.Card.Attack);
+                var defense = ToLabel(result.Card.Defense);
+                var hitPoints = ToLabel(result.Card.HitPoints);
+                var questPoints = ToLabel(result.Card.QuestPoints);
+                var traits = result.Card.TraitList;
+                sb.AppendLine(string.Format("{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}", title, threatCost, resourceCost, engagementCost, willpower, threatCost, attack, defense, hitPoints, questPoints, traits));
             }
 
             return sb.ToString();
@@ -59,7 +81,7 @@ namespace HallOfBeorn.Controllers
         {
             var result = new ContentResult();
 
-            result.Content = ToString(_cardService.Search(model));
+            result.Content = DelimitedText(_cardService.Search(model));
 
             return result;
         }
