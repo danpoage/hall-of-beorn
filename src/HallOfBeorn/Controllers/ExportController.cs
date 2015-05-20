@@ -39,7 +39,7 @@ namespace HallOfBeorn.Controllers
         private string ToLabel(byte? stat)
         {
             if (!stat.HasValue)
-                return "n/a";
+                return "none";
 
             switch (stat.Value)
             {
