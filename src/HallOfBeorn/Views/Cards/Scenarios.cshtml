@@ -70,8 +70,47 @@
             treacheryData = modeData.TreacheryTotals;
             objectiveData = modeData.ObjectiveTotals;
             objectiveAllyData = modeData.ObjectiveAllyTotals;
+            sideQuestData = modeData.SideQuestTotals;
             shadowData = modeData.ShadowTotals;
             surgeData = modeData.SurgeTotals;
+
+            var seriesData = [{
+                name: 'Enemies',
+                data: enemyData
+            }, {
+                name: 'Locations',
+                data: locationData
+            }, {
+                name: 'Treacheries',
+                data: treacheryData
+            }, {
+                name: 'Shadows',
+                data: shadowData
+            }, {
+                name: 'Surges',
+                data: surgeData
+            }];
+
+            if (objectiveData[0] > 0 || objectiveData[1] > 0 || objectiveData[2] > 0) {
+                seriesData.push({
+                        name: 'Objectives',
+                        data: objectiveData
+                });
+            }
+
+            if (objectiveAllyData[0] > 0 || objectiveAllyData[1] > 0 || objectiveAllyData[2] > 0) {
+                seriesData.push({
+                    name: 'Objective Allies',
+                    data: objectiveAllyData
+                });
+            }
+
+            if (sideQuestData[0] > 0 || sideQuestData[1] > 0 || sideQuestData[2] > 0) {
+                seriesData.push({
+                    name: 'Side Quests',
+                    data: sideQuestData
+                });
+            }
 
             $(selector).highcharts({
                 chart: {
@@ -121,29 +160,7 @@
                         }
                     }
                 },
-                series: [{
-                    name: 'Enemies',
-                    data: enemyData
-                }, {
-                    name: 'Locations',
-                    data: locationData
-                }, {
-                    name: 'Treacheries',
-                    data: treacheryData
-                }, {
-                    name: 'Objectives',
-                    data: objectiveData
-                }, {
-                    name: 'Objective Allies',
-                    data: objectiveAllyData
-                }, {
-                    name: 'Shadows',
-                    data: shadowData
-                }, {
-                    name: 'Surges',
-                    data: surgeData
-                }
-                ]
+                series: seriesData
             });
         }
 
@@ -159,6 +176,9 @@
             });
             $.get("/Cards/ScenarioTotals?id=The+Voice+of+Isengard,The+Ring-maker").success(function (data) {
                 loadTotals('#voiTotalsContainer', 'The Voice of Isengard and The Ring-maker', data);
+            });
+            $.get("/Cards/ScenarioTotals?id=The+Lost+Realm,Anmar+Awakened").success(function (data) {
+                loadTotals('#tlrTotalsContainer', 'The Lost Relam and Angmar Awakened', data);
             });
             $.get("/Cards/ScenarioTotals?id=The+Hobbit").success(function (data) {
                 loadTotals('#hobbitTotalsContainer', 'The Hobbit', data);
@@ -178,7 +198,7 @@
             if (id != null && id.length > 0) {
 
                 $.get("/Cards/ScenarioDetails/" + id).success(function (result) {
-                    console.log(result);
+                    
                     var enemyData = [];
                     var locationData = [];
                     var treacheryData = [];
@@ -476,6 +496,7 @@ else {
     <div style="margin-top:40px;" id="kdTotalsContainer"></div>
     <div style="margin-top:40px;" id="honTotalsContainer"></div>
     <div style="margin-top:40px;" id="voiTotalsContainer"></div>
+    <div style="margin-top:40px;" id="tlrTotalsContainer"></div>
     <div style="margin-top:40px;" id="hobbitTotalsContainer"></div>
     <div style="margin-top:40px;" id="lotrTotalsContainer"></div>
     <div style="margin-top:40px;" id="genConTotalsContainer"></div>

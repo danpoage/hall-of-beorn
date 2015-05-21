@@ -322,6 +322,7 @@ namespace HallOfBeorn.Controllers
                 TreacheryTotals = new List<float>();
                 ObjectiveTotals = new List<float>();
                 ObjectiveAllyTotals = new List<float>();
+                SideQuestTotals = new List<float>();
                 ShadowTotals = new List<float>();
                 SurgeTotals = new List<float>();
             }
@@ -332,6 +333,7 @@ namespace HallOfBeorn.Controllers
             public List<float> TreacheryTotals { get; private set; }
             public List<float> ObjectiveTotals { get; private set; }
             public List<float> ObjectiveAllyTotals { get; private set; }
+            public List<float> SideQuestTotals { get; private set; }
             public List<float> ShadowTotals { get; private set; }
             public List<float> SurgeTotals { get; private set; }
         }
@@ -362,6 +364,7 @@ namespace HallOfBeorn.Controllers
                     var treacheryTotals = new Dictionary<int, float> { { 0, 0f }, { 1, 0f }, { 2, 0f } };
                     var objectiveTotals = new Dictionary<int, float> { { 0, 0f }, { 1, 0f }, { 2, 0f } };
                     var objectiveAllyTotals = new Dictionary<int, float> { { 0, 0f }, { 1, 0f }, { 2, 0f } };
+                    var sideQuestTotals = new Dictionary<int, float> { { 0, 0f }, { 1, 0f }, { 2, 0f } };
                     var shadowTotals = new Dictionary<int, float> { { 0, 0f }, { 1, 0f }, { 2, 0f } };
                     var surgeTotals = new Dictionary<int, float> { { 0, 0f }, { 1, 0f }, { 2, 0f } };
 
@@ -394,6 +397,11 @@ namespace HallOfBeorn.Controllers
                                 objectiveAllyTotals[1] += card.NormalQuantity;
                                 objectiveAllyTotals[2] += card.NightmareQuantity;
                                 break;
+                            case CardType.Encounter_Side_Quest:
+                                sideQuestTotals[0] += card.EasyQuantity;
+                                sideQuestTotals[1] += card.NormalQuantity;
+                                sideQuestTotals[2] += card.NightmareQuantity;
+                                break;
                             default:
                                 break;
                         }
@@ -418,6 +426,7 @@ namespace HallOfBeorn.Controllers
                     data.EasyData.TreacheryTotals.Add(treacheryTotals[0]);
                     data.EasyData.ObjectiveTotals.Add(objectiveTotals[0]);
                     data.EasyData.ObjectiveAllyTotals.Add(objectiveAllyTotals[0]);
+                    data.EasyData.SideQuestTotals.Add(sideQuestTotals[0]);
                     data.EasyData.ShadowTotals.Add(shadowTotals[0]);
                     data.EasyData.SurgeTotals.Add(surgeTotals[0]);
 
@@ -426,6 +435,7 @@ namespace HallOfBeorn.Controllers
                     data.NormalData.TreacheryTotals.Add(treacheryTotals[1]);
                     data.NormalData.ObjectiveTotals.Add(objectiveTotals[1]);
                     data.NormalData.ObjectiveAllyTotals.Add(objectiveAllyTotals[1]);
+                    data.NormalData.SideQuestTotals.Add(sideQuestTotals[1]);
                     data.NormalData.ShadowTotals.Add(shadowTotals[1]);
                     data.NormalData.SurgeTotals.Add(surgeTotals[1]);
 
@@ -434,6 +444,7 @@ namespace HallOfBeorn.Controllers
                     data.NightmareData.TreacheryTotals.Add(treacheryTotals[2]);
                     data.NightmareData.ObjectiveTotals.Add(objectiveTotals[2]);
                     data.NightmareData.ObjectiveAllyTotals.Add(objectiveAllyTotals[2]);
+                    data.NightmareData.SideQuestTotals.Add(sideQuestTotals[2]);
                     data.NightmareData.ShadowTotals.Add(shadowTotals[2]);
                     data.NightmareData.SurgeTotals.Add(surgeTotals[2]);
                     
