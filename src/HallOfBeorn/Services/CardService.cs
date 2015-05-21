@@ -47,7 +47,7 @@ namespace HallOfBeorn.Services
         private readonly List<CardSet> sets = new List<CardSet>();
         private readonly List<string> setNames = new List<string>();
         private readonly Dictionary<string, string> encounterSetNames = new Dictionary<string, string>();
-        private readonly Dictionary<string, Card> cards = new Dictionary<string, Card>();
+        private readonly List<Card> cards = new List<Card>();
         private readonly Dictionary<string, string> keywords = new Dictionary<string, string>();
         private readonly Dictionary<string, string> traits = new Dictionary<string, string>();
         private readonly Dictionary<string, Deck> decks = new Dictionary<string, Deck>();
@@ -106,7 +106,7 @@ namespace HallOfBeorn.Services
                             {
                                 var encounterSet = card.EncounterSet.Replace(" Nightmare", string.Empty);
                                 scenarioTitle = scenarioTitle.Replace(" Nightmare", string.Empty);
-                                var original = cards.Values.Where(x => x.CardType == CardType.Quest && x.EncounterSet == encounterSet && x.CardSet.Cycle != "NIGHTMARE").FirstOrDefault();
+                                var original = cards.Where(x => x.CardType == CardType.Quest && x.EncounterSet == encounterSet && x.CardSet.Cycle != "NIGHTMARE").FirstOrDefault();
                                 if (original != null)
                                 {
                                     cycle = !string.IsNullOrEmpty(original.CardSet.Cycle) ? original.CardSet.Cycle : original.CardSet.Name;
@@ -137,7 +137,7 @@ namespace HallOfBeorn.Services
                     }
                 }
 
-                cards.Add(card.Id, card);
+                cards.Add(card);
 
                 foreach (var keyword in card.Keywords)
                 {
@@ -320,7 +320,7 @@ namespace HallOfBeorn.Services
 
                 var title = string.Join(" ", tokens).ToLower();
 
-                var card = cards.Values.Where(x => 
+                var card = cards.Where(x => 
                     (
                         (string.Equals(x.Title.ToLower(), title) || (!string.IsNullOrEmpty(x.NormalizedTitle) && string.Equals(x.NormalizedTitle.ToLower(), title)))
                         && ( string.IsNullOrEmpty(setName) || ( string.Equals(x.CardSet.Abbreviation, setName) || string.Equals(x.CardSet.Name, setName) ) )
@@ -520,7 +520,7 @@ namespace HallOfBeorn.Services
                 CreateEncounterCategoryFilter("each player with a threat", EncounterCategory.High_Player_Threat)
             };
 
-            foreach (var card in cards.Values.Where(x => IsEncounterCategorizable(x)))
+            foreach (var card in cards.Where(x => IsEncounterCategorizable(x)))
             {
                 foreach (var filter in filters)
                 {
@@ -547,7 +547,7 @@ namespace HallOfBeorn.Services
                 CreateQuestCategoryFilter("Siege", QuestCategory.Siege)
             };
 
-            foreach (var card in cards.Values.Where(x => IsQuestCategorizable(x)))
+            foreach (var card in cards.Where(x => IsQuestCategorizable(x)))
             {
                 foreach (var filter in filters)
                 {
@@ -599,7 +599,7 @@ namespace HallOfBeorn.Services
                 CreateCategoryFilter(@"attach 1 attachment card|an attachment of cost 3 or less and put it into play|you may attach that card facedown|to play Weapon and Armor attachments on|put into play the revealed card for no cost", Category.Equipping)
             };
 
-            foreach (var card in cards.Values.Where(x => IsCategorizable(x)))
+            foreach (var card in cards.Where(x => IsCategorizable(x)))
             {
                 foreach (var filter in filters)
                 {
@@ -620,7 +620,7 @@ namespace HallOfBeorn.Services
 
         private void LoadScenarioCards()
         {
-            foreach (var card in cards.Values.Where(x => !string.IsNullOrEmpty(x.ScenarioTitle)))
+            foreach (var card in cards.Where(x => !string.IsNullOrEmpty(x.ScenarioTitle)))
             {
                 var escapedTitle = card.ScenarioTitle.ToUrlSafeString();
 
@@ -651,7 +651,7 @@ namespace HallOfBeorn.Services
             }
 
             //Adds cards which comprise their own eponymous encounter set, but are included in multiple quests. (e.g. Iarion)
-            foreach (var card in cards.Values.Where(x => !string.IsNullOrEmpty(x.ScenarioTitle) && x.Title == x.EncounterSet && x.CardType == CardType.Objective_Ally))
+            foreach (var card in cards.Where(x => !string.IsNullOrEmpty(x.ScenarioTitle) && x.Title == x.EncounterSet && x.CardType == CardType.Objective_Ally))
             {
                 foreach (var scenario in scenarios.Values)
                 {
@@ -663,7 +663,7 @@ namespace HallOfBeorn.Services
             }
 
             //load nightmare setup cards
-            foreach (var setupCard in cards.Values.Where(x => x.CardType == CardType.Nightmare_Setup))
+            foreach (var setupCard in cards.Where(x => x.CardType == CardType.Nightmare_Setup))
             {
                 if (setupCard.UpdateScenarioCards != null)
                 {
@@ -1307,7 +1307,7 @@ namespace HallOfBeorn.Services
 
         public IEnumerable<Card> All()
         {
-            return cards.Values.ToList();
+            return cards;
         }
 
         private Func<CardScore, bool> NegateFilter(Func<CardScore, bool> predicate)
@@ -1629,8 +1629,8 @@ namespace HallOfBeorn.Services
                 var queryFilters = new List<WeightedSearchFilter>();
                 queryFilters.Add(new WeightedSearchFilter((s, c) => { return c.Title.IsEqualToLower(s.BasicQuery()); }, 200, "Title matches '" + model.Query + "'"));
                 queryFilters.Add(new WeightedSearchFilter((s, c) => { return c.NormalizedTitle.IsEqualToLower(s.BasicQuery()); }, 200, "Title matches '" + model.Query + "'"));
-                queryFilters.Add(new WeightedSearchFilter((s, c) => { return c.Title.StartsWithLower(s.BasicQuery()); }, 111, "Title matches '" + model.Query + "'"));
-                queryFilters.Add(new WeightedSearchFilter((s, c) => { return c.NormalizedTitle.StartsWithLower(s.BasicQuery()); }, 111, "Title matches '" + model.Query + "'"));
+                queryFilters.Add(new WeightedSearchFilter((s, c) => { return c.Title.StartsWithLower(s.BasicQuery()); }, 141, "Title matches '" + model.Query + "'"));
+                queryFilters.Add(new WeightedSearchFilter((s, c) => { return c.NormalizedTitle.StartsWithLower(s.BasicQuery()); }, 141, "Title matches '" + model.Query + "'"));
                 queryFilters.Add(new WeightedSearchFilter((s, c) => { return c.Title.ContainsLower(s.BasicQuery()); }, 100, "Title matches '" + model.Query + "'"));
                 queryFilters.Add(new WeightedSearchFilter((s, c) => { return c.NormalizedTitle.ContainsLower(s.BasicQuery()); }, 100, "Title matches '" + model.Query + "'"));
                 queryFilters.Add(new WeightedSearchFilter((s, c) => { return c.Text.ContainsLower(s.BasicQuery()); }, 100, "Card Text matches '" + model.Query + "'"));
@@ -1828,25 +1828,25 @@ namespace HallOfBeorn.Services
 
             if (filters.Count > 0)
             {
-                foreach (var card in cards.Values)
+                foreach (var card in cards)
                 {
                     foreach (var filter in filters)
                     {
                         var score = filter.Score(model, card);
                         
-                        if (results.ContainsKey(card.Id))
+                        if (results.ContainsKey(card.Slug))
                         {
-                            results[card.Id].Description += " and " + filter.Description(model, card);
+                            results[card.Slug].Description += " and " + filter.Description(model, card);
 
-                            var existing = results[card.Id].Score;
+                            var existing = results[card.Slug].Score;
                             if (score == 0 || existing > 0 && score > existing)
                             {
-                                results[card.Id].Score = score;
+                                results[card.Slug].Score = score;
                             }
                         }
                         else
                         {
-                            results[card.Id] = new CardScore(card, score, filter.Description(model, card));
+                            results[card.Slug] = new CardScore(card, score, filter.Description(model, card));
                         }
                     }
                 }
@@ -1854,16 +1854,16 @@ namespace HallOfBeorn.Services
             else if (!model.IsAdvancedSearch())
             {
                 //If this is not an advanced search and there are no filters then return only the heroes from the Core Set
-                foreach (var item in cards.Where(x => x.Value.CardSet.Name == "Core Set" && x.Value.Number < 13))
+                foreach (var item in cards.Where(x => x.CardSet.Name == "Core Set" && x.Number < 13))
                 {
-                    results[item.Value.Id] = new CardScore(item.Value, 13 - item.Value.Number, string.Empty);
+                    results[item.Slug] = new CardScore(item, 13 - item.Number, string.Empty);
                 }
             }
             else
             {
-                foreach (var card in cards.Values)
+                foreach (var card in cards)
                 {
-                    results[card.Id] = new CardScore(card, WeightedSearchFilter.WeightedScore(card, 1), string.Empty);
+                    results[card.Slug] = new CardScore(card, WeightedSearchFilter.WeightedScore(card, 1), string.Empty);
                 }
             }
 
@@ -1889,7 +1889,7 @@ namespace HallOfBeorn.Services
                     var choice = random.Next(0, total - 1);
                     var score = results.Values.ToList()[choice];
                     results = new Dictionary<string, CardScore>();
-                    results[score.Card.Id] = score;
+                    results[score.Card.Slug] = score;
                 }
             }
 
@@ -1940,9 +1940,7 @@ namespace HallOfBeorn.Services
 
         public Card Find(string id)
         {
-            return cards.ContainsKey(id) ?
-                cards[id]
-                : null;
+            return cards.Where(x => x.Id == id).FirstOrDefault();
         }
 
         public Card FindBySlug(string slug)
@@ -1950,11 +1948,11 @@ namespace HallOfBeorn.Services
             if (string.IsNullOrEmpty(slug))
                 return null;
 
-            var exact = cards.Values.Where(x => x.Slug.ToLower() == slug.ToLower()).FirstOrDefault();
+            var exact = cards.Where(x => x.Slug.ToLower() == slug.ToLower()).FirstOrDefault();
             if (exact != null)
                 return exact;
 
-            var partials = cards.Values.Where(x => x.Slug.ToLower().StartsWith(slug.ToLower())).ToList();
+            var partials = cards.Where(x => x.Slug.ToLower().StartsWith(slug.ToLower())).ToList();
             if (partials.Count == 1)
                 return partials.First();
 
@@ -1963,17 +1961,17 @@ namespace HallOfBeorn.Services
 
         public IEnumerable<string> ResourceCosts()
         {
-            return cards.Values.Where(x => !string.IsNullOrEmpty(x.ResourceCostLabel)).OrderBy(x => x.ResourceCost).Select(x => x.ResourceCostLabel).Distinct().ToList();
+            return cards.Where(x => !string.IsNullOrEmpty(x.ResourceCostLabel)).OrderBy(x => x.ResourceCost).Select(x => x.ResourceCostLabel).Distinct().ToList();
         }
 
         public IEnumerable<string> ThreatCosts()
         {
-            return cards.Values.Where(x => !string.IsNullOrEmpty(x.ThreatCostLabel)).OrderBy(x => x.ThreatCost).Select(x => x.ThreatCostLabel).Distinct().ToList();
+            return cards.Where(x => !string.IsNullOrEmpty(x.ThreatCostLabel)).OrderBy(x => x.ThreatCost).Select(x => x.ThreatCostLabel).Distinct().ToList();
         }
 
         public IEnumerable<string> EngagementCosts()
         {
-            return cards.Values.Where(x => !string.IsNullOrEmpty(x.EngagementCostLabel)).OrderBy(x => x.EngagementCost).Select(x => x.EngagementCostLabel).Distinct().ToList();
+            return cards.Where(x => !string.IsNullOrEmpty(x.EngagementCostLabel)).OrderBy(x => x.EngagementCost).Select(x => x.EngagementCostLabel).Distinct().ToList();
         }
 
         public IEnumerable<string> SetNames
