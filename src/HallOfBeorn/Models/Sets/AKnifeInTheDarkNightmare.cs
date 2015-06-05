@@ -95,7 +95,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithVictoryPoints(3)
                 .WithInfo(4, 1, Artist.Mariusz_Gandzel));
             Cards.Add(Card.Location("Weather Hills", "12C7C2E0-3D60-43ED-BF31-458122AE34CC", "A Knife in the Dark Nightmare", 3, 5)
-                .WithTraits("Hils.")
+                .WithTraits("Hills.")
                 .WithText("While the players are at stage 1, progress cannot be placed here.\r\nWhile The One Ring is exhausted, Weather Hills gets +2 Threat.")
                 .WithShadow("Shadow: Attacking enemy gets +2 Attack.")
                 .WithInfo(5, 3, Artist.Jake_Bullock));
