@@ -585,7 +585,7 @@ namespace HallOfBeorn.Services
                 CreateCategoryFilter(@"heal[\s].*damage", Category.Healing),
                 CreateCategoryFilter(@"discard.*Condition[\s]attachment", Category.Condition_Control),
                 CreateCategoryFilter(@"place[\s].*progress|switch the active location|location enters play|location gets -.*Threat|While attached to a location", Category.Location_Control),
-                CreateCategoryFilter("ready.*(character|hero|ally|allies|him|her|them|Prince)", Category.Readying, "While Dain Ironfoot is ready"),
+                CreateCategoryFilter("ready.*(character|hero|ally|allies|him|her|them|Prince|Boromir)", Category.Readying, "While Dain Ironfoot is ready"),
                 CreateCategoryFilter(@"(return.*discard[\s]pile.*hand|shuffle.*discard[\s]pile.*back)", Category.Recursion, "encounter discard pile"),
                 CreateCategoryFilter(@"deal[\s]([\d]|X)*[\s]damage|Deal damage to the attacking enemy|Excess damage dealt by this attack is assigned|assigned as damage to the chosen enemy|deal an additional.*damage", Category.Direct_Damage, "1 damage to Erkenbrand"),
                 CreateCategoryFilter(@"(look at|revealed|enters play|top of the).*encounter[\s]deck", Category.Encounter_Control),
