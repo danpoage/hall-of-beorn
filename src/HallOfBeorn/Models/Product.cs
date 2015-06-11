@@ -23,5 +23,16 @@ namespace HallOfBeorn.Models
         public string RulesUrl { get; protected set; }
 
         public List<CardSet> CardSets { get; private set; }
+
+        public static ProductGroup ShadowOfMirkwoodProductGroup = new Models.Products.ShadowsOfMirkwoodProductGroup();
+        public static ProductGroup TheDwarrowdelProductGroup = new Models.Products.TheDwarrowdelfProductGroup();
+        public static ProductGroup AgainstTheShadowProductGroup = new Models.Products.AgainstTheShadowProductGroup();
+        public static ProductGroup TheRingmakerProductGroup = new Models.Products.TheRingMakerProductGroup();
+        public static ProductGroup AngmarAwakenedProductGroup = new Models.Products.AngmarAwakenedProductGroup();
+        public static ProductGroup TheHobbitSagaProductGroup = new Models.Products.TheHobbitSagaProductGroup();
+        public static ProductGroup TheLordOfTheRingsProductGroup = new Models.Products.TheLordOfTheRingsSagaProductGroup();
+        public static ProductGroup GenConProductGroup = new Models.Products.GenConDeckProductGroup();
+        public static ProductGroup NightmareDeckProductGroup = new Models.Products.NightmareDeckProductGroup();
+        public static ProductGroup CustomProductGroup = new Models.Products.CustomProductGroup();
     }
 }
