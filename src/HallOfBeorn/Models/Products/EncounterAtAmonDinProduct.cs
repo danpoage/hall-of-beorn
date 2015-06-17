@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.Products
         {
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/rulesheet-encounter-at-amon-din.pdf";
 
-            CardSets.Add(CardSet.EncounterAtAmonDin);
+            AddCardSet(CardSet.EncounterAtAmonDin);
         }
     }
 }

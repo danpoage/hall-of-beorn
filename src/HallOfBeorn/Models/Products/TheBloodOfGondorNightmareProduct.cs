@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.Products
         public TheBloodOfGondorNightmareProduct()
             : base("The Blood of Gondor Nightmare Deck", "MEN26", ImageType.Jpg)
         {
-            CardSets.Add(CardSet.TheBloodOfGondorNightmare);
+            AddCardSet(CardSet.TheBloodOfGondorNightmare);
         }
     }
 }

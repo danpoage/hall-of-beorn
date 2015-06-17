@@ -12,9 +12,9 @@ namespace HallOfBeorn.Models.Products
         {
             IsPremier = true;
 
-            CardSets.Add(CardSet.IntoThePitNightmare);
-            CardSets.Add(CardSet.TheSeventhLevelNightmare);
-            CardSets.Add(CardSet.FlightFromMoriaNightmare);
+            AddCardSet(CardSet.IntoThePitNightmare);
+            AddCardSet(CardSet.TheSeventhLevelNightmare);
+            AddCardSet(CardSet.FlightFromMoriaNightmare);
         }
     }
 }

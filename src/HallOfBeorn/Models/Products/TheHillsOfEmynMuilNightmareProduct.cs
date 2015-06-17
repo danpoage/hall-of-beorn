@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.Products
         public TheHillsOfEmynMuilNightmareProduct()
             : base("The Hills of Emyn Muil Nightmare Deck", "MEN07", ImageType.Jpg)
         {
-            CardSets.Add(CardSet.TheHillsOfEmynMuilNightmare);
+            AddCardSet(CardSet.TheHillsOfEmynMuilNightmare);
         }
     }
 }

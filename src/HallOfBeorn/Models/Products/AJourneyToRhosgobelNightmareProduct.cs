@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.Products
         public AJourneyToRhosgobelNightmareProduct()
             : base("A Joureny to Rhosgobel Nightmare Deck", "MEN06", ImageType.Jpg)
         {
-            CardSets.Add(CardSet.AJourneyToRhosgobelNightmare);
+            AddCardSet(CardSet.AJourneyToRhosgobelNightmare);
         }
     }
 }

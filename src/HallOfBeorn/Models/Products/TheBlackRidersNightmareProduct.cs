@@ -11,9 +11,9 @@ namespace HallOfBeorn.Models.Products
             : base("The Black Riders Nightmare Decks", "MEN19", ImageType.Jpg)
         {
             IsPremier = true;
-            CardSets.Add(CardSet.AShadowOfThePastNightmare);
-            CardSets.Add(CardSet.AKnifeInTheDarkNightmare);
-            CardSets.Add(CardSet.FlightToTheFordNightmare);
+            AddCardSet(CardSet.AShadowOfThePastNightmare);
+            AddCardSet(CardSet.AKnifeInTheDarkNightmare);
+            AddCardSet(CardSet.FlightToTheFordNightmare);
         }
     }
 }

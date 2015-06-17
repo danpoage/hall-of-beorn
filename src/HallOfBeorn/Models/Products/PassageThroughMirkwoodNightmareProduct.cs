@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.Products
         {
             this.IsPremier = true;
 
-            CardSets.Add(CardSet.PassageThroughMirkwoodNightmare);
+            AddCardSet(CardSet.PassageThroughMirkwoodNightmare);
         }
     }
 }

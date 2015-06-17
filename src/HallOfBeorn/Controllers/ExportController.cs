@@ -15,10 +15,16 @@ namespace HallOfBeorn.Controllers
     {
         public ExportController()
         {
-            _cardService = new CardService();
+            productRepository = (ProductRepository)System.Web.HttpContext.Current.Application[Extensions.ProductRepositoryKey];
+            cardRepository = (CardRepository)System.Web.HttpContext.Current.Application[Extensions.CardRepositoryKey];
+            scenarioService = (ScenarioService)System.Web.HttpContext.Current.Application[Extensions.ScenarioServiceKey];
+            searchService = (SearchService)System.Web.HttpContext.Current.Application[Extensions.SearchServiceKey];
         }
 
-        private CardService _cardService;
+        private SearchService searchService;
+        private readonly ProductRepository productRepository;
+        private readonly CardRepository cardRepository;
+        private readonly ScenarioService scenarioService;
 
         private bool IsPlayerCard(Card card)
         {
@@ -81,7 +87,7 @@ namespace HallOfBeorn.Controllers
         {
             var result = new ContentResult();
 
-            result.Content = DelimitedText(_cardService.Search(model));
+            result.Content = DelimitedText(searchService.Search(model));
 
             return result;
         }
@@ -93,14 +99,14 @@ namespace HallOfBeorn.Controllers
             switch (name)
             {
                 case "Cards":
-                    result.Data = _cardService.All().Select(x => new SimpleCard(x)).ToList();
+                    result.Data = searchService.All().Select(x => new SimpleCard(x)).ToList();
                     break;
                 case "PlayerCards":
-                    result.Data = _cardService.All().Where(x => IsPlayerCard(x)).Select(y => new SimpleCard(y)).ToList();
+                    result.Data = searchService.All().Where(x => IsPlayerCard(x)).Select(y => new SimpleCard(y)).ToList();
                     break;
                 case "Scenarios":
                     var scenarios = new List<SimpleScenario>();
-                    foreach (var group in _cardService.ScenarioGroups())
+                    foreach (var group in scenarioService.ScenarioGroups())
                     {
                         foreach (var item in group.Scenarios)
                         {
@@ -130,10 +136,10 @@ namespace HallOfBeorn.Controllers
                     result.Data = scenarios;
                     break;
                 case "CardSets":
-                    result.Data = _cardService.CardSets().Select(x => new SimpleCardSet { Name = x.Name, Cycle = x.Cycle, SetType = x.SetType.ToString() }).ToList();
+                    result.Data = scenarioService.CardSets().Select(x => new SimpleCardSet { Name = x.Name, Cycle = x.Cycle, SetType = x.SetType.ToString() }).ToList();
                     break;
                 case "EncounterSets":
-                    result.Data = _cardService.EncounterSetNames;
+                    result.Data = scenarioService.EncounterSetNames();
                     break;
                 default:
                     if (!string.IsNullOrEmpty(name))

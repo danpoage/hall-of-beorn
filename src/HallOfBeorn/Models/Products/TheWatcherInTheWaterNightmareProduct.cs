@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.Products
         public TheWatcherInTheWaterNightmareProduct()
             : base("The Watcher in the Water Nightmare Deck", "MEN13", ImageType.Jpg)
         {
-            CardSets.Add(CardSet.TheWatcherInTheWaterNightmare);
+            AddCardSet(CardSet.TheWatcherInTheWaterNightmare);
         }
     }
 }

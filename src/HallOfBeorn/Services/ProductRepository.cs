@@ -12,19 +12,16 @@ namespace HallOfBeorn.Services
     {
         public ProductRepository()
         {
-            productGroups.Add(new ShadowsOfMirkwoodProductGroup());
-            productGroups.Add(new TheDwarrowdelfProductGroup());
-            productGroups.Add(new AgainstTheShadowProductGroup());
-            productGroups.Add(new TheRingMakerProductGroup());
-            productGroups.Add(new AngmarAwakenedProductGroup());
-
-            productGroups.Add(new TheHobbitSagaProductGroup());
-            productGroups.Add(new TheLordOfTheRingsSagaProductGroup());
-
-            productGroups.Add(new GenConDeckProductGroup());
-            productGroups.Add(new NightmareDeckProductGroup());
-
-            productGroups.Add(new CustomProductGroup());
+            productGroups.Add(ProductGroup.ShadowsOfMirkwood);
+            productGroups.Add(ProductGroup.TheDwarrowdelf);
+            productGroups.Add(ProductGroup.AgainstTheShadow);
+            productGroups.Add(ProductGroup.TheRingMaker);
+            productGroups.Add(ProductGroup.AngmarAwakened);
+            productGroups.Add(ProductGroup.TheHobbitSaga);
+            productGroups.Add(ProductGroup.TheLordOfTheRingsSaga);
+            productGroups.Add(ProductGroup.GenConDeck);
+            productGroups.Add(ProductGroup.NightmareDeck);
+            productGroups.Add(ProductGroup.Custom);
         }
 
         private readonly List<ProductGroup> productGroups = new List<ProductGroup>();
@@ -38,6 +35,11 @@ namespace HallOfBeorn.Services
         {
             foreach (var group in productGroups)
             {
+                if (group.MainProduct != null)
+                {
+                    yield return group.MainProduct;
+                }
+
                 foreach (var product in group.ChildProducts)
                 {
                     yield return product;

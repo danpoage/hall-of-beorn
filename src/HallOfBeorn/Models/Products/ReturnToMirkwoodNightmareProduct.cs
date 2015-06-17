@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.Products
         public ReturnToMirkwoodNightmareProduct()
             : base("Return to Mirkwood Nightmare Deck", "MEN09", ImageType.Jpg)
         {
-            CardSets.Add(CardSet.ReturnToMirkwoodNightmare);
+            AddCardSet(CardSet.ReturnToMirkwoodNightmare);
         }
     }
 }

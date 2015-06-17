@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.Products
         public FirstAgeProduct()
             : base("First Age", "FA01", ImageType.Jpg)
         {
-            CardSets.Add(CardSet.FirstAge);
+            AddCardSet(CardSet.FirstAge);
         }
     }
 }

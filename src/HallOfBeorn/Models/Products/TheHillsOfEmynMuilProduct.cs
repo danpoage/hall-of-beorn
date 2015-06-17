@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.Products
         {
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/The_Hills_of_Emyn_Muil_rulesheet.pdf";
 
-            CardSets.Add(CardSet.TheHillsOfEmynMuil);
+            AddCardSet(CardSet.TheHillsOfEmynMuil);
         }
     }
 }

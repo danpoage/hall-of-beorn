@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.Products
         {
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/the-three-trials-rulesheet.pdf";
 
-            CardSets.Add(CardSet.TheThreeTrials);
+            AddCardSet(CardSet.TheThreeTrials);
         }
     }
 }

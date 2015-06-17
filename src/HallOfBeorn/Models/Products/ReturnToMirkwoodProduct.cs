@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.Products
         {
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/Return_to_Mirkwood_rulesheet.pdf";
 
-            CardSets.Add(CardSet.ReturnToMirkwood);
+            AddCardSet(CardSet.ReturnToMirkwood);
         }
     }
 }

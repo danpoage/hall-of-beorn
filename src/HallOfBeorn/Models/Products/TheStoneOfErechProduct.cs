@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.Products
         public TheStoneOfErechProduct()
             : base("The Stone of Erech GenCon 2013", "MEC33", ImageType.Jpg)
         {
-            CardSets.Add(CardSet.TheStoneOfErech);
+            AddCardSet(CardSet.TheStoneOfErech);
         }
     }
 }

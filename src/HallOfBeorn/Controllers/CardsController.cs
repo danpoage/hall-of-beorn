@@ -14,10 +14,19 @@ namespace HallOfBeorn.Controllers
     {
         public CardsController()
         {
-            _cardService = (CardService)System.Web.HttpContext.Current.Application[Extensions.CardServiceKey];
+            
+            productRepository = (ProductRepository)System.Web.HttpContext.Current.Application[Extensions.ProductRepositoryKey];
+            searchService = (SearchService)System.Web.HttpContext.Current.Application[Extensions.SearchServiceKey];
+            categoryService = (CategoryService)System.Web.HttpContext.Current.Application[Extensions.CategoryServiceKey];
+            scenarioService = (ScenarioService)System.Web.HttpContext.Current.Application[Extensions.ScenarioServiceKey];
+            statService = (StatService)System.Web.HttpContext.Current.Application[Extensions.StatServiceKey];
         }
 
-        private CardService _cardService;
+        private readonly SearchService searchService;
+        private readonly ProductRepository productRepository;
+        private readonly CategoryService categoryService;
+        private readonly ScenarioService scenarioService;
+        private readonly StatService statService;
 
         private List<string> strongPhrases = new List<string> {
             "lost the game",
@@ -33,24 +42,26 @@ namespace HallOfBeorn.Controllers
         {
             model.Cards = new List<CardViewModel>();
 
-            SearchViewModel.Keywords = _cardService.Keywords().GetSelectListItems();
-            SearchViewModel.Traits = _cardService.Traits().GetSelectListItems();
-            SearchViewModel.ResourceCosts = _cardService.ResourceCosts().GetSelectListItems();
-            SearchViewModel.ThreatCosts = _cardService.ThreatCosts().GetSelectListItems();
-            SearchViewModel.EngagementCosts = _cardService.EngagementCosts().GetSelectListItems();
-            SearchViewModel.CardSets = _cardService.SetNames.GetSelectListItems();
-            SearchViewModel.Scenarios = _cardService.GetScenarioTitles().GetSelectListItems();
-            SearchViewModel.EncounterSets = _cardService.EncounterSetNames.GetSelectListItems();
-            SearchViewModel.Categories = _cardService.Categories().Select(x => x.ToString().Replace('_', ' ')).GetSelectListItems().OrderBy(x => x.Text).ToList();
-            SearchViewModel.EncounterCategories = _cardService.EncounterCategories().Select(x => x.ToString().Replace('_', ' ')).GetSelectListItems().OrderBy(x => x.Text).ToList();
-            SearchViewModel.QuestCategories = _cardService.QuestCategories().Select(x => x.ToString().Replace('_', ' ')).GetSelectListItems().OrderBy(x => x.Text).ToList();
-            SearchViewModel.VictoryPointValues = _cardService.VictoryPointValues().GetSelectListItems();
-            SearchViewModel.AttackStrengthValues = _cardService.AttackStrengthValues().GetSelectListItems();
-            SearchViewModel.DefenseStrengthValues = _cardService.DefenseStrengthValues().GetSelectListItems();
-            SearchViewModel.HitPointsValues = _cardService.HitPointsValues().GetSelectListItems();
-            SearchViewModel.WillpowerStrengthValues = _cardService.WillpowerStrengthValues().GetSelectListItems();
-            SearchViewModel.ThreatStrengthValues = _cardService.ThreatStrengthValues().GetSelectListItems();
-            SearchViewModel.QuestPointsValues = _cardService.QuestPointsValues().GetSelectListItems();
+            SearchViewModel.Keywords = statService.Keywords().GetSelectListItems();
+            SearchViewModel.Traits = statService.Traits().GetSelectListItems();
+            SearchViewModel.ResourceCosts = statService.ResourceCosts().GetSelectListItems();
+            SearchViewModel.ThreatCosts = statService.ThreatCosts().GetSelectListItems();
+            SearchViewModel.EngagementCosts = statService.EngagementCosts().GetSelectListItems();
+            SearchViewModel.VictoryPointValues = statService.VictoryPointsValues().GetSelectListItems();
+            SearchViewModel.AttackStrengthValues = statService.AttackStrengthValues().GetSelectListItems();
+            SearchViewModel.DefenseStrengthValues = statService.DefenseStrengthValues().GetSelectListItems();
+            SearchViewModel.HitPointsValues = statService.HitPointsValues().GetSelectListItems();
+            SearchViewModel.WillpowerStrengthValues = statService.WillpowerStrengthValues().GetSelectListItems();
+            SearchViewModel.ThreatStrengthValues = statService.ThreatStrengthValues().GetSelectListItems();
+            SearchViewModel.QuestPointsValues = statService.QuestPointsValues().GetSelectListItems();
+
+            SearchViewModel.CardSets = scenarioService.SetNames().GetSelectListItems();
+            SearchViewModel.Scenarios = scenarioService.ScenarioTitles().GetSelectListItems();
+            SearchViewModel.EncounterSets = scenarioService.EncounterSetNames().GetSelectListItems();
+
+            SearchViewModel.Categories = categoryService.CategoryNames().GetSelectListItems();
+            SearchViewModel.EncounterCategories = categoryService.EncounterCategoryNames().GetSelectListItems();
+            SearchViewModel.QuestCategories = categoryService.QuestCategoryNames().GetSelectListItems();
         }
 
         private IEnumerable<CardEffect> ParseCardEffects(Card card, string text)
@@ -175,7 +186,7 @@ namespace HallOfBeorn.Controllers
                     if (!escaped && normalized != "Attack")
                     {
                         //NOTE: A Sphere token has priority over a Trait token
-                        if (_cardService.Traits().Any(x => string.Equals(x, normalized + ".")) && !_cardService.Spheres().Any(x => string.Equals(x, normalized)))
+                        if (statService.Traits().Any(x => string.Equals(x, normalized + ".")) && !statService.Spheres().Any(x => string.Equals(x, normalized)))
                         {
                             token.IsTrait = true;
                             token.Text = token.Prefix + part.Trim(',');
@@ -255,7 +266,7 @@ namespace HallOfBeorn.Controllers
         {
             var model = new BrowseViewModel();
 
-            foreach (var productGroup in _cardService.ProductGroups())
+            foreach (var productGroup in productRepository.ProductGroups())
             {
                 model.ProductGroups.Add(new ProductGroupViewModel(productGroup));
             }
@@ -269,14 +280,14 @@ namespace HallOfBeorn.Controllers
 
             if (string.IsNullOrEmpty(id))
             {
-                foreach (var scenarioGroup in _cardService.ScenarioGroups())
+                foreach (var scenarioGroup in scenarioService.ScenarioGroups())
                 {
                     model.ScenarioGroups.Add(new ScenarioGroupViewModel(scenarioGroup));
                 }
             }
             else
             {
-                var scenario = _cardService.GetScenario(id);
+                var scenario = scenarioService.GetScenario(id);
 
                 if (scenario == null)
                 {
@@ -344,14 +355,14 @@ namespace HallOfBeorn.Controllers
             
             var groupNames = new string[0];
             if (!string.IsNullOrEmpty(id)) {
-                groupNames = id.Split(','); //new string[2] { "Core Set", "Shadows of Mirkwood" };
+                groupNames = id.Split(',');
             }
 
             var filter = (!string.IsNullOrEmpty(id)) ?
                 new Func<ScenarioGroup, bool>((g) => { return !string.IsNullOrEmpty(g.Name) && groupNames.Any(y => y == g.Name); }) :
                 new Func<ScenarioGroup, bool>((g) => { return !string.IsNullOrEmpty(g.Name); });
             
-            foreach (var scenarioGroup in _cardService.ScenarioGroups().Where(filter))
+            foreach (var scenarioGroup in scenarioService.ScenarioGroups().Where(filter))
             {
                 foreach (var scenario in scenarioGroup.Scenarios)
                 {
@@ -460,7 +471,7 @@ namespace HallOfBeorn.Controllers
             {
                 var details = new Dictionary<string, object>();
                 
-                var scenario = _cardService.GetScenario(id);
+                var scenario = scenarioService.GetScenario(id);
                 if (scenario != null)
                 {
                     details["title"] = scenario.Title;
@@ -581,32 +592,11 @@ namespace HallOfBeorn.Controllers
             }
         }
 
-        public ActionResult AdvancedSearch(AdvancedSearchViewModel model)
-        {
-            //InitializeSearch(model);
-
-            /*
-            foreach (var card in _cardService.Search(model))
-            {
-                model.Cards.Add(new CardViewModel(card));
-            }
-            */
-
-            return View(model);
-        }
-
-        [HttpPost]
-        [ActionName("AdvancedSearch")]
-        public ActionResult AdvancedSearch_Post(AdvancedSearchViewModel model)
-        {
-            return RedirectToAction("AdvancedSearch", model);
-        }
-
         public ActionResult Search(SearchViewModel model)
         {
             InitializeSearch(model);
 
-            foreach (var score in _cardService.Search(model))
+            foreach (var score in searchService.Search(model))
             {
                 model.Cards.Add(new CardViewModel(score));
             }
@@ -658,7 +648,7 @@ namespace HallOfBeorn.Controllers
 
             if (IsId(id))
             {
-                card = _cardService.Find(id);
+                card = searchService.Find(id);
                 if (card != null)
                 {
                     redirectURL = string.Format("/Cards/Details/{0}", card.Slug);
@@ -666,7 +656,7 @@ namespace HallOfBeorn.Controllers
             }
             else
             {
-                card = _cardService.FindBySlug(id);
+                card = searchService.FindBySlug(id);
                 if (card != null && card.Slug != id)
                 {
                     redirectURL = string.Format("/Cards/Details/{0}", card.Slug);

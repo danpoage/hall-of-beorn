@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.Products
         public TheDruadanForestNightmareProduct()
             : base("The Drúadan Forest Nightmare Deck", "MEN23", ImageType.Jpg)
         {
-            CardSets.Add(CardSet.TheDruadanForestNightmare);
+            AddCardSet(CardSet.TheDruadanForestNightmare);
         }
     }
 }

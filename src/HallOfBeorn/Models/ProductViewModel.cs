@@ -50,7 +50,7 @@ namespace HallOfBeorn.Models
         {
             get
             {
-                return _product.CardSets.Any(x => x.SetType == SetType.Core || x.SetType == SetType.Deluxe_Expansion || x.SetType == SetType.Saga_Expansion) ?
+                return _product.CardSets().Any(x => x.SetType == SetType.Core || x.SetType == SetType.Deluxe_Expansion || x.SetType == SetType.Saga_Expansion) ?
                     235 : 142;
             }
         }
@@ -66,11 +66,11 @@ namespace HallOfBeorn.Models
         {
             get
             {
-                if (_product.CardSets.Count == 1)
+                if (_product.CardSets().Count() == 1)
                 {
                     var cardSet = string.Empty;
 
-                    var first = _product.CardSets.FirstOrDefault();
+                    var first = _product.CardSets().FirstOrDefault();
                     if (first != null)
                     {
                         cardSet = first.Name.Replace(' ', '+');

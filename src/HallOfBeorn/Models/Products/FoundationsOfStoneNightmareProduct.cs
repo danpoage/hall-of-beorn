@@ -11,7 +11,7 @@ namespace HallOfBeorn.Models.Products
         public FoundationsOfStoneNightmareProduct()
             : base("Foundations of Stone Nightmare Deck", "MEN15", ImageType.Jpg)
         {
-            CardSets.Add(CardSet.FoundationsOfStoneNightmare);
+            AddCardSet(CardSet.FoundationsOfStoneNightmare);
         }
     }
 }

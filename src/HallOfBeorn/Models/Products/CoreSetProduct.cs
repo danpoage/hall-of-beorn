@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.Products
         {
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/LOTR_LCG_Core_rules_eng_Lo-Res.pdf";
 
-            CardSets.Add(CardSet.CoreSet);
+            AddCardSet(CardSet.CoreSet);
         }
     }
 }

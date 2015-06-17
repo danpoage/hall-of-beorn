@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.Products
         {
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/hobbit_over_hill_and_under_hill_rulesheet.pdf";
 
-            CardSets.Add(CardSet.TheHobbitOverHillAndUnderHill);
+            AddCardSet(CardSet.TheHobbitOverHillAndUnderHill);
         }
     }
 }

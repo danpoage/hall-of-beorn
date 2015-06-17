@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.Products
         {
             IsPremier = true;
 
-            CardSets.Add(CardSet.EscapeFromDolGuldurNightmare);
+            AddCardSet(CardSet.EscapeFromDolGuldurNightmare);
         }
     }
 }

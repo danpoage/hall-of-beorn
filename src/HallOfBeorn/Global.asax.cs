@@ -7,6 +7,8 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
+using HallOfBeorn.Services;
+
 namespace HallOfBeorn
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
@@ -25,7 +27,29 @@ namespace HallOfBeorn
             AuthConfig.RegisterAuth();
             
             System.Web.HttpContext.Current.Application.Lock();
-            System.Web.HttpContext.Current.Application[Extensions.CardServiceKey] = new HallOfBeorn.Services.CardService();
+            
+
+            var productRepository = new ProductRepository();
+            System.Web.HttpContext.Current.Application[Extensions.ProductRepositoryKey] = productRepository;
+
+            var cardRepository = new CardRepository(productRepository);
+            System.Web.HttpContext.Current.Application[Extensions.CardRepositoryKey] = cardRepository;
+
+            var deckRepository = new DeckRepository();
+            System.Web.HttpContext.Current.Application[Extensions.DeckRepositoryKey] = deckRepository;
+
+            var categoryService = new CategoryService(cardRepository);
+            System.Web.HttpContext.Current.Application[Extensions.CategoryServiceKey] = categoryService;
+
+            var scenarioService = new ScenarioService(productRepository, cardRepository);
+            System.Web.HttpContext.Current.Application[Extensions.ScenarioServiceKey] = scenarioService;
+
+            var searchService = new SearchService(productRepository, cardRepository, scenarioService);
+            System.Web.HttpContext.Current.Application[Extensions.SearchServiceKey] = searchService;
+
+            var statService = new StatService(cardRepository);
+            System.Web.HttpContext.Current.Application[Extensions.StatServiceKey] = statService;
+
             System.Web.HttpContext.Current.Application.UnLock();
         }
     }

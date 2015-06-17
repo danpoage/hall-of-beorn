@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.Products
         public TheRedhornGateNightmareProduct()
             : base("The Redhord Gate Nightmare Deck", "MEN11", ImageType.Jpg)
         {
-            CardSets.Add(CardSet.TheRedhornGateNightmare);
+            AddCardSet(CardSet.TheRedhornGateNightmare);
         }
     }
 }

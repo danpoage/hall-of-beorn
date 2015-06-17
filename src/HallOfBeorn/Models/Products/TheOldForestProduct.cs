@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.Products
         public TheOldForestProduct()
             : base("The Old Forest", "MEC37", ImageType.Jpg)
         {
-            CardSets.Add(new Sets.TheOldForest());
+            AddCardSet(new Sets.TheOldForest());
         }
     }
 }

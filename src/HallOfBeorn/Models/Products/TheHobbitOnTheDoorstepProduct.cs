@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.Products
         {
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/hobbit_on_the_doorstep_rulesheet.pdf";
 
-            CardSets.Add(CardSet.TheHobbitOnTheDoorstep);
+            AddCardSet(CardSet.TheHobbitOnTheDoorstep);
         }
     }
 }

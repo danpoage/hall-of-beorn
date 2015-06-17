@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.Products
         {
             RulesUrl = "https://images-cdn.fantasyflightgames.com/filer_public/d5/4c/d54cf57f-de1d-4934-abfc-c0fdbc9e0f7a/celebrimbors-secret-rulesheet.pdf";
 
-            CardSets.Add(CardSet.CelebrimborsSecret);
+            AddCardSet(CardSet.CelebrimborsSecret);
         }
     }
 }

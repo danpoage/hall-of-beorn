@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.Products
         public TheStewardsFearNightmareProduct()
             : base("The Steward's Fear Nightmare Deck", "MEN22", ImageType.Jpg)
         {
-            CardSets.Add(CardSet.TheStewardsFearNightmare);
+            AddCardSet(CardSet.TheStewardsFearNightmare);
         }
     }
 }

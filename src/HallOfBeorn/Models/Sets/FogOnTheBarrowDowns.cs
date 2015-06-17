@@ -14,7 +14,6 @@ namespace HallOfBeorn.Models.Sets
             Number = 3005;
             SetType = Models.SetType.Fellowship_Deck;
             Cycle = "GenCon";
-            DisablePublicImages = true;
 
             Cards.Add(new Card()
             {

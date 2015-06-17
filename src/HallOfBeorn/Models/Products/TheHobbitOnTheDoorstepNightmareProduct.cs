@@ -11,9 +11,9 @@ namespace HallOfBeorn.Models.Products
             : base("The Hobbit: On The Doorstep Nightmare Decks", "MEN18", ImageType.Jpg)
         {
             IsPremier = true;
-            CardSets.Add(CardSet.FliesAndSpidersNightmare);
-            CardSets.Add(CardSet.TheLonelyMountainNightmare);
-            CardSets.Add(CardSet.TheBattleOfFiveArmiesNightmare);
+            AddCardSet(CardSet.FliesAndSpidersNightmare);
+            AddCardSet(CardSet.TheLonelyMountainNightmare);
+            AddCardSet(CardSet.TheBattleOfFiveArmiesNightmare);
         }
     }
 }

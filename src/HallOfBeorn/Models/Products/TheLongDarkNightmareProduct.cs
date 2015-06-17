@@ -11,7 +11,7 @@ namespace HallOfBeorn.Models.Products
         public TheLongDarkNightmareProduct()
             : base("The Long Dark Nightmare Deck", "MEN14", ImageType.Jpg)
         {
-            CardSets.Add(CardSet.TheLongDarkNightmare);
+            AddCardSet(CardSet.TheLongDarkNightmare);
         }
     }
 }

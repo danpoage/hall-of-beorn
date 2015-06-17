@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.Products
         {
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/the-black-riders-rulesheet.pdf";
 
-            CardSets.Add(CardSet.TheBlackRiders);
+            AddCardSet(CardSet.TheBlackRiders);
         }
     }
 }

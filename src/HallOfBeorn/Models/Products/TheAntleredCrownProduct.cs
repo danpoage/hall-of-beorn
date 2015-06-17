@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.Products
         {
             RulesUrl = "https://images-cdn.fantasyflightgames.com/filer_public/a9/19/a91988d8-41a3-4653-9b3e-c2a970c1b2a8/mec31-the-antlered-crown-rulesheet.pdf";
 
-            CardSets.Add(CardSet.TheAntleredCrown);
+            AddCardSet(CardSet.TheAntleredCrown);
         }
     }
 }

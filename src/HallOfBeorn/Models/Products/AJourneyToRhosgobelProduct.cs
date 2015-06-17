@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.Products
         {
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/A-Journey-to-Rhosgobel-Rules.pdf";
 
-            CardSets.Add(CardSet.AJourneyToRhosgobel);
+            AddCardSet(CardSet.AJourneyToRhosgobel);
         }
     }
 }

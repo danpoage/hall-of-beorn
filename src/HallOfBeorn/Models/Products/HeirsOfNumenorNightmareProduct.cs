@@ -12,9 +12,9 @@ namespace HallOfBeorn.Models.Products
         {
             IsPremier = true;
             IsNewSubGroup = true;
-            CardSets.Add(CardSet.PerilInPelargirNightmare);
-            CardSets.Add(CardSet.IntoIthilienNightmare);
-            CardSets.Add(CardSet.TheSiegeOfCairAndrosNightmare);
+            AddCardSet(CardSet.PerilInPelargirNightmare);
+            AddCardSet(CardSet.IntoIthilienNightmare);
+            AddCardSet(CardSet.TheSiegeOfCairAndrosNightmare);
         }
     }
 }

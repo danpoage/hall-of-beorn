@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+using HallOfBeorn.Models.ProductGroups;
+
 namespace HallOfBeorn.Models
 {
     public class ProductGroup
     {
-        public ProductGroup(string name)
+        protected ProductGroup(string name)
         {
             Name = name;
             ChildProducts = new List<Product>();
@@ -21,5 +23,18 @@ namespace HallOfBeorn.Models
         public string Name { get; private set; }
         public Product MainProduct { get; set; }
         public List<Product> ChildProducts { get; private set; }
+
+        #region Static Members
+        public static ProductGroup ShadowsOfMirkwood = new ShadowsOfMirkwoodProductGroup();
+        public static ProductGroup TheDwarrowdelf = new TheDwarrowdelfProductGroup();
+        public static ProductGroup AgainstTheShadow = new AgainstTheShadowProductGroup();
+        public static ProductGroup TheRingMaker = new TheRingMakerProductGroup();
+        public static ProductGroup AngmarAwakened = new AngmarAwakenedProductGroup();
+        public static ProductGroup TheHobbitSaga = new TheHobbitSagaProductGroup();
+        public static ProductGroup TheLordOfTheRingsSaga = new TheLordOfTheRingsSagaProductGroup();
+        public static ProductGroup GenConDeck = new GenConDeckProductGroup();
+        public static ProductGroup NightmareDeck = new NightmareDeckProductGroup();
+        public static ProductGroup Custom = new CustomProductGroup();
+        #endregion
     }
 }

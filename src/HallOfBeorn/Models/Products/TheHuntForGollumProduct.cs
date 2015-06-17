@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.Products
         {
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/rulesheet-TheHuntForGollum.pdf";
 
-            CardSets.Add(CardSet.TheHuntForGollum);
+            AddCardSet(CardSet.TheHuntForGollum);
         }
     }
 }

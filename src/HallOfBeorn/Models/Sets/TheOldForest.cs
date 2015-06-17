@@ -14,7 +14,6 @@ namespace HallOfBeorn.Models.Sets
             Number = 3004;
             SetType = Models.SetType.GenConSaga_Expansion;
             Cycle = "GenCon";
-            DisablePublicImages = true;
 
             Cards.Add(new Card()
             {

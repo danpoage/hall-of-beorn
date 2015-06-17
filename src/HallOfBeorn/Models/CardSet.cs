@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models
 {
-    public class CardSet
+    public abstract class CardSet
     {
         protected CardSet()
         {
@@ -21,9 +21,7 @@ namespace HallOfBeorn.Models
 
         private string normalizedName;
 
-        protected virtual void Initialize()
-        {
-        }
+        protected abstract void Initialize();
 
         public string Id { get; protected set; }
         public string Name { get; protected set; }
@@ -44,8 +42,6 @@ namespace HallOfBeorn.Models
 
         public string Abbreviation { get; protected set; }
 
-        public bool DisablePublicImages { get; set; }
-
         private string publicSlug;
         public string PublicSlug
         {
@@ -65,6 +61,7 @@ namespace HallOfBeorn.Models
         {
         }
 
+        #region Static Members
         public static CardSet CoreSet = new Sets.CoreSet();
         public static CardSet TheHuntForGollum = new Sets.TheHuntforGollum();
         public static CardSet ConflictAtTheCarrock = new Sets.ConflictattheCarrock();
@@ -153,5 +150,6 @@ namespace HallOfBeorn.Models
         public static CardSet TheLostRealm = new Sets.TheLostRealm();
 
         public static CardSet FirstAge = new Sets.FirstAge();
+        #endregion
     }
 }

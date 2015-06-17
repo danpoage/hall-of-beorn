@@ -9,7 +9,14 @@ namespace HallOfBeorn
 {
     public static class Extensions
     {
-        public static string CardServiceKey = "cardService";
+        public static string ProductRepositoryKey = "productRepository";
+        public static string CardRepositoryKey = "cardRepository";
+        public static string DeckRepositoryKey = "deckRepository";
+
+        public static string CategoryServiceKey = "categoryService";
+        public static string ScenarioServiceKey = "scenarioService";
+        public static string SearchServiceKey = "searchService";
+        public static string StatServiceKey = "statServiceKey";
 
         public static string ToUrlSafeString(this string self)
         {

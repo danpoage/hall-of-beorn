@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.Products
         public TheRoadDarkensProduct()
             : base("The Road Darkens", "MEC34", ImageType.Png)
         {
-            CardSets.Add(CardSet.TheRoadDarkens);
+            AddCardSet(CardSet.TheRoadDarkens);
         }
     }
 }

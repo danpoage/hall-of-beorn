@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.Products
         public TheDeadMarshesNightmareProduct()
             : base("The Dead Marshes Nightmare Deck", "MEN08", ImageType.Jpg)
         {
-            CardSets.Add(CardSet.TheDeadMarshesNightmare);
+            AddCardSet(CardSet.TheDeadMarshesNightmare);
         }
     }
 }

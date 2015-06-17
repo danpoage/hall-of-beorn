@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.Products
         {
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/Heirs-of-Numenor_rules.pdf";
 
-            CardSets.Add(CardSet.HeirsOfNumenor);
+            AddCardSet(CardSet.HeirsOfNumenor);
         }
     }
 }

@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.Products
         public AssaultOnOsgiliathNightmareProduct()
             : base("Assault on Osgiliath Nightmare Deck", "MEN25", ImageType.Jpg)
         {
-            CardSets.Add(CardSet.AssaultOnOsgiliathNightmare);
+            AddCardSet(CardSet.AssaultOnOsgiliathNightmare);
         }
     }
 }

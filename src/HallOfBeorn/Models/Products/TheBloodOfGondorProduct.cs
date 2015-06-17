@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.Products
         {
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/rulesheet-the-blood-of-gondor.pdf";
 
-            CardSets.Add(CardSet.TheBloodOfGondor);
+            AddCardSet(CardSet.TheBloodOfGondor);
         }
     }
 }

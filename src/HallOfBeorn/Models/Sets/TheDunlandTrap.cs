@@ -14,7 +14,6 @@ namespace HallOfBeorn.Models.Sets
             Number = 23;
             SetType = Models.SetType.Adventure_Pack;
             Cycle = "The Ring-maker";
-            DisablePublicImages = true;
 
             Cards.Add(new Card()
             {

@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.Products
         public EncounterAtAmonDinNightmareProduct()
             : base("Encounter at Amon Dîn Nightmare Deck", "MEN24", ImageType.Jpg)
         {
-            CardSets.Add(CardSet.EncounterAtAmonDinNightmare);
+            AddCardSet(CardSet.EncounterAtAmonDinNightmare);
         }
     }
 }

@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.Products
         public TheMorgulValeNightmareProduct()
             : base("The Morgul Vale Nightmare Product", "MEN27", ImageType.Jpg)
         {
-            CardSets.Add(CardSet.TheMorgulValeNightmare);
+            AddCardSet(CardSet.TheMorgulValeNightmare);
         }
     }
 }

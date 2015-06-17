@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HallOfBeorn.Models.Products
+namespace HallOfBeorn.Models.ProductGroups
 {
     public class TheHobbitSagaProductGroup : ProductGroup
     {
         public TheHobbitSagaProductGroup()
             : base("The Hobbit Saga")
         {
-            AddProduct(new TheHobbitOverHillAndUnderHillProduct());
-            AddProduct(new TheHobbitOnTheDoorstepProduct());
+            AddProduct(Product.TheHobbitOverHillAndUnderHill);
+            AddProduct(Product.TheHobbitOnTheDoorstep);
         }
     }
 }

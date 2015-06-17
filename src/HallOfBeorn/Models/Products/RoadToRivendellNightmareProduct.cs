@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.Products
         public RoadToRivendellNightmareProduct()
             : base("Road to Rivendell Nightmare Deck", "MEN12", ImageType.Jpg)
         {
-            CardSets.Add(CardSet.RoadToRivendellNightmare);
+            AddCardSet(CardSet.RoadToRivendellNightmare);
         }
     }
 }

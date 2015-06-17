@@ -1,0 +1,341 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+using HallOfBeorn.Models;
+
+namespace HallOfBeorn.Services
+{
+    public class CategoryService
+    {
+        public CategoryService(CardRepository cardRepository)
+        {
+            cards = cardRepository.Cards();
+
+            LoadCategories();
+            LoadEncounterCategories();
+            LoadQuestCategories();
+        }
+
+        private readonly IEnumerable<Card> cards;
+        private readonly Dictionary<string, Category> categories = new Dictionary<string, Category>();
+        private readonly Dictionary<string, EncounterCategory> encounterCategories = new Dictionary<string, EncounterCategory>();
+        private readonly Dictionary<string, QuestCategory> questCategories = new Dictionary<string, QuestCategory>();
+
+        private bool IsCategorizable(Card card)
+        {
+            if (string.IsNullOrEmpty(card.Text))
+                return false;
+
+            switch (card.CardType)
+            {
+                case CardType.Hero:
+                    return true;
+                case CardType.Ally:
+                    return true;
+                case CardType.Attachment:
+                    return true;
+                case CardType.Event:
+                    return true;
+                default:
+                    return false;
+            }
+        }
+
+        private bool IsEncounterCategorizable(Card card)
+        {
+            switch (card.CardType)
+            {
+                case CardType.Enemy:
+                    return true;
+                case CardType.Location:
+                    return true;
+                case CardType.Treachery:
+                    return true;
+                default:
+                    return false;
+            }
+        }
+
+        private bool IsQuestCategorizable(Card card)
+        {
+            switch (card.CardType)
+            {
+                case CardType.Quest:
+                case CardType.Campaign:
+                case CardType.GenCon_Setup:
+                case CardType.Nightmare_Setup:
+                    return true;
+                default:
+                    return false;
+            }
+        }
+
+        private Func<Card, Category> CreateCategoryFilter(string pattern, Category category)
+        {
+            return CreateCategoryFilter(pattern, category, null);
+        }
+
+        private Func<Card, Category> CreateCategoryFilter(string pattern, Category category, params string[] negations)
+        {
+            Func<Card, Category> filter = (card) =>
+            {
+                foreach (var line in card.Text.Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    if (line.MatchesPattern(pattern))
+                    {
+                        if (negations == null || negations.Length == 0 || !negations.Any(x => line.ToLowerSafe().Contains(x.ToLowerSafe())))
+                            return category;
+                    }
+                }
+
+                return Category.None;
+            };
+
+            return filter;
+        }
+
+        private Func<Card, EncounterCategory> CreateEncounterCategoryFilter(string pattern, EncounterCategory category)
+        {
+            return CreateEncounterCategoryFilter(pattern, category, null);
+        }
+
+        private Func<Card, EncounterCategory> CreateEncounterCategoryFilter(string pattern, EncounterCategory category, params string[] negations)
+        {
+            Func<Card, EncounterCategory> filter = (card) =>
+            {
+                foreach (var line in card.Text.Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    if (line.MatchesPattern(pattern))
+                    {
+                        if (negations == null || negations.Length == 0 || !negations.Any(x => line.ToLowerSafe().Contains(x.ToLowerSafe())))
+                            return category;
+                    }
+                }
+
+                return EncounterCategory.None;
+            };
+
+            return filter;
+        }
+
+        private Func<Card, QuestCategory> CreateQuestCategoryFilter(string pattern, QuestCategory category)
+        {
+            return CreateQuestCategoryFilter(pattern, category, null);
+        }
+
+        private Func<Card, QuestCategory> CreateQuestCategoryFilter(string pattern, QuestCategory category, params string[] negations)
+        {
+            Func<Card, QuestCategory> filter = (card) =>
+            {
+                if (card.Keywords.Any(x => x.Contains(pattern)))
+                {
+                    return category;
+                }
+
+                foreach (var line in card.Text.Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    if (line.MatchesPattern(pattern))
+                    {
+                        if (negations == null || negations.Length == 0 || !negations.Any(x => line.ToLowerSafe().Contains(x.ToLowerSafe())))
+                            return category;
+                    }
+                }
+
+                return QuestCategory.None;
+            };
+
+            return filter;
+        }
+
+        private void LoadEncounterCategories()
+        {
+            var filters = new List<Func<Card, EncounterCategory>> {
+                CreateEncounterCategoryFilter("exhaust (a|1) (character|hero|ally)", EncounterCategory.Exhaustion),
+                CreateEncounterCategoryFilter("When Revealed:", EncounterCategory.When_Revealed),
+                CreateEncounterCategoryFilter("(each|a|1) hero", EncounterCategory.Targets_Heroes),
+                CreateEncounterCategoryFilter("(each|a|1) ally", EncounterCategory.Targets_Allies),
+                CreateEncounterCategoryFilter("(each|a|1) character", EncounterCategory.Targets_Characters),
+                CreateEncounterCategoryFilter("after you engage|after .*engages (you|a player)", EncounterCategory.Triggered_By_Engagement),
+                CreateEncounterCategoryFilter("(character|hero|ally) (gets|get).*\\-([xX1-9]) Willpower|Willpower.*reduced", EncounterCategory.Willpower_Reduction),
+                CreateEncounterCategoryFilter("(character|hero|ally) (gets|get).*\\-([xX1-9]) Attack|Attack.*reduced", EncounterCategory.Attack_Reduction),
+                CreateEncounterCategoryFilter("(character|hero|ally) (gets|get).*\\-([xX1-9]) Defense|Defense.*reduced", EncounterCategory.Defense_Reduction),
+                CreateEncounterCategoryFilter("(get|gets) .*\\+[xX1-9] Threat", EncounterCategory.Staging_Area_Threat_Raise),
+                CreateEncounterCategoryFilter("(get|gets) .*\\+[xX1-9] Attack", EncounterCategory.Enemy_Attack_Boost),
+                CreateEncounterCategoryFilter("(get|gets) .*\\+[xX1-9] Defense", EncounterCategory.Enemy_Defense_Boost),
+                CreateEncounterCategoryFilter("Counts as a Condition attachment", EncounterCategory.Condition_Attachment),
+                CreateEncounterCategoryFilter("While .* is the active location", EncounterCategory.While_Active),
+                CreateEncounterCategoryFilter("While .* is in the staging area", EncounterCategory.While_In_Staging),
+                CreateEncounterCategoryFilter("Cannot spend resources", EncounterCategory.Cannot_Spend_Resources),
+                CreateEncounterCategoryFilter("Cannot play (event|events)", EncounterCategory.Cannnot_Play_Events),
+                CreateEncounterCategoryFilter("Cannot play (ally|allies)", EncounterCategory.Cannot_Play_Allies),
+                CreateEncounterCategoryFilter("cannot be .*engaged", EncounterCategory.Cannot_Engage),
+                CreateEncounterCategoryFilter("makes an immediate attack", EncounterCategory.Immediate_Attack),
+                CreateEncounterCategoryFilter("return .* to the staging area", EncounterCategory.Return_to_Staging_Area),
+                CreateEncounterCategoryFilter("discard .* (card|cards) from (your|their|his) hand", EncounterCategory.Card_Discard),
+                CreateEncounterCategoryFilter("excess .*damage dealt", EncounterCategory.Trample),
+                CreateEncounterCategoryFilter("choose and discard", EncounterCategory.Chosen_Card_Discard, "random", "discard an attachment", "discard an ally"),
+                CreateEncounterCategoryFilter("discard .* random card|discard .* (card|cards) at random", EncounterCategory.Random_Card_Discard),
+                CreateEncounterCategoryFilter("gains surge", EncounterCategory.Optional_Surge),
+                CreateEncounterCategoryFilter("each player", EncounterCategory.Targets_Each_Player),
+                CreateEncounterCategoryFilter("first player", EncounterCategory.Targets_First_Player),
+                CreateEncounterCategoryFilter("engaged player", EncounterCategory.Targets_Engaged_Player),
+                CreateEncounterCategoryFilter("exhausted (character|hero|heroes|ally|allies)", EncounterCategory.Targets_Exhausted_Characters),
+                CreateEncounterCategoryFilter("(deal|deals) [xX1-9] damage|deal damage to", EncounterCategory.Direct_Damage, "to The Balrog"),
+                CreateEncounterCategoryFilter("raise (his|your|their) threat by", EncounterCategory.Player_Threat_Raise),
+                CreateEncounterCategoryFilter("printed text boxes .*blank", EncounterCategory.Text_Blanking),
+                CreateEncounterCategoryFilter("cannot play attachment|cannot have attachments", EncounterCategory.Attachment_Immunity),
+                CreateEncounterCategoryFilter("immune to player card effects", EncounterCategory.Effect_Immunity),
+                CreateEncounterCategoryFilter("a questing (hero|ally|character)|committed to a quest", EncounterCategory.Targets_Quester),
+                CreateEncounterCategoryFilter("not commited to.*quest", EncounterCategory.Targets_Non_Quester),
+                CreateEncounterCategoryFilter("as a defender|a character defends|cannot defend", EncounterCategory.Targets_Defender),
+                CreateEncounterCategoryFilter("as an attacker|when.*is attacked|cannot be attacked", EncounterCategory.Targets_Attacker),
+                CreateEncounterCategoryFilter("discard (a|1) (character|hero|ally)", EncounterCategory.Character_Discard),
+                CreateEncounterCategoryFilter("discard an attachment", EncounterCategory.Attachment_Discard),
+                CreateEncounterCategoryFilter("X is.*number of players", EncounterCategory.Scales_To_Number_of_Players),
+                CreateEncounterCategoryFilter("(each|an).*enemy.*(staging area|into play)", EncounterCategory.Bring_Enemies_Into_Play),
+                CreateEncounterCategoryFilter("Travel:", EncounterCategory.Travel),
+                CreateEncounterCategoryFilter("Forced:", EncounterCategory.Forced),
+                CreateEncounterCategoryFilter("unsuccessfully", EncounterCategory.Unsuccessful_Questing),
+                CreateEncounterCategoryFilter("a shadow (effect|card)|deal (a|1|2) shadow card", EncounterCategory.Shadow_Card_Synergy, "do not deal a shadow card"),
+                CreateEncounterCategoryFilter("(remove|removes) (a|all|that|the chosen) (hero|heroes|ally|ally|character|characters).*from the quest", EncounterCategory.Remove_From_Quest),
+                CreateEncounterCategoryFilter("remove.*progress", EncounterCategory.Progress_Removal),
+                CreateEncounterCategoryFilter("reveal.*additional", EncounterCategory.Reveal_Additional_Cards),
+                CreateEncounterCategoryFilter("discard (a|that) character", EncounterCategory.Character_Discard, "to The Balrog"),
+                CreateEncounterCategoryFilter("cannot draw cards", EncounterCategory.Cannot_Draw_Cards),
+                CreateEncounterCategoryFilter("cannot play (ally|allies)", EncounterCategory.Cannot_Play_Allies),
+                CreateEncounterCategoryFilter("while.*engaged", EncounterCategory.While_Engaged),
+                CreateEncounterCategoryFilter("shuffle (it|them|all copies of .*) back into", EncounterCategory.Encounter_Recursion),
+                CreateEncounterCategoryFilter("each player with a threat", EncounterCategory.High_Player_Threat)
+            };
+
+            foreach (var card in cards.Where(x => IsEncounterCategorizable(x)))
+            {
+                foreach (var filter in filters)
+                {
+                    var category = filter(card);
+                    if (category == EncounterCategory.None)
+                        continue;
+
+                    card.EncounterCategories.Add(category);
+
+                    var categoryKey = category.ToString();
+                    if (!encounterCategories.ContainsKey(categoryKey))
+                    {
+                        encounterCategories.Add(categoryKey, category);
+                    }
+                }
+            }
+        }
+
+        private void LoadQuestCategories()
+        {
+            var filters = new List<Func<Card, QuestCategory>>
+            {
+                CreateQuestCategoryFilter("Battle", QuestCategory.Battle),
+                CreateQuestCategoryFilter("Siege", QuestCategory.Siege)
+            };
+
+            foreach (var card in cards.Where(x => IsQuestCategorizable(x)))
+            {
+                foreach (var filter in filters)
+                {
+                    var category = filter(card);
+                    if (category == QuestCategory.None)
+                        continue;
+
+                    card.QuestCategories.Add(category);
+
+                    var categoryKey = category.ToString();
+                    if (!questCategories.ContainsKey(categoryKey))
+                    {
+                        questCategories.Add(categoryKey, category);
+                    }
+                }
+            }
+        }
+
+        private void LoadCategories()
+        {
+            var filters = new List<Func<Card, Category>>
+            {
+                CreateCategoryFilter(@"add[\s]{1}[\d]{1}[\s]{1}resource", Category.Resource_Acceleration),
+                CreateCategoryFilter(@"move[\s]{1}.*[\s]{1}resource|Pay 1 resource from a hero's resource pool to add 1 resource|add 1 resource to a Gondor or Noble|give attached hero a (Leadership|Tactics|Spirit|Lore)|gains a (Leadership|Tactics|Spirit|Lore)|you can spend resources of any sphere", Category.Resource_Smoothing),
+                CreateCategoryFilter(@"(ally|allies){1,}.*into[\s]play|put into play the revealed card for no cost", Category.Mustering),
+                CreateCategoryFilter(@"\+[\d]*[\s]Attack|add its Attack", Category.Attack_Bonus),
+                CreateCategoryFilter(@"\+[\d]*[\s]Defense", Category.Defense_Bonus),
+                CreateCategoryFilter(@"\+[\d]*[\s]Willpower|add.*Willpower", Category.Willpower_Bonus),
+                CreateCategoryFilter(@"\+[\d]*[\s]Hit[\s]Point", Category.Hit_Point_Bonus),
+                CreateCategoryFilter(@"(draw|draws)[\s][\w]*[\s]card|look at the top 2 cards of your deck. Add 1 to your hand|take it into your hand|a card and add it to your hand|draws 1 additional card", Category.Card_Draw),
+                CreateCategoryFilter(@"search[\s].*your[\s]deck", Category.Card_Search),
+                CreateCategoryFilter(@"(look|looks)[\s]at[\s].*[\s]deck|the top card of your deck faceup|exchange a card in your hand with the top card of your deck|reveal the top card of each player's deck", Category.Player_Scrying, "encounter deck", "Add 1 to your hand and discard the other"),
+                CreateCategoryFilter(@"(look|looks)[\s]at[\s].*encounter[\s]deck", Category.Encounter_Scrying),
+                CreateCategoryFilter("(enemy|enemies|engaged with you).*(cannot|do not) attack", Category.Combat_Control),
+                CreateCategoryFilter(@"heal[\s].*damage", Category.Healing),
+                CreateCategoryFilter(@"discard.*Condition[\s]attachment", Category.Condition_Control),
+                CreateCategoryFilter(@"place[\s].*progress|switch the active location|location enters play|location gets -.*Threat|While attached to a location", Category.Location_Control),
+                CreateCategoryFilter("ready.*(character|hero|ally|allies|him|her|them|Prince|Boromir)", Category.Readying, "While Dain Ironfoot is ready"),
+                CreateCategoryFilter(@"(return.*discard[\s]pile.*hand|shuffle.*discard[\s]pile.*back)", Category.Recursion, "encounter discard pile"),
+                CreateCategoryFilter(@"deal[\s]([\d]|X)*[\s]damage|Deal damage to the attacking enemy|Excess damage dealt by this attack is assigned|assigned as damage to the chosen enemy|deal an additional.*damage", Category.Direct_Damage, "1 damage to Erkenbrand"),
+                CreateCategoryFilter(@"(look at|revealed|enters play|top of the).*encounter[\s]deck", Category.Encounter_Control),
+                CreateCategoryFilter(@"cancel.*shadow|shadow[\s]cards|look at 1 shadow card|Discard each shadow card", Category.Shadow_Control), 
+                CreateCategoryFilter(@"(reduce|reduces|lower).*(his|your|player).*threat", Category.Threat_Control, "your threat is lower"),
+                CreateCategoryFilter(@"((enemy|enemies).*staging[\s]area.*attack|attacker.*against.*enemy not engaged with you|Any character may choose attached enemy as the target of an attack)|deal 1 damage to an enemy in the staging area", Category.Staging_Area_Attack),
+                CreateCategoryFilter("(choose (an enemy|a location).*(staging area|not engaged with you))|add.*each enemy's engagement cost|each enemy.*gets.*engagement cost|return that enemy to the staging area", Category.Staging_Area_Control),
+                CreateCategoryFilter(@"after[\s].*[\s](enters|enters or leaves)[\s]play", Category.Enters_Play),
+                CreateCategoryFilter(@"(after[\s].*[\s]leaves[\s]play|return (it|him|Keen-eyed Took) to your hand)|if that ally is still in play, add it to your hand", Category.Leaves_Play, "After attached location leaves play"),
+                CreateCategoryFilter(@"(after[\s]you[\s]play[\s].*[\s]from[\s]your[\s]hand|after you play)", Category.Played_From_Hand),
+                CreateCategoryFilter(@"attach 1 attachment card|an attachment of cost 3 or less and put it into play|you may attach that card facedown|to play Weapon and Armor attachments on|put into play the revealed card for no cost", Category.Equipping)
+            };
+
+            foreach (var card in cards.Where(x => IsCategorizable(x)))
+            {
+                foreach (var filter in filters)
+                {
+                    var category = filter(card);
+                    if (category == Category.None)
+                        continue;
+
+                    card.Categories.Add(category);
+
+                    var categoryKey = category.ToString();
+                    if (!categories.ContainsKey(categoryKey))
+                    {
+                        categories.Add(categoryKey, category);
+                    }
+                }
+            }
+        }
+
+        public bool HasPlayerCategory(Card card, Category category)
+        {
+            return false;
+        }
+
+        public bool HasEncounterCategory(Card card, EncounterCategory category)
+        {
+            return false;
+        }
+
+        public bool HasQuestCategory(Card card, QuestCategory category)
+        {
+            return false;
+        }
+
+        public IEnumerable<string> CategoryNames()
+        {
+            return categories.Values.ToList().Select(x => x.ToString().Replace('_', ' ')).OrderBy(x => x);
+        }
+
+        public IEnumerable<string> EncounterCategoryNames()
+        {
+            return encounterCategories.Values.ToList().Select(x => x.ToString().Replace('_', ' ')).OrderBy(x => x);
+        }
+
+        public IEnumerable<string> QuestCategoryNames()
+        {
+            return questCategories.Values.ToList().Select(x => x.ToString().Replace('_', ' ')).OrderBy(x => x);
+        }
+    }
+}

@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.Products
         {
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/Khazad_d%C3%BBm_rules.pdf";
 
-            CardSets.Add(CardSet.KhazadDum);
+            AddCardSet(CardSet.KhazadDum);
         }
     }
 }

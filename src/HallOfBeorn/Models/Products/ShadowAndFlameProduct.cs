@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.Products
         {
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/Shadow_and_Flame_rulesheet.pdf";
 
-            CardSets.Add(CardSet.ShadowAndFlame);
+            AddCardSet(CardSet.ShadowAndFlame);
         }
     }
 }

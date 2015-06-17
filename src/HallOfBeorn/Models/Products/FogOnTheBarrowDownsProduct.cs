@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.Products
         public FogOnTheBarrowDownsProduct()
             : base("Fog on the Barrow-downs", "MEC36", ImageType.Jpg)
         {
-            CardSets.Add(CardSet.FogOnTheBarrowDowns);
+            AddCardSet(CardSet.FogOnTheBarrowDowns);
         }
     }
 }
