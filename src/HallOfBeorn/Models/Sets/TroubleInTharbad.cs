@@ -215,6 +215,7 @@ Forced: After one or more progress is placed on this quest, cancell all progress
 
 When all players have 0 threat, immediately proceed to stage 2.",
                 EncounterSet = "Trouble in Tharbad",
+                IncludedEncounterSets = new List<EncounterSet> { EncounterSet.MistyMountainOrcs },
                 Number = 66,
                 Quantity = 1,
                 Artist = Artist.Mariusz_Gandzel
@@ -238,6 +239,7 @@ Progress that would be placed on this quest are instead placed on The Crossing a
 
 Forced: After a character leaves play, raise its controller's threat by 2.",
                 EncounterSet = "Trouble in Tharbad",
+                IncludedEncounterSets = new List<EncounterSet> { EncounterSet.MistyMountainOrcs },
                 Number = 67,
                 Quantity = 1,
                 Artist = Artist.Ben_Zweifel
