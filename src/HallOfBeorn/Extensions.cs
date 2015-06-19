@@ -488,5 +488,10 @@ namespace HallOfBeorn
         {
             return self != Models.Trait.None ? self.ToString().Replace("__", "-").Replace('_', ' ') : string.Empty;
         }
+
+        public static bool TextMatches(this Models.Card self, string pattern)
+        {
+            return self.Text.ToLowerSafe().MatchesPattern(pattern) || self.OppositeText.ToLowerSafe().MatchesPattern(pattern);
+        }
     }
 }

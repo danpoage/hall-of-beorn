@@ -482,6 +482,11 @@ namespace HallOfBeorn.Models
             get { return _card.EncounterCategories.Count > 0; }
         }
 
+        public bool HasQuestCategories
+        {
+            get { return _card.QuestCategories.Count > 0; }
+        }
+
         public Dictionary<string, string> Categories()
         {
             var categoryMap = new Dictionary<string, string>();
@@ -507,6 +512,23 @@ namespace HallOfBeorn.Models
             {
                 var key = category.ToString().Replace('_', ' ');
                 var value = string.Format("/Cards/Search?EncounterCategory={0}", category.ToString().Replace('_', '+'));
+                if (!categoryMap.ContainsKey(key))
+                {
+                    categoryMap.Add(key, value);
+                }
+            }
+
+            return categoryMap;
+        }
+
+        public Dictionary<string, string> QuestCategories()
+        {
+            var categoryMap = new Dictionary<string, string>();
+
+            foreach (var category in _card.QuestCategories)
+            {
+                var key = category.ToString().Replace('_', ' ');
+                var value = string.Format("/Cards/Search?QuestCategory={0}", category.ToString().Replace('_', '+'));
                 if (!categoryMap.ContainsKey(key))
                 {
                     categoryMap.Add(key, value);

@@ -9,6 +9,17 @@ namespace HallOfBeorn.Models
     {
         None = 0,
         Battle,
-        Siege
+        Siege,
+        Free,
+        Setup,
+        Alternate_Defeat,
+        Alternate_Victory,
+        Alternate_Progression,
+        Variable_Length,
+        Wandering,
+        Short,
+        Medium,
+        Long,
+        Extra_Long
     }
 }

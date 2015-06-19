@@ -149,6 +149,11 @@ namespace HallOfBeorn.Services
             return filter;
         }
 
+        private Func<Card, QuestCategory> CreateQuestCategoryFilter(Predicate<Card> filter, QuestCategory category)
+        {
+            return new Func<Card, QuestCategory>(x => { return filter(x) ? category : QuestCategory.None; });
+        }
+
         private void LoadEncounterCategories()
         {
             var filters = new List<Func<Card, EncounterCategory>> {
@@ -234,7 +239,18 @@ namespace HallOfBeorn.Services
             var filters = new List<Func<Card, QuestCategory>>
             {
                 CreateQuestCategoryFilter("Battle", QuestCategory.Battle),
-                CreateQuestCategoryFilter("Siege", QuestCategory.Siege)
+                CreateQuestCategoryFilter("Siege", QuestCategory.Siege),
+                CreateQuestCategoryFilter(x => { return (x.CardType == CardType.Quest && x.StageNumber == 1 && x.TextMatches("Setup:")); }, QuestCategory.Setup),
+                CreateQuestCategoryFilter(x => { return (x.CardType == CardType.Quest && x.QuestPoints == 254); }, QuestCategory.Variable_Length),
+                CreateQuestCategoryFilter(x => { return (x.CardType == CardType.Quest && (x.QuestPoints == 255 || x.QuestPoints == 0 || x.TextMatches("cannot advance"))); }, QuestCategory.Alternate_Progression),
+                CreateQuestCategoryFilter(x => { return (x.CardType == CardType.Quest && x.TextMatches("(lose|lost) the game")); }, QuestCategory.Alternate_Defeat),
+                CreateQuestCategoryFilter(x => { return (x.CardType == CardType.Quest && x.TextMatches("(win this|won the) game")); }, QuestCategory.Alternate_Victory),
+                CreateQuestCategoryFilter(x => { return (x.CardType == CardType.Quest && x.TextMatches("random stage")); }, QuestCategory.Wandering),
+                CreateQuestCategoryFilter(x => { return (x.CardType == CardType.Quest && x.StageNumber == 1 && x.TextMatches("skip")); }, QuestCategory.Free),
+                CreateQuestCategoryFilter(x => { return (x.CardType == CardType.Quest && x.QuestPoints >= 1 && x.QuestPoints <= 5); }, QuestCategory.Short),
+                CreateQuestCategoryFilter(x => { return (x.CardType == CardType.Quest && x.QuestPoints >= 6 && x.QuestPoints <= 10); }, QuestCategory.Medium),
+                CreateQuestCategoryFilter(x => { return (x.CardType == CardType.Quest && x.QuestPoints >= 11 && x.QuestPoints <= 15); }, QuestCategory.Long),
+                CreateQuestCategoryFilter(x => { return (x.CardType == CardType.Quest && x.QuestPoints >= 16 && x.QuestPoints <= 253); }, QuestCategory.Extra_Long)
             };
 
             foreach (var card in cards.Where(x => IsQuestCategorizable(x)))
