@@ -71,22 +71,43 @@ namespace HallOfBeorn.Models
             switch (type.ToLowerSafe())
             {
                 case "card":
-                    sb.AppendFormat("<a title='Card: {1}' href='/Cards/Details/{0}' target='_blank'>{1}</a>", label, key);
+                    sb.AppendFormat("<a title='Card: {1}' href='/Cards/Details/{0}' target='_blank' style='text-decoration:none;'>{1}</a>", label, key);
                     break;
                 case "title":
-                    sb.AppendFormat("<a title='Title: {1}' href='/Cards/Search?Query=%2Btitle%3A{0}' target='_blank'>{1}</a>", label, key);
+                    sb.AppendFormat("<a title='Search: {1} Title' href='/Cards/Search?Query=%2Btitle%3A{0}' target='_blank' style='text-decoration:none;'>{1}</a>", label, key);
                     break;
                 case "self":
-                    sb.AppendFormat("<a title='{1}' href='/Cards/Details/{0}' target='_blank'>{1}</a>", label, key);
+                    sb.AppendFormat("<a title='Card: {0}' href='/Cards/Details/{1}' target='_blank' style='text-decoration:none;'>{0}</a>", label, key);
                     break;
                 case "trait":
-                    sb.AppendFormat("<a title='Trait: {1}' href='/Cards/Search?Trait={0}' target='_blank'>{1}</a>", label, key);
+                    sb.AppendFormat("<a title='Search: {0} Trait' href='/Cards/Search?Trait={1}' target='_blank' style='text-decoration:none;'><b><i>{0}</i></b></a>", label, key);
+                    break;
+                case "trait-character":
+                    sb.AppendFormat("<a title='Search: {0} Character' href='/Cards/Search?Trait={1}&CardType=Character' target='_blank' style='text-decoration:none;'><b><i>{0}</i></b> character</a>", label, key);
+                    break;
+                case "trait-hero":
+                    sb.AppendFormat("<a title='Search: {0} Hero' href='/Cards/Search?Trait={1}&CardType=Hero' target='_blank' style='text-decoration:none;'><b><i>{0}</i></b> hero</a>", label, key);
+                    break;
+                case "trait-ally":
+                    sb.AppendFormat("<a title='Search: {0} Ally' href='/Cards/Search?Trait={1}&CardType=Ally' target='_blank' style='text-decoration:none;'><b><i>{0}</i></b> ally</a>", label, key);
                     break;
                 case "keyword":
-                    sb.AppendFormat("<a title='Keyword: {1}' href='/Cards/Search?Keyword={0}' target='_blank'>{1}</a>", label, key);
+                    sb.AppendFormat("<a title='Search: {0} Keyword' href='/Cards/Search?Keyword={1}' target='_blank' style='text-decoration:none;'>{0}</a>", label, key);
+                    break;
+                case "type":
+                    sb.AppendFormat("<a title='Search: {0} Type' href='/Cards/Search?CardType={1}' target='_blank' style='text-decoration:none;'>{1}</a>", label, key);
                     break;
                 case "sphere":
-                    sb.AppendFormat("<a title='Sphere: {0}' href='/Cards/Search?Sphere={0}' target='_blank'><img style='margin-bottom:-4px;margin-right:8px;height:24px;width:24px;' src='/Images/{0}.png' /></a>", key);
+                    sb.AppendFormat("<a title='Search: {0} Sphere' href='/Cards/Search?Sphere={0}' target='_blank' style='text-decoration:none;'><img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:24px;width:24px;' src='/Images/{0}.png' /></a>", key);
+                    break;
+                case "sphere-character":
+                    sb.AppendFormat("<a title='Search: {0} Character' href='/Cards/Search?Sphere={0}&CardType=Character' target='_blank' style='text-decoration:none;'><img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:24px;width:24px;' src='/Images/{0}.png' /> character</a>", key);
+                    break;
+                case "sphere-hero":
+                    sb.AppendFormat("<a title='Search: {0} Hero' href='/Cards/Search?Sphere={0}&CardType=Hero' target='_blank' style='text-decoration:none;'><img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:24px;width:24px;' src='/Images/{0}.png' /> hero</a>", key);
+                    break;
+                case "sphere-ally":
+                    sb.AppendFormat("<a title='Search: {0} Ally' href='/Cards/Search?Sphere={0}&CardType=Ally' target='_blank' style='text-decoration:none;'><img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:24px;width:24px;' src='/Images/{0}.png' /> ally</a>", key);
                     break;
                 case "willpower":
                     sb.Append("<img src='/Images/willpower.gif' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' />");
@@ -100,8 +121,14 @@ namespace HallOfBeorn.Models
                 case "defense":
                     sb.Append("<img src='/Images/defense.gif' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' />");
                     break;
+                case "victory":
+                    sb.AppendFormat("<div style='text-align:right;font-weight:bold;margin-bottom:4px;'><a href='/Cards/Search?VictoryPoints=Victory+{0}.' target='_blank' title='Victory: {0}' style='text-decoration:none;'><span style='padding-left:4px;padding-right:4px;border-style:solid;border-width:1px;border-color:black;'>Victory {0}</span></a></div>", key);
+                    break;
+                case "shadow":
+                    sb.Append("<img src='/Images/ShadowDivider.png' title='Shadow Effect' style='display:block;margin-left:auto;margin-right:auto;width:285px;'/>");
+                    break;
                 default:
-                    sb.Append("ERROR - UNRECOGNIZED TYPE: " + type.ToLowerSafe());
+                    sb.Append("<p>UNRECOGNIZED TYPE: " + type.ToLowerSafe() + "</p>");
                     break;
             }
         }
@@ -137,6 +164,18 @@ namespace HallOfBeorn.Models
                                 isType = false;
                                 isKey = false;
                                 isLabel = false;
+                                if (type == "self")
+                                {
+                                    if (string.IsNullOrEmpty(key))
+                                    {
+                                        key = this.Slug;
+                                    }
+                                    if (string.IsNullOrEmpty(label))
+                                    {
+                                        label = this.Title;
+                                    }
+                                }
+
                                 insertToken(s, type, key, label);
                                 type = string.Empty;
                                 key = string.Empty;

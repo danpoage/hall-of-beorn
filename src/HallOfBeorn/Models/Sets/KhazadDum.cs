@@ -631,13 +631,15 @@ If there are no enemies in play, immediately advance to the next stage of the sc
             });
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,
-                Title = "Khazad! Khazad!",
+                Title = "Khazâd! Khazâd!",
+                NormalizedTitle = "Khazad! Khazad!",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9044",
                 CardType = CardType.Event,
                 Sphere = Sphere.Tactics,
                 Quantity = 3,
                 ResourceCost = 0,
                 Text = "Action: Choose a Dwarf character. Until the end of the phase, that character gets +3 Attack.",
+                HtmlTemplate = "<p><b>Action:</b> Choose a {trait-character:Dwarf.@Dwarf}. Until the end of the phase, that character gets +3 Attack.</p>",
                 Number = 8,
                 Artist = Artist.Igor_Kieryluk
             });

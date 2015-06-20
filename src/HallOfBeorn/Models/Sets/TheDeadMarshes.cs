@@ -156,7 +156,8 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Gollum." },
                 Quantity = 1,
                 IsUnique = true,
-                Text = "If Gollum ever has 8 or more resource tokens on him, shuffle him back into the encounter deck.Forced: At the end of the quest phase, the party must make an escape test, dealing 1 card per player from the encounter deck. If this test is failed, place 2 resource tokens on Gollum.",
+                Text = "If Gollum ever has 8 or more resource tokens on him, shuffle him back into the encounter deck.\r\nForced: At the end of the quest phase, the party must make an escape test, dealing 1 card per player from the encounter deck. If this test is failed, place 2 resource tokens on Gollum.",
+                HtmlTemplate = "<p>If {self} ever has 8 or more resource tokens on him, shuffle him back into the encounter deck.</p><p><b>Forced:</b> At the end of the quest phase, the party must make an escape test, dealing 1 card per player from the encounter deck. If this test is failed, place 2 resource tokens on {self}.</p>",
                 EncounterSet = "The Dead Marshes",
                 Number = 107,
                 Artist = Artist.John_Matson

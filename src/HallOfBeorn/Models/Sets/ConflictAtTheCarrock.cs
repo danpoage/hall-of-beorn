@@ -157,6 +157,7 @@ Players cannot defeat this stage if there are any Troll enemies in play.",
                 ResourceCost = 2,
                 Text = "Attach to a Lore character.\r\nWhile attached character is defending, cancel any shadow effects on cards dealt to the attacking enemy.",
                 FlavorText = "\"Keep close to the fire, with your faces outward!\" cried Strider. \"Keep some of th elonger sticks ready in your hands.\" -The Fellowship of the Ring",
+                HtmlTemplate = "<p>Attach to a {sphere-character:Lore}.</p><p>While attached character is defending, cancel any shadow effects on cards dealt to the attacking enemy.</p><p><i>&quot;Keep close to the fire, with your faces outward!&quot; cried Strider. &quot;Keep some of th elonger sticks ready in your hands.&quot; &ndash;The Fellowship of the Ring</i></p>",
                 Number = 33,
                 Artist = Artist.Toni_Justamante_Jacobs
             });
