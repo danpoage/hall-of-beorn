@@ -49,7 +49,150 @@ namespace HallOfBeorn.Models
             this.Html = html.ToString();
         }
 
-        public string Html { get; set; }
+        private string html;
+
+        private void insertToken(StringBuilder sb, string type, string key, string label)
+        {
+            if (string.IsNullOrEmpty(type))
+            {
+                return;
+            }
+
+            if (string.IsNullOrEmpty(key))
+            {
+                key = type;
+            }
+
+            if (string.IsNullOrEmpty(label))
+            {
+                label = key;
+            }
+
+            switch (type.ToLowerSafe())
+            {
+                case "card":
+                    sb.AppendFormat("<a title='Card: {1}' href='/Cards/Details/{0}' target='_blank'>{1}</a>", label, key);
+                    break;
+                case "title":
+                    sb.AppendFormat("<a title='Title: {1}' href='/Cards/Search?Query=%2Btitle%3A{0}' target='_blank'>{1}</a>", label, key);
+                    break;
+                case "self":
+                    sb.AppendFormat("<a title='{1}' href='/Cards/Details/{0}' target='_blank'>{1}</a>", label, key);
+                    break;
+                case "trait":
+                    sb.AppendFormat("<a title='Trait: {1}' href='/Cards/Search?Trait={0}' target='_blank'>{1}</a>", label, key);
+                    break;
+                case "keyword":
+                    sb.AppendFormat("<a title='Keyword: {1}' href='/Cards/Search?Keyword={0}' target='_blank'>{1}</a>", label, key);
+                    break;
+                case "sphere":
+                    sb.AppendFormat("<a title='Sphere: {0}' href='/Cards/Search?Sphere={0}' target='_blank'><img style='margin-bottom:-4px;margin-right:8px;height:24px;width:24px;' src='/Images/{0}.png' /></a>", key);
+                    break;
+                case "willpower":
+                    sb.Append("<img src='/Images/willpower.gif' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' />");
+                    break;
+                case "threat":
+                    sb.Append("<img src='/Images/threat.png' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' />");
+                    break;
+                case "attack":
+                    sb.Append("<img src='/Images/attack.gif' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' />");
+                    break;
+                case "defense":
+                    sb.Append("<img src='/Images/defense.gif' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' />");
+                    break;
+                default:
+                    sb.Append("ERROR - UNRECOGNIZED TYPE: " + type.ToLowerSafe());
+                    break;
+            }
+        }
+
+        private void renderHtmlTemplate()
+        {            
+            if (string.IsNullOrEmpty(HtmlTemplate))
+            {
+                return;
+            }
+
+            var s = new StringBuilder();
+            var t = HtmlTemplate;
+
+            var isToken = false;
+            var isType = false;
+            var type = string.Empty;
+            var isKey = false;
+            var key = string.Empty;
+            var isLabel = false;
+            var label = string.Empty;
+
+            for (var i = 0; i < t.Length; i++)
+            {
+                if (t[i] == '{') {
+                    isToken = true;
+                    isType = true;
+                } else {
+                    if (isToken) {
+                        switch (t[i]) {
+                            case '}':
+                                isToken = false;
+                                isType = false;
+                                isKey = false;
+                                isLabel = false;
+                                insertToken(s, type, key, label);
+                                type = string.Empty;
+                                key = string.Empty;
+                                label = string.Empty;
+                                break;
+                            case ':':
+                                isType = false;
+                                isKey = true;
+                                isLabel = false;
+                                break;
+                            case '@':
+                                isType = false;
+                                isKey = false;
+                                isLabel = true;
+                                break;
+                            default:
+                                {
+                                    if (isType)
+                                    {
+                                        type += t[i];
+                                    }
+                                    else if (isKey)
+                                    {
+                                        key += t[i];
+                                    }
+                                    else if (isLabel)
+                                    {
+                                        label += t[i];
+                                    }
+                                }
+                                break;
+                        }
+                    } else {
+                        s.Append(t[i]);
+                    }
+                }
+            }
+
+            this.html = s.ToString();
+        }
+
+        public string Html
+        {
+            get
+            {
+                if (!string.IsNullOrEmpty(HtmlTemplate) && string.IsNullOrEmpty(html)) 
+                {
+                    renderHtmlTemplate();
+                }
+
+                return html;
+            }
+            set { html = value; }
+        }
+
+        public string HtmlTemplate;
 
         public Card WithFlavor(string flavor)
         {

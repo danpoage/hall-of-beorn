@@ -30,6 +30,7 @@ namespace HallOfBeorn.Models.Sets
                 NormalizedTraits = new List<string> { "Dunedain." },
                 Text = "Response: After Aragorn commits to a quest, spend 1 resource from his resource pool to ready him.",
                 FlavorText = "\"I am Aragorn son of Arathorn; and if by life or death I can save you, I will.\" -The Fellowship of the Ring",
+                HtmlTemplate = "<p>{keyword:Sentinel.}<p><p><b>Response:</b> After Aragorn commits to a quest, spend 1 resource from his resource pool to ready him.</p><p><i>&quot;I am Aragorn son of Arathorn; and if by life or death I can save you, I will.&quot; &ndash;The Fellowship of the Ring</i></p>",
                 Keywords = new List<string>() { "Sentinel." },
                 Quantity = 1,
                 Year = 2010,
@@ -147,6 +148,7 @@ namespace HallOfBeorn.Models.Sets
                 HitPoints = 3,
                 Traits = new List<string>() { "Noble.", "Rohan." },
                 Text = "Action: Discard 1 card from your hand to give Éowyn +1 Willpower until the end of the phase. This effect may be triggered by each player once each round.",
+                HtmlTemplate = "<p><b>Action:</b> Discard 1 card from your hand to give Éowyn +1 {Willpower} until the end of the phase. This effect may be triggered by each player once each round.</p><p><i>Slender and tall she was in her white robe girt with silver; but strong she seemed and stern as steel, a daughter of kings. &ndash;The Two Towers</i></p>",
                 Quantity = 1,
                 Number = 7,
                 Artist = Artist.Gabrielle_Portal
