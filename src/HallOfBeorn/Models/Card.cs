@@ -89,15 +89,40 @@ namespace HallOfBeorn.Models
                     sb.AppendFormat("<a title='Search: {0} Hero' href='/Cards/Search?Trait={1}&CardType=Hero' target='_blank' style='text-decoration:none;'><b><i>{0}</i></b> hero</a>", label, key);
                     break;
                 case "traits-hero":
-                    var traits = key.SplitOn(',');
-                    var trait1 = string.Empty;
-                    var trait2 = string.Empty;
-                    if (traits.Count == 2)
                     {
-                        trait1 = traits[0];
-                        trait2 = traits[1];
+                        var traits = key.SplitOn(',');
+                        var trait1 = string.Empty;
+                        var trait2 = string.Empty;
+                        if (traits.Count == 2)
+                        {
+                            trait1 = traits[0];
+                            trait2 = traits[1];
+                        }
+                        sb.AppendFormat("<a title='Search: {0} or {1} Hero' href='/Cards/Search?Query=%2Btrait%3A{2}&CardType=Hero' target='_blank' style='text-decoration:none;'><b><i>{0}</i></b> or <b><i>{1}</i></b> hero</a>", trait1, trait2, key);
                     }
-                    sb.AppendFormat("<a title='Search: {0} or {1} Hero' href='/Cards/Search?Query=%2Btrait%3A{2}&CardType=Hero' target='_blank' style='text-decoration:none;'><b><i>{0}</i></b> or <b><i>{1}</i></b> hero</a>", trait1, trait2, key);
+                    break;
+                case "traits-attachment":
+                    {
+                        if (string.IsNullOrEmpty(label))
+                        {
+                            label = "attachment";
+                        }
+                        var join = "or";
+                        if (label == "attachments")
+                        {
+                            join = "and";
+                        }
+
+                        var traits = key.SplitOn(',');
+                        var trait1 = string.Empty;
+                        var trait2 = string.Empty;
+                        if (traits.Count == 2)
+                        {
+                            trait1 = traits[0];
+                            trait2 = traits[1];
+                        }
+                        sb.AppendFormat("<a title='Search: {0} or {1} Attachment' href='/Cards/Search?Query=%2Btrait%3A{2}&CardType=Attachment' target='_blank' style='text-decoration:none;'><b><i>{0}</i></b> {4} <b><i>{1}</i></b> {3}</a>", trait1, trait2, key, label, join);
+                    }
                     break;
                 case "trait-ally":
                     sb.AppendFormat("<a title='Search: {0} Ally' href='/Cards/Search?Trait={1}&CardType=Ally' target='_blank' style='text-decoration:none;'><b><i>{0}</i></b> ally</a>", label, key);
