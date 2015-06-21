@@ -248,6 +248,7 @@ Attached hero gets +1 Defense.",
                 Willpower = 1,
                 HitPoints = 4,
                 Text = "Response: After Hama is declared as an attacker, return a Tactics event from your discard pile to your hand. Then, choose and discard 1 card from your hand.",
+                HtmlTemplate = "<p><b>Response:</b> After {self} is declared as an attacker, return a {sphere-event:Tactics} from your discard pile to your hand. Then, choose and discard 1 card from your hand.</p><p style='text-align:center;'><i>&quot;Yet in doubt a man of worth will trust to his own wisdom.&quot; &ndash;The Two Towers</i></p>",
                 Number = 76,
                 Artist = Artist.Magali_Villeneuve
             });

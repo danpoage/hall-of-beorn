@@ -28,6 +28,7 @@ namespace HallOfBeorn.Models.Sets
                 HitPoints = 2,
                 Traits = new List<string>() { "Noldor.", " Noble.", " Ally." },
                 Text = "The first player gains control of Arwen Undomiel, as an ally.Response: After Arwen Undomiel exhausts, choose a hero. Add 1 resource to that hero's resource pool.If Arwen Undomiel leaves play, the players are defeated.",
+                HtmlTemplate = "<p>The first player gains control of {self}, as an ally.</p><p><b>Response:</b> After {self}, choose a hero. Add 1 resource to that hero's resource pool.</p><p><b>If {self} leaves play, the players are defeated.</b></p>",
                 EncounterSet = "The Redhorn Gate",
                 Quantity = 1,
                 Number = 14,
@@ -109,10 +110,8 @@ namespace HallOfBeorn.Models.Sets
                 Willpower = 2,
                 HitPoints = 4,
                 Traits = new List<string>() { "Noldor.", " Noble.", " Ranger." },
-                Text = 
-@"While Elladan is in play, Elrohir gets +2 Defense.
-
-Response: After Elrohir is declared as a defender, pay 1 resource from his resource pool to ready him.",
+                Text = "While Elladan is in play, Elrohir gets +2 Defense.\r\nResponse: After Elrohir is declared as a defender, pay 1 resource from his resource pool to ready him.",
+                HtmlTemplate = "<p>While {title:Elladan} is in play, {self} gets +2 {Defense}.<p><p><b>Response:</b> After {self} is declared as a defender, pay 1 resource from his resource pool to ready him.</p><p style='text-align:center;'><i>&quot;We will not turn back.&quot;<br>&ndash;The Return of the King</i></p>",
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Magali_Villeneuve

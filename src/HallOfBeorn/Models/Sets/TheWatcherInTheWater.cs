@@ -76,7 +76,7 @@ namespace HallOfBeorn.Models.Sets
                 IsUnique = true,
                 Text = "Progress tokens that would be placed on Doors of Durin are instead placed on the current quest card.\r\nAction: Each player may discard any number of cards from his hand. Then, discard the top card of the encounter deck. If the first letter of the encounter card's title matches that of one of the discarded player cards, add Doors of Durin to your victory display. (Limit once per round.)",
                 Threat = 2,
-                QuestPoints = null,
+                QuestPoints = 255,
                 VictoryPoints = 3,
                 Number = 65,
                 Artist = Artist.Ben_Zweifel
@@ -133,6 +133,7 @@ namespace HallOfBeorn.Models.Sets
                 EasyModeQuantity = 0,
                 Text = "When Revealed: All enemies in the staging area engage the player with the highest threat. Then, each player raises his threat by the total Threat of all cards in the staging area.",
                 Shadow = "Shadow: attacking enemy gets +1 Attack. (+3 Attack instead if it is a Tentacle.)",
+                HtmlTemplate = "<p><b>When Revealed:</b> All enemies in the staging area engage the player with the highest threat. Then, each player raises his threat by the total {Threat} of all cards in the staging area.</p>{shadow}<p><i><b>Shadow:</b> Attacking enemy gets +1 {Attack}. (+3 {Attack} instead if it is a {trait:Tentacle.})</i></p>",
                 Number = 70,
                 Artist = Artist.Cristi_Balanescu
             });

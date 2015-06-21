@@ -88,6 +88,17 @@ namespace HallOfBeorn.Models
                 case "trait-hero":
                     sb.AppendFormat("<a title='Search: {0} Hero' href='/Cards/Search?Trait={1}&CardType=Hero' target='_blank' style='text-decoration:none;'><b><i>{0}</i></b> hero</a>", label, key);
                     break;
+                case "traits-hero":
+                    var traits = key.SplitOn(',');
+                    var trait1 = string.Empty;
+                    var trait2 = string.Empty;
+                    if (traits.Count == 2)
+                    {
+                        trait1 = traits[0];
+                        trait2 = traits[1];
+                    }
+                    sb.AppendFormat("<a title='Search: {0} or {1} Hero' href='/Cards/Search?Query=%2Btrait%3A{2}&CardType=Hero' target='_blank' style='text-decoration:none;'><b><i>{0}</i></b> or <b><i>{1}</i></b> hero</a>", trait1, trait2, key);
+                    break;
                 case "trait-ally":
                     sb.AppendFormat("<a title='Search: {0} Ally' href='/Cards/Search?Trait={1}&CardType=Ally' target='_blank' style='text-decoration:none;'><b><i>{0}</i></b> ally</a>", label, key);
                     break;
@@ -108,6 +119,9 @@ namespace HallOfBeorn.Models
                     break;
                 case "sphere-ally":
                     sb.AppendFormat("<a title='Search: {0} Ally' href='/Cards/Search?Sphere={0}&CardType=Ally' target='_blank' style='text-decoration:none;'><img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:24px;width:24px;' src='/Images/{0}.png' /> ally</a>", key);
+                    break;
+                case "sphere-event":
+                    sb.AppendFormat("<a title='Search: {0} Event' href='/Cards/Search?Sphere={0}&CardType=Event' target='_blank' style='text-decoration:none;'><img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:24px;width:24px;' src='/Images/{0}.png' /> event</a>", key);
                     break;
                 case "willpower":
                     sb.Append("<img src='/Images/willpower.gif' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' />");

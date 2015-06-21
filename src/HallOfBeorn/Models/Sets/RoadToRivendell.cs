@@ -60,6 +60,7 @@ namespace HallOfBeorn.Models.Sets
                 Willpower = 2,
                 HitPoints = 2,
                 Text = "The first player gains control of Arwen Undómiel, as an ally.Response: After Arwen Undómiel exhausts, choose a hero. Add 1 resource to that hero's resource pool.\r\n\r\nIf Arwen Undómiel leaves play, the players are defeated.",
+                HtmlTemplate = "<p>The first player gains control of {self}, as an ally.</p><p><b>Response:</b> After {self}, choose a hero. Add 1 resource to that hero's resource pool.</p><p><b>If {self} leaves play, the players are defeated.</b></p>",
                 Number = 41,
                 Artist = Artist.Magali_Villeneuve
             });
@@ -148,10 +149,8 @@ namespace HallOfBeorn.Models.Sets
                 Defense = 2,
                 Willpower = 2,
                 HitPoints = 4,
-                Text = 
-@"While Elrohir is in play, Elladan gets +2 Attack.
-
-Response: After Elladan is declared as an attacker, pay 1 resource from his resource pool to ready him.",
+                Text = "While Elrohir is in play, Elladan gets +2 Attack.\r\nResponse: After Elladan is declared as an attacker, pay 1 resource from his resource pool to ready him.",
+                HtmlTemplate = "<p>While {title:Elrohir} is in play, {self} gets +2 {Attack}.</p><p><b>Response:</b> After {self} is declared as an attacker, pay 1 resource from his resource pool to ready him.</p><p style='text-align:center;'><i>&quot;Yes, the Dead ride behind.&quot;<br>&ndash;The Return of the King</i></p>",
                 Number = 28,
                 Artist = Artist.Magali_Villeneuve
             });
