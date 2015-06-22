@@ -82,7 +82,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithFlavor("\"Helm is arisen and comes back to war. Helm for Théoden King!\" -Riders of Rohan, The Two Towers")
                 .WithInfo(12, 3, Artist.Smirtouille));
             Cards.Add(Card.Event("The Three Hunters", "207FB055-CAF4-4AA0-804D-7009922CA67B", Sphere.Fellowship, 3)
-                .WithText("Play only if you control Fellowship Aragorn.\r\nQuest Action: Choose 3 heroes committed to the quest. Until the end of the round, each of the chosen heroes gets +1 Willpower, +1 Attack and +1 Defense.")
+                .WithText("Play only if you control Fellowship Aragorn.\r\nQuest Action: Choose 3 heroes committed to the quest. Ready those heroes. Until the end of the round, each of the chosen heroes gets +1 Willpower, +1 Attack and +1 Defense.")
                 .WithFlavor("\"We shall makes such a chase as shall be accounted a marvel among the Three Kindreds: Elves, Dwarves, and Men. Forth the Three Hunters!\" -Aragorn, The Two Towers")
                 .WithInfo(13, 3, Artist.Nicholas_Gregory));
             Cards.Add(Card.Attachment("Shadowfax", "2DA7519D-4C7F-44A5-9E6E-413A28B5B4FD", Sphere.Neutral, 3)
