@@ -31,6 +31,7 @@ namespace HallOfBeorn.Models.Sets
                 Willpower = 2,
                 HitPoints = 5,
                 Text = "Refresh Action: Reduce your threat to your starting threat level. (Limit once per game.)",
+                HtmlTemplate = "<p>{keyword:Sentinel.}</p><p><b>Refresh Action:</b> Reduce your threat to your starting threat level. (Limit once per game.)</p><p style='text-align:center;'><i>&quot;I am older than I look, I might prove useful.&quot;<br/>&ndash;The Fellowship of the Ring</i></p>",
                 Keywords = new List<string>() { "Sentinel." },
                 Number = 53,
                 Artist = Artist.Tony_Foti
