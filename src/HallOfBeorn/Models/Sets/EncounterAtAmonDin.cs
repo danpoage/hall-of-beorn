@@ -171,6 +171,7 @@ Any character may choose attached enemy as the target of an attack.",
                 ResourceCost = 2,
                 Text = "Play only if each of your heroes is a Hobbit. Combat Action: Enemies engaged with you do not attack this round. You cannot declare attacks this round.",
                 FlavorText = "They possessed from the first the art of disappearing swiftly and silently, when large folk whom they do not wish to meet come blundering by... -The Fellowship of the Ring",
+                HtmlTemplate = "<p>Play only if each of your heroes is a {trait:Hobbit.}</p><p><b>Combat Action:</b> Enemies engaged with you do not attack this round. You cannot declare attacks this round.</p><p style='text-align:center'><i>They possessed from the first the art of disappearing swiftly and silently, when large folk whom they do not wish to meet come blundering by...<br/>&ndash;The Fellowship of the Ring</i></p>",
                 Quantity = 3,
                 Number = 65,
                 Artist = Artist.Blake_Henriksen
