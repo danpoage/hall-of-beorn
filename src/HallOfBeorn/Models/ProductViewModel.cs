@@ -92,6 +92,16 @@ namespace HallOfBeorn.Models
             get { return _product.RulesUrl; }
         }
 
+        public bool HasBuyLink
+        {
+            get { return !string.IsNullOrEmpty(_product.BuyLink); }
+        }
+
+        public string BuyLink
+        {
+            get { return _product.BuyLink; }
+        }
+
         public IEnumerable<ScenarioViewModel> Scenarios
         {
             get { return _scenarios; }

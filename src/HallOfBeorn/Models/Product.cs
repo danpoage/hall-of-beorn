@@ -30,6 +30,7 @@ namespace HallOfBeorn.Models
         public bool IsPremier { get; protected set; }
         public bool IsNewSubGroup { get; protected set; }
         public string RulesUrl { get; protected set; }
+        public string BuyLink { get; protected set; }
 
         public IEnumerable<CardSet> CardSets()
         {
