@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.ProductGroups
             : base("Angmar Awakened Cycle")
         {
             MainProduct = Product.TheLostRealm;
+
+            AddProduct(Product.TheWastesOfEriador);
         }
     }
 }

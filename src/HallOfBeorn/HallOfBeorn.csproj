@@ -363,6 +363,7 @@
     <Compile Include="Models\Products\TheThreeTrialsProduct.cs" />
     <Compile Include="Models\Products\TheTreasonOfSarumanProduct.cs" />
     <Compile Include="Models\Products\TheVoiceOfIsengardProduct.cs" />
+    <Compile Include="Models\Products\TheWastesOfEriadorProduct.cs" />
     <Compile Include="Models\Products\TheWatcherInTheWaterNightmareProduct.cs" />
     <Compile Include="Models\Products\TheWatcherInTheWaterProduct.cs" />
     <Compile Include="Models\Products\TroubleInTharbadProduct.cs" />
@@ -452,6 +453,7 @@
     <Compile Include="Models\Sets\TheStoneOfErech.cs" />
     <Compile Include="Models\Sets\TheThreeTrials.cs" />
     <Compile Include="Models\Sets\TheTreasonOfSaruman.cs" />
+    <Compile Include="Models\Sets\TheWastesOfEriador.cs" />
     <Compile Include="Models\Sets\TheWatcherInTheWater.cs" />
     <Compile Include="Models\Sets\TheWatcherInTheWaterNightmare.cs" />
     <Compile Include="Models\Sets\TroubleInTharbad.cs" />

@@ -148,6 +148,7 @@ namespace HallOfBeorn.Models
         public static CardSet TheMorgulValeNightmare = new Sets.TheMorgulValeNightmare();
 
         public static CardSet TheLostRealm = new Sets.TheLostRealm();
+        public static CardSet TheWastesOfEriador = new Sets.TheWastesOfEriador();
 
         public static CardSet FirstAge = new Sets.FirstAge();
         #endregion
