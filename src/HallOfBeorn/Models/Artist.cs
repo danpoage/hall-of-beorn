@@ -322,12 +322,17 @@ namespace HallOfBeorn.Models
             //The Morgul Vale Nightmare
             all.Add(Artist.Matthew_Cowdery);
 
-            //The Lost Realm
+            //The Lost Realm and Angmar Awakened
             all.Add(Artist.Alexandr_Elichev);
             all.Add(Artist.Helge_C_Balzer);
             all.Add(Artist.Kim_Sokol);
             all.Add(Artist.Michael_Wolmarans);
             all.Add(Artist.Tommy_Arnold);
+            all.Add(Artist.Eva_Maria_Toker);
+            all.Add(Artist.Crystal_Sully);
+            all.Add(Artist.Preston_Stone);
+            all.Add(Artist.Dawn_Carlos);
+            all.Add(Artist.Leonid_Kozienko);
 
             //First Age
             all.Add(Artist.Unknown);
@@ -473,6 +478,7 @@ namespace HallOfBeorn.Models
         public static Artist Cherif_Fortin = new Artist { Name = "Cherif Fortin", URL = "http://ijoust.deviantart.com" };
         public static Artist Christian_Quinot = new Artist { Name = "Christian Quinot", URL = "http://darkcloud013.deviantart.com" };
         public static Artist Clive_Lauzon = new Artist { Name = "Clive Lauzon", URL = "http://www.creativeshake.com/profile.html?MyUrl=clivelauzon" };
+        public static Artist Crystal_Sully = new Artist { Name = "Crystal Sully", URL = "http://crystalsully.com" };
         public static Artist CS_Marks = new Artist { Name = "C.S. Marks", URL = "http://www.csmarks.com/illustration-gallery" };
         public static Artist Damian_Ziomek = new Artist { Name = "Damian Ziomek", URL = "http://ziom05.deviantart.com" };
         public static Artist Dan_Mitchell = new Artist { Name = "Dan Mitchell", URL = "http://deathmetaldan.deviantart.com" };
@@ -480,6 +486,7 @@ namespace HallOfBeorn.Models
         public static Artist Danny_Staten = new Artist { Name = "Danny Staten", URL = "http://www.staten-illustration.com" };
         public static Artist Dardagan = new Artist { Name = "Dardagan", URL = "http://dardagan.deviantart.com" };
         public static Artist David_Wuertemburg = new Artist { Name = "David Wuertemburg", URL = "http://spdmngtruper.deviantart.com" };
+        public static Artist Dawn_Carlos = new Artist { Name = "Dawn Carlos", URL = "http://dawncarlosart.com" };
         public static Artist Dechambo = new Artist { Name = "Dechambo", URL = "http://www.dechambo.com/Dechambo_Artwork/www.dechambo.com.html" };
         public static Artist Deelane = new Artist { Name = "Deelane", URL = "http://deelane.deviantart.com" };
         public static Artist Dylan_Palmer = new Artist { Name = "Dylan Palmer", URL = "http://deelock.deviantart.com" };
@@ -518,6 +525,7 @@ namespace HallOfBeorn.Models
         public static Artist Kimberly80 = new Artist { Name = "kimberly80", URL = "http://kimberly80.deviantart.com" };
         public static Artist Kuun_Suru = new Artist { Name = "Kuun Suru", URL = "http://finduilas80.deviantart.com" };
         public static Artist Lady_Elleth = new Artist { Name = "Lady Elleth", URL = "http://ladyelleth.deviantart.com" };
+        public static Artist Leonid_Kozienko = new Artist { Name = "Leonid Kozienko", URL = "http://agnidevi.deviantart.com" };
         public static Artist LigaMarta = new Artist { Name = "Līga Kļaviņa", URL = "http://liga-marta.deviantart.com" };
         public static Artist Lomacchi = new Artist { Name = "Lomacchi", URL = "http://dalomacchi.deviantart.com" };
         public static Artist Luca_Michelucci = new Artist { Name = "Luca Michelucci", URL = "http://www.councilofelrond.com/imagegallerycats/michelucci" };
@@ -539,6 +547,7 @@ namespace HallOfBeorn.Models
         public static Artist Pete_Amachree = new Artist { Name = "Pete Amachree", URL = "http://peteamachree.deviantart.com" };
         public static Artist Peter_Xavier_Pric = new Artist { Name = "Peter Xavier Pric", URL = "http://peet.deviantart.com" };
         public static Artist Pieter_Claesz = new Artist { Name = "Pieter Claesz", URL = "http://en.wikipedia.org/wiki/Pieter_Claesz" };
+        public static Artist Preston_Stone = new Artist { Name = "Preston Stone", URL = "http://razwit.deviantart.com" };
         public static Artist Rafael_Damiani = new Artist { Name = "Rafael Damiani", URL = "http://ralphdamiani.deviantart.com" };
         public static Artist Razielmn = new Artist { Name = "Razielmn", URL = "http://razielmn.deviantart.com" };
         public static Artist Rebekah_Burlew = new Artist { Name = "Burlew", URL = "http://burlew.deviantart.com" };
@@ -659,6 +668,7 @@ namespace HallOfBeorn.Models
         public static Artist Emrah_Elmasli = new Artist { Name = "Emrah Elmasli", URL = "http://emrahelmasli.tumblr.com" };
         public static Artist Erfian_Asafat = new Artist { Name = "Erfian Asafat", URL = "http://masterchomic.deviantart.com" };
         public static Artist Eric_Braddock = new Artist { Name = "Eric Braddock", URL = "http://ericbraddock.deviantart.com" };
+        public static Artist Eva_Maria_Toker = new Artist { Name = "Eva Maria Toker", URL = "http://www.evamariatoker.com" };
         public static Artist Even_Mehl_Amundsen = new Artist { Name = "Even Mehl Amundsen", URL = "http://mischeviouslittleelf.deviantart.com" };
         public static Artist Fandy_Sugiarto = new Artist { Name = "Fandy Sugiarto", URL = "https://www.google.com/search?q=fandy+sugiarto+fantasy+art" };
         public static Artist Felicia_Cano = new Artist { Name = "Felicia Cano", URL = "http://feliciacano.deviantart.com" };
