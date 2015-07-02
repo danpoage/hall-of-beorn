@@ -130,6 +130,9 @@ namespace HallOfBeorn.Models
                 case "keyword":
                     sb.AppendFormat("<a title='Search: {0} Keyword' href='/Cards/Search?Keyword={1}' target='_blank' style='text-decoration:none;'>{0}</a>", label, key);
                     break;
+                case "keyword-hero":
+                    sb.AppendFormat("<a title='Search: Hero with {0} Keyword' href='/Cards/Search?Keyword={1}&CardType=Hero' target='_blank' style='text-decoration:none;'>hero with {0}</a>", label, key);
+                    break;
                 case "type":
                     sb.AppendFormat("<a title='Search: {0} Type' href='/Cards/Search?CardType={1}' target='_blank' style='text-decoration:none;'>{1}</a>", label, key);
                     break;
@@ -698,6 +701,19 @@ namespace HallOfBeorn.Models
             };
         }
 
+        public static Card PlayerSideQuest(string title, string id, Sphere sphere, byte resourceCost, byte questPoints)
+        {
+            return new Card()
+            {
+                CardType = CardType.Player_Side_Quest,
+                Title = title,
+                Id = id,
+                Sphere = sphere,
+                ResourceCost = resourceCost,
+                QuestPoints = questPoints
+            };
+        }
+
         public static Card Quest(string title, string id, int scenarioNumber, uint stageNumber, string encounterSet, byte questPoints)
         {
             return new Card()
@@ -758,6 +774,12 @@ namespace HallOfBeorn.Models
         public Card ClearText()
         {
             this.Text = string.Empty;
+            return this;
+        }
+
+        public Card WithGeneric()
+        {
+            this.IsUnique = false;
             return this;
         }
 
