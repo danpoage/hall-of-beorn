@@ -7,6 +7,7 @@
     "Quickbeam", "Arod", "Ent Draught", "Herugrim", "Entmoot", "Helm! Helm!", "The Three Hunters", "Shadowfax", "Intimidation", "Hands of a Healer", "Forewarned", "Leader of Men", "Beyond All Hope", "Palantir of Orthanc",
     "Ugluk", "Grishnakh", "Ent of Fangorn", "Saruman's Staff", "Orthanc", "Gates of Isengard", "Saruman's Voice",
     "Khamul the Easterling",
+    "Ingold", "Rallying Cry", "Honour Guard", "Raven-winged Helm", "Curious Brandybuck", "Hobbit Pony", "East Road Ranger", "Scout Ahead", "Ranger of Cardolan", "Amarthiul", "Pack Leader", 
           "+set:",
           "-set:",
           "+type:",

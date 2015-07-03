@@ -80,18 +80,21 @@ namespace HallOfBeorn.Models.Sets
                 .WithFlavor("Following the surprise attack on Fornost, you have agreed to help the Ranger, Amarthiúl, track the villains who captured his friend, Iârion.")
                 .WithOppositeText("While it is Day, each hero gets +1 Willpower.\r\nForced: When it becomes Night, raise each player's threat by 1.")
                 .WithOppositeFlavor("Your enemies' tracks lead you across the North Downs towards Angmar. In the barren lands between you and that dread realm, the nights are black and bitter cold, but it is the howling of Wargs that gives you chills.")
+                .WithIncludedEncounterSets(EncounterSet.EriadorWilds, EncounterSet.FoulWeather)
                 .WithInfo(13, 1, Artist.Ilich_Henriquez));
             Cards.Add(Card.Quest("Howling at Night", "", 1, 2, "The Wastes of Eriador", 15)
                 .WithText("When Revealed: Shuffle the encounter discard pile into the encounter deck. Discard cards from the top of the encounter deck until X Warg enemies are discarded. X is the number of players in the game. Add each discarded enemy to the staging area.")
                 .WithFlavor("Wargs have pursued you into the wastelands! They hound your every step, slowing your progress by day and attacking you when the sun has set.")
                 .WithOppositeText("Forced: When it becomes Day, each player draws 1 card.\r\nForced: When it becomes ~Night, discard 1 non-objective ally from play (discard 2 non-objective allies instead if there are 3 or more players in the game).")
                 .WithOppositeFlavor("Each night, another member of your company is caught at the edge of the firelight and dragged away. The sounds of snarling and screaming echo into the darkness.")
+                .WithIncludedEncounterSets(EncounterSet.EriadorWilds, EncounterSet.FoulWeather)
                 .WithInfo(14, 1, Artist.Aleksander_Karcz));
             Cards.Add(Card.Quest("Battle with the Pack", "", 1, 3, "The Wastes of Eriador", 5)
                 .WithText("When Revealed: Flip the Time objective to Nightfall. Add Pack Leader to the staging area. Shuffle the encounter discard pile into the encounter deck. Discard cards from the top of the encounter deck until X Warg enemies are discarded. X is 1 less than the number of players in the game. Add each discarded enemy to the staging area.")
                 .WithFlavor("You cannot go on like this. You must do something to discourage the Wargs from pursuing you further.")
                 .WithOppositeText("Pack Leader cannot take damage unless there are at least 5 progress tokens on this stage.\r\nForced: When it becomes Day, discard all progress from this stage.\r\nThe players cannot defeat this stage while Pack Leader is in play. If Pack Leader is destroyed, the players win the game.")
                 .WithOppositeFlavor("If you can defeat the alpha mail, that will scatter the pack...")
+                .WithIncludedEncounterSets(EncounterSet.EriadorWilds, EncounterSet.FoulWeather)
                 .WithInfo(15, 1, Artist.Lukasz_Jaskolski));
             Cards.Add(Card.ObjectiveAlly("Amarthiúl", "", "The Wastes of Eriador", 1, 3, 3, 3)
                 .WithNormalizedTitle("Amarthiul")
