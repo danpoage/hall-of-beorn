@@ -518,7 +518,7 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(new Card()
             {
                 Title = "A Shadow of the Past",
-                SlugIncludesType = true,
+                HasSecondImage = true,
                 Id = "307411f3-4a45-44ae-bc64-4e16deb97d10",
                 CardType = CardType.Campaign,
                 ScenarioNumber = 1,
@@ -756,7 +756,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
             Cards.Add(new Card()
             {
                 Title = "A Knife in the Dark",
-                SlugIncludesType = true,
+                HasSecondImage = true,
                 Id = "2efa631a-eb16-4078-84a5-18c7033b86f3",
                 CardType = CardType.Campaign,
                 ScenarioNumber = 2,
@@ -963,7 +963,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
             Cards.Add(new Card()
             {
                 Title = "Flight to the Ford",
-                SlugIncludesType = true,
+                HasSecondImage = true,
                 Id = "0ee09c42-34c9-41aa-aa98-b582608b15bb",
                 CardType = CardType.Campaign,
                 ScenarioNumber = 3,
