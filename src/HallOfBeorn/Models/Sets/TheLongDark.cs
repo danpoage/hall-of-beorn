@@ -62,7 +62,7 @@ namespace HallOfBeorn.Models.Sets
 "When Revealed: The first player makes a locate test. If this test is failed, reveal cards from the encounter deck equal to the number of players in the game and add them to the staging area. Then, trigger all \"Lost:\" effects in play.\r\n\r\nIf the players quest unsuccessfully, trigger all \"Lost:\" effects in play.\r\n\r\nIf the players defeat this stage, they have won the game.",
                 Number = 87,
                 Artist = Artist.David_A_Nash,
-                IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DeepsOfMoria, EncounterSet.HazardsOfThePit }
+                IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DeepsOfMoria, EncounterSet.TwistsAndTurns }
             });
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,
@@ -267,7 +267,7 @@ Attached hero gets +1 Defense.",
                 FlavorText = "Your party is scouting the Mines of Moria, searching for signs of Orcs. Dark tunnels and twisting passages spread out in all directions, a labyrinthine maze that you could wander in forever if you take the wrong path.",
                 Number = 86,
                 Artist = Artist.David_A_Nash,
-                IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DeepsOfMoria, EncounterSet.HazardsOfThePit }
+                IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DeepsOfMoria, EncounterSet.TwistsAndTurns }
             });
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,
