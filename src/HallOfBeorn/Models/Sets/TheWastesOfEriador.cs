@@ -64,6 +64,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithFlavor("Strider made them take cover in a thicket at the side of the Road, while he went forward to explore. -The Fellowship of the Ring ")
                 .WithInfo(9, 3, Artist.Tomasz_Jedruszek));
             Cards.Add(Card.Ally("Ranger of Cardolan", "", Sphere.Neutral, 4, 2, 2, 2, 3)
+                .WithGeneric()
                 .WithTraits("Dúnedain", "Ranger.")
                 .WithText("Response: After you engage an enemy, if you control at least 1 Dúnedain hero, spend 1 resource to put Ranger of Cardolan into play from your hand, under your control. At the end of the round, if Ranger of Cardolan is still in play, shuffle it into its owner's deck.")
                 .WithInfo(10, 3, Artist.Lukasz_Jaskolski));
