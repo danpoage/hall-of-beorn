@@ -58,7 +58,6 @@ namespace HallOfBeorn
         }
 
         public static string ToEnumDisplayString<T>(this T self)
-            where T: struct
         {
             if (typeof(T) == typeof(Models.NumericOperator))
             {
@@ -319,13 +318,13 @@ namespace HallOfBeorn
             return !(string.IsNullOrEmpty(self) || self == HallOfBeorn.Models.SearchViewModel.DEFAULT_FILTER_VALUE);
         }
 
-        public static bool CompareTo(this byte? self, HallOfBeorn.Models.NumericOperator op, string other)
+        public static bool CompareTo(this byte? self, HallOfBeorn.Models.NumericOperator? op, string other)
         {
-            if (!self.HasValue) {
+            if (!self.HasValue || !op.HasValue) {
                 return false;
             }
 
-            return self.Value.CompareTo(op, other);
+            return self.Value.CompareTo(op.Value, other);
         }
 
         public static bool CompareTo(this byte self, HallOfBeorn.Models.NumericOperator op, string other)

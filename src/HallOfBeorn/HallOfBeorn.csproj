@@ -473,6 +473,7 @@
     <Compile Include="Models\Token.cs" />
     <Compile Include="Models\Uniqueness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AdvancedSearchService.cs" />
     <Compile Include="Services\CardRepository.cs" />
     <Compile Include="Services\SearchService.cs" />
     <Compile Include="Services\CategoryService.cs" />
@@ -481,6 +482,7 @@
     <Compile Include="Services\ProductRepository.cs" />
     <Compile Include="Services\RelationshipService.cs" />
     <Compile Include="Services\ScenarioService.cs" />
+    <Compile Include="Services\SearchSortService.cs" />
     <Compile Include="Services\StatService.cs" />
   </ItemGroup>
   <ItemGroup>

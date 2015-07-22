@@ -14,7 +14,7 @@ namespace HallOfBeorn.Controllers
     {
         public CardsController()
         {
-            
+            cardRepository = (CardRepository)System.Web.HttpContext.Current.Application[Extensions.CardRepositoryKey];
             productRepository = (ProductRepository)System.Web.HttpContext.Current.Application[Extensions.ProductRepositoryKey];
             searchService = (SearchService)System.Web.HttpContext.Current.Application[Extensions.SearchServiceKey];
             categoryService = (CategoryService)System.Web.HttpContext.Current.Application[Extensions.CategoryServiceKey];
@@ -23,6 +23,7 @@ namespace HallOfBeorn.Controllers
         }
 
         private readonly SearchService searchService;
+        private readonly CardRepository cardRepository;
         private readonly ProductRepository productRepository;
         private readonly CategoryService categoryService;
         private readonly ScenarioService scenarioService;
@@ -622,6 +623,130 @@ namespace HallOfBeorn.Controllers
         [ActionName("Search")]
         public ActionResult Search_Post(SearchViewModel model)
         {
+            if (string.IsNullOrEmpty(model.CardSet) || model.CardSet == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.CardSet = null;
+            }
+            if (string.IsNullOrEmpty(model.EncounterSet) || model.EncounterSet == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.EncounterSet = null;
+            }
+            if (string.IsNullOrEmpty(model.Scenario) || model.Scenario == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.Scenario = null;
+            }
+            if (string.IsNullOrEmpty(model.Quest) || model.Quest == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.Quest = null;
+            }
+            if (model.CardType.HasValue && model.CardType.Value == Models.CardType.None)
+            {
+                model.CardType = null;
+            }
+            if (model.CardSubtype.HasValue && model.CardSubtype.Value == Models.CardSubtype.None)
+            {
+                model.CardSubtype = null;
+            }
+            if (model.SetType.HasValue && model.SetType.Value == Models.SetType.None)
+            {
+                model.SetType = null;
+            }
+            if (model.Sort.HasValue && model.Sort.Value == Models.Sort.None)
+            {
+                model.Sort = null;
+            }
+            if (model.DeckType.HasValue && model.DeckType.Value == Models.DeckType.None)
+            {
+                model.DeckType = null;
+            }
+            if (string.IsNullOrEmpty(model.Trait) || model.Trait == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.Trait = null;
+            }
+            if (string.IsNullOrEmpty(model.Keyword) || model.Keyword == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.Keyword = null;
+            }
+            if (string.IsNullOrEmpty(model.Artist) || model.Artist == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.Artist = null;
+            }
+            if (model.Sphere.HasValue && model.Sphere.Value == Models.Sphere.None)
+            {
+                model.Sphere = null;
+            }
+            if (string.IsNullOrEmpty(model.Category) || model.Category == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.Category = null;
+            }
+            if (string.IsNullOrEmpty(model.EncounterCategory) || model.EncounterCategory == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.EncounterCategory = null;
+            }
+            if (string.IsNullOrEmpty(model.QuestCategory) || model.QuestCategory == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.QuestCategory = null;
+            }
+            if (string.IsNullOrEmpty(model.VictoryPoints) || model.VictoryPoints == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.VictoryPoints = null;
+            }
+
+            if (model.IsUnique.HasValue && model.IsUnique.Value == Uniqueness.Any)
+            {
+                model.IsUnique = null;
+            }
+            if (model.HasShadow.HasValue && model.HasShadow.Value == HasShadow.Any)
+            {
+                model.HasShadow = null;
+            }
+
+            if (model.ThreatCostOperator.HasValue && model.ThreatCostOperator == NumericOperator.eq && (string.IsNullOrEmpty(model.ThreatCost) || model.ThreatCost == "Any"))
+            {
+                model.ThreatCost = null;
+                model.ThreatCostOperator = null;
+            }
+            if (model.CostOperator.HasValue && model.CostOperator == NumericOperator.eq && (string.IsNullOrEmpty(model.Cost) || model.Cost == "Any"))
+            {
+                model.Cost = null;
+                model.CostOperator = null;
+            }
+            if (model.EngagementCostOperator.HasValue && model.EngagementCostOperator == NumericOperator.eq && (string.IsNullOrEmpty(model.EngagementCost) || model.EngagementCost == "Any"))
+            {
+                model.EngagementCost = null;
+                model.EngagementCostOperator = null;
+            }
+            if (model.AttackOp.HasValue && model.AttackOp == NumericOperator.eq && (string.IsNullOrEmpty(model.Attack) || model.Attack == "Any"))
+            {
+                model.Attack = null;
+                model.AttackOp = null;
+            }
+            if (model.DefenseOp.HasValue && model.DefenseOp == NumericOperator.eq && (string.IsNullOrEmpty(model.Defense) || model.Defense == "Any"))
+            {
+                model.Defense = null;
+                model.DefenseOp = null;
+            }
+            if (model.WillpowerOp.HasValue && model.WillpowerOp == NumericOperator.eq && (string.IsNullOrEmpty(model.Willpower) || model.Willpower == "Any"))
+            {
+                model.Willpower = null;
+                model.WillpowerOp = null;
+            }
+            if (model.ThreatOp.HasValue && model.ThreatOp == NumericOperator.eq && (string.IsNullOrEmpty(model.Threat) || model.Threat == "Any"))
+            {
+                model.Threat = null;
+                model.ThreatOp = null;
+            }
+            if (model.HitPointsOp.HasValue && model.HitPointsOp == NumericOperator.eq && (string.IsNullOrEmpty(model.HitPoints) || model.HitPoints == "Any"))
+            {
+                model.HitPoints = null;
+                model.HitPointsOp = null;
+            }
+            if (model.QuestPointsOp.HasValue && model.QuestPointsOp == NumericOperator.eq && (string.IsNullOrEmpty(model.QuestPoints) || model.QuestPoints == "Any"))
+            {
+                model.QuestPoints = null;
+                model.QuestPointsOp = null;
+            }
+
             return RedirectToAction("Search", model);
         }
 
@@ -648,7 +773,7 @@ namespace HallOfBeorn.Controllers
 
             if (IsId(id))
             {
-                card = searchService.Find(id);
+                card = cardRepository.Find(id);
                 if (card != null)
                 {
                     redirectURL = string.Format("/Cards/Details/{0}", card.Slug);
@@ -656,7 +781,7 @@ namespace HallOfBeorn.Controllers
             }
             else
             {
-                card = searchService.FindBySlug(id);
+                card = cardRepository.FindBySlug(id);
                 if (card != null && card.Slug != id)
                 {
                     redirectURL = string.Format("/Cards/Details/{0}", card.Slug);

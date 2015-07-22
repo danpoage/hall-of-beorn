@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Routing;
 
 namespace HallOfBeorn.Models
 {
@@ -23,9 +24,6 @@ namespace HallOfBeorn.Models
     {
         public SearchViewModel()
         {
-            //AttackStrengthValues = new List<SelectListItem>() { new SelectListItem() { Text = "Foo", Value = "Foo" } };
-            //DefenseStrengthValues = new List<SelectListItem>() { new SelectListItem() { Text = "Foo", Value = "Foo" } };
-            //HitPointsValues = new List<SelectListItem>() { new SelectListItem() { Text = "Foo", Value = "Foo" } };
         }
 
         public const string DEFAULT_FILTER_VALUE = "Any";
@@ -35,13 +33,13 @@ namespace HallOfBeorn.Models
         public string Query { get; set; }
 
         [Display(Name = "Type")]
-        public CardType CardType { get; set; }
+        public CardType? CardType { get; set; }
 
         [Display(Name = "Subtype")]
-        public CardSubtype CardSubtype { get; set; }
+        public CardSubtype? CardSubtype { get; set; }
 
         [Display(Name="Deck Type")]
-        public DeckType DeckType { get; set; }
+        public DeckType? DeckType { get; set; }
 
         [Display(Name = "Set")]
         public string CardSet { get; set; }
@@ -59,70 +57,70 @@ namespace HallOfBeorn.Models
         public string Cost { get; set; }
 
         [Display(Name = "Cost Operator")]
-        public NumericOperator CostOperator { get; set; }
+        public NumericOperator? CostOperator { get; set; }
 
         [Display(Name = "Threat Cost")]
         public string ThreatCost { get; set; }
 
         [Display(Name = "Threat Cost Operator")]
-        public NumericOperator ThreatCostOperator { get; set; }
+        public NumericOperator? ThreatCostOperator { get; set; }
 
         [Display(Name = "Engagement Cost")]
         public string EngagementCost { get; set; }
 
         [Display(Name = "Engagement Cost Operator")]
-        public NumericOperator EngagementCostOperator { get; set; }
+        public NumericOperator? EngagementCostOperator { get; set; }
 
         [Display(Name = "Attack Strength")]
         public string Attack { get; set; }
 
         [Display(Name = "Attack Strength Operator")]
-        public NumericOperator AttackOp { get; set; }
+        public NumericOperator? AttackOp { get; set; }
 
         [Display(Name = "Defense Strength")]
         public string Defense { get; set; }
 
         [Display(Name = "Defense Strength Operator")]
-        public NumericOperator DefenseOp { get; set; }
+        public NumericOperator? DefenseOp { get; set; }
 
         [Display(Name = "Hit Points")]
         public string HitPoints { get; set; }
 
         [Display(Name = "Hit Points Operator")]
-        public NumericOperator HitPointsOp { get; set; }
+        public NumericOperator? HitPointsOp { get; set; }
 
         [Display(Name = "Willpower Strength")]
         public string Willpower { get; set; }
 
         [Display(Name = "Willpower Strength Operator")]
-        public NumericOperator WillpowerOp { get; set; }
+        public NumericOperator? WillpowerOp { get; set; }
 
         [Display(Name = "Threat Strength")]
         public string Threat { get; set; }
 
         [Display(Name = "Threat Strength Operator")]
-        public NumericOperator ThreatOp { get; set; }
+        public NumericOperator? ThreatOp { get; set; }
 
         [Display(Name = "Quest Points")]
         public string QuestPoints { get; set; }
 
         [Display(Name = "Quest Points Operator")]
-        public NumericOperator QuestPointsOp { get; set; }
+        public NumericOperator? QuestPointsOp { get; set; }
 
         [Display(Name = "Sphere")]
-        public Sphere Sphere { get; set; }
+        public Sphere? Sphere { get; set; }
+
+        //[Display(Name = "Unique")]
+        //public bool Unique { get; set; }
 
         [Display(Name = "Unique")]
-        public bool Unique { get; set; }
-
-        [Display(Name = "Unique")]
-        public Uniqueness IsUnique { get; set; }
+        public Uniqueness? IsUnique { get; set; }
 
         [Display(Name = "Set Type")]
-        public SetType SetType { get; set; }
+        public SetType? SetType { get; set; }
 
         [Display(Name = "Sort")]
-        public Sort Sort { get; set; }
+        public Sort? Sort { get; set; }
 
         [Display(Name = "Artist")]
         public string Artist { get; set; }
@@ -186,13 +184,13 @@ namespace HallOfBeorn.Models
         [Display(Name = "Results")]
         public List<CardViewModel> Cards { get; set; }
 
-        [Display(Name = "Custom")]
-        public bool Custom { get; set; }
+        //[Display(Name = "Custom")]
+        //public bool Custom { get; set; }
 
         [Display(Name = "Victory")]
         public string VictoryPoints { get; set; }
 
-        public HasShadow HasShadow { get; set; }
+        public HasShadow? HasShadow { get; set; }
 
         public string Quest { get; set; }
 
@@ -208,28 +206,23 @@ namespace HallOfBeorn.Models
 
         public bool HasCardType()
         {
-            return this.CardType != Models.CardType.None;
+            return this.CardType.HasValue && this.CardType.Value != Models.CardType.None;
         }
 
         public bool HasCardSubtype()
         {
-            return this.CardSubtype != Models.CardSubtype.None;
+            return this.CardSubtype.HasValue && this.CardSubtype.Value != Models.CardSubtype.None;
         }
 
         public bool HasDeckType()
         {
-            return this.DeckType != Models.DeckType.None;
+            return this.DeckType.HasValue && this.DeckType.Value != Models.DeckType.None;
         }
 
         public bool HasCardSet()
         {
             return !string.IsNullOrEmpty(this.CardSet) && this.CardSet != DEFAULT_FILTER_VALUE;
         }
-
-        //public bool HasSetType()
-        //{
-        //    return !string.IsNullOrEmpty(this.SetType
-        //}
 
         public bool HasScenario()
         {
@@ -248,7 +241,7 @@ namespace HallOfBeorn.Models
 
         public bool HasSphere()
         {
-            return this.Sphere != Models.Sphere.None;
+            return this.Sphere.HasValue && this.Sphere.Value != Models.Sphere.None;
         }
 
         public bool HasCategory()
@@ -327,10 +320,10 @@ namespace HallOfBeorn.Models
             if (HasResourceCost())
                 return true;
 
-            if (this.Unique)
-                return true;
+            //if (this.Unique)
+            //    return true;
 
-            if (this.IsUnique != Uniqueness.Any)
+            if (this.IsUnique.HasValue && this.IsUnique.Value != Uniqueness.Any)
                 return true;
 
             if (HasArtist())
@@ -347,19 +340,24 @@ namespace HallOfBeorn.Models
 
         public bool CardTypeMatches(Card card)
         {
-            if (CardType == CardType.Player)
+            if (!CardType.HasValue)
             {
-                return card.CardType == CardType.Hero || card.CardType == Models.CardType.Ally || card.CardType == Models.CardType.Attachment || card.CardType == Models.CardType.Event || card.CardType == Models.CardType.Player_Side_Quest;
+                return false;
             }
-            else if (CardType == CardType.Character)
+
+            if (CardType.Value == Models.CardType.Player)
+            {
+                return card.CardType == Models.CardType.Hero || card.CardType == Models.CardType.Ally || card.CardType == Models.CardType.Attachment || card.CardType == Models.CardType.Event || card.CardType == Models.CardType.Player_Side_Quest;
+            }
+            else if (CardType.Value == Models.CardType.Character)
             {
                 return card.CardType == Models.CardType.Hero || card.CardType == Models.CardType.Ally || card.CardType == Models.CardType.Objective_Ally || (card.CardType == Models.CardType.Objective && card.HitPoints > 0);
             }
-            else if (CardType == CardType.Encounter)
+            else if (CardType.Value == Models.CardType.Encounter)
             {
                 return card.CardType == Models.CardType.Enemy || card.CardType == Models.CardType.Location || card.CardType == Models.CardType.Treachery || card.CardType == Models.CardType.Objective || card.CardType == Models.CardType.Objective_Ally || card.CardType == Models.CardType.Encounter_Side_Quest;
             }
-            else if (CardType == CardType.Objective)
+            else if (CardType.Value == Models.CardType.Objective)
             {
                 return card.CardType == Models.CardType.Objective || card.CardType == Models.CardType.Objective_Ally;
             }
@@ -374,6 +372,7 @@ namespace HallOfBeorn.Models
 
         public bool CardIsCustom(Card card)
         {
+            /*
             if ((this.CardSet == null || this.CardSet == "Any") 
                 && (this.EncounterSet == null || this.EncounterSet == "Any") 
                 && this.Sphere != Sphere.Mastery 
@@ -388,7 +387,9 @@ namespace HallOfBeorn.Models
                 return card.CardSet.SetType == SetType.CUSTOM;
             }
 
-            return false;
+            return false;*/
+
+            return card.CardSet.SetType == Models.SetType.CUSTOM;
         }
 
         public bool VictoryPointsMatch(Card card)

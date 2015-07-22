@@ -348,6 +348,17 @@ namespace HallOfBeorn.Models
         public CardType CardType { get; set; }
         public CardSubtype CardSubtype { get; set; }
         public Sphere Sphere { get; set; }
+        
+        public Sphere SortedSphere()
+        {
+            if (CardSubtype == Models.CardSubtype.Boon)
+            {
+                return Models.Sphere.Neutral;
+            }
+
+            return this.Sphere;
+        }
+
         public byte? ThreatCost { get; set; }
         public byte? ResourceCost { get; set; }
         

@@ -29,5 +29,26 @@ namespace HallOfBeorn.Services
         {
             return cards;
         }
+
+        public Card Find(string id)
+        {
+            return cards.Where(x => x.Id == id).FirstOrDefault();
+        }
+
+        public Card FindBySlug(string slug)
+        {
+            if (string.IsNullOrEmpty(slug))
+                return null;
+
+            var exact = cards.Where(x => x.Slug.ToLower() == slug.ToLower()).FirstOrDefault();
+            if (exact != null)
+                return exact;
+
+            var partials = cards.Where(x => x.Slug.ToLower().StartsWith(slug.ToLower())).ToList();
+            if (partials.Count == 1)
+                return partials.First();
+
+            return null;
+        }
     }
 }

@@ -44,7 +44,10 @@ namespace HallOfBeorn
             var scenarioService = new ScenarioService(productRepository, cardRepository);
             System.Web.HttpContext.Current.Application[Extensions.ScenarioServiceKey] = scenarioService;
 
-            var searchService = new SearchService(productRepository, cardRepository, scenarioService);
+            var advancedSearchService = new AdvancedSearchService();
+            var sortService = new SearchSortService();
+            
+            var searchService = new SearchService(productRepository, cardRepository, scenarioService, advancedSearchService, sortService);
             System.Web.HttpContext.Current.Application[Extensions.SearchServiceKey] = searchService;
 
             var statService = new StatService(cardRepository);
