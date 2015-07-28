@@ -279,6 +279,8 @@
     <Compile Include="Models\EncounterCategory.cs" />
     <Compile Include="Models\EncounterSet.cs" />
     <Compile Include="Models\EncounterSetViewModel.cs" />
+    <Compile Include="Models\Products\EscapeFromMountGramProduct.cs" />
+    <Compile Include="Models\Search\FilterDefinition.cs" />
     <Compile Include="Models\HasShadow.cs" />
     <Compile Include="Models\HtmlBuilder.cs" />
     <Compile Include="Models\ImageType.cs" />
@@ -395,6 +397,7 @@
     <Compile Include="Models\Sets\EncounterAtAmonDin.cs" />
     <Compile Include="Models\Sets\EncounterAtAmonDinNightmare.cs" />
     <Compile Include="Models\Sets\EscapeFromDolGuldurNightmare.cs" />
+    <Compile Include="Models\Sets\EscapeFromMountGram.cs" />
     <Compile Include="Models\Sets\FliesAndSpidersNightmare.cs" />
     <Compile Include="Models\Sets\FlightFromMoriaNightmare.cs" />
     <Compile Include="Models\Sets\FlightToTheFordNightmare.cs" />

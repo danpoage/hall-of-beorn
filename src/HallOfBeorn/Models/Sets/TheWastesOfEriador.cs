@@ -54,7 +54,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithInfo(7, 3, Artist.Eva_Maria_Toker));
             Cards.Add(Card.Ally("East Road Ranger", "", Sphere.Lore, 3, 1, 2, 1, 3)
                 .WithGeneric()
-                .WithTraits("Dúnedain", "Scout.")
+                .WithTraits("Dúnedain.", "Scout.")
                 .WithText("East Road Ranger gets +2 Willpower while committed to a side quest.")
                 .WithFlavor("\"If you bring a Ranger with you, it is well to pay attention to him...\" -Gandalf, the Fellowship of the Ring")
                 .WithTemplate("<p>{self} gets +2 {willpower} while committed to a side quest.</p><p style='text-align:center'><i>&quot;If you bring a Ranger with you, it is well to pay attention to him...&quot;<br/>&ndash;Gandalf, the Fellowship of the Ring</i></p>")
@@ -65,7 +65,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithInfo(9, 3, Artist.Tomasz_Jedruszek));
             Cards.Add(Card.Ally("Ranger of Cardolan", "", Sphere.Neutral, 4, 2, 2, 2, 3)
                 .WithGeneric()
-                .WithTraits("Dúnedain", "Ranger.")
+                .WithTraits("Dúnedain.", "Ranger.")
                 .WithText("Response: After you engage an enemy, if you control at least 1 Dúnedain hero, spend 1 resource to put ~Ranger of Cardolan into play from your hand, under your control. At the end of the round, if ~Ranger of Cardolan is still in play, shuffle it into its owner's deck.")
                 .WithInfo(10, 3, Artist.Lukasz_Jaskolski));
             Cards.Add(Card.Objective("Daybreak", "", "The Wastes of Eriador")

@@ -6,6 +6,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
+using HallOfBeorn.Models.Search;
+
 namespace HallOfBeorn.Models
 {
     public class FilterViewModel
@@ -24,7 +26,22 @@ namespace HallOfBeorn.Models
     {
         public SearchViewModel()
         {
+            /*
+            definitions.Add(new FilterDefinition("Query", (m) => { return m.Query; }));
+            definitions.Add(new FilterDefinition("Card Type", (m) => { return m.CardType; }));
+            definitions.Add(new FilterDefinition("Card Subtype", (m) => { return m.CardSubtype; }));
+            definitions.Add(new FilterDefinition("Deck Type", (m) => { return m.DeckType; }));
+            definitions.Add(new FilterDefinition("Card Set", (m) => { return m.CardSet; }));
+            definitions.Add(new FilterDefinition("Scenario", (m) => { return m.Scenario; }));
+            definitions.Add(new FilterDefinition("Trait", (m) => { return m.Trait; }));
+            definitions.Add(new FilterDefinition("Keyword", (m) => { return m.Keyword; }));
+            definitions.Add(new FilterDefinition("Artist", (m) => { return m.Artist; }));
+            definitions.Add(new FilterDefinition("Cost", (m) => { return m.Cost; }, (m) => { return m.CostOperator; }));
+            */
+
         }
+
+        private readonly List<FilterDefinition> definitions = new List<FilterDefinition>();
 
         public const string DEFAULT_FILTER_VALUE = "Any";
         public const string RANDOM_KEYWORD = "+random";

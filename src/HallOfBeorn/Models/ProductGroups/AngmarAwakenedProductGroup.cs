@@ -13,6 +13,7 @@ namespace HallOfBeorn.Models.ProductGroups
             MainProduct = Product.TheLostRealm;
 
             AddProduct(Product.TheWastesOfEriador);
+            AddProduct(Product.EscapeFromMountGram);
         }
     }
 }

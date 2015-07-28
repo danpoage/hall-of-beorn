@@ -81,6 +81,7 @@ namespace HallOfBeorn.Models
         //The Lost Realm and Angmar Awakened Cycle
         public static Product TheLostRealm = new TheLostRealmProduct();
         public static Product TheWastesOfEriador = new TheWastesOfEriadorProduct();
+        public static Product EscapeFromMountGram = new EscapeFromMountGramProduct();
 
         //The Hobbit Saga
         public static Product TheHobbitOverHillAndUnderHill = new TheHobbitOverHillAndUnderHillProduct();

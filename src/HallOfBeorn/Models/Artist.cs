@@ -333,6 +333,10 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Preston_Stone);
             all.Add(Artist.Dawn_Carlos);
             all.Add(Artist.Leonid_Kozienko);
+            all.Add(Artist.Oscar_Romer);
+            all.Add(Artist.Jordan_Saia);
+            all.Add(Artist.Cassandre_Bolan);
+            all.Add(Artist.Jorge_Barrero);
 
             //First Age
             all.Add(Artist.Unknown);
@@ -624,6 +628,7 @@ namespace HallOfBeorn.Models
         public static Artist Carmen_Cianelli = new Artist { Name = "Carmen Cianelti", URL = "http://arteche.deviantart.com" };
         public static Artist Carly_Janine_Mazur = new Artist { Name = "Carly Janine Mazur", URL = "http://carlyjanine.com/home.html" };
         public static Artist Carolina_Eade = new Artist { Name = "Carolina Eade", URL = "http://carolina-eade.deviantart.com" };
+        public static Artist Cassandre_Bolan = new Artist { Name = "Cassandre Bolan", URL = "http://www.cassandrebolan.com" };
         public static Artist Charles_Urbach = new Artist { Name = "Charles Urbach", URL = "http://charlesurbachart.deviantart.com" };
         public static Artist Chris_Rahn = new Artist { Name = "Chris Rahn", URL = "http://www.rahnart.com" };
         public static Artist Chris_Rallis = new Artist { Name = "Chris Rallis", URL = "http://chrisra.deviantart.com" };
@@ -711,7 +716,9 @@ namespace HallOfBeorn.Models
         public static Artist John_Wigley = new Artist { Name = "John Wigley", URL = "http://wiggers123.deviantart.com" };
         public static Artist Joko_Mulyono = new Artist { Name = "Joko Mulyono", URL = "http://jokomulyono.deviantart.com" };
         public static Artist Jon_Bosco = new Artist { Name = "Jon Bosco", URL = "http://boscopenciller.deviantart.com" };
+        public static Artist Jordan_Saia = new Artist { Name = "Jordan Saia", URL = "http://jordansaia.com" };
         public static Artist Jordy_Lakiere = new Artist { Name = "Jordy Lakiere", URL = "http://jordylakiere.deviantart.com" };
+        public static Artist Jorge_Barrero = new Artist { Name = "Jorge Borrero", URL = "http://jorgebarrero.com" };
         public static Artist Jose_Vega = new Artist { Name = "Jose Vega", URL = "http://cheo36.deviantart.com" };
         public static Artist Juan_Carlos_Barquet = new Artist { Name = "Juan Carlos Barquet", URL = "http://jcbarquet.deviantart.com" };
         public static Artist Julia_Laud = new Artist { Name = "Julia Laud", URL = "http://julialaud.deviantart.com" };
@@ -774,6 +781,7 @@ namespace HallOfBeorn.Models
         public static Artist Noah_Bradley = new Artist { Name = "Noah Bradley", URL = "http://noahbradley.deviantart.com" };
         public static Artist Nora_Brisotti = new Artist { Name = "Nora Brisotti", URL = "http://noranimator.deviantart.com" };
         public static Artist Oleg_Saakyan = new Artist { Name = "Oleg Saakyan", URL = "http://ultracold.deviantart.com" };
+        public static Artist Oscar_Romer = new Artist { Name = " Oscar Römer", URL = "http://oscarromerart.blogspot.com" };
         public static Artist Owen_William_Weber = new Artist { Name = "Owen William Weber", URL = "http://oweber.blogspot.com" };
         public static Artist Paul_Guzenko = new Artist { Name = "Paul Guzenko", URL = "http://www.guzboroda.com/?author=1" };
         public static Artist Paolo_Puggioni = new Artist { Name = "Paulo Puggioni", URL = "http://www.paolopuggioni.com" };

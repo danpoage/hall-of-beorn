@@ -25,7 +25,7 @@ namespace HallOfBeorn.Services
 
             if (filters.Count == 1 && model.CardSet != null && model.CardSet != "Any" && sort == Models.Sort.None)
             {
-                //sort = Models.Sort.Set_Number;
+                sort = Models.Sort.Set_Number;
             }
 
             switch (sort)
