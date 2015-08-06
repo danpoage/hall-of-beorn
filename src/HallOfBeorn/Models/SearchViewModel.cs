@@ -26,22 +26,85 @@ namespace HallOfBeorn.Models
     {
         public SearchViewModel()
         {
+        }
+
+        public Func<Scenario> GetScenario { get; set; }
+
+        public void Initialize()
+        {
             /*
-            definitions.Add(new FilterDefinition("Query", (m) => { return m.Query; }));
-            definitions.Add(new FilterDefinition("Card Type", (m) => { return m.CardType; }));
-            definitions.Add(new FilterDefinition("Card Subtype", (m) => { return m.CardSubtype; }));
-            definitions.Add(new FilterDefinition("Deck Type", (m) => { return m.DeckType; }));
-            definitions.Add(new FilterDefinition("Card Set", (m) => { return m.CardSet; }));
-            definitions.Add(new FilterDefinition("Scenario", (m) => { return m.Scenario; }));
-            definitions.Add(new FilterDefinition("Trait", (m) => { return m.Trait; }));
-            definitions.Add(new FilterDefinition("Keyword", (m) => { return m.Keyword; }));
-            definitions.Add(new FilterDefinition("Artist", (m) => { return m.Artist; }));
-            definitions.Add(new FilterDefinition("Cost", (m) => { return m.Cost; }, (m) => { return m.CostOperator; }));
+            definitions.Add(new QueryFilterDefinition());
+
+            definitions.Add(new SimpleFilterDefinition("Card Set", (m) => { return m.CardSet; }, (s, c) => { return s.CardSetMatches(c); }, 100));
+            definitions.Add(new SimpleFilterDefinition("Scenario", (m) => { return m.Scenario; }, (s, c) => { return c.BelongsToScenario(s.GetScenario()); }, 100));
+            definitions.Add(new SimpleFilterDefinition("Encounter Set", (m) => { return m.EncounterSet; }, (s, c) => { return c.EncounterSet == s.EncounterSet; }, 100));
+
+            definitions.Add(new EnumFilterDefinition("Card Type", (m) => { return m.CardType.Value; }, (s, c) => { return s.CardTypeMatches(c); }, 100));
+            definitions.Add(new EnumFilterDefinition("Card Subtype", (m) => { return m.CardSubtype.Value; }, (s, c) => { return s.CardTypeMatches(c); }, 100));
+            definitions.Add(new EnumFilterDefinition("Deck Type", (m) => { return m.DeckType.Value; }, (s, c) => { return s.DeckType.Value == c.GetDeckType(); }, 100));
+
+            definitions.Add(new EnumFilterDefinition("Sphere", (m) => { return m.Sphere; }, (s, c) => { return s.Sphere.Value == c.Sphere; }, 100));
+            definitions.Add(new SimpleFilterDefinition("Unique", (m) => { return m.IsUnique; }, (s, c) => { return c.IsUnique == (s.IsUnique != null && s.IsUnique == Uniqueness.Yes); }, 100));
+            definitions.Add(new EnumFilterDefinition("Set Type", (m) => { return m.SetType; }, (s, c) => { return (s.SetType == Models.SetType.OFFICIAL && c.CardSet.SetType != Models.SetType.CUSTOM) || (s.SetType.Value == c.CardSet.SetType); }, 100));
             */
 
+            /*
+            //definitions.Add(new EnumFilterDefinition("Scenario", (m) => { return m.Scenario; }, (s, c) => { return s.Scenario == c.ScenarioTitle; }));
+            definitions.Add(new EnumFilterDefinition("Encounter Set", (m) => { return m.EncounterSet; }));
+
+            definitions.Add(new EnumFilterDefinition("Card Type", (m) => { return m.CardType; }));
+            definitions.Add(new EnumFilterDefinition("Card Subtype", (m) => { return m.CardSubtype; }));
+            definitions.Add(new EnumFilterDefinition("Deck Type", (m) => { return m.DeckType; }));
+
+            definitions.Add(new EnumFilterDefinition("Sphere", (m) => { return m.Sphere; }));
+            definitions.Add(new FilterDefinition("Unique", (m) => { return m.IsUnique; }));
+            definitions.Add(new FilterDefinition("Set Type", (m) => { return m.SetType; }));
+
+            definitions.Add(new FilterDefinition("Cost", (m) => { return m.Cost; }, (m) => { return m.CostOperator; }));
+            definitions.Add(new FilterDefinition("ThreatCost", (m) => { return m.ThreatCost; }, (m) => { return m.ThreatCostOperator; }));
+            definitions.Add(new FilterDefinition("EngagementCost", (m) => { return m.EngagementCost; }, (m) => { return m.EngagementCostOperator; }));
+            
+            definitions.Add(new FilterDefinition("Attack", (m) => { return m.Attack; }, (m) => { return m.AttackOp; }));
+            definitions.Add(new FilterDefinition("Defense", (m) => { return m.Defense; }, (m) => { return m.DefenseOp; }));
+            definitions.Add(new FilterDefinition("HitPoints", (m) => { return m.HitPoints; }, (m) => { return m.HitPointsOp; }));
+            
+            definitions.Add(new FilterDefinition("Willpower", (m) => { return m.Willpower; }, (m) => { return m.WillpowerOp; }));
+            definitions.Add(new FilterDefinition("Threat", (m) => { return m.Threat; }, (m) => { return m.ThreatOp; }));
+            definitions.Add(new FilterDefinition("Quest Points", (m) => { return m.QuestPoints; }, (m) => { return m.QuestPointsOp; }));
+
+            definitions.Add(new FilterDefinition("Trait", (m) => { return m.Trait; }));
+            definitions.Add(new FilterDefinition("Keyword", (m) => { return m.Keyword; }));
+            definitions.Add(new FilterDefinition("Victory Points", (m) => { return m.VictoryPoints; }));
+
+            definitions.Add(new FilterDefinition("Player Card Category", (m) => { return m.Category; }));
+            definitions.Add(new FilterDefinition("Encounter Card Category", (m) => { return m.EncounterCategory; }));
+            definitions.Add(new FilterDefinition("Quest Card Category", (m) => { return m.QuestCategory; }));
+
+            definitions.Add(new FilterDefinition("Artist", (m) => { return m.Artist; }));
+            */
         }
 
         private readonly List<FilterDefinition> definitions = new List<FilterDefinition>();
+
+        public bool HasValues()
+        {
+            return definitions.Any(x => x.HasValue(this));
+        }
+
+        public List<SearchFilter> Filters()
+        {
+            var filters = new List<SearchFilter>();
+
+            foreach (var def in definitions)
+            {
+                if (def.HasValue(this))
+                {
+                    filters.AddRange(def.Filters(this));
+                }
+            }
+
+            return filters;
+        }
 
         public const string DEFAULT_FILTER_VALUE = "Any";
         public const string RANDOM_KEYWORD = "+random";

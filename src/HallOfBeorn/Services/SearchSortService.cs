@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 
 using HallOfBeorn.Models;
+using HallOfBeorn.Models.Search;
 
 namespace HallOfBeorn.Services
 {
@@ -11,15 +12,19 @@ namespace HallOfBeorn.Services
     {
         const int MAX_RESULTS = 128;
 
-        public List<CardScore> Sort(SearchViewModel model, List<WeightedSearchFilter> filters, Dictionary<string, CardScore> results, int limit)
+        public List<CardScore> Sort(SearchViewModel model, List<SearchFilter> filters, Dictionary<string, CardScore> results)
         {
             var sortedResults = new List<CardScore>();
 
             var takeCount = model.HasFilter() || model.IsRandom() ? results.Count : MAX_RESULTS;
+
+            /*
+            var limit = filters.Max(x => x.Limit);
             if (limit > 0)
             {
                 takeCount = limit;
             }
+            */
 
             var sort = model.Sort.HasValue ? model.Sort.Value : Models.Sort.None;
 
@@ -31,10 +36,10 @@ namespace HallOfBeorn.Services
             switch (sort)
             {
                 case Models.Sort.Alphabetical:
-                    sortedResults = results.Where(x => x.Value.Score > 0).OrderBy(x => x.Value.Card.Title).Select(x => x.Value).Take(takeCount).ToList();
+                    sortedResults = results.Where(x => x.Value.Score() > 0).OrderBy(x => x.Value.Card.Title).Select(x => x.Value).Take(takeCount).ToList();
                     break;
                 case Models.Sort.Sphere_Type_Cost:
-                    sortedResults = results.Where(x => x.Value.Score > 0).OrderBy(x => x.Value.Card.SortedSphere()).ThenBy(x => x.Value.Card.CardType).ThenBy(x => x.Value.Card.CardSubtype).ThenBy(x =>
+                    sortedResults = results.Where(x => x.Value.Score() > 0).OrderBy(x => x.Value.Card.SortedSphere()).ThenBy(x => x.Value.Card.CardType).ThenBy(x => x.Value.Card.CardSubtype).ThenBy(x =>
                     {
                         if (x.Value.Card.ThreatCost.HasValue && x.Value.Card.ThreatCost.Value > 0)
                             return x.Value.Card.ThreatCost.Value;
@@ -49,10 +54,10 @@ namespace HallOfBeorn.Services
                     }).Select(x => x.Value).Take(takeCount).ToList();
                     break;
                 case Models.Sort.Set_Number:
-                    sortedResults = results.Where(x => x.Value.Score > 0).OrderBy(x => x.Value.Card.CardSet.Number).ThenBy(x => x.Value.Card.Number).Select(x => x.Value).Take(takeCount).ToList();
+                    sortedResults = results.Where(x => x.Value.Score() > 0).OrderBy(x => x.Value.Card.CardSet.Number).ThenBy(x => x.Value.Card.Number).Select(x => x.Value).Take(takeCount).ToList();
                     break;
                 default:
-                    sortedResults = results.Where(x => x.Value.Score > 0).OrderByDescending(x => x.Value.Score).Select(y => y.Value).Take(takeCount).ToList();
+                    sortedResults = results.Where(x => x.Value.Score() > 0).OrderByDescending(x => x.Value.Score()).Select(y => y.Value).Take(takeCount).ToList();
                     break;
             }
 

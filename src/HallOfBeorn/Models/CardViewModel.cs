@@ -13,7 +13,7 @@ namespace HallOfBeorn.Models
         }
 
         public CardViewModel(CardScore score)
-            : this(score.Card, score.Score, score.Description)
+            : this(score.Card, score.Score(), score.Description)
         {
         }
 
@@ -269,6 +269,17 @@ namespace HallOfBeorn.Models
         public string StageNumber
         {
             get { return _card.StageNumber > 0 ? _card.StageNumber.ToString() : string.Empty; }
+        }
+
+        public string StageLetters
+        {
+            get
+            {
+                char from = _card.StageLetter;
+                char to = (Char)(Convert.ToUInt16(_card.StageLetter) + 1);
+
+                return string.Format("{0}-{1}", from, to);
+            }
         }
 
         public string QuestPoints

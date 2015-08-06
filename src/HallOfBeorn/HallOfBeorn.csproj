@@ -280,6 +280,8 @@
     <Compile Include="Models\EncounterSet.cs" />
     <Compile Include="Models\EncounterSetViewModel.cs" />
     <Compile Include="Models\Products\EscapeFromMountGramProduct.cs" />
+    <Compile Include="Models\Products\TheRuinsOfBelegostProduct.cs" />
+    <Compile Include="Models\Search\EnumFilterDefinition.cs" />
     <Compile Include="Models\Search\FilterDefinition.cs" />
     <Compile Include="Models\HasShadow.cs" />
     <Compile Include="Models\HtmlBuilder.cs" />
@@ -383,6 +385,8 @@
     <Compile Include="Models\SearchRequest.cs" />
     <Compile Include="Models\SearchResult.cs" />
     <Compile Include="Models\SearchViewModel.cs" />
+    <Compile Include="Models\Search\QueryFilterDefinition.cs" />
+    <Compile Include="Models\Search\SimpleFilterDefinition.cs" />
     <Compile Include="Models\Sets\AJourneyToRhosgobelNightmare.cs" />
     <Compile Include="Models\Sets\AKnifeInTheDarkNightmare.cs" />
     <Compile Include="Models\Sets\AShadowOfThePastNightmare.cs" />
@@ -449,6 +453,7 @@
     <Compile Include="Models\Sets\TheRedhornGate.cs" />
     <Compile Include="Models\Sets\TheRedhornGateNightmare.cs" />
     <Compile Include="Models\Sets\TheRoadDarkens.cs" />
+    <Compile Include="Models\Sets\TheRuinsOfBelegost.cs" />
     <Compile Include="Models\Sets\TheSeventhLevelNightmare.cs" />
     <Compile Include="Models\Sets\TheSiegeOfCairAndrosNightmare.cs" />
     <Compile Include="Models\Sets\TheStewardsFear.cs" />
@@ -462,7 +467,7 @@
     <Compile Include="Models\Sets\TroubleInTharbad.cs" />
     <Compile Include="Models\Sets\TheVoiceOfIsengard.cs" />
     <Compile Include="Models\Trait.cs" />
-    <Compile Include="Models\WeightedSearchFilter.cs" />
+    <Compile Include="Models\Search\SearchFilter.cs" />
     <Compile Include="Models\Sets\WeMustAwayEreBreakOfDayNightmare.cs" />
     <Compile Include="Models\SetType.cs" />
     <Compile Include="Models\Simple\SimpleCard.cs" />

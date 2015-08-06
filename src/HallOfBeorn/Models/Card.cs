@@ -22,6 +22,8 @@ namespace HallOfBeorn.Models
             RelatedCards = new List<Card>();
             IncludedEncounterSets = new List<EncounterSet>();
 
+            StageLetter = 'A';
+
             UsePublicImageURL = true;
             Html = string.Empty;
         }
@@ -338,6 +340,7 @@ namespace HallOfBeorn.Models
 
         public uint Number { get; set; }
         public uint StageNumber { get; set; }
+        public char StageLetter { get; set; }
         
         public string ImageName { get; set; }
         public ImageType ImageType { get; set; }
@@ -727,6 +730,11 @@ namespace HallOfBeorn.Models
 
         public static Card Quest(string title, string id, int scenarioNumber, uint stageNumber, string encounterSet, byte questPoints)
         {
+            return Quest(title, id, scenarioNumber, stageNumber, encounterSet, questPoints, 'A');
+        }
+
+        public static Card Quest(string title, string id, int scenarioNumber, uint stageNumber, string encounterSet, byte questPoints, char stageLetter)
+        {
             return new Card()
             {
                 CardType = CardType.Quest,
@@ -737,7 +745,8 @@ namespace HallOfBeorn.Models
                 QuestPoints = questPoints,
                 IsVariableQuestPoints = questPoints == (byte)254,
                 ScenarioNumber = scenarioNumber,
-                StageNumber = stageNumber
+                StageNumber = stageNumber,
+                StageLetter = stageLetter
             };
         }
 

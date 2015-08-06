@@ -98,6 +98,7 @@ namespace HallOfBeorn.Models
         public static Product TheStoneOfErech = new TheStoneOfErechProduct();
         public static Product TheOldForest = new TheOldForestProduct();
         public static Product FogOnTheBarrowDowns = new FogOnTheBarrowDownsProduct();
+        public static Product TheRuinsOfBelegost = new TheRuinsOfBelegostProduct();
 
         //Nightmare Decks
         public static Product PassageThroughMirkwoodNightmare = new PassageThroughMirkwoodNightmareProduct();

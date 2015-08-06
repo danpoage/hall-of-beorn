@@ -453,6 +453,11 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Carlo_Pagulayan);
             all.Add(Artist.ElderScroller);
             all.Add(Artist.Blaz_Porenta);
+
+            //The Ruins of Belegost
+            all.Add(Artist.Ethan_Patrick_Harris);
+            all.Add(Artist.Sergey_Glushakov);
+            all.Add(Artist.Lucas_Durham);
         }
 
         private static List<Artist> all = new List<Artist>();
@@ -566,6 +571,7 @@ namespace HallOfBeorn.Models
         public static Artist Sarah_Finnigan = new Artist { Name = "Sarah Finnigan", URL = "http://sarahfinnigan.deviantart.com" };
         public static Artist Sattarov = new Artist { Name = "Sattarov", URL = "http://sattarov.deviantart.com" };
         public static Artist Saturnoarg = new Artist { Name = "saturnoarg", URL = "http://saturnoarg.deviantart.com" };
+        public static Artist Sergey_Glushakov = new Artist { Name = "Sergey Glushakov", URL = "https://www.google.com/search?q=Sergey+Glushakov+Art" };
         public static Artist Silvery = new Artist { Name = "Silvery", URL = "http://silvery.deviantart.com" };
         public static Artist Steamey = new Artist { Name = "steamey", URL = "http://steamy.deviantart.com" };
         public static Artist Stefan_Meisl = new Artist { Name = "Stefan Meisl", URL = "http://digital-fantasy.deviantart.com" };
@@ -673,6 +679,7 @@ namespace HallOfBeorn.Models
         public static Artist Emrah_Elmasli = new Artist { Name = "Emrah Elmasli", URL = "http://emrahelmasli.tumblr.com" };
         public static Artist Erfian_Asafat = new Artist { Name = "Erfian Asafat", URL = "http://masterchomic.deviantart.com" };
         public static Artist Eric_Braddock = new Artist { Name = "Eric Braddock", URL = "http://ericbraddock.deviantart.com" };
+        public static Artist Ethan_Patrick_Harris = new Artist { Name = "Ethan Patrick Harris", URL = "https://www.google.com/search?q=ethan+patrick+harris+art" };
         public static Artist Eva_Maria_Toker = new Artist { Name = "Eva Maria Toker", URL = "http://www.evamariatoker.com" };
         public static Artist Even_Mehl_Amundsen = new Artist { Name = "Even Mehl Amundsen", URL = "http://mischeviouslittleelf.deviantart.com" };
         public static Artist Fandy_Sugiarto = new Artist { Name = "Fandy Sugiarto", URL = "https://www.google.com/search?q=fandy+sugiarto+fantasy+art" };
@@ -740,6 +747,7 @@ namespace HallOfBeorn.Models
         public static Artist Loren_Fetterman = new Artist { Name = "Loren Fetterman", URL = "http://loren86.deviantart.com" };
         public static Artist Lorraine_Schleter = new Artist { Name = "Lorraine Schleter", URL = "http://lorraine-schleter.deviantart.com" };
         public static Artist Louis_Green = new Artist { Name = "Louis Green", URL = "http://louisgreen.blogspot.com" };
+        public static Artist Lucas_Durham = new Artist { Name = "Lucas Durham", URL = "https://www.google.com/search?q=lucas+durham+art" };
         public static Artist Lucas_Graciano = new Artist { Name = "Lucas Graciano", URL = "http://lucasgraciano.deviantart.com" };
         public static Artist Lukasz_Jaskolski = new Artist { Name = "Lukasz Jaskolski", URL = "http://www.fadingray.com" };
         public static Artist Magali_Villeneuve = new Artist { Name = "Magali Villeneuve", URL = "http://magali-villeneuve.blogspot.com" };
@@ -781,7 +789,7 @@ namespace HallOfBeorn.Models
         public static Artist Noah_Bradley = new Artist { Name = "Noah Bradley", URL = "http://noahbradley.deviantart.com" };
         public static Artist Nora_Brisotti = new Artist { Name = "Nora Brisotti", URL = "http://noranimator.deviantart.com" };
         public static Artist Oleg_Saakyan = new Artist { Name = "Oleg Saakyan", URL = "http://ultracold.deviantart.com" };
-        public static Artist Oscar_Romer = new Artist { Name = " Oscar Römer", URL = "http://oscarromerart.blogspot.com" };
+        public static Artist Oscar_Romer = new Artist { Name = "Oscar Römer", URL = "http://oscarromerart.blogspot.com" };
         public static Artist Owen_William_Weber = new Artist { Name = "Owen William Weber", URL = "http://oweber.blogspot.com" };
         public static Artist Paul_Guzenko = new Artist { Name = "Paul Guzenko", URL = "http://www.guzboroda.com/?author=1" };
         public static Artist Paolo_Puggioni = new Artist { Name = "Paulo Puggioni", URL = "http://www.paolopuggioni.com" };

@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.ProductGroups
             AddProduct(Product.TheStoneOfErech);
             AddProduct(Product.TheOldForest);
             AddProduct(Product.FogOnTheBarrowDowns);
+            AddProduct(Product.TheRuinsOfBelegost);
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Search
 {
-    public class FilterDefinition
+    public abstract class FilterDefinition
     {
         public FilterDefinition(string name, Func<SearchViewModel, object> getValue)
             : this(name, getValue, null)
@@ -19,9 +19,13 @@ namespace HallOfBeorn.Models.Search
             this.getOperator = getOperator;
         }
 
-        private readonly string name;
-        private readonly Func<SearchViewModel, object> getValue;
-        private readonly Func<SearchViewModel, object> getOperator;
+        const string VALUE_ANY = "Any";
+
+        protected readonly string name;
+        protected readonly Func<SearchViewModel, object> getValue;
+        protected readonly Func<SearchViewModel, object> getOperator;
+
+        protected abstract IEnumerable<SearchFilter> getFilters(SearchViewModel model);
 
         public bool HasValue<T>(SearchViewModel model)
         {
@@ -30,7 +34,24 @@ namespace HallOfBeorn.Models.Search
                 return false;
             }
 
-            return getValue(model) != null;
+            var value = getValue(model);
+            return value != null && value.ToString() != VALUE_ANY;
+        }
+
+        public bool HasValue(SearchViewModel model)
+        {
+            if (getOperator != null && getOperator(model) == null)
+            {
+                return false;
+            }
+
+            var value = getValue(model);
+            return value != null && value.ToString() != VALUE_ANY;
+        }
+
+        public IEnumerable<SearchFilter> Filters(SearchViewModel model)
+        {
+            return getFilters(model);
         }
     }
 }

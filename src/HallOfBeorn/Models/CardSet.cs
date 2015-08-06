@@ -103,6 +103,7 @@ namespace HallOfBeorn.Models
         public static CardSet TheMassingAtOsgiliath = new Sets.TheMassingatOsgiliath();
         public static CardSet TheBattleOfLakeTown = new Sets.TheBattleofLakeTown();
         public static CardSet TheStoneOfErech = new Sets.TheStoneofErech();
+        public static CardSet TheRuinsOfBelegost = new Sets.TheRuinsOfBelegost();
 
         public static CardSet PassageThroughMirkwoodNightmare = new Sets.PassageThroughMirkwoodNightmare();
         public static CardSet JourneyAlongTheAnduinNightmare = new Sets.JourneyAlongTheAnduinNightmare();

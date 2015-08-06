@@ -10,12 +10,29 @@ namespace HallOfBeorn.Models
         public CardScore(Card card, float score, string description)
         {
             this.Card = card;
-            this.Score = score;
             this.Description = description;
+
+            AddScore(score);
         }
 
+        private readonly List<float> scores = new List<float>();
+
         public Card Card { get; private set; }
-        public float Score { get; set; }
         public string Description { get; set; }
+
+        public void AddScore(float score)
+        {
+            scores.Add(score);
+        }
+
+        public float Score()
+        {
+            if (scores.Any(x => x == 0))
+            {
+                return 0;
+            }
+
+            return scores.Average();
+        }
     }
 }
