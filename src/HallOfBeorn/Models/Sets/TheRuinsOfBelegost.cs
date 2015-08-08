@@ -48,6 +48,23 @@ Page 3/4",
                 Number = 0,
                 Artist = Artist.Unknown
             });
+            Cards.Add(new Card()
+            {
+                Title = "The Ruins of Belegost Scenario Rules (continued)",
+                CardType = CardType.GenCon_Setup,
+                Text = 
+@"Taking Control of Loot
+
+When the encounter card guarding a Loot objective leaves play, the first player must immediately attach that Loot objective to a hero he controls. If a Loot objective is attached to the active location when the players make enough progress to explore the active location and advance to the next stage, the first player takes control of the Loot objective before advancing to the next stage.
+
+Immune to player card effects
+
+Cards with the text 'Immune to player card effects' ignore the effects of all player cards. Additionally, cards that are immune to player card effects cannot be chosen as targets of player card effects.
+
+Page 4/4",
+                Number = 0,
+                Artist = Artist.Unknown
+            });
             Cards.Add(Card.Hero("Gimli", "", Sphere.Tactics, 11, 2, 2, 2, 5)
                 .WithTraits("Dwarf.", "Noble.", "Warrior.")
                 .WithText("Gimli gets +1 Attack for each damage token on him.")
@@ -113,7 +130,7 @@ Page 3/4",
                 .WithKeywords("Loot.")
                 .WithText("If unattached, the fist player claims Keys of Belegost and attaches it to a hero he controls.\r\nAction: Exhaust Keys of Belegost to choose a hero. Add 1 resource to that hero's resource pool.")
                 .WithInfo(11, 1, Artist.Lucas_Durham));
-            Cards.Add(Card.Objective("Book of Aulë's Childre", "", "The Ruins of Belegost")
+            Cards.Add(Card.Objective("Book of Aulë's Children", "", "The Ruins of Belegost")
                 .WithUnique()
                 .WithTraits("Artifact.", "Item.")
                 .WithKeywords("Loot.")
@@ -143,6 +160,79 @@ Page 3/4",
                 .WithText("Cannot have attachments.\r\nLurker of the Depths cannot be engaged or take more than 4 damage each round.\r\nWhile Lurker of the Depths is in the staging area, it is considered to be engaged with each player.")
                 .WithVictoryPoints(5)
                 .WithInfo(16, 1, Artist.Ethan_Patrick_Harris));
+            Cards.Add(Card.Enemy("Nameless Cave Dweller", "", "The Ruins of Belegost", 35, 255, 255, 255, 5)
+                .WithTraits("Nameless.", "Hazard.")
+                .WithText("Cannot have player card attachments.\r\nX is 1 more than the Discover value on the active location.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if you control a Loot objective).")
+                .WithInfo(17, 3, Artist.Dimitri_Bielak));
+            Cards.Add(Card.Enemy("Old Stone Troll", "", "The Ruins of Belegost", 50, 3, 6, 3, 8)
+                .WithTraits("Troll.", "Hazard.")
+                .WithText("Cannot have player card attachments.\r\nOld Stone Troll gets -10 engagement cost for each Loot objective attached to a hero.\r\nOnly the engaged player can declare attackers against Old Stone Troll.")
+                .WithEasyModeQuantity(0)
+                .WithInfo(18, 2, Artist.Sandara_Tang));
+            Cards.Add(Card.Enemy("Orc of Ered Luin", "", "The Ruins of Belegost", 30, 2, 4, 2, 4)
+                .WithTraits("Orc.")
+                .WithText("When Revealed: Orc of Ered Luin makes an immediate attack against each player that controls at least 1 Loot objective (in turn order).")
+                .WithShadow("Shadow: After this attack, attacking enemy engages the next player, then makes an immediate attack.")
+                .WithInfo(19, 3, Artist.Sam_Lamont));
+            Cards.Add(Card.Enemy("Blue Mountain Goblin", "", "The Ruins of Belegost", 25, 1, 3, 2, 3)
+                .WithTraits("Orc.", "Goblin.")
+                .WithText("While a Loot objective is attached to a hero, Blue Mountain Goblin gains surge.")
+                .WithShadow("Shadow: If you control a Loot objective, put Blue Mountain Goblin into play engaged with you and deal it a shadow card.")
+                .WithInfo(20, 3, Artist.Sam_Lamont));
+            Cards.Add(Card.Location("Naurlhûg's Lair", "", "The Ruins of Belegost", 4, 6)
+                .WithTraits("Underground.")
+                .WithKeywords("Discover 5.")
+                .WithText("Immune to player card effects.\r\nForced: When Naurlhûg's Lair is explored, add the Loot objective from underneath Stalking the Ruins to the staging area faceup.\r\nTravel: Place X resources on Stalking the Ruins, where X is the number of players.")
+                .WithVictoryPoints(4)
+                .WithInfo(21, 1, Artist.Jokubas_Uoginitas));
+            Cards.Add(Card.Location("Abandoned Mine", "", "The Ruins of Belegost", 2, 3)
+                .WithTraits("Underground.")
+                .WithKeywords("Discover 2.")
+                .WithText("While Abandoned Mine is in the staging area, progress cannot be placed on locations in the staging area not named Abandoned Mine.\r\nForced: When resolving the Discover keyword on Abandoned Mine, look at X additional cards where X is the number of players in the game.")
+                .WithInfo(22, 4, Artist.Yoann_Boissonnet));
+            Cards.Add(Card.Location("Flooded Hall", "", "The Ruins of Belegost", 4, 4)
+                .WithTraits("Underground.")
+                .WithKeywords("Discover 4.")
+                .WithText("While Flooded Hall is in the staging area, increase the cost to play each ally by 1.\r\nForced: When resolving the Discover keyword on Flooded Hall, the first player reveals an additional looked at Hazard card for each other player in the game.")
+                .WithEasyModeQuantity(0)
+                .WithInfo(23, 2, Artist.Leanna_Crossan));
+            Cards.Add(Card.Location("Darkened Tunnel", "", "The Ruins of Belegost", 3, 3)
+                .WithTraits("Underground.")
+                .WithKeywords("Discover 2.")
+                .WithText("While Darkened Tunnel is in the staging area, it gains: \"Forced: After a 'when revealed' effect is canceled, discard the top card of the encounter deck. If the discarded card has the Hazard trait, resolve its staging as if it was just revealed from the encounter deck.\"\r\nTravel: Place 1 resource on Stalking the Ruins.")
+                .WithInfo(24, 2, Artist.Yoann_Boissonnet));
+            Cards.Add(Card.Location("Sunken Treasury", "", "The Ruins of Belegost", 1, 4)
+                .WithTraits("Underground.")
+                .WithKeywords("Discover 3.")
+                .WithText("Sunken Treasury gets +1 Threat for each Loot objective attached to a hero.\r\nTravel: Each player discards 1 random card from his hand.")
+                .WithShadow("Shadow: Exhaust a character you control.")
+                .WithInfo(25, 3, Artist.Leanna_Crossan));
+            Cards.Add(Card.Location("Secret Chamber", "", "The Ruins of Belegost", 3, 2)
+                .WithTraits("Underground.", "Hazard.")
+                .WithKeywords("Discover 3.")
+                .WithText("Response: After the players travel to Secret Chamber, if no Loot objective is attached to Secret Chamber, search the encounter discard pile for a Loot objective and attach it to Secret Chamber as a guarded objective.\r\nTravel: Raise each player's threat by 2.")
+                .WithInfo(26, 3, Artist.Jokubas_Uoginitas));
+            Cards.Add(Card.Treachery("Echoes in the Dark", "", "The Ruins of Belegost")
+                .WithKeywords("Doomed 1.")
+                .WithText("When Revealed: Add 1 to the total Threat in the staging area for each character controlled by the first player until the end of the phase.")
+                .WithShadow("Shadow: Discard 1 random card from your hand. If the discarded card is an event, attacking enemy gets +2 Attack.")
+                .WithInfo(27, 3, Artist.Adam_Lane));
+            Cards.Add(Card.Treachery("Spawn of Thangorodrim", "", "The Ruins of Belegost")
+                .WithText("When Revealed: If Naurlhûg is in play, it makes an immediate attack against the first player. If Naurlhûg is not in play, place 1 resource on Stalking the Ruins. Then, if there are at least 3 resources on Stalking the Ruins, add Naurlhûg to the staging area.")
+                .WithShadow("Shadow: Attacking enemy makes an additional attack against you after this one.")
+                .WithEasyModeQuantity(0)
+                .WithInfo(28, 2, Artist.Jokubas_Uoginitas));
+            Cards.Add(Card.Treachery("Concealed Spikes", "", "The Ruins of Belegost")
+                .WithTraits("Hazard.")
+                .WithText("When Revealed: Each player assigns X damage among characters he controls. X is 1 more than the Discover value on the active location.")
+                .WithShadow("Shadow: Assign X damage among characters you control. X is the number of attachments you control. You may discard the highest cost attachment you control to cancel this effect.")
+                .WithInfo(29, 2, Artist.Dimitri_Bielak));
+            Cards.Add(Card.Treachery("Covered Pit", "", "The Ruins of Belegost")
+                .WithTraits("Hazard.")
+                .WithText("When Revealed: Each player discards an ally he controls.")
+                .WithShadow("Shadow: If attacking enemy is non-unique, attach a Loot objective you control to it as a guarded objective. If this attack destroys a character, return attacking enemy to the staging area.")
+                .WithInfo(30, 2, Artist.Dimitri_Bielak));
         }
     }
 }
