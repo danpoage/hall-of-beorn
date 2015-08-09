@@ -422,7 +422,7 @@ namespace HallOfBeorn.Models
             var subtitle = _card.SlugIncludesOppositeTitle ? "-" + _card.OppositeTitle.ToUrlSafeString() : string.Empty;
             var number = _card.StageNumber.ToString();
             var image = _card.ImageName.ToUrlSafeString();
-            var suffix = isFirst ? "A" : "B";
+            var suffix = _card.StageLetter;
 
             return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}{2}-{3}{4}{5}", set, title, subtitle, number, suffix, ext);
         }

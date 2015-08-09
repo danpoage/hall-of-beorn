@@ -17,8 +17,30 @@ namespace HallOfBeorn.Models.Sets
 
             Cards.Add(new Card()
             {
-                Title = "The Ruins of Belegost Scenario Rules",
+                Title = "The Ruins of Belegost Scenario Rules (1)",
                 CardType = CardType.GenCon_Setup,
+                Text = 
+@"... in the ancient cities of Nogrod and Belegost
+in the Blue Mountains were ruined at the 
+breaking of Thangorodrim.
+            -The Return of the King
+
+Explore flooded ruins and encounter ancient evils in The Ruins of Belegost, a scenario designed for The Lord of the Rings: The Card Game special event at Gen Con 2015. This scenario can be played in both standard mode and easy mode, remove each card with a gold-bordered encounter set icon from the encounter deck and add 1 resource to each hero's resource pool when setting up the game.
+
+Expansion Symbol
+
+The cards in The Ruins of Belegost scenario can be identified by this symbol before each card's collector number.
+
+Page 1/4",
+                Number = 0,
+                Quantity = 1,
+                Artist = Artist.Unknown
+            });
+            Cards.Add(new Card()
+            {
+                Title = "The Ruins of Belegost Scenario Rules (2-3)",
+                CardType = CardType.GenCon_Setup,
+                HasSecondImage = true,
                 Text = 
 @"SCENARIO RULES
 Discover X
@@ -50,7 +72,7 @@ Page 3/4",
             });
             Cards.Add(new Card()
             {
-                Title = "The Ruins of Belegost Scenario Rules (continued)",
+                Title = "The Ruins of Belegost Scenario Rules (4)",
                 CardType = CardType.GenCon_Setup,
                 Text = 
 @"Taking Control of Loot
