@@ -176,7 +176,7 @@ Page 4/4",
                 .WithText("Immune to player card effects, Cannot take damage.\r\nX is the number of resources on Stalking the Ruins.\r\nForced: When Naurlhûg makes an attack, the defending player assigns X damage among characters he controls.")
                 .WithVictoryPoints(7)
                 .WithInfo(15, 1, Artist.Sergey_Glushakov));
-            Cards.Add(Card.Enemy("Lurker of the Depths", "", "The Ruines of Belegost", 50, 4, 5, 2, 12)
+            Cards.Add(Card.Enemy("Lurker of the Depths", "", "The Ruins of Belegost", 50, 4, 5, 2, 12)
                 .WithUnique()
                 .WithTraits("Creature.")
                 .WithText("Cannot have attachments.\r\nLurker of the Depths cannot be engaged or take more than 4 damage each round.\r\nWhile Lurker of the Depths is in the staging area, it is considered to be engaged with each player.")
