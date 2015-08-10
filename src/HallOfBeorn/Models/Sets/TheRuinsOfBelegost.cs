@@ -203,6 +203,7 @@ Page 4/4",
                 .WithShadow("Shadow: If you control a Loot objective, put Blue Mountain Goblin into play engaged with you and deal it a shadow card.")
                 .WithInfo(20, 3, Artist.Sam_Lamont));
             Cards.Add(Card.Location("Naurlhûg's Lair", "", "The Ruins of Belegost", 4, 6)
+                .WithUnique()
                 .WithTraits("Underground.")
                 .WithKeywords("Discover 5.")
                 .WithText("Immune to player card effects.\r\nForced: When Naurlhûg's Lair is explored, add the Loot objective from underneath Stalking the Ruins to the staging area faceup.\r\nTravel: Place X resources on Stalking the Ruins, where X is the number of players.")
