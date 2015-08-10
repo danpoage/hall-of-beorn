@@ -22,6 +22,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithTemplate("<p>If the active location shares a <b><i>Trait</i></b> with a location in the victory display, {self} gets +2 {Willpower}.</p><p>If the attacking enemy shares a <b><i>Trait</i></b> with an enemy in the victory display, {self} gets +2 {Defense}.</p><p style='text-align:center;'><i>&quot;Did you not say that you wished to see Elf-magic?&quot;<br>&ndash;Galadriel, The Fellowship of the Ring</i></p>")
                 .WithInfo(28, 1, Artist.Alexandre_Dainche));
             Cards.Add(Card.Ally("Veteran of Osgiliath", "", Sphere.Leadership, 3, 1, 2, 1, 2)
+                .WithGeneric()
                 .WithTraits("Gondor.", "Warrior.")
                 .WithText("Veteran of Osgiliath gets +1 Willpower, +1 Attack, and +1 Defense while your threat is 40 or higher.")
                 .WithFlavor("\"So do we ever watch the shores nigh Osgiliath, which our enemies now partly hold, and issue from it to harry our lands.\" —Faramir, The Two Towers")
@@ -33,6 +34,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithTemplate("<p>Ready up to X {trait:Dunedain.@Dúnedain} characters you control. X is the number of enemies engaged with you.</p><p style='text-align:center;'>&quot;But when dark things come from the houseless hills, or creep from sunless woods, they fly from us.&quot;<br>&ndash;Aragorn, The Fellowship of the Ring</p>")
                 .WithInfo(30, 3, Artist.Smirtouille));
             Cards.Add(Card.Ally("Derndingle Warrior", "", Sphere.Tactics, 2, 1, 1, 2, 3)
+                .WithGeneric()
                 .WithTraits("Ent.")
                 .WithKeywords("Sentinel.")
                 .WithText("Cannot have restricted attachments. Enters play exhausted.\r\n While Derndingle Warrior is defending, it gains: \"Action: Deal 1 damage to Derndingle Warrior to give it +3 Defense for this attack.\" (Limit once per attack.)")
@@ -44,6 +46,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithTemplate("<p><b>Response:</b> After an {trait:Ent.@Ent} character takes any amount of damage, ready it. That character gets +3 {Attack} until the end of the phase.</p><p style='text-align:center'>&quot;They roared and boomed and trumpeted, until stones began to crack and fall at the mere noise of them.&quot; &ndash;Merry, The Two Towers</p>")
                 .WithInfo(32, 3, Artist.Jordan_Saia));
             Cards.Add(Card.Ally("Elven Jeweler", "", Sphere.Spirit, 2, 1, 1, 1, 2)
+                .WithGeneric()
                 .WithTraits("Noldor.", "Craftsman.")
                 .WithText(" Discard 2 cards from your hand to put Elven Jeweler into play from your hand, under your control.")
                 .WithFlavor("\"...to the Elven-smiths they were but trifles...\" -Gandalf, The Fellowship of the Ring")
