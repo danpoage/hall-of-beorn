@@ -282,6 +282,12 @@ namespace HallOfBeorn.Models
             }
         }
 
+        public char GetSecondStageLetter()
+        {
+            var second = (Char)(Convert.ToUInt16(_card.StageLetter) + 1);
+            return second;
+        }
+
         public string QuestPoints
         {
             get { return _card.QuestPoints.Description(_card.IsVariableQuestPoints); }
@@ -422,7 +428,12 @@ namespace HallOfBeorn.Models
             var subtitle = _card.SlugIncludesOppositeTitle ? "-" + _card.OppositeTitle.ToUrlSafeString() : string.Empty;
             var number = _card.StageNumber.ToString();
             var image = _card.ImageName.ToUrlSafeString();
-            var suffix = _card.StageLetter;
+
+            var suffix = isFirst ? "A" : "B";
+            if (_card.StageLetter != 'A')
+            {
+                suffix = isFirst ? _card.StageLetter.ToString() : GetSecondStageLetter().ToString();
+            }
 
             return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}{2}-{3}{4}{5}", set, title, subtitle, number, suffix, ext);
         }
