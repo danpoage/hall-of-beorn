@@ -13,6 +13,7 @@ namespace HallOfBeorn.Models.ProductGroups
             AddProduct(Product.TheBlackRiders);
             AddProduct(Product.TheRoadDarkens);
             AddProduct(Product.TheTreasonOfSaruman);
+            AddProduct(Product.TheLandOfShadow);
         }
     }
 }

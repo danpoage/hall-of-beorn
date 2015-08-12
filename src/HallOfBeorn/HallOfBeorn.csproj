@@ -280,6 +280,7 @@
     <Compile Include="Models\EncounterSet.cs" />
     <Compile Include="Models\EncounterSetViewModel.cs" />
     <Compile Include="Models\Products\EscapeFromMountGramProduct.cs" />
+    <Compile Include="Models\Products\TheLandOfShadowProduct.cs" />
     <Compile Include="Models\Products\TheRuinsOfBelegostProduct.cs" />
     <Compile Include="Models\Search\EnumFilterDefinition.cs" />
     <Compile Include="Models\Search\FilterDefinition.cs" />
@@ -419,6 +420,7 @@
     <Compile Include="Models\Sets\TheBattleOfFiveArmiesNightmare.cs" />
     <Compile Include="Models\Sets\TheBloodOfGondorNightmare.cs" />
     <Compile Include="Models\Sets\TheDruadanForestNightmare.cs" />
+    <Compile Include="Models\Sets\TheLandOfShadow.cs" />
     <Compile Include="Models\Sets\TheLonelyMountainNightmare.cs" />
     <Compile Include="Models\Sets\TheLostRealm.cs" />
     <Compile Include="Models\Sets\TheMorgulValeNightmare.cs" />

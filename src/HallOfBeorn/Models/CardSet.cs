@@ -99,6 +99,7 @@ namespace HallOfBeorn.Models
         public static CardSet TheBlackRiders = new Sets.TheBlackRiders();
         public static CardSet TheRoadDarkens = new Sets.TheRoadDarkens();
         public static CardSet TheTreasonOfSaruman = new Sets.TheTreasonOfSaruman();
+        public static CardSet TheLandOfShadow = new Sets.TheLandOfShadow();
 
         public static CardSet TheMassingAtOsgiliath = new Sets.TheMassingatOsgiliath();
         public static CardSet TheBattleOfLakeTown = new Sets.TheBattleofLakeTown();

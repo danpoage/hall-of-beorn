@@ -91,6 +91,7 @@ namespace HallOfBeorn.Models
         public static Product TheBlackRiders = new TheBlackRidersProduct();
         public static Product TheRoadDarkens = new TheRoadDarkensProduct();
         public static Product TheTreasonOfSaruman = new TheTreasonOfSarumanProduct();
+        public static Product TheLandOfShadow = new TheLandOfShadowProduct();
 
         //GenCon and Fellowship Event Decks
         public static Product TheMassingAtOsgiliath = new TheMassingAtOsgiliathProduct();
