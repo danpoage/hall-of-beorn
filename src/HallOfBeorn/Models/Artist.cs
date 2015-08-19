@@ -468,6 +468,11 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Julepe);
             all.Add(Artist.Cristina_Vela);
             all.Add(Artist.Kara_Williams);
+
+            //Escape from Mount Gram
+            all.Add(Artist.Katayanagi);
+            all.Add(Artist.Tawny_Fritzinger);
+            all.Add(Artist.Kaija_Rudkiewicz);
         }
 
         private static List<Artist> all = new List<Artist>();
@@ -541,6 +546,8 @@ namespace HallOfBeorn.Models
         public static Artist Jokubas_Uoginitas = new Artist { Name = "Jokubas Uoginitas", URL = "https://www.behance.net/jokub" };
         public static Artist Julia_Alekseeva = new Artist { Name = "Julia Alekseeva", URL = "http://cg-warrior.deviantart.com" };
         public static Artist Justin_Gerard = new Artist { Name = "Justin Gerard", URL = "http://www.gallerygerard.com/the-art-of-justin-gerard" };
+        public static Artist Kaija_Rudkiewicz = new Artist { Name = "Kaija Rudkiewicz", URL = "https://www.behance.net/RunFreakRun" };
+        public static Artist Katayanagi = new Artist { Name = "Katayanagi", URL = "http://aldok.deviantart.com" };
         public static Artist Kieran_Tatsue = new Artist { Name = "Kieran Tatsue", URL = "http://valravnclaw.deviantart.com/" };
         public static Artist Kimberly80 = new Artist { Name = "kimberly80", URL = "http://kimberly80.deviantart.com" };
         public static Artist Kuun_Suru = new Artist { Name = "Kuun Suru", URL = "http://finduilas80.deviantart.com" };
@@ -591,6 +598,7 @@ namespace HallOfBeorn.Models
         public static Artist Stirzocular = new Artist { Name = "Stirzocular", URL = "http://stirzocular.deviantart.com" };
         public static Artist StrangerToTheRain = new Artist { Name = "Stranger to the Rain", URL = "http://strangertotherain.deviantart.com" };
         public static Artist Taina_Dos = new Artist { Name = "Tainá dOS", URL = "http://taina-dos.deviantart.com/" };
+        public static Artist Tawny_Fritzinger = new Artist { Name = "Tawny Fritzinger", URL = "http://www.tawnyfritz.com" };
         public static Artist Ted_Nasmith = new Artist { Name = "Ted Nasmith", URL = "http://tednasmith.mymiddleearth.com" };
         public static Artist Unknown = new Artist { Name = "Unknown", URL = "https://www.google.com/search?q=unknown+artist" };
         public static Artist US_Pixelstory = new Artist { Name = "US-Pixelstory", URL = "http://us-pixelstory.deviantart.com" };
