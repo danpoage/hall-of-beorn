@@ -72,6 +72,13 @@ namespace HallOfBeorn.Services
             }
         }
 
+        private Func<Card, Category> CreateCategoryFilter(Func<Card, bool> predicate, Category category)
+        {
+            return new Func<Card, Category>((card) => {
+                return (predicate(card)) ? category : Category.None;
+            });
+        }
+
         private Func<Card, Category> CreateCategoryFilter(string pattern, Category category)
         {
             return CreateCategoryFilter(pattern, category, null);
@@ -293,7 +300,7 @@ namespace HallOfBeorn.Services
                 CreateCategoryFilter(@"place[\s].*progress|switch the active location|location enters play|location gets -.*Threat|While attached to a location", Category.Location_Control),
                 CreateCategoryFilter("ready.*(character|hero|ally|allies|him|her|them|Prince|Boromir)", Category.Readying, "While Dain Ironfoot is ready"),
                 CreateCategoryFilter(@"(return.*discard[\s]pile.*hand|shuffle.*discard[\s]pile.*back)", Category.Recursion, "encounter discard pile"),
-                CreateCategoryFilter(@"deal[\s]([\d]|X)*[\s]damage|Deal damage to the attacking enemy|Excess damage dealt by this attack is assigned|assigned as damage to the chosen enemy|deal an additional.*damage", Category.Direct_Damage, "1 damage to Erkenbrand"),
+                CreateCategoryFilter(@"deal[\s]([\d]|X)*[\s]damage|Deal damage to the attacking enemy|Excess damage dealt by this attack is assigned|assigned as damage to the chosen enemy|deal an additional.*damage", Category.Direct_Damage, "1 damage to Erkenbrand", "deal 1 damage to him", "deal 1 damage to Treebeard", "deal 1 damage to Eärendil"),
                 CreateCategoryFilter(@"(look at|revealed|enters play|top of the).*encounter[\s]deck", Category.Encounter_Control),
                 CreateCategoryFilter(@"cancel.*shadow|shadow[\s]cards|look at 1 shadow card|Discard each shadow card", Category.Shadow_Control), 
                 CreateCategoryFilter(@"(reduce|reduces|lower).*(his|your|player).*threat", Category.Threat_Control, "your threat is lower"),
@@ -302,7 +309,8 @@ namespace HallOfBeorn.Services
                 CreateCategoryFilter(@"after[\s].*[\s](enters|enters or leaves)[\s]play", Category.Enters_Play),
                 CreateCategoryFilter(@"(after[\s].*[\s]leaves[\s]play|return (it|him|Keen-eyed Took) to your hand)|if that ally is still in play, add it to your hand", Category.Leaves_Play, "After attached location leaves play"),
                 CreateCategoryFilter(@"(after[\s]you[\s]play[\s].*[\s]from[\s]your[\s]hand|after you play)", Category.Played_From_Hand),
-                CreateCategoryFilter(@"attach 1 attachment card|an attachment of cost 3 or less and put it into play|you may attach that card facedown|to play Weapon and Armor attachments on|put into play the revealed card for no cost", Category.Equipping)
+                CreateCategoryFilter(@"attach 1 attachment card|an attachment of cost 3 or less and put it into play|you may attach that card facedown|to play Weapon and Armor attachments on|put into play the revealed card for no cost", Category.Equipping),
+                CreateCategoryFilter((card) => { return card.Keywords.Any(x => x.StartsWith("Secrecy ")) || card.Text.ToLowerSafe().Contains("if your threat is 20 or less"); }, Category.Secrecy)
             };
 
             foreach (var card in cards.Where(x => IsCategorizable(x)))

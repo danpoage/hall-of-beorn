@@ -409,7 +409,7 @@ The players have won the game.",
                 Sphere = Sphere.Lore,
                 Quantity = 3,
                 ResourceCost = 1,
-                Text = "Play during the quest phase, before the staging step.Action: Deal 2 damage to the first enemy revealed from the encounter deck this phase.",
+                Text = "Play during the quest phase, before the staging step.\r\nAction: Deal 2 damage to the first enemy revealed from the encounter deck this phase.",
                 Number = 18,
                 Artist = Artist.Ilich_Henriquez
             });

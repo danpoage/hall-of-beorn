@@ -34,6 +34,7 @@ namespace HallOfBeorn.Models
         Staging_Area_Attack,
         Enters_Play,
         Leaves_Play,
-        Played_From_Hand
+        Played_From_Hand,
+        Secrecy
     }
 }

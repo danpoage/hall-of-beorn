@@ -190,7 +190,7 @@ namespace HallOfBeorn.Models.Sets
                 Sphere = Sphere.Neutral,
                 Quantity = 3,
                 ResourceCost = 4,
-                Text = "Attach to a hero you control.Attached hero collects 1 additional resource during the resource phase each round.",
+                Text = "Attach to a hero you control.\r\nAttached hero collects 1 additional resource during the resource phase each round.",
                 Keywords = new List<string>() { "Secrecy 3." },
                 Number = 62,
                 Artist = Artist.Magali_Villeneuve
