@@ -236,7 +236,7 @@ namespace HallOfBeorn.Models.Sets
                 Sphere = Sphere.Leadership,
                 ResourceCost = 1,
                 Traits = new List<string>() { "Item." },
-                Text = "Attach to a Hobbit hero. Limit 1 per hero.\r\nAttached hero gets +2 Defense while defending against an attack by an enemy with an egagement cost higher than your threat.",
+                Text = "Attach to a Hobbit hero. Limit 1 per hero.\r\nAttached hero gets +2 Defense while defending against an attack by an enemy with an engagement cost higher than your threat.",
                 FlavorText = "In their dark cloaks they were invisible as if they all had magic rings. -The Fellowship of the Ring",
                 Quantity = 3,
                 Number = 13,

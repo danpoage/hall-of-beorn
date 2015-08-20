@@ -35,6 +35,7 @@ namespace HallOfBeorn.Models
         Enters_Play,
         Leaves_Play,
         Played_From_Hand,
-        Secrecy
+        Secrecy,
+        Stealth
     }
 }
