@@ -117,7 +117,7 @@ While Amon Lhaw is the active location, treat all attachments as if their printe
                 Sphere = Sphere.Lore,
                 Quantity = 3,
                 ResourceCost = 3,
-                Text = "Play during the Quest phase, before characters are committed to the Quest.Action: Reveal 1 less card from the encounter deck this phase. (To a minimum of 1.)",
+                Text = "Play during the Quest phase, before characters are committed to the Quest.\r\nAction: Reveal 1 less card from the encounter deck this phase. (To a minimum of 1.)",
                 Number = 80,
                 Artist = Artist.Magali_Villeneuve
             });
