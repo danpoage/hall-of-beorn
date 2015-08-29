@@ -11,6 +11,7 @@
     "Rossiel", "Veteran of Osgiliath", "Descendants of Kings", "Derndingle Warrior", "Boomed and Trumpeted", "Elven Jeweler", "Double Back", "Leave No Trace", "Distant Stars", "Keen As Lances",
     "Skinbark", "Gamling", "Staff of Lebethron", "Ambush", "Snowmane", "Taste it Again!", "In the Shadows", "Speak Your Promise!",
     "Sword of Belegost", "Map of Ered Luin", "Keys of Belegost", "Book of Aule's Children", "Dwarven Torch", "Blue Mountain Gem", "Naurlhug", "Lurker of the Depths", "Naurlhug's Lair",
+    "Shelob","Henneth Annun","The Black Gate","Smeagol","Smeagol's Secret Way","The Cleft of Cirith Ungol","Morgul Vale",
           "+set:",
           "-set:",
           "+type:",

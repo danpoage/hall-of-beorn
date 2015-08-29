@@ -574,7 +574,7 @@
     <Content Include="Images\unique-card.png" />
     <Content Include="Images\unique.png" />
     <Content Include="Images\willpower.gif" />
-    <Content Include="Scripts\autocomplete4.js" />
+    <Content Include="Scripts\autocomplete5.js" />
     <Content Include="Scripts\cardSearch.js" />
     <Content Include="Scripts\highcharts.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
