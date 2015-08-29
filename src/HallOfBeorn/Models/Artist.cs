@@ -468,6 +468,7 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Julepe);
             all.Add(Artist.Cristina_Vela);
             all.Add(Artist.Kara_Williams);
+            all.Add(Artist.Carlos_Palma_Cruchaga);
 
             //Escape from Mount Gram
             all.Add(Artist.Katayanagi);
@@ -498,6 +499,7 @@ namespace HallOfBeorn.Models
         public static Artist Blaz_Porenta = new Artist { Name = "Blaz Porenta", URL = "http://ninja2assn.deviantart.com" };
         public static Artist Bobby_Fieldhouse = new Artist { Name = "Bobby Fieldhouse", URL = "https://www.google.com/search?q=Bobby+Fieldhouse+Art" };
         public static Artist BrokenMachine86 = new Artist { Name = "brokenmachine86", URL = "http://brokenmachine86.deviantart.com" };
+        public static Artist Carlos_Palma_Cruchaga = new Artist { Name = "Carlos Palma Cruchaga", URL = "http://artworkproject.com/profile/CarlosPalmaCruchaga" };
         public static Artist Catherine_Karina_Chmiel = new Artist { Name = "Catherine Karina Chmiel", URL = "http://kasiopea.art.pl/en/home" };
         public static Artist Cherif_Fortin = new Artist { Name = "Cherif Fortin", URL = "http://ijoust.deviantart.com" };
         public static Artist Christian_Quinot = new Artist { Name = "Christian Quinot", URL = "http://darkcloud013.deviantart.com" };
@@ -682,6 +684,7 @@ namespace HallOfBeorn.Models
         public static Artist David_Kegg = new Artist { Name = "David Kegg", URL = "http://david-kegg.deviantart.com" };
         public static Artist David_Lecossu = new Artist { Name = "David Lecossu", URL = "http://d--co.deviantart.com" };
         public static Artist David_A_Nash = new Artist { Name = "David A. Nash", URL = "http://davidnashart.blogspot.com" };
+        public static Artist Davis_Engel = new Artist { Name = "Davis Engel", URL = "http://davisengel.com" };
         public static Artist Dean_Spencer = new Artist { Name = "Dean Spencer", URL = "http://www.deanspencerart.com" };
         public static Artist Diego_Gisbert_Llorens = new Artist { Name = "Diego Gisbert Llorens", URL = "http://diegogisbertllorens.deviantart.com" };
         public static Artist Dimitri_Bielak = new Artist { Name = "Dimitri Bielak", URL = "http://bielakdimitri.canalblog.com" };
