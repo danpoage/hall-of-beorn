@@ -469,6 +469,7 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Cristina_Vela);
             all.Add(Artist.Kara_Williams);
             all.Add(Artist.Carlos_Palma_Cruchaga);
+            all.Add(Artist.Fabio_Rodrigues);
 
             //Escape from Mount Gram
             all.Add(Artist.Katayanagi);
@@ -525,6 +526,7 @@ namespace HallOfBeorn.Models
         public static Artist Elfkin = new Artist { Name = "elfkin", URL = "http://elfkin.deviantart.com" };
         public static Artist Elshazam = new Artist { Name = "elshazam", URL = "http://elshazam.deviantart.com" };
         public static Artist David_J_Findlay = new Artist { Name = "David J. Findlay", URL = "http://ethalenskye.deviantart.com" };
+        public static Artist Fabio_Rodrigues = new Artist { Name = "Fabio Rodrigues", URL = "http://www.rodriguesart.com" };
         public static Artist FangornSpirit = new Artist { Name = "fangornspirit", URL = "https://www.google.com/search?q=Fangorn+Spirit+Art" };
         public static Artist Felix_Sotomayor = new Artist { Name = "Félix Sotomayor", URL = "http://feliche.deviantart.com" };
         public static Artist Ferdinand_Dumago_Ladera = new Artist { Name = "Ferdinand Dumago Ladera", URL = "http://ferdinandladera.deviantart.com" };
