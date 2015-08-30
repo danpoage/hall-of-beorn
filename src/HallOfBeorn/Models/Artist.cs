@@ -462,6 +462,9 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Jokubas_Uoginitas);
             all.Add(Artist.Leanna_Crossan);
 
+            //The Voice of Isengard Nightmare
+            all.Add(Artist.Chris_Grun);
+
             //The Land of Shadow
             all.Add(Artist.Jason_Cheeseman_Meyer);
             all.Add(Artist.Joshua_Cairos);
@@ -660,6 +663,7 @@ namespace HallOfBeorn.Models
         public static Artist Carolina_Eade = new Artist { Name = "Carolina Eade", URL = "http://carolina-eade.deviantart.com" };
         public static Artist Cassandre_Bolan = new Artist { Name = "Cassandre Bolan", URL = "http://www.cassandrebolan.com" };
         public static Artist Charles_Urbach = new Artist { Name = "Charles Urbach", URL = "http://charlesurbachart.deviantart.com" };
+        public static Artist Chris_Grun = new Artist { Name = "Chris Grun", URL = "http://cgrun.blogspot.com" };
         public static Artist Chris_Rahn = new Artist { Name = "Chris Rahn", URL = "http://www.rahnart.com" };
         public static Artist Chris_Rallis = new Artist { Name = "Chris Rallis", URL = "http://chrisra.deviantart.com" };
         public static Artist Christina_Davis = new Artist { Name = "Christina Davis", URL = "http://sentinel13.deviantart.com" };

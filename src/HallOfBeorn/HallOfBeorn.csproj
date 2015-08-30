@@ -282,6 +282,7 @@
     <Compile Include="Models\Products\EscapeFromMountGramProduct.cs" />
     <Compile Include="Models\Products\TheLandOfShadowProduct.cs" />
     <Compile Include="Models\Products\TheRuinsOfBelegostProduct.cs" />
+    <Compile Include="Models\Products\TheVoiceOfIsengardNightmareProduct.cs" />
     <Compile Include="Models\Search\EnumFilterDefinition.cs" />
     <Compile Include="Models\Search\FilterDefinition.cs" />
     <Compile Include="Models\HasShadow.cs" />
@@ -410,6 +411,7 @@
     <Compile Include="Models\Sets\FoundationsOfStone.cs" />
     <Compile Include="Models\Sets\FoundationsOfStoneNightmare.cs" />
     <Compile Include="Models\Sets\HeirsOfNumenor.cs" />
+    <Compile Include="Models\Sets\IntoFangornNightmare.cs" />
     <Compile Include="Models\Sets\IntoIthilienNightmare.cs" />
     <Compile Include="Models\Sets\IntoThePitNightmare.cs" />
     <Compile Include="Models\Sets\JourneyAlongTheAnduinNightmare.cs" />
@@ -420,6 +422,7 @@
     <Compile Include="Models\Sets\TheBattleOfFiveArmiesNightmare.cs" />
     <Compile Include="Models\Sets\TheBloodOfGondorNightmare.cs" />
     <Compile Include="Models\Sets\TheDruadanForestNightmare.cs" />
+    <Compile Include="Models\Sets\TheFordsOfIsenNightmare.cs" />
     <Compile Include="Models\Sets\TheLandOfShadow.cs" />
     <Compile Include="Models\Sets\TheLonelyMountainNightmare.cs" />
     <Compile Include="Models\Sets\TheLostRealm.cs" />
@@ -466,6 +469,7 @@
     <Compile Include="Models\Sets\TheWastesOfEriador.cs" />
     <Compile Include="Models\Sets\TheWatcherInTheWater.cs" />
     <Compile Include="Models\Sets\TheWatcherInTheWaterNightmare.cs" />
+    <Compile Include="Models\Sets\ToCatchAnOrcNightmare.cs" />
     <Compile Include="Models\Sets\TroubleInTharbad.cs" />
     <Compile Include="Models\Sets\TheVoiceOfIsengard.cs" />
     <Compile Include="Models\Trait.cs" />
