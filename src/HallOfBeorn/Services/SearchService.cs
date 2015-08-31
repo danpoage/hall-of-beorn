@@ -312,7 +312,7 @@ namespace HallOfBeorn.Services
             {
                 //limit = 12;
                 filters.Add(new SearchFilter((s, c) => { return (c.CardType == CardType.Hero && c.CardSet.Name == "Core Set"); }, 100f, "Default Search - Core Set Heroes"));
-                model.Sort = Sort.Set_Number;
+                //model.Sort = Sort.Set_Number;
             }
 
             if (filters.Count > 0)
