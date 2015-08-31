@@ -216,7 +216,20 @@
         </div>
     </div>
 }
-
+<div>
+    @if (@Model.Cards.Count == 0)
+    {
+        <span>No Results Found</span> 
+    }
+    else if (@Model.Cards.Count == 1)
+    {
+        <span>1 Result Found</span>
+    }
+    else
+    {
+        <span>@Model.Cards.Count Results Found</span>
+    }
+</div>
 <div>
 @foreach (var card in @Model.Cards)
 {    
