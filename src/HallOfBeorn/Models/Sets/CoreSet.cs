@@ -272,6 +272,7 @@ The delver mined, the mason built.
                 Willpower = 1,
                 HitPoints = 2,
                 Traits = new List<string>() { "Gondor.", "Warrior." },
+                FlavorText = "\"But the Lords of Minas Tirith still fight on, defying our enemies, keeping the passage of the River from Argonath to the Sea.\"\r\n-Elrond, The Fellowship of the Ring",
                 Quantity = 3,
                 Number = 13,
                 Artist = Artist.Leonardo_Borazio
@@ -290,6 +291,7 @@ The delver mined, the mason built.
                 HitPoints = 3,
                 Traits = new List<string>() { "Gondor.", "Noble.", "Ranger." },
                 Text = "Action: Exhaust Faramir to choose a player. Each character controlled by that player gets +1 Willpower until the end of the phase.",
+                FlavorText = "\"He leads now in all perilous ventures. But his life is charmed, or fate spares him for some other end.\r\n-Mablung, Ranger of Ithilien\r\nThe Two Towers",
                 Quantity = 2,
                 Number = 14,
                 Artist = Artist.Jeff_Himmelman
@@ -362,6 +364,7 @@ The delver mined, the mason built.
                 HitPoints = 3,
                 Traits = new List<string>() { "Dwarf.", "Warrior." },
                 Text = "Response: After Longbeard Orc Slayer enters play, deal 1 damage to each Orc enemy in play.",
+                FlavorText = "Five dead Orcs lay there. They had been hewn with many cruel strokes, and two had been beheaded. The ground was wet with their dark blood.\r\n-The Two Towers",
                 Quantity = 2,
                 Number = 18,
                 Artist = Artist.Kaya
@@ -380,6 +383,7 @@ The delver mined, the mason built.
                 HitPoints = 4,
                 Traits = new List<string>() { "Dwarf.", "Warrior." },
                 Text = "Response: After a Dwarf hero you control leaves play, put Brok Ironfist into play from your hand.",
+                FlavorText = "...there is no knowing what a Dwarf will not dare and do for revenge and the recovery of his own.\r\n-The Hobbit",
                 Quantity = 1,
                 Number = 19,
                 Artist = Artist.Even_Mehl_Amundsen
@@ -392,6 +396,7 @@ The delver mined, the mason built.
                 Sphere = Sphere.Leadership,
                 ResourceCost = 1,
                 Text = "Action: Choose and ready 1 ally card.",
+                FlavorText = "\"...no road looks toward safety any longer. Be vigilant!\"\r\n-Gandalf, The Return of the King",
                 Quantity = 2,
                 Number = 20,
                 Artist = Artist.Daarken
@@ -404,6 +409,7 @@ The delver mined, the mason built.
                 Sphere = Sphere.Leadership,
                 ResourceCost = 0,
                 Text = "Action: Exhaust 1 hero you control to choose and ready a different hero.",
+                FlavorText = "\"We will make such a chase as shall be accounted a marvel among the Three Kindreds: Elves, Dwarves, and Men.\"\r\n-Aragorn, The Two Towers",
                 Quantity = 2,
                 Number = 21,
                 Artist = Artist.Tony_Foti
@@ -416,6 +422,11 @@ The delver mined, the mason built.
                 Sphere = Sphere.Leadership,
                 ResourceCost = 2,
                 Text = "Action: Until the end of the phase, all characters get +1 Attack. All Gondor characters also get +1 Defense until the end of the phase.",
+                FlavorText = 
+@"And the tree that was withered shall be renewed,
+and he shall plant it in high places,
+and the City shall be blessed.
+-The Return of the King",
                 Quantity = 2,
                 Number = 22,
                 Artist = Artist.Margaret_Hardy
@@ -428,6 +439,7 @@ The delver mined, the mason built.
                 Sphere = Sphere.Leadership,
                 ResourceCost = 1,
                 Text = "Action: Put 1 ally card into play from your hand. At the end of the phase, if that ally is still in play, return it to your hand.",
+                FlavorText = "There is a seed of courage hidden (often deeply, it is true) in the heart of the fattest and most timid hobbit, waiting for some final and desperate danger to make it grow.\r\n-The Fellowship of the Ring",
                 Quantity = 2,
                 Number = 23,
                 Artist = Artist.Winona_Nelson
@@ -440,6 +452,7 @@ The delver mined, the mason built.
                 Sphere = Sphere.Leadership,
                 ResourceCost = 1,
                 Text = "Response: After an ally card leaves play, that card's controller draws 2 cards.",
+                FlavorText = "\"He fell defending the Hobbits, while I was away upon the hill.\r\n-Aragorn, The Two Towers",
                 Quantity = 2,
                 Number = 24,
                 Artist = Artist.David_A_Nash
@@ -452,6 +465,7 @@ The delver mined, the mason built.
                 Sphere = Sphere.Leadership,
                 ResourceCost = 5,
                 Text = "Action: Ready all character cards in play.",
+                FlavorText = "\"If there is only one way, then I must take it. What comes after must come.\" -Frodo Baggins, The Two Towers",
                 Quantity = 1,
                 Number = 25,
                 Artist = Artist.Daarken
@@ -482,6 +496,7 @@ The delver mined, the mason built.
                 IsUnique = true,
                 Traits = new List<string>() { "Artifact.", "Item." },
                 Text = "Attach to a hero.\r\nAttached hero gains +2 Willpower.\r\nIf attached hero is Aragorn, he also gains a Spirit resource icon.",
+                FlavorText = "\"You needn't,\" said Bilbo. \"As a matter of fact it was all mine. Except that Aragorn insisted on my putting in a green stone. He seemed to think it important. I don't know why.\"\r\n-The Fellowship of the Ring",
                 Keywords = new List<string>() { "Restricted." },
                 Quantity = 1,
                 Number = 27,
