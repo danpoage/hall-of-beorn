@@ -72,6 +72,7 @@ namespace HallOfBeorn.Models.Sets
                 HitPoints = 4,
                 Traits = new List<string>() { "Dwarf.", "Noble." },
                 Text = "Response: After Glóin suffers damage, add 1 resource to his resource pool for each point of damage he just suffered.",
+                FlavorText = "His beard, very long and forked, was white, nearly as white as the snow-white cloth of his garments.\r\n-The Fellowship of the Ring",
                 Quantity = 1,
                 Number = 3,
                 Artist = Artist.Tom_Garden
@@ -109,6 +110,7 @@ namespace HallOfBeorn.Models.Sets
                 HitPoints = 4,
                 Traits = new List<string>() { "Noble.", "Silvan.", "Warrior." },
                 Text = "Response: After Legolas participates in an attack that destroys an enemy, place 2 progress tokens on the current quest.",
+                FlavorText = "\"I can walk this path, but others have not this skill.\"\r\n-The Fellowship of the Ring",
                 Keywords = new List<string>() { "Ranged." },
                 Quantity = 1,
                 Number = 5,
@@ -128,6 +130,12 @@ namespace HallOfBeorn.Models.Sets
                 HitPoints = 4,
                 Traits = new List<string>() { "Dwarf.", "Warrior." },
                 Text = "While Thalin is committed to a quest, deal 1 damage to each enemy as it is revealed by the encounter deck.",
+                FlavorText = 
+@"There hammer on the anvil smote,
+There chisel clove, and graver wrote;
+There forged was blade, and bound was hilt;
+The delver mined, the mason built.
+-The Fellowship of the Ring",
                 Quantity = 1,
                 Number = 6,
                 Artist = Artist.Jen_Zee,
@@ -167,6 +175,7 @@ namespace HallOfBeorn.Models.Sets
                 HitPoints = 3,
                 Traits = new List<string>() { "Gondor.", "Noble." },
                 Text = "Response: Exhaust Eleanor to cancel the 'when revealed' effects of a treachery card just revealed by the encounter deck. Then, discard that card, and replace it with the next card from the encounter deck.",
+                FlavorText = "\"Gondor wanes, you say. But Gondor stands, and even the end of its strength is very strong.\" -Boromir, The Fellowship of the Ring",
                 Quantity = 1,
                 Number = 8,
                 Artist = Artist.Magali_Villeneuve,
@@ -187,6 +196,7 @@ namespace HallOfBeorn.Models.Sets
                 HitPoints = 4,
                 Traits = new List<string>() { "Rohan.", "Warrior." },
                 Text = "Dúnhere can target enemies in the staging area when he attacks alone. When doing so, he gets +1 Attack.",
+                FlavorText = "Captains rode to meet him at the ford, bearing messages from Gandalf. Dúnhere, chieftain of the folk of Harrowdale, was at their head.\r\n-The Return of the King",
                 Quantity = 1,
                 Number = 9,
                 Artist = Artist.Jeff_Himmelman
@@ -205,6 +215,7 @@ namespace HallOfBeorn.Models.Sets
                 HitPoints = 3,
                 Traits = new List<string>() { "Gondor.", "Noble.", "Steward." },
                 Text = "Action: Exhaust Denethor to look at the top card of the encounter deck. You may move that card to the bottom of the deck.",
+                FlavorText = "\"And the lord Denethor is unlike other men: he sees far.\"\r\n-Beregond, The Return of the King",
                 Quantity = 1,
                 Number = 10,
                 Artist = Artist.Tiziano_Baracchi
@@ -223,6 +234,7 @@ namespace HallOfBeorn.Models.Sets
                 HitPoints = 5,
                 Traits = new List<string>() { "Noble.", "Noldor.", "Warrior." },
                 Text = "Action: Pay 1 resource from Glorfindel's pool to heal 1 damage on any character. (Limit once per round.)",
+                FlavorText = "\"You saw him for a moment as he is upon the other side: one of the mighty of the firstborn.\"\r\n-Gandalf, The Fellowship of the Ring",
                 Quantity = 1,
                 Number = 11,
                 Artist = Artist.Katherine_Dinger
@@ -242,6 +254,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Dúnedain.", "Ranger." },
                 NormalizedTraits = new List<string> { "Dunedain." },
                 Text = "Action: Exhaust Beravor to choose a player. That player draws 2 cards. Limit once per round.",
+                FlavorText = "But in the wild lands beyond Bree there were mysterious wanderers. The Bree-folk called them Rangers, and knew nothing of their origin.\r\n-The Fellowship of the Ring",
                 Quantity = 1,
                 Number = 12,
                 Artist = Artist.Tiziano_Baracchi,
