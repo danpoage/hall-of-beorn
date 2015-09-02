@@ -478,6 +478,10 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Katayanagi);
             all.Add(Artist.Tawny_Fritzinger);
             all.Add(Artist.Kaija_Rudkiewicz);
+
+            //Across the Ettenmoors
+            all.Add(Artist.Michele_Frigo);
+            all.Add(Artist.Kip_Ayers);
         }
 
         private static List<Artist> all = new List<Artist>();
@@ -557,6 +561,7 @@ namespace HallOfBeorn.Models
         public static Artist Katayanagi = new Artist { Name = "Katayanagi", URL = "http://aldok.deviantart.com" };
         public static Artist Kieran_Tatsue = new Artist { Name = "Kieran Tatsue", URL = "http://valravnclaw.deviantart.com/" };
         public static Artist Kimberly80 = new Artist { Name = "kimberly80", URL = "http://kimberly80.deviantart.com" };
+        public static Artist Kip_Ayers = new Artist { Name = "Kip Ayers", URL = "http://www.kipayersillustration.com" };
         public static Artist Kuun_Suru = new Artist { Name = "Kuun Suru", URL = "http://finduilas80.deviantart.com" };
         public static Artist Lady_Elleth = new Artist { Name = "Lady Elleth", URL = "http://ladyelleth.deviantart.com" };
         public static Artist Leonid_Kozienko = new Artist { Name = "Leonid Kozienko", URL = "http://agnidevi.deviantart.com" };
@@ -569,6 +574,7 @@ namespace HallOfBeorn.Models
         public static Artist Meanor = new Artist { Name = "Meanor", URL = "http://meanor.deviantart.com" };
         public static Artist Miao_Yu = new Artist { Name = "Miao Yu", URL = "http://moonblossom.deviantart.com" };
         public static Artist Michael_Boatwright = new Artist { Name = "Michael Boatwright", URL = "http://korstemplar.deviantart.com" };
+        public static Artist Michele_Frigo = new Artist { Name = "Michele Frigo", URL = "http://michelefrigo.deviantart.com" };
         public static Artist MouMou38 = new Artist { Name = "moumou38", URL = "http://moumou38.deviantart.com" };
         public static Artist Murasaki_Ri = new Artist { Name = "Murasaki-Ri", URL = "http://murasaki-ri.deviantart.com" };
         public static Artist Nasko_Moskov = new Artist { Name = "Nasko Moskov", URL = "http://omegabolt.deviantart.com" };

@@ -73,22 +73,22 @@ namespace HallOfBeorn.Models
             switch (type.ToLowerSafe())
             {
                 case "card":
-                    sb.AppendFormat("<a title='Card: {1}' href='/Cards/Details/{0}' target='_blank' style='text-decoration:none;'>{1}</a>", label, key);
+                    sb.AppendFormat("<a title='Card: {1}' href='/Cards/Details/{0}' target='_blank'>{1}</a>", label, key);
                     break;
                 case "title":
-                    sb.AppendFormat("<a title='Search: {1} Title' href='/Cards/Search?Query=%2Btitle%3A{0}' target='_blank' style='text-decoration:none;'>{1}</a>", label, key);
+                    sb.AppendFormat("<a title='Search: {1} Title' href='/Cards/Search?Query=%2Btitle%3A{0}' target='_blank'>{1}</a>", label, key);
                     break;
                 case "self":
-                    sb.AppendFormat("<a title='Card: {0}' href='/Cards/Details/{1}' target='_blank' style='text-decoration:none;'>{0}</a>", label, key);
+                    sb.AppendFormat("<a title='Card: {0}' href='/Cards/Details/{1}' target='_blank'>{0}</a>", label, key);
                     break;
                 case "trait":
-                    sb.AppendFormat("<a title='Search: {0} Trait' href='/Cards/Search?Trait={1}' target='_blank' style='text-decoration:none;'><b><i>{0}</i></b></a>", label, key);
+                    sb.AppendFormat("<a title='Search: {0} Trait' href='/Cards/Search?Trait={1}' target='_blank'><b><i>{0}</i></b></a>", label, key);
                     break;
                 case "trait-character":
-                    sb.AppendFormat("<a title='Search: {0} Character' href='/Cards/Search?Trait={1}&CardType=Character' target='_blank' style='text-decoration:none;'><b><i>{0}</i></b> character</a>", label, key);
+                    sb.AppendFormat("<a title='Search: {0} Character' href='/Cards/Search?Trait={1}&CardType=Character' target='_blank'><b><i>{0}</i></b> character</a>", label, key);
                     break;
                 case "trait-hero":
-                    sb.AppendFormat("<a title='Search: {0} Hero' href='/Cards/Search?Trait={1}&CardType=Hero' target='_blank' style='text-decoration:none;'><b><i>{0}</i></b> hero</a>", label, key);
+                    sb.AppendFormat("<a title='Search: {0} Hero' href='/Cards/Search?Trait={1}&CardType=Hero' target='_blank'><b><i>{0}</i></b> hero</a>", label, key);
                     break;
                 case "traits-hero":
                     {
@@ -100,7 +100,7 @@ namespace HallOfBeorn.Models
                             trait1 = traits[0];
                             trait2 = traits[1];
                         }
-                        sb.AppendFormat("<a title='Search: {0} or {1} Hero' href='/Cards/Search?Query=%2Btrait%3A{2}&CardType=Hero' target='_blank' style='text-decoration:none;'><b><i>{0}</i></b> or <b><i>{1}</i></b> hero</a>", trait1, trait2, key);
+                        sb.AppendFormat("<a title='Search: {0} or {1} Hero' href='/Cards/Search?Query=%2Btrait%3A{2}&CardType=Hero' target='_blank'><b><i>{0}</i></b> or <b><i>{1}</i></b> hero</a>", trait1, trait2, key);
                     }
                     break;
                 case "traits-attachment":
@@ -123,35 +123,35 @@ namespace HallOfBeorn.Models
                             trait1 = traits[0];
                             trait2 = traits[1];
                         }
-                        sb.AppendFormat("<a title='Search: {0} or {1} Attachment' href='/Cards/Search?Query=%2Btrait%3A{2}&CardType=Attachment' target='_blank' style='text-decoration:none;'><b><i>{0}</i></b> {4} <b><i>{1}</i></b> {3}</a>", trait1, trait2, key, label, join);
+                        sb.AppendFormat("<a title='Search: {0} or {1} Attachment' href='/Cards/Search?Query=%2Btrait%3A{2}&CardType=Attachment' target='_blank'><b><i>{0}</i></b> {4} <b><i>{1}</i></b> {3}</a>", trait1, trait2, key, label, join);
                     }
                     break;
                 case "trait-ally":
-                    sb.AppendFormat("<a title='Search: {0} Ally' href='/Cards/Search?Trait={1}&CardType=Ally' target='_blank' style='text-decoration:none;'><b><i>{0}</i></b> ally</a>", label, key);
+                    sb.AppendFormat("<a title='Search: {0} Ally' href='/Cards/Search?Trait={1}&CardType=Ally' target='_blank'><b><i>{0}</i></b> ally</a>", label, key);
                     break;
                 case "keyword":
-                    sb.AppendFormat("<a title='Search: {0} Keyword' href='/Cards/Search?Keyword={1}' target='_blank' style='text-decoration:none;'>{0}</a>", label, key);
+                    sb.AppendFormat("<a title='Search: {0} Keyword' href='/Cards/Search?Keyword={1}' target='_blank'>{0}</a>", label, key);
                     break;
                 case "keyword-hero":
-                    sb.AppendFormat("<a title='Search: Hero with {0} Keyword' href='/Cards/Search?Keyword={1}&CardType=Hero' target='_blank' style='text-decoration:none;'>hero with {0}</a>", label, key);
+                    sb.AppendFormat("<a title='Search: Hero with {0} Keyword' href='/Cards/Search?Keyword={1}&CardType=Hero' target='_blank'>hero with {0}</a>", label, key);
                     break;
                 case "type":
-                    sb.AppendFormat("<a title='Search: {0} Type' href='/Cards/Search?CardType={1}' target='_blank' style='text-decoration:none;'>{1}</a>", label, key);
+                    sb.AppendFormat("<a title='Search: {0} Type' href='/Cards/Search?CardType={1}' target='_blank'>{1}</a>", label, key);
                     break;
                 case "sphere":
-                    sb.AppendFormat("<a title='Search: {0} Sphere' href='/Cards/Search?Sphere={0}' target='_blank' style='text-decoration:none;'><img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:24px;width:24px;' src='/Images/{0}.png' /></a>", key);
+                    sb.AppendFormat("<a title='Search: {0} Sphere' href='/Cards/Search?Sphere={0}' target='_blank'><img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:24px;width:24px;' src='/Images/{0}.png' /></a>", key);
                     break;
                 case "sphere-character":
-                    sb.AppendFormat("<a title='Search: {0} Character' href='/Cards/Search?Sphere={0}&CardType=Character' target='_blank' style='text-decoration:none;'><img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:24px;width:24px;' src='/Images/{0}.png' /> character</a>", key);
+                    sb.AppendFormat("<a title='Search: {0} Character' href='/Cards/Search?Sphere={0}&CardType=Character' target='_blank'><img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:24px;width:24px;' src='/Images/{0}.png' /> character</a>", key);
                     break;
                 case "sphere-hero":
-                    sb.AppendFormat("<a title='Search: {0} Hero' href='/Cards/Search?Sphere={0}&CardType=Hero' target='_blank' style='text-decoration:none;'><img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:24px;width:24px;' src='/Images/{0}.png' /> hero</a>", key);
+                    sb.AppendFormat("<a title='Search: {0} Hero' href='/Cards/Search?Sphere={0}&CardType=Hero' target='_blank'><img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:24px;width:24px;' src='/Images/{0}.png' /> hero</a>", key);
                     break;
                 case "sphere-ally":
-                    sb.AppendFormat("<a title='Search: {0} Ally' href='/Cards/Search?Sphere={0}&CardType=Ally' target='_blank' style='text-decoration:none;'><img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:24px;width:24px;' src='/Images/{0}.png' /> ally</a>", key);
+                    sb.AppendFormat("<a title='Search: {0} Ally' href='/Cards/Search?Sphere={0}&CardType=Ally' target='_blank'><img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:24px;width:24px;' src='/Images/{0}.png' /> ally</a>", key);
                     break;
                 case "sphere-event":
-                    sb.AppendFormat("<a title='Search: {0} Event' href='/Cards/Search?Sphere={0}&CardType=Event' target='_blank' style='text-decoration:none;'><img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:24px;width:24px;' src='/Images/{0}.png' /> event</a>", key);
+                    sb.AppendFormat("<a title='Search: {0} Event' href='/Cards/Search?Sphere={0}&CardType=Event' target='_blank'><img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:24px;width:24px;' src='/Images/{0}.png' /> event</a>", key);
                     break;
                 case "willpower":
                     sb.Append("<img src='/Images/willpower.gif' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' />");
@@ -166,7 +166,7 @@ namespace HallOfBeorn.Models
                     sb.Append("<img src='/Images/defense.gif' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' />");
                     break;
                 case "victory":
-                    sb.AppendFormat("<div style='text-align:right;font-weight:bold;margin-bottom:4px;'><a href='/Cards/Search?VictoryPoints=Victory+{0}.' target='_blank' title='Victory: {0}' style='text-decoration:none;'><span style='padding-left:4px;padding-right:4px;border-style:solid;border-width:1px;border-color:black;'>Victory {0}</span></a></div>", key);
+                    sb.AppendFormat("<div style='text-align:right;font-weight:bold;margin-bottom:4px;'><a href='/Cards/Search?VictoryPoints=Victory+{0}.' target='_blank' title='Victory: {0}'><span style='padding-left:4px;padding-right:4px;border-style:solid;border-width:1px;border-color:black;'>Victory {0}</span></a></div>", key);
                     break;
                 case "shadow":
                     sb.Append("<img src='/Images/ShadowDivider.png' title='Shadow Effect' style='display:block;margin-left:auto;margin-right:auto;width:285px;'/>");

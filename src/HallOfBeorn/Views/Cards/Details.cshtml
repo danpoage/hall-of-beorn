@@ -163,10 +163,12 @@
             </div>
             
             <div class="statTextBox" style="margin:2px;padding-top:0px;padding-left:6px;padding-right:6px;border: 1px solid gray;border-radius:4px;max-width:500px;min-height:200px;min-width:200px;position:relative;overflow:;background-color:@Model.BackgroundColor();">
+            @*
             @if (!string.IsNullOrEmpty(@Model.BackgroundImage()))
             {
-                <img src='@Model.BackgroundImage()' style="position: absolute;left:@Model.BackgroundImageLeft();top:@Model.BackgroundImageTop();width:@Model.BackgroundImageWidth();height:@Model.BackgroundImageHeight();opacity:0.08;" />
+                <img src='@Model.BackgroundImage()' style="z-index:-101;position: absolute;left:@Model.BackgroundImageLeft();top:@Model.BackgroundImageTop();width:@Model.BackgroundImageWidth();height:@Model.BackgroundImageHeight();opacity:0.08;" />
             }
+            *@
 
             @if (@Model.Traits.Count() > 0)
             {

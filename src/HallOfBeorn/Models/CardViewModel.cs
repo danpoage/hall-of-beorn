@@ -411,7 +411,7 @@ namespace HallOfBeorn.Models
                 case Models.Sphere.Tactics:
                     return "rgba(255, 0, 0, .1)";
                 case Models.Sphere.Spirit:
-                    return "rbga(0, 0, 255, .1)";
+                    return "rgba(0, 0, 255, .05)";
                 case Models.Sphere.Lore:
                     return "rgba(0, 128, 0, .1)";
                 default:
