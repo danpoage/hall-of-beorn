@@ -562,6 +562,7 @@
     <Content Include="Images\Baggins.png" />
     <Content Include="Images\close-button.png" />
     <Content Include="Images\defense.gif" />
+    <Content Include="Images\encounter-card-back.jpg" />
     <Content Include="Images\error.jpg" />
     <Content Include="Images\Fellowship.png" />
     <Content Include="Images\HallOfBeorn-AppleTouchIcon.png" />

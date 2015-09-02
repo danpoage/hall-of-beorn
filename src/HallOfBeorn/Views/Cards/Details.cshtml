@@ -162,7 +162,11 @@
                 </div>
             </div>
             
-            <div class="statTextBox" style="margin:2px;padding-top:0px;padding-left:6px;padding-right:6px;border: 1px solid gray;border-radius:4px;max-width:500px;">
+            <div class="statTextBox" style="margin:2px;padding-top:0px;padding-left:6px;padding-right:6px;border: 1px solid gray;border-radius:4px;max-width:500px;min-height:200px;min-width:200px;position:relative;overflow:;background-color:@Model.BackgroundColor();">
+            @if (!string.IsNullOrEmpty(@Model.BackgroundImage()))
+            {
+                <img src='@Model.BackgroundImage()' style="position: absolute;left:@Model.BackgroundImageLeft();top:@Model.BackgroundImageTop();width:@Model.BackgroundImageWidth();height:@Model.BackgroundImageHeight();opacity:0.08;" />
+            }
 
             @if (@Model.Traits.Count() > 0)
             {
@@ -182,7 +186,7 @@
             {                 
                 if (@Model.Keywords.Count() > 0)
                 {
-                    <span style="margin-left:6px;">
+                    <p style="margin-left:6px;margin-top:12px;">
                     @foreach (var keyword in Model.KeywordEffects)
                     {
                         if (keyword.Tokens.Count > 1 && !keyword.Tokens.Any(t => t.IsIcon))
@@ -243,8 +247,7 @@
                             }
                         }
                     }
-                    </span>
-                    <br />
+                    </p>
                 }
 
                 <div style="padding:4px;">
@@ -364,9 +367,8 @@
 
                 if (@Model.HasFlavorText || @Model.HasOppositeFlavorText)
                 {
-                    <br />
-                        
-                <p style="text-align:center;">
+                    
+                <div style="text-align:center;">
                     @if (@Model.HasFlavorText)
                     {
                         foreach (var line in @Model.FlavorText)
@@ -379,7 +381,6 @@
                         if (@Model.HasFlavorText)
                         {
                             <br />
-                            <br />
                         }
                                 
                         foreach (var line in @Model.OppositeFlavorText)
@@ -387,7 +388,7 @@
                             <i>@line</i><br />
                         }
                     }
-                </p>
+                </div>
                 }
             }
             </div>

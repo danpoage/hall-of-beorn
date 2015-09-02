@@ -311,6 +311,118 @@ namespace HallOfBeorn.Models
             }
         }
 
+        public string BackgroundImage()
+        {
+            switch (_card.Sphere) 
+            {
+                case Models.Sphere.Leadership:
+                case Models.Sphere.Tactics:
+                case Models.Sphere.Spirit:
+                case Models.Sphere.Lore:
+                    return string.Format("/Images/{0}.png", _card.Sphere.ToString());
+                default:
+                    if (_card.CardType == Models.CardType.Enemy || _card.CardType == Models.CardType.Location || _card.CardType == Models.CardType.Treachery || _card.CardType == Models.CardType.Objective || _card.CardType == Models.CardType.Objective_Ally || _card.CardType == Models.CardType.Encounter_Side_Quest)
+                    {
+                        return "/Images/encounter-card-back.jpg";
+                    }
+                    return null;
+            }
+        }
+
+        public string BackgroundImageTop()
+        {
+            switch (_card.Sphere)
+            {
+                case Models.Sphere.Leadership:
+                case Models.Sphere.Tactics:
+                case Models.Sphere.Spirit:
+                case Models.Sphere.Lore:
+                    return "-5px";
+                default:
+                    if (_card.CardType == Models.CardType.Enemy || _card.CardType == Models.CardType.Location || _card.CardType == Models.CardType.Treachery || _card.CardType == Models.CardType.Objective || _card.CardType == Models.CardType.Objective_Ally || _card.CardType == Models.CardType.Encounter_Side_Quest)
+                    {
+                        return "0px";
+                    }
+                    return "-5px";
+            }
+        }
+
+        public string BackgroundImageLeft()
+        {
+            //48px
+            switch (_card.Sphere)
+            {
+                case Models.Sphere.Leadership:
+                case Models.Sphere.Tactics:
+                case Models.Sphere.Spirit:
+                case Models.Sphere.Lore:
+                    return "48px";
+                default:
+                    if (_card.CardType == Models.CardType.Enemy || _card.CardType == Models.CardType.Location || _card.CardType == Models.CardType.Treachery || _card.CardType == Models.CardType.Objective || _card.CardType == Models.CardType.Objective_Ally || _card.CardType == Models.CardType.Encounter_Side_Quest)
+                    {
+                        return "0px";
+                    }
+                    return "48px;";
+            }
+        }
+
+        public string BackgroundImageHeight()
+        {
+            switch (_card.Sphere)
+            {
+                case Models.Sphere.Leadership:
+                case Models.Sphere.Tactics:
+                case Models.Sphere.Spirit:
+                case Models.Sphere.Lore:
+                    return "200px";
+                default:
+                    if (_card.CardType == Models.CardType.Enemy || _card.CardType == Models.CardType.Location || _card.CardType == Models.CardType.Treachery || _card.CardType == Models.CardType.Objective || _card.CardType == Models.CardType.Objective_Ally || _card.CardType == Models.CardType.Encounter_Side_Quest)
+                    {
+                        return "100%";
+                    }
+                    return "200px";
+            }
+        }
+
+        public string BackgroundImageWidth()
+        {
+            switch (_card.Sphere)
+            {
+                case Models.Sphere.Leadership:
+                case Models.Sphere.Tactics:
+                case Models.Sphere.Spirit:
+                case Models.Sphere.Lore:
+                    return "200";
+                default:
+                    if (_card.CardType == Models.CardType.Enemy || _card.CardType == Models.CardType.Location || _card.CardType == Models.CardType.Treachery || _card.CardType == Models.CardType.Objective || _card.CardType == Models.CardType.Objective_Ally || _card.CardType == Models.CardType.Encounter_Side_Quest)
+                    {
+                        return "100%";
+                    }
+                    return "200";
+            }
+        }
+
+        public string BackgroundColor()
+        {
+            switch (_card.Sphere)
+            {
+                case Models.Sphere.Leadership:
+                    return "rgba(128, 0, 128, .1)";
+                case Models.Sphere.Tactics:
+                    return "rgba(255, 0, 0, .1)";
+                case Models.Sphere.Spirit:
+                    return "rbga(0, 0, 255, .1)";
+                case Models.Sphere.Lore:
+                    return "rgba(0, 128, 0, .1)";
+                default:
+                    if (_card.CardType == Models.CardType.Enemy || _card.CardType == Models.CardType.Location || _card.CardType == Models.CardType.Treachery || _card.CardType == Models.CardType.Objective || _card.CardType == Models.CardType.Objective_Ally || _card.CardType == Models.CardType.Encounter_Side_Quest)
+                    {
+                        return "rgba(0, 0, 0, .1)";
+                    }
+                    return "White";
+            }
+        }
+
         public string PassValue
         {
             get

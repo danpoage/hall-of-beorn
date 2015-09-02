@@ -130,12 +130,7 @@ namespace HallOfBeorn.Models.Sets
                 HitPoints = 4,
                 Traits = new List<string>() { "Dwarf.", "Warrior." },
                 Text = "While Thalin is committed to a quest, deal 1 damage to each enemy as it is revealed by the encounter deck.",
-                FlavorText = 
-@"There hammer on the anvil smote,
-There chisel clove, and graver wrote;
-There forged was blade, and bound was hilt;
-The delver mined, the mason built.
--The Fellowship of the Ring",
+                FlavorText = "There hammer on the anvil smote,\r\nThere chisel clove, and graver wrote;\r\nThere forged was blade, and bound was hilt;\r\nThe delver mined, the mason built.\r\n-The Fellowship of the Ring",
                 Quantity = 1,
                 Number = 6,
                 Artist = Artist.Jen_Zee,
