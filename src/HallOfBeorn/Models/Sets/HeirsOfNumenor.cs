@@ -155,7 +155,7 @@ namespace HallOfBeorn.Models.Sets
                 HitPoints = 3,
                 Attack = 2,
                 Defense = 2,
-                Text = "While Celador is in the staging area, he is committed to the current quest.Forced: After players quest unsuccessfully or a character leaves play, deal 1 damage to Celador.If Celador leaves play, remove him from the game.",
+                Text = "While Celador is in the staging area, he is committed to the current quest.\r\nForced: After players quest unsuccessfully or a character leaves play, deal 1 damage to Celador.\r\nIf Celador leaves play, remove him from the game.",
                 EncounterSet = "Into Ithilien",
                 Number = 25,
                 Artist = Artist.Magali_Villeneuve
