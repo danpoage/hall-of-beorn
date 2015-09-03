@@ -34,6 +34,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithFlavor("\"I called for the help of the Dúnedain, and their watch has doubled...\"\r\n-Gandalf, The Fellowship of the Ring")
                 .WithInfo(56, 3, Artist.Sara_Biddle));
             Cards.Add(Card.Ally("Longbeard Sentry", "", Sphere.Tactics, 3, 0, 1, 2, 3)
+                .WithGeneric()
                 .WithTraits("Dwarf.", "Warrior.")
                 .WithText("Action: Discard 2 cards from the top of your deck to give Longbeard Sentry sentinel and +1 Defense until the end of the phase. (Limit once per phase.)")
                 .WithFlavor("\"...many of them have had experience in the dreadful dwarf and goblin wars, of which you have no doubt heard.\"\r\n-Bilbo Baggins, The Hobbit")
@@ -54,6 +55,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithFlavor("\"...you saw him for a moment as he is upon the other side: one of the mighty of the Firstborn.\"\r\n-Gandalf, The Fellowship of the Ring")
                 .WithInfo(60, 3, Artist.Magali_Villeneuve));
             Cards.Add(Card.Ally("Wellinghall Preserver", "", Sphere.Lore, 3, 3, 2, 2, 3)
+                .WithGeneric()
                 .WithTraits("Ent.")
                 .WithText("Cannot have restricted attachments.\r\nEnters play exhausted.\r\nResponse: After Wellinghall Preserver readies, heal 1 damage from an Ent character.")
                 .WithInfo(61, 3, Artist.Tomasz_Jedruszek));
