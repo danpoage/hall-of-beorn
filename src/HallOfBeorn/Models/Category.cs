@@ -36,6 +36,7 @@ namespace HallOfBeorn.Models
         Leaves_Play,
         Played_From_Hand,
         Secrecy,
-        Surprise
+        Surprise,
+        Victory_Display
     }
 }

@@ -135,6 +135,7 @@ Response: After attached hero attacks alone, exhaust Firefoot to choose a non-un
 @"...for into darkness fell his star
 in Mordor where the shadows are.
 –The Fellowship of the Ring",
+                VictoryPoints = 1,
                 Number = 7,
                 Artist = Artist.Arden_Beckwith
             });

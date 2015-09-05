@@ -97,6 +97,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithBoon()
                 .WithText("Play only if you control the Ring-bearer.\r\nPlanning Action: Add Brace of Coneys to the victory display to (choose 2): heal up to 2 damage from a hero, add 2 resources to a hero's pool, draw 2 cards, or reduce a player's threat by 2.")
                 .WithFlavor("\"'Sméagol always helps,' he said. 'He has brought rabbits, nice rabbits.'\" —Gollum, The Two Towers")
+                .WithVictoryPoints(2)
                 .WithInfo(14, 4, Artist.Cristina_Vela));
             Cards.Add(Card.Treachery("The Searching Eye", "", "The Passage of the Marshes")
                 .WithBurden()

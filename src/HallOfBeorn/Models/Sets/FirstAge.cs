@@ -1041,7 +1041,7 @@ Attached hero gets +2 Willpower, +2 Attack, +2 Defense, +2 hit points and does n
                 Sphere = Sphere.Lore,
                 Traits = new List<string>() { "Vala." },
                 ResourceCost = 1,
-                Text = "If the active location is a River or Water location, reduce the cost to play Dreams from Ulmo by 1.Action: Choose one character you control. Shuffle the encounter deck and look at its top card. Until the end of the phase, the chosen character gets +X Willpower. X is equal to the revealed card's Threat.",
+                Text = "If the active location is a River or Water location, reduce the cost to play Dreams from Ulmo by 1.\r\nAction: Choose one character you control. Shuffle the encounter deck and look at its top card. Until the end of the phase, the chosen character gets +X Willpower. X is equal to the revealed card's Threat.",
                 EncounterSet = "First Age",
                 Number = 90,
                 Artist = Artist.Ted_Nasmith
@@ -1104,7 +1104,7 @@ Attached hero gets +2 Willpower, +2 Attack, +2 Defense, +2 hit points and does n
                 Sphere = Sphere.Lore,
                 Traits = new List<string>() { "Vala." },
                 ResourceCost = 2,
-                Text = "If the active location is a River or Water location, reduce the cost to play Friendship of Ulmo by 2.Action: Reveal all shadow cards in play. Then, choose two shadow cards from different enemies and switch them.",
+                Text = "If the active location is a River or Water location, reduce the cost to play Friendship of Ulmo by 2.\r\nAction: Reveal all shadow cards in play. Then, choose two shadow cards from different enemies and switch them.",
                 EncounterSet = "First Age",
                 Number = 91,
                 Artist = Artist.John_Howe
