@@ -279,6 +279,8 @@
     <Compile Include="Models\EncounterCategory.cs" />
     <Compile Include="Models\EncounterSet.cs" />
     <Compile Include="Models\EncounterSetViewModel.cs" />
+    <Compile Include="Models\Link.cs" />
+    <Compile Include="Models\LinkType.cs" />
     <Compile Include="Models\Products\AcrossTheEttenmoorsProduct.cs" />
     <Compile Include="Models\Products\EscapeFromMountGramProduct.cs" />
     <Compile Include="Models\Products\TheLandOfShadowProduct.cs" />

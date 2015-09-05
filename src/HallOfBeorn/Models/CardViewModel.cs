@@ -93,6 +93,7 @@ namespace HallOfBeorn.Models
             }
         }
 
+        /*
         public string HallOfBeornBlogSearchUrl
         {
             get
@@ -118,6 +119,21 @@ namespace HallOfBeorn.Models
                 var search = !string.IsNullOrEmpty(_card.NormalizedTitle) ? _card.NormalizedTitle.ToSearchString() : _card.Title.ToSearchString();
                 return string.Format("http://masteroflore.wordpress.com/?s={0}", search);
             }
+        }
+        */
+
+        public bool HasBlogs { get { return _card.HasBlogs; } }
+
+        public List<Link> Blogs()
+        {
+            return _card.Blogs();
+        }
+
+        public bool HasReferences { get { return _card.HasReferences; } }
+
+        public List<Link> References()
+        {
+            return _card.References();
         }
 
         public string BlogTagUrl

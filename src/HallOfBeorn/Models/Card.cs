@@ -26,6 +26,9 @@ namespace HallOfBeorn.Models
 
             UsePublicImageURL = true;
             Html = string.Empty;
+
+            HasBlogs = true;
+            HasReferences = true;
         }
 
         #region Effect Functions
@@ -319,6 +322,43 @@ namespace HallOfBeorn.Models
 
         public Dictionary<string, Deck> Decks { get; set; }
         public List<Card> RelatedCards { get; set; }
+
+        public bool HasBlogs { get; set; }
+        public List<Link> Blogs()
+        {
+            var links = new List<Link>();
+
+            if (!HasBlogs)
+            {
+                return links;
+            }
+
+            links.Add(new Link(LinkType.Hall_of_Beorn, this));
+            links.Add(new Link(LinkType.Tales_from_the_Cards, this));
+            links.Add(new Link(LinkType.Master_of_Lore, this));
+            links.Add(new Link(LinkType.Dor_Cuarthol, this));
+            links.Add(new Link(LinkType.Second_Hand_Took, this));
+
+            return links;
+        }
+
+        public bool HasReferences { get; set; }
+        public List<Link> References()
+        {
+            var links = new List<Link>();
+
+            if (!HasReferences)
+            {
+                return links;
+            }
+
+            links.Add(new Link(LinkType.Wikipedia, this));
+            links.Add(new Link(LinkType.Tolkien_Gateway, this));
+            links.Add(new Link(LinkType.Lord_of_the_Rings_Wiki, this));
+            links.Add(new Link(LinkType.Encyclopedia_of_Arda, this));
+
+            return links;
+        }
 
         public string Id { get; set; }
         

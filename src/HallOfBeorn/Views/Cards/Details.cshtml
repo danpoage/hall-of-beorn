@@ -471,11 +471,30 @@
         }
         </div>
         <div>
-        <div>
-            <div style="margin-top:12px;margin-left:4px;margin-bottom:4px;"><a href="@Model.HallOfBeornBlogSearchUrl" target="_blank" title="Search Hall of Beorn for: @Model.Title">On Hall of Beorn Blog</a></div>
-            <div style="margin-left:4px;margin-bottom:4px;"><a href="@Model.TalesFromTheCardsBlogSearchUrl" target="_blank" title="Search Tales From the Cards for: @Model.Title">On Tales From The Cards</a></div>
-            <div style="margin-left:4px;margin-bottom:4px;"><a href="@Model.MasterOfLoreBlogSearchUrl" target="_blank" title="Search Master of Lore for: @Model.Title">On Master of Lore</a></div>
-        </div>
+            <div>
+            @if (@Model.HasBlogs)
+            {
+                    <div style="margin-top:12px;margin-bottom:-8px;"><b>Blogs</b></div>
+                    <ul style="list-style-type: none;">
+                        @foreach (var link in @Model.Blogs())
+                        {
+                            <li style="margin-left:-20px;"><a href="@link.Url" title="@link.Title" target="_blank">@link.Text</a></li>
+                        }
+                    </ul>
+            }
+            </div>
+            <div>
+                @if (@Model.HasReferences)
+                {
+                    <div style="margin-top:12px;margin-bottom:-8px;"><b>References</b></div>
+                    <ul style="list-style-type:none;">
+                        @foreach (var link in @Model.References())
+                        {
+                            <li style="margin-left:-20px;"><a href="@link.Url" title="@link.Title" target="_blank">@link.Text</a></li>
+                        }
+                    </ul>
+                }
+            </div>
         <div>
             <div>
                 @if (@Model.Decks.Count() > 0)
