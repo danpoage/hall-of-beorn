@@ -416,12 +416,13 @@ Planning Action: Spend 2 resources to play 1 progress token on The Old Bridge. (
                 Id = "1f1ad7bb-68ca-4b48-b7fa-516e5314e272",
                 CardType = CardType.Treachery,
                 Keywords = new List<string>() { "Surge." },
-                Text = "When Revealed: Each player must return the location he controls with the highest Threat to the staging area, or raise his threat by the total Threat of all locations he controls.",
+                Text = "When Revealed: Each player must either return the location he controls with the highest Threat to the staging area, or raise his threat by the total Threat of all locations he controls.",
                 EncounterSet = "Assault on Osgiliath",
                 Quantity = 2,
                 EasyModeQuantity = 1,
                 Number = 106,
-                Artist = Artist.Blake_Henriksen
+                Artist = Artist.Blake_Henriksen,
+                HasErrata = true
             });
         }
     }

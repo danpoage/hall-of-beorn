@@ -36,9 +36,10 @@ namespace HallOfBeorn.Models.Sets
                 Sphere = Sphere.Spirit,
                 ResourceCost = 1,
                 Quantity = 3,
-                Text = "Response: After a location leaves play as an explored location, return it to the top of the encounter deck.",
+                Text = "Response: After a location worth no victory points leaves play as an explored location, return it to the top of the encounter deck.",
                 Number = 12,
-                Artist = Artist.Titus_Lunter
+                Artist = Artist.Titus_Lunter,
+                HasErrata = true
             });
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,
@@ -1208,10 +1209,11 @@ If the players defeat this stage, they have won the game.",
                 CardType = CardType.Treachery,
                 Keywords = new List<string>() { "Doomed 3." },
                 Quantity = 1,
-                Text = "When Revealed: Count the number of encounter cards in the staging area and shuffle them into the encounter deck. Then, reveal an equal number of cards from the encounter deck and add them to the staging area. This effect cannot be canceled.",
+                Text = "When Revealed: Count the number of encounter cards in the staging area and shuffle them into the encounter deck. Reveal an equal number of cards from the encounter deck and add them to the staging area. This effect cannot be canceled.",
                 EncounterSet = "Mordor Elite",
                 Number = 61,
-                Artist = Artist.Ryan_Barger
+                Artist = Artist.Ryan_Barger,
+                HasErrata = true
             });
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,

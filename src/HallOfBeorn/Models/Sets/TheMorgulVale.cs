@@ -427,13 +427,14 @@ If 10 or more progress tokens are on To the Tower, the players have lost the gam
                 Id = "418e1e02-52fe-4aef-b543-3875837dd38a",
                 CardType = CardType.Treachery,
                 Title = "Impenetrable Fog",
-                Text = "When Revealed: The first player places 3 progress tokens on To the Tower or reveals X additional cards from the encounter deck and adds them to the staging area. X is the number of players in the game.",
-                FlavorText = "The air above was heavy with fog, and a reek lay on the land about them.\r\nThe Two Towers",
+                Text = "When Revealed: The first player either places 3 progress tokens on To the Tower or reveals X additional cards from the encounter deck and adds them to the staging area. X is the number of players in the game.",
+                FlavorText = "The air above was heavy with fog, and a reek lay on the land about them.\r\n-The Two Towers",
                 EncounterSet = "The Morgul Vale",
                 Quantity = 2,
                 EasyModeQuantity = 0,
                 Number = 157,
-                Artist = Artist.Oleg_Saakyan
+                Artist = Artist.Oleg_Saakyan,
+                HasErrata = true
             });
 
             Cards.Add(new Card()

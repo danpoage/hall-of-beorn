@@ -116,9 +116,10 @@ Response: After attached hero attacks alone, exhaust Firefoot to choose a non-un
                 Sphere = Models.Sphere.Spirit,
                 Quantity = 3,
                 Traits = new List<string> { "Dwarf." },
-                Text = "Action: Choose another player. That player gains control of Blue ~Mountain Trader. Then, that player moves 1 resource from the resource pool of a hero he controls to the resource pool of a hero you control, or Blue ~Mountain Trader is discarded.",
+                Text = "Action: Choose another player. That player gains control of Blue ~Mountain Trader. Then, that player moves 1 resource from the resource pool of a hero he controls to the resource pool of a hero you control, or Blue ~Mountain Trader is discarded. (Limit once per round.)",
                 Number = 6,
-                Artist = Artist.Sara_Betsy
+                Artist = Artist.Sara_Betsy,
+                HasErrata = true
             });
             Cards.Add(new Card()
             {
