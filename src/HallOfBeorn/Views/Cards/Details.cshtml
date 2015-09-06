@@ -365,8 +365,8 @@
                         <div style="text-align:right;font-weight:bold;">@Model.PassValue</div>
                     }
                 </div>
-
-                if (@Model.HasFlavorText || @Model.HasOppositeFlavorText)
+                
+                if (@Model.HasFlavorText)
                 {
                     
                 <div style="text-align:center;">
@@ -377,22 +377,85 @@
                             <i>@line</i><br />
                         }
                     }
-                    @if (@Model.HasOppositeFlavorText)
+                </div>
+                }
+            }
+            </div>
+
+            @if (@Model.OppositeTextEffects.Count > 0 || @Model.HasOppositeFlavorText)
+            {
+                <div class="statTextBox" style="margin:6px 2px 2px 2px;padding-top:0px;padding-left:6px;padding-right:6px;border: 1px solid gray;border-radius:4px;max-width:500px;min-height:200px;min-width:200px;position:relative;overflow:;background-color:@Model.BackgroundColor();">
+                    @if (@Model.OppositeTextEffects.Count > 0)
                     {
-                        if (@Model.HasFlavorText)
+                        <div style="padding:4px;">
+                        @foreach (var effect in @Model.OppositeTextEffects)
                         {
+                            var count = 0;
+                            foreach (var token in effect.Tokens)
+                            {
+                                count++;
+                                if (token.IsTrigger || effect.IsCritical)
+                                {
+                                    <b>@token.Text</b>
+                                }
+                                else if (token.IsStrong)
+                                {
+                                    <strong>@token.Text</strong>
+                                }
+                                else if (token.IsEmphasized)
+                                {
+                                    <em>@token.Text</em>
+                                }
+                                else if (token.IsTrait)
+                                {
+                                    <a title="Trait Search" style="font-weight:bold;font-style:italic;" href='@string.Format("/Cards/Search?Trait={0}.", @token.Text.Trim().TrimEnd('.'))'>@token.Text</a>
+                                
+                                    if (token.HasSuffix)
+                                    {
+                                        if (token.Suffix != "." || count != effect.Tokens.Count)
+                                        {
+                                            @token.Suffix
+                                        }
+                                    }
+                                }
+                                else if (token.IsIcon)
+                                {
+                                    if (token.HasSuffix)
+                                    {
+                                        if (token.HasPrefix)
+                                        {
+                                            <span style="margin-right:-6px;">@token.Prefix</span>
+                                        }
+                                                
+                                        <img src="@token.ImagePath" style="height:16px;margin-left:@token.LeftMargin;margin-right:-4px;margin-bottom:-2px;" />
+                                        @token.Suffix
+                                    }
+                                    else
+                                    {
+                                        <img src="@token.ImagePath" style="height:16px;margin-left:@token.LeftMargin;margin-right:2px;margin-bottom:-2px;" />
+                                    }
+                                }
+                                else
+                                {
+                                    @: @token.Text
+                                }
+                            }
+                            <br />
                             <br />
                         }
-                                
+                        </div>
+                    }
+
+                    @if (@Model.HasOppositeFlavorText)
+                    {
                         foreach (var line in @Model.OppositeFlavorText)
                         {
                             <i>@line</i><br />
                         }
                     }
                 </div>
-                }
             }
-            </div>
+            
         </div>
        </div>
 </div>
@@ -471,28 +534,24 @@
         }
         </div>
         <div>
-            <div>
+            <div style="display:inline-block;width:285px;vertical-align:top;">
             @if (@Model.HasBlogs)
             {
-                    <div style="margin-top:12px;margin-bottom:-8px;"><b>Blogs</b></div>
-                    <ul style="list-style-type: none;">
-                        @foreach (var link in @Model.Blogs())
-                        {
-                            <li style="margin-left:-20px;"><a href="@link.Url" title="@link.Title" target="_blank">@link.Text</a></li>
-                        }
-                    </ul>
+                    <div style="margin-top:12px;"><b>Blogs</b></div>
+                    foreach (var link in @Model.Blogs())
+                    {
+                        <div><a href="@link.Url" title="@link.Title" target="_blank">@link.Text</a></div>
+                    }
             }
             </div>
-            <div>
+            <div style="display:inline-block;width:285px; vertical-align:top;">
                 @if (@Model.HasReferences)
                 {
-                    <div style="margin-top:12px;margin-bottom:-8px;"><b>References</b></div>
-                    <ul style="list-style-type:none;">
-                        @foreach (var link in @Model.References())
-                        {
-                            <li style="margin-left:-20px;"><a href="@link.Url" title="@link.Title" target="_blank">@link.Text</a></li>
-                        }
-                    </ul>
+                    <div style="margin-top:12px;"><b>References</b></div>
+                    foreach (var link in @Model.References())
+                    {
+                        <div><a href="@link.Url" title="@link.Title" target="_blank">@link.Text</a></div>
+                    }
                 }
             </div>
         <div>

@@ -338,6 +338,12 @@ namespace HallOfBeorn.Models
             links.Add(new Link(LinkType.Master_of_Lore, this));
             links.Add(new Link(LinkType.Dor_Cuarthol, this));
             links.Add(new Link(LinkType.Second_Hand_Took, this));
+            links.Add(new Link(LinkType.The_Mirkwood_Runner, this));
+            links.Add(new Link(LinkType.Warden_of_Arnor, this));
+            links.Add(new Link(LinkType.Heroes_of_the_Rings, this));
+            links.Add(new Link(LinkType.Susurros_del_Bosque_Viejo, this, "Susurros del Bosque Viejo (Español)"));
+            links.Add(new Link(LinkType.El_Libro_Rojo_de_Bolson_Cerrado, this, "El Libro Rojo De Bolsón Cerrado (Español)"));
+            links.Add(new Link(LinkType.Die_Manner_von_Gondor, this, "Die Männer von Gondor (Deutsch)"));
 
             return links;
         }

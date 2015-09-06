@@ -35,11 +35,13 @@ namespace HallOfBeorn.Models
 
         private readonly List<CardEffect> _keywordEffects = new List<CardEffect>();
         private readonly List<CardEffect> _textEffects = new List<CardEffect>();
+        private readonly List<CardEffect> _oppositeTextEffects = new List<CardEffect>();
         private readonly List<CardEffect> _shadowEffects = new List<CardEffect>();
         private readonly List<EncounterSetViewModel> _includedEncounterSets = new List<EncounterSetViewModel>();
 
         public List<CardEffect> KeywordEffects { get { return _keywordEffects; } }
         public List<CardEffect> TextEffects { get { return _textEffects; } }
+        public List<CardEffect> OppositeTextEffects { get { return _oppositeTextEffects; } }
         public List<CardEffect> ShadowEffects { get { return _shadowEffects; } }
 
         public bool HasIncludedEncounterSets { get { return _includedEncounterSets.Count > 0; } }

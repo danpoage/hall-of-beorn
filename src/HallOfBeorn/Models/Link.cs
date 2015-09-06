@@ -8,9 +8,14 @@ namespace HallOfBeorn.Models
     public class Link
     {
         public Link(LinkType type, Card card)
+            : this(type, card, null)
+        {
+        }
+
+        public Link(LinkType type, Card card, string title)
         {
             this.Type = type;
-            this.Title = getTitle(type);
+            this.Title = string.IsNullOrEmpty(title) ? getTitle(type) : title;
             this.Text = this.Title;
             this.Url = getUrl(type, card, defaltLanguage);
         }
@@ -41,6 +46,19 @@ namespace HallOfBeorn.Models
                     return string.Format("http://tolkiengateway.net/wiki/{0}", title);
                 case LinkType.Wikipedia:
                     return string.Format("https://en.wikipedia.org/wiki/{0}", title);
+
+                case LinkType.The_Mirkwood_Runner:
+                    return string.Format("http://mirkwoodrunner.blogspot.com/search/label/{0}", title.ToLowerSafe());
+                case LinkType.Warden_of_Arnor:
+                    return string.Format("http://wardenofarnor.wordpress.com/?s={0}", title);
+                case LinkType.Heroes_of_the_Rings:
+                    return string.Format("http://heroesoftherings.blogspot.com/search/label/{0}", title.ToLowerSafe());
+                case LinkType.Susurros_del_Bosque_Viejo:
+                    return string.Format("http://susurrosdelbosqueviejo.blogspot.com/search/label/{0}", title.ToLowerSafe());
+                case LinkType.El_Libro_Rojo_de_Bolson_Cerrado:
+                    return string.Format("https://ellibrorojodebolsoncerrado.wordpress.com/?s={0}", title);
+                case LinkType.Die_Manner_von_Gondor:
+                    return string.Format("https://menofgondor.wordpress.com/?s={0}", title);
                 default:
                     return string.Empty;
             }

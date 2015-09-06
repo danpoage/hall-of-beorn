@@ -248,7 +248,7 @@ namespace HallOfBeorn.Controllers
                 viewModel.KeywordEffects.Add(ParseCardEffect(card, keyword, true));
 
             viewModel.TextEffects.AddRange(ParseCardEffects(card, card.Text));
-            viewModel.TextEffects.AddRange(ParseCardEffects(card, card.OppositeText));
+            viewModel.OppositeTextEffects.AddRange(ParseCardEffects(card, card.OppositeText));
 
             if (!string.IsNullOrEmpty(card.Shadow))
                 viewModel.ShadowEffects.Add(ParseCardEffect(card, card.Shadow, true));
