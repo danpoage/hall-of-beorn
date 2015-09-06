@@ -77,9 +77,9 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("It is ~Night. Progress cannot be placed quest cards. Encounter card effects cannot be canceled.\r\nForced: When it becomes ~Night, reveal an encounter card.\r\nForced: At the end of the round, flip this objective.")
                 .WithInfo(12, 1, Artist.Wibben));
             Cards.Add(Card.Quest("Across the Wastes", "", 1, 1, "The Wastes of Eriador", 20)
-                .WithText("Setup: Set Pack Leader aside, out of play. Make Shrouded Hills the active location. Add the Time objective to the staging area with Daybreak faceup. The first player takes control of Amarthiúl. Shuffle the encounter deck. Reveal 1 card from the encounter deck per player.")
+                .WithText("Setup: Set Pack Leader aside, out of play. Make Shrouded ~Hills the active location. Add the Time objective to the staging area with Daybreak faceup. The first player takes control of Amarthiúl. Shuffle the encounter deck. Reveal 1 card from the encounter deck per player.")
                 .WithFlavor("Following the surprise attack on Fornost, you have agreed to help the Ranger, Amarthiúl, track the villains who captured his friend, Iârion.")
-                .WithOppositeText("While it is Day, each hero gets +1 Willpower.\r\nForced: When it becomes Night, raise each player's threat by 1.")
+                .WithOppositeText("While it is Day, each hero gets +1 Willpower.\r\nForced: When it becomes ~Night, raise each player's threat by 1.")
                 .WithOppositeFlavor("Your enemies' tracks lead you across the North Downs towards Angmar. In the barren lands between you and that dread realm, the nights are black and bitter cold, but it is the howling of Wargs that gives you chills.")
                 .WithIncludedEncounterSets(EncounterSet.EriadorWilds, EncounterSet.FoulWeather)
                 .WithInfo(13, 1, Artist.Ilich_Henriquez));

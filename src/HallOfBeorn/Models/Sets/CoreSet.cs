@@ -286,7 +286,7 @@ namespace HallOfBeorn.Models.Sets
                 HitPoints = 3,
                 Traits = new List<string>() { "Gondor.", "Noble.", "Ranger." },
                 Text = "Action: Exhaust Faramir to choose a player. Each character controlled by that player gets +1 Willpower until the end of the phase.",
-                FlavorText = "\"He leads now in all perilous ventures. But his life is charmed, or fate spares him for some other end.\r\n-Mablung, Ranger of Ithilien\r\nThe Two Towers",
+                FlavorText = "\"He leads now in all perilous ventures. But his life is charmed, or fate spares him for some other end.\"\r\n-Mablung, Ranger of Ithilien,\r\nThe Two Towers",
                 Quantity = 2,
                 Number = 14,
                 Artist = Artist.Jeff_Himmelman

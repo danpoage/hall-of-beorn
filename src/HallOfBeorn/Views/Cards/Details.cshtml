@@ -369,7 +369,7 @@
                 if (@Model.HasFlavorText)
                 {
                     
-                <div style="text-align:center;">
+                <div style="text-align:center;padding:4px;">
                     @if (@Model.HasFlavorText)
                     {
                         foreach (var line in @Model.FlavorText)
@@ -446,6 +446,7 @@
                         </div>
                     }
 
+                    <div style="text-align:center;padding:4px;">
                     @if (@Model.HasOppositeFlavorText)
                     {
                         foreach (var line in @Model.OppositeFlavorText)
@@ -453,6 +454,7 @@
                             <i>@line</i><br />
                         }
                     }
+                    </div>
                 </div>
             }
             
