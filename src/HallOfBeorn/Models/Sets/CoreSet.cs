@@ -1891,7 +1891,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 EncounterSet = "Passage Through Mirkwood",
                 Quantity = 1,
                 FlavorText = "As you move through Mirkwood, hounded by spiders, the forest path forks before you...",
-                OppositeText = "Forced: When you defeat this stage, proceed to one of the 2 \"A Chosen Path\" stages, at random.",
+                OppositeText = "Forced: When you defeat this stage, proceed to one of the 2 \"A Chosen ~Path\" stages, at random.",
                 OppositeFlavorText = "Unsure of what lies ahead but spurred by the urgency of your message, you choose a path and proceed... ",
                 QuestPoints = 2,
                 Number = 120,
