@@ -73,6 +73,7 @@ namespace HallOfBeorn.Models
                 label = key;
             }
 
+            var innerText = string.Empty;
             switch (type.ToLowerSafe())
             {
                 case "card":
@@ -148,7 +149,8 @@ namespace HallOfBeorn.Models
                     sb.AppendFormat("<a title='Search: {0} Character' href='/Cards/Search?Sphere={0}&CardType=Character' target='_blank'><img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:24px;width:24px;' src='/Images/{0}.png' /> character</a>", key);
                     break;
                 case "sphere-hero":
-                    sb.AppendFormat("<a title='Search: {0} Hero' href='/Cards/Search?Sphere={0}&CardType=Hero' target='_blank'><img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:24px;width:24px;' src='/Images/{0}.png' /> hero</a>", key);
+                    innerText = (!string.IsNullOrEmpty(label) && label == "!") ? string.Empty : " hero";
+                    sb.AppendFormat("<a title='Search: {0} Hero' href='/Cards/Search?Sphere={0}&CardType=Hero' target='_blank'><img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:24px;width:24px;' src='/Images/{0}.png' />{1}</a>", key, innerText);
                     break;
                 case "sphere-ally":
                     sb.AppendFormat("<a title='Search: {0} Ally' href='/Cards/Search?Sphere={0}&CardType=Ally' target='_blank'><img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:24px;width:24px;' src='/Images/{0}.png' /> ally</a>", key);

@@ -116,7 +116,7 @@ namespace HallOfBeorn.Services
             switch (typeName)
             {
                 case "title":
-                    predicate = (score) => { return names.Any(y => score.Card.Title.MatchesWildcard(y)); };
+                    predicate = (score) => { return names.Any(y => score.Card.Title.MatchesWildcard(y) || score.Card.NormalizedTitle.MatchesWildcard(y)); };
                     break;
                 case "cycle":
                     predicate = (score) => { return names.Any(y => score.Card.CardSet.Cycle.MatchesWildcard(y)); };
