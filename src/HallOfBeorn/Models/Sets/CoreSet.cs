@@ -739,6 +739,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 HitPoints = 2,
                 Traits = new List<string>() { "Hobbit." },
                 Text = "Action: Reduce your threat by 3 to give control of Wandering Took to another player. Raise that player's threat by 3.",
+                FlavorText = "...but certainly there was something not entirely hobbit-like about them, and once in a while members of the Took-clan would go and have adventures. -The Hobbit",
                 Quantity = 2,
                 Number = 43,
                 Artist = Artist.Tony_Foti
@@ -757,6 +758,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 HitPoints = 2,
                 Traits = new List<string>() { "Silvan.", "Scout." },
                 Text = "Response: After Lórien Guide commits to a quest, place 1 progress token on the active location.",
+                FlavorText = "\"Indeed deep in the wood they dwell...\" -Aragorn, The Fellowship of the Ring",
                 Quantity = 3,
                 Number = 44,
                 Artist = Artist.Kristina_Gehrmann
@@ -801,6 +803,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Sphere = Sphere.Spirit,
                 ResourceCost = 0,
                 Text = "Response: After you travel to a location, exhaust a Spirit character to place 2 progress tokens on that location.",
+                FlavorText = "Then Aragorn lead the way, and such was the strength of his will in that hour that all the Dúnedain and their horses followed him. -The Return of the King",
                 Quantity = 2,
                 Number = 47,
                 Artist = Artist.Ryan_Barger
@@ -813,6 +816,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Sphere = Sphere.Spirit,
                 ResourceCost = 1,
                 Text = "Response: Cancel a shadow effect just triggered during combat.",
+                FlavorText = "'The hasy stroke goes oft astray,' said Aragorn. 'We must press our Enemy, and no longer wait on him for the next move.' -The Return of the King",
                 Quantity = 2,
                 Number = 48,
                 Artist = Artist.Lius_Lasahido
@@ -838,6 +842,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Sphere = Sphere.Spirit,
                 ResourceCost = 1,
                 Text = "Response: Cancel the 'when revealed' effects of a card that was just revealed from the encounter deck.",
+                FlavorText = "\"There is naught that you can do, other than to resist, with hope or without it\"\r\n-Elrond, The Fellowship of the Ring",
                 Quantity = 2,
                 Number = 50,
                 Artist = Artist.Ryan_Barger
@@ -865,6 +870,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Sphere = Sphere.Spirit,
                 ResourceCost = 2,
                 Text = "Action: Choose an enemy engaged with a player. Return that enemy to the staging area.",
+                FlavorText = "The light of the torches and the fire flickered about them...\r\n-The Hobbit",
                 Quantity = 2,
                 Number = 52,
                 Artist = Artist.Erfian_Asafat
@@ -877,6 +883,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Sphere = Sphere.Spirit,
                 ResourceCost = 1,
                 Text = "Action: Return 1 Spirit card from your discard pile to your hand.",
+                FlavorText = "The dwarves no more shall suffer wrong,\r\nThe dwarves of your made mighty spells,\r\nWhile hammers fell like ringing bells\r\nIn places deep, where dark things sleep,\r\nIn hollow halls beneath the fells.\r\n-The Hobbit",
                 Quantity = 1,
                 Number = 53,
                 Artist = Artist.Kaya
@@ -889,6 +896,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Sphere = Sphere.Spirit,
                 ResourceCost = 5,
                 Text = "Action: Choose a hero in any player's discard pile. Put that card into play, under its owner's control.",
+                FlavorText = "'Yes, fortune or fate have heped you,' said Gandalf, 'not to mention courage.'\r\n-The Fellowship of the Ring",
                 Quantity = 1,
                 Number = 54,
                 Artist = Artist.Igor_Kieryluk
@@ -902,6 +910,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 ResourceCost = 2,
                 Traits = new List<string>() { "Condition." },
                 Text = "Attach to a hero.\r\nAttached hero gains +1 Willpower.",
+                FlavorText = "\"You are indeed high in the favor of the Lady!\"\r\n-Unnamed Elf of Lórien,\r\nThe Fellowship of the Ring",
                 Quantity = 2,
                 Number = 55,
                 Artist = Artist.Magali_Villeneuve
@@ -915,6 +924,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 ResourceCost = 1,
                 Traits = new List<string>() { "Condition." },
                 Text = "Attach to a location.\r\nAttached location gets -1 Threat.",
+                FlavorText = "\"Power to defy our enemy is not in him, unless shuch power is in the earth itself.\" -Gandalf, The Fellowship of the Ring",
                 Quantity = 2,
                 Number = 56,
                 Artist = Artist.Soul_Core
@@ -928,6 +938,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 ResourceCost = 2,
                 Traits = new List<string>() { "Condition." },
                 Text = "Attach to a hero.\r\nAction: Exhaust Unexpected Courage to ready attached hero.",
+                FlavorText = "\"Here am I, naughty little fly;\r\nyou are fat and lazy.\r\nYou cannot trap me, though you try,\r\nin your cobwebs crazy.\"\r\n-Bilbo Baggins, The Hobbit",
                 Quantity = 1,
                 Number = 57,
                 Artist = Artist.Angela_Sung
