@@ -162,7 +162,7 @@
                 </div>
             </div>
             
-            <div class="statTextBox" style="margin:2px;padding-top:0px;padding-left:6px;padding-right:6px;border: 1px solid gray;border-radius:4px;max-width:500px;min-height:200px;min-width:200px;min-height:170px;position:relative;overflow:;background-color:@Model.BackgroundColor();">
+            <div class="statTextBox" style="margin:2px;padding-top:0px;padding-left:6px;padding-right:6px;border: 1px solid gray;border-radius:4px;max-width:500px;min-height:180px;min-width:200px;position:relative;background-color:@Model.BackgroundColor();">
             
             @if (!string.IsNullOrEmpty(@Model.BackgroundImage()))
             {
@@ -369,7 +369,7 @@
                 if (@Model.HasFlavorText)
                 {
                     
-                <div style="text-align:center;padding:4px;">
+                <div style="text-align:center;padding:4px;font-size:small;">
                     @if (@Model.HasFlavorText)
                     {
                         foreach (var line in @Model.FlavorText)
@@ -446,7 +446,7 @@
                         </div>
                     }
 
-                    <div style="text-align:center;padding:4px;">
+                    <div style="text-align:center;padding:4px;font-size:small;">
                     @if (@Model.HasOppositeFlavorText)
                     {
                         foreach (var line in @Model.OppositeFlavorText)

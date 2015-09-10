@@ -509,6 +509,7 @@ and the City shall be blessed.
                 Willpower = 0,
                 HitPoints = 2,
                 Traits = new List<string>() { "Dwarf.", "Warrior." },
+                FlavorText = "\"I am glad to have you standing nigh with your stout legs and your hard axe.\" -Legolas, The Two Towers",
                 Quantity = 3,
                 Number = 28,
                 Artist = Artist.Loren_Fetterman
@@ -526,6 +527,7 @@ and the City shall be blessed.
                 HitPoints = 1,
                 Traits = new List<string>() { "Gondor.", "Warrior." },
                 Text = "Response: After Gondorian Spearman is declared as a defender, deal 1 damage to the attacking enemy.",
+                FlavorText = "More than a thousand were there mustered. Their spears were like a sprining wood. -The Two Towers",
                 Keywords = new List<string>() { "Sentinel." },
                 Quantity = 3,
                 Number = 29,
@@ -544,6 +546,7 @@ and the City shall be blessed.
                 HitPoints = 2,
                 Traits = new List<string>() { "Rohan.", "Archer." },
                 Keywords = new List<string>() { "Ranged." },
+                FlavorText = "A few of the riders appeared to be bowmen, skilled at shooting from a running horse. -The Two Towers",
                 Quantity = 2,
                 Number = 30,
                 Artist = Artist.Loren_Fetterman
@@ -562,6 +565,7 @@ and the City shall be blessed.
                 HitPoints = 6,
                 Traits = new List<string>() { "Beorning.", "Warrior." },
                 Text = "Action: Beorn gains +5 Attack until the end of the phase. At the end of the phase in which you trigger this effect, shuffle Beorn back into your deck. (Limit once per round.)",
+                FlavorText = "\"I don't need your service, thank you...but I expect you need mine.\" -The Hobbit",
                 Quantity = 1,
                 Number = 31,
                 Artist = Artist.Tiziano_Baracchi
@@ -574,6 +578,7 @@ and the City shall be blessed.
                 Sphere = Sphere.Tactics,
                 ResourceCost = 1,
                 Text = "Action: Choose a character. Until the end of the phase, that character gains +1 Attack and +1 Defense.",
+                FlavorText = "Throwing back his cloak, he laid his hand on the hilt of a sword that had hung concealed by his side. They did not dare to move. -The Fellowship of the Ring",
                 Quantity = 3,
                 Number = 32,
                 Artist = Artist.Leonardo_Borazio
@@ -599,6 +604,7 @@ and the City shall be blessed.
                 Sphere = Sphere.Tactics,
                 ResourceCost = 1,
                 Text = "Combat Action: Choose an enemy engaged with a player. That enemy cannot attack that player this phase.",
+                FlavorText = "A few brave men were strung before them to make a feint of resistance, and many there fell before the rest drew back and fled to either side. -The Hobbit",
                 Quantity = 2,
                 Number = 34,
                 Artist = Artist.Lius_Lasahido
@@ -627,6 +633,7 @@ and the City shall be blessed.
 @"You must use resources from 3 different heroes' pools to pay for this card.
                 
 Action: Choose a player. That player's engaged enemies cannot attack that player this phase.",
+                FlavorText = "With a word or cry, suddenly, the Riders halted. A thicket of spears were pointed towards the strangers...\r\n-The Two Towers",
                 Quantity = 2,
                 Number = 36,
                 Artist = Artist.David_Horne,
@@ -640,6 +647,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Sphere = Sphere.Tactics,
                 ResourceCost = 2,
                 Text = "Response: After a character is declared as a defender, deal 2 damage to the attacking enemy.",
+                FlavorText = "A swift stroke she dealt, skilled and deadly.\r\n-The Return of the King",
                 Quantity = 1,
                 Number = 37,
                 Artist = Artist.Ijur
@@ -666,6 +674,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 ResourceCost = 1,
                 Traits = new List<string>() { "Item.", "Weapon." },
                 Text = "Attach to a hero.\r\nAttached hero gets +1 Attack when attacking an Orc.\r\nResponse: After attached hero attacks and destroys an enemy, place 1 progress token on the current quest.",
+                FlavorText = "It was rather splendid to be wearing a blade made in Gondolin for the goblin-wars of which so many songs had sung...\r\n-The Hobbit",
                 Keywords = new List<string>() { "Restricted." },
                 Quantity = 2,
                 Number = 39,
@@ -680,6 +689,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 ResourceCost = 4,
                 Traits = new List<string>() { "Item.", "Armor." },
                 Text = "Attach to a hero.\r\nAttached hero gets +4 Hit Points.",
+                FlavorText = "\"Go to the armouries of the Citadel, and get you there the livery and gear of the Tower.\"\r\n-Denethor, The Return of the King",
                 Keywords = new List<string>() { "Restricted." },
                 Quantity = 2,
                 Number = 40,
@@ -694,6 +704,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 ResourceCost = 2,
                 Traits = new List<string>() { "Item.", "Weapon." },
                 Text = "Attach to a hero.\r\nAttached hero gains +1 Attack. (+2 Attack instead if attached hero is a Dwarf.)",
+                FlavorText = "\"But keep your bow ready to hand, and I will keep my axe loose in my belt.\"\r\n-Gimli, The Two Towers",
                 Keywords = new List<string>() { "Restricted." },
                 Quantity = 2,
                 Number = 41,
@@ -709,6 +720,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 IsUnique = true,
                 Traits = new List<string>() { "Item.", "Artifact." },
                 Text = "Attach to a hero.\r\nResponse: After a character leaves play, add 1 resource to attached hero's pool.",
+                FlavorText = "'Slow should you be to wind that horn again, Boromir,' said Elrond, 'until you stand once more on the borders of your land, and dire need is on you.'\r\n-The Fellowship of the Ring",
                 Keywords = new List<string>() { "Restricted." },
                 Quantity = 1,
                 Number = 42,
