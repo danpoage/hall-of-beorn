@@ -112,6 +112,9 @@ namespace HallOfBeorn.Models.Search
                 case CardType.Objective_Ally:
                     weight += 8;
                     break;
+                case CardType.Objective_Location:
+                    weight += 2;
+                    break;
                 case CardType.Attachment:
                     weight += 7;
                     break;

@@ -99,6 +99,7 @@ namespace HallOfBeorn.Models.Simple
                     break;
                 case Models.CardType.Objective:
                 case Models.CardType.Objective_Ally:
+                case Models.CardType.Objective_Location:
                     InitializeEncounterSet(card);
                     InitializeObjective(card);
                     break;

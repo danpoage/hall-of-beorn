@@ -482,6 +482,7 @@ namespace HallOfBeorn.Models
             //Across the Ettenmoors
             all.Add(Artist.Michele_Frigo);
             all.Add(Artist.Kip_Ayers);
+            all.Add(Artist.Marcel_Mercado);
         }
 
         private static List<Artist> all = new List<Artist>();
@@ -569,6 +570,7 @@ namespace HallOfBeorn.Models
         public static Artist Lomacchi = new Artist { Name = "Lomacchi", URL = "http://dalomacchi.deviantart.com" };
         public static Artist Luca_Michelucci = new Artist { Name = "Luca Michelucci", URL = "http://www.councilofelrond.com/imagegallerycats/michelucci" };
         public static Artist Mahdi_Mehrnegar = new Artist { Name = "M. M. Mehrnegar", URL = "http://mahdi66.cgsociety.org" };
+        public static Artist Marcel_Mercado = new Artist { Name = "Marcel Mercado", URL = "http://marcelmercado.com" };
         public static Artist Mathia_Arkoniel = new Artist { Name = "Mathia Arkoniel", URL = "http://mathiaarkoniel.deviantart.com" };
         public static Artist Mathieu_Degrotte = new Artist { Name = "Mathieu Degrotte", URL = "http://md-arts.deviantart.com" };
         public static Artist Meanor = new Artist { Name = "Meanor", URL = "http://meanor.deviantart.com" };

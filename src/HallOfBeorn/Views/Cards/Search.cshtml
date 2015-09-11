@@ -326,6 +326,9 @@
                         <span style="width:24px;"><span style="margin-right:2px;font-weight:bold;">@card.Threat</span><img style="margin-bottom:-3px;" src="/Images/threat.png" /></span>
                         <span style="width:60px;margin-left:14px;color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.QuestPoints</span><span style="width:60px;color:#616161;">)</span>
                         break;
+                    case CardType.Objective_Location:
+                        <span style="width:60px;margin-left:14px;color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.QuestPoints</span><span style="width:60px;color:#616161;">)</span>
+                        break;
                     case CardType.Objective:
                     case CardType.Objective_Ally:
                         if (@card.CardType == CardType.Objective_Ally || @card.HasCharacterStats)

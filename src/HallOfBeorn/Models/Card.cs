@@ -608,6 +608,7 @@ namespace HallOfBeorn.Models
                 case Models.CardType.Treachery:
                 case Models.CardType.Objective:
                 case Models.CardType.Objective_Ally:
+                case Models.CardType.Objective_Location:
                 case Models.CardType.Encounter_Side_Quest:
                     return DeckType.Encounter;
                 case Models.CardType.Quest:
@@ -836,6 +837,18 @@ namespace HallOfBeorn.Models
                 Attack = attack,
                 Defense = defense,
                 HitPoints = hitPoints
+            };
+        }
+
+        public static Card ObjectiveLocation(string title, string encounterSet, byte questPoints)
+        {
+            return new Card()
+            {
+                CardType = CardType.Objective_Location,
+                Title = title,
+                Id = string.Empty,
+                EncounterSet = encounterSet,
+                QuestPoints = questPoints
             };
         }
 

@@ -339,7 +339,7 @@ namespace HallOfBeorn.Models
                 case Models.Sphere.Lore:
                     return string.Format("/Images/{0}.png", _card.Sphere.ToString());
                 default:
-                    if (_card.CardType == Models.CardType.Enemy || _card.CardType == Models.CardType.Location || _card.CardType == Models.CardType.Treachery || _card.CardType == Models.CardType.Objective || _card.CardType == Models.CardType.Objective_Ally || _card.CardType == Models.CardType.Encounter_Side_Quest)
+                    if (_card.CardType == Models.CardType.Enemy || _card.CardType == Models.CardType.Location || _card.CardType == Models.CardType.Treachery || _card.CardType == Models.CardType.Objective || _card.CardType == Models.CardType.Objective_Ally || _card.CardType == Models.CardType.Objective_Location || _card.CardType == Models.CardType.Encounter_Side_Quest)
                     {
                         return "/Images/encounter-card-back.jpg";
                     }
@@ -357,7 +357,7 @@ namespace HallOfBeorn.Models
                 case Models.Sphere.Lore:
                     return "-5px";
                 default:
-                    if (_card.CardType == Models.CardType.Enemy || _card.CardType == Models.CardType.Location || _card.CardType == Models.CardType.Treachery || _card.CardType == Models.CardType.Objective || _card.CardType == Models.CardType.Objective_Ally || _card.CardType == Models.CardType.Encounter_Side_Quest)
+                    if (_card.CardType == Models.CardType.Enemy || _card.CardType == Models.CardType.Location || _card.CardType == Models.CardType.Treachery || _card.CardType == Models.CardType.Objective || _card.CardType == Models.CardType.Objective_Ally || _card.CardType == Models.CardType.Objective_Location || _card.CardType == Models.CardType.Encounter_Side_Quest)
                     {
                         return "0px";
                     }
@@ -376,7 +376,7 @@ namespace HallOfBeorn.Models
                 case Models.Sphere.Lore:
                     return "48px";
                 default:
-                    if (_card.CardType == Models.CardType.Enemy || _card.CardType == Models.CardType.Location || _card.CardType == Models.CardType.Treachery || _card.CardType == Models.CardType.Objective || _card.CardType == Models.CardType.Objective_Ally || _card.CardType == Models.CardType.Encounter_Side_Quest)
+                    if (_card.CardType == Models.CardType.Enemy || _card.CardType == Models.CardType.Location || _card.CardType == Models.CardType.Treachery || _card.CardType == Models.CardType.Objective || _card.CardType == Models.CardType.Objective_Ally || _card.CardType == Models.CardType.Objective_Location || _card.CardType == Models.CardType.Encounter_Side_Quest)
                     {
                         return "0px";
                     }
@@ -394,7 +394,7 @@ namespace HallOfBeorn.Models
                 case Models.Sphere.Lore:
                     return "200px";
                 default:
-                    if (_card.CardType == Models.CardType.Enemy || _card.CardType == Models.CardType.Location || _card.CardType == Models.CardType.Treachery || _card.CardType == Models.CardType.Objective || _card.CardType == Models.CardType.Objective_Ally || _card.CardType == Models.CardType.Encounter_Side_Quest)
+                    if (_card.CardType == Models.CardType.Enemy || _card.CardType == Models.CardType.Location || _card.CardType == Models.CardType.Treachery || _card.CardType == Models.CardType.Objective || _card.CardType == Models.CardType.Objective_Ally || _card.CardType == Models.CardType.Objective_Location || _card.CardType == Models.CardType.Encounter_Side_Quest)
                     {
                         return "100%";
                     }
@@ -412,7 +412,7 @@ namespace HallOfBeorn.Models
                 case Models.Sphere.Lore:
                     return "200";
                 default:
-                    if (_card.CardType == Models.CardType.Enemy || _card.CardType == Models.CardType.Location || _card.CardType == Models.CardType.Treachery || _card.CardType == Models.CardType.Objective || _card.CardType == Models.CardType.Objective_Ally || _card.CardType == Models.CardType.Encounter_Side_Quest)
+                    if (_card.CardType == Models.CardType.Enemy || _card.CardType == Models.CardType.Location || _card.CardType == Models.CardType.Treachery || _card.CardType == Models.CardType.Objective || _card.CardType == Models.CardType.Objective_Ally || _card.CardType == Models.CardType.Objective_Location || _card.CardType == Models.CardType.Encounter_Side_Quest)
                     {
                         return "100%";
                     }
@@ -433,7 +433,7 @@ namespace HallOfBeorn.Models
                 case Models.Sphere.Lore:
                     return "rgba(0, 128, 0, .1)";
                 default:
-                    if (_card.CardType == Models.CardType.Enemy || _card.CardType == Models.CardType.Location || _card.CardType == Models.CardType.Treachery || _card.CardType == Models.CardType.Objective || _card.CardType == Models.CardType.Objective_Ally || _card.CardType == Models.CardType.Encounter_Side_Quest)
+                    if (_card.CardType == Models.CardType.Enemy || _card.CardType == Models.CardType.Location || _card.CardType == Models.CardType.Treachery || _card.CardType == Models.CardType.Objective || _card.CardType == Models.CardType.Objective_Ally || _card.CardType == Models.CardType.Objective_Location || _card.CardType == Models.CardType.Encounter_Side_Quest)
                     {
                         return "rgba(0, 0, 0, .1)";
                     }
