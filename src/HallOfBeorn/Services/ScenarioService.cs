@@ -122,7 +122,7 @@ namespace HallOfBeorn.Services
             {
                 var escapedTitle = card.ScenarioTitle.ToUrlSafeString();
 
-                if (card.CardType == CardType.Location || card.CardType == CardType.Enemy || card.CardType == CardType.Treachery || card.CardType == CardType.Objective || card.CardType == CardType.Objective_Ally || card.CardType == CardType.Encounter_Side_Quest)
+                if (card.CardType == CardType.Location || card.CardType == CardType.Enemy || card.CardType == CardType.Treachery || card.CardType == CardType.Objective || card.CardType == CardType.Objective_Ally || card.CardType == CardType.Objective_Location || card.CardType == CardType.Encounter_Side_Quest)
                 {
                     if (scenarios.ContainsKey(escapedTitle) && !card.ScenarioTitle.EndsWith(" Nightmare"))
                     {

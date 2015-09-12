@@ -48,6 +48,7 @@
             var treacheryData;
             var objectiveData;
             var objectiveAllyData;
+            var objectiveLocationData;
             var shadowData;
             var surgeData;
 
@@ -63,13 +64,14 @@
                     modeData = data.NightmareData;
                     break;
             }
-            
+
             scenarioTitles = modeData.ScenarioTitles;
             enemyData = modeData.EnemyTotals;
             locationData = modeData.LocationTotals;
             treacheryData = modeData.TreacheryTotals;
             objectiveData = modeData.ObjectiveTotals;
             objectiveAllyData = modeData.ObjectiveAllyTotals;
+            objectiveLocationData = modeData.ObjectiveLocationTotals;
             sideQuestData = modeData.SideQuestTotals;
             shadowData = modeData.ShadowTotals;
             surgeData = modeData.SurgeTotals;
@@ -102,6 +104,21 @@
                 seriesData.push({
                     name: 'Objective Allies',
                     data: objectiveAllyData
+                });
+            }
+
+            var hasObjectiveLocations = false;
+            for (var i = 0; i < objectiveLocationData.length; i++) {
+                if (objectiveLocationData[i] > 0) {
+                    hasObjectiveLocations = true;
+                    break;
+                }
+            }
+
+            if (hasObjectiveLocations) {
+                seriesData.push({
+                    name: 'Objective Locations',
+                    data: objectiveLocationData
                 });
             }
 
@@ -178,7 +195,7 @@
                 loadTotals('#voiTotalsContainer', 'The Voice of Isengard and The Ring-maker', data);
             });
             $.get("/Cards/ScenarioTotals?id=The+Lost+Realm,Angmar+Awakened").success(function (data) {
-                loadTotals('#tlrTotalsContainer', 'The Lost Relam and Angmar Awakened', data);
+                loadTotals('#tlrTotalsContainer', 'The Lost Realm and Angmar Awakened', data);
             });
             $.get("/Cards/ScenarioTotals?id=The+Hobbit").success(function (data) {
                 loadTotals('#hobbitTotalsContainer', 'The Hobbit', data);
@@ -272,6 +289,21 @@
                             data: objectiveAllyData
                         });
                     }
+                    if (result.EasyHasObjectiveLocations || result.NormalHasObjectiveLocations || result.NightmareHasObjectiveLocations) {
+                        var objectiveLocationData = [];
+                        if (result.HasEasy) {
+                            objectiveLocationData.push(result.EasyObjectiveLocations);
+                        }
+                        objectiveLocationData.push(result.NormalObjectiveLocations);
+                        if (result.HasNightmare) {
+                            objectiveLocationData.push(result.NightmareObjectiveLocations);
+                        }
+
+                        series.push({
+                            name: 'Objective Locations',
+                            data: objectiveLocationData
+                        });
+                    }
                     if (result.EasyHasSurge || result.NormalHasSurge || result.NightmareHasSurge) {
                         var surgeData = [];
                         if (result.HasEasy) {
@@ -362,6 +394,9 @@
                                                     break;
                                                 case 'Objective Allies':
                                                     cardType = 'Objective_Ally';
+                                                    break;
+                                                case 'Objective Locations':
+                                                    cardType = 'Objective_Location';
                                                     break;
                                                 case 'Surge':
                                                     query = 'Surge';
