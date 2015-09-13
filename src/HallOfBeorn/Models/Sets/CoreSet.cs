@@ -956,6 +956,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 HitPoints = 1,
                 Traits = new List<string>() { "Silvan." },
                 Text = "Action: Exhaust Daughter of the Nimrodel to heal up to 2 damage on any 1 hero.",
+                FlavorText = "\"Here is Nimrodel! Of this stream the Silvan Elves made many songs long ago, and still we sing them in the North...I will bate my feet, for it is said that the water is healing to the weary.\" -Legolas, The Fellowship of the Ring",
                 Quantity = 3,
                 Number = 58,
                 Artist = Artist.Magali_Villeneuve
@@ -973,6 +974,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 HitPoints = 3,
                 Traits = new List<string>() { "Dwarf.", "Craftsman." },
                 Text = "Response: After you play Erebor Hammersmith, return the topmost attachment in any player's discard pile to his hand.",
+                FlavorText = "\"In Erebor in the Kingdom of Dain there is such skill...\" -Aragorn, The Return of the King",
                 Quantity = 2,
                 Number = 59,
                 Artist = Artist.Empty_Room_Studios
@@ -991,6 +993,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 HitPoints = 1,
                 Traits = new List<string>() { "Silvan." },
                 Text = "Action: Exhaust Henamarth Riversong to look at the top card of the encounter deck.",
+                FlavorText = "\"And I reckon there's Elves and Elves. They're all elvish enough, but they're not all the same.\"\r\n-Sam Gamgee,\r\nThe Fellowship of the Ring",
                 Quantity = 1,
                 Number = 60,
                 Artist = Artist.Jen_Zee
