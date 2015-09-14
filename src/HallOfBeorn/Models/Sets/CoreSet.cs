@@ -1011,6 +1011,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 HitPoints = 2,
                 Traits = new List<string>() { "Dwarf." },
                 Text = "Response: After Miner of the Iron ~Hills enters play, choose and discard 1 Condition attachment from play.",
+                FlavorText = "...while the four dwarves sat around the table, and talked about mines and gold and troubles with goblins...\r\n-The Hobbit",
                 Quantity = 2,
                 Number = 61,
                 Artist = Artist.Loren_Fetterman
@@ -1030,6 +1031,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 HitPoints = 2,
                 Traits = new List<string>() { "Minstrel.", "Rohan." },
                 Text = "Action: Exhaust Gléowine to choose a player. That player draws 1 card.",
+                FlavorText = "Then the Riders of the King's House upon white horses rode round about the barrow and sang together a song of Théoden Thengle's son that Gléowine his minstrel made...\r\n-The Return of the King",
                 Quantity = 2,
                 Number = 62,
                 Artist = Artist.Tony_Foti
@@ -1042,6 +1044,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Sphere = Sphere.Lore,
                 ResourceCost = 2,
                 Text = "Action: Choose a character. Heal all damage from that character.",
+                FlavorText = "\"...understanding, making and healing...These things the Elves of Middle-earth have in some measure gained, though with sorrow.\"\r\n-Elrond, The Fellowship of the Ring",
                 Quantity = 3,
                 Number = 63,
                 Artist = Artist.Ryan_Barger
@@ -1055,6 +1058,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Sphere = Sphere.Lore,
                 ResourceCost = 3,
                 Text = "Action: Choose a player. That player draws 3 cards.",
+                FlavorText = "\"That is the fairest of all the dwellings of my people. There are no trees like the tress of that land.\"\r\n-Legolas, The Fellowship of the Ring",
                 Quantity = 2,
                 Number = 64,
                 Artist = Artist.Magali_Villeneuve
@@ -1094,6 +1098,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 ResourceCost = 254,
                 IsVariableCost = true,
                 Text = "Action: Look at the top X cards of any player's deck, add 1 of those cards to its owner's hand, and return the rest to the top of the deck in any order.",
+                FlavorText = "\"Less welcome did the Lord Denethor show me then than of old, and grudgingly he permitted me to search among his hoarded scrolls and books.\"\r\n-Gandalf, The Fellowship of the Ring",
                 Quantity = 2,
                 Number = 67,
                 Artist = Artist.Mike_Nash
@@ -1106,6 +1111,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Sphere = Sphere.Lore,
                 ResourceCost = 5,
                 Text = "Action: Choose a player. Heal all damage on each hero controlled by that player.",
+                FlavorText = "\"...and my house is open to you, if ever you come back this way again.\"\r\n-Beorn, The Hobbit",
                 Quantity = 1,
                 Number = 68,
                 Artist = Artist.David_A_Nash
@@ -1119,6 +1125,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 ResourceCost = 3,
                 Traits = new List<string>() { "Item.", "Trap." },
                 Text = "Attach to an enemy engaged with a player.\r\nAttached enemy cannot attack.",
+                FlavorText = "\"We shall have it like a coney in a trap. Then we shall learn what kind of thing it is.\"\r\n-Unidentified Man of Gondor,\r\nThe Two Towers",
                 Quantity = 2,
                 Number = 69,
                 Artist = Artist.Alexandru_Sabo
@@ -1133,6 +1140,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 ResourceCost = 1,
                 Traits = new List<string>() { "Title." },
                 Text = "Attach to a hero.\r\nAction: Discard a card from your hand to give attached hero +1 Defense or +1 Willpower until the end of the phase. Limit 3 times per phase.",
+                FlavorText = "'Speak no evil of the lady Galadriel!' said Aragorn sternly. 'There is in her and in this land no evil, unless a man bring it hither himself. Then let him beware.'\r\n-The Fellowship of the Ring",
                 Quantity = 2,
                 Number = 70,
                 Artist = Artist.Magali_Villeneuve,
@@ -1146,7 +1154,8 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Sphere = Sphere.Lore,
                 ResourceCost = 1,
                 Traits = new List<string>() { "Condition." },
-                Text = "Attach to a hero. Attached hero gets -1 Willpower.\r\nResponse: Exhaust Dark Knowledge to look at 1 shadow card that was just dealt to an enemy attacking you.",
+                Text = "Attach to a hero. Attached hero gets -1 Willpower.\r\nResponse: Exhaust ~Dark Knowledge to look at 1 shadow card that was just dealt to an enemy attacking you.",
+                FlavorText = "'Go on then!' said Frodo. 'What do you know?'\r\n'Too much; too many dark things,' said Strider grimly.\r\n-The Fellowship of the Ring",
                 Quantity = 1,
                 Number = 71,
                 Artist = Artist.Empty_Room_Studios
@@ -1160,6 +1169,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 ResourceCost = 3,
                 Traits = new List<string>() { "Skill." },
                 Text = "Attach to a character.\r\nAction: Exhaust Self Preservation to heal 2 points of damage from attached character.",
+                FlavorText = "...how much more of this would they have to endure, or could they endure?\r\n-The Two Towers",
                 Quantity = 2,
                 Number = 72,
                 Artist = Artist.Empty_Room_Studios
