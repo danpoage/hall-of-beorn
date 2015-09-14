@@ -772,7 +772,7 @@ namespace HallOfBeorn.Models
         public static Artist Julia_Laud = new Artist { Name = "Julia Laud", URL = "http://julialaud.deviantart.com" };
         public static Artist Julian_Kok = new Artist { Name = "Julian Kok", URL = "http://juliankokart.blogspot.com" };
         public static Artist K_R_Harris = new Artist { Name = "K. R. Harris", URL = "http://krhart.com" };
-        public static Artist Kara_Williams = new Artist { Name = "Kara Williams", URL = "http://karawilliams.com" };
+        public static Artist Kara_Williams = new Artist { Name = "Kara Williams", URL = "http://kwilliamsart.tumblr.com" };
         public static Artist Katherine_Dinger = new Artist { Name = "Katherine Dinger", URL = "http://jezebel.deviantart.com" };
         public static Artist Katy_Grierson = new Artist { Name = "Katy Grierson", URL = "http://kovah.deviantart.com" };
         public static Artist Kaya = new Artist { Name = "Kaya", URL = "http://gkb3rk.deviantart.com" };
