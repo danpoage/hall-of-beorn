@@ -2026,7 +2026,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 CardType = CardType.Quest,
                 ScenarioNumber = 3,
                 EncounterSet = "Escape from Dol Guldur",
-                FlavorText = "Following a threat of sunlight, you discover a cavern opening leading out through the side of the hill. Stationed outside the cave-mouth, however, is a large group of Orcs.",
+                FlavorText = "Following a thread of sunlight, you discover a cavern opening leading out through the side of the hill. Stationed outside the cave-mouth, however, is a large group of Orcs.",
                 OppositeText = "Forced: At the beginning of each quest phase, each player places the top card of his deck, face down in front of him as if it just engaged him from the staging area. These cards are called \"Orc Guard\" and act as enemies with: 1 hit point, 1 Attack, and 1 Defense.\r\nPlayers cannot defeat this stage while Nazgul of Dol Guldur is in play. If this stage is defeated and Nazgul of Dol Guldur is not in play, the players have won the game.",
                 Quantity = 1,
                 QuestPoints = 7,
