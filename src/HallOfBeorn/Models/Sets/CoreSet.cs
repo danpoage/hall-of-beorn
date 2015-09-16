@@ -1255,6 +1255,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 CardType = CardType.Location,
                 Traits = new List<string>() { "Forest." },
                 Text = "Travel: Each player must exhaust 1 hero he controls to travel here.",
+                FlavorText = "As he drew nearer, he saw that it was made with spider-webs one behind and over and tangled with another.\r\n-The Hobbit",
                 Threat = 2,
                 QuestPoints = 2,
                 EncounterSet = "Spiders of Mirkwood",
@@ -1282,6 +1283,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Id = "51223bd0-ffd1-11df-a976-0801200c9079",
                 CardType = CardType.Treachery,
                 Text = "When Revealed: Each player discards all event cards in his hand.",
+                FlavorText = "...he would see gleams in the darkness around them, and sometimes pairs of yellow or red or green eyes would stare at him from a little distance, and then slowly fade and disappear and slowly shine out again in another place.\r\n-The Hobbit",
                 EncounterSet = "Spiders of Mirkwood",
                 Quantity = 1,
                 EasyModeQuantity = 0,
@@ -1330,6 +1332,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 HitPoints = 9,
                 Traits = new List<string>() { "Troll." },
                 Text = "Excess combat damage dealt by Hill Troll (damage that is dealt beyond the remaining hit points of the character damaged by its attack) must be assigned as an increase to your threat.",
+                FlavorText = "\"Mutton yesterday, mutton today, and blimey, if it don't look like mutton again tomorrow.\"\r\n-Troll, The Hobbit",
                 Threat = 1,
                 EncounterSet = "Wilderlands",
                 Quantity = 2,
@@ -1366,6 +1369,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 HitPoints = 7,
                 Traits = new List<string>() { "Creature." },
                 Text = "Forced: Each time Marsh Adder attacks you, raise your threat by 1.",
+                FlavorText = "Under the boughs of Mirkwood there was deadly strife of Elves and Men and fell beasts.\r\n-The Fellowship of the Ring",
                 Threat = 3,
                 EncounterSet = "Wilderlands",
                 Quantity = 1,
@@ -1392,7 +1396,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Number = 85,
                 Artist = Artist.Ryan_Barger
             });
-            var despair = new Card()
+            Cards.Add(new Card()
             {
                 ImageType = Models.ImageType.Png,
                 Title = "Despair",
@@ -1405,15 +1409,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 EasyModeQuantity = 0,
                 Number = 86,
                 Artist = Artist.Marc_Scheff
-            };
-
-            //despair
-            //    .ClearText()
-            //    .WithEffect(CardEffectType.When_Revealed, "Remove 4 progress tokens from the current quest card. (If there are fewer than 4 progress tokens on the quest, remove all progress tokens from that quest.)")
-            //    .WithShadow("Defending character does not count its Defense.")
-            //    .RenderEffects();
-
-            Cards.Add(despair);
+            });
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,
                 Title = "The Brown Lands",
@@ -1421,6 +1417,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 CardType = CardType.Location,
                 Traits = new List<string>() { "Wasteland." },
                 Text = "Forced: After the players travel to The Brown Lands, place 1 progress token on it.",
+                FlavorText = "They had come to the Brown Lands that lay, vast and desolate, between Southern Mirkwood and the hills of the Emyn Muil. What pestilence or war or evil deed of the Enemy had so blasted all that region even Aragorn could not tell.\r\n-The Fellowship of the Ring",
                 Threat = 5,
                 QuestPoints = 1,
                 EncounterSet = "Wilderlands",
@@ -1435,6 +1432,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 CardType = CardType.Location,
                 Traits = new List<string>() { "Wasteland." },
                 Text = "When faced with the option to travel, the players must travel to The East Bight if there is no active location.",
+                FlavorText = "\"...to the east the lands are waste, and full of Sauron's creatures...\"\r\n-Haldir, The Fellowship of the Ring",
                 Threat = 1,
                 QuestPoints = 6,
                 EncounterSet = "Wilderlands",
@@ -1531,6 +1529,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 CardType = CardType.Location,
                 Traits = new List<string>() { "Stronghold.", " Dol Guldur." },
                 Text = "Travel: The first player must discard 2 cards from his hand at random to travel here.",
+                FlavorText = "\"It is clad in a forest of dark fir, where the trees strive one against another and their branches rot and wither. In the midst upon a stony height stands Dol Guldur, where long the hidden Enemy had his dwelling.\"\r\n-Haldir, The Fellowship of the Ring",
                 Threat = 3,
                 QuestPoints = 2,
                 EasyModeQuantity = 0,
@@ -1546,6 +1545,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 CardType = CardType.Location,
                 Traits = new List<string>() { "Forest." },
                 Text = "While Enchanted Stream is the active location, players cannot draw cards.",
+                FlavorText = "\"There is one stream, I know, black and strong which crosses the path. That you should neither drink of, nor bathe in; for I have heard that it carries enchantment and a great drowsiness and forgetfulness.\"\r\n-Beorn, The Hobbit",
                 Threat = 2,
                 QuestPoints = 2,
                 EncounterSet = "Dol Guldur Orcs",
@@ -1600,6 +1600,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 HitPoints = 2,
                 Traits = new List<string>() { "Creature." },
                 Text = "When Revealed: Each player must choose 1 character currently committed to a quest, and remove that character from the quest. (The chosen character does not ready.)",
+                FlavorText = "They could not stand that, nor the huge bats, black as a top-hat, either...\r\n-The Hobbit",
                 Threat = 1,
                 EncounterSet = "Passage Through Mirkwood",
                 Quantity = 1,
@@ -1613,6 +1614,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 CardType = CardType.Location,
                 Traits = new List<string>() { "Forest." },
                 Text = "Response: After you travel to Old Forest Road, the first player may choose and ready 1 character he controls.",
+                FlavorText = "...Beorn had warned them that that way was now often used by the goblins, while the forest-road itself, he had heard, was overgrown and disused on the eastern end and led to impassable marshes where the path had long been lost.\r\n-The Hobbit",
                 Threat = 1,
                 QuestPoints = 3,
                 EncounterSet = "Passage Through Mirkwood",
@@ -1627,6 +1629,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 CardType = CardType.Location,
                 Traits = new List<string>() { "Forest." },
                 Text = "Response: After you travel to Forest Gate, the first player may draw 2 cards.",
+                FlavorText = "The path itself was narrow and wound in and out among the trunks. Soon the light in the gate was like a little bright hole far behind, and the quiet was so deep that their feet seemed to thump along while the trees leaned over them and listened.\r\n-The Hobbit",
                 Threat = 2,
                 QuestPoints = 4,
                 EncounterSet = "Passage Through Mirkwood",
@@ -1723,6 +1726,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 CardType = CardType.Location,
                 Traits = new List<string>() { "Dungeon." },
                 Keywords = new List<string>() { "Doomed 1.", " Surge." },
+                FlavorText = "\"I alone of you have ever been in the dungeons of the Dark Lord, and only in his older and lesser dwelling in Dol Guldur.\"\r\n-Gandalf, The Fellowship of the Ring",
                 Threat = 1,
                 QuestPoints = 3,
                 EncounterSet = "Escape from Dol Guldur",
@@ -1737,6 +1741,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 CardType = CardType.Location,
                 Traits = new List<string>() { "Dungeon." },
                 Text = "Forced: After travelling to Tower Gate, each player places the top card of his deck, face down in front of him, as if it just engaged him from the staging area. These cards are called 'Orc Guard', and act as enemies with: 1 hit point, 1 Attack, and 1 Defense.",
+                FlavorText = "\"I myself dared to pass the doors of the Necromancer in Dol Guldur, and secretly explored his ways.\"\r\n-Gandalf, The Fellowship of the Ring",
                 Threat = 2,
                 QuestPoints = 1,
                 EncounterSet = "Escape from Dol Guldur",
@@ -1821,6 +1826,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 CardType = CardType.Location,
                 Traits = new List<string>() { "Riverland." },
                 Text = "Forced: If Banks of the Anduin leaves play, return it to the top of the encounter deck instead of placing it in the discard pile.",
+                FlavorText = "Here and there through openings Frodo could catch sudden glimpses of rolling mounds, and far beyond them hills in the sunset, and away on the edge of sight a dark line, where marches the southernmost ranks of the Misty Mountains.\r\n-The Fellowship of the Ring",
                 Threat = 1,
                 QuestPoints = 3,
                 EncounterSet = "Journey Down the Anduin",
@@ -1835,6 +1841,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 CardType = CardType.Location,
                 Traits = new List<string>() { "Marshland." },
                 Text = "Forced: While Gladden Fields is the active location, each player must raise his threat by an additional point during the refresh phase.",
+                FlavorText = "\"On a time they took a boat and went down to the Gladden Fields, where there were great beds of iris and flowering reeds.\"\r\n-Gandalf, The Fellowship of the Ring",
                 Threat = 3,
                 QuestPoints = 3,
                 EncounterSet = "Journey Down the Anduin",
@@ -1870,6 +1877,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Id = "51223bd0-ffd1-11df-a976-0801200c9116",
                 CardType = CardType.Treachery,
                 Text = "When Revealed: Deal 1 damage to each character controlled by each player with a threat of 35 or higher.",
+                FlavorText = "\"They say in my land he can govern the storms in the Mountains of Shadow...\"\r\n-Boromir, The Fellowship of the Ring",
                 EncounterSet = "Sauron's Reach",
                 Quantity = 3,
                 EasyModeQuantity = 2,
@@ -1894,6 +1902,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Id = "51223bd0-ffd1-11df-a976-0801200c9118",
                 CardType = CardType.Treachery,
                 Text = "When Revealed: Each location in the staging area gets +1 Threat until the end of the phase. Then, each player with a threat of 35 or higher chooses and discards 1 card from his hand.",
+                FlavorText = "\"But it will be hard to find the path unless the fog lifts a little later on.\"\r\n-Aragorn, The Fellowship of the Ring",
                 EncounterSet = "Sauron's Reach",
                 Quantity = 2,
                 Number = 118,
