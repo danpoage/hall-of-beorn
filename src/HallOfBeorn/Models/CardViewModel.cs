@@ -432,10 +432,16 @@ namespace HallOfBeorn.Models
                     return "rgba(0, 0, 255, .05)";
                 case Models.Sphere.Lore:
                     return "rgba(0, 128, 0, .1)";
+                case Models.Sphere.Neutral:
+                    return "#e4e4e4";
                 default:
                     if (_card.CardType == Models.CardType.Enemy || _card.CardType == Models.CardType.Location || _card.CardType == Models.CardType.Treachery || _card.CardType == Models.CardType.Objective || _card.CardType == Models.CardType.Objective_Ally || _card.CardType == Models.CardType.Objective_Location || _card.CardType == Models.CardType.Encounter_Side_Quest)
                     {
                         return "rgba(0, 0, 0, .1)";
+                    }
+                    else if (_card.CardType == Models.CardType.Quest)
+                    {
+                        return "#d3d3d3";
                     }
                     return "White";
             }

@@ -371,6 +371,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 Quantity = 3,
                 ResourceCost = 1,
                 Text = "Action: Each player returns the topmost attachment card from his discard pile to his hand.",
+                FlavorText = "...he was just sitting down to a nice little second-breakfast in the dinning-room...\r\n-The Hobbit",
                 Number = 27,
                 Artist = Artist.Magali_Villeneuve
             });
@@ -384,6 +385,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 Quantity = 3,
                 ResourceCost = 1,
                 Text = "Attach to a hero.\r\nAttached hero gains a Lore resource icon.",
+                FlavorText = "It sit beside the fire and think\r\nof all that I have seen,\r\nof meadow-flowers and butterflies\r\nin summers that have been\r\n-The Fellowship of the Ring",
                 Number = 34,
                 Artist = Artist.Magali_Villeneuve
             });

@@ -957,3 +957,15 @@ tr.pager td {
     font-family: 'Tolkien'; /*a name to be used later*/
     src: url('/Content/fonts/tolkien.ttf'); /*URL to font*/
 }
+
+.card-text {
+}
+
+.shadow-text {
+    font-style: italic;
+}
+
+.flavor-text {
+    font-style: italic;
+    text-align: center;
+}

@@ -258,6 +258,7 @@ The crownless again shall be king.
                 Traits = new List<string>() { "Riverland." },
                 Text = "While River Ninglor is the active location, remove 1 progress token from it and from the current quest at the end of each round.",
                 Shadow = "Shadow: Remove 1 progress token from the current quest. (2 progress tokens instead if this attack is undefended.)",
+                HtmlTemplate = "<p>While {self} is the active location, remove 1 progress token from it and from the current quest at the end of each round.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Remove 1 progress token from the current quest. (2 progress tokens instead if this attack is undefended.)</p>",
                 Threat = 2,
                 QuestPoints = 4,
                 EncounterSet = "The Hunt for Gollum",
@@ -382,10 +383,7 @@ The crownless again shall be king.
                 QuestPoints = 8,
                 EncounterSet = "The Hunt for Gollum",
                 FlavorText = "\"But at the western edge of Mirkwood the trail turned away. It wandered off southwards and passed out of the Wood-elves' ken, and was lost.\" -Gandalf, The Fellowship of the Ring",
-                OppositeText =
-@"Any player who does not control a hero with at least 1 Clue objective attached cannot commit characters to this quest. If there are ever no heroes with Clue objectives attached in play, reset the quest deck to stage 2B.
-
-If the players defeat this stage, the players have once again found a true sign of Gollum's passing, and have won the game.",
+                OppositeText = "Any player who does not control a hero with at least 1 Clue objective attached cannot commit characters to this quest. If there are ever no heroes with Clue objectives attached in play, reset the quest deck to stage 2B.\r\nIf the players defeat this stage, the players have once again found a true sign of Gollum's passing, and have won the game.",
                 Quantity = 1,
                 Number = 13,
                 Artist = Artist.Carolina_Eade,

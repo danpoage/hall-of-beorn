@@ -67,7 +67,7 @@ namespace HallOfBeorn.Models.Sets
                 Willpower = 2,
                 HitPoints = 3,
                 Traits = new List<string>() { "Istari." },
-                Text = "Radagast collects 1 resource each resource phase. These resources can be used to pay for Creature cards played from your hand.Action: Spend X resources from Radagast's pool to heal X wounds on any 1 Creature.",
+                Text = "Radagast collects 1 resource each resource phase. These resources can be used to pay for Creature cards played from your hand.\r\nAction: Spend X resources from Radagast's pool to heal X wounds on any 1 Creature.",
                 FlavorText = "\"I have an urgent errand. My news is evil.\"",
                 Quantity = 3,
                 Number = 59,
@@ -86,7 +86,7 @@ namespace HallOfBeorn.Models.Sets
                 Willpower = 1,
                 HitPoints = 4,
                 Traits = new List<string>() { "Creature.", " Eagle." },
-                Text = "Landroval cannot have restricted attachments.Response: After a hero card is destroyed, return Landroval to his owner's hand to put that hero back into play, with 1 damage token on it. (Limit once per game.)",
+                Text = "Landroval cannot have restricted attachments.\r\nResponse: After a hero card is destroyed, return Landroval to his owner's hand to put that hero back into play, with 1 damage token on it. (Limit once per game.)",
                 Keywords = new List<string>() { "Sentinel." },
                 Quantity = 3,
                 Number = 53,
@@ -158,7 +158,7 @@ namespace HallOfBeorn.Models.Sets
                 Willpower = 2,
                 HitPoints = 1,
                 Traits = new List<string>() { "Rohan." },
-                Text = "While committed to a quest, Escort from Edoras gets +2 Willpower.Forced: After resolving a quest to which Escort from Edoras was committed, discard Escort from Edoras from play.",
+                Text = "While committed to a quest, Escort from Edoras gets +2 Willpower.\r\nForced: After resolving a quest to which Escort from Edoras was committed, discard Escort from Edoras from play.",
                 Quantity = 3,
                 Number = 55,
                 Artist = Artist.Mark_Winters
@@ -215,6 +215,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Creature." },
                 Text = "Only Eagle characters or characters with ranged can attack or defend against Black Forest Bats.",
                 Shadow = "Shadow: If this attack is undefended, the damage must be placed on Wilyador.",
+                HtmlTemplate = "<p>Only {trait:Eagle} characters or characters with {keyword:Ranged.@ranged} can attack or defend against {self}.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> If this attack is undefended, the damage must be placed on Wilyador</p>",
                 Threat = 1,
                 EncounterSet = "A Journey to Rhosgobel",
                 Quantity = 5,
@@ -241,6 +242,7 @@ namespace HallOfBeorn.Models.Sets
                 CardType = CardType.Location,
                 Traits = new List<string>() { "Forest." },
                 Text = "Response: After the players explore Forest Grove, search the encounter deck and discard pile for 1 Athelas objective, and add it to the staging area. Then, shuffle the encounter deck.",
+                HtmlTemplate = "<p><b>Response:</b> After the players explore {self}, search the encounter deck and discard pile for 1 <a href='/Cards/Details/Athelas-AJtR' title='Athelas' target='_blank'>Athelas</a> objective, and add it to the staging area. Then, shuffle the encounter deck.</p>",
                 Threat = 2,
                 QuestPoints = 3,
                 EncounterSet = "A Journey to Rhosgobel",
@@ -260,6 +262,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Creature." },
                 Text = "Only Eagle characters or characters with ranged can attack or defend against Mirkwood Flock.",
                 Shadow = "Shadow: If this attack is undefended, the damage must be placed on Wilyador.",
+                HtmlTemplate = "<p>Only {trait:Eagle} characters or characters with {keyword:Ranged.@ranged} can attack or defend against {self}.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> If this attack is undefended, the damage must be placed on Wilyador</p>",
                 Threat = 1,
                 EncounterSet = "A Journey to Rhosgobel",
                 Quantity = 4,
@@ -273,9 +276,7 @@ namespace HallOfBeorn.Models.Sets
                 CardType = CardType.Location,
                 IsUnique = true,
                 Traits = new List<string>() { "Forest." },
-                Text =
-@"X is the number of players in the game.
-While Rhosgobel is in the staging area, Wilyador cannot be healed.Travel: Players must complete stage one of this quest before they can travel to Rhosgobel.",
+                Text = "X is the number of players in the game.\r\nWhile Rhosgobel is in the staging area, Wilyador cannot be healed.\r\nTravel: Players must complete stage one of this quest before they can travel to Rhosgobel.",
                 Threat = 0,
                 IsVariableThreat = true,
                 QuestPoints = 4,
@@ -310,12 +311,8 @@ While Rhosgobel is in the staging area, Wilyador cannot be healed.Travel: Player
                 Willpower = 1,
                 HitPoints = 20,
                 Traits = new List<string>() { "Creature.", " Eagle." },
-                Text = 
-@"No attachments. The first player gains control of Wilyador.\r\nForced: At the end of each round, Wilyador suffers 2 damage.
-
-Wilyador cannot be healed of more than 5 wounds by a single effect. 
-
-If Wilyador leaves play, the players have lost the game.",
+                Text = "No attachments. The first player gains control of Wilyador.\r\nForced: At the end of each round, Wilyador suffers 2 damage.\r\nWilyador cannot be healed of more than 5 wounds by a single effect. If Wilyador leaves play, the players have lost the game.",
+                HtmlTemplate = "<p>No attachments. The first player gains control of {self}.<p><b>Forced:</b> At the end of each round, {self} suffers 2 damage.</p><p>{self} cannot be healed of more than 5 wounds by a single effect. If {self} leaves play, the players have lost the game.</p>",
                 EncounterSet = "A Journey to Rhosgobel",
                 Quantity = 1,
                 Number = 64,
@@ -330,7 +327,9 @@ If Wilyador leaves play, the players have lost the game.",
                 CardType = CardType.Quest,
                 QuestPoints = 8,
                 Setup = "ss",
+                FlavorText = "After a fierce conflict with a group of Trolls, you come across a fallen Eagle, grievously wounded and on the verge of death.",
                 Text = "Setup: Search the encounter deck for Rhosgobel and Wilyador, and add them to the staging area with 2 damage tokens on Wilyador. Then, shuffle the encounter deck.",
+                OppositeFlavorText = "The Eagle's wounds cannot be tended in the wilderness, so you attempt to bring the creature to Rhosgobel, where the wisdom of Radagast the Brown may be its only hope.",
                 EncounterSet = "A Journey to Rhosgobel",
                 Quantity = 1,
                 Number = 60,
@@ -347,10 +346,7 @@ If Wilyador leaves play, the players have lost the game.",
                 QuestPoints = 12,
                 EncounterSet = "A Journey to Rhosgobel",
                 FlavorText = "The Eagle's health has grown worse, but you have at last arrived at Rhosgobel, where Radagast examines the bird. He then asks you to head out into the wilderness to find the healing plant, Athelas. Meantime, any healing lore or supplies your party has it its disposal could be used to assist in comforting the Eagle until you return.",
-                OppositeText = 
-@"Reponse: After the quest phase begins, the first player may place X damage tokens on Wilyador to look at the top 3 cards of the encounter deck. Reveal and add 1 of these cards to the staging area, and discard the other 2. X is the number of players in the game.
-
-Forced: After a card effect heals Wilyador, remove that card from the game.",
+                OppositeText = "Reponse: After the quest phase begins, the first player may place X damage tokens on Wilyador to look at the top 3 cards of the encounter deck. Reveal and add 1 of these cards to the staging area, and discard the other 2. X is the number of players in the game.\r\nForced: After a card effect heals Wilyador, remove that card from the game.",
                 Quantity = 1,
                 Number = 61,
                 Artist = Artist.Ijur,
@@ -364,10 +360,8 @@ Forced: After a card effect heals Wilyador, remove that card from the game.",
                 CardType = CardType.Quest,
                 QuestPoints = 0,
                 EncounterSet = "A Journey to Rhosgobel",
-                OppositeText = 
-@"When Revealed: Heal 5 wounds from Wilyador for each Athelas objective card the players controls.
-
-If Wilyador is completely healed when this effect resolves, Wilyador survives and the players have won the game. Otherwise, the players have lost the game.",
+                FlavorText = "Feeling tha time is runing out on Wilyador's life, you gather the Athelas you have found and head back to Rhosgobel. You arrive at night, wondering if you have found enough of the herb...",
+                OppositeText = "When Revealed: Heal 5 wounds from Wilyador for each Athelas objective card the players control.\r\nIf Wilyador is completely healed when this effect resolves, Wilyador survives and the players have won the game. Otherwise, the players have lost the game.",
                 Quantity = 1,
                 Number = 62,
                 Artist = Artist.Ben_Zweifel,
