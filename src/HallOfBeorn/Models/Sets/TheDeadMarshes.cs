@@ -25,6 +25,7 @@ namespace HallOfBeorn.Models.Sets
                 EasyModeQuantity = 1,
                 Text = "When Revealed: Place 2 resource tokens on Gollum. Any player may exhaust a Lore hero to reduce this effect to 1 resource token.Escape: 4",
                 FlavorText = "Presently it grew altogether dark; the air itself seemed black and heavy to breathe. When lights appeared Sam rubbed his eyes: he thought his head was going queer. He first saw one with the corner of his left eye, a wisp of pale sheen that faded away... -The Two Towers",
+                HtmlTemplate = "<p><b>When Revealed:</b> Place 2 resource tokens on <a title='Gollum (The Dead Marshes)' target='_blank' href='/Cards/Details/Gollum-TDM'>Gollum</a>. Any player may exhaust a {sphere:Lore} hero to reduce this effect to 1 resource token.<p><p><b>Escape:</b> 4</p><p class='flavor-text-smaller'>Presently it grew altogether dark; the air itself seemed black and heavy to breathe. When lights appeared Sam rubbed his eyes: he thought his head was going queer. He first saw one with the corner of his left eye, a wisp of pale sheen that faded away...<br>&ndash;The Two Towers</p>",
                 EncounterSet = "The Dead Marshes",
                 Number = 108,
                 Artist = Artist.Carolina_Eade
@@ -59,6 +60,7 @@ namespace HallOfBeorn.Models.Sets
                 Quantity = 3,
                 ResourceCost = 2,
                 Text = "Attach to a hero. Attached hero gains ranged.\r\nAction: Pay 1 resource from attached hero's pool to attach Dunedain Cache to another hero.",
+                HtmlTemplate = "<p>Attach to a hero.</p><p>Attached hero gains ranged.</p><p><b>Action:</b> Pay 1 resource from attached hero's pool to attach {self} to another hero.</p>",
                 Number = 97,
                 Artist = Artist.Stephanie_M_Brown
             });
@@ -123,6 +125,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Dead Marshes." },
                 Quantity = 4,
                 Text = "Forced: After the players travel to this location, place 1 resource token on Gollum.Escape: 2",
+                HtmlTemplate = "<p><b>Forced:</b> After the players travel to this location, place 1 resource token on <a title='Gollum (The Dead Marshes)' target='_blank' href='/Cards/Details/Gollum-TDM'>Gollum</a> for each location in the staging area.</p><p><b>Escape:</b> 2</p>",
                 Threat = 2,
                 QuestPoints = 2,
                 EncounterSet = "The Dead Marshes",
@@ -143,6 +146,7 @@ namespace HallOfBeorn.Models.Sets
                 HitPoints = 6,
                 Text = "Forced: Remove 2 damage from Giant Marsh Worm at the end of each round.Escape: 2",
                 FlavorText = "\"No birds here. There are snakeses, wormses, things in the pools. Lot of things, lots of nasty things.\" -Gollum, The Two Towers",
+                HtmlTemplate = "<p><b>Forced:</b> Remove 2 damage from {self} at the end of each round.</p><p><b>Escape:</b> 2</p><p class='flavor-text'>&quot;No birds here. There are snakeses, wormses, things in the pools. Lot of things, lots of nasty things.&quot;<br>&ndash;Gollum, The Two Towers</p>",
                 Threat = 1,
                 EncounterSet = "The Dead Marshes",
                 Number = 112,
@@ -171,6 +175,7 @@ namespace HallOfBeorn.Models.Sets
                 Quantity = 4,
                 EasyModeQuantity = 2,
                 Text = "When Revealed: Place 1 resource token on Gollum for each location card in the staging area.Escape: 2",
+                HtmlTemplate = "<p><b>When Revealed:</b> Place 1 resource token on <a title='Gollum (The Dead Marshes)' target='_blank' href='/Cards/Details/Gollum-TDM'>Gollum</a> for each location in the staging area.</p><p><b>Escape:</b> 2</p>{victory:7}",
                 Threat = 1,
                 QuestPoints = 12,
                 EncounterSet = "The Dead Marshes",
@@ -188,6 +193,7 @@ namespace HallOfBeorn.Models.Sets
                 Quantity = 1,
                 Setup = "s",
                 Text = "Setup: Search the encounter deck for Gollum, and add it to the staging area. Shuffle the encounter deck, then reveal 1 card per player from the encounter deck and add it to the staging area.",
+                HtmlTemplate = "<p class='flavor-text'>You have followed Gollum's trail for days, and are now closing in fast pursuit. In a last ditch effort to escape you, the creature has fled to The Dead Marshes.</p><p><b>Setup:</b> Search the encounter deck for <a title='Gollum (The Dead Marshes)' target='_blank' href='/Cards/Details/Gollum-TDM'>Gollum</a>, and add it to the staging area. Shuffle the encounter deck, then reveal 1 card per player from the encounter deck and add it to the staging area.</p>",
                 FlavorText = "You have followed Gollum's trail for days, and are now closing in fast pursuit. In a last ditch effort to escape you, the creature has fled to The Dead Marshes.",
                 OppositeFlavorText = "'Yes, yes,' said Gollum. 'All dead, all rotten. Elves and Men and Orcs. The Dead Marshes. There was a great battle long ago, yes, so they told him when Smeagol was young, when I was young before teh Precious came. It was a great battle. Tall Men with long swords, and terrible Elves and Orcses shrieking. They fought on th eplain for days and months at the Black Gates. But the Marshes have grown since then, swallowed up the graves; always creeping, creeping.' -The Two Towers.",
                 EncounterSet = "The Dead Marshes",
@@ -203,6 +209,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Escape." },
                 Quantity = 3,
                 Text = "When Revealed: The first player makes an escape test, dealing 2 cards from the encounter deck. If this test is failed, place 1 resource token on Gollum and raise each player's threat by 2.Escape: 2",
+                HtmlTemplate = "<p><b>When Revealed:</b> The first player makes an escape test, dealing 2 cards from the encounter deck. If this test is failed, place 1 resource token on <a title='Gollum (The Dead Marshes)' target='_blank' href='/Cards/Details/Gollum-TDM'>Gollum</a> and raise each player's threat by 2.</p><p><b>Escape:</b> 2</p>",
                 EncounterSet = "The Dead Marshes",
                 Number = 109,
                 Artist = Artist.David_Lecossu
@@ -249,11 +256,8 @@ namespace HallOfBeorn.Models.Sets
                 Quantity = 3,
                 ResourceCost = 1,
                 Text = "Attach to a hero.\r\nAction: Exhaust Song of Mocking to choose another hero. Until the end of the phase, attached hero takes all damage assigned to the chosen hero.",
-                FlavorText = @"Old fat spider spinning in a tree!
-Old fat spider can't see me!
-Attercop! Attercop!
-Won't you stop. Stop your spinning and look for me! 
--Bilbo Baggins, The Hobbit ",
+                HtmlTemplate = "<p>Attach to a hero.</p><p><b>Action:</b> Exhaust {self} to choose another hero. Until the end of the phase, attached hero takes all damage assigned to the chosen hero.</p><p class='flavor-text-smaller'>Old fat spider spinning in a tree!<br>Old fat spider can't see me!<br>Attercop! Attercop!<br>Won't you stop. Stop your spinning and look for me!<br>-Bilbo Baggins, The Hobbit</p>",
+                FlavorText = "Old fat spider spinning in a tree!\r\nOld fat spider can't see me!\r\nAttercop! Attercop!\r\nWon't you stop. Stop your spinning and look for me! \r\n-Bilbo Baggins, The Hobbit",
                 Number = 99,
                 Artist = Artist.Carolina_Eade
             });
@@ -264,10 +268,8 @@ Won't you stop. Stop your spinning and look for me!
                 Id = "51223bd0-ffd1-11df-a976-0801205c9017",
                 CardType = CardType.Quest,
                 FlavorText = "After a tiring pursuit through the treacherous marshland, you have cornered Gollum, and move in for the capture.",
-                OppositeText = 
-@"Forced: After this stage is defeated, the first player chooses a player. That player must pass an Escape test, dealing 1 card from the encounter deck for each resource token on Gollum, to capture him. If Gollum is not captured at this time, reset the quest deck to stage 1B.
-
-If this final Escape test is passed, the players have captured Gollum and won the game.",
+                OppositeText = "Forced: After this stage is defeated, the first player chooses a player. That player must pass an ~Escape test, dealing 1 card from the encounter deck for each resource token on ~Gollum, to capture him. If ~Gollum is not captured at this time, reset the quest deck to stage 1B.\r\nIf this final Escape test is passed, the players have captured Gollum and won the game.",
+                HtmlTemplate2 = "<p><b>Forced:</b> After this stage is defeated, the first player chooses a player. That player must pass an Escape test, dealing 1 card from the encounter deck for each resource token on <a title='Gollum (The Dead Marshes)' target='_blank' href='/Cards/Details/Gollum-TDM'>Gollum</a>, to capture him. If <a title='Gollum (The Dead Marshes)' target='_blank' href='/Cards/Details/Gollum-TDM'>Gollum</a> is not captured at this time, reset the quest deck to stage 1B.</p><p><b>If this final Escape test is passed, the players have captured Gollum and won the game.</b></p>",
                 QuestPoints = 3,
                 Quantity = 1,
                 EncounterSet = "The Dead Marshes",
@@ -284,6 +286,7 @@ If this final Escape test is passed, the players have captured Gollum and won th
                 Quantity = 4,
                 EasyModeQuantity = 2,
                 Text = "While The Heart of the Marshes is the active location, all cards dealt from the encounter deck for escape tests get +1 Escape. (Cards receive this bonus even if they do not have a printed escape value.)Escape: 1",
+                HtmlTemplate = "<p>While {self} is the active location, all cards dealt from the encounter deck for escape tests get +1 Escape. <i>(Cards receive this bonus even if they do not have a printed escape value.)<i></p><p><b>Escape:</b> 1</p>",
                 Threat = 3,
                 QuestPoints = 4,
                 EncounterSet = "The Dead Marshes",
@@ -299,6 +302,7 @@ If this final Escape test is passed, the players have captured Gollum and won th
                 Quantity = 4,
                 EasyModeQuantity = 2,
                 Text = "When Revealed: Each player must make an escape test, dealing 2 cards from the encounter deck for each test. Each player that fails this test places 1 resource token on Gollum, and raises his threat by 1.Escape: 5",
+                HtmlTemplate = "<p><b>When Revealed:</b> Each player must make an escape test, dealing 2 cards from the encounter deck for each test. Each player that fails this test places 1 resource token on <a title='Gollum (The Dead Marshes)' target='_blank' href='/Cards/Details/Gollum-TDM'>Gollum</a>, and raises his threat by 1.</p><p><b>Escape:</b> 5</p>",
                 EncounterSet = "The Dead Marshes",
                 Number = 111,
                 Artist = Artist.Henning_Ludvigsen
@@ -311,6 +315,7 @@ If this final Escape test is passed, the players have captured Gollum and won th
                 Traits = new List<string>() { "Escape." },
                 Quantity = 3,
                 Text = "When Revealed: The first player makes an escape test counting Attack instead of Willpower, dealing 2 cards from the encounter deck. If this test is failed, place 1 resource token on Gollum and raise each player's threat by 1.Escape: 3",
+                HtmlTemplate = "<b>When Revealed:</b> The first player makes an escape test counting {Attack} instead of {Willpower}, dealing 2 cards from the encounter deck. If this test is failed, place 1 resource token on <a title='Gollum (The Dead Marshes)' target='_blank' href='/Cards/Details/Gollum-TDM'>Gollum</a> and raise each player's threat by 1.</p><p><b>Escape:</b> 3</p>",
                 EncounterSet = "The Dead Marshes",
                 Number = 110,
                 Artist = Artist.Igor_Kieryluk
@@ -329,6 +334,7 @@ If this final Escape test is passed, the players have captured Gollum and won th
                 Willpower = 0,
                 HitPoints = 1,
                 Text = "Vassal of the Windlord cannot have restricted attachments.Forced: After an attack in which Vassal of the Windlord attacked resolves, discard Vassal of the Windlord from play.",
+                HtmlTemplate = "<p>{keyword:Ranged.}{self} cannot have restricted attachments.<p><p><b>Forced:</b> After an attack in which {self} attacked resolves, discard {self} from play.</p>",
                 Keywords = new List<string>() { "Ranged." },
                 Number = 98,
                 Artist = Artist.Anna_Christenson

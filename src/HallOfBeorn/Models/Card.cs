@@ -26,6 +26,7 @@ namespace HallOfBeorn.Models
 
             UsePublicImageURL = true;
             Html = string.Empty;
+            Html2 = string.Empty;
 
             HasBlogs = true;
             HasReferences = true;
@@ -55,6 +56,7 @@ namespace HallOfBeorn.Models
         }
 
         private string html;
+        private string html2;
 
         private void insertToken(StringBuilder sb, string type, string key, string label)
         {
@@ -171,7 +173,7 @@ namespace HallOfBeorn.Models
                     sb.Append("<img src='/Images/defense.gif' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' />");
                     break;
                 case "victory":
-                    sb.AppendFormat("<div style='text-align:right;font-weight:bold;margin-bottom:4px;'><a href='/Cards/Search?VictoryPoints=Victory+{0}.' target='_blank' title='Victory: {0}'><span style='padding-left:4px;padding-right:4px;border-style:solid;border-width:1px;border-color:black;'>Victory {0}</span></a></div>", key);
+                    sb.AppendFormat("<div style='text-align:right;font-weight:bold;margin-bottom:4px;position:absolute;bottom:4px;right:4px;'><a style='text-decoration:none;' href='/Cards/Search?VictoryPoints=Victory+{0}.' target='_blank' title='Victory: {0}'><span style='padding-left:4px;padding-right:4px;border-style:solid;border-width:1px;border-color:black;'>Victory {0}</span></a></div>", key);
                     break;
                 case "shadow":
                     sb.Append("<img src='/Images/ShadowDivider.png' title='Shadow Effect' style='display:block;margin-left:auto;margin-right:auto;width:285px;'/>");
@@ -182,15 +184,15 @@ namespace HallOfBeorn.Models
             }
         }
 
-        private void renderHtmlTemplate()
+        private string renderHtmlTemplate(string template)
         {            
-            if (string.IsNullOrEmpty(HtmlTemplate))
+            if (string.IsNullOrEmpty(template))
             {
-                return;
+                return string.Empty;
             }
 
             var s = new StringBuilder();
-            var t = HtmlTemplate;
+            var t = template;
 
             var isToken = false;
             var isType = false;
@@ -263,7 +265,7 @@ namespace HallOfBeorn.Models
                 }
             }
 
-            this.html = s.ToString();
+            return s.ToString();
         }
 
         public string Html
@@ -272,7 +274,7 @@ namespace HallOfBeorn.Models
             {
                 if (!string.IsNullOrEmpty(HtmlTemplate) && string.IsNullOrEmpty(html)) 
                 {
-                    renderHtmlTemplate();
+                    html = renderHtmlTemplate(HtmlTemplate);
                 }
 
                 return html;
@@ -281,6 +283,22 @@ namespace HallOfBeorn.Models
         }
 
         public string HtmlTemplate;
+
+        public string Html2
+        {
+            get
+            {
+                if (!string.IsNullOrEmpty(HtmlTemplate2) && string.IsNullOrEmpty(html2))
+                {
+                    html2 = renderHtmlTemplate(HtmlTemplate2);
+                }
+
+                return html2;
+            }
+            set { html2 = value; }
+        }
+
+        public string HtmlTemplate2;
 
         public Card WithTemplate(string htmlTemplate)
         {

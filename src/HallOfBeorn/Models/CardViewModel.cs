@@ -800,5 +800,15 @@ namespace HallOfBeorn.Models
         {
             get { return _card.Html; }
         }
+
+        public bool HasHtml2
+        {
+            get { return !string.IsNullOrEmpty(_card.Html2); }
+        }
+
+        public string Html2
+        {
+            get { return _card.Html2; }
+        }
     }
 }

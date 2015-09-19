@@ -23,10 +23,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Emyn Muil." },
                 Quantity = 1,
                 IsUnique = true,
-                Text = 
-@"X is double the number of players in the game.
-
-While Amon Hen is the active location, players cannot play events.",
+                Text = "X is double the number of players in the game.\r\nWhile Amon Hen is the active location, players cannot play events.",
                 Threat = 0,
                 IsVariableThreat = true,
                 QuestPoints = 5,
@@ -43,10 +40,7 @@ While Amon Hen is the active location, players cannot play events.",
                 Traits = new List<string>() { "Emyn Muil." },
                 Quantity = 1,
                 IsUnique = true,
-                Text = 
-@"X is double the number of players in the game.
-
-While Amon Lhaw is the active location, treat all attachments as if their printed text boxes were blank.",
+                Text = "X is double the number of players in the game.\r\nWhile Amon Lhaw is the active location, treat all attachments as if their printed text boxes were blank.",
                 Threat = 0,
                 IsVariableThreat = true,
                 QuestPoints = 5,
@@ -181,6 +175,7 @@ While Amon Lhaw is the active location, treat all attachments as if their printe
                 Defense = 2,
                 HitPoints = 6,
                 Text = "Orc Horse Thieves get +1 Attack for each location in the staging area.",
+                HtmlTemplate = "<p>{self} get +1 {Attack} for each location in the staging area.</p>",
                 Keywords = new List<string>() { "Doomed 2." },
                 Threat = 3,
                 EncounterSet = "The Hills of Emyn Muil",
@@ -294,6 +289,7 @@ While Amon Lhaw is the active location, treat all attachments as if their printe
                 Traits = new List<string>() { "Emyn Muil." },
                 Quantity = 4,
                 Text = "Travel: In order to travel to The Highlands, the players must reveal the top card of the encounter deck, and add it to the staging area.",
+                HtmlTemplate = "<p><b>Travel:</b> In order to travel to {self}, the players must reveal the top card of the encounter deck, and add it to the staging area.</p>{victory:1}",
                 Threat = 1,
                 QuestPoints = 1,
                 EncounterSet = "The Hills of Emyn Muil",
@@ -328,6 +324,7 @@ While Amon Lhaw is the active location, treat all attachments as if their printe
                 Traits = new List<string>() { "Emyn Muil." },
                 Quantity = 2,
                 Text = "Forced: After traveling to The North Stair, move the top card of the encounter discard pile to the staging area. Resolve any 'when revealed' effects on that card.",
+                HtmlTemplate = "<p><b>Forced:</b> After traveling to The North Stair, move the top card of the encounter discard pile to the staging area. Resolve any &quot;when revealed&quot; effects on that card.</p>{victory:3}",
                 Threat = 3,
                 QuestPoints = 3,
                 EncounterSet = "The Hills of Emyn Muil",

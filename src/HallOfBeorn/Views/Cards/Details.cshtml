@@ -387,79 +387,86 @@
             }
             </div>
 
-            @if (@Model.OppositeTextEffects.Count > 0 || @Model.HasOppositeFlavorText)
+            @if (@Model.OppositeTextEffects.Count > 0 || @Model.HasOppositeFlavorText || @Model.HasHtml2)
             {
                 <div class="statTextBox" style="margin:6px 2px 2px 2px;padding-top:0px;padding-left:6px;padding-right:6px;border: 1px solid gray;border-radius:4px;max-width:500px;min-height:200px;min-width:200px;min-height:100px;position:relative;overflow:;background-color:@Model.BackgroundColor();">
-                    @if (@Model.OppositeTextEffects.Count > 0)
+                    @if (@Model.HasHtml2)
                     {
-                        <div style="padding:4px;">
-                        @foreach (var effect in @Model.OppositeTextEffects)
+                        @Html.Raw(@Model.Html2);
+                    }
+                    else
+                    {
+                        if (@Model.OppositeTextEffects.Count > 0)
                         {
-                            var count = 0;
-                            foreach (var token in effect.Tokens)
+                            <div style="padding:4px;">
+                            @foreach (var effect in @Model.OppositeTextEffects)
                             {
-                                count++;
-                                if (token.IsTrigger || effect.IsCritical)
+                                var count = 0;
+                                foreach (var token in effect.Tokens)
                                 {
-                                    <b>@token.Text</b>
-                                }
-                                else if (token.IsStrong)
-                                {
-                                    <strong>@token.Text</strong>
-                                }
-                                else if (token.IsEmphasized)
-                                {
-                                    <em>@token.Text</em>
-                                }
-                                else if (token.IsTrait)
-                                {
-                                    <a title="Trait Search" style="font-weight:bold;font-style:italic;" href='@string.Format("/Cards/Search?Trait={0}.", @token.Text.Trim().TrimEnd('.'))'>@token.Text</a>
-                                
-                                    if (token.HasSuffix)
+                                    count++;
+                                    if (token.IsTrigger || effect.IsCritical)
                                     {
-                                        if (token.Suffix != "." || count != effect.Tokens.Count)
+                                        <b>@token.Text</b>
+                                    }
+                                    else if (token.IsStrong)
+                                    {
+                                        <strong>@token.Text</strong>
+                                    }
+                                    else if (token.IsEmphasized)
+                                    {
+                                        <em>@token.Text</em>
+                                    }
+                                    else if (token.IsTrait)
+                                    {
+                                        <a title="Trait Search" style="font-weight:bold;font-style:italic;" href='@string.Format("/Cards/Search?Trait={0}.", @token.Text.Trim().TrimEnd('.'))'>@token.Text</a>
+                                
+                                        if (token.HasSuffix)
                                         {
-                                            @token.Suffix
+                                            if (token.Suffix != "." || count != effect.Tokens.Count)
+                                            {
+                                                @token.Suffix
+                                            }
                                         }
                                     }
-                                }
-                                else if (token.IsIcon)
-                                {
-                                    if (token.HasSuffix)
+                                    else if (token.IsIcon)
                                     {
-                                        if (token.HasPrefix)
+                                        if (token.HasSuffix)
                                         {
-                                            <span style="margin-right:-6px;">@token.Prefix</span>
-                                        }
+                                            if (token.HasPrefix)
+                                            {
+                                                <span style="margin-right:-6px;">@token.Prefix</span>
+                                            }
                                                 
-                                        <img src="@token.ImagePath" style="height:16px;margin-left:@token.LeftMargin;margin-right:-4px;margin-bottom:-2px;" />
-                                        @token.Suffix
+                                            <img src="@token.ImagePath" style="height:16px;margin-left:@token.LeftMargin;margin-right:-4px;margin-bottom:-2px;" />
+                                            @token.Suffix
+                                        }
+                                        else
+                                        {
+                                            <img src="@token.ImagePath" style="height:16px;margin-left:@token.LeftMargin;margin-right:2px;margin-bottom:-2px;" />
+                                        }
                                     }
                                     else
                                     {
-                                        <img src="@token.ImagePath" style="height:16px;margin-left:@token.LeftMargin;margin-right:2px;margin-bottom:-2px;" />
+                                        @: @token.Text
                                     }
                                 }
-                                else
-                                {
-                                    @: @token.Text
-                                }
+                                <br />
+                                <br />
                             }
-                            <br />
-                            <br />
+                            </div>
+                        }
+
+                        <div style="text-align:center;padding:4px;font-size:small;">
+                        @if (@Model.HasOppositeFlavorText)
+                        {
+                            foreach (var line in @Model.OppositeFlavorText)
+                            {
+                                <i>@line</i><br />
+                            }
                         }
                         </div>
                     }
-
-                    <div style="text-align:center;padding:4px;font-size:small;">
-                    @if (@Model.HasOppositeFlavorText)
-                    {
-                        foreach (var line in @Model.OppositeFlavorText)
-                        {
-                            <i>@line</i><br />
-                        }
-                    }
-                    </div>
                 </div>
             }
             

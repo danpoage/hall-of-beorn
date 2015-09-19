@@ -966,6 +966,21 @@ tr.pager td {
 }
 
 .flavor-text {
+    font-family: 'Times New Roman';
+    font-size: small;
     font-style: italic;
-    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    width: 88%;
+}
+
+.flavor-text-smaller {
+    font-family: 'Times New Roman';
+    font-size: smaller;
+    font-style: italic;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    width: 88%;    
 }
