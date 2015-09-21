@@ -125,6 +125,7 @@ namespace HallOfBeorn.Models.Sets
                 Sphere = Sphere.Leadership,
                 Traits = new List<string>() { "Dúnedain.", " Ranger." },
                 NormalizedTraits = new List<string> { "Dunedain." },
+                HtmlTemplate = "<p>{keyword:Ranged.} {keyword:Sentinel.} {keyword:Secrecy 3.}</p><p class='flavor-text'>They roamed at will southwards, and eastwards even as far as the Misty Mountains; but they were no few and rarely seen.<br>&ndash;The Fellowship of the Ring</p>",
                 Quantity = 3,
                 ResourceCost = 5,
                 Attack = 2,
@@ -220,6 +221,7 @@ namespace HallOfBeorn.Models.Sets
                 Quantity = 3,
                 ResourceCost = 3,
                 Text = "Action: Ready all Dwarf characters.",
+                HtmlTemplate = "<p><b>Action:</b> Ready all {trait:Dwarf.@Dwarf} characters.</p><p class='flavor-text'>'The road that I speak of leads to the Mines of Moria,' said Gandalf. Only Gimli lifted up his head; a smouldering fire was in his eyes.<br>&ndash;The Fellowship of the Ring</p>",
                 Number = 30,
                 Artist = Artist.Mike_Nash
             });
@@ -311,6 +313,7 @@ namespace HallOfBeorn.Models.Sets
                 Willpower = 2,
                 HitPoints = 2,
                 Text = "Action: Spend 1 Spirit resource to give control of Rider of the Mark to another player. (Limit once per round.)Response: After Rider of the Mark changes control, discard a shadow card dealt to an enemy you are engaged with.",
+                HtmlTemplate = "<p><b>Action:</b> Spend 1 {sphere:Spirit} resource to give control of {self} to another player. (Limit once per round.)</p><p><b>Response:</b> After {self} changes control, discard a shadow card dealt to an enemy you are engaged with.</p>",
                 Number = 33,
                 Artist = Artist.David_Horne
             });
@@ -366,12 +369,8 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Song." },
                 Quantity = 3,
                 ResourceCost = 1,
-                Text = 
-@"Attach to a Spirit hero.
-
-Response: After ~Song of Eärendil enters play, draw 1 card.
-                
-Response: After another player raises his threat, raise your threat by 1 to reduce that player's threat by 1.",
+                Text = "Attach to a Spirit hero.\r\nResponse: After ~Song of Eärendil enters play, draw 1 card.\r\nResponse: After another player raises his threat, raise your threat by 1 to reduce that player's threat by 1.",
+                HtmlTemplate = "<p>Attach to a {sphere:Spirit} hero.</p><p><b>Response:</b> After {self} enters play, draw 1 card.</p><p><b>Response:</b> After another player raises his threat, raise your threat by 1 to reduce that player's threat by 1.</p>",
                 Number = 34,
                 Artist = Artist.K_R_Harris
             });
@@ -384,6 +383,7 @@ Response: After another player raises his threat, raise your threat by 1 to redu
                 Quantity = 3,
                 ResourceCost = 0,
                 Text = "Response: After a Dwarf character leaves play, shuffle the encounter discard pile back into the encounter deck.",
+                HtmlTemplate = "<p><b>Response:</b> After a {trait:Dwarf.@Dwarf} character leaves play, shuffle the encounter discard pile back into the encounter deck.</p><p class='flavor-text'>'He is dead then,', said Frodo. 'I feared it was so.'<br>&ndash;The Fellowship of the Ring</p>",
                 Number = 37,
                 Artist = Artist.Ryan_Barger
             });
