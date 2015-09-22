@@ -25,7 +25,8 @@ namespace HallOfBeorn.Models.Sets
                 Quantity = 1,
                 QuestPoints = 20,
                 Text = "Setup: Put Arwen Undómiel into play under the control of the first player. Shuffle the encounter deck. Reveal 1 card from the encounter deck per player, and add them to the staging area.",
-                FlavorText = "This is a wild and perilous country, and it is dangerous to follow the roads. The mountains rise up on the right, impassively watching your slow trek among their foothills.",
+                HtmlTemplate = "<p class='flavor-text'>Your party has braved the snows of the pass, but now must travel North along the Misty Mountains for league upon league as you escort Arwen to her father's house.</p><p><b>Setup:</b> Put <a title='Arwen Undómiel (Road to Rivendell)' href='/Cards/Details/Arwen-Undomiel-RtR' target='_blank'>Arwen Undómiel</a> into play under the control of the first player. Shuffle the encounter deck. Reveal 1 card from the encounter deck per player, and add them to the staging area.</p>",
+                HtmlTemplate2 = "<p class='flavor-text'>This is a wild and perilous country, and it is dangerous to follow the roads. The mountains rise up on the right, impassively watching your slow trek among their foothills.</p>",
                 Number = 38,
                 Artist = Artist.Ben_Zweifel,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.MistyMountains, EncounterSet.PlunderingGoblins }
@@ -74,6 +75,7 @@ namespace HallOfBeorn.Models.Sets
                 Quantity = 2,
                 Text = "While Barren Hills is the active location, ignore ambush.",
                 Shadow = "Shadow: Return attacking enemy to the staging area after it attacks.",
+                HtmlTemplate = "<p>While {self} is the active location, ignore ambush.</p>{shadow}<p><b>Shadow:</b> Return attacking enemy to the staging area after it attacks.</p>",
                 Threat = 2,
                 QuestPoints = 4,
                 Number = 45,
@@ -111,6 +113,7 @@ namespace HallOfBeorn.Models.Sets
                 HitPoints = 3,
                 Text = "While Crebain is in the staging area, encounter card effects cannot be canceled.",
                 Shadow = "Shadow: Return attacking enemy to the staging area after it attacks.",
+                HtmlTemplate = "<p>{keyword:Surge.@Surge}<p><p>While {self} is in the staging area, encounter card effects cannot be canceled.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Return attacking enemy to the staging area after it attacks.</p>",
                 Keywords = new List<string>() { "Surge." },
                 Threat = 2,
                 Number = 51,
@@ -165,6 +168,7 @@ namespace HallOfBeorn.Models.Sets
                 EasyModeQuantity = 1,
                 Text = "When Revealed: The first player (choose 1): deals 1 damage to all allies in play and Followed by Night gains surge, or all enemies engaged with players make an immediate attack, if able.",
                 Shadow = "Shadow: Return attacking enemy to the staging area after it attacks.",
+                HtmlTemplate = "<p><b>When Revealed:</b> The first player (choose 1): deals 1 damage to all allies in play and {self} gains surge, or all enemies enaged with players make an immediate attack, if able.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Return attacking enemy to the staging area after it attacks.</p>",
                 Number = 47,
                 Artist = Artist.Jasper_Sandner
             });
@@ -177,6 +181,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Gate." },
                 Quantity = 1,
                 Text = "While Goblin Gate is the active location, the first enemy revealed from the encounter deck each round gains ambush. If that enemy engages a player, it makes an immediate attack (deal and resolve a shadow card).",
+                HtmlTemplate = "<p>While {self} is the active location, the first enemy revealed from the encounter deck each round gains ambush. If that enemy engages a player, it makes an immediate attack <i>(deal and resolve a shadow card)</i>.</p><p class='flavor-text'>A crack had opened at the back of the cave, and was already a wide passage.<br>&ndash;The Hobbit</p>",
                 Threat = 5,
                 QuestPoints = 4,
                 Number = 43,
@@ -196,6 +201,7 @@ namespace HallOfBeorn.Models.Sets
                 HitPoints = 4,
                 Text = "Forced: After Goblin Taskmaster engages a player, that player deals 2 damage to 1 character he controls.",
                 Keywords = new List<string>() { "Ambush." },
+                HtmlTemplate = "<p>{keyword:Ambush.@Ambush} <i>(After this enemy enters play, each player makes an engagement check against it.)</i></p><p><b>Forced:</b> After {self} engages a player, that player deals 2 damage to 1 character he controls.</p>",
                 Threat = 2,
                 Number = 49,
                 Artist = Artist.Mike_Nash
@@ -250,6 +256,8 @@ namespace HallOfBeorn.Models.Sets
                 Number = 39,
                 OppositeText = "When Revealed: Search the encounter deck and discard pile for Goblin Gate and add it to the staging area, if able. Then, if there is no active location, Goblin Gate becomes the active location.",
                 FlavorText = "Heavy rain drives you to seek shelter among the caves of the mountains. They are dry, and the fire you start seeps into your bones and restores your spirit. Your eyes are heavy when teh soft clatter of falling pebbles reaches your ears. Perhaps you are not alone.",
+                HtmlTemplate = "<p class='flavor-text'>Heavy rain drives you to seek shelter among the caves of the mountains. They are dry, and the fire you start seeps into your bones and restores your spirit. Your eyes are heavy when teh soft clatter of falling pebbles reaches your ears. Perhaps you are not alone.</p>",
+                HtmlTemplate2 = "<p><b>When Revealed:</b> Search the encounter deck and discard pile for <a title= 'Goblin Gate (Road to Rivendell)' href='/Cards/Details/Goblin-Gate-RtR' target='_blank'>Goblin Gate</a> and add it to the staging area, if able. Then, if there is no active location, <a title= 'Goblin Gate (Road to Rivendell)' href='/Cards/Details/Goblin-Gate-RtR' target='_blank'>Goblin Gate</a> becomes the active location.</p>",
                 Artist = Artist.Nick_Deligaris,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.MistyMountains, EncounterSet.PlunderingGoblins }
             });
@@ -267,6 +275,7 @@ namespace HallOfBeorn.Models.Sets
                 HitPoints = 3,
                 Text = "Forced: After Orc Raiders engages a player, that player discards 2 attachments he controls, if able.",
                 Keywords = new List<string>() { "Ambush." },
+                HtmlTemplate = "<p>{keyword:Ambush.@Ambush} <i>(After this enemy enters play, each player makes an engagement check against it.)</i></p><p><b>Forced:</b> After {self} engages a player, that player discards 2 attachments he controls, if able.</p>",
                 Threat = 1,
                 Number = 50,
                 Artist = Artist.Mark_Tarrisse
@@ -294,6 +303,7 @@ namespace HallOfBeorn.Models.Sets
                 Quantity = 3,
                 Text = "Forced: After at least 1 progress token is placed on Pathless Country, remove 1 progress token from it.",
                 Shadow = "Shadow: Deal 1 damage to each ally in play.",
+                HtmlTemplate = "<p><b>Forced:</b> After at least 1 progress token in placed on {self}, remove 1 progress token from it.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Deal 1 damage to each ally in play.</p>",
                 Threat = 3,
                 QuestPoints = 5,
                 Number = 44,
@@ -341,6 +351,7 @@ namespace HallOfBeorn.Models.Sets
                 Quantity = 2,
                 Text = "Response: After you travel to Ruined Road, the first player places 2 progress tokens on it or readies 1 hero he controls.",
                 Shadow = "Shadow: Return attacking enemy to the staging area after it attacks.",
+                HtmlTemplate = "<p><b>Response:</b> After you travel to {self}, the first player places 2 progress tokens on it or readies 1 hero controls.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Return attacking enemy to the staging area after it attacks.</p>",
                 Threat = 1,
                 QuestPoints = 5,
                 Number = 42,
@@ -401,6 +412,7 @@ namespace HallOfBeorn.Models.Sets
                 HitPoints = 5,
                 Text = "Forced: After Wild Bear engages a player, it makes an immediate attack.",
                 Keywords = new List<string>() { "Ambush." },
+                HtmlTemplate = "<p>{keyword:Ambush.@Ambush} <i>(After this enemy enters play, each player makes an engagement check against it.)</i></p><p><b>Forced:</b> After {self} engages a player, it makes an immediate attack.</p>",
                 Threat = 0,
                 Number = 52,
                 Artist = Artist.Salvador_Trakal
