@@ -52,6 +52,7 @@ namespace HallOfBeorn.Models.Sets
                 Willpower = 2,
                 HitPoints = 2,
                 Text = "Response: After Arwen Undómiel exhausts, choose a character. That character gains sentinel and gets +1 Defense until the end of the round.",
+                HtmlTemplate = "<p><b>Response:</b> After {self} exhausts, choose a character. That character gains {keyword:Sentinel.@sentinel} and gets +1 {Defense} until the end of the round.</p><p class='flavor-text'>...in whom it was said that the likeness of Lúthien had come on earth again...for she was the Evenstar of her people.<br>&ndash;The Fellowship of the Ring</p>",
                 Number = 58,
                 Artist = Artist.Magali_Villeneuve
             });
@@ -91,6 +92,7 @@ namespace HallOfBeorn.Models.Sets
                 Quantity = 3,
                 ResourceCost = 0,
                 Text = "Action: If you control a unique Noldor character, give another character +1 Willpower until the end of the phase and lower your threat by 3.",
+                HtmlTemplate = "<p><b>Action:</b> If you control a {unique-trait-character:Noldor.@Noldor}, give another character +1 {Willpower} until the end of the phase and lower your threat by 3.</p><p class='flavor-text'>&quot;Believe rather that it is so ordered that we, who sit here, and none others, must now find counsel for the peril of the world.&quot;<br>&ndash;Elrond, The Fellowship of the Ring</p>",
                 Number = 59,
                 Artist = Artist.Anthony_Palumbo
             });
@@ -121,6 +123,7 @@ namespace HallOfBeorn.Models.Sets
                 Quantity = 3,
                 ResourceCost = 1,
                 Text = "Response: After a character leaves play, add its Attack to another character's Attack until the end of the round.",
+                HtmlTemplate = "<p><b>Response:</b> After a character leaves play, add its {Attack} to another character's {Attack} until the end of the round.</p><p class='flavor-text'>&quot;We have not the time or the tools to bury our comrade fitly, or to raise a mound up over him. A cairn we might build.&quot;<br>&ndash;Legolas, The Two Towers</p>",
                 Number = 54,
                 Artist = Artist.Trudi_Castle
             });
@@ -205,6 +208,7 @@ namespace HallOfBeorn.Models.Sets
                 Quantity = 3,
                 ResourceCost = 1,
                 Text = "Attach to a Noldor or Silvan character, or to Aragorn. Limit 1 per character.Attached character gains ranged.If attached character has a printed ranged keyword, it gets +1 Attack during a ranged attack.",
+                HtmlTemplate = "<p>Attach to a {traits-character:Noldor,Silvan}, or to <a title='Aragorn Character' href='/Cards/Search?CardType=Character&Query=%2Btitle%3AAragorn' target='_blank'>Aragorn</a>. Limit 1 per character.</p><p>Attached character gains {keyword:Ranged.@ranged.}</p><p>If attached character has the printed {keyword:Ranged.@ranged} keyword, it gets +1 {Attack} during a ranged attack.</p>",
                 Number = 57,
                 Artist = Artist.Sara_Biddle
             });
@@ -217,6 +221,7 @@ namespace HallOfBeorn.Models.Sets
                 Quantity = 3,
                 ResourceCost = 1,
                 Text = "Response: After a location enters play, exhaust a Hobbit character to shuffle that location back into the encounter deck. Then, reveal 1 card from the encounter deck and add it to the staging area.",
+                HtmlTemplate = "<p><b>Response:</b> After a location enters play, exhaust a {trait-character:Hobbit.@Hobbit} to shuffle that location back into the encounter deck. Then, reveal 1 card from the encounter deck and add it to the staging area.</p><p class='flavor-text'>&quot;I suppose we haven't lost more than two days by my short cut through the Forest!&quot;<br>&ndash;Frodo, The Fellowship of the Ring</p>",
                 Number = 60,
                 Artist = Artist.Igor_Kieryluk
             });
@@ -280,6 +285,7 @@ namespace HallOfBeorn.Models.Sets
                 ResourceCost = 3,
                 IsUnique = true,
                 Text = "Attach to a hero. Attached hero gains a Leadership resource icon.\r\nIf attached hero is Aragorn, each character you control gets +1 Willpower.",
+                HtmlTemplate = "<p>Attach to a hero.</p><p>Attached hero gains a {sphere:Leadership} resource icon.</p><p>If attached hero is <a title='Aragorn Hero Search' href='/Cards/Search?Query=%2Btitle%3AAragorn&CardType=Hero' target='_blank'>Aragorn</a>, each character you control gets +1 {Willpower}.</p><p class='flavor-text'>&quot;For the Sword that was Broken is the Sword of Elendil that broke beneath him when he fell.&quot;<br>&ndash;Aragorn, The Fellowship of the Ring</p>",
                 Number = 55,
                 Artist = Artist.Sara_Biddle
             });
@@ -372,6 +378,7 @@ If the players have at least 3 victory points and defeat this stage, they have w
                 HitPoints = 2,
                 Text = "Watcher of the Bruinen does not exhaust to defend.Forced: After Watcher of the Bruinen defends, either discard it from play or discard 1 card from your hand.",
                 Keywords = new List<string>() { "Sentinel." },
+                HtmlTemplate = "<p>{keyword:Sentinel.}</p><p>{self} does not exhaust to defend.</p><p><b>Forced:</b> After {self} defends, either discard it from play or discard 1 card from your hand.</p>",
                 Number = 56,
                 Artist = Artist.Kristina_Carroll
             });

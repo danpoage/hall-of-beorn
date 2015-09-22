@@ -93,8 +93,24 @@ namespace HallOfBeorn.Models
                 case "trait-character":
                     sb.AppendFormat("<a title='Search: {0} Character' href='/Cards/Search?Trait={1}&CardType=Character' target='_blank'><b><i>{0}</i></b> character</a>", label, key);
                     break;
+                case "unique-trait-character":
+                    sb.AppendFormat("<a title='Search: Unique {0} Character' href='/Cards/Search?Trait={1}&CardType=Character&IsUnique=Yes' target='_blank'>unique <b><i>{0}</i></b> character</a>", label, key);
+                    break;
                 case "trait-hero":
                     sb.AppendFormat("<a title='Search: {0} Hero' href='/Cards/Search?Trait={1}&CardType=Hero' target='_blank'><b><i>{0}</i></b> hero</a>", label, key);
+                    break;
+                case "traits-character":
+                    {
+                        var traits = key.SplitOn(',');
+                        var trait1 = string.Empty;
+                        var trait2 = string.Empty;
+                        if (traits.Count == 2)
+                        {
+                            trait1 = traits[0];
+                            trait2 = traits[1];
+                        }
+                        sb.AppendFormat("<a title='Search: {0} or {1} Character' href='/Cards/Search?Query=%2Btrait%3A{2}&CardType=Character' target='_blank'><b><i>{0}</i></b> or <b><i>{1}</i></b> character</a>", trait1, trait2, key);
+                    }
                     break;
                 case "traits-hero":
                     {
