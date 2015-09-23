@@ -157,6 +157,7 @@ namespace HallOfBeorn.Models
         public static CardSet TheWastesOfEriador = new Sets.TheWastesOfEriador();
         public static CardSet EscapeFromMountGram = new Sets.EscapeFromMountGram();
         public static CardSet AcrossTheEttenmoors = new Sets.AcrossTheEttenmoors();
+        public static CardSet TheTreacheryOfRhudaur = new Sets.TheTreacheryOfRhudaur();
 
         public static CardSet FirstAge = new Sets.FirstAge();
         #endregion

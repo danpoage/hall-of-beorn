@@ -483,6 +483,9 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Michele_Frigo);
             all.Add(Artist.Kip_Ayers);
             all.Add(Artist.Marcel_Mercado);
+
+            //The Treachery of Rhudaur
+            all.Add(Artist.David_Vargo);
         }
 
         private static List<Artist> all = new List<Artist>();
@@ -698,6 +701,7 @@ namespace HallOfBeorn.Models
         public static Artist David_Kegg = new Artist { Name = "David Kegg", URL = "http://david-kegg.deviantart.com" };
         public static Artist David_Lecossu = new Artist { Name = "David Lecossu", URL = "http://d--co.deviantart.com" };
         public static Artist David_A_Nash = new Artist { Name = "David A. Nash", URL = "http://davidnashart.blogspot.com" };
+        public static Artist David_Vargo = new Artist { Name = "David Vargo", URL = "http://davidvargo.deviantart.com/gallery" };
         public static Artist Davis_Engel = new Artist { Name = "Davis Engel", URL = "http://davisengel.com" };
         public static Artist Dean_Spencer = new Artist { Name = "Dean Spencer", URL = "http://www.deanspencerart.com" };
         public static Artist Diego_Gisbert_Llorens = new Artist { Name = "Diego Gisbert Llorens", URL = "http://diegogisbertllorens.deviantart.com" };

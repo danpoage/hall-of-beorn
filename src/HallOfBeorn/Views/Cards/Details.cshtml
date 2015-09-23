@@ -90,7 +90,7 @@
                         break;
                     case CardType.Ally:
                         {
-                            <span style="margin-left:2px;width:40px;color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.ResourceCost</span><span style="color:#616161;">)</span>
+                            <span style="margin-left:2px;width:40px;color:#616161;">[</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.ResourceCost</span><span style="color:#616161;">]</span>
                             <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Willpower</span><img style="margin-bottom:-3px;" src="/Images/willpower.gif" /></span>
                             <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Attack</span><img style="margin-bottom:-3px;" src="/Images/attack.gif" /></span>
                             <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Defense</span><img style="margin-bottom:-3px;" src="/Images/defense.gif" /></span>
@@ -99,12 +99,12 @@
                         break;
                     case CardType.Attachment:
                         {
-                            <span style="margin-left:2px;width:40px;color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.ResourceCost</span><span style="color:#616161;">)</span>
+                            <span style="margin-left:2px;width:40px;color:#616161;">[</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.ResourceCost</span><span style="color:#616161;">]</span>
                         }
                         break;
                     case CardType.Event:
                         {
-                            <span style="margin-left:2px;width:40px;color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.ResourceCost</span><span style="color:#616161;">)</span>
+                            <span style="margin-left:2px;width:40px;color:#616161;">[</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.ResourceCost</span><span style="color:#616161;">]</span>
                         }
                         break;
                     case CardType.Enemy:
@@ -151,10 +151,13 @@
                         break;
                     case CardType.Treasure:
                         {
-                            <span style="margin-left:2px;width:40px;color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.ResourceCost</span><span style="color:#616161;">)</span>
+                            <span style="margin-left:2px;width:40px;color:#616161;">[</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.ResourceCost</span><span style="color:#616161;">]</span>
                         }
                         break;
                     case CardType.Player_Side_Quest:
+                        <span style="margin-left:2px;width:40px;color:#616161;">[</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.ResourceCost</span><span style="color:#616161;">]</span>
+                        <span style="width:40px;color:#616161;margin-left:14px;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.QuestPoints</span><span style="width:40px;color:#616161;">)</span>
+                        break;
                     case CardType.Encounter_Side_Quest:
                         <span style="width:40px;color:#616161;margin-left:14px;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.QuestPoints</span><span style="width:40px;color:#616161;">)</span>
                         break;    

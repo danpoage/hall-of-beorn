@@ -286,6 +286,7 @@
     <Compile Include="Models\Products\TheLandOfShadowProduct.cs" />
     <Compile Include="Models\Products\TheRuinsOfBelegostProduct.cs" />
     <Compile Include="Models\Products\TheVoiceOfIsengardNightmareProduct.cs" />
+    <Compile Include="Models\Products\TheTreacheryOfRhudaurProduct.cs" />
     <Compile Include="Models\Search\EnumFilterDefinition.cs" />
     <Compile Include="Models\Search\FilterDefinition.cs" />
     <Compile Include="Models\HasShadow.cs" />
@@ -474,6 +475,7 @@
     <Compile Include="Models\Sets\TheWatcherInTheWater.cs" />
     <Compile Include="Models\Sets\TheWatcherInTheWaterNightmare.cs" />
     <Compile Include="Models\Sets\ToCatchAnOrcNightmare.cs" />
+    <Compile Include="Models\Sets\TheTreacheryOfRhudaur.cs" />
     <Compile Include="Models\Sets\TroubleInTharbad.cs" />
     <Compile Include="Models\Sets\TheVoiceOfIsengard.cs" />
     <Compile Include="Models\Trait.cs" />
@@ -583,7 +585,7 @@
     <Content Include="Images\unique-card.png" />
     <Content Include="Images\unique.png" />
     <Content Include="Images\willpower.gif" />
-    <Content Include="Scripts\autocomplete6.js" />
+    <Content Include="Scripts\autocomplete7.js" />
     <Content Include="Scripts\cardSearch.js" />
     <Content Include="Scripts\highcharts.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />

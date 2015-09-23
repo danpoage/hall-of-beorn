@@ -13,6 +13,7 @@
     "Sword of Belegost", "Map of Ered Luin", "Keys of Belegost", "Book of Aule's Children", "Dwarven Torch", "Blue Mountain Gem", "Naurlhug", "Lurker of the Depths", "Naurlhug's Lair",
     "Shelob", "Henneth Annun", "The Black Gate", "Smeagol", "Smeagol's Secret Way", "The Cleft of Cirith Ungol", "Morgul Vale",
     "Ranger Provisions", "Dunedain Message", "Longbeard Sentry", "Delay the Enemy", "Steed of Imladris", "Fair and Perilous", "Wellinghall Preserver", "None Return", "Hope Rekindled",
+    "Reinforcements", "Send for Aid", "Elven Spear", "Horn's Cry", "Galadhrim Weaver", "Silver Harp", "Galdor of the Havens", "The Door is Closed", "Elf-friend",
           "+set:",
           "-set:",
           "+type:",

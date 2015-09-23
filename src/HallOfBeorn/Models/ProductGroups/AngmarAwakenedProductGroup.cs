@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.ProductGroups
             AddProduct(Product.TheWastesOfEriador);
             AddProduct(Product.EscapeFromMountGram);
             AddProduct(Product.AcrossTheEttenmoors);
+            AddProduct(Product.TheTreacheryOfRhudaur);
         }
     }
 }
