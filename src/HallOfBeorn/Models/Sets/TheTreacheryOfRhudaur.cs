@@ -67,6 +67,13 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Attach to a character.\r\nAttached character gains the Noldor and Silvan traits.")
                 .WithFlavor("\"I name you Elf-friend; and may the stars shine upon the end of your road!\"\r\n-Gildor, The Fellowship of the Ring")
                 .WithInfo(93, 3, Artist.Sebastian_Giacobino));
+
+            Cards.Add(Card.ObjectiveAlly("Amarthiúl", "", setName, 1, 3, 3, 3)
+                .WithUnique()
+                .WithNormalizedTitle("Amarthiul")
+                .WithTraits("Dúnedain.", "Ranger.", "Warrior.")
+                .WithText("Response: After an enemy engages a player, give control of Amarthiúl to that player.\r\nIf Amarthiúl leaves play, the players lose the game.")
+                .WithInfo(96, 1, Artist.Tomasz_Jedruszek));
         }
     }
 }

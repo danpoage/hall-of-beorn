@@ -92,6 +92,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithIncludedEncounterSets(EncounterSet.EriadorWilds, EncounterSet.FoulWeather)
                 .WithInfo(66, 1, Artist.Victor_Garcia));
             Cards.Add(Card.ObjectiveAlly("Amarthiúl", "", setName, 1, 3, 3, 3)
+                .WithUnique()
                 .WithNormalizedTitle("Amarthiul")
                 .WithTraits("Dúnedain.", "Ranger.", "Warrior.")
                 .WithText("Response: After an enemy engages a player, give control of Amarthiúl to that player.\r\nIf Amarthiúl leaves play, the players lose the game.")
