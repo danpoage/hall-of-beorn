@@ -322,6 +322,12 @@ namespace HallOfBeorn.Models
             return this;
         }
 
+        public Card WithTemplate2(string htmlTemplate)
+        {
+            this.HtmlTemplate2 = htmlTemplate;
+            return this;
+        }
+
         public Card WithFlavor(string flavor)
         {
             this.FlavorText = flavor;
