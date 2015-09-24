@@ -486,6 +486,8 @@ namespace HallOfBeorn.Models
 
             //The Treachery of Rhudaur
             all.Add(Artist.David_Vargo);
+            all.Add(Artist.David_Ogilvie);
+            all.Add(Artist.Joshua_Calloway);
         }
 
         private static List<Artist> all = new List<Artist>();
@@ -537,6 +539,7 @@ namespace HallOfBeorn.Models
         public static Artist Elfkin = new Artist { Name = "elfkin", URL = "http://elfkin.deviantart.com" };
         public static Artist Elshazam = new Artist { Name = "elshazam", URL = "http://elshazam.deviantart.com" };
         public static Artist David_J_Findlay = new Artist { Name = "David J. Findlay", URL = "http://ethalenskye.deviantart.com" };
+        public static Artist David_Ogilvie = new Artist { Name = "David Ogilvie", URL = "http://ogilvie.deviantart.com" };
         public static Artist Fabio_Rodrigues = new Artist { Name = "Fabio Rodrigues", URL = "http://www.rodriguesart.com" };
         public static Artist FangornSpirit = new Artist { Name = "fangornspirit", URL = "https://www.google.com/search?q=Fangorn+Spirit+Art" };
         public static Artist Felix_Sotomayor = new Artist { Name = "Félix Sotomayor", URL = "http://feliche.deviantart.com" };
@@ -559,6 +562,7 @@ namespace HallOfBeorn.Models
         public static Artist John_G = new Artist { Name = "John G", URL = "http://john-g.deviantart.com" };
         public static Artist John_Howe = new Artist { Name = "John Howe", URL = "http://www.john-howe.com/portfolio/gallery" };
         public static Artist Jokubas_Uoginitas = new Artist { Name = "Jokubas Uoginitas", URL = "https://www.behance.net/jokub" };
+        public static Artist Joshua_Calloway = new Artist { Name = "Joshua Calloway", URL = "http://ninjacart.darkfolio.com" };
         public static Artist Julia_Alekseeva = new Artist { Name = "Julia Alekseeva", URL = "http://cg-warrior.deviantart.com" };
         public static Artist Justin_Gerard = new Artist { Name = "Justin Gerard", URL = "http://www.gallerygerard.com/the-art-of-justin-gerard" };
         public static Artist Kaija_Rudkiewicz = new Artist { Name = "Kaija Rudkiewicz", URL = "https://www.behance.net/RunFreakRun" };

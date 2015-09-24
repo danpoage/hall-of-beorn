@@ -74,6 +74,37 @@ namespace HallOfBeorn.Models.Sets
                 .WithTraits("Dúnedain.", "Ranger.", "Warrior.")
                 .WithText("Response: After an enemy engages a player, give control of Amarthiúl to that player.\r\nIf Amarthiúl leaves play, the players lose the game.")
                 .WithInfo(96, 1, Artist.Tomasz_Jedruszek));
+
+            Cards.Add(Card.Location("Eerie Halls", "", setName, 5, 4)
+                .WithTraits("Ruins.")
+                .WithText("Action: Raise your threat by 1 to reduce the Threat of Eerie Halls by 1 until the end of the phase. (Any player may trigger this action.)")
+                .WithShadow("Shadow: If the defending player does not control at least 1 Clue objective, the attacking enemy makes an additional attack after this one.")
+                .WithTemplate("<p><b>Action:</b> Raise your threat by 1 to reduce the {Threat} of {self} by 1 until the end of the phase. (Any player may trigger this action.)</p>{shadow}<p class='shadow-text'><b>Shadow:</b> If the defending player does not control at least 1 <a title='Clue Objective (The Treachery of Rhudaur)' href='/Cards/Search?CardSet=The+Treachery+of+Rhudaur&Trait=Clue.&CardType=Objective' target='_blank'><b><i>Clue</i></b> objective</a>, the attacking enemy makes an additional attack after this one.</p>")
+                .WithInfo(102, 2, Artist.Joshua_Calloway));
+            Cards.Add(Card.Location("Decrepit Remains", "", setName, 1, 3)
+                .WithTraits("Ruins.")
+                .WithText("While Decrepit Remains is in the staging area, each location and quest in the staging area gets +2 quest points.")
+                .WithShadow("Shadow: For each point of damage dealt by this attack, remove 1 progress from each quest in play.")
+                .WithTemplate("<p>While {self} is in the staging area, each location and quest in the staging area gets +2 quest points.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> For each point of damage dealt by this attack, remove 1 progress from each quest in play.</p>") 
+                .WithInfo(104, 2, Artist.Wibben));
+            Cards.Add(Card.Treachery("Centuries of Sorrow", "", setName)
+                .WithKeywords("Surge.")
+                .WithText("When Revealed: The first player must choose a new quest to be the current quest, if able.")
+                .WithShadow("Shadow: If the defending player does not control at least 1 Clue objective, this attack is considered undefended.")
+                .WithTemplate("<p>{keyword:Surge.}</p><p><b>When Revealed:</b> The first player must choose a new quest to be the current quest, if able.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> If the defending player does not control at least 1 <a title='Clue Objective (The Treachery of Rhudaur)' href='/Cards/Search?CardSet=The+Treachery+of+Rhudaur&Trait=Clue.&CardType=Objective' target='_blank'><b><i>Clue</i></b> objective</a>, this attack is considered undefended.</p>")
+                .WithInfo(105, 2, Artist.Marcel_Mercado));
+            Cards.Add(Card.Treachery("Curse of the Years", "", setName)
+                .WithTraits("Sorcery.")
+                .WithText("When Revealed: Deal 1 damage to each exhausted character. Each player with a threat of 35 or higher must also discard each exhausted attachment he controls.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack (+3 Attack instead if the defending player does not control at least 1 Clue objective.)")
+                .WithTemplate("<p><b>When Revealed:</b> Deal 1 damage to each exhausted character. Each player with a threat of 35 or higher must also discard each exhausted attachment he controls.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Attacking enemy gets +1 {Attack} (+3 {Attack} instead if the defending player does not control at least 1 <a title='Clue Objective (The Treachery of Rhudaur)' href='/Cards/Search?CardSet=The+Treachery+of+Rhudaur&Trait=Clue.&CardType=Objective' target='_blank'><b><i>Clue</i></b> objective</a>.)")
+                .WithInfo(106, 3, Artist.David_Ogilvie));
+            Cards.Add(Card.Treachery("Dark Covenant", "", setName)
+                .WithTraits("Sorcery.")
+                .WithText("When Revealed: Discard the top 3 cards of the encounter deck. The first player must either remove X progress from among the quests in play, or assign X damage among characters he controls. X is the total [Threat] of the discarded cards.")
+                .WithShadow("Shadow: If this attack destroys a character, raise your threat by the destroyed character's Willpower.")
+                .WithTemplate("<p><b>When Revealed:</b> Discard the top 3 cards of the encounter deck. The first player must either remove X progress from among the quests in play, or assign X damage among characters he controls. X is the total {Threat} of the discarded cards.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> If this attack destroys a character, raise your threat by the destroyed character's {Willpower}.</p>")
+                .WithInfo(107, 3, Artist.Yoann_Boissonnet));
         }
     }
 }
