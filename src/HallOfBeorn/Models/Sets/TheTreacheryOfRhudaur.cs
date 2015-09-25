@@ -115,6 +115,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Forced: When Traitorous Wight engages a player, remove 2 progress from each quest card in play.")
                 .WithShadow("Shadow: For each point of damage dealt by this attack, remove 1 progress from each quest in play.")
                 .WithTemplate("<p><b>Forced:</b> When {self} engages a player, remove 2 progress from each quest card in play.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> For each point of damage dealt by this attack, remove 1 progress from each quest in play.</p>")
+                .WithEasyModeQuantity(2)
                 .WithInfo(100, 3, Artist.Anthony_Devine));
             Cards.Add(Card.Location("Forbidden Descent", "", setName, 2, 6)
                 .WithTraits("Ruins.")
@@ -126,12 +127,14 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Action: Raise your threat by 1 to reduce the Threat of Eerie Halls by 1 until the end of the phase. (Any player may trigger this action.)")
                 .WithShadow("Shadow: If the defending player does not control at least 1 Clue objective, the attacking enemy makes an additional attack after this one.")
                 .WithTemplate("<p><b>Action:</b> Raise your threat by 1 to reduce the {Threat} of {self} by 1 until the end of the phase. (Any player may trigger this action.)</p>{shadow}<p class='shadow-text'><b>Shadow:</b> If the defending player does not control at least 1 <a title='Clue Objective (The Treachery of Rhudaur)' href='/Cards/Search?CardSet=The+Treachery+of+Rhudaur&Trait=Clue.&CardType=Objective' target='_blank'><b><i>Clue</i></b> objective</a>, the attacking enemy makes an additional attack after this one.</p>")
+                .WithEasyModeQuantity(1)
                 .WithInfo(102, 2, Artist.Joshua_Calloway));
             Cards.Add(Card.Location("Ghostly Ruins", "", setName, 4, 4)
                 .WithTraits("Ruins.")
                 .WithText("Any time the encounter deck runs out of cards, return the topmost Undead enemy in the encounter discard pile to the staging area before resetting the encounter deck.\r\nTravel: Return the topmost Undead enemy in the encounter discard pile to the staging area.")
                 .WithFlavor("\"I am not sure that I like it: it has a - well, rather a barrow-wightish look.\" -Merry, The Fellowship of the Ring")
                 .WithTemplate("<p>Any time the encounter deck runs out of cards, return the topmost {trait:Undead.@Undead} enemy in the encounter discard pile to the staging area before resetting the encounter deck.<p></p><b>Travel:</b> Return the topmost {trait:Undead.@Undead} enemy in the encounter discard pile to the staging area.</p><p class='flavor-text'></p>")
+                .WithEasyModeQuantity(0)
                 .WithInfo(103, 2, Artist.Matthew_Cowdery));
             Cards.Add(Card.Location("Decrepit Remains", "", setName, 1, 3)
                 .WithTraits("Ruins.")
@@ -144,12 +147,14 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("When Revealed: The first player must choose a new quest to be the current quest, if able.")
                 .WithShadow("Shadow: If the defending player does not control at least 1 Clue objective, this attack is considered undefended.")
                 .WithTemplate("<p>{keyword:Surge.}</p><p><b>When Revealed:</b> The first player must choose a new quest to be the current quest, if able.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> If the defending player does not control at least 1 <a title='Clue Objective (The Treachery of Rhudaur)' href='/Cards/Search?CardSet=The+Treachery+of+Rhudaur&Trait=Clue.&CardType=Objective' target='_blank'><b><i>Clue</i></b> objective</a>, this attack is considered undefended.</p>")
+                .WithEasyModeQuantity(1)
                 .WithInfo(105, 2, Artist.Marcel_Mercado));
             Cards.Add(Card.Treachery("Curse of the Years", "", setName)
                 .WithTraits("Sorcery.")
                 .WithText("When Revealed: Deal 1 damage to each exhausted character. Each player with a threat of 35 or higher must also discard each exhausted attachment he controls.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+3 Attack instead if the defending player does not control at least 1 Clue objective.)")
                 .WithTemplate("<p><b>When Revealed:</b> Deal 1 damage to each exhausted character. Each player with a threat of 35 or higher must also discard each exhausted attachment he controls.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Attacking enemy gets +1 {Attack} (+3 {Attack} instead if the defending player does not control at least 1 <a title='Clue Objective (The Treachery of Rhudaur)' href='/Cards/Search?CardSet=The+Treachery+of+Rhudaur&Trait=Clue.&CardType=Objective' target='_blank'><b><i>Clue</i></b> objective</a>.)")
+                .WithEasyModeQuantity(1)
                 .WithInfo(106, 3, Artist.David_Ogilvie));
             Cards.Add(Card.Treachery("Dark Covenant", "", setName)
                 .WithTraits("Sorcery.")
@@ -169,7 +174,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithInfo(109, 1, Artist.Adam_Lane));
             Cards.Add(Card.Objective("Daechanar's Brand", "", setName)
                 .WithTraits("Clue.")
-                .WithText("Action: Exhaust Amarthiúl or a hero to claim {self}. Then, attach {self} to that character.\r\nAttached character gets +1 Attack while attacking undead enemies.")
+                .WithText("Action: Exhaust Amarthiúl or a hero to claim Daechanar's Brand. Then, attach Daechanar's Brand to that character.\r\nAttached character gets +1 Attack while attacking undead enemies.")
                 .WithFlavor("When you touch this dark blade, you can feel a cursed power coursing through it. In Tengwar, the name \"Daechanar\" is inscribed upon its handle.")
                 .WithTemplate("<p><b>Action:</b> Exhaust {card:Amarthiul-TToR@Amarthiúl} or a hero to claim {self}. Then, attach {self} to that character.</p><p>Attached character gets +1 {Attack} while attacking {trait:Undead.@Undead} enemies.</p><p class='flavor-text'>When you touch this dark blade, you can feel a cursed power coursing through it. In Tengwar, the name &quot;Daechanar&quot; is inscribed upon its handle.</p>")
                 .WithInfo(110, 1, Artist.Preston_Stone));
@@ -181,7 +186,7 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(Card.Objective("Heirloom of Iârchon", "", setName)
                 .WithNormalizedTitle("Heirloom of Iarchon")
                 .WithTraits("Clue.")
-                .WithText("Action: Exhaust Amarthiúl or a hero to claim {self}. Then, attach {self} to that character.\r\nAttached character gets +1 Willpower.")
+                .WithText("Action: Exhaust Amarthiúl or a hero to claim Heirloom of Iârchon. Then, attach Heirloom of Iârchon to that character.\r\nAttached character gets +1 Willpower.")
                 .WithFlavor("You find a pendant, similar to the one you've seen Iârion wearing. The inscription on the back says:\r\n\"Iârchon, may this pendant guide you away from the shadow that dwells within us all. -Your loving father\"")
                 .WithTemplate("<p><b>Action:</b> Exhaust Amarthiúl or a hero to claim {self}. Then, attach {self} to that character.</p><p>Attached character gets +1 {Willpower}.</p><p class='flavor-text'>You find a pendant, similar to the one you've seen Iârion wearing. The inscription on the back says:<br>&quot;Iârchon, may this pendant guide you away from the shadow that dwells within us all. &ndash;Your loving father&quot;</p>")
                 .WithInfo(112, 1, Artist.Romana_Kendelic));
@@ -192,7 +197,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithInfo(113, 1, Artist.Nick_Deligaris));
             Cards.Add(Card.Objective("Orders from Angmar", "", setName)
                 .WithTraits("Clue.")
-                .WithText("Action: Exhaust Amarthiúl or a hero to claim {self}. Then, attach {self} to that character.\r\nAttached character gets +1 Attack while attacking undead enemies.")
+                .WithText("Action: Exhaust Amarthiúl or a hero to claim Orders from Angmar. Then, attach Orders from Angmar to that character.\r\nAttached character gets +1 Defense while defending against undead enemies.")
                 .WithFlavor("You find a tattered, barely legible scroll dated over 1000 years ago, summong those loyal to the Witch-king of Angmar for an assault on Rivendell.")
                 .WithTemplate("<p><b>Action:</b> Exhaust Amarthiúl or a hero to claim {self}. Then, attach {self} to that character.</p><p>Attached character gets +1 {Defense} while defending against {trait:Undead.@Undead} enemies.</p><p class='flavor-text'>You find a tattered, barely legible scroll dated over 1000 years ago, summong those loyal to the Witch-king of Angmar for an assault on Rivendell.</p>")
                 .WithInfo(114, 1, Artist.Chris_Metcalf));
