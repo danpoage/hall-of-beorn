@@ -79,13 +79,14 @@ namespace HallOfBeorn.Models
             switch (type.ToLowerSafe())
             {
                 case "card":
-                    sb.AppendFormat("<a title='Card: {1}' href='/Cards/Details/{0}' target='_blank'>{1}</a>", label, key);
+                    sb.AppendFormat("<a title='Card: {0}' href='/Cards/Details/{1}' target='_blank'>{0}</a>", label, key);
                     break;
                 case "title":
                     sb.AppendFormat("<a title='Search: {1} Title' href='/Cards/Search?Query=%2Btitle%3A{0}' target='_blank'>{1}</a>", label, key);
                     break;
                 case "self":
-                    sb.AppendFormat("<a title='Card: {0}' href='/Cards/Details/{1}' target='_blank'>{0}</a>", label, key);
+                    //sb.AppendFormat("<a title='Card: {0}' href='/Cards/Details/{1}' target='_blank'>{0}</a>", label, key);
+                    sb.AppendFormat(label);
                     break;
                 case "trait":
                     sb.AppendFormat("<a title='Search: {0} Trait' href='/Cards/Search?Trait={1}' target='_blank'><b><i>{0}</i></b></a>", label, key);

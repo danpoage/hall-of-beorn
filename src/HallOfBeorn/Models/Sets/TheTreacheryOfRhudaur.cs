@@ -67,12 +67,12 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Attach to a character.\r\nAttached character gains the Noldor and Silvan traits.")
                 .WithFlavor("\"I name you Elf-friend; and may the stars shine upon the end of your road!\"\r\n-Gildor, The Fellowship of the Ring")
                 .WithInfo(93, 3, Artist.Sebastian_Giacobino));
-            Cards.Add(Card.Quest("Secrets of Rhudaur", "", 4, 1, setName, 254)
+            Cards.Add(Card.Quest("Secrets of Rhudaur", "", 4, 1, setName, 255)
                 .WithKeywords("Time 5.")
                 .WithFlavor("You have decided to explore the ruins of this ancient keep, but Thaurdir pursues you, and time is of the essence.")
                 .WithText("Setup: Make The Great Hall the active location. Set Thaurdir aside, out of play. Add the 3 Treachery of Rhudaur side quests to the staging area, quest side faceup. Search the encounter deck for 1 copy of Ancient Causeway, and add it to the staging area (2 copies instead if there are 3 or 4 players in the game). The first player gains control of Amarthiúl.")
                 .WithOppositeText("Forced: After the last time counter is removed from Secrets of Rhudaur, remove each Treachery of Rhudaur side quest from the game and immediately advance to stage 2.\r\nDuring the quest phase, Secrets of Rhudaur cannot be chosen as the current quest.\r\nIf there are no Treachery of Rhudaur side quests in play, immediately advance to stage 2.")
-                .WithTemplate("<p class='flavor-text'>You have decided to explore the ruins of this ancient keep, but Thaurdir pursues you, and time is of the essence.</p><p><b>Setup:</b> Make {card:The-Great-Hall-TToR@The Great Hall} the active location. Set {card:Thaurdir-TToR@Thaurdir} aside, out of play. Add the <a href='/Cards/Search?CardSet=The+Treachery+of+Rhudaur&CardType=Encounter_Side_Quest' title='Side Quests from The Treachery of Rhudaur' target='_blank'>3 Treachery of Rhudaur side quests</a> to the staging area, quest side faceup. Search the encounter deck for 1 copy of {card:Ancient-Causeway-TToR@Ancient Causeway}, and add it to the staging area (2 copies instead if there are 3 or 4 players in the game). The first player gains control of {card:Amarthiul-TToR@Amarthiúl}.</p>")
+                .WithTemplate("<p class='flavor-text'>You have decided to explore the ruins of this ancient keep, but Thaurdir pursues you, and time is of the essence.</p><p><b>Setup:</b> Make {card:The-Great-Hall-TToR@The Great Hall} the active location. Set {card:Thaurdir-TToR@Thaurdir} aside, out of play. Add the <a href='/Cards/Search?CardSet=The+Treachery+of+Rhudaur&CardType=Encounter_Side_Quest' title='Side Quests from The Treachery of Rhudaur' target='_blank'>3 Treachery of Rhudaur side quests</a> to the staging area, quest side faceup. Search the encounter deck for 1 copy of {card:Ancient-Causeway-TLR@Ancient Causeway}, and add it to the staging area (2 copies instead if there are 3 or 4 players in the game). The first player gains control of {card:Amarthiul-TToR@Amarthiúl}.</p>")
                 .WithTemplate2("<p>{keyword:Time 5.} <b>Forced</b> After the last time counter is removed from {self}, remove each <a href='/Cards/Search?CardSet=The+Treachery+of+Rhudaur&CardType=Encounter_Side_Quest' title='Side Quests from The Treachery of Rhudaur' target='_blank'>Treachery of Rhudaur side quests</a> from the game and immediately advance to {card:Thaurdir's-Pursuit-TToR@stage_2}.</p></p>During the quest phase, Secrets of Rhudaur cannot be chosen as the current quest.<br>If there are no <a href='/Cards/Search?CardSet=The+Treachery+of+Rhudaur&CardType=Encounter_Side_Quest' title='Side Quests from The Treachery of Rhudaur' target='_blank'>Treachery of Rhudaur side quests</a> in play, immediately advance to {card:Thaurdir's-Pursuit-TToR@stage_2}.</p>")
                 .WithIncludedEncounterSets(EncounterSet.RuinsOfArnor, EncounterSet.CursedDead)
                 .WithInfo(94, 1, Artist.Eva_Maria_Toker));
@@ -91,13 +91,48 @@ namespace HallOfBeorn.Models.Sets
                 .WithTraits("Dúnedain.", "Ranger.", "Warrior.")
                 .WithText("Response: After an enemy engages a player, give control of Amarthiúl to that player.\r\nIf Amarthiúl leaves play, the players lose the game.")
                 .WithInfo(96, 1, Artist.Tomasz_Jedruszek));
-
+            Cards.Add(Card.Location("The Great Hall", "", setName, 4, 8)
+                .WithUnique()
+                .WithTraits("Ruins.")
+                .WithText("Forced: When The Great Hall is explored, each player discards the top 5 cards of the encounter deck and chooses an Undead enemy he discarded in this way to add to the staging area.")
+                .WithTemplate("<b>Forced:</b> When {self} is explored, each player discards the top 5 cards of the encounter deck and chooses an {traint:Undead.@Undead} enemy he discarded in this way to add to the staging area.")
+                .WithInfo(97, 1, Artist.Davis_Engel));
+            Cards.Add(Card.Enemy("Thaurdir", "", setName, 1, 4, 6, 4, 9)
+                .WithUnique()
+                .WithTraits("Undead.", "Wraith.")
+                .WithKeywords("Indestructible.")
+                .WithText("Cannot have attachments.\r\nForced: After a treachery card with the Sorcery trait is revealed from the encounter deck, Thaurdir heals 3 damage and makes an immediate attack against the first player.")
+                .WithTemplate("<p>{keyword:Indestructible.} Cannot have attachments.</p><p><b>Forced:</b> After a treachery card with the {trait:Sorcery.@Sorcery} trait is revealed from the encounter deck, {self} heals 3 damage and makes an immediate attack against the first player.</p>")
+                .WithInfo(98, 1, Artist.Joel_Hustak));
+            Cards.Add(Card.Enemy("Wight of Rhudaur", "", setName, 23, 2, 3, 3, 5)
+                .WithTraits("Undead.", "Wight.")
+                .WithText("While the current quest has 1 or more progress on it, Wight of Rhudaur gains surge.\r\nWhile the current quest has 0 progress on it, Wight of Rhudaur gains doomed 2.")
+                .WithFlavor("...evil spirits out of Angmar and Rhudaur entered into the deserted mounds and dwelt there. -The Return of the King")
+                .WithTemplate("<p>While the current quest has 1 or more progress on it, {self} gains {keyword:Surge.@surge}.</p><p>While the current quest has 0 progress on it, {self} gains {keyword:Doomed 2.@doomed 2}.</p><p class='flavor-text'>...evil spirits out of Angmar and Rhudaur entered into the deserted mounds and dwelt there.<br>&ndash;The Return of the King</p>")
+                .WithInfo(99, 2, Artist.Anthony_Devine));
+            Cards.Add(Card.Enemy("Traitorous Wight", "", setName, 32, 2, 4, 2, 4)
+                .WithTraits("Undead.", "Wraith.")
+                .WithText("Forced: When Traitorous Wight engages a player, remove 2 progress from each quest card in play.")
+                .WithShadow("Shadow: For each point of damage dealt by this attack, remove 1 progress from each quest in play.")
+                .WithTemplate("<p><b>Forced:</b> When {self} engages a player, remove 2 progress from each quest card in play.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> For each point of damage dealt by this attack, remove 1 progress from each quest in play.</p>")
+                .WithInfo(100, 3, Artist.Anthony_Devine));
+            Cards.Add(Card.Location("Forbidden Descent", "", setName, 2, 6)
+                .WithTraits("Ruins.")
+                .WithText("While Forbidden Descent is in the staging area, the first 2 progress that would be placed on a quest each round must be placed on Forbidden Descent, instead.\r\nForced: If Forbidden Descent leaves play from the staging area, raise each player’s threat by 2.")
+                .WithTemplate("<p>While {self} is in the staging area, the first 2 progress that would be placed on a quest each round must be placed on {self}, instead.</p><p><b>Forced:</b> If {self} leaves play from the staging area, raise each player’s threat by 2.</p>")
+                .WithInfo(101, 2, Artist.Titus_Lunter));
             Cards.Add(Card.Location("Eerie Halls", "", setName, 5, 4)
                 .WithTraits("Ruins.")
                 .WithText("Action: Raise your threat by 1 to reduce the Threat of Eerie Halls by 1 until the end of the phase. (Any player may trigger this action.)")
                 .WithShadow("Shadow: If the defending player does not control at least 1 Clue objective, the attacking enemy makes an additional attack after this one.")
                 .WithTemplate("<p><b>Action:</b> Raise your threat by 1 to reduce the {Threat} of {self} by 1 until the end of the phase. (Any player may trigger this action.)</p>{shadow}<p class='shadow-text'><b>Shadow:</b> If the defending player does not control at least 1 <a title='Clue Objective (The Treachery of Rhudaur)' href='/Cards/Search?CardSet=The+Treachery+of+Rhudaur&Trait=Clue.&CardType=Objective' target='_blank'><b><i>Clue</i></b> objective</a>, the attacking enemy makes an additional attack after this one.</p>")
                 .WithInfo(102, 2, Artist.Joshua_Calloway));
+            Cards.Add(Card.Location("Ghostly Ruins", "", setName, 4, 4)
+                .WithTraits("Ruins.")
+                .WithText("Any time the encounter deck runs out of cards, return the topmost Undead enemy in the encounter discard pile to the staging area before resetting the encounter deck.\r\nTravel: Return the topmost Undead enemy in the encounter discard pile to the staging area.")
+                .WithFlavor("\"I am not sure that I like it: it has a - well, rather a barrow-wightish look.\" -Merry, The Fellowship of the Ring")
+                .WithTemplate("<p>Any time the encounter deck runs out of cards, return the topmost {trait:Undead.@Undead} enemy in the encounter discard pile to the staging area before resetting the encounter deck.<p></p><b>Travel:</b> Return the topmost {trait:Undead.@Undead} enemy in the encounter discard pile to the staging area.</p><p class='flavor-text'></p>")
+                .WithInfo(103, 2, Artist.Matthew_Cowdery));
             Cards.Add(Card.Location("Decrepit Remains", "", setName, 1, 3)
                 .WithTraits("Ruins.")
                 .WithText("While Decrepit Remains is in the staging area, each location and quest in the staging area gets +2 quest points.")
@@ -118,10 +153,49 @@ namespace HallOfBeorn.Models.Sets
                 .WithInfo(106, 3, Artist.David_Ogilvie));
             Cards.Add(Card.Treachery("Dark Covenant", "", setName)
                 .WithTraits("Sorcery.")
-                .WithText("When Revealed: Discard the top 3 cards of the encounter deck. The first player must either remove X progress from among the quests in play, or assign X damage among characters he controls. X is the total [Threat] of the discarded cards.")
+                .WithText("When Revealed: Discard the top 3 cards of the encounter deck. The first player must either remove X progress from among the quests in play, or assign X damage among characters he controls. X is the total Threat of the discarded cards.")
                 .WithShadow("Shadow: If this attack destroys a character, raise your threat by the destroyed character's Willpower.")
                 .WithTemplate("<p><b>When Revealed:</b> Discard the top 3 cards of the encounter deck. The first player must either remove X progress from among the quests in play, or assign X damage among characters he controls. X is the total {Threat} of the discarded cards.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> If this attack destroys a character, raise your threat by the destroyed character's {Willpower}.</p>")
                 .WithInfo(107, 3, Artist.Yoann_Boissonnet));
+            Cards.Add(Card.Treachery("Haunting Fog", "", setName)
+                .WithTraits("Sorcery.") 
+                .WithText("When Revealed: Each player must exhaust a character he controls. Attach Haunting Fog to the current quest. (Counts as a Condition attachment with the text: \"Attached quest gets +6 quest points.\"")
+                .WithFlavor("Fog still hung in veils upon the crumbling rock-wall...\r\n-The Fellowship of the Ring")
+                .WithTemplate("<p><b>When Revealed:</b> Each player must exhaust a character he controls. Attach {self} to the current quest. (Counts as a Condition attachment with the text: &quot;Attached quest gets +6 quest points.&quot;</p><p class='flavor-text'>Fog still hung in veils upon the crumbling rock-wall...<br>&ndash;The Fellowship of the Ring</p>")
+                .WithInfo(108, 3, Artist.Logan_Feliciano));
+            Cards.Add(Card.EncounterSideQuest("Quiet the Spirits", "", setName, 16)
+                .WithText("While Quiet the Spirits is the current quest, each Undead enemy that enters play immediately engages the player with the highest threat. Enemies that engage a player from this effect contribute their Threat to the total Threat in the staging area until the end of the phase.\r\nForced: After an enemy is destroyed, place 2 progress on Quiet the Spirits.\r\nWhen this quest is defeated, flip it over.")
+                .WithTemplate("<p>While {self} is the current quest, each Undead enemy that enters play immediately engages the player with the highest threat. Enemies that engage a player from this effect contribute their {Threat} to the total {Threat} in the staging area until the end of the phase.</p><p><b>Forced:</b> After an enemy is destroyed, place 2 progress on {self}.</p><p><b>When this quest is defeated, {card:Daechanar's-Brand-TToR@flip it over}.</b></p>")
+                .WithInfo(109, 1, Artist.Adam_Lane));
+            Cards.Add(Card.Objective("Daechanar's Brand", "", setName)
+                .WithTraits("Clue.")
+                .WithText("Action: Exhaust Amarthiúl or a hero to claim {self}. Then, attach {self} to that character.\r\nAttached character gets +1 Attack while attacking undead enemies.")
+                .WithFlavor("When you touch this dark blade, you can feel a cursed power coursing through it. In Tengwar, the name \"Daechanar\" is inscribed upon its handle.")
+                .WithTemplate("<p><b>Action:</b> Exhaust {card:Amarthiul-TToR@Amarthiúl} or a hero to claim {self}. Then, attach {self} to that character.</p><p>Attached character gets +1 {Attack} while attacking {trait:Undead.@Undead} enemies.</p><p class='flavor-text'>When you touch this dark blade, you can feel a cursed power coursing through it. In Tengwar, the name &quot;Daechanar&quot; is inscribed upon its handle.</p>")
+                .WithInfo(110, 1, Artist.Preston_Stone));
+            Cards.Add(Card.EncounterSideQuest("Sift through the Debris", "", setName, 18)
+                .WithText("While Sift through the Debris is the current quest, each location in the staging area gets +1 Threat.\r\nForced: After a location is explored, place 2 progress on Sift through the Debris.\r\nWhen this quest is defeated, flip it over.")
+                .WithFlavor("You search through the ashes of the keep's destroyed rooms. If you are diligent, you may be able to find a clue as to Iârion's ancestry.")
+                .WithTemplate("<p class='flavor-text'>You search through the ashes of the keep's destroyed rooms. If you are diligent, you may be able to find a clue as to Iârion's ancestry.</b></p><p>While {self} is the current quest, each location in the staging area gets +1 {Threat}</p><p><b>Forced:</b> After a location is explored, place 2 progress on {self}.</p><p><b>When this quest is defeated, {card:Heirloom-of-Iarchon-TToR@flip it over}.</b></p>")
+                .WithInfo(111, 1, Artist.Tomasz_Jedruszek));
+            Cards.Add(Card.Objective("Heirloom of Iârchon", "", setName)
+                .WithNormalizedTitle("Heirloom of Iarchon")
+                .WithTraits("Clue.")
+                .WithText("Action: Exhaust Amarthiúl or a hero to claim {self}. Then, attach {self} to that character.\r\nAttached character gets +1 Willpower.")
+                .WithFlavor("You find a pendant, similar to the one you've seen Iârion wearing. The inscription on the back says:\r\n\"Iârchon, may this pendant guide you away from the shadow that dwells within us all. -Your loving father\"")
+                .WithTemplate("<p><b>Action:</b> Exhaust Amarthiúl or a hero to claim {self}. Then, attach {self} to that character.</p><p>Attached character gets +1 {Willpower}.</p><p class='flavor-text'>You find a pendant, similar to the one you've seen Iârion wearing. The inscription on the back says:<br>&quot;Iârchon, may this pendant guide you away from the shadow that dwells within us all. &ndash;Your loving father&quot;</p>")
+                .WithInfo(112, 1, Artist.Romana_Kendelic));
+            Cards.Add(Card.EncounterSideQuest("Decipher Ancient Texts", "", setName, 14)
+                .WithText("While Decipher Ancient Texts is the current quest, allies get –2 Willpower.\r\nAction: Pay 1 resource to place 1 progress on Decipher Ancient Texts. (Any player may trigger this action. Limit 3 times per round.)\r\nWhen this quest is defeated, flip it over.")
+                .WithFlavor("You look through the keep's many torn and ancient records, hoping to find information to help you understand the Enemy's plan...")
+                .WithTemplate("<p class='flavor-text'>You look through the keep's many torn and ancient records, hoping to find information to help you understand the Enemy's plan...</p><p>While {self} is the current quest, allies get –2 {Willpower}.</p><p><b>Action:</b> Pay 1 resource to place 1 progress on {self}. (Any player may trigger this action. Limit 3 times per round.)</p><p><b>When this quest is defeated, {card:Orders-from-Angmar-TToR@flip it over}.</b></p>")
+                .WithInfo(113, 1, Artist.Nick_Deligaris));
+            Cards.Add(Card.Objective("Orders from Angmar", "", setName)
+                .WithTraits("Clue.")
+                .WithText("Action: Exhaust Amarthiúl or a hero to claim {self}. Then, attach {self} to that character.\r\nAttached character gets +1 Attack while attacking undead enemies.")
+                .WithFlavor("You find a tattered, barely legible scroll dated over 1000 years ago, summong those loyal to the Witch-king of Angmar for an assault on Rivendell.")
+                .WithTemplate("<p><b>Action:</b> Exhaust Amarthiúl or a hero to claim {self}. Then, attach {self} to that character.</p><p>Attached character gets +1 {Defense} while defending against {trait:Undead.@Undead} enemies.</p><p class='flavor-text'>You find a tattered, barely legible scroll dated over 1000 years ago, summong those loyal to the Witch-king of Angmar for an assault on Rivendell.</p>")
+                .WithInfo(114, 1, Artist.Chris_Metcalf));
         }
     }
 }

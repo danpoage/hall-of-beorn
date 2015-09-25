@@ -488,6 +488,7 @@ namespace HallOfBeorn.Models
             all.Add(Artist.David_Vargo);
             all.Add(Artist.David_Ogilvie);
             all.Add(Artist.Joshua_Calloway);
+            all.Add(Artist.Chris_Metcalf);
         }
 
         private static List<Artist> all = new List<Artist>();
@@ -516,6 +517,7 @@ namespace HallOfBeorn.Models
         public static Artist Carlos_Palma_Cruchaga = new Artist { Name = "Carlos Palma Cruchaga", URL = "http://artworkproject.com/profile/CarlosPalmaCruchaga" };
         public static Artist Catherine_Karina_Chmiel = new Artist { Name = "Catherine Karina Chmiel", URL = "http://kasiopea.art.pl/en/home" };
         public static Artist Cherif_Fortin = new Artist { Name = "Cherif Fortin", URL = "http://ijoust.deviantart.com" };
+        public static Artist Chris_Metcalf = new Artist { Name = "Chris Metcalf", URL = "https://www.artstation.com/artist/cmetdraws" };
         public static Artist Christian_Quinot = new Artist { Name = "Christian Quinot", URL = "http://darkcloud013.deviantart.com" };
         public static Artist Clive_Lauzon = new Artist { Name = "Clive Lauzon", URL = "http://www.creativeshake.com/profile.html?MyUrl=clivelauzon" };
         public static Artist Crystal_Sully = new Artist { Name = "Crystal Sully", URL = "http://crystalsully.com" };
