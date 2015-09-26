@@ -95,7 +95,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithUnique()
                 .WithTraits("Ruins.")
                 .WithText("Forced: When The Great Hall is explored, each player discards the top 5 cards of the encounter deck and chooses an Undead enemy he discarded in this way to add to the staging area.")
-                .WithTemplate("<b>Forced:</b> When {self} is explored, each player discards the top 5 cards of the encounter deck and chooses an {traint:Undead.@Undead} enemy he discarded in this way to add to the staging area.")
+                .WithTemplate("<b>Forced:</b> When {self} is explored, each player discards the top 5 cards of the encounter deck and chooses an {trait:Undead.@Undead} enemy he discarded in this way to add to the staging area.")
                 .WithInfo(97, 1, Artist.Davis_Engel));
             Cards.Add(Card.Enemy("Thaurdir", "", setName, 1, 4, 6, 4, 9)
                 .WithUnique()
