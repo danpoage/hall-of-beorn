@@ -313,7 +313,7 @@ namespace HallOfBeorn.Services
                 CreateCategoryFilter((card) => { return card.Keywords.Any(x => x.StartsWith("Secrecy ")) || card.Text.ToLowerSafe().Contains("if your threat is 20 or less") || card.Text.ToLowerSafe().Contains("gains secrecy"); }, Category.Secrecy),
                 CreateCategoryFilter("enemy.*engagement cost.*than your threat", Category.Surprise),
                 CreateCategoryFilter((card) => { return card.Text.ToLowerSafe().Contains("victory display") && card.VictoryPoints == 0; }, Category.Victory_Display),
-                CreateCategoryFilter("(discard (a|1|2) (card|cards) from your hand|discarded from your hand)", Category.Discard_From_Hand)
+                CreateCategoryFilter("(discard (a|1|2|all) (card|cards) (from|in) your hand|discarded from your hand)", Category.Discard_From_Hand)
             };
 
             foreach (var card in cards.Where(x => IsCategorizable(x)))
