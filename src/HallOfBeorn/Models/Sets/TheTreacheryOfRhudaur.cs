@@ -50,7 +50,7 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(Card.Attachment("Silver Harp", "", Sphere.Spirit, 2)
                 .WithTraits("Item.", "Instrument.")
                 .WithKeywords("Restricted.")
-                .WithText("Attach to a Spirit hero.r\nResponse: After a card is discarded from your hand, exhaust Silver Harp to return that card to your hand.")
+                .WithText("Attach to a Spirit hero.\r\nResponse: After a card is discarded from your hand, exhaust Silver Harp to return that card to your hand.")
                 .WithFlavor("Elrond wore a mantle of grey and had a star upon his forehead, and a silver harp was in his hand... -The Return of the King")
                 .WithInfo(90, 3, Artist.Arden_Beckwith));
             Cards.Add(Card.Ally("Galdor of the Havens", "", Sphere.Lore, 4, 2, 2, 1, 4)

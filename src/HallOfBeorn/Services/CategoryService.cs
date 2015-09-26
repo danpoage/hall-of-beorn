@@ -312,7 +312,8 @@ namespace HallOfBeorn.Services
                 CreateCategoryFilter(@"attach 1 attachment card|an attachment of cost 3 or less and put it into play|you may attach that card facedown|to play Weapon and Armor attachments on|put into play the revealed card for no cost", Category.Equipping),
                 CreateCategoryFilter((card) => { return card.Keywords.Any(x => x.StartsWith("Secrecy ")) || card.Text.ToLowerSafe().Contains("if your threat is 20 or less") || card.Text.ToLowerSafe().Contains("gains secrecy"); }, Category.Secrecy),
                 CreateCategoryFilter("enemy.*engagement cost.*than your threat", Category.Surprise),
-                CreateCategoryFilter((card) => { return card.Text.ToLowerSafe().Contains("victory display") && card.VictoryPoints == 0; }, Category.Victory_Display)
+                CreateCategoryFilter((card) => { return card.Text.ToLowerSafe().Contains("victory display") && card.VictoryPoints == 0; }, Category.Victory_Display),
+                CreateCategoryFilter("(discard (a|1|2) (card|cards) from your hand|discarded from your hand)", Category.Discard_From_Hand)
             };
 
             foreach (var card in cards.Where(x => IsCategorizable(x)))
