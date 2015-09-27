@@ -984,3 +984,21 @@ tr.pager td {
     text-align: left;
     width: 88%;    
 }
+
+.victory-text {
+    text-align:right;
+    font-weight:bold;
+    margin-bottom:4px;
+    position:absolute;
+    bottom:4px;
+    right:4px;
+}
+
+.pass-text {
+    text-align:right;
+    font-weight:bold;
+    margin-bottom:4px;
+    position:absolute;
+    bottom:4px;
+    right:4px;
+}

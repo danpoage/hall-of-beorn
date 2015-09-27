@@ -190,7 +190,10 @@ namespace HallOfBeorn.Models
                     sb.Append("<img src='/Images/defense.gif' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' />");
                     break;
                 case "victory":
-                    sb.AppendFormat("<div style='text-align:right;font-weight:bold;margin-bottom:4px;position:absolute;bottom:4px;right:4px;'><a style='text-decoration:none;' href='/Cards/Search?VictoryPoints=Victory+{0}.' target='_blank' title='Victory: {0}'><span style='padding-left:4px;padding-right:4px;border-style:solid;border-width:1px;border-color:black;'>Victory {0}</span></a></div>", key);
+                    sb.AppendFormat("<div class='victory-text'><a style='text-decoration:none;' href='/Cards/Search?VictoryPoints=Victory+{0}.' target='_blank' title='Victory: {0}'><span style='padding-left:4px;padding-right:4px;border-style:solid;border-width:1px;border-color:black;'>Victory {0}</span></a></div>", key);
+                    break;
+                case "pass":
+                    sb.Append("<div class='pass-text'><b>PASS</b></div>");
                     break;
                 case "shadow":
                     sb.Append("<img src='/Images/ShadowDivider.png' title='Shadow Effect' style='display:block;margin-left:auto;margin-right:auto;width:285px;'/>");
