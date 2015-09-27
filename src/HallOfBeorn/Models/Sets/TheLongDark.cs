@@ -129,6 +129,7 @@ Attached hero gets +1 Defense.",
                 Willpower = 2,
                 HitPoints = 3,
                 Text = "Action: Choose and discard 1 card from your hand to draw 1 card. (Limit once per round.)",
+                FlavorText = "Beside Glorfindel there were several other counsellors of Elrond's household, of whom Erestor was the chief...\r\n-The Fellowship of the Ring",
                 Number = 77,
                 Artist = Artist.Magali_Villeneuve
             });
@@ -306,6 +307,8 @@ Attached hero gets +1 Defense.",
                 Quantity = 3,
                 ResourceCost = 2,
                 Text = "Attach to a Dwarf or Hobbit character.\r\nAttached character gets +1 hit point and +1 Defense.",
+                FlavorText = "\"And all the arrows of all the hunters in the world would be in vain...\r\n-Gimli, The Fellowship of the Ring",
+                HtmlTemplate = "<p>Attach to a {traits-character:Dwarf,Hobbit}. {keyword:Restricted.}</p><p>Attached character gets +1 hit point and +1 {Defense}.</p><p class='flavor-text'>&quot;And all the arrows of all the hunters in the world would be in vain...&quot;<br>&ndash;Gimli, The Fellowship of the Ring</p>",
                 Keywords = new List<string>() { "Restricted." },
                 Number = 80,
                 Artist = Artist.Magali_Villeneuve
