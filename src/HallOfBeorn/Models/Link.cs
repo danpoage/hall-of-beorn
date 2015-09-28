@@ -53,6 +53,8 @@ namespace HallOfBeorn.Models
                     return string.Format("http://wardenofarnor.wordpress.com/?s={0}", title);
                 case LinkType.Heroes_of_the_Rings:
                     return string.Format("http://heroesoftherings.blogspot.com/search/label/{0}", title.ToLowerSafe());
+                case LinkType.Very_Late_Adventurer:
+                    return string.Format("https://verylateadventurer.wordpress.com/?s={0}", title);
                 case LinkType.Susurros_del_Bosque_Viejo:
                     return string.Format("http://susurrosdelbosqueviejo.blogspot.com/search/label/{0}", title.ToLowerSafe());
                 case LinkType.El_Libro_Rojo_de_Bolson_Cerrado:

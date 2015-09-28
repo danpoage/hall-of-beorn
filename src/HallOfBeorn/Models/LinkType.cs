@@ -21,6 +21,7 @@ namespace HallOfBeorn.Models
         The_Mirkwood_Runner,
         Warden_of_Arnor,
         Heroes_of_the_Rings,
+        Very_Late_Adventurer,
         Susurros_del_Bosque_Viejo,
         El_Libro_Rojo_de_Bolson_Cerrado,
         Die_Manner_von_Gondor
