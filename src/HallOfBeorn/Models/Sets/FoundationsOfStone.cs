@@ -27,6 +27,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Mount." },
                 Text = "Attach to a Noldor or Silvan hero.\r\nAction: Exhaust Asfaloth to place 1 progress token on any location. (2 tokens instead if attached hero is Glorfindel.)",
                 FlavorText = "Suddenly into view below came a white horse, gleaming in the shadows, running swiftly. In the dusk its headstall flickered and flashed as if it were studded with gems like living stars. -The Fellowship of the Ring",
+                HtmlTemplate = "<p>Attach to a {traits-hero:Noldor,Silvan}.</p><b>Action:</b> Exhaust {self} to place 1 progress token on any location. (2 tokens instead if attached hero is <a title='Glorfindel Hero' href='/Cards/Search?Query=%2Btitle%3DGlorfindel&CardType=Hero' target='_blank'>Glorfindel</a>.)<p></p><p class='flavor-text'>Suddenly into view below came a white horse, gleaming in the shadows, running swiftly. In the dusk its headstall flickered and flashed as if it were studded with gems like living stars. &ndash;The Fellowship of the Ring</p>",
                 Number = 110,
                 Artist = Artist.Sandara_Tang
             });
@@ -124,6 +125,7 @@ namespace HallOfBeorn.Models.Sets
                 Quantity = 4,
                 Text = "When Revealed: Attach 1 card from the top of the first player's deck to each Nameless enemy in play, if able.",
                 Shadow = "Shadow: If attacking enemy is Nameless, the defending player must discard his hand.",
+                HtmlTemplate = "<p>{keyword:Doomed 1.} {keyword:Surge.}</p><p><b>When Revealed:</b> Attach 1 card from the top of the first player's deck to each {trait:Nameless.@Nameless} enemy in play, if able.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> If attacking enemy is {trait:Nameless.@Nameless}, the defending player must discard his hand.</p>",
                 Keywords = new List<string>() { "Doomed 1.", " Surge." },
                 Number = 123,
                 Artist = Artist.Rafal_Hrynkiewicz
@@ -136,7 +138,8 @@ namespace HallOfBeorn.Models.Sets
                 EncounterSet = "Foundations of Stone",
                 Traits = new List<string>() { "Underground.", " Underwater." },
                 Quantity = 3,
-                Text = "If Drowned Treasury is the active location at the end of the quest phase, each player must discard 1 character he controls.Response: After Drowned Treasury leaves play as an explored location, each player may draw 2 cards or claim 1 objective in play.",
+                Text = "If Drowned Treasury is the active location at the end of the quest phase, each player must discard 1 character he controls.\r\nResponse: After Drowned Treasury leaves play as an explored location, each player may draw 2 cards or claim 1 objective in play.",
+                HtmlTemplate = "<p>If {self} is the active location at the end of the quest phase, each player must discard 1 character he controls.</p><p><b>Response:</b> After {self} leaves play as an explored location, each player may draw 2 cards or claim 1 objective in play.</p>",
                 Threat = 2,
                 QuestPoints = 3,
                 Number = 121,
@@ -295,6 +298,7 @@ namespace HallOfBeorn.Models.Sets
                 EasyModeQuantity = 0,
                 Text = "When Revealed: Each player chooses and shuffles a hero he controls into his deck. When he draws that hero, he puts it into play.",
                 Shadow = "Shadow: If attacking enemy is Nameless, the defending player must discard his hand.",
+                HtmlTemplate = "<p><b>When Revealed:</b> Each player chooses and shuffles a hero he controls into his deck. When he draws that hero, he puts it into play.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> If attacking enemy is {trait:Nameless.@Nameless}, the defending player must discard his hand.</p>",
                 Number = 124,
                 Artist = Artist.David_Chen
             });
@@ -308,6 +312,7 @@ namespace HallOfBeorn.Models.Sets
                 Quantity = 1,
                 Text = "While Mithril Lode is the active location, it gains: 'Refresh Action: Exhaust a character you control to place X progress tokens on the current quest card, bypassing any active location. X is the exhausted character's Willpower. (Limit once per round.)'",
                 Keywords = new List<string>() { "Doomed 1." },
+                HtmlTemplate = "<p>{keyword:Doomed 1.}</p><p>While {self} is the active location, it gains: <blockquote><b>Refresh Action:</b> Exhaust a character you control to place X progress tokens on the current quest card, bypassing any active location. X is the exhausted character's {Willpower}. (Limit once per round.)</blockquote></p>",
                 Threat = 2,
                 QuestPoints = 5,
                 Number = 122,
@@ -375,7 +380,8 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Condition." },
                 Quantity = 3,
                 ResourceCost = 4,
-                Text = "Limit 1 per deck. Attach to a location. Heroes do not exhaust to attack, defend, or commit to a quest while attached location is the active location.",
+                Text = "Limit 1 per deck. Attach to a location.\r\nHeroes do not exhaust to attack, defend, or commit to a quest while attached location is the active location.",
+                FlavorText = "\"However it may prove, one must tread the path that need chooses!\"\r\n-Gandalf, The Fellowship of the Ring",
                 Number = 103,
                 Artist = Artist.Magali_Villeneuve
             });
@@ -391,8 +397,10 @@ namespace HallOfBeorn.Models.Sets
                 Setup = "t",
                 Text = "Setup: Place the Foundations of Stone encounter set aside, out of play. The first player attaches Cave Torch to a hero of his choice.",
                 FlavorText = "Your journey has led to a decrepit portion of the mines, untouched by Dwarven pick for many a year. The air grows thick with moisture, and the walls almost appear to be weeping.",
+                HtmlTemplate = "<p class='flavor-text'>Your journey has led to a decrepit portion of the mines, untouched by Dwarven pick for many a year. The air grows thick with moisture, and the walls almost appear to be weeping.</p><p><b>Setup:</b> Place the <a title='Foundations of Stone Encounter Set' href='/Cards/Search?CardType=Encounter&EncounterSet=Foundations+of+Stone' target='_blank'>Foundations of Stone</a> encounter set aside, out of play. The first player attaches <a title='Cave Torch (Khazad-dûm)' href='/Cards/Details/Cave-Torch-KD' target='_blank'>Cave Torch</a> to a hero of his choice.</p>",
                 OppositeFlavorText = "A low rumble sounds from below. There are a variety of underground waterways in Moria, but they should not be disturbed.",
                 OppositeText = "When Revealed: Reveal 1 card from the encounter deck per player, and add it to the staging area.",
+                HtmlTemplate2 = "<p class='flavor-text'>A low rumble sounds from below. There are a variety of underground waterways in Moria, but they should not be disturbed.</p><p><b>When Revealed:</b> Reveal 1 card from the encounter deck per player, and add it to the staging area.</p>",
                 Number = 111,
                 Artist = Artist.Ilich_Henriquez,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.HazardsOfThePit, EncounterSet.TwistsAndTurns }
@@ -427,6 +435,7 @@ namespace HallOfBeorn.Models.Sets
                 HitPoints = 2,
                 Text = "Trollshaw Scout does not exhaust to attack.Forced: After Trollshaw Scout attacks, either discard it from play or discard 1 card from your hand.",
                 Keywords = new List<string>() { "Ranged." },
+                HtmlTemplate = "<p>{keyword:Ranged.}</p><p>{self} does not exhaust to attack.</p><p><b>Forced:</b> After {self} attacks, either discard it from play or discard 1 card from your hand.</p>",
                 Number = 104,
                 Artist = Artist.Anna_Steinbauer
             });

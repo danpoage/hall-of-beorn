@@ -229,6 +229,7 @@ If players defeat this stage, they win the game.",
                 Quantity = 1,
                 Text = "Attach to a hero.\r\nAction: Exhaust Cave Torch to place up to 3 progress tokens on a Dark location.Forced: After Cave Torch exhausts, discard the top card of the encounter deck. If that card is an enemy, add it to the staging area.",
                 Keywords = new List<string>() { "Restricted." },
+                HtmlTemplate = "<p>Attach to a {type:Hero@hero}. {keyword:Restricted.}</p><p><b>Action:</b> Exhaust self to place up to 3 progress on a {trait:Dark.@Dark} location.</p><p><b>Forced:</b> After {self} exhausts, discard the top card of the encounter deck. If that card is an enemy, add it to the staging area.</p>",
                 Number = 41,
                 Artist = Artist.David_Lecossu
             });
