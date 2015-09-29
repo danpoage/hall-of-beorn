@@ -76,6 +76,8 @@ namespace HallOfBeorn.Models.Sets
                 Willpower = 3,
                 HitPoints = 4,
                 Text = "You may spend resources from Elrond's resource pool to pay for Spirit, Leadership, and Tactics allies.\r\nResponse: After a character is healed by another card effect, heal 1 damage on it.",
+                FlavorText = "\"But you do not stand alone.\"\r\n-The Fellowship of the Ring",
+                HtmlTemplate = "<p>You may spend resources from {self}'s resource pool to pay for {sphere:Spirit}, {sphere:Leadership}, and {sphere:Tactics} {type:Ally@allies.}</p><p><b>Response:</b> After a character is healed by another card effect, heal 1 damage on it.</p><p class='flavor-text'>&quot;But you do not stand alone.&quot;<br>&ndash;The Fellowship of the Ring</p>",
                 Number = 128,
                 Artist = Artist.Magali_Villeneuve
             });
@@ -128,6 +130,7 @@ namespace HallOfBeorn.Models.Sets
                 ResourceCost = 2,
                 IsUnique = true,
                 Text = "Attach to a Leadership hero.\r\nEach Dwarf character gets +1 hit point.",
+                HtmlTemplate = "<p>Attach to a {sphere-hero:Leadership}.</p><p>Each {trait-character:Dwarf.@Dwarf} gets +1 hit point.</p><p class='flavor-text'>&quot;We will seek the hidden door together. And we will come through. In the ruins of of the Dwarves, a dwarf's head will be less easy to bewilder than Elves or Men or Hobbits.&quot;<br>&ndash;Gandalf, The Fellowship of the Ring</p>",
                 Number = 130,
                 Artist = Artist.Jake_Murray
             });
@@ -271,6 +274,7 @@ Players cannot win the game while Durin's Bane is in play. If Durin's Bane leave
                 Quantity = 3,
                 ResourceCost = 1,
                 Text = "Refresh Action: Exhaust 2 heroes to draw 5 cards.",
+                HtmlTemplate = "<p><b>Refresh Action:</b> Exhaust 2 heroes to draw 5 cards.</p><p class='flavor-text'>&quot;Here you will hear many songs and tales-if you can keep awake. But except on high days it usually stands empty and quiet. and people come here who wish for peace, and thought. There is always a fire here, all the year round, but there is little other light.&quot;<br>&ndash;Gandalf, The Fellowship of the Ring</p>",
                 Number = 135,
                 Artist = Artist.Magali_Villeneuve
             });
@@ -360,6 +364,8 @@ Players cannot win the game while Durin's Bane is in play. If Durin's Bane leave
                 ResourceCost = 2,
                 IsUnique = true,
                 Text = "Attach to Elrond. He gains a Spirit resource icon.\r\nAction: Exhaust Elrond and Vilya to reveal the top card of your deck. You can immediately play or put into play the revealed card for no cost, if able. Otherwise, move the revealed card to the bottom of your deck.",
+                FlavorText = "...mightiest of the Three. -Return of the King",
+                HtmlTemplate = "<p>Attach to {title:Elrond}. He gains a {sphere:Spirit} resource icon.</p><p><b>Action:</b> Exhaust {title:Elrond} and {self} to reveal the top card of your deck. You can immediately play or put into play the revealed card for no cost, if able. Otherwise, move the revealed card to the bottom of your deck.</p><p class='flavor-text'>...mightiest of the Three. &ndash;The Return of the King</p>",
                 Number = 137,
                 Artist = Artist.Sara_Biddle
             });

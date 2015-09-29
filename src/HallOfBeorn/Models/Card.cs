@@ -159,7 +159,7 @@ namespace HallOfBeorn.Models
                     sb.AppendFormat("<a title='Search: Hero with {0} Keyword' href='/Cards/Search?Keyword={1}&CardType=Hero' target='_blank'>hero with {0}</a>", label, key);
                     break;
                 case "type":
-                    sb.AppendFormat("<a title='Search: {0} Type' href='/Cards/Search?CardType={1}' target='_blank'>{1}</a>", label, key);
+                    sb.AppendFormat("<a title='Search: {0} Type' href='/Cards/Search?CardType={1}' target='_blank'>{0}</a>", label, key);
                     break;
                 case "sphere":
                     sb.AppendFormat("<a title='Search: {0} Sphere' href='/Cards/Search?Sphere={0}' target='_blank'><img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:24px;width:24px;' src='/Images/{0}.png' /></a>", key);
