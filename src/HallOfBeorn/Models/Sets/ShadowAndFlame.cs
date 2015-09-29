@@ -25,6 +25,7 @@ namespace HallOfBeorn.Models.Sets
                 Quantity = 3,
                 EasyModeQuantity = 1,
                 Text = "When Revealed: Attach Counter-spell to Durin's Bane. (Counts as a Condition attachment with the text: 'Forced: When a player plays an event, discard the top card of the encounter deck. If that card is a treachery card, cancel the effects of the event, discard the event player's hand, and discard Counter-spell from play.')",
+                HtmlTemplate = "<p><b>When Revealed:</b> Attach {self} to {card:Durin&#39;s-Bane-SaF@Durin&#39;s Bane}. Counts as a {trait:Condition.@Condition} attachment with the text:<blockquote><b>Forced:</b> When a player plays an {type:Event@event}, discard the top card of the encounter deck. If that card is a treachery card, cancel the effects of the event, discard the event player's hand, and discard Counter-spell from play.</blockquote></p>",
                 Number = 145,
                 Artist = Artist.Magali_Villeneuve
             });
@@ -37,6 +38,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Underground.", " Dark." },
                 Quantity = 1,
                 Text = "While Dark Pit is the active location it gains: 'Refresh Action: Exhaust X characters (maximum 3) you control to discard the top X cards of your deck. If all discarded cards have a higher combined printed cost than the remaining hit points of Durin's Bane, discard Durin's Bane from play.'",
+                HtmlTemplate = "<p>While {self} is the active location it gains:<blockquote><b>Refresh Action:</b> Exhaust X characters (maximum 3) you control to discard the top X cards of your deck. If all discarded cards have a higher combined printed cost than the remaining hit points of {card:Durin&#39;s-Bane-SaF@Durin&#39;s Bane}, discard {card:Durin&#39;s-Bane-SaF@Durin&#39;s Bane} from play.</blockquote></p>",
                 Threat = 0,
                 QuestPoints = 11,
                 Number = 141,
@@ -57,6 +59,7 @@ namespace HallOfBeorn.Models.Sets
                 HitPoints = 27,
                 Text = "Players cannot play attachments on Durin's Bane.Durin's Bane cannot leave the staging area, is considered to be engaged with each player whose threat is 1 or greater, and attacks each of those players in turn during the combat phase (deal and discard a new shadow card each attack).",
                 Keywords = new List<string>() { "Regenerate 3.", " Indestructible." },
+                HtmlTemplate = "<p>{keyword:Regenerate 3.} {keyword:Indestructible.} Players cannot play attachments on {self}.</p><p>{self} cannot leave the staging area, is considered to be engaged with each player whose threat is 1 or greater, and attacks each of those players in turn during the combat phase <i>(deal and discard a new shadow card each attack)</i>.</p>",
                 Threat = 4,
                 Number = 150,
                 Artist = Artist.Magali_Villeneuve
@@ -91,6 +94,7 @@ namespace HallOfBeorn.Models.Sets
                 Quantity = 2,
                 IsUnique = true,
                 Text = "When Revealed: Attach Fiery Sword to Durin's Bane as a Weapon attachment with the text: 'Attached enemy gets +3 Attack.'",
+                HtmlTemplate = "<p><b>When Revealed:</b> Attach {self} to {card:Durin&#39;s-Bane-SaF@Durin&#39;s Bane} as a {trait:Weapon.@Weapon} attachment with the text:<blockquote>Attached enemy gets +3 {Attack}.</blockquote></p><p class='flavor-text'>In its right hand was a blade like a stabbing tongue of fire...<br>&ndash;The Fellowship of the Ring</p>",
                 Number = 152,
                 Artist = Artist.Timo_Karhula
             });
@@ -143,6 +147,7 @@ namespace HallOfBeorn.Models.Sets
                 Quantity = 3,
                 Text = "When Revealed: Durin's Bane gets +3 Attack until the end of the round. The first player may remove 1 questing hero he controls from the quest to cancel this effect.",
                 Shadow = "Shadow: If attacking enemy is Durin's Bane, it gets +3 Attack.",
+                HtmlTemplate = "<p><b>When Revealed:</b> {card:Durin&#39;s-Bane-SaF@Durin&#39;s Bane} gets +3 {Attack} until the end of the round. The first player may remove 1 questing hero he controls from the quest to cancel the effect.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> If attacking enemy is {card:Durin&#39;s-Bane-SaF@Durin&#39;s Bane}, it gets +3 {Attack}.</p>",
                 Number = 146,
                 Artist = Artist.Matthew_Starbuck
             });
@@ -155,6 +160,7 @@ namespace HallOfBeorn.Models.Sets
                 Quantity = 3,
                 Text = "When Revealed: Heal 5 damage from Durin's Bane, if able. The first player may remove 1 questing hero he controls from the quest to cancel this effect.",
                 Keywords = new List<string>() { "Surge." },
+                HtmlTemplate = "<p>{keyword:Surge.}</p><p><b>When Revealed:</b> Heal 5 damage from {card:Durin&#39;s-Bane-SaF@Durin&#39;s Bane}, if able. The first player may remove 1 questing hero he controls from the quest to cancel this effect.</p><p class='flavor-text'>The fire in it seemed to die, but the darkness grew.<br>&ndash;The Fellowship of the Ring</p>",
                 Number = 147,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
@@ -166,10 +172,9 @@ namespace HallOfBeorn.Models.Sets
                 CardType = CardType.Quest,
                 EncounterSet = "Shadow and Flame",
                 FlavorText = "There is a crumbling pile of boulders on the edge of a teetering cliff, and it gives you a sudden idea. There are chasms and pits along the path you are traveling, and perhaps a well-timed rockslide could send the Balrog down into the depths below...",
-                OppositeText = 
-@"When Revealed: Durin's Bane makes an immediate attack on the first player. Add Dark Pit to the staging area.
-
-Players cannot win the game while Durin's Bane is in play. If Durin's Bane leaves play by the effect on Dark Pit, the players have won the game.",
+                OppositeText = "When Revealed: Durin's Bane makes an immediate attack on the first player. Add Dark Pit to the staging area.\r\nPlayers cannot win the game while Durin's Bane is in play. If Durin's Bane leaves play by the effect on Dark Pit, the players have won the game.",
+                HtmlTemplate = "<p class='flavor-text'>There is a crumbling pile of boulders on the edge of a teetering cliff, and it gives you a sudden idea. There are chasms and pits along the path you are traveling, and perhaps a well-timed rockslide could send the Balrog down into the depths below...</p>",
+                HtmlTemplate2 = "<p><b>When Revealed:</b> {card:Durin&#39;s-Bane-SaF@Durin&#39;s Bane} makes an immediate attack on the first player. Add {card:Dark-Pit-SaF@Dark Pit} to the staging area.</p><p><b>Players cannot win the game while {card:Durin&#39;s-Bane-SaF@Durin&#39;s Bane} is in play. If {card:Durin&#39;s-Bane-SaF@Durin&#39;s Bane} leaves play by the effect on {card:Dark-Pit-SaF@Dark Pit}, the players have won the game.</b></p>",
                 Quantity = 1,
                 QuestPoints = 1,
                 Number = 140,
@@ -186,6 +191,7 @@ Players cannot win the game while Durin's Bane is in play. If Durin's Bane leave
                 EasyModeQuantity = 1,
                 Text = "When Revealed: Durin's Bane makes an immediate attack against the first player (deal and resolve a shadow card).",
                 Shadow = "Shadow: If attacking enemy is Durin's Bane, it gets +3 Attack.",
+                HtmlTemplate = "<p><b>When Revealed:</b> {card:Durin&#39;s-Bane-SaF@Durin&#39;s Bane} makes an immediate attack against the first player <i>(deal and resolve a shadow card).</i></p>{shadow}</p class='shadow-text'><b>Shadow:</b> If attacking enemy is {card:Durin&#39;s-Bane-SaF@Durin&#39;s Bane}, it gets +3 {Attack}.</p>",
                 Number = 149,
                 Artist = Artist.Timo_Karhula
             });
@@ -199,6 +205,7 @@ Players cannot win the game while Durin's Bane is in play. If Durin's Bane leave
                 Quantity = 2,
                 IsUnique = true,
                 Text = "When Revealed: Attach Many Thonged Whip to Durin's Bane as a Weapon attachment with the text: 'Forced: When Durin's Bane attacks, the defending player must discard 1 card at random from his hand.'",
+                HtmlTemplate = "<p><b>When Revealed:</b> Attach {self} to {card:Durin&#39;s-Bane-SaF@Durin&#39;s Bane} as a {trait:Weapon.@Weapon} attachment with the text:<blockquote><b>Forced:</b> When {card:Durin&#39;s-Bane-SaF@Durin&#39;s Bane} attacks, the defending player must discard 1 card at random from his hand.</blockquote></p><p class='flavor-text'>...in its left it held a whip of many thongs.<br>&ndash;The Fellowship of the Ring</p>'",
                 Number = 153,
                 Artist = Artist.Timo_Karhula
             });
@@ -246,6 +253,8 @@ Players cannot win the game while Durin's Bane is in play. If Durin's Bane leave
                 Setup = "ts",
                 Text = "Setup: Remove Dark Pit from the encounter deck and place it aside, out of play. Add Durin's Bane to the staging area. Shuffle the encounter deck.",
                 OppositeText = "When Revealed: Reduce each player's threat to 0. Reveal X cards from the encounter deck, where X is one less than the number of players in the game, and add them to the staging area.",
+                HtmlTemplate = "<p class='flavor-text'>As you reach the eastern realm of Darrowdelf the craftsmanship of the Dwarves is proudly displayed. But the sound of drums sound in the deep, and it appears that these halls are infested with Orcs.</p><p><b>Setup:</b> Remove {card:Dark-Pit-SaF@Dark Pit} from the encounter deck and place it aside, out of play. Add {card:Durin&#39;s-Bane-SaF@Durin&#39;s Bane} to the staging area. Shuffle the encounter deck.</p>",
+                HtmlTemplate2 = "<p class='flavor-text'>A crack like lightning sounds before you, and a creature of shadow and flame blocks your way. It is an ancient demon of Morgoth, and its presence explains the massing in Moria.</p><p><b>When Revealed:</b> Reduce each player's threat to 0. Reveal X cards from the encounter deck, where X is one less than the number of players in the game, and add them to the staging area.</p>",
                 Number = 138,
                 Artist = Artist.Ben_Zweifel,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.DeepsOfMoria }
@@ -290,7 +299,8 @@ Players cannot win the game while Durin's Bane is in play. If Durin's Bane leave
                 Attack = 1,
                 Defense = 1,
                 HitPoints = 2,
-                Text = "When Revealed: Each player must deal 1 damage to a hero he controls.Forced: After a character leaves play, shuffle Ranging Goblin and the top card in the encounter discard pile back into the encounter deck.",
+                Text = "When Revealed: Each player must deal 1 damage to a hero he controls.\r\nForced: After a character leaves play, shuffle Ranging Goblin and the top card in the encounter discard pile back into the encounter deck.",
+                HtmlTemplate = "<p><b>When Revealed:</b> Each player must deal 1 damage to a hero he controls.</p><p><b>Forced:</b> After a character leaves play, shuffle {self} and the top card in the encounter discard pile back into the encounter deck.</p>",
                 Threat = 2,
                 Number = 151,
                 Artist = Artist.Jasper_Sandner
@@ -317,6 +327,7 @@ Players cannot win the game while Durin's Bane is in play. If Durin's Bane leave
                 Traits = new List<string>() { "Underground." },
                 Quantity = 3,
                 Text = "While Durin's Bane has no damage on it, progress tokens cannot be placed on Second Deep.",
+                HtmlTemplate = "<p>While {card:Durin&#39;s-Bane-SaF@Durin&#39;s Bane} has no damage on it, progress tokens cannot be placed on {self}.</p>",
                 Threat = 3,
                 QuestPoints = 3,
                 Number = 143,
@@ -333,6 +344,7 @@ Players cannot win the game while Durin's Bane is in play. If Durin's Bane leave
                 IsUnique = true,
                 Text = "While Second Hall is the active location, it gains: 'Forced: After a character leaves play, reveal 1 card from the encounter deck and add it to the staging area.'",
                 FlavorText = "Down the centre stalked a double line of towering pillars. They were carved like boles of mighty trees whose boughs upheld the roof with a branching tracery of stone. -The Fellowship of the Ring",
+                HtmlTemplate = "<p>While {self} is the active location, it gains:<blockquote><b>Forced:</b> After a character leaves play, reveal 1 card from the encounter deck and add it to the staging area.</blockquote></p><p class='flavor-text'>Down the centre stalked a double line of towering pillars. They were carved like boles of mighty trees whose boughs upheld the roof with a branching tracery of stone.<br>&ndash;The Fellowship of the Ring</p>",
                 Threat = 4,
                 QuestPoints = 2,
                 Number = 142,
@@ -347,6 +359,8 @@ Players cannot win the game while Durin's Bane is in play. If Durin's Bane leave
                 EncounterSet = "Shadow and Flame",
                 FlavorText = "The fire-demon is Durin's Bane, doom of the Dwarves and the new Lord of Moria. It cannot be destroyed by mere strength of arms. You must find another way to deal with this Balrog as it relentlessly attacks, sword and whip weaving a deadly pattern of flame.",
                 OppositeText = "Forced: If at least 1 hero committed to the quest this round, place 4 progress tokens on The Rear Guard (bypassing any active location) at the end of the quest phase.\r\nIf Durin's Bane has 0 hit points, advance to the next stage of the scenario immediately.",
+                HtmlTemplate = "<p class='flavor-text'>The fire-demon is Durin's Bane, doom of the Dwarves and the new Lord of Moria. It cannot be destroyed by mere strength of arms. You must find another way to deal with this Balrog as it relentlessly attacks, sword and whip weaving a deadly pattern of flame.</p>",
+                HtmlTemplate2 = "<p><b>Forced:</b> If at least 1 hero committed to the quest this round, place 4 progress tokens on {self} <i>(bypassing the active location)</i> at the end of the quest phase.</p><p><b>If {card:Durin&#39;s-Bane-SaF@Durin&#39;s Bane} has 0 hit points, advance to {card:Last-Lord-of-Moria-SaF@the next stage} of the scenario immediately.</b></p>",
                 Quantity = 1,
                 QuestPoints = 16,
                 Number = 139,
@@ -391,6 +405,7 @@ Players cannot win the game while Durin's Bane is in play. If Durin's Bane leave
                 Quantity = 2,
                 Text = "When Revealed: Each player must discard 1 attachment he controls, if able.",
                 Shadow = "Shadow: If attacking enemy is Durin's Bane, the defending player discards all attachments he controls.",
+                HtmlTemplate = "<p><b>When Revealed:</b> Each player must discard 1 attachment he controls, if able.</p>{shadow}<p><b>Shadow:</b> If attacking enemy is {card:Durin&#39;s-Bane-SaF@Durin&#39;s Bane}, the defending player discards all attachments he controls.</p>",
                 Number = 148,
                 Artist = Artist.Timo_Karhula
             });
