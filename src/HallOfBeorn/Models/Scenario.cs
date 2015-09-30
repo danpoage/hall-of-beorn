@@ -7,25 +7,37 @@ namespace HallOfBeorn.Models
 {
     public class Scenario
     {
+        protected Scenario(bool hasNightmareMode)
+        {
+            this.hasNightmareMode = hasNightmareMode;
+        }
+
         public Scenario()
         {
         }
 
+        private readonly bool hasNightmareMode;
         private ScenarioCard campaignCard;
         private readonly List<ScenarioQuestCard> questCards = new List<ScenarioQuestCard>();
         private readonly List<ScenarioCard> scenarioCards = new List<ScenarioCard>();
 
-        private readonly List<Tuple<Card, byte>> excludedEasyModeCards = new List<Tuple<Card, byte>>();
-        private readonly List<Tuple<Card, byte>> excludedNightmareModeCards = new List<Tuple<Card, byte>>();
+        private readonly Dictionary<string, byte> questCardIds = new Dictionary<string, byte>();
+        private readonly Dictionary<string, byte> excludedEasyModeCards = new Dictionary<string, byte>();
+        private readonly Dictionary<string, byte> excludedNightmareModeCards = new Dictionary<string, byte>();
 
-        protected void ExcludedEasyMode(Card card, byte numberExcluded)
+        protected void AddQuestCardId(string slug)
         {
-            excludedEasyModeCards.Add(new Tuple<Card, byte>(card, numberExcluded));
+            questCardIds.Add(slug, 0);
         }
 
-        protected void ExcludedNightmareMode(Card card, byte numberExcluded)
+        protected void ExcludeFromEasyMode(string slug, byte numberExcluded)
         {
-            excludedNightmareModeCards.Add(new Tuple<Card, byte>(card, numberExcluded));
+            excludedEasyModeCards.Add(slug, numberExcluded);
+        }
+
+        protected void ExcludeFromNightmareMode(string slug, byte numberExcluded)
+        {
+            excludedNightmareModeCards.Add(slug, numberExcluded);
         }
 
         public int Number { get; set; }
@@ -73,6 +85,41 @@ namespace HallOfBeorn.Models
             }
 
             return false;
+        }
+
+        public string NightmareEncounterSet()
+        {
+            return hasNightmareMode ? string.Format("{0} Nightmare", Title) : string.Empty;
+        }
+
+        public IEnumerable<string> QuestCardIds()
+        {
+            return questCardIds.Keys;
+        }
+
+        public byte NormalModeCount(string slug, byte releaseQuantity)
+        {
+            return releaseQuantity;
+        }
+
+        public byte EasyModeCount(string slug, byte releaseQuantity)
+        {
+            if (excludedEasyModeCards.ContainsKey(slug))
+            {
+                return (byte)(releaseQuantity - excludedEasyModeCards[slug]);
+            }
+
+            return releaseQuantity;
+        }
+
+        public byte NightmareModeCount(string slug, byte releaseQuantity)
+        {
+            if (excludedNightmareModeCards.ContainsKey(slug))
+            {
+                return (byte)(releaseQuantity - excludedNightmareModeCards[slug]);
+            }
+
+            return releaseQuantity;
         }
     }
 }
