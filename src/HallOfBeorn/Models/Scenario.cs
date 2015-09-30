@@ -15,6 +15,19 @@ namespace HallOfBeorn.Models
         private readonly List<ScenarioQuestCard> questCards = new List<ScenarioQuestCard>();
         private readonly List<ScenarioCard> scenarioCards = new List<ScenarioCard>();
 
+        private readonly List<Tuple<Card, byte>> excludedEasyModeCards = new List<Tuple<Card, byte>>();
+        private readonly List<Tuple<Card, byte>> excludedNightmareModeCards = new List<Tuple<Card, byte>>();
+
+        protected void ExcludedEasyMode(Card card, byte numberExcluded)
+        {
+            excludedEasyModeCards.Add(new Tuple<Card, byte>(card, numberExcluded));
+        }
+
+        protected void ExcludedNightmareMode(Card card, byte numberExcluded)
+        {
+            excludedNightmareModeCards.Add(new Tuple<Card, byte>(card, numberExcluded));
+        }
+
         public int Number { get; set; }
         public string GroupName { get; set; }
         public string Title { get; set; }
