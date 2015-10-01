@@ -288,6 +288,7 @@
     <Compile Include="Models\Products\TheVoiceOfIsengardNightmareProduct.cs" />
     <Compile Include="Models\Products\TheTreacheryOfRhudaurProduct.cs" />
     <Compile Include="Models\Scenarios\CoreSetScenario.cs" />
+    <Compile Include="Models\Scenarios\JourneyDownTheAnduin.cs" />
     <Compile Include="Models\Scenarios\PassageThroughMirkwood.cs" />
     <Compile Include="Models\Search\EnumFilterDefinition.cs" />
     <Compile Include="Models\Search\FilterDefinition.cs" />
