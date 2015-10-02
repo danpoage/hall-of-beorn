@@ -11,7 +11,8 @@ namespace HallOfBeorn.Services
     {
         public ScenarioService(ProductRepository productRepository, CardRepository cardRepository)
         {
-            var cards = cardRepository.Cards();
+            this.cardRepository = cardRepository;
+            this.cards = cardRepository.Cards().ToList();
 
             foreach (var group in productRepository.ProductGroups())
             {
@@ -26,13 +27,55 @@ namespace HallOfBeorn.Services
                 }
             }
 
-            LoadScenarioCards(cards);
+            LoadScenarioCards(cards);    
         }
 
+        private readonly CardRepository cardRepository;
+        private readonly IList<Card> cards;
         private readonly List<CardSet> sets = new List<CardSet>();
         private readonly List<string> setNames = new List<string>();
         private readonly Dictionary<string, string> encounterSetNames = new Dictionary<string, string>();
         private readonly Dictionary<string, Scenario> scenarios = new Dictionary<string, Scenario>();
+
+        private readonly Dictionary<string, Scenario> scenariosByTitle = new Dictionary<string, Scenario>();
+        
+        private void AddScenario(Scenario scenario)
+        {
+            scenariosByTitle.Add(scenario.Title, scenario);
+
+            var encounterCardsBySlug = new Dictionary<string, Card>();
+
+            foreach (var questCardId in scenario.QuestCardIds())
+            {
+                var questCard = cardRepository.FindBySlug(questCardId);
+                if (string.IsNullOrEmpty(questCard.EncounterSet))
+                {
+                    continue;
+                }
+
+                foreach (var mainCard in cards.Where(x => x.CardType != CardType.Quest && x.EncounterSet == questCard.EncounterSet))
+                {
+                    encounterCardsBySlug[mainCard.Slug] = mainCard;
+                }
+
+                foreach (var encounterSet in questCard.IncludedEncounterSets)
+                {
+                    foreach (var includedCard in cards.Where(x => x.CardType != CardType.Quest && x.EncounterSet == encounterSet.Name))
+                    {
+                        encounterCardsBySlug[includedCard.Slug] = includedCard;
+                    }
+                }
+            }
+
+            foreach (var pair in encounterCardsBySlug)
+            {
+                var easyCount = scenario.EasyModeCount(pair.Key, pair.Value.Quantity);
+                var normalCount = scenario.NormalModeCount(pair.Key, pair.Value.Quantity);
+                var nightmareCount = scenario.NightmareModeCount(pair.Key, pair.Value.Quantity);
+
+                scenario.MapCardCount(pair.Key, easyCount, normalCount, nightmareCount);
+            }
+        }
 
         private void AddProduct(Product product, IEnumerable<Card> cards)
         {
@@ -40,6 +83,11 @@ namespace HallOfBeorn.Services
             {
                 AddSet(product, cardSet, cards);
             }
+
+            //foreach (var scenario in product.Scenarios())
+            //{
+            //    AddScenario(scenario);
+            //}
         }
 
         private void AddSet(Product product, CardSet cardSet, IEnumerable<Card> cards)

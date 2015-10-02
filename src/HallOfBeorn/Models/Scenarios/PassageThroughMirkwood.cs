@@ -11,7 +11,6 @@ namespace HallOfBeorn.Models.Scenarios
         {
             Number = 1;
             Title = "Passage Through Mirkwood";
-            ProductName = "Core Set";
 
             AddQuestCardId("Flies-and-Spiders-Core");
             AddQuestCardId("A-Fork-in-the-Road");

@@ -25,6 +25,8 @@ namespace HallOfBeorn.Models
         private readonly Dictionary<string, byte> excludedEasyModeCards = new Dictionary<string, byte>();
         private readonly Dictionary<string, byte> excludedNightmareModeCards = new Dictionary<string, byte>();
 
+        private readonly Dictionary<string, Tuple<byte, byte, byte>> cardCountMap = new Dictionary<string, Tuple<byte, byte, byte>>();
+
         protected void AddQuestCardId(string slug)
         {
             questCardIds.Add(slug, 0);
@@ -120,6 +122,16 @@ namespace HallOfBeorn.Models
             }
 
             return releaseQuantity;
+        }
+
+        public void MapCardCount(string slug, byte easyCount, byte normalCount, byte nightmareCount)
+        {
+            if (cardCountMap.ContainsKey(slug))
+            {
+                return;
+            }
+
+            cardCountMap[slug] = new Tuple<byte, byte, byte>(easyCount, normalCount, nightmareCount);
         }
     }
 }

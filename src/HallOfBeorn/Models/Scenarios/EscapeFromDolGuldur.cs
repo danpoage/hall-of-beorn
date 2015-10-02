@@ -5,12 +5,12 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Scenarios
 {
-    public class JourneyDownTheAnduin : CoreSetScenario
+    public class EscapeFromDolGuldur : CoreSetScenario
     {
-        public JourneyDownTheAnduin()
+        public EscapeFromDolGuldur()
         {
-            Number = 2;
-            Title = "Journey Down the Anduin";
+            Number = 3;
+            Title = "Escape from Dol Guldur";
         }
     }
 }

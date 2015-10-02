@@ -10,6 +10,7 @@ namespace HallOfBeorn.Models.Scenarios
         protected CoreSetScenario()
             : base(true)
         {
+            ProductName = "Core Set";
         }
 
         protected void ExcludeDolGuldurOrcsForEasyMode()

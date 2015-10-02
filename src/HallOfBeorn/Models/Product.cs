@@ -17,11 +17,17 @@ namespace HallOfBeorn.Models
         }
 
         private readonly List<CardSet> cardSets = new List<CardSet>();
+        private readonly List<Scenario> scenarios = new List<Scenario>();
 
         protected void AddCardSet(CardSet cardSet)
         {
             cardSet.Product = this;
             cardSets.Add(cardSet);
+        }
+
+        protected void AddScenario(Scenario scenario)
+        {
+            scenarios.Add(scenario);
         }
 
         public string Name { get; private set; }
@@ -35,6 +41,11 @@ namespace HallOfBeorn.Models
         public IEnumerable<CardSet> CardSets()
         {
             return cardSets;
+        }
+
+        public IEnumerable<Scenario> Scenarios()
+        {
+            return scenarios;
         }
 
         #region Static Members
