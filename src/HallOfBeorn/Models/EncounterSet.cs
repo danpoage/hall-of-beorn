@@ -25,6 +25,7 @@ namespace HallOfBeorn.Models
             return all;
         }
 
+        //Core Set and Shadows of Mirkwood
         public static EncounterSet PassageThroughMirkwood = new EncounterSet { Name = "Passage Through Mirkwood", Set = "Core Set" };
         public static EncounterSet DolGuldurOrcs = new EncounterSet { Name = "Dol Guldur Orcs", Set = "Core Set" };
         public static EncounterSet SpidersOfMirkwood = new EncounterSet { Name = "Spiders of Mirkwood", Set = "Core Set" };
@@ -38,6 +39,8 @@ namespace HallOfBeorn.Models
         public static EncounterSet TheHillsOfEmynMuil = new EncounterSet { Name = "The Hills of Emyn Muil", Set = "The Hills of Emyn Muil" };
         public static EncounterSet TheDeadMarshes = new EncounterSet { Name = "The Dead Marshes", Set = "The Dead Marshes" };
         public static EncounterSet ReturnToMirkwood = new EncounterSet { Name = "Return to Mirkwood", Set = "Return to Mirkwood" };
+        
+        //Khazad-dum and Dwarrowdelf
         public static EncounterSet IntoThePit = new EncounterSet { Name = "Into the Pit", Set = "Khazad-dûm", NormalizedSet = "Khazad-dum" };
         public static EncounterSet TwistsAndTurns = new EncounterSet { Name = "Twists and Turns", Set = "Khazad-dûm", NormalizedSet = "Khazad-dum" };
         public static EncounterSet HazardsOfThePit = new EncounterSet { Name = "Hazards of the Pit", Set = "Khazad-dûm", NormalizedSet = "Khazad-dum" };
@@ -53,6 +56,8 @@ namespace HallOfBeorn.Models
         public static EncounterSet TheLongDark = new EncounterSet { Name = "The Long Dark", Set = "The Long Dark" };
         public static EncounterSet FoundationsOfStone = new EncounterSet { Name = "Foundations of Stone", Set = "Foundations of Stone" };
         public static EncounterSet ShadowAndFlame = new EncounterSet { Name = "Shadow and Flame", Set = "Shadow and Flame" };
+        
+        //Heirs of Numenor and Against the Shadow
         public static EncounterSet PerilInPelargir = new EncounterSet { Name = "Peril in Pelargir", Set = "Heirs of Númenor", NormalizedSet = "Heirs of Numenor" };
         public static EncounterSet StreetsOfGondor = new EncounterSet { Name = "Streets of Gondor", Set = "Heirs of Númenor", NormalizedSet = "Heirs of Numenor" };
         public static EncounterSet Brigands = new EncounterSet { Name = "Brigands", Set = "Heirs of Númenor", NormalizedSet = "Heirs of Numenor" };
@@ -69,6 +74,8 @@ namespace HallOfBeorn.Models
         public static EncounterSet AssaultOnOsgiliath = new EncounterSet { Name = "Assault on Osgiliath", Set = "Assault on Osgiliath" };
         public static EncounterSet TheBloodOfGondor = new EncounterSet { Name = "The Blood of Gondor", Set = "The Blood of Gondor" };
         public static EncounterSet TheMorgulVale = new EncounterSet { Name = "The Morgul Vale", Set = "The Morgul Vale" };
+        
+        //The Voice of Isengard and Ring-maker
         public static EncounterSet TheFordsOfIsen = new EncounterSet { Name = "The Fords of Isen", Set = "Voice of Isengard" };
         public static EncounterSet DunlandWarriors = new EncounterSet { Name = "Dunland Warriors", Set = "Voice of Isengard" };
         public static EncounterSet DunlandRaiders = new EncounterSet { Name = "Dunland Raiders", Set = "Voice of Isengard" };
@@ -78,6 +85,15 @@ namespace HallOfBeorn.Models
         public static EncounterSet IntoFangorn = new EncounterSet { Name = "Into Fangorn", Set = "Voice of Isengard" };
         public static EncounterSet AncientForest = new EncounterSet { Name = "Ancient Forest", Set = "Voice of Isengard" };
         public static EncounterSet WearyTravelers = new EncounterSet { Name = "Weary Travelers", Set = "Voice of Isengard" };
+        public static EncounterSet TheDunlandTrap = new EncounterSet { Name = "The Dunland Trap", Set = "The Dunland Trap" };
+        public static EncounterSet TheThreeTrials = new EncounterSet { Name = "The Three Trials", Set = "The Three Trials" };
+        public static EncounterSet TroubleInTharbad = new EncounterSet { Name = "Trouble in Tharbad", Set = "Trouble in Tharbad" };
+        public static EncounterSet TheNinInEilph = new EncounterSet { Name = "The Nîn-in-Eilph", Set = "The Nîn-in-Eilph", NormalizedSet = "The Nîn-in-Eilph" };
+        public static EncounterSet CelebrimborsSecret = new EncounterSet { Name = "Celebrimbor's Secret", Set = "Celebrimbor's Secret" };
+        public static EncounterSet TheAntleredCrown = new EncounterSet { Name = "The Antlered Crown", Set = "The Antlered Crown" };
+
+        //The Lost Realm and Angmar Awakened
+        public static EncounterSet IntrudersInChetwood = new EncounterSet { Name = "Intruders in Chetwood", Set = "The Lost Realm" };
         public static EncounterSet Iarion = new EncounterSet { Name = "Iârion", Set = "The Lost Realm" };
         public static EncounterSet EriadorWilds = new EncounterSet { Name = "Eriador Wilds", Set = "The Lost Realm" };
         public static EncounterSet AngmarOrcs = new EncounterSet { Name = "Angmar Orcs", Set = "The Lost Realm" };
@@ -85,12 +101,14 @@ namespace HallOfBeorn.Models
         public static EncounterSet TheWeatherHills = new EncounterSet { Name = "The Weather Hills", Set = "The Lost Realm" };
         public static EncounterSet FoulWeather = new EncounterSet { Name = "Foul Weather", Set = "The Lost Realm" };
         public static EncounterSet DarkSorcery = new EncounterSet { Name = "Dark Sorcery", Set = "The Lost Realm" };
+        public static EncounterSet DeadmensDike = new EncounterSet { Name = "Deadmen's Dike", Set = "The Lost Realm" };
         public static EncounterSet CursedDead = new EncounterSet { Name = "Cursed Dead", Set = "The Lost Realm" };
         public static EncounterSet TheWastesOfEriador = new EncounterSet { Name = "The Wastes of Eriador", Set = "The Wastes of Eriador" };
         public static EncounterSet EscapeFromMountGram = new EncounterSet { Name = "Escape from Mount Gram", Set = "Escape from Mount Gram" };
         public static EncounterSet AcrossTheEttenmoors = new EncounterSet { Name = "Across the Ettenmoors", Set = "Across the Ettenmoors" };
         public static EncounterSet TheTreacheryOfRhudaur = new EncounterSet { Name = "The Treachery of Rhudaur", Set = "The Treachery of Rhudaur" };
 
+        //The Hobbit: Over Hill and Under Hill
         public static EncounterSet WeMustAwayEreBreakOfDay = new EncounterSet { Name = "We Must Away Ere Break of Day", Set = "The Hobbit: Over Hill and Under Hill" };
         public static EncounterSet WesternLands = new EncounterSet { Name = "Western Lands", Set = "The Hobbit: Over Hill and Under Hill" };
         public static EncounterSet OverTheMistyMountainsGrim = new EncounterSet { Name = "Over the Misty Mountains Grim", Set = "The Hobbit: Over Hill and Under Hill" };
@@ -98,11 +116,13 @@ namespace HallOfBeorn.Models
         public static EncounterSet MistyMountainGoblins = new EncounterSet { Name = "Misty Mountain Goblins", Set = "The Hobbit: Over Hill and Under Hill" };
         public static EncounterSet DungeonsDeepAndCavernsDim = new EncounterSet { Name = "Dungeons Deep and Caverns Dim", Set = "The Hobbit: Over Hill and Under Hill" };
 
+        //The Hobbit: On the Doorstep
         public static EncounterSet FliesAndSpiders = new EncounterSet { Name = "Flies and Spiders", Set = "The Hobbit: On the Doorstep" };
         public static EncounterSet Wilderland = new EncounterSet { Name = "Wilderland", Set = "The Hobbit: On the Doorstep" };
         public static EncounterSet TheLonelyMountain = new EncounterSet { Name = "The Lonely Mountain", Set = "The Hobbit: On the Doorstep" };
         public static EncounterSet TheBattleOfFiveArmies = new EncounterSet { Name = "The Battle of Five Armies", Set = "The Hobbit: On the Doorstep" };
 
+        //The Lord of the Rings: The Black Riders
         public static EncounterSet AShadowOfThePast = new EncounterSet { Name = "A Shadow of the Past", Set = "The Black Riders" };
         public static EncounterSet Hunted = new EncounterSet { Name = "Hunted", Set = "The Black Riders" };
         public static EncounterSet TheRing = new EncounterSet { Name = "The Ring", Set = "The Black Riders" };
@@ -110,14 +130,20 @@ namespace HallOfBeorn.Models
         public static EncounterSet AKnifeInTheDark = new EncounterSet { Name = "A Knife in the Dark", Set = "The Black Riders" };
         public static EncounterSet TheNazgul = new EncounterSet { Name = "The Nazgûl", Set = "The Black Riders" };
         public static EncounterSet FlightToTheFord = new EncounterSet { Name = "Flight to the Ford", Set = "The Black Riders" };
+
+        //The Lord of the Rings: The Road Darkens
         public static EncounterSet TheRingGoesSouth = new EncounterSet { Name = "The Ring Goes South", Set = "The Road Darkens" };
         public static EncounterSet JourneyInTheDark = new EncounterSet { Name = "Journey in the Dark", Set = "The Road Darkens" };
         public static EncounterSet BreakingOfTheFellowship = new EncounterSet { Name = "Breaking of the Fellowship", Set = "The Road Darkens" };
+
+        //The Lord of the Rings: The Treason of Saruman
         public static EncounterSet TheUrukHai = new EncounterSet { Name = "The Uruk-hai", Set = "The Treason of Saruman" };
         public static EncounterSet OrcsOfTheWhiteHand = new EncounterSet { Name = "Orcs of the White Hand", Set = "The Treason of Saruman" };
         public static EncounterSet SnagaOrcs = new EncounterSet { Name = "Snaga Orcs", Set = "The Treason of Saruman" };
         public static EncounterSet HelmsDeep = new EncounterSet { Name = "Helm's Deep", Set = "The Treason of Saruman" };
         public static EncounterSet TheRoadToIsengard = new EncounterSet { Name = "The Road to Isengard", Set = "The Treason of Saruman" };
+
+        //The Lord of the Rings: The Land of Shadow
         public static EncounterSet ThePassageOfTheMarshes = new EncounterSet { Name = "The Passage of the Marshes", Set = "The Land of Shadow" };
         public static EncounterSet Gollum = new EncounterSet { Name = "Gollum", Set = "The Land of Shadow" };
         public static EncounterSet Nazgul = new EncounterSet { Name = "Nazgûl", Set = "The Land of Shadow" };
@@ -126,6 +152,7 @@ namespace HallOfBeorn.Models
         public static EncounterSet ShelobsLair = new EncounterSet { Name = "Shelob's Lair", Set = "The Land of Shadow" };
         public static EncounterSet TheGreatSpider = new EncounterSet { Name = "The Great Spider", Set = "The Land of Shadow" };
 
+        //Gen Con and Fellowship Decks
         public static EncounterSet TheMassingAtOsgiliath = new EncounterSet { Name = "The Massing at Osgiliath", Set = "The Massing at Osgiliath" };
         public static EncounterSet TheBattleOfLakeTown = new EncounterSet { Name = "The Battle of Lake-town", Set = "The Battle of Lake-town" };
         public static EncounterSet TheStoneOfErech = new EncounterSet { Name = "The Stone of Erech", Set = "The Stone of Erech" };
@@ -133,6 +160,7 @@ namespace HallOfBeorn.Models
         public static EncounterSet FogOnTheBarrowDowns = new EncounterSet { Name = "Fog on the Barrow-downs", Set = "Fog on the Barrow-downs" };
         public static EncounterSet TheRuinsOfBelegost = new EncounterSet { Name = "The Ruins of Belegost", Set = "The Ruins of Belegost" };
 
+        //Core Set and Shadows of Mirkwood Nightmare Decks
         public static EncounterSet PassageThroughMirkwoodNightmare = new EncounterSet { Name = "Passage Through Mirkwood Nightmare", Set = "Passage Through Mirkwood Nightmare" };
         public static EncounterSet JourneyAlongTheAnduinNightmare = new EncounterSet { Name = "Journey Along the Anduin Nightmare", Set = "Journey Along the Anduin Nightmare" };
         public static EncounterSet EscapeFromDolGuldurNightmare = new EncounterSet { Name = "Escape from Dol Guldur Nightmare", Set = "Escape from Dol Guldur Nightmare" };
@@ -142,12 +170,49 @@ namespace HallOfBeorn.Models
         public static EncounterSet TheHillsOfEmynMuilNightmare = new EncounterSet { Name = "The Hills of Emyn Muil Nightmare", Set = "The Hills of Emyn Muil Nightmare" };
         public static EncounterSet TheDeadMarshesNightmare = new EncounterSet { Name = "The Dead Marshes Nightmare", Set = "The Dead Marshes Nightmare" };
         public static EncounterSet ReturnToMirkwoodNightmare = new EncounterSet { Name = "Return to Mirkwood Nightmare", Set = "Return to Mirkwood Nightmare" };
+        
+        //Khazad-dum and Dwarrowdelf Nightmare Decks
         public static EncounterSet IntoThePitNightmare = new EncounterSet { Name = "Into the Pit Nightmare", Set = "Into the Pit Nightmare" };
         public static EncounterSet TheSeventhLevelNightmare = new EncounterSet { Name = "The Seventh Level Nightmare", Set = "The Seventh Level Nightmare" };
         public static EncounterSet FlightFromMoriaNightmare = new EncounterSet { Name = "Flight from Moria Nightmare", Set = "Flight from Moria Nightmare" };
+        public static EncounterSet TheRedhornGateNightmare = new EncounterSet { Name = "The Redhorn Gate Nightmare", Set = "The Redhorn Gate Nightmare" };
+        public static EncounterSet RoadToRivendellNightmare = new EncounterSet { Name = "Road to Rivendell Nightmare", Set = "Road to Rivendell Nightmare" };
+        public static EncounterSet TheWatcherInTheWaterNightmare = new EncounterSet { Name = "The Watcher in the Water Nightmare", Set = "The Watcher in the Water Nightmare" };
+        public static EncounterSet TheLongDarkNightmare = new EncounterSet { Name = "The Long Dark Nightmare", Set = "The Long Dark Nightmare" };
+        public static EncounterSet FoundationsOfStoneNightmare = new EncounterSet { Name = "Foundations of Stone Nightmare", Set = "Foundations of Stone Nightmare" };
+        public static EncounterSet ShadowAndFlameNightmare = new EncounterSet { Name = "Shadow and Flame Nightmare", Set = "Shadow and Flame Nightmare" };
+
+        //Heirs of Numenor and Against the Shadow Nightmare Decks
+        public static EncounterSet PerilInPelargirNightmare = new EncounterSet { Name = "Peril in Pelargir Nightmare", Set = "Peril in Pelargir Nightmare" };
+        public static EncounterSet IntoIthilienNightmare = new EncounterSet { Name = "Into Ithilien Nightmare", Set = "Into Ithilien Nightmare" };
+        public static EncounterSet SiegeOfCairAndrosNightmare = new EncounterSet { Name = "Siege of Cair Andros Nightmare", Set = "Siege of Cair Andros Nightmare" };
+        public static EncounterSet TheStewardsFearNightmare = new EncounterSet { Name = "The Steward's Fear Nightmare", Set = "The Steward's Fear Nightmare" };
+        public static EncounterSet TheDruadanForestNightmare = new EncounterSet { Name = "The Drúadan Forest Nightmare", Set = "The Drúadan Forest Nightmare", NormalizedSet = "The Druadan Forest Nightmare" };
+        public static EncounterSet EncounterAtAmonDinNightmare = new EncounterSet { Name = "Encounter at Amon-Dîn Nightmare", Set = "Encounter at Amon-Dîn Nightmare", NormalizedSet = "Encounter at Amon-Din Nightmare", };
+        public static EncounterSet AssaultOnOsgiliathNightmare = new EncounterSet { Name = "Assault on Osgiliath Nightmare", Set = "Assault on Osgiliath Nightmare" };
+        public static EncounterSet TheBloodOfGondorNightmare = new EncounterSet { Name = "The Blood of Gondor Nightmare", Set = "The Blood of Gondor Nightmare" };
+        public static EncounterSet TheMorgulValeNightmare = new EncounterSet { Name = "The Morgul Vale Nightmare", Set = "The Morgul Vale Nightmare" };
+
+        //The Voice of Isengard and Ring-maker Nightmare Decks
+        public static EncounterSet TheFordsOfIsenNightmare = new EncounterSet { Name = "The Fords of Isen Nightmare", Set = "The Fords of Isen Nightmare" };
+        public static EncounterSet ToCatchAnOrcNightmare = new EncounterSet { Name = "To Catch an Orc Nightmare", Set = "To Catch an Orc Nightmare" };
+        public static EncounterSet IntoFangornNightmare = new EncounterSet { Name = "Into Fangorn Nightmare", Set = "Into Fangorn Nightmare" };
+
+        //The Hobbit: Over Hill and Under Hill Nightmare Decks
         public static EncounterSet WeMustAwayEreBreakOfDayNightmare = new EncounterSet { Name = "We Must Away Ere Break of Day Nightmare", Set = "We Must Away Ere Break of Day Nightmare" };
         public static EncounterSet OverTheMistyMountainsGrimNightmare = new EncounterSet { Name = "Over the Misty Mountains Grim Nightmare", Set = "Over the Misty Mountains Grim Nightmare" };
         public static EncounterSet TheGreatGoblinNightmare = new EncounterSet { Name = "The Great Goblin Nightmare", Set = "Over the Misty Mountains Grim Nightmare" };
         public static EncounterSet DungeonsDeepAndCavernsDimNightmare = new EncounterSet { Name = "Dungeons Deep and Caverns Dim Nightmare", Set = "Dungeons Deep and Caverns Dim Nightmare" };
+        
+        //The Hobbit: On the Doorstep Nightmare Decks
+        public static EncounterSet FliesAndSpidersNightmare = new EncounterSet { Name = "Flies and Spiders Nightmare", Set = "Flies and Spiders Nightmare" };
+        public static EncounterSet TheLonelyMountainNightmare = new EncounterSet { Name = "The Lonely Mountain Nightmare", Set = "The Lonely Mountain Nightmare" };
+        public static EncounterSet TheBattleOfFiveArmiesNightmare = new EncounterSet { Name = "The Battle of Five Armies Nightmare", Set = "The Battle of Five Armies Nightmare" };
+        
+        //The Lord of the Rings: The Black Riders Nightmare Decks
+        public static EncounterSet AShadowOfThePastNightmare = new EncounterSet { Name = "A Shadow of the Past Nightmare", Set = "A Shadow of the Past Nightmare" };
+        public static EncounterSet AKnifeInTheDarkNightmare = new EncounterSet { Name = "A Knife in the Dark Nightmare", Set = "A Knife in the Dark Nightmare" };
+        public static EncounterSet FlightToTheFordNightmare = new EncounterSet { Name = "Flight to the Ford Nightmare", Set = "Flight to the Ford Nightmare" };
+
     }
 }
