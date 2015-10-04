@@ -116,6 +116,9 @@ namespace HallOfBeorn.Models
         public static EncounterSet TheMassingAtOsgiliath = new EncounterSet { Name = "The Massing at Osgiliath", Set = "The Massing at Osgiliath" };
         public static EncounterSet TheBattleOfLakeTown = new EncounterSet { Name = "The Battle of Lake-town", Set = "The Battle of Lake-town" };
         public static EncounterSet TheStoneOfErech = new EncounterSet { Name = "The Stone of Erech", Set = "The Stone of Erech" };
+        public static EncounterSet TheOldForest = new EncounterSet { Name = "The Old Forest", Set = "The Old Forest" };
+        public static EncounterSet FogOnTheBarrowDowns = new EncounterSet { Name = "Fog on the Barrow-downs", Set = "Fog on the Barrow-downs" };
+        public static EncounterSet TheRuinsOfBelegost = new EncounterSet { Name = "The Ruins of Belegost", Set = "The Ruins of Belegost" };
 
         public static EncounterSet PassageThroughMirkwoodNightmare = new EncounterSet { Name = "Passage Through Mirkwood Nightmare", Set = "Passage Through Mirkwood Nightmare" };
         public static EncounterSet JourneyAlongTheAnduinNightmare = new EncounterSet { Name = "Journey Along the Anduin Nightmare", Set = "Journey Along the Anduin Nightmare" };
