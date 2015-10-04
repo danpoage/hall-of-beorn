@@ -86,6 +86,10 @@ namespace HallOfBeorn.Models
         public static EncounterSet FoulWeather = new EncounterSet { Name = "Foul Weather", Set = "The Lost Realm" };
         public static EncounterSet DarkSorcery = new EncounterSet { Name = "Dark Sorcery", Set = "The Lost Realm" };
         public static EncounterSet CursedDead = new EncounterSet { Name = "Cursed Dead", Set = "The Lost Realm" };
+        public static EncounterSet TheWastesOfEriador = new EncounterSet { Name = "The Wastes of Eriador", Set = "The Wastes of Eriador" };
+        public static EncounterSet EscapeFromMountGram = new EncounterSet { Name = "Escape from Mount Gram", Set = "Escape from Mount Gram" };
+        public static EncounterSet AcrossTheEttenmoors = new EncounterSet { Name = "Across the Ettenmoors", Set = "Across the Ettenmoors" };
+        public static EncounterSet TheTreacheryOfRhudaur = new EncounterSet { Name = "The Treachery of Rhudaur", Set = "The Treachery of Rhudaur" };
 
         public static EncounterSet WeMustAwayEreBreakOfDay = new EncounterSet { Name = "We Must Away Ere Break of Day", Set = "The Hobbit: Over Hill and Under Hill" };
         public static EncounterSet WesternLands = new EncounterSet { Name = "Western Lands", Set = "The Hobbit: Over Hill and Under Hill" };
@@ -106,11 +110,20 @@ namespace HallOfBeorn.Models
         public static EncounterSet AKnifeInTheDark = new EncounterSet { Name = "A Knife in the Dark", Set = "The Black Riders" };
         public static EncounterSet TheNazgul = new EncounterSet { Name = "The Nazgûl", Set = "The Black Riders" };
         public static EncounterSet FlightToTheFord = new EncounterSet { Name = "Flight to the Ford", Set = "The Black Riders" };
+        public static EncounterSet TheRingGoesSouth = new EncounterSet { Name = "The Ring Goes South", Set = "The Road Darkens" };
+        public static EncounterSet JourneyInTheDark = new EncounterSet { Name = "Journey in the Dark", Set = "The Road Darkens" };
+        public static EncounterSet BreakingOfTheFellowship = new EncounterSet { Name = "Breaking of the Fellowship", Set = "The Road Darkens" };
+        public static EncounterSet TheUrukHai = new EncounterSet { Name = "The Uruk-hai", Set = "The Treason of Saruman" };
         public static EncounterSet OrcsOfTheWhiteHand = new EncounterSet { Name = "Orcs of the White Hand", Set = "The Treason of Saruman" };
         public static EncounterSet SnagaOrcs = new EncounterSet { Name = "Snaga Orcs", Set = "The Treason of Saruman" };
+        public static EncounterSet HelmsDeep = new EncounterSet { Name = "Helm's Deep", Set = "The Treason of Saruman" };
+        public static EncounterSet TheRoadToIsengard = new EncounterSet { Name = "The Road to Isengard", Set = "The Treason of Saruman" };
+        public static EncounterSet ThePassageOfTheMarshes = new EncounterSet { Name = "The Passage of the Marshes", Set = "The Land of Shadow" };
         public static EncounterSet Gollum = new EncounterSet { Name = "Gollum", Set = "The Land of Shadow" };
         public static EncounterSet Nazgul = new EncounterSet { Name = "Nazgûl", Set = "The Land of Shadow" };
+        public static EncounterSet JourneyToTheCrossRoads = new EncounterSet { Name = "Journey to the Cross-roads", Set = "The Land of Shadow" };
         public static EncounterSet Harad = new EncounterSet { Name = "Harad", Set = "The Land of Shadow" };
+        public static EncounterSet ShelobsLair = new EncounterSet { Name = "Shelob's Lair", Set = "The Land of Shadow" };
         public static EncounterSet TheGreatSpider = new EncounterSet { Name = "The Great Spider", Set = "The Land of Shadow" };
 
         public static EncounterSet TheMassingAtOsgiliath = new EncounterSet { Name = "The Massing at Osgiliath", Set = "The Massing at Osgiliath" };
