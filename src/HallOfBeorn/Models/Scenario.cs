@@ -21,11 +21,17 @@ namespace HallOfBeorn.Models
         private readonly List<ScenarioQuestCard> questCards = new List<ScenarioQuestCard>();
         private readonly List<ScenarioCard> scenarioCards = new List<ScenarioCard>();
 
+        private readonly Dictionary<string, EncounterSet> encounterSets = new Dictionary<string, EncounterSet>();
         private readonly Dictionary<string, byte> questCardIds = new Dictionary<string, byte>();
         private readonly Dictionary<string, byte> excludedEasyModeCards = new Dictionary<string, byte>();
         private readonly Dictionary<string, byte> excludedNightmareModeCards = new Dictionary<string, byte>();
 
         private readonly Dictionary<string, Tuple<byte, byte, byte>> cardCountMap = new Dictionary<string, Tuple<byte, byte, byte>>();
+
+        protected void AddEncounterSet(EncounterSet set)
+        {
+            encounterSets[set.Name] = set;
+        }
 
         protected void AddQuestCardId(string slug)
         {

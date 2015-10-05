@@ -12,6 +12,11 @@ namespace HallOfBeorn.Models.Scenarios
             Number = 1;
             Title = "Passage Through Mirkwood";
 
+            AddEncounterSet(EncounterSet.PassageThroughMirkwood);
+            AddEncounterSet(EncounterSet.SpidersOfMirkwood);
+            AddEncounterSet(EncounterSet.DolGuldurOrcs);
+            AddEncounterSet(EncounterSet.PassageThroughMirkwoodNightmare);
+
             AddQuestCardId("Flies-and-Spiders-Core");
             AddQuestCardId("A-Fork-in-the-Road");
             AddQuestCardId("A-Chosen-Path-Don't-Leave-the-Path-Core");
