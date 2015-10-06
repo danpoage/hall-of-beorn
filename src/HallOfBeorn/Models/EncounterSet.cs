@@ -18,6 +18,11 @@ namespace HallOfBeorn.Models
         
         public string Name { get; set; }
 
+        public bool IsNightmare
+        {
+            get { return !string.IsNullOrEmpty(Name) && Name.EndsWith(" Nightmare"); }
+        }
+
         private static List<EncounterSet> all = new List<EncounterSet>();
 
         static EncounterSet()

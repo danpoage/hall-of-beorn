@@ -100,6 +100,11 @@ namespace HallOfBeorn.Models
             return hasNightmareMode ? string.Format("{0} Nightmare", Title) : string.Empty;
         }
 
+        public IEnumerable<EncounterSet> EncounterSets()
+        {
+            return encounterSets.Values;
+        }
+
         public IEnumerable<string> QuestCardIds()
         {
             return questCardIds.Keys;

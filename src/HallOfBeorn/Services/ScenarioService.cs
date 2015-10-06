@@ -43,37 +43,16 @@ namespace HallOfBeorn.Services
         {
             scenariosByTitle.Add(scenario.Title, scenario);
 
-            var encounterCardsBySlug = new Dictionary<string, Card>();
-
-            foreach (var questCardId in scenario.QuestCardIds())
+            foreach (var set in scenario.EncounterSets())
             {
-                var questCard = cardRepository.FindBySlug(questCardId);
-                if (string.IsNullOrEmpty(questCard.EncounterSet))
+                foreach (var card in cards.Where(x => x.CardType != CardType.Quest && x.EncounterSet == set.Name))
                 {
-                    continue;
+                    var easyCount = scenario.EasyModeCount(card.Slug, card.Quantity);
+                    var normalCount = scenario.NormalModeCount(card.Slug, card.Quantity);
+                    var nightmareCount = scenario.NightmareModeCount(card.Slug, card.Quantity);
+
+                    scenario.MapCardCount(card.Slug, easyCount, normalCount, nightmareCount);
                 }
-
-                foreach (var mainCard in cards.Where(x => x.CardType != CardType.Quest && x.EncounterSet == questCard.EncounterSet))
-                {
-                    encounterCardsBySlug[mainCard.Slug] = mainCard;
-                }
-
-                foreach (var encounterSet in questCard.IncludedEncounterSets)
-                {
-                    foreach (var includedCard in cards.Where(x => x.CardType != CardType.Quest && x.EncounterSet == encounterSet.Name))
-                    {
-                        encounterCardsBySlug[includedCard.Slug] = includedCard;
-                    }
-                }
-            }
-
-            foreach (var pair in encounterCardsBySlug)
-            {
-                var easyCount = scenario.EasyModeCount(pair.Key, pair.Value.Quantity);
-                var normalCount = scenario.NormalModeCount(pair.Key, pair.Value.Quantity);
-                var nightmareCount = scenario.NightmareModeCount(pair.Key, pair.Value.Quantity);
-
-                scenario.MapCardCount(pair.Key, easyCount, normalCount, nightmareCount);
             }
         }
 
