@@ -20,6 +20,208 @@ namespace HallOfBeorn.Models
 
         private static List<EncounterSet> all = new List<EncounterSet>();
 
+        static EncounterSet()
+        {
+            //Core Set and Shadows of Mirkwood
+            Add(PassageThroughMirkwood);
+            Add(DolGuldurOrcs);
+            Add(SpidersOfMirkwood);
+            Add(JourneyDownTheAnduin);
+            Add(SauronsReach);
+            Add(Wilderlands);
+            Add(EscapeFromDolGuldur);
+            Add(TheHuntForGollum);
+            Add(ConflictAtTheCarrock);
+            Add(AJourneyToRhosgobel);
+            Add(TheHillsOfEmynMuil);
+            Add(TheDeadMarshes);
+            Add(ReturnToMirkwood);
+
+            //Khazad-dum and Dwarrowdelf
+            Add(IntoThePit);
+            Add(TwistsAndTurns);
+            Add(HazardsOfThePit);
+            Add(GoblinsOfTheDeep);
+            Add(TheSeventhLevel);
+            Add(PlunderingGoblins);
+            Add(FlightFromMoria);
+            Add(DeepsOfMoria);
+            Add(MistyMountains);
+            Add(TheRedhornGate);
+            Add(RoadToRivendell);
+            Add(TheWatcherInTheWater);
+            Add(TheLongDark);
+            Add(FoundationsOfStone);
+            Add(ShadowAndFlame);
+
+            //Heirs of Numenor and Against the Shadow
+            Add(PerilInPelargir);
+            Add(StreetsOfGondor);
+            Add(Brigands);
+            Add(IntoIthilien);
+            Add(BroodingForest);
+            Add(CreaturesOfTheForest);
+            Add(Southrons);
+            Add(TheSiegeOfCairAndros);
+            Add(RavagingOrcs);
+            Add(MordorElite);
+            Add(TheStewardsFear);
+            Add(TheDruadanForest);
+            Add(EncounterAtAmonDin);
+            Add(AssaultOnOsgiliath);
+            Add(TheBloodOfGondor);
+            Add(TheMorgulVale);
+
+            //The Voice of Isengard and The Ring-maker
+            Add(TheFordsOfIsen);
+            Add(DunlandWarriors);
+            Add(DunlandRaiders);
+            Add(ToCatchAnOrc);
+            Add(MistyMountainOrcs);
+            Add(BrokenLands);
+            Add(IntoFangorn);
+            Add(AncientForest);
+            Add(WearyTravelers);
+            Add(TheDunlandTrap);
+            Add(TheThreeTrials);
+            Add(TroubleInTharbad);
+            Add(TheNinInEilph);
+            Add(CelebrimborsSecret);
+            Add(TheAntleredCrown);
+
+            //The Lost Realm and Angmar Awakened
+            Add(IntrudersInChetwood);
+            Add(Iarion);
+            Add(EriadorWilds);
+            Add(AngmarOrcs);
+            Add(RuinsOfArnor);
+            Add(TheWeatherHills);
+            Add(FoulWeather);
+            Add(DarkSorcery);
+            Add(DeadmensDike);
+            Add(CursedDead);
+            Add(TheWastesOfEriador);
+            Add(EscapeFromMountGram);
+            Add(AcrossTheEttenmoors);
+            Add(TheTreacheryOfRhudaur);
+
+            //The Hobbit: Over Hill and Under Hill
+            Add(WeMustAwayEreBreakOfDay);
+            Add(WesternLands);
+            Add(OverTheMistyMountainsGrim);
+            Add(TheGreatGoblin);
+            Add(MistyMountainGoblins);
+            Add(DungeonsDeepAndCavernsDim);
+
+            //The Hobbit: On the Doorstep
+            Add(FliesAndSpiders);
+            Add(Wilderland);
+            Add(TheLonelyMountain);
+            Add(TheBattleOfFiveArmies);
+
+            //The Lord of the Rings: The Black Riders
+            Add(AShadowOfThePast);
+            Add(Hunted);
+            Add(TheRing);
+            Add(TheBlackRiders);
+            Add(AKnifeInTheDark);
+            Add(TheNazgul);
+            Add(FlightToTheFord);
+
+            //The Lord of the Rings: The Road Darkens
+            Add(TheRingGoesSouth);
+            Add(JourneyInTheDark);
+            Add(BreakingOfTheFellowship);
+
+            //The Lord of the Rings: The Treason of Saruman
+            Add(TheUrukHai);
+            Add(OrcsOfTheWhiteHand);
+            Add(SnagaOrcs);
+            Add(HelmsDeep);
+            Add(TheRoadToIsengard);
+
+            //The Lord of the Rings: The Land of Shadow
+            Add(ThePassageOfTheMarshes);
+            Add(Gollum);
+            Add(Nazgul);
+            Add(JourneyToTheCrossRoads);
+            Add(Harad);
+            Add(ShelobsLair);
+            Add(TheGreatSpider);
+
+            //Gen Con and Fellowship Decks
+            Add(TheMassingAtOsgiliath);
+            Add(TheBattleOfLakeTown);
+            Add(TheStoneOfErech);
+            Add(TheOldForest);
+            Add(FogOnTheBarrowDowns);
+            Add(TheRuinsOfBelegost);
+
+            //Core Set and Shadows of Mirkwood Nightmare Decks
+            Add(PassageThroughMirkwoodNightmare);
+            Add(JourneyAlongTheAnduinNightmare);
+            Add(EscapeFromDolGuldurNightmare);
+            Add(TheHuntForGollumNightmare);
+            Add(ConflictAtTheCarrockNightmare);
+            Add(AJourneyToRhosgobelNightmare);
+            Add(TheHillsOfEmynMuilNightmare);
+            Add(TheDeadMarshesNightmare);
+            Add(ReturnToMirkwoodNightmare);
+        
+            //Khazad-dum and Dwarrowdelf Nightmare Decks
+            Add(IntoThePitNightmare);
+            Add(TheSeventhLevelNightmare);
+            Add(FlightFromMoriaNightmare);
+            Add(TheRedhornGateNightmare);
+            Add(RoadToRivendellNightmare);
+            Add(TheWatcherInTheWaterNightmare);
+            Add(TheLongDarkNightmare);
+            Add(FoundationsOfStoneNightmare);
+            Add(ShadowAndFlameNightmare);
+
+            //Heirs of Numenor and Against the Shadow Nightmare Decks
+            Add(PerilInPelargirNightmare);
+            Add(IntoIthilienNightmare);
+            Add(SiegeOfCairAndrosNightmare);
+            Add(TheStewardsFearNightmare);
+            Add(TheDruadanForestNightmare);
+            Add(EncounterAtAmonDinNightmare);
+            Add(AssaultOnOsgiliathNightmare);
+            Add(TheBloodOfGondorNightmare);
+            Add(TheMorgulValeNightmare);
+
+            //The Voice of Isengard and Ring-maker Nightmare Decks
+            Add(TheFordsOfIsenNightmare);
+            Add(ToCatchAnOrcNightmare);
+            Add(IntoFangornNightmare);
+
+            //The Hobbit: Over Hill and Under Hill Nightmare Decks
+            Add(WeMustAwayEreBreakOfDayNightmare);
+            Add(OverTheMistyMountainsGrimNightmare);
+            Add(TheGreatGoblinNightmare);
+            Add(DungeonsDeepAndCavernsDimNightmare);
+        
+            //The Hobbit: On the Doorstep Nightmare Decks
+            Add(FliesAndSpidersNightmare);
+            Add(TheLonelyMountainNightmare);
+            Add(TheBattleOfFiveArmiesNightmare);
+        
+            //The Lord of the Rings: The Black Riders Nightmare Decks
+            Add(AShadowOfThePastNightmare);
+            Add(AKnifeInTheDarkNightmare);
+            Add(FlightToTheFordNightmare);
+
+            //First Age
+            Add(HuntingOfTheWolf);
+            Add(TheIsleOfWerewolves);
+            Add(TheSeatOfMorgoth);
+        }
+
+        private static void Add(EncounterSet set)
+        {
+            all.Add(set);
+        }
+
         public static List<EncounterSet> All()
         {
             return all;
@@ -75,7 +277,7 @@ namespace HallOfBeorn.Models
         public static EncounterSet TheBloodOfGondor = new EncounterSet { Name = "The Blood of Gondor", Set = "The Blood of Gondor" };
         public static EncounterSet TheMorgulVale = new EncounterSet { Name = "The Morgul Vale", Set = "The Morgul Vale" };
         
-        //The Voice of Isengard and Ring-maker
+        //The Voice of Isengard and The Ring-maker
         public static EncounterSet TheFordsOfIsen = new EncounterSet { Name = "The Fords of Isen", Set = "Voice of Isengard" };
         public static EncounterSet DunlandWarriors = new EncounterSet { Name = "Dunland Warriors", Set = "Voice of Isengard" };
         public static EncounterSet DunlandRaiders = new EncounterSet { Name = "Dunland Raiders", Set = "Voice of Isengard" };
@@ -214,5 +416,9 @@ namespace HallOfBeorn.Models
         public static EncounterSet AKnifeInTheDarkNightmare = new EncounterSet { Name = "A Knife in the Dark Nightmare", Set = "A Knife in the Dark Nightmare" };
         public static EncounterSet FlightToTheFordNightmare = new EncounterSet { Name = "Flight to the Ford Nightmare", Set = "Flight to the Ford Nightmare" };
 
+        //First Age
+        public static EncounterSet HuntingOfTheWolf = new EncounterSet { Name = "Hunting of the Wolf", Set = "First Age" };
+        public static EncounterSet TheIsleOfWerewolves = new EncounterSet { Name = "The Isle of Werewolves", Set = "First Age" };
+        public static EncounterSet TheSeatOfMorgoth = new EncounterSet { Name = "The Seat of Morgoth", Set = "First Age" };
     }
 }
