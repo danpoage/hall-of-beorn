@@ -45,7 +45,7 @@ namespace HallOfBeorn.Services
 
             foreach (var set in scenario.EncounterSets())
             {
-                foreach (var card in cards.Where(x => x.CardType != CardType.Quest && x.EncounterSet == set.Name))
+                foreach (var card in cards.Where(x => x.EncounterSet == set.Name))
                 {
                     var easyCount = scenario.EasyModeCount(card.Slug, card.Quantity);
                     var normalCount = scenario.NormalModeCount(card.Slug, card.Quantity);
