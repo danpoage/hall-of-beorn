@@ -144,5 +144,12 @@ namespace HallOfBeorn.Models
 
             cardCountMap[slug] = new Tuple<byte, byte, byte>(easyCount, normalCount, nightmareCount);
         }
+
+        public IEnumerable<Tuple<Card, byte, byte, byte>> CardsWithCounts(Func<string, Card> cardLookup)
+        {
+            return cardCountMap.Select(x => {
+                return new Tuple<Card, byte, byte, byte>(cardLookup(x.Key), x.Value.Item1, x.Value.Item2, x.Value.Item3);
+            });
+        }
     }
 }
