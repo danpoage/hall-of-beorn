@@ -7,6 +7,11 @@ namespace HallOfBeorn.Models
 {
     public class EncounterSet
     {
+        public EncounterSet()
+        {
+            AlternateName = string.Empty;
+        }
+
         public string Set { get; set; }
 
         private string normalizedSet;
@@ -17,6 +22,7 @@ namespace HallOfBeorn.Models
         }
         
         public string Name { get; set; }
+        public string AlternateName { get; set; }
 
         public bool IsNightmare
         {
@@ -31,7 +37,7 @@ namespace HallOfBeorn.Models
             Add(PassageThroughMirkwood);
             Add(DolGuldurOrcs);
             Add(SpidersOfMirkwood);
-            Add(JourneyDownTheAnduin);
+            Add(JourneyAlongTheAnduin);
             Add(SauronsReach);
             Add(Wilderlands);
             Add(EscapeFromDolGuldur);
@@ -236,7 +242,7 @@ namespace HallOfBeorn.Models
         public static EncounterSet PassageThroughMirkwood = new EncounterSet { Name = "Passage Through Mirkwood", Set = "Core Set" };
         public static EncounterSet DolGuldurOrcs = new EncounterSet { Name = "Dol Guldur Orcs", Set = "Core Set" };
         public static EncounterSet SpidersOfMirkwood = new EncounterSet { Name = "Spiders of Mirkwood", Set = "Core Set" };
-        public static EncounterSet JourneyDownTheAnduin = new EncounterSet { Name = "Journey Down the Anduin", Set = "Core Set"};
+        public static EncounterSet JourneyAlongTheAnduin = new EncounterSet { Name = "Journey Along the Anduin", Set = "Core Set"};
         public static EncounterSet SauronsReach = new EncounterSet { Name = "Sauron's Reach", Set = "Core Set" };
         public static EncounterSet Wilderlands = new EncounterSet { Name = "Wilderlands", Set = "Core Set" };
         public static EncounterSet EscapeFromDolGuldur = new EncounterSet { Name = "Escape From Dol Guldur", Set = "Core Set" };

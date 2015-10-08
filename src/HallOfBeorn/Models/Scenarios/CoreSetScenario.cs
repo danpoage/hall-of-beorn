@@ -28,5 +28,18 @@ namespace HallOfBeorn.Models.Scenarios
             ExcludeFromEasyMode("Eyes-of-the-Forest-Core", 1);
             ExcludeFromEasyMode("Hummerhorns-Core", 1);
         }
+
+        protected void ExcludeSauronsReachForEasyMode()
+        {
+            ExcludeFromEasyMode("Eastern-Crows-Core", 2);
+            ExcludeFromEasyMode("Evil-Storm-Core", 1);
+        }
+
+        protected void ExcludeWilderlandsForEasyMode()
+        {
+            ExcludeFromEasyMode("Despair-Core", 2);
+            ExcludeFromEasyMode("Hill-Troll-Core", 1);
+            ExcludeFromEasyMode("Marsh-Adder-Core", 1);
+        }
     }
 }

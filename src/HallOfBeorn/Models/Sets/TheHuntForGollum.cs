@@ -356,7 +356,7 @@ The crownless again shall be king.
                 Quantity = 1,
                 Number = 11,
                 Artist = Artist.Igor_Kieryluk,
-                IncludedEncounterSets = new List<EncounterSet> { EncounterSet.JourneyDownTheAnduin, EncounterSet.SauronsReach }
+                IncludedEncounterSets = new List<EncounterSet> { EncounterSet.JourneyAlongTheAnduin, EncounterSet.SauronsReach }
             });
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,
@@ -372,7 +372,7 @@ The crownless again shall be king.
                 Quantity = 1,
                 Number = 12,
                 Artist = Artist.David_A_Nash,
-                IncludedEncounterSets = new List<EncounterSet> { EncounterSet.JourneyDownTheAnduin, EncounterSet.SauronsReach }
+                IncludedEncounterSets = new List<EncounterSet> { EncounterSet.JourneyAlongTheAnduin, EncounterSet.SauronsReach }
             });
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,
@@ -387,7 +387,7 @@ The crownless again shall be king.
                 Quantity = 1,
                 Number = 13,
                 Artist = Artist.Carolina_Eade,
-                IncludedEncounterSets = new List<EncounterSet> { EncounterSet.JourneyDownTheAnduin, EncounterSet.SauronsReach }
+                IncludedEncounterSets = new List<EncounterSet> { EncounterSet.JourneyAlongTheAnduin, EncounterSet.SauronsReach }
             });
         }
     }

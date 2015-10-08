@@ -17,6 +17,8 @@ namespace HallOfBeorn.Models.Products
             AddCardSet(CardSet.CoreSet);
 
             AddScenario(new HallOfBeorn.Models.Scenarios.PassageThroughMirkwood());
+            AddScenario(new HallOfBeorn.Models.Scenarios.JourneyAlongTheAnduin());
+            AddScenario(new HallOfBeorn.Models.Scenarios.EscapeFromDolGuldur());
         }
     }
 }

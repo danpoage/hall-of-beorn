@@ -30,6 +30,8 @@ namespace HallOfBeorn.Models
 
             HasBlogs = true;
             HasReferences = true;
+
+            AlternateEncounterSet = string.Empty;
         }
 
         #region Effect Functions
@@ -504,6 +506,7 @@ namespace HallOfBeorn.Models
         public string OppositeFlavorText { get; set; }
         public string Shadow { get; set; }
         public string EncounterSet { get; set; }
+        public string AlternateEncounterSet { get; set; }
         public List<EncounterSet> IncludedEncounterSets { get; set; }
         public byte VictoryPoints { get; set; }
         public bool? PassValue { get; set; }

@@ -63,7 +63,7 @@ Players cannot defeat this stage if there are any Troll enemies in play.",
                 EncounterSet = "Conflict at the Carrock",
                 Number = 36,
                 Artist = Artist.Diego_Gisbert_Llorens,
-                IncludedEncounterSets = new List<EncounterSet> { EncounterSet.JourneyDownTheAnduin, EncounterSet.Wilderlands }
+                IncludedEncounterSets = new List<EncounterSet> { EncounterSet.JourneyAlongTheAnduin, EncounterSet.Wilderlands }
             });
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,
@@ -200,7 +200,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 EncounterSet = "Conflict at the Carrock",
                 Number = 35,
                 Artist = Artist.Igor_Kieryluk,
-                IncludedEncounterSets = new List<EncounterSet> { EncounterSet.JourneyDownTheAnduin, EncounterSet.Wilderlands }
+                IncludedEncounterSets = new List<EncounterSet> { EncounterSet.JourneyAlongTheAnduin, EncounterSet.Wilderlands }
             });
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,

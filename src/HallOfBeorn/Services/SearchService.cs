@@ -277,7 +277,7 @@ namespace HallOfBeorn.Services
                 filters.Add(new SearchFilter((s, c) => { return s.Artist == c.Artist.Name; }, 100, "Has Artist '" + model.Artist + "'"));
 
             if (model.HasEncounterSet())
-                filters.Add(new SearchFilter((s, c) => { return s.EncounterSet == c.EncounterSet; }, 100, "Has Encounter Set '" + model.EncounterSet + "'"));
+                filters.Add(new SearchFilter((s, c) => { return s.EncounterSet == c.EncounterSet || s.EncounterSet == c.AlternateEncounterSet; }, 100, "Has Encounter Set '" + model.EncounterSet + "'"));
 
             if (model.HasVictoryPoints())
                 filters.Add(new SearchFilter((s, c) => { return s.VictoryPointsMatch(c); }, 100, "Has Victory Points '" + model.VictoryPoints + "'"));
