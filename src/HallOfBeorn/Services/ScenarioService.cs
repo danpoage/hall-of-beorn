@@ -47,13 +47,35 @@ namespace HallOfBeorn.Services
             {
                 foreach (var card in cards.Where(x => x.EncounterSet == set.Name))
                 {
-                    var easyCount = scenario.EasyModeCount(card.Slug, card.Quantity);
-                    var normalCount = scenario.NormalModeCount(card.Slug, card.Quantity);
-                    var nightmareCount = scenario.NightmareModeCount(card.Slug, card.Quantity);
+                    byte easyCount = 0; byte normalCount = 0; byte nightmareCount = 0;
+
+                    if (set.IsNightmare)
+                    {
+                        nightmareCount = scenario.NightmareModeCount(card.Slug, card.Quantity);
+                    }
+                    else
+                    {
+                        easyCount = scenario.EasyModeCount(card.Slug, card.Quantity);
+                        normalCount = scenario.NormalModeCount(card.Slug, card.Quantity);
+                        nightmareCount = scenario.NightmareModeCount(card.Slug, card.Quantity);
+                    }
 
                     scenario.MapCardCount(card.Slug, easyCount, normalCount, nightmareCount);
                 }
             }
+
+            foreach (var questId in scenario.QuestCardIds())
+            {
+                var questCard = cardRepository.FindBySlug(questId);
+                var releaseQuantity = questCard.CardSet.IsNightmare ? (byte)0 : (byte)1;
+                var easyQuantity = scenario.EasyModeCount(questId, releaseQuantity); 
+                var normalQuantity = scenario.NormalModeCount(questId, releaseQuantity); 
+                var nightmareQuantity = scenario.NightmareModeCount(questId, 1);
+
+                scenario.AddQuestCard(questCard, easyQuantity, normalQuantity, nightmareQuantity);
+            }
+
+            scenarios[scenario.Title.ToUrlSafeString()] = scenario;
         }
 
         private void AddProduct(Product product, IEnumerable<Card> cards)
@@ -63,10 +85,13 @@ namespace HallOfBeorn.Services
                 AddSet(product, cardSet, cards);
             }
 
+            //NOTE: Swap this for the lines above to use the new scenario-loading logic
+            /*
             foreach (var scenario in product.Scenarios())
             {
                 AddScenario(scenario);
             }
+            */
         }
 
         private void AddSet(Product product, CardSet cardSet, IEnumerable<Card> cards)

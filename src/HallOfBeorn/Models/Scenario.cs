@@ -79,6 +79,15 @@ namespace HallOfBeorn.Models
             questCards.Add(new ScenarioQuestCard(card));
         }
 
+        public void AddQuestCard(Card card, byte easyQuantity, byte normalQuantity, byte nigtmareQuantity)
+        {
+            var sqc = new ScenarioQuestCard(card);
+            sqc.EasyModeQuantity = easyQuantity;
+            sqc.NormalModeQuantity = normalQuantity;
+            sqc.NightmareModeQuantity = nigtmareQuantity;
+            questCards.Add(sqc);
+        }
+
         public void AddScenarioCard(Card card)
         {
             scenarioCards.Add(new ScenarioCard(card));

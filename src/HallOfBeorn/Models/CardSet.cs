@@ -57,6 +57,8 @@ namespace HallOfBeorn.Models
 
         public string AlternateName { get; protected set; }
 
+        public bool IsNightmare { get { return !string.IsNullOrEmpty(Name) && Name.EndsWith(" Nightmare"); } }
+
         static CardSet()
         {
         }

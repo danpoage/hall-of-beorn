@@ -25,7 +25,7 @@ namespace HallOfBeorn.Models.Scenarios
             ExcludeDolGuldurOrcsForEasyMode();
             ExcludeSpidersOfMirkwoodForEasyMode();
 
-            ExcludeFromNightmareMode("Dol-Guldur-Orcs-Core", 3);
+            ExcludeFromNightmareMode("Dol-Guldur-Orcs-Enemy-Core", 3);
             ExcludeFromNightmareMode("Black-Forest-Bats-Core", 1);
             ExcludeFromNightmareMode("Forest-Gate-Core", 2);
             ExcludeFromNightmareMode("Forest-Spider-Core", 3);
