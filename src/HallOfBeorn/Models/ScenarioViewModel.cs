@@ -8,6 +8,11 @@ namespace HallOfBeorn.Models
     public class ScenarioViewModel
     {
         public ScenarioViewModel(Scenario scenario)
+            : this(scenario, null)
+        {
+        }
+
+        public ScenarioViewModel(Scenario scenario, Func<string, Card> lookupCard)
         {
             _scenario = scenario;
 
@@ -18,9 +23,31 @@ namespace HallOfBeorn.Models
                 _questCards.Add(new ScenarioQuestViewModel(questCard));
             }
 
-            foreach (var scenarioCard in scenario.ScenarioCards)
+            var hasCardMap = false;
+            if (lookupCard != null)
             {
-                _scenarioCards.Add(new ScenarioCardViewModel(scenarioCard));
+                var cardsWithCounts = scenario.CardsWithCounts((slug) =>
+                    {
+                        return lookupCard(slug); 
+                    }
+                );
+
+                if (cardsWithCounts.Count > 0)
+                {
+                    hasCardMap = true;
+                    foreach (var map in cardsWithCounts)
+                    {
+                        _scenarioCards.Add(new ScenarioCardViewModel(new ScenarioCard(map)));
+                    }
+                }
+            }
+
+            if (!hasCardMap)
+            {
+                foreach (var scenarioCard in scenario.ScenarioCards)
+                {
+                    _scenarioCards.Add(new ScenarioCardViewModel(scenarioCard));
+                }
             }
         }
 

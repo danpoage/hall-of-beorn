@@ -7,14 +7,18 @@ namespace HallOfBeorn.Models
 {
     public class ScenarioCard
     {
+        public ScenarioCard(Tuple<Card, byte, byte, byte> map)
+        {
+            Init(map.Item1);
+
+            EasyQuantity = map.Item2;
+            NormalQuantity = map.Item3;
+            NightmareQuantity = map.Item4;
+        }
+
         public ScenarioCard(Card card)
         {
-            Card = card;
-            Title = card.Title;
-            Set = card.CardSet.NormalizedName;
-            EncounterSet = card.EncounterSet;
-            EncounterSetNumber = card.CardSet.Number;
-            Link = string.Format("/Cards/Details/{0}", card.Slug);
+            Init(card);
 
             NightmareQuantity = card.Quantity;
 
@@ -28,6 +32,16 @@ namespace HallOfBeorn.Models
                 NormalQuantity = card.Quantity;
                 EasyQuantity = card.EasyModeQuantity.HasValue ? card.EasyModeQuantity.Value : card.Quantity;
             }
+        }
+
+        private void Init(Card card)
+        {
+            Card = card;
+            Title = card.Title;
+            Set = card.CardSet.NormalizedName;
+            EncounterSet = card.EncounterSet;
+            EncounterSetNumber = card.CardSet.Number;
+            Link = string.Format("/Cards/Details/{0}", card.Slug);
         }
 
         public Card Card { get; private set; }

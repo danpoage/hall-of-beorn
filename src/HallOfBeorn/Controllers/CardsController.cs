@@ -278,12 +278,14 @@ namespace HallOfBeorn.Controllers
         public ActionResult Scenarios(string id)
         {
             var model = new ScenarioListViewModel();
+            var lookupCard = new Func<string, Card>((slug) => { return cardRepository.FindBySlug(slug); });
+
 
             if (string.IsNullOrEmpty(id))
             {
                 foreach (var scenarioGroup in scenarioService.ScenarioGroups())
                 {
-                    model.ScenarioGroups.Add(new ScenarioGroupViewModel(scenarioGroup));
+                    model.ScenarioGroups.Add(new ScenarioGroupViewModel(scenarioGroup, lookupCard));
                 }
             }
             else
@@ -295,7 +297,7 @@ namespace HallOfBeorn.Controllers
                     return HttpNotFound("I'm sorry Mario, your Princess is in another castle.\n\nNo scenario found matching this URL");
                 }
 
-                model.Detail = new ScenarioViewModel(scenario);
+                model.Detail = new ScenarioViewModel(scenario, lookupCard);
 
                 return View(model);
             }

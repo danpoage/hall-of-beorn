@@ -63,10 +63,10 @@ namespace HallOfBeorn.Services
                 AddSet(product, cardSet, cards);
             }
 
-            //foreach (var scenario in product.Scenarios())
-            //{
-            //    AddScenario(scenario);
-            //}
+            foreach (var scenario in product.Scenarios())
+            {
+                AddScenario(scenario);
+            }
         }
 
         private void AddSet(Product product, CardSet cardSet, IEnumerable<Card> cards)
