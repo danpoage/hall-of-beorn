@@ -36,6 +36,7 @@ namespace HallOfBeorn.Services
         private readonly List<string> setNames = new List<string>();
         private readonly Dictionary<string, string> encounterSetNames = new Dictionary<string, string>();
         private readonly Dictionary<string, Scenario> scenarios = new Dictionary<string, Scenario>();
+        private readonly Dictionary<string, Scenario> scenariosByAlternateTitle = new Dictionary<string, Scenario>();
 
         private readonly Dictionary<string, Scenario> scenariosByTitle = new Dictionary<string, Scenario>();
         
@@ -110,6 +111,7 @@ namespace HallOfBeorn.Services
                 if (!string.IsNullOrEmpty(card.ScenarioTitle))
                 {
                     var escapedTitle = card.ScenarioTitle.ToUrlSafeString();
+                    var alternateTitle = !string.IsNullOrEmpty(card.AlternateEncounterSet) ? card.AlternateEncounterSet.ToUrlSafeString() : string.Empty;
 
                     if (card.CardType == CardType.Quest)
                     {
@@ -135,6 +137,11 @@ namespace HallOfBeorn.Services
                             scenario.AddQuestCard(card);
 
                             scenarios.Add(escapedTitle, scenario);
+
+                            if (!string.IsNullOrEmpty(alternateTitle))
+                            {
+                                scenariosByAlternateTitle.Add(alternateTitle, scenario);
+                            }
                         }
                         else
                         {
@@ -263,6 +270,11 @@ namespace HallOfBeorn.Services
 
         public Scenario GetScenario(string scenarioTitle)
         {
+            if (scenariosByAlternateTitle.ContainsKey(scenarioTitle))
+            {
+                return scenariosByAlternateTitle[scenarioTitle];
+            }
+
             return scenarios.ContainsKey(scenarioTitle) ?
                 scenarios[scenarioTitle]
                 : null;

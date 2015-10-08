@@ -296,6 +296,15 @@ namespace HallOfBeorn.Controllers
                 {
                     return HttpNotFound("I'm sorry Mario, your Princess is in another castle.\n\nNo scenario found matching this URL");
                 }
+                else 
+                {
+                    var escapedTitle = scenario.Title.ToUrlSafeString();
+                    if (escapedTitle != id)
+                    {
+                        var redirectURL = "/Cards/Scenarios/" + escapedTitle;
+                        return Redirect(redirectURL);
+                    }
+                }
 
                 model.Detail = new ScenarioViewModel(scenario, lookupCard);
 

@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.Scenarios
         public JourneyAlongTheAnduin()
         {
             Number = 2;
-            Title = "Journey Down the Anduin";
+            Title = "Journey Along the Anduin";
 
             AddEncounterSet(EncounterSet.JourneyAlongTheAnduin);
             AddEncounterSet(EncounterSet.Wilderlands);
