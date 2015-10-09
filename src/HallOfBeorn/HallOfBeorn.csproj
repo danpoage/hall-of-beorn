@@ -291,6 +291,7 @@
     <Compile Include="Models\Scenarios\EscapeFromDolGuldur.cs" />
     <Compile Include="Models\Scenarios\JourneyAlongTheAnduin.cs" />
     <Compile Include="Models\Scenarios\PassageThroughMirkwood.cs" />
+    <Compile Include="Models\Scenarios\TheHuntForGollum.cs" />
     <Compile Include="Models\Search\EnumFilterDefinition.cs" />
     <Compile Include="Models\Search\FilterDefinition.cs" />
     <Compile Include="Models\HasShadow.cs" />

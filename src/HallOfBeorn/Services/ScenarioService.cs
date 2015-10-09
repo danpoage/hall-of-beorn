@@ -46,7 +46,7 @@ namespace HallOfBeorn.Services
 
             foreach (var set in scenario.EncounterSets())
             {
-                foreach (var card in cards.Where(x => x.EncounterSet == set.Name))
+                foreach (var card in cards.Where(x => x.CardType != CardType.Quest && x.EncounterSet == set.Name))
                 {
                     byte easyCount = 0; byte normalCount = 0; byte nightmareCount = 0;
 
