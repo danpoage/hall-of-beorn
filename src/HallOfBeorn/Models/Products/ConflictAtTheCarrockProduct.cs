@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.Products
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/rulesheet-ConflictAtTheCarrock.pdf";
 
             AddCardSet(CardSet.ConflictAtTheCarrock);
+
+            AddScenario(new HallOfBeorn.Models.Scenarios.ConflictAtTheCarrock());
         }
     }
 }
