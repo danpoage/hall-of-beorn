@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.Products
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/The-Redhorn-Gate-rulesheet.pdf";
 
             AddCardSet(CardSet.TheRedhornGate);
+
+            AddScenario(new HallOfBeorn.Models.Scenarios.TheRedhornGate());
         }
     }
 }
