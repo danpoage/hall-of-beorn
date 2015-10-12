@@ -393,6 +393,7 @@ namespace HallOfBeorn.Models
         public static EncounterSet TheWatcherInTheWaterNightmare = new EncounterSet { Name = "The Watcher in the Water Nightmare", Set = "The Watcher in the Water Nightmare" };
         public static EncounterSet TheLongDarkNightmare = new EncounterSet { Name = "The Long Dark Nightmare", Set = "The Long Dark Nightmare" };
         public static EncounterSet FoundationsOfStoneNightmare = new EncounterSet { Name = "Foundations of Stone Nightmare", Set = "Foundations of Stone Nightmare" };
+        public static EncounterSet GoblinsOfTheDeepNightmare = new EncounterSet { Name = "Goblins of the Deep Nightmare", Set = "Foundations of Stone Nightmare" };
         public static EncounterSet ShadowAndFlameNightmare = new EncounterSet { Name = "Shadow and Flame Nightmare", Set = "Shadow and Flame Nightmare" };
 
         //Heirs of Numenor and Against the Shadow Nightmare Decks

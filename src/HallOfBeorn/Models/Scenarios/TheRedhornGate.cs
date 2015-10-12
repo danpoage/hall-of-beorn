@@ -9,10 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
     {
         public TheRedhornGate()
         {
-            Title = "The Redhorn Gate";
-            ProductName = "The Redhorn Gate";
-            GroupName = "Dwarrowdelf";
-
+            AdventurePack("The Redhorn Gate", "Dwarrowdelf", 1);
+            
             AddEncounterSet(EncounterSet.TheRedhornGate);
             AddEncounterSet(EncounterSet.MistyMountains);
         }

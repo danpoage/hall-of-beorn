@@ -28,6 +28,14 @@ namespace HallOfBeorn.Models
 
         private readonly Dictionary<string, Tuple<byte, byte, byte>> cardCountMap = new Dictionary<string, Tuple<byte, byte, byte>>();
 
+        protected void AdventurePack(string title, string cycle, int number)
+        {
+            Title = title;
+            ProductName = title;
+            GroupName = cycle;
+            Number = number;
+        }
+
         protected void AddEncounterSet(EncounterSet set)
         {
             encounterSets[set.Name] = set;
