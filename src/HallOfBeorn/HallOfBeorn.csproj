@@ -289,6 +289,7 @@
     <Compile Include="Models\Products\TheTreacheryOfRhudaurProduct.cs" />
     <Compile Include="Models\Scenarios\AJourneyToRhosgobel.cs" />
     <Compile Include="Models\Scenarios\AssaultOnOsgiliath.cs" />
+    <Compile Include="Models\Scenarios\CelebrimborsSecret.cs" />
     <Compile Include="Models\Scenarios\ConflictAtTheCarrock.cs" />
     <Compile Include="Models\Scenarios\CoreSetScenario.cs" />
     <Compile Include="Models\Scenarios\EncounterAtAmonDin.cs" />
@@ -296,6 +297,7 @@
     <Compile Include="Models\Scenarios\FlightFromMoria.cs" />
     <Compile Include="Models\Scenarios\FoundationsOfStone.cs" />
     <Compile Include="Models\Scenarios\HeirsOfNumenorScenario.cs" />
+    <Compile Include="Models\Scenarios\IntoFangorn.cs" />
     <Compile Include="Models\Scenarios\IntoIthilien.cs" />
     <Compile Include="Models\Scenarios\IntoThePit.cs" />
     <Compile Include="Models\Scenarios\JourneyAlongTheAnduin.cs" />
@@ -305,9 +307,13 @@
     <Compile Include="Models\Scenarios\ReturnToMirkwood.cs" />
     <Compile Include="Models\Scenarios\RoadToRivendell.cs" />
     <Compile Include="Models\Scenarios\ShadowAndFlame.cs" />
+    <Compile Include="Models\Scenarios\TheAntleredCrown.cs" />
     <Compile Include="Models\Scenarios\TheBloodOfGondor.cs" />
     <Compile Include="Models\Scenarios\TheDruadanForest.cs" />
+    <Compile Include="Models\Scenarios\TheDunlandTrap.cs" />
+    <Compile Include="Models\Scenarios\TheFordsOfIsen.cs" />
     <Compile Include="Models\Scenarios\TheMorgulVale.cs" />
+    <Compile Include="Models\Scenarios\TheNinInEilph.cs" />
     <Compile Include="Models\Scenarios\TheSiegeOfCairAndros.cs" />
     <Compile Include="Models\Scenarios\TheDeadMarshes.cs" />
     <Compile Include="Models\Scenarios\TheHillsOfEmynMuil.cs" />
@@ -316,7 +322,11 @@
     <Compile Include="Models\Scenarios\TheRedhornGate.cs" />
     <Compile Include="Models\Scenarios\TheSeventhLevel.cs" />
     <Compile Include="Models\Scenarios\TheStewardsFear.cs" />
+    <Compile Include="Models\Scenarios\TheThreeTrials.cs" />
+    <Compile Include="Models\Scenarios\TheVoiceOfIsengardScenario.cs" />
     <Compile Include="Models\Scenarios\TheWatcherInTheWater.cs" />
+    <Compile Include="Models\Scenarios\ToCatchAnOrc.cs" />
+    <Compile Include="Models\Scenarios\TroubleInTharbad.cs" />
     <Compile Include="Models\Search\EnumFilterDefinition.cs" />
     <Compile Include="Models\Search\FilterDefinition.cs" />
     <Compile Include="Models\HasShadow.cs" />
