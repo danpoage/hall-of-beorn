@@ -8,10 +8,8 @@ namespace HallOfBeorn.Models.Scenarios
     public class PassageThroughMirkwood : CoreSetScenario
     {
         public PassageThroughMirkwood()
+            : base("Passage Through Mirkwood", 1)
         {
-            Number = 1;
-            Title = "Passage Through Mirkwood";
-
             AddEncounterSet(EncounterSet.PassageThroughMirkwood);
             AddEncounterSet(EncounterSet.SpidersOfMirkwood);
             AddEncounterSet(EncounterSet.DolGuldurOrcs);

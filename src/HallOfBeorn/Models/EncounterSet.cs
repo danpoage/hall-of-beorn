@@ -193,7 +193,7 @@ namespace HallOfBeorn.Models
             //Heirs of Numenor and Against the Shadow Nightmare Decks
             Add(PerilInPelargirNightmare);
             Add(IntoIthilienNightmare);
-            Add(SiegeOfCairAndrosNightmare);
+            Add(TheSiegeOfCairAndrosNightmare);
             Add(TheStewardsFearNightmare);
             Add(TheDruadanForestNightmare);
             Add(EncounterAtAmonDinNightmare);
@@ -399,7 +399,7 @@ namespace HallOfBeorn.Models
         //Heirs of Numenor and Against the Shadow Nightmare Decks
         public static EncounterSet PerilInPelargirNightmare = new EncounterSet { Name = "Peril in Pelargir Nightmare", Set = "Peril in Pelargir Nightmare" };
         public static EncounterSet IntoIthilienNightmare = new EncounterSet { Name = "Into Ithilien Nightmare", Set = "Into Ithilien Nightmare" };
-        public static EncounterSet SiegeOfCairAndrosNightmare = new EncounterSet { Name = "Siege of Cair Andros Nightmare", Set = "Siege of Cair Andros Nightmare" };
+        public static EncounterSet TheSiegeOfCairAndrosNightmare = new EncounterSet { Name = "The Siege of Cair Andros Nightmare", Set = "The Siege of Cair Andros Nightmare" };
         public static EncounterSet TheStewardsFearNightmare = new EncounterSet { Name = "The Steward's Fear Nightmare", Set = "The Steward's Fear Nightmare" };
         public static EncounterSet TheDruadanForestNightmare = new EncounterSet { Name = "The Drúadan Forest Nightmare", Set = "The Drúadan Forest Nightmare", NormalizedSet = "The Druadan Forest Nightmare" };
         public static EncounterSet EncounterAtAmonDinNightmare = new EncounterSet { Name = "Encounter at Amon-Dîn Nightmare", Set = "Encounter at Amon-Dîn Nightmare", NormalizedSet = "Encounter at Amon-Din Nightmare", };

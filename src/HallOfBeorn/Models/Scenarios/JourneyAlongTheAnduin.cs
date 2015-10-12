@@ -8,10 +8,8 @@ namespace HallOfBeorn.Models.Scenarios
     public class JourneyAlongTheAnduin : CoreSetScenario
     {
         public JourneyAlongTheAnduin()
+            : base("Journey Along the Anduin", 2)
         {
-            Number = 2;
-            Title = "Journey Along the Anduin";
-
             AddEncounterSet(EncounterSet.JourneyAlongTheAnduin);
             AddEncounterSet(EncounterSet.Wilderlands);
             AddEncounterSet(EncounterSet.DolGuldurOrcs);

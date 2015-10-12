@@ -9,8 +9,7 @@ namespace HallOfBeorn.Models.Scenarios
     {
         public TheSeventhLevel()
         {
-            Title = "The Seventh Level";
-            Number = 2;
+            DeluxeExpansion("The Seventh Level", "Khazad-dûm", 2);
 
             AddEncounterSet(EncounterSet.TheSeventhLevel);
             AddEncounterSet(EncounterSet.GoblinsOfTheDeep);

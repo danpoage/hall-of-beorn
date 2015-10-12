@@ -8,10 +8,8 @@ namespace HallOfBeorn.Models.Scenarios
     public class EscapeFromDolGuldur : CoreSetScenario
     {
         public EscapeFromDolGuldur()
+            : base("Escape from Dol Guldur", 3)
         {
-            Number = 3;
-            Title = "Escape from Dol Guldur";
-
             AddEncounterSet(EncounterSet.EscapeFromDolGuldur);
             AddEncounterSet(EncounterSet.SpidersOfMirkwood);
             AddEncounterSet(EncounterSet.DolGuldurOrcs);

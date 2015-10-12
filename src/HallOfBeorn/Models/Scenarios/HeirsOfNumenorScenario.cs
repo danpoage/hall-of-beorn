@@ -5,11 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Scenarios
 {
-    public class KhazadDumScenario : Scenario
+    public class HeirsOfNumenorScenario : Scenario
     {
-        protected KhazadDumScenario()
-            : base(true)
-        {
-        }
     }
 }

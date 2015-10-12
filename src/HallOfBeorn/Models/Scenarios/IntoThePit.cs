@@ -9,9 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
     {
         public IntoThePit()
         {
-            Title = "Into the Pit";
-            Number = 1;
-
+            DeluxeExpansion("Into the Pit", "Khazad-dûm", 1);
+            
             AddEncounterSet(EncounterSet.IntoThePit);
             AddEncounterSet(EncounterSet.GoblinsOfTheDeep);
             AddEncounterSet(EncounterSet.HazardsOfThePit);

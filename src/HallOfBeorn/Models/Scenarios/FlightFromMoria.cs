@@ -9,8 +9,7 @@ namespace HallOfBeorn.Models.Scenarios
     {
         public FlightFromMoria()
         {
-            Title = "Flight from Moria";
-            Number = 3;
+            DeluxeExpansion("Flight from Moria", "Khazad-dûm", 3);
 
             AddEncounterSet(EncounterSet.FlightFromMoria);
             AddEncounterSet(EncounterSet.DeepsOfMoria);

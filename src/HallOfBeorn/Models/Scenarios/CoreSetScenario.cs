@@ -14,6 +14,13 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "Core Set";
         }
 
+        protected CoreSetScenario(string title, int number)
+            : this()
+        {
+            Title = title;
+            Number = number;
+        }
+
         protected void ExcludeDolGuldurOrcsForEasyMode()
         {
             ExcludeFromEasyMode("Chieftain-Ufthak-Core", 1);

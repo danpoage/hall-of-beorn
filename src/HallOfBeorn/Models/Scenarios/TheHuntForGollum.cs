@@ -9,10 +9,7 @@ namespace HallOfBeorn.Models.Scenarios
     {
         public TheHuntForGollum()
         {
-            Title = "The Hunt for Gollum";
-            ProductName = "The Hunt for Gollum";
-            GroupName = "Shadows of Mirkwood";
-            Number = 1;
+            AdventurePack("The Hunt for Gollum", "Shadows of Mirkwood", 1);
 
             AddEncounterSet(EncounterSet.TheHuntForGollum);
             AddEncounterSet(EncounterSet.JourneyAlongTheAnduin);
