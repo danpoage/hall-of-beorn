@@ -9,10 +9,7 @@ namespace HallOfBeorn.Models.Scenarios
     {
         public AJourneyToRhosgobel()
         {
-            Title = "A Journey to Rhosgobel";
-            ProductName = "A Journey to Rhosgobel";
-            GroupName = "Shadows of Mirkwood";
-            Number = 3;
+            AdventurePack("A Journey to Rhosgobel", "Shadows of Mirkwood", 3);
 
             AddEncounterSet(EncounterSet.AJourneyToRhosgobel);
             AddEncounterSet(EncounterSet.DolGuldurOrcs);

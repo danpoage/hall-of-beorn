@@ -9,10 +9,7 @@ namespace HallOfBeorn.Models.Scenarios
     {
         public TheHillsOfEmynMuil()
         {
-            Title = "The Hills of Emyn Muil";
-            ProductName = "The Hills of Emyn Muil";
-            GroupName = "Shadows of Mirkwood";
-            Number = 4;
+            AdventurePack("The Hills of Emyn Muil", "Shadows of Mirkwood", 4);
 
             AddEncounterSet(EncounterSet.TheHillsOfEmynMuil);
             AddEncounterSet(EncounterSet.DolGuldurOrcs);

@@ -9,10 +9,7 @@ namespace HallOfBeorn.Models.Scenarios
     {
         public TheDeadMarshes()
         {
-            Title = "The Dead Marshes";
-            ProductName = "The Dead Marshes";
-            GroupName = "Shadows of Mirkwood";
-            Number = 5;
+            AdventurePack("The Dead Marshes", "Shadows of Mirkwood", 5);
 
             AddEncounterSet(EncounterSet.TheDeadMarshes);
             AddEncounterSet(EncounterSet.Wilderlands);

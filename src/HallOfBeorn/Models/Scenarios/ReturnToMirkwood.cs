@@ -9,10 +9,7 @@ namespace HallOfBeorn.Models.Scenarios
     {
         public ReturnToMirkwood()
         {
-            Title = "Return to Mirkwood";
-            ProductName = "Return to Mirkwood";
-            GroupName = "Shadows of Mirkwood";
-            Number = 6;
+            AdventurePack("Return to Mirkwood", "Shadows of Mirkwood", 6);
 
             AddEncounterSet(EncounterSet.ReturnToMirkwood);
             AddEncounterSet(EncounterSet.Wilderlands);

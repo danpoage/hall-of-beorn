@@ -9,10 +9,7 @@ namespace HallOfBeorn.Models.Scenarios
     {
         public ConflictAtTheCarrock()
         {
-            Title = "Conflict at the Carrock";
-            ProductName = "Conflict at the Carrock";
-            GroupName = "Shadows of Mirkwood";
-            Number = 2;
+            AdventurePack("Conflict at the Carrock", "Shadows of Mirkwood", 2);
 
             AddEncounterSet(EncounterSet.ConflictAtTheCarrock);
             AddEncounterSet(EncounterSet.Wilderlands);
