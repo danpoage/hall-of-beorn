@@ -292,6 +292,7 @@
     <Compile Include="Models\Scenarios\CelebrimborsSecret.cs" />
     <Compile Include="Models\Scenarios\ConflictAtTheCarrock.cs" />
     <Compile Include="Models\Scenarios\CoreSetScenario.cs" />
+    <Compile Include="Models\Scenarios\DeadmensDike.cs" />
     <Compile Include="Models\Scenarios\EncounterAtAmonDin.cs" />
     <Compile Include="Models\Scenarios\EscapeFromDolGuldur.cs" />
     <Compile Include="Models\Scenarios\FlightFromMoria.cs" />
@@ -300,6 +301,7 @@
     <Compile Include="Models\Scenarios\IntoFangorn.cs" />
     <Compile Include="Models\Scenarios\IntoIthilien.cs" />
     <Compile Include="Models\Scenarios\IntoThePit.cs" />
+    <Compile Include="Models\Scenarios\IntrudersInChetwood.cs" />
     <Compile Include="Models\Scenarios\JourneyAlongTheAnduin.cs" />
     <Compile Include="Models\Scenarios\KhazadDumScenario.cs" />
     <Compile Include="Models\Scenarios\PassageThroughMirkwood.cs" />
@@ -312,6 +314,7 @@
     <Compile Include="Models\Scenarios\TheDruadanForest.cs" />
     <Compile Include="Models\Scenarios\TheDunlandTrap.cs" />
     <Compile Include="Models\Scenarios\TheFordsOfIsen.cs" />
+    <Compile Include="Models\Scenarios\TheLostRealmScenario.cs" />
     <Compile Include="Models\Scenarios\TheMorgulVale.cs" />
     <Compile Include="Models\Scenarios\TheNinInEilph.cs" />
     <Compile Include="Models\Scenarios\TheSiegeOfCairAndros.cs" />
@@ -325,6 +328,7 @@
     <Compile Include="Models\Scenarios\TheThreeTrials.cs" />
     <Compile Include="Models\Scenarios\TheVoiceOfIsengardScenario.cs" />
     <Compile Include="Models\Scenarios\TheWatcherInTheWater.cs" />
+    <Compile Include="Models\Scenarios\TheWeatherHills.cs" />
     <Compile Include="Models\Scenarios\ToCatchAnOrc.cs" />
     <Compile Include="Models\Scenarios\TroubleInTharbad.cs" />
     <Compile Include="Models\Search\EnumFilterDefinition.cs" />
