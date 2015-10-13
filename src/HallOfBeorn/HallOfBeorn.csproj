@@ -318,6 +318,7 @@
     <Compile Include="Models\Scenarios\TheDruadanForest.cs" />
     <Compile Include="Models\Scenarios\TheDunlandTrap.cs" />
     <Compile Include="Models\Scenarios\TheFordsOfIsen.cs" />
+    <Compile Include="Models\Scenarios\TheHobbitOnTheDoorstepScenario.cs" />
     <Compile Include="Models\Scenarios\TheHobbitOverHillScenario.cs" />
     <Compile Include="Models\Scenarios\TheLostRealmScenario.cs" />
     <Compile Include="Models\Scenarios\TheMorgulVale.cs" />
