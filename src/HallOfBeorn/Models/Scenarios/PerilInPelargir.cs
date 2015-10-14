@@ -1,20 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
 namespace HallOfBeorn.Models.Scenarios
 {
-    public class PerilInPelargir : HeirsOfNumenorScenario
+    public class PerilInPelargir : Scenario
     {
         public PerilInPelargir()
         {
-            DeluxeExpansion("Peril in Pelargir", "Heirs of Númenor", 1);
+            Title = "Peril in Pelargir";
+            ProductName = "Heirs of Númenor";
+            GroupName = "Heirs of Númenor";
+            Number = 1;
 
-            AddEncounterSet(EncounterSet.PerilInPelargir);
-            AddEncounterSet(EncounterSet.StreetsOfGondor);
             AddEncounterSet(EncounterSet.Brigands);
+            AddEncounterSet(EncounterSet.PerilInPelargir);
             AddEncounterSet(EncounterSet.PerilInPelargirNightmare);
+            AddEncounterSet(EncounterSet.StreetsOfGondor);
+
+            AddQuestCardId("The-Leaping-Fish-Quest-HoN");
+            AddQuestCardId("Fighting-in-the-Streets-HoN");
+            AddQuestCardId("Escape-to-the-Quays-HoN");
+
+            ExcludeFromEasyMode("Umbar-Assassin-HoN", 1);
+            ExcludeFromEasyMode("Pelargir-Docks-HoN", 2);
+            ExcludeFromEasyMode("Local-Trouble-HoN", 1);
+            ExcludeFromEasyMode("Lost-in-the-City-HoN", 1);
+
+            ExcludeFromNightmareMode("Collateral-Damage-HoN", 4);
+            ExcludeFromNightmareMode("Harbor-Storehouse-HoN", 2);
+            ExcludeFromNightmareMode("Harbor-Thug-HoN", 1);
+            ExcludeFromNightmareMode("Pickpocket-HoN", 3);
         }
     }
 }

@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.Products
             : base("The Ruins of Belegost", "OP014", ImageType.Jpg)
         {
             AddCardSet(CardSet.TheRuinsOfBelegost);
+
+            AddScenario(new HallOfBeorn.Models.Scenarios.TheRuinsOfBelegost());
         }
     }
 }

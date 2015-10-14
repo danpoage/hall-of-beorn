@@ -365,14 +365,9 @@ namespace HallOfBeorn
             return self.Value == byte.MaxValue ? "-" : self.Value.ToString();
         }
 
-        public static string NormalizeString(this string self)
+        private static Dictionary<string, string> getNormalizeMap()
         {
-            if (string.IsNullOrEmpty(self))
-            {
-                return self;
-            }
-
-            var tokensToNormalize = new Dictionary<string, string> {
+            return new Dictionary<string, string> {
                 {"À", "A"}, {"Â", "A"}, {"Á", "A"}, {"Æ", "AE"}, {"Ǣ", "AE"}, {"Å", "A"},
                 {"à", "A"}, {"â", "A"}, {"á", "A"}, {"æ", "AE"}, {"ǣ", "AE"}, {"ā", "A"},
 
@@ -415,6 +410,80 @@ namespace HallOfBeorn
                 {"ў", "U"},
                 {"ž", "Z"}
             };
+        }
+
+        private static Dictionary<string, string> getCaseSensitiveNormalizeMap()
+        {
+            return new Dictionary<string, string> {
+                {"À", "A"}, {"Â", "A"}, {"Á", "A"}, {"Æ", "AE"}, {"Ǣ", "AE"}, {"Å", "A"},
+                {"à", "a"}, {"â", "a"}, {"á", "a"}, {"æ", "ae"}, {"ǣ", "ae"}, {"ā", "a"},
+
+                {"Ç", "C"},
+                {"č", "c"},
+
+                {"Ð", "D"},
+                {"ð", "d"}, 
+
+                {"È", "E"}, {"Ê", "E"}, {"Ë", "E"}, {"É", "E"},
+                {"è", "e"}, {"ê", "e"}, {"ë", "e"}, {"ē", "e"}, {"é", "e"},
+
+                {"Ğ", "G"}, {"ѓ", "G"},
+                {"ģ", "g"}, {"ǧ", "g"},
+
+                {"ȟ", "h"},
+
+                {"Ï", "I"}, {"Î", "I"}, {"Í", "I"}, {"İ", "I"}, {"й", "I"}, {"ѝ", "I"},
+                {"ï", "i"}, {"î", "i"}, {"ī", "i"}, {"í", "i"},
+                
+                {"ќ", "K"},
+                {"ķ", "k"},
+
+                {"ļ", "l"},
+
+                {"Ñ", "N"},
+                {"ñ", "n"}, {"ņ", "n"}, {"ŋ", "n"},
+
+                {"Ô", "O"}, {"Ö", "O"}, {"Ó", "O"},
+                {"ô", "o"}, {"ö", "o"}, {"ø", "o"}, {"ó", "o"}, {"õ", "o"},
+                
+                {"ŗ", "r"},
+
+                {"Ş", "S"},
+                {"š", "s"},
+
+                {"Û", "U"}, {"Ù", "U"}, {"Ú", "U"}, {"Ü", "U"},
+                {"û", "u"}, {"ù", "u"}, {"ū", "u"}, {"ú", "u"},
+                
+                {"ў", "u"},
+                {"ž", "z"}
+            };
+        }
+
+        public static string NormalizeString(this string self)
+        {
+            if (string.IsNullOrEmpty(self))
+            {
+                return self;
+            }
+
+            var tokensToNormalize = getNormalizeMap();
+
+            var normalized = self;
+            foreach (var pair in tokensToNormalize)
+            {
+                normalized = normalized.Replace(pair.Key, pair.Value);
+            }
+            return normalized;
+        }
+
+        public static string NormalizeCaseSensitiveString(this string self)
+        {
+            if (string.IsNullOrEmpty(self))
+            {
+                return self;
+            }
+
+            var tokensToNormalize = getCaseSensitiveNormalizeMap();
 
             var normalized = self;
             foreach (var pair in tokensToNormalize)

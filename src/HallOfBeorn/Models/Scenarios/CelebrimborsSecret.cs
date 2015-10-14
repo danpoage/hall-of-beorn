@@ -1,22 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
 namespace HallOfBeorn.Models.Scenarios
 {
-    public class CelebrimborsSecret : TheVoiceOfIsengardScenario
+    public class CelebrimborsSecret : Scenario
     {
         public CelebrimborsSecret()
         {
-            AdventurePack("Celebrimbor's Secret", "The Ring-maker", 5);
+            Title = "Celebrimbor's Secret";
+            ProductName = "Celebrimbor's Secret";
+            GroupName = "The Ring-maker";
+            Number = 0;
+
+            AddEncounterSet(EncounterSet.BrokenLands);
+            AddEncounterSet(EncounterSet.CelebrimborsSecret);
+            AddEncounterSet(EncounterSet.MistyMountainOrcs);
 
             AddQuestCardId("The-Ruins-of-Ost-in-Edhil-CS");
             AddQuestCardId("The-Enemy's-Servant-CS");
 
-            AddEncounterSet(EncounterSet.CelebrimborsSecret);
-            AddEncounterSet(EncounterSet.BrokenLands);
-            AddEncounterSet(EncounterSet.MistyMountainOrcs);
+            ExcludeFromEasyMode("Take-Cover-VoI", 1);
+            ExcludeFromEasyMode("Bellach's-Scout-CS", 1);
+            ExcludeFromEasyMode("City-Remains-CS", 2);
+            ExcludeFromEasyMode("Discovered-CS", 2);
+            ExcludeFromEasyMode("Prowling-Orc-CS", 1);
+            ExcludeFromEasyMode("Orc-Hound-VoI", 1);
+            ExcludeFromEasyMode("Orc-Hunter-VoI", 2);
+
         }
     }
 }

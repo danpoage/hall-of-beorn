@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.Products
             : base("Fog on the Barrow-downs", "MEC36", ImageType.Jpg)
         {
             AddCardSet(CardSet.FogOnTheBarrowDowns);
+
+            AddScenario(new HallOfBeorn.Models.Scenarios.FogOnTheBarrowDowns());
         }
     }
 }

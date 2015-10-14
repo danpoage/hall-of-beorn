@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.Products
             : base("Treachery of Rhudaur", "MEC42", ImageType.Jpg)
         {
             AddCardSet(CardSet.TheTreacheryOfRhudaur);
+
+            AddScenario(new HallOfBeorn.Models.Scenarios.TheTreacheryOfRhudaur());
         }
     }
 }

@@ -1,15 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
 namespace HallOfBeorn.Models.Scenarios
 {
-    public class TheNinInEilph : TheVoiceOfIsengardScenario
+    public class TheNinInEilph : Scenario
     {
         public TheNinInEilph()
         {
-            AdventurePack("The Nîn-in-Eilph", "The Ring-maker", 4);
+            Title = "The Nîn-in-Eilph";
+            ProductName = "The Nîn-in-Eilph";
+            GroupName = "The Ring-maker";
+            Number = 0;
+
+            AddEncounterSet(EncounterSet.TheNinInEilph);
+            AddEncounterSet(EncounterSet.WearyTravelers);
 
             AddQuestCardId("Fleeing-from-Tharbad-NiE");
             AddQuestCardId("Through-the-Marsh-No-End-in-Sight-NiE");
@@ -20,8 +21,13 @@ namespace HallOfBeorn.Models.Scenarios
             AddQuestCardId("Lost-in-the-Swanfleet-Creatures-of-a-Forgotten-Age-NiE");
             AddQuestCardId("Out-of-the-Swamp-NiE");
 
-            AddEncounterSet(EncounterSet.TheNinInEilph);
-            AddEncounterSet(EncounterSet.WearyTravelers);
+            ExcludeFromEasyMode("Fen-of-Reeds-NiE", 1);
+            ExcludeFromEasyMode("Giant-Swamp-Adder-NiE", 1);
+            ExcludeFromEasyMode("Remnants-of-Elder-Days-NiE", 1);
+            ExcludeFromEasyMode("Shifting-Marshland-NiE", 1);
+            ExcludeFromEasyMode("In-Need-of-Rest-VoI", 1);
+            ExcludeFromEasyMode("Low-on-Provisions-VoI", 1);
+
         }
     }
 }

@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.Products
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/Road-to-Rivendell-rulesheet.pdf";
 
             AddCardSet(CardSet.RoadToRivendell);
+
+            AddScenario(new HallOfBeorn.Models.Scenarios.RoadToRivendell());
         }
     }
 }

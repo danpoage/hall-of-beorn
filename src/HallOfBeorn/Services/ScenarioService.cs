@@ -27,7 +27,7 @@ namespace HallOfBeorn.Services
                 }
             }
 
-            LoadScenarioCards(cards);    
+            //LoadScenarioCards(cards);    
         }
 
         private readonly CardRepository cardRepository;
@@ -42,6 +42,11 @@ namespace HallOfBeorn.Services
         
         private void AddScenario(Scenario scenario)
         {
+            if (scenariosByTitle.ContainsKey(scenario.Title))
+            {
+                return;
+            }
+
             scenariosByTitle.Add(scenario.Title, scenario);
 
             foreach (var set in scenario.EncounterSets())
@@ -62,6 +67,7 @@ namespace HallOfBeorn.Services
                     }
 
                     scenario.MapCardCount(card.Slug, easyCount, normalCount, nightmareCount);
+                    scenario.AddScenarioCard(card);
                 }
             }
 
@@ -81,20 +87,20 @@ namespace HallOfBeorn.Services
 
         private void AddProduct(Product product, IEnumerable<Card> cards)
         {
+            //NOTE: Swap this for the lines above to use the old scenario-loading logic
+            /*
             foreach (var cardSet in product.CardSets())
             {
                 AddSet(product, cardSet, cards);
-            }
+            }*/
 
-            //NOTE: Swap this for the lines above to use the new scenario-loading logic
-            /*
             foreach (var scenario in product.Scenarios())
             {
                 AddScenario(scenario);
             }
-            */
         }
 
+        /*
         private void AddSet(Product product, CardSet cardSet, IEnumerable<Card> cards)
         {
             sets.Add(cardSet);
@@ -228,6 +234,7 @@ namespace HallOfBeorn.Services
                 }
             }
         }
+        */
 
         public IEnumerable<string> SetNames()
         {

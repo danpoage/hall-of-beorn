@@ -1,30 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
 namespace HallOfBeorn.Models.Scenarios
 {
-    public class EscapeFromDolGuldur : CoreSetScenario
+    public class EscapeFromDolGuldur : Scenario
     {
         public EscapeFromDolGuldur()
-            : base("Escape from Dol Guldur", 3)
         {
-            AddEncounterSet(EncounterSet.EscapeFromDolGuldur);
-            AddEncounterSet(EncounterSet.SpidersOfMirkwood);
+            Title = "Escape from Dol Guldur";
+            ProductName = "Core Set";
+            GroupName = "Core Set";
+            Number = 3;
+
             AddEncounterSet(EncounterSet.DolGuldurOrcs);
+            AddEncounterSet(EncounterSet.EscapeFromDolGuldur);
             AddEncounterSet(EncounterSet.EscapeFromDolGuldurNightmare);
+            AddEncounterSet(EncounterSet.SpidersOfMirkwood);
 
             AddQuestCardId("The-Necromancer's-Tower-Core");
             AddQuestCardId("Through-the-Caverns-Core");
             AddQuestCardId("Out-of-the-Dungeons-Core");
 
-            ExcludeSpidersOfMirkwoodForEasyMode();
-            ExcludeDolGuldurOrcsForEasyMode();
-
+            ExcludeFromEasyMode("Chieftan-Ufthak-Core", 1);
+            ExcludeFromEasyMode("Dol-Guldur-Beastmaster-Core", 1);
+            ExcludeFromEasyMode("Necromancer's-Pass-Core", 2);
+            ExcludeFromEasyMode("The-Necromancer's-Reach-Core", 2);
             ExcludeFromEasyMode("Dungeon-Jailor-Core", 2);
+            ExcludeFromEasyMode("Caught-in-a-Web-Core", 2);
+            ExcludeFromEasyMode("Eyes-of-the-Forest-Core", 1);
+            ExcludeFromEasyMode("Hummerhorns-Core", 1);
 
-            ExcludeFromNightmareMode("Dol-Guldur-Orcs-Core", 2);
+            ExcludeFromNightmareMode("Dol-Guldur-Orcs-Enemy-Core", 2);
             ExcludeFromNightmareMode("Enchanted-Stream-Core", 2);
             ExcludeFromNightmareMode("Necromancer's-Pass-Core", 1);
             ExcludeFromNightmareMode("The-Necromancer's-Reach-Core", 1);

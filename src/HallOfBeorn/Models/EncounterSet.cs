@@ -322,7 +322,7 @@ namespace HallOfBeorn.Models
         public static EncounterSet TheTreacheryOfRhudaur = new EncounterSet { Name = "The Treachery of Rhudaur", Set = "The Treachery of Rhudaur" };
 
         //The Hobbit: Over Hill and Under Hill
-        public static EncounterSet WeMustAwayEreBreakOfDay = new EncounterSet { Name = "We Must Away Ere Break of Day", Set = "The Hobbit: Over Hill and Under Hill" };
+        public static EncounterSet WeMustAwayEreBreakOfDay = new EncounterSet { Name = "We Must Away, Ere Break of Day", Set = "The Hobbit: Over Hill and Under Hill" };
         public static EncounterSet WesternLands = new EncounterSet { Name = "Western Lands", Set = "The Hobbit: Over Hill and Under Hill" };
         public static EncounterSet OverTheMistyMountainsGrim = new EncounterSet { Name = "Over the Misty Mountains Grim", Set = "The Hobbit: Over Hill and Under Hill" };
         public static EncounterSet TheGreatGoblin = new EncounterSet { Name = "The Great Goblin", Set = "The Hobbit: Over Hill and Under Hill" };
@@ -413,7 +413,7 @@ namespace HallOfBeorn.Models
         public static EncounterSet IntoFangornNightmare = new EncounterSet { Name = "Into Fangorn Nightmare", Set = "Into Fangorn Nightmare" };
 
         //The Hobbit: Over Hill and Under Hill Nightmare Decks
-        public static EncounterSet WeMustAwayEreBreakOfDayNightmare = new EncounterSet { Name = "We Must Away Ere Break of Day Nightmare", Set = "We Must Away Ere Break of Day Nightmare" };
+        public static EncounterSet WeMustAwayEreBreakOfDayNightmare = new EncounterSet { Name = "We Must Away, Ere Break of Day Nightmare", Set = "We Must Away, Ere Break of Day Nightmare" };
         public static EncounterSet OverTheMistyMountainsGrimNightmare = new EncounterSet { Name = "Over the Misty Mountains Grim Nightmare", Set = "Over the Misty Mountains Grim Nightmare" };
         public static EncounterSet TheGreatGoblinNightmare = new EncounterSet { Name = "The Great Goblin Nightmare", Set = "Over the Misty Mountains Grim Nightmare" };
         public static EncounterSet DungeonsDeepAndCavernsDimNightmare = new EncounterSet { Name = "Dungeons Deep and Caverns Dim Nightmare", Set = "Dungeons Deep and Caverns Dim Nightmare" };

@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.Products
             : base("The Stone of Erech GenCon 2013", "MEC33", ImageType.Jpg)
         {
             AddCardSet(CardSet.TheStoneOfErech);
+
+            AddScenario(new HallOfBeorn.Models.Scenarios.TheStoneOfErech());
         }
     }
 }

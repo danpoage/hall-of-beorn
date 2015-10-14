@@ -1,25 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
 namespace HallOfBeorn.Models.Scenarios
 {
-    public class WeMustAwayEreBreakOfDay : TheHobbitOverHillScenario
+    public class WeMustAwayEreBreakOfDay : Scenario
     {
         public WeMustAwayEreBreakOfDay()
         {
-            SagaExpansion("We Must Away Ere Break of Day", "The Hobbit: Over Hill and Under Hills", 1);
+            Title = "We Must Away, Ere Break of Day";
+            ProductName = "The Hobbit: Over Hill and Under Hill";
+            GroupName = "The Hobbit";
+            Number = 1;
+
+            AddEncounterSet(EncounterSet.WeMustAwayEreBreakOfDay);
+            AddEncounterSet(EncounterSet.WeMustAwayEreBreakOfDayNightmare);
+            AddEncounterSet(EncounterSet.WesternLands);
 
             AddQuestCardId("An-Unexpected-Party-THOHaUH");
             AddQuestCardId("Roast-Mutton-THOHaUH");
             AddQuestCardId("Dawn-Take-You-All-THOHaUH");
 
-            AddEncounterSet(EncounterSet.WeMustAwayEreBreakOfDay);
-            AddEncounterSet(EncounterSet.WesternLands);
-            AddEncounterSet(EncounterSet.WeMustAwayEreBreakOfDayNightmare);
+            ExcludeFromEasyMode("Hungry-Troll-THOHaUH", 3);
+            ExcludeFromEasyMode("Lots-or-None-at-All-THOHaUH", 2);
+            ExcludeFromEasyMode("Roast-'Em-or-Boil-'Em-THOHaUH", 1);
+            ExcludeFromEasyMode("Troll-Camp-THOHaUH", 2);
+            ExcludeFromEasyMode("Dreary-Hills-THOHaUH", 1);
+            ExcludeFromEasyMode("No-Campfire-THOHaUH", 2);
+            ExcludeFromEasyMode("Wind-whipped-Rain-THOHaUH", 1);
 
-            RemoveWesternLandsForEasyMode();
+            ExcludeFromNightmareMode("A-Nice-Pickle-THOHaUH", 2);
+            ExcludeFromNightmareMode("Hobbit-lands-THOHaUH", 2);
+            ExcludeFromNightmareMode("A-Suspicious-Crow-THOHaUH", 3);
+            ExcludeFromNightmareMode("Dreary-Hills-THOHaUH", 1);
         }
     }
 }

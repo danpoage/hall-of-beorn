@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.Products
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/MEC19-the-druadan-forest-rulesheet.pdf";
 
             AddCardSet(CardSet.TheDruadanForest);
+
+            AddScenario(new HallOfBeorn.Models.Scenarios.TheDruadanForest());
         }
     }
 }

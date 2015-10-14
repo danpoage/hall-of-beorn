@@ -1,21 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
 namespace HallOfBeorn.Models.Scenarios
 {
-    public class IntoIthilien : HeirsOfNumenorScenario
+    public class IntoIthilien : Scenario
     {
         public IntoIthilien()
         {
-            DeluxeExpansion("Into Ithilien", "Heirs of Númenor", 2);
+            Title = "Into Ithilien";
+            ProductName = "Heirs of Númenor";
+            GroupName = "Heirs of Númenor";
+            Number = 2;
 
-            AddEncounterSet(EncounterSet.IntoIthilien);
             AddEncounterSet(EncounterSet.BroodingForest);
             AddEncounterSet(EncounterSet.CreaturesOfTheForest);
-            AddEncounterSet(EncounterSet.Southrons);
+            AddEncounterSet(EncounterSet.IntoIthilien);
             AddEncounterSet(EncounterSet.IntoIthilienNightmare);
+            AddEncounterSet(EncounterSet.Southrons);
+
+            AddQuestCardId("Ambush-in-Ithilien-HoN");
+            AddQuestCardId("Southron-Counter-attack-HoN");
+            AddQuestCardId("The-Hidden-Way-HoN");
+            AddQuestCardId("Approaching-Cair-Andros-HoN");
+
+            ExcludeFromEasyMode("Lost-Companion-HoN", 2);
+            ExcludeFromEasyMode("Overgrown-Trail-HoN", 2);
+            ExcludeFromEasyMode("Morgul-Spider-HoN", 2);
+            ExcludeFromEasyMode("Watcher-in-the-Wood-HoN", 2);
+            ExcludeFromEasyMode("Blocking-Wargs-HoN", 2);
+            ExcludeFromEasyMode("Mumak-HoN", 1);
+            ExcludeFromEasyMode("Southron-Support-HoN", 2);
+
+            ExcludeFromNightmareMode("Overgrown-Trail-HoN", 1);
+            ExcludeFromNightmareMode("Secluded-Glade-HoN", 3);
+            ExcludeFromNightmareMode("Forest-Bat-HoN", 3);
+            ExcludeFromNightmareMode("Watcher-in-the-Wood-HoN", 2);
+            ExcludeFromNightmareMode("Blocking-Wargs-HoN", 1);
+            ExcludeFromNightmareMode("Southron-Mercenaries-HoN", 3);
         }
     }
 }

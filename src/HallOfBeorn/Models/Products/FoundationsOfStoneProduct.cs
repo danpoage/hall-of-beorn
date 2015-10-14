@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.Products
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/Foundations_of_Stone_rulesheet.pdf";
 
             AddCardSet(CardSet.FoundationsOfStone);
+
+            AddScenario(new HallOfBeorn.Models.Scenarios.FoundationsOfStone());
         }
     }
 }

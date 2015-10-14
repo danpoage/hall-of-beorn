@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.Products
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/trouble-in-tharbad-rulesheet.pdf";
 
             AddCardSet(new Sets.TroubleInTharbad());
+
+            AddScenario(new HallOfBeorn.Models.Scenarios.TroubleInTharbad());
         }
     }
 }

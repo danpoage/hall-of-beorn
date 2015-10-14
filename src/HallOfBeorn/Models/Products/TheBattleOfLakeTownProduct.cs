@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.Products
             : base("The Battle of Lake-town GenCon 2012", "MEC35", ImageType.Jpg)
         {
             AddCardSet(CardSet.TheBattleOfLakeTown);
+
+            AddScenario(new HallOfBeorn.Models.Scenarios.TheBattleOfLakeTown());
         }
     }
 }

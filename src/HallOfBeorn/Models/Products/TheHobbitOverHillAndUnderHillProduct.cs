@@ -13,6 +13,10 @@ namespace HallOfBeorn.Models.Products
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/hobbit_over_hill_and_under_hill_rulesheet.pdf";
 
             AddCardSet(CardSet.TheHobbitOverHillAndUnderHill);
+
+            AddScenario(new HallOfBeorn.Models.Scenarios.WeMustAwayEreBreakOfDay());
+            AddScenario(new HallOfBeorn.Models.Scenarios.OverTheMistyMountainsGrim());
+            AddScenario(new HallOfBeorn.Models.Scenarios.DungeonsDeepAndCavernsDim());
         }
     }
 }

@@ -1,20 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
 namespace HallOfBeorn.Models.Scenarios
 {
-    public class ShadowAndFlame : KhazadDumScenario
+    public class ShadowAndFlame : Scenario
     {
         public ShadowAndFlame()
         {
-            AdventurePack("Shadow and Flame", "Dwarrowdelf", 6);
+            Title = "Shadow and Flame";
+            ProductName = "Shadow and Flame";
+            GroupName = "Dwarrowdelf";
+            Number = 0;
 
-            AddEncounterSet(EncounterSet.ShadowAndFlame);
             AddEncounterSet(EncounterSet.DeepsOfMoria);
             AddEncounterSet(EncounterSet.GoblinsOfTheDeep);
+            AddEncounterSet(EncounterSet.ShadowAndFlame);
             AddEncounterSet(EncounterSet.ShadowAndFlameNightmare);
+
+            AddQuestCardId("Nearing-the-Gate-SaF");
+            AddQuestCardId("The-Rear-Guard-SaF");
+            AddQuestCardId("Last-Lord-of-Moria-SaF");
+
+            ExcludeFromEasyMode("Great-Cave-troll-KD", 2);
+            ExcludeFromEasyMode("Massing-in-the-Deep-KD", 2);
+            ExcludeFromEasyMode("Orc-Drummer-KD", 1);
+            ExcludeFromEasyMode("Watchful-Eyes-KD", 3);
+            ExcludeFromEasyMode("Counter-Spell-SaF", 2);
+            ExcludeFromEasyMode("Fires-in-the-Deep-SaF", 2);
+            ExcludeFromEasyMode("Leaping-Flame-SaF", 2);
+
+            ExcludeFromNightmareMode("Stray-Goblin-KD", 3);
+            ExcludeFromNightmareMode("The-Mountains'-Roots-KD", 3);
+            ExcludeFromNightmareMode("Goblin-Scout-KD", 3);
+            ExcludeFromNightmareMode("Goblin-Tunnels-KD", 2);
+            ExcludeFromNightmareMode("Fiery-Sword-SaF", 1);
+            ExcludeFromNightmareMode("Many-Thonged-Whip-SaF", 1);
+            ExcludeFromNightmareMode("Ranging-Goblin-SaF", 3);
         }
     }
 }

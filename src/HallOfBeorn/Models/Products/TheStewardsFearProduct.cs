@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.Products
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/MEC18-the-stewards-fear-rulesheet.pdf";
 
             AddCardSet(CardSet.TheStewardsFear);
+
+            AddScenario(new HallOfBeorn.Models.Scenarios.TheStewardsFear());
         }
     }
 }

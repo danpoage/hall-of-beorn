@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.Products
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/rulesheet-assault-on-osgiliath.pdf";
 
             AddCardSet(CardSet.AssaultOnOsgiliath);
+
+            AddScenario(new HallOfBeorn.Models.Scenarios.AssaultOnOsgiliath());
         }
     }
 }

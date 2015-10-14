@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.Products
             : base("The Massing at Osgiliath GenCon 2011", "MEC15", ImageType.Jpg)
         {
             AddCardSet(CardSet.TheMassingAtOsgiliath);
+
+            AddScenario(new HallOfBeorn.Models.Scenarios.TheMassingAtOsgiliath());
         }
     }
 }

@@ -1,23 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
 namespace HallOfBeorn.Models.Scenarios
 {
-    public class TheDunlandTrap : TheVoiceOfIsengardScenario
+    public class TheDunlandTrap : Scenario
     {
         public TheDunlandTrap()
         {
-            AdventurePack("The Dunland Trap", "The Ring-maker", 1);
+            Title = "The Dunland Trap";
+            ProductName = "The Dunland Trap";
+            GroupName = "The Ring-maker";
+            Number = 0;
+
+            AddEncounterSet(EncounterSet.DunlandWarriors);
+            AddEncounterSet(EncounterSet.TheDunlandTrap);
+            AddEncounterSet(EncounterSet.WearyTravelers);
 
             AddQuestCardId("The-Road-to-Tharbad-TDT");
             AddQuestCardId("A-Well-Laid-Trap-TDT");
             AddQuestCardId("No-Way-Out-TDT");
 
-            AddEncounterSet(EncounterSet.TheDunlandTrap);
-            AddEncounterSet(EncounterSet.DunlandWarriors);
-            AddEncounterSet(EncounterSet.WearyTravelers);
+            ExcludeFromEasyMode("Dunland-Chieftain-VoI", 2);
+            ExcludeFromEasyMode("Wild-Men-of-Dunland-VoI", 1);
+            ExcludeFromEasyMode("Boar-Clan-Stalker-TDT", 1);
+            ExcludeFromEasyMode("Hills-of-Dunland-TDT", 2);
+            ExcludeFromEasyMode("Hithaeglir-Foothills-TDT", 1);
+            ExcludeFromEasyMode("In-Need-of-Rest-VoI", 1);
+            ExcludeFromEasyMode("Low-on-Provisions-VoI", 1);
+
         }
     }
 }

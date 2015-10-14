@@ -1,23 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
 namespace HallOfBeorn.Models.Scenarios
 {
-    public class AcrossTheEttenmoors : TheLostRealmScenario
+    public class AcrossTheEttenmoors : Scenario
     {
         public AcrossTheEttenmoors()
         {
-            AdventurePack("Across the Ettenmoors", "Angmar Awakened", 3);
+            Title = "Across the Ettenmoors";
+            ProductName = "Across the Ettenmoors";
+            GroupName = "Angmar Awakened";
+            Number = 3;
+
+            AddEncounterSet(EncounterSet.AcrossTheEttenmoors);
+            AddEncounterSet(EncounterSet.EriadorWilds);
+            AddEncounterSet(EncounterSet.FoulWeather);
 
             AddQuestCardId("Into-the-Ettenmoors-AtE");
             AddQuestCardId("A-Miserable-Journey-AtE");
             AddQuestCardId("Journey's-End-AtE");
 
-            AddEncounterSet(EncounterSet.AcrossTheEttenmoors);
-            AddEncounterSet(EncounterSet.EriadorWilds);
-            AddEncounterSet(EncounterSet.FoulWeather);
+            ExcludeFromEasyMode("Arador's-Bane-AtE", 1);
+            ExcludeFromEasyMode("Barren-Moorland-AtE", 2);
+            ExcludeFromEasyMode("Coldfell-Giant-AtE", 2);
+            ExcludeFromEasyMode("Cruel-Mountain-troll-AtE", 2);
+            ExcludeFromEasyMode("Pressing-Needs-TLR", 1);
+            ExcludeFromEasyMode("Shrouded-Hills-TLR", 1);
+            ExcludeFromEasyMode("Weight-of-Responsibility-TLR", 1);
+            ExcludeFromEasyMode("Biting-Wind-TLR", 1);
+            ExcludeFromEasyMode("Cold-from-Angmar-TLR", 1);
+            ExcludeFromEasyMode("Freezing-Blast-TLR", 1);
+
         }
     }
 }

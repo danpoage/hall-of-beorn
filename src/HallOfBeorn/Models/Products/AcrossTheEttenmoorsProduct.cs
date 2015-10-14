@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.Products
             : base("Across the Ettenmoors", "MEC41", ImageType.Jpg)
         {
             AddCardSet(CardSet.AcrossTheEttenmoors);
+
+            AddScenario(new HallOfBeorn.Models.Scenarios.AcrossTheEttenmoors());
         }
     }
 }

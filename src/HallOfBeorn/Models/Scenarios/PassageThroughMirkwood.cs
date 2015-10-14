@@ -1,27 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
 namespace HallOfBeorn.Models.Scenarios
 {
-    public class PassageThroughMirkwood : CoreSetScenario
+    public class PassageThroughMirkwood : Scenario
     {
         public PassageThroughMirkwood()
-            : base("Passage Through Mirkwood", 1)
         {
-            AddEncounterSet(EncounterSet.PassageThroughMirkwood);
-            AddEncounterSet(EncounterSet.SpidersOfMirkwood);
+            Title = "Passage Through Mirkwood";
+            ProductName = "Core Set";
+            GroupName = "Core Set";
+            Number = 1;
+
             AddEncounterSet(EncounterSet.DolGuldurOrcs);
+            AddEncounterSet(EncounterSet.PassageThroughMirkwood);
             AddEncounterSet(EncounterSet.PassageThroughMirkwoodNightmare);
+            AddEncounterSet(EncounterSet.SpidersOfMirkwood);
 
             AddQuestCardId("Flies-and-Spiders-Core");
-            AddQuestCardId("A-Fork-in-the-Road");
+            AddQuestCardId("A-Fork-in-the-Road-Core");
             AddQuestCardId("A-Chosen-Path-Don't-Leave-the-Path-Core");
             AddQuestCardId("A-Chosen-Path-Beorn's-Path-Core");
 
-            ExcludeDolGuldurOrcsForEasyMode();
-            ExcludeSpidersOfMirkwoodForEasyMode();
+            ExcludeFromEasyMode("Chieftan-Ufthak-Core", 1);
+            ExcludeFromEasyMode("Dol-Guldur-Beastmaster-Core", 1);
+            ExcludeFromEasyMode("Necromancer's-Pass-Core", 2);
+            ExcludeFromEasyMode("The-Necromancer's-Reach-Core", 2);
+            ExcludeFromEasyMode("Caught-in-a-Web-Core", 2);
+            ExcludeFromEasyMode("Eyes-of-the-Forest-Core", 1);
+            ExcludeFromEasyMode("Hummerhorns-Core", 1);
 
             ExcludeFromNightmareMode("Dol-Guldur-Orcs-Enemy-Core", 3);
             ExcludeFromNightmareMode("Black-Forest-Bats-Core", 1);

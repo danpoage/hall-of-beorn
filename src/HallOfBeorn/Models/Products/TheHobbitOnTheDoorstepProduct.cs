@@ -13,6 +13,10 @@ namespace HallOfBeorn.Models.Products
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/hobbit_on_the_doorstep_rulesheet.pdf";
 
             AddCardSet(CardSet.TheHobbitOnTheDoorstep);
+
+            AddScenario(new HallOfBeorn.Models.Scenarios.FliesAndSpiders());
+            AddScenario(new HallOfBeorn.Models.Scenarios.TheLonelyMountain());
+            AddScenario(new HallOfBeorn.Models.Scenarios.TheBattleOfFiveArmies());
         }
     }
 }

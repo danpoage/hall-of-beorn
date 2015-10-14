@@ -1,23 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
 namespace HallOfBeorn.Models.Scenarios
 {
-    public class TheWeatherHills : TheLostRealmScenario
+    public class TheWeatherHills : Scenario
     {
         public TheWeatherHills()
         {
-            DeluxeExpansion("The Weather Hills", "The Lost Realm", 2);
+            Title = "The Weather Hills";
+            ProductName = "The Lost Realm";
+            GroupName = "The Lost Realm";
+            Number = 2;
+
+            AddEncounterSet(EncounterSet.AngmarOrcs);
+            AddEncounterSet(EncounterSet.FoulWeather);
+            AddEncounterSet(EncounterSet.RuinsOfArnor);
+            AddEncounterSet(EncounterSet.TheWeatherHills);
 
             AddQuestCardId("Scattered-Among-the-Hills-TLR");
             AddQuestCardId("Cornered-Animals-TLR");
 
-            AddEncounterSet(EncounterSet.TheWeatherHills);
-            AddEncounterSet(EncounterSet.AngmarOrcs);
-            AddEncounterSet(EncounterSet.FoulWeather);
-            AddEncounterSet(EncounterSet.RuinsOfArnor);
+            ExcludeFromEasyMode("Angmar-Captain-TLR", 1);
+            ExcludeFromEasyMode("Angmar-Marauder-TLR", 1);
+            ExcludeFromEasyMode("Biting-Wind-TLR", 1);
+            ExcludeFromEasyMode("Cold-from-Angmar-TLR", 1);
+            ExcludeFromEasyMode("Freezing-Blast-TLR", 1);
+            ExcludeFromEasyMode("Ruins-of-Arnor-TLR", 1);
+            ExcludeFromEasyMode("Exposed-Ridge-TLR", 1);
+            ExcludeFromEasyMode("Ice-Storm-TLR", 1);
+
         }
     }
 }
