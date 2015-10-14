@@ -59,8 +59,118 @@ namespace HallOfBeorn.Models
 
         public bool IsNightmare { get { return !string.IsNullOrEmpty(Name) && Name.EndsWith(" Nightmare"); } }
 
+        private static List<CardSet> all = new List<CardSet>();
+
+        private static void Add(CardSet cardSet)
+        {
+            all.Add(cardSet);
+        }
+
         static CardSet()
         {
+            Add(CoreSet);
+            Add(TheHuntForGollum);
+            Add(ConflictAtTheCarrock);
+            Add(AJourneyToRhosgobel);
+            Add(TheHillsOfEmynMuil);
+            Add(TheDeadMarshes);
+            Add(ReturnToMirkwood);
+        
+            Add(KhazadDum);
+            Add(TheRedhornGate);
+            Add(RoadToRivendell);
+            Add(TheWatcherInTheWater);
+            Add(TheLongDark);
+            Add(FoundationsOfStone);
+            Add(ShadowAndFlame);
+
+            Add(HeirsOfNumenor);
+            Add(TheStewardsFear);
+            Add(TheDruadanForest);
+            Add(EncounterAtAmonDin);
+            Add(AssaultOnOsgiliath);
+            Add(TheBloodOfGondor);
+            Add(TheMorgulVale);
+
+            Add(TheVoiceOfIsengard);
+            Add(TheDunlandTrap);
+            Add(TheThreeTrials);
+            Add(NinInEilph);
+            Add(CelebrimborsSecret);
+            Add(TheAntleredCrown);
+
+            Add(TheHobbitOverHillAndUnderHill);
+            Add(TheHobbitOnTheDoorstep);
+
+            Add(TheBlackRiders);
+            Add(TheRoadDarkens);
+            Add(TheTreasonOfSaruman);
+            Add(TheLandOfShadow);
+
+            Add(TheMassingAtOsgiliath);
+            Add(TheBattleOfLakeTown);
+            Add(TheStoneOfErech);
+            Add(TheRuinsOfBelegost);
+
+            Add(PassageThroughMirkwoodNightmare);
+            Add(JourneyAlongTheAnduinNightmare);
+            Add(EscapeFromDolGuldurNightmare);
+            Add(TheHuntForGollumNightmare);
+            Add(ConflictAtTheCarrockNightmare);
+            Add(AJourneyToRhosgobelNightmare);
+            Add(TheHillsOfEmynMuilNightmare);
+            Add(TheDeadMarshesNightmare);
+            Add(ReturnToMirkwoodNightmare);
+            Add(IntoThePitNightmare);
+            Add(TheSeventhLevelNightmare);
+            Add(FlightFromMoriaNightmare);
+            Add(WeMustAwayEreBreakOfDayNightmare);
+            Add(OverTheMistyMountainsGrimNightmare);
+            Add(DungeonsDeepAndCavernsDimNightmare);
+            Add(AShadowOfThePastNightmare);
+            Add(AKnifeInTheDarkNightmare);
+            Add(FlightToTheFordNightmare);
+
+            Add(TheRedhornGateNightmare);
+            Add(RoadToRivendellNightmare);
+            Add(TheWatcherInTheWaterNightmare);
+            Add(TheLongDarkNightmare);
+            Add(FoundationsOfStoneNightmare);
+            Add(ShadowAndFlameNightmare);
+
+            Add(FogOnTheBarrowDowns);
+
+            Add(PerilInPelargirNightmare);
+            Add(IntoIthilienNightmare);
+            Add(TheSiegeOfCairAndrosNightmare);
+
+            Add(FliesAndSpidersNightmare);
+            Add(TheLonelyMountainNightmare);
+            Add(TheBattleOfFiveArmiesNightmare);
+
+            Add(TheStewardsFearNightmare);
+            Add(TheDruadanForestNightmare);
+            Add(EncounterAtAmonDinNightmare);
+            Add(AssaultOnOsgiliathNightmare);
+            Add(TheBloodOfGondorNightmare);
+            Add(TheMorgulValeNightmare);
+
+            Add(TheFordsOfIsenNightmare);
+            Add(ToCatchAnOrcNightmare);
+            Add(IntoFangornNightmare);
+
+            Add(TheLostRealm);
+            Add(TheWastesOfEriador);
+            Add(EscapeFromMountGram);
+            Add(AcrossTheEttenmoors);
+            Add(TheTreacheryOfRhudaur);
+
+            Add(FirstAge);
+        }
+
+        public static List<CardSet> All()
+        {
+            return all;
         }
 
         #region Static Members

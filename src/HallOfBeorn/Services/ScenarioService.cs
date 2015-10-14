@@ -32,22 +32,18 @@ namespace HallOfBeorn.Services
 
         private readonly CardRepository cardRepository;
         private readonly IList<Card> cards;
-        private readonly List<CardSet> sets = new List<CardSet>();
-        private readonly List<string> setNames = new List<string>();
-        private readonly Dictionary<string, string> encounterSetNames = new Dictionary<string, string>();
-        private readonly Dictionary<string, Scenario> scenarios = new Dictionary<string, Scenario>();
         private readonly Dictionary<string, Scenario> scenariosByAlternateTitle = new Dictionary<string, Scenario>();
-
         private readonly Dictionary<string, Scenario> scenariosByTitle = new Dictionary<string, Scenario>();
         
         private void AddScenario(Scenario scenario)
         {
-            if (scenariosByTitle.ContainsKey(scenario.Title))
+            var escapedTitle = scenario.Title.ToUrlSafeString();
+            if (scenariosByTitle.ContainsKey(escapedTitle))
             {
                 return;
             }
 
-            scenariosByTitle.Add(scenario.Title, scenario);
+            scenariosByTitle.Add(escapedTitle, scenario);
 
             if (!string.IsNullOrEmpty(scenario.AlternateTitle))
             {
@@ -87,7 +83,7 @@ namespace HallOfBeorn.Services
                 scenario.AddQuestCard(questCard, easyQuantity, normalQuantity, nightmareQuantity);
             }
 
-            scenarios[scenario.Title.ToUrlSafeString()] = scenario;
+            //scenarios[scenario.Title.ToUrlSafeString()] = scenario;
         }
 
         private void AddProduct(Product product, IEnumerable<Card> cards)
@@ -243,24 +239,24 @@ namespace HallOfBeorn.Services
 
         public IEnumerable<string> SetNames()
         {
-            return setNames;
+            return CardSet.All().Select(x => x.Name).ToList();
         }
 
         public IEnumerable<CardSet> CardSets()
         {
-            return sets;
+            return CardSet.All();
         }
 
         public IEnumerable<string> EncounterSetNames()
         {
-            return encounterSetNames.Keys;
+            return EncounterSet.All().Select(x => x.Name).ToList();
         }
 
         public IEnumerable<ScenarioGroup> ScenarioGroups()
         {
             var scenarioGroups = new Dictionary<string, ScenarioGroup>();
 
-            foreach (var scenario in scenarios)
+            foreach (var scenario in scenariosByTitle)
             {
                 var name = scenario.Value.GroupName;
 
@@ -277,7 +273,7 @@ namespace HallOfBeorn.Services
 
         public IEnumerable<string> ScenarioTitles()
         {
-            return scenarios.Values.Select(x => x.Title).ToList();
+            return scenariosByTitle.Values.Select(x => x.Title).ToList();
         }
 
         public Scenario GetScenario(string scenarioTitle)
@@ -287,8 +283,8 @@ namespace HallOfBeorn.Services
                 return scenariosByAlternateTitle[scenarioTitle];
             }
 
-            return scenarios.ContainsKey(scenarioTitle) ?
-                scenarios[scenarioTitle]
+            return scenariosByTitle.ContainsKey(scenarioTitle) ?
+                scenariosByTitle[scenarioTitle]
                 : null;
         }
     }
