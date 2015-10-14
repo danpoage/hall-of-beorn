@@ -5,6 +5,7 @@ namespace HallOfBeorn.Models.Scenarios
         public JourneyAlongTheAnduin()
         {
             Title = "Journey Along the Anduin";
+            AlternateTitle = "Journey Down the Anduin";
             ProductName = "Core Set";
             GroupName = "Core Set";
             Number = 2;
