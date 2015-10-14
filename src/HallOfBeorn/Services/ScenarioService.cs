@@ -49,6 +49,11 @@ namespace HallOfBeorn.Services
 
             scenariosByTitle.Add(scenario.Title, scenario);
 
+            if (!string.IsNullOrEmpty(scenario.AlternateTitle))
+            {
+                scenariosByAlternateTitle[scenario.AlternateTitle.ToUrlSafeString()] = scenario;
+            }
+
             foreach (var set in scenario.EncounterSets())
             {
                 foreach (var card in cards.Where(x => x.CardType != CardType.Quest && x.EncounterSet == set.Name))
