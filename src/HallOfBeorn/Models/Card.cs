@@ -24,7 +24,6 @@ namespace HallOfBeorn.Models
 
             StageLetter = 'A';
 
-            UsePublicImageURL = true;
             Html = string.Empty;
             Html2 = string.Empty;
 
@@ -552,6 +551,7 @@ namespace HallOfBeorn.Models
             private set { publicSlug = value; }
         }
 
+        /*
         public bool UsePublicImageURL { get; set; }
 
         private string publicImageURL;
@@ -559,19 +559,17 @@ namespace HallOfBeorn.Models
         {
             get
             {
-                /*
-                if (!string.IsNullOrEmpty(publicImageURL))
-                {
-                    return publicImageURL;
-                }
-
-                return string.Format("http://www.cardgamedb.com/forums/uploads/lotr/{0}-{1}.jpg", PublicSlug, CardSet.PublicSlug);
-                */
+                //if (!string.IsNullOrEmpty(publicImageURL))
+                //{
+                //    return publicImageURL;
+                //}
+                //return string.Format("http://www.cardgamedb.com/forums/uploads/lotr/{0}-{1}.jpg", PublicSlug, CardSet.PublicSlug);
 
                 return null;
             }
             set { publicImageURL = value; }
         }
+        */
 
         public string Slug
         {

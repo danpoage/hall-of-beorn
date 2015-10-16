@@ -21,7 +21,6 @@ namespace HallOfBeorn.Models.Sets
                 Title = "Haldir of Lórien",
                 NormalizedTitle = "Haldir of Lorien",
                 ImageType = ImageType.Jpg,
-                PublicImageURL = "http://www.cardgamedb.com/forums/uploads/lotr/haldir-of-lorien-trouble-in-tharbad-56.jpg",
                 Id = "15DCE26E-339E-48CA-8CF8-19A5F5BF5DD1",
                 CardType = CardType.Hero,
                 Sphere = Models.Sphere.Lore,
@@ -44,7 +43,6 @@ namespace HallOfBeorn.Models.Sets
                 Title = "Herald of Anórien",
                 NormalizedTitle = "Herald of Anorien",
                 ImageType = ImageType.Jpg,
-                PublicImageURL = "http://www.cardgamedb.com/forums/uploads/lotr/hearld-of-anorien-trouble-in-tharbad-57.jpg",
                 Id = "3B790E51-01A5-4305-A273-8694964AFDAD",
                 CardType = CardType.Ally,
                 Sphere = Models.Sphere.Leadership,
@@ -65,7 +63,6 @@ namespace HallOfBeorn.Models.Sets
                 Title = "O Lórien!",
                 NormalizedTitle = "O Lorien!",
                 ImageType = ImageType.Jpg,
-                PublicImageURL = "http://www.cardgamedb.com/forums/uploads/lotr/o-lorien-trouble-in-tharbad-58.jpg",
                 Id = "879112FB-689B-45AA-BD4A-DE7FDB1D31AB",
                 CardType = CardType.Attachment,
                 Sphere = Models.Sphere.Leadership,
@@ -82,7 +79,6 @@ namespace HallOfBeorn.Models.Sets
             {
                 Title = "Gwaihir",
                 ImageType = Models.ImageType.Jpg,
-                PublicImageURL = "http://www.cardgamedb.com/forums/uploads/lotr/gwaihir-trouble-in-tharbad-59.jpg",
                 Id = "AAD1F231-94C0-4AF7-BD97-F1FA4A04A561",
                 CardType = Models.CardType.Ally,
                 Sphere = Models.Sphere.Tactics,
@@ -103,7 +99,6 @@ namespace HallOfBeorn.Models.Sets
             {
                 Title = "Pursuing the Enemy",
                 ImageType = ImageType.Jpg,
-                PublicImageURL = "http://www.cardgamedb.com/forums/uploads/lotr/pursuing-the-enemy-trouble-in-tharbad-60.jpg",
                 Id = "29FFD74F-E9E7-43EA-A259-7A22420B94BF",
                 CardType = CardType.Event,
                 Sphere = Sphere.Tactics,
@@ -117,7 +112,6 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(new Card()
             {
                 Title = "Courage Awakened",
-                PublicImageURL = "http://www.cardgamedb.com/forums/uploads/lotr/courage-awakened-trouble-in-tharbad-61.jpg",
                 Id = "EE30C4EE-61A8-4A34-A516-B95CB2672F23",
                 CardType = CardType.Event,
                 Sphere = Sphere.Spirit,
@@ -131,7 +125,6 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(new Card()
             {
                 Title = "Free to Choose",
-                PublicImageURL = "http://www.cardgamedb.com/forums/uploads/lotr/free-to-choose-trouble-in-tharbad-62.jpg",
                 Id = "B200B774-99B8-43F6-BFBA-2EF9063270D3",
                 CardType = CardType.Event,
                 Sphere = Sphere.Spirit,
@@ -145,7 +138,6 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(new Card()
             {
                 Title = "Galadhrim Minstrel",
-                PublicImageURL = "http://www.cardgamedb.com/forums/uploads/lotr/galadhrim-minstrel-trouble-in-tharbad-63.jpg",
                 Id = "7894DA0E-F6DF-4BFF-8128-B02E66371728",
                 CardType = CardType.Ally,
                 Sphere = Sphere.Lore,
@@ -164,7 +156,6 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(new Card()
             {
                 Title = "Lembas",
-                PublicImageURL = "http://www.cardgamedb.com/forums/uploads/lotr/lembas-trouble-in-tharbad-64.jpg",
                 Id = "81A13DA7-EFE9-483F-B53D-17EAD498D5B2",
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Lore,
@@ -179,7 +170,6 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(new Card()
             {
                 Title = "Defender of the Naith",
-                PublicImageURL = "http://www.cardgamedb.com/forums/uploads/lotr/defender-of-naith-trouble-in-tharbad-65.jpg",
                 Id = "EEB587DB-D1F6-49A5-91A3-136F14B97320",
                 CardType = CardType.Ally,
                 Sphere = Sphere.Neutral,
@@ -247,7 +237,6 @@ Forced: After a character leaves play, raise its controller's threat by 2.",
             Cards.Add(new Card()
             {
                 Title = "Nalir",
-                PublicImageURL = "http://www.cardgamedb.com/forums/uploads/lotr/nalir-trouble-in-tharbad-68.jpg",
                 Id = "52000AB7-E523-45F6-B4AA-1114B8477986",
                 CardType = CardType.Objective_Ally,
                 Willpower = 0,
@@ -269,7 +258,6 @@ If Nalir leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "The Empty Mug",
-                PublicImageURL = "http://www.cardgamedb.com/forums/uploads/lotr/the-empty-mug-trouble-in-tharbad-69.jpg",
                 Id = "696A364D-8114-4256-AA35-638A0D198CCB",
                 CardType = CardType.Location,
                 IsUnique = true,
@@ -286,7 +274,6 @@ If Nalir leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Bellach",
-                PublicImageURL = "http://www.cardgamedb.com/forums/uploads/lotr/bellach-trouble-in-tharbad-70.jpg",
                 Id = "",
                 CardType = CardType.Enemy,
                 IsUnique = true,
@@ -307,7 +294,6 @@ Forced: When Bellach is destroyed, shuffle him into the encounter deck.",
             Cards.Add(new Card()
             {
                 Title = "The Crossing at Tharbad",
-                PublicImageURL = "http://www.cardgamedb.com/forums/uploads/lotr/the-crossing-at-tharbad-trouble-in-tharbad-71.jpg",
                 Id = "F293EF80-8E47-4418-9EFE-F2BB6238C215",
                 CardType = CardType.Location,
                 Threat = 2,
@@ -325,7 +311,6 @@ When The Crossing at Tharbad is explored, the players win the game.",
             Cards.Add(new Card()
             {
                 Title = "Spy from Mordor",
-                PublicImageURL = "http://www.cardgamedb.com/forums/uploads/lotr/spy-from-mordor-trouble-in-tharbad-72.jpg",
                 Id = "6417354E-4762-4F31-A461-8395F2EDAB49",
                 CardType = CardType.Enemy,
                 EngagementCost = 40,
@@ -344,7 +329,6 @@ When The Crossing at Tharbad is explored, the players win the game.",
             Cards.Add(new Card()
             {
                 Title = "Bellach's Marauder",
-                PublicImageURL = "http://www.cardgamedb.com/forums/uploads/lotr/bellach-s-marauder-trouble-in-tharbad-73.jpg",
                 Id = "A7C09783-E0B0-40BC-B4C2-D96B331881BF",
                 CardType = CardType.Enemy,
                 EngagementCost = 30,
@@ -364,7 +348,6 @@ When The Crossing at Tharbad is explored, the players win the game.",
             Cards.Add(new Card()
             {
                 Title = "Streets of Tharbad",
-                PublicImageURL = "http://www.cardgamedb.com/forums/uploads/lotr/streets-of-tharbad-trouble-in-tharbad-74.jpg",
                 Id = "4D1B749A-29E4-44C8-9E63-5E2616938BB3",
                 CardType = CardType.Location,
                 Threat = 3,
@@ -380,7 +363,6 @@ When The Crossing at Tharbad is explored, the players win the game.",
             Cards.Add(new Card()
             {
                 Title = "Tharbad Hideout",
-                PublicImageURL = "http://www.cardgamedb.com/forums/uploads/lotr/tharbad-hideout-trouble-in-tharbad-75.jpg",
                 Id = "7F47899D-91EB-4016-B143-7EF2808716A9",
                 CardType = CardType.Location,
                 Threat = 1,
@@ -399,7 +381,6 @@ Forced: At the beginning of the quest phase, place 1 progress on Tharbad Hideout
             Cards.Add(new Card()
             {
                 Title = "Ruins of the Second Age",
-                PublicImageURL = "http://www.cardgamedb.com/forums/uploads/lotr/ruins-of-the-second-age-trouble-in-tharbad-76.jpg",
                 Id = "D4411EC3-D56B-41E5-9BF0-760E4346E913",
                 CardType = CardType.Location,
                 Threat = 1,
@@ -419,7 +400,6 @@ While ~Ruins of the Second Age is the active location, deal engaged enemies 1 ad
             Cards.Add(new Card()
             {
                 Title = "Seedy Inn",
-                PublicImageURL = "http://www.cardgamedb.com/forums/uploads/lotr/seedy-in-trouble-in-tharbad-77.jpg",
                 Id = "7B918CB0-4C4F-4DA6-A090-8BA99A52D9FE",
                 CardType = CardType.Location,
                 Threat = 3,
@@ -436,7 +416,6 @@ While ~Ruins of the Second Age is the active location, deal engaged enemies 1 ad
             Cards.Add(new Card()
             {
                 Title = "Hidden Alleyway",
-                PublicImageURL = "http://www.cardgamedb.com/forums/uploads/lotr/hidden-alleyway-trouble-in-tharbad-78.jpg",
                 Id = "F2567C68-49A1-4BC1-9E36-C0BB1415964C",
                 CardType = CardType.Location,
                 Threat = 3,
@@ -454,7 +433,6 @@ Forced: After traveling to Hidden Alleyway, add 1 time counter to the current qu
             Cards.Add(new Card()
             {
                 Title = "Decrepit Rooftops",
-                PublicImageURL = "http://www.cardgamedb.com/forums/uploads/lotr/decrepit-rooftops-trouble-in-tharbad-79.jpg",
                 Id = "89F5A19A-459C-49D6-B5A0-492672BE280C",
                 CardType = CardType.Location,
                 Threat = 2,
@@ -472,7 +450,6 @@ Forced: After traveling to Decrepit Rooftops, return all engaged enemies to the 
             Cards.Add(new Card()
             {
                 Title = "Constant Tail",
-                PublicImageURL = "http://www.cardgamedb.com/forums/uploads/lotr/constant-tail-trouble-in-tharbad-80.jpg",
                 Id = "A0B25995-3D8E-4EF2-810C-BF3F375FF214",
                 CardType = CardType.Treachery,
                 Text = "When Revealed: Return all engaged enemies to the staging area. Then, the first player either removes 1 time counter from the current quest or each Spy enemy in the staging area gets +2 Threat until the end of the phase.",
@@ -485,7 +462,6 @@ Forced: After traveling to Decrepit Rooftops, return all engaged enemies to the 
             Cards.Add(new Card()
             {
                 Title = "Conspicuous Lot",
-                PublicImageURL = "http://www.cardgamedb.com/forums/uploads/lotr/conspicous-lot-trouble-in-tharbad-81.jpg",
                 Id = "79E29881-2AC0-4625-BBAF-32CBB42BC2BC",
                 CardType = CardType.Treachery,
                 Text = "When Revealed: Each player raises his threat by 1 for each ally he controls. Then, if any player's threat is 20 or less, this card gains surge.",
@@ -499,7 +475,6 @@ Forced: After traveling to Decrepit Rooftops, return all engaged enemies to the 
             Cards.Add(new Card()
             {
                 Title = "Cornered",
-                PublicImageURL = "http://www.cardgamedb.com/forums/uploads/lotr/cornered-trouble-in-tharbad-82.jpg",
                 Id = "D8EA5691-6522-4472-BC4C-88EBA9B92248",
                 CardType = CardType.Treachery,
                 Text = "When Revealed: The first player either removes 1 time counter from the current quest or each enemy gets -20 engagement cost and +1 Attack until the end of the round.",
@@ -512,7 +487,6 @@ Forced: After traveling to Decrepit Rooftops, return all engaged enemies to the 
             Cards.Add(new Card()
             {
                 Title = "Get That Dwarf!",
-                PublicImageURL = "http://www.cardgamedb.com/forums/uploads/lotr/get-that-dwarf-trouble-in-tharbad-83.jpg",
                 Id = "B8B4D480-3311-46BF-964B-8519939937A4",
                 CardType = CardType.Treachery,
                 Text = "When Revealed: The enemy in the staging area with the highest Attack engages the first player and makes an immediate attack against Nalir. If there are no enemies in the staging area, Get That Dwarf! gains surge.",
