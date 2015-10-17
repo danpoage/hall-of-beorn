@@ -45,7 +45,8 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 EncounterSet = "The Lonely Mountain Nightmare",
                 Quantity = 1,
                 Number = 1,
-                Artist = Artist.Adam_Lane,
+                Artist = Artist.Adam_Lane
+                /*
                 UpdateScenarioCards = (groups) =>
                 {
                     foreach (var group in groups)
@@ -80,7 +81,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                     }
 
                     return true;
-                }
+                }*/
             });
             Cards.Add(new Card()
             {

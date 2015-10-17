@@ -52,7 +52,8 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 EncounterSet = "Flight from Moria Nightmare",
                 Quantity = 1,
                 Number = 1,
-                Artist = Artist.Mark_Behm,
+                Artist = Artist.Mark_Behm
+                /*
                 UpdateScenarioCards = (groups) =>
                 {
                     foreach (var group in groups)
@@ -111,7 +112,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                     }
 
                     return true;
-                }
+                }*/
             });
             Cards.Add(new Card()
             {

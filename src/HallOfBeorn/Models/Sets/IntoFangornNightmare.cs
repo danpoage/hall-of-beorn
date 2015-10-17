@@ -39,7 +39,8 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 EncounterSet = setName,
                 Quantity = 1,
                 Number = 1,
-                Artist = Artist.Katy_Grierson,
+                Artist = Artist.Katy_Grierson
+                /*
                 UpdateScenarioCards = (groups) =>
                 {
                     foreach (var group in groups)
@@ -68,7 +69,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                     }
 
                     return true;
-                }
+                }*/
             });
             Cards.Add(Card.Enemy("Huorn of Fangorn", "", setName, 23, 3, 4, 3, 6)
                 .WithTraits("Huorn.")

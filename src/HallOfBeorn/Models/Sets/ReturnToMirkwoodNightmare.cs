@@ -45,7 +45,8 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 EncounterSet = "Return to Mirkwood Nightmare",
                 Quantity = 1,
                 Number = 1,
-                Artist = Artist.Jose_Vega,
+                Artist = Artist.Jose_Vega
+                /*
                 UpdateScenarioCards = (groups) =>
                 {
                     foreach (var group in groups)
@@ -92,7 +93,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                     }
 
                     return true;
-                }
+                }*/
             });
             Cards.Add(new Card()
             {

@@ -42,7 +42,8 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 EncounterSet = "The Morgul Vale Nightmare",
                 Quantity = 1,
                 Number = 1,
-                Artist = Artist.Darek_Zabrocki,
+                Artist = Artist.Darek_Zabrocki
+                /*
                 UpdateScenarioCards = (groups) =>
                 {
                     foreach (var group in groups)
@@ -83,7 +84,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                     }
 
                     return true;
-                }
+                }*/
             });
             Cards.Add(Card.Enemy("Warrior of Nurn", "A8D4E2CA-E726-4690-AB2E-84D5B424D14D", "The Morgul Vale Nightmare", 18, 2, 4, 3, 5)
                 .WithTraits("Traitor.")

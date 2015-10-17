@@ -52,7 +52,8 @@ Play Tip: This scenario contains 10 treachery cards with the Attack trait that h
                 EncounterSet = "Shadow and Flame Nightmare",
                 Quantity = 1,
                 Number = 1,
-                Artist = Artist.Anthony_Feliciano,
+                Artist = Artist.Anthony_Feliciano
+                /*
                 UpdateScenarioCards = (groups) =>
                 {
                     foreach (var group in groups)
@@ -91,7 +92,7 @@ Play Tip: This scenario contains 10 treachery cards with the Attack trait that h
                     }
 
                     return true;
-                }
+                }*/
             });
             Cards.Add(new Card()
             {

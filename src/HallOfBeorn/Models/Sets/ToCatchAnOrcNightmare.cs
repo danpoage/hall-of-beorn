@@ -43,7 +43,8 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 EncounterSet = setName,
                 Quantity = 1,
                 Number = 1,
-                Artist = Artist.Mariusz_Gandzel,
+                Artist = Artist.Mariusz_Gandzel
+                /*
                 UpdateScenarioCards = (groups) =>
                 {
                     foreach (var group in groups)
@@ -84,7 +85,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                     }
 
                     return true;
-                }
+                }*/
             });
             Cards.Add(Card.Enemy("Vigilant Orc", "", setName, 1, 2, 4, 3, 4)
                 .WithTraits("Orc.")

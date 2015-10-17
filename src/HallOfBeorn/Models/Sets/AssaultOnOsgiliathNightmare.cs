@@ -47,7 +47,8 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 EncounterSet = "Assault on Osgiliath Nightmare",
                 Quantity = 1,
                 Number = 1,
-                Artist = Artist.Mariusz_Gandzel,
+                Artist = Artist.Mariusz_Gandzel
+                /*
                 UpdateScenarioCards = (groups) =>
                 {
                     foreach (var group in groups)
@@ -103,7 +104,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                     }
 
                     return true;
-                }
+                }*/
             });
             Cards.Add(Card.Enemy("Invading Orc", "4C4A8641-6C80-4BDD-9536-ECCA4B294F65", "Assault on Osgiliath Nightmare", 20, 2, 5, 3, 3)
                 .WithTraits("Orc.", "Mordor.")

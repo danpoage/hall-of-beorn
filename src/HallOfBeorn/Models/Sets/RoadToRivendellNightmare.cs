@@ -48,7 +48,8 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 EncounterSet = "Road to Rivendell Nightmare",
                 Quantity = 1,
                 Number = 1,
-                Artist = Artist.Oleg_Saakyan,
+                Artist = Artist.Oleg_Saakyan
+                /*
                 UpdateScenarioCards = (groups) =>
                 {
                     foreach (var group in groups)
@@ -117,7 +118,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                     }
 
                     return true;
-                }
+                }*/
             });
             Cards.Add(new Card()
             {

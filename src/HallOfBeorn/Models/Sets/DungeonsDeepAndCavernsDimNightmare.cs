@@ -47,7 +47,8 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 EncounterSet = "Dungeons Deep and Caverns Dim Nightmare",
                 Quantity = 1,
                 Number = 1,
-                Artist = Artist.Jake_Murray,
+                Artist = Artist.Jake_Murray
+                /*
                 UpdateScenarioCards = (groups) =>
                 {
                     foreach (var group in groups)
@@ -82,7 +83,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                     }
 
                     return true;
-                }
+                }*/
             });
             Cards.Add(new Card()
             {

@@ -46,7 +46,8 @@ Play Tip: The treachery card, ~Night Wanes Slow, has a Forced effect that trigge
                 EncounterSet = "We Must Away, Ere Break of Day Nightmare",
                 Quantity = 1,
                 Number = 1,
-                Artist = Artist.Ilich_Henriquez,
+                Artist = Artist.Ilich_Henriquez
+                /*
                 UpdateScenarioCards = (groups) =>
                 {
                     foreach (var group in groups)
@@ -81,7 +82,7 @@ Play Tip: The treachery card, ~Night Wanes Slow, has a Forced effect that trigge
                     }
 
                     return true;
-                }
+                }*/
             });
             Cards.Add(new Card()
             {

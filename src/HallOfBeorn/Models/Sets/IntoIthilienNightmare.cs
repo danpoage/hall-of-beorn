@@ -46,7 +46,8 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 EncounterSet = "Into Ithilien Nightmare",
                 Quantity = 1,
                 Number = 1,
-                Artist = Artist.Guillaume_Ducos,
+                Artist = Artist.Guillaume_Ducos
+                /*
                 UpdateScenarioCards = (groups) =>
                 {
                     foreach (var group in groups)
@@ -84,7 +85,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                     }
 
                     return true;
-                }
+                }*/
             });
             Cards.Add(new Card()
             {

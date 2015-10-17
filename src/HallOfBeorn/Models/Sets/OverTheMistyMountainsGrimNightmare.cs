@@ -43,7 +43,8 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 EncounterSet = "Over the Misty Mountains Grim Nightmare",
                 Quantity = 1,
                 Number = 1,
-                Artist = Artist.Mark_Bulahao,
+                Artist = Artist.Mark_Bulahao
+                /*
                 UpdateScenarioCards = (groups) =>
                 {
                     foreach (var group in groups)
@@ -87,7 +88,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                     }
 
                     return true;
-                }
+                }*/
             });
             Cards.Add(new Card()
             {

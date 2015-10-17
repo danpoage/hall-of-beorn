@@ -41,7 +41,8 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 EncounterSet = "A Knife in the Dark Nightmare",
                 Quantity = 1,
                 Number = 1,
-                Artist = Artist.Juan_Carlos_Barquet,
+                Artist = Artist.Juan_Carlos_Barquet
+                /*
                 UpdateScenarioCards = (groups) =>
                 {
                     foreach (var group in groups)
@@ -76,7 +77,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                     }
 
                     return true;
-                }
+                }*/
             });
             Cards.Add(Card.Enemy("Menacing Wraith", "2B12F498-3840-4831-9513-E54B0FF7132A", "A Knife in the Dark Nightmare", 40, 4, 5, 4, 6)
                 .WithTraits("Nazgûl")
