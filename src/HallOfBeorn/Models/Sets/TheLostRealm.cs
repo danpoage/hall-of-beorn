@@ -268,7 +268,7 @@ namespace HallOfBeorn.Models.Sets
                 NormalizedTitle = "Iarion",
                 Id = "93F6B7C3-2F83-4E1C-8E3E-E3C9F1044A18",
                 CardType = CardType.Objective_Ally,
-                ScenarioTitle = "The Lost Realm",
+                //ScenarioTitle = "The Lost Realm",
                 Willpower = 0,
                 IsVariableWillpower = true,
                 Attack = 0,

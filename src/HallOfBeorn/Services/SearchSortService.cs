@@ -39,7 +39,7 @@ namespace HallOfBeorn.Services
                     sortedResults = results.Where(x => x.Value.Score() > 0).OrderBy(x => x.Value.Card.Title).Select(x => x.Value).Take(takeCount).ToList();
                     break;
                 case Models.Sort.Sphere_Type_Cost:
-                    sortedResults = results.Where(x => x.Value.Score() > 0).OrderBy(x => x.Value.Card.SortedSphere()).ThenBy(x => x.Value.Card.CardType).ThenBy(x => x.Value.Card.CardSubtype).ThenBy(x =>
+                    sortedResults = results.Where(x => x.Value.Score() > 0).OrderBy(x => x.Value.Card.Sphere).ThenBy(x => x.Value.Card.CardType).ThenBy(x => x.Value.Card.CardSubtype).ThenBy(x =>
                     {
                         if (x.Value.Card.ThreatCost.HasValue && x.Value.Card.ThreatCost.Value > 0)
                             return x.Value.Card.ThreatCost.Value;

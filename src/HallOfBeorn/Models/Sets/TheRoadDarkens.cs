@@ -201,9 +201,9 @@ namespace HallOfBeorn.Models.Sets
                 IsUnique = true,
                 Id = "4CA6EBFE-C48F-43C9-867A-EDB7A50D37CE",
                 ImageType = Models.ImageType.Jpg,
+                Sphere = Models.Sphere.Neutral,
                 CardType = CardType.Attachment,
                 CardSubtype = Models.CardSubtype.Boon,
-                Sphere = Models.Sphere.Neutral,
                 ResourceCost = 2,
                 Traits = new List<string> { "Artifact.", "Item.", "Weapon." },
                 Keywords = new List<string> { "Restricted." },
@@ -223,6 +223,7 @@ Response: After attached hero exhausts to defend an attack, discard the top card
                 IsUnique = true,
                 Id = "2F44B05B-B233-414D-97AB-21EC1FE7F71D",
                 ImageType = Models.ImageType.Jpg,
+                Sphere = Models.Sphere.Neutral,
                 CardType = CardType.Attachment,
                 CardSubtype = Models.CardSubtype.Boon,
                 ResourceCost = 1,
@@ -239,15 +240,13 @@ Response: After attached hero exhausts to defend an attack, discard the top card
                 IsUnique = true,
                 Id = "921B7E59-0CFC-4B12-A95A-CB37A49587A0",
                 ImageType = Models.ImageType.Jpg,
+                Sphere = Models.Sphere.Neutral,
                 CardType = CardType.Attachment,
                 CardSubtype = Models.CardSubtype.Boon,
                 ResourceCost = 2,
                 Traits = new List<string> { "Artifact.", "Item.", "Weapon." },
                 Keywords = new List<string> { "Restricted." },
-                Text = 
-@"Attach to a Warrior hero or Gandalf. Attached character gets +2 Attack.
-
-Response: After attached character destroys an Orc enemy, draw 1 card.",
+                Text = "Attach to a Warrior hero or Gandalf. Attached character gets +2 Attack.\r\nResponse: After attached character destroys an Orc enemy, draw 1 card.",
                 FlavorText = "\"...at his side was the elven-sword Glamdring, the mate of Orcrist that lay now upon the breast of Thorin under the Lonely Mountain.\" -The Fellowship of the Ring",
                 Number = 13,
                 Quantity = 1,
@@ -260,17 +259,13 @@ Response: After attached character destroys an Orc enemy, draw 1 card.",
                 NormalizedTitle = "Anduril",
                 Id = "A4E77553-5376-452A-974B-601C35FEB5BA",
                 ImageType = Models.ImageType.Jpg,
+                Sphere = Models.Sphere.Neutral,
                 CardType = CardType.Attachment,
                 CardSubtype = Models.CardSubtype.Boon,
                 ResourceCost = 3,
                 Traits = new List<string> { "Artifact.", "Item.", "Weapon." },
                 Keywords = new List<string> { "Restricted." },
-                Text =
-@"Attach to a Noble hero or Aragorn.
-
-Attached hero gets +1 Willpower, +1 Attack, and +1 Defense.
-
-Response: After an attack in which the attached hero defended resolves, exhaust Andúril to target the enemy that just attacked. Declare attached hero as an attacker against that enemy (and resolve the attack).",
+                Text = "Attach to a Noble hero or Aragorn.\r\nAttached hero gets +1 Willpower, +1 Attack, and +1 Defense.\r\nResponse: After an attack in which the attached hero defended resolves, exhaust Andúril to target the enemy that just attacked. Declare attached hero as an attacker against that enemy (and resolve the attack).",
                 Number = 14,
                 Quantity = 1,
                 Artist = Artist.Magali_Villeneuve
@@ -281,14 +276,12 @@ Response: After an attack in which the attached hero defended resolves, exhaust 
                 IsUnique = true,
                 Id = "5AFC42BF-3E61-4FB8-AF2C-AB40E27AFF3F",
                 ImageType = Models.ImageType.Jpg,
+                Sphere = Models.Sphere.Neutral,
                 CardType = CardType.Attachment,
                 CardSubtype = Models.CardSubtype.Boon,
                 ResourceCost = 0,
                 Traits = new List<string> { "Item.", "Gift." },
-                Text = 
-@"Setup: Attach to a hero in play.
-
-Add Phial of Galadriel to the victory display and remove it from the campaign pool, to give each enemy engaged with you -4 Attack until the end of the round.",
+                Text = "Setup: Attach to a hero in play.\r\nAdd Phial of Galadriel to the victory display and remove it from the campaign pool, to give each enemy engaged with you -4 Attack until the end of the round.",
                 FlavorText = "\"May it be a light to you in dark places, when all other lights go out.\" -Galadriel, The Fellowship of the Ring",
                 VictoryPoints = 3,
                 Number = 15,
@@ -301,14 +294,12 @@ Add Phial of Galadriel to the victory display and remove it from the campaign po
                 IsUnique = true,
                 Id = "19CB3A5F-5D58-41E5-846D-733261B554A6",
                 ImageType = Models.ImageType.Jpg,
+                Sphere = Models.Sphere.Neutral,
                 CardType = CardType.Attachment,
                 CardSubtype = Models.CardSubtype.Boon,
                 ResourceCost = 0,
                 Traits = new List<string> { "Item.", "Gift." },
-                Text = 
-@"Setup: Attach to a hero in play.
-
-Action: Add Three Golden Hairs to the victory display and remove it from the campaign pool, to lower each player's threat by 3. Then, each player draws 3 cards.",
+                Text = "Setup: Attach to a hero in play.\r\nAction: Add Three Golden Hairs to the victory display and remove it from the campaign pool, to lower each player's threat by 3. Then, each player draws 3 cards.",
                 FlavorText = "\"...your hands shall flow with gold, and yet over you gold shall have no dominion.\" -Galadriel, The Fellowship of the Ring",
                 VictoryPoints = 3,
                 Number = 16,
@@ -322,14 +313,12 @@ Action: Add Three Golden Hairs to the victory display and remove it from the cam
                 NormalizedTitle = "Lorien Rope",
                 Id = "DF542407-56E4-4643-BD32-5BE349AA86FF",
                 ImageType = Models.ImageType.Jpg,
+                Sphere = Models.Sphere.Neutral,
                 CardType = CardType.Attachment,
                 CardSubtype = Models.CardSubtype.Boon,
                 ResourceCost = 0,
                 Traits = new List<string> { "Item.", "Gift." },
-                Text =
-@"Setup: Attach to a hero in play.
-
-Action: Add Lórien Rope to the victory display, and remove it from the campaign pool to give each location in the staging area -2 Threat until the end of the phase.",
+                Text = "Setup: Attach to a hero in play.\r\nAction: Add Lórien Rope to the victory display, and remove it from the campaign pool to give each location in the staging area -2 Threat until the end of the phase.",
                 FlavorText = "\"What a piece of luck you had that rope!\" -Frodo, The Two Towers",
                 VictoryPoints = 3,
                 Number = 17,
@@ -342,14 +331,12 @@ Action: Add Lórien Rope to the victory display, and remove it from the campaig
                 IsUnique = true,
                 Id = "AA0E8E20-FA34-4ED6-8BF4-C4BE15CA17F2",
                 ImageType = Models.ImageType.Jpg,
+                Sphere = Models.Sphere.Neutral,
                 CardType = CardType.Attachment,
                 CardSubtype = Models.CardSubtype.Boon,
                 ResourceCost = 0,
                 Traits = new List<string> { "Item.", "Gift." },
-                Text =
-@"Setup: Attach to a hero in play.
-
-Action: Add Leaf-wrapped Lembas to the victory display, and remove it from the campaign pool, to ready all heroes in play.",
+                Text = "Setup: Attach to a hero in play.\r\nAction: Add Leaf-wrapped Lembas to the victory display, and remove it from the campaign pool, to ready all heroes in play.",
                 FlavorText = "Often in their hearts they thanked the lady of Lórien for the gift of lembas, for they could eat of it and find new strength even as they ran. -The Two Towers",
                 VictoryPoints = 3,
                 Number = 18,

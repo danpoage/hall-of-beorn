@@ -30,6 +30,38 @@ namespace HallOfBeorn.Services
         private readonly SearchSortService sortService;
         private readonly IEnumerable<Card> cards;
 
+        private bool BelongsToScenario(Card card, Scenario scenario)
+        {
+            if (scenario == null)
+            {
+                return false;
+            }
+
+            if (card.CardType == CardType.Quest)
+            {
+                return scenario.QuestCardIds().Any(x => x == card.Slug);
+            }
+
+            return scenario.ScenarioCards.Any(x => x.Card.Slug == card.Slug);
+
+            /*
+            if (scenario.Title == card.ScenarioTitle)
+            {
+                return true;
+            }
+
+            if (!string.IsNullOrEmpty(EncounterSet))
+            {
+                if (scenario.IncludesEncounterSet(EncounterSet))
+                {
+                    return true;
+                }
+            }
+            */
+
+            //return false;
+        }
+
         public IEnumerable<CardScore> SearchNew(SearchViewModel model)
         {
             model.GetScenario = () => {
@@ -135,7 +167,7 @@ namespace HallOfBeorn.Services
                 filters.Add(new SearchFilter((s, c) => { return s.CardSetMatches(c); }, 100, "Card Set matches '" + model.CardSet + "'"));
 
             if (model.HasScenario())
-                filters.Add(new SearchFilter((s, c) => { return c.BelongsToScenario(scenarioService.GetScenario(s.Scenario.ToUrlSafeString())); }, 100, "Scenario matches '" + model.Scenario + "'"));
+                filters.Add(new SearchFilter((s, c) => { return BelongsToScenario(c, scenarioService.GetScenario(s.Scenario.ToUrlSafeString())); }, 100, "Scenario matches '" + model.Scenario + "'"));
 
             if (model.HasTrait())
                 filters.Add(new SearchFilter((s, c) => { return c.HasTrait(s.Trait); }, 100, "Has Trait '" + model.Trait + "'"));

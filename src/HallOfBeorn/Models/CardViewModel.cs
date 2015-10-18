@@ -124,18 +124,40 @@ namespace HallOfBeorn.Models
         }
         */
 
-        public bool HasBlogs { get { return _card.HasBlogs; } }
+        public bool HasBlogs { get { return true; } }
 
         public List<Link> Blogs()
         {
-            return _card.Blogs();
+            var links = new List<Link>();
+
+            links.Add(new Link(LinkType.Hall_of_Beorn, _card));
+            links.Add(new Link(LinkType.Tales_from_the_Cards, _card));
+            links.Add(new Link(LinkType.Master_of_Lore, _card));
+            links.Add(new Link(LinkType.Dor_Cuarthol, _card));
+            links.Add(new Link(LinkType.Second_Hand_Took, _card));
+            links.Add(new Link(LinkType.The_Mirkwood_Runner, _card));
+            links.Add(new Link(LinkType.Warden_of_Arnor, _card));
+            links.Add(new Link(LinkType.Heroes_of_the_Rings, _card));
+            links.Add(new Link(LinkType.Very_Late_Adventurer, _card));
+            links.Add(new Link(LinkType.Susurros_del_Bosque_Viejo, _card, "Susurros del Bosque Viejo (ES)"));
+            links.Add(new Link(LinkType.El_Libro_Rojo_de_Bolson_Cerrado, _card, "El Libro Rojo De Bolsón Cerrado (ES)"));
+            links.Add(new Link(LinkType.Die_Manner_von_Gondor, _card, "Die Männer von Gondor (DE)"));
+
+            return links;
         }
 
-        public bool HasReferences { get { return _card.HasReferences; } }
+        public bool HasReferences { get { return true; } }
 
         public List<Link> References()
         {
-            return _card.References();
+            var links = new List<Link>();
+
+            links.Add(new Link(LinkType.Wikipedia, _card));
+            links.Add(new Link(LinkType.Tolkien_Gateway, _card));
+            links.Add(new Link(LinkType.Lord_of_the_Rings_Wiki, _card));
+            links.Add(new Link(LinkType.Encyclopedia_of_Arda, _card));
+
+            return links;
         }
 
         public string BlogTagUrl
@@ -779,6 +801,7 @@ namespace HallOfBeorn.Models
             get { return _card.CardSet.Cycle == "NIGHTMARE"; }
         }
 
+        /*
         public IEnumerable<Deck> Decks
         {
             get { return _card.Decks.Values; }
@@ -790,6 +813,7 @@ namespace HallOfBeorn.Models
                 return _card.RelatedCards.Select(x => new CardViewModel(x)).ToList();
             }
         }
+        */
 
         public bool HasHtml
         {

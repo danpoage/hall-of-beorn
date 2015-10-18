@@ -24,11 +24,11 @@ namespace HallOfBeorn.Services
             if (leftCard == null || rightCard == null)
                 return;
 
-            if (!leftCard.RelatedCards.Any(x => x.Id == rightCard.Id))
-                leftCard.RelatedCards.Add(rightCard);
+            //if (!leftCard.RelatedCards.Any(x => x.Id == rightCard.Id))
+            //    leftCard.RelatedCards.Add(rightCard);
 
-            if (!rightCard.RelatedCards.Any(x => x.Id == leftCard.Id))
-                rightCard.RelatedCards.Add(leftCard);
+            //if (!rightCard.RelatedCards.Any(x => x.Id == leftCard.Id))
+            //    rightCard.RelatedCards.Add(leftCard);
         }
 
         private void LoadRelationships()

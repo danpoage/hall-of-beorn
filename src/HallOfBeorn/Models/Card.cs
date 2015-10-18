@@ -18,8 +18,8 @@ namespace HallOfBeorn.Models
             Categories = new List<Category>();
             EncounterCategories = new List<EncounterCategory>();
             QuestCategories = new List<QuestCategory>();
-            Decks = new Dictionary<string, Deck>();
-            RelatedCards = new List<Card>();
+            //Decks = new Dictionary<string, Deck>();
+            //RelatedCards = new List<Card>();
             IncludedEncounterSets = new List<EncounterSet>();
 
             StageLetter = 'A';
@@ -27,8 +27,8 @@ namespace HallOfBeorn.Models
             Html = string.Empty;
             Html2 = string.Empty;
 
-            HasBlogs = true;
-            HasReferences = true;
+            //HasBlogs = true;
+            //HasReferences = true;
 
             AlternateEncounterSet = string.Empty;
         }
@@ -365,20 +365,21 @@ namespace HallOfBeorn.Models
 
         #endregion
 
-        private string scenarioTitle;
+        //private string scenarioTitle;
 
-        public Dictionary<string, Deck> Decks { get; set; }
-        public List<Card> RelatedCards { get; set; }
+        //public Dictionary<string, Deck> Decks { get; set; }
+        //public List<Card> RelatedCards { get; set; }
 
-        public bool HasBlogs { get; set; }
+        //public bool HasBlogs { get; set; }
+        /*
         public List<Link> Blogs()
         {
             var links = new List<Link>();
 
-            if (!HasBlogs)
-            {
-                return links;
-            }
+            //if (!HasBlogs)
+            //{
+            //    return links;
+            //}
 
             links.Add(new Link(LinkType.Hall_of_Beorn, this));
             links.Add(new Link(LinkType.Tales_from_the_Cards, this));
@@ -394,17 +395,18 @@ namespace HallOfBeorn.Models
             links.Add(new Link(LinkType.Die_Manner_von_Gondor, this, "Die Männer von Gondor (DE)"));
 
             return links;
-        }
+        }*/
 
-        public bool HasReferences { get; set; }
+        //public bool HasReferences { get; set; }
+        /*
         public List<Link> References()
         {
             var links = new List<Link>();
 
-            if (!HasReferences)
-            {
-                return links;
-            }
+            //if (!HasReferences)
+            //{
+            //    return links;
+            //}
 
             links.Add(new Link(LinkType.Wikipedia, this));
             links.Add(new Link(LinkType.Tolkien_Gateway, this));
@@ -413,9 +415,11 @@ namespace HallOfBeorn.Models
 
             return links;
         }
+        */
 
         public string Id { get; set; }
         
+        /*
         public string ScenarioTitle 
         {
             get
@@ -425,6 +429,7 @@ namespace HallOfBeorn.Models
 
             set { scenarioTitle = value; }
         }
+        */
         public int ScenarioNumber { get; set; }
 
         public string Title { get; set; }
@@ -446,6 +451,7 @@ namespace HallOfBeorn.Models
         public CardSubtype CardSubtype { get; set; }
         public Sphere Sphere { get; set; }
         
+        /*
         public Sphere SortedSphere()
         {
             if (CardSubtype == Models.CardSubtype.Boon)
@@ -454,7 +460,7 @@ namespace HallOfBeorn.Models
             }
 
             return this.Sphere;
-        }
+        }*/
 
         public byte? ThreatCost { get; set; }
         public byte? ResourceCost { get; set; }
@@ -536,6 +542,7 @@ namespace HallOfBeorn.Models
             set { hasSecondImage = value; }
         }
 
+        /*
         private string publicSlug;
         public string PublicSlug
         {
@@ -550,6 +557,7 @@ namespace HallOfBeorn.Models
             }
             private set { publicSlug = value; }
         }
+        */
 
         /*
         public bool UsePublicImageURL { get; set; }
@@ -583,6 +591,7 @@ namespace HallOfBeorn.Models
             }
         }
 
+        /*
         public string TraitList
         {
             get
@@ -593,6 +602,7 @@ namespace HallOfBeorn.Models
                 return string.Join(" ", Traits);
             }
         }
+        */
 
         public bool HasKeyword(string keyword)
         {
@@ -605,10 +615,10 @@ namespace HallOfBeorn.Models
                 || NormalizedTraits.Any(x => x != null && string.Equals(x.Trim(), trait));
         }
 
-        public bool HasFaction(Sphere sphere, string trait)
-        {
-            return Sphere == sphere && HasTrait(trait);
-        }
+        //public bool HasFaction(Sphere sphere, string trait)
+        //{
+        //    return Sphere == sphere && HasTrait(trait);
+        //}
 
         public bool HasErrata { get; set; }
 
@@ -663,26 +673,6 @@ namespace HallOfBeorn.Models
                 default:
                     return DeckType.None;
             }
-        }
-
-        public bool BelongsToScenario(Scenario scenario)
-        {
-            if (scenario == null) {
-                return false;
-            }
-
-            if (scenario.Title == ScenarioTitle) {
-                return true;
-            }
-
-            if (!string.IsNullOrEmpty(EncounterSet)) {
-                if (scenario.IncludesEncounterSet(EncounterSet))
-                {
-                    return true;
-                }
-            }
-
-            return false;
         }
 
         public static Card Hero(string title, string id, Sphere sphere, byte threatCost, byte willpower, byte attack, byte defense, byte hitPoints)

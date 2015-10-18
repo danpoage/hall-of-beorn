@@ -121,7 +121,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
 Forced: When Mithril Seeker attacks, move 1 resource from each of the defending player's heroes to Mithril Seeker.",
                 FlavorText = "\"Of what they brought to light the Orcs have gathered nearly all, and given it in tribute to Sauron, who covets it.\"\r\n-Gandalf, The Fellowship of the Ring",
                 EncounterSet = "Goblins of the Deep Nightmare",
-                ScenarioTitle = "Foundations of Stone Nightmare",
+                //ScenarioTitle = "Foundations of Stone Nightmare",
                 Quantity = 3,
                 Number = 2,
                 Artist = Artist.Guillaume_Ducos
@@ -143,7 +143,7 @@ Forced: When Mithril Seeker attacks, move 1 resource from each of the defending 
 
 Forced: At the end of the combat phase, if ~Giant Centipede is engaged with a player, that player chooses and adds it to a different player's staging area.",
                 EncounterSet = "Goblins of the Deep Nightmare",
-                ScenarioTitle = "Foundations of Stone Nightmare",
+                //ScenarioTitle = "Foundations of Stone Nightmare",
                 Quantity = 2,
                 Number = 3,
                 Artist = Artist.Aurelien_Hubert

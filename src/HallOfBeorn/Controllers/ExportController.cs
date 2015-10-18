@@ -76,7 +76,7 @@ namespace HallOfBeorn.Controllers
                 var defense = ToLabel(result.Card.Defense);
                 var hitPoints = ToLabel(result.Card.HitPoints);
                 var questPoints = ToLabel(result.Card.QuestPoints);
-                var traits = result.Card.TraitList;
+                var traits = result.Card.Traits.ToListString<string>();
                 sb.AppendLine(string.Format("{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}", title, threatCost, resourceCost, engagementCost, willpower, threatCost, attack, defense, hitPoints, questPoints, traits));
             }
 

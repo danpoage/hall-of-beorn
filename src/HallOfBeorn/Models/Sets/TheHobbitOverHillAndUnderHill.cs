@@ -67,7 +67,7 @@ namespace HallOfBeorn.Models.Sets
             });
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,
-                ScenarioTitle = "Over the Misty Mountains Grim",
+                //ScenarioTitle = "Over the Misty Mountains Grim",
                 Title = "A Short Rest",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-1801204c9005",
@@ -370,7 +370,7 @@ The players have won the game.",
             });
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,
-                ScenarioTitle = "Over the Misty Mountains Grim",
+                //ScenarioTitle = "Over the Misty Mountains Grim",
                 Title = "Down, Down to Goblin Town",
                 StageNumber = 3,
                 Id = "51223bd0-ffd1-11df-a976-1801204c9028",
@@ -1108,7 +1108,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
             });
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,
-                ScenarioTitle = "Over the Misty Mountains Grim",
+                //ScenarioTitle = "Over the Misty Mountains Grim",
                 Title = "The Mountain Pass",
                 StageNumber = 2,
                 Id = "51223bd0-ffd1-11df-a976-1801204c9080",

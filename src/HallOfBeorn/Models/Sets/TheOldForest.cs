@@ -523,6 +523,7 @@ Setup: The first player attaches Old Bogey-stories to a hero in play.",
             {
                 Title = "Old Bogey-stories",
                 Id = "85658147-E88C-469A-AD77-BE903B1A826F",
+                Sphere = Models.Sphere.Neutral,
                 CardType = CardType.Attachment,
                 CardSubtype = Models.CardSubtype.Boon,
                 ResourceCost = 0,

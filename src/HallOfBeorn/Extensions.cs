@@ -213,6 +213,21 @@ namespace HallOfBeorn
             return self.ToList();
         }
 
+        public static string ToListString<T>(this IEnumerable<T> self)
+        {
+            return self.ToListString(" ");
+        }
+
+        public static string ToListString<T>(this IEnumerable<T> self, string separator)
+        {
+            if (self == null || self.Count() == 0)
+            {
+                return string.Empty;
+            }
+
+            return string.Join(separator, self.Select(x => x.ToString()));
+        }
+
         public static TEnum ToEnum<TEnum>(this object self) where TEnum: struct
         {
             if (self == null)

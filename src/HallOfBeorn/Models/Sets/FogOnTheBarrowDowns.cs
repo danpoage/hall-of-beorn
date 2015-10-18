@@ -434,6 +434,7 @@ Setup: While any player is at stage 4B, the first player cannot lose control of 
             {
                 Title = "Ho! Tom Bombadil!",
                 Id = "82249D64-2D0A-484D-BB52-AA4F32D98A3E",
+                Sphere = Models.Sphere.Neutral,
                 CardType = CardType.Event,
                 CardSubtype = CardSubtype.Boon,
                 ResourceCost = 0,

@@ -117,7 +117,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new Card()
             {
                 Title = "Search for an Exit",
-                ScenarioTitle = "Flight from Moria",
+                //ScenarioTitle = "Flight from Moria",
                 OppositeTitle = "Pursued By Shadow",
                 HasSecondImage = true,
                 ImageType = Models.ImageType.Png,
@@ -142,7 +142,7 @@ Players may bypass this quest card at the end of the combat phase.",
             Cards.Add(new Card()
             {
                 Title = "Search for an Exit",
-                ScenarioTitle = "Flight from Moria",
+                //ScenarioTitle = "Flight from Moria",
                 OppositeTitle = "Blocked by Flame",
                 HasSecondImage = true,
                 ImageType = Models.ImageType.Png,
@@ -167,7 +167,7 @@ If The ~Nameless Fear has 10 or more damage on it, remove all damage from it and
             Cards.Add(new Card()
             {
                 Title = "Search for an Exit",
-                ScenarioTitle = "Flight from Moria",
+                //ScenarioTitle = "Flight from Moria",
                 OppositeTitle = "Ghâsh",
                 HasSecondImage = true,
                 ImageType = Models.ImageType.Png,

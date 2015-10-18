@@ -28,6 +28,7 @@ namespace HallOfBeorn.Models
 
         private readonly Dictionary<string, Tuple<byte, byte, byte>> cardCountMap = new Dictionary<string, Tuple<byte, byte, byte>>();
 
+        /*
         protected void DeluxeExpansion(string title, string product, int number)
         {
             Title = title;
@@ -48,6 +49,7 @@ namespace HallOfBeorn.Models
             GroupName = cycle;
             Number = number;
         }
+        */
 
         protected void AddEncounterSet(EncounterSet set)
         {
