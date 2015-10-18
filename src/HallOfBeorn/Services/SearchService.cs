@@ -30,12 +30,14 @@ namespace HallOfBeorn.Services
         private readonly SearchSortService sortService;
         private readonly IEnumerable<Card> cards;
 
-        private bool BelongsToScenario(Card card, Scenario scenario)
+        private bool BelongsToScenario(Card card, string scenarioTitle)
         {
-            if (scenario == null)
+            if (string.IsNullOrEmpty(scenarioTitle))
             {
                 return false;
             }
+
+            var scenario = scenarioService.GetScenario(scenarioTitle.ToUrlSafeString());
 
             if (card.CardType == CardType.Quest)
             {
@@ -167,7 +169,7 @@ namespace HallOfBeorn.Services
                 filters.Add(new SearchFilter((s, c) => { return s.CardSetMatches(c); }, 100, "Card Set matches '" + model.CardSet + "'"));
 
             if (model.HasScenario())
-                filters.Add(new SearchFilter((s, c) => { return BelongsToScenario(c, scenarioService.GetScenario(s.Scenario.ToUrlSafeString())); }, 100, "Scenario matches '" + model.Scenario + "'"));
+                filters.Add(new SearchFilter((s, c) => { return BelongsToScenario(c, s.Scenario); }, 100, "Scenario matches '" + model.Scenario + "'"));
 
             if (model.HasTrait())
                 filters.Add(new SearchFilter((s, c) => { return c.HasTrait(s.Trait); }, 100, "Has Trait '" + model.Trait + "'"));
