@@ -52,51 +52,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Smirtouille
-                /*
-                UpdateScenarioCards = (groups) =>
-                {
-                    foreach (var group in groups)
-                    {
-                        var scenario = group.Scenarios.Where(x => x.Title == "The Drúadan Forest").FirstOrDefault();
-                        if (scenario == null)
-                            continue;
-
-                        foreach (var card in scenario.ScenarioCards.Where(x => !x.EncounterSet.EndsWith(" Nightmare")))
-                        {
-                            switch (card.Title)
-                            {
-                                case "Lost Companion":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Secluded Glade":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Overgrown Trail":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Drû-buri-Drû":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Drúadan Elite":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Drúadan Hunter":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Stars in the Sky":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Men in the Dark":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
-
-                    return true;
-                }*/
             });
             Cards.Add(new Card()
             {

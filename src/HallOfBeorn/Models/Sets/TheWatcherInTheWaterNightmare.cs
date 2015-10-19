@@ -48,42 +48,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Alvaro_Calvo_Escudero
-                /*
-                UpdateScenarioCards = (groups) =>
-                {
-                    foreach (var group in groups)
-                    {
-                        var scenario = group.Scenarios.Where(x => x.Title == "The Watcher in the Water").FirstOrDefault();
-                        if (scenario == null)
-                            continue;
-
-                        foreach (var card in scenario.ScenarioCards.Where(x => !x.EncounterSet.EndsWith(" Nightmare")))
-                        {
-                            switch (card.Title)
-                            {
-                                case "The Watcher":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Makeshift Passage":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Black Uruks":
-                                    card.NightmareQuantity -= 4;
-                                    break;
-                                case "Mountain Warg":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Warg Lair":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
-
-                    return true;
-                }*/
             });
             Cards.Add(new Card()
             {

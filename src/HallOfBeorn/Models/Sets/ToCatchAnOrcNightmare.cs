@@ -44,48 +44,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Mariusz_Gandzel
-                /*
-                UpdateScenarioCards = (groups) =>
-                {
-                    foreach (var group in groups)
-                    {
-                        var scenario = group.Scenarios.Where(x => x.Title == "To Catch an Orc").FirstOrDefault();
-                        if (scenario == null)
-                            continue;
-
-                        foreach (var card in scenario.ScenarioCards.Where(x => !x.EncounterSet.EndsWith(" Nightmare")))
-                        {
-                            switch (card.Title)
-                            {
-                                case "Methedras Orc":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Orc Skirmisher":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Orc Hunter":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Prowling Wolf":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Methedras":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Orc Cave":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Orc Hunting Party":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
-
-                    return true;
-                }*/
             });
             Cards.Add(Card.Enemy("Vigilant Orc", "", setName, 1, 2, 4, 3, 4)
                 .WithTraits("Orc.")

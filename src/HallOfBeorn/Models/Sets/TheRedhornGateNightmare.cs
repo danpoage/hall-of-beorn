@@ -50,54 +50,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Alyn_Spiller
-                /*
-                UpdateScenarioCards = (groups) =>
-                {
-                    foreach (var group in groups)
-                    {
-                        var scenario = group.Scenarios.Where(x => x.Title == "The Redhorn Gate").FirstOrDefault();
-                        if (scenario == null)
-                            continue;
-
-                        foreach (var card in scenario.ScenarioCards.Where(x => !x.EncounterSet.EndsWith(" Nightmare")))
-                        {
-                            switch (card.Title)
-                            {
-                                case "Black Uruks":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Mountain Warg":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Knees of the Mountain":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Turbulent Waters":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Warg Lair":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "The Dimrill Stair":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Fell Voices":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Fallen Stones":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Mountain Goblin":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
-
-                    return true;
-                }*/
             });
             Cards.Add(new Card()
             {

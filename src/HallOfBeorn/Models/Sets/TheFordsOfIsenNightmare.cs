@@ -42,42 +42,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Mariusz_Gandzel
-                /*
-                UpdateScenarioCards = (groups) =>
-                {
-                    foreach (var group in groups)
-                    {
-                        var scenario = group.Scenarios.Where(x => x.Title == "The Fords of Isen").FirstOrDefault();
-                        if (scenario == null)
-                            continue;
-
-                        foreach (var card in scenario.ScenarioCards.Where(x => !x.EncounterSet.EndsWith(" Nightmare")))
-                        {
-                            switch (card.Title)
-                            {
-                                case "Dunland Prowler":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Dunlending Bandit":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Dunland Berserker":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Gap of Rohan":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "The King's Road":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
-
-                    return true;
-                }*/
             });
             Cards.Add(Card.Enemy("Dunland Assassin", "", setName, 45, 3, 3, 3, 5)
                 .WithTraits("Dunland.")

@@ -53,46 +53,6 @@ Play Tip: This scenario contains 10 treachery cards with the Attack trait that h
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Anthony_Feliciano
-                /*
-                UpdateScenarioCards = (groups) =>
-                {
-                    foreach (var group in groups)
-                    {
-                        var scenario = group.Scenarios.Where(x => x.Title == "Shadow and Flame").FirstOrDefault();
-                        if (scenario == null)
-                            continue;
-
-                        foreach (var card in scenario.ScenarioCards.Where(x => !x.EncounterSet.EndsWith(" Nightmare")))
-                        {
-                            switch (card.Title)
-                            {
-                                case "Goblin Scout":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Goblin Tunnels":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Stray Goblin":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "The Mountains' Roots":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Ranging Goblin":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Fiery Sword":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Many Thonged Whip":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                            }
-                        }
-                    }
-
-                    return true;
-                }*/
             });
             Cards.Add(new Card()
             {

@@ -47,42 +47,6 @@ Play Tip: The treachery card, ~Night Wanes Slow, has a Forced effect that trigge
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Ilich_Henriquez
-                /*
-                UpdateScenarioCards = (groups) =>
-                {
-                    foreach (var group in groups)
-                    {
-                        var scenario = group.Scenarios.Where(x => x.Title == "We Must Away, Ere Break of Day").FirstOrDefault();
-                        if (scenario == null)
-                            continue;
-
-                        foreach (var card in scenario.ScenarioCards.Where(x => !x.EncounterSet.EndsWith(" Nightmare")))
-                        {
-                            switch (card.Title)
-                            {
-                                case "A Suspicious Crow":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Lone-lands":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Dreary Hills":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Hobbit-lands":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "A Nice Pickle":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
-
-                    return true;
-                }*/
             });
             Cards.Add(new Card()
             {

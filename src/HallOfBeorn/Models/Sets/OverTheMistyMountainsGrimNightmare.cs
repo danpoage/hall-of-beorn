@@ -44,51 +44,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Mark_Bulahao
-                /*
-                UpdateScenarioCards = (groups) =>
-                {
-                    foreach (var group in groups)
-                    {
-                        var scenario = group.Scenarios.Where(x => x.Title == "Over the Misty Mountains Grim").FirstOrDefault();
-                        if (scenario == null)
-                            continue;
-
-                        foreach (var card in scenario.ScenarioCards.Where(x => !x.EncounterSet.EndsWith(" Nightmare")))
-                        {
-                            switch (card.Title)
-                            {
-                                case "Cave Entrance":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Lone-lands":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Dreary Hills":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Overhanging Rock":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Great Cavern Room":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "The Great Goblin":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Goblin Miners":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Goblin Axeman":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
-
-                    return true;
-                }*/
             });
             Cards.Add(new Card()
             {

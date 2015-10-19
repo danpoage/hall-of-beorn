@@ -52,54 +52,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Ignacio_Bazan_Lazcano
-                /*
-                UpdateScenarioCards = (groups) =>
-                {
-                    foreach (var group in groups)
-                    {
-                        var scenario = group.Scenarios.Where(x => x.Title == "The Hunt for Gollum").FirstOrDefault();
-                        if (scenario == null)
-                            continue;
-
-                        foreach (var card in scenario.ScenarioCards.Where(x => !x.EncounterSet.EndsWith(" Nightmare")))
-                        {
-                            switch (card.Title)
-                            {
-                                case "River Ninglor":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "The Eaves of Mirkwood":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "False Lead":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Misty Mountain Goblins":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Banks of the Anduin":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Gladden Fields":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Eastern Crows":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Treacherous Fog":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Evil Storm":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
-
-                    return true;
-                }*/
             });
             Cards.Add(new Card()
             {

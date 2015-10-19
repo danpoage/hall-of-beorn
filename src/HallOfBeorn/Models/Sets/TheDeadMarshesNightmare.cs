@@ -59,69 +59,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Diego_Gisbert_Llorens
-                /*
-                UpdateScenarioCards = (groups) =>
-                {
-                    foreach (var group in groups)
-                    {
-                        var scenario = group.Scenarios.Where(x => x.Title == "The Dead Marshes").FirstOrDefault();
-                        if (scenario == null)
-                            continue;
-
-                        foreach (var card in scenario.ScenarioCards.Where(x => !x.EncounterSet.EndsWith(" Nightmare")))
-                        {
-                            switch (card.Title)
-                            {
-                                case "A Wisp of Pale Sheen":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Through the Mist":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Great Marsh Worm":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Fens and Mires":
-                                    card.NightmareQuantity -= 4;
-                                    break;
-                                case "Eastern Crows":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Pursued by Shadow":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Treacherous Fog":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Wolf Rider":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Hill Troll":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Goblin Sniper":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Wargs":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Despair":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "The Brown Lands":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "The East Bight":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
-
-                    return true;
-                }*/
             });
             Cards.Add(new Card()
             {

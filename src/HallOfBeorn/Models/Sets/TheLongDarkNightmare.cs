@@ -60,57 +60,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Alvaro_Calvo_Escudero
-                /*
-                UpdateScenarioCards = (groups) =>
-                {
-                    foreach (var group in groups)
-                    {
-                        var scenario = group.Scenarios.Where(x => x.Title == "The Long Dark").FirstOrDefault();
-                        if (scenario == null)
-                            continue;
-
-                        foreach (var card in scenario.ScenarioCards.Where(x => !x.EncounterSet.EndsWith(" Nightmare")))
-                        {
-                            switch (card.Title)
-                            {
-                                case "Goblin Follower":
-                                    card.NightmareQuantity -= 4;
-                                    break;
-                                case "Branching Paths":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Burning Low":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Stray Goblin":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Chance Encounter":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "The Mountains' Roots":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Abandoned Mine":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Fatigue":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Goblin Sneak":
-                                    card.NightmareQuantity -= 4;
-                                    break;
-                                case "Rock Adder":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
-
-                    return true;
-                }*/
             });
             Cards.Add(new Card()
             {

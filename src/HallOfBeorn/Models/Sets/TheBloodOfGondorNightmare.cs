@@ -46,48 +46,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Piya_Wannachaiwong
-                /*
-                UpdateScenarioCards = (groups) =>
-                {
-                    foreach (var group in groups)
-                    {
-                        var scenario = group.Scenarios.Where(x => x.Title == "The Blood of Gondor").FirstOrDefault();
-                        if (scenario == null)
-                            continue;
-
-                        foreach (var card in scenario.ScenarioCards.Where(x => !x.EncounterSet.EndsWith(" Nightmare")))
-                        {
-                            switch (card.Title)
-                            {
-                                case "Black Númenorean":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Evil Crow":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Lying in Wait":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "The Dark Woods":
-                                    card.NightmareQuantity -= 4;
-                                    break;
-                                case "Orc Rabble":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Orc Arsonist":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Scourge of Mordor":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
-
-                    return true;
-                }*/
             });
             Cards.Add(Card.Enemy("Black Númenorean", "07C0FBEC-771B-4FD2-AF0E-B9AC9165A500", "The Blood of Gondor Nightmare", 35, 255, 5, 4, 9)
                 .WithUnique()

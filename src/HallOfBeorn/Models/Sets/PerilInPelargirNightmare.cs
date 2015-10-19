@@ -46,39 +46,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Dleoblack
-                /*
-                UpdateScenarioCards = (groups) =>
-                {
-                    foreach (var group in groups)
-                    {
-                        var scenario = group.Scenarios.Where(x => x.Title == "Peril in Pelargir").FirstOrDefault();
-                        if (scenario == null)
-                            continue;
-
-                        foreach (var card in scenario.ScenarioCards.Where(x => !x.EncounterSet.EndsWith(" Nightmare")))
-                        {
-                            switch (card.Title)
-                            {
-                                case "Collateral Damage":
-                                    card.NightmareQuantity -= 4;
-                                    break;
-                                case "Harbor Storehouse":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Pickpocket":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Harbor Thug":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
-
-                    return true;
-                }*/
             });
             Cards.Add(new Card()
             {

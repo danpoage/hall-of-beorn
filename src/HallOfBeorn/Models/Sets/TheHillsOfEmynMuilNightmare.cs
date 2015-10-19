@@ -56,69 +56,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Alyn_Spiller
-                /*
-                UpdateScenarioCards = (groups) =>
-                {
-                    foreach (var group in groups)
-                    {
-                        var scenario = group.Scenarios.Where(x => x.Title == "The Hills of Emyn Muil").FirstOrDefault();
-                        if (scenario == null)
-                            continue;
-
-                        foreach (var card in scenario.ScenarioCards.Where(x => !x.EncounterSet.EndsWith(" Nightmare")))
-                        {
-                            switch (card.Title)
-                            {
-                                case "The East Wall of Rohan":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "The North Stair":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "The Shores of Nen Hithoel":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "The Highlands":
-                                    card.NightmareQuantity -= 4;
-                                    break;
-                                case "Slick Footing":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Impassable Chasm":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Dol Guldur Orcs":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Chieftan Ufthak":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Dol Guldur Beastmaster":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "The Necromancer's Reach":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Necromancer's Pass":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Enchanted Stream":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Evil Storm":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Pursued by Shadow":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
-
-                    return true;
-                }*/
             });
             Cards.Add(new Card()
             {
