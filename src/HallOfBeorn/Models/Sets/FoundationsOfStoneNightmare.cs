@@ -51,57 +51,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Alvaro_Calvo_Escudero
-                /*
-                UpdateScenarioCards = (groups) =>
-                {
-                    foreach (var group in groups)
-                    {
-                        var scenario = group.Scenarios.Where(x => x.Title == "Foundations of Stone").FirstOrDefault();
-                        if (scenario == null)
-                            continue;
-
-                        foreach (var card in scenario.ScenarioCards.Where(x => !x.EncounterSet.EndsWith(" Nightmare")))
-                        {
-                            switch (card.Title)
-                            {
-                                case "Goblin Scout":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Goblin Swordsman":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Goblin Follower":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Burning Low":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Branching Paths":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Many Roads":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Cave In":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Drowned Treasury":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Mithril Lode":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Moria Bats":
-                                    card.NightmareQuantity -= 4;
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
-
-                    return true;
-                }*/
             });
             Cards.Add(new Card()
             {

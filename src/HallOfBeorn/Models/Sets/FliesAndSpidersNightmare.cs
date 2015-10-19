@@ -45,45 +45,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Jon_Bosco
-                /*
-                UpdateScenarioCards = (groups) =>
-                {
-                    foreach (var group in groups)
-                    {
-                        var scenario = group.Scenarios.Where(x => x.Title == "Flies and Spiders").FirstOrDefault();
-                        if (scenario == null)
-                            continue;
-
-                        foreach (var card in scenario.ScenarioCards.Where(x => !x.EncounterSet.EndsWith(" Nightmare")))
-                        {
-                            switch (card.Title)
-                            {
-                                case "Dark Bats":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Hidden Path":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Fighting Among Friends":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Wicked Spider":
-                                    card.NightmareQuantity -= 5;
-                                    break;
-                                case "Fat Spider":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Giant Web":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
-
-                    return true;
-                }*/
             });
             Cards.Add(new Card()
             {

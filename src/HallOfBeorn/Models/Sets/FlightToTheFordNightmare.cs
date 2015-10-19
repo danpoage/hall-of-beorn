@@ -49,54 +49,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Julian_Kok
-                /*
-                UpdateScenarioCards = (groups) =>
-                {
-                    foreach (var group in groups)
-                    {
-                        var scenario = group.Scenarios.Where(x => x.Title == "A Shadow of the Past").FirstOrDefault();
-                        if (scenario == null)
-                            continue;
-
-                        foreach (var card in scenario.ScenarioCards.Where(x => !x.EncounterSet.EndsWith(" Nightmare")))
-                        {
-                            switch (card.Title)
-                            {
-                                case "Fell Rider":
-                                    card.NightmareQuantity -= 4;
-                                    break;
-                                case "Ford of Bruinen":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "The Troll's Camp":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Ettenmoors":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Pain Assailed Him":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "The Old Road":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Pathless Country":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Stricken Dumb":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Rode Like a Gale":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
-
-                    return true;
-                }*/
             });
             Cards.Add(Card.Enemy("Fell Rider", "3125D3AE-527C-47FC-BFA6-2C1705EF4D67", "Flight to the Ford Nightmare", 30, 3, 5, 4, 6)
                 .WithTraits("Nazgûl")

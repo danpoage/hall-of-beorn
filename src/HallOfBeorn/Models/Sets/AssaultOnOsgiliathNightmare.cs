@@ -48,63 +48,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Mariusz_Gandzel
-                /*
-                UpdateScenarioCards = (groups) =>
-                {
-                    foreach (var group in groups)
-                    {
-                        var scenario = group.Scenarios.Where(x => x.Title == "Assault on Osgiliath").FirstOrDefault();
-                        if (scenario == null)
-                            continue;
-
-                        foreach (var card in scenario.ScenarioCards.Where(x => !x.EncounterSet.EndsWith(" Nightmare")))
-                        {
-                            switch (card.Title)
-                            {
-                                case "Uruk Soldier":
-                                    card.NightmareQuantity -= 4;
-                                    break;
-                                case "Southron Phalanx":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "West Quarter":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "East Quarter":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Ruined Tower":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Ruined Square":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "The Master's Malice":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Street Fighting":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Southron Mercenaries":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Uruk Lieutenant":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Orc Arbalasters":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "The Power of Mordor":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
-
-                    return true;
-                }*/
             });
             Cards.Add(Card.Enemy("Invading Orc", "4C4A8641-6C80-4BDD-9536-ECCA4B294F65", "Assault on Osgiliath Nightmare", 20, 2, 5, 3, 3)
                 .WithTraits("Orc.", "Mordor.")

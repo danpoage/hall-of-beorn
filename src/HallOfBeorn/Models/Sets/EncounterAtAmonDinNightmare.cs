@@ -53,54 +53,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Mariusz_Gandzel
-                /*
-                UpdateScenarioCards = (groups) =>
-                {
-                    foreach (var group in groups)
-                    {
-                        var scenario = group.Scenarios.Where(x => x.Title == "Encounter at Amon Dîn").FirstOrDefault();
-                        if (scenario == null)
-                            continue;
-
-                        foreach (var card in scenario.ScenarioCards.Where(x => !x.EncounterSet.EndsWith(" Nightmare")))
-                        {
-                            switch (card.Title)
-                            {
-                                case "Burning Farmhouse":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Gondorian Hamlet":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Marauding Orc":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Orc Rabble":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Orc Ravager":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Craven Eagle":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Trapped Inside":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Panicked!":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Scourge of Mordor":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
-
-                    return true;
-                }*/
             });
             Cards.Add(new Card()
             {

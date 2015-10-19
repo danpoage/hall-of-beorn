@@ -46,57 +46,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Jim_Pavelec
-                /*
-                UpdateScenarioCards = (groups) =>
-                {
-                    foreach (var group in groups)
-                    {
-                        var scenario = group.Scenarios.Where(x => x.Title == "Escape from Dol Guldur").FirstOrDefault();
-                        if (scenario == null)
-                            continue;
-
-                        foreach (var card in scenario.ScenarioCards.Where(x => !x.EncounterSet.EndsWith(" Nightmare")))
-                        {
-                            switch (card.Title)
-                            {
-                                case "Dol Guldur Orcs":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Enchanted Stream":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Great Forest Web":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Mountains of Mirkwood":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Caught in a Web":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "The Necromancer's Reach":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Necromancer's Pass":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Under the Shadow":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Tower Gate":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Iron Shackles":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
-
-                    return true;
-                }*/
             });
             Cards.Add(new Card()
             {

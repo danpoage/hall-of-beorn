@@ -47,48 +47,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Helge_C_Balzer
-                /*
-                UpdateScenarioCards = (groups) =>
-                {
-                    foreach (var group in groups)
-                    {
-                        var scenario = group.Scenarios.Where(x => x.Title == "A Shadow of the Past").FirstOrDefault();
-                        if (scenario == null)
-                            continue;
-
-                        foreach (var card in scenario.ScenarioCards.Where(x => !x.EncounterSet.EndsWith(" Nightmare")))
-                        {
-                            switch (card.Title)
-                            {
-                                case "Evil Crow":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Woody End":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Bamfurlong":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Stock-brook":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Green Hill Country":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Pathless Country":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Rode Like a Gale":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
-
-                    return true;
-                }*/
             });
             Cards.Add(Card.Enemy("Khamûl the Easterling", "53468A89-8BF6-4252-8B39-F525E30011EC", "A Shadow of the Past Nightmare", 40, 5, 6, 4, 8)
                 .WithNormalizedTitle("Khamul the Easterling")

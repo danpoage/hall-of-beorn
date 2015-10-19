@@ -50,64 +50,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Guillaume_Ducos
-                /*
-                UpdateScenarioCards = (groups) =>
-                {
-                    foreach (var group in groups)
-                    {
-                        var scenario = group.Scenarios.Where(x => x.Title == "Into the Pit").FirstOrDefault();
-                        if (scenario == null)
-                            continue;
-
-                        foreach (var quest in scenario.QuestCards)
-                        {
-                            switch (quest.Title)
-                            {
-                                case "Goblin Patrol":
-                                    quest.NightmareModeQuantity = 0;
-                                    break;
-                                case "Goblin Ambush":
-                                    quest.NormalModeQuantity = 0;
-                                    quest.EasyModeQuantity = 0;
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-
-                        foreach (var card in scenario.ScenarioCards.Where(x => !x.EncounterSet.EndsWith(" Nightmare")))
-                        {
-                            switch (card.Title)
-                            {
-                                case "Stairs of Náin":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Goblin Follower":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Crumbling Ruin":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Cave In":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Fouled Well":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Goblin Tunnels":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Goblin Swordsman":
-                                    card.NightmareQuantity -= 5;
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
-
-                    return true;
-                }*/
             });
             Cards.Add(new Card()
             {

@@ -55,60 +55,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Jake_Murray
-                /*
-                UpdateScenarioCards = (groups) =>
-                {
-                    foreach (var group in groups)
-                    {
-                        var scenario = group.Scenarios.Where(x => x.Title == "A Journey to Rhosgobel").FirstOrDefault();
-                        if (scenario == null)
-                            continue;
-
-                        foreach (var card in scenario.ScenarioCards.Where(x => !x.EncounterSet.EndsWith(" Nightmare")))
-                        {
-                            switch (card.Title)
-                            {
-                                case "Forest Grove":
-                                    card.NightmareQuantity -= 4;
-                                    break;
-                                case "Exhaustion":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Swarming Insects":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Festering Wounds":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Mountains of Mirkwood":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Chieftan Ufthak":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Dol Guldur Beastmaster":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Driven by Shadow":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "The Necromancer's Reach":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                case "Necromancer's Pass":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                case "Enchanted Stream":
-                                    card.NightmareQuantity -= 2;
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
-
-                    return true;
-                }*/
             });
             Cards.Add(new Card()
             {

@@ -48,42 +48,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Jake_Murray
-                /*
-                UpdateScenarioCards = (groups) =>
-                {
-                    foreach (var group in groups)
-                    {
-                        var scenario = group.Scenarios.Where(x => x.Title == "Dungeons Deep and Caverns Dim").FirstOrDefault();
-                        if (scenario == null)
-                            continue;
-
-                        foreach (var card in scenario.ScenarioCards.Where(x => !x.EncounterSet.EndsWith(" Nightmare")))
-                        {
-                            switch (card.Title)
-                            {
-                                case "Goblin Miners":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Goblin Axeman":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "The Goblins' Caves":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Grip, Grab! Pinch, Nab!":
-                                    card.NightmareQuantity -= 3;
-                                    break;
-                                case "Not Fair! Not Fair!":
-                                    card.NightmareQuantity -= 1;
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
-
-                    return true;
-                }*/
             });
             Cards.Add(new Card()
             {
