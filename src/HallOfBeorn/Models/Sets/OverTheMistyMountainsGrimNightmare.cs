@@ -109,7 +109,6 @@ Forced: At the end of the round, each player must discard a random card from his
                 Text = "Progress cannot be placed on the current quest.\r\nForced: When The Great Goblin attacks, discard the top card of the encounter deck. If it is a Goblin enemy, put it into play engaged with the defending player and deal it a shadow card.",
                 VictoryPoints = 3,
                 EncounterSet = "The Great Goblin Nightmare",
-                //ScenarioTitle = "Over the Misty Mountains Grim Nightmare",
                 Quantity = 1,
                 Number = 5,
                 Artist = Artist.Mark_Bulahao
@@ -132,7 +131,6 @@ Forced: At the end of the round, each player must discard a random card from his
 Forced: When Goblin Prowler engages you, discard a character you control.",
                 FlavorText = "...neither Bilbo, nor the dwarves, nor even Gandalf heard them coming. -The Hobbit",
                 EncounterSet = "The Great Goblin Nightmare",
-                //ScenarioTitle = "Over the Misty Mountains Grim Nightmare",
                 Quantity = 4,
                 Number = 6,
                 Artist = Artist.Mariusz_Gandzel
@@ -151,7 +149,6 @@ Forced: When Goblin Prowler engages you, discard a character you control.",
 
 Travel: Raise each player's threat by X to travel here, where X is the number of Cave locations in the staging area.",
                 EncounterSet = "The Great Goblin Nightmare",
-                //ScenarioTitle = "Over the Misty Mountains Grim Nightmare",
                 Quantity = 3,
                 Number = 7,
                 Artist = Artist.Nicholas_Gregory
@@ -165,7 +162,6 @@ Travel: Raise each player's threat by X to travel here, where X is the number of
                 Text = "When Revealed: Each player must assign damage among characters he controls equal to the total number of Goblin enemies engaged with him and in the staging area.",
                 Shadow = "Shadow: Attacking enemy cannot take damage this round.",
                 EncounterSet = "The Great Goblin Nightmare",
-                //ScenarioTitle = "Over the Misty Mountains Grim Nightmare",
                 Quantity = 2,
                 Number = 8,
                 Artist = Artist.Adam_Lane

@@ -54,7 +54,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new Card()
             {
                 Title = "Goblin Ambush",
-                //ScenarioTitle = "Into the Pit",
                 ImageType = Models.ImageType.Png,
                 HasSecondImage = true,
                 Id = "F2F24396-EBA3-45D6-B7BD-01FAF787F13C",

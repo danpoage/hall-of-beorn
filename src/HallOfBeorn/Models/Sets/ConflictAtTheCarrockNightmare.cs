@@ -235,7 +235,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new Card()
             {
                 Title = "Grimbeorn's Folly",
-                //ScenarioTitle = "Conflict at the Carrock",
                 ImageType = Models.ImageType.Png,
                 HasSecondImage = true,
                 Id = "ED52944F-1499-4A0A-BB84-3CE5C18952DE",

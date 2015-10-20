@@ -53,7 +53,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new Card()
             {
                 Title = "Ambush in the Night",
-                //ScenarioTitle = "Road to Rivendell",
                 Id = "2EC4C17D-CB7C-4B1A-94AB-A755644577C5",
                 HasSecondImage = true,
                 CardType = CardType.Quest,

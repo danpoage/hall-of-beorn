@@ -260,7 +260,7 @@ namespace HallOfBeorn.Models.Sets
                 Text = "When Revealed: The first player chooses a player to take control of Ranger of the North. Then, either deal 2 damage to an enemy or place 2 progress tokens on a location.",
                 Artist = Artist.Alvaro_Calvo_Escudero,
                 Number = 15,
-                Quantity = 3,
+                Quantity = 3
             });
             Cards.Add(new Card()
             {
@@ -268,7 +268,6 @@ namespace HallOfBeorn.Models.Sets
                 NormalizedTitle = "Iarion",
                 Id = "93F6B7C3-2F83-4E1C-8E3E-E3C9F1044A18",
                 CardType = CardType.Objective_Ally,
-                //ScenarioTitle = "The Lost Realm",
                 Willpower = 0,
                 IsVariableWillpower = true,
                 Attack = 0,
