@@ -283,7 +283,7 @@ namespace HallOfBeorn.Models
         public static EncounterSet MordorElite = new EncounterSet { Name = "Mordor Elite", Set = "Heirs of Númenor", NormalizedSet = "Heirs of Numenor" };
         public static EncounterSet TheStewardsFear = new EncounterSet { Name = "The Steward's Fear", Set = "The Steward's Fear" };
         public static EncounterSet TheDruadanForest = new EncounterSet { Name = "The Drúadan Forest", Set = "The Drúadan Forest", NormalizedSet = "The Druadan Forest" };
-        public static EncounterSet EncounterAtAmonDin = new EncounterSet { Name = "Encounter at Amon-Dîn", Set = "Encounter at Amon-Dîn", NormalizedSet = "Encounter at Amon-Din", };
+        public static EncounterSet EncounterAtAmonDin = new EncounterSet { Name = "Encounter at Amon Dîn", Set = "Encounter at Amon Dîn", NormalizedSet = "Encounter at Amon Din", };
         public static EncounterSet AssaultOnOsgiliath = new EncounterSet { Name = "Assault on Osgiliath", Set = "Assault on Osgiliath" };
         public static EncounterSet TheBloodOfGondor = new EncounterSet { Name = "The Blood of Gondor", Set = "The Blood of Gondor" };
         public static EncounterSet TheMorgulVale = new EncounterSet { Name = "The Morgul Vale", Set = "The Morgul Vale" };
@@ -402,7 +402,7 @@ namespace HallOfBeorn.Models
         public static EncounterSet TheSiegeOfCairAndrosNightmare = new EncounterSet { Name = "The Siege of Cair Andros Nightmare", Set = "The Siege of Cair Andros Nightmare" };
         public static EncounterSet TheStewardsFearNightmare = new EncounterSet { Name = "The Steward's Fear Nightmare", Set = "The Steward's Fear Nightmare" };
         public static EncounterSet TheDruadanForestNightmare = new EncounterSet { Name = "The Drúadan Forest Nightmare", Set = "The Drúadan Forest Nightmare", NormalizedSet = "The Druadan Forest Nightmare" };
-        public static EncounterSet EncounterAtAmonDinNightmare = new EncounterSet { Name = "Encounter at Amon-Dîn Nightmare", Set = "Encounter at Amon-Dîn Nightmare", NormalizedSet = "Encounter at Amon-Din Nightmare", };
+        public static EncounterSet EncounterAtAmonDinNightmare = new EncounterSet { Name = "Encounter at Amon Dîn Nightmare", Set = "Encounter at Amon Dîn Nightmare", NormalizedSet = "Encounter at Amon Din Nightmare", };
         public static EncounterSet AssaultOnOsgiliathNightmare = new EncounterSet { Name = "Assault on Osgiliath Nightmare", Set = "Assault on Osgiliath Nightmare" };
         public static EncounterSet TheBloodOfGondorNightmare = new EncounterSet { Name = "The Blood of Gondor Nightmare", Set = "The Blood of Gondor Nightmare" };
         public static EncounterSet TheMorgulValeNightmare = new EncounterSet { Name = "The Morgul Vale Nightmare", Set = "The Morgul Vale Nightmare" };
