@@ -565,6 +565,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AdvancedSearchService.cs" />
     <Compile Include="Services\CardRepository.cs" />
+    <Compile Include="Services\OctgnService.cs" />
     <Compile Include="Services\SearchService.cs" />
     <Compile Include="Services\CategoryService.cs" />
     <Compile Include="Services\DeckRepository.cs" />
