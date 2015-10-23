@@ -14,7 +14,10 @@ namespace HallOfBeorn.Services
         }
 
         private readonly Dictionary<string, string> setNamesByGuid = new Dictionary<string,string>();
-        private readonly Dictionary<string, string> guidsBySetName = new Dictionary<string, string>();
+        private readonly Dictionary<string, string> setGuidsByName = new Dictionary<string, string>();
+
+        private readonly Dictionary<string, string> cardSlugsByGuid = new Dictionary<string, string>();
+        private readonly Dictionary<string, string> cardGuidsBySlug = new Dictionary<string, string>();
 
         private void LoadCardMaps()
         {
@@ -81,23 +84,23 @@ namespace HallOfBeorn.Services
 
             foreach (var pair in setNamesByGuid)
             {
-                guidsBySetName.Add(pair.Value, pair.Key);
+                setGuidsByName.Add(pair.Value, pair.Key);
             }
         }
 
-        public string GetOctgnCardGuid(string slug)
+        public string GetCardGuid(string slug)
         {
-            return string.Empty;
+            return cardGuidsBySlug.ContainsKey(slug) ? cardGuidsBySlug[slug] : string.Empty;
         }
 
         public string GetCardSlug(string octgnGuid)
         {
-            return string.Empty;
+            return cardSlugsByGuid.ContainsKey(octgnGuid) ? cardSlugsByGuid[octgnGuid] : string.Empty;
         }
 
-        public string GetOctgnSetGuid(string setName)
+        public string GetSetGuid(string setName)
         {
-            return guidsBySetName.ContainsKey(setName) ? guidsBySetName[setName] : string.Empty;
+            return setGuidsByName.ContainsKey(setName) ? setGuidsByName[setName] : string.Empty;
         }
 
         public string GetSetName(string octgnGuid)
