@@ -263,6 +263,7 @@ namespace HallOfBeorn.Controllers
             return Redirect("/Cards/Search");
         }
 
+        /*
         public ActionResult Browse()
         {
             var model = new BrowseViewModel();
@@ -270,6 +271,29 @@ namespace HallOfBeorn.Controllers
             foreach (var productGroup in productRepository.ProductGroups())
             {
                 model.ProductGroups.Add(new ProductGroupViewModel(productGroup));
+            }
+
+            return View(model);
+        }*/
+
+        public ActionResult Browse(string id)
+        {
+            var model = new BrowseViewModel();
+
+            if (string.IsNullOrEmpty(id))
+            {
+                foreach (var productGroup in productRepository.ProductGroups())
+                {
+                    model.ProductGroups.Add(new ProductGroupViewModel(productGroup));
+                }
+            }
+            else
+            {
+                var product = productRepository.Products().Where(x => x.Name.ToUrlSafeString() == id).FirstOrDefault();
+                if (product != null)
+                {
+                    model.Detail = new BrowseProductViewModel(product);
+                }
             }
 
             return View(model);

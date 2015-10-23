@@ -95,6 +95,27 @@ namespace HallOfBeorn.Models
             }
         }
 
+        private bool IsQuest()
+        {
+            return _card.CardType == Models.CardType.Quest || _card.CardType == Models.CardType.Encounter_Side_Quest || _card.CardType == Models.CardType.Player_Side_Quest;
+        }
+
+        public string smallWidth
+        {
+            get
+            {
+                return IsQuest() ? "180px" : "127px";
+            }
+        }
+
+        public string smallHeight
+        {
+            get
+            {
+                return IsQuest() ? "127px" : "180px";
+            }
+        }
+
         /*
         public string HallOfBeornBlogSearchUrl
         {

@@ -13,5 +13,7 @@ namespace HallOfBeorn.Models
         }
 
         public List<ProductGroupViewModel> ProductGroups { get; private set; }
+
+        public BrowseProductViewModel Detail { get; set; }
     }
 }

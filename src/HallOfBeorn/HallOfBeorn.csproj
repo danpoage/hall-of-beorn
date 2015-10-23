@@ -198,6 +198,7 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\AdvancedSearchViewModel.cs" />
     <Compile Include="Models\Artist.cs" />
+    <Compile Include="Models\BrowseProductViewModel.cs" />
     <Compile Include="Models\BrowseViewModel.cs" />
     <Compile Include="Models\CardEffectType.cs" />
     <Compile Include="Models\CardSubtype.cs" />
