@@ -30,6 +30,7 @@ namespace HallOfBeorn.Models.Sets
                 HitPoints = 3,
                 Traits = new List<string>() { "Silvan." },
                 Text = "Each hero you control with a printed Lore resource icon gets -1 threat cost.",
+                FlavorText = "\"...the Elves feared and distrusted the world outside...\"\r\n-The Fellowship of the Ring",
                 Quantity = 1,
                 Number = 32,
                 Artist = Artist.Magali_Villeneuve
