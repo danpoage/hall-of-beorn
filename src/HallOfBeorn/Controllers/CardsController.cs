@@ -20,6 +20,7 @@ namespace HallOfBeorn.Controllers
             categoryService = (CategoryService)System.Web.HttpContext.Current.Application[Extensions.CategoryServiceKey];
             scenarioService = (ScenarioService)System.Web.HttpContext.Current.Application[Extensions.ScenarioServiceKey];
             statService = (StatService)System.Web.HttpContext.Current.Application[Extensions.StatServiceKey];
+            octgnService = (OctgnService)System.Web.HttpContext.Current.Application[Extensions.OctgnServiceKey];
         }
 
         private readonly SearchService searchService;
@@ -28,6 +29,7 @@ namespace HallOfBeorn.Controllers
         private readonly CategoryService categoryService;
         private readonly ScenarioService scenarioService;
         private readonly StatService statService;
+        private readonly OctgnService octgnService;
 
         private List<string> strongPhrases = new List<string> {
             "lost the game",
@@ -860,6 +862,12 @@ namespace HallOfBeorn.Controllers
             else
             {
                 model = GetCardViewModel(card);
+
+                var octgnGuid = octgnService.GetCardGuid(card.Slug);
+                if (!string.IsNullOrEmpty(octgnGuid))
+                {
+                    model.OctgnGuid = octgnGuid;
+                }
             }   
 
             return View(model);

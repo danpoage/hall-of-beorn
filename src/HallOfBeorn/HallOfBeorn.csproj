@@ -649,6 +649,7 @@
     <Content Include="Images\Leadership.png" />
     <Content Include="Images\Lore.png" />
     <Content Include="Images\Mastery.png" />
+    <Content Include="Images\octgn-logo.png" />
     <Content Include="Images\plus.png" />
     <Content Include="Images\ShadowDivider.png" />
     <Content Include="Images\Spirit.png" />

@@ -572,6 +572,10 @@
                 }
             </div>
         <div>
+        @if (!string.IsNullOrEmpty(@Model.OctgnGuid))
+        {
+            <img title="OCTGN ID: @Model.OctgnGuid" src="/Images/octgn-logo.png" style="margin-top: 12px;" height="25" width="25"/>
+        }
             @*
             <div>
                 @if (@Model.Decks.Count() > 0)

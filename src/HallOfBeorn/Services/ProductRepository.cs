@@ -46,5 +46,27 @@ namespace HallOfBeorn.Services
                 }
             }
         }
+
+        public IEnumerable<CardSet> CardSets()
+        {
+            foreach (var group in productGroups)
+            {
+                if (group.MainProduct != null)
+                {
+                    foreach (var set in group.MainProduct.CardSets())
+                    {
+                        yield return set;
+                    }
+                }
+
+                foreach (var product in group.ChildProducts)
+                {
+                    foreach (var set in product.CardSets())
+                    {
+                        yield return set;
+                    }
+                }
+            }
+        }
     }
 }

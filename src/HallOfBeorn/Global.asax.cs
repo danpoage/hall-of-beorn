@@ -53,6 +53,9 @@ namespace HallOfBeorn
             var statService = new StatService(cardRepository);
             System.Web.HttpContext.Current.Application[Extensions.StatServiceKey] = statService;
 
+            var octgnService = new OctgnService(productRepository, cardRepository);
+            System.Web.HttpContext.Current.Application[Extensions.OctgnServiceKey] = octgnService;
+
             System.Web.HttpContext.Current.Application.UnLock();
         }
     }

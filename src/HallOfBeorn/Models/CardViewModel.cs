@@ -855,5 +855,11 @@ namespace HallOfBeorn.Models
         {
             get { return _card.Html2; }
         }
+
+        public string OctgnGuid
+        {
+            get;
+            set;
+        }
     }
 }
