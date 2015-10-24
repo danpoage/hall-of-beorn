@@ -289,9 +289,14 @@ namespace HallOfBeorn.Controllers
             }
             else
             {
-                var product = productRepository.Products().Where(x => x.Name.ToUrlSafeString() == id).FirstOrDefault();
+                var product = productRepository.Products().Where(x => x.Name.ToUrlSafeString() == id || x.Name.NormalizeCaseSensitiveString().ToUrlSafeString() == id).FirstOrDefault();
                 if (product != null)
                 {
+                    if (product.Name.NormalizeCaseSensitiveString().ToUrlSafeString() != id)
+                    {
+                        return Redirect(string.Format("/Cards/Browse/{0}", product.Name.NormalizeCaseSensitiveString().ToUrlSafeString()));
+                    }
+                    
                     model.Detail = new BrowseProductViewModel(product);
                 }
             }

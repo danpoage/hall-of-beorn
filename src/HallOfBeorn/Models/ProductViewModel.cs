@@ -66,7 +66,7 @@ namespace HallOfBeorn.Models
         {
             get
             {
-                return string.Format("/Cards/Browse/{0}", _product.Name.ToUrlSafeString());
+                return string.Format("/Cards/Browse/{0}", _product.Name.NormalizeCaseSensitiveString().ToUrlSafeString());
             }
         }
 
