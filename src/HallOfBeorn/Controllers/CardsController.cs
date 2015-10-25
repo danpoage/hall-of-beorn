@@ -863,7 +863,7 @@ namespace HallOfBeorn.Controllers
             {
                 model = GetCardViewModel(card);
 
-                var octgnGuid = octgnService.GetCardGuid(card.Slug);
+                var octgnGuid = octgnService.GetCardOctgnGuid(card.Slug);
                 if (!string.IsNullOrEmpty(octgnGuid))
                 {
                     model.OctgnGuid = octgnGuid;

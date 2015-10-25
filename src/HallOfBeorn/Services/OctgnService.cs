@@ -2966,7 +2966,7 @@ namespace HallOfBeorn.Services
             }
         }
 
-        public string GetCardGuid(string slug)
+        public string GetCardOctgnGuid(string slug)
         {
             return cardGuidsBySlug.ContainsKey(slug) ? cardGuidsBySlug[slug] : string.Empty;
         }
@@ -2976,7 +2976,7 @@ namespace HallOfBeorn.Services
             return cardSlugsByGuid.ContainsKey(octgnGuid) ? cardSlugsByGuid[octgnGuid] : string.Empty;
         }
 
-        public string GetSetGuid(string setName)
+        public string GetSetOctgnGuid(string setName)
         {
             return setGuidsByName.ContainsKey(setName) ? setGuidsByName[setName] : string.Empty;
         }
