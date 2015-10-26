@@ -13,8 +13,25 @@ namespace HallOfBeorn.Models
             this.Url = url;
         }
 
-        public string DeckList { get; protected set; }
-        public string Name { get; protected set; }
-        public string Url { get; protected set; }
+        public Deck()
+        {
+        }
+
+        private readonly List<string> cards = new List<string>();
+        private readonly List<string> octgnCards = new List<string>();
+
+        public List<string> Cards
+        {
+            get { return cards; }
+        }
+
+        public List<string> OctgnCards
+        {
+            get { return octgnCards; }
+        }
+
+        public string DeckList { get; set; }
+        public string Name { get; set; }
+        public string Url { get; set; }
     }
 }

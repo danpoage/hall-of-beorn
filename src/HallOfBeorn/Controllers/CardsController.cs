@@ -872,5 +872,19 @@ namespace HallOfBeorn.Controllers
 
             return View(model);
         }
+
+        public ActionResult OctgnDeck(Deck deck)
+        {
+            foreach (var slug in deck.Cards)
+            {
+                var cardGuid = octgnService.GetCardOctgnGuid(slug);
+                if (!string.IsNullOrEmpty(cardGuid))
+                {
+                    deck.OctgnCards.Add(cardGuid);
+                }
+            }
+
+            return View(deck);
+        }
     }
 }
