@@ -394,6 +394,37 @@ namespace HallOfBeorn.Controllers
             public List<float> SurgeTotals { get; private set; }
         }
 
+        private bool isPlayerCard(Card card)
+        {
+            switch (card.CardType)
+            {
+                case CardType.Hero:
+                case CardType.Ally:
+                case CardType.Attachment:
+                case CardType.Event:
+                case CardType.Player_Side_Quest:
+                    return true;
+                default:
+                    return false;
+            }
+        }
+
+        public JsonResult TitleSearch(string term)
+        {
+            //if (string.IsNullOrEmpty(term))
+            //{
+            //    return Json(string.Empty, JsonRequestBehavior.AllowGet);
+            //}
+
+            var match = term.ToLower();
+
+            var results = cardRepository.Cards()
+                .Where(x => isPlayerCard(x) && x.Title.ToLower().Contains(match))
+                .Select(x => x.Title).ToArray();
+
+            return Json(results, JsonRequestBehavior.AllowGet);
+        }
+
         public JsonResult ScenarioTotals(string id)
         {
             var data = new ScenarioTotalData();
@@ -869,6 +900,13 @@ namespace HallOfBeorn.Controllers
                     model.OctgnGuid = octgnGuid;
                 }
             }   
+
+            return View(model);
+        }
+
+        public ActionResult Decks()
+        {
+            var model = new DeckViewModel() { Name = "New Deck" };
 
             return View(model);
         }

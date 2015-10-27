@@ -274,6 +274,7 @@
     <Compile Include="Models\Decks\TalesFromTheCards\TrapsOfIthilien.cs" />
     <Compile Include="Models\Decks\TalesFromTheCards\WhereEaglesDare.cs" />
     <Compile Include="Models\DeckType.cs" />
+    <Compile Include="Models\DeckViewModel.cs" />
     <Compile Include="Models\Effect.cs" />
     <Compile Include="Models\EffectToken.cs" />
     <Compile Include="Models\EffectTokenType.cs" />
@@ -650,6 +651,7 @@
     <Content Include="Images\Lore.png" />
     <Content Include="Images\Mastery.png" />
     <Content Include="Images\octgn-logo.png" />
+    <Content Include="Images\Patreon.png" />
     <Content Include="Images\plus.png" />
     <Content Include="Images\ShadowDivider.png" />
     <Content Include="Images\Spirit.png" />
@@ -723,6 +725,7 @@
     <Content Include="Views\Cards\Scenarios.cshtml" />
     <Content Include="Views\Cards\AdvancedSearch.cshtml" />
     <Content Include="Error.html" />
+    <Content Include="Views\Cards\Decks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

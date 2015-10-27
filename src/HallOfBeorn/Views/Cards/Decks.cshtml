@@ -1,0 +1,54 @@
+﻿@using HallOfBeorn.Models;
+@model DeckViewModel
+
+@{
+    ViewBag.Title = "Decks";
+}
+
+@section scripts {
+<script type="text/javascript">
+    $(function () {
+        /*
+        $('#Search').keypress(function (e) {
+            if (e.which == 13) {
+                $('form').submit();
+                return false;
+            }
+        });*/
+
+        $("#Search").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: "/Cards/TitleSearch",
+                    type: "get",
+                    dataType: "json",
+                    data: {
+                        term: request.term
+                    },
+                    success: function (data) {
+                        response(data);
+                    }
+                });
+            },
+            minLength: 2
+        });
+        $("#Search").autocomplete("widget").addClass("autocompleteClass");
+    });
+</script>    
+}
+
+<h2>Deck Builder</h2>
+
+@using (Html.BeginForm("Decks", "Cards", FormMethod.Post))
+{
+    <span class="search-label-short">Search</span>
+    <div>
+        @Html.TextBoxFor(x => x.Search, new { style = "text-align:left;width:95%;margin-right:4px;" })
+    </div>
+    
+    
+    <span class="search-label-short">Name</span>
+    <div class="form-group">
+        @Html.TextBoxFor(x => x.Name, new { style = "text-align:left;width:95%;margin-right:4px;" })
+    </div>
+}
