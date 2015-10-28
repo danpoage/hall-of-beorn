@@ -418,10 +418,15 @@ namespace HallOfBeorn.Controllers
 
             var match = term.ToLower();
 
-            var results = cardRepository.Cards()
-                .Where(x => isPlayerCard(x) && x.Title.ToLower().Contains(match))
-                .Select(x => x.Title).ToArray();
+            var results = new List<DeckItemViewModel>();
 
+            foreach (var card in cardRepository.Cards()
+                .Where(x => isPlayerCard(x) && x.Title.ToLower().Contains(match))
+                .Select(x => new CardViewModel(x)))
+            {
+                results.Add(new DeckItemViewModel(card));
+            }
+            
             return Json(results, JsonRequestBehavior.AllowGet);
         }
 

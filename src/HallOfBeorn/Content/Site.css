@@ -1002,3 +1002,20 @@ tr.pager td {
     bottom:4px;
     right:4px;
 }
+
+.deck-sphere-icon {
+    height: 12px;
+    width: 12px;
+}
+
+#cardList {
+    list-style-type: none;
+}
+
+.deck-card-item {
+
+}
+
+.deck-card-image {
+    width: 48px;
+}

@@ -277,6 +277,21 @@ namespace HallOfBeorn.Models
             get { return _card.Sphere.ToString(); }
         }
 
+        public string SphereIcon
+        {
+            get
+            {
+                switch (_card.Sphere)
+                {
+                    case Models.Sphere.Neutral:
+                    case Models.Sphere.None:
+                        return string.Empty;
+                    default:
+                        return string.Format("/Images/{0}.png", _card.Sphere);
+                }
+            }
+        }
+
         public string ThreatCost
         {
             get { return _card.ThreatCost.ToString(); }

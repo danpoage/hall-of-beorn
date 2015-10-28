@@ -211,6 +211,7 @@
     <Compile Include="Models\CardViewModel.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Deck.cs" />
+    <Compile Include="Models\DeckItemViewModel.cs" />
     <Compile Include="Models\Decks\HallOfBeorn\BalinHoldsTheLine.cs" />
     <Compile Include="Models\Decks\HallOfBeorn\BardGoesHunting.cs" />
     <Compile Include="Models\Decks\HallOfBeorn\BattleOfPelennorAndTheWorldsEnding.cs" />
