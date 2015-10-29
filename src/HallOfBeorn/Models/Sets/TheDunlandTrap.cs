@@ -136,7 +136,8 @@ in Mordor where the shadows are.
 –The Fellowship of the Ring",
                 VictoryPoints = 1,
                 Number = 7,
-                Artist = Artist.Arden_Beckwith
+                Artist = Artist.Arden_Beckwith,
+                MaxPerDeck = 1
             });
             Cards.Add(new Card()
             {

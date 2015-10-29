@@ -383,7 +383,8 @@ namespace HallOfBeorn.Models.Sets
                 Text = "Limit 1 per deck. Attach to a location.\r\nHeroes do not exhaust to attack, defend, or commit to a quest while attached location is the active location.",
                 FlavorText = "\"However it may prove, one must tread the path that need chooses!\"\r\n-Gandalf, The Fellowship of the Ring",
                 Number = 103,
-                Artist = Artist.Magali_Villeneuve
+                Artist = Artist.Magali_Villeneuve,
+                MaxPerDeck = 1
             });
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,

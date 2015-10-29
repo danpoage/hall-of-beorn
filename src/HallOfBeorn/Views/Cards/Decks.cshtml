@@ -6,98 +6,48 @@
 }
 
 @section scripts {
-<script type="text/javascript">
-    $(function () {
-        /*
-        $('#Search').keypress(function (e) {
-            if (e.which == 13) {
-                $('form').submit();
-                return false;
-            }
-        });*/
-
-        var $search = $("#Search");
-
-        $search.autocomplete({
-            source: function (request, response) {
-                $.ajax({
-                    url: "/Cards/TitleSearch",
-                    type: "get",
-                    dataType: "json",
-                    data: {
-                        term: request.term
-                    },
-                    success: function (data) {
-                        //console.log('data for autocomplete');
-                        //console.log(data);
-                        response(data);
-                    }
-                });
-            },
-            minLength: 2,
-            select: function (event, elem) {
-                //console.log('select');
-                //console.log(event);
-                console.log('elem');
-                console.log(elem.item.Title);
-                if (elem && elem.item) {
-                    //console.log('setting item value: ' + elem.item.Item1);
-                    $('#cardList').append('<li class="deck-card-item"><img class="deck-card-image" src="' + elem.item.CardImage + '"/><img class="deck-sphere-icon" src="' + elem.item.SphereIcon + '"/><a href="' + elem.item.Url +'" target="_blank">' + elem.item.Title + '</a></li>');
-                        //('#Search').val(elem.item.Item1);
-                }
-            }
-        })
-        .data("autocomplete")._renderItem = function (ul, item) {
-
-            console.log('autocomlete item');
-            console.log(item);
-
-            var $li = $('<li>'),
-                $icon = $('<img class="deck-sphere-icon">'),
-                $image = $('<img class="deck-card-image">');
-
-
-            $icon.attr({
-                src: item.SphereIcon,
-                alt: item.Title
-            });
-
-            $image.attr({
-                src: item.CardImage,
-                alt: item.Title
-            });
-
-            $li.data('item.autocomplete', item); //.attr('data-value', item.Item1);
-            $li.append('<a href="#">');
-            $li.find('a').append($image).append($icon).append(item.Title);
-
-            //$li.append($image);
-
-            return $li.appendTo(ul);
-        };
-        $search.autocomplete("widget").addClass("autocompleteClass");
-    });
-</script>    
+<script type="text/javascript" src="~/Scripts/deckBuilder.js"></script>
 }
 
 <h2>Deck Builder</h2>
 
 @using (Html.BeginForm("Decks", "Cards", FormMethod.Post))
 {
-    <span class="search-label-short">Name</span>
-    <div class="form-group">
-        @Html.TextBoxFor(x => x.Name, new { style = "text-align:left;width:200px;margin-right:4px;" })
-    </div>
+    <div id="deckContainer">
+        <span class="search-label-short">Name</span>
+        <div class="form-group">
+            @Html.TextBoxFor(x => x.Name, new { style = "text-align:left;width:200px;margin-right:4px;" })
+        </div>
     
-    <span class="search-label-short">Search</span>
-    <div>
-        @Html.TextBoxFor(x => x.Search, new { style = "text-align:left;width:95%;margin-right:4px;" })
-    </div>
+        <span class="search-label-short">Search</span>
+        <div>
+            @Html.TextBoxFor(x => x.Search, new { style = "text-align:left;width:95%;margin-right:4px;" })
+        </div>
+    
+        <label>Heroes</label>
+        <div>
+            <ul id="heroList" class="type-list"></ul>
+        </div>
     
     
+        <label>Allies</label>
+        <div>
+            <ul id="allyList" class="type-list"></ul>
+        </div>
     
+        <label>Attachments</label>
+        <div>
+            <ul id="attachmentList" class="type-list"></ul>
+        </div>
     
-    <div>
-        <ul id="cardList"></ul>
+        <label>Events</label>
+        <div>
+            <ul id="eventList" class="type-list"></ul>
+        </div>
+    
+        <label>Side Quests</label>
+        <div>
+            <ul id="sideQuestList" class="type-list"></ul>
+        </div>
     </div>
 }

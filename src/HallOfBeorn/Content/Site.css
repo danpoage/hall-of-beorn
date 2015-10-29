@@ -1008,14 +1008,63 @@ tr.pager td {
     width: 12px;
 }
 
-#cardList {
-    list-style-type: none;
+#heroList {
+    display: inline;
+    list-style: none;
+}
+
+#allyList, #attachmentList, #eventList, #sideQuestList {
+    list-style: none;
+}
+
+.hero-card-item {
+    display: inline-block;
 }
 
 .deck-card-item {
+    display: block;
+}
 
+.hero-card-image {
+    width: 96px;
+    margin: 6px;
+}
+
+.hero-title {
 }
 
 .deck-card-image {
+    display: inline-block;
     width: 48px;
+}
+
+.deck-card-image-hidden {
+    display: none;
+}
+
+.deck-card-image-hover {
+    position: fixed;
+    margin-left: 6px;
+    width: 96px;
+}
+
+.deck-card-title {
+    display: inline-block;
+    width: 200px;
+}
+
+.deck-item {
+    margin: 2px 4px 2px 4px;
+}
+
+.deck-item-count, .deck-item-count-one {
+    margin: 0px 6px 0px 6px;
+}
+
+.deck-item-count-one {
+    background-color: lightgray;
+}
+
+.deck-item-remove {
+    margin: 0px 4px 0px 4px;
 }

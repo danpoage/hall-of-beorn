@@ -120,7 +120,8 @@ namespace HallOfBeorn.Models.Sets
                 FlavorText = "\"I have saved you to the last...\" -Bard, The Hobbit",
                 VictoryPoints = 1,
                 Number = 15,
-                Artist = Artist.Melissa_Findley
+                Artist = Artist.Melissa_Findley,
+                MaxPerDeck = 1
             });
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,

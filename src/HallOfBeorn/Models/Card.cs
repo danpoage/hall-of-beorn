@@ -450,7 +450,36 @@ namespace HallOfBeorn.Models
         public CardType CardType { get; set; }
         public CardSubtype CardSubtype { get; set; }
         public Sphere Sphere { get; set; }
-        
+
+        private byte maxPerDeck;
+        public byte MaxPerDeck
+        {
+            get
+            {
+                if (maxPerDeck > 0)
+                {
+                    return maxPerDeck;
+                }
+
+                switch (CardType)
+                {
+                    case Models.CardType.Hero:
+                    case Models.CardType.Player_Side_Quest:
+                        return 1;
+                    case Models.CardType.Ally:
+                    case Models.CardType.Attachment:
+                    case Models.CardType.Event:
+                        return 3;
+                    default:
+                        return 0;
+                }
+            }
+            set
+            {
+                maxPerDeck = value;
+            }
+        }
+
         /*
         public Sphere SortedSphere()
         {
