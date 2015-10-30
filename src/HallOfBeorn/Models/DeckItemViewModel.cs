@@ -10,6 +10,7 @@ namespace HallOfBeorn.Models
         public DeckItemViewModel(CardViewModel model)
         {
             Title = model.Title;
+            OctgnGuid = model.OctgnGuid;
             Url = string.Format("/Cards/Details/{0}", model.Slug);
             CardImage = model.ImagePath;
             Sphere = model.Sphere;
@@ -20,6 +21,7 @@ namespace HallOfBeorn.Models
         }
 
         public string Title { get; set; }
+        public string OctgnGuid { get; set; }
         public string Url { get; set; }
         public string CardImage { get; set; }
         public string Sphere { get; set; }

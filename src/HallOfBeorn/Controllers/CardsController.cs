@@ -424,6 +424,8 @@ namespace HallOfBeorn.Controllers
                 .Where(x => isPlayerCard(x) && x.Title.ToLower().Contains(match))
                 .Select(x => new CardViewModel(x)))
             {
+                card.OctgnGuid = octgnService.GetCardOctgnGuid(card.Slug);
+
                 results.Add(new DeckItemViewModel(card));
             }
             

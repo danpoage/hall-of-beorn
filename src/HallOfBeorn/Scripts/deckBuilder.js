@@ -11,6 +11,8 @@
 
         var countHtml = card.MaxPerDeck == 3 ? '<select class="deck-item-count"><option>1</option><option>2</option><option>3</option></select>' : '<select  class="deck-item-count-one" disabled><option>1</option></select>';
 
+        var octgnGuid = card.OctgnGuid;
+        console.log('octgn guid: ' + octgnGuid);
         var selector = false;
         var itemClass = 'deck-card-item';
         var titleClass = '';
@@ -38,7 +40,7 @@
         }
 
         if (selector) {
-            $(selector).append('<li class="deck-item ' + itemClass + '">' + itemHtml + '</li>');
+            $(selector).append('<li data-octgn="' + octgnGuid + '" class="deck-item ' + itemClass + '">' + itemHtml + '</li>');
         }
     }
 
@@ -53,6 +55,11 @@
 
     $('#deckContainer').on('click', '.deck-item-remove', function (e) {
         $(e.currentTarget).parent().closest('.deck-item').remove();
+    });
+
+    $('#deckContainer').on('click', '.deck-item', function (e) {
+        var octgnGuid = $(e.currentTarget).closest('.deck-item').data('octgn');
+        console.log('selected OCTGN guid: ' + octgnGuid);
     });
 
     var $search = $("#Search");
