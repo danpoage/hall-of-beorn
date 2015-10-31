@@ -577,5 +577,17 @@ namespace HallOfBeorn
         {
             return self.Text.ToLowerSafe().MatchesPattern(pattern) || self.OppositeText.ToLowerSafe().MatchesPattern(pattern);
         }
+
+        public static byte[] ToByteArray(this string s)
+        {
+            if (string.IsNullOrEmpty(s))
+            {
+                return new byte[0];
+            }
+
+            byte[] bytes = new byte[s.Length * sizeof(char)];
+            System.Buffer.BlockCopy(s.ToCharArray(), 0, bytes, 0, bytes.Length);
+            return bytes;
+        }
     }
 }

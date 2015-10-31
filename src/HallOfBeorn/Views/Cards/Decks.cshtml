@@ -14,7 +14,7 @@
 @using (Html.BeginForm("Decks", "Cards", FormMethod.Post))
 {
     <div id="deckContainer">
-        <span class="search-label-short">Name</span><button id="octgnExport">OCTGN</button>
+        <span class="search-label-short">Name</span>@*<button id="octgnExport">OCTGN</button>*@
         <div class="form-group">
             @Html.TextBoxFor(x => x.Name, new { style = "text-align:left;width:200px;margin-right:4px;" })
         </div>

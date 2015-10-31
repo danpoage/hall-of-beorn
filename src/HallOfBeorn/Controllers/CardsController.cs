@@ -432,6 +432,36 @@ namespace HallOfBeorn.Controllers
             return Json(results, JsonRequestBehavior.AllowGet);
         }
 
+        private void SaveOctgnDeck(string fileName, string xml)
+        {
+            StreamFileToBrowser(fileName, xml.ToByteArray(), "text/xml");
+        }
+
+        /// <summary>
+        /// Streams the bytes specified as a file with the name specified using HTTP to the 
+        /// calling browser.
+        /// </summary>
+        /// <param name="fileName">The name of the file as it will apear when the user
+        /// clicks either open or save as in their browser to accept the file
+        /// download.</param>
+        /// <param name="fileBytes">The file as a byte array to be streamed.</param>
+        /// <param name="contentType">The MIME type of the file</param>
+        private void StreamFileToBrowser(string fileName, byte[] fileBytes, string contentType)
+        {
+            System.Web.HttpContext context = System.Web.HttpContext.Current;
+            context.Response.Clear();
+            context.Response.ClearHeaders();
+            context.Response.ClearContent();
+            context.Response.AppendHeader("content-length", fileBytes.Length.ToString());
+            context.Response.ContentType = contentType;
+            context.Response.AppendHeader("content-disposition", "attachment; filename=" + fileName);
+            context.Response.BinaryWrite(fileBytes);
+
+            // use this instead of response.end to avoid thread aborted exception (known issue):
+            // http://support.microsoft.com/kb/312629/EN-US
+            context.ApplicationInstance.CompleteRequest();
+        }
+
         public JsonResult ScenarioTotals(string id)
         {
             var data = new ScenarioTotalData();

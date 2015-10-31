@@ -43,12 +43,12 @@
         }
     }
 
-    $('#octgnExport').click(function (e) {
-        console.log('octgnExport');
-        saveOctgnDeck();
-    });
+    //$('#octgnExport').click(function (e) {
+    //    console.log('octgnExport');
+    //    saveOctgnDeck();
+    //});
 
-    function saveOctgnDeck() {
+    function getOctgnDeck() {
         var xml = '<?xml version="1.0" encoding="utf-8" standalone="yes"?><deck game="a21af4e8-be4b-4cda-a6b6-534f9717391f">';
 
         xml += '<section name="Hero" shared="False">';
@@ -109,6 +109,8 @@
         xml += '</section>';
 
         xml += '</deck>';
+
+        return xml;
 
         //var aFileParts = [ xml ];
         //var blob = new Blob(aFileParts, { type: 'application/octgn' });
