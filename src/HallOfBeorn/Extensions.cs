@@ -589,5 +589,15 @@ namespace HallOfBeorn
             System.Buffer.BlockCopy(s.ToCharArray(), 0, bytes, 0, bytes.Length);
             return bytes;
         }
+
+        public static string[] SafeSplit(this string self, params char[] separator)
+        {
+            if (string.IsNullOrEmpty(self))
+            {
+                return new string[0];
+            }
+
+            return self.Split(separator);
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
 
@@ -432,6 +433,7 @@ namespace HallOfBeorn.Controllers
             return Json(results, JsonRequestBehavior.AllowGet);
         }
 
+        /*
         private void SaveOctgnDeck(string fileName, string xml)
         {
             StreamFileToBrowser(fileName, xml.ToByteArray(), "text/xml");
@@ -460,7 +462,7 @@ namespace HallOfBeorn.Controllers
             // use this instead of response.end to avoid thread aborted exception (known issue):
             // http://support.microsoft.com/kb/312629/EN-US
             context.ApplicationInstance.CompleteRequest();
-        }
+        }*/
 
         public JsonResult ScenarioTotals(string id)
         {
@@ -946,6 +948,122 @@ namespace HallOfBeorn.Controllers
             var model = new DeckViewModel() { Name = "New Deck" };
 
             return View(model);
+        }
+
+        private Card getByOctgnGuid(string octgnGuid)
+        {
+            var slug = octgnService.GetCardSlug(octgnGuid);
+            if (slug == null)
+            {
+                return null;
+            }
+
+            return cardRepository.FindBySlug(slug);
+        }
+
+        private void AddWithQuantity(StringBuilder xml, string guid, byte quantity)
+        {
+            var card = getByOctgnGuid(guid);
+            if (card == null)
+            {
+                return;
+            }
+
+            xml.AppendFormat("<card qty='{0}' id='{1}'>{2}</card>\r\n", quantity, guid, card.Title);
+        }
+
+        private void AddHeroes(StringBuilder xml, string heroes)
+        {
+            xml.AppendLine("<section name='Hero' shared='False'>");
+            foreach (var guid in heroes.SafeSplit(','))
+            {
+                AddWithQuantity(xml, guid, 1);
+            }
+            xml.AppendLine("</section>");
+        }
+
+        private void AddAllies(StringBuilder xml, string allies1, string allies2, string allies3)
+        {
+            xml.AppendLine("<section name='Ally' shared='False'>");            
+            foreach (var guid in allies1.SafeSplit(','))
+            {
+                AddWithQuantity(xml, guid, 1);
+            }
+            foreach (var guid in allies2.SafeSplit(','))
+            {
+                AddWithQuantity(xml, guid, 2);
+            }
+            foreach (var guid in allies3.SafeSplit(','))
+            {
+                AddWithQuantity(xml, guid, 3);
+            }
+            xml.AppendLine("</section>");
+        }
+
+        private void AddAttachments(StringBuilder xml, string attachments1, string attachments2, string attachments3)
+        {
+            xml.AppendLine("<section name='Attachment' shared='False'>");
+            foreach (var guid in attachments1.SafeSplit(','))
+            {
+                AddWithQuantity(xml, guid, 1);
+            }
+            foreach (var guid in attachments2.SafeSplit(','))
+            {
+                AddWithQuantity(xml, guid, 2);
+            }
+            foreach (var guid in attachments3.SafeSplit(','))
+            {
+                AddWithQuantity(xml, guid, 3);
+            }
+            xml.AppendLine("</section>");
+        }
+
+        private void AddEvents(StringBuilder xml, string events1, string events2, string events3)
+        {
+            xml.AppendLine("<section name='Event' shared='False'>");
+            foreach (var guid in events1.SafeSplit(','))
+            {
+                AddWithQuantity(xml, guid, 1);
+            }
+            foreach (var guid in events2.SafeSplit(','))
+            {
+                AddWithQuantity(xml, guid, 2);
+            }
+            foreach (var guid in events3.SafeSplit(','))
+            {
+                AddWithQuantity(xml, guid, 3);
+            }
+            xml.AppendLine("</section>");
+        }
+
+        private void AddSideQuests(StringBuilder xml, string sideQuests)
+        {
+            xml.AppendLine("<section name='Side Quest' shared='False'>");
+            foreach (var guid in sideQuests.SafeSplit(','))
+            {
+                AddWithQuantity(xml, guid, 1);
+            }
+            xml.AppendLine("</section>");
+        }
+
+        public FileContentResult SaveOctgnDeck(string name, string heroes, string allies1, string allies2, string allies3, string attachments1, string attachments2, string attachments3, string events1, string events2, string events3, string sideQuests)
+        {
+            var xml = new StringBuilder();
+            xml.AppendLine("<?xml version='1.0' encoding='utf-8' standalone='yes'?>");
+            xml.AppendLine("<deck game='a21af4e8-be4b-4cda-a6b6-534f9717391f'>");
+
+            AddHeroes(xml, heroes);
+            AddAllies(xml, allies1, allies2, allies3);
+            AddAttachments(xml, attachments1, attachments2, attachments3);
+            AddEvents(xml, events1, events2, events3);
+            AddSideQuests(xml, sideQuests);
+
+            xml.AppendLine("</deck>");
+
+            var result = new FileContentResult(xml.ToString().ToByteArray(), System.Net.Mime.MediaTypeNames.Application.Octet);
+            result.FileDownloadName = string.Format("{0}.od8", name);
+
+            return result;
         }
 
         public ActionResult OctgnDeck(Deck deck)
