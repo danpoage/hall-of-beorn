@@ -95,6 +95,7 @@ namespace HallOfBeorn.Models
         public static Product EscapeFromMountGram = new EscapeFromMountGramProduct();
         public static Product AcrossTheEttenmoors = new AcrossTheEttenmoorsProduct();
         public static Product TheTreacheryOfRhudaur = new TheTreacheryOfRhudaurProduct();
+        public static Product TheBattleOfCarnDum = new TheBattleOfCarnDumProduct();
 
         //The Hobbit Saga
         public static Product TheHobbitOverHillAndUnderHill = new TheHobbitOverHillAndUnderHillProduct();

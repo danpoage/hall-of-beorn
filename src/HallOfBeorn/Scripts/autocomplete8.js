@@ -14,6 +14,7 @@
     "Shelob", "Henneth Annun", "The Black Gate", "Smeagol", "Smeagol's Secret Way", "The Cleft of Cirith Ungol", "Morgul Vale",
     "Ranger Provisions", "Dunedain Message", "Longbeard Sentry", "Delay the Enemy", "Steed of Imladris", "Fair and Perilous", "Wellinghall Preserver", "None Return", "Hope Rekindled",
     "Reinforcements", "Send for Aid", "Elven Spear", "Horn's Cry", "Galadhrim Weaver", "Silver Harp", "Galdor of the Havens", "The Door is Closed", "Elf-friend",
+    "Guardian of Arnor", "Doom Hangs Still", "Beechbone", "Hold Your Ground", "Lindir", "Lords of the Eldar", "The Long Defeat", "Quick Ears", "Favor of the Valar",
           "+set:",
           "-set:",
           "+type:",

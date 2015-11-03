@@ -286,6 +286,7 @@
     <Compile Include="Models\LinkType.cs" />
     <Compile Include="Models\Products\AcrossTheEttenmoorsProduct.cs" />
     <Compile Include="Models\Products\EscapeFromMountGramProduct.cs" />
+    <Compile Include="Models\Products\TheBattleOfCarnDumProduct.cs" />
     <Compile Include="Models\Products\TheLandOfShadowProduct.cs" />
     <Compile Include="Models\Products\TheRuinsOfBelegostProduct.cs" />
     <Compile Include="Models\Products\TheVoiceOfIsengardNightmareProduct.cs" />
@@ -497,6 +498,7 @@
     <Compile Include="Models\Products\KhazadDumNightmareProduct.cs" />
     <Compile Include="Models\Sets\PerilInPelargirNightmare.cs" />
     <Compile Include="Models\Sets\TheAntleredCrown.cs" />
+    <Compile Include="Models\Sets\TheBattleOfCarnDum.cs" />
     <Compile Include="Models\Sets\TheBattleOfFiveArmiesNightmare.cs" />
     <Compile Include="Models\Sets\TheBloodOfGondorNightmare.cs" />
     <Compile Include="Models\Sets\TheDruadanForestNightmare.cs" />
@@ -661,7 +663,7 @@
     <Content Include="Images\unique-card.png" />
     <Content Include="Images\unique.png" />
     <Content Include="Images\willpower.gif" />
-    <Content Include="Scripts\autocomplete7.js" />
+    <Content Include="Scripts\autocomplete8.js" />
     <Content Include="Scripts\cardSearch.js" />
     <Content Include="Scripts\deckBuilder.js" />
     <Content Include="Scripts\highcharts.js" />

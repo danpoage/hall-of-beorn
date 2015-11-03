@@ -99,6 +99,13 @@ namespace HallOfBeorn.Models
             Add(CelebrimborsSecret);
             Add(TheAntleredCrown);
 
+            Add(TheLostRealm);
+            Add(TheWastesOfEriador);
+            Add(EscapeFromMountGram);
+            Add(AcrossTheEttenmoors);
+            Add(TheTreacheryOfRhudaur);
+            Add(TheBattleOfCarnDum);
+
             Add(TheHobbitOverHillAndUnderHill);
             Add(TheHobbitOnTheDoorstep);
 
@@ -158,12 +165,6 @@ namespace HallOfBeorn.Models
             Add(TheFordsOfIsenNightmare);
             Add(ToCatchAnOrcNightmare);
             Add(IntoFangornNightmare);
-
-            Add(TheLostRealm);
-            Add(TheWastesOfEriador);
-            Add(EscapeFromMountGram);
-            Add(AcrossTheEttenmoors);
-            Add(TheTreacheryOfRhudaur);
 
             Add(FirstAge);
         }
@@ -270,6 +271,7 @@ namespace HallOfBeorn.Models
         public static CardSet EscapeFromMountGram = new Sets.EscapeFromMountGram();
         public static CardSet AcrossTheEttenmoors = new Sets.AcrossTheEttenmoors();
         public static CardSet TheTreacheryOfRhudaur = new Sets.TheTreacheryOfRhudaur();
+        public static CardSet TheBattleOfCarnDum = new Sets.TheBattleOfCarnDum();
 
         public static CardSet FirstAge = new Sets.FirstAge();
         #endregion
