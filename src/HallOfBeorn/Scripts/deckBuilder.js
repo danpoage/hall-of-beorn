@@ -24,7 +24,7 @@
         }
     }
 
-    function addCard(card) {
+    function addCard(card, count) {
         console.log('addCard');
         console.log(card);
 
@@ -33,7 +33,21 @@
         var titleHtml = '<a class="deck-card-title" href="' + card.Url + '" target="_blank">' + card.Title + '</a>';
         var removeHtml = '<img class="deck-item-remove" src="/Images/close-button.png"/>';
 
-        var countHtml = card.MaxPerDeck == 3 ? '<select class="deck-item-count"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select>' : '<select  class="deck-item-count-one" disabled><option value="1">1</option></select>';
+        var selected1 = ' selected', selected2 = '', selected3 = '';
+        switch (count) {
+            case 3:
+                selected1 = '';
+                selected3 = ' selected';
+                break;
+            case 2:
+                selected1 = '';
+                selected2 = ' selected';
+                break;
+            default:
+                break;
+        }
+
+        var countHtml = card.MaxPerDeck == 3 ? '<select class="deck-item-count"><option value="1"' + selected1 + '>1</option><option value="2"' + selected2 + '>2</option><option value="3"' + selected3 + '>3</option></select>' : '<select  class="deck-item-count-one" disabled><option value="1" selected>1</option></select>';
 
         var octgnGuid = card.OctgnGuid;
         var selector = false;
@@ -86,7 +100,13 @@
         return false;
     });
 
-    function addDeckItem(guid, count, item) {
+    $('#loadDeck').click(function (e) {
+        console.log('loadDeck click');
+        clearLocal('currentDeck');
+    });
+
+    function addDeckItem(deck, guid, count, item) {
+        deck.counts[guid] = count;
         item.all.push(guid);
 
         switch (count) {
@@ -140,6 +160,8 @@
             }
         }
 
+        console.log('guid list');
+        console.log(guids);
         var url = '/Cards/DeckItems?guidList=' + guids.join(',');
         console.log('url: ' + url);
 
@@ -150,18 +172,64 @@
                 console.log('deck items results');
                 console.log(data);
 
+                var cardCount = 0;
                 if (data && data.length > 0) {
                     for (var i = 0; i < data.length; i++) {
-                        addCard(data[i]);
+                        //console.log('*** loading octgn guid: ' + data[i].OctgnGuid);
+                        cardCount = deck.counts[data[i].OctgnGuid];
+                        addCard(data[i], cardCount);
                     }
                 }
             }
         });
     }
 
+    function getCardCount(deck, guid) {
+
+        /*
+        if (deck.heroes.all.length > 0) {
+            for (var i = 0; i < deck.heroes.length; i++) {
+                if (deck.heroes.all[i] == guid) {
+                    return 1;
+                }
+            }
+        }
+
+        if (deck.sideQuests.all.length > 0) {
+            for (var i = 0; i < deck.sideQuests.length; i++) {
+                if (deck.sideQuests.all[i] == guid) {
+                    return 1;
+                }
+            }
+        }
+
+        var itemFields = ['allies', 'attachments', 'events'], 
+            itemField = '', 
+            countField = '';
+
+        for (var i = 1; i < 4; i++) {
+            countField = 'count' + i;
+            for (var j = 0; j < itemFields.length; j++) {
+                itemField = itemFields[j];
+                if (deck[itemField][countField].length > 0) {
+                    for (var k = 0; k < deck[itemField][countField].length; k++) {
+                        if (deck[itemField][countField][k] == guid) {
+                            return i;
+                        }
+                    }
+                }
+            }
+        }
+
+        return 1;
+        */
+    }
+
     function getDeckModel() {
         var deck = {
-            name: $('#Name').val(), 
+            name: $('#Name').val(),
+            counts: {
+            },
             heroes: {
                 all: [], count1: []
             },
@@ -182,35 +250,35 @@
         $('#heroList').find('.deck-item').each(function (index, item) {
             guid = $(item).data('octgn');
 
-            addDeckItem(guid, 1, deck.heroes);
+            addDeckItem(deck, guid, 1, deck.heroes);
         });
 
         $('#allyList').find('.deck-item').each(function (index, item) {
             var count = parseInt($(item).find('.deck-item-count').val()),
                 guid = $(item).data('octgn');
 
-            addDeckItem(guid, count, deck.allies);
+            addDeckItem(deck, guid, count, deck.allies);
         });
 
         $('#attachmentList').find('.deck-item').each(function (index, item) {
             var count = parseInt($(item).find('.deck-item-count').val()),
                 guid = $(item).data('octgn');
 
-            addDeckItem(guid, count, deck.attachments);
+            addDeckItem(deck, guid, count, deck.attachments);
         });
 
         $('#eventList').find('.deck-item').each(function (index, item) {
             var count = parseInt($(item).find('.deck-item-count').val()),
                 guid = $(item).data('octgn');
 
-            addDeckItem(guid, count, deck.events);
+            addDeckItem(deck, guid, count, deck.events);
         });
 
         $('#sideQuestList').find('.deck-item').each(function (index, item) {
             var count = $(item).find('.deck-item-count').val(),
                 guid = $(item).data('octgn');
 
-            addDeckItem(guid, 1, deck.sideQuests);
+            addDeckItem(deck, guid, 1, deck.sideQuests);
         });
 
         return deck;
@@ -295,7 +363,7 @@
         minLength: 2,
         select: function (event, elem) {
             if (elem && elem.item) {
-                addCard(elem.item);
+                addCard(elem.item, 1);
             }
         }
     })

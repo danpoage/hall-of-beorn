@@ -1069,7 +1069,9 @@ namespace HallOfBeorn.Controllers
                     var card = cardRepository.FindBySlug(slug);
                     if (card != null)
                     {
-                        items.Add(new DeckItemViewModel(new CardViewModel(card)));
+                        var viewModel = new CardViewModel(card);
+                        viewModel.OctgnGuid = guid;
+                        items.Add(new DeckItemViewModel(viewModel));
                     }
                 }
             }
