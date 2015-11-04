@@ -116,6 +116,30 @@
             }
         }
 
+        if (deck.allies.all.length > 0) {
+            for (var i = 0; i < deck.allies.all.length; i++) {
+                guids.push(deck.allies.all[i]);
+            }
+        }
+
+        if (deck.attachments.all.length > 0) {
+            for (var i = 0; i < deck.attachments.all.length; i++) {
+                guids.push(deck.attachments.all[i]);
+            }
+        }
+
+        if (deck.events.all.length > 0) {
+            for (var i = 0; i < deck.events.all.length; i++) {
+                guids.push(deck.events.all[i]);
+            }
+        }
+
+        if (deck.sideQuests.all.length > 0) {
+            for (var i = 0; i < deck.sideQuests.all.length; i++) {
+                guids.push(deck.sideQuests.all[i]);
+            }
+        }
+
         var url = '/Cards/DeckItems?guidList=' + guids.join(',');
         console.log('url: ' + url);
 
