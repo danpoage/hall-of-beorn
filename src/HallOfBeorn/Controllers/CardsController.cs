@@ -433,37 +433,6 @@ namespace HallOfBeorn.Controllers
             return Json(results, JsonRequestBehavior.AllowGet);
         }
 
-        /*
-        private void SaveOctgnDeck(string fileName, string xml)
-        {
-            StreamFileToBrowser(fileName, xml.ToByteArray(), "text/xml");
-        }
-
-        /// <summary>
-        /// Streams the bytes specified as a file with the name specified using HTTP to the 
-        /// calling browser.
-        /// </summary>
-        /// <param name="fileName">The name of the file as it will apear when the user
-        /// clicks either open or save as in their browser to accept the file
-        /// download.</param>
-        /// <param name="fileBytes">The file as a byte array to be streamed.</param>
-        /// <param name="contentType">The MIME type of the file</param>
-        private void StreamFileToBrowser(string fileName, byte[] fileBytes, string contentType)
-        {
-            System.Web.HttpContext context = System.Web.HttpContext.Current;
-            context.Response.Clear();
-            context.Response.ClearHeaders();
-            context.Response.ClearContent();
-            context.Response.AppendHeader("content-length", fileBytes.Length.ToString());
-            context.Response.ContentType = contentType;
-            context.Response.AppendHeader("content-disposition", "attachment; filename=" + fileName);
-            context.Response.BinaryWrite(fileBytes);
-
-            // use this instead of response.end to avoid thread aborted exception (known issue):
-            // http://support.microsoft.com/kb/312629/EN-US
-            context.ApplicationInstance.CompleteRequest();
-        }*/
-
         public JsonResult ScenarioTotals(string id)
         {
             var data = new ScenarioTotalData();
@@ -969,22 +938,22 @@ namespace HallOfBeorn.Controllers
                 return;
             }
 
-            xml.AppendFormat("<card qty='{0}' id='{1}'>{2}</card>\r\n", quantity, guid, card.Title);
+            xml.AppendFormat("    <card qty=\"{0}\" id=\"{1}\">{2}</card>", quantity, guid, card.Title);
         }
 
         private void AddHeroes(StringBuilder xml, string heroes)
         {
-            xml.AppendLine("<section name='Hero' shared='False'>");
+            xml.Append("  <section name=\"Hero\" shared=\"False\">");
             foreach (var guid in heroes.SafeSplit(','))
             {
                 AddWithQuantity(xml, guid, 1);
             }
-            xml.AppendLine("</section>");
+            xml.Append("  </section>");
         }
 
         private void AddAllies(StringBuilder xml, string allies1, string allies2, string allies3)
         {
-            xml.AppendLine("<section name='Ally' shared='False'>");            
+            xml.Append("  <section name=\"Ally\" shared=\"False\">");            
             foreach (var guid in allies1.SafeSplit(','))
             {
                 AddWithQuantity(xml, guid, 1);
@@ -997,12 +966,12 @@ namespace HallOfBeorn.Controllers
             {
                 AddWithQuantity(xml, guid, 3);
             }
-            xml.AppendLine("</section>");
+            xml.Append("  </section>");
         }
 
         private void AddAttachments(StringBuilder xml, string attachments1, string attachments2, string attachments3)
         {
-            xml.AppendLine("<section name='Attachment' shared='False'>");
+            xml.Append("  <section name=\"Attachment\" shared=\"False\">");
             foreach (var guid in attachments1.SafeSplit(','))
             {
                 AddWithQuantity(xml, guid, 1);
@@ -1015,12 +984,12 @@ namespace HallOfBeorn.Controllers
             {
                 AddWithQuantity(xml, guid, 3);
             }
-            xml.AppendLine("</section>");
+            xml.Append("  </section>");
         }
 
         private void AddEvents(StringBuilder xml, string events1, string events2, string events3)
         {
-            xml.AppendLine("<section name='Event' shared='False'>");
+            xml.Append("  <section name=\"Event\" shared=\"False\">");
             foreach (var guid in events1.SafeSplit(','))
             {
                 AddWithQuantity(xml, guid, 1);
@@ -1033,24 +1002,24 @@ namespace HallOfBeorn.Controllers
             {
                 AddWithQuantity(xml, guid, 3);
             }
-            xml.AppendLine("</section>");
+            xml.Append("  </section>");
         }
 
         private void AddSideQuests(StringBuilder xml, string sideQuests)
         {
-            xml.AppendLine("<section name='Side Quest' shared='False'>");
+            xml.Append("  <section name=\"Side Quest\" shared=\"False\">");
             foreach (var guid in sideQuests.SafeSplit(','))
             {
                 AddWithQuantity(xml, guid, 1);
             }
-            xml.AppendLine("</section>");
+            xml.Append("  </section>");
         }
 
         public FileContentResult SaveOctgnDeck(string name, string heroes, string allies1, string allies2, string allies3, string attachments1, string attachments2, string attachments3, string events1, string events2, string events3, string sideQuests)
         {
             var xml = new StringBuilder();
-            xml.AppendLine("<?xml version='1.0' encoding='utf-8' standalone='yes'?>");
-            xml.AppendLine("<deck game='a21af4e8-be4b-4cda-a6b6-534f9717391f'>");
+            xml.Append("<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>");
+            xml.Append("<deck game=\"a21af4e8-be4b-4cda-a6b6-534f9717391f\" sleeveid=\"0\">");
 
             AddHeroes(xml, heroes);
             AddAllies(xml, allies1, allies2, allies3);
@@ -1058,10 +1027,17 @@ namespace HallOfBeorn.Controllers
             AddEvents(xml, events1, events2, events3);
             AddSideQuests(xml, sideQuests);
 
-            xml.AppendLine("</deck>");
+            xml.Append("  <section name=\"Sideboard\" shared=\"False\" />");
+            xml.Append("  <section name=\"Quest\" shared=\"True\" />");
+            xml.Append("  <section name=\"Encounter\" shared=\"True\" />");
+            xml.Append("  <section name=\"Special\" shared=\"True\" />");
+            xml.Append("  <section name=\"Setup\" shared=\"True\" />");
+            xml.Append("  <notes><![CDATA[]]></notes>");
 
-            var result = new FileContentResult(xml.ToString().ToByteArray(), System.Net.Mime.MediaTypeNames.Application.Octet);
-            result.FileDownloadName = string.Format("{0}.od8", name);
+            xml.Append("</deck>");
+
+            var result = new FileContentResult(xml.ToString().ToByteArray(), System.Net.Mime.MediaTypeNames.Text.Xml);
+            result.FileDownloadName = string.Format("{0}.o8d", name);
 
             return result;
         }
@@ -1078,6 +1054,27 @@ namespace HallOfBeorn.Controllers
             }
 
             return View(deck);
+        }
+
+        public JsonResult DeckItems(string guidList)
+        {
+            var guids = guidList.SafeSplit(',');
+            var items = new List<DeckItemViewModel>();
+
+            foreach (var guid in guids)
+            {
+                var slug = octgnService.GetCardSlug(guid);
+                if (!string.IsNullOrEmpty(slug))
+                {
+                    var card = cardRepository.FindBySlug(slug);
+                    if (card != null)
+                    {
+                        items.Add(new DeckItemViewModel(new CardViewModel(card)));
+                    }
+                }
+            }
+
+            return Json(items, JsonRequestBehavior.AllowGet);
         }
     }
 }

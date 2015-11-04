@@ -1,5 +1,11 @@
 ﻿$(function () {
 
+    var storedDeck = getLocal('currentDeck');
+    if (storedDeck) {
+        var deckModel = JSON.parse(storedDeck);
+        loadDeckModel(deckModel);
+    }
+
     function getLocal(key) {
         if (typeof (Storage) !== "undefined") {
             return localStorage.getItem(key);
@@ -61,178 +67,171 @@
         }
     }
 
-    $('#octgnExport').click(function (e) {
+    $('#saveOctgn').click(function (e) {
         //console.log('octgnExport');
-        saveOctgnDeck();
+
+        var deck = getDeckModel();
+
+        saveLocalDeck(deck);
+        saveOctgnDeck(deck);
+        
         return false;
     });
 
-    function saveOctgnDeck() {
+    $('#saveLocal').click(function (e) {
+        var deck = getDeckModel();
 
-        var name = $('#Name').val(),
-            heroes = [],
-            allies1 = [], allies2 = [], allies3 = [],
-            attachments1 = [], attachments2 = [], attachments3 = [],
-            events1 = [], events2 = [], events3 = [],
-            sideQuests = [];
+        saveLocalDeck(deck);
 
-        //xml = '<?xml version="1.0" encoding="utf-8" standalone="yes"?><deck game="a21af4e8-be4b-4cda-a6b6-534f9717391f">';
+        return false;
+    });
 
-        //xml += '<section name="Hero" shared="False">';
-        $('#heroList').find('.deck-item').each(function (index, item) {
-            var title = $(item).find('.deck-card-title').html(), 
-                octgnGuid = $(item).data('octgn');
-            
-            heroes.push(octgnGuid);
-            //xml += '<card qty="1" id="' + octgnGuid + '">' + title + '</card>';
-        });
-        //xml += '</section>';
+    function addDeckItem(guid, count, item) {
+        item.all.push(guid);
 
-        //xml += '<section name="Ally" shared="False">';
-        $('#allyList').find('.deck-item').each(function (index, item) {
-            var title = $(item).find('.deck-card-title').html(),
-                count = parseInt($(item).find('.deck-item-count').val()),
-                octgnGuid = $(item).data('octgn');
+        switch (count) {
+            case 3:
+                item.count3.push(guid);
+                break;
+            case 2:
+                item.count2.push(guid);
+                break
+            case 1:
+            default:
+                item.count1.push(guid);
+                break;
+        }
+    }
 
-            switch (count) {
-                case 3:
-                    allies3.push(octgnGuid);
-                    break;
-                case 2:
-                    allies2.push(octgnGuid);
-                    break;
-                case 1:
-                default:
-                    allies1.push(octgnGuid);
-                    break;
+    function loadDeckModel(deck) {
+        console.log('loadDeckModel');
+        console.log(deck);
+
+        $('#Name').val(deck.name);
+
+        var guids = [];
+        if (deck.heroes.all.length > 0) {
+            for (var i = 0; i < deck.heroes.all.length; i++) {
+                guids.push(deck.heroes.all[i]);
             }
+        }
 
-            //console.log('count: ' + count);
-            //xml += '<card qty="' + count +'" id="' + octgnGuid + '">' + title + '</card>';
-        });
-        //xml += '</section>';
+        var url = '/Cards/DeckItems?guidList=' + guids.join(',');
+        console.log('url: ' + url);
 
-        //xml += '<section name="Attachment" shared="False">';
-        $('#attachmentList').find('.deck-item').each(function (index, item) {
-            var title = $(item).find('.deck-card-title').html(),
-                count = parseInt($(item).find('.deck-item-count').val()),
-                octgnGuid = $(item).data('octgn');
-
-            switch (count) {
-                case 3:
-                    attachments3.push(octgnGuid);
-                    break;
-                case 2:
-                    attachments2.push(octgnGuid);
-                    break;
-                case 1:
-                default:
-                    attachments1.push(octgnGuid);
-                    break;
-            }
-
-            //console.log('count: ' + count);
-            //xml += '<card qty="' + count + '" id="' + octgnGuid + '">' + title + '</card>';
-        });
-        //xml += '</section>';
-
-        //xml += '<section name="Event" shared="False">';
-        $('#eventList').find('.deck-item').each(function (index, item) {
-            var title = $(item).find('.deck-card-title').html(),
-                count = parseInt($(item).find('.deck-item-count').val()),
-                octgnGuid = $(item).data('octgn');
-
-            switch (count) {
-                case 3:
-                    events3.push(octgnGuid);
-                    break;
-                case 2:
-                    events2.push(octgnGuid);
-                    break;
-                case 1:
-                default:
-                    events1.push(octgnGuid);
-                    break;
-            }
-
-            //console.log('count: ' + count);
-            //xml += '<card qty="' + count + '" id="' + octgnGuid + '">' + title + '</card>';
-        });
-        //xml += '</section>';
-
-        //xml += '<section name="Side Quest" shared="False">';
-        $('#sideQuestList').find('.deck-item').each(function (index, item) {
-            var title = $(item).find('.deck-card-title').html(),
-                count = $(item).find('.deck-item-count').val(),
-                octgnGuid = $(item).data('octgn');
-
-            sideQuests.push(octgnGuid);
-
-            //console.log('count: ' + count);
-            //xml += '<card qty="' + count + '" id="' + octgnGuid + '">' + title + '</card>';
-        });
-        //xml += '</section>';
-
-        //xml += '</deck>';
-
-        /*
-        $.get({
-            url: "/Cards/SaveOctgnDeck",
-            //dataType: "json",
-            data: {
-                xml: xml,
-                name: name
-            },
+        $.ajax({
+            url: url,
+            type: "get",
             success: function (data) {
-                console.log('download success');
+                console.log('deck items results');
                 console.log(data);
+
+                if (data && data.length > 0) {
+                    for (var i = 0; i < data.length; i++) {
+                        addCard(data[i]);
+                    }
+                }
             }
         });
-        */
+    }
 
-        var url = '/Cards/SaveOctgnDeck?name=' + encodeURIComponent(name);
-        if (heroes.length > 0) {
-            url += '&heroes=' + heroes.join(',');
+    function getDeckModel() {
+        var deck = {
+            name: $('#Name').val(), 
+            heroes: {
+                all: [], count1: []
+            },
+            allies: {
+                all: [], count1: [], count2: [], count3: []
+            },
+            attachments: {
+                all: [], count1: [], count2: [], count3: []
+            },
+            events: {
+                all: [], count1: [], count2: [], count3: []
+            },
+            sideQuests: {
+                all: [], count1: []
+            }
+        };
+
+        $('#heroList').find('.deck-item').each(function (index, item) {
+            guid = $(item).data('octgn');
+
+            addDeckItem(guid, 1, deck.heroes);
+        });
+
+        $('#allyList').find('.deck-item').each(function (index, item) {
+            var count = parseInt($(item).find('.deck-item-count').val()),
+                guid = $(item).data('octgn');
+
+            addDeckItem(guid, count, deck.allies);
+        });
+
+        $('#attachmentList').find('.deck-item').each(function (index, item) {
+            var count = parseInt($(item).find('.deck-item-count').val()),
+                guid = $(item).data('octgn');
+
+            addDeckItem(guid, count, deck.attachments);
+        });
+
+        $('#eventList').find('.deck-item').each(function (index, item) {
+            var count = parseInt($(item).find('.deck-item-count').val()),
+                guid = $(item).data('octgn');
+
+            addDeckItem(guid, count, deck.events);
+        });
+
+        $('#sideQuestList').find('.deck-item').each(function (index, item) {
+            var count = $(item).find('.deck-item-count').val(),
+                guid = $(item).data('octgn');
+
+            addDeckItem(guid, 1, deck.sideQuests);
+        });
+
+        return deck;
+    }
+
+    function saveLocalDeck(deck) {
+        console.log('saveLocalDeck');
+        //console.log(deck);
+
+        var deckData = JSON.stringify(deck);
+
+        console.log('deckData');
+        console.log(deckData);
+
+        setLocal('currentDeck', deckData);
+    }
+
+    function saveOctgnDeck(deck) {
+        console.log('saveOctgnDeck');
+        console.log(deck);
+
+        var url = '/Cards/SaveOctgnDeck?name=' + encodeURIComponent(deck.name);
+        if (deck.heroes.all.length > 0) {
+            url += '&heroes=' + deck.heroes.all.join(',');
         }
-        if (allies1.length > 0) {
-            url += '&allies1=' + allies1.join(',');
+
+        var itemFields = ['allies', 'attachments', 'events'],
+            itemField = '', countField = '';
+
+        for (var i = 1; i < 4; i++) {
+            countField = 'count' + i;
+            for (var j = 0; j < itemFields.length; j++) {
+                itemField = itemFields[j];
+                if (deck[itemField][countField].length > 0) {
+                    url += '&' + itemField + i + '=' + deck[itemField][countField].join(',');
+                }
+            }
         }
-        if (allies2.length > 0) {
-            url += '&allies2=' + allies2.join(',');
-        }
-        if (allies3.length > 0) {
-            url += '&allies3=' + allies3.join(',');
-        }
-        if (attachments1.length > 0) {
-            url += '&attachments1=' + attachments1.join(',');
-        }
-        if (attachments2.length > 0) {
-            url += '&attachments2=' + attachments2.join(',');
-        }
-        if (attachments3.length > 0) {
-            url += '&attachments3=' + attachments3.join(',');
-        }
-        if (events1.length > 0) {
-            url += '&events1=' + events1.join(',');
-        }
-        if (events2.length > 0) {
-            url += '&events2=' + events2.join(',');
-        }
-        if (events3.length > 0) {
-            url += '&events3=' + events3.join(',');
-        }
-        if (sideQuests.length > 0) {
-            url += '&sideQuests=' + sideQuests.join(',');
+        
+        if (deck.sideQuests.all.length > 0) {
+            url += '&sideQuests=' + deck.sideQuests.all.join(',');
         }
 
         console.log('url: ' + url);
         window.open(url, '_blank');
-        //var win = window.open('/Cards/SaveOctgnDeck?name=' + encodeURIComponent(name), '_blank');
-        //win.focus();
-
-        //var aFileParts = [ xml ];
-        //var blob = new Blob(aFileParts, { type: 'application/octgn' });
-        //window.open(URL.createObjectURL(blob));
     }
 
     $('#deckContainer').on('mouseenter', '.deck-card-title', function (e) {

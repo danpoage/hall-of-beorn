@@ -578,16 +578,14 @@ namespace HallOfBeorn
             return self.Text.ToLowerSafe().MatchesPattern(pattern) || self.OppositeText.ToLowerSafe().MatchesPattern(pattern);
         }
 
-        public static byte[] ToByteArray(this string s)
+        public static byte[] ToByteArray(this string self)
         {
-            if (string.IsNullOrEmpty(s))
+            if (string.IsNullOrEmpty(self))
             {
                 return new byte[0];
             }
 
-            byte[] bytes = new byte[s.Length * sizeof(char)];
-            System.Buffer.BlockCopy(s.ToCharArray(), 0, bytes, 0, bytes.Length);
-            return bytes;
+            return System.Text.Encoding.UTF8.GetBytes(self);
         }
 
         public static string[] SafeSplit(this string self, params char[] separator)
