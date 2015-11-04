@@ -1,5 +1,23 @@
 ﻿$(function () {
 
+    function getLocal(key) {
+        if (typeof (Storage) !== "undefined") {
+            return localStorage.getItem(key);
+        }
+    }
+
+    function setLocal(key, data) {
+        if (typeof (Storage) !== "undefined") {
+            localStorage.setItem(key, data);
+        }
+    }
+
+    function clearLocal(key) {
+        if (typeof (Storage) !== "undefined") {
+            localStorage.removeItem(key);
+        }
+    }
+
     function addCard(card) {
         console.log('addCard');
         console.log(card);
