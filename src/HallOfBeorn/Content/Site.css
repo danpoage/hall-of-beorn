@@ -1083,3 +1083,36 @@ tr.pager td {
     border-width: 1px;
     border-radius: 6px;
 }
+
+.tab-container {
+    margin: 12px 4px 12px 4px;
+}
+
+.tab-section {
+    margin-top: 6px;
+}
+
+.option-tab {
+    height: 28px;
+    margin: 0px 4px 0px 4px;
+    padding: 4px 6px 0px 6px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background-color: lightgray;
+}
+
+.selected-tab {
+    background-color: lightblue;
+}
+
+.option-section {
+    background-color: lightblue;
+}
+
+.hidden {
+    display: none;
+}
+
+.section-container {
+    padding: 4px 4px 4px 8px;
+}

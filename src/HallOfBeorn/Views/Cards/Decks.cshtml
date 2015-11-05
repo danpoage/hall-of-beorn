@@ -19,11 +19,25 @@
             @Html.TextBoxFor(x => x.Name, new { style = "text-align:left;width:200px;margin-right:4px;" })
         </div>
 
-        <span class="search-label-short">Search</span>
-        <div>
-            @Html.TextBoxFor(x => x.Search, new { style = "text-align:left;width:95%;margin-right:4px;" })
+        <div class="tab-container">
+            <div class="tab-section">
+                <span id="searchTab" class="option-tab selected-tab">Search</span>
+                <span id="cardSetTab" class="option-tab">Card Sets</span>
+                <span id="settingsTab" class="option-tab">Settings</span>
+            </div>
+            <div id="searchSection" class="option-section">
+                <div class="section-container">
+                    @Html.TextBoxFor(x => x.Search, new { style = "text-align:left;width:95%;margin-right:4px;" })
+                </div>
+            </div>
+            <div id="cardSetSection" class="option-section hidden">
+                <div class="section-container">Card Sets</div>
+            </div>
+            <div id="settingsSection" class="option-section hidden">
+                <div class="section-container">Settings</div>
+            </div>
         </div>
-    
+
         <label>Heroes</label>
         <div>
             <ul id="heroList" class="type-list"></ul>

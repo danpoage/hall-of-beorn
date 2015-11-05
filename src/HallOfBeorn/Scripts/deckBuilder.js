@@ -105,6 +105,33 @@
         clearLocal('currentDeck');
     });
 
+    $('#searchTab').click(function (e) {
+        if (!$(this).hasClass('selected-tab')) {
+            $('.option-tab').removeClass('selected-tab');
+            $(this).addClass('selected-tab');
+            $('.option-section').addClass('hidden');
+            $('#searchSection').removeClass('hidden');
+        }
+    });
+
+    $('#cardSetTab').click(function (e) {
+        if (!$(this).hasClass('selected-tab')) {
+            $('.option-tab').removeClass('selected-tab');
+            $(this).addClass('selected-tab');
+            $('.option-section').addClass('hidden');
+            $('#cardSetSection').removeClass('hidden');
+        }
+    });
+
+    $('#settingsTab').click(function (e) {
+        if (!$(this).hasClass('selected-tab')) {
+            $('.option-tab').removeClass('selected-tab');
+            $(this).addClass('selected-tab');
+            $('.option-section').addClass('hidden');
+            $('#settingsSection').removeClass('hidden');
+        }
+    });
+
     function addDeckItem(deck, guid, count, item) {
         deck.counts[guid] = count;
         item.all.push(guid);
@@ -160,10 +187,10 @@
             }
         }
 
-        console.log('guid list');
-        console.log(guids);
+        //console.log('guid list');
+        //console.log(guids);
         var url = '/Cards/DeckItems?guidList=' + guids.join(',');
-        console.log('url: ' + url);
+        //console.log('url: ' + url);
 
         $.ajax({
             url: url,
@@ -175,54 +202,12 @@
                 var cardCount = 0;
                 if (data && data.length > 0) {
                     for (var i = 0; i < data.length; i++) {
-                        //console.log('*** loading octgn guid: ' + data[i].OctgnGuid);
                         cardCount = deck.counts[data[i].OctgnGuid];
                         addCard(data[i], cardCount);
                     }
                 }
             }
         });
-    }
-
-    function getCardCount(deck, guid) {
-
-        /*
-        if (deck.heroes.all.length > 0) {
-            for (var i = 0; i < deck.heroes.length; i++) {
-                if (deck.heroes.all[i] == guid) {
-                    return 1;
-                }
-            }
-        }
-
-        if (deck.sideQuests.all.length > 0) {
-            for (var i = 0; i < deck.sideQuests.length; i++) {
-                if (deck.sideQuests.all[i] == guid) {
-                    return 1;
-                }
-            }
-        }
-
-        var itemFields = ['allies', 'attachments', 'events'], 
-            itemField = '', 
-            countField = '';
-
-        for (var i = 1; i < 4; i++) {
-            countField = 'count' + i;
-            for (var j = 0; j < itemFields.length; j++) {
-                itemField = itemFields[j];
-                if (deck[itemField][countField].length > 0) {
-                    for (var k = 0; k < deck[itemField][countField].length; k++) {
-                        if (deck[itemField][countField][k] == guid) {
-                            return i;
-                        }
-                    }
-                }
-            }
-        }
-
-        return 1;
-        */
     }
 
     function getDeckModel() {
