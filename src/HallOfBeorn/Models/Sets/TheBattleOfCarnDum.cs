@@ -74,10 +74,64 @@ namespace HallOfBeorn.Models.Sets
                 .WithInfo(123, 3, Artist.Eva_Maria_Toker));
             Cards.Add(Card.Attachment("Favor of the Valar", "", Sphere.Neutral, 3)
                 .WithTraits("Condition.")
-                .WithTemplate("Attach to a player's threat dial. Limit 1 per player.\r\nForced: When you would be eliminated by reaching your threat elimination level, instead discard Favor of the Valar and reduce your threat to 5 less than your threat elimination level. You are not eliminated.")
+                .WithText("Attach to a player's threat dial. Limit 1 per player.\r\nForced: When you would be eliminated by reaching your threat elimination level, instead discard Favor of the Valar and reduce your threat to 5 less than your threat elimination level. You are not eliminated.")
                 .WithFlavor("\"...their hearts were lifted up in such a hope as they had not known since the darkness came out of the East...\" -The Return of the King")
                 .WithTemplate("<p>Attach to a player's threat dial. Limit 1 per player.</p><p><b>Forced:</b> When you would be eliminated by reaching your threat elimination level, instead discard Favor of the Valar and reduce your threat to 5 less than your threat elimination level. You are not eliminated.</p><p class='flavor-text'>&quot;...their hearts were lifted up in such a hope as they had not known since the darkness came out of the East...&quot;<br>&ndash;The Return of the King</p>")
                 .WithInfo(124, 3, Artist.Matthew_Cowdery));
+            Cards.Add(Card.Quest("The Clutches of Carn Dûm", "", 5, 1, setName, 15)
+                .WithNormalizedTitle("The Clutches of Carn Dum")
+                .WithFlavor("Your company has made its way swiftly north, and finally the fortress of Carn Dûm looms before you. Unsure if you have arrived in time, you can only hope beyond hope that Iârion is still alive.")
+                .WithText("Setup: Add Thaurdir to the staging area, Captain side faceup. Add 1 copy of Carn Dûm garrison per player to the staging area. Search the encounter deck for 1 copy of Accursed Battlefield and make it the active location. Shuffle the encounter deck.")
+                .WithTemplate("<p class='flavor-text'>Your company has made its way swiftly north, and finally the fortress of Carn Dûm looms before you. Unsure if you have arrived in time, you can only hope beyond hope that Iârion is still alive.</p><p><b>Setup:</b> Add {card:Thaurdir-TBoCD@Thaurdir} to the staging area, {trait:Captain.@Captain} side faceup. Add 1 copy of {card:Carn-Dûm-Garrison-TBoCD@Carn Dûm Garrison} per player to the staging area. Search the encounter deck for 1 copy of {card:Accursed-BAttlefield-TBoCD@Accursed Battlefield} and make it the active location. Shuffle the encounter deck.</p>")
+                .WithOppositeFlavor("Thaurdir has mustered the defense of Carn Dûm. There is no turning back now. \"For Iârion!\" the Rangers begin to shout, unsheathing their swords.")
+                .WithOppositeText("Thaurdir cannot leave the staging area and cannot take damage. At the end of the round, if Thaurdir is Champion side faceup, flip him.\r\nDo not discard unresolved shadow cards at the end of the combat phase.\r\nForced: If there are 3 shadow cards dealt to Thaurdir, flip him.")
+                .WithTemplate2("<p class='flavor-text'>Thaurdir has mustered the defense of Carn Dûm. There is no turning back now. &quot;For Iârion!&quot; the Rangers begin to shout, unsheathing their swords.</p><p>{card:Thaurdir-TBoCD@Thaurdir} cannot leave the staging area and cannot take damage. At the end of the round, if {card:Thaurdir-TBoCD@Thaurdir} is {trait:Champion.@Champion} side faceup, flip him.</p><p>Do not discard unresolved shadow cards at the end of the combat phase.</p><p><b>Forced:</b> If there are 3 shadow cards dealt to {card:Thaurdir-TBoCD@Thaurdir}, flip him.</p>")
+                .WithInfo(125, 1, Artist.Wibben));
+            Cards.Add(Card.Quest("Midwinter's Crux", "", 5, 2, setName, 15)
+                .WithFlavor("A swirling dark cloud starts to gather above you, and a cold wind tenses your muscles. \"I have a bad feeling about this...\" you hear Amarthiúl mutter. It seems Daechanar's ritual has begun. Sensing you have little time to spare, your company rushes to the gates of Carn Dûm")
+                .WithText("When Revealed: Raise each player's threat by X, where X is the number of shadow cards in play. If Thaurdir is Captain side faceup, flip him.")
+                .WithTemplate("<p class='flavor-text'>A swirling dark cloud starts to gather above you, and a cold wind tenses your muscles. \"I have a bad feeling about this...\" you hear Amarthiúl mutter. It seems Daechanar's ritual has begun. Sensing you have little time to spare, your company rushes to the gates of Carn Dûm</p><p><b>When Revealed:</b> Raise each player's threat by X, where X is the number of shadow cards in play. If {card:Thaurdir-TBoCD@Thaurdir} is {trait:Captain.@Captain} side faceup, flip him.</p>")
+                .WithOppositeText("Thaurdir cannot leave the staging area, is considered to be engaged with each player, and attacks each player in turn during the combat phase (deal and discard a new shadow card for each attack). At the end of the round, if Thaurdir is Captain side faceup, flip him.\r\nWhile Midwinter's Crux has 15 or more progress on it, Thaurdir loses indestructible. You cannot defeat this stage while Thaurdir is in play.\r\nIf Thaurdir is defeated, you win the game")
+                .WithTemplate2("<p>{card:Thaurdir-TBoCD@Thaurdir} cannot leave the staging area, is considered to be engaged with each player, and attacks each player in turn during the combat phase (deal and discard a new shadow card for each attack). At the end of the round, if {card:Thaurdir-TBoCD@Thaurdir} is {trait:Captain.@Captain} side faceup, flip him.</p><p>While {self} has 15 or more progress on it, {card:Thaurdir-TBoCD@Thaurdir} loses indestructible. You cannot defeat this stage while {card:Thaurdir-TBoCD@Thaurdir} is in play.</p><p><b>If {card:Thaurdir-TBoCD@Thaurdir} is defeated, you win the game</b></p>")
+                .WithInfo(126, 1, Artist.Tomasz_Jedruszek));
+            Cards.Add(Card.Enemy("Thaurdir", "", setName, 50, 4, 6, 4, 9)
+                .WithSuffix("Captain")
+                .WithUnique()
+                .WithTraits("Undead.", "Wraith.", "Captain.")
+                .WithKeywords("Indestructible.")
+                .WithText("Cannot have attachments.\r\nEach other enemy gets +10 engagement cost.\r\nForced: After Thaurdir is flipped or a treachery card with the Sorcery trait is revealed, deal 1 shadow card to each enemy in play.")
+                .WithTemplate("<p>{keyword:Indestructible.} Cannot have attachments.</p><p>Each other enemy gets +10 engagement cost.</p><p><b>Forced:</b> After {self} is flipped or a treachery with the {trait:Sorcery.@Sorcery} trait is revealed, deal 1 shadow card to each enemy in play.</p>")
+                .WithInfo(127, 1, Artist.Brian_Valenzuela));
+            Cards.Add(Card.Enemy("Thaurdir", "", setName, 50, 4, 6, 4, 9)
+                .WithSuffix("Champion")
+                .WithUnique()
+                .WithTraits("Undead.", "Wraith.", "Champion.")
+                .WithKeywords("Indestructible.")
+                .WithText("Cannot have attachments.\r\nEach other enemy gets -10 engagement cost.\r\nForced: After Thaurdir is flipped or a treachery with the Sorcery trait is revealed, Thaurdir heals 3 damage and makes an immediate attack against the first player.")
+                .WithTemplate("<p>{keyword:Indestructible.} Cannot have attachments.</p><p>Each other enemy gets -10 engagement cost.</p><p><b>Forced:</b> After {self} is flipped or a treachery with the {trait:Sorcery.@Sorcery} trait is revealed, {self} heals 3 damage and makes an immediate attack against the first player.</p>")
+                .WithInfo(128, 1, Artist.Brian_Valenzuela));
+            Cards.Add(Card.Enemy("Carn Dûm Garrison", "", setName, 40, 1, 4, 3, 5)
+                .WithNormalizedTitle("Carn Dum Garrison")
+                .WithTraits("Orc.")
+                .WithText("Carn Dûm gets +1 Threat for each shadow card currently dealt to it.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack for each shadow card currently dealt to it.")
+                .WithTemplate("<p>{self} gets +1 {Threat} for each shadow card currently dealt to it.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Attacking enemy gets +1 {Attack} for each shadow card currently dealt to it.</p>")
+                .WithEasyModeQuantity(3)
+                .WithInfo(129, 4, Artist.Brian_Valenzuela));
+            Cards.Add(Card.Enemy("Orc Grunts", "", setName, 8, 1, 2, 1, 3)
+                .WithTraits("Orc.")
+                .WithKeywords("Doomed 1.", "Surge.")
+                .WithText("Any time progress is placed on the current quest, reduce the amount of progress placed by 1.")
+                .WithShadow("Shadow: Add Orc Grunts to the staging area.")
+                .WithTemplate("<p>{keyword:Doomed 1.} {keyword:Surge.}</p><p>Any time progress is placed on the current quest, reduce the amount of progress placed by 1.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Add {self} to the staging area.</p>")
+                .WithEasyModeQuantity(2)
+                .WithInfo(130, 4, Artist.Rafal_Hrynkiewicz));
+            Cards.Add(Card.Enemy("Werewolf of Angmar", "", setName, 35, 2, 5, 4, 6)
+                .WithTraits("Creature.", "Werewolf.")
+                .WithText("Forced: After an event card is played, deal 1 shadow card to Werewolf of Angmar.\r\nForced: If there are 3 shadow cards dealt to Werewolf of Angmar and it is in the staging area, it engages the first player and makes an immediate attack (do not deal it a shadow card for this attack).")
+                .WithTemplate("<p><b>Forced:</b> After an event card is played, deal 1 shadow card to {self}.</p><p><b>Forced:</b> If there are 3 shadow cards dealt to {self} and it is in the staging area, it engages the first player and makes an immediate attack (do not deal it a shadow card for this attack).</p>")
+                .WithEasyModeQuantity(0)
+                .WithInfo(131, 2, Artist.Matthew_Starbuck));
         }
     }
 }

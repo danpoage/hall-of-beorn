@@ -326,6 +326,7 @@
     <Compile Include="Models\Scenarios\ShadowAndFlame.cs" />
     <Compile Include="Models\Scenarios\ShelobsLair.cs" />
     <Compile Include="Models\Scenarios\TheAntleredCrown.cs" />
+    <Compile Include="Models\Scenarios\TheBattleOfCarnDum.cs" />
     <Compile Include="Models\Scenarios\TheBattleOfFiveArmies.cs" />
     <Compile Include="Models\Scenarios\TheBattleOfLakeTown.cs" />
     <Compile Include="Models\Scenarios\TheBloodOfGondor.cs" />

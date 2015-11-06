@@ -31,6 +31,7 @@ namespace HallOfBeorn.Models
             //HasReferences = true;
 
             AlternateEncounterSet = string.Empty;
+            Suffix = string.Empty;
         }
 
         #region Effect Functions
@@ -345,6 +346,12 @@ namespace HallOfBeorn.Models
             return this;
         }
 
+        public Card WithSuffix(string suffix)
+        {
+            this.Suffix = suffix;
+            return this;
+        }
+
         public Card Flavor(string flavor)
         {
             effects.Add(new Effect(CardEffectType.Flavor_Text, LayoutType.Block).Flavor(flavor));
@@ -556,6 +563,7 @@ namespace HallOfBeorn.Models
         public ushort Year { get; set; }
         public bool SlugIncludesOppositeTitle { get; set; }
         public bool SlugIncludesType { get; set; }
+        public string Suffix { get; set; }
 
         private bool hasSecondImage;
         public bool HasSecondImage {
@@ -615,8 +623,9 @@ namespace HallOfBeorn.Models
                 var title = !string.IsNullOrEmpty(NormalizedTitle) ?  NormalizedTitle.ToUrlSafeString() : Title.ToUrlSafeString();
                 var subtitle = SlugIncludesOppositeTitle ? string.Format("{0}-", OppositeTitle.ToUrlSafeString()) : string.Empty;
                 var type = SlugIncludesType ? string.Format("{0}-", CardType.ToString().ToUrlSafeString()) : string.Empty;
+                var suffix = !string.IsNullOrEmpty(Suffix) ? string.Format("{0}-", Suffix) : string.Empty;
                 var set = CardSet.Abbreviation.ToString().ToUrlSafeString();
-                return string.Format("{0}-{1}{2}{3}", title, subtitle, type, set); 
+                return string.Format("{0}-{1}{2}{3}{4}", title, subtitle, suffix, type, set);
             }
         }
 

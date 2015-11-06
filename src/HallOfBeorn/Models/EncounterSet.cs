@@ -115,6 +115,7 @@ namespace HallOfBeorn.Models
             Add(EscapeFromMountGram);
             Add(AcrossTheEttenmoors);
             Add(TheTreacheryOfRhudaur);
+            Add(TheBattleOfCarnDum);
 
             //The Hobbit: Over Hill and Under Hill
             Add(WeMustAwayEreBreakOfDay);
@@ -301,7 +302,7 @@ namespace HallOfBeorn.Models
         public static EncounterSet TheDunlandTrap = new EncounterSet { Name = "The Dunland Trap", Set = "The Dunland Trap" };
         public static EncounterSet TheThreeTrials = new EncounterSet { Name = "The Three Trials", Set = "The Three Trials" };
         public static EncounterSet TroubleInTharbad = new EncounterSet { Name = "Trouble in Tharbad", Set = "Trouble in Tharbad" };
-        public static EncounterSet TheNinInEilph = new EncounterSet { Name = "The Nîn-in-Eilph", Set = "The Nîn-in-Eilph", NormalizedSet = "The Nîn-in-Eilph" };
+        public static EncounterSet TheNinInEilph = new EncounterSet { Name = "The Nîn-in-Eilph", Set = "The Nîn-in-Eilph", NormalizedSet = "The Nin-in-Eilph" };
         public static EncounterSet CelebrimborsSecret = new EncounterSet { Name = "Celebrimbor's Secret", Set = "Celebrimbor's Secret" };
         public static EncounterSet TheAntleredCrown = new EncounterSet { Name = "The Antlered Crown", Set = "The Antlered Crown" };
 
@@ -320,6 +321,7 @@ namespace HallOfBeorn.Models
         public static EncounterSet EscapeFromMountGram = new EncounterSet { Name = "Escape from Mount Gram", Set = "Escape from Mount Gram" };
         public static EncounterSet AcrossTheEttenmoors = new EncounterSet { Name = "Across the Ettenmoors", Set = "Across the Ettenmoors" };
         public static EncounterSet TheTreacheryOfRhudaur = new EncounterSet { Name = "The Treachery of Rhudaur", Set = "The Treachery of Rhudaur" };
+        public static EncounterSet TheBattleOfCarnDum = new EncounterSet { Name = "The Battle of Carn Dûm", Set = "The Battle of Carn Dûm", NormalizedSet = "The Battle of Carn Dum" };
 
         //The Hobbit: Over Hill and Under Hill
         public static EncounterSet WeMustAwayEreBreakOfDay = new EncounterSet { Name = "We Must Away, Ere Break of Day", Set = "The Hobbit: Over Hill and Under Hill" };

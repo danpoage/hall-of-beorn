@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.Products
             : base("The Battle of Carn Dûm", "MEC43", ImageType.Jpg)
         {
             AddCardSet(CardSet.TheBattleOfCarnDum);
+
+            AddScenario(new HallOfBeorn.Models.Scenarios.TheBattleOfCarnDum());
         }
     }
 }

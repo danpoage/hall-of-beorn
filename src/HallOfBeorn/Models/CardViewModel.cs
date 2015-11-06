@@ -599,11 +599,12 @@ namespace HallOfBeorn.Models
                 var ext = string.Format(".{0}", format.ToString().ToLower());
                 var set = !string.IsNullOrEmpty(_card.CardSet.NormalizedName) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
                 var title = _card.SlugIncludesOppositeTitle ? string.Format("{0}-{1}", Title.ToUrlSafeString(), OppositeTitle.ToUrlSafeString()) : Title.ToUrlSafeString();
+                var suffix = !string.IsNullOrEmpty(_card.Suffix) ? string.Format("-{0}", _card.Suffix) : string.Empty;
                 var type = _card.SlugIncludesType ? string.Format("-{0}", _card.CardType.ToString().ToUrlSafeString()) : string.Empty;
                 var image = _card.ImageName.ToUrlSafeString();
 
                 return string.IsNullOrEmpty(_card.ImageName) ?
-                    string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}{2}{3}", set, title, type, ext)
+                    string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}{2}{3}{4}", set, title, suffix, type, ext)
                     : string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}{1}", image, ext);
             }
         }

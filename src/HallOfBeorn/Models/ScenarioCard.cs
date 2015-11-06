@@ -37,7 +37,7 @@ namespace HallOfBeorn.Models
         private void Init(Card card)
         {
             Card = card;
-            Title = card.Title;
+            Title = !string.IsNullOrEmpty(card.Suffix) ? string.Format("{0} ({1})", card.Title, card.Suffix) : card.Title;
             Set = card.CardSet.NormalizedName;
             EncounterSet = card.EncounterSet;
             EncounterSetNumber = card.CardSet.Number;
