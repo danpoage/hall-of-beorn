@@ -30,7 +30,7 @@ namespace HallOfBeorn.Models.Sets
                 NormalizedTraits = new List<string> { "Dunedain." },
                 Text = "Response: After Aragorn commits to a quest, spend 1 resource from his resource pool to ready him.",
                 FlavorText = "\"I am Aragorn son of Arathorn; and if by life or death I can save you, I will.\" -The Fellowship of the Ring",
-                HtmlTemplate = "<p>{keyword:Sentinel.}<p><p><b>Response:</b> After Aragorn commits to a quest, spend 1 resource from his resource pool to ready him.</p><p><i>&quot;I am Aragorn son of Arathorn; and if by life or death I can save you, I will.&quot; &ndash;The Fellowship of the Ring</i></p>",
+                HtmlTemplate = "<p>{keyword:Sentinel.}<p><p><b>Response:</b> After {self} commits to a quest, spend 1 resource from his resource pool to ready him.</p><p class='flavor-text'>&quot;I am Aragorn son of Arathorn; and if by life or death I can save you, I will.&quot;<br>&ndash;The Fellowship of the Ring</p>",
                 Keywords = new List<string>() { "Sentinel." },
                 Quantity = 1,
                 Year = 2010,
@@ -53,6 +53,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Noble.", "Rohan.", "Warrior." },
                 Text = "Response: After Théodred commits to a quest, choose a hero committed to that quest. Add 1 resource to that hero's resource pool.",
                 FlavorText = "\"Not all is dark. Take courage, Lord of the Mark...\"\r\n\r\n-Gandalf, The Two Towers",
+                HtmlTemplate = "<p><b>Response:</b> After {self} commits to a quest, choose a hero committed to that quest. Add 1 resource to that hero's resource pool.<p><p class='flavor-text'>&quot;Not all is dark. Take courage, Lord of the Mark...&quot;<br>&ndash;Gandalf, The Two Towers</p>",
                 Quantity = 1,
                 Number = 2,
                 Artist = Artist.Jeff_Himmelman
@@ -73,6 +74,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Dwarf.", "Noble." },
                 Text = "Response: After Glóin suffers damage, add 1 resource to his resource pool for each point of damage he just suffered.",
                 FlavorText = "His beard, very long and forked, was white, nearly as white as the snow-white cloth of his garments.\r\n-The Fellowship of the Ring",
+                HtmlTemplate = "<p><b>Response:</b> After {self} suffers damage, add 1 resource to his resource pool for each point of damage he just suffered.</p><p class='flavor-text'>His beard, very long and forked, was white, nearly as white as the snow-white cloth of his garments.<br>&ndash;The Fellowship of the Ring</p>",
                 Quantity = 1,
                 Number = 3,
                 Artist = Artist.Tom_Garden

@@ -25,9 +25,7 @@
     }
 
     function addCard(card, count) {
-        console.log('addCard');
-        console.log(card);
-
+        
         var imageHtml = '<img class="deck-card-image deck-card-image-hidden" src="' + card.CardImage + '"/>';
         var sphereHtml = '<img class="deck-sphere-icon" src="' + card.SphereIcon + '"/>';
         var titleHtml = '<a class="deck-card-title" href="' + card.Url + '" target="_blank">' + card.Title + '</a>';
@@ -82,8 +80,6 @@
     }
 
     $('#saveOctgn').click(function (e) {
-        //console.log('octgnExport');
-
         var deck = getDeckModel();
 
         saveLocalDeck(deck);
@@ -101,7 +97,6 @@
     });
 
     $('#loadDeck').click(function (e) {
-        console.log('loadDeck click');
         clearLocal('currentDeck');
     });
 
@@ -151,9 +146,7 @@
     }
 
     function loadDeckModel(deck) {
-        console.log('loadDeckModel');
-        console.log(deck);
-
+        
         $('#Name').val(deck.name);
 
         var guids = [];
@@ -187,17 +180,12 @@
             }
         }
 
-        //console.log('guid list');
-        //console.log(guids);
         var url = '/Cards/DeckItems?guidList=' + guids.join(',');
-        //console.log('url: ' + url);
 
         $.ajax({
             url: url,
             type: "get",
             success: function (data) {
-                console.log('deck items results');
-                console.log(data);
 
                 var cardCount = 0;
                 if (data && data.length > 0) {
@@ -270,21 +258,14 @@
     }
 
     function saveLocalDeck(deck) {
-        console.log('saveLocalDeck');
-        //console.log(deck);
 
         var deckData = JSON.stringify(deck);
-
-        console.log('deckData');
-        console.log(deckData);
 
         setLocal('currentDeck', deckData);
     }
 
     function saveOctgnDeck(deck) {
-        console.log('saveOctgnDeck');
-        console.log(deck);
-
+        
         var url = '/Cards/SaveOctgnDeck?name=' + encodeURIComponent(deck.name);
         if (deck.heroes.all.length > 0) {
             url += '&heroes=' + deck.heroes.all.join(',');
@@ -307,7 +288,6 @@
             url += '&sideQuests=' + deck.sideQuests.all.join(',');
         }
 
-        console.log('url: ' + url);
         window.open(url, '_blank');
     }
 
@@ -316,7 +296,6 @@
     });
 
     $('#deckContainer').on('mouseleave', '.deck-card-title', function (e) {
-        console.log('mouse leaving title');
         $(e.currentTarget).parent().find('.deck-card-image').addClass('deck-card-image-hidden').removeClass('deck-card-image-hover');
     });
 
@@ -326,7 +305,6 @@
 
     $('#deckContainer').on('click', '.deck-item', function (e) {
         var octgnGuid = $(e.currentTarget).closest('.deck-item').data('octgn');
-        console.log('selected OCTGN guid: ' + octgnGuid);
     });
 
     var $search = $("#Search");
