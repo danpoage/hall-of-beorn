@@ -24,6 +24,9 @@ namespace HallOfBeorn.Models.Scenarios
             ExcludeFromEasyMode("Carn-Dum-Garrison-TBoCD", 1);
             ExcludeFromEasyMode("Orc-Grunts-TBoCD", 2);
             ExcludeFromEasyMode("Werewolf-of-Angmar-TBoCD", 2);
+            ExcludeFromEasyMode("Fortress-Walls-TBoCD", 2);
+            ExcludeFromEasyMode("The-Sky-Darkens-TBoCD", 2);
+            ExcludeFromEasyMode("Daechanar's-Will-TBoCD", 1);
         }
     }
 }

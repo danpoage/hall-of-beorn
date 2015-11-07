@@ -337,6 +337,7 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Jordan_Saia);
             all.Add(Artist.Cassandre_Bolan);
             all.Add(Artist.Jorge_Barrero);
+            all.Add(Artist.Mikhail_Greuli);
 
             //First Age
             all.Add(Artist.Unknown);
@@ -829,6 +830,7 @@ namespace HallOfBeorn.Models
         public static Artist Michael_Wolmarans = new Artist { Name = "Michael Wolmarans", URL = "https://artstation.com/artist/tenebrae" };
         public static Artist Mike_Capprotti = new Artist { Name = "Mike Capprotti", URL = "http://capprotti.deviantart.com" };
         public static Artist Mike_Nash = new Artist { Name = "Mike Nash", URL = "http://www.mike-nash.com/HOME.html" };
+        public static Artist Mikhail_Greuli = new Artist { Name = "Mikail Greuli", URL = "http://mgreuli.deviantart.com" };
         public static Artist Mikhail_Yakovlev = new Artist { Name = "Mikhail Yakovlev", URL = "http://yakovlevart.blogspot.com" };
         public static Artist Milek_Jakubiec = new Artist { Name = "Milek Jakubiec", URL = "http://ethicallychallenged.deviantart.com" };
         public static Artist Nacho_Molina = new Artist { Name = "Nacho Molina", URL = "http://nachomolina.deviantart.com" };
