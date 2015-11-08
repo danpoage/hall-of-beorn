@@ -94,6 +94,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Dwarf.", "Noble.", "Warrior." },
                 Text = "Gimli gets +1 Attack for each damage token on him.",
                 FlavorText = "\"Men need many words before deeds. My axe is restless in my hands\" -The Two Towers",
+                HtmlTemplate = "<p>{self} gets +1 {Attack} for each damage token on him.</p><p class='flavor-text'>&quot;Men need many words before deeds. My axe is restless in my hands.&quot<br>&ndash;The Two Towers</p>",
                 Quantity = 1,
                 Number = 4,
                 Artist = Artist.Tony_Foti
@@ -113,6 +114,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Noble.", "Silvan.", "Warrior." },
                 Text = "Response: After Legolas participates in an attack that destroys an enemy, place 2 progress tokens on the current quest.",
                 FlavorText = "\"I can walk this path, but others have not this skill.\"\r\n-The Fellowship of the Ring",
+                HtmlTemplate = "<p><b>Response:</b> After {self} participates in an attack that destroys an enemy, place 2 progress tokens on the current quest.</p><p class='flavor-text'>&quot;I can walk this path, but others have not this skill.&quot;<br>&ndash;The Fellowship of the Ring</p>",
                 Keywords = new List<string>() { "Ranged." },
                 Quantity = 1,
                 Number = 5,
@@ -133,6 +135,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Dwarf.", "Warrior." },
                 Text = "While Thalin is committed to a quest, deal 1 damage to each enemy as it is revealed by the encounter deck.",
                 FlavorText = "There hammer on the anvil smote,\r\nThere chisel clove, and graver wrote;\r\nThere forged was blade, and bound was hilt;\r\nThe delver mined, the mason built.\r\n-The Fellowship of the Ring",
+                HtmlTemplate = "<p>While {self} is committed to a quest, deal 1 damage to each enemy as it is revealed by the encounter deck.</p><p class='flavor-text'>There hammer on the anvil smote,<br>There chisel clove, and graver wrote;<br>There forged was blade, and bound was hilt;<br>The delver mined, the mason built.<br>&ndash;The Fellowship of the Ring</p>",
                 Quantity = 1,
                 Number = 6,
                 Artist = Artist.Jen_Zee,
