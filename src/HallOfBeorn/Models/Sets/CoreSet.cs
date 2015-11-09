@@ -156,7 +156,7 @@ namespace HallOfBeorn.Models.Sets
                 HitPoints = 3,
                 Traits = new List<string>() { "Noble.", "Rohan." },
                 Text = "Action: Discard 1 card from your hand to give Éowyn +1 Willpower until the end of the phase. This effect may be triggered by each player once each round.",
-                HtmlTemplate = "<p><b>Action:</b> Discard 1 card from your hand to give Éowyn +1 {Willpower} until the end of the phase. This effect may be triggered by each player once each round.</p><p><i>Slender and tall she was in her white robe girt with silver; but strong she seemed and stern as steel, a daughter of kings. &ndash;The Two Towers</i></p>",
+                HtmlTemplate = "<p><b>Action:</b> Discard 1 card from your hand to give Éowyn +1 {Willpower} until the end of the phase. This effect may be triggered by each player once each round.</p><p class='flavor-text'>Slender and tall she was in her white robe girt with silver; but strong she seemed and stern as steel, a daughter of kings.<br>&ndash;The Two Towers</p>",
                 Quantity = 1,
                 Number = 7,
                 Artist = Artist.Gabrielle_Portal
@@ -176,6 +176,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Gondor.", "Noble." },
                 Text = "Response: Exhaust Eleanor to cancel the 'when revealed' effects of a treachery card just revealed by the encounter deck. Then, discard that card, and replace it with the next card from the encounter deck.",
                 FlavorText = "\"Gondor wanes, you say. But Gondor stands, and even the end of its strength is very strong.\" -Boromir, The Fellowship of the Ring",
+                HtmlTemplate = "<p><b>Response:</b> Exhaust {self} to cancel the &quot;when revealed&quot; effects of a treachery card just revealed by the encounter deck. Then, discard that card, and replace it with the next card from the encounter deck.</p><p class='flavor-text'>&quot;Gondor wanes, you say. But Gondor stands, and even the end of its strength is very strong.&quot;<br>&ndash;Boromir, The Fellowship of the Ring</p>",
                 Quantity = 1,
                 Number = 8,
                 Artist = Artist.Magali_Villeneuve,
@@ -197,6 +198,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Rohan.", "Warrior." },
                 Text = "Dúnhere can target enemies in the staging area when he attacks alone. When doing so, he gets +1 Attack.",
                 FlavorText = "Captains rode to meet him at the ford, bearing messages from Gandalf. Dúnhere, chieftain of the folk of Harrowdale, was at their head.\r\n-The Return of the King",
+                HtmlTemplate = "<p>{self} can target enemies in the staging area when he attacks alone. When doing so, he gets +1 {Attack}.</p><p class='flavor-text'>Captains rode to meet him at the ford, bearing messages from Gandalf. Dúnhere, chieftain of the folk of Harrowdale, was at their head.<br>&ndash;The Return of the King</p>",
                 Quantity = 1,
                 Number = 9,
                 Artist = Artist.Jeff_Himmelman
@@ -216,6 +218,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Gondor.", "Noble.", "Steward." },
                 Text = "Action: Exhaust Denethor to look at the top card of the encounter deck. You may move that card to the bottom of the deck.",
                 FlavorText = "\"And the lord Denethor is unlike other men: he sees far.\"\r\n-Beregond, The Return of the King",
+                HtmlTemplate = "<p><b>Action:</b> Exhaust {self} to look at the top card of the encounter deck. You may move that card to the bottom of the deck.</p><p class='flavor-text'>&quot;And the lord Denethor is unlike other men: he sees far.&quot;<br>&ndash;Beregond, The Return of the King</p>",
                 Quantity = 1,
                 Number = 10,
                 Artist = Artist.Tiziano_Baracchi
@@ -235,6 +238,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Noble.", "Noldor.", "Warrior." },
                 Text = "Action: Pay 1 resource from Glorfindel's pool to heal 1 damage on any character. (Limit once per round.)",
                 FlavorText = "\"You saw him for a moment as he is upon the other side: one of the mighty of the firstborn.\"\r\n-Gandalf, The Fellowship of the Ring",
+                HtmlTemplate = "<p><b>Action:</b> Pay 1 resource from {self}'s pool to heal 1 damage on any character. (Limit once per round.)</p><p class='flavor-text'>&quot;You saw him for a moment as he is upon the other side: one of the mighty of the firstborn.&quot;<br>&ndash;Gandalf, The Fellowship of the Ring</p>",
                 Quantity = 1,
                 Number = 11,
                 Artist = Artist.Katherine_Dinger
@@ -255,6 +259,7 @@ namespace HallOfBeorn.Models.Sets
                 NormalizedTraits = new List<string> { "Dunedain." },
                 Text = "Action: Exhaust Beravor to choose a player. That player draws 2 cards. Limit once per round.",
                 FlavorText = "But in the wild lands beyond Bree there were mysterious wanderers. The Bree-folk called them Rangers, and knew nothing of their origin.\r\n-The Fellowship of the Ring",
+                HtmlTemplate = "<p><b>Action:</b> Exhaust {self} to choose a player. That player draws 2 cards. Limit once per round.</p><p class='flavor-text'>But in the wild lands beyond Bree there were mysterious wanderers. The Bree-folk called them Rangers, and knew nothing of their origin.<br>&ndash;The Fellowship of the Ring</p>",
                 Quantity = 1,
                 Number = 12,
                 Artist = Artist.Tiziano_Baracchi,
