@@ -279,6 +279,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Gondor.", "Warrior." },
                 FlavorText = "\"But the Lords of Minas Tirith still fight on, defying our enemies, keeping the passage of the River from Argonath to the Sea.\"\r\n-Elrond, The Fellowship of the Ring",
                 Quantity = 3,
+                HtmlTemplate = "<p class='flavor-text'>&quot;But the Lords of Minas Tirith still fight on, defying our enemies, keeping the passage of the River from Argonath to the Sea.&quot;<br>&ndash;Elrond, The Fellowship of the Ring</p>",
                 Number = 13,
                 Artist = Artist.Leonardo_Borazio
             });
@@ -297,6 +298,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Gondor.", "Noble.", "Ranger." },
                 Text = "Action: Exhaust Faramir to choose a player. Each character controlled by that player gets +1 Willpower until the end of the phase.",
                 FlavorText = "\"He leads now in all perilous ventures. But his life is charmed, or fate spares him for some other end.\"\r\n-Mablung, Ranger of Ithilien,\r\nThe Two Towers",
+                HtmlTemplate = "<p><b>Action:</b> Exhaust {self} to choose a player. Each character controlled by that player gets +1 {Willpower} until the end of the phase.</p><p class='flavor-text'>&quot;He leads now in all perilous ventures. But his life is charmed, or fate spares him for some other end.&quot;<br>&ndash;Mablung, Ranger of Ithilien,<br>The Two Towers</p>",
                 Quantity = 2,
                 Number = 14,
                 Artist = Artist.Jeff_Himmelman
@@ -316,6 +318,7 @@ namespace HallOfBeorn.Models.Sets
                 NormalizedTraits = new List<string> { "Dunedain." },
                 Text = "Response: After Son of Arnor enters play, choose an enemy card in the staging area or currently engaged with another player. Engage that enemy.",
                 FlavorText = "...and the North-realm they made in Arnor, and the South-realm in Gondor above the mouths of Anduin. -The Fellowship of the Ring",
+                HtmlTemplate = "<p><b>Response:</b> After {self} enters play, choose an enemy card in the staging area or currently engaged with another player. Engage that enemy.</p><p class='flavor-text'>...and the North-realm they made in Arnor, and the South-realm in Gondor above the mouths of Anduin.<br>&ndash;The Fellowship of the Ring</p>",
                 Quantity = 2,
                 Number = 15,
                 Artist = Artist.Ryan_Barger
@@ -334,6 +337,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Rohan.", "Scout." },
                 Text = "Response: After Snowbourn Scout enters play, choose a location. Place 1 progress token on that location.",
                 FlavorText = "...he saw not a shadow, nor a blur, but the small figures of horsemen, many horsemen, and the glint of morning on the tips of their spears was like the twinkle of minute stars beyond the edge of mortal sight. -The Two Towers",
+                HtmlTemplate = "<p><b>Response:</b> After {self} enters play, choose a location. Place 1 progress token on that location.</p><p class='flavor-text'>...he saw not a shadow, nor a blur, but the small figures of horsemen, many horsemen, and the glint of morning on the tips of their spears was like the twinkle of minute stars beyond the edge of mortal sight.<br>&ndash;The Two Towers</p>",
                 Quantity = 3,
                 Number = 16,
                 Artist = Artist.David_Horne
@@ -352,6 +356,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Archer.", "Silvan." },
                 Keywords = new List<string>() { "Ranged." },
                 FlavorText = "\"We have been keeping watch on the rivers, ever since we saw a great troop of Orcs going north towards Moria, along the skirts of the mountains, many days ago.\" -Haldir of Lórien, The Fellowship of the Ring",
+                HtmlTemplate = "<p>{keyword:Ranged.}</p><p class='flavor-text'>&quot;We have been keeping watch on the rivers, ever since we saw a great troop of Orcs going north towards Moria, along the skirts of the mountains, many days ago.&quot;<br>&ndash;Haldir of Lórien, The Fellowship of the Ring</p>",
                 Quantity = 2,
                 Number = 17,
                 Artist = Artist.A_M_Sartor
@@ -370,6 +375,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Dwarf.", "Warrior." },
                 Text = "Response: After Longbeard Orc Slayer enters play, deal 1 damage to each Orc enemy in play.",
                 FlavorText = "Five dead Orcs lay there. They had been hewn with many cruel strokes, and two had been beheaded. The ground was wet with their dark blood.\r\n-The Two Towers",
+                HtmlTemplate = "<p><b>Response:</b> After {self} enters play, deal 1 damage to each Orc enemy in play.</p><p class='flavor-text'>Five dead Orcs lay there. They had been hewn with many cruel strokes, and two had been beheaded. The ground was wet with their dark blood.<br>&ndash;The Two Towers</p>",
                 Quantity = 2,
                 Number = 18,
                 Artist = Artist.Kaya
@@ -389,6 +395,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Dwarf.", "Warrior." },
                 Text = "Response: After a Dwarf hero you control leaves play, put Brok Ironfist into play from your hand.",
                 FlavorText = "...there is no knowing what a Dwarf will not dare and do for revenge and the recovery of his own.\r\n-The Hobbit",
+                HtmlTemplate = "<p><b>Response:</b> After a {trait-hero:Dwarf.@Dwarf} you control leaves play, put {self} into play from your hand.</p><p class='flavor-text'>...there is no knowing what a Dwarf will not dare and do for revenge and the recovery of his own.<br>&ndash;The Hobbit</p>",
                 Quantity = 1,
                 Number = 19,
                 Artist = Artist.Even_Mehl_Amundsen
