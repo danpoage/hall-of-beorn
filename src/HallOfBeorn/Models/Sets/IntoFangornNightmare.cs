@@ -53,7 +53,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithText("Cannot have attachments.\r\nWhile Blocking Huron is engaged with a player, it adds its Threat to the staging area.")
                 .WithShadow("Shadow: Put Blocking Huorn into play engaged with you.")
                 .WithInfo(3, 2, Artist.Katy_Grierson));
-            Cards.Add(Card.Enemy("Wicked Huron", "", setName, 33, 3, 6, 4, 7)
+            Cards.Add(Card.Enemy("Wicked Huorn", "", setName, 33, 3, 6, 4, 7)
                 .WithTraits("Huorn.")
                 .WithKeywords("Hinder.")
                 .WithText("Cannot have attachments.\r\nForced: At the beginning of each resource phase, the engaged player exhausts a hero he controls.")
