@@ -30,6 +30,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Hobbit." },
                 Text = "The first player draws 1 additional card in the resource phase.",
                 FlavorText = "\"Well, my dear fellow,\" said bilbo, \"now you've heard the news, can't you spare me a moment? I want your help in something urgent.\" -The Fellowship of the Ring",
+                HtmlTemplate = "<p>The first player draws 1 additional card in the resource phase.</p><p class='flavor-text'>&quot;Well, my dear fellow,&quot; said Bilbo, &quot;now you've heard the news, can't you spare me a moment? I want your help in something urgent.&quot;<br>&ndash;The Fellowship of the Ring</p>",
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Tony_Foti
