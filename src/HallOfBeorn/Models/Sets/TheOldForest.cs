@@ -96,7 +96,7 @@ The Lord of the ~Rings : The Black Riders Saga Expansion is required to play The
                 Traits = new List<string>() { "Dúnedain.", "Noble.", "Ranger." },
                 NormalizedTraits = new List<string> { "Dunedain." },
                 Text = "Response: After Aragorn commits to a quest, spend 1 resource from his resource pool to ready him.",
-                FlavorText = "\"I am Aragorn son of Arathorn; and if by life or death I can save you, I will.\" -The Fellowship of the Ring",
+                HtmlTemplate = "<p>{keyword:Sentinel.}</p><p><b>Response:</b> After {self} commits to a quest, spend 1 resource from his resource pool to ready him.</p>",
                 Keywords = new List<string>() { "Sentinel." },
                 Quantity = 1,
                 Year = 2014,

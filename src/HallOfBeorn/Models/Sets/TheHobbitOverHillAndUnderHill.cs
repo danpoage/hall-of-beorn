@@ -195,6 +195,7 @@ namespace HallOfBeorn.Models.Sets
                 HitPoints = 10,
                 Text = "Cannot have attachments. Immune to player card effects.\r\nBeorn does not exhaust to defend.",
                 Keywords = new List<string>() { "Sentinel." },
+                HtmlTemplate = "<p>{keyword:Sentinel.} Cannot have attachments.</p><p>Immune to player card effects.<p><p>{self} does not exhaust to defend.</p><p class='flavor-text'>The roar of his voice was like drums and guns; and he tossed wolves and goblins from his path like straws and feathers.<br>&ndash;The Hobbit</p>",
                 Number = 5,
                 Artist = Artist.Emrah_Elmasli
             });
@@ -1149,6 +1150,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Willpower = 3,
                 HitPoints = 5,
                 Text = "If you control at least 5 Dwarf characters, add 1 additional resource to Thorin Oakenshield's pool when you collect resources during the resource phase.",
+                HtmlTemplate = "<p>If you control at least 5 {trait:Dwarf.@Dwarf} characters, add 1 additional resource to {self}'s pool when you collect resources during the resource phase.</p><p class='flavor-text'>&quot;I am Thorin son of Thrain son of Thror, King under the Mountain!&quot; &ndash;Thorin, The Hobbit</p>",
                 Number = 2,
                 Artist = Artist.Tiziano_Baracchi
             });

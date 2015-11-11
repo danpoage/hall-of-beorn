@@ -18,6 +18,7 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(Card.Hero("Aragorn", "913A68C4-876B-4AD4-AF08-A291B2E3D053", Sphere.Fellowship, 0, 2, 3, 2, 5)
                 .WithTraits("Dúnedain.", "Noble.", "Ranger.")
                 .WithText("The first player gains control of Aragorn. If Aragorn leaves play, the players lose the game.\r\nAction: Spend 2 resources from Aragorn's resource pool to ready a hero.")
+                .WithTemplate("<p>The first player gains control of {self}. If {self} leaves play, the players lose the game.</p><p><b>Action:</b> Spend 2 resources from {self}'s resource pool to ready a {type:Hero@hero}.</p><p class='flavor-text'>&quot;I am Aragorn son of Arathorn and am called Elessar, the Elfstone, Dunadan, the heir of Isildur Elendil’s son of Gondor.&quot;<br>&ndash;The Two Towers</p>")
                 .WithInfo(1, 1, Artist.Mark_Behm));
             Cards.Add(Card.Hero("Théoden", "F4529F02-EE47-4FA4-A5E3-F755E3620CF3", Sphere.Spirit, 12, 2, 3, 2, 4)
                 .WithTraits("Noble.", "Rohan.", "Warrior.")
@@ -28,7 +29,8 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(Card.Hero("Treebeard", "A9CD7B5C-39B9-4446-9075-636E5F69761F", Sphere.Lore, 13, 2, 3, 3, 5)
                 .WithTraits("Ent.")
                 .WithText("Action: Deal 1 damage to Treebeard to give him +1 Willpower and +1 Attack until the end of the phase. (Limit 5 times per phase.)")
-                .WithInfo(3, 1, Artist.Unknown));
+                .WithTemplate("<p><b>Action:</b> Deal 1 damage to {self} to give him +1 {Willpower} and +1 {Attack} until the end of the phase. (Limit 5 times per phase.)</p><p class='flavor-text'>&quot;I am not altogether on anybody's side, because nobody is altogether on my side...&quot;<br>&ndash;The Two Towers</p>")
+                .WithInfo(3, 1, Artist.Guillaume_Ducos));
             Cards.Add(Card.Ally("Gimli", "8C4FBDC9-60C4-446D-B7E9-14AECD7DC0C6", Sphere.Leadership, 4, 2, 2, 2, 3)
                 .WithUnique()
                 .WithTraits("Dwarf.", "Warrior.")
