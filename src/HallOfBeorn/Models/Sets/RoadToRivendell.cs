@@ -154,7 +154,7 @@ namespace HallOfBeorn.Models.Sets
                 Willpower = 2,
                 HitPoints = 4,
                 Text = "While Elrohir is in play, Elladan gets +2 Attack.\r\nResponse: After Elladan is declared as an attacker, pay 1 resource from his resource pool to ready him.",
-                HtmlTemplate = "<p>While {title:Elrohir} is in play, {self} gets +2 {Attack}.</p><p><b>Response:</b> After {self} is declared as an attacker, pay 1 resource from his resource pool to ready him.</p><p style='text-align:center;'><i>&quot;Yes, the Dead ride behind.&quot;<br>&ndash;The Return of the King</i></p>",
+                HtmlTemplate = "<p>While {title:Elrohir} is in play, {self} gets +2 {Attack}.</p><p><b>Response:</b> After {self} is declared as an attacker, pay 1 resource from his resource pool to ready him.</p><p class='flavor-text'>&quot;Yes, the Dead ride behind.&quot;<br>&ndash;The Return of the King</p>",
                 Number = 28,
                 Artist = Artist.Magali_Villeneuve
             });

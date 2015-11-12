@@ -22,7 +22,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithKeywords("Sentinel.")
                 .WithText("Response: After another hero is declared as a defender, exhaust Dori to add his Defense to the defending hero's Defense for this attack.")
                 .WithFlavor("Dori was really a decent fellow in spite of his grumbling.\r\n-The Hobbit")
-                .WithTemplate("<p><b>Response:</b> After another hero is declared as a defender, exhaust {self} to add his {Defense} to the defending hero's {Defense} for this attack.</p><p style='text-align:center;'><i>Dori was really a decent fellow in spite of his grumbling.<br>&ndash;The Hobbit</i></p>")
+                .WithTemplate("<p><b>Response:</b> After another hero is declared as a defender, exhaust {self} to add his {Defense} to the defending hero's {Defense} for this attack.</p><p class='flavor-text'>Dori was really a decent fellow in spite of his grumbling.<br>&ndash;The Hobbit</p>")
                 .WithInfo(54, 1, Artist.Sebastian_Giacobino));
             Cards.Add(Card.Attachment("Ranger Provisions", "", Sphere.Leadership, 1)
                 .WithTraits("Item.")
@@ -69,7 +69,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithTraits("Song.")
                 .WithText("Action: Reduce the cost of the next event that has a Valour trigger you play this phase by 2.\r\nValour Action: Search the top 10 cards of your deck for an event that has a Valour trigger and add it to your hand. Shuffle your deck.")
                 .WithFlavor("Hope he rekindled, and in hope ended;\r\nover death, over dread, over doom lifted\r\nout of loss, out of life, unto long glory.\r\n-The Return of the King")
-                .WithTemplate("<p><b>Action:</b> Reduce the cost of the next event that has a <b>Valour</b> trigger you play this phase by 2.</p><p><b>Valour Action:</b> Search the top 10 cards of your deck for an event that has a <b>Valour</b> trigger and add it to your hand. Shuffle your deck.</p><p style='text-align:center'><i>Hope he rekindled, and in hope ended;<br>over death, over dread, over doom lifted<br>out of loss, out of life, unto long glory.<br>&ndash;The Return of the King</i></p>")
+                .WithTemplate("<p><b>Action:</b> Reduce the cost of the next event that has a <b>Valour</b> trigger you play this phase by 2.</p><p><b>Valour Action:</b> Search the top 10 cards of your deck for an event that has a <b>Valour</b> trigger and add it to your hand. Shuffle your deck.</p><p class='flavor-text'>Hope he rekindled, and in hope ended;<br>over death, over dread, over doom lifted<br>out of loss, out of life, unto long glory.<br>&ndash;The Return of the King</p>")
                 .WithInfo(63, 3, Artist.Gabrielle_Portal));
             Cards.Add(Card.Quest("Into the Ettenmoors", "", 3, 1, setName, 10)
                 .WithText("Setup: Set aside each of the 3 Across the Enttenmoors side quests and each of the 4 locations with the safe keyword. Reveal 1 of those side quests at random and 1 of those safe locations at random, adding them to the staging area with the safe location guarded by the side quest. Search the encounter deck for 1 copy of Savage Trollspawn per player and add them to the staging area. Shuffle the remaining side quests and safe locations back into the encounter deck. The first player gains control of Amarthiúl.")

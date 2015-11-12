@@ -267,7 +267,7 @@ namespace HallOfBeorn.Models.Sets
                 IsUnique = true,
                 Text = "Attach to a Noldor or Silvan hero.\r\nAttached hero does not exhaust to commit to a quest.",
                 FlavorText = "\"... those who have dwelt in the blassed realm live at once in both worlds, and against both the Seen and Unseen they have great power.\"\r\n-Gandalf, The Fellowship of the Ring",
-                HtmlTemplate = "<p>Attach to a {traits-hero:Noldor,Silvan}.</p><p>Attached hero does not exhaust to commit to a quest.</p><p style='text-align:center;'><i>&quot;... those who have dwelt in the blassed realm live at once in both worlds, and against both the Seen and Unseen they have great power.&quot;<br>&ndash;Gandalf, The Fellowship of the Ring</i></p>",
+                HtmlTemplate = "<p>Attach to a {traits-hero:Noldor,Silvan}.</p><p>Attached hero does not exhaust to commit to a quest.</p><p class='flavor-text'>&quot;... those who have dwelt in the blassed realm live at once in both worlds, and against both the Seen and Unseen they have great power.&quot;<br>&ndash;Gandalf, The Fellowship of the Ring</i></p>",
                 Number = 107,
                 Artist = Artist.Lin_Bo
             });

@@ -26,7 +26,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithTraits("Gondor.", "Warrior.")
                 .WithText("Veteran of Osgiliath gets +1 Willpower, +1 Attack, and +1 Defense while your threat is 40 or higher.")
                 .WithFlavor("\"So do we ever watch the shores nigh Osgiliath, which our enemies now partly hold, and issue from it to harry our lands.\" —Faramir, The Two Towers")
-                .WithTemplate("<p>{self} gets +1 {Willpower}, +1 {Attack}, and +1 {Defense} while your threat is 40 or higher.</p><p style='text-align:center'><i>&quot;So do we ever watch the shores nigh Osgiliath, which our enemies now partly hold, and issue from it to harry our lands.&quot;<br>&ndash;Faramir, The Two Towers</p>")
+                .WithTemplate("<p>{self} gets +1 {Willpower}, +1 {Attack}, and +1 {Defense} while your threat is 40 or higher.</p><p class='flavor-text'>&quot;So do we ever watch the shores nigh Osgiliath, which our enemies now partly hold, and issue from it to harry our lands.&quot;<br>&ndash;Faramir, The Two Towers</p>")
                 .WithInfo(29, 3, Artist.John_Stanko));
             Cards.Add(Card.Event("Descendants of Kings", "", Sphere.Leadership, 1)
                 .WithText("Ready up to X Dúnedain characters you control. X is the number of enemies engaged with you.")

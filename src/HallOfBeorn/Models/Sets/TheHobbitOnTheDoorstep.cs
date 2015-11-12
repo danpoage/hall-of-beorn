@@ -390,7 +390,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Artifact.", "Item." },
                 Text = "Attach to a hero.\r\nResponse: After a location is added to the staging area, attach Thror's Key to that location. While attached to a location, Thror's Key gains: 'Treat attached location's printed text box as blank, except for traits.'",
                 FlavorText = "\"The key that went with the map! Try it now while there is still time!\" -Bilbo, The Hobbit",
-                HtmlTemplate = "<p>Attach to a {type:hero}.</p><p><b>Response:</b> After a location is added to the staging area, attach {self} to that location. While attached to a location, {self} gains: &quot;Treat attached location's printed text box as blank, except for traits.&quot;</p><p style='text-align:center;'><i>&quot;The key that went with the map! Try it now while there is still time!&quot; &ndash;Bilbo, The Hobbit</i></p>",
+                HtmlTemplate = "<p>Attach to a {type:hero}.</p><p><b>Response:</b> After a location is added to the staging area, attach {self} to that location. While attached to a location, {self} gains: &quot;Treat attached location's printed text box as blank, except for traits.&quot;</p><p class='flavor-text'>&quot;The key that went with the map! Try it now while there is still time!&quot; &ndash;Bilbo, The Hobbit</p>",
                 Number = 16,
                 Artist = Artist.Eric_Braddock
             });

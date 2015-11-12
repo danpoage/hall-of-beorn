@@ -375,7 +375,7 @@ namespace HallOfBeorn.Models.Sets
                 Quantity = 3,
                 Text = "Travel: The first player must discard 1 event card from his hand to travel to this location.",
                 Shadow = "Shadow: After this attack resolves, return attacking enemy to the staging area.",
-                HtmlTemplate = "<p><b>Travel:</b> The first player must discard 1 {type:event} card from his hand to travel to this location.</p>{shadow}<p><i><b>Shadow:</b> After this attack resolves, return attacking enemy to the staging area.</i></p>{victory:2}",
+                HtmlTemplate = "<p><b>Travel:</b> The first player must discard 1 {type:event} card from his hand to travel to this location.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> After this attack resolves, return attacking enemy to the staging area.</p>{victory:2}",
                 Threat = 2,
                 QuestPoints = 2,
                 EncounterSet = "The Hills of Emyn Muil",
