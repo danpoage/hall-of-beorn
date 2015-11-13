@@ -956,6 +956,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Traits = new List<string>() { "Condition." },
                 Text = "Attach to a hero.\r\nAction: Exhaust Unexpected Courage to ready attached hero.",
                 FlavorText = "\"Here am I, naughty little fly;\r\nyou are fat and lazy.\r\nYou cannot trap me, though you try,\r\nin your cobwebs crazy.\"\r\n-Bilbo Baggins, The Hobbit",
+                HtmlTemplate = "<p>Attach to a hero.</p><p><b>Action:</b> Exhaust {self} to ready attached hero.</p><p class='flavor-text'>&quot;Here am I, naughty little fly;<br>you are fat and lazy.<br>You cannot trap me, though you try,<br>in your cobwebs crazy.&quot;<br>&ndash;Bilbo Baggins, The Hobbit</p>",
                 Quantity = 1,
                 Number = 57,
                 Artist = Artist.Angela_Sung
