@@ -31,7 +31,7 @@ namespace HallOfBeorn.Models.Sets
                 Willpower = 2,
                 HitPoints = 5,
                 Text = "Refresh Action: Reduce your threat to your starting threat level. (Limit once per game.)",
-                HtmlTemplate = "<p>{keyword:Sentinel.}</p><p><b>Refresh Action:</b> Reduce your threat to your starting threat level. (Limit once per game.)</p><p style='text-align:center;'><i>&quot;I am older than I look, I might prove useful.&quot;<br/>&ndash;The Fellowship of the Ring</i></p>",
+                HtmlTemplate = "<p>{keyword:Sentinel.}</p><p><b>Refresh Action:</b> Reduce your threat to your starting threat level. (Limit once per game.)</p><p class='flavor-text'>&quot;I am older than I look, I might prove useful.&quot;<br/>&ndash;The Fellowship of the Ring</p>",
                 Keywords = new List<string>() { "Sentinel." },
                 Number = 53,
                 Artist = Artist.Tony_Foti
@@ -140,7 +140,7 @@ namespace HallOfBeorn.Models.Sets
                 EasyModeQuantity = 0,
                 Text = "When Revealed: All enemies in the staging area engage the player with the highest threat. Then, each player raises his threat by the total Threat of all cards in the staging area.",
                 Shadow = "Shadow: attacking enemy gets +1 Attack. (+3 Attack instead if it is a Tentacle.)",
-                HtmlTemplate = "<p><b>When Revealed:</b> All enemies in the staging area engage the player with the highest threat. Then, each player raises his threat by the total {Threat} of all cards in the staging area.</p>{shadow}<p><i><b>Shadow:</b> Attacking enemy gets +1 {Attack}. (+3 {Attack} instead if it is a {trait:Tentacle.})</i></p>",
+                HtmlTemplate = "<p><b>When Revealed:</b> All enemies in the staging area engage the player with the highest threat. Then, each player raises his threat by the total {Threat} of all cards in the staging area.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Attacking enemy gets +1 {Attack}. (+3 {Attack} instead if it is a {trait:Tentacle.})</p>",
                 Number = 70,
                 Artist = Artist.Cristi_Balanescu
             });

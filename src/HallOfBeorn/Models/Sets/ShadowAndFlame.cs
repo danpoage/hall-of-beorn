@@ -120,7 +120,7 @@ namespace HallOfBeorn.Models.Sets
                 Quantity = 3,
                 ResourceCost = 1,
                 Text = "Action: Exhaust a character you control with ranged to immediately declare it as an attacker (and resolve its attack) against an enemy in the staging area. It gets +1 Attack during this attack.",
-                HtmlTemplate = "<p><b>Action:</b> Exhaust a character you control with {keyword:Ranged.@ranged} to immediately declare it as an attacker (and resolve its attack) against an enemy in the staging area. It gets +1 {attack} during this attack.</p><p style='text-align:center'><i>&quot;We live now upon an island amid perils, and our hands are more often upon thr bowstring than upon the harp.&quot;<br/>&ndash;Haldir, The Fellowship of the Ring</i></p>",
+                HtmlTemplate = "<p><b>Action:</b> Exhaust a character you control with {keyword:Ranged.@ranged} to immediately declare it as an attacker (and resolve its attack) against an enemy in the staging area. It gets +1 {attack} during this attack.</p><p class='flavor-text'>&quot;We live now upon an island amid perils, and our hands are more often upon thr bowstring than upon the harp.&quot;<br/>&ndash;Haldir, The Fellowship of the Ring</p>",
                 Number = 131,
                 Artist = Artist.Magali_Villeneuve
             });

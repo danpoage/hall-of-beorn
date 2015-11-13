@@ -107,7 +107,7 @@ namespace HallOfBeorn.Models.Sets
                 HitPoints = 1,
                 Traits = new List<string>() { "Silvan." },
                 Text = "Forced: After a character leaves play, discard Silvan Refugee from play.",
-                HtmlTemplate = "<p><b>Forced:</b> After a character leaves play, discard {self} from play.</p><p style='text-align:center'><i>&quot;The Elves have their own labours and their own sorrows...&quot;<br/>&ndash;Gildor, The Fellowship of the Ring</i></p>",
+                HtmlTemplate = "<p><b>Forced:</b> After a character leaves play, discard {self} from play.</p><p class='flavor-text'>&quot;The Elves have their own labours and their own sorrows...&quot;<br/>&ndash;Gildor, The Fellowship of the Ring</p>",
                 FlavorText = "\"The Elves have their own labours and their own sorrows...\" -Gildor, The Fellowship of the Ring",
                 Quantity = 3,
                 Number = 37,

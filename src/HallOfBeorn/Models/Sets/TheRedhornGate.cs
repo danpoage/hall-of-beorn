@@ -116,7 +116,7 @@ namespace HallOfBeorn.Models.Sets
                 HitPoints = 4,
                 Traits = new List<string>() { "Noldor.", " Noble.", " Ranger." },
                 Text = "While Elladan is in play, Elrohir gets +2 Defense.\r\nResponse: After Elrohir is declared as a defender, pay 1 resource from his resource pool to ready him.",
-                HtmlTemplate = "<p>While {title:Elladan} is in play, {self} gets +2 {Defense}.<p><p><b>Response:</b> After {self} is declared as a defender, pay 1 resource from his resource pool to ready him.</p><p style='text-align:center;'><i>&quot;We will not turn back.&quot;<br>&ndash;The Return of the King</i></p>",
+                HtmlTemplate = "<p>While {title:Elladan} is in play, {self} gets +2 {Defense}.<p><p><b>Response:</b> After {self} is declared as a defender, pay 1 resource from his resource pool to ready him.</p><p class='flavor-text'>&quot;We will not turn back.&quot;<br>&ndash;The Return of the King</p>",
                 Quantity = 1,
                 Number = 1,
                 Artist = Artist.Magali_Villeneuve

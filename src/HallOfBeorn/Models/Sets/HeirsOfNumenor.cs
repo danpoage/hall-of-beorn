@@ -91,7 +91,7 @@ namespace HallOfBeorn.Models.Sets
                 Defense = 4,
                 Text = "Lower the cost to play Weapon and Armor attachments on Beregond by 2.",
                 FlavorText = "\"It is over-late to send for aid when you are already besieged.\" -The Return of the King",
-                HtmlTemplate = "<p>{keyword:Sentinel.}</p><p>Lower the cost to play {traits-attachment:Weapon,Armor@attachments} on {self} by 2.</p><p style='text-align:center'><i>&quot;It is over-late to send for aid when you are already besiged.&quot; &ndash;The Return of the King</i></p>",
+                HtmlTemplate = "<p>{keyword:Sentinel.}</p><p>Lower the cost to play {traits-attachment:Weapon,Armor@attachments} on {self} by 2.</p><p class='flavor-text'>&quot;It is over-late to send for aid when you are already besiged.&quot; &ndash;The Return of the King</p>",
                 Number = 1,
                 Artist = Artist.Magali_Villeneuve
             });

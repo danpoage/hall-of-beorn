@@ -23,7 +23,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithTraits("Dúnedain.", "Ranger.", "Warrior.")
                 .WithText("While you are engaged with at least 1 enemy, Amarthiúl gains the Tactics resource icon.\r\nWhile you are engaged with at least 2 enemies, add 1 additional resource to Amarthiúl's resource pool when you collect resources during the resource phase.")
                 .WithFlavor("\"The heirs of Elendil do not forget all things past...\" -Aragorn, The Return of the King")
-                .WithTemplate("<p>While you are engaged with at least 1 enemy, {self} gains the {sphere:Tactics} resource icon.</p><p>While you are engaged with at least 2 enemies, add 1 additional resource to {self}'s resource pool when you collect resources during the resource phase.</p><p style='text-align:center;'><i>&quot;The heirs of Elendil do not forget all things past...&quot;<br>&ndash;Aragorn, The Return of the King</i></p>")
+                .WithTemplate("<p>While you are engaged with at least 1 enemy, {self} gains the {sphere:Tactics} resource icon.</p><p>While you are engaged with at least 2 enemies, add 1 additional resource to {self}'s resource pool when you collect resources during the resource phase.</p><p class='flavor-text'>&quot;The heirs of Elendil do not forget all things past...&quot;<br>&ndash;Aragorn, The Return of the King</p>")
                 .WithInfo(115, 1, Artist.Tomasz_Jedruszek));
             Cards.Add(Card.Ally("Guardian of Arnor", "", Sphere.Leadership, 3, 1, 1, 1, 3)
                 .WithGeneric()
