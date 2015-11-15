@@ -47,6 +47,64 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Immune to player card effects.\r\nWhile Bill Ferny's House is in the victory display, each Suspect, and each shadow card dealt to a Suspect, is immune to player card effects.\r\nTravel: Search the encounter deck, discard pile and victory display for Bill Ferny and add him to the staging area. Shuffle the encounter deck.")
                 .WithVictoryPoints(5)
                 .WithInfo(4, 1, Artist.Michael_Rasmussen));
+
+            Cards.Add(Card.Location("Combe Storehouse", "", setName, 5, 5)
+                .WithUnique()
+                .WithTraits("Hideout.")
+                .WithText("Immune to player card effects.\r\nWhile Combe Storehouse is in the victory display, each Suspect gains: \"Forced: After this enemy engages a player, it makes an immediate attack.\"\r\nTravel: Search the encounter deck and discard pile for a Lawless Ruffian and add it to the staging area. Shuffle the encounter deck.")
+                .WithVictoryPoints(5)
+                .WithInfo(5, 1, Artist.Alvaro_Calvo_Escudero));
+
+            Cards.Add(Card.Location("Archet Trading Post", "", setName, 5, 5)
+                .WithUnique()
+                .WithTraits("Hideout.")
+                .WithText("Immune to player card effects.\r\nWhile Archet Trading Post is in the victory display, each Suspect cannot take more than 5 damage each round.\r\nTravel: Search the encounter deck and discard pile for a Bree-land Informant and add it to the staging area. Shuffle the encounter deck.")
+                .WithVictoryPoints(5)
+                .WithInfo(7, 1, Artist.Yoann_Boissonnet));
+            Cards.Add(Card.Location("Chetwood Campsite", "", setName, 5, 5)
+                .WithUnique()
+                .WithTraits("Hideout.")
+                .WithText("Immune to player card effects.\r\nWhile Chetwood Campsite is in the victory display, each Suspect gets +1 Threat, +1 Attack and +1 Defense.\r\nTravel: Search the encounter deck and discard pile for a Chetwood Outlaw and add it to the staging area. Shuffle the encounter deck.")
+                .WithVictoryPoints(5)
+                .WithInfo(8, 1, Artist.Michael_Rasmussen));
+
+            Cards.Add(Card.Enemy("Johnny Goblin-fingers", "", setName, 45, 3, 4, 4, 6)
+                .WithUnique()
+                .WithTraits("Suspect.", "Brigand.")
+                .WithText("Cannot have attachments.\r\nForced: When Johnny Goblin-finders attacks, the defending player discards 1 random card from his hand and raises his threat by X, where X is the printed cost of the discarded card.")
+                .WithVictoryPoints(5)
+                .WithInfo(12, 1, Artist.Romana_Kendelic));
+
+            Cards.Add(Card.Enemy("Bill Ferny", "", setName, 42, 3, 2, 3, 5)
+                .WithUnique()
+                .WithTraits("Bree.")
+                .WithText("Cannot be optionally engaged.\r\nThe first treachery revealed each round gains doomed 1 and its effects cannot be canceled.")
+                .WithShadow("Shadow: Either raise your threat by 4, or this attack is considered undefended.")
+                .WithInfo(21, 1, Artist.Lutful_Valeriya_Romanovna));
+            Cards.Add(Card.Enemy("Bree-land Informant", "", setName, 30, 3, 2, 1, 3)
+                .WithTraits("Bree.")
+                .WithText("Response: After Bree-land Information makes an attack against you, if it was dealt a shadow card with no shadow effect, raise your threat by 1 and spend 1 resource to look at the bottom card of the Investigation deck. Then, discard Bree-land Informant.")
+                .WithInfo(22, 3, Artist.Brian_Valenzuela));
+
+            Cards.Add(Card.Enemy("Greenway Footpad", "", setName, 25, 2, 4, 2, 4)
+                .WithTraits("Brigand.")
+                .WithText("When Revealed: Either raise each player's threat by 2 or Greenway Footpad makes an immediate attack against the first player.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if your threat is 35 or higher).")
+                .WithInfo(24, 3, Artist.Brian_Valenzuela));
+            Cards.Add(Card.Enemy("Chetwood Outlaw", "", setName, 40, 4, 4, 3, 5)
+                .WithTraits("Brigand.")
+                .WithText("Forced: After you optionally engaged Chetwood Outlaw, raise your threat by 4.")
+                .WithShadow("Shadow: Either raise your threat by 2, or return attacking enemy to the staging area after this attack.")
+                .WithInfo(25, 3, Artist.Micah_Epstein));
+            Cards.Add(Card.Treachery("Hired Muscle", "", setName)
+                .WithKeywords("Surge.")
+                .WithText("When Revealed: Attach to a Brigand enemy without a copy of Hired Muscle attacked and return that enemy to the staging area. (Counts as a Condition attachment with the text: \"Attached enemy gets +1 Threat, +1 Attack, +1 Defense and gains: 'Forced: When attached enemy is defeated, look at the bottom of the Investigation deck.'\")")
+                .WithInfo(26, 3, Artist.Rafal_Hrynkiewicz));
+
+            Cards.Add(Card.Treachery("Deadly Accusations", "", setName)
+                .WithText("When Revealed: Raise each player's threat by X, where X is 1 more than the Investigate value of the active location.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack, where X is the Investigate value of the active location.")
+                .WithInfo(29, 2, Artist.Dmitry_Prosvirnin));
         }
     }
 }

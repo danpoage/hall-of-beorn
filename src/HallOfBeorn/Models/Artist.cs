@@ -491,6 +491,10 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Joshua_Calloway);
             all.Add(Artist.Chris_Metcalf);
 
+            //Murder at the Prancing Pony
+            all.Add(Artist.Lutful_Valeriya_Romanovna);
+            all.Add(Artist.Micah_Epstein);
+
             all.Add(Artist.None);
         }
 
@@ -583,12 +587,14 @@ namespace HallOfBeorn.Models
         public static Artist LigaMarta = new Artist { Name = "Līga Kļaviņa", URL = "http://liga-marta.deviantart.com" };
         public static Artist Lomacchi = new Artist { Name = "Lomacchi", URL = "http://dalomacchi.deviantart.com" };
         public static Artist Luca_Michelucci = new Artist { Name = "Luca Michelucci", URL = "http://www.councilofelrond.com/imagegallerycats/michelucci" };
+        public static Artist Lutful_Valeriya_Romanovna = new Artist { Name = "Lutful Valeriya Romanovna", URL = "http://google.com/search?q=lutful+valeriya+romanova+art" };
         public static Artist Mahdi_Mehrnegar = new Artist { Name = "M. M. Mehrnegar", URL = "http://mahdi66.cgsociety.org" };
         public static Artist Marcel_Mercado = new Artist { Name = "Marcel Mercado", URL = "http://marcelmercado.com" };
         public static Artist Mathia_Arkoniel = new Artist { Name = "Mathia Arkoniel", URL = "http://mathiaarkoniel.deviantart.com" };
         public static Artist Mathieu_Degrotte = new Artist { Name = "Mathieu Degrotte", URL = "http://md-arts.deviantart.com" };
         public static Artist Meanor = new Artist { Name = "Meanor", URL = "http://meanor.deviantart.com" };
         public static Artist Miao_Yu = new Artist { Name = "Miao Yu", URL = "http://moonblossom.deviantart.com" };
+        public static Artist Micah_Epstein = new Artist { Name = "Micah Epstein", URL = "http://micahepsteinart.tumblr.com" };
         public static Artist Michael_Boatwright = new Artist { Name = "Michael Boatwright", URL = "http://korstemplar.deviantart.com" };
         public static Artist Michele_Frigo = new Artist { Name = "Michele Frigo", URL = "http://michelefrigo.deviantart.com" };
         public static Artist MouMou38 = new Artist { Name = "moumou38", URL = "http://moumou38.deviantart.com" };
