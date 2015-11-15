@@ -87,7 +87,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Cannot have attachments.\r\nExcess combat damage dealt by Todd the Troll (damage dealt beyond the remaining hit points of the character damaged by this attack) must be assigned as an increase to your threat.")
                 .WithVictoryPoints(5)
                 .WithInfo(9, 1, Artist.Rafal_Hrynkiewicz));
-            Cards.Add(Card.Enemy("Susie the Spider", "", investigationSetName, 45, 254, 5, 3, 8)
+            Cards.Add(Card.Enemy("Susie the Spider", "", investigationSetName, 45, 255, 5, 3, 8)
                 .WithUnique()
                 .WithTraits("Suspect.", "Brigand.")
                 .WithText("Cannot have attachments.\r\nX is the number of Brigand enemies in play.\r\nWhile at least 1 other Brigand is in play, Susie the Spider cannot take damage.")
