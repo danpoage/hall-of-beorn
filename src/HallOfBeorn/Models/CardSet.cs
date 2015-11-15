@@ -119,6 +119,10 @@ namespace HallOfBeorn.Models
             Add(TheStoneOfErech);
             Add(TheRuinsOfBelegost);
 
+            Add(TheOldForest);
+            Add(FogOnTheBarrowDowns);
+            Add(MurderAtThePrancingPony);
+
             Add(PassageThroughMirkwoodNightmare);
             Add(JourneyAlongTheAnduinNightmare);
             Add(EscapeFromDolGuldurNightmare);
@@ -144,8 +148,6 @@ namespace HallOfBeorn.Models
             Add(TheLongDarkNightmare);
             Add(FoundationsOfStoneNightmare);
             Add(ShadowAndFlameNightmare);
-
-            Add(FogOnTheBarrowDowns);
 
             Add(PerilInPelargirNightmare);
             Add(IntoIthilienNightmare);
@@ -245,7 +247,9 @@ namespace HallOfBeorn.Models
         public static CardSet FoundationsOfStoneNightmare = new Sets.FoundationsOfStoneNightmare();
         public static CardSet ShadowAndFlameNightmare = new Sets.ShadowAndFlameNightmare();
 
+        public static CardSet TheOldForest = new Sets.TheOldForest();
         public static CardSet FogOnTheBarrowDowns = new Sets.FogOnTheBarrowDowns();
+        public static CardSet MurderAtThePrancingPony = new Sets.MurderAtThePrancingPony();
 
         public static CardSet PerilInPelargirNightmare = new Sets.PerilInPelargirNightmare();
         public static CardSet IntoIthilienNightmare = new Sets.IntoIthilienNightmare();

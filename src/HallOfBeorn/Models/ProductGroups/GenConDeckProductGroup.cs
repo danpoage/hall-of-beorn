@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.ProductGroups
             AddProduct(Product.TheOldForest);
             AddProduct(Product.FogOnTheBarrowDowns);
             AddProduct(Product.TheRuinsOfBelegost);
+            AddProduct(Product.MurderAtThePrancingPony);
         }
     }
 }

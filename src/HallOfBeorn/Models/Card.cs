@@ -886,6 +886,18 @@ namespace HallOfBeorn.Models
             };
         }
 
+        public static Card GenConSetup(string title, string encounterSet)
+        {
+            return new Card()
+            {
+                CardType = CardType.GenCon_Setup,
+                Title = title,
+                HasSecondImage = true,
+                Id = string.Empty,
+                EncounterSet = encounterSet
+            };
+        }
+
         public static Card Objective(string title, string id, string encounterSet)
         {
             return new Card()

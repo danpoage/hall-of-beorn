@@ -286,6 +286,7 @@
     <Compile Include="Models\LinkType.cs" />
     <Compile Include="Models\Products\AcrossTheEttenmoorsProduct.cs" />
     <Compile Include="Models\Products\EscapeFromMountGramProduct.cs" />
+    <Compile Include="Models\Products\MurderAtThePrancingPonyProduct.cs" />
     <Compile Include="Models\Products\TheBattleOfCarnDumProduct.cs" />
     <Compile Include="Models\Products\TheLandOfShadowProduct.cs" />
     <Compile Include="Models\Products\TheRuinsOfBelegostProduct.cs" />
@@ -318,6 +319,7 @@
     <Compile Include="Models\Scenarios\JourneyAlongTheAnduin.cs" />
     <Compile Include="Models\Scenarios\JourneyInTheDark.cs" />
     <Compile Include="Models\Scenarios\JourneyToTheCrossroads.cs" />
+    <Compile Include="Models\Scenarios\MurderAtThePrancingPony.cs" />
     <Compile Include="Models\Scenarios\OverTheMistyMountainsGrim.cs" />
     <Compile Include="Models\Scenarios\PassageThroughMirkwood.cs" />
     <Compile Include="Models\Scenarios\PerilInPelargir.cs" />
@@ -497,6 +499,7 @@
     <Compile Include="Models\Sets\JourneyAlongTheAnduinNightmare.cs" />
     <Compile Include="Models\Sets\KhazadDum.cs" />
     <Compile Include="Models\Products\KhazadDumNightmareProduct.cs" />
+    <Compile Include="Models\Sets\MurderAtThePrancingPony.cs" />
     <Compile Include="Models\Sets\PerilInPelargirNightmare.cs" />
     <Compile Include="Models\Sets\TheAntleredCrown.cs" />
     <Compile Include="Models\Sets\TheBattleOfCarnDum.cs" />

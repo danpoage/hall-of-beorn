@@ -168,6 +168,7 @@ namespace HallOfBeorn.Models
             Add(TheOldForest);
             Add(FogOnTheBarrowDowns);
             Add(TheRuinsOfBelegost);
+            Add(MurderAtThePrancingPony);
 
             //Core Set and Shadows of Mirkwood Nightmare Decks
             Add(PassageThroughMirkwoodNightmare);
@@ -374,6 +375,7 @@ namespace HallOfBeorn.Models
         public static EncounterSet TheOldForest = new EncounterSet { Name = "The Old Forest", Set = "The Old Forest" };
         public static EncounterSet FogOnTheBarrowDowns = new EncounterSet { Name = "Fog on the Barrow-downs", Set = "Fog on the Barrow-downs" };
         public static EncounterSet TheRuinsOfBelegost = new EncounterSet { Name = "The Ruins of Belegost", Set = "The Ruins of Belegost" };
+        public static EncounterSet MurderAtThePrancingPony = new EncounterSet { Name = "Murder at the Prancing Pony", Set = "Murder at the Prancing Pony" };
 
         //Core Set and Shadows of Mirkwood Nightmare Decks
         public static EncounterSet PassageThroughMirkwoodNightmare = new EncounterSet { Name = "Passage Through Mirkwood Nightmare", Set = "Passage Through Mirkwood Nightmare" };
