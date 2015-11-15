@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.Scenarios
             Number = 6;
 
             AddEncounterSet(EncounterSet.MurderAtThePrancingPony);
+            AddEncounterSet(EncounterSet.Investigation);
 
             AddQuestCardId("Investigating-the-Crime-MatPP");
             AddQuestCardId("Running-out-of-Time-MatPP");

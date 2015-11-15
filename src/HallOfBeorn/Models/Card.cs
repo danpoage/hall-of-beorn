@@ -1086,6 +1086,12 @@ namespace HallOfBeorn.Models
             return this;
         }
 
+        public Card WithYear(ushort year)
+        {
+            this.Year = year;
+            return this;
+        }
+
         public Card WithInfo(byte number, byte quantity, Artist artist)
         {
             this.Number = number;
