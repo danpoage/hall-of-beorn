@@ -505,7 +505,7 @@ namespace HallOfBeorn.Models
             return all.OrderBy(a => a.Name).ToList();
         }
 
-        public static Artist None = new Artist { Name = "None", URL = "http://google.com/search?q=Irony" };
+        public static Artist None = new Artist { Name = "None", URL = "http://google.com/search?q=Existentialism" };
 
         public static Artist AlaisL = new Artist { Name = "AlaisL", URL = "http://alaisl.deviantart.com" };
         public static Artist Alan_Lee = new Artist { Name = "Alan Lee", URL = "http://anduin.eldar.org/artgallery/tolkien/alee/justpixs.html" };

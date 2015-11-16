@@ -1116,3 +1116,17 @@ tr.pager td {
 .section-container {
     padding: 4px 4px 4px 8px;
 }
+
+.rules-title {
+    text-align: center;
+}
+
+.page-number {
+    text-align: right;
+    margin: 4px 8px 4px 0px;
+    font-weight: bold;
+}
+
+.no-style-list {
+    list-style-type: none;
+}

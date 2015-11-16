@@ -478,7 +478,7 @@
 </div>
 <div class="extraBox">
     <div>
-        @if (!string.IsNullOrEmpty(@Model.Artist))
+        @if (!string.IsNullOrEmpty(@Model.Artist) && @Model.Artist != "None")
         {
             <div />
             <span style="margin-left:5px;margin-right:-3px;">Illus.</span>
