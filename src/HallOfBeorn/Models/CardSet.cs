@@ -95,6 +95,7 @@ namespace HallOfBeorn.Models
             Add(TheVoiceOfIsengard);
             Add(TheDunlandTrap);
             Add(TheThreeTrials);
+            Add(TroubleInTharbad);
             Add(NinInEilph);
             Add(CelebrimborsSecret);
             Add(TheAntleredCrown);
@@ -204,6 +205,7 @@ namespace HallOfBeorn.Models
         public static CardSet TheVoiceOfIsengard = new Sets.TheVoiceofIsengard();
         public static CardSet TheDunlandTrap = new Sets.TheDunlandTrap();
         public static CardSet TheThreeTrials = new Sets.TheThreeTrials();
+        public static CardSet TroubleInTharbad = new Sets.TroubleInTharbad(); 
         public static CardSet NinInEilph = new Sets.TheNinInEilph();
         public static CardSet CelebrimborsSecret = new Sets.CelebrimborsSecret();
         public static CardSet TheAntleredCrown = new Sets.TheAntleredCrown();
