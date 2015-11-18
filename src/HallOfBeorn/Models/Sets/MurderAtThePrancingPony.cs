@@ -67,6 +67,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithTraits("Hideout.")
                 .WithText("Immune to player card effects.\r\nWhile Bill Ferny's House is in the victory display, each Suspect, and each shadow card dealt to a Suspect, is immune to player card effects.\r\nTravel: Search the encounter deck, discard pile and victory display for Bill Ferny and add him to the staging area. Shuffle the encounter deck.")
                 .WithVictoryPoints(5)
+                .WithTemplate("<p>Immune to player card effects.</p><p>While {self} is in the victory display, each {trait:Suspect.@Suspect}, and each shadow card dealt to a {trait:Suspect.@Suspect}, is immune to player card effects.</p><p><b>Travel:</b> Search the encounter deck, discard pile and victory display for {card:Bill-Ferny-MatPP@Bill Ferny} and add him to the staging area. Shuffle the encounter deck.</p><br>{victory:5}")
                 .WithInfo(4, 1, Artist.Michael_Rasmussen));
             Cards.Add(Card.Location("Staddle Hiding Hole", "", investigationSetName, 5, 5)
                 .WithUnique()
