@@ -29,7 +29,7 @@ namespace HallOfBeorn.Models.Sets
 
 Remove the following cards, in the specified quantities, from the standard encounter deck:
 
-3x Spirit of the Wild
+3x ~Spirit of the Wild
 3x Grim Foothills
 1x Tangled Woods
 3x Turned Around
