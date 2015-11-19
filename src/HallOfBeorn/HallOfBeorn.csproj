@@ -290,6 +290,7 @@
     <Compile Include="Models\Products\TheBattleOfCarnDumProduct.cs" />
     <Compile Include="Models\Products\TheLandOfShadowProduct.cs" />
     <Compile Include="Models\Products\TheRuinsOfBelegostProduct.cs" />
+    <Compile Include="Models\Products\TheThreeTrialsNightmareProduct.cs" />
     <Compile Include="Models\Products\TheVoiceOfIsengardNightmareProduct.cs" />
     <Compile Include="Models\Products\TheTreacheryOfRhudaurProduct.cs" />
     <Compile Include="Models\Scenarios\AcrossTheEttenmoors.cs" />
@@ -549,6 +550,7 @@
     <Compile Include="Models\Sets\TheStewardsFearNightmare.cs" />
     <Compile Include="Models\Sets\TheStoneOfErech.cs" />
     <Compile Include="Models\Sets\TheThreeTrials.cs" />
+    <Compile Include="Models\Sets\TheThreeTrialsNightmare.cs" />
     <Compile Include="Models\Sets\TheTreasonOfSaruman.cs" />
     <Compile Include="Models\Sets\TheWastesOfEriador.cs" />
     <Compile Include="Models\Sets\TheWatcherInTheWater.cs" />

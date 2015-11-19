@@ -495,6 +495,8 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Lutful_Valeriya_Romanovna);
             all.Add(Artist.Micah_Epstein);
 
+            all.Add(Artist.Jessica_Savard);
+
             all.Add(Artist.None);
         }
 
@@ -568,6 +570,7 @@ namespace HallOfBeorn.Models
         public static Artist Ilya_Nazarov = new Artist { Name = "Ilya Nazarov", URL = "http://ilyanazarov.deviantart.com" };
         public static Artist Jan_Pospisil = new Artist { Name = "Jan Pospisil", URL = "http://merlkir.deviantart.com" };
         public static Artist Jenny_Dolfen = new Artist { Name = "Jenny Dolfen", URL = "http://gold-seven.deviantart.com" };
+        public static Artist Jessica_Savard = new Artist { Name = "Jessica Savard", URL = "jessica-savard.blogspot.ca" };
         public static Artist Joel_M_Kilpatrick = new Artist { Name = "Joel M. Kilpatrick", URL = "http://jmkilpatrick.deviantart.com" };
         public static Artist Joas_Kleine = new Artist { Name = "Joas Kleine", URL = "http://joaskleine.blogspot.com" };
         public static Artist John_G = new Artist { Name = "John G", URL = "http://john-g.deviantart.com" };

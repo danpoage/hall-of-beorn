@@ -153,6 +153,8 @@ namespace HallOfBeorn.Models
 
         public static Product TheVoiceOfIsengardNightmare = new TheVoiceOfIsengardNightmareProduct();
 
+        public static Product TheThreeTrialsNightmare = new TheThreeTrialsNightmareProduct();
+
         public static Product TheHobbitOverHillAndUnderHillNightmare = new TheHobbitOverHillAndUnderHillNightmareProduct();
         public static Product TheHobbitOnTheDoorstepNightmare = new TheHobbitOnTheDoorstepNightmareProduct();
 

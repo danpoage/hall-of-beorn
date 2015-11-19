@@ -272,6 +272,8 @@ namespace HallOfBeorn.Models
         public static CardSet ToCatchAnOrcNightmare = new Sets.ToCatchAnOrcNightmare();
         public static CardSet IntoFangornNightmare = new Sets.IntoFangornNightmare();
 
+        public static CardSet TheThreeTrialsNightmare = new Sets.TheThreeTrialsNightmare();
+
         public static CardSet TheLostRealm = new Sets.TheLostRealm();
         public static CardSet TheWastesOfEriador = new Sets.TheWastesOfEriador();
         public static CardSet EscapeFromMountGram = new Sets.EscapeFromMountGram();

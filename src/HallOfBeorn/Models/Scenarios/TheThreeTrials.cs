@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.Scenarios
     public class TheThreeTrials : Scenario
     {
         public TheThreeTrials()
+            : base(true)
         {
             Title = "The Three Trials";
             ProductName = "The Three Trials";
@@ -11,6 +12,7 @@ namespace HallOfBeorn.Models.Scenarios
 
             AddEncounterSet(EncounterSet.AncientForest);
             AddEncounterSet(EncounterSet.TheThreeTrials);
+            AddEncounterSet(EncounterSet.TheThreeTrialsNightmare);
 
             AddQuestCardId("The-Trials-Begin-TTT");
             AddQuestCardId("The-Trial-of-Strength-TTT");
@@ -25,6 +27,10 @@ namespace HallOfBeorn.Models.Scenarios
             ExcludeFromEasyMode("The-Guardian's-Fury-TTT", 2);
             ExcludeFromEasyMode("Wild-Tenacity-TTT", 1);
 
+            ExcludeFromNightmareMode("Spirit-of-the-Wild-TTT", 3);
+            ExcludeFromNightmareMode("Grim-Foothills-TTT", 3);
+            ExcludeFromNightmareMode("Tangled-Woods-TTT", 1);
+            ExcludeFromNightmareMode("Turned-Around-TTT", 3);
         }
     }
 }
