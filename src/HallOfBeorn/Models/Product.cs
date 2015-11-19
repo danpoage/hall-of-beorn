@@ -27,6 +27,11 @@ namespace HallOfBeorn.Models
 
         protected void AddScenario(Scenario scenario)
         {
+            if (!string.IsNullOrEmpty(RulesUrl))
+            {
+                scenario.RulesUrl = RulesUrl;
+            }
+
             scenarios.Add(scenario);
         }
 
