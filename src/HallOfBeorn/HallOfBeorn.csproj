@@ -288,11 +288,13 @@
     <Compile Include="Models\Products\EscapeFromMountGramProduct.cs" />
     <Compile Include="Models\Products\MurderAtThePrancingPonyProduct.cs" />
     <Compile Include="Models\Products\TheBattleOfCarnDumProduct.cs" />
+    <Compile Include="Models\Products\TheDunlandTrapNightmareProduct.cs" />
     <Compile Include="Models\Products\TheLandOfShadowProduct.cs" />
     <Compile Include="Models\Products\TheRuinsOfBelegostProduct.cs" />
     <Compile Include="Models\Products\TheThreeTrialsNightmareProduct.cs" />
     <Compile Include="Models\Products\TheVoiceOfIsengardNightmareProduct.cs" />
     <Compile Include="Models\Products\TheTreacheryOfRhudaurProduct.cs" />
+    <Compile Include="Models\Products\TroubleInTharbadNightmareProduct.cs" />
     <Compile Include="Models\Scenarios\AcrossTheEttenmoors.cs" />
     <Compile Include="Models\Scenarios\AJourneyToRhosgobel.cs" />
     <Compile Include="Models\Scenarios\AKnifeInTheDark.cs" />

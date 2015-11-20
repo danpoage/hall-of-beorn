@@ -417,8 +417,9 @@ namespace HallOfBeorn.Models
         public static EncounterSet TheFordsOfIsenNightmare = new EncounterSet { Name = "The Fords of Isen Nightmare", Set = "The Fords of Isen Nightmare" };
         public static EncounterSet ToCatchAnOrcNightmare = new EncounterSet { Name = "To Catch an Orc Nightmare", Set = "To Catch an Orc Nightmare" };
         public static EncounterSet IntoFangornNightmare = new EncounterSet { Name = "Into Fangorn Nightmare", Set = "Into Fangorn Nightmare" };
-
+        public static EncounterSet TheDunlandTrapNightmare = new EncounterSet { Name = "The Dunland Trap Nightmare", Set = "The Dunland Trap Nightmare" };
         public static EncounterSet TheThreeTrialsNightmare = new EncounterSet { Name = "The Three Trials Nightmare", Set = "The Three Trials Nightmare" };
+        public static EncounterSet TroubleInTharbadNightmare = new EncounterSet { Name = "Trouble in Tharbad Nightmare", Set = "Trouble in Tharbad Nightmare" };
 
         //The Hobbit: Over Hill and Under Hill Nightmare Decks
         public static EncounterSet WeMustAwayEreBreakOfDayNightmare = new EncounterSet { Name = "We Must Away, Ere Break of Day Nightmare", Set = "We Must Away, Ere Break of Day Nightmare" };
