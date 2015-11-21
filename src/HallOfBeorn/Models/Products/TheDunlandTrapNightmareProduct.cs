@@ -10,6 +10,7 @@ namespace HallOfBeorn.Models.Products
         public TheDunlandTrapNightmareProduct()
             : base("The Dunland Trap Nightmare Deck", "MEN29", ImageType.Jpg)
         {
+            AddCardSet(CardSet.TheDunlandTrapNightmare);
         }
     }
 }

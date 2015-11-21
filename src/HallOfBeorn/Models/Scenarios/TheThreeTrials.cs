@@ -29,8 +29,8 @@ namespace HallOfBeorn.Models.Scenarios
 
             ExcludeFromNightmareMode("Spirit-of-the-Wild-TTT", 3);
             ExcludeFromNightmareMode("Grim-Foothills-TTT", 3);
-            ExcludeFromNightmareMode("Tangled-Woods-TTT", 1);
-            ExcludeFromNightmareMode("Turned-Around-TTT", 3);
+            ExcludeFromNightmareMode("Tangled-Woods-VoI", 1);
+            ExcludeFromNightmareMode("Turned-Around-VoI", 3);
         }
     }
 }

@@ -509,6 +509,7 @@
     <Compile Include="Models\Sets\TheBattleOfFiveArmiesNightmare.cs" />
     <Compile Include="Models\Sets\TheBloodOfGondorNightmare.cs" />
     <Compile Include="Models\Sets\TheDruadanForestNightmare.cs" />
+    <Compile Include="Models\Sets\TheDunlandTrapNightmare.cs" />
     <Compile Include="Models\Sets\TheFordsOfIsenNightmare.cs" />
     <Compile Include="Models\Sets\TheLandOfShadow.cs" />
     <Compile Include="Models\Sets\TheLonelyMountainNightmare.cs" />
@@ -561,6 +562,7 @@
     <Compile Include="Models\Sets\TheTreacheryOfRhudaur.cs" />
     <Compile Include="Models\Sets\TroubleInTharbad.cs" />
     <Compile Include="Models\Sets\TheVoiceOfIsengard.cs" />
+    <Compile Include="Models\Sets\TroubleInTharbadNightmare.cs" />
     <Compile Include="Models\Trait.cs" />
     <Compile Include="Models\Search\SearchFilter.cs" />
     <Compile Include="Models\Sets\WeMustAwayEreBreakOfDayNightmare.cs" />

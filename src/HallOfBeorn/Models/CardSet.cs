@@ -136,38 +136,39 @@ namespace HallOfBeorn.Models
             Add(IntoThePitNightmare);
             Add(TheSeventhLevelNightmare);
             Add(FlightFromMoriaNightmare);
-            Add(WeMustAwayEreBreakOfDayNightmare);
-            Add(OverTheMistyMountainsGrimNightmare);
-            Add(DungeonsDeepAndCavernsDimNightmare);
-            Add(AShadowOfThePastNightmare);
-            Add(AKnifeInTheDarkNightmare);
-            Add(FlightToTheFordNightmare);
-
             Add(TheRedhornGateNightmare);
             Add(RoadToRivendellNightmare);
             Add(TheWatcherInTheWaterNightmare);
             Add(TheLongDarkNightmare);
             Add(FoundationsOfStoneNightmare);
             Add(ShadowAndFlameNightmare);
-
             Add(PerilInPelargirNightmare);
             Add(IntoIthilienNightmare);
             Add(TheSiegeOfCairAndrosNightmare);
-
-            Add(FliesAndSpidersNightmare);
-            Add(TheLonelyMountainNightmare);
-            Add(TheBattleOfFiveArmiesNightmare);
-
             Add(TheStewardsFearNightmare);
             Add(TheDruadanForestNightmare);
             Add(EncounterAtAmonDinNightmare);
             Add(AssaultOnOsgiliathNightmare);
             Add(TheBloodOfGondorNightmare);
             Add(TheMorgulValeNightmare);
-
             Add(TheFordsOfIsenNightmare);
             Add(ToCatchAnOrcNightmare);
             Add(IntoFangornNightmare);
+            Add(TheDunlandTrapNightmare);
+            Add(TheThreeTrialsNightmare);
+            Add(TroubleInTharbadNightmare);
+
+            Add(WeMustAwayEreBreakOfDayNightmare);
+            Add(OverTheMistyMountainsGrimNightmare);
+            Add(DungeonsDeepAndCavernsDimNightmare);
+            
+            Add(FliesAndSpidersNightmare);
+            Add(TheLonelyMountainNightmare);
+            Add(TheBattleOfFiveArmiesNightmare);
+
+            Add(AShadowOfThePastNightmare);
+            Add(AKnifeInTheDarkNightmare);
+            Add(FlightToTheFordNightmare);
 
             Add(FirstAge);
         }
@@ -210,6 +211,13 @@ namespace HallOfBeorn.Models
         public static CardSet CelebrimborsSecret = new Sets.CelebrimborsSecret();
         public static CardSet TheAntleredCrown = new Sets.TheAntleredCrown();
 
+        public static CardSet TheLostRealm = new Sets.TheLostRealm();
+        public static CardSet TheWastesOfEriador = new Sets.TheWastesOfEriador();
+        public static CardSet EscapeFromMountGram = new Sets.EscapeFromMountGram();
+        public static CardSet AcrossTheEttenmoors = new Sets.AcrossTheEttenmoors();
+        public static CardSet TheTreacheryOfRhudaur = new Sets.TheTreacheryOfRhudaur();
+        public static CardSet TheBattleOfCarnDum = new Sets.TheBattleOfCarnDum();
+
         public static CardSet TheHobbitOverHillAndUnderHill = new Sets.TheHobbitOverHillandUnderHill();
         public static CardSet TheHobbitOnTheDoorstep = new Sets.TheHobbitOntheDoorstep();
 
@@ -235,51 +243,42 @@ namespace HallOfBeorn.Models
         public static CardSet IntoThePitNightmare = new Sets.IntoThePitNightmare();
         public static CardSet TheSeventhLevelNightmare = new Sets.TheSeventhLevelNightmare();
         public static CardSet FlightFromMoriaNightmare = new Sets.FlightFromMoriaNightmare();
-        public static CardSet WeMustAwayEreBreakOfDayNightmare = new Sets.WeMustAwayEreBreakOfDayNightmare();
-        public static CardSet OverTheMistyMountainsGrimNightmare = new Sets.OverTheMistyMountainsGrimNightmare();
-        public static CardSet DungeonsDeepAndCavernsDimNightmare = new Sets.DungeonsDeepAndCavernsDimNightmare();
-        public static CardSet AShadowOfThePastNightmare = new Sets.AShadowOfThePastNightmare();
-        public static CardSet AKnifeInTheDarkNightmare = new Sets.AKnifeInTheDarkNightmare();
-        public static CardSet FlightToTheFordNightmare = new Sets.FlightToTheFordNightmare();
-
         public static CardSet TheRedhornGateNightmare = new Sets.TheRedhornGateNightmare();
         public static CardSet RoadToRivendellNightmare = new Sets.RoadToRivendellNightmare();
         public static CardSet TheWatcherInTheWaterNightmare = new Sets.TheWatcherInTheWaterNightmare();
         public static CardSet TheLongDarkNightmare = new Sets.TheLongDarkNightmare();
         public static CardSet FoundationsOfStoneNightmare = new Sets.FoundationsOfStoneNightmare();
         public static CardSet ShadowAndFlameNightmare = new Sets.ShadowAndFlameNightmare();
-
-        public static CardSet TheOldForest = new Sets.TheOldForest();
-        public static CardSet FogOnTheBarrowDowns = new Sets.FogOnTheBarrowDowns();
-        public static CardSet MurderAtThePrancingPony = new Sets.MurderAtThePrancingPony();
-
         public static CardSet PerilInPelargirNightmare = new Sets.PerilInPelargirNightmare();
         public static CardSet IntoIthilienNightmare = new Sets.IntoIthilienNightmare();
         public static CardSet TheSiegeOfCairAndrosNightmare = new Sets.TheSiegeOfCairAndrosNightmare();
-
-        public static CardSet FliesAndSpidersNightmare = new Sets.FliesAndSpidersNightmare();
-        public static CardSet TheLonelyMountainNightmare = new Sets.TheLonelyMountainNightmare();
-        public static CardSet TheBattleOfFiveArmiesNightmare = new Sets.TheBattleOfFiveArmiesNightmare();
-
         public static CardSet TheStewardsFearNightmare = new Sets.TheStewardsFearNightmare();
         public static CardSet TheDruadanForestNightmare = new Sets.TheDruadanForestNightmare();
         public static CardSet EncounterAtAmonDinNightmare = new Sets.EncounterAtAmonDinNightmare();
         public static CardSet AssaultOnOsgiliathNightmare = new Sets.AssaultOnOsgiliathNightmare();
         public static CardSet TheBloodOfGondorNightmare = new Sets.TheBloodOfGondorNightmare();
         public static CardSet TheMorgulValeNightmare = new Sets.TheMorgulValeNightmare();
-
         public static CardSet TheFordsOfIsenNightmare = new Sets.TheFordsOfIsenNightmare();
         public static CardSet ToCatchAnOrcNightmare = new Sets.ToCatchAnOrcNightmare();
         public static CardSet IntoFangornNightmare = new Sets.IntoFangornNightmare();
-
+        public static CardSet TheDunlandTrapNightmare = new Sets.TheDunlandTrapNightmare();
         public static CardSet TheThreeTrialsNightmare = new Sets.TheThreeTrialsNightmare();
+        public static CardSet TroubleInTharbadNightmare = new Sets.TroubleInTharbadNightmare();
 
-        public static CardSet TheLostRealm = new Sets.TheLostRealm();
-        public static CardSet TheWastesOfEriador = new Sets.TheWastesOfEriador();
-        public static CardSet EscapeFromMountGram = new Sets.EscapeFromMountGram();
-        public static CardSet AcrossTheEttenmoors = new Sets.AcrossTheEttenmoors();
-        public static CardSet TheTreacheryOfRhudaur = new Sets.TheTreacheryOfRhudaur();
-        public static CardSet TheBattleOfCarnDum = new Sets.TheBattleOfCarnDum();
+        public static CardSet WeMustAwayEreBreakOfDayNightmare = new Sets.WeMustAwayEreBreakOfDayNightmare();
+        public static CardSet OverTheMistyMountainsGrimNightmare = new Sets.OverTheMistyMountainsGrimNightmare();
+        public static CardSet DungeonsDeepAndCavernsDimNightmare = new Sets.DungeonsDeepAndCavernsDimNightmare();
+        public static CardSet FliesAndSpidersNightmare = new Sets.FliesAndSpidersNightmare();
+        public static CardSet TheLonelyMountainNightmare = new Sets.TheLonelyMountainNightmare();
+        public static CardSet TheBattleOfFiveArmiesNightmare = new Sets.TheBattleOfFiveArmiesNightmare();
+        public static CardSet AShadowOfThePastNightmare = new Sets.AShadowOfThePastNightmare();
+        public static CardSet AKnifeInTheDarkNightmare = new Sets.AKnifeInTheDarkNightmare();
+        public static CardSet FlightToTheFordNightmare = new Sets.FlightToTheFordNightmare();
+
+
+        public static CardSet TheOldForest = new Sets.TheOldForest();
+        public static CardSet FogOnTheBarrowDowns = new Sets.FogOnTheBarrowDowns();
+        public static CardSet MurderAtThePrancingPony = new Sets.MurderAtThePrancingPony();
 
         public static CardSet FirstAge = new Sets.FirstAge();
         #endregion

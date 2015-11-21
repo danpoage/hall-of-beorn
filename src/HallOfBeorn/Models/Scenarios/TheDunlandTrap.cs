@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.Scenarios
             AddEncounterSet(EncounterSet.DunlandWarriors);
             AddEncounterSet(EncounterSet.TheDunlandTrap);
             AddEncounterSet(EncounterSet.WearyTravelers);
+            AddEncounterSet(EncounterSet.TheDunlandTrapNightmare);
 
             AddQuestCardId("The-Road-to-Tharbad-TDT");
             AddQuestCardId("A-Well-Laid-Trap-TDT");
@@ -25,6 +26,12 @@ namespace HallOfBeorn.Models.Scenarios
             ExcludeFromEasyMode("In-Need-of-Rest-VoI", 1);
             ExcludeFromEasyMode("Low-on-Provisions-VoI", 1);
 
+            ExcludeFromNightmareMode("Boar-Clan-Warrior-TDT", 4);
+            ExcludeFromNightmareMode("Hithaeglir-Stream-TDT", 4);
+            ExcludeFromNightmareMode("Plains-of-Enedwaith-TDT", 3);
+            ExcludeFromNightmareMode("Dunlending-Ambush-TDT", 1);
+            ExcludeFromNightmareMode("Frenzied-Attack-TDT", 1);
+            ExcludeFromNightmareMode("Low-on-Provisions-VoI", 1);
         }
     }
 }

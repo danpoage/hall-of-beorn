@@ -10,6 +10,7 @@ namespace HallOfBeorn.Models.Products
         public TroubleInTharbadNightmareProduct()
             : base("Trouble in Tharbad Nightmare Deck", "MEN31", ImageType.Jpg)
         {
+            AddCardSet(CardSet.TroubleInTharbadNightmare);
         }
     }
 }
