@@ -24,8 +24,23 @@
         }
     }
 
+    function updateTotalCards(number) {
+        var total = parseInt($('#totalCards').text());
+        if (!total) {
+            total = 0;
+        }
+
+        var newTotal = total + number;
+
+        $('#totalCards').text(newTotal);
+    }
+
     function addCard(card, count) {
         
+        if (card.CardType != 'Hero') {
+            updateTotalCards(count);
+        }
+
         var imageHtml = '<img class="deck-card-image deck-card-image-hidden" src="' + card.CardImage + '"/>';
         var sphereHtml = '<img class="deck-sphere-icon" src="' + card.SphereIcon + '"/>';
         var titleHtml = '<a class="deck-card-title" href="' + card.Url + '" target="_blank">' + card.Title + '</a>';
@@ -133,13 +148,16 @@
 
         switch (count) {
             case 3:
+                updateTotalCards(3);
                 item.count3.push(guid);
                 break;
             case 2:
+                updateTotalCards(2);
                 item.count2.push(guid);
                 break
             case 1:
             default:
+                updateTotalCards(1);
                 item.count1.push(guid);
                 break;
         }
