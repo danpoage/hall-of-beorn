@@ -1123,8 +1123,12 @@ tr.pager td {
 
 .page-number {
     text-align: right;
-    margin: 4px 8px 4px 0px;
+    margin: 0px 12px 4px 0px;
     font-weight: bold;
+}
+
+.info-container {
+    margin: 8px 4px 8px 4px;
 }
 
 .no-style-list {
