@@ -30,9 +30,11 @@
             total = 0;
         }
 
-        var newTotal = total + number;
+        setTotalCards(total + number);
+    }
 
-        $('#totalCards').text(newTotal);
+    function setTotalCards(total) {
+        $('#totalCards').text(parseInt(total, 10));
     }
 
     function addCard(card, count) {
@@ -142,6 +144,21 @@
         }
     });
 
+    $('#deckContainer').on('change', '.deck-item-count', function (e) {
+        console.log('deck item count changed');
+        recalculateDeckTotal();
+    });
+
+    function recalculateDeckTotal() {
+        var total = 0;
+
+        $('.deck-item-count').each(function (index, item) {
+            total += parseInt($(item).val());
+        });
+
+        setTotalCards(total);
+    }
+
     function addDeckItem(deck, guid, count, item) {
         deck.counts[guid] = count;
         item.all.push(guid);
@@ -198,22 +215,24 @@
             }
         }
 
-        var url = '/Cards/DeckItems?guidList=' + guids.join(',');
+        if (guids && guids.length > 0) {
+            var url = '/Cards/DeckItems?guidList=' + guids.join(',');
 
-        $.ajax({
-            url: url,
-            type: "get",
-            success: function (data) {
+            $.ajax({
+                url: url,
+                type: "get",
+                success: function (data) {
 
-                var cardCount = 0;
-                if (data && data.length > 0) {
-                    for (var i = 0; i < data.length; i++) {
-                        cardCount = deck.counts[data[i].OctgnGuid];
-                        addCard(data[i], cardCount);
+                    var cardCount = 0;
+                    if (data && data.length > 0) {
+                        for (var i = 0; i < data.length; i++) {
+                            cardCount = deck.counts[data[i].OctgnGuid];
+                            addCard(data[i], cardCount);
+                        }
                     }
                 }
-            }
-        });
+            });
+        }
     }
 
     function getDeckModel() {
