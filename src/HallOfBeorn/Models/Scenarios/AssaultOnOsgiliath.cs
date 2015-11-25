@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "Against the Shadow";
             Number = 0;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/against-the-shadow-quest-assault-on-osgiliath.html";
+
             AddEncounterSet(EncounterSet.AssaultOnOsgiliath);
             AddEncounterSet(EncounterSet.AssaultOnOsgiliathNightmare);
             AddEncounterSet(EncounterSet.MordorElite);

@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "Against the Shadow";
             Number = 0;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/against-the-shadow-quest-the-stewards-fear.html";
+
             AddEncounterSet(EncounterSet.Brigands);
             AddEncounterSet(EncounterSet.StreetsOfGondor);
             AddEncounterSet(EncounterSet.TheStewardsFear);

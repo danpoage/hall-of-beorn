@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "Angmar Awakened";
             Number = 3;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/angmar-awakened-quest-across-the-ettenmoors.html";
+
             AddEncounterSet(EncounterSet.AcrossTheEttenmoors);
             AddEncounterSet(EncounterSet.EriadorWilds);
             AddEncounterSet(EncounterSet.FoulWeather);

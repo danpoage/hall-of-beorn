@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "The Lost Realm";
             Number = 1;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/the-lost-realm-quest-intruders-in-chetwood.html";
+
             AddEncounterSet(EncounterSet.AngmarOrcs);
             AddEncounterSet(EncounterSet.EriadorWilds);
             AddEncounterSet(EncounterSet.Iarion);

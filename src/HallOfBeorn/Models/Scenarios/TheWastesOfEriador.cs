@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "Angmar Awakened";
             Number = 1;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/angmar-awakened-quest-the-wastes-of-eriador.html";
+
             AddEncounterSet(EncounterSet.EriadorWilds);
             AddEncounterSet(EncounterSet.FoulWeather);
             AddEncounterSet(EncounterSet.TheWastesOfEriador);

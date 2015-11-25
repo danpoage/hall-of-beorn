@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "Shadows of Mirkwood";
             Number = 0;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/shadows-of-mirkwood-quest-a-journey-to-rhosgobel.html";
+
             AddEncounterSet(EncounterSet.AJourneyToRhosgobel);
             AddEncounterSet(EncounterSet.AJourneyToRhosgobelNightmare);
             AddEncounterSet(EncounterSet.DolGuldurOrcs);

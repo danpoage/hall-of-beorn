@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "The Lost Realm";
             Number = 3;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/the-lost-realm-quest-deadmens-dike.html";
+
             AddEncounterSet(EncounterSet.CursedDead);
             AddEncounterSet(EncounterSet.DarkSorcery);
             AddEncounterSet(EncounterSet.DeadmensDike);

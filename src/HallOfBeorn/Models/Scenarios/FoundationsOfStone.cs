@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "Dwarrowdelf";
             Number = 0;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/dwarrowdelf-quest-foundations-of-stone.html";
+
             AddEncounterSet(EncounterSet.FoundationsOfStone);
             AddEncounterSet(EncounterSet.FoundationsOfStoneNightmare);
             AddEncounterSet(EncounterSet.GoblinsOfTheDeep);

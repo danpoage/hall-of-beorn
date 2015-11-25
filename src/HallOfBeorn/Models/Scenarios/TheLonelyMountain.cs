@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "The Hobbit";
             Number = 5;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/the-hobbit-on-the-doorstep-quest-the-lonely-mountain.html";
+
             AddEncounterSet(EncounterSet.TheLonelyMountain);
             AddEncounterSet(EncounterSet.TheLonelyMountainNightmare);
             AddEncounterSet(EncounterSet.Wilderland);

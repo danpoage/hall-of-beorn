@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "GenCon";
             Number = 4;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/print-on-demand-quest-the-old-forest.html";
+            
             AddEncounterSet(EncounterSet.TheOldForest);
 
             AddQuestCardId("Farewell-to-the-Shire-TOF");

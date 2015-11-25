@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "Dwarrowdelf";
             Number = 0;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/dwarrowdelf-quest-the-watcher-in-the-water.html";
+
             AddEncounterSet(EncounterSet.MistyMountains);
             AddEncounterSet(EncounterSet.TheWatcherInTheWater);
             AddEncounterSet(EncounterSet.TheWatcherInTheWaterNightmare);

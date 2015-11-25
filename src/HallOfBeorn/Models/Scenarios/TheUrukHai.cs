@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "The Lord of the Rings";
             Number = 7;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/lotr-the-treason-of-saruman-saga-expansion-quest-the-uruk-hai.html";
+
             AddEncounterSet(EncounterSet.OrcsOfTheWhiteHand);
             AddEncounterSet(EncounterSet.SnagaOrcs);
             AddEncounterSet(EncounterSet.TheUrukHai);

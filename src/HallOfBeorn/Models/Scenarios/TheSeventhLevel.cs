@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "Khazad-dûm";
             Number = 2;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/khazad-dum-quest-the-seventh-level.html";
+
             AddEncounterSet(EncounterSet.GoblinsOfTheDeep);
             AddEncounterSet(EncounterSet.PlunderingGoblins);
             AddEncounterSet(EncounterSet.TheSeventhLevel);

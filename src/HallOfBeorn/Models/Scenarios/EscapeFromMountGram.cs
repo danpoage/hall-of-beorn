@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "Angmar Awakened";
             Number = 2;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/angmar-awakened-quest-escape-from-mount-gram.html";
+
             AddEncounterSet(EncounterSet.AngmarOrcs);
             AddEncounterSet(EncounterSet.EscapeFromMountGram);
 

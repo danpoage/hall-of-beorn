@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "GenCon";
             Number = 1;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/print-on-demand-quest-the-massing-at-osgiliath.html";
+
             AddEncounterSet(EncounterSet.TheMassingAtOsgiliath);
 
             AddQuestCardId("Beyond-Expectations-TMaO");

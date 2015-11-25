@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "The Ring-maker";
             Number = 0;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/the-ring-maker-quest-the-three-trials.html";
+
             AddEncounterSet(EncounterSet.AncientForest);
             AddEncounterSet(EncounterSet.TheThreeTrials);
             AddEncounterSet(EncounterSet.TheThreeTrialsNightmare);

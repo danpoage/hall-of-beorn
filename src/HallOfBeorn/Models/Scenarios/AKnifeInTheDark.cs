@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "The Lord of the Rings";
             Number = 2;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/lotr-the-black-riders-quest-a-knife-in-the-dark.html";
+
             AddEncounterSet(EncounterSet.AKnifeInTheDark);
             AddEncounterSet(EncounterSet.AKnifeInTheDarkNightmare);
             AddEncounterSet(EncounterSet.Hunted);

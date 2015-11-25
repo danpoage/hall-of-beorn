@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "The Voice of Isengard";
             Number = 3;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/voice-of-isengard-quest-into-fangorn.html";
+
             AddEncounterSet(EncounterSet.AncientForest);
             AddEncounterSet(EncounterSet.IntoFangorn);
             AddEncounterSet(EncounterSet.IntoFangornNightmare);

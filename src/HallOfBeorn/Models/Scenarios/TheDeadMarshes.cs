@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "Shadows of Mirkwood";
             Number = 0;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/shadows-of-mirkwood-quest-the-dead-marshes.html";
+
             AddEncounterSet(EncounterSet.SauronsReach);
             AddEncounterSet(EncounterSet.TheDeadMarshes);
             AddEncounterSet(EncounterSet.TheDeadMarshesNightmare);

@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "Heirs of Númenor";
             Number = 2;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/heirs-of-numenor-quest-into-ithilien.html";
+
             AddEncounterSet(EncounterSet.BroodingForest);
             AddEncounterSet(EncounterSet.CreaturesOfTheForest);
             AddEncounterSet(EncounterSet.IntoIthilien);

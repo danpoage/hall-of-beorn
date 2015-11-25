@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "The Ring-maker";
             Number = 0;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/the-ring-maker-quest-the-dunland-trap.html";
+
             AddEncounterSet(EncounterSet.DunlandWarriors);
             AddEncounterSet(EncounterSet.TheDunlandTrap);
             AddEncounterSet(EncounterSet.WearyTravelers);

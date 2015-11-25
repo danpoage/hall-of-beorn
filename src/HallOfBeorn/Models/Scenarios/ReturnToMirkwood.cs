@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "Shadows of Mirkwood";
             Number = 0;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/shadows-of-mirkwood-quest-return-to-mirkwood.html";
+
             AddEncounterSet(EncounterSet.ReturnToMirkwood);
             AddEncounterSet(EncounterSet.ReturnToMirkwoodNightmare);
             AddEncounterSet(EncounterSet.SpidersOfMirkwood);

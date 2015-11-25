@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "Khazad-dûm";
             Number = 1;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/khazad-dum-quest-into-the-pit.html";
+
             AddEncounterSet(EncounterSet.GoblinsOfTheDeep);
             AddEncounterSet(EncounterSet.HazardsOfThePit);
             AddEncounterSet(EncounterSet.IntoThePit);

@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "The Lord of the Rings";
             Number = 4;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/lotr-the-road-darkens-quest-the-ring-goes-south.html";
+
             AddEncounterSet(EncounterSet.TheRingGoesSouth);
 
             AddQuestCardId("The-Council-of-Elrond-RD");

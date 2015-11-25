@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "The Hobbit";
             Number = 2;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/the-hobbit-over-hill-and-under-hill-quest-over-the-misty-mountains-grim.html";
+
             AddEncounterSet(EncounterSet.MistyMountainGoblins);
             AddEncounterSet(EncounterSet.OverTheMistyMountainsGrim);
             AddEncounterSet(EncounterSet.OverTheMistyMountainsGrimNightmare);

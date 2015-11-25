@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "The Lord of the Rings";
             Number = 12;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/lotr-the-land-of-shadow-saga-expansion-quest-shelobs-lair.html";
+
             AddEncounterSet(EncounterSet.Gollum);
             AddEncounterSet(EncounterSet.Nazgul);
             AddEncounterSet(EncounterSet.ShelobsLair);

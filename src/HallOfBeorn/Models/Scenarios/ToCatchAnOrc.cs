@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "The Voice of Isengard";
             Number = 2;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/voice-of-isengard-quest-to-catch-an-orc.html";
+
             AddEncounterSet(EncounterSet.BrokenLands);
             AddEncounterSet(EncounterSet.MistyMountainOrcs);
             AddEncounterSet(EncounterSet.ToCatchAnOrc);

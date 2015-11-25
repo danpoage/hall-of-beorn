@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "GenCon";
             Number = 6;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/print-on-demand-quest-the-ruins-of-belegost.html";
+
             AddEncounterSet(EncounterSet.TheRuinsOfBelegost);
 
             AddQuestCardId("Ruins-of-the-First-Age-TRoB");

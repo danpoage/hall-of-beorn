@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "Heirs of Númenor";
             Number = 1;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/heirs-of-numenor-quest-peril-in-pelargir.html";
+
             AddEncounterSet(EncounterSet.Brigands);
             AddEncounterSet(EncounterSet.PerilInPelargir);
             AddEncounterSet(EncounterSet.PerilInPelargirNightmare);

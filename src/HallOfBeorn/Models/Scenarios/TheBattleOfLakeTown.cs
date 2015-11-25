@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "GenCon";
             Number = 2;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/print-on-demand-quest-the-battle-of-laketown.html";
+
             AddEncounterSet(EncounterSet.TheBattleOfLakeTown);
 
             AddQuestCardId("Terror-from-the-Mountain-TBoLT");

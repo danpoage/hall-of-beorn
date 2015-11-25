@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "GenCon";
             Number = 5;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/print-on-demand-quest-fog-on-the-barrow-downs.html";
+
             AddEncounterSet(EncounterSet.FogOnTheBarrowDowns);
 
             AddQuestCardId("The-House-of-Tom-Bombadil-FotBD");

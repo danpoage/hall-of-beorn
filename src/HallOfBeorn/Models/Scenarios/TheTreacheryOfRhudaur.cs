@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "Angmar Awakened";
             Number = 4;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/angmar-awakened-quest-the-treachery-of-rhudaur.html";
+
             AddEncounterSet(EncounterSet.CursedDead);
             AddEncounterSet(EncounterSet.RuinsOfArnor);
             AddEncounterSet(EncounterSet.TheTreacheryOfRhudaur);

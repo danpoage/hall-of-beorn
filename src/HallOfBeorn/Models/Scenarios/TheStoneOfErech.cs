@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "GenCon";
             Number = 3;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/print-on-demand-quest-the-stone-of-erech.html";
+
             AddEncounterSet(EncounterSet.TheStoneOfErech);
 
             AddQuestCardId("The-Disappearance-TSoE");

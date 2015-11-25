@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "Against the Shadow";
             Number = 0;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/against-the-shadow-quest-encounter-at-amon-din.html";
+
             AddEncounterSet(EncounterSet.EncounterAtAmonDin);
             AddEncounterSet(EncounterSet.EncounterAtAmonDinNightmare);
             AddEncounterSet(EncounterSet.RavagingOrcs);

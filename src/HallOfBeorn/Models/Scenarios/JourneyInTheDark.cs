@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "The Lord of the Rings";
             Number = 5;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/lotr-the-road-darkens-quest-journey-in-the-dark.html";
+
             AddEncounterSet(EncounterSet.JourneyInTheDark);
 
             AddQuestCardId("The-Long-Dark-of-Moria-RD");
