@@ -76,8 +76,9 @@ namespace HallOfBeorn.Models
         public string Title { get; set; }
         public string ProductName { get; set; }
         public string RulesUrl { get; set; }
-
         public string AlternateTitle { get; set; }
+
+        public string QuestCompanionUrl { get; set; }
 
         public ScenarioCard CampaignCard
         {

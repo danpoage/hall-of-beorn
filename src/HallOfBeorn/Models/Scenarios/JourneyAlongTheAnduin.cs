@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "Core Set";
             Number = 2;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/core-set-quest-journey-down-the-anduin.html";
+
             AddEncounterSet(EncounterSet.DolGuldurOrcs);
             AddEncounterSet(EncounterSet.JourneyAlongTheAnduin);
             AddEncounterSet(EncounterSet.JourneyAlongTheAnduinNightmare);

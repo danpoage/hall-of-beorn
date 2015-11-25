@@ -466,11 +466,16 @@
     }
     </div>
     
-    if (!string.IsNullOrEmpty(@Model.Detail.RulesUrl))
+    if (!string.IsNullOrEmpty(@Model.Detail.RulesUrl) || !string.IsNullOrEmpty(@Model.Detail.QuestCompanionUrl))
     {
-        <h3>Rules and Errata</h3>
+        <h3>Resources</h3>
         <div><a title="@Model.Detail.RulesLabel" href="@Model.Detail.RulesUrl" target="_blank">Rules Sheet</a></div>
+        if (!string.IsNullOrEmpty(@Model.Detail.QuestCompanionUrl))
+        {
+            <div><a title="@Model.Detail.Title on the Quest Companion" href="@Model.Detail.QuestCompanionUrl" target="_blank">Quest Companion</a></div>
+        }
     }
+    
     if (@Model.Detail.CampaignCard != null)
     {
         <h3>Campaign Card</h3>

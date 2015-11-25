@@ -60,6 +60,7 @@ namespace HallOfBeorn.Models
         public string Link { get { return string.Format("/Cards/Scenarios/{0}", _scenario.Title.ToUrlSafeString()); } }
         public string RulesUrl { get { return _scenario.RulesUrl; } }
         public string RulesLabel { get { return string.Format("Rules Sheet for {0}", _scenario.ProductName); } }
+        public string QuestCompanionUrl { get { return _scenario.QuestCompanionUrl; } }
 
         public ScenarioCardViewModel CampaignCard { get { return _campaignCard; } }
         public List<ScenarioQuestViewModel> QuestCards { get { return _questCards; } }
