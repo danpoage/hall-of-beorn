@@ -11,7 +11,7 @@ namespace HallOfBeorn.Models.Scenarios
 
             QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/lotr-the-land-of-shadow-saga-expansion-quest-journey-to-the-cross-roads.html";
 
-            AddEncounterSet(EncounterSet.Harad);
+            AddEncounterSet(EncounterSet.MenOfHarad);
             AddEncounterSet(EncounterSet.JourneyToTheCrossRoads);
 
             AddQuestCardId("Ambush-the-Men-of-Harad-TLoS");

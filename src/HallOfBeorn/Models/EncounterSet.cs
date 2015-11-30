@@ -157,7 +157,7 @@ namespace HallOfBeorn.Models
             Add(Gollum);
             Add(Nazgul);
             Add(JourneyToTheCrossRoads);
-            Add(Harad);
+            Add(MenOfHarad);
             Add(ShelobsLair);
             Add(TheGreatSpider);
 
@@ -365,7 +365,7 @@ namespace HallOfBeorn.Models
         public static EncounterSet Gollum = new EncounterSet { Name = "Gollum", Set = "The Land of Shadow" };
         public static EncounterSet Nazgul = new EncounterSet { Name = "Nazgûl", Set = "The Land of Shadow" };
         public static EncounterSet JourneyToTheCrossRoads = new EncounterSet { Name = "Journey to the Cross-roads", Set = "The Land of Shadow" };
-        public static EncounterSet Harad = new EncounterSet { Name = "Harad", Set = "The Land of Shadow" };
+        public static EncounterSet MenOfHarad = new EncounterSet { Name = "Men of Harad", Set = "The Land of Shadow" };
         public static EncounterSet ShelobsLair = new EncounterSet { Name = "Shelob's Lair", Set = "The Land of Shadow" };
         public static EncounterSet TheGreatSpider = new EncounterSet { Name = "The Great Spider", Set = "The Land of Shadow" };
 

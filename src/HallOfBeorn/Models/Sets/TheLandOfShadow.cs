@@ -331,17 +331,17 @@ namespace HallOfBeorn.Models.Sets
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+3 Attack instead if the attacking enemy is Gollum).")
                 .WithEasyModeQuantity(1)
                 .WithInfo(55, 2, Artist.Alvaro_Calvo_Escudero));
-            Cards.Add(Card.Enemy("Oliphaunt", "", "Harad", 44, 3, 6, 2, 9)
+            Cards.Add(Card.Enemy("Oliphaunt", "", "Men of Harad", 44, 3, 6, 2, 9)
                 .WithTraits("Harad.", "Creature.")
                 .WithText("Cannot have attachments or take more than 3 damage each round.\r\nForced: After Oliphaunt engages you, exhaust each ally you control.")
                 .WithShadow("Shadow: Attacking enemy gets +3 Attack.")
                 .WithInfo(56, 3, Artist.Lukasz_Jaskolski));
-            Cards.Add(Card.Enemy("Haradrim Soldier", "", "Harad", 40, 2, 4, 3, 4)
+            Cards.Add(Card.Enemy("Haradrim Soldier", "", "Men of Harad", 40, 2, 4, 3, 4)
                 .WithTraits("Harad.")
                 .WithText("Forced: After Haradrim Soldier engages you, it makes an immediate attack.")
                 .WithShadow("Shadow: Attacking enemy makes an additional attack against you after this one.")
                 .WithInfo(57, 3, Artist.Jon_Bosco));
-            Cards.Add(Card.Enemy("Haradrim Archer", "", "Harad", 42, 255, 3, 1, 5)
+            Cards.Add(Card.Enemy("Haradrim Archer", "", "Men of Harad", 42, 255, 3, 1, 5)
                 .WithTraits("Harad.")
                 .WithKeywords("Archery X.")
                 .WithText("X is the number of players in the game.\r\nForced: After Haradrim Archer engages you, assign X damage among characters you control.")
@@ -406,7 +406,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Setup: Add The Black Gate and The Cross-roads to the staging area. Shuffle the Harad encounter set and place it facedown under The Cross-roads. Each player, except for the first player, searches the encounter deck for a different non-unique location and adds it to the staging area. Shuffle the encounter deck.")
                 .WithOppositeFlavor("\"The road may pass, but they shall not!\"\r\n—Mablung, The Two Towers")
                 .WithOppositeText("Forced: At the beginning of the quest phase, reveal the top facedown card from under The Cross-roads and add it to the staging area.\r\nThe players cannot defeat this stage while The Cross-roads is in play. When The Cross-roads is explored, the players win the game.")
-                .WithIncludedEncounterSets(EncounterSet.Harad)
+                .WithIncludedEncounterSets(EncounterSet.MenOfHarad)
                 .WithInfo(68, 1, Artist.Julepe));
             Cards.Add(Card.Campaign("Journey to the Cross-roads", "", 11, "Journey to the Cross-roads", "The Lord of the Rings - Part 11")
                 .WithText("You are playing campaign mode.\r\nSetup: Each player must choose: either add 1 resource to each of his heroes’ pools, or shuffle 1 copy of Brace of Coneys into his deck. Remove each burden with the following burden set icons from the encounter deck and each player's deck: Helm's Deep, The Road to Isengard")
