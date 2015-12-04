@@ -72,9 +72,9 @@ namespace HallOfBeorn.Models
             get { return _card.Slug; }
         }
 
-        public string ShortSlug
+        public string OctgnSlug
         {
-            get { return _card.ShortSlug; }
+            get { return _card.OctgnSlug; }
         }
 
         public string Title

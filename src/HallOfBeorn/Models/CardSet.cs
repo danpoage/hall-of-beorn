@@ -68,26 +68,29 @@ namespace HallOfBeorn.Models
 
         private static List<CardSet> all = new List<CardSet>();
 
-        private static void AddCardShortSlugByType(CardSet cardSet, Func<Card, bool> typePredicate)
+        private static void AddCardSlugsByType(CardSet cardSet, Func<Card, bool> typePredicate)
         {
             var slugNum = 97; //a
             var shortSlug = string.Empty;
+            var octgnSlug = string.Empty;
 
             foreach (var card in cardSet.Cards.Where(typePredicate).OrderBy(y => y.Number))
             {
                 shortSlug = ((char)slugNum).ToString();
+                octgnSlug = cardSet.ShortSlug + shortSlug;
                 card.WithShortSlug(shortSlug);
+                card.WithOctgnSlug(octgnSlug);
                 slugNum++;
             }
         }
 
         private static void AddCardShortSlugs(CardSet cardSet)
         {
-            AddCardShortSlugByType(cardSet, (c) => { return c.CardType == CardType.Hero; });
-            AddCardShortSlugByType(cardSet, (c) => { return c.CardType == CardType.Ally; });
-            AddCardShortSlugByType(cardSet, (c) => { return c.CardType == CardType.Attachment; });
-            AddCardShortSlugByType(cardSet, (c) => { return c.CardType == CardType.Event; });
-            AddCardShortSlugByType(cardSet, (c) => { return c.CardType == CardType.Player_Side_Quest; });
+            AddCardSlugsByType(cardSet, (c) => { return c.CardType == CardType.Hero; });
+            AddCardSlugsByType(cardSet, (c) => { return c.CardType == CardType.Ally; });
+            AddCardSlugsByType(cardSet, (c) => { return c.CardType == CardType.Attachment; });
+            AddCardSlugsByType(cardSet, (c) => { return c.CardType == CardType.Event; });
+            AddCardSlugsByType(cardSet, (c) => { return c.CardType == CardType.Player_Side_Quest; });
         }
 
         private static void Add(CardSet cardSet)

@@ -574,15 +574,8 @@
         <div>
         @if (!string.IsNullOrEmpty(@Model.OctgnGuid))
         {
-            <img title="OCTGN ID: @Model.OctgnGuid" src="/Images/octgn-logo.png" style="margin-top: 12px;" height="25" width="25"/>
+            <img title="OCTGN Slug: @Model.OctgnSlug ID: @Model.OctgnGuid" src="/Images/octgn-logo.png" style="margin-top: 12px;" height="25" width="25"/>
         }
-
-        @*
-        @if (!string.IsNullOrEmpty(@Model.ShortSlug))
-        {
-            <span>[@Model.ShortSlug]</span>
-        }
-        *@
             
             @*
             <div>
