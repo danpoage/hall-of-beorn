@@ -25,6 +25,7 @@ namespace HallOfBeorn.Models
 
         public string Id { get; protected set; }
         public string Name { get; protected set; }
+        public string ShortSlug { get; protected set; }
         
         public string NormalizedName
         {
@@ -58,6 +59,12 @@ namespace HallOfBeorn.Models
         public string AlternateName { get; protected set; }
 
         public bool IsNightmare { get { return !string.IsNullOrEmpty(Name) && Name.EndsWith(" Nightmare"); } }
+
+        public CardSet WithShortSlug(string shortSlug)
+        {
+            this.ShortSlug = shortSlug;
+            return this;
+        }
 
         private static List<CardSet> all = new List<CardSet>();
 
@@ -179,57 +186,59 @@ namespace HallOfBeorn.Models
         }
 
         #region Static Members
-        public static CardSet CoreSet = new Sets.CoreSet();
-        public static CardSet TheHuntForGollum = new Sets.TheHuntforGollum();
-        public static CardSet ConflictAtTheCarrock = new Sets.ConflictattheCarrock();
-        public static CardSet AJourneyToRhosgobel = new Sets.AJourneytoRhosgobel();
-        public static CardSet TheHillsOfEmynMuil = new Sets.TheHillsofEmynMuil();
-        public static CardSet TheDeadMarshes = new Sets.TheDeadMarshes();
-        public static CardSet ReturnToMirkwood = new Sets.ReturntoMirkwood();
+        public static CardSet CoreSet = new Sets.CoreSet().WithShortSlug("a");
+        public static CardSet TheHuntForGollum = new Sets.TheHuntforGollum().WithShortSlug("b");
+        public static CardSet ConflictAtTheCarrock = new Sets.ConflictattheCarrock().WithShortSlug("c");
+        public static CardSet AJourneyToRhosgobel = new Sets.AJourneytoRhosgobel().WithShortSlug("d");
+        public static CardSet TheHillsOfEmynMuil = new Sets.TheHillsofEmynMuil().WithShortSlug("e");
+        public static CardSet TheDeadMarshes = new Sets.TheDeadMarshes().WithShortSlug("f");
+        public static CardSet ReturnToMirkwood = new Sets.ReturntoMirkwood().WithShortSlug("g");
         
-        public static CardSet KhazadDum = new Sets.Khazaddum();
-        public static CardSet TheRedhornGate = new Sets.TheRedhornGate();
-        public static CardSet RoadToRivendell = new Sets.RoadtoRivendell();
-        public static CardSet TheWatcherInTheWater = new Sets.TheWatcherintheWater();
-        public static CardSet TheLongDark = new Sets.TheLongDark();
-        public static CardSet FoundationsOfStone = new Sets.FoundationsofStone();
-        public static CardSet ShadowAndFlame = new Sets.ShadowandFlame();
+        public static CardSet KhazadDum = new Sets.Khazaddum().WithShortSlug("h");
+        public static CardSet TheRedhornGate = new Sets.TheRedhornGate().WithShortSlug("i");
+        public static CardSet RoadToRivendell = new Sets.RoadtoRivendell().WithShortSlug("j");
+        public static CardSet TheWatcherInTheWater = new Sets.TheWatcherintheWater().WithShortSlug("k");
+        public static CardSet TheLongDark = new Sets.TheLongDark().WithShortSlug("l");
+        public static CardSet FoundationsOfStone = new Sets.FoundationsofStone().WithShortSlug("m");
+        public static CardSet ShadowAndFlame = new Sets.ShadowandFlame().WithShortSlug("n");
 
-        public static CardSet HeirsOfNumenor = new Sets.HeirsofNumenor();
-        public static CardSet TheStewardsFear = new Sets.TheStewardsFear();
-        public static CardSet TheDruadanForest = new Sets.TheDruadanForest();
-        public static CardSet EncounterAtAmonDin = new Sets.EncounteratAmonDin();
-        public static CardSet AssaultOnOsgiliath = new Sets.AssaultonOsgiliath();
-        public static CardSet TheBloodOfGondor = new Sets.TheBloodofGondor();
-        public static CardSet TheMorgulVale = new Sets.TheMorgulVale();
+        public static CardSet HeirsOfNumenor = new Sets.HeirsofNumenor().WithShortSlug("o");
+        public static CardSet TheStewardsFear = new Sets.TheStewardsFear().WithShortSlug("p");
+        public static CardSet TheDruadanForest = new Sets.TheDruadanForest().WithShortSlug("q");
+        public static CardSet EncounterAtAmonDin = new Sets.EncounteratAmonDin().WithShortSlug("r");
+        public static CardSet AssaultOnOsgiliath = new Sets.AssaultonOsgiliath().WithShortSlug("s");
+        public static CardSet TheBloodOfGondor = new Sets.TheBloodofGondor().WithShortSlug("t");
+        public static CardSet TheMorgulVale = new Sets.TheMorgulVale().WithShortSlug("u");
 
-        public static CardSet TheVoiceOfIsengard = new Sets.TheVoiceofIsengard();
-        public static CardSet TheDunlandTrap = new Sets.TheDunlandTrap();
-        public static CardSet TheThreeTrials = new Sets.TheThreeTrials();
-        public static CardSet TroubleInTharbad = new Sets.TroubleInTharbad(); 
-        public static CardSet NinInEilph = new Sets.TheNinInEilph();
-        public static CardSet CelebrimborsSecret = new Sets.CelebrimborsSecret();
-        public static CardSet TheAntleredCrown = new Sets.TheAntleredCrown();
+        public static CardSet TheVoiceOfIsengard = new Sets.TheVoiceofIsengard().WithShortSlug("v");
+        public static CardSet TheDunlandTrap = new Sets.TheDunlandTrap().WithShortSlug("w");
+        public static CardSet TheThreeTrials = new Sets.TheThreeTrials().WithShortSlug("x");
+        public static CardSet TroubleInTharbad = new Sets.TroubleInTharbad().WithShortSlug("y"); 
+        public static CardSet NinInEilph = new Sets.TheNinInEilph().WithShortSlug("z");
+        public static CardSet CelebrimborsSecret = new Sets.CelebrimborsSecret().WithShortSlug("A");
+        public static CardSet TheAntleredCrown = new Sets.TheAntleredCrown().WithShortSlug("B");
 
-        public static CardSet TheLostRealm = new Sets.TheLostRealm();
-        public static CardSet TheWastesOfEriador = new Sets.TheWastesOfEriador();
-        public static CardSet EscapeFromMountGram = new Sets.EscapeFromMountGram();
-        public static CardSet AcrossTheEttenmoors = new Sets.AcrossTheEttenmoors();
-        public static CardSet TheTreacheryOfRhudaur = new Sets.TheTreacheryOfRhudaur();
-        public static CardSet TheBattleOfCarnDum = new Sets.TheBattleOfCarnDum();
+        public static CardSet TheLostRealm = new Sets.TheLostRealm().WithShortSlug("C");
+        public static CardSet TheWastesOfEriador = new Sets.TheWastesOfEriador().WithShortSlug("D");
+        public static CardSet EscapeFromMountGram = new Sets.EscapeFromMountGram().WithShortSlug("E");
+        public static CardSet AcrossTheEttenmoors = new Sets.AcrossTheEttenmoors().WithShortSlug("F");
+        public static CardSet TheTreacheryOfRhudaur = new Sets.TheTreacheryOfRhudaur().WithShortSlug("G");
+        public static CardSet TheBattleOfCarnDum = new Sets.TheBattleOfCarnDum().WithShortSlug("H");
 
-        public static CardSet TheHobbitOverHillAndUnderHill = new Sets.TheHobbitOverHillandUnderHill();
-        public static CardSet TheHobbitOnTheDoorstep = new Sets.TheHobbitOntheDoorstep();
+        public static CardSet TheHobbitOverHillAndUnderHill = new Sets.TheHobbitOverHillandUnderHill().WithShortSlug("Y");
+        public static CardSet TheHobbitOnTheDoorstep = new Sets.TheHobbitOntheDoorstep().WithShortSlug("Z");
 
-        public static CardSet TheBlackRiders = new Sets.TheBlackRiders();
-        public static CardSet TheRoadDarkens = new Sets.TheRoadDarkens();
-        public static CardSet TheTreasonOfSaruman = new Sets.TheTreasonOfSaruman();
-        public static CardSet TheLandOfShadow = new Sets.TheLandOfShadow();
+        public static CardSet TheBlackRiders = new Sets.TheBlackRiders().WithShortSlug("1");
+        public static CardSet TheRoadDarkens = new Sets.TheRoadDarkens().WithShortSlug("2");
+        public static CardSet TheTreasonOfSaruman = new Sets.TheTreasonOfSaruman().WithShortSlug("3");
+        public static CardSet TheLandOfShadow = new Sets.TheLandOfShadow().WithShortSlug("4");
+        //Saga #5
+        //Saga #6
 
         public static CardSet TheMassingAtOsgiliath = new Sets.TheMassingatOsgiliath();
         public static CardSet TheBattleOfLakeTown = new Sets.TheBattleofLakeTown();
         public static CardSet TheStoneOfErech = new Sets.TheStoneofErech();
-        public static CardSet TheRuinsOfBelegost = new Sets.TheRuinsOfBelegost();
+        public static CardSet TheRuinsOfBelegost = new Sets.TheRuinsOfBelegost().WithShortSlug("7");
 
         public static CardSet PassageThroughMirkwoodNightmare = new Sets.PassageThroughMirkwoodNightmare();
         public static CardSet JourneyAlongTheAnduinNightmare = new Sets.JourneyAlongTheAnduinNightmare();
@@ -275,10 +284,9 @@ namespace HallOfBeorn.Models
         public static CardSet AKnifeInTheDarkNightmare = new Sets.AKnifeInTheDarkNightmare();
         public static CardSet FlightToTheFordNightmare = new Sets.FlightToTheFordNightmare();
 
-
-        public static CardSet TheOldForest = new Sets.TheOldForest();
-        public static CardSet FogOnTheBarrowDowns = new Sets.FogOnTheBarrowDowns();
-        public static CardSet MurderAtThePrancingPony = new Sets.MurderAtThePrancingPony();
+        public static CardSet TheOldForest = new Sets.TheOldForest().WithShortSlug("8");
+        public static CardSet FogOnTheBarrowDowns = new Sets.FogOnTheBarrowDowns().WithShortSlug("9");
+        public static CardSet MurderAtThePrancingPony = new Sets.MurderAtThePrancingPony().WithShortSlug("0");
 
         public static CardSet FirstAge = new Sets.FirstAge();
         #endregion

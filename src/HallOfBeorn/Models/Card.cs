@@ -425,7 +425,9 @@ namespace HallOfBeorn.Models
         */
 
         public string Id { get; set; }
-        
+
+        public string ShortSlug { get; set; }
+
         /*
         public string ScenarioTitle 
         {
@@ -939,6 +941,12 @@ namespace HallOfBeorn.Models
         public Card ClearText()
         {
             this.Text = string.Empty;
+            return this;
+        }
+
+        public Card WithShortSlug(string shortSlug)
+        {
+            this.ShortSlug = shortSlug;
             return this;
         }
 
