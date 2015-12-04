@@ -68,8 +68,32 @@ namespace HallOfBeorn.Models
 
         private static List<CardSet> all = new List<CardSet>();
 
+        private static void AddCardShortSlugByType(CardSet cardSet, Func<Card, bool> typePredicate)
+        {
+            var slugNum = 97; //a
+            var shortSlug = string.Empty;
+
+            foreach (var card in cardSet.Cards.Where(typePredicate).OrderBy(y => y.Number))
+            {
+                shortSlug = ((char)slugNum).ToString();
+                card.WithShortSlug(shortSlug);
+                slugNum++;
+            }
+        }
+
+        private static void AddCardShortSlugs(CardSet cardSet)
+        {
+            AddCardShortSlugByType(cardSet, (c) => { return c.CardType == CardType.Hero; });
+            AddCardShortSlugByType(cardSet, (c) => { return c.CardType == CardType.Ally; });
+            AddCardShortSlugByType(cardSet, (c) => { return c.CardType == CardType.Attachment; });
+            AddCardShortSlugByType(cardSet, (c) => { return c.CardType == CardType.Event; });
+            AddCardShortSlugByType(cardSet, (c) => { return c.CardType == CardType.Player_Side_Quest; });
+        }
+
         private static void Add(CardSet cardSet)
         {
+            AddCardShortSlugs(cardSet);
+
             all.Add(cardSet);
         }
 
