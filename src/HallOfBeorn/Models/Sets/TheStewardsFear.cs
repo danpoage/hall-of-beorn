@@ -112,6 +112,7 @@ namespace HallOfBeorn.Models.Sets
                 HitPoints = 1,
                 Traits = new List<string>() { "Outlands." },
                 Text = "Each Outlands character you control gets +1 Willpower.",
+                FlavorText = "We heard of the horns in the hills ringing,\r\nthe swords shining in the South-kingdom.\r\n-The Return of the King",
                 Quantity = 3,
                 Number = 6,
                 Artist = Artist.Adam_Schumpert
