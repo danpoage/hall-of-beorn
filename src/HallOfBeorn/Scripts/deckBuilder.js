@@ -1,9 +1,112 @@
 ﻿$(function () {
 
-    var storedDeck = getLocal('currentDeck');
-    if (storedDeck) {
-        var deckModel = JSON.parse(storedDeck);
+    var storedDeck;
+    if (location.search && location.search.indexOf('t=') != -1 && location.search.indexOf('&h=') != -1) {
+        console.log('url has deck info: ' + location.search);
+
+        var deckModel = getDeckModelFromUrl();
         loadDeckModel(deckModel);
+    } else {
+        storedDeck = getLocal('currentDeck');
+        if (storedDeck) {
+            var deckModel = JSON.parse(storedDeck);
+            loadDeckModel(deckModel);
+        }
+    }
+
+
+    function loadShortSlugs(deck, shortSlugs, type) {
+        var url = '/Cards/DeckItemsByShortSlugs?shortSlugList=' + shortSlugs + "&type=" + type;
+
+        //console.log('url for deck items by short slugs: ' + url);
+        //console.log('deck before loading');
+        //console.log(deck);
+
+        $.ajax({
+            url: url,
+            type: "get",
+            success: function (data) {
+
+                if (data && data.length > 0) {
+                    for (var i = 0; i < data.length; i++) {
+
+                        console.log('card to add from URL');
+                        console.log(data[i]);
+
+                        switch (type) {
+                            case 'Hero':
+                                addDeckItem(deck, data[i].OctgnGuid, data[i].Count, deck.heroes);
+                                break;
+                            case 'Ally':
+                                addDeckItem(deck, data[i].OctgnGuid, data[i].Count, deck.allies);
+                                break;
+                            case 'Attachment':
+                                addDeckItem(deck, data[i].OctgnGuid, data[i].Count, deck.attachments);
+                                break;
+                            case 'Event':
+                                addDeckItem(deck, data[i].OctgnGuid, data[i].Count, deck.events);
+                                break;
+                            case 'Player_Side_Quest':
+                                addDeckItem(deck, data[i].OctgnGuid, data[i].Count, deck.sideQuests);
+                                break;
+                            default:
+                                break;
+                        }
+
+                        addCard(data[i], data[i].Count);
+                    }
+                }
+                //console.log('*** cards by short slugs!');
+                //console.log(data);
+            }
+        });
+    }
+
+    function getDeckModelFromUrl() {
+        var deck = getEmptyDeck();
+        
+        var parts = location.search.replace('?', '').split('&');
+        
+        if (parts && parts.length > 0) {
+            for (var i = 0; i < parts.length; i++) {
+
+                var keyAndVal = parts[i].split('=');
+                if (keyAndVal && keyAndVal.length == 2) {
+
+                    //console.log('keyAndVal: ' + keyAndVal[0]);
+                    
+                    switch (keyAndVal[0]) {
+                        case 't':
+                            deck.name = decodeURIComponent(keyAndVal[1]);
+                            break;
+                        case 'h':
+                            loadShortSlugs(deck, keyAndVal[1], 'Hero');
+                            break;
+                        case 'al':
+                            loadShortSlugs(deck, keyAndVal[1], 'Ally');
+                            break;
+                        case 'at':
+                            loadShortSlugs(deck, keyAndVal[1], 'Attachment');
+                            break;
+                        case 'e':
+                            loadShortSlugs(deck, keyAndVal[1], 'Event');
+                            break;
+                        case 'q':
+                            loadShortSlugs(deck, keyAndVal[1], 'Player_Side_Quest');
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+        }
+
+        loadDeckModel(deck);
+
+        //console.log('deck after load');
+        //console.log(deck);
+
+        return deck;
     }
 
     function getLocal(key) {
@@ -65,6 +168,7 @@
         var countHtml = card.MaxPerDeck == 3 ? '<select class="deck-item-count"><option value="1"' + selected1 + '>1</option><option value="2"' + selected2 + '>2</option><option value="3"' + selected3 + '>3</option></select>' : '<select  class="deck-item-count-one" disabled><option value="1" selected>1</option></select>';
 
         var octgnGuid = card.OctgnGuid;
+        var octgnSlug = card.OctgnSlug;
         var selector = false;
         var itemClass = 'deck-card-item';
         var titleClass = '';
@@ -92,7 +196,7 @@
         }
 
         if (selector) {
-            $(selector).append('<li data-octgn="' + octgnGuid + '" class="deck-item ' + itemClass + '">' + itemHtml + '</li>');
+            $(selector).append('<li data-octgn="' + octgnGuid + '" data-slug="' + octgnSlug + '" class="deck-item ' + itemClass + '">' + itemHtml + '</li>');
         }
     }
 
@@ -184,6 +288,8 @@
         
         $('#Name').val(deck.name);
 
+        var shareLink = '/Cards/Decks?t=' + encodeURIComponent(deck.name);
+
         var guids = [];
         if (deck.heroes.all.length > 0) {
             for (var i = 0; i < deck.heroes.all.length; i++) {
@@ -215,6 +321,8 @@
             }
         }
 
+        $('#shareLink').html(shareLink);
+
         if (guids && guids.length > 0) {
             var url = '/Cards/DeckItems?guidList=' + guids.join(',');
 
@@ -225,23 +333,78 @@
 
                     var cardCount = 0;
                     if (data && data.length > 0) {
+
+                        var hSlugs = [];
+                        var alSlugs = [];
+                        var atSlugs = [];
+                        var eSlugs = [];
+                        var qSlugs = [];
+
                         for (var i = 0; i < data.length; i++) {
                             cardCount = deck.counts[data[i].OctgnGuid];
                             addCard(data[i], cardCount);
+
+                            var countSuffix = '';
+                            if (cardCount > 1) {
+                                countSuffix = '_' + cardCount;
+                            }
+
+                            switch (data[i].CardType) {
+                                case 'Hero':
+                                    hSlugs.push(data[i].OctgnSlug + countSuffix);
+                                    break;
+                                case 'Ally':
+                                    alSlugs.push(data[i].OctgnSlug + countSuffix);
+                                    break;
+                                case 'Attachment':
+                                    atSlugs.push(data[i].OctgnSlug + countSuffix);
+                                    break;
+                                case 'Event':
+                                    eSlugs.push(data[i].OctgnSlug + countSuffix);
+                                    break;
+                                case 'Player_Side_Quest':
+                                    qSlugs.push(data[i].OctgnSlug + countSuffix);
+                                    break;
+                                default:
+                                    break;
+                            }
                         }
+
+                        if (hSlugs.length > 0) {
+                            shareLink += '&h=' + hSlugs.join(',');
+                        }
+
+                        if (alSlugs.length > 0) {
+                            shareLink += '&al=' + alSlugs.join(',');
+                        }
+
+                        if (atSlugs.length > 0) {
+                            shareLink += '&at=' + atSlugs.join(',');
+                        }
+
+                        if (eSlugs.length > 0) {
+                            shareLink += '&e=' + eSlugs.join(',');
+                        }
+
+                        if (qSlugs.length > 0) {
+                            shareLink += '&q=' + qSlugs.join(',');
+                        }
+
+                        //console.log('full share link: ' + shareLink);
+                        $('#shareLink').html(shareLink);
                     }
                 }
             });
         }
     }
 
-    function getDeckModel() {
+    function getEmptyDeck() {
         var deck = {
-            name: $('#Name').val(),
+            name: '',
             counts: {
             },
             heroes: {
-                all: [], count1: []
+                all: [], count1: [], count2: [], count3: []
             },
             allies: {
                 all: [], count1: [], count2: [], count3: []
@@ -253,9 +416,17 @@
                 all: [], count1: [], count2: [], count3: []
             },
             sideQuests: {
-                all: [], count1: []
+                all: [], count1: [], count2: [], count3: []
             }
         };
+
+        return deck;
+    }
+
+    function getDeckModel() {
+        var deck = getEmptyDeck();
+
+        deck.name = $('#Name').val();
 
         $('#heroList').find('.deck-item').each(function (index, item) {
             guid = $(item).data('octgn');

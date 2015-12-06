@@ -1056,9 +1056,8 @@ namespace HallOfBeorn.Controllers
             return View(deck);
         }
 
-        public JsonResult DeckItems(string guidList)
+        private List<DeckItemViewModel> getDeckItems(IEnumerable<string> guids)
         {
-            var guids = guidList.SafeSplit(',');
             var items = new List<DeckItemViewModel>();
 
             foreach (var guid in guids)
@@ -1076,6 +1075,68 @@ namespace HallOfBeorn.Controllers
                 }
             }
 
+            return items;
+        }
+
+        public JsonResult DeckItems(string guidList)
+        {
+            var guids = guidList.SafeSplit(',');
+            
+            var items = getDeckItems(guids);
+
+            return Json(items, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult DeckItemsByShortSlugs(string shortSlugList, string type)
+        {
+            var shortSlugs = shortSlugList.SafeSplit(',');
+            var guids = new List<string>();
+
+            var countsByGuid = new Dictionary<string, byte>();
+
+            foreach (var shortSlug in shortSlugs)
+            {
+                var octgnSlug = shortSlug;
+
+                if (string.IsNullOrEmpty(shortSlug))
+                {
+                    continue;
+                }
+
+                byte count = 1;
+                if (shortSlug.Contains('_'))
+                {
+                    var parts = shortSlug.SafeSplit('_');
+                    if (parts.Length == 2)
+                    {
+                        octgnSlug = parts[0];
+
+                        byte testCount = 0;
+                        if (byte.TryParse(parts[1], out testCount))
+                        {
+                            count = (byte)testCount;
+                        }
+                    }
+                }
+
+                var octgnGuid = octgnService.GetCardOctgnGuidByOctgnSlug(octgnSlug, type);
+                if (!string.IsNullOrEmpty(octgnGuid))
+                {
+                    countsByGuid[octgnGuid] = count;
+                    guids.Add(octgnGuid);
+                }
+            }
+
+            var items = getDeckItems(guids);
+
+            foreach (var item in items)
+            {
+                if (countsByGuid.ContainsKey(item.OctgnGuid))
+                {
+                    item.Count = countsByGuid[item.OctgnGuid];
+                }
+            }
+            
             return Json(items, JsonRequestBehavior.AllowGet);
         }
     }

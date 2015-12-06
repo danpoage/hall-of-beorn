@@ -17,6 +17,7 @@ namespace HallOfBeorn.Models
             SphereIcon = model.SphereIcon;
             SetName = model.Card.CardSet.Name;
             CardType = model.CardType.ToString();
+            OctgnSlug = model.Card.OctgnSlug;
             MaxPerDeck = model.Card.MaxPerDeck;
         }
 
@@ -28,6 +29,7 @@ namespace HallOfBeorn.Models
         public string SphereIcon { get; set; }
         public string SetName { get; set; }
         public string CardType { get; set; }
+        public string OctgnSlug { get; set; }
         public byte MaxPerDeck { get; set; }
 
         public byte Count { get; set; }

@@ -25,6 +25,7 @@ namespace HallOfBeorn.Services
 
         private readonly Dictionary<string, string> cardSlugsByGuid = new Dictionary<string, string>();
         private readonly Dictionary<string, string> cardGuidsBySlug = new Dictionary<string, string>();
+        private readonly Dictionary<string, string> cardSlugsByShortSlug = new Dictionary<string, string>();
 
         private void addCard(string setGuid, string cardGuid, string cardTitle)
         {
@@ -2974,6 +2975,37 @@ namespace HallOfBeorn.Services
         public string GetCardSlug(string octgnGuid)
         {
             return cardSlugsByGuid.ContainsKey(octgnGuid) ? cardSlugsByGuid[octgnGuid] : string.Empty;
+        }
+
+        public string GetCardOctgnGuidByOctgnSlug(string octgnSlug, string type)
+        {
+            var typeFilter = HallOfBeorn.Models.CardType.Hero;
+            switch (type)
+            {
+                case "Ally":
+                    typeFilter = Models.CardType.Ally;
+                    break;
+                case "Attachment":
+                    typeFilter = Models.CardType.Attachment;
+                    break;
+                case "Event":
+                    typeFilter = Models.CardType.Event;
+                    break;
+                case "Player_Side_Quest":
+                    typeFilter = Models.CardType.Player_Side_Quest;
+                    break;
+                case "Hero":
+                default:
+                    break;
+            }
+
+            var card = cardRepository.Cards()
+                .Where(x => x.OctgnSlug == octgnSlug && x.CardType == typeFilter)
+                .FirstOrDefault();
+
+            return card != null ?
+                GetCardOctgnGuid(card.Slug)
+                : string.Empty;
         }
 
         public string GetSetOctgnGuid(string setName)
