@@ -1,6 +1,6 @@
 namespace HallOfBeorn.Models.Scenarios
 {
-    public class DeadmensDike : Scenario
+    public class DeadmensDike : AngmarAwakenedScenario
     {
         public DeadmensDike()
         {
@@ -19,18 +19,16 @@ namespace HallOfBeorn.Models.Scenarios
             AddQuestCardId("The-Shades-of-Angmar-TLR");
             AddQuestCardId("A-Fell-Wraith-TLR");
 
+            ExcludeDarkSorceryFromEasyMode();
+
             ExcludeFromEasyMode("Cursed-Dead-TLR", 1);
             ExcludeFromEasyMode("Dead-Lord-TLR", 1);
             ExcludeFromEasyMode("Restless-Evil-TLR", 1);
-            ExcludeFromEasyMode("Dark-Sorcery-TLR", 1);
-            ExcludeFromEasyMode("Heavy-Curse-TLR", 2);
-            ExcludeFromEasyMode("Terror-of-the-North-TLR", 1);
             ExcludeFromEasyMode("Broken-Battlements-TLR", 1);
             ExcludeFromEasyMode("Deadmen's-Gate-TLR", 1);
             ExcludeFromEasyMode("Haunted-Keep-TLR", 1);
             ExcludeFromEasyMode("Thaurdir's-Damned-TLR", 2);
             ExcludeFromEasyMode("Unnatural-Fog-TLR", 1);
-
         }
     }
 }

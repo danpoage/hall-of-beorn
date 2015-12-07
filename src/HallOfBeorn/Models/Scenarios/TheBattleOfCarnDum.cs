@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Scenarios
 {
-    public class TheBattleOfCarnDum : Scenario
+    public class TheBattleOfCarnDum : AngmarAwakenedScenario
     {
         public TheBattleOfCarnDum()
         {
@@ -20,6 +20,9 @@ namespace HallOfBeorn.Models.Scenarios
 
             AddQuestCardId("The-Clutches-of-Carn-Dum-TBoCD");
             AddQuestCardId("Midwinter's-Crux-TBoCD");
+
+            ExcludeAngmarOrcsFromEasyMode();
+            ExcludeDarkSorceryFromEasyMode();
 
             ExcludeFromEasyMode("Carn-Dum-Garrison-TBoCD", 1);
             ExcludeFromEasyMode("Orc-Grunts-TBoCD", 2);

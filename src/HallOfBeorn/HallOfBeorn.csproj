@@ -298,6 +298,7 @@
     <Compile Include="Models\Scenarios\AcrossTheEttenmoors.cs" />
     <Compile Include="Models\Scenarios\AJourneyToRhosgobel.cs" />
     <Compile Include="Models\Scenarios\AKnifeInTheDark.cs" />
+    <Compile Include="Models\Scenarios\AngmarAwakenedScenario.cs" />
     <Compile Include="Models\Scenarios\AShadowOfThePast.cs" />
     <Compile Include="Models\Scenarios\AssaultOnOsgiliath.cs" />
     <Compile Include="Models\Scenarios\BreakingOfTheFellowship.cs" />
