@@ -6,11 +6,15 @@
 
         var deckModel = getDeckModelFromUrl();
         loadDeckModel(deckModel);
+
+        recalculateDeckTotal();
     } else {
         storedDeck = getLocal('currentDeck');
         if (storedDeck) {
             var deckModel = JSON.parse(storedDeck);
             loadDeckModel(deckModel);
+
+            recalculateDeckTotal();
         }
     }
 
@@ -30,8 +34,8 @@
                 if (data && data.length > 0) {
                     for (var i = 0; i < data.length; i++) {
 
-                        console.log('card to add from URL');
-                        console.log(data[i]);
+                        //console.log('card to add from URL');
+                        //console.log(data[i]);
 
                         switch (type) {
                             case 'Hero':
@@ -128,6 +132,7 @@
     }
 
     function updateTotalCards(number) {
+        console.log('updateTotalCards');
         var total = parseInt($('#totalCards').text());
         if (!total) {
             total = 0;
@@ -137,12 +142,14 @@
     }
 
     function setTotalCards(total) {
+        //console.log('setTotalCards');
         $('#totalCards').text(parseInt(total, 10));
     }
 
     function addCard(card, count) {
         
         if (card.CardType != 'Hero') {
+            console.log('*** adding non hero card');
             updateTotalCards(count);
         }
 
@@ -206,6 +213,8 @@
         saveLocalDeck(deck);
         saveOctgnDeck(deck);
         
+        recalculateDeckTotal();
+
         return false;
     });
 
@@ -213,6 +222,8 @@
         var deck = getDeckModel();
 
         saveLocalDeck(deck);
+
+        recalculateDeckTotal();
 
         return false;
     });
@@ -260,6 +271,8 @@
             total += parseInt($(item).val());
         });
 
+        console.log('total: ' + total);
+
         setTotalCards(total);
     }
 
@@ -278,7 +291,11 @@
                 break
             case 1:
             default:
-                updateTotalCards(1);
+                if (item.type != 'heroes') {
+                    console.log('???');
+                    console.log(item);
+                    updateTotalCards(1);
+                }
                 item.count1.push(guid);
                 break;
         }
@@ -404,18 +421,23 @@
             counts: {
             },
             heroes: {
+                type: 'heroes',
                 all: [], count1: [], count2: [], count3: []
             },
             allies: {
+                type: 'allies',
                 all: [], count1: [], count2: [], count3: []
             },
             attachments: {
+                type: 'attachments',
                 all: [], count1: [], count2: [], count3: []
             },
             events: {
+                type: 'events',
                 all: [], count1: [], count2: [], count3: []
             },
             sideQuests: {
+                type: 'sideQuests',
                 all: [], count1: [], count2: [], count3: []
             }
         };
