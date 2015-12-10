@@ -439,6 +439,7 @@ namespace HallOfBeorn.Models.Sets
 and he shall plant it in high places,
 and the City shall be blessed.
 -The Return of the King",
+                HtmlTemplate = "<p><b>Action:</b> Until the end of the phase, all characters get +1 {Attack}. All {trait:Gondor.@Gondor} characters also get +1 {Defense} until the end of the phase.</p><p class='flavor-text'>And the tree that was withered shall be renewed,<br>and he shall plant it in high places,<br>and the City shall be blessed.<br>&ndash;The Return of the King</p>",
                 Quantity = 2,
                 Number = 22,
                 Artist = Artist.Margaret_Hardy
