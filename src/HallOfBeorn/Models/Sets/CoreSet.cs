@@ -942,7 +942,8 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 ResourceCost = 1,
                 Traits = new List<string>() { "Condition." },
                 Text = "Attach to a location.\r\nAttached location gets -1 Threat.",
-                FlavorText = "\"Power to defy our enemy is not in him, unless shuch power is in the earth itself.\" -Gandalf, The Fellowship of the Ring",
+                FlavorText = "\"Power to defy our Enemy is not in him, unless shuch power is in the earth itself.\" -Gandalf, The Fellowship of the Ring",
+                HtmlTemplate = "<p>Attach to a location.</p><p>Attached location gets -1 {Threat}.</p><p class='flavor-text'>&quot;Power to defy our Enemy is not in him, unless shuch power is in the earth itself.&quot;<br>&ndash;Gandalf, The Fellowship of the Ring</p>",
                 Quantity = 2,
                 Number = 56,
                 Artist = Artist.Soul_Core
