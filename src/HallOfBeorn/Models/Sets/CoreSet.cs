@@ -929,6 +929,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Traits = new List<string>() { "Condition." },
                 Text = "Attach to a hero.\r\nAttached hero gains +1 Willpower.",
                 FlavorText = "\"You are indeed high in the favor of the Lady!\"\r\n-Unnamed Elf of Lórien,\r\nThe Fellowship of the Ring",
+                HtmlTemplate = "<p>Attach to a hero.</p><p>Attached hero gains +1 {Willpower}.</p><p class='flavor-text'>&quot;You are indeed high in the favor of the Lady!&quot;<br>&ndash;Unnamed Elf of Lórien,<br>The Fellowship of the Ring</p>",
                 Quantity = 2,
                 Number = 55,
                 Artist = Artist.Magali_Villeneuve
