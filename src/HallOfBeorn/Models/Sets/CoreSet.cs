@@ -861,6 +861,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 ResourceCost = 1,
                 Text = "Response: Cancel the 'when revealed' effects of a card that was just revealed from the encounter deck.",
                 FlavorText = "\"There is naught that you can do, other than to resist, with hope or without it\"\r\n-Elrond, The Fellowship of the Ring",
+                HtmlTemplate = "<p><b>Response:</b> Cancel the &ldquo;when revealed&rdquo; effects of a card that was just revealed from the encounter deck.</p><p class='flavor-text'>&quot;There is naught that you can do, other than to resist, with hope or without it&quot;<br>&ndash;Elrond, The Fellowship of the Ring</p>",
                 Quantity = 2,
                 Number = 50,
                 Artist = Artist.Ryan_Barger
