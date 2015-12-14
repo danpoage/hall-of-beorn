@@ -848,6 +848,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 ResourceCost = 1,
                 Text = "Action: Choose a player. Shuffle that player's discard pile back into his deck.",
                 FlavorText = "\"If Gondor has such men still in these days of fading, great must have been its glory in the days of its rising.\" -Legolas, The Return of the King",
+                HtmlTemplate = "<p><b>Action:</b> Choose a player. Shuffle that player's discard pile back into his deck.</p><p class='flavor-text'>&quot;If Gondor has such men still in these days of fading, great must have been its glory in the days of its rising.&quot;<br>&ndash;Legolas, The Return of the King</p>",
                 Quantity = 2,
                 Number = 49,
                 Artist = Artist.Erfian_Asafat
