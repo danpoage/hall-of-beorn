@@ -481,8 +481,8 @@ namespace HallOfBeorn.Models.Sets
                 .WithInfo(79, 1, Artist.Mark_Behm));
             Cards.Add(Card.Quest("The Voice of Saruman", "3D397200-CBF9-4195-A444-B4F4B8DE40EA", 9, 3, "The Road to Isengard", 15)
                 .WithFlavor("Suddenly another voice spoke, low and melodious, its very sound an enchantment. Those who listened unwarily to that voice could seldom report the words that they heard... -The Two Towers")
-                .WithText("When Revealed: Each player draws 6 cards. Each player witth more than 6 cards in his hand discards cards from his hand until he has only 6.\r\nAttach Saruman's Staff to Saruman.")
-                .WithText("While Orthanc is the active location, Saruman is considered to be engaged with the first player.\r\nForced: When Orthanc is explored, cancel any progress placed on the quest this phase and return Orthanc to the staging area.\r\nIf a player has 0 cards in his hand, he is eliminated from the game. If the players defeat this stage, they win the game.")
+                .WithText("When Revealed: Each player draws 6 cards. Each player witth more than 6 cards in his hand discards cards from his hand until he has only 6. Attach Saruman's ~Staff to Saruman.")
+                .WithOppositeText("While Orthanc is the active location, Saruman is considered to be engaged with the first player.\r\nForced: When Orthanc is explored, cancel any progress placed on the quest this phase and return Orthanc to the staging area.\r\nIf a player has 0 cards in his hand, he is eliminated from the game. If the players defeat this stage, they win the game.")
                 .WithIncludedEncounterSets(EncounterSet.SnagaOrcs)
                 .WithInfo(80, 1, Artist.Tiziano_Baracchi));
             Cards.Add(Card.Campaign("The Road to Isengard", "B0DE0027-1DAE-46E6-B6D4-E5BC123BB445", 9, "The Road to Isengard", "The Lord of the Rings Part 9")
