@@ -494,6 +494,7 @@ and the City shall be blessed.
                 Traits = new List<string>() { "Gondor.", "Title." },
                 Text = "Attach to a hero. Attached hero gains the Gondor trait.\r\nAction: Exhaust Steward of Gondor to add 2 resources to attached hero's resource pool.",
                 FlavorText = "\"It was commanded yesterday.\" -Denethor, The Return of the King",
+                HtmlTemplate = "<p>Attach to a hero.</p><p>Attached hero gains the {trait:Gondor.@Gondor} trait.</p><p><b>Action:</b> Exhaust {self} to add 2 resources to attached hero's resource pool.</p><p class='flavor-text'>&quot;It was commanded yesterday.&quot;<br>&ndash;Denethor, The Return of the King</p>",
                 Quantity = 2,
                 Number = 26,
                 Artist = Artist.Empty_Room_Studios
