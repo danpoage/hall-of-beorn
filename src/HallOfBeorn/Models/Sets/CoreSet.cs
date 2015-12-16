@@ -453,6 +453,7 @@ and the City shall be blessed.
                 ResourceCost = 1,
                 Text = "Action: Put 1 ally card into play from your hand. At the end of the phase, if that ally is still in play, return it to your hand.",
                 FlavorText = "There is a seed of courage hidden (often deeply, it is true) in the heart of the fattest and most timid hobbit, waiting for some final and desperate danger to make it grow.\r\n-The Fellowship of the Ring",
+                HtmlTemplate = "<p><b>Action:</b> Put 1 {type:Ally@ally} card into play from your hand. At the end of the phase, if that ally is still in play, return it to your hand.</p><p class='flavor-text'>There is a seed of courage hidden (often deeply, it is true) in the heart of the fattest and most timid hobbit, waiting for some final and desperate danger to make it grow.<br>&ndash;The Fellowship of the Ring</p>",
                 Quantity = 2,
                 Number = 23,
                 Artist = Artist.Winona_Nelson
