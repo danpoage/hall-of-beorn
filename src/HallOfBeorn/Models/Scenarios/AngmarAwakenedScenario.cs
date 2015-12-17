@@ -5,6 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Scenarios
 {
+
     public abstract class AngmarAwakenedScenario : Scenario
     {
         protected void ExcludeAngmarOrcsFromEasyMode()
