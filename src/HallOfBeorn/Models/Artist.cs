@@ -491,6 +491,9 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Joshua_Calloway);
             all.Add(Artist.Chris_Metcalf);
 
+            //The Dread Realm
+            all.Add(Artist.Glen_Osterberger);
+
             //Murder at the Prancing Pony
             all.Add(Artist.Lutful_Valeriya_Romanovna);
             all.Add(Artist.Micah_Epstein);
@@ -753,6 +756,7 @@ namespace HallOfBeorn.Models
         public static Artist Gabriel_Verdon = new Artist { Name = "Gabriel Verdon", URL = "http://gabriel-verdon.deviantart.com" };
         public static Artist Gabrielle_Portal = new Artist { Name = "Gabrielle Portal", URL = "http://gabrielleportaldesign.blogspot.com" };
         public static Artist Garret_DeChellis = new Artist { Name = "Garret DeChellis", URL = "http://www.gdillustration.com" };
+        public static Artist Glen_Osterberger = new Artist { Name = "Glen Osterberger", URL = "http://www.glenosterberger.com/index.html" };
         public static Artist Greg_Opalinski = new Artist { Name = "Greg Opalinski", URL = "http://greg-opalinski.deviantart.com" };
         public static Artist Grzegorz_Pedrycz = new Artist { Name = "Grzegorz Pedrycz", URL = "http://grzegorzpedrycz.deviantart.com" };
         public static Artist Guido_Kuip = new Artist { Name = "Guido Kuip", URL = "http://yoitisi.deviantart.com" };
