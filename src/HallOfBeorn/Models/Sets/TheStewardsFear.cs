@@ -95,6 +95,7 @@ namespace HallOfBeorn.Models.Sets
                 Text = "Attach to a hero. Limit 1 per hero.\r\nAttached hero gains +1 Defense. (+2 Defense instead if attached hero has the Gondor trait.)",
                 FlavorText = "There flowered a White Tree, and that was for Gondor... -The Return of the King",
                 Keywords = new List<string>() { "Restricted." },
+                HtmlTemplate = "<p>Attach to a {type:hero}. {keyword:Restricted.}</p><p>Limit 1 per hero.</p><p>Attached hero gains +1 {Defense}. (+2 {Defense} instead if attached hero has the {trait:Gondor.@Gondor} trait.)</p><p class='flavor-text'>There flowered a White Tree, and that was for Gondor...<br>&ndash;The Return of the King</p>",
                 Quantity = 3,
                 Number = 5,
                 Artist = Artist.Owen_William_Weber
