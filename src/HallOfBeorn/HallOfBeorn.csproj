@@ -338,6 +338,7 @@
     <Compile Include="Models\Scenarios\TheBattleOfLakeTown.cs" />
     <Compile Include="Models\Scenarios\TheBloodOfGondor.cs" />
     <Compile Include="Models\Scenarios\TheDeadMarshes.cs" />
+    <Compile Include="Models\Scenarios\TheDreadRealm.cs" />
     <Compile Include="Models\Scenarios\TheDruadanForest.cs" />
     <Compile Include="Models\Scenarios\TheDunlandTrap.cs" />
     <Compile Include="Models\Scenarios\TheFordsOfIsen.cs" />

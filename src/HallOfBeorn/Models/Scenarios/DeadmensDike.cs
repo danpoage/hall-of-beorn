@@ -20,10 +20,8 @@ namespace HallOfBeorn.Models.Scenarios
             AddQuestCardId("A-Fell-Wraith-TLR");
 
             ExcludeDarkSorceryFromEasyMode();
-
-            ExcludeFromEasyMode("Cursed-Dead-TLR", 1);
-            ExcludeFromEasyMode("Dead-Lord-TLR", 1);
-            ExcludeFromEasyMode("Restless-Evil-TLR", 1);
+            ExcludeCursedDeadFromEasyMode();
+            
             ExcludeFromEasyMode("Broken-Battlements-TLR", 1);
             ExcludeFromEasyMode("Deadmen's-Gate-TLR", 1);
             ExcludeFromEasyMode("Haunted-Keep-TLR", 1);

@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.Products
             : base("The Dread Realm", "MEC44", ImageType.Jpg)
         {
             AddCardSet(CardSet.TheDreadRealm);
+
+            AddScenario(new HallOfBeorn.Models.Scenarios.TheDreadRealm());
         }
     }
 }

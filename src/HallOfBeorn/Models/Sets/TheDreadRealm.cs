@@ -74,6 +74,90 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Attach to a unique ally belonging to any sphere of influence.\r\nAttached character loses the ally card type and gains the hero card type.")
                 .WithFlavor("\"But why, lord, did you receive me as sword-thain, if not to stay by your side?\"\r\n-Merry, The Return of the King")
                 .WithInfo(149, 3, Artist.Tomasz_Jedruszek));
+            Cards.Add(Card.Quest("The Catacombs of Carn Dûm", "", 6, 1, setName, 18)
+                .WithNormalizedTitle("The Catacombs of Carn Dum")
+                .WithFlavor("As you descend into the catacombs beneath Carn Dûm, you find yourself overcome with terror. Still, you press onward, knowing that Iârion's fate-and perhaps the fate of the north-lies in your hand.")
+                .WithText("Setup: Set Daechanar and Altar of Midwinter aside, out of play. Each player reveals an encounter card from the top of the encounter deck. Each player reanimates the top card of his deck.")
+                .WithOppositeFlavor("Daechanar's powers of sorcery and necromancy are strongest here, in the capital of the Witch-realm where the lord of the Nazgûl once resided.")
+                .WithOppositeText("Reanimated Dead are Undead enemies with 2 Threat, 2 Attack, 2 Defense and 2 hit points.\r\nWhen the players advance to stage 2, all Sorcery cards attached to this stage are attached to stage 2B.")
+                .WithInfo(150, 1, Artist.Logan_Feliciano));
+            Cards.Add(Card.Quest("Angmar Awakened", "", 6, 2, setName, 255)
+                .WithFlavor("A final scream fills the dreadful halls of Carn Dûm, and you suspect the worst. As you enter the site of Daechanar's dark ritual, your fears come to life. Iârion stands before you, cracking his neck and gripping the blade at his side tightly, as though testing his muscles. Only it isn't him.")
+                .WithText("When Revealed: Add Daechanar to the staging area. Make Altar of Midwinter the active location, returning any previously active location to the staging area. Each player reanimates the top card of his deck.")
+                .WithOppositeFlavor("Daechanar, in the body of your ally Iârion, laughs wickedly. Despair and frustration are the only thoughts that enter your mind. In the end, you were too late to stop this cruel fate. \"Finally! Yes, this body will do nicely.\" the wraith wearing the guise of your friend muses. He draws his blade.")
+                .WithOppositeFlavor("Reanimated Dead are Undead enemies with 2 Threat, 2 Attack, 2 Defense and 2 hit points.\r\nWhen Daechanar is defeated, advance to the next stage.")
+                .WithInfo(151, 1, Artist.Lukasz_Jaskolski));
+            Cards.Add(Card.Quest("Daechanar's Fall", "", 6, 3, setName, 255)
+                .WithFlavor("The imposter in Iârion's body collapses in agony, and a piercing shriek echoes the halls as the sorcerer exits Iârion. \"Thank you,\" Iârion says with a pained smile before his eyes close for the last time. Before you can mourn your loss, the walls begin to shake and crack. The catacombs are collapsing!")
+                .WithText("When Revealed: If there are less than X locations in the staging area, search the encounter deck and discard pile and add locations to the staging area until there are X locations in staging area. X is the number of players in the game.")
+                .WithOppositeText("Reanimated Dead are Undead enemies with 2 Threat, 2 Attack, 2 Defense and 2 hit points.\r\nProgress that would be placed on this quest is instead placed on locations in the staging area, divided as you choose.\r\nForced: At the end of the phase, if there are any locations in play, deal 1 damage to all characters in play. If there are no locations in play, the players have escaped Carn Dûm, and win the game.")
+                .WithInfo(152, 1, Artist.Alvaro_Calvo_Escudero));
+            Cards.Add(Card.Enemy("Daechanar", "", setName, 1, 5, 4, 5, 12)
+                .WithUnique()
+                .WithTraits("Undead.", "Dúnedain.", "Sorcerer.")
+                .WithText("Cannot have attachments.\r\nDaechanar gets +1 Attack for each Sorcery card in play, and gains indestructible while at least 1 Sorcery card is in play.\r\nForced: When Daechanar is damaged, if there is at least 1 Sorcery card in play, cancel all damage just dealt and remove a Sorcery card from the game.")
+                .WithVictoryPoints(10)
+                .WithInfo(153, 1, Artist.Lukasz_Jaskolski));
+            Cards.Add(Card.Location("Altar of Midwinter", "", setName, 5, 9)
+                .WithUnique()
+                .WithTraits("Carn Dûm.", "Underground.")
+                .WithText("While Daechanar is in play, progress cannot be placed on Altar of Widwinter.\r\nForced: At the end of the staging step, the first player must either reveal 1 additional card from the encounter deck, or reanimate the top card of his deck.")
+                .WithVictoryPoints(5)
+                .WithInfo(154, 1, Artist.Yoann_Boissonnet));
+            Cards.Add(Card.Enemy("Dwimmerlaik", "", setName, 34, 4, 5, 0, 9)
+                .WithTraits("Undead.", "Wraith.")
+                .WithText("Forced: After Dwimmerlaik attacks and destroys a character, the defending player reanimates that character and deals it 1 shadow card.")
+                .WithShadow("Shadow: If this attacks destroys a character, reanimate that character and deal it 1 shadow card.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(155, 3, Artist.Anthony_Devine));
+            Cards.Add(Card.Enemy("Witch of Angmar", "", setName, 26, 3, 2, 2, 4)
+                .WithTraits("Undead.", "Sorcerer.")
+                .WithText("Forced: When you resolve shadow cards dealt to Witch of Angmar, if they have the Sorcery trait, resolve their \"when revealed\" effects. (Resolve any shadow effects first.)")
+                .WithEasyModeQuantity(2)
+                .WithInfo(156, 3, Artist.Anthony_Devine));
+            Cards.Add(Card.Enemy("Wraith of Carn Dûm", "", setName, 18, 2, 4, 0, 5)
+                .WithNormalizedTitle("Wraith of Carn Dum")
+                .WithTraits("Undead.", "Wraith.")
+                .WithText("Forced: When Wraith of Carn Dûm leaves play, attach it to a character in play. (Counts as a Sorcery attachment with the text: \"Attached character has -1 Willpower, -1 Attack, and -1 Defense. If the attached character leaves play, return Wraith of Carn Dûm to the staging area as an enemy.\")")
+                .WithInfo(157, 2, Artist.Ilich_Henriquez));
+            Cards.Add(Card.Location("Sinister Dungeon", "", setName, 4, 1)
+                .WithTraits("Carn Dûm.", "Underground.")
+                .WithText("Forced: When Sinister Dungeon is explored, the first player reanimates a random card from his hand and deals Sinister Dungeon to it facedown as a shadow card.")
+                .WithShadow("Shadow: Discard the top 2 cards of the encounter deck. Resolve the \"when revealed\" effects of each Sorcery card discarded by this effect.")
+                .WithInfo(158, 3, Artist.Rafal_Hrynkiewicz));
+            Cards.Add(Card.Location("Tombs of Carn Dûm", "", setName, 3, 3)
+                .WithNormalizedTitle("Tombs of Carn Dum")
+                .WithTraits("Carn Dûm.", "Underground.")
+                .WithText("ForcedL At the end of the round, discard the top card of each player's deck. Each player must reanimate each ally discarded by this effect.\r\nTravel: Deal 1 shadow card to each Undead enemy in play to travel here.")
+                .WithFlavor("He could see nothing but the dim flame of the torches; but if the company halted, there seemed and endless whisper of voices all about him...\r\n-The Return of the King")
+                .WithEasyModeQuantity(0)
+                .WithInfo(159, 3, Artist.Logan_Feliciano));
+            Cards.Add(Card.Location("Dark Halls", "", setName, 2, 4)
+                .WithTraits("Carn Dûm.", "Underground.")
+                .WithText("While Dark Halls is in the staging area, each Reanimated Dead gets +1 Attack and +1 Defense.")
+                .WithShadow("Shadow: If there is a copy of the defending character in your discard pile, reanimate it and deal it 1 shadow card.")
+                .WithInfo(160, 2, Artist.Tomasz_Jedruszek));
+            Cards.Add(Card.Location("Unholy Crypt", "", setName, 1, 7)
+                .WithTraits("Carn Dûm.", "Underground.")
+                .WithText("Unholy Crypt gets +1 Threat for each Reanimated Dead in play.")
+                .WithShadow("Shadow: if this attack destroys a character, reanimate that character and deal it 1 shadow card.")
+                .WithInfo(161, 3, Artist.Mikhail_Greuli));
+            Cards.Add(Card.Treachery("Possession", "", setName)
+                .WithTraits("Sorcery.")
+                .WithKeywords("Doomed 1.")
+                .WithText("When Revealed: Destroy the highest cost ally in play. That ally's controller reanimates that character, adds it to the staging area, and attaches Possesion to it. (Counts as a Condition attachment with the text: \"If Possession is discarded, the attached card is also discarded.\")")
+                .WithEasyModeQuantity(0)
+                .WithInfo(162, 2, Artist.Victor_Garcia));
+            Cards.Add(Card.Treachery("A Fell Dread", "", setName)
+                .WithTraits("Sorcery.")
+                .WithText("When Revealed: The player with the highest threat must attach A Fell Dread to a hero he controls without A Fell Dread Attached. (Counts as a Condition attachment with the text: \"Attached hero's Willpower is reduced to 0. During the quest phase, attached hero must commit to the quest, if able.\")")
+                .WithInfo(163, 2, Artist.Tiziano_Baracchi));
+            Cards.Add(Card.Treachery("Death and Calamity", "", setName)
+                .WithTraits("Sorcery.")
+                .WithText("When Revealed: Attach Death and Calamity to the current quest. Then, the first player reanimates the top X cards of his deck, where X is the number of copies of Death and Calamity in play.")
+                .WithShadow("Shadow: Attacking enemy gets +X Attack, where X is the number of Sorcery cards in play.")
+                .WithEasyModeQuantity(2)
+                .WithInfo(164, 4, Artist.Rafal_Hrynkiewicz));
         }
     }
 }
