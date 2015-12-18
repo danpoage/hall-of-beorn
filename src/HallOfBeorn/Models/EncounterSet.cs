@@ -116,6 +116,7 @@ namespace HallOfBeorn.Models
             Add(AcrossTheEttenmoors);
             Add(TheTreacheryOfRhudaur);
             Add(TheBattleOfCarnDum);
+            Add(TheDreadRealm);
 
             //The Hobbit: Over Hill and Under Hill
             Add(WeMustAwayEreBreakOfDay);
@@ -324,6 +325,7 @@ namespace HallOfBeorn.Models
         public static EncounterSet AcrossTheEttenmoors = new EncounterSet { Name = "Across the Ettenmoors", Set = "Across the Ettenmoors" };
         public static EncounterSet TheTreacheryOfRhudaur = new EncounterSet { Name = "The Treachery of Rhudaur", Set = "The Treachery of Rhudaur" };
         public static EncounterSet TheBattleOfCarnDum = new EncounterSet { Name = "The Battle of Carn Dûm", Set = "The Battle of Carn Dûm", NormalizedSet = "The Battle of Carn Dum" };
+        public static EncounterSet TheDreadRealm = new EncounterSet { Name = "The Dread Realm", Set = "The Dread Realm" };
 
         //The Hobbit: Over Hill and Under Hill
         public static EncounterSet WeMustAwayEreBreakOfDay = new EncounterSet { Name = "We Must Away, Ere Break of Day", Set = "The Hobbit: Over Hill and Under Hill" };
