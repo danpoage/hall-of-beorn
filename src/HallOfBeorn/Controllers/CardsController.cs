@@ -279,6 +279,16 @@ namespace HallOfBeorn.Controllers
             return View(model);
         }*/
 
+        private Product getProductByIdentifier(string id)
+        {
+            return productRepository.Products()
+                .Where(
+                    x => x.Name.ToUrlSafeString() == id || 
+                    x.Name.NormalizeCaseSensitiveString().ToUrlSafeString() == id ||
+                    x.Code == id
+                ).FirstOrDefault();
+        }
+
         public ActionResult Browse(string id)
         {
             var model = new BrowseViewModel();
@@ -292,7 +302,7 @@ namespace HallOfBeorn.Controllers
             }
             else
             {
-                var product = productRepository.Products().Where(x => x.Name.ToUrlSafeString() == id || x.Name.NormalizeCaseSensitiveString().ToUrlSafeString() == id).FirstOrDefault();
+                var product = getProductByIdentifier(id);
                 if (product != null)
                 {
                     if (product.Name.NormalizeCaseSensitiveString().ToUrlSafeString() != id)
