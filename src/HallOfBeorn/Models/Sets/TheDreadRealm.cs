@@ -22,6 +22,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithTraits("Noldor.", "Noble.")
                 .WithText("Action: Discard a card from your hand to add 1 resource to a Noldor hero's resource pool, or to Aragorn's resource pool. (Limit once per round.)")
                 .WithFlavor("...the light of stars was in her bright eyes, grey as a cloudless night; yet queenly she looked, and thought and knowledge were in her glance, as of one who has known many things that the years bring.\r\n-The Fellowship of the Ring")
+                .WithTemplate("<p><b>Action:</b> Discard a card from your hand to add 1 resource to a {trait-hero:Noldor.@Noldor}'s resource pool, or to {title:Aragorn@Aragorn's} resource pool. (Limit once per round.)</p><p class='flavor-text'>...the light of stars was in her bright eyes, grey as a cloudless night; yet queenly she looked, and thought and knowledge were in her glance, as of one who has known many things that the years bring.<br>&ndash;The Fellowship of the Ring</p>")
                 .WithInfo(140, 1, Artist.Magali_Villeneuve));
             Cards.Add(Card.Ally("Éothain", "", Sphere.Leadership, 4, 2, 2, 1, 3)
                 .WithNormalizedTitle("Eothain")
