@@ -249,7 +249,7 @@ namespace HallOfBeorn.Models
         public static EncounterSet JourneyAlongTheAnduin = new EncounterSet { Name = "Journey Along the Anduin", Set = "Core Set"};
         public static EncounterSet SauronsReach = new EncounterSet { Name = "Sauron's Reach", Set = "Core Set" };
         public static EncounterSet Wilderlands = new EncounterSet { Name = "Wilderlands", Set = "Core Set" };
-        public static EncounterSet EscapeFromDolGuldur = new EncounterSet { Name = "Escape From Dol Guldur", Set = "Core Set" };
+        public static EncounterSet EscapeFromDolGuldur = new EncounterSet { Name = "Escape from Dol Guldur", Set = "Core Set" };
         public static EncounterSet TheHuntForGollum = new EncounterSet { Name = "The Hunt for Gollum", Set = "The Hunt for Gollum" };
         public static EncounterSet ConflictAtTheCarrock = new EncounterSet { Name = "Conflict at the Carrock", Set = "Conflict at the Carrock" };
         public static EncounterSet AJourneyToRhosgobel = new EncounterSet { Name = "A Journey to Rhosgobel", Set = "A Journey to Rhosgobel" };
