@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HallOfBeorn", "HallOfBeorn\HallOfBeorn.csproj", "{2AB13CDF-0847-47FA-908C-CA0E7CBAA9CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateBuilder", "TemplateBuilder\TemplateBuilder.csproj", "{D5FEB5CD-754B-4E6C-A4C1-28A95890C30E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScenarioBuilder", "ScenarioBuilder\ScenarioBuilder.csproj", "{D8D3970A-F1A0-442E-A25D-FB62DE31C8F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{2AB13CDF-0847-47FA-908C-CA0E7CBAA9CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AB13CDF-0847-47FA-908C-CA0E7CBAA9CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AB13CDF-0847-47FA-908C-CA0E7CBAA9CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5FEB5CD-754B-4E6C-A4C1-28A95890C30E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5FEB5CD-754B-4E6C-A4C1-28A95890C30E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5FEB5CD-754B-4E6C-A4C1-28A95890C30E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5FEB5CD-754B-4E6C-A4C1-28A95890C30E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8D3970A-F1A0-442E-A25D-FB62DE31C8F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8D3970A-F1A0-442E-A25D-FB62DE31C8F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8D3970A-F1A0-442E-A25D-FB62DE31C8F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8D3970A-F1A0-442E-A25D-FB62DE31C8F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
