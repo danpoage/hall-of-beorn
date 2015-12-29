@@ -30,6 +30,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithTraits("Rohan.", "Warrior.")
                 .WithText("Response: After a Rohan ally is discarded from play by a card effect, ready Éothain.")
                 .WithFlavor("\"We must hasten south, lord. Let us leave these wild folk to their fancies. Or let us bind them and take them to our king.\"\r\n-The Two Towers")
+                .WithTemplate("<p><b>Response:</b> After a {trait:Rohan.@Rohan} ally is discarded from play by a card effect, ready {self}.</p><p class='flavor-text'>&quot;We must hasten south, lord. Let us leave these wild folk to their fancies. Or let us bind them and take them to our king.&quot;<br>&ndash;The Two Towers</p>")
                 .WithInfo(141, 3, Artist.Glen_Osterberger));
             Cards.Add(Card.Attachment("Sword of Númenor", "", Sphere.Leadership, 1)
                 .WithNormalizedTitle("Sword of Numenor")
@@ -37,6 +38,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithKeywords("Restricted.")
                 .WithText("Attach to a Dúnedain or Gondor hero.\r\nAttached hero gets +1 Attack.\r\nResponse: After attached hero participates in an attack that destroys an enemy with 5 or more printed hit points, exhaust Sword of Númenor to add 1 resource to attached hero's resource pool.")
                 .WithFlavor("...the flowing characters of Númenor glinted like fire upon the blade.\r\n-The Fellowship of the Ring")
+                .WithTemplate("<p>Attach to a {traits-hero:Dúnedain,Gondor}. {keyword:Restricted.}</p><p>Attached hero gets +1 {Attack}.</p><p><b>Response:</b> After attached hero participates in an attack that destroys an enemy with 5 or more printed hit points, exhaust {self} to add 1 resource to attached hero's resource pool.</p><p class='flavor-text'>...the flowing characters of Númenor glinted like fire upon the blade.<br>&ndash;The Fellowship of the Ring</p>")
                 .WithInfo(142, 3, Artist.Romana_Kendelic));
             Cards.Add(Card.Ally("Fornost Bowman", "", Sphere.Tactics, 3, 1, 1, 1, 3)
                 .WithGeneric()
@@ -46,7 +48,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithFlavor("To the last battle at Fornost with the Witch-lord of Angmar they sent some bowmen to the aid of the king...\r\n-The Fellowship of the Ring")
                 .WithInfo(143, 3, Artist.Jose_Vega));
             Cards.Add(Card.Event("Hour of Wrath", "", Sphere.Tactics, 4)
-                .WithText("Action: Choose a hero. Until the end of the phase, the chose hero does not exhaust to attack or defend.\r\nValour Action: Choose a player. Until the end of the phase, each of that player's heroes do not exhaust to attack or defend.")
+                .WithText("Action: Choose a hero. Until the end of the phase, the chosen hero does not exhaust to attack or defend.\r\nValour Action: Choose a player. Until the end of the phase, each of that player's heroes do not exhaust to attack or defend.")
                 .WithFlavor("These three were unscathed, for such was their fortune and the skill and might of their arms...\r\n-The Return of the King")
                 .WithInfo(144, 3, Artist.Mark_Behm));
             Cards.Add(Card.Event("Elven-light", "", Sphere.Spirit, 1)
