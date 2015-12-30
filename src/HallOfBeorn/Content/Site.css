@@ -1134,3 +1134,11 @@ tr.pager td {
 .no-style-list {
     list-style-type: none;
 }
+
+.main-text {
+}
+
+.small-text {
+    font-size: 11px;
+    font-style: italic;
+}

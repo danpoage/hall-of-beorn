@@ -80,6 +80,12 @@ namespace HallOfBeorn.Models
             var innerText = string.Empty;
             switch (type.ToLowerSafe())
             {
+                case "query":
+                    sb.AppendFormat("<a title='Search: {0}' href='/Cards/Search?Query={1}' target='_blank'>{0}</a>", label, key);
+                    break;
+                case "search":
+                    sb.AppendFormat("<a title='Search: {0}' href='/Cards/Search?{1}' target='_blank'>{0}</a>", label, key);
+                    break;
                 case "card":
                     sb.AppendFormat("<a title='Card: {0}' href='/Cards/Details/{1}' target='_blank'>{0}</a>", label, key);
                     break;
