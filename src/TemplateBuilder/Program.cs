@@ -24,14 +24,22 @@ namespace TemplateBuilder
 
             statService = new StatService(cardRepo);
 
-            const string file = "templates1.txt";
+            const string file1 = "templates1.txt";
+            const string file2 = "templates2.txt";
             foreach (var c in cardRepo.Cards())
             {
                 if (string.IsNullOrEmpty(c.HtmlTemplate))
                 {
-                    Console.WriteLine("  Writing template for : " + c.Slug);
-                    var text = string.Format("AddHtml(\"{0}\", \"{1}\");\r\n", c.Slug, GetTemplate(c));
-                    File.AppendAllText(file, text);
+                    Console.WriteLine("  Writing template1 for : " + c.Slug);
+                    var text = string.Format("AddHtml(\"{0}\", \"{1}\");\r\n", c.Slug, GetTemplate(c, c.Text, c.Shadow, c.FlavorText));
+                    File.AppendAllText(file1, text);
+                }
+
+                if (string.IsNullOrEmpty(c.HtmlTemplate2) && !string.IsNullOrEmpty(c.OppositeText))
+                {
+                    Console.WriteLine("  Writing template2 for : " + c.Slug);
+                    var text = string.Format("AddHtml(\"{0}\", \"{1}\");\r\n", c.Slug, GetTemplate(c, c.OppositeText, string.Empty, c.OppositeFlavorText));
+                    File.AppendAllText(file2, text);
                 }
             }
 
@@ -39,14 +47,50 @@ namespace TemplateBuilder
             Console.ReadLine();
         }
 
-        private static void AddEffect(StringBuilder html, Card card, string text, bool isFirst, bool isParagraph)
+        private static void AddEffect(StringBuilder html, Card card, string text, bool isParagraph)
         {
             if (isParagraph)
             {
                 html.Append("<p>");
             }
 
-            var effect = CardEffect.Parse(statService, card, text, isFirst);
+            var effect = CardEffect.Parse(statService, card, text);
+
+            foreach (var token in effect.Tokens)
+            {
+                if (token.IsTrigger || token.IsStrong)
+                {
+                    html.Append("<b>");
+                }
+
+                if (token.IsEmphasized)
+                {
+                    html.Append("<i>");
+                }
+
+                if (token.IsIcon)
+                {
+                    html.Append("{" + token.Text + "}");
+                }
+                else if (token.IsTitleReference)
+                {
+                    html.Append("{title:" + token.Text + "}");
+                }
+                else
+                {
+                    html.Append(token.Text);
+                }
+
+                if (token.IsEmphasized)
+                {
+                    html.Append("</i>");
+                }
+
+                if (token.IsTrigger || token.IsStrong)
+                {
+                    html.Append("</b>");
+                }
+            }
 
             if (isParagraph)
             {
@@ -54,7 +98,7 @@ namespace TemplateBuilder
             }
         }
 
-        private static string GetTemplate(Card card)
+        private static string GetTemplate(Card card, string text, string shadowText, string flavorText)
         {
             var html = new StringBuilder();
 
@@ -63,15 +107,30 @@ namespace TemplateBuilder
                 html.Append("<p>");
                 foreach (var keyword in card.Keywords)
                 {
-                    AddEffect(html, card, keyword, false, false);
+                    AddEffect(html, card, keyword, false);
                 }
                 html.Append("</p>");
             }
 
-            var isFirst = true;
-            foreach (var text in card.Text.SplitLines())
+            foreach (var line in text.SplitLines())
             {
-                AddEffect(html, card, text, isFirst, true);
+                AddEffect(html, card, line, true);
+            }
+
+            if (!string.IsNullOrEmpty(shadowText))
+            {
+                html.Append("{shadow}<p class='shadow-text'>");
+
+                AddEffect(html, card, shadowText, false);
+
+                html.Append("</p>");
+            }
+
+            if (!string.IsNullOrEmpty(flavorText))
+            {
+                html.Append("<p class='flavor=text'>");
+                html.Append(flavorText.Replace("\r\n", "<br>").Replace("-", "&ndash;"));
+                html.Append("</p>");
             }
 
             html.Replace("\"", "&quot;");

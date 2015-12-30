@@ -156,7 +156,7 @@ namespace HallOfBeorn.Models
             "the players cannot"
         };
 
-        public static CardEffect Parse(StatService statService, Card card, string text, bool isFirst)
+        public static CardEffect Parse(StatService statService, Card card, string text)
         {
             if (text == null)
                 return null;

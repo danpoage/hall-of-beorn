@@ -22,6 +22,7 @@ namespace HallOfBeorn.Controllers
             scenarioService = (ScenarioService)System.Web.HttpContext.Current.Application[Extensions.ScenarioServiceKey];
             statService = (StatService)System.Web.HttpContext.Current.Application[Extensions.StatServiceKey];
             octgnService = (OctgnService)System.Web.HttpContext.Current.Application[Extensions.OctgnServiceKey];
+            templateService = (TemplateService)System.Web.HttpContext.Current.Application[Extensions.TemplateServiceKey];
         }
 
         private readonly SearchService searchService;
@@ -31,6 +32,7 @@ namespace HallOfBeorn.Controllers
         private readonly ScenarioService scenarioService;
         private readonly StatService statService;
         private readonly OctgnService octgnService;
+        private readonly TemplateService templateService;
 
         private void InitializeSearch(SearchViewModel model)
         {
@@ -65,14 +67,12 @@ namespace HallOfBeorn.Controllers
 
             var effects = new List<CardEffect>();
 
-            var isFirst = true;
             foreach (var line in text.Split(new string[] { "\r\n" }, StringSplitOptions.None))
             {
                 if (string.IsNullOrEmpty(line))
                     continue;
 
-                effects.Add(CardEffect.Parse(statService, card, line, isFirst));
-                isFirst = false;
+                effects.Add(CardEffect.Parse(statService, card, line));
             }
 
             return effects;
@@ -82,14 +82,26 @@ namespace HallOfBeorn.Controllers
         {
             var viewModel = new CardViewModel(card);
 
+            //TODO: Finish fixes to templates before enabling this
+            /*
+            if (string.IsNullOrEmpty(card.HtmlTemplate))
+            {
+                card.HtmlTemplate = templateService.GetHtmlTemplate1(card.Slug);
+            }
+            if (string.IsNullOrEmpty(card.HtmlTemplate2) && !string.IsNullOrEmpty(card.OppositeText))
+            {
+                card.HtmlTemplate2 = templateService.GetHtmlTemplate2(card.Slug);
+            }*/
+
+            //TODO: Remove this once the HTML templates are complete
             foreach (var keyword in card.Keywords)
-                viewModel.KeywordEffects.Add(CardEffect.Parse(statService, card, keyword, true));
+                viewModel.KeywordEffects.Add(CardEffect.Parse(statService, card, keyword));
 
             viewModel.TextEffects.AddRange(ParseCardEffects(card, card.Text));
             viewModel.OppositeTextEffects.AddRange(ParseCardEffects(card, card.OppositeText));
 
             if (!string.IsNullOrEmpty(card.Shadow))
-                viewModel.ShadowEffects.Add(CardEffect.Parse(statService, card, card.Shadow, true));
+                viewModel.ShadowEffects.Add(CardEffect.Parse(statService, card, card.Shadow));
 
             return viewModel;
         }

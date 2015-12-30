@@ -28,7 +28,6 @@ namespace HallOfBeorn
             
             System.Web.HttpContext.Current.Application.Lock();
             
-
             var productRepository = new ProductRepository();
             System.Web.HttpContext.Current.Application[Extensions.ProductRepositoryKey] = productRepository;
 
@@ -55,6 +54,9 @@ namespace HallOfBeorn
 
             var octgnService = new OctgnService(productRepository, cardRepository);
             System.Web.HttpContext.Current.Application[Extensions.OctgnServiceKey] = octgnService;
+
+            var templateService = new TemplateService();
+            System.Web.HttpContext.Current.Application[Extensions.TemplateServiceKey] = templateService;
 
             System.Web.HttpContext.Current.Application.UnLock();
         }

@@ -18,6 +18,7 @@ namespace HallOfBeorn
         public static string SearchServiceKey = "searchService";
         public static string StatServiceKey = "statService";
         public static string OctgnServiceKey = "octgnService";
+        public static string TemplateServiceKey = "templateService";
 
         public static string ToUrlSafeString(this string self)
         {

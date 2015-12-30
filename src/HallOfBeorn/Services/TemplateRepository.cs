@@ -7,6 +7,11 @@ namespace HallOfBeorn.Services
 {
     public abstract class TemplateRepository
     {
+        public TemplateRepository()
+        {
+            Initialize();
+        }
+
         private readonly Dictionary<string, string> htmlBySlug = new Dictionary<string, string>();
 
         protected abstract void Initialize();

@@ -12,6 +12,7 @@ namespace HallOfBeorn.Services
         public TemplateService()
         {
             enUsRepositories.Add(1, new EnUsTemplateRepository1());
+            enUsRepositories.Add(2, new EnUsTemplateRepository2());
         }
 
         private Dictionary<byte, TemplateRepository> enUsRepositories = new Dictionary<byte, TemplateRepository>();
