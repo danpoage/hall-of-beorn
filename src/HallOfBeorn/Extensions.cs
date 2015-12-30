@@ -245,6 +245,14 @@ namespace HallOfBeorn
             return self.Split(new char[] { separator }, StringSplitOptions.RemoveEmptyEntries).ToListSafe();
         }
 
+        public static List<string> SplitLines(this string self)
+        {
+            if (string.IsNullOrEmpty(self))
+                return new List<string>();
+
+            return self.Split(new string[] { "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries).ToListSafe();
+        }
+
         public static List<string> SplitOnSpace(this string self)
         {
             return self.SplitOn(' ');

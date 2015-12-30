@@ -13,12 +13,16 @@ namespace TemplateBuilder
 {
     class Program
     {
+        private static StatService statService;
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hall of Beorn Card Search\r\nHTML TemplateBuilder 0.0.1");
 
             var productRepo = new ProductRepository();
             var cardRepo = new CardRepository(productRepo);
+
+            statService = new StatService(cardRepo);
 
             const string file = "templates1.txt";
             foreach (var c in cardRepo.Cards())
@@ -35,11 +39,41 @@ namespace TemplateBuilder
             Console.ReadLine();
         }
 
+        private static void AddEffect(StringBuilder html, Card card, string text, bool isFirst, bool isParagraph)
+        {
+            if (isParagraph)
+            {
+                html.Append("<p>");
+            }
+
+            var effect = CardEffect.Parse(statService, card, text, isFirst);
+
+            if (isParagraph)
+            {
+                html.Append("</p>");
+            }
+        }
+
         private static string GetTemplate(Card card)
         {
             var html = new StringBuilder();
 
-            html.Replace("\r\n", "<br>");
+            if (card.Keywords.Count > 0)
+            {
+                html.Append("<p>");
+                foreach (var keyword in card.Keywords)
+                {
+                    AddEffect(html, card, keyword, false, false);
+                }
+                html.Append("</p>");
+            }
+
+            var isFirst = true;
+            foreach (var text in card.Text.SplitLines())
+            {
+                AddEffect(html, card, text, isFirst, true);
+            }
+
             html.Replace("\"", "&quot;");
 
             return html.ToString();
