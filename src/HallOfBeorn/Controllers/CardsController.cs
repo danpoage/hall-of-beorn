@@ -82,6 +82,7 @@ namespace HallOfBeorn.Controllers
         {
             var viewModel = new CardViewModel(card);
 
+            /*
             if (string.IsNullOrEmpty(card.HtmlTemplate))
             {
                 card.HtmlTemplate = templateService.GetHtmlTemplate1(card.Slug);
@@ -89,7 +90,7 @@ namespace HallOfBeorn.Controllers
             if (string.IsNullOrEmpty(card.HtmlTemplate2) && !string.IsNullOrEmpty(card.OppositeText))
             {
                 card.HtmlTemplate2 = templateService.GetHtmlTemplate2(card.Slug);
-            }
+            }*/
 
             //TODO: Remove effects once the HTML templates are complete
             foreach (var keyword in card.Keywords)

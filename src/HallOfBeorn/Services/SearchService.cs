@@ -413,15 +413,17 @@ namespace HallOfBeorn.Services
 
             if (model.IsRandom())
             {
-                var total = results.Count();
+                var total = results.Values.Where(x => x.Score() > 0).Count();
                 if (total > 1)
                 {
                     var random = new Random();
                     var choice = random.Next(0, total - 1);
-                    var score = results.Values.ToList()[choice];
+                    var score = results.Values.Where(x => x.Score() > 0).ToList()[choice];
                     results = new Dictionary<string, CardScore>();
                     results[score.Card.Slug] = score;
                 }
+
+                return results.Values.ToList();
             }
 
             var sortedResults = sortService.Sort(model, filters, results);

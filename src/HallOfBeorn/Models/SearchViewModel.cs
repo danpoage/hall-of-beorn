@@ -258,7 +258,7 @@ namespace HallOfBeorn.Models
 
         public bool IsRandom()
         {
-            return (!string.IsNullOrEmpty(this.Query) && this.Query.ContainsLower(RANDOM_KEYWORD));
+            return (!string.IsNullOrEmpty(this.Query) && this.Query.ContainsLower(RANDOM_KEYWORD)) || (this.Random.HasValue && this.Random.Value);
         }
 
         [Display(Name = "Results")]
@@ -269,6 +269,8 @@ namespace HallOfBeorn.Models
 
         [Display(Name = "Victory")]
         public string VictoryPoints { get; set; }
+
+        public bool? Random { get; set; }
 
         public HasShadow? HasShadow { get; set; }
 
@@ -502,7 +504,7 @@ namespace HallOfBeorn.Models
             {
                 if (IsAdvancedSearch())
                 {
-                    var parts = this.Query.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToListSafe().Where(x => !x.StartsWith("-") && !x.StartsWith("+")).ToListSafe();
+                    var parts = this.Query.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToListSafe().Where(x => !x.StartsWith("-") && !x.StartsWith("+") && !x.StartsWith("~")).ToListSafe();
 
                     if (parts.Count == 0)
                         return string.Empty;
