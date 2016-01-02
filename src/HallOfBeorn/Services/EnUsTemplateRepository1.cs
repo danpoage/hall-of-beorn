@@ -383,38 +383,23 @@ namespace HallOfBeorn.Services
             AddHtml("Longbeard-Map-Maker-CatC", "<p class='main-text'><b>Action:</b> Spend 1 {sphere:Lore} resource to give {self} +1 {Willpower} until the end of the phase.</p><p class='flavor-text'>On the table in the light of a big lamp with a red shade he spread a piece of parchment rather like a map. &ndash;The Hobbit</p>");
             AddHtml("A-Burning-Brand-CatC", "<p class='main-text'>Attach to a {sphere-character:Lore}.</p><p>While attached character is defending, cancel any shadow effects on cards dealt to the attacking enemy.</p><p class='flavor-text'>&quot;Keep close to the fire, with your faces outward!&quot; cried Strider. &quot;Keep some of th elonger sticks ready in your hands.&quot;<br>&ndash;The Fellowship of the Ring</p>");
             AddHtml("Song-of-Wisdom-CatC", "<p class='main-text'>Attach to a hero.</p><p>Attached hero gains a {sphere:Lore} resource icon.</p><p class='flavor-text'>It sit beside the fire and think<br>of all that I have seen,<br>of meadow&ndash;flowers and butterflies<br>in summers that have been<br>&ndash;The Fellowship of the Ring</p>");
-
-            
             AddHtml("Grimbeorn's-Quest-CatC", "<p class='main-text'><b>Setup:</b> Add {card:The-Carrock-CatC@The Carrock} to the staging area. Remove 4 unique {search:Trait=Troll.&EncounterSet=Conflict+at+the+Carrock@Troll} cards and 4 copies of the {card:Sacked-CatC@'Sacked!'} card from the encounter deck and set them aside, out of play. Then shuffle 1 'Sacked!' card per player back into the encounter deck.</p><p class='flavor-text'>While searching for Gollum in the Anduin valley, you recieve word that a group of Trolls have come to the Carrock.</p>");
             AddHtml("Against-the-Trolls-CatC", "<p class='flavor-text'>You approach the Carrock, and find that the Trolls have been watching you from the top of the rocky river landmark. As you approach, the Trolls close in and attack!</p>");
             AddHtml("Grimbeorn-the-Old-CatC", "<p class='main-text'>{self} does not exhaust to defend against Troll enemies.</p><p>If {self} has 8 or more resource tokens on him, he joins the first player as an ally.</p><p><b>Action:</b> Spend 1 {Leadership} resource to place that resource on {self}.</p>");
-
             AddHtml("A-Frightened-Beast-CatC", "<p class='main-text'><b>When Revealed:</b> Each player raises his threat by the total {Threat} of all cards in the staging area. Any player may choose to discard from play 1 {trait-ally:Creature} card he controls to cancel this effect.</p><p class='flavor-text'>Then, one of the ponies took fright at nothing and bolted. &ndash;The Hobbit</p>");
             AddHtml("Bee-Pastures-CatC", "<p class='main-text'><b>Response:</b> After you travel to {self}, search the encounter deck and discard pile for {card:Grimbeorn-the-Old-CatC@Grimbeorn the Old} and add him to the staging area. Then, shuffle the encounter deck.</p>");
-
             AddHtml("Louis-CatC", "<p class='main-text'>While {self} is engaged with a player, all {trait:Troll.@Troll} enemies gain<blockquote><b>&quot;Forced:</b> After this enemy attacks, the defending player must raise his threat by 3.&quot;</p></blockquote><p><b>Response:</b> After defeating {self}, you may choose and discard 1 &quot;Sacked!&quot; card from play.</p>");
             AddHtml("Morris-CatC", "<p class='main-text'>While {self} is engaged with a player, all {trait:Troll.@Troll} enemies get +1 {Attack}</p><p><b>Response:</b> After defeating {self}, you may choose and discard 1 'Sacked!' card from play.</p>");
+            AddHtml("Rupert-CatC", "<p class='main-text'><b>Forced:</b> After {self} attacks, shuffle all copies of the {card:Saced-CatC@'Sacked!'} card from the discard pile back into the encounter deck.</p><p><b>Response:</b> After defeating {self}, you may choose and discard 1 'Sacked!' card from play.</p>");
             AddHtml("Stuart-CatC", "<p class='main-text'>While {self} is engaged with a player, all {trait:Troll.@Troll} enemies get +1 {Defense}</p><p><b>Response:</b> After defeating {self}, you may choose and discard 1 'Sacked!' card from play.</p>");
             AddHtml("Muck-Adder-CatC", "<p class='main-text'><b>Forced:</b> If {self} damages a character, discard that character from play.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Defending character gets -1 {Defense} for the duration of this attack.</p>");
-            
-            
-            
-            
+            AddHtml("Oak-wood-Grove-CatC", "<p class='main-text'>While {self} is the active location, resource tokens from any sphere may be spent as {sphere:Leadership} resource tokens.</p>");
+            AddHtml("River-Langflood-CatC", "<p class='main-text'>While it is in the staging area, {self} gets +1 {Threat} for each {trait:Troll.@Troll} enemy in play.</p>");
+            AddHtml("Roasted-Slowly-CatC", "<p class='main-text'><b>When Revealed:</b> Destroy all heroes with the card {card:Sacked-CatC@'Sacked!'} attached. Then, shuffle {self} back into the encounter deck.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> If attacking enemy is a {trait:Troll.@Troll} remove 2 damage tokens from it.</p>");
+            AddHtml("Sacked-CatC", "<p class='main-text'><b>When Revealed:</b> Attach to a hero with no 'Sacked!' cards attached controlled by the first player. (Cannot be canceled.) Counts as a condition attachment with the text:<blockquote>Attached hero cannot attack, defend, commit to a quest, trigger its effect, or collect resources.</blockquote></p>{shadow}<p class='shadow-text'><b>Shadow:</b> If attacking enemy is a {trait:Troll.@Troll} resolve this card's 'when revealed' effect.</p>");
+            AddHtml("The-Carrock-CatC", "<p class='main-text'>Immune to player card effects.</p><p>Players cannot travel to {self} except through quest card effects.</p><p>While {self} is the active location, {trait:Troll.@Troll} enemies get +1 {Attack} and +1 {Defense}</p>");
 
             /* 
-            
-            
-            
-            
-            AddHtml("Oak-wood-Grove-CatC", "<p class='main-text'>While Oak-wood Grove is the active location, resource tokens from any sphere may be spent as{Leadership} resource tokens.</p>");
-            AddHtml("River-Langflood-CatC", "<p class='main-text'>While it is in the staging area, River Langflood gets +1{Threat} for each Troll enemy in play.</p>");
-            AddHtml("Roasted-Slowly-CatC", "<p class='main-text'><b>When Revealed:</b> Destroy all heroes with the card 'Sacked!' attached. Then, shuffle Roasted Slowly back into the encounter deck.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> If attacking enemy is a Troll remove 2 damage tokens from it.</p>");
-            AddHtml("Rupert-CatC", "<p class='main-text'><b>Forced:</b> After Rupert attacks, shuffle all copies of the 'Sacked!' card from the discard pile back into the encounter deck.</p><p><b>Response:</b> After defeating Rupert, you may choose and discard 1 'Sacked!' card from play.</p>");
-            AddHtml("Sacked-CatC", "<p class='main-text'><b>When Revealed:</b> Attach to a hero with no 'Sacked!' cards attached controlled by the first player. (Cannot be canceled.) Counts as a condition attachment with the text: 'Attached hero cannot attack, defend, commit to a quest, trigger its effect, or collect resources.'</p>{shadow}<p class='shadow-text'><b>Shadow:</b> If attacking enemy is a Troll resolve this card's 'when revealed' effect.</p>");
-            
-            
-            
-            AddHtml("The-Carrock-CatC", "<p class='main-text'>Immune to player card effects.</p><p>Players cannot travel to The Carrock except through quest card effects.While The Carrock is the active location, Troll enemies get +1 {Attack} and +1 {Defense}</p>");
             AddHtml("Prince-Imrahil-AJtR", "<p class='main-text'><b>Response:</b> After a character leaves play, ready Prince Imrahil. (Limit once per round.)</p><p class='flavor-text'>But beyond, in the great fief of Belfalas, dwelt Prince Imrahil in his castle of Dol Amroth by the sea, and he was of high blood, and his fold also, tall men and proud with sea&ndash;grey eyes. &ndash;The Return of the King.</p>");
             AddHtml("Haldir-of-Lorien-AJtR", "<p class='main-text'>Ranged.Sentinel.</p><p class='flavor-text'>&quot;But there are some of us still who go abroad for the gathering of news and the watching of our enemies, and they speak the languages of other lands.&quot; &ndash;The Fellowship of the Ring</p>");
             AddHtml("Radagast-AJtR", "<p class='main-text'>Radagast collects 1 resource each resource phase. These resources can be used to pay for Creature cards played from your hand.</p><p><b>Action:</b> Spend X resources from Radagast's pool to heal X wounds on any 1 Creature.</p><p class='flavor-text'>&quot;I have an urgent errand. My news is evil.&quot;</p>");
