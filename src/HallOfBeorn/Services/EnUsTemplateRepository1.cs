@@ -2279,6 +2279,9 @@ namespace HallOfBeorn.Services
             AddHtml("Ettendales-FttFN", "<p class='main-text'><b>Forced:</b> When Ettendales is explored, shuffle the top card of the burden deck into the encounter deck.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Attacking enemy gets +2 {Attack} If this attack destroys a character, reduce the Ring-bearer's life by 1.</p>");
             AddHtml("Come-Back-FttFN", "<p class='main-text'>Peril.Doomed 1.</p><p><b>When Revealed:</b> Reduce the Ring-bearer's life by 1 and remove all progress from the current quest.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Either reduce the Ring-bearer's life by 1, or this attack is considered undefended.</p>");
             AddHtml("The-Twilight-World-FttFN", "<p class='main-text'>Doomed 2.</p><p><b>When Revealed:</b> Attach to the Ring-bearer. Limit 1 per hero. (Counts as a Condition attachment with the text:<b>&quot;Forced:</b> At the beginning of the planning phase, either exhaust The One Ring, or reduce the Ring-bearer's life by 1.&quot;)</p>");
+            */
+             
+            /*
             AddHtml("Aredhel-FA", "<p class='main-text'><b>Response:</b> After the active location is explored, discard the top card of your deck. If it is an ally, take it into your hand.</p>");
             AddHtml("Azaghal-FA", "<p class='main-text'><b>Response:</b> After Azaghâl is destroyed as the result of an enemy attack, deal 3 damage to the attacking enemy.</p>");
             AddHtml("Barahir-FA", "<p class='main-text'>Sentinel.</p><p><b>Response:</b> After a shadow card is revealed, exhaust Barahir to add his {Defense} to the {Defense} of the defending character until the end of the phase.</p>");
