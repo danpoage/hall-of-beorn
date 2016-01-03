@@ -100,7 +100,10 @@ namespace HallOfBeorn.Models
                     sb.AppendFormat("<a title='Search: {0} Trait' href='/Cards/Search?Trait={1}' target='_blank'><b><i>{0}</i></b></a>", label, key);
                     break;
                 case "trait-character":
-                    sb.AppendFormat("<a title='Search: {0} Character' href='/Cards/Search?Trait={1}&CardType=Character' target='_blank'><b><i>{0}</i></b> character</a>", label, key);
+                    sb.AppendFormat("<a title='Search: {0} Character' href='/Cards/Search?Trait={1}&CardType=Character' target='_blank'><b><i>{0}</i></b></a>", label, key);
+                    break;
+                case "trait-attachment":
+                    sb.AppendFormat("<a title='Search: {0} Attachment' href='/Cards/Search?Trait={1}&CardType=Attachment' target='_blank'><b><i>{0}</i></b></a>", label, key);
                     break;
                 case "unique-trait-character":
                     sb.AppendFormat("<a title='Search: Unique {0} Character' href='/Cards/Search?Trait={1}&CardType=Character&IsUnique=Yes' target='_blank'>unique <b><i>{0}</i></b> character</a>", label, key);
@@ -158,7 +161,10 @@ namespace HallOfBeorn.Models
                     }
                     break;
                 case "trait-ally":
-                    sb.AppendFormat("<a title='Search: {0} Ally' href='/Cards/Search?Trait={1}&CardType=Ally' target='_blank'><b><i>{0}</i></b> ally</a>", label, key);
+                    sb.AppendFormat("<a title='Search: {0} Ally' href='/Cards/Search?Trait={1}&CardType=Ally' target='_blank'><b><i>{0}</i></b></a>", label, key);
+                    break;
+                case "trait-location":
+                    sb.AppendFormat("<a title='Search: {0} Location' href='/Cards/Search?Trait={1}&CardType=Location' target='_blank'><b><i>{0}</i></b></a>", label, key);
                     break;
                 case "keyword":
                     sb.AppendFormat("<a title='Search: {0} Keyword' href='/Cards/Search?Keyword={1}' target='_blank'>{0}</a>", label, key);
