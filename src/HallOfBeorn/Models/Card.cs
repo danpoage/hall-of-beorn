@@ -77,6 +77,9 @@ namespace HallOfBeorn.Models
                 label = key;
             }
 
+            key = key.Replace("'", "%27");
+            label = label.Replace("'", "%27");
+
             var innerText = string.Empty;
             switch (type.ToLowerSafe())
             {
@@ -91,6 +94,9 @@ namespace HallOfBeorn.Models
                     break;
                 case "title":
                     sb.AppendFormat("<a title='Search: {0} Title' href='/Cards/Search?Query=%2Btitle%3A{1}' target='_blank'>{0}</a>", label, key);
+                    break;
+                case "title-hero":
+                    sb.AppendFormat("<a title='Search: {0} Hero' href='/Cards/Search?Query=%2Btitle%3A{1}&CardType=Hero' target='_blank'>{0}</a>", label, key);
                     break;
                 case "self":
                     //sb.AppendFormat("<a title='Card: {0}' href='/Cards/Details/{1}' target='_blank'>{0}</a>", label, key);
