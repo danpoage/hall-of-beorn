@@ -348,6 +348,11 @@ namespace HallOfBeorn.Services
                 filters.Add(new SearchFilter((s, c) => { return (c.CardType == CardType.Hero && c.CardSet.Name == "Core Set"); }, 100f, "Default Search - Core Set Heroes"));
                 //model.Sort = Sort.Set_Number;
             }
+            //else if (!model.SetType.HasValue)
+            //{
+                //default set type search to official, if a card set filter is not already defined
+                //filters.Add(new SearchFilter((s, c) => { return (c.CardSet.SetType != SetType.CUSTOM); }, 1, "Official Release"));
+            //}
 
             if (filters.Count > 0)
             {
