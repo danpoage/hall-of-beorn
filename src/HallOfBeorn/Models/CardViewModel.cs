@@ -47,6 +47,18 @@ namespace HallOfBeorn.Models
         public bool HasIncludedEncounterSets { get { return _includedEncounterSets.Count > 0; } }
         public List<EncounterSetViewModel> IncludedEncounterSets { get { return _includedEncounterSets; } }
 
+        public string CountLabel
+        {
+            get
+            {
+                var easy = _card.EasyModeQuantity.HasValue ? _card.EasyModeQuantity.Value.ToString() : string.Empty;
+
+                return string.IsNullOrEmpty(easy) ?
+                    string.Format("(x{0})", _card.Quantity)
+                    : string.Format("(x{0}/x{1})", _card.Quantity, easy);
+            }
+        }
+
         public Card Card
         {
             get { return _card; }
