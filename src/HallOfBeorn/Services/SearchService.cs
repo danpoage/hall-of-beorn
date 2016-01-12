@@ -339,7 +339,14 @@ namespace HallOfBeorn.Services
             {
                 //var limit = 0;
                 //&& model.SetType.Value == SetType.OFFICIAL
-                filters.Add(new SearchFilter((s, c) => { return (s.SetType == SetType.OFFICIAL && c.CardSet.SetType != SetType.CUSTOM) || (s.SetType.Value == c.CardSet.SetType); }, 50f, 0f, "Has Set Type '" + model.SetType + "'"));
+                if (model.SetType.Value == SetType.Non_Nightmare)
+                {
+                    filters.Add(new SearchFilter((s, c) => { return c.CardSet.SetType != SetType.Nightmare_Expansion; }, 50f, 0f, "Is Not From A Nightmare Set"));
+                }
+                else
+                {
+                    filters.Add(new SearchFilter((s, c) => { return (s.SetType == SetType.OFFICIAL && c.CardSet.SetType != SetType.CUSTOM) || (s.SetType.Value == c.CardSet.SetType); }, 50f, 0f, "Has Set Type '" + model.SetType + "'"));
+                }
             }
 
             if (filters.Count == 0 && !model.IsAdvancedSearch())

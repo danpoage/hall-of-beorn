@@ -17,6 +17,7 @@ namespace HallOfBeorn.Models
         GenConSaga_Expansion,
         Nightmare_Expansion,
         Fellowship_Deck,
+        Non_Nightmare,
         CUSTOM
     }
 }
