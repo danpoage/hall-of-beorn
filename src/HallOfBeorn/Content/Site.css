@@ -1142,3 +1142,8 @@ tr.pager td {
     font-size: 11px;
     font-style: italic;
 }
+
+.detail-label {
+    display: inline-block;
+    color: #616161;
+}
