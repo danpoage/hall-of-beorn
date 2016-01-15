@@ -24,6 +24,7 @@ namespace HallOfBeorn.Models
         Very_Late_Adventurer,
         Susurros_del_Bosque_Viejo,
         El_Libro_Rojo_de_Bolson_Cerrado,
+        Expecting_Mischief,
         Die_Manner_von_Gondor
     }
 }

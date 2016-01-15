@@ -32,6 +32,8 @@ namespace HallOfBeorn.Models
                     return string.Format("https://dorcuarthol.wordpress.com/?s={0}", title);
                 case LinkType.Encyclopedia_of_Arda:
                     return string.Format("http://www.glyphweb.com/arda/search.asp?search={0}", title);
+                case LinkType.Expecting_Mischief:
+                    return string.Format("https://expectingmischief.wordpress.com/?s={0}", title);
                 case LinkType.Hall_of_Beorn:
                     return string.Format("http://hallofbeorn.wordpress.com/?s={0}", title);
                 case LinkType.Lord_of_the_Rings_Wiki:

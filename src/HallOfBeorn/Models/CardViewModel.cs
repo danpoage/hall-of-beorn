@@ -175,6 +175,7 @@ namespace HallOfBeorn.Models
             links.Add(new Link(LinkType.Second_Hand_Took, _card));
             links.Add(new Link(LinkType.The_Mirkwood_Runner, _card));
             links.Add(new Link(LinkType.Warden_of_Arnor, _card));
+            links.Add(new Link(LinkType.Expecting_Mischief, _card));
             links.Add(new Link(LinkType.Heroes_of_the_Rings, _card));
             links.Add(new Link(LinkType.Very_Late_Adventurer, _card));
             links.Add(new Link(LinkType.Susurros_del_Bosque_Viejo, _card, "Susurros del Bosque Viejo (ES)"));
