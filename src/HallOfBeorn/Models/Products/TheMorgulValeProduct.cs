@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Products
     public class TheMorgulValeProduct : Product
     {
         public TheMorgulValeProduct()
-            : base("The Morgul Vale", "MEC23", ImageType.Png)
+            : base("The Morgul Vale", "MEC23", ImageType.Png, new DateTime(2013, 11, 15))
         {
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/rulesheet-the-morgul-vale.pdf";
 

@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Products
     public class TheVoiceOfIsengardProduct : Product
     {
         public TheVoiceOfIsengardProduct()
-            : base("The Voice of Isengard", "MEC25", ImageType.Png)
+            : base("The Voice of Isengard", "MEC25", ImageType.Png, new DateTime(2014, 2, 21))
         {
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/the-voice-of-isengard-rulesheet.pdf";
 

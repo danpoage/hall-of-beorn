@@ -10,10 +10,16 @@ namespace HallOfBeorn.Models
     public class Product
     {
         protected Product(string name, string code, ImageType imageType)
+            : this(name, code, imageType, new DateTime(2099, 1, 1))
+        {
+        }
+
+        protected Product(string name, string code, ImageType imageType, DateTime firstReleased)
         {
             this.Name = name;
             this.Code = code;
             this.ImageType = imageType;
+            this.FirstReleased = firstReleased;
         }
 
         private readonly List<CardSet> cardSets = new List<CardSet>();
@@ -42,6 +48,7 @@ namespace HallOfBeorn.Models
         public bool IsNewSubGroup { get; protected set; }
         public string RulesUrl { get; protected set; }
         public string BuyLink { get; protected set; }
+        public DateTime FirstReleased { get; protected set; }
 
         public IEnumerable<CardSet> CardSets()
         {

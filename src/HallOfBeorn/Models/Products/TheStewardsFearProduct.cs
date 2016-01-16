@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Products
     public class TheStewardsFearProduct : Product
     {
         public TheStewardsFearProduct()
-            : base("The Steward's Fear", "MEC18", ImageType.Png)
+            : base("The Steward's Fear", "MEC18", ImageType.Png, new DateTime(2013, 5, 9))
         {
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/MEC18-the-stewards-fear-rulesheet.pdf";
 

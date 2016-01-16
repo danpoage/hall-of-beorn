@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Products
     public class ConflictAtTheCarrockProduct : Product
     {
         public ConflictAtTheCarrockProduct()
-            : base("Conflict at the Carrock", "MEC03", ImageType.Png)
+            : base("Conflict at the Carrock", "MEC03", ImageType.Png, new DateTime(2011, 8, 10))
         {
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/rulesheet-ConflictAtTheCarrock.pdf";
 

@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Products
     public class TheBlackRidersProduct : Product
     {
         public TheBlackRidersProduct()
-            : base("The Black Riders", "MEC32", ImageType.Png)
+            : base("The Black Riders", "MEC32", ImageType.Png, new DateTime(2013, 9, 13))
         {
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/the-black-riders-rulesheet.pdf";
 

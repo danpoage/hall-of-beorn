@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Products
     public class ConflictAtTheCarrockNightmareProduct : Product
     {
         public ConflictAtTheCarrockNightmareProduct()
-            : base("Conflict at the Carrock Nightmare Deck", "MEN05", ImageType.Jpg)
+            : base("Conflict at the Carrock Nightmare Deck", "MEN05", ImageType.Jpg, new DateTime(2013, 12, 30))
         {
             AddCardSet(CardSet.ConflictAtTheCarrockNightmare);
         }

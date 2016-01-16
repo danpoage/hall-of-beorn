@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Products
     public class TheStoneOfErechProduct : Product
     {
         public TheStoneOfErechProduct()
-            : base("The Stone of Erech GenCon 2013", "MEC33", ImageType.Jpg)
+            : base("The Stone of Erech GenCon 2013", "MEC33", ImageType.Jpg, new DateTime(2013, 10, 30))
         {
             AddCardSet(CardSet.TheStoneOfErech);
 

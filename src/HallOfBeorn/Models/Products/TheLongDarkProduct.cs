@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Products
     public class TheLongDarkProduct : Product
     {
         public TheLongDarkProduct()
-            : base("The Long Dark", "MEC12", ImageType.Png)
+            : base("The Long Dark", "MEC12", ImageType.Png, new DateTime(2012, 5, 16))
         {
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/The_Long_Dark_rulesheet.pdf";
 

@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Products
     public class EscapeFromDolGuldurNightmareProduct : Product
     {
         public EscapeFromDolGuldurNightmareProduct()
-            : base("Escape from Dol Guldur Nightmare Deck", "MEN03", ImageType.Jpg)
+            : base("Escape from Dol Guldur Nightmare Deck", "MEN03", ImageType.Jpg, new DateTime(2013, 8, 1))
         {
             IsPremier = true;
 

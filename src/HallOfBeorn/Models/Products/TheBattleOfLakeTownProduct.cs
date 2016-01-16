@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Products
     public class TheBattleOfLakeTownProduct : Product
     {
         public TheBattleOfLakeTownProduct()
-            : base("The Battle of Lake-town GenCon 2012", "MEC35", ImageType.Jpg)
+            : base("The Battle of Lake-town GenCon 2012", "MEC35", ImageType.Jpg, new DateTime(2012, 10, 16))
         {
             AddCardSet(CardSet.TheBattleOfLakeTown);
 

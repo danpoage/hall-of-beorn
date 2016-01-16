@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Products
     public class CoreSetProduct : Product
     {
         public CoreSetProduct()
-            : base("Core Set", "MEC01", ImageType.Png)
+            : base("Core Set", "MEC01", ImageType.Png, new DateTime(2011, 4, 20))
         {
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/LOTR_LCG_Core_rules_eng_Lo-Res.pdf";
 
