@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Products
     public class TheDunlandTrapNightmareProduct : Product
     {
         public TheDunlandTrapNightmareProduct()
-            : base("The Dunland Trap Nightmare Deck", "MEN29", ImageType.Jpg)
+            : base("The Dunland Trap Nightmare Deck", "MEN29", ImageType.Jpg, new DateTime(2015, 10, 29))
         {
             AddCardSet(CardSet.TheDunlandTrapNightmare);
         }

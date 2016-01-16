@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Products
     public class TheLandOfShadowProduct : Product
     {
         public TheLandOfShadowProduct()
-            : base("The Land of Shadow", "MEC46", ImageType.Jpg)
+            : base("The Land of Shadow", "MEC46", ImageType.Jpg, new DateTime(2015, 11, 19))
         {
             RulesUrl = "https://images-cdn.fantasyflightgames.com/filer_public/57/42/5742e6c7-ade4-433c-8263-492eaf2d1c65/mec46-the-land-of-shadow-rulesheet.pdf";
 

@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Products
     public class TheThreeTrialsProduct : Product
     {
         public TheThreeTrialsProduct()
-            : base("The Three Trials", "MEC27", ImageType.Png)
+            : base("The Three Trials", "MEC27", ImageType.Png, new DateTime(2014, 7, 24))
         {
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/the-three-trials-rulesheet.pdf";
 

@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Products
     public class TheTreasonOfSarumanProduct : Product
     {
         public TheTreasonOfSarumanProduct()
-            : base("The Treason of Saruman", "MEC45", ImageType.Jpg)
+            : base("The Treason of Saruman", "MEC45", ImageType.Jpg, new DateTime(2015, 4, 23))
         {
             RulesUrl = "https://images-cdn.fantasyflightgames.com/filer_public/ed/37/ed37099c-e74c-4c14-874a-6c73748dbe6c/mec45-the-treason-of-saruman-rulesheet.pdf";
 

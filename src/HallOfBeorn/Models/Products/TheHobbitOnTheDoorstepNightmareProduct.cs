@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Products
     public class TheHobbitOnTheDoorstepNightmareProduct : Product
     {
         public TheHobbitOnTheDoorstepNightmareProduct()
-            : base("The Hobbit: On The Doorstep Nightmare Decks", "MEN18", ImageType.Jpg)
+            : base("The Hobbit: On The Doorstep Nightmare Decks", "MEN18", ImageType.Jpg, new DateTime(2014, 12, 18))
         {
             IsPremier = true;
             AddCardSet(CardSet.FliesAndSpidersNightmare);

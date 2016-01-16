@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Products
     public class TheRedhornGateNightmareProduct : Product
     {
         public TheRedhornGateNightmareProduct()
-            : base("The Redhord Gate Nightmare Deck", "MEN11", ImageType.Jpg)
+            : base("The Redhord Gate Nightmare Deck", "MEN11", ImageType.Jpg, new DateTime(2014, 8, 27))
         {
             AddCardSet(CardSet.TheRedhornGateNightmare);
         }

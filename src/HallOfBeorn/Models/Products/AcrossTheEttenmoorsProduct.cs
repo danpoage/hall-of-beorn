@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Products
     public class AcrossTheEttenmoorsProduct : Product
     {
         public AcrossTheEttenmoorsProduct()
-            : base("Across the Ettenmoors", "MEC41", ImageType.Jpg)
+            : base("Across the Ettenmoors", "MEC41", ImageType.Jpg, new DateTime(2015, 9, 3))
         {
             AddCardSet(CardSet.AcrossTheEttenmoors);
 

@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Products
     public class FogOnTheBarrowDownsProduct : Product
     {
         public FogOnTheBarrowDownsProduct()
-            : base("Fog on the Barrow-downs", "MEC36", ImageType.Jpg)
+            : base("Fog on the Barrow-downs", "MEC36", ImageType.Jpg, new DateTime(2015, 1, 15))
         {
             AddCardSet(CardSet.FogOnTheBarrowDowns);
 

@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Products
     public class TheBlackRidersNightmareProduct : Product
     {
         public TheBlackRidersNightmareProduct()
-            : base("The Black Riders Nightmare Decks", "MEN19", ImageType.Jpg)
+            : base("The Black Riders Nightmare Decks", "MEN19", ImageType.Jpg, new DateTime(2015, 4, 10))
         {
             IsPremier = true;
             IsNewSubGroup = true;

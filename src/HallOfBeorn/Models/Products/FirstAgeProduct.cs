@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Products
     public class FirstAgeProduct : Product
     {
         public FirstAgeProduct()
-            : base("First Age", "FA01", ImageType.Jpg)
+            : base("First Age", "FA01", ImageType.Jpg, new DateTime(2014, 6, 13))
         {
             AddCardSet(CardSet.FirstAge);
 

@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Products
     public class TheVoiceOfIsengardNightmareProduct : Product
     {
         public TheVoiceOfIsengardNightmareProduct()
-            : base("The Voice of Isengard Nightmare Decks", "MEN28", ImageType.Jpg)
+            : base("The Voice of Isengard Nightmare Decks", "MEN28", ImageType.Jpg, new DateTime(2015, 7, 17))
         {
             IsPremier = true;
             IsNewSubGroup = true;

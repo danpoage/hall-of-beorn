@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Products
     public class TheRoadDarkensProduct : Product
     {
         public TheRoadDarkensProduct()
-            : base("The Road Darkens", "MEC34", ImageType.Png)
+            : base("The Road Darkens", "MEC34", ImageType.Png, new DateTime(2014, 10, 3))
         {
             RulesUrl = "https://images-cdn.fantasyflightgames.com/filer_public/74/0a/740a5955-ad03-4cb3-bc69-59121a3e3e1a/the-road-darkens-rulesheet.pdf";
 

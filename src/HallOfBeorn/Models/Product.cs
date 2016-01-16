@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models
     public class Product
     {
         protected Product(string name, string code, ImageType imageType)
-            : this(name, code, imageType, new DateTime(2099, 1, 1))
+            : this(name, code, imageType, DateTime.Now)
         {
         }
 

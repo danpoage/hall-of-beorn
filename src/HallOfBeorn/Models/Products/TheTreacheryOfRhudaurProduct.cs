@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Products
     public class TheTreacheryOfRhudaurProduct : Product
     {
         public TheTreacheryOfRhudaurProduct()
-            : base("Treachery of Rhudaur", "MEC42", ImageType.Jpg)
+            : base("Treachery of Rhudaur", "MEC42", ImageType.Jpg, new DateTime(2015, 9, 24))
         {
             AddCardSet(CardSet.TheTreacheryOfRhudaur);
 
