@@ -907,7 +907,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
                 Attack = 3,
                 Defense = 1,
                 HitPoints = 3,
-                Traits = new List<string> { "Orc.", "Uruk." },
+                Traits = new List<string> { "Orc." },
                 Text = "When Revealed: Either remove 1 damage from Doom, Doom, Doom, or reveal an additional encounter card.",
                 Shadow = "Shadow: The defending player raises his threat by 1 for each enemy engaged with him.",
                 EncounterSet = "Journey in the Dark",
