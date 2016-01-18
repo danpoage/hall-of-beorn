@@ -368,7 +368,13 @@ namespace HallOfBeorn.Services
                     foreach (var filter in filters)
                     {
                         var score = filter.Score(model, card);
-                        
+
+                        if (score > 0)
+                        {
+                            var x = card.Title + ": " + score.ToString();
+                            var y = x;
+                        }
+
                         if (results.ContainsKey(card.Slug))
                         {
                             results[card.Slug].Description += " and " + filter.Description(model, card);

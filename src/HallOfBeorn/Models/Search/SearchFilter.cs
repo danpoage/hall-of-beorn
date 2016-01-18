@@ -139,10 +139,11 @@ namespace HallOfBeorn.Models.Search
 
             var weighted = score + weight;
 
-            if (weighted > 100)
-            {
-                weighted = 20 + (weighted - 100);
-            }
+            //TODO: Fix weighted score normalization
+            //if (weighted > 100)
+            //{
+            //    weighted = 20 + (weighted - 100);
+            //}
 
             return weighted;
         }
