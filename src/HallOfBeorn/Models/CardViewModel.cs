@@ -384,12 +384,12 @@ namespace HallOfBeorn.Models
 
         public string QuestPoints
         {
-            get { return _card.QuestPoints.Description(_card.IsVariableQuestPoints); }
+            get { return _card.QuestPoints.Description(_card.IsVariableQuestPoints, "–"); }
         }
 
         public string Threat
         {
-            get { return _card.Threat.Description(_card.IsVariableThreat); }
+            get { return _card.Threat.Description(_card.IsVariableThreat, "–"); }
         }
 
         public string VictoryPoints

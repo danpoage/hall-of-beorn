@@ -377,6 +377,11 @@ namespace HallOfBeorn
 
         public static string Description(this byte? self, bool isVariable)
         {
+            return self.Description(isVariable, string.Empty);
+        }
+
+        public static string Description(this byte? self, bool isVariable, string defaultValue)
+        {
             if (isVariable)
             {
                 return "X";
@@ -384,7 +389,7 @@ namespace HallOfBeorn
 
             if (!self.HasValue)
             {
-                return string.Empty;
+                return defaultValue;
             }
 
             return self.Value == byte.MaxValue ? "-" : self.Value.ToString();
