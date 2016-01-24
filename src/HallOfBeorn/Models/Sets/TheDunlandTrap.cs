@@ -81,7 +81,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string> { "Mount." },
                 Keywords = new List<string> { "Restricted." },
                 Text = "Attach to a Tactics or Rohan hero.\r\nAttached hero gets +1 Attack (+2 Attack instead if attached hero is Éomer).\r\nResponse: After attached hero attacks alone, exhaust Firefoot to choose a non-unique enemy engaged with you. Excess damage dealt by this attack is assigned to the chosen enemy.",
-                HtmlTemplate = "<p>Attach to a {sphere-hero:Tactics@!} or {trait-hero:Rohan.@Rohan}. {keyword:Restricted.}</p><p>Attached hero gets +1 {Attack} (+2 {Attack} instead if attached hero is {title:Éomer@Eomer}).</p><p><b>Response:</b> After attached hero attacks alone, exhaust Firefoot to choose a non-unique enemy engaged with you. Excess damage dealt by this attack is assigned to the chosen enemy.</p>",
+                //HtmlTemplate = "<p>Attach to a {sphere-hero:Tactics@!} or {trait-hero:Rohan.@Rohan}. {keyword:Restricted.}</p><p>Attached hero gets +1 {Attack} (+2 {Attack} instead if attached hero is {title:Éomer@Eomer}).</p><p><b>Response:</b> After attached hero attacks alone, exhaust Firefoot to choose a non-unique enemy engaged with you. Excess damage dealt by this attack is assigned to the chosen enemy.</p>",
                 Number = 4,
                 Artist = Artist.Nora_Brisotti
             });
