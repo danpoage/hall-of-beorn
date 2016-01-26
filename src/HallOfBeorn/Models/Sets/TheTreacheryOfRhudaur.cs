@@ -58,7 +58,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Response:  After 1 or more cards are discarded from your hand, draw 1 card. Limit once per round.")
                 .WithFlavor("\"But have they the strength, have we here the strength to withstand the Enemy, the coming of Sauron at the last, when all else is overthrown?\"\r\n-The Fellowship of the Ring")
                 .WithInfo(91, 3, Artist.Arden_Beckwith));
-            Cards.Add(Card.Event("The Door is Closed", "", Sphere.Lore, 1)
+            Cards.Add(Card.Event("The Door is Closed!", "", Sphere.Lore, 1)
                 .WithText("Response: After an encounter card is revealed from the encounter deck, cancel its effects and discard it if there is a card with the same title in the victory display.")
                 .WithFlavor("\"...I perceive the Dark Lord and know his mind, or all of his mind that concerns the Elves. And he gropes ever to see me and my thought. But still the door is closed!\"\r\n-Galadriel, The Fellowship of the Ring")
                 .WithInfo(92, 3, Artist.Magali_Villeneuve));

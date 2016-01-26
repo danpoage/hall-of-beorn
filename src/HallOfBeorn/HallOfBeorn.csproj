@@ -682,7 +682,7 @@
     <Content Include="Images\unique-card.png" />
     <Content Include="Images\unique.png" />
     <Content Include="Images\willpower.gif" />
-    <Content Include="Scripts\autocomplete9.js" />
+    <Content Include="Scripts\autocomplete10.js" />
     <Content Include="Scripts\cardSearch.js" />
     <Content Include="Scripts\deckBuilder.js" />
     <Content Include="Scripts\highcharts.js" />
