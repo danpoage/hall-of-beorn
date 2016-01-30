@@ -277,15 +277,13 @@ If Nalir leaves play, the players lose the game.",
                 Id = "",
                 CardType = CardType.Enemy,
                 IsUnique = true,
+                EngagementCost = 50,
                 IsVariableThreat = true,
                 Attack = 5,
                 Defense = 4,
                 HitPoints = 7,
                 Traits = new List<string> { "Mordor.", "Spy." },
-                Text = 
-@"X is the number of players in the game.\r\nOrc and Creature enemies get -30 engagement cost and +1 Threat.
-
-Forced: When Bellach is destroyed, shuffle him into the encounter deck.",
+                Text = "X is the number of players in the game.\r\nOrc and Creature enemies get -30 engagement cost and +1 Threat.\r\nForced: When Bellach is destroyed, shuffle him into the encounter deck.",
                 EncounterSet = "Trouble in Tharbad",
                 Number = 70,
                 Quantity = 1,

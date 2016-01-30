@@ -100,7 +100,7 @@ namespace HallOfBeorn.Models
                     break;
                 case "self":
                     //sb.AppendFormat("<a title='Card: {0}' href='/Cards/Details/{1}' target='_blank'>{0}</a>", label, key);
-                    sb.AppendFormat(label);
+                    sb.AppendFormat(label.Replace("%27", "'"));
                     break;
                 case "trait":
                     sb.AppendFormat("<a title='Search: {0} Trait' href='/Cards/Search?Trait={1}' target='_blank'><b><i>{0}</i></b></a>", label, key);
