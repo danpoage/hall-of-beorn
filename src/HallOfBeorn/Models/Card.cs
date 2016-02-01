@@ -105,6 +105,9 @@ namespace HallOfBeorn.Models
                 case "trait":
                     sb.AppendFormat("<a title='Search: {0} Trait' href='/Cards/Search?Trait={1}' target='_blank'><b><i>{0}</i></b></a>", label, key);
                     break;
+                case "trait-search":
+                    sb.AppendFormat("<a title='Search: {0}' href='/Cards/Search?{1} target='_blank'><b><i>{0}</i></b></a>", label, key);
+                    break;
                 case "trait-character":
                     sb.AppendFormat("<a title='Search: {0} Character' href='/Cards/Search?Trait={1}&CardType=Character' target='_blank'><b><i>{0}</i></b></a>", label, key);
                     break;
