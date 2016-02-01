@@ -196,14 +196,7 @@ namespace HallOfBeorn.Models.Sets
                 QuestPoints = null,
                 Text = "Setup: Set Bellach and The Crossing at Tharbad aside, out of play. Search the encounter deck for 1 copy of Spy From Mordor per player, and add them to the staging area. Make The Empty Mug the active location. The first player takes control of Nalir, as an ally. Shuffle the encounter deck.",
                 FlavorText = "Your meeting with Nalir is interrupted by a host of Orcs led by a man, Bellach. In the ensuing chaos, you manage to escape with the Dwarf but the Orcs pursue. Outnumbered, you must throw the Orcs off your trail if you hope to escape...",
-                OppositeText = 
-@"Time 4.
-
-Forced: After the last time counter is removed from this quest, reduce each player's threat elmination level by 10 for the remainder of the game. Then, place 4 time counters on this stage.
-
-Forced: After one or more progress is placed on this quest, cancell all progress and reduce each players threat by an equal amount.
-
-When all players have 0 threat, immediately proceed to stage 2.",
+                OppositeText = "Time 4.\r\nForced: After the last time counter is removed from this quest, reduce each player's threat elmination level by 10 for the remainder of the game. Then, place 4 time counters on this stage.\r\nForced: After one or more progress is placed on this quest, cancell all progress and reduce each players threat by an equal amount.\r\nWhen all players have 0 threat, immediately proceed to stage 2.",
                 EncounterSet = "Trouble in Tharbad",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.MistyMountainOrcs },
                 Number = 66,
@@ -220,14 +213,7 @@ When all players have 0 threat, immediately proceed to stage 2.",
                 QuestPoints = null,
                 Text = "When Revealed: Add Bellach and The Crossing at Tharbad to the staging area. Then shuffle the encounter discard discard pile into the encounter deck and discard cards from the encounter deck until X Orc enemies have been discarded, where X is the number of players in the game. Add all discarded Orc enemies to the staging area.",
                 FlavorText = "You've eluded the Orcs and you make haste for the river crossing. If you can get across, perhaps you can escape. But, Bellach has cleverly set a patrol at the ford, and you are quickly spotted. You make a dash for the river...",
-                OppositeText = 
-@"Time 3. 
-
-Forced: After the last time counter is removed from the quest, either raise each player's threat by 3 or Bellach makes an immediate attack against Nalir. Then, place 3 time counters on this stage.
-
-Progress that would be placed on this quest are instead placed on The Crossing at Tharbad.
-
-Forced: After a character leaves play, raise its controller's threat by 2.",
+                OppositeText = "Time 3. \r\nForced: After the last time counter is removed from the quest, either raise each player's threat by 3 or Bellach makes an immediate attack against Nalir. Then, place 3 time counters on this stage.\r\nProgress that would be placed on this quest are instead placed on The Crossing at Tharbad.\r\nForced: After a character leaves play, raise its controller's threat by 2.",
                 EncounterSet = "Trouble in Tharbad",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.MistyMountainOrcs },
                 Number = 67,
@@ -244,12 +230,7 @@ Forced: After a character leaves play, raise its controller's threat by 2.",
                 Defense = 2,
                 HitPoints = 3,
                 Traits = new List<string> { "Dwarf." },
-                Text = 
-@"The first player gains control of Nalir.
-
-Forced: At the beginning of the refresh phase, raise your threat by 1 for each player in the game.
-
-If Nalir leaves play, the players lose the game.",
+                Text = "The first player gains control of Nalir.\r\nForced: At the beginning of the refresh phase, raise your threat by 1 for each player in the game.\r\nIf Nalir leaves play, the players lose the game.",
                 EncounterSet = "Trouble in Tharbad",
                 Number = 68,
                 Quantity = 1,
@@ -297,10 +278,7 @@ If Nalir leaves play, the players lose the game.",
                 Threat = 2,
                 QuestPoints = 10,
                 Traits = new List<string> { "City.", "Ruins.", "River." },
-                Text =
-@"Immune to player card effects. Cannot leave the staging area.\r\nThe Crossing at Tharbad gets +2 quest points for each player in the game.
-                
-When The Crossing at Tharbad is explored, the players win the game.",
+                Text = "Immune to player card effects. Cannot leave the staging area.\r\nThe Crossing at Tharbad gets +2 quest points for each player in the game.\r\nWhen The Crossing at Tharbad is explored, the players win the game.",
                 EncounterSet = "Trouble in Tharbad",
                 Number = 71,
                 Quantity = 1,
@@ -367,10 +345,7 @@ When The Crossing at Tharbad is explored, the players win the game.",
                 QuestPoints = 1,
                 Traits = new List<string> { "City." },
                 Keywords = new List<string> { "Surge." },
-                Text = 
-@"While Tharbad Hideout is the active location, time counters cannot be removed from the current quest.
-                
-Forced: At the beginning of the quest phase, place 1 progress on Tharbad Hideout.",
+                Text = "While Tharbad Hideout is the active location, time counters cannot be removed from the current quest.\r\nForced: At the beginning of the quest phase, place 1 progress on Tharbad Hideout.",
                 EncounterSet = "Trouble in Tharbad",
                 Number = 75,
                 Quantity = 2,
@@ -384,10 +359,7 @@ Forced: At the beginning of the quest phase, place 1 progress on Tharbad Hideout
                 Threat = 1,
                 QuestPoints = 5,
                 Traits = new List<string> { "City.", "Ruins." },
-                Text = 
-@"While ~Ruins of the Second Age is in the staging area, City locations get +1 Threat.
-
-While ~Ruins of the Second Age is the active location, deal engaged enemies 1 additional shadow card at the beginning of the combat phase.",
+                Text = "While ~Ruins of the Second Age is in the staging area, City locations get +1 Threat. While ~Ruins of the Second Age is the active location, deal engaged enemies 1 additional shadow card at the beginning of the combat phase.",
                 FlavorText = "...as far as Tharbad, where the old North Road crossed the river by a ruined town. -The Fellowship of the Ring",
                 EncounterSet = "Trouble in Tharbad",
                 Number = 76,
@@ -419,10 +391,7 @@ While ~Ruins of the Second Age is the active location, deal engaged enemies 1 ad
                 Threat = 3,
                 QuestPoints = 5,
                 Traits = new List<string> { "City." },
-                Text = 
-@"Travel: Raise each player's threat by X to travel here. X is the number of enemies in play.
-
-Forced: After traveling to Hidden Alleyway, add 1 time counter to the current quest.",
+                Text = "Travel: Raise each player's threat by X to travel here. X is the number of enemies in play.\r\nForced: After traveling to Hidden Alleyway, add 1 time counter to the current quest.",
                 EncounterSet = "Trouble in Tharbad",
                 Number = 78,
                 Quantity = 2,
@@ -436,10 +405,7 @@ Forced: After traveling to Hidden Alleyway, add 1 time counter to the current qu
                 Threat = 2,
                 QuestPoints = 3,
                 Traits = new List<string> { "City." },
-                Text = 
-@"While Decrepit Rooftops is the active location, enemies get +1 Threat and do not make engagement checks.
-
-Forced: After traveling to Decrepit Rooftops, return all engaged enemies to the staging area.",
+                Text = "While Decrepit Rooftops is the active location, enemies get +1 Threat and do not make engagement checks.\r\nForced: After traveling to Decrepit Rooftops, return all engaged enemies to the staging area.",
                 EncounterSet = "Trouble in Tharbad",
                 Number = 79,
                 Quantity = 2,
