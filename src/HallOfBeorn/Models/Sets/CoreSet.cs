@@ -744,7 +744,8 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Keywords = new List<string>() { "Restricted." },
                 Quantity = 1,
                 Number = 42,
-                Artist = Artist.Mark_Winters
+                Artist = Artist.Mark_Winters,
+                HasErrata = true
             });
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,

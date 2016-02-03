@@ -1148,5 +1148,11 @@ namespace HallOfBeorn.Models
             this.CardSubtype = CardSubtype.Burden;
             return this;
         }
+
+        public Card WithErrata()
+        {
+            this.HasErrata = true;
+            return this;
+        }
     }
 }
