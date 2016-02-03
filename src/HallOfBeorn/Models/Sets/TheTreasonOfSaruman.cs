@@ -262,7 +262,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithInfo(42, 3, Artist.Alvaro_Calvo_Escudero)
                 .WithEasyModeQuantity(1));
             Cards.Add(Card.Treachery("Devilry of Saruman", "41E4197E-0CA0-49FC-9D8C-EBB911EDC18A", "Helm's Deep")
-                .WithText("When Revealed: Place 3 progress on the current quest (bypassing any active location). Until the end of the round, treat each character's text box as if it was blank (except for Traits).")
+                .WithText("When Revealed: Place 3 progress on the main quest (bypassing any active location). Until the end of the round, treat each character's text box as if it was blank (except for Traits).")
                 .WithShadow("Shadow: Attacking enemy gets +2 Attack and gains Toughness 2 until the end of the round.")
                 .WithInfo(43, 3, Artist.Alvaro_Calvo_Escudero)
                 .WithEasyModeQuantity(2));

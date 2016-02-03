@@ -739,7 +739,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 ResourceCost = 1,
                 IsUnique = true,
                 Traits = new List<string>() { "Item.", "Artifact." },
-                Text = "Attach to a hero.\r\nResponse: After a character leaves play, add 1 resource to attached hero's pool.",
+                Text = "Attach to a hero.\r\nResponse: After a character is destroyed, add 1 resource to attached hero's pool.",
                 FlavorText = "'Slow should you be to wind that horn again, Boromir,' said Elrond, 'until you stand once more on the borders of your land, and dire need is on you.'\r\n-The Fellowship of the Ring",
                 Keywords = new List<string>() { "Restricted." },
                 Quantity = 1,

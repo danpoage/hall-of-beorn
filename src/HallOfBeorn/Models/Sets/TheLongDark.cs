@@ -286,7 +286,7 @@ Attached hero gets +1 Defense.",
                 Traits = new List<string>() { "Condition." },
                 Quantity = 3,
                 ResourceCost = 0,
-                Text = "Attach to a Lore hero. Limit 1 per hero.\r\nResponse: After a Song card is played, add 1 resource to attached hero's resource pool.",
+                Text = "Attach to a Lore hero. Limit 1 per hero.\r\nResponse: After a Song card is played, exhaust Love of Tales to add 1 resource to attached hero's resource pool.",
                 FlavorText = "\"I listened because I couldn't help myself, if you know what I mean. Lor bless me, sir, but I do love tales of that sort.\"\r\n-Sam Gamgee, The Fellowship of the Ring",
                 Number = 85,
                 Artist = Artist.Winona_Nelson

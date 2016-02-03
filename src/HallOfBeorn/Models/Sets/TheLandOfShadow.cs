@@ -396,7 +396,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithIncludedEncounterSets(EncounterSet.Gollum, EncounterSet.Nazgul)
                 .WithInfo(66, 1, Artist.Cristina_Vela));
             Cards.Add(Card.Campaign("The Passage of the Marshes", "", 10, "The Passage of the Marshes", "The Lord of the Rings - Part 10")
-                .WithText("You are playing campaign mode.\r\nSetup: Each player shuffles 1 copy of The Searching Eye into his deck. Remove each burden with the following burden set icons from the encounter deck and each player's deck: Helm's Deep, The Road to Isengard")
+                .WithText("You are playing campaign mode.\r\nSetup: Each player may change hero cards he controls without incurring the +1 threat penalty. Each player shuffles 1 copy of The Searching Eye into his deck. Remove each burden with the following burden set icons from the encounter deck and each player's deck: Helm's Deep, The Road to Isengard")
                 .WithFlavor("\"It's that Gollum! Snakes and adders! And to think that I thought that we’d puzzle him with our bit of a climb! Look at him! Like a nasty crawling spider on a wall.\" —Sam Gamgee, The Two Towers")
                 .WithOppositeText("Resolution: Each player must choose: either take a permanent +2 starting threat penalty, or earn 1 copy of The Searching Eye. Record each player's choice in the campaign log.")
                 .WithOppositeFlavor("The marshes were at an end, dying away into dead peats and wide flats of dry cracked mud. The land ahead rose in long shallow slopes, barren and pitiless, towards the desert that lay at Sauron's gate.\r\n-The Two Towers")

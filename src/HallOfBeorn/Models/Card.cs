@@ -695,7 +695,7 @@ namespace HallOfBeorn.Models
                 }
                 else if (this.HasErrata)
                 {
-                    return "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/LotR-FAQ.pdf";
+                    return "https://images-cdn.fantasyflightgames.com/filer_public/64/ee/64ee44ca-825d-4c14-b77b-b0ad7581ee31/lotr_faq_18.pdf";
                 }
 
                 return null;
