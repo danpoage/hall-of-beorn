@@ -107,6 +107,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithUnique()
                 .WithTraits("Creature.", "Warg.")
                 .WithText("Cannot have attachments.\r\nCannot be optionally engaged.\r\nForced: After Pack Leader engages you, exhaust a character you control for each Warg enemy engaged with you.")
+                .WithVictoryPoints(3)
                 .WithInfo(17, 1, Artist.Piya_Wannachaiwong));
             Cards.Add(Card.Enemy("Northern Warg", "", "The Wastes of Eriador", 30, 2, 3, 1, 4)
                 .WithTraits("Creature.", "Warg.")
