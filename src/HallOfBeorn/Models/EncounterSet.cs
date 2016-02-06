@@ -118,6 +118,10 @@ namespace HallOfBeorn.Models
             Add(TheBattleOfCarnDum);
             Add(TheDreadRealm);
 
+            //The Grey Havens and Dream-chaser
+            Add(TheStormcallerElite);
+            Add(TheDreamChasersFleet);
+
             //The Hobbit: Over Hill and Under Hill
             Add(WeMustAwayEreBreakOfDay);
             Add(WesternLands);
@@ -326,6 +330,10 @@ namespace HallOfBeorn.Models
         public static EncounterSet TheTreacheryOfRhudaur = new EncounterSet { Name = "The Treachery of Rhudaur", Set = "The Treachery of Rhudaur" };
         public static EncounterSet TheBattleOfCarnDum = new EncounterSet { Name = "The Battle of Carn Dûm", Set = "The Battle of Carn Dûm", NormalizedSet = "The Battle of Carn Dum" };
         public static EncounterSet TheDreadRealm = new EncounterSet { Name = "The Dread Realm", Set = "The Dread Realm" };
+
+        //The Grey Havens and Dream-chaser
+        public static EncounterSet TheStormcallerElite = new EncounterSet { Name = "The Stormcaller Elite", Set = "The Grey Havens" };
+        public static EncounterSet TheDreamChasersFleet = new EncounterSet { Name = "The Dream-chaser's Fleet", Set = "The Grey Havens" };
 
         //The Hobbit: Over Hill and Under Hill
         public static EncounterSet WeMustAwayEreBreakOfDay = new EncounterSet { Name = "We Must Away, Ere Break of Day", Set = "The Hobbit: Over Hill and Under Hill" };

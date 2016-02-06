@@ -960,6 +960,22 @@ namespace HallOfBeorn.Models
             };
         }
 
+        public static Card ShipObjective(string title, string encounterSet, byte willpower, byte attack, byte defense, byte hitPoints)
+        {
+            return new Card()
+            {
+                CardType = CardType.Ship_Objective,
+                Title = title,
+                IsUnique = true,
+                Id = string.Empty,
+                EncounterSet = encounterSet,
+                Willpower = willpower,
+                Attack = attack,
+                Defense = defense,
+                HitPoints = hitPoints
+            };
+        }
+
         public Card ClearText()
         {
             this.Text = string.Empty;
@@ -1152,6 +1168,12 @@ namespace HallOfBeorn.Models
         public Card WithErrata()
         {
             this.HasErrata = true;
+            return this;
+        }
+
+        public Card WithTypeBasedSlug()
+        {
+            this.SlugIncludesType = true;
             return this;
         }
     }

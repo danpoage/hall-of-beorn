@@ -19,6 +19,7 @@ namespace HallOfBeorn.Models
         Objective = 15,
         Objective_Ally = 16,
         Objective_Location = 17,
+        Ship_Objective = 18,
         Encounter_Side_Quest = 19,
         Player = 21,
         Character = 22,

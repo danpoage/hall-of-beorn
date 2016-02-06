@@ -494,6 +494,9 @@ namespace HallOfBeorn.Models
             //The Dread Realm
             all.Add(Artist.Glen_Osterberger);
 
+            //The Grey Havens
+            all.Add(Artist.Sara_Winters);
+
             //Murder at the Prancing Pony
             all.Add(Artist.Lutful_Valeriya_Romanovna);
             all.Add(Artist.Micah_Epstein);
@@ -628,6 +631,7 @@ namespace HallOfBeorn.Models
         public static Artist Sam_R_Kennedy = new Artist { Name = "Sam R Kennedy", URL = "http://samrkennedy.deviantart.com" };
         public static Artist Sansyu = new Artist { Name = "sansyu", URL = "http://sansyu.deviantart.com" };
         public static Artist Sarafiel = new Artist { Name = "Sarafiel", URL = "http://sarafiel.deviantart.com" };
+        public static Artist Sara_Winters = new Artist { Name = "Sara Winters", URL = "https://www.google.com/search?q=sara+winters+fantasy+art" };
         public static Artist Sarah_Finnigan = new Artist { Name = "Sarah Finnigan", URL = "http://sarahfinnigan.deviantart.com" };
         public static Artist Sattarov = new Artist { Name = "Sattarov", URL = "http://sattarov.deviantart.com" };
         public static Artist Saturnoarg = new Artist { Name = "saturnoarg", URL = "http://saturnoarg.deviantart.com" };
