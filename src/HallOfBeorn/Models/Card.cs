@@ -106,7 +106,7 @@ namespace HallOfBeorn.Models
                     sb.AppendFormat("<a title='Search: {0} Trait' href='/Cards/Search?Trait={1}' target='_blank'><b><i>{0}</i></b></a>", label, key);
                     break;
                 case "trait-search":
-                    sb.AppendFormat("<a title='Search: {0}' href='/Cards/Search?{1} target='_blank'><b><i>{0}</i></b></a>", label, key);
+                    sb.AppendFormat("<a title='Search: {0}' href='/Cards/Search?{1}' target='_blank'><b><i>{0}</i></b></a>", label, key);
                     break;
                 case "trait-character":
                     sb.AppendFormat("<a title='Search: {0} Character' href='/Cards/Search?Trait={1}&CardType=Character' target='_blank'><b><i>{0}</i></b></a>", label, key);
@@ -970,6 +970,22 @@ namespace HallOfBeorn.Models
                 Id = string.Empty,
                 EncounterSet = encounterSet,
                 Willpower = willpower,
+                Attack = attack,
+                Defense = defense,
+                HitPoints = hitPoints
+            };
+        }
+
+        public static Card ShipEnemy(string title, string encounterSet, byte engagementCost, byte threat, byte attack, byte defense, byte hitPoints)
+        {
+            return new Card()
+            {
+                CardType = Models.CardType.Ship_Enemy,
+                Title = title,
+                Id = string.Empty,
+                EncounterSet = encounterSet,
+                EngagementCost = engagementCost,
+                Threat = threat,
                 Attack = attack,
                 Defense = defense,
                 HitPoints = hitPoints

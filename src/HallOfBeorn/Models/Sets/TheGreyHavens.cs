@@ -38,7 +38,17 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Quest Action: Ready a questing character and give that character +1 Willpower until the end of the phase. Resolve that effect again for each copy of Elwing's Flight currently in your discard pile (you may choose different targets).")
                 .WithFlavor("There flying Elwing came to him\r\nand flame was in the darkness lit;\r\nmore bright than light of diamond\r\nthe fire upon her carcanet.\r\n-The Fellowship of the Ring")
                 .WithInfo(13, 3, Artist.A_M_Sartor));
-
+            Cards.Add(Card.ShipEnemy("Scouting Ship", string.Empty, 35, 2, 5, 2, 7)
+                .WithGeneric()
+                .WithTraits("Corsair.", "Ship.")
+                .WithKeywords("Boarding 1.")
+                .WithText("Cannot have attachments. Scouting Ship gets -15 engagement cost while you are off course (Cloudy, Rainy, or Stormy).")
+                .WithFlavor("All too well they could see for themselves the black sails.\r\n-The Return of the King")
+                .WithInfo(22, 3, Artist.Michael_Rasmussen));
+            Cards.Add(Card.Location("Waterspout", "", "", 2, 4)
+                .WithTraits("Ocean.")
+                .WithText("While your heading is at the worst setting (Stormy), when faced with the option to travel, the players must travel to Waterspout, if able.\r\nForced: After traveling to Waterspout, deal 4 damage to each Ship objective.")
+                .WithInfo(54, 2, Artist.Unknown));
             Cards.Add(Card.Enemy("Captain Sahír", "", "The Stormcaller Elite", 4, 6, 6, 2, 5)
                 .WithTypeBasedSlug()
                 .WithUnique()

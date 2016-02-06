@@ -437,7 +437,7 @@ namespace HallOfBeorn.Models
             }
             else if (CardType.Value == Models.CardType.Encounter)
             {
-                return card.CardType == Models.CardType.Enemy || card.CardType == Models.CardType.Location || card.CardType == Models.CardType.Treachery || card.CardType == Models.CardType.Objective || card.CardType == Models.CardType.Objective_Ally || card.CardType == Models.CardType.Objective_Location || card.CardType == Models.CardType.Encounter_Side_Quest;
+                return card.CardType == Models.CardType.Enemy || card.CardType == Models.CardType.Location || card.CardType == Models.CardType.Treachery || card.CardType == Models.CardType.Objective || card.CardType == Models.CardType.Objective_Ally || card.CardType == Models.CardType.Objective_Location || card.CardType == Models.CardType.Encounter_Side_Quest || card.CardType == Models.CardType.Ship_Objective || card.CardType == Models.CardType.Ship_Enemy;
             }
             else if (CardType.Value == Models.CardType.Objective)
             {
