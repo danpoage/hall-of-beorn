@@ -11,7 +11,7 @@ namespace HallOfBeorn.Models.Sets
         {
             Name = "The Grey Havens";
             Abbreviation = "TGH";
-            Number = 30;
+            Number = 35;
             SetType = Models.SetType.Deluxe_Expansion;
 
             Cards.Add(Card.Hero("Círdan the Shipwright", "", Sphere.Spirit, 12, 4, 2, 2, 4)
