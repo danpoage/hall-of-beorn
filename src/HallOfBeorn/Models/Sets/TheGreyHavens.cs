@@ -63,7 +63,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithTraits("Grey Havens.", "Ship.")
                 .WithText("Immune to player card effects. Sentinel.\r\nRaise your starting threat by 3.\r\nDraw 1 additional card during the resource phase.\r\nIf the Dawn Star is destroyed, the players lose the game.")
                 .WithInfo(81, 1, Artist.Titus_Lunter));
-            Cards.Add(Card.ShipObjective("Dream-chaser", "The Dream-chaser's Fleet", 5, 4, 4, 18)
+            Cards.Add(Card.ShipObjective("Silver Wing", "The Dream-chaser's Fleet", 5, 4, 4, 18)
                 .WithTraits("Grey Havens.", "Ship.")
                 .WithText("Immune to player card effects. Sentinel. Ranged.\r\nReduce your starting threat by 3.\r\nEach hero you control gets +1 Attack.\r\nIf the Silver Wing is destroyed, the players lose the game.")
                 .WithInfo(82, 1, Artist.Unknown));
