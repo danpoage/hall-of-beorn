@@ -110,6 +110,9 @@ namespace HallOfBeorn.Models
         public static Product TheBattleOfCarnDum = new TheBattleOfCarnDumProduct();
         public static Product TheDreadRealm = new TheDreadRealmProduct();
 
+        //The Grey Havens and Dream-chaser Cycle
+        public static Product TheGreyHavens = new TheGreyHavensProduct();
+
         //The Hobbit Saga
         public static Product TheHobbitOverHillAndUnderHill = new TheHobbitOverHillAndUnderHillProduct();
         public static Product TheHobbitOnTheDoorstep = new TheHobbitOnTheDoorstepProduct();

@@ -142,6 +142,8 @@ namespace HallOfBeorn.Models
             Add(TheBattleOfCarnDum);
             Add(TheDreadRealm);
 
+            Add(TheGreyHavens);
+
             Add(TheHobbitOverHillAndUnderHill);
             Add(TheHobbitOnTheDoorstep);
 
@@ -253,6 +255,8 @@ namespace HallOfBeorn.Models
         public static CardSet TheTreacheryOfRhudaur = new Sets.TheTreacheryOfRhudaur().WithShortSlug("G");
         public static CardSet TheBattleOfCarnDum = new Sets.TheBattleOfCarnDum().WithShortSlug("H");
         public static CardSet TheDreadRealm = new Sets.TheDreadRealm().WithShortSlug("I");
+
+        public static CardSet TheGreyHavens = new Sets.TheGreyHavens().WithShortSlug("J");
 
         public static CardSet TheHobbitOverHillAndUnderHill = new Sets.TheHobbitOverHillandUnderHill().WithShortSlug("Y");
         public static CardSet TheHobbitOnTheDoorstep = new Sets.TheHobbitOntheDoorstep().WithShortSlug("Z");

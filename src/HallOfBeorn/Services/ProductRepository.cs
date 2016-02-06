@@ -17,6 +17,7 @@ namespace HallOfBeorn.Services
             productGroups.Add(ProductGroup.AgainstTheShadow);
             productGroups.Add(ProductGroup.TheRingMaker);
             productGroups.Add(ProductGroup.AngmarAwakened);
+            productGroups.Add(ProductGroup.DreamChaser);
             productGroups.Add(ProductGroup.TheHobbitSaga);
             productGroups.Add(ProductGroup.TheLordOfTheRingsSaga);
             productGroups.Add(ProductGroup.GenConDeck);

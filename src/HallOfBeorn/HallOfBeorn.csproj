@@ -285,12 +285,14 @@
     <Compile Include="Models\Language.cs" />
     <Compile Include="Models\Link.cs" />
     <Compile Include="Models\LinkType.cs" />
+    <Compile Include="Models\ProductGroups\DreamChaserProductGroup.cs" />
     <Compile Include="Models\Products\AcrossTheEttenmoorsProduct.cs" />
     <Compile Include="Models\Products\EscapeFromMountGramProduct.cs" />
     <Compile Include="Models\Products\MurderAtThePrancingPonyProduct.cs" />
     <Compile Include="Models\Products\TheBattleOfCarnDumProduct.cs" />
     <Compile Include="Models\Products\TheDreadRealmProduct.cs" />
     <Compile Include="Models\Products\TheDunlandTrapNightmareProduct.cs" />
+    <Compile Include="Models\Products\TheGreyHavensProduct.cs" />
     <Compile Include="Models\Products\TheLandOfShadowProduct.cs" />
     <Compile Include="Models\Products\TheRuinsOfBelegostProduct.cs" />
     <Compile Include="Models\Products\TheThreeTrialsNightmareProduct.cs" />
@@ -516,6 +518,7 @@
     <Compile Include="Models\Sets\TheDruadanForestNightmare.cs" />
     <Compile Include="Models\Sets\TheDunlandTrapNightmare.cs" />
     <Compile Include="Models\Sets\TheFordsOfIsenNightmare.cs" />
+    <Compile Include="Models\Sets\TheGreyHavens.cs" />
     <Compile Include="Models\Sets\TheLandOfShadow.cs" />
     <Compile Include="Models\Sets\TheLonelyMountainNightmare.cs" />
     <Compile Include="Models\Sets\TheLostRealm.cs" />
@@ -682,7 +685,7 @@
     <Content Include="Images\unique-card.png" />
     <Content Include="Images\unique.png" />
     <Content Include="Images\willpower.gif" />
-    <Content Include="Scripts\autocomplete10.js" />
+    <Content Include="Scripts\autocomplete11.js" />
     <Content Include="Scripts\cardSearch.js" />
     <Content Include="Scripts\deckBuilder.js" />
     <Content Include="Scripts\highcharts.js" />

@@ -30,6 +30,7 @@ namespace HallOfBeorn.Models
         public static ProductGroup AgainstTheShadow = new AgainstTheShadowProductGroup();
         public static ProductGroup TheRingMaker = new TheRingMakerProductGroup();
         public static ProductGroup AngmarAwakened = new AngmarAwakenedProductGroup();
+        public static ProductGroup DreamChaser = new DreamChaserProductGroup();
         public static ProductGroup TheHobbitSaga = new TheHobbitSagaProductGroup();
         public static ProductGroup TheLordOfTheRingsSaga = new TheLordOfTheRingsSagaProductGroup();
         public static ProductGroup GenConDeck = new GenConDeckProductGroup();

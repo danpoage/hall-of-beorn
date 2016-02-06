@@ -16,6 +16,7 @@
     "Reinforcements", "Send for Aid", "Elven Spear", "Horn's Cry", "Galadhrim Weaver", "Silver Harp", "Galdor of the Havens", "The Door is Closed!", "Elf-friend",
     "Guardian of Arnor", "Doom Hangs Still", "Beechbone", "Hold Your Ground", "Lindir", "Lords of the Eldar", "The Long Defeat", "Quick Ears", "Favor of the Valar",
     "Eothain", "Sword of Numenor", "Fornost Bowman", "Hour of Wrath", "Elven-light", "Tale of Tinuviel", "Galadhrim Healer", "Weather-stained Cloak", "Sword-thain",
+    "Cirdan the Shipwright","Mithlond Sea-watcher","Lindon Navigator","Elwing's Flight",
           "+set:",
           "-set:",
           "+type:",
