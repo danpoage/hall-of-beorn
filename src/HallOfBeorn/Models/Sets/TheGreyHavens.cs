@@ -34,11 +34,13 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Attach to a Leadership or a Scout character.\r\nResponse: At the beginning of the travel phase, exhaust Mariner's Compass and attached character to search the top 5 cards of the encounter deck for a location. Switch that location with a location in the staging area. Shuffle the encounter deck.")
                 .WithInfo(4, 3, Artist.Unknown));
             Cards.Add(Card.Ally("Mithlond Sea-watcher", "", Sphere.Tactics, 2, 1, 1, 0, 2)
+                .WithGeneric()
                 .WithTraits("Noldor.", "Warrior.")
                 .WithText("While the top card of your discard pile is an ally, Mithlond Sea-watcher gets +2 Attack and gains ranged.")
                 .WithFlavor("But it was an old tradition that away over there stood the Grey Havens, from which at times elven-ships set sail, never to return.\r\n-The Fellowship of the Ring")
                 .WithInfo(5, 3, Artist.Owen_William_Weber));
             Cards.Add(Card.Ally("Warden of the Havens", "", Sphere.Leadership, 2, 0, 1, 1, 3)
+                .WithGeneric()
                 .WithTraits("Noldor.", "Warrior.")
                 .WithText("While the top card of your discard pile is an attachment, Warden of the Havens gets +2 Defense and gains sentinel.")
                 .WithFlavor("\"...and if he comes, assailing the White Towers and the Havens, hereafter the Elves may have no escape from the lengthening shadows of Middle-earth.\"\r\n-Galdor, The Fellowship of the Ring")
@@ -50,6 +52,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Response: After an enemy is declared as an attacker against you, declare an exhausted character you control as the defender. Resolve that effect again for each copy of Anchor Watch currently in your discard pile (all chosen characters are defending against this attack).")
                 .WithInfo(8, 3, Artist.Unknown));
             Cards.Add(Card.Ally("Lindon Navigator", "", Sphere.Lore, 2, 2, 1, 1, 2)
+                .WithGeneric()
                 .WithTraits("Noldor.", "Scout.")
                 .WithText("Lindon Navigator does not exhaust to commit to a quest, and can commit to quests while exhausted.\r\nForced: After resolving a quest to which Lindon Navigator was committed, either discard it from play or discard 1 card from your hand.")
                 .WithInfo(9, 3, Artist.Tiziano_Baracchi));
@@ -58,10 +61,12 @@ namespace HallOfBeorn.Models.Sets
                 .WithFlavor("...for ever still a herald on\r\nar errand that should never rest\r\nto bear his shining lamp afar,\r\nthe Flammifer of Westernesse.\r\n-The Fellowship of the Ring")
                 .WithInfo(10, 3, Artist.Unknown));
             Cards.Add(Card.Attachment("Explorer's Almanac", "", Sphere.Lore, 0)
+                .WithGeneric()
                 .WithTraits("Item.")
                 .WithText("Attach to a location in the staging area.\r\nProgress from questing successfully may be placed on the attached location before it is placed on the current quest.")
                 .WithInfo(11, 3, Artist.Unknown));
             Cards.Add(Card.Ally("Sailor of Lune", "", Sphere.Spirit, 2, 1, 1, 0, 2)
+                .WithGeneric()
                 .WithTraits("Noldor.", "Scout.")
                 .WithText("While the top card of your discard pile is an event, Sailor of Lune gets +1 Willpower and gains: \"Cannot be damaged while committed to the quest.\"")
                 .WithFlavor("\"They are sailing, sailing, sailing over the Sea, they are going into the West and leaving us,\" said Sam, half chanting the words, shaking his head sadly and solemnly.\r\n-The Fellowship of the Ring")
@@ -71,6 +76,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithFlavor("There flying Elwing came to him\r\nand flame was in the darkness lit;\r\nmore bright than light of diamond\r\nthe fire upon her carcanet.\r\n-The Fellowship of the Ring")
                 .WithInfo(13, 3, Artist.A_M_Sartor));
             Cards.Add(Card.Attachment("To the Sea, to the Sea!", "", Sphere.Spirit, 1)
+                .WithUnique()
                 .WithTraits("Song.")
                 .WithText("Attach to a Noldor character.\r\nAction: Exhaust To the Sea, to the Sea! and discard X cards from your hand to reduce the cost of the next Noldor ally played this phase by X (to a minimum of 1).")
                 .WithFlavor("To the Sea, to the Sea! The white gulls are crying,\r\nThe wind is blowing, and the white foam is flying.\r\n-The Return of the King")
