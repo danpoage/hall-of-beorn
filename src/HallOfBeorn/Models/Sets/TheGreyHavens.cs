@@ -38,6 +38,12 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Quest Action: Ready a questing character and give that character +1 Willpower until the end of the phase. Resolve that effect again for each copy of Elwing's Flight currently in your discard pile (you may choose different targets).")
                 .WithFlavor("There flying Elwing came to him\r\nand flame was in the darkness lit;\r\nmore bright than light of diamond\r\nthe fire upon her carcanet.\r\n-The Fellowship of the Ring")
                 .WithInfo(13, 3, Artist.A_M_Sartor));
+            Cards.Add(Card.Attachment("Narya", "", Sphere.Neutral, 2)
+                .WithUnique()
+                .WithTraits("Ring.", "Artifact.")
+                .WithText("Attach to Círdan the Shipwright or Gandalf.\r\nAttached character gains a Leadership resource icon.\r\nAction: Exhaust Narya and attached character to choose and ready up to 2 allies. Each of those allies gets +1 Attack and +1 Defense until the end of the phase.")
+                .WithFlavor("\"For this is the Ring of Fire, and with it you may rekindle hearts in a world that grows chill.\"\r\n-Círdan, The Return of the King")
+                .WithInfo(15, 3, Artist.Lucas_Durham));
             Cards.Add(Card.ShipEnemy("Scouting Ship", string.Empty, 35, 2, 5, 2, 7)
                 .WithGeneric()
                 .WithTraits("Corsair.", "Ship.")
