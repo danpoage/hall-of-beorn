@@ -27,7 +27,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithInfo(2, 1, Artist.Lukasz_Jaskolski));
             Cards.Add(Card.Attachment("Grappling Hook", "", Sphere.Tactics, 1)
                 .WithTraits("Item.")
-                .WithText("Attach to a character.\r\nQuest Action: Discard Grappling Hook and exhaust attached character to commit attached character to the quest, using its Attack instead of its Willpower (or instead of it Defense if the current quest has the siege keyword).")
+                .WithText("Attach to a character.\r\nQuest Action: Discard Grappling Hook and exhaust attached character to commit attached character to the quest, using its Attack instead of its Willpower (or instead of its Defense if the current quest has the siege keyword).")
                 .WithInfo(3, 3, Artist.Unknown));
             Cards.Add(Card.Attachment("Mariner's Compass", "", Sphere.Leadership, 1)
                 .WithTraits("Item.")
