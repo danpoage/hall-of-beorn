@@ -88,7 +88,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithFlavor("A final scream fills the dreadful halls of Carn Dûm, and you suspect the worst. As you enter the site of Daechanar's dark ritual, your fears come to life. Iârion stands before you, cracking his neck and gripping the blade at his side tightly, as though testing his muscles. Only it isn't him.")
                 .WithText("When Revealed: Add Daechanar to the staging area. Make Altar of Midwinter the active location, returning any previously active location to the staging area. Each player reanimates the top card of his deck.")
                 .WithOppositeFlavor("Daechanar, in the body of your ally Iârion, laughs wickedly. Despair and frustration are the only thoughts that enter your mind. In the end, you were too late to stop this cruel fate. \"Finally! Yes, this body will do nicely.\" the wraith wearing the guise of your friend muses. He draws his blade.")
-                .WithOppositeFlavor("Reanimated Dead are Undead enemies with 2 Threat, 2 Attack, 2 Defense and 2 hit points.\r\nWhen Daechanar is defeated, advance to the next stage.")
+                .WithOppositeText("Reanimated Dead are Undead enemies with 2 Threat, 2 Attack, 2 Defense and 2 hit points.\r\nWhen Daechanar is defeated, advance to the next stage.")
                 .WithInfo(151, 1, Artist.Lukasz_Jaskolski));
             Cards.Add(Card.Quest("Daechanar's Fall", "", 6, 3, setName, 255)
                 .WithFlavor("The imposter in Iârion's body collapses in agony, and a piercing shriek echoes the halls as the sorcerer exits Iârion. \"Thank you,\" Iârion says with a pained smile before his eyes close for the last time. Before you can mourn your loss, the walls begin to shake and crack. The catacombs are collapsing!")
