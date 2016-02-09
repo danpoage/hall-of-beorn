@@ -166,7 +166,7 @@ namespace HallOfBeorn.Services
                 filters.Add(new SearchFilter((s, c) => { return s.DeckType == c.GetDeckType(); }, 100, "Deck Type matches '" + model.DeckType.ToEnumDisplayString() + "'"));
 
             if (model.HasCardSet())
-                filters.Add(new SearchFilter((s, c) => { return s.CardSetMatches(c); }, 100, "Card Set matches '" + model.CardSet + "'"));
+                filters.Add(new SearchFilter((s, c) => { return s.CardSetMatches(c) || (!string.IsNullOrEmpty(c.CardSet.Cycle) && s.CardSet == c.CardSet.Cycle); }, 100, "Card Set matches '" + model.CardSet + "'"));
 
             if (model.HasScenario())
                 filters.Add(new SearchFilter((s, c) => { return BelongsToScenario(c, s.Scenario); }, 100, "Scenario matches '" + model.Scenario + "'"));

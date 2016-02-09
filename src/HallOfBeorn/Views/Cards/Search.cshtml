@@ -41,8 +41,8 @@
             <div class="search-items">
                 <span class="search-filter">
                 <span class="search-label-short">Card Set</span>
-                @Html.DropDownList("CardSet", SearchViewModel.CardSets, new { @class = "search-select" })
-                    @*
+                @* @Html.DropDownList("CardSet", SearchViewModel.CardSets, new { @class = "search-select" }) *@
+                    
                 <select class="search-select" id="CardSet" name="CardSet"><option selected="selected" value="Any">Any</option>
 <option value="Core Set" class="set-core">Core Set</option>
 <option value="Shadows of Mirkwood" class="set-cycle">SHADOWS OF MIRKWOOD CYCLE</option>
@@ -72,7 +72,7 @@
 <option value="The Morgul Vale" class="set-ap">The Morgul Vale</option>
 <option value="" disabled="disabled">————————————————————</option>
 <option value="The Voice of Isengard" class="set-expansion">The Voice of Isengard</option>
-<option value="The Ring-maker" class="set-cycle">RINGMAKER CYCLE</option>
+<option value="The Ring-maker" class="set-cycle">THE RING-MAKER CYCLE</option>
 <option value="The Dunland Trap" class="set-ap">The Dunland Trap</option>
 <option value="The Three Trials" class="set-ap">The Three Trials</option>
 <option value="Trouble in Tharbad" class="set-ap">Trouble in Tharbad</option>
@@ -110,7 +110,7 @@
 <option value="Fog on the Barrow-downs" class="set-pod">Fog on the Barrow-downs</option>
 <option value="Murder at the Prancing Pony" class="set-pod">Murder at the Prancing Pony</option>
 <option value="" disabled="disabled">————————————————————</option>
-<option value="Nightmare" class="set-cycle">NIGHTMARE</option>
+<option value="NIGHTMARE" class="set-cycle">NIGHTMARE</option>
 <option value="Passage Through Mirkwood Nightmare" class="set-pod">Passage Through Mirkwood Nightmare</option>
 <option value="Journey Along the Anduin Nightmare" class="set-pod">Journey Along the Anduin Nightmare</option>
 <option value="Escape From Dol Guldur Nightmare" class="set-pod">Escape From Dol Guldur Nightmare</option>
@@ -160,7 +160,7 @@
 <option value="Flight to the Ford Nightmare" class="set-pod">Flight to the Ford Nightmare</option>
 <option value="" disabled="disabled">————————————————————</option>
 <option value="First Age" class="set-expansion">First Age</option>
-</select>*@
+</select>
                 </span>
 
                 <span class="search-filter">

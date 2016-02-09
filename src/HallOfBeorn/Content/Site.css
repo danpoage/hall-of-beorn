@@ -1150,36 +1150,37 @@ tr.pager td {
 
 .set-core {
     color: black;
-    font-size: 14pt;
+    font-weight: bold !important;
+    font-size: 1.1em;
     font-family: Arial;
 }
 
 .set-expansion {
     color: black;
-    font-size: 14pt;
+    font-size: 1.1em;
     font-family: Arial;
 }
 
 .set-saga {
     color: black;
-    font-size: 14pt;
+    font-size: 1.1em;
     font-family: Arial;
 }
 
 .set-cycle {
     color: #505050;
-    font-size: 12pt;
+    font-size: .9em;
     font-family: Arial;
 }
 
 .set-ap {
     color: black;
-    font-size: 12pt;
+    font-size: 1em;
     font-family: Arial;
 }
 
 .set-pod {
     color: black;
-    font-size: 12pt;
+    font-size: 1em;
     font-family: Arial;
 }

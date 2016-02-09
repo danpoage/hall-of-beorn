@@ -92,8 +92,10 @@ namespace HallOfBeorn.Services
 
         public IEnumerable<string> SetNames()
         {
+            return CardSet.All().Select(x => x.Name).ToList();
+
+            /*
             var setNames = new List<string>();
-            //return CardSet.All().Select(x => x.Name).ToList();
 
             CardSet previous = null;
             foreach (var set in CardSet.All())
@@ -109,6 +111,7 @@ namespace HallOfBeorn.Services
             }
 
             return setNames;
+            */
         }
 
         public IEnumerable<CardSet> CardSets()
