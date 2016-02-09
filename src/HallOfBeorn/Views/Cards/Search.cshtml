@@ -41,7 +41,126 @@
             <div class="search-items">
                 <span class="search-filter">
                 <span class="search-label-short">Card Set</span>
-                @Html.DropDownListFor(x => x.CardSet, SearchViewModel.CardSets, new { @class = "search-select" })
+                @Html.DropDownList("CardSet", SearchViewModel.CardSets, new { @class = "search-select" })
+                    @*
+                <select class="search-select" id="CardSet" name="CardSet"><option selected="selected" value="Any">Any</option>
+<option value="Core Set" class="set-core">Core Set</option>
+<option value="Shadows of Mirkwood" class="set-cycle">SHADOWS OF MIRKWOOD CYCLE</option>
+<option value="The Hunt for Gollum" class="set-ap">The Hunt for Gollum</option>
+<option value="Conflict at the Carrock" class="set-ap">Conflict at the Carrock</option>
+<option value="A Journey To Rhosgobel" class="set-ap">A Journey To Rhosgobel</option>
+<option value="The Hills of Emyn Muil" class="set-ap">The Hills of Emyn Muil</option>
+<option value="The Dead Marshes" class="set-ap">The Dead Marshes</option>
+<option value="Return to Mirkwood" class="set-ap">Return to Mirkwood</option>
+<option value="" disabled="disabled">————————————————————</option>
+<option value="Khazad-dûm" class="set-expansion">Khazad-dûm</option>
+<option value="Dwarrowdelf" class="set-cycle">DWARROWDELF CYCLE</option>
+<option value="The Redhorn Gate" class="set-ap">The Redhorn Gate</option>
+<option value="Road to Rivendell" class="set-ap">Road to Rivendell</option>
+<option value="The Watcher in the Water" class="set-ap">The Watcher in the Water</option>
+<option value="The Long Dark" class="set-ap">The Long Dark</option>
+<option value="Foundations of Stone" class="set-ap">Foundations of Stone</option>
+<option value="Shadow and Flame" class="set-ap">Shadow and Flame</option>
+<option value="" disabled="disabled">————————————————————</option>
+<option value="Heirs of Númenor" class="set-expansion">Heirs of Númenor</option>
+<option value="Against the Shadow" class="set-cycle">AGAINST THE SHADOW CYCLE</option>
+<option value="The Steward's Fear" class="set-ap">The Steward's Fear</option>
+<option value="The Drúadan Forest" class="set-ap">The Drúadan Forest</option>
+<option value="Encounter at Amon Dîn" class="set-ap">Encounter at Amon Dîn</option>
+<option value="Assault on Osgiliath" class="set-ap">Assault on Osgiliath</option>
+<option value="The Blood of Gondor" class="set-ap">The Blood of Gondor</option>
+<option value="The Morgul Vale" class="set-ap">The Morgul Vale</option>
+<option value="" disabled="disabled">————————————————————</option>
+<option value="The Voice of Isengard" class="set-expansion">The Voice of Isengard</option>
+<option value="The Ring-maker" class="set-cycle">RINGMAKER CYCLE</option>
+<option value="The Dunland Trap" class="set-ap">The Dunland Trap</option>
+<option value="The Three Trials" class="set-ap">The Three Trials</option>
+<option value="Trouble in Tharbad" class="set-ap">Trouble in Tharbad</option>
+<option value="The Nîn-in-Eilph" class="set-ap">The Nîn-in-Eilph</option>
+<option value="Celebrimbor's Secret" class="set-ap">Celebrimbor's Secret</option>
+<option value="The Antlered Crown" class="set-ap">The Antlered Crown</option>
+<option value="" disabled="disabled">————————————————————</option>
+<option value="The Lost Realm" class="set-expansion">The Lost Realm</option>
+<option value="Angmar Awakened" class="set-cycle">ANGMAR AWAKENED CYCLE</option>
+<option value="The Wastes of Eriador" class="set-ap">The Wastes of Eriador</option>
+<option value="Escape from Mount Gram" class="set-ap">Escape from Mount Gram</option>
+<option value="Across the Ettenmoors" class="set-ap">Across the Ettenmoors</option>
+<option value="The Treachery of Rhudaur" class="set-ap">The Treachery of Rhudaur</option>
+<option value="The Battle of Carn Dûm" class="set-ap">The Battle of Carn Dûm</option>
+<option value="The Dread Realm" class="set-ap">The Dread Realm</option>
+<option value="" disabled="disabled">————————————————————</option>
+<option value="The Grey Havens" class="set-expansion">The Grey Havens</option>
+<option value="" disabled="disabled">————————————————————</option>
+<option value="The Hobbit" class="set-cycle">THE HOBBIT</option>
+<option value="The Hobbit: Over Hill and Under Hill" class="set-saga">The Hobbit: Over Hill and Under Hill</option>
+<option value="The Hobbit: On the Doorstep" class="set-saga">The Hobbit: On the Doorstep</option>
+<option value="" disabled="disabled">————————————————————</option>
+<option value="The Lord of the Rings" class="set-cycle">THE LORD OF THE RINGS</option>
+<option value="The Black Riders" class="set-saga">The Black Riders</option>
+<option value="The Road Darkens" class="set-saga">The Road Darkens</option>
+<option value="The Treason of Saruman" class="set-saga">The Treason of Saruman</option>
+<option value="The Land of Shadow" class="set-saga">The Land of Shadow</option>
+<option value="" disabled="disabled">————————————————————</option>
+<option value="GenCon" class="set-cycle">GENCON & FELLOWSHIP</option>
+<option value="The Massing at Osgiliath" class="set-pod">The Massing at Osgiliath</option>
+<option value="The Battle of Lake-town" class="set-pod">The Battle of Lake-town</option>
+<option value="The Stone of Erech" class="set-pod">The Stone of Erech</option>
+<option value="The Ruins of Belegost" class="set-pod">The Ruins of Belegost</option>
+<option value="The Old Forest" class="set-pod">The Old Forest</option>
+<option value="Fog on the Barrow-downs" class="set-pod">Fog on the Barrow-downs</option>
+<option value="Murder at the Prancing Pony" class="set-pod">Murder at the Prancing Pony</option>
+<option value="" disabled="disabled">————————————————————</option>
+<option value="Nightmare" class="set-cycle">NIGHTMARE</option>
+<option value="Passage Through Mirkwood Nightmare" class="set-pod">Passage Through Mirkwood Nightmare</option>
+<option value="Journey Along the Anduin Nightmare" class="set-pod">Journey Along the Anduin Nightmare</option>
+<option value="Escape From Dol Guldur Nightmare" class="set-pod">Escape From Dol Guldur Nightmare</option>
+<option value="The Hunt for Gollum Nightmare" class="set-pod">The Hunt for Gollum Nightmare</option>
+<option value="Conflict at the Carrock Nightmare" class="set-pod">Conflict at the Carrock Nightmare</option>
+<option value="A Journey to Rhosgobel Nightmare" class="set-pod">A Journey to Rhosgobel Nightmare</option>
+<option value="The Hills of Emyn Muil Nightmare" class="set-pod">The Hills of Emyn Muil Nightmare</option>
+<option value="The Dead Marshes Nightmare" class="set-pod">The Dead Marshes Nightmare</option>
+<option value="Return to Mirkwood Nightmare" class="set-pod">Return to Mirkwood Nightmare</option>
+<option value="" disabled="disabled">————————————————————</option>
+<option value="Into the Pit Nightmare" class="set-pod">Into the Pit Nightmare</option>
+<option value="The Seventh Level Nightmare" class="set-pod">The Seventh Level Nightmare</option>
+<option value="Flight from Moria Nightmare" class="set-pod">Flight from Moria Nightmare</option>
+<option value="The Redhorn Gate Nightmare" class="set-pod">The Redhorn Gate Nightmare</option>
+<option value="Road to Rivendell Nightmare" class="set-pod">Road to Rivendell Nightmare</option>
+<option value="The Watcher in the Water Nightmare" class="set-pod">The Watcher in the Water Nightmare</option>
+<option value="The Long Dark Nightmare" class="set-pod">The Long Dark Nightmare</option>
+<option value="Foundations of Stone Nightmare" class="set-pod">Foundations of Stone Nightmare</option>
+<option value="Shadow and Flame Nightmare" class="set-pod">Shadow and Flame Nightmare</option>
+<option value="" disabled="disabled">————————————————————</option>
+<option value="Peril in Pelargir Nightmare" class="set-pod">Peril in Pelargir Nightmare</option>
+<option value="Into Ithilien Nightmare" class="set-pod">Into Ithilien Nightmare</option>
+<option value="The Siege of Cair Andros Nightmare" class="set-pod">The Siege of Cair Andros Nightmare</option>
+<option value="The Steward's Fear Nightmare" class="set-pod">The Steward's Fear Nightmare</option>
+<option value="The Drúadan Forest Nightmare" class="set-pod">The Drúadan Forest Nightmare</option>
+<option value="Encounter at Amon Dîn Nightmare" class="set-pod">Encounter at Amon Dîn Nightmare</option>
+<option value="Assault on Osgiliath Nightmare" class="set-pod">Assault on Osgiliath Nightmare</option>
+<option value="The Blood of Gondor Nightmare" class="set-pod">The Blood of Gondor Nightmare</option>
+<option value="The Morgul Vale Nightmare" class="set-pod">The Morgul Vale Nightmare</option>
+<option value="" disabled="disabled">————————————————————</option>
+<option value="The Fords of Isen Nightmare" class="set-pod">The Fords of Isen Nightmare</option>
+<option value="To Catch an Orc Nightmare" class="set-pod">To Catch an Orc Nightmare</option>
+<option value="Into Fangorn Nightmare" class="set-pod">Into Fangorn Nightmare</option>
+<option value="The Dunland Trap Nightmare" class="set-pod">The Dunland Trap Nightmare</option>
+<option value="The Three Trials Nightmare" class="set-pod">The Three Trials Nightmare</option>
+<option value="Trouble in Tharbad Nightmare" class="set-pod">Trouble in Tharbad Nightmare</option>
+<option value="" disabled="disabled">————————————————————</option>
+<option value="We Must Away, Ere Break of Day Nightmare" class="set-pod">We Must Away, Ere Break of Day Nightmare</option>
+<option value="Over the Misty Mountains Grim Nightmare" class="set-pod">Over the Misty Mountains Grim Nightmare</option>
+<option value="Dungeons Deep and Caverns Dim Nightmare" class="set-pod">Dungeons Deep and Caverns Dim Nightmare</option>
+<option value="Flies and Spiders Nightmare" class="set-pod">Flies and Spiders Nightmare</option>
+<option value="The Lonely Mountain Nightmare" class="set-pod">The Lonely Mountain Nightmare</option>
+<option value="The Battle of Five Armies Nightmare" class="set-pod">The Battle of Five Armies Nightmare</option>
+<option value="" disabled="disabled">————————————————————</option>
+<option value="A Shadow of the Past Nightmare" class="set-pod">A Shadow of the Past Nightmare</option>
+<option value="A Knife in the Dark Nightmare" class="set-pod">A Knife in the Dark Nightmare</option>
+<option value="Flight to the Ford Nightmare" class="set-pod">Flight to the Ford Nightmare</option>
+<option value="" disabled="disabled">————————————————————</option>
+<option value="First Age" class="set-expansion">First Age</option>
+</select>*@
                 </span>
 
                 <span class="search-filter">

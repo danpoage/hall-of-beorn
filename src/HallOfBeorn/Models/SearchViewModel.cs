@@ -567,7 +567,7 @@ namespace HallOfBeorn.Models
             set;
         }
 
-        public static IEnumerable<SelectListItem> CardSets { get; set; }
+        public static IEnumerable<SelectListItemExtends> CardSets { get; set; }
         public static IEnumerable<SelectListItem> Scenarios { get; set; }
         public static IEnumerable<SelectListItem> EncounterSets { get; set; }
 

@@ -92,7 +92,23 @@ namespace HallOfBeorn.Services
 
         public IEnumerable<string> SetNames()
         {
-            return CardSet.All().Select(x => x.Name).ToList();
+            var setNames = new List<string>();
+            //return CardSet.All().Select(x => x.Name).ToList();
+
+            CardSet previous = null;
+            foreach (var set in CardSet.All())
+            {
+                if (previous != null && set.Cycle != previous.Cycle)
+                {
+                    setNames.Add(Extensions.SelectListSeparator);
+                }
+
+                setNames.Add(set.Name);
+
+                previous = set;
+            }
+
+            return setNames;
         }
 
         public IEnumerable<CardSet> CardSets()

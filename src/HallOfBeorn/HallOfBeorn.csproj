@@ -195,6 +195,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="HtmlHelperExtensions.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\AdvancedSearchViewModel.cs" />
     <Compile Include="Models\Artist.cs" />
@@ -602,6 +603,7 @@
     <Compile Include="Services\StatService.cs" />
     <Compile Include="Services\TemplateRepository.cs" />
     <Compile Include="Services\TemplateService.cs" />
+    <Compile Include="Views\SelectListItemExtends.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />

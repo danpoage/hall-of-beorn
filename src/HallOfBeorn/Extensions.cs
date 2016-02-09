@@ -166,6 +166,30 @@ namespace HallOfBeorn
             return listItems;
         }
 
+        public static IEnumerable<SelectListItemExtends> GetExtendedSelectListItems(this IEnumerable<string> list)
+        {
+            var listItems = new List<SelectListItemExtends>() { new SelectListItemExtends() { Selected = true, Text = "Any", Value = "Any", Enabled = true } };
+
+            foreach (var item in list)
+            {
+                var selectItem = new SelectListItemExtends()
+                    {
+                        Text = item.Replace(".", string.Empty),
+                        Value = item,
+                        Enabled = true
+                    };
+
+                if (item.Contains("———"))
+                {
+                    selectItem.Enabled = false;
+                }
+
+                listItems.Add(selectItem);
+            }
+
+            return listItems;
+        }
+
         public static IEnumerable<SelectListItem> GetSelectListItems(this IEnumerable<byte> list)
         {
             var listItems = new List<SelectListItem>() { new SelectListItem() { Selected = true, Text = "Any", Value = "-1" } };
@@ -611,5 +635,7 @@ namespace HallOfBeorn
 
             return self.Split(separator);
         }
+
+        public const string SelectListSeparator = "————————————————————";
     }
 }
