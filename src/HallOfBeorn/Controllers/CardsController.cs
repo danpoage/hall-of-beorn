@@ -51,7 +51,7 @@ namespace HallOfBeorn.Controllers
             SearchViewModel.ThreatStrengthValues = statService.ThreatStrengthValues().GetSelectListItems();
             SearchViewModel.QuestPointsValues = statService.QuestPointsValues().GetSelectListItems();
 
-            SearchViewModel.CardSets = scenarioService.SetNames().GetSelectListItems();
+            SearchViewModel.CardSets = scenarioService.SetNames().GetExtendedSelectListItems();
             SearchViewModel.Scenarios = scenarioService.ScenarioTitles().GetSelectListItems();
             SearchViewModel.EncounterSets = scenarioService.EncounterSetNames().GetSelectListItems();
 

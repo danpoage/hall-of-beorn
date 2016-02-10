@@ -92,9 +92,8 @@ namespace HallOfBeorn.Services
 
         public IEnumerable<string> SetNames()
         {
-            return CardSet.All().Select(x => x.Name).ToList();
+            //return CardSet.All().Select(x => x.Name).ToList();
 
-            /*
             var setNames = new List<string>();
 
             CardSet previous = null;
@@ -102,7 +101,15 @@ namespace HallOfBeorn.Services
             {
                 if (previous != null && set.Cycle != previous.Cycle)
                 {
-                    setNames.Add(Extensions.SelectListSeparator);
+                    if (!string.IsNullOrEmpty(previous.Cycle) || previous.SetType != set.SetType)
+                    {
+                        setNames.Add(Extensions.SelectListSeparator);
+                    }
+
+                    if (!string.IsNullOrEmpty(set.Cycle))
+                    {
+                        setNames.Add(set.Cycle.ToUpper());
+                    }
                 }
 
                 setNames.Add(set.Name);
@@ -111,7 +118,6 @@ namespace HallOfBeorn.Services
             }
 
             return setNames;
-            */
         }
 
         public IEnumerable<CardSet> CardSets()
