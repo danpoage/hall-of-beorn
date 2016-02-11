@@ -673,6 +673,7 @@
     <Content Include="Images\Fellowship.png" />
     <Content Include="Images\HallOfBeorn-AppleTouchIcon.png" />
     <Content Include="Images\Happy_Grizzly_Bear.jpg" />
+    <Content Include="Images\heading-stormy.png" />
     <Content Include="Images\heart.png" />
     <Content Include="Images\Leadership.png" />
     <Content Include="Images\Lore.png" />
@@ -680,6 +681,7 @@
     <Content Include="Images\octgn-logo.png" />
     <Content Include="Images\Patreon.png" />
     <Content Include="Images\plus.png" />
+    <Content Include="Images\sailing-success.png" />
     <Content Include="Images\ShadowDivider.png" />
     <Content Include="Images\Spirit.png" />
     <Content Include="Images\Tactics.png" />

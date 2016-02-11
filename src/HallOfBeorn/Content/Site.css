@@ -994,6 +994,20 @@ tr.pager td {
     right:4px;
 }
 
+.sailing-success {
+    text-align:left;
+    margin-bottom: 4px;
+    position:absolute;
+    bottom:0px;
+    left:4px;
+}
+
+.heading-icon {
+    margin-left: 1px;
+    margin-bottom: -3px;
+    margin-right: -1px;
+}
+
 .pass-text {
     text-align:right;
     font-weight:bold;

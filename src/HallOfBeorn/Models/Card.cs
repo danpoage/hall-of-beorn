@@ -221,6 +221,12 @@ namespace HallOfBeorn.Models
                 case "shadow":
                     sb.Append("<img src='/Images/ShadowDivider.png' title='Shadow Effect' style='display:block;margin-left:auto;margin-right:auto;width:285px;'/>");
                     break;
+                case "sailing-success":
+                    sb.Append("<div class='sailing-success'><img src='/Images/sailing-success.png'/></div>");
+                    break;
+                case "heading-stormy":
+                    sb.Append("<img class='heading-icon' src='/Images/heading-stormy.png' />");
+                    break;
                 default:
                     sb.Append("<p>UNRECOGNIZED TYPE: " + type.ToLowerSafe() + "</p>");
                     break;

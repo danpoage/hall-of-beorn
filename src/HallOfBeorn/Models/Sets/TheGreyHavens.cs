@@ -98,6 +98,11 @@ namespace HallOfBeorn.Models.Sets
                 .WithTraits("Ocean.")
                 .WithText("While your heading is at the worst setting (Stormy), when faced with the option to travel, the players must travel to Waterspout, if able.\r\nForced: After traveling to Waterspout, deal 4 damage to each Ship objective.")
                 .WithInfo(54, 2, Artist.Unknown));
+            Cards.Add(Card.Treachery("Winds of Wrath", "", "Stormy Weather")
+                .WithTraits("Weather.")
+                .WithText("When Revealed: If you are off-course, deal 1 damage to each character in play. If your heading is at the worst setting (Stormy), this effect cannot be canceled.")
+                .WithShadow("Shadow: Either shift your heading off-course or treat this attack as undefended.")
+                .WithInfo(56, 3, Artist.Nate_Abell));
             Cards.Add(Card.Enemy("Captain Sahír", "", "The Stormcaller Elite", 4, 6, 6, 2, 5)
                 .WithTypeBasedSlug()
                 .WithUnique()
