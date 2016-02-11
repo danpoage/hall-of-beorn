@@ -673,6 +673,8 @@
     <Content Include="Images\Fellowship.png" />
     <Content Include="Images\HallOfBeorn-AppleTouchIcon.png" />
     <Content Include="Images\Happy_Grizzly_Bear.jpg" />
+    <Content Include="Images\heading-cloudy.png" />
+    <Content Include="Images\heading-rainy.png" />
     <Content Include="Images\heading-stormy.png" />
     <Content Include="Images\heart.png" />
     <Content Include="Images\Leadership.png" />

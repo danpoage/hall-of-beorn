@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.ProductGroups
     public class DreamChaserProductGroup : ProductGroup
     {
         public DreamChaserProductGroup()
-            : base("Dream-chase Cycle")
+            : base("Dream-chaser Cycle")
         {
             MainProduct = Product.TheGreyHavens;
         }

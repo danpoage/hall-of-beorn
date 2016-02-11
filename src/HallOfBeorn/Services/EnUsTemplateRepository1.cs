@@ -1326,7 +1326,7 @@ namespace HallOfBeorn.Services
 
             AddHtml("Captain-Sahir-Enemy-TGH", "<p>{self} engages the first player.</p><p>For each point of damage {self} would take, discard 1 resource from him and cancel that damage.</p><p><b>Forced:</b> After {self} attacks, place 2 resource tokens on him (4 instead if his attack destroyed a character).</p><br>{victory:6}");
             AddHtml("Captain-Sahir-Objective-Ally-TGH", "<p>The first player gains control of {self}.</p><p>{self} gets +1 {Willpower} and +1 {Attack} for each resource on him (max +6).</p><p><b>Action:</b> Spend 1 resource from a hero you control to place 1 resource on {self}. (Limit once per round).</p><p><b>If {self} leaves play, the players lose.</b></p>");
-            AddHtml("Scouting-Ship-TGH", "<p>{keyword:Boarding 1.} Cannot have attachments.</p><p>{self} gets -15 engagement cost while you are off course (Cloudy, Rainy, or Stormy).</p><p class='flavor-text'>All too well they could see for themselves the black sails.<br>&ndash;The Return of the King</p>");
+            AddHtml("Scouting-Ship-TGH", "<p>{keyword:Boarding 1.} Cannot have {type:Attachment@attachments}.</p><p>{self} gets -15 engagement cost while you are off course ({heading-cloudy} , {heading-rainy} , or {heading-stormy}).</p><p class='flavor-text'>All too well they could see for themselves the black sails.<br>&ndash;The Return of the King</p>");
             AddHtml("Waterspout-TGH", "<p>While your heading is at the worst setting (Stormy), when faced with the option to travel, the players must travel to {self}, if able.</p><p><b>Forced:</b> After traveling to {self}, deal 4 damage to each {trait-search:CardType=Ship_Objective&Trait=Ship.@Ship} objective.");
 
             /*
