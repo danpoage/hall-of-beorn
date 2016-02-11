@@ -119,8 +119,18 @@ namespace HallOfBeorn.Models
             Add(TheDreadRealm);
 
             //The Grey Havens and Dream-chaser
-            Add(TheStormcallerElite);
+            Add(CorsairPirates);
+            Add(CorsairRaiders);
+            Add(DrownedDead);
+            Add(RaidOnTheGreyHavens);
+            Add(StormyWeather);
             Add(TheDreamChasersFleet);
+            Add(TheFateOfNumenor);
+            Add(TheRuinsOfNumenor);
+            Add(TheStormcallerElite);
+            Add(TheUmbarNavy);
+            Add(VastOceans);
+            Add(VoyageAcrossBelegaer);
 
             //The Hobbit: Over Hill and Under Hill
             Add(WeMustAwayEreBreakOfDay);
@@ -332,9 +342,19 @@ namespace HallOfBeorn.Models
         public static EncounterSet TheDreadRealm = new EncounterSet { Name = "The Dread Realm", Set = "The Dread Realm" };
 
         //The Grey Havens and Dream-chaser
-        public static EncounterSet TheStormcallerElite = new EncounterSet { Name = "The Stormcaller Elite", Set = "The Grey Havens" };
+        public static EncounterSet CorsairPirates = new EncounterSet { Name = "Corsair Pirates", Set = "The Grey Havens" };
+        public static EncounterSet CorsairRaiders = new EncounterSet { Name = "Corsair Raiders", Set = "The Grey Havens" };
+        public static EncounterSet DrownedDead = new EncounterSet { Name = "Drowned Dead", Set = "The Grey Havens" };
+        public static EncounterSet RaidOnTheGreyHavens = new EncounterSet { Name = "Raid on the Grey Havens", Set = "The Grey Havens" };
+        public static EncounterSet StormyWeather = new EncounterSet { Name = "Stormy Weather", Set = "The Grey Havens" };
         public static EncounterSet TheDreamChasersFleet = new EncounterSet { Name = "The Dream-chaser's Fleet", Set = "The Grey Havens" };
-
+        public static EncounterSet TheFateOfNumenor = new EncounterSet { Name = "The Fate of Númenor", Set = "The Grey Havens" };
+        public static EncounterSet TheRuinsOfNumenor = new EncounterSet { Name = "The Ruins of Númenor", Set = "The Grey Havens" };
+        public static EncounterSet TheStormcallerElite = new EncounterSet { Name = "The Stormcaller Elite", Set = "The Grey Havens" };
+        public static EncounterSet TheUmbarNavy = new EncounterSet { Name = "The Umbar Navy", Set = "The Grey Havens" };
+        public static EncounterSet VastOceans = new EncounterSet { Name = "Vast Oceans", Set = "The Grey Havens" };
+        public static EncounterSet VoyageAcrossBelegaer = new EncounterSet { Name = "Voyage Across Belegaer", Set = "The Grey Havens" };
+        
         //The Hobbit: Over Hill and Under Hill
         public static EncounterSet WeMustAwayEreBreakOfDay = new EncounterSet { Name = "We Must Away, Ere Break of Day", Set = "The Hobbit: Over Hill and Under Hill" };
         public static EncounterSet WesternLands = new EncounterSet { Name = "Western Lands", Set = "The Hobbit: Over Hill and Under Hill" };

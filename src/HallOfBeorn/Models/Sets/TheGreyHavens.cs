@@ -116,14 +116,17 @@ namespace HallOfBeorn.Models.Sets
 
             Cards.Add(Card.ShipObjective("Dream-chaser", "The Dream-chaser's Fleet", 5, 4, 4, 18)
                 .WithTraits("Grey Havens.", "Ship.")
+                .WithKeywords("Sentinel.")
                 .WithText("Immune to player card effects. Sentinel.\r\nThe Dream-chaser can always be committed to sailing tests (even if you are not the first player), and counts as 2 characters when committed to a Sailing test.\r\nIf the Dream-chaser is destroyed, the players lose the game.")
                 .WithInfo(80, 1, Artist.Unknown));
             Cards.Add(Card.ShipObjective("Dawn Star", "The Dream-chaser's Fleet", 3, 3, 4, 16)
                 .WithTraits("Gondor.", "Ship.")
+                .WithKeywords("Sentinel.")
                 .WithText("Immune to player card effects. Sentinel.\r\nRaise your starting threat by 3.\r\nDraw 1 additional card during the resource phase.\r\nIf the Dawn Star is destroyed, the players lose the game.")
                 .WithInfo(81, 1, Artist.Titus_Lunter));
             Cards.Add(Card.ShipObjective("Silver Wing", "The Dream-chaser's Fleet", 2, 4, 2, 14)
                 .WithTraits("Gondor.", "Ship.")
+                .WithKeywords("Sentinel.", "Ranged.")
                 .WithText("Immune to player card effects. Sentinel. Ranged.\r\nReduce your starting threat by 3.\r\nEach hero you control gets +1 Attack.\r\nIf the Silver Wing is destroyed, the players lose the game.")
                 .WithInfo(82, 1, Artist.Unknown));
         }
