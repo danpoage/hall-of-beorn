@@ -495,6 +495,8 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Glen_Osterberger);
 
             //The Grey Havens
+            all.Add(Artist.Leanna_Teneycke);
+            all.Add(Artist.Mateusz_Ozminski);
             all.Add(Artist.Sara_Winters);
 
             //Murder at the Prancing Pony
@@ -812,6 +814,7 @@ namespace HallOfBeorn.Models
         public static Artist Kristina_Gehrmann = new Artist { Name = "Kristina Gehrmann", URL = "http://kristinagehrmann.deviantart.com" };
         public static Artist Kristina_Carroll = new Artist { Name = "Kristina Carroll", URL = "http://kristinaecarroll.deviantart.com" };
         public static Artist Lane_Brown = new Artist { Name = "Lane Brown", URL = "http://wildweasel339.deviantart.com" };
+        public static Artist Leanna_Teneycke = new Artist { Name = "Leanna Teneycke", URL = "http://www.leannateneycke.com" };
         public static Artist Leonardo_Borazio = new Artist { Name = "Leonardo Borazio", URL = "http://dleoblack.deviantart.com" };
         public static Artist Lin_Bo = new Artist { Name = "Lin Bo", URL = "http://0bo.deviantart.com/" };
         public static Artist Lindsey_Messecar = new Artist { Name = "Lindsey Messecar", URL = "http://lmessecar.deviantart.com" };
@@ -837,6 +840,7 @@ namespace HallOfBeorn.Models
         public static Artist Mark_Poole = new Artist { Name = "Mark Poole", URL = "http://www.markpoole.net" };
         public static Artist Mark_Tarrisse = new Artist { Name = "Mark Tarrisse", URL = "http://marktarrisse.deviantart.com" };
         public static Artist Mark_Winters = new Artist { Name = "Mark Winters", URL = "http://markwinters.deviantart.com" };
+        public static Artist Mateusz_Ozminski = new Artist { Name = "Mateusz Ozminski", URL = "http://www.ozminski.com" };
         public static Artist Mathias_Kollros = new Artist { Name = "Mathias Kollros", URL = "http://guterrez.deviantart.com" };
         public static Artist Matt_Bradbury = new Artist { Name = "Matt Bradbury", URL = "http://bradburydigital.deviantart.com" };
         public static Artist Matt_Smith = new Artist { Name = "Matt Smith", URL = "https://www.google.com/search?q=matt+smith+fantasy+art" };

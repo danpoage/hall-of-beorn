@@ -87,6 +87,8 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Attach to Círdan the Shipwright or Gandalf.\r\nAttached character gains a Leadership resource icon.\r\nAction: Exhaust Narya and attached character to choose and ready up to 2 allies. Each of those allies gets +1 Attack and +1 Defense until the end of the phase.")
                 .WithFlavor("\"For this is the Ring of Fire, and with it you may rekindle hearts in a world that grows chill.\"\r\n-Círdan, The Return of the King")
                 .WithInfo(15, 3, Artist.Lucas_Durham));
+
+
             Cards.Add(Card.ShipEnemy("Scouting Ship", string.Empty, 35, 2, 5, 2, 7)
                 .WithGeneric()
                 .WithTraits("Corsair.", "Ship.")
@@ -94,15 +96,59 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Cannot have attachments. Scouting Ship gets -15 engagement cost while you are off course (Cloudy, Rainy, or Stormy).")
                 .WithFlavor("All too well they could see for themselves the black sails.\r\n-The Return of the King")
                 .WithInfo(22, 3, Artist.Michael_Rasmussen));
+            Cards.Add(Card.Location("Starlit Sea", "", "Voyage Across Belegaer", 3, 2)
+                .WithTraits("Ocean.")
+                .WithText("While you are off-course (Cloudy, Rainy, or Stormy), Starlit Sea gains: \"Travel: Raise each player’s threat by 3.\"")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if you are off-course).")
+                .WithInfo(23, 2, Artist.Mateusz_Ozminski));
+
+            Cards.Add(Card.Location("Steep Plateau", "", "The Fate of Númenor", 1, 3)
+                .WithTraits("Hills.")
+                .WithText("Response: After Steep Plateau is explored, peek at the facedown side of an Uncharted location in the staging area.")
+                .WithShadow("Shadow: Discard the bottom card of the defending player’s deck. If that card’s printed cost is 2 or less, attacking enemy gets +2 Attack.")
+                .WithInfo(32, 3, Artist.Florian_Devos));
+
+            Cards.Add(Card.Objective("The Havens Burn", "", "Raid on the Grey Havens")
+                .WithText("Forced: When a card is placed underneath The Havens Burn, reveal the top card of the encounter deck.\r\nIf there are X or more cards underneath The Havens Burn, the Corsairs have destroyed the Elven fleet and the players lose the game. X is 3 more than the number of players in the game.")
+                .WithInfo(38, 1, Artist.Nate_Abell));
+
+            Cards.Add(Card.Treachery("The Fires Spread", "", "Raid on the Grey Havens")
+                .WithKeywords("Doomed 2.")
+                .WithText("When Revealed: Deal 1 damage to each Aflame location in play. If less than 3 total damage is dealt by this effect, The Fires Spread gains surge.")
+                .WithShadow("Shadow: If this attack destroys a character, deal 1 damage to each Aflame location in play.")
+                .WithInfo(49, 2, Artist.Michael_Rasmussen));
+
             Cards.Add(Card.Location("Waterspout", "", "", 2, 4)
                 .WithTraits("Ocean.")
                 .WithText("While your heading is at the worst setting (Stormy), when faced with the option to travel, the players must travel to Waterspout, if able.\r\nForced: After traveling to Waterspout, deal 4 damage to each Ship objective.")
                 .WithInfo(54, 2, Artist.Unknown));
+            Cards.Add(Card.Treachery("Sudden Storm", "", "Stormy Weather")
+                .WithTraits("Weather.")
+                .WithText("When Revealed: Either shift your heading off-course or deal 1 damage to each exhausted character.")
+                .WithShadow("Shadow: Excess damage from this attack is dealt to a Ship objective you control.")
+                .WithInfo(55, 3, Artist.Simon_Dominic));
             Cards.Add(Card.Treachery("Winds of Wrath", "", "Stormy Weather")
                 .WithTraits("Weather.")
                 .WithText("When Revealed: If you are off-course, deal 1 damage to each character in play. If your heading is at the worst setting (Stormy), this effect cannot be canceled.")
                 .WithShadow("Shadow: Either shift your heading off-course or treat this attack as undefended.")
                 .WithInfo(56, 3, Artist.Nate_Abell));
+
+            Cards.Add(Card.Enemy("Southron Sailor", "", "Corsair Pirates", 28, 0, 2, 1, 4)
+                .WithTraits("Corsair.")
+                .WithText("While Southron Sailor is engaged with you, each Ship enemy engaged with you contributes its Threat to the total Threat in the staging area.")
+                .WithFlavor("\"There is a great fleet drawing near to the mouths of Anduin, manned by the corsairs of Umbar in the South.\" —Beregond, The Return of the King")
+                .WithInfo(60, 2, Artist.Leanna_Teneycke));
+
+            Cards.Add(Card.Enemy("Soulless Cadaver", "", "Drowned Dead", 38, 3, 3, 2, 4)
+                .WithTraits("Undead.")
+                .WithText("While you are engaged with Soulless Cadaver, your deck cannot be searched.\r\nForced: When Soulless Cadaver engages you, place each card in your hand with printed cost 2 or less on the bottom of your deck.")
+                .WithInfo(69, 2, Artist.Helge_C_Balzer));
+            Cards.Add(Card.Enemy("Throngs of Unfaithful", "", "Drowned Dead", 26, 1, 2, 0, 4)
+                .WithTraits("Undead.")
+                .WithKeywords("Surge.")
+                .WithText("Forced: When Throngs of Unfaithful is defeated, discard the bottom card of the engaged player's deck. If that card’s printed cost is 2 or less, return Throngs of the Unfaithful to the top of the encounter deck.")
+                .WithInfo(70, 2, Artist.Helge_C_Balzer));
+
             Cards.Add(Card.Enemy("Captain Sahír", "", "The Stormcaller Elite", 4, 6, 6, 2, 5)
                 .WithTypeBasedSlug()
                 .WithUnique()
