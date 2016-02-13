@@ -102,6 +102,12 @@ namespace HallOfBeorn.Models.Sets
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if you are off-course).")
                 .WithInfo(23, 2, Artist.Mateusz_Ozminski));
 
+            Cards.Add(Card.ObjectiveAlly("Calphon", "", "The Fate of Númenor", 1, 0, 1, 3)
+                .WithUnique()
+                .WithTraits("Gondor.", "Noble.")
+                .WithText("The first player gains control of Calphon.\r\nAction: Exhaust Calphon to look at the bottom card of your deck. Then, you may switch that card with a card in your hand.\r\nIf Calphon leaves play, the players lose the game.")
+                .WithInfo(28, 1, Artist.Ilich_Henriquez));
+
             Cards.Add(Card.Location("Steep Plateau", "", "The Fate of Númenor", 1, 3)
                 .WithTraits("Hills.")
                 .WithText("Response: After Steep Plateau is explored, peek at the facedown side of an Uncharted location in the staging area.")
@@ -112,11 +118,28 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Forced: When a card is placed underneath The Havens Burn, reveal the top card of the encounter deck.\r\nIf there are X or more cards underneath The Havens Burn, the Corsairs have destroyed the Elven fleet and the players lose the game. X is 3 more than the number of players in the game.")
                 .WithInfo(38, 1, Artist.Nate_Abell));
 
+            Cards.Add(Card.Enemy("Corsair Arsonist", "", "Raid on the Grey Havens", 28, 2, 2, 1, 3)
+                .WithTraits("Corsair.")
+                .WithText("When Revealed: Either deal 2 damage to an Aflame location in play, or search the encounter deck and discard pile for an Aflame location with the highest Aflame X value, and add it to the staging area.")
+                .WithInfo(40, 3, Artist.Leanna_Teneycke));
+
+            Cards.Add(Card.Location("Burning Piers", "", "Raid on the Grey Havens", 1, 3)
+                .WithTraits("Grey Havens.")
+                .WithKeywords("Aflame 5.")
+                .WithText("Burning Piers gets +1 Threat for each damage on it.\r\nForced: When Burning Piers is placed underneath The Havens Burn, deal 3 damage to The Dream-chaser.")
+                .WithShadow("Shadow: Add Burning Piers to the staging area.")
+                .WithInfo(43, 2, Artist.Lukasz_Jaskolski));
+
             Cards.Add(Card.Treachery("The Fires Spread", "", "Raid on the Grey Havens")
                 .WithKeywords("Doomed 2.")
                 .WithText("When Revealed: Deal 1 damage to each Aflame location in play. If less than 3 total damage is dealt by this effect, The Fires Spread gains surge.")
                 .WithShadow("Shadow: If this attack destroys a character, deal 1 damage to each Aflame location in play.")
                 .WithInfo(49, 2, Artist.Michael_Rasmussen));
+            Cards.Add(Card.Location("Calm Waters", "", "Vast Oceans", 1, 4)
+                .WithTraits("Ocean.")
+                .WithText("While Calm Waters is the active location, look at 2 additional cards from the top of the encounter deck during each Sailing test.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack (+3 Attack instead if attacking enemy is a Ship Enemy).")
+                .WithInfo(50, 2, Artist.Lukasz_Jaskolski));
 
             Cards.Add(Card.Location("Waterspout", "", "", 2, 4)
                 .WithTraits("Ocean.")
@@ -133,11 +156,35 @@ namespace HallOfBeorn.Models.Sets
                 .WithShadow("Shadow: Either shift your heading off-course or treat this attack as undefended.")
                 .WithInfo(56, 3, Artist.Nate_Abell));
 
+            Cards.Add(Card.ShipEnemy("Corsair Warship", "Umbar Navy", 44, 3, 8, 4, 9)
+                .WithTraits("Corsair.", "Ship.")
+                .WithKeywords("Boarding 3.")
+                .WithText("Cannot have attachments.\r\nWhile Corsair Warship is in the staging area, it cannot be damaged and gains archery 4.")
+                .WithFlavor("...ships of great draught with many oars, and with black sails bellying in the breeze. —The Return of the King")
+                .WithInfo(58, 2, Artist.Michael_Rasmussen));
+            Cards.Add(Card.Treachery("Boarding Party", "", "Umbar Navy")
+                .WithText("When Revealed: Each player reveals the top card of the Corsair deck and puts it into play, engaged with him.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if you control an exhausted Ship objective).")
+                .WithInfo(59, 2, Artist.Darek_Zabrocki));
             Cards.Add(Card.Enemy("Southron Sailor", "", "Corsair Pirates", 28, 0, 2, 1, 4)
                 .WithTraits("Corsair.")
                 .WithText("While Southron Sailor is engaged with you, each Ship enemy engaged with you contributes its Threat to the total Threat in the staging area.")
                 .WithFlavor("\"There is a great fleet drawing near to the mouths of Anduin, manned by the corsairs of Umbar in the South.\" —Beregond, The Return of the King")
                 .WithInfo(60, 2, Artist.Leanna_Teneycke));
+            Cards.Add(Card.Enemy("Cunning Pirate", "", "Corsair Pirates", 36, 1, 2, 2, 4)
+                .WithTraits("Corsair.", "Raider.")
+                .WithText("Cunning Pirate gets +1 Attack and +1 Defense for each resource on it.\r\nForced: When Cunning Pirate engages you, discard an attachment you control and place resources on Cunning Pirate equal to that attachment's printed cost.")
+                .WithInfo(61, 3, Artist.Adam_Lane));
+
+            Cards.Add(Card.Enemy("Corsair Infiltrator", "", "Corsair Raiders", 16, 2, 3, 3, 2)
+                .WithTraits("Corsair.", "Raider.")
+                .WithText("Forced: When Corsair Infiltrator attacks, deal it 1 additional shadow card for each resource on it.\r\nForced: After the engaged player collects resources at the beginning of the resource phase, that player moves 1 resource from one of his heroes' pools to Corsair Infiltrator.")
+                .WithInfo(65, 2, Artist.Adam_Lane));
+
+            Cards.Add(Card.Treachery("Battle-Hardened", "", "Corsair Raiders")
+                .WithText("When Revealed: Place 1 resource on each Raider enemy in play. Each engaged non-Ship enemy makes an immediate attack. If there are no engaged non-Ship enemies, Battle-Hardened gains surge.")
+                .WithShadow("Shadow: If the attacking enemy is a Raider, place 2 resources on it.")
+                .WithInfo(67, 2, Artist.Emile_Denis));
 
             Cards.Add(Card.Enemy("Soulless Cadaver", "", "Drowned Dead", 38, 3, 3, 2, 4)
                 .WithTraits("Undead.")
@@ -148,7 +195,14 @@ namespace HallOfBeorn.Models.Sets
                 .WithKeywords("Surge.")
                 .WithText("Forced: When Throngs of Unfaithful is defeated, discard the bottom card of the engaged player's deck. If that card’s printed cost is 2 or less, return Throngs of the Unfaithful to the top of the encounter deck.")
                 .WithInfo(70, 2, Artist.Helge_C_Balzer));
+            Cards.Add(Card.Treachery("Curse of the Downfallen", "", "Drowned Dead")
+                .WithText("When Revealed: Deal 1 damage to each ally with printed cost 2 or less. Place each ally that is destroyed by this effect on the bottom of its owner's deck.")
+                .WithShadow("Shadow: Discard the bottom card of your deck. If that card's printed cost is 2 or less, attacking enemy makes an additional attack after this one.")
+                .WithInfo(71, 2, Artist.Piya_Wannachaiwong));
 
+            Cards.Add(Card.Treachery("Aimless Wandering", "", "Ruins of Númenor")
+                .WithText("When Revealed: The players, as a group, must remove characters with a total of at least X [Willpower] from the quest. X is the number of Uncharted locations in the staging area. The first player may give Aimless Wandering doomed 2 to look at the facedown side of an Uncharted location in the staging area.")
+                .WithInfo(75, 3, Artist.David_Ogilvie));
             Cards.Add(Card.Enemy("Captain Sahír", "", "The Stormcaller Elite", 4, 6, 6, 2, 5)
                 .WithTypeBasedSlug()
                 .WithUnique()

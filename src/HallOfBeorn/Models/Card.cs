@@ -222,7 +222,10 @@ namespace HallOfBeorn.Models
                     sb.Append("<img src='/Images/ShadowDivider.png' title='Shadow Effect' style='display:block;margin-left:auto;margin-right:auto;width:285px;'/>");
                     break;
                 case "sailing-success":
-                    sb.Append("<div class='sailing-success'><img src='/Images/sailing-success.png'/></div>");
+                    sb.Append("<div class='sailing-success'><img src='/Images/sailing-success.png' title='Sailing Test Success'/></div>");
+                    break;
+                case "sailing-success2":
+                    sb.Append("<div class='sailing-success'><img src='/Images/sailing-success.png' title='Sailing Test Success'/><img src='/Images/sailing-success.png' title='Sailing Test Success'/></div>");
                     break;
                 case "heading-cloudy":
                     sb.Append("<img class='heading-icon' src='/Images/heading-cloudy.png' />");
