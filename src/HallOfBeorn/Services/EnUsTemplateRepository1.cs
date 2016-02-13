@@ -1331,6 +1331,8 @@ namespace HallOfBeorn.Services
             AddHtml("Calm-Waters-TGH", "<p class='main-text'>While {self} is the active location, look at 2 additional cards from the top of the encounter deck during each Sailing test.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Attacking enemy gets +1 {Attack} (+3 {Attack} instead if attacking enemy is a {trait-search:Ship.&CardType=Ship_Enemy@Ship} Enemy).</p><br>{sailing-success2}");
             AddHtml("Waterspout-TGH", "<p>While your heading is at the worst setting (Stormy), when faced with the option to travel, the players must travel to {self}, if able.</p><p><b>Forced:</b> After traveling to {self}, deal 4 damage to each {trait-search:CardType=Ship_Objective&Trait=Ship.@Ship} objective.");
 
+            AddHtml("Narelenya-TGH", "<p class='main-text'>Immune to player card effects. {keyword:Sentinel.}</p><p>Reduce the cost of the first {type:Ally@ally} you play each round by 1.</p><p><b>If the {self} is destroyed, its controller is eliminated from the game.</b></p>");
+
             /*
             AddHtml("A-Deep-Sack-THOHaUH", "<p class='main-text'><b>When</b><b>Sacked:</b> Attach to the character (excluding Gandalf) with the highest printed {Willpower} without a Sack attached.Attached character cannot ready, attack, defend, commit to quests, or trigger effects. If this Sack card is removed, shuffle it into the sack deck.</p>");
             AddHtml("A-Foul-Sack-THOHaUH", "<p class='main-text'><b>When</b><b>Sacked:</b> Attach to the character (excluding Gandalf) with the most attachments without a Sack attached.Attached character cannot ready, attack, defend, commit to quests, or trigger effects. If this Sack card is removed, shuffle it into the sack deck.</p>");

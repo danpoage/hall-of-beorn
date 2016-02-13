@@ -498,6 +498,7 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Leanna_Teneycke);
             all.Add(Artist.Mateusz_Ozminski);
             all.Add(Artist.Sara_Winters);
+            all.Add(Artist.Nele_Klumpe);
 
             //Murder at the Prancing Pony
             all.Add(Artist.Lutful_Valeriya_Romanovna);
@@ -860,6 +861,7 @@ namespace HallOfBeorn.Models
         public static Artist Milek_Jakubiec = new Artist { Name = "Milek Jakubiec", URL = "http://ethicallychallenged.deviantart.com" };
         public static Artist Nacho_Molina = new Artist { Name = "Nacho Molina", URL = "http://nachomolina.deviantart.com" };
         public static Artist Nate_Abell = new Artist { Name = "Nate Abell", URL = "http://www.nateabell.com" };
+        public static Artist Nele_Klumpe = new Artist { Name = "Nele Klumpe", URL = "http://avisnocturna.deviantart.com" };
         public static Artist Nicholas_Cloister = new Artist { Name = "Nicholas Cloister", URL = "http://cloister.deviantart.com" };
         public static Artist Nicholas_Gregory = new Artist { Name = "Nicholas Gregory", URL = "https://www.google.com/search?q=nicholas+gregory+fantasy+art" };
         public static Artist Nick_Deligaris = new Artist { Name = "Nick Deligaris", URL = "http://deligaris.deviantart.com" };

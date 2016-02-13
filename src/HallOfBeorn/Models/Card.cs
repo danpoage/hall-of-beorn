@@ -1037,6 +1037,12 @@ namespace HallOfBeorn.Models
             return this;
         }
 
+        public Card WithSlugIncludesType()
+        {
+            this.SlugIncludesType = true;
+            return this;
+        }
+
         public Card WithEasyModeQuantity(byte quantity)
         {
             this.EasyModeQuantity = quantity;

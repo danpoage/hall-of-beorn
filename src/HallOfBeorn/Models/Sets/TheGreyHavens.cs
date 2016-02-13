@@ -117,7 +117,13 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(Card.Objective("The Havens Burn", "", "Raid on the Grey Havens")
                 .WithText("Forced: When a card is placed underneath The Havens Burn, reveal the top card of the encounter deck.\r\nIf there are X or more cards underneath The Havens Burn, the Corsairs have destroyed the Elven fleet and the players lose the game. X is 3 more than the number of players in the game.")
                 .WithInfo(38, 1, Artist.Nate_Abell));
-
+            Cards.Add(Card.Location("Dream-chaser", "", "Raid on the Grey Havens", 2, 254)
+                .WithUnique()
+                .WithSlugIncludesType()
+                .WithTraits("Grey Havens.", "Ship.")
+                .WithKeywords("Aflame 12.")
+                .WithText("Immune to player card effects.\r\nThe players cannot travel to the Dream-chaser.\r\nWhen the Dream-chaser is placed underneath The Havens Burn, the players lose the game.")
+                .WithInfo(39, 1, Artist.Lukasz_Jaskolski));
             Cards.Add(Card.Enemy("Corsair Arsonist", "", "Raid on the Grey Havens", 28, 2, 2, 1, 3)
                 .WithTraits("Corsair.")
                 .WithText("When Revealed: Either deal 2 damage to an Aflame location in play, or search the encounter deck and discard pile for an Aflame location with the highest Aflame X value, and add it to the staging area.")
@@ -129,6 +135,18 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Burning Piers gets +1 Threat for each damage on it.\r\nForced: When Burning Piers is placed underneath The Havens Burn, deal 3 damage to The Dream-chaser.")
                 .WithShadow("Shadow: Add Burning Piers to the staging area.")
                 .WithInfo(43, 2, Artist.Lukasz_Jaskolski));
+
+            Cards.Add(Card.Location("Elven Wave-runner", "", " Raid on the Grey Havens", 3, 3)
+                .WithTraits("Grey Havens.", "Ship.")
+                .WithKeywords("Aflame 3.")
+                .WithText("Response: After Elven Wave-runner is added to the victory display, each player draws 1 card.")
+                .WithShadow("Shadow: If attacking enemy is a Raider, discard a card at random from your hand and place 1 resource on attacking enemy.")
+                .WithInfo(46, 2, Artist.Katy_Grierson));
+            Cards.Add(Card.Location("Elven Caravel", "", "Raid on the Grey Havens", 3, 5)
+                .WithTraits("Grey Havens.", "Ship.")
+                .WithKeywords("Aflame 4.")
+                .WithText("Travel: Each player must assign damage among characters he controls equal to the amount of damage on Elven Caravel.\r\nForced: When Elven Caravel is placed underneath The Havens Burn, deal 1 damage to each character in play.")
+                .WithInfo(47, 2, Artist.Nate_Abell));
 
             Cards.Add(Card.Treachery("The Fires Spread", "", "Raid on the Grey Havens")
                 .WithKeywords("Doomed 2.")
@@ -185,7 +203,11 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("When Revealed: Place 1 resource on each Raider enemy in play. Each engaged non-Ship enemy makes an immediate attack. If there are no engaged non-Ship enemies, Battle-Hardened gains surge.")
                 .WithShadow("Shadow: If the attacking enemy is a Raider, place 2 resources on it.")
                 .WithInfo(67, 2, Artist.Emile_Denis));
-
+            Cards.Add(Card.Enemy("Drowned Dead", "", "Drowned Dead", 32, 2, 4, 3, 3)
+                .WithTraits("Undead.")
+                .WithText("Forced: When Drowned Dead attacks and destroys an ally by an attack, place that ally on the bottom of your deck.")
+                .WithShadow("Shadow: If this attack destroys an ally, place that ally on the bottom of your deck.")
+                .WithInfo(68, 3, Artist.Chris_Grun));
             Cards.Add(Card.Enemy("Soulless Cadaver", "", "Drowned Dead", 38, 3, 3, 2, 4)
                 .WithTraits("Undead.")
                 .WithText("While you are engaged with Soulless Cadaver, your deck cannot be searched.\r\nForced: When Soulless Cadaver engages you, place each card in your hand with printed cost 2 or less on the bottom of your deck.")
@@ -200,6 +222,16 @@ namespace HallOfBeorn.Models.Sets
                 .WithShadow("Shadow: Discard the bottom card of your deck. If that card's printed cost is 2 or less, attacking enemy makes an additional attack after this one.")
                 .WithInfo(71, 2, Artist.Piya_Wannachaiwong));
 
+            Cards.Add(Card.Location("Drowned Graves", "", "Ruins of Númenor", 2, 2)
+                .WithTraits("Ruins.")
+                .WithText("Forced: After Drowned Graves is flipped to this side while active, discard the top X cards of the encounter deck. Each player adds an Undead enemy discarded from this effect to the staging area. X is 2 more than the number of players in the game.")
+                .WithFlavor("...their years lessened as their fear of death grew, and their joy departed. –The Return of the King")
+                .WithInfo(73, 2, Artist.Juan_Carlos_Barquet));
+            Cards.Add(Card.Location("Cursed Temple", "", "Ruins of Númenor", 1, 3)
+                .WithTraits("Ruins.")
+                .WithText("While Cursed Temple is the active location, characters with less than 2 Willpower do not ready during the refresh phase.")
+                .WithFlavor("It was not long before he had bewitched the King and was master of his counsel... –The Return of the King")
+                .WithInfo(74, 2, Artist.Davis_Engel));
             Cards.Add(Card.Treachery("Aimless Wandering", "", "Ruins of Númenor")
                 .WithText("When Revealed: The players, as a group, must remove characters with a total of at least X [Willpower] from the quest. X is the number of Uncharted locations in the staging area. The first player may give Aimless Wandering doomed 2 to look at the facedown side of an Uncharted location in the staging area.")
                 .WithInfo(75, 3, Artist.David_Ogilvie));
@@ -220,20 +252,27 @@ namespace HallOfBeorn.Models.Sets
                 .WithInfo(77, 1, Artist.Sara_Winters));
 
             Cards.Add(Card.ShipObjective("Dream-chaser", "The Dream-chaser's Fleet", 5, 4, 4, 18)
+                .WithSlugIncludesType()
                 .WithTraits("Grey Havens.", "Ship.")
                 .WithKeywords("Sentinel.")
                 .WithText("Immune to player card effects. Sentinel.\r\nThe Dream-chaser can always be committed to sailing tests (even if you are not the first player), and counts as 2 characters when committed to a Sailing test.\r\nIf the Dream-chaser is destroyed, the players lose the game.")
-                .WithInfo(80, 1, Artist.Unknown));
+                .WithInfo(79, 1, Artist.Unknown));
             Cards.Add(Card.ShipObjective("Dawn Star", "The Dream-chaser's Fleet", 3, 3, 4, 16)
                 .WithTraits("Gondor.", "Ship.")
                 .WithKeywords("Sentinel.")
                 .WithText("Immune to player card effects. Sentinel.\r\nRaise your starting threat by 3.\r\nDraw 1 additional card during the resource phase.\r\nIf the Dawn Star is destroyed, the players lose the game.")
-                .WithInfo(81, 1, Artist.Titus_Lunter));
+                .WithInfo(80, 1, Artist.Titus_Lunter));
             Cards.Add(Card.ShipObjective("Silver Wing", "The Dream-chaser's Fleet", 2, 4, 2, 14)
                 .WithTraits("Gondor.", "Ship.")
                 .WithKeywords("Sentinel.", "Ranged.")
                 .WithText("Immune to player card effects. Sentinel. Ranged.\r\nReduce your starting threat by 3.\r\nEach hero you control gets +1 Attack.\r\nIf the Silver Wing is destroyed, the players lose the game.")
-                .WithInfo(82, 1, Artist.Unknown));
+                .WithInfo(81, 1, Artist.Unknown));
+            Cards.Add(Card.ShipObjective("Nárelenya", "The Dream-chaser's Fleet", 3, 3, 5, 15)
+                .WithNormalizedTitle("Narelenya")
+                .WithTraits("Grey Havens.", "Ship.")
+                .WithKeywords("Sentinel.")
+                .WithText("Immune to player card effects.\r\nReduce the cost of the first ally you play each round by 1.\r\nIf the Nárelenya is destroyed, its controller is eliminated from the game.")
+                .WithInfo(82, 1, Artist.Nele_Klumpe));
         }
     }
 }
