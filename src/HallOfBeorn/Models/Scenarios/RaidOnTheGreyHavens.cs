@@ -22,7 +22,7 @@ namespace HallOfBeorn.Models.Scenarios
             AddQuestCardId("Sahir's-Advance-TGH");
 
             ExcludeFromEasyMode("Sahir's-Ravager-TGH", 2);
-            ExcludeFromEasyMode("Mithlong-Harbor-TGH", 1);
+            ExcludeFromEasyMode("Mithlond-Harbor-TGH", 1);
             ExcludeFromEasyMode("White-Ship-TGH", 1);
             ExcludeFromEasyMode("Elven-Caravel-TGH", 1);
 

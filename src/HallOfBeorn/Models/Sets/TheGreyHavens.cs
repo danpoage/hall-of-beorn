@@ -241,16 +241,18 @@ namespace HallOfBeorn.Models.Sets
                 .WithTraits("Corsair.")
                 .WithText("When Revealed: Either deal 2 damage to an Aflame location in play, or search the encounter deck and discard pile for an Aflame location with the highest Aflame X value, and add it to the staging area.")
                 .WithInfo(40, 3, Artist.Leanna_Teneycke));
-            Cards.Add(Card.Enemy("Sahír's Ravager", "", "Raid on the Grey Havens", 35, 3, 4, 4, 5)
+            Cards.Add(Card.Enemy("Sahír's Ravager", "", "Raid on the Grey Havens", 36, 3, 4, 3, 5)
                 .WithNormalizedTitle("Sahir's Ravager")
                 .WithTraits("Corsair.", "Raider.")
                 .WithText("Forced: After Sahír’s Ravager attacks, place 1 resource on it. Then, deal X damage to the Aflame location in play with the lowest Aflame value, where X is the number of resources on Sahír's Ravager.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(41, 3, Artist.Sara_Winters));
             Cards.Add(Card.Location("Mithlond Harbor", "", "Raid on the Grey Havens", 1, 2)
                 .WithTraits("Grey Havens.")
                 .WithKeywords("Surge.")
                 .WithText("While Mithlond Harbor is in the staging area, progress cannot be placed on locations in the staging area.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack for each damage token on the active location.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(42, 2, Artist.Matt_Stewart));
             Cards.Add(Card.Location("Burning Piers", "", "Raid on the Grey Havens", 1, 3)
                 .WithTraits("Grey Havens.")
@@ -268,6 +270,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithTraits("Grey Havens.", "Ship.")
                 .WithKeywords("Aflame 4.")
                 .WithText("Travel: Search the encounter deck and discard pile for a Corsair enemy and add it to the staging area. Shuffle the encounter deck.\r\nForced: When White Ship is placed underneath The Havens Burn, place 1 resource on each Raider enemy in play.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(45, 2, Artist.Katy_Grierson));
             Cards.Add(Card.Location("Elven Wave-runner", "", " Raid on the Grey Havens", 3, 3)
                 .WithTraits("Grey Havens.", "Ship.")
@@ -279,6 +282,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithTraits("Grey Havens.", "Ship.")
                 .WithKeywords("Aflame 4.")
                 .WithText("Travel: Each player must assign damage among characters he controls equal to the amount of damage on Elven Caravel.\r\nForced: When Elven Caravel is placed underneath The Havens Burn, deal 1 damage to each character in play.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(47, 2, Artist.Nate_Abell));
             Cards.Add(Card.Treachery("Put to the Torch", "", "Raid on the Grey Havens")
                 .WithText("When Revealed: Each player must either deal 3 damage to a character he controls, or to an Aflame location in play.")
