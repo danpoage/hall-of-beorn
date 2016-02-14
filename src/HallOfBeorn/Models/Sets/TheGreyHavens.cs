@@ -179,6 +179,7 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(Card.Enemy("Servant of the Deceiver", "", "The Fate of Númenor", 35, 3, 3, 4, 3)
                 .WithTraits("Undead.")
                 .WithText("Forced: When Servant of the Deceiver engages you, look at the top card of your deck. If its printed cost is 2 or less, place it on the bottom of your deck and Servant of the Deceiver gets +2 Attack until the end of the round.")
+                .WithEasyModeQuantity(2)
                 .WithInfo(29, 3, Artist.Florian_Devos));
             Cards.Add(Card.Location("Lush Jungle", "", "The Fate of Númenor", 4, 4)
                 .WithSecondImage("Lost-Island")
@@ -206,10 +207,12 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(Card.Treachery("Lingering Malevolence", "", "The Fate of Númenor")
                 .WithText("When Revealed: The first player discards the bottom card of his deck. Then, he discards each card in his hand with a printed cost higher than that of the discarded card.")
                 .WithShadow("Shadow: Discard the bottom card of the defending player’s deck. If that card’s printed cost is 2 or less, attacking enemy gets +2 Attack.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(34, 2, Artist.Preston_Stone));
             Cards.Add(Card.Treachery("Ruins of Ages Past", "", "The Fate of Númenor")
                 .WithKeywords("Doomed 2.")
                 .WithText("When Revealed: Add 1 copy of Lost Island from the top of the Uncharted deck to the staging area. Then, remove all progress from each Uncharted location in the staging area and shuffle them so that the players do not know which one is which.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(35, 2, Artist.Alyn_Spiller));
             Cards.Add(Card.Quest("The Corsairs' Assault", "", 3, 1, "Raid on the Grey Havens", 18)
                 .WithText("Setup: Set Captain Sahír and Na'asiyah aside, out of play. Add The Havens Burn, The Dream-chaser, and 1 copy of Sahír’s Ravager to the staging area. Shuffle the encounter deck and discard cards from the top of the encounter deck until X locations with the Aflame keyword are discarded, where X is the number of players in the game. Add each discarded Aflame location to the staging area. Then, shuffle the encounter discard pile back into the encounter deck.")
@@ -294,6 +297,7 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(Card.Location("Rolling Seas", "", "Vast Oceans", 4, 3)
                 .WithTraits("Ocean.", "Travel: Shift your heading off-course to travel here.\r\nShadow: If this attack deals damage to a Ship objective, shift your heading off-course.")
                 .WithFlavor("The winds of wrath came driving him, and blindly in the foam he fled… —The Fellowship of the Ring")
+                .WithEasyModeQuantity(1)
                 .WithInfo(51, 3, Artist.Carlos_Palma_Cruchaga));
             Cards.Add(Card.Treachery("Thrown Off Course", "", "Vast Oceans")
                 .WithText("When Revealed: Either remove all progress from the current quest and raise each player’s threat by 4, or shift your heading off-course.")
@@ -304,19 +308,22 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("While Rough Waters is in the staging area, cancel the first Sailing Success symbol found during each Sailing test.")
                 .WithShadow("Shadow: If you are off-course (Cloudy, Rainy, or Stormy), attacking enemy gets +2 Attack.")
                 .WithInfo(53, 2, Artist.Carlos_Palma_Cruchaga));
-            Cards.Add(Card.Location("Waterspout", "", "", 2, 4)
+            Cards.Add(Card.Location("Waterspout", "", "Stormy Weather", 2, 4)
                 .WithTraits("Ocean.")
                 .WithText("While your heading is at the worst setting (Stormy), when faced with the option to travel, the players must travel to Waterspout, if able.\r\nForced: After traveling to Waterspout, deal 4 damage to each Ship objective.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(54, 2, Artist.Jokubas_Uoginitas));
-            Cards.Add(Card.Treachery("Sudden Storm", "", "Stormy Weather")
+            Cards.Add(Card.Treachery("Sudden Storms", "", "Stormy Weather")
                 .WithTraits("Weather.")
                 .WithText("When Revealed: Either shift your heading off-course or deal 1 damage to each exhausted character.")
                 .WithShadow("Shadow: Excess damage from this attack is dealt to a Ship objective you control.")
+                .WithEasyModeQuantity(2)
                 .WithInfo(55, 3, Artist.Simon_Dominic));
             Cards.Add(Card.Treachery("Winds of Wrath", "", "Stormy Weather")
                 .WithTraits("Weather.")
                 .WithText("When Revealed: If you are off-course, deal 1 damage to each character in play. If your heading is at the worst setting (Stormy), this effect cannot be canceled.")
                 .WithShadow("Shadow: Either shift your heading off-course or treat this attack as undefended.")
+                .WithEasyModeQuantity(2)
                 .WithInfo(56, 3, Artist.Nate_Abell));
             Cards.Add(Card.ShipEnemy("Light Cruiser", "Umbar Fleet", 37, 4, 6, 5, 7)
                 .WithTraits("Corsair.", "Ship.")
@@ -329,10 +336,12 @@ namespace HallOfBeorn.Models.Sets
                 .WithKeywords("Boarding 3.")
                 .WithText("Cannot have attachments.\r\nWhile Corsair Warship is in the staging area, it cannot be damaged and gains archery 4.")
                 .WithFlavor("...ships of great draught with many oars, and with black sails bellying in the breeze. —The Return of the King")
+                .WithEasyModeQuantity(0)
                 .WithInfo(58, 2, Artist.Michael_Rasmussen));
             Cards.Add(Card.Treachery("Boarding Party", "", "Umbar Fleet")
                 .WithText("When Revealed: Each player reveals the top card of the Corsair deck and puts it into play, engaged with him.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if you control an exhausted Ship objective).")
+                .WithEasyModeQuantity(1)
                 .WithInfo(59, 2, Artist.Darek_Zabrocki));
             Cards.Add(Card.Enemy("Southron Sailor", "", "Corsair Pirates", 28, 0, 2, 1, 4)
                 .WithTraits("Corsair.")
@@ -351,6 +360,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithTraits("Corsair.")
                 .WithText("While you are engaged with Umbar Captain, characters you control cannot attack Ship enemies.")
                 .WithFlavor("...the strength of the rebels in Umbar was a great peril to Gondor... —The Return of the King")
+                .WithEasyModeQuantity(0)
                 .WithInfo(63, 2, Artist.David_Kegg));
             Cards.Add(Card.Enemy("Umbar Raider", "", "Corsair Raiders", 24, 2, 3, 2, 4)
                 .WithTraits("Corsair.", "Raider.")
@@ -365,10 +375,12 @@ namespace HallOfBeorn.Models.Sets
                 .WithTraits("Corsair.", "Raider.")
                 .WithText("Raid Leader gets +1 Defense for each resource on it.\r\nForced: When Raid Leader engages you, move 1 resource from each of your heroes' resource pools to Raid Leader.")
                 .WithFlavor("\"The Corsairs are upon us! It is the last stroke of doom!\" —Men of Gondor, The Return of the King")
+                .WithEasyModeQuantity(0)
                 .WithInfo(66, 2, Artist.Michael_Rasmussen));
             Cards.Add(Card.Treachery("Battle-Hardened", "", "Corsair Raiders")
                 .WithText("When Revealed: Place 1 resource on each Raider enemy in play. Each engaged non-Ship enemy makes an immediate attack. If there are no engaged non-Ship enemies, Battle-Hardened gains surge.")
                 .WithShadow("Shadow: If the attacking enemy is a Raider, place 2 resources on it.")
+                .WithEasyModeQuantity(0)
                 .WithInfo(67, 2, Artist.Emile_Denis));
             Cards.Add(Card.Enemy("Drowned Dead", "", "Drowned Dead", 32, 2, 4, 3, 3)
                 .WithTraits("Undead.")
@@ -378,15 +390,18 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(Card.Enemy("Soulless Cadaver", "", "Drowned Dead", 38, 3, 3, 2, 4)
                 .WithTraits("Undead.")
                 .WithText("While you are engaged with Soulless Cadaver, your deck cannot be searched.\r\nForced: When Soulless Cadaver engages you, place each card in your hand with printed cost 2 or less on the bottom of your deck.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(69, 2, Artist.Helge_C_Balzer));
             Cards.Add(Card.Enemy("Throngs of Unfaithful", "", "Drowned Dead", 26, 1, 2, 0, 4)
                 .WithTraits("Undead.")
                 .WithKeywords("Surge.")
                 .WithText("Forced: When Throngs of Unfaithful is defeated, discard the bottom card of the engaged player's deck. If that card’s printed cost is 2 or less, return Throngs of the Unfaithful to the top of the encounter deck.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(70, 2, Artist.Helge_C_Balzer));
             Cards.Add(Card.Treachery("Curse of the Downfallen", "", "Drowned Dead")
                 .WithText("When Revealed: Deal 1 damage to each ally with printed cost 2 or less. Place each ally that is destroyed by this effect on the bottom of its owner's deck.")
                 .WithShadow("Shadow: Discard the bottom card of your deck. If that card's printed cost is 2 or less, attacking enemy makes an additional attack after this one.")
+                .WithEasyModeQuantity(0)
                 .WithInfo(71, 2, Artist.Piya_Wannachaiwong));
             Cards.Add(Card.Location("Flooded Ruins", "", "Ruins of Númenor", 3, 5)
                 .WithSecondImage("Lost-Island")

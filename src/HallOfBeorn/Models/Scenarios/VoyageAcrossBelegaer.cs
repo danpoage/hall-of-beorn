@@ -27,6 +27,11 @@ namespace HallOfBeorn.Models.Scenarios
             AddQuestCardId("Calphon's-Divination-TGH");
             AddQuestCardId("The-Star's-Guidance-TGH");
             AddQuestCardId("Corsair-Pursuit-TGH");
+
+            ExcludeVastOceansFromEasyMode();
+            ExcludeStormyWeatherFromEasyMode();
+            ExcludeUmbarFleetFromEasyMode();
+            ExcludeCorsairPiratesFromEasyMode();
         }
     }
 }

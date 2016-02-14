@@ -20,6 +20,12 @@ namespace HallOfBeorn.Models.Scenarios
 
             AddQuestCardId("Explore-the-Island-TGH");
             AddQuestCardId("A-Fateful-Discovery-TGH");
+
+            ExcludeFromEasyMode("Servant-of-the-Deceiver-TGH", 1);
+            ExcludeFromEasyMode("Lingering-Malevolence-TGH", 1);
+            ExcludeFromEasyMode("Ruins-of-Ages-Past-TGH", 1);
+
+            ExcludeDrownedDeadFromEasyMode();
         }
     }
 }
