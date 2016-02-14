@@ -73,12 +73,20 @@ namespace HallOfBeorn.Services
             foreach (var questId in scenario.QuestCardIds())
             {
                 var questCard = cardRepository.FindBySlug(questId);
-                var releaseQuantity = questCard.CardSet.IsNightmare ? (byte)0 : (byte)1;
-                var easyQuantity = scenario.EasyModeCount(questId, releaseQuantity); 
-                var normalQuantity = scenario.NormalModeCount(questId, releaseQuantity); 
-                var nightmareQuantity = scenario.NightmareModeCount(questId, 1);
+                if (questCard != null)
+                {
+                    var releaseQuantity = questCard.CardSet.IsNightmare ? (byte)0 : (byte)1;
+                    var easyQuantity = scenario.EasyModeCount(questId, releaseQuantity);
+                    var normalQuantity = scenario.NormalModeCount(questId, releaseQuantity);
+                    var nightmareQuantity = scenario.NightmareModeCount(questId, 1);
 
-                scenario.AddQuestCard(questCard, easyQuantity, normalQuantity, nightmareQuantity);
+                    scenario.AddQuestCard(questCard, easyQuantity, normalQuantity, nightmareQuantity);
+                }
+                else
+                {
+                    //invalid quest card ID
+                    var x = questId;
+                }
             }
         }
 

@@ -102,7 +102,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithVictoryPoints(3)
                 .WithIncludedEncounterSets(EncounterSet.VastOceans, EncounterSet.StormyWeather, EncounterSet.UmbarFleet, EncounterSet.CorsairPirates, EncounterSet.TheDreamChasersFleet)
                 .WithInfo(17, 1, Artist.Nicholas_Gregory));
-            Cards.Add(Card.Quest("Cursed Mists", "", 1, 2, "Voyage Across the Belegaer", 6)
+            Cards.Add(Card.Quest("Cursed Mists", "", 1, 2, "Voyage Across Belegaer", 6)
                 .WithKeywords("Sailing.")
                 .WithText("When Revealed: Search the encounter deck and discard pile for 1 copy of Fog Bank and add it to the staging area. Shuffle the encounter deck.")
                 .WithFlavor("After days of aimless travel at sea, a dark mist settles along the ocean's surface, obscuring your visibility and frightening your ships’ crew. \"Wait,\" Calphon says, \"this happened in my dream, too... I think if we find a way through this mist, we shall be one step closer to the island.\"")
@@ -154,14 +154,14 @@ namespace HallOfBeorn.Models.Sets
                 .WithFlavor("You arrive on the island’s western beach, the edge of a dense jungle looming beyond. With no map to guide you and no idea of what to expect, you venture forward, deeper into the island... ")
                 .WithText("Setup: Set Shrine to Morgoth aside, out of play. Prepare the Uncharted deck. Add 2 copies of Lost Island from the top of the Uncharted deck to the staging area (3 copies instead if there are 3 or 4 players in the game). The first player takes control of Calphon. Shuffle the encounter deck.")
                 .WithOppositeText("Progress cannot be placed on Explore the Island except by quest effects.\r\nForced: After a location is explored, add progress to Explore the Island equal to that location’s printed quest points.\r\nForced: When an Uncharted location becomes the active location, add 1 copy of Lost Island from the top of the Uncharted deck to the staging area.")
-                .WithIncludedEncounterSets(EncounterSet.DrownedDead, EncounterSet.TheRuinsOfNumenor)
+                .WithIncludedEncounterSets(EncounterSet.DrownedDead, EncounterSet.RuinsOfNumenor)
                 .WithInfo(25, 1, Artist.Jon_Bosco));
             Cards.Add(Card.Quest("A Fateful Discovery", "", 2, 2, "The Fate of Númenor", 255)
                 .WithFlavor("Markings on Adûnaic suggest the existence of a grand shrine somewhere on the island. Perhaps there, you will find answers.")
                 .WithText("When Revealed: Add 2 copies of Lost Island from the top of the Uncharted deck to the staging area. Add Shrine to Morgoth to the staging area, Lost Island side faceup. Remove all progress from each Uncharted location in the staging area and shuffle them so that the players do not know which one is which.")
                 .WithOppositeFlavor("You search for the shrine, unsure of its exact location...")
                 .WithOppositeText("Forced: After a location is explored, if it would be shuffled into the Uncharted deck, add it to the victory display instead.\r\nThe players cannot defeat this stage unless Shrine to Morgoth is in the victory display. When Shrine to Morgoth is added to the victory display, the players win the game.")
-                .WithIncludedEncounterSets(EncounterSet.DrownedDead, EncounterSet.TheRuinsOfNumenor)
+                .WithIncludedEncounterSets(EncounterSet.DrownedDead, EncounterSet.RuinsOfNumenor)
                 .WithInfo(26, 1, Artist.Jon_Bosco));
             Cards.Add(Card.Location("Shrine to Morgoth", "", "The Fate of Númenor", 5, 8)
                 .WithUnique()
@@ -318,19 +318,19 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("When Revealed: If you are off-course, deal 1 damage to each character in play. If your heading is at the worst setting (Stormy), this effect cannot be canceled.")
                 .WithShadow("Shadow: Either shift your heading off-course or treat this attack as undefended.")
                 .WithInfo(56, 3, Artist.Nate_Abell));
-            Cards.Add(Card.ShipEnemy("Light Cruiser", "Umbar Navy", 37, 4, 6, 5, 7)
+            Cards.Add(Card.ShipEnemy("Light Cruiser", "Umbar Fleet", 37, 4, 6, 5, 7)
                 .WithTraits("Corsair.", "Ship.")
                 .WithKeywords("Boarding 2.")
                 .WithText("Cannot have attachments.\r\nEach Raider enemy revealed from the Corsair deck by Light Cruiser’s boarding keyword enters play with 1 resource on it.")
                 .WithFlavor("And looking thither they cried in dismay; for black against the glittering stream they beheld a fleet borne up on the wind… —The Return of the King")
                 .WithInfo(57, 2, Artist.Michael_Rasmussen));
-            Cards.Add(Card.ShipEnemy("Corsair Warship", "Umbar Navy", 44, 3, 8, 4, 9)
+            Cards.Add(Card.ShipEnemy("Corsair Warship", "Umbar Fleet", 44, 3, 8, 4, 9)
                 .WithTraits("Corsair.", "Ship.")
                 .WithKeywords("Boarding 3.")
                 .WithText("Cannot have attachments.\r\nWhile Corsair Warship is in the staging area, it cannot be damaged and gains archery 4.")
                 .WithFlavor("...ships of great draught with many oars, and with black sails bellying in the breeze. —The Return of the King")
                 .WithInfo(58, 2, Artist.Michael_Rasmussen));
-            Cards.Add(Card.Treachery("Boarding Party", "", "Umbar Navy")
+            Cards.Add(Card.Treachery("Boarding Party", "", "Umbar Fleet")
                 .WithText("When Revealed: Each player reveals the top card of the Corsair deck and puts it into play, engaged with him.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if you control an exhausted Ship objective).")
                 .WithInfo(59, 2, Artist.Darek_Zabrocki));

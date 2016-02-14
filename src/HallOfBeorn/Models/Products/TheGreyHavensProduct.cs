@@ -11,6 +11,10 @@ namespace HallOfBeorn.Models.Products
             : base("The Grey Havens", "MEC47", ImageType.Jpg)
         {
             AddCardSet(CardSet.TheGreyHavens);
+
+            AddScenario(new HallOfBeorn.Models.Scenarios.VoyageAcrossBelegaer());
+            AddScenario(new HallOfBeorn.Models.Scenarios.TheFateOfNumenor());
+            AddScenario(new HallOfBeorn.Models.Scenarios.RaidOnTheGreyHavens());
         }
     }
 }

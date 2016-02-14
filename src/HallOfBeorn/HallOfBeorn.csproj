@@ -310,6 +310,7 @@
     <Compile Include="Models\Scenarios\CelebrimborsSecret.cs" />
     <Compile Include="Models\Scenarios\ConflictAtTheCarrock.cs" />
     <Compile Include="Models\Scenarios\DeadmensDike.cs" />
+    <Compile Include="Models\Scenarios\DreamChaserScenario.cs" />
     <Compile Include="Models\Scenarios\DungeonsDeepAndCavernsDim.cs" />
     <Compile Include="Models\Scenarios\EncounterAtAmonDin.cs" />
     <Compile Include="Models\Scenarios\EscapeFromDolGuldur.cs" />
@@ -332,6 +333,7 @@
     <Compile Include="Models\Scenarios\OverTheMistyMountainsGrim.cs" />
     <Compile Include="Models\Scenarios\PassageThroughMirkwood.cs" />
     <Compile Include="Models\Scenarios\PerilInPelargir.cs" />
+    <Compile Include="Models\Scenarios\RaidOnTheGreyHavens.cs" />
     <Compile Include="Models\Scenarios\ReturnToMirkwood.cs" />
     <Compile Include="Models\Scenarios\RoadToRivendell.cs" />
     <Compile Include="Models\Scenarios\ShadowAndFlame.cs" />
@@ -345,6 +347,7 @@
     <Compile Include="Models\Scenarios\TheDreadRealm.cs" />
     <Compile Include="Models\Scenarios\TheDruadanForest.cs" />
     <Compile Include="Models\Scenarios\TheDunlandTrap.cs" />
+    <Compile Include="Models\Scenarios\TheFateOfNumenor.cs" />
     <Compile Include="Models\Scenarios\TheFordsOfIsen.cs" />
     <Compile Include="Models\Scenarios\TheHillsOfEmynMuil.cs" />
     <Compile Include="Models\Scenarios\TheHuntForGollum.cs" />
@@ -373,6 +376,7 @@
     <Compile Include="Models\Scenarios\TheWeatherHills.cs" />
     <Compile Include="Models\Scenarios\ToCatchAnOrc.cs" />
     <Compile Include="Models\Scenarios\TroubleInTharbad.cs" />
+    <Compile Include="Models\Scenarios\VoyageAcrossBelegaer.cs" />
     <Compile Include="Models\Scenarios\WeMustAwayEreBreakOfDay.cs" />
     <Compile Include="Models\Search\EnumFilterDefinition.cs" />
     <Compile Include="Models\Search\FilterDefinition.cs" />
