@@ -128,7 +128,7 @@ namespace HallOfBeorn.Models
             Add(TheFateOfNumenor);
             Add(TheRuinsOfNumenor);
             Add(TheStormcallerElite);
-            Add(TheUmbarNavy);
+            Add(UmbarFleet);
             Add(VastOceans);
             Add(VoyageAcrossBelegaer);
 
@@ -351,7 +351,7 @@ namespace HallOfBeorn.Models
         public static EncounterSet TheFateOfNumenor = new EncounterSet { Name = "The Fate of Númenor", Set = "The Grey Havens" };
         public static EncounterSet TheRuinsOfNumenor = new EncounterSet { Name = "The Ruins of Númenor", Set = "The Grey Havens" };
         public static EncounterSet TheStormcallerElite = new EncounterSet { Name = "The Stormcaller Elite", Set = "The Grey Havens" };
-        public static EncounterSet TheUmbarNavy = new EncounterSet { Name = "The Umbar Navy", Set = "The Grey Havens" };
+        public static EncounterSet UmbarFleet = new EncounterSet { Name = "Umbar Fleet", Set = "The Grey Havens" };
         public static EncounterSet VastOceans = new EncounterSet { Name = "Vast Oceans", Set = "The Grey Havens" };
         public static EncounterSet VoyageAcrossBelegaer = new EncounterSet { Name = "Voyage Across Belegaer", Set = "The Grey Havens" };
         

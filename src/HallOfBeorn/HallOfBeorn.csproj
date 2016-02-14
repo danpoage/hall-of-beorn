@@ -676,6 +676,7 @@
     <Content Include="Images\heading-cloudy.png" />
     <Content Include="Images\heading-rainy.png" />
     <Content Include="Images\heading-stormy.png" />
+    <Content Include="Images\heading-sunny.png" />
     <Content Include="Images\heart.png" />
     <Content Include="Images\Leadership.png" />
     <Content Include="Images\Lore.png" />

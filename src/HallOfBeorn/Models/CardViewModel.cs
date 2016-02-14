@@ -670,6 +670,12 @@ namespace HallOfBeorn.Models
         public string ImagePath1
         {
             get {
+
+                if (_card.HasSecondImage && !string.IsNullOrEmpty(_card.SecondImagePath))
+                {
+                    return ImagePath;
+                }
+
                 switch (_card.CardType)
                 {
                     case Models.CardType.Quest:
@@ -688,6 +694,12 @@ namespace HallOfBeorn.Models
         {
             get
             {
+                if (_card.HasSecondImage && !string.IsNullOrEmpty(_card.SecondImagePath))
+                {
+                    var set = !string.IsNullOrEmpty(_card.CardSet.NormalizedName) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
+                    return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}.jpg", set, _card.SecondImagePath);
+                }
+
                 switch (_card.CardType)
                 {
                     case Models.CardType.Quest:

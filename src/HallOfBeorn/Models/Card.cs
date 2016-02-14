@@ -227,6 +227,9 @@ namespace HallOfBeorn.Models
                 case "sailing-success2":
                     sb.Append("<div class='sailing-success'><img src='/Images/sailing-success.png' title='Sailing Test Success'/><img src='/Images/sailing-success.png' title='Sailing Test Success'/></div>");
                     break;
+                case "heading-sunny":
+                    sb.Append("<img class='heading-icon' src='/Images/heading-sunny.png' />");
+                    break;
                 case "heading-cloudy":
                     sb.Append("<img class='heading-icon' src='/Images/heading-cloudy.png' />");
                     break;
@@ -385,6 +388,13 @@ namespace HallOfBeorn.Models
         public Card WithSuffix(string suffix)
         {
             this.Suffix = suffix;
+            return this;
+        }
+
+        public Card WithSecondImage(string secondImagePath)
+        {
+            this.hasSecondImage = true;
+            this.secondImagePath = secondImagePath;
             return this;
         }
 
@@ -616,6 +626,13 @@ namespace HallOfBeorn.Models
                 return hasSecondImage;
             }
             set { hasSecondImage = value; }
+        }
+
+        private string secondImagePath;
+
+        public string SecondImagePath
+        {
+            get { return secondImagePath; }
         }
 
         /*
