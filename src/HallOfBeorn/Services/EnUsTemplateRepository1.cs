@@ -1332,6 +1332,7 @@ namespace HallOfBeorn.Services
             AddHtml("Waterspout-TGH", "<p>While your heading is at the worst setting (Stormy), when faced with the option to travel, the players must travel to {self}, if able.</p><p><b>Forced:</b> After traveling to {self}, deal 4 damage to each {trait-search:CardType=Ship_Objective&Trait=Ship.@Ship} objective.");
 
             AddHtml("Narelenya-TGH", "<p class='main-text'>Immune to player card effects. {keyword:Sentinel.}</p><p>Reduce the cost of the first {type:Ally@ally} you play each round by 1.</p><p><b>If the {self} is destroyed, its controller is eliminated from the game.</b></p>");
+            AddHtml("Navigation-TGH", "<table class='compass-rose'><tr><td></td><td style='text-align:center'>{heading-sunny2}</td><td></td></tr><tr><td>{heading-stormy2}</td><td>{compass-rose}</td><td>{heading-cloudy2}</td></tr><tr><td></td><td style='text-align:center'>{heading-rainy2}</td><td></td></tr></table>");
 
             /*
             AddHtml("A-Deep-Sack-THOHaUH", "<p class='main-text'><b>When</b><b>Sacked:</b> Attach to the character (excluding Gandalf) with the highest printed {Willpower} without a Sack attached.Attached character cannot ready, attack, defend, commit to quests, or trigger effects. If this Sack card is removed, shuffle it into the sack deck.</p>");

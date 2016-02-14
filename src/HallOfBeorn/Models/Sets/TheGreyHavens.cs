@@ -485,6 +485,9 @@ namespace HallOfBeorn.Models.Sets
                 .WithKeywords("Sentinel.", "Ranged.")
                 .WithText("Immune to player card effects. Sentinel. Ranged.\r\nReduce your starting threat by 3.\r\nEach hero you control gets +1 Attack.\r\nIf the Silver Wing is destroyed, its controller is eliminated from the game.")
                 .WithInfo(83, 1, Artist.Nele_Klumpe));
+            Cards.Add(Card.Objective("Navigation", "", "")
+                .WithText("Sunny, Cloudy, Rainy, Stormy")
+                .WithInfo(84, 1, Artist.Unknown));
         }
     }
 }

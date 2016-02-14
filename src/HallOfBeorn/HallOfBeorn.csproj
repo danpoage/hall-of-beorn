@@ -671,6 +671,7 @@
     <Content Include="Images\attack.gif" />
     <Content Include="Images\Baggins.png" />
     <Content Include="Images\close-button.png" />
+    <Content Include="Images\compass-rose.png" />
     <Content Include="Images\defense.gif" />
     <Content Include="Images\encounter-card-back.jpg" />
     <Content Include="Images\error.jpg" />
@@ -678,9 +679,13 @@
     <Content Include="Images\HallOfBeorn-AppleTouchIcon.png" />
     <Content Include="Images\Happy_Grizzly_Bear.jpg" />
     <Content Include="Images\heading-cloudy.png" />
+    <Content Include="Images\heading-cloudy2.png" />
     <Content Include="Images\heading-rainy.png" />
+    <Content Include="Images\heading-rainy2.png" />
     <Content Include="Images\heading-stormy.png" />
+    <Content Include="Images\heading-stormy2.png" />
     <Content Include="Images\heading-sunny.png" />
+    <Content Include="Images\heading-sunny2.png" />
     <Content Include="Images\heart.png" />
     <Content Include="Images\Leadership.png" />
     <Content Include="Images\Lore.png" />

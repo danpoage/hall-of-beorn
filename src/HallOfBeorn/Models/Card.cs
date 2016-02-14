@@ -228,16 +228,31 @@ namespace HallOfBeorn.Models
                     sb.Append("<div class='sailing-success'><img src='/Images/sailing-success.png' title='Sailing Test Success'/><img src='/Images/sailing-success.png' title='Sailing Test Success'/></div>");
                     break;
                 case "heading-sunny":
-                    sb.Append("<img class='heading-icon' src='/Images/heading-sunny.png' />");
+                    sb.Append("<img class='heading-icon' src='/Images/heading-sunny.png' title='Sunny Heading' />");
                     break;
                 case "heading-cloudy":
-                    sb.Append("<img class='heading-icon' src='/Images/heading-cloudy.png' />");
+                    sb.Append("<img class='heading-icon' src='/Images/heading-cloudy.png' title='Cloudy Heading' />");
                     break;
                 case "heading-rainy":
-                    sb.Append("<img class='heading-icon' src='/Images/heading-rainy.png' />");
+                    sb.Append("<img class='heading-icon' src='/Images/heading-rainy.png' title='Rainy Heading' />");
                     break;
                 case "heading-stormy":
-                    sb.Append("<img class='heading-icon' src='/Images/heading-stormy.png' />");
+                    sb.Append("<img class='heading-icon' src='/Images/heading-stormy.png' title='Stormy Heading' />");
+                    break;
+                case "heading-sunny2":
+                    sb.Append("<img class='heading-icon' src='/Images/heading-sunny2.png' title='Sunny Heading' />");
+                    break;
+                case "heading-cloudy2":
+                    sb.Append("<img class='heading-icon' src='/Images/heading-cloudy2.png' title='Cloudy Heading' />");
+                    break;
+                case "heading-rainy2":
+                    sb.Append("<img class='heading-icon' src='/Images/heading-rainy2.png' title='Rainy Heading' />");
+                    break;
+                case "heading-stormy2":
+                    sb.Append("<img class='heading-icon' src='/Images/heading-stormy2.png' title='Stormy Heading' />");
+                    break;
+                case "compass-rose":
+                    sb.Append("<img src='/Images/compass-rose.png'/>");
                     break;
                 default:
                     sb.Append("<p>UNRECOGNIZED TYPE: " + type.ToLowerSafe() + "</p>");
