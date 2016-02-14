@@ -19,11 +19,7 @@
             }
         }
         <div style="margin-top:4px;margin-bottom:2px;">
-            <span style="display:inline-block;max-width:154px;"><a href="@Model.SetSearchUrl" title="Search for @Model.SetName">@Model.SetName</a></span><span style="margin-left:8px;display:inline-block;">@string.Format("#{0} (x{1})", @Model.Number, @Model.Quantity)</span>
-            @if (!string.IsNullOrEmpty(@Model.EasyModeQuantity))
-            {
-                <span style="margin-left:8px;">@string.Format("(Easy Mode x{0})", @Model.EasyModeQuantity)</span>
-            }
+            <span style="display:inline-block;max-width:154px;"><a href="@Model.SetSearchUrl" title="Search for @Model.SetName">@Model.SetName</a></span><span style="margin-left:8px;display:inline-block;">@string.Format("#{0} {1}", @Model.Number, @Model.CountLabel)</span>
         </div>
     </div>
 
