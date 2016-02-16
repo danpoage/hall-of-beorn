@@ -1008,6 +1008,10 @@ tr.pager td {
     margin-right: -1px;
 }
 
+.heading-sunny-icon {
+    margin-right: 1px;
+}
+
 .pass-text {
     text-align:right;
     font-weight:bold;
