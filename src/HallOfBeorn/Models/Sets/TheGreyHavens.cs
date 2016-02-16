@@ -299,7 +299,8 @@ namespace HallOfBeorn.Models.Sets
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+3 Attack instead if attacking enemy is a Ship Enemy).")
                 .WithInfo(50, 2, Artist.Lukasz_Jaskolski));
             Cards.Add(Card.Location("Rolling Seas", "", "Vast Oceans", 4, 3)
-                .WithTraits("Ocean.", "Travel: Shift your heading off-course to travel here.\r\nShadow: If this attack deals damage to a Ship objective, shift your heading off-course.")
+                .WithTraits("Ocean.")
+                .WithText("Travel: Shift your heading off-course to travel here.\r\nShadow: If this attack deals damage to a Ship objective, shift your heading off-course.")
                 .WithFlavor("The winds of wrath came driving him, and blindly in the foam he fled… —The Fellowship of the Ring")
                 .WithEasyModeQuantity(1)
                 .WithInfo(51, 3, Artist.Carlos_Palma_Cruchaga));
