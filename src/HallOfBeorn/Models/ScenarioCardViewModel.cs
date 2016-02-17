@@ -18,6 +18,9 @@ namespace HallOfBeorn.Models
             NormalQuantity = scenarioCard.NormalQuantity > 0 ? scenarioCard.NormalQuantity.ToString() : "-";
             NightmareQuantity = scenarioCard.NightmareQuantity > 0 ? scenarioCard.NightmareQuantity.ToString() : "-";
             EasyQuantity = scenarioCard.EasyQuantity > 0 ? scenarioCard.EasyQuantity.ToString() : "-";
+            NormalCount = scenarioCard.NormalQuantity;
+            EasyCount = scenarioCard.EasyQuantity;
+            NightmareCount = scenarioCard.NightmareQuantity;
         }
 
         public string Title { get; private set; }
@@ -28,5 +31,8 @@ namespace HallOfBeorn.Models
         public string NormalQuantity { get; private set; }
         public string NightmareQuantity { get; private set; }
         public string EasyQuantity { get; private set; }
+        public int NormalCount { get; private set; }
+        public int EasyCount { get; private set; }
+        public int NightmareCount { get; private set; }
     }
 }

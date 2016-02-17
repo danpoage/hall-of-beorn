@@ -80,8 +80,14 @@
         }
         <div />
         var lastEncounterSet = string.Empty;
+        var normalTotal = 0;
+        var easyTotal = 0;
+        var nightmareTotal = 0;
         foreach (var scenarioCard in @Model.Detail.ScenarioCards)
         {
+            normalTotal += scenarioCard.NormalCount;
+            easyTotal += scenarioCard.EasyCount;
+            nightmareTotal += scenarioCard.NightmareCount;
             if (@lastEncounterSet != @scenarioCard.EncounterSet)
             {
                 <div><h3><a title="Search for @scenarioCard.EncounterSet" href="@scenarioCard.EncounterSetLink">@scenarioCard.EncounterSet</a><img style="margin-left:4px;width:20px;height:20px;" src="@scenarioCard.EncounterSetImage" /></h3></div>
@@ -95,6 +101,13 @@
     
             lastEncounterSet = scenarioCard.EncounterSet;
         }
+        <br />
+        <div>
+            <span style="display:inline-block;width:300px;"><b>Total Encounter Cards</b></span>
+            <span style="display:inline-block;margin-left:4px;width:60px;">@normalTotal</span>
+            <span style="display:inline-block;margin-left:4px;width:60px;">@easyTotal</span>
+            <span style="display:inline-block;margin-left:4px;width:60px;">@nightmareTotal</span>
+        </div>
     <br />
     <br />
     <button id="toggleChart">Show Chart</button>
