@@ -13,6 +13,15 @@ namespace HallOfBeorn.Services
         {
             this.cardRepository = cardRepository;
             this.cards = cardRepository.Cards().ToList();
+            foreach (var card in this.cards.Where(x => !string.IsNullOrEmpty(x.EncounterSet)))
+            {
+                if (!cardsByEncounterSet.ContainsKey(card.EncounterSet))
+                {
+                    cardsByEncounterSet[card.EncounterSet] = new List<Card>();
+                }
+
+                cardsByEncounterSet[card.EncounterSet].Add(card);
+            }
 
             foreach (var group in productRepository.ProductGroups())
             {
@@ -30,6 +39,7 @@ namespace HallOfBeorn.Services
 
         private readonly CardRepository cardRepository;
         private readonly IList<Card> cards;
+        private readonly IDictionary<string, List<Card>> cardsByEncounterSet = new Dictionary<string, List<Card>>();
         private readonly Dictionary<string, Scenario> scenariosByAlternateTitle = new Dictionary<string, Scenario>();
         private readonly Dictionary<string, Scenario> scenariosByTitle = new Dictionary<string, Scenario>();
         
@@ -50,7 +60,12 @@ namespace HallOfBeorn.Services
 
             foreach (var set in scenario.EncounterSets())
             {
-                foreach (var card in cards.Where(x => x.CardType != CardType.Quest && x.EncounterSet == set.Name))
+                if (!cardsByEncounterSet.ContainsKey(set.Name))
+                {
+                    continue;
+                }
+
+                foreach (var card in cardsByEncounterSet[set.Name].Where(x => x.CardType != CardType.Quest))
                 {
                     byte easyCount = 0; byte normalCount = 0; byte nightmareCount = 0;
 
@@ -138,6 +153,8 @@ namespace HallOfBeorn.Services
 
         public IEnumerable<ScenarioGroup> ScenarioGroups()
         {
+            //return getScenarioGroups();
+
             var scenarioGroups = new Dictionary<string, ScenarioGroup>();
 
             foreach (var scenario in scenariosByTitle)
@@ -153,6 +170,41 @@ namespace HallOfBeorn.Services
             }
 
             return scenarioGroups.Values.ToList();
+        }
+
+        private IEnumerable<ScenarioGroup> getScenarioGroups()
+        {
+            var scenarioGroups = new List<ScenarioGroup>();
+
+            scenarioGroups.Add(new ScenarioGroup("Core Set", getCoreSetScenarios()));
+            scenarioGroups.Add(new ScenarioGroup("Shadows of Mirkwood", getShadowsOfMirkwoodScenarios()));
+
+            return scenarioGroups;
+        }
+
+        private List<Scenario> getCoreSetScenarios()
+        {
+            var scenarios = new List<Scenario>();
+
+            scenarios.Add(new HallOfBeorn.Models.Scenarios.PassageThroughMirkwood());
+            scenarios.Add(new HallOfBeorn.Models.Scenarios.JourneyAlongTheAnduin());
+            scenarios.Add(new HallOfBeorn.Models.Scenarios.EscapeFromDolGuldur());
+
+            return scenarios;
+        }
+
+        private List<Scenario> getShadowsOfMirkwoodScenarios()
+        {
+            var scenarios = new List<Scenario>();
+
+            scenarios.Add(new HallOfBeorn.Models.Scenarios.TheHuntForGollum());
+            scenarios.Add(new HallOfBeorn.Models.Scenarios.ConflictAtTheCarrock());
+            scenarios.Add(new HallOfBeorn.Models.Scenarios.AJourneyToRhosgobel());
+            scenarios.Add(new HallOfBeorn.Models.Scenarios.TheHillsOfEmynMuil());
+            scenarios.Add(new HallOfBeorn.Models.Scenarios.TheDeadMarshes());
+            scenarios.Add(new HallOfBeorn.Models.Scenarios.ReturnToMirkwood());
+
+            return scenarios;
         }
 
         public IEnumerable<string> ScenarioTitles()

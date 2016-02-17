@@ -11,6 +11,16 @@ namespace HallOfBeorn.Models
         {
         }
 
+        public ScenarioGroup(string name, IEnumerable<Scenario> scenarios)
+        {
+            this.Name = name;
+
+            foreach (var scenario in scenarios)
+            {
+                AddScenario(scenario);
+            }
+        }
+
         private readonly List<Scenario> scenarios = new List<Scenario>();
 
         public string Name { get; set; }
