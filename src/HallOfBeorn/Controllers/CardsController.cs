@@ -164,16 +164,19 @@ namespace HallOfBeorn.Controllers
 
         public ActionResult Scenarios(string id)
         {
-            var model = new ScenarioListViewModel();
+            ScenarioListViewModel model;
             var lookupCard = new Func<string, Card>((slug) => { return cardRepository.FindBySlug(slug); });
 
 
             if (string.IsNullOrEmpty(id))
             {
+                model = scenarioService.GetListViewModel();
+                /*
                 foreach (var scenarioGroup in scenarioService.ScenarioGroups())
                 {
                     model.ScenarioGroups.Add(new ScenarioGroupViewModel(scenarioGroup, lookupCard));
                 }
+                */
             }
             else
             {
@@ -193,6 +196,7 @@ namespace HallOfBeorn.Controllers
                     }
                 }
 
+                model = new ScenarioListViewModel();
                 model.Detail = new ScenarioViewModel(scenario, lookupCard);
 
                 return View(model);

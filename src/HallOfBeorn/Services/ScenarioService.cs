@@ -34,7 +34,14 @@ namespace HallOfBeorn.Services
                 {
                     AddProduct(product, cards);
                 }
-            }    
+            }
+
+            listViewModel = new ScenarioListViewModel();
+            var lookupCard = new Func<string, Card>((slug) => { return cardRepository.FindBySlug(slug); });
+            foreach (var scenarioGroup in ScenarioGroups())
+            {
+                listViewModel.ScenarioGroups.Add(new ScenarioGroupViewModel(scenarioGroup, lookupCard));
+            }
         }
 
         private readonly CardRepository cardRepository;
@@ -42,7 +49,8 @@ namespace HallOfBeorn.Services
         private readonly IDictionary<string, List<Card>> cardsByEncounterSet = new Dictionary<string, List<Card>>();
         private readonly Dictionary<string, Scenario> scenariosByAlternateTitle = new Dictionary<string, Scenario>();
         private readonly Dictionary<string, Scenario> scenariosByTitle = new Dictionary<string, Scenario>();
-        
+        private readonly ScenarioListViewModel listViewModel;
+
         private void AddScenario(Scenario scenario)
         {
             var escapedTitle = scenario.Title.ToUrlSafeString();
@@ -222,6 +230,11 @@ namespace HallOfBeorn.Services
             return scenariosByTitle.ContainsKey(scenarioTitle) ?
                 scenariosByTitle[scenarioTitle]
                 : null;
+        }
+
+        public ScenarioListViewModel GetListViewModel()
+        {
+            return listViewModel;
         }
     }
 }
