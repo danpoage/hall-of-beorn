@@ -167,7 +167,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithUnique()
                 .WithSecondImage("Lost-Island")
                 .WithKeywords("Uncharted.")
-                .WithOppositeText("Cannot have player card attachments.\r\nForced: After Lost Island becomes the active location, flip it over.\r\nAction: Remove 4 progress from Lost Island to look at its facedown side.")
+                .WithOppositeText("Uncharted.\r\nCannot have player card attachments.\r\nForced: After Lost Island becomes the active location, flip it over.\r\nAction: Remove 4 progress from Lost Island to look at its facedown side.")
                 .WithTraits("Ruins.")
                 .WithText("While Shrine to Morgoth is the active location, players cannot draw cards or search their decks.\r\nForced: After Shrine to Morgoth is flipped over while active, exhaust each ally in play with printed cost 2 or less. Then, each player must search the encounter deck and discard pile for an Undead enemy and put it into play engaged with him. Shuffle the encounter deck.")
                 .WithInfo(27, 1, Artist.Jokubas_Uoginitas));
@@ -184,19 +184,19 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(Card.Location("Lush Jungle", "", "The Fate of Númenor", 4, 4)
                 .WithSecondImage("Lost-Island")
                 .WithKeywords("Uncharted.")
-                .WithOppositeText("Cannot have player card attachments.\r\nForced: After Lost Island becomes the active location, flip it over.\r\nAction: Remove 4 progress from Lost Island to look at its facedown side.")
+                .WithOppositeText("Uncharted.\r\nCannot have player card attachments.\r\nForced: After Lost Island becomes the active location, flip it over.\r\nAction: Remove 4 progress from Lost Island to look at its facedown side.")
                 .WithTraits("Forest.")
                 .WithText("While Lush Jungle is in the staging area, characters get –1 Attack and lose ranged.\r\nForced: After Lush Jungle is flipped over while active, return it to the staging area unless each player exhausts each ready hero he controls.")
                 .WithInfo(30, 2, Artist.Katy_Grierson));
             Cards.Add(Card.Location("Forbidden Coast", "", "The Fate of Númenor", 1, 6)
                 .WithSecondImage("Lost-Island")
                 .WithKeywords("Uncharted.")
-                .WithOppositeText("Cannot have player card attachments.\r\nForced: After Lost Island becomes the active location, flip it over.\r\nAction: Remove 4 progress from Lost Island to look at its facedown side.")
+                .WithOppositeText("Uncharted.\r\nCannot have player card attachments.\r\nForced: After Lost Island becomes the active location, flip it over.\r\nAction: Remove 4 progress from Lost Island to look at its facedown side.")
                 .WithTraits("Coastland.")
                 .WithText("Forced: After Forbidden Coast is flipped over while active, each player may draw a card. Then, each player chooses a card from his hand and places it on the bottom of his deck.")
                 .WithInfo(31, 2, Artist.Lukasz_Jaskolski));
             Cards.Add(Card.Location("Steep Plateau", "", "The Fate of Númenor", 1, 3)
-                .WithTraits("Hills.")
+                .WithTraits("Coastland.")
                 .WithText("Response: After Steep Plateau is explored, peek at the facedown side of an Uncharted location in the staging area.")
                 .WithShadow("Shadow: Discard the bottom card of the defending player’s deck. If that card’s printed cost is 2 or less, attacking enemy gets +2 Attack.")
                 .WithInfo(32, 3, Artist.Florian_Devos));
