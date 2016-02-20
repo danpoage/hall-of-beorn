@@ -272,11 +272,12 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Travel: Search the encounter deck and discard pile for a Corsair enemy and add it to the staging area. Shuffle the encounter deck.\r\nForced: When White Ship is placed underneath The Havens Burn, place 1 resource on each Raider enemy in play.")
                 .WithEasyModeQuantity(1)
                 .WithInfo(45, 2, Artist.Katy_Grierson));
-            Cards.Add(Card.Location("Elven Wave-runner", "", " Raid on the Grey Havens", 3, 3)
+            Cards.Add(Card.Location("Elven Wave-runner", "", "Raid on the Grey Havens", 3, 3)
                 .WithTraits("Grey Havens.", "Ship.")
                 .WithKeywords("Aflame 3.")
                 .WithText("Response: After Elven Wave-runner is added to the victory display, each player draws 1 card.")
                 .WithShadow("Shadow: If attacking enemy is a Raider, discard a card at random from your hand and place 1 resource on attacking enemy.")
+                .WithVictoryPoints(3)
                 .WithInfo(46, 2, Artist.Katy_Grierson));
             Cards.Add(Card.Location("Elven Caravel", "", "Raid on the Grey Havens", 3, 5)
                 .WithTraits("Grey Havens.", "Ship.")
