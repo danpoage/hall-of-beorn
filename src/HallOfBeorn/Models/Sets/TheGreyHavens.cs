@@ -456,7 +456,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithTypeBasedSlug()
                 .WithUnique()
                 .WithTraits("Corsair.", "Raider.")
-                .WithText("Na’asiyah engages the last player.\r\nForced: When Na’asiyah engages you, discard each event in your hand. Add 1 resource to Na’asiyah for each event discarded in this way.\r\nForced: When Na’asiyah attacks or defends, she gets +1 [Attack] and +1 [Defense] for this attack for each resource on her. After this attack, discard 1 resource from her.")
+                .WithText("Na’asiyah engages the last player.\r\nForced: When Na’asiyah engages you, discard each event in your hand. Add 1 resource to Na’asiyah for each event discarded in this way.\r\nForced: When Na’asiyah attacks or defends, she gets +1 Attack and +1 Defense for this attack for each resource on her. After this attack, discard 1 resource from her.")
                 .WithInfo(78, 1, Artist.Ilich_Henriquez));
             Cards.Add(Card.ObjectiveAlly("Na'asiyah", "", "The Stormcaller Elite", 1, 2, 2, 4)
                 .WithTypeBasedSlug()
