@@ -227,6 +227,9 @@ namespace HallOfBeorn.Models
                 case "sailing-success2":
                     sb.Append("<div class='sailing-success'><img src='/Images/sailing-success.png' title='Sailing Test Success'/><img src='/Images/sailing-success.png' title='Sailing Test Success'/></div>");
                     break;
+                case "sailing-success-small":
+                    sb.Append("<img style='height:15px; width:15px; margin-bottom:-2px;' src='/Images/sailing-success.png' title='Sailing Test Success'/>");
+                    break;
                 case "heading-sunny":
                     sb.Append("<img class='heading-icon heading-sunny-icon' src='/Images/heading-sunny.png' title='Sunny Heading' />");
                     break;
