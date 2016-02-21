@@ -358,7 +358,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithTraits("Corsair.", "Raider.")
                 .WithText("Cunning Pirate gets +1 Attack and +1 Defense for each resource on it.\r\nForced: When Cunning Pirate engages you, discard an attachment you control and place resources on Cunning Pirate equal to that attachment's printed cost.")
                 .WithInfo(61, 3, Artist.Adam_Lane));
-            Cards.Add(Card.Enemy("Vicious Marauder", "", "Corsair Pirates", 12, 2, 4, 3, 3)
+            Cards.Add(Card.Enemy("Vicious Marauder", "", "Corsair Pirates", 12, 2, 3, 3, 3)
                 .WithTraits("Corsair.", "Raider.")
                 .WithText("Forced: When Vicious Marauder engages you, discard a random card from your hand and place resources on it equal to that card’s printed cost.\r\nForced: When Vicious Marauder attacks you, distribute damage among characters you control equal to the number of resources on it.")
                 .WithInfo(62, 2, Artist.Nate_Abell));
