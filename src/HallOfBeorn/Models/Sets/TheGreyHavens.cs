@@ -413,10 +413,8 @@ namespace HallOfBeorn.Models.Sets
                 .WithSecondImage("Lost-Island")
                 .WithKeywords("Uncharted.")
                 .WithOppositeText("Cannot have player card attachments.\r\nForced: After Lost Island becomes the active location, flip it over.\r\nAction: Remove 4 progress from Lost Island to look at its facedown side.")
-                .WithKeywords("Uncharted.")
-                .WithOppositeText("Cannot have player card attachments.\r\nForced: After Lost Island becomes the active location, flip it over.\r\nAction: Remove 4 progress from Lost Island to look at its facedown side.")
                 .WithTraits("Ruins.")
-                .WithText("While Flooded Ruins is the active location, it contributes its [Threat] to the staging area.")
+                .WithText("While Flooded Ruins is the active location, it contributes its Threat to the staging area.")
                 .WithFlavor("Númenor was thrown down and swallowed in the sea... –The Return of the King")
                 .WithInfo(72, 2, Artist.Juan_Carlos_Barquet));
             Cards.Add(Card.Location("Drowned Graves", "", "Ruins of Númenor", 2, 2)
@@ -436,7 +434,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithFlavor("It was not long before he had bewitched the King and was master of his counsel... –The Return of the King")
                 .WithInfo(74, 2, Artist.Davis_Engel));
             Cards.Add(Card.Treachery("Aimless Wandering", "", "Ruins of Númenor")
-                .WithText("When Revealed: The players, as a group, must remove characters with a total of at least X [Willpower] from the quest. X is the number of Uncharted locations in the staging area. The first player may give Aimless Wandering doomed 2 to look at the facedown side of an Uncharted location in the staging area.")
+                .WithText("When Revealed: The players, as a group, must remove characters with a total of at least X Willpower from the quest. X is the number of Uncharted locations in the staging area. The first player may give Aimless Wandering doomed 2 to look at the facedown side of an Uncharted location in the staging area.")
                 .WithInfo(75, 3, Artist.David_Ogilvie));
             Cards.Add(Card.Enemy("Captain Sahír", "", "The Stormcaller Elite", 4, 6, 6, 2, 5)
                 .WithTypeBasedSlug()
@@ -469,12 +467,12 @@ namespace HallOfBeorn.Models.Sets
                 .WithSlugIncludesType()
                 .WithTraits("Grey Havens.", "Ship.")
                 .WithKeywords("Sentinel.")
-                .WithText("Immune to player card effects. Sentinel.\r\nThe Dream-chaser can always be committed to sailing tests (even if you are not the first player), and counts as 2 characters when committed to a Sailing test.\r\nIf the Dream-chaser is destroyed, the players lose the game.")
+                .WithText("Immune to player card effects.\r\nThe Dream-chaser can always be committed to sailing tests (even if you are not the first player), and counts as 2 characters when committed to a Sailing test.\r\nIf the Dream-chaser is destroyed, the players lose the game.")
                 .WithInfo(80, 1, Artist.Nele_Klumpe));
             Cards.Add(Card.ShipObjective("Dawn Star", "The Dream-chaser's Fleet", 3, 3, 4, 16)
                 .WithTraits("Gondor.", "Ship.")
                 .WithKeywords("Sentinel.")
-                .WithText("Immune to player card effects. Sentinel.\r\nRaise your starting threat by 3.\r\nDraw 1 additional card during the resource phase.\r\nIf the Dawn Star is destroyed, its controller is eliminated from the game.")
+                .WithText("Immune to player card effects.\r\nRaise your starting threat by 3.\r\nDraw 1 additional card during the resource phase.\r\nIf the Dawn Star is destroyed, its controller is eliminated from the game.")
                 .WithInfo(81, 1, Artist.Titus_Lunter));
             Cards.Add(Card.ShipObjective("Nárelenya", "The Dream-chaser's Fleet", 3, 3, 5, 15)
                 .WithNormalizedTitle("Narelenya")
@@ -485,7 +483,7 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(Card.ShipObjective("Silver Wing", "The Dream-chaser's Fleet", 2, 4, 2, 14)
                 .WithTraits("Gondor.", "Ship.")
                 .WithKeywords("Sentinel.", "Ranged.")
-                .WithText("Immune to player card effects. Sentinel. Ranged.\r\nReduce your starting threat by 3.\r\nEach hero you control gets +1 Attack.\r\nIf the Silver Wing is destroyed, its controller is eliminated from the game.")
+                .WithText("Immune to player card effects.\r\nReduce your starting threat by 3.\r\nEach hero you control gets +1 Attack.\r\nIf the Silver Wing is destroyed, its controller is eliminated from the game.")
                 .WithInfo(83, 1, Artist.Nele_Klumpe));
             Cards.Add(Card.Objective("Navigation", "", "")
                 .WithText("Sunny, Cloudy, Rainy, Stormy")
