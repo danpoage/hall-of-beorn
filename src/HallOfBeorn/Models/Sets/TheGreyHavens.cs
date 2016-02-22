@@ -377,7 +377,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithTraits("Corsair.", "Raider.")
                 .WithText("Forced: When Corsair Infiltrator attacks, deal it 1 additional shadow card for each resource on it.\r\nForced: After the engaged player collects resources at the beginning of the resource phase, that player moves 1 resource from one of his heroes' pools to Corsair Infiltrator.")
                 .WithInfo(65, 2, Artist.Adam_Lane));
-            Cards.Add(Card.Enemy("Raid Leader", "", "Corsair Raiders ", 40, 3, 5, 1, 5)
+            Cards.Add(Card.Enemy("Raid Leader", "", "Corsair Raiders", 40, 3, 5, 1, 5)
                 .WithTraits("Corsair.", "Raider.")
                 .WithText("Raid Leader gets +1 Defense for each resource on it.\r\nForced: When Raid Leader engages you, move 1 resource from each of your heroes' resource pools to Raid Leader.")
                 .WithFlavor("\"The Corsairs are upon us! It is the last stroke of doom!\" —Men of Gondor, The Return of the King")
