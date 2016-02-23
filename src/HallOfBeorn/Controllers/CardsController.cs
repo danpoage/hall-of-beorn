@@ -707,6 +707,39 @@ namespace HallOfBeorn.Controllers
                 model.QuestPointsOp = null;
             }
 
+            if (model.MEC01.HasValue && !model.MEC01.Value)
+            {
+                model.MEC01 = null;
+            }
+            if (model.MESOM.HasValue && !model.MESOM.Value)
+            {
+                model.MESOM = null;
+            }
+            if (model.MEC02.HasValue && !model.MEC02.Value)
+            {
+                model.MEC02 = null;
+            }
+            if (model.MEC03.HasValue && !model.MEC03.Value)
+            {
+                model.MEC03 = null;
+            }
+            if (model.MEC04.HasValue && !model.MEC04.Value)
+            {
+                model.MEC04 = null;
+            }
+            if (model.MEC05.HasValue && !model.MEC05.Value)
+            {
+                model.MEC05 = null;
+            }
+            if (model.MEC06.HasValue && !model.MEC06.Value)
+            {
+                model.MEC06 = null;
+            }
+            if (model.MEC07.HasValue && !model.MEC07.Value)
+            {
+                model.MEC07 = null;
+            }
+
             return RedirectToAction("Search", model);
         }
 

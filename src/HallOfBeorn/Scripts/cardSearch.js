@@ -171,4 +171,31 @@ $(document).ready(function () {
             return false;
         }
     });
+
+    $('.search-select-checkbox').click(function (e) {
+
+        if (e.currentTarget) {
+            var value = e.currentTarget.checked;
+
+            items = [];
+
+            switch (e.currentTarget.id) {
+                case 'MESOM':
+                    items = [ '#MEC02', '#MEC03', '#MEC04', '#MEC05', '#MEC06', '#MEC07' ];
+                    break;
+                case "MEDWD":
+                    items = [ '#MEC09', '#MEC10', '#MEC11', '#MEC12', '#MEC13', '#MEC14' ];
+                    break;
+                default:
+                    break;
+            }
+
+            if (items.length > 0) {
+                for (var i = 0; i < items.length; i++) {
+                    $(items[i]).prop('checked', value);
+                    $(items[i]).prop('disabled', value);
+                }
+            }
+        }
+    });
 });

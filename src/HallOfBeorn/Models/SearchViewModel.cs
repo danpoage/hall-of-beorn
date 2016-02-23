@@ -567,6 +567,85 @@ namespace HallOfBeorn.Models
             set;
         }
 
+        //Core Set
+        public bool? MEC01 { get; set; }
+
+        //Shadows of Mirkwood
+        public bool? MESOM { get; set; }
+        
+        public bool? MEC02 { get; set; }
+        public bool? MEC03 { get; set; }
+        public bool? MEC04 { get; set; }
+        public bool? MEC05 { get; set; }
+        public bool? MEC06 { get; set; }
+        public bool? MEC07 { get; set; }
+        
+        //Khazad-dum
+        public bool? MEC08 { get; set; }
+
+        //Dwarrowdelf
+        public bool? MEDWD { get; set; }
+
+        public bool? MEC09 { get; set; }
+        public bool? MEC10 { get; set; }
+        public bool? MEC11 { get; set; }
+        public bool? MEC12 { get; set; }
+        public bool? MEC13 { get; set; }
+        public bool? MEC14 { get; set; }
+        
+        //Heirs of Numenor
+        public bool? MEC17 { get; set; }
+
+        //Against the Shadow
+        public bool? MEATS { get; set; }
+
+        public bool? MEC18 { get; set; }
+        public bool? MEC19 { get; set; }
+        public bool? MEC20 { get; set; }
+        public bool? MEC21 { get; set; }
+        public bool? MEC22 { get; set; }
+        public bool? MEC23 { get; set; }
+        
+        //The Voice of Isengard
+        public bool? MEC25 { get; set; }
+
+        //Ring-maker
+        public bool? MERMK { get; set; }
+
+        public bool? MEC26 { get; set; }
+        public bool? MEC27 { get; set; }
+        public bool? MEC28 { get; set; }
+        public bool? MEC29 { get; set; }
+        public bool? MEC30 { get; set; }
+        public bool? MEC31 { get; set; }
+
+        //The Lost Realm
+        public bool? MEC38 { get; set; }
+
+        //Angmar Awakened
+        public bool? MEAAW { get; set; }
+
+        public bool? MEC39 { get; set; }
+        public bool? MEC40 { get; set; }
+        public bool? MEC41 { get; set; }
+        public bool? MEC42 { get; set; }
+        public bool? MEC43 { get; set; }
+        public bool? MEC44 { get; set; }
+
+        //The Grey Havens
+        public bool? MEC47 { get; set; }
+
+        //The Dream-chaser
+        public bool? MEDCH { get; set; }
+
+        public bool? MEC16 { get; set; }
+        public bool? MEC24 { get; set; }
+        public bool? MEC32 { get; set; }
+        public bool? MEC34 { get; set; }
+        public bool? MEC45 { get; set; }
+        public bool? MEC46 { get; set; }
+        public bool? FA01 { get; set; }
+
         public static IEnumerable<SelectListItemExtends> CardSets { get; set; }
         public static IEnumerable<SelectListItem> Scenarios { get; set; }
         public static IEnumerable<SelectListItem> EncounterSets { get; set; }

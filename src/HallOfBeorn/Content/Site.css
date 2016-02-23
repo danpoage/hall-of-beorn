@@ -633,6 +633,14 @@ tr.pager td {
     margin-bottom: 4px;
 }
 
+.search-cycle {
+    font-weight: bold;
+}
+
+.search-cycle-section {
+    display: inline-block;
+}
+
 .search-items {
     display: inline-block;
 }
@@ -689,6 +697,12 @@ tr.pager td {
     font-size: 12px;
 }
 
+.search-label-free {
+    margin-right: 2px;
+    color: #3e5667;
+    font-size: 12px;
+}
+
 .search-select {
     /*display: block;*/
     margin-right:6px;
@@ -717,6 +731,14 @@ tr.pager td {
     margin-right:10px;
     width:60px;
 }
+
+.search-select-checkbox {
+    margin-left: 6px;
+    margin-top: 0px;
+    margin-right: 12px;
+    margin-bottom: -6px;
+}
+
 .search-explanation-container {
     display: inline-block;
 }
