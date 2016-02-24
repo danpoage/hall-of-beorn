@@ -697,10 +697,46 @@ tr.pager td {
     font-size: 12px;
 }
 
-.search-label-free {
+.search-label-product {
+    display: inline-block;
     margin-right: 2px;
+    width: 130px;
     color: #3e5667;
     font-size: 12px;
+}
+
+.search-button {
+    margin-left:6px;
+    border-radius:8px;
+    background-color:lightgray;
+}
+
+.clear-button {
+    margin-left:6px;
+    margin-right:28px;
+    width:70px;
+}
+
+.show-button {
+    display: inline-block;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.centered-container {
+    width:100%;
+    display:inline-block;
+    text-align:center;
+}
+
+.results-count-label {
+    display: inline-block;
+    text-align: right;
+}
+
+.search-product-filters {
+    margin-top: 6px;
+    margin-bottom: 24px;
 }
 
 .search-select {
@@ -733,10 +769,8 @@ tr.pager td {
 }
 
 .search-select-checkbox {
-    margin-left: 6px;
-    margin-top: 0px;
-    margin-right: 12px;
-    margin-bottom: -6px;
+    margin-left: 2px;
+    margin-right: 3px;
 }
 
 .search-explanation-container {

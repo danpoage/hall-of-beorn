@@ -172,6 +172,16 @@ $(document).ready(function () {
         }
     });
 
+    $('#toggleProductFilters').click(function (e) {
+        $('#productFiltersContainer').toggle();
+
+        if ($('#productFiltersContainer').is(":visible")) {
+            $('#toggleProductFilters').text('Hide Product Filters');
+        } else {
+            $('#toggleProductFilters').text('Show Product Filters');
+        }
+    });
+
     $('.search-select-checkbox').click(function (e) {
 
         if (e.currentTarget) {
@@ -181,10 +191,19 @@ $(document).ready(function () {
 
             switch (e.currentTarget.id) {
                 case 'MESOM':
-                    items = [ '#MEC02', '#MEC03', '#MEC04', '#MEC05', '#MEC06', '#MEC07' ];
+                    items = [ 'MEC02', 'MEC03', 'MEC04', 'MEC05', 'MEC06', 'MEC07' ];
                     break;
                 case "MEDWD":
-                    items = [ '#MEC09', '#MEC10', '#MEC11', '#MEC12', '#MEC13', '#MEC14' ];
+                    items = [ 'MEC09', 'MEC10', 'MEC11', 'MEC12', 'MEC13', 'MEC14' ];
+                    break;
+                case "MEATS":
+                    items = [ 'MEC18', 'MEC19', 'MEC20', 'MEC21', 'MEC22', 'MEC23' ];
+                    break;
+                case 'MERMK':
+                    items = [ 'MEC26', 'MEC27', 'MEC28', 'MEC29', 'MEC30', 'MEC31' ];
+                    break;
+                case 'MEAAW':
+                    items = [ 'MEC39', 'MEC40', 'MEC41', 'MEC42', 'MEC43', 'MEC44' ];
                     break;
                 default:
                     break;
@@ -192,8 +211,8 @@ $(document).ready(function () {
 
             if (items.length > 0) {
                 for (var i = 0; i < items.length; i++) {
-                    $(items[i]).prop('checked', value);
-                    $(items[i]).prop('disabled', value);
+                    $('#' + items[i]).prop('checked', value);
+                    $('#' + items[i]).prop('disabled', value);
                 }
             }
         }

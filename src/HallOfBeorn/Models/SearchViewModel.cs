@@ -646,6 +646,22 @@ namespace HallOfBeorn.Models
         public bool? MEC46 { get; set; }
         public bool? FA01 { get; set; }
 
+        public string ResultsLabel
+        {
+            get
+            {
+                switch (Cards.Count)
+                {
+                    case 0:
+                        return "No Results Found";
+                    case 1:
+                        return "1 Result Found";
+                    default:
+                        return string.Format("{0} Results Found", Cards.Count);
+                }
+            }
+        }
+
         public static IEnumerable<SelectListItemExtends> CardSets { get; set; }
         public static IEnumerable<SelectListItem> Scenarios { get; set; }
         public static IEnumerable<SelectListItem> EncounterSets { get; set; }
