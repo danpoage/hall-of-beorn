@@ -205,6 +205,14 @@ $(document).ready(function () {
                 case 'MEAAW':
                     items = [ 'MEC39', 'MEC40', 'MEC41', 'MEC42', 'MEC43', 'MEC44' ];
                     break;
+                case 'MEDCH':
+                    break;
+                case 'MEHOB':
+                    items = [ 'MEC16', 'MEC24' ];
+                    break;
+                case 'MELTR':
+                    items = [ 'MEC32', 'MEC34', 'MEC45', 'MEC46' ];
+                    break;
                 default:
                     break;
             }

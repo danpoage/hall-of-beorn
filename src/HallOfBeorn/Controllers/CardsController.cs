@@ -711,10 +711,6 @@ namespace HallOfBeorn.Controllers
             {
                 model.MEC01 = null;
             }
-            if (model.MESOM.HasValue && !model.MESOM.Value)
-            {
-                model.MESOM = null;
-            }
             if (model.MEC02.HasValue && !model.MEC02.Value)
             {
                 model.MEC02 = null;
@@ -738,6 +734,65 @@ namespace HallOfBeorn.Controllers
             if (model.MEC07.HasValue && !model.MEC07.Value)
             {
                 model.MEC07 = null;
+            }
+
+            if (model.MEC08.HasValue && !model.MEC08.Value)
+            {
+                model.MEC08 = null;
+            }
+            if (model.MEC09.HasValue && !model.MEC09.Value)
+            {
+                model.MEC09 = null;
+            }
+            if (model.MEC10.HasValue && !model.MEC10.Value)
+            {
+                model.MEC10 = null;
+            }
+            if (model.MEC11.HasValue && !model.MEC11.Value)
+            {
+                model.MEC11 = null;
+            }
+            if (model.MEC12.HasValue && !model.MEC12.Value)
+            {
+                model.MEC12 = null;
+            }
+            if (model.MEC13.HasValue && !model.MEC13.Value)
+            {
+                model.MEC13 = null;
+            }
+            if (model.MEC14.HasValue && !model.MEC14.Value)
+            {
+                model.MEC14 = null;
+            }
+
+            if (model.MEC17.HasValue && !model.MEC17.Value)
+            {
+                model.MEC17 = null;
+            }
+
+            if (model.MEC18.HasValue && !model.MEC18.Value)
+            {
+                model.MEC18 = null;
+            }
+            if (model.MEC19.HasValue && !model.MEC19.Value)
+            {
+                model.MEC19 = null;
+            }
+            if (model.MEC20.HasValue && !model.MEC20.Value)
+            {
+                model.MEC20 = null;
+            }
+            if (model.MEC21.HasValue && !model.MEC21.Value)
+            {
+                model.MEC21 = null;
+            }
+            if (model.MEC22.HasValue && !model.MEC22.Value)
+            {
+                model.MEC22 = null;
+            }
+            if (model.MEC23.HasValue && !model.MEC23.Value)
+            {
+                model.MEC23 = null;
             }
 
             return RedirectToAction("Search", model);

@@ -215,10 +215,14 @@
 
         <span class="centered-container"><a id="toggleProductFilters" href="#" class="show-button">Show Product Filters</a></span>
         <div id="productFiltersContainer" class="search-row search-product-filters" style="display:none">
-            <h3>Product Filters</h3>
+            <div class="product-filters-notes">
+                <p><i>Product filters are optional.</i> Leave them blank to include all products in your search. Alternatively, check any products to include them in your search.</p><p><b><i>If at least 1 product filter is checked, any products not checked will be excluded from search results.</i></b></p>
+            </div>
             <div>
-                @Html.CheckBox("MEC01", Model.MEC01.HasValue && Model.MEC01.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Core Set</span>
-                @Html.CheckBox("MESOM", Model.MESOM.HasValue && Model.MESOM.Value, new { @class = "search-select-checkbox" })<span class="search-cycle">Shadows of Mirkwood</span>
+                @Html.CheckBox("MEC01", Model.MEC01.HasValue && Model.MEC01.Value, new { @class = "search-select-checkbox" })<span class="search-label-core">Core Set</span>
+            </div>
+            <div>
+                <input type="checkbox" id="MESOM" class="search-select-checkbox" /><span class="search-cycle">Shadows of Mirkwood</span>
                 <div class="search-cycle-section">
                     @Html.CheckBox("MEC02", Model.MEC02.HasValue && Model.MEC02.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Hunt for Gollum</span>
                     @Html.CheckBox("MEC03", Model.MEC03.HasValue && Model.MEC03.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Conflict at the Carrock</span>
@@ -230,8 +234,10 @@
             </div>
             <hr />
             <div>
-                @Html.CheckBox("MEC08", Model.MEC01.HasValue && Model.MEC01.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Khazad-dûm</span>
-                @Html.CheckBox("MEDWD", Model.MESOM.HasValue && Model.MESOM.Value, new { @class = "search-select-checkbox" })<span class="search-cycle">Dwarrowdelf</span>
+                @Html.CheckBox("MEC08", Model.MEC01.HasValue && Model.MEC01.Value, new { @class = "search-select-checkbox" })<span class="search-label-deluxe">Khazad-dûm</span>
+            </div>
+            <div>
+                <input type="checkbox" id="MEDWD" class="search-select-checkbox" /><span class="search-cycle">Dwarrowdelf</span>
                 <div class="search-cycle-section">
                     @Html.CheckBox("MEC09", Model.MEC09.HasValue && Model.MEC09.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Redhorn Gate</span>
                     @Html.CheckBox("MEC10", Model.MEC10.HasValue && Model.MEC10.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Road to Rivendell</span>
@@ -243,8 +249,10 @@
             </div>
             <hr />
             <div>
-                @Html.CheckBox("MEC17", Model.MEC17.HasValue && Model.MEC17.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Heirs of Númenor</span>
-                @Html.CheckBox("MEATS", Model.MEATS.HasValue && Model.MEATS.Value, new { @class = "search-select-checkbox" })<span class="search-cycle">Against the Shadow</span>
+                @Html.CheckBox("MEC17", Model.MEC17.HasValue && Model.MEC17.Value, new { @class = "search-select-checkbox" })<span class="search-label-deluxe">Heirs of Númenor</span>
+            </div>
+            <div>
+                <input type="checkbox" id="MEATS" class="search-select-checkbox" /><span class="search-cycle">Against the Shadow</span>
                 <div class="search-cycle-section">
                     @Html.CheckBox("MEC18", Model.MEC18.HasValue && Model.MEC18.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Steward's Fear</span>
                     @Html.CheckBox("MEC19", Model.MEC19.HasValue && Model.MEC19.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Drúadan Forest</span>
@@ -256,8 +264,10 @@
             </div>
             <hr />
             <div>
-                @Html.CheckBox("MEC25", Model.MEC25.HasValue && Model.MEC25.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Voice of Isengard</span>
-                @Html.CheckBox("MERMK", Model.MERMK.HasValue && Model.MERMK.Value, new { @class = "search-select-checkbox" })<span class="search-cycle">The Ring-maker</span>
+                @Html.CheckBox("MEC25", Model.MEC25.HasValue && Model.MEC25.Value, new { @class = "search-select-checkbox" })<span class="search-label-deluxe">The Voice of Isengard</span>
+            </div>
+            <div>
+                <input type="checkbox" id="MERMK" class="search-select-checkbox" /><span class="search-cycle">The Ring-maker</span>
                 <div class="search-cycle-section">
                     @Html.CheckBox("MEC26", Model.MEC26.HasValue && Model.MEC26.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Dunland Trap</span>
                     @Html.CheckBox("MEC27", Model.MEC27.HasValue && Model.MEC27.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Three Trials</span>
@@ -266,6 +276,47 @@
                     @Html.CheckBox("MEC30", Model.MEC30.HasValue && Model.MEC30.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Celebrimbor's Secret</span>
                     @Html.CheckBox("MEC31", Model.MEC31.HasValue && Model.MEC31.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Antlered Crown</span>
                 </div>
+            </div>
+            <hr />
+            <div>
+                @Html.CheckBox("MEC38", Model.MEC38.HasValue && Model.MEC38.Value, new { @class = "search-select-checkbox" })<span class="search-label-deluxe">The Lost Realm</span>
+            </div>
+            <div>
+                <input type="checkbox" id="MEAAW" class="search-select-checkbox" /><span class="search-cycle">Angmar Awakened</span>
+                <div class="search-cycle-section">
+                    @Html.CheckBox("MEC39", Model.MEC39.HasValue && Model.MEC39.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Wastes of Eriador</span>
+                    @Html.CheckBox("MEC40", Model.MEC40.HasValue && Model.MEC40.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Escape from Mount Gram</span>
+                    @Html.CheckBox("MEC41", Model.MEC41.HasValue && Model.MEC41.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Across the Ettenmoors</span>
+                    @Html.CheckBox("MEC42", Model.MEC42.HasValue && Model.MEC42.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Treachery of Rhudaur</span>
+                    @Html.CheckBox("MEC43", Model.MEC43.HasValue && Model.MEC43.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Battle of Carn</span>
+                    @Html.CheckBox("MEC44", Model.MEC44.HasValue && Model.MEC44.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Dread Realm</span>
+                </div>
+            </div>
+            <hr />
+            <div>
+                @Html.CheckBox("MEC47", Model.MEC47.HasValue && Model.MEC47.Value, new { @class = "search-select-checkbox" })<span class="search-label-deluxe">The Grey Havens</span>
+            </div>
+            <hr />
+            <div>
+                <input type="checkbox" id="MEHOB" class="search-select-checkbox" /><span class="search-cycle">The Hobbit</span>
+            </div>
+            <div>
+                @Html.CheckBox("MEC16", Model.MEC16.HasValue && Model.MEC16.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Over Hill and Under Hill</span>
+                @Html.CheckBox("MEC24", Model.MEC24.HasValue && Model.MEC24.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">On the Doorstep</span>
+            </div>
+            <hr />
+            <div>
+                <input type="checkbox" id="MELTR" class="search-select-checkbox" /><span class="search-cycle">The Lord of the Rings</span>
+            </div>
+            <div>
+                @Html.CheckBox("MEC32", Model.MEC32.HasValue && Model.MEC32.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Black Riders</span>
+                @Html.CheckBox("MEC34", Model.MEC34.HasValue && Model.MEC34.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Road Darkens</span>
+                @Html.CheckBox("MEC45", Model.MEC45.HasValue && Model.MEC45.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Treason of Saruman</span>
+                @Html.CheckBox("MEC46", Model.MEC46.HasValue && Model.MEC46.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Land of Shadows</span>
+            </div>
+            <hr />
+            <div>
+                @Html.CheckBox("FA01", Model.FA01.HasValue && Model.FA01.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">First Age</span>
             </div>
         </div>
 

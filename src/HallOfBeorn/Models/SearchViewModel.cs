@@ -571,7 +571,7 @@ namespace HallOfBeorn.Models
         public bool? MEC01 { get; set; }
 
         //Shadows of Mirkwood
-        public bool? MESOM { get; set; }
+        //public bool? MESOM { get; set; }
         
         public bool? MEC02 { get; set; }
         public bool? MEC03 { get; set; }
@@ -584,7 +584,7 @@ namespace HallOfBeorn.Models
         public bool? MEC08 { get; set; }
 
         //Dwarrowdelf
-        public bool? MEDWD { get; set; }
+        //public bool? MEDWD { get; set; }
 
         public bool? MEC09 { get; set; }
         public bool? MEC10 { get; set; }
@@ -597,7 +597,7 @@ namespace HallOfBeorn.Models
         public bool? MEC17 { get; set; }
 
         //Against the Shadow
-        public bool? MEATS { get; set; }
+        //public bool? MEATS { get; set; }
 
         public bool? MEC18 { get; set; }
         public bool? MEC19 { get; set; }
@@ -610,7 +610,7 @@ namespace HallOfBeorn.Models
         public bool? MEC25 { get; set; }
 
         //Ring-maker
-        public bool? MERMK { get; set; }
+        //public bool? MERMK { get; set; }
 
         public bool? MEC26 { get; set; }
         public bool? MEC27 { get; set; }
@@ -623,7 +623,7 @@ namespace HallOfBeorn.Models
         public bool? MEC38 { get; set; }
 
         //Angmar Awakened
-        public bool? MEAAW { get; set; }
+        //public bool? MEAAW { get; set; }
 
         public bool? MEC39 { get; set; }
         public bool? MEC40 { get; set; }
@@ -636,14 +636,21 @@ namespace HallOfBeorn.Models
         public bool? MEC47 { get; set; }
 
         //The Dream-chaser
-        public bool? MEDCH { get; set; }
+        //public bool? MEDCH { get; set; }
 
+        //The Hobbit
+        //public bool? MEHOB { get; set; }
         public bool? MEC16 { get; set; }
         public bool? MEC24 { get; set; }
+        
+        //The Lord of the Rings
+        //public bool? MELTR { get; set; }
         public bool? MEC32 { get; set; }
         public bool? MEC34 { get; set; }
         public bool? MEC45 { get; set; }
         public bool? MEC46 { get; set; }
+
+        //First Age
         public bool? FA01 { get; set; }
 
         public string ResultsLabel

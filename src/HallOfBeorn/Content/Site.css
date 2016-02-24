@@ -634,7 +634,10 @@ tr.pager td {
 }
 
 .search-cycle {
-    font-weight: bold;
+    display: inline-block;
+    width: 160px;
+    font-style: italic;
+    font-size: 13px;
 }
 
 .search-cycle-section {
@@ -697,10 +700,28 @@ tr.pager td {
     font-size: 12px;
 }
 
+.search-label-core {
+    display: inline-block;
+    margin-right: 2px;
+    width: 136px;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.search-label-deluxe {
+    display: inline-block;
+    margin-right: 2px;
+    width: 136px;
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+}
+
 .search-label-product {
     display: inline-block;
     margin-right: 2px;
-    width: 130px;
+    width: 136px;
     color: #3e5667;
     font-size: 12px;
 }
@@ -737,6 +758,14 @@ tr.pager td {
 .search-product-filters {
     margin-top: 6px;
     margin-bottom: 24px;
+}
+
+.product-filters-notes {
+    border-radius: 4px;
+    margin: 4px 2px 6px 2px;
+    padding: 2px 8px 2px 8px;
+    background-color: lightgray;
+    font-size: 12.5px;
 }
 
 .search-select {
