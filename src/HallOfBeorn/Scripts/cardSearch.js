@@ -76,7 +76,75 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+function checkForProductFilters() {
+    console.log('checkForProductFilters');
+    var codes = [];
+
+    codes.push('MEC01');
+    codes.push('MEC02');
+    codes.push('MEC03');
+    codes.push('MEC04');
+    codes.push('MEC05');
+    codes.push('MEC06');
+    codes.push('MEC07');
+    codes.push('MEC08');
+    codes.push('MEC09');
+    codes.push('MEC10');
+    codes.push('MEC11');
+    codes.push('MEC12');
+    codes.push('MEC13');
+    codes.push('MEC14');
+    codes.push('MEC17');
+    codes.push('MEC18');
+    codes.push('MEC19');
+    codes.push('MEC20');
+    codes.push('MEC21');
+    codes.push('MEC22');
+    codes.push('MEC23');
+    codes.push('MEC25');
+    codes.push('MEC26');
+    codes.push('MEC27');
+    codes.push('MEC28');
+    codes.push('MEC29');
+    codes.push('MEC30');
+    codes.push('MEC31');
+    codes.push('MEC38');
+    codes.push('MEC39');
+    codes.push('MEC40');
+    codes.push('MEC41');
+    codes.push('MEC42');
+    codes.push('MEC43');
+    codes.push('MEC44');
+    codes.push('MEC47');
+    codes.push('MEC16');
+    codes.push('MEC24');
+    codes.push('MEC32');
+    codes.push('MEC34');
+    codes.push('MEC45');
+    codes.push('MEC46');
+    codes.push('FA01');
+    
+    var code = '';
+
+    for (var i = 0; i < codes.length; i++) {
+        code = codes[i];
+
+        var filterChecked = getLocal(code);
+        
+        if (filterChecked == null) {
+            filterChecked = false;
+        }
+
+        //console.log(code + ' filter checked: ' + filterChecked);
+        $('#' + code).prop('checked', filterChecked);
+    }
+
+}
+
 $(document).ready(function () {
+
+    //checkForProductFilters();
+
     var cardSet = getParameterByName('CardSet');
     if (cardSet) {
         $("#CardSet").val(cardSet);
@@ -217,12 +285,23 @@ $(document).ready(function () {
                     break;
             }
 
+            console.log('id: ' + e.currentTarget.id + ' checked: ' + value);
+            setLocal(e.currentTarget.id, value);
+
+            //var url = removeUrlParameter(location.href, e.currentTarget.id);
+
             if (items.length > 0) {
                 for (var i = 0; i < items.length; i++) {
                     $('#' + items[i]).prop('checked', value);
-                    $('#' + items[i]).prop('disabled', value);
+
+                    setLocal(items[i], value);
+                    
+                    //Disabling child checkboxes hides them from search
+                    //$('#' + items[i]).prop('disabled', value);
                 }
             }
+
+            //location.reload();
         }
     });
 });

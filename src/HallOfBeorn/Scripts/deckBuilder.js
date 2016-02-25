@@ -113,24 +113,6 @@
         return deck;
     }
 
-    function getLocal(key) {
-        if (typeof (Storage) !== "undefined") {
-            return localStorage.getItem(key);
-        }
-    }
-
-    function setLocal(key, data) {
-        if (typeof (Storage) !== "undefined") {
-            localStorage.setItem(key, data);
-        }
-    }
-
-    function clearLocal(key) {
-        if (typeof (Storage) !== "undefined") {
-            localStorage.removeItem(key);
-        }
-    }
-
     function updateTotalCards(number) {
         console.log('updateTotalCards');
         var total = parseInt($('#totalCards').text());

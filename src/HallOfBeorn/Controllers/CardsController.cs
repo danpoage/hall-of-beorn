@@ -824,6 +824,71 @@ namespace HallOfBeorn.Controllers
                 model.MEC31 = null;
             }
 
+            if (model.MEC38.HasValue && !model.MEC38.Value)
+            {
+                model.MEC38 = null;
+            }
+            if (model.MEC39.HasValue && !model.MEC39.Value)
+            {
+                model.MEC39 = null;
+            }
+            if (model.MEC40.HasValue && !model.MEC40.Value)
+            {
+                model.MEC40 = null;
+            }
+            if (model.MEC41.HasValue && !model.MEC41.Value)
+            {
+                model.MEC41 = null;
+            }
+            if (model.MEC42.HasValue && !model.MEC42.Value)
+            {
+                model.MEC42 = null;
+            }
+            if (model.MEC43.HasValue && !model.MEC43.Value)
+            {
+                model.MEC43 = null;
+            }
+            if (model.MEC44.HasValue && !model.MEC44.Value)
+            {
+                model.MEC44 = null;
+            }
+
+            if (model.MEC47.HasValue && !model.MEC47.Value)
+            {
+                model.MEC47 = null;
+            }
+
+            if (model.MEC16.HasValue && !model.MEC16.Value)
+            {
+                model.MEC16 = null;
+            }
+            if (model.MEC24.HasValue && !model.MEC24.Value)
+            {
+                model.MEC24 = null;
+            }
+
+            if (model.MEC32.HasValue && !model.MEC32.Value)
+            {
+                model.MEC32 = null;
+            }
+            if (model.MEC34.HasValue && !model.MEC34.Value)
+            {
+                model.MEC34 = null;
+            }
+            if (model.MEC45.HasValue && !model.MEC45.Value)
+            {
+                model.MEC45 = null;
+            }
+            if (model.MEC46.HasValue && !model.MEC46.Value)
+            {
+                model.MEC46 = null;
+            }
+
+            if (model.FA01.HasValue && !model.FA01.Value)
+            {
+                model.FA01 = null;
+            }
+
             return RedirectToAction("Search", model);
         }
 

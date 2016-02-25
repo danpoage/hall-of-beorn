@@ -653,24 +653,21 @@ namespace HallOfBeorn.Models
         //First Age
         public bool? FA01 { get; set; }
 
-        public string ResultsLabel
-        {
-            get
+        public string GetResultsCount()
+        {            
+            if (Cards == null)
             {
-                if (Cards == null)
-                {
-                    return "No Results Found";
-                }
+                return "No Results Found";
+            }
 
-                switch (Cards.Count)
-                {
-                    case 0:
-                        return "No Results Found";
-                    case 1:
-                        return "1 Result Found";
-                    default:
-                        return string.Format("{0} Results Found", Cards.Count);
-                }
+            switch (Cards.Count)
+            {
+                case 0:
+                    return "No Results Found";
+                case 1:
+                    return "1 Result Found";
+                default:
+                    return string.Format("{0} Results Found", Cards.Count);
             }
         }
 
