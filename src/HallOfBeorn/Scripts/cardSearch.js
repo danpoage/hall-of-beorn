@@ -76,8 +76,7 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-function checkForProductFilters() {
-    console.log('checkForProductFilters');
+function getProductCodes() {
     var codes = [];
 
     codes.push('MEC01');
@@ -123,8 +122,15 @@ function checkForProductFilters() {
     codes.push('MEC45');
     codes.push('MEC46');
     codes.push('FA01');
+
+    return codes;
+}
+
+function checkForProductFilters() {
+    //console.log('checkForProductFilters');
     
-    var code = '';
+    var codes = getProductCodes(),
+        code = '';
 
     for (var i = 0; i < codes.length; i++) {
         code = codes[i];
@@ -138,6 +144,13 @@ function checkForProductFilters() {
         $('#' + code).prop('checked', filterChecked);
     }
 
+}
+
+function clearProductCodes() {
+    var codes = getProductCodes();
+    for (var i = 0; i < codes.length; i++) {
+        $('#' + codes[i]).prop('checked', false);
+    }
 }
 
 $(document).ready(function () {
@@ -230,6 +243,8 @@ $(document).ready(function () {
         $('#QuestCategory').val('Any');
 
         $('#Artist').val('Any');
+
+        clearProductCodes();
     });
 
     $('#Query').keypress(function (e) {
