@@ -712,7 +712,7 @@ tr.pager td {
 .search-label-deluxe {
     display: inline-block;
     margin-right: 2px;
-    width: 136px;
+    width: 170px;
     color: black;
     font-size: 13px;
     font-weight: bold;
@@ -721,7 +721,7 @@ tr.pager td {
 .search-label-product {
     display: inline-block;
     margin-right: 2px;
-    width: 136px;
+    width: 130px;
     color: #3e5667;
     font-size: 12px;
 }
