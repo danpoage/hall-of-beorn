@@ -657,6 +657,11 @@ namespace HallOfBeorn.Models
         {
             get
             {
+                if (Cards == null)
+                {
+                    return "No Results Found";
+                }
+
                 switch (Cards.Count)
                 {
                     case 0:
