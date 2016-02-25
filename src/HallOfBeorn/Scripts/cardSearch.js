@@ -135,7 +135,6 @@ function checkForProductFilters() {
             filterChecked = false;
         }
 
-        //console.log(code + ' filter checked: ' + filterChecked);
         $('#' + code).prop('checked', filterChecked);
     }
 
@@ -285,23 +284,17 @@ $(document).ready(function () {
                     break;
             }
 
-            console.log('id: ' + e.currentTarget.id + ' checked: ' + value);
-            setLocal(e.currentTarget.id, value);
-
-            //var url = removeUrlParameter(location.href, e.currentTarget.id);
+            //setLocal(e.currentTarget.id, value);
 
             if (items.length > 0) {
                 for (var i = 0; i < items.length; i++) {
                     $('#' + items[i]).prop('checked', value);
 
-                    setLocal(items[i], value);
-                    
+                    //setLocal(items[i], value);                    
                     //Disabling child checkboxes hides them from search
                     //$('#' + items[i]).prop('disabled', value);
                 }
             }
-
-            //location.reload();
         }
     });
 });
