@@ -151,13 +151,18 @@ namespace HallOfBeorn.Models.Simple
                 : viewModel.ImagePath;
         }
 
+        /*
+        private static string EscapeForJson(string s) {
+            string quoted = System.Web.Helpers.Json.Encode(s);
+            return quoted.Substring(1, quoted.Length - 2);
+        }
+        */
+
         private string GetBackImagePath(Card card)
         {
-            var viewModel = new CardViewModel(card);
-
-            return (!string.IsNullOrEmpty(viewModel.ImagePath2)) ?
-                viewModel.ImagePath2
-                : null;
+            //TODO: Back image path is returning invalid JSON.
+            //Figure out how to fix this
+            return "";
         }
 
         private void InitializeHero(Card card)
@@ -244,8 +249,14 @@ namespace HallOfBeorn.Models.Simple
 
         private void InitializeQuest(Card card)
         {
-            this.Back = new Side() { ImagePath = GetBackImagePath(card) };
+            if (this.Back == null)
+            {
+                this.Back = new Side();
+            }
+            
+            this.Back.ImagePath = GetBackImagePath(card);
 
+            /*
             this.Front.Stats[STAT_STAGE_NUMBER] = card.StageNumber + "A";
             this.Back.Stats[STAT_STAGE_NUMBER] = card.StageNumber + "B";
             this.Back.Stats[STAT_QUEST_POINTS] = card.QuestPoints.HasValue ? card.QuestPoints.Value.ToString() : "-";
@@ -254,6 +265,7 @@ namespace HallOfBeorn.Models.Simple
             {
                 this.EncounterInfo.IncludedEncounterSets.Add(encounterSet.Name);
             }
+            */
         }
 
         private void InitializeText(Card card)
@@ -262,13 +274,13 @@ namespace HallOfBeorn.Models.Simple
             {
                 foreach (var effect in card.Text.Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries))
                 {
-                    this.Front.Text.Add(effect.Replace('"', '`').Replace("~", string.Empty));
+                    this.Front.Text.Add(effect.Replace('"', '`').Replace("~", string.Empty).Replace("'", "`"));
                 }
             }
 
             if (!string.IsNullOrEmpty(card.FlavorText))
             {
-                this.Front.FlavorText = card.FlavorText.Replace('"', '`');
+                this.Front.FlavorText = card.FlavorText.Replace('"', '`').Replace("'", "`");
             }
 
             if (!string.IsNullOrEmpty(card.OppositeText))
@@ -280,7 +292,7 @@ namespace HallOfBeorn.Models.Simple
 
                 foreach (var effect in card.OppositeText.Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries))
                 {
-                    this.Back.Text.Add(effect.Replace('"', '`').Replace("~", string.Empty));
+                    this.Back.Text.Add(effect.Replace('"', '`').Replace("~", string.Empty).Replace("'", "`"));
                 }
             }
 
@@ -291,7 +303,7 @@ namespace HallOfBeorn.Models.Simple
                     this.Back = new Side();
                 }
 
-                this.Back.FlavorText = card.OppositeFlavorText.Replace('"', '`');
+                this.Back.FlavorText = card.OppositeFlavorText.Replace('"', '`').Replace("'", "`");
             }
         }
     }

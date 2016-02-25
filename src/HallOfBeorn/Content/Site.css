@@ -763,7 +763,7 @@ tr.pager td {
 .product-filters-notes {
     border-radius: 4px;
     margin: 4px 2px 6px 2px;
-    padding: 2px 8px 2px 8px;
+    padding: 2px 8px 2px 16px;
     background-color: lightgray;
     font-size: 12.5px;
 }

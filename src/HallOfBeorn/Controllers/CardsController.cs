@@ -795,6 +795,35 @@ namespace HallOfBeorn.Controllers
                 model.MEC23 = null;
             }
 
+            if (model.MEC25.HasValue && !model.MEC25.Value)
+            {
+                model.MEC25 = null;
+            }
+            if (model.MEC26.HasValue && !model.MEC26.Value)
+            {
+                model.MEC26 = null;
+            }
+            if (model.MEC27.HasValue && !model.MEC27.Value)
+            {
+                model.MEC27 = null;
+            }
+            if (model.MEC28.HasValue && !model.MEC28.Value)
+            {
+                model.MEC28 = null;
+            }
+            if (model.MEC29.HasValue && !model.MEC29.Value)
+            {
+                model.MEC29 = null;
+            }
+            if (model.MEC30.HasValue && !model.MEC30.Value)
+            {
+                model.MEC30 = null;
+            }
+            if (model.MEC31.HasValue && !model.MEC31.Value)
+            {
+                model.MEC31 = null;
+            }
+
             return RedirectToAction("Search", model);
         }
 

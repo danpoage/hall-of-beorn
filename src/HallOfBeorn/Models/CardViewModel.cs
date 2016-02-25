@@ -627,7 +627,7 @@ namespace HallOfBeorn.Models
             }
         }
 
-        string getQuestCardImagePath(bool isFirst)
+        public string getQuestCardImagePath(bool isFirst)
         {
             var format = ImageType.Jpg;
             if (_card.ImageType != ImageType.None)
@@ -636,7 +636,7 @@ namespace HallOfBeorn.Models
                 format = ImageType.Png;
 
             var ext = string.Format(".{0}", format.ToString().ToLower());
-            var set = !string.IsNullOrEmpty(_card.CardSet.NormalizedName) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
+            var set = (Card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
             var title = Title.ToUrlSafeString();
             var subtitle = _card.SlugIncludesOppositeTitle ? "-" + _card.OppositeTitle.ToUrlSafeString() : string.Empty;
             var number = _card.StageNumber.ToString();
@@ -651,7 +651,7 @@ namespace HallOfBeorn.Models
             return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}{2}-{3}{4}{5}", set, title, subtitle, number, suffix, ext);
         }
 
-        string getSetupCardImagePath(bool isFirst)
+        public string getSetupCardImagePath(bool isFirst)
         {
             var format = ImageType.Jpg;
             if (_card.ImageType != ImageType.None)
@@ -660,7 +660,7 @@ namespace HallOfBeorn.Models
                 format = ImageType.Png;
 
             var ext = string.Format(".{0}", format.ToString().ToLower());
-            var set = !string.IsNullOrEmpty(_card.CardSet.NormalizedName) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
+            var set = (_card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
             var title = _card.Title.ToUrlSafeString();
             var suffix = isFirst ? "A" : "B";
 
