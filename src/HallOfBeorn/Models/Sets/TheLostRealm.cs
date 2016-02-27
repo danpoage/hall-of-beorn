@@ -351,7 +351,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithFlavor("While scouting ahead, Iârion is ambushed by several Orcs. The Ranger is knoced unconscious and dragged away by the Orcs. You must rescue him!")
                 .WithVictoryPoints(10)
                 .WithInfo(24, 1, Artist.JB_Casacop));
-            Cards.Add(Card.Enemy("Cornered Orc", "88156181-C4C7-4B09-8F88-72AFA59C809B", "Intruders in Chetwood", 20, 2, 2, 1, 2)
+            Cards.Add(Card.Enemy("Cornered Orc", "88156181-C4C7-4B09-8F88-72AFA59C809B", "The Weather Hills", 20, 2, 2, 1, 2)
                 .WithTraits("Orc.")
                 .WithText("Forced: After Corned Orc engages a player, it makes an immediate attack.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the defending character is damaged).")
