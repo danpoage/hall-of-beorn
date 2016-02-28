@@ -266,7 +266,7 @@ namespace HallOfBeorn.Models.Sets
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Spirit,
                 ResourceCost = 0,
-                Traits = new List<string>() { "Item." },
+                Traits = new List<string>() { "Item.", "Pipe." },
                 Text = "Attach to a Hobbit character. Limit 1 per character.\r\nResponse: After your threat is reduced by an event card effect, exhaust Hobbit Pipe to draw a card.",
                 FlavorText = "But even the Dúnedain of Gondor allow us this credit: Hobbits first put it into pipes. Not even the Wizards first thought of that before we did. -The Fellowship of the Ring",
                 Quantity = 3,
