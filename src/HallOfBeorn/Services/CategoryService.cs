@@ -156,9 +156,38 @@ namespace HallOfBeorn.Services
             return filter;
         }
 
+        private bool textContains(Card card, string[] values)
+        {
+            foreach (var text in values)
+            {
+                if (!string.IsNullOrEmpty(card.Text) && card.Text.Contains(text))
+                {
+                    return true;
+                }
+
+                if (!string.IsNullOrEmpty(card.OppositeText) && card.OppositeText.Contains(text))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         private Func<Card, QuestCategory> CreateQuestCategoryFilter(Predicate<Card> filter, QuestCategory category)
         {
-            return new Func<Card, QuestCategory>(x => { return filter(x) ? category : QuestCategory.None; });
+            return CreateQuestCategoryFilter(filter, category, new string[0]);
+        }
+
+        private Func<Card, QuestCategory> CreateQuestCategoryFilter(Predicate<Card> filter, QuestCategory category, params string[] negations)
+        {
+            if (negations.Length == 0)
+            {
+                return new Func<Card, QuestCategory>(x => { return filter(x) ? category : QuestCategory.None; });
+            }
+            else
+            {
+                return new Func<Card, QuestCategory>(x => { return filter(x) && !textContains(x, negations) ? category : QuestCategory.None; });
+            }
         }
 
         private void LoadEncounterCategories()
@@ -251,7 +280,7 @@ namespace HallOfBeorn.Services
                 CreateQuestCategoryFilter(x => { return (x.CardType == CardType.Quest && x.QuestPoints == 254); }, QuestCategory.Variable_Length),
                 CreateQuestCategoryFilter(x => { return (x.CardType == CardType.Quest && (x.QuestPoints == 255 || x.QuestPoints == 0 || x.TextMatches("cannot advance"))); }, QuestCategory.Alternate_Progression),
                 CreateQuestCategoryFilter(x => { return (x.CardType == CardType.Quest && x.TextMatches("(lose|lost) the game")); }, QuestCategory.Alternate_Defeat),
-                CreateQuestCategoryFilter(x => { return (x.CardType == CardType.Quest && x.TextMatches("(win this|won the) game")); }, QuestCategory.Alternate_Victory),
+                CreateQuestCategoryFilter(x => { return (x.CardType == CardType.Quest && x.TextMatches("(win this|won the) game")); }, QuestCategory.Alternate_Victory, "crossed the Anduin"),
                 CreateQuestCategoryFilter(x => { return (x.CardType == CardType.Quest && x.TextMatches("random stage")); }, QuestCategory.Wandering),
                 CreateQuestCategoryFilter(x => { return (x.CardType == CardType.Quest && x.StageNumber == 1 && x.TextMatches("skip")); }, QuestCategory.Free),
                 CreateQuestCategoryFilter(x => { return (x.CardType == CardType.Quest && x.QuestPoints >= 1 && x.QuestPoints <= 5); }, QuestCategory.Short),

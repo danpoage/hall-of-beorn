@@ -191,7 +191,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 CardType = CardType.Location,
                 Traits = new List<string>() { "East Bank." },
                 Text = "If the players have not crossed the Anduin, Ruins of Osgiliath gets +3 Threat.",
-                HtmlTemplate = "<p>If the players have not crossed the Anduin, {self} gets +3 {threat}.</p><p class='flavor-text'>...but Osgiliath which lay between was deserted and in its ruins shadows walked.<br>&ndash;The Fellowship of the Ring</p>",
+                //HtmlTemplate = "<p>If the players have not crossed the Anduin, {self} gets +3 {threat}.</p><p class='flavor-text'>...but Osgiliath which lay between was deserted and in its ruins shadows walked.<br>&ndash;The Fellowship of the Ring</p>",
                 Threat = 1,
                 QuestPoints = 2,
                 EncounterSet = "The Massing at Osgiliath",
@@ -277,10 +277,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 CardType = CardType.Quest,
                 ScenarioNumber = 1,
                 QuestPoints = 5,
-                Text = 
-@"Players cannot travel to West Bank locations.
-
-Each player cannot play or put into play more than 1 card from his hand each round.",
+                OppositeText = "Players cannot travel to West Bank locations.\r\nEach player cannot play or put into play more than 1 card from his hand each round.",
                 FlavorText = "The outriders and scouts of the army have cut you off from the bridge. You desperately seek the likeliest place to cross the Anduin.",
                 EncounterSet = "The Massing at Osgiliath",
                 Quantity = 1,
@@ -295,12 +292,7 @@ Each player cannot play or put into play more than 1 card from his hand each rou
                 CardType = CardType.Quest,
                 ScenarioNumber = 1,
                 QuestPoints = 1,
-                Text = 
-@"Progress tokens from card effects cannot be placed on this quest card or the active location.
-
-Players cannot travel to East Bank or West Bank locations.
-
-In order to commit characters to the quest, a player must first choose a hero or 1 Ranger of Ithilien card he controls. Discard each chosen card from play.",
+                OppositeText = "Progress tokens from card effects cannot be placed on this quest card or the active location.\r\nPlayers cannot travel to East Bank or West Bank locations.\r\nIn order to commit characters to the quest, a player must first choose a hero or 1 Ranger of Ithilien card he controls. Discard each chosen card from play.",
                 FlavorText = "The cold waters of the Anduin river rush before you, but the current is weaker here and you have to cross. The outriders and van of the Dark Lord's army are closing fast behind, and their archers will make the attempted crossing even more dangerous. The bravest members of your band turn back to distract the oncoming horde, so that the rest of you might escape.",
                 EncounterSet = "The Massing at Osgiliath",
                 Quantity = 1,
@@ -315,12 +307,7 @@ In order to commit characters to the quest, a player must first choose a hero or
                 CardType = CardType.Quest,
                 ScenarioNumber = 1,
                 QuestPoints = 15,
-                Text = 
-@"When Revealed: Add The Witch-king to the staging area.
-
-Players have now crossed the Anduin. Players cannot travel to East Bank locations.
-
-If the players defeat this stage, they have won the game.",
+                OppositeText = "When Revealed: Add The Witch-king to the staging area.\r\nPlayers have now crossed the Anduin. Players cannot travel to East Bank locations.If the players defeat this stage, they have won the game.",
                 FlavorText = "You made it across the Anduin and are leaving Osgiliath when a fell shriek splits the air. You begin the race across the Pelennor Fields to the safety of Minas Tirith, but a new enemy follows behind.",
                 EncounterSet = "The Massing at Osgiliath",
                 Quantity = 1,
