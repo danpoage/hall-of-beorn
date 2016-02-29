@@ -441,19 +441,16 @@ namespace HallOfBeorn.Models.Sets
                 .WithOppositeFlavor("\"Master, dear master,\" he said, but Frodo did not speak. Ass hehad run forward, eager, rejoicing to be free, Shelob with hideous speed had come behind and with one swift stroke had stung him in the neck. He lay now pale, and heard no voice, and did not move.\r\n-The Two Towers")
                 .WithInfo(73, 1, Artist.Chris_Rahn));
             Cards.Add(Card.Enemy("Gollum", "", "Gollum", 30, 2, 2, 2, 5)
+                .WithUnique()
                 .WithTraits("Gollum.")
                 .WithText("Immune to non-Fellowship player card effects. ~Gollum engages the first player.\r\nForced: After ~Gollum engages the first player during the refresh phase, he makes an immediate attack.\r\nForced: When ~Gollum is defeated, flip him to Sméagol exhausted.")
                 .WithInfo(75, 1, Artist.Lukasz_Jaskolski));
             Cards.Add(Card.ObjectiveAlly("Sméagol", "", "Gollum", 2, 2, 2, 5)
+                .WithUnique()
                 .WithNormalizedTitle("Smeagol")
                 .WithTraits("Gollum.")
                 .WithText("Immune to player card effects. The first player gains control of Sméagol.\r\nForced: After the players quest unsuccessfully, flip Sméagol to ~Gollum.\r\nIf Sméagol is destroyed, the players lose the game.")
                 .WithInfo(76, 1, Artist.Lukasz_Jaskolski));
-
-            /*
-            
-            */
-
         }
     }
 }
