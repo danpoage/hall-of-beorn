@@ -297,7 +297,7 @@ namespace HallOfBeorn.Services
                 CreateCategoryFilter("(enemy|enemies|engaged with you).*(cannot|do not) attack", Category.Combat_Control),
                 CreateCategoryFilter(@"heal[\s].*damage", Category.Healing),
                 CreateCategoryFilter(@"discard.*Condition[\s]attachment", Category.Condition_Control),
-                CreateCategoryFilter(@"place[\s].*progress|switch the active location|location enters play|location gets -.*Threat|While attached to a location", Category.Location_Control),
+                CreateCategoryFilter(@"place[\s].*progress|switch the active location|location enters play|location gets -.*Threat|While attached to a location|make it the active location|may be placed on the attached location|switch that location", Category.Location_Control),
                 CreateCategoryFilter("ready.*(character|hero|ally|allies|him|her|them|Prince|Boromir)", Category.Readying, "While Dain Ironfoot is ready"),
                 CreateCategoryFilter(@"(return.*discard[\s]pile.*hand|shuffle.*discard[\s]pile.*back)", Category.Recursion, "encounter discard pile"),
                 CreateCategoryFilter(@"deal[\s]([\d]|X)*[\s]damage|Deal damage to the attacking enemy|Excess damage dealt by this attack is assigned|assigned as damage to the chosen enemy|deal an additional.*damage", Category.Direct_Damage, "1 damage to Erkenbrand", "deal 1 damage to him", "deal 1 damage to Treebeard", "deal 1 damage to Eärendil"),
@@ -313,7 +313,9 @@ namespace HallOfBeorn.Services
                 CreateCategoryFilter((card) => { return card.Keywords.Any(x => x.StartsWith("Secrecy ")) || card.Text.ToLowerSafe().Contains("if your threat is 20 or less") || card.Text.ToLowerSafe().Contains("gains secrecy"); }, Category.Secrecy),
                 CreateCategoryFilter("enemy.*engagement cost.*than your threat", Category.Surprise),
                 CreateCategoryFilter((card) => { return card.Text.ToLowerSafe().Contains("victory display") && card.VictoryPoints == 0; }, Category.Victory_Display),
-                CreateCategoryFilter("(discard (a|1|2|all) (card|cards) (from|in) your hand|discarded from your hand|discard (1 of those|any number of) cards)", Category.Discard_From_Hand)
+                CreateCategoryFilter("(discard (a|1|2|all|X) (card|cards) (from|in) your hand|discarded from your hand|discard (1 of those|any number of) cards)", Category.Discard_From_Hand),
+                CreateCategoryFilter("discard pile", Category.Discard_Pile, "encounter deck and discard pile"),
+                CreateCategoryFilter("(commit .* to|remove it from) the quest", Category.Quest_Control)
             };
 
             foreach (var card in cards.Where(x => IsCategorizable(x)))

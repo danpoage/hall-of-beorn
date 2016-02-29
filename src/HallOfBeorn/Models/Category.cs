@@ -38,6 +38,8 @@ namespace HallOfBeorn.Models
         Secrecy,
         Surprise,
         Victory_Display,
-        Discard_From_Hand
+        Discard_From_Hand,
+        Discard_Pile,
+        Quest_Control
     }
 }
