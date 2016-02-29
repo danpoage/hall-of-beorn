@@ -239,7 +239,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 ImageType = Models.ImageType.Png,
                 Title = "Ranger of Ithilien",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9015",
-                CardType = CardType.Objective,
+                CardType = CardType.Objective_Ally,
                 Attack = 2,
                 Defense = 1,
                 Willpower = 2,
