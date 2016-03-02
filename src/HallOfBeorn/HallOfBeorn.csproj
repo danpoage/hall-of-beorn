@@ -286,8 +286,10 @@
     <Compile Include="Models\Language.cs" />
     <Compile Include="Models\Link.cs" />
     <Compile Include="Models\LinkType.cs" />
+    <Compile Include="Models\ProductGroups\DoomMasteredProductGroup.cs" />
     <Compile Include="Models\ProductGroups\DreamChaserProductGroup.cs" />
     <Compile Include="Models\Products\AcrossTheEttenmoorsProduct.cs" />
+    <Compile Include="Models\Products\AmongTheOutlawsProduct.cs" />
     <Compile Include="Models\Products\EscapeFromMountGramProduct.cs" />
     <Compile Include="Models\Products\MurderAtThePrancingPonyProduct.cs" />
     <Compile Include="Models\Products\TheBattleOfCarnDumProduct.cs" />
@@ -299,6 +301,7 @@
     <Compile Include="Models\Products\TheThreeTrialsNightmareProduct.cs" />
     <Compile Include="Models\Products\TheVoiceOfIsengardNightmareProduct.cs" />
     <Compile Include="Models\Products\TheTreacheryOfRhudaurProduct.cs" />
+    <Compile Include="Models\Products\TrialUponTheMarchesProduct.cs" />
     <Compile Include="Models\Products\TroubleInTharbadNightmareProduct.cs" />
     <Compile Include="Models\Scenarios\AcrossTheEttenmoors.cs" />
     <Compile Include="Models\Scenarios\AJourneyToRhosgobel.cs" />
@@ -402,7 +405,6 @@
     <Compile Include="Models\Products\ConflictAtTheCarrockNightmareProduct.cs" />
     <Compile Include="Models\Products\ConflictAtTheCarrockProduct.cs" />
     <Compile Include="Models\Products\CoreSetProduct.cs" />
-    <Compile Include="Models\ProductGroups\CustomProductGroup.cs" />
     <Compile Include="Models\Products\EncounterAtAmonDinNightmareProduct.cs" />
     <Compile Include="Models\Products\EncounterAtAmonDinProduct.cs" />
     <Compile Include="Models\Products\EscapeFromDolGuldurNightmareProduct.cs" />
@@ -487,6 +489,7 @@
     <Compile Include="Models\Sets\AcrossTheEttenmoors.cs" />
     <Compile Include="Models\Sets\AJourneyToRhosgobelNightmare.cs" />
     <Compile Include="Models\Sets\AKnifeInTheDarkNightmare.cs" />
+    <Compile Include="Models\Sets\AmongTheOutlaws.cs" />
     <Compile Include="Models\Sets\AShadowOfThePastNightmare.cs" />
     <Compile Include="Models\Sets\AssaultOnOsgiliath.cs" />
     <Compile Include="Models\Sets\AJourneyToRhosgobel.cs" />
@@ -573,6 +576,7 @@
     <Compile Include="Models\Sets\TheWatcherInTheWaterNightmare.cs" />
     <Compile Include="Models\Sets\ToCatchAnOrcNightmare.cs" />
     <Compile Include="Models\Sets\TheTreacheryOfRhudaur.cs" />
+    <Compile Include="Models\Sets\TrialUponTheMarches.cs" />
     <Compile Include="Models\Sets\TroubleInTharbad.cs" />
     <Compile Include="Models\Sets\TheVoiceOfIsengard.cs" />
     <Compile Include="Models\Sets\TroubleInTharbadNightmare.cs" />

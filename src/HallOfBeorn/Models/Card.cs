@@ -1216,7 +1216,7 @@ namespace HallOfBeorn.Models
             return this;
         }
 
-        public Card WithInfo(byte number, byte quantity, Artist artist)
+        public Card WithInfo(uint number, byte quantity, Artist artist)
         {
             this.Number = number;
             this.Quantity = quantity;

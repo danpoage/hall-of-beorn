@@ -35,7 +35,7 @@ namespace HallOfBeorn.Models
         public static ProductGroup TheLordOfTheRingsSaga = new TheLordOfTheRingsSagaProductGroup();
         public static ProductGroup GenConDeck = new GenConDeckProductGroup();
         public static ProductGroup NightmareDeck = new NightmareDeckProductGroup();
-        public static ProductGroup Custom = new CustomProductGroup();
+        public static ProductGroup DoomMastered = new DoomMasteredProductGroup();
         #endregion
     }
 }

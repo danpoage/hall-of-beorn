@@ -208,6 +208,8 @@ namespace HallOfBeorn.Models
             Add(FlightToTheFordNightmare);
 
             Add(FirstAge);
+            Add(TrialUponTheMarches);
+            Add(AmongTheOutlaws);
         }
 
         public static List<CardSet> All()
@@ -322,6 +324,8 @@ namespace HallOfBeorn.Models
         public static CardSet MurderAtThePrancingPony = new Sets.MurderAtThePrancingPony().WithShortSlug("0");
 
         public static CardSet FirstAge = new Sets.FirstAge();
+        public static CardSet TrialUponTheMarches = new Sets.TrialUponTheMarches();
+        public static CardSet AmongTheOutlaws = new Sets.AmongTheOutlaws();
         #endregion
     }
 }

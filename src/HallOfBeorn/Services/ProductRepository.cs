@@ -22,7 +22,7 @@ namespace HallOfBeorn.Services
             productGroups.Add(ProductGroup.TheLordOfTheRingsSaga);
             productGroups.Add(ProductGroup.GenConDeck);
             productGroups.Add(ProductGroup.NightmareDeck);
-            productGroups.Add(ProductGroup.Custom);
+            productGroups.Add(ProductGroup.DoomMastered);
         }
 
         private readonly List<ProductGroup> productGroups = new List<ProductGroup>();

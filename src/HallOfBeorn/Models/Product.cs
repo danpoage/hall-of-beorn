@@ -174,6 +174,8 @@ namespace HallOfBeorn.Models
 
         //Custom Expansions
         public static Product FirstAge = new FirstAgeProduct();
+        public static Product TrialUponTheMarches = new TrialUponTheMarchesProduct();
+        public static Product AmongTheOutlaws = new AmongTheOutlawsProduct();
 
         #endregion
     }
