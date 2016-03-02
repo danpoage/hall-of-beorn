@@ -122,6 +122,8 @@ function getProductCodes() {
     codes.push('MEC45');
     codes.push('MEC46');
     codes.push('FA01');
+    codes.push('FA02');
+    codes.push('FA03');
 
     return codes;
 }
@@ -294,6 +296,9 @@ $(document).ready(function () {
                     break;
                 case 'MELTR':
                     items = [ 'MEC32', 'MEC34', 'MEC45', 'MEC46' ];
+                    break;
+                case 'FADMS':
+                    items = [ 'FA02', 'FA03' ];
                     break;
                 default:
                     break;

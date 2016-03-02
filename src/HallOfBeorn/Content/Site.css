@@ -641,7 +641,7 @@ tr.pager td {
 }
 
 .search-cycle-section {
-    display: inline-block;
+    display: block;
 }
 
 .search-items {

@@ -652,6 +652,8 @@ namespace HallOfBeorn.Models
 
         //First Age
         public bool? FA01 { get; set; }
+        public bool? FA02 { get; set; }
+        public bool? FA03 { get; set; }
 
         public string GetResultsCount()
         {            

@@ -317,7 +317,14 @@
             </div>
             <hr />
             <div>
-                @Html.CheckBox("FA01", Model.FA01.HasValue && Model.FA01.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">First Age</span>
+                @Html.CheckBox("FA01", Model.FA01.HasValue && Model.FA01.Value, new { @class = "search-select-checkbox" })<span class="search-label-deluxe">First Age</span>
+            </div>
+            <div>
+                <input type="checkbox" id="FADMS" class="search-select-checkbox" /><span class="search-cycle">Doom Mastered</span>
+                <div class="search-cycle-section">
+                    @Html.CheckBox("FA02", Model.FA02.HasValue && Model.FA02.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Trial Upon the Marches</span>
+                    @Html.CheckBox("FA03", Model.FA03.HasValue && Model.FA03.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Among the Outlaws</span>
+                </div>
             </div>
         </div>
 

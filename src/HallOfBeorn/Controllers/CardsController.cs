@@ -888,6 +888,14 @@ namespace HallOfBeorn.Controllers
             {
                 model.FA01 = null;
             }
+            if (model.FA02.HasValue && !model.FA02.Value)
+            {
+                model.FA02 = null;
+            }
+            if (model.FA03.HasValue && !model.FA03.Value)
+            {
+                model.FA03 = null;
+            }
 
             return RedirectToAction("Search", model);
         }

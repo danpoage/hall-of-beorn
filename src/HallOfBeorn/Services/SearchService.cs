@@ -316,6 +316,14 @@ namespace HallOfBeorn.Services
             {
                 codes.Add("FA01");
             }
+            if (model.FA02.HasValue && model.FA02.Value)
+            {
+                codes.Add("FA02");
+            }
+            if (model.FA03.HasValue && model.FA03.Value)
+            {
+                codes.Add("FA03");
+            }
 
             if (codes.Count > 0)
             {
