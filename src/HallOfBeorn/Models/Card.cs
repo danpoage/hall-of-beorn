@@ -972,6 +972,19 @@ namespace HallOfBeorn.Models
             };
         }
 
+        public static Card Scenario(string title, int scenarioNumber, string encounterSet, string oppositeTitle)
+        {
+            return new Card()
+            {
+                CardType = CardType.Scenario,
+                Title = title,
+                HasSecondImage = true,
+                Id = string.Empty,
+                EncounterSet = encounterSet,
+                OppositeTitle = oppositeTitle
+            };
+        }
+
         public static Card Objective(string title, string id, string encounterSet)
         {
             return new Card()

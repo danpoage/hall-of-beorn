@@ -7,6 +7,8 @@ namespace HallOfBeorn.Models.Sets
 {
     public class AmongTheOutlaws: CardSet
     {
+        private const string setName = "Among the Outlaws";
+
         protected override void Initialize()
         {
             Name = "Among the Outlaws";
@@ -14,6 +16,21 @@ namespace HallOfBeorn.Models.Sets
             Number = 9003;
             SetType = Models.SetType.CUSTOM;
             Cycle = "Doom Mastered";
+
+            Cards.Add(Card.Scenario("Among the Outlaws", 2, setName, "Doom Mastered")
+                .WithText("Dilemma Deck\r\nThe 9 objective cards with the Dilemma trait are set aside into a separate deck at the start of the game and shuffled. When players quest unsuccessfully, the top card of the dilemma deck is revealed. Each dilemma card gives the player two options. Carrying out the first option helps the Gaurwaith while carrying out the second option, which adds the card to the victory display, helps the woodmen.\r\nCorruption and Objective Allies\r\nObjective allies are immune to corruption and corruption cannot be placed on objective allies for any reason.")
+                .WithOppositeText("Ransom\r\nWhen a character with the Ransom keyword enters play, the player who controls it may discard a number of resources from the resource pools of heroes they control equal to the Ransom value. If they choose not to satisfy this requirement, then that player card loses the \"ally\" card type and gains the \"enemy\" card type, immediately engaging the player who played it. Its threat is equal to its willpower and its engagement cost is 0. If this enemy is defeated, remove all damage from it and return it its owner's control as an ally.\r\nRelentless\r\nAn enemy with the Relentless keyword cannot have its attack canceled or be prevented from attacking by player card effects. It can still be targeted by other effects which do no specifically prevent attacks.")
+                .WithInfo(0, 1, Artist.Arman_Akopian));
+
+            Cards.Add(Card.Enemy("Androg", "", setName, 0, 1, 3, 2, 5)
+                .WithSlugIncludesType()
+                .WithUnique()
+                .WithTraits("Gaurwaith.")
+                .WithKeywords("Relentless.")
+                .WithText("Androg gets +1 Attack for each hero you control with at least 1 Corruption.")
+                .WithFlavor("\"The hardest of heart was one named Androg...\"\r\n-The Children of Húrin")
+                .WithVictoryPoints(1)
+                .WithInfo(232, 1, Artist.Denman_Rooke));
 
             Cards.Add(Card.Hero("Bór the Faithful", "", Sphere.Spirit, 6, 2, 1, 1, 3)
                 .WithNormalizedTitle("Bor the Faithful")

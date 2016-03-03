@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models
         Nightmare_Setup = 2,
         Campaign = 3,
         GenCon_Setup = 4,
+        Scenario = 5,
         Encounter = 11,
         Enemy = 12,
         Ship_Enemy = 13,

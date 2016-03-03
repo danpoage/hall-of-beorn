@@ -244,6 +244,8 @@ namespace HallOfBeorn.Models
             Add(HuntingOfTheWolf);
             Add(TheIsleOfWerewolves);
             Add(TheSeatOfMorgoth);
+            Add(TrialUponTheMarches);
+            Add(AmongTheOutlaws);
         }
 
         private static void Add(EncounterSet set)
@@ -471,5 +473,7 @@ namespace HallOfBeorn.Models
         public static EncounterSet HuntingOfTheWolf = new EncounterSet { Name = "Hunting of the Wolf", Set = "First Age" };
         public static EncounterSet TheIsleOfWerewolves = new EncounterSet { Name = "The Isle of Werewolves", Set = "First Age" };
         public static EncounterSet TheSeatOfMorgoth = new EncounterSet { Name = "The Seat of Morgoth", Set = "First Age" };
+        public static EncounterSet TrialUponTheMarches = new EncounterSet { Name = "Trial Upon the Marches", Set = "Trial Upon the Marches" };
+        public static EncounterSet AmongTheOutlaws = new EncounterSet { Name = "Among the Outlaws", Set = "Among the Outlaws" };
     }
 }

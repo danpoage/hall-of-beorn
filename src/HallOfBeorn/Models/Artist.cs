@@ -542,6 +542,7 @@ namespace HallOfBeorn.Models
         public static Artist Anke_Eissmann = new Artist { Name = "Anke Eissmann", URL = "http://www.anke.edoras-art.de" };
         public static Artist Ao_Yi_Chuan = new Artist { Name = "Ao Yi Chuan", URL = "http://mcfrog.deviantart.com" };
         public static Artist Aogachou = new Artist { Name = "Aogachou", URL = "http://aogachou.deviantart.com" };
+        public static Artist Arman_Akopian = new Artist { Name = "Arman Akopian", URL = "http://i-guyjin-i.deviantart.com/gallery" };
         public static Artist Atomhawk = new Artist { Name = "Atomhawk", URL = "http://www.atomhawk.com" };
         public static Artist Ben_Daugherty = new Artist { Name = "Ben Daugherty", URL = "https://www.google.com/search?q=Ben+Daugherty+Art" };
         public static Artist Blaz_Porenta = new Artist { Name = "Blaz Porenta", URL = "http://ninja2assn.deviantart.com" };
@@ -565,6 +566,7 @@ namespace HallOfBeorn.Models
         public static Artist Dawn_Carlos = new Artist { Name = "Dawn Carlos", URL = "http://dawncarlosart.com" };
         public static Artist Dechambo = new Artist { Name = "Dechambo", URL = "http://www.dechambo.com/Dechambo_Artwork/www.dechambo.com.html" };
         public static Artist Deelane = new Artist { Name = "Deelane", URL = "http://deelane.deviantart.com" };
+        public static Artist Denman_Rooke = new Artist { Name = "Denman Rooke", URL = "http://denmanrooke.deviantart.com" };
         public static Artist Dylan_Palmer = new Artist { Name = "Dylan Palmer", URL = "http://deelock.deviantart.com" };
         public static Artist Ebe_Kastein = new Artist { Name = "Ebe Kastein", URL = "http://ebe-kastein.deviantart.com" };
         public static Artist Echo539 = new Artist { Name = "echo539", URL = "http://echo539.deviantart.com/gallery" };

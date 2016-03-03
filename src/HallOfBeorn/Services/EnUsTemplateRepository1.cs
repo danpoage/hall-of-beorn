@@ -2677,6 +2677,8 @@ namespace HallOfBeorn.Services
             AddHtml("Foolish-Ruckus-FA", "<p class='main-text'><b>When Revealed:</b> Raise the{Threat} of the active enemy by 3 until the end of the phase. If there is no active enemy, raise the{Threat} of all enemies in the staging area by 1 until the end of the phase.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> If this attack destroys a character, raise the defending player's threat by 2.</p>");
             AddHtml("Heroic-Diversion-FA", "<p class='main-text'>Doomed 1.</p><p><b>When Revealed:</b> Each player must either discard 1 character or raise his threat by 5.</p>");
             */
+
+            AddHtml("Among-the-Outlaws-AtO", "<p class='main-text'><b>Dilemma Deck</b></p><p>The 9 objective cards with the Dilemma trait are set aside into a separate deck at the start of the game and shuffled. When players quest unsuccessfully, the top card of the dilemma deck is revealed. Each dilemma card gives the player two options. Carrying out the first option helps the Gaurwaith while carrying out the second option, which adds the card to the victory display, helps the woodmen.</p><p><b> Corruption and Objective Allies</b></p><p>Objective allies are immune to corruption and corruption cannot be placed on objective allies for any reason.</p>");
         }
     }
 }

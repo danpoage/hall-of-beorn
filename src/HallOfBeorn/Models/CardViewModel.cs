@@ -683,6 +683,7 @@ namespace HallOfBeorn.Models
                     case Models.CardType.Campaign:
                     case Models.CardType.Nightmare_Setup:
                     case Models.CardType.GenCon_Setup:
+                    case Models.CardType.Scenario:
                         return getSetupCardImagePath(true);
                     default:
                         return null;
@@ -707,6 +708,7 @@ namespace HallOfBeorn.Models
                     case Models.CardType.Campaign:
                     case Models.CardType.Nightmare_Setup:
                     case Models.CardType.GenCon_Setup:
+                    case Models.CardType.Scenario:
                         return getSetupCardImagePath(false);
                     default:
                         return null;
