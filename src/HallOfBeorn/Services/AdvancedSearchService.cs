@@ -168,6 +168,9 @@ namespace HallOfBeorn.Services
                 case "custom":
                     predicate = (score) => { return score.Card.CardSet.SetType == SetType.CUSTOM; };
                     break;
+                case "saga":
+                    predicate = (score) => { return score.Card.CardSet.SetType == SetType.Saga_Expansion && (score.Card.CardType == CardType.Treasure || score.Card.CardSubtype == CardSubtype.Boon || score.Card.CardSubtype == CardSubtype.Burden || score.Card.Sphere == Sphere.Baggins || score.Card.Sphere == Sphere.Fellowship); };
+                    break;
                 default:
                     break;
             }
@@ -302,6 +305,9 @@ namespace HallOfBeorn.Services
                         results = FilterByByte(field, value, results, negate);
                         break;
                     case "unique":
+                        results = FilterByBool(field, results, negate);
+                        break;
+                    case "saga":
                         results = FilterByBool(field, results, negate);
                         break;
                     /*
