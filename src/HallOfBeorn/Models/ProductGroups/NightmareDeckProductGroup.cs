@@ -46,6 +46,8 @@ namespace HallOfBeorn.Models.ProductGroups
             AddProduct(Product.TheThreeTrialsNightmare);
             AddProduct(Product.TroubleInTharbadNightmare);
             AddProduct(Product.TheNinInEilphNightmare);
+            AddProduct(Product.CelebrimborsSecretNightmare);
+            AddProduct(Product.TheAntleredCrownNightmare);
 
             AddProduct(Product.TheBlackRidersNightmare);
         }

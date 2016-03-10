@@ -310,6 +310,8 @@ namespace HallOfBeorn.Models
         public static CardSet TheThreeTrialsNightmare = new Sets.TheThreeTrialsNightmare();
         public static CardSet TroubleInTharbadNightmare = new Sets.TroubleInTharbadNightmare();
         public static CardSet TheNinInEilphNightmare = new Sets.TheNinInEilphNightmare();
+        public static CardSet CelebrimborsSecretNightmare = new Sets.CelebrimborsSecretNightmare();
+        public static CardSet TheAntleredCrownNightmare = new Sets.TheAntleredCrownNightmare();
 
         public static CardSet WeMustAwayEreBreakOfDayNightmare = new Sets.WeMustAwayEreBreakOfDayNightmare();
         public static CardSet OverTheMistyMountainsGrimNightmare = new Sets.OverTheMistyMountainsGrimNightmare();
