@@ -960,6 +960,18 @@ namespace HallOfBeorn.Models
             };
         }
 
+        public static Card NightmareSetup(string title, string encounterSet)
+        {
+            return new Card()
+            {
+                CardType = CardType.Nightmare_Setup,
+                Title = title,
+                HasSecondImage = true,
+                Id = string.Empty,
+                EncounterSet = encounterSet
+            };
+        }
+
         public static Card GenConSetup(string title, string encounterSet)
         {
             return new Card()

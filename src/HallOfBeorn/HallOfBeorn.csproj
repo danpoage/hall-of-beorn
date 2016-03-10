@@ -297,6 +297,7 @@
     <Compile Include="Models\Products\TheDunlandTrapNightmareProduct.cs" />
     <Compile Include="Models\Products\TheGreyHavensProduct.cs" />
     <Compile Include="Models\Products\TheLandOfShadowProduct.cs" />
+    <Compile Include="Models\Products\TheNinInEilphNightmareProduct.cs" />
     <Compile Include="Models\Products\TheRuinsOfBelegostProduct.cs" />
     <Compile Include="Models\Products\TheThreeTrialsNightmareProduct.cs" />
     <Compile Include="Models\Products\TheVoiceOfIsengardNightmareProduct.cs" />
@@ -558,6 +559,7 @@
     <Compile Include="Models\Sets\TheLongDarkNightmare.cs" />
     <Compile Include="Models\Sets\TheMassingAtOsgiliath.cs" />
     <Compile Include="Models\Sets\TheMorgulVale.cs" />
+    <Compile Include="Models\Sets\TheNinInEilphNightmare.cs" />
     <Compile Include="Models\Sets\TheOldForest.cs" />
     <Compile Include="Models\Sets\TheRedhornGate.cs" />
     <Compile Include="Models\Sets\TheRedhornGateNightmare.cs" />

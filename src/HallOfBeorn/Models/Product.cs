@@ -166,6 +166,7 @@ namespace HallOfBeorn.Models
         public static Product TheDunlandTrapNightmare = new TheDunlandTrapNightmareProduct();
         public static Product TheThreeTrialsNightmare = new TheThreeTrialsNightmareProduct();
         public static Product TroubleInTharbadNightmare = new TroubleInTharbadNightmareProduct();
+        public static Product TheNinInEilphNightmare = new TheNinInEilphNightmareProduct();
 
         public static Product TheHobbitOverHillAndUnderHillNightmare = new TheHobbitOverHillAndUnderHillNightmareProduct();
         public static Product TheHobbitOnTheDoorstepNightmare = new TheHobbitOnTheDoorstepNightmareProduct();

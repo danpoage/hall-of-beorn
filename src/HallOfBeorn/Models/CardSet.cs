@@ -130,7 +130,7 @@ namespace HallOfBeorn.Models
             Add(TheDunlandTrap);
             Add(TheThreeTrials);
             Add(TroubleInTharbad);
-            Add(NinInEilph);
+            Add(TheNinInEilph);
             Add(CelebrimborsSecret);
             Add(TheAntleredCrown);
 
@@ -194,6 +194,7 @@ namespace HallOfBeorn.Models
             Add(TheDunlandTrapNightmare);
             Add(TheThreeTrialsNightmare);
             Add(TroubleInTharbadNightmare);
+            Add(TheNinInEilphNightmare);
 
             Add(WeMustAwayEreBreakOfDayNightmare);
             Add(OverTheMistyMountainsGrimNightmare);
@@ -246,7 +247,7 @@ namespace HallOfBeorn.Models
         public static CardSet TheDunlandTrap = new Sets.TheDunlandTrap().WithShortSlug("w");
         public static CardSet TheThreeTrials = new Sets.TheThreeTrials().WithShortSlug("x");
         public static CardSet TroubleInTharbad = new Sets.TroubleInTharbad().WithShortSlug("y"); 
-        public static CardSet NinInEilph = new Sets.TheNinInEilph().WithShortSlug("z");
+        public static CardSet TheNinInEilph = new Sets.TheNinInEilph().WithShortSlug("z");
         public static CardSet CelebrimborsSecret = new Sets.CelebrimborsSecret().WithShortSlug("A");
         public static CardSet TheAntleredCrown = new Sets.TheAntleredCrown().WithShortSlug("B");
 
@@ -308,6 +309,7 @@ namespace HallOfBeorn.Models
         public static CardSet TheDunlandTrapNightmare = new Sets.TheDunlandTrapNightmare();
         public static CardSet TheThreeTrialsNightmare = new Sets.TheThreeTrialsNightmare();
         public static CardSet TroubleInTharbadNightmare = new Sets.TroubleInTharbadNightmare();
+        public static CardSet TheNinInEilphNightmare = new Sets.TheNinInEilphNightmare();
 
         public static CardSet WeMustAwayEreBreakOfDayNightmare = new Sets.WeMustAwayEreBreakOfDayNightmare();
         public static CardSet OverTheMistyMountainsGrimNightmare = new Sets.OverTheMistyMountainsGrimNightmare();
