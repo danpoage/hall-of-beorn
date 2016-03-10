@@ -300,6 +300,7 @@
     <Compile Include="Models\Products\TheGreyHavensProduct.cs" />
     <Compile Include="Models\Products\TheLandOfShadowProduct.cs" />
     <Compile Include="Models\Products\TheNinInEilphNightmareProduct.cs" />
+    <Compile Include="Models\Products\TheRoadDarkensNightmareProduct.cs" />
     <Compile Include="Models\Products\TheRuinsOfBelegostProduct.cs" />
     <Compile Include="Models\Products\TheThreeTrialsNightmareProduct.cs" />
     <Compile Include="Models\Products\TheVoiceOfIsengardNightmareProduct.cs" />

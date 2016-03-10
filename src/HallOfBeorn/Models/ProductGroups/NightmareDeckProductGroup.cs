@@ -50,6 +50,7 @@ namespace HallOfBeorn.Models.ProductGroups
             AddProduct(Product.TheAntleredCrownNightmare);
 
             AddProduct(Product.TheBlackRidersNightmare);
+            AddProduct(Product.TheRoadDarkensNightmare);
         }
     }
 }

@@ -174,6 +174,7 @@ namespace HallOfBeorn.Models
         public static Product TheHobbitOnTheDoorstepNightmare = new TheHobbitOnTheDoorstepNightmareProduct();
 
         public static Product TheBlackRidersNightmare = new TheBlackRidersNightmareProduct();
+        public static Product TheRoadDarkensNightmare = new TheRoadDarkensNightmareProduct();
 
         //Custom Expansions
         public static Product FirstAge = new FirstAgeProduct();
