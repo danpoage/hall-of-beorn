@@ -99,10 +99,10 @@ namespace HallOfBeorn.Controllers
             switch (name)
             {
                 case "Cards":
-                    result.Data = cardRepository.Cards().Select(x => new SimpleCard(x)).ToList();
+                    result.Data = cardRepository.Cards().Where(x => x.CardSet.SetType != SetType.CUSTOM).Select(x => new SimpleCard(x)).ToList();
                     break;
                 case "PlayerCards":
-                    result.Data = cardRepository.Cards().Where(x => IsPlayerCard(x)).Select(y => new SimpleCard(y)).ToList();
+                    result.Data = cardRepository.Cards().Where(x => x.CardSet.SetType != SetType.CUSTOM && IsPlayerCard(x)).Select(y => new SimpleCard(y)).ToList();
                     break;
                 case "Scenarios":
                     var scenarios = new List<SimpleScenario>();
