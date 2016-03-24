@@ -706,6 +706,7 @@
     <Content Include="Images\octgn-logo.png" />
     <Content Include="Images\Patreon.png" />
     <Content Include="Images\plus.png" />
+    <Content Include="Images\RingsDB.jpg" />
     <Content Include="Images\sailing-success.png" />
     <Content Include="Images\ShadowDivider.png" />
     <Content Include="Images\Spirit.png" />
