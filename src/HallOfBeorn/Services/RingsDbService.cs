@@ -19,93 +19,51 @@ namespace HallOfBeorn.Services
 
         private readonly Dictionary<string, Card> cardsBySlug = new Dictionary<string,Card>();
 
-        private uint getRingsDbSet(string setAbbreviation)
+        private uint getRingsDbSet(CardSet set)
         {
-            switch (setAbbreviation)
+            switch (set.Cycle)
             {
-                //Core and Shadows of Mirkwood
+                case "Shadows of Mirkwood":
+                    return 2;
+                case "Dwarrowdelf":
+                    return 4;
+                case "Against the Shadow":
+                    return 6;
+                case "Ring-maker":
+                    return 8;
+                case "Angmar Awakened":
+                    return 10;
+                case "Dream-chaser":
+                    return 12;
+                default:
+                    break;
+            }
+
+            switch (set.Abbreviation)
+            {
+                //Core Set
                 case "Core":
                     return 1;
-                case "THfG":
-                    return 2;
-                case "CatC":
-                    return 3;
-                case "AJtR":
-                    return 4;
-                case "THoEM":
-                    return 5;
-                case "TDM":
-                    return 6;
-                case "RTM":
-                    return 7;
-
-                //KD and Dwarrowdelf
+                    
+                //Khazad-dum
                 case "KD":
-                    return 8;
-                case "TRG":
-                    return 9;
-                case "RtR":
-                    return 10;
-                case "TWitW":
-                    return 11;
-                case "TLD":
-                    return 12;
-                case "FoS":
-                    return 13;
-                case "SaF":
-                    return 14;
-
-                //HoN and Against the Shadow
+                    return 3;
+                    
+                //Heirs of Numenor
                 case "HoN":
-                    return 15;
-                case "TSF":
-                    return 16;
-                case "TDF":
-                    return 17;
-                case "EaAD":
-                    return 18;
-                case "AoO":
-                    return 19;
-                case "TBoG":
-                    return 20;
-                case "TMV":
-                    return 21;
-
-                //VoI and Ring-maker
+                    return 5;
+                    
+                //The Voice of Isengard
                 case "VoI":
-                    return 22;
-                case "TDT":
-                    return 23;
-                case "TTT":
-                    return 24;
-                case "TiT":
-                    return 25;
-                case "NiE":
-                    return 26;
-                case "CS":
-                    return 27;
-                case "TAC":
-                    return 28;
-
-                //TLR and Angmar Awakened
+                    return 7;
+                    
+                //The Lost Realm
                 case "TLR":
-                    return 29;
-                case "TWoE":
-                    return 30;
-                case "EfMG":
-                    return 31;
-                case "AtE":
-                    return 32;
-                case "TToR":
-                    return 33;
-                case "TBoCD":
-                    return 34;
-                case "TDR":
-                    return 35;
-
-                //TGH
+                    return 9;
+                    
+                //The Grey Havens
                 case "THG":
-                    return 36;
+                    return 11;
 
                 //The Hobbit
                 case "THOHaUH":
@@ -127,21 +85,21 @@ namespace HallOfBeorn.Services
             }
         }
 
-        public string GetRingsDBSlug(string hobSlug)
+        public string GetCardId(string slug)
         {
-            if (!cardsBySlug.ContainsKey(hobSlug))
+            if (!cardsBySlug.ContainsKey(slug))
             {
                 return null;
             }
 
-            var card = cardsBySlug[hobSlug];
+            var card = cardsBySlug[slug];
 
             if (card.CardSet == null)
             {
                 return null;
             }
 
-            var setNumber = getRingsDbSet(card.CardSet.Abbreviation);
+            var setNumber = getRingsDbSet(card.CardSet);
 
             if (setNumber >= 100)
             {

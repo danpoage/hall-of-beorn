@@ -1287,3 +1287,13 @@ tr.pager td {
     font-size: 1em;
     font-family: Arial;
 }
+
+.footer-section {
+    display:inline-block;
+    width:285px;
+    vertical-align:top;
+}
+
+.footer-title {
+    margin-top:12px;
+}

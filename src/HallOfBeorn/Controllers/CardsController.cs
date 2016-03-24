@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 
 using HallOfBeorn.Models;
+using HallOfBeorn.Models.RingsDb;
 using HallOfBeorn.Models.Simple;
 using HallOfBeorn.Services;
 
@@ -1125,6 +1126,40 @@ namespace HallOfBeorn.Controllers
             }
 
             return items;
+        }
+
+        public JsonResult TopDecks(string slug)
+        {
+            var service = new RingsDbService(this.cardRepository);
+
+            var cardId = service.GetCardId(slug);
+
+            var decks = new List<RingsDbDeck>();
+
+            if (!string.IsNullOrEmpty(cardId) && uint.Parse(cardId) > 0)
+            {
+                using (var client = new System.Net.Http.HttpClient())
+                {
+                    var url = "http://ringsdb.com/api/public/decklists/top_by_card/" + cardId + ".json";
+                    var response = client.GetAsync(url).Result;
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var responseContent = response.Content;
+                        string responseString = responseContent.ReadAsStringAsync().Result;
+
+                        decks = Newtonsoft.Json.JsonConvert.DeserializeObject<List<RingsDbDeck>>(responseString);
+
+                        //Normalize the URL in each deck
+                        foreach (var deck in decks)
+                        {
+                            deck.url = "http://ringsdb.com" + deck.url;
+                        }
+                    }
+                }
+            }
+
+            return Json(decks, JsonRequestBehavior.AllowGet);
         }
 
         public JsonResult DeckItems(string guidList)

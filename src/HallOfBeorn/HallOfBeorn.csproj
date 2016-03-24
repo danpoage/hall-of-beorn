@@ -307,6 +307,7 @@
     <Compile Include="Models\Products\TheTreacheryOfRhudaurProduct.cs" />
     <Compile Include="Models\Products\TrialUponTheMarchesProduct.cs" />
     <Compile Include="Models\Products\TroubleInTharbadNightmareProduct.cs" />
+    <Compile Include="Models\RingsDb\RingsDbDeck.cs" />
     <Compile Include="Models\Scenarios\AcrossTheEttenmoors.cs" />
     <Compile Include="Models\Scenarios\AJourneyToRhosgobel.cs" />
     <Compile Include="Models\Scenarios\AKnifeInTheDark.cs" />
@@ -714,6 +715,7 @@
     <Content Include="Images\unique.png" />
     <Content Include="Images\willpower.gif" />
     <Content Include="Scripts\autocomplete12.js" />
+    <Content Include="Scripts\cardDetails.js" />
     <Content Include="Scripts\cardSearch.js" />
     <Content Include="Scripts\deckBuilder.js" />
     <Content Include="Scripts\highcharts.js" />
