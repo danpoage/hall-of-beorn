@@ -62,7 +62,7 @@ namespace HallOfBeorn.Services
                     return 9;
                     
                 //The Grey Havens
-                case "THG":
+                case "TGH":
                     return 11;
 
                 //The Hobbit
