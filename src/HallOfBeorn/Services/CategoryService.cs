@@ -328,7 +328,7 @@ namespace HallOfBeorn.Services
                 CreateCategoryFilter(@"discard.*Condition[\s]attachment", Category.Condition_Control),
                 CreateCategoryFilter(@"place[\s].*progress|switch the active location|location enters play|location gets -.*Threat|While attached to a location|make it the active location|may be placed on the attached location|switch that location", Category.Location_Control),
                 CreateCategoryFilter("ready.*(character|hero|ally|allies|him|her|them|Prince|Boromir)", Category.Readying, "While Dain Ironfoot is ready"),
-                CreateCategoryFilter(@"(return.*discard[\s]pile.*hand|shuffle.*discard[\s]pile.*back)", Category.Recursion, "encounter discard pile"),
+                CreateCategoryFilter(@"(return.*discard[\s]pile.*hand|shuffle.*discard[\s]pile.*back|discard pile.*into play|discard pile.*shuffle|shuffle.*card.*discard pile.*into.*deck)", Category.Recursion, "encounter discard pile", "Shuffle the encounter deck"),
                 CreateCategoryFilter(@"deal[\s]([\d]|X)*[\s]damage|Deal damage to the attacking enemy|Excess damage dealt by this attack is assigned|assigned as damage to the chosen enemy|deal an additional.*damage", Category.Direct_Damage, "1 damage to Erkenbrand", "deal 1 damage to him", "deal 1 damage to Treebeard", "deal 1 damage to Eärendil"),
                 CreateCategoryFilter(@"(look at|revealed|enters play|top of the).*encounter[\s]deck", Category.Encounter_Control),
                 CreateCategoryFilter(@"cancel.*shadow|shadow[\s]cards|look at 1 shadow card|Discard (a|each) shadow card", Category.Shadow_Control), 
