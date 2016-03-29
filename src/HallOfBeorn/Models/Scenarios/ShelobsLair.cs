@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.Scenarios
             QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/lotr-the-land-of-shadow-saga-expansion-quest-shelobs-lair.html";
 
             AddEncounterSet(EncounterSet.Gollum);
-            AddEncounterSet(EncounterSet.Nazgul);
+            AddEncounterSet(EncounterSet.MorgulNazgul);
             AddEncounterSet(EncounterSet.ShelobsLair);
             AddEncounterSet(EncounterSet.TheGreatSpider);
 

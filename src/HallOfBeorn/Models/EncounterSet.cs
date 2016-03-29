@@ -170,7 +170,7 @@ namespace HallOfBeorn.Models
             //The Lord of the Rings: The Land of Shadow
             Add(ThePassageOfTheMarshes);
             Add(Gollum);
-            Add(Nazgul);
+            Add(MorgulNazgul);
             Add(JourneyToTheCrossRoads);
             Add(MenOfHarad);
             Add(ShelobsLair);
@@ -395,7 +395,7 @@ namespace HallOfBeorn.Models
         //The Lord of the Rings: The Land of Shadow
         public static EncounterSet ThePassageOfTheMarshes = new EncounterSet { Name = "The Passage of the Marshes", Set = "The Land of Shadow" };
         public static EncounterSet Gollum = new EncounterSet { Name = "Gollum", Set = "The Land of Shadow" };
-        public static EncounterSet Nazgul = new EncounterSet { Name = "Nazgûl", Set = "The Land of Shadow" };
+        public static EncounterSet MorgulNazgul = new EncounterSet { Name = "Morgul Nazgûl", Set = "The Land of Shadow" };
         public static EncounterSet JourneyToTheCrossRoads = new EncounterSet { Name = "Journey to the Cross-roads", Set = "The Land of Shadow" };
         public static EncounterSet MenOfHarad = new EncounterSet { Name = "Men of Harad", Set = "The Land of Shadow" };
         public static EncounterSet ShelobsLair = new EncounterSet { Name = "Shelob's Lair", Set = "The Land of Shadow" };

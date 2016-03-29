@@ -73,6 +73,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithFlavor("They were clad in warm raiment and heavy cloaks...\r\n-The Return of the King")
                 .WithInfo(148, 3, Artist.Jorge_Barrero));
             Cards.Add(Card.Attachment("Sword-thain", "", Sphere.Neutral, 4)
+                .WithUnique()
                 .WithTraits("Title.")
                 .WithText("Attach to a unique ally belonging to any sphere of influence.\r\nAttached character loses the ally card type and gains the hero card type.")
                 .WithFlavor("\"But why, lord, did you receive me as sword-thain, if not to stay by your side?\"\r\n-Merry, The Return of the King")
