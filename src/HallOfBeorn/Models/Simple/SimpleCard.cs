@@ -65,6 +65,8 @@ namespace HallOfBeorn.Models.Simple
                 this.Front.Keywords.Add("Victory " + card.VictoryPoints.ToString() + ".");
             }
 
+            InitializeCategories(card);
+
             switch (card.CardType)
             {
                 case Models.CardType.Hero:
@@ -110,6 +112,7 @@ namespace HallOfBeorn.Models.Simple
 
         public SimpleCard()
         {
+            this.Categories = new List<string>();
         }
 
         public string Title { get; set; }
@@ -126,6 +129,8 @@ namespace HallOfBeorn.Models.Simple
         public uint Quantity { get; set; }
         public string Artist { get; set; }
         public bool HasErrata { get; set; }
+
+        public List<string> Categories { get; private set; }
 
         #region Constants
         public const string STAT_SPHERE = "Sphere";
@@ -163,6 +168,24 @@ namespace HallOfBeorn.Models.Simple
             //TODO: Back image path is returning invalid JSON.
             //Figure out how to fix this
             return "";
+        }
+
+        private void InitializeCategories(Card card)
+        {
+            foreach (var category in card.Categories)
+            {
+                this.Categories.Add(category.ToString().Replace("_", " "));
+            }
+
+            foreach (var category in card.QuestCategories)
+            {
+                this.Categories.Add(category.ToString().Replace("_", " "));
+            }
+
+            foreach (var category in card.EncounterCategories)
+            {
+                this.Categories.Add(category.ToString().Replace("_", " "));
+            }
         }
 
         private void InitializeHero(Card card)
