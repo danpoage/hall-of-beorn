@@ -38,7 +38,7 @@ namespace HallOfBeorn.Models.Sets
             });
             Cards.Add(new Card()
             {
-                Title = "Follow Me",
+                Title = "Follow Me!",
                 Id = "89EE0935-04C9-4FE7-9B6F-4C4D7893ECCE",
                 CardType = CardType.Event,
                 Sphere = Sphere.Leadership,

@@ -627,7 +627,8 @@ and the City shall be blessed.
                 FlavorText = "A few brave men were strung before them to make a feint of resistance, and many there fell before the rest drew back and fled to either side. -The Hobbit",
                 Quantity = 2,
                 Number = 34,
-                Artist = Artist.Lius_Lasahido
+                Artist = Artist.Lius_Lasahido,
+                HasErrata = true
             });
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,
@@ -854,7 +855,8 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 HtmlTemplate = "<p><b>Action:</b> Choose a player. Shuffle that player's discard pile back into his deck.</p><p class='flavor-text'>&quot;If Gondor has such men still in these days of fading, great must have been its glory in the days of its rising.&quot;<br>&ndash;Legolas, The Return of the King</p>",
                 Quantity = 2,
                 Number = 49,
-                Artist = Artist.Erfian_Asafat
+                Artist = Artist.Erfian_Asafat,
+                HasErrata = true
             });
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,
