@@ -537,18 +537,28 @@ namespace HallOfBeorn.Services
                 }, 50, "Has Quest '" + model.Quest + "'"));
             }
 
-            if (model.SetType.HasValue && model.SetType.Value != SetType.None)
+            var officialSetFilter = false;
+            if (model.SetType.HasValue)
             {
-                //var limit = 0;
-                //&& model.SetType.Value == SetType.OFFICIAL
-                if (model.SetType.Value == SetType.Non_Nightmare)
+                if (model.SetType.Value != SetType.None)
                 {
-                    filters.Add(new SearchFilter((s, c) => { return c.CardSet.SetType != SetType.Nightmare_Expansion; }, 50f, 0f, "Is Not From A Nightmare Set"));
+                    if (model.SetType.Value == SetType.Non_Nightmare)
+                    {
+                        filters.Add(new SearchFilter((s, c) => { return c.CardSet.SetType != SetType.Nightmare_Expansion; }, 50f, 0f, "Is Not From A Nightmare Set"));
+                    }
+                    else if (model.SetType.Value != SetType.ALL_SETS)
+                    {
+                        filters.Add(new SearchFilter((s, c) => { return (s.SetType == SetType.OFFICIAL && c.CardSet.SetType != SetType.CUSTOM) || (s.SetType.Value == c.CardSet.SetType); }, 50f, 0f, "Has Set Type '" + model.SetType + "'"));
+                    }
                 }
                 else
                 {
-                    filters.Add(new SearchFilter((s, c) => { return (s.SetType == SetType.OFFICIAL && c.CardSet.SetType != SetType.CUSTOM) || (s.SetType.Value == c.CardSet.SetType); }, 50f, 0f, "Has Set Type '" + model.SetType + "'"));
+                    officialSetFilter = true;
                 }
+            }
+            else
+            {
+                officialSetFilter = true;
             }
 
             var productFilter = getProductFilter(model);
@@ -571,6 +581,11 @@ namespace HallOfBeorn.Services
 
             if (filters.Count > 0)
             {
+                if (officialSetFilter)
+                {
+                    filters.Add(new SearchFilter((s, c) => { return (c.CardSet.SetType != SetType.CUSTOM); }, 50f, 0f, "From an Official release"));
+                }
+
                 foreach (var card in cards)
                 {
                     foreach (var filter in filters)

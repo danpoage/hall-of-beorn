@@ -8,6 +8,7 @@ namespace HallOfBeorn.Models
     public enum SetType
     {
         None = 0,
+        ALL_SETS,
         OFFICIAL,
         Core,
         Adventure_Pack,
