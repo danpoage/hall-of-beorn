@@ -1297,3 +1297,14 @@ tr.pager td {
 .footer-title {
     margin-top:12px;
 }
+
+.ringsdb-icon {
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+    margin-bottom: -2px;
+}
+
+.ringsdb-card-link {
+    margin: 4px;
+}

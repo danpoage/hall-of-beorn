@@ -909,5 +909,11 @@ namespace HallOfBeorn.Models
             get;
             set;
         }
+
+        public string RingsDbUrl
+        {
+            get;
+            set;
+        }
     }
 }

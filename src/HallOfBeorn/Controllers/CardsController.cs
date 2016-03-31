@@ -23,6 +23,7 @@ namespace HallOfBeorn.Controllers
             scenarioService = (ScenarioService)System.Web.HttpContext.Current.Application[Extensions.ScenarioServiceKey];
             statService = (StatService)System.Web.HttpContext.Current.Application[Extensions.StatServiceKey];
             octgnService = (OctgnService)System.Web.HttpContext.Current.Application[Extensions.OctgnServiceKey];
+            ringsDbService = (RingsDbService)System.Web.HttpContext.Current.Application[Extensions.RingsDbKey];
             templateService = (TemplateService)System.Web.HttpContext.Current.Application[Extensions.TemplateServiceKey];
         }
 
@@ -33,6 +34,7 @@ namespace HallOfBeorn.Controllers
         private readonly ScenarioService scenarioService;
         private readonly StatService statService;
         private readonly OctgnService octgnService;
+        private readonly RingsDbService ringsDbService;
         private readonly TemplateService templateService;
 
         private void InitializeSearch(SearchViewModel model)
@@ -956,6 +958,15 @@ namespace HallOfBeorn.Controllers
                 if (!string.IsNullOrEmpty(octgnGuid))
                 {
                     model.OctgnGuid = octgnGuid;
+                }
+
+                if (isPlayerCard(card))
+                {
+                    var cardId = ringsDbService.GetCardId(model.Slug);
+                    if (!string.IsNullOrEmpty(cardId))
+                    {
+                        model.RingsDbUrl = string.Format("http://ringsdb.com/card/{0}", cardId);
+                    }
                 }
             }   
 

@@ -55,6 +55,9 @@ namespace HallOfBeorn
             var octgnService = new OctgnService(productRepository, cardRepository);
             System.Web.HttpContext.Current.Application[Extensions.OctgnServiceKey] = octgnService;
 
+            var ringsDbService = new RingsDbService(cardRepository);
+            System.Web.HttpContext.Current.Application[Extensions.RingsDbKey] = ringsDbService;
+
             var templateService = new TemplateService();
             System.Web.HttpContext.Current.Application[Extensions.TemplateServiceKey] = templateService;
 
