@@ -164,6 +164,7 @@ namespace HallOfBeorn.Models.Sets
             {
                 Title = "Defender of the West",
                 Id = "FA189ACD-3B81-4128-850D-F69DF9FDF6A4",
+                IsUnique = true,
                 CardType = CardType.Attachment,
                 Sphere = Models.Sphere.Neutral,
                 ResourceCost = 1,
