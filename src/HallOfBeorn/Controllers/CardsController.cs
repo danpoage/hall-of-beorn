@@ -967,6 +967,12 @@ namespace HallOfBeorn.Controllers
                     {
                         model.RingsDbUrl = string.Format("http://ringsdb.com/card/{0}", cardId);
                     }
+
+                    var popularity = ringsDbService.GetPopularity(model.Slug);
+                    if (popularity > 0)
+                    {
+                        model.Popularity = popularity;
+                    }
                 }
             }   
 

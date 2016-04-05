@@ -689,6 +689,7 @@
     <Content Include="Images\encounter-card-back.jpg" />
     <Content Include="Images\error.jpg" />
     <Content Include="Images\Fellowship.png" />
+    <Content Include="Images\gold-ring.png" />
     <Content Include="Images\HallOfBeorn-AppleTouchIcon.png" />
     <Content Include="Images\Happy_Grizzly_Bear.jpg" />
     <Content Include="Images\heading-cloudy.png" />

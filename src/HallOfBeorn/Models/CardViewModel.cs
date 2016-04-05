@@ -915,5 +915,33 @@ namespace HallOfBeorn.Models
             get;
             set;
         }
+
+        public byte Popularity
+        {
+            get;
+            set;
+        }
+
+        public string PopularityHtml
+        {
+            get
+            {
+                if (Popularity > 0)
+                {
+                    const string icon = "<img src='/Images/gold-ring.png' height='16' width='16'/>";
+
+                    var html = new System.Text.StringBuilder();
+
+                    for (var i = 0; i < Popularity; i++)
+                    {
+                        html.Append(icon);
+                    }
+
+                    return html.ToString();
+                }
+
+                return string.Empty;
+            }
+        }
     }
 }

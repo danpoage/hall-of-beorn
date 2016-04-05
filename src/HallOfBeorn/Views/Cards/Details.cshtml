@@ -555,6 +555,10 @@
         {
             <div class="ringsdb-card-link"><a title="@Model.Title on RingsDB" href="@Model.RingsDbUrl" target="_blank"><img src="/Images/RingsDB.jpg" class="ringsdb-icon" height="16" width="16" /><span>View this card on RingsDB</span></a></div>
         }
+        @if (!string.IsNullOrEmpty(@Model.PopularityHtml))
+        {
+            <div class="ringsdb-card-link"><span>Popularity (@Model.Popularity/5):&nbsp;&nbsp;</span>@Html.Raw(@Model.PopularityHtml)</div>
+        }
         </div>
         <div>
             <div class="footer-section">
