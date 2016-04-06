@@ -455,7 +455,7 @@ namespace HallOfBeorn.Controllers
                             hasEasy = true;
                         }
 
-                        if (card.Card.Traits.Any(x => x == "Surge.") || card.Card.Text.Contains(" surge"))
+                        if (card.Card.Keywords.Any(x => x == "Surge.") || card.Card.Text.Contains(" surge"))
                         {
                             surgeCounts[0] += card.EasyQuantity;
                             surgeCounts[1] += card.NormalQuantity;
