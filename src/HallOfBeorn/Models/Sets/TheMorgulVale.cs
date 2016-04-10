@@ -154,6 +154,7 @@ namespace HallOfBeorn.Models.Sets
                 Id = "63c6bd3a-5566-412d-9199-3929d2fc3cf2",
                 Sphere = Models.Sphere.Lore,
                 CardType = Models.CardType.Attachment,
+                IsUnique = true,
                 ResourceCost = 4,
                 Title = "Scroll of Isildur",
                 Traits = new List<string> { "Record." },
