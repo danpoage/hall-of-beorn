@@ -220,7 +220,7 @@ When the players defeat this stage, end the game. Compare the number of tokens o
                 Title = "Lord Alcaron",
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a93070",
                 IsUnique = true,
-                CardType = CardType.Objective,
+                CardType = CardType.Objective_Ally,
                 Willpower = 1,
                 Attack = 2,
                 Defense = 2,
