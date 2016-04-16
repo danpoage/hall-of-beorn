@@ -37,7 +37,7 @@ namespace HallOfBeorn.Models.Scenarios
             ExcludeFromNightmareMode("Evil-Storm-Core", 3);
             ExcludeFromNightmareMode("Treacherous-Fog-Core", 2);
             ExcludeFromNightmareMode("Banks-of-the-Anduin-Core", 2);
-            ExcludeFromNightmareMode("Dol-Guldur-Orcs-Core", 3);
+            ExcludeFromNightmareMode("Dol-Guldur-Orcs-Enemy-Core", 3);
             ExcludeFromNightmareMode("Enchanted-Stream-Core", 2);
             ExcludeFromNightmareMode("Despair-Core", 2);
             ExcludeFromNightmareMode("Misty-Mountain-Goblins-Core", 3);
