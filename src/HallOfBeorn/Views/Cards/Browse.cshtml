@@ -31,7 +31,12 @@ else
         {
             <div style="text-align:center;margin-top:20px;">
                 <a title="@productGroup.MainProduct.Name (@productGroup.MainProduct.Code)" href="@productGroup.MainProduct.Link"><img src="@productGroup.MainProduct.ImagePath" style="height:@productGroup.MainProduct.ImageHeight;width:@productGroup.MainProduct.ImageWidth;"/></a>
-           
+                @if (!string.IsNullOrEmpty(productGroup.MainProduct.PopularityHtml))
+                {
+                    <div>
+                    @Html.Raw(productGroup.MainProduct.PopularityHtml)
+                    </div>
+                } 
                 @*
                 @if (productGroup.MainProduct.HasBuyLink) {
                     @Html.Raw(@productGroup.MainProduct.BuyLink);
@@ -60,7 +65,14 @@ else
             lastProductWasPremier = product.IsPremier;
         
             <div style="display:inline-block;margin-left:4px;margin-right:4px;margin-top:6px;margin-bottom:6px;">
-                <a title="@product.Name (@product.Code)" href="@product.Link"><img src="@product.ImagePath" style="height:@product.ImageHeight;width:@product.ImageWidth;"/></a>
+                <a title="@product.Name (@product.Code)" href="@product.Link">   
+                <img src="@product.ImagePath" style="height:@product.ImageHeight;width:@product.ImageWidth;"/></a>
+                @if (!string.IsNullOrEmpty(@product.PopularityHtml))
+                {
+                    <div>
+                    @Html.Raw(@product.PopularityHtml)
+                    </div>
+                } 
 
                 @*
                 @if (product.HasBuyLink) {

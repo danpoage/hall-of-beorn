@@ -141,11 +141,16 @@ namespace HallOfBeorn.Controllers
         {
             var model = new BrowseViewModel();
 
+            Func<string, byte> getPopularity = (slug) =>
+            {
+                return ringsDbService.GetPopularity(slug);
+            };
+
             if (string.IsNullOrEmpty(id))
             {
                 foreach (var productGroup in productRepository.ProductGroups())
                 {
-                    model.ProductGroups.Add(new ProductGroupViewModel(productGroup));
+                    model.ProductGroups.Add(new ProductGroupViewModel(productGroup, getPopularity));
                 }
             }
             else

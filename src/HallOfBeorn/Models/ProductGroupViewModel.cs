@@ -7,20 +7,20 @@ namespace HallOfBeorn.Models
 {
     public class ProductGroupViewModel
     {
-        public ProductGroupViewModel(ProductGroup productGroup)
+        public ProductGroupViewModel(ProductGroup productGroup, Func<string, byte> getPopularity)
         {
             Name = productGroup.Name;
 
             if (productGroup.MainProduct != null)
             {
-                MainProduct = new ProductViewModel(productGroup.MainProduct);
+                MainProduct = new ProductViewModel(productGroup.MainProduct, getPopularity);
             }
 
             ChildProducts = new List<ProductViewModel>();
 
             foreach (var product in productGroup.ChildProducts)
             {
-                ChildProducts.Add(new ProductViewModel(product));
+                ChildProducts.Add(new ProductViewModel(product, getPopularity));
             }
         }
 

@@ -7,13 +7,34 @@ namespace HallOfBeorn.Models
 {
     public class ProductViewModel
     {
-        public ProductViewModel(Product product)
+        public ProductViewModel(Product product, Func<string, byte> getPopularity)
         {
             _product = product;
+            Popularity = 0;
 
+            var popCardCount = 0;
+            var totalPop = 0;
             foreach (var set in product.CardSets().Where(setHasPopularity))
             {
+                foreach (var card in set.Cards)
+                {
+                    var pop = getPopularity(card.Slug);
+                    if (pop > 0)
+                    {
+                        popCardCount++;
+                        totalPop += pop;
+                    }
+                }
+            }
 
+            if (popCardCount > 0 && totalPop > 0)
+            {
+                var avgPop = Convert.ToInt16(totalPop / popCardCount);
+                if (avgPop > 7) 
+                {
+                    avgPop = 7;
+                }
+                Popularity = (byte)avgPop;
             }
 
             //var scenarioTitle = string.Empty;
@@ -55,7 +76,30 @@ namespace HallOfBeorn.Models
         public string Code { get { return _product.Code; } }
         public bool IsPremier { get { return _product.IsPremier; } }
         public bool IsNewSubGroup { get { return _product.IsNewSubGroup; } }
-        public byte Popularity { get; private set; }
+        public int Popularity { get; private set; }
+        public string PopularityHtml
+        {
+            get
+            {
+                if (Popularity > 0)
+                {
+                    const string icon = "<img src='/Images/gold-ring.png' height='16' width='16'/>";
+
+                    var html = new System.Text.StringBuilder();
+
+                    for (var i = 0; i < Popularity; i++)
+                    {
+                        html.Append(icon);
+                    }
+
+                    return html.ToString();
+                }
+                else
+                {
+                    return string.Empty;
+                }
+            }
+        }
 
         public string ImagePath
         {
