@@ -1273,5 +1273,10 @@ namespace HallOfBeorn.Models
             this.SlugIncludesType = true;
             return this;
         }
+
+        public int Popularity(Func<string, byte> lookup)
+        {
+            return lookup(this.Slug);
+        }
     }
 }

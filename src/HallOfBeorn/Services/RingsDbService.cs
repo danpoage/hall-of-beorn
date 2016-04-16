@@ -48,13 +48,13 @@ namespace HallOfBeorn.Services
             addPopularity("010145", 5);
             addPopularity("01046", 5);
             addPopularity("09014", 5);
-            addPopularity("010140", 5);
+            addPopularity("10140", 5);
             addPopularity("01045", 5);
             addPopularity("04110", 5);
             addPopularity("01014", 5);
             addPopularity("04101", 5);
             addPopularity("01060", 5);
-            addPopularity("010061", 5);
+            addPopularity("10061", 5);
             addPopularity("05018", 5);
             addPopularity("01053", 5);
             addPopularity("011015", 5);
@@ -90,19 +90,19 @@ namespace HallOfBeorn.Services
             addPopularity("08118", 5);
             addPopularity("143011", 5);
             addPopularity("04128", 5);
-            addPopularity("0142006", 5);
+            addPopularity("142006", 5);
             addPopularity("143004", 5);
             addPopularity("01062", 5);
             addPopularity("04053", 5);
             addPopularity("05017", 5);
             addPopularity("08141", 5);
-            addPopularity("011001", 5);
+            addPopularity("11001", 5);
             addPopularity("04135", 5);
             addPopularity("131010", 5);
             addPopularity("141014", 5);
             addPopularity("02098", 5);
-            addPopularity("010091", 5);
-            addPopularity("010120", 5);
+            addPopularity("10091", 5);
+            addPopularity("10120", 5);
             addPopularity("143014", 5);
             addPopularity("04106", 5);
             addPopularity("05013", 5);
@@ -126,20 +126,20 @@ namespace HallOfBeorn.Services
             addPopularity("06009", 5);
             addPopularity("08084", 5);
             addPopularity("08086", 5);
-            addPopularity("010001", 5);
-            addPopularity("010032", 5);
-            addPopularity("010059", 5);
+            addPopularity("10001", 5);
+            addPopularity("10032", 5);
+            addPopularity("10059", 5);
             addPopularity("141003", 5);
             addPopularity("142005", 5);
             addPopularity("143008", 5);
-            addPopularity("04006    ", 4);
+            addPopularity("04006", 4);
             addPopularity("04077", 4);
             addPopularity("02119", 4);
             addPopularity("07007", 4);
             addPopularity("08002", 4);
-            addPopularity("010033", 4);
-            addPopularity("010121", 4);
-            addPopularity("011012", 4);
+            addPopularity("10033", 4);
+            addPopularity("10121", 4);
+            addPopularity("11012", 4);
             addPopularity("04137", 4);
             addPopularity("08056", 4);
             addPopularity("08063", 4);
@@ -164,13 +164,13 @@ namespace HallOfBeorn.Services
             addPopularity("144006", 4);
             addPopularity("01002", 4);
             addPopularity("02100", 4);
-            addPopularity("010029", 4);
-            addPopularity("010118", 4);
-            addPopularity("010147", 4);
+            addPopularity("10029", 4);
+            addPopularity("10118", 4);
+            addPopularity("10147", 4);
             addPopularity("144004", 4);
             addPopularity("06108", 4);
             addPopularity("08114", 4);
-            addPopularity("010115", 4);
+            addPopularity("10115", 4);
             addPopularity("141006", 4);
             addPopularity("01039", 4);
             addPopularity("04057", 4);
@@ -191,10 +191,10 @@ namespace HallOfBeorn.Services
             addPopularity("06086", 4);
             addPopularity("08059", 4);
             addPopularity("09010", 4);
-            addPopularity("010035", 4);
-            addPopularity("010084", 4);
-            addPopularity("010116", 4);
-            addPopularity("010149", 4);
+            addPopularity("10035", 4);
+            addPopularity("10084", 4);
+            addPopularity("10116", 4);
+            addPopularity("10149", 4);
             addPopularity("131011", 4);
             addPopularity("142007", 4);
             addPopularity("144002", 4);
@@ -204,7 +204,7 @@ namespace HallOfBeorn.Services
             addPopularity("02120", 4);
             addPopularity("08088", 4);
             addPopularity("08120", 4);
-            addPopularity("010007", 4);
+            addPopularity("10007", 4);
             addPopularity("010062", 4);
             addPopularity("010092", 4);
             addPopularity("142004", 4);
@@ -217,8 +217,8 @@ namespace HallOfBeorn.Services
             addPopularity("06032", 4);
             addPopularity("07006", 4);
             addPopularity("09003", 4);
-            addPopularity("010028", 4);
-            addPopularity("010037", 4);
+            addPopularity("10028", 4);
+            addPopularity("10037", 4);
             addPopularity("143010", 4);
             addPopularity("01005", 4);
             addPopularity("01051", 4);
@@ -244,9 +244,9 @@ namespace HallOfBeorn.Services
             addPopularity("08027", 3);
             addPopularity("09002", 3);
             addPopularity("09005", 3);
-            addPopularity("010055", 3);
-            addPopularity("010086", 3);
-            addPopularity("011002", 3);
+            addPopularity("10055", 3);
+            addPopularity("10086", 3);
+            addPopularity("11002", 3);
             addPopularity("141015", 3);
             addPopularity("144010", 3);
             addPopularity("02059", 3);
@@ -255,8 +255,8 @@ namespace HallOfBeorn.Services
             addPopularity("05002", 3);
             addPopularity("08028", 3);
             addPopularity("08138", 3);
-            addPopularity("010002", 3);
-            addPopularity("010006", 3);
+            addPopularity("10002", 3);
+            addPopularity("10006", 3);
             addPopularity("144007", 3);
             addPopularity("01061", 3);
             addPopularity("04076", 3);
@@ -335,9 +335,9 @@ namespace HallOfBeorn.Services
             addPopularity("08005", 3);
             addPopularity("08025", 3);
             addPopularity("08115", 3);
-            addPopularity("010141", 3);
-            addPopularity("011003", 3);
-            addPopularity("011006", 3);
+            addPopularity("10141", 3);
+            addPopularity("11003", 3);
+            addPopularity("11006", 3);
             addPopularity("132010", 3);
             addPopularity("141010", 3);
             addPopularity("141013", 3);
@@ -553,6 +553,8 @@ namespace HallOfBeorn.Services
             addPopularity("132008", 1);
             addPopularity("132012", 1);
             addPopularity("143013", 1);
+
+            addPopularity("06056", 1);
         }
 
         private uint getRingsDbSet(CardSet set)
@@ -565,7 +567,7 @@ namespace HallOfBeorn.Services
                     return 4;
                 case "Against the Shadow":
                     return 6;
-                case "Ring-maker":
+                case "The Ring-maker":
                     return 8;
                 case "Angmar Awakened":
                     return 10;
@@ -592,7 +594,7 @@ namespace HallOfBeorn.Services
                 //The Voice of Isengard
                 case "VoI":
                     return 7;
-                    
+
                 //The Lost Realm
                 case "TLR":
                     return 9;
@@ -610,7 +612,7 @@ namespace HallOfBeorn.Services
                 //The Lord of the Rings
                 case "TBR":
                     return 141;
-                case "TRD":
+                case "RD":
                     return 142;
                 case "ToS":
                     return 143;

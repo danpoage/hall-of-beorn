@@ -10,7 +10,17 @@ namespace HallOfBeorn.Services
 {
     public class SearchSortService
     {
+        public SearchSortService(RingsDbService ringsDbService)
+        {
+            this.ringsDbService = ringsDbService;
+
+            this.popularityLookup = (slug) => { return ringsDbService.GetPopularity(slug); };
+        }
+
         const int MAX_RESULTS = 128;
+
+        private readonly RingsDbService ringsDbService;
+        private readonly Func<string, byte> popularityLookup;
 
         public List<CardScore> Sort(SearchViewModel model, List<SearchFilter> filters, Dictionary<string, CardScore> results)
         {
@@ -58,6 +68,9 @@ namespace HallOfBeorn.Services
                     break;
                 case Models.Sort.Released:
                     sortedResults = results.Where(x => x.Value.Score() > 0).OrderBy(x => x.Value.Card.CardSet.Product.FirstReleased).ThenBy(x => x.Value.Card.CardSet.Number).Select(x => x.Value).Take(takeCount).ToList();
+                    break;
+                case Models.Sort.Popularity:
+                    sortedResults = results.Where(x => x.Value.Score() > 0).OrderByDescending(x => x.Value.Card.Popularity(popularityLookup)).ThenBy(x => x.Value.Card.CardSet.Number).ThenBy(x => x.Value.Card.Number).Select(x => x.Value).Take(takeCount).ToList();
                     break;
                 default:
                     sortedResults = results.Where(x => x.Value.Score() > 0).OrderByDescending(x => x.Value.Score()).Select(y => y.Value).Take(takeCount).ToList();

@@ -356,18 +356,16 @@
                     <img src="/Images/unique-card.png" style="margin-bottom:-3px;margin-right:-4px;height:16px;width:16px;"/>
                 }
                 @Html.ActionLink(@card.FullTitle, "Details", new { id = @card.Slug }, new { style = "margin-bottom:2px;font-size:medium;font-weight:bold;display:inline-block;" })
-            
-            
                 </div>
                 <div>
                     <span class="detail-label">@card.SetName</span>
                     <span class="detail-label">@card.CountLabel</span>
-                </div>
+                </div>                
             </div>
             <div style="display:inline-block;">
                 @if (@card.HasSphere)
                 {
-                    <span><img style="width:30px;height:30px;margin-bottom:4px;margin-left:6px;margin-right:1px;" src='@string.Format("/Images/{0}.png", @card.Sphere)' /></span>
+                    <span><img style="width:30px;height:30px;margin:4px 1px 4px 6px;" src='@string.Format("/Images/{0}.png", @card.Sphere)' /></span>
                 }
                 @if (@card.HasEncounterSet)
                 {
@@ -457,6 +455,12 @@
                         break;
                     default:
                         break;
+                }
+                @if (!string.IsNullOrEmpty(@card.PopularityHtml))
+                {
+                    <span style="margin-left: 4px; display:inline-block">
+                    @Html.Raw(@card.PopularityHtml)
+                    </span>
                 }
             </div>
             <div style="margin-left:2px;vertical-align:top;text-align:left;">

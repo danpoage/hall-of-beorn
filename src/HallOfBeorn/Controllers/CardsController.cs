@@ -562,7 +562,10 @@ namespace HallOfBeorn.Controllers
 
             foreach (var score in searchService.Search(model))
             {
-                model.Cards.Add(new CardViewModel(score));
+                var viewModel = new CardViewModel(score);
+                viewModel.Popularity = ringsDbService.GetPopularity(viewModel.Slug);
+
+                model.Cards.Add(viewModel);
             }
 
             return View(model);

@@ -11,6 +11,7 @@ namespace HallOfBeorn.Models
         Set_Number = 1,
         Alphabetical = 2,
         Sphere_Type_Cost = 3,
-        Released = 4
+        Released = 4,
+        Popularity = 5
     }
 }
