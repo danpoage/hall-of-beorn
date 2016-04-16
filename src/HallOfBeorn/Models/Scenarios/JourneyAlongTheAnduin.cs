@@ -34,6 +34,14 @@ namespace HallOfBeorn.Models.Scenarios
             ExcludeFromEasyMode("Hill-Troll-Core", 1);
             ExcludeFromEasyMode("Marsh-Adder-Core", 1);
 
+            ExcludeFromNightmareMode("Evil-Storm-Core", 3);
+            ExcludeFromNightmareMode("Treacherous-Fog-Core", 2);
+            ExcludeFromNightmareMode("Banks-of-the-Anduin-Core", 2);
+            ExcludeFromNightmareMode("Dol-Guldur-Orcs-Core", 3);
+            ExcludeFromNightmareMode("Enchanted-Stream-Core", 2);
+            ExcludeFromNightmareMode("Despair-Core", 2);
+            ExcludeFromNightmareMode("Misty-Mountain-Goblins-Core", 3);
+            ExcludeFromNightmareMode("Necromancer's-Pass-Core", 2);
         }
     }
 }

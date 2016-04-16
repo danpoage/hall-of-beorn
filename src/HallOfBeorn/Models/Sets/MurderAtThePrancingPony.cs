@@ -72,7 +72,7 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(Card.Location("Staddle Hiding Hole", "", investigationSetName, 5, 5)
                 .WithUnique()
                 .WithTraits("Hideout.")
-                .WithText("Immune to player card effects.\r\nWhile Staddle Hiding Hole is in the victory display, each player not engaged with a Suspect cannot declare attacks against that Suspect.\r\nTravel: Search the encounter deck and discard pile for a Greenway Footpad, reveal it, and add it to the staging area. Shuffle the encounter deck.")
+                .WithText("Immune to player card effects.\r\nWhile Staddle Hiding Hole is in the victory display, each player not engaged with a Suspect cannot declare attackers against that Suspect.\r\nTravel: Search the encounter deck and discard pile for a Greenway Footpad, reveal it, and add it to the staging area. Shuffle the encounter deck.")
                 .WithVictoryPoints(5)
                 .WithInfo(5, 1, Artist.Michael_Rasmussen));
             Cards.Add(Card.Location("Combe Storehouse", "", investigationSetName, 5, 5)

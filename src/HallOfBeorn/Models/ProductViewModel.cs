@@ -11,6 +11,11 @@ namespace HallOfBeorn.Models
         {
             _product = product;
 
+            foreach (var set in product.CardSets().Where(setHasPopularity))
+            {
+
+            }
+
             //var scenarioTitle = string.Empty;
             //const string linkFormat = "/Scenarios/Details/{0}";
 
@@ -29,6 +34,20 @@ namespace HallOfBeorn.Models
             }*/
         }
 
+        private Func<CardSet, bool> setHasPopularity = (set) =>
+        {
+            switch (set.SetType)
+            {
+                case SetType.Core:
+                case SetType.Adventure_Pack:
+                case SetType.Deluxe_Expansion:
+                case SetType.Saga_Expansion:
+                    return true;
+                default:
+                    return false;
+            }
+        };
+
         private readonly Product _product;
         private readonly List<ScenarioViewModel> _scenarios = new List<ScenarioViewModel>();
 
@@ -36,6 +55,7 @@ namespace HallOfBeorn.Models
         public string Code { get { return _product.Code; } }
         public bool IsPremier { get { return _product.IsPremier; } }
         public bool IsNewSubGroup { get { return _product.IsNewSubGroup; } }
+        public byte Popularity { get; private set; }
 
         public string ImagePath
         {
