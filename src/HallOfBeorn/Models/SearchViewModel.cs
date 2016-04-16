@@ -202,6 +202,9 @@ namespace HallOfBeorn.Models
         [Display(Name = "Sort")]
         public Sort? Sort { get; set; }
 
+        [Display(Name = "View")]
+        public View? View { get; set; }
+
         [Display(Name = "Artist")]
         public string Artist { get; set; }
 

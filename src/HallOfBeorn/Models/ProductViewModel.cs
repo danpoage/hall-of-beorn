@@ -12,8 +12,8 @@ namespace HallOfBeorn.Models
             _product = product;
             Popularity = 0;
 
-            var popCardCount = 0;
-            var totalPop = 0;
+            double popCardCount = 0;
+            double totalPop = 0;
             foreach (var set in product.CardSets().Where(setHasPopularity))
             {
                 foreach (var card in set.Cards)
@@ -29,30 +29,13 @@ namespace HallOfBeorn.Models
 
             if (popCardCount > 0 && totalPop > 0)
             {
-                var avgPop = Convert.ToInt16(totalPop / popCardCount);
-                if (avgPop > 7) 
+                AveragePopularity = totalPop / popCardCount;
+                if (AveragePopularity > 7) 
                 {
-                    avgPop = 7;
+                    AveragePopularity = 7;
                 }
-                Popularity = (byte)avgPop;
+                Popularity = (byte)Math.Round(AveragePopularity, MidpointRounding.AwayFromZero);
             }
-
-            //var scenarioTitle = string.Empty;
-            //const string linkFormat = "/Scenarios/Details/{0}";
-
-            /*
-            foreach (var cardSet in product.CardSets)
-            {
-                foreach (var card in cardSet.Cards.Where(x => (x.CardType == CardType.Quest || (x.EncounterSet != null && x.EncounterSet.EndsWith("Nightmare"))) && !string.IsNullOrEmpty(x.EncounterSet)))
-                {
-                    scenarioTitle = !string.IsNullOrEmpty(card.ScenarioTitle) ? card.ScenarioTitle : card.EncounterSet;
-
-                    if (!_scenarios.Any(x => x.Title == scenarioTitle))
-                    {
-                        _scenarios.Add(new ScenarioViewModel { Title = scenarioTitle, Link = string.Format(linkFormat, scenarioTitle.ToUrlSafeString()) });
-                    }
-                }
-            }*/
         }
 
         private Func<CardSet, bool> setHasPopularity = (set) =>
@@ -76,7 +59,8 @@ namespace HallOfBeorn.Models
         public string Code { get { return _product.Code; } }
         public bool IsPremier { get { return _product.IsPremier; } }
         public bool IsNewSubGroup { get { return _product.IsNewSubGroup; } }
-        public int Popularity { get; private set; }
+        public byte Popularity { get; private set; }
+        public double AveragePopularity { get; private set; }
         public string PopularityHtml
         {
             get
@@ -86,7 +70,7 @@ namespace HallOfBeorn.Models
                     const string icon = "<img src='/Images/gold-ring.png' height='16' width='16'/>";
 
                     var html = new System.Text.StringBuilder();
-
+                    
                     for (var i = 0; i < Popularity; i++)
                     {
                         html.Append(icon);

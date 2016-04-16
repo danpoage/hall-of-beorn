@@ -602,6 +602,7 @@
     <Compile Include="Models\Sphere.cs" />
     <Compile Include="Models\Token.cs" />
     <Compile Include="Models\Uniqueness.cs" />
+    <Compile Include="Models\View.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AdvancedSearchService.cs" />
     <Compile Include="Services\CardRepository.cs" />
