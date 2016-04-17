@@ -338,33 +338,43 @@
 <span class="results-count-label">@Model.GetResultsCount()</span>
 <div>
 @foreach (var card in @Model.Cards)
-{    
-    @* <hr style="color:#616161;" /> *@
-    @*
-    if (!string.IsNullOrEmpty(@card.SearchDescription))
+{   
+    if (!@Model.View.HasValue || (@Model.View.HasValue && @Model.View != View.Card_Image))
     {
-        <div class="search-explanation search-explanation-default">
-            <div id="search-explanation-text" class="search-explanation-container search-explanation-message" style="display:none;">
-                <div class="search-explanation-content"><p>@card.SearchDescription (Score: @card.Score)</p></div>
+        <hr style="color:#616161;" />
+    
+        if (!string.IsNullOrEmpty(@card.SearchDescription))
+        {
+            <div class="search-explanation search-explanation-default">
+                <div id="search-explanation-text" class="search-explanation-container search-explanation-message" style="display:none;">
+                    <div class="search-explanation-content"><p>@card.SearchDescription (Score: @card.Score)</p></div>
+                </div>
+                <div class="search-explanation-container search-explanation-button">
+                    <div class="search-explanation-glyph search-explanation-content"><p>?</p></div>
+                </div>
             </div>
-            <div class="search-explanation-container search-explanation-button">
-                <div class="search-explanation-glyph search-explanation-content"><p>?</p></div>
-            </div>
-        </div>
-    }
-    *@
-    <div style="display:inline-block;margin:6px;border: 0px solid gray;border-radius: 8px;width: 80%">
-        <div style="display:inline-block">
+        }
+    }  
+    
+    <div style="display:inline-block;margin:6px;border: 0px solid gray;border-radius: 8px;width: @Model.ItemWidth()">
+        <div>
             <div style="display:inline-block">
                 <div style="margin-bottom:2px;">
                 @if (@card.IsUnique)
                 {
                     <img src="/Images/unique-card.png" style="margin-bottom:-3px;margin-right:-4px;height:16px;width:16px;"/>
                 }
-                @Html.ActionLink(@card.FullTitle, "Details", new { id = @card.Slug }, new { style = "margin-bottom:2px;font-size:medium;font-weight:bold;display:inline-block;" })
+                @Html.ActionLink(@card.TitleTrimmed, "Details", new { id = @card.Slug }, new { style = "margin-bottom:2px;font-size:medium;font-weight:bold;display:inline-block;" })
                 </div>
                 <div>
-                    <span class="detail-label">@card.SetName</span>
+                    @if (@Model.View.HasValue && @Model.View == View.Card_Image)
+                    {
+                        <span class="detail-label">@card.SetNameTrimmed</span>
+                    }
+                    else
+                    {
+                           <span class="detail-label">@card.SetName</span>
+                    }
                     <span class="detail-label">@card.CountLabel</span>
                 </div>                
             </div>
@@ -379,7 +389,7 @@
                 }
             </div>
         </div>
-        <div>
+        <div style="display:inline-block">
             @if (!@Model.View.HasValue || (@Model.View.HasValue && (@Model.View == View.Card || @Model.View == View.Card_Image)))
             {
                 <div style="float:left;margin-right:4px;">

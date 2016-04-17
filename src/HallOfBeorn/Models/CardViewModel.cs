@@ -228,9 +228,45 @@ namespace HallOfBeorn.Models
             }
         }
 
+        public string TitleTrimmed
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Title))
+                {
+                    return string.Empty;
+                }
+
+                if (Title.Length > 18)
+                {
+                    return Title.Substring(0, 18) + "…";
+                }
+
+                return Title;
+            }
+        }
+
         public string SetName
         {
             get { return _card.CardSet.Name; }
+        }
+
+        public string SetNameTrimmed
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(this.SetName))
+                {
+                    return string.Empty;
+                }
+
+                if (this.SetName.Length > 14)
+                {
+                    return this.SetName.Substring(0, 14) + "…";
+                }
+
+                return this.SetName;
+            }
         }
 
         public string Number

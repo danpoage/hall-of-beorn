@@ -214,6 +214,15 @@ namespace HallOfBeorn.Models
         [Display(Name="Player Category")]
         public string Category { get; set; }
 
+        public string ItemWidth()
+        {
+            if (this.View.HasValue && View == Models.View.Card_Image)
+            {
+                return "200px;";
+            }
+            else return "80%";
+        }
+
         public Category GetCategory()
         {
             var category = HallOfBeorn.Models.Category.None;
