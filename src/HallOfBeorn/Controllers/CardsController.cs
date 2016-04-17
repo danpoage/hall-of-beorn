@@ -626,6 +626,10 @@ namespace HallOfBeorn.Controllers
             {
                 model.Sort = null;
             }
+            if (model.View.HasValue && model.View.Value == Models.View.None)
+            {
+                model.View = null;
+            }
             if (model.DeckType.HasValue && model.DeckType.Value == Models.DeckType.None)
             {
                 model.DeckType = null;

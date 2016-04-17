@@ -9,6 +9,7 @@ namespace HallOfBeorn.Models
     {
         None = 0,
         Card = 1,
-        Product = 2,
+        Card_Image = 2,
+        Card_Text = 3
     }
 }

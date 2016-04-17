@@ -701,6 +701,11 @@ namespace HallOfBeorn.Models
             get { return typeof(Sort).GetSelectListItems(", "); }
         }
 
+        public static IEnumerable<SelectListItem> Views
+        {
+            get { return typeof(View).GetSelectListItems(); }
+        }
+
         public static IEnumerable<SelectListItem> UniquenessValues
         {
             get { return typeof(Uniqueness).GetSelectListItems(); }
