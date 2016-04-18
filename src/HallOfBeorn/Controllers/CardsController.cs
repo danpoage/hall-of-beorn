@@ -582,12 +582,16 @@ namespace HallOfBeorn.Controllers
                     return ringsDbService.GetPopularity(slug);
                 };
 
-                foreach (var score in model.Cards)
+                var key = string.Empty;
+                foreach (var cardViewModel in model.Cards)
                 {
-                    if (!productsByCode.ContainsKey(score.Card.CardSet.Product.Code))
+                    key = cardViewModel.Card.CardSet.Product.Code;
+                    if (!productsByCode.ContainsKey(key))
                     {
-                        productsByCode[score.Card.CardSet.Product.Code] = new ProductViewModel(score.Card.CardSet.Product, getPopularity);
+                        productsByCode[key] = new ProductViewModel(cardViewModel.Card.CardSet.Product, getPopularity);
                     }
+
+                    productsByCode[key].AddCard(cardViewModel);
                 }
 
                 model.Products.AddRange(productsByCode.Values.OrderBy(x => x.Code));

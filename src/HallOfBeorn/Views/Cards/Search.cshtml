@@ -341,13 +341,38 @@
 {
     foreach (var product in @Model.Products)
     {
-        <div style="display:inline-block;margin-left:4px;margin-right:4px;margin-top:6px;margin-bottom:6px;">
+        <div style="display:inline-block;margin-left:4px;margin-right:4px;margin-top:6px;margin-bottom:6px;vertical-align: top;">
                 <a title="@product.Name (@product.Code)" href="@product.Link">   
                 <img src="@product.ImagePath" style="height:@product.ImageHeight;width:@product.ImageWidth;"/></a>
+
+                @*
                 @if (!string.IsNullOrEmpty(@product.PopularityHtml))
                 {
                     <div>
                     @Html.Raw(@product.PopularityHtml)
+                    </div>
+                }
+                *@
+
+                @if (product.HasCards())
+                {
+                    <div class="display:inline-block">
+                    @foreach (var card in @product.Cards)
+                    {
+                        <div>
+                            <div style="margin-bottom:2px;">
+                            @if (@card.IsUnique)
+                            {
+                                <img src="/Images/unique-card.png" style="margin-bottom:-3px;margin-right:-4px;height:16px;width:16px;"/>
+                            }
+                            @Html.ActionLink(@card.TitleTrimmed, "Details", new { id = @card.Slug }, new { style = "margin-bottom:2px;font-size:medium;font-weight:bold;display:inline-block;" })
+                            </div>
+                            <div>
+                                <span class="detail-label">@card.SetNameTrimmed</span>
+                                <span class="detail-label">@card.CountLabel</span>
+                            </div>                
+                        </div>
+                    }
                     </div>
                 }
             </div>

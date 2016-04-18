@@ -54,6 +54,7 @@ namespace HallOfBeorn.Models
 
         private readonly Product _product;
         private readonly List<ScenarioViewModel> _scenarios = new List<ScenarioViewModel>();
+        private readonly List<CardViewModel> _cards = new List<CardViewModel>();
 
         public string Name { get { return _product.Name; } }
         public string Code { get { return _product.Code; } }
@@ -136,6 +137,21 @@ namespace HallOfBeorn.Models
         public IEnumerable<ScenarioViewModel> Scenarios
         {
             get { return _scenarios; }
+        }
+
+        public IEnumerable<CardViewModel> Cards
+        {
+            get { return _cards; }
+        }
+
+        public void AddCard(CardViewModel card)
+        {
+            _cards.Add(card);
+        }
+
+        public bool HasCards()
+        {
+            return _cards.Count > 0;
         }
     }
 }
