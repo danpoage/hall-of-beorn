@@ -345,15 +345,6 @@
                 <a title="@product.Name (@product.Code)" href="@product.Link">   
                 <img src="@product.ImagePath" style="height:@product.ImageHeight;width:@product.ImageWidth;"/></a>
 
-                @*
-                @if (!string.IsNullOrEmpty(@product.PopularityHtml))
-                {
-                    <div>
-                    @Html.Raw(@product.PopularityHtml)
-                    </div>
-                }
-                *@
-
                 @if (product.HasCards())
                 {
                     <div class="display:inline-block">
@@ -408,7 +399,14 @@
                     {
                         <img src="/Images/unique-card.png" style="margin-bottom:-3px;margin-right:-4px;height:16px;width:16px;"/>
                     }
-                    @Html.ActionLink(@card.TitleTrimmed, "Details", new { id = @card.Slug }, new { style = "margin-bottom:2px;font-size:medium;font-weight:bold;display:inline-block;" })
+                    @if (@Model.View.HasValue && @Model.View == View.Card_Image)
+                    {
+                        @Html.ActionLink(@card.TitleTrimmed, "Details", new { id = @card.Slug }, new { style = "margin-bottom:2px;font-size:medium;font-weight:bold;display:inline-block;" })
+                    }
+                    else
+                    {
+                        @Html.ActionLink(@card.Title, "Details", new { id = @card.Slug }, new { style = "margin-bottom:2px;font-size:medium;font-weight:bold;display:inline-block;" })
+                    }
                     </div>
                     <div>
                         @if (@Model.View.HasValue && @Model.View == View.Card_Image)
