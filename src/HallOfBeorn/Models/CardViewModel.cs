@@ -964,7 +964,7 @@ namespace HallOfBeorn.Models
             {
                 if (Popularity > 0)
                 {
-                    const string icon = "<img src='/Images/gold-ring.png' height='16' width='16'/>";
+                    const string icon = "<img src='/Images/gold-ring.png' height='16' width='16' title='Popularity'/>";
 
                     var html = new System.Text.StringBuilder();
 

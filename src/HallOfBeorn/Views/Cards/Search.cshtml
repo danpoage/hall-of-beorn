@@ -421,7 +421,7 @@
                     </div>                
                 </div>
                 <div style="display:inline-block;">
-                    @if (@card.HasSphere)
+                    @if ((!@Model.View.HasValue || @Model.View != View.Card_Image) && @card.HasSphere)
                     {
                         <span><img style="width:30px;height:30px;margin:4px 1px 4px 6px;" src='@string.Format("/Images/{0}.png", @card.Sphere)' /></span>
                     }
