@@ -188,7 +188,7 @@ Page 4/4",
                 .WithTraits("Nameless.", "Hazard.")
                 .WithText("Cannot have player card attachments.\r\nX is 1 more than the Discover value on the active location.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if you control a Loot objective).")
-                .WithInfo(17, 3, Artist.Dimitri_Bielak));
+                .WithInfo(17, 4, Artist.Dimitri_Bielak));
             Cards.Add(Card.Enemy("Old Stone Troll", "", "The Ruins of Belegost", 50, 3, 6, 3, 8)
                 .WithTraits("Troll.", "Hazard.")
                 .WithText("Cannot have player card attachments.\r\nOld Stone Troll gets -10 engagement cost for each Loot objective attached to a hero.\r\nOnly the engaged player can declare attackers against Old Stone Troll.")
