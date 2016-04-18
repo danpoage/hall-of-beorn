@@ -40,6 +40,7 @@ namespace HallOfBeorn.Controllers
         private void InitializeSearch(SearchViewModel model)
         {
             model.Cards = new List<CardViewModel>();
+            model.Products = new List<ProductViewModel>();
 
             SearchViewModel.Keywords = statService.Keywords().GetSelectListItems();
             SearchViewModel.Traits = statService.Traits().GetSelectListItems();
@@ -571,6 +572,25 @@ namespace HallOfBeorn.Controllers
                 viewModel.Popularity = ringsDbService.GetPopularity(viewModel.Slug);
 
                 model.Cards.Add(viewModel);
+            }
+
+            if (model.View.HasValue && model.View == Models.View.Product)
+            {
+                var productsByCode = new Dictionary<string, ProductViewModel>();
+
+                Func<string, byte> getPopularity = (slug) => {
+                    return ringsDbService.GetPopularity(slug);
+                };
+
+                foreach (var score in model.Cards)
+                {
+                    if (!productsByCode.ContainsKey(score.Card.CardSet.Product.Code))
+                    {
+                        productsByCode[score.Card.CardSet.Product.Code] = new ProductViewModel(score.Card.CardSet.Product, getPopularity);
+                    }
+                }
+
+                model.Products.AddRange(productsByCode.Values.OrderBy(x => x.Code));
             }
 
             return View(model);

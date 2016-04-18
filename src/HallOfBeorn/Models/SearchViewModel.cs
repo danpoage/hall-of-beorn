@@ -205,6 +205,16 @@ namespace HallOfBeorn.Models
         [Display(Name = "View")]
         public View? View { get; set; }
 
+        public bool IsCardView()
+        {
+            return (!View.HasValue || (View != Models.View.Product));
+        }
+
+        public bool IsProductView()
+        {
+            return (View.HasValue && View == Models.View.Product);
+        }
+
         [Display(Name = "Artist")]
         public string Artist { get; set; }
 
@@ -273,8 +283,9 @@ namespace HallOfBeorn.Models
             return (!string.IsNullOrEmpty(this.Query) && this.Query.ContainsLower(RANDOM_KEYWORD)) || (this.Random.HasValue && this.Random.Value);
         }
 
-        [Display(Name = "Results")]
         public List<CardViewModel> Cards { get; set; }
+
+        public List<ProductViewModel> Products { get; set; }
 
         //[Display(Name = "Custom")]
         //public bool Custom { get; set; }
@@ -668,20 +679,26 @@ namespace HallOfBeorn.Models
         public bool? FA03 { get; set; }
 
         public string GetResultsCount()
-        {            
-            if (Cards == null)
-            {
-                return "No Results Found";
-            }
+        {
+            var count = 0;
 
-            switch (Cards.Count)
+            if (!View.HasValue || View != Models.View.Product)
+            {
+                count = Cards != null ? Cards.Count : 0;
+            }
+            else if (View.HasValue && View == Models.View.Product)
+            {
+                count = Products != null ? Products.Count : 0;
+            }
+            
+            switch (count)
             {
                 case 0:
                     return "No Results Found";
                 case 1:
                     return "1 Result Found";
                 default:
-                    return string.Format("{0} Results Found", Cards.Count);
+                    return string.Format("{0} Results Found", count);
             }
         }
 
