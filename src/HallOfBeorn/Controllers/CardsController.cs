@@ -979,7 +979,15 @@ namespace HallOfBeorn.Controllers
 
             if (card == null)
             {
-                redirectURL = string.Format("/Cards/Search?Query={0}", id.Replace('-', '+'));
+                var slug = ringsDbService.GetSlug(id);
+                if (!string.IsNullOrEmpty(slug))
+                {
+                    redirectURL = string.Format("/Cards/Details/{0}", slug);
+                }
+                else
+                {
+                    redirectURL = string.Format("/Cards/Search?Query={0}", id.Replace('-', '+'));
+                }
             }
 
             if (!string.IsNullOrEmpty(redirectURL))

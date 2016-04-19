@@ -14,12 +14,19 @@ namespace HallOfBeorn.Services
             foreach (var card in cardRepository.Cards())
             {
                 cardsBySlug.Add(card.Slug, card);
+
+                var cardId = GetCardId(card.Slug);
+                if (!string.IsNullOrEmpty(cardId))
+                {
+                    slugByCardId[cardId] = card.Slug;
+                }
             }
 
             initializePopularity();
         }
 
         private readonly Dictionary<string, Card> cardsBySlug = new Dictionary<string,Card>();
+        private readonly Dictionary<string, string> slugByCardId = new Dictionary<string, string>();
         private readonly Dictionary<string, byte> popularityByCardId = new Dictionary<string, byte>();
 
         private void addPopularity(string cardId, byte popularity)
@@ -621,6 +628,13 @@ namespace HallOfBeorn.Services
                 default:
                     return 0;
             }
+        }
+
+        public string GetSlug(string cardId)
+        {
+            return slugByCardId.ContainsKey(cardId) ?
+                slugByCardId[cardId]
+                : string.Empty;
         }
 
         public string GetCardId(string slug)
