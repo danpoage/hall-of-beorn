@@ -47,7 +47,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithInfo(3, 1, Artist.Joshua_Cairos));
             Cards.Add(Card.Ally("Anborn", "", Sphere.Leadership, 4, 1, 3, 1, 3)
                 .WithTraits("Gondor.", "Ranger.")
-                .WithText("Response: After an enemy is added to the staging area, exhaust Anborn to give that enemy +5 enagement cost until the end of the round. Then, deal 1 damage to that enemy.")
+                .WithText("Response: After an enemy is added to the staging area, exhaust Anborn to give that enemy +5 engagement cost until the end of the round. Then, deal 1 damage to that enemy.")
                 .WithFlavor("\"Now I have him at arrow-point.\" -The Two Towers")
                 .WithInfo(4, 3, Artist.Owen_William_Weber));
             Cards.Add(Card.Ally("Mablung", "", Sphere.Lore, 2, 2, 1, 0, 2)
@@ -309,6 +309,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithEasyModeQuantity(1)
                 .WithInfo(51, 2, Artist.Jokubas_Uoginitas));
             Cards.Add(Card.Objective("A Heavy Burden", "", "Shelob's Lair")
+                .WithBurden()
                 .WithTraits("Condition.")
                 .WithKeywords("Permanent.")
                 .WithText("Setup: Attach to the Ring-bearer.\r\nForced: At the end of the planning phase, either raise each player's threat by 1, or exhaust the Ring-bearer.")

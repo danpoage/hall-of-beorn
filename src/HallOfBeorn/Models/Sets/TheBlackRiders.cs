@@ -1331,6 +1331,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 Title = "The Ring Draws Them",
                 Id = "1c5f4854-c10c-430b-9c40-2d84c5997b8f",
                 CardType = CardType.Treachery,
+                CardSubtype = Models.CardSubtype.Burden,
                 Keywords = new List<string>() { "Surge." },
                 Text = "When Revealed: At the end of the phase, each enemy in the staging area engages the first player. If the One ~Ring is exhausted, this effect cannot be canceled.",
                 FlavorText = "\"Also,\" he added, and his voice sank to a whisper, \"the Ring draws them\" -The Fellowship of the Ring",
