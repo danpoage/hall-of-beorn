@@ -128,7 +128,7 @@ Progress cannot be placed on ~Goblin Ambush expect by the above effect.",
                 Text = "Shadow Dweller does not make engagement checks while Cave Torch is in play.",
                 Shadow = "Shadow: Shuffle Shadow Dweller back into the encounter deck.",
                 EncounterSet = "Into the Pit Nightmare",
-                Quantity = 4,
+                Quantity = 2,
                 Number = 5,
                 Artist = Artist.Mark_Bulahao
             });
