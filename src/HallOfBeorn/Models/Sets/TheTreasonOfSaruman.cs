@@ -28,8 +28,8 @@ namespace HallOfBeorn.Models.Sets
                 .WithInfo(2, 1, Artist.Tiziano_Baracchi));
             Cards.Add(Card.Hero("Treebeard", "A9CD7B5C-39B9-4446-9075-636E5F69761F", Sphere.Lore, 13, 2, 3, 3, 5)
                 .WithTraits("Ent.")
-                .WithText("Action: Deal 1 damage to Treebeard to give him +1 Willpower and +1 Attack until the end of the phase. (Limit 5 times per phase.)")
-                .WithTemplate("<p><b>Action:</b> Deal 1 damage to {self} to give him +1 {Willpower} and +1 {Attack} until the end of the phase. (Limit 5 times per phase.)</p><p class='flavor-text'>&quot;I am not altogether on anybody's side, because nobody is altogether on my side...&quot;<br>&ndash;The Two Towers</p>")
+                .WithText("Cannot have restricted attachments.\r\nAction: Deal 1 damage to Treebeard to give him +1 Willpower and +1 Attack until the end of the phase. (Limit 5 times per phase.)")
+                //.WithTemplate("<p><b>Action:</b> Deal 1 damage to {self} to give him +1 {Willpower} and +1 {Attack} until the end of the phase. (Limit 5 times per phase.)</p><p class='flavor-text'>&quot;I am not altogether on anybody's side, because nobody is altogether on my side...&quot;<br>&ndash;The Two Towers</p>")
                 .WithInfo(3, 1, Artist.Guillaume_Ducos));
             Cards.Add(Card.Ally("Gimli", "8C4FBDC9-60C4-446D-B7E9-14AECD7DC0C6", Sphere.Leadership, 4, 2, 2, 2, 3)
                 .WithUnique()
