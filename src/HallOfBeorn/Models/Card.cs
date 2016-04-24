@@ -1150,9 +1150,22 @@ namespace HallOfBeorn.Models
             return this;
         }
 
+        public Card WithOppositeTitle(string title, bool includedInSlug)
+        {
+            this.OppositeTitle = title;
+            this.SlugIncludesOppositeTitle = includedInSlug;
+            return this;
+        }
+
         public Card WithOppositeText(string text)
         {
             this.OppositeText = text;
+            return this;
+        }
+
+        public Card WithOppositeArtist(Artist artist)
+        {
+            this.OppositeArtist = artist;
             return this;
         }
 
