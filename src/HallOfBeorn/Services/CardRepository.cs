@@ -44,7 +44,7 @@ namespace HallOfBeorn.Services
             if (exact != null)
                 return exact;
 
-            var partials = cards.Where(x => x.Slug.ToLower().StartsWith(slug.ToLower())).ToList();
+            var partials = cards.Where(x => x.Slug.ToLower().StartsWith(slug.ToLower()) || x.AlternateSlug.ToLowerSafe().Contains(slug.ToLowerSafe())).ToList();
             if (partials.Count == 1)
                 return partials.First();
 

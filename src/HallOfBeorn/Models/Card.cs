@@ -32,6 +32,7 @@ namespace HallOfBeorn.Models
 
             AlternateEncounterSet = string.Empty;
             Suffix = string.Empty;
+            AlternateSlug = string.Empty;
         }
 
         #region Effect Functions
@@ -701,6 +702,12 @@ namespace HallOfBeorn.Models
                 var set = CardSet.Abbreviation.ToString().ToUrlSafeString();
                 return string.Format("{0}-{1}{2}{3}{4}", title, subtitle, suffix, type, set);
             }
+        }
+
+        public string AlternateSlug
+        {
+            get;
+            set;
         }
 
         /*

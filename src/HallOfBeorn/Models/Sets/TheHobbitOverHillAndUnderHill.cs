@@ -182,6 +182,7 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,
                 Title = "Beorn",
+                AlternateSlug = "Bjorn-THOHaUH",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9015",
                 CardType = CardType.Hero,
                 Sphere = Sphere.Tactics,

@@ -574,6 +574,7 @@ and the City shall be blessed.
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,
                 Title = "Beorn",
+                AlternateSlug = "Bjorn-Core",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9031",
                 CardType = CardType.Ally,
                 Sphere = Sphere.Tactics,
