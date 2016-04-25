@@ -164,6 +164,7 @@ Players cannot defeat this stage if there are any Troll enemies in play.",
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,
                 Title = "Grimbeorn the Old",
+                AlternateSlug = "Baby-Bjorn-CatC",
                 Id = "51223bd0-ffd1-11df-a976-0801202c9011",
                 CardType = CardType.Objective_Ally,
                 Traits = new List<string>() { "Ally." },
