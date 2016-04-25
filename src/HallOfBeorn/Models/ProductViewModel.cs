@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models
                 foreach (var card in set.Cards)
                 {
                     var pop = getPopularity(card.Slug);
-                    if (pop > 0)
+                    if (pop > 1)
                     {
                         popCardCount++;
                         totalPop += pop;
