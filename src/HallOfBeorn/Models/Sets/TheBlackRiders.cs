@@ -38,6 +38,7 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,
                 Title = "Sam Gamgee",
+                AlternateSlug = "Sam-Jamjee-TBR",
                 Id = "4124136c-8c86-4f86-830c-94c8c76df161",
                 IsUnique = true,
                 CardType = CardType.Hero,
