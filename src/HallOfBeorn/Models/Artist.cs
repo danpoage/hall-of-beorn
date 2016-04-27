@@ -524,6 +524,12 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Nele_Diel);
             all.Add(Artist.Von_Caberte);
 
+            //Celebrimbor's Secret Nightmare
+            all.Add(Artist.Victor_Manuel_Leza_Moreno);
+            all.Add(Artist.Ivan_Dixon);
+            all.Add(Artist.Javier_Charro_Martinez);
+            all.Add(Artist.David_Keen);
+
             all.Add(Artist.None);
         }
 
@@ -760,6 +766,7 @@ namespace HallOfBeorn.Models
         public static Artist David_Gaillet = new Artist { Name = "David Gaillet", URL = "http://davidgaillet.deviantart.com" };
         public static Artist David_Hammond = new Artist { Name = "David Hammond", URL = "https://www.behance.net/kollatt" };
         public static Artist David_Horne = new Artist { Name = "David Horne", URL = "http://www.epilogue.net/gallery/davidhorne" };
+        public static Artist David_Keen = new Artist { Name = "David Keen", URL = "http://www.davidkeenart.com" };
         public static Artist David_Kegg = new Artist { Name = "David Kegg", URL = "http://david-kegg.deviantart.com" };
         public static Artist David_Lecossu = new Artist { Name = "David Lecossu", URL = "http://d--co.deviantart.com" };
         public static Artist David_A_Nash = new Artist { Name = "David A. Nash", URL = "http://davidnashart.blogspot.com" };
@@ -808,6 +815,7 @@ namespace HallOfBeorn.Models
         public static Artist Igor_Kieryluk = new Artist { Name = "Igor Kieryluk", URL = "http://igorkieryluk.deviantart.com" };
         public static Artist Ilich_Henriquez = new Artist { Name = "Ilich Henriquez", URL = "http://ilacha.deviantart.com" };
         public static Artist Ijur = new Artist { Name = "Ijur", URL = "http://ijur.deviantart.com" };
+        public static Artist Ivan_Dixon = new Artist { Name = "Ivan Dixon", URL = "http://gammagrey.deviantart.com" };
         public static Artist JB_Casacop = new Artist { Name = "JB Casacop", URL = "http://jbcasacop.deviantart.com" };
         public static Artist J_Lonnee = new Artist { Name = "J. Lonnee", URL = "http://www.jisforgenius.com" };
         public static Artist Jake_Bullock = new Artist { Name = "Jake Bullock", URL = "http://jakewbullock.deviantart.com" };
@@ -817,6 +825,7 @@ namespace HallOfBeorn.Models
         public static Artist Jason_Juta = new Artist { Name = "Jason Juta", URL = "http://jasonjuta.deviantart.com" };
         public static Artist Jason_Ward = new Artist { Name = "Jason Ward", URL = "http://jasonwardart.com" };
         public static Artist Jasper_Sandner = new Artist { Name = "Jasper Sandner", URL = "http://jaspersandner.deviantart.com" };
+        public static Artist Javier_Charro_Martinez = new Artist { Name = "Javier Charro Martinez", URL = "http://www.charroart.com/work#1" };
         public static Artist Jeff_Himmelman = new Artist { Name = "Jeff Himmelman", URL = "http://jhimmelman.deviantart.com" };
         public static Artist Jeff_Lee_Johnson = new Artist { Name = "Jeff Lee Johnson", URL = "http://jeffleejohnsonart.com/jeffleejohnsonart.com/home.html" };
         public static Artist Jen_Zee = new Artist { Name = "Jen Zee", URL = "http://jenzee.deviantart.com" };
@@ -960,6 +969,7 @@ namespace HallOfBeorn.Models
         public static Artist Trudi_Castle = new Artist { Name = "Trudi Castle", URL = "http://www.artcastles.com/trudi/commerical.html" };
         public static Artist Vicki_Pangestu = new Artist { Name = "Vicki Pangestu", URL = "http://thiever.deviantart.com" };
         public static Artist Victor_Garcia = new Artist { Name = "Victor Garcia", URL = "http://curthedgehog.deviantart.com" };
+        public static Artist Victor_Manuel_Leza_Moreno = new Artist { Name = "Victor Manuel Leza Moreno", URL = "http://www.victorleza.com" };
         public static Artist Victor_Maury = new Artist { Name = "Victor Maury", URL = "http://victormaury.tumblr.com" };
         public static Artist Vincent_Proce = new Artist { Name = "Vincent Proce", URL = "http://vincentproceart.blogspot.com" };
         public static Artist Von_Caberte = new Artist { Name = "Von Caberte", URL = "http://cabertevon.com" };

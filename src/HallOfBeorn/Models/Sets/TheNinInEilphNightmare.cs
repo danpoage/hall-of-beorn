@@ -22,7 +22,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("You are playing Nightmare mode.\r\nForced: When the players advance to stage 2A, add Ancient Marsh-dweller to the staging area (from out of play or engaged with a player).")
                 .WithFlavor("There was a deep silence, only scraped on its surfaces by the faint quiver of empty seed plumes, and broken grass-blades trembling in small air-movements that they could not feel. -The Two Towers")
                 .WithOppositeText(
-@"Begin with the standard quest deck and encounter deck for the The Nîn-in-Eilph scenario.
+@"Begin with the standard quest deck and encounter deck for The Nîn-in-Eilph scenario.
 
 Remove the following cards, in the specified quantities, from the standard encounter deck:
 
