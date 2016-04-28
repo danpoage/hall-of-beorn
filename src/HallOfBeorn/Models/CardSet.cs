@@ -268,7 +268,7 @@ namespace HallOfBeorn.Models
         public static CardSet TheRoadDarkens = new Sets.TheRoadDarkens().WithShortSlug("2");
         public static CardSet TheTreasonOfSaruman = new Sets.TheTreasonOfSaruman().WithShortSlug("3");
         public static CardSet TheLandOfShadow = new Sets.TheLandOfShadow().WithShortSlug("4");
-        //Saga #5
+        public static CardSet TheFlameOfTheWest = new Sets.TheFlameOfTheWest().WithShortSlug("5");
         //Saga #6
 
         public static CardSet TheMassingAtOsgiliath = new Sets.TheMassingatOsgiliath();

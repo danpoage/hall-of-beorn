@@ -14,6 +14,7 @@ namespace HallOfBeorn.Models.ProductGroups
             AddProduct(Product.TheRoadDarkens);
             AddProduct(Product.TheTreasonOfSaruman);
             AddProduct(Product.TheLandOfShadow);
+            AddProduct(Product.TheFlameOfTheWest);
         }
     }
 }

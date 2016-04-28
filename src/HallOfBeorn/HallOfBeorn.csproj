@@ -297,6 +297,7 @@
     <Compile Include="Models\Products\TheBattleOfCarnDumProduct.cs" />
     <Compile Include="Models\Products\TheDreadRealmProduct.cs" />
     <Compile Include="Models\Products\TheDunlandTrapNightmareProduct.cs" />
+    <Compile Include="Models\Products\TheFlameOfTheWest.cs" />
     <Compile Include="Models\Products\TheGreyHavensProduct.cs" />
     <Compile Include="Models\Products\TheLandOfShadowProduct.cs" />
     <Compile Include="Models\Products\TheNinInEilphNightmareProduct.cs" />
@@ -532,6 +533,7 @@
     <Compile Include="Models\Sets\TheDreadRealm.cs" />
     <Compile Include="Models\Sets\TheDruadanForestNightmare.cs" />
     <Compile Include="Models\Sets\TheDunlandTrapNightmare.cs" />
+    <Compile Include="Models\Sets\TheFlameOfTheWest.cs" />
     <Compile Include="Models\Sets\TheFordsOfIsenNightmare.cs" />
     <Compile Include="Models\Sets\TheGreyHavens.cs" />
     <Compile Include="Models\Sets\TheLandOfShadow.cs" />
