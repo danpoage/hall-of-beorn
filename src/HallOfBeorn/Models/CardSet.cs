@@ -151,6 +151,7 @@ namespace HallOfBeorn.Models
             Add(TheRoadDarkens);
             Add(TheTreasonOfSaruman);
             Add(TheLandOfShadow);
+            Add(TheFlameOfTheWest);
 
             Add(TheMassingAtOsgiliath);
             Add(TheBattleOfLakeTown);
