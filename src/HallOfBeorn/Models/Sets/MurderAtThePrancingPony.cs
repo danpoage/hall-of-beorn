@@ -125,7 +125,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithVictoryPoints(5)
                 .WithInfo(13, 1, Artist.Dmitry_Prosvirnin));
             Cards.Add(Card.Treachery("Taken by Surprise", "", investigationSetName)
-                .WithText("Forced: When a player looks at any number of cards from the Investigation deck, if Taken by Surprise is among the looked at cards, shuffle the encounter discard pile into the encounter deck and discard cards until an enemy is discarded. Put the discarded enemy into play engaged with the first player. Then remove Take by Surprise from the game.")
+                .WithText("Forced: When a player looks at any number of cards from the Investigation deck, if Taken by Surprise is among the looked at cards, shuffle the encounter discard pile into the encounter deck and discard cards until an enemy is discarded. Put the discarded enemy into play engaged with the first player. Then remove Taken by Surprise from the game.")
                 .WithInfo(14, 2, Artist.Alvaro_Calvo_Escudero));
             Cards.Add(Card.Location("The Prancing Pony", "", setName, 2, 2)
                 .WithUnique()
@@ -155,6 +155,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Forced: When triggering the Investigate keyword on Old Warehouse, the first player must choose: either look at 2 additional card, or reduce each player's threat by 3.\r\nTravel: Reveal the top card of the encounter deck to travel here.")
                 .WithInfo(19, 3, Artist.Lutful_Valeriya_Romanovna));
             Cards.Add(Card.Location("Village Stable", "", setName, 3, 3)
+                .WithTraits("Bree.")
                 .WithKeywords("Investigate 1.")
                 .WithText("Response: After triggering the Investigate keyword on Village Stable, if the looked at card is a Suspect or a Hideout, add Village Stable to the victory display to add that card to the staging area.\r\nTravel: Each player discards 1 random card from his hand to travel here.")
                 .WithInfo(20, 2, Artist.Alvaro_Calvo_Escudero));
@@ -197,7 +198,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithInfo(28, 2, Artist.Tiziano_Baracchi));
             Cards.Add(Card.Treachery("Deadly Accusations", "", setName)
                 .WithText("When Revealed: Raise each player's threat by X, where X is 1 more than the Investigate value of the active location.")
-                .WithShadow("Shadow: Attacking enemy gets +1 Attack, where X is the Investigate value of the active location.")
+                .WithShadow("Shadow: Attacking enemy gets +X Attack, where X is the Investigate value of the active location.")
                 .WithInfo(29, 2, Artist.Dmitry_Prosvirnin));
         }
     }
