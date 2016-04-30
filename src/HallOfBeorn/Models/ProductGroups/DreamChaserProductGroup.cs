@@ -11,6 +11,7 @@ namespace HallOfBeorn.Models.ProductGroups
             : base("Dream-chaser Cycle")
         {
             MainProduct = Product.TheGreyHavens;
+            AddProduct(Product.FlightOfTheStormcaller);
         }
     }
 }

@@ -292,6 +292,7 @@
     <Compile Include="Models\Products\AmongTheOutlawsProduct.cs" />
     <Compile Include="Models\Products\CelebrimborsSecretNightmareProoduct.cs" />
     <Compile Include="Models\Products\EscapeFromMountGramProduct.cs" />
+    <Compile Include="Models\Products\FlightOfTheStormcaller.cs" />
     <Compile Include="Models\Products\MurderAtThePrancingPonyProduct.cs" />
     <Compile Include="Models\Products\TheAntleredCrownNightmareProduct.cs" />
     <Compile Include="Models\Products\TheBattleOfCarnDumProduct.cs" />
@@ -512,6 +513,7 @@
     <Compile Include="Models\Sets\EscapeFromMountGram.cs" />
     <Compile Include="Models\Sets\FliesAndSpidersNightmare.cs" />
     <Compile Include="Models\Sets\FlightFromMoriaNightmare.cs" />
+    <Compile Include="Models\Sets\FlightOfTheStormcaller.cs" />
     <Compile Include="Models\Sets\FlightToTheFordNightmare.cs" />
     <Compile Include="Models\Sets\FogOnTheBarrowDowns.cs" />
     <Compile Include="Models\Sets\FoundationsOfStone.cs" />

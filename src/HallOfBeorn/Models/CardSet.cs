@@ -143,6 +143,7 @@ namespace HallOfBeorn.Models
             Add(TheDreadRealm);
 
             Add(TheGreyHavens);
+            Add(FlightOfTheStormcaller);
 
             Add(TheHobbitOverHillAndUnderHill);
             Add(TheHobbitOnTheDoorstep);
@@ -261,6 +262,7 @@ namespace HallOfBeorn.Models
         public static CardSet TheDreadRealm = new Sets.TheDreadRealm().WithShortSlug("I");
 
         public static CardSet TheGreyHavens = new Sets.TheGreyHavens().WithShortSlug("J");
+        public static CardSet FlightOfTheStormcaller = new Sets.FlightOfTheStormcaller().WithShortSlug("K");
 
         public static CardSet TheHobbitOverHillAndUnderHill = new Sets.TheHobbitOverHillandUnderHill().WithShortSlug("Y");
         public static CardSet TheHobbitOnTheDoorstep = new Sets.TheHobbitOntheDoorstep().WithShortSlug("Z");
