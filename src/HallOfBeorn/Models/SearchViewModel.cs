@@ -224,6 +224,23 @@ namespace HallOfBeorn.Models
         [Display(Name="Player Category")]
         public string Category { get; set; }
 
+        [Display(Name="Player Card Popularity")]
+        public string Popularity { get; set; }
+
+        [Display(Name = "Popularity Operator")]
+        public NumericOperator? PopularityOp { get; set; }
+
+        public static IEnumerable<SelectListItem> PopularityValues
+        {
+            get
+            {
+                return new List<byte>()
+                {
+                    1, 2, 3, 4, 5
+                }.GetSelectListItems();
+            }
+        }
+
         public string ItemWidth()
         {
             if (this.View.HasValue && View == Models.View.Card_Image)

@@ -63,6 +63,10 @@
         return true;
     }
 
+    if ($('#Popularity').val() != 'Any') {
+        return true;
+    }
+
     return false;
 }
 

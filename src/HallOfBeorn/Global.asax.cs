@@ -49,7 +49,7 @@ namespace HallOfBeorn
             var advancedSearchService = new AdvancedSearchService();
             var sortService = new SearchSortService(ringsDbService);
             
-            var searchService = new SearchService(productRepository, cardRepository, scenarioService, advancedSearchService, sortService);
+            var searchService = new SearchService(productRepository, cardRepository, scenarioService, advancedSearchService, sortService, ringsDbService);
             System.Web.HttpContext.Current.Application[Extensions.SearchServiceKey] = searchService;
 
             var statService = new StatService(cardRepository);

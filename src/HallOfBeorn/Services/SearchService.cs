@@ -13,7 +13,7 @@ namespace HallOfBeorn.Services
 {
     public class SearchService
     {
-        public SearchService(ProductRepository productRepository, CardRepository cardRepository, ScenarioService scenarioService, AdvancedSearchService advancedSearchService, SearchSortService sortService)
+        public SearchService(ProductRepository productRepository, CardRepository cardRepository, ScenarioService scenarioService, AdvancedSearchService advancedSearchService, SearchSortService sortService, RingsDbService ringsDbService)
         {
             this.productRepository = productRepository;
             this.cardRepository = cardRepository;
@@ -21,6 +21,8 @@ namespace HallOfBeorn.Services
             this.advancedSearchService = advancedSearchService;
             this.sortService = sortService;
             this.cards = cardRepository.Cards();
+            this.ringsDbService = ringsDbService;
+            this.getPopularity = (slug) => { return ringsDbService.GetPopularity(slug); };
         }
 
         private readonly ProductRepository productRepository;
@@ -29,6 +31,8 @@ namespace HallOfBeorn.Services
         private readonly AdvancedSearchService advancedSearchService;
         private readonly SearchSortService sortService;
         private readonly IEnumerable<Card> cards;
+        private readonly RingsDbService ringsDbService;
+        private readonly Func<string, byte> getPopularity;
 
         private bool BelongsToScenario(Card card, string scenarioTitle)
         {
@@ -501,6 +505,11 @@ namespace HallOfBeorn.Services
                 {
                     filters.Add(new SearchFilter((s, c) => { return c.QuestPoints.HasValue && c.QuestPoints.Value != byte.MaxValue && c.IsVariableQuestPoints; }, 100, "Quest Points are 'X'"));
                 }
+            }
+
+            if (model.Popularity.IsDefinedFilter())
+            {
+                filters.Add(new SearchFilter((s, c) => { var pop = c.Popularity(getPopularity);  return pop > 0 && pop.CompareTo(s.PopularityOp, s.Popularity); }, 100, "Popularity " + model.PopularityOp.ToEnumDisplayString() + " '" + model.Popularity + "'"));
             }
 
             if (model.HasThreatCost())

@@ -215,6 +215,12 @@
                 <span class="search-label-short">Artist</span>
                 @Html.DropDownListFor(x => x.Artist, SearchViewModel.Artists, new { @class = "search-select" })
                 </span>
+
+                <span class="search-filter">
+                <span class="search-label-short">Popularity</span>
+                @Html.DropDownListFor(x => x.PopularityOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+                @Html.DropDownListFor(x => x.Popularity, SearchViewModel.PopularityValues, new { @class = "search-select-short" })
+                </span>
             </div>
         </div>
 

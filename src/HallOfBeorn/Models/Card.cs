@@ -1294,7 +1294,7 @@ namespace HallOfBeorn.Models
             return this;
         }
 
-        public int Popularity(Func<string, byte> lookup)
+        public byte? Popularity(Func<string, byte> lookup)
         {
             return lookup(this.Slug);
         }
