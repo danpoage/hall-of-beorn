@@ -745,6 +745,11 @@ namespace HallOfBeorn.Controllers
                 model.QuestPoints = null;
                 model.QuestPointsOp = null;
             }
+            if (model.PopularityOp.HasValue && model.PopularityOp == NumericOperator.eq && (string.IsNullOrEmpty(model.Popularity) || model.Popularity == "Any" || model.Popularity == "-1"))
+            {
+                model.Popularity = null;
+                model.PopularityOp = null;
+            }
 
             if (model.MEC01.HasValue && !model.MEC01.Value)
             {
