@@ -33,7 +33,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithInfo(3, 3, Artist.Jason_Cheeseman_Meyer));
             Cards.Add(Card.Ally("Azain Silverbeard", "", Sphere.Tactics, 3, 0, 3, 2, 2)
                 .WithTraits("Dwarf.", "Warrior.")
-                .WithText("Response: After Azain Silverbeard participates in an attack that destroys and enemy, spend 1 Tactics resource to deal 2 damage to another enemy that shares a Trait with the destroyed enemy. Any player may trigger this response.")
+                .WithText("Response: After Azain Silverbeard participates in an attack that destroys an enemy, spend 1 Tactics resource to deal 2 damage to another enemy that shares a Trait with the destroyed enemy. Any player may trigger this response.")
                 .WithInfo(4, 3, Artist.Unknown));
             Cards.Add(Card.Event("Last Stand", "", Sphere.Tactics, 0)
                 .WithText("Response: After a Warrior character is destroyed while defending against an enemy attack, deal damage to the attacking enemy equal to that character's printed Attack.")
