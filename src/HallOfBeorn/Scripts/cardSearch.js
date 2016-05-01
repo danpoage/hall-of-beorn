@@ -249,6 +249,8 @@ $(document).ready(function () {
         $('#QuestCategory').val('Any');
 
         $('#Artist').val('Any');
+        $('#PopularityOp').val('=');
+        $('#Popularity').val('Any');
 
         clearProductCodes();
     });
