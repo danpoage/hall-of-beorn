@@ -512,6 +512,9 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Sara_Winters);
             all.Add(Artist.Nele_Klumpe);
 
+            //Flight of the Stormcaller
+            all.Add(Artist.Nikolas_Hagialas);
+
             //Murder at the Prancing Pony
             all.Add(Artist.Lutful_Valeriya_Romanovna);
             all.Add(Artist.Micah_Epstein);
@@ -910,6 +913,7 @@ namespace HallOfBeorn.Models
         public static Artist Nicholas_Gregory = new Artist { Name = "Nicholas Gregory", URL = "https://www.google.com/search?q=nicholas+gregory+fantasy+art" };
         public static Artist Nick_Deligaris = new Artist { Name = "Nick Deligaris", URL = "http://deligaris.deviantart.com" };
         public static Artist Nikolay_Stoyanov = new Artist { Name = "Nikolay Stoyanov", URL = "http://nstoyanov.deviantart.com" };
+        public static Artist Nikolas_Hagialas = new Artist { Name = "Nikolas Hagialas", URL = "http://www.nikhagialas.daportfolio.com" };
         public static Artist Niten = new Artist { Name = "Niten", URL = "http://www.niten.es" };
         public static Artist Noah_Bradley = new Artist { Name = "Noah Bradley", URL = "http://noahbradley.deviantart.com" };
         public static Artist Nora_Brisotti = new Artist { Name = "Nora Brisotti", URL = "http://noranimator.deviantart.com" };
