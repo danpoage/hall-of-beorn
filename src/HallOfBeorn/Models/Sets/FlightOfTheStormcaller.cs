@@ -33,7 +33,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithInfo(3, 3, Artist.Jason_Cheeseman_Meyer));
             Cards.Add(Card.Ally("Azain Silverbeard", "", Sphere.Tactics, 3, 0, 3, 2, 2)
                 .WithTraits("Dwarf.", "Warrior.")
-                .WithText("Response: After Azain Silverbeard participates in an attack that destroys and enemy, spend 1 Tactics resource to deal 2 damage to another enemy that shares a Trait with the destroyed enemy. Any player may trigger this response.")
+                .WithText("Response: After Azain Silverbeard participates in an attack that destroys an enemy, spend 1 Tactics resource to deal 2 damage to another enemy that shares a Trait with the destroyed enemy. Any player may trigger this response.")
                 .WithInfo(4, 3, Artist.Unknown));
             Cards.Add(Card.Event("Last Stand", "", Sphere.Tactics, 0)
                 .WithText("Response: After a Warrior character is destroyed while defending against an enemy attack, deal damage to the attacking enemy equal to that character's printed Attack.")
@@ -41,7 +41,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithInfo(5, 3, Artist.Arden_Beckwith));
             Cards.Add(Card.Ally("Glorfindel", "", Sphere.Spirit, 5, 3, 3, 1, 4)
                 .WithTraits("Noldor.", "Noble.", "Warrior.")
-                .WithText("Glorfindel can be played from your discard pile.\r\nAction: Discard a card to ready Glorfindel. (Limit once per phase.)")
+                .WithText("Glorfindel can be played from your discard pile.\r\nAction: Discard a card from your hand to ready Glorfindel. (Limit once per phase.)")
                 .WithFlavor("\"Glorfindel is an Elf-lord of a house of princes.\"\r\n-Gandalf, The Fellowship of the Ring")
                 .WithInfo(6, 3, Artist.Aleksander_Karcz));
             Cards.Add(Card.Event("Tides of Fate", "", Sphere.Spirit, 0)
