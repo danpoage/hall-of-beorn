@@ -114,7 +114,7 @@ namespace HallOfBeorn.Models.Sets
                 Traits = new List<string>() { "Noble.", "Silvan.", "Warrior." },
                 Text = "Response: After Legolas participates in an attack that destroys an enemy, place 2 progress tokens on the current quest.",
                 FlavorText = "\"I can walk this path, but others have not this skill.\"\r\n-The Fellowship of the Ring",
-                HtmlTemplate = "<p><b>Response:</b> After {self} participates in an attack that destroys an enemy, place 2 progress tokens on the current quest.</p><p class='flavor-text'>&quot;I can walk this path, but others have not this skill.&quot;<br>&ndash;The Fellowship of the Ring</p>",
+                //HtmlTemplate = "<p><b>Response:</b> After {self} participates in an attack that destroys an enemy, place 2 progress tokens on the current quest.</p><p class='flavor-text'>&quot;I can walk this path, but others have not this skill.&quot;<br>&ndash;The Fellowship of the Ring</p>",
                 Keywords = new List<string>() { "Ranged." },
                 Quantity = 1,
                 Number = 5,
@@ -952,7 +952,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Traits = new List<string>() { "Condition." },
                 Text = "Attach to a location.\r\nAttached location gets -1 Threat.",
                 FlavorText = "\"Power to defy our Enemy is not in him, unless shuch power is in the earth itself.\" -Gandalf, The Fellowship of the Ring",
-                HtmlTemplate = "<p>Attach to a location.</p><p>Attached location gets -1 {Threat}.</p><p class='flavor-text'>&quot;Power to defy our Enemy is not in him, unless shuch power is in the earth itself.&quot;<br>&ndash;Gandalf, The Fellowship of the Ring</p>",
+                HtmlTemplate = "<p>Attach to a location.</p><p>Attached location gets -1 {Threat}.</p><p class='flavor-text'>&quot;Power to defy our Enemy is not in him, unless such power is in the earth itself.&quot;<br>&ndash;Gandalf, The Fellowship of the Ring</p>",
                 Quantity = 2,
                 Number = 56,
                 Artist = Artist.Soul_Core
