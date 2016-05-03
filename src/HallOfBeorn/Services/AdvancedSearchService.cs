@@ -139,6 +139,9 @@ namespace HallOfBeorn.Services
                 case "artist":
                     predicate = (score) => { return names.Any(y => (score.Card.Artist != null && score.Card.Artist.Name.MatchesWildcard(y)) || (score.Card.SecondArtist != null && score.Card.SecondArtist.Name.MatchesWildcard(y))); };
                     break;
+                case "shadow":
+                    predicate = (score) => { return names.Any(y => (!string.IsNullOrEmpty(score.Card.Shadow) && score.Card.Shadow.ContainsLower(y))); };
+                    break;
                 default:
                     break;
             }
@@ -309,6 +312,9 @@ namespace HallOfBeorn.Services
                         break;
                     case "saga":
                         results = FilterByBool(field, results, negate);
+                        break;
+                    case "shadow":
+                        results = FilterByString(field, value, results, negate);
                         break;
                     /*
                     case "custom":
