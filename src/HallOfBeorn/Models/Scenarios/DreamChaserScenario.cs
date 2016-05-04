@@ -32,7 +32,7 @@ namespace HallOfBeorn.Models.Scenarios
 
         protected void ExcludeCorsairPiratesFromEasyMode()
         {
-            ExcludeFromEasyMode("Umbar-Captain-THG", 2);
+            ExcludeFromEasyMode("Umbar-Captain-TGH", 2);
         }
 
         protected void ExcludeCorsairRaidersFromEasyMode()
