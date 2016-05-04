@@ -131,6 +131,7 @@ namespace HallOfBeorn.Models
             Add(UmbarFleet);
             Add(VastOceans);
             Add(VoyageAcrossBelegaer);
+            Add(FlightOfTheStormcaller);
 
             //The Hobbit: Over Hill and Under Hill
             Add(WeMustAwayEreBreakOfDay);
@@ -356,7 +357,8 @@ namespace HallOfBeorn.Models
         public static EncounterSet UmbarFleet = new EncounterSet { Name = "Umbar Fleet", Set = "The Grey Havens" };
         public static EncounterSet VastOceans = new EncounterSet { Name = "Vast Oceans", Set = "The Grey Havens" };
         public static EncounterSet VoyageAcrossBelegaer = new EncounterSet { Name = "Voyage Across Belegaer", Set = "The Grey Havens" };
-        
+        public static EncounterSet FlightOfTheStormcaller = new EncounterSet { Name = "Flight of the Stormcaller", Set = "Flight of the Stormcaller" };
+
         //The Hobbit: Over Hill and Under Hill
         public static EncounterSet WeMustAwayEreBreakOfDay = new EncounterSet { Name = "We Must Away, Ere Break of Day", Set = "The Hobbit: Over Hill and Under Hill" };
         public static EncounterSet WesternLands = new EncounterSet { Name = "Western Lands", Set = "The Hobbit: Over Hill and Under Hill" };

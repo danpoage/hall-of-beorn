@@ -7,9 +7,11 @@ namespace HallOfBeorn.Models.Sets
 {
     public class FlightOfTheStormcaller : CardSet
     {
+        private const string setName = "Flight of the Stormcaller";
+
         protected override void Initialize()
         {
-            Name = "Flight of the Stormcaller";
+            Name = setName;
             Abbreviation = "FotS";
             Number = 36;
             SetType = Models.SetType.Adventure_Pack;
@@ -67,6 +69,58 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Play only if you control 2 or fewer heroes.\r\nAction: Until the end of the phase, if your threat is higher than 20, treat your threat as if it is 20.")
                 .WithFlavor("\"I see now little hope, if we do not soon vanish from sight for a while, and cover our trail.\"\r\n-Gandalf, The Fellowship of the Ring")
                 .WithInfo(11, 3, Artist.Nikolas_Hagialas));
+
+            Cards.Add(Card.ShipEnemy("Stormcaller", setName, 50, 2, 6, 6, 18)
+                .WithUnique()
+                .WithTraits("Corsair.", "Ship.")
+                .WithKeywords("Boarding 2.")
+                .WithText("Cannot have attachments.\r\nWhen the Stormcaller advances to the next quest stage, return it to the Stormcaller's area.\r\nIf the Stormcaller leaves play, the players win the game.")
+                .WithInfo(19, 1, Artist.Davis_Engel));
+            Cards.Add(Card.ShipEnemy("Sahír's Escort", setName, 46, 2, 4, 3, 6)
+                .WithNormalizedTitle("Sahir's Escort")
+                .WithTraits("Corsair.", "Ship.")
+                .WithKeywords("Boarding 1.")
+                .WithText("Cannot have attachments.\r\nWhile Sahír's Escort is in the Stormcaller’s area, it contributes its Threat to the amount of progress the Stormcaller places on its quest stage each round.\r\nWhen Revealed: Add Sahír’s Escort to the Stormcaller’s area, instead of the players’ staging area.")
+                .WithInfo(20, 3, Artist.Mariusz_Gandzel));
+            Cards.Add(Card.ShipEnemy("Swift Raider", setName, 38, 3, 5, 4, 8)
+                .WithTraits("Cosair.", "Ship.")
+                .WithKeywords("Boarding 2.")
+                .WithText("Cannot have attachments.\r\nWhile Swift Raider is in the staging area, it gains: “Forced: After a player commits 4 or more characters to a Sailing test or to the quest, Swift Raider engages that player.”")
+                .WithInfo(21, 2, Artist.Michael_Rasmussen));
+            Cards.Add(Card.ShipEnemy("Corsair Skiff", setName, 24, 1, 2, 2, 5)
+                .WithTraits("Corsair.", "Ship.")
+                .WithKeywords("Surge.")
+                .WithText("Cannot have attachments.\r\nForced: When Corsair Skiff engages you from the staging area, either raise your threat by 3 or it gains Boarding 1.")
+                .WithInfo(22, 2, Artist.Michael_Rasmussen));
+            Cards.Add(Card.Enemy("Corsair Seafarer", "", setName, 26, 2, 2, 2, 3)
+                .WithTraits("Corsair.", "Raider.")
+                .WithText("Corsair Seafarer gets +1 Attack for each resource on it.\r\nForced: After the engaged player commits a hero to a Sailing test or to a quest, move 1 resource from that hero's resource pool to Corsair Seafarer.")
+                .WithInfo(23, 2, Artist.Adam_Lane));
+            Cards.Add(Card.Enemy("Serpent's Blade", "", setName, 10, 3, 3, 3, 4)
+                .WithTraits("Corsair.")
+                .WithText("Forced: When the Stormcaller advances to the next quest stage, Serpent's Blade makes an immediate attack against the engaged player.")
+                .WithInfo(24, 2, Artist.Lukasz_Jaskolski));
+            Cards.Add(Card.Location("Jagged Reef", "", setName, 1, 4)
+                .WithKeywords("Surge.")
+                .WithText("Forced: At the beginning of the travel phase, if you are on-course (Sunny), place 2 progress on Jagged Reef. If you are off-course (Cloudy, Rainy, or Stormy), deal 2 damage to each Ship objective instead.")
+                .WithInfo(25, 2, Artist.Trudi_Castle));
+            Cards.Add(Card.Location("Hidden Cove", "", setName, 3, 3)
+                .WithTraits("Coastland.", "Ocean.")
+                .WithText("Travel: Move 2 progress from the main quest to the Stormcaller's quest stage.\r\nResponse: After Hidden Cove becomes the active location, heal 4 damage from each Ship objective.")
+                .WithInfo(26, 2, Artist.Simon_Dominic));
+            Cards.Add(Card.Location("Vast Coastland", "", setName, 6, 4)
+                .WithTraits("Coastland.", "Ocean.")
+                .WithText("When Revealed: Add Vast Coastland to the Stormcaller’s area.")
+                .WithShadow("Shadow: Attacking enemy gets +2 Attack if you are at the same stage as The Stormcaller.")
+                .WithInfo(27, 2, Artist.Katy_Grierson));
+            Cards.Add(Card.Treachery("Man Overboard!", "", setName)
+                .WithText("When Revealed: Each player contributing at least 8 Willpower to the quest must discard a questing character. If your heading is at the worst setting (Stormy), this effect cannot be canceled.")
+                .WithShadow("Shadow: Attacking enemy gets +X Attack, where X is The Stormcaller's current quest stage.")
+                .WithInfo(28, 2, Artist.Leanna_Teneycke));
+            Cards.Add(Card.Treachery("Raging Squall", "", setName)
+                .WithKeywords("Doomed 2.")
+                .WithText("When Revealed: Attach Raging Squall to the current quest. (Counts as a Condition attachment with the text: “Forced: After an ally is committed to the quest, deal 1 damage to that ally if you are off-course.”)")
+                .WithInfo(29, 2, Artist.Lukasz_Jaskolski));
         }
     }
 }
