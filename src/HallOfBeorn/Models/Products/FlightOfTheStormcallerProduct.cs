@@ -5,12 +5,14 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Products
 {
-    public class FlightOfTheStormcaller : Product
+    public class FlightOfTheStormcallerProduct : Product
     {
-        public FlightOfTheStormcaller()
+        public FlightOfTheStormcallerProduct()
             : base("Flight of the Stormcaller", "MEC48", ImageType.Jpg)
         {
             AddCardSet(CardSet.FlightOfTheStormcaller);
+
+            AddScenario(new Scenarios.FlightOfTheStormcaller());
         }
     }
 }

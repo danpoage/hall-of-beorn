@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.Sets
             Abbreviation = "FotS";
             Number = 36;
             SetType = Models.SetType.Adventure_Pack;
+            Cycle = "Dream-chaser";
 
             Cards.Add(Card.Hero("Denethor", "", Sphere.Leadership, 8, 1, 1, 3, 3)
                 .WithTraits("Gondor.", "Noble.", "Steward.")
@@ -69,7 +70,55 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Play only if you control 2 or fewer heroes.\r\nAction: Until the end of the phase, if your threat is higher than 20, treat your threat as if it is 20.")
                 .WithFlavor("\"I see now little hope, if we do not soon vanish from sight for a while, and cover our trail.\"\r\n-Gandalf, The Fellowship of the Ring")
                 .WithInfo(11, 3, Artist.Nikolas_Hagialas));
-
+            Cards.Add(Card.Quest("Swift Departure", "", 4, 1, setName, 8)
+                .WithFlavor("Corsairs led by the treacherous Captain Sahír have stolen the black key you recovered in the ruins of Númenor. You must get it back!")
+                .WithText("Setup: Prepare the Corsair deck. Players prepare their fleet. Prepare the Stormcaller’s area with a second quest deck consisting of only stages 2C, 3C, and 4C, as well as the Stormcaller (see insert). Search the encounter deck for 1 copy of Rolling Seas, and add it to the staging area (2 copies instead if there are 3 or more players in the game). Shuffle the encounter deck.")
+                .WithKeywords("Sailing.")
+                .WithOppositeText("Forced: At the end of the quest phase, if you are off-course (Cloudy, Rainy, or Stormy), move 2 progress from Swift Departure to the Stormcaller's quest stage.")
+                .WithIncludedEncounterSets(EncounterSet.VastOceans, EncounterSet.CorsairPirates, EncounterSet.StormyWeather, EncounterSet.TheDreamChasersFleet)
+                .WithInfo(12, 1, Artist.Sara_Winters));
+            Cards.Add(Card.Quest("Full Sail Ahead", "", 4, 2, setName, 12)
+                .WithSuffix("AB")
+                .WithFlavor("As you travel along the western coast of Middle-earth, Corsairs continue to harry your fleet in an attempt to slow your progress.")
+                .WithText("When Revealed: Search the encounter deck and discard pile for 1 copy of Swift ~Raider and add it to the staging area. Shuffle the encounter deck.")
+                .WithKeywords("Sailing.")
+                .WithOppositeText("No more than 8 progress can be placed here each round. If you are off-course (Cloudy, Rainy, or Stormy), no more than 4 progress can be placed here each round instead.\r\nWhen you defeat this stage, if the Stormcaller is at stage 2, you have caught up to the Stormcaller and win the game. Otherwise, advance to the next stage.")
+                .WithIncludedEncounterSets(EncounterSet.VastOceans, EncounterSet.CorsairPirates, EncounterSet.StormyWeather, EncounterSet.TheDreamChasersFleet)
+                .WithInfo(13, 1, Artist.Nicholas_Gregory));
+            Cards.Add(Card.Quest("The Weather Turns Foul", "", 4, 3, setName, 18)
+                .WithSuffix("AB")
+                .WithFlavor("As your voyage continues, the skies darken and the rain becomes relentless. Storm clouds on the horizon flash with lightning, and unpredictable wind makes setting a course difficult.")
+                .WithOppositeText("Forced: At the end of the staging step, if you are off-course (󲂒, 󲂓, or 󲂔), reveal an additional encounter card from the top of the encounter deck.\r\nWhen you defeat this stage, if the Stormcaller is still at stage 3, you have caught up to the Stormcaller and win the game. Otherwise, advance to the next stage.")
+                .WithKeywords("Sailing.")
+                .WithIncludedEncounterSets(EncounterSet.VastOceans, EncounterSet.CorsairPirates, EncounterSet.StormyWeather, EncounterSet.TheDreamChasersFleet)
+                .WithInfo(14, 1, Artist.Nicholas_Gregory));
+            Cards.Add(Card.Quest("The Cape of Andrast", "", 4, 4, setName, 24)
+                .WithSuffix("AB")
+                .WithFlavor("You’ve pursued the Stormcaller all the way to the deadly Cape of Andrast, where terrible winds and sharp jetties threaten to tear apart your entire fleet.")
+                .WithText("When Revealed: Discard cards from the top of the encounter deck until a Weather treachery is discarded. Resolve that card’s “when revealed” effect. That effect cannot be canceled.")
+                .WithKeywords("Sailing.")
+                .WithOppositeText("Forced: After a Weather treachery is revealed, deal 1 damage to each Ship objective and Ship enemy at this stage.\r\nIf you defeat this stage, you have caught up to the Stormcaller and win the game.")
+                .WithIncludedEncounterSets(EncounterSet.VastOceans, EncounterSet.CorsairPirates, EncounterSet.StormyWeather, EncounterSet.TheDreamChasersFleet)
+                .WithInfo(15, 1, Artist.Nicholas_Gregory));
+            Cards.Add(Card.Quest("Full Sail Ahead", "", 4, 2, setName, 12, 'C')
+                .WithSuffix("CD")
+                .WithFlavor("The Stormcaller is the pride of the Corsair fleet, swift as the wind and nigh-unsinkable. It won’t be an easy quarry to chase.")
+                .WithOppositeText("If the players are off-course (Cloudy, Rainy, or Stormy), the Stormcaller gets +2 Threat.\r\nNo more than 4 damage may be placed on the Stormcaller each round.\r\nForced: At the end of the round, discard the top card of the encounter deck. the Stormcaller places progress on this stage equal to its Threat plus the Threat of the discarded card.")
+                .WithIncludedEncounterSets(EncounterSet.VastOceans, EncounterSet.CorsairPirates, EncounterSet.StormyWeather, EncounterSet.TheDreamChasersFleet)
+                .WithInfo(16, 1, Artist.Nicholas_Gregory));
+            Cards.Add(Card.Quest("The Weather Turns Foul", "", 4, 3, setName, 18, 'C')
+                .WithSuffix("CD")
+                .WithFlavor("Aided by other Corsair ships, the Stormcaller slips out of sight, heading into the dark clouds on the southern horizon.")
+                .WithText("When Revealed: Search the encounter deck and discard pile for 1 copy of Sahír's Escort and add it to the Stormcaller's area. Shuffle the encounter deck.")
+                .WithOppositeText("If the players are off-course (Cloudy, Rainy, or Stormy), the Stormcaller gets +2 Threat.\r\nNo more than 8 damage may be placed on the Stormcaller each round.\r\nForced: At the end of the round, discard the top card of the encounter deck. the Stormcaller places progress on this stage equal to its Threat plus the Threat of the discarded card.")
+                .WithIncludedEncounterSets(EncounterSet.VastOceans, EncounterSet.CorsairPirates, EncounterSet.StormyWeather, EncounterSet.TheDreamChasersFleet)
+                .WithInfo(17, 1, Artist.Nicholas_Gregory));
+            Cards.Add(Card.Quest("The Cape of Andrast", "", 4, 4, setName, 24, 'C')
+                .WithSuffix("CD")
+                .WithFlavor("The Stormcaller once again slips out of your grasp, rounding the Cape of Andrast to the south.")
+                .WithOppositeText("Forced: At the end of the round, discard the top card of the encounter deck. the Stormcaller places progress on this stage equal to its Threat plus the Threat of the discarded card.\r\nIf the Stormcaller defeats this stage, Captain Sahír has gotten away with the key, and the players lose the game.")
+                .WithIncludedEncounterSets(EncounterSet.VastOceans, EncounterSet.CorsairPirates, EncounterSet.StormyWeather, EncounterSet.TheDreamChasersFleet)
+                .WithInfo(18, 1, Artist.Nicholas_Gregory));
             Cards.Add(Card.ShipEnemy("Stormcaller", setName, 50, 2, 6, 6, 18)
                 .WithUnique()
                 .WithTraits("Corsair.", "Ship.")

@@ -222,8 +222,18 @@ namespace HallOfBeorn.Models
         {
             get
             {
-                return !string.IsNullOrEmpty(OppositeTitle) ?
-                    string.Format("{0} ({1})", Title, OppositeTitle)
+                var subtitle = string.Empty;
+                if (!string.IsNullOrEmpty(OppositeTitle))
+                {
+                    subtitle = OppositeTitle;
+                }
+                else if (!string.IsNullOrEmpty(_card.Suffix))
+                {
+                    subtitle = _card.Suffix;
+                }
+
+                return !string.IsNullOrEmpty(subtitle) ?
+                    string.Format("{0} ({1})", Title, subtitle)
                     : Title;
             }
         }

@@ -425,6 +425,9 @@ function loadCharts() {
     $.get("/Cards/ScenarioTotals?id=The+Lost+Realm,Angmar+Awakened").success(function (data) {
         loadTotals('#tlrTotalsContainer', 'The Lost Realm and Angmar Awakened', data);
     });
+    $.get("/Cards/ScenarioTotals?id=The+Grey+Havens,Dream-chaser").success(function (data) {
+        loadTotals('#tghTotalsContainer', 'The Grey Havens and Dream-chaser', data);
+    });
     $.get("/Cards/ScenarioTotals?id=The+Hobbit").success(function (data) {
         loadTotals('#hobbitTotalsContainer', 'The Hobbit', data);
     });

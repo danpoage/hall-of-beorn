@@ -112,7 +112,7 @@ namespace HallOfBeorn.Models
 
         //The Grey Havens and Dream-chaser Cycle
         public static Product TheGreyHavens = new TheGreyHavensProduct();
-        public static Product FlightOfTheStormcaller = new FlightOfTheStormcaller();
+        public static Product FlightOfTheStormcaller = new FlightOfTheStormcallerProduct();
 
         //The Hobbit Saga
         public static Product TheHobbitOverHillAndUnderHill = new TheHobbitOverHillAndUnderHillProduct();
