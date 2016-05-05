@@ -297,6 +297,7 @@
     <Compile Include="Models\Products\TheAntleredCrownNightmareProduct.cs" />
     <Compile Include="Models\Products\TheBattleOfCarnDumProduct.cs" />
     <Compile Include="Models\Products\TheDreadRealmProduct.cs" />
+    <Compile Include="Models\Products\TheDrownedRuinsProduct.cs" />
     <Compile Include="Models\Products\TheDunlandTrapNightmareProduct.cs" />
     <Compile Include="Models\Products\TheFlameOfTheWest.cs" />
     <Compile Include="Models\Products\TheGreyHavensProduct.cs" />
@@ -304,6 +305,7 @@
     <Compile Include="Models\Products\TheNinInEilphNightmareProduct.cs" />
     <Compile Include="Models\Products\TheRoadDarkensNightmareProduct.cs" />
     <Compile Include="Models\Products\TheRuinsOfBelegostProduct.cs" />
+    <Compile Include="Models\Products\TheThingInTheDepthsProduct.cs" />
     <Compile Include="Models\Products\TheThreeTrialsNightmareProduct.cs" />
     <Compile Include="Models\Products\TheVoiceOfIsengardNightmareProduct.cs" />
     <Compile Include="Models\Products\TheTreacheryOfRhudaurProduct.cs" />
@@ -534,6 +536,7 @@
     <Compile Include="Models\Sets\TheBattleOfFiveArmiesNightmare.cs" />
     <Compile Include="Models\Sets\TheBloodOfGondorNightmare.cs" />
     <Compile Include="Models\Sets\TheDreadRealm.cs" />
+    <Compile Include="Models\Sets\TheDrownedRuins.cs" />
     <Compile Include="Models\Sets\TheDruadanForestNightmare.cs" />
     <Compile Include="Models\Sets\TheDunlandTrapNightmare.cs" />
     <Compile Include="Models\Sets\TheFlameOfTheWest.cs" />
@@ -581,6 +584,7 @@
     <Compile Include="Models\Sets\TheStewardsFear.cs" />
     <Compile Include="Models\Sets\TheStewardsFearNightmare.cs" />
     <Compile Include="Models\Sets\TheStoneOfErech.cs" />
+    <Compile Include="Models\Sets\TheThingInTheDepths.cs" />
     <Compile Include="Models\Sets\TheThreeTrials.cs" />
     <Compile Include="Models\Sets\TheThreeTrialsNightmare.cs" />
     <Compile Include="Models\Sets\TheTreasonOfSaruman.cs" />

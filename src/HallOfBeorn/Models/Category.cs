@@ -40,6 +40,7 @@ namespace HallOfBeorn.Models
         Victory_Display,
         Discard_From_Hand,
         Discard_Pile,
-        Quest_Control
+        Quest_Control,
+        Two_Or_Fewer_Heroes
     }
 }

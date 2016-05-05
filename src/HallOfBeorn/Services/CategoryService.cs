@@ -339,12 +339,13 @@ namespace HallOfBeorn.Services
                 CreateCategoryFilter(@"(after[\s].*[\s]leaves[\s]play|return (it|him|Keen-eyed Took) to your hand)|if that ally is still in play, add it to your hand", Category.Leaves_Play, "After attached location leaves play"),
                 CreateCategoryFilter(@"(after[\s]you[\s]play[\s].*[\s]from[\s]your[\s]hand|after you play)", Category.Played_From_Hand),
                 CreateCategoryFilter(@"attach 1 attachment card|an attachment of cost 3 or less and put it into play|you may attach that card facedown|to play Weapon and Armor attachments on|put into play the revealed card for no cost", Category.Equipping),
-                CreateCategoryFilter((card) => { return card.Keywords.Any(x => x.StartsWith("Secrecy ")) || card.Text.ToLowerSafe().Contains("if your threat is 20 or less") || card.Text.ToLowerSafe().Contains("gains secrecy"); }, Category.Secrecy),
+                CreateCategoryFilter((card) => { return card.Keywords.Any(x => x.StartsWith("Secrecy ")) || card.Text.ToLowerSafe().Contains("if your threat is 20 or less") || card.Text.ToLowerSafe().Contains("gains secrecy") || card.Text.ToLowerSafe().Contains("treat your threat as if it is 20"); }, Category.Secrecy),
                 CreateCategoryFilter("enemy.*engagement cost.*than your threat", Category.Surprise),
                 CreateCategoryFilter((card) => { return card.Text.ToLowerSafe().Contains("victory display") && card.VictoryPoints == 0; }, Category.Victory_Display),
                 CreateCategoryFilter("(discard (a|1|2|all|X) (card|cards) (from|in) your hand|discarded from your hand|discard (1 of those|any number of) cards)", Category.Discard_From_Hand),
                 CreateCategoryFilter("discard pile", Category.Discard_Pile, "encounter deck and discard pile"),
-                CreateCategoryFilter("(commit .* to|remove it from) the quest", Category.Quest_Control)
+                CreateCategoryFilter("(commit .* to|remove it from) the quest", Category.Quest_Control),
+                CreateCategoryFilter("(two|2) or fewer heroes", Category.Two_Or_Fewer_Heroes)
             };
 
             foreach (var card in cards.Where(x => IsCategorizable(x)))

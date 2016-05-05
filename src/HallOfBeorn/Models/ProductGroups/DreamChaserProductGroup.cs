@@ -12,6 +12,8 @@ namespace HallOfBeorn.Models.ProductGroups
         {
             MainProduct = Product.TheGreyHavens;
             AddProduct(Product.FlightOfTheStormcaller);
+            AddProduct(Product.TheThingInTheDepths);
+            AddProduct(Product.TheDrownedRuins);
         }
     }
 }
