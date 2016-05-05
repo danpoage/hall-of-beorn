@@ -888,7 +888,7 @@ namespace HallOfBeorn.Models
 
         public bool HasSphere
         {
-            get { return _card.Sphere == Models.Sphere.Leadership || _card.Sphere == Models.Sphere.Tactics || _card.Sphere == Models.Sphere.Spirit || _card.Sphere == Models.Sphere.Lore || _card.Sphere == Models.Sphere.Mastery; }
+            get { return _card.Sphere == Models.Sphere.Leadership || _card.Sphere == Models.Sphere.Tactics || _card.Sphere == Models.Sphere.Spirit || _card.Sphere == Models.Sphere.Lore || _card.Sphere == Models.Sphere.Mastery || _card.Sphere == Models.Sphere.Fellowship; }
         }
 
         public bool HasEncounterSet
