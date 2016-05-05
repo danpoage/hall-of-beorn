@@ -145,6 +145,7 @@ namespace HallOfBeorn.Models
             Add(TheGreyHavens);
             Add(FlightOfTheStormcaller);
             Add(TheThingInTheDepths);
+            Add(TempleOfTheDeceived);
             Add(TheDrownedRuins);
 
             Add(TheHobbitOverHillAndUnderHill);
@@ -266,6 +267,7 @@ namespace HallOfBeorn.Models
         public static CardSet TheGreyHavens = new Sets.TheGreyHavens().WithShortSlug("J");
         public static CardSet FlightOfTheStormcaller = new Sets.FlightOfTheStormcaller().WithShortSlug("K");
         public static CardSet TheThingInTheDepths = new Sets.TheThingInTheDepths().WithShortSlug("L");
+        public static CardSet TempleOfTheDeceived = new Sets.TempleOfTheDeceived().WithShortSlug("M");
         public static CardSet TheDrownedRuins = new Sets.TheDrownedRuins().WithShortSlug("N");
 
         public static CardSet TheHobbitOverHillAndUnderHill = new Sets.TheHobbitOverHillandUnderHill().WithShortSlug("Y");

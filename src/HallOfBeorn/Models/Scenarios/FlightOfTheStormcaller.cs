@@ -31,6 +31,12 @@ namespace HallOfBeorn.Models.Scenarios
             ExcludeVastOceansFromEasyMode();
             ExcludeStormyWeatherFromEasyMode();
             ExcludeCorsairPiratesFromEasyMode();
+
+            ExcludeFromEasyMode("Sahir's-Escort-FotS", 1);
+            ExcludeFromEasyMode("Swift-Raider-FotS", 1);
+            ExcludeFromEasyMode("Serpent's-Blade-FotS", 1);
+            ExcludeFromEasyMode("Vast-Coastland-FotS", 1);
+            ExcludeFromEasyMode("Raging-Squall-FotS", 1);
         }
     }
 }

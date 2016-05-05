@@ -294,6 +294,7 @@
     <Compile Include="Models\Products\EscapeFromMountGramProduct.cs" />
     <Compile Include="Models\Products\FlightOfTheStormcallerProduct.cs" />
     <Compile Include="Models\Products\MurderAtThePrancingPonyProduct.cs" />
+    <Compile Include="Models\Products\TempleOfTheDeceived.cs" />
     <Compile Include="Models\Products\TheAntleredCrownNightmareProduct.cs" />
     <Compile Include="Models\Products\TheBattleOfCarnDumProduct.cs" />
     <Compile Include="Models\Products\TheDreadRealmProduct.cs" />
@@ -530,6 +531,7 @@
     <Compile Include="Models\Products\KhazadDumNightmareProduct.cs" />
     <Compile Include="Models\Sets\MurderAtThePrancingPony.cs" />
     <Compile Include="Models\Sets\PerilInPelargirNightmare.cs" />
+    <Compile Include="Models\Sets\TempleOfTheDeceived.cs" />
     <Compile Include="Models\Sets\TheAntleredCrown.cs" />
     <Compile Include="Models\Sets\TheAntleredCrownNightmare.cs" />
     <Compile Include="Models\Sets\TheBattleOfCarnDum.cs" />
