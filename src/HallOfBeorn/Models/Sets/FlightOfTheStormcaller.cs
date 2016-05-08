@@ -130,11 +130,13 @@ namespace HallOfBeorn.Models.Sets
                 .WithTraits("Corsair.", "Ship.")
                 .WithKeywords("Boarding 1.")
                 .WithText("Cannot have attachments.\r\nWhile Sahír's Escort is in the Stormcaller’s area, it contributes its Threat to the amount of progress the Stormcaller places on its quest stage each round.\r\nWhen Revealed: Add Sahír’s Escort to the Stormcaller’s area, instead of the players’ staging area.")
+                .WithEasyModeQuantity(2)
                 .WithInfo(20, 3, Artist.Mariusz_Gandzel));
             Cards.Add(Card.ShipEnemy("Swift Raider", setName, 38, 3, 5, 4, 8)
                 .WithTraits("Cosair.", "Ship.")
                 .WithKeywords("Boarding 2.")
                 .WithText("Cannot have attachments.\r\nWhile Swift Raider is in the staging area, it gains: “Forced: After a player commits 4 or more characters to a Sailing test or to the quest, Swift Raider engages that player.”")
+                .WithEasyModeQuantity(1)
                 .WithInfo(21, 2, Artist.Michael_Rasmussen));
             Cards.Add(Card.ShipEnemy("Corsair Skiff", setName, 24, 1, 2, 2, 5)
                 .WithTraits("Corsair.", "Ship.")
@@ -148,6 +150,7 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(Card.Enemy("Serpent's Blade", "", setName, 10, 3, 3, 3, 4)
                 .WithTraits("Corsair.")
                 .WithText("Forced: When the Stormcaller advances to the next quest stage, Serpent's Blade makes an immediate attack against the engaged player.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(24, 2, Artist.Lukasz_Jaskolski));
             Cards.Add(Card.Location("Jagged Reef", "", setName, 1, 4)
                 .WithKeywords("Surge.")
@@ -161,6 +164,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithTraits("Coastland.", "Ocean.")
                 .WithText("When Revealed: Add Vast Coastland to the Stormcaller’s area.")
                 .WithShadow("Shadow: Attacking enemy gets +2 Attack if you are at the same stage as The Stormcaller.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(27, 2, Artist.Katy_Grierson));
             Cards.Add(Card.Treachery("Man Overboard!", "", setName)
                 .WithText("When Revealed: Each player contributing at least 8 Willpower to the quest must discard a questing character. If your heading is at the worst setting (Stormy), this effect cannot be canceled.")
@@ -169,6 +173,7 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(Card.Treachery("Raging Squall", "", setName)
                 .WithKeywords("Doomed 2.")
                 .WithText("When Revealed: Attach Raging Squall to the current quest. (Counts as a Condition attachment with the text: “Forced: After an ally is committed to the quest, deal 1 damage to that ally if you are off-course.”)")
+                .WithEasyModeQuantity(1)
                 .WithInfo(29, 2, Artist.Lukasz_Jaskolski));
         }
     }
