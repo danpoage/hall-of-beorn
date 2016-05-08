@@ -1364,6 +1364,9 @@ namespace HallOfBeorn.Services
             AddHtml("Silver-Wing-TGH", "<p class='main-text'>Immune to player card effects. {keyword:Sentinel.} {keyword:Ranged.}</p><p>Reduce your starting threat by 3.</p><p>Each {type:Hero@hero} you control gets +1 {Attack}.</p><p><b>If the {self} is destroyed, its controller is eliminated from the game.</b></p>");
             AddHtml("Navigation-TGH", "<table class='compass-rose'><tr><td></td><td style='text-align:center'>{heading-sunny2}</td><td></td></tr><tr><td>{heading-stormy2}</td><td>{compass-rose}</td><td>{heading-cloudy2}</td></tr><tr><td></td><td style='text-align:center'>{heading-rainy2}</td><td></td></tr></table>");
 
+            //Flight of the Stormcaller
+            AddHtml("Jagged-Reef-FotS", "<p class='main-text'>{keyword:Surge.}</p><p><b>Forced:</b> At the beginning of the travel phase, if you are on-course ({heading-sunny}), place 2 progress on {self}. If you are off-course ({heading-cloudy}, {heading-rainy}, or {heading-stormy}), deal 2 damage to each {trait-search:Trait=Ship.&CardType=Objective@Ship} objective instead.</p>");
+
             //The Hobbit: Over Hill and Under Hill
             AddHtml("Bilbo-Baggins-THOHaUH", "<p class='main-text'>The first player gains control of {self}.</p><p>{{self} cannot gain resources from player card effects.</p><p><b>If {self} leaves play, the players lose the game.</b></p>");
             AddHtml("Thorin-Oakenshield-THOHaUH", "<p class='main-text'>If you control at least 5 {trait:Dwarf.@Dwarf} characters, add 1 additional resource to {self}'s pool when you collect resources during the resource phase.</p><p class='flavor-text'>&quot;I am Thorin son of Thrain son of Thror, King under the Mountain!&quot; &ndash;Thorin, The Hobbit</p>");

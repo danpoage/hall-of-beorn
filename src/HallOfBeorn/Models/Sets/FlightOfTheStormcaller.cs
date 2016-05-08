@@ -153,6 +153,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithEasyModeQuantity(1)
                 .WithInfo(24, 2, Artist.Lukasz_Jaskolski));
             Cards.Add(Card.Location("Jagged Reef", "", setName, 1, 4)
+                .WithTraits("Coastland.", "Ocean.")
                 .WithKeywords("Surge.")
                 .WithText("Forced: At the beginning of the travel phase, if you are on-course (Sunny), place 2 progress on Jagged Reef. If you are off-course (Cloudy, Rainy, or Stormy), deal 2 damage to each Ship objective instead.")
                 .WithInfo(25, 2, Artist.Trudi_Castle));

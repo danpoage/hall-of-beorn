@@ -329,8 +329,8 @@ namespace HallOfBeorn.Models.Sets
                 .WithTraits("Weather.")
                 .WithText("When Revealed: If you are off-course, deal 1 damage to each character in play. If your heading is at the worst setting (Stormy), this effect cannot be canceled.")
                 .WithShadow("Shadow: Either shift your heading off-course or treat this attack as undefended.")
-                .WithEasyModeQuantity(2)
-                .WithInfo(56, 3, Artist.Nate_Abell));
+                .WithEasyModeQuantity(1)
+                .WithInfo(56, 2, Artist.Nate_Abell));
             Cards.Add(Card.ShipEnemy("Light Cruiser", "Umbar Fleet", 37, 4, 6, 5, 7)
                 .WithTraits("Corsair.", "Ship.")
                 .WithKeywords("Boarding 2.")
