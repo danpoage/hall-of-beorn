@@ -345,7 +345,8 @@ namespace HallOfBeorn.Services
                 CreateCategoryFilter("(discard (a|1|2|all|X) (card|cards) (from|in) your hand|discarded from your hand|discard (1 of those|any number of) cards)", Category.Discard_From_Hand),
                 CreateCategoryFilter("discard pile", Category.Discard_Pile, "encounter deck and discard pile"),
                 CreateCategoryFilter("(commit .* to|remove it from) the quest", Category.Quest_Control),
-                CreateCategoryFilter("(two|2) or fewer heroes", Category.Two_Or_Fewer_Heroes)
+                CreateCategoryFilter("(two|2) or fewer heroes", Category.Two_Or_Fewer_Heroes),
+                CreateCategoryFilter("(players as a group may spend|triggered by each player|any player may trigger)", Category.Group_Effect)
             };
 
             foreach (var card in cards.Where(x => IsCategorizable(x)))

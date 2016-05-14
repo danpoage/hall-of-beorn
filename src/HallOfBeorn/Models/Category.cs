@@ -41,6 +41,7 @@ namespace HallOfBeorn.Models
         Discard_From_Hand,
         Discard_Pile,
         Quest_Control,
-        Two_Or_Fewer_Heroes
+        Two_Or_Fewer_Heroes,
+        Group_Effect
     }
 }
