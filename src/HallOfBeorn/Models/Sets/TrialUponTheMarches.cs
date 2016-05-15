@@ -7,13 +7,50 @@ namespace HallOfBeorn.Models.Sets
 {
     public class TrialUponTheMarches : CardSet
     {
+        private const string setName = "Trial Upon the Marches";
+
         protected override void Initialize()
         {
-            Name = "Trial Upon the Marches";
+            Name = setName;
             Abbreviation = "TUtM";
             Number = 9002;
             SetType = Models.SetType.CUSTOM;
             Cycle = "Doom Mastered";
+
+            Cards.Add(Card.Enemy("Colossal Orc", "", setName, 35, 1, 4, 2, 6)
+                .WithTraits("Orc.")
+                .WithKeywords("Raid.")
+                .WithText("Colossal Orc gets +1 Threat for each damage token on him.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack (+3 Attack instead if the attacking enemy has at least 1 damage token.)")
+                .WithInfo(192, 1, Artist.Anssiart));
+            Cards.Add(Card.Enemy("Angband Assassin", "", setName, 20, 2, 3, 2, 3)
+                .WithTraits("Orc.")
+                .WithKeywords("Raid.")
+                .WithText("Forced: After Angband Assassin engages you, discard an ally you control, if able.")
+                .WithShadow("Shadow: If the defending character is an ally, discard if after the attack resolves.")
+                .WithInfo(195, 1, Artist.Alex_Ruiz));
+            Cards.Add(Card.Enemy("Azrat", "", setName, 38, 3, 6, 4, 9)
+                .WithUnique()
+                .WithTraits("Orc.", "Veteran.")
+                .WithKeywords("Raid.", "Relentless.")
+                .WithText("Forced: When Azrat is damaged by an attack, discard the top card of the attacking player's deck. Reduce the damage by the cost of the discarded card and deal that damage to one attacking character instead.")
+                .WithInfo(196, 1, Artist.Aleksi_Briclot));
+
+            Cards.Add(Card.Location("Burning Abode", "", setName, 3, 4)
+                .WithTraits("Forest.", "Dwelling.")
+                .WithText("Forced: At the end of the round, each player must discard the top card of his deck. If the discarded card is an ally, deal 1 Corruption to a hero controlled by that player.")
+                .WithFlavor("...and the Orcs passwed on to the homesteads, and sacked and burned them.\r\n-The Children of Húrin")
+                .WithInfo(201, 1, Artist.Unknown));
+            Cards.Add(Card.Treachery("Crooked Blades", "", setName)
+                .WithKeywords("Surge.")
+                .WithText("When Revealed: Deal 1 damage to all characters with at least 1 damage.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack. (+3 Attack instead if the defending character has at least 1 damage.)")
+                .WithInfo(203, 1, Artist.Odbrush));
+
+            Cards.Add(Card.Treachery("An Ill Fate", "", setName)
+                .WithText("When Revealed: Each player must discard an ally from his hand, if able, and discard X cards from the top of his deck. X is the cost of the discarded ally. If any player did not discard an ally, An Ill Fate gains surge.")
+                .WithShadow("Shadow: If this attack destroys an ally, discard the top X cards of the defending player's deck. X is the cost of that ally.")
+                .WithInfo(205, 1, Artist.Katerina_Konstantinoudi));
 
             Cards.Add(Card.Hero("Beleg Strongbow", "", Sphere.Lore, 10, 2, 3, 1, 5)
                 .WithTraits("Teleri.", "Ranger.", "Scout.")
@@ -66,7 +103,13 @@ namespace HallOfBeorn.Models.Sets
                 .WithFlavor("\"I am not a chicken-heart, as men know; but I am not your match\"\r\n-Androg, The Children of Húrin")
                 .WithVictoryPoints(1)
                 .WithInfo(227, 3, Artist.Catherine_Karina_Chmiel));
-            
+
+            Cards.Add(Card.Objective("Curse of Morgoth", "", setName)
+                .WithBurden()
+                .WithTraits("Curse.")
+                .WithKeywords("Permanent.")
+                .WithText("Setup: Attach to a hero.\r\nForced: After the attached hero takes Corruption, discard the top card of the encounter deck. If it is a treachery card, the attached hero becomes corrupted until the end of the round.\r\nIf the attached hero leaves play, the players have lost the game.")
+                .WithInfo(229, 1, Artist.Alan_Lee));
         }
     }
 }
