@@ -470,7 +470,7 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Katerina_Konstantinoudi);
             all.Add(Artist.Aleksi_Briclot);
             all.Add(Artist.Anssiart);
-            all.Add(Artist.Odbrush);
+            all.Add(Artist.Sean_O_Daniels);
 
             //The Ruins of Belegost
             all.Add(Artist.Ethan_Patrick_Harris);
@@ -663,7 +663,7 @@ namespace HallOfBeorn.Models
         public static Artist Nimarra = new Artist { Name = "nimarra", URL = "http://nimarra.deviantart.com" };
         public static Artist Niyochara = new Artist { Name = "niyochara", URL = "http://forevermedhok.deviantart.com" };
         public static Artist Noldomirwen = new Artist { Name = "Noldomirwen", URL = "http://noldomirwen.deviantart.com" };
-        public static Artist Odbrush = new Artist { Name = "Odbrush", URL = "http://www.odbrush.com" };
+        public static Artist Sean_O_Daniels = new Artist { Name = "Sean O Daniels", URL = "http://www.odbrush.com" };
         public static Artist Leanna_Crossan = new Artist { Name = "Leanna Crossan", URL = "http://leannacrossanart.com" };
         public static Artist Luc_de_Haan = new Artist { Name = "Luc de Haan", URL = "http://omuk.deviantart.com" };
         public static Artist Pete_Amachree = new Artist { Name = "Pete Amachree", URL = "http://peteamachree.deviantart.com" };

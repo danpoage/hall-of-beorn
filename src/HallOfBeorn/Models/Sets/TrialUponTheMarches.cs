@@ -45,7 +45,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithKeywords("Surge.")
                 .WithText("When Revealed: Deal 1 damage to all characters with at least 1 damage.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack. (+3 Attack instead if the defending character has at least 1 damage.)")
-                .WithInfo(203, 1, Artist.Odbrush));
+                .WithInfo(203, 1, Artist.Sean_O_Daniels));
 
             Cards.Add(Card.Treachery("An Ill Fate", "", setName)
                 .WithText("When Revealed: Each player must discard an ally from his hand, if able, and discard X cards from the top of his deck. X is the cost of the discarded ally. If any player did not discard an ally, An Ill Fate gains surge.")
