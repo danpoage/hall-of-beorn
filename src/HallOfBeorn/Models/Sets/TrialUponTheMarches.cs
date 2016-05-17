@@ -17,12 +17,46 @@ namespace HallOfBeorn.Models.Sets
             SetType = Models.SetType.CUSTOM;
             Cycle = "Doom Mastered";
 
+            Cards.Add(Card.Objective("Deeds of Daring", "", setName)
+                .WithTraits("Feat.")
+                .WithText("While Deeds of Darin is in the victory display, heroes gets +1 Attack when attacking alone.\r\nResponse: After the players complete the attached quest, add Deeds of Daring to the victory display.\r\nForced: After an ally is declared as a defender or attacker, remove Deeds of Daring from play if it is not in the victory display.")
+                .WithVictoryPoints(1)
+                .WithInfo(188, 1, Artist.Alan_Lathwell));
+            Cards.Add(Card.Objective("Mighty in Arms", "", setName)
+                .WithTraits("Feat.")
+                .WithText("While Mighty in Arms is in the victory display, each enemy gets -1 Defense.\r\nResponse: After a player deals more than 5 damage to an enemy in a single round, add Mighty in Arms to the victory display.\r\nForced: After the players complete the attached quest, remove Mighty in Arms from play if it is not in the victory display.")
+                .WithVictoryPoints(1)
+                .WithInfo(189, 1, Artist.Greg_Taylor));
+            Cards.Add(Card.Enemy("", "", setName, 40, 3, 5, 4, 8)
+                .WithTraits("Orc.")
+                .WithKeywords("Raid.")
+                .WithText("Cannot leave play unless destroyed.\r\nWhile the current quest stage is Rescue the Settlement, Orc Raiding Party can only be engaged by quest card effects.")
+                .WithFlavor("A few fought their way through and came to Brethil, but many were slain or captured; and the Orcs passed on to the homesteads, and sacked them and burned them.\r\n-The Children of Húrin")
+                .WithInfo(190, 2, Artist.Han_Park));
+            Cards.Add(Card.Enemy("Orc Marauders", "", setName, 28, 2, 3, 2, 5)
+                .WithTraits("Orc.")
+                .WithKeywords("Raid.")
+                .WithText("While Orc Marauders is engaged with a player, that player cannot make optional engagements.")
+                .WithShadow("Shadow: Return a different enemy engaged with the defending player to the staging area.")
+                .WithInfo(191, 2, Artist.Alexander_Nanitchkov));
             Cards.Add(Card.Enemy("Colossal Orc", "", setName, 35, 1, 4, 2, 6)
                 .WithTraits("Orc.")
                 .WithKeywords("Raid.")
                 .WithText("Colossal Orc gets +1 Threat for each damage token on him.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+3 Attack instead if the attacking enemy has at least 1 damage token.)")
                 .WithInfo(192, 1, Artist.Anssiart));
+            Cards.Add(Card.Enemy("Orc Archer", "", setName, 45, 2, 2, 2, 3)
+                .WithTraits("Orc.")
+                .WithKeywords("Archery 2.")
+                .WithText("Forced: When resolving the archery keyword on this card, discard the top 2 cards of the first player's deck.")
+                .WithShadow("Shadow: If this attack deals damage, discard the top 2 cards of the first player's deck.")
+                .WithInfo(193, 2, Artist.Alexandr_Sumerky));
+            Cards.Add(Card.Enemy("Orc Follower", "", setName, 15, 2, null, null, 4)
+                .WithTraits("Orc.")
+                .WithKeywords("Raid.")
+                .WithText("X is twice the number of enemies engaged with you.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack. (+2 Attack instead if there is more than 1 enemy engaged with the defending player.)")
+                .WithInfo(194, 2, Artist.Lius_Lasahido));
             Cards.Add(Card.Enemy("Angband Assassin", "", setName, 20, 2, 3, 2, 3)
                 .WithTraits("Orc.")
                 .WithKeywords("Raid.")
@@ -35,22 +69,74 @@ namespace HallOfBeorn.Models.Sets
                 .WithKeywords("Raid.", "Relentless.")
                 .WithText("Forced: When Azrat is damaged by an attack, discard the top card of the attacking player's deck. Reduce the damage by the cost of the discarded card and deal that damage to one attacking character instead.")
                 .WithInfo(196, 1, Artist.Aleksi_Briclot));
-
+            Cards.Add(Card.Enemy("Orc Burner", "", setName, 30, 4, 3, 2, 4)
+                .WithTraits("Orc.")
+                .WithKeywords("Raid.")
+                .WithText("Forced: After Orc Burner engages a player, discard the top card of that player's deck and deal X damage to characters controlled by that player. X is the cost of the discarded card.")
+                .WithInfo(197, 2, Artist.Nathan_Rosario));
+            Cards.Add(Card.Location("Hidden Grove", "", setName, 2, 6)
+                .WithTraits("Forest.")
+                .WithText("While Hidden Grove is the active location, the first player may declare one attack before enemy attacks are resolved.\r\nTravel: Trigger all raid keywords on cards in play as if it were the end of the round.")
+                .WithInfo(198, 2, Artist.Unknown));
+            Cards.Add(Card.Location("March Outpost", "", setName, 3, 3)
+                .WithTraits("Forest.", "Outpost.")
+                .WithText("While March Outpost is the active location, engaged enemies do not trigger the raid keyword.\r\nTravel: Each engaged enemy makes an immediate attack, if able.")
+                .WithInfo(199, 2, Artist.Tyler_Edlin));
+            Cards.Add(Card.Location("", "", setName, 4, 2)
+                .WithTraits("Forest.", "Camp.")
+                .WithText("Travel: Discard cards from the top of the encounter deck until X Orc enemies are discarded. X is the number of players. Add each enemy discarded this way to the staging area.\r\nResponse: After Raider Camp leaves play as the active location, each player may return 1 card from his discard pile to his hand.")
+                .WithInfo(200, 2, Artist.Julia_Alekseeva));
             Cards.Add(Card.Location("Burning Abode", "", setName, 3, 4)
                 .WithTraits("Forest.", "Dwelling.")
                 .WithText("Forced: At the end of the round, each player must discard the top card of his deck. If the discarded card is an ally, deal 1 Corruption to a hero controlled by that player.")
                 .WithFlavor("...and the Orcs passwed on to the homesteads, and sacked and burned them.\r\n-The Children of Húrin")
                 .WithInfo(201, 1, Artist.Unknown));
+            Cards.Add(Card.Location("March Road", "", setName, 2, 5)
+                .WithTraits("Forest.", "Road.")
+                .WithText("While March Road is in the staging area, enemies use their Attack instead of their Threat when the raid keyword triggers.")
+                .WithInfo(202, 2, Artist.Felicks));
             Cards.Add(Card.Treachery("Crooked Blades", "", setName)
                 .WithKeywords("Surge.")
                 .WithText("When Revealed: Deal 1 damage to all characters with at least 1 damage.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack. (+3 Attack instead if the defending character has at least 1 damage.)")
                 .WithInfo(203, 1, Artist.Sean_O_Daniels));
-
+            Cards.Add(Card.Treachery("Renewed Grief", "", setName)
+                .WithText("When Revealed: The first player attaches Renewed Grief to a hero he controls. (Counts as a Condition attachment with the text: \"Limit 1 per hero. Forced: At the beginning of each quest phase, either deal 1 Corruption to the attached hero or the attached hero gets -2 Willpower, -2 Attack and -2 Defense until the end of the round.\")")
+                .WithInfo(204, 2, Artist.Martin_Pastyrik));
             Cards.Add(Card.Treachery("An Ill Fate", "", setName)
                 .WithText("When Revealed: Each player must discard an ally from his hand, if able, and discard X cards from the top of his deck. X is the cost of the discarded ally. If any player did not discard an ally, An Ill Fate gains surge.")
                 .WithShadow("Shadow: If this attack destroys an ally, discard the top X cards of the defending player's deck. X is the cost of that ally.")
                 .WithInfo(205, 1, Artist.Katerina_Konstantinoudi));
+            Cards.Add(Card.Treachery("Mirth of Morgoth", "", setName)
+                .WithText("When Revealed: Remove a hero from the quest and place that hero in the staging area. Each enemy in the staging area makes an attack against that hero during the combat phase. That hero can only declare attack and defend against enemies in the staging area. This effect lasts until the end of the round.")
+                .WithInfo(206, 2, Artist.Sergey_Musin));
+            Cards.Add(Card.Treachery("", "", setName)
+                .WithText("When Revealed: Each player must discard an attachment from his hand. Orc enemies gets +X Attack until the end of the round. X is the attachment with the highest cost discarded in this way. If any player did not discard an attachment, Orcish Mischief gains surge.")
+                .WithInfo(207, 2, Artist.Marius_Bota));
+            Cards.Add(Card.Treachery("Orc Infiltration", "", setName)
+                .WithKeywords("Surge.")
+                .WithText("When Revealed: Shuffle the enemy in play with the lowest Threat into the first player's deck. When that enemy is revealed, discarded, or drawn, it engages the first player and makes an immediate attack.")
+                .WithFlavor("Suddenly a watchman gave a call, and leaping up they saw three hooded shapes, grey-clad, going stealthy among the stones.\r\n-The Children of Húrin")
+                .WithInfo(208, 2, Artist.John_Howe));
+            Cards.Add(Card.Objective("Not So High Is Your Destiny", "", setName)
+                .WithBurden()
+                .WithTraits("Doom.")
+                .WithText("Setup: Add Not So High Is Your Destiny to the staging area. Each player must place 1 Corruption on the hero with the lowest Willpower he controls. The player who controls the hero with Curse of Morgoth attached must place 1 Corruption on that hero instead.")
+                .WithFlavor("\"But you are overbold to speak so to the father of Lúthien. Not so high is your destiny, I think...\"\r\n-Melian, The Children of Húrin")
+                .WithInfo(209, 1, Artist.Elena_Kukanova));
+            Cards.Add(Card.Attachment("Greatness is in You", "", Sphere.Neutral, 0)
+                .WithBoon()
+                .WithTraits("Doom.")
+                .WithKeywords("Permanent.")
+                .WithText("Setup: Attach to the hero with Curse of Morgoth attached.\r\nAction: Add Greatness Is In You to the victory display to ready the attached hero. That hero does not exhaust to attack or defend until the end of the round.")
+                .WithInfo(210, 1, Artist.Jason_Yong_Wee_Seng));
+            Cards.Add(Card.Treachery("For Good Or For Ill", "", setName)
+                .WithBurden()
+                .WithTraits("Doom.")
+                .WithKeywords("Surge.", "Doomed 4.")
+                .WithText("Setup: Shuffle For Good Or For Ill into the encounter deck.\r\nWhen Revealed: If there are no Corruption tokens on the hero with Curse of Morgoth attached, cancel the effects of all keywords on this card. Otherwise, resolve keywords as normal.")
+                .WithFlavor("\"...your fate is twined with that of the Elven-folk, for good or for ill. Beware of yourself, lest it be ill.\"\r\n-Melian, The Children of Húrin")
+                .WithInfo(211, 1, Artist.Neerachar_Sophol));
 
             Cards.Add(Card.Hero("Beleg Strongbow", "", Sphere.Lore, 10, 2, 3, 1, 5)
                 .WithTraits("Teleri.", "Ranger.", "Scout.")
