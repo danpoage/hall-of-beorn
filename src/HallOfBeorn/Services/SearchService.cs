@@ -289,6 +289,10 @@ namespace HallOfBeorn.Services
             {
                 codes.Add("MEC47");
             }
+            if (model.MEC48.HasValue && model.MEC48.Value)
+            {
+                codes.Add("MEC48");
+            }
 
             if (model.MEC16.HasValue && model.MEC16.Value)
             {

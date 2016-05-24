@@ -245,7 +245,7 @@
             </div>
             <hr />
             <div>
-                @Html.CheckBox("MEC08", Model.MEC01.HasValue && Model.MEC01.Value, new { @class = "search-select-checkbox" })<span class="search-label-deluxe">Khazad-dûm</span>
+                @Html.CheckBox("MEC08", Model.MEC08.HasValue && Model.MEC08.Value, new { @class = "search-select-checkbox" })<span class="search-label-deluxe">Khazad-dûm</span>
             </div>
             <div>
                 <input type="checkbox" id="MEDWD" class="search-select-checkbox" /><span class="search-cycle">Dwarrowdelf</span>
@@ -306,6 +306,12 @@
             <hr />
             <div>
                 @Html.CheckBox("MEC47", Model.MEC47.HasValue && Model.MEC47.Value, new { @class = "search-select-checkbox" })<span class="search-label-deluxe">The Grey Havens</span>
+            </div>
+            <div>
+                <input type="checkbox" id="MEDCH" class="search-select-checkbox" /><span class="search-cycle">Dream-chaser</span>
+                <div class="search-cycle-section">
+                    @Html.CheckBox("MEC48", Model.MEC48.HasValue && Model.MEC48.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Flight of the Stormcaller</span>
+                </div>
             </div>
             <hr />
             <div>

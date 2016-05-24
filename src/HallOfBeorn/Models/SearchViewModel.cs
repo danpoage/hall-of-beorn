@@ -678,6 +678,8 @@ namespace HallOfBeorn.Models
         //The Dream-chaser
         //public bool? MEDCH { get; set; }
 
+        public bool? MEC48 { get; set; }
+
         //The Hobbit
         //public bool? MEHOB { get; set; }
         public bool? MEC16 { get; set; }

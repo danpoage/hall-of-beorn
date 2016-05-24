@@ -27,7 +27,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("While Mighty in Arms is in the victory display, each enemy gets -1 Defense.\r\nResponse: After a player deals more than 5 damage to an enemy in a single round, add Mighty in Arms to the victory display.\r\nForced: After the players complete the attached quest, remove Mighty in Arms from play if it is not in the victory display.")
                 .WithVictoryPoints(1)
                 .WithInfo(189, 1, Artist.Greg_Taylor));
-            Cards.Add(Card.Enemy("", "", setName, 40, 3, 5, 4, 8)
+            Cards.Add(Card.Enemy("Orc Raiding Party", "", setName, 40, 3, 5, 4, 8)
                 .WithTraits("Orc.")
                 .WithKeywords("Raid.")
                 .WithText("Cannot leave play unless destroyed.\r\nWhile the current quest stage is Rescue the Settlement, Orc Raiding Party can only be engaged by quest card effects.")
@@ -82,7 +82,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithTraits("Forest.", "Outpost.")
                 .WithText("While March Outpost is the active location, engaged enemies do not trigger the raid keyword.\r\nTravel: Each engaged enemy makes an immediate attack, if able.")
                 .WithInfo(199, 2, Artist.Tyler_Edlin));
-            Cards.Add(Card.Location("", "", setName, 4, 2)
+            Cards.Add(Card.Location("Raider Camp", "", setName, 4, 2)
                 .WithTraits("Forest.", "Camp.")
                 .WithText("Travel: Discard cards from the top of the encounter deck until X Orc enemies are discarded. X is the number of players. Add each enemy discarded this way to the staging area.\r\nResponse: After Raider Camp leaves play as the active location, each player may return 1 card from his discard pile to his hand.")
                 .WithInfo(200, 2, Artist.Julia_Alekseeva));
@@ -110,7 +110,7 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(Card.Treachery("Mirth of Morgoth", "", setName)
                 .WithText("When Revealed: Remove a hero from the quest and place that hero in the staging area. Each enemy in the staging area makes an attack against that hero during the combat phase. That hero can only declare attack and defend against enemies in the staging area. This effect lasts until the end of the round.")
                 .WithInfo(206, 2, Artist.Sergey_Musin));
-            Cards.Add(Card.Treachery("", "", setName)
+            Cards.Add(Card.Treachery("Orcish Mischief", "", setName)
                 .WithText("When Revealed: Each player must discard an attachment from his hand. Orc enemies gets +X Attack until the end of the round. X is the attachment with the highest cost discarded in this way. If any player did not discard an attachment, Orcish Mischief gains surge.")
                 .WithInfo(207, 2, Artist.Marius_Bota));
             Cards.Add(Card.Treachery("Orc Infiltration", "", setName)

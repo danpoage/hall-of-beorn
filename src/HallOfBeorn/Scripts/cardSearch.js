@@ -119,6 +119,7 @@ function getProductCodes() {
     codes.push('MEC43');
     codes.push('MEC44');
     codes.push('MEC47');
+    codes.push('MEC48');
     codes.push('MEC16');
     codes.push('MEC24');
     codes.push('MEC32');
@@ -296,6 +297,7 @@ $(document).ready(function () {
                     items = [ 'MEC39', 'MEC40', 'MEC41', 'MEC42', 'MEC43', 'MEC44' ];
                     break;
                 case 'MEDCH':
+                    items = [ 'MEC47', 'MEC48' ];
                     break;
                 case 'MEHOB':
                     items = [ 'MEC16', 'MEC24' ];
