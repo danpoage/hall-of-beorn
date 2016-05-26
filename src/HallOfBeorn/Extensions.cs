@@ -289,6 +289,14 @@ namespace HallOfBeorn
             return self.SplitOn(',');
         }
 
+        public static List<string> SplitOnCommaOrPipe(this string self)
+        {
+            if (string.IsNullOrEmpty(self))
+                return new List<string>();
+
+            return self.Split(new char[] { ',', '|' }, StringSplitOptions.RemoveEmptyEntries).ToListSafe();
+        }
+
         public static List<string> SplitOnEquals(this string self)
         {
             return self.SplitOn('=');

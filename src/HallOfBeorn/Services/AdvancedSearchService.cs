@@ -110,8 +110,10 @@ namespace HallOfBeorn.Services
 
         private List<CardScore> FilterByString(string typeName, string value, List<CardScore> results, bool negate)
         {
-            var names = value.SplitOnComma().Select(x => x.Replace('+', ' ').Replace('_', ' ')).ToList();
+            var names = value.SplitOnCommaOrPipe().Select(x => x.Replace('+', ' ').Replace('_', ' ')).ToList();
             Func<CardScore, bool> predicate = null;
+
+            var orFilters = value.Contains('|');
 
             switch (typeName)
             {
@@ -139,8 +141,25 @@ namespace HallOfBeorn.Services
                 case "artist":
                     predicate = (score) => { return names.Any(y => (score.Card.Artist != null && score.Card.Artist.Name.MatchesWildcard(y)) || (score.Card.SecondArtist != null && score.Card.SecondArtist.Name.MatchesWildcard(y))); };
                     break;
+                case "text":
+                    if (orFilters)
+                    {
+                        predicate = (score) => { return names.Any(y => (score.Card.Text.ContainsLower(y))); };
+                    }
+                    else
+                    {
+                        predicate = (score) => { return names.All(y => (score.Card.Text.ContainsLower(y))); };
+                    }
+                    break;
                 case "shadow":
-                    predicate = (score) => { return names.Any(y => (!string.IsNullOrEmpty(score.Card.Shadow) && score.Card.Shadow.ContainsLower(y))); };
+                    if (orFilters)
+                    {
+                        predicate = (score) => { return names.Any(y => (!string.IsNullOrEmpty(score.Card.Shadow) && score.Card.Shadow.ContainsLower(y))); };
+                    }
+                    else
+                    {
+                        predicate = (score) => { return names.All(y => (!string.IsNullOrEmpty(score.Card.Shadow) && score.Card.Shadow.ContainsLower(y))); };
+                    }
                     break;
                 default:
                     break;
@@ -313,6 +332,7 @@ namespace HallOfBeorn.Services
                     case "saga":
                         results = FilterByBool(field, results, negate);
                         break;
+                    case "text":
                     case "shadow":
                         results = FilterByString(field, value, results, negate);
                         break;
