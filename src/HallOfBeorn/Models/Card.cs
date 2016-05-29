@@ -800,7 +800,7 @@ namespace HallOfBeorn.Models
             {
                 CardType = Models.CardType.Hero,
                 Title = title,
-                NormalizedTitle = title.NormalizeString(),
+                NormalizedTitle = title.NormalizeCaseSensitiveString(),
                 Id = id,
                 IsUnique = true,
                 Sphere = sphere,
@@ -818,6 +818,7 @@ namespace HallOfBeorn.Models
             {
                 CardType = Models.CardType.Ally,
                 Title = title,
+                NormalizedTitle = title.NormalizeCaseSensitiveString(),
                 Id = id,
                 IsUnique = true,
                 Sphere = sphere,
@@ -835,7 +836,7 @@ namespace HallOfBeorn.Models
             {
                 CardType = Models.CardType.Attachment,
                 Title = title,
-                NormalizedTitle = title.NormalizeString(),
+                NormalizedTitle = title.NormalizeCaseSensitiveString(),
                 Id = id,
                 Sphere = sphere,
                 ResourceCost = resourceCost
@@ -848,7 +849,7 @@ namespace HallOfBeorn.Models
             {
                 CardType = Models.CardType.Event,
                 Title = title,
-                NormalizedTitle = title.NormalizeString(),
+                NormalizedTitle = title.NormalizeCaseSensitiveString(),
                 Id = id,
                 Sphere = sphere,
                 ResourceCost = resourceCost
@@ -866,6 +867,7 @@ namespace HallOfBeorn.Models
             {
                 CardType = Models.CardType.Enemy,
                 Title = title,
+                NormalizedTitle = title.NormalizeCaseSensitiveString(),
                 Id = string.IsNullOrEmpty(id) ? Guid.NewGuid().ToString() : id,
                 EngagementCost = engagementCost,
                 Threat = threat,
@@ -886,6 +888,7 @@ namespace HallOfBeorn.Models
             {
                 CardType = Models.CardType.Location,
                 Title = title,
+                NormalizedTitle = title.NormalizeCaseSensitiveString(),
                 Id = string.IsNullOrEmpty(id) ? Guid.NewGuid().ToString() : id,
                 Threat = threat,
                 IsVariableThreat = threat.HasValue && threat.Value == (byte)254,
@@ -900,6 +903,7 @@ namespace HallOfBeorn.Models
             {
                 CardType = Models.CardType.Treachery,
                 Title = title,
+                NormalizedTitle = title.NormalizeCaseSensitiveString(),
                 Id = string.IsNullOrEmpty(id) ? Guid.NewGuid().ToString() : id,
                 EncounterSet = encounterSet
             };
@@ -911,6 +915,7 @@ namespace HallOfBeorn.Models
             {
                 CardType = CardType.Encounter_Side_Quest,
                 Title = title,
+                NormalizedTitle = title.NormalizeCaseSensitiveString(),
                 Id = string.IsNullOrEmpty(id) ? Guid.NewGuid().ToString() : id,
                 EncounterSet = encounterSet,
                 QuestPoints = questPoints
@@ -923,6 +928,7 @@ namespace HallOfBeorn.Models
             {
                 CardType = CardType.Player_Side_Quest,
                 Title = title,
+                NormalizedTitle = title.NormalizeCaseSensitiveString(),
                 Id = id,
                 Sphere = sphere,
                 ResourceCost = resourceCost,
@@ -941,6 +947,7 @@ namespace HallOfBeorn.Models
             {
                 CardType = CardType.Quest,
                 Title = title,
+                NormalizedTitle = title.NormalizeCaseSensitiveString(),
                 HasSecondImage = true,
                 Id = id,
                 EncounterSet = encounterSet,
@@ -958,6 +965,7 @@ namespace HallOfBeorn.Models
             {
                 CardType = CardType.Campaign,
                 Title = title,
+                NormalizedTitle = title.NormalizeCaseSensitiveString(),
                 HasSecondImage = true,
                 Id = id,
                 EncounterSet = encounterSet,
@@ -973,6 +981,7 @@ namespace HallOfBeorn.Models
             {
                 CardType = CardType.Nightmare_Setup,
                 Title = title,
+                NormalizedTitle = title.NormalizeCaseSensitiveString(),
                 HasSecondImage = true,
                 Id = string.Empty,
                 EncounterSet = encounterSet
@@ -985,6 +994,7 @@ namespace HallOfBeorn.Models
             {
                 CardType = CardType.GenCon_Setup,
                 Title = title,
+                NormalizedTitle = title.NormalizeCaseSensitiveString(),
                 HasSecondImage = true,
                 Id = string.Empty,
                 EncounterSet = encounterSet
@@ -997,6 +1007,7 @@ namespace HallOfBeorn.Models
             {
                 CardType = CardType.Scenario,
                 Title = title,
+                NormalizedTitle = title.NormalizeCaseSensitiveString(),
                 HasSecondImage = true,
                 Id = string.Empty,
                 EncounterSet = encounterSet,
@@ -1010,6 +1021,7 @@ namespace HallOfBeorn.Models
             {
                 CardType = CardType.Objective,
                 Title = title,
+                NormalizedTitle = title.NormalizeCaseSensitiveString(),
                 Id = id,
                 EncounterSet = encounterSet
             };
@@ -1021,6 +1033,7 @@ namespace HallOfBeorn.Models
             {
                 CardType = CardType.Objective_Ally,
                 Title = title,
+                NormalizedTitle = title.NormalizeCaseSensitiveString(),
                 Id = id,
                 EncounterSet = encounterSet,
                 Willpower = willpower,
@@ -1036,6 +1049,7 @@ namespace HallOfBeorn.Models
             {
                 CardType = CardType.Objective_Location,
                 Title = title,
+                NormalizedTitle = title.NormalizeCaseSensitiveString(),
                 Id = string.Empty,
                 EncounterSet = encounterSet,
                 QuestPoints = questPoints
@@ -1048,6 +1062,7 @@ namespace HallOfBeorn.Models
             {
                 CardType = CardType.Ship_Objective,
                 Title = title,
+                NormalizedTitle = title.NormalizeCaseSensitiveString(),
                 IsUnique = true,
                 Id = string.Empty,
                 EncounterSet = encounterSet,
@@ -1064,6 +1079,7 @@ namespace HallOfBeorn.Models
             {
                 CardType = Models.CardType.Ship_Enemy,
                 Title = title,
+                NormalizedTitle = title.NormalizeCaseSensitiveString(),
                 Id = string.Empty,
                 EncounterSet = encounterSet,
                 EngagementCost = engagementCost,

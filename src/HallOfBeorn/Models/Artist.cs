@@ -531,6 +531,9 @@ namespace HallOfBeorn.Models
             //Flight of the Stormcaller
             all.Add(Artist.Nikolas_Hagialas);
 
+            //The Thing in the Depths
+            all.Add(Artist.Craig_Maher);
+
             //Murder at the Prancing Pony
             all.Add(Artist.Lutful_Valeriya_Romanovna);
             all.Add(Artist.Micah_Epstein);
@@ -592,6 +595,7 @@ namespace HallOfBeorn.Models
         public static Artist Chris_Quilliams = new Artist { Name = "Chris Quilliams", URL = "http://chrisquilliams.deviantart.com" };
         public static Artist Christian_Quinot = new Artist { Name = "Christian Quinot", URL = "http://darkcloud013.deviantart.com" };
         public static Artist Clive_Lauzon = new Artist { Name = "Clive Lauzon", URL = "http://www.creativeshake.com/profile.html?MyUrl=clivelauzon" };
+        public static Artist Craig_Maher = new Artist { Name = "Craig Maher", URL = "http://craigmaher.deviantart.com" };
         public static Artist Crystal_Sully = new Artist { Name = "Crystal Sully", URL = "http://crystalsully.com" };
         public static Artist CS_Marks = new Artist { Name = "C.S. Marks", URL = "http://www.csmarks.com/illustration-gallery" };
         public static Artist Damian_Ziomek = new Artist { Name = "Damian Ziomek", URL = "http://ziom05.deviantart.com" };
