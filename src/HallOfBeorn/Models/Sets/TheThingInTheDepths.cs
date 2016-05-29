@@ -19,6 +19,7 @@ namespace HallOfBeorn.Models.Sets
 
             Cards.Add(Card.Hero("Lanwyn", "", Sphere.Spirit, 9, 2, 3, 1, 3)
                 .WithTraits("Dale.", "Scout.")
+                .WithKeywords("Ranged.")
                 .WithText("Response: After an encounter card with surge is revealed, either ready Lanwyn or give her +2 Willpower until the end of the phase. (Limit twice per phase.)")
                 .WithFlavor("\"The Men of Dale used to have the trick of understanding their language, and used them for messengers to fly to the Men of the Lake...\"\r\n-Thorin, The Hobbit")
                 .WithInfo(30, 1, Artist.Aleksander_Karcz));
