@@ -366,6 +366,7 @@ The players have won the game.",
                 Willpower = 1,
                 HitPoints = 3,
                 Text = "Response: After a hero is assigned any amount of damage, exhaust Dori to place that damage on Dori instead.",
+                FlavorText = "'I can't always be carrying burglars on my back,' said Dori, 'down tunnels and up trees! What do you think I am? A porter?' -Dori, The Hobbit",
                 Number = 9,
                 Artist = Artist.Jake_Murray
             });
