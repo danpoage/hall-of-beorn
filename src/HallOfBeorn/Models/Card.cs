@@ -863,6 +863,26 @@ namespace HallOfBeorn.Models
             var isVariableDefense = defense.HasValue && defense.Value == byte.MaxValue;
             var isVariableHitPoints = hitPoints.HasValue && hitPoints.Value == byte.MaxValue;
 
+            if (threat == 254)
+            {
+                threat = 255;
+            }
+
+            if (attack == 254)
+            {
+                attack = 255;
+            }
+
+            if (defense == 254)
+            {
+                defense = 255;
+            }
+
+            if (hitPoints == 254)
+            {
+                hitPoints = 255;
+            }
+
             return new Card()
             {
                 CardType = Models.CardType.Enemy,
