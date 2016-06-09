@@ -382,6 +382,7 @@
     <Compile Include="Models\Scenarios\TheSiegeOfCairAndros.cs" />
     <Compile Include="Models\Scenarios\TheStewardsFear.cs" />
     <Compile Include="Models\Scenarios\TheStoneOfErech.cs" />
+    <Compile Include="Models\Scenarios\TheThingInTheDepths.cs" />
     <Compile Include="Models\Scenarios\TheThreeTrials.cs" />
     <Compile Include="Models\Scenarios\TheTreacheryOfRhudaur.cs" />
     <Compile Include="Models\Scenarios\TheUrukHai.cs" />

@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.Products
             : base("The Thing in the Depths", "MEC49", ImageType.Jpg)
         {
             AddCardSet(CardSet.TheThingInTheDepths);
+
+            AddScenario(new Scenarios.TheThingInTheDepths());
         }
     }
 }
