@@ -387,7 +387,7 @@ And runes of power upon the door.
                 Traits = new List<string>() { "Gate." },
                 Quantity = 1,
                 IsUnique = true,
-                Text = "Immune to player card effects.\r\nPlayers cannot optionally engage enemies and no engagement checks are made.Forced: After East-gate leaves play as an explored location, add First Hall to the staging area.",
+                Text = "Immune to card effects.\r\nPlayers cannot optionally engage enemies and no engagement checks are made.Forced: After East-gate leaves play as an explored location, add First Hall to the staging area.",
                 Threat = 7,
                 QuestPoints = 7,
                 VictoryPoints = 1,

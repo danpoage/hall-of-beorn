@@ -35,7 +35,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithInfo(30, 3, Artist.Smirtouille));
             Cards.Add(Card.Ally("Derndingle Warrior", "", Sphere.Tactics, 2, 1, 1, 2, 3)
                 .WithGeneric()
-                .WithTraits("Ent.")
+                .WithTraits("Ent.", "Warrior.")
                 .WithKeywords("Sentinel.")
                 .WithText("Cannot have restricted attachments. Enters play exhausted.\r\n While Derndingle Warrior is defending, it gains: \"Action: Deal 1 damage to Derndingle Warrior to give it +3 Defense for this attack.\" (Limit once per attack.)")
                 .WithInfo(31, 3, Artist.Oscar_Romer));
