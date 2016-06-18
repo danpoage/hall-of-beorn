@@ -130,6 +130,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithInfo(19, 1, Artist.Ilich_Henriquez));
             Cards.Add(Card.Attachment("Palantír of Orthanc", "8D9A389B-C84A-48B4-9DBE-29076536B52C", Sphere.Neutral, 0)
                 .WithNormalizedTitle("Palantir of Orthanc")
+                .WithUnique()
                 .WithBoon()
                 .WithTraits("Artifact.", "Item.")
                 .WithText("Attach to Fellowship Aragorn.\r\nQuest Action: Exhaust Aragorn and Palantír of Orthanc to discard the top card of the encounter deck. If Aragorn's Willpower is greater than the discarded card's Threat, you may add Palantír of Orthanc to the victory display and remove it from the campaign pool to choose a player. That player reveals 1 fewer encounter card this phase (to a minimum of 0).")
