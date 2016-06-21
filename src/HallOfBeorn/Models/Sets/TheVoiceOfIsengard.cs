@@ -281,6 +281,7 @@ Response: After Saruman enters play, choose a non-unique enemy or location in th
             Cards.Add(new Card() {
                 Title = "Gríma",
                 NormalizedTitle = "Grima",
+                IsUnique = true,
                 ImageType = ImageType.Png,
                 Id = "C6DFAF1C-E925-4EF2-A5F2-E0B30B2BC8A8",
                 CardType = CardType.Objective_Ally,
@@ -291,10 +292,10 @@ Response: After Saruman enters play, choose a non-unique enemy or location in th
                 Defense = 2,
                 HitPoints = 3,
                 Traits = new List<string> { "Rohan." },
-                Text = 
+                Text =
 @"If free of encounters, the first player gains control of Gríma.
 
-Action: Exhaust Grima to draw a card.
+Action: Exhaust Gríma to draw a card.
 
 If Gríma leaves play, the players lose the game.",
                 FlavorText = "Behind him cringing between two other men, came Gríma the Wormtongue. -The Two Towers",
