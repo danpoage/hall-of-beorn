@@ -534,6 +534,10 @@ namespace HallOfBeorn.Models
             //The Thing in the Depths
             all.Add(Artist.Craig_Maher);
 
+            //Temple of the Deceived
+            all.Add(Artist.DinoDrawing);
+            all.Add(Artist.Tristan_Denecke);
+
             //Murder at the Prancing Pony
             all.Add(Artist.Lutful_Valeriya_Romanovna);
             all.Add(Artist.Micah_Epstein);
@@ -608,6 +612,7 @@ namespace HallOfBeorn.Models
         public static Artist Dechambo = new Artist { Name = "Dechambo", URL = "http://www.dechambo.com/Dechambo_Artwork/www.dechambo.com.html" };
         public static Artist Deelane = new Artist { Name = "Deelane", URL = "http://deelane.deviantart.com" };
         public static Artist Denman_Rooke = new Artist { Name = "Denman Rooke", URL = "http://denmanrooke.deviantart.com" };
+        public static Artist DinoDrawing = new Artist { Name = "Sergey Glushakov", URL = "http://dinodrawing.deviantart.com" };
         public static Artist Dylan_Palmer = new Artist { Name = "Dylan Palmer", URL = "http://deelock.deviantart.com" };
         public static Artist Ebe_Kastein = new Artist { Name = "Ebe Kastein", URL = "http://ebe-kastein.deviantart.com" };
         public static Artist Echo539 = new Artist { Name = "echo539", URL = "http://echo539.deviantart.com/gallery" };
@@ -723,6 +728,7 @@ namespace HallOfBeorn.Models
         public static Artist Ted_Nasmith = new Artist { Name = "Ted Nasmith", URL = "http://tednasmith.mymiddleearth.com" };
         public static Artist Thomas_Rouillard = new Artist { Name = "Thomas Rouillard", URL = "http://tolkiengateway.net/wiki/Category:Images_by_Thomas_Rouillard" };
         public static Artist Thomas_Scholes = new Artist { Name = "Thomas Scholes", URL = "http://www.artofscholes.com" };
+        public static Artist Tristan_Denecke = new Artist { Name = "Tristan Denecke", URL = "http://princepssenatus.deviantart.com" };
         public static Artist Tyler_Edlin = new Artist { Name = "Tyler Edlin", URL = "http://tyleredlinart.deviantart.com" };
         public static Artist Unknown = new Artist { Name = "Unknown", URL = "https://www.google.com/search?q=unknown+artist" };
         public static Artist US_Pixelstory = new Artist { Name = "US-Pixelstory", URL = "http://us-pixelstory.deviantart.com" };

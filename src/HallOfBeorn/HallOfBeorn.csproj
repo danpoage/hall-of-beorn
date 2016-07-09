@@ -729,7 +729,7 @@
     <Content Include="Images\unique-card.png" />
     <Content Include="Images\unique.png" />
     <Content Include="Images\willpower.gif" />
-    <Content Include="Scripts\autocomplete14.js" />
+    <Content Include="Scripts\autocomplete15.js" />
     <Content Include="Scripts\cardDetails.js" />
     <Content Include="Scripts\cardSearch.js" />
     <Content Include="Scripts\deckBuilder.js" />

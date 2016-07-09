@@ -19,6 +19,7 @@
     "Cirdan the Shipwright", "Mithlond Sea-watcher", "Lindon Navigator", "Elwing's Flight", "Grappling Hook", "Mariner's Compass", "Warden of the Havens", "Skyward Volley", "Anchor Watch", "The Evening Star", "Explorer's Almanac", "Sailor of Lune", "To the Sea, to the Sea", "Narya",
     "Azain Silverbeard", "Guardian of Rivendell", "Heed the Dream", "Imladris Caregiver", "In Service of the Steward", "Last Stand", "Rod of the Steward", "Tides of Fate", "Vanish from Sight",
     "Lanwyn", "Eldahir", "Captain's Wisdom", "Master Ironsmith", "Raiment of War", "Elevenses", "Mirkwood Explorer", "Guarded Ceaselessly",
+    "Ceorl", "Armored Destrier", "Deorwine", "Revealed in Wrath", "Rhovanion Outrider", "Scouting Party", "Entangling Nets", "Arrows from the Trees", "Ered Luin Miner",
           "+set:",
           "-set:",
           "+type:",
