@@ -537,6 +537,7 @@ namespace HallOfBeorn.Models
             //Temple of the Deceived
             all.Add(Artist.DinoDrawing);
             all.Add(Artist.Tristan_Denecke);
+            all.Add(Artist.Federico_Musetti);
 
             //Murder at the Prancing Pony
             all.Add(Artist.Lutful_Valeriya_Romanovna);
@@ -626,6 +627,7 @@ namespace HallOfBeorn.Models
         public static Artist David_Ogilvie = new Artist { Name = "David Ogilvie", URL = "http://ogilvie.deviantart.com" };
         public static Artist Fabio_Rodrigues = new Artist { Name = "Fabio Rodrigues", URL = "http://www.rodriguesart.com" };
         public static Artist FangornSpirit = new Artist { Name = "fangornspirit", URL = "https://www.google.com/search?q=Fangorn+Spirit+Art" };
+        public static Artist Federico_Musetti = new Artist { Name = "Federico Musetti", URL = "http://federicomusetti.daportfolio.com" };
         public static Artist Felicks = new Artist { Name = "Felicks", URL = "http://fel-x.deviantart.com" };
         public static Artist Felix_Sotomayor = new Artist { Name = "Félix Sotomayor", URL = "http://feliche.deviantart.com" };
         public static Artist Ferdinand_Dumago_Ladera = new Artist { Name = "Ferdinand Dumago Ladera", URL = "http://ferdinandladera.deviantart.com" };

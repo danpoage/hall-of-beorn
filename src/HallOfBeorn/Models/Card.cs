@@ -956,12 +956,12 @@ namespace HallOfBeorn.Models
             };
         }
 
-        public static Card Quest(string title, string id, int scenarioNumber, uint stageNumber, string encounterSet, byte questPoints)
+        public static Card Quest(string title, string id, int scenarioNumber, uint stageNumber, string encounterSet, byte? questPoints)
         {
             return Quest(title, id, scenarioNumber, stageNumber, encounterSet, questPoints, 'A');
         }
 
-        public static Card Quest(string title, string id, int scenarioNumber, uint stageNumber, string encounterSet, byte questPoints, char stageLetter)
+        public static Card Quest(string title, string id, int scenarioNumber, uint stageNumber, string encounterSet, byte? questPoints, char stageLetter)
         {
             return new Card()
             {

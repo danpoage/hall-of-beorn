@@ -1398,6 +1398,9 @@ namespace HallOfBeorn.Services
             //The Thing in the Depths
             AddHtml("Weather-Deck-TTiTD", "<p class='main-text'>While {self} is in the staging area, each other {trait:Deck.@Deck} location in play gains: <blockquote><b>Travel:</b> Each player must exhaust a character he controls to travel here.</blockquote></p>{shadow}<p class='shadow-text'><b>Shadow:</b> Exhaust a character you control.</p>");
 
+            //Temple of the Deceived
+            AddHtml("Searching-the-Island-TotD", "<p class='main-text'><b>Setup:</b> Prepare the Island Map (see insert). Flip over the top-left and bottom-left locations of the Island Map (without resolving their <b>Forced</b> effects, if any), and choose one as the player's starting active location, using a resource token to represent which location is active. The first player takes control of Captain Sahír, and the last player takes control of Na'asiyah (objective-ally side faceup). Add Temple Guardian to the staging area and attach Gate Key to it, guarded. Shuffle the encounter deck.</p>");
+
             //The Hobbit: Over Hill and Under Hill
             AddHtml("Bilbo-Baggins-THOHaUH", "<p class='main-text'>The first player gains control of {self}.</p><p>{{self} cannot gain resources from player card effects.</p><p><b>If {self} leaves play, the players lose the game.</b></p>");
             AddHtml("Thorin-Oakenshield-THOHaUH", "<p class='main-text'>If you control at least 5 {trait:Dwarf.@Dwarf} characters, add 1 additional resource to {self}'s pool when you collect resources during the resource phase.</p><p class='flavor-text'>&quot;I am Thorin son of Thrain son of Thror, King under the Mountain!&quot; &ndash;Thorin, The Hobbit</p>");

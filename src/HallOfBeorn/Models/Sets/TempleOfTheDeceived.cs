@@ -65,6 +65,59 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Response: After Ered Luin Miner is discarded from the top of your deck, put it into play under your control.")
                 .WithFlavor("Tools were to be found in plenty that the miners and quarriers and builders of old had used; and at such work the dwarves were still very skilled.\r\n-The Hobbit")
                 .WithInfo(66, 3, Artist.Lukasz_Jaskolski));
+            Cards.Add(Card.Quest("Searching the Island", "", 3, 1, setName, null)
+                .WithText("Setup: Prepare the Island Map (see insert). Flip over the top-left and bottom-left locations of the Island Map (without resolving their Forced effects, if any), and choose one as the player's starting active location, using a resource token to represent which location is active. The first player takes control of Captain Sahír, and the last player takes control of Na'asiyah (objective-ally side faceup). Add Temple Guardian to the staging area and attach Gate Key to it, guarded. Shuffle the encounter deck.")
+                .WithOppositeFlavor("Sahír has led you to an uncharted isle, and has agreed to help you find a chest he claims the black key will open. First, you must find the Gate Key that opens the way to the grand temple on the eastern side of the island.")
+                .WithKeywords("Exploration.")
+                .WithOppositeText("For each progress that would be placed on Searching the Island, you may place it on a location in the staging area, instead.")
+                .WithInfo(67, 1, Artist.Sara_Winters));
+            Cards.Add(Card.Location("The Grotto's Entrance", "", setName, 2, 8)
+                .WithSecondImage("Temple-of-the-Deceived")
+                .WithUnique()
+                .WithTraits("Ruins.")
+                .WithKeywords("Uncharted.")
+                .WithText("Forced: When The Grotto's Entrance is flipped over while active, put Temple ~Guardian into play from the victory display, engaged with the player with the highest threat.\r\nWhen the 8th progress is placed on The Grotto's Entrance, the players have found the sunken ruins and win the game.")
+                .WithOppositeText("Uncharted. Immune to player card effects.\r\nTravel: Exhaust the ~Gate ~Key to travel here.\r\nForced: After Temple of the Deceived becomes the active location, flip it over.")
+                .WithInfo(68, 1, Artist.Sara_Winters));
+            Cards.Add(Card.Location("Temple Halls", "", setName, 5, 5)
+                .WithSecondImage("Temple-of-the-Deceived")
+                .WithTraits("Ruins.")
+                .WithKeywords("Uncharted.")
+                .WithText("While Temple Halls is the active location, each character gets -1 Attack and -1 Defense.\r\nForced: When Temple Halls is flipped over while active, put Temple ~Guardian into play from the victory display, engaged with the player with the highest threat.")
+                .WithOppositeText("Uncharted. Immune to player card effects.\r\nTravel: Exhaust the ~Gate ~Key to travel here.\r\nForced: After Temple of the Deceived becomes the active location, flip it over.")
+                .WithInfo(69, 2, Artist.Nicholas_Gregory));
+            Cards.Add(Card.Enemy("Temple Guardian", "", setName, 50, 255, 6, 4, 10)
+                .WithUnique()
+                .WithTraits("Undead.")
+                .WithText("X is the number of players in the game.\r\nImmune to player card effects. Cannot be optionally engaged.\r\nTemple ~Guardian gets -50 engagement cost while Cursed Temple is the active location.")
+                .WithVictoryPoints(4)
+                .WithInfo(70, 1, Artist.Chris_Grun));
+            Cards.Add(Card.Objective("Gate Key", "", setName)
+                .WithUnique()
+                .WithTraits("Item.", "Artifact.")
+                .WithText("If unattached, return ~Gate ~Key to the staging area and it gains: \"Action: Exhaust a hero to claim ~Gate ~Key and attach it to that hero.\"\r\nAction: Exhaust ~Gate ~Key and attached hero and spend 3 resources from attached hero's resource pool to look at the facedown side of a Temple of the Deceived.")
+                .WithInfo(71, 1, Artist.Katy_Grierson));
+            Cards.Add(Card.Location("Jagged Cliffs", "", setName, 4, 4)
+                .WithTraits("Mountain.")
+                .WithSecondImage("Lost-Island")
+                .WithKeywords("Uncharted.")
+                .WithOppositeText("Uncharted.\r\nCannot have player card attachments.\r\nForced: After Lost Island becomes the active location, flip it over.\r\nAction: Remove 4 progress from Lost Island to look at its facedown side.")
+                .WithText("While Jagged Cliffs is the active location, the location to its right is not considered to be in the staging area.\r\nForced: When Jagged Cliffs is flipped over while active, look at the facedown side of each adjacent copy of Lost Island.")
+                .WithInfo(72, 2, Artist.Katy_Grierson));
+            Cards.Add(Card.Location("Winding Caverns", "", setName, 2, 6)
+                .WithTraits("Underground.")
+                .WithSecondImage("Lost-Island")
+                .WithKeywords("Uncharted.")
+                .WithOppositeText("Uncharted.\r\nCannot have player card attachments.\r\nForced: After Lost Island becomes the active location, flip it over.\r\nAction: Remove 4 progress from Lost Island to look at its facedown side.")
+                .WithText("While Winding Caverns is the active location, each enemy gets +10 engagement cost.\r\nWhen you travel from Winding Caverns to another location, you may travel to a location up to 3 locations away. (You must still pay that location's Travel cost in order to travel there.)")
+                .WithInfo(73, 2, Artist.Katy_Grierson));
+            Cards.Add(Card.Location("Jungle Path", "", setName, 4, 4)
+                .WithTraits("Underground.")
+                .WithSecondImage("Lost-Island")
+                .WithKeywords("Uncharted.")
+                .WithOppositeText("Uncharted.\r\nCannot have player card attachments.\r\nForced: After Lost Island becomes the active location, flip it over.\r\nAction: Remove 4 progress from Lost Island to look at its facedown side.")
+                .WithText("While Jungle Path is the active location, the locations immediately above and below it are not considered to be in the staging area.\r\nForced: When Jungle Path is flipped over while active, each player must exhaust a character with at least 2 Attack.")
+                .WithInfo(74, 2, Artist.Katy_Grierson));
         }
     }
 }
