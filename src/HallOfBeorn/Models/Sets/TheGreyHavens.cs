@@ -133,7 +133,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithOppositeText("You cannot place progress on Corsair Pursuit unless you are on-course (Sunny).\r\nIf there are no Ship enemies in play, you have defeated your pursuers, and win the game.\r\nIf this stage has 10 or more progress on it, you have lost your pursuers, and win the game.")
                 .WithIncludedEncounterSets(EncounterSet.VastOceans, EncounterSet.StormyWeather, EncounterSet.UmbarFleet, EncounterSet.CorsairPirates, EncounterSet.TheDreamChasersFleet)
                 .WithInfo(21, 1, Artist.Nicholas_Gregory));
-            Cards.Add(Card.ShipEnemy("Scouting Ship", string.Empty, 35, 2, 5, 2, 7)
+            Cards.Add(Card.ShipEnemy("Scouting Ship", "Voyage Across Belegaer", 35, 2, 5, 2, 7)
                 .WithGeneric()
                 .WithTraits("Corsair.", "Ship.")
                 .WithKeywords("Boarding 1.")
