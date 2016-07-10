@@ -134,6 +134,7 @@ namespace HallOfBeorn.Models
             Add(FlightOfTheStormcaller);
             Add(TheThingInTheDepths);
             Add(TheStormcaller);
+            Add(TempleOfTheDeceived);
 
             //The Hobbit: Over Hill and Under Hill
             Add(WeMustAwayEreBreakOfDay);
@@ -362,6 +363,7 @@ namespace HallOfBeorn.Models
         public static EncounterSet FlightOfTheStormcaller = new EncounterSet { Name = "Flight of the Stormcaller", Set = "Flight of the Stormcaller" };
         public static EncounterSet TheThingInTheDepths = new EncounterSet { Name = "The Thing in the Depths", Set = "The Thing in the Depths" };
         public static EncounterSet TheStormcaller = new EncounterSet { Name = "The Stormcaller", Set = "The Thing in the Depths" };
+        public static EncounterSet TempleOfTheDeceived = new EncounterSet { Name = "Temple of the Deceived", Set = "Temple of the Deceived" };
 
         //The Hobbit: Over Hill and Under Hill
         public static EncounterSet WeMustAwayEreBreakOfDay = new EncounterSet { Name = "We Must Away, Ere Break of Day", Set = "The Hobbit: Over Hill and Under Hill" };

@@ -70,6 +70,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithOppositeFlavor("Sahír has led you to an uncharted isle, and has agreed to help you find a chest he claims the black key will open. First, you must find the Gate Key that opens the way to the grand temple on the eastern side of the island.")
                 .WithKeywords("Exploration.")
                 .WithOppositeText("For each progress that would be placed on Searching the Island, you may place it on a location in the staging area, instead.")
+                .WithIncludedEncounterSets(EncounterSet.RuinsOfNumenor, EncounterSet.DrownedDead, EncounterSet.TheStormcallerElite)
                 .WithInfo(67, 1, Artist.Sara_Winters));
             Cards.Add(Card.Location("The Grotto's Entrance", "", setName, 2, 8)
                 .WithSecondImage("Temple-of-the-Deceived")
@@ -118,6 +119,40 @@ namespace HallOfBeorn.Models.Sets
                 .WithOppositeText("Uncharted.\r\nCannot have player card attachments.\r\nForced: After Lost Island becomes the active location, flip it over.\r\nAction: Remove 4 progress from Lost Island to look at its facedown side.")
                 .WithText("While Jungle Path is the active location, the locations immediately above and below it are not considered to be in the staging area.\r\nForced: When Jungle Path is flipped over while active, each player must exhaust a character with at least 2 Attack.")
                 .WithInfo(74, 2, Artist.Katy_Grierson));
+            Cards.Add(Card.Enemy("Faithless Desecrator", "", setName, 25, 2, 2, 2, 4)
+                .WithGeneric()
+                .WithTraits("Undead.")
+                .WithText("While engaged with a player, Faithless Desecrator contributes its Threat to the total Threat in the staging area.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the active location is a Ruins location).")
+                .WithInfo(75, 3, Artist.Chris_Grun));
+            Cards.Add(Card.Enemy("Island Watcher", "", setName, 46, 3, 4, 1, 5)
+                .WithGeneric()
+                .WithTraits("Undead.")
+                .WithText("Island Watcher cannot be optionally engaged.\r\nWhile Island Watcher is in the staging area, it gains: \"Forced: At the beginning of the encounter phase, if the active location has the Ruins trait, Island Watcher engages the player with the highest treat. Then, deal it 2 shadow cards.\"")
+                .WithEasyModeQuantity(0)
+                .WithInfo(76, 2, Artist.Chris_Grun));
+            Cards.Add(Card.Enemy("Profane Dead", "", setName, 35, 1, 2, 3, 3)
+                .WithGeneric()
+                .WithTraits("Undead.")
+                .WithText("Forced: When you travel to the riight, Profane Dead makes an immediate attack against the engaged player.")
+                .WithShadow("Shadow: Attacking enemy gets +3 Attack if the players control the Gate Key.")
+                .WithInfo(77, 2, Artist.Guillaume_Ducos));
+            Cards.Add(Card.Treachery("Deeper into the Ruins", "", setName)
+                .WithText("When Revealed: Until the end of the phase, add X Threat to the total Threat in the staging area. X is the total Threat of all locations to the left of the active location (in its row). If X is 0, Deeper into the Ruins gains Doomed 1.")
+                .WithInfo(78, 4, Artist.Leanna_Teneycke));
+            Cards.Add(Card.Treachery("Furious Rainstorm", "", setName)
+                .WithText("When Revealed: Each player must choose: raise his threat by the number of his characters commited to the quest, or deal 1 damage to each of his characters committed to the quest.")
+                .WithShadow("Shadow: If this attack destroys a character, raise your threat by the attacking enemy's Threat.")
+                .WithEasyModeQuantity(2)
+                .WithInfo(79, 3, Artist.Dallas_Williams));
+            Cards.Add(Card.Treachery("Dwindling Supplies", "", setName)
+                .WithText("When Revealed: Each player must randomly discard cards from his hand until he has no more than 3 cards in his hand. If no cards were discarded by this effect, Dwindling Supplies gains doomed 2.")
+                .WithShadow("Shadow: Defending characters gets -2 Defense for this attack.")
+                .WithInfo(80, 3, Artist.Mariusz_Gandzel));
+            Cards.Add(Card.Treachery("Sunken Ruins", "", setName)
+                .WithKeywords("Doomed 1.")
+                .WithText("When Revealed: Each Uncharted location in the staging area gets +1 Threat until the end of the phase. If the active location has the Ruins trait, discard 1 resource from each hero and objective-ally in play.")
+                .WithInfo(81, 3, Artist.DinoDrawing));
         }
     }
 }

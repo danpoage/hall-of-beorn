@@ -114,7 +114,7 @@ namespace HallOfBeorn.Models
         public static Product TheGreyHavens = new TheGreyHavensProduct();
         public static Product FlightOfTheStormcaller = new FlightOfTheStormcallerProduct();
         public static Product TheThingInTheDepths = new TheThingInTheDepthsProduct();
-        public static Product TempleOfTheDeceived = new TempleOfTheDeceived();
+        public static Product TempleOfTheDeceived = new TempleOfTheDeceivedProduct();
         public static Product TheDrownedRuins = new TheDrownedRuinsProduct();
 
         //The Hobbit Saga
