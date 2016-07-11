@@ -52,6 +52,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new Card()
             {
                 Title = "The Watcher",
+                IsUnique = true,
                 Id = "38396B24-B249-4A91-A458-1008FF0F0B48",
                 CardType = CardType.Enemy,
                 EngagementCost = 50,
@@ -61,7 +62,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 HitPoints = 21,
                 Traits = new List<string> { "Creature.", "Tentacle." },
                 Text = 
-@"While THe Watcher is in the staging area, it cannot be damage by player card effects.
+@"While The Watcher is in the staging area, it cannot be damaged by player card effects.
 
 If The Watcher is in the staging area at the end of the combat phase, each player must deal 3 damage to 1 character he controls.",
                 VictoryPoints = 3,
