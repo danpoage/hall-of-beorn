@@ -164,6 +164,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithTraits("Bree.")
                 .WithText("Cannot be optionally engaged.\r\nThe first treachery revealed each round gains doomed 1 and its effects cannot be canceled.")
                 .WithShadow("Shadow: Either raise your threat by 4, or this attack is considered undefended.")
+                .WithVictoryPoints(3)
                 .WithInfo(21, 1, Artist.Lutful_Valeriya_Romanovna));
             Cards.Add(Card.Enemy("Bree-land Informant", "", setName, 30, 3, 2, 1, 3)
                 .WithTraits("Bree.")
