@@ -32,7 +32,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithGeneric()
                 .WithTraits("Mount.")
                 .WithKeywords("Restricted.")
-                .WithText("Attach to a Leadership or sentinel hero.\r\nResponse: After attached hero defends against an attack, exhaust Armored Destrier to ready attached hro. Then, discard a shadow card from another enemy engaged with the defending player.")
+                .WithText("Attach to a Leadership or sentinel hero.\r\nResponse: After attached hero defends against an attack, exhaust Armored Destrier to ready attached hero. Then, discard a shadow card from another enemy engaged with the defending player.")
                 .WithInfo(59, 3, Artist.Sandara_Tang));
             Cards.Add(Card.Ally("Déorwine", "", Sphere.Tactics, 4, 0, 1, 3, 3)
                 .WithNormalizedTitle("Deorwine")
