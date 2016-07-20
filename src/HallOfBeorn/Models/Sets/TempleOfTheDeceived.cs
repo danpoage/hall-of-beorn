@@ -61,6 +61,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Play only after making engagement checks.\r\nEncounter Action: If no enemies were engaged this phase, deal 1 damage to each enemy in the staging area. Then, the players as a group may spend 3 Tactics resources to deal 2 additional damage to each enemy in the staging area.")
                 .WithInfo(65, 3, Artist.Tristan_Denecke));
             Cards.Add(Card.Ally("Ered Luin Miner", "", Sphere.Neutral, 3, 1, 1, 1, 2)
+                .WithGeneric()
                 .WithTraits("Dwarf.")
                 .WithText("Response: After Ered Luin Miner is discarded from the top of your deck, put it into play under your control.")
                 .WithFlavor("Tools were to be found in plenty that the miners and quarriers and builders of old had used; and at such work the dwarves were still very skilled.\r\n-The Hobbit")
