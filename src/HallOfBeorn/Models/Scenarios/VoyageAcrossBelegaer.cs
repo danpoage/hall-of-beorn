@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "The Grey Havens";
             Number = 1;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/the-grey-havens-quest-voyage-across-belegaer.html";
+
             AddEncounterSet(EncounterSet.VastOceans);
             AddEncounterSet(EncounterSet.StormyWeather);
             AddEncounterSet(EncounterSet.UmbarFleet);

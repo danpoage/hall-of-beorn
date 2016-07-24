@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "The Grey Havens";
             Number = 3;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/the-grey-havens-quest-raid-on-the-grey-havens.html";
+
             AddEncounterSet(EncounterSet.CorsairRaiders);
             AddEncounterSet(EncounterSet.TheStormcallerElite);
             AddEncounterSet(EncounterSet.RaidOnTheGreyHavens);

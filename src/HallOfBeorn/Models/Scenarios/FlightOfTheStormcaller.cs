@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "Dream-chaser";
             Number = 1;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/the-dream-chaser-quest-flight-of-the-stormcaller.html";
+
             AddEncounterSet(EncounterSet.VastOceans);
             AddEncounterSet(EncounterSet.StormyWeather);
             AddEncounterSet(EncounterSet.CorsairPirates);

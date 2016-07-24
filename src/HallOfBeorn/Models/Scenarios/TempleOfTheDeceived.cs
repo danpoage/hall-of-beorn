@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "Dream-chaser";
             Number = 3;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/the-dream-chaser-quest-temple-of-the-deceived.html";
+
             AddEncounterSet(EncounterSet.TempleOfTheDeceived);
             AddEncounterSet(EncounterSet.RuinsOfNumenor);
             AddEncounterSet(EncounterSet.DrownedDead);

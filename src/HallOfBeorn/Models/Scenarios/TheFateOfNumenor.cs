@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.Scenarios
             GroupName = "The Grey Havens";
             Number = 2;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/the-grey-havens-quest-the-fate-of-numenor.html";
+
             AddEncounterSet(EncounterSet.DrownedDead);
             AddEncounterSet(EncounterSet.RuinsOfNumenor);
             AddEncounterSet(EncounterSet.TheFateOfNumenor);
