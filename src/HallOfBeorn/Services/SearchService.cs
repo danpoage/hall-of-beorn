@@ -363,6 +363,7 @@ namespace HallOfBeorn.Services
                 queryFilters.Add(new SearchFilter((s, c) => { return c.NormalizedTraits.Any(t => t.ToLowerSafe().Contains(s.BasicQuery())); }, 120, "Trait contains '" + model.Query + "'"));
                 queryFilters.Add(new SearchFilter((s, c) => { return c.Keywords.Any(k => k.ToLowerSafe().Equals(s.BasicQuery())); }, 115, "Keyword matches '" + model.Query + "'"));
                 queryFilters.Add(new SearchFilter((s, c) => { return c.Keywords.Any(k => k.ToLowerSafe().Contains(s.BasicQuery())); }, 110, "Keyword contains '" + model.Query + "'"));
+                queryFilters.Add(new SearchFilter((s, c) => { return c.Shadow.ContainsLower(s.BasicQuery()); }, 100, "Shadow Text matches '" + model.Query + "'"));
                 filters.Add(new SearchFilter(queryFilters));
             }
 
