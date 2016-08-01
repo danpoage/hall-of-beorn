@@ -878,6 +878,7 @@ namespace HallOfBeorn.Models
         public static Artist Jeff_Himmelman = new Artist { Name = "Jeff Himmelman", URL = "http://jhimmelman.deviantart.com" };
         public static Artist Jeff_Lee_Johnson = new Artist { Name = "Jeff Lee Johnson", URL = "http://jeffleejohnsonart.com/jeffleejohnsonart.com/home.html" };
         public static Artist Jen_Zee = new Artist { Name = "Jen Zee", URL = "http://jenzee.deviantart.com" };
+        public static Artist Jenn_Tran = new Artist { Name = "Jenn Tran", URL = "https://www.google.com/search?q=jenn+tran+art" };
         public static Artist Jim_Pavelec = new Artist { Name = "Jim Pavelec", URL = "http://www.jimpavelec.com" };
         public static Artist Joe_Wilson = new Artist { Name = "Joe Wilson", URL = "http://jwilsonillustration.deviantart.com" };
         public static Artist Joel_Hustak = new Artist { Name = "Joel Hustak", URL = "http://www.joelhustak.com" };

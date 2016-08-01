@@ -806,6 +806,7 @@ namespace HallOfBeorn.Models
                 Sphere = sphere,
                 ThreatCost = threatCost,
                 Willpower = willpower,
+                IsVariableWillpower = (willpower == 254),
                 Attack = attack,
                 Defense = defense,
                 HitPoints = hitPoints
@@ -824,6 +825,7 @@ namespace HallOfBeorn.Models
                 Sphere = sphere,
                 ResourceCost = resourceCost,
                 Willpower = willpower,
+                IsVariableWillpower = (willpower == 254),
                 Attack = attack,
                 Defense = defense,
                 HitPoints = hitPoints

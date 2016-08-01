@@ -31,14 +31,30 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Response: After Beregond defends an attack and takes no damage, reduce the defending player's threat by 1. (Limit once per round.)")
                 .WithFlavor("\"The Lord does not permit those who wear the black and silver to leave their post for any cause...\"\r\n-The Return of the King")
                 .WithInfo(3, 1, Artist.Adam_Lane));
-
+            Cards.Add(Card.Ally("Grimbold", "", Sphere.Tactics, 3, 2, 1, 1, 2)
+                .WithUnique()
+                .WithTraits("Rohan.", "Warrior.")
+                .WithText("Combat Action: Discard Grimbold to choose an enemy engaged with a player. That enemy cannot attack that player this phase.")
+                .WithFlavor("Grimbold's men turned aside and passed round to a great gap in the wall further eastward.\r\n-The Return of the King")
+                .WithInfo(4, 3, Artist.Lucas_Durham));
             Cards.Add(Card.Ally("Prince Imrahil", "", Sphere.Spirit, 4, 2, 2, 2, 3)
                 .WithUnique()
                 .WithTraits("Gondor.", "Noble.")
                 .WithText("While there is a hero in your discard pile, Prince Imrahil loses the ally card type and gains the hero card type.")
                 .WithFlavor("\"We must gather all of the strength that we can find.\r\n-The Return of the King")
-                .WithInfo(6, 3, Artist.Gabriel_Verdon));
-
+                .WithInfo(5, 3, Artist.Gabriel_Verdon));
+            Cards.Add(Card.Ally("Halbarad", "", Sphere.Leadership, 4, 2, 2, 2, 3)
+                .WithUnique()
+                .WithTraits("Dúnedain.", "Ranger.")
+                .WithText("Reduce the cost to play Halbarad by 1 for each enemy engaged with you.\r\nEach enemy engaged with you gets +10 engagement cost.")
+                .WithFlavor("\"Halbarad Dunadan, Ranger of the North I am...\"\r\n-The Return of the King")
+                .WithInfo(6, 3, Artist.Adam_Lane));
+            Cards.Add(Card.Ally("Ghân-buri-Ghân", "", Sphere.Lore, 2, 254, 1, 1, 2)
+                .WithNormalizedTitle("Ghan-buri-Ghan")
+                .WithUnique()
+                .WithTraits("Wose.")
+                .WithText("X is the Threat of the active location.\r\nTravel Action: Discard Ghân-buri-Ghân to travel to a location without resolving its Travel effect.")
+                .WithInfo(7, 3, Artist.Piya_Wannachaiwong));
             Cards.Add(Card.Event("Sterner than Steel", "", Sphere.Tactics, 0)
                 .WithText("Response: Exhaust a Weapon or Armor card attached to the defending character to cancel a shadow effect just triggered in combat")
                 .WithFlavor("\"Do what you will; but I will hinder it, if I may.\"\r\n-Éowyn, The Return of the King")
@@ -61,6 +77,32 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Attach to a Gondor hero.\r\nResponse: Spend X resources from attached hero's pool to cancel X damage just dealt to attached hero.")
                 .WithFlavor("This was the livery of the heirs of Elendil, and none wore it now in all Gondor, save the Guards of the Citadel...\r\n-The Return of the King")
                 .WithInfo(11, 3, Artist.Suzanne_Helmigh));
+            Cards.Add(Card.Attachment("Roheryn", "", Sphere.Leadership, 2)
+                .WithUnique()
+                .WithTraits("Mount.")
+                .WithText("Attach to a Dúnedain hero.\r\nIf the attached hero is Aragorn, he gains a Tactics icon.\r\nResponse: After you optionally engage an enemy, exhaust Roheryn and attached hero to declare attached hero as an attacker (and resolve its attack) against that eneny.")
+                .WithFlavor("\"Aragorn's own horse that they had brought from the North; Roheryn was his name.\"\r\n-The Return of the King")
+                .WithInfo(12, 3, Artist.Eva_Maria_Toker));
+            Cards.Add(Card.Attachment("Banner of Elendil", "", Sphere.Fellowship, 3)
+                .WithUnique()
+                .WithTraits("Artifact.", "Item.")
+                .WithText("Attach to Aragorn.\r\nWhile Aragorn is questing, each other questing character you control gets +1 Willpower.\r\nWhile Aragorn is attacking, each other questing character you control gets +1 Attack.")
+                .WithFlavor("Seven stars were about it, and a high crown above it, the signs of Elendil that no lord had borne for years beyond count.\r\n-The Return of the King")
+                .WithInfo(13, 3, Artist.Jenn_Tran));
+            Cards.Add(Card.Attachment("Esquire of Rohan", "", Sphere.Neutral, 0)
+                .WithUnique()
+                .WithBoon()
+                .WithTraits("Title.")
+                .WithText("Setup: Attach to a hero.\r\nAttached hero gains the Rohan trait.\r\nAttached hero gets +1 Attack while attacking with another Rohan character.")
+                .WithFlavor("\"Rise now, Meriadoc, esquire of Rohan of the household of Meduseld!\"\r\n-Théoden, The Return of the King")
+                .WithInfo(14, 1, Artist.Romana_Kendelic));
+            Cards.Add(Card.Attachment("Esquire of Gondor", "", Sphere.Neutral, 0)
+                .WithUnique()
+                .WithBoon()
+                .WithTraits("Title.")
+                .WithText("Setup: Attach to a hero.\r\nAttached hero gains the Gondor trait.\r\nAttached hero gets +1 Willpower while commited to the quest with another Gondor character.")
+                .WithFlavor("\"Here do I swear fealty and service to Gondor, and to the Lord and Steward of the realm...\"\r\n-Pippin, The Return of the King")
+                .WithInfo(15, 1, Artist.Romana_Kendelic));
         }
     }
 }
