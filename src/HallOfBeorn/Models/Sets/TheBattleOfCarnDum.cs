@@ -41,8 +41,7 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(Card.Ally("Beechbone", "", Sphere.Tactics, 3, 2, 2, 1, 4)
                 .WithUnique()
                 .WithTraits("Ent.")
-                .WithText("Cannot have attachments. Enters play exhausted.\r\nResponse: After Beechbone is declared as an attacker, deal 1 damage to him to deal X damage to the defending enemy. X is the amount of damage on Beechbone.")
-                .WithTemplate("<p>Cannot have attachments. Enters play exhausted.</p><p><b>Response:</b> After {self} is declared as an attacker, deal 1 damage to him to deal X damage to the defending enemy. X is the amount of damage on {self}.</p>")
+                .WithText("Cannot have restricted attachments.\r\nEnters play exhausted.\r\nResponse: After Beechbone is declared as an attacker, deal 1 damage to him to deal X damage to the defending enemy. X is the amount of damage on Beechbone.")
                 .WithInfo(118, 3, Artist.Katayanagi));
             Cards.Add(Card.Event("Hold Your Ground!", "", Sphere.Tactics, 1)
                 .WithText("Action: Choose and ready a sentinel character.\r\nValour Action: Ready all sentinel characters.")
