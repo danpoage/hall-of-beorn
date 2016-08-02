@@ -136,6 +136,7 @@ namespace HallOfBeorn.Models
         public static Product FogOnTheBarrowDowns = new FogOnTheBarrowDownsProduct();
         public static Product TheRuinsOfBelegost = new TheRuinsOfBelegostProduct();
         public static Product MurderAtThePrancingPony = new MurderAtThePrancingPonyProduct();
+        public static Product TheSiegeOfAnnuminas = new TheSiegeOfAnnuminasProduct();
 
         //Nightmare Decks
         public static Product PassageThroughMirkwoodNightmare = new PassageThroughMirkwoodNightmareProduct();

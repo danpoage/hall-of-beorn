@@ -161,6 +161,7 @@ namespace HallOfBeorn.Models
             Add(TheBattleOfLakeTown);
             Add(TheStoneOfErech);
             Add(TheRuinsOfBelegost);
+            Add(TheSiegeOfAnnuminas);
 
             Add(TheOldForest);
             Add(FogOnTheBarrowDowns);
@@ -284,6 +285,7 @@ namespace HallOfBeorn.Models
         public static CardSet TheBattleOfLakeTown = new Sets.TheBattleofLakeTown();
         public static CardSet TheStoneOfErech = new Sets.TheStoneofErech();
         public static CardSet TheRuinsOfBelegost = new Sets.TheRuinsOfBelegost().WithShortSlug("7");
+        public static CardSet TheSiegeOfAnnuminas = new Sets.TheSiegeOfAnnuminas().WithShortSlug("8");
 
         public static CardSet PassageThroughMirkwoodNightmare = new Sets.PassageThroughMirkwoodNightmare();
         public static CardSet JourneyAlongTheAnduinNightmare = new Sets.JourneyAlongTheAnduinNightmare();

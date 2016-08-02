@@ -306,6 +306,7 @@
     <Compile Include="Models\Products\TheNinInEilphNightmareProduct.cs" />
     <Compile Include="Models\Products\TheRoadDarkensNightmareProduct.cs" />
     <Compile Include="Models\Products\TheRuinsOfBelegostProduct.cs" />
+    <Compile Include="Models\Products\TheSiegeOfAnnuminasProduct.cs" />
     <Compile Include="Models\Products\TheThingInTheDepthsProduct.cs" />
     <Compile Include="Models\Products\TheThreeTrialsNightmareProduct.cs" />
     <Compile Include="Models\Products\TheVoiceOfIsengardNightmareProduct.cs" />
@@ -584,6 +585,7 @@
     <Compile Include="Models\Sets\TheRoadDarkens.cs" />
     <Compile Include="Models\Sets\TheRuinsOfBelegost.cs" />
     <Compile Include="Models\Sets\TheSeventhLevelNightmare.cs" />
+    <Compile Include="Models\Sets\TheSiegeOfAnnuminas.cs" />
     <Compile Include="Models\Sets\TheSiegeOfCairAndrosNightmare.cs" />
     <Compile Include="Models\Sets\TheStewardsFear.cs" />
     <Compile Include="Models\Sets\TheStewardsFearNightmare.cs" />
