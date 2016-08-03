@@ -15,6 +15,8 @@ namespace HallOfBeorn.Models.ProductGroups
             AddProduct(Product.TheThingInTheDepths);
             AddProduct(Product.TempleOfTheDeceived);
             AddProduct(Product.TheDrownedRuins);
+            AddProduct(Product.AStormOnCobasHaven);
+            AddProduct(Product.TheCityOfCorsairs);
         }
     }
 }

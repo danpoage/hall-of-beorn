@@ -290,6 +290,7 @@
     <Compile Include="Models\ProductGroups\DreamChaserProductGroup.cs" />
     <Compile Include="Models\Products\AcrossTheEttenmoorsProduct.cs" />
     <Compile Include="Models\Products\AmongTheOutlawsProduct.cs" />
+    <Compile Include="Models\Products\AStormOnCobasHavenProduct.cs" />
     <Compile Include="Models\Products\CelebrimborsSecretNightmareProoduct.cs" />
     <Compile Include="Models\Products\EscapeFromMountGramProduct.cs" />
     <Compile Include="Models\Products\FlightOfTheStormcallerProduct.cs" />
@@ -297,6 +298,7 @@
     <Compile Include="Models\Products\TempleOfTheDeceivedProduct.cs" />
     <Compile Include="Models\Products\TheAntleredCrownNightmareProduct.cs" />
     <Compile Include="Models\Products\TheBattleOfCarnDumProduct.cs" />
+    <Compile Include="Models\Products\TheCityOfCorsairsProduct.cs" />
     <Compile Include="Models\Products\TheDreadRealmProduct.cs" />
     <Compile Include="Models\Products\TheDrownedRuinsProduct.cs" />
     <Compile Include="Models\Products\TheDunlandTrapNightmareProduct.cs" />
@@ -508,6 +510,7 @@
     <Compile Include="Models\Sets\AssaultOnOsgiliath.cs" />
     <Compile Include="Models\Sets\AJourneyToRhosgobel.cs" />
     <Compile Include="Models\Sets\AssaultOnOsgiliathNightmare.cs" />
+    <Compile Include="Models\Sets\AStormOnCobasHaven.cs" />
     <Compile Include="Models\Sets\CelebrimborsSecret.cs" />
     <Compile Include="Models\Sets\CelebrimborsSecretNightmare.cs" />
     <Compile Include="Models\Sets\ConflictAtTheCarrock.cs" />
@@ -540,6 +543,7 @@
     <Compile Include="Models\Sets\TheBattleOfCarnDum.cs" />
     <Compile Include="Models\Sets\TheBattleOfFiveArmiesNightmare.cs" />
     <Compile Include="Models\Sets\TheBloodOfGondorNightmare.cs" />
+    <Compile Include="Models\Sets\TheCityOfCorsairs.cs" />
     <Compile Include="Models\Sets\TheDreadRealm.cs" />
     <Compile Include="Models\Sets\TheDrownedRuins.cs" />
     <Compile Include="Models\Sets\TheDruadanForestNightmare.cs" />

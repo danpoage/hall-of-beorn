@@ -147,6 +147,8 @@ namespace HallOfBeorn.Models
             Add(TheThingInTheDepths);
             Add(TempleOfTheDeceived);
             Add(TheDrownedRuins);
+            Add(AStormOnCobasHaven);
+            Add(TheCityOfCorsairs);
 
             Add(TheHobbitOverHillAndUnderHill);
             Add(TheHobbitOnTheDoorstep);
@@ -270,6 +272,8 @@ namespace HallOfBeorn.Models
         public static CardSet TheThingInTheDepths = new Sets.TheThingInTheDepths().WithShortSlug("L");
         public static CardSet TempleOfTheDeceived = new Sets.TempleOfTheDeceived().WithShortSlug("M");
         public static CardSet TheDrownedRuins = new Sets.TheDrownedRuins().WithShortSlug("N");
+        public static CardSet AStormOnCobasHaven = new Sets.AStormOnCobasHaven();
+        public static CardSet TheCityOfCorsairs = new Sets.TheCityOfCorsairs();
 
         public static CardSet TheHobbitOverHillAndUnderHill = new Sets.TheHobbitOverHillandUnderHill().WithShortSlug("Y");
         public static CardSet TheHobbitOnTheDoorstep = new Sets.TheHobbitOntheDoorstep().WithShortSlug("Z");
