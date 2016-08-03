@@ -56,6 +56,26 @@ namespace HallOfBeorn.Models
         private readonly List<ScenarioViewModel> _scenarios = new List<ScenarioViewModel>();
         private readonly List<CardViewModel> _cards = new List<CardViewModel>();
 
+        private bool hasPopularity()
+        {
+            if (!string.IsNullOrEmpty(_product.Code) && _product.Code.StartsWith("MEC"))
+            {
+                switch (_product.Code)
+                {
+                    case "MEC15":
+                    case "MEC33":
+                    case "MEC35":
+                    case "MEC36":
+                    case "MEC37":
+                        return false;
+                    default:
+                        return true;
+                }
+            }
+
+            return false;
+        }
+
         public string Name { get { return _product.Name; } }
         public string Code { get { return _product.Code; } }
         public bool IsPremier { get { return _product.IsPremier; } }
@@ -66,10 +86,15 @@ namespace HallOfBeorn.Models
         {
             get
             {
+                if (!hasPopularity())
+                {
+                    return string.Empty;
+                }
+
+                const string icon = "<img src='/Images/gold-ring.png' height='16' width='16'/>";
+
                 if (Popularity > 0)
                 {
-                    const string icon = "<img src='/Images/gold-ring.png' height='16' width='16'/>";
-
                     var html = new System.Text.StringBuilder();
                     
                     for (var i = 0; i < Popularity; i++)
@@ -81,7 +106,7 @@ namespace HallOfBeorn.Models
                 }
                 else
                 {
-                    return string.Empty;
+                    return icon;
                 }
             }
         }
