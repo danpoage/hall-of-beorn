@@ -37,8 +37,10 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(Card.Ally("Déorwine", "", Sphere.Tactics, 4, 0, 1, 3, 3)
                 .WithNormalizedTitle("Deorwine")
                 .WithUnique()
+                .WithTraits("Rohan.", "Warrior.")
                 .WithKeywords("Sentinel.")
-                .WithText("Action: While Déorwine is defending, spend 1 Leadership resource to cancel a shadow effect dealt to the attacking enemy. Any player may trigger this action.")
+                .WithText("Response: While Déorwine is defending, spend 1 Leadership resource to cancel a shadow effect dealt to the attacking enemy. Any player may trigger this action.")
+                .WithNote("Caleb said <blockquote>I believe Deorwine’s ‘Action’ should be a ‘Response’ to allow his ability to work as intended. His effect is meant to cancel the shadow effect after it is revealed and before it resolves in a similar fashion to Hasty Stroke.</blockquote>", new DateTime(2016, 7, 10), 0, "https://community.fantasyflightgames.com/topic/222753-temple-of-the-deceived/page-10#entry2302961") 
                 .WithInfo(60, 3, Artist.Aleksander_Karcz));
             Cards.Add(Card.Event("Revealed in Wrath", "", Sphere.Tactics, 1)
                 .WithText("Play only if you controla  Noldor hero.\r\nAction: Choose a non-unique enemy. Until the end of the phase, treat the chosen enemy's printed text box as if it were blank (except for Traits).")
