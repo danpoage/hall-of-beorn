@@ -990,14 +990,24 @@ namespace HallOfBeorn.Models
             }
         }
 
+        private readonly List<CardNote> notes = new List<CardNote>();
+
         public bool HasNotes()
         {
-            return _card.Notes.Count > 0;
+            return notes.Count > 0;
         }
 
         public IEnumerable<CardNote> Notes()
         {
-            return _card.Notes;
+            return notes;
+        }
+
+        public void LoadNotes(IEnumerable<CardNote> notes)
+        {
+            foreach (var note in notes)
+            {
+                this.notes.Add(note);
+            }
         }
     }
 }

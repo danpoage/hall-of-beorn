@@ -61,6 +61,9 @@ namespace HallOfBeorn
             var templateService = new TemplateService();
             System.Web.HttpContext.Current.Application[Extensions.TemplateServiceKey] = templateService;
 
+            var noteService = new NoteService();
+            System.Web.HttpContext.Current.Application[Extensions.NoteServiceKey] = noteService;
+
             System.Web.HttpContext.Current.Application.UnLock();
         }
     }

@@ -20,6 +20,7 @@ namespace HallOfBeorn.Controllers
             productRepository = (ProductRepository)System.Web.HttpContext.Current.Application[Extensions.ProductRepositoryKey];
             searchService = (SearchService)System.Web.HttpContext.Current.Application[Extensions.SearchServiceKey];
             categoryService = (CategoryService)System.Web.HttpContext.Current.Application[Extensions.CategoryServiceKey];
+            noteService = (NoteService)System.Web.HttpContext.Current.Application[Extensions.NoteServiceKey];
             scenarioService = (ScenarioService)System.Web.HttpContext.Current.Application[Extensions.ScenarioServiceKey];
             statService = (StatService)System.Web.HttpContext.Current.Application[Extensions.StatServiceKey];
             octgnService = (OctgnService)System.Web.HttpContext.Current.Application[Extensions.OctgnServiceKey];
@@ -31,6 +32,7 @@ namespace HallOfBeorn.Controllers
         private readonly CardRepository cardRepository;
         private readonly ProductRepository productRepository;
         private readonly CategoryService categoryService;
+        private readonly NoteService noteService;
         private readonly ScenarioService scenarioService;
         private readonly StatService statService;
         private readonly OctgnService octgnService;
@@ -1013,6 +1015,8 @@ namespace HallOfBeorn.Controllers
                 {
                     model.OctgnGuid = octgnGuid;
                 }
+
+                model.LoadNotes(noteService.GetNotes(card.Slug));
 
                 if (isPlayerCard(card))
                 {

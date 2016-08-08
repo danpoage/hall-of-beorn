@@ -42,7 +42,6 @@ namespace HallOfBeorn.Models.Sets
                 .WithTraits("Gondor.", "Noble.")
                 .WithText("While there is a hero in your discard pile, Prince Imrahil loses the ally card type and gains the hero card type.")
                 .WithFlavor("\"We must gather all of the strength that we can find.\r\n-The Return of the King")
-                .WithNote("Hi Benjamin,<br>Prince Imrahil’s text is a passive effect that is constantly checking the game state to see if there is a hero in your discard pile, so the instant that Caldara is placed in your discard pile he becomes a hero. As for Caldara, the cost to trigger her effect is to place her in the discard pile, and you cannot trigger an effect without paying the cost first. So, you must discard Caldara before you can resolve the rest of her effect. That means Imrahil is a hero at the time that you calculate how many allies you put into play, which means you can get up to 3 allies into play with Caldara’s effect (or even 4 if you make a unique spirit ally a hero with Sword-thain first).<br>Cheers,<br>Caleb", new DateTime(2016, 7, 25), 0m, "https://community.fantasyflightgames.com/topic/225784-prince-imrahil-the-flame-of-the-west-ally-and-caldara/")
                 .WithInfo(5, 3, Artist.Gabriel_Verdon));
             Cards.Add(Card.Ally("Halbarad", "", Sphere.Leadership, 4, 2, 2, 2, 3)
                 .WithUnique()
