@@ -36,7 +36,7 @@ namespace HallOfBeorn.Models.Sets
                 Year = 2010,
                 Artist = Artist.John_Stanko,
                 Number = 1
-            });
+            }.WithNote("As always, this Response is optional but if desired it must be triggered immediately after Aragorn is committed to a quest. This can't allow Aragorn to quest more than once in the same round. He is still committed to the quest until the end of the phase even if you ready him."));
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,
                 Title = "Théodred",
@@ -57,7 +57,7 @@ namespace HallOfBeorn.Models.Sets
                 Quantity = 1,
                 Number = 2,
                 Artist = Artist.Jeff_Himmelman
-            });
+            }.WithNote("Can add resource to himself or any other Hero owned by any player. Théodred can add resource to Aragorn (CORE 1) who can use the resource to ready himself if they both are committed to the quest by the same player. If Aragorn was already committed by another player he would not be able to immediately use this resource (official FAQ). Can only commit to a quest once per game turn, even if you have a way to ready him.", 1.1m));
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,
                 Title = "Glóin",
@@ -119,7 +119,7 @@ namespace HallOfBeorn.Models.Sets
                 Quantity = 1,
                 Number = 5,
                 Artist = Artist.Magali_Villeneuve
-            });
+            }.WithNote("If you have an active Location, progress tokens are placed there instead of the current Quest card (official FAQ v1.1). This benefit occurs any time Legolas is part of an attack that destroys an enemy, whether he attacks alone or with somebody else.", new DateTime(2011, 6, 28), 1.1m, "https://images-cdn.fantasyflightgames.com/ffg_content/lotr-lcg/support/lotr-lcg-faq-low-res.pdf"));
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,
                 Title = "Thalin",

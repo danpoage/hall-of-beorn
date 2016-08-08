@@ -202,6 +202,7 @@
     <Compile Include="Models\BrowseProductViewModel.cs" />
     <Compile Include="Models\BrowseViewModel.cs" />
     <Compile Include="Models\CardEffectType.cs" />
+    <Compile Include="Models\CardNote.cs" />
     <Compile Include="Models\CardSubtype.cs" />
     <Compile Include="Models\Card.cs" />
     <Compile Include="Models\CardEffect.cs" />

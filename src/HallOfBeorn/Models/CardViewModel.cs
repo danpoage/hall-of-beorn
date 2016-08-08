@@ -989,5 +989,15 @@ namespace HallOfBeorn.Models
                 return string.Empty;
             }
         }
+
+        public bool HasNotes()
+        {
+            return _card.Notes.Count > 0;
+        }
+
+        public IEnumerable<CardNote> Notes()
+        {
+            return _card.Notes;
+        }
     }
 }

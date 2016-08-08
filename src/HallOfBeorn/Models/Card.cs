@@ -21,6 +21,7 @@ namespace HallOfBeorn.Models
             //Decks = new Dictionary<string, Deck>();
             //RelatedCards = new List<Card>();
             IncludedEncounterSets = new List<EncounterSet>();
+            Notes = new List<CardNote>();
 
             StageLetter = 'A';
 
@@ -525,6 +526,38 @@ namespace HallOfBeorn.Models
         public CardType CardType { get; set; }
         public CardSubtype CardSubtype { get; set; }
         public Sphere Sphere { get; set; }
+
+        public List<CardNote> Notes { get; private set; }
+
+        public Card WithNote(string text)
+        {
+            Notes.Add(new CardNote { Text = text });
+            return this;
+        }
+
+        public Card WithNote(string text, DateTime? date)
+        {
+            Notes.Add(new CardNote { Text = text, Date = date });
+            return this;
+        }
+
+        public Card WithNote(string text, decimal faqVersion)
+        {
+            Notes.Add(new CardNote { Text = text, FaqVersion = faqVersion });
+            return this;
+        }
+
+        public Card WithNote(string text, DateTime date, decimal faqVersion)
+        {
+            Notes.Add(new CardNote { Text = text, Date = date, FaqVersion = faqVersion });
+            return this;
+        }
+
+        public Card WithNote(string text, DateTime date, decimal faqVersion, string url)
+        {
+            Notes.Add(new CardNote { Text = text, Date = date, FaqVersion = faqVersion, Url = url });
+            return this;
+        }
 
         private byte maxPerDeck;
         public byte MaxPerDeck
