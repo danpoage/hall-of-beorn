@@ -86,7 +86,7 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(Card.Attachment("Banner of Elendil", "", Sphere.Fellowship, 3)
                 .WithUnique()
                 .WithTraits("Artifact.", "Item.")
-                .WithText("Attach to Aragorn.\r\nWhile Aragorn is questing, each other questing character you control gets +1 Willpower.\r\nWhile Aragorn is attacking, each other questing character you control gets +1 Attack.")
+                .WithText("Attach to Aragorn.\r\nWhile Aragorn is questing, each other questing character you control gets +1 Willpower.\r\nWhile Aragorn is attacking, each other attacking character you control gets +1 Attack.")
                 .WithFlavor("Seven stars were about it, and a high crown above it, the signs of Elendil that no lord had borne for years beyond count.\r\n-The Return of the King")
                 .WithInfo(13, 3, Artist.Jenn_Tran));
             Cards.Add(Card.Attachment("Esquire of Rohan", "", Sphere.Neutral, 0)
