@@ -559,6 +559,17 @@
         {
             <div class="ringsdb-card-link"><span>Popularity (@Model.Popularity/5):&nbsp;&nbsp;</span>@Html.Raw(@Model.PopularityHtml)</div>
         }
+        @if (@Model.HasTags())
+        {
+            <div class="tag-box">
+                @foreach (var tag in @Model.Tags())
+                {
+                    <a target="_blank" title="@tag.Description" href="@tag.Url" class="tag-link">
+                        @Html.Raw(@tag.Text)
+                    </a>
+                }
+            </div>
+        }
         @if (@Model.HasNotes())
         {
             <br />

@@ -26,6 +26,7 @@ namespace HallOfBeorn.Controllers
             octgnService = (OctgnService)System.Web.HttpContext.Current.Application[Extensions.OctgnServiceKey];
             ringsDbService = (RingsDbService)System.Web.HttpContext.Current.Application[Extensions.RingsDbKey];
             templateService = (TemplateService)System.Web.HttpContext.Current.Application[Extensions.TemplateServiceKey];
+            tagService = (TagService)System.Web.HttpContext.Current.Application[Extensions.TagServiceKey];
         }
 
         private readonly SearchService searchService;
@@ -38,6 +39,7 @@ namespace HallOfBeorn.Controllers
         private readonly OctgnService octgnService;
         private readonly RingsDbService ringsDbService;
         private readonly TemplateService templateService;
+        private readonly TagService tagService;
 
         private void InitializeSearch(SearchViewModel model)
         {
@@ -1017,6 +1019,7 @@ namespace HallOfBeorn.Controllers
                 }
 
                 model.LoadNotes(noteService.GetNotes(card.Slug));
+                model.LoadTags(tagService.GetTags(card.Slug));
 
                 if (isPlayerCard(card))
                 {

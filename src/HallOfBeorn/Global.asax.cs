@@ -64,6 +64,9 @@ namespace HallOfBeorn
             var noteService = new NoteService();
             System.Web.HttpContext.Current.Application[Extensions.NoteServiceKey] = noteService;
 
+            var tagService = new TagService();
+            System.Web.HttpContext.Current.Application[Extensions.TagServiceKey] = tagService;
+
             System.Web.HttpContext.Current.Application.UnLock();
         }
     }

@@ -1009,5 +1009,25 @@ namespace HallOfBeorn.Models
                 this.notes.Add(note);
             }
         }
+
+        private readonly List<CardTag> tags = new List<CardTag>();
+
+        public bool HasTags()
+        {
+            return tags.Count > 0;
+        }
+
+        public IEnumerable<CardTag> Tags()
+        {
+            return tags;
+        }
+
+        public void LoadTags(IEnumerable<CardTag> tags)
+        {
+            foreach (var tag in tags)
+            {
+                this.tags.Add(tag);
+            }
+        }
     }
 }

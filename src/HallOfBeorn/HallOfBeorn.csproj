@@ -209,6 +209,7 @@
     <Compile Include="Models\CardEffectViewModel.cs" />
     <Compile Include="Models\CardScore.cs" />
     <Compile Include="Models\CardSet.cs" />
+    <Compile Include="Models\CardTag.cs" />
     <Compile Include="Models\CardType.cs" />
     <Compile Include="Models\CardViewModel.cs" />
     <Compile Include="Models\Category.cs" />
@@ -640,6 +641,7 @@
     <Compile Include="Services\ScenarioService.cs" />
     <Compile Include="Services\SearchSortService.cs" />
     <Compile Include="Services\StatService.cs" />
+    <Compile Include="Services\TagService.cs" />
     <Compile Include="Services\TemplateRepository.cs" />
     <Compile Include="Services\TemplateService.cs" />
     <Compile Include="Views\SelectListItemExtends.cs" />

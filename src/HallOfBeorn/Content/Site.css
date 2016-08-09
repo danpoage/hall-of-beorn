@@ -1308,3 +1308,28 @@ tr.pager td {
 .ringsdb-card-link {
     margin: 4px;
 }
+
+.tag-box {
+    margin: 18px 2px 4px 2px;
+}
+
+.tag-link {
+    background-color:#787878;
+    border-color:#585858;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    text-decoration:none;
+    margin: 2px 4px 2px 4px;
+    padding: 2px 4px 2px 4px;
+}
+
+.hero-champ-first {
+    color:gold;
+    font-weight: bold;
+}
+
+.hero-champ-second {
+    color:silver;
+    font-weight: bold;
+}

@@ -20,6 +20,7 @@ namespace HallOfBeorn
         public static string StatServiceKey = "statService";
         public static string OctgnServiceKey = "octgnService";
         public static string RingsDbKey = "ringsDBService";
+        public static string TagServiceKey = "tagService";
         public static string TemplateServiceKey = "templateService";
 
         public static string ToUrlSafeString(this string self)
