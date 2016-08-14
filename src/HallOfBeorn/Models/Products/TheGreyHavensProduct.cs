@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.Products
         public TheGreyHavensProduct()
             : base("The Grey Havens", "MEC47", ImageType.Jpg)
         {
+            RulesUrl = "https://images-cdn.fantasyflightgames.com/filer_public/82/67/82674691-bd21-4e45-8a31-2749ca2e5bd9/mec47_rules.pdf";
+
             AddCardSet(CardSet.TheGreyHavens);
 
             AddScenario(new HallOfBeorn.Models.Scenarios.VoyageAcrossBelegaer());
