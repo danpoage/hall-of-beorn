@@ -38,7 +38,7 @@ Remove the following cards, in the specified quantities, from the standard encou
 1x Stock-brook
 3x Green Hill Country
 3x Pathless Country
-2x Rode Liek a Gale
+2x Rode Like a Gale
 
 Then, shuffle the encounter cards in this Nightmare Deck into the remainder of the standard A ~Shadow of the Past encounter deck.
 
