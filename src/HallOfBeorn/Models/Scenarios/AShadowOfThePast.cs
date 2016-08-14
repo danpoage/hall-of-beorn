@@ -33,8 +33,8 @@ namespace HallOfBeorn.Models.Scenarios
             ExcludeFromNightmareMode("Evil-Crow-TBR", 3);
             ExcludeFromNightmareMode("Green-Hill-Country-TBR", 3);
             ExcludeFromNightmareMode("Woody-End-TBR", 1);
-            ExcludeFromNightmareMode("Pathless-Country-TBR", 6);
-            ExcludeFromNightmareMode("Rode-Like-a-Gale-TBR", 4);
+            ExcludeFromNightmareMode("Pathless-Country-TBR", 3);
+            ExcludeFromNightmareMode("Rode-Like-a-Gale-TBR", 2);
         }
     }
 }
