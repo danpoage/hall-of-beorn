@@ -28,14 +28,64 @@ namespace HallOfBeorn.Controllers
 
         private bool IsPlayerCard(Card card)
         {
+            if (card == null)
+            {
+                return false;
+            }
+
             switch (card.CardType)
             {
                 case CardType.Hero:
                 case CardType.Ally:
                 case CardType.Attachment:
                 case CardType.Event:
-                //case CardType.Boon:
                 case CardType.Treasure:
+                    return true;
+                default:
+                    return false;
+            }
+        }
+
+        private bool IsEncounterCard(Card card)
+        {
+            if (card == null)
+            {
+                return false;
+            }
+
+            switch (card.CardType)
+            {
+                case CardType.Encounter:
+                case CardType.Encounter_Side_Quest:
+                case CardType.Enemy:
+                case CardType.Location:
+                case CardType.Treachery:
+                case CardType.Objective:
+                case CardType.Objective_Ally:
+                case CardType.Objective_Location:
+                case CardType.Ship_Enemy:
+                case CardType.Ship_Objective:
+                case CardType.Treasure:
+                    return true;
+                default:
+                    return false;
+            }
+        }
+
+        private bool IsQuestCard(Card card)
+        {
+            if (card == null)
+            {
+                return false;
+            }
+
+            switch (card.CardType)
+            {
+                case CardType.Quest:
+                case CardType.Campaign:
+                case CardType.GenCon_Setup:
+                case CardType.Nightmare_Setup:
+                case CardType.Scenario:
                     return true;
                 default:
                     return false;
@@ -99,10 +149,16 @@ namespace HallOfBeorn.Controllers
             switch (name)
             {
                 case "Cards":
-                    result.Data = cardRepository.Cards().Where(x => x.CardSet.SetType != SetType.CUSTOM).Select(x => new SimpleCard(x)).ToList();
+                    result.Data = "This method is no longer supported for performance reasons. Use export/PlayerCards, export/EncounterCards or export/QuestCards instead. Thanks for your support!"; //cardRepository.Cards().Where(x => x.CardSet.SetType != SetType.CUSTOM).Select(x => new SimpleCard(x)).ToList();
                     break;
                 case "PlayerCards":
                     result.Data = cardRepository.Cards().Where(x => x.CardSet.SetType != SetType.CUSTOM && IsPlayerCard(x)).Select(y => new SimpleCard(y)).ToList();
+                    break;
+                case "EncounterCards":
+                    result.Data = cardRepository.Cards().Where(x => x.CardSet.SetType != SetType.CUSTOM && IsEncounterCard(x)).Select(y => new SimpleCard(y)).ToList();
+                    break;
+                case "QuestCards":
+                    result.Data = cardRepository.Cards().Where(x => x.CardSet.SetType != SetType.CUSTOM && IsQuestCard(x)).Select(y => new SimpleCard(y)).ToList();
                     break;
                 case "Scenarios":
                     var scenarios = new List<SimpleScenario>();
@@ -154,9 +210,6 @@ namespace HallOfBeorn.Controllers
             }
 
             return result;
-
-
-            //return "This is a test of the API: " + name;
         }
     }
 }
