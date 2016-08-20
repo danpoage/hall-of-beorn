@@ -214,12 +214,12 @@ namespace HallOfBeorn.Models.Sets
                 .WithOppositeText("Resolution: Add each copy of Overcome by Fear attached to a player's threat dial to the campaign pool and record the name of each player it was attached to. If Army of the Dead is in the victory display, add the Army of the Dead boon to the campaign pool. The players have earned each card added to the campaign pool")
                 .WithOppositeFlavor("Then Aragorn said: \"The hour is come at last. Now I go to Pelargir upon Anduin, and ye shall come after me. And when all this land is clean of the servants of Sauron, I will hold the oath fulfilled, and ye shall have peace and depart for ever. For I am Elessar, Isildur's heir of Gondor.\" -The Return of the King")
                 .WithInfo(66, 1, Artist.Yoann_Boissonnet));
-            Cards.Add(Card.Enemy("Army of the Dead", string.Empty, setThePassingOfTheGreyCompany, 50, 254, 6, 2, 8)
+            Cards.Add(Card.Enemy("Army of the Dead", string.Empty, setThePassingOfTheGreyCompany, 50, 255, 6, 2, 8)
                 .WithSlugIncludesType()
                 .WithUnique()
                 .WithTraits("Undead.", "Oathbreaker.")
                 .WithKeywords("Phantom.")
-                .WithText("Immune to player card effects.\r\nX is twice the number of players in the game.\r\nForced: When Army of the Dead attacks, you must either attach a set aside Overcome by Fear to your threat dial, or discard an ally you control.")
+                .WithText("Immune to player card effects.\r\nX is twice the number of players in the game.\r\nForced: When Army of the Dead attacks, you must either attach a set aside Overcome by ~Fear to your threat dial, or discard an ally you control.")
                 .WithVictoryPoints(6)
                 .WithInfo(67, 1, Artist.Uwe_Jarling));
             Cards.Add(Card.ObjectiveAlly("Army of the Dead", string.Empty, setThePassingOfTheGreyCompany, 4, 6, 2, 8)
