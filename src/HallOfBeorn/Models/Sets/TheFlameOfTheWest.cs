@@ -7,6 +7,10 @@ namespace HallOfBeorn.Models.Sets
 {
     public class TheFlameOfTheWest : CardSet
     {
+        private const string setThePassingOfTheGreyCompany = "The Passing of the Grey Company";
+        private const string setTheSiegeOfGondor = "The Siege of Gondor";
+        private const string setTheBattleOfThePelennorFields = "The Battle of the Pelennor Fields";
+
         protected override void Initialize()
         {
             Name = "The Flame of the West";
@@ -103,6 +107,129 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Setup: Attach to a hero.\r\nAttached hero gains the Gondor trait.\r\nAttached hero gets +1 Willpower while commited to the quest with another Gondor character.")
                 .WithFlavor("\"Here do I swear fealty and service to Gondor, and to the Lord and Steward of the realm...\"\r\n-Pippin, The Return of the King")
                 .WithInfo(15, 1, Artist.Romana_Kendelic));
+            Cards.Add(Card.Objective("Overcome by Fear", string.Empty, setThePassingOfTheGreyCompany)
+                .WithBurden()
+                .WithTraits("Fear.")
+                .WithText("Setup: Attach to your threat dial. Limit 1 per threat dial.\r\nYour threat cannot be reduced.\r\nForced: At the end of the round, raise your threat by 1. Then you may spend 1 Fellowship resource to detach Overcome by ~Fear and set it aside, out of play.")
+                .WithInfo(16, 4, Artist.Micah_Epstein));
+            Cards.Add(Card.Location("The Stone of Erech", string.Empty, setThePassingOfTheGreyCompany, 5, 5)
+                .WithUnique()
+                .WithTraits("Hill.")
+                .WithText("Immune to player card effects.\r\nForced: After The Stone of Erech becomes the active location, each player searches the encounter deck and discard pile for an Oathbreaker enemy and adds it to the staging area. Shuffle the encounter deck.\r\nTravel: Remove 5 progress from stage 3B to travel here.")
+                .WithInfo(17, 1, Artist.Dawn_Carlos));
+            Cards.Add(Card.Location("Dark Door", string.Empty, setThePassingOfTheGreyCompany, 4, 4)
+                .WithTraits("Underground.")
+                .WithText("While Dark Door is in the staging area, progress cannot be placed on locations in the staging area.\r\nTravel: The first player reveals an encounter card to travel here.")
+                .WithFlavor("...before him stood a stony door closed fast...\r\n-The Return of the King")
+                .WithEasyModeQuantity(1)
+                .WithInfo(18, 2, Artist.Yoann_Boissonnet));
+            Cards.Add(Card.Location("Trysting Place", string.Empty, setThePassingOfTheGreyCompany, 3, 3)
+                .WithTraits("Underground.")
+                .WithText("While Trysting Place is in the staging area, each enemy in the staging area cannot take damage.\r\nTravel: The first player searches the encounter deck and discard pile for an Oathbreaker enemy and puts it into play engaged with him. Shuffle the encounter deck.")
+                .WithEasyModeQuantity(2)
+                .WithInfo(19, 3, Artist.Leanna_Crossan));
+            Cards.Add(Card.Location("Deadly Road", string.Empty, setThePassingOfTheGreyCompany, 2, 3)
+                .WithTraits("Underground.")
+                .WithText("While Deadly Road is in the staging area, it gains: \"Forced: After a 'when revealed' effecvt is canceled, raise each player's threat by 1.\"\r\nTravel: Spend 1 Fellowship resource to travel here.")
+                .WithFlavor("\"I was held to the road only by the will of Aragorn.\"\r\n-Gimli, The Return of the King")
+                .WithInfo(20, 3, Artist.Pedro_Amato));
+            Cards.Add(Card.Location("Haunted Path", string.Empty, setThePassingOfTheGreyCompany, 1, 4)
+                .WithTraits("Underground.")
+                .WithText("Haunted Path gets +1 Threat for each player with a threat of 35 or higher.\r\nTravel: Raise each player's threat by 1 to travel here.")
+                .WithShadow("Shadow: Either raise your your threat by 2, or return attacking enemy to the staging area after this attack.")
+                .WithInfo(21, 3, Artist.Stephen_Najarian));
+            Cards.Add(Card.Enemy("Dead Man of Dunharrow", string.Empty, setThePassingOfTheGreyCompany, 30, 2, 2, 1, 3)
+                .WithGeneric()
+                .WithTraits("Undead.", "Oathbreaker.")
+                .WithKeywords("Phantom.")
+                .WithText("Forced: After Dead Man of Dunharrow engages you, either attach a set aside Overcome by Fear to your threat dial, or raise your threat by 2.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack.")
+                .WithInfo(22, 4, Artist.Anthony_Devine));
+            Cards.Add(Card.Enemy("Faithless Dead", string.Empty, setThePassingOfTheGreyCompany, 35, 2, 3, 1, 4)
+                .WithGeneric()
+                .WithTraits("Undead.", "Oathbreaker.")
+                .WithKeywords("Peril.", "Phantom.")
+                .WithText("When Revealed: Either raise each player's threat by 2, or reveal an additional encounter card.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack and loses the Phantom keyword for this attack.")
+                .WithEasyModeQuantity(2)
+                .WithInfo(23, 3, Artist.Chris_Grun));
+            Cards.Add(Card.Enemy("Ghosts of Men", string.Empty, setThePassingOfTheGreyCompany, 40, 3, 3, 1, 5)
+                .WithGeneric()
+                .WithTraits("Undead.", "Oathbreaker.")
+                .WithKeywords("Peril.", "Phantom.")
+                .WithText("When Revealed: Either attach a set aside Overcome by Fear to your threat dial, or Ghosts of Men makes an immediate attack against you.")
+                .WithFlavor("...a rumour came after him like the shadow-sound of many feet. -The Return of the King")
+                .WithInfo(24, 2, Artist.Jose_Vega));
+            Cards.Add(Card.Enemy("Shadow Host", string.Empty, setThePassingOfTheGreyCompany, 45, 4, 4, 2, 6)
+                .WithGeneric()
+                .WithTraits("Undead.", "Oathbreaker.")
+                .WithKeywords("Phantom.")
+                .WithText("Forced: When Shadow Host engages you, either attach a set aside Overcome by Fear to your threat dial, or it makes an immediate attack.")
+                .WithFlavor("\"In that gloom the Shadow Host seemed to grow stronger and more terrible to look upon.\"\r\n-Legolas, The Return of the King")
+                .WithEasyModeQuantity(1)
+                .WithInfo(25, 2, Artist.Preston_Stone));
+            Cards.Add(Card.Treachery("Blood Runs Chill", string.Empty, setThePassingOfTheGreyCompany)
+                .WithKeywords("Doomed 1.")
+                .WithText("When Revealed: Each player with a threat of 35 or higher deal 1 damage to each exhausted character he controls.")
+                .WithShadow("Shadow: If your threat is 35 or higher, defending character cannot ready until the end of the round.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(26, 3, Artist.Uriah_Voth));
+            Cards.Add(Card.Treachery("The Way is Shut", string.Empty, setThePassingOfTheGreyCompany)
+                .WithKeywords("Peril.", "Surge.")
+                .WithText("When Revealed: Either attach a set aside Overcome by Fear to your threat dial, or progress cannot be placed on the current quest until the end of the round.")
+                .WithFlavor("\"It was made by those who are Dead, and the Dead keep it...\" -Old Man, The Return of the King")
+                .WithInfo(27, 2, Artist.Yoann_Boissonnet));
+            Cards.Add(Card.Treachery("Whispers in the Dark", string.Empty, setThePassingOfTheGreyCompany)
+                .WithKeywords("Peril.")
+                .WithText("When Revealed: Either attach a set aside Overcome by Fear to your threat dial, or each character you control gets -1 Willpower, -1 Attack, and -1 Defense until the end of the round.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if undefended).")
+                .WithInfo(28, 3, Artist.Gabriel_Verdon));
+            Cards.Add(Card.Treachery("No Turning Back", string.Empty, setThePassingOfTheGreyCompany)
+                .WithText("When Revealed: Each player must choose: either attach a set aside Overcome by Fear to your threat dial, or discard an ally you control")
+                .WithShadow("Shadow: Either attach a set aside Overcome by Fear to your threat dial, or attacking enemy makes an additional attack after this one.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(29, 2, Artist.Preston_Stone));
+
+            Cards.Add(Card.Quest("The Forbidden Door", string.Empty, 13, 1, setThePassingOfTheGreyCompany, null)
+                .WithFlavor("\"I must take new counsel for myself and my kindred. We must ride our own road, and no longer in secret. For me the time of stealth has passed. I will ride by the swiftest way, and I will take the Paths of the Dead.\" -Aragorn, The Return of the King")
+                .WithText("Setup: Set The Stone of Erech and Army of the Dead aside, out of play. Each player attaches a copy of Overcome by ~Fear to his threat dial. Remove each unattached copy of Overcome by ~Fear from the game.")
+                .WithOppositeFlavor("\"This is an evil door,\" said Halbarad, \"and my death lies beyond it. I will dare to pass nonetheless...\" -The Return of the King")
+                .WithOppositeText("When Revealed: Each player may add 1 resource to the resource pool of each hero he controls. Each player who does so must raise his threat by 3.\r\nForced: At the end of the planning phase, discard all cards in each player’s hand and advance to stage 2A.")
+                .WithInfo(63, 1, Artist.Yoann_Boissonnet));
+            Cards.Add(Card.Quest("The Paths of the Dead", string.Empty, 13, 2, setThePassingOfTheGreyCompany, 254)
+                .WithFlavor("He could see nothing but the dim flame of the torches; but if the company halted, there seemed an endless whisper of voices all about him, a murmur of words in no tongue that he had ever heard before. -The Return of the King")
+                .WithText("When Revealed: Each player searches the encounter deck for a different location and adds it to the staging area. Shuffle the encounter deck.")
+                .WithOppositeFlavor("...there could be no turning back; all the paths behind were thronged by an unseen host that followed in the dark. -The Return of the King")
+                .WithOppositeText("X is the threat of the player with the highest threat.\r\nEach player cannot reduce his threat below his initial threat level.\r\nForced: At the beginning of the planning phase each player must choose: either raise your threat by 1, or you cannot play cards this phase.")
+                .WithInfo(64, 1, Artist.Jennifer_Hrabota_Lesser));
+            Cards.Add(Card.Quest("The Dead are Following", string.Empty, 13, 3, setThePassingOfTheGreyCompany, 5)
+                .WithFlavor("\"I see shapes of Men and of horses, and pale banners like shreds of cloud, and spears like winter-thickets on a misty night. The Dead are following.\" -Legolas, The Return of the King")
+                .WithText("When Revealed: Add The Stone of Erech and Army of the Dead (enemy side faceup) to the staging area. Each player may raise his threat by 3 to detach Overcome by ~Fear from his threat dial and set it aside, out of play.")
+                .WithOppositeFlavor("\"Yes, the Dead ride behind. They have been summoned.\" -Elladan, The Return of the King")
+                .WithOppositeText("While Stone of Erech is the active location, each Oathbreaker enemy loses the Phantom keyword and gets -20 engagement cost.\r\nWhen The Stone of Erech leaves play as an explored location, the players win the game.")
+                .WithInfo(65, 1, Artist.S_C_Watson));
+            Cards.Add(Card.Campaign("The Passing of the Grey Company", string.Empty, 13, setThePassingOfTheGreyCompany, "The Lord of the Rings - Part 13")
+                .WithText("Setup: Each player may trade heroes without incurring a threat penalty. The first player may raise each player’s threat by 1 to search his deck for Anduril and add it to his hand. Remove each burden with these burden set icons from the encounter deck: A Shadow of the Past, Flight to the Ford, The Ring Goes South, The Passage of the Marshes, Shelob’s Lair")
+                .WithFlavor("\"...there is only one way through the mountains that will bring me to the coastlands before all is lost. That is the Paths of the Dead.\" -Aragorn, The Return of the King")
+                .WithOppositeText("Resolution: Add each copy of Overcome by Fear attached to a player's threat dial to the campaign pool and record the name of each player it was attached to. If Army of the Dead is in the victory display, add the Army of the Dead boon to the campaign pool. The players have earned each card added to the campaign pool")
+                .WithOppositeFlavor("Then Aragorn said: \"The hour is come at last. Now I go to Pelargir upon Anduin, and ye shall come after me. And when all this land is clean of the servants of Sauron, I will hold the oath fulfilled, and ye shall have peace and depart for ever. For I am Elessar, Isildur's heir of Gondor.\" -The Return of the King")
+                .WithInfo(66, 1, Artist.Yoann_Boissonnet));
+            Cards.Add(Card.Enemy("Army of the Dead", string.Empty, setThePassingOfTheGreyCompany, 50, 254, 6, 2, 8)
+                .WithSlugIncludesType()
+                .WithUnique()
+                .WithTraits("Undead.", "Oathbreaker.")
+                .WithKeywords("Phantom.")
+                .WithText("Immune to player card effects.\r\nX is twice the number of players in the game.\r\nForced: When Army of the Dead attacks, you must either attach a set aside Overcome by Fear to your threat dial, or discard an ally you control.")
+                .WithVictoryPoints(6)
+                .WithInfo(67, 1, Artist.Uwe_Jarling));
+            Cards.Add(Card.ObjectiveAlly("Army of the Dead", string.Empty, setThePassingOfTheGreyCompany, 4, 6, 2, 8)
+                .WithBoon()
+                .WithSlugIncludesType()
+                .WithUnique()
+                .WithTraits("Undead.")
+                .WithText("Immune to player card effects. The first player gains control of Army of the Dead.\r\nSetup: The first player takes control of Army of the Dead.\r\nIf Army of the Dead leaves play, remove it from the game.")
+                .WithFlavor("\"Now come! By the Black Stone I call you!\"\r\n-Aragorn, The Return of the King")
+                .WithInfo(68, 1, Artist.Uwe_Jarling));
         }
     }
 }

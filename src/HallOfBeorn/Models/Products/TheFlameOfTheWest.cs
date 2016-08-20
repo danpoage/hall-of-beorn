@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.Products
             : base("The Flame of the West", "MEC54", ImageType.Jpg)
         {
             AddCardSet(CardSet.TheFlameOfTheWest);
+
+            AddScenario(new HallOfBeorn.Models.Scenarios.ThePassingOfTheGreyCompany());
         }
     }
 }

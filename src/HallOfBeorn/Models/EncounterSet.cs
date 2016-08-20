@@ -180,6 +180,9 @@ namespace HallOfBeorn.Models
             Add(ShelobsLair);
             Add(TheGreatSpider);
 
+            //The Lord of the Rings: The Flame of the West
+            Add(ThePassingOfTheGreyCompany);
+
             //Gen Con and Fellowship Decks
             Add(TheMassingAtOsgiliath);
             Add(TheBattleOfLakeTown);
@@ -408,6 +411,9 @@ namespace HallOfBeorn.Models
         public static EncounterSet MenOfHarad = new EncounterSet { Name = "Men of Harad", Set = "The Land of Shadow" };
         public static EncounterSet ShelobsLair = new EncounterSet { Name = "Shelob's Lair", Set = "The Land of Shadow" };
         public static EncounterSet TheGreatSpider = new EncounterSet { Name = "The Great Spider", Set = "The Land of Shadow" };
+
+        //The Lord of the Rings: The Flame of the West
+        public static EncounterSet ThePassingOfTheGreyCompany = new EncounterSet { Name = "The Passing of the Grey Company", Set = "The Flame of the West" };
 
         //Gen Con and Fellowship Decks
         public static EncounterSet TheMassingAtOsgiliath = new EncounterSet { Name = "The Massing at Osgiliath", Set = "The Massing at Osgiliath" };

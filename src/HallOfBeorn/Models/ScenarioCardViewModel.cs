@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models
     {
         public ScenarioCardViewModel(ScenarioCard scenarioCard)
         {
-            Title = scenarioCard.Title;
+            Title = scenarioCard.Card.SlugIncludesType ? string.Format("{0} ({1})", scenarioCard.Title, scenarioCard.Card.CardType.ToString().Replace('_', ' ')) : scenarioCard.Title;
             EncounterSet = scenarioCard.EncounterSet;
             EncounterSetLink = string.Format("/Cards/Search?EncounterSet={0}", scenarioCard.EncounterSet.Replace(" ", "%20"));
             EncounterSetImage = scenarioCard.EncounterSetImage;

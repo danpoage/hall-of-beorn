@@ -379,6 +379,7 @@
     <Compile Include="Models\Scenarios\TheNinInEilph.cs" />
     <Compile Include="Models\Scenarios\TheOldForest.cs" />
     <Compile Include="Models\Scenarios\ThePassageOfTheMarshes.cs" />
+    <Compile Include="Models\Scenarios\ThePassingOfTheGreyCompany.cs" />
     <Compile Include="Models\Scenarios\TheRedhornGate.cs" />
     <Compile Include="Models\Scenarios\TheRingGoesSouth.cs" />
     <Compile Include="Models\Scenarios\TheRoadToIsengard.cs" />
