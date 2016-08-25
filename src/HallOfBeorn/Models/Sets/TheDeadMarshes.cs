@@ -99,7 +99,7 @@ namespace HallOfBeorn.Models.Sets
                 Willpower = 1,
                 HitPoints = 3,
                 Text = "While Elfhelm is ready, he gains: 'Response: After your threat is raised as the result of questing unsuccessfully, or by an encounter or quest card effect, reduce your threat by 1.'",
-                FlavorText = "\"Buy my lord sends word that we must set ourselves in readiness: orders may come for a sudden move.\" -The Return of the King",
+                FlavorText = "\"But my lord sends word that we must set ourselves in readiness: orders may come for a sudden move.\" -The Return of the King",
                 Number = 100,
                 Artist = Artist.Magali_Villeneuve
             });
