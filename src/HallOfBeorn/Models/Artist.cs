@@ -540,6 +540,9 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Federico_Musetti);
             all.Add(Artist.Dallas_Williams);
 
+            //The Drowned Ruins
+            all.Add(Artist.Andreia_Ugrai);
+
             //Murder at the Prancing Pony
             all.Add(Artist.Lutful_Valeriya_Romanovna);
             all.Add(Artist.Micah_Epstein);
@@ -768,6 +771,7 @@ namespace HallOfBeorn.Models
         public static Artist Allison_Theus = new Artist { Name = "Allison Theus", URL = "http://beastofoblivion.deviantart.com" };
         public static Artist Alvaro_Calvo_Escudero = new Artist { Name = "Álvaro Calvo Escudero", URL = "http://escudero.deviantart.com" };
         public static Artist Alyn_Spiller = new Artist { Name = "Alyn Spiller", URL = "http://niltrace.deviantart.com" };
+        public static Artist Andreia_Ugrai = new Artist { Name = "Andreia Ugrai", URL = "http://andreiaugrai.deviantart.com" };
         public static Artist Andrew_Johanson = new Artist { Name = "Andrew Johanson", URL = "http://andrewjohanson.blogspot.com" };
         public static Artist Andrew_Olson = new Artist { Name = "Andrew Olson", URL = "http://mysticaldonkey1.deviantart.com" };
         public static Artist Andrew_Ryan = new Artist { Name = "Andrew Ryan", URL = "http://andrewryanart.deviantart.com" };
