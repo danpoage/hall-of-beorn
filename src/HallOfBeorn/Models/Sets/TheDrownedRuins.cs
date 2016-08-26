@@ -20,7 +20,7 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(Card.Hero("Argalad", string.Empty, Sphere.Lore, 9, 2, 2, 1, 4)
                 .WithTraits("Silvan.", "Scout.")
                 .WithKeywords("Ranged.")
-                .WithText("Action: Exhaust Aragalad to choose an enemy in the staging area. Until the end of the phase, that enemy gets -X Threat, where X is Argalad's Attack. If this effect reduces the enemy's Threat to 0, deal 1 damage to it. (Limit once per round.)")
+                .WithText("Action: Exhaust Argalad to choose an enemy in the staging area. Until the end of the phase, that enemy gets -X Threat, where X is Argalad's Attack. If this effect reduces the enemy's Threat to 0, deal 1 damage to it. (Limit once per round.)")
                 .WithInfo(82, 1, Artist.Andreia_Ugrai));
             Cards.Add(Card.Ally("Dwarven Sellsword", "", Sphere.Leadership, 1, 2, 2, 2, 3)
                 .WithGeneric()
