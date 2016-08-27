@@ -33,7 +33,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithNormalizedTitle("Dunedain Message")
                 .WithTraits("Signal.")
                 .WithText("Action: Search your deck for a side quest and add it to your hand. Suffle your deck.")
-                .WithFlavor("\"I called for the help of the Dúnedain, and their watch has doubled...\"\r\n-Gandalf, The Fellowship of the Ring")
+                .WithFlavor("\"I called for the help of the Dúnedain, and their watch was doubled...\"\r\n-Gandalf, The Fellowship of the Ring")
                 .WithInfo(56, 3, Artist.Sara_Biddle));
             Cards.Add(Card.Ally("Longbeard Sentry", "", Sphere.Tactics, 3, 0, 1, 2, 3)
                 .WithGeneric()
