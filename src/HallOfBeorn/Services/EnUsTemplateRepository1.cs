@@ -1398,8 +1398,25 @@ namespace HallOfBeorn.Services
             //The Thing in the Depths
             AddHtml("Weather-Deck-TTiTD", "<p class='main-text'>While {self} is in the staging area, each other {trait:Deck.@Deck} location in play gains: <blockquote><b>Travel:</b> Each player must exhaust a character he controls to travel here.</blockquote></p>{shadow}<p class='shadow-text'><b>Shadow:</b> Exhaust a character you control.</p>");
 
+
             //Temple of the Deceived
             AddHtml("Searching-the-Island-TotD", "<p class='main-text'><b>Setup:</b> Prepare the Island Map (see insert). Flip over the top-left and bottom-left locations of the Island Map (without resolving their <b>Forced</b> effects, if any), and choose one as the player's starting active location, using a resource token to represent which location is active. The first player takes control of Captain Sahír, and the last player takes control of Na'asiyah (objective-ally side faceup). Add Temple Guardian to the staging area and attach Gate Key to it, guarded. Shuffle the encounter deck.</p>");
+
+            //The Drowned Ruins
+            AddHtml("Argalad-TDRu", "<p class='main-text'>{keyword:Ranged.}</p><p><b>Action:</b> Exhaust {self} to choose an enemy in the staging area. Until the end of the phase, that enemy gets -X {Threat}, where X is {self}'s {Attack}. If this effect reduces the enemy's {Threat} to 0, deal 1 damage to it. (Limit once per round.)</p>");
+            AddHtml("Dwarven-Sellsword-TDRu", "<p class='main-text'><b>Forced:</b> At the end of the round, discard {self} unless the players as a group spend 1 {sphere:Leadership} resource.</p><p class='flavor-text'>...he did not altogether approve of dwarves and their love of gold...<br>&ndash;The Hobbit</p>");
+            AddHtml("Dunedain-Remedy-TDRu", "<p class='main-text'>Attach to a hero.</p><p><b>Response:</b> After {self} is attached to a hero, heal 1 damage on that hero.</p><p><b>Action:</b> Pay 1 resource from attached hero's resource pool to attach {self} to another hero.</p>");
+            AddHtml("Marksman-of-Lorien-TDRu", "<p class='main-text'>{keyword:Ranged.}</p><p><b>Response:</b> After {self} enters play, choose an enemy. That enemy gets -2 {Defense} until the end of the round.</p><p class='flavor-text'>&quot;Keen are the eyes of the Elves.&quot;<br>&ndash;Aragorn, The Two Towers</p>");
+            AddHtml("Battle-fury-TDRu", "<p class='main-text'>Play only before the staging step.</p><p><b>Quest Action:</b> Exhaust a {type:Hero.@hero} you control to immediately declare it as an attacker (and resolve its attack) against any eligible enemy target. Then, the players as a group may spend 1 {sphere:Spirit} resource to commit that hero to the quest.</p><p class='flavor-text'>Fey he seemed, or the battle-fury of his fathers ran like new fire in his veins...<br>&ndash;The Return of the King</p>");
+            AddHtml("Woodland-Courier-TDRu", "<p class='main-text'><b>Response:</b> After {self} enters play, place 1 progress on a location (2 progress instead if that location has the {trait:Forest.@Forest} trait).</p>");
+            AddHtml("Hithlain-TDRu", "<p>Attach to a location. Limit 1 per location</p><p><b>Response:</b> After a player plays a {trait-ally:Silvan.@Silvan} ally from his hand, place 1 progress on attached location.</p><p class='flavor-text'>He made his end of the rope fast about another tree, and then ran lightly along it, over the river and back again, as if he were on a round.<br>&ndash;The Fellowship of the Ring</p>");
+            AddHtml("Robin-Smallburrow-TDRu", "<p class='main-text'><b>Response:</b> After you travel to a location, spend 1 {sphere:Spirit} resource to raise the engagement cost of each enemy in play by X until the end of the round, where X is that location's quest points. Any player may trigger this response.</p><p class='flavor-text'>&quot;Gave me a chance of walking round the country and seeing folk, and hearing the news, and knowing where the good beer was.&quot;<br>&ndash;The Return of the King</p>");
+            AddHtml("Interrogation-TDRu", "<p class='main-text'><b>Action:</b> Choose an enemy with an attached {trait:Trap.@Trap} card. Look at the top X cards of the encounter deck, where X is that enemy's printed {Threat}. You may discard 1 of those cards. Return the rest to the top of the deck, in the same order.</p>");
+            AddHtml("Strider-TDRu", "<p class='main-text'>Attach to a hero.</p><p>While you control 2 or fewer heroes, attached hero does not exhaust to commit to the quest.</p><p>While you control 5 or fewer characters, attached hero gets +2 {Willpower}.</p><p class='flavor-text'>&quot;Strider can take you by paths that are seldom tridden. Will you have him?&quot;<br>&ndash;Aragorn, The Fellowship of the Ring</p>");
+            
+            //A Storm on Cobas Haven
+
+            //The City of Corsairs
 
             //The Hobbit: Over Hill and Under Hill
             AddHtml("Bilbo-Baggins-THOHaUH", "<p class='main-text'>The first player gains control of {self}.</p><p>{{self} cannot gain resources from player card effects.</p><p><b>If {self} leaves play, the players lose the game.</b></p>");
@@ -1935,6 +1952,8 @@ namespace HallOfBeorn.Services
             AddHtml("Shelob's-Lair-Campaign-TLoS", "<p class='main-text'>You are playing campaign mode.</p><p><b>Setup:</b> Attach A Heavy Burden to the Ring-bearer. Remove each burden with the following burden set icons from the encounter deck and each player’s deck: Helm’s Deep, The Road to Isengard</p><p class='flavor-text'>&quot;There is another way. O yes indeed there is. Another way, darker, more difficult to find, more secret. But Sméagolnknows it. Let Sméagol show you!&quot; —The Two Towers</p>");
             */
             
+            //The Flame of the Wests
+
             //The Massing at Osgiliath
             AddHtml("Ruins-of-Osgiliath-TMaO", "<p class='main-text'>If the players have not crossed the Anduin, {self} gets +3 {threat}.</p><p class='flavor-text'>...but Osgiliath which lay between was deserted and in its ruins shadows walked.<br>&ndash;The Fellowship of the Ring</p>");
             AddHtml("The-Witch-King-TMaO", "<p class='main-text'>No {type:Attachment@attachments}.</p><p>While {self} is in the staging area, each character gets -1 {Willpower}.</p><p><b>Forced:</b> After {self} attacks, he returns to the staging area unless the defending player raises his threat by 3.</p>");

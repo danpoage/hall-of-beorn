@@ -20,6 +20,7 @@
     "Azain Silverbeard", "Guardian of Rivendell", "Heed the Dream", "Imladris Caregiver", "In Service of the Steward", "Last Stand", "Rod of the Steward", "Tides of Fate", "Vanish from Sight",
     "Lanwyn", "Eldahir", "Captain's Wisdom", "Master Ironsmith", "Raiment of War", "Elevenses", "Mirkwood Explorer", "Guarded Ceaselessly",
     "Ceorl", "Armored Destrier", "Deorwine", "Revealed in Wrath", "Rhovanion Outrider", "Scouting Party", "Entangling Nets", "Arrows from the Trees", "Ered Luin Miner",
+    "Argalad","Dwarven Sellsword", "Dunedain Remedy", "Marksman of Lorien", "Battle-fury", "Woodland Courier", "Hithlain", "Robin Smallburrow", "Interrogation", "Strider",
     "Banner of Elendil", "Desperate Defense", "Esquire of Gondor", "Esquire of Rohan", "Ghan-buri-Ghan", "Golden Shield", "Grimbold", "Livery of the Tower", "Roheryn", "Sterner than Steel",
           "+set:",
           "-set:",
