@@ -52,10 +52,26 @@ namespace HallOfBeorn.Services
             AddFaq("Eleanor-Core", "<p>Eleanor's ability can't cancel other keywords, just When Revealed. Any When Revealed effects and keywords on the replacement card are still resolved because it is considered &quot;Revealed&quot; (errata, FAQ 1.2).</p>", version);
         }
 
+        private void InitializeFaq14()
+        {
+            var version = 1.4;
+            AddFaq("Feint-Core", "<p>Should read: <blockquote><b>Combat Action:</b> Choose an enemy engaged with a player. That enemy cannot attack that player this phase.</blockquote></p>", version);
+            AddFaq("Thicket-of-Spears-Core", "<p>Should read: <blockquote><b>Action:</b> Choose a player. That player’s engaged enemies cannot attack that player this phase.</blockquote></p>", version);
+            AddFaq("Narvi's-Belt-KD", "<p>Should read: <blockquote><b>Action:</b> Exhaust Narvi’s Belt to give attached hero a <img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:16px;width:16px;' src='/Images/Leadership.png' />, <img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:16px;width:16px;' src='/Images/Lore.png' />, <img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:16px;width:16px;' src='/Images/Tactics.png' />, or <img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:16px;width:16px;' src='/Images/Spirit.png' /> icon until the end of the phase.</blockquote></p>", version);
+            AddFaq("Out-of-Sight-TLD", "<p>Should read: <blockquote><b>Action:</b> Enemies engaged with you cannot attack you this phase.</blockquote>", version);
+            AddFaq("Nori-THOHaUH", "<p>Should read: <blockquote><b>Response:</b> After you play a Dwarf character from your hand, reduce your threat by 1.</blockquote></p>", version);
+            AddFaq("Thror's-Map-THOHaUH", "<p>Should read: Should read: <blockquote><b>Travel Action:</b> Exhaust Thrór’s Map to choose a location in the staging area...</blockquote></p>", version);
+            AddFaq("Troll-Purse-THOHaUH", "<p>Should read: <blockquote>If Troll Purse is discarded, add it to the staging area. If Troll Purse is unattached and in the staging area, attach it to a <b><i>Troll</i></b> enemy, if able.</blockquote></p>", version);
+            AddFaq("Troll-Key-THOHaUH", "<p>Should read: <blockquote>If Troll Key is discarded, add it to the staging area. If Troll Key is unattached and in the staging area, attach it to a <b><i>Troll</i></b> enemy, if able.</blockquote></p>", version);
+            AddFaq("Master-of-Lore-HoN", "<p>Should read: <blockquote>Action: Exhaust Master of Lore to name a card type. Lower the cost for you to play the next <img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:16px;width:16px;' src='/Images/Lore.png' /> card of that type by 1 until the end of the phase (to a minimum of 1).</blockquote>", version);
+            AddFaq("Blocking-Wargs-HoN", "<p>Should read: <blockquote>Surge. <b>When Revealed:</b> Deal 1 damage to each character committed to the quest.</blockquote><br>Omit the parenthetical.</p>", version);
+        }
+
         private void InitializeFaqs()
         {
             InitializeFaq11();
             InitializeFaq12();
+            InitializeFaq14();
         }
 
         private void InitializeRulings()
