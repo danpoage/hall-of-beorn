@@ -1161,12 +1161,13 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 CardType = CardType.Location,
                 Quantity = 2,
                 Traits = new List<string>() { "Mountain." },
-                Text = "While Secret Entrance is the active location, The Lonely Mountain's Threat is reduced by half (round up).Travel: The first player must exhaust a hero and name a card type to travel here. Then, reveal the top card of the encounter deck. If the revealed card is not the named type, return Secret Entrance to the staging area. (The players cannot travel again this round.)",
+                Text = "While Secret Entrance is the active location, The Lonely Mountain's Threat is reduced by half (round up). Travel: The first player must exhaust a hero and name a card type to travel here. Then, look at the top card of the encounter deck. If the looked at card is not the named type, return Secret Entrance to the staging area. (The players cannot travel again this round.)",
                 QuestPoints = 1,
                 EncounterSet = "The Lonely Mountain",
                 Threat = 1,
                 Number = 45,
-                Artist = Artist.Darek_Zabrocki
+                Artist = Artist.Darek_Zabrocki,
+                HasErrata = true
             });
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,

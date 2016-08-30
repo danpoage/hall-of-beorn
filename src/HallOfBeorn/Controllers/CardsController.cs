@@ -1018,7 +1018,7 @@ namespace HallOfBeorn.Controllers
                     model.OctgnGuid = octgnGuid;
                 }
 
-                model.LoadNotes(noteService.GetNotes(card.Slug));
+                model.LoadNotes(noteService.Notes(card.Slug));
                 model.LoadTags(tagService.GetTags(card.Slug));
 
                 if (isPlayerCard(card))

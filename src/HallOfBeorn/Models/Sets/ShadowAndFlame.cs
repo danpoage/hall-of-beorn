@@ -261,13 +261,14 @@ namespace HallOfBeorn.Models.Sets
             });
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Png,
-                Title = "O Elbereth! Gilthonial!",
+                Title = "A Elbereth! Gilthonial!",
+                AlternateSlug = "O-Elbereth-Gilthonial-SaF",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9019",
                 CardType = CardType.Event,
                 Sphere = Sphere.Spirit,
                 Quantity = 3,
                 ResourceCost = 4,
-                Text = "Response: After an enemy attacks you, put that enemy on the bottom of the encounter deck. If your threat is lower than that enemy's engagement cost, set your threat equal to the engagement cost of that enemy.",
+                Text = "Response: After a non-unique enemy attacks you, put that enemy on the bottom of the encounter deck. If your threat is lower than that enemy's engagement cost, set your threat equal to the engagement cost of that enemy.",
                 Keywords = new List<string>() { "Secrecy 4." },
                 Number = 132,
                 Artist = Artist.Aaron_B_Miller,
