@@ -52,6 +52,14 @@ namespace HallOfBeorn.Services
             addFaq("Eleanor-Core", "<p>Eleanor's ability can't cancel other keywords, just When Revealed. Any When Revealed effects and keywords on the replacement card are still resolved because it is considered &quot;Revealed&quot; (errata, FAQ 1.2).</p>", version);
         }
 
+        private void loadFaq13()
+        {
+            var version = 1.3;
+            addFaq("Beravor-Core", "<p>Should read: <blockquote><b>Action:</b> Exhaust Beravor to choose a player. That player draws 2 cards. Limit once per round.</blockquote></p>", version);
+            addFaq("Protector-of-Lorien-Core", "<p>Should read: <blockquote><b>Action:</b> Discard a card from your hand to give attached hero +1 <img src='/Images/defense.gif' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' /> or +1 <img src='/Images/willpower.gif' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' /> until the end of the phase. Limit 3 times per phase.</blockquote></p>", version);
+            addFaq("Zigil-Miner-KD", "<p>Should read: <blockquote><b>Action:</b> Exhaust Zigil Miner and name a number to discard the top 2 cards of your deck. If at least one of those cards has cost equal to the named number, choose a hero you control. For each card that matches the named number, add 1 resource to that hero’s resource pool.</blockquote></p>", version);
+        }
+
         private void loadFaq14()
         {
             var version = 1.4;
@@ -74,7 +82,7 @@ namespace HallOfBeorn.Services
             addFaq("A-Elbereth-Gilthonial-SaF", "<p>Title should read: “A Elbereth! Gilthoniel!”</p><p>Should read: <blockquote><b>Resonse:</b> After a non-unique enemy attacks you...</blockquote></p>", version);
             addFaq("Secret-Entrance-THOtD", "<p>Should read: <blockquote>Then, look at the top card of the encounter deck. If the looked at card is not...</blockquote></p>", version);
             addFaq("A-Watchful-Peace-HoN", "<p>Should read: <blockquote><b>Response:</b> After a location worth no victory points leaves play as an explored location...</blockquote></p>", version);
-            addFaq("Power-of-Mordor-HoN", "<p>Should read: <blockquote>...Reveal an equal number of cards from the encounter deck...</blockquote><br>Omit the word “Then”</p>", version);
+            addFaq("The-Power-of-Mordor-HoN", "<p>Should read: <blockquote>...Reveal an equal number of cards from the encounter deck...</blockquote><br>Omit the word “Then”</p>", version);
             addFaq("Trained-for-War-TDF", "<p>Should read: <blockquote><b>Action:</b> Until the end of the phase, if the current quest does not have siege, it gains battle.</blockquote></p>", version);
             addFaq("Counter-attack-AoO", "<p>Should read: <blockquote><b>When Revealed:</b> Each player must either return the location he controls...</blockquote></p>", version);
             addFaq("Impenetrable-Fog-TMV", "<p>Should read: <blockquote><b>When Revealed:</b> The first player either places 3 progress tokens on To the Tower, or...</blockquote></p>", version);
@@ -85,6 +93,7 @@ namespace HallOfBeorn.Services
         {
             loadFaq11();
             loadFaq12();
+            loadFaq13();
             loadFaq14();
             loadFaq17();
         }

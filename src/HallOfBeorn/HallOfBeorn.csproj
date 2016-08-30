@@ -290,6 +290,7 @@
     <Compile Include="Models\LinkType.cs" />
     <Compile Include="Models\ProductGroups\DoomMasteredProductGroup.cs" />
     <Compile Include="Models\ProductGroups\DreamChaserProductGroup.cs" />
+    <Compile Include="Models\ProductGroups\HaradrimProductGroup.cs" />
     <Compile Include="Models\Products\AcrossTheEttenmoorsProduct.cs" />
     <Compile Include="Models\Products\AmongTheOutlawsProduct.cs" />
     <Compile Include="Models\Products\AStormOnCobasHavenProduct.cs" />
@@ -310,6 +311,7 @@
     <Compile Include="Models\Products\TheNinInEilphNightmareProduct.cs" />
     <Compile Include="Models\Products\TheRoadDarkensNightmareProduct.cs" />
     <Compile Include="Models\Products\TheRuinsOfBelegostProduct.cs" />
+    <Compile Include="Models\Products\TheSandsOfHaradProduct.cs" />
     <Compile Include="Models\Products\TheSiegeOfAnnuminasProduct.cs" />
     <Compile Include="Models\Products\TheThingInTheDepthsProduct.cs" />
     <Compile Include="Models\Products\TheThreeTrialsNightmareProduct.cs" />
@@ -591,6 +593,7 @@
     <Compile Include="Models\Sets\TheRedhornGateNightmare.cs" />
     <Compile Include="Models\Sets\TheRoadDarkens.cs" />
     <Compile Include="Models\Sets\TheRuinsOfBelegost.cs" />
+    <Compile Include="Models\Sets\TheSandsOfHarad.cs" />
     <Compile Include="Models\Sets\TheSeventhLevelNightmare.cs" />
     <Compile Include="Models\Sets\TheSiegeOfAnnuminas.cs" />
     <Compile Include="Models\Sets\TheSiegeOfCairAndrosNightmare.cs" />

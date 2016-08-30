@@ -119,6 +119,9 @@ namespace HallOfBeorn.Models
         public static Product AStormOnCobasHaven = new AStormOnCobasHavenProduct();
         public static Product TheCityOfCorsairs = new TheCityOfCorsairsProduct();
 
+        //The Sands of Harad and Haradrim Cycle
+        public static Product TheSandsOfHarad = new TheSandsOfHaradProduct();
+
         //The Hobbit Saga
         public static Product TheHobbitOverHillAndUnderHill = new TheHobbitOverHillAndUnderHillProduct();
         public static Product TheHobbitOnTheDoorstep = new TheHobbitOnTheDoorstepProduct();
