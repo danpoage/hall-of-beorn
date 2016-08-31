@@ -151,6 +151,8 @@ namespace HallOfBeorn.Models
             Add(TheCityOfCorsairs);
 
             Add(TheSandsOfHarad);
+            Add(TheMumakil);
+            Add(RaceAcrossHarad);
 
             Add(TheHobbitOverHillAndUnderHill);
             Add(TheHobbitOnTheDoorstep);
@@ -278,6 +280,8 @@ namespace HallOfBeorn.Models
         public static CardSet TheCityOfCorsairs = new Sets.TheCityOfCorsairs();
 
         public static CardSet TheSandsOfHarad = new Sets.TheSandsOfHarad();
+        public static CardSet TheMumakil = new Sets.TheMumakil();
+        public static CardSet RaceAcrossHarad = new Sets.RaceAcrossHarad();
 
         public static CardSet TheHobbitOverHillAndUnderHill = new Sets.TheHobbitOverHillandUnderHill().WithShortSlug("Y");
         public static CardSet TheHobbitOnTheDoorstep = new Sets.TheHobbitOntheDoorstep().WithShortSlug("Z");

@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.ProductGroups
             : base("Haradrim Cycle")
         {
             MainProduct = Product.TheSandsOfHarad;
+            AddProduct(Product.TheMumakil);
+            AddProduct(Product.RaceAcrossHarad);
         }
     }
 }

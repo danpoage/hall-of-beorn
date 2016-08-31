@@ -298,6 +298,7 @@
     <Compile Include="Models\Products\EscapeFromMountGramProduct.cs" />
     <Compile Include="Models\Products\FlightOfTheStormcallerProduct.cs" />
     <Compile Include="Models\Products\MurderAtThePrancingPonyProduct.cs" />
+    <Compile Include="Models\Products\RaceAcrossHaradProduct.cs" />
     <Compile Include="Models\Products\TempleOfTheDeceivedProduct.cs" />
     <Compile Include="Models\Products\TheAntleredCrownNightmareProduct.cs" />
     <Compile Include="Models\Products\TheBattleOfCarnDumProduct.cs" />
@@ -308,6 +309,7 @@
     <Compile Include="Models\Products\TheFlameOfTheWest.cs" />
     <Compile Include="Models\Products\TheGreyHavensProduct.cs" />
     <Compile Include="Models\Products\TheLandOfShadowProduct.cs" />
+    <Compile Include="Models\Products\TheMumakilProduct.cs" />
     <Compile Include="Models\Products\TheNinInEilphNightmareProduct.cs" />
     <Compile Include="Models\Products\TheRoadDarkensNightmareProduct.cs" />
     <Compile Include="Models\Products\TheRuinsOfBelegostProduct.cs" />
@@ -542,6 +544,7 @@
     <Compile Include="Models\Products\KhazadDumNightmareProduct.cs" />
     <Compile Include="Models\Sets\MurderAtThePrancingPony.cs" />
     <Compile Include="Models\Sets\PerilInPelargirNightmare.cs" />
+    <Compile Include="Models\Sets\RaceAcrossHarad.cs" />
     <Compile Include="Models\Sets\TempleOfTheDeceived.cs" />
     <Compile Include="Models\Sets\TheAntleredCrown.cs" />
     <Compile Include="Models\Sets\TheAntleredCrownNightmare.cs" />
@@ -560,6 +563,7 @@
     <Compile Include="Models\Sets\TheLonelyMountainNightmare.cs" />
     <Compile Include="Models\Sets\TheLostRealm.cs" />
     <Compile Include="Models\Sets\TheMorgulValeNightmare.cs" />
+    <Compile Include="Models\Sets\TheMumakil.cs" />
     <Compile Include="Models\Sets\TheNinInEilph.cs" />
     <Compile Include="Models\Sets\OverTheMistyMountainsGrimNightmare.cs" />
     <Compile Include="Models\Sets\PassageThroughMirkwoodNightmare.cs" />

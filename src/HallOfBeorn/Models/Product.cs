@@ -121,6 +121,8 @@ namespace HallOfBeorn.Models
 
         //The Sands of Harad and Haradrim Cycle
         public static Product TheSandsOfHarad = new TheSandsOfHaradProduct();
+        public static Product TheMumakil = new TheMumakilProduct();
+        public static Product RaceAcrossHarad = new RaceAcrossHaradProduct();
 
         //The Hobbit Saga
         public static Product TheHobbitOverHillAndUnderHill = new TheHobbitOverHillAndUnderHillProduct();
