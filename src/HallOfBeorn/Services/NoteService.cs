@@ -106,6 +106,15 @@ namespace HallOfBeorn.Services
             addFaq("Blue-Mountain-Trader-TDT", "<p>Should read: <blockquote>...Then, that player moves 1 resource from the resource pool of a hero he controls to the resource pool of a hero you control, or Blue Mountain Trader is discarded. (Limit once per round.)</blockquote></p>", version);
         }
 
+        private void loadFaq18()
+        {
+            var version = 1.8;
+            addFaq("Horn-of-Gondor-Core", "<p>Should read: <blockquote><b>Response:</b> After a character is destroyed, add 1 resource to attached hero’s pool.</blockquote></p>", version);
+            addFaq("Love-of-Tales-TLD", "<p>Should read: <blockquote><b>Response:</b> After a <b><i>Song</i></b> card is played, exhaust Love of Tales to add 1 resource...</blockquote></p>", version);
+            addFaq("Devilry-of-Saruman-ToS", "<p>Should read: <blockquote><b>When Revealed:</b> Place 3 progress on the main quest...</blockquote></p>", version);
+            addFaq("The-Passage-of-the-Marshes-Campaign-TLoS", "<p>Should read: <blockquote><b>Setup:</b> Each player may change hero cards he controls without incurring the +1 threat penalty. Each player shuffles 1 copy...</blockquote></p>", version);
+        }
+
         private void loadFaqs()
         {
             loadFaq11();
@@ -115,6 +124,7 @@ namespace HallOfBeorn.Services
             loadFaq15();
             loadFaq16();
             loadFaq17();
+            loadFaq18();
         }
 
         private void loadRulings()

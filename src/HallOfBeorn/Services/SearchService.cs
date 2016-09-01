@@ -552,6 +552,9 @@ namespace HallOfBeorn.Services
                     case ErrataVersion.FAQ_1_7:
                         version = 1.7;
                         break;
+                    case ErrataVersion.FAQ_1_8:
+                        version = 1.8;
+                        break;
                     default:
                         break;
                 }
