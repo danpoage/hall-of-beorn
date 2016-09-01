@@ -25,7 +25,7 @@ namespace HallOfBeorn.Services
 
         private bool IsCategorizable(Card card)
         {
-            if (string.IsNullOrEmpty(card.Text))
+            if (string.IsNullOrEmpty(card.Text) && card.Keywords.Count == 0)
                 return false;
 
             switch (card.CardType)
@@ -323,7 +323,7 @@ namespace HallOfBeorn.Services
                 CreateCategoryFilter(@"search[\s].*your[\s]deck", Category.Card_Search),
                 CreateCategoryFilter(@"(look|looks)[\s]at[\s].*[\s]deck|the top card of your deck faceup|exchange a card in your hand with the top card of your deck|reveal the top card of each player's deck", Category.Player_Scrying, "encounter deck", "Add 1 to your hand and discard the other"),
                 CreateCategoryFilter(@"(look|looks)[\s]at[\s].*encounter[\s]deck", Category.Encounter_Scrying),
-                CreateCategoryFilter("(enemy|enemies|engaged with you).*(cannot|do not) attack", Category.Combat_Control),
+                CreateCategoryFilter("(enemy|enemies|engaged with you).*(cannot|do not) attack|enemy on the bottom of the encounter deck", Category.Combat_Control),
                 CreateCategoryFilter(@"(heal|heals)[\s].*damage", Category.Healing),
                 CreateCategoryFilter(@"discard.*Condition[\s]attachment", Category.Condition_Control),
                 CreateCategoryFilter(@"place[\s].*progress|switch the active location|location enters play|location gets -.*Threat|While attached to a location|make it the active location|may be placed on the attached location|switch that location", Category.Location_Control),
@@ -339,7 +339,7 @@ namespace HallOfBeorn.Services
                 CreateCategoryFilter(@"(after[\s].*[\s]leaves[\s]play|return (it|him|Keen-eyed Took) to your hand)|if that ally is still in play, add it to your hand", Category.Leaves_Play, "After attached location leaves play"),
                 CreateCategoryFilter(@"(after[\s]you[\s]play[\s].*[\s]from[\s]your[\s]hand|after you play)", Category.Played_From_Hand),
                 CreateCategoryFilter(@"attach 1 attachment card|an attachment of cost 3 or less and put it into play|you may attach that card facedown|to play Weapon and Armor attachments on|put into play the revealed card for no cost", Category.Equipping),
-                CreateCategoryFilter((card) => { return card.Keywords.Any(x => x.StartsWith("Secrecy ")) || card.Text.ToLowerSafe().Contains("if your threat is 20 or less") || card.Text.ToLowerSafe().Contains("gains secrecy") || card.Text.ToLowerSafe().Contains("treat your threat as if it is 20"); }, Category.Secrecy),
+                CreateCategoryFilter((card) => { return card.Keywords.Any(x => x.StartsWith("Secrecy")) || card.Text.ToLowerSafe().Contains("if your threat is 20 or less") || card.Text.ToLowerSafe().Contains("gains secrecy") || card.Text.ToLowerSafe().Contains("treat your threat as if it is 20"); }, Category.Secrecy),
                 CreateCategoryFilter("enemy.*engagement cost.*than your threat", Category.Surprise),
                 CreateCategoryFilter((card) => { return card.Text.ToLowerSafe().Contains("victory display") && card.VictoryPoints == 0; }, Category.Victory_Display),
                 CreateCategoryFilter("(discard (a|1|2|all|X) (card|cards) (from|in) your hand|discarded from your hand|discard (1 of those|any number of) cards)", Category.Discard_From_Hand),

@@ -135,7 +135,7 @@ namespace HallOfBeorn.Models.Sets
                 Defense = 2,
                 Willpower = 1,
                 HitPoints = 2,
-                Keywords = new List<string>() { "Ranged.", " Sentinel.", " Secrecy 3." },
+                Keywords = new List<string>() { "Ranged.", "Sentinel.", "Secrecy 3." },
                 Number = 29,
                 Artist = Artist.Ilich_Henriquez
             });

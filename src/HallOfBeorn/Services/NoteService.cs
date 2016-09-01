@@ -75,6 +75,12 @@ namespace HallOfBeorn.Services
             addFaq("Blocking-Wargs-HoN", "<p>Should read: <blockquote>Surge. <b>When Revealed:</b> Deal 1 damage to each character committed to the quest.</blockquote><br>Omit the parenthetical.</p>", version);
         }
 
+        private void loadFaq15()
+        {
+            //var version = 1.5;
+            //addFaq("", "", version);
+        }
+
         private void loadFaq17()
         {
             var version = 1.7;
