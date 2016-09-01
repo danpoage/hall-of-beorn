@@ -75,6 +75,14 @@ namespace HallOfBeorn.Services
             addFaq("Blocking-Wargs-HoN", "<p>Should read: <blockquote>Surge. <b>When Revealed:</b> Deal 1 damage to each character committed to the quest.</blockquote><br>Omit the parenthetical.</p>", version);
         }
 
+        private void loadFaq15()
+        {
+            var version = 1.5;
+            addFaq("Snow-Warg-TRG", "<p>Should read: <blockquote><b>Forced:</b> After a character is declared as a defender against Snow Warg, deal 1 damage to the defending character, if able.</blockquote></p>", version);
+            addFaq("Ravens-of-the-Mountain-THOtD", "<p>Should read: <blockquote><b>Action:</b> Exhaust a hero you control to shuffle the encounter deck and look at its top card..</blockquote></p>", version);
+            addFaq("Lost-in-the-Dark-THOtD", "<p>Should read: <blockquote><b>When Revealed:</b> Reveal stage 3 and create a separate staging area for the first player using that stage. If there are no other players in the game, discard this stage and each card in its staging area. All other players advance to stage 4.</blockquote></p>", version);
+        }
+
         private void loadFaq16()
         {
             var version = 1.6;
@@ -104,6 +112,7 @@ namespace HallOfBeorn.Services
             loadFaq12();
             loadFaq13();
             loadFaq14();
+            loadFaq15();
             loadFaq16();
             loadFaq17();
         }

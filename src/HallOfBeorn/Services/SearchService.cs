@@ -543,6 +543,9 @@ namespace HallOfBeorn.Services
                     case ErrataVersion.FAQ_1_4:
                         version = 1.4;
                         break;
+                    case ErrataVersion.FAQ_1_5:
+                        version = 1.5;
+                        break;
                     case ErrataVersion.FAQ_1_6:
                         version = 1.6;
                         break;
@@ -555,7 +558,7 @@ namespace HallOfBeorn.Services
 
                 if (version > 0)
                 {
-                    filters.Add(new SearchFilter((s, c) => { return noteService.HasErrata(c.Slug, version); }, 100, "Has Errata for " + model.Errata.Value.ToString().Replace("1_", "1.")));
+                    filters.Add(new SearchFilter((s, c) => { return noteService.HasErrata(c.Slug, version); }, 100, "Has Errata from " + model.Errata.Value.ToString().Replace("FAQ_1_", " FAQ 1.")));
                 }
             }
 

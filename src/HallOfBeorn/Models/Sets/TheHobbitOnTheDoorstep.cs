@@ -436,7 +436,7 @@ namespace HallOfBeorn.Models.Sets
                 QuestPoints = null,
                 EncounterSet = "Flies and Spiders",
                 FlavorText = "The nights were the worst. It then became pitch-dark - not what you call pitch-dark, but really pitch, so black that you really could see nothing. Bilbo tried flapping his hand in front of his nose but he could not see it at all. Well, perhaps it is not true to say they could see nothing: they could see eyes. -The Hobbit",
-                OppositeText = "When Revealed: Reveal stage 3 and create a separate staging area for the first player use that stage. If there are not other players in the game, discard this stage and each card in the stage area. All other players advance to stage 4.",
+                OppositeText = "When Revealed: Reveal stage 3 and create a separate staging area for the first player use that stage. If there are not other players in the game, discard this stage and each card in the staging area. All other players advance to stage 4.",
                 OppositeFlavorText = "... the cries of the others got steadily further and fainter, and though after a while it seemed to him they changed to yells and cries for help in the far distance, all noise at last died right away, and he was left alone in complete silence and darkness. -The Hobbit",
                 Number = 68,
                 Artist = Artist.Adam_Lane,
