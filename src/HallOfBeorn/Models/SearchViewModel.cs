@@ -205,6 +205,9 @@ namespace HallOfBeorn.Models
         [Display(Name = "View")]
         public View? View { get; set; }
 
+        [Display(Name = "Errata")]
+        public ErrataVersion? Errata { get; set; }
+
         public bool IsCardView()
         {
             return (!View.HasValue || (View != Models.View.Product));
@@ -735,6 +738,11 @@ namespace HallOfBeorn.Models
         public static IEnumerable<SelectListItem> WillpowerStrengthValues { get; set; }
         public static IEnumerable<SelectListItem> ThreatStrengthValues { get; set; }
         public static IEnumerable<SelectListItem> QuestPointsValues { get; set; }
+
+        public static IEnumerable<SelectListItem> ErrataVersions
+        {
+            get { return typeof(ErrataVersion).GetSelectListItems(); }
+        }
 
         public static IEnumerable<SelectListItem> Spheres
         {

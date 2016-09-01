@@ -48,8 +48,11 @@ namespace HallOfBeorn
 
             var advancedSearchService = new AdvancedSearchService();
             var sortService = new SearchSortService(ringsDbService);
-            
-            var searchService = new SearchService(productRepository, cardRepository, scenarioService, advancedSearchService, sortService, ringsDbService);
+
+            var noteService = new NoteService();
+            System.Web.HttpContext.Current.Application[Extensions.NoteServiceKey] = noteService;
+
+            var searchService = new SearchService(productRepository, cardRepository, scenarioService, advancedSearchService, sortService, ringsDbService, noteService);
             System.Web.HttpContext.Current.Application[Extensions.SearchServiceKey] = searchService;
 
             var statService = new StatService(cardRepository);
@@ -60,9 +63,6 @@ namespace HallOfBeorn
 
             var templateService = new TemplateService();
             System.Web.HttpContext.Current.Application[Extensions.TemplateServiceKey] = templateService;
-
-            var noteService = new NoteService();
-            System.Web.HttpContext.Current.Application[Extensions.NoteServiceKey] = noteService;
 
             var tagService = new TagService();
             System.Web.HttpContext.Current.Application[Extensions.TagServiceKey] = tagService;

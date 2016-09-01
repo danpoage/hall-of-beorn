@@ -75,10 +75,13 @@ namespace HallOfBeorn.Services
             addFaq("Blocking-Wargs-HoN", "<p>Should read: <blockquote>Surge. <b>When Revealed:</b> Deal 1 damage to each character committed to the quest.</blockquote><br>Omit the parenthetical.</p>", version);
         }
 
-        private void loadFaq15()
+        private void loadFaq16()
         {
-            //var version = 1.5;
-            //addFaq("", "", version);
+            var version = 1.6;
+            addFaq("Erebor-Battle-Master-TLD", "<p>Should read: <blockquote>Erebor Battle Master gets +1 <img src='/Images/attack.gif' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' /> for each other <b><i>Dwarf</i></b> ally you control.</blockquote></p>", version);
+            addFaq("Expert-Treasure-hunter-THOtD", "<p>Should read: </blockquote>Attach to a hero. Limit 1 per hero.</blockquote></p>", version);
+            addFaq("The-Ambush-TBoG", "<p>Should read: <blockquote>At the beginning of the combat phase, each player must either turn each of his hidden cards faceup, or take 1 hidden card.</blockquote></p>", version);
+            addFaq("The-Cross-roads-TBoG", "<p>Should read: <blockquote>The current quest card gains siege (and loses battle).</blockquote></p>", version);
         }
 
         private void loadFaq17()
@@ -101,6 +104,7 @@ namespace HallOfBeorn.Services
             loadFaq12();
             loadFaq13();
             loadFaq14();
+            loadFaq16();
             loadFaq17();
         }
 
@@ -166,6 +170,24 @@ namespace HallOfBeorn.Services
             return (notesBySlug.ContainsKey(slug)) ?
                 notesBySlug[slug]
                 : new List<CardNote>();
+        }
+
+        public bool HasErrata(string slug, double version)
+        {
+            if (!notesBySlug.ContainsKey(slug))
+            {
+                return false;
+            }
+
+            foreach (var note in Notes(slug))
+            {
+                if (note.Type == CardNoteType.FAQ && (note.FaqVersion == version || version == 0))
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }

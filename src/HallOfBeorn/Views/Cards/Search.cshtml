@@ -221,6 +221,11 @@
                 @Html.DropDownListFor(x => x.PopularityOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
                 @Html.DropDownListFor(x => x.Popularity, SearchViewModel.PopularityValues, new { @class = "search-select-short" })
                 </span>
+
+                <span class="search-filter">
+                <span class="search-label-short">Errata</span>
+                @Html.DropDownListFor(x => x.Errata, SearchViewModel.ErrataVersions, new { @class = "search-select-short" })
+                </span>
             </div>
         </div>
 

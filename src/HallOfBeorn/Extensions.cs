@@ -134,7 +134,7 @@ namespace HallOfBeorn
                     text = keepZero ? item.ToString().Replace("_", separator) : "Any";
                 }
                 else {
-                    text = item.ToString().Replace("_", separator);
+                    text = item.ToString().Replace("1_", "1.").Replace("_", separator);
                 }
 
                 var value = item.ToString();

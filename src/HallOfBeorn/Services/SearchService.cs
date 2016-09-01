@@ -13,7 +13,7 @@ namespace HallOfBeorn.Services
 {
     public class SearchService
     {
-        public SearchService(ProductRepository productRepository, CardRepository cardRepository, ScenarioService scenarioService, AdvancedSearchService advancedSearchService, SearchSortService sortService, RingsDbService ringsDbService)
+        public SearchService(ProductRepository productRepository, CardRepository cardRepository, ScenarioService scenarioService, AdvancedSearchService advancedSearchService, SearchSortService sortService, RingsDbService ringsDbService, NoteService noteService)
         {
             this.productRepository = productRepository;
             this.cardRepository = cardRepository;
@@ -22,6 +22,7 @@ namespace HallOfBeorn.Services
             this.sortService = sortService;
             this.cards = cardRepository.Cards();
             this.ringsDbService = ringsDbService;
+            this.noteService = noteService;
             this.getPopularity = (slug) => { return ringsDbService.GetPopularity(slug); };
         }
 
@@ -32,6 +33,7 @@ namespace HallOfBeorn.Services
         private readonly SearchSortService sortService;
         private readonly IEnumerable<Card> cards;
         private readonly RingsDbService ringsDbService;
+        private readonly NoteService noteService;
         private readonly Func<string, byte> getPopularity;
 
         private bool BelongsToScenario(Card card, string scenarioTitle)
@@ -515,6 +517,46 @@ namespace HallOfBeorn.Services
             if (model.Popularity.IsDefinedFilter())
             {
                 filters.Add(new SearchFilter((s, c) => { var pop = c.Popularity(getPopularity);  return pop > 0 && pop.CompareTo(s.PopularityOp, s.Popularity); }, 100, "Popularity " + model.PopularityOp.ToEnumDisplayString() + " '" + model.Popularity + "'"));
+            }
+
+            if (model.Errata.HasValue && model.Errata.Value != ErrataVersion.Any)
+            {
+                double version = 0;
+
+                switch (model.Errata.Value)
+                {
+                    case ErrataVersion.Has_Errata:
+                        filters.Add(new SearchFilter((s, c) => { return noteService.HasErrata(c.Slug, 0); }, 100, "Has Errata"));
+                        break;
+                    case ErrataVersion.No_Errata:
+                        filters.Add(new SearchFilter((s, c) => { return !noteService.HasErrata(c.Slug, 0); }, 100, "Does Not Have Errata"));
+                        break;
+                    case ErrataVersion.FAQ_1_1:
+                        version = 1.1;
+                        break;
+                    case ErrataVersion.FAQ_1_2:
+                        version = 1.2;
+                        break;
+                    case ErrataVersion.FAQ_1_3:
+                        version = 1.3;
+                        break;
+                    case ErrataVersion.FAQ_1_4:
+                        version = 1.4;
+                        break;
+                    case ErrataVersion.FAQ_1_6:
+                        version = 1.6;
+                        break;
+                    case ErrataVersion.FAQ_1_7:
+                        version = 1.7;
+                        break;
+                    default:
+                        break;
+                }
+
+                if (version > 0)
+                {
+                    filters.Add(new SearchFilter((s, c) => { return noteService.HasErrata(c.Slug, version); }, 100, "Has Errata for " + model.Errata.Value.ToString().Replace("1_", "1.")));
+                }
             }
 
             if (model.HasThreatCost())
