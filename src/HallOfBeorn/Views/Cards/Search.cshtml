@@ -8,7 +8,7 @@
 @section scripts {
 <script type="text/javascript" src="~/Scripts/cardSearch.js"></script>
 <script type="text/javascript" src="~/Scripts/storage.js"></script>
-<script type="text/javascript" src="~/Scripts/autocomplete17.js"></script>
+<script type="text/javascript" src="~/Scripts/autocomplete18.js"></script>
 <script type="text/javascript">
     $(function () {
         $("#Query").autocomplete({
@@ -316,6 +316,9 @@
                 <input type="checkbox" id="MEDCH" class="search-select-checkbox" /><span class="search-cycle">Dream-chaser</span>
                 <div class="search-cycle-section">
                     @Html.CheckBox("MEC48", Model.MEC48.HasValue && Model.MEC48.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Flight of the Stormcaller</span>
+                    @Html.CheckBox("MEC49", Model.MEC48.HasValue && Model.MEC49.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Thing in the Depths</span>
+                    @Html.CheckBox("MEC50", Model.MEC48.HasValue && Model.MEC50.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Temple of the Deceived</span>
+                    @Html.CheckBox("MEC51", Model.MEC48.HasValue && Model.MEC51.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Drowned Ruins</span>
                 </div>
             </div>
             <hr />
@@ -335,6 +338,7 @@
                 @Html.CheckBox("MEC34", Model.MEC34.HasValue && Model.MEC34.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Road Darkens</span>
                 @Html.CheckBox("MEC45", Model.MEC45.HasValue && Model.MEC45.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Treason of Saruman</span>
                 @Html.CheckBox("MEC46", Model.MEC46.HasValue && Model.MEC46.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Land of Shadows</span>
+                @Html.CheckBox("MEC54", Model.MEC54.HasValue && Model.MEC54.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Flame of the West</span>
             </div>
             <hr />
             <div>

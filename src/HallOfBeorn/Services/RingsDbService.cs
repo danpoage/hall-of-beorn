@@ -560,6 +560,7 @@ namespace HallOfBeorn.Services
             addPopularity("132008", 1);
             addPopularity("132012", 1);
             addPopularity("143013", 1);
+            addPopularity("04132", 1);
 
             addPopularity("06056", 1);
         }

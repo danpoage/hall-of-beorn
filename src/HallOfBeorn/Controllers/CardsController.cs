@@ -914,6 +914,18 @@ namespace HallOfBeorn.Controllers
             {
                 model.MEC48 = null;
             }
+            if (model.MEC49.HasValue && !model.MEC49.Value)
+            {
+                model.MEC49 = null;
+            }
+            if (model.MEC50.HasValue && !model.MEC50.Value)
+            {
+                model.MEC50 = null;
+            }
+            if (model.MEC51.HasValue && !model.MEC51.Value)
+            {
+                model.MEC51 = null;
+            }
 
             if (model.MEC16.HasValue && !model.MEC16.Value)
             {
@@ -939,6 +951,10 @@ namespace HallOfBeorn.Controllers
             if (model.MEC46.HasValue && !model.MEC46.Value)
             {
                 model.MEC46 = null;
+            }
+            if (model.MEC54.HasValue && !model.MEC54.Value)
+            {
+                model.MEC54 = null;
             }
 
             if (model.FA01.HasValue && !model.FA01.Value)

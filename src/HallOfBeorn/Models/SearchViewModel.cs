@@ -682,6 +682,9 @@ namespace HallOfBeorn.Models
         //public bool? MEDCH { get; set; }
 
         public bool? MEC48 { get; set; }
+        public bool? MEC49 { get; set; }
+        public bool? MEC50 { get; set; }
+        public bool? MEC51 { get; set; }
 
         //The Hobbit
         //public bool? MEHOB { get; set; }
@@ -694,6 +697,7 @@ namespace HallOfBeorn.Models
         public bool? MEC34 { get; set; }
         public bool? MEC45 { get; set; }
         public bool? MEC46 { get; set; }
+        public bool? MEC54 { get; set; }
 
         //First Age
         public bool? FA01 { get; set; }

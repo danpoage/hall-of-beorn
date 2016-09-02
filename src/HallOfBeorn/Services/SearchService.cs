@@ -295,6 +295,18 @@ namespace HallOfBeorn.Services
             {
                 codes.Add("MEC48");
             }
+            if (model.MEC49.HasValue && model.MEC49.Value)
+            {
+                codes.Add("MEC49");
+            }
+            if (model.MEC50.HasValue && model.MEC50.Value)
+            {
+                codes.Add("MEC50");
+            }
+            if (model.MEC51.HasValue && model.MEC51.Value)
+            {
+                codes.Add("MEC51");
+            }
 
             if (model.MEC16.HasValue && model.MEC16.Value)
             {
@@ -320,6 +332,10 @@ namespace HallOfBeorn.Services
             if (model.MEC46.HasValue && model.MEC46.Value)
             {
                 codes.Add("MEC46");
+            }
+            if (model.MEC54.HasValue && model.MEC54.Value)
+            {
+                codes.Add("MEC54");
             }
 
             if (model.FA01.HasValue && model.FA01.Value)

@@ -252,6 +252,7 @@ $(document).ready(function () {
         $('#Artist').val('Any');
         $('#PopularityOp').val('=');
         $('#Popularity').val('Any');
+        $('#Errata').val('Any');
 
         clearProductCodes();
     });
