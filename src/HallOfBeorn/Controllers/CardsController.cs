@@ -754,6 +754,10 @@ namespace HallOfBeorn.Controllers
                 model.Popularity = null;
                 model.PopularityOp = null;
             }
+            if (model.Errata.HasValue && model.Errata.Value == ErrataVersion.Any)
+            {
+                model.Errata = null;
+            }
 
             if (model.MEC01.HasValue && !model.MEC01.Value)
             {
