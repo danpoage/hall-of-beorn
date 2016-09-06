@@ -406,6 +406,7 @@
     <Compile Include="Models\Scenarios\VoyageAcrossBelegaer.cs" />
     <Compile Include="Models\Scenarios\WeMustAwayEreBreakOfDay.cs" />
     <Compile Include="Models\Search\EnumFilterDefinition.cs" />
+    <Compile Include="Models\Search\FilterBuilder.cs" />
     <Compile Include="Models\Search\FilterDefinition.cs" />
     <Compile Include="Models\HasShadow.cs" />
     <Compile Include="Models\HtmlBuilder.cs" />

@@ -31,12 +31,17 @@ namespace HallOfBeorn.Models.Search
             _filters = filters;
         }
 
-        private readonly Func<SearchViewModel, Card, bool> _check;
+        private Func<SearchViewModel, Card, bool> _check;
         private readonly IEnumerable<SearchFilter> _filters;
-        private readonly float _score;
+        private float _score;
         private readonly float _miss;
-        private readonly string _description;
+        private string _description;
         private readonly bool _isWeighted = true;
+
+        protected void init(Func<SearchViewModel, Card, bool> check, float score, string description)
+        {
+            this._check = check;
+        }
 
         public string Description(SearchViewModel search, Card card)
         {

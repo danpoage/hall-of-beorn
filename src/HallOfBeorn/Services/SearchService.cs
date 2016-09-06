@@ -537,47 +537,12 @@ namespace HallOfBeorn.Services
 
             if (model.Errata.HasValue && model.Errata.Value != ErrataVersion.Any)
             {
-                double version = 0;
+                Func<string, double, bool> hasErrata = (slug, version) => { return noteService.HasErrata(slug, version); };
 
-                switch (model.Errata.Value)
+                var errataFilter = FilterBuilder.ErrataFilter(model.Errata.Value, hasErrata);
+                if (errataFilter != null)
                 {
-                    case ErrataVersion.Has_Errata:
-                        filters.Add(new SearchFilter((s, c) => { return noteService.HasErrata(c.Slug, 0); }, 100, "Has Errata"));
-                        break;
-                    case ErrataVersion.No_Errata:
-                        filters.Add(new SearchFilter((s, c) => { return !noteService.HasErrata(c.Slug, 0); }, 100, "Does Not Have Errata"));
-                        break;
-                    case ErrataVersion.FAQ_1_1:
-                        version = 1.1;
-                        break;
-                    case ErrataVersion.FAQ_1_2:
-                        version = 1.2;
-                        break;
-                    case ErrataVersion.FAQ_1_3:
-                        version = 1.3;
-                        break;
-                    case ErrataVersion.FAQ_1_4:
-                        version = 1.4;
-                        break;
-                    case ErrataVersion.FAQ_1_5:
-                        version = 1.5;
-                        break;
-                    case ErrataVersion.FAQ_1_6:
-                        version = 1.6;
-                        break;
-                    case ErrataVersion.FAQ_1_7:
-                        version = 1.7;
-                        break;
-                    case ErrataVersion.FAQ_1_8:
-                        version = 1.8;
-                        break;
-                    default:
-                        break;
-                }
-
-                if (version > 0)
-                {
-                    filters.Add(new SearchFilter((s, c) => { return noteService.HasErrata(c.Slug, version); }, 100, "Has Errata from " + model.Errata.Value.ToString().Replace("FAQ_1_", " FAQ 1.")));
+                    filters.Add(errataFilter);
                 }
             }
 
