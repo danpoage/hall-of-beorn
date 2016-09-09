@@ -716,10 +716,12 @@
     <Content Include="Content\fonts\tolkien.ttf" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Images\attack.gif" />
+    <Content Include="Images\attack_med.png" />
     <Content Include="Images\Baggins.png" />
     <Content Include="Images\close-button.png" />
     <Content Include="Images\compass-rose.png" />
     <Content Include="Images\defense.gif" />
+    <Content Include="Images\defense_med.png" />
     <Content Include="Images\encounter-card-back.jpg" />
     <Content Include="Images\error.jpg" />
     <Content Include="Images\Fellowship.png" />
@@ -747,9 +749,11 @@
     <Content Include="Images\Spirit.png" />
     <Content Include="Images\Tactics.png" />
     <Content Include="Images\threat.png" />
+    <Content Include="Images\threat_med.png" />
     <Content Include="Images\unique-card.png" />
     <Content Include="Images\unique.png" />
     <Content Include="Images\willpower.gif" />
+    <Content Include="Images\willpower_med.png" />
     <Content Include="Scripts\autocomplete18.js" />
     <Content Include="Scripts\cardDetails.js" />
     <Content Include="Scripts\cardSearch.js" />

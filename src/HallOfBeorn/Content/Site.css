@@ -667,6 +667,39 @@ tr.pager td {
     margin-bottom: -3px;
 }
 
+.search-icon-square {
+    height: 16px;
+    width: 16px;
+}
+
+.search-icon-rectangle {
+    height: 16px;
+    width: 12px;
+}
+
+.stat-icon-square {
+    margin-bottom:-3px;
+    height: 20px;
+    width: 20px;
+}
+
+.stat-icon-rectangle {
+    margin-bottom:-3px;
+    height: 20px;
+    width: 16px;
+}
+
+.stat-icon-hp {
+    margin-bottom:-4px;
+    margin-left:-4px;
+    height: 20px;
+    width: 20px;
+}
+
+.stat-text {
+    font-size: 16px;
+}
+
 .search-label {
     display:inline-block;
     margin-right:2px;
