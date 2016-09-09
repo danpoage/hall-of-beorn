@@ -23,7 +23,7 @@ namespace HallOfBeorn.Models.Search
             _score = score;
             _miss = miss;
             _description = description;
-            _isWeighted = isWeighted;
+            //_isWeighted = isWeighted;
         }
 
         public SearchFilter(IEnumerable<SearchFilter> filters)
@@ -36,12 +36,14 @@ namespace HallOfBeorn.Models.Search
         private float _score;
         private readonly float _miss;
         private string _description;
-        private readonly bool _isWeighted = true;
+        private readonly bool _isWeighted = false;
 
+        /*
         protected void init(Func<SearchViewModel, Card, bool> check, float score, string description)
         {
             this._check = check;
         }
+        */
 
         public string Description(SearchViewModel search, Card card)
         {
@@ -82,6 +84,11 @@ namespace HallOfBeorn.Models.Search
                     {
                         bestScore = score;
                     }
+                }
+
+                if (bestScore > 100)
+                {
+                    bestScore = 100;
                 }
 
                 return bestScore;
@@ -144,11 +151,10 @@ namespace HallOfBeorn.Models.Search
 
             var weighted = score + weight;
 
-            //TODO: Fix weighted score normalization
-            //if (weighted > 100)
-            //{
-            //    weighted = 20 + (weighted - 100);
-            //}
+            if (weighted > 100)
+            {
+                weighted = 100;
+            }
 
             return weighted;
         }

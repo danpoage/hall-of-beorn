@@ -69,9 +69,9 @@ namespace HallOfBeorn.Models
             get { return _searchDescription; }
         }
 
-        public float Score
+        public double Score
         {
-            get { return _score; }
+            get { return Math.Truncate(_score); }
         }
 
         public string Id

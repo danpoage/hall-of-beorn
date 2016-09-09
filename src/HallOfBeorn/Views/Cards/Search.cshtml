@@ -401,9 +401,9 @@
     
             if (!string.IsNullOrEmpty(@card.SearchDescription))
             {
-                <div class="search-explanation search-explanation-default">
+                <div class="search-explanation search-explanation-default" style="display: none">
                     <div id="search-explanation-text" class="search-explanation-container search-explanation-message" style="display:none;">
-                        <div class="search-explanation-content"><p>@card.SearchDescription (Score: @card.Score)</p></div>
+                        <div class="search-explanation-content"><p>@Html.Raw(@card.SearchDescription)</p></div>
                     </div>
                     <div class="search-explanation-container search-explanation-button">
                         <div class="search-explanation-glyph search-explanation-content"><p>?</p></div>

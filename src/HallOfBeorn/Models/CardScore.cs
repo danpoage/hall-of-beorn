@@ -10,15 +10,39 @@ namespace HallOfBeorn.Models
         public CardScore(Card card, float score, string description)
         {
             this.Card = card;
-            this.Description = description;
-
+            AddDescription(description);
             AddScore(score);
         }
 
         private readonly List<float> scores = new List<float>();
+        private readonly List<string> descriptions = new List<string>();
 
         public Card Card { get; private set; }
-        public string Description { get; set; }
+        
+        public string Description
+        {
+            get
+            {
+                var sb = new System.Text.StringBuilder();
+
+                sb.AppendFormat("<div>Score: {0}</div>", Math.Truncate(Score()));
+                sb.Append("<ul>");
+
+                foreach (var desc in descriptions)
+                {
+                    sb.AppendFormat("<li>{0}</li>", desc);
+                }
+
+                sb.Append("</ul>");
+
+                return sb.ToString();
+            }
+        }
+
+        public void AddDescription(string description)
+        {
+            descriptions.Add(description);
+        }
 
         public void AddScore(float score)
         {

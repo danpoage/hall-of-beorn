@@ -60,7 +60,7 @@ namespace HallOfBeorn.Services
 
                     if (results.ContainsKey(card.Slug))
                     {
-                        results[card.Slug].Description += " and " + filter.Description(model, card);
+                        results[card.Slug].AddDescription(filter.Description(model, card));
                         results[card.Slug].AddScore(score);
 
                         /*
@@ -109,21 +109,21 @@ namespace HallOfBeorn.Services
             if (model.HasQuery() && !string.IsNullOrEmpty(model.BasicQuery()))
             {
                 var queryFilters = new List<SearchFilter>();
-                queryFilters.Add(new SearchFilter((s, c) => { return c.Title.IsEqualToLower(s.BasicQuery()); }, 200, "Title matches '" + model.Query + "'"));
-                queryFilters.Add(new SearchFilter((s, c) => { return c.NormalizedTitle.IsEqualToLower(s.BasicQuery()); }, 200, "Title matches '" + model.Query + "'"));
-                queryFilters.Add(new SearchFilter((s, c) => { return c.Title.StartsWithLower(s.BasicQuery()); }, 141, "Title matches '" + model.Query + "'"));
-                queryFilters.Add(new SearchFilter((s, c) => { return c.NormalizedTitle.StartsWithLower(s.BasicQuery()); }, 141, "Title matches '" + model.Query + "'"));
-                queryFilters.Add(new SearchFilter((s, c) => { return c.Title.ContainsLower(s.BasicQuery()); }, 100, "Title matches '" + model.Query + "'"));
-                queryFilters.Add(new SearchFilter((s, c) => { return c.NormalizedTitle.ContainsLower(s.BasicQuery()); }, 100, "Title matches '" + model.Query + "'"));
-                queryFilters.Add(new SearchFilter((s, c) => { return c.Text.ContainsLower(s.BasicQuery()); }, 100, "Card Text matches '" + model.Query + "'"));
-                queryFilters.Add(new SearchFilter((s, c) => { return c.OppositeText.ContainsLower(s.BasicQuery()); }, 100, "Card Text matches '" + model.Query + "'"));
-                queryFilters.Add(new SearchFilter((s, c) => { return c.Traits.Any(t => t.ToLowerSafe().Equals(s.BasicQuery() + ".")); }, 130, "Trait matches '" + model.Query + "'"));
-                queryFilters.Add(new SearchFilter((s, c) => { return c.NormalizedTraits.Any(t => t.ToLowerSafe().Equals(s.BasicQuery() + ".")); }, 130, "Trait matches '" + model.Query + "'"));
-                queryFilters.Add(new SearchFilter((s, c) => { return c.Traits.Any(t => t.ToLowerSafe().Contains(s.BasicQuery())); }, 120, "Trait contains '" + model.Query + "'"));
-                queryFilters.Add(new SearchFilter((s, c) => { return c.NormalizedTraits.Any(t => t.ToLowerSafe().Contains(s.BasicQuery())); }, 120, "Trait contains '" + model.Query + "'"));
-                queryFilters.Add(new SearchFilter((s, c) => { return c.Keywords.Any(k => k.ToLowerSafe().Equals(s.BasicQuery())); }, 115, "Keyword matches '" + model.Query + "'"));
-                queryFilters.Add(new SearchFilter((s, c) => { return c.Keywords.Any(k => k.ToLowerSafe().Contains(s.BasicQuery())); }, 110, "Keyword contains '" + model.Query + "'"));
-                queryFilters.Add(new SearchFilter((s, c) => { return c.Shadow.ContainsLower(s.BasicQuery()); }, 100, "Shadow Text matches '" + model.Query + "'"));
+                queryFilters.Add(new SearchFilter((s, c) => { return c.Title.IsEqualToLower(s.BasicQuery()); }, 100, "Title matches with '" + model.Query + "'"));
+                queryFilters.Add(new SearchFilter((s, c) => { return c.NormalizedTitle.IsEqualToLower(s.BasicQuery()); }, 100, "Title matches with '" + model.Query + "'"));
+                queryFilters.Add(new SearchFilter((s, c) => { return c.Title.StartsWithLower(s.BasicQuery()); }, 90, "Title starts with '" + model.Query + "'"));
+                queryFilters.Add(new SearchFilter((s, c) => { return c.NormalizedTitle.StartsWithLower(s.BasicQuery()); }, 90, "Title starts with '" + model.Query + "'"));
+                queryFilters.Add(new SearchFilter((s, c) => { return c.Title.ContainsLower(s.BasicQuery()); }, 70, "Title includes '" + model.Query + "'"));
+                queryFilters.Add(new SearchFilter((s, c) => { return c.NormalizedTitle.ContainsLower(s.BasicQuery()); }, 70, "Title includes '" + model.Query + "'"));
+                queryFilters.Add(new SearchFilter((s, c) => { return c.Text.ContainsLower(s.BasicQuery()); }, 50, "Card Text includes '" + model.Query + "'"));
+                queryFilters.Add(new SearchFilter((s, c) => { return c.OppositeText.ContainsLower(s.BasicQuery()); }, 45, "Card Text includes '" + model.Query + "'"));
+                queryFilters.Add(new SearchFilter((s, c) => { return c.Shadow.ContainsLower(s.BasicQuery()); }, 45, "Shadow Text includes '" + model.Query + "'"));
+                queryFilters.Add(new SearchFilter((s, c) => { return c.Traits.Any(t => t.ToLowerSafe().Equals(s.BasicQuery() + ".")); }, 30, "Trait matches '" + model.Query + "'"));
+                queryFilters.Add(new SearchFilter((s, c) => { return c.NormalizedTraits.Any(t => t.ToLowerSafe().Equals(s.BasicQuery() + ".")); }, 30, "Trait matches '" + model.Query + "'"));
+                queryFilters.Add(new SearchFilter((s, c) => { return c.Traits.Any(t => t.ToLowerSafe().Contains(s.BasicQuery())); }, 25, "Trait contains '" + model.Query + "'"));
+                queryFilters.Add(new SearchFilter((s, c) => { return c.NormalizedTraits.Any(t => t.ToLowerSafe().Contains(s.BasicQuery())); }, 25, "Trait contains '" + model.Query + "'"));
+                queryFilters.Add(new SearchFilter((s, c) => { return c.Keywords.Any(k => k.ToLowerSafe().Equals(s.BasicQuery())); }, 15, "Keyword matches '" + model.Query + "'"));
+                queryFilters.Add(new SearchFilter((s, c) => { return c.Keywords.Any(k => k.ToLowerSafe().Contains(s.BasicQuery())); }, 15, "Keyword contains '" + model.Query + "'"));
                 filters.Add(new SearchFilter(queryFilters));
             }
 
@@ -351,21 +351,14 @@ namespace HallOfBeorn.Services
 
             if (filters.Count == 0 && !model.IsAdvancedSearch())
             {
-                //limit = 12;
                 filters.Add(new SearchFilter((s, c) => { return (c.CardType == CardType.Hero && c.CardSet.Name == "Core Set"); }, 100f, "Default Search - Core Set Heroes"));
-                //model.Sort = Sort.Set_Number;
             }
-            //else if (!model.SetType.HasValue)
-            //{
-                //default set type search to official, if a card set filter is not already defined
-                //filters.Add(new SearchFilter((s, c) => { return (c.CardSet.SetType != SetType.CUSTOM); }, 1, "Official Release"));
-            //}
-
+            
             if (filters.Count > 0)
             {
                 if (officialSetFilter)
                 {
-                    filters.Add(new SearchFilter((s, c) => { return (c.CardSet.SetType != SetType.CUSTOM); }, 50f, 0f, "From an Official release"));
+                    filters.Add(new SearchFilter((s, c) => { return (c.CardSet.SetType != SetType.CUSTOM); }, 100f, 0f, "From an Official release"));
                 }
 
                 foreach (var card in cards)
@@ -376,7 +369,7 @@ namespace HallOfBeorn.Services
 
                         if (results.ContainsKey(card.Slug))
                         {
-                            results[card.Slug].Description += " and " + filter.Description(model, card);
+                            results[card.Slug].AddDescription(filter.Description(model, card));
                             results[card.Slug].AddScore(score);
 
                             /*

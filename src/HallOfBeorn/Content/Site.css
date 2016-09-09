@@ -841,6 +841,7 @@ tr.pager td {
 
 .search-explanation-content {
     display: table;
+    padding: 4px;
 }
 
 .search-explanation-content p {
@@ -871,7 +872,9 @@ tr.pager td {
 }
 
 .search-explanation {
-    position: relative;
+    display: inline-block;
+    position: absolute;
+    background-color: white;
     float: right;
     margin-right:4px;
     color: darkgray;
