@@ -34,9 +34,6 @@ namespace HallOfBeorn
             var cardRepository = new CardRepository(productRepository);
             System.Web.HttpContext.Current.Application[Extensions.CardRepositoryKey] = cardRepository;
 
-            var deckRepository = new DeckRepository();
-            System.Web.HttpContext.Current.Application[Extensions.DeckRepositoryKey] = deckRepository;
-
             var categoryService = new CategoryService(cardRepository);
             System.Web.HttpContext.Current.Application[Extensions.CategoryServiceKey] = categoryService;
 

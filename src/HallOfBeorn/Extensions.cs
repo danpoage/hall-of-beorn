@@ -11,7 +11,6 @@ namespace HallOfBeorn
     {
         public static string ProductRepositoryKey = "productRepository";
         public static string CardRepositoryKey = "cardRepository";
-        public static string DeckRepositoryKey = "deckRepository";
 
         public static string CategoryServiceKey = "categoryService";
         public static string NoteServiceKey = "noteService";

@@ -1158,7 +1158,8 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
             });
             Cards.Add(new Card() {
                 ImageType = Models.ImageType.Jpg,
-                Title = "Thror's Map",
+                Title = "Thrór's Map",
+                NormalizedTitle = "Thror's Map",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9084",
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Lore,
@@ -1166,7 +1167,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Quantity = 3,
                 ResourceCost = 1,
                 IsUnique = true,
-                Text = "Attach to a hero.\r\nTravel Action: Exhaust Thror's Map to choose a location in the staging area. Make that location the active location. (If there is another active location, return it to the staging area.)",
+                Text = "Attach to a hero.\r\nTravel Action: Exhaust Thrór's Map to choose a location in the staging area. Make that location the active location. (If there is another active location, return it to the staging area.)",
                 FlavorText = "\"This was made by Thror, your grandfather, Thorin.\" he said in answer to the dwarves' excited questions. \"It is a plan of the Mountain.\" -Gandalf, The Hobbit",
                 Number = 13,
                 Artist = Artist.Jake_Murray,

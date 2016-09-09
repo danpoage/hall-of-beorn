@@ -4,8 +4,6 @@ using System.Linq;
 using System.Web;
 
 using HallOfBeorn.Models;
-using HallOfBeorn.Models.Decks.HallOfBeorn;
-using HallOfBeorn.Models.Decks.TalesFromTheCards;
 using HallOfBeorn.Models.Products;
 using HallOfBeorn.Models.Search;
 
