@@ -236,5 +236,22 @@ namespace HallOfBeorn.Services
         {
             return listViewModel;
         }
+
+        public bool BelongsToScenario(string cardSlug, CardType cardType, string scenarioTitle)
+        {
+            if (string.IsNullOrEmpty(scenarioTitle))
+            {
+                return false;
+            }
+
+            var scenario = GetScenario(scenarioTitle.ToUrlSafeString());
+
+            if (cardType == CardType.Quest)
+            {
+                return scenario.QuestCardIds().Any(x => x == cardSlug);
+            }
+
+            return scenario.ScenarioCards.Any(x => x.Card.Slug == cardSlug);
+        }
     }
 }
