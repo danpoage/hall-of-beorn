@@ -435,6 +435,12 @@ namespace HallOfBeorn.Models
             return this;
         }
 
+        public Card WithStageLetter(char letter)
+        {
+            StageLetter = letter;
+            return this;
+        }
+
         #endregion
 
         //private string scenarioTitle;

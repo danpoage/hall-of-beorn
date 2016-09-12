@@ -566,6 +566,9 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Uriah_Voth);
             all.Add(Artist.Uwe_Jarling);
 
+            //The Siege of Annuminas
+            all.Add(Artist.Aurore_Folay);
+
             all.Add(Artist.None);
         }
 
@@ -788,6 +791,7 @@ namespace HallOfBeorn.Models
         public static Artist Arden_Beckwith = new Artist { Name = "Arden Beckwith", URL = "http://ardenbeckwith.blogspot.com" };
         public static Artist Asahi = new Artist { Name = "Asahi", URL = "http://asahisuperdry.deviantart.com" };
         public static Artist Aurelien_Hubert = new Artist { Name = "Aurelien Hubert", URL = "http://aurelien-hubert-ash.blogspot.com" };
+        public static Artist Aurore_Folay = new Artist { Name = "Aurore Folay", URL = "http://google.com/search?q=Aurore+Folay" };
         public static Artist Ben_Peek = new Artist { Name = "Ben Peek", URL = "https://www.google.com/search?q=been+peek+art" };
         public static Artist Ben_Zweifel = new Artist { Name = "Ben Zweifel", URL = "http://benzweifel.com" };
         public static Artist Beth_Sobel = new Artist { Name = "Beth Sobel", URL = "http://www.bethsobel.com" };

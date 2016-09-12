@@ -329,6 +329,7 @@
     <Compile Include="Models\Scenarios\TheRuinsOfBelegost.cs" />
     <Compile Include="Models\Scenarios\TheSeatOfMorgoth.cs" />
     <Compile Include="Models\Scenarios\TheSeventhLevel.cs" />
+    <Compile Include="Models\Scenarios\TheSiegeOfAnnuminas.cs" />
     <Compile Include="Models\Scenarios\TheSiegeOfCairAndros.cs" />
     <Compile Include="Models\Scenarios\TheStewardsFear.cs" />
     <Compile Include="Models\Scenarios\TheStoneOfErech.cs" />

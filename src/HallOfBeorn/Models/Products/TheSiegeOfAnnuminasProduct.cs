@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.Products
             : base("The Siege of Annúminas", "OP016", ImageType.Jpg)
         {
             AddCardSet(CardSet.TheSiegeOfAnnuminas);
+
+            AddScenario(new Scenarios.TheSiegeOfAnnuminas());
         }
     }
 }
