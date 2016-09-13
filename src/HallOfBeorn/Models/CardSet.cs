@@ -167,11 +167,11 @@ namespace HallOfBeorn.Models
             Add(TheBattleOfLakeTown);
             Add(TheStoneOfErech);
             Add(TheRuinsOfBelegost);
-            Add(TheSiegeOfAnnuminas);
 
             Add(TheOldForest);
             Add(FogOnTheBarrowDowns);
             Add(MurderAtThePrancingPony);
+            Add(TheSiegeOfAnnuminas);
 
             Add(PassageThroughMirkwoodNightmare);
             Add(JourneyAlongTheAnduinNightmare);
