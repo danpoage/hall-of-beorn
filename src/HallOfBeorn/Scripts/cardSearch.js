@@ -126,6 +126,13 @@ function getProductCodes() {
     codes.push('MEC34');
     codes.push('MEC45');
     codes.push('MEC46');
+    codes.push('MEC47');
+    codes.push('MEC48');
+    codes.push('MEC49');
+    codes.push('MEC50');
+    codes.push('MEC51');
+    codes.push('MEC52');
+    codes.push('MEC53');
     codes.push('FA01');
     codes.push('FA02');
     codes.push('FA03');
@@ -298,7 +305,7 @@ $(document).ready(function () {
                     items = [ 'MEC39', 'MEC40', 'MEC41', 'MEC42', 'MEC43', 'MEC44' ];
                     break;
                 case 'MEDCH':
-                    items = [ 'MEC47', 'MEC48' ];
+                    items = [ 'MEC48', 'MEC49', 'MEC50', 'MEC51', 'MEC52', 'MEC53' ];
                     break;
                 case 'MEHOB':
                     items = [ 'MEC16', 'MEC24' ];

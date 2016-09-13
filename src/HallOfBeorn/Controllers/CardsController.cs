@@ -926,6 +926,14 @@ namespace HallOfBeorn.Controllers
             {
                 model.MEC51 = null;
             }
+            if (model.MEC52.HasValue && !model.MEC52.Value)
+            {
+                model.MEC52 = null;
+            }
+            if (model.MEC53.HasValue && !model.MEC53.Value)
+            {
+                model.MEC53 = null;
+            }
 
             if (model.MEC16.HasValue && !model.MEC16.Value)
             {

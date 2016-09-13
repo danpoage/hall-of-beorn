@@ -220,6 +220,14 @@ namespace HallOfBeorn.Models.Search
             {
                 codes.Add("MEC51");
             }
+            if (model.MEC52.HasValue && model.MEC52.Value)
+            {
+                codes.Add("MEC52");
+            }
+            if (model.MEC53.HasValue && model.MEC53.Value)
+            {
+                codes.Add("MEC53");
+            }
 
             if (model.MEC16.HasValue && model.MEC16.Value)
             {

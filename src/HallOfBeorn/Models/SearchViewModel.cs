@@ -685,6 +685,8 @@ namespace HallOfBeorn.Models
         public bool? MEC49 { get; set; }
         public bool? MEC50 { get; set; }
         public bool? MEC51 { get; set; }
+        public bool? MEC52 { get; set; }
+        public bool? MEC53 { get; set; }
 
         //The Hobbit
         //public bool? MEHOB { get; set; }
