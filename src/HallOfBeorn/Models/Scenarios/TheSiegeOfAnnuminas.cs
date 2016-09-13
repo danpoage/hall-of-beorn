@@ -18,6 +18,13 @@ namespace HallOfBeorn.Models.Scenarios
 
             AddQuestCardId("Rebuild-the-Defenses-TSoA");
             AddQuestCardId("Defend-the-City-TSoA");
+            AddQuestCardId("Lead-the-Sortie-TSoA");
+            AddQuestCardId("Raise-the-Levee-TSoA");
+            AddQuestCardId("Guard-the-Gate-TSoA");
+            AddQuestCardId("Rescue-the-Captives-TSoA");
+            AddQuestCardId("Delay-the-Enemy-TSoA");
+            AddQuestCardId("Man-the-Walls-TSoA");
+            AddQuestCardId("Stop-the-Attack-TSoA");
         }
     }
 }
