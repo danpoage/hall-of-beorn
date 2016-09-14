@@ -128,6 +128,74 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("X is 1 more than the number of enemies in play.\r\nTravel: Each player engages an enemy in the staging area to travel here.")
                 .WithFlavor("\"...the Men of Westernesse were diminished, and their city of of Annúminas beside lake Evendim fell into ruin...\"\r\n-Elrond, The Fellowship of the Ring")
                 .WithInfo(19, 2, Artist.DinoDrawing));
+            Cards.Add(Card.Location("City Wall", string.Empty, setName, 3, 4)
+                .WithTraits("Arnor.", "City.")
+                .WithText("Immune to player card effects.\r\nForced: At the end of the round, place 1 resource on City Wall. Then, if there are 3 resources here, discard City Wall to deal 4 damage to Annúminas and reveal an encounter card.\r\nTravel: Reveal the top card of the encounter deck to travel here.")
+                .WithInfo(20, 3, Artist.DinoDrawing));
+            Cards.Add(Card.Location("Arnor Battlefield", string.Empty, setName, 3, 3)
+                .WithTraits("Arnor.")
+                .WithText("While Arnor Battlefield is in the staging area, each non-unique enemy gets -5 engagement cost.\r\nTravel: Each player deals 1 damage to a hero he controls to travel here.")
+                .WithFlavor("A smoke as of fire and battle arose, and again the sun went down in a burning red that faded into a grey mist...\r\n-The Fellowship of the Ring")
+                .WithInfo(21, 3, Artist.Stanislav_Dikolenko));
+            Cards.Add(Card.Location("Hills of Evendim", string.Empty, setName, 4, 4)
+                .WithTraits("Arnor.")
+                .WithText("While Hills of Evendim is in the staging area, 'when revealed' effects cannot be canceled.\r\nTravel: Shuffle the encounter discard pile into the encounter deck and discard cards from the top until an enemy is discarded. Add the discarded enemy to the staging area to travel here.")
+                .WithInfo(22, 2, Artist.DinoDrawing));
+            Cards.Add(Card.Location("Shores of Lake Nenuial", string.Empty, setName, 2, 6)
+                .WithTraits("Arnor.")
+                .WithText("While Shores of Lake Nenuial is in the staging area, progress cannot be placed on other locations in the staging area.\r\nTravel: Raise each player's threat by 2 to travel here.")
+                .WithFlavor("\"...that is so long ago that the hills have forgotten them, though a shadow still lies on the land.\"\r\n-Aragorn, The Fellowship of the Ring")
+                .WithInfo(23, 2, Artist.DinoDrawing));
+            Cards.Add(Card.Enemy("Warg of Carn Dûm", string.Empty, setName, 20, 1, 2, 1, 2)
+                .WithGeneric()
+                .WithTraits("Creature.")
+                .WithKeywords("Surge.")
+                .WithText("Forced: After Warg of Carn Dûm engages you, either remove 1 progress from the main quest, or exhaust a character you control.")
+                .WithFlavor("Up from the dark plain below came the crying of fell voices, and the howling of many wolves\r\n-The Fellowship of the Ring")
+                .WithInfo(24, 3, Artist.Stanislav_Dikolenko));
+            Cards.Add(Card.Enemy("Orc of Angmar", string.Empty, setName, 30, 2, 4, 2, 3)
+                .WithGeneric()
+                .WithTraits("Orc.")
+                .WithKeywords("Archery 1.")
+                .WithText("Forced: When Orc of Angmar attacks, either remove 1 progress from the main quest, or it gets +2 Defense until the end of the phase.")
+                .WithShadow("Shadow: Defender gets -2 Defense until end of round.")
+                .WithInfo(25, 3, Artist.Marius_Bota));
+            Cards.Add(Card.Enemy("Angmar Warg-rider", string.Empty, setName, 35, 2, 3, 2, 4)
+                .WithGeneric()
+                .WithTraits("Orc.")
+                .WithKeywords("Archery 1.")
+                .WithText("Forced: After Angmar Warg-rider engages you, either remove 2 progress from the main quest, or it makes an immediate attack.")
+                .WithShadow("Shadow: Exhaust a character you control.")
+                .WithInfo(26, 3, Artist.Stanislav_Dikolenko));
+            Cards.Add(Card.Enemy("Savage Werewolf", string.Empty, setName, 40, 3, 5, 2, 5)
+                .WithGeneric()
+                .WithTraits("Creature.")
+                .WithText("Forced: After Savage Werewolf attacks and destroys a character, remove 3 progress from the main quest.")
+                .WithShadow("Shadow: Attacking enemy makes an additional attack against you after this one.")
+                .WithInfo(27, 2, Artist.Stanislav_Dikolenko));
+            Cards.Add(Card.Enemy("Vanguard of Carn Dûm", string.Empty, setName, 45, 3, 6, 3, 8)
+                .WithGeneric()
+                .WithTraits("Orc.")
+                .WithText("Cannot have attachments.\r\nWhile Vanguard of Carn Dûm is in the staging area, no more than 5 progress can be placed on the main quest each round.")
+                .WithShadow("Shadow: Defender cannot ready this round.")
+                .WithInfo(28, 2, Artist.Marius_Bota));
+            Cards.Add(Card.Treachery("The Hordes of Angmar", string.Empty, setName)
+                .WithText("When Revealed: Each player must choose: either return the highest Threat enemy engaged with you to the staging area, or search the encounter deck and discard pile for an enemy and put it into play engaged with you.")
+                .WithShadow("Shadow: If this attack destroys a character, reveal the top card of the encounter deck.")
+                .WithInfo(29, 2, Artist.Stanislav_Dikolenko));
+            Cards.Add(Card.Treachery("Sorcery of Carn Dûm", string.Empty, setName)
+                .WithKeywords("Doomed 1.")
+                .WithText("When Revealed: Each player must choose: either discard the highest cost attachment you control, or assign X damage among characters you control, where X is the number of attachments you control.")
+                .WithShadow("Shadow: Discard an attachment you control.")
+                .WithInfo(30, 2, Artist.Sam_Lamont));
+            Cards.Add(Card.Treachery("Caught in the Press", string.Empty, setName)
+                .WithText("Each player must choose: either deal 1 damage to each questing character you control, or each questing character you control gets -1 Willpower until the end of the phase.")
+                .WithShadow("Shadow: Either remove 2 progress from the main quest, or return attacking enemy to the staging area after this attack.")
+                .WithInfo(31, 3, Artist.Rafal_Hrynkiewicz));
+            Cards.Add(Card.Treachery("Weary Warriors", string.Empty, setName)
+                .WithText("When Revealed: Each player deals 1 damage to a hero he controls. If that hero is questing, remove it from the quest. Until the end of the round, treat each damaged character's text box as if it were blank (except for Traits).")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the defender is damaged).")
+                .WithInfo(32, 3, Artist.Andreia_Ugrai));
             Cards.Add(Card.Hero("Boromir", "", Sphere.Tactics, 11, 1, 3, 2, 5)
                 .WithTraits("Gondor.", "Noble.", "Warrior.")
                 .WithText("Action: Raise your threat by 1 to ready Boromir.\r\nAction: Discard Boromir to deal 2 damage to each enemy engaged with a single player.")

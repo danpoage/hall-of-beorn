@@ -568,6 +568,7 @@ namespace HallOfBeorn.Models
 
             //The Siege of Annuminas
             all.Add(Artist.Aurore_Folay);
+            all.Add(Artist.Stanislav_Dikolenko);
 
             all.Add(Artist.None);
         }
@@ -1018,6 +1019,7 @@ namespace HallOfBeorn.Models
         public static Artist Smirtouille = new Artist { Name = "Smirtouille", URL = "http://smirtouille.deviantart.com" };
         public static Artist Soul_Core = new Artist { Name = "Soul Core", URL = "http://en.amokanet.ru" };
         public static Artist Stacey_Diana_Clark = new Artist { Name = "Stacey Diana Clark", URL = "http://staceydiana.blogspot.com" };
+        public static Artist Stanislav_Dikolenko = new Artist { Name = "Stanislav Dikolenko", URL = "https://www.artstation.com/artist/stsdklnk" };
         public static Artist Stephane_Gantiez = new Artist { Name = "Stephane Gantiez", URL = "http://lodin111.deviantart.com" };
         public static Artist Stephanie_M_Brown = new Artist { Name = "Stephanie M. Brown", URL = "https://www.google.com/search?q=stephanie+m.+brown+art" };
         public static Artist Stephen_M_Mabee = new Artist { Name = "Stephen M. Mabee", URL = "http://fineartamerica.com/profiles/stephen-mabee.html" };
