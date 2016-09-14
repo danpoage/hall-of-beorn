@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.Products
             : base("The Drowned Ruins", "MEC51", ImageType.Jpg)
         {
             AddCardSet(CardSet.TheDrownedRuins);
+
+            AddScenario(new Scenarios.TheDrownedRuins());
         }
     }
 }
