@@ -384,7 +384,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithInfo(30, 3, Artist.Mariusz_Gandzel));
             Cards.Add(Card.Treachery("Ice Storm", "79EB9FDC-9806-4A6B-9F2A-025EF37F141D", "The Weather Hills")
                 .WithTraits("Weather.")
-                .WithText("When Revealed: Each player assigns X damage among characters he controls, where X is the number of cards in play. Then, exhaust each damaged character.")
+                .WithText("When Revealed: Each player assigns X damage among characters he controls, where X is the number of quest cards in play. Then, exhaust each damaged character.")
                 .WithShadow("Shadow: Assign X damage among characters you control. X is the number of quest cards in play.")
                 .WithInfo(31, 2, Artist.Romana_Kendelic)
                 .WithEasyModeQuantity(1));
