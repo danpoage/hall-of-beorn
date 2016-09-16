@@ -189,6 +189,74 @@ namespace HallOfBeorn.Models.Sets
                 .WithShadow("Shadow: Either attach a set aside Overcome by Fear to your threat dial, or attacking enemy makes an additional attack after this one.")
                 .WithEasyModeQuantity(1)
                 .WithInfo(29, 2, Artist.Preston_Stone));
+            Cards.Add(Card.Location("Great Corsair Ship", string.Empty, setTheSiegeOfGondor, 255, 5)
+                .WithUnique()
+                .WithTraits("Ship.")
+                .WithText("X is the number of resources on The Corsair Fleet.\r\nThe players cannot travel here unless there are at least 3 ship locations in the victory display.\r\nTravel: Each player searches the encounter deck and discard pile for a Corsair enemy and adds it to the staging area. Once of those enemies must be Corsair Captain, if able.")
+                .WithVictoryPoints(5)
+                .WithInfo(30, 1, Artist.Johan_Tornlund));
+            Cards.Add(Card.Location("Umbar War Galley", string.Empty, setTheSiegeOfGondor, 3, 3)
+                .WithText("While Umbar War Galley is the active location, each Corsair enemy gets -10 engagement cost.\r\nTravel: Shuffle the encounter discard pile into the encounter deck and discard cards from the encounter deck until a Corsair enemy is discarded. Add the discarded enemy to the staging area.")
+                .WithFlavor("\"The Corsairs are upon us! It is the last stroke of doom!\"\r\n-Men of Gondor, The Return of the King")
+                .WithVictoryPoints(3)
+                .WithInfo(31, 3, Artist.Alvaro_Calvo_Escudero));
+            Cards.Add(Card.Location("Corsair Dromon", string.Empty, setTheSiegeOfGondor, 2, 2)
+                .WithTraits("Ship.")
+                .WithText("While Corsair Dromon is the active location, each Corsair enemy gains Archery 1.\r\nTravel: Shuffle the encounter discard pile into the encounter deck and discard cards from the top until a Corsair enemy is discarded. Add the discarded enemy to the staging area.")
+                .WithVictoryPoints(2)
+                .WithInfo(32, 3, Artist.Jessica_Cheng));
+            Cards.Add(Card.Location("Port of Pelargir", string.Empty, setTheSiegeOfGondor, 2, 4)
+                .WithTraits("City.")
+                .WithText("While Port of Pelargir is in the staging area, no more than 1 damage can be healed from each character each round.")
+                .WithShadow("Shadow: If this attack damages a character, that character cannot ready until the end of the round.")
+                .WithInfo(33, 3, Artist.Eva_Maria_Toker));
+            Cards.Add(Card.Location("Pelargir Quays", string.Empty, setTheSiegeOfGondor, 3, 4)
+                .WithTraits("City.")
+                .WithText("Forced: At the end of the round, place a damage token here. Then, if there are 4 damage tokens here, discard Pelargir Quays and assign 4 damage among characters in play.")
+                .WithFlavor("\"...this attack will draw off much of the help that we looked to have from Lebennin and Belfalas...\"\r\n-Beregond, The Return of the King")
+                .WithEasyModeQuantity(0)
+                .WithInfo(34, 2, Artist.Eva_Maria_Toker));
+            Cards.Add(Card.Enemy("Corsair Captain", string.Empty, setTheSiegeOfGondor, 49, 3, 5, 3, 6)
+                .WithTraits("Corsair.")
+                .WithText("Cannot be optionally engaged.\r\nIf the active location is a Ship, ~Corsair ~Captain gets -30 engagement cost and gains: \"Forced: When ~Corsair ~Captain engages you, it makes an immediate attack.\"")
+                .WithEasyModeQuantity(1)
+                .WithInfo(35, 2, Artist.Gabriel_Verdon));
+            Cards.Add(Card.Enemy("Corsair of Umbar", string.Empty, setTheSiegeOfGondor, 29, 2, 2, 1, 3)
+                .WithTraits("Corsair.")
+                .WithText("If the active location is a Ship, ~Corsair of Umbar gets +2 Attack and +2 Defense.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the active location is a Ship).")
+                .WithInfo(36, 3, Artist.Ivan_Dixon));
+            Cards.Add(Card.Enemy("Umbar Pirate Crew", string.Empty, setTheSiegeOfGondor, 39, 3, 6, 2, 8)
+                .WithTraits("Corsair.")
+                .WithText("Cannot have attachments.\r\nForced: When Umbar Pirate Crew engages you, exhaust a character you control.")
+                .WithShadow("Shadow: If the active location is a Ship, return attacking enemy to the staging area after this attack.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(37, 2, Artist.Gabriel_Verdon));
+            Cards.Add(Card.Enemy("Haradrim Pirate", string.Empty, setTheSiegeOfGondor, 34, 2, 3, 2, 4)
+                .WithTraits("Corsair.")
+                .WithText("Forced: When Haradrim Pirate engages you, deal 1 damage to a character you control (2 damage instead if the active location is a Ship).")
+                .WithShadow("Shadow: Defending character gets -1 Defense for each damage on it.")
+                .WithInfo(38, 3, Artist.Owen_William_Weber));
+            Cards.Add(Card.Treachery("Fell Folk of Umbar", string.Empty, setTheSiegeOfGondor)
+                .WithKeywords("Peril.")
+                .WithText("When Revealed: Either return each Corsair enemy engaged with you to the staging area, or discard cards from the top of the encounter deck until a Corsair enemy is discarded and put that enemy into play engaged with you.")
+                .WithFlavor("\"...there men of Lamedon contested the fords with fell folk of Umbar and Harad who had sailed up the river.\"\r\n-Legolas, The Return of the King")
+                .WithInfo(39, 2, Artist.Alvaro_Calvo_Escudero));
+            Cards.Add(Card.Treachery("Black Sails", string.Empty, setTheSiegeOfGondor)
+                .WithKeywords("Doomed 1.")
+                .WithText("When Revealed: Each Ship location in the staging area gets +1 Threat until the end of the phase. If there are no non-unique Ship locations in the staging area, search the encounter deck and discard pile for a Ship location and add it to the staging area. Shuffle the encounter deck.")
+                .WithInfo(40, 3, Artist.Jose_Vega));
+            Cards.Add(Card.Treachery("Raiding the Coasts", string.Empty, setTheSiegeOfGondor)
+                .WithText("When Revealed: Each player must choose: either add 3 to the total Threat in the staging area until the end of the phase, or discard the highest cost attachment you control.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, discard an attachment you control.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(41, 2, Artist.Johan_Tornlund));
+            Cards.Add(Card.Treachery("Driven to the Brink", string.Empty, setTheSiegeOfGondor)
+                .WithKeywords("Peril.")
+                .WithText("When Revealed: Either immediately end the quest phase (without resolving the quest), or assign X damage among questing characters you control. X is the number of resources on The Corsair Fleet.")
+                .WithShadow("Shadow: Exhaust a character you control.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(42, 2, Artist.Jenn_Tran));
 
             Cards.Add(Card.Quest("The Forbidden Door", string.Empty, 13, 1, setThePassingOfTheGreyCompany, null)
                 .WithFlavor("\"I must take new counsel for myself and my kindred. We must ride our own road, and no longer in secret. For me the time of stealth has passed. I will ride by the swiftest way, and I will take the Paths of the Dead.\" -Aragorn, The Return of the King")
@@ -230,6 +298,32 @@ namespace HallOfBeorn.Models.Sets
                 .WithText("Immune to player card effects. The first player gains control of Army of the Dead.\r\nSetup: The first player takes control of Army of the Dead.\r\nIf Army of the Dead leaves play, remove it from the game.")
                 .WithFlavor("\"Now come! By the Black Stone I call you!\"\r\n-Aragorn, The Return of the King")
                 .WithInfo(68, 1, Artist.Uwe_Jarling));
+            Cards.Add(Card.Quest("Attack on Pelargir", string.Empty, 14, 1, setTheSiegeOfGondor, 20)
+                .WithFlavor("\"There at Pelargir lay the main fleet of Umbar, fifty great ships and smaller vessels beyond count. Many of those that we pursued had reached the havens before us...\"\r\n-Gimli, The Return of the King")
+                .WithText("Setup: Add The ~Corsair Fleet (Corsair side faceup) and Great Corsair Ship to the staging area. Each player searches the encounter deck for a Ship location and adds it to the staging area. Shuffle the encounter deck.")
+                .WithOppositeFlavor("\"But the Haradrim, being now driven to the brink, turned at bay, and they were fierce in despair; and they laughed when the looked on us, for they were a great army still.\" -Gimli, The Return of the King")
+                .WithOppositeText("Each Ship location in the staging area is immune to player card effects.\r\nThe players cannot defeat this stage while Great Corsair Ship is in play. When this stage is defeated, the players win the game.")
+                .WithInfo(69, 1, Artist.Javier_Charro_Martinez));
+            Cards.Add(Card.Campaign("The Siege of Gondor", string.Empty, 14, setTheSiegeOfGondor, "The Lord of the Rings - Part 14")
+                .WithText("Setup: The first player may raise each player's threat by 1 to search his deck for Andúril and add it to his hand. Remove each burden with the following burden set icons from the encounter deck:")
+                .WithFlavor("\"There is a great fleet drawing near to the mouths of Anduin, manned by the Corsairs of Umbar in the South. They have long ceased to fear the might of Gondor, and they have allied with the Enemy, and now make a heavy stroke in his cause.\"\r\n-Beregond, The Return of the King")
+                .WithOppositeText("Resolution: Count the number of resources on The Corsair Fleet and record that number in the notes section of the quest log. Remove Army of the Dead from the Campaign pool.")
+                .WithOppositeFlavor("\"But mighty indeed was Aragorn that day. Lo! all the black fleet was in his hands; and he chose the greatest ship to be his own, and he went up into it.\"\r\n-Gimli, The Return of the King")
+                .WithInfo(70, 1, Artist.Javier_Charro_Martinez));
+            Cards.Add(Card.Objective("The Corsair Fleet", string.Empty, setTheSiegeOfGondor)
+                .WithUnique()
+                .WithTraits("Corsair.")
+                .WithSuffix("Corsair")
+                .WithText("Forced: At the beginning of the staging step, place 1 resource on this objective. Then, each player must choose: either reveal an encounter card, or assign X damage among characters he controls. X is the number of resources here.")
+                .WithFlavor("...ships of great draught with many oars, and with black sails bellying in the breeze. -The Return of the King")
+                .WithInfo(71, 1, Artist.Johan_Tornlund));
+            Cards.Add(Card.Objective("The Corsair Fleet", string.Empty, setTheSiegeOfGondor)
+                .WithUnique()
+                .WithTraits("Gondor.")
+                .WithSuffix("Gondor")
+                .WithText("Forced: At the beginning of the quest phase, remove 1 resource from The Corsair Fleet. Then, if there are no resources here, the first player takes control of Aragorn and adds The Corsair Fleet to the victory display.")
+                .WithFlavor("\"The oars were now wielded by free men, and manfully they laboured...\"\r\n-Legolas, The Return of the King")
+                .WithInfo(72, 1, Artist.Johan_Tornlund));
         }
     }
 }

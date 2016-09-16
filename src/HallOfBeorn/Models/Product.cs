@@ -133,7 +133,7 @@ namespace HallOfBeorn.Models
         public static Product TheRoadDarkens = new TheRoadDarkensProduct();
         public static Product TheTreasonOfSaruman = new TheTreasonOfSarumanProduct();
         public static Product TheLandOfShadow = new TheLandOfShadowProduct();
-        public static Product TheFlameOfTheWest = new TheFlameOfTheWest();
+        public static Product TheFlameOfTheWest = new TheFlameOfTheWestProduct();
 
         //GenCon and Fellowship Event Decks
         public static Product TheMassingAtOsgiliath = new TheMassingAtOsgiliathProduct();

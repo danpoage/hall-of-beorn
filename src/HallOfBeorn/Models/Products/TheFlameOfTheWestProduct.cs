@@ -5,14 +5,15 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Products
 {
-    public class TheFlameOfTheWest : Product
+    public class TheFlameOfTheWestProduct : Product
     {
-        public TheFlameOfTheWest()
+        public TheFlameOfTheWestProduct()
             : base("The Flame of the West", "MEC54", ImageType.Jpg)
         {
             AddCardSet(CardSet.TheFlameOfTheWest);
 
             AddScenario(new HallOfBeorn.Models.Scenarios.ThePassingOfTheGreyCompany());
+            AddScenario(new HallOfBeorn.Models.Scenarios.TheSiegeOfGondor());
         }
     }
 }

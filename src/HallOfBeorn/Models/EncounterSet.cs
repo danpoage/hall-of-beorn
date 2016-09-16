@@ -182,6 +182,7 @@ namespace HallOfBeorn.Models
 
             //The Lord of the Rings: The Flame of the West
             Add(ThePassingOfTheGreyCompany);
+            Add(TheSiegeOfGondor);
 
             //Gen Con and Fellowship Decks
             Add(TheMassingAtOsgiliath);
@@ -416,6 +417,7 @@ namespace HallOfBeorn.Models
 
         //The Lord of the Rings: The Flame of the West
         public static EncounterSet ThePassingOfTheGreyCompany = new EncounterSet { Name = "The Passing of the Grey Company", Set = "The Flame of the West" };
+        public static EncounterSet TheSiegeOfGondor = new EncounterSet { Name = "The Siege of Gondor", Set = "The Flame of the West" };
 
         //Gen Con and Fellowship Decks
         public static EncounterSet TheMassingAtOsgiliath = new EncounterSet { Name = "The Massing at Osgiliath", Set = "The Massing at Osgiliath" };

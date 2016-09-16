@@ -245,7 +245,7 @@
     <Compile Include="Models\Products\TheDreadRealmProduct.cs" />
     <Compile Include="Models\Products\TheDrownedRuinsProduct.cs" />
     <Compile Include="Models\Products\TheDunlandTrapNightmareProduct.cs" />
-    <Compile Include="Models\Products\TheFlameOfTheWest.cs" />
+    <Compile Include="Models\Products\TheFlameOfTheWestProduct.cs" />
     <Compile Include="Models\Products\TheGreyHavensProduct.cs" />
     <Compile Include="Models\Products\TheLandOfShadowProduct.cs" />
     <Compile Include="Models\Products\TheMumakilProduct.cs" />
@@ -332,6 +332,7 @@
     <Compile Include="Models\Scenarios\TheSeventhLevel.cs" />
     <Compile Include="Models\Scenarios\TheSiegeOfAnnuminas.cs" />
     <Compile Include="Models\Scenarios\TheSiegeOfCairAndros.cs" />
+    <Compile Include="Models\Scenarios\TheSiegeOfGondor.cs" />
     <Compile Include="Models\Scenarios\TheStewardsFear.cs" />
     <Compile Include="Models\Scenarios\TheStoneOfErech.cs" />
     <Compile Include="Models\Scenarios\TheThingInTheDepths.cs" />

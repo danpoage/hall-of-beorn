@@ -565,6 +565,8 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Stephen_Najarian);
             all.Add(Artist.Uriah_Voth);
             all.Add(Artist.Uwe_Jarling);
+            all.Add(Artist.Johan_Tornlund);
+            all.Add(Artist.Jessica_Cheng);
 
             //The Siege of Annuminas
             all.Add(Artist.Aurore_Folay);
@@ -664,9 +666,11 @@ namespace HallOfBeorn.Models
         public static Artist Jenny_Dolfen = new Artist { Name = "Jenny Dolfen", URL = "http://gold-seven.deviantart.com" };
         public static Artist Jennifer_Hrabota_Lesser = new Artist { Name = "Jennifer Hrabota Lesser", URL = "http://www.jenniferhrabotalesser.com" };
         public static Artist Jerad_S_Marantz = new Artist { Name = "Jerad S. Marantz", URL = "http://jsmarantz.deviantart.com" };
+        public static Artist Jessica_Cheng = new Artist { Name = "Jessica Cheng", URL = "http://www.jesschengart.com" };
         public static Artist Jessica_Savard = new Artist { Name = "Jessica Savard", URL = "http://jjessicassavard.tumblr.com" };
         public static Artist Joel_M_Kilpatrick = new Artist { Name = "Joel M. Kilpatrick", URL = "http://jmkilpatrick.deviantart.com" };
         public static Artist Joas_Kleine = new Artist { Name = "Joas Kleine", URL = "http://joaskleine.blogspot.com" };
+        public static Artist Johan_Tornlund = new Artist { Name = "Johan Törnlund", URL = "https://www.artstation.com/artist/tornlundart" };
         public static Artist John_G = new Artist { Name = "John G", URL = "http://john-g.deviantart.com" };
         public static Artist John_Howe = new Artist { Name = "John Howe", URL = "http://www.john-howe.com/portfolio/gallery" };
         public static Artist Jokubas_Uoginitas = new Artist { Name = "Jokubas Uoginitas", URL = "https://www.behance.net/jokub" };
