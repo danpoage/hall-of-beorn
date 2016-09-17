@@ -567,6 +567,7 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Uwe_Jarling);
             all.Add(Artist.Johan_Tornlund);
             all.Add(Artist.Jessica_Cheng);
+            all.Add(Artist.Kamila_Tzutenberg);
 
             //The Siege of Annuminas
             all.Add(Artist.Aurore_Folay);
@@ -679,6 +680,7 @@ namespace HallOfBeorn.Models
         public static Artist Justin_Gerard = new Artist { Name = "Justin Gerard", URL = "http://www.gallerygerard.com/the-art-of-justin-gerard" };
         public static Artist K_LeCrone = new Artist { Name = "K. LeCrone", URL = "http://dreamspirit.deviantart.com" };
         public static Artist Kaija_Rudkiewicz = new Artist { Name = "Kaija Rudkiewicz", URL = "https://www.behance.net/RunFreakRun" };
+        public static Artist Kamila_Tzutenberg = new Artist { Name = "Kamila Tzutenberg", URL = "https://www.artstation.com/artist/karamissa" };
         public static Artist Katayanagi = new Artist { Name = "Katayanagi", URL = "http://aldok.deviantart.com" };
         public static Artist Kieran_Tatsue = new Artist { Name = "Kieran Tatsue", URL = "http://valravnclaw.deviantart.com/" };
         public static Artist Kimberly80 = new Artist { Name = "kimberly80", URL = "http://kimberly80.deviantart.com" };

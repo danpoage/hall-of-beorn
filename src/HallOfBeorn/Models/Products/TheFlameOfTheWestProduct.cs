@@ -14,6 +14,7 @@ namespace HallOfBeorn.Models.Products
 
             AddScenario(new HallOfBeorn.Models.Scenarios.ThePassingOfTheGreyCompany());
             AddScenario(new HallOfBeorn.Models.Scenarios.TheSiegeOfGondor());
+            AddScenario(new HallOfBeorn.Models.Scenarios.TheBattleOfThePelennorFields());
         }
     }
 }

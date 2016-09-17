@@ -305,6 +305,7 @@
     <Compile Include="Models\Scenarios\TheBattleOfCarnDum.cs" />
     <Compile Include="Models\Scenarios\TheBattleOfFiveArmies.cs" />
     <Compile Include="Models\Scenarios\TheBattleOfLakeTown.cs" />
+    <Compile Include="Models\Scenarios\TheBattleOfThePelennorFields.cs" />
     <Compile Include="Models\Scenarios\TheBloodOfGondor.cs" />
     <Compile Include="Models\Scenarios\TheDeadMarshes.cs" />
     <Compile Include="Models\Scenarios\TheDreadRealm.cs" />
