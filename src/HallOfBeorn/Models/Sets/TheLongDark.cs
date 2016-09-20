@@ -16,7 +16,7 @@ namespace HallOfBeorn.Models.Sets
             Cycle = "Dwarrowdelf";
 
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Abandoned Mine",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9001",
                 CardType = CardType.Location,
@@ -33,7 +33,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Paolo_Puggioni
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Cave Spider",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9002",
                 CardType = CardType.Enemy,
@@ -50,7 +50,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Allison_Theus
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Continuing Eastward",
                 StageNumber = 2,
                 Id = "51223bd0-ffd1-11df-a976-0801211c9003",
@@ -66,7 +66,7 @@ namespace HallOfBeorn.Models.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DeepsOfMoria, EncounterSet.TwistsAndTurns }
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Durin's Greaves",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9005",
                 CardType = CardType.Objective,
@@ -82,7 +82,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Dwarven Forge",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9006",
                 CardType = CardType.Location,
@@ -99,7 +99,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Erebor Battle Master",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9007",
                 CardType = CardType.Ally,
@@ -117,7 +117,7 @@ Attached hero gets +1 Defense.",
                 HasErrata = true
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Erestor",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9008",
                 CardType = CardType.Ally,
@@ -136,7 +136,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Ever My Heart Rises",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9009",
                 CardType = CardType.Attachment,
@@ -151,7 +151,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Carolina_Eade
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Fatigue",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9010",
                 CardType = CardType.Treachery,
@@ -163,7 +163,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Charles_Urbach
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Foul Air",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9011",
                 CardType = CardType.Treachery,
@@ -177,7 +177,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Jasper_Sandner
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Fresh Tracks",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9012",
                 CardType = CardType.Event,
@@ -189,7 +189,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Garret_DeChellis
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Gathering Ground",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9013",
                 CardType = CardType.Treachery,
@@ -202,7 +202,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Jason_Juta
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Goblin Sneak",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9014",
                 CardType = CardType.Enemy,
@@ -221,7 +221,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Timo_Karhula
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Goblin Warlord",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9015",
                 CardType = CardType.Enemy,
@@ -241,7 +241,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Matthew_Starbuck
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Háma",
                 NormalizedTitle = "Hama",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9016",
@@ -261,7 +261,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Journey in the Black Pit",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-0801211c9017",
@@ -278,7 +278,7 @@ Attached hero gets +1 Defense.",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DeepsOfMoria, EncounterSet.TwistsAndTurns }
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Love of Tales",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9019",
                 CardType = CardType.Attachment,
@@ -293,7 +293,7 @@ Attached hero gets +1 Defense.",
                 HasErrata = true
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Out of Sight",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9020",
                 CardType = CardType.Event,
@@ -307,7 +307,7 @@ Attached hero gets +1 Defense.",
                 HasErrata = true
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Ring Mail",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9021",
                 CardType = CardType.Attachment,
@@ -325,7 +325,7 @@ Attached hero gets +1 Defense.",
             Cards.Add(new Card() {
                 Title = "Rock Adder",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9022",
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 CardType = CardType.Enemy,
                 EncounterSet = "The Long Dark",
                 Traits = new List<string>() { "Creature." },
@@ -341,7 +341,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Allison_Theus
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Silent Caverns",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9023",
                 CardType = CardType.Location,
@@ -357,7 +357,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Twisting Passage",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9024",
                 CardType = CardType.Location,
@@ -374,7 +374,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Vast and Intricate",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9025",
                 CardType = CardType.Treachery,
@@ -388,7 +388,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Eric_Braddock
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Warden of Healing",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9026",
                 CardType = CardType.Ally,
@@ -406,7 +406,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Paolo_Puggioni
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Word of Command",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9027",
                 CardType = CardType.Event,

@@ -16,7 +16,7 @@ namespace HallOfBeorn.Models.Sets
             SetType = Models.SetType.Deluxe_Expansion;
 
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "A Foe Beyond",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9001",
                 CardType = CardType.Treachery,
@@ -29,7 +29,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "A Presence in the Dark",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-0801207c9002",
@@ -46,7 +46,7 @@ namespace HallOfBeorn.Models.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "A Way Up",
                 StageNumber = 3,
                 Id = "51223bd0-ffd1-11df-a976-0801207c9004",
@@ -63,7 +63,7 @@ If players defeat this stage, they win the game.",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.TwistsAndTurns, EncounterSet.HazardsOfThePit, EncounterSet.GoblinsOfTheDeep }
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Abandoned Tools",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9006",
                 CardType = CardType.Objective,
@@ -76,7 +76,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Stu_Barnes
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Ancestral Knowledge",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9007",
                 CardType = CardType.Event,
@@ -88,7 +88,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Bifur",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9008",
                 CardType = CardType.Hero,
@@ -107,7 +107,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Bitter Wind",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9009",
                 CardType = CardType.Treachery,
@@ -119,7 +119,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Anthony_Palumbo
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Black Uruks",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9010",
                 CardType = CardType.Enemy,
@@ -137,7 +137,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Jake_Murray
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Book of Mazarbul",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9011",
                 CardType = CardType.Objective,
@@ -151,7 +151,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Boots from Erebor",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9012",
                 CardType = CardType.Attachment,
@@ -164,7 +164,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Carolina_Eade
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Branching Paths",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9013",
                 CardType = CardType.Location,
@@ -179,7 +179,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Bridge of Khazad-dûm",
                 NormalizedTitle = "Bridge of Khazad-dum",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9014",
@@ -196,7 +196,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Lin_Bo
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Burning Low",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9015",
                 CardType = CardType.Treachery,
@@ -208,7 +208,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Anthony_Palumbo
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Cave In",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9016",
                 CardType = CardType.Treachery,
@@ -220,7 +220,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Winona_Nelson
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Cave Torch",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9017",
                 CardType = CardType.Objective,
@@ -234,7 +234,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Cave-troll",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9018",
                 CardType = CardType.Enemy,
@@ -253,7 +253,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Timo_Karhula
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Chance Encounter",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9019",
                 CardType = CardType.Treachery,
@@ -265,7 +265,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Chieftain of the Pit",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9020",
                 CardType = CardType.Enemy,
@@ -284,7 +284,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.John_Stanko
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Crumbling Ruin",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9021",
                 CardType = CardType.Treachery,
@@ -297,7 +297,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Dark and Dreadful",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9022",
                 CardType = CardType.Treachery,
@@ -310,7 +310,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Igor_Kieryluk
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Dreadful Gap",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9023",
                 CardType = CardType.Location,
@@ -327,7 +327,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Stu_Barnes
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Durin's Song",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9024",
                 CardType = CardType.Event,
@@ -346,7 +346,7 @@ And runes of power upon the door.
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Dwalin",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9025",
                 CardType = CardType.Hero,
@@ -364,7 +364,7 @@ And runes of power upon the door.
                 Artist = Artist.Tony_Foti
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Dwarrowdelf Axe",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9026",
                 CardType = CardType.Attachment,
@@ -379,7 +379,7 @@ And runes of power upon the door.
                 Artist = Artist.Carolina_Eade
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "East-gate",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9027",
                 CardType = CardType.Location,
@@ -395,7 +395,7 @@ And runes of power upon the door.
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Entering the Mines",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-0801207c9028",
@@ -416,7 +416,7 @@ Player cannot advance to the next stage of the scenario unless Bridge of Khazad-
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.TwistsAndTurns, EncounterSet.HazardsOfThePit, EncounterSet.GoblinsOfTheDeep }
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Erebor Record Keeper",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9030",
                 CardType = CardType.Ally,
@@ -436,7 +436,7 @@ Action: Exhaust Erebor ~Record Keeper and pay 1 Lore resource to choose and read
                 Artist = Artist.Andrew_Johanson
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Ever Onward",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9031",
                 CardType = CardType.Event,
@@ -448,7 +448,7 @@ Action: Exhaust Erebor ~Record Keeper and pay 1 Lore resource to choose and read
                 Artist = Artist.Dleoblack
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "First Hall",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9032",
                 CardType = CardType.Location,
@@ -464,7 +464,7 @@ Action: Exhaust Erebor ~Record Keeper and pay 1 Lore resource to choose and read
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Fouled Well",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9033",
                 CardType = CardType.Location,
@@ -478,7 +478,7 @@ Action: Exhaust Erebor ~Record Keeper and pay 1 Lore resource to choose and read
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Goblin Archer",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9034",
                 CardType = CardType.Enemy,
@@ -495,7 +495,7 @@ Action: Exhaust Erebor ~Record Keeper and pay 1 Lore resource to choose and read
                 Artist = Artist.Salvador_Trakal
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Goblin Follower",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9035",
                 CardType = CardType.Enemy,
@@ -513,7 +513,7 @@ Action: Exhaust Erebor ~Record Keeper and pay 1 Lore resource to choose and read
                 Artist = Artist.Salvador_Trakal
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Goblin Patrol",
                 StageNumber = 2,
                 Id = "51223bd0-ffd1-11df-a976-0801207c9036",
@@ -533,7 +533,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.TwistsAndTurns, EncounterSet.HazardsOfThePit, EncounterSet.GoblinsOfTheDeep }
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Goblin Scout",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9038",
                 CardType = CardType.Enemy,
@@ -550,7 +550,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Winona_Nelson
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Goblin Spearman",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9039",
                 CardType = CardType.Enemy,
@@ -568,7 +568,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Salvador_Trakal
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Goblin Swordsman",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9040",
                 CardType = CardType.Enemy,
@@ -586,7 +586,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Winona_Nelson
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Goblin Tunnels",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9041",
                 CardType = CardType.Location,
@@ -601,7 +601,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Great Cave-troll",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9042",
                 CardType = CardType.Enemy,
@@ -620,7 +620,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Hidden Threat",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9043",
                 CardType = CardType.Treachery,
@@ -631,7 +631,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Ryan_Barger
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Khazâd! Khazâd!",
                 NormalizedTitle = "Khazad! Khazad!",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9044",
@@ -645,7 +645,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Igor_Kieryluk
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Knees of the Mountain",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9045",
                 CardType = CardType.Location,
@@ -659,7 +659,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Stacey_Diana_Clark
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Lightless Passage",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9046",
                 CardType = CardType.Location,
@@ -675,7 +675,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Stu_Barnes
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Many Roads",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9047",
                 CardType = CardType.Treachery,
@@ -687,7 +687,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Stu_Barnes
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Massing in the Deep",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9048",
                 CardType = CardType.Treachery,
@@ -701,7 +701,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Noah_Bradley
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Mountain Warg",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9049",
                 CardType = CardType.Enemy,
@@ -720,7 +720,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Allison_Theus
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Narvi's Belt",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9050",
                 CardType = CardType.Attachment,
@@ -735,7 +735,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 HasErrata = true
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "New Devilry",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9051",
                 CardType = CardType.Treachery,
@@ -747,7 +747,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Orc Drummer",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9052",
                 CardType = CardType.Enemy,
@@ -765,7 +765,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Orc Horn Blower",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9053",
                 CardType = CardType.Enemy,
@@ -784,7 +784,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Patrol Leader",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9054",
                 CardType = CardType.Enemy,
@@ -803,7 +803,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Plundered Armoury",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9055",
                 CardType = CardType.Location,
@@ -817,7 +817,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Search for an Exit",
                 SlugIncludesOppositeTitle = true,
                 StageNumber = 2,
@@ -838,7 +838,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Search for an Exit",
                 SlugIncludesOppositeTitle = true,
                 StageNumber = 2,
@@ -859,7 +859,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Search for an Exit",
                 SlugIncludesOppositeTitle = true,
                 StageNumber = 2,
@@ -880,7 +880,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Search for an Exit",
                 SlugIncludesOppositeTitle = true,
                 StageNumber = 2,
@@ -901,7 +901,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Search for an Exit",
                 SlugIncludesOppositeTitle = true,
                 StageNumber = 2,
@@ -921,7 +921,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Search for an Exit",
                 SlugIncludesOppositeTitle = true,
                 StageNumber = 2,
@@ -947,7 +947,7 @@ Players may bypass this quest card at the end of the combat phase. If the player
             });
             var card = new Card()
             {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Search for an Exit",
                 SlugIncludesOppositeTitle = true,
                 StageNumber = 2,
@@ -985,7 +985,7 @@ Players may bypass this quest card at the end of the combat phase. If the player
 
             Cards.Add(card);
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Search for the Chamber",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-0801207c9070",
@@ -1001,7 +1001,7 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.PlunderingGoblins }
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Shadow of Fear",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9072",
                 CardType = CardType.Treachery,
@@ -1013,7 +1013,7 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 Artist = Artist.Gabrielle_Portal
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Signs of Conflict",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9073",
                 CardType = CardType.Treachery,
@@ -1027,7 +1027,7 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Stairs of Náin",
                 NormalizedTitle = "Stairs of Nain",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9074",
@@ -1043,7 +1043,7 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 Artist = Artist.Lin_Bo
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Stray Goblin",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9075",
                 CardType = CardType.Enemy,
@@ -1062,7 +1062,7 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 Artist = Artist.Mike_Capprotti
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Sudden Pitfall",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9076",
                 CardType = CardType.Treachery,
@@ -1076,7 +1076,7 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 Artist = Artist.Jake_Murray
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "The Fate of Balin",
                 StageNumber = 2,
                 Id = "51223bd0-ffd1-11df-a976-0801207c9077",
@@ -1095,7 +1095,7 @@ If the players defeat this stage, they win the game.",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.PlunderingGoblins }
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "The Mountains' Roots",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9079",
                 CardType = CardType.Location,
@@ -1112,7 +1112,7 @@ If the players defeat this stage, they win the game.",
                 Artist = Artist.Stu_Barnes
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "The Nameless Fear",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9080",
                 CardType = CardType.Enemy,
@@ -1133,7 +1133,7 @@ If the players defeat this stage, they win the game.",
                 Artist = Artist.Timo_Karhula
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Turbulent Waters",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9081",
                 CardType = CardType.Location,
@@ -1148,7 +1148,7 @@ If the players defeat this stage, they win the game.",
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Undisturbed Bones",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9082",
                 CardType = CardType.Treachery,
@@ -1161,7 +1161,7 @@ If the players defeat this stage, they win the game.",
                 Artist = Artist.Carolina_Eade
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Untroubled by Darkness",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9083",
                 CardType = CardType.Event,
@@ -1173,7 +1173,7 @@ If the players defeat this stage, they win the game.",
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Upper Hall",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9084",
                 CardType = CardType.Location,
@@ -1187,7 +1187,7 @@ If the players defeat this stage, they win the game.",
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Veteran of Nanduhirion",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9085",
                 CardType = CardType.Ally,
@@ -1205,7 +1205,7 @@ If the players defeat this stage, they win the game.",
                 Artist = Artist.Dleoblack
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Warg Lair",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9086",
                 CardType = CardType.Location,
@@ -1219,7 +1219,7 @@ If the players defeat this stage, they win the game.",
                 Artist = Artist.Roman_V_Papsuev
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Watchful Eyes",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9087",
                 CardType = CardType.Treachery,
@@ -1231,7 +1231,7 @@ If the players defeat this stage, they win the game.",
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Zigil Miner",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9088",
                 CardType = CardType.Ally,
@@ -1249,7 +1249,7 @@ If the players defeat this stage, they win the game.",
                 HasErrata = true
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Zigil Mineshaft",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9089",
                 CardType = CardType.Location,
