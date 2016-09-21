@@ -81,7 +81,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithText("When Revealed: Attach to the current quest. (Counts as a Condition attachment with the text: \"Forced: After a player fails a Hide test, he discards a random card from his hand.\")")
                 .WithInfo(7, 2, Artist.Piya_Wannachaiwong));
             Cards.Add(Card.Treachery("Followed by Shadows", "402B5339-2661-4E88-8BA7-A668B8388670", "A Shadow of the Past Nightmare")
-                .WithText("When Revealed: Starting with the first place, each player makes a Hide 2 test. Each player who fails this Hide test raises his threat by 5.")
+                .WithText("When Revealed: Starting with the first player, each player makes a Hide 2 test. Each player who fails this Hide test raises his threat by 5.")
                 .WithShadow("Shadow: If the defending player has failed a Hide test this round, this attack is considered undefended.")
                 .WithInfo(8, 3, Artist.Helge_C_Balzer));
             Cards.Add(Card.Treachery("Sniffing and Hissing", "4920FD14-6910-4A56-8DEE-34B03FF5BAFC", "A Shadow of the Past Nightmare")
