@@ -16,7 +16,7 @@ namespace HallOfBeorn.Models.Sets
             Cycle = "Shadows of Mirkwood";
 
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Ambush",
                 StageNumber = 4,
                 Id = "51223bd0-ffd1-11df-a976-0801206c9001",
@@ -33,7 +33,7 @@ namespace HallOfBeorn.Models.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.SpidersOfMirkwood, EncounterSet.Wilderlands }
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Astonishing Speed",
                 Id = "51223bd0-ffd1-11df-a976-0801206c9003",
                 CardType = CardType.Event,
@@ -46,7 +46,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Anna_Christenson
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Attercop, Attercop",
                 Id = "51223bd0-ffd1-11df-a976-0801206c9004",
                 CardType = CardType.Enemy,
@@ -66,7 +66,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Aaron_B_Miller
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Dain Ironfoot",
                 Id = "51223bd0-ffd1-11df-a976-0801206c9005",
                 CardType = CardType.Hero,
@@ -85,7 +85,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Dawn Take You All",
                 Id = "51223bd0-ffd1-11df-a976-0801206c9006",
                 CardType = CardType.Event,
@@ -98,7 +98,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Dry Watercourse",
                 Id = "51223bd0-ffd1-11df-a976-0801206c9007",
                 CardType = CardType.Location,
@@ -113,7 +113,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Bill_Corbett
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Dúnedain Signal",
                 NormalizedTitle = "Dunedain Signal",
                 Id = "51223bd0-ffd1-11df-a976-0801206c9008",
@@ -128,7 +128,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Ijur
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Eagles of the Misty Mountains",
                 Id = "51223bd0-ffd1-11df-a976-0801206c9009",
                 CardType = CardType.Ally,
@@ -145,7 +145,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Sandara_Tang
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Escape Attempt",
                 StageNumber = 2,
                 Id = "51223bd0-ffd1-11df-a976-0801206c9010",
@@ -161,7 +161,7 @@ namespace HallOfBeorn.Models.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.SpidersOfMirkwood, EncounterSet.Wilderlands }
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Gollum",
                 Id = "51223bd0-ffd1-11df-a976-0801206c9012",
                 CardType = CardType.Objective_Ally,
@@ -181,7 +181,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Gollum's Anguish",
                 Id = "51223bd0-ffd1-11df-a976-0801206c9013",
                 CardType = CardType.Treachery,
@@ -196,7 +196,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 Artist = Artist.Tom_Garden
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Gollum's Bite",
                 Id = "51223bd0-ffd1-11df-a976-0801206c9014",
                 CardType = CardType.Treachery,
@@ -211,7 +211,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 Artist = Artist.Tom_Garden
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Mirkwood Bats",
                 Id = "51223bd0-ffd1-11df-a976-0801206c9015",
                 CardType = CardType.Enemy,
@@ -231,7 +231,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 Artist = Artist.Felicia_Cano
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Mirkwood Runner",
                 Id = "51223bd0-ffd1-11df-a976-0801206c9016",
                 CardType = CardType.Ally,
@@ -250,7 +250,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Rumour from the Earth",
                 Id = "51223bd0-ffd1-11df-a976-0801206c9017",
                 CardType = CardType.Event,
@@ -263,7 +263,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Shadow of the Past",
                 Id = "51223bd0-ffd1-11df-a976-0801206c9018",
                 CardType = CardType.Event,
@@ -276,7 +276,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 Artist = Artist.Henning_Ludvigsen
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Support of the Eagles",
                 Id = "51223bd0-ffd1-11df-a976-0801206c9019",
                 CardType = CardType.Attachment,
@@ -290,7 +290,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "The Spiders' Ring",
                 Id = "51223bd0-ffd1-11df-a976-0801206c9020",
                 CardType = CardType.Location,
@@ -307,7 +307,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 Artist = Artist.Andrew_Johanson
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Through the Forest",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-0801206c9021",
@@ -323,7 +323,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.SpidersOfMirkwood, EncounterSet.Wilderlands }
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "To the Elvin King's Halls",
                 StageNumber = 3,
                 Id = "51223bd0-ffd1-11df-a976-0801206c9023",
@@ -339,7 +339,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.SpidersOfMirkwood, EncounterSet.Wilderlands }
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Wasted Provisions",
                 Id = "51223bd0-ffd1-11df-a976-0801206c9025",
                 CardType = CardType.Treachery,
@@ -354,7 +354,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "West Road Traveller",
                 Id = "51223bd0-ffd1-11df-a976-0801206c9026",
                 CardType = CardType.Ally,
@@ -373,7 +373,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Wood Elf Path",
                 Id = "51223bd0-ffd1-11df-a976-0801206c9027",
                 CardType = CardType.Location,
@@ -388,7 +388,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 Artist = Artist.Stacey_Diana_Clark
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Woodman's Glade",
                 Id = "51223bd0-ffd1-11df-a976-0801206c9028",
                 CardType = CardType.Location,
