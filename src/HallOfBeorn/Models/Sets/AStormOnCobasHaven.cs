@@ -17,6 +17,16 @@ namespace HallOfBeorn.Models.Sets
             SetType = Models.SetType.Adventure_Pack;
             Cycle = "Dream-chaser";
 
+            Cards.Add(Card.Event("Terrible to Behold", string.Empty, Sphere.Leadership, 1)
+                .WithText("Response: After you declare a Noble character as a defender against an attack made by an engaged enemy, return that enemy to the staging area. Then, cancel the attack.")
+                .WithFlavor("So great a power and royalty was revealed in Aragorn...that many of the wild men paused, and looked back over their shoulders to the valley, and some looked up doubtfully at the sky.\r\n-The Two Towers")
+                .WithInfo(111, 3, Artist.Jason_Cheeseman_Meyer));
+
+            Cards.Add(Card.Attachment("Vigilant Guard", string.Empty, Sphere.Tactics, 3)
+                .WithGeneric()
+                .WithTraits("Skill.")
+                .WithText("Attach to a Warrior character. Limit 1 per character.\r\nAttached character gets +2 hit points.\r\nResponse: When another character would be assigned any amount of damage, place 1 of that damage on attached character instead.")
+                .WithInfo(113, 3, Artist.Lukasz_Jaskolski));
             Cards.Add(Card.Event("Knife-work", "", Sphere.Tactics, 1)
                 .WithText("Action: Choose a player. Each enemy engaged with that player gets -1 Defense until the end of the phase. Then, the players as a group may spend 2 Lore resources to have the chosen player draw 1 card each time he attacks and destroys an enemy this phase.")
                 .WithFlavor("\"Good!\" said Legolas. \"But my count is now two dozen. It has been knife-work up here.\" -The Two Towers")
