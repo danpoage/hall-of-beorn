@@ -17,7 +17,7 @@ namespace HallOfBeorn.Models.Sets
 
             Cards.Add(new Card() {
                 Title = "Éomer",
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 NormalizedTitle = "Eomer",
                 Id = "FE720A40-0522-4882-B8F4-5F3E4E120E67",
                 CardType = CardType.Hero,
@@ -37,7 +37,7 @@ namespace HallOfBeorn.Models.Sets
             });
             Cards.Add(new Card() {
                 Title = "Gríma",
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 NormalizedTitle = "Grima",
                 Id = "2BECB7B6-5D0C-46D1-83C3-DDE505ABEB5E",
                 CardType = CardType.Hero,
@@ -58,7 +58,7 @@ namespace HallOfBeorn.Models.Sets
             });
             Cards.Add(new Card() {
                 Title = "Saruman",
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Id = "E0C9F997-2FC0-46AA-9B50-A8F8CDC6C31B",
                 CardType = CardType.Ally,
                 ResourceCost = 3,
@@ -80,7 +80,7 @@ Response: After Saruman enters play, choose a non-unique enemy or location in th
             });
             Cards.Add(new Card() {
                 Title = "Orthanc Guard",
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Id = "9A940560-831D-4E4A-8C46-9BFA886B9465",
                 CardType = CardType.Ally,
                 ResourceCost = 2,
@@ -99,7 +99,7 @@ Response: After Saruman enters play, choose a non-unique enemy or location in th
             });
             Cards.Add(new Card() {
                 Title = "Isengard Messenger",
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Id = "70BF219C-AF95-42EE-A2CB-92448E63F276",
                 CardType = CardType.Ally,
                 ResourceCost = 2,
@@ -118,7 +118,7 @@ Response: After Saruman enters play, choose a non-unique enemy or location in th
             });
             Cards.Add(new Card() {
                 Title = "Westfold Outrider",
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Id = "76F84AE2-DDB9-4402-A7FA-7A3EA13F2190",
                 CardType = CardType.Ally,
                 ResourceCost = 2,
@@ -137,7 +137,7 @@ Response: After Saruman enters play, choose a non-unique enemy or location in th
             });
             Cards.Add(new Card() {
                 Title = "Westfold Horse-breeder",
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Id = "C4287846-77C8-4685-A293-9165B180DBDD",
                 CardType = CardType.Ally,
                 ResourceCost = 1,
@@ -156,7 +156,7 @@ Response: After Saruman enters play, choose a non-unique enemy or location in th
             });
             Cards.Add(new Card() {
                 Title = "Rohan Warhorse",
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Id = "FEB80BF1-5F72-49B4-BFDD-7D125529C23F",
                 CardType = CardType.Attachment,
                 ResourceCost = 1,
@@ -172,7 +172,7 @@ Response: After Saruman enters play, choose a non-unique enemy or location in th
             });
             Cards.Add(new Card() {
                 Title = "Silver Lamp",
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Id = "0FF953B2-66CB-4760-9F30-56066D94448C",
                 CardType = CardType.Attachment,
                 ResourceCost = 2,
@@ -187,7 +187,7 @@ Response: After Saruman enters play, choose a non-unique enemy or location in th
             });
             Cards.Add(new Card() {
                 Title = "Keys of Orthanc",
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Id = "F61BB4CD-9239-4AD4-9869-985DE696FFDF",
                 CardType = CardType.Attachment,
                 ResourceCost = 1,
@@ -203,7 +203,7 @@ Response: After Saruman enters play, choose a non-unique enemy or location in th
             Cards.Add(new Card(){
                 Title = "Legacy of Númenor",
                 NormalizedTitle = "Legacy of Numenor",
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Id = "9482929A-87C0-4993-8E76-D80E1A40C3DA",
                 CardType = CardType.Event,
                 ResourceCost = 0,
@@ -218,7 +218,7 @@ Response: After Saruman enters play, choose a non-unique enemy or location in th
             });
             Cards.Add(new Card() {
                 Title = "Deep Knowledge",
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Id = "E68FD84E-D79D-42D6-85B1-8DF6B7F5FDC8",
                 CardType = CardType.Event,
                 ResourceCost = 0,
@@ -233,7 +233,7 @@ Response: After Saruman enters play, choose a non-unique enemy or location in th
             });
             Cards.Add(new Card() {
                 Title = "The Wizards's Voice",
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Id = "AB0B49A0-3A74-433F-AED3-206964FABD18",
                 CardType = CardType.Event,
                 ResourceCost = 0,
@@ -249,7 +249,7 @@ Response: After Saruman enters play, choose a non-unique enemy or location in th
             });
             Cards.Add(new Card() {
                 Title = "Power of Orthanc",
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Id = "19FE9EB6-82EE-4967-9381-E9E7C97B2463",
                 CardType = CardType.Event,
                 ResourceCost = 0,
@@ -265,7 +265,7 @@ Response: After Saruman enters play, choose a non-unique enemy or location in th
             });
             Cards.Add(new Card() {
                 Title = "The Seeing-stone",
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Id = "F54077B5-277B-4E73-ADE0-98D0EA9EC2AC",
                 CardType = CardType.Event,
                 ResourceCost = 0,
@@ -282,7 +282,7 @@ Response: After Saruman enters play, choose a non-unique enemy or location in th
                 Title = "Gríma",
                 NormalizedTitle = "Grima",
                 IsUnique = true,
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "C6DFAF1C-E925-4EF2-A5F2-E0B30B2BC8A8",
                 CardType = CardType.Objective_Ally,
                 SlugIncludesType = true,
@@ -306,7 +306,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card() {
                 Title = "The Islet",
                 IsUnique = true,
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "ED21A7D1-B4EF-4BDD-B998-CACE0FA163BD",
                 CardType = CardType.Location,
                 EncounterSet = "The Fords of Isen",
@@ -323,7 +323,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Fords of Isen",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "4E8365C0-15F6-44AC-A6A8-FBDDFEE22A14",
                 CardType = CardType.Location,
                 EncounterSet = "The Fords of Isen",
@@ -340,7 +340,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "The King's Road",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "86CB2BA1-EC96-45E3-97A0-9615BB11B6A7",
                 CardType = CardType.Location,
                 EncounterSet = "The Fords of Isen",
@@ -356,7 +356,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Gap of Rohan",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "FB63AD99-2F89-4DE6-B5C1-BF9DB78D45E0",
                 CardType = CardType.Location,
                 EncounterSet = "The Fords of Isen",
@@ -373,7 +373,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Pillaging and Burning",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "880C9C97-3664-4EE1-8E96-00F96D4D9D0A",
                 CardType = CardType.Treachery,
                 EncounterSet = "The Fords of Isen",
@@ -387,7 +387,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Down from the Hills",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "F3203B8D-A669-4693-8F72-D53508462C16",
                 CardType = CardType.Treachery,
                 EncounterSet = "The Fords of Isen",
@@ -400,7 +400,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Ill Tidings",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "66EE86BE-D5D4-41AC-97F1-610110F3EB02",
                 CardType = CardType.Treachery,
                 EncounterSet = "The Fords of Isen",
@@ -416,7 +416,7 @@ If Gríma leaves play, the players lose the game.",
                 Title = "Mugash",
                 IsUnique = true,
                 SlugIncludesType = true,
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "EB8CE576-9546-4D19-9070-F7D47638E069",
                 CardType = CardType.Enemy,
                 EncounterSet = "To Catch an Orc",
@@ -435,7 +435,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Mugash's Guard",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "E0BA3FAF-C260-45B8-A918-CE2A74E1920B",
                 CardType = CardType.Enemy,
                 EncounterSet = "To Catch an Orc",
@@ -455,7 +455,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Methedras Orc",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "83B385DA-EB5D-4B20-8C6E-E3133C9CF29F",
                 CardType = CardType.Enemy,
                 EncounterSet = "To Catch an Orc",
@@ -475,7 +475,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Methedras",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "11C24A02-4D8F-4D49-9A55-04348FD61C18",
                 CardType = CardType.Location,
                 EncounterSet = "To Catch an Orc",
@@ -492,7 +492,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Orc Cave",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "472DE81E-675F-4A0C-BD30-A22E415884A9",
                 CardType = CardType.Location,
                 EncounterSet = "To Catch an Orc",
@@ -508,7 +508,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Mugash's Lair",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "29B4F4B0-7C3B-4702-A24B-92FF83D3F6B9",
                 CardType = CardType.Location,
                 EncounterSet = "To Catch an Orc",
@@ -525,7 +525,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Orc Territory",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "08040309-1CF0-401B-9125-E6A7D0E1B875",
                 CardType = CardType.Treachery,
                 EncounterSet = "To Catch an Orc",
@@ -540,7 +540,7 @@ If Gríma leaves play, the players lose the game.",
                 Title = "Mugash",
                 IsUnique = true,
                 SlugIncludesType = true,
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "D926470B-02E3-4A06-9428-5F3F5186E62A",
                 CardType = CardType.Objective,
                 EncounterSet = "Into Fangorn",
@@ -556,7 +556,7 @@ If Gríma leaves play, the players lose the game.",
             {
                 Title = "Edge of Fangorn",
                 IsUnique = true,
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "12EE099F-7D5D-42FB-8A09-4420030CAA3C",
                 CardType = CardType.Location,
                 EncounterSet = "Into Fangorn",
@@ -574,7 +574,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Dark-Hearted Huorn",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "E8C84525-B138-47D8-9761-9336A87A9A77",
                 CardType = CardType.Enemy,
                 EncounterSet = "Into Fangorn",
@@ -595,7 +595,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Angry Huorn",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "599FBFC7-1864-4959-9096-7531741C5004",
                 CardType = CardType.Enemy,
                 EncounterSet = "Into Fangorn",
@@ -616,7 +616,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Deadly Huorn",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "C56394C3-4953-4896-8D47-3E84547D4789",
                 CardType = CardType.Enemy,
                 EncounterSet = "Into Fangorn",
@@ -637,7 +637,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Heart of Fangorn",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "4B4E19C1-A025-46D1-95B3-D7BF85052B45",
                 CardType = CardType.Location,
                 EncounterSet = "Into Fangorn",
@@ -654,7 +654,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "The Forest's Malice",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "3A7F339F-A300-4CDA-BDB1-19A6E21789C9",
                 CardType = CardType.Treachery,
                 EncounterSet = "Into Fangorn",
@@ -667,7 +667,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Orc Skirmisher",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "5745026F-AABE-49D7-BF33-B7C70A42B93E",
                 CardType = CardType.Enemy,
                 EncounterSet = "Misty Mountain Orcs",
@@ -687,7 +687,7 @@ If Gríma leaves play, the players lose the game.",
              Cards.Add(new Card()
             {
                 Title = "Orc Hunter",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "7D907B4B-8D64-4F15-80FB-73DD3146FA1F",
                 CardType = CardType.Enemy,
                 EncounterSet = "Misty Mountain Orcs",
@@ -707,7 +707,7 @@ If Gríma leaves play, the players lose the game.",
              Cards.Add(new Card()
             {
                 Title = "Orc Hound",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "16DB3C77-DCF6-4547-94ED-3249C4D18824",
                 CardType = CardType.Enemy,
                 EncounterSet = "Misty Mountain Orcs",
@@ -727,7 +727,7 @@ If Gríma leaves play, the players lose the game.",
              Cards.Add(new Card()
             {
                 Title = "Orc Hunting Party",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "B7380292-B4B6-495F-9A04-6AF1D3AAA7C2",
                 CardType = CardType.Treachery,
                 EncounterSet = "Misty Mountain Orcs",
@@ -741,7 +741,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Dunland Prowler",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "3978167C-C2A9-4ED1-9E2D-AA1B711C50A6",
                 CardType = CardType.Enemy,
                 EncounterSet = "Dunland Raiders",
@@ -761,7 +761,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Dunlending Bandit",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "738ED376-48BF-45CF-BBB0-428DB6CB5869",
                 CardType = CardType.Enemy,
                 EncounterSet = "Dunland Raiders",
@@ -781,7 +781,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Dunland Raider",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "E461B1C0-6887-46DE-B1E7-A7A98F04FAEF",
                 CardType = CardType.Enemy,
                 EncounterSet = "Dunland Raiders",
@@ -801,7 +801,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Old Hatreds",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "AEDC7B12-2B48-4644-8881-92C6BA3E4FBA",
                 CardType = CardType.Treachery,
                 EncounterSet = "Dunland Raiders",
@@ -816,7 +816,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Dunland Tribesman",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "10450FC9-315B-4F2B-B227-D4CE0E9B784C",
                 CardType = CardType.Enemy,
                 EncounterSet = "Dunland Warriors",
@@ -836,7 +836,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Dunland Chieftain",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "F94C1AB8-C0CE-4F1A-9B31-E0B88E833BA0",
                 CardType = CardType.Enemy,
                 EncounterSet = "Dunland Warriors",
@@ -855,7 +855,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Dunland Berserker",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "78ACB894-103C-41CC-B2D1-F9A6F81FB322",
                 CardType = CardType.Enemy,
                 EncounterSet = "Dunland Warriors",
@@ -875,7 +875,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Wild Men of Dunland",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "176B2C82-0C3C-48EC-BB7E-B7C61C9DDC11",
                 CardType = CardType.Treachery,
                 EncounterSet = "Dunland Warriors",
@@ -891,7 +891,7 @@ If Gríma leaves play, the players lose the game.",
             {
                 Title = "Ancient Forest",
                 SlugIncludesType = true,
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "AA0B89D9-02C5-4A15-9C81-0E1AF2CC906D",
                 CardType = CardType.Location,
                 EncounterSet = "Ancient Forest",
@@ -908,7 +908,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Tangled Woods",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "1DEE93C2-E861-48CD-9DD0-02CB46491D4E",
                 CardType = CardType.Location,
                 EncounterSet = "Ancient Forest",
@@ -925,7 +925,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Turned Around",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "5CEF2C98-F61D-4766-8A07-42BA17B0CB4B",
                 CardType = CardType.Treachery,
                 EncounterSet = "Ancient Forest",
@@ -939,7 +939,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Prowling Wolf",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "7BFE696F-DA00-4D2F-ACA9-3044F22D6431",
                 CardType = CardType.Enemy,
                 EncounterSet = "Broken Lands",
@@ -960,7 +960,7 @@ If Gríma leaves play, the players lose the game.",
             {
                 Title = "Broken Lands",
                 SlugIncludesType = true,
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "39982128-25C4-49E7-B7CB-66916E62A69A",
                 CardType = CardType.Location,
                 EncounterSet = "Broken Lands",
@@ -977,7 +977,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Take Cover!",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "350DC354-534A-4FE6-BC4F-475F8C1DDC30",
                 CardType = CardType.Treachery,
                 EncounterSet = "Broken Lands",
@@ -992,7 +992,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Low on Provisions",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "E38C9171-4B13-43E0-A729-18C99C35489E",
                 CardType = CardType.Treachery,
                 EncounterSet = "Weary Travelers",
@@ -1006,7 +1006,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "Off Track",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "3B4CB88B-F9E5-4C70-91A8-9F2AC1B98636",
                 CardType = CardType.Treachery,
                 EncounterSet = "Weary Travelers",
@@ -1020,7 +1020,7 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new Card()
             {
                 Title = "In Need of Rest",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "C22ADAF6-954E-4212-AFA9-5CEA555117D3",
                 CardType = CardType.Treachery,
                 EncounterSet = "Weary Travelers",
@@ -1036,7 +1036,7 @@ If Gríma leaves play, the players lose the game.",
                 Title = "Fight at the Fords",
                 HasSecondImage = true,
                 StageNumber = 1,
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "4BEF0C09-6FB2-4021-BD27-816EEBFBDDCC",
                 CardType = CardType.Quest,
                 ScenarioNumber = 1,
@@ -1056,7 +1056,7 @@ If Gríma leaves play, the players lose the game.",
                 Title = "Dunlending Attack",
                 HasSecondImage = true,
                 StageNumber = 2,
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "FEBD2BE9-DF9E-4391-A498-86EE6758E2AB",
                 CardType = CardType.Quest,
                 ScenarioNumber = 1,
@@ -1075,7 +1075,7 @@ If Gríma leaves play, the players lose the game.",
                 Title = "Hold the Fords",
                 HasSecondImage = true,
                 StageNumber = 3,
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "8D5B83EB-5A77-492D-897A-1A5341550731",
                 CardType = CardType.Quest,
                 ScenarioNumber = 1,
@@ -1094,7 +1094,7 @@ If Gríma leaves play, the players lose the game.",
                 Title = "Orders from Orthanc",
                 HasSecondImage = true,
                 StageNumber = 1,
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "3ED48AE6-66BB-45B2-B07A-0F549A952F75",
                 CardType = CardType.Quest,
                 ScenarioNumber = 2,
@@ -1113,7 +1113,7 @@ If Gríma leaves play, the players lose the game.",
                 Title = "Searching for Mugash",
                 HasSecondImage = true,
                 StageNumber = 2,
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "EA763FD7-64E8-4E39-B318-0F110B20F241",
                 CardType = CardType.Quest,
                 ScenarioNumber = 2,
@@ -1131,7 +1131,7 @@ If Gríma leaves play, the players lose the game.",
                 Title = "The Wizard's Prize",
                 HasSecondImage = true,
                 StageNumber = 3,
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "BAD7F11E-961B-49B0-9B67-7924E52F7309",
                 CardType = CardType.Quest,
                 ScenarioNumber = 2,
@@ -1150,7 +1150,7 @@ If Gríma leaves play, the players lose the game.",
                 Title = "Into the Woods",
                 HasSecondImage = true,
                 StageNumber = 1,
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "3D3EFB85-5EDA-45EB-A992-A8146673AECA",
                 CardType = CardType.Quest,
                 ScenarioNumber = 3,
@@ -1171,7 +1171,7 @@ If Gríma leaves play, the players lose the game.",
                 Title = "Escape from Fangorn",
                 HasSecondImage = true,
                 StageNumber = 2,
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "C3572881-CF4C-421A-B555-7D40DC91E720",
                 CardType = CardType.Quest,
                 ScenarioNumber = 3,
@@ -1191,7 +1191,7 @@ If Gríma leaves play, the players lose the game.",
                 Title = "The Angry Forest",
                 HasSecondImage = true,
                 StageNumber = 3,
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "AD53EA8E-E050-4BCE-B826-945EF6A6F227",
                 CardType = CardType.Quest,
                 ScenarioNumber = 3,
