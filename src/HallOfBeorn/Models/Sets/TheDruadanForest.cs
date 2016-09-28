@@ -17,7 +17,7 @@ namespace HallOfBeorn.Models.Sets
             Cycle = "Against the Shadow";
 
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Mirlonde",
                 Id = "536c80ba-ad8b-447e-b378-1684508eb0f9",
                 CardType = CardType.Hero,
@@ -36,7 +36,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Forlong",
                 Id = "c6ae1840-dd7d-46ea-baf8-6d30614506de",
                 CardType = CardType.Ally,
@@ -55,7 +55,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Emile_Denis
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Strength of Arms",
                 Id = "91f28bdf-4b78-4750-9853-65e783e4cb15",
                 CardType = CardType.Event,
@@ -68,7 +68,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Jon_Bosco
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Mighty Prowess",
                 Id = "4ed8bd53-0453-4490-a4bb-20a7d793c17f",
                 CardType = CardType.Attachment,
@@ -82,7 +82,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Blake_Henriksen
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Trained for War",
                 Id = "5c7a6b89-0439-4b46-b9f1-09189f981a0d",
                 CardType = CardType.Event,
@@ -95,7 +95,7 @@ namespace HallOfBeorn.Models.Sets
                 HasErrata = true
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Silvan Refugee",
                 Id = "e4fd6e25-982a-464f-82d8-812269864d46",
                 CardType = CardType.Ally,
@@ -114,7 +114,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Lorraine_Schleter
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Against the Shadow",
                 Id = "0801c2c0-2bf7-4a0a-838a-13740f6cdbaf",
                 CardType = CardType.Event,
@@ -127,7 +127,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Andrew_Ryan
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Harbor Master",
                 Id = "b7f8b82b-c448-4f43-a025-bf6b7e6f0310",
                 CardType = CardType.Ally,
@@ -145,7 +145,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Kristina_Gehrmann
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Advance Warning",
                 Id = "e678be7e-8048-458d-b4f9-25c2a718fabb",
                 CardType = CardType.Event,
@@ -158,7 +158,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Adam_Lane
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "White Tower Watchman",
                 Id = "31cd848b-a1bc-4ccd-af0c-eb3cc3ba593b",
                 CardType = CardType.Ally,
@@ -176,7 +176,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Drû-buri-Drû",
                 NormalizedTitle = "Dru-buri-Dru",
                 Id = "19b732b9-a26a-4535-a438-7dd83cd4ecf2",
@@ -195,7 +195,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Drúadan Drummer",
                 NormalizedTitle = "Druadan Drummer",
                 Id = "e2c02f11-fdfb-402b-89de-1729d1364e4c",
@@ -215,7 +215,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Drúadan Elite",
                 NormalizedTitle = "Druadan Elite",
                 Id = "607c3e44-5add-4c80-bb3b-55b016b6cd0e",
@@ -235,7 +235,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Drúadan Hunter",
                 NormalizedTitle = "Druadan Hunter",
                 Id = "809ff5de-8273-4491-adfb-3a27d4b316f3",
@@ -256,7 +256,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Drúadan Thief",
                 NormalizedTitle = "Druadan Thief",
                 Id = "85045e14-3abc-4d58-824f-249b1fb3643d",
@@ -275,7 +275,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Ancestral Clearing",
                 Id = "0ebedc5b-fd8b-46b8-a2a1-1a6f739e8819",
                 CardType = CardType.Location,
@@ -291,7 +291,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Grzegorz_Pedrycz
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Garden of Poisons",
                 Id = "41c3779a-a28a-44db-8b9b-bc5e81d1111a",
                 CardType = CardType.Location,
@@ -306,7 +306,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Simon_Dominic
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Glade of Cleansing",
                 Id = "801078c6-56a9-45f2-b5a4-7e38cb5bc507",
                 CardType = CardType.Location,
@@ -323,7 +323,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Titus_Lunter
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Men in the Dark",
                 Id = "24e431be-cde9-4f93-943a-de5e5ca9108b",
                 CardType = CardType.Treachery,
@@ -335,7 +335,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Marcia_George_Bogdan
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Stars in Sky",
                 Id = "7cbf23fd-28c4-494c-97aa-b7fed050ad8b",
                 CardType = CardType.Treachery,
@@ -348,7 +348,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Blake_Henriksen
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Leaves on Tree",
                 Id = "9dda3cf1-e5bd-4cab-8c3b-b29db1220249",
                 CardType = CardType.Treachery,
@@ -361,7 +361,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "The Pursuit",
                 StageNumber = 1,
                 Id = "71079813-3afe-41b7-8746-92dcc1f91084",
@@ -378,7 +378,7 @@ namespace HallOfBeorn.Models.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.BroodingForest }
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "An Untimely End",
                 StageNumber = 2,
                 Id = "346fda89-94df-410a-8027-41eacbf27238",
@@ -394,7 +394,7 @@ namespace HallOfBeorn.Models.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.BroodingForest }
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "The Passage Out",
                 StageNumber = 3,
                 Id = "f6578eb7-1b94-458b-aba1-82b406507a4d",
