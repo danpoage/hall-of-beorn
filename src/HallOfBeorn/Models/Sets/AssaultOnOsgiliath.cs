@@ -16,7 +16,7 @@ namespace HallOfBeorn.Models.Sets
             Cycle = "Against the Shadow";
 
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Faramir",
                 Id = "323ebfa3-57e5-4394-9f55-284b2f7ee0be",
                 IsUnique = true,
@@ -36,7 +36,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Sword of Morthond",
                 Id = "98ba9e54-d6c3-41ff-b886-81a29e29eb64",
                 IsUnique = true,
@@ -51,7 +51,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Sara_K_Diesel
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Men of the West",
                 Id = "a2d440c4-6150-4b6f-9a36-faa51ace7908",
                 CardType = CardType.Event,
@@ -66,7 +66,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Knight of Minas Tirith",
                 Id = "237b31e7-d0b0-4c1e-bd4a-40a175f7d7d1",
                 CardType = CardType.Ally,
@@ -83,7 +83,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Emile_Denis
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Gondorian Fire",
                 Id = "a7f12d87-5f28-46ca-a301-0ac48ca5e471",
                 CardType = CardType.Attachment,
@@ -96,7 +96,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Pelargir Shipwright",
                 Id = "d8d1e7b4-3639-4ca0-bc83-daa7f78554b2",
                 CardType = CardType.Ally,
@@ -114,7 +114,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Map of Earnil",
                 Id = "72cb5c31-c62f-4870-a5f4-099cdec1d4a7",
                 IsUnique = true,
@@ -128,7 +128,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Florian_Stitz
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Ranger Bow",
                 Id = "3fa0b17f-a7d1-4f0c-a779-c20cb6084e78",
                 CardType = CardType.Attachment,
@@ -143,7 +143,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Aurelien_Hubert
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Forest Patrol",
                 Id = "50aa4aab-6daa-4cb5-bfb1-a13db03c1a23",
                 CardType = CardType.Event,
@@ -156,7 +156,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Kristina_Gehrmann
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Palantir",
                 Id = "1e9a6c59-8dc7-4dc4-a5a4-f5f4f9ccdc55",
                 IsUnique = true,
@@ -170,7 +170,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Sandara_Tang
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Retake the City",
                 StageNumber = 1,
                 Id = "c46c37c3-b2e7-4e28-9466-e3a371417c8b",
@@ -185,7 +185,7 @@ namespace HallOfBeorn.Models.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.MordorElite, EncounterSet.Southrons }
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Uruk Lieutenant",
                 Id = "bfa3b9da-d0e3-4ad6-8d1d-f32975f69551",
                 CardType = CardType.Enemy,
@@ -204,7 +204,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Blake_Henriksen
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Uruk Soldier",
                 Id = "f89b8962-1081-4f61-bc08-b2ca4eb08ba8",
                 CardType = CardType.Enemy,
@@ -222,7 +222,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Blake_Henriksen
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Southron Phalanx",
                 Id = "1c95d49a-5638-4f31-a42f-f93a5d1f50db",
                 CardType = CardType.Enemy,
@@ -240,7 +240,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.J_Lonnee
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Southron Commander",
                 Id = "264adf61-31e1-46db-a655-7fee1d4282ae",
                 CardType = CardType.Enemy,
@@ -259,7 +259,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.J_Lonnee
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "West Gate",
                 Id = "5a3d198a-5c72-42ec-b5ae-f183194632cf",
                 IsUnique = true,
@@ -274,7 +274,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "The King's Library",
                 Id = "fa9df618-126b-4ea9-95d7-22cd5dad6d2f",
                 IsUnique = true,
@@ -290,7 +290,7 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Julian_Kok
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Ancient Harbor",
                 Id = "0c44ed2b-976a-4b17-b7e7-e64b20f74fd7",
                 IsUnique = true,
@@ -308,7 +308,7 @@ Combat Action: Exhaust a hero to place 1 progress token on Ancient Harbor.\r\nFo
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "The Old Bridge",
                 Id = "e46a15c0-abbe-4a2e-8951-0e9950aa0288",
                 IsUnique = true,
@@ -326,7 +326,7 @@ Planning Action: Spend 2 resources to play 1 progress token on The Old Bridge. (
                 Artist = Artist.Adam_Lane
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "West Quarter",
                 Id = "b5c7bf41-7642-4d25-9794-cb247f540182",
                 CardType = CardType.Location,
@@ -342,7 +342,7 @@ Planning Action: Spend 2 resources to play 1 progress token on The Old Bridge. (
                 Artist = Artist.Marcia_George_Bogdan
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "East Quarter",
                 Id = "93bf98f7-fe0f-4c03-bd93-2f8d5753acce",
                 CardType = CardType.Location,
@@ -358,7 +358,7 @@ Planning Action: Spend 2 resources to play 1 progress token on The Old Bridge. (
                 Artist = Artist.Julian_Kok
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Ruined Square",
                 Id = "fb301d7d-7936-49b6-a938-40ff0ca549cb",
                 CardType = CardType.Location,
@@ -373,7 +373,7 @@ Planning Action: Spend 2 resources to play 1 progress token on The Old Bridge. (
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Ruined Tower",
                 Id = "ae5727cb-4d88-4a28-99be-84a565292b67",
                 CardType = CardType.Location,
@@ -387,7 +387,7 @@ Planning Action: Spend 2 resources to play 1 progress token on The Old Bridge. (
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Pinned Down",
                 Id = "03b6d303-7722-4319-9623-e182b50c90b2",
                 CardType = CardType.Treachery,
@@ -399,7 +399,7 @@ Planning Action: Spend 2 resources to play 1 progress token on The Old Bridge. (
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Street Fighting",
                 Id = "2573b8e3-d3a1-47c0-acc8-e6151f223383",
                 CardType = CardType.Treachery,
@@ -411,7 +411,7 @@ Planning Action: Spend 2 resources to play 1 progress token on The Old Bridge. (
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Counter-attack",
                 Id = "1f1ad7bb-68ca-4b48-b7fa-516e5314e272",
                 CardType = CardType.Treachery,
