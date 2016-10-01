@@ -30,13 +30,13 @@
     @if (@Model.HasSecondImage)
     {
         <span>
-            <img src="@Model.ImagePath1" style="max-height:200px;"/>
-            <img src="@Model.ImagePath2" style="max-height:200px;"/>
+            <img src="@Model.ImagePath1" style="max-height:200px;" class="card-image"/>
+            <img src="@Model.ImagePath2" style="max-height:200px;" class="card-image"/>
         </span>
     }
     else
     {
-        <img src="@Model.ImagePath" style="max-width: 285px;max-height: 400px;"/>
+        <img src="@Model.ImagePath" style="max-width: 285px;max-height: 400px;"  class="card-image"/>
     }
 </div>
 <div class="statBox" style="display:inline-block;max-width:300px;vertical-align:top;">

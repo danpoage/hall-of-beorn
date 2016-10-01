@@ -13,11 +13,11 @@
     {
         if (@card.HasSecondImage)
         {
-            <a title="@card.Title" href="@card.Url" target="_blank"><img style="margin-bottom: 6px" src="@card.ImagePath1" height="@card.smallHeight" width="@card.smallWidth" /></a>
+            <a title="@card.Title" href="@card.Url" target="_blank"><img style="margin-bottom: 6px" src="@card.ImagePath1" height="@card.smallHeight" width="@card.smallWidth" class="card-image"/></a>
         }
         else
         {
-            <a title="@card.Title" href="@card.Url" target="_blank"><img style="margin-bottom: 6px" src="@card.ImagePath" height="@card.smallHeight" width="@card.smallWidth" /></a>
+            <a title="@card.Title" href="@card.Url" target="_blank"><img style="margin-bottom: 6px" src="@card.ImagePath" height="@card.smallHeight" width="@card.smallWidth" class="card-image"/></a>
         }
     }
 }
