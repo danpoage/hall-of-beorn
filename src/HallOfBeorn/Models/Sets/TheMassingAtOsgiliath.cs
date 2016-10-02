@@ -16,8 +16,8 @@ namespace HallOfBeorn.Models.Sets
             Cycle = "GenCon";
 
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
-                Title = "The Witch-King",
+                ImageType = Models.ImageType.Jpg,
+                Title = "The Witch-king",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9001",
                 CardType = CardType.Enemy,
                 EngagementCost = 40,
@@ -38,7 +38,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Igor_Kieryluk
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Snaga Scouts",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9002",
                 CardType = CardType.Enemy,
@@ -55,7 +55,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Paul_Guzenko
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Wolves from Mordor",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9003",
                 CardType = CardType.Enemy,
@@ -73,7 +73,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Allison_Theus
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Wainriders",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9004",
                 CardType = CardType.Enemy,
@@ -90,7 +90,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.David_Chen
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Wainrider Captain",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9005",
                 CardType = CardType.Enemy,
@@ -108,7 +108,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.David_Horne
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Uruk Vanguard",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9006",
                 CardType = CardType.Enemy,
@@ -126,7 +126,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Matthew_Starbuck
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Captured Watchtower",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9007",
                 CardType = CardType.Location,
@@ -141,7 +141,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Emyn Arnen Overlook",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9008",
                 CardType = CardType.Location,
@@ -155,7 +155,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Igor_Kieryluk
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Morgulduin",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9009",
                 CardType = CardType.Location,
@@ -170,7 +170,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Pelennor Fields",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9010",
                 CardType = CardType.Location,
@@ -185,7 +185,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Ruins of Osgiliath",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9011",
                 CardType = CardType.Location,
@@ -200,7 +200,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Cut Off",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9012",
                 CardType = CardType.Treachery,
@@ -213,7 +213,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Dark Pursuit",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9013",
                 CardType = CardType.Treachery,
@@ -224,7 +224,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Jake_Murray
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Massing at Osgiliath",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9014",
                 CardType = CardType.Treachery,
@@ -236,7 +236,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new Card() {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Ranger of Ithilien",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9015",
                 CardType = CardType.Objective_Ally,

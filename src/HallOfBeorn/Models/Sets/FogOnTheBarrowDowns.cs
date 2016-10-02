@@ -77,7 +77,7 @@ The Lord of the ~Rings: The Black Riders Saga Expansion is required to play Fog 
             });
             Cards.Add(new Card()
             {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Aragorn",
                 Id = "AAF34EE7-24B9-4962-AE9F-079772089407",
                 CardType = CardType.Hero,

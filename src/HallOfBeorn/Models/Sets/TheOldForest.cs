@@ -82,7 +82,7 @@ The Lord of the ~Rings : The Black Riders Saga Expansion is required to play The
             });
             Cards.Add(new Card()
             {
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Title = "Aragorn",
                 Id = "638BAEF3-2B18-431F-9855-B61A6CD283EA",
                 CardType = CardType.Hero,
