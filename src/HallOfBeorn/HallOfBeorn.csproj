@@ -694,7 +694,7 @@
     <Content Include="Images\unique.png" />
     <Content Include="Images\willpower.gif" />
     <Content Include="Images\willpower_med.png" />
-    <Content Include="Scripts\autocomplete18.js" />
+    <Content Include="Scripts\autocomplete19.js" />
     <Content Include="Scripts\cardDetails.js" />
     <Content Include="Scripts\cardSearch.js" />
     <Content Include="Scripts\deckBuilder.js" />

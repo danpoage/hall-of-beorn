@@ -1369,3 +1369,7 @@ tr.pager td {
     color:silver;
     font-weight: bold;
 }
+
+.card-image {
+    border-radius: 6px;
+}

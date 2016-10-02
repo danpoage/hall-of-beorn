@@ -8,7 +8,7 @@
 @section scripts {
 <script type="text/javascript" src="~/Scripts/cardSearch.js"></script>
 <script type="text/javascript" src="~/Scripts/storage.js"></script>
-<script type="text/javascript" src="~/Scripts/autocomplete18.js"></script>
+<script type="text/javascript" src="~/Scripts/autocomplete19.js"></script>
 <script type="text/javascript">
     $(function () {
         $("#Query").autocomplete({
@@ -462,13 +462,13 @@
                             @if (@card.HasSecondImage)
                             {
                                 <span style="text-align:left;">
-                                    <img src="@card.ImagePath1" style="height:180px;"/>
-                                    <img src="@card.ImagePath2" style="height:180px;margin-left:4px;"/>
+                                    <img src="@card.ImagePath1" style="height: 180px" class="card-image"/>
+                                    <img src="@card.ImagePath2" style="height: 180px; margin-left: 4px;" class="card-image"/>
                                 </span>
                             }
                             else
                             {
-                            <img src="@card.ImagePath" style="height:180px;"/>
+                            <img src="@card.ImagePath" style="height: 180px" class="card-image"/>
                             }
                         </a>
                     </div>

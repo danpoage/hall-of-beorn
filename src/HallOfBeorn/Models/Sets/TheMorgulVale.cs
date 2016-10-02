@@ -215,7 +215,6 @@ namespace HallOfBeorn.Models.Sets
                 Artist = Artist.Magali_Villeneuve,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.MordorElite, EncounterSet.CreaturesOfTheForest }
             });
-
             Cards.Add(new Card()
             {
                 HasSecondImage = true,

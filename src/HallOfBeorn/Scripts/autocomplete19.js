@@ -22,6 +22,7 @@
     "Ceorl", "Armored Destrier", "Deorwine", "Revealed in Wrath", "Rhovanion Outrider", "Scouting Party", "Entangling Nets", "Arrows from the Trees", "Ered Luin Miner",
     "Argalad","Dwarven Sellsword", "Dunedain Remedy", "Marksman of Lorien", "Battle-fury", "Woodland Courier", "Hithlain", "Robin Smallburrow", "Interrogation", "Strider",
     "Banner of Elendil", "Desperate Defense", "Esquire of Gondor", "Esquire of Rohan", "Ghan-buri-Ghan", "Golden Shield", "Grimbold", "Livery of the Tower", "Roheryn", "Sterner than Steel",
+    "Na'asiyah", "Rune-master", "Terrible to Behold", "Veteran Sword-elf", "Vigilant Guard", "Knife-work", "Linhir Sea-captain", "Windfola", "Ioreth", "The Houses of Healing", "Justice Shall Be Done",
           "+set:",
           "-set:",
           "+type:",
