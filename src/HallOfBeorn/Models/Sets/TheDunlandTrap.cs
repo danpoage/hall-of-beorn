@@ -195,7 +195,7 @@ a hero he controls, draw 1 card, or shuffle 1 card from his discard pile into hi
             Cards.Add(new Card()
             {
                 Title = "The Road to Tharbad",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "AA596A48-A5E8-4DC6-8789-433FD2C9BF82",
                 CardType = CardType.Quest,
                 StageNumber = 1,
@@ -216,7 +216,7 @@ Forced: After the last time counter is removed from this stage, each player disc
             Cards.Add(new Card()
             {
                 Title = "A Well Laid Trap",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "D20381AB-5138-4C66-B072-13865CA1F2A7",
                 CardType = CardType.Quest,
                 StageNumber = 2,
@@ -237,7 +237,7 @@ Forced: At the end of the combat phase, advance to stage 3A.",
             Cards.Add(new Card()
             {
                 Title = "No Way Out",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "32C557BA-7FC3-477F-872F-C531DCDD5B00",
                 CardType = CardType.Quest,
                 StageNumber = 3,

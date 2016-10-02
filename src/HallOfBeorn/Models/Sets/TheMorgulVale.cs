@@ -181,7 +181,7 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(new Card()
             {
                 HasSecondImage = true,
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Id = "30a319ff-6092-4d5f-9b94-2a9b4f44f9c1",
                 StageNumber = 1,
                 CardType = Models.CardType.Quest,
@@ -200,7 +200,7 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(new Card()
             {
                 HasSecondImage = true,
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Id = "49aa4e88-3774-43f7-ab8d-05268ed3fb7e",
                 StageNumber = 2,
                 CardType = Models.CardType.Quest,
@@ -219,7 +219,7 @@ namespace HallOfBeorn.Models.Sets
             Cards.Add(new Card()
             {
                 HasSecondImage = true,
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Id = "8b4dd0c5-3847-46f6-a69b-a4c7ee2b21c8",
                 StageNumber = 3,
                 CardType = Models.CardType.Quest,
@@ -394,7 +394,7 @@ If 10 or more progress tokens are on To the Tower, the players have lost the gam
             {
                 Title = "Morgul Vale",
                 Id = "e176b4d7-2fae-4025-8a71-5c3bc843e2e1",
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 CardType = CardType.Location,
                 Threat = 3,
                 QuestPoints = 3,
