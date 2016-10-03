@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models.Sets
             {
                 Title = "The Dead Marshes Nightmare",
                 HasSecondImage = true,
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Id = "B4BE3175-F193-464F-A6CE-79C9AA55DB44",
                 CardType = CardType.Nightmare_Setup,
                 Text =
@@ -63,7 +63,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new Card()
             {
                 Title = "The Mere of Dead Faces",
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 IsUnique = true,
                 Id = "1F4F1442-91FE-4DE6-9093-C127F238B7E9",
                 CardType = CardType.Location,
@@ -85,7 +85,7 @@ Forced: After Gollum enters play, place 2 resource tokens on Gollum, then move a
             Cards.Add(new Card()
             {
                 Title = "Stagnant Quagmire",
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Id = "58E63798-5F44-487B-9EF8-D4F08417E6B6",
                 CardType = CardType.Location,
                 Threat = 3,
@@ -104,7 +104,7 @@ Escape: 2",
             Cards.Add(new Card()
             {
                 Title = "Things in the Pools",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "AE951388-A055-431B-B801-3D50379BFB9D",
                 CardType = CardType.Enemy,
                 EngagementCost = 50,
@@ -123,7 +123,7 @@ Escape: 2",
             Cards.Add(new Card()
             {
                 Title = "Marsh-wight",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "640021E3-0FCE-4BC8-89B8-D822FE3238C3",
                 CardType = CardType.Enemy,
                 EngagementCost = 40,
@@ -142,7 +142,7 @@ Escape: 2",
             Cards.Add(new Card()
             {
                 Title = "Lost Soul of Lórien",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "8441AF00-6E28-4540-81CD-0FAF945F5C12",
                 CardType = CardType.Enemy,
                 EngagementCost = 30,
@@ -161,7 +161,7 @@ Escape: 2",
             Cards.Add(new Card()
             {
                 Title = "Ill-fated Guard",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "E8D8546C-53AB-4828-BEFD-10CB544C976F",
                 CardType = CardType.Enemy,
                 EngagementCost = 18,
@@ -180,7 +180,7 @@ Escape: 2",
             Cards.Add(new Card()
             {
                 Title = "Candles of Corpses",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "424E66B5-9A58-4AEE-A26E-8A305F26BA52",
                 CardType = CardType.Treachery,
                 Traits = new List<string> { "Escape." },
@@ -197,7 +197,7 @@ Escape: 5",
             Cards.Add(new Card()
             {
                 Title = "Swarming Mosquitos",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "C719042A-4C59-4866-B0D6-46620CDFE1B3",
                 CardType = CardType.Treachery,
                 Traits = new List<string> { "Escape." },
@@ -213,7 +213,7 @@ Escape: 3",
             Cards.Add(new Card()
             {
                 Title = "Devilry of the Dark Land",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "12702037-6E7C-4A8C-AC38-9EB25DB09553",
                 CardType = CardType.Treachery,
                 Traits = new List<string> { "Corruption." },

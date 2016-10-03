@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models.Sets
             {
                 Title = "The Hunt for Gollum Nightmare",
                 HasSecondImage = true,
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Id = "EAC4C67B-297A-4E6D-AA8E-DA33D57C87E7",
                 CardType = CardType.Nightmare_Setup,
                 Text =
@@ -56,7 +56,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new Card()
             {
                 Title = "Ravenous Hawk",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "47DFC868-233F-4746-BD7B-566C068979FB",
                 CardType = CardType.Enemy,
                 EngagementCost = 42,
@@ -74,7 +74,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new Card()
             {
                 Title = "Hunting Warg",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "CCC072EA-E465-435A-B35A-17434AE875A2",
                 CardType = CardType.Enemy,
                 EngagementCost = 15,
@@ -93,7 +93,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new Card()
             {
                 Title = "Watched Path",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "F57F373C-8DB0-4B64-B24E-1035586955F5",
                 CardType = CardType.Location,
                 Threat = 3,
@@ -110,7 +110,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new Card()
             {
                 Title = "Hunter's Lookout",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "05B0B319-AD3B-48D3-BBCC-EA14CCC25D51",
                 CardType = CardType.Location,
                 Threat = 2,
@@ -126,7 +126,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new Card()
             {
                 Title = "Dark Pools",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "F138439D-B974-4F34-9060-F7BB9732D504",
                 CardType = CardType.Location,
                 Threat = 3,
@@ -145,7 +145,7 @@ Forced: After Dark Pools becomes the active location, each player must discard a
             Cards.Add(new Card()
             {
                 Title = "The Enemy's Trail",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "4ABD5D9D-97E6-4937-BD4B-3F149A149569",
                 CardType = CardType.Treachery,
                 Text = "When Revealed: Search the encounter discard pile for a Clue card and attach it to a Mordor enemy in play, if able. If no card is attached by this effect, The Enemy's Trail gains surge.",
@@ -158,7 +158,7 @@ Forced: After Dark Pools becomes the active location, each player must discard a
             Cards.Add(new Card()
             {
                 Title = "Restless Hunters",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "2B86BFA7-483E-4643-BD16-D63FC990DEE9",
                 CardType = CardType.Treachery,
                 Keywords = new List<string> { "Surge." },
@@ -172,7 +172,7 @@ Forced: After Dark Pools becomes the active location, each player must discard a
             Cards.Add(new Card()
             {
                 Title = "The Trail Goes Cold",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "6F9650AD-DDE1-41F5-81DE-5F4E7EEDB208",
                 CardType = CardType.Treachery,
                 Text = "When Revealed: Attach to the active location and remove all progress from that location. (Counts as a Condition attachment with the text:\"Limit 1 per location. Attached location contributes its Threat during the quest phase as if it were in the staging area.\")\r\n\r\nIf The Trail Goes Cold does not attach to a location as a result of this effect, it gains surge.",

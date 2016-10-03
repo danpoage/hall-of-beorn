@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models.Sets
             {
                 Title = "The Hills of Emyn Muil Nightmare",
                 HasSecondImage = true,
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Id = "EB6E672D-7D48-4A52-A6C8-69ACDFE99AB3",
                 CardType = CardType.Nightmare_Setup,
                 Text =
@@ -60,7 +60,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new Card()
             {
                 Title = "Tunneling Nameless Thing",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "B7A0F4CE-99FE-4DC8-8406-6ED68C1C1A0E",
                 CardType = CardType.Enemy,
                 EngagementCost = 50,
@@ -79,7 +79,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new Card()
             {
                 Title = "Orc Interceptor",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "EF5B610D-F818-4430-8448-C91480D86BEA",
                 CardType = CardType.Enemy,
                 EngagementCost = 39,
@@ -98,7 +98,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new Card()
             {
                 Title = "Brambles and Thorns",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "123704FC-D51C-41EE-9F1C-B5E54FB021A2",
                 CardType = CardType.Location,
                 Threat = 3,
@@ -115,7 +115,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new Card()
             {
                 Title = "Sarn Gebir Rapids",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "F27C0523-F014-423D-AD41-BECF34388F34",
                 CardType = CardType.Location,
                 Threat = 5,
@@ -132,7 +132,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new Card()
             {
                 Title = "A Hurrying Darkness",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "DAD2B933-76D5-4D3B-BC1B-8C46625647FA",
                 CardType = CardType.Treachery,
                 Traits = new List<string> { "Hazard." },
@@ -146,7 +146,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new Card()
             {
                 Title = "Blast of Savage Wind",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "12FB8290-3BEC-44E4-A3D0-62B5C55FCBE1",
                 CardType = CardType.Treachery,
                 Traits = new List<string> { "Hazard." },
@@ -161,7 +161,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new Card()
             {
                 Title = "Hazardous Terrain",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "EDD8BE69-BF39-40FD-8064-AE0366EB188A",
                 CardType = CardType.Treachery,
                 Keywords = new List<string> { "Surge.", "Doomed 2." },
@@ -175,7 +175,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new Card()
             {
                 Title = "Retraced Steps",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "04528490-54F8-4414-9969-80F0DA6A907A",
                 CardType = CardType.Treachery,
                 Keywords = new List<string> { "Surge." },

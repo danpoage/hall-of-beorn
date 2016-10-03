@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models.Sets
             {
                 Title = "A Journey to Rhosgobel Nightmare",
                 HasSecondImage = true,
-                ImageType = Models.ImageType.Png,
+                ImageType = Models.ImageType.Jpg,
                 Id = "146793CB-7609-49D7-B8F5-FC25826CC85E",
                 CardType = CardType.Nightmare_Setup,
                 Text =
@@ -59,7 +59,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new Card()
             {
                 Title = "Goblin Eagle-hunter",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "1C9D123D-FEB3-4BF8-B492-865BC6F3ED3C",
                 CardType = CardType.Enemy,
                 EngagementCost = 48,
@@ -81,7 +81,7 @@ Forced: At the end of the combat phase, deal 1 damage to Wilyador",
             Cards.Add(new Card()
             {
                 Title = "Treetop Bird-eater",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "4ACFC32F-5ED7-40A3-9FE4-04921CFE961C",
                 CardType = CardType.Enemy,
                 EngagementCost = 11,
@@ -102,7 +102,7 @@ Forced: At the beginning of the encounter phase, Treetop Bird-eater engages the 
             Cards.Add(new Card()
             {
                 Title = "Dark-wood Grove",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "3F5EBE31-A8E4-40A7-AB6D-CEF5FEAB41FC",
                 CardType = CardType.Location,
                 Threat = 3,
@@ -118,7 +118,7 @@ Forced: At the beginning of the encounter phase, Treetop Bird-eater engages the 
             Cards.Add(new Card()
             {
                 Title = "Labyrinthine Woods",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "03E19827-867B-4E23-935B-925164703A24",
                 CardType = CardType.Location,
                 Threat = 2,
@@ -134,7 +134,7 @@ Forced: At the beginning of the encounter phase, Treetop Bird-eater engages the 
             Cards.Add(new Card()
             {
                 Title = "Pitch-dark Thicket",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "27B280E9-4C7F-4FFC-A5B5-2505452DA506",
                 CardType = CardType.Location,
                 Threat = 4,
@@ -151,7 +151,7 @@ Forced: At the beginning of the encounter phase, Treetop Bird-eater engages the 
             Cards.Add(new Card()
             {
                 Title = "Shot from the Sky",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "C289A0CD-FC3D-4EA9-8312-F39FD59FBDBA",
                 CardType = CardType.Treachery,
                 Keywords = new List<string> { "Surge." },
@@ -165,7 +165,7 @@ Forced: At the beginning of the encounter phase, Treetop Bird-eater engages the 
             Cards.Add(new Card()
             {
                 Title = "Noxious Supplies",
-                ImageType = ImageType.Png,
+                ImageType = ImageType.Jpg,
                 Id = "B6DE76B6-B171-4124-B026-33C72C8C587F",
                 CardType = CardType.Treachery,
                 Keywords = new List<string> { "Surge." },
