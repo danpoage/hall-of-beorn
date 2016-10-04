@@ -233,6 +233,7 @@
     <Compile Include="Models\Products\AcrossTheEttenmoorsProduct.cs" />
     <Compile Include="Models\Products\AmongTheOutlawsProduct.cs" />
     <Compile Include="Models\Products\AStormOnCobasHavenProduct.cs" />
+    <Compile Include="Models\Products\BeneathTheSandsProduct.cs" />
     <Compile Include="Models\Products\CelebrimborsSecretNightmareProoduct.cs" />
     <Compile Include="Models\Products\EscapeFromMountGramProduct.cs" />
     <Compile Include="Models\Products\FlightOfTheStormcallerProduct.cs" />
@@ -462,6 +463,7 @@
     <Compile Include="Models\Sets\AJourneyToRhosgobel.cs" />
     <Compile Include="Models\Sets\AssaultOnOsgiliathNightmare.cs" />
     <Compile Include="Models\Sets\AStormOnCobasHaven.cs" />
+    <Compile Include="Models\Sets\BeneathTheSands.cs" />
     <Compile Include="Models\Sets\CelebrimborsSecret.cs" />
     <Compile Include="Models\Sets\CelebrimborsSecretNightmare.cs" />
     <Compile Include="Models\Sets\ConflictAtTheCarrock.cs" />

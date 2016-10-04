@@ -13,6 +13,7 @@ namespace HallOfBeorn.Models.ProductGroups
             MainProduct = Product.TheSandsOfHarad;
             AddProduct(Product.TheMumakil);
             AddProduct(Product.RaceAcrossHarad);
+            AddProduct(Product.BeneathTheSands);
         }
     }
 }
