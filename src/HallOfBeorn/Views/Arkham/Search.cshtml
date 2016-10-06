@@ -1,0 +1,12 @@
+﻿@using HallOfBeorn.Models.Arkham
+@model ArkhamSearchViewModel
+
+@{
+    ViewBag.Title = "Arkham Horror: The Card Game - Search";
+}
+
+@using (Html.BeginForm("Search", "Arkham", FormMethod.Post))
+{
+                <span class="search-label-right">Sort</span>
+                @Html.DropDownListFor(x => x.Sort, ArkhamSearchViewModel.Sorts, new { @class = "search-select-medium" })
+}
