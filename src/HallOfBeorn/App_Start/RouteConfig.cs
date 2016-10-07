@@ -34,6 +34,12 @@ namespace HallOfBeorn
             );
 
             routes.MapRoute(
+                "ArkhamDefaultRoute",
+                "Arkham/{action}/{id}",
+                new { controller = "Arkham", action = "Search", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
                 "CardImageRoute",
                 "Images/Cards/{setName}/{imageName}",
                 new { controller = "Image", action = "GetCardImage", setName = UrlParameter.Optional, imageName = UrlParameter.Optional }
