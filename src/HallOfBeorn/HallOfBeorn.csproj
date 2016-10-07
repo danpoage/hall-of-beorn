@@ -200,8 +200,14 @@
     <Compile Include="HtmlHelperExtensions.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\AdvancedSearchViewModel.cs" />
+    <Compile Include="Models\Arkham\ArkhamCard.cs" />
+    <Compile Include="Models\Arkham\ArkhamCardSet.cs" />
+    <Compile Include="Models\Arkham\ArkhamClass.cs" />
     <Compile Include="Models\Arkham\ArkhamSearchViewModel.cs" />
     <Compile Include="Models\Arkham\ArkhamSort.cs" />
+    <Compile Include="Models\Arkham\Investigator.cs" />
+    <Compile Include="Models\Arkham\Sets\CoreSet.cs" />
+    <Compile Include="Models\Arkham\Skill.cs" />
     <Compile Include="Models\Artist.cs" />
     <Compile Include="Models\BrowseProductViewModel.cs" />
     <Compile Include="Models\BrowseViewModel.cs" />
@@ -776,6 +782,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\Arkham\ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
