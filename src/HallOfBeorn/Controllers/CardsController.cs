@@ -144,6 +144,18 @@ namespace HallOfBeorn.Controllers
 
         public ActionResult Browse(string id)
         {
+            if (HttpContext.Request.Url.AbsolutePath.Contains("/Cards"))
+            {
+                if (string.IsNullOrEmpty(id))
+                {
+                    return Redirect(Url.Action("Browse", "Cards"));
+                }
+                else
+                {
+                    return Redirect(Url.Action("Browse", "Cards", new { action = id }));
+                }
+            }
+
             var model = new BrowseViewModel();
 
             Func<string, byte> getPopularity = (slug) =>
@@ -177,6 +189,18 @@ namespace HallOfBeorn.Controllers
 
         public ActionResult Scenarios(string id)
         {
+            if (HttpContext.Request.Url.AbsolutePath.Contains("/Cards"))
+            {
+                if (string.IsNullOrEmpty(id))
+                {
+                    return Redirect(Url.Action("Scenarios", "Cards"));
+                }
+                else
+                {
+                    return Redirect(Url.Action("Scenarios", "Cards", new { action = id }));
+                }
+            }
+
             ScenarioListViewModel model;
             var lookupCard = new Func<string, Card>((slug) => { return cardRepository.FindBySlug(slug); });
 
@@ -568,6 +592,11 @@ namespace HallOfBeorn.Controllers
 
         public ActionResult Search(SearchViewModel model)
         {
+            if (HttpContext.Request.Url.AbsolutePath.Contains("/Cards"))
+            {
+                return Redirect(Url.Action("Search", model));
+            }
+
             InitializeSearch(model);
 
             foreach (var score in searchService.Search(model))
@@ -997,6 +1026,11 @@ namespace HallOfBeorn.Controllers
 
         public ActionResult Details(string id)
         {
+            if (HttpContext.Request.Url.AbsolutePath.Contains("/Cards"))
+            {
+                return Redirect(Url.Action("Details", new { action = id }));
+            }
+
             CardViewModel model= null;
 
             Card card = null;

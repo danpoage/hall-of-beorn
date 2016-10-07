@@ -28,6 +28,12 @@ namespace HallOfBeorn
             routes.RouteExistingFiles = true;
 
             routes.MapRoute(
+                "LotRDefaultRoute",
+                "LotR/{action}/{id}",
+                new { controller = "Cards", action = "Search", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
                 "CardImageRoute",
                 "Images/Cards/{setName}/{imageName}",
                 new { controller = "Image", action = "GetCardImage", setName = UrlParameter.Optional, imageName = UrlParameter.Optional }
