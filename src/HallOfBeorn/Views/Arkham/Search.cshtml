@@ -10,9 +10,15 @@
     <input type="submit" value="Search" class="search-button" />
     <a id="resetButton" href="#" class="clear-button">Clear</a>
 
+    <div>
     <span class="search-label-right">Sort</span>
     @Html.DropDownListFor(x => x.Sort, ArkhamSearchViewModel.Sorts, new { @class = "search-select-medium" })
 
+    <span class="search-label-right">CardType</span>
+    @Html.DropDownListFor(x => x.CardType, ArkhamSearchViewModel.CardTypes, new { @class = "search-select-medium" })
+
+    </div>
+    
     <span class="results-count-label">@Model.GetResultsCount()</span>
     
     foreach (var card in @Model.Cards())
@@ -24,7 +30,10 @@
             <h3>@card.Name</h3>
             <div><b>@card.CardType</b></div>
             @if (!string.IsNullOrEmpty(@card.ClassName)) {
-                <div><img src="@card.ClassIcon" width="50px" height="50px"/> @card.ClassName</div>
+                <div><img src="@card.ClassIcon" width="50" height="50"/> @card.ClassName</div>
+            }
+            @if (!string.IsNullOrEmpty(@card.Cost)) {
+                <div>Cost: @card.Cost</div>
             }
         </div>
     }

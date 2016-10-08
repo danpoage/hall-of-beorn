@@ -13,10 +13,16 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         private readonly List<ArkhamCardViewModel> cards = new List<ArkhamCardViewModel>();
 
         public ArkhamSort? Sort { get; set; }
+        public ArkhamCardType? CardType { get; set; }
 
         public static IEnumerable<SelectListItem> Sorts
         {
             get { return typeof(ArkhamSort).GetSelectListItems(", "); }
+        }
+
+        public static IEnumerable<SelectListItem> CardTypes
+        {
+            get { return typeof(ArkhamCardType).GetSelectListItems(", "); }
         }
 
         public List<ArkhamCardViewModel> Cards()

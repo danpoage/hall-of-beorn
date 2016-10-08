@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HallOfBeorn.Models.Arkham
+namespace HallOfBeorn.Models
 {
-    public enum ArkhamCardLevel
+    public enum ArkhamCardCost: sbyte
     {
         NA = -1,
         Zero = 0,
@@ -13,6 +13,7 @@ namespace HallOfBeorn.Models.Arkham
         Two = 2,
         Three = 3,
         Four = 4,
-        Five = 5
+        Five = 5,
+        X = 122
     }
 }

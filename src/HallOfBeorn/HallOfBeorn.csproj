@@ -200,6 +200,9 @@
     <Compile Include="HtmlHelperExtensions.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\AdvancedSearchViewModel.cs" />
+    <Compile Include="Models\ArkhamCardCost.cs" />
+    <Compile Include="Models\ArkhamDeckType.cs" />
+    <Compile Include="Models\ArkhamItemSlot.cs" />
     <Compile Include="Models\Arkham\ArkhamCard.cs" />
     <Compile Include="Models\Arkham\ArkhamCardLevel.cs" />
     <Compile Include="Models\Arkham\ArkhamCardType.cs" />
@@ -207,7 +210,6 @@
     <Compile Include="Models\Arkham\ArkhamClass.cs" />
     <Compile Include="Models\Arkham\ArkhamSearchResult.cs" />
     <Compile Include="Models\Arkham\ArkhamSort.cs" />
-    <Compile Include="Models\Arkham\Investigator.cs" />
     <Compile Include="Models\Arkham\Products\CoreSet.cs" />
     <Compile Include="Models\Arkham\Skill.cs" />
     <Compile Include="Models\Arkham\ViewModels\ArkhamCardViewModel.cs" />

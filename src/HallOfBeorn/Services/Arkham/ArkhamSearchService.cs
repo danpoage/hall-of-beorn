@@ -20,6 +20,11 @@ namespace HallOfBeorn.Services.Arkham
             {
                 foreach (var card in product.Cards())
                 {
+                    if (model.CardType.HasValue && card.CardType != model.CardType.Value)
+                    {
+                        continue;
+                    }
+
                     results.Add(new ArkhamSearchResult(card));
                 }
             }

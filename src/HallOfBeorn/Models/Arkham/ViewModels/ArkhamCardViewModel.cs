@@ -26,7 +26,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             {
                 var slug = Name.ToUrlSafeString();
                 var product = card.Product.Name.ToUrlSafeString();
-                var level = card.Level.HasValue ? string.Format("-{0}", (int)card.Level.Value) : string.Empty;
+                var level = card.Level != ArkhamCardLevel.NA ? string.Format("-{0}", (sbyte)card.Level) : string.Empty;
                 
                 return string.Format("{0}/{1}/{2}{3}.jpg", arkhamCardImages, product, slug, level);
             }
@@ -42,19 +42,28 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
 
         public string ClassName
         {
-            get
-            {
-                var investigator = card as Investigator;
-                return investigator != null ? investigator.Class.ToString() : string.Empty;
-            }
+            get { return card.Class != ArkhamClass.None ? card.Class.ToString() : string.Empty; }
         }
 
         public string ClassIcon
         {
+            get { return card.Class != ArkhamClass.None ? string.Format("/Images/Arkham/{0}.png", ClassName) : string.Empty; }
+        }
+
+        public string Cost
+        {
             get
             {
-                var investigator = card as Investigator;
-                return investigator != null ? string.Format("/Images/Arkham/{0}.png", investigator.Class.ToString()) : string.Empty;
+                if (card.Cost == ArkhamCardCost.NA)
+                    return string.Empty;
+
+                switch (card.Cost)
+                {
+                    case ArkhamCardCost.X:
+                        return "X";
+                    default:
+                        return ((int)card.Cost).ToString();
+                }
             }
         }
     }
