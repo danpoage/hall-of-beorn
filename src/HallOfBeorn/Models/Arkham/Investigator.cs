@@ -30,6 +30,7 @@ namespace HallOfBeorn.Models.Arkham
             return new Investigator()
             {
                 Name = name,
+                IsUnique = true,
                 NickName = nickName,
                 Class = cl,
                 Health = health,

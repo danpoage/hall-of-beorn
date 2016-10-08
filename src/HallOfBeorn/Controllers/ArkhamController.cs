@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 
 using HallOfBeorn.Models.Arkham;
+using HallOfBeorn.Models.Arkham.ViewModels;
 
 namespace HallOfBeorn.Controllers
 {

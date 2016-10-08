@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace HallOfBeorn.Models.Arkham
+namespace HallOfBeorn.Models.Arkham.ViewModels
 {
     public class ArkhamSearchViewModel
     {

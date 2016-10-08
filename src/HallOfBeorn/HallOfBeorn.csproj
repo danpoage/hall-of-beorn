@@ -201,13 +201,14 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\AdvancedSearchViewModel.cs" />
     <Compile Include="Models\Arkham\ArkhamCard.cs" />
-    <Compile Include="Models\Arkham\ArkhamCardSet.cs" />
+    <Compile Include="Models\Arkham\ArkhamProduct.cs" />
     <Compile Include="Models\Arkham\ArkhamClass.cs" />
-    <Compile Include="Models\Arkham\ArkhamSearchViewModel.cs" />
+    <Compile Include="Models\Arkham\ArkhamSearchResult.cs" />
     <Compile Include="Models\Arkham\ArkhamSort.cs" />
     <Compile Include="Models\Arkham\Investigator.cs" />
-    <Compile Include="Models\Arkham\Sets\CoreSet.cs" />
+    <Compile Include="Models\Arkham\Products\CoreSet.cs" />
     <Compile Include="Models\Arkham\Skill.cs" />
+    <Compile Include="Models\Arkham\ViewModels\ArkhamSearchViewModel.cs" />
     <Compile Include="Models\Artist.cs" />
     <Compile Include="Models\BrowseProductViewModel.cs" />
     <Compile Include="Models\BrowseViewModel.cs" />
@@ -590,6 +591,8 @@
     <Compile Include="Models\View.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AdvancedSearchService.cs" />
+    <Compile Include="Services\Arkham\ArkhamProductRepository.cs" />
+    <Compile Include="Services\Arkham\ArkhamSearchService.cs" />
     <Compile Include="Services\CardRepository.cs" />
     <Compile Include="Services\EnUsTemplateRepository1.cs" />
     <Compile Include="Services\EnUsTemplateRepository2.cs" />
@@ -782,7 +785,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\Arkham\ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

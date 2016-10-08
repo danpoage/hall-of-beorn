@@ -5,18 +5,18 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Arkham
 {
-    public class ArkhamCardSet
+    public class ArkhamProduct
     {
-        public ArkhamCardSet(string name)
+        public ArkhamProduct(string name)
         {
             this.Name = name;
 
-            Initialize();
+            init();
         }
 
         private readonly List<ArkhamCard> cards = new List<ArkhamCard>();
 
-        protected virtual void Initialize()
+        protected virtual void init()
         {
         }
 
