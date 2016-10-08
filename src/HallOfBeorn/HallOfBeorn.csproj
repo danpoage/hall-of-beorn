@@ -201,6 +201,7 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\AdvancedSearchViewModel.cs" />
     <Compile Include="Models\Arkham\ArkhamCard.cs" />
+    <Compile Include="Models\Arkham\ArkhamCardLevel.cs" />
     <Compile Include="Models\Arkham\ArkhamProduct.cs" />
     <Compile Include="Models\Arkham\ArkhamClass.cs" />
     <Compile Include="Models\Arkham\ArkhamSearchResult.cs" />
@@ -208,6 +209,7 @@
     <Compile Include="Models\Arkham\Investigator.cs" />
     <Compile Include="Models\Arkham\Products\CoreSet.cs" />
     <Compile Include="Models\Arkham\Skill.cs" />
+    <Compile Include="Models\Arkham\ViewModels\ArkhamCardViewModel.cs" />
     <Compile Include="Models\Arkham\ViewModels\ArkhamSearchViewModel.cs" />
     <Compile Include="Models\Artist.cs" />
     <Compile Include="Models\BrowseProductViewModel.cs" />

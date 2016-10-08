@@ -7,6 +7,21 @@
 
 @using (Html.BeginForm("Search", "Arkham", FormMethod.Post))
 {
-                <span class="search-label-right">Sort</span>
-                @Html.DropDownListFor(x => x.Sort, ArkhamSearchViewModel.Sorts, new { @class = "search-select-medium" })
+    <input type="submit" value="Search" class="search-button" />
+    <a id="resetButton" href="#" class="clear-button">Clear</a>
+
+    <span class="search-label-right">Sort</span>
+    @Html.DropDownListFor(x => x.Sort, ArkhamSearchViewModel.Sorts, new { @class = "search-select-medium" })
+
+    <span class="results-count-label">@Model.GetResultsCount()</span>
+    
+    foreach (var card in @Model.Cards())
+    {
+        <hr style="color:#616161;" />
+    
+        <div style="display:inline-block"><img src="@card.ImagePath" /></div>
+        <div style="display:inline-block"><h3>@card.Name</h3>
+            <div>Class: @card.ClassName</div>
+        </div>
+    }
 }

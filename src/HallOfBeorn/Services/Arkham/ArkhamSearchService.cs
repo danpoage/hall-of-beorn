@@ -10,11 +10,34 @@ namespace HallOfBeorn.Services.Arkham
 {
     public class ArkhamSearchService
     {
+        private readonly ArkhamProductRepository productRepository = new ArkhamProductRepository();
+
         public IEnumerable<ArkhamSearchResult> Search(ArkhamSearchViewModel model)
         {
             var results = new List<ArkhamSearchResult>();
 
-            return results;
+            foreach (var product in productRepository.Products())
+            {
+                foreach (var card in product.Cards())
+                {
+                    results.Add(new ArkhamSearchResult(card));
+                }
+            }
+
+            if (!model.Sort.HasValue)
+            {
+                return results.OrderByDescending(x => x.Score).ToList();
+            }
+
+            switch (model.Sort)
+            {
+                case ArkhamSort.Alphabetical:
+                    return results.OrderBy(x => x.Card.Name).ToList();
+                case ArkhamSort.Set_Number:
+                    return results.OrderBy(x => x.Card.Product.ReleaseDate).ThenBy(x => x.Card.Number).ToList();
+                default:
+                    return results.OrderByDescending(x => x.Score).ToList();
+            }
         }
     }
 }

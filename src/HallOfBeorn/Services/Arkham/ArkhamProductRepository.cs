@@ -17,7 +17,7 @@ namespace HallOfBeorn.Services.Arkham
 
         private readonly List<ArkhamProduct> products = new List<ArkhamProduct>();
 
-        public List<ArkhamProduct> CardSets()
+        public List<ArkhamProduct> Products()
         {
             return products;
         }

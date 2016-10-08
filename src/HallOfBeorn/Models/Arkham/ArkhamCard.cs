@@ -9,10 +9,15 @@ namespace HallOfBeorn.Models.Arkham
     {
         private readonly List<string> traits = new List<string>();
 
+        public ArkhamProduct Product { get; set; }
         public string Name { get; protected set; }
         public bool IsUnique { get; protected set; }
+
+        public ArkhamCardLevel? Level { get; protected set; }
+        
         public string Text { get; protected set; }
         public string Flavor { get; protected set; }
+
         public ushort Number { get; protected set; }
         public byte Quanity { get; protected set; }
         public string Artist { get; protected set; }
