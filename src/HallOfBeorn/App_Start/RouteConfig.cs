@@ -21,6 +21,9 @@ namespace HallOfBeorn
             routes.IgnoreRoute("Content/themes/base/minified/images/{resource}.png");
             routes.IgnoreRoute("Content/themes/base/minified/{resource}.css");
             routes.IgnoreRoute("Scripts/{resource}.js");
+            routes.IgnoreRoute("Images/Arkham/{resource}.jpg");
+            routes.IgnoreRoute("Images/Arkham/{resource}.png");
+            routes.IgnoreRoute("Images/Arkham/{resource}.gif");
             routes.IgnoreRoute("Images/{resource}.jpg");
             routes.IgnoreRoute("Images/{resource}.png");
             routes.IgnoreRoute("Images/{resource}.gif");

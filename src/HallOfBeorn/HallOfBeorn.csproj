@@ -202,6 +202,7 @@
     <Compile Include="Models\AdvancedSearchViewModel.cs" />
     <Compile Include="Models\Arkham\ArkhamCard.cs" />
     <Compile Include="Models\Arkham\ArkhamCardLevel.cs" />
+    <Compile Include="Models\Arkham\ArkhamCardType.cs" />
     <Compile Include="Models\Arkham\ArkhamProduct.cs" />
     <Compile Include="Models\Arkham\ArkhamClass.cs" />
     <Compile Include="Models\Arkham\ArkhamSearchResult.cs" />
@@ -674,6 +675,11 @@
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Images\AH.png" />
     <Content Include="Images\AH_small.png" />
+    <Content Include="Images\Arkham\Guardian.png" />
+    <Content Include="Images\Arkham\Mystic.png" />
+    <Content Include="Images\Arkham\Rogue.png" />
+    <Content Include="Images\Arkham\Seeker.png" />
+    <Content Include="Images\Arkham\Survivor.png" />
     <Content Include="Images\attack.gif" />
     <Content Include="Images\attack_med.png" />
     <Content Include="Images\Baggins.png" />

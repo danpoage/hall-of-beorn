@@ -20,8 +20,12 @@
         <hr style="color:#616161;" />
     
         <div style="display:inline-block"><img src="@card.ImagePath" /></div>
-        <div style="display:inline-block"><h3>@card.Name</h3>
-            <div>Class: @card.ClassName</div>
+        <div style="display:inline-block">
+            <h3>@card.Name</h3>
+            <div><b>@card.CardType</b></div>
+            @if (!string.IsNullOrEmpty(@card.ClassName)) {
+                <div><img src="@card.ClassIcon" width="50px" height="50px"/> @card.ClassName</div>
+            }
         </div>
     }
 }

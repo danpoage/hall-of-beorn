@@ -29,6 +29,7 @@ namespace HallOfBeorn.Models.Arkham
         {
             return new Investigator()
             {
+                CardType = ArkhamCardType.Investigator,
                 Name = name,
                 IsUnique = true,
                 NickName = nickName,

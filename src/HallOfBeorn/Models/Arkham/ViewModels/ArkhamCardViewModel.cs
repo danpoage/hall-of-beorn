@@ -32,12 +32,29 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             }
         }
 
+        public string CardType
+        {
+            get
+            {
+                return card.CardType.ToString();
+            }
+        }
+
         public string ClassName
         {
             get
             {
                 var investigator = card as Investigator;
                 return investigator != null ? investigator.Class.ToString() : string.Empty;
+            }
+        }
+
+        public string ClassIcon
+        {
+            get
+            {
+                var investigator = card as Investigator;
+                return investigator != null ? string.Format("/Images/Arkham/{0}.png", investigator.Class.ToString()) : string.Empty;
             }
         }
     }
