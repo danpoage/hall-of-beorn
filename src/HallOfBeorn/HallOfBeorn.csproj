@@ -209,8 +209,10 @@
     <Compile Include="Models\Arkham\ArkhamProduct.cs" />
     <Compile Include="Models\Arkham\ArkhamClass.cs" />
     <Compile Include="Models\Arkham\ArkhamSearchResult.cs" />
-    <Compile Include="Models\Arkham\ArkhamSort.cs" />
+    <Compile Include="Models\Arkham\ArkhamSearchView.cs" />
+    <Compile Include="Models\Arkham\ArkhamSearchSort.cs" />
     <Compile Include="Models\Arkham\Products\CoreSet.cs" />
+    <Compile Include="Models\Arkham\Products\TheDunwichLegacy.cs" />
     <Compile Include="Models\Arkham\Skill.cs" />
     <Compile Include="Models\Arkham\ViewModels\ArkhamCardViewModel.cs" />
     <Compile Include="Models\Arkham\ViewModels\ArkhamSearchViewModel.cs" />

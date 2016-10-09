@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Arkham
 {
-    public enum ArkhamSort
+    public enum ArkhamSearchSort
     {
         None = 0,
         Alphabetical = 1,

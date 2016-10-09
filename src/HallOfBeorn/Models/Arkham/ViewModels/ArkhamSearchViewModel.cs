@@ -12,17 +12,38 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
     {
         private readonly List<ArkhamCardViewModel> cards = new List<ArkhamCardViewModel>();
 
-        public ArkhamSort? Sort { get; set; }
+        public string Query { get; set; }
+        public ArkhamSearchSort? Sort { get; set; }
+        public ArkhamSearchView? View { get; set; }
+
+        public string Product { get; set; }
+
         public ArkhamCardType? CardType { get; set; }
 
         public static IEnumerable<SelectListItem> Sorts
         {
-            get { return typeof(ArkhamSort).GetSelectListItems(", "); }
+            get { return typeof(ArkhamSearchSort).GetSelectListItems(", "); }
+        }
+
+        public static IEnumerable<SelectListItem> Views
+        {
+            get { return typeof(ArkhamSearchView).GetSelectListItems(", "); }
         }
 
         public static IEnumerable<SelectListItem> CardTypes
         {
             get { return typeof(ArkhamCardType).GetSelectListItems(", "); }
+        }
+
+        private static readonly List<SelectListItem> products = new List<SelectListItem>();
+        public static IEnumerable<SelectListItem> Products
+        {
+            get { return products; }
+        }
+        public static void LoadProducts(IEnumerable<SelectListItem> prods)
+        {
+            products.Clear();
+            products.AddRange(prods);
         }
 
         public List<ArkhamCardViewModel> Cards()

@@ -10,7 +10,12 @@ namespace HallOfBeorn.Services.Arkham
 {
     public class ArkhamSearchService
     {
-        private readonly ArkhamProductRepository productRepository = new ArkhamProductRepository();
+        public ArkhamSearchService(ArkhamProductRepository productRepository)
+        {
+            this.productRepository = productRepository;
+        }
+
+        private readonly ArkhamProductRepository productRepository;
 
         public IEnumerable<ArkhamSearchResult> Search(ArkhamSearchViewModel model)
         {
@@ -20,7 +25,12 @@ namespace HallOfBeorn.Services.Arkham
             {
                 foreach (var card in product.Cards())
                 {
-                    if (model.CardType.HasValue && card.CardType != model.CardType.Value)
+                    if (model.CardType.HasValue && model.CardType != ArkhamCardType.None && card.CardType != model.CardType.Value)
+                    {
+                        continue;
+                    }
+
+                    if (!string.IsNullOrEmpty(model.Product) && model.Product != "Any" && card.Product.Name != model.Product)
                     {
                         continue;
                     }
@@ -36,9 +46,9 @@ namespace HallOfBeorn.Services.Arkham
 
             switch (model.Sort)
             {
-                case ArkhamSort.Alphabetical:
+                case ArkhamSearchSort.Alphabetical:
                     return results.OrderBy(x => x.Card.Name).ToList();
-                case ArkhamSort.Set_Number:
+                case ArkhamSearchSort.Set_Number:
                     return results.OrderBy(x => x.Card.Product.ReleaseDate).ThenBy(x => x.Card.Number).ToList();
                 default:
                     return results.OrderByDescending(x => x.Score).ToList();

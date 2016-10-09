@@ -7,16 +7,50 @@
 
 @using (Html.BeginForm("Search", "Arkham", FormMethod.Post))
 {
-    <input type="submit" value="Search" class="search-button" />
-    <a id="resetButton" href="#" class="clear-button">Clear</a>
+    <div style="margin-bottom:10px;">
+        <div style="display:inline-block;min-width:300px;margin-right:4px;">@Html.TextBoxFor(x => x.Query, new { style = "text-align:left;width:95%;margin-right:4px;" })</div>
+        <div style="display:inline-block;">
+            <input type="submit" value="Search" class="search-button" />
+            <a id="resetButton" href="#" class="clear-button">Clear</a>
+            <span style="display:inline-block;">
+            <span class="search-label-right">Sort</span>
+            @Html.DropDownListFor(x => x.Sort, ArkhamSearchViewModel.Sorts, new { @class = "search-select-medium" })
+            </span>
+            <span style="display:inline-block">
+            <span class="search-label-right">View</span>
+            @Html.DropDownListFor(x => x.View, ArkhamSearchViewModel.Views, new { @class = "search-select-medium" })
+            </span>
+        </div>
+    </div>
 
-    <div>
-    <span class="search-label-right">Sort</span>
-    @Html.DropDownListFor(x => x.Sort, ArkhamSearchViewModel.Sorts, new { @class = "search-select-medium" })
+     <div class="search-row">
+            <div class="search-items">
+                <span class="search-filter">
+                <span class="search-label-short">Product</span>
+                @Html.DropDownList("Product", ArkhamSearchViewModel.Products, new { @class = "search-select" })
+                </span>
 
-    <span class="search-label-right">CardType</span>
-    @Html.DropDownListFor(x => x.CardType, ArkhamSearchViewModel.CardTypes, new { @class = "search-select-medium" })
+                @*
+                <span class="search-filter">
+                <span class="search-label-short" title="Scenario">Scenario</span>
+                @Html.DropDownListFor(x => x.Scenario, SearchViewModel.Scenarios, new { @class = "search-select" })
+                </span>
 
+                <span class="search-filter">
+                <span class="search-label-short">Encounter</span>
+                @Html.DropDownListFor(x => x.EncounterSet, SearchViewModel.EncounterSets, new { @class = "search-select" })
+                </span>
+                *@
+            </div>
+        </div>
+    
+    <div class="search-row">
+        <div class="search-item">
+            <span class="search-filter">
+            <span class="search-label-short">Card Type</span>
+            @Html.DropDownListFor(x => x.CardType, ArkhamSearchViewModel.CardTypes, new { @class = "search-select-medium" })
+            </span>
+        </div>    
     </div>
     
     <span class="results-count-label">@Model.GetResultsCount()</span>

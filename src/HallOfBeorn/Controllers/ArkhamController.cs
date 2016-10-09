@@ -13,10 +13,24 @@ namespace HallOfBeorn.Controllers
 {
     public class ArkhamController : Controller
     {
-        private readonly ArkhamSearchService searchService = new ArkhamSearchService();
+        public ArkhamController()
+        {
+            productRepository = new ArkhamProductRepository();
+            searchService = new ArkhamSearchService(productRepository);
+        }
+
+        private readonly ArkhamProductRepository productRepository;
+        private readonly ArkhamSearchService searchService;
+
+        private void initSearch()
+        {
+            ArkhamSearchViewModel.LoadProducts(productRepository.Products().Select(x => { return x.Name; }).GetExtendedSelectListItems());
+        }
 
         public ActionResult Search(ArkhamSearchViewModel model)
         {
+            initSearch();
+
             var results = searchService.Search(model);
 
             model.LoadCards(results.Select(x => { return new ArkhamCardViewModel(x.Card); }));

@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Arkham.Products
     public class CoreSet : ArkhamProduct
     {
         public CoreSet()
-            : base("Core Set", "Core", 1, new DateTime(2016, 10, 31))
+            : base("Core Set", "Core", "ACH01", 1, new DateTime(2016, 10, 31))
         {
         }
 
