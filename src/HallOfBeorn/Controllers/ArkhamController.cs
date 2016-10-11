@@ -27,6 +27,41 @@ namespace HallOfBeorn.Controllers
             ArkhamSearchViewModel.LoadProducts(productRepository.Products().Select(x => { return x.Name; }).GetExtendedSelectListItems());
         }
 
+        public ActionResult Details(string id)
+        {
+            ArkhamCard found = null;
+
+            foreach (var product in productRepository.Products())
+            {
+                foreach (var card in product.Cards())
+                {
+                    var level = card.Level != ArkhamCardLevel.NA ? string.Format("-{0}", (sbyte)card.Level) : string.Empty;
+                    var suffix = product.Abbreviation;
+                    var slug = string.Format("{0}{1}-{2}", card.Name.ToUrlSafeString(), level, suffix);
+
+                    if (slug == id)
+                    {
+                        found = card;
+                        break;
+                    }
+                }
+
+                if (found != null)
+                {
+                    break;
+                }
+            }
+
+            if (found != null)
+            {
+                return View(new ArkhamCardViewModel(found));
+            }
+            else
+            {
+                return HttpNotFound();
+            }
+        }
+
         public ActionResult Search(ArkhamSearchViewModel model)
         {
             initSearch();

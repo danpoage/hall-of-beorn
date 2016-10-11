@@ -15,6 +15,8 @@ namespace HallOfBeorn.Models.Arkham
         }
 
         private readonly List<string> traits = new List<string>();
+        private readonly Dictionary<Skill, byte> skills = new Dictionary<Skill, byte>();
+        private readonly List<SkillBonus> skillBonuses = new List<SkillBonus>();
 
         public ArkhamProduct Product { get; set; }
         public ArkhamDeckType DeckType { get; set; }
@@ -33,8 +35,6 @@ namespace HallOfBeorn.Models.Arkham
         public byte Quanity { get; protected set; }
         public Artist Artist { get; protected set; }
 
-        private readonly Dictionary<Skill, byte> skills = new Dictionary<Skill, byte>();
-
         public string NickName { get; private set; }
         public ArkhamClass Class { get; private set; }
         public byte Health { get; private set; }
@@ -48,6 +48,16 @@ namespace HallOfBeorn.Models.Arkham
         public IEnumerable<KeyValuePair<Skill, byte>> Skills()
         {
             return skills;
+        }
+
+        protected void addSkillBonus(IEnumerable<SkillBonus> skillBonuses)
+        {
+            this.skillBonuses.AddRange(skillBonuses);
+        }
+
+        public IEnumerable<SkillBonus> SkillBonuses()
+        {
+            return skillBonuses;
         }
 
         public static ArkhamCard Investigator(string name, string nickName, ArkhamClass cl, byte health, byte sanity)
@@ -108,6 +118,7 @@ namespace HallOfBeorn.Models.Arkham
             return this;
         }
 
+        /*
         public ArkhamCard WithWillpower(byte willpower)
         {
             addSkill(Skill.Willpower, willpower);
@@ -130,11 +141,20 @@ namespace HallOfBeorn.Models.Arkham
         {
             addSkill(Skill.Agility, agility);
             return this;
+        }*/
+
+        public ArkhamCard WithSkills(byte willpower, byte intellect, byte combat, byte agility)
+        {
+            addSkill(Skill.Willpower, willpower);
+            addSkill(Skill.Intellect, intellect);
+            addSkill(Skill.Combat, combat);
+            addSkill(Skill.Agility, agility);
+            return this;
         }
 
-        public ArkhamCard WithWild(byte wild)
+        public ArkhamCard WithSkillBonuses(params SkillBonus[] skillBonuses)
         {
-            addSkill(Skill.Wild, wild);
+            addSkillBonus(skillBonuses);
             return this;
         }
 

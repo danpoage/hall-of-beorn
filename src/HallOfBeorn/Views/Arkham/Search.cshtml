@@ -59,9 +59,18 @@
     {
         <hr style="color:#616161;" />
     
-        <div style="display:inline-block"><img src="@card.ImagePath" /></div>
+        <div style="display:inline-block"><img src="@card.ImagePathFront" /></div>
+        if (!string.IsNullOrEmpty(@card.ImagePathBack))
+        {
+            <div style="display:inline-block"><img src="@card.ImagePathBack" /></div>
+        }
         <div style="display:inline-block">
-            <h3>@card.Name</h3>
+            @if (@card.IsUnique)
+            {
+                <div style="font-size:1.75em;font-family:Verdana;"><a href="@card.SearchUrl"><img src="/Images/Arkham/Unique.png" style="margin-right:8px;margin-bottom:-2px;height:22px;width:22px;"/>@card.Name</a></div>
+            } else {
+                <div style="font-size:1.75em;font-family:Verdana;"><a href="@card.SearchUrl">@card.Name</a></div>
+            }
             <div><b>@card.CardType</b></div>
             @if (!string.IsNullOrEmpty(@card.ClassName)) {
                 <div><img src="@card.ClassIcon" width="50" height="50"/> @card.ClassName</div>

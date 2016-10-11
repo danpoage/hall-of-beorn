@@ -18,17 +18,54 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
 
         private const string arkhamCardImages = "https://s3.amazonaws.com/hallofbeorn-resources/Images/Arkham/Cards";
 
+        public bool IsUnique { get { return card.IsUnique; } }
         public string Name { get { return card.Name; } }
-        
-        public string ImagePath
+
+        private string getBaseImagePath()
+        {
+            var slug = Name.ToUrlSafeString();
+            var product = card.Product.Name.ToUrlSafeString();
+            var level = card.Level != ArkhamCardLevel.NA ? string.Format("-{0}", (sbyte)card.Level) : string.Empty;
+
+            return string.Format("{0}/{1}/{2}{3}", arkhamCardImages, product, slug, level);
+        }
+
+        public string SearchUrl
         {
             get
             {
                 var slug = Name.ToUrlSafeString();
-                var product = card.Product.Name.ToUrlSafeString();
                 var level = card.Level != ArkhamCardLevel.NA ? string.Format("-{0}", (sbyte)card.Level) : string.Empty;
-                
-                return string.Format("{0}/{1}/{2}{3}.jpg", arkhamCardImages, product, slug, level);
+                var product = card.Product.Abbreviation;
+                return string.Format("/Arkham/Details/{0}{1}-{2}", slug, level, product);
+            }
+        }
+
+        public string ImagePathFront
+        {
+            get
+            {
+                switch (card.CardType)
+                {
+                    case ArkhamCardType.Investigator:
+                        return string.Format("{0}-Front.jpg", getBaseImagePath());
+                    default:
+                        return string.Format("{0}.jpg", getBaseImagePath());
+                }
+            }
+        }
+
+        public string ImagePathBack
+        {
+            get
+            {
+                switch (card.CardType)
+                {
+                    case ArkhamCardType.Investigator:
+                        return string.Format("{0}-Back.jpg", getBaseImagePath());
+                    default:
+                        return string.Empty;
+                }
             }
         }
 

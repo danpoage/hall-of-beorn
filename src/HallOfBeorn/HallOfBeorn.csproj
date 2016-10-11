@@ -214,6 +214,7 @@
     <Compile Include="Models\Arkham\Products\CoreSet.cs" />
     <Compile Include="Models\Arkham\Products\TheDunwichLegacy.cs" />
     <Compile Include="Models\Arkham\Skill.cs" />
+    <Compile Include="Models\Arkham\SkillBonus.cs" />
     <Compile Include="Models\Arkham\ViewModels\ArkhamCardViewModel.cs" />
     <Compile Include="Models\Arkham\ViewModels\ArkhamSearchViewModel.cs" />
     <Compile Include="Models\Artist.cs" />
@@ -684,6 +685,7 @@
     <Content Include="Images\Arkham\Rogue.png" />
     <Content Include="Images\Arkham\Seeker.png" />
     <Content Include="Images\Arkham\Survivor.png" />
+    <Content Include="Images\Arkham\Unique.png" />
     <Content Include="Images\attack.gif" />
     <Content Include="Images\attack_med.png" />
     <Content Include="Images\Baggins.png" />
@@ -794,6 +796,7 @@
     <Content Include="Error.html" />
     <Content Include="Views\Cards\Decks.cshtml" />
     <Content Include="Views\Arkham\Search.cshtml" />
+    <Content Include="Views\Arkham\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

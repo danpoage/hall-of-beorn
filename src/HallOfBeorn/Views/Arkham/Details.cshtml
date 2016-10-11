@@ -1,0 +1,22 @@
+﻿@using HallOfBeorn.Models.Arkham.ViewModels
+@model ArkhamCardViewModel
+
+@{
+    ViewBag.Title = @Model.Name;
+}
+
+<div class="titleBox" style="display:inline-block;max-width:310px;margin-right:10px;">
+    <div class="titleNameBox">
+        @if (@Model.IsUnique)
+        {
+            <div style="font-size:1.75em;font-family:Verdana;"><img src="/Images/Arkham/Unique.png" style="margin-right:8px;margin-bottom:-2px;height:22px;width:22px;"/>@Model.Name</div>
+        } else {
+            <div style="font-size:1.75em;font-family:Verdana;">@Model.Name</div>
+        }
+        <div style="margin-top:4px;margin-bottom:2px;">
+            @*
+            <span style="display:inline-block;max-width:154px;"><a href="@Model.SetSearchUrl" title="Search for @Model.SetName">@Model.SetName</a></span><span style="margin-left:8px;display:inline-block;">@string.Format("#{0} {1}", @Model.Number, @Model.CountLabel)</span>
+            *@
+        </div>
+    </div>
+</div>
