@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HallOfBeorn.Models
+namespace HallOfBeorn.Models.Arkham
 {
-    public enum ArkhamItemSlot : sbyte
+    public enum AssetSlot : sbyte
     {
         NA = -1,
         None = 0,

@@ -10,6 +10,7 @@ namespace HallOfBeorn.Models
         None = 0,
         Player,
         Act,
-        Agenda
+        Agenda,
+        Encounter
     }
 }

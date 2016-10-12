@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Arkham
 {
-    public enum SkillBonus: byte
+    public enum SkillIcon: byte
     {
         None = 0,
         Willpower,

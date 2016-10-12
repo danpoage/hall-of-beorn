@@ -24,17 +24,36 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         { 
             get
             {
-                return (card.Level != ArkhamCardLevel.NA && card.Level != ArkhamCardLevel.Zero) ?
+                return (card.Level != Level.NA && card.Level != Level.Zero) ?
                     string.Format("{0} ({1})", card.Name, (sbyte)card.Level)
                     : card.Name;
             }
         }
 
+        public string Subtitle
+        {
+            get
+            {
+                switch (card.CardType)
+                {
+                    case ArkhamCardType.Investigator:
+                        return card.NickName;
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+
+        public string Willpower { get { return ((sbyte)card.Willpower).ToString(); } }
+        public string Intellect { get { return ((sbyte)card.Intellect).ToString(); } }
+        public string Combat { get { return ((sbyte)card.Combat).ToString(); } }
+        public string Agility { get { return ((sbyte)card.Agility).ToString(); } }
+
         private string getBaseImagePath()
         {
             var slug = card.Name.ToUrlSafeString();
             var product = card.Product.Name.ToUrlSafeString();
-            var level = (card.Level != ArkhamCardLevel.NA && card.Level != ArkhamCardLevel.Zero) ? ((sbyte)card.Level).ToString() : string.Empty;
+            var level = (card.Level != Level.NA && card.Level != Level.Zero) ? ((sbyte)card.Level).ToString() : string.Empty;
 
             return string.Format("{0}/{1}/{2}{3}", arkhamCardImages, product, slug, level);
         }

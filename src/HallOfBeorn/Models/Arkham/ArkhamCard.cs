@@ -10,14 +10,13 @@ namespace HallOfBeorn.Models.Arkham
         private ArkhamCard()
         {
             Cost = ArkhamCardCost.NA;
-            Level = ArkhamCardLevel.NA;
-            ItemSlot = ArkhamItemSlot.NA;
+            Level = Level.NA;
+            AssetSlot = AssetSlot.NA;
         }
 
         private readonly List<string> traits = new List<string>();
         private readonly List<string> keywords = new List<string>();
-        private readonly Dictionary<Skill, byte> skills = new Dictionary<Skill, byte>();
-        private readonly List<SkillBonus> skillBonuses = new List<SkillBonus>();
+        private readonly List<SkillIcon> skillIcons = new List<SkillIcon>();
 
         public ArkhamProduct Product { get; set; }
         public ArkhamDeckType DeckType { get; set; }
@@ -25,10 +24,16 @@ namespace HallOfBeorn.Models.Arkham
         public string Name { get; protected set; }
         public bool IsUnique { get; protected set; }
 
+        public Skill Willpower { get; protected set; }
+        public Skill Intellect { get; protected set; }
+        public Skill Combat { get; protected set; }
+        public Skill Agility { get; protected set; }
         public ArkhamCardCost Cost { get; protected set; }
-        public ArkhamCardLevel Level { get; protected set; }
-        public ArkhamItemSlot ItemSlot { get; protected set; }
-        
+        public Level Level { get; protected set; }
+        public AssetSlot AssetSlot { get; protected set; }
+        public ShroudValue ShroudValue { get; protected set; }
+        public ArkhamClueValue ClueValue { get; protected set; }
+
         public string Text { get; protected set; }
         public string Flavor { get; protected set; }
 
@@ -51,20 +56,15 @@ namespace HallOfBeorn.Models.Arkham
             this.keywords.AddRange(keywords);
         }
 
-        private void addSkill(Skill skill, byte value)
+        protected void addSkillIcons(IEnumerable<SkillIcon> skillIcons)
         {
-            skills.Add(skill, value);
-        }
-
-        protected void addSkillBonus(IEnumerable<SkillBonus> skillBonuses)
-        {
-            this.skillBonuses.AddRange(skillBonuses);
+            this.skillIcons.AddRange(skillIcons);
         }
 
         public static string GetSlug(ArkhamCard card)
         {
             var name = card.Name.ToUrlSafeString();
-            var level = (card.Level != ArkhamCardLevel.NA && card.Level != ArkhamCardLevel.Zero) ? ((sbyte)card.Level).ToString() : string.Empty;
+            var level = (card.Level != Level.NA && card.Level != Level.Zero) ? ((sbyte)card.Level).ToString() : string.Empty;
             var product = card.Product.Abbreviation;
             return string.Format("{0}{1}-{2}", name, level, product);
         }
@@ -84,14 +84,9 @@ namespace HallOfBeorn.Models.Arkham
             return keywords;
         }
 
-        public IEnumerable<KeyValuePair<Skill, byte>> Skills()
+        public IEnumerable<SkillIcon> SkillIcons()
         {
-            return skills;
-        }
-
-        public IEnumerable<SkillBonus> SkillBonuses()
-        {
-            return skillBonuses;
+            return skillIcons;
         }
 
         public static ArkhamCard Investigator(string name, string nickName, ArkhamClass cl, byte health, byte sanity)
@@ -109,7 +104,7 @@ namespace HallOfBeorn.Models.Arkham
             };
         }
 
-        public static ArkhamCard Asset(string name, ArkhamClass cl, ArkhamCardCost cost, ArkhamItemSlot itemSlot)
+        public static ArkhamCard Asset(string name, ArkhamClass cl, ArkhamCardCost cost, AssetSlot assetSlot)
         {
             return new ArkhamCard()
             {
@@ -118,11 +113,11 @@ namespace HallOfBeorn.Models.Arkham
                 Name = name,
                 Class = cl,
                 Cost = cost,
-                ItemSlot = itemSlot
+                AssetSlot = assetSlot
             };
         }
 
-        public static ArkhamCard Event(string name, ArkhamClass cl, ArkhamCardCost cost, ArkhamCardLevel level)
+        public static ArkhamCard Event(string name, ArkhamClass cl, ArkhamCardCost cost, Level level)
         {
             return new ArkhamCard()
             {
@@ -159,15 +154,15 @@ namespace HallOfBeorn.Models.Arkham
             return this;
         }
 
-        public ArkhamCard WithLevel(ArkhamCardLevel level)
+        public ArkhamCard WithLevel(Level level)
         {
             this.Level = level;
             return this;
         }
 
-        public ArkhamCard WithItemSlot(ArkhamItemSlot itemSlot)
+        public ArkhamCard WithAssetSlot(AssetSlot assetSlot)
         {
-            this.ItemSlot = itemSlot;
+            this.AssetSlot = assetSlot;
             return this;
         }
 
@@ -196,18 +191,30 @@ namespace HallOfBeorn.Models.Arkham
             return this;
         }*/
 
-        public ArkhamCard WithSkills(byte willpower, byte intellect, byte combat, byte agility)
+        public ArkhamCard WithSkills(sbyte willpower, sbyte intellect, sbyte combat, sbyte agility)
         {
-            addSkill(Skill.Willpower, willpower);
-            addSkill(Skill.Intellect, intellect);
-            addSkill(Skill.Combat, combat);
-            addSkill(Skill.Agility, agility);
+            this.Willpower = (Skill)willpower;
+            this.Intellect = (Skill)intellect;
+            this.Combat = (Skill)combat;
+            this.Agility = (Skill)agility;
             return this;
         }
 
-        public ArkhamCard WithSkillBonuses(params SkillBonus[] skillBonuses)
+        public ArkhamCard WithSkillIcons(params SkillIcon[] skillIcons)
         {
-            addSkillBonus(skillBonuses);
+            addSkillIcons(skillIcons);
+            return this;
+        }
+
+        public ArkhamCard WithShroudValue(ShroudValue shroudValue)
+        {
+            this.ShroudValue = shroudValue;
+            return this;
+        }
+
+        public ArkhamCard WithClueValue(ArkhamClueValue clueValue)
+        {
+            this.ClueValue = clueValue;
             return this;
         }
 

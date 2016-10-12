@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HallOfBeorn.Models.Arkham
+namespace HallOfBeorn.Models.Arkham.ViewModels
 {
     public enum ArkhamSearchView
     {

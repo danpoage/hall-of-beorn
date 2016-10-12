@@ -5,10 +5,11 @@
     ViewBag.Title = @Model.DisplayName;
 }
 
-<div class="titleBox" style="display:inline-block;max-width:310px;margin-right:10px;">
+<a href="/Arkham">Back</a>
+<div class="titleBox" style="display:block;max-width:310px;margin-right:10px;">
     <div class="titleNameBox">
         <div style="display:inline-block"><img src="@Model.ImagePathFront" /></div>
-        if (!string.IsNullOrEmpty(@Model.ImagePathBack))
+        @if (!string.IsNullOrEmpty(@Model.ImagePathBack))
         {
             <div style="display:inline-block"><img src="@Model.ImagePathBack" /></div>
         }

@@ -10,7 +10,15 @@ namespace HallOfBeorn.Models.Arkham
         None = 0,
         Investigator,
         Asset,
-        Spell,
-        Event
+        Skill,
+        Event,
+        Weakness,
+        Agenda,
+        Act,
+        Location,
+        Enemy,
+        Treachery,
+        Player_Reference,
+        Scenario_Reference
     }
 }

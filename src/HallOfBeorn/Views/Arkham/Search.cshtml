@@ -65,19 +65,37 @@
             <div style="display:inline-block"><img src="@card.ImagePathBack" /></div>
         }
         <div style="display:inline-block">
+            <div style="font-size:1.75em;font-family:Verdana;">
+            @if (!string.IsNullOrEmpty(@card.ClassName))
+            {
+                <img src="@card.ClassIcon" width="32" height="32" title="@card.ClassName"/>@: &nbsp;
+            }
             @if (@card.IsUnique)
             {
-                <div style="font-size:1.75em;font-family:Verdana;"><a href="@card.SearchUrl"><img src="/Images/Arkham/Unique.png" style="margin-right:8px;margin-bottom:-2px;height:22px;width:22px;"/>@card.DisplayName</a></div>
+                <a href="@card.SearchUrl"><img src="/Images/Arkham/Unique.png" style="margin-right:8px;margin-bottom:-2px;height:22px;width:22px;"/>@card.DisplayName</a>
             } else {
-                <div style="font-size:1.75em;font-family:Verdana;"><a href="@card.SearchUrl">@card.DisplayName</a></div>
+                <a href="@card.SearchUrl">@card.DisplayName</a>
+            }
+            </div>
+            @if (!string.IsNullOrEmpty(@card.Subtitle)) {
+                <h3>@card.Subtitle</h3>
             }
             <div><b>@card.CardType</b></div>
-            @if (!string.IsNullOrEmpty(@card.ClassName)) {
-                <div><img src="@card.ClassIcon" width="50" height="50"/> @card.ClassName</div>
+            @switch (@card.CardType)
+            {
+                case "Investigator":
+                    <div>
+                        <span>@card.Willpower <img src="/Images/Arkham/Willpower.png" /></span>
+                        <span>@card.Intellect <img src="/Images/Arkham/Intellect.png" /></span>
+                        <span>@card.Combat <img src="/Images/Arkham/Combat.png" /></span>
+                        <span>@card.Agility <img src="/Images/Arkham/Agility.png" /></span>
+                    </div>
+                    break;
+                case "Asset":
+                    <div>( @card.Cost )</div>
+                    break;
             }
-            @if (!string.IsNullOrEmpty(@card.Cost)) {
-                <div>Cost: @card.Cost</div>
-            }
+            
         </div>
     }
 }
