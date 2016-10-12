@@ -2,16 +2,21 @@
 @model ArkhamCardViewModel
 
 @{
-    ViewBag.Title = @Model.Name;
+    ViewBag.Title = @Model.DisplayName;
 }
 
 <div class="titleBox" style="display:inline-block;max-width:310px;margin-right:10px;">
     <div class="titleNameBox">
+        <div style="display:inline-block"><img src="@Model.ImagePathFront" /></div>
+        if (!string.IsNullOrEmpty(@Model.ImagePathBack))
+        {
+            <div style="display:inline-block"><img src="@Model.ImagePathBack" /></div>
+        }
         @if (@Model.IsUnique)
         {
-            <div style="font-size:1.75em;font-family:Verdana;"><img src="/Images/Arkham/Unique.png" style="margin-right:8px;margin-bottom:-2px;height:22px;width:22px;"/>@Model.Name</div>
+            <div style="font-size:1.75em;font-family:Verdana;"><img src="/Images/Arkham/Unique.png" style="margin-right:8px;margin-bottom:-2px;height:22px;width:22px;"/>@Model.DisplayName</div>
         } else {
-            <div style="font-size:1.75em;font-family:Verdana;">@Model.Name</div>
+            <div style="font-size:1.75em;font-family:Verdana;">@Model.DisplayName</div>
         }
         <div style="margin-top:4px;margin-bottom:2px;">
             @*

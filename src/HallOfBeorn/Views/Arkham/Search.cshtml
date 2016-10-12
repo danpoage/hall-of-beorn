@@ -67,9 +67,9 @@
         <div style="display:inline-block">
             @if (@card.IsUnique)
             {
-                <div style="font-size:1.75em;font-family:Verdana;"><a href="@card.SearchUrl"><img src="/Images/Arkham/Unique.png" style="margin-right:8px;margin-bottom:-2px;height:22px;width:22px;"/>@card.Name</a></div>
+                <div style="font-size:1.75em;font-family:Verdana;"><a href="@card.SearchUrl"><img src="/Images/Arkham/Unique.png" style="margin-right:8px;margin-bottom:-2px;height:22px;width:22px;"/>@card.DisplayName</a></div>
             } else {
-                <div style="font-size:1.75em;font-family:Verdana;"><a href="@card.SearchUrl">@card.Name</a></div>
+                <div style="font-size:1.75em;font-family:Verdana;"><a href="@card.SearchUrl">@card.DisplayName</a></div>
             }
             <div><b>@card.CardType</b></div>
             @if (!string.IsNullOrEmpty(@card.ClassName)) {

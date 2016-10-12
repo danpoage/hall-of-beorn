@@ -35,6 +35,17 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithText("Roland Banks deck only.\r\nUses (4 ammo).\r\nAction - Spend 1 ammo: Fight. You get +1 Combat for this attack (if there are 1 or more clues on this location, you get +3 combat instead). This attack deals +1 damage.")
                 .WithInfo(6, 1, Artist.Tiziano_Baracchi));
 
+            addCard(ArkhamCard.Event("Lucky!", ArkhamClass.Survivor, ArkhamCardCost.One, ArkhamCardLevel.Zero)
+                .WithTraits("Fortune.")
+                .WithKeywords("Fast.")
+                .WithText("Fast. Play when you would fail a skill test. Get +2 to your skill value for that test.")
+                .WithInfo(80, 1, Artist.David_A_Nash));
+            addCard(ArkhamCard.Event("Lucky!", ArkhamClass.Survivor, ArkhamCardCost.One, ArkhamCardLevel.Two)
+                .WithTraits("Fortune.")
+                .WithKeywords("Fast.")
+                .WithText("Fast. Play when you would fail a skill test. Get +2 to your skill value for that test. Draw 1 card.")
+                .WithInfo(84, 1, Artist.David_A_Nash));
+
         }
     }
 }

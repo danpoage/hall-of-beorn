@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.Arkham
         }
 
         private readonly List<string> traits = new List<string>();
+        private readonly List<string> keywords = new List<string>();
         private readonly Dictionary<Skill, byte> skills = new Dictionary<Skill, byte>();
         private readonly List<SkillBonus> skillBonuses = new List<SkillBonus>();
 
@@ -40,19 +41,52 @@ namespace HallOfBeorn.Models.Arkham
         public byte Health { get; private set; }
         public byte Sanity { get; private set; }
 
-        protected void addSkill(Skill skill, byte value)
+        protected void addTraits(IEnumerable<string> traits)
         {
-            skills.Add(skill, value);
+            this.traits.AddRange(traits);
         }
 
-        public IEnumerable<KeyValuePair<Skill, byte>> Skills()
+        protected void addKeywords(IEnumerable<string> keywords)
         {
-            return skills;
+            this.keywords.AddRange(keywords);
+        }
+
+        private void addSkill(Skill skill, byte value)
+        {
+            skills.Add(skill, value);
         }
 
         protected void addSkillBonus(IEnumerable<SkillBonus> skillBonuses)
         {
             this.skillBonuses.AddRange(skillBonuses);
+        }
+
+        public static string GetSlug(ArkhamCard card)
+        {
+            var name = card.Name.ToUrlSafeString();
+            var level = (card.Level != ArkhamCardLevel.NA && card.Level != ArkhamCardLevel.Zero) ? ((sbyte)card.Level).ToString() : string.Empty;
+            var product = card.Product.Abbreviation;
+            return string.Format("{0}{1}-{2}", name, level, product);
+        }
+
+        public string Slug
+        {
+            get { return GetSlug(this); }
+        }
+
+        public IEnumerable<string> Traits()
+        {
+            return traits;
+        }
+
+        public IEnumerable<string> Keywords()
+        {
+            return keywords;
+        }
+
+        public IEnumerable<KeyValuePair<Skill, byte>> Skills()
+        {
+            return skills;
         }
 
         public IEnumerable<SkillBonus> SkillBonuses()
@@ -88,6 +122,19 @@ namespace HallOfBeorn.Models.Arkham
             };
         }
 
+        public static ArkhamCard Event(string name, ArkhamClass cl, ArkhamCardCost cost, ArkhamCardLevel level)
+        {
+            return new ArkhamCard()
+            {
+                CardType = ArkhamCardType.Event,
+                DeckType = ArkhamDeckType.Player,
+                Name = name,
+                Class = cl,
+                Cost = cost,
+                Level = level
+            };
+        }
+
         public ArkhamCard WithUnique()
         {
             this.IsUnique = true;
@@ -97,6 +144,12 @@ namespace HallOfBeorn.Models.Arkham
         public ArkhamCard WithTraits(params string[] traits)
         {
             addTraits(traits);
+            return this;
+        }
+
+        public ArkhamCard WithKeywords(params string[] keywords)
+        {
+            addKeywords(keywords);
             return this;
         }
 
@@ -176,16 +229,6 @@ namespace HallOfBeorn.Models.Arkham
             this.Quanity = quantity;
             this.Artist = artist;
             return this;
-        }
-
-        protected void addTraits(IEnumerable<string> traits)
-        {
-            this.traits.AddRange(traits);
-        }
-
-        public IEnumerable<string> Traits()
-        {
-            return traits;
         }
     }
 }

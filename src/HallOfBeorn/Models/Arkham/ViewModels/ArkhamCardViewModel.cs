@@ -19,26 +19,29 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         private const string arkhamCardImages = "https://s3.amazonaws.com/hallofbeorn-resources/Images/Arkham/Cards";
 
         public bool IsUnique { get { return card.IsUnique; } }
-        public string Name { get { return card.Name; } }
+
+        public string DisplayName
+        { 
+            get
+            {
+                return (card.Level != ArkhamCardLevel.NA && card.Level != ArkhamCardLevel.Zero) ?
+                    string.Format("{0} ({1})", card.Name, (sbyte)card.Level)
+                    : card.Name;
+            }
+        }
 
         private string getBaseImagePath()
         {
-            var slug = Name.ToUrlSafeString();
+            var slug = card.Name.ToUrlSafeString();
             var product = card.Product.Name.ToUrlSafeString();
-            var level = card.Level != ArkhamCardLevel.NA ? string.Format("-{0}", (sbyte)card.Level) : string.Empty;
+            var level = (card.Level != ArkhamCardLevel.NA && card.Level != ArkhamCardLevel.Zero) ? ((sbyte)card.Level).ToString() : string.Empty;
 
             return string.Format("{0}/{1}/{2}{3}", arkhamCardImages, product, slug, level);
         }
 
         public string SearchUrl
         {
-            get
-            {
-                var slug = Name.ToUrlSafeString();
-                var level = card.Level != ArkhamCardLevel.NA ? string.Format("-{0}", (sbyte)card.Level) : string.Empty;
-                var product = card.Product.Abbreviation;
-                return string.Format("/Arkham/Details/{0}{1}-{2}", slug, level, product);
-            }
+            get { return string.Format("/Arkham/Details/{0}", card.Slug); }
         }
 
         public string ImagePathFront

@@ -35,11 +35,7 @@ namespace HallOfBeorn.Controllers
             {
                 foreach (var card in product.Cards())
                 {
-                    var level = card.Level != ArkhamCardLevel.NA ? string.Format("-{0}", (sbyte)card.Level) : string.Empty;
-                    var suffix = product.Abbreviation;
-                    var slug = string.Format("{0}{1}-{2}", card.Name.ToUrlSafeString(), level, suffix);
-
-                    if (slug == id)
+                    if (card.Slug == id)
                     {
                         found = card;
                         break;
