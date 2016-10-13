@@ -206,13 +206,13 @@
     <Compile Include="Models\Arkham\ArkhamCard.cs" />
     <Compile Include="Models\Arkham\Level.cs" />
     <Compile Include="Models\Arkham\ArkhamCardType.cs" />
-    <Compile Include="Models\Arkham\ArkhamClueValue.cs" />
+    <Compile Include="Models\Arkham\ClueValue.cs" />
     <Compile Include="Models\Arkham\ArkhamProduct.cs" />
     <Compile Include="Models\Arkham\ArkhamClass.cs" />
     <Compile Include="Models\Arkham\ArkhamSearchResult.cs" />
     <Compile Include="Models\Arkham\ViewModels\ArkhamSearchView.cs" />
     <Compile Include="Models\Arkham\ViewModels\ArkhamSearchSort.cs" />
-    <Compile Include="Models\Arkham\ShroudValue.cs" />
+    <Compile Include="Models\Arkham\Shroud.cs" />
     <Compile Include="Models\Arkham\Products\CoreSet.cs" />
     <Compile Include="Models\Arkham\Products\TheDunwichLegacy.cs" />
     <Compile Include="Models\Arkham\Skill.cs" />

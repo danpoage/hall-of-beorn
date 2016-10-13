@@ -31,8 +31,8 @@ namespace HallOfBeorn.Models.Arkham
         public ArkhamCardCost Cost { get; protected set; }
         public Level Level { get; protected set; }
         public AssetSlot AssetSlot { get; protected set; }
-        public ShroudValue ShroudValue { get; protected set; }
-        public ArkhamClueValue ClueValue { get; protected set; }
+        public Shroud? Shroud { get; protected set; }
+        public ClueValue? ClueValue { get; protected set; }
 
         public string Text { get; protected set; }
         public string Flavor { get; protected set; }
@@ -206,15 +206,15 @@ namespace HallOfBeorn.Models.Arkham
             return this;
         }
 
-        public ArkhamCard WithShroudValue(ShroudValue shroudValue)
+        public ArkhamCard WithShroud(byte value, bool perInvestigator, bool isVariable)
         {
-            this.ShroudValue = shroudValue;
+            this.Shroud = new Shroud { Value = value, PerInvestigator = perInvestigator, IsVariable = isVariable };
             return this;
         }
 
-        public ArkhamCard WithClueValue(ArkhamClueValue clueValue)
+        public ArkhamCard WithClueValue(byte value, bool perInvestigator, bool isVariable)
         {
-            this.ClueValue = clueValue;
+            this.ClueValue = new ClueValue { Value = value, PerInvestigator = perInvestigator, IsVariable = isVariable };
             return this;
         }
 
