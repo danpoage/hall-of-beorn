@@ -204,12 +204,14 @@
     <Compile Include="Models\Arkham\ArkhamDeckType.cs" />
     <Compile Include="Models\Arkham\AssetSlot.cs" />
     <Compile Include="Models\Arkham\ArkhamCard.cs" />
+    <Compile Include="Models\Arkham\ArkhamEncounterSet.cs" />
     <Compile Include="Models\Arkham\Level.cs" />
     <Compile Include="Models\Arkham\ArkhamCardType.cs" />
     <Compile Include="Models\Arkham\ClueValue.cs" />
     <Compile Include="Models\Arkham\ArkhamProduct.cs" />
     <Compile Include="Models\Arkham\ArkhamClass.cs" />
     <Compile Include="Models\Arkham\ArkhamSearchResult.cs" />
+    <Compile Include="Models\Arkham\VictoryPoints.cs" />
     <Compile Include="Models\Arkham\ViewModels\ArkhamSearchView.cs" />
     <Compile Include="Models\Arkham\ViewModels\ArkhamSearchSort.cs" />
     <Compile Include="Models\Arkham\Shroud.cs" />
@@ -687,6 +689,7 @@
     <Content Include="Images\Arkham\Guardian.png" />
     <Content Include="Images\Arkham\Intellect.png" />
     <Content Include="Images\Arkham\Mystic.png" />
+    <Content Include="Images\Arkham\PerInvestigator.png" />
     <Content Include="Images\Arkham\Rogue.png" />
     <Content Include="Images\Arkham\Seeker.png" />
     <Content Include="Images\Arkham\Survivor.png" />

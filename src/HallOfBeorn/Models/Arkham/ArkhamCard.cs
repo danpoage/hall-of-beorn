@@ -34,17 +34,21 @@ namespace HallOfBeorn.Models.Arkham
         public Shroud? Shroud { get; protected set; }
         public ClueValue? ClueValue { get; protected set; }
 
-        public string Text { get; protected set; }
-        public string Flavor { get; protected set; }
+        public string FrontText { get; protected set; }
+        public string FrontFlavor { get; protected set; }
+        public string BackText { get; private set; }
+        public string BackFlavor { get; private set; }
 
         public ushort Number { get; protected set; }
         public byte Quanity { get; protected set; }
         public Artist Artist { get; protected set; }
 
-        public string NickName { get; private set; }
+        public string Subtitle { get; private set; }
         public ArkhamClass Class { get; private set; }
         public byte Health { get; private set; }
         public byte Sanity { get; private set; }
+        public byte VictoryPoints { get; private set; }
+        public ArkhamEncounterSet EncounterSet { get; private set; }
 
         protected void addTraits(IEnumerable<string> traits)
         {
@@ -97,7 +101,7 @@ namespace HallOfBeorn.Models.Arkham
                 DeckType = ArkhamDeckType.Player,
                 Name = name,
                 IsUnique = true,
-                NickName = nickName,
+                Subtitle = nickName,
                 Class = cl,
                 Health = health,
                 Sanity = sanity
@@ -130,9 +134,28 @@ namespace HallOfBeorn.Models.Arkham
             };
         }
 
+        public static ArkhamCard Location(string name, Shroud shroud, ClueValue clueValue, ArkhamEncounterSet encounterSet)
+        {
+            return new ArkhamCard()
+            {
+                CardType = ArkhamCardType.Location,
+                DeckType = ArkhamDeckType.Encounter,
+                Name = name,
+                Shroud = shroud,
+                ClueValue = clueValue,
+                EncounterSet = encounterSet
+            };
+        }
+
         public ArkhamCard WithUnique()
         {
             this.IsUnique = true;
+            return this;
+        }
+
+        public ArkhamCard WithSubtitle(string subtitle)
+        {
+            this.Subtitle = subtitle;
             return this;
         }
 
@@ -163,6 +186,12 @@ namespace HallOfBeorn.Models.Arkham
         public ArkhamCard WithAssetSlot(AssetSlot assetSlot)
         {
             this.AssetSlot = assetSlot;
+            return this;
+        }
+
+        public ArkhamCard WithVictoryPoints(byte victoryPoints)
+        {
+            this.VictoryPoints = victoryPoints;
             return this;
         }
 
@@ -218,15 +247,27 @@ namespace HallOfBeorn.Models.Arkham
             return this;
         }
 
-        public ArkhamCard WithText(string text)
+        public ArkhamCard WithFrontText(string text)
         {
-            this.Text = text;
+            this.FrontText = text;
             return this;
         }
 
-        public ArkhamCard WithFlavor(string flavor)
+        public ArkhamCard WithFrontFlavor(string flavor)
         {
-            this.Flavor = flavor;
+            this.FrontFlavor = flavor;
+            return this;
+        }
+
+        public ArkhamCard WithBackText(string text)
+        {
+            this.BackText = text;
+            return this;
+        }
+
+        public ArkhamCard WithBackFlavor(string flavor)
+        {
+            this.BackFlavor = flavor;
             return this;
         }
 

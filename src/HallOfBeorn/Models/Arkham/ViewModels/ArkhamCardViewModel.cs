@@ -37,7 +37,8 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
                 switch (card.CardType)
                 {
                     case ArkhamCardType.Investigator:
-                        return card.NickName;
+                    case ArkhamCardType.Location:
+                        return card.Subtitle;
                     default:
                         return string.Empty;
                 }
@@ -70,6 +71,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
                 switch (card.CardType)
                 {
                     case ArkhamCardType.Investigator:
+                    case ArkhamCardType.Location:
                         return string.Format("{0}-Front.jpg", getBaseImagePath());
                     default:
                         return string.Format("{0}.jpg", getBaseImagePath());
@@ -84,6 +86,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
                 switch (card.CardType)
                 {
                     case ArkhamCardType.Investigator:
+                    case ArkhamCardType.Location:
                         return string.Format("{0}-Back.jpg", getBaseImagePath());
                     default:
                         return string.Empty;
@@ -123,6 +126,58 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
                     default:
                         return ((int)card.Cost).ToString();
                 }
+            }
+        }
+
+        public string Text
+        {
+            get
+            {
+                var text = new System.Text.StringBuilder();
+                if (!string.IsNullOrEmpty(card.FrontText))
+                {
+                }
+
+                return text.ToString();
+            }
+        }
+
+        public string Shroud
+        {
+            get {
+                if (!card.Shroud.HasValue)
+                {
+                    return string.Empty;
+                }
+
+                var shroud = card.Shroud.Value.IsVariable ? "X" : card.Shroud.Value.ToString();
+
+                if (card.Shroud.Value.PerInvestigator)
+                {
+                    shroud += "&nbsp;<img src='/Images/Arkham/PerInvestigator.png'/>";
+                }
+
+                return shroud;
+            }
+        }
+
+        public string ClueValue
+        {
+            get
+            {
+                if (!card.ClueValue.HasValue)
+                {
+                    return string.Empty;
+                }
+
+                var clueValue = card.ClueValue.Value.IsVariable ? "X" : card.ClueValue.Value.ToString();
+
+                if (card.ClueValue.Value.PerInvestigator)
+                {
+                    clueValue += "&nbsp;<img src='/Images/Arkham/PerInvestigator.png'/>";
+                }
+
+                return clueValue;
             }
         }
     }
