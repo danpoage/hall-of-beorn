@@ -1373,3 +1373,71 @@ tr.pager td {
 .card-image {
     border-radius: 6px;
 }
+
+/* Arkham Stles */
+.arkham-circle {
+    display:inline-block;
+    height: 28px;
+    width: 28px;
+    border-radius:14px;
+    border-style:solid;
+    border-width:1px;
+}
+
+.arkham-shroud {
+    color:white;
+    background-color:black;
+}
+
+.arkham-clueValue {
+    color:black;
+    background-color:white;
+}
+
+.arkham-valueInner {
+    display: block;
+    text-align:center;
+    vertical-align: middle;
+    margin-top: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family:'Palatino Linotype',serif;
+}
+
+.arkham-perInvestigator {
+    width: 10px;
+    height: 10px;
+}
+
+.arkham-health {
+    display: inline-block;
+    background-image: url('/Images/Arkham/Health.png');
+    width: 25px;
+    height: 31px;
+}
+
+.arkham-sanity {
+    display: inline-block;
+    background-image: url('/Images/Arkham/Sanity.png');
+    width: 35px;
+    height: 28px;
+}
+
+.arkham-energyInner {
+    display: block;
+    color: white;
+    text-align:center;    
+    vertical-align: middle;
+    margin-top: 2px;
+    font-size: 22px;
+    font-weight: bolder;
+    font-family:'Palatino Linotype',serif;
+}
+
+.arkham-healthInner {
+    margin-bottom: 1px;
+}
+
+.arkham-sanityInner {
+    margin-top: -4px;
+}

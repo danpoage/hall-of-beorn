@@ -94,6 +94,22 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             }
         }
 
+        public int ImageHeight
+        {
+            get
+            {
+                switch (card.CardType)
+                {
+                    case ArkhamCardType.Investigator:
+                    case ArkhamCardType.Agenda:
+                    case ArkhamCardType.Act:
+                        return 240;
+                    default:
+                        return 300;
+                }
+            }
+        }
+
         public string CardType
         {
             get
@@ -142,6 +158,24 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             }
         }
 
+        public string Health
+        {
+            get
+            {
+                return card.Health > 0 ? card.Health.ToString() : string.Empty;
+            }
+        }
+
+        public string Sanity
+        {
+            get
+            {
+                return card.Sanity > 0 ? card.Sanity.ToString() : string.Empty;
+            }
+        }
+
+        private const string perInvestigatorIcon = "<img src='/Images/Arkham/PerInvestigator.png' class='arkham-perInvestigator'/>";
+
         public string Shroud
         {
             get {
@@ -150,11 +184,11 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
                     return string.Empty;
                 }
 
-                var shroud = card.Shroud.Value.IsVariable ? "X" : card.Shroud.Value.ToString();
+                var shroud = card.Shroud.Value.IsVariable ? "X" : card.Shroud.Value.Value.ToString();
 
                 if (card.Shroud.Value.PerInvestigator)
                 {
-                    shroud += "&nbsp;<img src='/Images/Arkham/PerInvestigator.png'/>";
+                    shroud += perInvestigatorIcon;
                 }
 
                 return shroud;
@@ -170,11 +204,11 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
                     return string.Empty;
                 }
 
-                var clueValue = card.ClueValue.Value.IsVariable ? "X" : card.ClueValue.Value.ToString();
+                var clueValue = card.ClueValue.Value.IsVariable ? "X" : card.ClueValue.Value.Value.ToString();
 
                 if (card.ClueValue.Value.PerInvestigator)
                 {
-                    clueValue += "&nbsp;<img src='/Images/Arkham/PerInvestigator.png'/>";
+                    clueValue += perInvestigatorIcon;
                 }
 
                 return clueValue;

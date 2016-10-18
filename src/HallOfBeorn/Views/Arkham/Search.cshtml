@@ -59,10 +59,10 @@
     {
         <hr style="color:#616161;" />
     
-        <div style="display:inline-block"><img src="@card.ImagePathFront" /></div>
+        <div style="display:inline-block"><img src="@card.ImagePathFront" height="@card.ImageHeight" /></div>
         if (!string.IsNullOrEmpty(@card.ImagePathBack))
         {
-            <div style="display:inline-block"><img src="@card.ImagePathBack" /></div>
+            <div style="display:inline-block"><img src="@card.ImagePathBack" height="@card.ImageHeight"/></div>
         }
         <div style="display:inline-block">
             <div style="font-size:1.75em;font-family:Verdana;">
@@ -90,9 +90,19 @@
                         <span>@card.Combat <img src="/Images/Arkham/Combat.png" /></span>
                         <span>@card.Agility <img src="/Images/Arkham/Agility.png" /></span>
                     </div>
+                    <div>
+                        <span class="arkham-health"><span class="arkham-energyInner arkham-healthInner">@card.Health</span></span>
+                        <span class="arkham-sanity"><span class="arkham-energyInner arkham-sanityInner">@card.Sanity</span></span>
+                    </div>
                     break;
                 case "Asset":
                     <div>( @card.Cost )</div>
+                    break;
+                case "Location":
+                    <div>
+                        <div class="arkham-circle arkham-shroud" title="Shroud"><div class="arkham-valueInner">@Html.Raw(@card.Shroud)</div></div>
+                        <div class="arkham-circle arkham-clueValue" title="Clue Value"><div class="arkham-valueInner">@Html.Raw(@card.ClueValue)</div></div>
+                    </div>
                     break;
             }
             

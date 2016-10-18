@@ -687,10 +687,12 @@
     <Content Include="Images\Arkham\Agility.png" />
     <Content Include="Images\Arkham\Combat.png" />
     <Content Include="Images\Arkham\Guardian.png" />
+    <Content Include="Images\Arkham\Health.png" />
     <Content Include="Images\Arkham\Intellect.png" />
     <Content Include="Images\Arkham\Mystic.png" />
     <Content Include="Images\Arkham\PerInvestigator.png" />
     <Content Include="Images\Arkham\Rogue.png" />
+    <Content Include="Images\Arkham\Sanity.png" />
     <Content Include="Images\Arkham\Seeker.png" />
     <Content Include="Images\Arkham\Survivor.png" />
     <Content Include="Images\Arkham\Unique.png" />
