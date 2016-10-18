@@ -18,9 +18,47 @@ namespace HallOfBeorn.Services.Arkham
 
         private readonly List<ArkhamProduct> products = new List<ArkhamProduct>();
 
-        public List<ArkhamProduct> Products()
+        public IEnumerable<ArkhamProduct> Products()
         {
             return products;
+        }
+
+        public IEnumerable<ArkhamCard> Cards()
+        {
+            foreach (var product in products)
+                foreach (var card in product.Cards())
+                    yield return card;
+        }
+
+        public IEnumerable<string> Traits()
+        {
+            foreach (var card in Cards())
+                foreach (var trait in card.Traits())
+                    yield return trait;
+        }
+        public IEnumerable<string> SkillValues(Skill skill)
+        {
+            foreach (var card in Cards())
+            {
+                Func<ArkhamCard, Skill, string> getSkill = (c, sk) =>
+                    {
+                        switch (sk)
+                        {
+                            case Skill.Willpower:
+                                return c.Willpower > 0 ? ((byte)c.Willpower).ToString() : string.Empty;
+                            case Skill.Intellect:
+                                return c.Intellect > 0 ? ((byte)c.Intellect).ToString() : string.Empty;
+                            case Skill.Combat:
+                                return c.Combat > 0 ? ((byte)c.Combat).ToString() : string.Empty;
+                            case Skill.Agility:
+                                return c.Agility > 0 ? ((byte)c.Agility).ToString() : string.Empty;
+                            default:
+                                return string.Empty;;
+                        }
+                    };
+
+                yield return getSkill(card, skill);
+            }
         }
     }
 }

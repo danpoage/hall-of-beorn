@@ -24,10 +24,10 @@ namespace HallOfBeorn.Models.Arkham
         public string Name { get; protected set; }
         public bool IsUnique { get; protected set; }
 
-        public Skill Willpower { get; protected set; }
-        public Skill Intellect { get; protected set; }
-        public Skill Combat { get; protected set; }
-        public Skill Agility { get; protected set; }
+        public byte Willpower { get; protected set; }
+        public byte Intellect { get; protected set; }
+        public byte Combat { get; protected set; }
+        public byte Agility { get; protected set; }
         public ArkhamCardCost Cost { get; protected set; }
         public Level Level { get; protected set; }
         public AssetSlot AssetSlot { get; protected set; }
@@ -220,12 +220,12 @@ namespace HallOfBeorn.Models.Arkham
             return this;
         }*/
 
-        public ArkhamCard WithSkills(sbyte willpower, sbyte intellect, sbyte combat, sbyte agility)
+        public ArkhamCard WithSkills(byte willpower, byte intellect, byte combat, byte agility)
         {
-            this.Willpower = (Skill)willpower;
-            this.Intellect = (Skill)intellect;
-            this.Combat = (Skill)combat;
-            this.Agility = (Skill)agility;
+            this.Willpower = willpower;
+            this.Intellect = intellect;
+            this.Combat = combat;
+            this.Agility = agility;
             return this;
         }
 

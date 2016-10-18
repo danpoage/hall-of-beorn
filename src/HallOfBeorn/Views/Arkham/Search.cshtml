@@ -50,6 +50,42 @@
             <span class="search-label-short">Card Type</span>
             @Html.DropDownListFor(x => x.CardType, ArkhamSearchViewModel.CardTypes, new { @class = "search-select-medium" })
             </span>
+
+            <span class="search-filter">
+            <span class="search-label-short">Card Class</span>
+            @Html.DropDownListFor(x => x.CardClass, ArkhamSearchViewModel.CardClasses, new { @class = "search-select-medium" })
+            </span>
+        </div>
+    </div>
+    <div class="search-row">
+        <div class="search-item">
+            <span class="search-filter">
+            <span class="search-label-short">Willpower</span>
+            @Html.DropDownListFor(x => x.Willpower, ArkhamSearchViewModel.WillpowerValues, new { @class = "search-select-short" })
+            </span>
+
+            <span class="search-filter">
+            <span class="search-label-short">Intellect</span>
+            @Html.DropDownListFor(x => x.Intellect, ArkhamSearchViewModel.IntellectValues, new { @class = "search-select-short" })
+            </span>
+
+            <span class="search-filter">
+            <span class="search-label-short">Combat</span>
+            @Html.DropDownListFor(x => x.Combat, ArkhamSearchViewModel.CombatValues, new { @class = "search-select-short" })
+            </span>
+
+            <span class="search-filter">
+            <span class="search-label-short">Agility</span>
+            @Html.DropDownListFor(x => x.Agility, ArkhamSearchViewModel.AgilityValues, new { @class = "search-select-short" })
+            </span>
+        </div>
+    </div>
+    <div class="search-row">
+        <div class="search-item">
+            <span class="search-filter">
+            <span class="search-label-short">Traits</span>
+            @Html.DropDownListFor(x => x.Trait, ArkhamSearchViewModel.Traits, new { @class = "search-select-medium" })
+            </span>
         </div>    
     </div>
     
@@ -68,7 +104,7 @@
             <div style="font-size:1.75em;font-family:Verdana;">
             @if (!string.IsNullOrEmpty(@card.ClassName))
             {
-                <img src="@card.ClassIcon" width="32" height="32" title="@card.ClassName"/>@: &nbsp;
+                <img src="@card.ClassIcon" width="32" height="32" title="Class: @card.ClassName"/>@: &nbsp;
             }
             @if (@card.IsUnique)
             {
@@ -81,22 +117,29 @@
                 <h3>@card.Subtitle</h3>
             }
             <div><b>@card.CardType</b></div>
+            @if (@card.HasTraits()) {
+                <div class="arkham-statSection">
+                    @foreach (var trait in @card.Traits()) {
+                        <span>@Html.Raw(trait.ToString())</span>
+                    }
+                </div>
+            }
             @switch (@card.CardType)
             {
                 case "Investigator":
                     <div>
-                        <span>@card.Willpower <img src="/Images/Arkham/Willpower.png" /></span>
-                        <span>@card.Intellect <img src="/Images/Arkham/Intellect.png" /></span>
-                        <span>@card.Combat <img src="/Images/Arkham/Combat.png" /></span>
-                        <span>@card.Agility <img src="/Images/Arkham/Agility.png" /></span>
+                        <span>@card.Willpower <img src="/Images/Arkham/Willpower.png" title="Willpower" /></span>
+                        <span>@card.Intellect <img src="/Images/Arkham/Intellect.png" title="Intellect"/></span>
+                        <span>@card.Combat <img src="/Images/Arkham/Combat.png" title="Combat"/></span>
+                        <span>@card.Agility <img src="/Images/Arkham/Agility.png" title="Agility"/></span>
                     </div>
-                    <div>
-                        <span class="arkham-health"><span class="arkham-energyInner arkham-healthInner">@card.Health</span></span>
-                        <span class="arkham-sanity"><span class="arkham-energyInner arkham-sanityInner">@card.Sanity</span></span>
+                    <div class="arkham-statSection">
+                        <span class="arkham-health" title="Health"><span class="arkham-energyInner arkham-healthInner">@card.Health</span></span>
+                        <span class="arkham-sanity" title="Sanity"><span class="arkham-energyInner arkham-sanityInner">@card.Sanity</span></span>
                     </div>
                     break;
                 case "Asset":
-                    <div>( @card.Cost )</div>
+                    <div><span class="arkham-circle arkham-cost" title="Cost"><span class="arkham-valueInner">@card.Cost</span></span></div>
                     break;
                 case "Location":
                     <div>

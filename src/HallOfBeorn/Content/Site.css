@@ -1375,6 +1375,10 @@ tr.pager td {
 }
 
 /* Arkham Stles */
+.arkham-statSection {
+    margin: 4px;
+}
+
 .arkham-circle {
     display:inline-block;
     height: 28px;
@@ -1404,6 +1408,11 @@ tr.pager td {
     font-family:'Palatino Linotype',serif;
 }
 
+.arkham-cost {
+    color: white;
+    background-color: black;
+}
+
 .arkham-perInvestigator {
     width: 10px;
     height: 10px;
@@ -1411,6 +1420,7 @@ tr.pager td {
 
 .arkham-health {
     display: inline-block;
+    vertical-align: top;
     background-image: url('/Images/Arkham/Health.png');
     width: 25px;
     height: 31px;
@@ -1418,9 +1428,12 @@ tr.pager td {
 
 .arkham-sanity {
     display: inline-block;
+    vertical-align: top;
     background-image: url('/Images/Arkham/Sanity.png');
     width: 35px;
     height: 28px;
+    margin-top: 2px;
+    margin-bottom: 5px;
 }
 
 .arkham-energyInner {
@@ -1429,15 +1442,25 @@ tr.pager td {
     text-align:center;    
     vertical-align: middle;
     margin-top: 2px;
-    font-size: 22px;
-    font-weight: bolder;
-    font-family:'Palatino Linotype',serif;
+    font-size: 24px;
+    font-weight: 200;
+    font-family:Georgia,'Palatino Linotype',serif;
 }
 
 .arkham-healthInner {
-    margin-bottom: 1px;
+    margin-bottom: -1px;
+    border-color: red;
 }
 
 .arkham-sanityInner {
-    margin-top: -4px;
+    margin-top: -3px;
+    border-color: blue;
+}
+
+.arkham-link {
+}
+
+.arkham-trait {
+    font-style: italic;
+    font-weight: bold;
 }

@@ -174,6 +174,17 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             }
         }
 
+        public bool HasTraits()
+        {
+            return card.Traits().Count() > 0;
+        }
+
+        public IEnumerable<LinkViewModel> Traits()
+        {
+            foreach (var trait in card.Traits())
+                yield return new LinkViewModel() { Name = trait, Title = "Trait Search: " + trait, Target = "_blank", Href = "/Arkham/Search?Trait=" + trait, CssClass = "arkham-trait" };
+        }
+
         private const string perInvestigatorIcon = "<img src='/Images/Arkham/PerInvestigator.png' class='arkham-perInvestigator'/>";
 
         public string Shroud

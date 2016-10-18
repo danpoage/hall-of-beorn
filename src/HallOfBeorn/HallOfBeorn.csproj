@@ -221,6 +221,7 @@
     <Compile Include="Models\Arkham\SkillIcon.cs" />
     <Compile Include="Models\Arkham\ViewModels\ArkhamCardViewModel.cs" />
     <Compile Include="Models\Arkham\ViewModels\ArkhamSearchViewModel.cs" />
+    <Compile Include="Models\Arkham\ViewModels\LinkViewModel.cs" />
     <Compile Include="Models\Artist.cs" />
     <Compile Include="Models\BrowseProductViewModel.cs" />
     <Compile Include="Models\BrowseViewModel.cs" />

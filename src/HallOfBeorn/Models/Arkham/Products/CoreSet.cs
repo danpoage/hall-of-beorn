@@ -16,7 +16,7 @@ namespace HallOfBeorn.Models.Arkham.Products
         {
             addCard(ArkhamCard.Investigator("Roland Banks", "The Fed", ArkhamClass.Guardian, 9, 5)
                 .WithSkills(3, 3, 4, 2)
-                .WithTraits("Agency.", "Investigator.")
+                .WithTraits("Agency.", "Detective.")
                 .WithFrontText("Response - After you defeat an enemy: Discover 1 clue at your location. (Limit once per round.)\r\nEldritch Effect: +1 for each clue on your location.")
                 .WithFrontFlavor("Everything by the book: every \"i\" dotted, every \"t\" crossed. It had worked, until now")
                 .WithInfo(1, 1, Artist.Magali_Villeneuve));
