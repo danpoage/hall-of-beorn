@@ -105,6 +105,11 @@ namespace HallOfBeorn.Models.Arkham
             return skillTestIcons;
         }
 
+        public IEnumerable<ConnectionSymbol> Connections()
+        {
+            return connections;
+        }
+
         public static ArkhamCard Investigator(string title, string subtitle, ClassSymbol cl, byte health, byte sanity)
         {
             return new ArkhamCard()

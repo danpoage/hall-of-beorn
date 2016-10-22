@@ -57,6 +57,19 @@
             </span>
         </div>
     </div>
+        <div class="search-row">
+        <div class="search-item">
+            <span class="search-filter">
+            <span class="search-label-short">Location Symbol</span>
+            @Html.DropDownListFor(x => x.LocationSymbol, ArkhamSearchViewModel.ConnectionSymbols, new { @class = "search-select-medium" })
+            </span>
+
+            <span class="search-filter">
+            <span class="search-label-short">Connects To</span>
+            @Html.DropDownListFor(x => x.ConnectsTo, ArkhamSearchViewModel.ConnectionSymbols, new { @class = "search-select-medium" })
+            </span>
+        </div>
+    </div>
     <div class="search-row">
         <div class="search-item">
             <span class="search-filter">
@@ -95,10 +108,12 @@
     {
         <hr style="color:#616161;" />
     
-        <div style="display:inline-block"><img src="@card.ImagePathFront" height="@card.ImageHeight" /></div>
-        if (!string.IsNullOrEmpty(@card.ImagePathBack))
-        {
-            <div style="display:inline-block"><img src="@card.ImagePathBack" height="@card.ImageHeight"/></div>
+        if (!@Model.View.HasValue || @Model.View.Value == ArkhamSearchView.Card || @Model.View.Value == ArkhamSearchView.Card_Image) {
+            <div style="display:inline-block"><img src="@card.ImagePathFront" height="@card.ImageHeight" /></div>
+            if (!string.IsNullOrEmpty(@card.ImagePathBack))
+            {
+                <div style="display:inline-block"><img src="@card.ImagePathBack" height="@card.ImageHeight"/></div>
+            }
         }
         <div style="display:inline-block">
             <div style="font-size:1.75em;font-family:Verdana;">
@@ -147,8 +162,22 @@
                         <div class="arkham-circle arkham-clueValue" title="Clue Value"><div class="arkham-valueInner">@Html.Raw(@card.ClueValue)</div></div>
                     </div>
                     break;
+                case "Enemy":
+                    <div class="arkham-statSection">
+                        <div class="arkham-stat"><div class="arkham-statSquare" title="Enemy Fight Value"><div class="arkham-valueInner">@Html.Raw(@card.FightValue)</div></div><img src="/Images/Arkham/Combat.png" title="Enemy Fight Value"/></div>
+                        <div class="arkham-stat"><div class="arkham-statSquare" title="Enemy Health Value"><div class="arkham-valueInner">@Html.Raw(@card.HealthValue)</div></div><img src="/Images/Arkham/EnemyHealth.png" title="Enemy Health Value" width="21" height="21"/></div>
+                        <div class="arkham-stat"><div class="arkham-statSquare" title="Enemy Evade Value"><div class="arkham-valueInner">@Html.Raw(@card.EvadeValue)</div></div><img src="/Images/Arkham/Agility.png" title="Enemy Evade Value"/></div>
+                    </div>
+                    <div class="arkham-statSection">
+                        <span class="arkham-health" title="Damage"><span class="arkham-energyInner arkham-healthInner">@card.Damage</span></span>
+                        <span class="arkham-sanity" title="Horror"><span class="arkham-energyInner arkham-sanityInner">@card.Horror</span></span>
+                    </div>
+                    break;    
             }
-            
+            @if ((!@Model.View.HasValue || @Model.View.Value == ArkhamSearchView.Card || @Model.View.Value == ArkhamSearchView.Card_Text) && !string.IsNullOrEmpty(@card.BodyHtml()))
+            {
+                @Html.Raw(@card.BodyHtml())
+            }
         </div>
     }
 }

@@ -57,6 +57,14 @@ namespace HallOfBeorn.Services.Arkham
                     {
                         continue;
                     }
+                    if (model.LocationSymbol.HasValue && model.LocationSymbol.Value != ConnectionSymbol.None && (!card.LocationSymbol.HasValue || model.LocationSymbol.Value != card.LocationSymbol))
+                    {
+                        continue;
+                    }
+                    if (model.ConnectsTo.HasValue && model.ConnectsTo.Value != ConnectionSymbol.None && !card.Connections().Any(x => x == model.ConnectsTo.Value))
+                    {
+                        continue;
+                    }
 
                     results.Add(new ArkhamSearchResult(card));
                 }

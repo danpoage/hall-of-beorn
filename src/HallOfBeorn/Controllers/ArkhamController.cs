@@ -64,6 +64,14 @@ namespace HallOfBeorn.Controllers
             {
                 model.View = null;
             }
+            if (model.LocationSymbol.HasValue && model.LocationSymbol.Value == ConnectionSymbol.None)
+            {
+                model.LocationSymbol = null;
+            }
+            if (model.ConnectsTo.HasValue && model.ConnectsTo.Value == ConnectionSymbol.None)
+            {
+                model.ConnectsTo = null;
+            }
 
             ArkhamSearchViewModel.LoadProducts(productRepository.Products().Select(x => { return x.Name; }).GetExtendedSelectListItems());
             ArkhamSearchViewModel.LoadTraits(productRepository.Traits().Distinct().OrderBy(x => { return x; }).GetExtendedSelectListItems());
@@ -71,6 +79,11 @@ namespace HallOfBeorn.Controllers
             ArkhamSearchViewModel.LoadSkillValues(Skill.Intellect, productRepository.SkillValues(Skill.Intellect).Distinct().Where(x => { return !string.IsNullOrEmpty(x); }).OrderBy(x => { return x; }).GetExtendedSelectListItems());
             ArkhamSearchViewModel.LoadSkillValues(Skill.Combat, productRepository.SkillValues(Skill.Combat).Distinct().Where(x => { return !string.IsNullOrEmpty(x); }).OrderBy(x => { return x; }).GetExtendedSelectListItems());
             ArkhamSearchViewModel.LoadSkillValues(Skill.Agility, productRepository.SkillValues(Skill.Agility).Distinct().Where(x => { return !string.IsNullOrEmpty(x); }).OrderBy(x => { return x; }).GetExtendedSelectListItems());
+            ArkhamSearchViewModel.LoadEnemyStats(EnemyStatType.FightValue, productRepository.EnemyStats(EnemyStatType.FightValue, ArkhamCardViewModel.perInvestigatorIcon).Distinct().Where(x => { return !string.IsNullOrEmpty(x); }).OrderBy(x => { return x; }).GetExtendedSelectListItems());
+            ArkhamSearchViewModel.LoadEnemyStats(EnemyStatType.HealthValue, productRepository.EnemyStats(EnemyStatType.HealthValue, ArkhamCardViewModel.perInvestigatorIcon).Distinct().Where(x => { return !string.IsNullOrEmpty(x); }).OrderBy(x => { return x; }).GetExtendedSelectListItems());
+            ArkhamSearchViewModel.LoadEnemyStats(EnemyStatType.EvadeValue, productRepository.EnemyStats(EnemyStatType.EvadeValue, ArkhamCardViewModel.perInvestigatorIcon).Distinct().Where(x => { return !string.IsNullOrEmpty(x); }).OrderBy(x => { return x; }).GetExtendedSelectListItems());
+            ArkhamSearchViewModel.LoadEnemyStats(EnemyStatType.Damage, productRepository.EnemyStats(EnemyStatType.Damage, ArkhamCardViewModel.perInvestigatorIcon).Distinct().Where(x => { return !string.IsNullOrEmpty(x); }).OrderBy(x => { return x; }).GetExtendedSelectListItems());
+            ArkhamSearchViewModel.LoadEnemyStats(EnemyStatType.Horror, productRepository.EnemyStats(EnemyStatType.Horror, ArkhamCardViewModel.perInvestigatorIcon).Distinct().Where(x => { return !string.IsNullOrEmpty(x); }).OrderBy(x => { return x; }).GetExtendedSelectListItems());
         }
 
         public ActionResult Details(string id)

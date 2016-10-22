@@ -26,6 +26,14 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         public byte? Agility { get; set; }
         public string Trait { get; set; }
 
+        public ConnectionSymbol? LocationSymbol { get; set; }
+        public ConnectionSymbol? ConnectsTo { get; set; }
+        public sbyte? FightValue { get; set; }
+        public sbyte? HealthValue { get; set; }
+        public sbyte? EvadeValue { get; set; }
+        public sbyte? Damage { get; set; }
+        public sbyte? Horror { get; set; }
+
         public static IEnumerable<SelectListItem> Sorts
         {
             get { return typeof(ArkhamSearchSort).GetSelectListItems(", "); }
@@ -33,7 +41,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
 
         public static IEnumerable<SelectListItem> Views
         {
-            get { return typeof(ArkhamSearchView).GetSelectListItems(", "); }
+            get { return typeof(ArkhamSearchView).GetSelectListItems(" "); }
         }
 
         public static IEnumerable<SelectListItem> CardTypes
@@ -43,7 +51,12 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
 
         public static IEnumerable<SelectListItem> CardClasses
         {
-            get { return typeof(ClassSymbol).GetSelectListItems(", "); }
+            get { return typeof(ClassSymbol).GetSelectListItems(" "); }
+        }
+
+        public static IEnumerable<SelectListItem> ConnectionSymbols
+        {
+            get { return typeof(ConnectionSymbol).GetSelectListItems(" "); }
         }
 
         private static readonly Dictionary<Skill, IEnumerable<SelectListItem>> valuesBySkill = new Dictionary<Skill, IEnumerable<SelectListItem>>();
@@ -66,6 +79,32 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         public static void LoadSkillValues(Skill skill, IEnumerable<SelectListItem> values)
         {
             valuesBySkill[skill] = values;
+        }
+
+        private static Dictionary<EnemyStatType, IEnumerable<SelectListItem>> enemyStatsByType = new Dictionary<EnemyStatType, IEnumerable<SelectListItem>>();
+        public static IEnumerable<SelectListItem> FightValues
+        {
+            get { return enemyStatsByType[EnemyStatType.FightValue]; }
+        }
+        public static IEnumerable<SelectListItem> HealthValues
+        {
+            get { return enemyStatsByType[EnemyStatType.HealthValue]; }
+        }
+        public static IEnumerable<SelectListItem> EvadeValues
+        {
+            get { return enemyStatsByType[EnemyStatType.EvadeValue]; }
+        }
+        public static IEnumerable<SelectListItem> DamageValues
+        {
+            get { return enemyStatsByType[EnemyStatType.Damage]; }
+        }
+        public static IEnumerable<SelectListItem> HorrorValues
+        {
+            get { return enemyStatsByType[EnemyStatType.Horror]; }
+        }
+        public static void LoadEnemyStats(EnemyStatType type, IEnumerable<SelectListItem> values)
+        {
+            enemyStatsByType[type] = values;
         }
 
         private static readonly List<SelectListItem> traits = new List<SelectListItem>();

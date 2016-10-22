@@ -60,5 +60,31 @@ namespace HallOfBeorn.Services.Arkham
                 yield return getSkill(card, skill);
             }
         }
+        public IEnumerable<string> EnemyStats(EnemyStatType type, string perInvestigatorSuffix)
+        {
+            foreach (var card in Cards().Where(x => x.CardType == ArkhamCardType.Enemy))
+            {
+                Func<ArkhamCard, EnemyStatType, string> getStat = (c, t) =>
+                {
+                    switch (t)
+                    {
+                        case EnemyStatType.FightValue:
+                            return c.FightValue.HasValue ? c.FightValue.Value.ToString(perInvestigatorSuffix) : string.Empty;
+                        case EnemyStatType.HealthValue:
+                            return c.HealthValue.HasValue ? c.HealthValue.Value.ToString(perInvestigatorSuffix) : string.Empty;
+                        case EnemyStatType.EvadeValue:
+                            return c.EvadeValue.HasValue ? c.EvadeValue.Value.ToString(perInvestigatorSuffix) : string.Empty;
+                        case EnemyStatType.Damage:
+                            return c.Damage.HasValue ? c.Damage.Value.ToString() : string.Empty;
+                        case EnemyStatType.Horror:
+                            return c.Horror.HasValue ? c.Horror.Value.ToString() : string.Empty;
+                        default:
+                            return string.Empty; ;
+                    }
+                };
+
+                yield return getStat(card, type);
+            }
+        }
     }
 }

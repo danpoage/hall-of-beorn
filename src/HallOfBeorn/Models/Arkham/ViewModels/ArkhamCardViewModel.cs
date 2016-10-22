@@ -162,6 +162,31 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             }
         }
 
+        public string FightValue
+        {
+            get { return card.FightValue.HasValue ? card.FightValue.Value.ToString(perInvestigatorIcon) : string.Empty; }
+        }
+
+        public string HealthValue
+        {
+            get { return card.HealthValue.HasValue ? card.HealthValue.Value.ToString(perInvestigatorIcon) : string.Empty; }
+        }
+
+        public string EvadeValue
+        {
+            get { return card.EvadeValue.HasValue ? card.EvadeValue.Value.ToString(perInvestigatorIcon) : string.Empty; }
+        }
+
+        public string Damage
+        {
+             get { return card.Damage.HasValue ? card.Damage.Value.ToString() : string.Empty; }
+        }
+
+        public string Horror
+        {
+            get { return card.Horror.HasValue ? card.Horror.Value.ToString() : string.Empty; }
+        }
+
         public bool HasTraits()
         {
             return card.Traits().Count() > 0;
@@ -173,16 +198,59 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
                 yield return new LinkViewModel() { Name = trait, Title = "Trait Search: " + trait, Target = "_blank", Href = "/Arkham/Search?Trait=" + trait, CssClass = "arkham-trait" };
         }
 
-        private const string perInvestigatorIcon = "<img src='/Images/Arkham/PerInvestigator.png' class='arkham-perInvestigator'/>";
+        public IEnumerable<LinkViewModel> ConnectsTo()
+        {
+            foreach (var connection in card.Connections())
+                yield return new LinkViewModel() { Name = connection.ToString().Replace("_", " "), Title = "Connects To", Target = "_blank", Href = "/Arkham/Search?ConnectsTo=" +  connection.ToString() };
+        }
+
+        public const string perInvestigatorIcon = "<img src='/Images/Arkham/PerInvestigator.png' class='arkham-perInvestigator'/>";
 
         public string Shroud
         {
-            get { return card.Shroud.HasValue ? card.Shroud.Value.ToString() : string.Empty; }
+            get { return card.Shroud.HasValue ? card.Shroud.Value.ToString(perInvestigatorIcon) : string.Empty; }
         }
 
         public string ClueValue
         {
-            get { return card.ClueValue.HasValue ? card.ClueValue.Value.ToString() : string.Empty; }
+            get { return card.ClueValue.HasValue ? card.ClueValue.Value.ToString(perInvestigatorIcon) : string.Empty; }
+        }
+
+        public string BodyHtml()
+        {
+            var body = new System.Text.StringBuilder();
+
+            if (!string.IsNullOrEmpty(card.FrontText))
+            {
+                body.AppendFormat("<p class='arkham-cardText'>{0}</p>", card.FrontText);
+            }
+
+            if (!string.IsNullOrEmpty(card.FrontFlavor))
+            {
+                body.AppendFormat("<p class='arkham-flavorText'>{0}</p>", card.FrontFlavor);
+            }
+
+            if (!string.IsNullOrEmpty(card.BackText))
+            {
+                if (body.Length > 0)
+                {
+                    body.Append("---");
+                }
+
+                body.AppendFormat("<p class='arkham-cardText'>{0}</p>", card.BackText);
+            }
+
+            if (!string.IsNullOrEmpty(card.FrontFlavor))
+            {
+                if (body.Length > 0 && string.IsNullOrEmpty(card.BackText))
+                {
+                    body.Append("---");
+                }
+
+                body.AppendFormat("<p class='arkham-flavorText'>{0}</p>", card.BackFlavor);
+            }
+
+            return body.ToString();
         }
     }
 }

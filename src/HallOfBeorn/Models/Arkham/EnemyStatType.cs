@@ -5,14 +5,13 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Arkham
 {
-    public enum ConnectionSymbol
+    public enum EnemyStatType
     {
         None = 0,
-        Study,
-        Hallway,
-        Attic,
-        Cellar,
-        Parlor,
-
+        FightValue,
+        HealthValue,
+        EvadeValue,
+        Damage,
+        Horror
     }
 }

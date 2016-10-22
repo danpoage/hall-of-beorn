@@ -46,6 +46,11 @@ namespace HallOfBeorn.Models.Arkham
 
         public override string ToString()
         {
+            return this.ToString("Per Investigator");
+        }
+
+        public string ToString(string perInvestigatorSuffix)
+        {
             if (IsNotApplicable)
             {
                 return "-";
@@ -53,10 +58,11 @@ namespace HallOfBeorn.Models.Arkham
 
             if (IsX)
             {
-                return IsPerInvestigator ? "X Per Investigator" : "X"; 
+                return IsPerInvestigator ? string.Format("X {0}", perInvestigatorSuffix) : "X";
             }
 
-            return IsPerInvestigator ? string.Format("{0} Per Investigator", Value) : Value.ToString();
+            return IsPerInvestigator ? string.Format("{0} {1}", Value, perInvestigatorSuffix) : Value.ToString();
         }
+
     }
 }

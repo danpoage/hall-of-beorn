@@ -45,7 +45,16 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithKeywords("Fast.")
                 .WithFrontText("Fast. Play when you would fail a skill test. Get +2 to your skill value for that test. Draw 1 card.")
                 .WithInfo(84, 1, Artist.David_A_Nash));
-
+            
+            addCard(ArkhamCard.Location("Study", ConnectionSymbol.Study, Shroud.Of(2), ClueValue.Of(2).PerInvestigator())
+                .WithFrontFlavor("You've been investigating the strange events occurring in Arkham for several years now. Your desk is covered in newspaper articles, police reports, and witness accounts.")
+                .WithBackFlavor("The door to your study has vanished")
+                .WithInfo(111, 1, Artist.Yoann_Boissonnet));
+            addCard(ArkhamCard.Location("Hallway", ConnectionSymbol.Hallway, Shroud.Of(1), ClueValue.Of(0))
+                .WithFrontFlavor("A moment of panic and disorientation strikes as you land upon the floor of the hallway. The world spins, as if turned on its head.")
+                .WithConnections(ConnectionSymbol.Attic, ConnectionSymbol.Cellar, ConnectionSymbol.Parlor)
+                .WithBackFlavor("The walls of your house are splattered with mud, and your hardwood floor is gone, replaced with a dirt path.")
+                .WithInfo(112, 1, Artist.Yoann_Boissonnet));
             addCard(ArkhamCard.Location("Attic", ConnectionSymbol.Attic, Shroud.Of(1), ClueValue.Of(2).PerInvestigator())
                 .WithVictoryPoints(1)
                 .WithFrontFlavor("The smell of rotten meat assaults your nostrils as you approach the attic stairs.")
@@ -59,6 +68,20 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithBackFlavor("Your cellar seems to have been replaced with an underground network of icy tunnels and caverns.\r\nThe cold chills you to the core.")
                 .WithConnections(ConnectionSymbol.Hallway)
                 .WithInfo(114, 1, Artist.Yoann_Boissonnet));
+            addCard(ArkhamCard.Location("Parlor", ConnectionSymbol.Parlor, Shroud.Of(2), ClueValue.Of(0))
+                .WithFrontText("The entrance to the Parlor is blocked by a darkly glowing unfathomable barrier. You cannot move into the Parlor.")
+                .WithFrontFlavor("You're unsure what would happen if you tried to corss the threshold of the strange barrier, but based on its extreme heat, you sure as hell don't want to try.")
+                .WithBackText("Action: Resign. \"This is too much for me!\" You run out the front door, fleeing in panic.\r\nWhile Lita Chantler is not controlled by a player, she gains: \"Action: Parley. Test Intellect (4). If you succeed, take contro of Lita Chantler.")
+                .WithConnections(ConnectionSymbol.Hallway)
+                .WithInfo(115, 1, Artist.Yoann_Boissonnet));
+
+            addCard(ArkhamCard.Enemy("Ghoul Priest", Number.Of(4), Number.Of(5).PerInvestigator(), Number.Of(4), Number.Of(2), Number.Of(2))
+                .WithTraits("Humanoid.", "Monster.", "Ghoul.", "Elite.")
+                .WithKeywords("Hunter.", "Retaliate.")
+                .WithFrontText("Prey - Highest Combat.")
+                .WithFrontFlavor("A figure in red robes wearing a bone mask. It gibbers and snarls before leaping to attack.")
+                .WithVictoryPoints(2)
+                .WithInfo(116, 1, Artist.Chun_Lo));
         }
     }
 }

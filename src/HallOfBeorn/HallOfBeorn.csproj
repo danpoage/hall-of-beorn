@@ -206,6 +206,7 @@
     <Compile Include="Models\Arkham\ArkhamEncounterSet.cs" />
     <Compile Include="Models\Arkham\ConnectionSymbol.cs" />
     <Compile Include="Models\Arkham\DoomValue.cs" />
+    <Compile Include="Models\Arkham\EnemyStatType.cs" />
     <Compile Include="Models\Arkham\Level.cs" />
     <Compile Include="Models\Arkham\ArkhamCardType.cs" />
     <Compile Include="Models\Arkham\ClueValue.cs" />
@@ -689,6 +690,7 @@
     <Content Include="Images\AH_small.png" />
     <Content Include="Images\Arkham\Agility.png" />
     <Content Include="Images\Arkham\Combat.png" />
+    <Content Include="Images\Arkham\EnemyHealth.png" />
     <Content Include="Images\Arkham\Guardian.png" />
     <Content Include="Images\Arkham\Health.png" />
     <Content Include="Images\Arkham\Intellect.png" />
