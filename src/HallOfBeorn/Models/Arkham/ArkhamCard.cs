@@ -9,42 +9,54 @@ namespace HallOfBeorn.Models.Arkham
     {
         private ArkhamCard()
         {
-            Cost = ArkhamCardCost.NA;
             Level = Level.NA;
             AssetSlot = AssetSlot.NA;
         }
 
         private readonly List<string> traits = new List<string>();
         private readonly List<string> keywords = new List<string>();
-        private readonly List<SkillIcon> skillIcons = new List<SkillIcon>();
+        private readonly List<SkillIcon> skillTestIcons = new List<SkillIcon>();
+        private readonly List<ConnectionSymbol> connections = new List<ConnectionSymbol>();
 
         public ArkhamProduct Product { get; set; }
         public ArkhamDeckType DeckType { get; set; }
         public ArkhamCardType CardType { get; set; }
-        public string Name { get; protected set; }
+        public string Title { get; protected set; }
+        public string Subtitle { get; private set; }
         public bool IsUnique { get; protected set; }
 
-        public byte Willpower { get; protected set; }
-        public byte Intellect { get; protected set; }
-        public byte Combat { get; protected set; }
-        public byte Agility { get; protected set; }
-        public ArkhamCardCost Cost { get; protected set; }
+        public Number? Willpower { get; protected set; }
+        public Number? Intellect { get; protected set; }
+        public Number? Combat { get; protected set; }
+        public Number? Agility { get; protected set; }
+
+        public Number? Cost { get; protected set; }
         public Level Level { get; protected set; }
         public AssetSlot AssetSlot { get; protected set; }
-        public Shroud? Shroud { get; protected set; }
-        public ClueValue? ClueValue { get; protected set; }
+        
+        public Number? Shroud { get; protected set; }
+        public Number? ClueValue { get; protected set; }
+        public ConnectionSymbol? LocationSymbol { get; private set; }
+
+        public Number? DoomThreshold { get; private set; }
+        public Number? ClueThreshold { get; private set; }
+
+        public Number? FightValue { get; private set; }
+        public Number? HealthValue { get; private set; }
+        public Number? EvadeValue { get; private set; }
+        public Number? Damage { get; private set; }
+        public Number? Horror { get; private set; }
 
         public string FrontText { get; protected set; }
         public string FrontFlavor { get; protected set; }
         public string BackText { get; private set; }
         public string BackFlavor { get; private set; }
 
-        public ushort Number { get; protected set; }
+        public ushort CardNumber { get; protected set; }
         public byte Quanity { get; protected set; }
         public Artist Artist { get; protected set; }
 
-        public string Subtitle { get; private set; }
-        public ArkhamClass Class { get; private set; }
+        public ClassSymbol Class { get; private set; }
         public byte Health { get; private set; }
         public byte Sanity { get; private set; }
         public byte VictoryPoints { get; private set; }
@@ -60,14 +72,14 @@ namespace HallOfBeorn.Models.Arkham
             this.keywords.AddRange(keywords);
         }
 
-        protected void addSkillIcons(IEnumerable<SkillIcon> skillIcons)
+        protected void addSkillTestIcons(IEnumerable<SkillIcon> skillIcons)
         {
-            this.skillIcons.AddRange(skillIcons);
+            this.skillTestIcons.AddRange(skillIcons);
         }
 
         public static string GetSlug(ArkhamCard card)
         {
-            var name = card.Name.ToUrlSafeString();
+            var name = card.Title.ToUrlSafeString();
             var level = (card.Level != Level.NA && card.Level != Level.Zero) ? ((sbyte)card.Level).ToString() : string.Empty;
             var product = card.Product.Abbreviation;
             return string.Format("{0}{1}-{2}", name, level, product);
@@ -90,60 +102,75 @@ namespace HallOfBeorn.Models.Arkham
 
         public IEnumerable<SkillIcon> SkillIcons()
         {
-            return skillIcons;
+            return skillTestIcons;
         }
 
-        public static ArkhamCard Investigator(string name, string nickName, ArkhamClass cl, byte health, byte sanity)
+        public static ArkhamCard Investigator(string title, string subtitle, ClassSymbol cl, byte health, byte sanity)
         {
             return new ArkhamCard()
             {
                 CardType = ArkhamCardType.Investigator,
                 DeckType = ArkhamDeckType.Player,
-                Name = name,
+                Title = title,
                 IsUnique = true,
-                Subtitle = nickName,
+                Subtitle = subtitle,
                 Class = cl,
                 Health = health,
                 Sanity = sanity
             };
         }
 
-        public static ArkhamCard Asset(string name, ArkhamClass cl, ArkhamCardCost cost, AssetSlot assetSlot)
+        public static ArkhamCard Asset(string title, ClassSymbol cl, Number cost, AssetSlot assetSlot)
         {
             return new ArkhamCard()
             {
                 CardType = ArkhamCardType.Asset,
                 DeckType = ArkhamDeckType.Player,
-                Name = name,
+                Title = title,
                 Class = cl,
                 Cost = cost,
                 AssetSlot = assetSlot
             };
         }
 
-        public static ArkhamCard Event(string name, ArkhamClass cl, ArkhamCardCost cost, Level level)
+        public static ArkhamCard Event(string title, ClassSymbol cl, Number cost, Level level)
         {
             return new ArkhamCard()
             {
                 CardType = ArkhamCardType.Event,
                 DeckType = ArkhamDeckType.Player,
-                Name = name,
+                Title = title,
                 Class = cl,
                 Cost = cost,
                 Level = level
             };
         }
 
-        public static ArkhamCard Location(string name, Shroud shroud, ClueValue clueValue, ArkhamEncounterSet encounterSet)
+        public static ArkhamCard Enemy(string title, Number fightValue, Number healthValue, Number evadeValue, Number damage, Number horror)
+        {
+            return new ArkhamCard()
+            {
+                CardType = ArkhamCardType.Enemy,
+                DeckType = ArkhamDeckType.Encounter,
+                Title = title,
+                FightValue = fightValue,
+                HealthValue = healthValue,
+                EvadeValue = evadeValue,
+                Damage = damage,
+                Horror = horror
+            };
+        }
+
+        public static ArkhamCard Location(string title, ConnectionSymbol locationSymbol, Number shroud, Number clueValue)
         {
             return new ArkhamCard()
             {
                 CardType = ArkhamCardType.Location,
                 DeckType = ArkhamDeckType.Encounter,
-                Name = name,
+                Title = title,
+                LocationSymbol = locationSymbol,
                 Shroud = shroud,
-                ClueValue = clueValue,
-                EncounterSet = encounterSet
+                ClueValue = clueValue
             };
         }
 
@@ -171,7 +198,7 @@ namespace HallOfBeorn.Models.Arkham
             return this;
         }
 
-        public ArkhamCard WithCost(ArkhamCardCost cost)
+        public ArkhamCard WithCost(Number cost)
         {
             this.Cost = cost;
             return this;
@@ -195,57 +222,64 @@ namespace HallOfBeorn.Models.Arkham
             return this;
         }
 
-        /*
-        public ArkhamCard WithWillpower(byte willpower)
+        public ArkhamCard WithConnections(params ConnectionSymbol[] connections)
         {
-            addSkill(Skill.Willpower, willpower);
+            this.connections.AddRange(connections);
             return this;
         }
-
-        public ArkhamCard WithIntellect(byte intellect)
-        {
-            addSkill(Skill.Intellect, intellect);
-            return this;
-        }
-
-        public ArkhamCard WithCombat(byte combat)
-        {
-            addSkill(Skill.Combat, combat);
-            return this;
-        }
-
-        public ArkhamCard WithAgility(byte agility)
-        {
-            addSkill(Skill.Agility, agility);
-            return this;
-        }*/
 
         public ArkhamCard WithSkills(byte willpower, byte intellect, byte combat, byte agility)
         {
-            this.Willpower = willpower;
-            this.Intellect = intellect;
-            this.Combat = combat;
-            this.Agility = agility;
+            this.Willpower = Number.Of(willpower);
+            this.Intellect = Number.Of(intellect);
+            this.Combat = Number.Of(combat);
+            this.Agility = Number.Of(agility);
             return this;
         }
 
-        public ArkhamCard WithSkillIcons(params SkillIcon[] skillIcons)
+        public ArkhamCard WithSkillTestIcons(params SkillIcon[] skillIcons)
         {
-            addSkillIcons(skillIcons);
+            addSkillTestIcons(skillIcons);
             return this;
         }
 
-        public ArkhamCard WithShroud(byte value, bool perInvestigator, bool isVariable)
+        public ArkhamCard WithShroud(byte value, bool perInvestigator, bool isX)
         {
-            this.Shroud = new Shroud { Value = value, PerInvestigator = perInvestigator, IsVariable = isVariable };
+            this.Shroud = new Number { Value = value, IsPerInvestigator = perInvestigator, IsX = isX };
             return this;
         }
 
-        public ArkhamCard WithClueValue(byte value, bool perInvestigator, bool isVariable)
+        public ArkhamCard WithClueValue(byte value, bool perInvestigator, bool isX)
         {
-            this.ClueValue = new ClueValue { Value = value, PerInvestigator = perInvestigator, IsVariable = isVariable };
+            this.ClueValue = new Number { Value = value, IsPerInvestigator = perInvestigator, IsX = isX };
             return this;
         }
+
+        public ArkhamCard WithDoomThreshold(Number doomThreshold)
+        {
+            this.DoomThreshold = doomThreshold;
+            return this;
+        }
+
+        public ArkhamCard WithClueThreshold(Number clueThreshold)
+        {
+            this.ClueThreshold = clueThreshold;
+            return this;
+        }
+
+        /*
+        public ArkhamCard WithDamage(byte? damage)
+        {
+            this.Damage = damage;
+            return this;
+        }
+
+        public ArkhamCard WithHorror(byte? horror)
+        {
+            this.Horror = horror;
+            return this;
+        }
+        */
 
         public ArkhamCard WithFrontText(string text)
         {
@@ -271,9 +305,9 @@ namespace HallOfBeorn.Models.Arkham
             return this;
         }
 
-        public ArkhamCard WithInfo(byte number, byte quantity, Artist artist)
+        public ArkhamCard WithInfo(byte cardNumber, byte quantity, Artist artist)
         {
-            this.Number = number;
+            this.CardNumber = cardNumber;
             this.Quanity = quantity;
             this.Artist = artist;
             return this;

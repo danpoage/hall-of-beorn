@@ -45,13 +45,13 @@ namespace HallOfBeorn.Services.Arkham
                         switch (sk)
                         {
                             case Skill.Willpower:
-                                return c.Willpower > 0 ? ((byte)c.Willpower).ToString() : string.Empty;
+                                return c.Willpower.HasValue ? c.Willpower.ToString() : string.Empty;
                             case Skill.Intellect:
-                                return c.Intellect > 0 ? ((byte)c.Intellect).ToString() : string.Empty;
+                                return c.Intellect.HasValue ? c.Intellect.ToString() : string.Empty;
                             case Skill.Combat:
-                                return c.Combat > 0 ? ((byte)c.Combat).ToString() : string.Empty;
+                                return c.Combat.HasValue ? c.Combat.ToString() : string.Empty;
                             case Skill.Agility:
-                                return c.Agility > 0 ? ((byte)c.Agility).ToString() : string.Empty;
+                                return c.Agility.HasValue ? c.Agility.ToString() : string.Empty;
                             default:
                                 return string.Empty;;
                         }

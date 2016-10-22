@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         public string Product { get; set; }
 
         public ArkhamCardType? CardType { get; set; }
-        public ArkhamClass? CardClass { get; set; }
+        public ClassSymbol? CardClass { get; set; }
         public byte? Willpower { get; set; }
         public byte? Intellect { get; set; }
         public byte? Combat { get; set; }
@@ -43,7 +43,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
 
         public static IEnumerable<SelectListItem> CardClasses
         {
-            get { return typeof(ArkhamClass).GetSelectListItems(", "); }
+            get { return typeof(ClassSymbol).GetSelectListItems(", "); }
         }
 
         private static readonly Dictionary<Skill, IEnumerable<SelectListItem>> valuesBySkill = new Dictionary<Skill, IEnumerable<SelectListItem>>();

@@ -25,8 +25,8 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             get
             {
                 return (card.Level != Level.NA && card.Level != Level.Zero) ?
-                    string.Format("{0} ({1})", card.Name, (sbyte)card.Level)
-                    : card.Name;
+                    string.Format("{0} ({1})", card.Title, (sbyte)card.Level)
+                    : card.Title;
             }
         }
 
@@ -45,14 +45,14 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             }
         }
 
-        public string Willpower { get { return ((sbyte)card.Willpower).ToString(); } }
-        public string Intellect { get { return ((sbyte)card.Intellect).ToString(); } }
-        public string Combat { get { return ((sbyte)card.Combat).ToString(); } }
-        public string Agility { get { return ((sbyte)card.Agility).ToString(); } }
+        public string Willpower { get { return card.Willpower.ToString(); } }
+        public string Intellect { get { return card.Intellect.ToString(); } }
+        public string Combat { get { return card.Combat.ToString(); } }
+        public string Agility { get { return card.Agility.ToString(); } }
 
         private string getBaseImagePath()
         {
-            var slug = card.Name.ToUrlSafeString();
+            var slug = card.Title.ToUrlSafeString();
             var product = card.Product.Name.ToUrlSafeString();
             var level = (card.Level != Level.NA && card.Level != Level.Zero) ? ((sbyte)card.Level).ToString() : string.Empty;
 
@@ -120,29 +120,17 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
 
         public string ClassName
         {
-            get { return card.Class != ArkhamClass.None ? card.Class.ToString() : string.Empty; }
+            get { return card.Class != ClassSymbol.None ? card.Class.ToString() : string.Empty; }
         }
 
         public string ClassIcon
         {
-            get { return card.Class != ArkhamClass.None ? string.Format("/Images/Arkham/{0}.png", ClassName) : string.Empty; }
+            get { return card.Class != ClassSymbol.None ? string.Format("/Images/Arkham/{0}.png", ClassName) : string.Empty; }
         }
 
         public string Cost
         {
-            get
-            {
-                if (card.Cost == ArkhamCardCost.NA)
-                    return string.Empty;
-
-                switch (card.Cost)
-                {
-                    case ArkhamCardCost.X:
-                        return "X";
-                    default:
-                        return ((int)card.Cost).ToString();
-                }
-            }
+            get { return (card.Cost.HasValue) ? card.Cost.Value.ToString() : string.Empty; }
         }
 
         public string Text
@@ -189,41 +177,12 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
 
         public string Shroud
         {
-            get {
-                if (!card.Shroud.HasValue)
-                {
-                    return string.Empty;
-                }
-
-                var shroud = card.Shroud.Value.IsVariable ? "X" : card.Shroud.Value.Value.ToString();
-
-                if (card.Shroud.Value.PerInvestigator)
-                {
-                    shroud += perInvestigatorIcon;
-                }
-
-                return shroud;
-            }
+            get { return card.Shroud.HasValue ? card.Shroud.Value.ToString() : string.Empty; }
         }
 
         public string ClueValue
         {
-            get
-            {
-                if (!card.ClueValue.HasValue)
-                {
-                    return string.Empty;
-                }
-
-                var clueValue = card.ClueValue.Value.IsVariable ? "X" : card.ClueValue.Value.Value.ToString();
-
-                if (card.ClueValue.Value.PerInvestigator)
-                {
-                    clueValue += perInvestigatorIcon;
-                }
-
-                return clueValue;
-            }
+            get { return card.ClueValue.HasValue ? card.ClueValue.Value.ToString() : string.Empty; }
         }
     }
 }

@@ -5,13 +5,11 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Arkham
 {
-    public enum ArkhamClass
+    public enum ConnectionSymbol
     {
         None = 0,
-        Guardian,
-        Seeker,
-        Rogue,
-        Mystic,
-        Survivor
+        Hallway,
+        Attic,
+        Cellar
     }
 }

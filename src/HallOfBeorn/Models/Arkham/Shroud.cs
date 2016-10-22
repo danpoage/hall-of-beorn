@@ -5,15 +5,16 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Arkham
 {
-    public struct Shroud
+    public class Shroud
     {
-        public byte Value { get; set; }
-        public bool PerInvestigator { get; set; }
-        public bool IsVariable { get; set; }
-
-        public static Shroud One
+        public static Number Of(byte value)
         {
-            get { return new Shroud { Value = 1 }; }
+            return new Number { Value = value };
+        }
+
+        public static Number X
+        {
+            get { return new Number { IsX = true }; }
         }
     }
 }

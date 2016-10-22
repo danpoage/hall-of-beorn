@@ -5,15 +5,16 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Arkham
 {
-    public struct ClueValue
+    public class ClueValue
     {
-        public byte Value { get; set; }
-        public bool PerInvestigator { get; set; }
-        public bool IsVariable { get; set; }
-
-        public static ClueValue TwoPerInvestigator
+        public static Number Of(byte value)
         {
-            get { return new ClueValue { Value = 2, PerInvestigator = true }; }
+            return new Number { Value = value };
+        }
+
+        public static Number X
+        {
+            get { return new Number { IsX = true }; }
         }
     }
 }

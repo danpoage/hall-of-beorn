@@ -32,7 +32,7 @@ namespace HallOfBeorn.Controllers
             {
                 model.CardType = null;
             }
-            if (model.CardClass.HasValue && model.CardClass.Value == ArkhamClass.None)
+            if (model.CardClass.HasValue && model.CardClass.Value == ClassSymbol.None)
             {
                 model.CardClass = null;
             }

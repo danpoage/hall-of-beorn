@@ -7,12 +7,12 @@ namespace HallOfBeorn.Models.Arkham
 {
     public class ArkhamProduct
     {
-        public ArkhamProduct(string name, string abbreviation, string code, ushort number, DateTime releaseDate)
+        public ArkhamProduct(string name, string abbreviation, string productCode, ushort productNumber, DateTime releaseDate)
         {
             this.Name = name;
             this.Abbreviation = abbreviation;
-            this.Number = number;
-            this.Code = code;
+            this.ProductCode = productCode;
+            this.ProductNumber = productNumber;
             this.ReleaseDate = releaseDate;
 
             init();
@@ -32,8 +32,8 @@ namespace HallOfBeorn.Models.Arkham
 
         public string Name { get; protected set; }
         public string Abbreviation { get; protected set; }
-        public string Code { get; protected set; }
-        public ushort Number { get; protected set; }
+        public string ProductCode { get; protected set; }
+        public ushort ProductNumber { get; protected set; }
         public DateTime ReleaseDate { get; protected set; }
 
         public IEnumerable<ArkhamCard> Cards()

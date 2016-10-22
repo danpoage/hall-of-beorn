@@ -33,23 +33,23 @@ namespace HallOfBeorn.Services.Arkham
                     {
                         continue;
                     }
-                    if (model.CardClass.HasValue && model.CardClass != ArkhamClass.None && card.Class != model.CardClass.Value)
+                    if (model.CardClass.HasValue && model.CardClass != ClassSymbol.None && card.Class != model.CardClass.Value)
                     {
                         continue;
                     }
-                    if (model.Willpower.HasValue && model.Willpower.Value > 0 && model.Willpower.Value != card.Willpower)
+                    if (model.Willpower.HasValue && model.Willpower.Value > 0 && card.Willpower.HasValue && model.Willpower.Value != card.Willpower.Value.Value)
                     {
                         continue;
                     }
-                    if (model.Intellect.HasValue && model.Intellect.Value > 0 && model.Intellect.Value != card.Intellect)
+                    if (model.Intellect.HasValue && model.Intellect.Value > 0 && card.Intellect.HasValue && model.Intellect.Value != card.Intellect.Value.Value)
                     {
                         continue;
                     }
-                    if (model.Combat.HasValue && model.Combat.Value > 0 && model.Combat.Value != card.Combat)
+                    if (model.Combat.HasValue && model.Combat.Value > 0 && card.Combat.HasValue && model.Combat.Value != card.Combat.Value.Value)
                     {
                         continue;
                     }
-                    if (model.Agility.HasValue && model.Agility.Value > 0 && model.Agility.Value != card.Agility)
+                    if (model.Agility.HasValue && model.Agility.Value > 0 && card.Agility.HasValue && model.Agility.Value != card.Agility.Value.Value)
                     {
                         continue;
                     }
@@ -70,9 +70,9 @@ namespace HallOfBeorn.Services.Arkham
             switch (model.Sort)
             {
                 case ArkhamSearchSort.Alphabetical:
-                    return results.OrderBy(x => x.Card.Name).ToList();
+                    return results.OrderBy(x => x.Card.Title).ToList();
                 case ArkhamSearchSort.Set_Number:
-                    return results.OrderBy(x => x.Card.Product.ReleaseDate).ThenBy(x => x.Card.Number).ToList();
+                    return results.OrderBy(x => x.Card.Product.ReleaseDate).ThenBy(x => x.Card.CardNumber).ToList();
                 default:
                     return results.OrderByDescending(x => x.Score).ToList();
             }
