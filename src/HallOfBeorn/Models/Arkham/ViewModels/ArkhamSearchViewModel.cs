@@ -26,13 +26,15 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         public byte? Agility { get; set; }
         public string Trait { get; set; }
 
+        public string Shroud { get; set; }
+        public string ClueValue { get; set; }
         public ConnectionSymbol? LocationSymbol { get; set; }
         public ConnectionSymbol? ConnectsTo { get; set; }
-        public sbyte? FightValue { get; set; }
-        public sbyte? HealthValue { get; set; }
-        public sbyte? EvadeValue { get; set; }
-        public sbyte? Damage { get; set; }
-        public sbyte? Horror { get; set; }
+        public string FightValue { get; set; }
+        public string HealthValue { get; set; }
+        public string EvadeValue { get; set; }
+        public string Damage { get; set; }
+        public string Horror { get; set; }
 
         public static IEnumerable<SelectListItem> Sorts
         {
@@ -81,30 +83,38 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             valuesBySkill[skill] = values;
         }
 
-        private static Dictionary<EnemyStatType, IEnumerable<SelectListItem>> enemyStatsByType = new Dictionary<EnemyStatType, IEnumerable<SelectListItem>>();
+        private static Dictionary<StatType, IEnumerable<SelectListItem>> statsByType = new Dictionary<StatType, IEnumerable<SelectListItem>>();
         public static IEnumerable<SelectListItem> FightValues
         {
-            get { return enemyStatsByType[EnemyStatType.FightValue]; }
+            get { return statsByType[StatType.FightValue]; }
         }
         public static IEnumerable<SelectListItem> HealthValues
         {
-            get { return enemyStatsByType[EnemyStatType.HealthValue]; }
+            get { return statsByType[StatType.HealthValue]; }
         }
         public static IEnumerable<SelectListItem> EvadeValues
         {
-            get { return enemyStatsByType[EnemyStatType.EvadeValue]; }
+            get { return statsByType[StatType.EvadeValue]; }
         }
         public static IEnumerable<SelectListItem> DamageValues
         {
-            get { return enemyStatsByType[EnemyStatType.Damage]; }
+            get { return statsByType[StatType.Damage]; }
         }
         public static IEnumerable<SelectListItem> HorrorValues
         {
-            get { return enemyStatsByType[EnemyStatType.Horror]; }
+            get { return statsByType[StatType.Horror]; }
         }
-        public static void LoadEnemyStats(EnemyStatType type, IEnumerable<SelectListItem> values)
+        public static IEnumerable<SelectListItem> ShroudValues
         {
-            enemyStatsByType[type] = values;
+            get { return statsByType[StatType.Shroud]; }
+        }
+        public static IEnumerable<SelectListItem> ClueValues
+        {
+            get { return statsByType[StatType.ClueValue]; }
+        }
+        public static void LoadCardStats(StatType type, IEnumerable<SelectListItem> values)
+        {
+            statsByType[type] = values;
         }
 
         private static readonly List<SelectListItem> traits = new List<SelectListItem>();

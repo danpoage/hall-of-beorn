@@ -206,7 +206,7 @@
     <Compile Include="Models\Arkham\ArkhamEncounterSet.cs" />
     <Compile Include="Models\Arkham\ConnectionSymbol.cs" />
     <Compile Include="Models\Arkham\DoomValue.cs" />
-    <Compile Include="Models\Arkham\EnemyStatType.cs" />
+    <Compile Include="Models\Arkham\StatType.cs" />
     <Compile Include="Models\Arkham\Level.cs" />
     <Compile Include="Models\Arkham\ArkhamCardType.cs" />
     <Compile Include="Models\Arkham\ClueValue.cs" />

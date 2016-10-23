@@ -5,9 +5,11 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Arkham
 {
-    public enum EnemyStatType
+    public enum StatType
     {
         None = 0,
+        Shroud,
+        ClueValue,
         FightValue,
         HealthValue,
         EvadeValue,

@@ -17,6 +17,42 @@ namespace HallOfBeorn.Services.Arkham
 
         private readonly ArkhamProductRepository productRepository;
 
+        private bool cardMatchesNumberFilter(string modelValue, Number? cardValue)
+        {
+            if (!cardValue.HasValue)
+            {
+                return false;
+            }
+
+            var isPerInvestigator = modelValue.EndsWith(ArkhamCardViewModel.PerInvestigatorDescription);
+            var isX = modelValue == "X";
+            var isNA = modelValue == "-";
+            byte value = 0;
+            if (!isX && !isNA)
+            {
+                byte.TryParse(modelValue.Replace(ArkhamCardViewModel.PerInvestigatorDescription, string.Empty).Trim(), out value);
+            }
+
+            if (cardValue.Value.Value != value)
+            {
+                return false;
+            }
+            if (cardValue.Value.IsX != isX)
+            {
+                return false;
+            }
+            if (cardValue.Value.IsPerInvestigator != isPerInvestigator)
+            {
+                return false;
+            }
+            if (cardValue.Value.IsNotApplicable != isNA)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         public IEnumerable<ArkhamSearchResult> Search(ArkhamSearchViewModel model)
         {
             var results = new List<ArkhamSearchResult>();
@@ -64,6 +100,41 @@ namespace HallOfBeorn.Services.Arkham
                     if (model.ConnectsTo.HasValue && model.ConnectsTo.Value != ConnectionSymbol.None && !card.Connections().Any(x => x == model.ConnectsTo.Value))
                     {
                         continue;
+                    }
+                    if (!string.IsNullOrEmpty(model.FightValue) && model.FightValue != "Any")
+                    {
+                        if (!cardMatchesNumberFilter(model.FightValue, card.FightValue))
+                            continue;
+                    }
+                    if (!string.IsNullOrEmpty(model.HealthValue) && model.HealthValue != "Any")
+                    {
+                        if (!cardMatchesNumberFilter(model.HealthValue, card.HealthValue))
+                            continue;
+                    }
+                    if (!string.IsNullOrEmpty(model.EvadeValue) && model.EvadeValue != "Any")
+                    {
+                        if (!cardMatchesNumberFilter(model.EvadeValue, card.EvadeValue))
+                            continue;
+                    }
+                    if (!string.IsNullOrEmpty(model.Damage) && model.Damage != "Any")
+                    {
+                        if (!cardMatchesNumberFilter(model.Damage, card.Damage))
+                            continue;
+                    }
+                    if (!string.IsNullOrEmpty(model.Horror) && model.Horror != "Any")
+                    {
+                        if (!cardMatchesNumberFilter(model.Horror, card.Horror))
+                            continue;
+                    }
+                    if (!string.IsNullOrEmpty(model.Shroud) && model.Shroud != "Any")
+                    {
+                        if (!cardMatchesNumberFilter(model.Shroud, card.Shroud))
+                            continue;
+                    }
+                    if (!string.IsNullOrEmpty(model.ClueValue) && model.ClueValue != "Any")
+                    {
+                        if (!cardMatchesNumberFilter(model.ClueValue, card.ClueValue))
+                            continue;
                     }
 
                     results.Add(new ArkhamSearchResult(card));

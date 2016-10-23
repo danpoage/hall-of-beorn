@@ -60,23 +60,27 @@ namespace HallOfBeorn.Services.Arkham
                 yield return getSkill(card, skill);
             }
         }
-        public IEnumerable<string> EnemyStats(EnemyStatType type, string perInvestigatorSuffix)
+        public IEnumerable<string> Stats(StatType type, string perInvestigatorSuffix)
         {
-            foreach (var card in Cards().Where(x => x.CardType == ArkhamCardType.Enemy))
+            foreach (var card in Cards().Where(x => x.CardType == ArkhamCardType.Enemy || x.CardType == ArkhamCardType.Location || x.CardType == ArkhamCardType.Treachery))
             {
-                Func<ArkhamCard, EnemyStatType, string> getStat = (c, t) =>
+                Func<ArkhamCard, StatType, string> getStat = (c, t) =>
                 {
                     switch (t)
                     {
-                        case EnemyStatType.FightValue:
+                        case StatType.Shroud:
+                            return c.Shroud.HasValue ? c.Shroud.Value.ToString(perInvestigatorSuffix) : string.Empty;
+                        case StatType.ClueValue:
+                            return c.ClueValue.HasValue ? c.ClueValue.Value.ToString(perInvestigatorSuffix) : string.Empty;
+                        case StatType.FightValue:
                             return c.FightValue.HasValue ? c.FightValue.Value.ToString(perInvestigatorSuffix) : string.Empty;
-                        case EnemyStatType.HealthValue:
+                        case StatType.HealthValue:
                             return c.HealthValue.HasValue ? c.HealthValue.Value.ToString(perInvestigatorSuffix) : string.Empty;
-                        case EnemyStatType.EvadeValue:
+                        case StatType.EvadeValue:
                             return c.EvadeValue.HasValue ? c.EvadeValue.Value.ToString(perInvestigatorSuffix) : string.Empty;
-                        case EnemyStatType.Damage:
+                        case StatType.Damage:
                             return c.Damage.HasValue ? c.Damage.Value.ToString() : string.Empty;
-                        case EnemyStatType.Horror:
+                        case StatType.Horror:
                             return c.Horror.HasValue ? c.Horror.Value.ToString() : string.Empty;
                         default:
                             return string.Empty; ;

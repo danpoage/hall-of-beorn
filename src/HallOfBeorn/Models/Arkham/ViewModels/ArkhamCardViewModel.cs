@@ -164,17 +164,17 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
 
         public string FightValue
         {
-            get { return card.FightValue.HasValue ? card.FightValue.Value.ToString(perInvestigatorIcon) : string.Empty; }
+            get { return card.FightValue.HasValue ? card.FightValue.Value.ToString(PerInvestigatorIcon) : string.Empty; }
         }
 
         public string HealthValue
         {
-            get { return card.HealthValue.HasValue ? card.HealthValue.Value.ToString(perInvestigatorIcon) : string.Empty; }
+            get { return card.HealthValue.HasValue ? card.HealthValue.Value.ToString(PerInvestigatorIcon) : string.Empty; }
         }
 
         public string EvadeValue
         {
-            get { return card.EvadeValue.HasValue ? card.EvadeValue.Value.ToString(perInvestigatorIcon) : string.Empty; }
+            get { return card.EvadeValue.HasValue ? card.EvadeValue.Value.ToString(PerInvestigatorIcon) : string.Empty; }
         }
 
         public string Damage
@@ -204,16 +204,17 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
                 yield return new LinkViewModel() { Name = connection.ToString().Replace("_", " "), Title = "Connects To", Target = "_blank", Href = "/Arkham/Search?ConnectsTo=" +  connection.ToString() };
         }
 
-        public const string perInvestigatorIcon = "<img src='/Images/Arkham/PerInvestigator.png' class='arkham-perInvestigator'/>";
+        public const string PerInvestigatorIcon = "<img src='/Images/Arkham/PerInvestigator.png' class='arkham-perInvestigator'/>";
+        public const string PerInvestigatorDescription = "Per Investigator";
 
         public string Shroud
         {
-            get { return card.Shroud.HasValue ? card.Shroud.Value.ToString(perInvestigatorIcon) : string.Empty; }
+            get { return card.Shroud.HasValue ? card.Shroud.Value.ToString(PerInvestigatorIcon) : string.Empty; }
         }
 
         public string ClueValue
         {
-            get { return card.ClueValue.HasValue ? card.ClueValue.Value.ToString(perInvestigatorIcon) : string.Empty; }
+            get { return card.ClueValue.HasValue ? card.ClueValue.Value.ToString(PerInvestigatorIcon) : string.Empty; }
         }
 
         public string BodyHtml()
