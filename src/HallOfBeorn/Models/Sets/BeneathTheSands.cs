@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.Sets
             Cycle = "Haradrim";
 
             Cards.Add(Card.Ally("Dúnedain Lookout", string.Empty, Sphere.Lore, 2, 1, 1, 1, 2)
+                .WithGeneric()
                 .WithNormalizedTitle("Dunedain Lookout")
                 .WithTraits("Dúnedain.")
                 .WithText("Response: Discard Dúnedain Lookout to cancel the 'When Revealed' effects of an enemy just revealed from the encounter deck.")
