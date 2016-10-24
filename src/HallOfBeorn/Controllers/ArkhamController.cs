@@ -32,9 +32,22 @@ namespace HallOfBeorn.Controllers
             {
                 model.CardType = null;
             }
+            if (model.DeckType.HasValue && model.DeckType.Value == ArkhamDeckType.None) {
+                model.DeckType = null;
+            }
             if (model.CardClass.HasValue && model.CardClass.Value == ClassSymbol.None)
             {
                 model.CardClass = null;
+            }
+            if (model.IsUnique.HasValue && model.IsUnique.Value == Models.Uniqueness.Any)
+            {
+                model.IsUnique = null;
+            }
+            if (model.Health.HasValue && model.Health == 0) {
+                model.Health = null;
+            }
+            if (model.Sanity.HasValue && model.Sanity == 0) {
+                model.Sanity = null;
             }
             if (model.Willpower.HasValue && model.Willpower.Value == 0)
             {
@@ -56,6 +69,10 @@ namespace HallOfBeorn.Controllers
             {
                 model.Trait = null;
             }
+            if (string.IsNullOrEmpty(model.Keyword) || model.Keyword == "None" || model.Keyword == "Any")
+            {
+                model.Keyword = null;
+            }
             if (model.Sort.HasValue && model.Sort.Value == ArkhamSearchSort.None)
             {
                 model.Sort = null;
@@ -72,17 +89,17 @@ namespace HallOfBeorn.Controllers
             {
                 model.ConnectsTo = null;
             }
-            if (string.IsNullOrEmpty(model.FightValue) || model.FightValue == "Any")
+            if (string.IsNullOrEmpty(model.EnemyFightValue) || model.EnemyFightValue == "Any")
             {
-                model.FightValue = null;
+                model.EnemyFightValue = null;
             }
-            if (string.IsNullOrEmpty(model.HealthValue) || model.HealthValue == "Any")
+            if (string.IsNullOrEmpty(model.EnemyHealthValue) || model.EnemyHealthValue == "Any")
             {
-                model.HealthValue = null;
+                model.EnemyHealthValue = null;
             }
-            if (string.IsNullOrEmpty(model.EvadeValue) || model.EvadeValue == "Any")
+            if (string.IsNullOrEmpty(model.EnemyEvadeValue) || model.EnemyEvadeValue == "Any")
             {
-                model.EvadeValue = null;
+                model.EnemyEvadeValue = null;
             }
             if (string.IsNullOrEmpty(model.Damage) || model.Damage == "Any")
             {
@@ -101,8 +118,11 @@ namespace HallOfBeorn.Controllers
                 model.ClueValue = null;
             }
 
-            ArkhamSearchViewModel.LoadProducts(productRepository.Products().Select(x => { return x.Name; }).GetExtendedSelectListItems());
-            ArkhamSearchViewModel.LoadTraits(productRepository.Traits().Distinct().OrderBy(x => { return x; }).GetExtendedSelectListItems());
+            ArkhamSearchViewModel.Products = productRepository.Products().Select(x => { return x.Name; }).GetExtendedSelectListItems();
+            ArkhamSearchViewModel.Traits = productRepository.Traits().Distinct().OrderBy(x => { return x; }).GetExtendedSelectListItems();
+            ArkhamSearchViewModel.Keywords = productRepository.Keywords().Distinct().OrderBy(x => { return x; }).GetExtendedSelectListItems();
+            ArkhamSearchViewModel.HealthValues = productRepository.HealthValues().Distinct().OrderBy(x => { return x; }).GetExtendedSelectListItems();
+            ArkhamSearchViewModel.SanityValues = productRepository.SanityValues().Distinct().OrderBy(x => { return x; }).GetExtendedSelectListItems();
             ArkhamSearchViewModel.LoadSkillValues(Skill.Willpower, productRepository.SkillValues(Skill.Willpower).Distinct().Where(x => { return !string.IsNullOrEmpty(x); }).OrderBy(x => { return x; }).GetExtendedSelectListItems());
             ArkhamSearchViewModel.LoadSkillValues(Skill.Intellect, productRepository.SkillValues(Skill.Intellect).Distinct().Where(x => { return !string.IsNullOrEmpty(x); }).OrderBy(x => { return x; }).GetExtendedSelectListItems());
             ArkhamSearchViewModel.LoadSkillValues(Skill.Combat, productRepository.SkillValues(Skill.Combat).Distinct().Where(x => { return !string.IsNullOrEmpty(x); }).OrderBy(x => { return x; }).GetExtendedSelectListItems());

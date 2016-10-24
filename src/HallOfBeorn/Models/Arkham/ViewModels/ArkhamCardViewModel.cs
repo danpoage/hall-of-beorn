@@ -120,12 +120,12 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
 
         public string ClassName
         {
-            get { return card.Class != ClassSymbol.None ? card.Class.ToString() : string.Empty; }
+            get { return card.ClassSymbol != ClassSymbol.None ? card.ClassSymbol.ToString() : string.Empty; }
         }
 
         public string ClassIcon
         {
-            get { return card.Class != ClassSymbol.None ? string.Format("/Images/Arkham/{0}.png", ClassName) : string.Empty; }
+            get { return card.ClassSymbol != ClassSymbol.None ? string.Format("/Images/Arkham/{0}.png", ClassName) : string.Empty; }
         }
 
         public string Cost
@@ -164,17 +164,17 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
 
         public string FightValue
         {
-            get { return card.FightValue.HasValue ? card.FightValue.Value.ToString(PerInvestigatorIcon) : string.Empty; }
+            get { return card.EnemyFightValue.HasValue ? card.EnemyFightValue.Value.ToString(PerInvestigatorIcon) : string.Empty; }
         }
 
         public string HealthValue
         {
-            get { return card.HealthValue.HasValue ? card.HealthValue.Value.ToString(PerInvestigatorIcon) : string.Empty; }
+            get { return card.EnemyHealthValue.HasValue ? card.EnemyHealthValue.Value.ToString(PerInvestigatorIcon) : string.Empty; }
         }
 
         public string EvadeValue
         {
-            get { return card.EvadeValue.HasValue ? card.EvadeValue.Value.ToString(PerInvestigatorIcon) : string.Empty; }
+            get { return card.EnemyEvadeValue.HasValue ? card.EnemyEvadeValue.Value.ToString(PerInvestigatorIcon) : string.Empty; }
         }
 
         public string Damage

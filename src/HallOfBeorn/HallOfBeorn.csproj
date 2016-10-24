@@ -741,6 +741,7 @@
     <Content Include="Images\unique.png" />
     <Content Include="Images\willpower.gif" />
     <Content Include="Images\willpower_med.png" />
+    <Content Include="Scripts\Arkham\cardSearch.js" />
     <Content Include="Scripts\autocomplete20.js" />
     <Content Include="Scripts\cardDetails.js" />
     <Content Include="Scripts\cardSearch.js" />

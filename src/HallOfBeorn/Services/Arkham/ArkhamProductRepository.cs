@@ -36,6 +36,26 @@ namespace HallOfBeorn.Services.Arkham
                 foreach (var trait in card.Traits())
                     yield return trait;
         }
+
+        public IEnumerable<string> Keywords()
+        {
+            foreach (var card in Cards())
+                foreach (var keyword in card.Keywords())
+                    yield return keyword;
+        }
+
+        public IEnumerable<string> HealthValues()
+        {
+            foreach (var card in Cards().Where(x => x.Health > 0))
+                yield return card.Health.ToString();
+        }
+
+        public IEnumerable<string> SanityValues()
+        {
+            foreach (var card in Cards().Where(x => x.Sanity > 0))
+                yield return card.Sanity.ToString();
+        }
+
         public IEnumerable<string> SkillValues(Skill skill)
         {
             foreach (var card in Cards())
@@ -73,11 +93,11 @@ namespace HallOfBeorn.Services.Arkham
                         case StatType.ClueValue:
                             return c.ClueValue.HasValue ? c.ClueValue.Value.ToString(perInvestigatorSuffix) : string.Empty;
                         case StatType.FightValue:
-                            return c.FightValue.HasValue ? c.FightValue.Value.ToString(perInvestigatorSuffix) : string.Empty;
+                            return c.EnemyFightValue.HasValue ? c.EnemyFightValue.Value.ToString(perInvestigatorSuffix) : string.Empty;
                         case StatType.HealthValue:
-                            return c.HealthValue.HasValue ? c.HealthValue.Value.ToString(perInvestigatorSuffix) : string.Empty;
+                            return c.EnemyHealthValue.HasValue ? c.EnemyHealthValue.Value.ToString(perInvestigatorSuffix) : string.Empty;
                         case StatType.EvadeValue:
-                            return c.EvadeValue.HasValue ? c.EvadeValue.Value.ToString(perInvestigatorSuffix) : string.Empty;
+                            return c.EnemyEvadeValue.HasValue ? c.EnemyEvadeValue.Value.ToString(perInvestigatorSuffix) : string.Empty;
                         case StatType.Damage:
                             return c.Damage.HasValue ? c.Damage.Value.ToString() : string.Empty;
                         case StatType.Horror:

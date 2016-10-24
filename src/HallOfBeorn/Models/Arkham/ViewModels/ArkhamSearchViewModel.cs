@@ -19,20 +19,25 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         public string Product { get; set; }
 
         public ArkhamCardType? CardType { get; set; }
+        public ArkhamDeckType? DeckType { get; set; }
         public ClassSymbol? CardClass { get; set; }
+        public Uniqueness? IsUnique { get; set; }
+        public byte? Health { get; set; }
+        public byte? Sanity { get; set; }
         public byte? Willpower { get; set; }
         public byte? Intellect { get; set; }
         public byte? Combat { get; set; }
         public byte? Agility { get; set; }
         public string Trait { get; set; }
+        public string Keyword { get; set; }
 
         public string Shroud { get; set; }
         public string ClueValue { get; set; }
         public ConnectionSymbol? LocationSymbol { get; set; }
         public ConnectionSymbol? ConnectsTo { get; set; }
-        public string FightValue { get; set; }
-        public string HealthValue { get; set; }
-        public string EvadeValue { get; set; }
+        public string EnemyFightValue { get; set; }
+        public string EnemyHealthValue { get; set; }
+        public string EnemyEvadeValue { get; set; }
         public string Damage { get; set; }
         public string Horror { get; set; }
 
@@ -51,6 +56,16 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             get { return typeof(ArkhamCardType).GetSelectListItems(" "); }
         }
 
+        public static IEnumerable<SelectListItem> DeckTypes
+        {
+            get { return typeof(ArkhamDeckType).GetSelectListItems(" "); }
+        }
+
+        public static IEnumerable<SelectListItem> UniquenessValues
+        {
+            get { return typeof(Uniqueness).GetSelectListItems(" "); }
+        }
+
         public static IEnumerable<SelectListItem> CardClasses
         {
             get { return typeof(ClassSymbol).GetSelectListItems(" "); }
@@ -59,6 +74,18 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         public static IEnumerable<SelectListItem> ConnectionSymbols
         {
             get { return typeof(ConnectionSymbol).GetSelectListItems(" "); }
+        }
+
+        public static IEnumerable<SelectListItem> HealthValues
+        {
+            get;
+            set;
+        }
+
+        public static IEnumerable<SelectListItem> SanityValues
+        {
+            get;
+            set;
         }
 
         private static readonly Dictionary<Skill, IEnumerable<SelectListItem>> valuesBySkill = new Dictionary<Skill, IEnumerable<SelectListItem>>();
@@ -84,15 +111,15 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         }
 
         private static Dictionary<StatType, IEnumerable<SelectListItem>> statsByType = new Dictionary<StatType, IEnumerable<SelectListItem>>();
-        public static IEnumerable<SelectListItem> FightValues
+        public static IEnumerable<SelectListItem> EnemyFightValues
         {
             get { return statsByType[StatType.FightValue]; }
         }
-        public static IEnumerable<SelectListItem> HealthValues
+        public static IEnumerable<SelectListItem> EnemyHealthValues
         {
             get { return statsByType[StatType.HealthValue]; }
         }
-        public static IEnumerable<SelectListItem> EvadeValues
+        public static IEnumerable<SelectListItem> EnemyEvadeValues
         {
             get { return statsByType[StatType.EvadeValue]; }
         }
@@ -120,25 +147,24 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         private static readonly List<SelectListItem> traits = new List<SelectListItem>();
         public static IEnumerable<SelectListItem> Traits
         {
-            get { return traits; }
+            get;
+            set;
         }
-        public static void LoadTraits(IEnumerable<SelectListItem> t)
+
+        private static readonly List<SelectListItem> keywords = new List<SelectListItem>();
+        public static IEnumerable<SelectListItem> Keywords
         {
-            traits.Clear();
-            traits.AddRange(t);
+            get;
+            set;
         }
 
         private static readonly List<SelectListItem> products = new List<SelectListItem>();
         public static IEnumerable<SelectListItem> Products
         {
-            get { return products; }
+            get;
+            set;
         }
-        public static void LoadProducts(IEnumerable<SelectListItem> prods)
-        {
-            products.Clear();
-            products.AddRange(prods);
-        }
-
+        
         public List<ArkhamCardViewModel> Cards()
         {
             return cards;

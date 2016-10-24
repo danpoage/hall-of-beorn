@@ -1489,3 +1489,7 @@ tr.pager td {
     font-size: 12px;
     font-style: italic;
 }
+
+.arkham-filterLine {
+    color: #616161;
+}

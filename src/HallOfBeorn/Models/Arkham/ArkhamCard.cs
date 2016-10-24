@@ -41,9 +41,9 @@ namespace HallOfBeorn.Models.Arkham
         public Number? DoomThreshold { get; private set; }
         public Number? ClueThreshold { get; private set; }
 
-        public Number? FightValue { get; private set; }
-        public Number? HealthValue { get; private set; }
-        public Number? EvadeValue { get; private set; }
+        public Number? EnemyFightValue { get; private set; }
+        public Number? EnemyHealthValue { get; private set; }
+        public Number? EnemyEvadeValue { get; private set; }
         public Number? Damage { get; private set; }
         public Number? Horror { get; private set; }
 
@@ -56,7 +56,7 @@ namespace HallOfBeorn.Models.Arkham
         public byte Quanity { get; protected set; }
         public Artist Artist { get; protected set; }
 
-        public ClassSymbol Class { get; private set; }
+        public ClassSymbol ClassSymbol { get; private set; }
         public byte Health { get; private set; }
         public byte Sanity { get; private set; }
         public byte VictoryPoints { get; private set; }
@@ -110,7 +110,7 @@ namespace HallOfBeorn.Models.Arkham
             return connections;
         }
 
-        public static ArkhamCard Investigator(string title, string subtitle, ClassSymbol cl, byte health, byte sanity)
+        public static ArkhamCard Investigator(string title, string subtitle, ClassSymbol classSymbol, byte health, byte sanity)
         {
             return new ArkhamCard()
             {
@@ -119,33 +119,33 @@ namespace HallOfBeorn.Models.Arkham
                 Title = title,
                 IsUnique = true,
                 Subtitle = subtitle,
-                Class = cl,
+                ClassSymbol = classSymbol,
                 Health = health,
                 Sanity = sanity
             };
         }
 
-        public static ArkhamCard Asset(string title, ClassSymbol cl, Number cost, AssetSlot assetSlot)
+        public static ArkhamCard Asset(string title, ClassSymbol classSymbol, Number cost, AssetSlot assetSlot)
         {
             return new ArkhamCard()
             {
                 CardType = ArkhamCardType.Asset,
                 DeckType = ArkhamDeckType.Player,
                 Title = title,
-                Class = cl,
+                ClassSymbol = classSymbol,
                 Cost = cost,
                 AssetSlot = assetSlot
             };
         }
 
-        public static ArkhamCard Event(string title, ClassSymbol cl, Number cost, Level level)
+        public static ArkhamCard Event(string title, ClassSymbol classSymbol, Number cost, Level level)
         {
             return new ArkhamCard()
             {
                 CardType = ArkhamCardType.Event,
                 DeckType = ArkhamDeckType.Player,
                 Title = title,
-                Class = cl,
+                ClassSymbol = classSymbol,
                 Cost = cost,
                 Level = level
             };
@@ -158,9 +158,9 @@ namespace HallOfBeorn.Models.Arkham
                 CardType = ArkhamCardType.Enemy,
                 DeckType = ArkhamDeckType.Encounter,
                 Title = title,
-                FightValue = fightValue,
-                HealthValue = healthValue,
-                EvadeValue = evadeValue,
+                EnemyFightValue = fightValue,
+                EnemyHealthValue = healthValue,
+                EnemyEvadeValue = evadeValue,
                 Damage = damage,
                 Horror = horror
             };
