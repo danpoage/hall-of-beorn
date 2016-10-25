@@ -40,7 +40,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithNormalizedTitle("Sulien")
                 .WithUnique()
                 .WithTraits("Dúnedain.", "Scout.")
-                .WithText("Action: Spend 1 Lore resource to exhaust Súlien. Then, each location in the staging area gets –1 [Threat] until the end of the phase. Any player may trigger this action.")
+                .WithText("Action: Spend 1 Lore resource to exhaust Súlien. Then, each location in the staging area gets –1 Threat until the end of the phase. Any player may trigger this action.")
                 .WithInfo(142, 3, Artist.Andreia_Ugrai));
             Cards.Add(Card.Event("Inspiring Presence", string.Empty, Sphere.Spirit, 2)
                 .WithText("Action: Choose a hero you control. Each hero with lower threat cost than the chosen hero gets +2 Defense until the end of the phase. Then, the players as a group may spend 2 Leadership resources to give +2 Attack to each hero with lower threat cost than the chosen hero until the end of the phase.")
