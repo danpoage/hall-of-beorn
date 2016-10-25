@@ -56,7 +56,7 @@ namespace HallOfBeorn.Models.Sets
                 .WithGeneric()
                 .WithTraits("Item.", "Weapon.")
                 .WithKeywords("Restricted.")
-                .WithText("Attach to a Ranger character.\r\nAttached character gets +1 [Attack] (+2 [Attack] instead when attacking an enemy with an attachment on it).")
+                .WithText("Attach to a Ranger character.\r\nAttached character gets +1 Attack (+2 Attack instead when attacking an enemy with an attachment on it).")
                 .WithFlavor("Two had spears in their hands with broad bright heads.\r\n-The Two Towers")
                 .WithInfo(145, 3, Artist.Marius_Bota));
             Cards.Add(Card.Attachment("Prince of Dol Amroth", "", Sphere.Neutral, 3)
