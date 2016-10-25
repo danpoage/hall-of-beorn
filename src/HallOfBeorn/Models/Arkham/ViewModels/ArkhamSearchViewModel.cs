@@ -22,24 +22,48 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         public ArkhamDeckType? DeckType { get; set; }
         public ClassSymbol? CardClass { get; set; }
         public Uniqueness? IsUnique { get; set; }
-        public byte? Health { get; set; }
-        public byte? Sanity { get; set; }
+        public SkillIcon? SkillIcon { get; set; }
+        
+        public NumericOperator? WillpowerOp { get; set; }
         public byte? Willpower { get; set; }
+        public NumericOperator? IntellectOp { get; set; }
         public byte? Intellect { get; set; }
+        public NumericOperator? CombatOp { get; set; }
         public byte? Combat { get; set; }
+        public NumericOperator? AgilityOp { get; set; }
         public byte? Agility { get; set; }
+        public NumericOperator? HealthOp { get; set; }
+        public byte? Health { get; set; }
+        public NumericOperator? SanityOp { get; set; }
+        public byte? Sanity { get; set; }
+        public NumericOperator? CostOp { get; set; }
+        public string Cost { get; set; }
+        public NumericOperator? LevelOp { get; set; }
+        public string Level { get; set; }
+
+
         public string Trait { get; set; }
         public string Keyword { get; set; }
+        public string VictoryPoints { get; set; }
 
+        public NumericOperator? ShroudOp { get; set; }
         public string Shroud { get; set; }
+        public NumericOperator? ClueValueOp { get; set; }
         public string ClueValue { get; set; }
         public ConnectionSymbol? LocationSymbol { get; set; }
         public ConnectionSymbol? ConnectsTo { get; set; }
+        public NumericOperator? EnemyFightValueOp { get; set; }
         public string EnemyFightValue { get; set; }
+        public NumericOperator? EnemyHealthValueOp { get; set; }
         public string EnemyHealthValue { get; set; }
+        public NumericOperator? EnemyEvadeValueOp { get; set; }
         public string EnemyEvadeValue { get; set; }
+        public NumericOperator? DamageOp { get; set; }
         public string Damage { get; set; }
+        public NumericOperator? HorrorOp { get; set; }
         public string Horror { get; set; }
+
+        public string Artist { get; set; }
 
         public static IEnumerable<SelectListItem> Sorts
         {
@@ -49,6 +73,29 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         public static IEnumerable<SelectListItem> Views
         {
             get { return typeof(ArkhamSearchView).GetSelectListItems(" "); }
+        }
+
+        public static IEnumerable<SelectListItem> NumericOperators
+        {
+            get {
+                Func<NumericOperator, string> mapFunction = (n) =>
+                {
+                    switch (n) {
+                        case NumericOperator.eq:
+                        default:
+                            return "=";
+                        case NumericOperator.gt:
+                            return ">";
+                        case NumericOperator.gteq:
+                            return ">=";
+                        case NumericOperator.lt:
+                            return "<";
+                        case NumericOperator.lteq:
+                            return "<=";
+                    }
+                };
+                return typeof(NumericOperator).GetSelectListItems<NumericOperator>(mapFunction); 
+            }
         }
 
         public static IEnumerable<SelectListItem> CardTypes
@@ -86,6 +133,22 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         {
             get;
             set;
+        }
+
+        public static IEnumerable<SelectListItem> CostValues
+        {
+            get;
+            set;
+        }
+
+        public static IEnumerable<SelectListItem> LevelValues
+        {
+            get { return new List<string>{ "0", "1", "2", "3", "4", "5" }.GetSelectListItems(); }
+        }
+
+        public static IEnumerable<SelectListItem> SkillIconValues
+        {
+            get { return typeof(SkillIcon).GetSelectListItems(" "); }
         }
 
         private static readonly Dictionary<Skill, IEnumerable<SelectListItem>> valuesBySkill = new Dictionary<Skill, IEnumerable<SelectListItem>>();
@@ -164,7 +227,19 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             get;
             set;
         }
-        
+
+        public static IEnumerable<SelectListItem> VictoryPointsValues
+        {
+            get;
+            set;
+        }
+
+        public static IEnumerable<SelectListItem> ArtistValues
+        {
+            get;
+            set;
+        }
+
         public List<ArkhamCardViewModel> Cards()
         {
             return cards;

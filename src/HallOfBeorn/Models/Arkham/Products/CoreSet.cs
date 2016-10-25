@@ -35,17 +35,23 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithFrontText("Roland Banks deck only.\r\nUses (4 ammo).\r\nAction - Spend 1 ammo: Fight. You get +1 Combat for this attack (if there are 1 or more clues on this location, you get +3 combat instead). This attack deals +1 damage.")
                 .WithInfo(6, 1, Artist.Tiziano_Baracchi));
 
-            addCard(ArkhamCard.Event("Lucky!", ClassSymbol.Survivor, Number.One, Level.Zero)
+            addCard(ArkhamCard.Event("Lucky!", ClassSymbol.Survivor, Number.One, 0)
                 .WithTraits("Fortune.")
                 .WithKeywords("Fast.")
                 .WithFrontText("Fast. Play when you would fail a skill test. Get +2 to your skill value for that test.")
                 .WithInfo(80, 1, Artist.David_A_Nash));
-            addCard(ArkhamCard.Event("Lucky!", ClassSymbol.Survivor, Number.One, Level.Two)
+            addCard(ArkhamCard.Event("Lucky!", ClassSymbol.Survivor, Number.One, 2)
                 .WithTraits("Fortune.")
                 .WithKeywords("Fast.")
                 .WithFrontText("Fast. Play when you would fail a skill test. Get +2 to your skill value for that test. Draw 1 card.")
                 .WithInfo(84, 1, Artist.David_A_Nash));
-            
+
+            addCard(ArkhamCard.Event("Emergency Cache", ClassSymbol.None, Number.Of(0), 0)
+                .WithTraits("Supply.")
+                .WithFrontText("Gain 3 resources.")
+                .WithFrontFlavor("You can never be too prepared.")
+                .WithInfo(88, 1, Artist.Vincent_Dutrait));
+
             addCard(ArkhamCard.Location("Study", ConnectionSymbol.Study, Shroud.Of(2), ClueValue.Of(2).PerInvestigator())
                 .WithFrontFlavor("You've been investigating the strange events occurring in Arkham for several years now. Your desk is covered in newspaper articles, police reports, and witness accounts.")
                 .WithBackFlavor("The door to your study has vanished")

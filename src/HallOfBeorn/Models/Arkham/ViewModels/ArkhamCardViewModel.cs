@@ -24,7 +24,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         { 
             get
             {
-                return (card.Level != Level.NA && card.Level != Level.Zero) ?
+                return (card.Level.HasValue && card.Level.Value > 0) ?
                     string.Format("{0} ({1})", card.Title, (sbyte)card.Level)
                     : card.Title;
             }
@@ -54,7 +54,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         {
             var slug = card.Title.ToUrlSafeString();
             var product = card.Product.Name.ToUrlSafeString();
-            var level = (card.Level != Level.NA && card.Level != Level.Zero) ? ((sbyte)card.Level).ToString() : string.Empty;
+            var level = (card.Level.HasValue && card.Level.Value > 0) ? card.Level.ToString() : string.Empty;
 
             return string.Format("{0}/{1}/{2}{3}", arkhamCardImages, product, slug, level);
         }

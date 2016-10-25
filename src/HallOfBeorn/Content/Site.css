@@ -659,6 +659,20 @@ tr.pager td {
     margin-right: 12px;
 }
 
+.search-filter-fixed {
+    display: inline-block;
+    width: 190px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.search-filter-fixed-long {
+    display: inline-block;
+    width: 260px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
 .search-group {
     display: inline-block;
 }
@@ -721,6 +735,14 @@ tr.pager td {
     display: inline-block;
     margin-right:2px;
     width:72px;
+    color: #3e5667;
+    font-size: 12px;
+}
+
+.search-label-medium {
+    display: inline-block;
+    margin-right:2px;
+    width:75px;
     color: #3e5667;
     font-size: 12px;
 }
@@ -1493,3 +1515,18 @@ tr.pager td {
 .arkham-filterLine {
     color: #616161;
 }
+
+.search-label-tiny {
+    display: inline-block;
+    margin-right: 2px;
+    width: 40px;
+    color: #3e5667;
+    font-size: 12px;
+}
+
+/*
+.search-select-tiny {
+    margin-right: 6px;
+    width: 80px;
+}
+*/

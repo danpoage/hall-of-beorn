@@ -56,6 +56,18 @@ namespace HallOfBeorn.Services.Arkham
                 yield return card.Sanity.ToString();
         }
 
+        public IEnumerable<string> CostValues()
+        {
+            foreach (var card in Cards().Where(x => x.Cost.HasValue))
+                yield return card.Cost.Value.ToString();
+        }
+
+        public IEnumerable<string> VictoryPointsValues()
+        {
+            foreach (var card in Cards().Where(x => x.VictoryPoints.HasValue))
+                yield return string.Format("Victory {0}", card.VictoryPoints.Value);
+        }
+
         public IEnumerable<string> SkillValues(Skill skill)
         {
             foreach (var card in Cards())
@@ -109,6 +121,11 @@ namespace HallOfBeorn.Services.Arkham
 
                 yield return getStat(card, type);
             }
+        }
+        public IEnumerable<string> Artists()
+        {
+            foreach (var card in Cards())
+                yield return card.Artist.Name;
         }
     }
 }

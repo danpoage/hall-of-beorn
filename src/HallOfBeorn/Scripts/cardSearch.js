@@ -176,10 +176,10 @@ $(document).ready(function () {
         $("#CardSet").val(cardSet);
     }
 
-    if (hasMoreOptions()) {
-        $('#moreOptionsButton').text('Fewer Search Options');
-        $('#moreOptionsContainer').show();
-    }
+    //if (hasMoreOptions()) {
+    //    $('#moreOptionsButton').text('Fewer Search Options');
+    //    $('#moreOptionsContainer').show();
+    //}
 
     $('.search-explanation-button').click(function () {
         var text = $(this).parent().find('#search-explanation-text');

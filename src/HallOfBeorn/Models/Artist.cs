@@ -1057,5 +1057,7 @@ namespace HallOfBeorn.Models
         public static Artist Yigit_Koroglu = new Artist { Name = "Yigit Koroglu", URL = "http://yigitkoroglu.deviantart.com" };
         public static Artist Yoann_Boissonnet = new Artist { Name = "Yoann Boissonnet", URL = "http://yoannboissonnet.carbonmade.com" };
         public static Artist Yog_Joshi = new Artist { Name = "Yog Joshi", URL = "http://www.yogjoshi.com" };
+
+        public static Artist Vincent_Dutrait = new Artist { Name = "Vincent Dutrait", URL = "http://www.vincentdutrait.com" };
     }
 }

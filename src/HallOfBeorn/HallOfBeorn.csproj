@@ -207,14 +207,12 @@
     <Compile Include="Models\Arkham\ConnectionSymbol.cs" />
     <Compile Include="Models\Arkham\DoomValue.cs" />
     <Compile Include="Models\Arkham\StatType.cs" />
-    <Compile Include="Models\Arkham\Level.cs" />
     <Compile Include="Models\Arkham\ArkhamCardType.cs" />
     <Compile Include="Models\Arkham\ClueValue.cs" />
     <Compile Include="Models\Arkham\ArkhamProduct.cs" />
     <Compile Include="Models\Arkham\ClassSymbol.cs" />
     <Compile Include="Models\Arkham\ArkhamSearchResult.cs" />
     <Compile Include="Models\Arkham\Number.cs" />
-    <Compile Include="Models\Arkham\VictoryPoints.cs" />
     <Compile Include="Models\Arkham\ViewModels\ArkhamSearchView.cs" />
     <Compile Include="Models\Arkham\ViewModels\ArkhamSearchSort.cs" />
     <Compile Include="Models\Arkham\Shroud.cs" />

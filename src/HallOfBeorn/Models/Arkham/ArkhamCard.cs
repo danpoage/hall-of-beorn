@@ -9,7 +9,6 @@ namespace HallOfBeorn.Models.Arkham
     {
         private ArkhamCard()
         {
-            Level = Level.NA;
             AssetSlot = AssetSlot.NA;
         }
 
@@ -31,7 +30,7 @@ namespace HallOfBeorn.Models.Arkham
         public Number? Agility { get; protected set; }
 
         public Number? Cost { get; protected set; }
-        public Level Level { get; protected set; }
+        public byte? Level { get; protected set; }
         public AssetSlot AssetSlot { get; protected set; }
         
         public Number? Shroud { get; protected set; }
@@ -59,7 +58,7 @@ namespace HallOfBeorn.Models.Arkham
         public ClassSymbol ClassSymbol { get; private set; }
         public byte Health { get; private set; }
         public byte Sanity { get; private set; }
-        public byte VictoryPoints { get; private set; }
+        public byte? VictoryPoints { get; private set; }
         public ArkhamEncounterSet EncounterSet { get; private set; }
 
         protected void addTraits(IEnumerable<string> traits)
@@ -80,7 +79,7 @@ namespace HallOfBeorn.Models.Arkham
         public static string GetSlug(ArkhamCard card)
         {
             var name = card.Title.ToUrlSafeString();
-            var level = (card.Level != Level.NA && card.Level != Level.Zero) ? ((sbyte)card.Level).ToString() : string.Empty;
+            var level = (card.Level.HasValue && card.Level.Value > 0) ? card.Level.ToString() : string.Empty;
             var product = card.Product.Abbreviation;
             return string.Format("{0}{1}-{2}", name, level, product);
         }
@@ -138,7 +137,7 @@ namespace HallOfBeorn.Models.Arkham
             };
         }
 
-        public static ArkhamCard Event(string title, ClassSymbol classSymbol, Number cost, Level level)
+        public static ArkhamCard Event(string title, ClassSymbol classSymbol, Number cost, byte level)
         {
             return new ArkhamCard()
             {
@@ -209,7 +208,7 @@ namespace HallOfBeorn.Models.Arkham
             return this;
         }
 
-        public ArkhamCard WithLevel(Level level)
+        public ArkhamCard WithLevel(byte level)
         {
             this.Level = level;
             return this;

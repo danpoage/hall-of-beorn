@@ -56,6 +56,20 @@ namespace HallOfBeorn.Services.Arkham
 
         #region Filters
 
+        private static Func<string, byte?, bool> hasVictoryPoints = (filter, vp) =>
+        {
+            if (!vp.HasValue)
+                return false;
+
+            var f = filter.Replace("Victory ", string.Empty).Trim();
+            if (string.IsNullOrEmpty(f))
+                return false;
+            byte fNum = 0;
+            byte.TryParse(f, out fNum);
+
+            return fNum == vp.Value;
+        };
+
         private static Func<string, string> normalizer = x => { return x.ToLowerSafe().NormalizeString().Replace(".", string.Empty); };
 
         private Func<string, ArkhamCard, float> scoreTitle = (query, card) =>
@@ -252,6 +266,18 @@ namespace HallOfBeorn.Services.Arkham
                     if (model.Sanity.HasValue && model.Sanity.Value > 0 && card.Sanity != model.Sanity.Value) {
                         continue;
                     }
+                    if (!string.IsNullOrEmpty(model.Cost) && model.Cost != "Any" && (!card.Cost.HasValue || model.Cost != card.Cost.Value.ToString()))
+                    {
+                        continue;
+                    }
+                    if (!string.IsNullOrEmpty(model.Level) && model.Level != "Any" && (!card.Level.HasValue || model.Level != card.Level.Value.ToString()))
+                    {
+                        continue;
+                    }
+
+                    if (model.SkillIcon.HasValue && model.SkillIcon.Value != SkillIcon.None && !card.SkillIcons().Any(x => x == model.SkillIcon)) {
+                        continue;
+                    }
                     if (model.Willpower.HasValue && model.Willpower.Value > 0 && card.Willpower.HasValue && model.Willpower.Value != card.Willpower.Value.Value)
                     {
                         continue;
@@ -273,6 +299,10 @@ namespace HallOfBeorn.Services.Arkham
                         continue;
                     }
                     if (!string.IsNullOrEmpty(model.Keyword) && model.Keyword != "Any" && !card.Keywords().Any(x => x.Replace(".", "") == model.Keyword.Replace(".", "")))
+                    {
+                        continue;
+                    }
+                    if (!string.IsNullOrEmpty(model.VictoryPoints) && model.VictoryPoints != "Any" && !hasVictoryPoints(model.VictoryPoints, card.VictoryPoints))
                     {
                         continue;
                     }
@@ -319,7 +349,9 @@ namespace HallOfBeorn.Services.Arkham
                         if (!cardMatchesNumberFilter(model.ClueValue, card.ClueValue))
                             continue;
                     }
-
+                    if (!string.IsNullOrEmpty(model.Artist) && model.Artist != "Any" && model.Artist != card.Artist.Name) {
+                        continue;
+                    }
                     results.Add(new ArkhamSearchResult(card, score));
                 }
             }

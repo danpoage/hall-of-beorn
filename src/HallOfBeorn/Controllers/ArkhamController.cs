@@ -49,6 +49,9 @@ namespace HallOfBeorn.Controllers
             if (model.Sanity.HasValue && model.Sanity == 0) {
                 model.Sanity = null;
             }
+            if (model.SkillIcon.HasValue && model.SkillIcon.Value == SkillIcon.None) {
+                model.SkillIcon = null;
+            }
             if (model.Willpower.HasValue && model.Willpower.Value == 0)
             {
                 model.Willpower = null;
@@ -72,6 +75,15 @@ namespace HallOfBeorn.Controllers
             if (string.IsNullOrEmpty(model.Keyword) || model.Keyword == "None" || model.Keyword == "Any")
             {
                 model.Keyword = null;
+            }
+            if (string.IsNullOrEmpty(model.VictoryPoints) ||  model.VictoryPoints == "Any") {
+                model.VictoryPoints = null;
+            }
+            if (string.IsNullOrEmpty(model.Cost) || model.Cost == "Any") {
+                model.Cost = null;
+            }
+            if (string.IsNullOrEmpty(model.Level) || model.Level == "Any") {
+                model.Level = null;
             }
             if (model.Sort.HasValue && model.Sort.Value == ArkhamSearchSort.None)
             {
@@ -117,12 +129,18 @@ namespace HallOfBeorn.Controllers
             {
                 model.ClueValue = null;
             }
+            if (string.IsNullOrEmpty(model.Artist) || model.Artist == "Any")
+            {
+                model.Artist = null;
+            }
 
             ArkhamSearchViewModel.Products = productRepository.Products().Select(x => { return x.Name; }).GetExtendedSelectListItems();
             ArkhamSearchViewModel.Traits = productRepository.Traits().Distinct().OrderBy(x => { return x; }).GetExtendedSelectListItems();
             ArkhamSearchViewModel.Keywords = productRepository.Keywords().Distinct().OrderBy(x => { return x; }).GetExtendedSelectListItems();
+            ArkhamSearchViewModel.VictoryPointsValues = productRepository.VictoryPointsValues().Distinct().OrderBy(x => { return x; }).GetExtendedSelectListItems();
             ArkhamSearchViewModel.HealthValues = productRepository.HealthValues().Distinct().OrderBy(x => { return x; }).GetExtendedSelectListItems();
             ArkhamSearchViewModel.SanityValues = productRepository.SanityValues().Distinct().OrderBy(x => { return x; }).GetExtendedSelectListItems();
+            ArkhamSearchViewModel.CostValues = productRepository.CostValues().Distinct().OrderBy(x => { return x; }).GetExtendedSelectListItems();
             ArkhamSearchViewModel.LoadSkillValues(Skill.Willpower, productRepository.SkillValues(Skill.Willpower).Distinct().Where(x => { return !string.IsNullOrEmpty(x); }).OrderBy(x => { return x; }).GetExtendedSelectListItems());
             ArkhamSearchViewModel.LoadSkillValues(Skill.Intellect, productRepository.SkillValues(Skill.Intellect).Distinct().Where(x => { return !string.IsNullOrEmpty(x); }).OrderBy(x => { return x; }).GetExtendedSelectListItems());
             ArkhamSearchViewModel.LoadSkillValues(Skill.Combat, productRepository.SkillValues(Skill.Combat).Distinct().Where(x => { return !string.IsNullOrEmpty(x); }).OrderBy(x => { return x; }).GetExtendedSelectListItems());
@@ -134,6 +152,7 @@ namespace HallOfBeorn.Controllers
             ArkhamSearchViewModel.LoadCardStats(StatType.Horror, productRepository.Stats(StatType.Horror, ArkhamCardViewModel.PerInvestigatorDescription).Distinct().Where(x => { return !string.IsNullOrEmpty(x); }).OrderBy(x => { return x; }).GetExtendedSelectListItems());
             ArkhamSearchViewModel.LoadCardStats(StatType.Shroud, productRepository.Stats(StatType.Shroud, ArkhamCardViewModel.PerInvestigatorDescription).Distinct().Where(x => { return !string.IsNullOrEmpty(x); }).OrderBy(x => { return x; }).GetExtendedSelectListItems());
             ArkhamSearchViewModel.LoadCardStats(StatType.ClueValue, productRepository.Stats(StatType.ClueValue, ArkhamCardViewModel.PerInvestigatorDescription).Distinct().Where(x => { return !string.IsNullOrEmpty(x); }).OrderBy(x => { return x; }).GetExtendedSelectListItems());
+            ArkhamSearchViewModel.ArtistValues = productRepository.Artists().Distinct().OrderBy(x => { return x; }).GetExtendedSelectListItems();
         }
 
         public ActionResult Details(string id)

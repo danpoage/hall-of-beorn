@@ -28,70 +28,66 @@
     </div>
 
      <div class="search-row">
+         <div class="search-section">Set</div>
         <div class="search-items">
-            <span class="search-filter">
+            <span class="search-filter-fixed-long">
             <span class="search-label-short">Product</span>
             @Html.DropDownList("Product", ArkhamSearchViewModel.Products, new { @class = "search-select" })
+            </span>
+
+            <span class="search-filter-fixed-long">
+            <span class="search-label-short">Artist</span>
+            @Html.DropDownListFor(x => x.Artist, ArkhamSearchViewModel.ArtistValues, new { @class = "search-select" })
             </span>
         </div>
     </div>
     
      <div class="search-row">
-        <div class="search-items">
-            <span class="search-filter">
+         <div class="search-section">Type</div>
+         <div class="search-items">
+            <span class="search-filter-fixed">
             <span class="search-label-short">Card Type</span>
             @Html.DropDownListFor(x => x.CardType, ArkhamSearchViewModel.CardTypes, new { @class = "search-select-short" })
             </span>
 
-            <span class="search-filter">
+            <span class="search-filter-fixed">
             <span class="search-label-short">Card Class</span>
             @Html.DropDownListFor(x => x.CardClass, ArkhamSearchViewModel.CardClasses, new { @class = "search-select-short" })
             </span>
 
-            <span class="search-filter">
+            <span class="search-filter-fixed">
             <span class="search-label-short">Deck Type</span>
             @Html.DropDownListFor(x => x.DeckType, ArkhamSearchViewModel.DeckTypes, new { @class = "search-select-short" })
             </span>
 
-            <span class="search-filter">
+            <span class="search-filter-fixed">
             <span class="search-label-short">Unique</span>
             @Html.DropDownListFor(x => x.IsUnique, ArkhamSearchViewModel.UniquenessValues, new { @class = "search-select-short" })
             </span>
-
-            @*
-            <span class="search-filter">
-            <span class="search-label-short" title="Scenario">Scenario</span>
-            @Html.DropDownListFor(x => x.Scenario, SearchViewModel.Scenarios, new { @class = "search-select" })
-            </span>
-
-            <span class="search-filter">
-            <span class="search-label-short">Encounter</span>
-            @Html.DropDownListFor(x => x.EncounterSet, SearchViewModel.EncounterSets, new { @class = "search-select" })
-            </span>
-            *@
         </div>
     </div>
 
     <div class="search-row">
-        <div class="search-item">
-            <span class="search-filter">
+        <div class="search-section">Text</div>
+        <div class="search-items">
+            <span class="search-filter-fixed">
             <span class="search-label-short">Traits</span>
             @Html.DropDownListFor(x => x.Trait, ArkhamSearchViewModel.Traits, new { @class = "search-select-short" })
             </span>
 
-            <span class="search-filter">
+            <span class="search-filter-fixed">
             <span class="search-label-short">Keywords</span>
             @Html.DropDownListFor(x => x.Keyword, ArkhamSearchViewModel.Keywords, new { @class = "search-select-short" })
             </span>
 
-            <span class="search-filter">
-            <span class="search-label-short">Health</span>
-            @Html.DropDownListFor(x => x.Health, ArkhamSearchViewModel.HealthValues, new { @class = "search-select-short" })
+            <span class="search-filter-fixed">
+            <span class="search-label-short">Victory</span>
+            @Html.DropDownListFor(x => x.VictoryPoints, ArkhamSearchViewModel.VictoryPointsValues, new { @class = "search-select-short" })
             </span>
 
-            <span class="search-filter">
-            <span class="search-label-short">Sanity</span>
-            @Html.DropDownListFor(x => x.Sanity, ArkhamSearchViewModel.SanityValues, new { @class = "search-select-short" })
+            <span class="search-filter-fixed">
+            <span class="search-label-short">Icons</span>
+            @Html.DropDownListFor(x => x.SkillIcon, ArkhamSearchViewModel.SkillIconValues, new { @class = "search-select-short" })
             </span>
         </div>
     </div>
@@ -99,82 +95,124 @@
     <hr class="arkham-filterLine" />
     
     <div class="search-row">
-        <div class="search-item">
-            <span class="search-filter">
-            <span class="search-label-short">Willpower</span>
-            @Html.DropDownListFor(x => x.Willpower, ArkhamSearchViewModel.WillpowerValues, new { @class = "search-select-short" })
+        <div class="search-section">Stats</div>
+        <div class="search-items">
+            <span class="search-filter-fixed">
+            <span class="search-label-tiny"><img src="/Images/Arkham/Willpower.png"></span>
+            @Html.DropDownListFor(x => x.WillpowerOp, ArkhamSearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+            @Html.DropDownListFor(x => x.Willpower, ArkhamSearchViewModel.WillpowerValues, new { @class = "search-select-tiny" })
             </span>
 
-            <span class="search-filter">
-            <span class="search-label-short">Intellect</span>
-            @Html.DropDownListFor(x => x.Intellect, ArkhamSearchViewModel.IntellectValues, new { @class = "search-select-short" })
+            <span class="search-filter-fixed">
+            <span class="search-label-tiny"><img src="/Images/Arkham/Intellect.png"></span>
+            @Html.DropDownListFor(x => x.IntellectOp, ArkhamSearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+            @Html.DropDownListFor(x => x.Intellect, ArkhamSearchViewModel.IntellectValues, new { @class = "search-select-tiny" })
             </span>
 
-            <span class="search-filter">
-            <span class="search-label-short">Combat</span>
-            @Html.DropDownListFor(x => x.Combat, ArkhamSearchViewModel.CombatValues, new { @class = "search-select-short" })
+            <span class="search-filter-fixed">
+            <span class="search-label-tiny"><img src="/Images/Arkham/Combat.png"></span>
+            @Html.DropDownListFor(x => x.CombatOp, ArkhamSearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+            @Html.DropDownListFor(x => x.Combat, ArkhamSearchViewModel.CombatValues, new { @class = "search-select-tiny" })
             </span>
 
-            <span class="search-filter">
-            <span class="search-label-short">Agility</span>
-            @Html.DropDownListFor(x => x.Agility, ArkhamSearchViewModel.AgilityValues, new { @class = "search-select-short" })
+            <span class="search-filter-fixed">
+            <span class="search-label-tiny"><img src="/Images/Arkham/Agility.png"></span>
+            @Html.DropDownListFor(x => x.AgilityOp, ArkhamSearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+            @Html.DropDownListFor(x => x.Agility, ArkhamSearchViewModel.AgilityValues, new { @class = "search-select-tiny" })
             </span>
         </div>
     </div>
-    
+    <div class="search-row">
+        <div class="search-section"></div>
+        <div class="search-items">
+            <span class="search-filter-fixed">
+            <span class="search-label-tiny"><img src="/Images/Arkham/Health.png" width="17" height="20"></span>
+            @Html.DropDownListFor(x => x.HealthOp, ArkhamSearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+            @Html.DropDownListFor(x => x.Health, ArkhamSearchViewModel.HealthValues, new { @class = "search-select-tiny" })
+            </span>
+
+            <span class="search-filter-fixed">
+            <span class="search-label-tiny"><img src="/Images/Arkham/Sanity.png" width="20" height="16"></span>
+            @Html.DropDownListFor(x => x.SanityOp, ArkhamSearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+            @Html.DropDownListFor(x => x.Sanity, ArkhamSearchViewModel.SanityValues, new { @class = "search-select-tiny" })
+            </span>
+
+            <span class="search-filter-fixed">
+            <span class="search-label-tiny">Cost</span>
+            @Html.DropDownListFor(x => x.CostOp, ArkhamSearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+            @Html.DropDownListFor(x => x.Cost, ArkhamSearchViewModel.CostValues, new { @class = "search-select-tiny" })
+            </span>
+            
+            <span class="search-filter-fixed">
+            <span class="search-label-tiny">Level</span>
+            @Html.DropDownListFor(x => x.LevelOp, ArkhamSearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+            @Html.DropDownListFor(x => x.Level, ArkhamSearchViewModel.LevelValues, new { @class = "search-select-tiny" })
+            </span>
+        </div>
+    </div>
     <hr class="arkham-filterLine" />
         
     <div class="search-row">
-        <div class="search-item">
-            <span class="search-filter">
-            <span class="search-label-short">Location</span>
-            @Html.DropDownListFor(x => x.LocationSymbol, ArkhamSearchViewModel.ConnectionSymbols, new { @class = "search-select-short" })
+        <div class="search-section">Location</div>
+        <div class="search-items">
+            <span class="search-filter-fixed">
+                <span class="search-label-short">Symbol</span>
+                @Html.DropDownListFor(x => x.LocationSymbol, ArkhamSearchViewModel.ConnectionSymbols, new { @class = "search-select-short" })
             </span>
 
-            <span class="search-filter">
-            <span class="search-label-short">Connects To</span>
-            @Html.DropDownListFor(x => x.ConnectsTo, ArkhamSearchViewModel.ConnectionSymbols, new { @class = "search-select-short" })
+            <span class="search-filter-fixed">
+                <span class="search-label-short">Connects To</span>
+                @Html.DropDownListFor(x => x.ConnectsTo, ArkhamSearchViewModel.ConnectionSymbols, new { @class = "search-select-short" })
             </span>
 
-            <span class="search-filter">
-            <span class="search-label-short">Shroud</span>
-            @Html.DropDownListFor(x => x.Shroud, ArkhamSearchViewModel.ShroudValues, new { @class = "search-select-short" })
+            <span class="search-filter-fixed">
+            <span class="search-label-tiny">Shroud</span>
+            @Html.DropDownListFor(x => x.ShroudOp, ArkhamSearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+            @Html.DropDownListFor(x => x.Shroud, ArkhamSearchViewModel.ShroudValues, new { @class = "search-select-tiny" })
             </span>
 
-            <span class="search-filter">
-            <span class="search-label-short">Clue Value</span>
-            @Html.DropDownListFor(x => x.ClueValue, ArkhamSearchViewModel.ClueValues, new { @class = "search-select-short" })
+            <span class="search-filter-fixed">
+            <span class="search-label-tiny">Clues</span>
+            @Html.DropDownListFor(x => x.ClueValueOp, ArkhamSearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+            @Html.DropDownListFor(x => x.ClueValue, ArkhamSearchViewModel.ClueValues, new { @class = "search-select-tiny" })
             </span>
         </div>
     </div>
     <div class="search-row">
-        <div class="search-item">
-            <span class="search-filter">
-            <span class="search-label-short">Enemy Fight Value</span>
-            @Html.DropDownListFor(x => x.EnemyFightValue, ArkhamSearchViewModel.EnemyFightValues, new { @class = "search-select-short" })
+        <div class="search-section">Enemy</div>
+        <div class="search-items">
+            <span class="search-filter-fixed">
+            <span class="search-label-tiny">Fight</span>
+            @Html.DropDownListFor(x => x.EnemyFightValueOp, ArkhamSearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+            @Html.DropDownListFor(x => x.EnemyFightValue, ArkhamSearchViewModel.EnemyFightValues, new { @class = "search-select-tiny" })
             </span>
 
-            <span class="search-filter">
-            <span class="search-label-short">Enemy Health Value</span>
-            @Html.DropDownListFor(x => x.EnemyHealthValue, ArkhamSearchViewModel.EnemyHealthValues, new { @class = "search-select-short" })
+            <span class="search-filter-fixed">
+            <span class="search-label-tiny">Health</span>
+            @Html.DropDownListFor(x => x.EnemyHealthValueOp, ArkhamSearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+            @Html.DropDownListFor(x => x.EnemyHealthValue, ArkhamSearchViewModel.EnemyHealthValues, new { @class = "search-select-tiny" })
             </span>
 
-            <span class="search-filter">
-            <span class="search-label-short">Enemy Evade Value</span>
-            @Html.DropDownListFor(x => x.EnemyEvadeValue, ArkhamSearchViewModel.EnemyEvadeValues, new { @class = "search-select-short" })
+            <span class="search-filter-fixed">
+            <span class="search-label-tiny">Evade</span>
+            @Html.DropDownListFor(x => x.EnemyEvadeValueOp, ArkhamSearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+            @Html.DropDownListFor(x => x.EnemyEvadeValue, ArkhamSearchViewModel.EnemyEvadeValues, new { @class = "search-select-tiny" })
             </span>
         </div>
     </div>
     <div class="search-row">
-        <div class="search-item">
-            <span class="search-filter">
-            <span class="search-label-short">Damage</span>
-            @Html.DropDownListFor(x => x.Damage, ArkhamSearchViewModel.DamageValues, new { @class = "search-select-short" })
+        <div class="search-section"></div>
+        <div class="search-items">
+            <span class="search-filter-fixed">
+            <span class="search-label-tiny">Damage</span>
+            @Html.DropDownListFor(x => x.DamageOp, ArkhamSearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+            @Html.DropDownListFor(x => x.Damage, ArkhamSearchViewModel.DamageValues, new { @class = "search-select-tiny" })
             </span>
 
-            <span class="search-filter">
-            <span class="search-label-short">Horror</span>
-            @Html.DropDownListFor(x => x.Horror, ArkhamSearchViewModel.HorrorValues, new { @class = "search-select-short" })
+            <span class="search-filter-fixed">
+            <span class="search-label-tiny">Horror</span>
+            @Html.DropDownListFor(x => x.HorrorOp, ArkhamSearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+            @Html.DropDownListFor(x => x.Horror, ArkhamSearchViewModel.HorrorValues, new { @class = "search-select-tiny" })
             </span>
         </div>
     </div>
