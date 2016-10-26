@@ -56,8 +56,8 @@ namespace HallOfBeorn.Models.Arkham
         public Artist Artist { get; protected set; }
 
         public ClassSymbol ClassSymbol { get; private set; }
-        public byte Health { get; private set; }
-        public byte Sanity { get; private set; }
+        public byte? Health { get; private set; }
+        public byte? Sanity { get; private set; }
         public byte? VictoryPoints { get; private set; }
         public ArkhamEncounterSet EncounterSet { get; private set; }
 

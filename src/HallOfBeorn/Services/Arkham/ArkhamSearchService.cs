@@ -224,6 +224,93 @@ namespace HallOfBeorn.Services.Arkham
             return highest;
         }
 
+        private bool checkByteValue(byte filterValue, NumericOperator op, Number cardValue)
+        {
+            return checkStringValue(filterValue.ToString(), op, cardValue);
+        }
+
+        private bool checkStringValue(string filterValue, NumericOperator op, Number cardValue)
+        {
+            if (string.IsNullOrEmpty(filterValue) || filterValue == "Any") {
+                return true;
+            }
+
+            var IsPerInvestigator = filterValue.Contains(ArkhamCardViewModel.PerInvestigatorDescription);
+            var isX = false;
+            var isNotApplicable = false;
+            byte val = 0;
+            var token = filterValue.Replace(ArkhamCardViewModel.PerInvestigatorDescription, string.Empty).Trim();
+            if (!byte.TryParse(token, out val)) {
+                isX = (token == "X");
+                isNotApplicable = (token == "-");
+            }
+            var filterNumber = new Number { Value = val, IsX = isX, IsNotApplicable = isNotApplicable, IsPerInvestigator = IsPerInvestigator };
+
+            if (!filterNumber.FlagsMatch(cardValue))
+                return false;
+
+            switch (op)
+            {
+                case NumericOperator.gt:
+                    return cardValue > filterNumber;
+                case NumericOperator.gteq:
+                    return cardValue >= filterNumber;
+                case NumericOperator.lt:
+                    return cardValue < filterNumber;
+                case NumericOperator.lteq:
+                    return cardValue <= filterNumber;
+                default:
+                case NumericOperator.eq:
+                    return cardValue == filterNumber;
+            }
+        }
+
+        private bool byteFiltersMatch(ArkhamSearchViewModel model, ArkhamCard card) {
+
+            var checks = new List<Tuple<byte?, NumericOperator?, Number?>>() {
+                    new Tuple<byte?, NumericOperator?, Number?>(model.Willpower, model.WillpowerOp, card.Willpower),
+                    new Tuple<byte?, NumericOperator?, Number?>(model.Intellect, model.IntellectOp, card.Intellect),
+                    new Tuple<byte?, NumericOperator?, Number?>(model.Combat, model.CombatOp, card.Combat),
+                    new Tuple<byte?, NumericOperator?, Number?>(model.Agility, model.AgilityOp, card.Agility),
+                    new Tuple<byte?, NumericOperator?, Number?>(model.Health, model.HealthOp, Number.Optional(card.Health)),
+                    new Tuple<byte?, NumericOperator?, Number?>(model.Sanity, model.SanityOp, Number.Optional(card.Sanity))
+            };
+
+            foreach (var c in checks) {
+                if (c.Item1.HasValue && c.Item2.HasValue)
+                {
+                    if (!c.Item3.HasValue)
+                        return false;
+
+                    if (!checkByteValue(c.Item1.Value, c.Item2.Value, c.Item3.Value))
+                        return false;
+                }
+            }
+
+            return true;
+        }
+
+        private bool stringFiltersMatch(ArkhamSearchViewModel model, ArkhamCard card) {
+
+            var checks = new List<Tuple<string, NumericOperator?, Number?>>() {
+                    new Tuple<string, NumericOperator?, Number?>(model.Cost, model.CostOp, card.Cost),
+                    new Tuple<string, NumericOperator?, Number?>(model.Level, model.LevelOp, Number.Optional(card.Level))
+            };
+
+            foreach (var c in checks) {
+                if (!string.IsNullOrEmpty(c.Item1) && c.Item2.HasValue)
+                {
+                    if (!c.Item3.HasValue)
+                        return false;
+
+                    if (!checkStringValue(c.Item1, c.Item2.Value, c.Item3.Value))
+                        return false;
+                }
+            }
+
+            return true;
+        }
+
         public IEnumerable<ArkhamSearchResult> Search(ArkhamSearchViewModel model)
         {
             var results = new List<ArkhamSearchResult>();
@@ -260,27 +347,28 @@ namespace HallOfBeorn.Services.Arkham
                     {
                         continue;
                     }
-                    if (model.Health.HasValue && model.Health.Value > 0 && card.Health != model.Health.Value) {
-                        continue;
-                    }
-                    if (model.Sanity.HasValue && model.Sanity.Value > 0 && card.Sanity != model.Sanity.Value) {
-                        continue;
-                    }
-                    if (!string.IsNullOrEmpty(model.Cost) && model.Cost != "Any" && (!card.Cost.HasValue || model.Cost != card.Cost.Value.ToString()))
-                    {
-                        continue;
-                    }
-                    if (!string.IsNullOrEmpty(model.Level) && model.Level != "Any" && (!card.Level.HasValue || model.Level != card.Level.Value.ToString()))
-                    {
-                        continue;
-                    }
-
+                    
                     if (model.SkillIcon.HasValue && model.SkillIcon.Value != SkillIcon.None && !card.SkillIcons().Any(x => x == model.SkillIcon)) {
                         continue;
                     }
-                    if (model.Willpower.HasValue && model.Willpower.Value > 0 && card.Willpower.HasValue && model.Willpower.Value != card.Willpower.Value.Value)
-                    {
+
+                    if (!byteFiltersMatch(model, card)) {
                         continue;
+                    }
+
+                    if (!stringFiltersMatch(model, card)) {
+                        continue;
+                    }
+
+                    /*
+                    //Stat checks
+                    if (model.Willpower.HasValue && model.Willpower.Value > 0 && model.WillpowerOp.HasValue)
+                    {
+                        if (!card.Willpower.HasValue)
+                            continue;
+
+                        if (!checkByteValue(model.Willpower.Value, model.WillpowerOp.Value, card.Willpower.Value))
+                            continue;
                     }
                     if (model.Intellect.HasValue && model.Intellect.Value > 0 && card.Intellect.HasValue && model.Intellect.Value != card.Intellect.Value.Value)
                     {
@@ -294,6 +382,7 @@ namespace HallOfBeorn.Services.Arkham
                     {
                         continue;
                     }
+                    */
                     if (!string.IsNullOrEmpty(model.Trait) && model.Trait != "Any" && !card.Traits().Any(x => x.Replace(".", "") == model.Trait.Replace(".", "")))
                     {
                         continue;
@@ -329,6 +418,7 @@ namespace HallOfBeorn.Services.Arkham
                         if (!cardMatchesNumberFilter(model.EnemyEvadeValue, card.EnemyEvadeValue))
                             continue;
                     }
+                    /*
                     if (!string.IsNullOrEmpty(model.Damage) && model.Damage != "Any")
                     {
                         if (!cardMatchesNumberFilter(model.Damage, card.Damage))
@@ -349,9 +439,12 @@ namespace HallOfBeorn.Services.Arkham
                         if (!cardMatchesNumberFilter(model.ClueValue, card.ClueValue))
                             continue;
                     }
+                    */
+
                     if (!string.IsNullOrEmpty(model.Artist) && model.Artist != "Any" && model.Artist != card.Artist.Name) {
                         continue;
                     }
+
                     results.Add(new ArkhamSearchResult(card, score));
                 }
             }

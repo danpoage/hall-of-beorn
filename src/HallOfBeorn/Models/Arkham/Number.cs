@@ -33,6 +33,11 @@ namespace HallOfBeorn.Models.Arkham
             return new Number { Value = value };
         }
 
+        public static Number? Optional(byte? value)
+        {
+            return value.HasValue ? new Number { Value = value.Value } : (Number?)null;
+        }
+
         public Number PerInvestigator()
         {
             this.IsPerInvestigator = true;
@@ -64,5 +69,56 @@ namespace HallOfBeorn.Models.Arkham
             return IsPerInvestigator ? string.Format("{0} {1}", Value, perInvestigatorSuffix) : Value.ToString();
         }
 
+        public static bool operator <(Number num1, Number num2) {
+            return Comparison(num1, num2) < 0;
+        }
+
+        public static bool operator >(Number num1, Number num2) {
+            return Comparison(num1, num2) > 0;
+        }
+
+        public static bool operator ==(Number num1, Number num2) {
+            return Comparison(num1, num2) == 0;
+        }
+
+        public static bool operator !=(Number num1, Number num2) {
+            return Comparison(num1, num2) != 0;
+        }
+
+        public override bool Equals(object obj) {
+            if (!(obj is Number)) return false;
+            return this == (Number)obj;
+        }
+
+        public static bool operator <=(Number num1, Number num2) {
+            return Comparison(num1, num2) <= 0;
+        }
+
+        public static bool operator >=(Number num1, Number num2) {
+            return Comparison(num1, num2) >= 0;
+        }
+
+        public static int Comparison(Number num1, Number num2) {
+            if (num1.Value < num2.Value)
+                return -1;
+            else if (num1.Value == num2.Value)
+                return 0;
+            else if (num1.Value > num2.Value)
+                return 1;
+
+            return 0;
+        }
+
+        public override int GetHashCode()
+        {
+            return Value.GetHashCode();
+        }
+
+        public bool FlagsMatch(Number num1)
+        {
+            return this.IsPerInvestigator == num1.IsPerInvestigator &&
+                this.IsX == num1.IsX &&
+                this.IsNotApplicable == num1.IsNotApplicable;
+        }
     }
 }

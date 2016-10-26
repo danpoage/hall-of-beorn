@@ -43,31 +43,35 @@ namespace HallOfBeorn.Controllers
             {
                 model.IsUnique = null;
             }
-            if (model.Health.HasValue && model.Health == 0) {
-                model.Health = null;
-            }
-            if (model.Sanity.HasValue && model.Sanity == 0) {
-                model.Sanity = null;
-            }
             if (model.SkillIcon.HasValue && model.SkillIcon.Value == SkillIcon.None) {
                 model.SkillIcon = null;
             }
-            if (model.Willpower.HasValue && model.Willpower.Value == 0)
-            {
+
+            if (!model.Health.HasValue || model.Health.Value == 0) {
+                model.Health = null;
+                model.HealthOp = null;
+            }
+            if (!model.Sanity.HasValue || model.Sanity.Value == 0) {
+                model.Sanity = null;
+                model.SanityOp = null;
+            }
+            if (!model.Willpower.HasValue || model.Willpower.Value == 0) {
                 model.Willpower = null;
+                model.WillpowerOp = null;
             }
-            if (model.Intellect.HasValue && model.Intellect.Value == 0)
-            {
+            if (!model.Intellect.HasValue || model.Intellect.Value == 0) {
                 model.Intellect = null;
+                model.IntellectOp = null;
             }
-            if (model.Combat.HasValue && model.Combat.Value == 0)
-            {
+            if (!model.Combat.HasValue || model.Combat.Value == 0) {
                 model.Combat = null;
+                model.CombatOp = null;
             }
-            if (model.Agility.HasValue && model.Agility.Value == 0)
-            {
+            if (!model.Agility.HasValue || model.Agility.Value == 0) {
                 model.Agility = null;
+                model.AgilityOp = null;
             }
+
             if (string.IsNullOrEmpty(model.Trait) || model.Trait == "None" || model.Trait == "Any")
             {
                 model.Trait = null;
@@ -81,9 +85,11 @@ namespace HallOfBeorn.Controllers
             }
             if (string.IsNullOrEmpty(model.Cost) || model.Cost == "Any") {
                 model.Cost = null;
+                model.CostOp = null;
             }
             if (string.IsNullOrEmpty(model.Level) || model.Level == "Any") {
                 model.Level = null;
+                model.LevelOp = null;
             }
             if (model.Sort.HasValue && model.Sort.Value == ArkhamSearchSort.None)
             {
@@ -104,30 +110,37 @@ namespace HallOfBeorn.Controllers
             if (string.IsNullOrEmpty(model.EnemyFightValue) || model.EnemyFightValue == "Any")
             {
                 model.EnemyFightValue = null;
+                model.EnemyFightValueOp = null;
             }
             if (string.IsNullOrEmpty(model.EnemyHealthValue) || model.EnemyHealthValue == "Any")
             {
                 model.EnemyHealthValue = null;
+                model.EnemyHealthValueOp = null;
             }
             if (string.IsNullOrEmpty(model.EnemyEvadeValue) || model.EnemyEvadeValue == "Any")
             {
                 model.EnemyEvadeValue = null;
+                model.EnemyEvadeValueOp = null;
             }
             if (string.IsNullOrEmpty(model.Damage) || model.Damage == "Any")
             {
                 model.Damage = null;
+                model.DamageOp = null;
             }
             if (string.IsNullOrEmpty(model.Horror) || model.Horror == "Any")
             {
                 model.Horror = null;
+                model.HorrorOp = null;
             }
             if (string.IsNullOrEmpty(model.Shroud) || model.Shroud == "Any")
             {
                 model.Shroud = null;
+                model.ShroudOp = null;
             }
             if (string.IsNullOrEmpty(model.ClueValue) || model.ClueValue == "Any")
             {
                 model.ClueValue = null;
+                model.ClueValueOp = null;
             }
             if (string.IsNullOrEmpty(model.Artist) || model.Artist == "Any")
             {
