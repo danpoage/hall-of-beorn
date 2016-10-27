@@ -6,12 +6,56 @@
         $('#Query').focus().val('');
 
         $('#Product').val('Any');
+        $('#Artist').val('Any');
 
         $('#CardType').val('Any');
-        $('#DeckType').val('Any');
-
         $('#ClassSymbol').val('Any');
+        $('#DeckType').val('Any');
         $('#IsUnique').val('Any');
+
+        $('#Trait').val('Any');
+        $('#Keyword').val('Any');
+        $('#VictoryPoints').val('Any');
+        $('#SkillIcon').val('Any');
+        
+        $('#WillpowerOp').val('=');
+        $('#Willpower').val('Any');
+        $('#IntellectOp').val('=');
+        $('#Intellect').val('Any');
+        $('#CombatOp').val('=');
+        $('#Combat').val('Any');
+        $('#AgilityOp').val('=');
+        $('#Agility').val('Any');
+
+        $('#HealthOp').val('=');
+        $('#Health').val('Any');
+        $('#SanityOp').val('=');
+        $('#Sanity').val('Any');
+        $('#CostOp').val('=');
+        $('#Cost').val('Any');
+        $('#LevelOp').val('=');
+        $('#Level').val('Any');
+
+        $('#LocationSymbol').val('Any');
+        $('#ConnectsTo').val('Any');
+        $('#ShroudOp').val('=');
+        $('#Shroud').val('Any');
+        $('#ClueValueOp').val('=');
+        $('#ClueValue').val('Any');
+
+        $('#EnemyFightValueOp').val('=');
+        $('#EnemyFightValue').val('Any');
+        $('#EnemyHealthValueOp').val('=');
+        $('#EnemyHealthValue').val('Any');
+        $('#EnemyEvadeValueOp').val('=');
+        $('#EnemyEvadeValue').val('Any');
+        $('#DamageOp').val('=');
+        $('#Damage').val('Any');
+        $('#HorrorOp').val('=');
+        $('#Horror').val('Any');
+
+
+
         /*
         $('#SetType').val('Any');
 

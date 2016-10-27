@@ -294,7 +294,12 @@ namespace HallOfBeorn.Services.Arkham
 
             var checks = new List<Tuple<string, NumericOperator?, Number?>>() {
                     new Tuple<string, NumericOperator?, Number?>(model.Cost, model.CostOp, card.Cost),
-                    new Tuple<string, NumericOperator?, Number?>(model.Level, model.LevelOp, Number.Optional(card.Level))
+                    new Tuple<string, NumericOperator?, Number?>(model.Level, model.LevelOp, Number.Optional(card.Level)),
+                    new Tuple<string, NumericOperator?, Number?>(model.EnemyFightValue, model.EnemyFightValueOp, card.EnemyFightValue),
+                    new Tuple<string, NumericOperator?, Number?>(model.EnemyHealthValue, model.EnemyHealthValueOp, card.EnemyHealthValue),
+                    new Tuple<string, NumericOperator?, Number?>(model.EnemyEvadeValue, model.EnemyEvadeValueOp, card.EnemyEvadeValue),
+                    new Tuple<string, NumericOperator?, Number?>(model.Damage, model.DamageOp, card.Damage),
+                    new Tuple<string, NumericOperator?, Number?>(model.Horror, model.HorrorOp, card.Horror),
             };
 
             foreach (var c in checks) {
@@ -343,7 +348,7 @@ namespace HallOfBeorn.Services.Arkham
                     if (model.IsUnique.HasValue && model.IsUnique.Value != Uniqueness.Any && (model.IsUnique == Uniqueness.Yes && !card.IsUnique || model.IsUnique == Uniqueness.No && card.IsUnique)) {
                         continue;
                     }
-                    if (model.CardClass.HasValue && model.CardClass != ClassSymbol.None && card.ClassSymbol != model.CardClass.Value)
+                    if (model.ClassSymbol.HasValue && model.ClassSymbol != ClassSymbol.None && card.ClassSymbol != model.ClassSymbol.Value)
                     {
                         continue;
                     }

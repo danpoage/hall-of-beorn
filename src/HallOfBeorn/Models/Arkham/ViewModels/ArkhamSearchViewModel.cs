@@ -20,7 +20,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
 
         public ArkhamCardType? CardType { get; set; }
         public ArkhamDeckType? DeckType { get; set; }
-        public ClassSymbol? CardClass { get; set; }
+        public ClassSymbol? ClassSymbol { get; set; }
         public Uniqueness? IsUnique { get; set; }
         public SkillIcon? SkillIcon { get; set; }
         
@@ -113,7 +113,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             get { return typeof(Uniqueness).GetSelectListItems(" "); }
         }
 
-        public static IEnumerable<SelectListItem> CardClasses
+        public static IEnumerable<SelectListItem> ClassSymbolValues
         {
             get { return typeof(ClassSymbol).GetSelectListItems(" "); }
         }

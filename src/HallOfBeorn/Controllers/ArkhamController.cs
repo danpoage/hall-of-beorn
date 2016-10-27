@@ -35,9 +35,9 @@ namespace HallOfBeorn.Controllers
             if (model.DeckType.HasValue && model.DeckType.Value == ArkhamDeckType.None) {
                 model.DeckType = null;
             }
-            if (model.CardClass.HasValue && model.CardClass.Value == ClassSymbol.None)
+            if (model.ClassSymbol.HasValue && model.ClassSymbol.Value == ClassSymbol.None)
             {
-                model.CardClass = null;
+                model.ClassSymbol = null;
             }
             if (model.IsUnique.HasValue && model.IsUnique.Value == Models.Uniqueness.Any)
             {

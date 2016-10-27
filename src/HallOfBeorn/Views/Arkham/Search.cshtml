@@ -51,8 +51,8 @@
             </span>
 
             <span class="search-filter-fixed">
-            <span class="search-label-short">Card Class</span>
-            @Html.DropDownListFor(x => x.CardClass, ArkhamSearchViewModel.CardClasses, new { @class = "search-select-short" })
+            <span class="search-label-short">Class Symbol</span>
+            @Html.DropDownListFor(x => x.ClassSymbol, ArkhamSearchViewModel.ClassSymbolValues, new { @class = "search-select-short" })
             </span>
 
             <span class="search-filter-fixed">
@@ -71,12 +71,12 @@
         <div class="search-section">Text</div>
         <div class="search-items">
             <span class="search-filter-fixed">
-            <span class="search-label-short">Traits</span>
+            <span class="search-label-short">Trait</span>
             @Html.DropDownListFor(x => x.Trait, ArkhamSearchViewModel.Traits, new { @class = "search-select-short" })
             </span>
 
             <span class="search-filter-fixed">
-            <span class="search-label-short">Keywords</span>
+            <span class="search-label-short">Keyword</span>
             @Html.DropDownListFor(x => x.Keyword, ArkhamSearchViewModel.Keywords, new { @class = "search-select-short" })
             </span>
 
@@ -86,7 +86,7 @@
             </span>
 
             <span class="search-filter-fixed">
-            <span class="search-label-short">Icons</span>
+            <span class="search-label-short">Skill Icon</span>
             @Html.DropDownListFor(x => x.SkillIcon, ArkhamSearchViewModel.SkillIconValues, new { @class = "search-select-short" })
             </span>
         </div>
