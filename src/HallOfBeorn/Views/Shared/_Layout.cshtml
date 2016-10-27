@@ -17,10 +17,12 @@
         <header>
             <div class="content-wrapper">
                 <div style="display:inline-block;text-align:center;">
-                    <a href="/Home" style="text-align:center;display:inline-block;"><img src="/Images/Happy_Grizzly_Bear.jpg" width="64" height="48" /></a>
-                    <span class="site-title" style="color: brown; font-family:Tolkien;min-width:230px;display:inline-block;margin-left:0px;">HALL OF BEORN</span>
-                    <div style="text-align:left"><a href="/Arkham/Search" style="text-align:left;display:none"><img src="/Images/AH.png" width="64" height="17" style="margin-bottom:-4px;"/></a><div style="min-width:230px;margin-bottom:6px;margin-left:70px;text-align:center;display:inline-block">Cooperative LCG Card Search</div></div>
-                    
+                    <div style="display:inline-block">
+                        <a href="/Home" style="text-align:center;display:inline-block;"><img src="/Images/Happy_Grizzly_Bear.jpg" width="64" height="48" title="Lord of the Rings LCG Card Search" /></a>
+                        <span class="site-title" style="color: brown; font-family:Tolkien;min-width:230px;display:inline-block;margin-left:0px;">HALL OF BEORN</span>
+                        <a href="/Arkham/Search" style="text-align:left"><img src="/Images/ArkhamBeornSmall.jpg" width="64" height="48" title="Arkham Horror LCG Card Search" style="margin-bottom:-4px;"/></a>
+                    </div>
+                    <div style="min-width:230px;margin-bottom:6px;text-align:center">Cooperative LCG Card Search</div>
                 </div>
                 <div>
                     <!--
@@ -29,15 +31,21 @@
                     </section>
                         -->
                     <nav>
+                        @if (@Request.Url.LocalPath.Contains("/LotR")) {
                         <ul id="menu">
-                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("LotR", "Index", "Home")</li>
                             <li><a title="Browse Products" href="/Cards/Browse">Browse</a></li>
                             <li><a title="Browse Scenarios" href="/Cards/Scenarios/">Scenarios</a></li>
-                            @*<li><a title="Decks" href="/Cards/Decks">Decks</a></li>*@
                             <li><a title="Hall of Beorn Blog" href="http://hallofbeorn.wordpress.com" target="_blank">Blog</a></li>
-                            <li><a title="The Grey Company Podcast" href="http://greycompanypodcast.wordpress.com/" target="_blank">Podcast</a></li>
+                            <li><a title="The Grey Company Podcast" href="http://greycompanypodcast.wordpress.com/" target="_blank">Grey Company</a></li>
                             <li><a title="Patreon Page" href="https://www.patreon.com/Beorn" target="_blank"><img title="Patreon Donors" alt="Patreon Donors" src="/Images/Patreon.png" /></a></li>
                         </ul>
+                        } else {
+                        <ul id="menu">
+                            <li>@Html.ActionLink("Arkham", "Search", "Arkham")</li>
+                            <li><a title="Mythos Busters Podcast" href="https://mythosbusterspodcast.wordpress.com/" target="_blank">Mythos Busters</a></li>
+                        </ul>
+                        }
                     </nav>
                 </div>
             </div>
