@@ -68,6 +68,18 @@ namespace HallOfBeorn.Services.Arkham
                 yield return string.Format("Victory {0}", card.VictoryPoints.Value);
         }
 
+        public IEnumerable<string> DoomThresholdValues()
+        {
+            foreach (var card in Cards().Where(x => x.DoomThreshold.HasValue))
+                yield return card.DoomThreshold.Value.ToString();
+        }
+
+        public IEnumerable<string> ClueThresholdValues()
+        {
+            foreach (var card in Cards().Where(x => x.ClueThreshold.HasValue))
+                yield return card.ClueThreshold.Value.ToString();
+        }
+
         public IEnumerable<string> SkillValues(Skill skill)
         {
             foreach (var card in Cards())

@@ -52,6 +52,18 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithFrontFlavor("You can never be too prepared.")
                 .WithInfo(88, 1, Artist.Vincent_Dutrait));
 
+            addCard(ArkhamCard.Agenda("What's Going On?!", "A Lapse in Time", 1, Number.Of(3))
+                .WithFrontFlavor("It is late at night, You are holed up in your study, researching the bloody disappearances that have been taking place in the region. A few hours into your research, you hear the sound of strange chanting coming from your parlor down the hall. At the same time, you hear dirt churning, as if something were digging beneath the floor.")
+                .WithBackFlavor("Your house continues to change before your very eyes. The walls have decayed, and the ground in many rooms has turned to dirt. It is almost as if you have been transported somewhere else entirely, although every now and again you recognize elements of your former home.")
+                .WithBackText("The lead investigator must decide (choose one): Either each investigator discards 1 card at random from his or her hand, or the lead investigator takes 2 horror.")
+                .WithInfo(105, 1, Artist.Mark_Molnar));
+
+            addCard(ArkhamCard.Act("Trapped", "The Door on the Floor", 1, Number.Of(2).PerInvestigator())
+                .WithFrontFlavor("As you leap to investigate, the door to your study vanishes before you eyes, leaving behind only a solid wall. You're trapped inside your study until you can find another way out.")
+                .WithBackFlavor("You notice that the edges of your newly purchased rug are tattered and mud-stained. Finding this odd, you shift the furniture aside and pull back the rug. To your surprise, you see the door leading out of your study. You slowly turn the knob, and the door swings open, revealing your hallway below.\r\nYou jump through the doorway, landing on your feet on soft dirt. The door to the study slams shut above you. The smell of burning wood fills the narrow hall, intermingled with the scent of rot and decay.")
+                .WithBackText("Put into play the set-aside Hallway, Cellar, Attic and Parlor.\r\nDiscard each enemy in the Study.\r\nPlace each investigator in the Hallway.\r\nRemove the Study from the game.")
+                .WithInfo(108, 1, Artist.Jose_Vega));
+
             addCard(ArkhamCard.Location("Study", ConnectionSymbol.Study, Shroud.Of(2), ClueValue.Of(2).PerInvestigator())
                 .WithFrontFlavor("You've been investigating the strange events occurring in Arkham for several years now. Your desk is covered in newspaper articles, police reports, and witness accounts.")
                 .WithBackFlavor("The door to your study has vanished")

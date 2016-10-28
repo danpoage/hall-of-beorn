@@ -153,28 +153,18 @@
     <hr class="arkham-filterLine" />
         
     <div class="search-row">
-        <div class="search-section">Location</div>
+        <div class="search-section">Act/Agenda</div>
         <div class="search-items">
             <span class="search-filter-fixed">
-                <span class="search-label-short">Symbol</span>
-                @Html.DropDownListFor(x => x.LocationSymbol, ArkhamSearchViewModel.ConnectionSymbols, new { @class = "search-select-short" })
+            <span class="search-label-tiny">Doom Thresh.</span>
+            @Html.DropDownListFor(x => x.DoomThresholdOp, ArkhamSearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+            @Html.DropDownListFor(x => x.DoomThreshold, ArkhamSearchViewModel.DoomThresholdValues, new { @class = "search-select-tiny" })
             </span>
 
             <span class="search-filter-fixed">
-                <span class="search-label-short">Connects To</span>
-                @Html.DropDownListFor(x => x.ConnectsTo, ArkhamSearchViewModel.ConnectionSymbols, new { @class = "search-select-short" })
-            </span>
-
-            <span class="search-filter-fixed">
-            <span class="search-label-tiny">Shroud</span>
-            @Html.DropDownListFor(x => x.ShroudOp, ArkhamSearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
-            @Html.DropDownListFor(x => x.Shroud, ArkhamSearchViewModel.ShroudValues, new { @class = "search-select-tiny" })
-            </span>
-
-            <span class="search-filter-fixed">
-            <span class="search-label-tiny">Clues</span>
-            @Html.DropDownListFor(x => x.ClueValueOp, ArkhamSearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
-            @Html.DropDownListFor(x => x.ClueValue, ArkhamSearchViewModel.ClueValues, new { @class = "search-select-tiny" })
+            <span class="search-label-tiny">Clue Thresh.</span>
+            @Html.DropDownListFor(x => x.ClueThresholdOp, ArkhamSearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+            @Html.DropDownListFor(x => x.ClueThreshold, ArkhamSearchViewModel.ClueThresholdValues, new { @class = "search-select-tiny" })
             </span>
         </div>
     </div>
@@ -216,7 +206,32 @@
             </span>
         </div>
     </div>
-    
+    <div class="search-row">
+        <div class="search-section">Location</div>
+        <div class="search-items">
+            <span class="search-filter-fixed">
+                <span class="search-label-short">Symbol</span>
+                @Html.DropDownListFor(x => x.LocationSymbol, ArkhamSearchViewModel.ConnectionSymbols, new { @class = "search-select-short" })
+            </span>
+
+            <span class="search-filter-fixed">
+                <span class="search-label-short">Connects To</span>
+                @Html.DropDownListFor(x => x.ConnectsTo, ArkhamSearchViewModel.ConnectionSymbols, new { @class = "search-select-short" })
+            </span>
+
+            <span class="search-filter-fixed">
+            <span class="search-label-tiny">Shroud</span>
+            @Html.DropDownListFor(x => x.ShroudOp, ArkhamSearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+            @Html.DropDownListFor(x => x.Shroud, ArkhamSearchViewModel.ShroudValues, new { @class = "search-select-tiny" })
+            </span>
+
+            <span class="search-filter-fixed">
+            <span class="search-label-tiny">Clues</span>
+            @Html.DropDownListFor(x => x.ClueValueOp, ArkhamSearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+            @Html.DropDownListFor(x => x.ClueValue, ArkhamSearchViewModel.ClueValues, new { @class = "search-select-tiny" })
+            </span>
+        </div>
+    </div>
     <span class="results-count-label">@Model.GetResultsCount()</span>
     
     foreach (var card in @Model.Cards())
@@ -246,7 +261,14 @@
             @if (!string.IsNullOrEmpty(@card.Subtitle)) {
                 <h3>@card.Subtitle</h3>
             }
-            <div><b>@card.CardType</b></div>
+            <div><b>
+                @card.CardType
+
+                @if (!string.IsNullOrEmpty(card.Sequence)) {
+                    @card.Sequence
+                }
+                 </b>
+            </div>
             @if (@card.HasTraits()) {
                 <div class="arkham-statSection">
                     @foreach (var trait in @card.Traits()) {
@@ -271,6 +293,9 @@
                 case "Asset":
                     <div><span class="arkham-circle arkham-cost" title="Cost"><span class="arkham-valueInner">@card.Cost</span></span></div>
                     break;
+                case "Event":
+                    <div><span class="arkham-circle arkham-cost" title="Cost"><span class="arkham-valueInner">@card.Cost</span></span></div>
+                    break;
                 case "Location":
                     <div>
                         <div class="arkham-circle arkham-shroud" title="Shroud"><div class="arkham-valueInner">@Html.Raw(@card.Shroud)</div></div>
@@ -279,15 +304,24 @@
                     break;
                 case "Enemy":
                     <div class="arkham-statSection">
-                        <div class="arkham-stat"><div class="arkham-statSquare" title="Enemy Fight Value"><div class="arkham-valueInner">@Html.Raw(@card.FightValue)</div></div><img src="/Images/Arkham/Combat.png" title="Enemy Fight Value"/></div>
-                        <div class="arkham-stat"><div class="arkham-statSquare" title="Enemy Health Value"><div class="arkham-valueInner">@Html.Raw(@card.HealthValue)</div></div><img src="/Images/Arkham/EnemyHealth.png" title="Enemy Health Value" width="21" height="21"/></div>
-                        <div class="arkham-stat"><div class="arkham-statSquare" title="Enemy Evade Value"><div class="arkham-valueInner">@Html.Raw(@card.EvadeValue)</div></div><img src="/Images/Arkham/Agility.png" title="Enemy Evade Value"/></div>
+                        <div class="arkham-enemyStatSection">@Html.Raw(@card.EnemyStatHtml())</div>
                     </div>
                     <div class="arkham-statSection">
                         <span class="arkham-health" title="Damage"><span class="arkham-energyInner arkham-healthInner">@card.Damage</span></span>
                         <span class="arkham-sanity" title="Horror"><span class="arkham-energyInner arkham-sanityInner">@card.Horror</span></span>
                     </div>
-                    break;    
+                    break;
+                case "Act":
+                    <div class="arkham-statSection">
+                        <div class="arkham-circle arkham-clueValue" title="Clue Threshold"><div class="arkham-valueInner">@Html.Raw(@card.ClueThreshold)</div></div>
+                    </div>
+                    break;
+                case "Agenda":
+                    <div class="arkham-statSection">
+                        <div class="arkham-doomThreshold" title="Doom Threshold"><div class="arkham-valueInner">@Html.Raw(@card.DoomThreshold)</div></div>
+                    </div>
+                    break;
+                       
             }
             @if ((!@Model.View.HasValue || @Model.View.Value == ArkhamSearchView.Card || @Model.View.Value == ArkhamSearchView.Card_Text) && !string.IsNullOrEmpty(@card.BodyHtml()))
             {

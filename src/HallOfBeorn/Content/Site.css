@@ -1429,6 +1429,19 @@ tr.pager td {
     background-color:black;
 }
 
+.arkham-doomThreshold {
+    display: inline-block;
+    height: 28px;
+    width: 28px;
+    color: white;
+    background-color: darkgray;
+    opacity: 0.5;
+    border: 1px solid black;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
 .arkham-clueValue {
     color:black;
     background-color:white;
@@ -1452,6 +1465,7 @@ tr.pager td {
 .arkham-perInvestigator {
     width: 10px;
     height: 10px;
+    margin-left: -4px;
 }
 
 .arkham-health {
@@ -1510,6 +1524,8 @@ tr.pager td {
     font-family: 'Times New Roman';
     font-size: 12px;
     font-style: italic;
+    padding: 2px 2px 2px 4px;
+    border-left: 4px double darkgrey;
 }
 
 .arkham-filterLine {
@@ -1523,6 +1539,35 @@ tr.pager td {
     color: #3e5667;
     font-size: 12px;
 }
+
+.arkham-enemyStatSection {
+    font-size: 18px;
+    font-weight: 200;
+    font-family:Georgia,'Palatino Linotype',serif;
+    width: 175px;
+    height: 40px;
+    background-image: url('/Images/Arkham/EnemyStats.png');
+    color: white;
+}
+
+.arkham-enemyFightValue {
+    display: inline-block;
+    margin-top: 2px;
+    margin-left: 32px;
+}
+
+.arkham-enemyHealthValue {
+    display: inline-block;
+    margin-left: 40px;
+    margin-right: 8px;
+}
+
+.arkham-enemyEvadeValue {
+    display: inline-block;
+    margin-top: 2px;
+    margin-left: 24px;
+}
+
 
 /*
 .search-select-tiny {

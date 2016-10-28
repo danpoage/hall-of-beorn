@@ -38,6 +38,8 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
                 {
                     case ArkhamCardType.Investigator:
                     case ArkhamCardType.Location:
+                    case ArkhamCardType.Act:
+                    case ArkhamCardType.Agenda:
                         return card.Subtitle;
                     default:
                         return string.Empty;
@@ -55,8 +57,9 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             var slug = card.Title.ToUrlSafeString();
             var product = card.Product.Name.ToUrlSafeString();
             var level = (card.Level.HasValue && card.Level.Value > 0) ? card.Level.ToString() : string.Empty;
+            var sequence = card.Sequence.HasValue ? string.Format("-{0}", card.Sequence) : string.Empty;
 
-            return string.Format("{0}/{1}/{2}{3}", arkhamCardImages, product, slug, level);
+            return string.Format("{0}/{1}/{2}{3}{4}", arkhamCardImages, product, slug, level, sequence);
         }
 
         public string SearchUrl
@@ -70,6 +73,9 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             {
                 switch (card.CardType)
                 {
+                    case ArkhamCardType.Act:
+                    case ArkhamCardType.Agenda:
+                        return string.Format("{0}a.jpg", getBaseImagePath());
                     case ArkhamCardType.Investigator:
                     case ArkhamCardType.Location:
                         return string.Format("{0}-Front.jpg", getBaseImagePath());
@@ -85,6 +91,9 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             {
                 switch (card.CardType)
                 {
+                    case ArkhamCardType.Act:
+                    case ArkhamCardType.Agenda:
+                        return string.Format("{0}b.jpg", getBaseImagePath());
                     case ArkhamCardType.Investigator:
                     case ArkhamCardType.Location:
                         return string.Format("{0}-Back.jpg", getBaseImagePath());
@@ -164,17 +173,17 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
 
         public string FightValue
         {
-            get { return card.EnemyFightValue.HasValue ? card.EnemyFightValue.Value.ToString(PerInvestigatorIcon) : string.Empty; }
+            get { return card.EnemyFightValue.HasValue ? card.EnemyFightValue.Value.ToString(PerInvestigatorBlackIcon) : string.Empty; }
         }
 
         public string HealthValue
         {
-            get { return card.EnemyHealthValue.HasValue ? card.EnemyHealthValue.Value.ToString(PerInvestigatorIcon) : string.Empty; }
+            get { return card.EnemyHealthValue.HasValue ? card.EnemyHealthValue.Value.ToString(PerInvestigatorBlackIcon) : string.Empty; }
         }
 
         public string EvadeValue
         {
-            get { return card.EnemyEvadeValue.HasValue ? card.EnemyEvadeValue.Value.ToString(PerInvestigatorIcon) : string.Empty; }
+            get { return card.EnemyEvadeValue.HasValue ? card.EnemyEvadeValue.Value.ToString(PerInvestigatorBlackIcon) : string.Empty; }
         }
 
         public string Damage
@@ -185,6 +194,21 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         public string Horror
         {
             get { return card.Horror.HasValue ? card.Horror.Value.ToString() : string.Empty; }
+        }
+
+        public string Sequence
+        {
+            get { return card.Sequence.HasValue ? card.Sequence.ToString() : string.Empty; }
+        }
+
+        public string DoomThreshold 
+        {
+            get { return card.DoomThreshold.HasValue ? card.DoomThreshold.Value.ToString(PerInvestigatorBlackIcon) : string.Empty; }
+        }
+
+        public string ClueThreshold
+        {
+            get { return card.ClueThreshold.HasValue ? card.ClueThreshold.Value.ToString(PerInvestigatorBlackIcon) : string.Empty; }
         }
 
         public bool HasTraits()
@@ -204,17 +228,34 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
                 yield return new LinkViewModel() { Name = connection.ToString().Replace("_", " "), Title = "Connects To", Target = "_blank", Href = "/Arkham/Search?ConnectsTo=" +  connection.ToString() };
         }
 
-        public const string PerInvestigatorIcon = "<img src='/Images/Arkham/PerInvestigator.png' class='arkham-perInvestigator'/>";
+        public const string PerInvestigatorBlackIcon = "<img src='/Images/Arkham/PerInvestigatorBlack.png' class='arkham-perInvestigator'/>";
+        public const string PerInvestigatorWhiteIcon = "<img src='/Images/Arkham/PerInvestigatorWhite.png' class='arkham-perInvestigator'/>";
         public const string PerInvestigatorDescription = "Per Investigator";
 
         public string Shroud
         {
-            get { return card.Shroud.HasValue ? card.Shroud.Value.ToString(PerInvestigatorIcon) : string.Empty; }
+            get { return card.Shroud.HasValue ? card.Shroud.Value.ToString(PerInvestigatorBlackIcon) : string.Empty; }
         }
 
         public string ClueValue
         {
-            get { return card.ClueValue.HasValue ? card.ClueValue.Value.ToString(PerInvestigatorIcon) : string.Empty; }
+            get { return card.ClueValue.HasValue ? card.ClueValue.Value.ToString(PerInvestigatorBlackIcon) : string.Empty; }
+        }
+
+        public string EnemyStatHtml()
+        {
+            var html = new System.Text.StringBuilder();
+
+            if (card.CardType == ArkhamCardType.Enemy)
+            {
+                var fight = card.EnemyFightValue.HasValue ? card.EnemyFightValue.Value.ToString(PerInvestigatorWhiteIcon) : string.Empty;
+                var health = card.EnemyHealthValue.HasValue ? card.EnemyHealthValue.Value.ToString(PerInvestigatorWhiteIcon) : string.Empty;
+                var evade = card.EnemyEvadeValue.HasValue ? card.EnemyEvadeValue.Value.ToString(PerInvestigatorWhiteIcon) : string.Empty;
+
+                html.AppendFormat("<div class='arkham-enemyFightValue'>{0}</div><div class='arkham-enemyHealthValue'>{1}</div><div class='arkham-enemyEvadeValue'>{2}</div>", fight, health, evade);
+            }
+
+            return html.ToString();
         }
 
         public string BodyHtml()
@@ -235,7 +276,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             {
                 if (body.Length > 0)
                 {
-                    body.Append("---");
+                    //body.Append("---");
                 }
 
                 body.AppendFormat("<p class='arkham-cardText'>{0}</p>", card.BackText);
@@ -245,7 +286,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             {
                 if (body.Length > 0 && string.IsNullOrEmpty(card.BackText))
                 {
-                    body.Append("---");
+                    //body.Append("---");
                 }
 
                 body.AppendFormat("<p class='arkham-flavorText'>{0}</p>", card.BackFlavor);

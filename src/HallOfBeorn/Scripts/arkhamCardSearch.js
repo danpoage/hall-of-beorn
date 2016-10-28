@@ -36,6 +36,11 @@
         $('#LevelOp').val('=');
         $('#Level').val('Any');
 
+        $('#DoomThresholdOp').val('=');
+        $('#DoomThreshold').val('Any');
+        $('#ClueThresholdOp').val('=');
+        $('#ClueThreshold').val('Any');
+
         $('#LocationSymbol').val('Any');
         $('#ConnectsTo').val('Any');
         $('#ShroudOp').val('=');

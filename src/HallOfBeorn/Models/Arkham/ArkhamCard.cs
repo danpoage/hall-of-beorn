@@ -20,23 +20,24 @@ namespace HallOfBeorn.Models.Arkham
         public ArkhamProduct Product { get; set; }
         public ArkhamDeckType DeckType { get; set; }
         public ArkhamCardType CardType { get; set; }
-        public string Title { get; protected set; }
+        public string Title { get; private set; }
         public string Subtitle { get; private set; }
-        public bool IsUnique { get; protected set; }
+        public bool IsUnique { get; private set; }
 
-        public Number? Willpower { get; protected set; }
-        public Number? Intellect { get; protected set; }
-        public Number? Combat { get; protected set; }
-        public Number? Agility { get; protected set; }
+        public Number? Willpower { get; private set; }
+        public Number? Intellect { get; private set; }
+        public Number? Combat { get; private set; }
+        public Number? Agility { get; private set; }
 
-        public Number? Cost { get; protected set; }
-        public byte? Level { get; protected set; }
-        public AssetSlot AssetSlot { get; protected set; }
+        public Number? Cost { get; private set; }
+        public byte? Level { get; private set; }
+        public AssetSlot AssetSlot { get; private set; }
         
-        public Number? Shroud { get; protected set; }
-        public Number? ClueValue { get; protected set; }
+        public Number? Shroud { get; private set; }
+        public Number? ClueValue { get; private set; }
         public ConnectionSymbol? LocationSymbol { get; private set; }
 
+        public byte? Sequence { get; private set; }
         public Number? DoomThreshold { get; private set; }
         public Number? ClueThreshold { get; private set; }
 
@@ -175,6 +176,32 @@ namespace HallOfBeorn.Models.Arkham
                 LocationSymbol = locationSymbol,
                 Shroud = shroud,
                 ClueValue = clueValue
+            };
+        }
+
+        public static ArkhamCard Agenda(string title, string subtitle, byte sequence, Number doomThreshold)
+        {
+            return new ArkhamCard()
+            {
+                CardType = ArkhamCardType.Agenda,
+                DeckType = ArkhamDeckType.Agenda,
+                Title = title,
+                Subtitle = subtitle,
+                Sequence = sequence,
+                DoomThreshold = doomThreshold
+            };
+        }
+
+        public static ArkhamCard Act(string title, string subtitle, byte sequence, Number clueThreshold)
+        {
+            return new ArkhamCard()
+            {
+                CardType = ArkhamCardType.Act,
+                DeckType = ArkhamDeckType.Act,
+                Title = title,
+                Subtitle = subtitle,
+                Sequence = sequence,
+                ClueThreshold = clueThreshold
             };
         }
 

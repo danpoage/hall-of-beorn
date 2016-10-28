@@ -300,6 +300,8 @@ namespace HallOfBeorn.Services.Arkham
                     new Tuple<string, NumericOperator?, Number?>(model.EnemyEvadeValue, model.EnemyEvadeValueOp, card.EnemyEvadeValue),
                     new Tuple<string, NumericOperator?, Number?>(model.Damage, model.DamageOp, card.Damage),
                     new Tuple<string, NumericOperator?, Number?>(model.Horror, model.HorrorOp, card.Horror),
+                    new Tuple<string, NumericOperator?, Number?>(model.DoomThreshold, model.DoomThresholdOp, card.DoomThreshold),
+                    new Tuple<string, NumericOperator?, Number?>(model.ClueThreshold, model.ClueThresholdOp, card.ClueThreshold)
             };
 
             foreach (var c in checks) {

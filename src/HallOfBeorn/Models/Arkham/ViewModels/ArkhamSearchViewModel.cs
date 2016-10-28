@@ -62,6 +62,10 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         public string Damage { get; set; }
         public NumericOperator? HorrorOp { get; set; }
         public string Horror { get; set; }
+        public NumericOperator? DoomThresholdOp { get; set; }
+        public string DoomThreshold { get; set; }
+        public NumericOperator? ClueThresholdOp { get; set; }
+        public string ClueThreshold { get; set; }
 
         public string Artist { get; set; }
 
@@ -136,6 +140,18 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         }
 
         public static IEnumerable<SelectListItem> CostValues
+        {
+            get;
+            set;
+        }
+
+        public static IEnumerable<SelectListItem> DoomThresholdValues
+        {
+            get;
+            set;
+        }
+
+        public static IEnumerable<SelectListItem> ClueThresholdValues
         {
             get;
             set;

@@ -142,6 +142,16 @@ namespace HallOfBeorn.Controllers
                 model.ClueValue = null;
                 model.ClueValueOp = null;
             }
+            if (string.IsNullOrEmpty(model.DoomThreshold) || model.DoomThreshold == "Any")
+            {
+                model.DoomThreshold = null;
+                model.DoomThresholdOp = null;
+            }
+            if (string.IsNullOrEmpty(model.ClueThreshold) || model.ClueThreshold == "Any")
+            {
+                model.ClueThreshold = null;
+                model.ClueThresholdOp = null;
+            }
             if (string.IsNullOrEmpty(model.Artist) || model.Artist == "Any")
             {
                 model.Artist = null;
@@ -154,6 +164,8 @@ namespace HallOfBeorn.Controllers
             ArkhamSearchViewModel.HealthValues = productRepository.HealthValues().Distinct().OrderBy(x => { return x; }).GetExtendedSelectListItems();
             ArkhamSearchViewModel.SanityValues = productRepository.SanityValues().Distinct().OrderBy(x => { return x; }).GetExtendedSelectListItems();
             ArkhamSearchViewModel.CostValues = productRepository.CostValues().Distinct().OrderBy(x => { return x; }).GetExtendedSelectListItems();
+            ArkhamSearchViewModel.DoomThresholdValues = productRepository.DoomThresholdValues().Distinct().OrderBy(x => { return x; }).GetExtendedSelectListItems();
+            ArkhamSearchViewModel.ClueThresholdValues = productRepository.ClueThresholdValues().Distinct().OrderBy(x => { return x; }).GetExtendedSelectListItems();
             ArkhamSearchViewModel.LoadSkillValues(Skill.Willpower, productRepository.SkillValues(Skill.Willpower).Distinct().Where(x => { return !string.IsNullOrEmpty(x); }).OrderBy(x => { return x; }).GetExtendedSelectListItems());
             ArkhamSearchViewModel.LoadSkillValues(Skill.Intellect, productRepository.SkillValues(Skill.Intellect).Distinct().Where(x => { return !string.IsNullOrEmpty(x); }).OrderBy(x => { return x; }).GetExtendedSelectListItems());
             ArkhamSearchViewModel.LoadSkillValues(Skill.Combat, productRepository.SkillValues(Skill.Combat).Distinct().Where(x => { return !string.IsNullOrEmpty(x); }).OrderBy(x => { return x; }).GetExtendedSelectListItems());
