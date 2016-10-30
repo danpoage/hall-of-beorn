@@ -35,7 +35,8 @@ namespace HallOfBeorn
                 .Replace(",", string.Empty)
                 .Replace(":", string.Empty)
                 .Replace("?", string.Empty)
-                .Replace("!", string.Empty);
+                .Replace("!", string.Empty)
+                .Replace("\"", string.Empty);
         }
 
         public static string UrlEncode(this string self)

@@ -200,6 +200,7 @@
     <Compile Include="HtmlHelperExtensions.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\AdvancedSearchViewModel.cs" />
+    <Compile Include="Models\Arkham\ArkhamCardSubtype.cs" />
     <Compile Include="Models\Arkham\ArkhamDeckType.cs" />
     <Compile Include="Models\Arkham\AssetSlot.cs" />
     <Compile Include="Models\Arkham\ArkhamCard.cs" />

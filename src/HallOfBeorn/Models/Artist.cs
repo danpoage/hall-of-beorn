@@ -573,6 +573,13 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Aurore_Folay);
             all.Add(Artist.Stanislav_Dikolenko);
 
+            //Arkham Horrom Core
+            //all.Add(Artist.Vincent_Dutrait);
+            //all.Add(Artist.Jacob_Murray);
+            //all.Add(Artist.Dani_Hartel);
+            //all.Add(Artist.Falk);
+            //all.Add(Artist.Linda_Tso);
+
             all.Add(Artist.None);
         }
 
@@ -1058,6 +1065,18 @@ namespace HallOfBeorn.Models
         public static Artist Yoann_Boissonnet = new Artist { Name = "Yoann Boissonnet", URL = "http://yoannboissonnet.carbonmade.com" };
         public static Artist Yog_Joshi = new Artist { Name = "Yog Joshi", URL = "http://www.yogjoshi.com" };
 
+        //Arkham Horror Artists
         public static Artist Vincent_Dutrait = new Artist { Name = "Vincent Dutrait", URL = "http://www.vincentdutrait.com" };
+        public static Artist Jacob_Murray = new Artist { Name = "Jacob Murray", URL = "http://www.murr-art.com" };
+        public static Artist Dani_Hartel = new Artist { Name = "Dani Hartel", URL = "http://www.danihartel.com" };
+        public static Artist Falk = new Artist { Name = "Falk", URL = "http://www.this-is-cool.co.uk/falk-digital-fantasy-artist" };
+        public static Artist Linda_Tso = new Artist { Name = "Linda Tso", URL = "http://peachysticks.deviantart.com" };
+        public static Artist John_Pacer = new Artist { Name = "John Pacer", URL = "http://johnpacer.com" };
+        public static Artist Lake_Hurwitz = new Artist { Name = "Lake Hurwitz", URL = "http://www.demonui.com" };
+        public static Artist Nicholas_Elias = new Artist { Name = "Nicholas Elias", URL = "http://www.eliasillustration.com" };
+        public static Artist Jason_Caffoe = new Artist { Name = "Jason Caffoe", URL = "http://jcaffoe.com" };
+        public static Artist Stephen_Somers = new Artist { Name = "Stephen Somers", URL = "http://stephensomers.deviantart.com" };
+        public static Artist Dane_Cozens = new Artist { Name = "Dane Cozens", URL = "http://www.danecozens.com" };
+        public static Artist Michael_J_Williams = new Artist { Name = "Michael J. Williams", URL = "http://www.mwillustration.com" };
     }
 }

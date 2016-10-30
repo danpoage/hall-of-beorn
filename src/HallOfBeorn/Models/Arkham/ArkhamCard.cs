@@ -20,6 +20,7 @@ namespace HallOfBeorn.Models.Arkham
         public ArkhamProduct Product { get; set; }
         public ArkhamDeckType DeckType { get; set; }
         public ArkhamCardType CardType { get; set; }
+        public ArkhamCardSubtype CardSubtype { get; set; }
         public string Title { get; private set; }
         public string Subtitle { get; private set; }
         public bool IsUnique { get; private set; }
@@ -138,6 +139,18 @@ namespace HallOfBeorn.Models.Arkham
             };
         }
 
+        public static ArkhamCard Skill(string title, ClassSymbol classSymbol, byte level)
+        {
+            return new ArkhamCard
+            {
+                CardType = ArkhamCardType.Skill,
+                DeckType = ArkhamDeckType.Player,
+                Title = title,
+                ClassSymbol = classSymbol,
+                Level = level
+            };
+        }
+
         public static ArkhamCard Event(string title, ClassSymbol classSymbol, Number cost, byte level)
         {
             return new ArkhamCard()
@@ -179,6 +192,17 @@ namespace HallOfBeorn.Models.Arkham
             };
         }
 
+        public static ArkhamCard Treachery(string title, ArkhamCardSubtype subtype)
+        {
+            return new ArkhamCard
+            {
+                CardType = ArkhamCardType.Treachery,
+                DeckType = ArkhamDeckType.Player,
+                Title = title,
+                CardSubtype = subtype
+            };
+        }
+
         public static ArkhamCard Agenda(string title, string subtitle, byte sequence, Number doomThreshold)
         {
             return new ArkhamCard()
@@ -208,6 +232,24 @@ namespace HallOfBeorn.Models.Arkham
         public ArkhamCard WithUnique()
         {
             this.IsUnique = true;
+            return this;
+        }
+
+        public ArkhamCard WithHealth(byte health)
+        {
+            this.Health = health;
+            return this;
+        }
+
+        public ArkhamCard WithSanity(byte sanity)
+        {
+            this.Sanity = sanity;
+            return this;
+        }
+
+        public ArkhamCard WithSubtype(ArkhamCardSubtype subtype)
+        {
+            this.CardSubtype = subtype;
             return this;
         }
 
