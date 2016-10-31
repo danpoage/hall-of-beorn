@@ -1066,6 +1066,7 @@ namespace HallOfBeorn.Models
         public static Artist Yog_Joshi = new Artist { Name = "Yog Joshi", URL = "http://www.yogjoshi.com" };
 
         //Arkham Horror Artists
+        public static Artist TBD = new Artist { Name = "To Be Determined", URL = "google.com" };
         public static Artist Vincent_Dutrait = new Artist { Name = "Vincent Dutrait", URL = "http://www.vincentdutrait.com" };
         public static Artist Jacob_Murray = new Artist { Name = "Jacob Murray", URL = "http://www.murr-art.com" };
         public static Artist Dani_Hartel = new Artist { Name = "Dani Hartel", URL = "http://www.danihartel.com" };

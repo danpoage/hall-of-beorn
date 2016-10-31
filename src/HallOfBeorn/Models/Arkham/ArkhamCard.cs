@@ -126,6 +126,11 @@ namespace HallOfBeorn.Models.Arkham
             };
         }
 
+        public static ArkhamCard Asset(string title, ClassSymbol classSymbol, byte cost, AssetSlot assetSlot)
+        {
+            return Asset(title, classSymbol, Number.Of(cost), assetSlot);
+        }
+
         public static ArkhamCard Asset(string title, ClassSymbol classSymbol, Number cost, AssetSlot assetSlot)
         {
             return new ArkhamCard()
@@ -149,6 +154,16 @@ namespace HallOfBeorn.Models.Arkham
                 ClassSymbol = classSymbol,
                 Level = level
             };
+        }
+
+        public static ArkhamCard Event(string title, ClassSymbol classSymbol, byte cost)
+        {
+            return Event(title, classSymbol, cost, 0);
+        }
+
+        public static ArkhamCard Event(string title, ClassSymbol classSymbol, byte cost, byte level)
+        {
+            return Event(title, classSymbol, Number.Of(cost), level);
         }
 
         public static ArkhamCard Event(string title, ClassSymbol classSymbol, Number cost, byte level)
@@ -353,6 +368,16 @@ namespace HallOfBeorn.Models.Arkham
             return this;
         }
         */
+
+        public ArkhamCard WithText(string text)
+        {
+            return WithFrontText(text);
+        }
+
+        public ArkhamCard WithFlavor(string flavor)
+        {
+            return WithFrontFlavor(flavor);
+        }
 
         public ArkhamCard WithFrontText(string text)
         {
