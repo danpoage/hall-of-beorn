@@ -14,6 +14,7 @@ namespace HallOfBeorn.Models.ProductGroups
             AddProduct(Product.TheMumakil);
             AddProduct(Product.RaceAcrossHarad);
             AddProduct(Product.BeneathTheSands);
+            AddProduct(Product.TheBlackSerpent);
         }
     }
 }

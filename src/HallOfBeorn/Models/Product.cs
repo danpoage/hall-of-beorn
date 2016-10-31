@@ -124,6 +124,7 @@ namespace HallOfBeorn.Models
         public static Product TheMumakil = new TheMumakilProduct();
         public static Product RaceAcrossHarad = new RaceAcrossHaradProduct();
         public static Product BeneathTheSands = new BeneathTheSandsProduct();
+        public static Product TheBlackSerpent = new TheBlackSerpentProduct();
 
         //The Hobbit Saga
         public static Product TheHobbitOverHillAndUnderHill = new TheHobbitOverHillAndUnderHillProduct();
