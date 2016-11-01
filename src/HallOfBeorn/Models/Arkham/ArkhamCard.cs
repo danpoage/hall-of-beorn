@@ -9,7 +9,6 @@ namespace HallOfBeorn.Models.Arkham
     {
         private ArkhamCard()
         {
-            AssetSlot = AssetSlot.NA;
         }
 
         private readonly List<string> traits = new List<string>();
@@ -32,7 +31,7 @@ namespace HallOfBeorn.Models.Arkham
 
         public Number? Cost { get; private set; }
         public byte? Level { get; private set; }
-        public AssetSlot AssetSlot { get; private set; }
+        public AssetSlot? Slot { get; private set; }
         
         public Number? Shroud { get; private set; }
         public Number? ClueValue { get; private set; }
@@ -126,12 +125,17 @@ namespace HallOfBeorn.Models.Arkham
             };
         }
 
-        public static ArkhamCard Asset(string title, ClassSymbol classSymbol, byte cost, AssetSlot assetSlot)
+        public static ArkhamCard Asset(string title, ClassSymbol classSymbol, byte cost)
         {
-            return Asset(title, classSymbol, Number.Of(cost), assetSlot);
+            return Asset(title, classSymbol, cost, AssetSlot.None);
         }
 
-        public static ArkhamCard Asset(string title, ClassSymbol classSymbol, Number cost, AssetSlot assetSlot)
+        public static ArkhamCard Asset(string title, ClassSymbol classSymbol, byte cost, AssetSlot slot)
+        {
+            return Asset(title, classSymbol, Number.Of(cost), slot);
+        }
+
+        public static ArkhamCard Asset(string title, ClassSymbol classSymbol, Number cost, AssetSlot slot)
         {
             return new ArkhamCard()
             {
@@ -140,7 +144,7 @@ namespace HallOfBeorn.Models.Arkham
                 Title = title,
                 ClassSymbol = classSymbol,
                 Cost = cost,
-                AssetSlot = assetSlot
+                Slot = slot
             };
         }
 
@@ -298,9 +302,9 @@ namespace HallOfBeorn.Models.Arkham
             return this;
         }
 
-        public ArkhamCard WithAssetSlot(AssetSlot assetSlot)
+        public ArkhamCard WithAssetSlot(AssetSlot slot)
         {
-            this.AssetSlot = assetSlot;
+            this.Slot = slot;
             return this;
         }
 

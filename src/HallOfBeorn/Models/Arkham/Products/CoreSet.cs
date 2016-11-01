@@ -255,6 +255,78 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithKeywords("Fast.")
                 .WithText("Fast. Play only during your turn.\r\nChoose an investigator at your location. That investigator draws 3 cards.")
                 .WithInfo(43, 1, Artist.Tomasz_Jedruszek));
+            addCard(ArkhamCard.Asset("Switchblade", ClassSymbol.Rogue, 1, AssetSlot.One_Hand)
+                .WithTraits("Item.", "Weapon.", "Melee.", "Illicit.")
+                .WithKeywords("Fast.")
+                .WithSkillTestIcons(SkillIcon.Agility)
+                .WithText("Fast.\r\nAction: Fight. If you succeed by 2 or more, this attack deals +1 damage.")
+                .WithInfo(44, 1, Artist.Matthew_Cowdery));
+            addCard(ArkhamCard.Asset("Burglary", ClassSymbol.Rogue, 1)
+                .WithTraits("Talent.", "Illicit.")
+                .WithSkillTestIcons(SkillIcon.Intellect)
+                .WithText("Action - Exhaust Burglary: Investigate. If you succeed, instead of discovering clues, gain 3 resources.")
+                .WithInfo(45, 1, Artist.Sara_Biddle));
+            addCard(ArkhamCard.Asset("Pickpocketing", ClassSymbol.Rogue, 2)
+                .WithTraits("Talent.", "Illicit.")
+                .WithSkillTestIcons(SkillIcon.Agility)
+                .WithText("Reaction - After you evade an enemy, exhaust Pickpocketing: Draw 1 card.")
+                .WithInfo(46, 1, Artist.Stanislav_Dikolenko));
+            addCard(ArkhamCard.Asset(".41 Derringer", ClassSymbol.Rogue, 3, AssetSlot.One_Hand)
+                .WithTraits("Item.", "Weapon.", "Firearm.", "Illicit.")
+                .WithKeywords("Uses 3.")
+                .WithSkillTestIcons(SkillIcon.Combat)
+                .WithText("Uses (3 ammo).\r\nAction - Spend 1 ammo: Fight. You get +2 Combat for this attack. If you succeed by 2 or more, this attack dealt +1 damage.")
+                .WithInfo(47, 1, Artist.John_Pacer));
+            addCard(ArkhamCard.Asset("Leo De Luca", ClassSymbol.Rogue, 6, AssetSlot.Ally)
+                .WithUnique()
+                .WithTraits("Ally.", "Criminal.")
+                .WithSkillTestIcons(SkillIcon.Intellect)
+                .WithText("You may take an additional action during your turn.")
+                .WithFlavor("\"I was born in Mississippi. Lousiana just sounded better.\"")
+                .WithHealth(2).WithSanity(2)
+                .WithInfo(48, 1, Artist.Paco_Rico_Torres));
+            addCard(ArkhamCard.Asset("Hard Knocks", ClassSymbol.Rogue, 2)
+                .WithTraits("Talent.")
+                .WithSkillTestIcons(SkillIcon.Combat, SkillIcon.Agility)
+                .WithText("Free Action - Spend 1 resource: You get +1 Combat for this skill test.\r\nFree Action - Spend 1 resource: You get +1 Agility for this skill test.")
+                .WithInfo(49, 1, Artist.Magali_Villeneuve));
+            addCard(ArkhamCard.Event("Elusive", ClassSymbol.Rogue, 2)
+                .WithTraits("Tactic.")
+                .WithSkillTestIcons(SkillIcon.Intellect, SkillIcon.Agility)
+                .WithKeywords("Fast.")
+                .WithText("Fast. Play only during your turn.\r\nDisengage from each enemy engaged with you and move to a revealed location with no enemies.")
+                .WithInfo(50, 1, Artist.Adam_Schumpert));
+            addCard(ArkhamCard.Event("Backstab", ClassSymbol.Rogue, 3)
+                .WithTraits("Tactic.")
+                .WithSkillTestIcons(SkillIcon.Combat, SkillIcon.Agility)
+                .WithText("Fight. This attack uses Agility instead of Combat. This attack deals +2 damage.")
+                .WithInfo(51, 1, Artist.Federico_Piatti));
+            addCard(ArkhamCard.Event("Sneak Attack", ClassSymbol.Rogue, 2)
+                .WithTraits("Tactic.")
+                .WithSkillTestIcons(SkillIcon.Intellect, SkillIcon.Combat)
+                .WithText("Deal 2 damage to an exhausted enemy at your location.")
+                .WithInfo(52, 1, Artist.Stanislav_Dikolenko));
+            addCard(ArkhamCard.Skill("Opportunist", ClassSymbol.Rogue, 0)
+                .WithTraits("Innate.")
+                .WithSkillTestIcons(SkillIcon.Wild)
+                .WithText("Commit only to a skill test you are performing.\r\nIf you succeed by 3 or more, return Opportunist to your hand after this test instead of discarding it.")
+                .WithInfo(53, 1, Artist.Rafal_Hrynkiewicz));
+            addCard(ArkhamCard.Asset("Leo De Luca", ClassSymbol.Rogue, 5, AssetSlot.Ally)
+                .WithLevel(1)
+                .WithUnique()
+                .WithTraits("Ally.", "Criminal.")
+                .WithSkillTestIcons(SkillIcon.Intellect)
+                .WithText("You may take an additional action during your turn.")
+                .WithFlavor("\"I was born in Mississippi. Lousiana just sounded better.\"")
+                .WithHealth(2).WithSanity(2)
+                .WithInfo(54, 1, Artist.Paco_Rico_Torres));
+            addCard(ArkhamCard.Asset("Cat Burglar", ClassSymbol.Rogue, 4, AssetSlot.Ally)
+                .WithLevel(1)
+                .WithTraits("Ally.", "Criminal.")
+                .WithSkillTestIcons(SkillIcon.Willpower, SkillIcon.Agility)
+                .WithText("You get +1 Agility.\r\nAction Exhaust Cat Burglar: Disengage from each enemy engaged with you and move to a connecting location. This action does not provoke attacks of opportunity.")
+                .WithHealth(2).WithSanity(2)
+                .WithInfo(55, 1, Artist.JB_Casacop));
 
             addCard(ArkhamCard.Event("Lucky!", ClassSymbol.Survivor, 1)
                 .WithTraits("Fortune.")

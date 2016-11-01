@@ -1079,5 +1079,7 @@ namespace HallOfBeorn.Models
         public static Artist Stephen_Somers = new Artist { Name = "Stephen Somers", URL = "http://stephensomers.deviantart.com" };
         public static Artist Dane_Cozens = new Artist { Name = "Dane Cozens", URL = "http://www.danecozens.com" };
         public static Artist Michael_J_Williams = new Artist { Name = "Michael J. Williams", URL = "http://www.mwillustration.com" };
+        public static Artist Paco_Rico_Torres = new Artist { Name = "Paco Rico Torres", URL = "http://pacorico.blogspot.com" };
+        public static Artist Federico_Piatti = new Artist { Name = "Federico Piatti", URL = "http://fpiatti.com" };
     }
 }
