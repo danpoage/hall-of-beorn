@@ -174,7 +174,7 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithSkillTestIcons(SkillIcon.Intellect)
                 .WithText("Fast.\r\nYou get +1 Intellect while invetigating.")
                 .WithFlavor("A lens into a world unseen can reveal things you wish it hadn't.")
-                .WithInfo(30, 1, Artist.TBD));
+                .WithInfo(30, 1, Artist.German_Nobile));
             addCard(ArkhamCard.Asset("Old Book of Lore", ClassSymbol.Seeker, 3, AssetSlot.One_Hand)
                 .WithTraits("Item.", "Tome.")
                 .WithSkillTestIcons(SkillIcon.Willpower)
@@ -210,13 +210,13 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithSkillTestIcons(SkillIcon.Combat, SkillIcon.Agility)
                 .WithKeywords("Fast.")
                 .WithText("Fast. Play only during your turn.\r\nUntil the end of the round, you must use your Intellect in place of your Combat and Agility.")
-                .WithInfo(36, 1, Artist.TBD));
+                .WithInfo(36, 1, Artist.Maggie_Ivy));
             addCard(ArkhamCard.Event("Working a Hunch", ClassSymbol.Seeker, 2)
                 .WithTraits("Insight.")
                 .WithSkillTestIcons(SkillIcon.Intellect, SkillIcon.Intellect)
                 .WithKeywords("Fast.")
                 .WithText("Fast. Play only during your turn. Discover 1 clue at your location.")
-                .WithInfo(37, 1, Artist.TBD));
+                .WithInfo(37, 1, Artist.Maggie_Ivy));
             addCard(ArkhamCard.Event("Barricade", ClassSymbol.Seeker, 0)
                 .WithTraits("Insight.", "Tactic.")
                 .WithText("Attach to your location.\r\nNon-Elite enemies cannot move into attached location.\r\nForced - When an investigator leaves attached location: Discard Barricade.")
@@ -225,7 +225,7 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithTraits("Practiced.")
                 .WithText("If this skill test is successful while investigating a location, discover 1 additional clue at that location.")
                 .WithFlavor("I knew I had seen this symbol before. I must warn the others before it is too late!")
-                .WithInfo(39, 1, Artist.TBD));
+                .WithInfo(39, 1, Artist.Felicia_Cano));
             addCard(ArkhamCard.Asset("Magnifying Glass", ClassSymbol.Seeker, 0, AssetSlot.One_Hand)
                 .WithLevel(1)
                 .WithTraits("Item.", "Tool.")
@@ -233,7 +233,7 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithSkillTestIcons(SkillIcon.Intellect)
                 .WithText("Fast.\r\nYou get +1 Intellect while investigating.\r\nFree Action - If there are no clues on your location: Return Magnifying Glass to your hand.")
                 .WithFlavor("A lens into a world unseen can reveal things you wish it hadn't.")
-                .WithInfo(40, 1, Artist.TBD));
+                .WithInfo(40, 1, Artist.German_Nobile));
             addCard(ArkhamCard.Asset("Disc of Itzamna", ClassSymbol.Seeker, 3, AssetSlot.Accessory)
                 .WithLevel(2)
                 .WithUnique()
@@ -241,14 +241,14 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithSkillTestIcons(SkillIcon.Willpower, SkillIcon.Intellect, SkillIcon.Combat)
                 .WithText("Reaction - When a non-Elite enemy spawns at your location, discard Disc of Itzamna: Discard that enemy.")
                 .WithFlavor("Do they fear it because of what it will do to them?\r\nOr, do they fear it because of what it will do to you?")
-                .WithInfo(41, 1, Artist.TBD));
+                .WithInfo(41, 1, Artist.Melissa_Findley));
             addCard(ArkhamCard.Asset("Encyclopedia", ClassSymbol.Seeker, 2, AssetSlot.One_Hand)
                 .WithLevel(2)
                 .WithTraits("Item.", "Tome.")
                 .WithSkillTestIcons(SkillIcon.Wild)
                 .WithText("Action - Exhaust Encyclopedia: Choose an investigator at your location. That investigator gets +2 to a skill of your choice until the end of the phase.")
                 .WithFlavor("It's supposed to be comprehensive, but the more I search through its pages, the more I realize we know nothing about the real truths of the cosmos.")
-                .WithInfo(42, 1, Artist.TBD));
+                .WithInfo(42, 1, Artist.Eric_Wilkerson));
             addCard(ArkhamCard.Event("Cryptic Research", ClassSymbol.Seeker, 0)
                 .WithLevel(4)
                 .WithTraits("Insight.")
@@ -327,6 +327,53 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithText("You get +1 Agility.\r\nAction Exhaust Cat Burglar: Disengage from each enemy engaged with you and move to a connecting location. This action does not provoke attacks of opportunity.")
                 .WithHealth(2).WithSanity(2)
                 .WithInfo(55, 1, Artist.JB_Casacop));
+            addCard(ArkhamCard.Event("Sure Gamble", ClassSymbol.Rogue, 2)
+                .WithLevel(3)
+                .WithTraits("Fortune.", "Insight.")
+                .WithKeywords("Fast.")
+                .WithText("Fast. Play after you reveal a chaos token with a negative modifier.\r\nSwitch that token's \"-\" to a \"+\".")
+                .WithInfo(56, 1, Artist.Sara_Biddle));
+            addCard(ArkhamCard.Event("Hot Streak", ClassSymbol.Rogue, 3)
+                .WithLevel(4)
+                .WithText("Gain 10 resources.")
+                .WithFlavor("\"I win again! Sorry sugar, it's just not your night.\"")
+                .WithInfo(57, 1, Artist.Sara_Biddle));
+            addCard(ArkhamCard.Asset("Forbidden Knowledge", ClassSymbol.Mystic, 0)
+                .WithTraits("Talent.")
+                .WithKeywords("Uses 4.")
+                .WithSkillTestIcons(SkillIcon.Intellect)
+                .WithText("Uses (4 secrets). If Forbidden Knowledge has no secrets, discard it.\r\nFree Action - Exhaust Forbidden Knowledge and take 1 horror: Move 1 secret from Forbidden Knowledge to your resource pool, as a resource.")
+                .WithInfo(58, 1, Artist.Drew_Whitmore));
+            addCard(ArkhamCard.Asset("Holy Rosary", ClassSymbol.Mystic, 2, AssetSlot.Accessory)
+                .WithTraits("Item.", "Charm.")
+                .WithSkillTestIcons(SkillIcon.Willpower)
+                .WithText("You get +1 Willpower.")
+                .WithFlavor("Whether focused through a mundane trinket or a mystical artifact, there is real power in fait all the same.")
+                .WithHealth(0).WithSanity(2)
+                .WithInfo(59, 1, Artist.Sara_Biddle));
+            addCard(ArkhamCard.Asset("Shrivelling", ClassSymbol.Mystic, 3, AssetSlot.Arcane)
+                .WithTraits("Spell.")
+                .WithKeywords("Uses 4.")
+                .WithSkillTestIcons(SkillIcon.Combat)
+                .WithText("Uses (4 charges).\r\nAction - Spend 1 charge: Fight. This attack uses Willpower instead of Combat and deals +1 damage. If a Skull, Cultist, Tablet, Heart or Tentacle symbol is revealed during this attack, take 1 horror.")
+                .WithInfo(60, 1, Artist.Brian_Valenzuela));
+            addCard(ArkhamCard.Asset("Scrying", ClassSymbol.Mystic, 1, AssetSlot.Arcane)
+                .WithTraits("Spell.")
+                .WithKeywords("Uses 3.")
+                .WithSkillTestIcons(SkillIcon.Intellect)
+                .WithText("Uses (3 charges).\r\nAction - Exhaust Scrying and spend 1 charge: Look at the top 3 cards of any investigator's deck or the encounter deck. Return them to the top of that deck in any order.")
+                .WithInfo(61, 1, Artist.Romana_Kendelic));
+            addCard(ArkhamCard.Asset("Arcane Studies", ClassSymbol.Mystic, 2)
+                .WithTraits("Talent.")
+                .WithSkillTestIcons(SkillIcon.Willpower, SkillIcon.Intellect)
+                .WithText("Free Action - Spend 1 resource: You get +1 Willpower for this skill test.\r\nFree Action - Spend 1 resource: You get +1 Intellect for this skill test.")
+                .WithInfo(62, 1, Artist.Alexandre_Dainche));
+            addCard(ArkhamCard.Asset("Arcane Initiate", ClassSymbol.Mystic, 1, AssetSlot.Ally)
+                .WithTraits("Ally.", "Sorcerer.")
+                .WithSkillTestIcons(SkillIcon.Willpower)
+                .WithText("Forced - After Arcane Initiate enters play: Place 1 doom on it.\r\nFree Action - Exhaust Arcane Initiate: Search the top 3 cards of your deck for a Spell card and draw it. Shuffle your deck.")
+                .WithHealth(1).WithSanity(2)
+                .WithInfo(63, 1, Artist.Xia_Taptara));
 
             addCard(ArkhamCard.Event("Lucky!", ClassSymbol.Survivor, 1)
                 .WithTraits("Fortune.")

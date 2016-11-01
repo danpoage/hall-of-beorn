@@ -119,6 +119,26 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             }
         }
 
+        public string SlotImagePath
+        {
+            get
+            {
+                return card.Slot.HasValue && card.Slot.Value != AssetSlot.None ?
+                    string.Format("/Images/Arkham/Slot{0}.png", card.Slot.Value.ToString())
+                    : string.Empty;
+            }
+        }
+
+        public string SlotSearch
+        {
+            get
+            {
+                return card.Slot.HasValue && card.Slot.Value != AssetSlot.None ?
+                    string.Format("/Arkham?Slot={0}", card.Slot.Value)
+                    : string.Empty;
+            }
+        }
+
         public string CardType
         {
             get
@@ -159,7 +179,10 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         {
             get
             {
-                return card.Health > 0 ? card.Health.ToString() : string.Empty;
+                if  (!card.Health.HasValue)
+                    return string.Empty;
+                
+                return card.Health.Value > 0 ? card.Health.ToString() : "-";
             }
         }
 
@@ -167,7 +190,10 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         {
             get
             {
-                return card.Sanity > 0 ? card.Sanity.ToString() : string.Empty;
+                if (!card.Sanity.HasValue)
+                    return string.Empty;
+
+                return card.Sanity.Value > 0 ? card.Sanity.ToString() : "-";
             }
         }
 

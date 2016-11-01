@@ -1066,7 +1066,6 @@ namespace HallOfBeorn.Models
         public static Artist Yog_Joshi = new Artist { Name = "Yog Joshi", URL = "http://www.yogjoshi.com" };
 
         //Arkham Horror Artists
-        public static Artist TBD = new Artist { Name = "To Be Determined", URL = "google.com" };
         public static Artist Vincent_Dutrait = new Artist { Name = "Vincent Dutrait", URL = "http://www.vincentdutrait.com" };
         public static Artist Jacob_Murray = new Artist { Name = "Jacob Murray", URL = "http://www.murr-art.com" };
         public static Artist Dani_Hartel = new Artist { Name = "Dani Hartel", URL = "http://www.danihartel.com" };
@@ -1079,7 +1078,11 @@ namespace HallOfBeorn.Models
         public static Artist Stephen_Somers = new Artist { Name = "Stephen Somers", URL = "http://stephensomers.deviantart.com" };
         public static Artist Dane_Cozens = new Artist { Name = "Dane Cozens", URL = "http://www.danecozens.com" };
         public static Artist Michael_J_Williams = new Artist { Name = "Michael J. Williams", URL = "http://www.mwillustration.com" };
+        public static Artist German_Nobile = new Artist { Name = "German Nobile", URL = "http://aracubus.deviantart.com" };
+        public static Artist Maggie_Ivy = new Artist { Name = "Maggie Ivy", URL = "http://www.maggieivy.com" };
+        public static Artist Eric_Wilkerson = new Artist { Name = "Eric Wilkerson", URL = "http://ericwilkersonart.com" };
         public static Artist Paco_Rico_Torres = new Artist { Name = "Paco Rico Torres", URL = "http://pacorico.blogspot.com" };
         public static Artist Federico_Piatti = new Artist { Name = "Federico Piatti", URL = "http://fpiatti.com" };
+        public static Artist Xia_Taptara = new Artist { Name = "Xia Taptara", URL = "http://xiataptara.deviantart.com" };
     }
 }

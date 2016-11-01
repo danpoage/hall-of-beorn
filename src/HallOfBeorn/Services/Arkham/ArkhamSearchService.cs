@@ -359,6 +359,11 @@ namespace HallOfBeorn.Services.Arkham
                         continue;
                     }
 
+                    if (model.Slot.HasValue && model.Slot.Value != AssetSlot.None && (!card.Slot.HasValue || card.Slot.Value != model.Slot.Value))
+                    {
+                        continue;
+                    }
+
                     if (!byteFiltersMatch(model, card)) {
                         continue;
                     }

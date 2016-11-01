@@ -23,7 +23,8 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         public ClassSymbol? ClassSymbol { get; set; }
         public Uniqueness? IsUnique { get; set; }
         public SkillIcon? SkillIcon { get; set; }
-        
+        public AssetSlot? Slot { get; set; }
+
         public NumericOperator? WillpowerOp { get; set; }
         public byte? Willpower { get; set; }
         public NumericOperator? IntellectOp { get; set; }
@@ -165,6 +166,11 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         public static IEnumerable<SelectListItem> SkillIconValues
         {
             get { return typeof(SkillIcon).GetSelectListItems(" "); }
+        }
+
+        public static IEnumerable<SelectListItem> SlotValues
+        {
+            get { return typeof(AssetSlot).GetSelectListItems(" "); }
         }
 
         private static readonly Dictionary<Skill, IEnumerable<SelectListItem>> valuesBySkill = new Dictionary<Skill, IEnumerable<SelectListItem>>();

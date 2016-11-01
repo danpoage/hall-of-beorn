@@ -46,6 +46,10 @@ namespace HallOfBeorn.Controllers
             if (model.SkillIcon.HasValue && model.SkillIcon.Value == SkillIcon.None) {
                 model.SkillIcon = null;
             }
+            if (model.Slot.HasValue && model.Slot.Value == AssetSlot.None)
+            {
+                model.Slot = null;
+            }
 
             if (!model.Health.HasValue || model.Health.Value == 0) {
                 model.Health = null;
