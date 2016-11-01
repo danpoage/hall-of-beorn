@@ -374,6 +374,54 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithText("Forced - After Arcane Initiate enters play: Place 1 doom on it.\r\nFree Action - Exhaust Arcane Initiate: Search the top 3 cards of your deck for a Spell card and draw it. Shuffle your deck.")
                 .WithHealth(1).WithSanity(2)
                 .WithInfo(63, 1, Artist.Xia_Taptara));
+            addCard(ArkhamCard.Event("Drawn to the Flame", ClassSymbol.Mystic, 0)
+                .WithTraits("Insight.")
+                .WithSkillTestIcons(SkillIcon.Willpower, SkillIcon.Intellect)
+                .WithText("Draw the top card of the encounter deck. Then, discover 2 clues at your location.")
+                .WithFlavor("\"We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far.\"\r\n-H.P. Lovecraft, \"The Call of Cthulhu\"")
+                .WithInfo(64, 1, Artist.Magali_Villeneuve));
+            addCard(ArkhamCard.Event("Ward of Protection", ClassSymbol.Mystic, 1)
+                .WithTraits("Spell.", "Spirit.")
+                .WithSkillTestIcons(SkillIcon.Wild)
+                .WithKeywords("Fast.")
+                .WithText("Fast. Play when you draw a non-weakness treachery card.\r\nCancel that card's revelation effect. Then, take 1 horror.")
+                .WithInfo(65, 1, Artist.Alexandr_Elichev));
+            addCard(ArkhamCard.Event("Blinding Light", ClassSymbol.Mystic, 2)
+                .WithTraits("Spell.")
+                .WithSkillTestIcons(SkillIcon.Willpower, SkillIcon.Agility)
+                .WithText("Evade. This evasion attempt uses Willpower instead of Agility. If you succeed, deal 1 damage to the enemy just evaded. If a Skull, Cultist, Tablet, Heart or Tentacle symbol is revealed during this evasion attempt, lose 1 action this turn.")
+                .WithInfo(66, 1, Artist.Stephen_Somers));
+            addCard(ArkhamCard.Skill("Fearless", ClassSymbol.Mystic, 0)
+                .WithTraits("Innate.")
+                .WithSkillTestIcons(SkillIcon.Willpower)
+                .WithText("If this skill test is successful, heal 1 horror.")
+                .WithFlavor("Only by standing firm against the darkness can we live to see the light of another day.")
+                .WithInfo(67, 1, Artist.RJ_Palmer));
+            addCard(ArkhamCard.Event("Mind Wipe", ClassSymbol.Mystic, 1)
+                .WithLevel(1)
+                .WithTraits("Spell.")
+                .WithSkillTestIcons(SkillIcon.Willpower, SkillIcon.Combat)
+                .WithKeywords("Fast.")
+                .WithText("Fast. Play after a phase begins.\r\nChoose a non-Elite enemy at your location. Treat the chosen enemy's printed text box as if it were blank (except for Traits) until the end of the phase.")
+                .WithInfo(68, 1, Artist.Rafal_Hrynkiewicz));
+            addCard(ArkhamCard.Event("Blinding Light", ClassSymbol.Mystic, 1)
+                .WithLevel(2)
+                .WithTraits("Spell.")
+                .WithSkillTestIcons(SkillIcon.Willpower, SkillIcon.Agility)
+                .WithText("Evade. This evasion attempt uses Willpower instead of Agility. If you succeed, deal 2 damage to the enemy just evaded. If a Skull, Cultist, Tablet, Heart or Tentacle symbol is revealed during this evasion attempt, lose 1 action this turn and take 1 horror.")
+                .WithInfo(69, 1, Artist.Stephen_Somers));
+            addCard(ArkhamCard.Asset("Book of Shadows", ClassSymbol.Mystic, 4, AssetSlot.One_Hand)
+                .WithLevel(3)
+                .WithTraits("Item.", "Tome.")
+                .WithSkillTestIcons(SkillIcon.Willpower, SkillIcon.Intellect)
+                .WithText("You have 1 additional arcane slot.\r\nAction - Exhaust Book of Shadows: Add 1 charge to a Spell asset you control.")
+                .WithInfo(70, 1, Artist.Dimitri_Bielak));
+            addCard(ArkhamCard.Asset("Grotesque Statue", ClassSymbol.Mystic, 2, AssetSlot.One_Hand)
+                .WithTraits("Item.", "Relic.")
+                .WithSkillTestIcons(SkillIcon.Wild)
+                .WithKeywords("Uses 4.")
+                .WithText("Uses (4 charges). If Grotesque Status has no charges, discard it.\r\nReaction - When you would reveal a chaos token, spend 1 charge: Reveal 2 chaos tokens instead of 1. Choose 1 of those tokens to resolve, and ignore the other.")
+                .WithInfo(71, 1, Artist.Josh_Stewart));
 
             addCard(ArkhamCard.Event("Lucky!", ClassSymbol.Survivor, 1)
                 .WithTraits("Fortune.")

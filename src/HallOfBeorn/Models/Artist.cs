@@ -1084,5 +1084,7 @@ namespace HallOfBeorn.Models
         public static Artist Paco_Rico_Torres = new Artist { Name = "Paco Rico Torres", URL = "http://pacorico.blogspot.com" };
         public static Artist Federico_Piatti = new Artist { Name = "Federico Piatti", URL = "http://fpiatti.com" };
         public static Artist Xia_Taptara = new Artist { Name = "Xia Taptara", URL = "http://xiataptara.deviantart.com" };
+        public static Artist RJ_Palmer = new Artist { Name = "RJ Palmer", URL = "http://arvalis.deviantart.com" };
+        public static Artist Josh_Stewart = new Artist { Name = "Josh Stewart", URL = "http://www.joshuajstewart.com" };
     }
 }
