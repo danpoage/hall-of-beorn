@@ -717,6 +717,7 @@
     <Content Include="Images\Arkham\SlotSpell.png" />
     <Content Include="Images\Arkham\Survivor.png" />
     <Content Include="Images\Arkham\Unique.png" />
+    <Content Include="Images\Arkham\Wild.png" />
     <Content Include="Images\Arkham\Willpower.png" />
     <Content Include="Images\Arkham\Willpower_small.png" />
     <Content Include="Images\attack.gif" />

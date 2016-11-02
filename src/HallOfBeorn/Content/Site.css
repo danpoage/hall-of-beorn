@@ -1458,8 +1458,8 @@ tr.pager td {
 }
 
 .arkham-cost {
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: white;
 }
 
 .arkham-perInvestigator {
@@ -1474,6 +1474,7 @@ tr.pager td {
     background-image: url('/Images/Arkham/Health.png');
     width: 25px;
     height: 31px;
+    margin-right: 8px;
 }
 
 .arkham-sanity {
@@ -1568,6 +1569,56 @@ tr.pager td {
     margin-left: 24px;
 }
 
+.arkham-title {
+    min-width: 200px;
+    font-family: Georgia;
+    font-weight: 200;
+    font-size: 14pt;
+}
+
+.arkham-subtitle {
+    font-family: 'Times New Roman';
+    font-size: 10pt;
+    text-align: center;
+}
+
+.arkham-statBox {
+    margin-top: -4px;
+}
+
+.arkham-skillSection {
+    display: inline-block;
+    width: 236px;
+}
+
+.arkham-skillBox {
+    display: inline-block;
+    margin-left: 8px;
+    height: 32px;
+    width: 40px;
+    border: 1px solid black;
+    border-radius: 8px;
+    vertical-align: middle;
+}
+
+.arkham-skillValue {
+    display: inline-block;
+    font-family: Georgia;
+    font-size: 16pt;
+    font-weight: 200;
+    height: 24px;
+    margin-bottom: 4px;
+    margin-left: 2px;
+}
+
+.arkham-skillIcon {
+    margin-top: 4px;
+}
+
+.arkham-slot {
+    display: inline-block;
+    margin-left: 16px;
+}
 
 /*
 .search-select-tiny {

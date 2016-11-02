@@ -244,10 +244,15 @@ namespace HallOfBeorn.Services.Arkham
                 isX = (token == "X");
                 isNotApplicable = (token == "-");
             }
+
             var filterNumber = new Number { Value = val, IsX = isX, IsNotApplicable = isNotApplicable, IsPerInvestigator = IsPerInvestigator };
 
             if (!filterNumber.FlagsMatch(cardValue))
                 return false;
+
+            if (isNotApplicable || isX) {
+                return true;
+            }
 
             switch (op)
             {
@@ -265,32 +270,34 @@ namespace HallOfBeorn.Services.Arkham
             }
         }
 
-        private bool byteFiltersMatch(ArkhamSearchViewModel model, ArkhamCard card) {
+        private bool byteFiltersCheck(ArkhamSearchViewModel model, ArkhamCard card, bool filterCheck) {
 
             var checks = new List<Tuple<byte?, NumericOperator?, Number?>>() {
                     new Tuple<byte?, NumericOperator?, Number?>(model.Willpower, model.WillpowerOp, card.Willpower),
                     new Tuple<byte?, NumericOperator?, Number?>(model.Intellect, model.IntellectOp, card.Intellect),
                     new Tuple<byte?, NumericOperator?, Number?>(model.Combat, model.CombatOp, card.Combat),
-                    new Tuple<byte?, NumericOperator?, Number?>(model.Agility, model.AgilityOp, card.Agility),
-                    new Tuple<byte?, NumericOperator?, Number?>(model.Health, model.HealthOp, Number.Optional(card.Health)),
-                    new Tuple<byte?, NumericOperator?, Number?>(model.Sanity, model.SanityOp, Number.Optional(card.Sanity))
+                    new Tuple<byte?, NumericOperator?, Number?>(model.Agility, model.AgilityOp, card.Agility)
             };
 
             foreach (var c in checks) {
                 if (c.Item1.HasValue && c.Item2.HasValue)
                 {
-                    if (!c.Item3.HasValue)
-                        return false;
+                    if (filterCheck) {
+                        return true;
+                    } else {
+                        if (!c.Item3.HasValue)
+                            return false;
 
-                    if (!checkByteValue(c.Item1.Value, c.Item2.Value, c.Item3.Value))
-                        return false;
+                        if (!checkByteValue(c.Item1.Value, c.Item2.Value, c.Item3.Value))
+                            return false;
+                    }
                 }
             }
 
-            return true;
+            return !filterCheck;
         }
 
-        private bool stringFiltersMatch(ArkhamSearchViewModel model, ArkhamCard card) {
+        private bool stringFiltersCheck(ArkhamSearchViewModel model, ArkhamCard card, bool filterCheck) {
 
             var checks = new List<Tuple<string, NumericOperator?, Number?>>() {
                     new Tuple<string, NumericOperator?, Number?>(model.Cost, model.CostOp, card.Cost),
@@ -301,21 +308,27 @@ namespace HallOfBeorn.Services.Arkham
                     new Tuple<string, NumericOperator?, Number?>(model.Damage, model.DamageOp, card.Damage),
                     new Tuple<string, NumericOperator?, Number?>(model.Horror, model.HorrorOp, card.Horror),
                     new Tuple<string, NumericOperator?, Number?>(model.DoomThreshold, model.DoomThresholdOp, card.DoomThreshold),
-                    new Tuple<string, NumericOperator?, Number?>(model.ClueThreshold, model.ClueThresholdOp, card.ClueThreshold)
+                    new Tuple<string, NumericOperator?, Number?>(model.ClueThreshold, model.ClueThresholdOp, card.ClueThreshold),
+                    new Tuple<string, NumericOperator?, Number?>(model.Health, model.HealthOp, card.Health),
+                    new Tuple<string, NumericOperator?, Number?>(model.Sanity, model.SanityOp, card.Sanity)
             };
 
             foreach (var c in checks) {
                 if (!string.IsNullOrEmpty(c.Item1) && c.Item2.HasValue)
                 {
-                    if (!c.Item3.HasValue)
-                        return false;
+                    if (filterCheck) {
+                        return true;
+                    } else {
+                        if (!c.Item3.HasValue)
+                            return false;
 
-                    if (!checkStringValue(c.Item1, c.Item2.Value, c.Item3.Value))
-                        return false;
+                        if (!checkStringValue(c.Item1, c.Item2.Value, c.Item3.Value))
+                            return false;
+                    }
                 }
             }
 
-            return true;
+            return !filterCheck;
         }
 
         public IEnumerable<ArkhamSearchResult> Search(ArkhamSearchViewModel model)
@@ -327,133 +340,129 @@ namespace HallOfBeorn.Services.Arkham
                 foreach (var card in product.Cards())
                 {
                     float score = string.IsNullOrEmpty(model.Query) ? 100 : 0;
+                    var hasFilter = false;
 
                     if (!string.IsNullOrEmpty(model.Query))
                     {
+                        hasFilter = true;
                         score = getQueryScore(model, card);
 
                         if (score == 0)
                             continue;
                     }
 
-                    if (!string.IsNullOrEmpty(model.Product) && model.Product != "Any" && card.Product.Name != model.Product)
+                    if (!string.IsNullOrEmpty(model.Product) && model.Product != "Any")
                     {
-                        continue;
+                        hasFilter = true;
+                        if (card.Product.Name != model.Product)
+                            continue;
                     }
-                    if (model.CardType.HasValue && model.CardType != ArkhamCardType.None && card.CardType != model.CardType.Value)
+                    if (model.CardType.HasValue && model.CardType != ArkhamCardType.None)
                     {
-                        continue;
+                        hasFilter = true;
+                        if (card.CardType != model.CardType.Value)
+                            continue;
                     }
-                    if (model.DeckType.HasValue && model.DeckType.Value != ArkhamDeckType.None && card.DeckType != model.DeckType.Value) {
-                        continue;
+                    if (model.DeckType.HasValue && model.DeckType.Value != ArkhamDeckType.None) {
+                        hasFilter = true;
+                        if (card.DeckType != model.DeckType.Value)
+                            continue;
                     }
-                    if (model.IsUnique.HasValue && model.IsUnique.Value != Uniqueness.Any && (model.IsUnique == Uniqueness.Yes && !card.IsUnique || model.IsUnique == Uniqueness.No && card.IsUnique)) {
-                        continue;
+                    if (model.IsUnique.HasValue && model.IsUnique.Value != Uniqueness.Any) {
+                        hasFilter = true;
+                        if (model.IsUnique == Uniqueness.Yes && !card.IsUnique || model.IsUnique == Uniqueness.No && card.IsUnique)
+                            continue;
                     }
-                    if (model.ClassSymbol.HasValue && model.ClassSymbol != ClassSymbol.None && card.ClassSymbol != model.ClassSymbol.Value)
+                    if (model.ClassSymbol.HasValue && model.ClassSymbol != ClassSymbol.None)
                     {
-                        continue;
+                        hasFilter = true;
+                        if (card.ClassSymbol != model.ClassSymbol.Value)
+                            continue;
                     }
                     
-                    if (model.SkillIcon.HasValue && model.SkillIcon.Value != SkillIcon.None && !card.SkillIcons().Any(x => x == model.SkillIcon)) {
-                        continue;
-                    }
-
-                    if (model.Slot.HasValue && model.Slot.Value != AssetSlot.None && (!card.Slot.HasValue || card.Slot.Value != model.Slot.Value))
-                    {
-                        continue;
-                    }
-
-                    if (!byteFiltersMatch(model, card)) {
-                        continue;
-                    }
-
-                    if (!stringFiltersMatch(model, card)) {
-                        continue;
-                    }
-
-                    /*
-                    //Stat checks
-                    if (model.Willpower.HasValue && model.Willpower.Value > 0 && model.WillpowerOp.HasValue)
-                    {
-                        if (!card.Willpower.HasValue)
-                            continue;
-
-                        if (!checkByteValue(model.Willpower.Value, model.WillpowerOp.Value, card.Willpower.Value))
+                    if (model.SkillIcon.HasValue && model.SkillIcon.Value != SkillIcon.None) {
+                        hasFilter = true;
+                        if (!card.SkillIcons().Any(x => x == model.SkillIcon))
                             continue;
                     }
-                    if (model.Intellect.HasValue && model.Intellect.Value > 0 && card.Intellect.HasValue && model.Intellect.Value != card.Intellect.Value.Value)
+
+                    if (model.Slot.HasValue && model.Slot.Value != AssetSlot.None)
                     {
-                        continue;
+                        hasFilter = true;
+                        if (!card.Slot.HasValue || card.Slot.Value != model.Slot.Value)
+                            continue;
                     }
-                    if (model.Combat.HasValue && model.Combat.Value > 0 && card.Combat.HasValue && model.Combat.Value != card.Combat.Value.Value)
-                    {
-                        continue;
+
+                    if (byteFiltersCheck(model, card, true)) {
+                        hasFilter = true;
+                        if (!byteFiltersCheck(model, card, false)) {
+                            continue;
+                        }
                     }
-                    if (model.Agility.HasValue && model.Agility.Value > 0 && card.Agility.HasValue && model.Agility.Value != card.Agility.Value.Value)
-                    {
-                        continue;
+
+                    if (stringFiltersCheck(model, card, true)) {
+                        hasFilter = true;
+                        if (!stringFiltersCheck(model, card, false)) {
+                            continue;
+                        }
                     }
-                    */
-                    if (!string.IsNullOrEmpty(model.Trait) && model.Trait != "Any" && !card.Traits().Any(x => x.Replace(".", "") == model.Trait.Replace(".", "")))
+
+                    if (!string.IsNullOrEmpty(model.Trait) && model.Trait != "Any")
                     {
-                        continue;
+                        hasFilter = true;
+                        if (!card.Traits().Any(x => x.Replace(".", "") == model.Trait.Replace(".", "")))
+                            continue;
                     }
-                    if (!string.IsNullOrEmpty(model.Keyword) && model.Keyword != "Any" && !card.Keywords().Any(x => x.Replace(".", "") == model.Keyword.Replace(".", "")))
+                    if (!string.IsNullOrEmpty(model.Keyword) && model.Keyword != "Any")
                     {
-                        continue;
+                        hasFilter = true;
+                        if (!card.Keywords().Any(x => x.Replace(".", "") == model.Keyword.Replace(".", "")))
+                            continue;
                     }
-                    if (!string.IsNullOrEmpty(model.VictoryPoints) && model.VictoryPoints != "Any" && !hasVictoryPoints(model.VictoryPoints, card.VictoryPoints))
+                    if (!string.IsNullOrEmpty(model.VictoryPoints) && model.VictoryPoints != "Any")
                     {
-                        continue;
+                        hasFilter = true;
+                        if (!hasVictoryPoints(model.VictoryPoints, card.VictoryPoints))
+                            continue;
                     }
-                    if (model.LocationSymbol.HasValue && model.LocationSymbol.Value != ConnectionSymbol.None && (!card.LocationSymbol.HasValue || model.LocationSymbol.Value != card.LocationSymbol))
+                    if (model.LocationSymbol.HasValue && model.LocationSymbol.Value != ConnectionSymbol.None)
                     {
-                        continue;
+                        hasFilter = true;
+                        if ((!card.LocationSymbol.HasValue || model.LocationSymbol.Value != card.LocationSymbol))
+                            continue;
                     }
-                    if (model.ConnectsTo.HasValue && model.ConnectsTo.Value != ConnectionSymbol.None && !card.Connections().Any(x => x == model.ConnectsTo.Value))
+                    if (model.ConnectsTo.HasValue && model.ConnectsTo.Value != ConnectionSymbol.None)
                     {
-                        continue;
+                        hasFilter = true;
+                        if (!card.Connections().Any(x => x == model.ConnectsTo.Value))
+                            continue;
                     }
                     if (!string.IsNullOrEmpty(model.EnemyFightValue) && model.EnemyFightValue != "Any")
                     {
+                        hasFilter = true;
                         if (!cardMatchesNumberFilter(model.EnemyFightValue, card.EnemyFightValue))
                             continue;
                     }
                     if (!string.IsNullOrEmpty(model.EnemyHealthValue) && model.EnemyHealthValue != "Any")
                     {
+                        hasFilter = true;
                         if (!cardMatchesNumberFilter(model.EnemyHealthValue, card.EnemyHealthValue))
                             continue;
                     }
                     if (!string.IsNullOrEmpty(model.EnemyEvadeValue) && model.EnemyEvadeValue != "Any")
                     {
+                        hasFilter = true;
                         if (!cardMatchesNumberFilter(model.EnemyEvadeValue, card.EnemyEvadeValue))
                             continue;
                     }
-                    /*
-                    if (!string.IsNullOrEmpty(model.Damage) && model.Damage != "Any")
-                    {
-                        if (!cardMatchesNumberFilter(model.Damage, card.Damage))
-                            continue;
-                    }
-                    if (!string.IsNullOrEmpty(model.Horror) && model.Horror != "Any")
-                    {
-                        if (!cardMatchesNumberFilter(model.Horror, card.Horror))
-                            continue;
-                    }
-                    if (!string.IsNullOrEmpty(model.Shroud) && model.Shroud != "Any")
-                    {
-                        if (!cardMatchesNumberFilter(model.Shroud, card.Shroud))
-                            continue;
-                    }
-                    if (!string.IsNullOrEmpty(model.ClueValue) && model.ClueValue != "Any")
-                    {
-                        if (!cardMatchesNumberFilter(model.ClueValue, card.ClueValue))
-                            continue;
-                    }
-                    */
 
-                    if (!string.IsNullOrEmpty(model.Artist) && model.Artist != "Any" && model.Artist != card.Artist.Name) {
+                    if (!string.IsNullOrEmpty(model.Artist) && model.Artist != "Any") {
+                        hasFilter = true;
+                        if (model.Artist != card.Artist.Name)
+                            continue;
+                    }
+
+                    if (!hasFilter && card.CardType != ArkhamCardType.Investigator) {
                         continue;
                     }
 

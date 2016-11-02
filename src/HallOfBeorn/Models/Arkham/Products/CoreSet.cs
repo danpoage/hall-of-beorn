@@ -20,6 +20,7 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithFrontText("Reaction - After you defeat an enemy: Discover 1 clue at your location. (Limit once per round.)\r\nElder Sign Effect: +1 for each clue on your location.")
                 .WithFrontFlavor("Everything by the book: every \"i\" dotted, every \"t\" crossed. It had worked, until now")
                 .WithBackText("Deck Size: 30.\r\nDeckbuiling Options: Guardian cards level 0-5, Seeker cards level 0-2, Neutral cards level 0-5.\r\nDeckbuiling Requirements (do not count towards deck size): Roland's .38 Special, Cover Up, 1 random basic weakness.")
+                .WithBackFlavor("Roland had always taken comfort in procedure and rules. As an agent in Bureau, he was relieved to have guidelines to follow in any given situation. But lately, his Federal Agent's Handbook had been entirely unhelpful given the cases he'd been assigned. Try as he might, Roland could find no mention of what to do when confronted with strange creatures, gates through time and space, or magic spells. If he hadn't seen it with his own eyes, he would never have believed it... and there's no way his superiors would understand. Roland knew he would have to handle this one himself.")
                 .WithInfo(1, 1, Artist.Magali_Villeneuve));
             addCard(ArkhamCard.Investigator("Daisy Walker", "The Librarian", ClassSymbol.Seeker, 5, 9)
                 .WithSkills(3, 5, 2, 2)
@@ -27,6 +28,7 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithFrontText("You may take an additional action during your turn, which can only be used on Tome Action abilities.\r\nElder Sign effect: +0. If you succeed, draw 1 card for each Tome you control.")
                 .WithFrontFlavor("\"I know of books so powerful, they can rewrite reality.\"")
                 .WithBackText("Deck Size: 30.\r\nDeckbuilding Options: Seeker cards level 0-5, Mystic cards level 0-2, Neutral cards level 0-5.\r\nDeckbuilding Requirements (do not count toward deck size): Daisy's Tote Bag, The Necronomicon (John Dee Translation), 1 random basic weakness.")
+                .WithBackFlavor("As a respected librarian at Mikatonic University, Daisy had always felt that books were the most important thing in her life. She explored in fiction what she abhorred in life: horror, violence, fear. Then, she stumbled across the John Dee translation of the Necronomicon. It was blasphemous, unholy, and too awful to be real. But given her studies in obscure and occult subjects, Daisy knew there was more truth than fiction within the book's pages. She began to wonder what other secrets the restricted collection of the Orne Library held...")
                 .WithInfo(2, 1, Artist.Magali_Villeneuve));
             addCard(ArkhamCard.Investigator("\"Skids\" O'Toole", "The Ex-Con", ClassSymbol.Rogue, 8, 6)
                 .WithSkills(2, 3, 3, 4)
@@ -34,6 +36,7 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithFrontText("Free Ability - During your turn, spend 2 resources: You may take an additional action this turn. (Limit once per turn.)\r\nElder Sign effect: +2. If you succeed, gain 2 resources.")
                 .WithFrontFlavor("\"I didn't get out of the joint just to watch the world end.\"")
                 .WithBackText("Deck Size: 30.\r\nDeckbuilding Options: Rogue cards level 0-5, Guardian cards level 0-2, Neutral cards level 0-5.\r\nDeckbuilding Requirements (do not count toward deck size): On the Lam, Hospital Debts, 1 random basic weakness.")
+                .WithBackFlavor("Skids hadn't planned on a life of crime. But sometimes doing the right thing means getting your hands dirty. The cops didn't care that SKids needed the money for his mother's operation. His mother died of her illness during the second year of his sentence. His cellmate, Brad Hollins, told him there were worse fates than death. He ranted and raved in a quiet voice every evening about the \"Old Ones\" and told Skids about bizaree adventures he'd had while dreaming. Skids didn't give it much thought until he woke one night to ths sight of his cellmate bursting into flames. When Skids was finally released, he returned to Arkham, looking for answers.")
                 .WithInfo(3, 1, Artist.Magali_Villeneuve));
             addCard(ArkhamCard.Investigator("Agnes Baker", "The Waitress", ClassSymbol.Mystic, 6, 8)
                 .WithSkills(5, 2, 2, 3)
@@ -41,12 +44,14 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithFrontText("Reaction - After 1 or more horror is placed on Agnes Baker: Deal 1 damage to an enemy at your location. (Limit once per phase.)\r\nElder Sign Effect: +1 for each horror on Agnes Baker.")
                 .WithFrontFlavor("\"I remember another life, one of sorcery and conquest.\"")
                 .WithBackText("Deck Size: 30.\r\nDeckbuilding Options: Mystic cards level 0-5, Survivor cards level 0-2, Neutral cards level 0-5.\r\nDeckbuilding Requirements (do not count toward deck size): Heirloom of Hyperborea, Dark Memory, 1 random basic weakness.")
+                .WithBackFlavor("Agnes Baker may be just an unassuming waitress in this life, but in a previous life, in a time and age undreamed of in the mordern world, she had been a powerful witch. It began when she found a strange artifact - a key of some kind - in a dusty collection of family belongings in her attic. When she touched it, the memories came flooding back, along with one word: \"Hyperborea.\" The more she delved into the visions and memories of her former life, the stronger her powers grew...and the more frightened she became.")
                 .WithInfo(4, 1, Artist.Magali_Villeneuve));
             addCard(ArkhamCard.Investigator("Wendy Adams", "The Urchin", ClassSymbol.Survivor, 7, 7)
                 .WithSkills(4, 3, 1, 4)
                 .WithTraits("Drifter.")
                 .WithFrontText("Reaction - When you reveal a chaos token, choose and discard 1 card from your hand: Cancal that chaos token and return it to the bag. Reveal a new chaos token. (Limit once per test/ability.)\r\nElder Sign Effect: +0. If Wendy's Amulet is in play, you automatically succeed instead.")
                 .WithBackText("Deck Size: 30.\r\nDeckbuilding Options: Survivor cards level 0-5, Rogue cards level 0-2, Neutral cards level 0-5.\r\nDeckbuilding Requirements (do not count toward deck size): Wendy's Amulet, Abandoned and Alone, 1 random basic weakness.")
+                .WithBackFlavor("Mama used to let Wendy play with her necklace when she was small. Mama would tell her stories, and Wendy would spin the necklace and watch as it glittered. Then, word came that her father had been lost at sea, and Mama started acting strange, drawing unusual symbols in chalk all over the house. They took Mama to the asylum, and Wendy went to the orphanage. Before they took her away, Mama gave her the necklace, to \"protect her.\" Wendy stayed in the orphanage for several years before running away, deciding that she could take better care of herself on her own.")
                 .WithInfo(5, 1, Artist.Jacob_Murray));
             addCard(ArkhamCard.Asset("Roland's .38 Special", ClassSymbol.Guardian, Number.Three, AssetSlot.One_Hand)
                 .WithUnique()
@@ -89,7 +94,7 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithFrontText("Uses (4 ammo).\r\nAction - Spend 1 ammo: Fight. You get +1 Combat for this attack. This attack deals +1 damage.")
                 .WithInfo(16, 1, Artist.John_Pacer));
             addCard(ArkhamCard.Asset("Physical Training", ClassSymbol.Guardian, Number.Of(2), AssetSlot.None)
-                .WithTraits("Talen.")
+                .WithTraits("Talent.")
                 .WithIcons(SkillIcon.Willpower, SkillIcon.Combat)
                 .WithFrontText("Free Action: Spend 1 resource: You get +1 Willpower for this skill test.\r\nFree Action: Spend 1 resource: You get +1 Combat for this skill test.")
                 .WithInfo(17, 1, Artist.Lake_Hurwitz));

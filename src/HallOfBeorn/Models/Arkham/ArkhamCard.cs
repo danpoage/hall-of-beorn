@@ -62,8 +62,8 @@ namespace HallOfBeorn.Models.Arkham
         public Artist Artist { get; protected set; }
 
         public ClassSymbol ClassSymbol { get; private set; }
-        public byte? Health { get; private set; }
-        public byte? Sanity { get; private set; }
+        public Number? Health { get; private set; }
+        public Number? Sanity { get; private set; }
         public byte? VictoryPoints { get; private set; }
         public ArkhamEncounterSet EncounterSet { get; private set; }
 
@@ -130,8 +130,8 @@ namespace HallOfBeorn.Models.Arkham
                 IsUnique = true,
                 Subtitle = subtitle,
                 ClassSymbol = classSymbol,
-                Health = health,
-                Sanity = sanity
+                Health = Number.Of(health),
+                Sanity = Number.Of(sanity)
             };
         }
 
@@ -277,13 +277,13 @@ namespace HallOfBeorn.Models.Arkham
 
         public ArkhamCard WithHealth(byte health)
         {
-            this.Health = health;
+            this.Health = health > 0 ? Number.Of(health) : Number.NA;
             return this;
         }
 
         public ArkhamCard WithSanity(byte sanity)
         {
-            this.Sanity = sanity;
+            this.Sanity = sanity > 0 ? Number.Of(sanity) : Number.NA;
             return this;
         }
 

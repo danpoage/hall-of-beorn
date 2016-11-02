@@ -51,11 +51,11 @@ namespace HallOfBeorn.Controllers
                 model.Slot = null;
             }
 
-            if (!model.Health.HasValue || model.Health.Value == 0) {
+            if (string.IsNullOrEmpty(model.Health) || model.Health == "Any") {
                 model.Health = null;
                 model.HealthOp = null;
             }
-            if (!model.Sanity.HasValue || model.Sanity.Value == 0) {
+            if (string.IsNullOrEmpty(model.Sanity) || model.Sanity == "Any") {
                 model.Sanity = null;
                 model.SanityOp = null;
             }

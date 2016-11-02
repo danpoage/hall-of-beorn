@@ -179,10 +179,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         {
             get
             {
-                if  (!card.Health.HasValue)
-                    return string.Empty;
-                
-                return card.Health.Value > 0 ? card.Health.ToString() : "-";
+                return card.Health.HasValue ? card.Health.Value.ToString(string.Empty) : string.Empty;
             }
         }
 
@@ -190,10 +187,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         {
             get
             {
-                if (!card.Sanity.HasValue)
-                    return string.Empty;
-
-                return card.Sanity.Value > 0 ? card.Sanity.ToString() : "-";
+                return card.Sanity.HasValue ? card.Sanity.Value.ToString(string.Empty) : string.Empty;
             }
         }
 
@@ -245,13 +239,24 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         public IEnumerable<LinkViewModel> Traits()
         {
             foreach (var trait in card.Traits())
-                yield return new LinkViewModel() { Name = trait, Title = "Trait Search: " + trait, Target = "_blank", Href = "/Arkham/Search?Trait=" + trait, CssClass = "arkham-trait" };
+                yield return new LinkViewModel() { Name = trait, Title = "Trait Search: " + trait, Target = "_blank", Href = "/Arkham?Trait=" + trait, CssClass = "arkham-trait" };
         }
 
         public IEnumerable<LinkViewModel> ConnectsTo()
         {
             foreach (var connection in card.Connections())
-                yield return new LinkViewModel() { Name = connection.ToString().Replace("_", " "), Title = "Connects To", Target = "_blank", Href = "/Arkham/Search?ConnectsTo=" +  connection.ToString() };
+                yield return new LinkViewModel() { Name = connection.ToString().Replace("_", " "), Title = "Connects To", Target = "_blank", Href = "/Arkham?ConnectsTo=" +  connection.ToString() };
+        }
+
+        public bool HasSkillIcons()
+        {
+            return card.SkillIcons().Count() > 0;
+        }
+
+        public IEnumerable<string> SkillIcons()
+        {
+            foreach (var icon in card.SkillIcons())
+                yield return string.Format("<a href='/Arkham?SkillIcon={0}'><img src='/Images/Arkham/{0}.png' title='{0}' class='arkham-skillIcon'/></a>", icon);
         }
 
         public const string PerInvestigatorBlackIcon = "<img src='/Images/Arkham/PerInvestigatorBlack.png' class='arkham-perInvestigator'/>";
@@ -284,6 +289,36 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             return html.ToString();
         }
 
+        public string FrontBodyHtml()
+        {
+            var body = new System.Text.StringBuilder();
+
+            var replaceMap = new Dictionary<string, string>();
+            replaceMap["\r\n"] = "<br/>";
+            replaceMap["Elder Sign Effect:"] = "<img src='/Images/Arkham/Elder_Sign_small.png'> effect: ";
+
+            if (!string.IsNullOrEmpty(card.FrontText))
+            {
+                var text = card.FrontText;
+                foreach(var item in replaceMap) {
+                    text = text.Replace(item.Key, replaceMap[item.Key]);
+                }
+
+                body.AppendFormat("<p class='arkham-cardText'>{0}</p>", text);
+            }
+
+            if (!string.IsNullOrEmpty(card.FrontFlavor))
+            {
+                var text = card.FrontFlavor;
+                foreach(var item in replaceMap) {
+                    text = text.Replace(item.Key, replaceMap[item.Key]);
+                }
+                body.AppendFormat("<p class='arkham-flavorText'>{0}</p>", text);
+            }
+
+            return body.ToString();
+        }
+
         public string BodyHtml()
         {
             var body = new System.Text.StringBuilder();
@@ -308,7 +343,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
                 body.AppendFormat("<p class='arkham-cardText'>{0}</p>", card.BackText);
             }
 
-            if (!string.IsNullOrEmpty(card.FrontFlavor))
+            if (!string.IsNullOrEmpty(card.BackFlavor))
             {
                 if (body.Length > 0 && string.IsNullOrEmpty(card.BackText))
                 {

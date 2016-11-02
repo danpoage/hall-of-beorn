@@ -46,14 +46,14 @@ namespace HallOfBeorn.Services.Arkham
 
         public IEnumerable<string> HealthValues()
         {
-            foreach (var card in Cards().Where(x => x.Health > 0))
-                yield return card.Health.ToString();
+            foreach (var card in Cards().Where(x => x.Health.HasValue))
+                yield return card.Health.Value.ToString();
         }
 
         public IEnumerable<string> SanityValues()
         {
-            foreach (var card in Cards().Where(x => x.Sanity > 0))
-                yield return card.Sanity.ToString();
+            foreach (var card in Cards().Where(x => x.Sanity.HasValue))
+                yield return card.Sanity.Value.ToString();
         }
 
         public IEnumerable<string> CostValues()

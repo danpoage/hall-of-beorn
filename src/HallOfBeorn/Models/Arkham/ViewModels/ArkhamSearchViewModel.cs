@@ -34,9 +34,9 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         public NumericOperator? AgilityOp { get; set; }
         public byte? Agility { get; set; }
         public NumericOperator? HealthOp { get; set; }
-        public byte? Health { get; set; }
+        public string Health { get; set; }
         public NumericOperator? SanityOp { get; set; }
-        public byte? Sanity { get; set; }
+        public string Sanity { get; set; }
         public NumericOperator? CostOp { get; set; }
         public string Cost { get; set; }
         public NumericOperator? LevelOp { get; set; }

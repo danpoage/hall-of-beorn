@@ -249,36 +249,64 @@
         <hr class="arkham-filterLine" />
     
         if (!@Model.View.HasValue || @Model.View.Value == ArkhamSearchView.Card || @Model.View.Value == ArkhamSearchView.Card_Image) {
-            <div style="display:inline-block"><img src="@card.ImagePathFront" height="@card.ImageHeight" /></div>
-            if (!string.IsNullOrEmpty(@card.ImagePathBack))
-            {
-                <div style="display:inline-block"><img src="@card.ImagePathBack" height="@card.ImageHeight"/></div>
-            }
-        }
-        <div style="display:inline-block">
-            <div style="font-size:1.75em;font-family:Verdana;">
-            @if (!string.IsNullOrEmpty(@card.ClassName))
-            {
-                <img src="@card.ClassIcon" width="32" height="32" title="Class: @card.ClassName"/>@: &nbsp;
-            }
-            @if (@card.IsUnique)
-            {
-                <a href="@card.SearchUrl"><img src="/Images/Arkham/Unique.png" style="margin-right:8px;margin-bottom:-2px;height:22px;width:22px;"/>@card.DisplayName</a>
-            } else {
-                <a href="@card.SearchUrl">@card.DisplayName</a>
-            }
-            </div>
-            @if (!string.IsNullOrEmpty(@card.Subtitle)) {
-                <h3>@card.Subtitle</h3>
-            }
-            <div><b>
-                @card.CardType
-
-                @if (!string.IsNullOrEmpty(card.Sequence)) {
-                    @card.Sequence
+            <div style="display: inline-block">
+                <div><img src="@card.ImagePathFront" height="@card.ImageHeight" /></div>
+                @*
+                @if (!string.IsNullOrEmpty(@card.ImagePathBack))
+                {
+                    <div><img src="@card.ImagePathBack" height="@card.ImageHeight"/></div>
                 }
-                 </b>
+                *@
             </div>
+        }
+        <div style="display:inline-block;max-width:500px;vertical-align:top;margin-left: 4px;">
+            <table class="arkham-statBox">
+                <tr>
+                    <td>
+                        @if (!string.IsNullOrEmpty(@card.ClassName))
+                        {
+                            <a href="/Arkham?ClassSymbol=@card.ClassName"><img src="@card.ClassIcon" width="32" height="32" title="Class: @card.ClassName"/></a>
+                        }
+                    </td>
+                    <td>
+                        <div class="arkham-title">
+                        @if (@card.IsUnique)
+                        {
+                            <a href="@card.SearchUrl"><img src="/Images/Arkham/Unique.png" style="margin-right:8px;margin-bottom:-2px;height:22px;width:22px;"/>@card.DisplayName</a>
+                        } else {
+                            <a href="@card.SearchUrl">@card.DisplayName</a>
+                        }
+                        </div>
+                        @if (!string.IsNullOrEmpty(@card.Subtitle)) {
+                            <div class="arkham-subtitle">@card.Subtitle</div>
+                        }
+                    </td>
+                    <td>
+                        @if (@card.CardType == "Investigator") {
+                            <div class="arkham-skillSection">
+                                <a href="/Arkham?Willpower=@card.Willpower&WillpowerOp=eq"><span class="arkham-skillBox"><span class="arkham-skillValue">@card.Willpower</span><img src="/Images/Arkham/Willpower.png" title="Willpower" class="arkham-skillIcon"/></span></a>
+                                <a href="/Arkham?Intellect=@card.Intellect&IntellectOp=eq"><span class="arkham-skillBox"><span class="arkham-skillValue">@card.Intellect</span><img src="/Images/Arkham/Intellect.png" title="Intellect" class="arkham-skillIcon"/></span></a>
+                                <a href="/Arkham?Combat=@card.Combat&CombatOp=eq"><span class="arkham-skillBox"><span class="arkham-skillValue">@card.Combat</span><img src="/Images/Arkham/Combat.png" title="Combat" class="arkham-skillIcon"/></span></a>
+                                <a href="/Arkham?Agility=@card.Agility&AgilityOp=eq"><span class="arkham-skillBox"><span class="arkham-skillValue">@card.Agility</span><img src="/Images/Arkham/Agility.png" title="Agility" class="arkham-skillIcon"/></span></a>
+                            </div>
+                        }
+                    </td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(@card.Cost)) {
+                            <a href="/Arkham?Cost=@card.Cost&CostOp=eq"><span class="arkham-circle arkham-cost" title="Cost"><span class="arkham-valueInner">@card.Cost</span></span></a>
+                        }
+                    </td>
+                </tr>
+            </table>
+            
+            @if (@card.HasSkillIcons()) {
+                <div class="arkham-statSection">
+                    @foreach (var icon in @card.SkillIcons()) {
+                        <span>@Html.Raw(icon.ToString())</span>
+                    }
+                </div>
+            }
+
             @if (@card.HasTraits()) {
                 <div class="arkham-statSection">
                     @foreach (var trait in @card.Traits()) {
@@ -286,39 +314,9 @@
                     }
                 </div>
             }
+
             @switch (@card.CardType)
             {
-                case "Investigator":
-                    <div>
-                        <span>@card.Willpower <img src="/Images/Arkham/Willpower.png" title="Willpower" /></span>
-                        <span>@card.Intellect <img src="/Images/Arkham/Intellect.png" title="Intellect"/></span>
-                        <span>@card.Combat <img src="/Images/Arkham/Combat.png" title="Combat"/></span>
-                        <span>@card.Agility <img src="/Images/Arkham/Agility.png" title="Agility"/></span>
-                    </div>
-                    <div class="arkham-statSection">
-                        <span class="arkham-health" title="Health"><span class="arkham-energyInner arkham-healthInner">@card.Health</span></span>
-                        <span class="arkham-sanity" title="Sanity"><span class="arkham-energyInner arkham-sanityInner">@card.Sanity</span></span>
-                    </div>
-                    break;
-                case "Asset":
-                    <div>
-                        <span class="arkham-circle arkham-cost" title="Cost"><span class="arkham-valueInner">@card.Cost</span></span>
-                    
-                        @if (!string.IsNullOrEmpty(@card.SlotImagePath)) {
-                            <span><a href="@card.SlotSearch" target="_blank"><img src="@card.SlotImagePath" title="Asset Slot" height="32" width="32"/></a></span>
-                        }
-
-                        @if (!string.IsNullOrEmpty(@card.Health) || !string.IsNullOrEmpty(@card.Sanity)) {
-                            <div class="arkham-statSection">
-                                <span class="arkham-health" title="Health"><span class="arkham-energyInner arkham-healthInner">@card.Health</span></span>
-                                <span class="arkham-sanity" title="Sanity"><span class="arkham-energyInner arkham-sanityInner">@card.Sanity</span></span>
-                            </div>  
-                        }
-                    </div>
-                    break;
-                case "Event":
-                    <div><span class="arkham-circle arkham-cost" title="Cost"><span class="arkham-valueInner">@card.Cost</span></span></div>
-                    break;
                 case "Location":
                     <div>
                         <div class="arkham-circle arkham-shroud" title="Shroud"><div class="arkham-valueInner">@Html.Raw(@card.Shroud)</div></div>
@@ -346,9 +344,31 @@
                     break;
                        
             }
-            @if ((!@Model.View.HasValue || @Model.View.Value == ArkhamSearchView.Card || @Model.View.Value == ArkhamSearchView.Card_Text) && !string.IsNullOrEmpty(@card.BodyHtml()))
+            @if ((!@Model.View.HasValue || @Model.View.Value == ArkhamSearchView.Card || @Model.View.Value == ArkhamSearchView.Card_Text) && !string.IsNullOrEmpty(@card.FrontBodyHtml()))
             {
-                @Html.Raw(@card.BodyHtml())
+                @Html.Raw(@card.FrontBodyHtml())
+            }
+
+            <div class="arkham-statSection">
+                @if (!string.IsNullOrEmpty(@card.Health) || !string.IsNullOrEmpty(@card.Sanity)) {
+                    <a href="/Arkham?Health=@card.Health"><span class="arkham-health" title="Health"><span class="arkham-energyInner arkham-healthInner">@card.Health</span></span></a>
+                    <a href="/Arkham?Sanity=@card.Sanity"><span class="arkham-sanity" title="Sanity"><span class="arkham-energyInner arkham-sanityInner">@card.Sanity</span></span></a>
+                }
+
+                @if (!string.IsNullOrEmpty(@card.SlotImagePath)) {
+                    <div class="arkham-slot"><a href="@card.SlotSearch" target="_blank"><img src="@card.SlotImagePath" title="Asset Slot" height="32" width="32"/></a></div>
+                }
+            </div>
+
+            @if (@card.CardType == "Act" || @card.CardType == "Agenda") {
+                <div><b>
+                    @card.CardType
+
+                    @if (!string.IsNullOrEmpty(card.Sequence)) {
+                        @card.Sequence
+                    }
+                     </b>
+                </div>
             }
         </div>
     }
