@@ -289,30 +289,67 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             return html.ToString();
         }
 
+        private Dictionary<string, string> getTemplateMap()
+        {
+            var map = new Dictionary<string, string>();
+
+            map["\r\n"] = "<br/>";
+            map[" - "] = "&mdash;";
+            
+            //Triggers
+            map["{Forced}"] = "<b>Forced</b>";
+            map["{Revelation}"] = "<b>Revelation</b>";
+            map["{Free Action}"] = "<img src='/Images/Arkham/Free_Action.png' height='12' width='27'>";
+            map["{Action}"] = "<img src='/Images/Arkham/Action.png' height='12' width='17'>";
+            map["{Reaction}"] = "<img src='/Images/Arkham/Reaction.png' height='12' width='19'>";
+
+            //Actions
+            map["{Fight}"] = "<b>Fight</b>";
+            map["{Evade}"] = "<b>Evade</b>";
+            map["{Investigate}"] = "<b>Investigate</b>";
+
+            //Skills
+            map["{Willpower}"]  = "<img src='/Images/Arkham/Willpower_small.png'>";
+            map["{Intellect}"]  = "<img src='/Images/Arkham/Intellect_small.png'>";
+            map["{Combat}"]  = "<img src='/Images/Arkham/Combat_small.png'>";
+            map["{Agility}"]  = "<img src='/Images/Arkham/Agility_small.png'>";
+
+            //Chaos Tokens
+            map["{Skull}"] = "<img src='/Images/Arkham/Skull.png'>";
+            map["{Cultist}"]  = "<img src='/Images/Arkham/Cultist.png'>";
+            map["{Tablet}"]  = "<img src='/Images/Arkham/Tablet.png'>";
+            map["{Elder Thing}"]  = "<img src='/Images/Arkham/Elder_Thing.png'>";
+            map["{Elder Sign}"] = "<img src='/Images/Arkham/Elder_Sign.png'>";
+            map["{Tentacle}"] = "<img src='/Images/Arkham/Tentacle.png'>";
+
+            //Traits
+            map["{t:Tome}"] = "<a href='/Arkham?Trait=Tome.' target='_blank'><b><i>Tome</i></b></a>";
+
+            return map;
+        }
+
         public string FrontBodyHtml()
         {
             var body = new System.Text.StringBuilder();
 
-            var replaceMap = new Dictionary<string, string>();
-            replaceMap["\r\n"] = "<br/>";
-            replaceMap["Elder Sign Effect:"] = "<img src='/Images/Arkham/Elder_Sign_small.png'> effect: ";
-
+            var map = getTemplateMap();
+            
             if (!string.IsNullOrEmpty(card.FrontText))
             {
-                var text = card.FrontText;
-                foreach(var item in replaceMap) {
-                    text = text.Replace(item.Key, replaceMap[item.Key]);
-                }
+                var lines = card.FrontText.Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
+                foreach (var line in lines) {
+                    var text = line;
+                    foreach(var item in map) {
+                        text = text.Replace(item.Key, map[item.Key]);
+                    }
 
-                body.AppendFormat("<p class='arkham-cardText'>{0}</p>", text);
+                    body.AppendFormat("<p class='arkham-cardText'>{0}</p>", text);
+                }
             }
 
             if (!string.IsNullOrEmpty(card.FrontFlavor))
             {
-                var text = card.FrontFlavor;
-                foreach(var item in replaceMap) {
-                    text = text.Replace(item.Key, replaceMap[item.Key]);
-                }
+                var text = card.FrontFlavor.Replace("\r\n", "<br/>");
                 body.AppendFormat("<p class='arkham-flavorText'>{0}</p>", text);
             }
 

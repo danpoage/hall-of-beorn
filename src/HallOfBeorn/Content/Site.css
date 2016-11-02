@@ -739,6 +739,14 @@ tr.pager td {
     font-size: 12px;
 }
 
+.search-label-short2 {
+    display: inline-block;
+    margin-right:2px;
+    width:64px;
+    color: #3e5667;
+    font-size: 12px;
+}
+
 .search-label-medium {
     display: inline-block;
     margin-right:2px;
@@ -1518,12 +1526,12 @@ tr.pager td {
 
 .arkham-cardText {
     font-family: 'Times New Roman';
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .arkham-flavorText {
     font-family: 'Times New Roman';
-    font-size: 12px;
+    font-size: 13px;
     font-style: italic;
     padding: 2px 2px 2px 4px;
     border-left: 4px double darkgrey;
@@ -1537,6 +1545,14 @@ tr.pager td {
     display: inline-block;
     margin-right: 2px;
     width: 40px;
+    color: #3e5667;
+    font-size: 12px;
+}
+
+.search-label-tiny2 {
+    display: inline-block;
+    margin-right: 2px;
+    width: 42px;
     color: #3e5667;
     font-size: 12px;
 }
@@ -1569,11 +1585,17 @@ tr.pager td {
     margin-left: 24px;
 }
 
+.arkham-unique {
+    margin-right: 2px;
+}
+
 .arkham-title {
     min-width: 200px;
     font-family: Georgia;
     font-weight: 200;
     font-size: 14pt;
+    text-align: center;
+    vertical-align: top;
 }
 
 .arkham-subtitle {
@@ -1583,12 +1605,12 @@ tr.pager td {
 }
 
 .arkham-statBox {
-    margin-top: -4px;
+    display: inline-block;
 }
 
 .arkham-skillSection {
+    vertical-align: top;
     display: inline-block;
-    width: 236px;
 }
 
 .arkham-skillBox {
@@ -1623,4 +1645,8 @@ tr.pager td {
 .search-select-tiny2 {
     margin-right: 6px;
     width: 56px;
+}
+
+.top {
+    vertical-align: top;
 }
