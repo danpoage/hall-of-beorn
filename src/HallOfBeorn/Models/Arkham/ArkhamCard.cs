@@ -9,6 +9,11 @@ namespace HallOfBeorn.Models.Arkham
     {
         private ArkhamCard()
         {
+            Subtitle = string.Empty;
+            FrontText = string.Empty;
+            FrontFlavor = string.Empty;
+            BackText = string.Empty;
+            BackFlavor = string.Empty;
         }
 
         private readonly List<string> traits = new List<string>();
@@ -80,7 +85,12 @@ namespace HallOfBeorn.Models.Arkham
         public static string GetSlug(ArkhamCard card)
         {
             var name = card.Title.ToUrlSafeString();
-            var level = (card.Level.HasValue && card.Level.Value > 0) ? card.Level.ToString() : string.Empty;
+            var level = string.Empty;
+            if (card.CardType == ArkhamCardType.Scenario_Reference) {
+                level = card.Subtitle.Replace(" / ", "-");
+            } else {
+                level = (card.Level.HasValue && card.Level.Value > 0) ? card.Level.ToString() : string.Empty;
+            }
             var product = card.Product.Abbreviation;
             return string.Format("{0}{1}-{2}", name, level, product);
         }
@@ -222,6 +232,17 @@ namespace HallOfBeorn.Models.Arkham
             };
         }
 
+        public static ArkhamCard ScenarioReference(string title, string subtitle) 
+        {
+            return new ArkhamCard
+            {
+                CardType = ArkhamCardType.Scenario_Reference,
+                DeckType = ArkhamDeckType.None,
+                Title = title,
+                Subtitle = subtitle
+            };
+        }
+
         public static ArkhamCard Agenda(string title, string subtitle, byte sequence, Number doomThreshold)
         {
             return new ArkhamCard()
@@ -329,7 +350,7 @@ namespace HallOfBeorn.Models.Arkham
             return this;
         }
 
-        public ArkhamCard WithSkillTestIcons(params SkillIcon[] skillIcons)
+        public ArkhamCard WithIcons(params SkillIcon[] skillIcons)
         {
             addSkillTestIcons(skillIcons);
             return this;
