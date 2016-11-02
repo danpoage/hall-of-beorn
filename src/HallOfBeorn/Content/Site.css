@@ -1595,7 +1595,7 @@ tr.pager td {
     display: inline-block;
     margin-left: 8px;
     height: 32px;
-    width: 40px;
+    width: 36px;
     border: 1px solid black;
     border-radius: 8px;
     vertical-align: middle;
@@ -1620,9 +1620,7 @@ tr.pager td {
     margin-left: 16px;
 }
 
-/*
-.search-select-tiny {
+.search-select-tiny2 {
     margin-right: 6px;
-    width: 80px;
+    width: 56px;
 }
-*/
