@@ -70,7 +70,7 @@ namespace HallOfBeorn.Services.Arkham
             return fNum == vp.Value;
         };
 
-        private static Func<string, string> normalizer = x => { return x.ToLowerSafe().NormalizeString().Replace(".", string.Empty); };
+        private static Func<string, string> normalizer = x => { return x.ToLowerSafe().NormalizeString().Replace(".", string.Empty).Replace("\"", string.Empty); };
 
         private Func<string, ArkhamCard, float> scoreTitle = (query, card) =>
         {

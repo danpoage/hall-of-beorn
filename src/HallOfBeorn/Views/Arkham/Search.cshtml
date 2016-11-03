@@ -7,6 +7,17 @@
 
 @section scripts {
 <script type="text/javascript" src="~/Scripts/arkhamCardSearch.js"></script>
+<script type="text/javascript" src="~/Scripts/arkhamAutocomplete1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#Query").autocomplete({
+            source: autocompleteSource,
+            minLength: 2
+        });
+        $("#Query").autocomplete("widget").addClass("autocompleteClass");
+    });
+</script>    
+
 }
 
 @using (Html.BeginForm("Search", "Arkham", FormMethod.Post))
@@ -250,7 +261,7 @@
     
         if (!@Model.View.HasValue || @Model.View.Value == ArkhamSearchView.Card || @Model.View.Value == ArkhamSearchView.Card_Image) {
             <div style="display: inline-block">
-                <div><img src="@card.ImagePathFront" height="@card.ImageHeight" /></div>
+                <div><img src="@card.ImagePathFront" height="@card.ImageHeight" width="@card.ImageWidth" /></div>
                 @*
                 @if (!string.IsNullOrEmpty(@card.ImagePathBack))
                 {

@@ -112,9 +112,25 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
                     case ArkhamCardType.Investigator:
                     case ArkhamCardType.Agenda:
                     case ArkhamCardType.Act:
-                        return 240;
+                        return 212;
                     default:
                         return 300;
+                }
+            }
+        }
+
+        public int ImageWidth
+        {
+            get
+            {
+                switch (card.CardType)
+                {
+                    case ArkhamCardType.Investigator:
+                    case ArkhamCardType.Agenda:
+                    case ArkhamCardType.Act:
+                        return 300;
+                    default:
+                        return 212;
                 }
             }
         }
@@ -299,9 +315,9 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             //Triggers
             map["{Forced}"] = "<b>Forced</b>";
             map["{Revelation}"] = "<b>Revelation</b>";
-            map["{Free Action}"] = "<img src='/Images/Arkham/Free_Action.png' height='12' width='27'>";
-            map["{Action}"] = "<img src='/Images/Arkham/Action.png' height='12' width='17'>";
-            map["{Reaction}"] = "<img src='/Images/Arkham/Reaction.png' height='12' width='19'>";
+            map["{Free Action}"] = "<img title='Free Action' src='/Images/Arkham/Free_Action.png' height='12' width='27'>";
+            map["{Action}"] = "<img title='Action' src='/Images/Arkham/Action.png' height='12' width='17'>";
+            map["{Reaction}"] = "<img title='Reaction' src='/Images/Arkham/Reaction.png' height='12' width='19'>";
 
             //Actions
             map["{Fight}"] = "<b>Fight</b>";
@@ -309,10 +325,10 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             map["{Investigate}"] = "<b>Investigate</b>";
 
             //Skills
-            map["{Willpower}"]  = "<img src='/Images/Arkham/Willpower_small.png'>";
-            map["{Intellect}"]  = "<img src='/Images/Arkham/Intellect_small.png'>";
-            map["{Combat}"]  = "<img src='/Images/Arkham/Combat_small.png'>";
-            map["{Agility}"]  = "<img src='/Images/Arkham/Agility_small.png'>";
+            map["{Willpower}"]  = "<img title='Willpower Skill' src='/Images/Arkham/Willpower_small.png'>";
+            map["{Intellect}"]  = "<img title='Intellect Skill' src='/Images/Arkham/Intellect_small.png'>";
+            map["{Combat}"]  = "<img title='Combat Skill' src='/Images/Arkham/Combat_small.png'>";
+            map["{Agility}"]  = "<img title='Agility Skill' src='/Images/Arkham/Agility_small.png'>";
 
             //Chaos Tokens
             map["{Skull}"] = "<img src='/Images/Arkham/Skull.png'>";

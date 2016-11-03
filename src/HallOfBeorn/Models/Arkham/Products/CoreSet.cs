@@ -57,7 +57,7 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithUnique()
                 .WithTraits("Item.", "Weapon.", "Firearm.")
                 .WithIcons(SkillIcon.Combat, SkillIcon.Agility, SkillIcon.Wild)
-                .WithFrontText("Roland Banks deck only.\r\nUses (4 ammo).\r\n{Action} Spend 1 ammo: Fight. You get +1 Combat for this attack (if there are 1 or more clues on this location, you get +3 combat instead). This attack deals +1 damage.")
+                .WithFrontText("Roland Banks deck only.\r\nUses (4 ammo).\r\n{Action} Spend 1 ammo: {Fight}. You get +1 {Combat} for this attack (if there are 1 or more clues on this location, you get +3 {Combat} instead). This attack deals +1 damage.")
                 .WithInfo(6, 1, Artist.Tiziano_Baracchi));
             addCard(ArkhamCard.Treachery("Hospital Debts", ArkhamCardSubtype.Weakness)
                 .WithTraits("Task.")
@@ -91,7 +91,7 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithTraits("Item.", "Weapon.", "Firearm.")
                 .WithIcons(SkillIcon.Agility)
                 .WithKeywords("Uses 4.")
-                .WithFrontText("Uses (4 ammo).\r\n{Action} Spend 1 ammo: Fight. You get +1 Combat for this attack. This attack deals +1 damage.")
+                .WithFrontText("Uses (4 ammo).\r\n{Action} Spend 1 ammo: {Fight}. You get +1 {Combat} for this attack. This attack deals +1 damage.")
                 .WithInfo(16, 1, Artist.John_Pacer));
             addCard(ArkhamCard.Asset("Physical Training", ClassSymbol.Guardian, Number.Of(2), AssetSlot.None)
                 .WithTraits("Talent.")
@@ -101,7 +101,7 @@ namespace HallOfBeorn.Models.Arkham.Products
             addCard(ArkhamCard.Asset("Beat Cop", ClassSymbol.Guardian, Number.Of(4), AssetSlot.Ally)
                 .WithTraits("Ally.", "Police.")
                 .WithIcons(SkillIcon.Combat)
-                .WithFrontText("You get +1 Combat.\r\n{Free Action} Discard Beat Cop - Deal 1 damage to an enemy at your location.")
+                .WithFrontText("You get +1 {Combat}.\r\n{Free Action} Discard Beat Cop - Deal 1 damage to an enemy at your location.")
                 .WithHealth(2).WithSanity(2)
                 .WithInfo(18, 1, Artist.Nicholas_Elias));
             addCard(ArkhamCard.Asset("First Aid", ClassSymbol.Guardian, Number.Of(2), AssetSlot.None)
@@ -113,7 +113,7 @@ namespace HallOfBeorn.Models.Arkham.Products
             addCard(ArkhamCard.Asset("Machete", ClassSymbol.Guardian, Number.Of(3), AssetSlot.One_Hand)
                 .WithTraits("Item.", "Weapon.", "Melee.")
                 .WithIcons(SkillIcon.Combat)
-                .WithFrontText("Action: Fight. You get +1 Combat for this attack. If the attacked enenmy is the only enemy engaged with you, this attack deals +1 damage.")
+                .WithFrontText("{Action}: {Fight}. You get +1 {Combat} for this attack. If the attacked enenmy is the only enemy engaged with you, this attack deals +1 damage.")
                 .WithFrontFlavor("Cuts through vines, underbrush, and tentacles equally well.")
                 .WithInfo(20, 1, Artist.Jason_Caffoe));
             addCard(ArkhamCard.Asset("Guard Dog", ClassSymbol.Guardian, Number.Of(3), AssetSlot.Ally)
@@ -157,13 +157,13 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithLevel(2)
                 .WithTraits("Item.")
                 .WithIcons(SkillIcon.Willpower, SkillIcon.Wild)
-                .WithFrontText("You get +1 Willpower.\r\n{Free Action} While an investigator at your location is taking his or her turn, discard Police Badge: That investigator may take 2 additional actions this turn.")
+                .WithFrontText("You get +1 {Willpower}.\r\n{Free Action} While an investigator at your location is taking his or her turn, discard Police Badge: That investigator may take 2 additional actions this turn.")
                 .WithInfo(27, 1, Artist.Stanislav_Dikolenko));
             addCard(ArkhamCard.Asset("Beat Cop", ClassSymbol.Guardian, Number.Of(4), AssetSlot.Ally)
                 .WithLevel(2)
                 .WithTraits("Ally.", "Police.")
                 .WithIcons(SkillIcon.Combat, SkillIcon.Agility)
-                .WithFrontText("You get +1 Combat.\r\n{Free Action} Exhaust Beat Cop and deal 1 damage to it: Deal 1 damage to an enemy at your location.")
+                .WithFrontText("You get +1 {Combat}.\r\n{Free Action} Exhaust Beat Cop and deal 1 damage to it: Deal 1 damage to an enemy at your location.")
                 .WithHealth(3).WithSanity(2)
                 .WithInfo(28, 1, Artist.Nicholas_Elias));
             addCard(ArkhamCard.Asset("Shotgun", ClassSymbol.Guardian, Number.Of(5), AssetSlot.Both_Hands)
@@ -171,13 +171,13 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithTraits("Item.", "Weapon.", "Firearm.")
                 .WithIcons(SkillIcon.Combat, SkillIcon.Combat)
                 .WithKeywords("Uses 2.")
-                .WithFrontText("Uses (2 ammo).\r\n{Action} Spend 1 ammo: Fight. You get +3 Combat for this attack. Instead of its standard damage, this attack deals 1 damage for each point you succeed by (to a minimum of 1, to a maximum of 5). If you fail and would damage another investigator, this attack deals 1 damage for each point you fail by (to a minimum of 1, to a maximum of 5).")
+                .WithFrontText("Uses (2 ammo).\r\n{Action} Spend 1 ammo: {Fight}. You get +3 {Combat} for this attack. Instead of its standard damage, this attack deals 1 damage for each point you succeed by (to a minimum of 1, to a maximum of 5). If you fail and would damage another investigator, this attack deals 1 damage for each point you fail by (to a minimum of 1, to a maximum of 5).")
                 .WithInfo(29, 1, Artist.Tony_Foti));
             addCard(ArkhamCard.Asset("Magnifying Glass", ClassSymbol.Seeker, 1, AssetSlot.One_Hand)
                 .WithTraits("Item.", "Tool.")
                 .WithKeywords("Fast.")
                 .WithIcons(SkillIcon.Intellect)
-                .WithText("Fast.\r\nYou get +1 Intellect while invetigating.")
+                .WithText("Fast.\r\nYou get +1 {Intellect} while invetigating.")
                 .WithFlavor("A lens into a world unseen can reveal things you wish it hadn't.")
                 .WithInfo(30, 1, Artist.German_Nobile));
             addCard(ArkhamCard.Asset("Old Book of Lore", ClassSymbol.Seeker, 3, AssetSlot.One_Hand)
@@ -196,19 +196,19 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithUnique()
                 .WithTraits("Ally.", "Miskatonic.")
                 .WithIcons(SkillIcon.Intellect)
-                .WithText("You get +1 Intellect.\r\n{Reaction} After you successfully investigate: Gain 1 resource.")
+                .WithText("You get +1 {Intellect}.\r\n{Reaction} After you successfully investigate: Gain 1 resource.")
                 .WithFlavor("\"While I truly pray that this nightmare is just a singular abomination, I must admit that I am exhilarated by the possibility that this is but one speciment of a new genus!\"")
                 .WithHealth(1).WithSanity(2)
                 .WithInfo(33, 1, Artist.Anthony_Devine));
             addCard(ArkhamCard.Asset("Hyperawareness", ClassSymbol.Seeker, 2, AssetSlot.None)
                 .WithTraits("Talent.")
                 .WithIcons(SkillIcon.Intellect, SkillIcon.Agility)
-                .WithText("{Free Action} Spend 1 resource: You get +1 Intellect for this skill test.\r\n{Free Action} Spend 1 resource: You get +1 Agility for this skill test.")
+                .WithText("{Free Action} Spend 1 resource: You get +1 {Intellect} for this skill test.\r\n{Free Action} Spend 1 resource: You get +1 {Agility} for this skill test.")
                 .WithInfo(34, 1, Artist.Aurore_Folay));
             addCard(ArkhamCard.Asset("Medical Texts", ClassSymbol.Seeker, 2, AssetSlot.One_Hand)
                 .WithTraits("Item.", "Tome.")
                 .WithIcons(SkillIcon.Combat)
-                .WithText("Action: Choose an investigator at your location and test Intellect (2). If you succeed, heal 1 damage from that investigator. If you fail, deal 1 damage to that investigator.")
+                .WithText("{Action}: Choose an investigator at your location and test Intellect (2). If you succeed, heal 1 damage from that investigator. If you fail, deal 1 damage to that investigator.")
                 .WithInfo(35, 1, Artist.Anna_Christenson));
             addCard(ArkhamCard.Event("Mind over Matter", ClassSymbol.Seeker, 1)
                 .WithTraits("Insight.")
@@ -236,7 +236,7 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithTraits("Item.", "Tool.")
                 .WithKeywords("Fast.")
                 .WithIcons(SkillIcon.Intellect)
-                .WithText("Fast.\r\nYou get +1 Intellect while investigating.\r\n{Free Action} If there are no clues on your location: Return Magnifying Glass to your hand.")
+                .WithText("Fast.\r\nYou get +1 {Intellect} while investigating.\r\n{Free Action} If there are no clues on your location: Return Magnifying Glass to your hand.")
                 .WithFlavor("A lens into a world unseen can reveal things you wish it hadn't.")
                 .WithInfo(40, 1, Artist.German_Nobile));
             addCard(ArkhamCard.Asset("Disc of Itzamna", ClassSymbol.Seeker, 3, AssetSlot.Accessory)
@@ -264,7 +264,7 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithTraits("Item.", "Weapon.", "Melee.", "Illicit.")
                 .WithKeywords("Fast.")
                 .WithIcons(SkillIcon.Agility)
-                .WithText("Fast.\r\nAction: Fight. If you succeed by 2 or more, this attack deals +1 damage.")
+                .WithText("Fast.\r\n{Action}: {Fight}. If you succeed by 2 or more, this attack deals +1 damage.")
                 .WithInfo(44, 1, Artist.Matthew_Cowdery));
             addCard(ArkhamCard.Asset("Burglary", ClassSymbol.Rogue, 1)
                 .WithTraits("Talent.", "Illicit.")
@@ -280,7 +280,7 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithTraits("Item.", "Weapon.", "Firearm.", "Illicit.")
                 .WithKeywords("Uses 3.")
                 .WithIcons(SkillIcon.Combat)
-                .WithText("Uses (3 ammo).\r\n{Action} Spend 1 ammo: Fight. You get +2 Combat for this attack. If you succeed by 2 or more, this attack dealt +1 damage.")
+                .WithText("Uses (3 ammo).\r\n{Action} Spend 1 ammo: {Fight}. You get +2 {Combat} for this attack. If you succeed by 2 or more, this attack dealt +1 damage.")
                 .WithInfo(47, 1, Artist.John_Pacer));
             addCard(ArkhamCard.Asset("Leo De Luca", ClassSymbol.Rogue, 6, AssetSlot.Ally)
                 .WithUnique()
@@ -293,7 +293,7 @@ namespace HallOfBeorn.Models.Arkham.Products
             addCard(ArkhamCard.Asset("Hard Knocks", ClassSymbol.Rogue, 2)
                 .WithTraits("Talent.")
                 .WithIcons(SkillIcon.Combat, SkillIcon.Agility)
-                .WithText("{Free Action} Spend 1 resource: You get +1 Combat for this skill test.\r\n{Free Action} Spend 1 resource: You get +1 Agility for this skill test.")
+                .WithText("{Free Action} Spend 1 resource: You get +1 {Combat} for this skill test.\r\n{Free Action} Spend 1 resource: You get +1 {Agility} for this skill test.")
                 .WithInfo(49, 1, Artist.Magali_Villeneuve));
             addCard(ArkhamCard.Event("Elusive", ClassSymbol.Rogue, 2)
                 .WithTraits("Tactic.")
@@ -304,7 +304,7 @@ namespace HallOfBeorn.Models.Arkham.Products
             addCard(ArkhamCard.Event("Backstab", ClassSymbol.Rogue, 3)
                 .WithTraits("Tactic.")
                 .WithIcons(SkillIcon.Combat, SkillIcon.Agility)
-                .WithText("Fight. This attack uses Agility instead of Combat. This attack deals +2 damage.")
+                .WithText("{Fight}. This attack uses Agility instead of Combat. This attack deals +2 damage.")
                 .WithInfo(51, 1, Artist.Federico_Piatti));
             addCard(ArkhamCard.Event("Sneak Attack", ClassSymbol.Rogue, 2)
                 .WithTraits("Tactic.")
@@ -329,7 +329,7 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithLevel(1)
                 .WithTraits("Ally.", "Criminal.")
                 .WithIcons(SkillIcon.Willpower, SkillIcon.Agility)
-                .WithText("You get +1 Agility.\r\n{Action} Exhaust Cat Burglar: Disengage from each enemy engaged with you and move to a connecting location. This action does not provoke attacks of opportunity.")
+                .WithText("You get +1 {Agility}.\r\n{Action} Exhaust Cat Burglar: Disengage from each enemy engaged with you and move to a connecting location. This action does not provoke attacks of opportunity.")
                 .WithHealth(2).WithSanity(2)
                 .WithInfo(55, 1, Artist.JB_Casacop));
             addCard(ArkhamCard.Event("Sure Gamble", ClassSymbol.Rogue, 2)
@@ -352,7 +352,7 @@ namespace HallOfBeorn.Models.Arkham.Products
             addCard(ArkhamCard.Asset("Holy Rosary", ClassSymbol.Mystic, 2, AssetSlot.Accessory)
                 .WithTraits("Item.", "Charm.")
                 .WithIcons(SkillIcon.Willpower)
-                .WithText("You get +1 Willpower.")
+                .WithText("You get +1 {Willpower}.")
                 .WithFlavor("Whether focused through a mundane trinket or a mystical artifact, there is real power in fait all the same.")
                 .WithHealth(0).WithSanity(2)
                 .WithInfo(59, 1, Artist.Sara_Biddle));
@@ -360,7 +360,7 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithTraits("Spell.")
                 .WithKeywords("Uses 4.")
                 .WithIcons(SkillIcon.Combat)
-                .WithText("Uses (4 charges).\r\n{Action} Spend 1 charge: Fight. This attack uses {Willpower} instead of {Combat} and deals +1 damage. If a {Skull}, {Cultist}, {Tablet}, {Elder Thing} or {Tentacle} symbol is revealed during this attack, take 1 horror.")
+                .WithText("Uses (4 charges).\r\n{Action} Spend 1 charge: {Fight}. This attack uses {Willpower} instead of {Combat} and deals +1 damage. If a {Skull}, {Cultist}, {Tablet}, {Elder Thing} or {Tentacle} symbol is revealed during this attack, take 1 horror.")
                 .WithInfo(60, 1, Artist.Brian_Valenzuela));
             addCard(ArkhamCard.Asset("Scrying", ClassSymbol.Mystic, 1, AssetSlot.Arcane)
                 .WithTraits("Spell.")
@@ -441,7 +441,7 @@ namespace HallOfBeorn.Models.Arkham.Products
             addCard(ArkhamCard.Asset("Baseball Bat", ClassSymbol.Survivor, 2, AssetSlot.Both_Hands)
                 .WithTraits("Item.", "Weapon.", "Melee.")
                 .WithIcons(SkillIcon.Combat)
-                .WithText("Action: Fight. You get +2 Combat for this attack. This attack deals +1 damage. If a {Skull} or {Tentacle} symbol is revealed during this attack, discard Baseball Bat after the attack resolves.")
+                .WithText("{Action}: {Fight}. You get +2 {Combat} for this attack. This attack deals +1 damage. If a {Skull} or {Tentacle} symbol is revealed during this attack, discard Baseball Bat after the attack resolves.")
                 .WithInfo(74, 1, Artist.Unknown));
             addCard(ArkhamCard.Asset("Rabbit's Foot", ClassSymbol.Survivor, 1, AssetSlot.Accessory)
                 .WithTraits("Item.", "Charm.")
@@ -459,7 +459,7 @@ namespace HallOfBeorn.Models.Arkham.Products
             addCard(ArkhamCard.Asset("Dig Deep", ClassSymbol.Survivor, 2)
                 .WithTraits("Talent.")
                 .WithIcons(SkillIcon.Willpower, SkillIcon.Agility)
-                .WithText("{Free Action} Spend 1 resource: You get +1 Willpower for this skill test.\r\n{Free Action} Spend 1 resource: You get +1 Agility for this skill test.")
+                .WithText("{Free Action} Spend 1 resource: You get +1 {Willpower} for this skill test.\r\n{Free Action} Spend 1 resource: You get +1 {Agility} for this skill test.")
                 .WithInfo(77, 1, Artist.David_Gaillet));
             addCard(ArkhamCard.Event("Cunning Distraction", ClassSymbol.Survivor, 5)
                 .WithTraits("Tactic.")
@@ -512,7 +512,7 @@ namespace HallOfBeorn.Models.Arkham.Products
             addCard(ArkhamCard.Asset("Knife", ClassSymbol.None, 1, AssetSlot.One_Hand)
                 .WithTraits("Item.", "Weapon.", "Melee.")
                 .WithIcons(SkillIcon.Combat)
-                .WithText("Action: Fight. You get +1 Combat for this attack.\r\nAction Discard Knife: Fight. You get +2 Combat for this attack. This attack deals +1 damage.")
+                .WithText("{Action}: {Fight}. You get +1 {Combat} for this attack.\r\nAction Discard Knife: {Fight}. You get +2 {Combat} for this attack. This attack deals +1 damage.")
                 .WithInfo(86, 1, Artist.Henning_Ludvigsen));
             addCard(ArkhamCard.Asset("Flashlight", ClassSymbol.None, 2, AssetSlot.One_Hand)
                 .WithTraits("Item.", "Tool.")
@@ -581,15 +581,15 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithInfo(97, 1, Artist.Cristina_Vela));
             addCard(ArkhamCard.Treachery("Haunted", ArkhamCardSubtype.Basic_Weakness)
                 .WithTraits("Curse.")
-                .WithText("{Revelation} - Add Haunted to your threat area. You get -1 to each of your skills.\r\nAction Action: Discard Haunted.")
+                .WithText("{Revelation} - Add Haunted to your threat area. You get -1 to each of your skills.\r\nAction {Action}: Discard Haunted.")
                 .WithInfo(98, 1, Artist.Magali_Villeneuve));
             addCard(ArkhamCard.Treachery("Psychosis", ArkhamCardSubtype.Basic_Weakness)
                 .WithTraits("Madness.")
-                .WithText("{Revelation} - Add Psychosis to your threat area.\r\n{Forced} - After you take 1 or more horror: Take 1 direct damage.\r\nAction Action: Discard Psychosis.")
+                .WithText("{Revelation} - Add Psychosis to your threat area.\r\n{Forced} - After you take 1 or more horror: Take 1 direct damage.\r\nAction {Action}: Discard Psychosis.")
                 .WithInfo(99, 1, Artist.Tiziano_Baracchi));
             addCard(ArkhamCard.Treachery("Hypochondria", ArkhamCardSubtype.Basic_Weakness)
                 .WithTraits("Madness.")
-                .WithText("{Revelation} - Add Hypochondria to your threat area.\r\n{Forced} - After you take or more damage: Take 1 direct horror.\r\nAction Action: Discard Hypochondria.")
+                .WithText("{Revelation} - Add Hypochondria to your threat area.\r\n{Forced} - After you take or more damage: Take 1 direct horror.\r\nAction {Action}: Discard Hypochondria.")
                 .WithInfo(100, 1, Artist.Rafal_Hrynkiewicz));
             addCard(ArkhamCard.Enemy("Mob Enforcer", Number.Of(4), Number.Of(3), Number.Of(3), Number.Of(1), Number.Of(0))
                 .WithSubtype(ArkhamCardSubtype.Basic_Weakness)
@@ -652,7 +652,7 @@ namespace HallOfBeorn.Models.Arkham.Products
             addCard(ArkhamCard.Location("Parlor", ConnectionSymbol.Parlor, Shroud.Of(2), ClueValue.Of(0))
                 .WithFrontText("The entrance to the Parlor is blocked by a darkly glowing unfathomable barrier. You cannot move into the Parlor.")
                 .WithFrontFlavor("You're unsure what would happen if you tried to corss the threshold of the strange barrier, but based on its extreme heat, you sure as hell don't want to try.")
-                .WithBackText("Action: Resign. \"This is too much for me!\" You run out the front door, fleeing in panic.\r\nWhile Lita Chantler is not controlled by a player, she gains: \"Action: Parley. Test Intellect (4). If you succeed, take contro of Lita Chantler.")
+                .WithBackText("{Action}: Resign. \"This is too much for me!\" You run out the front door, fleeing in panic.\r\nWhile Lita Chantler is not controlled by a player, she gains: \"{Action}: Parley. Test Intellect (4). If you succeed, take contro of Lita Chantler.")
                 .WithConnections(ConnectionSymbol.Hallway)
                 .WithInfo(115, 1, Artist.Yoann_Boissonnet));
 
