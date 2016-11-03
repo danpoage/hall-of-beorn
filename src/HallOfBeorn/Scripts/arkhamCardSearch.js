@@ -9,6 +9,7 @@
         $('#Artist').val('Any');
 
         $('#CardType').val('Any');
+        $('#CardSubtype').val('Any');
         $('#ClassSymbol').val('Any');
         $('#DeckType').val('Any');
         $('#IsUnique').val('Any');

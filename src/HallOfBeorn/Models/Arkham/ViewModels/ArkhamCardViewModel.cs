@@ -42,7 +42,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
                     case ArkhamCardType.Agenda:
                         return card.Subtitle;
                     default:
-                        return string.Empty;
+                        return card.CardSubtype != ArkhamCardSubtype.None ? card.CardSubtype.ToString().Replace("_", " ") : string.Empty;
                 }
             }
         }
@@ -157,20 +157,49 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
 
         public string CardType
         {
-            get
-            {
-                return card.CardType.ToString();
+            get { return card.CardType.ToString(); }
+        }
+
+        public string CardSubtype
+        {
+            get { 
+                return card.CardSubtype != ArkhamCardSubtype.None ? 
+                    card.CardSubtype.ToString().Replace("_", " ") 
+                    : string.Empty; 
             }
         }
 
         public string ClassName
         {
-            get { return card.ClassSymbol != ClassSymbol.None ? card.ClassSymbol.ToString() : string.Empty; }
+            get
+            {
+                if (card.CardSubtype == ArkhamCardSubtype.Basic_Weakness)
+                    return "Basic Weakness";
+
+                return card.ClassSymbol != ClassSymbol.None ? card.ClassSymbol.ToString() : string.Empty;
+            }
+        }
+
+        public string ClassUrl
+        {
+            get
+            {
+                if (card.CardSubtype == ArkhamCardSubtype.Basic_Weakness)
+                    return "/Arkham?CardSubtype=Basic_Weakness";
+
+                return card.ClassSymbol != ClassSymbol.None ? string.Format("/Arkham?ClassSymbol={0}", card.ClassSymbol) : string.Empty;
+            }
         }
 
         public string ClassIcon
         {
-            get { return card.ClassSymbol != ClassSymbol.None ? string.Format("/Images/Arkham/{0}.png", ClassName) : string.Empty; }
+            get
+            {
+                if (card.CardSubtype == ArkhamCardSubtype.Basic_Weakness)
+                    return "<img src='/Images/Arkham/Basic_Weakness.png' width='32' height='28' title='Basic Weakness'/>";
+
+                return card.ClassSymbol != ClassSymbol.None ? string.Format("<img src='/Images/Arkham/{0}.png' width='32' height='32' title='{0} Class'/>", ClassName) : string.Empty; 
+            }
         }
 
         public string Cost
@@ -323,6 +352,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             map["{Fight}"] = "<b>Fight</b>";
             map["{Evade}"] = "<b>Evade</b>";
             map["{Investigate}"] = "<b>Investigate</b>";
+            map["{Parley}"] = "<b>Parley</b>";
 
             //Skills
             map["{Willpower}"]  = "<img title='Willpower Skill' src='/Images/Arkham/Willpower_small.png'>";

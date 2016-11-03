@@ -72,8 +72,8 @@
             </span>
 
             <span class="search-filter-fixed">
-            <span class="search-label-short">Unique</span>
-            @Html.DropDownListFor(x => x.IsUnique, ArkhamSearchViewModel.UniquenessValues, new { @class = "search-select-short" })
+            <span class="search-label-tiny2">Subtype</span>
+            @Html.DropDownListFor(x => x.CardSubtype, ArkhamSearchViewModel.CardSubtypes, new { @class = "search-select-short2" })
             </span>
         </div>
     </div>
@@ -97,7 +97,7 @@
             </span>
 
             <span class="search-filter-fixed">
-            <span class="search-label-short">Slot</span>
+            <span class="search-label-short">Asset Slot</span>
             @Html.DropDownListFor(x => x.Slot, ArkhamSearchViewModel.SlotValues, new { @class = "search-select-short" })
             </span>
         </div>
@@ -109,6 +109,11 @@
             <span class="search-filter-fixed">
             <span class="search-label-short">Victory</span>
             @Html.DropDownListFor(x => x.VictoryPoints, ArkhamSearchViewModel.VictoryPointsValues, new { @class = "search-select-short" })
+            </span>
+
+            <span class="search-filter-fixed">
+            <span class="search-label-short">Unique</span>
+            @Html.DropDownListFor(x => x.IsUnique, ArkhamSearchViewModel.UniquenessValues, new { @class = "search-select-short" })
             </span>
         </div>
     </div>
@@ -274,7 +279,7 @@
             <div class="arkham-statSection">
                 @if (!string.IsNullOrEmpty(@card.ClassName))
                 {
-                    <div class="arkham-statBox"><a href="/Arkham?ClassSymbol=@card.ClassName"><img src="@card.ClassIcon" width="32" height="32" title="Class: @card.ClassName"/></a></div>
+                    <div class="arkham-statBox"><a href="@card.ClassUrl">@Html.Raw(@card.ClassIcon)</a></div>
                 }
                 <div class="arkham-statBox top">
                     <div class="arkham-title">
@@ -300,7 +305,7 @@
                 }
 
                 @if (!string.IsNullOrEmpty(@card.Cost)) {
-                    <div class="arkham-statBox"><a href="/Arkham?Cost=@card.Cost&CostOp=eq"><span class="arkham-circle arkham-cost" title="Cost"><span class="arkham-valueInner">@card.Cost</span></span></a></div>
+                    <div class="arkham-statBox top"><a href="/Arkham?Cost=@card.Cost&CostOp=eq"><span class="arkham-circle arkham-cost" title="Cost"><span class="arkham-valueInner">@card.Cost</span></span></a></div>
                 }
             </div>
             

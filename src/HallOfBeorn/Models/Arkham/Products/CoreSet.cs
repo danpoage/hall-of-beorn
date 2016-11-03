@@ -208,13 +208,13 @@ namespace HallOfBeorn.Models.Arkham.Products
             addCard(ArkhamCard.Asset("Medical Texts", ClassSymbol.Seeker, 2, AssetSlot.One_Hand)
                 .WithTraits("Item.", "Tome.")
                 .WithIcons(SkillIcon.Combat)
-                .WithText("{Action}: Choose an investigator at your location and test Intellect (2). If you succeed, heal 1 damage from that investigator. If you fail, deal 1 damage to that investigator.")
+                .WithText("{Action}: Choose an investigator at your location and test {Intellect} (2). If you succeed, heal 1 damage from that investigator. If you fail, deal 1 damage to that investigator.")
                 .WithInfo(35, 1, Artist.Anna_Christenson));
             addCard(ArkhamCard.Event("Mind over Matter", ClassSymbol.Seeker, 1)
                 .WithTraits("Insight.")
                 .WithIcons(SkillIcon.Combat, SkillIcon.Agility)
                 .WithKeywords("Fast.")
-                .WithText("Fast. Play only during your turn.\r\nUntil the end of the round, you must use your Intellect in place of your Combat and Agility.")
+                .WithText("Fast. Play only during your turn.\r\nUntil the end of the round, you must use your {Intellect} in place of your {Combat} and {Agility}. ")
                 .WithInfo(36, 1, Artist.Maggie_Ivy));
             addCard(ArkhamCard.Event("Working a Hunch", ClassSymbol.Seeker, 2)
                 .WithTraits("Insight.")
@@ -394,7 +394,7 @@ namespace HallOfBeorn.Models.Arkham.Products
             addCard(ArkhamCard.Event("Blinding Light", ClassSymbol.Mystic, 2)
                 .WithTraits("Spell.")
                 .WithIcons(SkillIcon.Willpower, SkillIcon.Agility)
-                .WithText("Evade. This evasion attempt uses Willpower instead of Agility. If you succeed, deal 1 damage to the enemy just evaded. If a {Skull}, {Cultist}, {Tablet}, {Elder Thing} or {Tentacle} symbol is revealed during this evasion attempt, lose 1 action this turn.")
+                .WithText("Evade. This evasion attempt uses Willpower instead of {Agility}.  If you succeed, deal 1 damage to the enemy just evaded. If a {Skull}, {Cultist}, {Tablet}, {Elder Thing} or {Tentacle} symbol is revealed during this evasion attempt, lose 1 action this turn.")
                 .WithInfo(66, 1, Artist.Stephen_Somers));
             addCard(ArkhamCard.Skill("Fearless", ClassSymbol.Mystic, 0)
                 .WithTraits("Innate.")
@@ -413,7 +413,7 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithLevel(2)
                 .WithTraits("Spell.")
                 .WithIcons(SkillIcon.Willpower, SkillIcon.Agility)
-                .WithText("Evade. This evasion attempt uses Willpower instead of Agility. If you succeed, deal 2 damage to the enemy just evaded. If a {Skull}, {Cultist}, {Tablet}, {Elder Thing} or {Tentacle} symbol is revealed during this evasion attempt, lose 1 action this turn and take 1 horror.")
+                .WithText("Evade. This evasion attempt uses Willpower instead of {Agility}.  If you succeed, deal 2 damage to the enemy just evaded. If a {Skull}, {Cultist}, {Tablet}, {Elder Thing} or {Tentacle} symbol is revealed during this evasion attempt, lose 1 action this turn and take 1 horror.")
                 .WithInfo(69, 1, Artist.Stephen_Somers));
             addCard(ArkhamCard.Asset("Book of Shadows", ClassSymbol.Mystic, 4, AssetSlot.One_Hand)
                 .WithLevel(3)
@@ -581,21 +581,21 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithInfo(97, 1, Artist.Cristina_Vela));
             addCard(ArkhamCard.Treachery("Haunted", ArkhamCardSubtype.Basic_Weakness)
                 .WithTraits("Curse.")
-                .WithText("{Revelation} - Add Haunted to your threat area. You get -1 to each of your skills.\r\nAction {Action}: Discard Haunted.")
+                .WithText("{Revelation} - Add Haunted to your threat area. You get -1 to each of your skills.\r\n{Action} {Action}: Discard Haunted.")
                 .WithInfo(98, 1, Artist.Magali_Villeneuve));
             addCard(ArkhamCard.Treachery("Psychosis", ArkhamCardSubtype.Basic_Weakness)
                 .WithTraits("Madness.")
-                .WithText("{Revelation} - Add Psychosis to your threat area.\r\n{Forced} - After you take 1 or more horror: Take 1 direct damage.\r\nAction {Action}: Discard Psychosis.")
+                .WithText("{Revelation} - Add Psychosis to your threat area.\r\n{Forced} - After you take 1 or more horror: Take 1 direct damage.\r\n{Action} {Action}: Discard Psychosis.")
                 .WithInfo(99, 1, Artist.Tiziano_Baracchi));
             addCard(ArkhamCard.Treachery("Hypochondria", ArkhamCardSubtype.Basic_Weakness)
                 .WithTraits("Madness.")
-                .WithText("{Revelation} - Add Hypochondria to your threat area.\r\n{Forced} - After you take or more damage: Take 1 direct horror.\r\nAction {Action}: Discard Hypochondria.")
+                .WithText("{Revelation} - Add Hypochondria to your threat area.\r\n{Forced} - After you take or more damage: Take 1 direct horror.\r\n{Action} {Action}: Discard Hypochondria.")
                 .WithInfo(100, 1, Artist.Rafal_Hrynkiewicz));
             addCard(ArkhamCard.Enemy("Mob Enforcer", Number.Of(4), Number.Of(3), Number.Of(3), Number.Of(1), Number.Of(0))
                 .WithSubtype(ArkhamCardSubtype.Basic_Weakness)
                 .WithTraits("Humanoid.", "Criminal.")
                 .WithKeywords("Prey - Bearer only.", "Hunter.")
-                .WithText("Prey - Bearer only.\r\nHunter.\r\n{Action} Spend 4 resources: Parley. Discard Mob Enforcer.")
+                .WithText("Prey - Bearer only.\r\nHunter.\r\n{Action} Spend 4 resources: {Parley}. Discard Mob Enforcer.")
                 .WithFlavor("You knew you shouldn't have borrowed money from the O'Bannion gang. It seems like they're always looking to collect at the worst times.")
                 .WithInfo(101, 1, Artist.Rafal_Hrynkiewicz));
             addCard(ArkhamCard.Enemy("Silver Twilight Acolyte", Number.Of(2), Number.Of(3), Number.Of(3), Number.Of(1), Number.Of(0))
@@ -652,7 +652,7 @@ namespace HallOfBeorn.Models.Arkham.Products
             addCard(ArkhamCard.Location("Parlor", ConnectionSymbol.Parlor, Shroud.Of(2), ClueValue.Of(0))
                 .WithFrontText("The entrance to the Parlor is blocked by a darkly glowing unfathomable barrier. You cannot move into the Parlor.")
                 .WithFrontFlavor("You're unsure what would happen if you tried to corss the threshold of the strange barrier, but based on its extreme heat, you sure as hell don't want to try.")
-                .WithBackText("{Action}: Resign. \"This is too much for me!\" You run out the front door, fleeing in panic.\r\nWhile Lita Chantler is not controlled by a player, she gains: \"{Action}: Parley. Test Intellect (4). If you succeed, take contro of Lita Chantler.")
+                .WithBackText("{Action}: Resign. \"This is too much for me!\" You run out the front door, fleeing in panic.\r\nWhile Lita Chantler is not controlled by a player, she gains: \"{Action}: {Parley}. Test {Intellect} (4). If you succeed, take contro of Lita Chantler.")
                 .WithConnections(ConnectionSymbol.Hallway)
                 .WithInfo(115, 1, Artist.Yoann_Boissonnet));
 

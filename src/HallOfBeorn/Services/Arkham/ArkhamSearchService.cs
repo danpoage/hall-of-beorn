@@ -363,6 +363,12 @@ namespace HallOfBeorn.Services.Arkham
                         if (card.CardType != model.CardType.Value)
                             continue;
                     }
+                    if (model.CardSubtype.HasValue && model.CardSubtype != ArkhamCardSubtype.None)
+                    {
+                        hasFilter = true;
+                        if (card.CardSubtype != model.CardSubtype.Value)
+                            continue;
+                    }
                     if (model.DeckType.HasValue && model.DeckType.Value != ArkhamDeckType.None) {
                         hasFilter = true;
                         if (card.DeckType != model.DeckType.Value)

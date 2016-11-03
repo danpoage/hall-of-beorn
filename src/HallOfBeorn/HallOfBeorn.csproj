@@ -693,6 +693,7 @@
     <Content Include="Images\Arkham\Action.png" />
     <Content Include="Images\Arkham\Agility.png" />
     <Content Include="Images\Arkham\Agility_small.png" />
+    <Content Include="Images\Arkham\Basic_Weakness.png" />
     <Content Include="Images\Arkham\Combat.png" />
     <Content Include="Images\Arkham\Combat_small.png" />
     <Content Include="Images\Arkham\Cultist.png" />

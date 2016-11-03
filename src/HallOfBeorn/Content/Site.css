@@ -849,6 +849,11 @@ tr.pager td {
     width:100px;
 }
 
+.search-select-short2 {
+    margin-right: 6px;
+    width: 130px;
+}
+
 .search-select-short-padded {
     margin-right:82px;
     width:100px;
@@ -1582,7 +1587,7 @@ tr.pager td {
 .arkham-enemyEvadeValue {
     display: inline-block;
     margin-top: 2px;
-    margin-left: 24px;
+    margin-left: 36px;
 }
 
 .arkham-unique {
@@ -1590,7 +1595,7 @@ tr.pager td {
 }
 
 .arkham-title {
-    min-width: 200px;
+    max-width: 300px;
     font-family: Georgia;
     font-weight: 200;
     font-size: 14pt;
