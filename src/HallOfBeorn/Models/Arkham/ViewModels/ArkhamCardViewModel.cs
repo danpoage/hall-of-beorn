@@ -406,24 +406,37 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         {
             var body = new System.Text.StringBuilder();
 
+            var map = getTemplateMap();
+            
             if (!string.IsNullOrEmpty(card.FrontText))
             {
-                body.AppendFormat("<p class='arkham-cardText'>{0}</p>", card.FrontText);
+                var lines = card.FrontText.Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
+                foreach (var line in lines) {
+                    var text = line;
+                    foreach(var item in map) {
+                        text = text.Replace(item.Key, map[item.Key]);
+                    }
+
+                    body.AppendFormat("<p class='arkham-cardText'>{0}</p>", text);
+                }
             }
 
             if (!string.IsNullOrEmpty(card.FrontFlavor))
             {
                 body.AppendFormat("<p class='arkham-flavorText'>{0}</p>", card.FrontFlavor);
             }
-
+            
             if (!string.IsNullOrEmpty(card.BackText))
             {
-                if (body.Length > 0)
-                {
-                    //body.Append("---");
-                }
+                var lines = card.BackText.Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
+                foreach (var line in lines) {
+                    var text = line;
+                    foreach(var item in map) {
+                        text = text.Replace(item.Key, map[item.Key]);
+                    }
 
-                body.AppendFormat("<p class='arkham-cardText'>{0}</p>", card.BackText);
+                    body.AppendFormat("<p class='arkham-cardText'>{0}</p>", text);
+                }
             }
 
             if (!string.IsNullOrEmpty(card.BackFlavor))
