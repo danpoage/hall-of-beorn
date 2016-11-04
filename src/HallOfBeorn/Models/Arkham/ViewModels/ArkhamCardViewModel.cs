@@ -51,15 +51,42 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         public string Intellect { get { return card.Intellect.ToString(); } }
         public string Combat { get { return card.Combat.ToString(); } }
         public string Agility { get { return card.Agility.ToString(); } }
-
-        private string getBaseImagePath()
+        
+        public string Victory
         {
-            var slug = card.Title.ToUrlSafeString();
+            get
+            {
+                return card.VictoryPoints.HasValue && card.VictoryPoints.Value > 0 ?
+                    string.Format("Victory {0}", card.VictoryPoints.Value)
+                    : string.Empty;
+            }
+        }
+
+        private string getProductImagePath()
+        {
             var product = card.Product.Name.ToUrlSafeString();
+            return string.Format("{0}/{1}", arkhamCardImages, product);
+        }
+
+        private string getEncounterSetImage()
+        {
+            if (card.EncounterSet == ArkhamEncounterSet.None)
+                return string.Empty;
+
+            var product = getProductImagePath();
+            var set = card.EncounterSet.ToString().Replace("_", "-");
+
+            return string.Format("{0}/{1}.png", product, set);
+        }
+
+        private string getCardImagePath()
+        {
+            var product = getProductImagePath();
+            var slug = card.Title.ToUrlSafeString();
             var level = (card.Level.HasValue && card.Level.Value > 0) ? card.Level.ToString() : string.Empty;
             var sequence = card.Sequence.HasValue ? string.Format("-{0}", card.Sequence) : string.Empty;
 
-            return string.Format("{0}/{1}/{2}{3}{4}", arkhamCardImages, product, slug, level, sequence);
+            return string.Format("{0}/{1}{2}{3}", product, slug, level, sequence);
         }
 
         public string SearchUrl
@@ -75,13 +102,13 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
                 {
                     case ArkhamCardType.Act:
                     case ArkhamCardType.Agenda:
-                        return string.Format("{0}a.jpg", getBaseImagePath());
+                        return string.Format("{0}a.jpg", getCardImagePath());
                     case ArkhamCardType.Investigator:
                     case ArkhamCardType.Location:
                     case ArkhamCardType.Scenario_Reference:
-                        return string.Format("{0}-Front.jpg", getBaseImagePath());
+                        return string.Format("{0}-Front.jpg", getCardImagePath());
                     default:
-                        return string.Format("{0}.jpg", getBaseImagePath());
+                        return string.Format("{0}.jpg", getCardImagePath());
                 }
             }
         }
@@ -94,11 +121,11 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
                 {
                     case ArkhamCardType.Act:
                     case ArkhamCardType.Agenda:
-                        return string.Format("{0}b.jpg", getBaseImagePath());
+                        return string.Format("{0}b.jpg", getCardImagePath());
                     case ArkhamCardType.Investigator:
                     case ArkhamCardType.Location:
                     case ArkhamCardType.Scenario_Reference:
-                        return string.Format("{0}-Back.jpg", getBaseImagePath());
+                        return string.Format("{0}-Back.jpg", getCardImagePath());
                     default:
                         return string.Empty;
                 }
@@ -177,6 +204,8 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             {
                 if (card.CardSubtype == ArkhamCardSubtype.Basic_Weakness)
                     return "Basic Weakness";
+                else if (card.EncounterSet != ArkhamEncounterSet.None)
+                    return card.EncounterSet.ToString().Replace("_", " ");
 
                 return card.ClassSymbol != ClassSymbol.None ? card.ClassSymbol.ToString() : string.Empty;
             }
@@ -188,6 +217,8 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             {
                 if (card.CardSubtype == ArkhamCardSubtype.Basic_Weakness)
                     return "/Arkham?CardSubtype=Basic_Weakness";
+                else if (card.EncounterSet != ArkhamEncounterSet.None)
+                    return string.Format("/Arkham?EncounterSet={0}", card.EncounterSet);
 
                 return card.ClassSymbol != ClassSymbol.None ? string.Format("/Arkham?ClassSymbol={0}", card.ClassSymbol) : string.Empty;
             }
@@ -199,6 +230,8 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             {
                 if (card.CardSubtype == ArkhamCardSubtype.Basic_Weakness)
                     return "<img src='/Images/Arkham/Basic_Weakness.png' width='32' height='28' title='Basic Weakness'/>";
+                else if (card.EncounterSet != ArkhamEncounterSet.None)
+                    return string.Format("<img src='{0}' width='32' height='32' title='{1}'/>", getEncounterSetImage(), ClassName);
 
                 return card.ClassSymbol != ClassSymbol.None ? string.Format("<img src='/Images/Arkham/{0}.png' width='32' height='32' title='{0} Class'/>", ClassName) : string.Empty; 
             }
@@ -253,14 +286,14 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             get { return card.EnemyEvadeValue.HasValue ? card.EnemyEvadeValue.Value.ToString(PerInvestigatorBlackIcon) : string.Empty; }
         }
 
-        public string Damage
+        public byte Damage
         {
-             get { return card.Damage.HasValue ? card.Damage.Value.ToString() : string.Empty; }
+             get { return card.Damage.HasValue ? card.Damage.Value.Value : (byte)0; }
         }
 
-        public string Horror
+        public byte Horror
         {
-            get { return card.Horror.HasValue ? card.Horror.Value.ToString() : string.Empty; }
+            get { return card.Horror.HasValue ? card.Horror.Value.Value : (byte)0; }
         }
 
         public string Sequence
@@ -330,7 +363,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
                 var health = card.EnemyHealthValue.HasValue ? card.EnemyHealthValue.Value.ToString(PerInvestigatorWhiteIcon) : string.Empty;
                 var evade = card.EnemyEvadeValue.HasValue ? card.EnemyEvadeValue.Value.ToString(PerInvestigatorWhiteIcon) : string.Empty;
 
-                html.AppendFormat("<div class='arkham-enemyFightValue'>{0}</div><div class='arkham-enemyHealthValue'>{1}</div><div class='arkham-enemyEvadeValue'>{2}</div>", fight, health, evade);
+                html.AppendFormat("<div class='arkham-enemyFightValue' title='Fight Value'>{0}</div><div class='arkham-enemyHealthValue' title='Health Value'>{1}</div><div class='arkham-enemyEvadeValue' title='Evade Value'>{2}</div>", fight, health, evade);
             }
 
             return html.ToString();

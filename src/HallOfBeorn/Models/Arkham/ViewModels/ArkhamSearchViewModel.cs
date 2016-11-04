@@ -17,6 +17,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         public ArkhamSearchView? View { get; set; }
 
         public string Product { get; set; }
+        public ArkhamEncounterSet? EncounterSet { get; set; }
 
         public ArkhamCardType? CardType { get; set; }
         public ArkhamCardSubtype? CardSubtype { get; set; }
@@ -112,6 +113,11 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         public static IEnumerable<SelectListItem> CardSubtypes
         {
             get { return typeof(ArkhamCardSubtype).GetSelectListItems(" "); }
+        }
+
+        public static IEnumerable<SelectListItem> EncounterSets
+        {
+            get { return typeof(ArkhamEncounterSet).GetSelectListItems(" "); }
         }
 
         public static IEnumerable<SelectListItem> DeckTypes

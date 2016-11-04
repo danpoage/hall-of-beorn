@@ -28,6 +28,10 @@ namespace HallOfBeorn.Controllers
             {
                 model.Product = null;
             }
+            if (model.EncounterSet.HasValue && model.EncounterSet.Value == ArkhamEncounterSet.None)
+            {
+                model.EncounterSet = null;
+            }
             if (model.CardType.HasValue && model.CardType.Value == ArkhamCardType.None)
             {
                 model.CardType = null;

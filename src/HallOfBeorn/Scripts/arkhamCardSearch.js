@@ -6,6 +6,7 @@
         $('#Query').focus().val('');
 
         $('#Product').val('Any');
+        $('#EncounterSet').val('Any');
         $('#Artist').val('Any');
 
         $('#CardType').val('Any');

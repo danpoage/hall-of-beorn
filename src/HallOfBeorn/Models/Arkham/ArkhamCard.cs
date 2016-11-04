@@ -215,10 +215,11 @@ namespace HallOfBeorn.Models.Arkham
             };
         }
 
-        public static ArkhamCard Location(string title, ConnectionSymbol locationSymbol, Number shroud, Number clueValue)
+        public static ArkhamCard Location(string title, ConnectionSymbol locationSymbol, Number shroud, Number clueValue, ArkhamEncounterSet encounterSet)
         {
             return new ArkhamCard()
             {
+                EncounterSet = encounterSet,
                 CardType = ArkhamCardType.Location,
                 DeckType = ArkhamDeckType.Encounter,
                 Title = title,
@@ -230,8 +231,14 @@ namespace HallOfBeorn.Models.Arkham
 
         public static ArkhamCard Treachery(string title, ArkhamCardSubtype subtype)
         {
+            return Treachery(title, subtype, ArkhamEncounterSet.None);
+        }
+
+        public static ArkhamCard Treachery(string title, ArkhamCardSubtype subtype, ArkhamEncounterSet encounterSet)
+        {
             return new ArkhamCard
             {
+                EncounterSet = encounterSet,
                 CardType = ArkhamCardType.Treachery,
                 DeckType = ArkhamDeckType.Player,
                 Title = title,
@@ -239,10 +246,11 @@ namespace HallOfBeorn.Models.Arkham
             };
         }
 
-        public static ArkhamCard ScenarioReference(string title, string subtitle) 
+        public static ArkhamCard ScenarioReference(string title, string subtitle, ArkhamEncounterSet encounterSet) 
         {
             return new ArkhamCard
             {
+                EncounterSet = encounterSet,
                 CardType = ArkhamCardType.Scenario_Reference,
                 DeckType = ArkhamDeckType.None,
                 Title = title,

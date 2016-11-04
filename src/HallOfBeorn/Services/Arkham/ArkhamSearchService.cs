@@ -357,7 +357,13 @@ namespace HallOfBeorn.Services.Arkham
                         if (card.Product.Name != model.Product)
                             continue;
                     }
-                    if (model.CardType.HasValue && model.CardType != ArkhamCardType.None)
+                    if (model.EncounterSet.HasValue && model.EncounterSet.Value != ArkhamEncounterSet.None)
+                    {
+                        hasFilter = true;
+                        if (card.EncounterSet != model.EncounterSet.Value)
+                            continue;
+                    }
+                    if (model.CardType.HasValue && model.CardType.Value != ArkhamCardType.None)
                     {
                         hasFilter = true;
                         if (card.CardType != model.CardType.Value)

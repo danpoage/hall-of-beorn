@@ -43,7 +43,12 @@
         <div class="search-items">
             <span class="search-filter-fixed-long">
             <span class="search-label-short">Product</span>
-            @Html.DropDownList("Product", ArkhamSearchViewModel.Products, new { @class = "search-select" })
+            @Html.DropDownListFor(x => x.Product, ArkhamSearchViewModel.Products, new { @class = "search-select" })
+            </span>
+
+            <span class="search-filter-fixed-long">
+            <span class="search-label-short">Encounter</span>
+            @Html.DropDownListFor(x => x.EncounterSet, ArkhamSearchViewModel.EncounterSets, new { @class = "search-select" })
             </span>
 
             <span class="search-filter-fixed-long">
@@ -307,6 +312,21 @@
                 @if (!string.IsNullOrEmpty(@card.Cost)) {
                     <div class="arkham-statBox top"><a href="/Arkham?Cost=@card.Cost&CostOp=eq"><span class="arkham-circle arkham-cost" title="Cost"><span class="arkham-valueInner">@card.Cost</span></span></a></div>
                 }
+                @if (!string.IsNullOrEmpty(@card.ClueThreshold)) {
+                    <div class="arkham-statBox top"><div class="arkham-circle arkham-clueValue" title="Clue Threshold"><div class="arkham-valueInner">@Html.Raw(@card.ClueThreshold)</div></div></div>
+                }
+                @if (!string.IsNullOrEmpty(@card.DoomThreshold)) {
+                    <div class="arkham-statBox top"><div class="arkham-doomThreshold" title="Doom Threshold"><div class="arkham-valueInner">@Html.Raw(@card.DoomThreshold)</div></div></div>
+                }
+                @if (!string.IsNullOrEmpty(@card.Shroud)) {
+                    <div class="arkham-statBox top"><div class="arkham-circle arkham-shroud" title="Shroud"><div class="arkham-valueInner">@Html.Raw(@card.Shroud)</div></div></div>    
+                }
+                @if (!string.IsNullOrEmpty(@card.ClueValue)) {
+                    <div class="arkham-statBox top"><div class="arkham-circle arkham-clueValue" title="Clue Value"><div class="arkham-valueInner">@Html.Raw(@card.ClueValue)</div></div></div>   
+                }
+                @if (@card.CardType == "Enemy") {
+                    <div class="arkham-enemyStatSection">@Html.Raw(@card.EnemyStatHtml())</div>
+                }
             </div>
             
             @if (@card.HasSkillIcons()) {
@@ -325,35 +345,6 @@
                 </div>
             }
 
-            @switch (@card.CardType)
-            {
-                case "Location":
-                    <div>
-                        <div class="arkham-circle arkham-shroud" title="Shroud"><div class="arkham-valueInner">@Html.Raw(@card.Shroud)</div></div>
-                        <div class="arkham-circle arkham-clueValue" title="Clue Value"><div class="arkham-valueInner">@Html.Raw(@card.ClueValue)</div></div>
-                    </div>
-                    break;
-                case "Enemy":
-                    <div class="arkham-statSection">
-                        <div class="arkham-enemyStatSection">@Html.Raw(@card.EnemyStatHtml())</div>
-                    </div>
-                    <div class="arkham-statSection">
-                        <span class="arkham-health" title="Damage"><span class="arkham-energyInner arkham-healthInner">@card.Damage</span></span>
-                        <span class="arkham-sanity" title="Horror"><span class="arkham-energyInner arkham-sanityInner">@card.Horror</span></span>
-                    </div>
-                    break;
-                case "Act":
-                    <div class="arkham-statSection">
-                        <div class="arkham-circle arkham-clueValue" title="Clue Threshold"><div class="arkham-valueInner">@Html.Raw(@card.ClueThreshold)</div></div>
-                    </div>
-                    break;
-                case "Agenda":
-                    <div class="arkham-statSection">
-                        <div class="arkham-doomThreshold" title="Doom Threshold"><div class="arkham-valueInner">@Html.Raw(@card.DoomThreshold)</div></div>
-                    </div>
-                    break;
-                       
-            }
             @if ((!@Model.View.HasValue || @Model.View.Value == ArkhamSearchView.Card || @Model.View.Value == ArkhamSearchView.Card_Text) && !string.IsNullOrEmpty(@card.FrontBodyHtml()))
             {
                 @Html.Raw(@card.FrontBodyHtml())
@@ -370,17 +361,27 @@
                 }
             </div>
 
-            @*
-            @if (@card.CardType == "Act" || @card.CardType == "Agenda") {
-                <div><b>
-                    @card.CardType
+            @if (!string.IsNullOrEmpty(@card.Victory)) {
+                <div class="arkham-statSection"><a href="/Arkham?VictoryPoints=@card.Victory" title="Victory Points"><b>@card.Victory.</b></a></div>
+            }
 
-                    @if (!string.IsNullOrEmpty(card.Sequence)) {
-                        @card.Sequence
-                    }
-                     </b>
+            <div class="arkham-statSection">
+            @if (@card.Damage > 0) {
+                <div class="arkham-statBox arkham-damageBox">
+                @for (var i=0;i<@card.Damage;i++) {
+                    <img src="/Images/Arkham/Health.png" height="15" width="12" title="Damage"/> 
+                }
                 </div>
-            }*@
+            }
+
+            @if (@card.Horror > 0) {
+                <div class="arkham-statBox arkham-horrorBox">
+                @for (var i=0;i<@card.Horror;i++) {
+                    <img src="/Images/Arkham/Sanity.png" height="14" width="17" title="Horror" />
+                }
+                </div>
+            }
+            </div>
         </div>
     }
 }
