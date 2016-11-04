@@ -70,11 +70,11 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
 
         private string getEncounterSetImage()
         {
-            if (card.EncounterSet == ArkhamEncounterSet.None)
+            if (card.EncounterSet == null)
                 return string.Empty;
 
             var product = getProductImagePath();
-            var set = card.EncounterSet.ToString().Replace("_", "-");
+            var set = card.EncounterSet.Name.ToUrlSafeString();
 
             return string.Format("{0}/{1}.png", product, set);
         }
@@ -204,8 +204,8 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             {
                 if (card.CardSubtype == ArkhamCardSubtype.Basic_Weakness)
                     return "Basic Weakness";
-                else if (card.EncounterSet != ArkhamEncounterSet.None)
-                    return card.EncounterSet.ToString().Replace("_", " ");
+                else if (card.EncounterSet != null)
+                    return card.EncounterSet.Name;
 
                 return card.ClassSymbol != ClassSymbol.None ? card.ClassSymbol.ToString() : string.Empty;
             }
@@ -217,8 +217,8 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             {
                 if (card.CardSubtype == ArkhamCardSubtype.Basic_Weakness)
                     return "/Arkham?CardSubtype=Basic_Weakness";
-                else if (card.EncounterSet != ArkhamEncounterSet.None)
-                    return string.Format("/Arkham?EncounterSet={0}", card.EncounterSet);
+                else if (card.EncounterSet != null)
+                    return string.Format("/Arkham?EncounterSet={0}", card.EncounterSet.Name);
 
                 return card.ClassSymbol != ClassSymbol.None ? string.Format("/Arkham?ClassSymbol={0}", card.ClassSymbol) : string.Empty;
             }
@@ -230,7 +230,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             {
                 if (card.CardSubtype == ArkhamCardSubtype.Basic_Weakness)
                     return "<img src='/Images/Arkham/Basic_Weakness.png' width='32' height='28' title='Basic Weakness'/>";
-                else if (card.EncounterSet != ArkhamEncounterSet.None)
+                else if (card.EncounterSet != null)
                     return string.Format("<img src='{0}' width='32' height='32' title='{1}'/>", getEncounterSetImage(), ClassName);
 
                 return card.ClassSymbol != ClassSymbol.None ? string.Format("<img src='/Images/Arkham/{0}.png' width='32' height='32' title='{0} Class'/>", ClassName) : string.Empty; 

@@ -199,6 +199,11 @@ namespace HallOfBeorn.Models.Arkham
             };
         }
 
+        public static ArkhamCard Enemy(string title, Number fightValue, Number healthValue, Number evadeValue, Number damage, Number horror)
+        {
+            return Enemy(title, fightValue, healthValue, evadeValue, damage, horror, null);
+        }
+
         public static ArkhamCard Enemy(string title, Number fightValue, Number healthValue, Number evadeValue, Number damage, Number horror, ArkhamEncounterSet encounterSet)
         {
             return new ArkhamCard()
@@ -231,7 +236,7 @@ namespace HallOfBeorn.Models.Arkham
 
         public static ArkhamCard Treachery(string title, ArkhamCardSubtype subtype)
         {
-            return Treachery(title, subtype, ArkhamEncounterSet.None);
+            return Treachery(title, subtype, null);
         }
 
         public static ArkhamCard Treachery(string title, ArkhamCardSubtype subtype, ArkhamEncounterSet encounterSet)

@@ -28,7 +28,7 @@ namespace HallOfBeorn.Controllers
             {
                 model.Product = null;
             }
-            if (model.EncounterSet.HasValue && model.EncounterSet.Value == ArkhamEncounterSet.None)
+            if (string.IsNullOrEmpty(model.EncounterSet) || model.EncounterSet == "None" || model.EncounterSet == "Any")
             {
                 model.EncounterSet = null;
             }
@@ -170,6 +170,7 @@ namespace HallOfBeorn.Controllers
             }
 
             ArkhamSearchViewModel.Products = productRepository.Products().Select(x => { return x.Name; }).GetExtendedSelectListItems();
+            ArkhamSearchViewModel.EncounterSets = ArkhamEncounterSet.All().Select(x => { return x.Name; }).GetExtendedSelectListItems();
             ArkhamSearchViewModel.Traits = productRepository.Traits().Distinct().OrderBy(x => { return x; }).GetExtendedSelectListItems();
             ArkhamSearchViewModel.Keywords = productRepository.Keywords().Distinct().OrderBy(x => { return x; }).GetExtendedSelectListItems();
             ArkhamSearchViewModel.VictoryPointsValues = productRepository.VictoryPointsValues().Distinct().OrderBy(x => { return x; }).GetExtendedSelectListItems();
