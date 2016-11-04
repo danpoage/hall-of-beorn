@@ -32,6 +32,10 @@ namespace HallOfBeorn.Controllers
             {
                 model.CardType = null;
             }
+            if (model.CardSubtype.HasValue && model.CardSubtype.Value == ArkhamCardSubtype.None)
+            {
+                model.CardSubtype = null;
+            }
             if (model.DeckType.HasValue && model.DeckType.Value == ArkhamDeckType.None) {
                 model.DeckType = null;
             }

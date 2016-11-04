@@ -58,7 +58,7 @@ namespace HallOfBeorn.Models.Arkham
         {
             if (IsNotApplicable)
             {
-                return "-";
+                return "–";
             }
 
             if (IsX)

@@ -7,6 +7,7 @@ namespace HallOfBeorn.Models.Arkham
 {
     public enum ArkhamEncounterSet
     {
-        None = 0
+        None = 0,
+        The_Gathering
     }
 }

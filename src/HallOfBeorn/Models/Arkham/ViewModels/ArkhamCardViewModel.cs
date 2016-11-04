@@ -78,6 +78,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
                         return string.Format("{0}a.jpg", getBaseImagePath());
                     case ArkhamCardType.Investigator:
                     case ArkhamCardType.Location:
+                    case ArkhamCardType.Scenario_Reference:
                         return string.Format("{0}-Front.jpg", getBaseImagePath());
                     default:
                         return string.Format("{0}.jpg", getBaseImagePath());
@@ -96,6 +97,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
                         return string.Format("{0}b.jpg", getBaseImagePath());
                     case ArkhamCardType.Investigator:
                     case ArkhamCardType.Location:
+                    case ArkhamCardType.Scenario_Reference:
                         return string.Format("{0}-Back.jpg", getBaseImagePath());
                     default:
                         return string.Empty;
@@ -339,7 +341,8 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             var map = new Dictionary<string, string>();
 
             map["\r\n"] = "<br/>";
-            map[" - "] = "&mdash;";
+            map[" -- "] = "&nbsp;&mdash;&nbsp;";
+            map[" - "] = "&nbsp;&ndash;&nbsp;";
             
             //Triggers
             map["{Forced}"] = "<b>Forced</b>";
@@ -370,6 +373,8 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
 
             //Traits
             map["{t:Tome}"] = "<a href='/Arkham?Trait=Tome.' target='_blank'><b><i>Tome</i></b></a>";
+            map["{t:Ghoul}"] = "<a href='/Arkham?Trait=Ghoul.' target='_blank'><b><i>Ghoul</i></b></a>";
+            map["{t:Monster}"] = "<a href='/Arkham?Trait=Monster.' target='_blank'><b><i>Monster</i></b></a>";
 
             return map;
         }

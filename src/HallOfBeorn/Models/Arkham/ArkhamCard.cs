@@ -120,6 +120,12 @@ namespace HallOfBeorn.Models.Arkham
             return connections;
         }
 
+        public ArkhamCard WithEncounterSet(ArkhamEncounterSet encounterSet)
+        {
+            this.EncounterSet = encounterSet;
+            return this;
+        }
+
         public static ArkhamCard Investigator(string title, string subtitle, ClassSymbol classSymbol, byte health, byte sanity)
         {
             return new ArkhamCard()
@@ -193,10 +199,11 @@ namespace HallOfBeorn.Models.Arkham
             };
         }
 
-        public static ArkhamCard Enemy(string title, Number fightValue, Number healthValue, Number evadeValue, Number damage, Number horror)
+        public static ArkhamCard Enemy(string title, Number fightValue, Number healthValue, Number evadeValue, Number damage, Number horror, ArkhamEncounterSet encounterSet)
         {
             return new ArkhamCard()
             {
+                EncounterSet = encounterSet,
                 CardType = ArkhamCardType.Enemy,
                 DeckType = ArkhamDeckType.Encounter,
                 Title = title,
@@ -243,10 +250,11 @@ namespace HallOfBeorn.Models.Arkham
             };
         }
 
-        public static ArkhamCard Agenda(string title, string subtitle, byte sequence, Number doomThreshold)
+        public static ArkhamCard Agenda(string title, string subtitle, byte sequence, Number doomThreshold, ArkhamEncounterSet encounterSet)
         {
             return new ArkhamCard()
             {
+                EncounterSet = encounterSet,
                 CardType = ArkhamCardType.Agenda,
                 DeckType = ArkhamDeckType.Agenda,
                 Title = title,
@@ -256,10 +264,11 @@ namespace HallOfBeorn.Models.Arkham
             };
         }
 
-        public static ArkhamCard Act(string title, string subtitle, byte sequence, Number clueThreshold)
+        public static ArkhamCard Act(string title, string subtitle, byte sequence, Number clueThreshold, ArkhamEncounterSet encounterSet)
         {
             return new ArkhamCard()
             {
+                EncounterSet = encounterSet,
                 CardType = ArkhamCardType.Act,
                 DeckType = ArkhamDeckType.Act,
                 Title = title,
