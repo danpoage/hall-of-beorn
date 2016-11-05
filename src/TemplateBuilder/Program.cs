@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 
 using HallOfBeorn;
 using HallOfBeorn.Models;
-using HallOfBeorn.Services;
+using HallOfBeorn.Models.LotR;
+using HallOfBeorn.Models.LotR.ViewModels;
+using HallOfBeorn.Services.LotR;
 
 namespace TemplateBuilder
 {
@@ -47,7 +49,7 @@ namespace TemplateBuilder
             Console.ReadLine();
         }
 
-        private static void AddEffect(StringBuilder html, Card card, string text, bool isParagraph)
+        private static void AddEffect(StringBuilder html, LotRCard card, string text, bool isParagraph)
         {
             if (isParagraph)
             {
@@ -98,7 +100,7 @@ namespace TemplateBuilder
             }
         }
 
-        private static string GetTemplate(Card card, string text, string shadowText, string flavorText)
+        private static string GetTemplate(LotRCard card, string text, string shadowText, string flavorText)
         {
             var html = new StringBuilder();
 

@@ -8,6 +8,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 
 using HallOfBeorn.Services;
+using HallOfBeorn.Services.LotR;
 
 namespace HallOfBeorn
 {

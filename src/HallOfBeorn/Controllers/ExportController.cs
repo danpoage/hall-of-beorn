@@ -6,8 +6,10 @@ using System.Web;
 using System.Web.Mvc;
 
 using HallOfBeorn.Models;
-using HallOfBeorn.Models.Simple;
-using HallOfBeorn.Services;
+using HallOfBeorn.Models.LotR;
+using HallOfBeorn.Models.LotR.Simple;
+using HallOfBeorn.Models.LotR.ViewModels;
+using HallOfBeorn.Services.LotR;
 
 namespace HallOfBeorn.Controllers
 {
@@ -26,7 +28,7 @@ namespace HallOfBeorn.Controllers
         private readonly CardRepository cardRepository;
         private readonly ScenarioService scenarioService;
 
-        private bool IsPlayerCard(Card card)
+        private bool IsPlayerCard(LotRCard card)
         {
             if (card == null)
             {
@@ -46,7 +48,7 @@ namespace HallOfBeorn.Controllers
             }
         }
 
-        private bool IsEncounterCard(Card card)
+        private bool IsEncounterCard(LotRCard card)
         {
             if (card == null)
             {
@@ -72,7 +74,7 @@ namespace HallOfBeorn.Controllers
             }
         }
 
-        private bool IsQuestCard(Card card)
+        private bool IsQuestCard(LotRCard card)
         {
             if (card == null)
             {

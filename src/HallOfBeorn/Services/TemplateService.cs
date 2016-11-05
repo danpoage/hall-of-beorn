@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 
 using HallOfBeorn.Models;
+using HallOfBeorn.Services.LotR;
 
 namespace HallOfBeorn.Services
 {

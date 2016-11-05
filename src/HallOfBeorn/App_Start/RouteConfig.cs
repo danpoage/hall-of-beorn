@@ -33,7 +33,13 @@ namespace HallOfBeorn
             routes.MapRoute(
                 "LotRDefaultRoute",
                 "LotR/{action}/{id}",
-                new { controller = "Cards", action = "Search", id = UrlParameter.Optional }
+                new { controller = "LotR", action = "Search", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                "LotRLegacyRoute",
+                "Cards/{action}/{id}",
+                new { controller = "LotR", action = "Search", id = UrlParameter.Optional }
             );
 
             routes.MapRoute(

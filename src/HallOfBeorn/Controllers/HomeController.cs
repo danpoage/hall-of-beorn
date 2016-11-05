@@ -10,7 +10,7 @@ namespace HallOfBeorn.Controllers
     {
         public ActionResult Index()
         {
-            return RedirectToAction("Search", "Cards");
+            return RedirectToAction("Search", "LotR");
         }
 
         /*

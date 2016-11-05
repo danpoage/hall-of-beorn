@@ -375,7 +375,7 @@ namespace HallOfBeorn
 
         public static bool IsDefinedFilter(this string self)
         {
-            return !(string.IsNullOrEmpty(self) || self == HallOfBeorn.Models.SearchViewModel.DEFAULT_FILTER_VALUE);
+            return !(string.IsNullOrEmpty(self) || self == HallOfBeorn.Models.LotR.ViewModels.SearchViewModel.DEFAULT_FILTER_VALUE);
         }
 
         public static bool CompareTo(this byte? self, HallOfBeorn.Models.NumericOperator? op, string other)
@@ -558,60 +558,60 @@ namespace HallOfBeorn
             return normalized;
         }
 
-        public static string Html(this Models.CardEffectType self)
+        public static string Html(this Models.LotR.CardEffectType self)
         {
             switch (self)
             {
-                case Models.CardEffectType.Action:
-                case Models.CardEffectType.Combat_Action:
-                case Models.CardEffectType.Encounter_Action:
-                case Models.CardEffectType.Forced:
-                case Models.CardEffectType.Planning_Action:
-                case Models.CardEffectType.Quest_Action:
-                case Models.CardEffectType.Refresh_Action:
-                case Models.CardEffectType.Resource_Action:
-                case Models.CardEffectType.Response:
-                case Models.CardEffectType.Setup:
-                case Models.CardEffectType.Shadow:
-                case Models.CardEffectType.Travel:
-                case Models.CardEffectType.Travel_Action:
-                case Models.CardEffectType.When_Revealed:
+                case Models.LotR.CardEffectType.Action:
+                case Models.LotR.CardEffectType.Combat_Action:
+                case Models.LotR.CardEffectType.Encounter_Action:
+                case Models.LotR.CardEffectType.Forced:
+                case Models.LotR.CardEffectType.Planning_Action:
+                case Models.LotR.CardEffectType.Quest_Action:
+                case Models.LotR.CardEffectType.Refresh_Action:
+                case Models.LotR.CardEffectType.Resource_Action:
+                case Models.LotR.CardEffectType.Response:
+                case Models.LotR.CardEffectType.Setup:
+                case Models.LotR.CardEffectType.Shadow:
+                case Models.LotR.CardEffectType.Travel:
+                case Models.LotR.CardEffectType.Travel_Action:
+                case Models.LotR.CardEffectType.When_Revealed:
                     return "<strong>" + self.ToEnumDisplayString() + ": </strong>";
-                case Models.CardEffectType.Flavor_Text:
-                case Models.CardEffectType.None:
-                case Models.CardEffectType.Passive:
+                case Models.LotR.CardEffectType.Flavor_Text:
+                case Models.LotR.CardEffectType.None:
+                case Models.LotR.CardEffectType.Passive:
                 default:
                     return string.Empty;
             }
         }
-
-        public static string Text(this Models.CardEffectType self)
+        
+        public static string Text(this Models.LotR.CardEffectType self)
         {
             switch (self)
             {
-                case Models.CardEffectType.Action:
-                case Models.CardEffectType.Combat_Action:
-                case Models.CardEffectType.Encounter_Action:
-                case Models.CardEffectType.Forced:
-                case Models.CardEffectType.Planning_Action:
-                case Models.CardEffectType.Quest_Action:
-                case Models.CardEffectType.Refresh_Action:
-                case Models.CardEffectType.Resource_Action:
-                case Models.CardEffectType.Response:
-                case Models.CardEffectType.Setup:
-                case Models.CardEffectType.Shadow:
-                case Models.CardEffectType.Travel:
-                case Models.CardEffectType.Travel_Action:
-                case Models.CardEffectType.When_Revealed:
+                case Models.LotR.CardEffectType.Action:
+                case Models.LotR.CardEffectType.Combat_Action:
+                case Models.LotR.CardEffectType.Encounter_Action:
+                case Models.LotR.CardEffectType.Forced:
+                case Models.LotR.CardEffectType.Planning_Action:
+                case Models.LotR.CardEffectType.Quest_Action:
+                case Models.LotR.CardEffectType.Refresh_Action:
+                case Models.LotR.CardEffectType.Resource_Action:
+                case Models.LotR.CardEffectType.Response:
+                case Models.LotR.CardEffectType.Setup:
+                case Models.LotR.CardEffectType.Shadow:
+                case Models.LotR.CardEffectType.Travel:
+                case Models.LotR.CardEffectType.Travel_Action:
+                case Models.LotR.CardEffectType.When_Revealed:
                     return self.ToEnumDisplayString() + ": ";
-                case Models.CardEffectType.Flavor_Text:
-                case Models.CardEffectType.None:
-                case Models.CardEffectType.Passive:
+                case Models.LotR.CardEffectType.Flavor_Text:
+                case Models.LotR.CardEffectType.None:
+                case Models.LotR.CardEffectType.Passive:
                 default:
                     return string.Empty;
             }
         }
-
+        
         public static string Name(this Models.Keyword self)
         {
             return self != Models.Keyword.None ? self.ToString().Replace('_', ' ') : string.Empty;
@@ -622,7 +622,7 @@ namespace HallOfBeorn
             return self != Models.Trait.None ? self.ToString().Replace("__", "-").Replace('_', ' ') : string.Empty;
         }
 
-        public static bool TextMatches(this Models.Card self, string pattern)
+        public static bool TextMatches(this Models.LotR.LotRCard self, string pattern)
         {
             return self.Text.ToLowerSafe().MatchesPattern(pattern) || self.OppositeText.ToLowerSafe().MatchesPattern(pattern);
         }

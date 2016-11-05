@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 using HallOfBeorn;
 using HallOfBeorn.Models;
-using HallOfBeorn.Services;
+using HallOfBeorn.Models.LotR;
+using HallOfBeorn.Services.LotR;
 
 namespace ScenarioBuilder
 {

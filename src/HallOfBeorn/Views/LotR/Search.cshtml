@@ -1,0 +1,585 @@
+﻿@using HallOfBeorn.Models
+@using HallOfBeorn.Models.LotR
+@using HallOfBeorn.Models.LotR.ViewModels
+@model SearchViewModel
+
+@{
+    ViewBag.Title = "Lord of the Rings: The Card Game - Search";
+}
+
+@section scripts {
+<script type="text/javascript" src="~/Scripts/cardSearch.js"></script>
+<script type="text/javascript" src="~/Scripts/storage.js"></script>
+<script type="text/javascript" src="~/Scripts/autocomplete20.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#Query").autocomplete({
+            source: autocompleteSource,
+            minLength: 2
+        });
+        $("#Query").autocomplete("widget").addClass("autocompleteClass");
+    });
+</script>    
+}
+
+@*<h2>Search</h2>*@
+
+@using (Html.BeginForm("Search", "Cards", FormMethod.Post))
+{
+    <div class="form-group">
+        <div style="margin-bottom:10px;">
+            <div style="display:inline-block;min-width:300px;margin-right:4px;">@Html.TextBoxFor(x => x.Query, new { style = "text-align:left;width:95%;margin-right:4px;" })</div>
+            <div style="display:inline-block;">
+                <input type="submit" value="Search" class="search-button" />
+                <a id="resetButton" href="#" class="clear-button">Clear</a>
+                <span style="display:inline-block;">
+                <span class="search-label-right">Sort</span>
+                @Html.DropDownListFor(x => x.Sort, SearchViewModel.Sorts, new { @class = "search-select-medium" })
+                </span>
+                <span style="display:inline-block">
+                <span class="search-label-right">View</span>
+                @Html.DropDownListFor(x => x.View, SearchViewModel.Views, new { @class = "search-select-medium" })
+                </span>
+            </div>
+        </div>
+        
+        <div class="search-row">
+            <div class="search-section">Set</div>
+            <div class="search-items">
+                <span class="search-filter">
+                <span class="search-label-short">Card Set</span>
+                @Html.DropDownList("CardSet", SearchViewModel.CardSets, new { @class = "search-select" })
+                </span>
+
+                <span class="search-filter">
+                <span class="search-label-short" title="Scenario">Scenario</span>
+                @Html.DropDownListFor(x => x.Scenario, SearchViewModel.Scenarios, new { @class = "search-select" })
+                </span>
+
+                <span class="search-filter">
+                <span class="search-label-short">Encounter</span>
+                @Html.DropDownListFor(x => x.EncounterSet, SearchViewModel.EncounterSets, new { @class = "search-select" })
+                </span>
+            </div>
+        </div>
+
+        <div class="search-row">
+            <div class="search-section">Type</div>
+            <div class="search-items">
+                <div class="search-sub-section">
+                    <span class="search-filter">
+                    <span class="search-label-short">Card Type</span>
+                    @Html.DropDownListFor(x => x.CardType, SearchViewModel.CardTypes, new { @class = "search-select" })
+                    </span>
+
+                    <span class="search-filter">
+                    <span class="search-label-short" title="Card Subtype">Subtype</span>
+                    @Html.DropDownListFor(x => x.CardSubtype, SearchViewModel.CardSubtypes, new { @class = "search-select-short-padded" })
+                    </span>
+
+                    <span class="search-filter">
+                    <span class="search-label-short" title="Deck Type">Deck Type</span>
+                    @Html.DropDownListFor(x => x.DeckType, SearchViewModel.DeckTypes, new { @class = "search-select-short-padded" })
+                    </span>
+                </div>
+                <div class="search-sub-section">
+                    <span class="search-filter">
+                    <span class="search-label-short">Sphere</span>
+                    @Html.DropDownListFor(x => x.Sphere, SearchViewModel.Spheres, new { @class = "search-select-short-padded" })
+                    </span>
+
+                    <span class="search-filter">
+                    <span class="search-label-short">Unique</span>
+                    @Html.DropDownListFor(x => x.IsUnique, SearchViewModel.UniquenessValues, new { @class = "search-select-short-padded" })
+                    </span>
+
+                    <span class="search-filter">
+                    <span class="search-label-short">Set Type</span>
+                    @Html.DropDownListFor(x => x.SetType, SearchViewModel.SetTypeValues, new { @class = "search-select" })
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <span class="centered-container">Advanced Search Options</span>
+        @* a id="moreOptionsButton" href="#">More Search Options/a *@
+        <div id="moreOptionsContainer">
+        <div class="search-row">
+            <div class="search-section">Cost</div>
+            <div class="search-items">
+                <span class="search-filter">
+                <span class="search-label-short">Resource</span>
+                @Html.DropDownListFor(x => x.CostOperator, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+                @Html.DropDownListFor(x => x.Cost, SearchViewModel.ResourceCosts, new { @class = "search-select-short" })
+                </span>
+
+                <span class="search-filter">
+                <span class="search-label-short">Threat</span>
+                @Html.DropDownListFor(x => x.ThreatCostOperator, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+                @Html.DropDownListFor(x => x.ThreatCost, SearchViewModel.ThreatCosts, new { @class = "search-select-short" })
+                </span>
+
+                <span class="search-filter">
+                <span class="search-label-short">Engagement</span>
+                @Html.DropDownListFor(x => x.EngagementCostOperator, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+                @Html.DropDownListFor(x => x.EngagementCost, SearchViewModel.EngagementCosts, new { @class = "search-select-short" })
+                </span>
+            </div>
+        </div>
+
+        <div class="search-row">
+            <div class="search-section">Stats</div>
+            <div class="search-items">
+                <div class="search-sub-section">
+                    <span class="search-filter">
+                    <span class="search-label-short"><img src="/Images/attack.gif" class="search-icon"></span>
+                    @Html.DropDownListFor(x => x.AttackOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+                    @Html.DropDownListFor(x => x.Attack, SearchViewModel.AttackStrengthValues, new { @class = "search-select-short" })
+                    </span>
+
+                    <span class="search-filter">
+                    <span class="search-label-short"><img src="/Images/defense.gif" class="search-icon"></span>
+                    @Html.DropDownListFor(x => x.DefenseOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+                    @Html.DropDownListFor(x => x.Defense, SearchViewModel.DefenseStrengthValues, new { @class = "search-select-short" })
+                    </span>
+
+                    <span class="search-filter">
+                    <span class="search-label-short">Hit Points</span>
+                    @Html.DropDownListFor(x => x.HitPointsOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+                    @Html.DropDownListFor(x => x.HitPoints, SearchViewModel.HitPointsValues, new { @class = "search-select-short" })
+                    </span>
+                </div>
+                <div class="search-sub-section">
+                    <span class="search-filter">
+                    <span class="search-label-short"><img src="/Images/willpower.gif" class="search-icon"></span>
+                    @Html.DropDownListFor(x => x.WillpowerOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+                    @Html.DropDownListFor(x => x.Willpower, SearchViewModel.WillpowerStrengthValues, new { @class = "search-select-short" })
+                    </span>
+
+                    <span class="search-filter">
+                    <span class="search-label-short"><img src="/Images/threat.png" class="search-icon"></span>
+                    @Html.DropDownListFor(x => x.ThreatOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+                    @Html.DropDownListFor(x => x.Threat, SearchViewModel.ThreatStrengthValues, new { @class = "search-select-short" })
+                    </span>
+
+                    <span class="search-filter">
+                    <span class="search-label-short">Quest Points</span>
+                    @Html.DropDownListFor(x => x.QuestPointsOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+                    @Html.DropDownListFor(x => x.QuestPoints, SearchViewModel.QuestPointsValues, new { @class = "search-select-short" })
+                </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-row">
+            <div class="search-section">Text</div>
+            <div class="search-items">
+                <span class="search-filter">
+                <span class="search-label-short">Trait</span>
+                @Html.DropDownListFor(x => x.Trait, SearchViewModel.Traits, new { @class = "search-select" })
+                </span>
+
+                <span class="search-filter">
+                <span class="search-label-short">Keyword</span>
+                @Html.DropDownListFor(x => x.Keyword, SearchViewModel.Keywords, new { @class = "search-select" })
+                </span>
+
+                <span class="search-filter">
+                <span class="search-label-short">Victory</span>
+                @Html.DropDownListFor(x => x.VictoryPoints, SearchViewModel.VictoryPointValues, new { @class = "search-select-short-padded" })
+                </span>
+            </div>
+        </div>
+
+        <div class="search-row">
+            <div class="search-section">Category</div>
+            <div class="search-items">
+                <span class="search-filter">
+                <span class="search-label-short" title="Player Card Category">Player</span>
+                @Html.DropDownListFor(x => x.Category, SearchViewModel.Categories, new { @class = "search-select" })
+                </span>
+
+                <span class="search-filter">
+                <span class="search-label-short" title="Encounter Card Category">Encounter</span>
+                @Html.DropDownListFor(x => x.EncounterCategory, SearchViewModel.EncounterCategories, new { @class = "search-select" })
+                </span>
+
+                <span class="search-filter">
+                <span class="search-label-short" title="Quest Card Category">Quest</span>
+                @Html.DropDownListFor(x => x.QuestCategory, SearchViewModel.QuestCategories, new { @class = "search-select" })
+                </span>
+            </div>
+        </div>
+
+        <div class="search-row">
+            <div class="search-section">Details</div>
+            <div class="search-items">
+                <span class="search-filter">
+                <span class="search-label-short">Artist</span>
+                @Html.DropDownListFor(x => x.Artist, SearchViewModel.Artists, new { @class = "search-select" })
+                </span>
+
+                <span class="search-filter">
+                <span class="search-label-short">Popularity</span>
+                @Html.DropDownListFor(x => x.PopularityOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+                @Html.DropDownListFor(x => x.Popularity, SearchViewModel.PopularityValues, new { @class = "search-select-short" })
+                </span>
+
+                <span class="search-filter">
+                <span class="search-label-short">Errata</span>
+                @Html.DropDownListFor(x => x.Errata, SearchViewModel.ErrataVersions, new { @class = "search-select-short" })
+                </span>
+            </div>
+        </div>
+
+        <span class="centered-container"><a id="toggleProductFilters" href="#" class="show-button">Show Product Filters</a></span>
+        <div id="productFiltersContainer" class="search-row search-product-filters" style="display:none">
+            <div class="product-filters-notes">
+                <p><i>Product filters are optional.</i> Leave them blank to include all products in your search. Alternatively, check any products to include them in your search.</p><p><b><i>If at least 1 product filter is checked, any products not checked will be excluded from search results.</i></b></p>
+            </div>
+            <div>
+                @Html.CheckBox("MEC01", Model.MEC01.HasValue && Model.MEC01.Value, new { @class = "search-select-checkbox" })<span class="search-label-core">Core Set</span>
+            </div>
+            <div>
+                <input type="checkbox" id="MESOM" class="search-select-checkbox" /><span class="search-cycle">Shadows of Mirkwood</span>
+                <div class="search-cycle-section">
+                    @Html.CheckBox("MEC02", Model.MEC02.HasValue && Model.MEC02.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Hunt for Gollum</span>
+                    @Html.CheckBox("MEC03", Model.MEC03.HasValue && Model.MEC03.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Conflict at the Carrock</span>
+                    @Html.CheckBox("MEC04", Model.MEC04.HasValue && Model.MEC04.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">A Journey to Rhosgobel</span>
+                    @Html.CheckBox("MEC05", Model.MEC05.HasValue && Model.MEC05.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Hills of Emyn Muil</span>
+                    @Html.CheckBox("MEC06", Model.MEC06.HasValue && Model.MEC06.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Dead Marshes</span>
+                    @Html.CheckBox("MEC07", Model.MEC07.HasValue && Model.MEC07.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Return to Mirkwood</span>
+                </div>
+            </div>
+            <hr />
+            <div>
+                @Html.CheckBox("MEC08", Model.MEC08.HasValue && Model.MEC08.Value, new { @class = "search-select-checkbox" })<span class="search-label-deluxe">Khazad-dûm</span>
+            </div>
+            <div>
+                <input type="checkbox" id="MEDWD" class="search-select-checkbox" /><span class="search-cycle">Dwarrowdelf</span>
+                <div class="search-cycle-section">
+                    @Html.CheckBox("MEC09", Model.MEC09.HasValue && Model.MEC09.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Redhorn Gate</span>
+                    @Html.CheckBox("MEC10", Model.MEC10.HasValue && Model.MEC10.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Road to Rivendell</span>
+                    @Html.CheckBox("MEC11", Model.MEC11.HasValue && Model.MEC11.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Watcher in the Water</span>
+                    @Html.CheckBox("MEC12", Model.MEC12.HasValue && Model.MEC12.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Long Dark</span>
+                    @Html.CheckBox("MEC13", Model.MEC13.HasValue && Model.MEC13.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Foundations of Stone</span>
+                    @Html.CheckBox("MEC14", Model.MEC14.HasValue && Model.MEC14.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Shadow and Flame</span>
+                </div>
+            </div>
+            <hr />
+            <div>
+                @Html.CheckBox("MEC17", Model.MEC17.HasValue && Model.MEC17.Value, new { @class = "search-select-checkbox" })<span class="search-label-deluxe">Heirs of Númenor</span>
+            </div>
+            <div>
+                <input type="checkbox" id="MEATS" class="search-select-checkbox" /><span class="search-cycle">Against the Shadow</span>
+                <div class="search-cycle-section">
+                    @Html.CheckBox("MEC18", Model.MEC18.HasValue && Model.MEC18.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Steward's Fear</span>
+                    @Html.CheckBox("MEC19", Model.MEC19.HasValue && Model.MEC19.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Drúadan Forest</span>
+                    @Html.CheckBox("MEC20", Model.MEC20.HasValue && Model.MEC20.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Encounter at Amon Dîn</span>
+                    @Html.CheckBox("MEC21", Model.MEC21.HasValue && Model.MEC21.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Assault on Osgiliath</span>
+                    @Html.CheckBox("MEC22", Model.MEC22.HasValue && Model.MEC22.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Blood of Gondor</span>
+                    @Html.CheckBox("MEC23", Model.MEC23.HasValue && Model.MEC23.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Morgul Vale</span>
+                </div>
+            </div>
+            <hr />
+            <div>
+                @Html.CheckBox("MEC25", Model.MEC25.HasValue && Model.MEC25.Value, new { @class = "search-select-checkbox" })<span class="search-label-deluxe">The Voice of Isengard</span>
+            </div>
+            <div>
+                <input type="checkbox" id="MERMK" class="search-select-checkbox" /><span class="search-cycle">The Ring-maker</span>
+                <div class="search-cycle-section">
+                    @Html.CheckBox("MEC26", Model.MEC26.HasValue && Model.MEC26.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Dunland Trap</span>
+                    @Html.CheckBox("MEC27", Model.MEC27.HasValue && Model.MEC27.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Three Trials</span>
+                    @Html.CheckBox("MEC28", Model.MEC28.HasValue && Model.MEC28.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Trouble in Tharbad</span>
+                    @Html.CheckBox("MEC29", Model.MEC29.HasValue && Model.MEC29.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Nin-in-Eilph</span>
+                    @Html.CheckBox("MEC30", Model.MEC30.HasValue && Model.MEC30.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Celebrimbor's Secret</span>
+                    @Html.CheckBox("MEC31", Model.MEC31.HasValue && Model.MEC31.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Antlered Crown</span>
+                </div>
+            </div>
+            <hr />
+            <div>
+                @Html.CheckBox("MEC38", Model.MEC38.HasValue && Model.MEC38.Value, new { @class = "search-select-checkbox" })<span class="search-label-deluxe">The Lost Realm</span>
+            </div>
+            <div>
+                <input type="checkbox" id="MEAAW" class="search-select-checkbox" /><span class="search-cycle">Angmar Awakened</span>
+                <div class="search-cycle-section">
+                    @Html.CheckBox("MEC39", Model.MEC39.HasValue && Model.MEC39.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Wastes of Eriador</span>
+                    @Html.CheckBox("MEC40", Model.MEC40.HasValue && Model.MEC40.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Escape from Mount Gram</span>
+                    @Html.CheckBox("MEC41", Model.MEC41.HasValue && Model.MEC41.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Across the Ettenmoors</span>
+                    @Html.CheckBox("MEC42", Model.MEC42.HasValue && Model.MEC42.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Treachery of Rhudaur</span>
+                    @Html.CheckBox("MEC43", Model.MEC43.HasValue && Model.MEC43.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Battle of Carn Dûm</span>
+                    @Html.CheckBox("MEC44", Model.MEC44.HasValue && Model.MEC44.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Dread Realm</span>
+                </div>
+            </div>
+            <hr />
+            <div>
+                @Html.CheckBox("MEC47", Model.MEC47.HasValue && Model.MEC47.Value, new { @class = "search-select-checkbox" })<span class="search-label-deluxe">The Grey Havens</span>
+            </div>
+            <div>
+                <input type="checkbox" id="MEDCH" class="search-select-checkbox" /><span class="search-cycle">Dream-chaser</span>
+                <div class="search-cycle-section">
+                    @Html.CheckBox("MEC48", Model.MEC48.HasValue && Model.MEC48.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Flight of the Stormcaller</span>
+                    @Html.CheckBox("MEC49", Model.MEC49.HasValue && Model.MEC49.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Thing in the Depths</span>
+                    @Html.CheckBox("MEC50", Model.MEC50.HasValue && Model.MEC50.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Temple of the Deceived</span>
+                    @Html.CheckBox("MEC51", Model.MEC51.HasValue && Model.MEC51.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Drowned Ruins</span>
+                    @Html.CheckBox("MEC52", Model.MEC52.HasValue && Model.MEC52.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">A Storm of Cobas Haven</span>
+                    @Html.CheckBox("MEC53", Model.MEC53.HasValue && Model.MEC53.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The City of Corsairs</span>
+                </div>
+            </div>
+            <hr />
+            <div>
+                <input type="checkbox" id="MEHOB" class="search-select-checkbox" /><span class="search-cycle">The Hobbit</span>
+            </div>
+            <div>
+                @Html.CheckBox("MEC16", Model.MEC16.HasValue && Model.MEC16.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Over Hill and Under Hill</span>
+                @Html.CheckBox("MEC24", Model.MEC24.HasValue && Model.MEC24.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">On the Doorstep</span>
+            </div>
+            <hr />
+            <div>
+                <input type="checkbox" id="MELTR" class="search-select-checkbox" /><span class="search-cycle">The Lord of the Rings</span>
+            </div>
+            <div>
+                @Html.CheckBox("MEC32", Model.MEC32.HasValue && Model.MEC32.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Black Riders</span>
+                @Html.CheckBox("MEC34", Model.MEC34.HasValue && Model.MEC34.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Road Darkens</span>
+                @Html.CheckBox("MEC45", Model.MEC45.HasValue && Model.MEC45.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Treason of Saruman</span>
+                @Html.CheckBox("MEC46", Model.MEC46.HasValue && Model.MEC46.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Land of Shadows</span>
+                @Html.CheckBox("MEC54", Model.MEC54.HasValue && Model.MEC54.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">The Flame of the West</span>
+            </div>
+            <hr />
+            <div>
+                @Html.CheckBox("FA01", Model.FA01.HasValue && Model.FA01.Value, new { @class = "search-select-checkbox" })<span class="search-label-deluxe">First Age</span>
+            </div>
+            <div>
+                <input type="checkbox" id="FADMS" class="search-select-checkbox" /><span class="search-cycle">Doom Mastered</span>
+                <div class="search-cycle-section">
+                    @Html.CheckBox("FA02", Model.FA02.HasValue && Model.FA02.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Trial Upon the Marches</span>
+                    @Html.CheckBox("FA03", Model.FA03.HasValue && Model.FA03.Value, new { @class = "search-select-checkbox" })<span class="search-label-product">Among the Outlaws</span>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+}
+<span class="results-count-label">@Model.GetResultsCount()</span>
+<div>
+@if (@Model.IsProductView())
+{
+    foreach (var product in @Model.Products)
+    {
+        <div style="display:inline-block;margin-left:4px;margin-right:4px;margin-top:6px;margin-bottom:6px;vertical-align: top;">
+                <a title="@product.Name (@product.Code)" href="@product.Link">   
+                <img src="@product.ImagePath" style="height:@product.ImageHeight;width:@product.ImageWidth;"/></a>
+
+                @if (product.HasCards())
+                {
+                    <div class="display:inline-block">
+                    @foreach (var card in @product.Cards)
+                    {
+                        <div>
+                            <div style="margin-bottom:2px;">
+                            @if (@card.IsUnique)
+                            {
+                                <img src="/Images/unique-card.png" style="margin-bottom:-3px;margin-right:-4px;height:16px;width:16px;"/>
+                            }
+                            @Html.ActionLink(@card.TitleTrimmed, "Details", new { id = @card.Slug }, new { style = "margin-bottom:2px;font-size:medium;font-weight:bold;display:inline-block;" })
+                            </div>
+                            <div>
+                                <span class="detail-label">@card.SetNameTrimmed</span>
+                                <span class="detail-label">@card.CountLabel</span>
+                            </div>                
+                        </div>
+                    }
+                    </div>
+                }
+            </div>
+    }
+}
+
+@if (@Model.IsCardView())
+{
+    foreach (var card in @Model.Cards)
+    {
+        if (!@Model.View.HasValue || (@Model.View.HasValue && @Model.View != View.Card_Image))
+        {
+            <hr style="color:#616161;" />
+    
+            if (!string.IsNullOrEmpty(@card.SearchDescription))
+            {
+                <div class="search-explanation search-explanation-default" style="display: none">
+                    <div id="search-explanation-text" class="search-explanation-container search-explanation-message" style="display:none;">
+                        <div class="search-explanation-content"><p>@Html.Raw(@card.SearchDescription)</p></div>
+                    </div>
+                    <div class="search-explanation-container search-explanation-button">
+                        <div class="search-explanation-glyph search-explanation-content"><p>?</p></div>
+                    </div>
+                </div>
+            }
+        }  
+    
+        <div style="display:inline-block;margin:6px;border: 0px solid gray;border-radius: 8px;width: @Model.ItemWidth()">
+            <div>
+                <div style="display:inline-block">
+                    <div style="margin-bottom:2px;">
+                    @if (@card.IsUnique)
+                    {
+                        <img src="/Images/unique-card.png" style="margin-bottom:-3px;margin-right:-4px;height:16px;width:16px;"/>
+                    }
+                    @if (@Model.View.HasValue && @Model.View == View.Card_Image)
+                    {
+                        @Html.ActionLink(@card.TitleTrimmed, "Details", new { id = @card.Slug }, new { style = "margin-bottom:2px;font-size:medium;font-weight:bold;display:inline-block;" })
+                    }
+                    else
+                    {
+                        @Html.ActionLink(@card.Title, "Details", new { id = @card.Slug }, new { style = "margin-bottom:2px;font-size:medium;font-weight:bold;display:inline-block;" })
+                    }
+                    </div>
+                    <div>
+                        @if (@Model.View.HasValue && @Model.View == View.Card_Image)
+                        {
+                            <span class="detail-label">@card.SetNameTrimmed</span>
+                        }
+                        else
+                        {
+                               <span class="detail-label">@card.SetName</span>
+                        }
+                        <span class="detail-label">@card.CountLabel</span>
+                    </div>                
+                </div>
+                <div style="display:inline-block;">
+                    @if ((!@Model.View.HasValue || @Model.View != View.Card_Image) && @card.HasSphere)
+                    {
+                        <span><img style="width:30px;height:30px;margin:4px 1px 4px 6px;" src='@string.Format("/Images/{0}.png", @card.Sphere)' /></span>
+                    }
+                    @if (@card.HasEncounterSet)
+                    {
+                        <span><img style="width:30px;height:30px;margin-bottom:4px;margin-left:6px;margin-right:1px;" src='@card.EncounterSetImagePath' /></span>
+                    }
+                </div>
+            </div>
+            <div style="display:inline-block">
+                @if (!@Model.View.HasValue || (@Model.View.HasValue && (@Model.View == View.Card || @Model.View == View.Card_Image)))
+                {
+                    <div style="float:left;margin-right:4px;">
+                        <a href="@Href(string.Format("/Cards/Details/{0}", @card.Slug))">
+                            @if (@card.HasSecondImage)
+                            {
+                                <span style="text-align:left;">
+                                    <img src="@card.ImagePath1" style="height: 180px" class="card-image"/>
+                                    <img src="@card.ImagePath2" style="height: 180px; margin-left: 4px;" class="card-image"/>
+                                </span>
+                            }
+                            else
+                            {
+                            <img src="@card.ImagePath" style="height: 180px" class="card-image"/>
+                            }
+                        </a>
+                    </div>
+                }
+
+                @if (!@Model.View.HasValue || (@Model.View.HasValue && (@Model.View == View.Card || @Model.View == View.Card_Text)))
+                {
+                    <div style="display:inline-block;margin-left:4px;min-width:30px;">
+                        @switch (@card.CardType)
+                        {
+                            case CardType.Hero:
+                                <span style="color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.ThreatCost</span><span style="color:#616161;">)</span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Willpower</span><img style="margin-bottom:-3px;" src="/Images/willpower.gif" /></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Attack</span><img style="margin-bottom:-3px;" src="/Images/attack.gif" /></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Defense</span><img style="margin-bottom:-3px;" src="/Images/defense.gif" /></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.HitPoints</span><img style="margin-bottom:-4px;margin-left:-4px;width:20px;height:20px;" src="/Images/heart.png"/></span>
+                                break;
+                            case CardType.Ally:
+                                <span style="color:#616161;">[</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.ResourceCost</span><span style="color:#616161;">]</span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Willpower</span><img style="margin-bottom:-3px;" src="/Images/willpower.gif" /></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Attack</span><img style="margin-bottom:-3px;" src="/Images/attack.gif" /></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Defense</span><img style="margin-bottom:-3px;" src="/Images/defense.gif" /></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.HitPoints</span><img style="margin-bottom:-4px;margin-left:-4px;width:20px;height:20px;" src="/Images/heart.png"/></span>
+                                break;
+                            case CardType.Attachment:
+                                <span style="width:50px;color:#616161;">[</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.ResourceCost</span><span style="color:#616161;">]</span>
+                                break;
+                            case CardType.Event:
+                                <span style="width:50px;color:#616161;">[</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.ResourceCost</span><span style="color:#616161;">]</span>
+                                break;
+                            case CardType.Treasure:
+                                <span style="width:50px;color:#616161;">[</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.ResourceCost</span><span style="color:#616161;">]</span>
+                                break;
+                            case CardType.Enemy:
+                            case CardType.Ship_Enemy:
+                                <span style="color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.EngagementCost</span><span style="color:#616161;">)</span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Threat</span><img style="margin-bottom:-3px;" src="/Images/threat.png" /></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Attack</span><img style="margin-bottom:-3px;" src="/Images/attack.gif" /></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Defense</span><img style="margin-bottom:-3px;" src="/Images/defense.gif" /></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.HitPoints</span><img style="margin-bottom:-4px;margin-left:-4px;width:20px;height:20px;" src="/Images/heart.png"/></span>
+                                break;
+                            case CardType.Location:
+                                <span style="width:24px;"><span style="margin-right:2px;font-weight:bold;">@card.Threat</span><img style="margin-bottom:-3px;" src="/Images/threat.png" /></span>
+                                <span style="width:60px;margin-left:14px;color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.QuestPoints</span><span style="width:60px;color:#616161;">)</span>
+                                break;
+                            case CardType.Objective_Location:
+                                <span style="width:60px;margin-left:14px;color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.QuestPoints</span><span style="width:60px;color:#616161;">)</span>
+                                break;
+                            case CardType.Objective:
+                            case CardType.Objective_Ally:
+                            case CardType.Ship_Objective:
+                                if (@card.CardType == CardType.Objective_Ally || @card.HasCharacterStats)
+                                {
+                                <span style="width:24px;"><span style="margin-right:2px;font-weight:bold;">@card.Willpower</span><img style="margin-bottom:-3px;" src="/Images/willpower.gif" /></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Attack</span><img style="margin-bottom:-3px;" src="/Images/attack.gif" /></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Defense</span><img style="margin-bottom:-3px;" src="/Images/defense.gif" /></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.HitPoints</span><img style="margin-bottom:-4px;margin-left:-4px;width:20px;height:20px;" src="/Images/heart.png"/></span>
+                                }
+                                break;
+                            case CardType.Quest:
+                                <span style="margin-left:4px;font-weight:bold;">@card.StageNumber</span><span style="width:40px;margin-left:2px;color:#616161;font-size:10px;font-weight:bold;">@card.StageLetters</span>
+                                <span style="width:40px;margin-left:14px;color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.QuestPoints</span><span style="width:40px;color:#616161;">)</span>
+                                break;
+                            case CardType.Player_Side_Quest:
+                                <span style="width:50px;color:#616161;">[</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.ResourceCost</span><span style="color:#616161;">]</span>
+                                <span style="width:40px;margin-left:14px;color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.QuestPoints</span><span style="width:40px;color:#616161;">)</span>
+                                break;
+                            case CardType.Encounter_Side_Quest:
+                                <span style="width:40px;margin-left:14px;color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.QuestPoints</span><span style="width:40px;color:#616161;">)</span>
+                                break;
+                            default:
+                                break;
+                        }
+                        @if (!string.IsNullOrEmpty(@card.PopularityHtml))
+                        {
+                            <span style="margin-left: 4px; display:inline-block">
+                            @Html.Raw(@card.PopularityHtml)
+                            </span>
+                        }
+                    </div>
+                    <div style="margin-left:2px;vertical-align:top;text-align:left;">
+                        @foreach (var trait in card.Traits)
+                        {
+                            <i>@trait</i> @: &nbsp;
+                        }
+                        <br />
+                        @foreach (var keyword in card.Keywords)
+                        {
+                            @keyword @: &nbsp;
+                        }
+                        @if (!string.IsNullOrEmpty(@card.Text))
+                        {
+                            <div>@card.Text</div>
+                        }
+                        @if (!string.IsNullOrEmpty(@card.OppositeText))
+                        {
+                            <hr style="margin-left:24px;margin-right:24px;"/>
+                            <div>@card.OppositeText</div>
+                        }
+                        @if (!string.IsNullOrEmpty(@card.Shadow))
+                        {
+                            <hr style="margin-left:24px;margin-right:24px;"/>    
+                            <div>@card.Shadow</div>
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+    }
+}
+</div>
