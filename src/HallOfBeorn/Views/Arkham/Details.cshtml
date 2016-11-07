@@ -11,7 +11,7 @@
         <div><img src="@Model.ImagePathFront" height="@Model.ImageHeight" width="@Model.ImageWidth" /></div>
         @if (!string.IsNullOrEmpty(@Model.ImagePathBack))
         {
-            <div><img src="@Model.ImagePathBack" height="@Model.ImageHeight"/></div>
+            <div><img src="@Model.ImagePathBack" height="@Model.ImageHeightBack"/></div>
         }
     </div>
     <div style="display:inline-block;max-width:500px;vertical-align:top;margin-left: 4px;">
@@ -58,7 +58,7 @@
         @if (!string.IsNullOrEmpty(@Model.ClueValue)) {
             <div class="arkham-statBox top"><div class="arkham-circle arkham-clueValue" title="Clue Value"><div class="arkham-valueInner">@Html.Raw(@Model.ClueValue)</div></div></div>   
         }
-        @if (@Model.CardType == "Enemy") {
+        @if (@Model.CardType == "Enemy" || @Model.BackCardType == "Enemy") {
             <div class="arkham-enemyStatSection">@Html.Raw(@Model.EnemyStatHtml())</div>
         }
     </div>

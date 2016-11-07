@@ -24,6 +24,7 @@ namespace HallOfBeorn.Models.Arkham
         public ArkhamProduct Product { get; set; }
         public ArkhamDeckType DeckType { get; set; }
         public ArkhamCardType CardType { get; set; }
+        public ArkhamCardType? BackCardType { get; set; }
         public ArkhamCardSubtype CardSubtype { get; set; }
         public string Title { get; private set; }
         public string Subtitle { get; private set; }
@@ -218,6 +219,22 @@ namespace HallOfBeorn.Models.Arkham
                 Damage = damage,
                 Horror = horror
             };
+        }
+
+        public ArkhamCard WithEnemyStats(Number fightValue, Number healthValue, Number evadeValue, Number damage, Number horror)
+        {
+            EnemyFightValue = fightValue;
+            EnemyHealthValue = healthValue;
+            EnemyEvadeValue = evadeValue;
+            Damage = damage;
+            Horror = horror;
+            return this;
+        }
+
+        public ArkhamCard WithBackCardType(ArkhamCardType backCardType)
+        {
+            BackCardType = backCardType;
+            return this;
         }
 
         public static ArkhamCard Location(string title, ConnectionSymbol locationSymbol, Number shroud, Number clueValue, ArkhamEncounterSet encounterSet)

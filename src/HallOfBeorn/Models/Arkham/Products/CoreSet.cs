@@ -422,6 +422,7 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithText("You have 1 additional arcane slot.\r\n{Action} Exhaust Book of Shadows: Add 1 charge to a Spell asset you control.")
                 .WithInfo(70, 1, Artist.Dimitri_Bielak));
             addCard(ArkhamCard.Asset("Grotesque Statue", ClassSymbol.Mystic, 2, AssetSlot.One_Hand)
+                .WithLevel(4)
                 .WithTraits("Item.", "Relic.")
                 .WithIcons(SkillIcon.Wild)
                 .WithKeywords("Uses 4.")
@@ -706,6 +707,33 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithFlavor("Inside the tunnels beneath the house, a massive beast tears it way out of the ince. It is covered in a thick layer of frost, its breath visible in the bitter cold.")
                 .WithVictoryPoints(1)
                 .WithInfo(119, 1, Artist.Chun_Lo));
+            addCard(ArkhamCard.ScenarioReference("The Midnight Masks", "Scenario Reference", ArkhamEncounterSet.TheMidnightMasks)
+                .WithText("<h3>EASY / STANDARD</h3>\r\n{Skull}: -X. X is the hghest number of doom on a {t:Cultist} enemy in play.\r\n{Cultist}: -2. Place 1 doom on the nearest Cultist enemy.\r\n{Tablet}: -3. If you fail, place 1 of your clues on your location.")
+                .WithBackText("<h3>HARD / EXPERT</h3>\r\n{Skull}: -X. X is the total number of doom in play.\r\n{Cultist}: -2. Place 1 doom on each {t:Cultist} enemy in play. If there are no {t:Cultist} enemies in play, reveal another token.\r\n{Tablet}: -4. If you fail, place all your clues on your location.")
+                .WithInfo(120, 1, Artist.None));
+            addCard(ArkhamCard.Agenda("Predator or Prey?", "The Masked Hunter", 1, Number.Of(6), ArkhamEncounterSet.TheMidnightMasks)
+                .WithFlavor("Lita seems convinced of a conspiracy within the city of Arkham. She believes that a secret cult serves the ghouls that live in the crypts beneath the city, and that several of the cult's prominent members are scattered throughout Arkham. As you beging searching for them, you can't shake the feeling that you too are being hunted.")
+                .WithText("{Action}: Resign. You don't want to risk taking too long, so you head to safety with the information you've gathered.")
+                .WithEnemyStats(Number.Of(4), Number.Of(4), Number.Of(2), Number.Of(2), Number.Of(1))
+                .WithTraits("Humanoid.", "Cultist.", "Elite.")
+                .WithKeywords("Spawn - Engaged with Prey.", "Hunter")
+                .WithBackCardType(ArkhamCardType.Enemy)
+                .WithBackText("Spawn - Engaged with Prey.\r\nPrey - Most clues.\r\nHunter.\r\nThe Masked Hunter gets +2 health per investigator.\r\nWhile you are engaged with The Masked Hunter, you cannot discover or spend clues.")
+                .WithVictoryPoints(2)
+                .WithInfo(121, 1, Artist.Michele_Frigo));
+            addCard(ArkhamCard.Agenda("Time Is Running Short", "The Clock Strikes Midnight", 2, Number.Of(8), ArkhamEncounterSet.TheMidnightMasks)
+                .WithFlavor("The minutes pass quickly as your investigation continues.")
+                .WithText("{Action}: {Resign}. You don't want to risk taking too long, so you head to safety with the information you've gathered.")
+                .WithBackFlavor("Twelve bells ring out across the town. It is midnight. There is no time left to investigate the city; you must act based on the information you've collected from the cultists you've found.")
+                .WithBackText("<b>(&rarr;R2)</b>")
+                .WithInfo(122, 1, Artist.Unknown));
+            addCard(ArkhamCard.Act("Uncovering the Conspiracy", "Secrets Unveiled", 1, Number.NA, ArkhamEncounterSet.TheMidnightMasks)
+                .WithFlavor("You have one night to find the members of this cult and unveil their plan. The more members of the cult you can find and interrogate before midnight, the better.")
+                .WithText("{Action} The investigators spend 2 clues per investigator, as a group: Draw the top card of the Cultist deck.\r\n<b>Objective</b> - Find as many unique {t:Cultist} enemies as you can and add them to the victory display. If there are 6 unique {t:Cultist} enemies in the victory display, advance. <i>(Note: Not all 6 of them are in the Cultist deck.)</i>")
+                .WithBackFlavor("You've successfully uncovered the identities of all of the cult's high-ranking members within Arkham. The man who had stalked you throughout the city was dedicated in his conviction, as was Herman, the undertaker of the graveyard. Others seemed to have been coerced to aid the cult. Ruth, the mortician, had been told that her family would be killed if she did not supply the ghouls with fresh corpses. Thankfully, you managed to help her escape the hospital safely. Peter, the professor, had to be convinced that his involvement with the cult would do more harm than good. Victoria's obsession with occult artifacts had landed her deep within the cult's web. When you confronted Drew in the asylum, he attacked you - but interestingly, he did so because he thought you were part of the cult. The deeper you delve into thiss conspiracy, the clearer it becomes that many lives have been ruined by it.")
+                .WithBackText("<b>(&rarr;R1)</b>")
+                .WithInfo(123, 1, Artist.Romana_Kendelic));
+
         }
     }
 }

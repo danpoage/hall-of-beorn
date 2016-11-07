@@ -14,6 +14,7 @@ namespace HallOfBeorn.Models.Arkham
         static ArkhamEncounterSet()
         {
             all.Add(TheGathering);
+            all.Add(TheMidnightMasks);
         }
 
         public static List<ArkhamEncounterSet> All()
@@ -22,5 +23,6 @@ namespace HallOfBeorn.Models.Arkham
         }
 
         public static ArkhamEncounterSet TheGathering = new ArkhamEncounterSet { Name = "The Gathering" };
+        public static ArkhamEncounterSet TheMidnightMasks = new ArkhamEncounterSet { Name = "The Midnight Masks" };
     }
 }

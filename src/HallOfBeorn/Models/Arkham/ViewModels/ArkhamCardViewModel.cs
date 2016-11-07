@@ -164,6 +164,42 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             }
         }
 
+        public int ImageHeightBack
+        {
+            get
+            {
+                var type = card.BackCardType.HasValue ? card.BackCardType : card.CardType;
+
+                switch (type)
+                {
+                    case ArkhamCardType.Investigator:
+                    case ArkhamCardType.Agenda:
+                    case ArkhamCardType.Act:
+                        return 212;
+                    default:
+                        return 300;
+                }
+            }
+        }
+
+        public int ImageWidthBack
+        {
+            get
+            {
+                var type = card.BackCardType.HasValue ? card.BackCardType : card.CardType;
+
+                switch (type)
+                {
+                    case ArkhamCardType.Investigator:
+                    case ArkhamCardType.Agenda:
+                    case ArkhamCardType.Act:
+                        return 300;
+                    default:
+                        return 212;
+                }
+            }
+        }
+
         public string SlotImagePath
         {
             get
@@ -196,6 +232,11 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
                     card.CardSubtype.ToString().Replace("_", " ") 
                     : string.Empty; 
             }
+        }
+
+        public string BackCardType
+        {
+            get { return card.BackCardType.HasValue ? card.BackCardType.Value.ToString().Replace("_", " ") : string.Empty; }
         }
 
         public string ClassName
@@ -357,7 +398,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         {
             var html = new System.Text.StringBuilder();
 
-            if (card.CardType == ArkhamCardType.Enemy)
+            if (card.CardType == ArkhamCardType.Enemy || (card.BackCardType.HasValue && card.BackCardType.Value == ArkhamCardType.Enemy))
             {
                 var fight = card.EnemyFightValue.HasValue ? card.EnemyFightValue.Value.ToString(PerInvestigatorWhiteIcon) : string.Empty;
                 var health = card.EnemyHealthValue.HasValue ? card.EnemyHealthValue.Value.ToString(PerInvestigatorWhiteIcon) : string.Empty;
@@ -405,9 +446,10 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             map["{Tentacle}"] = "<img src='/Images/Arkham/Tentacle.png'>";
 
             //Traits
-            map["{t:Tome}"] = "<a href='/Arkham?Trait=Tome.' target='_blank'><b><i>Tome</i></b></a>";
+            map["{t:Cultist}"] = "<a href='/Arkham?Trait=Cultist.' target='_blank'><b><i>Cultist</i></b></a>";
             map["{t:Ghoul}"] = "<a href='/Arkham?Trait=Ghoul.' target='_blank'><b><i>Ghoul</i></b></a>";
             map["{t:Monster}"] = "<a href='/Arkham?Trait=Monster.' target='_blank'><b><i>Monster</i></b></a>";
+            map["{t:Tome}"] = "<a href='/Arkham?Trait=Tome.' target='_blank'><b><i>Tome</i></b></a>";
 
             return map;
         }
