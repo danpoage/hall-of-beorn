@@ -13,6 +13,7 @@ namespace HallOfBeorn.Services.Arkham
         public ArkhamProductRepository()
         {
             products.Add(new CoreSet());
+            products.Add(new CurseOfTheRougarou());
             products.Add(new TheDunwichLegacy());
         }
 

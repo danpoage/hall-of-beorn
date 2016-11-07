@@ -446,6 +446,8 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             map["{Tentacle}"] = "<img src='/Images/Arkham/Tentacle.png'>";
 
             //Traits
+            map["{t:Bayou}"] = "<a href='/Arkham?Trait=Bayou.' target='_blank'><b><i>Bayou</i></b></a>";
+            map["{t:Trap}"] = "<a href='/Arkham?Trait=Trap.' target='_blank'><b><i>Trap</i></b></a>";
             map["{t:Cultist}"] = "<a href='/Arkham?Trait=Cultist.' target='_blank'><b><i>Cultist</i></b></a>";
             map["{t:Ghoul}"] = "<a href='/Arkham?Trait=Ghoul.' target='_blank'><b><i>Ghoul</i></b></a>";
             map["{t:Monster}"] = "<a href='/Arkham?Trait=Monster.' target='_blank'><b><i>Monster</i></b></a>";
