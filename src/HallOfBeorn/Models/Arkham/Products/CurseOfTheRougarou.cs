@@ -48,6 +48,57 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithBackFlavor("Conversing with the creature is a daunting task. Whenever it is cornered, it bellows and attacks, like a feral beast. If there is still some semblance of humanity left inside the create, it is buried deep beneath the rage and bloodlust of the curse.")
                 .WithBackText("If each of the following requirements are met, proceed to <b>(&rarr;R3).</b> Otherwise, flip this act back to its \"a\" side.<br><ul><li>\"We must learn more about the curse.\" The investigators must have 4<img src='/Images/Arkham/PerInvestigatorBlack.png' height='10' width='10'/> clues, as a group.</li><li>\"We must keep it contained.\" The Rougarou must have a {t:Trap} card attached to it.</li><li>\"We must protected ourseleves.\" The Rougarou must have at least 1<img src='/Images/Arkham/PerInvestigatorBlack.png' height='10' width='10'/> damage on it.</li><li>\"We must calm it down.\" The investigators must have either \"found a binding stone\" or \"found a strange doll.\"</li></ul>")
                 .WithInfo(6, 1, Artist.Darek_Zabrocki));
+            addCard(ArkhamCard.Location("Cursed Shores", ConnectionSymbol.Cursed_Shores, Number.Of(1), Number.Of(0), set)
+                .WithTraits("New Orleans.", "Bayou.")
+                .WithFlavor("Black storm clouds loom above you, watching patiently as you trudge through the bayou. Their shapes twist and churn in the night sky, blotting out the stars.")
+                .WithBackText("{Action}: Take 1 damage. You get +2 to your skill value for the next skill test you make this turn.\r\n{Forced} - When you leave Cursed Shores: Choose and discard a skill card from your hand.")
+                .WithInfo(7, 1, Artist.Unknown)); //Antonio Jse Manzamedo
+
+            addCard(ArkhamCard.Asset("Lady Esprit", ClassSymbol.None, 4, AssetSlot.Ally)
+                .WithUnique()
+                .WithEncounterSet(set)
+                .WithTraits("Ally.", "Sorcerer.")
+                .WithIcons(SkillIcon.Willpower, SkillIcon.Intellect, SkillIcon.Wild)
+                .WithText("{Action} Exhaust Lady Esprit and deal her 1 horror: Heal 2 damage or gain 2 resources. Any investigator at Lady Esprit's location may activate this ability.")
+                .WithHealth(2).WithSanity(4)
+                .WithInfo(19, 1, Artist.Arden_Beckwith));
+            addCard(ArkhamCard.Asset("Bear Trap", ClassSymbol.None, Number.NA, AssetSlot.None)
+                .WithEncounterSet(set)
+                .WithTraits("Trap.")
+                .WithText("{Free Action}: Attach Bear Trap to your location.\r\n{Forced} - After The Rougarou enters attached location: Attach Bear Trap to The Rougarou.\r\nAttached enemy gets -1 fight and -1 evade.")
+                .WithInfo(20, 1, Artist.Unknown));
+            addCard(ArkhamCard.Asset("Fishing Net", ClassSymbol.None, Number.NA, AssetSlot.None)
+                .WithEncounterSet(set)
+                .WithTraits("Trap.")
+                .WithText("{Free Action} If The Rougarou is exhausted and at your location: Attach Fishing Net to The Rougarou.\r\nAttached enemy loses retaliate.")
+                .WithInfo(21, 1, Artist.Unknown));
+            addCard(ArkhamCard.Enemy("Bog Gator", Number.Of(2), Number.Of(2), Number.Of(2), Number.Of(1), Number.Of(1), set)
+                .WithTraits("Creature.")
+                .WithKeywords("Prey - Lowest Agility.")
+                .WithText("Prey - Lowest {Agility}.\r\nWhile Bog Gator is at a {t:Bayou} location, it gets +2 fight and +2 evade.")
+                .WithFlavor("They were apex predators even before the curse took hold.")
+                .WithInfo(22, 2, Artist.Unknown));
+            addCard(ArkhamCard.Enemy("Swamp Leech", Number.Of(4), Number.Of(1), Number.NA, Number.Of(1), Number.Of(0), set)
+                .WithTraits("Creature.")
+                .WithText("Spawn - Any {t:Bayou} location.\r\nSwamp Leech cannot be evaded.\r\n{Forced} - When Swamp Leech enters a non-{t:Bayou} location: Discard it.")
+                .WithInfo(23, 3, Artist.Unknown)); //Daniel Dulitzky
+            addCard(ArkhamCard.Treachery("Cursed Swamp", ArkhamCardSubtype.None, set)
+                .WithTraits("Hazard.")
+                .WithText("{Revelation} - Test {Willpower} (3). For each point you fail by, take 1 damage. If you are at a Bayou location, you cannot commit cards to this skill test.")
+                .WithInfo(24, 3, Artist.Nikolay_Stoyanov));
+            addCard(ArkhamCard.Treachery("Spectral Mist", ArkhamCardSubtype.None, set)
+                .WithTraits("Hazard.")
+                .WithText("{Revelation} - Attach to a {t:Bayou} location. Limit 1 per location.\r\nEach skill test performed at attached location gets +1 difficulty.\r\n{Action}: Test {Intellect} (2) to disrupt the source of the mist. If you suceed, discard Spectral Mist.")
+                .WithInfo(25, 3, Artist.Darek_Zabrocki));
+            addCard(ArkhamCard.Treachery("Dragged Under", ArkhamCardSubtype.None, set)
+                .WithTraits("Hazard.")
+                .WithText("Revelation - Test {Agility{ (3). If you fail, add Dragged Under to your threat area.\r\n{Forced} - When you leave your current location: take 2 damage and discard Dragged Under.\r\n{Forced} - At the end of your turn: Test {Agility} (3). If you succeed, discard Dragged Under.")
+                .WithInfo(26, 4, Artist.Sara_Biddle));
+            addCard(ArkhamCard.Treachery("Ripples on the Surface", ArkhamCardSubtype.None, set)
+                .WithTraits("Terror.")
+                .WithText("{Revelation} - Test {Willpower} (3). For each point you fail by, take 1 horror. If you are at a {t:Bayou} location, you cannot commit cards to this skill test.")
+                .WithFlavor("There are dangers deep within the mire you can only begin to imagine.")
+                .WithInfo(27, 3, Artist.Unknown)); //Alex Aguilar
         }
     }
 }

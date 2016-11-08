@@ -14,5 +14,14 @@ namespace HallOfBeorn.Models.Arkham
         Cellar,
         Parlor,
 
+        //Curse of the Rougarou
+        Cursed_Shores,
+        New_Orleans,
+        Brackish_Waters,
+        Riverside,
+        Forgotten_Marsh,
+        Wilderness,
+        Foul_Swamp,
+        Unhallowed_Land
     }
 }
