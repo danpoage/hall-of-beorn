@@ -424,6 +424,9 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             map["{Free Action}"] = "<img title='Free Action' src='/Images/Arkham/Free_Action.png' height='12' width='27'>";
             map["{Action}"] = "<img title='Action' src='/Images/Arkham/Action.png' height='12' width='17'>";
             map["{Reaction}"] = "<img title='Reaction' src='/Images/Arkham/Reaction.png' height='12' width='19'>";
+            
+            //Symbols
+            map["{Per Investigator}"] = "<img title='Reaction' src='/Images/Arkham/PerInvestigatorBlack.png' height='12' width='12'>";
 
             //Actions
             map["{Fight}"] = "<b>Fight</b>";
@@ -452,6 +455,9 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             map["{t:Ghoul}"] = "<a href='/Arkham?Trait=Ghoul.' target='_blank'><b><i>Ghoul</i></b></a>";
             map["{t:Monster}"] = "<a href='/Arkham?Trait=Monster.' target='_blank'><b><i>Monster</i></b></a>";
             map["{t:Tome}"] = "<a href='/Arkham?Trait=Tome.' target='_blank'><b><i>Tome</i></b></a>";
+
+            //Keywords
+            map["{k:Fast}"] = "<a href='/Arkham?Keyword=Fast.' target='_blank'>Fast.</a>";
 
             return map;
         }

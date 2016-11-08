@@ -88,7 +88,7 @@ namespace HallOfBeorn.Models.Arkham
             var name = card.Title.ToUrlSafeString();
             var level = string.Empty;
             if (card.CardType == ArkhamCardType.Scenario_Reference) {
-                level = card.Subtitle.Replace(" / ", "-");
+                level = "-" + card.Subtitle.Replace(" / ", "-").Replace(" ", "-");
             } else {
                 level = (card.Level.HasValue && card.Level.Value > 0) ? card.Level.ToString() : string.Empty;
             }
