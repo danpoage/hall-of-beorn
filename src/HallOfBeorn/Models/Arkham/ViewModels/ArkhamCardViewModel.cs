@@ -124,6 +124,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
                         return string.Format("{0}b.jpg", getCardImagePath());
                     case ArkhamCardType.Investigator:
                     case ArkhamCardType.Location:
+                        return !string.IsNullOrEmpty(card.Subtitle) ? string.Format("{0}-{1}-Back.jpg", getCardImagePath(), card.Subtitle.ToUrlSafeString()) : string.Format("{0}-Back.jpg", getCardImagePath());
                     case ArkhamCardType.Scenario_Reference:
                         return string.Format("{0}-Back.jpg", getCardImagePath());
                     default:
