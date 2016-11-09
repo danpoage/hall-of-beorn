@@ -118,6 +118,34 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithKeywords("Fast.")
                 .WithText("{k:Fast}\r\nSet the base value of your {Willpower} and {Intellect} to 2.\r\nSet the base value of your {Combat} and {Agility} to 5.\r\n{Action} Exhaust Monstrous Transformation: {Fight}. You deal +1 damage for this attack.")
                 .WithInfo(30, 1, Artist.Jon_Bosco));
+            addCard(ArkhamCard.Enemy("Slime-Covered Dhole", Number.Of(2), Number.Of(3), Number.Of(3), Number.Of(1), Number.Of(1), setCurse)
+                .WithTraits("Monster.", "Dhole.")
+                .WithKeywords("Hunter.")
+                .WithText("Spawn - Any non-{t:Bayou} location.\r\nPrey - Lowest remaining health.\r\n{k:Hunter}\r\n{Forced} - When Slime-Covered Dhole enters a location: Each investigator at that location takes 1 horror.")
+                .WithInfo(31, 2, Artist.Allison_Theus));
+            addCard(ArkhamCard.Enemy("Marsh Gug", Number.Of(3), Number.Of(4), Number.Of(3), Number.Of(2), Number.Of(1), setCurse)
+                .WithTraits("Monster.", "Gug.")
+                .WithKeywords("Hunter.")
+                .WithText("<b>Spawn</b> - Any {t:Bayou} location.\r\n{k:Hunter}")
+                .WithFlavor("A great thrashing accompanied by an echoing roar turns your blood to ice.")
+                .WithInfo(32, 2, Artist.Unknown)); //Kim Chi Zutya
+            addCard(ArkhamCard.Enemy("Dark Young Host", Number.Of(4), Number.Of(5), Number.Of(2), Number.Of(2), Number.Of(2), setCurse)
+                .WithTraits("Monster.", "Dark Young.")
+                .WithText("<b>Spawn</b> - Any {t:Bayou} location.\r\n{Forced} - When 1 or more clues are placed on Dark Young Host's location: Place those clues on Dark Young Host.\r\n{Forced} - When Dark Young Host is defeated: Move all clues on Dark Young Host to its location.")
+                .WithVictoryPoints(1)
+                .WithInfo(33, 1, Artist.Jon_Bosco));
+            addCard(ArkhamCard.Treachery("On the Prowl", ArkhamCardSubtype.None, setCurse)
+                .WithKeywords("Surge.")
+                .WithText("{k:Surge}\r\n{Revelation} - Find a non-{t:Bayou} location with the fewest clues on it. Move The Rougarou (one location at a time) until it enters that location.")
+                .WithFlavor("A dreadful howl pierces your eardrums. The Rougarou is on the move...")
+                .WithInfo(34, 5, Artist.Helge_C_Balzer));
+            addCard(ArkhamCard.Treachery("Beast of the Bayou", ArkhamCardSubtype.None, setCurse)
+                .WithText("{Revelation} - The Rougarou makes an immediate attack against each investigator at the Rougarou's location and each connecting location. If no attacks were made by this effect, place 1 doom on the current agenda.")
+                .WithFlavor("Driven by hunger, it cares for naught but its next meal.")
+                .WithInfo(35, 2, Artist.Unknown)); //Kim Artem
+            addCard(ArkhamCard.Treachery("Insatiable Bloodlust", ArkhamCardSubtype.None, setCurse)
+                .WithText("{Revelation} - Attach to The Rougarou.\r\nThe Rougarou gets +1 fight, +1 damage, +1 horror, and cannot be evaded.\r\n{Forced} - After The Rougarou takes damage: Discard Insatiable Bloodlust.")
+                .WithInfo(36, 3, Artist.Helge_C_Balzer));
         }
     }
 }

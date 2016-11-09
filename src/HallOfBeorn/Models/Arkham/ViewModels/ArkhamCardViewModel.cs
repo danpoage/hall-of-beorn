@@ -458,6 +458,8 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
 
             //Keywords
             map["{k:Fast}"] = "<a href='/Arkham?Keyword=Fast.' target='_blank'>Fast.</a>";
+            map["{k:Hunter}"] = "<a href='/Arkham?Keyword=Hunter.' target='_blank'>Hunter.</a>";
+            map["{k:Surge}"] = "<a href='/Arkham?Keyword=Surge.' target='_blank'>Surge.</a>";
 
             return map;
         }
