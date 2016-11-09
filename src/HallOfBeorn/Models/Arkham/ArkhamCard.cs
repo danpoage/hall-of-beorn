@@ -58,9 +58,10 @@ namespace HallOfBeorn.Models.Arkham
         public string BackText { get; private set; }
         public string BackFlavor { get; private set; }
 
-        public ushort CardNumber { get; protected set; }
-        public byte Quanity { get; protected set; }
-        public Artist Artist { get; protected set; }
+        public ushort CardNumber { get; private set; }
+        public byte Quanity { get; private set; }
+        public Artist Artist { get; private set; }
+        public Artist BackArtist { get; private set; }
 
         public ClassSymbol ClassSymbol { get; private set; }
         public Number? Health { get; private set; }
@@ -464,6 +465,12 @@ namespace HallOfBeorn.Models.Arkham
         public ArkhamCard WithBackFlavor(string flavor)
         {
             this.BackFlavor = flavor;
+            return this;
+        }
+
+        public ArkhamCard WithBackArtist(Artist artist)
+        {
+            this.BackArtist = artist;
             return this;
         }
 

@@ -433,6 +433,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             map["{Evade}"] = "<b>Evade</b>";
             map["{Investigate}"] = "<b>Investigate</b>";
             map["{Parley}"] = "<b>Parley</b>";
+            map["{Resign}"] = "<b>Resign.</b>";
 
             //Skills
             map["{Willpower}"]  = "<img title='Willpower Skill' src='/Images/Arkham/Willpower_small.png'>";
