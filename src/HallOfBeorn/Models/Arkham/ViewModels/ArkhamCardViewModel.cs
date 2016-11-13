@@ -416,47 +416,50 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             var map = new Dictionary<string, string>();
 
             map["\r\n"] = "<br/>";
-            map[" -- "] = "&nbsp;&mdash;&nbsp;";
             map[" - "] = "&nbsp;&ndash;&nbsp;";
+            map[" -- "] = "&nbsp;&mdash;&nbsp;";
             
             //Triggers
-            map["{Forced}"] = "<b>Forced</b>";
-            map["{Revelation}"] = "<b>Revelation</b>";
-            map["{Free Action}"] = "<img title='Free Action' src='/Images/Arkham/Free_Action.png' height='12' width='27'>";
             map["{Action}"] = "<img title='Action' src='/Images/Arkham/Action.png' height='12' width='17'>";
+            map["{Free Action}"] = "<img title='Free Action' src='/Images/Arkham/Free_Action.png' height='12' width='27'>";
+            map["{Forced}"] = "<b>Forced</b>";
             map["{Reaction}"] = "<img title='Reaction' src='/Images/Arkham/Reaction.png' height='12' width='19'>";
+            map["{Revelation}"] = "<b>Revelation</b>";
             
             //Symbols
             map["{Per Investigator}"] = "<img title='Reaction' src='/Images/Arkham/PerInvestigatorBlack.png' height='12' width='12'>";
 
             //Actions
-            map["{Fight}"] = "<b>Fight</b>";
             map["{Evade}"] = "<b>Evade</b>";
+            map["{Fight}"] = "<b>Fight</b>";
             map["{Investigate}"] = "<b>Investigate</b>";
             map["{Parley}"] = "<b>Parley</b>";
             map["{Resign}"] = "<b>Resign.</b>";
 
             //Skills
-            map["{Willpower}"]  = "<img title='Willpower Skill' src='/Images/Arkham/Willpower_small.png'>";
-            map["{Intellect}"]  = "<img title='Intellect Skill' src='/Images/Arkham/Intellect_small.png'>";
-            map["{Combat}"]  = "<img title='Combat Skill' src='/Images/Arkham/Combat_small.png'>";
             map["{Agility}"]  = "<img title='Agility Skill' src='/Images/Arkham/Agility_small.png'>";
+            map["{Combat}"]  = "<img title='Combat Skill' src='/Images/Arkham/Combat_small.png'>";
+            map["{Intellect}"]  = "<img title='Intellect Skill' src='/Images/Arkham/Intellect_small.png'>";
+            map["{Willpower}"]  = "<img title='Willpower Skill' src='/Images/Arkham/Willpower_small.png'>";
 
             //Chaos Tokens
-            map["{Skull}"] = "<img src='/Images/Arkham/Skull.png'>";
             map["{Cultist}"]  = "<img src='/Images/Arkham/Cultist.png'>";
-            map["{Tablet}"]  = "<img src='/Images/Arkham/Tablet.png'>";
-            map["{Elder Thing}"]  = "<img src='/Images/Arkham/Elder_Thing.png'>";
             map["{Elder Sign}"] = "<img src='/Images/Arkham/Elder_Sign.png'>";
+            map["{Elder Thing}"]  = "<img src='/Images/Arkham/Elder_Thing.png'>";
+            map["{Skull}"] = "<img src='/Images/Arkham/Skull.png'>";
+            map["{Tablet}"]  = "<img src='/Images/Arkham/Tablet.png'>";
             map["{Tentacle}"] = "<img src='/Images/Arkham/Tentacle.png'>";
 
             //Traits
+            map["{t:Ancient One}"] = "<a href='/Arkham?Trait=Ancient+One.' target='_blank'><b><i>Ancient One</i></b></a>";
             map["{t:Bayou}"] = "<a href='/Arkham?Trait=Bayou.' target='_blank'><b><i>Bayou</i></b></a>";
-            map["{t:Trap}"] = "<a href='/Arkham?Trait=Trap.' target='_blank'><b><i>Trap</i></b></a>";
             map["{t:Cultist}"] = "<a href='/Arkham?Trait=Cultist.' target='_blank'><b><i>Cultist</i></b></a>";
+            map["{t:Elite}"] = "<a href='/Arkham?Trait=Elite.' target='_blank'><b><i>Elite</i></b></a>";
             map["{t:Ghoul}"] = "<a href='/Arkham?Trait=Ghoul.' target='_blank'><b><i>Ghoul</i></b></a>";
+            map["{t:Madness}"] = "<a href='/Arkham?Trait=Madness.' target='_blank'><b><i>Madness</i></b></a>";
             map["{t:Monster}"] = "<a href='/Arkham?Trait=Monster.' target='_blank'><b><i>Monster</i></b></a>";
             map["{t:Tome}"] = "<a href='/Arkham?Trait=Tome.' target='_blank'><b><i>Tome</i></b></a>";
+            map["{t:Trap}"] = "<a href='/Arkham?Trait=Trap.' target='_blank'><b><i>Trap</i></b></a>";
 
             //Keywords
             map["{k:Fast}"] = "<a href='/Arkham?Keyword=Fast.' target='_blank'>Fast.</a>";

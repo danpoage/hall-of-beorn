@@ -7,6 +7,8 @@ namespace HallOfBeorn.Models.Arkham.Products
 {
     public class CoreSet : ArkhamProduct
     {
+        private ArkhamEncounterSet setDevourer = ArkhamEncounterSet.TheDevourerBelow;
+
         public CoreSet()
             : base("Core Set", "Core", "AHC01", 1, new DateTime(2016, 10, 31))
         {
@@ -59,6 +61,29 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithIcons(SkillIcon.Combat, SkillIcon.Agility, SkillIcon.Wild)
                 .WithFrontText("Roland Banks deck only.\r\nUses (4 ammo).\r\n{Action} Spend 1 ammo: {Fight}. You get +1 {Combat} for this attack (if there are 1 or more clues on this location, you get +3 {Combat} instead). This attack deals +1 damage.")
                 .WithInfo(6, 1, Artist.Tiziano_Baracchi));
+            addCard(ArkhamCard.Treachery("Cover Up", ArkhamCardSubtype.Weakness)
+                .WithTraits("Task.")
+                .WithText("{Revelation} - Put Cover Up into play in your threat area, with 3 clues on it.\r\n{Reaction} When you would discover 1 or more clues at your location: Discard that many clues from Cover Up instead.\r\n{Forced} - When the game ends, if there are any clues on Cover Up: You suffer 1 mental trauma.")
+                .WithInfo(7, 1, Artist.Unknown));
+            addCard(ArkhamCard.Asset("Daisy's Tote Bag", ClassSymbol.None, 2)
+                .WithUnique()
+                .WithTraits("Item.")
+                .WithIcons(SkillIcon.Willpower, SkillIcon.Intellect, SkillIcon.Wild)
+                .WithText("Daisy Walker deck only.\r\nYou have 2 additional hand slots, which can only be used to hold {t:Tome} assets.")
+                .WithInfo(8, 1, Artist.Dani_Hartel));
+            addCard(ArkhamCard.Asset("The Necronomicon", ClassSymbol.None, Number.NA, AssetSlot.One_Hand)
+                .WithSubtitle("John Dee Translation")
+                .WithSubtype(ArkhamCardSubtype.Weakness)
+                .WithTraits("Item.", "Tome.")
+                .WithText("{Revelation} - Put The Necronomicon into play in your threat area, with 3 horror on it. It cannot leave play while it has 1 or more horror on it.\r\nTreat each {Elder Sign} you reveal on a chaos token as a {Tentacle}.\r\n{Action}: Move 1 horror from The Necronomicon to Daisy Walker. Then, if The Necronomicon has no horror on it, discard it.")
+                .WithInfo(9, 1, Artist.Unknown));
+            addCard(ArkhamCard.Event("On the Lam", ClassSymbol.None, 1)
+                .WithTraits("Tactic.")
+                .WithIcons(SkillIcon.Intellect, SkillIcon.Agility, SkillIcon.Wild, SkillIcon.Wild)
+                .WithKeywords("Fast.")
+                .WithText("\"Skids\" O'Toole deck only.\r\n{k:Fast} Play after your turn begins.\r\nUtil the end of the round, non-{t:Elite} enemies cannot attack you.")
+                .WithFlavor("I ain't going to the pen a second time.")
+                .WithInfo(10, 1, Artist.John_Pacer));
             addCard(ArkhamCard.Treachery("Hospital Debts", ArkhamCardSubtype.Weakness)
                 .WithTraits("Task.")
                 .WithFrontText("{Revelation} - Put Hospital Debts into play in your threat area.\r\n{Free Action}: Move 1 resource from your resource pool to Hospital Debts. (Limit twice per round.)\r\n{Forced} - When the game ends, if Hospital Debts has fewer than 6 resources on it: You ear 2 fewer experience for this scenario.")
@@ -734,6 +759,27 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithBackText("<b>(&rarr;R1)</b>")
                 .WithInfo(123, 1, Artist.Romana_Kendelic));
 
+
+            addCard(ArkhamCard.ScenarioReference("The Devourer Below", "Scenario Reference", setDevourer)
+                .WithText("<h3>EASY / STANDARD</h3>{Skull} -X. X is the number of {t:Monster} enemies in play.\r\n{Cultist} -2. Place 1 doom on the nearest enemy.\r\n{Tablet} -3. If there is a {t:Monster} enemy at your location, take 1 damage.\r\n{Elder Thing} -5. If there is an {t:Ancient One} enemy in play, reveal another token.")
+                .WithBackText("<h3>HARD / EXPERT</h3>{Skull} -3. If you fail, after this skill test, search the encounter discard pile for a {t:Monster} enemy, and draw it. Shuffle the encounter deck.\r\n{Cultist} -4. Place 2 doom on the nearest enemy.\r\n{Tablet} -5. If there is a {t:Monster} enemy at your location, take 1 damage and 1 horror.\r\n{Elder Thing} -7. If there is an {t:Ancient One} enemy in play, reveal another token.")
+                .WithInfo(142, 1, Artist.None));
+            addCard(ArkhamCard.Agenda("The Arkham Woods", "Death to the Intruders", 1, Number.Of(4), setDevourer)
+                .WithFlavor("From interrogating members of the conspiracy within Arkham, you have learned that they are performing a rite of vengeance in response to the destruction of one of their master's lairs. You have entered the woods outside Arkham to try to stop them. The woods seem unnaturally cold and filled with a deathly silence.")
+                .WithBackFlavor("Throughout the woods, a shrieking cry echoes. From somewhere deeper in the forest, a score of hideous voices answer the call, inhuman as the baying of hounds and yet articulate, repeating a singular name: \"Umôrdhoth... Umôrdhoth... Umôrdhoth...\"")
+                .WithBackText("Shuffle the encounter discard pile into the encounter deck and discard cards from the top until a {t:Monster} enemy is dicarded. Spawn that enemy at the Main Path. Then, place 1 doom on that enemy.")
+                .WithInfo(143, 1, Artist.Mark_Molnar));
+            addCard(ArkhamCard.Agenda("The Ritual Begins", "The Will of Umôrdhoth", 2, Number.Of(5), setDevourer)
+                .WithFlavor("\"Umôrdhoth... Umôrdhoth... Umôrdhoth...\"<br>The chanting builds in intensity, echoing into the cold air of the night. The sparse clouds in the sky coalesce above the Arkham woods, blotting out the faint light of the stars.")
+                .WithText("Each enemy gets +1 fight and +1 evade.")
+                .WithBackFlavor("A dark presence approaches, and you are assaulted by invisible pressures that bring you to your knees. A terrible force threatens to invade your mind and soul. Your throat clenches and you eyes water as the sensation burns through you.")
+                .WithBackText("In player order, each investigator must test {Willpower} (6). Each investigator who fails must search the collection for a random basic {t:Madness} weakness and add it to his or her hand.")
+                .WithInfo(144, 1, Artist.Mark_Molnar));
+            addCard(ArkhamCard.Agenda("Vengeance Awaits", "The Devourer Below", 3, Number.Of(5), setDevourer)
+                .WithFlavor("The world beings to shift and change as the ritual nears its conclusion. The air grows chilly, and the entire forest is covered in a layer of rime. The trees bend unnaturally, and their shadows lengthen into weird shapes.")
+                .WithText("{Forced} - When this agenda advances:<ul><li>If the investigators are at Act 1, put the set-aside Ritual Site into play and spawn the set-aside Umôrdhoth there.</li><li>If the investigators are at Act 2 or 3, discard all enemies at the Ritual Site and spawn the set-aside Umôrdhoth there.</li></ul>")
+                .WithBackText("{Revelation} - Replace the current Act and Agenda with The Devourer Below. This card is both the current Act and the current Agenda.\r\n{Objective} - If Umôrdhoth is defeated, <b>(&rarr;R2).</b>")
+                .WithInfo(145, 1, Artist.Mark_Molnar));
         }
     }
 }

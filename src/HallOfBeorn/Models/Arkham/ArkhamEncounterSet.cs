@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.Arkham
         {
             all.Add(TheGathering);
             all.Add(TheMidnightMasks);
+            all.Add(TheDevourerBelow);
 
             all.Add(CurseOfTheRougarou);
             all.Add(TheBayou);
@@ -27,6 +28,7 @@ namespace HallOfBeorn.Models.Arkham
 
         public static ArkhamEncounterSet TheGathering = new ArkhamEncounterSet { Name = "The Gathering" };
         public static ArkhamEncounterSet TheMidnightMasks = new ArkhamEncounterSet { Name = "The Midnight Masks" };
+        public static ArkhamEncounterSet TheDevourerBelow = new ArkhamEncounterSet { Name = "The Devourer Below" };
 
         public static ArkhamEncounterSet CurseOfTheRougarou = new ArkhamEncounterSet { Name = "Curse of the Rougarou" };
         public static ArkhamEncounterSet TheBayou = new ArkhamEncounterSet { Name = "The Bayou" };

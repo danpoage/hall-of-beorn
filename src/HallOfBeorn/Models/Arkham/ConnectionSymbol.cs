@@ -14,6 +14,16 @@ namespace HallOfBeorn.Models.Arkham
         Cellar,
         Parlor,
 
+        Your_House, //Sideways S on Green?
+        Rivertown, //Circle on Yellow
+        Southside, //Square on Red
+        St_Marys_Hospital, //Cross on Red
+        Misktaonic_University, //Diamong on Yellow
+        Downtown, //Triangle on Blue
+        Easttown, //Crescent on Purple?
+        Graveyard, //Hourglass on Black
+        Northside, //T on Black
+
         //Curse of the Rougarou
         Cursed_Shores,
         New_Orleans,
