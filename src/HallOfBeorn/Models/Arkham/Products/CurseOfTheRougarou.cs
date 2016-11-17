@@ -88,7 +88,7 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithBackArtist(Artist.Preston_Stone)
                 .WithInfo(11, 1, Artist.Unknown)); //James Ives
             addCard(ArkhamCard.Location("Riverside", ConnectionSymbol.Riverside, Number.Of(4), Number.Of(0), setTheBayou)
-                .WithSubtitle("Fauborg Marigny")
+                .WithSubtitle("Faubourg Marigny")
                 .WithTraits("Riverside.")
                 .WithFlavor("Even at this late hour, bells and shouts sound across the piers as dockworkers go about their business.")
                 .WithBackText("While you are at Fauborg Marigny, reduce the cost of each asset you play by 1.\r\n{Action}: {Resign} \"We can't catch the beast!\" You make your way to safety, letting the beast roam free.")
