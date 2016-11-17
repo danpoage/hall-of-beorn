@@ -700,6 +700,7 @@
     <Content Include="Images\Arkham\Cultist.png" />
     <Content Include="Images\Arkham\Cultist_small.png" />
     <Content Include="Images\Arkham\Elder_Sign.png" />
+    <Content Include="Images\Arkham\Elder_Thing.png" />
     <Content Include="Images\Arkham\EnemyHealth.png" />
     <Content Include="Images\Arkham\EnemyStats.png" />
     <Content Include="Images\Arkham\Free_Action.png" />
