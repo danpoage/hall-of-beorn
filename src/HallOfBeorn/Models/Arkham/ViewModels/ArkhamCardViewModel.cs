@@ -106,6 +106,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
                     case ArkhamCardType.Investigator:
                     case ArkhamCardType.Location:
                     case ArkhamCardType.Scenario_Reference:
+                    case ArkhamCardType.Campaign_Rules:
                         return string.Format("{0}-Front.jpg", getCardImagePath());
                     default:
                         return string.Format("{0}.jpg", getCardImagePath());
@@ -126,6 +127,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
                     case ArkhamCardType.Location:
                         return !string.IsNullOrEmpty(card.Subtitle) ? string.Format("{0}-{1}-Back.jpg", getCardImagePath(), card.Subtitle.ToUrlSafeString()) : string.Format("{0}-Back.jpg", getCardImagePath());
                     case ArkhamCardType.Scenario_Reference:
+                    case ArkhamCardType.Campaign_Rules:
                         return string.Format("{0}-Back.jpg", getCardImagePath());
                     default:
                         return string.Empty;

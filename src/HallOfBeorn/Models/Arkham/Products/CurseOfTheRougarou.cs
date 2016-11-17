@@ -191,7 +191,7 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithText("{Revelation} - Test {Willpower} (3). For each point you fail by, take 1 horror. If you are at a {t:Bayou} location, you cannot commit cards to this skill test.")
                 .WithFlavor("There are dangers deep within the mire you can only begin to imagine.")
                 .WithInfo(27, 3, Artist.Unknown)); //Alex Aguilar
-            addCard(ArkhamCard.Enemy("The Rougarou", Number.Of(4), Number.Of(5).PerInvestigator(), Number.Of(3), Number.Of(2), Number.Of(2), setCurse)
+            addCard(ArkhamCard.Enemy("The Rougarou", Number.Of(3), Number.Of(5).PerInvestigator(), Number.Of(3), Number.Of(2), Number.Of(2), setCurse)
                 .WithSubtitle("Cursed Soul")
                 .WithUnique()
                 .WithTraits("Monster.", "Creature.", "Elite.")
@@ -237,6 +237,14 @@ namespace HallOfBeorn.Models.Arkham.Products
             addCard(ArkhamCard.Treachery("Insatiable Bloodlust", ArkhamCardSubtype.None, setCurse)
                 .WithText("{Revelation} - Attach to The Rougarou.\r\nThe Rougarou gets +1 fight, +1 damage, +1 horror, and cannot be evaded.\r\n{Forced} - After The Rougarou takes damage: Discard Insatiable Bloodlust.")
                 .WithInfo(36, 3, Artist.Helge_C_Balzer));
+            addCard(ArkhamCard.CampaignRules("Campaign 1-2")
+                .WithInfo(0, 1, Artist.None));
+            addCard(ArkhamCard.CampaignRules("Campaign 3-4")
+                .WithInfo(0, 1, Artist.None));
+            addCard(ArkhamCard.CampaignRules("Campaign 5-6")
+                .WithInfo(0, 1, Artist.None));
+            addCard(ArkhamCard.CampaignRules("Campaign 7-8")
+                .WithInfo(0, 1, Artist.None));
         }
     }
 }

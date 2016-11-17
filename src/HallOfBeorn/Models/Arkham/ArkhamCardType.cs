@@ -19,6 +19,7 @@ namespace HallOfBeorn.Models.Arkham
         Enemy,
         Treachery,
         Player_Reference,
-        Scenario_Reference
+        Scenario_Reference,
+        Campaign_Rules
     }
 }

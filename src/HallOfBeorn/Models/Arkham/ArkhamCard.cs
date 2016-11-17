@@ -88,7 +88,7 @@ namespace HallOfBeorn.Models.Arkham
         {
             var name = card.Title.ToUrlSafeString();
             var level = string.Empty;
-            if (card.CardType == ArkhamCardType.Scenario_Reference) {
+            if (card.CardType == ArkhamCardType.Scenario_Reference || card.CardType == ArkhamCardType.Location) {
                 level = "-" + card.Subtitle.Replace(" / ", "-").Replace(" ", "-");
             } else {
                 level = (card.Level.HasValue && card.Level.Value > 0) ? card.Level.ToString() : string.Empty;
@@ -278,6 +278,16 @@ namespace HallOfBeorn.Models.Arkham
                 DeckType = ArkhamDeckType.None,
                 Title = title,
                 Subtitle = subtitle
+            };
+        }
+
+        public static ArkhamCard CampaignRules(string title)
+        {
+            return new ArkhamCard
+            {
+                CardType = ArkhamCardType.Campaign_Rules,
+                DeckType = ArkhamDeckType.None,
+                Title = title
             };
         }
 
