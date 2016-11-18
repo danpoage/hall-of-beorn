@@ -71,7 +71,27 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithFlavor("\"...it is the last move in a great jeopardy, and for one side or the other it will bring the end of the game.\"\r\n-Aragorn, The Return of the King")
                 .WithVictoryPoints(1)
                 .WithInfo(119, 3, Artist.Dmitry_Prosvirnin));
+            Cards.Add(LotRCard.Quest("Outmaneuver the Enemy", string.Empty, 8, 1, setName, 10)
+                .WithFlavor("Corsairs are attacking Dol Amroth to cover Sahír's escape to Umbar!")
+                .WithText("Setup: Prepare the Corsair deck. Players prepare their fleet. Set each copy of Dol Amroth Warship aside, out of play. Search the encounter deck for Raider Flagship and 1 copy of Scouting Ship, and add them to the staging area. Search the encounter deck for a Dol Amroth objective of your choice and add it to the staging area. Then, shuffle the encounter deck and resolve the Guarded keyword on that objective.")
+                .WithKeywords("Sailing.")
+                .WithOppositeText("Forced: When a Ship enemy engages you, if you are off-course (Cloudy, Rainy or Stormy), deal 2 damage to a Ship objective you control. If you are on-course (Sunny), deal 2 damage to that Ship enemy instead.\r\nIf your current heading is at the worst setting (Stormy), Raider Flagship gets -50 engagement cost.")
+                .WithIncludedEncounterSets(EncounterSet.CorsairRaiders, EncounterSet.CorsairPirates, EncounterSet.UmbarFleet, EncounterSet.VoyageAcrossBelegaer, EncounterSet.TheDreamChasersFleet)
+                .WithInfo(120, 1, Artist.Adam_Lane));
+            Cards.Add(LotRCard.Quest("Battle in the Bay", string.Empty, 8, 2, setName, 16)
+                .WithFlavor("The Corsair fleet seems to be attacking multiple key locations simultaneously. To stop the attack, you must defend Dol Amroth from the Corsair ships.")
+                .WithText("When Revealed: Search the encounter deck and discard pile for a Ship enemy and add it to the staging area (2 Ship enemies instead if there are 3 or 4 players in the game). Shuffle the encounter deck. For each unguarded objective in the staging area, attach a non-unique Ship enemy in the staging area to that objective, guarding it.")
+                .WithKeywords("Sailing.")
+                .WithOppositeText("If your current heading is at the worst setting (Stormy), Raider Flagship gets -50 engagement cost.\r\nYou cannot advance while at least 1 objective is guarded by an encounter.")
+                .WithIncludedEncounterSets(EncounterSet.CorsairRaiders, EncounterSet.CorsairPirates, EncounterSet.UmbarFleet, EncounterSet.VoyageAcrossBelegaer, EncounterSet.TheDreamChasersFleet)
+                .WithInfo(121, 1, Artist.DinoDrawing));
+            Cards.Add(LotRCard.Quest("Break Through the Fleet!", string.Empty, 8, 3, setName, 5)
+                .WithFlavor("\"You have to go after Sahír!\" Imrahil yells as the battle rages on. \"We will finish this fight!\"")
+                .WithText("When Revealed: The players make engagement checks against each enemy in the staging area. Raider Flagship gets -50 engagement cost during these engagement checks.")
+                .WithKeywords("Sailing.")
+                .WithOppositeText("Raider Flagship gets -50 engagement cost.\r\nBreak Through the Fleet! has +5 quest points for each Ship enemy in play.\r\nIf this stage is defeated, or if Raider Flagship is in the victory display, the players have broken through the Corsair fleet and win the game!")
+                .WithIncludedEncounterSets(EncounterSet.CorsairRaiders, EncounterSet.CorsairPirates, EncounterSet.UmbarFleet, EncounterSet.VoyageAcrossBelegaer, EncounterSet.TheDreamChasersFleet)
+                .WithInfo(121, 1, Artist.Joshua_Cairos));
         }
-        
     }
 }
