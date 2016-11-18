@@ -120,7 +120,7 @@ namespace HallOfBeorn.Services.Arkham
             var highest = 0;
             var current = 0;
             
-            foreach (var trait in card.Traits().Select(normalizer))
+            foreach (var trait in card.Traits.Select(normalizer))
             {
                 if (trait == query) {
                     current = 50;
@@ -147,7 +147,7 @@ namespace HallOfBeorn.Services.Arkham
             var highest = 0;
             var current = 0;
             
-            foreach (var keyword in card.Keywords().Select(normalizer))
+            foreach (var keyword in card.Keywords.Select(normalizer))
             {
                 if (keyword == normQuery) {
                     current = 33;
@@ -422,13 +422,13 @@ namespace HallOfBeorn.Services.Arkham
                     if (!string.IsNullOrEmpty(model.Trait) && model.Trait != "Any")
                     {
                         hasFilter = true;
-                        if (!card.Traits().Any(x => x.Replace(".", "") == model.Trait.Replace(".", "")))
+                        if (!card.Traits.Any(x => x.Replace(".", "") == model.Trait.Replace(".", "")))
                             continue;
                     }
                     if (!string.IsNullOrEmpty(model.Keyword) && model.Keyword != "Any")
                     {
                         hasFilter = true;
-                        if (!card.Keywords().Any(x => x.Replace(".", "") == model.Keyword.Replace(".", "")))
+                        if (!card.Keywords.Any(x => x.Replace(".", "") == model.Keyword.Replace(".", "")))
                             continue;
                     }
                     if (!string.IsNullOrEmpty(model.VictoryPoints) && model.VictoryPoints != "Any")

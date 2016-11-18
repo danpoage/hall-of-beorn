@@ -11,9 +11,7 @@ namespace HallOfBeorn.Models.LotR
         public LotRCard()
         {
             Text = string.Empty;
-            Traits = new List<string>();
             NormalizedTraits = new List<string>();
-            Keywords = new List<string>();
             NormalizedKeywords = new List<string>();
             Categories = new List<Category>();
             EncounterCategories = new List<EncounterCategory>();
@@ -459,7 +457,6 @@ namespace HallOfBeorn.Models.LotR
 
         public CardSet CardSet { get; set; }
 
-        public bool IsUnique { get; set; }
         public CardType CardType { get; set; }
         public CardSubtype CardSubtype { get; set; }
         public Sphere Sphere { get; set; }
@@ -511,10 +508,8 @@ namespace HallOfBeorn.Models.LotR
         public byte? HitPoints { get; set; }
         public byte? QuestPoints { get; set; }
 
-        public List<string> Traits { get; set; }
         public List<string> NormalizedTraits { get; set; }
 
-        public List<string> Keywords { get; set; }
         public List<string> NormalizedKeywords { get; set; }
 
         public List<Category> Categories { get; private set; }
@@ -527,7 +522,6 @@ namespace HallOfBeorn.Models.LotR
         public string EncounterSet { get; set; }
         public string AlternateEncounterSet { get; set; }
         public List<EncounterSet> IncludedEncounterSets { get; set; }
-        public byte VictoryPoints { get; set; }
         public bool? PassValue { get; set; }
         public byte Quantity { get; set; }
         public byte? EasyModeQuantity { get; set; }
@@ -535,9 +529,8 @@ namespace HallOfBeorn.Models.LotR
         public string Setup { get; set; }
 
         public string FlavorText { get; set; }
-        public Artist Artist { get; set; }
         public Artist SecondArtist { get; set; }
-        public Artist OppositeArtist { get; set; }
+        
         public ushort Year { get; set; }
         public bool SlugIncludesOppositeTitle { get; set; }
         public bool SlugIncludesType { get; set; }
@@ -983,14 +976,14 @@ namespace HallOfBeorn.Models.LotR
 
         public LotRCard WithTraits(params string[] traits)
         {
+            addTraits(traits);
+
             foreach (var trait in traits)
             {
                 if (trait != trait.NormalizeString())
                 {
                     this.NormalizedTraits.Add(trait.NormalizeString());
                 }
-
-                this.Traits.Add(trait);
             }
 
             return this;
@@ -1010,9 +1003,7 @@ namespace HallOfBeorn.Models.LotR
 
         public LotRCard WithKeywords(params string[] keywords)
         {
-            foreach (var keyword in keywords)
-                this.Keywords.Add(keyword);
-
+            addKeywords(keywords);
             return this;
         }
 
@@ -1035,9 +1026,9 @@ namespace HallOfBeorn.Models.LotR
             return this;
         }
 
-        public LotRCard WithOppositeArtist(Artist artist)
+        public LotRCard WithBackArtist(Artist artist)
         {
-            this.OppositeArtist = artist;
+            this.BackArtist = artist;
             return this;
         }
 

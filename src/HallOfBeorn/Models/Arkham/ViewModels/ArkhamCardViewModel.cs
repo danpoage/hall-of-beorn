@@ -56,8 +56,8 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         {
             get
             {
-                return card.VictoryPoints.HasValue && card.VictoryPoints.Value > 0 ?
-                    string.Format("Victory {0}", card.VictoryPoints.Value)
+                return card.VictoryPoints > 0 ?
+                    string.Format("Victory {0}", card.VictoryPoints)
                     : string.Empty;
             }
         }
@@ -123,9 +123,9 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
                     case ArkhamCardType.Act:
                     case ArkhamCardType.Agenda:
                         return string.Format("{0}b.jpg", getCardImagePath());
-                    case ArkhamCardType.Investigator:
                     case ArkhamCardType.Location:
                         return !string.IsNullOrEmpty(card.Subtitle) ? string.Format("{0}-{1}-Back.jpg", getCardImagePath(), card.Subtitle.ToUrlSafeString()) : string.Format("{0}-Back.jpg", getCardImagePath());
+                    case ArkhamCardType.Investigator:
                     case ArkhamCardType.Scenario_Reference:
                     case ArkhamCardType.Campaign_Rules:
                         return string.Format("{0}-Back.jpg", getCardImagePath());
@@ -357,12 +357,12 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
 
         public bool HasTraits()
         {
-            return card.Traits().Count() > 0;
+            return card.Traits.Count() > 0;
         }
 
         public IEnumerable<LinkViewModel> Traits()
         {
-            foreach (var trait in card.Traits())
+            foreach (var trait in card.Traits)
                 yield return new LinkViewModel() { Name = trait, Title = "Trait Search: " + trait, Target = "_blank", Href = "/Arkham?Trait=" + trait, CssClass = "arkham-trait" };
         }
 

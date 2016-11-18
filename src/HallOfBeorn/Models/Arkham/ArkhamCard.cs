@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Arkham
 {
-    public class ArkhamCard
+    public class ArkhamCard : Card
     {
         private ArkhamCard()
         {
@@ -16,8 +16,7 @@ namespace HallOfBeorn.Models.Arkham
             BackFlavor = string.Empty;
         }
 
-        private readonly List<string> traits = new List<string>();
-        private readonly List<string> keywords = new List<string>();
+        
         private readonly List<SkillIcon> skillTestIcons = new List<SkillIcon>();
         private readonly List<ConnectionSymbol> connections = new List<ConnectionSymbol>();
 
@@ -28,8 +27,7 @@ namespace HallOfBeorn.Models.Arkham
         public ArkhamCardSubtype CardSubtype { get; set; }
         public string Title { get; private set; }
         public string Subtitle { get; private set; }
-        public bool IsUnique { get; private set; }
-
+        
         public Number? Willpower { get; private set; }
         public Number? Intellect { get; private set; }
         public Number? Combat { get; private set; }
@@ -53,31 +51,21 @@ namespace HallOfBeorn.Models.Arkham
         public Number? Damage { get; private set; }
         public Number? Horror { get; private set; }
 
-        public string FrontText { get; protected set; }
+        public string FrontText { 
+            get { return Text; }
+            set { Text = value; }
+        }
         public string FrontFlavor { get; protected set; }
         public string BackText { get; private set; }
         public string BackFlavor { get; private set; }
 
         public ushort CardNumber { get; private set; }
         public byte Quanity { get; private set; }
-        public Artist Artist { get; private set; }
-        public Artist BackArtist { get; private set; }
-
+        
         public ClassSymbol ClassSymbol { get; private set; }
         public Number? Health { get; private set; }
         public Number? Sanity { get; private set; }
-        public byte? VictoryPoints { get; private set; }
         public ArkhamEncounterSet EncounterSet { get; private set; }
-
-        protected void addTraits(IEnumerable<string> traits)
-        {
-            this.traits.AddRange(traits);
-        }
-
-        protected void addKeywords(IEnumerable<string> keywords)
-        {
-            this.keywords.AddRange(keywords);
-        }
 
         protected void addSkillTestIcons(IEnumerable<SkillIcon> skillIcons)
         {
@@ -100,16 +88,6 @@ namespace HallOfBeorn.Models.Arkham
         public string Slug
         {
             get { return GetSlug(this); }
-        }
-
-        public IEnumerable<string> Traits()
-        {
-            return traits;
-        }
-
-        public IEnumerable<string> Keywords()
-        {
-            return keywords;
         }
 
         public IEnumerable<SkillIcon> SkillIcons()

@@ -76,7 +76,7 @@ Players may bypass this quest card at the end of the combat phase.",
                 Quantity = 1,
                 Number = 2,
                 Artist = Artist.Cristi_Balanescu,
-                OppositeArtist = Artist.Gabriel_Verdon
+                BackArtist = Artist.Gabriel_Verdon
             });
             Cards.Add(new LotRCard()
             {
@@ -100,7 +100,7 @@ If The ~Nameless Fear has 10 or more damage on it, remove all damage from it and
                 Quantity = 1,
                 Number = 3,
                 Artist = Artist.Cristi_Balanescu,
-                OppositeArtist = Artist.Alvaro_Calvo_Escudero
+                BackArtist = Artist.Alvaro_Calvo_Escudero
             });
             Cards.Add(new LotRCard()
             {
@@ -125,7 +125,7 @@ Players may bypass this quest card at the end of the combat phase.",
                 Quantity = 1,
                 Number = 4,
                 Artist = Artist.Cristi_Balanescu,
-                OppositeArtist = Artist.Mark_Behm
+                BackArtist = Artist.Mark_Behm
             });
             Cards.Add(new LotRCard()
             {

@@ -25,7 +25,7 @@ namespace HallOfBeorn.Services.LotR
 
         private bool IsCategorizable(LotRCard card)
         {
-            if (string.IsNullOrEmpty(card.Text) && card.Keywords.Count == 0)
+            if (string.IsNullOrEmpty(card.Text) && card.Keywords.Count() == 0)
                 return false;
 
             switch (card.CardType)

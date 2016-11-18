@@ -46,7 +46,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 OppositeText = "When Revealed: Create your own staging area. Reveal 2 cards from the encounter deck and add them to your staging area.\r\nForced: After the 11th progress token is placed on Sheltered Rocks, join another player at the beginning of the travel phase. If you cannot join another player, all players continue to stage 5 together.",
                 Number = 114,
                 Artist = Artist.Cristi_Balanescu,
-                OppositeArtist = Artist.David_Lecossu,
+                BackArtist = Artist.David_Lecossu,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.HazardsOfThePit, EncounterSet.TwistsAndTurns }
             });
             Cards.Add(new LotRCard() {
@@ -64,7 +64,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 OppositeText = "When Revealed: Create your own staging area. Discard all resources from your heroes.\r\nForced: After the 17th progress token is placed on The Endless Caves, join another player at the beginning of the travel phase. If you cannot join another player, all players continue on to stage 5 together.",
                 Number = 115,
                 Artist = Artist.Cristi_Balanescu,
-                OppositeArtist = Artist.Cristi_Balanescu,
+                BackArtist = Artist.Cristi_Balanescu,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.HazardsOfThePit, EncounterSet.TwistsAndTurns }
             });
             Cards.Add(new LotRCard() {
@@ -82,7 +82,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 OppositeText = "When Revealed: Create your own staging area. Discard your hand. Reveal 2 cards from the encounter deck and add them to your staging area.\r\nForced: After the 7th progress token is placed on The Shivering Bank, join another player at the beginning of the travel phase. If you cannot join another player, all players continue on to stage 5 together.",
                 Number = 116,
                 Artist = Artist.Cristi_Balanescu,
-                OppositeArtist = Artist.Cristi_Balanescu,
+                BackArtist = Artist.Cristi_Balanescu,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.HazardsOfThePit, EncounterSet.TwistsAndTurns }
             });
             Cards.Add(new LotRCard() {
@@ -100,7 +100,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 OppositeText = "When Revealed: Create you own staging area. Reveal 4 cards from the encounter deck and add them to your staging area.\r\nForced: After the 5th progress token is placed on Old One Lair, join another player at the beginning of the travel phase. If you cannot join another player, all players continue on to stage 5 together.",
                 Number = 117,
                 Artist = Artist.Cristi_Balanescu,
-                OppositeArtist = Artist.Cristi_Balanescu,
+                BackArtist = Artist.Cristi_Balanescu,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.HazardsOfThePit, EncounterSet.TwistsAndTurns }
             });
             Cards.Add(new LotRCard() {

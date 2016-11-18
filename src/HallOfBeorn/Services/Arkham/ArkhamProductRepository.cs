@@ -34,14 +34,14 @@ namespace HallOfBeorn.Services.Arkham
         public IEnumerable<string> Traits()
         {
             foreach (var card in Cards())
-                foreach (var trait in card.Traits())
+                foreach (var trait in card.Traits)
                     yield return trait;
         }
 
         public IEnumerable<string> Keywords()
         {
             foreach (var card in Cards())
-                foreach (var keyword in card.Keywords())
+                foreach (var keyword in card.Keywords)
                     yield return keyword;
         }
 
@@ -65,8 +65,8 @@ namespace HallOfBeorn.Services.Arkham
 
         public IEnumerable<string> VictoryPointsValues()
         {
-            foreach (var card in Cards().Where(x => x.VictoryPoints.HasValue))
-                yield return string.Format("Victory {0}", card.VictoryPoints.Value);
+            foreach (var card in Cards().Where(x => x.VictoryPoints > 0))
+                yield return string.Format("Victory {0}", card.VictoryPoints);
         }
 
         public IEnumerable<string> DoomThresholdValues()

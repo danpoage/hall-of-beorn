@@ -104,7 +104,7 @@ namespace TemplateBuilder
         {
             var html = new StringBuilder();
 
-            if (card.Keywords.Count > 0)
+            if (card.Keywords.Count() > 0)
             {
                 html.Append("<p>");
                 foreach (var keyword in card.Keywords)

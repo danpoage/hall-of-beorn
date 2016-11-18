@@ -875,12 +875,12 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public string OppositeArtist
         {
-            get { return _card.OppositeArtist != null ? _card.OppositeArtist.Name : string.Empty; }
+            get { return _card.BackArtist != null ? _card.BackArtist.Name : string.Empty; }
         }
 
         public string OppositeArtistURL
         {
-            get { return _card.OppositeArtist != null ? _card.OppositeArtist.URL : string.Empty; }
+            get { return _card.BackArtist != null ? _card.BackArtist.URL : string.Empty; }
         }
 
         public string Year

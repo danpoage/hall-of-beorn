@@ -543,6 +543,10 @@ namespace HallOfBeorn.Models
             //The Drowned Ruins
             all.Add(Artist.Andreia_Ugrai);
 
+            //The City of Corsairs
+            all.Add(Artist.Michael_Suchanek);
+            all.Add(Artist.Monztre);
+
             //Murder at the Prancing Pony
             all.Add(Artist.Lutful_Valeriya_Romanovna);
             all.Add(Artist.Micah_Epstein);
@@ -978,12 +982,14 @@ namespace HallOfBeorn.Models
         public static Artist Melissa_Findley = new Artist { Name = "Melissa Findley", URL = "http://melissafindley.deviantart.com" };
         public static Artist Michael_Komarck = new Artist { Name = "Michael Komarck", URL = "http://www.komarckart.com" };
         public static Artist Michael_Rasmussen = new Artist { Name = "Michael Rasmussen", URL = "http://www.rasmussenillustration.com" };
+        public static Artist Michael_Suchanek = new Artist { Name = "Michael Suchánek", URL = "http://www.michalsuchanek.cz" };
         public static Artist Michael_Wolmarans = new Artist { Name = "Michael Wolmarans", URL = "https://artstation.com/artist/tenebrae" };
         public static Artist Mike_Capprotti = new Artist { Name = "Mike Capprotti", URL = "http://capprotti.deviantart.com" };
         public static Artist Mike_Nash = new Artist { Name = "Mike Nash", URL = "http://www.mike-nash.com/HOME.html" };
         public static Artist Mikhail_Greuli = new Artist { Name = "Mikail Greuli", URL = "http://mgreuli.deviantart.com" };
         public static Artist Mikhail_Yakovlev = new Artist { Name = "Mikhail Yakovlev", URL = "http://yakovlevart.blogspot.com" };
         public static Artist Milek_Jakubiec = new Artist { Name = "Milek Jakubiec", URL = "http://ethicallychallenged.deviantart.com" };
+        public static Artist Monztre = new Artist { Name = "Monztre", URL = "https://www.google.com/search?q=monztre+fantasy+art" };
         public static Artist Nacho_Molina = new Artist { Name = "Nacho Molina", URL = "http://nachomolina.deviantart.com" };
         public static Artist Nate_Abell = new Artist { Name = "Nate Abell", URL = "http://www.nateabell.com" };
         public static Artist Nele_Diel = new Artist { Name = "Nele Diel", URL = "http://nele-diel.deviantart.com" };

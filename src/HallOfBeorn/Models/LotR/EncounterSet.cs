@@ -370,6 +370,9 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet TheStormcaller = new EncounterSet { Name = "The Stormcaller", Set = "The Thing in the Depths" };
         public static EncounterSet TempleOfTheDeceived = new EncounterSet { Name = "Temple of the Deceived", Set = "Temple of the Deceived" };
         public static EncounterSet TheDrownedRuins = new EncounterSet { Name = "The Drowned Ruins", Set = "The Drowned Ruins" };
+        public static EncounterSet AStormOnCobasHaven = new EncounterSet { Name = "A Storm on Cobas Haven", Set = "A Storm on Cobas Haven" };
+        public static EncounterSet TheCityOfCorsairs = new EncounterSet { Name = "The City of Corsairs", Set = "The City of Corsairs" };
+        public static EncounterSet CoastOfUmbar = new EncounterSet { Name = "Coast of Umbar", Set = "The City of Corsairs" };
 
         //The Hobbit: Over Hill and Under Hill
         public static EncounterSet WeMustAwayEreBreakOfDay = new EncounterSet { Name = "We Must Away, Ere Break of Day", Set = "The Hobbit: Over Hill and Under Hill" };

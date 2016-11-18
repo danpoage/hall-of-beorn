@@ -1994,7 +1994,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 QuestPoints = 0,
                 Number = 121,
                 Artist = Artist.Yoann_Boissonnet,
-                OppositeArtist = Artist.Ben_Zweifel,
+                BackArtist = Artist.Ben_Zweifel,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood }
             });
             Cards.Add(new LotRCard() {
@@ -2014,7 +2014,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 QuestPoints = 10,
                 Number = 122,
                 Artist = Artist.Yoann_Boissonnet,
-                OppositeArtist = Artist.David_Lecossu,
+                BackArtist = Artist.David_Lecossu,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood }
             });
             Cards.Add(new LotRCard() {

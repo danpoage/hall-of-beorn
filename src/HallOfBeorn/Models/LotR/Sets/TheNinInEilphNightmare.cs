@@ -71,7 +71,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithText("When Revealed: Raise each player's threat by 1.")
                 .WithKeywords("Time 3.")
                 .WithOppositeText("Forced: After the last time counter is removed from this stage, advance to a different stage 2A at random. Return this stage to the quest deck.\r\nAllies enter play exhausted.\r\nForced: When the players defeat this stage, advance to a random stage 3A.")
-                .WithOppositeArtist(Artist.Von_Caberte)
+                .WithBackArtist(Artist.Von_Caberte)
                 .WithInfo(8, 1, Artist.Mariusz_Gandzel));
             Cards.Add(LotRCard.Quest("Lost in the Swanfleet", "", 0, 3, setName, 16)
                 .WithOppositeTitle("Deadly Waters", true)
@@ -80,7 +80,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithText("When Revealed: Raise each player's threat by 1. Add Ancient Marsh-dweller to the staging area (from out of play or engaged with a player) and heal all damage from it.")
                 .WithKeywords("Time 3.")
                 .WithText("Forced: After the last time counter is removed from this stage, advance to a different stage 3A at random. Return this stage to the quest deck.\r\nTreachery card effects cannot be canceled.")
-                .WithOppositeArtist(Artist.Claudio_Pozas)
+                .WithBackArtist(Artist.Claudio_Pozas)
                 .WithInfo(9, 1, Artist.Silver_Saaremael));
         }
     }

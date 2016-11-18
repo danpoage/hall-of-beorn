@@ -834,7 +834,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 VictoryPoints = 1,
                 Number = 70,
                 Artist = Artist.Cristi_Balanescu,
-                OppositeArtist = Artist.Magali_Villeneuve,
+                BackArtist = Artist.Magali_Villeneuve,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
             });
             Cards.Add(new LotRCard() {
@@ -855,7 +855,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 VictoryPoints = 1,
                 Number = 71,
                 Artist = Artist.Cristi_Balanescu,
-                OppositeArtist = Artist.Magali_Villeneuve,
+                BackArtist = Artist.Magali_Villeneuve,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
             });
             Cards.Add(new LotRCard() {
@@ -876,7 +876,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 VictoryPoints = 2,
                 Number = 72,
                 Artist = Artist.Cristi_Balanescu,
-                OppositeArtist = Artist.David_Lecossu,
+                BackArtist = Artist.David_Lecossu,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
             });
             Cards.Add(new LotRCard() {
@@ -897,7 +897,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 VictoryPoints = 1,
                 Number = 73,
                 Artist = Artist.Cristi_Balanescu,
-                OppositeArtist = Artist.Ilich_Henriquez,
+                BackArtist = Artist.Ilich_Henriquez,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
             });
             Cards.Add(new LotRCard() {
@@ -917,7 +917,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 VictoryPoints = 2,
                 Number = 74,
                 Artist = Artist.Cristi_Balanescu,
-                OppositeArtist = Artist.Stacey_Diana_Clark,
+                BackArtist = Artist.Stacey_Diana_Clark,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
             });
             Cards.Add(new LotRCard() {
@@ -942,7 +942,7 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 QuestPoints = 9,
                 Number = 75,
                 Artist = Artist.Cristi_Balanescu,
-                OppositeArtist = Artist.Magali_Villeneuve,
+                BackArtist = Artist.Magali_Villeneuve,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
             });
             var card = new LotRCard()
@@ -963,7 +963,7 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 QuestPoints = 4,
                 Number = 76,
                 Artist = Artist.Cristi_Balanescu,
-                OppositeArtist = Artist.Magali_Villeneuve,
+                BackArtist = Artist.Magali_Villeneuve,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
             };
 
