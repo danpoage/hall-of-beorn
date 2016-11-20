@@ -70,7 +70,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithOppositeFlavor("Deep in enemy waters, you must recover the artifact from the Stormcaller.")
                 .WithKeywords("Sailing.")
                 .WithText("Progress cannot be placed on The Coast of Umbar if the players are off-course.\r\nIf the Stormcaller is destroyed (or if this stage has 15 or more progress on it), advance to stage 2.")
-                .WithIncludedEncounterSets(EncounterSet.TheCityOfCorsairs, EncounterSet.CorsairRaiders, EncounterSet.StormyWeather, EncounterSet.UmbarFleet, EncounterSet.VoyageAcrossBelegaer)
+                .WithIncludedEncounterSets(EncounterSet.CorsairRaiders, EncounterSet.StormyWeather, EncounterSet.UmbarFleet, EncounterSet.VoyageAcrossBelegaer, EncounterSet.TheDreamChasersFleet)
                 .WithInfo(147, 1, Artist.Simon_Dominic));
             Cards.Add(LotRCard.Quest("Fate of the Dream-chaser", string.Empty, 9, 2, setCoast, 255)
                 .WithFlavor("Suddenly, all of the beacons and lights along the watch-tower are snuffed as fog rolls in from the west. \"Pull up the sails!\" you hear, but it is too late. The Corsair ships turn at once, and the Dream-chaser smashes into the rocks. You are plunged into the cold waters, struggling to stay afloat.")

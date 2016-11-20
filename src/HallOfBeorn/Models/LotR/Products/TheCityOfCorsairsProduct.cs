@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Products
             : base("The City of Corsairs", "MEC53", ImageType.Jpg)
         {
             AddCardSet(CardSet.TheCityOfCorsairs);
+
+            AddScenario(new Scenarios.TheCityOfCorsairs());
         }
     }
 }
