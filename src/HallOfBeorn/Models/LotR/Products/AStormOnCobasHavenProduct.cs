@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Products
             : base("A Storm on Cobas Haven", "MEC52", ImageType.Jpg)
         {
             AddCardSet(CardSet.AStormOnCobasHaven);
+
+            AddScenario(new Scenarios.AStormOnCobasHaven());
         }
     }
 }

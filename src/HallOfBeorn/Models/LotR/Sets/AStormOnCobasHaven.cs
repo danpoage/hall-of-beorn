@@ -91,7 +91,78 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithKeywords("Sailing.")
                 .WithOppositeText("Raider Flagship gets -50 engagement cost.\r\nBreak Through the Fleet! has +5 quest points for each Ship enemy in play.\r\nIf this stage is defeated, or if Raider Flagship is in the victory display, the players have broken through the Corsair fleet and win the game!")
                 .WithIncludedEncounterSets(EncounterSet.CorsairRaiders, EncounterSet.CorsairPirates, EncounterSet.UmbarFleet, EncounterSet.VoyageAcrossBelegaer, EncounterSet.TheDreamChasersFleet)
-                .WithInfo(121, 1, Artist.Joshua_Cairos));
+                .WithInfo(122, 1, Artist.Joshua_Cairos));
+            Cards.Add(LotRCard.ShipObjective("Dol Amroth Warship", setName, 2, 2, 2, 8)
+                .WithTraits("Gondor.", "Ship.")
+                .WithText("Immune to player card effects.\r\nIf you are on-course (Sunny), Dol Amroth Warship gets +2 Willpower, +2 Attack, and +2 Defense.\r\nForced: When Dol Amroth Warship is destroyed, set it aside, out of play.")
+                .WithInfo(123, 1, Artist.Ignacio_Bazan_Lazcano));
+            Cards.Add(LotRCard.ShipEnemy("Raider Flagship", setName, 50, 3, 5, 3, 18)
+                .WithUnique()
+                .WithTraits("Corsair.", "Ship.")
+                .WithKeywords("Boarding 1.")
+                .WithText("Immune to player card effectss.\r\nOnly Ship enemies can be declared as attackers against Raider Flagship.\r\nForced: At the end of the encounter phase, the engaged player reveals the top card of the Corsair deck and engages it.")
+                .WithVictoryPoints(20)
+                .WithInfo(124, 1, Artist.Michael_Rasmussen));
+            Cards.Add(LotRCard.ShipEnemy("Corsair Skirmisher", setName, 28, 3, 4, 4, 6)
+                .WithTraits("Corsair.", "Ship.")
+                .WithKeywords("Boarding 1.")
+                .WithText("Immune to player card effects.\r\nResponse: After Corsair Skirmisher is destroyed as an enemy, the engaged player may discard allies he controls with a total of at least 3 Willpower ti take control of Corsair Skirmisher as a Ship-Objective with Willpower equal to its Threat. (It loses the Ship-Enemy card type and gains the Ship-Objective card type).")
+                .WithInfo(125, 1, Artist.Mariusz_Gandzel));
+            Cards.Add(LotRCard.ShipEnemy("Siege Ship", setName, 46, 2, 5, 5, 7)
+                .WithTraits("Corsair.", "Ship.")
+                .WithKeywords("Archery 2.")
+                .WithText("Cannot have attachments.\r\nWhile Siege Ship is in the staging area, it gains: \"Forrced: at the end of the quest phase, if Siege Ship is not guarding an objective and there is an unguarded objective in the staging area, attach Siege Ship to that objective, guarding it.\"")
+                .WithInfo(126, 1, Artist.Michael_Rasmussen));
+            Cards.Add(LotRCard.ShipEnemy("Heavy Cruiser", setName, 42, 5, 7, 5, 8)
+                .WithTraits("Corsair.", "Ship.")
+                .WithKeywords("Boarding 2.")
+                .WithText("Cannot have attachments.\r\nWhen Revealed: Search the encounter deck and discard pile for a Dol Amroth objective and add it to the staging area. Then, attach Heavy Crusier to that objective, guarding it. Shuffle the encounter deck.")
+                .WithInfo(127, 1, Artist.DinoDrawing)); //Navigation symbol
+            Cards.Add(LotRCard.Location("Coast of Anfalas", string.Empty, setName, 3, 3)
+                .WithTraits("Coastland.", "Ocean.")
+                .WithText("If you are off-course (Cloudy, Rainy, Stormy), Coast of Anfalas gets +2 Threat. Travel: Exhaust a Ship objective to travel here.")
+                .WithShadow("Shadow: If you are off-course (Cloudy, Rainy, Stormy), attacking enemy gets +2 Attack.")
+                .WithInfo(128, 1, Artist.Katy_Grierson));
+            Cards.Add(LotRCard.Location("Belfalas Islet", string.Empty, setName, 1, 5)
+                .WithTraits("Coastland.", "Ocean.")
+                .WithText("You cannot travel to Belfalas Islet if you are off-course (Cloudy, Rainy, Stormy).\r\nResponse: After you travel to Belfalas Islet, choose a Ship enemy that is not guarding an objective. While Belfalas Islet is the active location, the chosen enemy is considered to be out of play.")
+                .WithVictoryPoints(1)
+                .WithInfo(129, 1, Artist.Ben_Zweifel));
+            Cards.Add(LotRCard.Location("Cobas Haven", string.Empty, setName, 2, 4)
+                .WithTraits("Coastland.", "Ocean.")
+                .WithText("While Cobas Haven is the active location, reduce the Boarding X value on each Ship enemy by 1.")
+                .WithFlavor("But beyond, in the great fief of Belfalas, dwelt Prince Imrahil in his castle of Dol Amroth by the sea...\r\n-The Return of the King")
+                .WithInfo(130, 1, Artist.Simon_Dominic));
+            Cards.Add(LotRCard.Treachery("Ramming Speed!", string.Empty, setName)
+                .WithText("When Revealed: If you are off-course (Cloudy, Rainy, or Stormy), the engaged Ship enemy with the highest Attack makes an immediate attack. Until the end of the phase, add 1 to the total Threat in the staging area for each damage dealt by this attack. If no attack is made as a result of this effect, Ramming Speed! gains doomed 2.")
+                .WithInfo(131, 1, Artist.Michael_Rasmussen)); //Navigation symbol
+            Cards.Add(LotRCard.Treachery("Taking on Water", string.Empty, setName)
+                .WithText("When Revealed: Attach to a Ship objective. (Counts as a Condition attachment with the text: \"Forced: When attached objective exhausts, deal 2 damage to it. Action: Exhaust 3 character you control to discard Taking on Water.\")")
+                .WithShadow("Shadow: If defending character is a ship, attach Taking on Water to it.")
+                .WithInfo(132, 1, Artist.Ignacio_Bazan_Lazcano));
+            Cards.Add(LotRCard.Treachery("The Raiders' Assault", string.Empty, setName)
+                .WithText("When Revealed: Choose a Ship enemy that is not currently guarding an objective. Attach that enemy to an unguarded objective in the staging area, guarding it (return that enemy to the staging area if it is engaged). If no Ship enemy is returned to the staging area by this effect, The Raiders' Assault gains surge.")
+                .WithInfo(133, 1, Artist.Michael_Rasmussen)); //Navigation symbol
+            Cards.Add(LotRCard.Objective("Sea-ward Tower", string.Empty, setName)
+                .WithUnique()
+                .WithKeywords("Guarded.")
+                .WithText("If Sea-ward Tower is free of encounters, add it to the staging area, controlled by the players.\r\nWhile the players control Sea-ward Tower, look at 2 additional cards from the top of the encounter deck during each Sailing test.")
+                .WithInfo(134, 1, Artist.Michael_Rasmussen)); //Navigation symbol
+            Cards.Add(LotRCard.Objective("Tower of the Gull", string.Empty, setName)
+                .WithUnique()
+                .WithKeywords("Guarded.")
+                .WithText("If Tower of the Gull is free of encounters, add it to the staging area, controlled by the players.\r\nCombat Action: If the players control Tower of the Gull, exhaust it to deal 2 damage to a non-unique Ship enemy. Any player may trigger this action.")
+                .WithInfo(135, 1, Artist.Ryan_Yee)); //Navigation symbol
+            Cards.Add(LotRCard.Objective("The Beacon", string.Empty, setName)
+                .WithUnique()
+                .WithKeywords("Guarded.")
+                .WithText("If The Beacon is free of encounters, add it to the staging area, controlled by the players.\r\nPlanning Action: If the players control The Beacon, exhaust it and spend 5 resources to take control of 1 set-aside copy of Dol Amroth Warship. Any player may trigger this action.")
+                .WithInfo(136, 1, Artist.Titus_Lunter)); //Navigation symbol
+            Cards.Add(LotRCard.Objective("Tower of the Heron", string.Empty, setName)
+                .WithUnique()
+                .WithKeywords("Guarded.")
+                .WithText("If Tower of the Heron is free of encounters, add it to the staging area, controlled by the players.\r\nWhile Tower of the Heron is controlled by the players, reduce the archery total by 4.")
+                .WithInfo(137, 1, Artist.Adam_Lane)); //Navigation symbol
         }
     }
 }

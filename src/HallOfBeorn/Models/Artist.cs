@@ -543,6 +543,9 @@ namespace HallOfBeorn.Models
             //The Drowned Ruins
             all.Add(Artist.Andreia_Ugrai);
 
+            //A Storm on Cobas Haven
+            all.Add(Artist.Ryan_Yee);
+
             //The City of Corsairs
             all.Add(Artist.Michael_Suchanek);
             all.Add(Artist.Monztre);
@@ -1018,6 +1021,7 @@ namespace HallOfBeorn.Models
         public static Artist Romana_Kendelic = new Artist { Name = "Romana Kendelic", URL = "http://alisaryn.cgsociety.org" };
         public static Artist Rovina_Cai = new Artist { Name = "Rovina Cai", URL = "http://www.rovinacai.com/portfolio" };
         public static Artist Ryan_Barger = new Artist { Name = "Ryan Barger", URL = "http://ryanbarger.deviantart.com" };
+        public static Artist Ryan_Yee = new Artist { Name = "Ryan Yee", URL = "http://ryanyee.com" };
         public static Artist S_C_Watson = new Artist { Name = "S. C. Watson", URL = "http://oreganal.deviantart.com" };
         public static Artist Sabin_Boykinov = new Artist { Name = "Sabin Boykinov", URL = "http://sabin-boykinov.deviantart.com" };
         public static Artist Sacha_Diener = new Artist { Name = "Sacha Diener", URL = "http://thefirstangel.deviantart.com" };
