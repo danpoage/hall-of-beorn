@@ -7,7 +7,9 @@ namespace HallOfBeorn.Models.Arkham.Products
 {
     public class CoreSet : ArkhamProduct
     {
+        private ArkhamEncounterSet setGathering = ArkhamEncounterSet.TheGathering;
         private ArkhamEncounterSet setDevourer = ArkhamEncounterSet.TheDevourerBelow;
+        private ArkhamEncounterSet setMidnight = ArkhamEncounterSet.TheMidnightMasks;
 
         public CoreSet()
             : base("Core Set", "Core", "AHC01", 1, new DateTime(2016, 10, 31))
@@ -758,8 +760,43 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithBackFlavor("You've successfully uncovered the identities of all of the cult's high-ranking members within Arkham. The man who had stalked you throughout the city was dedicated in his conviction, as was Herman, the undertaker of the graveyard. Others seemed to have been coerced to aid the cult. Ruth, the mortician, had been told that her family would be killed if she did not supply the ghouls with fresh corpses. Thankfully, you managed to help her escape the hospital safely. Peter, the professor, had to be convinced that his involvement with the cult would do more harm than good. Victoria's obsession with occult artifacts had landed her deep within the cult's web. When you confronted Drew in the asylum, he attacked you - but interestingly, he did so because he thought you were part of the cult. The deeper you delve into thiss conspiracy, the clearer it becomes that many lives have been ruined by it.")
                 .WithBackText("<b>(&rarr;R1)</b>")
                 .WithInfo(123, 1, Artist.Romana_Kendelic));
-
-
+            addCard(ArkhamCard.Location("Your House", ConnectionSymbol.Your_House, Number.Of(2), Number.Of(1).PerInvestigator(), setMidnight)
+                .WithTraits("Arkham.")
+                .WithFlavor("Despite what happened, you just couldn't bring yourself to destroy your home.")
+                .WithBackText("{Forced} - When Ghoul Priest spawns: Spawn it here instead of its normal location.\r\n{Action}: Draw 1 card and gain 1 resource. (Limit once per turn.)")
+                .WithBackFlavor("You still feel uneasy about going back.")
+                .WithConnections(ConnectionSymbol.Rivertown)
+                .WithInfo(124, 1, Artist.Jose_Vega));
+            addCard(ArkhamCard.Location("Rivertown", ConnectionSymbol.Rivertown, Number.Of(1), Number.Of(1).PerInvestigator(), setMidnight)
+                .WithTraits("Arkham.", "Central.")
+                .WithFlavor("The banks of the Miskatonic River are lined with docks, warehouses, and small shops in a district aptly named Rivertown.")
+                .WithBackFlavor("There is something unsettling about the water of the Miskatonic River tonight. It ripples and bubbles as though something is moving beneath the surface.")
+                .WithConnections(ConnectionSymbol.Easttown, ConnectionSymbol.Misktaonic_University, ConnectionSymbol.Southside, ConnectionSymbol.Your_House, ConnectionSymbol.Graveyard)
+                .WithInfo(125, 1, Artist.Ed_Mattinian));
+            addCard(ArkhamCard.Location("Southside", ConnectionSymbol.Southside, Number.Of(3), Number.Of(1).PerInvestigator(), setMidnight)
+                .WithSubtitle("Historical Society")
+                .WithTraits("Arkham.")
+                .WithFlavor("Middle-class houses with gambrel roofs crowd together between the streets of Southside. The neighborhood is known for its cultural and social landmarks, such as South Church, Ma's Boarding House, and the Historical Socity.")
+                .WithBackText("{Action}: Draw 3 cards. (Limit once per game.)")
+                .WithBackFlavor("The Gregorian manor housing the Historical Society is well known for its private library, where local records, maps, and artifacts from Arkham's past hint at secrets better left alone.")
+                .WithConnections(ConnectionSymbol.Misktaonic_University, ConnectionSymbol.St_Marys_Hospital, ConnectionSymbol.Rivertown)
+                .WithInfo(126, 1, Artist.Unknown)); //Andreas Rocha
+            addCard(ArkhamCard.Location("Southside", ConnectionSymbol.Southside, Number.Of(3), Number.Of(1).PerInvestigator(), setMidnight)
+                .WithSubtitle("Ma's Boarding House")
+                .WithTraits("Arkham.")
+                .WithFlavor("Middle-class houses with gambrel roofs crowd together between the streets of Southside. The neighborhood is known for its cultural and social landmarks, such as South Church, Ma's Boarding House, and the Historical Socity.")
+                .WithBackText("{Action}: Search your deck for an Ally asset and add it to your hand. Shuffle your deck. (Limit once per game.)")
+                .WithBackFlavor("Ma's is famous for cheap rooms and Mystery Meat Mondays. A motley variety of characters can be found coming and going at all times of day.")
+                .WithConnections(ConnectionSymbol.Misktaonic_University, ConnectionSymbol.St_Marys_Hospital, ConnectionSymbol.Rivertown)
+                .WithInfo(127, 1, Artist.Unknown)); //Andreas Rocha
+            addCard(ArkhamCard.Location("St. Mary's Hospital", ConnectionSymbol.St_Marys_Hospital, Number.Of(2), Number.Of(1).PerInvestigator(), setMidnight)
+                .WithTraits("Arkham.")
+                .WithFlavor("Arkham's only hopsital, St. Mary's has a twenty-four-hour receiving room and is busy at all hours of the night. Doctor Mortimore and Nurse Sharon have been particularly stressed lately, thanks in part to recent events.")
+                .WithBackText("{Action}: Heal 3 damage. (Limit once per game.)")
+                .WithBackFlavor("An extended stay at St. Mary's can do wonders for the body, but its effect on one's psyche is unclear.")
+                .WithConnections(ConnectionSymbol.Misktaonic_University, ConnectionSymbol.Southside)
+                .WithInfo(128, 1, Artist.Unknown)); //Andreas Rocha
+            
             addCard(ArkhamCard.ScenarioReference("The Devourer Below", "Scenario Reference", setDevourer)
                 .WithText("<h3>EASY / STANDARD</h3>{Skull} -X. X is the number of {t:Monster} enemies in play.\r\n{Cultist} -2. Place 1 doom on the nearest enemy.\r\n{Tablet} -3. If there is a {t:Monster} enemy at your location, take 1 damage.\r\n{Elder Thing} -5. If there is an {t:Ancient One} enemy in play, reveal another token.")
                 .WithBackText("<h3>HARD / EXPERT</h3>{Skull} -3. If you fail, after this skill test, search the encounter discard pile for a {t:Monster} enemy, and draw it. Shuffle the encounter deck.\r\n{Cultist} -4. Place 2 doom on the nearest enemy.\r\n{Tablet} -5. If there is a {t:Monster} enemy at your location, take 1 damage and 1 horror.\r\n{Elder Thing} -7. If there is an {t:Ancient One} enemy in play, reveal another token.")
