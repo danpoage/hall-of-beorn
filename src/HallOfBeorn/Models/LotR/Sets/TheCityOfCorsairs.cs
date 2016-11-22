@@ -103,29 +103,32 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTraits("Corsair.", "Ship.")
                 .WithKeywords("Boarding 1.")
                 .WithText("Cannot have attachments.\r\nFor each point of damage dealt to a Ship objective by Slave Ship's attack, deal 1 point of damage to a non-Ship character controlled by the defending player, as well.")
-                .WithInfo(152, 1, Artist.Lukasz_Jaskolski));
+                .WithInfo(152, 2, Artist.Lukasz_Jaskolski));
             Cards.Add(LotRCard.Enemy("Umbar Slaver", string.Empty, setCoast, 28, 2, 2, 3, 5)
                 .WithTraits("Corsair.", "Raider.")
                 .WithText("Corsair Slaver gets +1 Attack and +1 Threat for each resource on it.\r\nForced: After the engaged player spends any number of resources, place 1 of those resources on Umbar Slaver.")
-                .WithInfo(153, 1, Artist.Monztre));
+                .WithEasyModeQuantity(1)
+                .WithInfo(153, 3, Artist.Monztre));
             Cards.Add(LotRCard.Location("Southern Belfalas", string.Empty, setCoast, 3, 5)
                 .WithTraits("Ocean.", "Coastland.")
                 .WithText("Travel: One player must reveal the top card of the Corsair deck and engage it to travel here.")
                 .WithShadow("Shadow: If this attack destroys a character, discard an ally controlled by the defending player.")
-                .WithInfo(154, 1, Artist.Nicholas_Gregory)); //With Course Symbol
+                .WithInfo(154, 2, Artist.Nicholas_Gregory)); //With Course Symbol
             Cards.Add(LotRCard.Location("Corsair Waters", string.Empty, setCoast, 4, 3)
                 .WithTraits("Ocean.", "Coastland.")
                 .WithText("While Corsair Waters is the active location, no more than 1 ally can enter play each round.")
                 .WithShadow("Shadow: Either shift your heading off-course, or treat this attack as undefended.")
-                .WithInfo(155, 1, Artist.Simon_Dominic)); //With Course Symbol
+                .WithEasyModeQuantity(1)
+                .WithInfo(155, 2, Artist.Simon_Dominic)); //With Course Symbol
             Cards.Add(LotRCard.Location("Watch Tower", string.Empty, setCoast, 2, 3)
                 .WithTraits("Umbar.", "Coastland.")
                 .WithText("While Watch Tower is in the staging area, it gains: \"Forced: When a Raider enemy enters play, add 1 resource to it.\"")
                 .WithShadow("Shadow: If this attack destroys an ally, add resources to a Raider enemy in play equal to that character's printed resource cost.")
-                .WithInfo(156, 1, Artist.Joshua_Cairos));
+                .WithEasyModeQuantity(1)
+                .WithInfo(156, 2, Artist.Joshua_Cairos));
             Cards.Add(LotRCard.Treachery("Serpent's Tail", string.Empty, setCoast)
                 .WithText("When Revealed: Deal 1 shadow card to each Ship enemy in play. Then, if you are off-course (Cloudy, Rainy, Stormy), each Ship enemy in play gets -10 enagement cost until the end of the round.")
-                .WithInfo(157, 1, Artist.Michael_Rasmussen));
+                .WithInfo(157, 2, Artist.Michael_Rasmussen));
             Cards.Add(LotRCard.Enemy("Captain Sahír", string.Empty, setCity, 4, 6, 6, 2, 8)
                 .WithUnique()
                 .WithTraits("Corsair.", "Raider.", "Corrupt.")
@@ -143,25 +146,29 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTraits("Umbar.", "City.")
                 .WithText("When faced with the option to travel, if Streets of Umbar is in the staging area, the players must either travel to a location named Streets of Umbar or add 2 resources to a Raider enemy in play.")
                 .WithShadow("Shadow: If attacking enemy is a Raider, deal it an additional shadow card for each resource token on it, to a maximum of 3 additional shadow cards.")
-                .WithInfo(160, 1, Artist.DinoDrawing));
+                .WithInfo(160, 3, Artist.DinoDrawing));
             Cards.Add(LotRCard.Location("City of Corsairs", string.Empty, setCity, 254, 4)
                 .WithTraits("Umbar.", "City.")
                 .WithText("X is the highest number of resources on a Raider enemy in play.\r\nTravel: Search the encounter deck and discard pile for a Corsair enemy and add it to the staging area. Shuffle the encounter deck.")
-                .WithInfo(161, 1, Artist.Nicholas_Gregory));
+                .WithEasyModeQuantity(1)
+                .WithInfo(161, 2, Artist.Nicholas_Gregory));
             Cards.Add(LotRCard.Location("Umbar Harbor", string.Empty, setCity, 4, 4)
                 .WithTraits("Umbar.", "City.")
                 .WithText("While Umbar Harbor is the active location, Corsair enemies get +2 Defense.")
                 .WithShadow("Shadow: If attacking enemy is a Raider, move 1 resource from a hero you control to attacking enemy.")
-                .WithInfo(162, 1, Artist.Mariusz_Gandzel));
+                .WithEasyModeQuantity(2)
+                .WithInfo(162, 3, Artist.Mariusz_Gandzel));
             Cards.Add(LotRCard.Treachery("Foes of Ecthelion", string.Empty, setCity)
                 .WithText("When Revealed: Add 2 resources to a Raider enemy in the staging area. Each Raider enemy in the staging area gets +1 Threat for each resource on it until the end of the phase. If there are no Raider enemies in the staging area, Foes of Ecthelion gains surge.")
-                .WithInfo(163, 1, Artist.Mariusz_Gandzel));
+                .WithEasyModeQuantity(1)
+                .WithInfo(163, 2, Artist.Mariusz_Gandzel));
             Cards.Add(LotRCard.Treachery("Umbar Patrol", string.Empty, setCity)
                 .WithText("When Revealed: Each player returns an enemy engaged with him to the staging area. Until the end of the round, enemies cannot be optionally engaged. If there are no enemies in the staging area, search the encounter deck and discard pile for an enemy and add it to the staging area.")
-                .WithInfo(164, 1, Artist.Michael_Suchanek));
+                .WithInfo(164, 2, Artist.Michael_Suchanek));
             Cards.Add(LotRCard.Treachery("Fury and Malice", string.Empty, setCity)
                 .WithText("When Revealed: Add 1 resource to each engaged Raider enemy. Then, each player assigns damage among characters he controls equal to the number of resource tokens on Raider enemies engaged with him. If no damage is assigned by this effect, Fury and Malice gains surge.")
-                .WithInfo(165, 1, Artist.Nikolas_Hagialas));
+                .WithEasyModeQuantity(2)
+                .WithInfo(165, 3, Artist.Nikolas_Hagialas));
         }
     }
 }

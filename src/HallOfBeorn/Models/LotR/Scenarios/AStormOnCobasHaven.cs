@@ -29,9 +29,10 @@ namespace HallOfBeorn.Models.LotR.Scenarios
             ExcludeCorsairPiratesFromEasyMode();
             ExcludeUmbarFleetFromEasyMode();
 
-            //ExcludeFromEasyMode("Cave-Eel-TDRu", 1);
-            //ExcludeFromEasyMode("Powerful-Undertow-TDRu", 2);
-            //ExcludeFromEasyMode("Ancient-Depths-TDRu", 2);
+            ExcludeFromEasyMode("Siege-Ship-ASoCH", 1);
+            ExcludeFromEasyMode("Heavy-Cruiser-ASoCH", 1);
+            ExcludeFromEasyMode("Coast-of-Anfalas-ASoCH", 2);
+            ExcludeFromEasyMode("Taking-on-Water-ASoCH", 1);
         }
     }
 }
