@@ -10,6 +10,7 @@ namespace HallOfBeorn.Models.Arkham.Products
         private ArkhamEncounterSet setGathering = ArkhamEncounterSet.TheGathering;
         private ArkhamEncounterSet setDevourer = ArkhamEncounterSet.TheDevourerBelow;
         private ArkhamEncounterSet setMidnight = ArkhamEncounterSet.TheMidnightMasks;
+        private ArkhamEncounterSet setCharacters = ArkhamEncounterSet.Characters; //???
 
         public CoreSet()
             : base("Core Set", "Core", "AHC01", 1, new DateTime(2016, 10, 31))
@@ -796,7 +797,69 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithBackFlavor("An extended stay at St. Mary's can do wonders for the body, but its effect on one's psyche is unclear.")
                 .WithConnections(ConnectionSymbol.Misktaonic_University, ConnectionSymbol.Southside)
                 .WithInfo(128, 1, Artist.Unknown)); //Andreas Rocha
-            
+            addCard(ArkhamCard.Location("Miskatonic University", ConnectionSymbol.Misktaonic_University, Number.Of(4), Number.Two.PerInvestigator(), setMidnight)
+                .WithTraits("Arkham.")
+                .WithFlavor("Miskatonic University is one of the most prestigious colleges in the Northeast. The university library is famous for its collection of occult books maintained by the esteemed Dr. Henry Armitage.")
+                .WithBackText("{Action}: Search the top 6 cards of your deck for a {t:Tome} or {t:Spell} card and add it to your hand. Shuffle your deck.")
+                .WithBackFlavor("The campus is quiet and lonely. Several of the building have been left unlocked for students and faculty working late into the night.")
+                .WithVictoryPoints(1)
+                .WithConnections(ConnectionSymbol.Northside, ConnectionSymbol.St_Marys_Hospital, ConnectionSymbol.Rivertown, ConnectionSymbol.Southside)
+                .WithInfo(129, 1, Artist.Unknown)); //Andreas Rocha
+            addCard(ArkhamCard.Location("Downtown", ConnectionSymbol.Downtown, Number.Of(3), Number.Of(1).PerInvestigator(), setMidnight)
+                .WithTraits("Arkham.")
+                .WithSubtitle("First Bank of Arkham")
+                .WithFlavor("The Downtown area of Arkham is filled with government buildings, including City Hall, The First Bank of Arkham, Independence Square, and Arkham Asylum can also be found in this area. It is the busiest district in the city.")
+                .WithBackText("{Action}: Gain 3 resources. (Limit once per game.)")
+                .WithBackFlavor("We'll call this a \"loan.\"")
+                .WithConnections(ConnectionSymbol.Easttown, ConnectionSymbol.Northside)
+                .WithInfo(130, 1, Artist.Jose_Vega));
+            addCard(ArkhamCard.Location("Downtown", ConnectionSymbol.Downtown, Number.Of(4), Number.Of(2).PerInvestigator(), setMidnight)
+                .WithSubtitle("Arkham Asylum")
+                .WithTraits("Arkham.")
+                .WithFlavor("The Downtown area of Arkham is filled with government buildings, including City Hall, The First Bank of Arkham, Independence Square, and Arkham Asylum can also be found in this area. It is the busiest district in the city.")
+                .WithBackText("{Action}: Heal 3 horror. (Limit once per game.)")
+                .WithBackFlavor("A refuge for the mind, or a prison for the soul?")
+                .WithConnections(ConnectionSymbol.Easttown, ConnectionSymbol.Northside)
+                .WithVictoryPoints(1)
+                .WithInfo(131, 1, Artist.Jose_Vega));
+            addCard(ArkhamCard.Location("Easttown", ConnectionSymbol.Easttown, Number.Of(2), Number.Of(1).PerInvestigator(), setMidnight)
+                .WithTraits("Arkham.")
+                .WithFlavor("The Easttown neighborhood, situated on the northern banks of the Mistaktonic River, contains lower-class housing, the Arkham Police Station, and popular eateries like Velma's Diner.")
+                .WithBackText("While you are in Easttown, reduce the cost of each {t:Ally} asset you play by 2.")
+                .WithConnections(ConnectionSymbol.Rivertown, ConnectionSymbol.Downtown)
+                .WithInfo(132, 1, Artist.Cristi_Balanescu));
+            addCard(ArkhamCard.Location("Graveyard", ConnectionSymbol.Graveyard, Number.Of(1), Number.Of(2).PerInvestigator(), setMidnight)
+                .WithTraits("Arkham.")
+                .WithFlavor("The graveyard lies at the foot of French Hill. Some of the headstones date back to the seventh century, when the earliest colonists came to Arkham. Considering what happened in your house, you're not completely keen on heading there.")
+                .WithBackText("{Forced} - After you enter the Graveyard: Test {Willpower} (3). If you fail, you must either take 2 horror or move to Rivertown.")
+                .WithConnections(ConnectionSymbol.Rivertown)
+                .WithVictoryPoints(1)
+                .WithInfo(133, 1, Artist.Michael_Komarck));
+            addCard(ArkhamCard.Location("Northside", ConnectionSymbol.Northside, Number.Of(3), Number.Of(2).PerInvestigator(), setMidnight)
+                .WithTraits("Arkham.")
+                .WithFlavor("Northside is a commercial district that contains many offices and factories, as well as the train station.")
+                .WithBackText("{Action} Spend 5 resources: Gain 2 clues from the token pool. (Group limit once per game.)")
+                .WithBackFlavor("In Northside, nothing gets people talking faster than a bit of dough.")
+                .WithConnections(ConnectionSymbol.Misktaonic_University, ConnectionSymbol.Downtown)
+                .WithVictoryPoints(1)
+                .WithInfo(134, 1, Artist.Mark_Molnar));
+            addCard(ArkhamCard.Treachery("Hunting Shadow", ArkhamCardSubtype.None, setMidnight)
+                .WithTraits("Curse.")
+                .WithKeywords("Peril.")
+                .WithText("{k:Peril}\r\n{Revelation} - You must either (choose one): Spend 1 clue or take 2 damage.")
+                .WithFlavor("A shadowy figure follows you in the rain. When you look at it, your head pounds and your vision blurs.")
+                .WithInfo(135, 3, Artist.Stephen_Somers));
+            addCard(ArkhamCard.Treachery("False Lead", ArkhamCardSubtype.None, setMidnight)
+                .WithText("{Revelation} - If you have no clues, False Lead gains {k:Surge}. If you have 1 or more clues, test {Intellect} (4). For each point you fail by, place 1 of your clues on your location.")
+                .WithInfo(136, 2, Artist.Unknown)); //Alex Aguilar
+            addCard(ArkhamCard.Enemy("\"Wolf-Man\" Drew", Number.Of(4), Number.Of(4), Number.Of(2), Number.Of(2), Number.Of(0), setCharacters)
+                .WithUnique()
+                .WithTraits("Humanoid.", "Cultist.")
+                .WithText("{Spawn} - Downtown.\r\n{Forced} - When \"Wolf-Man\" Drew attacks: Heal 1 damage from him.")
+                .WithFlavor("Drew is a longtime patient in Arkham Asylum. Rumor has it he was locked up for committing cannibalism several years ago. He is considered extremely dangerous.")
+                .WithVictoryPoints(1)
+                .WithInfo(137, 1, Artist.Stephen_Somers));
+
             addCard(ArkhamCard.ScenarioReference("The Devourer Below", "Scenario Reference", setDevourer)
                 .WithText("<h3>EASY / STANDARD</h3>{Skull} -X. X is the number of {t:Monster} enemies in play.\r\n{Cultist} -2. Place 1 doom on the nearest enemy.\r\n{Tablet} -3. If there is a {t:Monster} enemy at your location, take 1 damage.\r\n{Elder Thing} -5. If there is an {t:Ancient One} enemy in play, reveal another token.")
                 .WithBackText("<h3>HARD / EXPERT</h3>{Skull} -3. If you fail, after this skill test, search the encounter discard pile for a {t:Monster} enemy, and draw it. Shuffle the encounter deck.\r\n{Cultist} -4. Place 2 doom on the nearest enemy.\r\n{Tablet} -5. If there is a {t:Monster} enemy at your location, take 1 damage and 1 horror.\r\n{Elder Thing} -7. If there is an {t:Ancient One} enemy in play, reveal another token.")

@@ -427,6 +427,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             map["{Forced}"] = "<b>Forced</b>";
             map["{Reaction}"] = "<img title='Reaction' src='/Images/Arkham/Reaction.png' height='12' width='19'>";
             map["{Revelation}"] = "<b>Revelation</b>";
+            map["{Spawn}"] = "<b>Spawn</b>";
             
             //Symbols
             map["{Per Investigator}"] = "<img title='Reaction' src='/Images/Arkham/PerInvestigatorBlack.png' height='12' width='12'>";
@@ -453,6 +454,7 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             map["{Tentacle}"] = "<img src='/Images/Arkham/Tentacle.png'>";
 
             //Traits
+            map["{t:Ally}"] = "<a href='/Arkham?Trait=Ally.' target='_blank'><b><i>Ally</i></b></a>";
             map["{t:Ancient One}"] = "<a href='/Arkham?Trait=Ancient+One.' target='_blank'><b><i>Ancient One</i></b></a>";
             map["{t:Bayou}"] = "<a href='/Arkham?Trait=Bayou.' target='_blank'><b><i>Bayou</i></b></a>";
             map["{t:Cultist}"] = "<a href='/Arkham?Trait=Cultist.' target='_blank'><b><i>Cultist</i></b></a>";
@@ -460,12 +462,14 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
             map["{t:Ghoul}"] = "<a href='/Arkham?Trait=Ghoul.' target='_blank'><b><i>Ghoul</i></b></a>";
             map["{t:Madness}"] = "<a href='/Arkham?Trait=Madness.' target='_blank'><b><i>Madness</i></b></a>";
             map["{t:Monster}"] = "<a href='/Arkham?Trait=Monster.' target='_blank'><b><i>Monster</i></b></a>";
+            map["{t:Spell}"] = "<a href='/Arkham?Trait=Spell.' target='_blank'><b><i>Spell</i></b></a>";
             map["{t:Tome}"] = "<a href='/Arkham?Trait=Tome.' target='_blank'><b><i>Tome</i></b></a>";
             map["{t:Trap}"] = "<a href='/Arkham?Trait=Trap.' target='_blank'><b><i>Trap</i></b></a>";
 
             //Keywords
             map["{k:Fast}"] = "<a href='/Arkham?Keyword=Fast.' target='_blank'>Fast.</a>";
             map["{k:Hunter}"] = "<a href='/Arkham?Keyword=Hunter.' target='_blank'>Hunter.</a>";
+            map["{k:Peril}"] = "<a href='/Arkham?Keyword=Peril.' target='_blank'>Peril.</a>";
             map["{k:Surge}"] = "<a href='/Arkham?Keyword=Surge.' target='_blank'>Surge.</a>";
 
             return map;

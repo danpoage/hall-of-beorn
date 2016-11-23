@@ -29,6 +29,7 @@ namespace HallOfBeorn.Models.Arkham
         public static ArkhamEncounterSet TheGathering = new ArkhamEncounterSet { Name = "The Gathering" };
         public static ArkhamEncounterSet TheMidnightMasks = new ArkhamEncounterSet { Name = "The Midnight Masks" };
         public static ArkhamEncounterSet TheDevourerBelow = new ArkhamEncounterSet { Name = "The Devourer Below" };
+        public static ArkhamEncounterSet Characters = new ArkhamEncounterSet { Name = "Characters" };
 
         public static ArkhamEncounterSet CurseOfTheRougarou = new ArkhamEncounterSet { Name = "Curse of the Rougarou" };
         public static ArkhamEncounterSet TheBayou = new ArkhamEncounterSet { Name = "The Bayou" };
