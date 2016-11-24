@@ -31,9 +31,14 @@ namespace HallOfBeorn.Models.LotR.Scenarios
             ExcludeStormyWeatherFromEasyMode();;
             ExcludeUmbarFleetFromEasyMode();
 
-            //ExcludeFromEasyMode("Cave-Eel-TDRu", 1);
-            //ExcludeFromEasyMode("Powerful-Undertow-TDRu", 2);
-            //ExcludeFromEasyMode("Ancient-Depths-TDRu", 2);
+            ExcludeFromEasyMode("Slave-Ship-TCoC", 1);
+            ExcludeFromEasyMode("Umbar-Slaver-TCoC", 2);
+            ExcludeFromEasyMode("Corsair-Waters-TCoC", 1);
+            ExcludeFromEasyMode("Watch-Tower-TCoC", 1);
+            ExcludeFromEasyMode("City-of-Corsairs-TCoC", 1);
+            ExcludeFromEasyMode("Umbar-Harbor-TCoC", 1);
+            ExcludeFromEasyMode("Foes-of-Ecthelion-TCoC", 1);
+            ExcludeFromEasyMode("Fury-and-Malice-TCoC", 1);
         }
     }
 }
