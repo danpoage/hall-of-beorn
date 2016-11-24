@@ -23,6 +23,11 @@ namespace HallOfBeorn.Models.LotR
 
         protected abstract void Initialize();
 
+        protected void addCard(LotRCard card)
+        {
+            this.Cards.Add(card);
+        }
+
         public string Id { get; protected set; }
         public string Name { get; protected set; }
         public string ShortSlug { get; protected set; }
