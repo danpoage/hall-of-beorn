@@ -196,7 +196,7 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithUnique()
                 .WithTraits("Monster.", "Creature.", "Elite.")
                 .WithKeywords("Aloof.", "Retaliate.")
-                .WithText("Aloof. Retaliate.\r\nAs an additional cost for an investigator to engage The Rougarou, the investigators must spend 1 clue, as a group (2 clues instead if there are 3 or 4 investigators).\r\n{Forced} - After The Rougarou takes 1{Per Investigator} damage during a single phase: Find the location that is farthest from all investigator. Move The Rougarou (one location at a time) until it enters that location.")
+                .WithText("Aloof. Retaliate.\r\nAs an additional cost for an investigator to engage The Rougarou, the investigators must spend 1 clue, as a group (2 clues instead if there are 3 or 4 investigators).\r\n{Forced} - After The Rougarou takes 1{Per Investigator} damage during a single phase: Find the location that is farthest from all investigators. Move The Rougarou (one location at a time) until it enters that location.")
                 .WithInfo(28, 1, Artist.Nicholas_Gregory));
             addCard(ArkhamCard.Treachery("Curse of the Rougarou", ArkhamCardSubtype.Weakness, setCurse)
                 .WithTraits("Curse.")

@@ -117,7 +117,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         public CardType? CardType { get; set; }
 
         [Display(Name = "Subtype")]
-        public CardSubtype? CardSubtype { get; set; }
+        public string CardSubtype { get; set; }
 
         [Display(Name="Deck Type")]
         public DeckType? DeckType { get; set; }
@@ -337,7 +337,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public bool HasCardSubtype()
         {
-            return this.CardSubtype.HasValue && this.CardSubtype.Value != Models.CardSubtype.None;
+            return !string.IsNullOrEmpty(this.CardSubtype) && this.CardSubtype != "Any";
         }
 
         public bool HasDeckType()
@@ -571,7 +571,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public static IEnumerable<SelectListItem> CardSubtypes
         {
-            get { return typeof(CardSubtype).GetSelectListItems(); }
+            get { return typeof(CardSubtype).GetSelectListItems(new Tuple<string,string>("No Subtype", "No Subtype")); }
         }
 
         public static IEnumerable<SelectListItem> DeckTypes

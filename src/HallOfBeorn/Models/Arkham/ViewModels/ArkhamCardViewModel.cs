@@ -34,15 +34,10 @@ namespace HallOfBeorn.Models.Arkham.ViewModels
         {
             get
             {
-                switch (card.CardType)
-                {
-                    case ArkhamCardType.Investigator:
-                    case ArkhamCardType.Location:
-                    case ArkhamCardType.Act:
-                    case ArkhamCardType.Agenda:
+                if (!string.IsNullOrEmpty(card.Subtitle)) {
                         return card.Subtitle;
-                    default:
-                        return card.CardSubtype != ArkhamCardSubtype.None ? card.CardSubtype.ToString().Replace("_", " ") : string.Empty;
+                } else {
+                    return card.CardSubtype != ArkhamCardSubtype.None ? card.CardSubtype.ToString().Replace("_", " ") : string.Empty;
                 }
             }
         }

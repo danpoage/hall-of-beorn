@@ -143,8 +143,13 @@ namespace HallOfBeorn.Services.LotR
             if (model.HasCardType())
                 filters.Add(new SearchFilter((s, c) => { return s.CardTypeMatches(c); }, 100, "Card Type matches '" + model.CardType.ToEnumDisplayString() + "'"));
 
-            if (model.HasCardSubtype())
-                filters.Add(new SearchFilter((s, c) => { return s.CardSubtype == c.CardSubtype; }, 100, "Card Subtype matches '" + model.CardSubtype.ToEnumDisplayString() + "'"));
+            if (model.HasCardSubtype()) {
+                if (model.CardSubtype == "No Subtype") {
+                    filters.Add(new SearchFilter((s, c) => { return c.CardSubtype == CardSubtype.None; }, 100, "Card Has No Subtype"));
+                } else {
+                    filters.Add(new SearchFilter((s, c) => { return s.CardSubtype == c.CardSubtype.ToString(); }, 100, "Card Subtype matches '" + model.CardSubtype.ToEnumDisplayString() + "'"));
+                }
+            }
 
             if (model.HasDeckType())
                 filters.Add(new SearchFilter((s, c) => { return s.DeckType == c.DeckType; }, 100, "Deck Type matches '" + model.DeckType.ToEnumDisplayString() + "'"));
@@ -313,8 +318,13 @@ namespace HallOfBeorn.Services.LotR
             if (model.HasEncounterSet())
                 filters.Add(new SearchFilter((s, c) => { return s.EncounterSet == c.EncounterSet || s.EncounterSet == c.AlternateEncounterSet; }, 100, "Has Encounter Set '" + model.EncounterSet + "'"));
 
-            if (model.HasVictoryPoints())
-                filters.Add(new SearchFilter((s, c) => { return s.VictoryPointsMatch(c); }, 100, "Has Victory Points '" + model.VictoryPoints + "'"));
+            if (model.HasVictoryPoints()) {
+                if (model.VictoryPoints == "Victory>0") {
+                    filters.Add(new SearchFilter((s, c) => { return c.VictoryPoints > 0; }, 100, "Has Victory Points"));
+                } else {
+                    filters.Add(new SearchFilter((s, c) => { return s.VictoryPointsMatch(c); }, 100, "Has Victory Points '" + model.VictoryPoints + "'"));
+                }
+            }
             
             if (model.HasShadow.HasValue && model.HasShadow.Value != HasShadow.Any)
                 filters.Add(new SearchFilter((s, c) => { return (s.HasShadow == HasShadow.Yes && !string.IsNullOrEmpty(c.Shadow) || s.HasShadow == HasShadow.No && string.IsNullOrEmpty(c.Shadow)); }, 50, model.HasShadow == HasShadow.Yes ? "Has Shadow Effect" : "Does Not Have Shadow Effect"));

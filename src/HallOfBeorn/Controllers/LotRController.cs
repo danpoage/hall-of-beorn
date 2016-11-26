@@ -55,7 +55,7 @@ namespace HallOfBeorn.Controllers
             SearchViewModel.ResourceCosts = statService.ResourceCosts().GetSelectListItems();
             SearchViewModel.ThreatCosts = statService.ThreatCosts().GetSelectListItems();
             SearchViewModel.EngagementCosts = statService.EngagementCosts().GetSelectListItems();
-            SearchViewModel.VictoryPointValues = statService.VictoryPointsValues().GetSelectListItems();
+            SearchViewModel.VictoryPointValues = statService.VictoryPointsValues().GetSelectListItems(new Tuple<string, string>("Victory > 0", "Victory>0"));
             SearchViewModel.AttackStrengthValues = statService.AttackStrengthValues().GetSelectListItems();
             SearchViewModel.DefenseStrengthValues = statService.DefenseStrengthValues().GetSelectListItems();
             SearchViewModel.HitPointsValues = statService.HitPointsValues().GetSelectListItems();
@@ -675,7 +675,7 @@ namespace HallOfBeorn.Controllers
             {
                 model.CardType = null;
             }
-            if (model.CardSubtype.HasValue && model.CardSubtype.Value == Models.CardSubtype.None)
+            if (string.IsNullOrEmpty(model.CardSubtype) || model.CardSubtype == SearchViewModel.DEFAULT_FILTER_VALUE || model.CardSubtype == "None")
             {
                 model.CardSubtype = null;
             }

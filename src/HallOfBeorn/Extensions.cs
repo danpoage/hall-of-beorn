@@ -88,11 +88,6 @@ namespace HallOfBeorn
             }
         }
 
-        public static IEnumerable<SelectListItem> GetSelectListItems(this Type enumType)
-        {
-            return enumType.GetSelectListItems(" ", false);
-        }
-
         public static IEnumerable<SelectListItem> GetSelectListItems<T>(this Type enumType, Func<T, string> mapFunction)
             where T: struct
         {
@@ -116,12 +111,27 @@ namespace HallOfBeorn
             return listItems;
         }
 
+        public static IEnumerable<SelectListItem> GetSelectListItems(this Type enumType)
+        {
+            return enumType.GetSelectListItems(" ", false);
+        }
+
+        public static IEnumerable<SelectListItem> GetSelectListItems(this Type enumType, Tuple<string, string> topItem)
+        {
+            return enumType.GetSelectListItems(" ", false, topItem);
+        }
+
         public static IEnumerable<SelectListItem> GetSelectListItems(this Type enumType, string separator)
         {
             return enumType.GetSelectListItems(separator, false);
         }
 
         public static IEnumerable<SelectListItem> GetSelectListItems(this Type enumType, string separator, bool keepZero)
+        {
+            return enumType.GetSelectListItems(separator, false, null);
+        }
+
+        public static IEnumerable<SelectListItem> GetSelectListItems(this Type enumType, string separator, bool keepZero, Tuple<string, string> topItem)
         {
             var listItems = new List<SelectListItem>();
 
@@ -148,12 +158,39 @@ namespace HallOfBeorn
                 );
             }
 
+            if (topItem != null && listItems.Count > 1) {
+                listItems.Insert(1, new SelectListItem { Selected = false, Text = topItem.Item1, Value = topItem.Item2 });
+            }
+
             return listItems;
         }
 
         public static IEnumerable<SelectListItem> GetSelectListItems(this IEnumerable<string> list)
         {
-            var listItems = new List<SelectListItem>() { new SelectListItem() { Selected = true, Text = "Any", Value = "Any" } };
+            var listItems = new List<SelectListItem>() { new SelectListItem { Selected = true, Text = "Any", Value = "Any" } };
+
+            foreach (var item in list)
+            {
+                listItems.Add(
+                    new SelectListItem()
+                    {
+                        Text = item.Replace(".", string.Empty),
+                        Value = item
+                    }
+                );
+            }
+
+            return listItems;
+        }
+
+        public static IEnumerable<SelectListItem> GetSelectListItems(this IEnumerable<string> list, Tuple<string,string> topItem)
+        {
+            var listItems = new List<SelectListItem>() { new SelectListItem { Selected = true, Text = "Any", Value = "Any" } };
+
+            if (topItem != null)
+            {
+                listItems.Add(new SelectListItem { Selected = false, Text = topItem.Item1, Value = topItem.Item2 });
+            }
 
             foreach (var item in list)
             {

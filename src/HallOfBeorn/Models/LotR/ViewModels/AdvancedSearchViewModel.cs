@@ -61,7 +61,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public static IEnumerable<SelectListItem> CardTypes
         {
-            get { return typeof(CardType).GetSelectListItems(); }
+            get { return typeof(CardType).GetSelectListItems(" "); }
         }
 
         public static IEnumerable<SelectListItem> Keywords

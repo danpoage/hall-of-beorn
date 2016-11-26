@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.Arkham.Products
         private ArkhamEncounterSet setGathering = ArkhamEncounterSet.TheGathering;
         private ArkhamEncounterSet setDevourer = ArkhamEncounterSet.TheDevourerBelow;
         private ArkhamEncounterSet setMidnight = ArkhamEncounterSet.TheMidnightMasks;
-        private ArkhamEncounterSet setCharacters = ArkhamEncounterSet.Characters; //???
+        private ArkhamEncounterSet setCult = ArkhamEncounterSet.CultOfUmordhoth;
 
         public CoreSet()
             : base("Core Set", "Core", "AHC01", 1, new DateTime(2016, 10, 31))
@@ -852,8 +852,9 @@ namespace HallOfBeorn.Models.Arkham.Products
             addCard(ArkhamCard.Treachery("False Lead", ArkhamCardSubtype.None, setMidnight)
                 .WithText("{Revelation} - If you have no clues, False Lead gains {k:Surge}. If you have 1 or more clues, test {Intellect} (4). For each point you fail by, place 1 of your clues on your location.")
                 .WithInfo(136, 2, Artist.Unknown)); //Alex Aguilar
-            addCard(ArkhamCard.Enemy("\"Wolf-Man\" Drew", Number.Of(4), Number.Of(4), Number.Of(2), Number.Of(2), Number.Of(0), setCharacters)
+            addCard(ArkhamCard.Enemy("\"Wolf-Man\" Drew", Number.Of(4), Number.Of(4), Number.Of(2), Number.Of(2), Number.Of(0), setCult)
                 .WithUnique()
+                .WithSubtitle("The Cannibal")
                 .WithTraits("Humanoid.", "Cultist.")
                 .WithText("{Spawn} - Downtown.\r\n{Forced} - When \"Wolf-Man\" Drew attacks: Heal 1 damage from him.")
                 .WithFlavor("Drew is a longtime patient in Arkham Asylum. Rumor has it he was locked up for committing cannibalism several years ago. He is considered extremely dangerous.")
