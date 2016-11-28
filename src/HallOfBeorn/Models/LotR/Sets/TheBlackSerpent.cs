@@ -15,6 +15,11 @@ namespace HallOfBeorn.Models.LotR.Sets
             SetType = Models.SetType.Adventure_Pack;
             Cycle = "Haradrim";
 
+            addCard(LotRCard.Attachment("Song of Hope", string.Empty, Sphere.Leadership, 0)
+                .WithTraits("Song.")
+                .WithText("Attach to a hero. Limit 1 per hero.\r\nAction: Spend 1 resource from attached hero's pool to give attached hero +1 Willpower until the end of the phase. (Limit 3 times per phase.)")
+                .WithFlavor("\"I will not say the Day is done.\r\nnor bid the Stars farewell.\"\r\n-Sam Gamgee, The Return of the King")
+                .WithInfo(82, 3, Artist.Micah_Epstein));
             Cards.Add(LotRCard.Event("Burst into Song", string.Empty, Sphere.Leadership, 2)
                 .WithText("Ready each hero with a Song attachment.")
                 .WithFlavor("And then all the host of Rohan burst into song, and they sang as they slew, for the joy of battle was on them, and the sound of their singing that was fair and terrible came even to the City.\r\n-The Return of the King")
