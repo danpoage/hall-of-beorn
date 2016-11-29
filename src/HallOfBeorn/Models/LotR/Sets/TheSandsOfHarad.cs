@@ -27,18 +27,21 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithFlavor("\"I go to find the Sun!\"\r\n-The Fellowship of the Ring")
                 .WithInfo(2, 1, Artist.Aleksander_Karcz));
             addCard(LotRCard.Ally("Greenwood Archer", string.Empty, Sphere.Leadership, 2, 0, 2, 0, 1)
+                .WithGeneric()
                 .WithTraits("Silvan.")
                 .WithKeywords("Ranged.")
                 .WithText("Response: After Greenwood Archer enters play, ready a hero.")
                 .WithFlavor("They dwelt most often by the edges of the woods, from which they could escape at times to hunt...\r\n-The Hobbit")
                 .WithInfo(3, 3, Artist.Unknown));
             addCard(LotRCard.Ally("Erebor Guard", string.Empty, Sphere.Spirit, 4, 0, 1, 2, 3)
+                .WithGeneric()
                 .WithTraits("Dwarf.", "Warrior.")
                 .WithKeywords("Sentinel.")
                 .WithText("Response: When you play Erebor Guard from your hand, discard the top 2 cards of your deck to reduce its cost by 2.")
                 .WithFlavor("...the fortress of the dwarves could not be taken by surprise.\r\n-The Hobbit")
                 .WithInfo(4, 3, Artist.Unknown));
             addCard(LotRCard.Ally("Halfling Bounder", string.Empty, Sphere.Lore, 2, 1, 1, 0, 2)
+                .WithGeneric()
                 .WithTraits("Hobbit.")
                 .WithText("While there is a side quest in the victory display, Halfling Bounder gains: \"Response: Discard Halfling Bounder to cancel the 'when revealed' effects of an encounter card that was just revealed from the encounter deck.\"")
                 .WithFlavor("\"The Bounders have never been so busy before.\"\r\n-Sam Gamgee, The Fellowship of the Ring")
