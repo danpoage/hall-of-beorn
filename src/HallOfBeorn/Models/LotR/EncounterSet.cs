@@ -135,6 +135,12 @@ namespace HallOfBeorn.Models.LotR
             Add(TheThingInTheDepths);
             Add(TheStormcaller);
             Add(TempleOfTheDeceived);
+            Add(TheDrownedRuins);
+            Add(AStormOnCobasHaven);
+            Add(TheCityOfCorsairs);
+
+            //The Sands of Harad and Harradrim
+            Add(TheLongArmOfMordor);
 
             //The Hobbit: Over Hill and Under Hill
             Add(WeMustAwayEreBreakOfDay);
@@ -373,6 +379,9 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet AStormOnCobasHaven = new EncounterSet { Name = "A Storm on Cobas Haven", Set = "A Storm on Cobas Haven" };
         public static EncounterSet TheCityOfCorsairs = new EncounterSet { Name = "The City of Corsairs", Set = "The City of Corsairs" };
         public static EncounterSet CoastOfUmbar = new EncounterSet { Name = "Coast of Umbar", Set = "The City of Corsairs" };
+
+        //The Sands of Harad and Harradrim
+        public static EncounterSet TheLongArmOfMordor = new EncounterSet { Name = "The Long Arm of Mordor", Set = "The Sands of Harad" };
 
         //The Hobbit: Over Hill and Under Hill
         public static EncounterSet WeMustAwayEreBreakOfDay = new EncounterSet { Name = "We Must Away, Ere Break of Day", Set = "The Hobbit: Over Hill and Under Hill" };

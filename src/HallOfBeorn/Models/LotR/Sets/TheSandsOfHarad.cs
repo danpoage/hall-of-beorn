@@ -7,6 +7,8 @@ namespace HallOfBeorn.Models.LotR.Sets
 {
     public class TheSandsOfHarad : CardSet
     {
+        private string setLongArm = EncounterSet.TheLongArmOfMordor.Name;
+
         protected override void Initialize()
         {
             Name = "The Sands of Harad";
@@ -89,6 +91,25 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithFlavor("\"For behold! The storm comes, and now all friends should gather together, lest each singly be destroyed.\"\r\n-Gandalf, The Two Towers")
                 .WithVictoryPoints(1)
                 .WithInfo(13, 3, Artist.Tomasz_Jedruszek));
+
+            addCard(LotRCard.ObjectiveHero("Kahliel", setLongArm, 2, 2, 2, 3)
+                .WithTraits("Harad.", "Noble.")
+                .WithText("Response: At the beginning of the planning phase, add 1 resource to a hero's pool.\r\nIf Kahliel leaves play, you are eliminated from the game.")
+                .WithInfo(31, 1, Artist.David_A_Nash));
+            addCard(LotRCard.ObjectiveHero("Firyal", setLongArm, 3, 1, 2, 3)
+                .WithTraits("Harad.", "Scout.")
+                .WithText("Response: After Firyal commits to a quest, look at the top of the encounter deck. Then, you may discard that card.\r\nIf Firyal leaves play, you are eliminated from the game.")
+                .WithInfo(32, 1, Artist.Tawny_Fritzinger));
+            addCard(LotRCard.ObjectiveHero("Yazan", setLongArm, 2, 3, 1, 3)
+                .WithTraits("Harad.", "Ranger.")
+                .WithKeywords("Ranged.")
+                .WithText("Response: After Yazan is declared as an attacker, deal 1 damage to a non-unique enemy in play. (Limit once per phase.)\r\nIf Yazan leaves play, you are eliminated from the game.")
+                .WithInfo(33, 1, Artist.David_A_Nash));
+            addCard(LotRCard.ObjectiveHero("Jubayr", setLongArm, 1, 2, 3, 3)
+                .WithTraits("Harad.", "Warrior.")
+                .WithKeywords("Sentinel.")
+                .WithText("Response: After Jubayr is declared as a defender, discard 1 facedown shadow card from a non-unique enemy. (Limit once per phase.)\r\nIf Jubayr leaves play, you are eliminated from the game.")
+                .WithInfo(34, 1, Artist.Unknown));
         }
     }
 }

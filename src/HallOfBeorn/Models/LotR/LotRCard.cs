@@ -600,6 +600,7 @@ namespace HallOfBeorn.Models.LotR
                     case Models.LotR.CardType.Treachery:
                     case Models.LotR.CardType.Objective:
                     case Models.LotR.CardType.Objective_Ally:
+                    case Models.LotR.CardType.Objective_Hero:
                     case Models.LotR.CardType.Objective_Location:
                     case Models.LotR.CardType.Encounter_Side_Quest:
                         return DeckType.Encounter;
@@ -675,6 +676,24 @@ namespace HallOfBeorn.Models.LotR
                 Id = id,
                 Sphere = sphere,
                 ResourceCost = resourceCost
+            };
+        }
+
+        public static LotRCard ObjectiveHero(string title, string encounterSet, byte willpower, byte attack, byte defense, byte hitPoints)
+        {
+            return new LotRCard()
+            {
+                CardType = Models.LotR.CardType.Objective_Hero,
+                Title = title,
+                NormalizedTitle = title.NormalizeCaseSensitiveString(),
+                Id = string.Empty,
+                EncounterSet = encounterSet,
+                IsUnique = true,
+                Willpower = willpower,
+                IsVariableWillpower = (willpower == 254),
+                Attack = attack,
+                Defense = defense,
+                HitPoints = hitPoints
             };
         }
 
