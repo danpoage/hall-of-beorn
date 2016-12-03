@@ -25,7 +25,7 @@ namespace HallOfBeorn.Models.Arkham
         public ArkhamCardType CardType { get; set; }
         public ArkhamCardType? BackCardType { get; set; }
         public ArkhamCardSubtype CardSubtype { get; set; }
-        public string Title { get; private set; }
+        
         public string Subtitle { get; private set; }
         
         public Number? Willpower { get; private set; }

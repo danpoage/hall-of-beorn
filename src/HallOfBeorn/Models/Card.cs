@@ -20,6 +20,17 @@ namespace HallOfBeorn.Models
             this.keywords.AddRange(keywords);
         }
 
+        private string title;
+        public string Title { 
+            get { return title; }
+            set {
+                title = value;
+                if (value.NormalizeString() != value) {
+                    NormalizedTitle = value.NormalizeString();
+                }
+            }
+        }
+        public string NormalizedTitle { get; set; }
         public string Text { get; set; }
         public bool IsUnique { get; set; }
         public byte VictoryPoints { get; set; }

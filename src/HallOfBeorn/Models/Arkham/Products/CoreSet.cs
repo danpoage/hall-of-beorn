@@ -11,6 +11,18 @@ namespace HallOfBeorn.Models.Arkham.Products
         private ArkhamEncounterSet setDevourer = ArkhamEncounterSet.TheDevourerBelow;
         private ArkhamEncounterSet setMidnight = ArkhamEncounterSet.TheMidnightMasks;
         private ArkhamEncounterSet setCult = ArkhamEncounterSet.CultOfUmordhoth;
+        private ArkhamEncounterSet setRats = ArkhamEncounterSet.Rats;
+        private ArkhamEncounterSet setGhouls = ArkhamEncounterSet.Ghouls;
+        private ArkhamEncounterSet setStrikingFear = ArkhamEncounterSet.StrikingFear;
+        private ArkhamEncounterSet setAncientEvils = ArkhamEncounterSet.AncientEvils;
+        private ArkhamEncounterSet setChillingCold = ArkhamEncounterSet.ChillingCold;
+        private ArkhamEncounterSet setDarkCult = ArkhamEncounterSet.DarkCult;
+        private ArkhamEncounterSet setNightgaunts = ArkhamEncounterSet.Nightguants;
+        private ArkhamEncounterSet setLockedDoors = ArkhamEncounterSet.LockedDoors;
+        private ArkhamEncounterSet setAgentsYoSothoth = ArkhamEncounterSet.AgentsOfYoSothoth;
+        private ArkhamEncounterSet setAgentsShubNuggurath = ArkhamEncounterSet.AgentsOfShubNiggurath;
+        private ArkhamEncounterSet setAgentsCthulhu = ArkhamEncounterSet.AgentsOfCthulhu;
+        private ArkhamEncounterSet setAgentsHastur = ArkhamEncounterSet.AgentsOfHastur;
 
         public CoreSet()
             : base("Core Set", "Core", "AHC01", 1, new DateTime(2016, 10, 31))
@@ -860,7 +872,38 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithFlavor("Drew is a longtime patient in Arkham Asylum. Rumor has it he was locked up for committing cannibalism several years ago. He is considered extremely dangerous.")
                 .WithVictoryPoints(1)
                 .WithInfo(137, 1, Artist.Stephen_Somers));
-
+            addCard(ArkhamCard.Enemy("Herman Collins", Number.Of(3), Number.Of(4), Number.Of(4), Number.Of(1), Number.Of(1), setCult)
+                .WithUnique()
+                .WithSubtitle("The Undertaker")
+                .WithTraits("Humanoid.", "Cultist.")
+                .WithText("{Spawn} - Graveyard.\r\n{Action} Choose and discard 4 cards from your hand: {Parley}. Add Herman Collins to the victory display.")
+                .WithFlavor("The undertaker in the local graveyard has been digging strange tunnels underneath the mausoleum... but for what purpose?")
+                .WithVictoryPoints(1)
+                .WithInfo(138, 1, Artist.Rafal_Hrynkiewicz));
+            addCard(ArkhamCard.Enemy("Peter Warren", Number.Of(2), Number.Of(3), Number.Of(3), Number.Of(1), Number.Of(0), setCult)
+                .WithUnique()
+                .WithSubtitle("The Occult Professor")
+                .WithTraits("Humanoid.", "Cultist.", "Miskatonic.")
+                .WithText("{Spaw} - Miskatonic University.\r\n{Action} Spend 2 clues: {Parley}. Add Peter Warren to the victory display.")
+                .WithFlavor("A professor of the occult has bee reading\r\nStrange books that relate to cannibalism.\r\nMaybe he knows something we don't?")
+                .WithVictoryPoints(1)
+                .WithInfo(139, 1, Artist.Ilich_Henriquez));
+            addCard(ArkhamCard.Enemy("Victoria Dexereux", Number.Of(3), Number.Of(3), Number.Of(2), Number.Of(1), Number.Of(0), setCult)
+                .WithUnique()
+                .WithSubtitle("The Collector")
+                .WithTraits("Humanoid.", "Cultist.")
+                .WithText("{Spawn} - Northside.\r\n{Action} Spend 5 resource: {Parley}. Add Victoria Devereux to the victory display.")
+                .WithFlavor("Oliver Thomas, the proprietor of the Curiositie Shoppe, has informed you that a new client has taken a keen interest in a mysterious mask...")
+                .WithVictoryPoints(1)
+                .WithInfo(140, 1, Artist.Priscilla_Kim));
+            addCard(ArkhamCard.Enemy("Ruth Turner", Number.Of(2), Number.Of(4), Number.Of(5), Number.Of(1), Number.Of(0), setCult)
+                .WithUnique()
+                .WithSubtitle("The Mortician")
+                .WithTraits("Humanoid.", "Cultist.")
+                .WithText("{Spawn} - St. Mary's Hospital.\r\n{Forced} - After Ruth Turner is evaded: Add her to the victory display.")
+                .WithFlavor("Bodies from the morgue have mysteriously gone missing. Perhaps the mortician in St. Mary's has something to do with these disappearances.")
+                .WithVictoryPoints(1)
+                .WithInfo(141, 1, Artist.Andreia_Ugrai));
             addCard(ArkhamCard.ScenarioReference("The Devourer Below", "Scenario Reference", setDevourer)
                 .WithText("<h3>EASY / STANDARD</h3>{Skull} -X. X is the number of {t:Monster} enemies in play.\r\n{Cultist} -2. Place 1 doom on the nearest enemy.\r\n{Tablet} -3. If there is a {t:Monster} enemy at your location, take 1 damage.\r\n{Elder Thing} -5. If there is an {t:Ancient One} enemy in play, reveal another token.")
                 .WithBackText("<h3>HARD / EXPERT</h3>{Skull} -3. If you fail, after this skill test, search the encounter discard pile for a {t:Monster} enemy, and draw it. Shuffle the encounter deck.\r\n{Cultist} -4. Place 2 doom on the nearest enemy.\r\n{Tablet} -5. If there is a {t:Monster} enemy at your location, take 1 damage and 1 horror.\r\n{Elder Thing} -7. If there is an {t:Ancient One} enemy in play, reveal another token.")
@@ -881,6 +924,130 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithText("{Forced} - When this agenda advances:<ul><li>If the investigators are at Act 1, put the set-aside Ritual Site into play and spawn the set-aside Umôrdhoth there.</li><li>If the investigators are at Act 2 or 3, discard all enemies at the Ritual Site and spawn the set-aside Umôrdhoth there.</li></ul>")
                 .WithBackText("{Revelation} - Replace the current Act and Agenda with The Devourer Below. This card is both the current Act and the current Agenda.\r\n{Objective} - If Umôrdhoth is defeated, <b>(&rarr;R2).</b>")
                 .WithInfo(145, 1, Artist.Mark_Molnar));
+            addCard(ArkhamCard.Act("Investigating the Trail", "Unveiling the Plan", 1, Number.Of(3).PerInvestigator(), setDevourer)
+                .WithFlavor("The evidence you've gathered has led you to the woods south of Arkham, where you believe a ritual to summon a being \"Umôrdhoth\" is about to take place. Steeling your resolve, you set forth deeper into the woods, hoping to find the site of this ritual.")
+                .WithBackFlavor("Scattered throughout the forest, you've seen glyphs and arcane sigils in various places -- etched into the bark of trees, carved upon the faces of stones, and dripped in blood upon the ground. Though you cannot decipher these glyphs, you notice that most of them tend to face south. Following these signs leads you by twists and turns toward a cave in the darkest and coldest part of the forest.\r\nAs you advance, shadowy figured emerge from the trees, blocking the only path to the cave.")
+                .WithBackText("Put the set-aside Ritual Site into play if it is not already in play.\r\nSearch the collection for each enemy recorded in your Campaign Log under \"Cultists Who Got Away,\" and spawn those enemies at the Main Path.")
+                .WithInfo(146, 1, Artist.Mark_Molnar));
+            addCard(ArkhamCard.Act("Into the Darkness", "Last Rites", 2, Number.NA, setDevourer)
+                .WithFlavor("The remaining cultists have followed you into the woods to try to stop you, and now they block the path to your objective. They stand ominously beneath the overhanging trees, silent sentinels in the night. You must defeat them or sneak past if you are to gain access to the site of the ritual.")
+                .WithText("{Objective} - If an investigator enters the Ritual Site, advance.")
+                .WithBackFlavor("When you enter the cave, the air grows cold, and your nostrils are assaulted by the pungent smell of blood and rot.")
+                .WithBackText("Shuffle the encounter discard pile into the encounter deck. Discard cards from the top of the encounter deck until 1 enemy is discarded (2 enemies instead if there are 3 or more players in the game). Spawn each discarded enemy at Ritual Site.")
+                .WithInfo(147, 1, Artist.Mark_Molnar));
+            addCard(ArkhamCard.Act("Disrupting the Ritual", "The Ritual is Broken", 3, Number.NA, setDevourer)
+                .WithFlavor("The site of the cult's ritual is inside a large cavern in a dark corner of the woods. In the center of the chamber is a candlelit circle marked by rocks and arcane runes.")
+                .WithText("{Action} Spend 1 clue: Test {Willpower} (3) or {Agility} (3). If you succeed, place 1 clue on this Act.\r\n{Objective} - If there are 2 clues per investigator on this Act, advance.")
+                .WithBackFlavor("You brave the unnatural chill and weave through arcane symbols, crossing the threshold of the circle. You smother the marking on the ground, covering them with dirt, breaking apart the carefully constructed pattern of smooth rocks. A shrill noise pierces your ears as the air grows suddenly warmer, and the world distorts around you, settling into normality.")
+                .WithBackText("<b>(&rarr;R1)</b>")
+                .WithInfo(148, 1, Artist.Mark_Molnar));
+            //addCard(ArkhamCard.Location("Main Path", ConnectionSymbol.Forgotten_Marsh
+            addCard(ArkhamCard.Enemy("Umôrdhoth", Number.Of(5), Number.Of(6), Number.Of(6), Number.Of(3), Number.Of(3), setDevourer)
+                .WithUnique()
+                .WithSubtitle("The Devourer Below")
+                .WithTraits("Ancient One.", "Elite.")
+                .WithKeywords("Hunter.", "Massive.")
+                .WithText("{k:Hunter} {k:Massive}\r\nUmôrdhoth gets +4 health per investigator.\r\n{Forced} - At the end of each investigator's turn: Ready Umôrdhoth.\r\n{Action} If you control Lita Chantler: \"It's only after her!\" You throw Lita to Umôrdhoth in order to spare your lives. <b>(&rarr;R3)</b>")
+                .WithInfo(157, 1, Artist.Stephen_Somers));
+            addCard(ArkhamCard.Treachery("Umôrdhoth's Wrath", ArkhamCardSubtype.None, setDevourer)
+                .WithTraits("Curse.")
+                .WithText("{Revelation} - Test {Willpower} (5). For each point you fail by, you must either (choose one): Choose and discard a card from your hand, or take 1 damage and 1 horror.")
+                .WithFlavor("A deathly chill engulfs you, attempting to suck your life force away.")
+                .WithInfo(158, 2, Artist.Dane_Cozens));
+            addCard(ArkhamCard.Enemy("Swarm of Rats", Number.Of(1), Number.Of(1), Number.Of(3), Number.Of(1), Number.Of(0), setRats)
+                .WithTraits("Creature.")
+                .WithKeywords("Hunter.")
+                .WithText("{k:Hunter}")
+                .WithFlavor("A horde of cruel rats skitters forth in an undulating wave of claws, teeth, and mottled fur.")
+                .WithInfo(159, 3, Artist.Bill_Thompson));
+            addCard(ArkhamCard.Enemy("Ghoul Minion", Number.Of(2), Number.Of(2), Number.Of(2), Number.Of(1), Number.Of(1), setGhouls)
+                .WithTraits("Humanoid.", "Monster.", "Ghoul.")
+                .WithFlavor("It was a colossal and nameless blasphemy with glaring red eyes, and it held in bony claws a thing that had been a man, gnawing at the head as a child nibbles at a stick of candy.\r\n-H.P. Lovecraft, \"Pickman's Model\"")
+                .WithInfo(160, 3, Artist.Unknown)); //Hector Ortiz
+            addCard(ArkhamCard.Enemy("Ravenous Ghoul", Number.Of(3), Number.Of(3), Number.Of(3), Number.Of(1), Number.Of(1), setGhouls)
+                .WithTraits("Humanoid.", "Monster.", "Ghoul.")
+                .WithText("{Prey} - Lowest remaining health.")
+                .WithFlavor("The sight of the thing raised the question:\r\nDo we eat to live, or do we live to eat?")
+                .WithInfo(161, 1, Artist.Christopher_Burdett));
+            addCard(ArkhamCard.Treachery("Grasping Hands", ArkhamCardSubtype.None, setGhouls)
+                .WithTraits("Hazard.")
+                .WithText("{Revelation} - Test {Agility} (3). For each point you fail by, take 1 damage.")
+                .WithFlavor("Decaying hands rise up from below and graps and claw at your ankles.")
+                .WithInfo(162, 3, Artist.JB_Casacop));
+            addCard(ArkhamCard.Treachery("Rotting Remains", ArkhamCardSubtype.None, setStrikingFear)
+                .WithTraits("Terror.")
+                .WithText("{Revelation} - Test {Willpower} (3). For each point you fail by, take 1 horror.")
+                .WithFlavor("A sickening display of gore causes you to retch.\r\nYou're glad this wasn't you.")
+                .WithInfo(163, 4, Artist.Stephen_Somers));
+            addCard(ArkhamCard.Treachery("Frozen in Fear", ArkhamCardSubtype.None, setStrikingFear)
+                .WithTraits("Terror.")
+                .WithText("{Revelation} - Put Frozen in Fear into play in your threat area.\r\nThe first time you perform one of the following actions (move, fight, or evade) each round, it costs 1 additional action.\r\n{Forced} - At the end of your turn: Test {Willpower} (3). If you succeed, disard Frozen in Fear.")
+                .WithInfo(164, 1, Artist.Unknown)); //Anders Finer
+            addCard(ArkhamCard.Treachery("Dissonant Voices", ArkhamCardSubtype.None, setStrikingFear)
+                .WithTraits("Terror.")
+                .WithText("{Revelation} - Put Dissonant Voices into play in your threat area.\r\nYou cannot play assets or events.\r\n{Forced} - At the end of the round: Discard Dissonant Voices.")
+                .WithInfo(165, 2, Artist.Sam_R_Kennedy));
+            addCard(ArkhamCard.Treachery("Ancient Evils", ArkhamCardSubtype.None, setAncientEvils)
+                .WithTraits("Omen.")
+                .WithText("{Revelation} - Place 1 doom on the current agenda. This effect can cause the current agenda to advance.")
+                .WithFlavor("Dark forces stir against you. If you do not act quickly,\r\na sinister plot will be fulfilled.")
+                .WithInfo(166, 3, Artist.Michael_Komarck));
+            addCard(ArkhamCard.Treachery("Crypt Chill", ArkhamCardSubtype.None, setChillingCold)
+                .WithTraits("Hazard.")
+                .WithText("{Revelation} - Test {Willpower} (4). If you fail, choose and discard 1 asset you control (if you cannot, take 2 damage instead).")
+                .WithFlavor("The supernatural cold threatens to freeze your soul.")
+                .WithInfo(167, 2, Artist.Stephen_Somers));
+            addCard(ArkhamCard.Treachery("Obscuring Fog", ArkhamCardSubtype.None, setChillingCold)
+                .WithTraits("Hazard.")
+                .WithText("{Revelation} - Attach to your location. Limit 1 per location.\r\nAttached location gets +2 shroud.\r\n{Forced} - After attached location is successfully investigated: Discard Obscuring Fog.")
+                .WithInfo(168, 2, Artist.Unknown)); //Alex Tooth
+            addCard(ArkhamCard.Enemy("Acolyte", Number.Of(3), Number.Of(1), Number.Of(2), Number.Of(1), Number.Of(0), setDarkCult)
+                .WithTraits("Humanoid.", "Cultist.")
+                .WithText("{Spawn} - Any empty location.\r\n{Forced} - After Acolyte enters play: Place 1 doom on it.")
+                .WithFlavor("Is was only a small sacrifice.")
+                .WithInfo(169, 3, Artist.Unknown)); //Clark Huggins
+
+            addCard(ArkhamCard.Enemy("Hunting Nightgaunt", Number.Of(3), Number.Of(4), Number.Of(1), Number.Of(1), Number.Of(1), setNightgaunts)
+                .WithTraits("Monster.", "Nightgaunt.")
+                .WithKeywords("Hunter.")
+                .WithText("{k:Hunter}\r\nWhile attempting to evade Hunting Nightgaunt, double the negative modifier of each revealed chaos token.")
+                .WithFlavor("...they had no faces at all to smile with, but only a suggestive blankness where a face ought to be.\r\n-H.P. Lovecraft")
+                .WithInfo(172, 2, Artist.Jeff_Himmelman));
+
+            addCard(ArkhamCard.Treachery("Locked Door", ArkhamCardSubtype.None, setLockedDoors)
+                .WithTraits("Obstacle.")
+                .WithText("{Revelation} - Attach to the location with the most clues, and without a Locked Door attached.\r\nThe attached location cannot be investigated.\r\n{Action}: Test {Combat} (4) to break down the door or {Agility} (4) to pick the locks. If you succeed, discard Locked Door.")
+                .WithInfo(174, 2, Artist.Dimitri_Bielak));
+
+            addCard(ArkhamCard.Enemy("Screeching Byakhee", Number.Of(3), Number.Of(4), Number.Of(3), Number.Of(1), Number.Of(2), setAgentsHastur)
+                .WithTraits("Monster.", "Byakhee.")
+                .WithKeywords("Hunter.")
+                .WithText("{Prey} - Lowest remaining sanity.\r\n{k:Hunter}\r\nWhile engaged with an investigator with remaining sanity 4 or fewer, Screeching Byakhee gets +1 fight and +1 evade.")
+                .WithVictoryPoints(1)
+                .WithInfo(175, 2, Artist.Unknown)); //Hector Ortiz
+
+            addCard(ArkhamCard.Enemy("Yithian Observer", Number.Of(4), Number.Of(4), Number.Of(3), Number.Of(1), Number.Of(1), setAgentsYoSothoth)
+                .WithTraits("Monster.", "Yithian.")
+                .WithText("{Prey} - Fewest cards in hand.\r\n{Forced} - When Yithian Observer attacks you: Discard 1 card at random from your hand. If you cannot, Yithian Observer deals +1 damage and +1 horror for this attack.")
+                .WithVictoryPoints(1)
+                .WithInfo(177, 2, Artist.Chun_Lo));
+
+            addCard(ArkhamCard.Enemy("Relentless Dark Young", Number.Of(4), Number.Of(5), Number.Of(2), Number.Of(2), Number.Of(1), setAgentsShubNuggurath)
+                .WithTraits("Monster.", "Dark Young.")
+                .WithText("{Prey} - Lowest {Agility}.\r\n{Forced} - At the end of the round: Heal 2 damage from Relentless Dark Young.")
+                .WithFlavor("The trees trembled, leaves fluttering around us. The earth shook as the thuds of giant hooved feet grew ever closer...")
+                .WithVictoryPoints(1)
+                .WithInfo(179, 1, Artist.Michael_Komarck));
+
+            addCard(ArkhamCard.Enemy("Young Deep One", Number.Of(3), Number.Of(3), Number.Of(3), Number.Of(1), Number.Of(1), setAgentsCthulhu)
+                .WithTraits("Humanoid.", "Monster.", "Deep One.")
+                .WithKeywords("Hunter.")
+                .WithText("{Prey} - Lowest {Combat}.\r\n{k:Hunter}\r\n{Forced} - After Young Deep One engages you: Take 1 horror.")
+                .WithInfo(181, 2, Artist.Mike_Capprotti));
+            addCard(ArkhamCard.Treachery("Dreams of R'lyeh", ArkhamCardSubtype.None, setAgentsCthulhu)
+                .WithTraits("Omen.")
+                .WithText("{Revelation} - Put Dreams of R'lyeh into play in your threat area.\r\nYou get -1 {Willpower} and -1 sanity.\r\n{Action}: Test {Willpower} (3). If you succeed, discard Dreams of R'lyeh.")
+                .WithInfo(182, 2, Artist.Ryan_Barger));
         }
     }
 }

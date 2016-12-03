@@ -23,6 +23,11 @@ namespace HallOfBeorn.Models.Arkham
         Easttown, //Crescent on Purple?
         Graveyard, //Hourglass on Black
         Northside, //T on Black
+        
+        //The Devourer Below
+        Main_Path, //Sideways Green S
+        Arkham_Woods, //Brown Rectangle
+        Ritual_Site, //Black Cross
 
         //Curse of the Rougarou
         Cursed_Shores,

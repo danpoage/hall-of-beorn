@@ -443,8 +443,6 @@ namespace HallOfBeorn.Models.LotR
         public string OctgnSlug { get; set; }
         public int ScenarioNumber { get; set; }
 
-        public string Title { get; set; }
-        public string NormalizedTitle { get; set; }
         public string OppositeTitle { get; set; }
         public string NormalizedOppositeTitle { get; set; }
 

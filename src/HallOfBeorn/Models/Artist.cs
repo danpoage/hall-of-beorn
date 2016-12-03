@@ -1098,5 +1098,6 @@ namespace HallOfBeorn.Models
         public static Artist Josh_Stewart = new Artist { Name = "Josh Stewart", URL = "http://www.joshuajstewart.com" };
         public static Artist VIKO = new Artist { Name = "VIKO", URL = "http://www.vikowebsite.com/concept-art" };
         public static Artist Reiko_Murakami = new Artist { Name = "Reiko Murakami", URL = "http://www.reikomurakami.com" };
+        public static Artist Priscilla_Kim = new Artist { Name = "Priscilla Kim", URL = "http://www.priscilla-kim.com" };
     }
 }

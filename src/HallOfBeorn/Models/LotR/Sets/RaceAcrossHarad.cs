@@ -29,7 +29,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithInfo(30, 3, Artist.Alvaro_Calvo_Escudero));
             Cards.Add(LotRCard.PlayerSideQuest("Explore Secret Ways", string.Empty, Sphere.Lore, 1, 6)
                 .WithText("Limit 1 copy of Explore Secret Ways in the victory display.\r\nWhile Explore Secret Ways is in the victory display, each location in the staging area with the same title as the active location does not contribute its Threat to the total Threat in the staging area.")
-                .WithFlavor("\"I myself dares to pass the doors of the Necromancer in Dul Guldur, and secretly explored his ways...\"\r\n-Gandalf, The Fellowship of the Ring")
+                .WithFlavor("\"I myself dared to pass the doors of the Necromancer in Dul Guldur, and secretly explored his ways...\"\r\n-Gandalf, The Fellowship of the Ring")
                 .WithVictoryPoints(1)
                 .WithInfo(36, 3, Artist.Andreia_Ugrai));
         }

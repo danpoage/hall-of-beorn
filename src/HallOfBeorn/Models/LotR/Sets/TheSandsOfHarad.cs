@@ -7,7 +7,14 @@ namespace HallOfBeorn.Models.LotR.Sets
 {
     public class TheSandsOfHarad : CardSet
     {
+        private string setEscape = EncounterSet.EscapeFromUmbar.Name;
         private string setLongArm = EncounterSet.TheLongArmOfMordor.Name;
+        private string setMordorOrcs = EncounterSet.MordorOrcs.Name;
+        private string setJungle = EncounterSet.JungleForest.Name;
+        private string setHaradSoldiers = EncounterSet.HaradSoldiers.Name;
+        private string setHaradTerritory = EncounterSet.HaradTerritory.Name;
+        private string setCrossing = EncounterSet.DesertCrossing.Name;
+        private string setCreatures = EncounterSet.DesertCreatures.Name;
 
         protected override void Initialize()
         {
@@ -91,6 +98,9 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithFlavor("\"For behold! The storm comes, and now all friends should gather together, lest each singly be destroyed.\"\r\n-Gandalf, The Two Towers")
                 .WithVictoryPoints(1)
                 .WithInfo(13, 3, Artist.Tomasz_Jedruszek));
+            addCard(LotRCard.Objective("\"Seize Them!\"", string.Empty, setEscape)
+                .WithText("Forced: After an enemy attacks and destroys a character, remove X progress from the main quest, X is the attacking enemy's Threat.\r\nAt the end of the round, if the main quest has been in play the entire round and there are no progress tokens on it, the players lose the game.")
+                .WithInfo(14, 1, Artist.Victor_Manuel_Leza_Moreno));
 
             addCard(LotRCard.ObjectiveHero("Kahliel", setLongArm, 2, 2, 2, 3)
                 .WithTraits("Harad.", "Noble.")
@@ -110,6 +120,12 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithKeywords("Sentinel.")
                 .WithText("Response: After Jubayr is declared as a defender, discard 1 facedown shadow card from a non-unique enemy. (Limit once per phase.)\r\nIf Jubayr leaves play, you are eliminated from the game.")
                 .WithInfo(34, 1, Artist.Unknown));
+
+            addCard(LotRCard.Enemy("Uruk Chieftain", string.Empty, setMordorOrcs, 50, 4, 5, 3, 6)
+                .WithUnique()
+                .WithTraits("Orc.", "Uruk.")
+                .WithText("Cannot have player card attachments or be optionally engaged.\r\nWhile the engaged player is engaged with another Orc enemy, ~Uruk Chieftain cannot take damage.\r\nForced: At the end of the encounter phase, ~Uruk Chieftain engages the player engaged with the most non-unique Orc enemies.")
+                .WithInfo(61, 1, Artist.Sam_Lamont));
         }
     }
 }

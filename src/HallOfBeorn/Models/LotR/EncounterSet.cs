@@ -140,7 +140,14 @@ namespace HallOfBeorn.Models.LotR
             Add(TheCityOfCorsairs);
 
             //The Sands of Harad and Harradrim
+            Add(EscapeFromUmbar);
             Add(TheLongArmOfMordor);
+            Add(MordorOrcs);
+            Add(DesertCrossing);
+            Add(DesertCreatures);
+            Add(JungleForest);
+            Add(HaradSoldiers);
+            Add(HaradTerritory);
 
             //The Hobbit: Over Hill and Under Hill
             Add(WeMustAwayEreBreakOfDay);
@@ -381,7 +388,14 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet CoastOfUmbar = new EncounterSet { Name = "Coast of Umbar", Set = "The City of Corsairs" };
 
         //The Sands of Harad and Harradrim
+        public static EncounterSet EscapeFromUmbar = new EncounterSet { Name = "Escape from Umbar", Set = "The Sands of Harad" };
         public static EncounterSet TheLongArmOfMordor = new EncounterSet { Name = "The Long Arm of Mordor", Set = "The Sands of Harad" };
+        public static EncounterSet MordorOrcs = new EncounterSet { Name = "Mordor Orcs", Set = "The Sands of Harad" };
+        public static EncounterSet DesertCrossing = new EncounterSet { Name = "Desert Crossing", Set = "The Sands of Harad" };
+        public static EncounterSet DesertCreatures = new EncounterSet { Name = "Desert Creatures", Set = "The Sands of Harad" };
+        public static EncounterSet HaradSoldiers = new EncounterSet { Name = "Harad Soldiers", Set = "The Sands of Harad" };
+        public static EncounterSet HaradTerritory = new EncounterSet { Name = "Harad Territory", Set = "The Sands of Harad" };
+        public static EncounterSet JungleForest = new EncounterSet { Name = "Jungle Forest", Set = "Jungle Forest" };
 
         //The Hobbit: Over Hill and Under Hill
         public static EncounterSet WeMustAwayEreBreakOfDay = new EncounterSet { Name = "We Must Away, Ere Break of Day", Set = "The Hobbit: Over Hill and Under Hill" };
