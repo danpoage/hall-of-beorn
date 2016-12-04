@@ -888,7 +888,7 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithFlavor("A professor of the occult has bee reading\r\nStrange books that relate to cannibalism.\r\nMaybe he knows something we don't?")
                 .WithVictoryPoints(1)
                 .WithInfo(139, 1, Artist.Ilich_Henriquez));
-            addCard(ArkhamCard.Enemy("Victoria Dexereux", Number.Of(3), Number.Of(3), Number.Of(2), Number.Of(1), Number.Of(0), setCult)
+            addCard(ArkhamCard.Enemy("Victoria Devereux", Number.Of(3), Number.Of(3), Number.Of(2), Number.Of(1), Number.Of(0), setCult)
                 .WithUnique()
                 .WithSubtitle("The Collector")
                 .WithTraits("Humanoid.", "Cultist.")
@@ -941,7 +941,79 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithBackFlavor("You brave the unnatural chill and weave through arcane symbols, crossing the threshold of the circle. You smother the marking on the ground, covering them with dirt, breaking apart the carefully constructed pattern of smooth rocks. A shrill noise pierces your ears as the air grows suddenly warmer, and the world distorts around you, settling into normality.")
                 .WithBackText("<b>(&rarr;R1)</b>")
                 .WithInfo(148, 1, Artist.Mark_Molnar));
-            //addCard(ArkhamCard.Location("Main Path", ConnectionSymbol.Forgotten_Marsh
+            addCard(ArkhamCard.Location("Main Path", ConnectionSymbol.Main_Path, Number.Of(2), Number.Of(0), setDevourer)
+                .WithTraits("Woods.")
+                .WithFlavor("Hangman's Brook separates Uptown from the woods south of Arkham. Passing over the small bridge, you follow the main path deeper into the forest.")
+                .WithBackText("The Main Path is connected to each other {t:Woods} location.\r\n{Action}: {Resign}. \"There's nothing we can do to stop them!\" You flee from the woods, leaving Arkham to its grisly fate.")
+                .WithConnections(ConnectionSymbol.Arkham_Woods, ConnectionSymbol.Ritual_Site)
+                .WithInfo(149, 1, Artist.Matthew_Cowdery));
+            addCard(ArkhamCard.Location("Arkham Woods", ConnectionSymbol.Arkham_Woods, Number.Of(4), Number.Of(1).PerInvestigator(), setDevourer)
+                .WithSubtitle("Unhallowed Ground")
+                .WithBackLocationSymbol(ConnectionSymbol.Arkham_Woods_Unhallowed_Ground)
+                .WithTraits("Woods.")
+                .WithFlavor("Growing up, you were always warned to stay out of the woods at night. Now you know why.")
+                .WithBackText("{Forced} - After you enter this location: Test {Willpower} (4). If you fail, take 1 damage and 1 horror.")
+                .WithBackFlavor("This clearing has been the site of dark rites since colonists first came to the area over two centuries ago.")
+                .WithConnections(ConnectionSymbol.Main_Path, ConnectionSymbol.Arkham_Woods_Cliffside, ConnectionSymbol.Arkham_Woods_Old_House)
+                .WithBackArtist(Artist.Michael_Komarck)
+                .WithInfo(150, 1, Artist.Yoann_Boissonnet));
+            addCard(ArkhamCard.Location("Arkham Woods", ConnectionSymbol.Arkham_Woods, Number.Of(3), Number.Of(1).PerInvestigator(), setDevourer)
+                .WithSubtitle("Twisting Paths")
+                .WithBackLocationSymbol(ConnectionSymbol.Arkham_Woods_Twisting_Paths)
+                .WithTraits("Woods.")
+                .WithFlavor("Growing up, you were always warned to stay out of the woods at night. Now you know why.")
+                .WithBackText("{Forced} - When you move out of this location: Test {Intellect} (3). If you fail, cancel the effects of the move.")
+                .WithBackFlavor("This path seems to twist and turn upong itself,\r\nalmost as if it were alive.")
+                .WithConnections(ConnectionSymbol.Main_Path, ConnectionSymbol.Arkham_Woods_Old_House, ConnectionSymbol.Arkham_Woods_Tangled_Thicket)
+                .WithBackArtist(Artist.Dimitri_Bielak)
+                .WithInfo(151, 1, Artist.Yoann_Boissonnet));
+            addCard(ArkhamCard.Location("Arkham Woods", ConnectionSymbol.Arkham_Woods, Number.Of(2), Number.Of(1).PerInvestigator(), setDevourer)
+                .WithSubtitle("Old House")
+                .WithBackLocationSymbol(ConnectionSymbol.Arkham_Woods_Old_House)
+                .WithTraits("Woods.")
+                .WithFlavor("Growing up, you were always warned to stay out of the woods at night. Now you know why.")
+                .WithBackText("This location is investigated using {Willpower} instead of the skill indicated by the investigation attempt.")
+                .WithBackFlavor("A house waits at the edge of the trail, covered in vines. Inside, the walls and floors are bloodstained and littered with dirt, mud, and discarded bones.")
+                .WithConnections(ConnectionSymbol.Main_Path, ConnectionSymbol.Arkham_Woods_Unhallowed_Ground, ConnectionSymbol.Arkham_Woods_Twisting_Paths)
+                .WithBackArtist(Artist.Julian_Kok)
+                .WithInfo(152, 1, Artist.Yoann_Boissonnet));
+            addCard(ArkhamCard.Location("Arkham Woods", ConnectionSymbol.Arkham_Woods, Number.Of(2), Number.Of(1).PerInvestigator(), setDevourer)
+                .WithSubtitle("Cliffside")
+                .WithBackLocationSymbol(ConnectionSymbol.Arkham_Woods_Cliffside)
+                .WithTraits("Woods.")
+                .WithFlavor("Growing up, you were always warned to stay out of the woods at night. Now you know why.")
+                .WithBackText("This location is investigated using {Agility} instead of the skill indicated by the investigation attempt.")
+                .WithBackFlavor("Atop a nearby plateau, you can see signs of cultist activity.\r\nYou will have to climb the cliff in order to reach the top.")
+                .WithConnections(ConnectionSymbol.Main_Path, ConnectionSymbol.Arkham_Woods_Quiet_Glade, ConnectionSymbol.Arkham_Woods_Unhallowed_Ground)
+                .WithBackArtist(Artist.Dimitri_Bielak)
+                .WithInfo(153, 1, Artist.Yoann_Boissonnet));
+            addCard(ArkhamCard.Location("Arkham Woods", ConnectionSymbol.Arkham_Woods, Number.Of(2), Number.Of(1).PerInvestigator(), setDevourer)
+                .WithSubtitle("Tangled Thicket")
+                .WithBackLocationSymbol(ConnectionSymbol.Arkham_Woods_Tangled_Thicket)
+                .WithTraits("Woods.")
+                .WithFlavor("Growing up, you were always warned to stay out of the woods at night. Now you know why.")
+                .WithBackText("This location is investigated using {Combat} instead of the skill indicated by the investigation attempt.")
+                .WithBackFlavor("An old horse trail in colonial days, this overgrown path hasn't been used in over a decade.")
+                .WithConnections(ConnectionSymbol.Main_Path, ConnectionSymbol.Arkham_Woods_Twisting_Paths, ConnectionSymbol.Arkham_Woods_Quiet_Glade)
+                .WithBackArtist(Artist.Matthew_Cowdery)
+                .WithInfo(154, 1, Artist.Yoann_Boissonnet));
+            addCard(ArkhamCard.Location("Arkham Woods", ConnectionSymbol.Arkham_Woods, Number.Of(1), Number.Of(0), setDevourer)
+                .WithSubtitle("Quiet Glade")
+                .WithBackLocationSymbol(ConnectionSymbol.Arkham_Woods_Quiet_Glade)
+                .WithTraits("Woods.")
+                .WithFlavor("Growing up, you were always warned to stay out of the woods at night. Now you know why.")
+                .WithBackText("{Action}: Heal 1 damage or heal 1 horror. (Limit once per turn.)")
+                .WithBackFlavor("This would be a nice picnic spot,\r\nif it weren't for all the monsters.")
+                .WithConnections(ConnectionSymbol.Main_Path, ConnectionSymbol.Arkham_Woods_Tangled_Thicket, ConnectionSymbol.Arkham_Woods_Cliffside)
+                .WithBackArtist(Artist.Unknown) //Andreas Rocha
+                .WithInfo(155, 1, Artist.Yoann_Boissonnet));
+            addCard(ArkhamCard.Location("Ritual Site", ConnectionSymbol.Ritual_Site, Number.Of(3), Number.Of(2).PerInvestigator(), setDevourer)
+                .WithTraits("Cave.")
+                .WithFlavor("The large central chamber of a cold, dark cavern, adorned with arcane markings and dimly lit by candlelight.")
+                .WithBackText("{Forced} - At the end of the round, if there are fewer than 2 clues per investigator on Ritual Site: Add clues to it until it has 2 clues per investigator on it.")
+                .WithBackFlavor("The sigils on the wall begin to flicker in and out of focus, and the air grows heavy with the smell of death.")
+                .WithConnections(ConnectionSymbol.Main_Path)
+                .WithInfo(156, 1, Artist.Mark_Molnar));
             addCard(ArkhamCard.Enemy("Umôrdhoth", Number.Of(5), Number.Of(6), Number.Of(6), Number.Of(3), Number.Of(3), setDevourer)
                 .WithUnique()
                 .WithSubtitle("The Devourer Below")
@@ -1006,39 +1078,62 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithText("{Spawn} - Any empty location.\r\n{Forced} - After Acolyte enters play: Place 1 doom on it.")
                 .WithFlavor("Is was only a small sacrifice.")
                 .WithInfo(169, 3, Artist.Unknown)); //Clark Huggins
-
+            addCard(ArkhamCard.Enemy("Wizard of the Order", Number.Of(4), Number.Of(2), Number.Of(2), Number.Of(1), Number.Of(0), setDarkCult)
+                .WithTraits("Humanoid.", "Cultist.")
+                .WithText("{Spawn} - Any empty location.\r\n{k:Retaliate}\r\n{Forced} - At the end of the mythos phase: Place 1 doom Wizard of the Order.")
+                .WithInfo(170, 2, Artist.Tomasz_Jedruszek));
+            addCard(ArkhamCard.Treachery("Mysterious Chanting", ArkhamCardSubtype.None, setDarkCult)
+                .WithTraits("Hex.")
+                .WithText("{Revelation} - Place 2 doom on the nearest {t:Cultist} enemy. If there are no {t:Cultist} enemies in play, search the encounter deck and discard pile for a {t:Cultist} enemy and draw it (shuffle the encounter deck).")
+                .WithInfo(171, 2, Artist.Unknown)); //Anders Finer
             addCard(ArkhamCard.Enemy("Hunting Nightgaunt", Number.Of(3), Number.Of(4), Number.Of(1), Number.Of(1), Number.Of(1), setNightgaunts)
                 .WithTraits("Monster.", "Nightgaunt.")
                 .WithKeywords("Hunter.")
                 .WithText("{k:Hunter}\r\nWhile attempting to evade Hunting Nightgaunt, double the negative modifier of each revealed chaos token.")
                 .WithFlavor("...they had no faces at all to smile with, but only a suggestive blankness where a face ought to be.\r\n-H.P. Lovecraft")
                 .WithInfo(172, 2, Artist.Jeff_Himmelman));
-
+            addCard(ArkhamCard.Treachery("On Wings of Darkness", ArkhamCardSubtype.None, setNightgaunts)
+                .WithText("{Revelation} - Test {Agility} (4). If you fail, take 1 damage and 1 horror. Then, disengage from each non-{t:Nightgaunt} enemy engaged with you and move to a {t:Central} location.")
+                .WithFlavor("A nightgaunt swoops down from the sky and grabs you with its clawed hands, carrying you off into the night.")
+                .WithInfo(173, 2, Artist.Stephen_Somers));
             addCard(ArkhamCard.Treachery("Locked Door", ArkhamCardSubtype.None, setLockedDoors)
                 .WithTraits("Obstacle.")
                 .WithText("{Revelation} - Attach to the location with the most clues, and without a Locked Door attached.\r\nThe attached location cannot be investigated.\r\n{Action}: Test {Combat} (4) to break down the door or {Agility} (4) to pick the locks. If you succeed, discard Locked Door.")
                 .WithInfo(174, 2, Artist.Dimitri_Bielak));
-
             addCard(ArkhamCard.Enemy("Screeching Byakhee", Number.Of(3), Number.Of(4), Number.Of(3), Number.Of(1), Number.Of(2), setAgentsHastur)
                 .WithTraits("Monster.", "Byakhee.")
                 .WithKeywords("Hunter.")
                 .WithText("{Prey} - Lowest remaining sanity.\r\n{k:Hunter}\r\nWhile engaged with an investigator with remaining sanity 4 or fewer, Screeching Byakhee gets +1 fight and +1 evade.")
                 .WithVictoryPoints(1)
                 .WithInfo(175, 2, Artist.Unknown)); //Hector Ortiz
-
+            addCard(ArkhamCard.Treachery("The Yellow Sign", ArkhamCardSubtype.None, setAgentsHastur)
+                .WithTraits("Omen.")
+                .WithText("{Revelation} - Test {Willpower} (4). If you fail, take 2 horror and search your deck for a {t:Madness} weakness. Draw that card and shuffle your deck.")
+                .WithFlavor("They came to me slowly as if I had forgotten them, and at last I could make some sense out of the sounds. It was this: \"Have you found the Yellow Sign?\"\r\n-Robert W. Chambers, \"The Yellow Sign\"")
+                .WithInfo(176, 2, Artist.Unknown)); //Shane Tyree
             addCard(ArkhamCard.Enemy("Yithian Observer", Number.Of(4), Number.Of(4), Number.Of(3), Number.Of(1), Number.Of(1), setAgentsYoSothoth)
                 .WithTraits("Monster.", "Yithian.")
                 .WithText("{Prey} - Fewest cards in hand.\r\n{Forced} - When Yithian Observer attacks you: Discard 1 card at random from your hand. If you cannot, Yithian Observer deals +1 damage and +1 horror for this attack.")
                 .WithVictoryPoints(1)
                 .WithInfo(177, 2, Artist.Chun_Lo));
-
+            addCard(ArkhamCard.Treachery("Offer of Power", ArkhamCardSubtype.None, setAgentsYoSothoth)
+                .WithTraits("Pact.")
+                .WithKeywords("Peril.")
+                .WithText("{k:Peril}\r\n{Revelation} - You must either (choose one): Draw 2 cards and place 2 doom on the current agenda (this effect can cause the current agenda to advance), or take 2 horror.")
+                .WithFlavor("A voice inside your head offers you power...for a price.")
+                .WithInfo(178, 2, Artist.Stephen_Somers));
             addCard(ArkhamCard.Enemy("Relentless Dark Young", Number.Of(4), Number.Of(5), Number.Of(2), Number.Of(2), Number.Of(1), setAgentsShubNuggurath)
                 .WithTraits("Monster.", "Dark Young.")
                 .WithText("{Prey} - Lowest {Agility}.\r\n{Forced} - At the end of the round: Heal 2 damage from Relentless Dark Young.")
                 .WithFlavor("The trees trembled, leaves fluttering around us. The earth shook as the thuds of giant hooved feet grew ever closer...")
                 .WithVictoryPoints(1)
                 .WithInfo(179, 1, Artist.Michael_Komarck));
-
+            addCard(ArkhamCard.Enemy("Goat Spawn", Number.Of(3), Number.Of(3), Number.Of(2), Number.Of(1), Number.Of(0), setAgentsShubNuggurath)
+                .WithTraits("Humanoid.", "Monster.")
+                .WithKeywords("Hunter.", "Retaliate.")
+                .WithText("{k:Hunter} {k:Retaliate}\r\n{Forced} - When Goat Spawn is defeated: Each investigator at this location takes 1 horror.")
+                .WithFlavor("The creature was at once terrible and graceful, the result of blasphemous trafficks with some otherwordly horror.")
+                .WithInfo(180, 3, Artist.Stephen_Somers));
             addCard(ArkhamCard.Enemy("Young Deep One", Number.Of(3), Number.Of(3), Number.Of(3), Number.Of(1), Number.Of(1), setAgentsCthulhu)
                 .WithTraits("Humanoid.", "Monster.", "Deep One.")
                 .WithKeywords("Hunter.")

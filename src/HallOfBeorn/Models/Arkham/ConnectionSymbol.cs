@@ -27,6 +27,12 @@ namespace HallOfBeorn.Models.Arkham
         //The Devourer Below
         Main_Path, //Sideways Green S
         Arkham_Woods, //Brown Rectangle
+        Arkham_Woods_Unhallowed_Ground, //Blue Triangle
+        Arkham_Woods_Twisting_Paths, //Black T
+        Arkham_Woods_Old_House, //Yellow Diamond
+        Arkham_Woods_Cliffside, //Black Hourglass
+        Arkham_Woods_Tangled_Thicket, //Brown Double Dash
+        Arkham_Woods_Quiet_Glade, //Brown Crescent
         Ritual_Site, //Black Cross
 
         //Curse of the Rougarou

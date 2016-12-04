@@ -40,6 +40,7 @@ namespace HallOfBeorn.Models.Arkham
         public Number? Shroud { get; private set; }
         public Number? ClueValue { get; private set; }
         public ConnectionSymbol? LocationSymbol { get; private set; }
+        public ConnectionSymbol? BackLocationSymbol { get; private set; }
 
         public byte? Sequence { get; private set; }
         public Number? DoomThreshold { get; private set; }
@@ -360,6 +361,12 @@ namespace HallOfBeorn.Models.Arkham
         public ArkhamCard WithVictoryPoints(byte victoryPoints)
         {
             this.VictoryPoints = victoryPoints;
+            return this;
+        }
+
+        public ArkhamCard WithBackLocationSymbol(ConnectionSymbol symbol)
+        {
+            this.BackLocationSymbol = symbol;
             return this;
         }
 
