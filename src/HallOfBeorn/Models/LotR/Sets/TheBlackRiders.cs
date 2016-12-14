@@ -32,7 +32,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Response: Spend 1 Fellowship resource and exhaust The One ~Ring to cancel the effect of an encounter card just revealed from the encounter deck. Shuffle that card back into the encounter deck and reveal another encounter card.",
                 FlavorText = "\"I will take the Ring,\" he said, \"though I do not know the way.\" -The Fellowship of the Ring",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Jake_Murray
             });
             Cards.Add(new LotRCard() {
@@ -52,7 +52,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Response: After you engage an enemy with a higher engagement cost than your threat, ready Sam Gamgee. He gets +1 Willpower, +1 Attack and +1 Defense until the end of the round.",
                 FlavorText = "\"I'm going with him...and if any of those Black Riders try to stop him, they'll have Sam Gamgee to reckon with\" -The Fellowship of the Ring",
                 Quantity = 1,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Alexandre_Dainche
             });
             Cards.Add(new LotRCard() {
@@ -71,7 +71,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Merry gets +1 Attack for each Hobbit hero you control.\r\nResponse: After Merry participates in an attack that destroys an enemy, ready another character that participated in that attack.",
                 FlavorText = "\"You can trust us to stick to you through thick and thin to the bitter end\" -The Fellowship of the Ring",
                 Quantity = 1,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Alexandre_Dainche
             });
             Cards.Add(new LotRCard() {
@@ -90,7 +90,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Each enemy in play gets +1 engagement cost for each Hobbit hero you control.\r\nResponse: After you engage an enemy with an engagement cost higher than your threat, draw a card.",
                 FlavorText = "\"We Hobbits ought to stick together, and we will\"\r\n-The Fellowship of the Ring",
                 Quantity = 1,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Alexandre_Dainche
             });
             Cards.Add(new LotRCard() {
@@ -109,7 +109,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Action: Exhaust Fatty Bolger to choose an enemy in the staging area and raise your threat by that enemy's Threat. Until the end of the phase, that enemy does not contribute its Threat. (Limit once per round.)",
                 FlavorText = "\"I only hope that you do not need rescuing before the day is out\" -The Fellowship of the Ring",
                 Quantity = 1,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Sebastian_Giacobino
             });
             Cards.Add(new LotRCard()
@@ -129,7 +129,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Cannot have attachments.\r\nLower the cost to play Bill the Pony by 2 if you control Sam Gamgee.\r\nEach Hobbit character gets +1 hit point.",
                 FlavorText = "\"He gave me a look as plain as Mr. Pippin could speak it: if you don't let me go with you, Sam, I'll follow on my own\" -Sam Gamgee, The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Christine_Bian
             });
             Cards.Add(new LotRCard()
@@ -149,7 +149,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "If each hero you control has the Hobbit trait, damage from undefended attacks against you may be assigned to Barliman Butterbur.",
                 FlavorText = "\"But spooks or no spooks, they won't get in The Prancing Pony so easy.\" -The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Owen_William_Weber
             });
             Cards.Add(new LotRCard()
@@ -169,7 +169,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Response: After Farmer Maggot enters play, deal 1 damage to an enemy engaged with you. (Deal 2 damage instead if that enemy's engagement cost is higher than your threat.)",
                 FlavorText = "\"It is lucky for you that I know you. I was going out to set my dogs on any strangers.\" -The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Adam_Lane
             });
             Cards.Add(new LotRCard()
@@ -183,7 +183,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Action: Choose a Hobbit character. That character gets +2 Willpower, +2 Attack and +2 Defense until the end of the phase.",
                 FlavorText = "\"I have something to do before the end, and it lies ahead, not in the Shire. I must see it through, sir, if you understand me.\" -Sam Gamgee, The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 9,
+                CardNumber = 9,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard()
@@ -197,7 +197,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Action: Reduce your threat by 1 for each Pipe you control. Each hero with a Pipe attachment gets +1 Willpower until the end of the phase.",
                 FlavorText = "...he smoked and blew smoke-rings with the same vigour and delight...-The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 10,
+                CardNumber = 10,
                 Artist = Artist.Lane_Brown
             });
             Cards.Add(new LotRCard()
@@ -211,7 +211,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Lower the cost play Take No Notice by 1 for each Hobbit or Ranger hero you control.\r\nAction: Add 5 to each enemy's engagement cost until the end of the round.",
                 FlavorText = "...they made no noise that even hobbits would hear. Event the wild things in the fields and woods hardly noticed their passing. -The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 11,
+                CardNumber = 11,
                 Artist = Artist.Adam_Lane
             });
             Cards.Add(new LotRCard()
@@ -225,7 +225,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Action: Each hero you control gets +1 Willpower until the end of the round. Draw 1 card for each Hobbit hero you control.",
                 FlavorText = "\"I wonder if that is Gandalf coming after us\" said Frodo, but even as he said it, he had a feeling that it was not so... -The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 12,
+                CardNumber = 12,
                 Artist = Artist.Winona_Nelson
             });
             Cards.Add(new LotRCard()
@@ -240,7 +240,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Attach to a Hobbit hero. Limit 1 per hero.\r\nAttached hero gets +2 Defense while defending against an attack by an enemy with an engagement cost higher than your threat.",
                 FlavorText = "In their dark cloaks they were invisible as if they all had magic rings. -The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 13,
+                CardNumber = 13,
                 Artist = Artist.Alexandre_Dainche
             });
             Cards.Add(new LotRCard()
@@ -256,7 +256,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Attach to a hero.\r\nAttached hero gets +1 Attack (+2 Attack instead if attacking an enemy with an engagement cost higher than your threat).",
                 FlavorText = "...these blades were forged many long years ago by Men of Westernesse: they were foes of the Dark Lord...\r\n-The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 14,
+                CardNumber = 14,
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard()
@@ -271,7 +271,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Attach to a Hobbit character. Limit 1 per character.\r\nResponse: After your threat is reduced by an event card effect, exhaust Hobbit Pipe to draw a card.",
                 FlavorText = "But even the Dúnedain of Gondor allow us this credit: Hobbits first put it into pipes. Not even the Wizards first thought of that before we did. -The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 15,
+                CardNumber = 15,
                 Artist = Artist.Mike_Nash
             });
             Cards.Add(new LotRCard()
@@ -287,7 +287,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Attach to the active location. Attached location gets +1 quest point.\r\nResponse: After attached location leaves play as an explored location, the first player puts 1 ally into play from his hand.",
                 FlavorText = "\"It is a beryl, an elf-stone. Whether it was set there, or let fall by chance, I cannot say, but it brings hope to me\"\r\n-Aragorn, The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 16,
+                CardNumber = 16,
                 Artist = Artist.Sandara_Tang
             });
             Cards.Add(new LotRCard()
@@ -307,7 +307,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 VictoryPoints = 1,
                 Quantity = 1,
                 Setup = "t",
-                Number = 17,
+                CardNumber = 17,
                 Artist = Artist.Sebastian_Giacobino
             });
             Cards.Add(new LotRCard()
@@ -325,7 +325,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Setup: Attach to a hero.\r\nAttached hero gets +1 defense and gains the Ranger trait.",
                 FlavorText = "\"What roads would any dare to tread, what safety would there be in quiet lands, or in the homes of simple men at night, if the Dúnedain were asleep, or were all gone into the grave?\"\r\nAragorn, The Fellowship of the Ring",
                 Quantity = 1,
-                Number = 18,
+                CardNumber = 18,
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard()
@@ -343,7 +343,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Setup: Attach to a hero.\r\nAttached hero gets +2 hit points and gains the Healer trait.",
                 FlavorText = "\"Few now have the skill of healing to match such evil weapons. But I will do what I can.\"\r\n-Aragorn, The Fellowship of the Ring",
                 Quantity = 1,
-                Number = 19,
+                CardNumber = 19,
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard()
@@ -361,7 +361,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Setup: Attach to a hero.\r\nAttached hero gets +1 Attack and gains the Warrior trait.",
                 FlavorText = "\"Three of the servants of Sauron were upon the Bridge, but they withdrew and I pursued them westward.\" -Glorfindel, The Fellowship of the Ring",
                 Quantity = 1,
-                Number = 20,
+                CardNumber = 20,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard()
@@ -379,7 +379,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Setup: Attach to a hero.\r\nAttached hero gets +1 Willpower and gainst the Noble trait.",
                 FlavorText = "Venerable he seemed as a king crowned with many winters, and yet hale as a tried warrior in the fullness of his strength\r\nThe Fellowship of the Ring",
                 Quantity = 1,
-                Number = 21,
+                CardNumber = 21,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard()
@@ -397,7 +397,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 OppositeText = "When a player fails a Hide test, each Nazgûl enemy in the staging area engages that player. (Trigger Forced effects after resolving this effect.)\r\nThe player cannot advance unless Bag End is in the victory display.",
                 OppositeFlavorText = "Frodo's friend insist on joining him in his adventure, but danger finds them sooner than anticipated when Black Riders appear in the Shire.",
                 QuestPoints = 1,
-                Number = 22,
+                CardNumber = 22,
                 Artist = Artist.Cristi_Balanescu,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Hunted, EncounterSet.TheRing, EncounterSet.TheBlackRiders }
             });
@@ -414,7 +414,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 OppositeText = "When Revealed: The first player searches the encounter deck and discard pile for a Black Rider, reveals it (cannot be canceled), and adds it to the staging area. Shuffle the encounter deck.\r\nWhen a player makes a Hide test, add 1 to the total Threat for each ally that player controls.\r\nWhen a player fails a Hide test, each Nazgûl enemy in the staging area engages that player. (Trigger Forced effects after resolving this effect.)",
                 Quantity = 1,
                 QuestPoints = 14,
-                Number = 23,
+                CardNumber = 23,
                 Artist = Artist.Chris_Rahn,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Hunted, EncounterSet.TheRing, EncounterSet.TheBlackRiders }
             });
@@ -430,7 +430,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 OppositeText = "When Revealed: The first player searches the encounter deck and discard pile for a Black Rider, reveals it (cannot be canceled), and adds it to the staging area. Shuffle the encounter deck.\r\nWhen a player fails a Hide test, each Nazgûl enemy in the staging area engages that player. (Trigger Forced effects after resolving this effect.)\r\nResponse: After a player makes a successful Hide test, place X progress on a non-unique location in play. X is twice the number of players in the game.",
                 EncounterSet = "A Shadow of the Past",
                 Quantity = 1,
-                Number = 24,
+                CardNumber = 24,
                 Artist = Artist.Diego_Gisbert_Llorens,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Hunted, EncounterSet.TheRing, EncounterSet.TheBlackRiders }
             });
@@ -449,7 +449,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "A Knife in the Dark",
                 Quantity = 1,
                 QuestPoints = 8,
-                Number = 25,
+                CardNumber = 25,
                 Artist = Artist.Darek_Zabrocki,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Hunted, EncounterSet.TheRing, EncounterSet.TheNazgul }
             });
@@ -466,7 +466,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "A Knife in the Dark",
                 Quantity = 1,
                 QuestPoints = 6,
-                Number = 26,
+                CardNumber = 26,
                 Artist = Artist.Adam_Lane,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Hunted, EncounterSet.TheRing, EncounterSet.TheNazgul }
             });
@@ -484,7 +484,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 OppositeFlavorText = "There were five tall figures: two standing on the lip of the dell, three advancing. In their white faces burned keen and merciless eyes; under their mantles were long grey robes; upon their grey hairs were helms of silver; in their haggard hands were swords of steel. Their eyes fell on him and pierced him, as they rushed towards him. Desperate, he drew his own sword...\r\n–The Fellowship of the Ring ",
                 EncounterSet = "A Knife in the Dark",
                 Quantity = 1,
-                Number = 27,
+                CardNumber = 27,
                 Artist = Artist.David_A_Nash,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Hunted, EncounterSet.TheRing, EncounterSet.TheNazgul }
             });
@@ -501,7 +501,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "Flight to the Ford",
                 Quantity = 1,
                 QuestPoints = 15,
-                Number = 28,
+                CardNumber = 28,
                 Artist = Artist.Magali_Villeneuve,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Hunted, EncounterSet.TheBlackRiders, EncounterSet.TheNazgul }
             });
@@ -517,7 +517,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "Flight to the Ford",
                 Quantity = 1,
                 QuestPoints = 15,
-                Number = 29,
+                CardNumber = 29,
                 Artist = Artist.Darek_Zabrocki,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Hunted, EncounterSet.TheBlackRiders, EncounterSet.TheNazgul }
             });
@@ -538,7 +538,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 OppositeFlavorText = "The ferry-boat moved slowly across the water. The Buckland shore drew nearer. Sam was the only member of the party who had not been over the river before. He had a stange feeling as the slow gurgling stream slipped by: his old life lay behind in the mists, dark adventure lay in front. He scratched his head, and for a moment had a passing wish that Mr. Frodo could have gone on living quietly at Bag End.\r\n-The Fellowship of the Ring",
                 EncounterSet = "A Shadow of the Past",
                 Quantity = 1,
-                Number = 30,
+                CardNumber = 30,
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard()
@@ -557,7 +557,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 VictoryPoints = 1,
                 Quantity = 1,
                 EasyModeQuantity = 1,
-                Number = 31,
+                CardNumber = 31,
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard()
@@ -576,7 +576,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 VictoryPoints = 1,
                 Quantity = 1,
                 EasyModeQuantity = 1,
-                Number = 32,
+                CardNumber = 32,
                 Artist = Artist.Julian_Kok
             });
             Cards.Add(new LotRCard()
@@ -594,7 +594,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 VictoryPoints = 1,
                 Quantity = 1,
                 EasyModeQuantity = 1,
-                Number = 33,
+                CardNumber = 33,
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard()
@@ -612,7 +612,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 VictoryPoints = 1,
                 Quantity = 1,
                 EasyModeQuantity = 1,
-                Number = 34,
+                CardNumber = 34,
                 Artist = Artist.Sabin_Boykinov
             });
             Cards.Add(new LotRCard()
@@ -628,7 +628,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 Text = "Immune to player card effects.\r\nWhile there is at least 1 other location in play, players cannot travel here.\r\n\r\nTravel: The first player must make a Hide 3 test to travel here.\r\n\r\nAfter Bucklebury Ferry leaves play as an explored location, the players win the game.",
                 Quantity = 1,
                 EasyModeQuantity = 1,
-                Number = 35,
+                CardNumber = 35,
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard()
@@ -644,7 +644,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 Shadow = "Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if you have failed a Hide test this round)",
                 Quantity = 3,
                 EasyModeQuantity = 3,
-                Number = 36,
+                CardNumber = 36,
                 Artist = Artist.Sabin_Boykinov
             });
             Cards.Add(new LotRCard()
@@ -659,7 +659,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 Text = "While Stock Road is in the staging area, add 2 to the total Threat of the discarded cards when a player resolves a Hide test.\r\n\r\nTravel: The first player must make a Hide 1 test to travel here.",
                 Quantity = 3,
                 EasyModeQuantity = 1,
-                Number = 37,
+                CardNumber = 37,
                 Artist = Artist.Alyn_Spiller
             });
             Cards.Add(new LotRCard()
@@ -675,7 +675,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 Shadow = "Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the defending player failed a Hide test this round).",
                 Quantity = 2,
                 EasyModeQuantity = 1,
-                Number = 38,
+                CardNumber = 38,
                 Artist = Artist.Sabin_Boykinov
             });
             Cards.Add(new LotRCard()
@@ -689,14 +689,13 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 Defense = 4,
                 HitPoints = 6,
                 Traits = new List<string>() { "Nazgûl." },
-                NormalizedTraits = new List<string> { "Nazgul." },
                 Keywords = new List<string>() { "Hide 2." },
                 EncounterSet = "A Shadow of the Past",
                 Text = "Cannot have non-Morgul attachments.\r\nForced: After engaged player fails a Hide test, Black Rider makes an immediate attack.",
                 FlavorText = "The riding figure sat quite still with its head bowed, as if listening. From inside the hood came a noise as of someone sniffing...-The Fellowship of the Ring",
                 Quantity = 5,
                 EasyModeQuantity = 3,
-                Number = 39,
+                CardNumber = 39,
                 Artist = Artist.Mariana_Vieira
             });
             Cards.Add(new LotRCard()
@@ -715,7 +714,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 Shadow = "Shadow: If you have failed a Hide test this round, this attack is considered undefended",
                 Quantity = 3,
                 EasyModeQuantity = 3,
-                Number = 40,
+                CardNumber = 40,
                 Artist = Artist.Christine_Bian
             });
             Cards.Add(new LotRCard()
@@ -729,7 +728,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 Shadow = "Shadow: Return attacking enemy to the staging area after this attack.",
                 Quantity = 3,
                 EasyModeQuantity = 2,
-                Number = 41,
+                CardNumber = 41,
                 Artist = Artist.Brent_Hollowel
             });
             Cards.Add(new LotRCard()
@@ -742,7 +741,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 Text = "When Revealed: Starting with the last player, each player must either return a Nazgûl enemy engaged with him to the staging area or make a Hide 2 test.",
                 FlavorText = "\"So he is seeking it, seeking it, and all his thought is bent on it.\" -Gandalf, The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 42,
+                CardNumber = 42,
                 Artist = Artist.Diego_Gisbert_Llorens
             });
             Cards.Add(new LotRCard()
@@ -756,7 +755,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 FlavorText = "\"He is not far away. I wish to find him. If he passes will you tell me? I will come back with gold.\"\r\n-Black Rider, The Fellowship of the Ring",
                 Quantity = 2,
                 EasyModeQuantity = 0,
-                Number = 43,
+                CardNumber = 43,
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard()
@@ -773,7 +772,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 OppositeFlavorText = "At that moment Frodo threw himself forward on the ground, and he heard himself crying aloud: O Elbereth! Gilthoniel! At the same time he struck at the feet of his enemy. A shrill cry rang out in the night; and he felt a pain like a dart of poisoned ice pierce his left shoulder. Even as he swooned he caught, as through a swirling mist, a glimpse of Strider leaping out of the darkness with a flaming brand of wood in either hand. With a last effort Frodo, dropping his sword, slipped the Ring from his finger and closed his right hand tight about it.\r\n-The Fellowship of the Ring",
                 EncounterSet = "A Knife in the Dark",
                 Quantity = 1,
-                Number = 44,
+                CardNumber = 44,
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard()
@@ -790,7 +789,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 VictoryPoints = 1,
                 Quantity = 1,
                 EasyModeQuantity = 1,
-                Number = 45,
+                CardNumber = 45,
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard()
@@ -808,7 +807,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 VictoryPoints = 4,
                 Quantity = 1,
                 EasyModeQuantity = 1,
-                Number = 46,
+                CardNumber = 46,
                 Artist = Artist.Julian_Kok
             });
             Cards.Add(new LotRCard()
@@ -825,7 +824,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 FlavorText = "On the third day out from Bree they came out of the Chetwood. -The Fellowship of the Ring",
                 Quantity = 3,
                 EasyModeQuantity = 3,
-                Number = 47,
+                CardNumber = 47,
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard()
@@ -843,7 +842,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 VictoryPoints = 1,
                 Quantity = 1,
                 EasyModeQuantity = 1,
-                Number = 48,
+                CardNumber = 48,
                 Artist = Artist.Alyn_Spiller
             });
             Cards.Add(new LotRCard()
@@ -858,7 +857,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 Text = "Response: After the players travel here, place 1 non-unique enemy in play facedown under this location. While an enemy is under this location, it is out of play.\r\n\r\n Forced: After this location leaves play, return each enemy under it to the staging area face-up.",
                 Quantity = 3,
                 EasyModeQuantity = 3,
-                Number = 49,
+                CardNumber = 49,
                 Artist = Artist.Alyn_Spiller
             });
             Cards.Add(new LotRCard()
@@ -872,12 +871,11 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 Defense = 3,
                 HitPoints = 5,
                 Traits = new List<string>() { "Nazgûl." },
-                NormalizedTraits = new List<string> { "Nazgul." },
                 EncounterSet = "A Knife in the Dark",
                 Text = "Cannot have non-Morgul attachments.\r\nWhile Rider of Mordor is engaged with a player, characters that player controls get -1 Willpower.\r\n\r\nWhile The One ~Ring is exhausted, Rider of Mordor gets -10 engagement cost.",
                 Quantity = 2,
                 EasyModeQuantity = 2,
-                Number = 50,
+                CardNumber = 50,
                 Artist = Artist.Ryan_Barger
             });
             Cards.Add(new LotRCard()
@@ -897,7 +895,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 VictoryPoints = 1,
                 Quantity = 1,
                 EasyModeQuantity = 1,
-                Number = 51,
+                CardNumber = 51,
                 Artist = Artist.Sarah_Morris
             });
             Cards.Add(new LotRCard()
@@ -916,7 +914,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 Shadow = "Shadow: Defending character get -1 Defense (-2 Defense instead if The One ~Ring is exhausted).",
                 Quantity = 4,
                 EasyModeQuantity = 4,
-                Number = 52,
+                CardNumber = 52,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard()
@@ -935,7 +933,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 FlavorText = "Presently he slipped out of the door, followed by the squint-eyed southerner: the two had been whispering together a good deal during the evening.\r\n-The Fellowship of the Ring",
                 Quantity = 3,
                 EasyModeQuantity = 2,
-                Number = 53,
+                CardNumber = 53,
                 Artist = Artist.Dimitri_Bielak
             });
             Cards.Add(new LotRCard()
@@ -949,7 +947,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 Shadow = "Shadow: Return attacking enemy to the staging area after this attack.",
                 Quantity = 3,
                 EasyModeQuantity = 3,
-                Number = 54,
+                CardNumber = 54,
                 Artist = Artist.Jake_Murray
             });
             Cards.Add(new LotRCard()
@@ -963,7 +961,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 FlavorText = "",
                 Quantity = 2,
                 EasyModeQuantity = 0,
-                Number = 55,
+                CardNumber = 55,
                 Artist = Artist.Mariusz_Gandzel
             });
             Cards.Add(new LotRCard()
@@ -983,7 +981,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 OppositeFlavorText = "The black horses were filled with madness, and leaping forward in terror they bore their riders into the rushing flood. Their piercing cries were drowned in the roaring of the river as it carried them away. Then Frodo felt himself falling, and the roaring and confusion seemed to rise and engulf him together with his enemies. He heard and saw no more.\r\n-The Fellowship of the Ring",
                 EncounterSet = "Flight to the Ford",
                 Quantity = 1,
-                Number = 56,
+                CardNumber = 56,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard()
@@ -996,7 +994,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 EncounterSet = "Flight to the Ford",
                 Quantity = 1,
                 EasyModeQuantity = 1,
-                Number = 57,
+                CardNumber = 57,
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard()
@@ -1014,7 +1012,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 VictoryPoints = 3,
                 Quantity = 1,
                 EasyModeQuantity = 1,
-                Number = 58,
+                CardNumber = 58,
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard()
@@ -1031,7 +1029,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 VictoryPoints = 5,
                 Quantity = 1,
                 EasyModeQuantity = 1,
-                Number = 59,
+                CardNumber = 59,
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard()
@@ -1049,7 +1047,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 VictoryPoints = 1,
                 Quantity = 1,
                 EasyModeQuantity = 1,
-                Number = 60,
+                CardNumber = 60,
                 Artist = Artist.Brent_Hollowel
             });
             Cards.Add(new LotRCard()
@@ -1064,7 +1062,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 Text = "While Ettenmoors is the active location, do not deal Nazgûl enemies a shadow card during the combat phase.\r\n\r\nForced: After any amount of progress is placed on Ettenmoors, reduce the Ring-bearer's life by 1.",
                 FlavorText = "Before long Frodo was obliged to dismount and stuggle along on foot. -The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 61,
+                CardNumber = 61,
                 Artist = Artist.Aaron_B_Miller
             });
             Cards.Add(new LotRCard()
@@ -1080,7 +1078,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 FlavorText = "\"The Road is watched, be we should have to cross it, if we tried to take cover in the thickets away to the south.\"\r\n-Aragorn, The Fellowship of the Ring",
                 Quantity = 3,
                 EasyModeQuantity = 3,
-                Number = 62,
+                CardNumber = 62,
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard()
@@ -1094,12 +1092,11 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 Defense = 3,
                 HitPoints = 6,
                 Traits = new List<string>() { "Nazgûl." },
-                NormalizedTraits = new List<string> { "Nazgul." },
                 EncounterSet = "Flight to the Ford",
                 Text = "Cannot have non-Morgul attachments.\r\nWhile Fell Rider is in the staging area, it gains: \"Forced: At the beginning of the encounter phase, the first player must either reduce the Ring-bearer's life by 1 or engage Fell Rider.\"",
                 Quantity = 4,
                 EasyModeQuantity = 4,
-                Number = 63,
+                CardNumber = 63,
                 Artist = Artist.Aleksander_Karcz
             });
             Cards.Add(new LotRCard()
@@ -1113,7 +1110,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 FlavorText = "Then the leader, who was now half across the Ford, stood up menacing in his stirrups, and raised up his hand.\r\n-The Fellowship of the Ring",
                 Quantity = 3,
                 EasyModeQuantity = 3,
-                Number = 64,
+                CardNumber = 64,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
             Cards.Add(new LotRCard()
@@ -1127,7 +1124,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 Shadow = "Shadow: If this attack destroys a character, remove all progress from the current quest.",
                 Quantity = 2,
                 EasyModeQuantity = 0,
-                Number = 65,
+                CardNumber = 65,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard()
@@ -1140,7 +1137,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 Shadow = "Shadow: If this attack destroys a character, reduce the Ring-bearer's life by 1.",
                 Quantity = 3,
                 EasyModeQuantity = 3,
-                Number = 66,
+                CardNumber = 66,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
             Cards.Add(new LotRCard()
@@ -1154,7 +1151,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 Shadow = "Shadow: Return attacking enemy to the staging area after this attack.",
                 Quantity = 2,
                 EasyModeQuantity = 1,
-                Number = 67,
+                CardNumber = 67,
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard()
@@ -1169,12 +1166,11 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 Defense = 5,
                 HitPoints = 9,
                 Traits = new List<string>() { "Nazgûl." },
-                NormalizedTraits = new List<string> { "Nazgul." },
                 Text = "Immune to player card effects.\r\nThe Witch-king gets -30 engagement cost while The One ~Ring is exhausted.\r\n\r\nCharacters with 1 Willpower or less cannot defend attacks made by The Witch-king.",
                 EncounterSet = "The Nazgûl",
                 Quantity = 1,
                 EasyModeQuantity = 1,
-                Number = 68,
+                CardNumber = 68,
                 Artist = Artist.Jim_Pavelec
             });
             Cards.Add(new LotRCard()
@@ -1188,13 +1184,12 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 Defense = 4,
                 HitPoints = 5,
                 Traits = new List<string>() { "Nazgûl." },
-                NormalizedTraits = new List<string> { "Nazgul." },
                 EncounterSet = "The Nazgûl",
                 Text = "Cannot have non-Morgul attachments.\r\nForced: When Ringwraith attacks, deal it an additional shadow card if The One ~Ring is exhausted.",
                 Shadow = "Shadow: Shuffle this card into the encounter deck.",
                 Quantity = 4,
                 EasyModeQuantity = 2,
-                Number = 69,
+                CardNumber = 69,
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard()
@@ -1208,7 +1203,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 FlavorText = "...in their haggard hands were swords of steel.\r\n-The Fellowship of the Ring",
                 Quantity = 3,
                 EasyModeQuantity = 1,
-                Number = 70,
+                CardNumber = 70,
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard()
@@ -1221,7 +1216,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 Shadow = "Shadow: Discard a non-objective attachment you control.",
                 Quantity = 3,
                 EasyModeQuantity = 1,
-                Number = 71,
+                CardNumber = 71,
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard()
@@ -1237,7 +1232,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 Shadow = "Shadow: After this attack, the attacking enemy engages the next player then makes an immediate attack.",
                 Quantity = 3,
                 EasyModeQuantity = 3,
-                Number = 72,
+                CardNumber = 72,
                 Artist = Artist.Dimitri_Bielak
             });
             Cards.Add(new LotRCard()
@@ -1251,7 +1246,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 Shadow = "Shadow: Attacking enemy makes an additional attack after this one.",
                 Quantity = 3,
                 EasyModeQuantity = 1,
-                Number = 73,
+                CardNumber = 73,
                 Artist = Artist.Chris_Rallis
             });
             Cards.Add(new LotRCard()
@@ -1264,7 +1259,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 Text = "When Revealed: Attach to a Nazgûl enemy in play, if able. (Counts as a Mount attachment with the text: \"Limit 1 per enemy. Attached enemy gets -10 engagement cost and gains: 'Forced: At the end of the refresh phase, return attached enemy to the staging area.'\")",
                 Quantity = 3,
                 EasyModeQuantity = 1,
-                Number = 74,
+                CardNumber = 74,
                 Artist = Artist.Sandara_Tang
             });
             Cards.Add(new LotRCard()
@@ -1277,7 +1272,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 Shadow = "Shadow: Return attacking enemy to the staging area after this attack.",
                 Quantity = 2,
                 EasyModeQuantity = 2,
-                Number = 75,
+                CardNumber = 75,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
             Cards.Add(new LotRCard()
@@ -1290,7 +1285,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 Text = "When Revealed: The first player must either exhaust The One ~Ring or raise his threat 3.",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if The One ~Ring is exhausted).",
                 Quantity = 3,
-                Number = 76,
+                CardNumber = 76,
                 Artist = Artist.Melanie_Maier
             });
             Cards.Add(new LotRCard()
@@ -1310,7 +1305,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 Text = "The first player gains control of Gildor Inglorion.\r\nForced: At the end of the round, discard Gildor Inglorion. The first player may spend 1 Fellowship resource to cancel this effect.",
                 FlavorText = "\"We think you had best come now with us.\"\r\n-The Fellowship of the Ring",
                 Quantity = 1,
-                Number = 77,
+                CardNumber = 77,
                 Artist = Artist.Alexandre_Dainche
             });
             Cards.Add(new LotRCard()
@@ -1324,7 +1319,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 FlavorText = "The next day Frodo became really anxious, and kept a constant look-out for Gandalf. Thursday, his birthday morning, dawned as fair and clear as it had long ago for Bilbo's great party. Still Gandalf did not appear.\r\n-The Fellowship of the Ring",
                 EncounterSet = "A Shadow of the Past",
                 Quantity = 1,
-                Number = 78,
+                CardNumber = 78,
                 Artist = Artist.Drazenka_Kimpel
             });
             Cards.Add(new LotRCard()
@@ -1338,7 +1333,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 FlavorText = "\"Also,\" he added, and his voice sank to a whisper, \"the Ring draws them\" -The Fellowship of the Ring",
                 EncounterSet = "A Shadow of the Past",
                 Quantity = 1,
-                Number = 79,
+                CardNumber = 79,
                 Artist = Artist.Mike_Nash
             });
             Cards.Add(new LotRCard()
@@ -1352,7 +1347,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 FlavorText = "Once more the desire to slip on the Ring came over Frodo... -The Fellowship of the Ring",
                 EncounterSet = "Flight to the Ford",
                 Quantity = 1,
-                Number = 80,
+                CardNumber = 80,
                 Artist = Artist.Mike_Nash
             });
             Cards.Add(new LotRCard()
@@ -1367,7 +1362,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 Shadow = "Defending player raises his threat by 3.",
                 EncounterSet = "Flight to the Ford",
                 Quantity = 1,
-                Number = 81,
+                CardNumber = 81,
                 Artist = Artist.Chris_Rahn
             });
             Cards.Add(new LotRCard()
@@ -1381,7 +1376,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 Shadow = "Shadow: Deal 1 damage to defending character.",
                 EncounterSet = "Flight to the Ford",
                 Quantity = 1,
-                Number = 82,
+                CardNumber = 82,
                 Artist = Artist.Melanie_Maier
             });
             Cards.Add(new LotRCard()
@@ -1395,7 +1390,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 Shadow = "Shadow: Defending player exhausts a character he controls.",
                 EncounterSet = "Flight to the Ford",
                 Quantity = 1,
-                Number = 83,
+                CardNumber = 83,
                 Artist = Artist.Marcia_George_Bogdan
             });
             Cards.Add(new LotRCard()
@@ -1410,7 +1405,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
                 Shadow = "Shadow: Defending player discards 1 card at random from his hand.",
                 EncounterSet = "Flight to the Ford",
                 Quantity = 1,
-                Number = 84,
+                CardNumber = 84,
                 Artist = Artist.Daarken
             });
             Cards.Add(new LotRCard() {
@@ -1426,7 +1421,7 @@ Attached hero does not count against the hero limit. The first player gains cont
 
 If The One ~Ring leaves play, the players lose the game.",
                 Quantity = 1,
-                Number = 85,
+                CardNumber = 85,
                 Artist = Artist.Mike_Nash
             });
         }

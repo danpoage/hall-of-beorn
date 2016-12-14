@@ -86,10 +86,10 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             get { return _card.Slug; }
         }
 
-        public string OctgnSlug
-        {
-            get { return _card.OctgnSlug; }
-        }
+        //public string OctgnSlug
+        //{
+        //    get { return _card.OctgnSlug; }
+        //}
 
         public string Title
         {
@@ -229,9 +229,9 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 {
                     subtitle = OppositeTitle;
                 }
-                else if (!string.IsNullOrEmpty(_card.Suffix))
+                else if (!string.IsNullOrEmpty(_card.SlugSuffix))
                 {
-                    subtitle = _card.Suffix;
+                    subtitle = _card.SlugSuffix;
                 }
 
                 return !string.IsNullOrEmpty(subtitle) ?
@@ -283,7 +283,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public string Number
         {
-            get { return _card.Number.ToString(); }
+            get { return _card.CardNumber.ToString(); }
         }
 
         public string Quantity
@@ -665,7 +665,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 var ext = string.Format(".{0}", format.ToString().ToLower());
                 var set = !string.IsNullOrEmpty(_card.CardSet.NormalizedName) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
                 var title = _card.SlugIncludesOppositeTitle ? string.Format("{0}-{1}", Title.ToUrlSafeString(), OppositeTitle.ToUrlSafeString()) : Title.ToUrlSafeString();
-                var suffix = !string.IsNullOrEmpty(_card.Suffix) ? string.Format("-{0}", _card.Suffix) : string.Empty;
+                var suffix = !string.IsNullOrEmpty(_card.SlugSuffix) ? string.Format("-{0}", _card.SlugSuffix) : string.Empty;
                 var type = _card.SlugIncludesType ? string.Format("-{0}", _card.CardType.ToString().ToUrlSafeString()) : string.Empty;
                 var image = _card.ImageName.ToUrlSafeString();
 

@@ -30,7 +30,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Traits = new List<string> { "Hobbit.", "Ring-bearer." },
                 Text = "Action: Spend 1 Fellowship resource and exhaust The One ~Ring to give Frodo Baggins +2 Willpower and +2 Attack until the end of the round.",
                 FlavorText = "\"It's my doom, I think, to go to that Shadow yonder, so that a way will be found.\" -The Two Towers",
-                Number = 1,
+                CardNumber = 1,
                 Quantity = 1,
                 Artist = Artist.Melanie_Maier
             });

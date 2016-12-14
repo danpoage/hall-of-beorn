@@ -46,7 +46,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
 
                 EncounterSet = "Passage Through Mirkwood Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Stacey_Diana_Clark
             });
             Cards.Add(new LotRCard()
@@ -65,7 +65,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Shadow = "Shadow: Raise defending player's threat by 5. (Raise defending player's threat by 10 instead if undefended.)",
                 EncounterSet = "Passage Through Mirkwood Nightmare",
                 Quantity = 1,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Christopher_Burdett
             });
             Cards.Add(new LotRCard()
@@ -84,7 +84,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Shadow = "Shadow: If this attack is undefended, exhaust all characters you control.",
                 EncounterSet = "Passage Through Mirkwood Nightmare",
                 Quantity = 3,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.S_C_Watson
             });
             Cards.Add(new LotRCard()
@@ -103,7 +103,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Shadow = "Shadow: If attacking enemy is an Insect, deal it 2 additional shadow cards.",
                 EncounterSet = "Passage Through Mirkwood Nightmare",
                 Quantity = 3,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
             Cards.Add(new LotRCard()
@@ -122,7 +122,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Shadow = "Shadow: Choose and exhaust 1 character you control. If this attack is undefended, also deal that character 2 damage.",
                 EncounterSet = "Passage Through Mirkwood Nightmare",
                 Quantity = 2,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Andrew_Ryan
             });
             Cards.Add(new LotRCard()
@@ -134,7 +134,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Text = "When Revealed: The player with the highest threat exhausts all heroes he controls. Then, attach this card to one of that player's heroes. (Counts as a Condition attachment with the text, \"Each time attached hero readies, deal it 1 damage.\")",
                 EncounterSet = "Passage Through Mirkwood Nightmare",
                 Quantity = 3,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
             Cards.Add(new LotRCard()
@@ -148,7 +148,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Shadow = "Shadow: Deal and resolve the topmost Shadow effect in the encounter discard pile for this attack.",
                 EncounterSet = "Passage Through Mirkwood Nightmare",
                 Quantity = 2,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard()
@@ -164,7 +164,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Shadow = "Shadow: If this attack is undefended, discard all attachment cards players control.",
                 EncounterSet = "Passage Through Mirkwood Nightmare",
                 Quantity = 3,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Dana_Li
             });
             Cards.Add(new LotRCard()
@@ -180,7 +180,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 FlavorText = "...black even for that forest, like a patch of midnight that had never been cleared away. -The Hobbit",
                 EncounterSet = "Passage Through Mirkwood Nightmare",
                 Quantity = 2,
-                Number = 9,
+                CardNumber = 9,
                 Artist = Artist.S_C_Watson
             });
         }

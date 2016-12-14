@@ -39,7 +39,7 @@ Then, shuffle the encounter cards in this Nightmare Deck into the remainder of t
 Finally, flip this setup card over and place it next to the quest deck. Its effects remain active throughout the game, which is now ready to begin.",
                 EncounterSet = setName,
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Alvaro_Calvo_Escudero
             });
             Cards.Add(LotRCard.Enemy("Wolf Spirit", "", setName, 30, 2, 5, 1, 6)

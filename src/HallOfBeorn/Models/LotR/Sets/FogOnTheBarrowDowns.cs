@@ -38,7 +38,7 @@ When a player is instructed to create his own staging area, he sets aside an are
 Players cannot affect players or cards that do not share a common staging area. The players as a group still cannot have more than 1 copy of a unique card in play.
 
 During the encounter phase, players only reveal 1 card per player that shares their staging area. Encounter card effects are limited to players and cards at that stage. Effects that reference 'each player' only affect each player at that staging area.",
-                Number = 0,
+                CardNumber = 0,
                 Quantity = 1,
                 Artist = Artist.Unknown
             });
@@ -71,7 +71,7 @@ Campaign Mode Components
 Fog on the Barrow-downs expansion includes 2 cards that can only be used when playing the scenario in campaign mode: one double-sided campaign card and one boon card. The description for each of these card types can be found on page 4 of The Black Riders rules insert.
 
 The Lord of the ~Rings: The Black Riders Saga Expansion is required to play Fog on the Barrow-downs in campaign mode.",
-                Number = 0,
+                CardNumber = 0,
                 Quantity = 1,
                 Artist = Artist.Unknown
             });
@@ -89,14 +89,13 @@ The Lord of the ~Rings: The Black Riders Saga Expansion is required to play Fog 
                 Willpower = 2,
                 HitPoints = 5,
                 Traits = new List<string>() { "Dúnedain.", "Noble.", "Ranger." },
-                NormalizedTraits = new List<string> { "Dunedain." },
                 Text = "Response: After Aragorn commits to a quest, spend 1 resource from his resource pool to ready him.",
                 HtmlTemplate = "<p>{keyword:Sentinel.}</p><p><b>Response:</b> After {self} commits to a quest, spend 1 resource from his resource pool to ready him.</p>",
                 Keywords = new List<string>() { "Sentinel." },
                 Quantity = 1,
                 Year = 2014,
                 Artist = Artist.Sebastian_Giacobino,
-                Number = 1
+                CardNumber = 1
             });
             Cards.Add(new LotRCard()
             {
@@ -113,7 +112,7 @@ The Lord of the ~Rings: The Black Riders Saga Expansion is required to play Fog 
                 OppositeText = "Skip the quest phase.\r\nForced: At the end of the round, place 1 progress on this stage.",
                 EncounterSet = "Fog on the Barrow-downs",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Emrah_Elmasli
             });
             Cards.Add(new LotRCard()
@@ -129,7 +128,7 @@ The Lord of the ~Rings: The Black Riders Saga Expansion is required to play Fog 
                 QuestPoints = 14,
                 EncounterSet = "Fog on the Barrow-downs",
                 Quantity = 1,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Emrah_Elmasli
 
             });
@@ -151,7 +150,7 @@ The players cannot defeat this stage unless each player in the game is at this s
                 QuestPoints = 16,
                 EncounterSet = "Fog on the Barrow-downs",
                 Quantity = 1,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Florian_Devos
 
             });
@@ -171,7 +170,7 @@ Forced: After this stage is defeated, advance to stage 3B at the beginning of th
                 QuestPoints = 9,
                 EncounterSet = "Fog on the Barrow-downs",
                 Quantity = 4,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Mark_Bulahao
 
             });
@@ -189,7 +188,7 @@ Forced: After this stage is defeated, advance to stage 3B at the beginning of th
                 VictoryPoints = 3,
                 EncounterSet = "Fog on the Barrow-downs",
                 Quantity = 1,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Jose_Vega
 
             });
@@ -206,7 +205,7 @@ Forced: After this stage is defeated, advance to stage 3B at the beginning of th
                 VictoryPoints = 3,
                 EncounterSet = "Fog on the Barrow-downs",
                 Quantity = 1,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Jose_Vega
 
             });
@@ -224,7 +223,7 @@ Forced: After this stage is defeated, advance to stage 3B at the beginning of th
                 EncounterSet = "Fog on the Barrow-downs",
                 Quantity = 5,
                 EasyModeQuantity = 3,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Anthony_Devine
             });
             Cards.Add(new LotRCard()
@@ -240,7 +239,7 @@ Forced: After this stage is defeated, advance to stage 3B at the beginning of th
                 EncounterSet = "Fog on the Barrow-downs",
                 Quantity = 3,
                 EasyModeQuantity = 2,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Ferdinand_Dumago_Ladera
 
             });
@@ -256,7 +255,7 @@ Forced: After this stage is defeated, advance to stage 3B at the beginning of th
                 EncounterSet = "Fog on the Barrow-downs",
                 Quantity = 4,
                 EasyModeQuantity = 3,
-                Number = 9,
+                CardNumber = 9,
                 Artist = Artist.Ferdinand_Dumago_Ladera
 
             });
@@ -272,7 +271,7 @@ Forced: After this stage is defeated, advance to stage 3B at the beginning of th
                 Shadow = "Shadow: Attacking enemy gets +2 Attack. If this attack destroys a character, raise each player's threat by 2.",
                 EncounterSet = "Fog on the Barrow-downs",
                 Quantity = 4,
-                Number = 10,
+                CardNumber = 10,
                 Artist = Artist.Emrah_Elmasli
             });
             Cards.Add(new LotRCard()
@@ -290,7 +289,7 @@ Forced: After this stage is defeated, advance to stage 3B at the beginning of th
                 EncounterSet = "Fog on the Barrow-downs",
                 Quantity = 4,
                 EasyModeQuantity = 3,
-                Number = 11,
+                CardNumber = 11,
                 Artist = Artist.Anthony_Devine
             });
             Cards.Add(new LotRCard()
@@ -307,7 +306,7 @@ Forced: After this stage is defeated, advance to stage 3B at the beginning of th
                 Text = "While Cold-wight is engaged with a player, that player cannot draw cards from card effects.\r\nForced: After Cold-wight attacks and destroys a character, that character's controller discards a random card from his hand.",
                 EncounterSet = "Fog on the Barrow-downs",
                 Quantity = 3,
-                Number = 12,
+                CardNumber = 12,
                 Artist = Artist.Anthony_Devine
             });
             Cards.Add(new LotRCard()
@@ -324,7 +323,7 @@ Forced: After this stage is defeated, advance to stage 3B at the beginning of th
                 Text = "While Dark-wight is engaged with a player, that player's heros cannot gain resources from card effects.\r\nForced: After Dark-wight attacks and destroys a character, that character's controller discards all resources from each hero he controls.",
                 EncounterSet = "Fog on the Barrow-downs",
                 Quantity = 3,
-                Number = 13,
+                CardNumber = 13,
                 Artist = Artist.Anthony_Devine
             });
             Cards.Add(new LotRCard()
@@ -337,7 +336,7 @@ Forced: After this stage is defeated, advance to stage 3B at the beginning of th
                 EncounterSet = "Fog on the Barrow-downs",
                 Quantity = 2,
                 EasyModeQuantity = 0,
-                Number = 14,
+                CardNumber = 14,
                 Artist = Artist.Anthony_Devine
             });
             Cards.Add(new LotRCard()
@@ -349,7 +348,7 @@ Forced: After this stage is defeated, advance to stage 3B at the beginning of th
                 Text = "When Revealed: Until the end of the phase, each Wight enemy engaged with you contributes its Threat to the total Threat in the staging area. If no enemies are engaged with you, search the encounter deck and discard pile for a Wight enemy and put it into play engaged with you. Shuffle the encounter deck.",
                 EncounterSet = "Fog on the Barrow-downs",
                 Quantity = 3,
-                Number = 15,
+                CardNumber = 15,
                 Artist = Artist.Mariusz_Gandzel
             });
             Cards.Add(new LotRCard()
@@ -361,7 +360,7 @@ Forced: After this stage is defeated, advance to stage 3B at the beginning of th
                 Shadow = "Shadow: Raise your threat by 1 for each damage dealt by this attack.",
                 EncounterSet = "Fog on the Barrow-downs",
                 Quantity = 2,
-                Number = 16,
+                CardNumber = 16,
                 Artist = Artist.Anthony_Feliciano
             });
             Cards.Add(new LotRCard()
@@ -375,7 +374,7 @@ Forced: After this stage is defeated, advance to stage 3B at the beginning of th
                 EncounterSet = "Fog on the Barrow-downs",
                 Quantity = 3,
                 EasyModeQuantity = 2,
-                Number = 17,
+                CardNumber = 17,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
             Cards.Add(new LotRCard()
@@ -389,7 +388,7 @@ Forced: After this stage is defeated, advance to stage 3B at the beginning of th
                 EncounterSet = "Fog on the Barrow-downs",
                 Quantity = 2,
                 EasyModeQuantity = 1,
-                Number = 18,
+                CardNumber = 18,
                 Artist = Artist.Florian_Devos
             });
             Cards.Add(new LotRCard()
@@ -407,7 +406,7 @@ Forced: After this stage is defeated, advance to stage 3B at the beginning of th
                 FlavorText = "\"Tom Bom, Jolly Tom, Tom Bombadillo!\" -Tom Bombadil, The Fellowship of the Ring",
                 EncounterSet = "Fog on the Barrow-downs",
                 Quantity = 1,
-                Number = 19,
+                CardNumber = 19,
                 Artist = Artist.Romana_Kendelic
             });
             Cards.Add(new LotRCard()
@@ -426,7 +425,7 @@ Setup: While any player is at stage 4B, the first player cannot lose control of 
                 OppositeText = "Resolution: The players have earned the Ho! Tom Bombadil! boon card.",
                 OppositeFlavorText = "At last they set off. They led their ponies down the hill; and then mounting they trotted quickly along the valley. They looked back and saw the top of the old mound on the hill, and from it the sunlight on the gold went up like a yellow flame. Then they turned a shoulder of the Downs and it was hidden from view.\r\n-The Fellowship of the Ring",
                 EncounterSet = "Fog on the Barrow-downs",
-                Number = 20,
+                CardNumber = 20,
                 Quantity = 1,
                 Artist = Artist.Emrah_Elmasli
             });
@@ -442,7 +441,7 @@ Setup: While any player is at stage 4B, the first player cannot lose control of 
                 Text = "Setup: The first player adds this card to his hand.\r\nResponse: Add this card to the victory display and remove it from the campaign pool to cancel the \"when revealed\" effects of an encounter card just revealed from the encounter deck.",
                 FlavorText = "By fire, sun and moon, harken now and hear us!\r\nCome, Tom Bombadil, for our need is near us!\r\n-Frodo, The Fellowship of the Ring",
                 VictoryPoints = 1,
-                Number = 21,
+                CardNumber = 21,
                 Quantity = 1,
                 Artist = Artist.Romana_Kendelic
             });

@@ -32,7 +32,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 FlavorText = "\"Well, my dear fellow,\" said bilbo, \"now you've heard the news, can't you spare me a moment? I want your help in something urgent.\" -The Fellowship of the Ring",
                 HtmlTemplate = "<p>The first player draws 1 additional card in the resource phase.</p><p class='flavor-text'>&quot;Well, my dear fellow,&quot; said Bilbo, &quot;now you've heard the news, can't you spare me a moment? I want your help in something urgent.&quot;<br>&ndash;The Fellowship of the Ring</p>",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Tony_Foti
             });
             Cards.Add(new LotRCard() {
@@ -46,7 +46,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Traits = new List<string>() { "Signal." },
                 Text = "Attach to a hero.\r\nAttached hero gains +1 Attack.\r\nAction: Pay 1 resource from attached hero's pool to attach Dunedain Mark to another hero.",
                 Quantity = 3,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Joko_Mulyono,
                 SecondArtist = Artist.Lius_Lasahido
             });
@@ -60,7 +60,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Action: Each player draws 1 card.",
                 FlavorText = "\"It is a fair tale, though it is sad, as are all the tales of Middle-earth, and yet it may lift up your hearts.\" -Strider, The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Felicia_Cano
             });
             Cards.Add(new LotRCard() {
@@ -73,7 +73,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Action: Search the top 10 cards of your deck for any 1 Rohan ally card and add it to your hand. Then, shuffle the other cards back into your deck.",
                 FlavorText = "\"More speed we cannot make, if the strength of Rohan is to be gathered.\" -Éomer, The Return of the King",
                 Quantity = 3,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Stu_Barnes
             });
             Cards.Add(new LotRCard() {
@@ -91,7 +91,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Response: After you play Rivendell Minstrel from your hand, search your deck for 1 Song card and add it to your hand. Shuffle your deck.",
                 FlavorText = "As Elrond entered and went towards the seat prepared for him, Elvish minstrels began to make sweet music. -The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Katherine_Dinger
             });
             Cards.Add(new LotRCard() {
@@ -110,7 +110,7 @@ Renewed shall be blade that was broken,
 The crownless again shall be king.
 -The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 10,
+                CardNumber = 10,
                 Artist = Artist.John_Gravato
             });
             Cards.Add(new LotRCard() {
@@ -123,7 +123,7 @@ The crownless again shall be king.
                 Text = "Response: After a location is revealed from the encounter deck, immediately travel to that location without resolving its Travel effect. If another location is currently active, return it to the staging area.",
                 FlavorText = "\"My cuts, short or long, don't go wrong.\" -Strider, The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 9,
+                CardNumber = 9,
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
@@ -137,7 +137,7 @@ The crownless again shall be king.
                 Text = "Action: Search the top 5 cards of your deck for any number of Eagle cards and add them to your hand. Shuffle the other cards back into your deck.",
                 FlavorText = "\"The Eagles! The Eagles!\" -Bilbo Baggins, The Hobbit",
                 Quantity = 3,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Jake_Murray
             });
             Cards.Add(new LotRCard() {
@@ -155,7 +155,7 @@ The crownless again shall be king.
                 Text = "Action: Discard Westfold Horse-Breaker to choose and ready a hero.",
                 FlavorText = "\"Your own valour has done more, and the stout legs of the Westfold-men marching through the night.\" -Gandalf, The Two Towers",
                 Quantity = 3,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -173,7 +173,7 @@ The crownless again shall be king.
                 Text = "Winged Guardian cannot have restricted attachments.Forced: After an attack in which Winged Guardian defends resolves, pay 1 Tactics resource or discard Winged Guardian from play.",
                 Keywords = new List<string>() { "Sentinel." },
                 Quantity = 3,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
@@ -184,7 +184,7 @@ The crownless again shall be king.
                 Text = "When Revealed: The first player chooses and shuffles a card with the printed Clue trait back into the encounter deck. If there are no Clue cards in play, False Lead gains surge.",
                 EncounterSet = "The Hunt for Gollum",
                 Quantity = 2,
-                Number = 22,
+                CardNumber = 22,
                 Artist = Artist.Even_Mehl_Amundsen
             });
             Cards.Add(new LotRCard() {
@@ -198,7 +198,7 @@ The crownless again shall be king.
                 Keywords = new List<string>() { "Doomed 1.", " Surge." },
                 EncounterSet = "The Hunt for Gollum",
                 Quantity = 2,
-                Number = 23,
+                CardNumber = 23,
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
@@ -216,7 +216,7 @@ The crownless again shall be king.
                 EncounterSet = "The Hunt for Gollum",
                 Quantity = 2,
                 EasyModeQuantity = 1,
-                Number = 20,
+                CardNumber = 20,
                 Artist = Artist.Jarreau_Wimberly
             });
             Cards.Add(new LotRCard() {
@@ -235,7 +235,7 @@ The crownless again shall be king.
                 EncounterSet = "The Hunt for Gollum",
                 Quantity = 5,
                 EasyModeQuantity = 2,
-                Number = 21,
+                CardNumber = 21,
                 Artist = Artist.Igor_Kieryluk
             });
             Cards.Add(new LotRCard() {
@@ -248,7 +248,7 @@ The crownless again shall be king.
                 EncounterSet = "The Hunt for Gollum",
                 Quantity = 3,
                 EasyModeQuantity = 1,
-                Number = 24,
+                CardNumber = 24,
                 Artist = Artist.Brian_Valenzuela
             });
             Cards.Add(new LotRCard() {
@@ -264,7 +264,7 @@ The crownless again shall be king.
                 QuestPoints = 4,
                 EncounterSet = "The Hunt for Gollum",
                 Quantity = 2,
-                Number = 17,
+                CardNumber = 17,
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
@@ -277,7 +277,7 @@ The crownless again shall be king.
                 Keywords = new List<string>() { "Guarded." },
                 EncounterSet = "The Hunt for Gollum",
                 Quantity = 4,
-                Number = 14,
+                CardNumber = 14,
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
@@ -292,7 +292,7 @@ The crownless again shall be king.
                 QuestPoints = 3,
                 EncounterSet = "The Hunt for Gollum",
                 Quantity = 2,
-                Number = 18,
+                CardNumber = 18,
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
@@ -307,7 +307,7 @@ The crownless again shall be king.
                 QuestPoints = 2,
                 EncounterSet = "The Hunt for Gollum",
                 Quantity = 3,
-                Number = 16,
+                CardNumber = 16,
                 Artist = Artist.Timo_Karhula
             });
             Cards.Add(new LotRCard() {
@@ -324,7 +324,7 @@ The crownless again shall be king.
                 EncounterSet = "The Hunt for Gollum",
                 Quantity = 2,
                 EasyModeQuantity = 0,
-                Number = 15,
+                CardNumber = 15,
                 Artist = Artist.Timo_Karhula
             });
             Cards.Add(new LotRCard() {
@@ -339,7 +339,7 @@ The crownless again shall be king.
                 QuestPoints = 3,
                 EncounterSet = "The Hunt for Gollum",
                 Quantity = 2,
-                Number = 19,
+                CardNumber = 19,
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
@@ -355,7 +355,7 @@ The crownless again shall be king.
                 OppositeFlavorText = "You make your way along the banks of the Anduin River, a likely place for Gollum to find food.",
                 EncounterSet = "The Hunt for Gollum",
                 Quantity = 1,
-                Number = 11,
+                CardNumber = 11,
                 Artist = Artist.Igor_Kieryluk,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.JourneyAlongTheAnduin, EncounterSet.SauronsReach }
             });
@@ -371,7 +371,7 @@ The crownless again shall be king.
                 OppositeText = "Forced: At the beginning of the quest phase, the first player looks at the top 2 cards of the encounter deck. Reveal and add 1 of those cards to the staging area, and discard the other.",
                 OppositeFlavorText = "Rumors have led you to the eaves of Mirkwood Forest, where the Woodmen whisper of a new terror in the night...",
                 Quantity = 1,
-                Number = 12,
+                CardNumber = 12,
                 Artist = Artist.David_A_Nash,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.JourneyAlongTheAnduin, EncounterSet.SauronsReach }
             });
@@ -386,7 +386,7 @@ The crownless again shall be king.
                 FlavorText = "\"But at the western edge of Mirkwood the trail turned away. It wandered off southwards and passed out of the Wood-elves' ken, and was lost.\" -Gandalf, The Fellowship of the Ring",
                 OppositeText = "Any player who does not control a hero with at least 1 Clue objective attached cannot commit characters to this quest. If there are ever no heroes with Clue objectives attached in play, reset the quest deck to stage 2B.\r\nIf the players defeat this stage, the players have once again found a true sign of Gollum's passing, and have won the game.",
                 Quantity = 1,
-                Number = 13,
+                CardNumber = 13,
                 Artist = Artist.Carolina_Eade,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.JourneyAlongTheAnduin, EncounterSet.SauronsReach }
             });

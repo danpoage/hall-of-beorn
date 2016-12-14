@@ -44,7 +44,7 @@ Then, shuffle the encounter cards in this Nightmare Deck into the remainder of t
 Finally, flip this setup card over and place it next to the quest deck. Its effects remain active throughout the game, which is now ready to begin.",
                 EncounterSet = "Escape from Dol Guldur Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Jim_Pavelec
             });
             Cards.Add(new LotRCard()
@@ -63,7 +63,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Shadow = "Shadow: Any hero damaged but not defeated by this attack is turned face down, as a \"prisoner.\" Then, if the players are on stage 3, return to stage 2B of the quest.",
                 EncounterSet = "Escape from Dol Guldur Nightmare",
                 Quantity = 3,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
             Cards.Add(new LotRCard()
@@ -83,7 +83,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Shadow = "If attacking enemy is not defeated this phase, raise defending player's threat by 7 at the end of the phase.",
                 EncounterSet = "Escape from Dol Guldur Nightmare",
                 Quantity = 2,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard()
@@ -102,7 +102,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Shadow = "Shadow: Attacking enemy gets +3 Attack for each unclaimed objective in play.",
                 EncounterSet = "Escape from Dol Guldur Nightmare",
                 Quantity = 3,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Andrew_Ryan
             });
             Cards.Add(new LotRCard()
@@ -117,7 +117,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Text = "If Torture Chamber has 4 or more resource tokens on it, all \"prisoners\" were killed, and the players have lost the game.\r\n\r\nForced: At the end of each round, place 1 resource token on each Dol Guldur location in play.",
                 EncounterSet = "Escape from Dol Guldur Nightmare",
                 Quantity = 2,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard()
@@ -136,7 +136,7 @@ Forced: At the end of each round, place 1 resource token on Dungeon Labyrinth fo
                 FlavorText = "\"Some here will remember that many years ago I myself dared to pass the doors of the Necromancer in Dol Guldur...\" -Gandalf, The Fellowship of the Ring",
                 EncounterSet = "Escape from Dol Guldur Nightmare",
                 Quantity = 3,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.S_C_Watson
             });
             Cards.Add(new LotRCard()
@@ -148,7 +148,7 @@ Forced: At the end of each round, place 1 resource token on Dungeon Labyrinth fo
                 Text = "When Revealed: The staging area gets +X Threat until the end of the phase, where X is twice the number of players in the game. If the players quest unsuccessfully this phase, put the ~Nazgûl of ~Dol Guldur into play (from any out of play area), engaged with the first player. (Cannot be canceled.)",
                 EncounterSet = "Escape from Dol Guldur Nightmare",
                 Quantity = 2,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
             Cards.Add(new LotRCard()
@@ -162,7 +162,7 @@ Forced: At the end of each round, place 1 resource token on Dungeon Labyrinth fo
                 Shadow = "Shadow: If there is a Dol Guldur location in the staging area, move 1 resource token from each of your heroes' resource pools to that location. (Resolve this effect for each Dol Guldur location.)",
                 EncounterSet = "Escape from Dol Guldur Nightmare",
                 Quantity = 2,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
             Cards.Add(new LotRCard()
@@ -175,7 +175,7 @@ Forced: At the end of each round, place 1 resource token on Dungeon Labyrinth fo
                 Shadow = "Shadow: Discard each card you control that has at least 1 copy of itself in your discard pile. (If this attack is undefended, each player must resolve this effect.)",
                 EncounterSet = "Escape from Dol Guldur Nightmare",
                 Quantity = 2,
-                Number = 9,
+                CardNumber = 9,
                 Artist = Artist.Magali_Villeneuve
             });
         }

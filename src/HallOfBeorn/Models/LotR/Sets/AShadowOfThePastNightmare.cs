@@ -45,7 +45,7 @@ Then, shuffle the encounter cards in this Nightmare Deck into the remainder of t
 Finally, flip this setup card over and place it next to the quest deck. Its effects remain active throughout the game, which is now ready to begin.",
                 EncounterSet = "A Shadow of the Past Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Helge_C_Balzer
             });
             Cards.Add(LotRCard.Enemy("Khamûl the Easterling", "53468A89-8BF6-4252-8B39-F525E30011EC", "A Shadow of the Past Nightmare", 40, 5, 6, 4, 8)

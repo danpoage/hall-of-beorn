@@ -41,7 +41,7 @@ Then, shuffle the encounter cards in this Nightmare Deck into the remainder of t
 Finally, flip this setup card over and place it next to the quest deck. Its effects remain active throughout the game, which is now ready to begin.",
                 EncounterSet = "The Morgul Vale Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(LotRCard.Enemy("Warrior of Nurn", "A8D4E2CA-E726-4690-AB2E-84D5B424D14D", "The Morgul Vale Nightmare", 18, 2, 4, 3, 5)

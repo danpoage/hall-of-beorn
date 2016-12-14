@@ -2977,6 +2977,7 @@ namespace HallOfBeorn.Services.LotR
             return cardSlugsByGuid.ContainsKey(octgnGuid) ? cardSlugsByGuid[octgnGuid] : string.Empty;
         }
 
+        /*
         public string GetCardOctgnGuidByOctgnSlug(string octgnSlug, string type)
         {
             var typeFilter = HallOfBeorn.Models.LotR.CardType.Hero;
@@ -3007,6 +3008,7 @@ namespace HallOfBeorn.Services.LotR
                 GetCardOctgnGuid(card.Slug)
                 : string.Empty;
         }
+        */
 
         public string GetSetOctgnGuid(string setName)
         {

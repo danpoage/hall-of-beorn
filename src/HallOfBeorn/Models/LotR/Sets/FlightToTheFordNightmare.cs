@@ -47,7 +47,7 @@ Then, shuffle the encounter cards in this Nightmare Deck into the remainder of t
 Finally, flip this setup card over and place it next to the quest deck. Its effects remain active throughout the game, which is now ready to begin.",
                 EncounterSet = "Flight to the Ford Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Julian_Kok
             });
             Cards.Add(LotRCard.Enemy("Fell Rider", "3125D3AE-527C-47FC-BFA6-2C1705EF4D67", "Flight to the Ford Nightmare", 30, 3, 5, 4, 6)

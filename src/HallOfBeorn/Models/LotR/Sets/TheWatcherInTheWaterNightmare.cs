@@ -46,7 +46,7 @@ Then, shuffle the encounter cards in this Nightmare Deck into the remainder of t
 Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.",
                 EncounterSet = "The Watcher in the Water Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Alvaro_Calvo_Escudero
             });
             Cards.Add(new LotRCard()
@@ -68,7 +68,7 @@ If The Watcher is in the staging area at the end of the combat phase, each playe
                 VictoryPoints = 3,
                 EncounterSet = "The Watcher in the Water Nightmare",
                 Quantity = 1,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Lukasz_Jaskolski
             });
             Cards.Add(new LotRCard()
@@ -85,7 +85,7 @@ If The Watcher is in the staging area at the end of the combat phase, each playe
                 Text = "Forced: When Writing Tentacle engages a player, discard the top card of the encounter deck. If that card has a shadow effect or is a Tentacle enemy, Writhing Tentacle makes an immediate attack, then attaches to the defending character as a Tentacle attachment with the text: \"Attached character cannot commit to the quest.\"",
                 EncounterSet = "The Watcher in the Water Nightmare",
                 Quantity = 3,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Lukasz_Jaskolski
             });
             Cards.Add(new LotRCard()
@@ -102,7 +102,7 @@ If The Watcher is in the staging area at the end of the combat phase, each playe
                 Text = "Forced: After resolving an attack made by Choking Tentacle, discard the top card of the encounter deck. If that card has a shadow effect or is a Tentacle enemy, attach Choking Tentacle to a character the defending player controls as a Tentacle attachment with the text: \"Forced: After attached character readies. deal it 1 damage.\"",
                 EncounterSet = "The Watcher in the Water Nightmare",
                 Quantity = 4,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Jon_Bosco
             });
             Cards.Add(new LotRCard()
@@ -117,7 +117,7 @@ If The Watcher is in the staging area at the end of the combat phase, each playe
                 Shadow = "Shadow: For each point of damage dealt by this attack, the defending player must discard a random card from his hand.",
                 EncounterSet = "The Watcher in the Water Nightmare",
                 Quantity = 3,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Rick_Price
             });
             Cards.Add(new LotRCard()
@@ -134,7 +134,7 @@ If The Watcher is in the staging area at the end of the combat phase, each playe
 Travel: Reveal the topmost Tentacle enemy in the encounter discard pile to travel here.",                
                 EncounterSet = "The Watcher in the Water Nightmare",
                 Quantity = 3,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Mark_Behm
             });
             Cards.Add(new LotRCard()
@@ -147,7 +147,7 @@ Travel: Reveal the topmost Tentacle enemy in the encounter discard pile to trave
                 Shadow = "Shadow: If the defending character has a Tentacle attachment, discard that character.",
                 EncounterSet = "The Watcher in the Water Nightmare",
                 Quantity = 2,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Guillaume_Ducos
             });
             Cards.Add(new LotRCard()
@@ -161,7 +161,7 @@ Travel: Reveal the topmost Tentacle enemy in the encounter discard pile to trave
                 FlavorText = "Twenty other arms came rippling out.\r\n-The Fellowship of the Ring",
                 EncounterSet = "The Watcher in the Water Nightmare",
                 Quantity = 3,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Alvaro_Calvo_Escudero
             });
         }

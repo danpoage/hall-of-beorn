@@ -46,7 +46,7 @@ Then, shuffle the encounter cards in this Nightmare Deck into the remainder of t
 Finally, flip this setup card over and place it next to the quest deck. Its effects remain active throughout the game, which is now ready to begin.",
                 EncounterSet = "Assault on Osgiliath Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Mariusz_Gandzel
             });
             Cards.Add(LotRCard.Enemy("Invading Orc", "4C4A8641-6C80-4BDD-9536-ECCA4B294F65", "Assault on Osgiliath Nightmare", 20, 2, 5, 3, 3)

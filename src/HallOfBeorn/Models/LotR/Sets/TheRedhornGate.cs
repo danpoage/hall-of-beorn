@@ -31,7 +31,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HtmlTemplate = "<p>The first player gains control of {self}, as an ally.</p><p><b>Response:</b> After {self}, choose a hero. Add 1 resource to that hero's resource pool.</p><p><b>If {self} leaves play, the players are defeated.</b></p>",
                 EncounterSet = "The Redhorn Gate",
                 Quantity = 1,
-                Number = 14,
+                CardNumber = 14,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -45,7 +45,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "The Redhorn Gate",
                 Quantity = 1,
                 EasyModeQuantity = 0,
-                Number = 24,
+                CardNumber = 24,
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
@@ -65,7 +65,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 FlavorText = "\"Get up lazy-bones...\" -The Hobbit",
                 HtmlTemplate = "<p>Quest Action: Spend 1 {sphere:Spirit} resource to put {self} into play from your hand, exhausted and committed to a quest. If you quest successfully this phase and {self} is still in play, return him to your hand.</p><p class='flavor-text'>&quot;Get up lazy-bones...&quot; &ndash;The Hobbit</p>",
                 Quantity = 3,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard() {
@@ -82,7 +82,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "The Redhorn Gate",
                 Quantity = 1,
                 VictoryPoints = 3,
-                Number = 15,
+                CardNumber = 15,
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
@@ -99,7 +99,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "The Redhorn Gate",
                 Quantity = 1,
                 VictoryPoints = 2,
-                Number = 17,
+                CardNumber = 17,
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
@@ -118,7 +118,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "While Elladan is in play, Elrohir gets +2 Defense.\r\nResponse: After Elrohir is declared as a defender, pay 1 resource from his resource pool to ready him.",
                 HtmlTemplate = "<p>While {title:Elladan} is in play, {self} gets +2 {Defense}.<p><p><b>Response:</b> After {self} is declared as a defender, pay 1 resource from his resource pool to ready him.</p><p class='flavor-text'>&quot;We will not turn back.&quot;<br>&ndash;The Return of the King</p>",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -130,7 +130,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Shadow = "Shadow: attacking enemy gets +1 Attack for each progress token on the active location.",
                 EncounterSet = "The Redhorn Gate",
                 Quantity = 2,
-                Number = 21,
+                CardNumber = 21,
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
@@ -147,7 +147,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "The Redhorn Gate",
                 Quantity = 1,
                 VictoryPoints = 2,
-                Number = 16,
+                CardNumber = 16,
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
@@ -158,7 +158,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "When Revealed: Return the top 2 Snow cards in the encounter discard pile to the top of the encounter deck. If this effect returned less than 2 Snow treachery cards, Fell Voices gains surge.",
                 EncounterSet = "The Redhorn Gate",
                 Quantity = 2,
-                Number = 20,
+                CardNumber = 20,
                 Artist = Artist.K_R_Harris
             });
             Cards.Add(new LotRCard() {
@@ -171,7 +171,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "The Redhorn Gate",
                 Quantity = 3,
                 EasyModeQuantity = 1,
-                Number = 23,
+                CardNumber = 23,
                 Artist = Artist.Eric_Braddock
             });
             Cards.Add(new LotRCard() {
@@ -183,7 +183,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 ResourceCost = 0,
                 Text = "Attach to a Hobbit hero.\r\nAction: Discard Good Meal to lower the cost of the next event you play this round that matches attached hero's sphere by 2.",
                 Quantity = 3,
-                Number = 10,
+                CardNumber = 10,
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
@@ -200,7 +200,7 @@ Attached hero gets +1 Attack for each resource token on another copy of Keeping 
 
 Forced: After attached hero attacks and destroys an enemy, place 1 resource token on this card.",
                 Quantity = 3,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Mark_Tarrisse
             });
             Cards.Add(new LotRCard() {
@@ -219,7 +219,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 Threat = 1,
                 EncounterSet = "The Redhorn Gate",
                 Quantity = 3,
-                Number = 25,
+                CardNumber = 25,
                 Artist = Artist.Dmitry_Burmak
             });
             Cards.Add(new LotRCard() {
@@ -239,7 +239,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 EncounterSet = "The Redhorn Gate",
                 Quantity = 2,
                 EasyModeQuantity = 0,
-                Number = 26,
+                CardNumber = 26,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
             Cards.Add(new LotRCard() {
@@ -252,7 +252,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 Text = "Action: Raise your threat by 1 to look at the top card of the encounter deck. Then, reduce your threat by X, where X is the threat of that card.",
                 Keywords = new List<string>() { "Secrecy 2." },
                 Quantity = 3,
-                Number = 9,
+                CardNumber = 9,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -270,7 +270,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 Text = "Action: Exhaust Ravenhill Scout to move up to 2 progress tokens from 1 location to another location.",
                 FlavorText = "\"They made their first camp on the western side of the great southern spur, which ended in a height called Ravenhill.\" -The Hobbit",
                 Quantity = 3,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Garret_DeChellis
             });
             Cards.Add(new LotRCard() {
@@ -282,7 +282,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 ResourceCost = 0,
                 Text = "Response: After another player plays an attachment on a hero you control, you may (choose 1): ready 1 of that player's heroes, have that player draw 1 card, or lower that player's threat by 2.",
                 Quantity = 3,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard() {
@@ -298,7 +298,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 EncounterSet = "The Redhorn Gate",
                 Quantity = 3,
                 EasyModeQuantity = 1,
-                Number = 19,
+                CardNumber = 19,
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
@@ -311,7 +311,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 Shadow = "Shadow: Until the end of the phase, characters defending this attack get -1 Willpower and are discarded if their Willpower is 0.",
                 EncounterSet = "The Redhorn Gate",
                 Quantity = 5,
-                Number = 22,
+                CardNumber = 22,
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
@@ -329,7 +329,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 Threat = 3,
                 EncounterSet = "The Redhorn Gate",
                 Quantity = 3,
-                Number = 27,
+                CardNumber = 27,
                 Artist = Artist.Allison_Theus,
                 HasErrata = true
             });
@@ -342,7 +342,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 ResourceCost = 0,
                 Text = "Action: Discard the top card of your deck. If the discarded card's printed cost is equal to or higher than the number of characters you control, draw 2 cards and deal 2 damage to any enemy.",
                 Quantity = 3,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Melissa_Findley
             });
             Cards.Add(new LotRCard() {
@@ -358,7 +358,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 EncounterSet = "The Redhorn Gate",
                 Quantity = 1,
                 VictoryPoints = 1,
-                Number = 18,
+                CardNumber = 18,
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard() {
@@ -371,7 +371,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 Text = "Action: Reveal the top 5 cards of your deck and put 1 revealed ally into play, if able. Shuffle all other revealed cards back into your deck.",
                 Keywords = new List<string>() { "Secrecy 3." },
                 Quantity = 3,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Sandara_Tang
             });
             Cards.Add(new LotRCard() {
@@ -383,7 +383,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 ResourceCost = 0,
                 Text = "Action: Choose a character you control. Until the end of the phase, that character gets +3 Attack while attacking an enemy with a higher engagement cost than your threat.",
                 Quantity = 3,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Even_Mehl_Amundsen
             });
             Cards.Add(new LotRCard() {
@@ -398,7 +398,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 OppositeText = "When Revealed: Shuffle 1 more copy of Snowstorm into the encounter deck than the number of players in the game.\r\nForced: After playing the 11th progress token on Snowdrifts, discard any active location. Caradhras becomes the active location.",
                 QuestPoints = 11,
                 Quantity = 1,
-                Number = 12,
+                CardNumber = 12,
                 Artist = Artist.Stu_Barnes,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.MistyMountains }
             });
@@ -419,7 +419,7 @@ Characters are discarded from play if their Willpower is ever 0.
 Players cannot defeat this stage unless they have 5 victory points. If the players defeat this stage, they have won the game.",
                 Quantity = 1,
                 QuestPoints = 13,
-                Number = 13,
+                CardNumber = 13,
                 Artist = Artist.Cristi_Balanescu,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.MistyMountains }
             });
@@ -438,7 +438,7 @@ Players cannot defeat this stage unless they have 5 victory points. If the playe
                 EncounterSet = "The Redhorn Gate",
                 QuestPoints = 9,
                 Quantity = 1,
-                Number = 11,
+                CardNumber = 11,
                 Artist = Artist.Jason_Juta,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.MistyMountains }
             });

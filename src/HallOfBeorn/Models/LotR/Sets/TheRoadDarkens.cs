@@ -31,7 +31,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Traits = new List<string> { "Hobbit.", "Ring-bearer." },
                 Text = "Response: After Frodo ~Baggins exhausts to defend an attack, exhaust The One ~Ring and spend 1 Fellowship resource to target the attacking enemy. Then, this attack deals no damage and each player raises his threat by 2.",
                 FlavorText = "\"But there is more about you now than appears on the surface.\" -Bilbo, The Fellowship of the Ring",
-                Number = 1,
+                CardNumber = 1,
                 Quantity = 1,
                 Artist = Artist.Sebastian_Giacobino
             });
@@ -51,7 +51,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Traits = new List<string> { "Istari." },
                 Text = "Play with the top card of your deck faceup. Once per phase, you may play the top card of your deck as if it was in your hand. When playing a card this way, Gandalf is considered to have the printed Leadership, Lore, Tactics, and Spirit icons.",
                 FlavorText = "\"I am a servant of the Secret Fire, wielder of the flame of Anor.\" -The Fellowship of the Ring",
-                Number = 2,
+                CardNumber = 2,
                 Quantity = 1,
                 Artist = Artist.Matt_Stewart
             });
@@ -70,7 +70,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HitPoints = 3,
                 Traits = new List<string> { "Noldor.", "Noble." },
                 Text = "At the end of the round, discard Galadriel from play.\r\nResponse: After you play Galadriel from your hand, search the top 5 cards of your deck for an attachment of cost 3 or less and put it into play. Put the remaining cards back in any order.",
-                Number = 3,
+                CardNumber = 3,
                 Quantity = 3,
                 Artist = Artist.Sebastian_Giacobino
             });
@@ -89,7 +89,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HitPoints = 4,
                 Traits = new List<string> { "Gondor.", "Warrior." },
                 Text = "Boromir gets +2 Defense while defending against an enemy with an engagement cost higher than your threat.\r\nResponse: After Boromir takes any amount of damage, ready him.",
-                Number = 4,
+                CardNumber = 4,
                 Quantity = 3,
                 Artist = Artist.Chris_Rahn
             });
@@ -108,7 +108,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HitPoints = 3,
                 Traits = new List<string> { "Noldor.", "Healer." },
                 Text = "At the end of the round, discard Elrond from play.\r\nResponse: After Elrond enters play, choose one: heal all damage on a hero, discard a Condition attachment, or each player draws 1 card.",
-                Number = 5,
+                CardNumber = 5,
                 Quantity = 3,
                 Artist = Artist.Allen_Douglas
             });
@@ -128,7 +128,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Traits = new List<string> { "Hobbit." },
                 Text = "Response: After Bilbo ~Baggins enters play, search your deck for a Pipe attachment and add it to your hand. Shuffle your deck.",
                 FlavorText = "\"Elves may thrive on speech alone, and Dwarves endure great weariness, but I am an old Hobbit, and I miss my meal at noon.\" -The Fellowship of the Ring",
-                Number = 6,
+                CardNumber = 6,
                 Quantity = 3,
                 Artist = Artist.Sebastian_Giacobino
             });
@@ -144,7 +144,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Action: Add Flame of Anor to the victory display and discard the top card of your deck to ready an Istari character you control. That character gets +X Attack until the end of the phase where X is the discarded card's cost.",
                 FlavorText = "\"You cannot pass!\" -Gandalf, The Fellowship of the Ring",
                 VictoryPoints = 1,
-                Number = 7,
+                CardNumber = 7,
                 Quantity = 3,
                 Artist = Artist.Diego_Gisbert_Llorens 
             });
@@ -161,7 +161,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Keywords = new List<string> { "Restricted." },
                 Text = "Attach to Gandalf.\r\nAction: Exhaust Gandalf's Staff to (choose one): choose a player to draw 1 card, add 1 resource to a hero's resource pool, or discard a shadow card from a non-unique enemy.",
                 FlavorText = "...he held his staff aloft, and from its tip there came a feint radiance. -The Fellowship of the Ring",
-                Number = 8,
+                CardNumber = 8,
                 Quantity = 3,
                 Artist = Artist.Victor_Maury
             });
@@ -176,7 +176,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Traits = new List<string> { "Item.", "Pipe." },
                 Text = "Attach to an Istari character. Limit 1 per character.\r\nAction: Exhaust Wizard ~Pipe to exchange a card in your hand with the top card of your deck.",
                 FlavorText = "...there was a long silence, broken only by the soft puffs of Gandalf's pipe, as he blew white smoke-rings out of the window. -The Fellowship of the Ring",
-                Number = 9,
+                CardNumber = 9,
                 Quantity = 3,
                 Artist = Artist.Tiziano_Baracchi
             });
@@ -191,7 +191,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 ResourceCost = 2,
                 Traits = new List<string> { "Fellowship." },
                 Text = "Attach to the Ring-bearer.\r\nEach hero gets +1 Willpower.\r\nForced: After a character is destroyed, discard Fellowship of the Ring.",
-                Number = 10,
+                CardNumber = 10,
                 Quantity = 3,
                 Artist = Artist.Michael_Komarck
             });
@@ -213,7 +213,7 @@ namespace HallOfBeorn.Models.LotR.Sets
 Attached hero gets +1 Willpower, +1 Attack, and +1 Defense.
 
 Response: After attached hero exhausts to defend an attack, discard the top card of the encounter deck. Deal damage to the attacking enemy equal to the discarded card's Threat.",
-                Number = 11,
+                CardNumber = 11,
                 Quantity = 1,
                 Artist = Artist.Magali_Villeneuve
             });
@@ -230,7 +230,7 @@ Response: After attached hero exhausts to defend an attack, discard the top card
                 Traits = new List<string> { "Artifact.", "Item.", "Armor." },
                 Text = "Attach to Ring-bearer.\r\nAttached hero gets +1 Defense and +1 hit point.",
                 FlavorText = "\"I should feel happier if I knew you were wearing it. I have a fancy it would turn even the knives of the Black Riders...\" -Bilbo, The Fellowship of the Ring",
-                Number = 12,
+                CardNumber = 12,
                 Quantity = 1,
                 Artist = Artist.Sara_Betsy
             });
@@ -248,7 +248,7 @@ Response: After attached hero exhausts to defend an attack, discard the top card
                 Keywords = new List<string> { "Restricted." },
                 Text = "Attach to a Warrior hero or Gandalf. Attached character gets +2 Attack.\r\nResponse: After attached character destroys an Orc enemy, draw 1 card.",
                 FlavorText = "\"...at his side was the elven-sword Glamdring, the mate of Orcrist that lay now upon the breast of Thorin under the Lonely Mountain.\" -The Fellowship of the Ring",
-                Number = 13,
+                CardNumber = 13,
                 Quantity = 1,
                 Artist = Artist.Magali_Villeneuve
             });
@@ -266,7 +266,7 @@ Response: After attached hero exhausts to defend an attack, discard the top card
                 Traits = new List<string> { "Artifact.", "Item.", "Weapon." },
                 Keywords = new List<string> { "Restricted." },
                 Text = "Attach to a Noble hero or Aragorn.\r\nAttached hero gets +1 Willpower, +1 Attack, and +1 Defense.\r\nResponse: After an attack in which the attached hero defended resolves, exhaust Andúril to target the enemy that just attacked. Declare attached hero as an attacker against that enemy (and resolve the attack).",
-                Number = 14,
+                CardNumber = 14,
                 Quantity = 1,
                 Artist = Artist.Magali_Villeneuve
             });
@@ -284,7 +284,7 @@ Response: After attached hero exhausts to defend an attack, discard the top card
                 Text = "Setup: Attach to a hero in play.\r\nAdd Phial of Galadriel to the victory display and remove it from the campaign pool, to give each enemy engaged with you -4 Attack until the end of the round.",
                 FlavorText = "\"May it be a light to you in dark places, when all other lights go out.\" -Galadriel, The Fellowship of the Ring",
                 VictoryPoints = 3,
-                Number = 15,
+                CardNumber = 15,
                 Quantity = 1,
                 Artist = Artist.Cynthia_Sheppard
             });
@@ -302,7 +302,7 @@ Response: After attached hero exhausts to defend an attack, discard the top card
                 Text = "Setup: Attach to a hero in play.\r\nAction: Add Three Golden Hairs to the victory display and remove it from the campaign pool, to lower each player's threat by 3. Then, each player draws 3 cards.",
                 FlavorText = "\"...your hands shall flow with gold, and yet over you gold shall have no dominion.\" -Galadriel, The Fellowship of the Ring",
                 VictoryPoints = 3,
-                Number = 16,
+                CardNumber = 16,
                 Quantity = 1,
                 Artist = Artist.Rovina_Cai
             });
@@ -321,7 +321,7 @@ Response: After attached hero exhausts to defend an attack, discard the top card
                 Text = "Setup: Attach to a hero in play.\r\nAction: Add Lórien Rope to the victory display, and remove it from the campaign pool to give each location in the staging area -2 Threat until the end of the phase.",
                 FlavorText = "\"What a piece of luck you had that rope!\" -Frodo, The Two Towers",
                 VictoryPoints = 3,
-                Number = 17,
+                CardNumber = 17,
                 Quantity = 1,
                 Artist = Artist.Rick_Price
             });
@@ -339,7 +339,7 @@ Response: After attached hero exhausts to defend an attack, discard the top card
                 Text = "Setup: Attach to a hero in play.\r\nAction: Add Leaf-wrapped Lembas to the victory display, and remove it from the campaign pool, to ready all heroes in play.",
                 FlavorText = "Often in their hearts they thanked the lady of Lórien for the gift of lembas, for they could eat of it and find new strength even as they ran. -The Two Towers",
                 VictoryPoints = 3,
-                Number = 18,
+                CardNumber = 18,
                 Quantity = 1,
                 Artist = Artist.Owen_William_Weber
             });
@@ -361,7 +361,7 @@ Setup: Each player may change hero cards he controls without incurring the +1 th
                 OppositeText = "Resolution: If Lust for the Ring is attached to a hero, the players have earned that burden.",
                 OppositeFlavorText = "They were just in time. Sam and Frodo were only a few steps up, and Gandalf had just begun to climb, when the groping tentacles writhed across the narrow shore and fingered the cliff-wall and the doors. One came wriggling over the threshold, glistening in the starlight. Gandalf turned and paused. If he was considering what word would close the gate again from within, there was no need. Many coiling arms seized the doors on either side, and with horrible strength, swung them round. With a shattering echo they slammed, and all light was lost. -The Fellowship of the Ring",
                 EncounterSet = "The Ring Goes South",
-                Number = 19,
+                CardNumber = 19,
                 Quantity = 1,
                 Artist = Artist.Ignacio_Bazan_Lazcano
             });
@@ -379,7 +379,7 @@ Setup: Each player may change hero cards he controls without incurring the +1 th
                 FlavorText = "In the House of Elrond, the evil wound that Frodo received on Weathertop is healed and he is reunited with his uncle Bilbo. The One Ring cannot remain hidden in Rivendell for long, so Lord Elrond summons a council to decide what should be done to protect the Free Peoples of Middle-earth.",
                 QuestPoints = null,
                 OppositeText = "Forced: At the end of the planning phase, each player places the top card of his deck faceup in front of him, in player order, until there are a total of 4 faceup cards between the players. The first player chooses 1 faceup card to be played for 0 cost, 1 to add to its owner's hand, 1 to discard, and 1 to shuffle into its owner's deck. Then, either shuffle Lust for the Ring into the encounter deck, or raise each player's threat by 5. Advance to stage 2.",
-                Number = 20,
+                CardNumber = 20,
                 Quantity = 1,
                 Artist = Artist.Ignacio_Bazan_Lazcano
             });
@@ -398,7 +398,7 @@ Setup: Each player may change hero cards he controls without incurring the +1 th
                 QuestPoints = 8,
                 OppositeText = "During the travel phase, the players must travel to a location, if able.\r\nForced: After an enemy engages a player, place 1 damage on the active location, if able.",
                 OppositeFlavorText = "\"Hollin is no longer wholesome for us: it is being watched.\" -Aragorn, The Fellowship of the Ring",
-                Number = 21,
+                CardNumber = 21,
                 Quantity = 1,
                 Artist = Artist.Matt_Bradbury
             });
@@ -417,7 +417,7 @@ Setup: Each player may change hero cards he controls without incurring the +1 th
                 QuestPoints = 12,
                 OppositeText = "During the travel phase, the players must travel to a location, if able.\r\nForced: After an enemy engages a player, place 1 damage on the active location, if able.",
                 OppositeFlavorText = "The Fellowship is being hunted by Wargs!",
-                Number = 22,
+                CardNumber = 22,
                 Quantity = 1,
                 Artist = Artist.Mark_Bulahao
             });
@@ -436,7 +436,7 @@ Setup: Each player may change hero cards he controls without incurring the +1 th
                 QuestPoints = null,
                 OppositeText = "There can be 2 active locations. During the travel phase, the players must travel to a location, if able.\r\nForced: After an enemy engages a player, place 1 damage on each active location.\r\nIf Doors of Durin is explored, the players win the game.",
                 OppositeFlavorText = "The Fellowship is being hunted by Wargs!",
-                Number = 23,
+                CardNumber = 23,
                 Quantity = 1,
                 Artist = Artist.Mark_Bulahao
             });
@@ -459,7 +459,7 @@ Setup: Each player may change hero cards he controls without incurring the +1 th
 
 Forced: After placing the 6th damage here, the first player takes control of the Ring-bearer, exhausted with 1 damage on it.",
                 EncounterSet = "The Ring Goes South",
-                Number = 24,
+                CardNumber = 24,
                 Quantity = 1,
                 Artist = Artist.Florian_Devos
             });
@@ -478,7 +478,7 @@ Forced: After placing the 6th damage here, the first player takes control of the
                 Traits = new List<string> { "Creature.", "Warg." },
                 Text = "Cannot have attachments.\r\nForced: After Great Warg Chief enages you, discard cards from the encounter deck until a Warg enemy is discarded. Put that enemy into play engaged with you.",
                 EncounterSet = "The Ring Goes South",
-                Number = 25,
+                CardNumber = 25,
                 Quantity = 1,
                 Artist = Artist.Alvaro_Calvo_Escudero
             });
@@ -498,7 +498,7 @@ Forced: After placing the 6th damage here, the first player takes control of the
                 Text = "Hound of Sauron gets -5 engagement cost for each enemy in the staging area.",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if it was engaged with round).",
                 EncounterSet = "The Ring Goes South",
-                Number = 26,
+                CardNumber = 26,
                 Quantity = 4,
                 EasyModeQuantity = 2,
                 Artist = Artist.Aurelien_Hubert
@@ -518,7 +518,7 @@ Forced: After placing the 6th damage here, the first player takes control of the
                 Text = "Forced: After Howling Warg attacks, place 1 damage on an active location.",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, place 1 damage on an active location.",
                 EncounterSet = "The Ring Goes South",
-                Number = 27,
+                CardNumber = 27,
                 Quantity = 4,
                 Artist = Artist.Dylan_Pierpont
             });
@@ -540,7 +540,7 @@ Forced: After placing the 6th damage here, the first player takes control of the
 
 Forced: After Crebain from Dunland engages a player, reveal the top card of the encounter deck.",
                 EncounterSet = "The Ring Goes South",
-                Number = 28,
+                CardNumber = 28,
                 Quantity = 2,
                 Artist = Artist.Aurelien_Hubert
             });
@@ -558,7 +558,7 @@ Forced: After Crebain from Dunland engages a player, reveal the top card of the 
                 FlavorText = "\"We may well be seen by watchers on that narrow path...\" -Gandalf, The Fellowship of the Ring",
                 VictoryPoints = 1,
                 EncounterSet = "The Ring Goes South",
-                Number = 29,
+                CardNumber = 29,
                 Quantity = 1,
                 Artist = Artist.Katy_Grierson
             });
@@ -580,7 +580,7 @@ Progress cannot be placed on each other active location before it can be placed 
 If there are 9 damage tokens, the players lose the game.",
                 VictoryPoints = 1,
                 EncounterSet = "The Ring Goes South",
-                Number = 30,
+                CardNumber = 30,
                 Quantity = 1,
                 Artist = Artist.Nate_Abell
             });
@@ -600,7 +600,7 @@ Forced: When Tree-crowned hill is explored, the players, as a group, exhaust X c
                 FlavorText = "For their defense in the night the Company climbed to the top of the small hill... -The Fellowship of the Ring",
                 VictoryPoints = 1,
                 EncounterSet = "The Ring Goes South",
-                Number = 31,
+                CardNumber = 31,
                 Quantity = 1,
                 Artist = Artist.Ferdinand_Dumago_Ladera
             });
@@ -620,7 +620,7 @@ Forced: When ~Hills of Hollin is explored, each player raises his threat by 1 fo
                 FlavorText = "For their defense in the night the Company climbed to the top of the small hill... -The Fellowship of the Ring",
                 VictoryPoints = 1,
                 EncounterSet = "The Ring Goes South",
-                Number = 32,
+                CardNumber = 32,
                 Quantity = 3,
                 Artist = Artist.Mikhail_Yakovlev
             });
@@ -635,7 +635,7 @@ Forced: When ~Hills of Hollin is explored, each player raises his threat by 1 fo
                 Traits = new List<string> { "Hills." },
                 Text = "While ~Hills of Hollin is the active location, it gains: \"Forced: After an enemy is added to the staging area, it gets -5 engagement cost until the end of the round.\"\r\nForced: When Redhorn Foothills is explored, each player must discard X cards from his hand at random. X is the number of damage here.",
                 EncounterSet = "The Ring Goes South",
-                Number = 33,
+                CardNumber = 33,
                 Quantity = 3,
                 EasyModeQuantity = 2,
                 Artist = Artist.Victor_Garcia
@@ -652,7 +652,7 @@ Forced: When ~Hills of Hollin is explored, each player raises his threat by 1 fo
                 Text = "Forced: When Eregion is explored, the players, as a group, must discard X allies from play. X is the number of damage here.",
                 Shadow = "Shadow: Defending player discards a non-objective attachment he controls.",
                 EncounterSet = "The Ring Goes South",
-                Number = 34,
+                CardNumber = 34,
                 Quantity = 3,
                 EasyModeQuantity = 2,
                 Artist = Artist.Michael_Rasmussen
@@ -667,7 +667,7 @@ Forced: When ~Hills of Hollin is explored, each player raises his threat by 1 fo
                 Shadow = "Shadow: Undefended damage from this attack must be assigned to the active location.",
                 FlavorText = "\"I think they are spying out the land.\" -Aragorn, The Fellowship of the Ring",
                 EncounterSet = "The Ring Goes South",
-                Number = 35,
+                CardNumber = 35,
                 Quantity = 2,
                 EasyModeQuantity = 1,
                 Artist = Artist.Sandra_Duchiewicz
@@ -682,7 +682,7 @@ Forced: When ~Hills of Hollin is explored, each player raises his threat by 1 fo
                 Text = "When Revealed: Attach to the active location. (Countss as a Condition attachment with the text, \"Limit 1 per location. No more than 3 progress can be placed on attached location each round.\") If Snowdrifts is not attached to the active location, it gains surge.",
                 FlavorText = "Soon even Boromir found it hard to keep going. -The Fellowship of the Ring",
                 EncounterSet = "The Ring Goes South",
-                Number = 36,
+                CardNumber = 36,
                 Quantity = 2,
                 Artist = Artist.Mark_Behm
             });
@@ -696,7 +696,7 @@ Forced: When ~Hills of Hollin is explored, each player raises his threat by 1 fo
                 Text = "When Revealed: Each player must choose: either discard each ally he controls, or raise his threat by 1 for each ally he controls.",
                 Shadow = "Shadow: Attacking enemy makes an additional attack after this one.",
                 EncounterSet = "The Ring Goes South",
-                Number = 37,
+                CardNumber = 37,
                 Quantity = 2,
                 EasyModeQuantity = 1,
                 Artist = Artist.Carly_Janine_Mazur
@@ -710,7 +710,7 @@ Forced: When ~Hills of Hollin is explored, each player raises his threat by 1 fo
                 Keywords = new List<string> { "Peril." },
                 Text = "When Revealed: Either the Warg enemy in the staging area with the highest engagement cost attacks you, or each Warg enemy gets -20 engagement until the end of the round. If no Warg enemy is in the staging area, Storm of Howls gains surge.",
                 EncounterSet = "The Ring Goes South",
-                Number = 38,
+                CardNumber = 38,
                 Quantity = 3,
                 EasyModeQuantity = 2,
                 Artist = Artist.Jake_Bullock
@@ -733,7 +733,7 @@ Setup: Shuffle the burder treachery cards Pursued by the Enemy and Shadow of Fea
                 OppositeText = "Resolution: The first player must choose one of the burden treachery cards (Pursued by the Enemy or Shadow of Fear), and one of the burden objective cards (Grievous Wound or Overcome by Grief) and add to the Campaign Pool. If The Balrog is still in play, the first player must choose all 4 burden cards instead. The chosen burdens have been earned by the players.",
                 OppositeFlavorText = "They ran on. The light grew before them; great shafts pierced the roof. They ran swifter. They passed into a hall, bright with daylight from its high windows in the east. They fled across it. Through its huge broken doors they passed, and suddenly before them the Great Gates opened, an arch of blazing light. -The Fellowship of the Ring",
                 EncounterSet = "Journey in the Dark",
-                Number = 39,
+                CardNumber = 39,
                 Quantity = 1,
                 Artist = Artist.Juan_Carlos_Barquet
             });
@@ -752,7 +752,7 @@ Setup: Shuffle the burder treachery cards Pursued by the Enemy and Shadow of Fea
                 QuestPoints = 14,
                 OppositeText = "Forced: After a player optionally engages an enemy, remove 1 damage from Doom, Doom, Doom.",
                 OppositeFlavorText = "There were not only many roads to choose from, there were also in many places holes and pitfalls, and dark wells beside the path in which their passing feet echoed. -The Fellowship of the Ring",
-                Number = 40,
+                CardNumber = 40,
                 Quantity = 1,
                 Artist = Artist.Juan_Carlos_Barquet
             });
@@ -775,7 +775,7 @@ Setup: Shuffle the burder treachery cards Pursued by the Enemy and Shadow of Fea
 The players cannot advance unless there are X resource tokens on this stage. X is the number of players times 3.
 
 Forced: After an enemy is defeated, place 1 resource token on this stage.",
-                Number = 41,
+                CardNumber = 41,
                 Quantity = 1,
                 Artist = Artist.Nate_Abell
             });
@@ -797,7 +797,7 @@ Forced: After an enemy is defeated, place 1 resource token on this stage.",
 
 The players cannot defeat this stage while The Great Bridge is in play. If the players defeat this stage, they win the game.",
                 OppositeFlavorText = "\"Now for the last race!\" said Gandalf. \"If the sun is shining outside we may still escape. After me!\" -The Fellowship of the Ring",
-                Number = 42,
+                CardNumber = 42,
                 Quantity = 1,
                 Artist = Artist.Silver_Saaremael
             });
@@ -813,7 +813,7 @@ The players cannot defeat this stage while The Great Bridge is in play. If the p
 
 Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in play.",
                 EncounterSet = "Journey in the Dark",
-                Number = 43,
+                CardNumber = 43,
                 Quantity = 1,
                 Artist = Artist.Silver_Saaremael
             });
@@ -834,7 +834,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
                 Text = "Cannot be optionally engaged. The Balrog and shadow cards dealt to The Balrog are immune to player card effects.\r\nWhile in the staging area, The ~Balrog is considered to be engaged with the first player and only the first player can declare attackers against The ~Balrog.",
                 VictoryPoints = 50,
                 EncounterSet = "Journey in the Dark",
-                Number = 44,
+                CardNumber = 44,
                 Quantity = 1,
                 Artist = Artist.Jim_Pavelec
             });
@@ -853,7 +853,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
                 Text = "Cannot have attachmnets. Allies cannot defend against Orc-chieftain.\r\nForced: At the beginning of the encounter phase, Orc-chieftain engages the first player.",
                 FlavorText = "...he charged into the Company and thrust his spear straight at Frodo. -The Fellowship of the Ring",
                 EncounterSet = "Journey in the Dark",
-                Number = 45,
+                CardNumber = 45,
                 Quantity = 1,
                 Artist = Artist.Alvaro_Calvo_Escudero
             });
@@ -871,7 +871,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
                 Traits = new List<string> { "Troll." },
                 Text = "Cannot have attachments.\r\nFor each point of excess damage dealt by Cave-troll (damage that is dealt beyond the remaining hit points of the character damaged by its attack) remove 1 progress from the current quest.",
                 EncounterSet = "Journey in the Dark",
-                Number = 46,
+                CardNumber = 46,
                 Quantity = 2,
                 EasyModeQuantity = 1,
                 Artist = Artist.Nicholas_Gregory
@@ -891,7 +891,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
                 Text = "When Revealed: Uruk from Mordor makes an immediate attack against the first player.",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, attacking enemy makes an additional attack.",
                 EncounterSet = "Journey in the Dark",
-                Number = 47,
+                CardNumber = 47,
                 Quantity = 3,
                 EasyModeQuantity = 2,
                 Artist = Artist.Guillaume_Ducos
@@ -911,7 +911,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
                 Text = "When Revealed: Either remove 1 damage from Doom, Doom, Doom, or reveal an additional encounter card.",
                 Shadow = "Shadow: The defending player raises his threat by 1 for each enemy engaged with him.",
                 EncounterSet = "Journey in the Dark",
-                Number = 48,
+                CardNumber = 48,
                 Quantity = 3,
                 Artist = Artist.Ben_Peek
             });
@@ -931,7 +931,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
                 Keywords = new List<string> { "Peril.", "Archery 2." },
                 Text = "X is the number of players in the game.\r\nWhen Revealed: Assign X damage among characters you control.",
                 EncounterSet = "Journey in the Dark",
-                Number = 49,
+                CardNumber = 49,
                 Quantity = 3,
                 EasyModeQuantity = 2,
                 Artist = Artist.Ben_Peek
@@ -949,7 +949,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
                 Text = "Immune to player card effects.\r\nResponse: When The Great Bridge is explored, discard a hero from play to deal X damage to The Balrog. X is that hero's threat cost. Then, The Balrog loses all keywords for the remainder of the game. Any player may trigger this response.",
                 EncounterSet = "Journey in the Dark",
                 VictoryPoints = 5,
-                Number = 50,
+                CardNumber = 50,
                 Quantity = 1,
                 Artist = Artist.Emilio_Rodriguez
             });
@@ -966,7 +966,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
                 Text = "Immune to player card effects.\r\nThe player cannot advance to the next stage.\r\nTravel: Each player searches the encounter deck and discard pile for a different enemy and adds it to the staging area to travel here. One of those enemies must be Orc-chieftain, if able.",
                 EncounterSet = "Journey in the Dark",
                 VictoryPoints = 4,
-                Number = 51,
+                CardNumber = 51,
                 Quantity = 1,
                 Artist = Artist.Emilio_Rodriguez
             });
@@ -982,7 +982,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
                 Text = "Whiles Mines of Moria is in the staging area, progress must be placed on Mines of Moria before it can be placed on the current quest.",
                 Shadow = "Shadow: Defending player discards a non-objective attachment he controls (2 non-objective attachments instead if his threat is 35 or higher).",
                 EncounterSet = "Journey in the Dark",
-                Number = 52,
+                CardNumber = 52,
                 Quantity = 4,
                 Artist = Artist.Juan_Carlos_Barquet
             });
@@ -998,7 +998,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
                 Text = "Many-pillared Hall gets +1 Threat for each Many-pillared Hall in play.",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the defending player's threat is 35 or higher).",
                 EncounterSet = "Journey in the Dark",
-                Number = 53,
+                CardNumber = 53,
                 Quantity = 4,
                 EasyModeQuantity = 3,
                 Artist = Artist.Jose_Vega
@@ -1015,7 +1015,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
                 Text = "Forced: After Darkened Stairway is explored, discard the top card of the encounter deck. If the discarded card is a location, add it to the staging area.",
                 FlavorText = "Frodo caught glimpses of stairs and arches and of other passages and tunnels, sloping up, or running steeply down, or opening blankly dakr on either side. -The Fellowship of the Ring",
                 EncounterSet = "Journey in the Dark",
-                Number = 54,
+                CardNumber = 54,
                 Quantity = 2,
                 EasyModeQuantity = 1,
                 Artist = Artist.Nate_Abell
@@ -1031,7 +1031,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
                 Traits = new List<string> { "Underground." },
                 Text = "While Ancient Guardroom is the active location, each enemy in play gets -1 Attack.\r\nTravel: Discard the top card of the encounter deck to travel here. Each player raises his threat by X, where X is the discarded card's Threat.",
                 EncounterSet = "Journey in the Dark",
-                Number = 55,
+                CardNumber = 55,
                 Quantity = 2,
                 Artist = Artist.Pedro_Amato
             });
@@ -1044,7 +1044,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
                 Keywords = new List<string> { "Doomed 2." },
                 Text = "When Revealed: Shuffle the encounter discard pile into the encounter deck and discard cards from the top of the encounter deck until X enemies are discarded. X is the number of players in the game. Add each enemy discarded this way to the staging area.",
                 EncounterSet = "Journey in the Dark",
-                Number = 56,
+                CardNumber = 56,
                 Quantity = 2,
                 EasyModeQuantity = 1,
                 Artist = Artist.Sara_Betsy
@@ -1058,7 +1058,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
                 Text = "When Revealed: Each player assigns X damage among characters he controls. X is the number of exhausted characters he controls.",
                 Shadow = "Shadow: Assign X damage among characters you control. X is the number of enemies engaged with you.",
                 EncounterSet = "Journey in the Dark",
-                Number = 57,
+                CardNumber = 57,
                 Quantity = 3,
                 EasyModeQuantity = 2,
                 Artist = Artist.Nate_Abell
@@ -1073,7 +1073,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
                 Text = "When Revealed: Remove a character you control from the quest and discard the top card of the encounter deck. If that character's printed Willpower is less than the discarded card's Threat, discard that character.",
                 FlavorText = "...it was long before Pippin could summon enough courage to leap... -The Fellowship of the Ring",
                 EncounterSet = "Journey in the Dark",
-                Number = 58,
+                CardNumber = 58,
                 Quantity = 3,
                 Artist = Artist.Pedro_Amato
             });
@@ -1087,7 +1087,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
                 Text = "When Revealed: Remove 1 damage token from Doom, Doom, Doom, or The Balrog makes an attack, if able.",
                 Shadow = "Shadow: If this attack destroys a character, reveal 1 card from the encounter deck.",
                 EncounterSet = "Journey in the Dark",
-                Number = 59,
+                CardNumber = 59,
                 Quantity = 2,
                 EasyModeQuantity = 1,
                 Artist = Artist.Chris_Rahn
@@ -1111,7 +1111,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 OppositeText = "Resolution: If Fallen into Evil is attached to a hero, add that hero to the list of Fallen Heroes in the Campaign Log.\r\nThe first player chooses either Followed by Night or Ill Fate to be added to the campaign pool. The chosen burden card has been earned by the players.\r\nEach player chooses 1 hero he controls (other than the Ring-bearer or Aragorn) to be taken captive. Record the name of each \"captive\" in the Notes section of the Campaign Log.",
                 OppositeFlavorText = "I would have guided Frodo to Mordor and gone with him to the end; but if I seek him now in the wilderness, I must abandon the captives to torment and death. My heart speaks clearly at last: the fate of the Bearer is in my hands no longer. The Company has played its part. Yet we that remain cannot forsake our companions while we have strength left. Come! We will go now. Leave all that can be spared behind! We will press on by day and dark! -Aragorn, The Two Towers",
                 EncounterSet = "Breaking of the Fellowship",
-                Number = 60,
+                CardNumber = 60,
                 Quantity = 1,
                 Artist = Artist.Katy_Grierson
             });
@@ -1130,7 +1130,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 OppositeText = "Enemies get +2 Defense and cannot be engaged. Skip the encounter phase.\r\nThe players cannot advance while The Argonath is in play.",
                 OppositeFlavorText = "So the Company went on their long way, down the wide hurrying waters, borne ever southwards. Bare woods stalked along either bank, and they could not see any glimpse of the lands behind. -The Fellowship of the Ring",
                 EncounterSet = "Breaking of the Fellowship",
-                Number = 61,
+                CardNumber = 61,
                 Quantity = 1,
                 Artist = Artist.Katy_Grierson
             });
@@ -1148,7 +1148,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 FlavorText = "The river has carried the Company as far as it can and the time has come for Frodo to choose which way to go. He asks for an hour to decide, but after he disappears Orcs are discovered prowling the woods and the Company scatters to find him...",
                 OppositeText = "Forced: At the end of the refresh phase, shuffle Seat of Seeing and Forod's Choice into the encounter discard pile. Then, place the encounter discard pile on the bottom of the encounter deck. Starting with the first player, each player creates his own staging area and advances to a different stage 3A of his choice. In player order, each player moves 1 encounter card from this staging area to his. When there are no encounter cards left at this stage, discard it.",
                 EncounterSet = "Breaking of the Fellowship",
-                Number = 62,
+                CardNumber = 62,
                 Quantity = 1,
                 Artist = Artist.Claudio_Pozas
             });
@@ -1166,7 +1166,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 FlavorText = "Sam had dashed off first. Merry and Pippin had followed, and were already disappearing westward into the trees by the shore, shouting: Frodo! Frodo! in their clear, high hobbit-voices. -The Fellowship of the Ring",
                 OppositeText = "If Frodo's Choice is not in play, any time players would place progress on this quest, discard an equal number of cards from the encounter deck instead.\r\nForced: After Frodo's Choice is revealed at this stage, advance to stage 4A.\r\nResponse: After you quest successfully, discard a non-unique location in the staging area.",
                 EncounterSet = "Breaking of the Fellowship",
-                Number = 63,
+                CardNumber = 63,
                 Quantity = 1,
                 Artist = Artist.Anthony_Devine
             });
@@ -1184,7 +1184,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 FlavorText = "\"Boromir! I do not know what part you have played in this mischief, but help now! Go after those two young hobbits, and guard them at the least, even if you cannot find Frod.\" -Aragorn, The Fellowship of the Ring",
                 OppositeText = "If Frodo's Choice is not in play, any time players would place progress on this quest, discard an equal number of cards from the encounter deck instead.\r\nForced: After Frodo's Choice is revealed at this stage, advance to stage 4A.\r\nResponse: After you quest successfully, choose a player. Ready each of that player's heroes.",
                 EncounterSet = "Breaking of the Fellowship",
-                Number = 64,
+                CardNumber = 64,
                 Quantity = 1,
                 Artist = Artist.Rovina_Cai
             });
@@ -1202,7 +1202,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 FlavorText = "\"I am going to the top, to the Seat of Amon Hen, to see what may be seen. And look! It is as my heart guessed, Frodo went this way. Follow me, and keep your eyes open!\" -Aragorn, The Fellowship of the Ring",
                 OppositeText = "If Frodo's Choice is not in play, any time players would place progress on this quest, discard an equal number of cards from the encounter deck instead.\r\nForced: After Frodo's Choice is revealed at this stage, advance to stage 4A.\r\nResponse: After you quest successfully, choose a player. That player draws 2 cards and lowers his threat by 2.",
                 EncounterSet = "Breaking of the Fellowship",
-                Number = 65,
+                CardNumber = 65,
                 Quantity = 1,
                 Artist = Artist.Stacey_Diana_Clark
             });
@@ -1220,7 +1220,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 FlavorText = "So it was that Legolas and Gimli found him. They came from the western slopes of the hill, silently, creeping through the trees as if they were hunting. Gimli had his axe in hand, and Legolas his long knife: all his arrows were spent. -The Two Towers",
                 OppositeText = "If Frodo's Choice is not in play, any time players would place progress on this quest, discard an equal number of cards from the encounter deck instead.\r\nForced: After Frodo's Choice is revealed at this stage, advance to stage 4A.\r\nResponse: After you quest successfully, discard an enemy engaged with a player.",
                 EncounterSet = "Breaking of the Fellowship",
-                Number = 66,
+                CardNumber = 66,
                 Quantity = 1,
                 Artist = Artist.Alvaro_Calvo_Escudero
             });
@@ -1238,7 +1238,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 FlavorText = "\"Now, Sam,\" said Frodo, \"don't hinder me! The others will be coming back at any minute. If they catch me here, I shall have to argue and explain, and I shall never have the heart of the chance to get off. But I must go at once. It's the only way.\" -The Fellowship of the Ring",
                 OppositeText = "During the quest phase, reveal 1 additional encounter card for each player in the game.\r\nResponse: After an enemy is revealed at this stage, raise your threat by X to engage that enemy. X is that enemy's Threat. Each player (at any stage) may trigger this ability once per round.\r\nWhen this stage is defeated, the players win the game.",
                 EncounterSet = "Breaking of the Fellowship",
-                Number = 67,
+                CardNumber = 67,
                 Quantity = 1,
                 Artist = Artist.Gabriel_Verdon
             });
@@ -1252,7 +1252,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 Text = "If Frodo's Choice is discarded, reveal it instead.\r\nWhen Revealed: Take control of the first player token and the Ring-bearer (and each card attached to it). Attach to the Ring-bearer. For the rest of the game, you cannot lose control of the first player token.",
                 FlavorText = "\"I will go alone.\" -Frodo, The Fellowship of the Ring",
                 EncounterSet = "Breaking of the Fellowship",
-                Number = 68,
+                CardNumber = 68,
                 Quantity = 1,
                 Artist = Artist.Sandra_Duchiewicz
             });
@@ -1272,7 +1272,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 Text = "Cannot have attachments.\r\nAllies with fewer printed hit points than Uruk-hai ~Captain cannot defend against Uruk-hai ~Captain.",
                 Shadow = "Shadow: Attacking enemy makes an additional attack after this one.",
                 EncounterSet = "Breaking of the Fellowship",
-                Number = 69,
+                CardNumber = 69,
                 Quantity = 2,
                 EasyModeQuantity = 1,
                 Artist = Artist.Joel_Hustak
@@ -1294,7 +1294,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 Text = "X is the number of players at this stage.\r\nWhen Revealed: Discard an ally you control.",
                 FlavorText = "...they had bows of yew, in length and shape like the bows of Men. -The Fellowship of the Ring",
                 EncounterSet = "Breaking of the Fellowship",
-                Number = 70,
+                CardNumber = 70,
                 Quantity = 4,
                 EasyModeQuantity = 3,
                 Artist = Artist.Florian_Devos
@@ -1315,7 +1315,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 Text = "Uruk-hai Tracker gets +2 Attack against characters with 2 or fewer printed hit points.",
                 Shadow = "Shadow: Discard a non-objective attachment you control.",
                 EncounterSet = "Breaking of the Fellowship",
-                Number = 71,
+                CardNumber = 71,
                 Quantity = 3,
                 EasyModeQuantity = 2,
                 Artist = Artist.Tey_Bartolome
@@ -1336,7 +1336,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 Text = "When Revealed: Either choose a player to reveal an additional encounter card, or Uruk-hai Hunter makes an immediate attack against you.",
                 FlavorText = "\"I fear that the Orcs may already be on this side of the water.\" -Aragorn, The Fellowship of the Ring",
                 EncounterSet = "Breaking of the Fellowship",
-                Number = 72,
+                CardNumber = 72,
                 Quantity = 3,
                 EasyModeQuantity = 2,
                 Artist = Artist.Gabriel_Verdon
@@ -1354,7 +1354,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 Text = "Immune to player card effects.\r\nTravel: Search the encounter deck and discard pile for an enemy and add it to the staging area to travel here. Shuffle the encounter deck.\r\nWhile Parth Galen is in play, the players cannot win the game.",
                 VictoryPoints = 1,
                 EncounterSet = "Breaking of the Fellowship",
-                Number = 73,
+                CardNumber = 73,
                 Quantity = 1,
                 Artist = Artist.Katy_Grierson
             });
@@ -1371,7 +1371,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 Text = "Immune to player card effects.\r\nResponse: When Seat of Seeing is explored, choose a burden card in play, in the encounter deck, or in the discard pile, and remove it from the game. Shuffle the encounter deck. (If you are playing campaign mode, remove that card from the campaign pool.)",
                 VictoryPoints = 1,
                 EncounterSet = "Breaking of the Fellowship",
-                Number = 74,
+                CardNumber = 74,
                 Quantity = 1,
                 Artist = Artist.Jose_Vega
             });
@@ -1390,7 +1390,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 FlavorText = "\"Behold the Argonath, the Pillars of the Kings!\" -Aragorn, The Fellowship of the Ring",
                 VictoryPoints = 1,
                 EncounterSet = "Breaking of the Fellowship",
-                Number = 75,
+                CardNumber = 75,
                 Quantity = 1,
                 Artist = Artist.Juan_Carlos_Barquet
             });
@@ -1408,7 +1408,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 FlavorText = "\"Boats of the Elves would not sink, maybe.\" he said, \"but that does not say that we should come through Sarn Gebir alive. None have ever done so yet.\" -Boromir, The Fellowship of the Ring",
                 VictoryPoints = 1,
                 EncounterSet = "Breaking of the Fellowship",
-                Number = 76,
+                CardNumber = 76,
                 Quantity = 1,
                 Artist = Artist.Katy_Grierson
             });
@@ -1424,7 +1424,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 Text = "While River Anduin is in the staging area it gains: \"Forced: At the end of the travel phase, each player at this stage raises his threat by 1. Then, River Anduin moves to the staging area to the left, if able.\"",
                 FlavorText = "\"Anduin flows faster than I thought.\" -Aragorn, The Fellowship of the Ring",
                 EncounterSet = "Breaking of the Fellowship",
-                Number = 77,
+                CardNumber = 77,
                 Quantity = 4,
                 Artist = Artist.Victor_Garcia
             });
@@ -1439,7 +1439,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 Traits = new List<string> { "River.", "Forest." },
                 Text = "While Wooded Shoreline is in the staging area, it gains archery 2.\r\nTravel: Search the encounter deck and discard pile for an enemy and add it to the staging area to travel here. Shuffle the encounter deck.",
                 EncounterSet = "Breaking of the Fellowship",
-                Number = 78,
+                CardNumber = 78,
                 Quantity = 3,
                 EasyModeQuantity = 1,
                 Artist = Artist.Anthony_Feliciano
@@ -1456,7 +1456,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 Text = "Travel: A player at this staging area must engage an enemy in any staging area to travel here.",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the defending character has fewer printed hit points than the attacking enemy).",
                 EncounterSet = "Breaking of the Fellowship",
-                Number = 79,
+                CardNumber = 79,
                 Quantity = 3,
                 Artist = Artist.Michael_Rasmussen
             });
@@ -1470,7 +1470,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 Text = "When Revealed: Either move 1 enemy engaged with you to the first player's staging area, or Growing Threat gains doomed 2 and surge.",
                 Shadow = "Shadow: After this attack, move attacking enemy to the first player's staging area.",
                 EncounterSet = "Breaking of the Fellowship",
-                Number = 80,
+                CardNumber = 80,
                 Quantity = 2,
                 Artist = Artist.Greg_Opalinski
             });
@@ -1483,7 +1483,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 Text = "When Revealed: Remove all damage from each enemy at this stage. Each enemy at this stage gets +1 Threat, +1 Attack, and +1 Defense until the end of the round.",
                 Shadow = "Shadow: If the defending character has fewer printed hit points than the attacking enemy, this attack is considered undefended.",
                 EncounterSet = "Breaking of the Fellowship",
-                Number = 81,
+                CardNumber = 81,
                 Quantity = 2,
                 Artist = Artist.Alvaro_Calvo_Escudero
             });
@@ -1496,7 +1496,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 Text = "When Revealed: Until the end of the round, add 1 to the archery total at this stage for each ally currently at this stage.",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the defending character has fewer printed hit points than the attacking enemy).",
                 EncounterSet = "Breaking of the Fellowship",
-                Number = 82,
+                CardNumber = 82,
                 Quantity = 3,
                 Artist = Artist.Mark_Erwan_Tarrisse
             });
@@ -1509,7 +1509,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 Traits = new List<string> { "Corruption." },
                 Text = "When Revealed: Attach to a non-Fellowship hero and move it to the first player's staging area. (Counts as a Condition attachment with the text: \"Attached hero loses the hero card type and gains the enemy card type with Threat equal to its Willpower and engagement cost equal to its threat cost. If Fallen into Evil is discarded, return attached hero to its owner's control\")",
                 EncounterSet = "Breaking of the Fellowship",
-                Number = 83,
+                CardNumber = 83,
                 Quantity = 1,
                 EasyModeQuantity = 0,
                 Artist = Artist.Claudio_Pozas
@@ -1525,7 +1525,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 Keywords = new List<string> { "Peril.", "Surge." },
                 Text = "When Revealed: Attach to a non-Fellowship hero in play. Counts as a Condition attachment with the text: \"Forced: After The One ~Ring exhausts, raise each player's threat by 1 and reduce attached hero's Willpower to 0 until the end of the round.\"",
                 EncounterSet = "The Ring Goes South",
-                Number = 84,
+                CardNumber = 84,
                 Quantity = 1,
                 Artist = Artist.Arden_Beckwith
             });
@@ -1540,7 +1540,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 Text = "When Revealed: Treat the printed text box of each character in play as blank (except for Traits) until the end of the round.",
                 Shadow = "Shadow: Defending character does not count its Defense.",
                 EncounterSet = "Journey in the Dark",
-                Number = 85,
+                CardNumber = 85,
                 Quantity = 1,
                 Artist = Artist.Mark_Behm
             });
@@ -1555,7 +1555,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 Text = "When Revealed: Each enemy engaged with a player, and not in the staging area, makes an immediate attack.",
                 Shadow = "Shadow: Attacking enemy makes an additional attack after this one.",
                 EncounterSet = "Journey in the Dark",
-                Number = 86,
+                CardNumber = 86,
                 Quantity = 1,
                 Artist = Artist.Claudio_Pozas
             });
@@ -1569,7 +1569,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 Traits = new List<string> { "Despair." },
                 Text = "Setup: Add Overcome by Grief to the staging area.\r\nForced: After a character is destroyed, if Overcome by Grief is unattached, attach to a hero. (Counts as a Condition attachment with the text: \"Forced: After a character you control is destroyed, exhaust attached hero. Until the end of the round, attached hero cannot ready.\")",
                 EncounterSet = "Journey in the Dark",
-                Number = 87,
+                CardNumber = 87,
                 Quantity = 1,
                 Artist = Artist.Guillaume_Ducos
             });
@@ -1583,7 +1583,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 Traits = new List<string> { "Wound." },
                 Text = "Setup: Add Grievous Wound to the staging area.\r\n\"Forced: After a hero takes damage, if Grievous Wound is unattached, attach to that hero. (Counts as a Condition attachment with the text: \"Forced: After attached hero exhausts, deal 1 damage to it.\")",
                 EncounterSet = "Journey in the Dark",
-                Number = 88,
+                CardNumber = 88,
                 Quantity = 1,
                 Artist = Artist.Sara_K_Diesel
             });
@@ -1598,7 +1598,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 Text = "When Revealed: Put the topmost enemy of the encounter deck discard pile into play engaged with you.",
                 FlavorText = "\"Quite apart from murder by night on his own account, he may put any enemy that is about on our track.\" -Aragorn, The Fellowship of the Ring",
                 EncounterSet = "Breaking of the Fellowship",
-                Number = 89,
+                CardNumber = 89,
                 Quantity = 1,
                 Artist = Artist.Gabriel_Verdon
             });
@@ -1614,7 +1614,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 Text = "When Revealed: Attach to a hero you control. (Counts as a Condition attachment with the text: \"Forced: After a character you control is destroyed, raise your threat by 2.\")",
                 FlavorText = "\"Alas! An ill fate is on me this day, and all that I do goes amiss.\" -Aragorn, The Fellowship of the Ring",
                 EncounterSet = "Breaking of the Fellowship",
-                Number = 90,
+                CardNumber = 90,
                 Quantity = 1,
                 Artist = Artist.Magali_Villeneuve
             });
@@ -1632,7 +1632,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
 Attached hero does not count against the hero limit. The first player gains control of attached hero.
 
 If The One Ring leaves play, the players lose the game.",
-                Number = 91,
+                CardNumber = 91,
                 Quantity = 1,
                 Artist = Artist.Mike_Nash
             });

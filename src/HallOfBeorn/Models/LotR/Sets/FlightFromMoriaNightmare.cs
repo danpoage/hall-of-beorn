@@ -51,7 +51,7 @@ Shuffle the new stage 2 quest cards in this Nightmare Deck into the quest deck a
 Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.",
                 EncounterSet = "Flight from Moria Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Mark_Behm
             });
             Cards.Add(new LotRCard()
@@ -74,7 +74,7 @@ Players may bypass this quest card at the end of the combat phase.",
                 QuestPoints = 5,
                 EncounterSet = "Flight from Moria Nightmare",
                 Quantity = 1,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Gabriel_Verdon
             });
@@ -98,7 +98,7 @@ If The ~Nameless Fear has 10 or more damage on it, remove all damage from it and
                 VictoryPoints = 1,
                 EncounterSet = "Flight from Moria Nightmare",
                 Quantity = 1,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Alvaro_Calvo_Escudero
             });
@@ -123,7 +123,7 @@ Players may bypass this quest card at the end of the combat phase.",
                 VictoryPoints = 1,
                 EncounterSet = "Flight from Moria Nightmare",
                 Quantity = 1,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Mark_Behm
             });
@@ -143,7 +143,7 @@ Players may bypass this quest card at the end of the combat phase.",
                 Text = "While you are engaged with Swarming Goblins, it gains: \"Forced: When a quest card is bypassed, search the encounter discard pile for a copy of ~Goblin Spearman and put it into play engaged with you.\"",
                 EncounterSet = "Flight from Moria Nightmare",
                 Quantity = 3,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Mark_Behm
             });
             Cards.Add(new LotRCard()
@@ -164,7 +164,7 @@ Players may bypass this quest card at the end of the combat phase.",
                 Shadow = "Shadow: Attacking enemy gets +X Attack. X is the number of victory points in the victory display.",
                 EncounterSet = "Flight from Moria Nightmare",
                 Quantity = 3,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new LotRCard()
@@ -180,7 +180,7 @@ Players may bypass this quest card at the end of the combat phase.",
                 Shadow = "Shadow: If the defending character is a hero, discard all resources in its resource pool. Deal attacking enemy another shadow card for each resource discarded in this way.",
                 EncounterSet = "Flight from Moria Nightmare",
                 Quantity = 4,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard()
@@ -193,7 +193,7 @@ Players may bypass this quest card at the end of the combat phase.",
                 Shadow = "Shadow: Discard each attachment you control with a cost less than The ~Nameless Fear's Threat.",
                 EncounterSet = "Flight from Moria Nightmare",
                 Quantity = 3,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Dleoblack
             });
             Cards.Add(new LotRCard()
@@ -209,7 +209,7 @@ Players may bypass this quest card at the end of the combat phase.",
                 VictoryPoints = 1,
                 EncounterSet = "Flight from Moria Nightmare",
                 Quantity = 3,
-                Number = 9,
+                CardNumber = 9,
                 Artist = Artist.Mark_Behm
             });
         }

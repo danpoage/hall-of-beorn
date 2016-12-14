@@ -29,7 +29,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 QuestPoints = 5,
                 EncounterSet = "The Hills of Emyn Muil",
                 VictoryPoints = 5,
-                Number = 83,
+                CardNumber = 83,
                 Artist = Artist.Vincent_Proce
             });
             Cards.Add(new LotRCard() {
@@ -46,7 +46,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 QuestPoints = 5,
                 EncounterSet = "The Hills of Emyn Muil",
                 VictoryPoints = 5,
-                Number = 84,
+                CardNumber = 84,
                 Artist = Artist.Vincent_Proce
             });
             Cards.Add(new LotRCard() {
@@ -66,7 +66,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Response: After Brand son of Bain attacks and defeats an enemy engaged with another player, choose and ready one of that player's characters.",
                 FlavorText = "\"The grandson of Bard the Bowman rules them, Brand son of Bain son of Bard.\"\r\n-Glóin, The Fellowship of the Ring", 
                 Keywords = new List<string>() { "Ranged." },
-                Number = 72,
+                CardNumber = 72,
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard() {
@@ -83,7 +83,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Willpower = 1,
                 HitPoints = 2,
                 Text = "Descendant of Thorondor cannot have restricted attachments.\r\nResponse: After Descendant of Thorondor enters or leaves play, deal 2 damage to any 1 enemy in the staging area.",
-                Number = 75,
+                CardNumber = 75,
                 Artist = Artist.Igor_Kieryluk
             });
             Cards.Add(new LotRCard() {
@@ -102,7 +102,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HitPoints = 3,
                 Text = "Action: Exhaust Gildor Inglorion to look at the top 3 cards of your deck. Switch one of those cards with a card from your hand. Then, return the 3 cards to the top of your deck, in any order.",
                 FlavorText = "\"Go not to the Elves for counsel, for they will say both no and yes.\" -Frodo Baggins, The Fellowship of the Ring",
-                Number = 79,
+                CardNumber = 79,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -115,7 +115,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 ResourceCost = 3,
                 Text = "Play during the Quest phase, before characters are committed to the Quest.\r\nAction: Reveal 1 less card from the encounter deck this phase. (To a minimum of 1.)",
                 FlavorText = "\"The wide world is all about you: you can fence yourselves in, but you cannot for ever fence it out.\"\r\n-Gildor, The Fellowship of the Ring",
-                Number = 80,
+                CardNumber = 80,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -128,7 +128,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EasyModeQuantity = 2,
                 Text = "When Revealed: If there is an active location, remove all progress tokens from that location and return it to the staging area. If no location is moved by this effect, this card gains surge.",
                 EncounterSet = "The Hills of Emyn Muil",
-                Number = 91,
+                CardNumber = 91,
                 Artist = Artist.Noah_Bradley
             });
             Cards.Add(new LotRCard() {
@@ -146,7 +146,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HitPoints = 2,
                 Text = "Response: After Keen-eyed Took enters play, reveal the top card of each player's deck.\r\nAction: Return Keen-eyed Took to your hand to discard the top card of each player's deck.",
                 FlavorText = "Then something Tookish woke up inside him...\r\n-The Hobbit",
-                Number = 73,
+                CardNumber = 73,
                 Artist = Artist.Anna_Mohrbacher
             });
             Cards.Add(new LotRCard() {
@@ -159,7 +159,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 ResourceCost = 0,
                 Text = "Action: Choose an Eagle ally. Return that character to its owner's hand.",
                 FlavorText = "Not event an eagle poised against the sun would have marked the hobbits sitting there, under the weight of doom...\r\n-The Two Towers",
-                Number = 76,
+                CardNumber = 76,
                 Artist = Artist.A_M_Sartor
             });
             Cards.Add(new LotRCard() {
@@ -179,7 +179,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Keywords = new List<string>() { "Doomed 2." },
                 Threat = 3,
                 EncounterSet = "The Hills of Emyn Muil",
-                Number = 94,
+                CardNumber = 94,
                 Artist = Artist.Brian_Valenzuela
             });
             Cards.Add(new LotRCard() {
@@ -195,7 +195,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 QuestPoints = 4,
                 EncounterSet = "The Hills of Emyn Muil",
                 VictoryPoints = 3,
-                Number = 87,
+                CardNumber = 87,
                 Artist = Artist.Aaron_B_Miller
             });
             Cards.Add(new LotRCard() {
@@ -208,7 +208,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 ResourceCost = 1,
                 Text = "Quest Action: Discard a Leadership ally to give each hero committed to this quest +1 Willpower until the end of the phase.",
                 FlavorText = "In the dark at the rear, grim and silent, walked Aragorn.\r\n-The Fellowship of the Ring",
-                Number = 74,
+                CardNumber = 74,
                 Artist = Artist.Lin_Bo
             });
             Cards.Add(new LotRCard() {
@@ -221,7 +221,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 ResourceCost = 1,
                 Text = "Action: Discard a Rohan ally to choose a location. Place 3 progress tokens on that location.",
                 FlavorText = "\"Death! Ride, ride to ruin and the world's ending!\"\r\n-Éomer, The Return of the King",
-                Number = 78,
+                CardNumber = 78,
                 Artist = Artist.Erfian_Asafat
             });
             Cards.Add(new LotRCard() {
@@ -235,7 +235,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "When Revealed: Deal 2 damage to each character committed to this quest.",
                 Shadow = "Shadow: Remove defending character from combat. This attack is considered undefended.",
                 EncounterSet = "The Hills of Emyn Muil",
-                Number = 92,
+                CardNumber = 92,
                 Artist = Artist.Stu_Barnes
             });
             Cards.Add(new LotRCard() {
@@ -247,7 +247,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Quantity = 3,
                 Text = "When Revealed: Remove 1 progress token from each location in play. Then, discard the top card of each player's deck for each progress token removed by this effect.",
                 EncounterSet = "The Hills of Emyn Muil",
-                Number = 93,
+                CardNumber = 93,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -261,7 +261,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 ResourceCost = 1,
                 Text = "Attach to a hero.\r\nAttached hero gains a Spirit resource icon.",
                 FlavorText = "The Road goes ever on and on\r\nDown from the door where it began.\r\nNow far ahead the road has gone,\r\nAnd I must follow, if I can.\r\n-The Fellowship of the Ring",
-                Number = 81,
+                CardNumber = 81,
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard() {
@@ -278,7 +278,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 QuestPoints = 2,
                 EncounterSet = "The Hills of Emyn Muil",
                 VictoryPoints = 3,
-                Number = 85,
+                CardNumber = 85,
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
@@ -294,7 +294,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 QuestPoints = 1,
                 EncounterSet = "The Hills of Emyn Muil",
                 VictoryPoints = 1,
-                Number = 90,
+                CardNumber = 90,
                 Artist = Artist.Bill_Corbett
             });
             Cards.Add(new LotRCard() {
@@ -312,7 +312,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 OppositeFlavorText = "You are certain that Gollum has fled into the area, and you must explore until you find the fresh trail.",
                 OppositeText = "Forced: If there are no location cards in the staging area, the first treachery card revealed during the quest phase gains surge.\r\nPlayers cannot defeat this stage until there are no Emyn Muil locations in play, and they have collected at least 20 victory points.",
                 EncounterSet = "The Hills of Emyn Muil",
-                Number = 82,
+                CardNumber = 82,
                 Artist = Artist.Igor_Kieryluk,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SauronsReach }
             });
@@ -329,7 +329,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 QuestPoints = 3,
                 EncounterSet = "The Hills of Emyn Muil",
                 VictoryPoints = 3,
-                Number = 86,
+                CardNumber = 86,
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard() {
@@ -345,7 +345,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 QuestPoints = 2,
                 EncounterSet = "The Hills of Emyn Muil",
                 VictoryPoints = 2,
-                Number = 89,
+                CardNumber = 89,
                 Artist = Artist.Lin_Bo
             });
             Cards.Add(new LotRCard() {
@@ -363,7 +363,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HitPoints = 2,
                 Text = "Action: Exhaust and discard The Riddermark's Finest to place 2 progress tokens on any location.",
                 FlavorText = "\"And there are no horses like the ones that are bred in that great vale between the Misty Mountains and the White.\"\r\n-Gandalf, The Fellowship of the Ring",
-                Number = 77,
+                CardNumber = 77,
                 Artist = Artist.Andrew_Johanson
             });
             Cards.Add(new LotRCard() {
@@ -380,7 +380,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 QuestPoints = 2,
                 EncounterSet = "The Hills of Emyn Muil",
                 VictoryPoints = 2,
-                Number = 88,
+                CardNumber = 88,
                 Artist = Artist.Lin_Bo
             });
         }

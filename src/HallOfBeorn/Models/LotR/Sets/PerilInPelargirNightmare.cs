@@ -44,7 +44,7 @@ Then, shuffle the encounter cards in this Nightmare Deck into the remainder of t
 Finally, flip this setup card over and place it next to the quest deck. Its effects remain active throughout the game, which is now ready to begin.",
                 EncounterSet = "Peril in Pelargir Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Dleoblack
             });
             Cards.Add(new LotRCard()
@@ -63,7 +63,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
 
 During the encounter phase, if Alcaron's ~Scroll is attached to a hero, that hero's controller is considered to have +10 threat for the purpose of engagement checks.",
                 EncounterSet = "Peril in Pelargir Nightmare",
-                Number = 2,
+                CardNumber = 2,
                 Quantity = 3,
                 Artist = Artist.Jason_Ward
             });
@@ -80,7 +80,7 @@ During the encounter phase, if Alcaron's ~Scroll is attached to a hero, that her
                 Traits = new List<string> { "Brigand.", "Thug." },
                 Text = "When Revealed: If Alcaron's ~Scroll is attached to an enemy, detach it from that enemy and attach it to ~Harbor Brute. Move all progress tokens from that enemy to ~Harbor Brute.",
                 EncounterSet = "Peril in Pelargir Nightmare",
-                Number = 3,
+                CardNumber = 3,
                 Quantity = 2,
                 Artist = Artist.Mark_Behm
             });
@@ -98,7 +98,7 @@ During the encounter phase, if Alcaron's ~Scroll is attached to a hero, that her
                 Text = "Forced: When Pelargir Ringleader engages a player, return the topmost Brigand enemy in the encounter discard pile to play, engaged with that player.",
                 Shadow = "Shadow: Attacking enemy gets +2 Attack.",
                 EncounterSet = "Peril in Pelargir Nightmare",
-                Number = 4,
+                CardNumber = 4,
                 Quantity = 2,
                 Artist = Artist.Mark_Behm
             });
@@ -112,7 +112,7 @@ During the encounter phase, if Alcaron's ~Scroll is attached to a hero, that her
                 Traits = new List<string> { "City." },
                 Text = "While Dockside Street is in the staging area, enemies in the staging area cannot be damaged or optionally engaged.\r\nTravel: Exhaust the hero with Alcaron's ~Scroll attached to travel here.",
                 EncounterSet = "Peril in Pelargir Nightmare",
-                Number = 5,
+                CardNumber = 5,
                 Quantity = 3,
                 Artist = Artist.Mark_Behm
             });
@@ -127,7 +127,7 @@ During the encounter phase, if Alcaron's ~Scroll is attached to a hero, that her
                 Text = "While Alcaron's ~Scroll is not attached to a hero, Pelargir Alley gets +3 Threat.",
                 Shadow = "Shadow: If the defending player controls a hero with Alcaron's ~Scroll attached, attach Alcaron's ~Scroll to the attacking enemy.",
                 EncounterSet = "Peril in Pelargir Nightmare",
-                Number = 6,
+                CardNumber = 6,
                 Quantity = 2,
                 Artist = Artist.Dleoblack
             });
@@ -139,7 +139,7 @@ During the encounter phase, if Alcaron's ~Scroll is attached to a hero, that her
                 Text = "When Revealed: Each player must either remove a hero he controls from the quest or engage an enemy in the staging area. Each enemy engaged by this effect makes an immediate attack.",
                 Shadow = "Shadow: Attacking enemy gets +2 Attack.",
                 EncounterSet = "Peril in Pelargir Nightmare",
-                Number = 7,
+                CardNumber = 7,
                 Quantity = 3,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
@@ -151,7 +151,7 @@ During the encounter phase, if Alcaron's ~Scroll is attached to a hero, that her
                 Keywords = new List<string> { "Surge." },
                 Text = "When Revealed: If Alcaron's ~Scroll is attached to a hero, choose an enemy engaged with that hero's controller, if able. Attached Alcaron's ~Scroll to that enemy, then add 1 progress to that enemy.",
                 EncounterSet = "Peril in Pelargir Nightmare",
-                Number = 8,
+                CardNumber = 8,
                 Quantity = 2,
                 Artist = Artist.JB_Casacop
             });
@@ -163,7 +163,7 @@ During the encounter phase, if Alcaron's ~Scroll is attached to a hero, that her
                 Keywords = new List<string> { "Surge." },
                 Text = "When Revealed: If Alcaron's ~Scroll is attached to an enemy, choose one: either add 1 progress token to that enemy, or each card in the staging area gets +2 Threat until the end of the phase.",
                 EncounterSet = "Peril in Pelargir Nightmare",
-                Number = 9,
+                CardNumber = 9,
                 Quantity = 2,
                 Artist = Artist.JB_Casacop
             });

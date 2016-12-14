@@ -43,7 +43,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 EncounterSet = "Journey Along the Anduin Nightmare",
                 AlternateEncounterSet = "Journey Down the Anduin Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Alexandre_Dainche
             });
             Cards.Add(new LotRCard()
@@ -63,7 +63,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 EncounterSet = "Journey Along the Anduin Nightmare",
                 AlternateEncounterSet = "Journey Down the Anduin Nightmare",
                 Quantity = 2,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
             Cards.Add(new LotRCard()
@@ -85,7 +85,7 @@ Forced: At the beginning of the combat phase, Anduin Troll Spawn engages a playe
                 EncounterSet = "Journey Along the Anduin Nightmare",
                 AlternateEncounterSet = "Journey Down the Anduin Nightmare",
                 Quantity = 3,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Chun_Lo
             });
             Cards.Add(new LotRCard()
@@ -105,7 +105,7 @@ Forced: At the beginning of the combat phase, Anduin Troll Spawn engages a playe
                 EncounterSet = "Journey Along the Anduin Nightmare",
                 AlternateEncounterSet = "Journey Down the Anduin Nightmare",
                 Quantity = 3,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
             Cards.Add(new LotRCard()
@@ -122,7 +122,7 @@ Forced: At the beginning of the combat phase, Anduin Troll Spawn engages a playe
                 EncounterSet = "Journey Along the Anduin Nightmare",
                 AlternateEncounterSet = "Journey Down the Anduin Nightmare",
                 Quantity = 1,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Alexandre_Dainche
             });
             Cards.Add(new LotRCard()
@@ -139,7 +139,7 @@ Forced: At the beginning of the combat phase, Anduin Troll Spawn engages a playe
                 EncounterSet = "Journey Along the Anduin Nightmare",
                 AlternateEncounterSet = "Journey Down the Anduin Nightmare",
                 Quantity = 3,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard()
@@ -152,7 +152,7 @@ Forced: At the beginning of the combat phase, Anduin Troll Spawn engages a playe
                 EncounterSet = "Journey Along the Anduin Nightmare",
                 AlternateEncounterSet = "Journey Down the Anduin Nightmare",
                 Quantity = 2,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Allison_Theus
             });
             Cards.Add(new LotRCard()
@@ -166,7 +166,7 @@ Forced: At the beginning of the combat phase, Anduin Troll Spawn engages a playe
                 EncounterSet = "Journey Along the Anduin Nightmare",
                 AlternateEncounterSet = "Journey Down the Anduin Nightmare",
                 Quantity = 2,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
             Cards.Add(new LotRCard()
@@ -180,7 +180,7 @@ Forced: At the beginning of the combat phase, Anduin Troll Spawn engages a playe
                 EncounterSet = "Journey Along the Anduin Nightmare",
                 AlternateEncounterSet = "Journey Down the Anduin Nightmare",
                 Quantity = 2,
-                Number = 9,
+                CardNumber = 9,
                 Artist = Artist.Magali_Villeneuve
             });
         }

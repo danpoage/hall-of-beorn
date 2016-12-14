@@ -44,7 +44,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
 
                 EncounterSet = "Return to Mirkwood Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Jose_Vega
             });
             Cards.Add(new LotRCard()
@@ -63,7 +63,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 FlavorText = "\"It was that very night of summer, yet moonless and starless, that Orcs came on us at unawares.\" -Legolas, The Fellowship of the Ring",
                 EncounterSet = "Return to Mirkwood Nightmare",
                 Quantity = 3,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard()
@@ -81,7 +81,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Text = "Cannot be optionally engaged.\r\nForced: After the player guarding Gollum changes, Pursuing Warg-rider engages the player guarding Gollum and makes an immediate attack against that player.",
                 EncounterSet = "Return to Mirkwood Nightmare",
                 Quantity = 2,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Rick_Price
             });
             Cards.Add(new LotRCard()
@@ -100,7 +100,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Shadow = "Shadow: The player guarding Gollum must exhaust a character he controls.",
                 EncounterSet = "Return to Mirkwood Nightmare",
                 Quantity = 3,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Aurelien_Hubert
             });
             Cards.Add(new LotRCard()
@@ -118,7 +118,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
 Forced: After Deceptive Path becomes the active location, shuffle the encounter discard pile into the encounter deck and discard cards from the top of the encounter deck until a location is discarded. Reveal that location and make it the active location. Then, discard Deceptive Path.",
                 EncounterSet = "Return to Mirkwood Nightmare",
                 Quantity = 2,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Jose_Vega
             });
             Cards.Add(new LotRCard()
@@ -134,7 +134,7 @@ Forced: After Deceptive Path becomes the active location, shuffle the encounter 
                 Shadow = "Shadow: The player guarding Gollum must discard all resources from each of his heroes' resource pools.",
                 EncounterSet = "Return to Mirkwood Nightmare",
                 Quantity = 3,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Jose_Vega
             });
             Cards.Add(new LotRCard()
@@ -148,7 +148,7 @@ Forced: After Deceptive Path becomes the active location, shuffle the encounter 
                 FlavorText = "And he was miserable, alone, lost. -The Hobbit",
                 EncounterSet = "Return to Mirkwood Nightmare",
                 Quantity = 2,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Adam_Lane
             });
             Cards.Add(new LotRCard()
@@ -162,7 +162,7 @@ Forced: After Deceptive Path becomes the active location, shuffle the encounter 
                 Shadow = "Shadow: Discard all attachments controlled by the player guarding Gollum.",
                 EncounterSet = "Return to Mirkwood Nightmare",
                 Quantity = 2,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Ed_Mattinian
             });
             Cards.Add(new LotRCard()
@@ -175,7 +175,7 @@ Forced: After Deceptive Path becomes the active location, shuffle the encounter 
                 Shadow = "Shadow: Deal the topmost Tantrum card in the encounter discard pile as a new shadow card for this attack, if able.",
                 EncounterSet = "Return to Mirkwood Nightmare",
                 Quantity = 2,
-                Number = 9,
+                CardNumber = 9,
                 Artist = Artist.Gabriel_Verdon
             });
         }

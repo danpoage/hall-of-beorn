@@ -32,7 +32,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "If each hero you control has the Hobbit trait, Pippin gains: 'Response: After an enemy engages you, raise your threat by 3 to return it to the staging area. Until the end of the round, that enemy cannot engage you.'",
                 FlavorText = "\"There must be someone with intelligence in the party.\" -The Fellowship of the Ring",
                 Quantity = 1,
-                Number = 56,
+                CardNumber = 56,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -51,7 +51,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Denethor gets -1 Willpower for each damaged hero you control.Discard Denethor if his Willpower is 0 or less.",
                 FlavorText = "\"Denethor is of another sort, proud and subtile, a man of far greater lineage and power, though he is not called a king.\" -Gandalf, The Return of the King",
                 Quantity = 3,
-                Number = 57,
+                CardNumber = 57,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -66,7 +66,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Attach to a Gondor or Outlands hero.\r\nIf each hero you control has a printed Leadership resource icon, Lord of Morthond gains: 'Response: After you play a Lore, Spirit, or Tactics ally, draw 1 card.'",
                 FlavorText = "\"The Captains of the Outlands are expected up the South Road ere sundown. Come with us and you will see.\" -Bergil, The Return of the King",
                 Quantity = 3,
-                Number = 58,
+                CardNumber = 58,
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard() {
@@ -80,7 +80,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Traits = new List<string>() { "Record." },
                 Text = "Attach to a Tactics hero.\r\nReduce the cost to play Book of Eldacar by 1 for each hero you control with a printed Tactics resource icon.Action: Discard Book of Eldacar to play any Tactics event card in your discard pile as if it were in your hand. Then, place that event on the bottom of your deck.",
                 Quantity = 3,
-                Number = 59,
+                CardNumber = 59,
                 Artist = Artist.Florian_Stitz
             });
             Cards.Add(new LotRCard() {
@@ -94,7 +94,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Response: Cancel up to 2 points of damage just dealt to a Gondor character.",
                 FlavorText = "At last, less than a mile from the City, a more ordered mass of men came into view, marching not running, still holding together. -The Return of the King",
                 Quantity = 3,
-                Number = 60,
+                CardNumber = 60,
                 Artist = Artist.Jake_Murray
             });
             Cards.Add(new LotRCard() {
@@ -111,7 +111,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Traits = new List<string>() { "Gondor.", " Craftsman." },
                 Text = "Response: After an encounter card with surge is revealed, discard Minas Tirith Lampwright to name enemy, location, or treachery. If the next encounter card revealed is the named type, discard it without resolving its effects.",
                 Quantity = 3,
-                Number = 61,
+                CardNumber = 61,
                 Artist = Artist.Melanie_Maier
             });
             Cards.Add(new LotRCard() {
@@ -123,7 +123,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 ResourceCost = 1,
                 Text = "Response: After a Hobbit hero you control exhausts to defend an attack, choose another enemy engaged with you and reveal the attacking enemy's shadow card. If that shadow card has no shadow effect, resolve this enemy's attack against the chosen enemy. If that shadow card has a shadow effect, resolve this attack as normal.",
                 Quantity = 3,
-                Number = 62,
+                CardNumber = 62,
                 Artist = Artist.Jake_Murray
             });
             Cards.Add(new LotRCard() {
@@ -141,7 +141,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Keywords = new List<string>() { "Ranged." },
                 Text = "Response: After Ithilien Archer attacks and damages an enemy, return that enemy to the staging area.",
                 Quantity = 3,
-                Number = 63,
+                CardNumber = 63,
                 Artist = Artist.Carmen_Cianelli
             });
             Cards.Add(new LotRCard() {
@@ -159,7 +159,7 @@ If unattached, attach ~Ithilien Pit to the next eligible enemy that enters the s
 
 Any character may choose attached enemy as the target of an attack.",
                 Quantity = 3,
-                Number = 64,
+                CardNumber = 64,
                 Artist = Artist.David_Gaillet
             });
             Cards.Add(new LotRCard() {
@@ -173,7 +173,7 @@ Any character may choose attached enemy as the target of an attack.",
                 FlavorText = "They possessed from the first the art of disappearing swiftly and silently, when large folk whom they do not wish to meet come blundering by... -The Fellowship of the Ring",
                 HtmlTemplate = "<p>Play only if each of your heroes is a {trait:Hobbit.}</p><p><b>Combat Action:</b> Enemies engaged with you do not attack this round. You cannot declare attacks this round.</p><p class='flavor-text'>They possessed from the first the art of disappearing swiftly and silently, when large folk whom they do not wish to meet come blundering by...<br/>&ndash;The Fellowship of the Ring</p>",
                 Quantity = 3,
-                Number = 65,
+                CardNumber = 65,
                 Artist = Artist.Blake_Henriksen
             });
             Cards.Add(new LotRCard() {
@@ -192,7 +192,7 @@ If there are no villager tokens on Savagery of the Orcs, advance to the next sta
                 OppositeFlavorText = "In a smoldering village near Amon Dîn, you find none other than a tired Lord Alcaron. Pleased to see you, he requests your assistance in protecting the village.",
                 EncounterSet = "Encounter at Amon Dîn",
                 Quantity = 1,
-                Number = 66,
+                CardNumber = 66,
                 Artist = Artist.Jake_Murray,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.RavagingOrcs }
             });
@@ -211,7 +211,7 @@ When the players defeat this stage, end the game. Compare the number of tokens o
                 EncounterSet = "Encounter at Amon Dîn",
                 Quantity = 1,
                 QuestPoints = 15,
-                Number = 67,
+                CardNumber = 67,
                 Artist = Artist.Jake_Murray,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.RavagingOrcs }
             });
@@ -229,7 +229,7 @@ When the players defeat this stage, end the game. Compare the number of tokens o
                 Text = "The first player gains control of Lord Alcaron.\r\nResponse: After a villager token is discarded, exhaust Lord Alcaron to place that villager token on a location instead.\r\n\r\nIf Lord Alcaron leaves play, the players have lost the game.",
                 EncounterSet = "Encounter at Amon Dîn",
                 Quantity = 1,
-                Number = 70,
+                CardNumber = 70,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -240,7 +240,7 @@ When the players defeat this stage, end the game. Compare the number of tokens o
                 Text = "If a location leaves play as an explored location, move any villager tokens from that location to Rescued Villagers.At the end of the game, if there are more villager tokens here than damage tokens on Dead Vilagers, the players have won.",
                 EncounterSet = "Encounter at Amon Dîn",
                 Quantity = 1,
-                Number = 68,
+                CardNumber = 68,
                 Artist = Artist.Jake_Murray
             });
             Cards.Add(new LotRCard() {
@@ -251,7 +251,7 @@ When the players defeat this stage, end the game. Compare the number of tokens o
                 Text = "If a villager token is discarded from a location, objective or quest stage, place a damage token on Dead Villagers.At the end of the game, if there are more damage tokens here than villager tokens on Rescued Villagers, the players have lost.",
                 EncounterSet = "Encounter at Amon Dîn",
                 Quantity = 1,
-                Number = 69,
+                CardNumber = 69,
                 Artist = Artist.Greg_Opalinski
             });
             Cards.Add(new LotRCard() {
@@ -276,7 +276,7 @@ While Ghulat is in play, the game cannot end.",
                 EncounterSet = "Encounter at Amon Dîn",
                 VictoryPoints = 2,
                 Quantity = 1,
-                Number = 71,
+                CardNumber = 71,
                 Artist = Artist.Diego_Gisbert_Llorens
             });
             Cards.Add(new LotRCard() {
@@ -294,7 +294,7 @@ While Ghulat is in play, the game cannot end.",
                 Shadow = "Shadow: If this attack destroys a character, discard 1 villager token from Rescued Villagers.",
                 EncounterSet = "Encounter at Amon Dîn",
                 Quantity = 4,
-                Number = 72,
+                CardNumber = 72,
                 Artist = Artist.Ellyson_Ferrari_Lifante
             });
             Cards.Add(new LotRCard() {
@@ -312,7 +312,7 @@ While Ghulat is in play, the game cannot end.",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack. (+2 Attack instead if undefended.)",
                 EncounterSet = "Encounter at Amon Dîn",
                 Quantity = 3,
-                Number = 73,
+                CardNumber = 73,
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard() {
@@ -331,7 +331,7 @@ While Ghulat is in play, the game cannot end.",
                 EncounterSet = "Encounter at Amon Dîn",
                 Quantity = 2,
                 EasyModeQuantity = 0,
-                Number = 74,
+                CardNumber = 74,
                 Artist = Artist.Dean_Spencer
             });
             Cards.Add(new LotRCard() {
@@ -348,7 +348,7 @@ While Ghulat is in play, the game cannot end.",
                 EncounterSet = "Encounter at Amon Dîn",
                 VictoryPoints = 1,
                 Quantity = 4,
-                Number = 75,
+                CardNumber = 75,
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard() {
@@ -365,7 +365,7 @@ While Ghulat is in play, the game cannot end.",
                 EncounterSet = "Encounter at Amon Dîn",
                 VictoryPoints = 1,
                 Quantity = 4,
-                Number = 76,
+                CardNumber = 76,
                 Artist = Artist.Sabin_Boykinov
             });
             Cards.Add(new LotRCard() {
@@ -382,7 +382,7 @@ While Ghulat is in play, the game cannot end.",
                 EncounterSet = "Encounter at Amon Dîn",
                 VictoryPoints = 1,
                 Quantity = 3,
-                Number = 77,
+                CardNumber = 77,
                 Artist = Artist.Sabin_Boykinov
             });
             Cards.Add(new LotRCard() {
@@ -396,7 +396,7 @@ While Ghulat is in play, the game cannot end.",
                 EncounterSet = "Encounter at Amon Dîn",
                 Quantity = 2,
                 EasyModeQuantity = 0,
-                Number = 78,
+                CardNumber = 78,
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard() {
@@ -409,7 +409,7 @@ While Ghulat is in play, the game cannot end.",
                 Shadow = "Shadow: If this attack destroys a character, discard 1 villager token from Rescued Villagers.",
                 EncounterSet = "Encounter at Amon Dîn",
                 Quantity = 2,
-                Number = 79,
+                CardNumber = 79,
                 Artist = Artist.Jake_Murray
             });
             Cards.Add(new LotRCard() {
@@ -421,7 +421,7 @@ While Ghulat is in play, the game cannot end.",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack for each damage token on Dead Villagers.",
                 EncounterSet = "Encounter at Amon Dîn",
                 Quantity = 2,
-                Number = 80,
+                CardNumber = 80,
                 Artist = Artist.Ilich_Henriquez
             });
         }

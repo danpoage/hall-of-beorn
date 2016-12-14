@@ -43,7 +43,7 @@ namespace HallOfBeorn.Models.LotR.Simple
             this.CardSubType = card.CardSubtype.ToString();
             this.Sphere = (card.Sphere != Models.LotR.Sphere.None && card.Sphere != Models.LotR.Sphere.Neutral) ? card.Sphere.ToString() : null;
             this.CardSet = card.CardSet.Name;
-            this.Number = card.Number;
+            this.Number = card.CardNumber;
             this.Quantity = card.Quantity;
             this.Artist = card.Artist != null ? card.Artist.Name : null;
             this.HasErrata = card.HasErrata;

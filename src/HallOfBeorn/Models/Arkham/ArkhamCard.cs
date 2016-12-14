@@ -56,12 +56,23 @@ namespace HallOfBeorn.Models.Arkham
             get { return Text; }
             set { Text = value; }
         }
-        public string FrontFlavor { get; protected set; }
-        public string BackText { get; private set; }
-        public string BackFlavor { get; private set; }
+        public string FrontFlavor
+        {
+            get { return FlavorText; }
+            protected set { FlavorText = value; }
+        }
 
-        public ushort CardNumber { get; private set; }
-        public byte Quanity { get; private set; }
+        public string BackText
+        {
+            get { return OppositeText; }
+            protected set { OppositeText = value; }
+        }
+
+        public string BackFlavor
+        {
+            get { return OppositeFlavorText; }
+            protected set { OppositeFlavorText = value; }
+        }
         
         public ClassSymbol ClassSymbol { get; private set; }
         public Number? Health { get; private set; }
@@ -73,22 +84,22 @@ namespace HallOfBeorn.Models.Arkham
             this.skillTestIcons.AddRange(skillIcons);
         }
 
-        public static string GetSlug(ArkhamCard card)
+        protected override string getSetAbbreviation()
         {
-            var name = card.Title.ToUrlSafeString();
-            var level = string.Empty;
-            if (card.CardType == ArkhamCardType.Scenario_Reference || card.CardType == ArkhamCardType.Location) {
-                level = "-" + card.Subtitle.Replace(" / ", "-").Replace(" ", "-");
-            } else {
-                level = (card.Level.HasValue && card.Level.Value > 0) ? card.Level.ToString() : string.Empty;
-            }
-            var product = card.Product.Abbreviation;
-            return string.Format("{0}{1}-{2}", name, level, product);
+            return Product.Abbreviation.ToUrlSafeString();
         }
 
-        public string Slug
+        protected override string getSlug()
         {
-            get { return GetSlug(this); }
+            var name = Title.ToUrlSafeString();
+            var level = string.Empty;
+            if (CardType == ArkhamCardType.Scenario_Reference || CardType == ArkhamCardType.Location) {
+                level = "-" + Subtitle.Replace(" / ", "-").Replace(" ", "-");
+            } else {
+                level = (Level.HasValue && Level.Value > 0) ? Level.ToString() : string.Empty;
+            }
+            var product = Product.Abbreviation;
+            return string.Format("{0}{1}-{2}", name, level, product);
         }
 
         public IEnumerable<SkillIcon> SkillIcons()
@@ -472,7 +483,7 @@ namespace HallOfBeorn.Models.Arkham
         public ArkhamCard WithInfo(byte cardNumber, byte quantity, Artist artist)
         {
             this.CardNumber = cardNumber;
-            this.Quanity = quantity;
+            this.Quantity = quantity;
             this.Artist = artist;
             return this;
         }

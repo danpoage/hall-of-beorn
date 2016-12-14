@@ -45,7 +45,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
 Play Tip: The treachery card, ~Night Wanes Slow, has a Forced effect that triggers when it is discarded from the encounter deck as a result of stage 2B's effect. When discarding cards from the encounter deck at stage 2B, discard them one at a time in case ~Night Wanes Slow is one of them.",
                 EncounterSet = "We Must Away, Ere Break of Day Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard()
@@ -66,7 +66,7 @@ Play Tip: The treachery card, ~Night Wanes Slow, has a Forced effect that trigge
 Forced: If A Murder of Crows would be destroyed, shuffle it back into the encounter deck instead.",
                 EncounterSet = "We Must Away, Ere Break of Day Nightmare",
                 Quantity = 3,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Niten
             });
             Cards.Add(new LotRCard()
@@ -82,7 +82,7 @@ Forced: If A Murder of Crows would be destroyed, shuffle it back into the encoun
                 FlavorText = "I don't know what river is way, a rushing red one, swollen with the rains of the last few days... -The Hobbit",
                 EncounterSet = "We Must Away, Ere Break of Day Nightmare",
                 Quantity = 3,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.JB_Casacop
             });
             Cards.Add(new LotRCard()
@@ -98,7 +98,7 @@ Forced: If A Murder of Crows would be destroyed, shuffle it back into the encoun
                 Shadow = "Shadow: Attacking enemy gets +2 Attack. (+3 Attack instead if attacking enemy is a Troll.)",
                 EncounterSet = "We Must Away, Ere Break of Day Nightmare",
                 Quantity = 3,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Wibben
             });
             Cards.Add(new LotRCard()
@@ -119,7 +119,7 @@ Forced: After Comfortable Light becomes the active location, discard it.",
                 FlavorText = "Out of the dark mass of the trees they could now see a light shining, a reddish comfortable-looking light... -The Hobbit",
                 EncounterSet = "We Must Away, Ere Break of Day Nightmare",
                 Quantity = 3,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Mark_Behm
             });
             Cards.Add(new LotRCard()
@@ -132,7 +132,7 @@ Forced: After Comfortable Light becomes the active location, discard it.",
                 Shadow = "Shadow: If attacking enemy is a Troll, return it to the staging area after this attack.",
                 EncounterSet = "We Must Away, Ere Break of Day Nightmare",
                 Quantity = 3,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard()
@@ -149,7 +149,7 @@ When Revealed: Shuffle the encounter discard pile into the encounter deck. Revea
                 FlavorText = "",
                 EncounterSet = "We Must Away, Ere Break of Day Nightmare",
                 Quantity = 2,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Wibben
             });
             Cards.Add(new LotRCard()
@@ -162,7 +162,7 @@ When Revealed: Shuffle the encounter discard pile into the encounter deck. Revea
                 FlavorText = "...at last they decided to sit on the sacks one by one and squash them, and boil them next time. -The Hobbit",
                 EncounterSet = "We Must Away, Ere Break of Day Nightmare",
                 Quantity = 2,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
         }

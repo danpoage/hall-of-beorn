@@ -40,7 +40,7 @@ Then, shuffle the encounter cards in this Nightmare Deck into the remainder of t
 Finally, flip this setup card over and place it next to the quest deck. Its effects remain active throughout the game, which is now ready to begin.",
                 EncounterSet = setName,
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Mariusz_Gandzel
             });
             Cards.Add(LotRCard.Enemy("Dunland Assassin", "", setName, 45, 3, 3, 3, 5)

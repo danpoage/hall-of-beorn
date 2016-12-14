@@ -31,7 +31,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Response: After Frodo ~Baggins is damaged, cancel the damage and instead raise your threat by the amount of damage he would have been dealt. (Limit once per phase.)",
                 FlavorText = "Frodo began to feel restless, and the old paths seemed too well-trodden. he looked at maps and wondered what lay beyond their edges... -The Fellowship of the Ring",
                 Quantity = 1,
-                Number = 25,
+                CardNumber = 25,
                 Artist = Artist.John_Stanko
             });
             Cards.Add(new LotRCard() {
@@ -44,7 +44,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "When Revealed: Each player raises his threat by the total Threat of all cards in the staging area. Any player may choose to discard from play 1 Creature ally card he controls to cancel this effect.",
                 FlavorText = "Then, one of the ponies took fright at nothing and bolted. -The Hobbit",
                 EncounterSet = "Conflict at the Carrock",
-                Number = 47,
+                CardNumber = 47,
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
@@ -61,7 +61,7 @@ namespace HallOfBeorn.Models.LotR.Sets
 
 Players cannot defeat this stage if there are any Troll enemies in play.",
                 EncounterSet = "Conflict at the Carrock",
-                Number = 36,
+                CardNumber = 36,
                 Artist = Artist.Diego_Gisbert_Llorens,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.JourneyAlongTheAnduin, EncounterSet.Wilderlands }
             });
@@ -76,7 +76,7 @@ Players cannot defeat this stage if there are any Troll enemies in play.",
                 Threat = 1,
                 QuestPoints = 2,
                 EncounterSet = "Conflict at the Carrock",
-                Number = 45,
+                CardNumber = 45,
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
@@ -94,7 +94,7 @@ Players cannot defeat this stage if there are any Troll enemies in play.",
                 HitPoints = 3,
                 Text = "Action: Discard Beorning Beekeeper from play to deal 1 damage to each enemy in the staging area.",
                 FlavorText = "\"We are getting near,\" said Gandalf. \"We are on th eedge of his bee pastures.\" - The Hobbit",
-                Number = 28,
+                CardNumber = 28,
                 Artist = Artist.John_Matson
             });
             Cards.Add(new LotRCard() {
@@ -108,7 +108,7 @@ Players cannot defeat this stage if there are any Troll enemies in play.",
                 ResourceCost = 0,
                 Text = "Attach to an ally.\r\nAction: Discard Born Aloft from play to return attached ally to its owner's hand.",
                 FlavorText = "\"Very well,\" said Gandalf. \"Take us where and as far as you will!\" -The Hobbit",
-                Number = 29,
+                CardNumber = 29,
                 Artist = Artist.Salvador_Trakal
             });
             Cards.Add(new LotRCard() {
@@ -122,7 +122,7 @@ Players cannot defeat this stage if there are any Troll enemies in play.",
                 Quantity = 3,
                 ResourceCost = 1,
                 Text = "Attach to a hero.\r\nAttached hero gains +1 Defense.\r\nAction: Pay 1 resource from attached hero's pool to attach Dunedain Warning to another hero.",
-                Number = 26,
+                CardNumber = 26,
                 Artist = Artist.Taufiq,
                 SecondArtist = Artist.Vicki_Pangestu
             });
@@ -143,7 +143,7 @@ Players cannot defeat this stage if there are any Troll enemies in play.",
                 HitPoints = 2,
                 Text = "Response: After Éomund leaves play, ready all Rohan characters in play.",
                 FlavorText = "\"You I have not seen before, for you are young, but I have spoken with Eomund your father...\" -Aragorn, The Two Towers",
-                Number = 30,
+                CardNumber = 30,
                 Artist = Artist.Katherine_Dinger
             });
             Cards.Add(new LotRCard() {
@@ -158,7 +158,7 @@ Players cannot defeat this stage if there are any Troll enemies in play.",
                 Text = "Attach to a Lore character.\r\nWhile attached character is defending, cancel any shadow effects on cards dealt to the attacking enemy.",
                 FlavorText = "\"Keep close to the fire, with your faces outward!\" cried Strider. \"Keep some of th elonger sticks ready in your hands.\" -The Fellowship of the Ring",
                 HtmlTemplate = "<p>Attach to a {sphere-character:Lore}.</p><p>While attached character is defending, cancel any shadow effects on cards dealt to the attacking enemy.</p><p class='flavor-text'>&quot;Keep close to the fire, with your faces outward!&quot; cried Strider. &quot;Keep some of th elonger sticks ready in your hands.&quot;<br>&ndash;The Fellowship of the Ring</p>",
-                Number = 33,
+                CardNumber = 33,
                 Artist = Artist.Toni_Justamante_Jacobs
             });
             Cards.Add(new LotRCard() {
@@ -183,7 +183,7 @@ If Grimbeorn the Old has 8 or more resource tokens on him, he joins the first pl
 
 Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.",
                 EncounterSet = "Conflict at the Carrock",
-                Number = 37,
+                CardNumber = 37,
                 Artist = Artist.Mark_Winters
             });
             Cards.Add(new LotRCard() {
@@ -199,7 +199,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 OppositeText = "Forced: After placing the 7th progress token on Grimbeorn's Quest, The Carrock becomes the active location. Discard the previous active location from play.",
                 OppositeFlavorText = "As this area is under the watch of the Beornings, you seek out their leader, Grimbeorn the Old, and discover he has already set out in a rage. You follow, hoping to find him before he confronts the Trolls.",
                 EncounterSet = "Conflict at the Carrock",
-                Number = 35,
+                CardNumber = 35,
                 Artist = Artist.Igor_Kieryluk,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.JourneyAlongTheAnduin, EncounterSet.Wilderlands }
             });
@@ -218,7 +218,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 HitPoints = 3,
                 Text = "Action: Spend 1 Lore resource to give Longbeard Map-Maker +1 Willpower until the end of the phase.",
                 FlavorText = "On the table in the light of a big lamp with a red shade he spread a piece of parchment rather like a map. -The Hobbit",
-                Number = 32,
+                CardNumber = 32,
                 Artist = Artist.Andrew_Silver
             });
             Cards.Add(new LotRCard() {
@@ -236,7 +236,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 Text = "While Louis is engaged with a player, all Troll enemies gain, \"Forced: After this enemy attacks, the defending player must raise his threat by 3.\"\r\nResponse: After defeating Louis, you may choose and discard 1 \"Sacked!\" card from play.",
                 Threat = 2,
                 EncounterSet = "Conflict at the Carrock",
-                Number = 38,
+                CardNumber = 38,
                 Artist = Artist.Brian_Valenzuela
             });
             Cards.Add(new LotRCard() {
@@ -254,7 +254,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 Text = "While Morris is engaged with a player, all Troll enemies get +1 Attack.\r\nResponse: After defeating Morris, you may choose and discard 1 'Sacked!' card from play.",
                 Threat = 2,
                 EncounterSet = "Conflict at the Carrock",
-                Number = 39,
+                CardNumber = 39,
                 Artist = Artist.Paul_Guzenko
             });
             Cards.Add(new LotRCard() {
@@ -273,7 +273,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 Shadow = "Shadow: Defending character gets -1 Defense for the duration of this attack.",
                 Threat = 1,
                 EncounterSet = "Conflict at the Carrock",
-                Number = 42,
+                CardNumber = 42,
                 Artist = Artist.Joe_Wilson
             });
             Cards.Add(new LotRCard() {
@@ -287,7 +287,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 ResourceCost = 1,
                 Text = "Attach to a character.\r\nAttached character gains the Rohan trait.",
                 FlavorText = "\"Nor indeed am I a stranger: for I have been in this land before, more than once, and ridden with the host of the Rohirrim, though under other name and in other guise.\" -Aragorn, The Two Towers",
-                Number = 31,
+                CardNumber = 31,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -301,7 +301,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 Threat = 2,
                 QuestPoints = 1,
                 EncounterSet = "Conflict at the Carrock",
-                Number = 46,
+                CardNumber = 46,
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
@@ -316,7 +316,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 Threat = 2,
                 QuestPoints = 3,
                 EncounterSet = "Conflict at the Carrock",
-                Number = 44,
+                CardNumber = 44,
                 Artist = Artist.Marco_Caradonna
             });
             Cards.Add(new LotRCard() {
@@ -329,7 +329,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 Text = "When Revealed: Destroy all heroes with the card 'Sacked!' attached. Then, shuffle Roasted Slowly back into the encounter deck.",
                 Shadow = "Shadow: If attacking enemy is a Troll, remove 2 damage tokens from it.",
                 EncounterSet = "Conflict at the Carrock",
-                Number = 49,
+                CardNumber = 49,
                 Artist = Artist.Diego_Gisbert_Llorens
             });
             Cards.Add(new LotRCard() {
@@ -347,7 +347,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 Text = "Forced: After Rupert attacks, shuffle all copies of the 'Sacked!' card from the discard pile back into the encounter deck.\r\nResponse: After defeating Rupert, you may choose and discard 1 'Sacked!' card from play.",
                 Threat = 2,
                 EncounterSet = "Conflict at the Carrock",
-                Number = 41,
+                CardNumber = 41,
                 Artist = Artist.Andrew_Silver
             });
             Cards.Add(new LotRCard() {
@@ -360,7 +360,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 Text = "When Revealed: Attach to a hero with no 'Sacked!' cards attached controlled by the first player. (Cannot be canceled.) Counts as a condition attachment with the text: 'Attached hero cannot attack, defend, commit to a quest, trigger its effect, or collect resources.'",
                 Shadow = "Shadow: If attacking enemy is a Troll, resolve this card's 'when revealed' effect.",
                 EncounterSet = "Conflict at the Carrock",
-                Number = 48,
+                CardNumber = 48,
                 Artist = Artist.Lorraine_Schleter
             });
             Cards.Add(new LotRCard() {
@@ -373,7 +373,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 ResourceCost = 1,
                 Text = "Action: Each player returns the topmost attachment card from his discard pile to his hand.",
                 FlavorText = "...he was just sitting down to a nice little second-breakfast in the dinning-room...\r\n-The Hobbit",
-                Number = 27,
+                CardNumber = 27,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -387,7 +387,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 ResourceCost = 1,
                 Text = "Attach to a hero.\r\nAttached hero gains a Lore resource icon.",
                 FlavorText = "It sit beside the fire and think\r\nof all that I have seen,\r\nof meadow-flowers and butterflies\r\nin summers that have been\r\n-The Fellowship of the Ring",
-                Number = 34,
+                CardNumber = 34,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -405,7 +405,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 Text = "While Stuart is engaged with a player, all Troll enemies get +1 Defense.\r\nResponse: After defeating Stuart, you may choose and discard 1 'Sacked!' card from play.",
                 Threat = 2,
                 EncounterSet = "Conflict at the Carrock",
-                Number = 40,
+                CardNumber = 40,
                 Artist = Artist.Paul_Guzenko
             });
             Cards.Add(new LotRCard() {
@@ -420,7 +420,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 Threat = 2,
                 QuestPoints = 6,
                 EncounterSet = "Conflict at the Carrock",
-                Number = 43,
+                CardNumber = 43,
                 Artist = Artist.Marco_Caradonna
             });
         }

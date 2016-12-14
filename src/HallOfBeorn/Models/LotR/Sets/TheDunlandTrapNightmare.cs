@@ -43,7 +43,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 HtmlTemplate2 = "<p>Begin with the standard quest deck and encounter deck for <a href='/Cards/Scenarios/The-Dunland-Trap' target='_blank'>The Dunland Trap scenario</a>.</p><p>Remove the following cards, in the specified quantities, from the standard encounter deck:</p><p><ul class='no-style-list'><li>4x {card:Boar-Clan-Warrior-TDT@Boar Clan Warrior}</li><li>4x {card:Hithaeglir-Stream-TDT@Hithaeglir Stream}</li><li>3x {card:Plains-of-Enedwaith-TDT@Plains of Enedwaith}</li><li>1x {card:Dunlending-Ambush-TDT@Dunlending-Ambush}</li><li>1x {card:Frenzied-Attack-TDT@Frenzied Attack}</li><li>1x {card:Low-on-Provisions-VoI@Low on Provisions}</li></ul><p>Then, shuffle the encounter cards in this Nightmare Deck into the remainder of the standard <a href='/Cards/Search?EncounterSet=The+Dunland+Trap' target='_blank'>The Dunland Trap encounter deck</a>.</p><p>Finally, flip this setup card over and place it next to the quest deck. Its effects remain active throughout the game, which is now ready to begin.</p>",
                 EncounterSet = setName,
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Mariusz_Gandzel
             });
             Cards.Add(LotRCard.Enemy("Boar Clan Ambusher", "", setName, 30, 3, 5, 2, 5)

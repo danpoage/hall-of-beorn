@@ -22,7 +22,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 CardType = CardType.Hero,
                 Sphere = Sphere.Lore,
                 Traits = new List<string>() { "Dúnedain.", " Ranger." },
-                NormalizedTraits = new List<string> { "Dunedain." },
                 Quantity = 1,
                 ThreatCost = 12,
                 IsUnique = true,
@@ -33,7 +32,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Refresh Action: Reduce your threat to your starting threat level. (Limit once per game.)",
                 HtmlTemplate = "<p>{keyword:Sentinel.}</p><p><b>Refresh Action:</b> Reduce your threat to your starting threat level. (Limit once per game.)</p><p class='flavor-text'>&quot;I am older than I look, I might prove useful.&quot;<br/>&ndash;The Fellowship of the Ring</p>",
                 Keywords = new List<string>() { "Sentinel." },
-                Number = 53,
+                CardNumber = 53,
                 Artist = Artist.Tony_Foti
             });
             Cards.Add(new LotRCard() {
@@ -53,7 +52,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HitPoints = 2,
                 Text = "Response: After Arwen Undómiel exhausts, choose a character. That character gains sentinel and gets +1 Defense until the end of the round.",
                 HtmlTemplate = "<p><b>Response:</b> After {self} exhausts, choose a character. That character gains {keyword:Sentinel.@sentinel} and gets +1 {Defense} until the end of the round.</p><p class='flavor-text'>...in whom it was said that the likeness of Lúthien had come on earth again...for she was the Evenstar of her people.<br>&ndash;The Fellowship of the Ring</p>",
-                Number = 58,
+                CardNumber = 58,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -65,7 +64,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Quantity = 3,
                 Keywords = new List<string>() { "Doomed 5." },
                 HtmlTemplate = "<p>{keyword:Doomed+5.@Doomed 5.}</p><p class='flavor-text'>...there came a soft sound: a swish, followed by a plop, as if a fish had disturbed the still surface of the water. Turning quickly they saw ripples, black-edged with shadow in the waning light: great rings were widening outwards from a point far out in the lake. There was a bubbling noise, and then silence<br>&ndash;The Fellowship of the Ring</p>",
-                Number = 71,
+                CardNumber = 71,
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
@@ -82,7 +81,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Threat = 2,
                 QuestPoints = 255,
                 VictoryPoints = 3,
-                Number = 65,
+                CardNumber = 65,
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
@@ -95,7 +94,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 ResourceCost = 0,
                 Text = "Action: If you control a unique Noldor character, give another character +1 Willpower until the end of the phase and lower your threat by 3.",
                 HtmlTemplate = "<p><b>Action:</b> If you control a {unique-trait-character:Noldor.@Noldor}, give another character +1 {Willpower} until the end of the phase and lower your threat by 3.</p><p class='flavor-text'>&quot;Believe rather that it is so ordered that we, who sit here, and none others, must now find counsel for the peril of the world.&quot;<br>&ndash;Elrond, The Fellowship of the Ring</p>",
-                Number = 59,
+                CardNumber = 59,
                 Artist = Artist.Anthony_Palumbo
             });
             Cards.Add(new LotRCard() {
@@ -114,7 +113,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Forced: When Grasping Tentacle is attacked, discard the top card of the encounter deck. If that card has a shadow effect or is a Tentacle enemy, attach this card to an attacking character as a Tentacle attachment with the text: 'Attached character's Attack and Defense are reduced to 0.'",
                 HtmlTemplate = "<p><b>Forced:</b> When {self} is attacked, discard the top card of the encounter deck. If that card has a shadow effect or is a {trait:Tentacle.@Tentacle} enemy, attach this card to an attacking character as a {trait:Tentacle.@Tentacle} attachment with the text: &quot;Attached character's {Attack} and {Defense} are reduced to 0.&quot;</p>",
                 Threat = 2,
-                Number = 73,
+                CardNumber = 73,
                 Artist = Artist.Mark_Tarrisse
             });
             Cards.Add(new LotRCard() {
@@ -127,7 +126,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 ResourceCost = 1,
                 Text = "Response: After a character leaves play, add its Attack to another character's Attack until the end of the round.",
                 HtmlTemplate = "<p><b>Response:</b> After a character leaves play, add its {Attack} to another character's {Attack} until the end of the round.</p><p class='flavor-text'>&quot;We have not the time or the tools to bury our comrade fitly, or to raise a mound up over him. A cairn we might build.&quot;<br>&ndash;Legolas, The Two Towers</p>",
-                Number = 54,
+                CardNumber = 54,
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard() {
@@ -141,7 +140,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "When Revealed: All enemies in the staging area engage the player with the highest threat. Then, each player raises his threat by the total Threat of all cards in the staging area.",
                 Shadow = "Shadow: attacking enemy gets +1 Attack. (+3 Attack instead if it is a Tentacle.)",
                 HtmlTemplate = "<p><b>When Revealed:</b> All enemies in the staging area engage the player with the highest threat. Then, each player raises his threat by the total {Threat} of all cards in the staging area.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Attacking enemy gets +1 {Attack}. (+3 {Attack} instead if it is a {trait:Tentacle.})</p>",
-                Number = 70,
+                CardNumber = 70,
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
@@ -155,7 +154,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 ResourceCost = 1,
                 IsUnique = true,
                 Text = "Attach to a Dwarf hero.\r\nResponse: After you play a Dwarf character from your hand, draw 1 card.",
-                Number = 61,
+                CardNumber = 61,
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard() {
@@ -171,7 +170,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HtmlTemplate = "<p><b>Forced:</b> After you travel to {self}, place 2 progress tokens on the current quest card, bypassing any active location.</p><p class='flavor-text'>They reached the strip of dry land between the lake and the cliffs: it was narrow, often hardly a dozen yards across, and encumbered with fallen rock and stones; but they found a way, hugging the cliff, and keeping as far from the dark water as they might.<br>&ndash;The Fellowship of the Ring</p>",
                 Threat = 1,
                 QuestPoints = 5,
-                Number = 68,
+                CardNumber = 68,
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
@@ -187,7 +186,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HtmlTemplate = "<p>No more than 1 progress token can be placed on {self} each round</p><p class='flavor-text'><b>Shadow:</b> Remove 1 progress token from the current quest.</p>",
                 Threat = 4,
                 QuestPoints = 2,
-                Number = 67,
+                CardNumber = 67,
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard() {
@@ -200,7 +199,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 ResourceCost = 4,
                 Text = "Attach to a hero you control.\r\nAttached hero collects 1 additional resource during the resource phase each round.",
                 Keywords = new List<string>() { "Secrecy 3." },
-                Number = 62,
+                CardNumber = 62,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -214,7 +213,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 ResourceCost = 1,
                 Text = "Attach to a Noldor or Silvan character, or to Aragorn. Limit 1 per character.Attached character gains ranged.If attached character has a printed ranged keyword, it gets +1 Attack during a ranged attack.",
                 HtmlTemplate = "<p>Attach to a {traits-character:Noldor,Silvan}, or to <a title='Aragorn Character' href='/Cards/Search?CardType=Character&Query=%2Btitle%3AAragorn' target='_blank'>Aragorn</a>. Limit 1 per character.</p><p>Attached character gains {keyword:Ranged.@ranged.}</p><p>If attached character has the printed {keyword:Ranged.@ranged} keyword, it gets +1 {Attack} during a ranged attack.</p>",
-                Number = 57,
+                CardNumber = 57,
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard() {
@@ -227,7 +226,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 ResourceCost = 1,
                 Text = "Response: After a location enters play, exhaust a Hobbit character to shuffle that location back into the encounter deck. Then, reveal 1 card from the encounter deck and add it to the staging area.",
                 HtmlTemplate = "<p><b>Response:</b> After a location enters play, exhaust a {trait-character:Hobbit.@Hobbit} to shuffle that location back into the encounter deck. Then, reveal 1 card from the encounter deck and add it to the staging area.</p><p class='flavor-text'>&quot;I suppose we haven't lost more than two days by my short cut through the Forest!&quot;<br>&ndash;Frodo, The Fellowship of the Ring</p>",
-                Number = 60,
+                CardNumber = 60,
                 Artist = Artist.Igor_Kieryluk
             });
             Cards.Add(new LotRCard() {
@@ -243,7 +242,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HtmlTemplate = "<p><b>When Revealed:</b> Discard the top card of the encounter deck. If the discarded card is a {trait:Tentacle.@Tentacle} enemy, add that card to the staging area and raise each player's threat by 5.</p><p class='flavor-text'>When they came to the northernmost corner of the lake they found a narrow creek that barreed their way. It was green and stagnant, thrust out like a slimy arm towards the enclosing hills.<br>&ndash;The Fellowship of the Ring</p>",
                 Threat = 3,
                 QuestPoints = 3,
-                Number = 69,
+                CardNumber = 69,
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
@@ -259,7 +258,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Shadow = "Shadow: Remove 1 progress token from the current quest.",
                 Threat = 2,
                 QuestPoints = 4,
-                Number = 66,
+                CardNumber = 66,
                 Artist = Artist.Lin_Bo
             });
             Cards.Add(new LotRCard() {
@@ -278,7 +277,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Forced: When Striking Tentacle attacks, discard the top card of the encounter deck. If that card has a shadow effect or is a Tentacle enemy, this attack is considered undefended.",
                 HtmlTemplate = "<p><b>Forced:</b> When {self} attacks, discard the top card of the encounter deck. If that card has a shadow effect or is a {trait:Tentacle.@Tentacle} enemy, this attack is considered undefended.</p>",
                 Threat = 2,
-                Number = 75,
+                CardNumber = 75,
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
@@ -293,7 +292,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IsUnique = true,
                 Text = "Attach to a hero. Attached hero gains a Leadership resource icon.\r\nIf attached hero is Aragorn, each character you control gets +1 Willpower.",
                 HtmlTemplate = "<p>Attach to a hero.</p><p>Attached hero gains a {sphere:Leadership} resource icon.</p><p>If attached hero is <a title='Aragorn Hero Search' href='/Cards/Search?Query=%2Btitle%3AAragorn&CardType=Hero' target='_blank'>Aragorn</a>, each character you control gets +1 {Willpower}.</p><p class='flavor-text'>&quot;For the Sword that was Broken is the Sword of Elendil that broke beneath him when he fell.&quot;<br>&ndash;Aragorn, The Fellowship of the Ring</p>",
-                Number = 55,
+                CardNumber = 55,
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard() {
@@ -309,7 +308,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HtmlTemplate = "<p class='flavor-text'>The others swung round and saw the waters of the lake seething, as if a host of snakes were swimming up from the southern end.<br>&ndash;The Fellowship of the Ring</p><p class='flavor-text'>The Doors of Durin are blocked by an ancient spell. You must figure out a way into the mines before the Seething bog and its Watcher consumes you all.</p>",
                 HtmlTemplate2 = "<p><b>When Revealed:</b> Add <a title='The Watcher (The Watcher in the Water)' href='/Cards/Details/The-Watcher-TWitW' target='_blank'>The Watcher</a> to the staging area. <a title='Doors of Durin (The Watcher in the Water)' href='/Cards/Details/Doors-of-Durin-TWitW' target='_blank'>Doors of Durin</a> becomes the active location, moving any previous active location to the staging area. Shuffle all {trait:Tentacle.@Tentacle} cards in the encounter discard pile back into the encounter deck.</p><p><b>If the players have at least 3 victory points and defeat this stage, they have won the game.</b></p>",
                 QuestPoints = 5,
-                Number = 64,
+                CardNumber = 64,
                 Artist = Artist.Adam_Schumpert,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.MistyMountains }
             });
@@ -331,7 +330,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HtmlTemplate = "<p>{keyword:Regenerate+2.@Regenerate 2}. While there is another {trait:Tentacle.@Tentacle} enemy in play, {self} cannot be optionally engaged.</p><p>If {self} is in the staging area at the end of the combat phase, each player must deal 3 damage to 1 character he controls.</p>{victory:3}",
                 Threat = 4,
                 VictoryPoints = 3,
-                Number = 72,
+                CardNumber = 72,
                 Artist = Artist.Matthew_Starbuck
             });
             Cards.Add(new LotRCard() {
@@ -350,7 +349,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Forced: When Thrashing Tentacle is attacked, discard the top card of the encounter deck. If that card has a shadow effect or is a Tentacle enemy, deal the damage from the attack to 1 character an attacking player controls (ignoring defense).",
                 HtmlTemplate = "<p><b>Forced:</b> When {self} is attacked, discard the top card of the encounter deck. If that card has a shadow effect or is a {trait:Tentacle.@Tentacle} enemy, deal the damage from the attack to 1 character an attacking player controls <i>(ignoring defense)</i>.</p>",
                 Threat = 2,
-                Number = 74,
+                CardNumber = 74,
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
@@ -369,7 +368,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 OppositeFlavorText = "Your approach is blocked by a dark lake that slumbers beneath the face of the cliff. You must search for a way around the water.",
                 HtmlTemplate = "<p class='flavor-text'>Elrond has asked you to scout the Mines of Moria on your return to Lorien, hoping to discover if it is the source of increased Orc activity along the Misty Mountains.</p><p><b>Setup:</b> Remove <a title='The Watcher (The Watcher in the Water)' href='/Cards/Details/The-Watcher-TWitW' target='_blank'>The Watcher</a> and <a title='Doors of Durin (The Watcher in the Water)' href='/Cards/Details/Doors-of-Durin-TWitW' target='_blank'>Doors of Durin</a> from the encounter deck and set them aside, out of play.</p>",
                 HtmlTemplate2 = "<p class='flavor-text'>Your approach is blocked by a dark lake that slumbers beneath the face of the cliff. You must search for a way around the water.</p><p><b>When Revealed:</b> Reveal cards from the encounter deck and add them to the staging area until there is at least X {Threat} in the staging area. X is twice the number of players in the game.</p>",
-                Number = 63,
+                CardNumber = 63,
                 Artist = Artist.Jason_Juta,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.MistyMountains }
             });
@@ -389,7 +388,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Watcher of the Bruinen does not exhaust to defend.Forced: After Watcher of the Bruinen defends, either discard it from play or discard 1 card from your hand.",
                 Keywords = new List<string>() { "Sentinel." },
                 HtmlTemplate = "<p>{keyword:Sentinel.}</p><p>{self} does not exhaust to defend.</p><p><b>Forced:</b> After {self} defends, either discard it from play or discard 1 card from your hand.</p>",
-                Number = 56,
+                CardNumber = 56,
                 Artist = Artist.Kristina_Carroll
             });
             Cards.Add(new LotRCard() {
@@ -404,7 +403,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EasyModeQuantity = 2,
                 Text = "When Revealed: The first player attaches Wrapped! to a hero he controls. (Counts as a Tentacle attachment with the text: 'Limit 1 per hero. Attached hero cannot exhaust or ready. At the end of the round, discard attached hero from play. Combat Action: Exhaust a hero you control without a Tentacle attachment to discard Wrapped!.')",
                 HtmlTemplate = "<p><b>When Revealed:</b> The first player attaches {self} to a hero he controls. Counts as a {trait:Tentacle.@Tentacle} attachment with the text: <blockquote>Limit 1 per hero. Attached hero cannot exhaust or ready. At the end of the round, discard attached hero from play.<br><b>Combat Action:</b> Exhaust a hero you control without a {trait:Tentacle.@Tentacle} attachment to discard {self}.</blockquote></p>",
-                Number = 76,
+                CardNumber = 76,
                 Artist = Artist.Cristi_Balanescu
             });
         }

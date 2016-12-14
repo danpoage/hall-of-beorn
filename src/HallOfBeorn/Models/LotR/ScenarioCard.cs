@@ -37,7 +37,7 @@ namespace HallOfBeorn.Models.LotR
         private void Init(LotRCard card)
         {
             Card = card;
-            Title = !string.IsNullOrEmpty(card.Suffix) ? string.Format("{0} ({1})", card.Title, card.Suffix) : card.Title;
+            Title = !string.IsNullOrEmpty(card.SlugSuffix) ? string.Format("{0} ({1})", card.Title, card.SlugSuffix) : card.Title;
             Set = card.CardSet.NormalizedName;
             EncounterSet = card.EncounterSet;
             EncounterSetNumber = card.CardSet.Number;

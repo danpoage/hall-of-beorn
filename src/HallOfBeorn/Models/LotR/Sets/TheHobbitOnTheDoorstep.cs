@@ -32,7 +32,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Defense = 2,
                 Text = "Response: Pay 1 resource from Balin's resource pool to cancel a shadow effect just triggered during an attack. Then, deal the attacking enemy another shadow card. (Limit once per attack.)",
                 FlavorText = "\"Well, it is the first time that even a mouse has crept along carefully and quietly under my very nose and not been spotted.\" -The Hobbit",
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Winona_Nelson
             });
             Cards.Add(new LotRCard() {
@@ -52,7 +52,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Defense = 2,
                 Text = "When Bard the Bowman makes a ranged attack, the enemy he attacks gets -2 Defense until the end of the phase.",
                 FlavorText = "Now he shot with a great yew bow, till all his arrows but one were spent. -The Hobbit",
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -71,7 +71,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Defense = 1,
                 Text = "While you control at least 5 Dwarf characters, Bifur gains: 'Response: After you play Bifur from your hand, draw 2 cards.'",
                 FlavorText = "\"My cousins! Bombur and Bofur - we have forgotten them, they are down in the valley!\" -The Hobbit",
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Taylor_Ingvarsson
             });
             Cards.Add(new LotRCard() {
@@ -89,7 +89,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Attack = 1,
                 Defense = 1,
                 Text = "Bilbo ~Baggins does not count against the hero limit and cannot gain resources from non-treasure cards.\r\nThe first player gains control of Bilbo ~Baggins.\r\nAction: Spend 1 Baggins resource to search your deck for a treasure card and add it to your hand.\r\nIf Bilbo ~Baggins leaves play, the players have lost the game.",
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -103,7 +103,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Quantity = 1,
                 Traits = new List<string>() { "Artifact.", "Item.", "Ring." },
                 Text = "Attach to Bilbo ~Baggins.\r\nAction: Exhaust Bilbo's Magic ~Ring and raise your threat by 1 to gain 1 Baggins resource. (Limit once per round.)\r\n\r\nResponse: After Bilbo ~Baggins exhausts to defend an attack, exhaust Bilbo's Magic ~Ring and raise your threat by 3 to cancel all damage from this attack.",
-                Number = 19,
+                CardNumber = 19,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -119,7 +119,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Limit 1 per deck. Attach to a hero with Ranged.\r\nResponse: After attached hero declares an attack, add Black Arrow to the victory display to give attached hero +5 Attack for this attack.",
                 FlavorText = "\"I have saved you to the last...\" -Bard, The Hobbit",
                 VictoryPoints = 1,
-                Number = 15,
+                CardNumber = 15,
                 Artist = Artist.Melissa_Findley,
                 MaxPerDeck = 1
             });
@@ -139,7 +139,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Defense = 2,
                 Text = "When counting the number of Dwarf characters you control, Bombur counts as two.",
                 FlavorText = "\"Bombur is fattest and will do for two, he had better come alone and last.\" -Gandalf, The Hobbit",
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard() {
@@ -152,7 +152,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Quantity = 3,
                 Text = "Action: Choose a hero you control. Until the end of the phase, give control of that hero and all resources in that hero's resource pool to another player. (Limit 1 per phase.)",
                 FlavorText = "\"Come!\" called Gandalf. \"There is yet time for council.\" -The Hobbit",
-                Number = 10,
+                CardNumber = 10,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -171,7 +171,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Attack = 1,
                 Defense = 2,
                 Text = "While you control at least 5 Dwarf characters, lower the cost to play Dwalin by 2.",
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Melanie_Maier
             });
             Cards.Add(new LotRCard() {
@@ -184,7 +184,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Quantity = 3,
                 Traits = new List<string>() { "Skill." },
                 Text = "Attach to a hero. Limit 1 per hero.\r\nResponse: After attached hero quests successfully, name a card type and discard the top card of your deck. If the discarded card is the named type, take it into your hand.",
-                Number = 17,
+                CardNumber = 17,
                 Artist = Artist.Magali_Villeneuve,
                 HasErrata = true
             });
@@ -205,7 +205,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Defense = 1,
                 Text = "While you control at least 5 Dwarf characters, Glóin gains: 'Response: After you play Glóin from your hand, choose a hero. Add 2 resources to that hero's resource pool.'",
                 FlavorText = "Glóin lit several more torches, and then they all crept out, one by one... - The Hobbit ",
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Jeff_Lee_Johnson
             });
             Cards.Add(new LotRCard() {
@@ -219,7 +219,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Quantity = 3,
                 Traits = new List<string>() { "Item.", "Weapon." },
                 Text = "Attach to a hero with the printed Ranged keyword.\r\nCombat Action: Choose an enemy in the staging area. Exhaust Great Yew Bow and attached hero to make a ranged attack against that enemy. Declare attached hero as the attacker. No other attackers can be declared for this attack.",
-                Number = 14,
+                CardNumber = 14,
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard() {
@@ -234,7 +234,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Traits = new List<string>() { "Title." },
                 Text = "Attach to a Dwarf hero.\r\nAction: Exhaust King Under the Mountain to look at the top 2 cards of your deck. Add 1 to your hand and discard the other.",
                 FlavorText = "\"Long ago in my grandfather Thror's time our family was driven out of the far North, and came back with all their wealth and tools to this Mountain on the map.\" -Thorin, The Hobbit",
-                Number = 18,
+                CardNumber = 18,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -249,7 +249,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Traits = new List<string>() { "Artifact.", "Erebor.", "Item." },
                 Text = "Attach to Bilbo ~Baggins.\r\nAttached hero gets +1 Defense and +1 hit point.",
                 FlavorText = "\"Mr. Baggins!\" he cried. \"Here is the first payment of your reward! Cast off your old coat and put on this!\" - Thorin, The Hobbit",
-                Number = 21,
+                CardNumber = 21,
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard() {
@@ -269,7 +269,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Defense = 1,
                 Text = "While you control at least 5 Dwarf characters, Oin gets +1 Attack and gains the Tactics resource icon.",
                 FlavorText = "Dwarves can make fire almost anywhere out of almost anything, wind or no wind... -The Hobbit",
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Jeff_Lee_Johnson
             });
             Cards.Add(new LotRCard() {
@@ -282,7 +282,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Quantity = 3,
                 Text = "Action: Exhaust a hero you control to shuffle the encounter deck and look at its top card. Place progress tokens on the current quest equal to the revealed card's Threat. Then, put that card back on top of the encounter deck.",
                 FlavorText = "As they worked the ravens brought them constant tidings. -The Hobbit",
-                Number = 11,
+                CardNumber = 11,
                 Artist = Artist.Adam_Lane,
                 HasErrata = true
             });
@@ -296,7 +296,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Quantity = 3,
                 Text = "Action: Exhaust a Weapon attachment to choose a non-unique enemy with 0 Defense. Discard the chosen enemy.",
                 FlavorText = "In it smote and vanished, barb, shaft and feather, so fierce was its flight. -The Hobbit",
-                Number = 9,
+                CardNumber = 9,
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard() {
@@ -311,7 +311,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Traits = new List<string>() { "Artifact.", " Erebor.", " Item." },
                 Text = "Attach to a hero.\r\nAction: Exhaust The Arkenstone and raise your threat by X to lower by X the cost of the next ally you play this phase that matches the attached hero's sphere.",
                 FlavorText = "\"...the Heart of the Mountain; and it is also the heart of Thorin. He values it above a rive of gold.\" -Bilbo, The Hobbit",
-                Number = 20,
+                CardNumber = 20,
                 Artist = Artist.Mike_Nash
             });
             Cards.Add(new LotRCard() {
@@ -323,7 +323,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 ResourceCost = 1,
                 Quantity = 3,
                 Text = "Action: Choose a character in play (other than Bilbo ~Baggins). Add Bilbo ~Baggins' total Willpower, Attack, and Defense to that character's Willpower, Attack, and Defense respectively until the end of the phase.",
-                Number = 13,
+                CardNumber = 13,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -340,7 +340,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Traits = new List<string>() { "Artifact.", " Erebor.", " Item." },
                 Text = "Attach to a hero.\r\nAttached hero gets +2 Attack.\r\nResponse: After attached hero attacks and destroys an enemy, deal 1 damage to another enemy engaged with you.",
                 FlavorText = "Royal indeed did Thorin look, clad in a coat of gold-plated rings, with a silver hafted axe... -The Hobbit",
-                Number = 22,
+                CardNumber = 22,
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard() {
@@ -357,7 +357,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Attach to a hero.\r\nAction: Add Thror's Golden Cup to the victory display to draw 3 cards.",
                 FlavorText = "...the great golden cup of Thror, two-handed, hammered and carven with birds and flowers whose eyes and petals were of jewels... -The Hobbit",
                 VictoryPoints = 3,
-                Number = 24,
+                CardNumber = 24,
                 Artist = Artist.Melanie_Maier
             });
             Cards.Add(new LotRCard() {
@@ -374,7 +374,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Traits = new List<string>() { "Artifact.", " Erebor.", " Item." },
                 Text = "Attach to a hero. Attached hero gains Ranged.\r\nWhen making a ranged attack, attached hero gets +2 Attack.",
                 FlavorText = "Thorin seized a bow of horn and shot an arrow at the speaker. -The Hobbit",
-                Number = 23,
+                CardNumber = 23,
                 Artist = Artist.David_Horne
             });
             Cards.Add(new LotRCard() {
@@ -391,7 +391,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Attach to a hero.\r\nResponse: After a location is added to the staging area, attach Thror's Key to that location. While attached to a location, Thror's Key gains: 'Treat attached location's printed text box as blank, except for traits.'",
                 FlavorText = "\"The key that went with the map! Try it now while there is still time!\" -Bilbo, The Hobbit",
                 HtmlTemplate = "<p>Attach to a {type:hero}.</p><p><b>Response:</b> After a location is added to the staging area, attach {self} to that location. While attached to a location, {self} gains: &quot;Treat attached location's printed text box as blank, except for traits.&quot;</p><p class='flavor-text'>&quot;The key that went with the map! Try it now while there is still time!&quot; &ndash;Bilbo, The Hobbit</p>",
-                Number = 16,
+                CardNumber = 16,
                 Artist = Artist.Eric_Braddock
             });
             Cards.Add(new LotRCard() {
@@ -404,7 +404,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Quantity = 3,
                 Text = "Action: If you control at least 1 Dwarf hero, put a Dwarf ally from your discard pile into play under your control. Put that ally on the bottom of your deck at the end of the phase.",
                 FlavorText = "Out leapt the King under the Mountain, and his companions followed him. -The Hobbit",
-                Number = 12,
+                CardNumber = 12,
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard() {
@@ -421,7 +421,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 FlavorText = "\"Stick to the forest-track, keep your spirits up, hope for the best, and with a tremendous slice of luck you may come out one day and see the Long Marshes lying below you, and beyond them, high in the East, the Lonely Mountain where dear old Smaug lives.\" -Gandalf, The Hobbit",
                 OppositeText = "Unconscious characters cannot quest, attack, defend, collect resources, trigger abilities, be poisoned, or ready (except by effects that target unconscious character).",
                 EncounterSet = "Flies and Spiders",
-                Number = 67,
+                CardNumber = 67,
                 Artist = Artist.Magali_Villeneuve,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Wilderland }
             });
@@ -438,7 +438,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 FlavorText = "The nights were the worst. It then became pitch-dark - not what you call pitch-dark, but really pitch, so black that you really could see nothing. Bilbo tried flapping his hand in front of his nose but he could not see it at all. Well, perhaps it is not true to say they could see nothing: they could see eyes. -The Hobbit",
                 OppositeText = "When Revealed: Reveal stage 3 and create a separate staging area for the first player use that stage. If there are not other players in the game, discard this stage and each card in the staging area. All other players advance to stage 4.",
                 OppositeFlavorText = "... the cries of the others got steadily further and fainter, and though after a while it seemed to him they changed to yells and cries for help in the far distance, all noise at last died right away, and he was left alone in complete silence and darkness. -The Hobbit",
-                Number = 68,
+                CardNumber = 68,
                 Artist = Artist.Adam_Lane,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Wilderland },
                 HasErrata = true
@@ -460,7 +460,7 @@ namespace HallOfBeorn.Models.LotR.Sets
 Do not pass the first player token. When this stage is complete, do not advance to stage 4 until the end of the quest phase. (Combine staging areas if necessary.)
 
 Action: Spend 2 Baggins resources to ready and unconscious character you control.",
-                Number = 69,
+                CardNumber = 69,
                 Artist = Artist.Ben_Zweifel,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Wilderland }
             });
@@ -483,7 +483,7 @@ Action: Spend 2 Baggins resources to ready an unconscious character you control.
 
 If the players defeat this stage, they have won the game and discovered the treasure card Bilbo's Magic Ring.",
                 EncounterSet = "Flies and Spiders",
-                Number = 70,
+                CardNumber = 70,
                 Artist = Artist.Darek_Zabrocki,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Wilderland }
             });
@@ -505,7 +505,7 @@ Forced: At the end of the round, advance to stage 2.
 ",
                 OppositeFlavorText = "So one day, although autumn was now getting far on, and winds were cold, and leaves were falling fast, three large boats left Lake-town, laden with rowers, dwarves, Mr. Baggins, and many provisions. -The Hobbit",
                 EncounterSet = "The Lonely Mountain",
-                Number = 71,
+                CardNumber = 71,
                 Artist = Artist.Ben_Zweifel,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Wilderland }
             });
@@ -523,7 +523,7 @@ Forced: At the end of the round, advance to stage 2.
 @"Forced: After questing successfully, place 1 progress on Smaug the Golden. Then, he first player makes a burgle attempt. If successful, the first player takes the top card from under The Lonely Mountain into his hand. Then, the players may advance to stage 3.
 
 Forced: After the first player makes an unsuccessful burgle attempt, Smaug the Golden attacks the first player.",
-                Number = 72,
+                CardNumber = 72,
                 Artist = Artist.Diego_Gisbert_Llorens,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Wilderland }
             });
@@ -545,7 +545,7 @@ Forced: If the total number of progress on this stage is greater than the total 
 
 If the players defeat this stage, they have won the game and discovered any treasure successfully burgled from The Lonely Mountain.",
                 EncounterSet = "The Lonely Mountain",
-                Number = 73,
+                CardNumber = 73,
                 Artist = Artist.Sidharth_Chatursedi,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Wilderland }
             });
@@ -565,7 +565,7 @@ If the players defeat this stage, they have won the game and discovered any trea
 @"Forced: After placing the 7th progress token on this stage, remove all damage from Smaug the Magnificent and set him aside, out of play. Then, add Smaug the Golden to the staging area and reset the quest deck to stage 2B.",
                 OppositeFlavorText = "To hunt the whole mountain till he had caught the thief and had torn and trampled him was his one thought -The Hobbit",
                 EncounterSet = "The Lonely Mountain",
-                Number = 74,
+                CardNumber = 74,
                 Artist = Artist.Chris_Rahn,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Wilderland }
             });
@@ -584,7 +584,7 @@ If the players defeat this stage, they have won the game and discovered any trea
                 OppositeText = "When Revealed: Put stage 2, stage 3 and stage 4 into play at the same time. Then remove this stage from play.",
                 OppositeFlavorText = "Ever since the fall of the Great Goblin of the Misty Mountains the hatred of their race for the dwarves had been rekindled to fury. Messengers had passed to and from between all their cities, colonies and strongholds; for they resolved now to win the dominion of the north. -The Hobbit",
                 EncounterSet = "The Battle of Five Armies",
-                Number = 75,
+                CardNumber = 75,
                 Artist = Artist.Sidharth_Chatursedi,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Wilderland }
             });
@@ -603,7 +603,7 @@ If the players defeat this stage, they have won the game and discovered any trea
 @"Players cannot advance from this stage unless stage 3 and stage 4 are complete.
 
 Forced: If there is no progress on this stage at the end of the round, each player must discard 1 random card from his hand.",
-                Number = 76,
+                CardNumber = 76,
                 Artist = Artist.Darek_Zabrocki,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Wilderland }
             });
@@ -623,7 +623,7 @@ Forced: If there is no progress on this stage at the end of the round, each play
 @"Players cannot advance from this stage unless stage 2 and stage 4 are complete.
 
 Forced: If there is no progress on this stage at the end of the round, the first player adds the topmost enemy in the discard pile to the staging area, if able.",
-                Number = 77,
+                CardNumber = 77,
                 Artist = Artist.Adam_Schumpert,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Wilderland }
             });
@@ -643,7 +643,7 @@ Forced: If there is no progress on this stage at the end of the round, the first
 @"Players cannot advance from this stage unless stage 2 and stage 3 are complete.
 
 Forced: If there is no progress on this stage at the end of the round, each player must discard all resources from each hero's resource pool.",
-                Number = 78,
+                CardNumber = 78,
                 Artist = Artist.Adam_Lane,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Wilderland }
             });
@@ -664,7 +664,7 @@ Forced: If there is no progress on this stage at the end of the round, each play
 Progress cannot be placed in this stage. While Bolg is in the staging area, it is considered to be engaged with the first player.
 
 If Bolg is destroyed, the players win the game.",
-                Number = 79,
+                CardNumber = 79,
                 Artist = Artist.Adam_Schumpert,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Wilderland }
             });
@@ -677,7 +677,7 @@ If Bolg is destroyed, the players win the game.",
                 Traits = new List<string>() { "Information." },
                 Text = "While attached, Smaug the Magnificent gets -3 Defense.Response: After the players quest successfully, the first player makes a burgle attempt. If successful, attach A Bare Patch to Smaug the Magnificent.",
                 EncounterSet = "The Lonely Mountain",
-                Number = 39,
+                CardNumber = 39,
                 Artist = Artist.Mike_Nash
             });
             Cards.Add(new LotRCard() {
@@ -688,7 +688,7 @@ If Bolg is destroyed, the players win the game.",
                 Quantity = 4,
                 Text = "When Revealed: Each Dragon enemy in the staging area makes an immediate attack against the player with the highest total Willpower committed to the quest. (Do not deal a shadow card for this attack.)\r\n\r\nBurgle: The first player shuffles his deck and reveals the top card. He may discard 1 card from his hand that matches the revealed card's type and cost.",
                 EncounterSet = "The Lonely Mountain",
-                Number = 50,
+                CardNumber = 50,
                 Artist = Artist.Christina_Davis
             });
             Cards.Add(new LotRCard() {
@@ -709,7 +709,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 EncounterSet = "The Battle of Five Armies",
                 EngagementCost = 35,
                 Threat = 2,
-                Number = 54,
+                CardNumber = 54,
                 Artist = Artist.Aurelien_Hubert
             });
             Cards.Add(new LotRCard() {
@@ -728,7 +728,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 EngagementCost = 50,
                 Threat = 0,
                 IsVariableThreat = true,
-                Number = 53,
+                CardNumber = 53,
                 Artist = Artist.Jim_Pavelec
             });
             Cards.Add(new LotRCard() {
@@ -740,7 +740,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 Text = "When Revealed: Choose a hero to be removed from the quest and make that hero unconscious. If no hero was removed from the quest by this effect, this card gains surge.",
                 FlavorText = "\"What nasty thick skins they have to be sure, but I'll wager there is good juice inside.\" -Spider, The Hobbit",
                 EncounterSet = "Flies and Spiders",
-                Number = 33,
+                CardNumber = 33,
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard() {
@@ -760,7 +760,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 EngagementCost = 30,
                 Shadow = "Shadow: Defending character gets 1 poison.",
                 Threat = 2,
-                Number = 29,
+                CardNumber = 29,
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new LotRCard() {
@@ -778,7 +778,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 EncounterSet = "The Lonely Mountain",
                 EngagementCost = 33,
                 Threat = 1,
-                Number = 42,
+                CardNumber = 42,
                 Artist = Artist.Aurelien_Hubert
             });
             Cards.Add(new LotRCard() {
@@ -796,7 +796,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 EngagementCost = 15,
                 Shadow = "Shadow: Attach this card to the defending character.",
                 Threat = 2,
-                Number = 36,
+                CardNumber = 36,
                 Artist = Artist.Aurelien_Hubert
             });
             Cards.Add(new LotRCard() {
@@ -810,7 +810,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 QuestPoints = 3,
                 EncounterSet = "The Lonely Mountain",
                 Threat = 3,
-                Number = 46,
+                CardNumber = 46,
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard() {
@@ -823,7 +823,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 Traits = new List<string>() { "Enchantment." },
                 Text = "When Revealed: Attach to the hero with the most resources without Dragon-Spell attached. (Counts as a Condition attachment with the text: 'Attached hero gets -1 Willpower for each resource in its resource pool. Forced: When attached hero spends resources, attached hero takes X damage. X is equal to the number of resources spent.')",
                 EncounterSet = "The Lonely Mountain",
-                Number = 51,
+                CardNumber = 51,
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard() {
@@ -843,7 +843,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 EngagementCost = 28,
                 Shadow = "Shadow: Defending character gets 1 poison. (Give 2 poison to a character you control if undefended.)",
                 Threat = 2,
-                Number = 31,
+                CardNumber = 31,
                 Artist = Artist.Piya_Wannachaiwong
             });
             Cards.Add(new LotRCard() {
@@ -856,7 +856,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 Text = "When Revealed: The first player names a sphere. Then, all non-Baggins characters who do not belong to the named sphere are removed from the quest.",
                 EncounterSet = "Wilderland",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack. (+2 Attack instead if undefended.)",
-                Number = 37,
+                CardNumber = 37,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -871,7 +871,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 QuestPoints = 4,
                 EncounterSet = "Flies and Spiders",
                 Threat = 2,
-                Number = 27,
+                CardNumber = 27,
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard() {
@@ -886,7 +886,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 QuestPoints = 3,
                 EncounterSet = "Flies and Spiders",
                 Threat = 3,
-                Number = 26,
+                CardNumber = 26,
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard() {
@@ -899,7 +899,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 Text = "When Revealed: Each player must search the encounter deck and discard pile for a Goblin enemy and put it into play, engaged with him. Then, shuffle the encounter deck. (This effect cannot be canceled.)",
                 EncounterSet = "The Battle of Five Armies",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack for each Goblin enemy engaged with you.",
-                Number = 65,
+                CardNumber = 65,
                 Artist = Artist.Diego_Gisbert_Llorens
             });
             Cards.Add(new LotRCard() {
@@ -914,7 +914,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 QuestPoints = 4,
                 EncounterSet = "The Lonely Mountain",
                 Threat = 4,
-                Number = 44,
+                CardNumber = 44,
                 Artist = Artist.Emilio_Rodriguez
             });
             Cards.Add(new LotRCard() {
@@ -932,7 +932,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 EncounterSet = "The Battle of Five Armies",
                 EngagementCost = 33,
                 Threat = 1,
-                Number = 56,
+                CardNumber = 56,
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard() {
@@ -950,7 +950,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 EngagementCost = 15,
                 Shadow = "Shadow: Attacking enemy gets +1 Attack for each quest stage in play with no progress on it.",
                 Threat = 1,
-                Number = 55,
+                CardNumber = 55,
                 Artist = Artist.Andrew_Olson
             });
             Cards.Add(new LotRCard() {
@@ -963,7 +963,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 Text = "When Revealed: Each enemy engaged with a player makes an immediate attack. Do not deal shadow cards for attacks made by this effect. If no attacks were made by this effect, this card gains surge.",
                 EncounterSet = "The Battle of Five Armies",
                 Shadow = "Shadow: Attacking enemy makes an additional attack immediately after this one.",
-                Number = 64,
+                CardNumber = 64,
                 Artist = Artist.Adam_Lane
             });
             Cards.Add(new LotRCard() {
@@ -976,7 +976,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 Text = "When Revealed: Choose a different quest to be the current quest until the end of the round, if able. If the current quest did not change as a result of this effect, this card gains Doomed 3.",
                 FlavorText = "Down, heedless of order, rushed all the dwarves of Dain to his help. Down too came many of the Lake-men, for Bard could not restrain them... -The Hobbit",
                 EncounterSet = "The Battle of Five Armies",
-                Number = 66,
+                CardNumber = 66,
                 Artist = Artist.Sidharth_Chatursedi
             });
             Cards.Add(new LotRCard() {
@@ -991,7 +991,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 QuestPoints = 1,
                 EncounterSet = "Wilderland",
                 Threat = 3,
-                Number = 35,
+                CardNumber = 35,
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard() {
@@ -1002,7 +1002,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 Quantity = 2,
                 Text = "When Revealed: Each player discards 2 random cards from hand. Until the end of the phase, each Dragon enemy in play gets +1 Threat for each event discarded by this effect.Burgle: The first player shuffles his deck and reveals the top card. He may discard 1 card from his hand that matches the revealed card's sphere and cost.",
                 EncounterSet = "The Lonely Mountain",
-                Number = 49,
+                CardNumber = 49,
                 Artist = Artist.Alex_Stone
             });
             Cards.Add(new LotRCard() {
@@ -1022,7 +1022,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 EngagementCost = 33,
                 Shadow = "Shadow: If defending character is poisoned, make that character unconscious.",
                 Threat = 3,
-                Number = 30,
+                CardNumber = 30,
                 Artist = Artist.Andrew_Olson
             });
             Cards.Add(new LotRCard() {
@@ -1039,7 +1039,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 Text = "Action: The first player may spend 2 Baggins resources to (choose one): take control of Misty ~Mountain ~Eagle, or discard this ally to discard a non-unique enemy in the staging area.",
                 EncounterSet = "The Battle of Five Armies",
                 Shadow = "Shadow: Deal 3 damage to attacking enemy.",
-                Number = 52,
+                CardNumber = 52,
                 Artist = Artist.Mike_Nash
             });
             Cards.Add(new LotRCard() {
@@ -1054,7 +1054,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 QuestPoints = 3,
                 EncounterSet = "The Battle of Five Armies",
                 Threat = 3,
-                Number = 60,
+                CardNumber = 60,
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard() {
@@ -1074,7 +1074,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 EncounterSet = "Flies and Spiders",
                 EngagementCost = 37,
                 Threat = 3,
-                Number = 28,
+                CardNumber = 28,
                 Artist = Artist.Jim_Pavelec
             });
             Cards.Add(new LotRCard() {
@@ -1087,7 +1087,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 Text = "When Revealed: Each character takes damage equal to the number of poison it has. If no characters were damaged by this effect, this card gains surge.",
                 EncounterSet = "Flies and Spiders",
                 Shadow = "Shadow: Discard an unconscious character you control.",
-                Number = 34,
+                CardNumber = 34,
                 Artist = Artist.Adam_Lane
             });
             Cards.Add(new LotRCard() {
@@ -1100,7 +1100,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 EasyModeQuantity = 0,
                 Text = "When Revealed: Put 1 progress token on Smaug the Golden. Then, spend X Baggins resources or advance to stage 4A. X is the number of progress tokens on Smaug the Golden.Burgle: The first player shuffles his deck and reveals the top card. He may discard 2 cards from his hand that match the revealed card's type.",
                 EncounterSet = "The Lonely Mountain",
-                Number = 48,
+                CardNumber = 48,
                 Artist = Artist.Mike_Nash
             });
             Cards.Add(new LotRCard() {
@@ -1116,7 +1116,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 EncounterSet = "The Battle of Five Armies",
                 Threat = 2,
                 VictoryPoints = 3,
-                Number = 62,
+                CardNumber = 62,
                 Artist = Artist.Emilio_Rodriguez
             });
             Cards.Add(new LotRCard() {
@@ -1135,7 +1135,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 EngagementCost = 30,
                 Shadow = "Shadow: Defending character gets -1 Defense for each quest stage in play with no progress on it.",
                 Threat = 2,
-                Number = 59,
+                CardNumber = 59,
                 Artist = Artist.Jim_Pavelec
             });
             Cards.Add(new LotRCard() {
@@ -1151,7 +1151,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 EncounterSet = "The Battle of Five Armies",
                 Threat = 2,
                 VictoryPoints = 3,
-                Number = 61,
+                CardNumber = 61,
                 Artist = Artist.Titus_Lunter
             });
             Cards.Add(new LotRCard() {
@@ -1165,7 +1165,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 QuestPoints = 1,
                 EncounterSet = "The Lonely Mountain",
                 Threat = 1,
-                Number = 45,
+                CardNumber = 45,
                 Artist = Artist.Darek_Zabrocki,
                 HasErrata = true
             });
@@ -1186,7 +1186,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 EngagementCost = 50,
                 Threat = 0,
                 IsVariableThreat = true,
-                Number = 40,
+                CardNumber = 40,
                 Artist = Artist.Christopher_Burdett
             });
             Cards.Add(new LotRCard() {
@@ -1205,7 +1205,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 EncounterSet = "The Lonely Mountain",
                 EngagementCost = 50,
                 Threat = 6,
-                Number = 41,
+                CardNumber = 41,
                 Artist = Artist.Christopher_Burdett
             });
             Cards.Add(new LotRCard() {
@@ -1221,7 +1221,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 EncounterSet = "The Battle of Five Armies",
                 Threat = 2,
                 VictoryPoints = 3,
-                Number = 63,
+                CardNumber = 63,
                 Artist = Artist.Emilio_Rodriguez
             });
             Cards.Add(new LotRCard() {
@@ -1238,7 +1238,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 EncounterSet = "The Lonely Mountain",
                 Threat = 12,
                 VictoryPoints = 10,
-                Number = 43,
+                CardNumber = 43,
                 Artist = Artist.Joel_Hustak
             });
             Cards.Add(new LotRCard() {
@@ -1253,7 +1253,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 QuestPoints = 9,
                 EncounterSet = "Flies and Spiders",
                 Threat = 1,
-                Number = 25,
+                CardNumber = 25,
                 Artist = Artist.Joel_Hustak
             });
             Cards.Add(new LotRCard() {
@@ -1272,7 +1272,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 EngagementCost = 20,
                 Shadow = "Shadow: If this attack destroys a character, remove all progress from the current quest.",
                 Threat = 1,
-                Number = 57,
+                CardNumber = 57,
                 Artist = Artist.Diego_Gisbert_Llorens
             });
             Cards.Add(new LotRCard() {
@@ -1285,7 +1285,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 Text = "When Revealed: Until the end of the round, exhausted characters get -1 Willpower, -1 Attack, and -1 Defense.",
                 EncounterSet = "Wilderland",
                 Shadow = "Shadow: If the defending character is destroyed by this attack, its controller must raise his threat by 5.",
-                Number = 38,
+                CardNumber = 38,
                 Artist = Artist.Anna_Steinbauer
             });
             Cards.Add(new LotRCard() {
@@ -1299,7 +1299,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 QuestPoints = 5,
                 EncounterSet = "The Lonely Mountain",
                 Threat = 2,
-                Number = 47,
+                CardNumber = 47,
                 Artist = Artist.Sara_K_Diesel
             });
             Cards.Add(new LotRCard() {
@@ -1318,7 +1318,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 EngagementCost = 25,
                 Shadow = "Shadow: Defending character gets 2 poison.",
                 Threat = 1,
-                Number = 32,
+                CardNumber = 32,
                 Artist = Artist.Aurelien_Hubert
             });
             Cards.Add(new LotRCard() {
@@ -1336,7 +1336,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 EngagementCost = 40,
                 Shadow = "Shadow: Deal 1 damage to defending character for each quest stage in play with no progress on it.",
                 Threat = 2,
-                Number = 58,
+                CardNumber = 58,
                 Artist = Artist.Florian_Stitz
             });
         }

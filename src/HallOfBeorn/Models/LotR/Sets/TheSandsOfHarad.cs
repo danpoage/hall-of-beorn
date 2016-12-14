@@ -102,6 +102,17 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Forced: After an enemy attacks and destroys a character, remove X progress from the main quest, X is the attacking enemy's Threat.\r\nAt the end of the round, if the main quest has been in play the entire round and there are no progress tokens on it, the players lose the game.")
                 .WithInfo(14, 1, Artist.Victor_Manuel_Leza_Moreno));
 
+            addCard(LotRCard.Enemy("Carrion Bird", string.Empty, setCrossing, 40, 2, 2, 1, 3)
+                .WithGeneric()
+                .WithTraits("Creature.")
+                .WithText("Carrior Birds gets -1 engagement cost for each damaged character in play.\r\nForced: After Carrion Bird engages you, discard a damaged character you control.")
+                .WithInfo(24, 2, Artist.Dimitri_Bielak));
+            addCard(LotRCard.Location("Burnt Sands", string.Empty, setCrossing, 2, 3)
+                .WithTraits("Desert.")
+                .WithText("While the temperature is 40 or higher, Burnt Sands gets +2 Threat.\r\nForced: After Burnt Sands becomes the active location, increase the temperature by 2.")
+                .WithFlavor("...all seemed ruinous and dead, a desert burned and choked. -The Return of the King")
+                .WithInfo(25, 4, Artist.Katy_Grierson));
+
             addCard(LotRCard.ObjectiveHero("Kahliel", setLongArm, 2, 2, 2, 3)
                 .WithTraits("Harad.", "Noble.")
                 .WithText("Response: At the beginning of the planning phase, add 1 resource to a hero's pool.\r\nIf Kahliel leaves play, you are eliminated from the game.")
@@ -126,6 +137,12 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTraits("Orc.", "Uruk.")
                 .WithText("Cannot have player card attachments or be optionally engaged.\r\nWhile the engaged player is engaged with another Orc enemy, ~Uruk Chieftain cannot take damage.\r\nForced: At the end of the encounter phase, ~Uruk Chieftain engages the player engaged with the most non-unique Orc enemies.")
                 .WithInfo(61, 1, Artist.Sam_Lamont));
+
+            addCard(LotRCard.Quest("Beasts of Legend", string.Empty, 1, 3, setCrossing, 16)
+                .WithFlavor("You have wandered through the trackless desert and discovered the legendary nesting grounds of the wild Were-worms. The beasts rear up and circle to attack. You must drive them off or meet your end upon the desert sands.")
+                .WithText("When Revealed: Increase the temperature by 2. Each player searches the encounter deck, discard pile, and victory display for a Were-worm and adds it to the staging area, if able. Shuffle the encounter deck.")
+                .WithOppositeText("During the quest phase, add X [Threat] to the total [Threat] in the staging area, where X is the tens digit of the temperature.\r\nForced: At the end of the round, increase the temperature by 4.\r\nWhile at least 1 Were-worm is in play, the players cannot defeat this stage. If the players defeat this stage, they win the game. If the temperature is 60 or higher, the players lose the game.")
+                .WithInfo(70, 1, Artist.Dimitri_Bielak));
         }
     }
 }

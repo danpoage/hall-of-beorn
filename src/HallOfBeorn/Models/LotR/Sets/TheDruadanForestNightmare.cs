@@ -50,7 +50,7 @@ Then, shuffle the encounter cards in this Nightmare Deck into the remainder of t
 Finally, flip this setup card over and place it next to the quest deck. Its effects remain active throughout the game, which is now ready to begin.",
                 EncounterSet = "The Drúadan Forest Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Smirtouille
             });
             Cards.Add(new LotRCard()
@@ -67,7 +67,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Text = "Drû-buri-Drû cannot take more than 1 damage each round.\r\nWhile Drû-buri-Drû is in play, other Wose enemies get +1 Attack and +1 Defense.\r\nUnless Drû-buri-Drû is in the victory display, the players cannot win the game.",
                 EncounterSet = "The Drúadan Forest Nightmare",
                 Quantity = 1,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new LotRCard()
@@ -85,7 +85,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Text = "Each hero with no resources in its resource pool cannot be declared as an attacker or defender against Drúadan Warrior.",
                 EncounterSet = "The Drúadan Forest Nightmare",
                 Quantity = 3,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Tey_Bartolome
             });
             Cards.Add(new LotRCard()
@@ -103,7 +103,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Text = "As an additional cost to optionally engage Drúadan Stalker, you must spend 2 resources.",
                 EncounterSet = "The Drúadan Forest Nightmare",
                 Quantity = 3,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new LotRCard()
@@ -117,7 +117,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Text = "Immune to player card effects.\r\nWhile Devil's Mirk is in the staging area, characters cannot be healed.\r\nWhile Devil's Mirk is the active location, each Wose enemy gets +2 Defense.",
                 EncounterSet = "The Drúadan Forest Nightmare",
                 Quantity = 3,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Bill_Thompson
             });
             Cards.Add(new LotRCard()
@@ -133,7 +133,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 FlavorText = "...standing up from the long ridges of the Drúadan Forest... -The Return of the King",
                 EncounterSet = "The Drúadan Forest Nightmare",
                 Quantity = 2,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Jose_Vega
             });
             Cards.Add(new LotRCard()
@@ -148,7 +148,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 FlavorText = "\"Way is wide for four horses in Stonewain Valley yonder,\" he waved his hand southwards: \"but narrow at beginning and at end.\" -Ghân-buri-Ghân, The Return of the King",
                 EncounterSet = "The Drúadan Forest Nightmare",
                 Quantity = 2,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Jake_Bullock
             });
             Cards.Add(new LotRCard()
@@ -159,7 +159,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Text = "When Revealed: Each player must trigger the prowl keyword on each enemy engaged with him, as if that enemy had been revealed from the encounter deck. Then, return each engaged Wose enemy to the staging area. If no enemies are returned to the staging area by this effect, Drums of the Wild Men gains surge.",
                 EncounterSet = "The Drúadan Forest Nightmare",
                 Quantity = 2,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Smirtouille
             });
             Cards.Add(new LotRCard()
@@ -173,7 +173,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 FlavorText = "Merry did not like this talk of wild men and poisoned darts... -The Return of the King",
                 EncounterSet = "The Drúadan Forest Nightmare",
                 Quantity = 3,
-                Number = 9,
+                CardNumber = 9,
                 Artist = Artist.Melanie_Maier
             });
         }

@@ -57,7 +57,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
 
                 EncounterSet = "The Dead Marshes Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Diego_Gisbert_Llorens
             });
             Cards.Add(new LotRCard()
@@ -79,7 +79,7 @@ If Gollum is not in play, any resource tokens that would be placed on Gollum are
 Forced: After Gollum enters play, place 2 resource tokens on Gollum, then move all resource tokens from The Mere of Dead Faces to Gollum.",
                 EncounterSet = "The Dead Marshes Nightmare",
                 Quantity = 1,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Alyn_Spiller
             });
             Cards.Add(new LotRCard()
@@ -98,7 +98,7 @@ Escape: 2",
                 Shadow = "Shadow: Perform an escape test, dealing 1 card the encounter deck. If this test is failed, discard the defending character.",
                 EncounterSet = "The Dead Marshes Nightmare",
                 Quantity = 3,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Alexandr_Shaldin
             });
             Cards.Add(new LotRCard()
@@ -117,7 +117,7 @@ Escape: 2",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack. (+2 Attack instead if attacking enemy is Undead.)",
                 EncounterSet = "The Dead Marshes Nightmare",
                 Quantity = 3,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Gabriel_Verdon
             });
             Cards.Add(new LotRCard()
@@ -136,7 +136,7 @@ Escape: 2",
                 FlavorText = "\"But all foul, all rotting, all dead. A fell light is in them.\" -Frodo, The Two Towers",
                 EncounterSet = "The Dead Marshes Nightmare",
                 Quantity = 2,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Yan_Wen_Tang
             });
             Cards.Add(new LotRCard()
@@ -155,7 +155,7 @@ Escape: 2",
                 FlavorText = "\"Many faces proud and fair, and weeds in their silver hair.\" -Frodo, The Two Towers",
                 EncounterSet = "The Dead Marshes Nightmare",
                 Quantity = 3,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Yan_Wen_Tang
             });
             Cards.Add(new LotRCard()
@@ -174,7 +174,7 @@ Escape: 2",
                 Shadow = "Shadow: Discard all attachments from each character you control with 3 or more Willpower.",
                 EncounterSet = "The Dead Marshes Nightmare",
                 Quantity = 3,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Mariana_Vieira
             });
             Cards.Add(new LotRCard()
@@ -191,7 +191,7 @@ Escape: 5",
                 FlavorText = "\"You should not look in when the candles are lit.\" -Gollum, The Two Towers",
                 EncounterSet = "The Dead Marshes Nightmare",
                 Quantity = 1,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Adam_Lane
             });
             Cards.Add(new LotRCard()
@@ -207,7 +207,7 @@ Escape: 5",
 Escape: 3",
                 EncounterSet = "The Dead Marshes Nightmare",
                 Quantity = 2,
-                Number = 9,
+                CardNumber = 9,
                 Artist = Artist.Owen_William_Weber
             });
             Cards.Add(new LotRCard()
@@ -224,7 +224,7 @@ Escape: 10",
                 FlavorText = "'But that is an age and more ago,' said Sam. 'The Dead can't be really there!' -The Two Towers",
                 EncounterSet = "The Dead Marshes Nightmare",
                 Quantity = 1,
-                Number = 10,
+                CardNumber = 10,
                 Artist = Artist.Jose_Vega
             });
         }

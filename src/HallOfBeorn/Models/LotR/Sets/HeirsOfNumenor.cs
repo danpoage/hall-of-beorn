@@ -25,7 +25,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Traits = new List<string>() { "Scroll." },
                 Text = "If unattached, return Alcaron's Scroll to the staging area and it gains: 'Action: Exhaust a hero to attach Alcaron's Scroll to that hero.'Forced: When the hero with Alcaron's Scroll attached is damaged by an enemy attack, attach Alcaron's Scroll to that enemy.",
                 EncounterSet = "Peril in Pelargir",
-                Number = 19,
+                CardNumber = 19,
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new LotRCard() {
@@ -37,7 +37,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 ResourceCost = 1,
                 Quantity = 3,
                 Text = "Response: After a location worth no victory points leaves play as an explored location, return it to the top of the encounter deck.",
-                Number = 12,
+                CardNumber = 12,
                 Artist = Artist.Titus_Lunter,
                 HasErrata = true
             });
@@ -58,7 +58,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EngagementCost = 33,
                 Shadow = "Shadow: Deal 2 damage to The Approach if it is in play. Otherwise, attacking enemy gets +2 Attack.",
                 Threat = 2,
-                Number = 31,
+                CardNumber = 31,
                 Artist = Artist.Lin_Bo
             });
             Cards.Add(new LotRCard() {
@@ -71,7 +71,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Quantity = 3,
                 Text = "Action: Ready a defending Gondor character. That character gets +1 Defense until the end of the phase.",
                 FlavorText = "...seven walls of stone so strong and old that it seemed to have been not builded by carven by giants out of the bones of the earth. -The Return of the King",
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Matt_Smith
             });
             Cards.Add(new LotRCard() {
@@ -92,7 +92,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Lower the cost to play Weapon and Armor attachments on Beregond by 2.",
                 FlavorText = "\"It is over-late to send for aid when you are already besieged.\" -The Return of the King",
                 HtmlTemplate = "<p>{keyword:Sentinel.}</p><p>Lower the cost to play {traits-attachment:Weapon,Armor@attachments} on {self} by 2.</p><p class='flavor-text'>&quot;It is over-late to send for aid when you are already besiged.&quot; &ndash;The Return of the King</p>",
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -106,7 +106,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "When Revealed: Deal 1 damage to each character committed to the quest.",
                 EncounterSet = "Into Ithilien",
                 Shadow = "Shadow: Deal 1 damage to the defending character.",
-                Number = 29,
+                CardNumber = 29,
                 Artist = Artist.Marcia_George_Bogdan,
                 HasErrata = true
             });
@@ -122,7 +122,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Traits = new List<string>() { "Condition." },
                 Text = "Attach to a Gondor or Dúnedain hero.\r\nAction: Spend 1 resource from attached hero's resource pool to give attached hero +1 Defense for each resource in its resource pool until the end of the phase. (Limit once per phase.)",
                 FlavorText = "\"Believe not that in the land of Gondor the blood of Numenor is spent, nor all its pride and dignity forgotten.\" -Boromir, The Fellowship of the Ring",
-                Number = 13,
+                CardNumber = 13,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -141,7 +141,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Defense = 2,
                 Text = "While Boromir has at least 1 resource in his resource pool, Gondor allies get +1 Attack.",
                 FlavorText = "\"By our valour the wild fold of the East are still restrained, and the terror of Morgul kept at bay...\" -The Fellowship of the Ring",
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -158,7 +158,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Defense = 2,
                 Text = "While Celador is in the staging area, he is committed to the current quest.\r\nForced: After players quest unsuccessfully or a character leaves play, deal 1 damage to Celador.\r\nIf Celador leaves play, remove him from the game.",
                 EncounterSet = "Into Ithilien",
-                Number = 25,
+                CardNumber = 25,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -175,7 +175,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Attack = 0,
                 Defense = 1,
                 Text = "Lower the cost to play Citadel Custodian by 1 for each Gondor ally in play.",
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Lorraine_Schleter
             });
             Cards.Add(new LotRCard() {
@@ -191,7 +191,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "Streets of Gondor",
                 Shadow = "Shadow: attacking enemy gets +2 Attack.",
                 Threat = 2,
-                Number = 38,
+                CardNumber = 38,
                 Artist = Artist.Stu_Barnes
             });
             Cards.Add(new LotRCard() {
@@ -203,7 +203,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "When Revealed: Discard 2 cards from the top of the encounter deck. Discard an additional 2 cards for each copy of Collateral Damage in the discard pile. Then, raise each player's threat by 2 for each location discarded by this effect.",
                 EncounterSet = "Peril in Pelargir",
                 Shadow = "Shadow: Any damage dealt by this attack is dealt to the hero with Alcaron's Scroll attached, if able.",
-                Number = 24,
+                CardNumber = 24,
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard() {
@@ -221,7 +221,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Attack = 2,
                 Defense = 2,
                 Text = "Action: Discard Damrod from play to lower your threat by 1 for each enemy in the staging area.",
-                Number = 10,
+                CardNumber = 10,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -237,7 +237,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HitPoints = 1,
                 Attack = 1,
                 Defense = 4,
-                Number = 7,
+                CardNumber = 7,
                 FlavorText = "\"And the Enemy must pay dearly for the crossing of the River.\" -Denethor, The Return of the King",
                 Artist = Artist.Marcia_George_Bogdan
             });
@@ -255,7 +255,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Attack = 1,
                 Defense = 0,
                 Text = "Response: After Envoy of Pelargir enters play, add 1 resource to a Gondor or Noble hero's resource pool.",
-                Number = 18,
+                CardNumber = 18,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -273,7 +273,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Defense = 0,
                 Text = "Action: Exhaust Errand-rider to move 1 resource from the resource pool of a hero you control to another hero's resource pool.",
                 FlavorText = "For the people of the City used horses very little and they were seldom seen in their streets, save only those ridden by the errand-riders of their lord. -The Return of the King",
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Anna_Steinbauer
             });
             Cards.Add(new LotRCard() {
@@ -291,7 +291,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EngagementCost = 18,
                 Shadow = "Shadow: Defending player raises his threat by X where X is the attacking enemy's Threat.",
                 Threat = 1,
-                Number = 50,
+                CardNumber = 50,
                 Artist = Artist.Aurelien_Hubert
             });
             Cards.Add(new LotRCard() {
@@ -309,7 +309,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EngagementCost = 27,
                 Shadow = "Shadow: This enemy attacks again after this attack resolves. (Deal a new shadow card for that attack.)",
                 Threat = 3,
-                Number = 53,
+                CardNumber = 53,
                 Artist = Artist.Adam_Lane
             });
             Cards.Add(new LotRCard() {
@@ -324,7 +324,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "Peril in Pelargir",
                 Shadow = "Shadow: Deal attacking enemy an additional shadow card for each Thug enemy in play.",
                 Threat = 1,
-                Number = 23,
+                CardNumber = 23,
                 Artist = Artist.Titus_Lunter
             });
             Cards.Add(new LotRCard() {
@@ -342,7 +342,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EngagementCost = 25,
                 Shadow = "Shadow: Any damage dealt by this attack is dealt to the hero with Alcaron's Scroll attached, if able.",
                 Threat = 2,
-                Number = 20,
+                CardNumber = 20,
                 Artist = Artist.Ellyson_Ferrari_Lifante
             });
             Cards.Add(new LotRCard() {
@@ -362,7 +362,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 OppositeText = "When Revealed: Each player must search the encounter deck for a copy of Harbor Thug and add it to the staging area. Shuffle the encounter deck.",
                 OppositeFlavorText = "Inside the tavern, Lord Alcaron looks nervously toward the door as he hands you a scroll bearing the seal of Gondor. He asks that you deliver it to Faramir in Ithilen, but the brigands who just entered look intent on taking it from you",
                 EncounterSet = "Peril in Pelargir",
-                Number = 65,
+                CardNumber = 65,
                 Artist = Artist.Darek_Zabrocki,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.StreetsOfGondor, EncounterSet.Brigands }
             });
@@ -379,7 +379,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Keywords = new List<string> { "Battle." },
                 FlavorText = "During the fight in the tavern, one of your adversaries managed to grab Alcaron's Scroll and flee outside. You chase the thief into the street where you are surrounded by a gang of his fellow brigands. You must fight your way through the mob and recover the scroll!",
                 OppositeText = "When Revealed: Attach Alcaron's ~Scroll to the highest engagement cost enemy in play, if able. Otherwise, add Alcaron's Scroll to the staging area.",
-                Number = 66,
+                CardNumber = 66,
                 Artist = Artist.Ben_Zweifel,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.StreetsOfGondor, EncounterSet.Brigands }
             });
@@ -401,7 +401,7 @@ Forced: The first enemy revealed from the encounter deck each round makes an imm
 
 The players cannot defeat this stage unless Alcaron's ~Scroll is attached to a hero. If the players defeat this stage, they have won the game.",
                 EncounterSet = "Peril in Pelargir",
-                Number = 67,
+                CardNumber = 67,
                 Artist = Artist.Jeff_Lee_Johnson,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.StreetsOfGondor, EncounterSet.Brigands }
             });
@@ -421,7 +421,7 @@ The players cannot defeat this stage unless Alcaron's ~Scroll is attached to a h
                 OppositeText = "If the players complete this stage with Celador in the staging area, advance to stage 3A (bypassing stage 2).",
                 OppositeFlavorText = "Faramir has left a company of rangers in Ithilien, tasked on ambushing Southrons as the march toward Cair Andros. Their captain, Celador, offers to lead you to Cair Andros after the approaching enemy is destroyed...",
                 EncounterSet = "Into Ithilien",
-                Number = 68,
+                CardNumber = 68,
                 Artist = Artist.Jeff_Lee_Johnson,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.BroodingForest, EncounterSet.CreaturesOfTheForest, EncounterSet.Southrons }
             });
@@ -441,7 +441,7 @@ The players cannot defeat this stage unless Alcaron's ~Scroll is attached to a h
 @"X is the number of players in the game.
 
 After this stage is completed advance to stage 4A (bypassing stage 3).",
-                Number = 69,
+                CardNumber = 69,
                 Artist = Artist.Magali_Villeneuve,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.BroodingForest, EncounterSet.CreaturesOfTheForest, EncounterSet.Southrons }
             });
@@ -459,7 +459,7 @@ After this stage is completed advance to stage 4A (bypassing stage 3).",
 @"When Revealed: The first player takes contorl of all Ranger objectives in the staging area.
 
 Enemies do not make engagement checks and cannot be optionally engaged.",
-                Number = 70,
+                CardNumber = 70,
                 Artist = Artist.Ilich_Henriquez,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.BroodingForest, EncounterSet.CreaturesOfTheForest, EncounterSet.Southrons }
             });
@@ -480,7 +480,7 @@ Enemies do not make engagement checks and cannot be optionally engaged.",
 Forced: At the end of each round, raise each player's threat by 2.
 
 If the players defeat this stage, they have won the game.",
-                Number = 71,
+                CardNumber = 71,
                 Artist = Artist.Emrah_Elmasli,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.BroodingForest, EncounterSet.CreaturesOfTheForest, EncounterSet.Southrons }
             });
@@ -500,7 +500,7 @@ If the players defeat this stage, they have won the game.",
                 OppositeText = "Players must deal damage from undefended attacks to the lowest Threat Battleground location in play. If there are no Battleground locations in play, immediate advance to the next stage.",
                 OppositeFlavorText = "The assault is relentless, and the defenders grow weary. The tide is slowly but surely turning against you...",
                 EncounterSet = "The Siege of Cair Andros",
-                Number = 72,
+                CardNumber = 72,
                 Artist = Artist.Lin_Bo,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Southrons, EncounterSet.RavagingOrcs, EncounterSet.MordorElite }
             });
@@ -516,7 +516,7 @@ If the players defeat this stage, they have won the game.",
                 EncounterSet = "The Siege of Cair Andros",
                 FlavorText = "As smoke and rending cries fill the air, rafts of Orcs beach their crafts all along the northern banks. You must reach the shore and drive them back into the river before a solid foothold can be established.",
                 OppositeText = "Reveal 1 additional card from the encounter deck and add it to the staging area during the staging step each round.",
-                Number = 73,
+                CardNumber = 73,
                 Artist = Artist.Timo_Karhula,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Southrons, EncounterSet.RavagingOrcs, EncounterSet.MordorElite }
             });
@@ -533,7 +533,7 @@ If the players defeat this stage, they have won the game.",
                 Keywords = new List<string> { "Battle." },
                 FlavorText = "With a crashing boom the eastern gate shatters. A ram has broken through, and the pressing host of Orcs pour into the courtyard beyond. Engage them in hand-to-hand combat and secure the gate!",
                 OppositeText = "Forced: After the players quest unsuccessfully, instead of raising threat each player must choose and discard 1 character he controls.",
-                Number = 74,
+                CardNumber = 74,
                 Artist = Artist.Lin_Bo,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Southrons, EncounterSet.RavagingOrcs, EncounterSet.MordorElite }
             });
@@ -550,7 +550,7 @@ If the players defeat this stage, they have won the game.",
                 Keywords = new List<string> { "Siege." },
                 FlavorText = "Orc scramblers have infiltrated the island and climbed over the walls. They fought to the western gate, and the gate fell. Now a new host of enemies that were lying in wait are breaching the Citadel itself!",
                 OppositeText = "Breakthrough at the Citadel adds 5 Threat to the staging area.",
-                Number = 75,
+                CardNumber = 75,
                 Artist = Artist.Darek_Zabrocki,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Southrons, EncounterSet.RavagingOrcs, EncounterSet.MordorElite }
             });
@@ -571,7 +571,7 @@ If the players defeat this stage, they have won the game.",
 If the players have collected 4 or more victory points, The Last Battle gains Battle and loses Siege.
 
 If the players defeat this stage, they have won the game.",
-                Number = 76,
+                CardNumber = 76,
                 Artist = Artist.Darek_Zabrocki,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Southrons, EncounterSet.RavagingOrcs, EncounterSet.MordorElite }
             });
@@ -590,7 +590,7 @@ If the players defeat this stage, they have won the game.",
                 Defense = 1,
                 Text = "Response: After you play Hunter of Lamedon from your hand, reveal the top card of your deck. If it is an Outlands card, add it to your hand. Otherwise, discard it.",
                 FlavorText = "From Lamedon, a few grim hillmen without a captain. -The Return of the King",
-                Number = 14,
+                CardNumber = 14,
                 Artist = Artist.Lorraine_Schleter
             });
             Cards.Add(new LotRCard() {
@@ -607,7 +607,7 @@ If the players defeat this stage, they have won the game.",
                 Text = "While ~Ithilien ~Guardian is in the staging area, he is committed to the current quest.\r\nWhen Revealed: Add ~Ithilien ~Guardian to the staging area and ~Ithilien ~Guardian gains surge.",
                 EncounterSet = "Into Ithilien",
                 Shadow = "Shadow: Deal 2 damage to the attacking enemy.",
-                Number = 26,
+                CardNumber = 26,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -622,7 +622,7 @@ If the players defeat this stage, they have won the game.",
                 EncounterSet = "Into Ithilien",
                 Shadow = "Shadow: Return attacking enemy to the staging area after it attacks.",
                 Threat = 4,
-                Number = 28,
+                CardNumber = 28,
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard() {
@@ -640,7 +640,7 @@ If the players defeat this stage, they have won the game.",
                 Defense = 0,
                 Text = "Action: Exhaust Ithilien Tracker to lower the Threat of the next enemy added to the staging area to 0 until the end of the phase.",
                 FlavorText = "Green gauntlets covered their hands, and their faces were hooded and masked with green, except for their eyes, which were very keen and bright. -The Two Towers",
-                Number = 15,
+                CardNumber = 15,
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
@@ -658,7 +658,7 @@ If the players defeat this stage, they have won the game.",
                 EngagementCost = 33,
                 Threat = 2,
                 VictoryPoints = 3,
-                Number = 56,
+                CardNumber = 56,
                 Artist = Artist.Jim_Pavelec
             });
             Cards.Add(new LotRCard() {
@@ -671,7 +671,7 @@ If the players defeat this stage, they have won the game.",
                 Quantity = 3,
                 Text = "Action: All characters get +2 Defense and do not exhaust to defend until the end of the round.",
                 FlavorText = "\"The beacons of Gondor are alight, calling for aid.\" -Gandalf, The Return of the King",
-                Number = 11,
+                CardNumber = 11,
                 Artist = Artist.Titus_Lunter
             });
             Cards.Add(new LotRCard() {
@@ -684,7 +684,7 @@ If the players defeat this stage, they have won the game.",
                 Text = "When Revealed: Attach this card to the hero with the highest threat cost without a copy of Local Trouble attached. (Counts as a Condition attachment with the text: 'When attached hero exhausts, readies, or triggers an ability, raise its controller's threat by 1.')",
                 FlavorText = "...they all got an uncomfortable feeling that they were being watched with disapproval, deepening to dislike and even enmity. -The Fellowship of the Ring",
                 EncounterSet = "Streets of Gondor",
-                Number = 41,
+                CardNumber = 41,
                 Artist = Artist.Ryan_Barger
             });
             Cards.Add(new LotRCard() {
@@ -701,7 +701,7 @@ If the players defeat this stage, they have won the game.",
                 EncounterSet = "Brigands",
                 EngagementCost = 24,
                 Threat = 3,
-                Number = 43,
+                CardNumber = 43,
                 Artist = Artist.Dan_Masso
             });
             Cards.Add(new LotRCard() {
@@ -714,7 +714,7 @@ If the players defeat this stage, they have won the game.",
                 Text = "When Revealed: Each player removes 1 character he controls from the quest, if able. Then, if any player has no characters committed to the quest, remove all characters from the quest.",
                 FlavorText = "\"Seven companions we had: one we lost at Moria, the others we left at Parth Galen above Rauros...\" -Frodo Baggins, The Two Towers",
                 EncounterSet = "Brooding Forest",
-                Number = 48,
+                CardNumber = 48,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -727,7 +727,7 @@ If the players defeat this stage, they have won the game.",
                 Text = "When Revealed: Each player must search the encounter deck and discard pile for 1 City location and add it to the staging area, if able. Shuffle the encounter deck. This effect cannot be canceled.",
                 EncounterSet = "Streets of Gondor",
                 Shadow = "Shadow: Defending player discards his hand.",
-                Number = 40,
+                CardNumber = 40,
                 Artist = Artist.Dleoblack
             });
             Cards.Add(new LotRCard() {
@@ -739,7 +739,7 @@ If the players defeat this stage, they have won the game.",
                 Text = "When Revealed: Return all Brigand enemies engaged with players to the staging area. If this effect returned no Brigand enemies to the staging area, Lurking in Shadows gains surge.",
                 EncounterSet = "Brigands",
                 Shadow = "Shadow: Return attacking enemy to the staging area after it attacks.",
-                Number = 45,
+                CardNumber = 45,
                 Artist = Artist.Sabin_Boykinov
             });
             Cards.Add(new LotRCard() {
@@ -754,7 +754,7 @@ If the players defeat this stage, they have won the game.",
                 EncounterSet = "Streets of Gondor",
                 Shadow = "Shadow: Defending player discards all resources in his heroes' resource pools.",
                 Threat = 3,
-                Number = 39,
+                CardNumber = 39,
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard() {
@@ -772,7 +772,7 @@ If the players defeat this stage, they have won the game.",
                 Defense = 1,
                 Text = "Action: Exhaust Master of ~Lore to name a card type. Lower the cost for you to play the next Lore card of that type by 1 until the end of the phase (to a minimum of 1).",
                 FlavorText = "\"If Cirith Ungol is named, old men and masters of lore will blanch and fall silent.\" -Faramir, The Two Towers",
-                Number = 16,
+                CardNumber = 16,
                 Artist = Artist.Ilich_Henriquez,
                 HasErrata = true
             });
@@ -792,7 +792,7 @@ If the players defeat this stage, they have won the game.",
                 EncounterSet = "Creatures of the Forest",
                 EngagementCost = 25,
                 Threat = 3,
-                Number = 49,
+                CardNumber = 49,
                 Artist = Artist.Dean_Spencer
             });
             Cards.Add(new LotRCard() {
@@ -812,7 +812,7 @@ If the players defeat this stage, they have won the game.",
                 EncounterSet = "Southrons",
                 EngagementCost = 38,
                 Threat = 4,
-                Number = 54,
+                CardNumber = 54,
                 Artist = Artist.Piya_Wannachaiwong
             });
             Cards.Add(new LotRCard() {
@@ -825,7 +825,7 @@ If the players defeat this stage, they have won the game.",
                 Quantity = 3,
                 Text = "Action: Until the end of the phase, each Gondor card in play gains the Rohan trait, and each Rohan card in play gains the Gondor trait.",
                 FlavorText = "\"These are the Rohirrim, as we name them, masters of horses... and have ever proved true to us, aiding us at need, and guarding our northern marches and the Gap of Rohan.\" -Faramir, The Two Towers",
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard() {
@@ -844,7 +844,7 @@ If the players defeat this stage, they have won the game.",
                 EngagementCost = 35,
                 Shadow = "Shadow: attacking enemy gets +2 Attack.",
                 Threat = 2,
-                Number = 57,
+                CardNumber = 57,
                 Artist = Artist.Timo_Karhula
             });
             Cards.Add(new LotRCard() {
@@ -862,7 +862,7 @@ If the players defeat this stage, they have won the game.",
                 EngagementCost = 30,
                 Shadow = "Shadow: attacking enemy gets +1 Attack. Deal it another shadow card.",
                 Threat = 3,
-                Number = 63,
+                CardNumber = 63,
                 Artist = Artist.David_Kegg
             });
             Cards.Add(new LotRCard() {
@@ -874,7 +874,7 @@ If the players defeat this stage, they have won the game.",
                 Text = "When Revealed: Each character gets -2 Attack and -2 Defense until the end of the round.",
                 EncounterSet = "The Siege of Cair Andros",
                 Shadow = "Shadow: Deal 2 damage to all Battleground locations in play.",
-                Number = 36,
+                CardNumber = 36,
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard() {
@@ -893,7 +893,7 @@ If the players defeat this stage, they have won the game.",
                 EngagementCost = 28,
                 Shadow = "Shadow: Deal the attacking enemy an additional shadow card for each player in the game.",
                 Threat = 2,
-                Number = 62,
+                CardNumber = 62,
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
@@ -913,7 +913,7 @@ If the players defeat this stage, they have won the game.",
                 EngagementCost = 15,
                 Shadow = "Shadow: Deal 2 damage to The Citadel if it is in play. Otherwise, attacking enemy gets +2 Attack.",
                 Threat = 1,
-                Number = 30,
+                CardNumber = 30,
                 Artist = Artist.Anton_Kokarev
             });
             Cards.Add(new LotRCard() {
@@ -932,7 +932,7 @@ If the players defeat this stage, they have won the game.",
                 EngagementCost = 40,
                 Shadow = "Shadow: Deal the attacking enemy two additional shadow cards.",
                 Threat = 2,
-                Number = 58,
+                CardNumber = 58,
                 Artist = Artist.Lin_Bo
             });
             Cards.Add(new LotRCard() {
@@ -948,7 +948,7 @@ If the players defeat this stage, they have won the game.",
                 EncounterSet = "Mordor Elite",
                 Shadow = "Shadow: attacking enemy gets +1 Attack for each shadow card dealt to it.",
                 Threat = 5,
-                Number = 59,
+                CardNumber = 59,
                 Artist = Artist.Emilio_Rodriguez
             });
             Cards.Add(new LotRCard() {
@@ -964,7 +964,7 @@ If the players defeat this stage, they have won the game.",
                 EncounterSet = "Brooding Forest",
                 Shadow = "Shadow: Remove X progress tokens from the current quest, where X is the attacking enemy's Threat.",
                 Threat = 4,
-                Number = 46,
+                CardNumber = 46,
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard() {
@@ -980,7 +980,7 @@ If the players defeat this stage, they have won the game.",
                 QuestPoints = 3,
                 EncounterSet = "Peril in Pelargir",
                 Threat = 4,
-                Number = 22,
+                CardNumber = 22,
                 Artist = Artist.Emilio_Rodriguez
             });
             Cards.Add(new LotRCard() {
@@ -998,7 +998,7 @@ If the players defeat this stage, they have won the game.",
                 EngagementCost = 28,
                 Shadow = "Shadow: Defending player discards 1 of his attachments. (Discard all of his attachments instead if undefended.)",
                 Threat = 3,
-                Number = 37,
+                CardNumber = 37,
                 Artist = Artist.Asahi
             });
             Cards.Add(new LotRCard() {
@@ -1011,7 +1011,7 @@ If the players defeat this stage, they have won the game.",
                 Quantity = 3,
                 Traits = new List<string>() { "Trap." },
                 Text = "Play Ranger Spikes into the staging area unattached.If unattached, attach Ranger Spikes to the next eligible enemy that enters the staging area.Players do not make engagement checks against attached enemy. Attached enemy gets -2 Threat.",
-                Number = 17,
+                CardNumber = 17,
                 Artist = Artist.Titus_Lunter,
                 SecondArtist = Artist.Suzanne_Helmigh
             });
@@ -1024,7 +1024,7 @@ If the players defeat this stage, they have won the game.",
                 Text = "When Revealed: Each player discards the top card of his deck. Until the end of the phase, raise the total Threat in the staging area by X, where X is the total cost of all cards discarded by this effect.",
                 EncounterSet = "Ravaging Orcs",
                 Shadow = "Shadow: attacking enemy gets +1 Attack. Deal it another shadow card.",
-                Number = 64,
+                CardNumber = 64,
                 Artist = Artist.Caravan_Studio
             });
             Cards.Add(new LotRCard() {
@@ -1040,7 +1040,7 @@ If the players defeat this stage, they have won the game.",
                 EncounterSet = "Brooding Forest",
                 Shadow = "Shadow: Remove X progress tokens from the current quest, where X is the attacking enemy's Threat.",
                 Threat = 3,
-                Number = 47,
+                CardNumber = 47,
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard() {
@@ -1059,7 +1059,7 @@ If the players defeat this stage, they have won the game.",
                 EngagementCost = 30,
                 Shadow = "Shadow: Deal 2 damage to The Banks if it is in play. Otherwise, attacking enemy gets +2 Attack.",
                 Threat = 3,
-                Number = 32,
+                CardNumber = 32,
                 Artist = Artist.Marco_Caradonna
             });
             Cards.Add(new LotRCard() {
@@ -1077,7 +1077,7 @@ If the players defeat this stage, they have won the game.",
                 EngagementCost = 34,
                 Shadow = "Shadow: attacking enemy gets +1 Attack. (+2 Attack instead if the current quest card has a keyword.)",
                 Threat = 1,
-                Number = 27,
+                CardNumber = 27,
                 Artist = Artist.Ignacio_Bazan_Lazcano
             });
             Cards.Add(new LotRCard() {
@@ -1096,7 +1096,7 @@ If the players defeat this stage, they have won the game.",
                 EngagementCost = 35,
                 Shadow = "Shadow: attacking enemy gets +1 Attack. (+3 Attack instead if it has the Harad trait.)",
                 Threat = 2,
-                Number = 52,
+                CardNumber = 52,
                 Artist = Artist.Emile_Denis
             });
             Cards.Add(new LotRCard() {
@@ -1110,7 +1110,7 @@ If the players defeat this stage, they have won the game.",
                 Text = "When Revealed: Each player must search the encounter deck and discard pile for 1 Harad enemy and add it to the staging area, if able. Shuffle the encounter deck.",
                 FlavorText = "... wild Southron men with red banners, shouting with harsh tongues, surging up, overtaking the retreat. -The Return of the King",
                 EncounterSet = "Southrons",
-                Number = 55,
+                CardNumber = 55,
                 Artist = Artist.C_B_Sorge
             });
             Cards.Add(new LotRCard() {
@@ -1124,7 +1124,7 @@ If the players defeat this stage, they have won the game.",
                 Quantity = 3,
                 Traits = new List<string>() { "Item.", " Weapon." },
                 Text = "Attach to a Tactics character. Limit 1 per character.\r\nResponse: After attached character is declared as a defender, deal 1 damage to the attacking enemy.",
-                Number = 9,
+                CardNumber = 9,
                 Artist = Artist.Dan_Masso
             });
             Cards.Add(new LotRCard() {
@@ -1139,7 +1139,7 @@ If the players defeat this stage, they have won the game.",
                 EncounterSet = "The Siege of Cair Andros",
                 Threat = 2,
                 VictoryPoints = 2,
-                Number = 34,
+                CardNumber = 34,
                 Artist = Artist.Titus_Lunter
             });
             Cards.Add(new LotRCard() {
@@ -1154,7 +1154,7 @@ If the players defeat this stage, they have won the game.",
                 EncounterSet = "The Siege of Cair Andros",
                 Threat = 1,
                 VictoryPoints = 1,
-                Number = 35,
+                CardNumber = 35,
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
@@ -1169,7 +1169,7 @@ If the players defeat this stage, they have won the game.",
                 EncounterSet = "The Siege of Cair Andros",
                 Threat = 3,
                 VictoryPoints = 3,
-                Number = 33,
+                CardNumber = 33,
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard() {
@@ -1186,7 +1186,7 @@ If the players defeat this stage, they have won the game.",
                 EncounterSet = "Peril in Pelargir",
                 Threat = 2,
                 VictoryPoints = 3,
-                Number = 21,
+                CardNumber = 21,
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard() {
@@ -1199,7 +1199,7 @@ If the players defeat this stage, they have won the game.",
                 Text = "When Revealed: Each player chooses 1 sphere of influence (Leadership, Tactics, Spirit, or Lore). Each character a player controls that does not belong to his chosen sphere takes 3 damage.",
                 FlavorText = "\"I doubt not that the days of Gondor are numbered, and the walls of Minas Tirith are doomed, so great is His strength and malice.\" -Damrod, The Two Towers",
                 EncounterSet = "Mordor Elite",
-                Number = 60,
+                CardNumber = 60,
                 Artist = Artist.Marcia_George_Bogdan
             });
             Cards.Add(new LotRCard() {
@@ -1211,7 +1211,7 @@ If the players defeat this stage, they have won the game.",
                 Quantity = 1,
                 Text = "When Revealed: Count the number of encounter cards in the staging area and shuffle them into the encounter deck. Reveal an equal number of cards from the encounter deck and add them to the staging area. This effect cannot be canceled.",
                 EncounterSet = "Mordor Elite",
-                Number = 61,
+                CardNumber = 61,
                 Artist = Artist.Ryan_Barger,
                 HasErrata = true
             });
@@ -1231,7 +1231,7 @@ If the players defeat this stage, they have won the game.",
                 EncounterSet = "Brigands",
                 EngagementCost = 40,
                 Threat = 4,
-                Number = 44,
+                CardNumber = 44,
                 Artist = Artist.Greg_Opalinski
             });
             Cards.Add(new LotRCard() {
@@ -1244,7 +1244,7 @@ If the players defeat this stage, they have won the game.",
                 Text = "When Revealed: Raise each player's threat by the number of questing characters. (If the current quest has the battle or siege keyword, Watcher in the Wood gains surge.)",
                 EncounterSet = "Creatures of the Forest",
                 Shadow = "Shadow: Each player raises his threat by the number of enemies engaged with him.",
-                Number = 51,
+                CardNumber = 51,
                 Artist = Artist.Igor_Kieryluk
             });
             Cards.Add(new LotRCard() {
@@ -1257,7 +1257,7 @@ If the players defeat this stage, they have won the game.",
                 Quantity = 3,
                 Text = "Action: Choose a Gondor hero. Add 1 resource to that hero's resource pool.",
                 FlavorText = "Kings made tombs more splendid than houses of the living, and counted old names in the rolls of their descent dearer than the names of sons. -The Two Towers",
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard() {
@@ -1274,7 +1274,7 @@ If the players defeat this stage, they have won the game.",
                 EncounterSet = "Brigands",
                 EngagementCost = 17,
                 Threat = 2,
-                Number = 42,
+                CardNumber = 42,
                 Artist = Artist.David_Gaillet
             });
         }

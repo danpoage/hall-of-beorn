@@ -28,7 +28,7 @@ Expansion Symbol
 
 The cards in The Old ~Forest scenario can be identified by this symbol before each card's collector number.",
                 OppositeFlavorText = "\"But you won't have any luck in the Old Forest,\" objected Fedegar, \"No one ever had luck there. You'll get lost.\"\r\n-The Fellowship of the Ring",
-                Number = 0,
+                CardNumber = 0,
                 Quantity = 1,
                 Artist = Artist.Silver_Saaremael
             });
@@ -59,7 +59,7 @@ Cards with the text 'Immune to player card effects' ignore the effects of all pl
 Indestructible
 
 An enemy with the indestructible keyword cannot be destroyed by damage, even when it has damage on it equal to its hit points.",
-                Number = 0,
+                CardNumber = 0,
                 Quantity = 1,
                 Artist = Artist.Unknown
             });
@@ -76,7 +76,7 @@ Campaign Mode Components
 The Old ~Forest expansion includes 2 cards that can only be used when playing the scenario in campaign mode: one double-sided campaign card and one boon card. The description for each of these card types can be found on page 4 of The Black Riders rules insert.
 
 The Lord of the ~Rings : The Black Riders Saga Expansion is required to play The Old ~Forest in campaign mode.",
-                Number = 0,
+                CardNumber = 0,
                 Quantity = 1,
                 Artist = Artist.Unknown
             });
@@ -94,14 +94,13 @@ The Lord of the ~Rings : The Black Riders Saga Expansion is required to play The
                 Willpower = 2,
                 HitPoints = 5,
                 Traits = new List<string>() { "Dúnedain.", "Noble.", "Ranger." },
-                NormalizedTraits = new List<string> { "Dunedain." },
                 Text = "Response: After Aragorn commits to a quest, spend 1 resource from his resource pool to ready him.",
                 HtmlTemplate = "<p>{keyword:Sentinel.}</p><p><b>Response:</b> After {self} commits to a quest, spend 1 resource from his resource pool to ready him.</p>",
                 Keywords = new List<string>() { "Sentinel." },
                 Quantity = 1,
                 Year = 2014,
                 Artist = Artist.Sebastian_Giacobino,
-                Number = 1
+                CardNumber = 1
             });
             Cards.Add(new LotRCard()
             {
@@ -118,7 +117,7 @@ The Lord of the ~Rings : The Black Riders Saga Expansion is required to play The
                 OppositeText = "When Revealed: Each player draws 1 card. Advance to a random stage 2A.",
                 OppositeFlavorText = "\"You have left the Shire, and are now outside, and on the edge of the Old Forest.\" -Merry, The Fellowship of the Ring",
                 EncounterSet = "The Old Forest",
-                Number = 1,
+                CardNumber = 1,
                 Quantity = 1,
                 Artist = Artist.Brian_Valenzuela
             });
@@ -141,7 +140,7 @@ The Lord of the ~Rings : The Black Riders Saga Expansion is required to play The
 
 Forced: After placing progress as a result of questing successfully, if there are X or more total victory points on locations in the victory display, advance to stage 3A. Otherwise, advance to a different random stage 2A. X is the number of players in the game times 5.",
                 EncounterSet = "The Old Forest",
-                Number = 2,
+                CardNumber = 2,
                 Quantity = 1,
                 Artist = Artist.Silver_Saaremael,
                 SecondArtist = Artist.Nathalia_Gomes
@@ -164,7 +163,7 @@ Forced: After placing progress as a result of questing successfully, if there ar
 
 Forced: After placing progress as a result of questing successfully, if there are X or more total victory points on locations in the victory display, advance to stage 3A. Otherwise, advance to a different random stage 2A. X is the number of players in the game times 5.",
                 EncounterSet = "The Old Forest",
-                Number = 3,
+                CardNumber = 3,
                 Quantity = 1,
                 Artist = Artist.Silver_Saaremael,
                 SecondArtist = Artist.Silver_Saaremael
@@ -187,7 +186,7 @@ Forced: After placing progress as a result of questing successfully, if there ar
 
 Forced: After placing progress as a result of questing successfully, if there are X or more total victory points on locations in the victory display, advance to stage 3A. Otherwise, advance to a different random stage 2A. X is the number of players in the game times 5.",
                 EncounterSet = "The Old Forest",
-                Number = 4,
+                CardNumber = 4,
                 Quantity = 1,
                 Artist = Artist.Jose_Vega,
                 SecondArtist = Artist.Nathalia_Gomes
@@ -210,7 +209,7 @@ Forced: After placing progress as a result of questing successfully, if there ar
 
 Forced: After placing progress as a result of questing successfully, if there are X or more total victory points on locations in the victory display, advance to stage 3A. Otherwise, advance to a different random stage 2A. X is the number of players in the game times 5.",
                 EncounterSet = "The Old Forest",
-                Number = 5,
+                CardNumber = 5,
                 Quantity = 1,
                 Artist = Artist.Silver_Saaremael,
                 SecondArtist = Artist.Joel_Hustak
@@ -232,7 +231,7 @@ Forced: After placing progress as a result of questing successfully, if there ar
 
 If the players defeat this stage, they win the game.",
                 EncounterSet = "The Old Forest",
-                Number = 6,
+                CardNumber = 6,
                 Quantity = 1,
                 Artist = Artist.Ignacio_Bazan_Lazcano
             });
@@ -251,7 +250,7 @@ If the players defeat this stage, they win the game.",
                 Keywords = new List<string> { "Indestructible." },
                 Text = "Immune to player card effects.\r\nForced: When Old Man Willow attacks, discard a random location from the victory display. The defending player raises his threat by X, where X is that location's victory point value.",
                 EncounterSet = "The Old Forest",
-                Number = 7,
+                CardNumber = 7,
                 Quantity = 1,
                 Artist = Artist.Silver_Saaremael
             });
@@ -269,7 +268,7 @@ If the players defeat this stage, they win the game.",
                 Text = "While Long Trailer is in the staging area it gains: \"Forced: After the active location leaves play as an explored location, Long Trailer makes an immediate attack against the first player.\"",
                 FlavorText = "\"Occasionally the most unfriendly ones may drop a branch, or stick a root out, or grasp at you with a long trailer.\" -Merry, The Fellowship of the Ring",
                 EncounterSet = "The Old Forest",
-                Number = 8,
+                CardNumber = 8,
                 Quantity = 4,
                 EasyModeQuantity = 2,
                 Artist = Artist.Jose_Vega
@@ -288,7 +287,7 @@ If the players defeat this stage, they win the game.",
                 Text = "Forced: After Grasping Root engages a player, that player must assign X damage among characters he controls. X is the number of locations in the victory display.",
                 FlavorText = "...a great tree-root seemed to be over him and holding him down... -The Fellowship of the Ring",
                 EncounterSet = "The Old Forest",
-                Number = 9,
+                CardNumber = 9,
                 Quantity = 4,
                 Artist = Artist.Guillaume_Ducos
             });
@@ -307,7 +306,7 @@ If the players defeat this stage, they win the game.",
                 Text = "Forced: After Army of Flies engages a player, that player discards a non-objective attachment he controls.",
                 Shadow = "Shadow: Defending player discards a non-objective attachment he controls.",
                 EncounterSet = "The Old Forest",
-                Number = 10,
+                CardNumber = 10,
                 Quantity = 3,
                 Artist = Artist.Victor_Garcia
             });
@@ -329,7 +328,7 @@ While Withywindle is the active location, the first player reveals 1 additional 
                 FlavorText = "\"The Withywindle valley is said to be the queerest part of the whole wood...\" -Merry, The Fellowship of the Ring",
                 VictoryPoints = 3,
                 EncounterSet = "The Old Forest",
-                Number = 11,
+                CardNumber = 11,
                 Quantity = 1,
                 Artist = Artist.Alyn_Spiller
             });
@@ -345,7 +344,7 @@ While Withywindle is the active location, the first player reveals 1 additional 
                 Text = "When faced with the option to travel, the players must travel to Misleading Path if there is no active location.",
                 Shadow = "Shadow: Defending player discards each ally card in his hand.",
                 EncounterSet = "The Old Forest",
-                Number = 12,
+                CardNumber = 12,
                 Quantity = 2,
                 EasyModeQuantity = 1,
                 Artist = Artist.Katy_Grierson
@@ -362,7 +361,7 @@ While Withywindle is the active location, the first player reveals 1 additional 
                 FlavorText = "Each time they clambered out, the trees seemed deeper and darker... -The Fellowship of the Ring",
                 VictoryPoints = 2,
                 EncounterSet = "The Old Forest",
-                Number = 13,
+                CardNumber = 13,
                 Quantity = 4,
                 Artist = Artist.Silver_Saaremael
             });
@@ -378,7 +377,7 @@ While Withywindle is the active location, the first player reveals 1 additional 
                 Shadow = "Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, raise each player's threat by 2.",
                 VictoryPoints = 1,
                 EncounterSet = "The Old Forest",
-                Number = 14,
+                CardNumber = 14,
                 Quantity = 3,
                 Artist = Artist.Jose_Vega
             });
@@ -395,7 +394,7 @@ While Withywindle is the active location, the first player reveals 1 additional 
                 FlavorText = "The trees drew close again on either side, and they could no longer see far ahead. -The Fellowship of the Ring",
                 IsVariableVictoryPoints = true,
                 EncounterSet = "The Old Forest",
-                Number = 15,
+                CardNumber = 15,
                 Quantity = 4,
                 Artist = Artist.Silver_Saaremael
             });
@@ -411,7 +410,7 @@ While Withywindle is the active location, the first player reveals 1 additional 
                 Shadow = "Shadow: If there are no locations in the staging area, add this location to the staging area.",
                 VictoryPoints = 2,
                 EncounterSet = "The Old Forest",
-                Number = 16,
+                CardNumber = 16,
                 Quantity = 2,
                 EasyModeQuantity = 1,
                 Artist = Artist.Joel_Hustak
@@ -425,7 +424,7 @@ While Withywindle is the active location, the first player reveals 1 additional 
                 Text = "When Revealed: Choose a location in the victory display and return it to the staging area. If no location was returned to the staging area this way, Swaying Without Wind gains surge.",
                 FlavorText = "\"...the branches swayed and groped without any wind.\"\r\n-Merry, The Fellowship of the Ring",
                 EncounterSet = "The Old Forest",
-                Number = 17,
+                CardNumber = 17,
                 Quantity = 2,
                 Artist = Artist.Jake_Bullock
             });
@@ -437,7 +436,7 @@ While Withywindle is the active location, the first player reveals 1 additional 
                 Text = "When Revealed: Each player removes a character he controls from the quest and deals 2 damage to that character (3 damage instead if that character is an ally).",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the defending character is an ally.)",
                 EncounterSet = "The Old Forest",
-                Number = 18,
+                CardNumber = 18,
                 Quantity = 3,
                 EasyModeQuantity = 1,
                 Artist = Artist.Victor_Garcia
@@ -451,7 +450,7 @@ While Withywindle is the active location, the first player reveals 1 additional 
                 Keywords = new List<string> { "Peril." },
                 Text = "When Revealed: Remove a questing hero you control from the quest and attach Song of Sleep to that hero. Counts as a Condition attachment with the text: \"Limit 1 per hero. Treat attached hero's printed text box as if it were blank (except for Traits). Attached hero cannot ready.\"",
                 EncounterSet = "The Old Forest",
-                Number = 19,
+                CardNumber = 19,
                 Quantity = 2,
                 EasyModeQuantity = 1,
                 Artist = Artist.Romana_Kendelic
@@ -465,7 +464,7 @@ While Withywindle is the active location, the first player reveals 1 additional 
                 Text = "When Revealed: Discard all progress from each location in the staging area. If there is a non-unique active location, randomly choose a location in the staging area and switch it with the active location.",
                 FlavorText = "But Frodo, without any clear idea of why he did so, our what he hoped for, ran along the path crying help! help! help! -The Fellowship of the Ring",
                 EncounterSet = "The Old Forest",
-                Number = 20,
+                CardNumber = 20,
                 Quantity = 2,
                 Artist = Artist.Romana_Kendelic
             });
@@ -478,7 +477,7 @@ While Withywindle is the active location, the first player reveals 1 additional 
                 Text = "When Revealed: At the end of the phase, raise each player's threat by X where X is the number of enemies in the staging area.",
                 Shadow = "Shadow: Return attacking enemy to the staging area after this attack.",
                 EncounterSet = "The Old Forest",
-                Number = 21,
+                CardNumber = 21,
                 Quantity = 2,
                 Artist = Artist.Romana_Kendelic
             });
@@ -496,7 +495,7 @@ While Withywindle is the active location, the first player reveals 1 additional 
                 Text = "When Revealed: Choose a player. That player gains control of Tom Bombadil, ready and committed to the quest. At the end of the round, discard Tom Bombadil. Then Shuffle the encounter discard pile into the encounter deck. This effect cannot be canceled.",
                 FlavorText = "\"Tom Bom, jolly Tom, Tom Bombadillo!\"\r\n-Tom Bombadil, The Fellowship of the Ring",
                 EncounterSet = "The Old Forest",
-                Number = 22,
+                CardNumber = 22,
                 Quantity = 1,
                 Artist = Artist.Romana_Kendelic
             });
@@ -515,7 +514,7 @@ Setup: The first player attaches Old Bogey-stories to a hero in play.",
                 OppositeText = "Resolution: If there are at least 12 damage tokens on Old Man Willow, the players have earned the Old Bogey-Stories boon card.",
                 OppositeFlavorText = "Tom Bombadil burst out laughing, \"Well, my little fellows!\" said he, stooping so that he peered into their faces. \"You shall come home with me! The table is all laden with yellow cream, honeycomb, and white bread and butter. Goldberry is waiting. Time enough for questions around the supper table. You follow after me as quick as you are able!\" With that he picked up his lilies, and then with a beckoning wave of his hand went hopping and dancing along the path eastward, still singing loudly and nonsensically.\r\n-The Fellowship of the Ring",
                 EncounterSet = "The Old Forest",
-                Number = 23,
+                CardNumber = 23,
                 Quantity = 1,
                 Artist = Artist.Brian_Valenzuela
             });
@@ -534,7 +533,7 @@ Setup: The first player attaches Old Bogey-stories to a hero in play.",
 Action: Add Old Bogey-stories to the victory display to shuffle your hand of at least 6 cards into your deck. Then, draw 6 cards.",
                 FlavorText = "\"If you mean the old bogey-stories Fatty's nurses used to tell him, about goblins and wolves and things of that sort, I should say no.\" -Merry, The Fellowship of the Ring",
                 VictoryPoints = 1,
-                Number = 24,
+                CardNumber = 24,
                 Quantity = 1,
                 Artist = Artist.Brian_Valenzuela
             });

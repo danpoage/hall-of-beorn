@@ -49,7 +49,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
 
                 EncounterSet = "The Seventh Level Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Mark_Bulahao
             });
             Cards.Add(new LotRCard()
@@ -71,7 +71,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 VictoryPoints = 5,
                 EncounterSet = "The Seventh Level Nightmare",
                 Quantity = 1,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Aurelien_Hubert
             });
             Cards.Add(new LotRCard()
@@ -89,7 +89,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 VictoryPoints = 5,
                 EncounterSet = "The Seventh Level Nightmare",
                 Quantity = 1,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Juan_Carlos_Barquet
             });
             Cards.Add(new LotRCard()
@@ -110,7 +110,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
 Forced: When a Goblin enemy with at least 1 resource on it is dealt any amount of damage, remove 1 resource from that enemy and cancel all damage just dealt to it.",
                 EncounterSet = "The Seventh Level Nightmare",
                 Quantity = 2,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Guillaume_Ducos
             });
             Cards.Add(new LotRCard()
@@ -129,7 +129,7 @@ Forced: When a Goblin enemy with at least 1 resource on it is dealt any amount o
                 Shadow = "Shadow: Deal X damage to the defending character. X is the number of resources on attacking enemy.",
                 EncounterSet = "The Seventh Level Nightmare",
                 Quantity = 3,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Rick_Price
             });
             Cards.Add(new LotRCard()
@@ -148,7 +148,7 @@ Forced: When a Goblin enemy with at least 1 resource on it is dealt any amount o
                 Shadow = "Shadow: If attacking enemy is a Goblin, add 1 resource to it.",
                 EncounterSet = "The Seventh Level Nightmare",
                 Quantity = 2,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Alvaro_Calvo_Escudero
             });
             Cards.Add(new LotRCard()
@@ -164,7 +164,7 @@ Forced: When a Goblin enemy with at least 1 resource on it is dealt any amount o
                 Shadow = "Shadow: Attacking enemy gets +1 Attack. Then, if attacking enemy is a Goblin, deal it another shadow card.",
                 EncounterSet = "The Seventh Level Nightmare",
                 Quantity = 3,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard()
@@ -180,7 +180,7 @@ Forced: When a Goblin enemy with at least 1 resource on it is dealt any amount o
                 FlavorText = "Away beyond the shadows at the western end of the hall there came cries and horn-calls.\r\n-The Fellowship of the Ring",
                 EncounterSet = "The Seventh Level Nightmare",
                 Quantity = 2,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard()
@@ -194,7 +194,7 @@ Forced: When a Goblin enemy with at least 1 resource on it is dealt any amount o
                 Shadow = "Shadow: If attacking enemy is a Goblin, add 1 resource to it.",
                 EncounterSet = "The Seventh Level Nightmare",
                 Quantity = 3,
-                Number = 9,
+                CardNumber = 9,
                 Artist = Artist.Sebastian_Giacobino
             });
             Cards.Add(new LotRCard()
@@ -207,7 +207,7 @@ Forced: When a Goblin enemy with at least 1 resource on it is dealt any amount o
                 FlavorText = "Eachoes ran along as they hurried forward; and there seemed to be the sound of many footfalls following their own. -The Fellowship of the Ring",
                 EncounterSet = "The Seventh Level Nightmare",
                 Quantity = 2,
-                Number = 10,
+                CardNumber = 10,
                 Artist = Artist.Mark_Bulahao
             });
         }

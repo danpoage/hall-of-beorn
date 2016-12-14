@@ -656,11 +656,11 @@ namespace HallOfBeorn.Services.LotR
 
             if (setNumber >= 100)
             {
-                return string.Format("{0:000}{1:000}", setNumber, card.Number);
+                return string.Format("{0:000}{1:000}", setNumber, card.CardNumber);
             }
             else
             {
-                return string.Format("{0:00}{1:000}", setNumber, card.Number);
+                return string.Format("{0:00}{1:000}", setNumber, card.CardNumber);
             }
         }
 

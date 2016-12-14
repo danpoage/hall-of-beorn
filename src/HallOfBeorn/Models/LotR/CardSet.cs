@@ -73,13 +73,14 @@ namespace HallOfBeorn.Models.LotR
 
         private static List<CardSet> all = new List<CardSet>();
 
+        /*
         private static void AddCardSlugsByType(CardSet cardSet, Func<LotRCard, bool> typePredicate)
         {
             var slugNum = 97; //a
             var shortSlug = string.Empty;
             var octgnSlug = string.Empty;
 
-            foreach (var card in cardSet.Cards.Where(typePredicate).OrderBy(y => y.Number))
+            foreach (var card in cardSet.Cards.Where(typePredicate).OrderBy(y => y.CardNumber))
             {
                 shortSlug = ((char)slugNum).ToString();
                 octgnSlug = cardSet.ShortSlug + shortSlug;
@@ -87,8 +88,9 @@ namespace HallOfBeorn.Models.LotR
                 card.WithOctgnSlug(octgnSlug);
                 slugNum++;
             }
-        }
+        }*/
 
+        /*
         private static void AddCardShortSlugs(CardSet cardSet)
         {
             AddCardSlugsByType(cardSet, (c) => { return c.CardType == CardType.Hero; });
@@ -97,10 +99,11 @@ namespace HallOfBeorn.Models.LotR
             AddCardSlugsByType(cardSet, (c) => { return c.CardType == CardType.Event; });
             AddCardSlugsByType(cardSet, (c) => { return c.CardType == CardType.Player_Side_Quest; });
         }
+        */
 
         private static void Add(CardSet cardSet)
         {
-            AddCardShortSlugs(cardSet);
+            //AddCardShortSlugs(cardSet);
 
             all.Add(cardSet);
         }

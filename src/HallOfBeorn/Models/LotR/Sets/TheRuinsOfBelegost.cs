@@ -32,7 +32,7 @@ Expansion Symbol
 The cards in The Ruins of Belegost scenario can be identified by this symbol before each card's collector number.
 
 Page 1/4",
-                Number = 0,
+                CardNumber = 0,
                 Quantity = 1,
                 Artist = Artist.Unknown
             });
@@ -67,7 +67,7 @@ Loot is a new keyword that appears on some objective cards in The Ruins of Beleg
 If a card with the Loot keyword is revealed from the encounter deck, discard it and reveal another card from the top of the encounter deck.
 
 Page 3/4",
-                Number = 0,
+                CardNumber = 0,
                 Artist = Artist.Unknown
             });
             Cards.Add(new LotRCard()
@@ -84,7 +84,7 @@ Immune to player card effects
 Cards with the text 'Immune to player card effects' ignore the effects of all player cards. Additionally, cards that are immune to player card effects cannot be chosen as targets of player card effects.
 
 Page 4/4",
-                Number = 0,
+                CardNumber = 0,
                 Artist = Artist.Unknown
             });
             Cards.Add(LotRCard.Hero("Gimli", "", Sphere.Tactics, 11, 2, 2, 2, 5)

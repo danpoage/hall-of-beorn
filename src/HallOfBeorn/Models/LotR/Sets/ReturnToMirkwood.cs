@@ -27,7 +27,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HtmlTemplate2 = "<p><b>Forced:</b> At the beginning of the combat phase, all enemies in play engage the player guarding <a title='Gollum (Return to Mirkwood)' target='_blank' href='/Cards/Details/Gollum-RtM'>Gollum</a>.<p><p><b>Players cannot defeat this stage if there are any enemies in play. If players defeat this stage, they have won the game.</b></p>",
                 Quantity = 1,
                 EncounterSet = "Return to Mirkwood",
-                Number = 129,
+                CardNumber = 129,
                 Artist = Artist.John_Gravato,
                 SecondArtist = Artist.Dimitri_Bielak,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.SpidersOfMirkwood, EncounterSet.Wilderlands }
@@ -42,7 +42,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 ResourceCost = 3,
                 Text = "Action: Until the end of the phase, all Rohan characters get +2 Willpower.",
                 FlavorText = "With astonishing speed and skill they checked their steeds, wheeled, and came charging round. -The Two Towers",
-                Number = 122,
+                CardNumber = 122,
                 Artist = Artist.Anna_Christenson
             });
             Cards.Add(new LotRCard() {
@@ -62,7 +62,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HtmlTemplate = "<p><b>Forced:</b> At the beginning of the encounter phase, {self} automatically engages the player guarding <a title='Gollum (Return to Mirkwood)' target='_blank' href='/Cards/Details/Gollum-RtM'>Gollum</a>, regardless of his threat.</p><p class='flavor-text'>&quot;Attercop! Attercop! Won't you stop...&quot;<br>&ndash;Bilbo Baggins, The Hobbit</p>",
                 Threat = 2,
                 EncounterSet = "Return to Mirkwood",
-                Number = 139,
+                CardNumber = 139,
                 Artist = Artist.Aaron_B_Miller
             });
             Cards.Add(new LotRCard() {
@@ -81,7 +81,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HitPoints = 5,
                 Text = "While Dain Ironfoot is ready, Dwarf characters get +1 Attack and +1 Willpower.",
                 FlavorText = "\"You have not heard of Dain and the dwarves of the Iron Hills?\" -Bilbo Baggins, The Hobbit",
-                Number = 116,
+                CardNumber = 116,
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard() {
@@ -94,7 +94,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 ResourceCost = 2,
                 Text = "Play after shadow cards have been dealt, before any attacks have resolved.\r\nCombat Action: Each player may choose and discard 1 facedown shadow card from an enemy with which he is engaged.",
                 FlavorText = "\"Dawn take you all, and be stone to you!\" -Gandalf, The Hobbit",
-                Number = 118,
+                CardNumber = 118,
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
@@ -109,7 +109,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Threat = 2,
                 QuestPoints = 2,
                 EncounterSet = "Return to Mirkwood",
-                Number = 132,
+                CardNumber = 132,
                 Artist = Artist.Bill_Corbett
             });
             Cards.Add(new LotRCard() {
@@ -124,7 +124,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 ResourceCost = 1,
                 Text = "Attach to a hero. Attached hero gains sentinel.\r\nAction: Pay 1 resource from attached hero's pool to attach Dunedain Signal to another hero.",
                 HtmlTemplate = "<p>Attach to a hero.</p><p>Attached hero gains {keyword:Sentinel.@sentinel}.<p><b>Action:</b> Pay 1 resource from attached hero's pool to attach {self} to another hero.</p>",
-                Number = 117,
+                CardNumber = 117,
                 Artist = Artist.Ijur
             });
             Cards.Add(new LotRCard() {
@@ -141,7 +141,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Willpower = 2,
                 HitPoints = 4,
                 Text = "Eagles of the Misty Mountains cannot have restricted attachments. Eagles of the Misty Mountains gets +1 Attack and +1 Defense for each facedown attachment it has.\r\nResponse: After another Eagle character leaves play, you may attach that card facedown to Eagles of the Misty Mountains.",
-                Number = 119,
+                CardNumber = 119,
                 Artist = Artist.Sandara_Tang
             });
             Cards.Add(new LotRCard() {
@@ -156,7 +156,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 OppositeText = "The player guarding ~Gollum cannot commit characters to this quest (unless he is the only player in the game).\r\nIf the players quest unsuccessfully, Gollum escapes and the players have lost the game.",
                 HtmlTemplate2 = "<p>The player guarding <a title='Gollum (Return to Mirkwood)' target='_blank' href='/Cards/Details/Gollum-RtM'>Gollum</a> cannot commit characters to this quest (unless he is the only player remaining in the game).</p><p><b>If the player quest unsuccessfully, <a title='Gollum (Return to Mirkwood)' target='_blank' href='/Cards/Details/Gollum-RtM'>Gollum</a> escapes and the player have lost the game.</b></p>",
                 EncounterSet = "Return to Mirkwood",
-                Number = 127,
+                CardNumber = 127,
                 Artist = Artist.Tom_Garden,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.SpidersOfMirkwood, EncounterSet.Wilderlands }
             });
@@ -177,7 +177,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 
 Forced: At the end of each round, raise the threat of the player guarding ~Gollum by 3. Then, that player may choose a new player to guard ~Gollum.",
                 EncounterSet = "Return to Mirkwood",
-                Number = 130,
+                CardNumber = 130,
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard() {
@@ -192,7 +192,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 HtmlTemplate = "<p><b>When Revealed:</b> Raise the threat of the player guarding <a title='Gollum (Return to Mirkwood)' target='_blank' href='/Cards/Details/Gollum-RtM'>Gollum</a> by 8. That player must choose a new player to guard <a title='Gollum (Return to Mirkwood)' target='_blank' href='/Cards/Details/Gollum-RtM'>Gollum</a>, if able.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Raise the threat of the player guarding <a title='Gollum (Return to Mirkwood)' target='_blank' href='/Cards/Details/Gollum-RtM'>Gollum</a> by 4.</p>",
                 Shadow = "Shadow: Raise the threat of the player guarding ~Gollum by 4.",
                 EncounterSet = "Return to Mirkwood",
-                Number = 135,
+                CardNumber = 135,
                 Artist = Artist.Tom_Garden
             });
             Cards.Add(new LotRCard() {
@@ -207,7 +207,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 Shadow = "Shadow: Deal 2 damage to a hero controlled by the player guarding ~Gollum.",
                 HtmlTemplate = "<p><b>When Revealed:</b> Deal 4 damage to a hero controlled by the player guarding <a title='Gollum (Return to Mirkwood)' target='_blank' href='/Cards/Details/Gollum-RtM'>Gollum</a>. That player must choose a new player to guard <a title='Gollum (Return to Mirkwood)' target='_blank' href='/Cards/Details/Gollum-RtM'>Gollum</a>, if able.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Deal 2 damage to a hero controlled by the player guarding <a title='Gollum (Return to Mirkwood)' target='_blank' href='/Cards/Details/Gollum-RtM'>Gollum</a>.</p>",
                 EncounterSet = "Return to Mirkwood",
-                Number = 136,
+                CardNumber = 136,
                 Artist = Artist.Tom_Garden
             });
             Cards.Add(new LotRCard() {
@@ -227,7 +227,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 HtmlTemplate = "<p>{keyword:Surge.}</p><p><b>Forced:</b> After {self} engages a player, deal 1 damage to each character controlled by the player guarding <a title='Gollum (Return to Mirkwood)' target='_blank' href='/Cards/Details/Gollum-RtM'>Gollum</a>.</p>",
                 Threat = 1,
                 EncounterSet = "Return to Mirkwood",
-                Number = 138,
+                CardNumber = 138,
                 Artist = Artist.Felicia_Cano
             });
             Cards.Add(new LotRCard() {
@@ -246,7 +246,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 Text = "While Mirkwood Runner is attacking alone, the defending enemy does not count its Defense.",
                 FlavorText = "\"...let a ploughman plough, but choose an otter for swimming, and for running light over grass and leaf or over snow-an Elf.\" -Legolas, The Fellowship of the Ring",
                 HtmlTemplate = "<p>While {self} is attacking alone, the defending enemy does not count its {Defense}.</p><p class='flavor-text-smaller'>&quot;...let a ploughman plough, but choose an otter for swimming, and for running light over grass and leaf or over snow-an Elf.&quot;<br>&ndash;Legolas, The Fellowship of the Ring</p>",
-                Number = 123,
+                CardNumber = 123,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -259,7 +259,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 ResourceCost = 0,
                 Text = "Action: Look at the top card of the encounter deck. Then, you may pay 1 Lore resource to return Rumour from the Earth to your hand.",
                 FlavorText = "'Where sight fails the earth may bring us rumour,' said Aragorn. 'The land must groan under their hated feet.' -The Two Towers",
-                Number = 124,
+                CardNumber = 124,
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard() {
@@ -272,7 +272,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 ResourceCost = 2,
                 Text = "Action: Move the top card of the encounter discard pile to the top of the encounter deck.",
                 FlavorText = "The wizard's face remained grave and attentive, and only a flicker in his deep eyes showed that he was startled and indeed alarmed. 'It has been called that before,' he said, 'but not by you.' -The Fellowship of the Ring",
-                Number = 125,
+                CardNumber = 125,
                 Artist = Artist.Henning_Ludvigsen
             });
             Cards.Add(new LotRCard() {
@@ -286,7 +286,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 ResourceCost = 3,
                 Text = "Attach to a Tactics hero.\r\nAction: Exhaust Support of the Eagles to choose an Eagle ally. Until the end of the phase, attached hero adds that ally's Attack or Defense (choose 1) to its own.",
                 FlavorText = "\"I would bear you, whither you will, even were you made of stone.\" -Gwaihir, The Return of the King",
-                Number = 120,
+                CardNumber = 120,
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard() {
@@ -303,7 +303,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 Threat = 3,
                 QuestPoints = 2,
                 EncounterSet = "Return to Mirkwood",
-                Number = 131,
+                CardNumber = 131,
                 Artist = Artist.Andrew_Johanson
             });
             Cards.Add(new LotRCard() {
@@ -318,7 +318,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 OppositeFlavorText = "Mirkwood is always a dangerous place, but it is even worse with Gollum. Between the outbursts, tantrums, and the flying provisions, you are not afforded a moment's peace",
                 HtmlTemplate = "<p class='flavor-text'>Having captured Gollum, you must now escort him through Mirkwood Forest for interrogation at Thranduil's Palace.</p><p><b>Setup:</b> Search the encounter deck for <a title='Gollum (Return to Mirkwood)' target='_blank' href='/Cards/Details/Gollum-RtM'>Gollum</a>. Choose a player to guard <a title='Gollum (Return to Mirkwood)' target='_blank' href='/Cards/Details/Gollum-RtM'>Gollum</a> at the start of the game, and place <a title='Gollum (Return to Mirkwood)' target='_blank' href='/Cards/Details/Gollum-RtM'>Gollum</a> in front of that player. Then shuffle the encounter deck. Reveal 1 card per player from the encounter deck, and add it to the staging area.</p>",
                 EncounterSet = "Return to Mirkwood",
-                Number = 126,
+                CardNumber = 126,
                 Artist = Artist.Ignacio_Bazan_Lazcano,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.SpidersOfMirkwood, EncounterSet.Wilderlands }
             });
@@ -334,7 +334,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 QuestPoints = 7,
                 Quantity = 1,
                 EncounterSet = "Return to Mirkwood",
-                Number = 128,
+                CardNumber = 128,
                 Artist = Artist.Timo_Karhula,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.SpidersOfMirkwood, EncounterSet.Wilderlands }
             });
@@ -350,7 +350,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 Shadow = "Shadow: Discard the top 5 cards from the deck of the player guarding ~Gollum.",
                 HtmlTemplate = "<p><b>When Revealed:</b> Discard the top 10 cards from the deck of the player guarding <a title='Gollum (Return to Mirkwood)' target='_blank' href='/Cards/Details/Gollum-RtM'>Gollum</a>. That player must choose a new player to guard <a title='Gollum (Return to Mirkwood)' target='_blank' href='/Cards/Details/Gollum-RtM'>Gollum</a>, if able.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Discard the top 5 cards from the deck of the player guarding <a title='Gollum (Return to Mirkwood)' target='_blank' href='/Cards/Details/Gollum-RtM'>Gollum</a>.</p>",
                 EncounterSet = "Return to Mirkwood",
-                Number = 137,
+                CardNumber = 137,
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
@@ -369,7 +369,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 Text = "Response: After you play West Road Traveller from your hand, switch the active location with any other location in the staging area.",
                 HtmlTemplate = "<p><b>Response:</b> After you play {self} from your hand, switch the active location with any other location in the staging area.</p><p class='flavor-text'>The dark world was rushing by, and the wind sang loudly in his ears.<br>&ndash;The Return of the King</p>",
                 FlavorText = "The dark world was rushing by, and the wind sang loudly in his ears. -The Return of the King",
-                Number = 121,
+                CardNumber = 121,
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard() {
@@ -384,7 +384,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 Threat = 1,
                 QuestPoints = 3,
                 EncounterSet = "Return to Mirkwood",
-                Number = 134,
+                CardNumber = 134,
                 Artist = Artist.Stacey_Diana_Clark
             });
             Cards.Add(new LotRCard() {
@@ -399,7 +399,7 @@ Forced: At the end of each round, raise the threat of the player guarding ~Gollu
                 Threat = 2,
                 QuestPoints = 2,
                 EncounterSet = "Return to Mirkwood",
-                Number = 133,
+                CardNumber = 133,
                 Artist = Artist.Mark_Poole
             });
         }

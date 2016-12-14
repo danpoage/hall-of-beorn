@@ -51,7 +51,7 @@ Play Tip: This scenario contains 10 treachery cards with the Attack trait that h
 
                 EncounterSet = "Shadow and Flame Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Anthony_Feliciano
             });
             Cards.Add(new LotRCard()
@@ -64,7 +64,7 @@ Play Tip: This scenario contains 10 treachery cards with the Attack trait that h
                 Shadow = "Shadow: For each excess point of combat damage dealt by this attack (damage that is dealt beyond the remaining hit points of the character damaged by this attack) you must damage another character you control. Exhaust all characters damaged by this effect.",
                 EncounterSet = "Shadow and Flame Nightmare",
                 Quantity = 2,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Adam_Lane
             });
             Cards.Add(new LotRCard()
@@ -78,7 +78,7 @@ Play Tip: This scenario contains 10 treachery cards with the Attack trait that h
                 FlavorText = "The flames roared up to greet it, and wreathed about it; and a black smoke swirled in the air. -The Fellowship of the Ring",
                 EncounterSet = "Shadow and Flame Nightmare",
                 Quantity = 2,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Anthony_Feliciano
             });
             Cards.Add(new LotRCard()
@@ -92,7 +92,7 @@ Play Tip: This scenario contains 10 treachery cards with the Attack trait that h
                 FlavorText = "Fire came from its nostrils. -The Fellowship of the Ring",
                 EncounterSet = "Shadow and Flame Nightmare",
                 Quantity = 2,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Jon_Bosco
             });
             Cards.Add(new LotRCard()
@@ -106,7 +106,7 @@ Play Tip: This scenario contains 10 treachery cards with the Attack trait that h
                 FlavorText = "From out of the shadow a red sword leaped flaming. -The Fellowship of the Ring",
                 EncounterSet = "Shadow and Flame Nightmare",
                 Quantity = 2,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Alvaro_Calvo_Escudero
             });
             Cards.Add(new LotRCard()
@@ -121,7 +121,7 @@ Play Tip: This scenario contains 10 treachery cards with the Attack trait that h
                 FlavorText = "The dark figure streaming with fire raced towards them. -The Fellowship of the Ring",
                 EncounterSet = "Shadow and Flame Nightmare",
                 Quantity = 2,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Anthony_Feliciano
             });
             Cards.Add(new LotRCard()
@@ -140,7 +140,7 @@ Play Tip: This scenario contains 10 treachery cards with the Attack trait that h
                 Shadow = "Shadow: Search the encounter deck for a treachery card with the Shadow or Flame trait and reveal it, if able. Shuffle the encounter deck.",
                 EncounterSet = "Shadow and Flame Nightmare",
                 Quantity = 3,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Guillaume_Ducos
             });
             Cards.Add(new LotRCard()
@@ -160,7 +160,7 @@ Play Tip: This scenario contains 10 treachery cards with the Attack trait that h
                 FlavorText = "\"And some are large and evil: Black Uruks of Mordor.\" -Gandalf, The Fellowship of the Ring",
                 EncounterSet = "Shadow and Flame Nightmare",
                 Quantity = 2,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Lukasz_Jaskolski
             });
             Cards.Add(new LotRCard()
@@ -179,7 +179,7 @@ Travel: Each player must move 1 damage from Durin's Bane to a hero to travel her
                 FlavorText = "Out of it a fierce red light came, and now and again flames licked at the brink and curled about the bases of the columns. -The Fellowship of the Ring",
                 EncounterSet = "Shadow and Flame Nightmare",
                 Quantity = 2,
-                Number = 9,
+                CardNumber = 9,
                 Artist = Artist.Alvaro_Calvo_Escudero
             });
             Cards.Add(new LotRCard()
@@ -195,7 +195,7 @@ Travel: Each player must move 1 damage from Durin's Bane to a hero to travel her
                 Shadow = "Shadow: If this attack destroys a character, the defending player must discard all event cards in his hand.",
                 EncounterSet = "Shadow and Flame Nightmare",
                 Quantity = 2,
-                Number = 10,
+                CardNumber = 10,
                 Artist = Artist.Alyn_Spiller
             });
         }

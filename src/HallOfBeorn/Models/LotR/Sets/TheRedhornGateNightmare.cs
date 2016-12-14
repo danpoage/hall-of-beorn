@@ -48,7 +48,7 @@ Then, shuffle the encounter cards in this Nightmare Deck into the remainder of t
 Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.",
                 EncounterSet = "The Redhorn Gate Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Alyn_Spiller
             });
             Cards.Add(new LotRCard()
@@ -66,7 +66,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Text = "Forced: After engaging Wolfpelt Goblin, the engaged player must deal X damage to 1 character he controls, where X is the active location's remaining quest points. Then, remove 2 progress from the active location, if able.",
                 EncounterSet = "The Redhorn Gate Nightmare",
                 Quantity = 3,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Diego_Gisbert_Llorens
             });
             Cards.Add(new LotRCard()
@@ -84,7 +84,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Shadow = "Shadow: Attacking enemy gets +2 Attack if the defending character has less than 2 Willpower.",
                 EncounterSet = "The Redhorn Gate Nightmare",
                 Quantity = 4,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Aurelien_Hubert
             });
             Cards.Add(new LotRCard()
@@ -105,7 +105,7 @@ Forced: After Snow-Giant engages you, discard the ally you control with the high
                 VictoryPoints = 1,
                 EncounterSet = "The Redhorn Gate Nightmare",
                 Quantity = 3,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new LotRCard()
@@ -124,7 +124,7 @@ Travel: Search the encounter deck and discard pile for 1 copy of Freezing Cold a
                 Shadow = "Shadow: Defending character gets -1 Willpower. Deal the attacking enemy 1 additional shadow card.",
                 EncounterSet = "The Redhorn Gate Nightmare",
                 Quantity = 3,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Julian_Kok
             });
             Cards.Add(new LotRCard()
@@ -140,7 +140,7 @@ Travel: Search the encounter deck and discard pile for 1 copy of Freezing Cold a
                 FlavorText = "\"...and there the River Silverlode rises in its icy springs.\"\r\n-Gandalf, The Fellowship of the Ring",
                 EncounterSet = "The Redhorn Gate Nightmare",
                 Quantity = 3,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Alyn_Spiller
             });
             Cards.Add(new LotRCard()
@@ -155,7 +155,7 @@ Travel: Search the encounter deck and discard pile for 1 copy of Freezing Cold a
 When Revealed: Add Blinding Blizzard to the staging area. Progress that would be placed on the current quest or on Snow locations are instead placed on Blinding Blizzard. When the 5th progress is placed on Blinding Blizzard, discard it.",
                 EncounterSet = "The Redhorn Gate Nightmare",
                 Quantity = 2,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Julian_Kok
             });
             Cards.Add(new LotRCard()
@@ -167,7 +167,7 @@ When Revealed: Add Blinding Blizzard to the staging area. Progress that would be
                 FlavorText = "\"Caradhras has not forgiven us,\" he said. \"He has more snow yet to fling at us, if we go on.\"\r\n-Gimli, The Fellowship of the Ring",
                 EncounterSet = "The Redhorn Gate Nightmare",
                 Quantity = 2,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Alvaro_Calvo_Escudero
             });
         }

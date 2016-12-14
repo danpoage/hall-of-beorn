@@ -31,7 +31,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Response: After a character leaves play, ready Prince Imrahil. (Limit once per round.)",
                 FlavorText = "But beyond, in the great fief of Belfalas, dwelt Prince Imrahil in his castle of Dol Amroth by the sea, and he was of high blood, and his fold also, tall men and proud with sea-grey eyes. -The Return of the King.",
                 Quantity = 1,
-                Number = 50,
+                CardNumber = 50,
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
@@ -51,7 +51,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Keywords = new List<string>() { "Ranged.", " Sentinel." },
                 FlavorText = "\"But there are some of us still who go abroad for the gathering of news and the watching of our enemies, and they speak the languages of other lands.\" -The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 57,
+                CardNumber = 57,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -70,7 +70,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Radagast collects 1 resource each resource phase. These resources can be used to pay for Creature cards played from your hand.\r\nAction: Spend X resources from Radagast's pool to heal X wounds on any 1 Creature.",
                 FlavorText = "\"I have an urgent errand. My news is evil.\"",
                 Quantity = 3,
-                Number = 59,
+                CardNumber = 59,
                 Artist = Artist.Rio_Sabda
             });
             Cards.Add(new LotRCard() {
@@ -89,7 +89,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Landroval cannot have restricted attachments.\r\nResponse: After a hero card is destroyed, return Landroval to his owner's hand to put that hero back into play, with 1 damage token on it. (Limit once per game.)",
                 Keywords = new List<string>() { "Sentinel." },
                 Quantity = 3,
-                Number = 53,
+                CardNumber = 53,
                 Artist = Artist.Allison_Theus
             });
             Cards.Add(new LotRCard() {
@@ -103,7 +103,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Attach to a location.\r\nResponse: After attached location is explored, the first player draws 3 cards.",
                 FlavorText = "The Mathom-house it was called; for anything that Hobbits had no immediate use for, but were unwilling to throw away, they called a mathom. Their dwellings were apt to become rather crowded with mathoms... -The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 56,
+                CardNumber = 56,
                 Artist = Artist.Anna_Mohrbacher
             });
             Cards.Add(new LotRCard() {
@@ -116,7 +116,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Action: Move any number of damage from one enemy to another.",
                 FlavorText = "That's cursed rebel-talk, and I'll stick you, if you don't shut it down, see? -Orc Soldier, The Return of the King",
                 Quantity = 3,
-                Number = 58,
+                CardNumber = 58,
                 Artist = Artist.Felicia_Cano
             });
             Cards.Add(new LotRCard() {
@@ -129,7 +129,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Action: Move any number of resource tokens from a Leadership hero's resource pool to any other hero's resource pool.",
                 FlavorText = "Inside the hall there was piled a large assortment of packages and parcels and small articles of furniture. -The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 52,
+                CardNumber = 52,
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
@@ -143,7 +143,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Traits = new List<string>() { "Signal." },
                 Text = "Attach to a hero.\r\nAttached hero gains +1 Willpower.\r\nAction: Pay 1 resource from attached hero's pool to attach Dunedain Quest to another hero.",
                 Quantity = 3,
-                Number = 51,
+                CardNumber = 51,
                 Artist = Artist.Leonardo_Borazio
             });
             Cards.Add(new LotRCard() {
@@ -160,7 +160,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Traits = new List<string>() { "Rohan." },
                 Text = "While committed to a quest, Escort from Edoras gets +2 Willpower.\r\nForced: After resolving a quest to which Escort from Edoras was committed, discard Escort from Edoras from play.",
                 Quantity = 3,
-                Number = 55,
+                CardNumber = 55,
                 Artist = Artist.Mark_Winters
             });
             Cards.Add(new LotRCard() {
@@ -173,7 +173,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Response: After an ally is destroyed, exhaust 1 Eagle character to move that ally from the discard pile to its owner's hand.",
                 FlavorText = "The pale peaks of the mountains were coming nearer, moonlit spikes of rock sticking out of black shadows. -The Hobbit",
                 Quantity = 3,
-                Number = 54,
+                CardNumber = 54,
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
@@ -186,7 +186,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "A Journey to Rhosgobel",
                 Quantity = 2,
                 EasyModeQuantity = 1,
-                Number = 69,
+                CardNumber = 69,
                 Artist = Artist.Taufiq,
                 SecondArtist = Artist.Julia_Laud
             });
@@ -200,7 +200,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Keywords = new List<string>() { "Guarded." },
                 EncounterSet = "A Journey to Rhosgobel",
                 Quantity = 4,
-                Number = 63,
+                CardNumber = 63,
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard() {
@@ -219,7 +219,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Threat = 1,
                 EncounterSet = "A Journey to Rhosgobel",
                 Quantity = 5,
-                Number = 71,
+                CardNumber = 71,
                 Artist = Artist.Aurelien_Hubert
             });
             Cards.Add(new LotRCard() {
@@ -232,7 +232,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "A Journey to Rhosgobel",
                 Quantity = 4,
                 EasyModeQuantity = 1,
-                Number = 67,
+                CardNumber = 67,
                 Artist = Artist.Marco_Caradonna
             });
             Cards.Add(new LotRCard() {
@@ -247,7 +247,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 QuestPoints = 3,
                 EncounterSet = "A Journey to Rhosgobel",
                 Quantity = 4,
-                Number = 66,
+                CardNumber = 66,
                 Artist = Artist.Anna_Mohrbacher
             });
             Cards.Add(new LotRCard() {
@@ -266,7 +266,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Threat = 1,
                 EncounterSet = "A Journey to Rhosgobel",
                 Quantity = 4,
-                Number = 70,
+                CardNumber = 70,
                 Artist = Artist.Brandon_Leach
             });
             Cards.Add(new LotRCard() {
@@ -283,7 +283,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "A Journey to Rhosgobel",
                 Quantity = 1,
                 VictoryPoints = 4,
-                Number = 65,
+                CardNumber = 65,
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
@@ -296,7 +296,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "A Journey to Rhosgobel",
                 Quantity = 4,
                 EasyModeQuantity = 1,
-                Number = 68,
+                CardNumber = 68,
                 Artist = Artist.Taufiq,
                 SecondArtist = Artist.Julia_Laud
             });
@@ -315,7 +315,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HtmlTemplate = "<p>No attachments. The first player gains control of {self}.<p><b>Forced:</b> At the end of each round, {self} suffers 2 damage.</p><p>{self} cannot be healed of more than 5 wounds by a single effect. If {self} leaves play, the players have lost the game.</p>",
                 EncounterSet = "A Journey to Rhosgobel",
                 Quantity = 1,
-                Number = 64,
+                CardNumber = 64,
                 Artist = Artist.Taufiq,
                 SecondArtist = Artist.Julia_Laud
             });
@@ -332,7 +332,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 OppositeFlavorText = "The Eagle's wounds cannot be tended in the wilderness, so you attempt to bring the creature to Rhosgobel, where the wisdom of Radagast the Brown may be its only hope.",
                 EncounterSet = "A Journey to Rhosgobel",
                 Quantity = 1,
-                Number = 60,
+                CardNumber = 60,
                 Artist = Artist.Joko_Mulyono,
                 SecondArtist = Artist.Fandy_Sugiarto,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood }
@@ -348,7 +348,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 FlavorText = "The Eagle's health has grown worse, but you have at last arrived at Rhosgobel, where Radagast examines the bird. He then asks you to head out into the wilderness to find the healing plant, Athelas. Meantime, any healing lore or supplies your party has it its disposal could be used to assist in comforting the Eagle until you return.",
                 OppositeText = "Reponse: After the quest phase begins, the first player may place X damage tokens on Wilyador to look at the top 3 cards of the encounter deck. Reveal and add 1 of these cards to the staging area, and discard the other 2. X is the number of players in the game.\r\nForced: After a card effect heals Wilyador, remove that card from the game.",
                 Quantity = 1,
-                Number = 61,
+                CardNumber = 61,
                 Artist = Artist.Ijur,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood }
             });
@@ -363,7 +363,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 FlavorText = "Feeling tha time is runing out on Wilyador's life, you gather the Athelas you have found and head back to Rhosgobel. You arrive at night, wondering if you have found enough of the herb...",
                 OppositeText = "When Revealed: Heal 5 wounds from Wilyador for each Athelas objective card the players control.\r\nIf Wilyador is completely healed when this effect resolves, Wilyador survives and the players have won the game. Otherwise, the players have lost the game.",
                 Quantity = 1,
-                Number = 62,
+                CardNumber = 62,
                 Artist = Artist.Ben_Zweifel,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood }
             });

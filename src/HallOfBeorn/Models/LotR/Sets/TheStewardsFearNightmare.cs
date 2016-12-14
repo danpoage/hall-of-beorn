@@ -38,7 +38,7 @@ Then, shuffle the encounter cards in this Nightmare Deck into the remainder of t
 Finally, flip this setup card over and place it next to the quest deck. Its effects remain active throughout the game, which is now ready to begin.",
                 EncounterSet = "The Steward's Fear Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Mariusz_Gandzel
             });
             Cards.Add(new LotRCard()
@@ -49,7 +49,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Traits = new List<string> { "Plot." },
                 Text = "Rise to Power contributes X Threat to the staging area during the quest phase, where X is the number of resources on it.\r\nForced: At the end of the round, place 2 resources on Rise to Power.",
                 EncounterSet = "The Steward's Fear Nightmare",
-                Number = 2,
+                CardNumber = 2,
                 Quantity = 1,
                 Artist = Artist.Dleoblack
             });
@@ -61,7 +61,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Traits = new List<string> { "Plot." },
                 Text = "When Revealed: Attach Assassination to the hero with the highest threat cost. (Counts as a Plot attachment with the text: \"Each enemy gets +1 Attack. Attached hero cannot be healed. Damage from undefended attacks and A Knife in the Back must be assigned to attached hero. If attached hero leaves play, the players lose the game.\")",
                 EncounterSet = "The Steward's Fear Nightmare",
-                Number = 3,
+                CardNumber = 3,
                 Quantity = 1,
                 Artist = Artist.Arden_Beckwith
             });
@@ -78,7 +78,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Traits = new List<string> { "Brigand." },
                 Text = "When Revealed: Murderous Turncoat makes an immediate attack against the first player.\r\nForced: At the end of the combat phase, place Murderous Turncoat facedown underneath the active location if you are not at stage 3.",
                 EncounterSet = "Brigands Nightmare",
-                Number = 4,
+                CardNumber = 4,
                 Quantity = 3,
                 Artist = Artist.Jon_Bosco
             });
@@ -96,7 +96,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Text = "If the active location has at least 1 facedown card underneath it, Faithless Conspirator cannot take damage.",
                 Shadow = "Shadow: Return attacking enemy to the staging area after this attack.",
                 EncounterSet = "The Steward's Fear Nightmare",
-                Number = 5,
+                CardNumber = 5,
                 Quantity = 3,
                 Artist = Artist.Rick_Price
             });
@@ -111,7 +111,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Keywords = new List<string> { "Underworld 1." },
                 Text = "Forced: At the end of the round, place 1 resource token on Traitors' Den. Then, if it has 4 or more resource tokens on it, remove all tokens from it and reveal at random one of the Plot cards removed from the game during setup. Add that card to the staging area.",
                 EncounterSet = "The Steward's Fear Nightmare",
-                Number = 6,
+                CardNumber = 6,
                 Quantity = 2,
                 Artist = Artist.Mariusz_Gandzel
             });
@@ -126,7 +126,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Text = "While Rath Celerdain is in the staging area, it gains: \"Forced: At the beginning of the encounter phase, reveal the top card of the underworld deck. If it is an objective, discard it.\"",
                 FlavorText = "\"...go down to the lowest circle and ask for the Old Guesthouse in the Rath Celerdain, the Lampwrights' Street.\" -Beregond, The Return of the King",
                 EncounterSet = "The Steward's Fear Nightmare",
-                Number = 7,
+                CardNumber = 7,
                 Quantity = 2,
                 Artist = Artist.Mariusz_Gandzel
             });
@@ -142,7 +142,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Text = "Travel: Reveal all facedown cards underneath Arched Tunnel, one at a time. Then, place the top card of the underworld deck facedown underneath Arched Tunnel, if able.",
                 FlavorText = "And each time that it passed the line of the Great Gate it went through an arched tunnel... -The Return of the King",
                 EncounterSet = "The Steward's Fear Nightmare",
-                Number = 8,
+                CardNumber = 8,
                 Quantity = 2,
                 Artist = Artist.Mariusz_Gandzel
             });
@@ -155,7 +155,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Text = "When Revealed: Each player must either raise his threat by 5 or exhaust each ready character he controls.",
                 Shadow = "Shadow: After this attack, return attacking enemy to the staging area. Then, it makes engagement checks against each player.",
                 EncounterSet = "The Steward's Fear Nightmare",
-                Number = 9,
+                CardNumber = 9,
                 Quantity = 2,
                 Artist = Artist.Smirtouille
             });
@@ -168,7 +168,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Keywords = new List<string> { "Surge.", "Doomed 1." },
                 Text = "If The Cabal's Champion is unattached and in the staging area, attach it to a Villain enemy, if able. (Counts as a Title attachment with the text: \"Attached enemy gets +1 Threat, +1 Attack, +1 Defense, and +2 hit points.\")",
                 EncounterSet = "The Steward's Fear Nightmare",
-                Number = 10,
+                CardNumber = 10,
                 Quantity = 3,
                 Artist = Artist.Ed_Mattinian
             });

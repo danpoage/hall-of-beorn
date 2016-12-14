@@ -44,7 +44,7 @@ Then, shuffle the encounter cards in this Nightmare Deck into the remainder of t
 Finally, flip this setup card over and place it next to the quest deck. Its effects remain active throughout the game, which is now ready to begin.",
                 EncounterSet = "The Lonely Mountain Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Adam_Lane
             });
             Cards.Add(new LotRCard()
@@ -64,7 +64,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
 Burgle: The first player shuffles his deck and reveals the top card. He may discard 2 cards from his hand that match the card's cost and type.",
                 EncounterSet = "The Lonely Mountain Nightmare",
                 Quantity = 4,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Alvaro_Calvo_Escudero
             });
             Cards.Add(new LotRCard()
@@ -79,7 +79,7 @@ Burgle: The first player shuffles his deck and reveals the top card. He may disc
                 FlavorText = "It was a red light steadily getting redder and redder. Also it was now undoubtedly hot in the tunnel. Wisps of vapour floated up and past him and he began to sweat.\r\n -The Hobbit",
                 EncounterSet = "The Lonely Mountain Nightmare",
                 Quantity = 3,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
             Cards.Add(new LotRCard()
@@ -94,7 +94,7 @@ Burgle: The first player shuffles his deck and reveals the top card. He may disc
                 Shadow = "Shadow: Attacking enemy gets +2 Attack. If this attack destroys a character, raise each player's threat by 3.",
                 EncounterSet = "The Lonely Mountain Nightmare",
                 Quantity = 3,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Titus_Lunter
             });
             Cards.Add(new LotRCard()
@@ -108,7 +108,7 @@ Burgle: The first player shuffles his deck and reveals the top card. He may disc
                 Text = "Foced: When the Front Gate is explored, each Dragon enemy in play makes an attack against the first player. (Deal and resolve a shadow card for this attack.)\r\nBurgle: The first player shuffles his deck and reveals the top card. He may discard 3 cards from his hand that match the revealed card's cost.",
                 EncounterSet = "The Lonely Mountain Nightmare",
                 Quantity = 2,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Adam_Lane
             });
             Cards.Add(new LotRCard()
@@ -120,7 +120,7 @@ Burgle: The first player shuffles his deck and reveals the top card. He may disc
                 Text = "When Revealed: Each Dragon enemy in play makes an immediate attack against each player in turn order. Do not deal shadow cards for these attacks. For each character that is destroyed by one of these attacks, place 1 progress on each Dragon enemy in play.",
                 EncounterSet = "The Lonely Mountain Nightmare",
                 Quantity = 4,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Anthony_Feliciano
             });
             Cards.Add(new LotRCard()
@@ -132,7 +132,7 @@ Burgle: The first player shuffles his deck and reveals the top card. He may disc
                 Text = "When Revealed: Each player raises his threat by 1 for each attachment attached to a character he controls.\r\nBurgle: The first player shuffles his deck and reveals the top card. He may discard 1 card from his hand that matches the revealed card's sphere, type, and cost.",
                 EncounterSet = "The Lonely Mountain Nightmare",
                 Quantity = 3,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Sebastian_Giacobino
             });
         }

@@ -32,7 +32,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 FlavorText = "Hirluin the Fair of the Green Hills from Pinnath Gelin... -The Return of the King",
                 Keywords = new List<string>() { "Ranged." },
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Tony_Foti
             });
             Cards.Add(new LotRCard() {
@@ -50,7 +50,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Each Outlands character you control gets +1 Defense.",
                 FlavorText = "... grim-faced they were, and shorter and somewhat swarthier than any men that Pippin had yet seen in Gondor. - The Return of the King",
                 Quantity = 3,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Mark_Winters
             });
             Cards.Add(new LotRCard() {
@@ -63,7 +63,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Action: Discard 2 resources from your hero's resource pool to add 3 resources to that hero's resource pool.",
                 FlavorText = "\"Nay, my friends, I am the lawful master of the Stone, and I had both the right and the strength to use it...\" -Aragorn, The Return of the King",
                 Quantity = 3,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -81,7 +81,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Each Outlands character you control gets +1 Attack.",
                 FlavorText = "...foremost on the field rode the swan-knights of Dol Amroth with their Prince and his blue banner at their head. -The Return of the King",
                 Quantity = 3,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Marcia_George_Bogdan
             });
             Cards.Add(new LotRCard() {
@@ -97,7 +97,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Keywords = new List<string>() { "Restricted." },
                 HtmlTemplate = "<p>Attach to a {type:hero}. {keyword:Restricted.}</p><p>Limit 1 per hero.</p><p>Attached hero gains +1 {Defense}. (+2 {Defense} instead if attached hero has the {trait:Gondor.@Gondor} trait.)</p><p class='flavor-text'>There flowered a White Tree, and that was for Gondor...<br>&ndash;The Return of the King</p>",
                 Quantity = 3,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Owen_William_Weber
             });
             Cards.Add(new LotRCard() {
@@ -115,7 +115,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Each Outlands character you control gets +1 Willpower.",
                 FlavorText = "We heard of the horns in the hills ringing,\r\nthe swords shining in the South-kingdom.\r\n-The Return of the King",
                 Quantity = 3,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Adam_Schumpert
             });
             Cards.Add(new LotRCard() {
@@ -129,7 +129,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Traits = new List<string>() { "Artifact.", " Item.", " Ring." },
                 Text = "Attach to a hero.\r\nAttached hero gets +1 hit point for each Artifact attachment attached to it.\r\nIf attached hero is Aragorn, he also gains a Lore resource icon.",
                 Quantity = 3,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard() {
@@ -147,7 +147,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Each Outlands character you control gets +1 hit point.",
                 FlavorText = "From the Anfalas, the Langstrand far away, a long line of men of many sorts, hunters and herdsmen and men of little villages... -The Return of the King",
                 Quantity = 3,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Blake_Henriksen
             });
             Cards.Add(new LotRCard() {
@@ -160,7 +160,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Action: Draw 1 card for each hero you control with a printed Lore resource icon.",
                 FlavorText = "\"Let none now reject the counsels of Gandalf, whose long labours against Sauron come at last to their test.\" -Aragorn, The Return of the King",
                 Quantity = 3,
-                Number = 9,
+                CardNumber = 9,
                 Artist = Artist.Nacho_Molina
             });
             Cards.Add(new LotRCard() {
@@ -173,7 +173,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Action: Name a sphere. Until the end of the phase, you can spend resources of any sphere when paying for cards that belong to the named sphere.",
                 FlavorText = "The townlands were rich, with wide tilth and many orchards, and homesteads there were with oast and garner, fold and byre, and many rills rippling through the green from the highlands down to the Anduin. -The Return of the King",
                 Quantity = 3,
-                Number = 10,
+                CardNumber = 10,
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard() {
@@ -191,7 +191,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Threat = 3,
                 EncounterSet = "The Steward's Fear",
                 Quantity = 5,
-                Number = 14,
+                CardNumber = 14,
                 Artist = Artist.Dan_Howard
             });
             Cards.Add(new LotRCard() {
@@ -210,7 +210,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Threat = 3,
                 EncounterSet = "The Steward's Fear",
                 Quantity = 1,
-                Number = 15,
+                CardNumber = 15,
                 Artist = Artist.Anna_Steinbauer
             });
             Cards.Add(new LotRCard() {
@@ -228,7 +228,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Threat = 3,
                 EncounterSet = "The Steward's Fear",
                 Quantity = 1,
-                Number = 16,
+                CardNumber = 16,
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard() {
@@ -246,7 +246,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Threat = 3,
                 EncounterSet = "The Steward's Fear",
                 Quantity = 1,
-                Number = 17,
+                CardNumber = 17,
                 Artist = Artist.Aurelien_Hubert
             });
             Cards.Add(new LotRCard() {
@@ -261,7 +261,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 QuestPoints = 3,
                 EncounterSet = "The Steward's Fear",
                 Quantity = 3,
-                Number = 18,
+                CardNumber = 18,
                 Artist = Artist.Titus_Lunter
             });
             Cards.Add(new LotRCard() {
@@ -278,7 +278,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 QuestPoints = 5,
                 EncounterSet = "The Steward's Fear",
                 Quantity = 1,
-                Number = 19,
+                CardNumber = 19,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
             Cards.Add(new LotRCard() {
@@ -295,7 +295,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 QuestPoints = 2,
                 EncounterSet = "The Steward's Fear",
                 Quantity = 2,
-                Number = 20,
+                CardNumber = 20,
                 Artist = Artist.Titus_Lunter
             });
             Cards.Add(new LotRCard() {
@@ -313,7 +313,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "The Steward's Fear",
                 Quantity = 1,
                 EasyModeQuantity = 0,
-                Number = 21,
+                CardNumber = 21,
                 Artist = Artist.Titus_Lunter
             });
             Cards.Add(new LotRCard() {
@@ -332,7 +332,7 @@ Response: When The Fourth Star leaves play as an explored location, each player 
                 QuestPoints = 5,
                 EncounterSet = "The Steward's Fear",
                 Quantity = 1,
-                Number = 22,
+                CardNumber = 22,
                 Artist = Artist.Sabin_Boykinov
             });
             Cards.Add(new LotRCard() {
@@ -344,7 +344,7 @@ Response: When The Fourth Star leaves play as an explored location, each player 
                 Keywords = new List<string>() { "Surge." },
                 EncounterSet = "The Steward's Fear",
                 Quantity = 2,
-                Number = 23,
+                CardNumber = 23,
                 Artist = Artist.David_Gaillet
             });
             Cards.Add(new LotRCard() {
@@ -356,7 +356,7 @@ Response: When The Fourth Star leaves play as an explored location, each player 
                 EncounterSet = "The Steward's Fear",
                 Quantity = 3,
                 EasyModeQuantity = 1,
-                Number = 24,
+                CardNumber = 24,
                 Artist = Artist.Carmen_Cianelli
             });
             Cards.Add(new LotRCard() {
@@ -368,7 +368,7 @@ Response: When The Fourth Star leaves play as an explored location, each player 
                 Shadow = "Shadow: If this attack destroys a character, remove all tokens from the current quest.",
                 EncounterSet = "The Steward's Fear",
                 Quantity = 2,
-                Number = 25,
+                CardNumber = 25,
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard() {
@@ -381,7 +381,7 @@ Response: When The Fourth Star leaves play as an explored location, each player 
                 EncounterSet = "The Steward's Fear",
                 Quantity = 1,
                 VictoryPoints = 1,
-                Number = 26,
+                CardNumber = 26,
                 Artist = Artist.Aurelien_Hubert
             });
             Cards.Add(new LotRCard() {
@@ -394,7 +394,7 @@ Response: When The Fourth Star leaves play as an explored location, each player 
                 EncounterSet = "The Steward's Fear",
                 Quantity = 1,
                 VictoryPoints = 1,
-                Number = 27,
+                CardNumber = 27,
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard() {
@@ -407,7 +407,7 @@ Response: When The Fourth Star leaves play as an explored location, each player 
                 EncounterSet = "The Steward's Fear",
                 Quantity = 1,
                 VictoryPoints = 1,
-                Number = 28,
+                CardNumber = 28,
                 Artist = Artist.Even_Mehl_Amundsen
             });
             Cards.Add(new LotRCard() {
@@ -419,7 +419,7 @@ Response: When The Fourth Star leaves play as an explored location, each player 
                 Text = "Reveal 1 additional card from the encounter deck and add it to the staging area during the staging step each round.If a hero is destroyed by an enemy attack, the players have lost the game.",
                 EncounterSet = "The Steward's Fear",
                 Quantity = 1,
-                Number = 29,
+                CardNumber = 29,
                 Artist = Artist.Blake_Henriksen
             });
             Cards.Add(new LotRCard() {
@@ -431,7 +431,7 @@ Response: When The Fourth Star leaves play as an explored location, each player 
                 Text = "Forced: At the end of the round, place 1 resource token on Up in Flames and discard the top X cards of each player's deck. X is the number of resource tokens on Up in Flames.If any player has no cards in his deck, the players have lost the game.",
                 EncounterSet = "The Steward's Fear",
                 Quantity = 1,
-                Number = 30,
+                CardNumber = 30,
                 Artist = Artist.Marcia_George_Bogdan
             });
             Cards.Add(new LotRCard() {
@@ -444,7 +444,7 @@ Response: When The Fourth Star leaves play as an explored location, each player 
                 FlavorText = "\"... whispering was in your ears, poisoning your thought...\" -Gandalf, The Two Towers",
                 EncounterSet = "The Steward's Fear",
                 Quantity = 1,
-                Number = 31,
+                CardNumber = 31,
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
@@ -464,7 +464,7 @@ If there are 4 or more resource tokens on Conspiracy, advance to the next stage.
                 OppositeFlavorText = "You begin your investigation at The Fourth Star, a popular tavern...",
                 EncounterSet = "The Steward's Fear",
                 Quantity = 1,
-                Number = 11,
+                CardNumber = 11,
                 Artist = Artist.Milek_Jakubiec,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Brigands, EncounterSet.StreetsOfGondor }
             });
@@ -484,7 +484,7 @@ Forced: After the active location leaves play as an explored location place 1 re
 If there are 4 or more resource tokens on The Grand Design, advance to the next stage.",
                 EncounterSet = "The Steward's Fear",
                 Quantity = 1,
-                Number = 12,
+                CardNumber = 12,
                 Artist = Artist.Grzegorz_Pedrycz,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Brigands, EncounterSet.StreetsOfGondor }
             });
@@ -503,7 +503,7 @@ The players cannot defeat this stage while a Villain is in play. If this stage i
                 EncounterSet = "The Steward's Fear",
                 Quantity = 1,
                 QuestPoints = 15,
-                Number = 13,
+                CardNumber = 13,
                 Artist = Artist.David_A_Nash,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Brigands, EncounterSet.StreetsOfGondor }
             });

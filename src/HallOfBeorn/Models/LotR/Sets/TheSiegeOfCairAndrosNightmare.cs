@@ -43,7 +43,7 @@ Then, shuffle the encounter cards in this Nightmare Deck into the remainder of t
 Finally, flip this setup card over and place it next to the quest deck. Its effects remain active throughout the game, which is now ready to begin.",
                 EncounterSet = "The Siege of Cair Andros Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Guillaume_Ducos
             });
             Cards.Add(new LotRCard()
@@ -60,7 +60,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Keywords = new List<string> { "Archery 5." },
                 Text = "Damage from each round's achery total may be assigned to Battleground locations, as well as characters.",
                 EncounterSet = "The Siege of Cair Andros Nightmare",
-                Number = 2,
+                CardNumber = 2,
                 Quantity = 3,
                 Artist = Artist.Dleoblack
             });
@@ -78,7 +78,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Text = "Damage dealt by Orc Saboteur's attacks must be dealt to a Battleground location in play, if able.",
                 Shadow = "Shadow: If this attack destroys a character, deal 2 damage to a Battleground location in play.",
                 EncounterSet = "The Siege of Cair Andros Nightmare",
-                Number = 3,
+                CardNumber = 3,
                 Quantity = 3,
                 Artist = Artist.Guillaume_Ducos
             });
@@ -96,7 +96,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Text = "Forced: When Orc Ravager is dealt a shadow card, it gets +2 Defense until the end of the phase.",
                 Shadow = "Shadow: Exhaust a character you control. Deal attacking enemy another shadow card.",
                 EncounterSet = "The Siege of Cair Andros Nightmare",
-                Number = 4,
+                CardNumber = 4,
                 Quantity = 4,
                 Artist = Artist.Jason_Ward
             });
@@ -111,7 +111,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Text = "If Besieged Courtyard has 5 or more damage, discard it and exhaust each ready character.",
                 Shadow = "Shadow: Choose one: either attacking enemy makes an additional attack after this one, or deal 10 damage to a Battleground location.",
                 EncounterSet = "The Siege of Cair Andros Nightmare",
-                Number = 5,
+                CardNumber = 5,
                 Quantity = 2,
                 Artist = Artist.Wibben
             });
@@ -126,7 +126,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Text = "If Walls of Cair Andros has 4 or more damage, discard it and each player must assign 4 damage amoung characters he controls.",
                 Shadow = "Shadow: Attacking enemy gets +X, where X is the amount of damage on the active location.",
                 EncounterSet = "The Siege of Cair Andros Nightmare",
-                Number = 6,
+                CardNumber = 6,
                 Quantity = 2,
                 Artist = Artist.Darek_Zabrocki
             });
@@ -140,7 +140,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Traits = new List<string> { "Cair Andros.", "Battleground.", "Riverland." },
                 Text = "If Anduin Wharf has 6 or more damage, discard it and reveal 2 cards from the top of the encounter deck.\r\nWhile Anduin Wharf is the active location, allies cost 1 additional matching resource to play from hand.",
                 EncounterSet = "The Siege of Cair Andros Nightmare",
-                Number = 7,
+                CardNumber = 7,
                 Quantity = 2,
                 Artist = Artist.Wibben
             });
@@ -153,7 +153,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Text = "When Revealed: Deal 2 shadow cards to each enemy in play. Deal 2 damage to each Battleground location in play.",
                 Shadow = "Shadow: Discard an attachment you control.",
                 EncounterSet = "The Siege of Cair Andros Nightmare",
-                Number = 8,
+                CardNumber = 8,
                 Quantity = 3,
                 Artist = Artist.Julian_Kok
             });

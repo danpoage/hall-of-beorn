@@ -17,7 +17,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             SphereIcon = model.SphereIcon;
             SetName = model.Card.CardSet.Name;
             CardType = model.CardType.ToString();
-            OctgnSlug = model.Card.OctgnSlug;
+            //OctgnSlug = model.Card.OctgnSlug;
             MaxPerDeck = model.Card.MaxPerDeck;
         }
 

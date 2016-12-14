@@ -54,7 +54,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
 
                 EncounterSet = "The Hills of Emyn Muil Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Alyn_Spiller
             });
             Cards.Add(new LotRCard()
@@ -73,7 +73,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Shadow = "Shadow:",
                 EncounterSet = "The Hills of Emyn Muil Nightmare",
                 Quantity = 3,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Sandara_Tang
             });
             Cards.Add(new LotRCard()
@@ -92,7 +92,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Shadow = "Shadow:",
                 EncounterSet = "The Hills of Emyn Muil Nightmare",
                 Quantity = 2,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Mariusz_Gandzel
             });
             Cards.Add(new LotRCard()
@@ -109,7 +109,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 VictoryPoints = 3,
                 EncounterSet = "The Hills of Emyn Muil Nightmare",
                 Quantity = 3,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard()
@@ -126,7 +126,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 VictoryPoints = 2,
                 EncounterSet = "The Hills of Emyn Muil Nightmare",
                 Quantity = 2,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Jose_Vega
             });
             Cards.Add(new LotRCard()
@@ -140,7 +140,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Shadow = "Shadow: Attacking enemy gets +X Attack. X is the Threat of the active location.",
                 EncounterSet = "The Hills of Emyn Muil Nightmare",
                 Quantity = 2,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard()
@@ -155,7 +155,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Shadow = "Shadow: Remove all progress from each Emyn Muil location in play.",
                 EncounterSet = "The Hills of Emyn Muil Nightmare",
                 Quantity = 3,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Christina_Davis
             });
             Cards.Add(new LotRCard()
@@ -169,7 +169,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Shadow = "Shadow: Shuffle all Hazard cards from the encounter discard pile back into the encounter deck. Then, deal another shadow card for this attack.",
                 EncounterSet = "The Hills of Emyn Muil Nightmare",
                 Quantity = 2,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Alexandre_Dainche
             });
             Cards.Add(new LotRCard()
@@ -183,7 +183,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 FlavorText = "...they had climbed and laboured among the barren slopes and stones of Emyn Muil, sometimes retracing their steps because they could find no way forward... -The Two Towers",
                 EncounterSet = "The Hills of Emyn Muil Nightmare",
                 Quantity = 2,
-                Number = 9,
+                CardNumber = 9,
                 Artist = Artist.Jake_Murray
             });
         }

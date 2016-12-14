@@ -51,7 +51,7 @@ Then, shuffle the encounter cards in this Nightmare Deck into the remainder of t
 Finally, flip this setup card over and place it next to the quest deck. Its effects remain active throughout the game, which is now ready to begin.",
                 EncounterSet = "Encounter at Amon Dîn Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Mariusz_Gandzel
             });
             Cards.Add(new LotRCard()
@@ -69,7 +69,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Shadow = "Shadow: Attacking enemy makes an additional attack after this one.",
                 EncounterSet = "Encounter at Amon Dîn Nightmare",
                 Quantity = 2,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Lukasz_Jaskolski
             });
             Cards.Add(new LotRCard()
@@ -87,7 +87,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Shadow = "Shadow: Deal attacking enemy 1 shadow card for each villager token on the active location.",
                 EncounterSet = "Encounter at Amon Dîn Nightmare",
                 Quantity = 3,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Diego_Gisbert_Llorens
             });
             Cards.Add(new LotRCard()
@@ -103,7 +103,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 VictoryPoints = 1,
                 EncounterSet = "Encounter at Amon Dîn Nightmare",
                 Quantity = 3,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Lino_Drieghe
             });
             Cards.Add(new LotRCard()
@@ -119,7 +119,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 VictoryPoints = 1,
                 EncounterSet = "Encounter at Amon Dîn Nightmare",
                 Quantity = 2,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Mariusz_Gandzel
             });
             Cards.Add(new LotRCard()
@@ -131,7 +131,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Shadow = "Shadow: Attacking enemy gets +2 Attack. If this attack destroys an ally, place 1 damage token on Dead Villagers.",
                 EncounterSet = "Encounter at Amon Dîn Nightmare",
                 Quantity = 3,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Smirtouille
             });
             Cards.Add(new LotRCard()
@@ -143,7 +143,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Shadow = "Shadow: Either discard 1 villager token from Rescued Villagers, or this attack is considered undefended.",
                 EncounterSet = "Encounter at Amon Dîn Nightmare",
                 Quantity = 2,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Lukasz_Jaskolski
             });
             Cards.Add(new LotRCard()
@@ -155,7 +155,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Shadow = "Shadow: Attacking enemy gets +1 Attack. Deal is another shadow card.",
                 EncounterSet = "Encounter at Amon Dîn Nightmare",
                 Quantity = 2,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Romana_Kendelic
             });
             Cards.Add(new LotRCard()
@@ -169,7 +169,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 FlavorText = "\"Few maybe, of those now sundered will meet again.\" -Beregond, The Return of the King",
                 EncounterSet = "Encounter at Amon Dîn Nightmare",
                 Quantity = 2,
-                Number = 9,
+                CardNumber = 9,
                 Artist = Artist.Jose_Vega
             });
         }

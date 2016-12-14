@@ -49,7 +49,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
 
                 EncounterSet = "Foundations of Stone Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Alvaro_Calvo_Escudero
             });
             Cards.Add(new LotRCard()
@@ -71,7 +71,7 @@ Forced: When Mithril Seeker attacks, move 1 resource from each of the defending 
                 FlavorText = "\"Of what they brought to light the Orcs have gathered nearly all, and given it in tribute to Sauron, who covets it.\"\r\n-Gandalf, The Fellowship of the Ring",
                 EncounterSet = "Goblins of the Deep Nightmare",
                 Quantity = 3,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Guillaume_Ducos
             });
             Cards.Add(new LotRCard()
@@ -92,7 +92,7 @@ Forced: When Mithril Seeker attacks, move 1 resource from each of the defending 
 Forced: At the end of the combat phase, if ~Giant Centipede is engaged with a player, that player chooses and adds it to a different player's staging area.",
                 EncounterSet = "Goblins of the Deep Nightmare",
                 Quantity = 2,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Aurelien_Hubert
             });
             Cards.Add(new LotRCard()
@@ -115,7 +115,7 @@ Forced: At the end of the combat phase, if ~Giant Centipede is engaged with a pl
 X is the printed cost of all attached cards on this card. If there are no cards attached, X is 5.",
                 EncounterSet = "Foundations of Stone Nightmare",
                 Quantity = 3,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Florian_Devos
             });
             Cards.Add(new LotRCard()
@@ -138,7 +138,7 @@ X is the printed cost of all attached cards on this card. If there are no cards 
 X is the printed cost of all attached cards on this card. If there are no cards attached, X is 6.",
                 EncounterSet = "Foundations of Stone Nightmare",
                 Quantity = 2,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Alvaro_Calvo_Escudero
             });
             Cards.Add(new LotRCard()
@@ -153,7 +153,7 @@ X is the printed cost of all attached cards on this card. If there are no cards 
                 Text = "While Nest of Horrors is in the staging area, it gains: \"Forced: When one or more cards are attached to a Nameless enemy from the top of a player's deck, attach an additional card from the top of that player's deck.\"\r\nTravel: Each player at this stage discards the top card of the encounter deck to travel here. Reveal each Nameless enemy discarded by this effect.",
                 EncounterSet = "Foundations of Stone Nightmare",
                 Quantity = 3,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Alvaro_Calvo_Escudero
             });
             Cards.Add(new LotRCard()
@@ -169,7 +169,7 @@ X is the printed cost of all attached cards on this card. If there are no cards 
                 Shadow = "Shadow: Attacking enemy gets +1 Attack. (+3 Attack instead if there is more than one player at this staging area.)",
                 EncounterSet = "Foundations of Stone Nightmare",
                 Quantity = 3,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Jake_Bullock
             });
             Cards.Add(new LotRCard()
@@ -182,7 +182,7 @@ X is the printed cost of all attached cards on this card. If there are no cards 
                 Shadow = "Shadow: If attacking enemy is Nameless, attach the top card of the defending player's deck to it.",
                 EncounterSet = "Foundations of Stone Nightmare",
                 Quantity = 3,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Dleoblack
             });
         }

@@ -53,7 +53,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
 
                 EncounterSet = "A Journey to Rhosgobel Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Jake_Murray
             });
             Cards.Add(new LotRCard()
@@ -75,7 +75,7 @@ Forced: At the end of the combat phase, deal 1 damage to Wilyador",
                 Shadow = "Shadow: If Wilyador has 10 or less damage on him, deal 2 damage to Wilyador.",
                 EncounterSet = "A Journey to Rhosgobel Nightmare",
                 Quantity = 3,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Mike_Nash
             });
             Cards.Add(new LotRCard()
@@ -96,7 +96,7 @@ Forced: At the end of the combat phase, deal 1 damage to Wilyador",
 Forced: At the beginning of the encounter phase, Treetop Bird-eater engages the player who controls Wilyador (regardless of threat).",
                 EncounterSet = "A Journey to Rhosgobel Nightmare",
                 Quantity = 2,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Aurelien_Hubert
             });
             Cards.Add(new LotRCard()
@@ -112,7 +112,7 @@ Forced: At the beginning of the encounter phase, Treetop Bird-eater engages the 
                 Shadow = "Shadow: If defending player controls at least 1 Athelas card, attacking enemy makes an additional attack after this one.",
                 EncounterSet = "A Journey to Rhosgobel Nightmare",
                 Quantity = 3,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard()
@@ -128,7 +128,7 @@ Forced: At the beginning of the encounter phase, Treetop Bird-eater engages the 
                 Shadow = "Shadow: After this attack, attacking enemy engages the next player and makes an immediate attack.",
                 EncounterSet = "A Journey to Rhosgobel Nightmare",
                 Quantity = 3,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard()
@@ -145,7 +145,7 @@ Forced: At the beginning of the encounter phase, Treetop Bird-eater engages the 
                 FlavorText = "...so black that you really could see nothing. -The Hobbit",
                 EncounterSet = "A Journey to Rhosgobel Nightmare",
                 Quantity = 2,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Jose_Vega
             });
             Cards.Add(new LotRCard()
@@ -159,7 +159,7 @@ Forced: At the beginning of the encounter phase, Treetop Bird-eater engages the 
                 Shadow = "Shadow: Resolve the \"when revealed\" effect of Shot from the Sky.",
                 EncounterSet = "A Journey to Rhosgobel Nightmare",
                 Quantity = 3,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Gabriel_Verdon
             });
             Cards.Add(new LotRCard()
@@ -172,7 +172,7 @@ Forced: At the beginning of the encounter phase, Treetop Bird-eater engages the 
                 Text = "When Revealed: Attach to Wilyador. (Counts as a Condition attachment with the text: \"Forced: When attached character is healed by a card effect other than Athelas, the amount of damage healed is reduced to 1. Then, discard Noxious Supplies.\")",
                 EncounterSet = "A Journey to Rhosgobel Nightmare",
                 Quantity = 3,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Sandra_Duchiewicz
             });
         }

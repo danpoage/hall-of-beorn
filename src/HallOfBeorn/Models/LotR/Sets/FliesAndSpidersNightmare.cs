@@ -43,7 +43,7 @@ Then, shuffle the encounter cards in this Nightmare Deck into the remainder of t
 Finally, flip this setup card over and place it next to the quest deck. Its effects remain active throughout the game, which is now ready to begin.",
                 EncounterSet = "Flies and Spiders Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Jon_Bosco
             });
             Cards.Add(new LotRCard()
@@ -63,7 +63,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
 Poisoned characters cannot be declared as attackers or defenders against Attercop.",
                 EncounterSet = "Flies and Spiders Nightmare",
                 Quantity = 3,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Jon_Bosco
             });
             Cards.Add(new LotRCard()
@@ -82,7 +82,7 @@ Poisoned characters cannot be declared as attackers or defenders against Atterco
                 Shadow = "Shadow: Give 2 poison to the defending character.",
                 EncounterSet = "Flies and Spiders Nightmare",
                 Quantity = 5,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Florian_Devos
             });
             Cards.Add(new LotRCard()
@@ -97,7 +97,7 @@ Poisoned characters cannot be declared as attackers or defenders against Atterco
                 FlavorText = "Suddenly he saw, too, that there were spiders huge and horrible sitting in the branches above him, and ring or no ring he trembled with fear lest they should discover him.\r\n -The Hobbit",
                 EncounterSet = "Flies and Spiders Nightmare",
                 Quantity = 2,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Mark_Behm
             });
             Cards.Add(new LotRCard()
@@ -113,7 +113,7 @@ Poisoned characters cannot be declared as attackers or defenders against Atterco
                 Shadow = "Shadow: Attacking enemy gets +1 Attack for each poisoned character you control.",
                 EncounterSet = "Flies and Spiders Nightmare",
                 Quantity = 2,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard()
@@ -128,7 +128,7 @@ Poisoned characters cannot be declared as attackers or defenders against Atterco
                 Shadow = "Shadow: Raise your threat by 1 for each poisoned character you control.",
                 EncounterSet = "Flies and Spiders Nightmare",
                 Quantity = 3,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
             Cards.Add(new LotRCard()
@@ -140,7 +140,7 @@ Poisoned characters cannot be declared as attackers or defenders against Atterco
                 Shadow = "Shadow: Attacking enemy makes an additional attack against the defending player after this one.",
                 EncounterSet = "Flies and Spiders Nightmare",
                 Quantity = 2,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Diego_Gisbert_Llorens
             });
             Cards.Add(new LotRCard()
@@ -152,7 +152,7 @@ Poisoned characters cannot be declared as attackers or defenders against Atterco
                 Text = "When Revealed: Attach to a hero that is not unconscious. (Counts as a Condition attachment with the text: \"Limit 1 per hero. Forced: At the end of the refresh phase, give attached hero 1 poison. When attached hero becomes unconscious, discard Spider Bite.\")",
                 EncounterSet = "Flies and Spiders Nightmare",
                 Quantity = 2,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Florian_Devos
             });
         }

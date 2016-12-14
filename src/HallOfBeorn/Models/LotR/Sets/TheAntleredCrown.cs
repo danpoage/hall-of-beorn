@@ -31,7 +31,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Keywords = new List<string> { "Sentinel." },
                 Text = "While Erkenbrand is defending, he gains: \"Response: Deal 1 damage to Erkenbrand to cancel a shadow effect just triggered.\"",
                 FlavorText = "Down from the hills leaped Erkenbrand, lord of Westfold. -The Two Towers",
-                Number = 137,
+                CardNumber = 137,
                 Quantity = 1,
                 Artist = Artist.Sebastian_Giacobino
             });
@@ -50,7 +50,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Keywords = new List<string> { "Sentinel."  },
                 Text = "",
                 FlavorText = "They now learned to their joy that Erkenbrand had left many men to hold Helm's Gate, and more had since escaped thither. -The Two Towers",
-                Number = 138,
+                CardNumber = 138,
                 Quantity = 3,
                 Artist = Artist.Jarreau_Wimberly
             });
@@ -65,7 +65,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Traits = new List<string> { "Song." },
                 Text = "Attach to a hero with sentinel.\r\nResponse: After attached hero defends against an attack and takes no damage while defending that attack, exhaust Day's Rising to add 1 resource to the attached hero's resource pool.",
                 FlavorText = "Out of doubt, out of dark to the day's rising\r\nI came singing in the sun, sword unsheathing.\r\n-Éomer, The Return of the King",
-                Number = 139,
+                CardNumber = 139,
                 Quantity = 3,
                 Artist = Artist.Jarreau_Wimberly
             });
@@ -80,7 +80,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Traits = new List<string> { "Title." },
                 Text = "Attach to a Warrior hero.\r\nResponse: After you optionally engage an enemy, exhaust ~Captain of ~Gondor to give attached hero +1 Attack and +1 Defense until the end of the round.",
                 FlavorText = "\"Boromir it was that drove the enemy at last back from this western shore...\" -Beregond, The Return of the King",
-                Number = 140,
+                CardNumber = 140,
                 Quantity = 3,
                 Artist = Artist.Jarreau_Wimberly
             });
@@ -98,7 +98,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Traits = new List<string> { "Ent." },
                 Text = "Cannot have restricted attachments. Enters play exhausted.\r\nBooming ~Ent gets +1 Attack for each damaged Ent character you control.",
                 FlavorText = "\"...a man that hacks once at an Ent never gets a chance of a second blow.\" -Merry, The Two Towers",
-                Number = 141,
+                CardNumber = 141,
                 Quantity = 3,
                 Artist = Artist.Jarreau_Wimberly
             });
@@ -111,7 +111,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 ResourceCost = 2,
                 Text = "Quest Action: Choose a non-unique enemy in the staging area. Until the end of the phase, progress that would be placed on the quest from questing successfully is instead assigned as damage to the chosen enemy. (Progress must still be placed on any active location first.)",
                 FlavorText = "Like thunder they broke upon the enemy... -The Return of the King",
-                Number = 142,
+                CardNumber = 142,
                 Quantity = 3,
                 Artist = Artist.Emile_Denis
             });
@@ -124,7 +124,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 ResourceCost = 3,
                 Text = "You must use resources from 3 different heroes' pools to pay for this card.\r\nAction: Discard each shadow card from each enemy in play.",
                 FlavorText = "At that moment he caught a flash of white and silver coming from the North, like a small star down on the dusky fields. -The Return of the King",
-                Number = 143,
+                CardNumber = 143,
                 Quantity = 3,
                 Artist = Artist.Jordy_Lakiere
             });
@@ -137,7 +137,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 ResourceCost = 0,
                 Text = "Response: When an encounter card is revealed but before resolving any of that card's keywords or \"when revealed\" effects, choose a character comited to the quest. Ready that character and remove it from the quest.",
                 FlavorText = "\"Don't be hasty, that is my motto.\" -Treebeard, The Two Towers",
-                Number = 144,
+                CardNumber = 144,
                 Quantity = 3,
                 Artist = Artist.Mike_Nash
             });
@@ -151,7 +151,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Keywords = new List<string> { "Doomed 3." },
                 Text = "Action: Heal all damage on each character in play.",
                 FlavorText = "For a moment Frodo stood near the brink and let the water flow over his tired feet. It was cold but its touch was clean, and as he went on and it mounted to his knees, he felt that the strain of travel and all weariness was washed from his limbs. -The Fellowship of the Ring",
-                Number = 145,
+                CardNumber = 145,
                 Quantity = 3,
                 Artist = Artist.Jose_Vega
             });
@@ -169,7 +169,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HitPoints = 5,
                 Traits = new List<string> { "Ent." },
                 Text = "Cannot have restricted attachments. Treebeard enters play exhausted and collects 1 resource each resource phase. These resources can be used to pay for Ent cards played from your hand.\r\nAction: Pay 2 resources from Treebeard's pool to ready an Ent character.",
-                Number = 146,
+                CardNumber = 146,
                 Quantity = 3,
                 Artist = Artist.Mike_Nash
             });
@@ -187,7 +187,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 OppositeFlavorText = "On your return journey to Isengard, you find war in Dunland. The Raven Clan has refused the Boar's claim to The Antlered Crown, and chief Turch asks you to join his Clan as they march to battle. Seeing an opportunity to earn Saruman the friendship of a unified Dunland, you agree to join forces and fight...",
                 EncounterSet = "The Antlered Crown",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DunlandRaiders, EncounterSet.DunlandWarriors },
-                Number = 147,
+                CardNumber = 147,
                 Quantity = 1,
                 Artist = Artist.Darek_Zabrocki
             });
@@ -205,7 +205,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 FlavorText = "Chief Turch's goal is to defeat the Raven Clan before they can marshal their full strength, but Dunland is a vast country and there is much ground to cover. The longer it takes to subdue the enemy, the more time they have to gather...",
                 EncounterSet = "The Antlered Crown",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DunlandRaiders, EncounterSet.DunlandWarriors },
-                Number = 148,
+                CardNumber = 148,
                 Quantity = 1,
                 Artist = Artist.Darek_Zabrocki
             });
@@ -223,7 +223,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 OppositeText = "Forced: After the last time counter is removed from this stage, each engaged enemy makes an attack. Place 2 time counter on this stage.\r\nAt the end of the round, if ~Raven Chief is in the victory display, the players win the game.",
                 EncounterSet = "The Antlered Crown",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DunlandRaiders, EncounterSet.DunlandWarriors },
-                Number = 149,
+                CardNumber = 149,
                 Quantity = 1,
                 Artist = Artist.Darek_Zabrocki
             });
@@ -240,7 +240,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Traits = new List<string> { "Dunland.", "Boar Clan." },
                 Text = "The first player gains control of Chief Turch.\r\nImmune to player card effects. Chief Turch does not exhaust to defend.\r\nIf Chief Tuch leaves play, the players lose the game.",
                 EncounterSet = "The Antlered Crown",
-                Number = 150,
+                CardNumber = 150,
                 Quantity = 1,
                 Artist = Artist.Alvaro_Calvo_Escudero
             });
@@ -259,7 +259,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Cannot have attachments. While ~Raven Chief's Camp is in play, ~Raven Chief cannot be damaged.\r\nForced: When ~Raven Chief attacks, remove 1 time counter from the active location, if able.",
                 VictoryPoints = 3,
                 EncounterSet = "The Antlered Crown",
-                Number = 151,
+                CardNumber = 151,
                 Quantity = 1,
                 Artist = Artist.Scott_Murphy
             });
@@ -276,7 +276,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Immune to player card effects.\r\nForced: After the last time counter is removed from this location, exhaust each damaged character. Place 3 time counters on this location.",
                 VictoryPoints = 3,
                 EncounterSet = "The Antlered Crown",
-                Number = 152,
+                CardNumber = 152,
                 Quantity = 1,
                 Artist = Artist.Victor_Garcia
             });
@@ -294,7 +294,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Forced: After ~Raven Warrior engages a player. remove X time counters from locations in play. X is the number of cards in engaged player's hand.",
                 Shadow = "Shadow: Defending player discards an attachment he controls.",
                 EncounterSet = "The Antlered Crown",
-                Number = 153,
+                CardNumber = 153,
                 Quantity = 4,
                 EasyModeQuantity = 3,
                 Artist = Artist.Nicholas_Gregory
@@ -313,7 +313,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "When Revealed: Either remove 1 time counter from the active location, or reveal an additional encounter card.",
                 Shadow = "Shadow: Attacking enemy gets +X Attack, where X is the Time X value on the active location.",
                 EncounterSet = "The Antlered Crown",
-                Number = 154,
+                CardNumber = 154,
                 Quantity = 3,
                 EasyModeQuantity = 2,
                 Artist = Artist.Nicholas_Gregory
@@ -330,7 +330,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Forced: After the last time counter is removed from this location, starting with the first player, each player draws the top card of the ~Raven deck and puts it into play engaged with him.",
                 FlavorText = "All the camp was soon astir. -The Two Towers",
                 EncounterSet = "The Antlered Crown",
-                Number = 155,
+                CardNumber = 155,
                 Quantity = 4,
                 EasyModeQuantity = 2,
                 Artist = Artist.Ben_Zweifel
@@ -347,7 +347,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Forced: After the last time counter is removed from this location, reveal the top card of the ~Raven deck and add it to the staging area.",
                 Shadow = "Shadow: Deal attacking enemy 2 additional shadow cards from the Raven deck.",
                 EncounterSet = "The Antlered Crown",
-                Number = 156,
+                CardNumber = 156,
                 Quantity = 3,
                 Artist = Artist.Lino_Drieghe
             });
@@ -363,7 +363,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Forced: After the last time counter is removed from this location, each player assigns X damage among characters he controls, where X is the number of cards in his hand.",
                 Shadow = "Shadow: Deal 1 damage to the defending character.",
                 EncounterSet = "The Antlered Crown",
-                Number = 157,
+                CardNumber = 157,
                 Quantity = 3,
                 Artist = Artist.Victor_Garcia
             });
@@ -379,7 +379,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Forced: After the last time counter is removed from this location, each player raises his threat by the number of cards in his hand.",
                 Shadow = "Shadow: Defending player assigns X damage among characters he controls. X is the Time X value on the active location.",
                 EncounterSet = "The Antlered Crown",
-                Number = 158,
+                CardNumber = 158,
                 Quantity = 2,
                 Artist = Artist.Victor_Garcia
             });
@@ -391,7 +391,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "When Revealed: Remove 1 time counter from each location in play. Place X time counters on each location in play with no time counters on it. X is the \"Time X\" value on that location. If there are not locations in the staging area, Raising the Cry gains surge.",
                 FlavorText = "...a cry went up into the shuddering air...\r\n-The Return of the King",
                 EncounterSet = "The Antlered Crown",
-                Number = 159,
+                CardNumber = 159,
                 Quantity = 3,
                 EasyModeQuantity = 2,
                 Artist = Artist.Nicholas_Gregory
@@ -405,7 +405,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "When Revealed: Each player draws 3 cards. Until the end of the round, players cannot play events.",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, remove 1 time counter from the active location.",
                 EncounterSet = "The Antlered Crown",
-                Number = 160,
+                CardNumber = 160,
                 Quantity = 2,
                 EasyModeQuantity = 1,
                 Artist = Artist.Alvaro_Calvo_Escudero
@@ -418,7 +418,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "When Revealed: Remove all progress from each location in the staging area. Increase the total Threat in the staging area by 1 for each progress removed this way. If no progress was removed by this effect, Driven Back gains surge.",
                 FlavorText = "\"We are overmastered.\" -Ceorl, The Two Towers",
                 EncounterSet = "The Antlered Crown",
-                Number = 161,
+                CardNumber = 161,
                 Quantity = 2,
                 Artist = Artist.Igor_Kieryluk
             });

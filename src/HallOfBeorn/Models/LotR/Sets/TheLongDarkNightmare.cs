@@ -58,7 +58,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
 
                 EncounterSet = "The Long Dark Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Alvaro_Calvo_Escudero
             });
             Cards.Add(new LotRCard()
@@ -80,7 +80,7 @@ Forced: When ~Goblin Stalker is dealt a shadow card with 'PASS' printed in its t
                 PassValue = true,
                 EncounterSet = "The Long Dark Nightmare",
                 Quantity = 4,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Adam_Lane
             });
             Cards.Add(new LotRCard()
@@ -102,7 +102,7 @@ Lost: Trapdoor ~Spider engages the last player and makes an immediate attack.",
                 PassValue = true,
                 EncounterSet = "The Long Dark Nightmare",
                 Quantity = 3,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Alvaro_Calvo_Escudero
             });
             Cards.Add(new LotRCard()
@@ -121,7 +121,7 @@ Lost: Trapdoor ~Spider engages the last player and makes an immediate attack.",
                 Shadow = "Shadow: Defending player must choose and trigger 1 'Lost:' effect in play.",
                 EncounterSet = "The Long Dark Nightmare",
                 Quantity = 2,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Lukasz_Jaskolski
             });
             Cards.Add(new LotRCard()
@@ -137,7 +137,7 @@ Lost: Trapdoor ~Spider engages the last player and makes an immediate attack.",
                 Shadow = "Shadow: Defending player must choose and trigger 1 \"Lost:\" effect in play.",
                 EncounterSet = "The Long Dark Nightmare",
                 Quantity = 2,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Alyn_Spiller
             });
             Cards.Add(new LotRCard()
@@ -153,7 +153,7 @@ Lost: Trapdoor ~Spider engages the last player and makes an immediate attack.",
                 Shadow = "Shadow: If this attack destroys a character, the defending player discards all cards in his hand.",
                 EncounterSet = "The Long Dark Nightmare",
                 Quantity = 3,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Jake_Bullock
             });
             Cards.Add(new LotRCard()
@@ -166,7 +166,7 @@ Lost: Trapdoor ~Spider engages the last player and makes an immediate attack.",
                 Shadow = "Shadow: Make a locate test. If this test is failed, return attacking enemy to the staging area after this attack and trigger all \"Lost:\" effects in play.",
                 EncounterSet = "The Long Dark Nightmare",
                 Quantity = 3,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Brian_Valenzuela
             });
             Cards.Add(new LotRCard()
@@ -180,7 +180,7 @@ Lost: Trapdoor ~Spider engages the last player and makes an immediate attack.",
                 Shadow = "Shadow: If you have no cards in your hand, discard defending character from play.",
                 EncounterSet = "The Long Dark Nightmare",
                 Quantity = 2,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Ilich_Henriquez
             });
         }

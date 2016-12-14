@@ -38,7 +38,7 @@ Then, shuffle the encounter cards in this Nightmare Deck into the remainder of t
 Finally, flip this setup card over and place it next to the quest deck. Its effects remain active throughout the game, which is now ready to begin.",
                 EncounterSet = setName,
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Katy_Grierson
             });
             Cards.Add(LotRCard.Enemy("Huorn of Fangorn", "", setName, 23, 3, 4, 3, 6)

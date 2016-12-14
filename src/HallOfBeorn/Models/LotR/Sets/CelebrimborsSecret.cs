@@ -32,7 +32,7 @@ namespace HallOfBeorn.Models.LotR.Sets
 @"Galadriel cannot quest, attack, or defend. Allies you control do not exhaust to commit to the quest during the round they enter play.
 
 Action: Exhaust Galadriel to choose a player. That player reduces his threat by 1 and draws 1 card. (Limit once per round.)",
-                Number = 112,
+                CardNumber = 112,
                 Quantity = 1,
                 Artist = Artist.Magali_Villeneuve
             });
@@ -50,7 +50,7 @@ Action: Exhaust Galadriel to choose a player. That player reduces his threat by 
 
 Response: After attached hero gains any number of resources from a card effect, exhaust Heir of Mardil to ready attached hero.",
                 FlavorText = "\"...in my turn I bore it, and so did each eldest son of our house, far back into the vanished years before the failing of the kings...\"\r\n-Denethor, The Return of the King",
-                Number = 113,
+                CardNumber = 113,
                 Quantity = 3,
                 Artist = Artist.Alexandre_Dainche
             });
@@ -70,7 +70,7 @@ Response: After attached hero gains any number of resources from a card effect, 
                 Keywords = new List<string> { "Ranged." },
                 Text = "Response: After Orophin enters play, return a Silvan ally from your discard pile to your hand.",
                 FlavorText = "\"Orophin has now gone in haste back to our dwellings to warn our people.\" -Haldir, The Fellowship of the Ring",
-                Number = 114,
+                CardNumber = 114,
                 Quantity = 3,
                 Artist = Artist.Magali_Villeneuve
             });
@@ -89,7 +89,7 @@ Response: After attached hero gains any number of resources from a card effect, 
                 Traits = new List<string> { "Gondor.", "Warrior." },
                 Text = "You may give Henneth Annûn Guard doomed 1 when you play it from your hand. If you do, it gains :\"Response: After you play Henneth Annûn Guard, choose a character. Until the end of the round, that character gets +2 Defense and gains sentinel.\"",
                 FlavorText = "\"Does he think that men sleep without watch all night?\" -Faramir, The Two Towers",
-                Number = 115,
+                CardNumber = 115,
                 Quantity = 3,
                 Artist = Artist.Kristina_Carroll
             });
@@ -102,7 +102,7 @@ Response: After attached hero gains any number of resources from a card effect, 
                 ResourceCost = 2,
                 Text = "Action: Until the end of the phase, each Rohan character with a Mount attachment gets +3 Attack.",
                 FlavorText = "\"Arise, arise, riders of Théoden!\" -Théoden, The Return of the King",
-                Number = 116,
+                CardNumber = 116,
                 Quantity = 3,
                 Artist = Artist.Igor_Kieryluk
             });
@@ -120,7 +120,7 @@ Response: After attached hero gains any number of resources from a card effect, 
                 Traits = new List<string> { "Silvan." },
                 Text = "Response: After Galadriel's Handmaiden enters play, choose a player. That player reduces his threat by 1.",
                 FlavorText = "Her maidens stood silent about her, and a while she looked upon her guests. -The Fellowship of the Ring",
-                Number = 117,
+                CardNumber = 117,
                 Quantity = 3,
                 Artist = Artist.Nathalia_Gomes
             });
@@ -138,7 +138,7 @@ Response: After attached hero gains any number of resources from a card effect, 
 
 Exhaust Mirror of Galadriel to search the top 10 cards of your deck for a card and add it to your hand. Shuffle the rest back into your deck. Then, discard a random card from your hand.",
                 FlavorText = "\"What you will see, if you leave the Mirror free to work, I cannot tell. For it shows things that were, things that are, things that yet may be.\"\r\n-Galadriel, The Fellowship of the Ring",
-                Number = 118,
+                CardNumber = 118,
                 Quantity = 3,
                 Artist = Artist.Jose_Vega
             });
@@ -156,7 +156,7 @@ Exhaust Mirror of Galadriel to search the top 10 cards of your deck for a card a
                 Traits = new List<string> { "Ent." },
                 Text = "Cannot have restricted attachments.\r\nEnters play exhausted.",
                 FlavorText = "There were songs about the hunt of the Ents for the Entwives sung among Elves and Men from Mirkwood to Gondor. -The Two Towers",
-                Number = 119,
+                CardNumber = 119,
                 Quantity = 3,
                 Artist = Artist.Dmitry_Prosvirnin
             });
@@ -171,7 +171,7 @@ Exhaust Mirror of Galadriel to search the top 10 cards of your deck for a card a
                 Traits = new List<string> { "Item." },
                 Text = "Attach to a Noldor or Silvan character.\r\nLimit 1 per character.\r\nAttached character gets +1 Defense (+2 Defense instead if the active location has the Forest trait).",
                 FlavorText = "It was hard to say what colour they were: grey with the hue of twilight under the trees they seemed to be; and yet if they were moved, or set in another light, they were green as shadowed leaves... -The Fellowship of the Ring",
-                Number = 120,
+                CardNumber = 120,
                 Quantity = 3,
                 Artist = Artist.Sara_K_Diesel
             });
@@ -186,7 +186,7 @@ Exhaust Mirror of Galadriel to search the top 10 cards of your deck for a card a
                 Traits = new List<string> { "Artifact.", "Ring." },
                 Text = "Attach to Galadriel. She gains a Lore resource icon.\r\nQuest Action: Exhaust Nenya and Galadriel to add her Willpower to another character's Willpower until the end of the phase.",
                 FlavorText = "\"The is Nenya, the Ring of Adamant, and I am its keeper.\" -Galadriel, The Fellowship of the Ring",
-                Number = 121,
+                CardNumber = 121,
                 Quantity = 3,
                 Artist = Artist.Mike_Nash
             });
@@ -204,7 +204,7 @@ Exhaust Mirror of Galadriel to search the top 10 cards of your deck for a card a
                 QuestPoints = 14,
                 EncounterSet = "Celebrimbor's Secret",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.MistyMountainOrcs, EncounterSet.BrokenLands },
-                Number = 122,
+                CardNumber = 122,
                 Quantity = 1,
                 Artist = Artist.Ben_Zweifel
             });
@@ -227,7 +227,7 @@ The players cannot win unless Celebrimbor's Mould is attached to a hero. If the 
                 QuestPoints = 12,
                 EncounterSet = "Celebrimbor's Secret",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.MistyMountainOrcs, EncounterSet.BrokenLands },
-                Number = 123,
+                CardNumber = 123,
                 Quantity = 1,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
@@ -247,7 +247,7 @@ The players cannot win unless Celebrimbor's Mould is attached to a hero. If the 
                 Text = "X is the number of cards underneath The Orcs' Search.\r\nScour: Each player must search the encounter deck and discard pile for an Orc enemy and add it to the staging area.",
                 EncounterSet = "Celebrimbor's Secret",
                 VictoryPoints = 5,
-                Number = 124,
+                CardNumber = 124,
                 Quantity = 1,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
@@ -261,7 +261,7 @@ The players cannot win unless Celebrimbor's Mould is attached to a hero. If the 
 
 Forced: At the end of the refresh phase, raise each player's threat by 1 for each card underneath The Orcs' Search.",
                 EncounterSet = "Celebrimbor's Secret",
-                Number = 125,
+                CardNumber = 125,
                 Quantity = 1,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
@@ -277,7 +277,7 @@ Forced: At the end of the refresh phase, raise each player's threat by 1 for eac
                 Text = "X is the number of players in the game. Immune to player card effects.\r\nTravel: Remove 3 progress from the current quest to travel here.\r\nIf the Secret Chamber is placed underneath The Orcs' Search, the players lose the game.",
                 VictoryPoints = 3,
                 EncounterSet = "Celebrimbor's Secret",
-                Number = 126,
+                CardNumber = 126,
                 Quantity = 1,
                 Artist = Artist.Jose_Vega
             });
@@ -291,7 +291,7 @@ Forced: At the end of the refresh phase, raise each player's threat by 1 for eac
                 Text = "If Celebrimbor's Mould is free of encounters, the first player claims it and attaches it to a hero he controls.\r\nIf the attached hero leaves play, the players lose the game.",
                 FlavorText = "\"Celebrimbor of Hollin drew these signs.\" -Gandalf, The Fellowship of the Ring",
                 EncounterSet = "Celebrimbor's Secret",
-                Number = 127,
+                CardNumber = 127,
                 Quantity = 1,
                 Artist = Artist.Michael_Rasmussen
             });
@@ -312,7 +312,7 @@ Forced: At the end of the refresh phase, raise each player's threat by 1 for eac
 Scour: Place 1 damage on the active location.",
                 Shadow = "Shadow: Place 1 damage on the active location.",
                 EncounterSet = "Celebrimbor's Secret",
-                Number = 128,
+                CardNumber = 128,
                 Quantity = 4,
                 EasyModeQuantity = 3,
                 Artist = Artist.Florian_Devos
@@ -334,7 +334,7 @@ Scour: Place 1 damage on the active location.",
 Scour: Prowling ~Orc engages the player with the highest threat and makes an immediate attack.",
                 FlavorText = "\"Garn! You don't even know what you're looking for.\" -Orc, The Return of the King",
                 EncounterSet = "Celebrimbor's Secret",
-                Number = 129,
+                CardNumber = 129,
                 Quantity = 2,
                 EasyModeQuantity = 1,
                 Artist = Artist.Ilich_Henriquez
@@ -350,7 +350,7 @@ Scour: Prowling ~Orc engages the player with the highest threat and makes an imm
                 Text = "Forced: After Ruined Plaza enters the staging area, place 1 damage here.",
                 Shadow = "Shadow: Defending player assigns X damage amoung characters he controls. X is the number of cards underneath The Orcs' Search.",
                 EncounterSet = "Celebrimbor's Secret",
-                Number = 130,
+                CardNumber = 130,
                 Quantity = 3,
                 Artist = Artist.Joel_Hustak
             });
@@ -366,7 +366,7 @@ Scour: Prowling ~Orc engages the player with the highest threat and makes an imm
                 Text = "Scour: Return this location to the staging area and place 2 damage here.",
                 Shadow = "Shadow: Excess damage from this attack must be placed on the active location, if able.",
                 EncounterSet = "Celebrimbor's Secret",
-                Number = 131,
+                CardNumber = 131,
                 Quantity = 2,
                 Artist = Artist.Anthony_Feliciano
             });
@@ -381,7 +381,7 @@ Scour: Prowling ~Orc engages the player with the highest threat and makes an imm
                 Text = "Scour: Assign X damage amoung locations in play. X is the number of locations in play. This ability does not stack with other copies of Ancient Foundation.\r\nTravel: Place 1 damage on this location to travel here.",
                 FlavorText = "...deep they delved us, fair they wrought us, hight they builded us; but they are gone. -Legolas, The Fellowship of the Ring",
                 EncounterSet = "Celebrimbor's Secret",
-                Number = 132,
+                CardNumber = 132,
                 Quantity = 4,
                 Artist = Artist.Titus_Lunter
             });
@@ -396,7 +396,7 @@ Scour: Prowling ~Orc engages the player with the highest threat and makes an imm
                 Text = "Forced: After placing any amount of progress here, trigger the topmost **Scour** effect in the discard pile, if able.",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, raise each player's threat by 1 for each card underneath The Orcs' Search.",
                 EncounterSet = "Celebrimbor's Secret",
-                Number = 133,
+                CardNumber = 133,
                 Quantity = 4,
                 EasyModeQuantity = 2,
                 Artist = Artist.Ben_Zweifel
@@ -409,7 +409,7 @@ Scour: Prowling ~Orc engages the player with the highest threat and makes an imm
                 Text = "When Revealed: Either trigger ech Scour effect currently in play, or each player places a random card from his hand facedown underneath The Orcs' Search.",
                 Shadow = "Shadow: If this attack destroy's a character, place that character facedown underneath The Orcs' Search.",
                 EncounterSet = "Celebrimbor's Secret",
-                Number = 134,
+                CardNumber = 134,
                 Quantity = 2,
                 EasyModeQuantity = 0,
                 Artist = Artist.Louis_Green
@@ -422,7 +422,7 @@ Scour: Prowling ~Orc engages the player with the highest threat and makes an imm
                 Text = "When Revealed: Place 3 damage on the active location. If there is no active location, Desecrated ~Ruins gains surge.",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack. If this attack destroys an ally, place X damage on the active location. X is that ally's cost.",
                 EncounterSet = "Celebrimbor's Secret",
-                Number = 135,
+                CardNumber = 135,
                 Quantity = 3,
                 Artist = Artist.David_Hammond
             });
@@ -434,7 +434,7 @@ Scour: Prowling ~Orc engages the player with the highest threat and makes an imm
                 Text = "When Revealed: Each player must exhaust X characters he controls. X is the number of cards underneath The Orcs' Search. If no characters are exhausted this way, Spies from ~Mordor gains surge.",
                 Shadow = "Shadow: Defending player discards a non-objective attachment he controls.",
                 EncounterSet = "Celebrimbor's Secret",
-                Number = 136,
+                CardNumber = 136,
                 Quantity = 2,
                 Artist = Artist.Florian_Devos
             });

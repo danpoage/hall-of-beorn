@@ -27,7 +27,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Willpower = 2,
                 HitPoints = 5,
                 Traits = new List<string>() { "Dúnedain.", "Noble.", "Ranger." },
-                NormalizedTraits = new List<string> { "Dunedain." },
                 Text = "Response: After Aragorn commits to a quest, spend 1 resource from his resource pool to ready him.",
                 FlavorText = "\"I am Aragorn son of Arathorn; and if by life or death I can save you, I will.\" -The Fellowship of the Ring",
                 HtmlTemplate = "<p>{keyword:Sentinel.}<p><p><b>Response:</b> After {self} commits to a quest, spend 1 resource from his resource pool to ready him.</p><p class='flavor-text'>&quot;I am Aragorn son of Arathorn; and if by life or death I can save you, I will.&quot;<br>&ndash;The Fellowship of the Ring</p>",
@@ -35,7 +34,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Quantity = 1,
                 Year = 2010,
                 Artist = Artist.John_Stanko,
-                Number = 1
+                CardNumber = 1
             });
             Cards.Add(new LotRCard()
             {
@@ -56,7 +55,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 FlavorText = "\"Not all is dark. Take courage, Lord of the Mark...\"\r\n\r\n-Gandalf, The Two Towers",
                 HtmlTemplate = "<p><b>Response:</b> After {self} commits to a quest, choose a hero committed to that quest. Add 1 resource to that hero's resource pool.<p><p class='flavor-text'>&quot;Not all is dark. Take courage, Lord of the Mark...&quot;<br>&ndash;Gandalf, The Two Towers</p>",
                 Quantity = 1,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Jeff_Himmelman
             });
             Cards.Add(new LotRCard() {
@@ -77,7 +76,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 FlavorText = "His beard, very long and forked, was white, nearly as white as the snow-white cloth of his garments.\r\n-The Fellowship of the Ring",
                 HtmlTemplate = "<p><b>Response:</b> After {self} suffers damage, add 1 resource to his resource pool for each point of damage he just suffered.</p><p class='flavor-text'>His beard, very long and forked, was white, nearly as white as the snow-white cloth of his garments.<br>&ndash;The Fellowship of the Ring</p>",
                 Quantity = 1,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Tom_Garden
             });
             Cards.Add(new LotRCard() {
@@ -97,7 +96,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 FlavorText = "\"Men need many words before deeds. My axe is restless in my hands\" -The Two Towers",
                 HtmlTemplate = "<p>{self} gets +1 {Attack} for each damage token on him.</p><p class='flavor-text'>&quot;Men need many words before deeds. My axe is restless in my hands.&quot<br>&ndash;The Two Towers</p>",
                 Quantity = 1,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Tony_Foti
             });
             Cards.Add(new LotRCard() {
@@ -118,7 +117,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 //HtmlTemplate = "<p><b>Response:</b> After {self} participates in an attack that destroys an enemy, place 2 progress tokens on the current quest.</p><p class='flavor-text'>&quot;I can walk this path, but others have not this skill.&quot;<br>&ndash;The Fellowship of the Ring</p>",
                 Keywords = new List<string>() { "Ranged." },
                 Quantity = 1,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -138,7 +137,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 FlavorText = "There hammer on the anvil smote,\r\nThere chisel clove, and graver wrote;\r\nThere forged was blade, and bound was hilt;\r\nThe delver mined, the mason built.\r\n-The Fellowship of the Ring",
                 HtmlTemplate = "<p>While {self} is committed to a quest, deal 1 damage to each enemy as it is revealed by the encounter deck.</p><p class='flavor-text'>There hammer on the anvil smote,<br>There chisel clove, and graver wrote;<br>There forged was blade, and bound was hilt;<br>The delver mined, the mason built.<br>&ndash;The Fellowship of the Ring</p>",
                 Quantity = 1,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Jen_Zee,
                 HasErrata = true
             });
@@ -159,7 +158,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Action: Discard 1 card from your hand to give Éowyn +1 Willpower until the end of the phase. This effect may be triggered by each player once each round.",
                 HtmlTemplate = "<p><b>Action:</b> Discard 1 card from your hand to give Éowyn +1 {Willpower} until the end of the phase. This effect may be triggered by each player once each round.</p><p class='flavor-text'>Slender and tall she was in her white robe girt with silver; but strong she seemed and stern as steel, a daughter of kings.<br>&ndash;The Two Towers</p>",
                 Quantity = 1,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Gabrielle_Portal
             });
             Cards.Add(new LotRCard() {
@@ -179,7 +178,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 FlavorText = "\"Gondor wanes, you say. But Gondor stands, and even the end of its strength is very strong.\" -Boromir, The Fellowship of the Ring",
                 HtmlTemplate = "<p><b>Response:</b> Exhaust {self} to cancel the &quot;when revealed&quot; effects of a treachery card just revealed by the encounter deck. Then, discard that card, and replace it with the next card from the encounter deck.</p><p class='flavor-text'>&quot;Gondor wanes, you say. But Gondor stands, and even the end of its strength is very strong.&quot;<br>&ndash;Boromir, The Fellowship of the Ring</p>",
                 Quantity = 1,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Magali_Villeneuve,
                 HasErrata = true
             });
@@ -201,7 +200,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 FlavorText = "Captains rode to meet him at the ford, bearing messages from Gandalf. Dúnhere, chieftain of the folk of Harrowdale, was at their head.\r\n-The Return of the King",
                 HtmlTemplate = "<p>{self} can target enemies in the staging area when he attacks alone. When doing so, he gets +1 {Attack}.</p><p class='flavor-text'>Captains rode to meet him at the ford, bearing messages from Gandalf. Dúnhere, chieftain of the folk of Harrowdale, was at their head.<br>&ndash;The Return of the King</p>",
                 Quantity = 1,
-                Number = 9,
+                CardNumber = 9,
                 Artist = Artist.Jeff_Himmelman
             });
             Cards.Add(new LotRCard() {
@@ -221,7 +220,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 FlavorText = "\"And the lord Denethor is unlike other men: he sees far.\"\r\n-Beregond, The Return of the King",
                 HtmlTemplate = "<p><b>Action:</b> Exhaust {self} to look at the top card of the encounter deck. You may move that card to the bottom of the deck.</p><p class='flavor-text'>&quot;And the lord Denethor is unlike other men: he sees far.&quot;<br>&ndash;Beregond, The Return of the King</p>",
                 Quantity = 1,
-                Number = 10,
+                CardNumber = 10,
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard() {
@@ -241,7 +240,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 FlavorText = "\"You saw him for a moment as he is upon the other side: one of the mighty of the firstborn.\"\r\n-Gandalf, The Fellowship of the Ring",
                 HtmlTemplate = "<p><b>Action:</b> Pay 1 resource from {self}'s pool to heal 1 damage on any character. (Limit once per round.)</p><p class='flavor-text'>&quot;You saw him for a moment as he is upon the other side: one of the mighty of the firstborn.&quot;<br>&ndash;Gandalf, The Fellowship of the Ring</p>",
                 Quantity = 1,
-                Number = 11,
+                CardNumber = 11,
                 Artist = Artist.Katherine_Dinger
             });
             Cards.Add(new LotRCard() {
@@ -257,12 +256,11 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Willpower = 2,
                 HitPoints = 4,
                 Traits = new List<string>() { "Dúnedain.", "Ranger." },
-                NormalizedTraits = new List<string> { "Dunedain." },
                 Text = "Action: Exhaust Beravor to choose a player. That player draws 2 cards. Limit once per round.",
                 FlavorText = "But in the wild lands beyond Bree there were mysterious wanderers. The Bree-folk called them Rangers, and knew nothing of their origin.\r\n-The Fellowship of the Ring",
                 HtmlTemplate = "<p><b>Action:</b> Exhaust {self} to choose a player. That player draws 2 cards. Limit once per round.</p><p class='flavor-text'>But in the wild lands beyond Bree there were mysterious wanderers. The Bree-folk called them Rangers, and knew nothing of their origin.<br>&ndash;The Fellowship of the Ring</p>",
                 Quantity = 1,
-                Number = 12,
+                CardNumber = 12,
                 Artist = Artist.Tiziano_Baracchi,
                 HasErrata = true
             });
@@ -281,7 +279,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 FlavorText = "\"But the Lords of Minas Tirith still fight on, defying our enemies, keeping the passage of the River from Argonath to the Sea.\"\r\n-Elrond, The Fellowship of the Ring",
                 Quantity = 3,
                 HtmlTemplate = "<p class='flavor-text'>&quot;But the Lords of Minas Tirith still fight on, defying our enemies, keeping the passage of the River from Argonath to the Sea.&quot;<br>&ndash;Elrond, The Fellowship of the Ring</p>",
-                Number = 13,
+                CardNumber = 13,
                 Artist = Artist.Leonardo_Borazio
             });
             Cards.Add(new LotRCard() {
@@ -301,7 +299,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 FlavorText = "\"He leads now in all perilous ventures. But his life is charmed, or fate spares him for some other end.\"\r\n-Mablung, Ranger of Ithilien,\r\nThe Two Towers",
                 HtmlTemplate = "<p><b>Action:</b> Exhaust {self} to choose a player. Each character controlled by that player gets +1 {Willpower} until the end of the phase.</p><p class='flavor-text'>&quot;He leads now in all perilous ventures. But his life is charmed, or fate spares him for some other end.&quot;<br>&ndash;Mablung, Ranger of Ithilien,<br>The Two Towers</p>",
                 Quantity = 2,
-                Number = 14,
+                CardNumber = 14,
                 Artist = Artist.Jeff_Himmelman
             });
             Cards.Add(new LotRCard() {
@@ -316,12 +314,11 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Willpower = 0,
                 HitPoints = 2,
                 Traits = new List<string>() { "Dúnedain." },
-                NormalizedTraits = new List<string> { "Dunedain." },
                 Text = "Response: After Son of Arnor enters play, choose an enemy card in the staging area or currently engaged with another player. Engage that enemy.",
                 FlavorText = "...and the North-realm they made in Arnor, and the South-realm in Gondor above the mouths of Anduin. -The Fellowship of the Ring",
                 HtmlTemplate = "<p><b>Response:</b> After {self} enters play, choose an enemy card in the staging area or currently engaged with another player. Engage that enemy.</p><p class='flavor-text'>...and the North-realm they made in Arnor, and the South-realm in Gondor above the mouths of Anduin.<br>&ndash;The Fellowship of the Ring</p>",
                 Quantity = 2,
-                Number = 15,
+                CardNumber = 15,
                 Artist = Artist.Ryan_Barger
             });
             Cards.Add(new LotRCard() {
@@ -340,7 +337,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 FlavorText = "...he saw not a shadow, nor a blur, but the small figures of horsemen, many horsemen, and the glint of morning on the tips of their spears was like the twinkle of minute stars beyond the edge of mortal sight. -The Two Towers",
                 HtmlTemplate = "<p><b>Response:</b> After {self} enters play, choose a location. Place 1 progress token on that location.</p><p class='flavor-text'>...he saw not a shadow, nor a blur, but the small figures of horsemen, many horsemen, and the glint of morning on the tips of their spears was like the twinkle of minute stars beyond the edge of mortal sight.<br>&ndash;The Two Towers</p>",
                 Quantity = 3,
-                Number = 16,
+                CardNumber = 16,
                 Artist = Artist.David_Horne
             });
             Cards.Add(new LotRCard() {
@@ -359,7 +356,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 FlavorText = "\"We have been keeping watch on the rivers, ever since we saw a great troop of Orcs going north towards Moria, along the skirts of the mountains, many days ago.\" -Haldir of Lórien, The Fellowship of the Ring",
                 HtmlTemplate = "<p>{keyword:Ranged.}</p><p class='flavor-text'>&quot;We have been keeping watch on the rivers, ever since we saw a great troop of Orcs going north towards Moria, along the skirts of the mountains, many days ago.&quot;<br>&ndash;Haldir of Lórien, The Fellowship of the Ring</p>",
                 Quantity = 2,
-                Number = 17,
+                CardNumber = 17,
                 Artist = Artist.A_M_Sartor
             });
             Cards.Add(new LotRCard() {
@@ -378,7 +375,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 FlavorText = "Five dead Orcs lay there. They had been hewn with many cruel strokes, and two had been beheaded. The ground was wet with their dark blood.\r\n-The Two Towers",
                 HtmlTemplate = "<p><b>Response:</b> After {self} enters play, deal 1 damage to each Orc enemy in play.</p><p class='flavor-text'>Five dead Orcs lay there. They had been hewn with many cruel strokes, and two had been beheaded. The ground was wet with their dark blood.<br>&ndash;The Two Towers</p>",
                 Quantity = 2,
-                Number = 18,
+                CardNumber = 18,
                 Artist = Artist.Kaya
             });
             Cards.Add(new LotRCard() {
@@ -398,7 +395,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 FlavorText = "...there is no knowing what a Dwarf will not dare and do for revenge and the recovery of his own.\r\n-The Hobbit",
                 HtmlTemplate = "<p><b>Response:</b> After a {trait-hero:Dwarf.@Dwarf} you control leaves play, put {self} into play from your hand.</p><p class='flavor-text'>...there is no knowing what a Dwarf will not dare and do for revenge and the recovery of his own.<br>&ndash;The Hobbit</p>",
                 Quantity = 1,
-                Number = 19,
+                CardNumber = 19,
                 Artist = Artist.Even_Mehl_Amundsen
             });
             Cards.Add(new LotRCard() {
@@ -411,7 +408,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Action: Choose and ready 1 ally card.",
                 FlavorText = "\"...no road looks toward safety any longer. Be vigilant!\"\r\n-Gandalf, The Return of the King",
                 Quantity = 2,
-                Number = 20,
+                CardNumber = 20,
                 Artist = Artist.Daarken
             });
             Cards.Add(new LotRCard() {
@@ -424,7 +421,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Action: Exhaust 1 hero you control to choose and ready a different hero.",
                 FlavorText = "\"We will make such a chase as shall be accounted a marvel among the Three Kindreds: Elves, Dwarves, and Men.\"\r\n-Aragorn, The Two Towers",
                 Quantity = 2,
-                Number = 21,
+                CardNumber = 21,
                 Artist = Artist.Tony_Foti
             });
             Cards.Add(new LotRCard() {
@@ -442,7 +439,7 @@ and the City shall be blessed.
 -The Return of the King",
                 HtmlTemplate = "<p><b>Action:</b> Until the end of the phase, all characters get +1 {Attack}. All {trait:Gondor.@Gondor} characters also get +1 {Defense} until the end of the phase.</p><p class='flavor-text'>And the tree that was withered shall be renewed,<br>and he shall plant it in high places,<br>and the City shall be blessed.<br>&ndash;The Return of the King</p>",
                 Quantity = 2,
-                Number = 22,
+                CardNumber = 22,
                 Artist = Artist.Margaret_Hardy
             });
             Cards.Add(new LotRCard() {
@@ -456,7 +453,7 @@ and the City shall be blessed.
                 FlavorText = "There is a seed of courage hidden (often deeply, it is true) in the heart of the fattest and most timid hobbit, waiting for some final and desperate danger to make it grow.\r\n-The Fellowship of the Ring",
                 HtmlTemplate = "<p><b>Action:</b> Put 1 {type:Ally@ally} card into play from your hand. At the end of the phase, if that ally is still in play, return it to your hand.</p><p class='flavor-text'>There is a seed of courage hidden (often deeply, it is true) in the heart of the fattest and most timid hobbit, waiting for some final and desperate danger to make it grow.<br>&ndash;The Fellowship of the Ring</p>",
                 Quantity = 2,
-                Number = 23,
+                CardNumber = 23,
                 Artist = Artist.Winona_Nelson
             });
             Cards.Add(new LotRCard() {
@@ -469,7 +466,7 @@ and the City shall be blessed.
                 Text = "Response: After an ally card leaves play, that card's controller draws 2 cards.",
                 FlavorText = "\"He fell defending the Hobbits, while I was away upon the hill.\r\n-Aragorn, The Two Towers",
                 Quantity = 2,
-                Number = 24,
+                CardNumber = 24,
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
@@ -482,7 +479,7 @@ and the City shall be blessed.
                 Text = "Action: Ready all character cards in play.",
                 FlavorText = "\"If there is only one way, then I must take it. What comes after must come.\" -Frodo Baggins, The Two Towers",
                 Quantity = 1,
-                Number = 25,
+                CardNumber = 25,
                 Artist = Artist.Daarken
             });
             Cards.Add(new LotRCard() {
@@ -498,7 +495,7 @@ and the City shall be blessed.
                 FlavorText = "\"It was commanded yesterday.\" -Denethor, The Return of the King",
                 HtmlTemplate = "<p>Attach to a hero.</p><p>Attached hero gains the {trait:Gondor.@Gondor} trait.</p><p><b>Action:</b> Exhaust {self} to add 2 resources to attached hero's resource pool.</p><p class='flavor-text'>&quot;It was commanded yesterday.&quot;<br>&ndash;Denethor, The Return of the King</p>",
                 Quantity = 2,
-                Number = 26,
+                CardNumber = 26,
                 Artist = Artist.Empty_Room_Studios
             });
             Cards.Add(new LotRCard() {
@@ -515,7 +512,7 @@ and the City shall be blessed.
                 FlavorText = "\"You needn't,\" said Bilbo. \"As a matter of fact it was all mine. Except that Aragorn insisted on my putting in a green stone. He seemed to think it important. I don't know why.\"\r\n-The Fellowship of the Ring",
                 Keywords = new List<string>() { "Restricted." },
                 Quantity = 1,
-                Number = 27,
+                CardNumber = 27,
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard() {
@@ -532,7 +529,7 @@ and the City shall be blessed.
                 Traits = new List<string>() { "Dwarf.", "Warrior." },
                 FlavorText = "\"I am glad to have you standing nigh with your stout legs and your hard axe.\" -Legolas, The Two Towers",
                 Quantity = 3,
-                Number = 28,
+                CardNumber = 28,
                 Artist = Artist.Loren_Fetterman
             });
             Cards.Add(new LotRCard() {
@@ -551,7 +548,7 @@ and the City shall be blessed.
                 FlavorText = "More than a thousand were there mustered. Their spears were like a sprining wood. -The Two Towers",
                 Keywords = new List<string>() { "Sentinel." },
                 Quantity = 3,
-                Number = 29,
+                CardNumber = 29,
                 Artist = Artist.Winona_Nelson
             });
             Cards.Add(new LotRCard() {
@@ -569,7 +566,7 @@ and the City shall be blessed.
                 Keywords = new List<string>() { "Ranged." },
                 FlavorText = "A few of the riders appeared to be bowmen, skilled at shooting from a running horse. -The Two Towers",
                 Quantity = 2,
-                Number = 30,
+                CardNumber = 30,
                 Artist = Artist.Loren_Fetterman
             });
             Cards.Add(new LotRCard() {
@@ -589,7 +586,7 @@ and the City shall be blessed.
                 Text = "Action: Beorn gains +5 Attack until the end of the phase. At the end of the phase in which you trigger this effect, shuffle Beorn back into your deck. (Limit once per round.)",
                 FlavorText = "\"I don't need your service, thank you...but I expect you need mine.\" -The Hobbit",
                 Quantity = 1,
-                Number = 31,
+                CardNumber = 31,
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard() {
@@ -602,7 +599,7 @@ and the City shall be blessed.
                 Text = "Action: Choose a character. Until the end of the phase, that character gains +1 Attack and +1 Defense.",
                 FlavorText = "Throwing back his cloak, he laid his hand on the hilt of a sword that had hung concealed by his side. They did not dare to move. -The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 32,
+                CardNumber = 32,
                 Artist = Artist.Leonardo_Borazio
             });
             Cards.Add(new LotRCard() {
@@ -615,7 +612,7 @@ and the City shall be blessed.
                 Text = "Action: Exhaust a character you control with the ranged keyword to choose a player. Deal 1 damage to each enemy engaged with that player.",
                 FlavorText = "Arrows thick as the rain came whistling over the battlements, and fell clinking and glancing on th estones. Many found their mark. -The Two Towers",
                 Quantity = 2,
-                Number = 33,
+                CardNumber = 33,
                 Artist = Artist.Frank_Walls
             });
             Cards.Add(new LotRCard() {
@@ -628,7 +625,7 @@ and the City shall be blessed.
                 Text = "Combat Action: Choose an enemy engaged with a player. That enemy cannot attack that player this phase.",
                 FlavorText = "A few brave men were strung before them to make a feint of resistance, and many there fell before the rest drew back and fled to either side. -The Hobbit",
                 Quantity = 2,
-                Number = 34,
+                CardNumber = 34,
                 Artist = Artist.Lius_Lasahido,
                 HasErrata = true
             });
@@ -642,7 +639,7 @@ and the City shall be blessed.
                 Text = "Action: Exhaust a character you control to immediately declare it as an attacker (and resolve its attack) against any eligible enemy target.",
                 FlavorText = "\"...for he that strikes the first blow, if he strikes it hard enough, may need to strike no more.\" -Gandalf, The Two Towers",
                 Quantity = 2,
-                Number = 35,
+                CardNumber = 35,
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard() {
@@ -658,7 +655,7 @@ and the City shall be blessed.
 Action: Choose a player. That player's engaged enemies cannot attack that player this phase.",
                 FlavorText = "With a word or cry, suddenly, the Riders halted. A thicket of spears were pointed towards the strangers...\r\n-The Two Towers",
                 Quantity = 2,
-                Number = 36,
+                CardNumber = 36,
                 Artist = Artist.David_Horne,
                 HasErrata = true
             });
@@ -672,7 +669,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Response: After a character is declared as a defender, deal 2 damage to the attacking enemy.",
                 FlavorText = "A swift stroke she dealt, skilled and deadly.\r\n-The Return of the King",
                 Quantity = 1,
-                Number = 37,
+                CardNumber = 37,
                 Artist = Artist.Ijur
             });
             Cards.Add(new LotRCard() {
@@ -685,7 +682,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Action: Choose a player. That player may declare any number of his eligible characters as defenders against each enemy attacking him this phase.",
                 FlavorText = "...and when the task was done, there they would come to an end, alone, houseless, foodless in the midst of a terrible desert. There could be no return. -The Return of the King",
                 Quantity = 1,
-                Number = 38,
+                CardNumber = 38,
                 Artist = Artist.Daarken
             });
             Cards.Add(new LotRCard() {
@@ -700,7 +697,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 FlavorText = "It was rather splendid to be wearing a blade made in Gondolin for the goblin-wars of which so many songs had sung...\r\n-The Hobbit",
                 Keywords = new List<string>() { "Restricted." },
                 Quantity = 2,
-                Number = 39,
+                CardNumber = 39,
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
@@ -715,7 +712,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 FlavorText = "\"Go to the armouries of the Citadel, and get you there the livery and gear of the Tower.\"\r\n-Denethor, The Return of the King",
                 Keywords = new List<string>() { "Restricted." },
                 Quantity = 2,
-                Number = 40,
+                CardNumber = 40,
                 Artist = Artist.Fredrik_Dahl_Tyskerud
             });
             Cards.Add(new LotRCard() {
@@ -730,7 +727,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 FlavorText = "\"But keep your bow ready to hand, and I will keep my axe loose in my belt.\"\r\n-Gimli, The Two Towers",
                 Keywords = new List<string>() { "Restricted." },
                 Quantity = 2,
-                Number = 41,
+                CardNumber = 41,
                 Artist = Artist.Drew_Whitmore
             });
             Cards.Add(new LotRCard() {
@@ -746,7 +743,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 FlavorText = "'Slow should you be to wind that horn again, Boromir,' said Elrond, 'until you stand once more on the borders of your land, and dire need is on you.'\r\n-The Fellowship of the Ring",
                 Keywords = new List<string>() { "Restricted." },
                 Quantity = 1,
-                Number = 42,
+                CardNumber = 42,
                 Artist = Artist.Mark_Winters,
                 HasErrata = true
             });
@@ -765,7 +762,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Action: Reduce your threat by 3 to give control of Wandering Took to another player. Raise that player's threat by 3.",
                 FlavorText = "...but certainly there was something not entirely hobbit-like about them, and once in a while members of the Took-clan would go and have adventures. -The Hobbit",
                 Quantity = 2,
-                Number = 43,
+                CardNumber = 43,
                 Artist = Artist.Tony_Foti
             });
             Cards.Add(new LotRCard() {
@@ -784,7 +781,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Response: After Lórien Guide commits to a quest, place 1 progress token on the active location.",
                 FlavorText = "\"Indeed deep in the wood they dwell...\" -Aragorn, The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 44,
+                CardNumber = 44,
                 Artist = Artist.Kristina_Gehrmann
             });
             Cards.Add(new LotRCard() {
@@ -799,11 +796,10 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Willpower = 1,
                 HitPoints = 3,
                 Traits = new List<string>() { "Dúnedain.", "Ranger." },
-                NormalizedTraits = new List<string> { "Dunedain." },
                 Text = "Response: After Northern Tracker commits to a quest, place 1 progress token on each location in the staging area.",
                 FlavorText = "\"What roads would any dare to tread, what safety would there be in quiet lands, or in the homes of simple men at night, if the Dúnedain were asleep, or were all gone into the grave?\" -Aragorn, The Fellowship of the Ring",
                 Quantity = 2,
-                Number = 45,
+                CardNumber = 45,
                 Artist = Artist.Kristina_Gehrmann
             });
             Cards.Add(new LotRCard() {
@@ -816,7 +812,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Action: Reduce one player's threat by 6, or reduce each player's threat by 2.",
                 FlavorText = "\"Welcome to Caras Galadhan!\" he said. \"Here is the city of the Galadhrim where dwell the Lord Celeborn and Galadriel the Lady of Lórien\" -The Fellowship of the Ring",
                 Quantity = 2,
-                Number = 46,
+                CardNumber = 46,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -829,7 +825,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Response: After you travel to a location, exhaust a Spirit character to place 2 progress tokens on that location.",
                 FlavorText = "Then Aragorn lead the way, and such was the strength of his will in that hour that all the Dúnedain and their horses followed him. -The Return of the King",
                 Quantity = 2,
-                Number = 47,
+                CardNumber = 47,
                 Artist = Artist.Ryan_Barger
             });
             Cards.Add(new LotRCard() {
@@ -842,7 +838,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Response: Cancel a shadow effect just triggered during combat.",
                 FlavorText = "'The hasy stroke goes oft astray,' said Aragorn. 'We must press our Enemy, and no longer wait on him for the next move.' -The Return of the King",
                 Quantity = 2,
-                Number = 48,
+                CardNumber = 48,
                 Artist = Artist.Lius_Lasahido
             });
             Cards.Add(new LotRCard() {
@@ -856,7 +852,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 FlavorText = "\"If Gondor has such men still in these days of fading, great must have been its glory in the days of its rising.\" -Legolas, The Return of the King",
                 HtmlTemplate = "<p><b>Action:</b> Choose a player. Shuffle that player's discard pile back into his deck.</p><p class='flavor-text'>&quot;If Gondor has such men still in these days of fading, great must have been its glory in the days of its rising.&quot;<br>&ndash;Legolas, The Return of the King</p>",
                 Quantity = 2,
-                Number = 49,
+                CardNumber = 49,
                 Artist = Artist.Erfian_Asafat,
                 HasErrata = true
             });
@@ -871,7 +867,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 FlavorText = "\"There is naught that you can do, other than to resist, with hope or without it\"\r\n-Elrond, The Fellowship of the Ring",
                 HtmlTemplate = "<p><b>Response:</b> Cancel the &ldquo;when revealed&rdquo; effects of a card that was just revealed from the encounter deck.</p><p class='flavor-text'>&quot;There is naught that you can do, other than to resist, with hope or without it&quot;<br>&ndash;Elrond, The Fellowship of the Ring</p>",
                 Quantity = 2,
-                Number = 50,
+                CardNumber = 50,
                 Artist = Artist.Ryan_Barger
             });
             Cards.Add(new LotRCard() {
@@ -885,7 +881,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Action: Choose an ally with a printed cost of X in any player's discard pile. Put that ally into play under your control. (The chosen ally can belong to any sphere of influence.)",
                 FlavorText = "\"...we will fight on.\" -Boromir, The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 51,
+                CardNumber = 51,
                 Artist = Artist.Rio_Sabda,
                 HasErrata = true
             });
@@ -899,7 +895,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Action: Choose an enemy engaged with a player. Return that enemy to the staging area.",
                 FlavorText = "The light of the torches and the fire flickered about them...\r\n-The Hobbit",
                 Quantity = 2,
-                Number = 52,
+                CardNumber = 52,
                 Artist = Artist.Erfian_Asafat
             });
             Cards.Add(new LotRCard() {
@@ -912,7 +908,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Action: Return 1 Spirit card from your discard pile to your hand.",
                 FlavorText = "The dwarves no more shall suffer wrong,\r\nThe dwarves of your made mighty spells,\r\nWhile hammers fell like ringing bells\r\nIn places deep, where dark things sleep,\r\nIn hollow halls beneath the fells.\r\n-The Hobbit",
                 Quantity = 1,
-                Number = 53,
+                CardNumber = 53,
                 Artist = Artist.Kaya
             });
             Cards.Add(new LotRCard() {
@@ -925,7 +921,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Action: Choose a hero in any player's discard pile. Put that card into play, under its owner's control.",
                 FlavorText = "'Yes, fortune or fate have heped you,' said Gandalf, 'not to mention courage.'\r\n-The Fellowship of the Ring",
                 Quantity = 1,
-                Number = 54,
+                CardNumber = 54,
                 Artist = Artist.Igor_Kieryluk
             });
             Cards.Add(new LotRCard() {
@@ -940,7 +936,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 FlavorText = "\"You are indeed high in the favor of the Lady!\"\r\n-Unnamed Elf of Lórien,\r\nThe Fellowship of the Ring",
                 HtmlTemplate = "<p>Attach to a hero.</p><p>Attached hero gains +1 {Willpower}.</p><p class='flavor-text'>&quot;You are indeed high in the favor of the Lady!&quot;<br>&ndash;Unnamed Elf of Lórien,<br>The Fellowship of the Ring</p>",
                 Quantity = 2,
-                Number = 55,
+                CardNumber = 55,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -955,7 +951,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 FlavorText = "\"Power to defy our Enemy is not in him, unless shuch power is in the earth itself.\" -Gandalf, The Fellowship of the Ring",
                 HtmlTemplate = "<p>Attach to a location.</p><p>Attached location gets -1 {Threat}.</p><p class='flavor-text'>&quot;Power to defy our Enemy is not in him, unless such power is in the earth itself.&quot;<br>&ndash;Gandalf, The Fellowship of the Ring</p>",
                 Quantity = 2,
-                Number = 56,
+                CardNumber = 56,
                 Artist = Artist.Soul_Core
             });
             Cards.Add(new LotRCard() {
@@ -970,7 +966,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 FlavorText = "\"Here am I, naughty little fly;\r\nyou are fat and lazy.\r\nYou cannot trap me, though you try,\r\nin your cobwebs crazy.\"\r\n-Bilbo Baggins, The Hobbit",
                 HtmlTemplate = "<p>Attach to a hero.</p><p><b>Action:</b> Exhaust {self} to ready attached hero.</p><p class='flavor-text'>&quot;Here am I, naughty little fly;<br>you are fat and lazy.<br>You cannot trap me, though you try,<br>in your cobwebs crazy.&quot;<br>&ndash;Bilbo Baggins, The Hobbit</p>",
                 Quantity = 1,
-                Number = 57,
+                CardNumber = 57,
                 Artist = Artist.Angela_Sung
             });
             Cards.Add(new LotRCard() {
@@ -988,7 +984,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Action: Exhaust Daughter of the Nimrodel to heal up to 2 damage on any 1 hero.",
                 FlavorText = "\"Here is Nimrodel! Of this stream the Silvan Elves made many songs long ago, and still we sing them in the North...I will bate my feet, for it is said that the water is healing to the weary.\" -Legolas, The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 58,
+                CardNumber = 58,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -1006,7 +1002,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Response: After you play Erebor Hammersmith, return the topmost attachment in any player's discard pile to his hand.",
                 FlavorText = "\"In Erebor in the Kingdom of Dain there is such skill...\" -Aragorn, The Return of the King",
                 Quantity = 2,
-                Number = 59,
+                CardNumber = 59,
                 Artist = Artist.Empty_Room_Studios
             });
             Cards.Add(new LotRCard() {
@@ -1025,7 +1021,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Action: Exhaust Henamarth Riversong to look at the top card of the encounter deck.",
                 FlavorText = "\"And I reckon there's Elves and Elves. They're all elvish enough, but they're not all the same.\"\r\n-Sam Gamgee,\r\nThe Fellowship of the Ring",
                 Quantity = 1,
-                Number = 60,
+                CardNumber = 60,
                 Artist = Artist.Jen_Zee
             });
             Cards.Add(new LotRCard() {
@@ -1043,7 +1039,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Response: After Miner of the Iron ~Hills enters play, choose and discard 1 Condition attachment from play.",
                 FlavorText = "...while the four dwarves sat around the table, and talked about mines and gold and troubles with goblins...\r\n-The Hobbit",
                 Quantity = 2,
-                Number = 61,
+                CardNumber = 61,
                 Artist = Artist.Loren_Fetterman
             });
             Cards.Add(new LotRCard() {
@@ -1063,7 +1059,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Action: Exhaust Gléowine to choose a player. That player draws 1 card.",
                 FlavorText = "Then the Riders of the King's House upon white horses rode round about the barrow and sang together a song of Théoden Thengle's son that Gléowine his minstrel made...\r\n-The Return of the King",
                 Quantity = 2,
-                Number = 62,
+                CardNumber = 62,
                 Artist = Artist.Tony_Foti
             });
             Cards.Add(new LotRCard() {
@@ -1076,7 +1072,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Action: Choose a character. Heal all damage from that character.",
                 FlavorText = "\"...understanding, making and healing...These things the Elves of Middle-earth have in some measure gained, though with sorrow.\"\r\n-Elrond, The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 63,
+                CardNumber = 63,
                 Artist = Artist.Ryan_Barger
             });
             Cards.Add(new LotRCard() {
@@ -1090,7 +1086,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Action: Choose a player. That player draws 3 cards.",
                 FlavorText = "\"That is the fairest of all the dwellings of my people. There are no trees like the tress of that land.\"\r\n-Legolas, The Fellowship of the Ring",
                 Quantity = 2,
-                Number = 64,
+                CardNumber = 64,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -1103,7 +1099,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Quest Action: Choose an enemy in the staging area. Until the end of the phase, that enemy does not contribute its Threat.",
                 FlavorText = "\"Radagast is, of course, a worthy Wizard, a master of shapes and changes of hue; and he has much lore of herbs and beasts, and birds are especially his friends.\" -Gandalf, The Fellowship of the Ring",
                 Quantity = 2,
-                Number = 65,
+                CardNumber = 65,
                 Artist = Artist.Lucas_Graciano
             });
             Cards.Add(new LotRCard() {
@@ -1116,7 +1112,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Quest Action: Choose a location in the staging area. Until the end of the phase, that location does not contribute its Threat.",
                 FlavorText = "...Beorn advised them to take this way; for at a place a few days' ride due north of the Carrock was the gate of a little-known pathway through Mirkwood... -The Hobbit",
                 Quantity = 2,
-                Number = 66,
+                CardNumber = 66,
                 Artist = Artist.Empty_Room_Studios
             });
             Cards.Add(new LotRCard() {
@@ -1130,7 +1126,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Action: Look at the top X cards of any player's deck, add 1 of those cards to its owner's hand, and return the rest to the top of the deck in any order.",
                 FlavorText = "\"Less welcome did the Lord Denethor show me then than of old, and grudgingly he permitted me to search among his hoarded scrolls and books.\"\r\n-Gandalf, The Fellowship of the Ring",
                 Quantity = 2,
-                Number = 67,
+                CardNumber = 67,
                 Artist = Artist.Mike_Nash
             });
             Cards.Add(new LotRCard() {
@@ -1143,7 +1139,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Action: Choose a player. Heal all damage on each hero controlled by that player.",
                 FlavorText = "\"...and my house is open to you, if ever you come back this way again.\"\r\n-Beorn, The Hobbit",
                 Quantity = 1,
-                Number = 68,
+                CardNumber = 68,
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
@@ -1157,7 +1153,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Attach to an enemy engaged with a player.\r\nAttached enemy cannot attack.",
                 FlavorText = "\"We shall have it like a coney in a trap. Then we shall learn what kind of thing it is.\"\r\n-Unidentified Man of Gondor,\r\nThe Two Towers",
                 Quantity = 2,
-                Number = 69,
+                CardNumber = 69,
                 Artist = Artist.Alexandru_Sabo
             });
             Cards.Add(new LotRCard() {
@@ -1172,7 +1168,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Attach to a hero.\r\nAction: Discard a card from your hand to give attached hero +1 Defense or +1 Willpower until the end of the phase. Limit 3 times per phase.",
                 FlavorText = "'Speak no evil of the lady Galadriel!' said Aragorn sternly. 'There is in her and in this land no evil, unless a man bring it hither himself. Then let him beware.'\r\n-The Fellowship of the Ring",
                 Quantity = 2,
-                Number = 70,
+                CardNumber = 70,
                 Artist = Artist.Magali_Villeneuve,
                 HasErrata = true
             });
@@ -1187,7 +1183,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Attach to a hero. Attached hero gets -1 Willpower.\r\nResponse: Exhaust ~Dark Knowledge to look at 1 shadow card that was just dealt to an enemy attacking you.",
                 FlavorText = "'Go on then!' said Frodo. 'What do you know?'\r\n'Too much; too many dark things,' said Strider grimly.\r\n-The Fellowship of the Ring",
                 Quantity = 1,
-                Number = 71,
+                CardNumber = 71,
                 Artist = Artist.Empty_Room_Studios
             });
             Cards.Add(new LotRCard() {
@@ -1201,7 +1197,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Attach to a character.\r\nAction: Exhaust Self Preservation to heal 2 points of damage from attached character.",
                 FlavorText = "...how much more of this would they have to endure, or could they endure?\r\n-The Two Towers",
                 Quantity = 2,
-                Number = 72,
+                CardNumber = 72,
                 Artist = Artist.Empty_Room_Studios
             });
             Cards.Add(new LotRCard() {
@@ -1219,7 +1215,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Traits = new List<string>() { "Istari." },
                 Text = "At the end of the round, discard Gandalf from play.\r\nResponse: After Gandalf enters play, (choose 1): draw 3 cards, deal 4 damage to 1 enemy in play, or reduce your threat by 5.",
                 Quantity = 4,
-                Number = 73,
+                CardNumber = 73,
                 Artist = Artist.Lucas_Graciano
             });
             Cards.Add(new LotRCard() {
@@ -1237,7 +1233,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Threat = 2,
                 EncounterSet = "Spiders of Mirkwood",
                 Quantity = 2,
-                Number = 74,
+                CardNumber = 74,
                 Artist = Artist.John_Wigley
             });
             Cards.Add(new LotRCard() {
@@ -1257,7 +1253,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Quantity = 1,
                 EasyModeQuantity = 0,
                 VictoryPoints = 5,
-                Number = 75,
+                CardNumber = 75,
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
@@ -1275,7 +1271,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Threat = 3,
                 EncounterSet = "Spiders of Mirkwood",
                 Quantity = 1,
-                Number = 76,
+                CardNumber = 76,
                 Artist = Artist.Andrew_Olson
             });
             Cards.Add(new LotRCard() {
@@ -1290,7 +1286,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 QuestPoints = 2,
                 EncounterSet = "Spiders of Mirkwood",
                 Quantity = 2,
-                Number = 77,
+                CardNumber = 77,
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new LotRCard() {
@@ -1304,7 +1300,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 QuestPoints = 3,
                 EncounterSet = "Spiders of Mirkwood",
                 Quantity = 3,
-                Number = 78,
+                CardNumber = 78,
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
@@ -1317,7 +1313,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 EncounterSet = "Spiders of Mirkwood",
                 Quantity = 1,
                 EasyModeQuantity = 0,
-                Number = 79,
+                CardNumber = 79,
                 Artist = Artist.Yoann_Boissonnet
             });
             Cards.Add(new LotRCard() {
@@ -1329,7 +1325,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 EncounterSet = "Spiders of Mirkwood",
                 Quantity = 2,
                 EasyModeQuantity = 0,
-                Number = 80,
+                CardNumber = 80,
                 Artist = Artist.Daryl_Mandryk
             });
             Cards.Add(new LotRCard() {
@@ -1348,7 +1344,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Threat = 1,
                 EncounterSet = "Wilderlands",
                 Quantity = 1,
-                Number = 81,
+                CardNumber = 81,
                 Artist = Artist.Alexandru_Sabo
             });
             Cards.Add(new LotRCard() {
@@ -1368,7 +1364,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Quantity = 2,
                 EasyModeQuantity = 1,
                 VictoryPoints = 4,
-                Number = 82,
+                CardNumber = 82,
                 Artist = Artist.Florian_Stitz
             });
             Cards.Add(new LotRCard() {
@@ -1385,7 +1381,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Threat = 2,
                 EncounterSet = "Wilderlands",
                 Quantity = 2,
-                Number = 83,
+                CardNumber = 83,
                 Artist = Artist.Alexandr_Shaldin
             });
             Cards.Add(new LotRCard() {
@@ -1405,7 +1401,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Quantity = 1,
                 EasyModeQuantity = 0,
                 VictoryPoints = 3,
-                Number = 84,
+                CardNumber = 84,
                 Artist = Artist.Sandara_Tang
             });
             Cards.Add(new LotRCard() {
@@ -1423,7 +1419,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Threat = 2,
                 EncounterSet = "Wilderlands",
                 Quantity = 2,
-                Number = 85,
+                CardNumber = 85,
                 Artist = Artist.Ryan_Barger
             });
             Cards.Add(new LotRCard()
@@ -1437,7 +1433,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 EncounterSet = "Wilderlands",
                 Quantity = 2,
                 EasyModeQuantity = 0,
-                Number = 86,
+                CardNumber = 86,
                 Artist = Artist.Marc_Scheff
             });
             Cards.Add(new LotRCard() {
@@ -1452,7 +1448,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 QuestPoints = 1,
                 EncounterSet = "Wilderlands",
                 Quantity = 2,
-                Number = 87,
+                CardNumber = 87,
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
@@ -1467,7 +1463,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 QuestPoints = 6,
                 EncounterSet = "Wilderlands",
                 Quantity = 2,
-                Number = 88,
+                CardNumber = 88,
                 Artist = Artist.Santiago_Villa
             });
             Cards.Add(new LotRCard() {
@@ -1486,7 +1482,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Threat = 2,
                 EncounterSet = "Dol Guldur Orcs",
                 Quantity = 3,
-                Number = 89,
+                CardNumber = 89,
                 Artist = Artist.Anna_Christenson
             });
             Cards.Add(new LotRCard() {
@@ -1505,7 +1501,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Quantity = 1,
                 EasyModeQuantity = 0,
                 VictoryPoints = 4,
-                Number = 90,
+                CardNumber = 90,
                 Artist = Artist.Mathias_Kollros
             });
             Cards.Add(new LotRCard() {
@@ -1523,7 +1519,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 EncounterSet = "Dol Guldur Orcs",
                 Quantity = 2,
                 EasyModeQuantity = 1,
-                Number = 91,
+                CardNumber = 91,
                 Artist = Artist.David_Lecossu,
                 HasErrata = true
             });
@@ -1536,7 +1532,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Shadow = "Shadow: Choose and discard 1 attachment from the defending character. (If this attack is undefended, discard all attachments you control.)",
                 EncounterSet = "Dol Guldur Orcs",
                 Quantity = 1,
-                Number = 92,
+                CardNumber = 92,
                 Artist = Artist.Alexandru_Sabo
             });
             Cards.Add(new LotRCard() {
@@ -1549,7 +1545,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 EncounterSet = "Dol Guldur Orcs",
                 Quantity = 3,
                 EasyModeQuantity = 1,
-                Number = 93,
+                CardNumber = 93,
                 Artist = Artist.Anna_Christenson
             });
             Cards.Add(new LotRCard() {
@@ -1565,7 +1561,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 EasyModeQuantity = 0,
                 EncounterSet = "Dol Guldur Orcs",
                 Quantity = 2,
-                Number = 94,
+                CardNumber = 94,
                 Artist = Artist.Daryl_Mandryk
             });
             Cards.Add(new LotRCard() {
@@ -1580,7 +1576,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 QuestPoints = 2,
                 EncounterSet = "Dol Guldur Orcs",
                 Quantity = 2,
-                Number = 95,
+                CardNumber = 95,
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
@@ -1598,7 +1594,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Threat = 2,
                 EncounterSet = "Passage Through Mirkwood",
                 Quantity = 4,
-                Number = 96,
+                CardNumber = 96,
                 Artist = Artist.Marco_Caradonna
             });
             Cards.Add(new LotRCard() {
@@ -1616,7 +1612,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Threat = 3,
                 EncounterSet = "Passage Through Mirkwood",
                 Quantity = 1,
-                Number = 97,
+                CardNumber = 97,
                 Artist = Artist.Nikolay_Stoyanov
             });
             Cards.Add(new LotRCard() {
@@ -1634,7 +1630,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Threat = 1,
                 EncounterSet = "Passage Through Mirkwood",
                 Quantity = 1,
-                Number = 98,
+                CardNumber = 98,
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
@@ -1649,7 +1645,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 QuestPoints = 3,
                 EncounterSet = "Passage Through Mirkwood",
                 Quantity = 2,
-                Number = 99,
+                CardNumber = 99,
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
@@ -1664,7 +1660,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 QuestPoints = 4,
                 EncounterSet = "Passage Through Mirkwood",
                 Quantity = 2,
-                Number = 100,
+                CardNumber = 100,
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
@@ -1683,11 +1679,10 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Quantity = 2,
                 EasyModeQuantity = 0,
                 VictoryPoints = 5,
-                Number = 101,
+                CardNumber = 101,
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Nazgûl of Dol Guldur",
                 NormalizedTitle = "Nazgul of Dol Guldur",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9102",
@@ -1697,17 +1692,15 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Defense = 3,
                 HitPoints = 9,
                 Traits = new List<string>() { "Nazgûl." },
-                NormalizedTraits = new List<string> { "Nazgul." },
                 Text = "No attachments.\r\nForced: When the prisoner is 'rescued', move Nazgul of Dol Guldur into the staging area.\r\nForced: After a shadow effect dealt to Nazgul of Dol Guldur resolves, the engaged player must choose and discard 1 character he controls.",
                 Threat = 5,
                 EncounterSet = "Escape from Dol Guldur",
                 Quantity = 1,
-                Number = 102,
+                CardNumber = 102,
                 Artist = Artist.David_A_Nash,
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Cavern Guardian",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9103",
                 CardType = CardType.Enemy,
@@ -1722,7 +1715,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Threat = 2,
                 EncounterSet = "Escape from Dol Guldur",
                 Quantity = 2,
-                Number = 103,
+                CardNumber = 103,
                 Artist = Artist.Mark_Winters
             });
             Cards.Add(new LotRCard() {
@@ -1734,7 +1727,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Shadow = "Shadow: Defending player raises his threat by the number of enemies  with which he is engaged.",
                 EncounterSet = "Escape from Dol Guldur",
                 Quantity = 2,
-                Number = 104,
+                CardNumber = 104,
                 Artist = Artist.Igor_Kieryluk
             });
             Cards.Add(new LotRCard() {
@@ -1746,7 +1739,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Shadow = "Shadow: Resolve the 'When Revealed' effect of Iron Shackles.",
                 EncounterSet = "Escape from Dol Guldur",
                 Quantity = 1,
-                Number = 105,
+                CardNumber = 105,
                 Artist = Artist.Drew_Whitmore
             });
             Cards.Add(new LotRCard() {
@@ -1761,7 +1754,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 QuestPoints = 3,
                 EncounterSet = "Escape from Dol Guldur",
                 Quantity = 2,
-                Number = 106,
+                CardNumber = 106,
                 Artist = Artist.Even_Mehl_Amundsen
             });
             Cards.Add(new LotRCard() {
@@ -1776,7 +1769,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 QuestPoints = 1,
                 EncounterSet = "Escape from Dol Guldur",
                 Quantity = 2,
-                Number = 107,
+                CardNumber = 107,
                 Artist = Artist.West_Clendinning
             });
             Cards.Add(new LotRCard() {
@@ -1789,7 +1782,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Keywords = new List<string>() { "Guarded.", " Restricted." },
                 EncounterSet = "Escape from Dol Guldur",
                 Quantity = 1,
-                Number = 108,
+                CardNumber = 108,
                 Artist = Artist.Mike_Nash
             });
             Cards.Add(new LotRCard() {
@@ -1802,7 +1795,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Keywords = new List<string>() { "Guarded.", " Restricted." },
                 EncounterSet = "Escape from Dol Guldur",
                 Quantity = 1,
-                Number = 109,
+                CardNumber = 109,
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
@@ -1815,7 +1808,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Keywords = new List<string>() { "Guarded.", " Restricted." },
                 EncounterSet = "Escape from Dol Guldur",
                 Quantity = 1,
-                Number = 110,
+                CardNumber = 110,
                 Artist = Artist.Nicholas_Cloister
             });
             Cards.Add(new LotRCard() {
@@ -1834,7 +1827,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 EncounterSet = "Journey Along the Anduin",
                 AlternateEncounterSet = "Journey Down the Anduin",
                 Quantity = 3,
-                Number = 111,
+                CardNumber = 111,
                 Artist = Artist.Nikolay_Stoyanov
             });
             Cards.Add(new LotRCard() {
@@ -1848,7 +1841,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 AlternateEncounterSet = "Journey Down the Anduin",
                 Quantity = 1,
                 EasyModeQuantity = 0,
-                Number = 112,
+                CardNumber = 112,
                 Artist = Artist.Mathias_Kollros
             });
             Cards.Add(new LotRCard() {
@@ -1864,7 +1857,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 EncounterSet = "Journey Along the Anduin",
                 AlternateEncounterSet = "Journey Down the Anduin",
                 Quantity = 2,
-                Number = 113,
+                CardNumber = 113,
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
@@ -1882,7 +1875,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Quantity = 3,
                 EasyModeQuantity = 1,
                 VictoryPoints = 3,
-                Number = 114,
+                CardNumber = 114,
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
@@ -1902,7 +1895,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 EncounterSet = "Sauron's Reach",
                 Quantity = 3,
                 EasyModeQuantity = 1,
-                Number = 115,
+                CardNumber = 115,
                 Artist = Artist.Matthew_Starbuck
             });
             Cards.Add(new LotRCard() {
@@ -1915,7 +1908,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 EncounterSet = "Sauron's Reach",
                 Quantity = 3,
                 EasyModeQuantity = 2,
-                Number = 116,
+                CardNumber = 116,
                 Artist = Artist.Tom_Garden
             });
             Cards.Add(new LotRCard() {
@@ -1927,7 +1920,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Shadow = "Shadow: Defending player chooses and returns 1 exhausted ally he controls to its owner's hand. If he controls no exhausted allies, raise his threat by 3.",
                 EncounterSet = "Sauron's Reach",
                 Quantity = 2,
-                Number = 117,
+                CardNumber = 117,
                 Artist = Artist.Matthew_Starbuck
             });
             Cards.Add(new LotRCard() {
@@ -1939,7 +1932,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 FlavorText = "\"But it will be hard to find the path unless the fog lifts a little later on.\"\r\n-Aragorn, The Fellowship of the Ring",
                 EncounterSet = "Sauron's Reach",
                 Quantity = 2,
-                Number = 118,
+                CardNumber = 118,
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
@@ -1956,7 +1949,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 EncounterSet = "Passage Through Mirkwood",
                 Quantity = 1,
                 QuestPoints = 8,
-                Number = 119,
+                CardNumber = 119,
                 Artist = Artist.Ben_Zweifel,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood }
             });
@@ -1973,7 +1966,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 OppositeText = "Forced: When you defeat this stage, proceed to one of the 2 \"A Chosen ~Path\" stages, at random.",
                 OppositeFlavorText = "Unsure of what lies ahead but spurred by the urgency of your message, you choose a path and proceed... ",
                 QuestPoints = 2,
-                Number = 120,
+                CardNumber = 120,
                 Artist = Artist.Ben_Zweifel,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood }
             });
@@ -1992,7 +1985,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 OppositeFlavorText = "The shadows grow darker, and you realize that a foul presence is aiming to draw you from the path. You must defeat it to pass this way.",
                 Quantity = 1,
                 QuestPoints = 0,
-                Number = 121,
+                CardNumber = 121,
                 Artist = Artist.Yoann_Boissonnet,
                 BackArtist = Artist.Ben_Zweifel,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood }
@@ -2012,7 +2005,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 OppositeFlavorText = "You attempt to follow a secret, hidden trail to avoid the enemy...",
                 Quantity = 1,
                 QuestPoints = 10,
-                Number = 122,
+                CardNumber = 122,
                 Artist = Artist.Yoann_Boissonnet,
                 BackArtist = Artist.David_Lecossu,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood }
@@ -2031,7 +2024,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 EncounterSet = "Escape from Dol Guldur",
                 Quantity = 1,
                 QuestPoints = 9,
-                Number = 123,
+                CardNumber = 123,
                 Artist = Artist.Ben_Zweifel,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood },
                 HasErrata = true
@@ -2048,7 +2041,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 OppositeText = "Response: After placing any number of progress tokens on this card, flip the \"prisoner\" hero card face-up, and place 1 damage toke on it. The hero has been \"rescued\" and may now be used by its controller.\r\nThe players, as a group, cannot play more than 1 ally card each round.\r\nPlayers cannot advance to the next stage of the quest unless they have rescued the prisoner and have all 3 \"Escape from Dol Guldur\" objective cards.",
                 Quantity = 1,
                 QuestPoints = 15,
-                Number = 124,
+                CardNumber = 124,
                 Artist = Artist.Kaya,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood }
             });
@@ -2064,7 +2057,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 OppositeText = "Forced: At the beginning of each quest phase, each player places the top card of his deck, face down in front of him as if it just engaged him from the staging area. These cards are called \"Orc Guard\" and act as enemies with: 1 hit point, 1 Attack, and 1 Defense.\r\nPlayers cannot defeat this stage while Nazgul of Dol Guldur is in play. If this stage is defeated and Nazgul of Dol Guldur is not in play, the players have won the game.",
                 Quantity = 1,
                 QuestPoints = 7,
-                Number = 125,
+                CardNumber = 125,
                 Artist = Artist.Kaya,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood },
                 HasErrata = true
@@ -2084,7 +2077,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 AlternateEncounterSet = "Journey Down the Anduin",
                 Quantity = 1,
                 QuestPoints = 8,
-                Number = 126,
+                CardNumber = 126,
                 Artist = Artist.Ben_Zweifel,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SauronsReach, EncounterSet.Wilderlands }
             });
@@ -2102,7 +2095,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Text = "Reveal 1 additional card from the encounter deck each quest phase. Do not make engagement checks during the encounter phase. (Each player may still optionally engage 1 enemy each encounter phase.)",
                 OppositeFlavorText = "As your enemies harass the raft, it is difficult to maintain balance and effectively fight them off.",
                 QuestPoints = 16,
-                Number = 127,
+                CardNumber = 127,
                 Artist = Artist.Ben_Zweifel,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SauronsReach, EncounterSet.Wilderlands }
             });
@@ -2119,7 +2112,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 FlavorText = "The ongoing harassment from your enemies has forced your raft to the shore, and you must now confront their ambush head on. If you survive this attack, your path to the Golden Wood should be open before you...",
                 Text = "When Revealed: Reveal 2 encounter cards per player, and add them to the staging area.\r\nSkip the staging step of the quest phase for the remainder of the game.\r\nOnce there are no enemies in play, the players have won the game.",
                 QuestPoints = 0,
-                Number = 128,
+                CardNumber = 128,
                 Artist = Artist.David_A_Nash,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SauronsReach, EncounterSet.Wilderlands }
             });

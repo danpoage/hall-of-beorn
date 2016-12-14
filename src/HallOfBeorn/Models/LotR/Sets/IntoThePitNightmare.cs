@@ -48,7 +48,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
 
                 EncounterSet = "Into the Pit Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Guillaume_Ducos
             });
             Cards.Add(new LotRCard()
@@ -71,7 +71,7 @@ Forced: After an enemy is defeated, place 1 progress on this stage.
 Progress cannot be placed on ~Goblin Ambush expect by the above effect.",
                 EncounterSet = "Into the Pit Nightmare",
                 Quantity = 1,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new LotRCard()
@@ -90,7 +90,7 @@ Progress cannot be placed on ~Goblin Ambush expect by the above effect.",
                 Shadow = "Shadow: Add Patrol Sentry to the staging area.",
                 EncounterSet = "Into the Pit Nightmare",
                 Quantity = 4,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Guillaume_Ducos
             });
             Cards.Add(new LotRCard()
@@ -109,7 +109,7 @@ Progress cannot be placed on ~Goblin Ambush expect by the above effect.",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack (+3 Attack instead if the active location is a Dark location.)",
                 EncounterSet = "Into the Pit Nightmare",
                 Quantity = 3,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Piya_Wannachaiwong
             });
             Cards.Add(new LotRCard()
@@ -129,7 +129,7 @@ Progress cannot be placed on ~Goblin Ambush expect by the above effect.",
                 Shadow = "Shadow: Shuffle Shadow Dweller back into the encounter deck.",
                 EncounterSet = "Into the Pit Nightmare",
                 Quantity = 2,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Mark_Bulahao
             });
             Cards.Add(new LotRCard()
@@ -147,7 +147,7 @@ Progress cannot be placed on ~Goblin Ambush expect by the above effect.",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack for each Dark location in play.",
                 EncounterSet = "Into the Pit Nightmare",
                 Quantity = 3,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard()
@@ -164,7 +164,7 @@ Progress cannot be placed on ~Goblin Ambush expect by the above effect.",
                 FlavorText = "There were fissures and chasms in the walls...\r\n-The Fellowship of the Ring",
                 EncounterSet = "Into the Pit Nightmare",
                 Quantity = 3,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Katy_Grierson
             });
             Cards.Add(new LotRCard()
@@ -178,7 +178,7 @@ Progress cannot be placed on ~Goblin Ambush expect by the above effect.",
                 Shadow = "Shadow: Attacking enemy gets +3 Defense this phase.",
                 EncounterSet = "Into the Pit Nightmare",
                 Quantity = 3,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Anthony_Feliciano
             });
         }

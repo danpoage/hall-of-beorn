@@ -10,9 +10,6 @@ namespace HallOfBeorn.Models.LotR
     {
         public LotRCard()
         {
-            Text = string.Empty;
-            NormalizedTraits = new List<string>();
-            NormalizedKeywords = new List<string>();
             Categories = new List<Category>();
             EncounterCategories = new List<EncounterCategory>();
             QuestCategories = new List<QuestCategory>();
@@ -24,8 +21,7 @@ namespace HallOfBeorn.Models.LotR
             Html2 = string.Empty;
 
             AlternateEncounterSet = string.Empty;
-            Suffix = string.Empty;
-            AlternateSlug = string.Empty;
+            //Suffix = string.Empty;
         }
 
         #region Effect Functions
@@ -399,7 +395,7 @@ namespace HallOfBeorn.Models.LotR
 
         public LotRCard WithSuffix(string suffix)
         {
-            this.Suffix = suffix;
+            this.SlugSuffix = suffix;
             return this;
         }
 
@@ -436,17 +432,10 @@ namespace HallOfBeorn.Models.LotR
 
         #endregion
 
-
-        public string Id { get; set; }
-
-        public string ShortSlug { get; set; }
-        public string OctgnSlug { get; set; }
+        //public string ShortSlug { get; set; }
+        //public string OctgnSlug { get; set; }
         public int ScenarioNumber { get; set; }
 
-        public string OppositeTitle { get; set; }
-        public string NormalizedOppositeTitle { get; set; }
-
-        public uint Number { get; set; }
         public uint StageNumber { get; set; }
         public char StageLetter { get; set; }
         
@@ -506,34 +495,22 @@ namespace HallOfBeorn.Models.LotR
         public byte? HitPoints { get; set; }
         public byte? QuestPoints { get; set; }
 
-        public List<string> NormalizedTraits { get; set; }
-
-        public List<string> NormalizedKeywords { get; set; }
-
         public List<Category> Categories { get; private set; }
         public List<EncounterCategory> EncounterCategories { get; private set; }
         public List<QuestCategory> QuestCategories { get; private set; }
 
-        public string OppositeText { get; set; }
-        public string OppositeFlavorText { get; set; }
         public string Shadow { get; set; }
         public string EncounterSet { get; set; }
         public string AlternateEncounterSet { get; set; }
         public List<EncounterSet> IncludedEncounterSets { get; set; }
         public bool? PassValue { get; set; }
-        public byte Quantity { get; set; }
         public byte? EasyModeQuantity { get; set; }
         public byte? NightmareModeQuantity { get; set; }
         public string Setup { get; set; }
 
-        public string FlavorText { get; set; }
-        public Artist SecondArtist { get; set; }
-        
-        public ushort Year { get; set; }
         public bool SlugIncludesOppositeTitle { get; set; }
         public bool SlugIncludesType { get; set; }
-        public string Suffix { get; set; }
-
+        
         private bool hasSecondImage;
         public bool HasSecondImage {
             get
@@ -555,23 +532,19 @@ namespace HallOfBeorn.Models.LotR
             get { return secondImagePath; }
         }
 
-        public string Slug
+        protected override string getSetAbbreviation()
         {
-            get
-            {
-                var title = !string.IsNullOrEmpty(NormalizedTitle) ?  NormalizedTitle.ToUrlSafeString() : Title.ToUrlSafeString();
-                var subtitle = SlugIncludesOppositeTitle ? string.Format("{0}-", OppositeTitle.ToUrlSafeString()) : string.Empty;
-                var type = SlugIncludesType ? string.Format("{0}-", CardType.ToString().ToUrlSafeString()) : string.Empty;
-                var suffix = !string.IsNullOrEmpty(Suffix) ? string.Format("{0}-", Suffix) : string.Empty;
-                var set = CardSet.Abbreviation.ToString().ToUrlSafeString();
-                return string.Format("{0}-{1}{2}{3}{4}", title, subtitle, suffix, type, set);
-            }
+            return CardSet.Abbreviation.ToUrlSafeString();
         }
 
-        public string AlternateSlug
+        protected override string getSlug()
         {
-            get;
-            set;
+            var title = !string.IsNullOrEmpty(NormalizedTitle) ?  NormalizedTitle.ToUrlSafeString() : Title.ToUrlSafeString();
+            var subtitle = SlugIncludesOppositeTitle ? string.Format("{0}-", OppositeTitle.ToUrlSafeString()) : string.Empty;
+            var suffix = !string.IsNullOrEmpty(SlugSuffix) ? string.Format("{0}-", SlugSuffix) : string.Empty;
+            var type = SlugIncludesType ? string.Format("{0}-", CardType.ToString().ToUrlSafeString()) : string.Empty;
+            var set = CardSet.Abbreviation.ToString().ToUrlSafeString();
+            return string.Format("{0}-{1}{2}{3}{4}", title, subtitle, suffix, type, set);
         }
 
         public bool HasErrata { get; set; }
@@ -955,6 +928,7 @@ namespace HallOfBeorn.Models.LotR
             return this;
         }
 
+        /*
         public LotRCard WithShortSlug(string shortSlug)
         {
             this.ShortSlug = shortSlug;
@@ -966,6 +940,7 @@ namespace HallOfBeorn.Models.LotR
             this.OctgnSlug = octgnSlug;
             return this;
         }
+        */
 
         public LotRCard WithGeneric()
         {
@@ -995,13 +970,13 @@ namespace HallOfBeorn.Models.LotR
         {
             addTraits(traits);
 
-            foreach (var trait in traits)
-            {
-                if (trait != trait.NormalizeString())
-                {
-                    this.NormalizedTraits.Add(trait.NormalizeString());
-                }
-            }
+            //foreach (var trait in traits)
+            //{
+            //    if (trait != trait.NormalizeString())
+            //    {
+            //        this.NormalizedTraits.Add(trait.NormalizeString());
+            //    }
+            //}
 
             return this;
         }
@@ -1134,9 +1109,9 @@ namespace HallOfBeorn.Models.LotR
             return this;
         }
 
-        public LotRCard WithInfo(uint number, byte quantity, Artist artist)
+        public LotRCard WithInfo(ushort number, byte quantity, Artist artist)
         {
-            this.Number = number;
+            this.CardNumber = number;
             this.Quantity = quantity;
             this.Artist = artist;
 

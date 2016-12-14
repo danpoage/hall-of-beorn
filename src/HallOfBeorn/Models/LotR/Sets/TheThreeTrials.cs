@@ -30,10 +30,9 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IsUnique = true,
                 Quantity = 1,
                 Traits = new List<string>() { "Dúnedain.", "Ranger.", "Scout." },
-                NormalizedTraits = new List<string> { "Dunedain.", "Ranger.", "Scout." },
                 Text = "Response: After a location is explored, ready Idraen.",
                 FlavorText = "\"Where now are the Dúnedain, Elessar, Elessar? Why do thy kinsfolk wander afar?\" -Galadriel, The Two Towers",
-                Number = 25,
+                CardNumber = 25,
                 Artist = Artist.Jake_Murray
             });
             Cards.Add(new LotRCard()
@@ -53,7 +52,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Keywords = new List<string> { "Secrecy 2." },
                 Text = string.Empty,
                 FlavorText = "\"Elrond is sending Elves, and they will get in touch with the Rangers, and maybe with Thranduil's folk in Mirkwood.\" -Gandalf, The Fellowship of the Ring",
-                Number = 26,
+                CardNumber = 26,
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard()
@@ -67,7 +66,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 ResourceCost = 0,
                 Text = "Combat Action: Return a Silvan ally you control to your hand to choose an enemy engaged with a player. That enemy cannot attack that player this phase.",
                 FlavorText = "\"The three of us could not challenge a hundred, so we went ahead and spoke with feigned voices, leading them on into the wood.\" -Haldir, The Fellowship of the Ring",
-                Number = 27,
+                CardNumber = 27,
                 Artist = Artist.Sara_Betsy
             });
             Cards.Add(new LotRCard()
@@ -89,7 +88,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Keywords = new List<string> { "Ranged." },
                 Text = "Response: After you play Rúmil from your hand, choose an enemy engaged with a player. Deal X damage to that enemy where X is the number of ranged characters you control.",
                 FlavorText = "...the Company set out again, guided now by Haldir and his brother Rúmil. -The Fellowship of the Ring",
-                Number = 28,
+                CardNumber = 28,
                 Artist = Artist.Melanie_Maier
             });
             Cards.Add(new LotRCard()
@@ -105,7 +104,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Keywords = new List<string> { "Restricted." },
                 Text = "Attach to a Noldor or Silvan character.\r\nAttached character gets +2 hit points and gains sentinel.",
                 FlavorText = "...they were tall and and clad in grey mail, and from their shoulders hung long white cloaks. -The Fellowship of the Ring",
-                Number = 29,
+                CardNumber = 29,
                 Artist = Artist.Sara_Betsy
             });
             Cards.Add(new LotRCard()
@@ -122,10 +121,9 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Defense = 0,
                 HitPoints = 2,
                 Traits = new List<string>() { "Dúnedain.", "Scout." },
-                NormalizedTraits = new List<string> { "Dunedain.", "Scout." },
                 Text = "You may give Greyflood Wanderer doomed 2 when you play from your hand. If you do, it gains: \"Response: After you play Greyflood Wanderer, place 1 progress token on each location in play.\"",
                 FlavorText = "...others had gone west, and with the help of Aragorn and the Rangers had searched the lands far down the Greyflood... -The Fellowship of the Ring",
-                Number = 30,
+                CardNumber = 30,
                 Artist = Artist.Arden_Beckwith
             });
             Cards.Add(new LotRCard()
@@ -141,7 +139,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Traits = new List<string> { "Title." },
                 Text = "Attach to a Scout hero.\r\nWhile attached character is committed to the quest, place 1 progress on the first location revealed by the encounter deck each round.",
                 FlavorText = "\"I have had a hard life and a long: and the leagues that lie between here and Gondor are a small part in the count of my journeys.\" -Aragorn, The Fellowship of the Ring",
-                Number = 31,
+                CardNumber = 31,
                 Artist = Artist.Melanie_Maier
             });
             Cards.Add(new LotRCard()
@@ -155,7 +153,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 ResourceCost = 0,
                 Text = "Action: Choose a player. That player may choose 1 card from his hand and add it to another player's hand. At the end of the round, if the chosen card is in that player's hand or in play, shuffle it into its owner's deck.",
                 FlavorText = "\"But we have heard rumours of your coming, for the messengers of Elrond passed by Lórien on the way home up the Dimrill Stair. -Haldir, The Fellowship of the Ring",
-                Number = 32,
+                CardNumber = 32,
                 Artist = Artist.Arden_Beckwith
             });
             Cards.Add(new LotRCard()
@@ -169,7 +167,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 ResourceCost = 1,
                 Text = "Action: Choose an enemy in the staging area. That enemy does not make engagement checks this round. Then, if your threat is 20 or less and this is the first time you played a copy of Noiseless Movement this round, return this card to your hand instead of discarding it.",
                 FlavorText = "...the woodland folk were altogether noiseless in their movements. -The Fellowship of the Ring",
-                Number = 33,
+                CardNumber = 33,
                 Artist = Artist.Jordy_Lakiere
             });
             Cards.Add(new LotRCard()
@@ -184,7 +182,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Traits = new List<string> { "Item." },
                 Text = "Attach to a hero. Limit 1 per hero.\r\nThe first event card you play each round that matches attached hero's printed sphere gains secrecy 1.",
                 FlavorText = "Each cloak was fastened about the neck with a brooch like a green leaf veined with silver. -The Fellowship of the Ring",
-                Number = 34,
+                CardNumber = 34,
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new LotRCard()
@@ -203,7 +201,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 OppositeFlavorText = "Three ancient barrows mark the locations for the trials, each the resting place of a different guardian spirit. The Boar Clan waits at the forest's edge for any sign of your victory... or your death. Your only option is to press onward, heading towards the site of one of the three trials...",
                 EncounterSet = "The Three Trials",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.AncientForest },
-                Number = 35,
+                CardNumber = 35,
                 Artist = Artist.Dleoblack
             });
             Cards.Add(new LotRCard()
@@ -224,7 +222,7 @@ namespace HallOfBeorn.Models.LotR.Sets
 When the players control the current trial's Key objective, add all Barrow locations in play to the victory display and immediately advance to a stage 2A of the players' choice. If all stage 2 quests have been defeated, advance to stage 3A, instead.",
                 EncounterSet = "The Three Trials",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.AncientForest },
-                Number = 36,
+                CardNumber = 36,
                 Artist = Artist.Matt_Bradbury
             });
             Cards.Add(new LotRCard()
@@ -245,7 +243,7 @@ When the players control the current trial's Key objective, add all Barrow locat
 When the players control the current trial's Key objective, add all Guardian enemies in play to the victory display and immediately advance to a stage 2A of the players' choice. If all stage 2 quests have been defeated, advance to stage 3A, instead.",
                 EncounterSet = "The Three Trials",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.AncientForest },
-                Number = 37,
+                CardNumber = 37,
                 Artist = Artist.Silver_Saaremael
             });
             Cards.Add(new LotRCard()
@@ -266,7 +264,7 @@ When the players control the current trial's Key objective, add all Guardian ene
 When the players control the current trial's Key objective, add all Guardian enemies and Barrow locations in play to the victory display and immediately advance to a stage 2A of the players' choice. If all stage 2 quests have been defeated, advance to stage 3A, instead.",
                 EncounterSet = "The Three Trials",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.AncientForest },
-                Number = 38,
+                CardNumber = 38,
                 Artist = Artist.Matt_Bradbury
             });
             Cards.Add(new LotRCard()
@@ -288,7 +286,7 @@ When the players control the current trial's Key objective, add all Guardian ene
 Players cannot defeat this stage unless Hallowed Circle is in the victory display. If the players defeat this stage, they win the game.",
                 EncounterSet = "The Three Trials",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.AncientForest },
-                Number = 39,
+                CardNumber = 39,
                 Artist = Artist.Claudio_Pozas
             });
             Cards.Add(new LotRCard()
@@ -309,7 +307,7 @@ Players cannot defeat this stage unless Hallowed Circle is in the victory displa
                 Text = "Cannot have non-Key attachments.\r\nForced: After the last time counter is removed from Boar's Guardian, the engaged player must discard an ally he controls. Place 2 time counters on Boar's Guardian.",
                 VictoryPoints = 3,
                 EncounterSet = "The Three Trials",
-                Number = 40,
+                CardNumber = 40,
                 Artist = Artist.Alexander_Kozachenko
             });
             Cards.Add(new LotRCard()
@@ -330,7 +328,7 @@ Players cannot defeat this stage unless Hallowed Circle is in the victory displa
                 Text = "Cannot have non-Key attachments.\r\nForced: After the last time counter is removed from Wolf's Guardian, it makes an immediate attack against the engaged player. Place 3 time counters on Wolf's Guardian.",
                 VictoryPoints = 3,
                 EncounterSet = "The Three Trials",
-                Number = 41,
+                CardNumber = 41,
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard()
@@ -351,7 +349,7 @@ Players cannot defeat this stage unless Hallowed Circle is in the victory displa
                 Text = "Cannot have non-Key attachments.\r\nForced: After the last time counter is removed from Raven's Guardian, deal 1 damage to each character controlled by the engaged player. Place 4 time counters on Raven's Guardian.",
                 VictoryPoints = 3,
                 EncounterSet = "The Three Trials",
-                Number = 42,
+                CardNumber = 42,
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard()
@@ -369,7 +367,7 @@ Players cannot defeat this stage unless Hallowed Circle is in the victory displa
 If Key of the Boar is discarded, add it to the staging area.",
                 Shadow = "Shadow: Shuffle Key of the Boar back into the encounter deck.",
                 EncounterSet = "The Three Trials",
-                Number = 43,
+                CardNumber = 43,
                 Artist = Artist.Ellyson_Ferrari_Lifante
             });
             Cards.Add(new LotRCard()
@@ -387,7 +385,7 @@ If Key of the Boar is discarded, add it to the staging area.",
 If Key of the Wolf is discarded, add it to the staging area.",
                 Shadow = "Shadow: Shuffle Key of the Wolf back into the encounter deck.",
                 EncounterSet = "The Three Trials",
-                Number = 44,
+                CardNumber = 44,
                 Artist = Artist.Ellyson_Ferrari_Lifante
             });
             Cards.Add(new LotRCard()
@@ -405,7 +403,7 @@ If Key of the Wolf is discarded, add it to the staging area.",
 If Key of the Raven is discarded, add it to the staging area.",
                 Shadow = "Shadow: Shuffle Key of the Raven back into the encounter deck.",
                 EncounterSet = "The Three Trials",
-                Number = 45,
+                CardNumber = 45,
                 Artist = Artist.Ellyson_Ferrari_Lifante
             });
             Cards.Add(new LotRCard()
@@ -422,7 +420,7 @@ If Key of the Raven is discarded, add it to the staging area.",
                 FlavorText = "They heard of the Great Barrows, and the green mounds, and the stone-rings upon the hills and in the hollows among the hills. -The Fellowship of the Ring",
                 VictoryPoints = 2,
                 EncounterSet = "The Three Trials",
-                Number = 46,
+                CardNumber = 46,
                 Artist = Artist.Jose_Vega
             });
             Cards.Add(new LotRCard()
@@ -438,7 +436,7 @@ If Key of the Raven is discarded, add it to the staging area.",
                 Text = "The players, as a group, cannot have more than 5 allies in play. (If there are more than 5 allies in play, discard allies until only 5 remain.)",
                 FlavorText = "Raising himself on one arm he looked, and saw now in the pale light that they were in a kind of passage which behind them turned a corner. -The Fellowship of the Ring",
                 EncounterSet = "The Three Trials",
-                Number = 47,
+                CardNumber = 47,
                 Artist = Artist.Jose_Vega
             });
             Cards.Add(new LotRCard()
@@ -455,7 +453,7 @@ If Key of the Raven is discarded, add it to the staging area.",
                 FlavorText = "Stone rings grinned out of the ground like broken teeth in the moonlight. -The Fellowship of the Ring",
                 VictoryPoints = 2,
                 EncounterSet = "The Three Trials",
-                Number = 48,
+                CardNumber = 48,
                 Artist = Artist.Jose_Vega
             });
             Cards.Add(new LotRCard()
@@ -478,7 +476,7 @@ Travel: The players must exhaust 3 Key objectives.
 Forced: After the players travel here, each engaged Guardian enemy makes an immediate attack.",
                 VictoryPoints = 5,
                 EncounterSet = "The Three Trials",
-                Number = 49,
+                CardNumber = 49,
                 Artist = Artist.Jose_Vega
             });
             Cards.Add(new LotRCard()
@@ -498,7 +496,7 @@ Forced: After the players travel here, each engaged Guardian enemy makes an imme
                 Text = "Cannot have attachments.\r\nSpirit of the Wild gets +1 Threat and +1 Attack for each Key objectives the players control.",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack for each Key objective the players control.",
                 EncounterSet = "The Three Trials",
-                Number = 50,
+                CardNumber = 50,
                 Artist = Artist.Alexander_Kozachenko
             });
             Cards.Add(new LotRCard()
@@ -514,7 +512,7 @@ Forced: After the players travel here, each engaged Guardian enemy makes an imme
                 Text = "Travel: Search the encounter deck and discard pile for a Spirit enemy and add it to the staging area.",
                 Shadow = "Shadow: If this attack destroys a character, remove a time counter from an enemy, if able.",
                 EncounterSet = "The Three Trials",
-                Number = 51,
+                CardNumber = 51,
                 Artist = Artist.Anthony_Feliciano
             });
             Cards.Add(new LotRCard()
@@ -532,7 +530,7 @@ Forced: After the players travel here, each engaged Guardian enemy makes an imme
                 Keywords = new List<string> { "Doomed 2." },
                 Text = "X is the number of players in the game.\r\nWhile Grim Foothills is in the staging area, progress must be placed on Grim Foothills before it can be placed on the active location.",
                 EncounterSet = "The Three Trials",
-                Number = 52,
+                CardNumber = 52,
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard()
@@ -546,7 +544,7 @@ Forced: After the players travel here, each engaged Guardian enemy makes an imme
                 Text = "When Revealed: Deal 1 damage to each non-unique character in play. If the players control 3 Key objectives, Curse of the Wild Men gains surge.",
                 Shadow = "Shadow: Attacking enemy gets +1 AQttack for each Key objective the players control.",
                 EncounterSet = "The Three Trials",
-                Number = 53,
+                CardNumber = 53,
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new LotRCard()
@@ -560,7 +558,7 @@ Forced: After the players travel here, each engaged Guardian enemy makes an imme
                 Text = "When Revealed: Each Guardian enemy makes an attack. If there are no Guardian enemies in play, reveal a random Guardian enemy from the victory display, and add it to the staging area.",
                 Shadow = "If the attacking enemy is a Guardian, it makes an additional attack after this one.",
                 EncounterSet = "The Three Trials",
-                Number = 54,
+                CardNumber = 54,
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard()
@@ -574,7 +572,7 @@ Forced: After the players travel here, each engaged Guardian enemy makes an imme
                 Text = "When Revealed: Remove X time counters from each enemy in play with the time keyword, where X is the number of players.",
                 Shadow = "Shadow: If attacking enemy is a Guardian, deal it 2 additional shadow cards for this attack.",
                 EncounterSet = "The Three Trials",
-                Number = 55,
+                CardNumber = 55,
                 Artist = Artist.Darek_Zabrocki
             });
         }

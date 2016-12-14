@@ -25,7 +25,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EasyModeQuantity = 1,
                 Text = "When Revealed: The last player deals damage equal to The ~Nameless Fear's attack to a hero he controls. This effect cannot be canceled.",
                 Shadow = "Shadow: Deal damage equal to The ~Nameless Fear's Attack to the defending character.",
-                Number = 28,
+                CardNumber = 28,
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard() {
@@ -41,7 +41,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Setup: Prepare the quest deck. Add The Nameless Fear to the staging area. Remove all copies of A Foe Beyond from the encounter deck. Then, shuffle 1 copy of A Foe Beyond per player back into the encounter deck.",
                 OppositeText = "When Revealed: Reveal 1 encounter card per player, and add it to the staging area. Then, add A Presence in the Dark to your victory display.",
                 VictoryPoints = 2,
-                Number = 69,
+                CardNumber = 69,
                 Artist = Artist.Igor_Kieryluk,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
             });
@@ -58,7 +58,7 @@ namespace HallOfBeorn.Models.LotR.Sets
 
 If players defeat this stage, they win the game.",
                 Quantity = 1,
-                Number = 66,
+                CardNumber = 66,
                 Artist = Artist.Ben_Zweifel,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.TwistsAndTurns, EncounterSet.HazardsOfThePit, EncounterSet.GoblinsOfTheDeep }
             });
@@ -72,7 +72,7 @@ If players defeat this stage, they win the game.",
                 Quantity = 1,
                 Text = "Action: Exhaust a hero to claim this objective if it has no encounters attached. Then, attach Abandoned ~Tools to that hero. (If detached, return Abandoned ~Tools to the staging area.)",
                 Keywords = new List<string>() { "Guarded.", " Restricted." },
-                Number = 29,
+                CardNumber = 29,
                 Artist = Artist.Stu_Barnes
             });
             Cards.Add(new LotRCard() {
@@ -84,7 +84,7 @@ If players defeat this stage, they win the game.",
                 Quantity = 3,
                 ResourceCost = 1,
                 Text = "Action: Exhaust a Dwarf character to place 2 progress tokens on the active location. (4 progress tokens instead if it is an Underground or Mountain location.)",
-                Number = 12,
+                CardNumber = 12,
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
@@ -103,7 +103,7 @@ If players defeat this stage, they win the game.",
                 HitPoints = 3,
                 Text = "Action: Pay 1 resource from a hero's resource pool to add 1 resource to Bifur's resource pool. Any player may trigger this ability. (Limit once per round.)",
                 FlavorText = "\"And winter comes after autumn.\" - Bifur, The Hobbit",
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -115,7 +115,7 @@ If players defeat this stage, they win the game.",
                 Quantity = 3,
                 Text = "When Revealed: The first player must discard 3 resources from each hero he controls.",
                 Shadow = "Shadow: Defending player must discard 2 resources from each hero he controls.",
-                Number = 56,
+                CardNumber = 56,
                 Artist = Artist.Anthony_Palumbo
             });
             Cards.Add(new LotRCard() {
@@ -133,7 +133,7 @@ If players defeat this stage, they win the game.",
                 Text = "When Revealed: The first player must choose and discard an attachment from a questing character, if able.",
                 Shadow = "Shadow: If this attack is undefended, deal 2 additional shadow cards to attacking enemy.",
                 Threat = 2,
-                Number = 54,
+                CardNumber = 54,
                 Artist = Artist.Jake_Murray
             });
             Cards.Add(new LotRCard() {
@@ -147,7 +147,7 @@ If players defeat this stage, they win the game.",
                 IsUnique = true,
                 Text = "Action: Exhaust a hero to claim this objective. Then, attach Book of Mazarbul to that hero. (If detached, return Book of Mazarbul to the staging area.)Attached hero cannot attack and does not exhaust to commit to a quest.",
                 Keywords = new List<string>() { "Restricted." },
-                Number = 24,
+                CardNumber = 24,
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard() {
@@ -160,7 +160,7 @@ If players defeat this stage, they win the game.",
                 Quantity = 3,
                 ResourceCost = 0,
                 Text = "Attach to a Dwarf or Hobbit character. Limit 1 Boots from Erebor per character.\r\nAttached character gets +1 hit point.",
-                Number = 13,
+                CardNumber = 13,
                 Artist = Artist.Carolina_Eade
             });
             Cards.Add(new LotRCard() {
@@ -175,7 +175,7 @@ If players defeat this stage, they win the game.",
                 Text = "While Branching Paths is in the staging area, each Dark location gets +1 Threat.Forced: After Branching Paths leaves play as an explored location, look at the top 3 cards of the encounter deck. Players must choose 1 of those to reveal and add to the staging area, moving the other 2 to the bottom of the deck.",
                 Threat = 1,
                 QuestPoints = 3,
-                Number = 36,
+                CardNumber = 36,
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
@@ -192,7 +192,7 @@ If players defeat this stage, they win the game.",
                 Threat = 3,
                 QuestPoints = 3,
                 VictoryPoints = 2,
-                Number = 18,
+                CardNumber = 18,
                 Artist = Artist.Lin_Bo
             });
             Cards.Add(new LotRCard() {
@@ -204,7 +204,7 @@ If players defeat this stage, they win the game.",
                 Quantity = 3,
                 Text = "When Revealed: Each enemy and location currently in the staging area gets +1 Threat until the end of the phase. (+3 Threat instead if it is a Dark location.) Players may exhaust a Cave Torch to cancel this effect.",
                 Shadow = "Shadow: attacking enemy gets +2 Attack.",
-                Number = 40,
+                CardNumber = 40,
                 Artist = Artist.Anthony_Palumbo
             });
             Cards.Add(new LotRCard() {
@@ -216,7 +216,7 @@ If players defeat this stage, they win the game.",
                 Traits = new List<string>() { "Hazard." },
                 Quantity = 3,
                 Text = "When Revealed: Remove all progress tokens from the current quest card and active location. If Cave In removed no progress tokens, it gains surge.",
-                Number = 48,
+                CardNumber = 48,
                 Artist = Artist.Winona_Nelson
             });
             Cards.Add(new LotRCard() {
@@ -230,7 +230,7 @@ If players defeat this stage, they win the game.",
                 Text = "Attach to a hero.\r\nAction: Exhaust Cave Torch to place up to 3 progress tokens on a Dark location.Forced: After Cave Torch exhausts, discard the top card of the encounter deck. If that card is an enemy, add it to the staging area.",
                 Keywords = new List<string>() { "Restricted." },
                 HtmlTemplate = "<p>Attach to a {type:Hero@hero}. {keyword:Restricted.}</p><p><b>Action:</b> Exhaust self to place up to 3 progress on a {trait:Dark.@Dark} location.</p><p><b>Forced:</b> After {self} exhausts, discard the top card of the encounter deck. If that card is an enemy, add it to the staging area.</p>",
-                Number = 41,
+                CardNumber = 41,
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
@@ -249,7 +249,7 @@ If players defeat this stage, they win the game.",
                 Text = "For each excess point of combat damage dealt by Cave-troll (damage that is dealt beyond the remaining hit points of the character damaged by its attack) you must damage another character you control.",
                 Threat = 4,
                 VictoryPoints = 2,
-                Number = 20,
+                CardNumber = 20,
                 Artist = Artist.Timo_Karhula
             });
             Cards.Add(new LotRCard() {
@@ -261,7 +261,7 @@ If players defeat this stage, they win the game.",
                 Quantity = 3,
                 Text = "When Revealed: Put the top enemy in the encounter discard pile into play, engaged with the first player. If this effect put no enemies into play, Chance Encounter gains surge.",
                 Shadow = "Shadow: attacking enemy gets +1 Attack. (+3 Attack instead if engaged with the first player.)",
-                Number = 45,
+                CardNumber = 45,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -280,7 +280,7 @@ If players defeat this stage, they win the game.",
                 Text = "When Revealed: Chieftain of the Pit gets +3 Attack until the end of the round.",
                 Shadow = "Shadow: attacking enemy attacks again after this attack. Deal it another shadow card for the next attack.",
                 Threat = 2,
-                Number = 30,
+                CardNumber = 30,
                 Artist = Artist.John_Stanko
             });
             Cards.Add(new LotRCard() {
@@ -293,7 +293,7 @@ If players defeat this stage, they win the game.",
                 Quantity = 2,
                 EasyModeQuantity = 0,
                 Text = "When Revealed: Each player must exhaust a character and discard the top card of his deck, if able. If the printed cost of the discarded card is equal to or higher than the remaining hit points of the exhausted character, discard the exhausted character.",
-                Number = 49,
+                CardNumber = 49,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -306,7 +306,7 @@ If players defeat this stage, they win the game.",
                 EasyModeQuantity = 1,
                 Text = "When Revealed: Deal 1 damage to each exhausted character. (2 damage instead if the active location is a Dark location.)",
                 Shadow = "Shadow: Deal 1 damage to the defending character. (Attacking enemy gets +2 Attack instead if this attack is undefended.)",
-                Number = 50,
+                CardNumber = 50,
                 Artist = Artist.Igor_Kieryluk
             });
             Cards.Add(new LotRCard() {
@@ -323,7 +323,7 @@ If players defeat this stage, they win the game.",
                 QuestPoints = 254,
                 IsVariableQuestPoints = true,
                 VictoryPoints = 3,
-                Number = 52,
+                CardNumber = 52,
                 Artist = Artist.Stu_Barnes
             });
             Cards.Add(new LotRCard() {
@@ -342,7 +342,7 @@ In many-pillared halls of stone
 With golden roof and silver floor,
 And runes of power upon the door.
 -The Fellowship of the Ring ",
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
@@ -360,7 +360,7 @@ And runes of power upon the door.
                 Willpower = 1,
                 HitPoints = 4,
                 Text = "Response: After Dwalin attacks and destroys an Orc enemy, lower your threat by 2.",
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Tony_Foti
             });
             Cards.Add(new LotRCard() {
@@ -375,7 +375,7 @@ And runes of power upon the door.
                 Text = "Attach to a Dwarf character.\r\nAttached character gets +1 Attack.\r\nResponse: After attached character attacks, deal 1 damage to the defending enemy.",
                 FlavorText = "\"We make good armour and keen swords, but we cannot again make mail or blade to match those that were made before the dragon came.\" -Gloin, The Fellowship of the Ring",
                 Keywords = new List<string>() { "Restricted." },
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Carolina_Eade
             });
             Cards.Add(new LotRCard() {
@@ -391,7 +391,7 @@ And runes of power upon the door.
                 Threat = 7,
                 QuestPoints = 7,
                 VictoryPoints = 1,
-                Number = 16,
+                CardNumber = 16,
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
@@ -411,7 +411,7 @@ And runes of power upon the door.
 Player cannot advance to the next stage of the scenario unless Bridge of Khazad-dum is in their victory display.",
                 FlavorText = "You have been sent by the White Council to Moria, to deliver a message to Balin and his Dwarven colony. No one has heard from him in a while.",
                 OppositeFlavorText = "The doors of the East-gate hang crooked on their henges. The darkness inside the doorway is still and impenetrable, shutting out the last beams of a sinking sun.",
-                Number = 64,
+                CardNumber = 64,
                 Artist = Artist.Ben_Zweifel,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.TwistsAndTurns, EncounterSet.HazardsOfThePit, EncounterSet.GoblinsOfTheDeep }
             });
@@ -432,7 +432,7 @@ Player cannot advance to the next stage of the scenario unless Bridge of Khazad-
 @"Erebor ~Record Keeper cannot attack or defend.
 
 Action: Exhaust Erebor ~Record Keeper and pay 1 Lore resource to choose and ready a Dwarf character.",
-                Number = 11,
+                CardNumber = 11,
                 Artist = Artist.Andrew_Johanson
             });
             Cards.Add(new LotRCard() {
@@ -444,7 +444,7 @@ Action: Exhaust Erebor ~Record Keeper and pay 1 Lore resource to choose and read
                 Quantity = 3,
                 ResourceCost = 3,
                 Text = "Response: After players quest unsuccessfully, choose a player. That player does not raise his threat.",
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Dleoblack
             });
             Cards.Add(new LotRCard() {
@@ -460,7 +460,7 @@ Action: Exhaust Erebor ~Record Keeper and pay 1 Lore resource to choose and read
                 Threat = 2,
                 QuestPoints = 2,
                 VictoryPoints = 1,
-                Number = 17,
+                CardNumber = 17,
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard() {
@@ -474,7 +474,7 @@ Action: Exhaust Erebor ~Record Keeper and pay 1 Lore resource to choose and read
                 Text = "When Revealed: Each player may choose and discard 1 card at random from his hand. If all players did not discard 1 card, Fouled Well gains surge.",
                 Threat = 3,
                 QuestPoints = 5,
-                Number = 53,
+                CardNumber = 53,
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
@@ -491,7 +491,7 @@ Action: Exhaust Erebor ~Record Keeper and pay 1 Lore resource to choose and read
                 HitPoints = 1,
                 Text = "Players cannot optionally engaged Goblin Archer.\r\nCharacters with ranged are eligible to attack Goblin Archer while it is in the staging area.Forced: After an enemy is revealed from the encounter deck, the first player must deal 1 damage to 1 character he controls.",
                 Threat = 2,
-                Number = 32,
+                CardNumber = 32,
                 Artist = Artist.Salvador_Trakal
             });
             Cards.Add(new LotRCard() {
@@ -509,7 +509,7 @@ Action: Exhaust Erebor ~Record Keeper and pay 1 Lore resource to choose and read
                 Text = "When Revealed: Goblin Follower engages the last player.",
                 Shadow = "Shadow: attacking enemy gets +1 Attack. (+2 Attack instead if attacking the last player.)",
                 Threat = 1,
-                Number = 35,
+                CardNumber = 35,
                 Artist = Artist.Salvador_Trakal
             });
             Cards.Add(new LotRCard() {
@@ -528,7 +528,7 @@ Forced: After an enemy is revealed from the encounter deck, discard it instead o
 If there are no enemies in play, immediately advance to the next stage of the scenario. (Players can also advance by placing 11 progress tokens on ~Goblin Patrol.)",
                 FlavorText = "The skeletons of Dwarves and Orcs lie undisturbed, but you have discovered no recent sign of the Dwarven colony. The sound of scampering feet travels to your ears, and you move in that direction to investigate. There is a patrol of Goblins, marching in a loose formation through the shadows.",
                 Quantity = 1,
-                Number = 65,
+                CardNumber = 65,
                 Artist = Artist.Ilich_Henriquez,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.TwistsAndTurns, EncounterSet.HazardsOfThePit, EncounterSet.GoblinsOfTheDeep }
             });
@@ -546,7 +546,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 HitPoints = 2,
                 Text = "Each player with a threat of 25 or higher cannot optionally engage Goblin Scout.",
                 Threat = 3,
-                Number = 60,
+                CardNumber = 60,
                 Artist = Artist.Winona_Nelson
             });
             Cards.Add(new LotRCard() {
@@ -564,7 +564,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Text = "Goblin Spearman gets +2 Attack if its attack is undefended.",
                 Shadow = "Shadow: Add Goblin Spearman to the staging area.",
                 Threat = 2,
-                Number = 31,
+                CardNumber = 31,
                 Artist = Artist.Salvador_Trakal
             });
             Cards.Add(new LotRCard() {
@@ -582,7 +582,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Text = "Goblin Swordsman gets +2 Attack if its attack is undefended.",
                 Shadow = "Shadow: Add Goblin Swordsman to the staging area.",
                 Threat = 1,
-                Number = 61,
+                CardNumber = 61,
                 Artist = Artist.Winona_Nelson
             });
             Cards.Add(new LotRCard() {
@@ -597,7 +597,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Shadow = "Shadow: attacking enemy gets +1 Attack. (+3 Attack instead if attacking enemy is a Goblin.)",
                 Threat = 2,
                 QuestPoints = 7,
-                Number = 63,
+                CardNumber = 63,
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard() {
@@ -616,7 +616,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Text = "Immune to ranged damage.\r\nNo attachments can be played on Great Cave-troll.",
                 Threat = 2,
                 VictoryPoints = 3,
-                Number = 42,
+                CardNumber = 42,
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
@@ -627,7 +627,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 EncounterSet = "The Seventh Level",
                 Quantity = 2,
                 Text = "When Revealed: Each player must raise his threat by 1 for each enemy in the staging area. Then, the last player discards an attachment he controls.",
-                Number = 22,
+                CardNumber = 22,
                 Artist = Artist.Ryan_Barger
             });
             Cards.Add(new LotRCard() {
@@ -641,7 +641,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 ResourceCost = 0,
                 Text = "Action: Choose a Dwarf character. Until the end of the phase, that character gets +3 Attack.",
                 HtmlTemplate = "<p><b>Action:</b> Choose a {trait-character:Dwarf.@Dwarf}. Until the end of the phase, that character gets +3 Attack.</p>",
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Igor_Kieryluk
             });
             Cards.Add(new LotRCard() {
@@ -655,7 +655,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Text = "While Knees of the Mountain is in the staging area, it gains: 'Forced: After an enemy engages a player, it gets +1 Attack until the end of the round.'",
                 Threat = 2,
                 QuestPoints = 3,
-                Number = 57,
+                CardNumber = 57,
                 Artist = Artist.Stacey_Diana_Clark
             });
             Cards.Add(new LotRCard() {
@@ -671,7 +671,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Shadow = "Shadow: Cancel all combat damage dealt to attacking enemy.",
                 Threat = 4,
                 QuestPoints = 4,
-                Number = 37,
+                CardNumber = 37,
                 Artist = Artist.Stu_Barnes
             });
             Cards.Add(new LotRCard() {
@@ -683,7 +683,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Quantity = 1,
                 Text = "When Revealed: Shuffle all locations in the encounter discard pile back into the encounter deck.",
                 Keywords = new List<string>() { "Surge." },
-                Number = 39,
+                CardNumber = 39,
                 Artist = Artist.Stu_Barnes
             });
             Cards.Add(new LotRCard() {
@@ -697,7 +697,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Text = "When Revealed: Reveal X additional cards from the encounter deck and add them to the staging area. X is the number of players in the game.",
                 Shadow = "Shadow: attacking enemy gets +X Attack. X is the number of players in the game.",
                 Keywords = new List<string>() { "Doomed 1." },
-                Number = 46,
+                CardNumber = 46,
                 Artist = Artist.Noah_Bradley
             });
             Cards.Add(new LotRCard() {
@@ -716,7 +716,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Text = "If Mountain Warg is dealt a shadow card with no effect, return Mountain Warg to the staging area after it attacks.",
                 Shadow = "Shadow: attacking enemy gets +1 Attack. (+2 Attack instead if a Mountain is the active location.)",
                 Threat = 2,
-                Number = 55,
+                CardNumber = 55,
                 Artist = Artist.Allison_Theus
             });
             Cards.Add(new LotRCard() {
@@ -730,7 +730,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 ResourceCost = 2,
                 IsUnique = true,
                 Text = "Attach to a Dwarf hero.\r\nAction: Exhaust Narvi's Belt to give attached hero a Leadership, Lore, Tactics, or Spirit icon until the end of the phase.",
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Carolina_Eade,
                 HasErrata = true
             });
@@ -743,7 +743,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Quantity = 3,
                 Text = "When Revealed: If the players are not on stage 1, shuffle the current quest card into the quest deck, then reveal a new quest card. Otherwise, New Devilry gains surge.",
                 Shadow = "Shadow: If this attack is undefended, raise your threat by The Nameless Fear's Threat.",
-                Number = 26,
+                CardNumber = 26,
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
@@ -761,7 +761,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 HitPoints = 1,
                 Text = "While Orc Drummer is in the staging area, each enemy gets +X Threat. X is the number of players in the game.",
                 Threat = 1,
-                Number = 43,
+                CardNumber = 43,
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
@@ -780,7 +780,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Text = "When Revealed: Reveal 1 card from the encounter deck and add it to the staging area.",
                 Keywords = new List<string>() { "Surge." },
                 Threat = 2,
-                Number = 21,
+                CardNumber = 21,
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard() {
@@ -799,7 +799,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Text = "Forced: Before Patrol Leader is dealt damage, discard the top card of the encounter deck. If the discarded card is an enemy, cancel that damage.",
                 Shadow = "Shadow: Cancel all damage dealt to this enemy.",
                 Threat = 3,
-                Number = 14,
+                CardNumber = 14,
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
@@ -813,7 +813,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Text = "While Plundered Armoury is in the staging area, enemies get +1 Attack.Response: After Plundered Armoury leaves play as an explored location, each player may attach a Weapon or Armour attachment from his hand to 1 character he controls.",
                 Threat = 3,
                 QuestPoints = 2,
-                Number = 34,
+                CardNumber = 34,
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard() {
@@ -832,7 +832,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 FlavorText = "As the presence draws near, doubt and fear surround you like a vast shadow. You must find daylight, you must escape from the Black Pit...",
                 QuestPoints = 5,
                 VictoryPoints = 1,
-                Number = 70,
+                CardNumber = 70,
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Magali_Villeneuve,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
@@ -853,7 +853,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 FlavorText = "As the presence draws near, doubt and fear surround you like a vast shadow. You must find daylight, you must escape from the Black Pit...",
                 QuestPoints = 7,
                 VictoryPoints = 1,
-                Number = 71,
+                CardNumber = 71,
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Magali_Villeneuve,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
@@ -874,7 +874,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 FlavorText = "As the presence draws near, doubt and fear surround you like a vast shadow. You must find daylight, you must escape from the Black Pit...",
                 QuestPoints = 1,
                 VictoryPoints = 2,
-                Number = 72,
+                CardNumber = 72,
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.David_Lecossu,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
@@ -895,7 +895,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 FlavorText = "As the presence draws near, doubt and fear surround you like a vast shadow. You must find daylight, you must escape from the Black Pit...",
                 QuestPoints = 3,
                 VictoryPoints = 1,
-                Number = 73,
+                CardNumber = 73,
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Ilich_Henriquez,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
@@ -915,7 +915,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 OppositeText = "When Revealed: Shuffle all copies of A Foe Beyond from the encounter discard pile back into the encounter deck. Reveal the top 2 cards of the quest deck. Choose 1 to become the active quest (flipped to side 2B) and put the other on the bottom of the quest deck. Then, add Hasty Council to your victory display.",
                 FlavorText = "As the presence draws near, doubt and fear surround you like a vast shadow. You must find daylight, you must escape from the Black Pit...",
                 VictoryPoints = 2,
-                Number = 74,
+                CardNumber = 74,
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Stacey_Diana_Clark,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
@@ -940,7 +940,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
 Players may bypass this quest card at the end of the combat phase. If the players defeat this stage, they escape and win the game.",
                 FlavorText = "As the presence draws near, doubt and fear surround you like a vast shadow. You must find daylight, you must escape from the Black Pit...",
                 QuestPoints = 9,
-                Number = 75,
+                CardNumber = 75,
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Magali_Villeneuve,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
@@ -961,7 +961,7 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 OppositeText = "Abandoned ~Tools gains: \"Refresh Action: Exhaust attached hero to put a progress token on ~Escape from Darkness.\"\r\nPlayers may bypass this quest card at the end of the combat phase. Progress tokens cannot be placed on Escape from Darkness except by Abandoned Tools. If the players defeat this stage, they escape and win the game.",
                 FlavorText = "As the presence draws near, doubt and fear surround you like a vast shadow. You must find daylight, you must escape from the Black Pit...",
                 QuestPoints = 4,
-                Number = 76,
+                CardNumber = 76,
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Magali_Villeneuve,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
@@ -996,7 +996,7 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 Setup = "t",
                 Text = "Setup: Search the encounter deck for Book of Mazarbul, and have the first player attach it to a hero of his choice. Shuffle the encounter deck.",
                 OppositeText = "When Revealed: Reveal 1 encounter card per player, and add it to the staging area.",
-                Number = 67,
+                CardNumber = 67,
                 Artist = Artist.Cristi_Balanescu,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.PlunderingGoblins }
             });
@@ -1009,7 +1009,7 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 Quantity = 3,
                 EasyModeQuantity = 1,
                 Text = "When Revealed: The first player attaches Shadow of Fear to one of his heroes. (Counts as a Condition attachment with the text: 'Limit 1 per hero. Attached hero cannot exhaust or ready and its text box is treated as if it were blank. Action: Pay 3 resources from attached hero's pool to discard this card.')",
-                Number = 27,
+                CardNumber = 27,
                 Artist = Artist.Gabrielle_Portal
             });
             Cards.Add(new LotRCard() {
@@ -1023,7 +1023,7 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 Text = string.Empty,
                 Shadow = "Shadow: Defending player raises his threat by 2.",
                 Keywords = new List<string>() { "Doomed 2.", "Surge." },
-                Number = 15,
+                CardNumber = 15,
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
@@ -1039,7 +1039,7 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 Shadow = "Shadow: Defending player must choose and exhaust 1 character he controls.",
                 Threat = 2,
                 QuestPoints = 4,
-                Number = 19,
+                CardNumber = 19,
                 Artist = Artist.Lin_Bo
             });
             Cards.Add(new LotRCard() {
@@ -1058,7 +1058,7 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 Shadow = "Shadow: attacking enemy gets +X Attack. X is the number of players in the game.",
                 Threat = 0,
                 IsVariableThreat = true,
-                Number = 44,
+                CardNumber = 44,
                 Artist = Artist.Mike_Capprotti
             });
             Cards.Add(new LotRCard() {
@@ -1072,7 +1072,7 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 EasyModeQuantity = 0,
                 Text = "When Revealed: The first player must discard 1 questing character he controls, if able. This effect cannot be canceled.",
                 Shadow = "Shadow: Discard the defending character from play.",
-                Number = 51,
+                CardNumber = 51,
                 Artist = Artist.Jake_Murray
             });
             Cards.Add(new LotRCard() {
@@ -1090,7 +1090,7 @@ Forced: At the end of the staging step, reveal the top X cards of the encounter 
 
 If the players defeat this stage, they win the game.",
                 Quantity = 1,
-                Number = 68,
+                CardNumber = 68,
                 Artist = Artist.Ben_Zweifel,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.PlunderingGoblins }
             });
@@ -1108,7 +1108,7 @@ If the players defeat this stage, they win the game.",
                 IsVariableThreat = true,
                 QuestPoints = 254,
                 IsVariableQuestPoints = true,
-                Number = 47,
+                CardNumber = 47,
                 Artist = Artist.Stu_Barnes
             });
             Cards.Add(new LotRCard() {
@@ -1129,7 +1129,7 @@ If the players defeat this stage, they win the game.",
                 IsVariableThreat = true,
                 IsVariableAttack = true,
                 IsVariableDefense = true,
-                Number = 25,
+                CardNumber = 25,
                 Artist = Artist.Timo_Karhula
             });
             Cards.Add(new LotRCard() {
@@ -1144,7 +1144,7 @@ If the players defeat this stage, they win the game.",
                 Text = "While Turbulent Waters is the active location, players cannot optionally engage enemies.",
                 Threat = 3,
                 QuestPoints = 2,
-                Number = 58,
+                CardNumber = 58,
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
@@ -1157,7 +1157,7 @@ If the players defeat this stage, they win the game.",
                 EasyModeQuantity = 1,
                 Text = "When Revealed: Each player must deal X damage to 1 ally he controls. X is the number of allies he controls.",
                 Shadow = "Shadow: If the defending character is an ally, discard it from play.",
-                Number = 33,
+                CardNumber = 33,
                 Artist = Artist.Carolina_Eade
             });
             Cards.Add(new LotRCard() {
@@ -1169,7 +1169,7 @@ If the players defeat this stage, they win the game.",
                 Quantity = 3,
                 ResourceCost = 2,
                 Text = "Action: Each Dwarf character gets +1 Willpower until the end of the phase. (+2 Willpower instead if the active location is an Underground or Dark location.)",
-                Number = 10,
+                CardNumber = 10,
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard() {
@@ -1183,7 +1183,7 @@ If the players defeat this stage, they win the game.",
                 Keywords = new List<string>() { "Doomed 2." },
                 Threat = 3,
                 QuestPoints = 4,
-                Number = 23,
+                CardNumber = 23,
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
@@ -1201,7 +1201,7 @@ If the players defeat this stage, they win the game.",
                 HitPoints = 3,
                 Text = "Veteran of Nanduhirion enters play with 1 damage on it.",
                 FlavorText = "With cries of \"Moria!\" and \"Dain, Dain!\" the dwarves of the Iron Hills plunged in... -The Hobbit",
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Dleoblack
             });
             Cards.Add(new LotRCard() {
@@ -1215,7 +1215,7 @@ If the players defeat this stage, they win the game.",
                 Text = "When Revealed: Search the encounter deck and discard pile for 1 copy of Mountain Warg and add it to the staging area, if able. Shuffle the encounter deck.Response: After Warg Lair leaves play as an explored location, each player draws 1 card.",
                 Threat = 1,
                 QuestPoints = 3,
-                Number = 59,
+                CardNumber = 59,
                 Artist = Artist.Roman_V_Papsuev
             });
             Cards.Add(new LotRCard() {
@@ -1227,7 +1227,7 @@ If the players defeat this stage, they win the game.",
                 Quantity = 3,
                 EasyModeQuantity = 0,
                 Text = "When Revealed: The first player attaches Watchful Eyes to one of his heroes. (Counts as a Condition attachment with the text: 'Limit 1 per hero. Forced: If attached hero is exhausted at the end of the combat phase, reveal 1 card from the encounter deck and add it to the staging area.')",
-                Number = 62,
+                CardNumber = 62,
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard() {
@@ -1244,7 +1244,7 @@ If the players defeat this stage, they win the game.",
                 Willpower = 1,
                 HitPoints = 1,
                 Text = "Action: Exhaust Zigil Miner and name a number to discard the top 2 cards of your deck. If at least one of those cards has cost equal to the named number, choose a hero you control. For each card that matches the named number, add 1 resource to that hero's resource pool.",
-                Number = 9,
+                CardNumber = 9,
                 Artist = Artist.Magali_Villeneuve,
                 HasErrata = true
             });
@@ -1260,7 +1260,7 @@ If the players defeat this stage, they win the game.",
                 Text = "Action: Raise each player's threat by 1 to place 1 progress token on Zigil Mineshaft.",
                 Threat = 5,
                 QuestPoints = 5,
-                Number = 38,
+                CardNumber = 38,
                 Artist = Artist.David_Lecossu
             });
         }

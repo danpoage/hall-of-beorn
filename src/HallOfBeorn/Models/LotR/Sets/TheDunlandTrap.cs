@@ -32,7 +32,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Traits = new List<string>() { "Silvan.", "Noble." },
                 Text = "Response: After a Silvan ally enters play, that ally gets +1 Willpower, +1 Attack and +1 Defense until the end of the round.",
                 FlavorText = "\"...the lord of the Galadhrim is accounted wisest of the Elves of Middle-earth, and a giver of gifts beyond the power of kings.\" -Galadriel, The Fellowship of the Ring",
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard()
@@ -51,7 +51,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Traits = new List<string>() { "Silvan.", "Scout." },
                 Text = "Response: After Naith Guide enters play, choose a hero. That hero does not exhaust to quest this round.",
                 FlavorText = "\"...I shall lead you well...\" -Haldir, The Fellowship of the Ring",
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard()
@@ -65,7 +65,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Quantity = 3,
                 Text = "Action: Ready a hero you control. Then, if your threat is 20 or less and this is the first time you played a copy of Swift and Silent this round, return this card to your hand instead of discarding it.",
                 FlavorText = "A marching host of Elves had come up silently...–The Fellowship of the Ring",
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Raymond_Bonilla
             });
             Cards.Add(new LotRCard()
@@ -82,7 +82,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Keywords = new List<string> { "Restricted." },
                 Text = "Attach to a Tactics or Rohan hero.\r\nAttached hero gets +1 Attack (+2 Attack instead if attached hero is Éomer).\r\nResponse: After attached hero attacks alone, exhaust Firefoot to choose a non-unique enemy engaged with you. Excess damage dealt by this attack is assigned to the chosen enemy.",
                 //HtmlTemplate = "<p>Attach to a {sphere-hero:Tactics@!} or {trait-hero:Rohan.@Rohan}. {keyword:Restricted.}</p><p>Attached hero gets +1 {Attack} (+2 {Attack} instead if attached hero is {title:Éomer@Eomer}).</p><p><b>Response:</b> After attached hero attacks alone, exhaust Firefoot to choose a non-unique enemy engaged with you. Excess damage dealt by this attack is assigned to the chosen enemy.</p>",
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Nora_Brisotti
             });
             Cards.Add(new LotRCard()
@@ -97,7 +97,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Keywords = new List<string> { "Doomed X." },
                 Text = "Response: Cancel X damage just dealt to a hero.",
                 FlavorText = "\"That spear-thrust would have skewered a wild boar!\"–Aragorn, The Fellowship of the Ring",
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard()
@@ -115,7 +115,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Quantity = 3,
                 Traits = new List<string> { "Dwarf." },
                 Text = "Action: Choose another player. That player gains control of Blue ~Mountain Trader. Then, that player moves 1 resource from the resource pool of a hero he controls to the resource pool of a hero you control, or Blue ~Mountain Trader is discarded. (Limit once per round.)",
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Sara_Betsy,
                 HasErrata = true
             });
@@ -135,7 +135,7 @@ namespace HallOfBeorn.Models.LotR.Sets
 in Mordor where the shadows are.
 –The Fellowship of the Ring",
                 VictoryPoints = 1,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Arden_Beckwith,
                 MaxPerDeck = 1
             });
@@ -156,7 +156,7 @@ in Mordor where the shadows are.
                 Keywords = new List<string> { "Secrecy 2." },
                 Text = "Response: After ~Ithilien Lookout enters play, look at the top card of the encounter deck. If it is an enemy, you may discard it.",
                 FlavorText = "All had swords at their sides... –The Two Towers",
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard()
@@ -170,7 +170,7 @@ in Mordor where the shadows are.
                 Quantity = 3,
                 Text = "Action: Return a Silvan ally you control to your hand to search the top 5 cards of your deck for a Silvan ally. Put that ally into play and shuffle the other cards back into your deck. You can only play 1 copy of The Tree People each phase.",
                 FlavorText = "No folk could they see, nor hear any feet upon the paths; but there were many voices, about them, and in the air above. –The Fellowship of the Ring",
-                Number = 9,
+                CardNumber = 9,
                 Artist = Artist.Stacey_Diana_Clark
             });
             Cards.Add(new LotRCard()
@@ -189,7 +189,7 @@ in Mordor where the shadows are.
 Action: Starting with the first player, each player chooses 1 different option: ready a hero he controls, add 1 resource to the resource pool of
 a hero he controls, draw 1 card, or shuffle 1 card from his discard pile into his deck.",
                 FlavorText = "\"I it was who first summoned the White Council.\"\r\n–Galadriel, The Fellowship of the Ring",
-                Number = 10,
+                CardNumber = 10,
                 Artist = Artist.Sacha_Diener
             });
             Cards.Add(new LotRCard()
@@ -209,7 +209,7 @@ a hero he controls, draw 1 card, or shuffle 1 card from his discard pile into hi
 Forced: After the last time counter is removed from this stage, each player discards his hand and draws 2 cards. Place 2 time counters on this stage.",
                 OppositeFlavorText = "Already weary from a full day of travel, you struggle to hold off the ferocious Dunlending attack. You must rally your companions and drive back the enemy, or you will be defeated.",
                 EncounterSet = "The Dunland Trap",
-                Number = 11,
+                CardNumber = 11,
                 Artist = Artist.Sacha_Diener,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DunlandWarriors, EncounterSet.WearyTravelers }
             });
@@ -230,7 +230,7 @@ Forced: After the last time counter is removed from this stage, each player disc
 Forced: At the end of the combat phase, advance to stage 3A.",
                 OppositeFlavorText = "In your zeal to recover the gold, you have been led into an ambush.",
                 EncounterSet = "The Dunland Trap",
-                Number = 12,
+                CardNumber = 12,
                 Artist = Artist.Sacha_Diener,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DunlandWarriors, EncounterSet.WearyTravelers }
             });
@@ -252,7 +252,7 @@ If a hero is destroyed at this stage, the players lose the game.
 
 Forced: After the last time counter is removed from this stage, the players make engagement checks. Then, each engaged enemy makes an attack. If no heroes are destroyed by these attacks, the players win the game.",
                 EncounterSet = "The Dunland Trap",
-                Number = 13,
+                CardNumber = 13,
                 Artist = Artist.Silver_Saaremael,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DunlandWarriors, EncounterSet.WearyTravelers }
             });
@@ -277,7 +277,7 @@ Chief Turch engages the first player.
 Forced: After an enemy engages a player, remove 1 time counter from the current quest.",
                 FlavorText = "",
                 EncounterSet = "The Dunland Trap",
-                Number = 14,
+                CardNumber = 14,
                 Artist = Artist.Alvaro_Calvo_Escudero
             });
             Cards.Add(new LotRCard()
@@ -296,7 +296,7 @@ Forced: After an enemy engages a player, remove 1 time counter from the current 
                 FlavorText = "...beyond them the green and tangled valley ran up into the long ravine between the dark arms of the mountains.\r\n-The Two Towers",
                 VictoryPoints = 3,
                 EncounterSet = "The Dunland Trap",
-                Number = 15,
+                CardNumber = 15,
                 Artist = Artist.Dominique_Peyronnet
             });
             Cards.Add(new LotRCard()
@@ -314,7 +314,7 @@ Forced: After an enemy engages a player, remove 1 time counter from the current 
                 FlavorText = "After some miles, however, the road ceased to roll up and down... –The Fellowship of the Ring",
                 VictoryPoints = 1,
                 EncounterSet = "The Dunland Trap",
-                Number = 16,
+                CardNumber = 16,
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard()
@@ -337,7 +337,7 @@ Forced: After an enemy engages a player, remove 1 time counter from the current 
 Forced: After the engaged player draws any number of cards, put a resource token on Boar Clan Stalker",
                 FlavorText = "",
                 EncounterSet = "The Dunland Trap",
-                Number = 17,
+                CardNumber = 17,
                 Artist = Artist.Alvaro_Calvo_Escudero
             });
             Cards.Add(new LotRCard()
@@ -356,7 +356,7 @@ Forced: After the engaged player draws any number of cards, put a resource token
                 Text = "Forced: After the engaged player draws any number of cards, deal Boar Clan Warrior a shadow card.",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack for each shadow card on it.",
                 EncounterSet = "The Dunland Trap",
-                Number = 18,
+                CardNumber = 18,
                 Artist = Artist.Alvaro_Calvo_Escudero
             });
             Cards.Add(new LotRCard()
@@ -377,7 +377,7 @@ Forced: After the engaged player draws any number of cards, put a resource token
 
 Forced: After a player draws any number of cards, place 1 resource token here.",
                 EncounterSet = "The Dunland Trap",
-                Number = 19,
+                CardNumber = 19,
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard()
@@ -393,7 +393,7 @@ Forced: After a player draws any number of cards, place 1 resource token here.",
                 Traits = new List<string> { "Enedwaith.", "Hills." },
                 Text = "While Hills of Dunland is in the staging area, it gains: \"Forced: After a player draws any number of cards, discard the top card of the encounter deck. If the discarded card is a Dunland enemy, put it into play engaged with that player. This ability does not stack with other copies of Hills of Dunland.\"\r\n\r\nTravel: Each player draws a card to travel here.",
                 EncounterSet = "The Dunland Trap",
-                Number = 20,
+                CardNumber = 20,
                 Artist = Artist.Katy_Grierson
             });
             Cards.Add(new LotRCard()
@@ -409,7 +409,7 @@ Forced: After a player draws any number of cards, place 1 resource token here.",
                 Text = "While Plains of Enedwaith is the active location, players do not draw a card during the resource phase.",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack (+3 Attack instead if undefended).",
                 EncounterSet = "The Dunland Trap",
-                Number = 21,
+                CardNumber = 21,
                 Artist = Artist.Katy_Grierson
             });
             Cards.Add(new LotRCard()
@@ -425,7 +425,7 @@ Forced: After a player draws any number of cards, place 1 resource token here.",
                 Text = "While Hithaeglir Stream is the active location, players draw 2 cards during the resource phase instead of 1.",
                 FlavorText = "Shadow: Attacking enemy gets +1 Attack. Deal it an additional shadow card.",
                 EncounterSet = "The Dunland Trap",
-                Number = 22,
+                CardNumber = 22,
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard()
@@ -438,7 +438,7 @@ Forced: After a player draws any number of cards, place 1 resource token here.",
                 Text = "When Revealed: Each player draws a card. Each player discard each ally from his hand. If no allies were discarded this way, Frenzied Attack gains surge.",
                 Shadow = "Shadow: Until the end of the round, attacking enemy cannot take damage.",
                 EncounterSet = "The Dunland Trap",
-                Number = 23,
+                CardNumber = 23,
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard()
@@ -451,7 +451,7 @@ Forced: After a player draws any number of cards, place 1 resource token here.",
                 Keywords = new List<string> { "Surge." },
                 Text = "When Revealed: Attach to the active location. (Counts as a Condition attachment with the text: \"Limit 1 per location. Forced: After attached location is explored, each player searches the encounter deck and discard pile for a Dunland enemy and puts it into play engaged with him. Shuffle the encounter deck.\")",
                 EncounterSet = "The Dunland Trap",
-                Number = 24,
+                CardNumber = 24,
                 Artist = Artist.Claudio_Pozas
             });
         } 

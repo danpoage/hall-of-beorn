@@ -42,7 +42,7 @@ Then, shuffle the encounter cards in this Nightmare Deck into the remainder of t
 Finally, flip this setup card over and place it next to the quest deck. Its effects remain active throughout the game, which is now ready to begin.",
                 EncounterSet = "The Battle of Five Armies Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new LotRCard()
@@ -60,7 +60,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Shadow = "Shadow: Defending player discards 1 attachment he controls.",
                 EncounterSet = "The Battle of Five Armies Nightmare",
                 Quantity = 3,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Jon_Bosco
             });
             Cards.Add(new LotRCard()
@@ -78,7 +78,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Shadow = "Shadow: Deal 1 damage to the defending character (2 damage instead if the current quest has no progress on it).",
                 EncounterSet = "The Battle of Five Armies Nightmare",
                 Quantity = 4,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Beth_Sobel
             });
             Cards.Add(new LotRCard()
@@ -95,7 +95,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Text = "Cannot be optionally engaged.\r\nForced: At the end of the round, if Gundabad Elite is in the staging area, either remove 2 progress from the current quest, or Gundabad Elite makes an attack against the first player.",
                 EncounterSet = "The Battle of Five Armies Nightmare",
                 Quantity = 4,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Florian_Devos
             });
             Cards.Add(new LotRCard()
@@ -109,7 +109,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Text = "Forced: At the end of the round, each player assigns X damage among heroes he controls. X is the number of quest stages with no progress on them.\r\nTravel: The players (as a group) exhaust X characters. X is the number of quest stages with no progress on them.",
                 EncounterSet = "The Battle of Five Armies Nightmare",
                 Quantity = 2,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new LotRCard()
@@ -124,7 +124,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Shadow = "Shadow: Until the end of the phase, attacking enemy gets +1 Defense for each quest stage with no progress on it.",
                 EncounterSet = "The Battle of Five Armies Nightmare",
                 Quantity = 3,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Alyn_Spiller
             });
             Cards.Add(new LotRCard()
@@ -136,7 +136,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Shadow = "Shadow: Attacking enemy gets +2 Attack.",
                 EncounterSet = "The Battle of Five Armies Nightmare",
                 Quantity = 3,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Anthony_Devine
             });
         }

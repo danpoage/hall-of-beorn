@@ -45,7 +45,7 @@ Then, shuffle the encounter cards in this Nightmare Deck into the remainder of t
 Finally, flip this setup card over and place it next to the quest deck. Its effects remain active throughout the game, which is now ready to begin.",
                 EncounterSet = "Into Ithilien Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Guillaume_Ducos
             });
             Cards.Add(new LotRCard()
@@ -62,7 +62,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Traits = new List<string> { "Harad.", "Creature." },
                 Text = "Cannot have attachments. Archery X.\r\nX is the number of players in the game.\r\nMûmak Elite cannot take more than 3 damage each round.",
                 EncounterSet = "Into Ithilien Nightmare",
-                Number = 2,
+                CardNumber = 2,
                 Quantity = 2,
                 Artist = Artist.Anthony_Feliciano
             });
@@ -79,7 +79,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Traits = new List<string> { "Harad." },
                 Text = "While the current quest has battle, Haradrim Marksman gets +2 Threat and gains archery 2.\r\nWhile the current quest has siege, Haradrim Marksman gets +2 Attack and allies cannot be declared as defenders against its attacks.",
                 EncounterSet = "Into Ithilien Nightmare",
-                Number = 3,
+                CardNumber = 3,
                 Quantity = 3,
                 Artist = Artist.Florian_Devos
             });
@@ -97,7 +97,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Text = "Each Harad enemy in the staging area gains archery 1.\r\nEach engaged Harad enemy gets +1 Defense.",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack (+3 Attack instead if it has the Harad trait).",
                 EncounterSet = "Into Ithilien Nightmare",
-                Number = 4,
+                CardNumber = 4,
                 Quantity = 2,
                 Artist = Artist.Guillaume_Ducos
             });
@@ -112,7 +112,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Keywords = new List<string>{ "Archery 2." },
                 Text = "When assigning archery damage to a character, you must continue assigning archery damage to that character until that character is destroyed or there is no more archery damage to assign.",
                 EncounterSet = "Into Ithilien Nightmare",
-                Number = 5,
+                CardNumber = 5,
                 Quantity = 3,
                 Artist = Artist.Adam_Lane
             });
@@ -127,7 +127,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Text = "While Dense Thickets is in the staging area, each Forest location in play gets +1 Threat.",
                 Shadow = "Shadow: Excess damage dealt by this attack (damage that is dealt beyond the remaining hit points of the character damaged by this attack) must be assigned to a Ranger objective in play.",
                 EncounterSet = "Into Ithilien Nightmare",
-                Number = 6,
+                CardNumber = 6,
                 Quantity = 3,
                 Artist = Artist.Wibben
             });
@@ -141,7 +141,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Traits = new List<string> { "Plains.", "Riverland." },
                 Text = "While the current quest has battle, Cormallen Fields gets +2 Threat.\r\nWhile the current quest has siege, when faced with the option to travel, the players must travel to Cormallen Fields, if able.",
                 EncounterSet = "Into Ithilien Nightmare",
-                Number = 7,
+                CardNumber = 7,
                 Quantity = 2,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
@@ -153,7 +153,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Text = "When Revealed: The current quest gains archery 2 until the end of the round. Then, assign all archery damage to characters in play as if it were the beginning of the combat phase.",
                 Shadow = "Shadow: Attacking enemy gets +X Attack. X is that enemy's archery value.",
                 EncounterSet = "Into Ithilien Nightmare",
-                Number = 8,
+                CardNumber = 8,
                 Quantity = 2,
                 Artist = Artist.Aurelien_Hubert
             });
@@ -165,7 +165,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Keywords = new List<string> { "Doomed 2." },
                 Text = "When Revealed: If the current quest has a keyword, until the end of the round, switch that keyword from battle to siege, or siege to battle, if able. If the current quest does not have a keyword, Savage Fray gains surge.",
                 EncounterSet = "Into Ithilien Nightmare",
-                Number = 9,
+                CardNumber = 9,
                 Quantity = 2,
                 Artist = Artist.Tiziano_Baracchi
             });

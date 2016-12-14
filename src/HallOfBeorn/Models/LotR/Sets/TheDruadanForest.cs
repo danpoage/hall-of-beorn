@@ -32,7 +32,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Each hero you control with a printed Lore resource icon gets -1 threat cost.",
                 FlavorText = "\"...the Elves feared and distrusted the world outside...\"\r\n-The Fellowship of the Ring",
                 Quantity = 1,
-                Number = 32,
+                CardNumber = 32,
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
@@ -51,7 +51,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "While you control Outlands allies that belong to 4 different spheres, ready Forlong at the beginning of each phase.",
                 FlavorText = "\"Forlong!\" men shouted. \"True heart, true friend!\" -The Return of the King",
                 Quantity = 3,
-                Number = 33,
+                CardNumber = 33,
                 Artist = Artist.Emile_Denis
             });
             Cards.Add(new LotRCard() {
@@ -64,7 +64,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Play only if each hero you control has a printed Leadership resource icon.\r\nAction: Ready each ally in play.",
                 FlavorText = "And so the companies came and were hailed and cheered and passed through the Gate, men of the Outlands marching to defend the City of Gondor in a dark hour... -The Return of the King",
                 Quantity = 3,
-                Number = 34,
+                CardNumber = 34,
                 Artist = Artist.Jon_Bosco
             });
             Cards.Add(new LotRCard() {
@@ -78,7 +78,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Attach to a Tactics hero. Limit 1 per hero.\r\nResponse: After attached hero attacks and destroys an enemy, deal 1 damage to another enemy that shares a Trait with the enemy just destroyed.",
                 FlavorText = "He slew many of them and the rest fled. -The Two Towers",
                 Quantity = 3,
-                Number = 35,
+                CardNumber = 35,
                 Artist = Artist.Blake_Henriksen
             });
             Cards.Add(new LotRCard() {
@@ -90,7 +90,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 ResourceCost = 2,
                 Text = "Play only if each hero you control has the printed Tactics resource icon.\r\nAction: Until the end of the phase, if the current quest does not have Siege, it gains Battle.",
                 Quantity = 3,
-                Number = 36,
+                CardNumber = 36,
                 Artist = Artist.Magali_Villeneuve,
                 HasErrata = true
             });
@@ -110,7 +110,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HtmlTemplate = "<p><b>Forced:</b> After a character leaves play, discard {self} from play.</p><p class='flavor-text'>&quot;The Elves have their own labours and their own sorrows...&quot;<br/>&ndash;Gildor, The Fellowship of the Ring</p>",
                 FlavorText = "\"The Elves have their own labours and their own sorrows...\" -Gildor, The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 37,
+                CardNumber = 37,
                 Artist = Artist.Lorraine_Schleter
             });
             Cards.Add(new LotRCard() {
@@ -123,7 +123,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Play only if each hero you control has the printed Spirit resource icon.\r\nAction: Until the end of the phase, Spirit characters use their Willpower instead of Defense.",
                 FlavorText = "\"Courage will now be your best defense against the storm that is at hand...\" -Gandalf, The Return of the King",
                 Quantity = 3,
-                Number = 38,
+                CardNumber = 38,
                 Artist = Artist.Andrew_Ryan
             });
             Cards.Add(new LotRCard() {
@@ -141,7 +141,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Response: After a card effect adds any number of resources to the resource pool of a hero you control, Harbor Master gains +1 Defense until the end of the round.",
                 FlavorText = "For the Elves of the High Kindred had not yet forsaken Middle-earth, and they dwelt still at that time at the Grey Havens...-The Fellowship of the Ring",
                 Quantity = 3,
-                Number = 39,
+                CardNumber = 39,
                 Artist = Artist.Kristina_Gehrmann
             });
             Cards.Add(new LotRCard() {
@@ -154,7 +154,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Play only if each hero you control has a printed Lore resource icon.\r\nAction: Until the end of the phase, enemies do not make engagement checks",
                 FlavorText = "Suddenly he halted and listened. Had he heard a whistle or not? Or was it the call of some strange bird? -The Two Towers",
                 Quantity = 3,
-                Number = 40,
+                CardNumber = 40,
                 Artist = Artist.Adam_Lane
             });
             Cards.Add(new LotRCard() {
@@ -172,7 +172,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "If each hero you control belongs to the same sphere of influence, you may assign damage from undefended enemy attacks to White Tower Watchman instead of a hero you control.",
                 FlavorText = "The watchmen cried aloud, and all men in the City stood to arms. -The Return of the King",
                 Quantity = 3,
-                Number = 41,
+                CardNumber = 41,
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard() {
@@ -191,7 +191,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Threat = 4,
                 EncounterSet = "The Drúadan Forest",
                 Quantity = 1,
-                Number = 45,
+                CardNumber = 45,
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
@@ -211,7 +211,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "The Drúadan Forest",
                 Quantity = 3,
                 EasyModeQuantity = 1,
-                Number = 46,
+                CardNumber = 46,
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new LotRCard() {
@@ -231,7 +231,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Threat = 2,
                 EncounterSet = "The Drúadan Forest",
                 Quantity = 3,
-                Number = 47,
+                CardNumber = 47,
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new LotRCard() {
@@ -252,7 +252,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "The Drúadan Forest",
                 Quantity = 4,
                 EasyModeQuantity = 2,
-                Number = 48,
+                CardNumber = 48,
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new LotRCard() {
@@ -271,7 +271,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Threat = 2,
                 EncounterSet = "The Drúadan Forest",
                 Quantity = 3,
-                Number = 49,
+                CardNumber = 49,
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new LotRCard() {
@@ -287,7 +287,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "The Drúadan Forest",
                 Quantity = 1,
                 EasyModeQuantity = 0,
-                Number = 50,
+                CardNumber = 50,
                 Artist = Artist.Grzegorz_Pedrycz
             });
             Cards.Add(new LotRCard() {
@@ -302,7 +302,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 QuestPoints = 3,
                 EncounterSet = "The Drúadan Forest",
                 Quantity = 3,
-                Number = 51,
+                CardNumber = 51,
                 Artist = Artist.Simon_Dominic
             });
             Cards.Add(new LotRCard() {
@@ -319,7 +319,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "The Drúadan Forest",
                 Quantity = 3,
                 EasyModeQuantity = 1,
-                Number = 52,
+                CardNumber = 52,
                 Artist = Artist.Titus_Lunter
             });
             Cards.Add(new LotRCard() {
@@ -331,7 +331,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Shadow = "Shadow: Attacking enemy gets +1 Attack for each hero the defending player controls with no resources.",
                 EncounterSet = "The Drúadan Forest",
                 Quantity = 3,
-                Number = 53,
+                CardNumber = 53,
                 Artist = Artist.Marcia_George_Bogdan
             });
             Cards.Add(new LotRCard() {
@@ -344,7 +344,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Keywords = new List<string>() { "Prowl 2." },
                 EncounterSet = "The Drúadan Forest",
                 Quantity = 3,
-                Number = 54,
+                CardNumber = 54,
                 Artist = Artist.Blake_Henriksen
             });
             Cards.Add(new LotRCard() {
@@ -357,7 +357,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Keywords = new List<string>() { "Surge." },
                 EncounterSet = "The Drúadan Forest",
                 Quantity = 2,
-                Number = 55,
+                CardNumber = 55,
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new LotRCard() {
@@ -373,7 +373,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "The Drúadan Forest",
                 Quantity = 1,
                 QuestPoints = 11,
-                Number = 42,
+                CardNumber = 42,
                 Artist = Artist.Emile_Denis,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.BroodingForest }
             });
@@ -389,7 +389,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 OppositeFlavorText = "In the grove, the fleeing traitors lie slain, pierced by poisoned arrows. As you search the pain-wracked corpses for the body of their leader, the ominous echo of drums begins to sound among the trees. You desperately begin to retrace your steps from the woods, lest the fate of the traitors becomes your own.",
                 Quantity = 1,
                 QuestPoints = 17,
-                Number = 43,
+                CardNumber = 43,
                 Artist = Artist.Adam_Lane,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.BroodingForest }
             });
@@ -409,7 +409,7 @@ If the players defeat this stage, they have won the game.",
                 EncounterSet = "The Drúadan Forest",
                 Quantity = 1,
                 QuestPoints = 14,
-                Number = 44,
+                CardNumber = 44,
                 Artist = Artist.Jason_Ward,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.BroodingForest }
             });

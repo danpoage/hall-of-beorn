@@ -50,7 +50,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
 
                 EncounterSet = "The Hunt for Gollum Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Ignacio_Bazan_Lazcano
             });
             Cards.Add(new LotRCard()
@@ -68,7 +68,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Text = "Forced: When a card effect instructs a player to \"look\" at cards in the encounter deck and Ravenous Hawk is among those cards, that player must put Ravenous Hawk into play engaged with him. (This does not satisfy the Forced effect of stage 1B or 2B).",
                 EncounterSet = "The Hunt for Gollum Nightmare",
                 Quantity = 3,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Nacho_Molina
             });
             Cards.Add(new LotRCard()
@@ -87,7 +87,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 FlavorText = "\"...where the warg howls, there also the orc prowls.\"\r\n-Aragorn, The Fellowship of the Ring",
                 EncounterSet = "The Hunt for Gollum Nightmare",
                 Quantity = 2,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Aurelien_Hubert
             });
             Cards.Add(new LotRCard()
@@ -104,7 +104,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 FlavorText = "\"The Road is watched, but we should have to cross it...\"\r\n-Aragorn, The Fellowship of the Ring",
                 EncounterSet = "The Hunt for Gollum Nightmare",
                 Quantity = 2,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Jose_Vega
             });
             Cards.Add(new LotRCard()
@@ -120,7 +120,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Shadow = "Shadow: Attacking enemy gets +1 Defense for each Clue card in play until the end of the round.",
                 EncounterSet = "The Hunt for Gollum Nightmare",
                 Quantity = 2,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Jose_Vega
             });
             Cards.Add(new LotRCard()
@@ -139,7 +139,7 @@ Forced: After Dark Pools becomes the active location, each player must discard a
                 FlavorText = "'And there in the dark pools amid the Gladden Fields,'he said, 'the Ring passed out of knowledge and legend...'\r\n-The Fellowship of the Ring",
                 EncounterSet = "The Hunt for Gollum Nightmare",
                 Quantity = 3,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Jose_Vega
             });
             Cards.Add(new LotRCard()
@@ -152,7 +152,7 @@ Forced: After Dark Pools becomes the active location, each player must discard a
                 Shadow = "Shadow: Search the encounter discard pile for a Clue card and attach it to a Mordor enemy in play, if able.",
                 EncounterSet = "The Hunt for Gollum Nightmare",
                 Quantity = 2,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard()
@@ -166,7 +166,7 @@ Forced: After Dark Pools becomes the active location, each player must discard a
                 Shadow = "Shadow: Damage from this attack must be applied to a hero you control with a Clue card attached, if able.",
                 EncounterSet = "The Hunt for Gollum Nightmare",
                 Quantity = 3,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Adam_Lane
             });
             Cards.Add(new LotRCard()
@@ -178,7 +178,7 @@ Forced: After Dark Pools becomes the active location, each player must discard a
                 Text = "When Revealed: Attach to the active location and remove all progress from that location. (Counts as a Condition attachment with the text:\"Limit 1 per location. Attached location contributes its Threat during the quest phase as if it were in the staging area.\")\r\n\r\nIf The Trail Goes Cold does not attach to a location as a result of this effect, it gains surge.",
                 EncounterSet = "The Hunt for Gollum Nightmare",
                 Quantity = 2,
-                Number = 9,
+                CardNumber = 9,
                 Artist = Artist.Christine_Mitzuk
             });
         }

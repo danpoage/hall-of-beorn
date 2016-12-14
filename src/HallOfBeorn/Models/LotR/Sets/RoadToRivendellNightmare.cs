@@ -47,7 +47,7 @@ Add the new quest card in this Nightmare Deck to the normal quest deck, in stage
 Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.",
                 EncounterSet = "Road to Rivendell Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Oleg_Saakyan
             });
             Cards.Add(new LotRCard()
@@ -68,7 +68,7 @@ Goblin Gate gets +1 quest point for each enemy engaged with a player.
 Progress cannot be placed on this stage unless the players control Arwen Undómiel.",
                 EncounterSet = "Road to Rivendell Nightmare",
                 Quantity = 1,
-                Number = 2,
+                CardNumber = 2,
                 Artist = Artist.Oleg_Saakyan
             });
             Cards.Add(new LotRCard()
@@ -87,7 +87,7 @@ Progress cannot be placed on this stage unless the players control Arwen Undómi
                 Shadow = "Shadow: Attacking enemy gets +2 Attack.",
                 EncounterSet = "Road to Rivendell Nightmare",
                 Quantity = 3,
-                Number = 3,
+                CardNumber = 3,
                 Artist = Artist.Anthony_Devine
             });
             Cards.Add(new LotRCard()
@@ -106,7 +106,7 @@ Progress cannot be placed on this stage unless the players control Arwen Undómi
                 Shadow = "Shadow: Add Goblin Trapper to the staging area.",
                 EncounterSet = "Road to Rivendell Nightmare",
                 Quantity = 3,
-                Number = 4,
+                CardNumber = 4,
                 Artist = Artist.Guillaume_Ducos
             });
             Cards.Add(new LotRCard()
@@ -124,7 +124,7 @@ Progress cannot be placed on this stage unless the players control Arwen Undómi
                 Text = "Forced: After Raiding Party engages a player, each player discards the top card of the encounter deck, starting with the first player. Each player who discards an enemy with the ambush keyword must make an engagement check against that enemy.",
                 EncounterSet = "Road to Rivendell Nightmare",
                 Quantity = 2,
-                Number = 5,
+                CardNumber = 5,
                 Artist = Artist.Mark_Behm
             });
             Cards.Add(new LotRCard()
@@ -142,7 +142,7 @@ Progress cannot be placed on this stage unless the players control Arwen Undómi
                 Text = "While Vicious Tracker is engaged with a player, that player is considered to have +20 threat for purposes of engagement checks only.",
                 EncounterSet = "Road to Rivendell Nightmare",
                 Quantity = 2,
-                Number = 6,
+                CardNumber = 6,
                 Artist = Artist.Lukasz_Jaskolski
             });
             Cards.Add(new LotRCard()
@@ -157,7 +157,7 @@ Progress cannot be placed on this stage unless the players control Arwen Undómi
                 Shadow = "Shadow: Excess damage dealt by this attack must be assigned to Arwen Undómiel.",
                 EncounterSet = "Road to Rivendell Nightmare",
                 Quantity = 3,
-                Number = 7,
+                CardNumber = 7,
                 Artist = Artist.Adam_Lane
             });
             Cards.Add(new LotRCard()
@@ -172,7 +172,7 @@ Progress cannot be placed on this stage unless the players control Arwen Undómi
                 Shadow = "Shadow: Attacking enemy gets +2 Attack if engaged with the first player.",
                 EncounterSet = "Road to Rivendell Nightmare",
                 Quantity = 3,
-                Number = 8,
+                CardNumber = 8,
                 Artist = Artist.Jake_Bullock
             });
             Cards.Add(new LotRCard()
@@ -183,7 +183,7 @@ Progress cannot be placed on this stage unless the players control Arwen Undómi
                 Text = "When Revealed: Return each engaged enemy with the ambush keyword to the staging area. Each player makes engagement checks against each enemy in the staging area, as if it were the encounter phase. If there are no enemies with the ambush keyword in play, Tumultuous Assault gains surge.",
                 EncounterSet = "Road to Rivendell Nightmare",
                 Quantity = 2,
-                Number = 9,
+                CardNumber = 9,
                 Artist = Artist.Mark_Behm
             });
         }

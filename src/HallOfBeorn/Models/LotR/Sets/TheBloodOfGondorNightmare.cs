@@ -44,7 +44,7 @@ Then, shuffle the encounter cards in this Nightmare Deck into the remainder of t
 Finally, flip this setup card over and place it next to the quest deck. Its effects remain active throughout the game, which is now ready to begin.",
                 EncounterSet = "The Blood of Gondor Nightmare",
                 Quantity = 1,
-                Number = 1,
+                CardNumber = 1,
                 Artist = Artist.Piya_Wannachaiwong
             });
             Cards.Add(LotRCard.Enemy("Black Númenorean", "07C0FBEC-771B-4FD2-AF0E-B9AC9165A500", "The Blood of Gondor Nightmare", 35, 255, 5, 4, 9)
