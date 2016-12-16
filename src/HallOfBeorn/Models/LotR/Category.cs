@@ -39,6 +39,7 @@ namespace HallOfBeorn.Models.LotR
         Surprise,
         Victory_Display,
         Discard_From_Hand,
+        Discard_From_Deck,
         Discard_Pile,
         Quest_Control,
         Two_Or_Fewer_Heroes,

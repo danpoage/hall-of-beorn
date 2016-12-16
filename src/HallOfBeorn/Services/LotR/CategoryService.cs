@@ -342,11 +342,12 @@ namespace HallOfBeorn.Services.LotR
                 CreateCategoryFilter((card) => { return card.Keywords.Any(x => x.StartsWith("Secrecy")) || card.Text.ToLowerSafe().Contains("if your threat is 20 or less") || card.Text.ToLowerSafe().Contains("gains secrecy") || card.Text.ToLowerSafe().Contains("treat your threat as if it is 20"); }, Category.Secrecy),
                 CreateCategoryFilter("enemy.*engagement cost.*than your threat", Category.Surprise),
                 CreateCategoryFilter((card) => { return card.Text.ToLowerSafe().Contains("victory display") && card.VictoryPoints == 0; }, Category.Victory_Display),
-                CreateCategoryFilter("(discard (a|1|2|all|X) (card|cards) (from|in) your hand|discarded from your hand|discard (1 of those|any number of) cards)", Category.Discard_From_Hand),
+                CreateCategoryFilter("(discard (a|1|2|all|X) (card|cards) (from|in) your hand|discarded from your hand|discard (1 of those|any number of) cards)", Category.Discard_From_Hand, "Look at the top X cards of the encounter deck"),
                 CreateCategoryFilter("discard pile", Category.Discard_Pile, "encounter deck and discard pile"),
                 CreateCategoryFilter("(commit .* to|remove it from) the quest", Category.Quest_Control),
                 CreateCategoryFilter("(two|2) or fewer heroes", Category.Two_Or_Fewer_Heroes),
-                CreateCategoryFilter("(players as a group.*spend|triggered by each player|any player may trigger)", Category.Group_Effect)
+                CreateCategoryFilter("(players as a group.*spend|triggered by each player|any player may trigger)", Category.Group_Effect),
+                CreateCategoryFilter("(is discarded from the top of your deck|discard the top card of your deck|discard the top 2 cards of your deck|discard 2 cards from the top of your deck|the top 2 cards of your deck. Add 1 to your hand and discard the other)", Category.Discard_From_Deck)
             };
 
             foreach (var card in cards.Where(x => IsCategorizable(x)))
