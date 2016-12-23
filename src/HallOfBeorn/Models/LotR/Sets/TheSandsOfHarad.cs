@@ -105,7 +105,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             addCard(LotRCard.Enemy("Umbar Sentry", string.Empty, setEscape, 28, 1, 2, 1, 3)
                 .WithTraits("Harad.")
                 .WithKeywords("Surge.", "Archery 1.")
-                .WithText("Forced: When Umbar Sentry attacks, either remove 1 progress token from the main quest, or it gets +2 Attack for this attack.")
+                .WithText("Forced: When ~Umbar Sentry attacks, either remove 1 progress token from the main quest, or it gets +2 Attack for this attack.")
                 .WithFlavor("Umbar remained at war with Gondor for many lives of men...\r\n-The Return of the King")
                 .WithInfo(15, 5, Artist.Victor_Manuel_Leza_Moreno));
             addCard(LotRCard.Location("Narrow Alleyway", string.Empty, setEscape, 2, 2)
@@ -122,7 +122,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("While Umbar Square is the active location, it gains: \"Response: After an enemy is defeated, place 1 progress on the main quest, bypassing the active location.\"\r\nTravel: Reveal the top card of the encounter deck to travel here.")
                 .WithFlavor("The loss of Umbar was grievous to Gondor...\r\n-The Return of the King")
                 .WithInfo(18, 3, Artist.Mariusz_Gandzel));
-            addCard(LotRCard.Location("Port of Harad", string.Empty, setEscape, 255, 4)
+            addCard(LotRCard.Location("Port of Harad", string.Empty, setEscape, 254, 4)
                 .WithTraits("City.")
                 .WithText("X is the number of engaged enemies.\r\nTravel: Assign X damage among characters in play to travel here.")
                 .WithFlavor("Often those on who suspicion fell had fled to Umbar and there joined the rebels...\r\n-The Return of the King")
@@ -241,7 +241,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("When Revealed: The first player discards cards from the top of the encounter deck until an enemy is discarded, and puts that enemy into play engaged with him.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if it was engaged this round).")
                 .WithInfo(44, 3, Artist.Kim_Sokol));
-            addCard(LotRCard.EncounterSideQuest("In Hostile Territory", string.Empty, setHaradTerritory, 8)
+            addCard(LotRCard.EncounterSideQuest("In Enemy Territory", string.Empty, setHaradTerritory, 8)
                 .WithFlavor("Alone in a hostile land, cut off from help, you struggle to find your bearings...")
                 .WithKeywords("Surge.")
                 .WithText("Each player cannot have more than 5 cards in his hand. (If you have more than 5, immediately choose and discard cards from hand until you have only 5.)\r\nResponse: When this stage is defeated, each player draws a card.")
@@ -338,7 +338,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithInfo(65, 2, Artist.Mariusz_Gandzel));
             addCard(LotRCard.Quest("Stranded in Umbar", string.Empty, 1, 1, setEscape, 15)
                 .WithFlavor("At the end of a long sea-voyage, you have reached the port of Umbar but your ship was dashed upon the rocks. Though you completed the quest that brought you to Harad, it has left you stranded in enemy territory, far from help.")
-                .WithText("Setup: Add “Seize them!” to the staging area. Each player adds 1 different location to the staging area and puts 1 copy of Umbar Sentry into play engaged with him. Shuffle the encounter deck.")
+                .WithText("Setup: Add “Seize them!” to the staging area. Each player adds 1 different location to the staging area and puts 1 copy of ~Umbar Sentry into play engaged with him. Shuffle the encounter deck.")
                 .WithOppositeFlavor("Alarm bells ring from high watchtowers and the city guard shouts for you to lay down your arms and surrender. You must run or be captured!")
                 .WithOppositeText("This stage cannot have more than 15 progress tokens on it.\r\nWhile at least 1 player is engaged with an enemy, the players cannot defeat this stage.")
                 .WithInfo(66, 1, Artist.Nikolas_Hagialas));
