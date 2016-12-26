@@ -202,6 +202,7 @@
     <Compile Include="Models\LotR\LayoutType.cs" />
     <Compile Include="Models\LotR\Scenarios\AStormOnCobasHaven.cs" />
     <Compile Include="Models\LotR\Scenarios\TheCityOfCorsairs.cs" />
+    <Compile Include="Models\LotR\Scenarios\TheSandsOfHarad.cs" />
     <Compile Include="Models\LotR\ViewModels\AdvancedSearchViewModel.cs" />
     <Compile Include="Models\Arkham\ArkhamCardSubtype.cs" />
     <Compile Include="Models\Arkham\ArkhamDeckType.cs" />
