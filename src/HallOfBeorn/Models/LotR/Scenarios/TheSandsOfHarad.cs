@@ -13,44 +13,44 @@ namespace HallOfBeorn.Models.LotR.Scenarios
             ExcludeFromEasyMode("Enemy-Pursui-TSoH", 1);
         }
 
-        protected void excludeFromDesertCrossing() {
+        protected void excludeDesertCrossing() {
             ExcludeFromEasyMode("Carrion-Bird-TSoH", 1);
             ExcludeFromEasyMode("Scorched-Hamada-TSoH", 1);
             ExcludeFromEasyMode("Unbeatable-Heat-TSoH", 1);
             ExcludeFromEasyMode("Scorching-Sun-TSoH", 1);
         }
 
-        protected void excludeFromTheLongArmOfMordor() {
+        protected void excludeTheLongArmOfMordor() {
             ExcludeFromEasyMode("Savage-Attack-TSoH", 1);
         }
 
-        protected void excludeFromHaradSoldiers() {
+        protected void excludeHaradSoldiers() {
             ExcludeFromEasyMode("Southron-Soldier-TSoH", 1);
             ExcludeFromEasyMode("Southron-Archer-TSoH", 1);
             ExcludeFromEasyMode("Nowhere-to-Hide-TSoH", 1);
         }
 
-        protected void excludeFromHaradTerritory() {
+        protected void excludeHaradTerritory() {
             ExcludeFromEasyMode("Injured-Companion-TSoH", 1);
             ExcludeFromEasyMode("Enfeebled-TSoH", 1);
         }
 
-        protected void excludeFromDesertSands() {
+        protected void excludeDesertSands() {
             ExcludeFromEasyMode("Towering-Dunes-TSoH", 1);
             ExcludeFromEasyMode("Sandstorm-TSoH", 1);
         }
 
-        protected void excludeFromDesertCreatures() {
+        protected void excludeDesertCreatures() {
             ExcludeFromEasyMode("Sand-Viper-TSoH", 1);
         }
 
-        protected void excludeFromJungleForest() {
+        protected void excludeJungleForest() {
             ExcludeFromEasyMode("Jungle-Trail-TSoH", 1);
             ExcludeFromEasyMode("Forest-Clearing-TSoH", 1);
             ExcludeFromEasyMode("Overgrown-TSoH", 1);
         }
 
-        protected void excludeFromMordorOrcs() {
+        protected void excludeMordorOrcs() {
             ExcludeFromEasyMode("Uruk-Warg-rider-TSoH", 1);
             ExcludeFromEasyMode("Mordor-Watrg-TSoH", 1);
             ExcludeFromEasyMode("Fear-of-Mordor-TSoH", 1);
