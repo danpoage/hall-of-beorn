@@ -107,6 +107,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithKeywords("Surge.", "Archery 1.")
                 .WithText("Forced: When ~Umbar Sentry attacks, either remove 1 progress token from the main quest, or it gets +2 Attack for this attack.")
                 .WithFlavor("Umbar remained at war with Gondor for many lives of men...\r\n-The Return of the King")
+                .WithEasyModeQuantity(4)
                 .WithInfo(15, 5, Artist.Victor_Manuel_Leza_Moreno));
             addCard(LotRCard.Location("Narrow Alleyway", string.Empty, setEscape, 2, 2)
                 .WithTraits("City.")
@@ -116,6 +117,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTraits("City.")
                 .WithText("While Street of Umbar is the active location, each enemy gets -1 engagement cost for each progress token on the main quest.")
                 .WithShadow("Shadow: Discard an attachment you control.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(17, 2, Artist.Pavel_Kolomeyets));
             addCard(LotRCard.Location("Umbar Square", string.Empty, setEscape, 2, 3)
                 .WithTraits("City.")
@@ -134,6 +136,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             addCard(LotRCard.Treachery("Enemy Pursuit", string.Empty, setEscape)
                 .WithText("When Revealed: Either remove all progress from the main quest, or assign X damage among characters in play. X is the number of progress tokens on the main quest.")
                 .WithShadow("Shadow: Attacking enemy makes an additional attack against you after this one.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(21, 2, Artist.Will_O_Brien));
             addCard(LotRCard.Treachery("Mirage", string.Empty, setCrossing)
                 .WithTraits("Weather.")
@@ -148,6 +151,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithGeneric()
                 .WithTraits("Creature.")
                 .WithText("Carrior Birds gets -1 engagement cost for each damaged character in play.\r\nForced: After Carrion Bird engages you, discard a damaged character you control.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(24, 2, Artist.Dimitri_Bielak));
             addCard(LotRCard.Location("Burnt Sands", string.Empty, setCrossing, 2, 3)
                 .WithTraits("Desert.")
@@ -158,6 +162,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTraits("Desert.")
                 .WithText("X is the tens digit of the temperature.\r\nForced: After Scorched Hamada becomes the active location, assign X damage among characters in play.")
                 .WithShadow("Shadow: Raise your threat by X, where X is the tens digit of the temperature.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(26, 2, Artist.Pavel_Kolomeyets));
             addCard(LotRCard.Location("Parched Wadi", string.Empty, setCrossing, 3, 3)
                 .WithTraits("Desert.")
@@ -172,12 +177,14 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTraits("Weather.")
                 .WithText("When Revealed: Each player assigns X damage among characters he controls, where X is the tens digit of the temperature.")
                 .WithShadow("Shadow: Attacking enemy gets +X Attack, where X is the tens digit of the temperature.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(29, 2, Artist.Kim_Sokol));
             addCard(LotRCard.Treachery("Scorching Sun", string.Empty, setCrossing)
                 .WithTraits("Weather.")
                 .WithKeywords("Surge.")
                 .WithText("When Revealed: Increase the temperature by 4.")
                 .WithShadow("Shadow: Either raise the temperature by 2, or return attacking enemy to the staging area after this attack.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(30, 2, Artist.Dimitri_Bielak));
             addCard(LotRCard.ObjectiveHero("Kahliel", setLongArm, 2, 2, 2, 3)
                 .WithTraits("Harad.", "Noble.")
@@ -214,6 +221,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             addCard(LotRCard.Treachery("Savage Attack", string.Empty, setLongArm)
                 .WithText("When Revealed: Each player must choose: either discard the highest cost ally you control, or reveal an encounter card.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, reveal the top card of the encounter deck.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(38, 2, Artist.Dimitri_Bielak));
             addCard(LotRCard.Treachery("Overrun by Orcs", string.Empty, setLongArm)
                 .WithText("When Revealed: Until the end of the phase, increase the total Threat in the staging area by X, where X is twice the stage number of the main quest.")
@@ -231,15 +239,18 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTraits("Harad.")
                 .WithText("Forced: After Southron Soldier engages you, either remove 2 progress tokens from the main quest, or Southron Soldier makes an immediate attack.")
                 .WithShadow("Shadow: Choose an enemy in the staging area. Engage it and deal it a shadow card.")
+                .WithEasyModeQuantity(2)
                 .WithInfo(42, 3, Artist.Alexandr_Elichev)); 
             addCard(LotRCard.Enemy("Southron Archer", string.Empty, setHaradSoldiers, 36, 2, 4, 3, 4)
                 .WithTraits("Harad.")
                 .WithKeywords("Archery 2.")
                 .WithText("Forced: After Southron Archer engages you, either remove 2 progress tokens from the main quest, or discard an ally you control.")
+                .WithEasyModeQuantity(3)
                 .WithInfo(43, 4, Artist.J_Lonnee));
             addCard(LotRCard.Treachery("Nowhere to Hide", string.Empty, setHaradSoldiers)
                 .WithText("When Revealed: The first player discards cards from the top of the encounter deck until an enemy is discarded, and puts that enemy into play engaged with him.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if it was engaged this round).")
+                .WithEasyModeQuantity(2)
                 .WithInfo(44, 3, Artist.Kim_Sokol));
             addCard(LotRCard.EncounterSideQuest("In Enemy Territory", string.Empty, setHaradTerritory, 8)
                 .WithFlavor("Alone in a hostile land, cut off from help, you struggle to find your bearings...")
@@ -249,10 +260,12 @@ namespace HallOfBeorn.Models.LotR.Sets
             addCard(LotRCard.Treachery("Injured Companion", string.Empty, setHaradTerritory)
                 .WithText("When Revealed: Each player must choose: either raise your threat by 1 for each character you control, or discard a character you control.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, raise each player's threat by 1.")
+                .WithEasyModeQuantity(2)
                 .WithInfo(46, 3, Artist.Ilich_Henriquez));
             addCard(LotRCard.Treachery("Enfeebled", string.Empty, setHaradTerritory)
                 .WithText("When Revealed: Each player exhausts a character he controls. Until the end of the combat phase, exhausted characters cannot ready.")
                 .WithShadow("Shadow: Until the end of the round, defending character cannot ready.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(47, 2, Artist.Adam_Duff));
             addCard(LotRCard.EncounterSideQuest("Find Water", string.Empty, setSands, 6)
                 .WithFlavor("Your companions grow weary from thirst. They need water to drink.")
@@ -261,6 +274,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             addCard(LotRCard.Location("Towering Dunes", string.Empty, setSands, 3, 4)
                 .WithTraits("Desert.")
                 .WithText("While Towering Dunes is in the staging area, progress cannot be placed on locations in the staging area not named Towering Dunes.\r\nForced: After Towering Dunes becomes the active location, reveal the top card of the encounter deck.")
+                .WithEasyModeQuantity(2)
                 .WithInfo(49, 3, Artist.Katy_Grierson));
             addCard(LotRCard.Location("Desert Oasis", string.Empty, setSands, 2, 2)
                 .WithTraits("Desert.")
@@ -270,6 +284,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTraits("Weather.")
                 .WithText("When Revealed: Each player either discards his hand, or assigns X damage among characters he controls. X is the number of cards in his hand.")
                 .WithShadow("Shadow: Either discard the highest cost attachment you control, or assign X damage among characters you control where X is the number of attachments you control.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(51, 2, Artist.Mariusz_Gandzel));
             addCard(LotRCard.Treachery("Heat Exhaustion", string.Empty, setSands)
                 .WithText("When Revealed: Each player exhausts a character he controls and deals 1 damage to that character.")
@@ -283,6 +298,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTraits("Creature.")
                 .WithText("Players cannot declare defenders against Sand Viper.\r\nForced: After the players travel to a location, Sand Viper engages the first player.")
                 .WithFlavor("To some suddenly it seemed that they saw a snake coiling itself to strike.\r\n-The Two Towers")
+                .WithEasyModeQuantity(1)
                 .WithInfo(54, 2, Artist.Piya_Wannachaiwong));
             addCard(LotRCard.Enemy("Giant Scorpion", string.Empty, setCreatures, 33, 3, 3, 2, 4)
                 .WithTraits("Creature.")
@@ -293,11 +309,13 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTraits("Forest.")
                 .WithText("While Jungle Trail is the active location, each location in the staging area gets -1 Threat.\r\nTravel: Reveal the top card of the encounter deck to travel here.")
                 .WithFlavor("The path itself was narrow and wound in and out among the trunks.\r\n-The Hobbit")
+                .WithEasyModeQuantity(1)
                 .WithInfo(56, 2, Artist.Katy_Grierson));
             addCard(LotRCard.Location("Forest Clearing", string.Empty, setJungle, 3, 2)
                 .WithTraits("Forest.")
                 .WithText("Forced: When Forest Clearing is explored, discard the top card of the encounter deck. If that card is an enemy, add that enemy to the staging area.")
                 .WithShadow("Shadow: Discard an attachment you control.")
+                .WithEasyModeQuantity(2)
                 .WithInfo(57, 3, Artist.Mariusz_Gandzel));
             addCard(LotRCard.Location("Dense Jungle", string.Empty, setJungle, 2, 3)
                 .WithTraits("Forest.")
@@ -307,6 +325,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             addCard(LotRCard.Treachery("Overgrown", string.Empty, setJungle)
                 .WithKeywords("Surge.")
                 .WithText("When Revealed: Attach to the highest Threat location in the staging area without a copy of Overgrown attached. (Counts as a Condition attachment with the text: \"Attached location gets +1 Threat and gains 'Immune to player card effects.'\"")
+                .WithEasyModeQuantity(1)
                 .WithInfo(59, 2, Artist.Kamila_Tzutenberg));
             addCard(LotRCard.EncounterSideQuest("Uruks of the Eye", string.Empty, setMordorOrcs, 5)
                 .WithFlavor("The Uruks of Mordor attack with a savagery that is difficult to match.")
@@ -327,14 +346,17 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTraits("Orc.", "Uruk.")
                 .WithText("Uruk Warg-Rider gets +X Attack while attacking a character with less Willpower than Uruk Warg-rider's Threat. X is the difference.")
                 .WithShadow("Shadow: Return attacking enemy to the staging area after this attack.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(63, 2, Artist.Piya_Wannachaiwong));
             addCard(LotRCard.Enemy("Mordor Warg", string.Empty, setMordorOrcs, 20, 2, 2, 2, 2)
                 .WithTraits("Creature.")
                 .WithText("When Revealed: Attach to an Orc enemy and return that enemy to the staging area. Limit 1 per enemy. (Counts as a Mount attachment with the text: \"Attached enemy gets +2 Threat, +2 Attack, +2 Defense and +2 hit points.\r\nForced: When attached enemy leaves play, add Mordor Warg to the staging area.\"")
+                .WithEasyModeQuantity(1)
                 .WithInfo(64, 2, Artist.Mariusz_Gandzel));
             addCard(LotRCard.Treachery("Fear of Mordor", string.Empty, setMordorOrcs)
                 .WithText("When Revealed: Each ally in play gets -1 Willpower, -1 Attack, and -1 Defense until the end of the round.")
                 .WithShadow("Shadow: If attacking enemy's Threat is greater than the defending character's Willpower, it makes an additional attack after this one.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(65, 2, Artist.Mariusz_Gandzel));
             addCard(LotRCard.Quest("Stranded in Umbar", string.Empty, 1, 1, setEscape, 15)
                 .WithFlavor("At the end of a long sea-voyage, you have reached the port of Umbar but your ship was dashed upon the rocks. Though you completed the quest that brought you to Harad, it has left you stranded in enemy territory, far from help.")
