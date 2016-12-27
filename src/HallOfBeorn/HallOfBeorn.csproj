@@ -201,7 +201,10 @@
     <Compile Include="Models\Arkham\Products\CurseOfTheRougarou.cs" />
     <Compile Include="Models\LotR\LayoutType.cs" />
     <Compile Include="Models\LotR\Scenarios\AStormOnCobasHaven.cs" />
+    <Compile Include="Models\LotR\Scenarios\DesertCrossing.cs" />
+    <Compile Include="Models\LotR\Scenarios\EscapeFromUmbar.cs" />
     <Compile Include="Models\LotR\Scenarios\TheCityOfCorsairs.cs" />
+    <Compile Include="Models\LotR\Scenarios\TheLongArmOfMordor.cs" />
     <Compile Include="Models\LotR\Scenarios\TheSandsOfHarad.cs" />
     <Compile Include="Models\LotR\ViewModels\AdvancedSearchViewModel.cs" />
     <Compile Include="Models\Arkham\ArkhamCardSubtype.cs" />

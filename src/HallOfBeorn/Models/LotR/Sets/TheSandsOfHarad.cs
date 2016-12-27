@@ -363,47 +363,56 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Setup: Add “Seize them!” to the staging area. Each player adds 1 different location to the staging area and puts 1 copy of ~Umbar Sentry into play engaged with him. Shuffle the encounter deck.")
                 .WithOppositeFlavor("Alarm bells ring from high watchtowers and the city guard shouts for you to lay down your arms and surrender. You must run or be captured!")
                 .WithOppositeText("This stage cannot have more than 15 progress tokens on it.\r\nWhile at least 1 player is engaged with an enemy, the players cannot defeat this stage.")
+                .WithIncludedEncounterSets(EncounterSet.HaradTerritory, EncounterSet.HaradSoldiers)
                 .WithInfo(66, 1, Artist.Nikolas_Hagialas));
             addCard(LotRCard.Quest("Flee the City", string.Empty, 1, 2, setEscape, 15)
                 .WithFlavor("The whole of Umbar is astir, and the Southrons chase you through the streets. If you cannot escape the city quickly, you are certain to be taken prisoner.")
                 .WithText("When Revealed: End the current phase. Shuffle the encounter discard pile into the encounter deck. Starting with the first player, each player discards cards from the top of the encounter deck until he discards an enemy, and puts that enemy into play engaged with him.")
                 .WithOppositeText("This stage cannot have more than 15 progress tokens on it.\r\nForced: At the beginning of the quest phase, if any player is not engaged with an enemy, discard cards from the top of the encounter deck until an enemy is discarded and add it to the staging area.\r\nWhile at least 1 player is engaged with an enemy, the players cannot defeat this stage. If the players defeat this stage, they win the game.")
+                .WithIncludedEncounterSets(EncounterSet.HaradTerritory, EncounterSet.HaradSoldiers)
                 .WithInfo(67, 1, Artist.Joshua_Cairos));
             addCard(LotRCard.Quest("The Desert of Harad", string.Empty, 2, 1, setCrossing, 8)
                 .WithFlavor("You have escaped from Umbar and thrown off your pursuers by fleeing into the desert, but many barren miles lie between you and the other side. To turn back is to walk into the arms of the Haradrim, so you set out on a dangerous desert crossing.")
                 .WithText("Setup: Each player searches the encounter deck for a copy of Burnt Sands and adds it to the staging area. Shuffle the encounter deck. Place the heat tracker next to the quest deck and set the temperature to 10.")
                 .WithOppositeFlavor("As the sun climbs into the sky, you can feel the rising heat begin to take its toll on you...")
                 .WithOppositeText("Forced: After an ally enters play, either exhaust it, or deal 1 damage to it.\r\nForced: At the end of the round, increase the temperature by 4.\r\nIf the temperature is 60 or higher, the players lose the game.")
+                .WithIncludedEncounterSets(EncounterSet.DesertCreatures, EncounterSet.DesertSands)
                 .WithInfo(68, 1, Artist.Kim_Sokol));
             addCard(LotRCard.Quest("Under the Merciless Sun", string.Empty, 2, 2, setCrossing, 14)
                 .WithFlavor("You trudge across the barren desert with the blazing sun overhead and deadly creatures underfoot, but nothing is more dangerous to you than your lack of water.")
                 .WithText("When Revealed: Increase the temperature by 2. Shuffle the encounter discard pile into the encounter deck and reveal 1 encounter card per player.")
                 .WithOppositeFlavor("If you cannot make it across the desert soon, you are certain to die of thrist...")
                 .WithOppositeText("Forced: At the end of the round, increase the temperature by 4. Then, each player assigns X damage among characters he controls, where X is the tens digit of the temperature.\r\nIf the temperature is 60 or higher, the players lose the game.")
+                .WithIncludedEncounterSets(EncounterSet.DesertCreatures, EncounterSet.DesertSands)
                 .WithInfo(69, 1, Artist.Victor_Garcia));
             addCard(LotRCard.Quest("Beasts of Legend", string.Empty, 2, 3, setCrossing, 16)
                 .WithFlavor("You have wandered through the trackless desert and discovered the legendary nesting grounds of the wild Were-worms. The beasts rear up and circle to attack. You must drive them off or meet your end upon the desert sands.")
                 .WithText("When Revealed: Increase the temperature by 2. Each player searches the encounter deck, discard pile, and victory display for a Were-worm and adds it to the staging area, if able. Shuffle the encounter deck.")
                 .WithOppositeText("During the quest phase, add X Threat to the total Threat in the staging area, where X is the tens digit of the temperature.\r\nForced: At the end of the round, increase the temperature by 4.\r\nWhile at least 1 Were-worm is in play, the players cannot defeat this stage. If the players defeat this stage, they win the game. If the temperature is 60 or higher, the players lose the game.")
+                .WithIncludedEncounterSets(EncounterSet.DesertCreatures, EncounterSet.DesertSands)
                 .WithInfo(70, 1, Artist.Dimitri_Bielak));
             addCard(LotRCard.Quest("Surprise Attack", string.Empty, 3, 1, setLongArm, 0)
                 .WithFlavor("A tribe of Haradrim has rescued you, but their village is attacked by Orcs!")
                 .WithText("Setup: Set Uruk Chieftain aside, out of play. Each player adds 1 copy of Sauron’s Enforcers to the staging area. Move each hero to the staging area. Each player takes control of an objective-hero and adds 2 resources to its resource pool. Remove each remaining objective-hero from the game. For the remainder of the game, heroes in the staging area are in play but under no player’s control, immune to player card effects, and their text boxes are considered to be blank.")
                 .WithOppositeText("Damage from undefended attacks must be dealt to a hero in the staging area, if able.\r\nThe first card each player plays each phase does not require a resource match.\r\nForced: After placing progress from questing successfully, each player chooses a hero he owns in the staging area and, takes control of that hero, and exhausts it. Advance to stage 2A.")
+                .WithIncludedEncounterSets(EncounterSet.MordorOrcs, EncounterSet.JungleForest)
                 .WithInfo(71, 1, Artist.Alexandr_Elichev));
             addCard(LotRCard.Quest("Find the Others", string.Empty, 3, 2, setLongArm, 5)
                 .WithFlavor("Still weary from the long journey across the desert, your companions are somewhere in the village. In your weakened state you are no match for the attacking Orcs. Your only chance to survive is to flee into the jungle, but you will not abandon your friends.")
                 .WithOppositeText("Damage from undefended attacks must be dealt to a hero in the staging area, if able.\r\nThe first card each player plays each phase does not require a resource match.\r\nForced: When this stage is defeated, each player chooses a hero he owns in the staging area, takes control of that hero, and exhausts it.")
+                .WithIncludedEncounterSets(EncounterSet.MordorOrcs, EncounterSet.JungleForest)
                 .WithInfo(72, 1, Artist.Joshua_Cairos));
             addCard(LotRCard.Quest("Free the Captives", string.Empty, 3, 3, setLongArm, 10)
                 .WithFlavor("Orcs have seized your friends and are now dragging them away as captives.")
                 .WithText("When Revealed: Each player searches the encounter deck and discard pile for an Orc enemy and adds it to the staging area. Shuffle the encounter deck. Attach each hero in the staging area to a different Orc enemy in the staging area. Each hero attached to an enemy is guarded by that enemy. Guarded heroes are under no player’s control, immune to player card effects, and their text boxes are considered to be blank.")
                 .WithOppositeText("While an enemy is guarding a hero it gets +1 Threat, +1 Attack, +1 Defense and is immune to player card effects.\r\nForced: When the enemy guarding a hero is defeated, that hero’s owner takes control of that hero and exhausts it.\r\nThis stage cannot be defeated while an enemy is guarding a hero.")
+                .WithIncludedEncounterSets(EncounterSet.MordorOrcs, EncounterSet.JungleForest)
                 .WithInfo(73, 1, Artist.Nikolas_Hagialas));
             addCard(LotRCard.Quest("Escape into the Jungle", string.Empty, 3, 4, setLongArm, 15)
                 .WithFlavor("The Orcs run rampant through the Haradrim boma. Amidst the chaos, you see an opportunity to escape but a large Uruk chieftain bars your way. You will have to defeat the chieftain in order to get past him.")
                 .WithText("When Revealed: Add Uruk Chieftain to the staging area. Shuffle the encounter discard pile into the encounter deck and reveal 1 encounter card per player.")
                 .WithOppositeText("Uruk Chieftain cannot take non-combat damage.\r\nEach non-unique Orc enemy gets -10 engagement cost.\r\nForced: After Uruk Chieftain engages a player, it makes an immediate attack.\r\nThe players cannot defeat this stage while Uruk Chieftain is in play. If the players defeat this stage, they win the game.")
+                .WithIncludedEncounterSets(EncounterSet.MordorOrcs, EncounterSet.JungleForest)
                 .WithInfo(74, 1, Artist.David_A_Nash));
         }
     }

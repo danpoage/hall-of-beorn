@@ -11,6 +11,10 @@ namespace HallOfBeorn.Models.LotR.Products
             : base("The Sands of Harad", "MEC55", ImageType.Jpg)
         {
             AddCardSet(CardSet.TheSandsOfHarad);
+
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.EscapeFromUmbar());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.DesertCrossing());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheLongArmOfMordor());
         }
     }
 }
