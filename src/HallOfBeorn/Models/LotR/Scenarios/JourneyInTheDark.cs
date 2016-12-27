@@ -15,7 +15,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios
 
             AddQuestCardId("The-Long-Dark-of-Moria-RD");
             AddQuestCardId("Drums-in-the-Deep-RD");
-            AddQuestCardId("The-Bridge-of-Khazad-dûm-RD");
+            AddQuestCardId("The-Bridge-of-Khazad-dum-RD");
 
             ExcludeFromEasyMode("Darkened-Stairway-RD", 1);
             ExcludeFromEasyMode("Fool-of-a-Took-RD", 1);

@@ -782,6 +782,7 @@ Forced: After an enemy is defeated, place 1 resource token on this stage.",
             Cards.Add(new LotRCard()
             {
                 Title = "The Bridge of Khazad-dûm",
+                NormalizedTitle = "The Bridge of Khazad-dum",
                 Id = "F836D78D-C291-43DE-A562-144D4ABC4F4A",
                 ImageType = Models.ImageType.Jpg,
                 HasSecondImage = true,
@@ -789,7 +790,7 @@ Forced: After an enemy is defeated, place 1 resource token on this stage.",
                 ScenarioNumber = 5,
                 StageNumber = 3,
                 EncounterSet = "Journey in the Dark",
-                Text = "When Revealed: Add The Great ~Bridge to the staging area. Each player reveals 1 encounter card and removes 1 damage token from Doom, Doom, Doom.",
+                Text = "When Revealed: Add The Great ~Bridge to the staging area. Each player reveals 1 encounter card and removes 1 damage token from ~Doom, ~Doom, ~Doom.",
                 FlavorText = "The outer door could only be reached by a slender bridge of stone, without kerb or rail, that spanned the chasm with one curving spring of fifty feet. -The Fellowship of the Ring",
                 QuestPoints = 15,
                 OppositeText =
