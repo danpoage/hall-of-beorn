@@ -16,7 +16,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cycle = "Shadows of Mirkwood";
 
             Cards.Add(new LotRCard() {
-                ImageType = ImageType.Jpg,
+                
                 Title = "Amon Hen",
                 Id = "51223bd0-ffd1-11df-a976-0801204c9001",
                 CardType = CardType.Location,
@@ -33,7 +33,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Vincent_Proce
             });
             Cards.Add(new LotRCard() {
-                ImageType = ImageType.Jpg,
+                
                 Title = "Amon Lhaw",
                 Id = "51223bd0-ffd1-11df-a976-0801204c9002",
                 CardType = CardType.Location,
@@ -50,7 +50,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Vincent_Proce
             });
             Cards.Add(new LotRCard() {
-                ImageType = ImageType.Jpg,
+                
                 Title = "Brand son of Bain",
                 Id = "51223bd0-ffd1-11df-a976-0801204c9003",
                 CardType = CardType.Hero,
@@ -70,7 +70,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard() {
-                ImageType = ImageType.Jpg,
+                
                 Title = "Descendant of Thorondor",
                 Id = "51223bd0-ffd1-11df-a976-0801204c9004",
                 CardType = CardType.Ally,
@@ -87,7 +87,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Igor_Kieryluk
             });
             Cards.Add(new LotRCard() {
-                ImageType = ImageType.Jpg,
+                
                 Title = "Gildor Inglorion",
                 Id = "51223bd0-ffd1-11df-a976-0801204c9005",
                 CardType = CardType.Ally,
@@ -106,7 +106,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = ImageType.Jpg,
+                
                 Title = "Gildor's Counsel",
                 Id = "51223bd0-ffd1-11df-a976-0801204c9006",
                 CardType = CardType.Event,
@@ -119,7 +119,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = ImageType.Jpg,
+                
                 Title = "Impassable Chasm",
                 Id = "51223bd0-ffd1-11df-a976-0801204c9007",
                 CardType = CardType.Treachery,
@@ -132,7 +132,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Noah_Bradley
             });
             Cards.Add(new LotRCard() {
-                ImageType = ImageType.Jpg,
+                
                 Title = "Keen-eyed Took",
                 Id = "51223bd0-ffd1-11df-a976-0801204c9008",
                 CardType = CardType.Ally,
@@ -150,7 +150,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Anna_Mohrbacher
             });
             Cards.Add(new LotRCard() {
-                ImageType = ImageType.Jpg,
+                
                 Title = "Meneldor's Flight",
                 Id = "51223bd0-ffd1-11df-a976-0801204c9009",
                 CardType = CardType.Event,
@@ -163,7 +163,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.A_M_Sartor
             });
             Cards.Add(new LotRCard() {
-                ImageType = ImageType.Jpg,
+                
                 Title = "Orc Horse Thieves",
                 Id = "51223bd0-ffd1-11df-a976-0801204c9010",
                 CardType = CardType.Enemy,
@@ -183,7 +183,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Brian_Valenzuela
             });
             Cards.Add(new LotRCard() {
-                ImageType = ImageType.Jpg,
+                
                 Title = "Rauros Falls",
                 Id = "51223bd0-ffd1-11df-a976-0801204c9011",
                 CardType = CardType.Location,
@@ -199,7 +199,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Aaron_B_Miller
             });
             Cards.Add(new LotRCard() {
-                ImageType = ImageType.Jpg,
+                
                 Title = "Rear Guard",
                 Id = "51223bd0-ffd1-11df-a976-0801204c9012",
                 CardType = CardType.Event,
@@ -212,7 +212,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Lin_Bo
             });
             Cards.Add(new LotRCard() {
-                ImageType = ImageType.Jpg,
+                
                 Title = "Ride to Ruin",
                 Id = "51223bd0-ffd1-11df-a976-0801204c9013",
                 CardType = CardType.Event,
@@ -225,7 +225,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Erfian_Asafat
             });
             Cards.Add(new LotRCard() {
-                ImageType = ImageType.Jpg,
+                
                 Title = "Rockslide",
                 Id = "51223bd0-ffd1-11df-a976-0801204c9014",
                 CardType = CardType.Treachery,
@@ -239,7 +239,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Stu_Barnes
             });
             Cards.Add(new LotRCard() {
-                ImageType = ImageType.Jpg,
+                
                 Title = "Slick Footing",
                 Id = "51223bd0-ffd1-11df-a976-0801204c9015",
                 CardType = CardType.Treachery,
@@ -251,7 +251,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = ImageType.Jpg,
+                
                 Title = "Song of Travel",
                 Id = "51223bd0-ffd1-11df-a976-0801204c9016",
                 CardType = CardType.Attachment,
@@ -265,7 +265,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard() {
-                ImageType = ImageType.Jpg,
+                
                 Title = "The East Wall of Rohan",
                 Id = "51223bd0-ffd1-11df-a976-0801204c9017",
                 CardType = CardType.Location,
@@ -282,7 +282,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
-                ImageType = ImageType.Jpg,
+                
                 Title = "The Highlands",
                 Id = "51223bd0-ffd1-11df-a976-0801204c9018",
                 CardType = CardType.Location,
@@ -298,7 +298,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Bill_Corbett
             });
             Cards.Add(new LotRCard() {
-                ImageType = ImageType.Jpg,
+                
                 SlugIncludesType = true,
                 Title = "The Hills of Emyn Muil",
                 StageNumber = 1,
@@ -306,7 +306,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 CardType = CardType.Quest,
                 QuestPoints = 1,
                 Quantity = 1,
-                Setup = "ss",
                 Text = "Setup: Search the encounter deck for Amon Hen and Amon Lhaw, and add them to the staging area. Then shuffle the encounter deck.",
                 FlavorText = "The hunt for Gollum has led you to the south, and you are now approaching Rauros falls and the nearby hills of Emyn Muil...",
                 OppositeFlavorText = "You are certain that Gollum has fled into the area, and you must explore until you find the fresh trail.",
@@ -317,7 +316,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SauronsReach }
             });
             Cards.Add(new LotRCard() {
-                ImageType = ImageType.Jpg,
+                
                 Title = "The North Stair",
                 Id = "51223bd0-ffd1-11df-a976-0801204c9021",
                 CardType = CardType.Location,
@@ -333,7 +332,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard() {
-                ImageType = ImageType.Jpg,
+                
                 Title = "The Outer Ridge",
                 Id = "51223bd0-ffd1-11df-a976-0801204c9022",
                 CardType = CardType.Location,
@@ -349,7 +348,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Lin_Bo
             });
             Cards.Add(new LotRCard() {
-                ImageType = ImageType.Jpg,
+                
                 Title = "The Riddermark's Finest",
                 Id = "51223bd0-ffd1-11df-a976-0801204c9023",
                 CardType = CardType.Ally,
@@ -367,7 +366,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Andrew_Johanson
             });
             Cards.Add(new LotRCard() {
-                ImageType = ImageType.Jpg,
+                
                 Title = "The Shores of Nen Hithoel",
                 Id = "51223bd0-ffd1-11df-a976-0801204c9024",
                 CardType = CardType.Location,

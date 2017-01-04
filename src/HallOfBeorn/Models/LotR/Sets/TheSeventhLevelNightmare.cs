@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             {
                 Title = "The Seventh Level Nightmare",
                 HasSecondImage = true,
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "4A2A4373-7D97-4664-A502-C083A6D6079E",
                 CardType = CardType.Nightmare_Setup,
                 Text =
@@ -56,7 +56,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             {
                 Title = "Overseer Maurûl",
                 IsUnique = true,
-                ImageType = ImageType.Jpg,
+                
                 Id = "F61D5E3F-9CE7-4939-AF86-F77A92D3FBB0",
                 CardType = CardType.Enemy,
                 EngagementCost = 20,
@@ -78,7 +78,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             {
                 Title = "Chamber of Records",
                 IsUnique = true,
-                ImageType = ImageType.Jpg,
+                
                 Id = "A27F95E3-3DE8-4358-831D-DD027908B955",
                 CardType = CardType.Location,
                 Threat = 5,
@@ -95,7 +95,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Orc Taskmaster",
-                ImageType = ImageType.Jpg,
+                
                 Id = "EF2A8F64-950C-4E2A-BDC7-2D2AB35FEEFA",
                 CardType = CardType.Enemy,
                 EngagementCost = 44,
@@ -116,7 +116,7 @@ Forced: When a Goblin enemy with at least 1 resource on it is dealt any amount o
             Cards.Add(new LotRCard()
             {
                 Title = "Goblin Skirmisher",
-                ImageType = ImageType.Jpg,
+                
                 Id = "BD58DF6F-B041-4990-817A-FB85E340383D",
                 CardType = CardType.Enemy,
                 EngagementCost = 15,
@@ -135,7 +135,7 @@ Forced: When a Goblin enemy with at least 1 resource on it is dealt any amount o
             Cards.Add(new LotRCard()
             {
                 Title = "Pit Goblin",
-                ImageType = ImageType.Jpg,
+                
                 Id = "59BA724D-519F-4B9C-B0C8-2DC847A7B5DE",
                 CardType = CardType.Enemy,
                 EngagementCost = 36,
@@ -154,7 +154,7 @@ Forced: When a Goblin enemy with at least 1 resource on it is dealt any amount o
             Cards.Add(new LotRCard()
             {
                 Title = "Deep-Mines",
-                ImageType = ImageType.Jpg,
+                
                 Id = "3CDFFD2F-AD4F-494B-BEF3-51E7BF0D3831",
                 CardType = CardType.Location,
                 Threat = 2,
@@ -170,7 +170,7 @@ Forced: When a Goblin enemy with at least 1 resource on it is dealt any amount o
             Cards.Add(new LotRCard()
             {
                 Title = "Western Hall",
-                ImageType = ImageType.Jpg,
+                
                 Id = "271067BE-C5D3-49F2-A460-C91C35750E88",
                 CardType = CardType.Location,
                 Threat = 4,
@@ -186,7 +186,7 @@ Forced: When a Goblin enemy with at least 1 resource on it is dealt any amount o
             Cards.Add(new LotRCard()
             {
                 Title = "Balin's Doom",
-                ImageType = ImageType.Jpg,
+                
                 Id = "4F0ADDDF-50F0-49FB-88A7-E2F37B1A3BCF",
                 CardType = CardType.Treachery,
                 Keywords = new List<string> { "Surge.", "Doomed 1." },
@@ -200,7 +200,7 @@ Forced: When a Goblin enemy with at least 1 resource on it is dealt any amount o
             Cards.Add(new LotRCard()
             {
                 Title = "Beats and Echoes",
-                ImageType = ImageType.Jpg,
+                
                 Id = "EDFBC460-3EB4-4FA9-AFE2-6E538C86B8CE",
                 CardType = CardType.Treachery,
                 Text = "When Revealed: Reveal the top X cards of the encounter deck, adding all enemies to the staging area. Discard the other revealed cards without resolving them. X is 2 plus the number of players not engaged with a Goblin enemy.",

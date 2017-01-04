@@ -71,20 +71,20 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithFlavor("Hope he rekindled, and in hope ended;\r\nover death, over dread, over doom lifted\r\nout of loss, out of life, unto long glory.\r\n-The Return of the King")
                 .WithTemplate("<p><b>Action:</b> Reduce the cost of the next event that has a <b>Valour</b> trigger you play this phase by 2.</p><p><b>Valour Action:</b> Search the top 10 cards of your deck for an event that has a <b>Valour</b> trigger and add it to your hand. Shuffle your deck.</p><p class='flavor-text'>Hope he rekindled, and in hope ended;<br>over death, over dread, over doom lifted<br>out of loss, out of life, unto long glory.<br>&ndash;The Return of the King</p>")
                 .WithInfo(63, 3, Artist.Gabrielle_Portal));
-            Cards.Add(LotRCard.Quest("Into the Ettenmoors", "", 3, 1, setName, 10)
+            Cards.Add(LotRCard.Quest("Into the Ettenmoors", 1, setName, 10)
                 .WithText("Setup: Set aside each of the 3 Across the Enttenmoors side quests and each of the 4 locations with the safe keyword. Reveal 1 of those side quests at random and 1 of those safe locations at random, adding them to the staging area with the safe location guarded by the side quest. Search the encounter deck for 1 copy of Savage Trollspawn per player and add them to the staging area. Shuffle the remaining side quests and safe locations back into the encounter deck. The first player gains control of Amarthiúl.")
                 .WithOppositeFlavor("You have escaped from the prisons of Mount Gram, but you are not safe yet.")
                 .WithOppositeText("Forced: At the beginning of the quest phase, if there are no encounter side quests in play, discard cards from the top of the encounter deck until a side quest is discarded, reveal it, and add it to the staging area.\r\nForced: When a side quest is defeated, place progress tokens on Into the Etternmoors equal to that side quest's quest points.")
                 .WithIncludedEncounterSets(EncounterSet.EriadorWilds, EncounterSet.FoulWeather)
                 .WithInfo(64, 1, Artist.Alvaro_Calvo_Escudero));
-            Cards.Add(LotRCard.Quest("A Miserable Journey", "", 3, 2, setName, 20)
+            Cards.Add(LotRCard.Quest("A Miserable Journey", 2, setName, 20)
                 .WithFlavor("Your trek through the Ettenmoors only gets worse as your injured company is pursued by hungry trolls and bettered by cold and rain.")
                 .WithText("When Revealed: Shuffle the encounter discard pile into the encounter deck. Discard cards from the top of the encounter deck until a side quest is discarded. Reveal that side quest and add it to the staging area, if able.")
                 .WithOppositeFlavor("This land is barren and untamed. Food is scarce, and you must take care to avoid the Trolls and other creatures that roam the moors. If you are lucky, you may find a safe place to hide and rest for a short time before your journey continues.")
                 .WithOppositeText("Reveal 1 additional encounter card during the quest phase unless there is an active location with the safe keyword.")
                 .WithIncludedEncounterSets(EncounterSet.EriadorWilds, EncounterSet.FoulWeather)
                 .WithInfo(65, 1, Artist.Victor_Garcia));
-            Cards.Add(LotRCard.Quest("Journey's End", "", 3, 3, setName, 17)
+            Cards.Add(LotRCard.Quest("Journey's End", 3, setName, 17)
                 .WithFlavor("You are getting closer to the edge of the Troll-fells, but exhaustion has taken its toll. One way or another, this journey is nearing its end...")
                 .WithText("When Revealed: Shuffle the encounter discard pile into the encounter deck. Discard cards from the top of the encounter deck until a side quest is discarded. Reveal that side quest and add it to the staging area, if able.")
                 .WithOppositeFlavor("Your wounded companions only slow your progress. With Trolls on your heels and foul weather overhead, you press onward.")

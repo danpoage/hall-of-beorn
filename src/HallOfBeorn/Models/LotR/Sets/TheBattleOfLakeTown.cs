@@ -17,16 +17,13 @@ namespace HallOfBeorn.Models.LotR.Sets
 
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Terror from the Mountain",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-1801203c9020",
                 CardType = CardType.Quest,
-                ScenarioNumber = 2,
                 EncounterSet = "The Battle of Lake-town",
                 Quantity = 1,
                 QuestPoints = 14,
-                Setup = "s",
                 Text = "Setup: Shuffle all copies of Smaug into a separate Smaug Deck. Search the encounter deck for Lake-town and add it to the staging area. Shuffle the encounter deck. Then reveal 1 card from the encounter deck per player, and add it to the staging area.",
                 OppositeText = "Smaug cannot have more than 6 damage on him.\r\nWhen Revealed: Deal 1 damage to Lake-town for each player in the game.",
                 FlavorText = "\"Then warning trumpets were suddenly sounded, and echoed along the rocky shores. The cheering stopped and the joy was quickly turned to dread. So it was that the dragon did not find them quite unprepared.\" - The Hobbit",
@@ -35,12 +32,12 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Fire and Water",
                 StageNumber = 2,
                 Id = "51223bd0-ffd1-11df-a976-1801203c9006",
                 CardType = CardType.Quest,
-                ScenarioNumber = 2,
+                
                 EncounterSet = "The Battle of Lake-town",
                 Quantity = 1,
                 QuestPoints = 10,
@@ -51,12 +48,12 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Dragon's Wrath",
                 StageNumber = 3,
                 Id = "51223bd0-ffd1-11df-a976-1801203c9022",
                 CardType = CardType.Quest,
-                ScenarioNumber = 2,
+                
                 EncounterSet = "The Battle of Lake-town",
                 Quantity = 1,
                 QuestPoints = null,
@@ -67,7 +64,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Smaug the Mighty",
                 Id = "51223bd0-ffd1-11df-a976-1801203c9017",
                 CardType = CardType.Enemy,
@@ -86,7 +83,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Smaug the Terrible",
                 Id = "51223bd0-ffd1-11df-a976-1801203c9018",
                 CardType = CardType.Enemy,
@@ -104,7 +101,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Christopher_Burdett
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Smaug the Magnificent",
                 Id = "51223bd0-ffd1-11df-a976-1801203c9016",
                 CardType = CardType.Enemy,
@@ -123,7 +120,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Lake-town",
                 Id = "51223bd0-ffd1-11df-a976-1801203c9011",
                 CardType = CardType.Objective,
@@ -137,7 +134,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Old Thrush",
                 Id = "51223bd0-ffd1-11df-a976-1801203c9025",
                 CardType = CardType.Objective,
@@ -152,7 +149,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Close to the Flame",
                 Id = "51223bd0-ffd1-11df-a976-1801203c9002",
                 CardType = CardType.Treachery,
@@ -165,7 +162,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Scorching Blast",
                 Id = "51223bd0-ffd1-11df-a976-1801203c9015",
                 CardType = CardType.Treachery,
@@ -178,7 +175,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Town-Baiting",
                 Id = "51223bd0-ffd1-11df-a976-1801203c9026",
                 CardType = CardType.Treachery,
@@ -190,7 +187,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Dire Magnificence",
                 Id = "51223bd0-ffd1-11df-a976-1801203c9003",
                 CardType = CardType.Treachery,
@@ -203,7 +200,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Catching Fire",
                 Id = "51223bd0-ffd1-11df-a976-1801203c9001",
                 CardType = CardType.Treachery,
@@ -216,7 +213,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Reckless in His Rage",
                 Id = "51223bd0-ffd1-11df-a976-1801203c9014",
                 CardType = CardType.Treachery,
@@ -229,7 +226,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "West Pier",
                 Id = "51223bd0-ffd1-11df-a976-1801203c9027",
                 CardType = CardType.Location,
@@ -245,7 +242,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Master's Manor",
                 Id = "51223bd0-ffd1-11df-a976-1801203c9024",
                 CardType = CardType.Location,
@@ -262,7 +259,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Alexandre_Dainche
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "South Pier",
                 Id = "51223bd0-ffd1-11df-a976-1801203c9019",
                 CardType = CardType.Location,
@@ -279,7 +276,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "North Pier",
                 Id = "51223bd0-ffd1-11df-a976-1801203c9013",
                 CardType = CardType.Location,
@@ -296,7 +293,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Merchant's District",
                 Id = "51223bd0-ffd1-11df-a976-1801203c9012",
                 CardType = CardType.Location,
@@ -314,7 +311,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "East Pier",
                 Id = "51223bd0-ffd1-11df-a976-1801203c9004",
                 CardType = CardType.Location,
@@ -331,7 +328,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Great House",
                 IsUnique = true,
                 Id = "51223bd0-ffd1-11df-a976-1801203c9010",
@@ -349,7 +346,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Great Bridge",
                 IsUnique = true,
                 Id = "51223bd0-ffd1-11df-a976-1801203c9009",
@@ -367,7 +364,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Fisherman's Dock",
                 Id = "51223bd0-ffd1-11df-a976-1801203c9008",
                 CardType = CardType.Location,
@@ -385,7 +382,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Esgaroth Wharf",
                 Id = "51223bd0-ffd1-11df-a976-1801203c9005",
                 CardType = CardType.Location,

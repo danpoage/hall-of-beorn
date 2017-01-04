@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             {
                 Title = "Return to Mirkwood Nightmare",
                 HasSecondImage = true,
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "C9A56A9F-F13D-4DA9-916C-D6CE5408B7A5",
                 CardType = CardType.Nightmare_Setup,
                 Text = "You are playing Nightmare mode.\r\n\r\nForced: At the beginning of the quest phase, the player who is guarding ~Gollum must either exhaust a hero he controls or resolve the \"when revealed\" effect of the topmost Tantrum card in the encounter discard pile.\r\n\r\nForced: When Stage 4A is revealed, search the encounter deck and discard pile for 1 copy of Attercop, Attercop and add it to the staging area, if able. Shuffle the encounter deck.",
@@ -50,7 +50,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Ambushing Orcs",
-                ImageType = ImageType.Jpg,
+                
                 Id = "E52E3F8B-6C12-4A5C-9909-3B3A40C5DE81",
                 CardType = CardType.Enemy,
                 EngagementCost = 28,
@@ -69,7 +69,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Pursuing Warg-rider",
-                ImageType = ImageType.Jpg,
+                
                 Id = "10E42DC5-566E-43B4-9C3D-CF63AF40A291",
                 CardType = CardType.Enemy,
                 EngagementCost = 48,
@@ -87,7 +87,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Web-spinner",
-                ImageType = ImageType.Jpg,
+                
                 Id = "DD05E927-C677-4C27-B694-493281C0D8FB",
                 CardType = CardType.Enemy,
                 EngagementCost = 33,
@@ -106,7 +106,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Deceptive Path",
-                ImageType = ImageType.Jpg,
+                
                 Id = "CFFD5078-77D7-451B-B45E-86AC11A70BA4",
                 CardType = CardType.Location,
                 Threat = 4,
@@ -124,7 +124,7 @@ Forced: After Deceptive Path becomes the active location, shuffle the encounter 
             Cards.Add(new LotRCard()
             {
                 Title = "Web-wall",
-                ImageType = ImageType.Jpg,
+                
                 Id = "766CF222-9094-4076-94FD-43C871F69423",
                 CardType = CardType.Location,
                 Threat = 3,
@@ -140,7 +140,7 @@ Forced: After Deceptive Path becomes the active location, shuffle the encounter 
             Cards.Add(new LotRCard()
             {
                 Title = "Isolation",
-                ImageType = ImageType.Jpg,
+                
                 Id = "2AFB7882-B425-4036-9518-B6A5E317012A",
                 CardType = CardType.Treachery,
                 Keywords = new List<string> { "Surge." },
@@ -154,7 +154,7 @@ Forced: After Deceptive Path becomes the active location, shuffle the encounter 
             Cards.Add(new LotRCard()
             {
                 Title = "Befouled Equipment",
-                ImageType = ImageType.Jpg,
+                
                 Id = "DF8EC67E-9764-4C69-A06F-FCB56DA2A9AB",
                 CardType = CardType.Treachery,
                 Traits = new List<string> { "Tantrum." },
@@ -168,7 +168,7 @@ Forced: After Deceptive Path becomes the active location, shuffle the encounter 
             Cards.Add(new LotRCard()
             {
                 Title = "Wickedness and Mischief",
-                ImageType = ImageType.Jpg,
+                
                 Id = "23005927-8199-44C7-8462-B6372B51E077",
                 CardType = CardType.Treachery,
                 Text = "When Revealed: The player guarding Gollum must either reveal the topmost Tantrum card in the encounter discard pile, or reveal 2 additional encounter cards from the encounter deck.",

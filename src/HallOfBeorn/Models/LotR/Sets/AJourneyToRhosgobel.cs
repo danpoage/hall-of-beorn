@@ -16,7 +16,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cycle = "Shadows of Mirkwood";
 
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Prince Imrahil",
                 Id = "51223bd0-ffd1-11df-a976-0801203c9001",
                 CardType = CardType.Hero,
@@ -53,7 +52,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Radagast",
                 Id = "51223bd0-ffd1-11df-a976-0801203c9003",
                 CardType = CardType.Ally,
@@ -72,7 +71,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Rio_Sabda
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Landroval",
                 Id = "51223bd0-ffd1-11df-a976-0801203c9004",
                 CardType = CardType.Ally,
@@ -91,7 +90,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Allison_Theus
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Ancient Mathom",
                 Id = "51223bd0-ffd1-11df-a976-0801203c9005",
                 CardType = CardType.Attachment,
@@ -105,7 +104,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Anna_Mohrbacher
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Infighting",
                 Id = "51223bd0-ffd1-11df-a976-0801203c9006",
                 CardType = CardType.Event,
@@ -118,7 +117,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Felicia_Cano
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Parting Gifts",
                 Id = "51223bd0-ffd1-11df-a976-0801203c9007",
                 CardType = CardType.Event,
@@ -143,7 +142,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Leonardo_Borazio
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Escort from Edoras",
                 Id = "51223bd0-ffd1-11df-a976-0801203c9009",
                 CardType = CardType.Ally,
@@ -160,7 +159,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Mark_Winters
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "To the Eyrie",
                 Id = "51223bd0-ffd1-11df-a976-0801203c9010",
                 CardType = CardType.Event,
@@ -173,7 +172,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Festering Wounds",
                 Id = "51223bd0-ffd1-11df-a976-0801203c9011",
                 CardType = CardType.Treachery,
@@ -187,7 +186,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 SecondArtist = Artist.Julia_Laud
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Athelas",
                 Id = "51223bd0-ffd1-11df-a976-0801203c9012",
                 CardType = CardType.Objective,
@@ -200,7 +199,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Black Forest Bats",
                 Id = "51223bd0-ffd1-11df-a976-0801203c9013",
                 CardType = CardType.Enemy,
@@ -219,7 +218,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Aurelien_Hubert
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Exhaustion",
                 Id = "51223bd0-ffd1-11df-a976-0801203c9014",
                 CardType = CardType.Treachery,
@@ -232,7 +231,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Marco_Caradonna
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Forest Grove",
                 Id = "51223bd0-ffd1-11df-a976-0801203c9015",
                 CardType = CardType.Location,
@@ -247,7 +246,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Anna_Mohrbacher
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Mirkwood Flock",
                 Id = "51223bd0-ffd1-11df-a976-0801203c9016",
                 CardType = CardType.Enemy,
@@ -266,7 +265,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Brandon_Leach
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Rhosgobel",
                 Id = "51223bd0-ffd1-11df-a976-0801203c9017",
                 CardType = CardType.Location,
@@ -283,7 +282,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Swarming Insects",
                 Id = "51223bd0-ffd1-11df-a976-0801203c9018",
                 CardType = CardType.Treachery,
@@ -297,7 +296,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 SecondArtist = Artist.Julia_Laud
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Wilyador",
                 Id = "51223bd0-ffd1-11df-a976-0801203c9019",
                 CardType = CardType.Objective_Ally,
@@ -316,13 +315,11 @@ namespace HallOfBeorn.Models.LotR.Sets
                 SecondArtist = Artist.Julia_Laud
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "The Wounded Eagle",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-0801203c9020",
                 CardType = CardType.Quest,
                 QuestPoints = 8,
-                Setup = "ss",
                 FlavorText = "After a fierce conflict with a group of Trolls, you come across a fallen Eagle, grievously wounded and on the verge of death.",
                 Text = "Setup: Search the encounter deck for Rhosgobel and Wilyador, and add them to the staging area with 2 damage tokens on Wilyador. Then, shuffle the encounter deck.",
                 OppositeFlavorText = "The Eagle's wounds cannot be tended in the wilderness, so you attempt to bring the creature to Rhosgobel, where the wisdom of Radagast the Brown may be its only hope.",
@@ -334,7 +331,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Radagast's Request",
                 StageNumber = 2,
                 Id = "51223bd0-ffd1-11df-a976-0801203c9022",
@@ -349,7 +346,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Return to Rhosgobel",
                 StageNumber = 3,
                 Id = "51223bd0-ffd1-11df-a976-0801203c9024",

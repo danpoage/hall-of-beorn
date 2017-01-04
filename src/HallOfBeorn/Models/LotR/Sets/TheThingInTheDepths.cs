@@ -65,18 +65,18 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Attach to a location.\r\nAction: Exhaust a Ranger or Scout character to give attached location -2 Threat until the end of the phase.")
                 .WithFlavor("\"In this high play you may see the two powers that are opposed to one another; and ever they strive now in thought...\"\r\n-The Fellowship of the Ring")
                 .WithInfo(38, 3, Artist.Leanna_Teneycke));
-            Cards.Add(LotRCard.Quest("Take the Ship!", "", 2, 1, stormcallerSet, 4)
+            Cards.Add(LotRCard.Quest("Take the Ship!", 1, stormcallerSet, 4)
                 .WithFlavor("Swinging across on ropes, your company boards the Stormcaller, and a fierce battle ensues!")
                 .WithText("Setup: Build the encounter deck using only The Stormcaller and Corsair Raiders encounter sets, setting The Thing in the Depths and The Stormcaller Elite encounter sets aside, out of play (enemy side faceup). Search the encounter deck for Helm of the Stormcaller and 1 copy of Umbar Raider, and add them to the staging area. Shuffle the encounter deck.")
                 .WithOppositeText("Captain Sahír and Na’asiyah gain indestructible.\r\nForced: At the end of the round, if Captain Sahír and Na’asiyah are not in play, add 1 resource to each of them.\r\nProgress cannot be placed on this stage unless Helm of the Stormcaller is in the victory display.")
                 .WithIncludedEncounterSets(EncounterSet.TheThingInTheDepths, EncounterSet.TheStormcallerElite, EncounterSet.CorsairRaiders)
                 .WithInfo(39, 1, Artist.Guillaume_Ducos));
-            Cards.Add(LotRCard.Quest("Change of Plans", "", 2, 2, stormcallerSet, 0)
+            Cards.Add(LotRCard.Quest("Change of Plans", 2, stormcallerSet, 0)
                 .WithFlavor("Sahír and Na’asiyah prove to be worthy adversaries, but before you can finish the fight, the entire ship starts to shudder and shake violently. The battle stops as both parties look about, startled. All of a sudden, tentacle arms burst forth from all around the Stormcaller, grabbing a hold of the deck and the masts, punching through the hull of the ship. Deadly, spiked arms lash about at friend and foe alike, and the entire ship creaks, slowly crushed by the arms of a giant sea-beast. The Corsairs lock eyes with you, and you nod in a silent truce.")
                 .WithOppositeText("When Revealed: Flip Captain Sahír and Na’asiyah to their objective sides, removing all tokens from them. Search the encounter deck, discard pile and all play areas for each encounter card from the Corsair Raiders encounter set and remove each of those cards from the game. Add The Thing in the Depths to the staging area. Shuffle the encounter discard pile and the set aside The Thing in the Depths encounter set into the encounter deck. Advance to stage 3.")
                 .WithIncludedEncounterSets(EncounterSet.TheStormcallerElite, EncounterSet.CorsairRaiders)
                 .WithInfo(40, 1, Artist.Sara_Winters));
-            Cards.Add(LotRCard.Quest("Defend the Ship!", "", 2, 3, setName, 0)
+            Cards.Add(LotRCard.Quest("Defend the Ship!", 3, setName, 0)
                 .WithFlavor("With your fleet too far to assist, you must help the Corsairs defend the Stormcaller from destruction, or else you will surely join them in the bottom of the ocean.")
                 .WithText("When Revealed: Discard cards from the top of the encounter deck until X Tentacle enemies are discarded, where X is 1 more than the number of players in the game. Resolve the Grapple keyword on each of those enemies.")
                 .WithOppositeText("During the travel phase, the players may travel to a location in the staging area even if another location is currently active. If they do, return the currently active location to the staging area.\r\nAt the end of the round, if the total Threat of any one Ship location is 9 or higher, the Stormcaller is destroyed, and the players lose the game.\r\nWhen Thing in the Depths is destroyed, the players win the game.")

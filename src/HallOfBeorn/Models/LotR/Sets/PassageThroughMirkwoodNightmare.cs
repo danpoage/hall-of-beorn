@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             {
                 Title = "Passage Through Mirkwood Nightmare",
                 HasSecondImage = true,
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "e84f94bf-201b-4adf-95d2-0012e0bb5001",
                 CardType = CardType.Nightmare_Setup,
                 Text =
@@ -52,7 +52,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Ungoliant's Spawn",
-                ImageType = ImageType.Jpg,
+                
                 Id = "E9AA70B7-D4E4-426B-ADFE-7A3F2A91FE18",
                 CardType = CardType.Enemy,
                 EngagementCost = 32,
@@ -71,7 +71,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Ungoliant's Brood",
-                ImageType = ImageType.Jpg,
+                
                 Id = "99AED5D7-2300-41DB-9D93-97DB4AFB1D32",
                 CardType = CardType.Enemy,
                 EngagementCost = 31,
@@ -90,7 +90,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Forest Flies",
-                ImageType = ImageType.Jpg,
+                
                 Id = "9FE05FBB-7A80-45F5-B004-0F1B45E66E3F",
                 CardType = CardType.Enemy,
                 EngagementCost = 27,
@@ -109,7 +109,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Spiders of Mirkwood",
-                ImageType = ImageType.Jpg,
+                
                 Id = "67F97CBB-20B1-44A8-896A-C96573A20975",
                 CardType = CardType.Enemy,
                 EngagementCost = 18,
@@ -128,7 +128,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "The Spider's Web",
-                ImageType = ImageType.Jpg,
+                
                 Id = "61507870-10CC-409A-BD91-497697D4B415",
                 CardType = CardType.Treachery,
                 Text = "When Revealed: The player with the highest threat exhausts all heroes he controls. Then, attach this card to one of that player's heroes. (Counts as a Condition attachment with the text, \"Each time attached hero readies, deal it 1 damage.\")",
@@ -140,7 +140,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Backtrack!",
-                ImageType = ImageType.Jpg,
+                
                 Id = "C399B1D6-37BD-4C51-8769-2F15B649F816",
                 CardType = CardType.Treachery,
                 Keywords = new List<string> { "Surge." },
@@ -154,7 +154,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Abandoned Camp",
-                ImageType = ImageType.Jpg,
+                
                 Id = "D9AEDBA6-726A-4E70-BC90-B6D7EBBE25C9",
                 CardType = CardType.Location,
                 Threat = 2,
@@ -170,7 +170,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Glade of the Spawn",
-                ImageType = ImageType.Jpg,
+                
                 Id = "09968CAF-E80A-411D-9491-BFABB78F1F67",
                 CardType = CardType.Location,
                 Threat = 4,

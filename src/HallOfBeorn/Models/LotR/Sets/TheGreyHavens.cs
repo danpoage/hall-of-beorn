@@ -87,7 +87,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Attach to Círdan the Shipwright or Gandalf.\r\nAttached character gains a Leadership resource icon.\r\nAction: Exhaust Narya and attached character to choose and ready up to 2 allies. Each of those allies gets +1 Attack and +1 Defense until the end of the phase.")
                 .WithFlavor("\"For this is the Ring of Fire, and with it you may rekindle hearts in a world that grows chill.\"\r\n-Círdan, The Return of the King")
                 .WithInfo(15, 3, Artist.Lucas_Durham));
-            Cards.Add(LotRCard.Quest("Departure from the Havens", "", 1, 1, "Voyage Across Belegaer", 8)
+            Cards.Add(LotRCard.Quest("Departure from the Havens", 1, "Voyage Across Belegaer", 8)
                 .WithKeywords("Sailing.")
                 .WithFlavor("The Dream-chaser and her fleet depart from the Grey Havens, in search of the island from Calphon's dreams. Only a week out from the coast, the black sails of Corsair can be seen in pursuit!")
                 .WithText("Setup: Prepare the Corsair deck. Players prepare their fleet. Shuffle each stage 2 card in the quest deck so that their order is random, leaving stage 3 on the bottom. Search the encounter deck for 1 copy of Rolling Seas and 1 copy of Scouting Ship, and add them to the staging area. Shuffle the encounter deck.")
@@ -95,14 +95,14 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithVictoryPoints(3)
                 .WithIncludedEncounterSets(EncounterSet.VastOceans, EncounterSet.StormyWeather, EncounterSet.UmbarFleet, EncounterSet.CorsairPirates, EncounterSet.TheDreamChasersFleet)
                 .WithInfo(16, 1, Artist.Matt_Stewart));
-            Cards.Add(LotRCard.Quest("Into the Storm", "", 1, 2, "Voyage Across Belegaer", 2)
+            Cards.Add(LotRCard.Quest("Into the Storm", 2, "Voyage Across Belegaer", 2)
                 .WithFlavor("Calphon squints at dark storm clouds on the horizon. \"In my dream, the skies were dark and full of wrath... Perhaps the island lies within that squall?\"\r\nYou hesitate. Guiding your ship into a deadly storm is foolish, at best... But what if he’s right?")
                 .WithText("When Revealed: Search the encounter deck and discard pile for 1 copy of Waterspout and add it to the staging area. Shuffle the encounter deck.")
                 .WithOppositeText("Forced: At the end of the quest phase, if you are off-course (Cloudy, Rainy, Stormy), each player must distribute 5 damage among characters he controls.\r\nWhen this stage is defeated, if you are on course (Sunny), look at the top 2 stages of the quest deck and advance to one of your choice, placing the other on the bottom of the quest deck. Otherwise, advance to the top stage of the quest deck.")
                 .WithVictoryPoints(3)
                 .WithIncludedEncounterSets(EncounterSet.VastOceans, EncounterSet.StormyWeather, EncounterSet.UmbarFleet, EncounterSet.CorsairPirates, EncounterSet.TheDreamChasersFleet)
                 .WithInfo(17, 1, Artist.Nicholas_Gregory));
-            Cards.Add(LotRCard.Quest("Cursed Mists", "", 1, 2, "Voyage Across Belegaer", 6)
+            Cards.Add(LotRCard.Quest("Cursed Mists", 2, "Voyage Across Belegaer", 6)
                 .WithKeywords("Sailing.")
                 .WithText("When Revealed: Search the encounter deck and discard pile for 1 copy of Fog Bank and add it to the staging area. Shuffle the encounter deck.")
                 .WithFlavor("After days of aimless travel at sea, a dark mist settles along the ocean's surface, obscuring your visibility and frightening your ships’ crew. \"Wait,\" Calphon says, \"this happened in my dream, too... I think if we find a way through this mist, we shall be one step closer to the island.\"")
@@ -110,7 +110,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithVictoryPoints(3)
                 .WithIncludedEncounterSets(EncounterSet.VastOceans, EncounterSet.StormyWeather, EncounterSet.UmbarFleet, EncounterSet.CorsairPirates, EncounterSet.TheDreamChasersFleet)
                 .WithInfo(18, 1, Artist.Yoann_Boissonnet));
-            Cards.Add(LotRCard.Quest("Calphon's Divination", "", 1, 2, "Voyage Across Belegaer", 4)
+            Cards.Add(LotRCard.Quest("Calphon's Divination", 2, "Voyage Across Belegaer", 4)
                 .WithKeywords("Sailing.")
                 .WithText("When Revealed: Search the encounter deck and discard pile for 1 copy of Scouting Ship and add it to the staging area. Shuffle the encounter deck.")
                 .WithFlavor("Calphon bursts into one of the heroes’ quarters in the middle of the night, sweating profusely and breathing heavily. “I saw it again!” he cries. “It was the same island as before, only the sun was rising behind it, bathing the sky in orange. It must be to the east!” You can change course to follow Calphon’s vision, but you risk being discovered by the Corsairs chasing you... ")
@@ -118,7 +118,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithVictoryPoints(3)
                 .WithIncludedEncounterSets(EncounterSet.VastOceans, EncounterSet.StormyWeather, EncounterSet.UmbarFleet, EncounterSet.CorsairPirates, EncounterSet.TheDreamChasersFleet)
                 .WithInfo(19, 1, Artist.Juan_Carlos_Barquet));
-            Cards.Add(LotRCard.Quest("The Star's Guidance", "", 1, 2, "Voyage Across Belegaer", 4)
+            Cards.Add(LotRCard.Quest("The Star's Guidance", 2, "Voyage Across Belegaer", 4)
                 .WithKeywords("Sailing.")
                 .WithText("When Revealed: Search the encounter deck and discard pile for 1 copy of Starlit Sea and add it to the staging area. Shuffle the encounter deck.")
                 .WithOppositeText("While you are off-course (Cloudy, Rainy, or Stormy), each Ocean location gets +1 Threat.\r\nWhen this stage is defeated, if you are on-course, look at the top 2 stages of the quest deck and advance to one of your choice, placing the other on the bottom of the quest deck. Otherwise, advance to the top stage of the quest deck.")
@@ -126,7 +126,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithVictoryPoints(3)
                 .WithIncludedEncounterSets(EncounterSet.VastOceans, EncounterSet.StormyWeather, EncounterSet.UmbarFleet, EncounterSet.CorsairPirates, EncounterSet.TheDreamChasersFleet)
                 .WithInfo(20, 1, Artist.Nate_Abell));
-            Cards.Add(LotRCard.Quest("Corsair Pursuit", "", 1, 3, "Voyage Across Belegaer", 10)
+            Cards.Add(LotRCard.Quest("Corsair Pursuit", 3, "Voyage Across Belegaer", 10)
                 .WithKeywords("Sailing.")
                 .WithText("When Revealed: Search the encounter deck or discard pile for the Ship enemy with the highest Threat and add it to the staging area (the 2 Ship enemies with the highest Threat instead if there are 3 or more players in the game). Shuffle the encounter deck.")
                 .WithFlavor("Calphon insists you are very close to finding the island, but Corsairs still shadow your fleet. You must either fight them or outpace them before you can reach the island and weigh anchor.")
@@ -150,13 +150,13 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("While Fog Bank is the active location, Ship enemies do not make engagement checks, cannot attack, and cannot be attacked.")
                 .WithShadow("Shadow: If your heading is at the worst setting (Stormy), attacking enemy makes an additional attack after this one.")
                 .WithInfo(24, 2, Artist.Alyn_Spiller));
-            Cards.Add(LotRCard.Quest("Explore the Island", "", 2, 1, "The Fate of Númenor", 20)
+            Cards.Add(LotRCard.Quest("Explore the Island", 1, "The Fate of Númenor", 20)
                 .WithFlavor("You arrive on the island’s western beach, the edge of a dense jungle looming beyond. With no map to guide you and no idea of what to expect, you venture forward, deeper into the island... ")
                 .WithText("Setup: Set Shrine to Morgoth aside, out of play. Prepare the Uncharted deck. Add 2 copies of Lost Island from the top of the Uncharted deck to the staging area (3 copies instead if there are 3 or 4 players in the game). The first player takes control of Calphon. Shuffle the encounter deck.")
                 .WithOppositeText("Progress cannot be placed on Explore the Island except by quest effects.\r\nForced: After a location is explored, add progress to Explore the Island equal to that location’s printed quest points.\r\nForced: When an Uncharted location becomes the active location, add 1 copy of Lost Island from the top of the Uncharted deck to the staging area.")
                 .WithIncludedEncounterSets(EncounterSet.DrownedDead, EncounterSet.RuinsOfNumenor)
                 .WithInfo(25, 1, Artist.Jon_Bosco));
-            Cards.Add(LotRCard.Quest("A Fateful Discovery", "", 2, 2, "The Fate of Númenor", 255)
+            Cards.Add(LotRCard.Quest("A Fateful Discovery", 2, "The Fate of Númenor", 255)
                 .WithFlavor("Markings on Adûnaic suggest the existence of a grand shrine somewhere on the island. Perhaps there, you will find answers.")
                 .WithText("When Revealed: Add 2 copies of Lost Island from the top of the Uncharted deck to the staging area. Add Shrine to Morgoth to the staging area, Lost Island side faceup. Remove all progress from each Uncharted location in the staging area and shuffle them so that the players do not know which one is which.")
                 .WithOppositeFlavor("You search for the shrine, unsure of its exact location...")
@@ -214,13 +214,13 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("When Revealed: Add 1 copy of Lost Island from the top of the Uncharted deck to the staging area. Then, remove all progress from each Uncharted location in the staging area and shuffle them so that the players do not know which one is which.")
                 .WithEasyModeQuantity(1)
                 .WithInfo(35, 2, Artist.Alyn_Spiller));
-            Cards.Add(LotRCard.Quest("The Corsairs' Assault", "", 3, 1, "Raid on the Grey Havens", 18)
+            Cards.Add(LotRCard.Quest("The Corsairs' Assault", 1, "Raid on the Grey Havens", 18)
                 .WithText("Setup: Set Captain Sahír and Na'asiyah aside, out of play. Add The Havens Burn, The Dream-chaser, and 1 copy of Sahír’s Ravager to the staging area. Shuffle the encounter deck and discard cards from the top of the encounter deck until X locations with the Aflame keyword are discarded, where X is the number of players in the game. Add each discarded Aflame location to the staging area. Then, shuffle the encounter discard pile back into the encounter deck.")
                 .WithOppositeFlavor("Corsairs are attacking the Grey Havens and burning the Elven fleet. You must defend the Havens from these fierce raiders and save as many ships as you can!")
                 .WithOppositeText("Forced: At the end of the combat phase, deal X damage to the Aflame location in play with the lowest Aflame value. X is the number of Corsair enemies in play.")
                 .WithIncludedEncounterSets(EncounterSet.CorsairRaiders, EncounterSet.TheStormcallerElite)
                 .WithInfo(36, 1, Artist.Simon_Dominic));
-            Cards.Add(LotRCard.Quest("Sahír's Advance", "", 3, 2, "Raid on the Grey Havens", 255)
+            Cards.Add(LotRCard.Quest("Sahír's Advance", 2, "Raid on the Grey Havens", 255)
                 .WithNormalizedTitle("Sahir's Advance")
                 .WithFlavor("A menacing ship leads the raiders, its charismatic captain bellowing orders to the Corsairs: \"Kill the defenders!\" he shouts. \"Destroy their ships!\"")
                 .WithText("When Revealed: Add Na’asiyah and Captain Sahír to the staging area, enemy side faceup. Each player reveals the top card of the encounter deck. Place resources on Na’asiyah and Captain Sahír equal to the amount of damage on The Dream-chaser. Add 1 resource to each other Raider enemy in play.")

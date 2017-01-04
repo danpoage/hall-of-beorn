@@ -19,7 +19,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             {
                 Title = "Conflict at the Carrock Nightmare",
                 HasSecondImage = true,
-                ImageType = Models.ImageType.Jpg,
                 Id = "2E094DA7-6760-45AB-9E2E-E2BAA5F58BE7",
                 CardType = CardType.Nightmare_Setup,
                 Text =
@@ -69,7 +68,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Savage Hill-troll",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "8028643D-4E92-4EC0-B001-2BC5789E09C6",
                 CardType = CardType.Enemy,
                 EngagementCost = 21,
@@ -89,7 +88,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Rob and Bob",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "7BC5EAA2-B25B-418F-ACC7-5B755EC429EE",
                 IsUnique = true,
                 CardType = CardType.Enemy,
@@ -109,7 +108,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Louis",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "A3757C06-9FF4-469D-984A-B21B41CCF0CE",
                 IsUnique = true,
                 CardType = CardType.Enemy,
@@ -129,7 +128,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Morris",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "A1484DD8-DCD3-4D39-BBD6-F23DBBE794D4",
                 IsUnique = true,
                 CardType = CardType.Enemy,
@@ -149,7 +148,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Rupert",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "F7CEA583-D1F7-4466-A318-28071E408E29",
                 IsUnique = true,
                 CardType = CardType.Enemy,
@@ -169,7 +168,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Stuart",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "0ECCBF56-5D7D-498B-BC04-D05E7C072979",
                 IsUnique = true,
                 CardType = CardType.Enemy,
@@ -189,7 +188,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Troll Lair",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "A964F86A-7DC9-4892-9A35-A4E665A8AA43",
                 CardType = CardType.Location,
                 Threat = 2,
@@ -205,7 +204,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Hives and Hives",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "3681AF57-1689-445D-A594-E5F0156EC90C",
                 CardType = CardType.Location,
                 Threat = 3,
@@ -222,7 +221,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Time for Supper",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "BF6EFB7A-88A6-4B10-BFB2-38027057332E",
                 CardType = CardType.Treachery,
                 Text = "When Revealed: The first player chooses a hero in any player's discard pile and removes that hero from the game. Then, heal all damage from each Troll enemy in play. If no damage is removed from any Troll enemy as a result of this effect, Time for Supper gains surge.",
@@ -235,7 +234,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Grimbeorn's Folly",
-                ImageType = Models.ImageType.Jpg,
+                
                 HasSecondImage = true,
                 Id = "ED52944F-1499-4A0A-BB84-3CE5C18952DE",
                 CardType = CardType.Quest,

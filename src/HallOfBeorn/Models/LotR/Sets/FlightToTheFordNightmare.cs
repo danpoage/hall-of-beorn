@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             {
                 Title = "Flight to the Ford Nightmare",
                 HasSecondImage = true,
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "954C80B3-ABAD-464D-BA2F-985610926BEB",
                 CardType = CardType.Nightmare_Setup,
                 Text =

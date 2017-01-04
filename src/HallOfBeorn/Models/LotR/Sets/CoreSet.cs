@@ -15,7 +15,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             SetType = Models.SetType.Core;
 
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Aragorn",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9001",
                 CardType = CardType.Hero,
@@ -38,7 +37,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Théodred",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9002",
                 CardType = CardType.Hero,
@@ -77,7 +76,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Tom_Garden
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Gimli",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9004",
                 CardType = CardType.Hero,
@@ -97,7 +96,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Tony_Foti
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Legolas",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9005",
                 CardType = CardType.Hero,
@@ -118,7 +117,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Thalin",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9006",
                 CardType = CardType.Hero,
@@ -157,7 +156,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Gabrielle_Portal
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Eleanor",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9008",
                 CardType = CardType.Hero,
@@ -178,7 +177,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Dúnhere",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9009",
                 CardType = CardType.Hero,
@@ -198,7 +197,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Jeff_Himmelman
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Denethor",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9010",
                 CardType = CardType.Hero,
@@ -218,7 +217,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Glorfindel",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9011",
                 CardType = CardType.Hero,
@@ -238,7 +237,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Katherine_Dinger
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Beravor",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9012",
                 CardType = CardType.Hero,
@@ -259,7 +258,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Guard of the Citadel",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9013",
                 CardType = CardType.Ally,
@@ -277,7 +276,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Leonardo_Borazio
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Faramir",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9014",
                 CardType = CardType.Ally,
@@ -297,7 +296,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Jeff_Himmelman
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Son of Arnor",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9015",
                 CardType = CardType.Ally,
@@ -316,7 +315,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Ryan_Barger
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Snowbourn Scout",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9016",
                 CardType = CardType.Ally,
@@ -335,7 +334,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.David_Horne
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Silverlode Archer",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9017",
                 CardType = CardType.Ally,
@@ -354,7 +353,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.A_M_Sartor
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Longbeard Orc Slayer",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9018",
                 CardType = CardType.Ally,
@@ -373,7 +372,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Kaya
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Brok Ironfist",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9019",
                 CardType = CardType.Ally,
@@ -393,7 +392,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Even_Mehl_Amundsen
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Ever Vigilant",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9020",
                 CardType = CardType.Event,
@@ -406,7 +405,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Daarken
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Common Cause",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9021",
                 CardType = CardType.Event,
@@ -419,7 +418,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Tony_Foti
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "For Gondor!",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9022",
                 CardType = CardType.Event,
@@ -437,7 +436,7 @@ and the City shall be blessed.
                 Artist = Artist.Margaret_Hardy
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Sneak Attack",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9023",
                 CardType = CardType.Event,
@@ -451,7 +450,7 @@ and the City shall be blessed.
                 Artist = Artist.Winona_Nelson
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Valiant Sacrifice",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9024",
                 CardType = CardType.Event,
@@ -464,7 +463,7 @@ and the City shall be blessed.
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Grim Resolve",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9025",
                 CardType = CardType.Event,
@@ -477,7 +476,7 @@ and the City shall be blessed.
                 Artist = Artist.Daarken
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Steward of Gondor",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9026",
                 CardType = CardType.Attachment,
@@ -508,7 +507,7 @@ and the City shall be blessed.
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Veteran Axehand",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9028",
                 CardType = CardType.Ally,
@@ -525,7 +524,7 @@ and the City shall be blessed.
                 Artist = Artist.Loren_Fetterman
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Gondorian Spearman",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9029",
                 CardType = CardType.Ally,
@@ -544,7 +543,7 @@ and the City shall be blessed.
                 Artist = Artist.Winona_Nelson
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Horseback Archer",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9030",
                 CardType = CardType.Ally,
@@ -562,7 +561,7 @@ and the City shall be blessed.
                 Artist = Artist.Loren_Fetterman
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Beorn",
                 AlternateSlug = "Bjorn-Core",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9031",
@@ -582,7 +581,7 @@ and the City shall be blessed.
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Blade Mastery",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9032",
                 CardType = CardType.Event,
@@ -595,7 +594,7 @@ and the City shall be blessed.
                 Artist = Artist.Leonardo_Borazio
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Rain of Arrows",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9033",
                 CardType = CardType.Event,
@@ -608,7 +607,7 @@ and the City shall be blessed.
                 Artist = Artist.Frank_Walls
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Feint",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9034",
                 CardType = CardType.Event,
@@ -622,7 +621,7 @@ and the City shall be blessed.
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Quick Strike",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9035",
                 CardType = CardType.Event,
@@ -635,7 +634,7 @@ and the City shall be blessed.
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Thicket of Spears",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9036",
                 CardType = CardType.Event,
@@ -652,7 +651,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Swift Strike",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9037",
                 CardType = CardType.Event,
@@ -665,7 +664,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Ijur
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Stand Together",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9038",
                 CardType = CardType.Event,
@@ -678,7 +677,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Daarken
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Blade of Gondolin",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9039",
                 CardType = CardType.Attachment,
@@ -693,7 +692,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Citadel Plate",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9040",
                 CardType = CardType.Attachment,
@@ -708,7 +707,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Fredrik_Dahl_Tyskerud
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Dwarven Axe",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9041",
                 CardType = CardType.Attachment,
@@ -723,7 +722,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Drew_Whitmore
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Horn of Gondor",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9042",
                 CardType = CardType.Attachment,
@@ -740,7 +739,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Wandering Took",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9043",
                 CardType = CardType.Ally,
@@ -758,7 +757,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Tony_Foti
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Lórien Guide",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9044",
                 CardType = CardType.Ally,
@@ -776,7 +775,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Kristina_Gehrmann
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Northern Tracker",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9045",
                 CardType = CardType.Ally,
@@ -794,7 +793,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Kristina_Gehrmann
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Galadhrim's Greeting",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9046",
                 CardType = CardType.Event,
@@ -807,7 +806,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Strength of Will",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9047",
                 CardType = CardType.Event,
@@ -820,7 +819,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Ryan_Barger
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Hasty Stroke",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9048",
                 CardType = CardType.Event,
@@ -833,7 +832,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Lius_Lasahido
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Will of the West",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9049",
                 CardType = CardType.Event,
@@ -848,7 +847,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "A Test of Will",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9050",
                 CardType = CardType.Event,
@@ -862,7 +861,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Ryan_Barger
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Stand and Fight",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9051",
                 CardType = CardType.Event,
@@ -877,7 +876,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "A Light in the Dark",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9052",
                 CardType = CardType.Event,
@@ -890,7 +889,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Erfian_Asafat
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Dwarven Tomb",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9053",
                 CardType = CardType.Event,
@@ -903,7 +902,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Kaya
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Fortune or Fate",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9054",
                 CardType = CardType.Event,
@@ -916,7 +915,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Igor_Kieryluk
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Favor of the Lady",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9055",
                 CardType = CardType.Attachment,
@@ -931,7 +930,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Power in the Earth",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9056",
                 CardType = CardType.Attachment,
@@ -946,7 +945,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Soul_Core
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Unexpected Courage",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9057",
                 CardType = CardType.Attachment,
@@ -961,7 +960,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Angela_Sung
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Daughter of the Nimrodel",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9058",
                 CardType = CardType.Ally,
@@ -979,7 +978,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Erebor Hammersmith",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9059",
                 CardType = CardType.Ally,
@@ -997,7 +996,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Empty_Room_Studios
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Henamarth Riversong",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9060",
                 CardType = CardType.Ally,
@@ -1016,7 +1015,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Jen_Zee
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Miner of the Iron Hills",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9061",
                 CardType = CardType.Ally,
@@ -1052,7 +1051,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Tony_Foti
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Lore of Imladris",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9063",
                 CardType = CardType.Event,
@@ -1077,7 +1076,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Radagast's Cunning",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9065",
                 CardType = CardType.Event,
@@ -1090,7 +1089,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Lucas_Graciano
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Secret Paths",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9066",
                 CardType = CardType.Event,
@@ -1103,7 +1102,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Empty_Room_Studios
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Gandalf's Search",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9067",
                 CardType = CardType.Event,
@@ -1117,7 +1116,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Mike_Nash
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Beorn's Hospitality",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9068",
                 CardType = CardType.Event,
@@ -1130,7 +1129,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Forest Snare",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9069",
                 CardType = CardType.Attachment,
@@ -1158,7 +1157,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Dark Knowledge",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9071",
                 CardType = CardType.Attachment,
@@ -1172,7 +1171,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Empty_Room_Studios
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Self Preservation",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9072",
                 CardType = CardType.Attachment,
@@ -1186,7 +1185,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Empty_Room_Studios
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Gandalf",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9073",
                 CardType = CardType.Ally,
@@ -1204,7 +1203,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Lucas_Graciano
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "King Spider",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9074",
                 CardType = CardType.Enemy,
@@ -1222,7 +1221,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.John_Wigley
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Hummerhorns",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9075",
                 CardType = CardType.Enemy,
@@ -1242,7 +1241,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Ungoliant's Spawn",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9076",
                 CardType = CardType.Enemy,
@@ -1260,7 +1259,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Andrew_Olson
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Great Forest Web",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9077",
                 CardType = CardType.Location,
@@ -1275,7 +1274,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Mountains of Mirkwood",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9078",
                 CardType = CardType.Location,
@@ -1289,7 +1288,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Eyes of the Forest",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9079",
                 CardType = CardType.Treachery,
@@ -1302,7 +1301,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Yoann_Boissonnet
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Caught in a Web",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9080",
                 CardType = CardType.Treachery,
@@ -1314,7 +1313,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Daryl_Mandryk
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Wolf Rider",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9081",
                 CardType = CardType.Enemy,
@@ -1333,7 +1332,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Alexandru_Sabo
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Hill Troll",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9082",
                 CardType = CardType.Enemy,
@@ -1353,7 +1352,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Florian_Stitz
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Goblin Sniper",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9083",
                 CardType = CardType.Enemy,
@@ -1370,7 +1369,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Alexandr_Shaldin
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Marsh Adder",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9084",
                 CardType = CardType.Enemy,
@@ -1390,7 +1389,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Sandara_Tang
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Wargs",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9085",
                 CardType = CardType.Enemy,
@@ -1409,7 +1408,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Despair",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9086",
                 CardType = CardType.Treachery,
@@ -1422,7 +1421,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Marc_Scheff
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Brown Lands",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9087",
                 CardType = CardType.Location,
@@ -1437,7 +1436,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The East Bight",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9088",
                 CardType = CardType.Location,
@@ -1452,7 +1451,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Santiago_Villa
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Dol Guldur Orcs",
                 SlugIncludesType = true,
                 Id = "51223bd0-ffd1-11df-a976-0801200c9089",
@@ -1471,7 +1470,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Anna_Christenson
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Chieftan Ufthak",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9090",
                 CardType = CardType.Enemy,
@@ -1490,7 +1489,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Mathias_Kollros
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Dol Guldur Beastmaster",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9091",
                 CardType = CardType.Enemy,
@@ -1509,7 +1508,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Driven by Shadow",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9092",
                 CardType = CardType.Treachery,
@@ -1521,7 +1520,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Alexandru_Sabo
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Necromancer's Reach",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9093",
                 CardType = CardType.Treachery,
@@ -1534,7 +1533,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Anna_Christenson
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Necromancer's Pass",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9094",
                 CardType = CardType.Location,
@@ -1550,7 +1549,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Daryl_Mandryk
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Enchanted Stream",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9095",
                 CardType = CardType.Location,
@@ -1565,7 +1564,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Forest Spider",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9096",
                 CardType = CardType.Enemy,
@@ -1583,7 +1582,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Marco_Caradonna
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "East Bight Patrol",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9097",
                 CardType = CardType.Enemy,
@@ -1601,7 +1600,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Nikolay_Stoyanov
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Black Forest Bats",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9098",
                 CardType = CardType.Enemy,
@@ -1619,7 +1618,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Old Forest Road",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9099",
                 CardType = CardType.Location,
@@ -1634,7 +1633,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Forest Gate",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9100",
                 CardType = CardType.Location,
@@ -1649,7 +1648,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Dungeon Jailor",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9101",
                 CardType = CardType.Enemy,
@@ -1703,7 +1702,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Mark_Winters
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Under the Shadow",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9104",
                 CardType = CardType.Treachery,
@@ -1715,7 +1714,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Igor_Kieryluk
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Iron Shackles",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9105",
                 CardType = CardType.Treachery,
@@ -1727,7 +1726,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Drew_Whitmore
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Endless Caverns",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9106",
                 CardType = CardType.Location,
@@ -1742,7 +1741,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Even_Mehl_Amundsen
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Tower Gate",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9107",
                 CardType = CardType.Location,
@@ -1757,7 +1756,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.West_Clendinning
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Gandalf's Map",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9108",
                 CardType = CardType.Objective,
@@ -1770,7 +1769,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Mike_Nash
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Dungeon Torch",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9109",
                 CardType = CardType.Objective,
@@ -1783,7 +1782,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Shadow Key",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9110",
                 CardType = CardType.Objective,
@@ -1796,7 +1795,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Nicholas_Cloister
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Misty Mountain Goblins",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9111",
                 CardType = CardType.Enemy,
@@ -1815,7 +1814,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Nikolay_Stoyanov
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Massing at Night",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9112",
                 CardType = CardType.Treachery,
@@ -1829,7 +1828,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Mathias_Kollros
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Banks of the Anduin",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9113",
                 CardType = CardType.Location,
@@ -1845,7 +1844,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Gladden Fields",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9114",
                 CardType = CardType.Location,
@@ -1863,7 +1862,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Eastern Crows",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9115",
                 CardType = CardType.Enemy,
@@ -1883,7 +1882,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Matthew_Starbuck
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Evil Storm",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9116",
                 CardType = CardType.Treachery,
@@ -1896,7 +1895,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Tom_Garden
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Pursued by Shadow",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9117",
                 CardType = CardType.Treachery,
@@ -1908,7 +1907,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Matthew_Starbuck
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Treacherous Fog",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9118",
                 CardType = CardType.Treachery,
@@ -1920,13 +1919,11 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Flies and Spiders",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-0801200c9119",
                 CardType = CardType.Quest,
-                ScenarioNumber = 1,
-                Setup = "ss",
+                
                 Text = "Setup: Search the encounter deck for 1 copy of the ~Forest ~Spider and 1 copy of the Old ~Forest ~Road, and add them to the staging area. Then, shuffle the encounter deck.",
                 FlavorText = "You are traveling through Mirkwood forest, carrying an urgent message from King Thanduil to the Lady Galadriel of Lorien. As you move along the dark trail, the spiders gather around you...",
                 OppositeFlavorText = "The nastiest things they saw were the cobwebs; dark dense cobwebs, with threads extradionairly thick, often stretched from tree to tree, or tangled in the lower branches on either side of them. There were none stretched across the path, but whether because some magic kept it clear, or for what other reasons they could not guess. - The Hobbit",
@@ -1938,12 +1935,12 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "A Fork in the Road",
                 StageNumber = 2,
                 Id = "51223bd0-ffd1-11df-a976-0801200c9121",
                 CardType = CardType.Quest,
-                ScenarioNumber = 1,
+                
                 EncounterSet = "Passage Through Mirkwood",
                 Quantity = 1,
                 FlavorText = "As you move through Mirkwood, hounded by spiders, the forest path forks before you...",
@@ -1955,14 +1952,14 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "A Chosen Path",
                 StageNumber = 3,
                 SlugIncludesOppositeTitle = true,
                 OppositeTitle = "Don't Leave the Path",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9123",
                 CardType = CardType.Quest,
-                ScenarioNumber = 1,
+                
                 EncounterSet = "Passage Through Mirkwood",
                 FlavorText = "The trail winds into one of the darkest, most tangled parts of the forest...\r\n\r\nYou sense that foul, dark presence is hunting you, and you move quickly in an attempt to avoid its evil.",
                 OppositeText = "When Revealed: Each player must search the encounter deck and discard pile for 1 Spider card of his choice, and add it to the staging area.\r\nThe players must find and defeat Ungoliant's Spawn to win this game.",
@@ -1975,14 +1972,14 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "A Chosen Path",
                 StageNumber = 3,
                 SlugIncludesOppositeTitle = true,
                 OppositeTitle = "Beorn's Path",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9125",
                 CardType = CardType.Quest,
-                ScenarioNumber = 1,
+                
                 EncounterSet = "Passage Through Mirkwood",
                 FlavorText = "The trail winds into one of the darkest, most tangled parts of the forest...\r\n\r\nYou sense that foul, dark presence is hunting you, and you move quickly in an attempt to avoid its evil.",
                 OppositeText = "Players cannot defeat this stage while Ungoliant's Spawn is in play. If players defeat this stage, they have won the game.",
@@ -1995,13 +1992,11 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "The Necromancer's Tower",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-0801200c9127",
                 CardType = CardType.Quest,
-                ScenarioNumber = 3,
-                Setup = "ssst",
+                
                 Text = "Setup: Search the encounter deck for the 3 objective cards, reveal and place them in the staging area. Also, place the Nazgul of Dol Guldur face up but out of play, alongside the quest deck. Then, shuffle the encounter deck, and attach 1 encounter to each objective card.",
                 FlavorText = "The Lady Galadriel of Lorien has asked you to investigate the area in the vicinity of Dol Guldar. While doing so, one of your allies was ambushed by Orcs, captured, and is now held in a dungeon cell...",
                 OppositeText = "When Revealed: Randomly select 1 hero card (among all the heroes controlled by the players) and turn it facedown. The hero is now considered a \"prisoner\", cannot be used, cannot be damaged, and does not collect resources, until it is \"rescued\" (as instructed by card effects) later in this quest.\r\nThe players, as a group, cannot play more than 1 ally card each round.\r\nPlayers cannot advance to the next stage of this quest unless they have at least 1 objective card.",
@@ -2014,12 +2009,12 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Through the Caverns",
                 StageNumber = 2,
                 Id = "51223bd0-ffd1-11df-a976-0801200c9129",
                 CardType = CardType.Quest,
-                ScenarioNumber = 3,
+                
                 EncounterSet = "Escape from Dol Guldur",
                 FlavorText = "Finding a hidden entrance to the dungeons of Dol Guldur at last, you attempt to make your way through the caverns beneath the hill, searching for your imprisoned friend. The denizens of this labyrinth stand in your way, while the jailors protect the prisoner.",
                 OppositeText = "Response: After placing any number of progress tokens on this card, flip the \"prisoner\" hero card face-up, and place 1 damage toke on it. The hero has been \"rescued\" and may now be used by its controller.\r\nThe players, as a group, cannot play more than 1 ally card each round.\r\nPlayers cannot advance to the next stage of the quest unless they have rescued the prisoner and have all 3 \"Escape from Dol Guldur\" objective cards.",
@@ -2030,12 +2025,12 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Out of the Dungeons",
                 StageNumber = 3,
                 Id = "51223bd0-ffd1-11df-a976-0801200c9131",
                 CardType = CardType.Quest,
-                ScenarioNumber = 3,
+                
                 EncounterSet = "Escape from Dol Guldur",
                 FlavorText = "Following a thread of sunlight, you discover a cavern opening leading out through the side of the hill. Stationed outside the cave-mouth, however, is a large group of Orcs.",
                 OppositeText = "Forced: At the beginning of each quest phase, each player places the top card of his deck, face down in front of him as if it just engaged him from the staging area. These cards are called \"Orc Guard\" and act as enemies with: 1 hit point, 1 Attack, and 1 Defense.\r\nPlayers cannot defeat this stage while Nazgul of Dol Guldur is in play. If this stage is defeated and Nazgul of Dol Guldur is not in play, the players have won the game.",
@@ -2047,12 +2042,12 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "To the River...",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-0801200c9133",
                 CardType = CardType.Quest,
-                ScenarioNumber = 2,
+                
                 Text = "Setup: Each player reveals 1 card from the top of the encounter deck, and adds it to the staging area.",
                 FlavorText = "Emerging from Mirkwood Forest with an urgent message from Lady Galadriel, you must make your way south along the Anduin River in order to reach the forst of Lórien. As you leave the forest behind, you notice that you are being pursued, and thus quicken your pace...",
                 OppositeText = "When Revealed: Search the encounter deck for 1 Hill Troll is one is not already in play, and place it in the staging area. Shuffle the encounter deck.\r\nPlayers cannot defeat this stage while any Hill Troll cards are in play.",
@@ -2066,12 +2061,12 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SauronsReach, EncounterSet.Wilderlands }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Anduin Passage",
                 StageNumber = 2,
                 Id = "51223bd0-ffd1-11df-a976-0801200c9135",
                 CardType = CardType.Quest,
-                ScenarioNumber = 2,
+                
                 EncounterSet = "Journey Along the Anduin",
                 AlternateEncounterSet = "Journey Down the Anduin",
                 Quantity = 1,
@@ -2084,12 +2079,12 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SauronsReach, EncounterSet.Wilderlands }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 StageNumber = 3,
                 Title = "Ambush on the Shore",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9137",
                 CardType = CardType.Quest,
-                ScenarioNumber = 2,
+                
                 EncounterSet = "Journey Along the Anduin",
                 AlternateEncounterSet = "Journey Down the Anduin",
                 Quantity = 1,

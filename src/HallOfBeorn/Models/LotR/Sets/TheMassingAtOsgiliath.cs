@@ -16,7 +16,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cycle = "GenCon";
 
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Witch-king",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9001",
                 CardType = CardType.Enemy,
@@ -37,7 +37,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Igor_Kieryluk
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Snaga Scouts",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9002",
                 CardType = CardType.Enemy,
@@ -54,7 +54,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Paul_Guzenko
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Wolves from Mordor",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9003",
                 CardType = CardType.Enemy,
@@ -72,7 +72,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Allison_Theus
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Wainriders",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9004",
                 CardType = CardType.Enemy,
@@ -89,7 +89,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.David_Chen
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Wainrider Captain",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9005",
                 CardType = CardType.Enemy,
@@ -107,7 +107,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.David_Horne
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Uruk Vanguard",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9006",
                 CardType = CardType.Enemy,
@@ -125,7 +125,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Matthew_Starbuck
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Captured Watchtower",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9007",
                 CardType = CardType.Location,
@@ -140,7 +140,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Emyn Arnen Overlook",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9008",
                 CardType = CardType.Location,
@@ -154,7 +154,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Igor_Kieryluk
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Morgulduin",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9009",
                 CardType = CardType.Location,
@@ -169,7 +169,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Pelennor Fields",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9010",
                 CardType = CardType.Location,
@@ -184,7 +184,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Ruins of Osgiliath",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9011",
                 CardType = CardType.Location,
@@ -199,7 +199,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Cut Off",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9012",
                 CardType = CardType.Treachery,
@@ -212,7 +212,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Dark Pursuit",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9013",
                 CardType = CardType.Treachery,
@@ -223,7 +223,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Jake_Murray
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Massing at Osgiliath",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9014",
                 CardType = CardType.Treachery,
@@ -235,7 +235,7 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Ranger of Ithilien",
                 Id = "51223bd0-ffd1-11df-a976-1801202c9015",
                 CardType = CardType.Objective_Ally,
@@ -252,12 +252,12 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Eric_Braddock
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Beyond Expectations",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-1801202c9016",
                 CardType = CardType.Quest,
-                ScenarioNumber = 1,
+                
                 QuestPoints = 7,
                 Text = "Setup: Search the encounter deck for 12 Scout cards, and add 3 per player (one of each title), to the staging area. Remove The Witch-king from the encounter deck and set him aside, out of play. Shuffle any unused Scoutcards back into the encounter deck.",
                 FlavorText = "There are reports of increased Orc activity around Ithilien, and you have been sent to investigate. You enter Osgiliath and cross the river. On the outskirts of the city, you see a horde that surpassses all expectations coming down the Morgul Road.",
@@ -269,12 +269,12 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Through the Ruins",
                 StageNumber = 2,
                 Id = "51223bd0-ffd1-11df-a976-1801202c9018",
                 CardType = CardType.Quest,
-                ScenarioNumber = 1,
+                
                 QuestPoints = 5,
                 OppositeText = "Players cannot travel to West Bank locations.\r\nEach player cannot play or put into play more than 1 card from his hand each round.",
                 FlavorText = "The outriders and scouts of the army have cut you off from the bridge. You desperately seek the likeliest place to cross the Anduin.",
@@ -284,12 +284,12 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Anduin Crossing",
                 StageNumber = 3,
                 Id = "51223bd0-ffd1-11df-a976-1801202c9020",
                 CardType = CardType.Quest,
-                ScenarioNumber = 1,
+                
                 QuestPoints = 1,
                 OppositeText = "Progress tokens from card effects cannot be placed on this quest card or the active location.\r\nPlayers cannot travel to East Bank or West Bank locations.\r\nIn order to commit characters to the quest, a player must first choose a hero or 1 Ranger of Ithilien card he controls. Discard each chosen card from play.",
                 FlavorText = "The cold waters of the Anduin river rush before you, but the current is weaker here and you have to cross. The outriders and van of the Dark Lord's army are closing fast behind, and their archers will make the attempted crossing even more dangerous. The bravest members of your band turn back to distract the oncoming horde, so that the rest of you might escape.",
@@ -299,12 +299,12 @@ Forced: After The Witch-king attacks, he returns to the staging area unless the 
                 Artist = Artist.Marco_Caradonna
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Race to Minas Tirith",
                 StageNumber = 4,
                 Id = "51223bd0-ffd1-11df-a976-1801202c9022",
                 CardType = CardType.Quest,
-                ScenarioNumber = 1,
+                
                 QuestPoints = 15,
                 OppositeText = "When Revealed: Add The Witch-king to the staging area.\r\nPlayers have now crossed the Anduin. Players cannot travel to East Bank locations.If the players defeat this stage, they have won the game.",
                 FlavorText = "You made it across the Anduin and are leaving Osgiliath when a fell shriek splits the air. You begin the race across the Pelennor Fields to the safety of Minas Tirith, but a new enemy follows behind.",

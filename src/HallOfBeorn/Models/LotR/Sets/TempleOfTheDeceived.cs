@@ -67,7 +67,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Response: After Ered Luin Miner is discarded from the top of your deck, put it into play under your control.")
                 .WithFlavor("Tools were to be found in plenty that the miners and quarriers and builders of old had used; and at such work the dwarves were still very skilled.\r\n-The Hobbit")
                 .WithInfo(66, 3, Artist.Lukasz_Jaskolski));
-            Cards.Add(LotRCard.Quest("Searching the Island", "", 3, 1, setName, null)
+            Cards.Add(LotRCard.Quest("Searching the Island", 1, setName, null)
                 .WithText("Setup: Prepare the Island Map (see insert). Flip over the top-left and bottom-left locations of the Island Map (without resolving their Forced effects, if any), and choose one as the player's starting active location, using a resource token to represent which location is active. The first player takes control of Captain Sahír, and the last player takes control of Na'asiyah (objective-ally side faceup). Add Temple Guardian to the staging area and attach Gate Key to it, guarded. Shuffle the encounter deck.")
                 .WithOppositeFlavor("Sahír has led you to an uncharted isle, and has agreed to help you find a chest he claims the black key will open. First, you must find the Gate Key that opens the way to the grand temple on the eastern side of the island.")
                 .WithKeywords("Exploration.")

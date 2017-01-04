@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             {
                 Title = "Shadow and Flame Nightmare",
                 HasSecondImage = true,
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "9331CC57-75DA-4FE0-9961-179232C03F02",
                 CardType = CardType.Nightmare_Setup,
                 Text =
@@ -58,7 +58,7 @@ Play Tip: This scenario contains 10 treachery cards with the Attack trait that h
             {
                 Title = "Terrible Strength",
                 Id = "F0B82FA2-95E0-476A-84DC-5690632ED167",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Treachery,
                 Traits = new List<string> { "Attack." },
                 Shadow = "Shadow: For each excess point of combat damage dealt by this attack (damage that is dealt beyond the remaining hit points of the character damaged by this attack) you must damage another character you control. Exhaust all characters damaged by this effect.",
@@ -71,7 +71,7 @@ Play Tip: This scenario contains 10 treachery cards with the Attack trait that h
             {
                 Title = "The Dark Fire",
                 Id = "C51679AE-3BF7-4B3A-81C4-EC1E854E4599",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Treachery,
                 Traits = new List<string> { "Attack." },
                 Shadow = "Shadow: For each point of damage dealt by this attack, heal 1 damage from Durin's Bane.",
@@ -85,7 +85,7 @@ Play Tip: This scenario contains 10 treachery cards with the Attack trait that h
             {
                 Title = "Blazing Grip",
                 Id = "886F5736-146D-42E0-9C1A-47BCE7EC0AAC",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Treachery,
                 Traits = new List<string> { "Attack." },
                 Shadow = "Shadow: Discard all cards attached to the defending character and deal it 1 damage. Cannot be canceled.",
@@ -99,7 +99,7 @@ Play Tip: This scenario contains 10 treachery cards with the Attack trait that h
             {
                 Title = "Morgoth's Bidding",
                 Id = "62CDF7FE-B451-4FCB-A30C-F6C917E0168A",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Treachery,
                 Traits = new List<string> { "Attack." },
                 Shadow = "Shadow: If this attack destroys a character, Durin's Bane makes an additional attack against the defending player after this one.",
@@ -113,7 +113,7 @@ Play Tip: This scenario contains 10 treachery cards with the Attack trait that h
             {
                 Title = "Flame of Udûn",
                 Id = "488E2850-8EE2-425C-9258-6AC3B493EE4F",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Treachery,
                 Traits = new List<string> { "Attack." },
                 Shadow = "Shadow: Deal Durin's Bane 3 additional shadow cards from the encounter deck (not the Balrog deck).",
@@ -127,7 +127,7 @@ Play Tip: This scenario contains 10 treachery cards with the Attack trait that h
             {
                 Title = "Servant of Flame",
                 Id = "B95E40F4-DB1A-4D87-9E15-3C247AE77913",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Enemy,
                 EngagementCost = 12,
                 Threat = 3,
@@ -146,7 +146,7 @@ Play Tip: This scenario contains 10 treachery cards with the Attack trait that h
             {
                 Title = "Captain of Mordor",
                 Id = "1D4246FD-3712-44EF-AE50-E241F36B019A",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Enemy,
                 EngagementCost = 42,
                 Threat = 4,
@@ -166,7 +166,7 @@ Play Tip: This scenario contains 10 treachery cards with the Attack trait that h
             {
                 Title = "Fiery Depths",
                 Id = "E21ECEE3-8A17-4BE6-BC07-A0A39E56022A",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Location,
                 Threat = 5,
                 QuestPoints = 2,
@@ -185,7 +185,7 @@ Travel: Each player must move 1 damage from Durin's Bane to a hero to travel her
             {
                 Title = "Crumbling Stairs",
                 Id = "7178014D-828F-4BDF-A1F5-7B76396BE1A5",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Location,
                 Threat = 2,
                 QuestPoints = 7,

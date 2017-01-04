@@ -16,7 +16,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cycle = "Shadows of Mirkwood";
 
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Bilbo Baggins",
                 Id = "51223bd0-ffd1-11df-a976-0801201c9001",
                 CardType = CardType.Hero,
@@ -36,7 +36,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Tony_Foti
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Dúnedain Mark",
                 Id = "51223bd0-ffd1-11df-a976-0801201c9002",
                 CardType = CardType.Attachment,
@@ -50,7 +50,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 SecondArtist = Artist.Lius_Lasahido
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Campfire Tales",
                 Id = "51223bd0-ffd1-11df-a976-0801201c9003",
                 CardType = CardType.Event,
@@ -63,7 +63,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Felicia_Cano
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Mustering the Rohirrim",
                 Id = "51223bd0-ffd1-11df-a976-0801201c9004",
                 CardType = CardType.Event,
@@ -76,7 +76,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Stu_Barnes
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Rivendell Minstrel",
                 Id = "51223bd0-ffd1-11df-a976-0801201c9005",
                 CardType = CardType.Ally,
@@ -94,7 +94,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Katherine_Dinger
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Song of Kings",
                 Id = "51223bd0-ffd1-11df-a976-0801201c9006",
                 CardType = CardType.Attachment,
@@ -113,7 +113,7 @@ The crownless again shall be king.
                 Artist = Artist.John_Gravato
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Strider's Path",
                 Id = "51223bd0-ffd1-11df-a976-0801201c9007",
                 CardType = CardType.Event,
@@ -126,7 +126,7 @@ The crownless again shall be king.
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Eagles Are Coming!",
                 Id = "51223bd0-ffd1-11df-a976-0801201c9008",
                 CardType = CardType.Event,
@@ -140,7 +140,7 @@ The crownless again shall be king.
                 Artist = Artist.Jake_Murray
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Westfold Horse-Breaker",
                 Id = "51223bd0-ffd1-11df-a976-0801201c9009",
                 CardType = CardType.Ally,
@@ -158,7 +158,7 @@ The crownless again shall be king.
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Winged Guardian",
                 Id = "51223bd0-ffd1-11df-a976-0801201c9010",
                 CardType = CardType.Ally,
@@ -176,7 +176,7 @@ The crownless again shall be king.
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "False Lead",
                 Id = "51223bd0-ffd1-11df-a976-0801201c9011",
                 CardType = CardType.Treachery,
@@ -187,7 +187,7 @@ The crownless again shall be king.
                 Artist = Artist.Even_Mehl_Amundsen
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Flooding",
                 Id = "51223bd0-ffd1-11df-a976-0801201c9012",
                 CardType = CardType.Treachery,
@@ -201,7 +201,7 @@ The crownless again shall be king.
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Goblintown Scavengers",
                 Id = "51223bd0-ffd1-11df-a976-0801201c9013",
                 CardType = CardType.Enemy,
@@ -219,7 +219,7 @@ The crownless again shall be king.
                 Artist = Artist.Jarreau_Wimberly
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Hunters from Mordor",
                 Id = "51223bd0-ffd1-11df-a976-0801201c9014",
                 CardType = CardType.Enemy,
@@ -238,7 +238,7 @@ The crownless again shall be king.
                 Artist = Artist.Igor_Kieryluk
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Old Wives' Tales",
                 Id = "51223bd0-ffd1-11df-a976-0801201c9015",
                 CardType = CardType.Treachery,
@@ -251,7 +251,7 @@ The crownless again shall be king.
                 Artist = Artist.Brian_Valenzuela
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "River Ninglor",
                 Id = "51223bd0-ffd1-11df-a976-0801201c9016",
                 CardType = CardType.Location,
@@ -267,7 +267,7 @@ The crownless again shall be king.
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Signs of Gollum",
                 Id = "51223bd0-ffd1-11df-a976-0801201c9017",
                 CardType = CardType.Objective,
@@ -280,7 +280,7 @@ The crownless again shall be king.
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The East Bank",
                 Id = "51223bd0-ffd1-11df-a976-0801201c9018",
                 CardType = CardType.Location,
@@ -295,7 +295,7 @@ The crownless again shall be king.
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Eaves of Mirkwood",
                 Id = "51223bd0-ffd1-11df-a976-0801201c9019",
                 CardType = CardType.Location,
@@ -310,7 +310,7 @@ The crownless again shall be king.
                 Artist = Artist.Timo_Karhula
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Old Ford",
                 Id = "51223bd0-ffd1-11df-a976-0801201c9020",
                 CardType = CardType.Location,
@@ -327,7 +327,7 @@ The crownless again shall be king.
                 Artist = Artist.Timo_Karhula
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The West Bank",
                 Id = "51223bd0-ffd1-11df-a976-0801201c9021",
                 CardType = CardType.Location,
@@ -342,7 +342,7 @@ The crownless again shall be king.
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Hunt Begins",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-0801201c9022",
@@ -359,7 +359,7 @@ The crownless again shall be king.
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.JourneyAlongTheAnduin, EncounterSet.SauronsReach }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "A New Terror Abroad",
                 StageNumber = 2,
                 QuestPoints = 10,
@@ -375,7 +375,7 @@ The crownless again shall be king.
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.JourneyAlongTheAnduin, EncounterSet.SauronsReach }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "On the Trail",
                 StageNumber = 3,
                 Id = "51223bd0-ffd1-11df-a976-0801201c9026",

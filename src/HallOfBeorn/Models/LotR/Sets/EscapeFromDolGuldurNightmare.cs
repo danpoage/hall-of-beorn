@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             {
                 Title = "Escape from Dol Guldur Nightmare",
                 HasSecondImage = true,
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "3E562129-6B4E-4DA9-B7DD-8165BB91931B",
                 CardType = CardType.Nightmare_Setup,
                 Text = "You are playing Nightmare mode.\r\n\r\nForced: When stage 1B is revealed, the number of random heroes captured is determined by the number of players, as follows: 1-2 players = 1 hero captured, 3 players = 2 heroes captured, 4 players = 3 heroes captured. All captured heroes are turned face down and considered \"the prisoner,\" cannot be used, cannot be damaged, and do not collect resources until they are rescued, (A single player cannot have more than 1 hero captured by this effect.)",
@@ -50,7 +50,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Torture Master",
-                ImageType = ImageType.Jpg,
+                
                 Id = "0C6DB523-94DC-4893-9A96-F2D631D9CB3A",
                 CardType = CardType.Enemy,
                 EngagementCost = 45,
@@ -69,7 +69,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Crazed Captive",
-                ImageType = ImageType.Jpg,
+                
                 Id = "54DD806E-767D-4FAB-964D-A0951475CFB9",
                 CardType = CardType.Enemy,
                 EngagementCost = 13,
@@ -89,7 +89,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Spider of Dol Guldur",
-                ImageType = ImageType.Jpg,
+                
                 Id = "D1EB44E3-8ABA-4024-B858-82C9A4EBF374",
                 CardType = CardType.Enemy,
                 EngagementCost = 28,
@@ -108,7 +108,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Torture Chamber",
-                ImageType = ImageType.Jpg,
+                
                 Id = "CC2D3C5B-E751-4B2D-8177-A9D8792FA4C0",
                 CardType = CardType.Location,
                 Threat = 3,
@@ -123,7 +123,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Dungeon Labyrinth",
-                ImageType = ImageType.Jpg,
+                
                 Id = "4780DEFF-40C9-4DEC-BFD8-83D892C76A91",
                 CardType = CardType.Location,
                 Threat = 1,
@@ -142,7 +142,7 @@ Forced: At the end of each round, place 1 resource token on Dungeon Labyrinth fo
             Cards.Add(new LotRCard()
             {
                 Title = "Sentinel of Shadow",
-                ImageType = ImageType.Jpg,
+                
                 Id = "0323B0F5-7726-4F0C-891E-A9F970E1974F",
                 CardType = CardType.Treachery,
                 Text = "When Revealed: The staging area gets +X Threat until the end of the phase, where X is twice the number of players in the game. If the players quest unsuccessfully this phase, put the ~Nazgûl of ~Dol Guldur into play (from any out of play area), engaged with the first player. (Cannot be canceled.)",
@@ -154,7 +154,7 @@ Forced: At the end of each round, place 1 resource token on Dungeon Labyrinth fo
             Cards.Add(new LotRCard()
             {
                 Title = "Catacomb Inspection",
-                ImageType = ImageType.Jpg,
+                
                 Id = "A8750BE5-98C8-4D6C-ACBE-28A9E9B85B3A",
                 CardType = CardType.Treachery,
                 Keywords = new List<string> { "Surge." },
@@ -168,7 +168,7 @@ Forced: At the end of each round, place 1 resource token on Dungeon Labyrinth fo
             Cards.Add(new LotRCard()
             {
                 Title = "Dark Interrogation",
-                ImageType = ImageType.Jpg,
+                
                 Id = "2DC13AE9-73DD-4F80-AF8F-29E4E4BA7E7A",
                 CardType = CardType.Treachery,
                 Text = "When Revealed: Each player must choose and discard cards from hand until he has only 2 cards in hand. (Each player with 2 or fewer cards in hand must instead reveal 1 card from the encounter deck.)",

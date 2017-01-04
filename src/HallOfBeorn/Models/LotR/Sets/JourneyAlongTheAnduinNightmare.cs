@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             {
                 Title = "Journey Along the Anduin Nightmare",
                 HasSecondImage = true,
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "9AE317F1-0CDF-410C-A063-C6A0A340DE45",
                 CardType = CardType.Nightmare_Setup,
                 Text = "You are playing Nightmare mode.\r\n\r\nAll Troll enemies gain the text: \"Cannot have attachments.\"\r\n\r\nIf the encounter deck is empty (at any time), shuffle the encounter discard pile back into the encounter deck.",
@@ -49,7 +49,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Marshland Outlaws",
-                ImageType = ImageType.Jpg,
+                
                 Id = "A7A341CA-431A-464F-B2EE-D51840E35270",
                 CardType = CardType.Enemy,
                 EngagementCost = 21,
@@ -69,7 +69,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Anduin Troll Spawn",
-                ImageType = ImageType.Jpg,
+                
                 Id = "F06B0F8E-7587-4C4D-9A7B-D0809C83C4C1",
                 CardType = CardType.Enemy,
                 EngagementCost = 26,
@@ -91,7 +91,7 @@ Forced: At the beginning of the combat phase, Anduin Troll Spawn engages a playe
             Cards.Add(new LotRCard()
             {
                 Title = "Brown Water Rats",
-                ImageType = ImageType.Jpg,
+                
                 Id = "AA404B97-5CED-4A8C-953E-B8D4EA694A68",
                 CardType = CardType.Enemy,
                 EngagementCost = 1,
@@ -111,7 +111,7 @@ Forced: At the beginning of the combat phase, Anduin Troll Spawn engages a playe
             Cards.Add(new LotRCard()
             {
                 Title = "A Flooded Ford",
-                ImageType = ImageType.Jpg,
+                
                 Id = "F5DA8E4F-B12C-4BF0-A261-EBD642F32EE9",
                 CardType = CardType.Location,
                 Threat = 3,
@@ -128,7 +128,7 @@ Forced: At the beginning of the combat phase, Anduin Troll Spawn engages a playe
             Cards.Add(new LotRCard()
             {
                 Title = "Gladden Marshlands",
-                ImageType = ImageType.Jpg,
+                
                 Id = "96EE48F9-0C53-474D-A76C-EE7DC09D160B",
                 CardType = CardType.Location,
                 Threat = 10,
@@ -145,7 +145,7 @@ Forced: At the beginning of the combat phase, Anduin Troll Spawn engages a playe
             Cards.Add(new LotRCard()
             {
                 Title = "Pursuit on the Shore",
-                ImageType = ImageType.Jpg,
+                
                 Id = "E721FF49-E1B1-4728-970F-BC1F9834461E",
                 CardType = CardType.Treachery,
                 Text = "When Revealed: Search the victory display and encounter discard pile for the enemy with the most hit points. Return that enemy to the staging area. If no enemy is returned by this effect, Pursuit on the Shore gains surge. (Cannot be canceled.)",
@@ -158,7 +158,7 @@ Forced: At the beginning of the combat phase, Anduin Troll Spawn engages a playe
             Cards.Add(new LotRCard()
             {
                 Title = "Troll Attack",
-                ImageType = ImageType.Jpg,
+                
                 Id = "0969CB94-D988-4F1C-A2C0-C1779D774064",
                 CardType = CardType.Treachery,
                 Text = "When Revealed: All engaged Troll enemies attack. If no Troll enemies are engaged, Troll Attack gains surge.",
@@ -172,7 +172,7 @@ Forced: At the beginning of the combat phase, Anduin Troll Spawn engages a playe
             Cards.Add(new LotRCard()
             {
                 Title = "Smoking Blood",
-                ImageType = ImageType.Jpg,
+                
                 Id = "D6E77113-ABF9-4E04-B118-2A3716FE7AA2",
                 CardType = CardType.Treachery,
                 Text = "When Revealed: Remove all damage from all enemies. Then, each player raises his threat by the amount of just removed from his engaged enemies. If no damage is removed by this effect, Smoking Blood gains surge.",

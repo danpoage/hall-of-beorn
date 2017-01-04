@@ -33,7 +33,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Avalanche!",
                 Id = "ef0a0467-656b-4cef-baf2-e60037d69472",
                 CardType = CardType.Treachery,
@@ -47,7 +47,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Bofur",
                 Id = "c00bdeff-c186-4d83-bf24-2142fdd39b19",
                 CardType = CardType.Ally,
@@ -67,7 +67,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Caradhras",
                 Id = "f433a8a8-00ee-45d3-b0ac-1643216a2422",
                 CardType = CardType.Location,
@@ -84,7 +84,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Celebdil",
                 Id = "1ce63cb5-0022-48b2-a864-af49bdf18bef",
                 CardType = CardType.Location,
@@ -101,7 +101,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Elrohir",
                 Id = "cc7beee8-1f42-4926-8c45-8a50f3a87c57",
                 CardType = CardType.Hero,
@@ -120,7 +120,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Fallen Stones",
                 Id = "0a1166fb-fb90-4651-a8ae-7d532e41c2b6",
                 CardType = CardType.Treachery,
@@ -132,7 +132,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Fanuidhol",
                 Id = "71f1436f-bc66-4bf9-ac87-369ddea7dc64",
                 CardType = CardType.Location,
@@ -149,7 +149,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Fell Voices",
                 Id = "14be3661-3f3c-4a89-b27f-ab7c15f92e4e",
                 CardType = CardType.Treachery,
@@ -160,7 +160,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.K_R_Harris
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Freezing Cold",
                 Id = "2e810a9b-5d79-4828-8268-33e82c5fc1fa",
                 CardType = CardType.Treachery,
@@ -173,7 +173,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Eric_Braddock
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Good Meal",
                 Id = "97016882-11f8-428c-9f3f-43bb51aacb38",
                 CardType = CardType.Attachment,
@@ -185,7 +185,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Keeping Count",
                 Id = "fcfc6d7e-40eb-43b4-a72a-b529931f12ea",
                 CardType = CardType.Attachment,
@@ -202,7 +202,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 Artist = Artist.Mark_Tarrisse
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Mountain Goblin",
                 Id = "2809f147-b000-419c-bbb2-39e6221d72de",
                 CardType = CardType.Enemy,
@@ -221,7 +221,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 Artist = Artist.Dmitry_Burmak
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Mountain Troll",
                 Id = "ca41e49b-6bf0-42dc-8f83-83d7c8aaba1c",
                 CardType = CardType.Enemy,
@@ -241,7 +241,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 Artist = Artist.Rafal_Hrynkiewicz
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Needful to Know",
                 Id = "28a27a2b-d9c9-40ab-95ec-b44eca301102",
                 CardType = CardType.Event,
@@ -254,7 +254,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Ravenhill Scout",
                 Id = "2bb2c224-3d72-455f-9ec6-89670d372660",
                 CardType = CardType.Ally,
@@ -272,7 +272,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 Artist = Artist.Garret_DeChellis
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Renewed Friendship",
                 Id = "ef533832-523e-40ff-9116-163485826c5b",
                 CardType = CardType.Event,
@@ -284,7 +284,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Rocky Crags",
                 Id = "f8edfe48-aeda-41ea-bef9-db49d4781e7b",
                 CardType = CardType.Location,
@@ -300,7 +300,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Snowstorm",
                 Id = "e6808a55-528f-444e-bf61-67748e7261e9",
                 CardType = CardType.Treachery,
@@ -313,7 +313,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Snow Warg",
                 Id = "a516b400-b53f-4c21-8e44-c0a889caa8d5",
                 CardType = CardType.Enemy,
@@ -332,7 +332,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Taking Initiative",
                 Id = "ac2d3796-1d68-4d27-9e5e-4a09a535c0b7",
                 CardType = CardType.Event,
@@ -344,7 +344,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 Artist = Artist.Melissa_Findley
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Dimrill Stair",
                 Id = "a4df63d1-cb3d-4510-9e26-3b734632f456",
                 CardType = CardType.Location,
@@ -360,7 +360,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Timely Aid",
                 Id = "bd20ff6a-d77f-47d8-81dd-202e5f21cfaf",
                 CardType = CardType.Event,
@@ -373,7 +373,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 Artist = Artist.Sandara_Tang
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Unseen Strike",
                 Id = "c1c21875-2650-4e7d-b8c7-c0c0970ce8b0",
                 CardType = CardType.Event,
@@ -385,7 +385,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 Artist = Artist.Even_Mehl_Amundsen
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Snowdrifts",
                 StageNumber = 2,
                 Id = "737a8d5f-2f82-47e4-844e-52fdae95ccf5",
@@ -401,7 +401,7 @@ Forced: After attached hero attacks and destroys an enemy, place 1 resource toke
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.MistyMountains }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Mountains' Peaks",
                 StageNumber = 3,
                 Id = "001dbc8b-3b8e-4f02-bdbd-7e78c6ecd348",
@@ -422,12 +422,11 @@ Players cannot defeat this stage unless they have 5 victory points. If the playe
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.MistyMountains }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Up the Pass",
                 StageNumber = 1,
                 Id = "0ec5f691-e5b3-41b5-bcec-2f963786ef4d",
                 CardType = CardType.Quest,
-                Setup = "stttttt",
                 Text = "Setup: Add Caradhras to the staging area. Remove all copies of Snowstorm from the encounter deck and set them aside, out of play. Put Arwen Undomiel into play under the control of the first player.",
                 HtmlTemplate = "<p class='flavor-text'>Celeborn has bid you to visit her father in Rivendell. Your journey takes you though the Redhorn Gate...</p><p><b>Setup:</b> Add <a title='Caradhras (The Redhorn Gate)' target='_blank' href='/Cards/Details/Caradhras-TRG'>Caradhras</a> to the staging area. Remove all copies of <a title='Snowstorm (The Redhorn Gate)' target='_blank' href='/Cards/Details/Snowstorm-TRG'>Snowstorm</a> from the encounter deck and set them aside, out of play. Put <a target='_blank' title='Arwen Undomiel (The Redhorn Gate)' href='/Cards/Details/Arwen-Undomiel-TRG'>Arwen Undómiel</a> into play under the control of the first player.</p>",
                 HtmlTemplate2 = "<p><b>When Revealed:</b> Reveal 1 card from the encounter deck per player, and add it to the staging area.</p>",

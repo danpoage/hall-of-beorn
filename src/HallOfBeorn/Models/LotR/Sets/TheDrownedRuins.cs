@@ -70,13 +70,13 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithFlavor("\"Strider can take you by paths that are seldom tridden. Will you have him?\"\r\n-Aragorn, The Fellowship of the Ring")
                 .WithInfo(91, 3, Artist.Unknown));
 
-            Cards.Add(LotRCard.Quest("The Grotto", string.Empty, 4, 1, setName, 15)
+            Cards.Add(LotRCard.Quest("The Grotto", 1, setName, 15)
                 .WithFlavor("In the sunken ruins of the temple, you find a grotto leading deep below the sea level. Much of the grotto is submerged underwater.")
                 .WithText("Setup: Set Shrine to Morgoth aside, out of play. Prepare the ~Grotto deck. Add the top 2 locations from the ~Grotto deck to the staging area, Grotto side faceup (the top 3 instead if there are 3 or more players in the game). The first player takes control of ~Captain Sahír, and the last player takes control of Na'asiyah (objective-ally sides faceup).")
                 .WithOppositeText("While an underwater location is the active location, players cannot play attachments or allies.\r\nForced: After a double-sided location is explored, add the top location from the ~Grotto deck to the staging area, Grotto side faceup.\r\nYou cannot advance unless there are at least 3 Underwater locations in the victory display.")
                 .WithIncludedEncounterSets(EncounterSet.TheStormcallerElite, EncounterSet.DrownedDead)
                 .WithInfo(92, 1, Artist.Mariusz_Gandzel));
-            Cards.Add(LotRCard.Quest("Sahír's Betrayal", string.Empty, 4, 2, setName, null)
+            Cards.Add(LotRCard.Quest("Sahír's Betrayal", 2, setName, null)
                 .WithFlavor("In the center of the shrine, reverently placed on a large altar, lies a long black chest. As soon as you get close, Sahír knocks one of the heroes over and grabs it!")
                 .WithText("When Revealed: Make the set aside Shrine to Morgoth the active location, Grotto side faceup. ~Captain Sahír flips to his enemy side (removing all tokens) and makes an immediate attack against the first player. Remove ~Captain Sahír from the game. Each player searches the encounter deck and discard pile for an Undead enemy and adds it to the staging area. Shuffle the encounter deck.")
                 .WithOppositeFlavor("You dive at Sahír, but he swiftly runs to the entrance, laughing as he seals you in. \"Captain?! What about me?\" Na'asiyah scream angrily. As soon as the entrace is sealed shut, the walls shudder, and water begins to leak rapidly from the ceiling and walls. \"We have to get out of here!\" the heroes shout, as the water level starts to rise.")

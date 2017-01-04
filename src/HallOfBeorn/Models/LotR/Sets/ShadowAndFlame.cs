@@ -16,7 +16,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cycle = "Dwarrowdelf";
 
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Counter-Spell",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9001",
                 CardType = CardType.Treachery,
@@ -30,7 +30,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Dark Pit",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9002",
                 CardType = CardType.Location,
@@ -45,7 +45,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Igor_Kieryluk
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Durin's Bane",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9003",
                 CardType = CardType.Enemy,
@@ -65,7 +65,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Elrond",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9004",
                 CardType = CardType.Hero,
@@ -85,7 +85,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Fiery Sword",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9005",
                 CardType = CardType.Treachery,
@@ -99,7 +99,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Timo_Karhula
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Fires in the Deep",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9006",
                 CardType = CardType.Treachery,
@@ -112,7 +112,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Nick_Deligaris
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Hands Upon the Bow",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9007",
                 CardType = CardType.Event,
@@ -125,7 +125,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Hardy Leadership",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9008",
                 CardType = CardType.Attachment,
@@ -139,7 +139,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Jake_Murray
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Inner Flame",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9009",
                 CardType = CardType.Treachery,
@@ -152,7 +152,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Matthew_Starbuck
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Inner Shadow",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9010",
                 CardType = CardType.Treachery,
@@ -165,7 +165,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Rafal_Hrynkiewicz
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Last Lord of Moria",
                 StageNumber = 3,
                 Id = "51223bd0-ffd1-11df-a976-0801213c9011",
@@ -182,7 +182,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.DeepsOfMoria }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Leaping Flame",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9013",
                 CardType = CardType.Treachery,
@@ -196,7 +196,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Timo_Karhula
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Many Thonged Whip",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9014",
                 CardType = CardType.Treachery,
@@ -210,7 +210,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Timo_Karhula
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Master of the Forge",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9015",
                 CardType = CardType.Ally,
@@ -227,7 +227,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Paul_Guzenko
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Miruvor",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9016",
                 CardType = CardType.Attachment,
@@ -240,7 +240,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Nearing the Gate",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-0801213c9017",
@@ -250,7 +249,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 QuestPoints = 9,
                 FlavorText = "As you reach the eastern realm of Darrowdelf the craftsmanship of the Dwarves is proudly displayed. But the sound of drums sound in the deep, and it appears that these halls are infested with Orcs.",
                 OppositeFlavorText = "A crack like lightning sounds before you, and a creature of shadow and flame blocks your way. It is an ancient demon of Morgoth, and its presence explains the massing in Moria.",
-                Setup = "ts",
                 Text = "Setup: Remove Dark Pit from the encounter deck and place it aside, out of play. Add Durin's Bane to the staging area. Shuffle the encounter deck.",
                 OppositeText = "When Revealed: Reduce each player's threat to 0. Reveal X cards from the encounter deck, where X is one less than the number of players in the game, and add them to the staging area.",
                 HtmlTemplate = "<p class='flavor-text'>As you reach the eastern realm of Darrowdelf the craftsmanship of the Dwarves is proudly displayed. But the sound of drums sound in the deep, and it appears that these halls are infested with Orcs.</p><p><b>Setup:</b> Remove {card:Dark-Pit-SaF@Dark Pit} from the encounter deck and place it aside, out of play. Add {card:Durin&#39;s-Bane-SaF@Durin&#39;s Bane} to the staging area. Shuffle the encounter deck.</p>",
@@ -260,7 +258,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.DeepsOfMoria }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "A Elbereth! Gilthonial!",
                 AlternateSlug = "O-Elbereth-Gilthonial-SaF",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9019",
@@ -275,7 +273,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Peace, and Thought",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9020",
                 CardType = CardType.Event,
@@ -288,7 +286,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Ranging Goblin",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9021",
                 CardType = CardType.Enemy,
@@ -306,7 +304,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Jasper_Sandner
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Risk Some Light",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9022",
                 CardType = CardType.Event,
@@ -319,7 +317,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Dmitry_Burmak
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Second Deep",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9023",
                 CardType = CardType.Location,
@@ -334,7 +332,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Nick_Deligaris
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Second Hall",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9024",
                 CardType = CardType.Location,
@@ -351,7 +349,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Rear Guard",
                 StageNumber = 2,
                 Id = "51223bd0-ffd1-11df-a976-0801213c9025",
@@ -368,7 +366,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.DeepsOfMoria }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Vilya",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9027",
                 CardType = CardType.Attachment,
@@ -384,7 +382,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "We Are Not Idle",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9028",
                 CardType = CardType.Event,
@@ -397,7 +395,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Charles_Urbach
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Whip Lash",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9029",
                 CardType = CardType.Treachery,

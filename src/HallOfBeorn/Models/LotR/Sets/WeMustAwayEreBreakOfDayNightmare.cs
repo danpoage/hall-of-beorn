@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             {
                 Title = "We Must Away, Ere Break of Day Nightmare",
                 HasSecondImage = true,
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "4AB41CDE-413A-4410-89D9-E201DA9D21AD",
                 CardType = CardType.Nightmare_Setup,
                 Text = 
@@ -51,7 +51,7 @@ Play Tip: The treachery card, ~Night Wanes Slow, has a Forced effect that trigge
             Cards.Add(new LotRCard()
             {
                 Title = "A Murder of Crows",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "648EE911-F664-4866-9C33-8ABBE5A65CCA",
                 CardType = CardType.Enemy,
                 EngagementCost = 50,
@@ -72,7 +72,7 @@ Forced: If A Murder of Crows would be destroyed, shuffle it back into the encoun
             Cards.Add(new LotRCard()
             {
                 Title = "Red River-bank",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "6CA9F51F-BDE1-40C9-9FAF-5CF8C6AF2124",
                 CardType = CardType.Location,
                 Threat = 2,
@@ -88,7 +88,7 @@ Forced: If A Murder of Crows would be destroyed, shuffle it back into the encoun
             Cards.Add(new LotRCard()
             {
                 Title = "Wicked Hilltops",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "E022C71D-E74B-4C0C-A4D7-419EAB8C7FAB",
                 CardType = CardType.Location,
                 Threat = 3,
@@ -104,7 +104,7 @@ Forced: If A Murder of Crows would be destroyed, shuffle it back into the encoun
             Cards.Add(new LotRCard()
             {
                 Title = "Comfortable Light",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "96F490CC-350A-4E64-B984-DE9653BACFFA",
                 CardType = CardType.Location,
                 Threat = 5,
@@ -125,7 +125,7 @@ Forced: After Comfortable Light becomes the active location, discard it.",
             Cards.Add(new LotRCard()
             {
                 Title = "Mince Them Fine",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "634A723D-7A73-4C69-9C45-E32ABFC00D65",
                 CardType = CardType.Treachery,
                 Text = "When Revealed: Each engaged Troll enemy makes an immediate attack. If the players are at stage 1, immediately advance to stage 2A.",
@@ -138,7 +138,7 @@ Forced: After Comfortable Light becomes the active location, discard it.",
             Cards.Add(new LotRCard()
             {
                 Title = "Night Wanes Slow",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "7F724BF7-CA78-45D7-B2E9-2D05F357357D",
                 CardType = CardType.Treachery,
                 Text = 
@@ -155,7 +155,7 @@ When Revealed: Shuffle the encounter discard pile into the encounter deck. Revea
             Cards.Add(new LotRCard()
             {
                 Title = "One By One",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "59E3A03C-07EB-4859-BA57-14DC29645425",
                 CardType = CardType.Treachery,
                 Text = "When Revealed: Choose and destroy a character with a Sack card attached. Then, return that Sack card to the top of the Sack deck and Sack 1.",

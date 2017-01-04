@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             {
                 Title = "Over the Misty Mountains Grim Nightmare",
                 HasSecondImage = true,
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "857AD504-541B-48B0-9DEB-AB31B122C50D",
                 CardType = CardType.Nightmare_Setup,
                 Text = "You are playing Nightmare mode.\r\n\r\nWhen resolving the \"when revealed\" effect of stage 3B, no more than X resources may be spent from Bilbo Baggins's resource pool, where X is the number of players in the game.",
@@ -48,7 +48,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Narrow Ledge",
-                ImageType = ImageType.Jpg,
+                
                 Id = "48EE2956-EA04-4F72-A39E-0C561BE576D6",
                 CardType = CardType.Location,
                 Threat = 4,
@@ -64,7 +64,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Dim Valley",
-                ImageType = ImageType.Jpg,
+                
                 Id = "B28CF907-EB44-4A8D-98D7-EDD2DF4623A0",
                 CardType = CardType.Location,
                 Threat = 3,
@@ -83,7 +83,7 @@ Forced: At the end of the round, each player must discard a random card from his
             Cards.Add(new LotRCard()
             {
                 Title = "Lightning Splinters",
-                ImageType = ImageType.Jpg,
+                
                 Id = "739A4125-54A8-4277-8A92-368F54ED3A8F",
                 CardType = CardType.Treachery,
                 Text = "When Revealed: Each player must choose and discard 3 cards from his hand. Each player assigns X damage among characters he controls, where X is the combined printed cost of the cards he discarded.",
@@ -96,7 +96,7 @@ Forced: At the end of the round, each player must discard a random card from his
             Cards.Add(new LotRCard()
             {
                 Title = "The Great Goblin",
-                ImageType = ImageType.Jpg,
+                
                 Id = "EDA986F6-EB85-4127-9E30-92FC5C373240",
                 IsUnique = true,
                 CardType = CardType.Enemy,
@@ -116,7 +116,7 @@ Forced: At the end of the round, each player must discard a random card from his
             Cards.Add(new LotRCard()
             {
                 Title = "Goblin Prowler",
-                ImageType = ImageType.Jpg,
+                
                 Id = "46F01E94-6C05-42A8-AD36-7FA365740F4D",
                 CardType = CardType.Enemy,
                 EngagementCost = 45,
@@ -138,7 +138,7 @@ Forced: When Goblin Prowler engages you, discard a character you control.",
             Cards.Add(new LotRCard()
             {
                 Title = "Dark Passages",
-                ImageType = ImageType.Jpg,
+                
                 Id = "D9ED9A91-57FF-4235-BE12-D9E02E5953DA",
                 CardType = CardType.Location,
                 Threat = 4,
@@ -156,7 +156,7 @@ Travel: Raise each player's threat by X to travel here, where X is the number of
             Cards.Add(new LotRCard()
             {
                 Title = "Swish, smack! Whip crack!",
-                ImageType = ImageType.Jpg,
+                
                 Id = "76436D46-2999-4E00-A33D-712D652D569B",
                 CardType = CardType.Treachery,
                 Text = "When Revealed: Each player must assign damage among characters he controls equal to the total number of Goblin enemies engaged with him and in the staging area.",

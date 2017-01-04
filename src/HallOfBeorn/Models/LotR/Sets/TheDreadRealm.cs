@@ -77,20 +77,20 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Attach to a unique ally belonging to any sphere of influence.\r\nAttached character loses the ally card type and gains the hero card type.")
                 .WithFlavor("\"But why, lord, did you receive me as sword-thain, if not to stay by your side?\"\r\n-Merry, The Return of the King")
                 .WithInfo(149, 3, Artist.Tomasz_Jedruszek));
-            Cards.Add(LotRCard.Quest("The Catacombs of Carn Dûm", "", 6, 1, setName, 18)
+            Cards.Add(LotRCard.Quest("The Catacombs of Carn Dûm", 1, setName, 18)
                 .WithNormalizedTitle("The Catacombs of Carn Dum")
                 .WithFlavor("As you descend into the catacombs beneath Carn Dûm, you find yourself overcome with terror. Still, you press onward, knowing that Iârion's fate-and perhaps the fate of the north-lies in your hand.")
                 .WithText("Setup: Set Daechanar and Altar of Midwinter aside, out of play. Each player reveals an encounter card from the top of the encounter deck. Each player reanimates the top card of his deck.")
                 .WithOppositeFlavor("Daechanar's powers of sorcery and necromancy are strongest here, in the capital of the Witch-realm where the lord of the Nazgûl once resided.")
                 .WithOppositeText("Reanimated Dead are Undead enemies with 2 Threat, 2 Attack, 2 Defense and 2 hit points.\r\nWhen the players advance to stage 2, all Sorcery cards attached to this stage are attached to stage 2B.")
                 .WithInfo(150, 1, Artist.Logan_Feliciano));
-            Cards.Add(LotRCard.Quest("Angmar Awakened", "", 6, 2, setName, 255)
+            Cards.Add(LotRCard.Quest("Angmar Awakened", 2, setName, 255)
                 .WithFlavor("A final scream fills the dreadful halls of Carn Dûm, and you suspect the worst. As you enter the site of Daechanar's dark ritual, your fears come to life. Iârion stands before you, cracking his neck and gripping the blade at his side tightly, as though testing his muscles. Only it isn't him.")
                 .WithText("When Revealed: Add Daechanar to the staging area. Make Altar of Midwinter the active location, returning any previously active location to the staging area. Each player reanimates the top card of his deck.")
                 .WithOppositeFlavor("Daechanar, in the body of your ally Iârion, laughs wickedly. Despair and frustration are the only thoughts that enter your mind. In the end, you were too late to stop this cruel fate. \"Finally! Yes, this body will do nicely.\" the wraith wearing the guise of your friend muses. He draws his blade.")
                 .WithOppositeText("Reanimated Dead are Undead enemies with 2 Threat, 2 Attack, 2 Defense and 2 hit points.\r\nWhen Daechanar is defeated, advance to the next stage.")
                 .WithInfo(151, 1, Artist.Lukasz_Jaskolski));
-            Cards.Add(LotRCard.Quest("Daechanar's Fall", "", 6, 3, setName, 255)
+            Cards.Add(LotRCard.Quest("Daechanar's Fall", 3, setName, 255)
                 .WithFlavor("The imposter in Iârion's body collapses in agony, and a piercing shriek echoes the halls as the sorcerer exits Iârion. \"Thank you,\" Iârion says with a pained smile before his eyes close for the last time. Before you can mourn your loss, the walls begin to shake and crack. The catacombs are collapsing!")
                 .WithText("When Revealed: If there are less than X locations in the staging area, search the encounter deck and discard pile and add locations to the staging area until there are X locations in staging area. X is the number of players in the game.")
                 .WithOppositeText("Reanimated Dead are Undead enemies with 2 Threat, 2 Attack, 2 Defense and 2 hit points.\r\nProgress that would be placed on this quest is instead placed on locations in the staging area, divided as you choose.\r\nForced: At the end of the phase, if there are any locations in play, deal 1 damage to all characters in play. If there are no locations in play, the players have escaped Carn Dûm, and win the game.")

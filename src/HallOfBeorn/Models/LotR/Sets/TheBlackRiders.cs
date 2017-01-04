@@ -17,7 +17,7 @@ namespace HallOfBeorn.Models.LotR.Sets
 
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Frodo Baggins",
                 Id = "3217a119-6b86-47dd-b451-c5e45be3f874",
                 IsUnique = true,
@@ -36,7 +36,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Jake_Murray
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Sam Gamgee",
                 AlternateSlug = "Sam-Jamjee-TBR",
                 Id = "4124136c-8c86-4f86-830c-94c8c76df161",
@@ -56,7 +56,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Alexandre_Dainche
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Merry",
                 Id = "052b1f85-8b9c-4bb0-a735-bdbd5ac1b2c4",
                 IsUnique = true,
@@ -75,7 +75,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Alexandre_Dainche
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Pippin",
                 Id = "ce96b767-c569-48b8-a998-d8009b0143c7",
                 IsUnique = true,
@@ -94,7 +94,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Alexandre_Dainche
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Fatty Bolger",
                 Id = "5d75d4dd-7300-43d7-87f2-963271c9c904",
                 IsUnique = true,
@@ -114,7 +114,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Bill the Pony",
                 Id = "1f7fc118-94a7-48a0-bd0c-9c15a36ddc23",
                 IsUnique = true,
@@ -134,7 +134,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Barliman Butterbur",
                 Id = "77f58774-86e7-4449-b31e-3833700b3e60",
                 IsUnique = true,
@@ -154,7 +154,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Farmer Maggot",
                 Id = "9d8ccd1a-48d3-4123-bcca-3c0ab88347ec",
                 IsUnique = true,
@@ -174,7 +174,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Halfling Determination",
                 Id = "8e7e5c8d-0ea4-46df-ae38-d8d2fee7ca8b",
                 CardType = CardType.Event,
@@ -188,7 +188,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Smoke Rings",
                 Id = "9418c634-54c6-47de-9aae-798038a4a35b",
                 CardType = CardType.Event,
@@ -202,7 +202,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Take No Notice",
                 Id = "768ae041-2d15-44a3-a928-62838536a160",
                 CardType = CardType.Event,
@@ -216,7 +216,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Frodo's Intuition",
                 Id = "96350b97-5c68-4033-bb2f-4305696a7ae7",
                 CardType = CardType.Event,
@@ -230,7 +230,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Hobbit Cloak",
                 Id = "8e49ea86-375a-472e-b497-16a1164ae27f",
                 CardType = CardType.Attachment,
@@ -245,7 +245,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Dagger of Westernesse",
                 Id = "418e6de7-af19-4ea7-bfbe-2a02838c6de4",
                 CardType = CardType.Attachment,
@@ -261,7 +261,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Hobbit Pipe",
                 Id = "9c455b1a-a2d4-44f7-a9d3-9a3134c21a2a",
                 CardType = CardType.Attachment,
@@ -276,7 +276,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Elf-stone",
                 Id = "9bb32f2c-29fb-43ba-b7ba-2227b28f7b58",
                 IsUnique = true,
@@ -292,7 +292,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Mr. Underhill",
                 Id = "d0ed393c-162a-4715-bed4-e338c24e9e36",
                 IsUnique = true,
@@ -306,13 +306,12 @@ namespace HallOfBeorn.Models.LotR.Sets
                 FlavorText = "\"I will give you a travelling name now. When you go, go as Mr. Underhill.\" -Gandalf, The Fellowship of the Ring",
                 VictoryPoints = 1,
                 Quantity = 1,
-                Setup = "t",
                 CardNumber = 17,
                 Artist = Artist.Sebastian_Giacobino
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Tireless Ranger",
                 Id = "ef014a91-c2d9-44ca-acd0-cc1a339c051f",
                 IsUnique = true,
@@ -330,7 +329,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Skilled Healer",
                 Id = "1d1ab8a3-ad76-4992-ae5c-6a89fd0ed463",
                 IsUnique = true,
@@ -348,7 +347,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Valiant Warrior",
                 Id = "ff574390-bd68-4277-9065-dd9dbf552d00",
                 IsUnique = true,
@@ -366,7 +365,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Noble Hero",
                 Id = "af49e5ea-c6a2-4be4-bbf3-ac53c100e887",
                 IsUnique = true,
@@ -384,12 +383,12 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Three is Company",
                 StageNumber = 1,
                 Id = "6b34adb4-b510-4db9-aaba-9a1876626dce",
                 CardType = CardType.Quest,
-                ScenarioNumber = 1,
+                
                 EncounterSet = "A Shadow of the Past",
                 Quantity = 1,
                 Text = "Setup: Set Buckleberry Ferry aside, out of play. Add 1 Black Rider to the staging area and make Bag End the active location. Shuffle the encounter deck.",
@@ -403,12 +402,12 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "A Shortcut to Mushrooms",
                 StageNumber = 2,
                 Id = "40c7a675-d48f-4e71-8818-5f0ffb9fa0dd",
                 CardType = CardType.Quest,
-                ScenarioNumber = 1,
+                
                 EncounterSet = "A Shadow of the Past",
                 FlavorText = "As Frodo watched he saw something dark pass across the lighter space between two trees, and then halt. It looked like the black shade of a horse led by a smaller black shadow. The black shadow stood close to the point where they had left the path, and it swayed from side to side. Frodo thought he heard the sound of snuffling. The shadow bent to the ground, and then began to crawl towards him. –The Fellowship of the Ring",
                 OppositeText = "When Revealed: The first player searches the encounter deck and discard pile for a Black Rider, reveals it (cannot be canceled), and adds it to the staging area. Shuffle the encounter deck.\r\nWhen a player makes a Hide test, add 1 to the total Threat for each ally that player controls.\r\nWhen a player fails a Hide test, each Nazgûl enemy in the staging area engages that player. (Trigger Forced effects after resolving this effect.)",
@@ -420,12 +419,12 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Escape to Buckland",
                 StageNumber = 3,
                 Id = "7371cfea-03d0-4bc0-98a1-d99e0acdbf88",
                 CardType = CardType.Quest,
-                ScenarioNumber = 1,
+                
                 Text = "When Revealed: Add Buckleberry Ferry to the staging area.",
                 OppositeText = "When Revealed: The first player searches the encounter deck and discard pile for a Black Rider, reveals it (cannot be canceled), and adds it to the staging area. Shuffle the encounter deck.\r\nWhen a player fails a Hide test, each Nazgûl enemy in the staging area engages that player. (Trigger Forced effects after resolving this effect.)\r\nResponse: After a player makes a successful Hide test, place X progress on a non-unique location in play. X is twice the number of players in the game.",
                 EncounterSet = "A Shadow of the Past",
@@ -436,12 +435,12 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Trouble in Bree",
                 StageNumber = 1,
                 Id = "d0b6992d-9dc4-41fa-a483-b4ad0a3d60b3",
                 CardType = CardType.Quest,
-                ScenarioNumber = 2,
+                
                 Text = "Setup: Set all copies of Ringwraith, The Witch-king, Midgewater, and Weathertop aside, out of play. Add The Prancing Pony and Bill Ferny to the staging area. Shuffle the encounter deck.",
                 FlavorText = "Frodo and his companions arrive at Bree to find the shadow of the Black Riders already on the crossroads town. Unsure of who to trust, they decide to lodge at The Prancing Pony. There they meet a friend of Gandalf named Strider who offers to lead them to Rivendell, but their movements are also tracked by less savory folk.",
                 OppositeText = "The player cannot advance while The Prancy Pony is in play.",
@@ -455,12 +454,12 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Into the Wild",
                 StageNumber = 2,
                 Id = "28a4721b-3696-4fae-9eea-01b5a250c892",
                 CardType = CardType.Quest,
-                ScenarioNumber = 2,
+                
                 FlavorText = "His plan, as far as they could understand it without knowing the country, was to go towards Archet at first, but to bear right and pass it on the east, and then to steer as straight as he could over the wild lands to Weathertop Hill. In that way they would, if all went well, cut off a great loop of the Road, which further on bent southwards to avoid the Midgewater Marshes. But, of course, they would have to pass through the marshes themselves, and Strider’s description of them was not encouraging. –The Fellowship of the Ring",
                 OppositeText = "When Revealed: Add Midgewater to the staging area. Each player places 1 progress on the current quest.\r\nForced: At the end of the round, eithe remove X progress from the current quest or shuffle 1 out of play Ringwraith into the encounter deck. X is the number of players in the game.\r\nThe players cannot advance while Midgewater is in play.",
                 EncounterSet = "A Knife in the Dark",
@@ -472,12 +471,12 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Ringwraiths Attack",
                 StageNumber = 3,
                 Id = "257f9b44-2744-4f02-bbf6-115d12b52e8d",
                 CardType = CardType.Quest,
-                ScenarioNumber = 2,
+                
                 Text = "When Revealed: Add Weathertop and The Witch-king to the staging area. Search the encounter deck and discard pile and add each Nazgûl enemy found to the staging area. Shuffle the encounter deck.",
                 FlavorText = "Strider has led Frodo and his companions to Weathertop where he hopes to meet Gandalf. Instead, they find the Black Riders waiting for them. As the sun goes down, the Nazgûl close in on their prey.",
                 OppositeText = "If there are no Nazgûl enemies in play, the players win the game.",
@@ -490,12 +489,12 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Pursued by the Enemy",
                 StageNumber = 1,
                 Id = "f9824e39-fda8-4e4b-bc74-83b4bd40c72d",
                 CardType = CardType.Quest,
-                ScenarioNumber = 3,
+                
                 Text = "Setup: Shuffle each burden card from the Flight to the Ford burden set into a Burden deck. Attach An Evil Wound to the Ring-bearer. Set Ford of Bruinen and The Witch-king aside, out of play. Add The Last Bridge and 1 Fell Rider per player to the staging area. Set the Ring-bearer's life at 15. Shuffle the encounter deck.",
                 OppositeText = "The players cannot advance unless The Last Bridge is in the victory display.\r\nForced: At the end of the round, reduce the Ring-bearer's life by 1.",
                 EncounterSet = "Flight to the Ford",
@@ -507,12 +506,12 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Race To Rivendell",
                 StageNumber = 2,
                 Id = "6b2673af-c764-4599-a265-6e43d3b75310",
                 CardType = CardType.Quest,
-                ScenarioNumber = 3,
+                
                 OppositeText = "When Revealed: Add Ford of Bruinen and The Witch-king to the staging area.\r\nWhile at least 1 Nazgûl enemy is in play, Race to Rivendell gets +15 quest points.\r\nForced: At the end of the round, reduce the Ring-bearer's life by 1.\r\nIf the players defeat this stage, they have won the game.",
                 EncounterSet = "Flight to the Ford",
                 Quantity = 1,
@@ -527,7 +526,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HasSecondImage = true,
                 Id = "307411f3-4a45-44ae-bc64-4e16deb97d10",
                 CardType = CardType.Campaign,
-                ScenarioNumber = 1,
+                
                 Text =
 @"You are playing Campaign Mode.
 
@@ -543,7 +542,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Bag End",
                 Id = "0d30fbf1-6e8f-480f-9f2f-3196777f6e11",
                 IsUnique = true,
@@ -562,7 +561,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Woody End",
                 Id = "b194fe1c-18c8-47d2-a674-8e209339c7e2",
                 IsUnique = true,
@@ -764,7 +763,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 HasSecondImage = true,
                 Id = "2efa631a-eb16-4078-84a5-18c7033b86f3",
                 CardType = CardType.Campaign,
-                ScenarioNumber = 2,
+                
                 Text = "You are playing Campaign Mode.",
                 FlavorText = "Black horsemen have passed through Bree. On Monday one came down the Greenway, they say; and another appeared later, coming up the Greenway from the south.\r\n-Aragorn, The Fellowship of the Ring",
                 OppositeTitle = "The Lord of the Rings Part 2",
@@ -970,7 +969,7 @@ Setup: Attach Mr. Underhill to the Ring-bearer. Add Gandalf's Delay to the stagi
                 HasSecondImage = true,
                 Id = "0ee09c42-34c9-41aa-aa98-b582608b15bb",
                 CardType = CardType.Campaign,
-                ScenarioNumber = 3,
+                
                 Text =
 @"You are playing Campaign Mode.
 
@@ -1290,7 +1289,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
             Cards.Add(new LotRCard()
             {
                 Title = "Gildor Inglorion",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "6c04a40a-0666-4b4f-a768-ddff46857cf0",
                 IsUnique = true,
                 Sphere = Models.LotR.Sphere.Neutral,
@@ -1310,7 +1309,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
             Cards.Add(new LotRCard()
             {
                 Title = "Gandalf's Delay",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "d95a6076-3ead-4ff6-a1ba-ca320d2bd4e1",
                 CardType = CardType.Objective,
                 CardSubtype = Models.CardSubtype.Burden,
@@ -1352,7 +1351,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
             Cards.Add(new LotRCard()
             {
                 Title = "Fear of Discovery",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "074cad39-ce55-4dc1-9775-e95363682ef7",
                 CardType = CardType.Treachery,
                 CardSubtype = Models.CardSubtype.Burden,
@@ -1395,7 +1394,7 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
             Cards.Add(new LotRCard()
             {
                 Title = "Overcome by Terror",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "cdc303cb-bb1a-4409-a479-aa4155bd8ed5",
                 CardType = CardType.Treachery,
                 CardSubtype = Models.CardSubtype.Burden,

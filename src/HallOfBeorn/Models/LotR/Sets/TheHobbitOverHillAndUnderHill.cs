@@ -17,7 +17,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cycle = "The Hobbit";
 
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "A Deep Sack",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9001",
                 CardType = CardType.Objective,
@@ -29,7 +29,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.David_Kegg
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "A Foul Sack",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9002",
                 CardType = CardType.Objective,
@@ -41,7 +41,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Diego_Gisbert_Llorens
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "A Large Sack",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9003",
                 CardType = CardType.Objective,
@@ -53,7 +53,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Florian_Stitz
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "A Nice Pickle",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9004",
                 CardType = CardType.Treachery,
@@ -66,16 +66,14 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "A Short Rest",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-1801204c9005",
                 CardType = CardType.Quest,
-                ScenarioNumber = 2,
+                
                 EncounterSet = "Over the Misty Mountains Grim",
                 Quantity = 1,
                 QuestPoints = 0,
-                Setup = "s",
                 Text = "Setup: Shuffle the Over the Misty Mountains Grim and Western Lands encounter sets into one encounter deck and make it the active encounter deck. Then, shuffle the The Great Goblin and Misty Mountain Goblins encounter sets into a second encounter deck and set it aside, inactive.",
                 FlavorText = "After a refreshing stay in the House of Elrond, Bilbo and his companions resumed their quest for the Lonely Mountain. But to reach Erebor, they first had to climb the high pass over the Misty Mountains.",
                 OppositeText = "When Revealed: Each player may search his deck for 1 treasure card and add it to his hand, then shuffle his deck. Advance to stage 2A.",
@@ -84,7 +82,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.WesternLands }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "A Smelly Sack",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9007",
                 CardType = CardType.Objective,
@@ -96,7 +94,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "A Strong Sack",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9008",
                 CardType = CardType.Objective,
@@ -108,7 +106,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Adam_Lane
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "A Suspicious Crow",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9009",
                 CardType = CardType.Enemy,
@@ -126,7 +124,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Dean_Spencer
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "A Tough Sack",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9010",
                 CardType = CardType.Objective,
@@ -138,7 +136,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Ignacio_Bazan_Lazcano
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "A Very Good Tale",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9011",
                 CardType = CardType.Event,
@@ -150,7 +148,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "A Worn Sack",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9012",
                 CardType = CardType.Objective,
@@ -162,16 +160,15 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Blake_Henriksen
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "An Unexpected Party",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-1801204c9013",
                 CardType = CardType.Quest,
-                ScenarioNumber = 1,
+                
                 EncounterSet = "We Must Away, Ere Break of Day",
                 Quantity = 1,
                 QuestPoints = 7,
-                Setup = "tttt",
                 Text = "Setup: Remove and shuffle the 7 Sack cards into a Sack deck and set it aside face down. Remove the 3 Troll enemies and the ~Troll Cave from the encounter deck and set them aside out of play. Then, shuffle the encounter deck. Each player reveals 1 card from the top of the encounter deck and adds it to the staging area.",
                 FlavorText = "The wizard Gandalf has chosen Bilbo Baggins to join Thorin and company on their quest to the Lonley Mountain.",
                 OppositeFlavorText = "At first they had passed through hobbit-lands, a wild respectable country inhabited by decent folk, with good roads, an inn or two, and now and then, a dwarf or a farmer ambling by on business. Then they came to lands where people spoke strangely, and sang songs Bilbo had never heard before. - The Hobbit.",
@@ -180,7 +177,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.WesternLands }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Beorn",
                 AlternateSlug = "Bjorn-THOHaUH",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9015",
@@ -201,7 +198,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Emrah_Elmasli
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Bert",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9016",
                 CardType = CardType.Enemy,
@@ -220,7 +217,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Mike_Nash
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Bilbo Baggins",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9017",
                 CardType = CardType.Hero,
@@ -238,7 +235,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Bilbo's Magic Ring",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9018",
                 CardType = CardType.Objective,
@@ -251,7 +248,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Bofur",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9019",
                 CardType = CardType.Ally,
@@ -269,7 +266,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Burglar Baggins",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9020",
                 CardType = CardType.Event,
@@ -281,7 +278,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Emrah_Elmasli
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Cave Entrance",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9021",
                 CardType = CardType.Location,
@@ -295,7 +292,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Chaos in the Cavern",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9022",
                 CardType = CardType.Treachery,
@@ -308,7 +305,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Come Down Little Bird",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9023",
                 CardType = CardType.Treachery,
@@ -320,7 +317,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Marco_Caradonna
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Cram",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9024",
                 CardType = CardType.Attachment,
@@ -333,12 +330,12 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Adam_Lane
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Dawn Take You All",
                 StageNumber = 3,
                 Id = "51223bd0-ffd1-11df-a976-1801204c9025",
                 CardType = CardType.Quest,
-                ScenarioNumber = 1,
+                
                 EncounterSet = "We Must Away, Ere Break of Day",
                 Quantity = 1,
                 QuestPoints = 0,
@@ -352,7 +349,7 @@ The players have won the game.",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.WesternLands }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Dori",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9027",
                 CardType = CardType.Ally,
@@ -371,12 +368,12 @@ The players have won the game.",
                 Artist = Artist.Jake_Murray
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Down, Down to Goblin Town",
                 StageNumber = 3,
                 Id = "51223bd0-ffd1-11df-a976-1801204c9028",
                 CardType = CardType.Quest,
-                ScenarioNumber = 2,
+                
                 EncounterSet = "The Great Goblin",
                 Quantity = 1,
                 QuestPoints = 20,
@@ -388,7 +385,7 @@ The players have won the game.",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.TheGreatGoblin, EncounterSet.MistyMountainGoblins }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Dreary Hills",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9030",
                 CardType = CardType.Location,
@@ -403,7 +400,7 @@ The players have won the game.",
                 Artist = Artist.David_Demaret
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Expecting Mischief",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9031",
                 CardType = CardType.Event,
@@ -415,7 +412,7 @@ The players have won the game.",
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Fili",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9032",
                 CardType = CardType.Ally,
@@ -433,7 +430,7 @@ The players have won the game.",
                 Artist = Artist.Carmen_Cianelli
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Foe-hammer",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9033",
                 CardType = CardType.Event,
@@ -445,7 +442,7 @@ The players have won the game.",
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Front Porch",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9034",
                 CardType = CardType.Location,
@@ -460,7 +457,7 @@ The players have won the game.",
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Galloping Boulders",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9035",
                 CardType = CardType.Treachery,
@@ -473,7 +470,7 @@ The players have won the game.",
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Gandalf",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9036",
                 CardType = CardType.Ally,
@@ -491,7 +488,7 @@ The players have won the game.",
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Glamdring",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9037",
                 CardType = CardType.Treasure,
@@ -506,7 +503,7 @@ The players have won the game.",
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Goblin Axeman",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9038",
                 CardType = CardType.Enemy,
@@ -524,7 +521,7 @@ The players have won the game.",
                 Artist = Artist.Florian_Stitz
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Goblin Bent-Swords",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9039",
                 CardType = CardType.Enemy,
@@ -542,7 +539,7 @@ The players have won the game.",
                 Artist = Artist.Johann_Bodin
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Goblin Driver",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9040",
                 CardType = CardType.Enemy,
@@ -560,7 +557,7 @@ The players have won the game.",
                 Artist = Artist.Stephane_Gantiez
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Goblin Miners",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9041",
                 CardType = CardType.Enemy,
@@ -578,7 +575,7 @@ The players have won the game.",
                 Artist = Artist.C_B_Sorge
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Goblin Runners",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9042",
                 CardType = CardType.Enemy,
@@ -598,7 +595,7 @@ The players have won the game.",
                 Artist = Artist.Stephane_Gantiez
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Goblin-cleaver",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9043",
                 CardType = CardType.Event,
@@ -611,7 +608,7 @@ The players have won the game.",
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Gollum",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9044",
                 CardType = CardType.Enemy,
@@ -630,7 +627,7 @@ The players have won the game.",
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Great Cavern Room",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9045",
                 CardType = CardType.Location,
@@ -644,7 +641,7 @@ The players have won the game.",
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Great Gray Wolf",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9046",
                 CardType = CardType.Enemy,
@@ -662,7 +659,7 @@ The players have won the game.",
                 Artist = Artist.Allison_Theus
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Grip, Grab! Pinch, Nab!",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9047",
                 CardType = CardType.Treachery,
@@ -675,7 +672,7 @@ The players have won the game.",
                 Artist = Artist.Blake_Henriksen
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Guffawing of Giants",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9048",
                 CardType = CardType.Treachery,
@@ -686,7 +683,7 @@ The players have won the game.",
                 Artist = Artist.Chun_Lo
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Hiding in the Trees",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9049",
                 CardType = CardType.Treachery,
@@ -698,7 +695,7 @@ The players have won the game.",
                 Artist = Artist.David_Demaret
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Hobbit-lands",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9050",
                 CardType = CardType.Location,
@@ -713,7 +710,7 @@ The players have won the game.",
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Hungry Troll",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9051",
                 CardType = CardType.Treachery,
@@ -726,12 +723,12 @@ The players have won the game.",
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Into the Fire",
                 StageNumber = 3,
                 Id = "51223bd0-ffd1-11df-a976-1801204c9052",
                 CardType = CardType.Quest,
-                ScenarioNumber = 3,
+                
                 EncounterSet = "Dungeons Deep and Caverns Dim",
                 Quantity = 1,
                 QuestPoints = 16,
@@ -742,7 +739,7 @@ The players have won the game.",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.MistyMountainGoblins }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "It Likes Riddles?",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9054",
                 CardType = CardType.Treachery,
@@ -753,7 +750,7 @@ The players have won the game.",
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Kili",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9055",
                 CardType = CardType.Ally,
@@ -771,7 +768,7 @@ The players have won the game.",
                 Artist = Artist.Carmen_Cianelli
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Lake in the Cavern",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9056",
                 CardType = CardType.Location,
@@ -794,7 +791,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Late Adventurer",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9057",
                 CardType = CardType.Event,
@@ -807,7 +804,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Artist = Artist.Carmen_Cianelli
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Lone-Lands",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9058",
                 CardType = CardType.Location,
@@ -821,7 +818,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Lots or None at All",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9059",
                 CardType = CardType.Treachery,
@@ -834,7 +831,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "More Like a Grocer",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9060",
                 CardType = CardType.Treachery,
@@ -847,7 +844,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "No Campfire",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9061",
                 CardType = CardType.Treachery,
@@ -861,7 +858,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Nori",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9062",
                 CardType = CardType.Hero,
@@ -881,7 +878,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Not Fair! Not Fair!",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9063",
                 CardType = CardType.Treachery,
@@ -892,7 +889,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Orcrist",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9064",
                 CardType = CardType.Treasure,
@@ -908,7 +905,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Ori",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9065",
                 CardType = CardType.Hero,
@@ -927,16 +924,14 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Artist = Artist.Blake_Henriksen
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Out of the Frying Pan",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-1801204c9066",
                 CardType = CardType.Quest,
-                ScenarioNumber = 3,
+                
                 EncounterSet = "Dungeons Deep and Caverns Dim",
                 Quantity = 1,
                 QuestPoints = 14,
-                Setup = "stt",
                 Text = "Setup: Add Lake in the Cavern to the staging area. Create a riddle area with stage 2A and follow the setup instructions on that card.",
                 FlavorText = "After killing the Great Goblin, Bilbo's companions fought to win their escape from the goblins. By the time they realized that Bilbo had been lost in the darkness, it was too late to turn back and search for him.",
                 OppositeText = "Players cannot advance to stage 3A unless both 1B and 2B are complete.\r\nForced: Reveal 1 additional encounter card per player during the staging step.",
@@ -945,7 +940,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.MistyMountainGoblins }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Overhanging Rock",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9068",
                 CardType = CardType.Location,
@@ -960,12 +955,12 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Artist = Artist.Helmutt
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Riddles in the Dark",
                 StageNumber = 2,
                 Id = "51223bd0-ffd1-11df-a976-1801204c9069",
                 CardType = CardType.Quest,
-                ScenarioNumber = 3,
+                
                 EncounterSet = "Dungeons Deep and Caverns Dim",
                 Quantity = 1,
                 QuestPoints = 9,
@@ -977,7 +972,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.MistyMountainGoblins }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Roast 'Em or Boil 'Em?",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9071",
                 CardType = CardType.Treachery,
@@ -990,12 +985,12 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Artist = Artist.Chun_Lo
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Roast Mutton",
                 StageNumber = 2,
                 Id = "51223bd0-ffd1-11df-a976-1801204c9072",
                 CardType = CardType.Quest,
-                ScenarioNumber = 1,
+                
                 EncounterSet = "We Must Away, Ere Break of Day",
                 Quantity = 1,
                 QuestPoints = 1,
@@ -1007,7 +1002,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.WesternLands }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Spare Hood and Cloak",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9074",
                 CardType = CardType.Attachment,
@@ -1021,7 +1016,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Artist = Artist.David_Kegg
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Sting",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9075",
                 CardType = CardType.Treasure,
@@ -1037,7 +1032,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Stone-Giant",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9076",
                 CardType = CardType.Enemy,
@@ -1055,7 +1050,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Artist = Artist.Timo_Karhula
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Goblins' Caves",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9077",
                 CardType = CardType.Location,
@@ -1071,7 +1066,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Artist = Artist.David_Demaret
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Great Goblin",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9078",
                 CardType = CardType.Enemy,
@@ -1091,7 +1086,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Artist = Artist.Johann_Bodin
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The High Pass",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9079",
                 CardType = CardType.Location,
@@ -1108,12 +1103,12 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Artist = Artist.Titus_Lunter
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Mountain Pass",
                 StageNumber = 2,
                 Id = "51223bd0-ffd1-11df-a976-1801204c9080",
                 CardType = CardType.Quest,
-                ScenarioNumber = 2,
+                
                 EncounterSet = "Over the Misty Mountains Grim",
                 Quantity = 1,
                 QuestPoints = 16,
@@ -1124,7 +1119,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.WesternLands }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Wargs' Glade",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9082",
                 CardType = CardType.Location,
@@ -1138,7 +1133,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Thorin Oakenshield",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9083",
                 CardType = CardType.Hero,
@@ -1172,7 +1167,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Tom",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9085",
                 CardType = CardType.Enemy,
@@ -1191,7 +1186,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Artist = Artist.Mike_Nash
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Troll Camp",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9086",
                 CardType = CardType.Location,
@@ -1206,7 +1201,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Artist = Artist.Stephane_Gantiez
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Troll Cave",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9087",
                 CardType = CardType.Location,
@@ -1221,7 +1216,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Troll Key",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9088",
                 CardType = CardType.Objective,
@@ -1235,7 +1230,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Troll Purse",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9089",
                 CardType = CardType.Objective,
@@ -1249,7 +1244,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "What's In My Pocket?",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9090",
                 CardType = CardType.Treachery,
@@ -1260,7 +1255,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Wild Wargs",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9091",
                 CardType = CardType.Enemy,
@@ -1277,7 +1272,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Artist = Artist.Piya_Wannachaiwong
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "William",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9092",
                 CardType = CardType.Enemy,
@@ -1296,7 +1291,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Artist = Artist.Mike_Nash
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Wind-whipped Rain",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9093",
                 CardType = CardType.Treachery,

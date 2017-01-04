@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             {
                 Title = "Flight from Moria Nightmare",
                 HasSecondImage = true,
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "96C0EDF3-550B-4966-99D6-095521DCCB5A",
                 CardType = CardType.Nightmare_Setup,
                 Text =
@@ -59,7 +59,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Title = "Search for an Exit",
                 OppositeTitle = "Pursued By Shadow",
                 HasSecondImage = true,
-                ImageType = Models.ImageType.Jpg,
+                
                 SlugIncludesOppositeTitle = true,
                 Id = "A1380AE9-1895-48A7-9C5D-FF3D941DD1D9",
                 CardType = CardType.Quest,
@@ -83,7 +83,7 @@ Players may bypass this quest card at the end of the combat phase.",
                 Title = "Search for an Exit",
                 OppositeTitle = "Blocked by Flame",
                 HasSecondImage = true,
-                ImageType = Models.ImageType.Jpg,
+                
                 SlugIncludesOppositeTitle = true,
                 Id = "1A4E5458-13CC-41B1-8A44-6FC3FF25693E",
                 CardType = CardType.Quest,
@@ -107,7 +107,7 @@ If The ~Nameless Fear has 10 or more damage on it, remove all damage from it and
                 Title = "Search for an Exit",
                 OppositeTitle = "Ghâsh",
                 HasSecondImage = true,
-                ImageType = Models.ImageType.Jpg,
+                
                 SlugIncludesOppositeTitle = true,
                 Id = "A1EDC2C0-0F79-45C1-BFF6-B314BEDFBC6B",
                 CardType = CardType.Quest,
@@ -130,7 +130,7 @@ Players may bypass this quest card at the end of the combat phase.",
             Cards.Add(new LotRCard()
             {
                 Title = "Swarming Goblins",
-                ImageType = ImageType.Jpg,
+                
                 Id = "AE6D95BC-A85D-49F9-93D1-58730B3A2982",
                 CardType = CardType.Enemy,
                 EngagementCost = 10,
@@ -149,7 +149,7 @@ Players may bypass this quest card at the end of the combat phase.",
             Cards.Add(new LotRCard()
             {
                 Title = "Coal-Black Orc",
-                ImageType = ImageType.Jpg,
+                
                 Id = "7DDD73A9-F6E1-4610-B78D-3D349C9CC057",
                 CardType = CardType.Enemy,
                 EngagementCost = 34,
@@ -170,7 +170,7 @@ Players may bypass this quest card at the end of the combat phase.",
             Cards.Add(new LotRCard()
             {
                 Title = "Shadowed Corridor",
-                ImageType = ImageType.Jpg,
+                
                 Id = "0653EEE7-63F0-4A2B-AB65-B487A842A288",
                 CardType = CardType.Location,
                 Threat = 4,
@@ -186,7 +186,7 @@ Players may bypass this quest card at the end of the combat phase.",
             Cards.Add(new LotRCard()
             {
                 Title = "Dismay and Fear",
-                ImageType = ImageType.Jpg,
+                
                 Id = "8724509F-5380-42E1-9434-FFFF1B03091D",
                 CardType = CardType.Treachery,
                 Text = "When Revealed: Choose and remove characters from the quest until the total Willpower of characters removed from the quest is equal to or higher than The ~Nameless Fear's Threat.",
@@ -199,7 +199,7 @@ Players may bypass this quest card at the end of the combat phase.",
             Cards.Add(new LotRCard()
             {
                 Title = "An Evil Fortune",
-                ImageType = ImageType.Jpg,
+                
                 Id = "D69789C5-FA48-44FA-80B2-158134CFEF33",
                 CardType = CardType.Treachery,
                 Traits = new List<string> { "Shadow.", "Flame." },

@@ -18,7 +18,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Idraen",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "1AB9D3C4-C97E-4121-B08C-968839DABE6D",
                 CardType = CardType.Hero,
                 ThreatCost = 11,
@@ -38,7 +38,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Rivendell Scout",
-                ImageType = ImageType.Jpg,
+                
                 Id = "DACE5750-8E0F-4CBB-BF33-470792092026",
                 CardType = CardType.Ally,
                 Sphere = Models.LotR.Sphere.Leadership,
@@ -58,7 +58,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Feigned Voices",
-                ImageType = ImageType.Jpg,
+                
                 Id = "9B821B9F-6279-4EDF-8D1A-BF208C310AC9",
                 CardType = CardType.Event,
                 Sphere = Models.LotR.Sphere.Leadership,
@@ -92,7 +92,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Elven Mail",
-                ImageType = ImageType.Jpg,
+                
                 Id = "5AA8270F-DA60-4B28-8B8C-6EFB1D0E012C",
                 CardType = CardType.Attachment,
                 Sphere = Models.LotR.Sphere.Tactics,
@@ -108,7 +108,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Greyflood Wanderer",
-                ImageType = ImageType.Jpg,
+                
                 Id = "02F7C276-FDBE-4574-915D-3FC01B479879",
                 CardType = CardType.Ally,
                 Sphere = Models.LotR.Sphere.Spirit,
@@ -127,7 +127,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Warden of Arnor",
-                ImageType = ImageType.Jpg,
+                
                 Id = "12423D4F-1E04-48C2-96A8-3E012DB954AA",
                 CardType = CardType.Attachment,
                 Sphere = Models.LotR.Sphere.Spirit,
@@ -143,7 +143,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Message from Elrond",
-                ImageType = ImageType.Jpg,
+                
                 Id = "D1C87F36-6371-47B1-90D1-E5A5767050F9",
                 CardType = CardType.Event,
                 Sphere = Models.LotR.Sphere.Lore,
@@ -157,7 +157,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Noiseless Movement",
-                ImageType = ImageType.Jpg,
+                
                 Id = "EBC8BD16-93D7-483D-B001-E0C21D727B31",
                 CardType = CardType.Event,
                 Sphere = Models.LotR.Sphere.Lore,
@@ -171,7 +171,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Leaf Brooch",
-                ImageType = ImageType.Jpg,
+                
                 Id = "4C52BE83-0B8F-4D9A-A54D-4D8BF23B34A4",
                 CardType = CardType.Attachment,
                 Quantity = 3,
@@ -186,7 +186,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "The Trials Begin",
-                ImageType = ImageType.Jpg,
+                
                 HasSecondImage = true,
                 Id = "C3367A1E-7110-4025-8274-DBA2836778BC",
                 CardType = Models.LotR.CardType.Quest,
@@ -205,7 +205,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "The Trial of Strength",
-                ImageType = ImageType.Jpg,
+                
                 HasSecondImage = true,
                 Id = "704201A2-5A88-465A-B304-1AF7CBCEA156",
                 CardType = CardType.Quest,
@@ -226,7 +226,7 @@ When the players control the current trial's Key objective, add all Barrow locat
             Cards.Add(new LotRCard()
             {
                 Title = "The Trial of Perseverance",
-                ImageType = ImageType.Jpg,
+                
                 HasSecondImage = true,
                 Id = "AF8B9515-2CCE-45CC-BB9C-D77733AD45F4",
                 CardType = CardType.Quest,
@@ -247,7 +247,7 @@ When the players control the current trial's Key objective, add all Guardian ene
             Cards.Add(new LotRCard()
             {
                 Title = "The Trial of Intuition",
-                ImageType = ImageType.Jpg,
+                
                 HasSecondImage = true,
                 Id = "3C484CBD-ADFF-4C20-8AF3-FDFAD91C50EA",
                 CardType = CardType.Quest,
@@ -268,7 +268,7 @@ When the players control the current trial's Key objective, add all Guardian ene
             Cards.Add(new LotRCard()
             {
                 Title = "The Antlered Crown",
-                ImageType = ImageType.Jpg,
+                
                 HasSecondImage = true,
                 Id = "9331EBC1-B5A5-407F-9841-D753BD080546",
                 CardType = CardType.Quest,
@@ -290,7 +290,7 @@ Players cannot defeat this stage unless Hallowed Circle is in the victory displa
             Cards.Add(new LotRCard()
             {
                 Title = "Boar's Guardian",
-                ImageType = ImageType.Jpg,
+                
                 Id = "FE9E3B29-2686-4E9B-B52C-741B807CF527",
                 CardType = Models.LotR.CardType.Enemy,
                 IsUnique = true,
@@ -311,7 +311,7 @@ Players cannot defeat this stage unless Hallowed Circle is in the victory displa
             Cards.Add(new LotRCard()
             {
                 Title = "Wolf's Guardian",
-                ImageType = ImageType.Jpg,
+                
                 Id = "AD0ABA5C-2151-4332-BBB8-ECACF73694C2",
                 CardType = Models.LotR.CardType.Enemy,
                 IsUnique = true,
@@ -332,7 +332,7 @@ Players cannot defeat this stage unless Hallowed Circle is in the victory displa
             Cards.Add(new LotRCard()
             {
                 Title = "Raven's Guardian",
-                ImageType = ImageType.Jpg,
+                
                 Id = "9D1F0475-0703-4FE3-8A29-81E521D69ADB",
                 CardType = Models.LotR.CardType.Enemy,
                 IsUnique = true,
@@ -353,7 +353,7 @@ Players cannot defeat this stage unless Hallowed Circle is in the victory displa
             Cards.Add(new LotRCard()
             {
                 Title = "Key of the Boar",
-                ImageType = ImageType.Jpg,
+                
                 Id = "FB7F9E37-61DD-4BD2-BEA2-5035DC8FC4FE",
                 CardType = Models.LotR.CardType.Objective,
                 IsUnique = true,
@@ -371,7 +371,7 @@ If Key of the Boar is discarded, add it to the staging area.",
             Cards.Add(new LotRCard()
             {
                 Title = "Key of the Wolf",
-                ImageType = ImageType.Jpg,
+                
                 Id = "DC98A8D8-3232-487E-8581-41128F6BD3C2",
                 CardType = Models.LotR.CardType.Objective,
                 IsUnique = true,
@@ -389,7 +389,7 @@ If Key of the Wolf is discarded, add it to the staging area.",
             Cards.Add(new LotRCard()
             {
                 Title = "Key of the Raven",
-                ImageType = ImageType.Jpg,
+                
                 Id = "E723AC0A-3193-4759-A86B-58A2FA904EB5",
                 CardType = Models.LotR.CardType.Objective,
                 IsUnique = true,
@@ -407,7 +407,7 @@ If Key of the Raven is discarded, add it to the staging area.",
             Cards.Add(new LotRCard()
             {
                 Title = "Hill Barrow",
-                ImageType = ImageType.Jpg,
+                
                 Id = "F7A746AE-3F01-42D2-8BBA-7E87CE46F4DF",
                 CardType = Models.LotR.CardType.Location,
                 Quantity = 1,
@@ -424,7 +424,7 @@ If Key of the Raven is discarded, add it to the staging area.",
             Cards.Add(new LotRCard()
             {
                 Title = "Cave Barrow",
-                ImageType = ImageType.Jpg,
+                
                 Id = "B3DD5D12-DB0F-4096-8F5F-D73D22185C23",
                 CardType = Models.LotR.CardType.Location,
                 Quantity = 1,
@@ -440,7 +440,7 @@ If Key of the Raven is discarded, add it to the staging area.",
             Cards.Add(new LotRCard()
             {
                 Title = "Stone Barrow",
-                ImageType = ImageType.Jpg,
+                
                 Id = "3ECA9B52-EBEC-490C-A6F8-6B1F48818B6F",
                 CardType = Models.LotR.CardType.Location,
                 Quantity = 1,
@@ -457,7 +457,7 @@ If Key of the Raven is discarded, add it to the staging area.",
             Cards.Add(new LotRCard()
             {
                 Title = "Hallowed Circle",
-                ImageType = ImageType.Jpg,
+                
                 Id = "394D9B67-A302-4493-8D3F-497F5327DD4A",
                 CardType = Models.LotR.CardType.Location,
                 IsUnique = true,
@@ -480,7 +480,7 @@ Forced: After the players travel here, each engaged Guardian enemy makes an imme
             Cards.Add(new LotRCard()
             {
                 Title = "Spirit of the Wild",
-                ImageType = ImageType.Jpg,
+                
                 Id = "9D9C0590-43C6-434D-A277-CA2EE47B3132",
                 CardType = Models.LotR.CardType.Enemy,
                 Quantity = 5,
@@ -500,7 +500,7 @@ Forced: After the players travel here, each engaged Guardian enemy makes an imme
             Cards.Add(new LotRCard()
             {
                 Title = "Cursed Forest",
-                ImageType = ImageType.Jpg,
+                
                 Id = "DEB14C86-8786-4166-A8CB-1D85CDDB350D",
                 CardType = Models.LotR.CardType.Location,
                 Quantity = 2,
@@ -516,7 +516,7 @@ Forced: After the players travel here, each engaged Guardian enemy makes an imme
             Cards.Add(new LotRCard()
             {
                 Title = "Grim Foothills",
-                ImageType = ImageType.Jpg,
+                
                 Id = "3B2A21DF-E6D2-4A3F-8F22-D059E32BB051",
                 CardType = Models.LotR.CardType.Location,
                 Quantity = 3,
@@ -534,7 +534,7 @@ Forced: After the players travel here, each engaged Guardian enemy makes an imme
             Cards.Add(new LotRCard()
             {
                 Title = "Curse of the Wild Men",
-                ImageType = ImageType.Jpg,
+                
                 Id = "E1286A47-B5AC-4F10-806E-8C2179AB3B7D",
                 CardType = Models.LotR.CardType.Treachery,
                 Quantity = 2,
@@ -548,7 +548,7 @@ Forced: After the players travel here, each engaged Guardian enemy makes an imme
             Cards.Add(new LotRCard()
             {
                 Title = "The Guardian's Fury",
-                ImageType = ImageType.Jpg,
+                
                 Id = "75C803E2-AA34-4D40-BD00-7A17DA344842",
                 CardType = Models.LotR.CardType.Treachery,
                 Quantity = 2,
@@ -562,7 +562,7 @@ Forced: After the players travel here, each engaged Guardian enemy makes an imme
             Cards.Add(new LotRCard()
             {
                 Title = "Wild Tenacity",
-                ImageType = ImageType.Jpg,
+                
                 Id = "3CF889F6-7603-48C0-8A98-2B6DD5EC3633",
                 CardType = Models.LotR.CardType.Treachery,
                 Quantity = 3,

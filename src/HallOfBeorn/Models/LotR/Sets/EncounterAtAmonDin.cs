@@ -17,7 +17,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cycle = "Against the Shadow";
 
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Pippin",
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a90021",
                 IsUnique = true,
@@ -36,7 +36,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Denethor",
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a90022",
                 IsUnique = true,
@@ -55,7 +55,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Lord of Morthond",
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a90023",
                 IsUnique = true,
@@ -70,7 +70,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Book of Eldacar",
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a90024",
                 IsUnique = true,
@@ -84,7 +84,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Florian_Stitz
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Gondorian Discipline",
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a90025",
                 CardType = CardType.Event,
@@ -98,7 +98,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Jake_Murray
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Minas Tirith Lampwright",
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a90026",
                 CardType = CardType.Ally,
@@ -115,7 +115,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Melanie_Maier
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Small Target",
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a90027",
                 CardType = CardType.Event,
@@ -127,7 +127,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Jake_Murray
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Ithilien Archer",
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a90028",
                 CardType = CardType.Ally,
@@ -145,7 +145,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Carmen_Cianelli
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Ithilien Pit",
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a90029",
                 CardType = CardType.Attachment,
@@ -163,7 +163,7 @@ Any character may choose attached enemy as the target of an attack.",
                 Artist = Artist.David_Gaillet
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Hobbit-sense",
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a90030",
                 CardType = CardType.Event,
@@ -177,7 +177,7 @@ Any character may choose attached enemy as the target of an attack.",
                 Artist = Artist.Blake_Henriksen
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Savagery of the Orcs",
                 StageNumber = 1,
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a93001",
@@ -197,7 +197,7 @@ If there are no villager tokens on Savagery of the Orcs, advance to the next sta
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.RavagingOrcs }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Protect the Villagers",
                 StageNumber = 2,
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a93002",
@@ -216,7 +216,7 @@ When the players defeat this stage, end the game. Compare the number of tokens o
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.RavagingOrcs }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Lord Alcaron",
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a93070",
                 IsUnique = true,
@@ -233,7 +233,7 @@ When the players defeat this stage, end the game. Compare the number of tokens o
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Rescued Villagers",
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a93068",
                 CardType = CardType.Objective,
@@ -244,7 +244,7 @@ When the players defeat this stage, end the game. Compare the number of tokens o
                 Artist = Artist.Jake_Murray
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Dead Villagers",
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a93069",
                 CardType = CardType.Objective,
@@ -255,7 +255,7 @@ When the players defeat this stage, end the game. Compare the number of tokens o
                 Artist = Artist.Greg_Opalinski
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Ghulat",
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a93071",
                 IsUnique = true,
@@ -280,7 +280,7 @@ While Ghulat is in play, the game cannot end.",
                 Artist = Artist.Diego_Gisbert_Llorens
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Marauding Orc",
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a93072",
                 CardType = CardType.Enemy,
@@ -298,7 +298,7 @@ While Ghulat is in play, the game cannot end.",
                 Artist = Artist.Ellyson_Ferrari_Lifante
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Orc Ravager",
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a93073",
                 CardType = CardType.Enemy,
@@ -316,7 +316,7 @@ While Ghulat is in play, the game cannot end.",
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Craven Eagle",
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a93074",
                 CardType = CardType.Enemy,
@@ -335,7 +335,7 @@ While Ghulat is in play, the game cannot end.",
                 Artist = Artist.Dean_Spencer
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Burning Farmhouse",
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a93075",
                 CardType = CardType.Location,
@@ -352,7 +352,7 @@ While Ghulat is in play, the game cannot end.",
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Gondorian Hamlet",
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a93076",
                 CardType = CardType.Location,
@@ -369,7 +369,7 @@ While Ghulat is in play, the game cannot end.",
                 Artist = Artist.Sabin_Boykinov
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Secluded Farmhouse",
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a93077",
                 CardType = CardType.Location,
@@ -386,7 +386,7 @@ While Ghulat is in play, the game cannot end.",
                 Artist = Artist.Sabin_Boykinov
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Burnt Homestead",
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a93078",
                 CardType = CardType.Treachery,
@@ -400,7 +400,7 @@ While Ghulat is in play, the game cannot end.",
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Trapped Inside",
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a93079",
                 CardType = CardType.Treachery,
@@ -413,7 +413,7 @@ While Ghulat is in play, the game cannot end.",
                 Artist = Artist.Jake_Murray
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Panicked!",
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a93080",
                 CardType = CardType.Treachery,

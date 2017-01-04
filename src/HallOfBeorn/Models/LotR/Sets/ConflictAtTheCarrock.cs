@@ -16,7 +16,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cycle = "Shadows of Mirkwood";
 
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Frodo Baggins",
                 Id = "51223bd0-ffd1-11df-a976-0801202c9001",
                 CardType = CardType.Hero,
@@ -35,7 +35,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.John_Stanko
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "A Frightened Beast",
                 Id = "51223bd0-ffd1-11df-a976-0801202c9002",
                 CardType = CardType.Treachery,
@@ -48,7 +47,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Against the Trolls",
                 StageNumber = 2,
                 Id = "51223bd0-ffd1-11df-a976-0801202c9003",
@@ -66,7 +64,6 @@ Players cannot defeat this stage if there are any Troll enemies in play.",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.JourneyAlongTheAnduin, EncounterSet.Wilderlands }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Bee Pastures",
                 Id = "51223bd0-ffd1-11df-a976-0801202c9005",
                 CardType = CardType.Location,
@@ -80,7 +77,6 @@ Players cannot defeat this stage if there are any Troll enemies in play.",
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Beorning Beekeeper",
                 Id = "51223bd0-ffd1-11df-a976-0801202c9006",
                 CardType = CardType.Ally,
@@ -98,7 +94,6 @@ Players cannot defeat this stage if there are any Troll enemies in play.",
                 Artist = Artist.John_Matson
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Born Aloft",
                 Id = "51223bd0-ffd1-11df-a976-0801202c9007",
                 CardType = CardType.Attachment,
@@ -112,7 +107,6 @@ Players cannot defeat this stage if there are any Troll enemies in play.",
                 Artist = Artist.Salvador_Trakal
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Dúnedain Warning",
                 Id = "51223bd0-ffd1-11df-a976-0801202c9008",
                 CardType = CardType.Attachment,
@@ -126,7 +120,6 @@ Players cannot defeat this stage if there are any Troll enemies in play.",
                 SecondArtist = Artist.Vicki_Pangestu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Éomund",
                 Id = "51223bd0-ffd1-11df-a976-0801202c9009",
                 CardType = CardType.Ally,
@@ -145,7 +138,6 @@ Players cannot defeat this stage if there are any Troll enemies in play.",
                 Artist = Artist.Katherine_Dinger
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "A Burning Brand",
                 Id = "51223bd0-ffd1-11df-a976-0801202c9010",
                 CardType = CardType.Attachment,
@@ -160,7 +152,7 @@ Players cannot defeat this stage if there are any Troll enemies in play.",
                 Artist = Artist.Toni_Justamante_Jacobs
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Grimbeorn the Old",
                 AlternateSlug = "Baby-Bjorn-CatC",
                 Id = "51223bd0-ffd1-11df-a976-0801202c9011",
@@ -185,7 +177,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 Artist = Artist.Mark_Winters
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Grimbeorn's Quest",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-0801202c9012",
@@ -202,7 +194,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.JourneyAlongTheAnduin, EncounterSet.Wilderlands }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Longbeard Map-Maker",
                 Id = "51223bd0-ffd1-11df-a976-0801202c9014",
                 CardType = CardType.Ally,
@@ -220,7 +212,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 Artist = Artist.Andrew_Silver
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Louis",
                 Id = "51223bd0-ffd1-11df-a976-0801202c9015",
                 CardType = CardType.Enemy,
@@ -238,7 +230,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 Artist = Artist.Brian_Valenzuela
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Morris",
                 Id = "51223bd0-ffd1-11df-a976-0801202c9016",
                 CardType = CardType.Enemy,
@@ -256,7 +248,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 Artist = Artist.Paul_Guzenko
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Muck Adder",
                 Id = "51223bd0-ffd1-11df-a976-0801202c9017",
                 CardType = CardType.Enemy,
@@ -275,7 +267,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 Artist = Artist.Joe_Wilson
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Nor am I a Stranger",
                 Id = "51223bd0-ffd1-11df-a976-0801202c9018",
                 CardType = CardType.Attachment,
@@ -289,7 +281,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Oak-wood Grove",
                 Id = "51223bd0-ffd1-11df-a976-0801202c9019",
                 CardType = CardType.Location,
@@ -303,7 +295,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "River Langflood",
                 Id = "51223bd0-ffd1-11df-a976-0801202c9020",
                 CardType = CardType.Location,
@@ -318,7 +310,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 Artist = Artist.Marco_Caradonna
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Roasted Slowly",
                 Id = "51223bd0-ffd1-11df-a976-0801202c9021",
                 CardType = CardType.Treachery,
@@ -331,7 +323,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 Artist = Artist.Diego_Gisbert_Llorens
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Rupert",
                 Id = "51223bd0-ffd1-11df-a976-0801202c9022",
                 CardType = CardType.Enemy,
@@ -349,7 +341,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 Artist = Artist.Andrew_Silver
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Sacked!",
                 Id = "51223bd0-ffd1-11df-a976-0801202c9023",
                 CardType = CardType.Treachery,
@@ -362,7 +354,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 Artist = Artist.Lorraine_Schleter
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Second Breakfast",
                 Id = "51223bd0-ffd1-11df-a976-0801202c9024",
                 CardType = CardType.Event,
@@ -375,7 +367,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Song of Wisdom",
                 Id = "51223bd0-ffd1-11df-a976-0801202c9025",
                 CardType = CardType.Attachment,
@@ -389,7 +381,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Stuart",
                 Id = "51223bd0-ffd1-11df-a976-0801202c9026",
                 CardType = CardType.Enemy,
@@ -407,7 +399,7 @@ Action: Spend 1 Leadership resource to place that resource on Grimbeorn the Old.
                 Artist = Artist.Paul_Guzenko
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Carrock",
                 Id = "51223bd0-ffd1-11df-a976-0801202c9027",
                 CardType = CardType.Location,

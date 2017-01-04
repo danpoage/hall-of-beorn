@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             {
                 Title = "Frodo Baggins",
                 IsUnique = true,
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Hero,
                 Sphere = Models.LotR.Sphere.Fellowship,
                 ThreatCost = 0,
@@ -375,7 +375,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTraits("Artifact.", "Item.", "Ring.")
                 .WithText("Setup: The first player claims The One ~Ring and attaches it to the Ring-bearer.\r\nAttached hero does not count against the hero limit. The first player gains control of attached hero.\r\nIf The One Ring leaves play, the players lose the game.")
                 .WithInfo(63, 1, Artist.Mike_Nash));
-            Cards.Add(LotRCard.Quest("The Taming of Sméagol", "", 10, 1, "The Passage of the Marshes", 6)
+            Cards.Add(LotRCard.Quest("The Taming of Sméagol", 1, "The Passage of the Marshes", 6)
                 .WithNormalizedTitle("The Taming of Smeagol")
                 .WithFlavor("Frodo and Sam left the Fellowship above the falls of Rauros and crossed the great river to climb the Emyn Muil upon the Eastern shore. After days of wandering through that maze of rocky crags, they have finally reached the edge of the Dead Marshes only to discover that Gollum is following them.")
                 .WithText("Setup: Put Gollum into play engaged with the first player. Each player searches the encounter deck for 1 location, reveals it, and adds it to the staging area. Shuffle the encounter deck.")
@@ -383,59 +383,59 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithOppositeText("The players cannot advance unless the first player controls Sméagol.\r\nForced: After a player declares any number of attackers against Gollum, discard the top card of the encounter deck. Gollum gets +X Defense for this attack, where X is the discarded card’s Threat.")
                 .WithIncludedEncounterSets(EncounterSet.Gollum, EncounterSet.MorgulNazgul)
                 .WithInfo(64, 1, Artist.Cristina_Vela));
-            Cards.Add(LotRCard.Quest("Across the Marshes", "", 10, 2, "The Passage of the Marshes", 12)
+            Cards.Add(LotRCard.Quest("Across the Marshes", 2, "The Passage of the Marshes", 12)
                 .WithFlavor("The Hobbits soon found that what had looked like one vast fen was really an endless network of pools, and soft mires, and winding half-strangled watercourses. Among these a cunning eye and foot could thread a wandering path. —The Two Towers")
                 .WithText("When Revealed: If the number of locations in the staging area is less than the number of players in the game, discard cards from the encounter deck until a location is discarded. Add the discarded location to the staging area.")
                 .WithOppositeText("Progress cannot be placed on locations in the staging area.\r\nThe players cannot advance unless the first player controls Sméagol and there are at least 4 locations in the victory display.\r\nForced: At the end of the staging step, if the number of locations in the staging area is less than the number of players in the game, reveal the top card of the encounter deck.")
                 .WithIncludedEncounterSets(EncounterSet.Gollum, EncounterSet.MorgulNazgul)
                 .WithInfo(65, 1, Artist.Yoann_Boissonnet));
-            Cards.Add(LotRCard.Quest("Don't Look at the Lights!", "", 10, 3, "The Passage of the Marshes", 24)
+            Cards.Add(LotRCard.Quest("Don't Look at the Lights!", 3, "The Passage of the Marshes", 24)
                 .WithFlavor("For a moment the water below him looked like some window, glazed with grimy glass, through which he was peering. Wrenching his hands out of the bog, he sprang back with a cry. \"There are dead things, dead faces in the water,\" he said with horror. —The Two Towers")
                 .WithText("When Revealed: Each player searches the encounter deck and discard pile for an Undeadenemy and puts it into play engaged with him. Shuffle all locations in the victory display into the encounter deck.")
                 .WithOppositeFlavor("Gollum laughed. \"The Dead Marshes, yes, yes: that is their names,\" he cackled. \"You should not look in when the candles are lit.\" —The Two Towers")
                 .WithOppositeText("While any player is engaged with an Undead enemy, progress cannot be placed on this stage.\r\nThe players cannot defeat this stage unless the first player controls Sméagol. If the players defeat this stage, they win the game.")
                 .WithIncludedEncounterSets(EncounterSet.Gollum, EncounterSet.MorgulNazgul)
                 .WithInfo(66, 1, Artist.Cristina_Vela));
-            Cards.Add(LotRCard.Campaign("The Passage of the Marshes", "", 10, "The Passage of the Marshes", "The Lord of the Rings - Part 10")
+            Cards.Add(LotRCard.Campaign("The Passage of the Marshes", "The Passage of the Marshes", "The Lord of the Rings - Part 10")
                 .WithText("You are playing campaign mode.\r\nSetup: Each player may change hero cards he controls without incurring the +1 threat penalty. Each player shuffles 1 copy of The Searching Eye into his deck. Remove each burden with the following burden set icons from the encounter deck and each player's deck: Helm's Deep, The Road to Isengard")
                 .WithFlavor("\"It's that Gollum! Snakes and adders! And to think that I thought that we’d puzzle him with our bit of a climb! Look at him! Like a nasty crawling spider on a wall.\" —Sam Gamgee, The Two Towers")
                 .WithOppositeText("Resolution: Each player must choose: either take a permanent +2 starting threat penalty, or earn 1 copy of The Searching Eye. Record each player's choice in the campaign log.")
                 .WithOppositeFlavor("The marshes were at an end, dying away into dead peats and wide flats of dry cracked mud. The land ahead rose in long shallow slopes, barren and pitiless, towards the desert that lay at Sauron's gate.\r\n-The Two Towers")
                 .WithErrata()
                 .WithInfo(67, 1, Artist.Cristina_Vela));
-            Cards.Add(LotRCard.Quest("Ambush the Men of Harad", "", 11, 1, "Journey to the Cross-roads", 20)
+            Cards.Add(LotRCard.Quest("Ambush the Men of Harad", 1, "Journey to the Cross-roads", 20)
                 .WithFlavor("\"These cursed Southrons come now marching up the ancient roads to swell the hosts of the Dark Tower. Yea, up the very roads that craft of Gondor made.\" —Mablung, The Two Towers")
                 .WithText("Setup: Add The Black Gate and The Cross-roads to the staging area. Shuffle the Harad encounter set and place it facedown under The Cross-roads. Each player, except for the first player, searches the encounter deck for a different non-unique location and adds it to the staging area. Shuffle the encounter deck.")
                 .WithOppositeFlavor("\"The road may pass, but they shall not!\"\r\n—Mablung, The Two Towers")
                 .WithOppositeText("Forced: At the beginning of the quest phase, reveal the top facedown card from under The Cross-roads and add it to the staging area.\r\nThe players cannot defeat this stage while The Cross-roads is in play. When The Cross-roads is explored, the players win the game.")
                 .WithIncludedEncounterSets(EncounterSet.MenOfHarad)
                 .WithInfo(68, 1, Artist.Julepe));
-            Cards.Add(LotRCard.Campaign("Journey to the Cross-roads", "", 11, "Journey to the Cross-roads", "The Lord of the Rings - Part 11")
+            Cards.Add(LotRCard.Campaign("Journey to the Cross-roads", "Journey to the Cross-roads", "The Lord of the Rings - Part 11")
                 .WithText("You are playing campaign mode.\r\nSetup: Each player must choose: either add 1 resource to each of his heroes’ pools, or shuffle 1 copy of Brace of Coneys into his deck. Remove each burden with the following burden set icons from the encounter deck and each player's deck: Helm's Deep, The Road to Isengard")
                 .WithFlavor("So they passed into the northern marches of that land that Men once called Ithilien, a fair country of climbing woods and swift-falling streams. —The Two Towers")
                 .WithOppositeText("Resolution: Each player who chose to shuffle a copy of Brace of Coneys into his deck during setup has earned that boon. Add each earned copy to the campaign pool. Record the name and quantity of each enemy underneath The Black Gate in the notes section of the campaign log.")
                 .WithOppositeFlavor("\"Here is the last parting of our ways,\" said Faramir.\r\n\"If you take my counsel, you will not turn eastward yet. Go straight on, for thus you will have the cover of the woodland for many miles.\" -The Two Towers")
                 .WithInfo(69, 1, Artist.Julepe));
-            Cards.Add(LotRCard.Quest("The Stairs of Cirith Ungol", "", 12, 1, "Shelob's Lair", 255)
+            Cards.Add(LotRCard.Quest("The Stairs of Cirith Ungol", 1, "Shelob's Lair", 255)
                 .WithFlavor("Sméagol has led Frodo and Sam to the Morgul Vale, where he promises to show them a secret way over the Mountains of Shadow and into the land of Mordor, but Sam fears that Gollum may be leading them into a trap...")
                 .WithText("Setup: Set Cleft of Cirith Ungol, Shelob and The Great ~Spider encounter set aside, out of play. Put Sméagol into play under the first player's control. Make ~Morgul Vale the active location. Add Sméagol's Secret Way to the staging area. Shuffle the encounter deck.")
                 .WithOppositeText("Progress cannot be placed on Underground locations.\r\nResponse: After Sméagol's Secret Way is explored, discard 3 random cards from each player's hand to discard each Nazgûl enemy in the staging area.\r\nForced: At the end of the quest phase, if Sméagol's Secret Way is in the victory display, advance to stage 2A.")
                 .WithIncludedEncounterSets(EncounterSet.Gollum, EncounterSet.MorgulNazgul, EncounterSet.TheGreatSpider)
                 .WithInfo(70, 1, Artist.Chris_Rahn));
-            Cards.Add(LotRCard.Quest("The Spider's Pass", "", 12, 2, "Shelob's Lair", 16)
+            Cards.Add(LotRCard.Quest("The Spider's Pass", 2, "Shelob's Lair", 16)
                 .WithFlavor("Presently they were under the shadow, and there in the midst of it they saw the opening of a cave. \"This is the way in,\" said Gollum softly. \"This is the entrance to the tunnel.\" He did not speak its name: Torech Ungol, Shelob’s Lair. —The Two Towers")
                 .WithText("When Revealed: Add Shelob to the staging area and shuffle all cards from The Great ~Spider encounter set and the encounter discard pile into the encounter deck.")
                 .WithOppositeFlavor("They had not gone more than a few yards when from behind them came a sound, startling and horrible in the heavy padded silence: a gurgling, bubbling noise, and a long venomous hiss. —The Two Towers")
                 .WithOppositeText("Shelob cannot leave the staging area and Sméagol cannot attack or defend.\r\nEach player cannot play, or put into play, more than 1 ally each round.\r\nNo more than 4 progress can be placed on this stage each round.")
                 .WithIncludedEncounterSets(EncounterSet.Gollum, EncounterSet.MorgulNazgul, EncounterSet.TheGreatSpider)
                 .WithInfo(71, 1, Artist.Dimitri_Bielak));
-            Cards.Add(LotRCard.Quest("Gollum's Betrayal", "", 12, 3, "Shelob's Lair", 8)
+            Cards.Add(LotRCard.Quest("Gollum's Betrayal", 3, "Shelob's Lair", 8)
                 .WithFlavor("\"Got him!\" hissed Gollum in his ear. \"At last, my precious, we've got him, yet, the nassty hobbit. We takes this one. She'll get the other. O yes, Selob will get him, not Sméagol: he promised; he won't hurt Master at all. But he's got you, you nassty filthy little sneak!\" He spat on Sam's neck. -The Two Towers")
                 .WithText("When Revealed: Add Cleft of Cirith Ungol to the staging area. Flip Sméagol to Gollum and heal all damage from Shelob. Each player places 1 resource on Shelob.")
                 .WithOppositeText("If Gollum is defeated, add him to the victory display. (Do not flip him over.)\r\nWhile Shelob has at least 1 resource on her, she gains: \"Forced: When Shelob is dealt any amount of damage, cancel that damage and discard 1 resource from Shelob instead.\"\r\nThe players cannot defeat this stage unless both Shelob and Gollum are in the victory display. If the players defeat this stage, they win the game.")
                 .WithIncludedEncounterSets(EncounterSet.Gollum, EncounterSet.MorgulNazgul, EncounterSet.TheGreatSpider)
                 .WithInfo(72, 1, Artist.Nicholas_Gregory));
-            Cards.Add(LotRCard.Campaign("Shelob's Lair", "", 12, "Shelob's Lair", "The Lord of the Rings - Part 12")
+            Cards.Add(LotRCard.Campaign("Shelob's Lair", "Shelob's Lair", "The Lord of the Rings - Part 12")
                 .WithText("You are playing campaign mode.\r\nSetup: Attach A Heavy Burden to the Ring-bearer. Remove each burden with the following burden set icons from the encounter deck and each player’s deck: Helm’s Deep, The Road to Isengard")
                 .WithFlavor("\"There is another way. O yes indeed there is. Another way, darker, more difficult to find, more secret. But Sméagolnknows it. Let Sméagol show you!\" —The Two Towers")
                 .WithOppositeText("Resolution: Add a Heavy Burden to the campaign pool. The players have earned that burden.")

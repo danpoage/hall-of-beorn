@@ -16,7 +16,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cycle = "Dwarrowdelf";
 
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Abandoned Mine",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9001",
                 CardType = CardType.Location,
@@ -33,7 +33,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Paolo_Puggioni
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Cave Spider",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9002",
                 CardType = CardType.Enemy,
@@ -50,7 +50,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Allison_Theus
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Continuing Eastward",
                 StageNumber = 2,
                 Id = "51223bd0-ffd1-11df-a976-0801211c9003",
@@ -66,7 +66,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DeepsOfMoria, EncounterSet.TwistsAndTurns }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Durin's Greaves",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9005",
                 CardType = CardType.Objective,
@@ -82,7 +82,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Dwarven Forge",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9006",
                 CardType = CardType.Location,
@@ -99,7 +99,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Erebor Battle Master",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9007",
                 CardType = CardType.Ally,
@@ -117,7 +117,7 @@ Attached hero gets +1 Defense.",
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Erestor",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9008",
                 CardType = CardType.Ally,
@@ -136,7 +136,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Ever My Heart Rises",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9009",
                 CardType = CardType.Attachment,
@@ -151,7 +151,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Carolina_Eade
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Fatigue",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9010",
                 CardType = CardType.Treachery,
@@ -163,7 +163,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Charles_Urbach
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Foul Air",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9011",
                 CardType = CardType.Treachery,
@@ -177,7 +177,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Jasper_Sandner
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Fresh Tracks",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9012",
                 CardType = CardType.Event,
@@ -189,7 +189,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Garret_DeChellis
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Gathering Ground",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9013",
                 CardType = CardType.Treachery,
@@ -202,7 +202,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Jason_Juta
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Goblin Sneak",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9014",
                 CardType = CardType.Enemy,
@@ -221,7 +221,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Timo_Karhula
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Goblin Warlord",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9015",
                 CardType = CardType.Enemy,
@@ -259,7 +259,6 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Journey in the Black Pit",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-0801211c9017",
@@ -267,7 +266,6 @@ Attached hero gets +1 Defense.",
                 EncounterSet = "The Long Dark",
                 Quantity = 1,
                 QuestPoints = 13,
-                Setup = "t",
                 Text = "Setup: The first player attaches ~Cave Torch to a hero of his choice.",
                 OppositeText = "When Revealed: Discard cards from the top of the encounter deck until you discard X locations, where X is one less than the number of players in the game (minimum 1). Add those locations to the staging area, and shuffle the other discarded cards back into the encounter deck.\r\nEach location gets +1 threat. If the players quest unsuccessfully, trigger all \"Lost:\" effects in play.",
                 FlavorText = "Your party is scouting the Mines of Moria, searching for signs of Orcs. Dark tunnels and twisting passages spread out in all directions, a labyrinthine maze that you could wander in forever if you take the wrong path.",
@@ -276,7 +274,7 @@ Attached hero gets +1 Defense.",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DeepsOfMoria, EncounterSet.TwistsAndTurns }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Love of Tales",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9019",
                 CardType = CardType.Attachment,
@@ -291,7 +289,7 @@ Attached hero gets +1 Defense.",
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Out of Sight",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9020",
                 CardType = CardType.Event,
@@ -305,7 +303,7 @@ Attached hero gets +1 Defense.",
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Ring Mail",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9021",
                 CardType = CardType.Attachment,
@@ -323,7 +321,7 @@ Attached hero gets +1 Defense.",
             Cards.Add(new LotRCard() {
                 Title = "Rock Adder",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9022",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Enemy,
                 EncounterSet = "The Long Dark",
                 Traits = new List<string>() { "Creature." },
@@ -339,7 +337,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Allison_Theus
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Silent Caverns",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9023",
                 CardType = CardType.Location,
@@ -355,7 +353,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Twisting Passage",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9024",
                 CardType = CardType.Location,
@@ -372,7 +370,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Vast and Intricate",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9025",
                 CardType = CardType.Treachery,
@@ -386,7 +384,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Eric_Braddock
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Warden of Healing",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9026",
                 CardType = CardType.Ally,
@@ -404,7 +402,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Paolo_Puggioni
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Word of Command",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9027",
                 CardType = CardType.Event,

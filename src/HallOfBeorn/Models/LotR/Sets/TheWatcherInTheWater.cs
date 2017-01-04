@@ -16,7 +16,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cycle = "Dwarrowdelf";
 
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Aragorn",
                 Id = "51223bd0-ffd1-11df-a976-0801210c9001",
                 CardType = CardType.Hero,
@@ -54,7 +54,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Disturbed Waters",
                 Id = "51223bd0-ffd1-11df-a976-0801210c9003",
                 CardType = CardType.Treachery,
@@ -66,7 +66,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Doors of Durin",
                 Id = "51223bd0-ffd1-11df-a976-0801210c9004",
                 CardType = CardType.Location,
@@ -83,7 +83,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Elrond's Counsel",
                 Id = "51223bd0-ffd1-11df-a976-0801210c9005",
                 CardType = CardType.Event,
@@ -96,7 +96,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Anthony_Palumbo
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Grasping Tentacle",
                 Id = "51223bd0-ffd1-11df-a976-0801210c9006",
                 CardType = CardType.Enemy,
@@ -115,7 +115,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Mark_Tarrisse
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Grave Cairn",
                 Id = "51223bd0-ffd1-11df-a976-0801210c9007",
                 CardType = CardType.Event,
@@ -128,7 +128,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Ill Purpose",
                 Id = "51223bd0-ffd1-11df-a976-0801210c9008",
                 CardType = CardType.Treachery,
@@ -142,7 +142,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Legacy of Durin",
                 Id = "51223bd0-ffd1-11df-a976-0801210c9009",
                 CardType = CardType.Attachment,
@@ -156,7 +156,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Makeshift Passage",
                 Id = "51223bd0-ffd1-11df-a976-0801210c9010",
                 CardType = CardType.Location,
@@ -172,7 +172,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Perilous Swamp",
                 Id = "51223bd0-ffd1-11df-a976-0801210c9011",
                 CardType = CardType.Location,
@@ -188,7 +188,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Resourceful",
                 Id = "51223bd0-ffd1-11df-a976-0801210c9012",
                 CardType = CardType.Attachment,
@@ -201,7 +201,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Rivendell Bow",
                 Id = "51223bd0-ffd1-11df-a976-0801210c9013",
                 CardType = CardType.Attachment,
@@ -215,7 +215,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Short Cut",
                 Id = "51223bd0-ffd1-11df-a976-0801210c9014",
                 CardType = CardType.Event,
@@ -228,7 +228,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Igor_Kieryluk
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Stagnant Creek",
                 Id = "51223bd0-ffd1-11df-a976-0801210c9015",
                 CardType = CardType.Location,
@@ -244,7 +244,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Stair Falls",
                 Id = "51223bd0-ffd1-11df-a976-0801210c9016",
                 CardType = CardType.Location,
@@ -260,7 +260,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Lin_Bo
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Striking Tentacle",
                 Id = "51223bd0-ffd1-11df-a976-0801210c9017",
                 CardType = CardType.Enemy,
@@ -279,7 +279,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Sword that was Broken",
                 Id = "51223bd0-ffd1-11df-a976-0801210c9018",
                 CardType = CardType.Attachment,
@@ -294,7 +294,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Seething Lake",
                 StageNumber = 2,
                 Id = "51223bd0-ffd1-11df-a976-0801210c9019",
@@ -311,7 +311,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.MistyMountains }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Watcher",
                 Id = "51223bd0-ffd1-11df-a976-0801210c9021",
                 CardType = CardType.Enemy,
@@ -332,7 +332,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Matthew_Starbuck
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Thrashing Tentacle",
                 Id = "51223bd0-ffd1-11df-a976-0801210c9022",
                 CardType = CardType.Enemy,
@@ -351,7 +351,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "To the West-door",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-0801210c9023",
@@ -359,7 +359,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "The Watcher in the Water",
                 Quantity = 1,
                 QuestPoints = 13,
-                Setup = "tt",
                 Text = "Setup: Remove The Watcher and Doors of Durin from the encounter deck and set them aside, out of play.",
                 FlavorText = "Elrond has asked you to scout the Mines of Moria on your return to Lorien, hoping to discover if it is the source of increased Orc activity along the Misty Mountains.",
                 OppositeText = "When Revealed: Reveal cards from the encounter deck and add them to the staging area until there is at least X threat in the staging area. X is twice the number of players in the game.",
@@ -371,7 +370,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.MistyMountains }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Watcher of the Bruinen",
                 Id = "51223bd0-ffd1-11df-a976-0801210c9025",
                 CardType = CardType.Ally,

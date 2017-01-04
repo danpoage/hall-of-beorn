@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             {
                 Title = "Into the Pit Nightmare",
                 HasSecondImage = true,
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "97E64088-69B6-4A71-87B5-7F11FBAD94E3",
                 CardType = CardType.Nightmare_Setup,
                 Text =
@@ -54,7 +54,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Goblin Ambush",
-                ImageType = Models.ImageType.Jpg,
+                
                 HasSecondImage = true,
                 Id = "F2F24396-EBA3-45D6-B7BD-01FAF787F13C",
                 CardType = CardType.Quest,
@@ -77,7 +77,7 @@ Progress cannot be placed on ~Goblin Ambush expect by the above effect.",
             Cards.Add(new LotRCard()
             {
                 Title = "Patrol Sentry",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "0BDB88B6-B3D2-4C7D-9498-B3A3B8A4DA6E",
                 CardType = CardType.Enemy,
                 EngagementCost = 20,
@@ -96,7 +96,7 @@ Progress cannot be placed on ~Goblin Ambush expect by the above effect.",
             Cards.Add(new LotRCard()
             {
                 Title = "Goblin Lurker",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "31A590D5-B68B-4F6B-96AE-E2042CA1B0A0",
                 CardType = CardType.Enemy,
                 EngagementCost = 50,
@@ -115,7 +115,7 @@ Progress cannot be placed on ~Goblin Ambush expect by the above effect.",
             Cards.Add(new LotRCard()
             {
                 Title = "Shadow Dweller",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "19EA237D-1722-4086-A72A-3795AEB5E651",
                 CardType = CardType.Enemy,
                 EngagementCost = 0,
@@ -135,7 +135,7 @@ Progress cannot be placed on ~Goblin Ambush expect by the above effect.",
             Cards.Add(new LotRCard()
             {
                 Title = "Twisting Shadows",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "580CB1FA-38F7-4A24-9007-9F45BDE823DA",
                 CardType = CardType.Location,
                 Threat = 0,
@@ -153,7 +153,7 @@ Progress cannot be placed on ~Goblin Ambush expect by the above effect.",
             Cards.Add(new LotRCard()
             {
                 Title = "Narrow Fissure",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "291F486B-DC64-4AAE-B479-F7730786E2EA",
                 CardType = CardType.Location,
                 Threat = 3,
@@ -170,7 +170,7 @@ Progress cannot be placed on ~Goblin Ambush expect by the above effect.",
             Cards.Add(new LotRCard()
             {
                 Title = "Shadow-fall",
-                ImageType = ImageType.Jpg,
+                
                 Id = "58254459-502F-4C22-B1CD-BA3FA15D4C6B",
                 CardType = CardType.Treachery,
                 Keywords = new List<string> { "Surge." },

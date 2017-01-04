@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             {
                 Title = "Dungeons Deep and Caverns Dim Nightmare",
                 HasSecondImage = true,
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "128B10F6-8EF0-4AD2-A880-D43B175298D0",
                 CardType = CardType.Nightmare_Setup,
                 Text =
@@ -52,7 +52,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "The Lower Gate",
-                ImageType = ImageType.Jpg,
+                
                 Id = "5EF7B3C4-C8AB-4077-B917-CAA404D1FA8A",
                 IsUnique = true,
                 CardType = CardType.Location,
@@ -74,7 +74,7 @@ Goblin enemies get +1 Defense.",
             Cards.Add(new LotRCard()
             {
                 Title = "Wicked Wolf",
-                ImageType = ImageType.Jpg,
+                
                 Id = "91BF1FD0-9F7F-4208-B011-93540916584F",
                 CardType = CardType.Enemy,
                 EngagementCost = 33,
@@ -93,7 +93,7 @@ Goblin enemies get +1 Defense.",
             Cards.Add(new LotRCard()
             {
                 Title = "Lower Gate Sentries",
-                ImageType = ImageType.Jpg,
+                
                 Id = "9652CBB6-267B-4F4D-8B45-A15D914683B2",
                 CardType = CardType.Enemy,
                 EngagementCost = 15,
@@ -112,7 +112,7 @@ Goblin enemies get +1 Defense.",
             Cards.Add(new LotRCard()
             {
                 Title = "Pine Slopes",
-                ImageType = ImageType.Jpg,
+                
                 Id = "85EF235F-5142-4E7B-83B0-ABC1DFD0046A",
                 CardType = CardType.Location,
                 Threat = 3,
@@ -128,7 +128,7 @@ Goblin enemies get +1 Defense.",
             Cards.Add(new LotRCard()
             {
                 Title = "Fallen Stones",
-                ImageType = ImageType.Jpg,
+                
                 Id = "A2C71165-CE9A-4540-8E1F-8975D8E9B586",
                 CardType = CardType.Location,
                 Threat = 4,
@@ -147,7 +147,7 @@ Riddle: The first player names a card title, shuffles his deck, and discards the
             Cards.Add(new LotRCard()
             {
                 Title = "Where Isss It?",
-                ImageType = ImageType.Jpg,
+                
                 Id = "BB1ED846-C9D3-4313-82F6-CE194FC84F81",
                 CardType = CardType.Treachery,
                 Text = 
@@ -162,7 +162,7 @@ Riddle: The first player names a sphere, a cost, and a card type, shuffles his d
             Cards.Add(new LotRCard()
             {
                 Title = "We Hates It!",
-                ImageType = ImageType.Jpg,
+                
                 Id = "AA3C2832-695A-43CE-A768-B784D539169F",
                 CardType = CardType.Treachery,
                 Text = "When Revealed: Attach We Hates Is! to Gollum. (Counts as a Condition attachment with the text: \"If the players are on stage 3, Gollum gets +2 Attack.\")\r\n\r\nRiddle: The first player names a Trait, shuffles his deck, and discards the top card. For each card that has at least 1 matching Trait, place 1 progress on stage 2.",

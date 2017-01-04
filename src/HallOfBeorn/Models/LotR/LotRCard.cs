@@ -432,15 +432,10 @@ namespace HallOfBeorn.Models.LotR
 
         #endregion
 
-        //public string ShortSlug { get; set; }
-        //public string OctgnSlug { get; set; }
-        public int ScenarioNumber { get; set; }
+        //public int ScenarioNumber { private get; set; }
 
         public uint StageNumber { get; set; }
         public char StageLetter { get; set; }
-        
-        public string ImageName { get; set; }
-        public ImageType ImageType { get; set; }
 
         public CardSet CardSet { get; set; }
 
@@ -506,7 +501,6 @@ namespace HallOfBeorn.Models.LotR
         public bool? PassValue { get; set; }
         public byte? EasyModeQuantity { get; set; }
         public byte? NightmareModeQuantity { get; set; }
-        public string Setup { get; set; }
 
         public bool SlugIncludesOppositeTitle { get; set; }
         public bool SlugIncludesType { get; set; }
@@ -539,7 +533,7 @@ namespace HallOfBeorn.Models.LotR
 
         protected override string getSlug()
         {
-            var title = !string.IsNullOrEmpty(NormalizedTitle) ?  NormalizedTitle.ToUrlSafeString() : Title.ToUrlSafeString();
+            var title = !string.IsNullOrEmpty(NormalizedTitle) ? NormalizedTitle.ToUrlSafeString() : Title.ToUrlSafeString();
             var subtitle = SlugIncludesOppositeTitle ? string.Format("{0}-", OppositeTitle.ToUrlSafeString()) : string.Empty;
             var suffix = !string.IsNullOrEmpty(SlugSuffix) ? string.Format("{0}-", SlugSuffix) : string.Empty;
             var type = SlugIncludesType ? string.Format("{0}-", CardType.ToString().ToUrlSafeString()) : string.Empty;
@@ -768,12 +762,12 @@ namespace HallOfBeorn.Models.LotR
             };
         }
 
-        public static LotRCard Quest(string title, string id, int scenarioNumber, uint stageNumber, string encounterSet, byte? questPoints)
+        public static LotRCard Quest(string title, uint stageNumber, string encounterSet, byte? questPoints)
         {
-            return Quest(title, id, scenarioNumber, stageNumber, encounterSet, questPoints, 'A');
+            return Quest(title, stageNumber, encounterSet, questPoints, 'A');
         }
 
-        public static LotRCard Quest(string title, string id, int scenarioNumber, uint stageNumber, string encounterSet, byte? questPoints, char stageLetter)
+        public static LotRCard Quest(string title, uint stageNumber, string encounterSet, byte? questPoints, char stageLetter)
         {
             return new LotRCard()
             {
@@ -781,17 +775,15 @@ namespace HallOfBeorn.Models.LotR
                 Title = title,
                 NormalizedTitle = title.NormalizeCaseSensitiveString(),
                 HasSecondImage = true,
-                Id = id,
                 EncounterSet = encounterSet,
                 QuestPoints = questPoints,
                 IsVariableQuestPoints = questPoints == (byte)254,
-                ScenarioNumber = scenarioNumber,
                 StageNumber = stageNumber,
                 StageLetter = stageLetter
             };
         }
 
-        public static LotRCard Campaign(string title, string id, int scenarioNumber, string encounterSet, string oppositeTitle)
+        public static LotRCard Campaign(string title, string encounterSet, string oppositeTitle)
         {
             return new LotRCard()
             {
@@ -799,9 +791,7 @@ namespace HallOfBeorn.Models.LotR
                 Title = title,
                 NormalizedTitle = title.NormalizeCaseSensitiveString(),
                 HasSecondImage = true,
-                Id = id,
                 EncounterSet = encounterSet,
-                ScenarioNumber = scenarioNumber,
                 SlugIncludesType = true,
                 OppositeTitle = oppositeTitle
             };

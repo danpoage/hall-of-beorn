@@ -16,7 +16,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             SetType = Models.SetType.Deluxe_Expansion;
 
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Alcaron's Scroll",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9001",
                 CardType = CardType.Objective,
@@ -29,7 +29,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "A Watchful Peace",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9002",
                 CardType = CardType.Event,
@@ -42,7 +42,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Battering Ram",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9003",
                 CardType = CardType.Enemy,
@@ -62,7 +62,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Lin_Bo
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Behind Strong Walls",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9004",
                 CardType = CardType.Event,
@@ -75,7 +75,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Matt_Smith
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Beregond",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9005",
                 CardType = CardType.Hero,
@@ -96,7 +96,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Blocking Wargs",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9006",
                 CardType = CardType.Treachery,
@@ -111,7 +111,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Blood of Númenor",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9007",
                 CardType = CardType.Attachment,
@@ -125,7 +125,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Boromir",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9008",
                 CardType = CardType.Hero,
@@ -144,7 +144,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Celador",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9009",
                 CardType = CardType.Objective,
@@ -161,7 +161,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Citadel Custodian",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9010",
                 CardType = CardType.Ally,
@@ -178,7 +178,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Lorraine_Schleter
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "City Street",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9011",
                 CardType = CardType.Location,
@@ -194,7 +194,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Stu_Barnes
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Collateral Damage",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9012",
                 CardType = CardType.Treachery,
@@ -206,7 +206,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Damrod",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9013",
                 CardType = CardType.Ally,
@@ -224,7 +224,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Defender of Rammas",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9014",
                 CardType = CardType.Ally,
@@ -241,7 +241,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Marcia_George_Bogdan
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Envoy of Pelargir",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9015",
                 CardType = CardType.Ally,
@@ -258,7 +258,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Errand-rider",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9016",
                 CardType = CardType.Ally,
@@ -276,7 +276,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Anna_Steinbauer
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Forest Bat",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9017",
                 CardType = CardType.Enemy,
@@ -294,7 +294,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Aurelien_Hubert
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Haradrim Elite",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9018",
                 CardType = CardType.Enemy,
@@ -312,7 +312,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Adam_Lane
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Harbor Storehouse",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9019",
                 CardType = CardType.Location,
@@ -327,7 +327,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Titus_Lunter
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Harbor Thug",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9020",
                 CardType = CardType.Enemy,
@@ -345,14 +345,12 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Ellyson_Ferrari_Lifante
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "The Leaping Fish",
                 SlugIncludesType = true,
                 StageNumber = 1,
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9021",
                 CardType = CardType.Quest,
-                ScenarioNumber = 1,
-                Setup = "lt",
+                
                 Quantity = 1,
                 QuestPoints = 6,
                 Keywords = new List<string> { "Battle." },
@@ -366,12 +364,12 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.StreetsOfGondor, EncounterSet.Brigands }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Fighting in the Streets",
                 StageNumber = 2,
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9023",
                 CardType = CardType.Quest,
-                ScenarioNumber = 1,
+                
                 Quantity = 1,
                 QuestPoints = 13,
                 EncounterSet = "Peril in Pelargir",
@@ -383,12 +381,12 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.StreetsOfGondor, EncounterSet.Brigands }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Escape to the Quays",
                 StageNumber = 3,
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9025",
                 CardType = CardType.Quest,
-                ScenarioNumber = 1,
+                
                 Quantity = 1,
                 QuestPoints = 15,
                 Text = "When Revealed: Each player searches the encounter deck and discard pile for 1 enemy and adds it to the staging area.",
@@ -405,13 +403,11 @@ The players cannot defeat this stage unless Alcaron's ~Scroll is attached to a h
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.StreetsOfGondor, EncounterSet.Brigands }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Ambush in Ithilien",
                 StageNumber = 1,
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9027",
                 CardType = CardType.Quest,
-                ScenarioNumber = 2,
-                Setup = "sl",
+                
                 Quantity = 1,
                 QuestPoints = 15,
                 Keywords = new List<string> { "Battle." },
@@ -425,12 +421,12 @@ The players cannot defeat this stage unless Alcaron's ~Scroll is attached to a h
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.BroodingForest, EncounterSet.CreaturesOfTheForest, EncounterSet.Southrons }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Southron Counter-attack",
                 StageNumber = 2,
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9029",
                 CardType = CardType.Quest,
-                ScenarioNumber = 2,
+                
                 Quantity = 1,
                 QuestPoints = 9,
                 EncounterSet = "Into Ithilien",
@@ -445,12 +441,12 @@ After this stage is completed advance to stage 4A (bypassing stage 3).",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.BroodingForest, EncounterSet.CreaturesOfTheForest, EncounterSet.Southrons }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Hidden Way",
                 StageNumber = 3,
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9031",
                 CardType = CardType.Quest,
-                ScenarioNumber = 2,
+                
                 Quantity = 1,
                 QuestPoints = 12,
                 EncounterSet = "Into Ithilien",
@@ -463,12 +459,12 @@ Enemies do not make engagement checks and cannot be optionally engaged.",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.BroodingForest, EncounterSet.CreaturesOfTheForest, EncounterSet.Southrons }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Approaching Cair Andros",
                 StageNumber = 4,
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9033",
                 CardType = CardType.Quest,
-                ScenarioNumber = 2,
+                
                 Quantity = 1,
                 QuestPoints = 15,
                 EncounterSet = "Into Ithilien",
@@ -484,13 +480,11 @@ If the players defeat this stage, they have won the game.",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.BroodingForest, EncounterSet.CreaturesOfTheForest, EncounterSet.Southrons }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "The Defense",
                 StageNumber = 1,
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9035",
                 CardType = CardType.Quest,
-                ScenarioNumber = 3,
-                Setup = "sss",
+                
                 Quantity = 1,
                 QuestPoints = 9,
                 Keywords = new List<string> { "Siege." },
@@ -504,12 +498,12 @@ If the players defeat this stage, they have won the game.",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Southrons, EncounterSet.RavagingOrcs, EncounterSet.MordorElite }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Reinforcing the Banks",
                 StageNumber = 2,
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9037",
                 CardType = CardType.Quest,
-                ScenarioNumber = 3,
+                
                 Quantity = 1,
                 QuestPoints = 9,
                 EncounterSet = "The Siege of Cair Andros",
@@ -520,12 +514,12 @@ If the players defeat this stage, they have won the game.",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Southrons, EncounterSet.RavagingOrcs, EncounterSet.MordorElite }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Breakthrough at the Approach",
                 StageNumber = 3,
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9039",
                 CardType = CardType.Quest,
-                ScenarioNumber = 3,
+                
                 Quantity = 1,
                 QuestPoints = 7,
                 EncounterSet = "The Siege of Cair Andros",
@@ -537,12 +531,12 @@ If the players defeat this stage, they have won the game.",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Southrons, EncounterSet.RavagingOrcs, EncounterSet.MordorElite }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Breakthrough at the Citadel",
                 StageNumber = 4,
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9041",
                 CardType = CardType.Quest,
-                ScenarioNumber = 3,
+                
                 Quantity = 1,
                 QuestPoints = 5,
                 EncounterSet = "The Siege of Cair Andros",
@@ -554,12 +548,12 @@ If the players defeat this stage, they have won the game.",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Southrons, EncounterSet.RavagingOrcs, EncounterSet.MordorElite }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Last Battle",
                 StageNumber = 5,
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9043",
                 CardType = CardType.Quest,
-                ScenarioNumber = 3,
+                
                 Quantity = 1,
                 QuestPoints = 15,
                 EncounterSet = "The Siege of Cair Andros",
@@ -575,7 +569,7 @@ If the players defeat this stage, they have won the game.",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Southrons, EncounterSet.RavagingOrcs, EncounterSet.MordorElite }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Hunter of Lamedon",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9045",
                 CardType = CardType.Ally,
@@ -593,7 +587,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Lorraine_Schleter
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Ithilien Guardian",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9046",
                 CardType = CardType.Objective,
@@ -610,7 +604,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Ithilien Road",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9047",
                 CardType = CardType.Location,
@@ -625,7 +619,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Ithilien Tracker",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9048",
                 CardType = CardType.Ally,
@@ -643,7 +637,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Lieutenant of Mordor",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9049",
                 CardType = CardType.Enemy,
@@ -661,7 +655,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Jim_Pavelec
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Light the Beacons",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9050",
                 CardType = CardType.Event,
@@ -674,7 +668,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Titus_Lunter
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Local Trouble",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9051",
                 CardType = CardType.Treachery,
@@ -687,7 +681,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Ryan_Barger
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Lossarnach Bandit",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9052",
                 CardType = CardType.Enemy,
@@ -704,7 +698,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Dan_Masso
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Lost Companion",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9053",
                 CardType = CardType.Treachery,
@@ -717,7 +711,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Lost in the City",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9054",
                 CardType = CardType.Treachery,
@@ -730,7 +724,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Dleoblack
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Lurking in Shadows",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9055",
                 CardType = CardType.Treachery,
@@ -742,7 +736,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Sabin_Boykinov
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Market Square",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9056",
                 CardType = CardType.Location,
@@ -757,7 +751,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Master of Lore",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9057",
                 CardType = CardType.Ally,
@@ -776,7 +770,7 @@ If the players defeat this stage, they have won the game.",
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Morgul Spider",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9058",
                 CardType = CardType.Enemy,
@@ -813,7 +807,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Piya_Wannachaiwong
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Mutual Accord",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9060",
                 CardType = CardType.Event,
@@ -826,7 +820,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Orc Arbalesters",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9061",
                 CardType = CardType.Enemy,
@@ -845,7 +839,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Timo_Karhula
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Orc Arsonist",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9062",
                 CardType = CardType.Enemy,
@@ -863,7 +857,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.David_Kegg
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Orc Assault",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9063",
                 CardType = CardType.Treachery,
@@ -875,7 +869,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Orc Rabble",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9064",
                 CardType = CardType.Enemy,
@@ -894,7 +888,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Orc Scramblers",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9065",
                 CardType = CardType.Enemy,
@@ -914,7 +908,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Anton_Kokarev
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Orc Vanguard",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9066",
                 CardType = CardType.Enemy,
@@ -933,7 +927,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Lin_Bo
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Orc War Camp",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9067",
                 CardType = CardType.Location,
@@ -949,7 +943,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Emilio_Rodriguez
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Overgrown Trail",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9068",
                 CardType = CardType.Location,
@@ -965,7 +959,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Pelargir Docks",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9069",
                 CardType = CardType.Location,
@@ -981,7 +975,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Emilio_Rodriguez
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Pickpocket",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9070",
                 CardType = CardType.Enemy,
@@ -999,7 +993,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Asahi
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Ranger Spikes",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9071",
                 CardType = CardType.Attachment,
@@ -1013,7 +1007,7 @@ If the players defeat this stage, they have won the game.",
                 SecondArtist = Artist.Suzanne_Helmigh
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Scourge of Mordor",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9072",
                 CardType = CardType.Treachery,
@@ -1025,7 +1019,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Caravan_Studio
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Secluded Glade",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9073",
                 CardType = CardType.Location,
@@ -1041,7 +1035,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Siege Raft",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9074",
                 CardType = CardType.Enemy,
@@ -1060,7 +1054,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Marco_Caradonna
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Southron Company",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9075",
                 CardType = CardType.Enemy,
@@ -1078,7 +1072,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Ignacio_Bazan_Lazcano
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Southron Mercenaries",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9076",
                 CardType = CardType.Enemy,
@@ -1097,7 +1091,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Emile_Denis
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Southron Support",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9077",
                 CardType = CardType.Treachery,
@@ -1111,7 +1105,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.C_B_Sorge
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Spear of the Citadel",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9078",
                 CardType = CardType.Attachment,
@@ -1125,7 +1119,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Dan_Masso
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Approach",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9079",
                 CardType = CardType.Location,
@@ -1140,7 +1134,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Titus_Lunter
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Banks",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9080",
                 CardType = CardType.Location,
@@ -1155,7 +1149,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Citadel",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9081",
                 CardType = CardType.Location,
@@ -1170,7 +1164,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Leaping Fish",
                 SlugIncludesType = true,
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9082",
@@ -1187,7 +1181,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Master's Malice",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9083",
                 CardType = CardType.Treachery,
@@ -1200,7 +1194,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Marcia_George_Bogdan
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Power of Mordor",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9084",
                 CardType = CardType.Treachery,
@@ -1213,7 +1207,7 @@ If the players defeat this stage, they have won the game.",
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Umbar Assassin",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9085",
                 CardType = CardType.Enemy,
@@ -1232,7 +1226,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Greg_Opalinski
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Watcher in the Wood",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9086",
                 CardType = CardType.Treachery,
@@ -1245,7 +1239,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Igor_Kieryluk
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Wealth of Gondor",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9087",
                 CardType = CardType.Event,
@@ -1258,7 +1252,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Darek_Zabrocki
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Zealous Traitor",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9088",
                 CardType = CardType.Enemy,

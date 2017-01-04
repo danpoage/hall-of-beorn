@@ -82,7 +82,7 @@ The Lord of the ~Rings : The Black Riders Saga Expansion is required to play The
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Aragorn",
                 Id = "638BAEF3-2B18-431F-9855-B61A6CD283EA",
                 CardType = CardType.Hero,
@@ -108,7 +108,7 @@ The Lord of the ~Rings : The Black Riders Saga Expansion is required to play The
                 Id = "1351C3CA-4CC0-445E-BF8F-7FBE21E3F407",
                 CardType = Models.LotR.CardType.Quest,
                 HasSecondImage = true,
-                ScenarioNumber = 4,
+                
                 StageNumber = 1,
                 QuestPoints = 0,
                 Text = 
@@ -129,7 +129,7 @@ The Lord of the ~Rings : The Black Riders Saga Expansion is required to play The
                 SlugIncludesOppositeTitle = true,
                 CardType = CardType.Quest,
                 HasSecondImage = true,
-                ScenarioNumber = 4,
+                
                 StageNumber = 2,
                 QuestPoints = null,
                 Text = 

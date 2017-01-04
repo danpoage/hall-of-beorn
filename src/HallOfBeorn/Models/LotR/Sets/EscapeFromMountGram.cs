@@ -66,14 +66,14 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(LotRCard.Event("Keen as Lances", "", Sphere.Neutral, 5)
                 .WithText("Reduce the cost to play Keen as Lances by 1 for each card worth no victory points in the victory display.\r\nAction: Add Keen as Lances to the victory display. Then, choose one: add 2 resources to a hero's resource pool, draw 3 cards, or reduce your threat by 4.")
                 .WithInfo(37, 3, Artist.Magali_Villeneuve));
-            Cards.Add(LotRCard.Quest("Unexpected Rescue", "", 2, 1, "Escape from Mount Gram", 255)
+            Cards.Add(LotRCard.Quest("Unexpected Rescue", 1, "Escape from Mount Gram", 255)
                 .WithFlavor("You have been captured and imprisoned by the goblins of Mount Gram.")
                 .WithText("Setup: Each player shuffles his starting hand into his deck. Each player prepares a separate captured deck (see insert). Each player adds 2 resources to his starting hero and sets his threat to that hero's threat cost. Set Southern ~Gate, Jailor Gornákh and the Angmar Orcs encounter set aside, out of play. Shuffle the encounter deck. Each player draws a new starting hand of 3 cards.")
                 .WithOppositeFlavor("You have endured much during your imprisonment in Mount Gram at the hands of a cruel goblin known as Gornákh. But before you are taken north as prizes for \"Lord Daechanar,\" Amarthiúl comes to your rescue. After he frees you, he slips off to find Iârion, whom you suspect is imprisoned nearby. Armed with only your wits and resolve, you must find the rest of your company.")
                 .WithOppositeText("When Revealed: Each player creates his own staging area and advances to a different stage 2A.")
                 .WithIncludedEncounterSets(EncounterSet.AngmarOrcs)
                 .WithInfo(38, 1, Artist.Tomasz_Jedruszek));
-            Cards.Add(LotRCard.Quest("Gornákh's Dungeons", "", 2, 2, "Escape from Mount Gram", 255)
+            Cards.Add(LotRCard.Quest("Gornákh's Dungeons", 2, "Escape from Mount Gram", 255)
                 .WithNormalizedTitle("Gornakh's Dungeons")
                 .WithFlavor("Alone and without your equipment, you steel yourself and being to search for your companions and belongings.")
                 .WithKeywords("Capture 7.")
@@ -81,7 +81,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithOppositeText("Any time players would place progress on this quest, resuce an equal number of captured cards at random from underneath it instead. (Progress is placed on the active location before triggering this effect.)\r\nForced: If there are no captured cards underneath Gornákh's Dungeons, join another player at the beginning of the travel phase. If you cannot join another player, all players advance to stage 3A together.")
                 .WithIncludedEncounterSets(EncounterSet.AngmarOrcs)
                 .WithInfo(39, 4, Artist.Katayanagi));
-            Cards.Add(LotRCard.Quest("Flight from Mount Gram", "", 2, 3, "Escape from Mount Gram", 16)
+            Cards.Add(LotRCard.Quest("Flight from Mount Gram", 3, "Escape from Mount Gram", 16)
                 .WithFlavor("Having rescued as many of your companions as you can find, you begin to make your way towards the dungeon's hidden exit. By now Gornákh is surely aware of your escape, and the orcs that were with Thaurdir are now searching for you, as well.")
                 .WithText("When Revealed: Add Southern ~Gate and Jailor Gornakh to the staging area. Shuffle the Angmar Orcs encounter set into the encounter deck. Then, reveal 1 encounter card per player from the top of the encounter deck.")
                 .WithOppositeFlavor("Orcs and Goblins rush to find you before you can make your escape. You must make haste if you wish to make it out of Mount Gram alive!")

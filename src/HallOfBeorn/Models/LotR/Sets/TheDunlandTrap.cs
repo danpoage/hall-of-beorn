@@ -18,7 +18,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Celeborn",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "687AD7DB-AF87-4BCE-ADEF-43BE538ED5B4",
                 CardType = CardType.Hero,
                 ThreatCost = 11,
@@ -38,7 +38,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Naith Guide",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "B6DBC38B-BA83-49CC-AE0E-003F734117EC",
                 CardType = CardType.Ally,
                 ResourceCost = 2,
@@ -57,7 +57,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Swift and Silent",
-                ImageType = ImageType.Jpg,
+                
                 Id = "35690E9B-ABF4-4596-821B-9568F3F1CEA7",
                 CardType = CardType.Event,
                 ResourceCost = 1,
@@ -72,7 +72,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             {
                 Title = "Firefoot",
                 IsUnique = true,
-                ImageType = ImageType.Jpg,
+                
                 Id = "3EBC4AF2-7A9A-4B61-9F67-D53AAC9D2802",
                 CardType = CardType.Attachment,
                 ResourceCost = 2,
@@ -88,7 +88,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Close Call",
-                ImageType = ImageType.Jpg,
+                
                 Id = "DD8B3478-D0EF-434C-BF90-479538A200BB",
                 CardType = CardType.Event,
                 ResourceCost = 0,
@@ -103,7 +103,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Blue Mountain Trader",
-                ImageType = ImageType.Jpg,
+                
                 Id = "98C41A39-3008-4985-805E-DC6C18973C6B",
                 CardType = CardType.Ally,
                 ResourceCost = 2,
@@ -122,7 +122,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "The Fall of Gil-Galad",
-                ImageType = ImageType.Jpg,
+                
                 Id = "A36F57A5-12FA-46DA-8991-FAC4313CEBB1",
                 CardType = CardType.Attachment,
                 ResourceCost = 1,
@@ -142,7 +142,7 @@ in Mordor where the shadows are.
             Cards.Add(new LotRCard()
             {
                 Title = "Ithilien Lookout",
-                ImageType = ImageType.Jpg,
+                
                 Id = "9AB83EED-4839-4A92-8DB7-1932DF8E6AA2",
                 CardType = CardType.Ally,
                 ResourceCost = 3,
@@ -162,7 +162,7 @@ in Mordor where the shadows are.
             Cards.Add(new LotRCard()
             {
                 Title = "The Tree People",
-                ImageType = ImageType.Jpg,
+                
                 Id = "8C8910B8-F4E3-471E-A973-C32A3ED27890",
                 CardType = CardType.Event,
                 ResourceCost = 0,
@@ -176,7 +176,7 @@ in Mordor where the shadows are.
             Cards.Add(new LotRCard()
             {
                 Title = "The White Council",
-                ImageType = ImageType.Jpg,
+                
                 Id = "3D87FA7B-09A6-46C9-9117-E052902B842D",
                 CardType = CardType.Event,
                 ResourceCost = 254,
@@ -195,7 +195,7 @@ a hero he controls, draw 1 card, or shuffle 1 card from his discard pile into hi
             Cards.Add(new LotRCard()
             {
                 Title = "The Road to Tharbad",
-                ImageType = ImageType.Jpg,
+                
                 Id = "AA596A48-A5E8-4DC6-8789-433FD2C9BF82",
                 CardType = CardType.Quest,
                 StageNumber = 1,
@@ -216,7 +216,7 @@ Forced: After the last time counter is removed from this stage, each player disc
             Cards.Add(new LotRCard()
             {
                 Title = "A Well Laid Trap",
-                ImageType = ImageType.Jpg,
+                
                 Id = "D20381AB-5138-4C66-B072-13865CA1F2A7",
                 CardType = CardType.Quest,
                 StageNumber = 2,
@@ -237,7 +237,7 @@ Forced: At the end of the combat phase, advance to stage 3A.",
             Cards.Add(new LotRCard()
             {
                 Title = "No Way Out",
-                ImageType = ImageType.Jpg,
+                
                 Id = "32C557BA-7FC3-477F-872F-C531DCDD5B00",
                 CardType = CardType.Quest,
                 StageNumber = 3,
@@ -260,7 +260,7 @@ Forced: After the last time counter is removed from this stage, the players make
             {
                 Title = "Chief Turch",
                 IsUnique = true,
-                ImageType = ImageType.Jpg,
+                
                 Id = "3511164D-A255-4324-A95E-1810737D9AC4",
                 CardType = CardType.Enemy,
                 EngagementCost = 50,
@@ -301,7 +301,7 @@ Forced: After an enemy engages a player, remove 1 time counter from the current 
             {
                 Title = "Old South Road",
                 IsUnique = true,
-                ImageType = ImageType.Jpg,
+                
                 Id = "2D464AC7-6602-40FB-B8C2-F2712009E000",
                 CardType = CardType.Location,
                 Threat = 1,
@@ -318,7 +318,7 @@ Forced: After an enemy engages a player, remove 1 time counter from the current 
             Cards.Add(new LotRCard()
             {
                 Title = "Boar Clan Stalker",
-                ImageType = ImageType.Jpg,
+                
                 Id = "11BD2DAA-8271-49F3-8B2B-03E41EF68CC9",
                 CardType = CardType.Enemy,
                 EngagementCost = 28,
@@ -341,7 +341,7 @@ Forced: After the engaged player draws any number of cards, put a resource token
             Cards.Add(new LotRCard()
             {
                 Title = "Boar Clan Warrior",
-                ImageType = ImageType.Jpg,
+                
                 Id = "24CCB412-A2EC-43FA-BB28-01DEDF9730CA",
                 CardType = CardType.Enemy,
                 EngagementCost = 20,
@@ -360,7 +360,7 @@ Forced: After the engaged player draws any number of cards, put a resource token
             Cards.Add(new LotRCard()
             {
                 Title = "Hithaeglir Foothills",
-                ImageType = ImageType.Jpg,
+                
                 Id = "02AB39BB-FC95-494D-9BC5-0ADE106A02BA",
                 CardType = CardType.Location,
                 Threat = 0,
@@ -381,7 +381,7 @@ Forced: After a player draws any number of cards, place 1 resource token here.",
             Cards.Add(new LotRCard()
             {
                 Title = "Hills of Dunland",
-                ImageType = ImageType.Jpg,
+                
                 Id = "CBD27C8C-FC74-41A6-97C0-70CDF8121F81",
                 CardType = CardType.Location,
                 Threat = 2,
@@ -397,7 +397,7 @@ Forced: After a player draws any number of cards, place 1 resource token here.",
             Cards.Add(new LotRCard()
             {
                 Title = "Plains of Enedwaith",
-                ImageType = ImageType.Jpg,
+                
                 Id = "2D01B076-6E90-4B6C-AAC2-345EB6DCBACF",
                 CardType = CardType.Location,
                 Threat = 2,
@@ -413,7 +413,7 @@ Forced: After a player draws any number of cards, place 1 resource token here.",
             Cards.Add(new LotRCard()
             {
                 Title = "Hithaeglir Stream",
-                ImageType = ImageType.Jpg,
+                
                 Id = "5FD21DB3-B2AA-491F-AFA3-53714BC0F83F",
                 CardType = CardType.Location,
                 Threat = 3,
@@ -429,7 +429,7 @@ Forced: After a player draws any number of cards, place 1 resource token here.",
             Cards.Add(new LotRCard()
             {
                 Title = "Frenzied Attack",
-                ImageType = ImageType.Jpg,
+                
                 Id = "78997B05-A569-450C-B552-CAA76AA75E84",
                 CardType = CardType.Treachery,
                 Quantity = 3,
@@ -442,7 +442,7 @@ Forced: After a player draws any number of cards, place 1 resource token here.",
             Cards.Add(new LotRCard()
             {
                 Title = "Dunlending Ambush",
-                ImageType = ImageType.Jpg,
+                
                 Id = "4FBFC291-E369-49BD-8B2C-562388CE3B0E",
                 CardType = CardType.Treachery,
                 Quantity = 3,

@@ -72,7 +72,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Gwaihir",
-                ImageType = Models.ImageType.Jpg,
+                
                 Id = "AAD1F231-94C0-4AF7-BD97-F1FA4A04A561",
                 CardType = Models.LotR.CardType.Ally,
                 Sphere = Models.LotR.Sphere.Tactics,
@@ -92,7 +92,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Pursuing the Enemy",
-                ImageType = ImageType.Jpg,
+                
                 Id = "29FFD74F-E9E7-43EA-A259-7A22420B94BF",
                 CardType = CardType.Event,
                 Sphere = Sphere.Tactics,

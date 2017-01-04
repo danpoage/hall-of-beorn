@@ -67,7 +67,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Attach to a character.\r\nAttached character gains the Noldor and Silvan traits.")
                 .WithFlavor("\"I name you Elf-friend; and may the stars shine upon the end of your road!\"\r\n-Gildor, The Fellowship of the Ring")
                 .WithInfo(93, 3, Artist.Sebastian_Giacobino));
-            Cards.Add(LotRCard.Quest("Secrets of Rhudaur", "", 4, 1, setName, 255)
+            Cards.Add(LotRCard.Quest("Secrets of Rhudaur", 1, setName, 255)
                 .WithKeywords("Time 5.")
                 .WithFlavor("You have decided to explore the ruins of this ancient keep, but Thaurdir pursues you, and time is of the essence.")
                 .WithText("Setup: Make The Great Hall the active location. Set Thaurdir aside, out of play. Add the 3 Treachery of Rhudaur side quests to the staging area, quest side faceup. Search the encounter deck for 1 copy of Ancient Causeway, and add it to the staging area (2 copies instead if there are 3 or 4 players in the game). The first player gains control of Amarthiúl.")
@@ -76,7 +76,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTemplate2("<p>{keyword:Time 5.} <b>Forced</b> After the last time counter is removed from {self}, remove each <a href='/Cards/Search?CardSet=The+Treachery+of+Rhudaur&CardType=Encounter_Side_Quest' title='Side Quests from The Treachery of Rhudaur' target='_blank'>Treachery of Rhudaur side quests</a> from the game and immediately advance to {card:Thaurdir's-Pursuit-TToR@stage_2}.</p></p>During the quest phase, Secrets of Rhudaur cannot be chosen as the current quest.<br>If there are no <a href='/Cards/Search?CardSet=The+Treachery+of+Rhudaur&CardType=Encounter_Side_Quest' title='Side Quests from The Treachery of Rhudaur' target='_blank'>Treachery of Rhudaur side quests</a> in play, immediately advance to {card:Thaurdir's-Pursuit-TToR@stage_2}.</p>")
                 .WithIncludedEncounterSets(EncounterSet.RuinsOfArnor, EncounterSet.CursedDead)
                 .WithInfo(94, 1, Artist.Eva_Maria_Toker));
-            Cards.Add(LotRCard.Quest("Thaurdir's Pursuit", "", 4, 2, setName, 30)
+            Cards.Add(LotRCard.Quest("Thaurdir's Pursuit", 2, setName, 30)
                 .WithFlavor("As you study the clues that you've found, you feel a chill wind flow through the keep. \"You will not leave this place alive,\" a sinister voice echoes throughout the halls. \"My master Daechanar will it so.\"\r\n\"Thaurdir!\" Amarthiúl exclaims, unsheathing his blades.")
                 .WithText("When Revealed: Add Thaurdir to the staging area. Each player searches the encounter deck and discard pile for an Undead enemy and adds it to the staging area. Shuffle the encounter deck.")
                 .WithOppositeFlavor("The wraith you fought in Fornost has followed you since your flight from Mount Gram. Your only hope is to escape with the clues you've found.")

@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             {
                 Title = "Fog on the Barrow-downs Scenario Rules",
                 Id = "BE094FA5-B976-4888-AB7A-D3E257E390C9",
-                ImageType = Models.ImageType.Jpg,
+                
                 HasSecondImage = true,
                 CardType = CardType.GenCon_Setup,
                 Text = 
@@ -46,7 +46,7 @@ During the encounter phase, players only reveal 1 card per player that shares th
             {
                 Title = "Fog on the Barrow-downs Campaign Rules",
                 Id = "E953D925-0DA7-4AA4-AE85-A98A8C1815DA",
-                ImageType = Models.ImageType.Jpg,
+                
                 HasSecondImage = true,
                 CardType = CardType.GenCon_Setup,
                 Text =
@@ -77,7 +77,7 @@ The Lord of the ~Rings: The Black Riders Saga Expansion is required to play Fog 
             });
             Cards.Add(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Aragorn",
                 Id = "AAF34EE7-24B9-4962-AE9F-079772089407",
                 CardType = CardType.Hero,
@@ -103,7 +103,7 @@ The Lord of the ~Rings: The Black Riders Saga Expansion is required to play Fog 
                 Id = "BACA2A71-4CE6-4003-B8D1-8279869DF137",
                 CardType = CardType.Quest,
                 HasSecondImage = true,
-                ScenarioNumber = 5,
+                
                 StageNumber = 1,
                 QuestPoints = 1,
                 FlavorText = "After rescuing the hobbits from Old Man Willow, Tom Bombadil has invited Frodo and his friends to stay the night in his house. There they are greeted warmly by his wife, Goldberry, the River-daughter.",
@@ -121,7 +121,7 @@ The Lord of the ~Rings: The Black Riders Saga Expansion is required to play Fog 
                 Id = "E15090E3-CF35-4BF5-9B89-38D09CA8A9E0",
                 HasSecondImage = true,
                 CardType = Models.LotR.CardType.Quest,
-                ScenarioNumber = 5,
+                
                 StageNumber = 2,
                 Text = "When Revealed: Add Hollow Circle to the staging area. Each player reveals 1 encounter card.",
                 OppositeText = "Forced: At the end of the refresh phase, raise each player's threat by 1.\r\nThe players cannot defeat this stage unless Hollow Circle is in the victory display.",
@@ -138,7 +138,7 @@ The Lord of the ~Rings: The Black Riders Saga Expansion is required to play Fog 
                 Id = "56D70012-B295-468A-9064-4E1C22BF9C9D",
                 HasSecondImage = true,
                 CardType = Models.LotR.CardType.Quest,
-                ScenarioNumber = 5,
+                
                 StageNumber = 3,
                 Text = "When Revealed: The first player adds Standing Stones to the staging area. Each other player reveals 1 encounter card. Shuffle the encounter discard pile and each copy of Great Barrows into the encounter deck.",
                 OppositeText = 
@@ -160,7 +160,7 @@ The players cannot defeat this stage unless each player in the game is at this s
                 Id = "E84070BC-F6B6-4ED3-8CAC-158CE4268696",
                 HasSecondImage = true,
                 CardType = Models.LotR.CardType.Quest,
-                ScenarioNumber = 5,
+                
                 StageNumber = 4,
                 Text = "When Revealed: End your quest phase (do not resolve the quest). Discard cards from the encounter deck until a Wight enemy is discarded. Add the discarded Wight enemy to the staging area. Discard all but X allies you control where X is the number of enemies engaged with you.",
                 OppositeText = 

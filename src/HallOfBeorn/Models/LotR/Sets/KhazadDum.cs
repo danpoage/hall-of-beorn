@@ -16,7 +16,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             SetType = Models.SetType.Deluxe_Expansion;
 
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "A Foe Beyond",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9001",
                 CardType = CardType.Treachery,
@@ -29,15 +29,13 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "A Presence in the Dark",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-0801207c9002",
                 CardType = CardType.Quest,
-                ScenarioNumber = 3,
+                
                 EncounterSet = "Flight from Moria",
                 Quantity = 1,
-                Setup = "stttt",
                 Text = "Setup: Prepare the quest deck. Add The Nameless Fear to the staging area. Remove all copies of A Foe Beyond from the encounter deck. Then, shuffle 1 copy of A Foe Beyond per player back into the encounter deck.",
                 OppositeText = "When Revealed: Reveal 1 encounter card per player, and add it to the staging area. Then, add A Presence in the Dark to your victory display.",
                 VictoryPoints = 2,
@@ -46,12 +44,12 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "A Way Up",
                 StageNumber = 3,
                 Id = "51223bd0-ffd1-11df-a976-0801207c9004",
                 CardType = CardType.Quest,
-                ScenarioNumber = 1,
+                
                 EncounterSet = "Into the Pit",
                 OppositeText = 
 @"Heroes do not collect resources during the resource phase.
@@ -63,7 +61,7 @@ If players defeat this stage, they win the game.",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.TwistsAndTurns, EncounterSet.HazardsOfThePit, EncounterSet.GoblinsOfTheDeep }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Abandoned Tools",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9006",
                 CardType = CardType.Objective,
@@ -76,7 +74,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Stu_Barnes
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Ancestral Knowledge",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9007",
                 CardType = CardType.Event,
@@ -88,7 +86,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Bifur",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9008",
                 CardType = CardType.Hero,
@@ -107,7 +105,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Bitter Wind",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9009",
                 CardType = CardType.Treachery,
@@ -119,7 +117,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Anthony_Palumbo
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Black Uruks",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9010",
                 CardType = CardType.Enemy,
@@ -137,7 +135,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Jake_Murray
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Book of Mazarbul",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9011",
                 CardType = CardType.Objective,
@@ -151,7 +149,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Boots from Erebor",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9012",
                 CardType = CardType.Attachment,
@@ -164,7 +162,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Carolina_Eade
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Branching Paths",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9013",
                 CardType = CardType.Location,
@@ -179,7 +177,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Bridge of Khazad-dûm",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9014",
                 CardType = CardType.Location,
@@ -195,7 +193,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Lin_Bo
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Burning Low",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9015",
                 CardType = CardType.Treachery,
@@ -207,7 +205,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Anthony_Palumbo
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Cave In",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9016",
                 CardType = CardType.Treachery,
@@ -219,7 +217,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Winona_Nelson
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Cave Torch",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9017",
                 CardType = CardType.Objective,
@@ -233,7 +231,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Cave-troll",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9018",
                 CardType = CardType.Enemy,
@@ -252,7 +250,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Timo_Karhula
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Chance Encounter",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9019",
                 CardType = CardType.Treachery,
@@ -264,7 +262,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Chieftain of the Pit",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9020",
                 CardType = CardType.Enemy,
@@ -283,7 +281,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.John_Stanko
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Crumbling Ruin",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9021",
                 CardType = CardType.Treachery,
@@ -296,7 +294,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Dark and Dreadful",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9022",
                 CardType = CardType.Treachery,
@@ -309,7 +307,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Igor_Kieryluk
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Dreadful Gap",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9023",
                 CardType = CardType.Location,
@@ -326,7 +324,7 @@ If players defeat this stage, they win the game.",
                 Artist = Artist.Stu_Barnes
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Durin's Song",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9024",
                 CardType = CardType.Event,
@@ -345,7 +343,7 @@ And runes of power upon the door.
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Dwalin",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9025",
                 CardType = CardType.Hero,
@@ -363,7 +361,7 @@ And runes of power upon the door.
                 Artist = Artist.Tony_Foti
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Dwarrowdelf Axe",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9026",
                 CardType = CardType.Attachment,
@@ -378,7 +376,7 @@ And runes of power upon the door.
                 Artist = Artist.Carolina_Eade
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "East-gate",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9027",
                 CardType = CardType.Location,
@@ -394,15 +392,14 @@ And runes of power upon the door.
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Entering the Mines",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-0801207c9028",
                 CardType = CardType.Quest,
-                ScenarioNumber = 1,
+                
                 EncounterSet = "Into the Pit",
                 Quantity = 1,
-                Setup = "lttt",
                 Text = "Setup: Search the encounter deck for East-gate and Cave Torch. Put East-gate into play as the active location, and have the first player attach Cave Torch to a hero of his choice. Set First Hall and Bridge of Khazad-dum aside, out of play. Shuffle the encounter deck.",
                 OppositeText = 
 @"When Revealed: Reveal 1 encounter card per player, and add it to the staging area.
@@ -415,7 +412,7 @@ Player cannot advance to the next stage of the scenario unless Bridge of Khazad-
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.TwistsAndTurns, EncounterSet.HazardsOfThePit, EncounterSet.GoblinsOfTheDeep }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Erebor Record Keeper",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9030",
                 CardType = CardType.Ally,
@@ -435,7 +432,7 @@ Action: Exhaust Erebor ~Record Keeper and pay 1 Lore resource to choose and read
                 Artist = Artist.Andrew_Johanson
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Ever Onward",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9031",
                 CardType = CardType.Event,
@@ -447,7 +444,7 @@ Action: Exhaust Erebor ~Record Keeper and pay 1 Lore resource to choose and read
                 Artist = Artist.Dleoblack
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "First Hall",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9032",
                 CardType = CardType.Location,
@@ -463,7 +460,7 @@ Action: Exhaust Erebor ~Record Keeper and pay 1 Lore resource to choose and read
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Fouled Well",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9033",
                 CardType = CardType.Location,
@@ -477,7 +474,7 @@ Action: Exhaust Erebor ~Record Keeper and pay 1 Lore resource to choose and read
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Goblin Archer",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9034",
                 CardType = CardType.Enemy,
@@ -494,7 +491,7 @@ Action: Exhaust Erebor ~Record Keeper and pay 1 Lore resource to choose and read
                 Artist = Artist.Salvador_Trakal
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Goblin Follower",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9035",
                 CardType = CardType.Enemy,
@@ -512,12 +509,12 @@ Action: Exhaust Erebor ~Record Keeper and pay 1 Lore resource to choose and read
                 Artist = Artist.Salvador_Trakal
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Goblin Patrol",
                 StageNumber = 2,
                 Id = "51223bd0-ffd1-11df-a976-0801207c9036",
                 CardType = CardType.Quest,
-                ScenarioNumber = 1,
+                
                 EncounterSet = "Into the Pit",
                 OppositeText =
 @"When Revealed: Each player must search the encounter deck and discard pile for 1 enemy of his choice, and add it to the staging area. One choice must be Patrol Leader, if able.
@@ -532,7 +529,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.TwistsAndTurns, EncounterSet.HazardsOfThePit, EncounterSet.GoblinsOfTheDeep }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Goblin Scout",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9038",
                 CardType = CardType.Enemy,
@@ -549,7 +546,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Winona_Nelson
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Goblin Spearman",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9039",
                 CardType = CardType.Enemy,
@@ -567,7 +564,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Salvador_Trakal
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Goblin Swordsman",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9040",
                 CardType = CardType.Enemy,
@@ -585,7 +582,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Winona_Nelson
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Goblin Tunnels",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9041",
                 CardType = CardType.Location,
@@ -600,7 +597,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Great Cave-troll",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9042",
                 CardType = CardType.Enemy,
@@ -619,7 +616,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Hidden Threat",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9043",
                 CardType = CardType.Treachery,
@@ -630,7 +627,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Ryan_Barger
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Khazâd! Khazâd!",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9044",
                 CardType = CardType.Event,
@@ -643,7 +640,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Igor_Kieryluk
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Knees of the Mountain",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9045",
                 CardType = CardType.Location,
@@ -657,7 +654,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Stacey_Diana_Clark
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Lightless Passage",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9046",
                 CardType = CardType.Location,
@@ -673,7 +670,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Stu_Barnes
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Many Roads",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9047",
                 CardType = CardType.Treachery,
@@ -685,7 +682,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Stu_Barnes
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Massing in the Deep",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9048",
                 CardType = CardType.Treachery,
@@ -699,7 +696,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Noah_Bradley
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Mountain Warg",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9049",
                 CardType = CardType.Enemy,
@@ -718,7 +715,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Allison_Theus
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Narvi's Belt",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9050",
                 CardType = CardType.Attachment,
@@ -733,7 +730,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "New Devilry",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9051",
                 CardType = CardType.Treachery,
@@ -745,7 +742,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Ben_Zweifel
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Orc Drummer",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9052",
                 CardType = CardType.Enemy,
@@ -763,7 +760,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Orc Horn Blower",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9053",
                 CardType = CardType.Enemy,
@@ -782,7 +779,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Patrol Leader",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9054",
                 CardType = CardType.Enemy,
@@ -801,7 +798,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Plundered Armoury",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9055",
                 CardType = CardType.Location,
@@ -815,14 +812,14 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Search for an Exit",
                 SlugIncludesOppositeTitle = true,
                 StageNumber = 2,
                 OppositeTitle = "Heading Down",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9056",
                 CardType = CardType.Quest,
-                ScenarioNumber = 3,
+                
                 EncounterSet = "Flight from Moria",
                 Quantity = 1,
                 Text = "While Search for an Exit is the active quest card, only flip it to side 2B at the beginning of the staging step.",
@@ -836,14 +833,14 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Search for an Exit",
                 SlugIncludesOppositeTitle = true,
                 StageNumber = 2,
                 OppositeTitle = "Heading Up",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9058",
                 CardType = CardType.Quest,
-                ScenarioNumber = 3,
+                
                 EncounterSet = "Flight from Moria",
                 Quantity = 1,
                 Text = "While Search for an Exit is the active quest card, only flip it to side 2B at the beginning of the staging step.",
@@ -857,14 +854,14 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Search for an Exit",
                 SlugIncludesOppositeTitle = true,
                 StageNumber = 2,
                 OppositeTitle = "A Wrong Turn",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9060",
                 CardType = CardType.Quest,
-                ScenarioNumber = 3,
+                
                 EncounterSet = "Flight from Moria",
                 Quantity = 1,
                 Text = "While Search for an Exit is the active quest card, only flip it to side 2B at the beginning of the staging step.",
@@ -878,14 +875,14 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Search for an Exit",
                 SlugIncludesOppositeTitle = true,
                 StageNumber = 2,
                 OppositeTitle = "Narrow Paths",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9062",
                 CardType = CardType.Quest,
-                ScenarioNumber = 3,
+                
                 EncounterSet = "Flight from Moria",
                 Quantity = 1,
                 Text = "While Search for an Exit is the active quest card, only flip it to side 2B at the beginning of the staging step.",
@@ -899,14 +896,14 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Search for an Exit",
                 SlugIncludesOppositeTitle = true,
                 StageNumber = 2,
                 OppositeTitle = "Hasty Council",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9064",
                 CardType = CardType.Quest,
-                ScenarioNumber = 3,
+                
                 EncounterSet = "Flight from Moria",
                 Quantity = 1,
                 Text = "While Search for an Exit is the active quest card, only flip it to side 2B at the beginning of the staging step.",
@@ -919,14 +916,14 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Search for an Exit",
                 SlugIncludesOppositeTitle = true,
                 StageNumber = 2,
                 OppositeTitle = "Blocked By Shadow",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9066",
                 CardType = CardType.Quest,
-                ScenarioNumber = 3,
+                
                 EncounterSet = "Flight from Moria",
                 Quantity = 1,
                 Text = "While Search for an Exit is the active quest card, only flip it to side 2B at the beginning of the staging step.",
@@ -943,16 +940,16 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 BackArtist = Artist.Magali_Villeneuve,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
             });
-            var card = new LotRCard()
+            addCard(new LotRCard()
             {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Search for an Exit",
                 SlugIncludesOppositeTitle = true,
                 StageNumber = 2,
                 OppositeTitle = "Escape from Darkness",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9068",
                 CardType = CardType.Quest,
-                ScenarioNumber = 3,
+                
                 EncounterSet = "Flight from Moria",
                 Quantity = 1,
                 Text = "While Search for an Exit is the active quest card, only flip it to side 2B at the beginning of the staging step.",
@@ -963,35 +960,15 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Magali_Villeneuve,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
-            };
-
-            /*
-            card
-                .Flavor("As the presence draws near, doubt and fear surround you like a vast shadow. You must find daylight, you must escape from the Black Pit...")
-                .Important("While Search for an Exit is the active quest card, only flip it to side 2B at the beginning of the staging step.")
-                .Flavor("There is a weakness in the walls. You can practically taste the freedom beyond.")
-                .Effect(Effect.New(CardEffectType.Passive, LayoutType.Block)
-                .Text("Abandoned Tools gains: ")
-                    .Quote(Effect.New(CardEffectType.Refresh_Action, LayoutType.Inline)
-                        .Text("Exhaust attached hero to put a progress token on Escape from Darkness.")))
-                .Important("Players may bypass this quest card at the end of the combat phase.")
-                .Important("Progress tokens cannot be placed on Escape from Darkness except by Abandoned Tools. If the players defeat this stage, they escape and win the game.");
-
-            card.RenderEffects();
-            var x = card.Html;
-            */
-
-            Cards.Add(card);
+            });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Search for the Chamber",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-0801207c9070",
                 CardType = CardType.Quest,
-                ScenarioNumber = 2,
+                
                 EncounterSet = "The Seventh Level",
                 Quantity = 1,
-                Setup = "t",
                 Text = "Setup: Search the encounter deck for Book of Mazarbul, and have the first player attach it to a hero of his choice. Shuffle the encounter deck.",
                 OppositeText = "When Revealed: Reveal 1 encounter card per player, and add it to the staging area.",
                 CardNumber = 67,
@@ -999,7 +976,7 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.PlunderingGoblins }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Shadow of Fear",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9072",
                 CardType = CardType.Treachery,
@@ -1011,7 +988,7 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 Artist = Artist.Gabrielle_Portal
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Signs of Conflict",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9073",
                 CardType = CardType.Treachery,
@@ -1039,7 +1016,7 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 Artist = Artist.Lin_Bo
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Stray Goblin",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9075",
                 CardType = CardType.Enemy,
@@ -1058,7 +1035,7 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 Artist = Artist.Mike_Capprotti
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Sudden Pitfall",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9076",
                 CardType = CardType.Treachery,
@@ -1072,12 +1049,12 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 Artist = Artist.Jake_Murray
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Fate of Balin",
                 StageNumber = 2,
                 Id = "51223bd0-ffd1-11df-a976-0801207c9077",
                 CardType = CardType.Quest,
-                ScenarioNumber = 2,
+                
                 EncounterSet = "The Seventh Level",
                 OppositeText = 
 @"When Revealed: Remove Book of Mazarbul from the game.
@@ -1091,7 +1068,7 @@ If the players defeat this stage, they win the game.",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.PlunderingGoblins }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Mountains' Roots",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9079",
                 CardType = CardType.Location,
@@ -1108,7 +1085,7 @@ If the players defeat this stage, they win the game.",
                 Artist = Artist.Stu_Barnes
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Nameless Fear",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9080",
                 CardType = CardType.Enemy,
@@ -1129,7 +1106,7 @@ If the players defeat this stage, they win the game.",
                 Artist = Artist.Timo_Karhula
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Turbulent Waters",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9081",
                 CardType = CardType.Location,
@@ -1144,7 +1121,7 @@ If the players defeat this stage, they win the game.",
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Undisturbed Bones",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9082",
                 CardType = CardType.Treachery,
@@ -1157,7 +1134,7 @@ If the players defeat this stage, they win the game.",
                 Artist = Artist.Carolina_Eade
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Untroubled by Darkness",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9083",
                 CardType = CardType.Event,
@@ -1169,7 +1146,7 @@ If the players defeat this stage, they win the game.",
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Upper Hall",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9084",
                 CardType = CardType.Location,
@@ -1183,7 +1160,7 @@ If the players defeat this stage, they win the game.",
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Veteran of Nanduhirion",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9085",
                 CardType = CardType.Ally,
@@ -1201,7 +1178,7 @@ If the players defeat this stage, they win the game.",
                 Artist = Artist.Dleoblack
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Warg Lair",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9086",
                 CardType = CardType.Location,
@@ -1215,7 +1192,7 @@ If the players defeat this stage, they win the game.",
                 Artist = Artist.Roman_V_Papsuev
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Watchful Eyes",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9087",
                 CardType = CardType.Treachery,
@@ -1227,7 +1204,7 @@ If the players defeat this stage, they win the game.",
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Zigil Miner",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9088",
                 CardType = CardType.Ally,
@@ -1245,7 +1222,7 @@ If the players defeat this stage, they win the game.",
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Zigil Mineshaft",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9089",
                 CardType = CardType.Location,

@@ -16,7 +16,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cycle = "Dwarrowdelf";
 
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Asfaloth",
                 Id = "51223bd0-ffd1-11df-a976-0801212c9001",
                 CardType = CardType.Attachment,
@@ -32,7 +32,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Sandara_Tang
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Below the Mines",
                 StageNumber = 4,
                 SlugIncludesOppositeTitle = true,
@@ -50,7 +50,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.HazardsOfThePit, EncounterSet.TwistsAndTurns }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Below the Mines",
                 StageNumber = 4,
                 SlugIncludesOppositeTitle = true,
@@ -68,7 +68,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.HazardsOfThePit, EncounterSet.TwistsAndTurns }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Below the Mines",
                 StageNumber = 4,
                 SlugIncludesOppositeTitle = true,
@@ -86,7 +86,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.HazardsOfThePit, EncounterSet.TwistsAndTurns }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Below the Mines",
                 StageNumber = 4,
                 SlugIncludesOppositeTitle = true,
@@ -104,7 +104,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.HazardsOfThePit, EncounterSet.TwistsAndTurns }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Daeron's Runes",
                 Id = "51223bd0-ffd1-11df-a976-0801212c9010",
                 CardType = CardType.Event,
@@ -117,7 +117,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Carolina_Eade
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Deep Deep Dark",
                 Id = "51223bd0-ffd1-11df-a976-0801212c9011",
                 CardType = CardType.Treachery,
@@ -131,7 +131,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Rafal_Hrynkiewicz
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Drowned Treasury",
                 Id = "51223bd0-ffd1-11df-a976-0801212c9012",
                 CardType = CardType.Location,
@@ -146,7 +146,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Carolina_Eade
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Durin's Axe",
                 Id = "51223bd0-ffd1-11df-a976-0801212c9013",
                 CardType = CardType.Objective,
@@ -160,7 +160,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Stephen_M_Mabee
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Durin's Helm",
                 Id = "51223bd0-ffd1-11df-a976-0801212c9014",
                 CardType = CardType.Objective,
@@ -174,7 +174,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Stephen_M_Mabee
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Elder Nameless Thing",
                 Id = "51223bd0-ffd1-11df-a976-0801212c9015",
                 CardType = CardType.Enemy,
@@ -195,7 +195,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Allison_Theus
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Glorfindel",
                 Id = "51223bd0-ffd1-11df-a976-0801212c9016",
                 CardType = CardType.Hero,
@@ -214,7 +214,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Healing Herbs",
                 Id = "51223bd0-ffd1-11df-a976-0801212c9017",
                 CardType = CardType.Attachment,
@@ -226,7 +226,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Heavy Stroke",
                 Id = "51223bd0-ffd1-11df-a976-0801212c9018",
                 CardType = CardType.Event,
@@ -239,7 +239,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Adam_Schumpert
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Imladris Stargazer",
                 Id = "51223bd0-ffd1-11df-a976-0801212c9019",
                 CardType = CardType.Ally,
@@ -256,7 +256,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Light of Valinor",
                 Id = "51223bd0-ffd1-11df-a976-0801212c9020",
                 CardType = CardType.Attachment,
@@ -272,7 +272,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Lin_Bo
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Longbeard Elder",
                 Id = "51223bd0-ffd1-11df-a976-0801212c9021",
                 CardType = CardType.Ally,
@@ -289,7 +289,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Eric_Braddock
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Lost and Alone",
                 Id = "51223bd0-ffd1-11df-a976-0801212c9022",
                 CardType = CardType.Treachery,
@@ -303,7 +303,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.David_Chen
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Mithril Lode",
                 Id = "51223bd0-ffd1-11df-a976-0801212c9023",
                 CardType = CardType.Location,
@@ -319,7 +319,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Moria Bats",
                 Id = "51223bd0-ffd1-11df-a976-0801212c9024",
                 CardType = CardType.Enemy,
@@ -336,7 +336,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Nameless Thing",
                 Id = "51223bd0-ffd1-11df-a976-0801212c9025",
                 CardType = CardType.Enemy,
@@ -357,7 +357,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Timo_Karhula
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Out of the Depths",
                 StageNumber = 5,
                 Id = "51223bd0-ffd1-11df-a976-0801212c9026",
@@ -372,7 +372,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.HazardsOfThePit, EncounterSet.TwistsAndTurns }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Path of Need",
                 Id = "51223bd0-ffd1-11df-a976-0801212c9028",
                 CardType = CardType.Attachment,
@@ -387,7 +387,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 MaxPerDeck = 1
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Dripping Walls",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-0801212c9029",
@@ -395,7 +395,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "Foundations of Stone",
                 Quantity = 1,
                 QuestPoints = 9,
-                Setup = "t",
                 Text = "Setup: Place the Foundations of Stone encounter set aside, out of play. The first player attaches Cave Torch to a hero of his choice.",
                 FlavorText = "Your journey has led to a decrepit portion of the mines, untouched by Dwarven pick for many a year. The air grows thick with moisture, and the walls almost appear to be weeping.",
                 HtmlTemplate = "<p class='flavor-text'>Your journey has led to a decrepit portion of the mines, untouched by Dwarven pick for many a year. The air grows thick with moisture, and the walls almost appear to be weeping.</p><p><b>Setup:</b> Place the <a title='Foundations of Stone Encounter Set' href='/Cards/Search?CardType=Encounter&EncounterSet=Foundations+of+Stone' target='_blank'>Foundations of Stone</a> encounter set aside, out of play. The first player attaches <a title='Cave Torch (Khazad-dûm)' href='/Cards/Details/Cave-Torch-KD' target='_blank'>Cave Torch</a> to a hero of his choice.</p>",
@@ -407,7 +406,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.HazardsOfThePit, EncounterSet.TwistsAndTurns }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Water's Edge",
                 StageNumber = 2,
                 Id = "51223bd0-ffd1-11df-a976-0801212c9031",
@@ -422,7 +421,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.HazardsOfThePit, EncounterSet.TwistsAndTurns }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Trollshaw Scout",
                 Id = "51223bd0-ffd1-11df-a976-0801212c9033",
                 CardType = CardType.Ally,
@@ -441,7 +440,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Anna_Steinbauer
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Washed Away!",
                 StageNumber = 3,
                 Id = "51223bd0-ffd1-11df-a976-0801212c9034",

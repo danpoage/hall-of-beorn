@@ -655,40 +655,21 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             get
             {
-                var format = ImageType.Jpg;
-                if (_card.ImageType != ImageType.None)
-                    format = _card.ImageType;
-                else if (!string.IsNullOrEmpty(_card.ImageName)) {
-                    format = ImageType.Png;
-                }
-
-                var ext = string.Format(".{0}", format.ToString().ToLower());
                 var set = !string.IsNullOrEmpty(_card.CardSet.NormalizedName) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
                 var title = _card.SlugIncludesOppositeTitle ? string.Format("{0}-{1}", Title.ToUrlSafeString(), OppositeTitle.ToUrlSafeString()) : Title.ToUrlSafeString();
                 var suffix = !string.IsNullOrEmpty(_card.SlugSuffix) ? string.Format("-{0}", _card.SlugSuffix) : string.Empty;
                 var type = _card.SlugIncludesType ? string.Format("-{0}", _card.CardType.ToString().ToUrlSafeString()) : string.Empty;
-                var image = _card.ImageName.ToUrlSafeString();
 
-                return string.IsNullOrEmpty(_card.ImageName) ?
-                    string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}{2}{3}{4}", set, title, suffix, type, ext)
-                    : string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}{1}", image, ext);
+                return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}{2}{3}.jpg", set, title, suffix, type);
             }
         }
 
         public string getQuestCardImagePath(bool isFirst)
         {
-            var format = ImageType.Jpg;
-            if (_card.ImageType != ImageType.None)
-                format = _card.ImageType;
-            else if (!string.IsNullOrEmpty(_card.ImageName))
-                format = ImageType.Png;
-
-            var ext = string.Format(".{0}", format.ToString().ToLower());
             var set = (Card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
             var title = Title.ToUrlSafeString();
             var subtitle = _card.SlugIncludesOppositeTitle ? "-" + _card.OppositeTitle.ToUrlSafeString() : string.Empty;
             var number = _card.StageNumber.ToString();
-            var image = _card.ImageName.ToUrlSafeString();
 
             var suffix = isFirst ? "A" : "B";
             if (_card.StageLetter != 'A')
@@ -696,23 +677,16 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 suffix = isFirst ? _card.StageLetter.ToString() : GetSecondStageLetter().ToString();
             }
 
-            return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}{2}-{3}{4}{5}", set, title, subtitle, number, suffix, ext);
+            return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}{2}-{3}{4}.jpg", set, title, subtitle, number, suffix);
         }
 
         public string getSetupCardImagePath(bool isFirst)
         {
-            var format = ImageType.Jpg;
-            if (_card.ImageType != ImageType.None)
-                format = _card.ImageType;
-            else if (!string.IsNullOrEmpty(_card.ImageName))
-                format = ImageType.Png;
-
-            var ext = string.Format(".{0}", format.ToString().ToLower());
             var set = (_card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
             var title = _card.Title.ToUrlSafeString();
             var suffix = isFirst ? "A" : "B";
 
-            return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}-Setup{2}{3}", set, title, suffix, ext);
+            return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}-Setup{2}.jpg", set, title, suffix);
         }
 
         public string ImagePath1

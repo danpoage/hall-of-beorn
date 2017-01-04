@@ -20,7 +20,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Title = "Frodo Baggins",
                 IsUnique = true,
                 Id = "BC8E79AD-1B4A-4B63-A7CA-966E28D39403",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Hero,
                 Sphere = Models.LotR.Sphere.Fellowship,
                 ThreatCost = 0,
@@ -40,7 +40,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Title = "Gandalf",
                 IsUnique = true,
                 Id = "92724E6A-0F32-4996-8C58-451858A96C36",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Hero,
                 Sphere = Models.LotR.Sphere.Neutral,
                 ThreatCost = 14,
@@ -60,7 +60,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Title = "Galadriel",
                 IsUnique = true,
                 Id = "B081B837-C996-4F1C-AD97-0CCBCD3D9A8C",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Ally,
                 Sphere = Models.LotR.Sphere.Leadership,
                 ResourceCost = 3,
@@ -79,7 +79,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Title = "Boromir",
                 IsUnique = true,
                 Id = "13C3F24D-27BE-485D-8CAB-5A639802CDDF",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Ally,
                 Sphere = Models.LotR.Sphere.Tactics,
                 ResourceCost = 4,
@@ -98,7 +98,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Title = "Elrond",
                 IsUnique = true,
                 Id = "47BF974D-65B3-4AB7-AD01-B0AC41D9ADE4",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Ally,
                 Sphere = Sphere.Lore,
                 ResourceCost = 3,
@@ -117,7 +117,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Title = "Bilbo Baggins",
                 IsUnique = true,
                 Id = "8382124A-14F3-46B4-A24C-DA520299A81B",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Ally,
                 Sphere = Models.LotR.Sphere.Spirit,
                 ResourceCost = 2,
@@ -136,7 +136,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             {
                 Title = "Flame of Anor",
                 Id = "AF117DE3-66FE-4E0E-A9FB-AD1618CFDEA9",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Event,
                 Sphere = Models.LotR.Sphere.Neutral,
                 ResourceCost = 1,
@@ -153,7 +153,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Title = "Gandalf's Staff",
                 IsUnique = true,
                 Id = "5B66215C-663A-4F31-BD5B-34EB484F8146",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Neutral,
                 ResourceCost = 2,
@@ -169,7 +169,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             {
                 Title = "Wizard Pipe",
                 Id = "DD619FB9-8CCE-4306-978A-B6E89E243A5A",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Attachment,
                 Sphere = Models.LotR.Sphere.Neutral,
                 ResourceCost = 1,
@@ -185,7 +185,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Title = "Fellowship of the Ring",
                 IsUnique = true,
                 Id = "FC5068A4-CBD5-4831-A7AE-32DDB306DAD1",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Attachment,
                 Sphere = Models.LotR.Sphere.Fellowship,
                 ResourceCost = 2,
@@ -200,7 +200,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Title = "Sting",
                 IsUnique = true,
                 Id = "4CA6EBFE-C48F-43C9-867A-EDB7A50D37CE",
-                ImageType = Models.ImageType.Jpg,
+                
                 Sphere = Models.LotR.Sphere.Neutral,
                 CardType = CardType.Attachment,
                 CardSubtype = Models.CardSubtype.Boon,
@@ -222,7 +222,7 @@ Response: After attached hero exhausts to defend an attack, discard the top card
                 Title = "Mithril Shirt",
                 IsUnique = true,
                 Id = "2F44B05B-B233-414D-97AB-21EC1FE7F71D",
-                ImageType = Models.ImageType.Jpg,
+                
                 Sphere = Models.LotR.Sphere.Neutral,
                 CardType = CardType.Attachment,
                 CardSubtype = Models.CardSubtype.Boon,
@@ -239,7 +239,7 @@ Response: After attached hero exhausts to defend an attack, discard the top card
                 Title = "Glamdring",
                 IsUnique = true,
                 Id = "921B7E59-0CFC-4B12-A95A-CB37A49587A0",
-                ImageType = Models.ImageType.Jpg,
+                
                 Sphere = Models.LotR.Sphere.Neutral,
                 CardType = CardType.Attachment,
                 CardSubtype = Models.CardSubtype.Boon,
@@ -257,7 +257,7 @@ Response: After attached hero exhausts to defend an attack, discard the top card
                 Title = "Andúril",
                 IsUnique = true,
                 Id = "A4E77553-5376-452A-974B-601C35FEB5BA",
-                ImageType = Models.ImageType.Jpg,
+                
                 Sphere = Models.LotR.Sphere.Neutral,
                 CardType = CardType.Attachment,
                 CardSubtype = Models.CardSubtype.Boon,
@@ -274,7 +274,7 @@ Response: After attached hero exhausts to defend an attack, discard the top card
                 Title = "Phial of Galadriel",
                 IsUnique = true,
                 Id = "5AFC42BF-3E61-4FB8-AF2C-AB40E27AFF3F",
-                ImageType = Models.ImageType.Jpg,
+                
                 Sphere = Models.LotR.Sphere.Neutral,
                 CardType = CardType.Attachment,
                 CardSubtype = Models.CardSubtype.Boon,
@@ -292,7 +292,7 @@ Response: After attached hero exhausts to defend an attack, discard the top card
                 Title = "Three Golden Hairs",
                 IsUnique = true,
                 Id = "19CB3A5F-5D58-41E5-846D-733261B554A6",
-                ImageType = Models.ImageType.Jpg,
+                
                 Sphere = Models.LotR.Sphere.Neutral,
                 CardType = CardType.Attachment,
                 CardSubtype = Models.CardSubtype.Boon,
@@ -327,7 +327,7 @@ Response: After attached hero exhausts to defend an attack, discard the top card
                 Title = "Leaf-wrapped Lembas",
                 IsUnique = true,
                 Id = "AA0E8E20-FA34-4ED6-8BF4-C4BE15CA17F2",
-                ImageType = Models.ImageType.Jpg,
+                
                 Sphere = Models.LotR.Sphere.Neutral,
                 CardType = CardType.Attachment,
                 CardSubtype = Models.CardSubtype.Boon,
@@ -344,9 +344,9 @@ Response: After attached hero exhausts to defend an attack, discard the top card
             {
                 Title = "The Ring Goes South",
                 CardType = Models.LotR.CardType.Campaign,
-                ScenarioNumber = 4,
+                
                 HasSecondImage = true,
-                ImageType = Models.ImageType.Jpg,
+                
                 SlugIncludesType = true,
                 Id = "DFF44707-3468-4E8F-AB49-DF4E5E6D93FC",
                 OppositeTitle = "The Lord of the Rings Part 4",
@@ -366,10 +366,10 @@ Setup: Each player may change hero cards he controls without incurring the +1 th
             {
                 Title = "The Council of Elrond",
                 Id = "D49C15DD-1D36-4716-A754-B192CC59D5E3",
-                ImageType = Models.ImageType.Jpg,
+                
                 HasSecondImage = true,
                 CardType = CardType.Quest,
-                ScenarioNumber = 4,
+                
                 StageNumber = 1,
                 EncounterSet = "The Ring Goes South",
                 Text = "Setup: Set Lust for the Ring, Redhorn Pass, Doors of Durin and Watcher in the Water aside, out of play. Shuffle the encounter deck.",
@@ -384,10 +384,10 @@ Setup: Each player may change hero cards he controls without incurring the +1 th
             {
                 Title = "The Nine Walkers",
                 Id = "855DC3F7-9DB8-48BB-9BA1-ABDCEEAE1074",
-                ImageType = Models.ImageType.Jpg,
+                
                 HasSecondImage = true,
                 CardType = CardType.Quest,
-                ScenarioNumber = 4,
+                
                 StageNumber = 2,
                 EncounterSet = "The Ring Goes South",
                 Text = "When Revealed: Make Redhorn Pass the active location. The first player reveals cards from the encounter deck until there is at least X Threat in the staging area. X is twice the number of players in the game.",
@@ -403,10 +403,10 @@ Setup: Each player may change hero cards he controls without incurring the +1 th
             {
                 Title = "The Hunt is Up!",
                 Id = "15A0614C-85DB-4FA1-8BD6-7C53CC9357A0",
-                ImageType = Models.ImageType.Jpg,
+                
                 HasSecondImage = true,
                 CardType = CardType.Quest,
-                ScenarioNumber = 4,
+                
                 StageNumber = 3,
                 EncounterSet = "The Ring Goes South",
                 Text = "When Revealed: Each player searches the encounter deck and discard pile for an enemy and adds it to the staging area. One of those enemies must be Great Warg Chief, if able. Shuffle the encounter deck.",
@@ -422,10 +422,10 @@ Setup: Each player may change hero cards he controls without incurring the +1 th
             {
                 Title = "The Gates of Moria",
                 Id = "855B100F-5BE9-4651-91D8-C559DAAE5E77",
-                ImageType = Models.ImageType.Jpg,
+                
                 HasSecondImage = true,
                 CardType = CardType.Quest,
-                ScenarioNumber = 4,
+                
                 StageNumber = 4,
                 EncounterSet = "The Ring Goes South",
                 Text = "When Revealed: Make Doors of Durin the active location. Add Watcher in the Water to the staging area. Discard all tokens from the Ring-bearer and place it (and each card attached to it) facedown under Watcher in the Water.",
@@ -441,7 +441,7 @@ Setup: Each player may change hero cards he controls without incurring the +1 th
             {
                 Title = "Watcher in the Water",
                 Id = "88F28954-B4E4-4C79-AF22-578B474BF750",
-                ImageType = Models.ImageType.Jpg,
+                
                 IsUnique = true,
                 CardType = CardType.Enemy,
                 EngagementCost = 50,
@@ -464,7 +464,7 @@ Forced: After placing the 6th damage here, the first player takes control of the
             {
                 Title = "Great Warg Chief",
                 Id = "17C446FC-31C8-458F-9F89-036E82A728EC",
-                ImageType = Models.ImageType.Jpg,
+                
                 IsUnique = true,
                 CardType = CardType.Enemy,
                 EngagementCost = 30,
@@ -483,7 +483,7 @@ Forced: After placing the 6th damage here, the first player takes control of the
             {
                 Title = "Hound of Sauron",
                 Id = "5BB5992A-37AC-406D-8448-0ABC11A3AB1C",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Enemy,
                 EngagementCost = 50,
                 Threat = 1,
@@ -504,7 +504,7 @@ Forced: After placing the 6th damage here, the first player takes control of the
             {
                 Title = "Howling Warg",
                 Id = "0EB61219-35A9-4F46-8E08-8101A352477F",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Enemy,
                 EngagementCost = 38,
                 Threat = 2,
@@ -523,7 +523,7 @@ Forced: After placing the 6th damage here, the first player takes control of the
             {
                 Title = "Crebain from Dunland",
                 Id = "CAC621B7-8DA4-4891-A2FB-6CDA4CBF1FED",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Enemy,
                 EngagementCost = 28,
                 Threat = 3,
@@ -546,7 +546,7 @@ Forced: After Crebain from Dunland engages a player, reveal the top card of the 
                 Title = "Redhorn Pass",
                 IsUnique = true,
                 Id = "BB618ACA-4B66-4C3C-A7F0-D973812492B4",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Location,
                 Threat = 4,
                 QuestPoints = 6,
@@ -564,7 +564,7 @@ Forced: After Crebain from Dunland engages a player, reveal the top card of the 
                 Title = "Doors of Durin",
                 IsUnique = true,
                 Id = "FFD1FDEF-1A8F-4550-A66E-2ACC91F9EE91",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Location,
                 Threat = 1,
                 QuestPoints = 9,
@@ -585,7 +585,7 @@ If there are 9 damage tokens, the players lose the game.",
             {
                 Title = "Tree-crowned Hill",
                 Id = "E5ADB36D-58A3-480B-8782-E3750B71BDD0",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Location,
                 Threat = 3,
                 QuestPoints = 6,
@@ -605,7 +605,7 @@ Forced: When Tree-crowned hill is explored, the players, as a group, exhaust X c
             {
                 Title = "Hills of Hollin",
                 Id = "6194470F-0592-4ECD-9D8A-21D413F96500",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Location,
                 Threat = 2,
                 QuestPoints = 4,
@@ -625,7 +625,7 @@ Forced: When ~Hills of Hollin is explored, each player raises his threat by 1 fo
             {
                 Title = "Redhorn Foothills",
                 Id = "C1D01F3E-8DCD-489C-AD0D-18CFEF78DAC2",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Location,
                 Threat = 4,
                 QuestPoints = 5,
@@ -641,7 +641,7 @@ Forced: When ~Hills of Hollin is explored, each player raises his threat by 1 fo
             {
                 Title = "Eregion",
                 Id = "B8F593C8-3BDD-4E98-AE44-1EBA952754B6",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Location,
                 Threat = 3,
                 QuestPoints = 4,
@@ -658,7 +658,7 @@ Forced: When ~Hills of Hollin is explored, each player raises his threat by 1 fo
             {
                 Title = "Regiments of Crows",
                 Id = "F9524610-C38E-41B8-A26F-D11BC6EB8969",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Treachery,
                 Text = "When Revealed: Place 3 damage on each active location.",
                 Shadow = "Shadow: Undefended damage from this attack must be assigned to the active location.",
@@ -673,7 +673,7 @@ Forced: When ~Hills of Hollin is explored, each player raises his threat by 1 fo
             {
                 Title = "Snowdrifts",
                 Id = "45A01A09-7FB1-4AA6-AF9B-D06D86764C3C",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Treachery,
                 Traits = new List<string> { "Weather." },
                 Text = "When Revealed: Attach to the active location. (Countss as a Condition attachment with the text, \"Limit 1 per location. No more than 3 progress can be placed on attached location each round.\") If Snowdrifts is not attached to the active location, it gains surge.",
@@ -687,7 +687,7 @@ Forced: When ~Hills of Hollin is explored, each player raises his threat by 1 fo
             {
                 Title = "Bitter Cold",
                 Id = "B83DC4E9-DD6C-4D4A-ABC5-C0A846DEB571",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Treachery,
                 Traits = new List<string> { "Weather." },
                 Text = "When Revealed: Each player must choose: either discard each ally he controls, or raise his threat by 1 for each ally he controls.",
@@ -702,7 +702,7 @@ Forced: When ~Hills of Hollin is explored, each player raises his threat by 1 fo
             {
                 Title = "Storm of Howls",
                 Id = "1CFB37BB-1DD1-44DC-A907-778EE15D9EE9",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Treachery,
                 Keywords = new List<string> { "Peril." },
                 Text = "When Revealed: Either the Warg enemy in the staging area with the highest engagement cost attacks you, or each Warg enemy gets -20 engagement until the end of the round. If no Warg enemy is in the staging area, Storm of Howls gains surge.",
@@ -716,11 +716,11 @@ Forced: When ~Hills of Hollin is explored, each player raises his threat by 1 fo
             {
                 Title = "Journey in the Dark",
                 CardType = Models.LotR.CardType.Campaign,
-                ScenarioNumber = 5,
+                
                 HasSecondImage = true,
                 SlugIncludesType = true,
                 Id = "952913FB-ACC2-4A0C-A802-D841D9F18198",
-                ImageType = Models.ImageType.Jpg,
+                
                 OppositeTitle = "The Lord of the Rings Part 5",
                 Text =
 @"You are playing in Campaign Mode.
@@ -738,10 +738,10 @@ Setup: Shuffle the burder treachery cards Pursued by the Enemy and Shadow of Fea
             {
                 Title = "The Long Dark of Moria",
                 Id = "1C1EC6D0-14E5-4563-A52C-7B2B51FCA760",
-                ImageType = Models.ImageType.Jpg,
+                
                 HasSecondImage = true,
                 CardType = CardType.Quest,
-                ScenarioNumber = 5,
+                
                 StageNumber = 1,
                 EncounterSet = "Journey in the Dark",
                 Text = "Setup: Set The ~Balrog, The Great ~Bridge, and Chamber of Mazarbul aside out of play. Add Doom, Doom, Doom to the staging area and place 10 damage tokens on it. Each player adds 1 different location to the staging area.",
@@ -757,10 +757,10 @@ Setup: Shuffle the burder treachery cards Pursued by the Enemy and Shadow of Fea
             {
                 Title = "Drums in the Deep",
                 Id = "8AF12E34-E1F4-490E-9926-74929D6F9649",
-                ImageType = Models.ImageType.Jpg,
+                
                 HasSecondImage = true,
                 CardType = CardType.Quest,
-                ScenarioNumber = 5,
+                
                 StageNumber = 2,
                 EncounterSet = "Journey in the Dark",
                 Text = "When Revealed: Add Chamber of Mazarbul to the staging area.",
@@ -782,7 +782,7 @@ Forced: After an enemy is defeated, place 1 resource token on this stage.",
                 Id = "F836D78D-C291-43DE-A562-144D4ABC4F4A",
                 HasSecondImage = true,
                 CardType = CardType.Quest,
-                ScenarioNumber = 5,
+                
                 StageNumber = 3,
                 EncounterSet = "Journey in the Dark",
                 Text = "When Revealed: Add The Great ~Bridge to the staging area. Each player reveals 1 encounter card and removes 1 damage token from ~Doom, ~Doom, ~Doom.",
@@ -801,7 +801,7 @@ The players cannot defeat this stage while The Great Bridge is in play. If the p
             {
                 Title = "Doom, Doom, Doom",
                 Id = "4289DFBC-7164-490F-9905-92BA78C0037F",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Objective,
                 Traits = new List<string> { "Shadow.", "Flame." },
                 Text = 
@@ -817,7 +817,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
             {
                 Title = "The Balrog",
                 Id = "88D5E35D-37C2-404C-83B6-F30D916405E0",
-                ImageType = Models.ImageType.Jpg,
+                
                 IsUnique = true,
                 CardType = CardType.Enemy,
                 EngagementCost = 50,
@@ -838,7 +838,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
             {
                 Title = "Orc-chieftain",
                 Id = "54E8B892-5DDF-4883-B54B-563323884C3A",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Enemy,
                 EngagementCost = 40,
                 Threat = 4,
@@ -857,7 +857,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
             {
                 Title = "Great Cave-troll",
                 Id = "052DC0A2-B1D6-4833-960E-FE8C34A0857B",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Enemy,
                 EngagementCost = 36,
                 Threat = 3,
@@ -876,7 +876,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
             {
                 Title = "Uruk from Mordor",
                 Id = "48E64AED-A5E7-4427-946C-C24260DA163E",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Enemy,
                 EngagementCost = 34,
                 Threat = 2,
@@ -896,7 +896,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
             {
                 Title = "Moria Orc",
                 Id = "30D5D5BB-6517-4BCA-B06C-273D27CBFB25",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Enemy,
                 EngagementCost = 38,
                 Threat = 2,
@@ -915,7 +915,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
             {
                 Title = "Moria Archer",
                 Id = "798A9EB5-AB16-4DC6-9228-61E670EF5784",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Enemy,
                 EngagementCost = 42,
                 Threat = 0,
@@ -936,8 +936,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
             {
                 Title = "The Great Bridge",
                 IsUnique = true,
-                Id = "F42AAEF4-1F89-417B-8E7D-483F91C62527",
-                ImageType = Models.ImageType.Jpg,
+                Id = "F42AAEF4-1F89-417B-8E7D-483F91C62527", 
                 CardType = CardType.Location,
                 Threat = 5,
                 QuestPoints = 5,
@@ -954,7 +953,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
                 Title = "Chamber of Mazarbul",
                 IsUnique = true,
                 Id = "5206815D-292B-475C-9887-FE9CBB2D4CAF",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Location,
                 Threat = 4,
                 QuestPoints = 4,
@@ -970,7 +969,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
             {
                 Title = "Mines of Moria",
                 Id = "BE234B07-D1FD-4673-9680-639CE3104424",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Location,
                 Threat = 2,
                 QuestPoints = 4,
@@ -986,7 +985,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
             {
                 Title = "Many-pillared Hall",
                 Id = "8C8FC2DF-034B-43CB-BD08-8F6EE7911732",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Location,
                 Threat = 1,
                 QuestPoints = 6,
@@ -1003,7 +1002,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
             {
                 Title = "Darkened Stairway",
                 Id = "D3E23B2F-CEFA-4E83-A724-1151D2090433",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Location,
                 Threat = 4,
                 QuestPoints = 2,
@@ -1020,7 +1019,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
             {
                 Title = "Ancient Guardroom",
                 Id = "20B1B404-F6E5-4E29-B9D8-C869525AA272",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Location,
                 Threat = 3,
                 QuestPoints = 3,
@@ -1035,7 +1034,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
             {
                 Title = "They Are Coming!",
                 Id = "33A5425A-1827-4672-8B7B-28FA52CBD2C2",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Treachery,
                 Keywords = new List<string> { "Doomed 2." },
                 Text = "When Revealed: Shuffle the encounter discard pile into the encounter deck and discard cards from the top of the encounter deck until X enemies are discarded. X is the number of players in the game. Add each enemy discarded this way to the staging area.",
@@ -1049,7 +1048,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
             {
                 Title = "We Cannot Get Out",
                 Id = "BF2720F0-A766-48AB-B23E-408FB6ECFFD2",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Treachery,
                 Text = "When Revealed: Each player assigns X damage among characters he controls. X is the number of exhausted characters he controls.",
                 Shadow = "Shadow: Assign X damage among characters you control. X is the number of enemies engaged with you.",
@@ -1063,7 +1062,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
             {
                 Title = "Deep Fissure",
                 Id = "49C6D3E2-52D6-4807-BB52-D2C3AA062836",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Treachery,
                 Traits = new List<string> { "Hazard." },
                 Text = "When Revealed: Remove a character you control from the quest and discard the top card of the encounter deck. If that character's printed Willpower is less than the discarded card's Threat, discard that character.",
@@ -1077,7 +1076,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
             {
                 Title = "Fool of a Took!",
                 Id = "0777D985-660F-4CC7-BE97-7B4BD09FDB13",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Treachery,
                 Keywords = new List<string> { "Doomed 1." },
                 Text = "When Revealed: Remove 1 damage token from Doom, Doom, Doom, or The Balrog makes an attack, if able.",
@@ -1092,9 +1091,9 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
             {
                 Title = "Breaking of the Fellowship",
                 CardType = Models.LotR.CardType.Campaign,
-                ScenarioNumber = 6,
+                
                 HasSecondImage = true,
-                ImageType = Models.ImageType.Jpg,
+                
                 //CampaignCardType = Models.CampaignCardType.Campaign,
                 SlugIncludesType = true,
                 Id = "EC6105D0-33EE-436B-83CC-A7DF744E68CC",
@@ -1115,10 +1114,10 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "The Great River",
                 Id = "9B5F7D5B-895F-479A-937B-7F4ADB7ECEEB",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Quest,
                 HasSecondImage = true,
-                ScenarioNumber = 6,
+                
                 StageNumber = 1,
                 QuestPoints = 12,
                 Text = "Setup: Set Frodo's Choice, Seat of Seeing, and Parth Galen aside, out of play. Add The Argonath and Sarn Gebir to the staging area.",
@@ -1134,10 +1133,10 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "The Company Divided",
                 Id = "40144880-A0D8-4B0D-94C1-4E882C10A10E",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Quest,
                 HasSecondImage = true,
-                ScenarioNumber = 6,
+                
                 StageNumber = 2,
                 QuestPoints = null,
                 Text = "When Revealed: Remove the Ring-bearer, and each card attached to it, from the game (treat The One Ring's text as blank while resolving this effect). Reduce each enemy's engagement cost to 0 until the end of the encounter phase. Skip the travel phase this round.",
@@ -1152,10 +1151,10 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "Searching the Woods",
                 Id = "F97A9D56-D91E-42CA-805C-6F0326B9F606",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Quest,
                 HasSecondImage = true,
-                ScenarioNumber = 6,
+                
                 StageNumber = 3,
                 QuestPoints = null,
                 Text = "Forced: After stage 2B is discarded, if the total Threat of the encounter cards in this staging area is less than 4, reveal 1 encounter card.",
@@ -1170,10 +1169,10 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "Guard the Hobbits",
                 Id = "93652F64-1A7A-453D-95B5-5C8DBCF1EDFF",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Quest,
                 HasSecondImage = true,
-                ScenarioNumber = 6,
+                
                 StageNumber = 3,
                 QuestPoints = null,
                 Text = "Forced: After stage 2B is discarded, if the total Threat of encounter cards in this staging area is less than 4, reveal 1 encounter card.",
@@ -1188,10 +1187,10 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "The Seat of Amon Hen",
                 Id = "B3AEC66C-0D33-4043-8719-A75782AE3CA4",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Quest,
                 HasSecondImage = true,
-                ScenarioNumber = 6,
+                
                 StageNumber = 3,
                 QuestPoints = null,
                 Text = "Forced: After stage 2B is discarded, if the total Threat of encounter cards in this staging area is less than 4, reveal 1 encounter card.",
@@ -1206,10 +1205,10 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "Orc Hunting",
                 Id = "BFA38F37-C2BC-42E1-9595-A2BB78712952",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Quest,
                 HasSecondImage = true,
-                ScenarioNumber = 6,
+                
                 StageNumber = 3,
                 QuestPoints = null,
                 Text = "Forced: After stage 2B is discarded, if the total Threat of encounter cards in this staging area is less than 4, reveal 1 encounter card.",
@@ -1224,10 +1223,10 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "The Ring-bearer Sets Out",
                 Id = "E667DDD0-93ED-4B3C-AE34-AD69A3D5220C",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Quest,
                 HasSecondImage = true,
-                ScenarioNumber = 6,
+                
                 StageNumber = 4,
                 QuestPoints = 16,
                 Text = "When Revealed: Add Parth Galen to the staging area. If it is your quest phase, end the phase (do not resolve the quest).",
@@ -1242,7 +1241,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "Frodo's Choice",
                 Id = "3B61F8AD-26C3-476D-A7E4-A3966860F66C",
-                ImageType = ImageType.Jpg,
+                
                 CardType = CardType.Objective,
                 Traits = new List<string> { "Doom." },
                 Text = "If Frodo's Choice is discarded, reveal it instead.\r\nWhen Revealed: Take control of the first player token and the Ring-bearer (and each card attached to it). Attach to the Ring-bearer. For the rest of the game, you cannot lose control of the first player token.",
@@ -1256,7 +1255,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "Uruk-hai Captain",
                 Id = "E7DB332C-2DF7-4DC0-89DD-B1395CC0289C",
-                ImageType = ImageType.Jpg,
+                
                 CardType = CardType.Enemy,
                 EngagementCost = 36,
                 Threat = 3,
@@ -1277,7 +1276,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "Uruk-hai Archer",
                 Id = "E5C15C13-4405-4B0A-961A-B192D1B9FD5B",
-                ImageType = ImageType.Jpg,
+                
                 CardType = CardType.Enemy,
                 EngagementCost = 44,
                 Threat = 0,
@@ -1299,7 +1298,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "Uruk-hai Tracker",
                 Id = "8A96B065-F74A-4BCB-849B-1B0E3DBCA0F8",
-                ImageType = ImageType.Jpg,
+                
                 CardType = CardType.Enemy,
                 EngagementCost = 33,
                 Threat = 1,
@@ -1320,7 +1319,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "Uruk-hai Hunter",
                 Id = "28C5F71C-940B-405A-A73C-85DFE6A5F925",
-                ImageType = ImageType.Jpg,
+                
                 CardType = CardType.Enemy,
                 EngagementCost = 28,
                 Threat = 2,
@@ -1342,7 +1341,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 Title = "Parth Galen",
                 IsUnique = true,
                 Id = "25D83563-9FAD-44C8-8C5D-A2F05A516BB2",
-                ImageType = ImageType.Jpg,
+                
                 CardType = CardType.Location,
                 Threat = 2,
                 QuestPoints = 4,
@@ -1359,7 +1358,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 Title = "Seat of Seeing",
                 IsUnique = true,
                 Id = "76932935-59DA-4F1D-91C6-AD058099F22C",
-                ImageType = ImageType.Jpg,
+                
                 CardType = CardType.Location,
                 Threat = 1,
                 QuestPoints = 6,
@@ -1376,7 +1375,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 Title = "The Argonath",
                 IsUnique = true,
                 Id = "DB8709C6-128D-4C9F-B6FA-4D5C6E3EB63C",
-                ImageType = ImageType.Jpg,
+                
                 CardType = CardType.Location,
                 Threat = 0,
                 IsVariableThreat = true,
@@ -1395,7 +1394,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
                 Title = "Sarn Gebir",
                 IsUnique = true,
                 Id = "54DF1D26-07FC-432E-91D7-48655404DF2B",
-                ImageType = ImageType.Jpg,
+                
                 CardType = CardType.Location,
                 Threat = 3,
                 QuestPoints = 4,
@@ -1412,7 +1411,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "River Anduin",
                 Id = "1C0B30DD-A330-4F26-8807-331C9934150A",
-                ImageType = ImageType.Jpg,
+                
                 CardType = CardType.Location,
                 Threat = 2,
                 QuestPoints = 5,
@@ -1428,7 +1427,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "Wooded Shoreline",
                 Id = "1449ACED-E191-42E7-9F2A-473D37192C5D",
-                ImageType = ImageType.Jpg,
+                
                 CardType = CardType.Location,
                 Threat = 3,
                 QuestPoints = 4,
@@ -1444,7 +1443,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "Slopes of Amon Hen",
                 Id = "C2172E7C-9A7D-4E85-B337-0BD39B66F842",
-                ImageType = ImageType.Jpg,
+                
                 CardType = CardType.Location,
                 Threat = 3,
                 QuestPoints = 3,
@@ -1460,7 +1459,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "Growing Threat",
                 Id = "911E2D42-C072-4C05-8F54-8870BEFB15DA",
-                ImageType = ImageType.Jpg,
+                
                 CardType = CardType.Treachery,
                 Keywords = new List<string> { "Peril." },
                 Text = "When Revealed: Either move 1 enemy engaged with you to the first player's staging area, or Growing Threat gains doomed 2 and surge.",
@@ -1474,7 +1473,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "Orcs of the White Hand",
                 Id = "92AA6365-6E59-481A-AE38-006C23148056",
-                ImageType = ImageType.Jpg,
+                
                 CardType = CardType.Treachery,
                 Text = "When Revealed: Remove all damage from each enemy at this stage. Each enemy at this stage gets +1 Threat, +1 Attack, and +1 Defense until the end of the round.",
                 Shadow = "Shadow: If the defending character has fewer printed hit points than the attacking enemy, this attack is considered undefended.",
@@ -1487,7 +1486,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "Black Feathered Arrows",
                 Id = "BB56207A-0B48-4769-B868-FD97CB1CE1CF",
-                ImageType = ImageType.Jpg,
+                
                 CardType = CardType.Treachery,
                 Text = "When Revealed: Until the end of the round, add 1 to the archery total at this stage for each ally currently at this stage.",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the defending character has fewer printed hit points than the attacking enemy).",
@@ -1500,7 +1499,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "Fallen Into Evil",
                 Id = "0B8ABA0E-4E46-4F8A-A4C9-41FFC4174DE3",
-                ImageType = ImageType.Jpg,
+                
                 CardType = CardType.Treachery,
                 Traits = new List<string> { "Corruption." },
                 Text = "When Revealed: Attach to a non-Fellowship hero and move it to the first player's staging area. (Counts as a Condition attachment with the text: \"Attached hero loses the hero card type and gains the enemy card type with Threat equal to its Willpower and engagement cost equal to its threat cost. If Fallen into Evil is discarded, return attached hero to its owner's control\")",
@@ -1514,7 +1513,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "Lust for the Ring",
                 Id = "BF5429AB-9AD8-4BD1-AFB0-A781D0846B6B",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Treachery,
                 CardSubtype = CardSubtype.Burden,
                 Traits = new List<string> { "Corruption." },
@@ -1529,7 +1528,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "Shadow of Fear",
                 Id = "BAFE055D-1A5A-45E7-A34B-929B247D7D1A",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Treachery,
                 CardSubtype = CardSubtype.Burden,
                 Keywords = new List<string> { "Doomed 1.", "Surge." },
@@ -1544,7 +1543,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "Pursued by the Enemy",
                 Id = "9C98A2E1-01D7-4E47-B7E5-DD40E297FE04",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Treachery,
                 CardSubtype = CardSubtype.Burden,
                 Keywords = new List<string> { "Doomed 1.", "Surge." },
@@ -1559,7 +1558,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "Overcome by Grief",
                 Id = "12A3B17C-F6C0-4493-B340-D5834CA375B9",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Objective,
                 CardSubtype = CardSubtype.Burden,
                 Traits = new List<string> { "Despair." },
@@ -1573,7 +1572,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "Grievous Wound",
                 Id = "B8C72B5E-3A9A-4161-A167-4F8EB59FDD84",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Objective,
                 CardSubtype = CardSubtype.Burden,
                 Traits = new List<string> { "Wound." },
@@ -1587,7 +1586,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "Followed by Night",
                 Id = "876E404F-F85A-4218-B7D8-6466ACA84ABC",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Treachery,
                 CardSubtype = CardSubtype.Burden,
                 Keywords = new List<string> { "Peril.", "Surge." },
@@ -1602,7 +1601,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "Ill Fate",
                 Id = "ED9A877D-E9FD-4DCC-A346-E6958CF1E8C6",
-                ImageType = Models.ImageType.Jpg,
+                
                 CardType = CardType.Treachery,
                 CardSubtype = CardSubtype.Burden,
                 Traits = new List<string> { "Despair." },
@@ -1618,7 +1617,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "The One Ring",
                 Id = "90F20B2B-F4AB-40D6-AB04-864ECD053790",
-                ImageType = Models.ImageType.Jpg,
+                
                 IsUnique = true,
                 CardType = CardType.Objective,
                 Traits = new List<string> { "Artifact.", "Item.", "Ring." },

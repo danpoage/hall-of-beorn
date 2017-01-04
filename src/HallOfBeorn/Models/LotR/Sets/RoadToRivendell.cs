@@ -16,7 +16,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cycle = "Dwarrowdelf";
 
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Along the Misty Mountains",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-0801209c9001",
@@ -32,7 +32,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.MistyMountains, EncounterSet.PlunderingGoblins }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Approaching Rivendell",
                 StageNumber = 3,
                 Id = "51223bd0-ffd1-11df-a976-0801209c9003",
@@ -64,7 +64,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Barren Hills",
                 Id = "51223bd0-ffd1-11df-a976-0801209c9006",
                 CardType = CardType.Location,
@@ -80,7 +80,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Bombur",
                 Id = "51223bd0-ffd1-11df-a976-0801209c9007",
                 CardType = CardType.Ally,
@@ -98,7 +98,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Winona_Nelson
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Crebain",
                 Id = "51223bd0-ffd1-11df-a976-0801209c9008",
                 CardType = CardType.Enemy,
@@ -135,7 +135,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Ilich_Henriquez
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Elladan",
                 Id = "51223bd0-ffd1-11df-a976-0801209c9010",
                 CardType = CardType.Hero,
@@ -154,7 +154,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Followed by Night",
                 Id = "51223bd0-ffd1-11df-a976-0801209c9011",
                 CardType = CardType.Treachery,
@@ -168,7 +168,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Jasper_Sandner
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Goblin Gate",
                 Id = "51223bd0-ffd1-11df-a976-0801209c9012",
                 CardType = CardType.Location,
@@ -183,7 +183,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Goblin Taskmaster",
                 Id = "51223bd0-ffd1-11df-a976-0801209c9013",
                 CardType = CardType.Enemy,
@@ -202,7 +202,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Mike_Nash
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Hail of Stones",
                 Id = "51223bd0-ffd1-11df-a976-0801209c9014",
                 CardType = CardType.Event,
@@ -214,7 +214,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Stu_Barnes
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Lure of Moria",
                 Id = "51223bd0-ffd1-11df-a976-0801209c9015",
                 CardType = CardType.Event,
@@ -227,7 +227,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Mike_Nash
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Orc Ambush",
                 Id = "51223bd0-ffd1-11df-a976-0801209c9016",
                 CardType = CardType.Treachery,
@@ -240,7 +240,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Anton_Kolyukh
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Orc Outpost",
                 StageNumber = 2,
                 Id = "51223bd0-ffd1-11df-a976-0801209c9017",
@@ -257,7 +257,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.MistyMountains, EncounterSet.PlunderingGoblins }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Orc Raiders",
                 Id = "51223bd0-ffd1-11df-a976-0801209c9019",
                 CardType = CardType.Enemy,
@@ -276,7 +276,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Mark_Tarrisse
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Out of the Wild",
                 Id = "51223bd0-ffd1-11df-a976-0801209c9020",
                 CardType = CardType.Event,
@@ -289,7 +289,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Pathless Country",
                 Id = "51223bd0-ffd1-11df-a976-0801209c9021",
                 CardType = CardType.Location,
@@ -305,7 +305,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Rider of the Mark",
                 Id = "51223bd0-ffd1-11df-a976-0801209c9022",
                 CardType = CardType.Ally,
@@ -323,7 +323,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.David_Horne
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Rivendell Blade",
                 Id = "51223bd0-ffd1-11df-a976-0801209c9023",
                 CardType = CardType.Attachment,
@@ -337,7 +337,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Sara_Biddle
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Ruined Road",
                 Id = "51223bd0-ffd1-11df-a976-0801209c9024",
                 CardType = CardType.Location,
@@ -353,7 +353,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Trudi_Castle
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Sleeping Sentry",
                 Id = "51223bd0-ffd1-11df-a976-0801209c9025",
                 CardType = CardType.Treachery,
@@ -379,7 +379,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.K_R_Harris
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The End Comes",
                 Id = "51223bd0-ffd1-11df-a976-0801209c9027",
                 CardType = CardType.Event,
@@ -392,7 +392,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Ryan_Barger
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Wild Bear",
                 Id = "51223bd0-ffd1-11df-a976-0801209c9028",
                 CardType = CardType.Enemy,

@@ -16,7 +16,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cycle = "Shadows of Mirkwood";
 
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "A Wisp of Pale Sheen",
                 Id = "51223bd0-ffd1-11df-a976-0801205c9001",
                 CardType = CardType.Treachery,
@@ -31,7 +31,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Carolina_Eade
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Boromir",
                 Id = "51223bd0-ffd1-11df-a976-0801205c9002",
                 CardType = CardType.Hero,
@@ -80,7 +80,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Lindsey_Messecar
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Elfhelm",
                 Id = "51223bd0-ffd1-11df-a976-0801205c9005",
                 CardType = CardType.Ally,
@@ -99,7 +99,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Fast Hitch",
                 Id = "51223bd0-ffd1-11df-a976-0801205c9006",
                 CardType = CardType.Attachment,
@@ -113,7 +113,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Fens and Mires",
                 Id = "51223bd0-ffd1-11df-a976-0801205c9007",
                 CardType = CardType.Location,
@@ -128,7 +128,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Stacey_Diana_Clark
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Giant Marsh Worm",
                 Id = "51223bd0-ffd1-11df-a976-0801205c9008",
                 CardType = CardType.Enemy,
@@ -148,7 +148,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Jake_Murray
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Gollum",
                 Id = "51223bd0-ffd1-11df-a976-0801205c9009",
                 CardType = CardType.Objective,
@@ -162,7 +162,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.John_Matson
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Impassable Bog",
                 Id = "51223bd0-ffd1-11df-a976-0801205c9010",
                 CardType = CardType.Location,
@@ -179,14 +179,13 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Yoann_Boissonnet
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Into the Marshes",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-0801205c9011",
                 CardType = CardType.Quest,
                 QuestPoints = 12,
                 Quantity = 1,
-                Setup = "s",
                 Text = "Setup: Search the encounter deck for Gollum, and add it to the staging area. Shuffle the encounter deck, then reveal 1 card per player from the encounter deck and add it to the staging area.",
                 HtmlTemplate = "<p class='flavor-text'>You have followed Gollum's trail for days, and are now closing in fast pursuit. In a last ditch effort to escape you, the creature has fled to The Dead Marshes.</p><p><b>Setup:</b> Search the encounter deck for <a title='Gollum (The Dead Marshes)' target='_blank' href='/Cards/Details/Gollum-TDM'>Gollum</a>, and add it to the staging area. Shuffle the encounter deck, then reveal 1 card per player from the encounter deck and add it to the staging area.</p>",
                 FlavorText = "You have followed Gollum's trail for days, and are now closing in fast pursuit. In a last ditch effort to escape you, the creature has fled to The Dead Marshes.",
@@ -197,7 +196,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.SauronsReach, EncounterSet.Wilderlands }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Nightfall",
                 Id = "51223bd0-ffd1-11df-a976-0801205c9013",
                 CardType = CardType.Treachery,
@@ -210,7 +209,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.David_Lecossu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Silvan Tracker",
                 Id = "51223bd0-ffd1-11df-a976-0801205c9014",
                 CardType = CardType.Ally,
@@ -228,7 +227,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Song of Battle",
                 Id = "51223bd0-ffd1-11df-a976-0801205c9015",
                 CardType = CardType.Attachment,
@@ -242,7 +241,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Leonardo_Borazio
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Song of Mocking",
                 Id = "51223bd0-ffd1-11df-a976-0801205c9016",
                 CardType = CardType.Attachment,
@@ -257,7 +256,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Carolina_Eade
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Capture",
                 StageNumber = 2,
                 Id = "51223bd0-ffd1-11df-a976-0801205c9017",
@@ -273,7 +272,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.SauronsReach, EncounterSet.Wilderlands }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Heart of the Marshes",
                 Id = "51223bd0-ffd1-11df-a976-0801205c9019",
                 CardType = CardType.Location,
@@ -289,7 +288,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Noah_Bradley
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "The Lights of the Dead",
                 Id = "51223bd0-ffd1-11df-a976-0801205c9020",
                 CardType = CardType.Treachery,
@@ -303,7 +302,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Henning_Ludvigsen
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Through the Mist",
                 Id = "51223bd0-ffd1-11df-a976-0801205c9021",
                 CardType = CardType.Treachery,
@@ -316,7 +315,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Igor_Kieryluk
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "Vassal of the Windlord",
                 Id = "51223bd0-ffd1-11df-a976-0801205c9022",
                 CardType = CardType.Ally,
@@ -335,7 +334,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Anna_Christenson
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
+                
                 Title = "We Do Not Sleep",
                 Id = "51223bd0-ffd1-11df-a976-0801205c9023",
                 CardType = CardType.Event,
