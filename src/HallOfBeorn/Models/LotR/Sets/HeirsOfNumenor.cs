@@ -113,7 +113,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard() {
                 ImageType = Models.ImageType.Jpg,
                 Title = "Blood of Númenor",
-                NormalizedTitle = "Blood of Numenor",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9007",
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Spirit,
@@ -796,9 +795,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Dean_Spencer
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Mûmak",
-                NormalizedTitle = "Mumak",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9059",
                 CardType = CardType.Enemy,
                 Quantity = 1,

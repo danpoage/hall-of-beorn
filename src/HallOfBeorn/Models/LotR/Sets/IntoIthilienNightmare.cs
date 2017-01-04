@@ -51,7 +51,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Mûmak Elite",
-                NormalizedTitle = "Mumak Elite",
                 Id = "46153486-ED33-47A8-8B6B-8DBB4049DC19",
                 CardType = Models.LotR.CardType.Enemy,
                 EngagementCost = 38,

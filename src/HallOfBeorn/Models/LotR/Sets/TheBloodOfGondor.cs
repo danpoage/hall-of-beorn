@@ -309,9 +309,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Captured!",
-                NormalizedTitle = "Captured",
                 StageNumber = 2,
                 Id = "d2bf00ad-2e1e-4537-b662-f6f20f9a1cfe",
                 CardType = CardType.Quest,
@@ -426,9 +424,7 @@ If Faramir leaves play, the players have lost the game.",
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Black Númenorean",
-                NormalizedTitle = "Black Numenorean",
                 Id = "6a4b0ba7-c80b-4580-bc43-d5369b0c44aa",
                 CardType = CardType.Enemy,
                 EngagementCost = 35,

@@ -16,9 +16,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cycle = "Dwarrowdelf";
 
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Arwen Undómiel",
-                NormalizedTitle = "Arwen Undomiel",
                 Id = "231bf335-bf9b-44d9-a919-e59aa1d46473",
                 CardType = CardType.Objective_Ally,
                 IsUnique = true,

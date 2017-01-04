@@ -112,7 +112,6 @@ Play Tip: This scenario contains 10 treachery cards with the Attack trait that h
             Cards.Add(new LotRCard()
             {
                 Title = "Flame of Udûn",
-                NormalizedTitle = "Flame of Udun",
                 Id = "488E2850-8EE2-425C-9258-6AC3B493EE4F",
                 ImageType = Models.ImageType.Jpg,
                 CardType = CardType.Treachery,

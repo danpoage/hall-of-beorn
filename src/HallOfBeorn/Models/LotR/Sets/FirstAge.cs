@@ -34,8 +34,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard() {
                 Title = "Azaghâl",
-                NormalizedTitle = "Azaghal",
-                ImageType = ImageType.Jpg,
                 Id = "c10276a3-fc4d-4c05-9378-e22437febd30",
                 IsUnique = true,
                 CardType = CardType.Ally,
@@ -72,8 +70,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard() {
                 Title = "Bëor",
-                NormalizedTitle = "Beor",
-                ImageType = ImageType.Jpg,
                 Id = "a71937a2-dd20-40d3-bfb6-a6cf7856011a",
                 IsUnique = true,
                 CardType = CardType.Ally,
@@ -215,8 +211,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard() {
                 Title = "Eöl",
-                NormalizedTitle = "Eol",
-                ImageType = ImageType.Jpg,
                 Id = "c12463e1-712b-4a77-8579-f9cafc7d9332",
                 IsUnique = true,
                 CardType = CardType.Ally,
@@ -538,8 +532,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard() {
                 Title = "Aranrúth",
-                NormalizedTitle = "Aranruth",
-                ImageType = ImageType.Jpg,
                 Id = "a4274bdd-ac5f-4ca6-8897-b7f4d3c683b7",
                 IsUnique = true,
                 CardType = CardType.Attachment,
@@ -715,8 +707,6 @@ All enemies get -1 Threat and -10 engagement cost.",
             });
             Cards.Add(new LotRCard() {
                 Title = "Nauglamír",
-                NormalizedTitle = "Nauglamir",
-                ImageType = ImageType.Jpg,
                 Id = "4186631e-c283-4a5e-b364-7a8ade2255ab",
                 IsUnique = true,
                 CardType = CardType.Attachment,
@@ -744,8 +734,6 @@ All enemies get -1 Threat and -10 engagement cost.",
             });
             Cards.Add(new LotRCard() {
                 Title = "Oath of Fëanor",
-                NormalizedTitle = "Oath of Feanor",
-                ImageType = ImageType.Jpg,
                 Id = "92602678-0802-4c45-971e-0eff7a57855a",
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Mastery,
@@ -1154,8 +1142,6 @@ Attached hero gets +2 Willpower, +2 Attack, +2 Defense, +2 hit points and does n
             });
             Cards.Add(new LotRCard() {
                 Title = "Manwë's Pity",
-                NormalizedTitle = "Manwe's Pity",
-                ImageType = ImageType.Jpg,
                 Id = "b0356374-d811-4ebf-84e0-916262b4b8ac",
                 CardType = CardType.Event,
                 Sphere = Sphere.Leadership,
@@ -1246,8 +1232,6 @@ Action: Reduce your threat by 3.",
             });
             Cards.Add(new LotRCard() {
                 Title = "Song of Lúthien",
-                NormalizedTitle = "Song of Luthien",
-                ImageType = ImageType.Jpg,
                 Id = "0236a411-93bd-4865-99c7-afbbcf66e0a8",
                 CardType = CardType.Event,
                 Sphere = Sphere.Spirit,
@@ -1339,8 +1323,6 @@ Action: Reduce your threat by 3.",
             });
             Cards.Add(new LotRCard() {
                 Title = "Círdan",
-                NormalizedTitle = "Cirdan",
-                ImageType = ImageType.Jpg,
                 Id = "b47b0c9d-67d8-49cf-b481-e812cb6aa4df",
                 IsUnique = true,
                 CardType = CardType.Hero,
@@ -1358,8 +1340,6 @@ Action: Reduce your threat by 3.",
             });
             Cards.Add(new LotRCard() {
                 Title = "Eärendil",
-                NormalizedTitle = "Earendil",
-                ImageType = ImageType.Jpg,
                 Id = "464a02c5-9a1c-4391-bbe8-ed2563a89ae5",
                 IsUnique = true,
                 CardType = CardType.Hero,
@@ -1395,8 +1375,6 @@ Action: Reduce your threat by 3.",
             });
             Cards.Add(new LotRCard() {
                 Title = "Fëanor",
-                NormalizedTitle = "Feanor",
-                ImageType = ImageType.Jpg,
                 Id = "8147cf97-844f-41db-a6cb-456bb2d8d1bb",
                 IsUnique = true,
                 CardType = CardType.Hero,
@@ -1490,8 +1468,6 @@ Action: Place 1 Corruption on Fëanor to play an attachment from any sphere of i
             });
             Cards.Add(new LotRCard() {
                 Title = "Húrin",
-                NormalizedTitle = "Hurin",
-                ImageType = ImageType.Jpg,
                 Id = "612a0a90-b2d9-49c4-88af-8d99fbd00dab",
                 IsUnique = true,
                 CardType = CardType.Hero,
@@ -1527,8 +1503,6 @@ Action: Place 1 Corruption on Fëanor to play an attachment from any sphere of i
             });
             Cards.Add(new LotRCard() {
                 Title = "Lúthien",
-                NormalizedTitle = "Luthien",
-                ImageType = ImageType.Jpg,
                 Id = "267a3597-c2d2-4de0-8121-4c3e71678b2f",
                 IsUnique = true,
                 CardType = CardType.Hero,
@@ -1582,8 +1556,6 @@ Action: Place 1 Corruption on Fëanor to play an attachment from any sphere of i
             });
             Cards.Add(new LotRCard() {
                 Title = "Túrin Turambar",
-                NormalizedTitle = "Turin Turambar",
-                ImageType = ImageType.Jpg,
                 Id = "401c19ae-f7b8-4ce8-80ec-06c14ef6b323",
                 IsUnique = true,
                 CardType = CardType.Hero,

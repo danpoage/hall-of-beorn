@@ -47,9 +47,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.MistyMountains, EncounterSet.PlunderingGoblins }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Arwen Undómiel",
-                NormalizedTitle = "Arwen Undomiel",
                 Id = "51223bd0-ffd1-11df-a976-0801209c9005",
                 CardType = CardType.Objective_Ally,
                 EncounterSet = "Road to Rivendell",
@@ -61,7 +59,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Willpower = 2,
                 HitPoints = 2,
                 Text = "The first player gains control of Arwen Undómiel, as an ally.Response: After Arwen Undómiel exhausts, choose a hero. Add 1 resource to that hero's resource pool.\r\n\r\nIf Arwen Undómiel leaves play, the players are defeated.",
-                HtmlTemplate = "<p>The first player gains control of {self}, as an ally.</p><p><b>Response:</b> After {self}, choose a hero. Add 1 resource to that hero's resource pool.</p><p><b>If {self} leaves play, the players are defeated.</b></p>",
+                HtmlTemplate = "<p>The first player gains control of {self}, as an ally.</p><p><b>Response:</b> After {self} exhausts, choose a hero. Add 1 resource to that hero's resource pool.</p><p><b>If {self} leaves play, the players are defeated.</b></p>",
                 CardNumber = 41,
                 Artist = Artist.Magali_Villeneuve
             });
@@ -120,9 +118,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Allison_Theus
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Dúnedain Wanderer",
-                NormalizedTitle = "Dunedain Wanderer",
                 Id = "51223bd0-ffd1-11df-a976-0801209c9009",
                 CardType = CardType.Ally,
                 Sphere = Sphere.Leadership,
@@ -370,9 +366,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Song of Eärendil",
-                NormalizedTitle = "Song of Earendil",
                 Id = "51223bd0-ffd1-11df-a976-0801209c9026",
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Spirit,

@@ -50,9 +50,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Dúnedain Cache",
-                NormalizedTitle = "Dunedain Cache",
                 Id = "51223bd0-ffd1-11df-a976-0801205c9003",
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Leadership,
@@ -65,9 +63,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Stephanie_M_Brown
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Dúnedain Watcher",
-                NormalizedTitle = "Dunedain Watcher",
                 Id = "51223bd0-ffd1-11df-a976-0801205c9004",
                 CardType = CardType.Ally,
                 Sphere = Sphere.Leadership,

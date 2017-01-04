@@ -113,9 +113,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Bill_Corbett
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Dúnedain Signal",
-                NormalizedTitle = "Dunedain Signal",
                 Id = "51223bd0-ffd1-11df-a976-0801206c9008",
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Leadership,

@@ -72,12 +72,12 @@ namespace HallOfBeorn.Models
             get { return title; }
             set {
                 title = value;
-                if (value.NormalizeString() != value) {
-                    NormalizedTitle = value.NormalizeString();
+                if (value.NormalizeCaseSensitiveString() != value) {
+                    NormalizedTitle = value.NormalizeCaseSensitiveString();
                 }
             }
         }
-        public string NormalizedTitle { get; set; }
+        public string NormalizedTitle { get; protected set; }
 
         private string oppositeTitle;
         public string OppositeTitle

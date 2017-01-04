@@ -1116,7 +1116,6 @@ Response: After an ememy is declared as an attacker, shuffle the top card of the
             Cards.Add(new LotRCard()
             {
                 Title = "The Enemy is Upon Us!",
-                NormalizedTitle = "The Enemy is Upon Us",
                 Id = "0e12b3e5-d330-4a13-be7b-5a07a57a2273",
                 CardType = CardType.Treachery,
                 EncounterSet = "Flight to the Ford",

@@ -178,7 +178,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard() {
                 ImageType = Models.ImageType.Jpg,
                 Title = "Drû-buri-Drû",
-                NormalizedTitle = "Dru-buri-Dru",
                 Id = "19b732b9-a26a-4535-a438-7dd83cd4ecf2",
                 CardType = CardType.Enemy,
                 EngagementCost = 1,
@@ -197,7 +196,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard() {
                 ImageType = Models.ImageType.Jpg,
                 Title = "Drúadan Drummer",
-                NormalizedTitle = "Druadan Drummer",
                 Id = "e2c02f11-fdfb-402b-89de-1729d1364e4c",
                 CardType = CardType.Enemy,
                 EngagementCost = 40,
@@ -217,7 +215,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard() {
                 ImageType = Models.ImageType.Jpg,
                 Title = "Drúadan Elite",
-                NormalizedTitle = "Druadan Elite",
                 Id = "607c3e44-5add-4c80-bb3b-55b016b6cd0e",
                 CardType = CardType.Enemy,
                 EngagementCost = 35,
@@ -235,9 +232,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Drúadan Hunter",
-                NormalizedTitle = "Druadan Hunter",
                 Id = "809ff5de-8273-4491-adfb-3a27d4b316f3",
                 CardType = CardType.Enemy,
                 EngagementCost = 25,
@@ -256,9 +251,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Jason_Ward
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Drúadan Thief",
-                NormalizedTitle = "Druadan Thief",
                 Id = "85045e14-3abc-4d58-824f-249b1fb3643d",
                 CardType = CardType.Enemy,
                 EngagementCost = 5,

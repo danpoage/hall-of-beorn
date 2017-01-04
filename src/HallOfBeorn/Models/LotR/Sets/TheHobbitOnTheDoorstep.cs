@@ -189,9 +189,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Glóin",
-                NormalizedTitle = "Gloin",
                 Id = "6778eb01-6b07-4dbe-87f1-e854ab548813",
                 CardType = CardType.Ally,
                 Sphere = Sphere.Leadership,
@@ -253,9 +251,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Óin",
-                NormalizedTitle = "Oin",
                 Id = "b21a2af5-7443-4630-9503-1b334ae51c6e",
                 CardType = CardType.Hero,
                 Sphere = Sphere.Spirit,
@@ -327,9 +323,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Thrór's Battle Axe",
-                NormalizedTitle = "Thror's Battle Axe",
                 Id = "857d6dc8-ba1e-4839-8e96-a8a0136a2302",
                 CardType = CardType.Treasure,
                 Sphere = Sphere.Neutral,
@@ -344,9 +338,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Thrór's Golden Cup",
-                NormalizedTitle = "Thror's Golden Cup",
                 Id = "ff7b0b9d-f8ae-4464-9db3-7205c5ae4db7",
                 CardType = CardType.Treasure,
                 Sphere = Sphere.Neutral,
@@ -361,9 +353,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Melanie_Maier
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Thrór's Hunting Bow",
-                NormalizedTitle = "Thror's Hunting Bow",
                 Id = "7adc49c0-640d-4934-89c5-312ab584b77c",
                 CardType = CardType.Treasure,
                 Sphere = Sphere.Neutral,
@@ -378,9 +368,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.David_Horne
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Thrór's Key",
-                NormalizedTitle = "Thror's Key",
                 Id = "f4490261-317e-4e9e-9440-a5c58dcddcbf",
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Spirit,
@@ -550,9 +538,7 @@ If the players defeat this stage, they have won the game and discovered any trea
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Wilderland }
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Thieves! Fire! Murder!",
-                NormalizedTitle = "Thieves Fire Murder",
                 StageNumber = 4,
                 Id = "240a9f5b-17dc-4182-b854-3d2dd5a33f68",
                 CardType = CardType.Quest,

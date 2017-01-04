@@ -277,7 +277,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard() {
                 ImageType = Models.ImageType.Jpg,
                 Title = "Peace, and Thought",
-                NormalizedTitle = "Peace and Thought",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9020",
                 CardType = CardType.Event,
                 Sphere = Sphere.Lore,

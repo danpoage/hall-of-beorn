@@ -19,8 +19,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Haldir of Lórien",
-                NormalizedTitle = "Haldir of Lorien",
-                ImageType = ImageType.Jpg,
                 Id = "15DCE26E-339E-48CA-8CF8-19A5F5BF5DD1",
                 CardType = CardType.Hero,
                 Sphere = Models.LotR.Sphere.Lore,
@@ -41,8 +39,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Herald of Anórien",
-                NormalizedTitle = "Herald of Anorien",
-                ImageType = ImageType.Jpg,
                 Id = "3B790E51-01A5-4305-A273-8694964AFDAD",
                 CardType = CardType.Ally,
                 Sphere = Models.LotR.Sphere.Leadership,
@@ -61,8 +57,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "O Lórien!",
-                NormalizedTitle = "O Lorien!",
-                ImageType = ImageType.Jpg,
                 Id = "879112FB-689B-45AA-BD4A-DE7FDB1D31AB",
                 CardType = CardType.Attachment,
                 Sphere = Models.LotR.Sphere.Leadership,

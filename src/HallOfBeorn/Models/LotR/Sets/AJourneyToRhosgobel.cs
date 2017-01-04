@@ -35,9 +35,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.David_A_Nash
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Haldir of Lórien",
-                NormalizedTitle = "Haldir of Lorien",
                 Id = "51223bd0-ffd1-11df-a976-0801203c9002",
                 CardType = CardType.Ally,
                 Sphere = Sphere.Lore,
@@ -133,9 +131,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Dúnedain Quest",
-                NormalizedTitle = "Dunedain Quest",
                 Id = "51223bd0-ffd1-11df-a976-0801203c9008",
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Leadership,

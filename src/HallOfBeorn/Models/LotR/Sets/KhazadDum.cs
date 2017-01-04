@@ -181,7 +181,6 @@ If players defeat this stage, they win the game.",
             Cards.Add(new LotRCard() {
                 ImageType = Models.ImageType.Jpg,
                 Title = "Bridge of Khazad-dûm",
-                NormalizedTitle = "Bridge of Khazad-dum",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9014",
                 CardType = CardType.Location,
                 EncounterSet = "Into the Pit",
@@ -633,7 +632,6 @@ If there are no enemies in play, immediately advance to the next stage of the sc
             Cards.Add(new LotRCard() {
                 ImageType = Models.ImageType.Jpg,
                 Title = "Khazâd! Khazâd!",
-                NormalizedTitle = "Khazad! Khazad!",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9044",
                 CardType = CardType.Event,
                 Sphere = Sphere.Tactics,
@@ -1027,9 +1025,7 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Stairs of Náin",
-                NormalizedTitle = "Stairs of Nain",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9074",
                 CardType = CardType.Location,
                 EncounterSet = "Into the Pit",

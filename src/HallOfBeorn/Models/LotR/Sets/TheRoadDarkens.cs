@@ -256,7 +256,6 @@ Response: After attached hero exhausts to defend an attack, discard the top card
             {
                 Title = "Andúril",
                 IsUnique = true,
-                NormalizedTitle = "Anduril",
                 Id = "A4E77553-5376-452A-974B-601C35FEB5BA",
                 ImageType = Models.ImageType.Jpg,
                 Sphere = Models.LotR.Sphere.Neutral,
@@ -310,9 +309,7 @@ Response: After attached hero exhausts to defend an attack, discard the top card
             {
                 Title = "Lórien Rope",
                 IsUnique = true,
-                NormalizedTitle = "Lorien Rope",
                 Id = "DF542407-56E4-4643-BD32-5BE349AA86FF",
-                ImageType = Models.ImageType.Jpg,
                 Sphere = Models.LotR.Sphere.Neutral,
                 CardType = CardType.Attachment,
                 CardSubtype = Models.CardSubtype.Boon,
@@ -782,9 +779,7 @@ Forced: After an enemy is defeated, place 1 resource token on this stage.",
             Cards.Add(new LotRCard()
             {
                 Title = "The Bridge of Khazad-dûm",
-                NormalizedTitle = "The Bridge of Khazad-dum",
                 Id = "F836D78D-C291-43DE-A562-144D4ABC4F4A",
-                ImageType = Models.ImageType.Jpg,
                 HasSecondImage = true,
                 CardType = CardType.Quest,
                 ScenarioNumber = 5,
@@ -947,7 +942,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
                 Threat = 5,
                 QuestPoints = 5,
                 Traits = new List<string> { "Underground.", "Bridge." },
-                Text = "Immune to player card effects.\r\nResponse: When The Great Bridge is explored, discard a hero from play to deal X damage to The Balrog. X is that hero's threat cost. Then, The Balrog loses all keywords for the remainder of the game. Any player may trigger this response.",
+                Text = "Immune to player card effects.\r\nResponse: When The Great ~Bridge is explored, discard a hero from play to deal X damage to The ~Balrog. X is that hero's threat cost. Then, The ~Balrog loses all keywords for the remainder of the game. Any player may trigger this response.",
                 EncounterSet = "Journey in the Dark",
                 VictoryPoints = 5,
                 CardNumber = 50,

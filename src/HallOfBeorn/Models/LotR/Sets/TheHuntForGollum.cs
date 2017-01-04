@@ -38,7 +38,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard() {
                 ImageType = Models.ImageType.Jpg,
                 Title = "Dúnedain Mark",
-                NormalizedTitle = "Dunedain Mark",
                 Id = "51223bd0-ffd1-11df-a976-0801201c9002",
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Leadership,

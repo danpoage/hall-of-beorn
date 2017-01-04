@@ -197,7 +197,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard() {
                 ImageType = Models.ImageType.Jpg,
                 Title = "Daughter of Berúthiel",
-                NormalizedTitle = "Daughter of Beruthiel",
                 Id = "408148e1-3391-4734-aeac-3e3a7b69c1c1",
                 CardType = CardType.Enemy,
                 EngagementCost = 10,

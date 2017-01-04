@@ -241,9 +241,7 @@ Attached hero gets +1 Defense.",
                 Artist = Artist.Matthew_Starbuck
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Háma",
-                NormalizedTitle = "Hama",
                 Id = "51223bd0-ffd1-11df-a976-0801211c9016",
                 CardType = CardType.Hero,
                 Sphere = Sphere.Tactics,

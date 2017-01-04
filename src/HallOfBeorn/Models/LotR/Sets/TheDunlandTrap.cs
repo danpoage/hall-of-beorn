@@ -283,9 +283,7 @@ Forced: After an enemy engages a player, remove 1 time counter from the current 
             Cards.Add(new LotRCard()
             {
                 Title = "Munuv Dûv Ravine",
-                NormalizedTitle = "Munuv Duv Ravine",
                 IsUnique = true,
-                ImageType = ImageType.Jpg,
                 Id = "DFD4D300-CC81-47ED-8421-6FA0A3ADFBF0",
                 CardType = CardType.Location,
                 Threat = 4,

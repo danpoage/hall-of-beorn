@@ -17,8 +17,6 @@ namespace HallOfBeorn.Models.LotR.Sets
 
             Cards.Add(new LotRCard() {
                 Title = "Éomer",
-                ImageType = Models.ImageType.Jpg,
-                NormalizedTitle = "Eomer",
                 Id = "FE720A40-0522-4882-B8F4-5F3E4E120E67",
                 CardType = CardType.Hero,
                 ThreatCost = 10,
@@ -37,8 +35,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard() {
                 Title = "Gríma",
-                ImageType = Models.ImageType.Jpg,
-                NormalizedTitle = "Grima",
                 Id = "2BECB7B6-5D0C-46D1-83C3-DDE505ABEB5E",
                 CardType = CardType.Hero,
                 ThreatCost = 9,
@@ -202,8 +198,6 @@ Response: After Saruman enters play, choose a non-unique enemy or location in th
             });
             Cards.Add(new LotRCard(){
                 Title = "Legacy of Númenor",
-                NormalizedTitle = "Legacy of Numenor",
-                ImageType = Models.ImageType.Jpg,
                 Id = "9482929A-87C0-4993-8E76-D80E1A40C3DA",
                 CardType = CardType.Event,
                 ResourceCost = 0,
@@ -280,7 +274,6 @@ Response: After Saruman enters play, choose a non-unique enemy or location in th
             });
             Cards.Add(new LotRCard() {
                 Title = "Gríma",
-                NormalizedTitle = "Grima",
                 IsUnique = true,
                 ImageType = ImageType.Jpg,
                 Id = "C6DFAF1C-E925-4EF2-A5F2-E0B30B2BC8A8",

@@ -73,7 +73,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Dúnedain Hunter",
-                NormalizedTitle = "Dunedain Hunter",
                 Id = "8E8D4D02-E6C9-4E42-AC81-F545658F996A",
                 CardType = CardType.Ally,
                 Sphere = Sphere.Tactics,
@@ -109,7 +108,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Warden of Annúminas",
-                NormalizedTitle = "Warden of Annuminas",
                 Id = "C9AB1B34-0511-4B08-A47A-4D0A64405449",
                 CardType = CardType.Ally,
                 Sphere = Sphere.Spirit,
@@ -258,7 +256,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Iârion",
-                NormalizedTitle = "Iarion",
                 Id = "93F6B7C3-2F83-4E1C-8E3E-E3C9F1044A18",
                 CardType = CardType.Objective_Ally,
                 Willpower = 0,

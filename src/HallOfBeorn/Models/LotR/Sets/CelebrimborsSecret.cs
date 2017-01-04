@@ -77,7 +77,6 @@ Response: After attached hero gains any number of resources from a card effect, 
             Cards.Add(new LotRCard()
             {
                 Title = "Henneth Annûn Guard",
-                NormalizedTitle = "Henneth Annun Guard",
                 Id = "597CB12C-233C-4AB1-BC98-A8575478DE5A",
                 CardType = Models.LotR.CardType.Ally,
                 Sphere = Models.LotR.Sphere.Tactics,
@@ -163,7 +162,6 @@ Exhaust Mirror of Galadriel to search the top 10 cards of your deck for a card a
             Cards.Add(new LotRCard()
             {
                 Title = "Cloak of Lórien",
-                NormalizedTitle = "Cloak of Lorien",
                 Id = "67BFABC9-37C3-43E1-A747-9A0488161DCC",
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Lore,

@@ -36,9 +36,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Tony_Foti
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Arwen Undómiel",
-                NormalizedTitle = "Arwen Undomiel",
                 Id = "51223bd0-ffd1-11df-a976-0801210c9002",
                 CardType = CardType.Ally,
                 Sphere = Sphere.Spirit,
@@ -392,9 +390,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Kristina_Carroll
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Wrapped!",
-                NormalizedTitle = "Wrapped",
                 Id = "51223bd0-ffd1-11df-a976-0801210c9026",
                 CardType = CardType.Treachery,
                 EncounterSet = "The Watcher in the Water",

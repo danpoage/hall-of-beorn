@@ -1157,9 +1157,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Thrór's Map",
-                NormalizedTitle = "Thror's Map",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9084",
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Lore,

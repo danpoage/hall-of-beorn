@@ -40,7 +40,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             {
                 ImageType = Models.ImageType.Jpg,
                 Title = "Théodred",
-                NormalizedTitle = "Theodred",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9002",
                 CardType = CardType.Hero,
                 Sphere = Sphere.Leadership,
@@ -59,9 +58,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Jeff_Himmelman
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Glóin",
-                NormalizedTitle = "Gloin",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9003",
                 CardType = CardType.Hero,
                 Sphere = Sphere.Leadership,
@@ -142,9 +139,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Éowyn",
-                NormalizedTitle = "Eowyn",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9007",
                 CardType = CardType.Hero,
                 Sphere = Sphere.Spirit,
@@ -185,7 +180,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard() {
                 ImageType = Models.ImageType.Jpg,
                 Title = "Dúnhere",
-                NormalizedTitle = "Dunhere",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9009",
                 CardType = CardType.Hero,
                 Sphere = Sphere.Spirit,
@@ -499,9 +493,7 @@ and the City shall be blessed.
                 Artist = Artist.Empty_Room_Studios
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Celebrían's Stone",
-                NormalizedTitle = "Celebrian's Stone",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9027",
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Leadership,
@@ -768,7 +760,6 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
             Cards.Add(new LotRCard() {
                 ImageType = Models.ImageType.Jpg,
                 Title = "Lórien Guide",
-                NormalizedTitle = "Lorien Guide",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9044",
                 CardType = CardType.Ally,
                 Sphere = Sphere.Spirit,
@@ -1043,9 +1034,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Loren_Fetterman
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Gléowine",
-                NormalizedTitle = "Gleowine",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9062",
                 CardType = CardType.Ally,
                 Sphere = Sphere.Lore,
@@ -1076,9 +1065,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Ryan_Barger
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Lórien's Wealth",
-                NormalizedTitle = "Lorien's Wealth",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9064",
                 CardType = CardType.Event,
                 Sphere = Sphere.Lore,
@@ -1157,9 +1144,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Alexandru_Sabo
             });
             Cards.Add(new LotRCard() {
-                ImageType = Models.ImageType.Jpg,
                 Title = "Protector of Lórien",
-                NormalizedTitle = "Protector of Lorien",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9070",
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Lore,
@@ -1684,7 +1669,6 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
             });
             Cards.Add(new LotRCard() {
                 Title = "Nazgûl of Dol Guldur",
-                NormalizedTitle = "Nazgul of Dol Guldur",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9102",
                 CardType = CardType.Enemy,
                 EngagementCost = 40,

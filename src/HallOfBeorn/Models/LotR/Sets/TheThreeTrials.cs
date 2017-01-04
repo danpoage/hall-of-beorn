@@ -72,8 +72,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Rúmil",
-                NormalizedTitle = "Rumil",
-                ImageType = ImageType.Jpg,
                 Id = "56ADA7E6-4981-4BEB-851B-E12633FE1408",
                 CardType = CardType.Ally,
                 Sphere = Models.LotR.Sphere.Tactics,
