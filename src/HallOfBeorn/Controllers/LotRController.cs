@@ -310,29 +310,6 @@ namespace HallOfBeorn.Controllers
             }
         }
 
-        public JsonResult TitleSearch(string term)
-        {
-            //if (string.IsNullOrEmpty(term))
-            //{
-            //    return Json(string.Empty, JsonRequestBehavior.AllowGet);
-            //}
-
-            var match = term.ToLower();
-
-            var results = new List<DeckItemViewModel>();
-
-            foreach (var card in cardRepository.Cards()
-                .Where(x => isPlayerCard(x) && x.Title.ToLower().Contains(match))
-                .Select(x => new CardViewModel(x)))
-            {
-                card.OctgnGuid = octgnService.GetCardOctgnGuid(card.Slug);
-
-                results.Add(new DeckItemViewModel(card));
-            }
-            
-            return Json(results, JsonRequestBehavior.AllowGet);
-        }
-
         public JsonResult ScenarioTotals(string id)
         {
             var data = new ScenarioTotalData();
@@ -1102,13 +1079,6 @@ namespace HallOfBeorn.Controllers
                     }
                 }
             }   
-
-            return View(model);
-        }
-
-        public ActionResult Decks()
-        {
-            var model = new DeckViewModel() { Name = "New Deck" };
 
             return View(model);
         }

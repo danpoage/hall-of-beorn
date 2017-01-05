@@ -64,6 +64,7 @@ namespace HallOfBeorn.Controllers
                 case CardType.Treachery:
                 case CardType.Objective:
                 case CardType.Objective_Ally:
+                case CardType.Objective_Hero:
                 case CardType.Objective_Location:
                 case CardType.Ship_Enemy:
                 case CardType.Ship_Objective:

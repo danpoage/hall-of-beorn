@@ -25,7 +25,7 @@ namespace HallOfBeorn.Models
         {
             var parts = new List<string>();
 
-            parts.Add(Title.NormalizeString());
+            parts.Add(Title.NormalizeCaseSensitiveString());
 
             if (!string.IsNullOrEmpty(SlugSubtitle)) {
                 parts.Add(SlugSubtitle);
@@ -43,7 +43,7 @@ namespace HallOfBeorn.Models
         protected void addTraits(IEnumerable<string> traits)
         {
             foreach (var trait in traits) {
-                var norm = trait.NormalizeString();
+                var norm = trait.NormalizeCaseSensitiveString();
                 if (norm != trait) {
                     normalizedTraits.Add(norm);
                 }
@@ -55,7 +55,7 @@ namespace HallOfBeorn.Models
         protected void addKeywords(IEnumerable<string> keywords)
         {
             foreach (var keyword in keywords) {
-                var norm = keyword.NormalizeString();
+                var norm = keyword.NormalizeCaseSensitiveString();
                 if (norm != keyword) {
                     normalizedKeywords.Add(norm);
                 }
@@ -87,7 +87,7 @@ namespace HallOfBeorn.Models
                 oppositeTitle = value;
 
                 if (value.NormalizeString() != value) {
-                    NormalizedOppositeTitle = value.NormalizeString();
+                    NormalizedOppositeTitle = value.NormalizeCaseSensitiveString();
                 }
             }
         }

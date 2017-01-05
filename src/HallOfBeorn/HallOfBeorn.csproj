@@ -248,9 +248,7 @@
     <Compile Include="Models\LotR\ViewModels\CardViewModel.cs" />
     <Compile Include="Models\LotR\Category.cs" />
     <Compile Include="Models\LotR\Deck.cs" />
-    <Compile Include="Models\LotR\ViewModels\DeckItemViewModel.cs" />
     <Compile Include="Models\LotR\DeckType.cs" />
-    <Compile Include="Models\LotR\ViewModels\DeckViewModel.cs" />
     <Compile Include="Models\LotR\Effect.cs" />
     <Compile Include="Models\LotR\EffectToken.cs" />
     <Compile Include="Models\LotR\EffectTokenType.cs" />
@@ -780,7 +778,6 @@
     <Content Include="Scripts\autocomplete20.js" />
     <Content Include="Scripts\cardDetails.js" />
     <Content Include="Scripts\cardSearch.js" />
-    <Content Include="Scripts\deckBuilder.js" />
     <Content Include="Scripts\highcharts.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -846,7 +843,6 @@
     <Content Include="Views\LotR\Scenarios.cshtml" />
     <Content Include="Views\LotR\AdvancedSearch.cshtml" />
     <Content Include="Error.html" />
-    <Content Include="Views\LotR\Decks.cshtml" />
     <Content Include="Views\Arkham\Search.cshtml" />
     <Content Include="Views\Arkham\Details.cshtml" />
   </ItemGroup>

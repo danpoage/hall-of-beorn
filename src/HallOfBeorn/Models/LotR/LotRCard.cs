@@ -26,6 +26,7 @@ namespace HallOfBeorn.Models.LotR
 
         #region Effect Functions
 
+        /*
         private readonly List<Effect> effects = new List<Effect>();
         public void RenderEffects()
         {
@@ -46,6 +47,7 @@ namespace HallOfBeorn.Models.LotR
             this.Text = text.ToString();
             this.Html = html.ToString();
         }
+        */
 
         private string html;
         private string html2;
@@ -406,6 +408,13 @@ namespace HallOfBeorn.Models.LotR
             return this;
         }
 
+        public LotRCard WithStageLetter(char letter)
+        {
+            StageLetter = letter;
+            return this;
+        }
+
+        /*
         public LotRCard Flavor(string flavor)
         {
             effects.Add(new Effect(CardEffectType.Flavor_Text, LayoutType.Block).Flavor(flavor));
@@ -423,12 +432,7 @@ namespace HallOfBeorn.Models.LotR
             effects.Add(effect);
             return this;
         }
-
-        public LotRCard WithStageLetter(char letter)
-        {
-            StageLetter = letter;
-            return this;
-        }
+        */
 
         #endregion
 
@@ -443,35 +447,7 @@ namespace HallOfBeorn.Models.LotR
         public CardSubtype CardSubtype { get; set; }
         public Sphere Sphere { get; set; }
 
-        private byte maxPerDeck;
-        public byte MaxPerDeck
-        {
-            get
-            {
-                if (maxPerDeck > 0)
-                {
-                    return maxPerDeck;
-                }
-
-                switch (CardType)
-                {
-                    case Models.LotR.CardType.Hero:
-                    case Models.LotR.CardType.Player_Side_Quest:
-                        return 1;
-                    case Models.LotR.CardType.Ally:
-                    case Models.LotR.CardType.Attachment:
-                    case Models.LotR.CardType.Event:
-                        return 3;
-                    default:
-                        return 0;
-                }
-            }
-            set
-            {
-                maxPerDeck = value;
-            }
-        }
-
+        public byte? MaxPerDeck { get; set; }
         public byte? ThreatCost { get; set; }
         public byte? ResourceCost { get; set; }
         public byte? EngagementCost { get; set; }
@@ -553,32 +529,36 @@ namespace HallOfBeorn.Models.LotR
 
                 switch (CardType)
                 {
-                    case Models.LotR.CardType.Hero:
-                    case Models.LotR.CardType.Ally:
-                    case Models.LotR.CardType.Attachment:
-                    case Models.LotR.CardType.Event:
-                    case Models.LotR.CardType.Treasure:
-                    case Models.LotR.CardType.Player_Side_Quest:
+                    case LotR.CardType.Hero:
+                    case LotR.CardType.Ally:
+                    case LotR.CardType.Attachment:
+                    case LotR.CardType.Event:
+                    case LotR.CardType.Treasure:
+                    case LotR.CardType.Player_Side_Quest:
                         return DeckType.Player;
-                    case Models.LotR.CardType.Enemy:
-                    case Models.LotR.CardType.Location:
-                    case Models.LotR.CardType.Treachery:
-                    case Models.LotR.CardType.Objective:
-                    case Models.LotR.CardType.Objective_Ally:
-                    case Models.LotR.CardType.Objective_Hero:
-                    case Models.LotR.CardType.Objective_Location:
-                    case Models.LotR.CardType.Encounter_Side_Quest:
+                    case LotR.CardType.Enemy:
+                    case LotR.CardType.Location:
+                    case LotR.CardType.Treachery:
+                    case LotR.CardType.Objective:
+                    case LotR.CardType.Objective_Ally:
+                    case LotR.CardType.Objective_Hero:
+                    case LotR.CardType.Objective_Location:
+                    case LotR.CardType.Encounter_Side_Quest:
+                    case LotR.CardType.Ship_Objective:
+                    case LotR.CardType.Ship_Enemy:
                         return DeckType.Encounter;
-                    case Models.LotR.CardType.Quest:
-                    case Models.LotR.CardType.Campaign:
-                    case Models.LotR.CardType.GenCon_Setup:
-                    case Models.LotR.CardType.Nightmare_Setup:
+                    case LotR.CardType.Quest:
+                    case LotR.CardType.Campaign:
+                    case LotR.CardType.GenCon_Setup:
+                    case LotR.CardType.Nightmare_Setup:
                         return DeckType.Quest;
                     default:
                         return DeckType.None;
                 }
             }
         }
+
+        #region Static Fluent Helpers
 
         public static LotRCard Hero(string title, string id, Sphere sphere, byte threatCost, byte willpower, byte attack, byte defense, byte hitPoints)
         {
@@ -912,25 +892,7 @@ namespace HallOfBeorn.Models.LotR
             };
         }
 
-        public LotRCard ClearText()
-        {
-            this.Text = string.Empty;
-            return this;
-        }
-
-        /*
-        public LotRCard WithShortSlug(string shortSlug)
-        {
-            this.ShortSlug = shortSlug;
-            return this;
-        }
-
-        public LotRCard WithOctgnSlug(string octgnSlug)
-        {
-            this.OctgnSlug = octgnSlug;
-            return this;
-        }
-        */
+        #endregion
 
         public LotRCard WithGeneric()
         {

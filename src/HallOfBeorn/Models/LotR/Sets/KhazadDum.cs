@@ -635,7 +635,8 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Quantity = 3,
                 ResourceCost = 0,
                 Text = "Action: Choose a Dwarf character. Until the end of the phase, that character gets +3 Attack.",
-                HtmlTemplate = "<p><b>Action:</b> Choose a {trait-character:Dwarf.@Dwarf}. Until the end of the phase, that character gets +3 Attack.</p>",
+                FlavorText = "Down from the wall leapt Gimli with a fierce cry the echoed in the cliffs. \"Khazâd! Khazâd!\" He soon had work enough.\r\n-The Two Towers",
+                HtmlTemplate = "<p><b>Action:</b> Choose a {trait-character:Dwarf.@Dwarf} character. Until the end of the phase, that character gets +3 {Attack}.</p><p class='flavor-text'>Down from the wall leapt Gimli with a fierce cry the echoed in the cliffs. &quot;Khazâd! Khazâd!&quot; He soon had work enough.<br>&ndash;The Two Towers</p>",
                 CardNumber = 8,
                 Artist = Artist.Igor_Kieryluk
             });
