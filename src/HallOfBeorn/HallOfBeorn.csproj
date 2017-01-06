@@ -235,7 +235,6 @@
     <Compile Include="Models\Card.cs" />
     <Compile Include="Models\LotR\ViewModels\BrowseProductViewModel.cs" />
     <Compile Include="Models\LotR\ViewModels\BrowseViewModel.cs" />
-    <Compile Include="Models\LotR\CardEffectType.cs" />
     <Compile Include="Models\CardNote.cs" />
     <Compile Include="Models\LotR\CardSubtype.cs" />
     <Compile Include="Models\LotR\LotRCard.cs" />
@@ -249,9 +248,6 @@
     <Compile Include="Models\LotR\Category.cs" />
     <Compile Include="Models\LotR\Deck.cs" />
     <Compile Include="Models\LotR\DeckType.cs" />
-    <Compile Include="Models\LotR\Effect.cs" />
-    <Compile Include="Models\LotR\EffectToken.cs" />
-    <Compile Include="Models\LotR\EffectTokenType.cs" />
     <Compile Include="Models\LotR\EncounterCategory.cs" />
     <Compile Include="Models\LotR\EncounterSet.cs" />
     <Compile Include="Models\LotR\ViewModels\EncounterSetViewModel.cs" />
