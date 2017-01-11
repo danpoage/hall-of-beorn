@@ -179,8 +179,6 @@ namespace HallOfBeorn.Models.LotR.Sets
 
             Cards.Add(new LotRCard()
             {
-                HasSecondImage = true,
-                
                 Id = "30a319ff-6092-4d5f-9b94-2a9b4f44f9c1",
                 StageNumber = 1,
                 CardType = Models.LotR.CardType.Quest,
@@ -198,8 +196,6 @@ namespace HallOfBeorn.Models.LotR.Sets
 
             Cards.Add(new LotRCard()
             {
-                HasSecondImage = true,
-                
                 Id = "49aa4e88-3774-43f7-ab8d-05268ed3fb7e",
                 StageNumber = 2,
                 CardType = Models.LotR.CardType.Quest,
@@ -216,8 +212,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard()
             {
-                HasSecondImage = true,
-                
                 Id = "8b4dd0c5-3847-46f6-a69b-a4c7ee2b21c8",
                 StageNumber = 3,
                 CardType = Models.LotR.CardType.Quest,

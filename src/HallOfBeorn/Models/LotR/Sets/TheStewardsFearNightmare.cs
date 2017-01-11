@@ -18,7 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "The Steward's Fear Nightmare",
-                HasSecondImage = true,
                 Id = "149CC227-7C4D-4647-BE5B-C5F8C0ACB385",
                 CardType = CardType.Nightmare_Setup,
                 Text = "You are playing Nightmare mode.\r\nSteup: Shuffle each copy of False Accusations into the underworld deck. When randomly determining which Plot is the \"hidden\" plot cardm include the 2 new Plot cards from the Nightmare Deck, as well as the 3 Plot cards from the original scenario.\r\nForced: After an enemy is destroyed, shuffle it into the underworld deck if you are not at stage 3.\r\nForced: At the beginning of the refresh phase, if there is a Clue card in the staging area, shuffle it back into the underworld deck.",

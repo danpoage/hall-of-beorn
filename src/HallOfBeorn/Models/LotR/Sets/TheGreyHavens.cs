@@ -165,7 +165,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithInfo(26, 1, Artist.Jon_Bosco));
             Cards.Add(LotRCard.Location("Shrine to Morgoth", "", "The Fate of Númenor", 5, 8)
                 .WithUnique()
-                .WithSecondImage("Lost-Island")
+                .WithOppositeTitle("Lost Island")
                 .WithKeywords("Uncharted.")
                 .WithOppositeText("Uncharted.\r\nCannot have player card attachments.\r\nForced: After Lost Island becomes the active location, flip it over.\r\nAction: Remove 4 progress from Lost Island to look at its facedown side.")
                 .WithTraits("Ruins.")
@@ -182,14 +182,14 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithEasyModeQuantity(2)
                 .WithInfo(29, 3, Artist.Florian_Devos));
             Cards.Add(LotRCard.Location("Lush Jungle", "", "The Fate of Númenor", 4, 4)
-                .WithSecondImage("Lost-Island")
+                .WithOppositeTitle("Lost Island")
                 .WithKeywords("Uncharted.")
                 .WithOppositeText("Uncharted.\r\nCannot have player card attachments.\r\nForced: After Lost Island becomes the active location, flip it over.\r\nAction: Remove 4 progress from Lost Island to look at its facedown side.")
                 .WithTraits("Forest.")
                 .WithText("While Lush Jungle is in the staging area, characters get –1 Attack and lose ranged.\r\nForced: After Lush Jungle is flipped over while active, return it to the staging area unless each player exhausts each ready hero he controls.")
                 .WithInfo(30, 2, Artist.Katy_Grierson));
             Cards.Add(LotRCard.Location("Forbidden Coast", "", "The Fate of Númenor", 1, 6)
-                .WithSecondImage("Lost-Island")
+                .WithOppositeTitle("Lost Island")
                 .WithKeywords("Uncharted.")
                 .WithOppositeText("Uncharted.\r\nCannot have player card attachments.\r\nForced: After Lost Island becomes the active location, flip it over.\r\nAction: Remove 4 progress from Lost Island to look at its facedown side.")
                 .WithTraits("Coastland.")
@@ -410,7 +410,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithEasyModeQuantity(0)
                 .WithInfo(71, 2, Artist.Piya_Wannachaiwong));
             Cards.Add(LotRCard.Location("Flooded Ruins", "", "Ruins of Númenor", 3, 5)
-                .WithSecondImage("Lost-Island")
+                .WithOppositeTitle("Lost Island")
                 .WithKeywords("Uncharted.")
                 .WithOppositeText("Cannot have player card attachments.\r\nForced: After Lost Island becomes the active location, flip it over.\r\nAction: Remove 4 progress from Lost Island to look at its facedown side.")
                 .WithTraits("Ruins.")
@@ -418,7 +418,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithFlavor("Númenor was thrown down and swallowed in the sea... –The Return of the King")
                 .WithInfo(72, 2, Artist.Juan_Carlos_Barquet));
             Cards.Add(LotRCard.Location("Drowned Graves", "", "Ruins of Númenor", 2, 2)
-                .WithSecondImage("Lost-Island")
+                .WithOppositeTitle("Lost Island")
                 .WithKeywords("Uncharted.")
                 .WithOppositeText("Cannot have player card attachments.\r\nForced: After Lost Island becomes the active location, flip it over.\r\nAction: Remove 4 progress from Lost Island to look at its facedown side.")
                 .WithTraits("Ruins.")
@@ -426,7 +426,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithFlavor("...their years lessened as their fear of death grew, and their joy departed. –The Return of the King")
                 .WithInfo(73, 2, Artist.Juan_Carlos_Barquet));
             Cards.Add(LotRCard.Location("Cursed Temple", "", "Ruins of Númenor", 1, 3)
-                .WithSecondImage("Lost-Island")
+                .WithOppositeTitle("Lost Island")
                 .WithKeywords("Uncharted.")
                 .WithOppositeText("Cannot have player card attachments.\r\nForced: After Lost Island becomes the active location, flip it over.\r\nAction: Remove 4 progress from Lost Island to look at its facedown side.")
                 .WithTraits("Ruins.")

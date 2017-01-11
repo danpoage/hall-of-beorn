@@ -18,8 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Over the Misty Mountains Grim Nightmare",
-                HasSecondImage = true,
-                
                 Id = "857AD504-541B-48B0-9DEB-AB31B122C50D",
                 CardType = CardType.Nightmare_Setup,
                 Text = "You are playing Nightmare mode.\r\n\r\nWhen resolving the \"when revealed\" effect of stage 3B, no more than X resources may be spent from Bilbo Baggins's resource pool, where X is the number of players in the game.",

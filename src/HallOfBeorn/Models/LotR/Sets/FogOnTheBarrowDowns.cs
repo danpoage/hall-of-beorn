@@ -19,8 +19,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             {
                 Title = "Fog on the Barrow-downs Scenario Rules",
                 Id = "BE094FA5-B976-4888-AB7A-D3E257E390C9",
-                
-                HasSecondImage = true,
                 CardType = CardType.GenCon_Setup,
                 Text = 
 @"New Staging Rules
@@ -46,8 +44,6 @@ During the encounter phase, players only reveal 1 card per player that shares th
             {
                 Title = "Fog on the Barrow-downs Campaign Rules",
                 Id = "E953D925-0DA7-4AA4-AE85-A98A8C1815DA",
-                
-                HasSecondImage = true,
                 CardType = CardType.GenCon_Setup,
                 Text =
 @"Stage 3B - Lost in the Fog
@@ -102,8 +98,6 @@ The Lord of the ~Rings: The Black Riders Saga Expansion is required to play Fog 
                 Title = "The House of Tom Bombadil",
                 Id = "BACA2A71-4CE6-4003-B8D1-8279869DF137",
                 CardType = CardType.Quest,
-                HasSecondImage = true,
-                
                 StageNumber = 1,
                 QuestPoints = 1,
                 FlavorText = "After rescuing the hobbits from Old Man Willow, Tom Bombadil has invited Frodo and his friends to stay the night in his house. There they are greeted warmly by his wife, Goldberry, the River-daughter.",
@@ -119,9 +113,7 @@ The Lord of the ~Rings: The Black Riders Saga Expansion is required to play Fog 
             {
                 Title = "Across the Downs",
                 Id = "E15090E3-CF35-4BF5-9B89-38D09CA8A9E0",
-                HasSecondImage = true,
                 CardType = Models.LotR.CardType.Quest,
-                
                 StageNumber = 2,
                 Text = "When Revealed: Add Hollow Circle to the staging area. Each player reveals 1 encounter card.",
                 OppositeText = "Forced: At the end of the refresh phase, raise each player's threat by 1.\r\nThe players cannot defeat this stage unless Hollow Circle is in the victory display.",
@@ -136,9 +128,7 @@ The Lord of the ~Rings: The Black Riders Saga Expansion is required to play Fog 
             {
                 Title = "Lost in the Fog",
                 Id = "56D70012-B295-468A-9064-4E1C22BF9C9D",
-                HasSecondImage = true,
                 CardType = Models.LotR.CardType.Quest,
-                
                 StageNumber = 3,
                 Text = "When Revealed: The first player adds Standing Stones to the staging area. Each other player reveals 1 encounter card. Shuffle the encounter discard pile and each copy of Great Barrows into the encounter deck.",
                 OppositeText = 
@@ -158,9 +148,7 @@ The players cannot defeat this stage unless each player in the game is at this s
             {
                 Title = "Trapped Inside a Barrow",
                 Id = "E84070BC-F6B6-4ED3-8CAC-158CE4268696",
-                HasSecondImage = true,
                 CardType = Models.LotR.CardType.Quest,
-                
                 StageNumber = 4,
                 Text = "When Revealed: End your quest phase (do not resolve the quest). Discard cards from the encounter deck until a Wight enemy is discarded. Add the discarded Wight enemy to the staging area. Discard all but X allies you control where X is the number of enemies engaged with you.",
                 OppositeText = 
@@ -414,13 +402,9 @@ Forced: After this stage is defeated, advance to stage 3B at the beginning of th
                 Title = "Fog on the Barrow-downs",
                 OppositeTitle = "The Lord of the Rings Part 1.2",
                 SlugIncludesType = true,
-                HasSecondImage = true,
                 Id = "ACC07870-CD7F-4B88-A8A5-6C1FBFF6A55D",
                 CardType = CardType.Campaign,
-                Text =
-@"You are playing Campaign Mode.
-
-Setup: While any player is at stage 4B, the first player cannot lose control of the first player token.",
+                Text = "You are playing Campaign Mode.\r\nSetup: While any player is at stage 4B, the first player cannot lose control of the first player token.",
                 FlavorText = "Even in the Shire the rumour of the Barrow-wights of the Barrow-downs beyond the Forest had been heard. But it was not a tale than any hobbit liked to listen to, even by a comfortable fireside far away. -The Fellowship of the Ring",
                 OppositeText = "Resolution: The players have earned the Ho! Tom Bombadil! boon card.",
                 OppositeFlavorText = "At last they set off. They led their ponies down the hill; and then mounting they trotted quickly along the valley. They looked back and saw the top of the old mound on the hill, and from it the sunlight on the gold went up like a yellow flame. Then they turned a shoulder of the Downs and it was hidden from view.\r\n-The Fellowship of the Ring",

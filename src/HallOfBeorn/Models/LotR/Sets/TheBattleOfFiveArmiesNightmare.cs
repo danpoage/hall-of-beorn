@@ -18,7 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "The Battle of Five Armies Nightmare",
-                HasSecondImage = true,
                 Id = "4B62A616-0F18-4577-A42D-0ACABA3703CF",
                 CardType = CardType.Nightmare_Setup,
                 Text =

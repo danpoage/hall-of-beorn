@@ -18,8 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Shadow and Flame Nightmare",
-                HasSecondImage = true,
-                
                 Id = "9331CC57-75DA-4FE0-9961-179232C03F02",
                 CardType = CardType.Nightmare_Setup,
                 Text =

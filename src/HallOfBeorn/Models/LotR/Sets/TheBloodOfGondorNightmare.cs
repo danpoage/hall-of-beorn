@@ -18,7 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "The Blood of Gondor Nightmare",
-                HasSecondImage = true,
                 Id = "08D3CCC2-D32F-406B-A497-33A3FD9CF044",
                 CardType = CardType.Nightmare_Setup,
                 Text = 

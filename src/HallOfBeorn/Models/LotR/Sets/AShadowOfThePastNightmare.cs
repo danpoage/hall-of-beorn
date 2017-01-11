@@ -18,8 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "A Shadow of the Past Nightmare",
-                HasSecondImage = true,
-                
                 Id = "28724329-65BE-4799-A3E8-4A6FD4608748",
                 CardType = CardType.Nightmare_Setup,
                 Text =

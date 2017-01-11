@@ -18,7 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Conflict at the Carrock Nightmare",
-                HasSecondImage = true,
                 Id = "2E094DA7-6760-45AB-9E2E-E2BAA5F58BE7",
                 CardType = CardType.Nightmare_Setup,
                 Text =
@@ -234,8 +233,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Grimbeorn's Folly",
-                
-                HasSecondImage = true,
                 Id = "ED52944F-1499-4A0A-BB84-3CE5C18952DE",
                 CardType = CardType.Quest,
                 StageNumber = 3,

@@ -20,7 +20,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = setName,
-                HasSecondImage = true,
                 CardType = CardType.Nightmare_Setup,
                 Text = "You are playing Nightmare mode.\r\nSetup: Raise each player's starting threat by 5.\r\nProgress cannot be placed on Crossing at Tharbad while Bellach is in play.",
                 FlavorText = "The houses looked large and strange to them. Sam stared up at the inn with its three storeys and many windows, and felt his heart sink.\r\n-The Fellowship of the Ring",

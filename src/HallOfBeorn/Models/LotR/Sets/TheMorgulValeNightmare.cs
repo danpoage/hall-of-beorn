@@ -18,7 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "The Morgul Vale Nightmare",
-                HasSecondImage = true,
                 Id = "7DFF5DF8-99C4-4DE0-9EEC-83B27680D89B",
                 CardType = CardType.Nightmare_Setup,
                 Text = "You are playing Nightmare mode.\r\nSetup: Place 1 progress on To the Tower.",

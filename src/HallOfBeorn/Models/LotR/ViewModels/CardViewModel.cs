@@ -689,11 +689,46 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}-Setup{2}.jpg", set, title, suffix);
         }
 
+        public bool HasSecondImage
+        {
+            get
+            {
+                if (_card.CardType == LotR.CardType.Location && !string.IsNullOrEmpty(_card.OppositeTitle)) {
+                    return true;
+                }
+
+                switch (_card.CardType)
+                {
+                    case LotR.CardType.Quest:
+                    case LotR.CardType.Scenario:
+                    case LotR.CardType.Campaign:
+                    case LotR.CardType.GenCon_Setup:
+                    case LotR.CardType.Nightmare_Setup:
+                        return true;
+                    default:
+                        return false;
+                }
+            }
+        }
+
+        private string secondImagePath
+        {
+            get
+            {
+                if (_card.CardType == CardType.Location && !string.IsNullOrEmpty(_card.OppositeTitle))
+                {
+                    return _card.OppositeTitle.ToUrlSafeString();
+                }
+
+                return string.Empty;
+            }
+        }
+
         public string ImagePath1
         {
             get {
 
-                if (_card.HasSecondImage && !string.IsNullOrEmpty(_card.SecondImagePath))
+                if (HasSecondImage && !string.IsNullOrEmpty(secondImagePath))
                 {
                     return ImagePath;
                 }
@@ -717,10 +752,10 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             get
             {
-                if (_card.HasSecondImage && !string.IsNullOrEmpty(_card.SecondImagePath))
+                if (HasSecondImage && !string.IsNullOrEmpty(secondImagePath))
                 {
                     var set = !string.IsNullOrEmpty(_card.CardSet.NormalizedName) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
-                    return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}.jpg", set, _card.SecondImagePath);
+                    return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}.jpg", set, secondImagePath);
                 }
 
                 switch (_card.CardType)
@@ -736,11 +771,6 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                         return null;
                 }
             }
-        }
-
-        public bool HasSecondImage
-        {
-            get { return _card.HasSecondImage; }
         }
 
         public bool HasCategories

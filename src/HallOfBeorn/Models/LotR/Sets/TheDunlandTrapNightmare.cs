@@ -20,7 +20,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = setName,
-                HasSecondImage = true,
                 CardType = CardType.Nightmare_Setup,
                 Text = "You are playing Nightmare mode.",
                 FlavorText = "\"I hear them,\" said Éomer; \"but they are only the screams of birds and the bellowing of beasts to my ears.\"\r\n-The Two Towers",

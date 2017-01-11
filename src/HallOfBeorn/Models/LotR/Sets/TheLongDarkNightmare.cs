@@ -18,8 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "The Long Dark Nightmare",
-                HasSecondImage = true,
-                
                 Id = "A4144835-46A7-460A-8D58-CC1C25D973ED",
                 CardType = CardType.Nightmare_Setup,
                 Text =

@@ -20,7 +20,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = setName,
-                HasSecondImage = true,
                 CardType = CardType.Nightmare_Setup,
                 Text = "You are playing Nightmare mode.\r\nForced: After the players advance to a new quest stage, each player with fewer than 3 cards in his hand draws 3 cards.",
                 FlavorText = "\"Not in half a thousand years have they forgotten their grievance that the lords of Gondor gave the Mark to Eorl the young and made alliance with him.\" -Gamling, The Two Towers",

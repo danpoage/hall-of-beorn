@@ -18,8 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Passage Through Mirkwood Nightmare",
-                HasSecondImage = true,
-                
                 Id = "e84f94bf-201b-4adf-95d2-0012e0bb5001",
                 CardType = CardType.Nightmare_Setup,
                 Text =

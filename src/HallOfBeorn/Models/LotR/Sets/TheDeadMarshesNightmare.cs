@@ -18,8 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "The Dead Marshes Nightmare",
-                HasSecondImage = true,
-                
                 Id = "B4BE3175-F193-464F-A6CE-79C9AA55DB44",
                 CardType = CardType.Nightmare_Setup,
                 Text =

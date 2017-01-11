@@ -19,7 +19,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "The Drúadan Forest Nightmare",
-                HasSecondImage = true,
                 Id = "2795E34C-6744-425F-8696-1A27A66E3742",
                 CardType = CardType.Nightmare_Setup,
                 Text = 

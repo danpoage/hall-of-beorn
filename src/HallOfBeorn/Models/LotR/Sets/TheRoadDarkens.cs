@@ -344,9 +344,6 @@ Response: After attached hero exhausts to defend an attack, discard the top card
             {
                 Title = "The Ring Goes South",
                 CardType = Models.LotR.CardType.Campaign,
-                
-                HasSecondImage = true,
-                
                 SlugIncludesType = true,
                 Id = "DFF44707-3468-4E8F-AB49-DF4E5E6D93FC",
                 OppositeTitle = "The Lord of the Rings Part 4",
@@ -366,10 +363,7 @@ Setup: Each player may change hero cards he controls without incurring the +1 th
             {
                 Title = "The Council of Elrond",
                 Id = "D49C15DD-1D36-4716-A754-B192CC59D5E3",
-                
-                HasSecondImage = true,
                 CardType = CardType.Quest,
-                
                 StageNumber = 1,
                 EncounterSet = "The Ring Goes South",
                 Text = "Setup: Set Lust for the Ring, Redhorn Pass, Doors of Durin and Watcher in the Water aside, out of play. Shuffle the encounter deck.",
@@ -384,10 +378,7 @@ Setup: Each player may change hero cards he controls without incurring the +1 th
             {
                 Title = "The Nine Walkers",
                 Id = "855DC3F7-9DB8-48BB-9BA1-ABDCEEAE1074",
-                
-                HasSecondImage = true,
                 CardType = CardType.Quest,
-                
                 StageNumber = 2,
                 EncounterSet = "The Ring Goes South",
                 Text = "When Revealed: Make Redhorn Pass the active location. The first player reveals cards from the encounter deck until there is at least X Threat in the staging area. X is twice the number of players in the game.",
@@ -403,10 +394,7 @@ Setup: Each player may change hero cards he controls without incurring the +1 th
             {
                 Title = "The Hunt is Up!",
                 Id = "15A0614C-85DB-4FA1-8BD6-7C53CC9357A0",
-                
-                HasSecondImage = true,
                 CardType = CardType.Quest,
-                
                 StageNumber = 3,
                 EncounterSet = "The Ring Goes South",
                 Text = "When Revealed: Each player searches the encounter deck and discard pile for an enemy and adds it to the staging area. One of those enemies must be Great Warg Chief, if able. Shuffle the encounter deck.",
@@ -422,10 +410,7 @@ Setup: Each player may change hero cards he controls without incurring the +1 th
             {
                 Title = "The Gates of Moria",
                 Id = "855B100F-5BE9-4651-91D8-C559DAAE5E77",
-                
-                HasSecondImage = true,
                 CardType = CardType.Quest,
-                
                 StageNumber = 4,
                 EncounterSet = "The Ring Goes South",
                 Text = "When Revealed: Make Doors of Durin the active location. Add Watcher in the Water to the staging area. Discard all tokens from the Ring-bearer and place it (and each card attached to it) facedown under Watcher in the Water.",
@@ -716,16 +701,10 @@ Forced: When ~Hills of Hollin is explored, each player raises his threat by 1 fo
             {
                 Title = "Journey in the Dark",
                 CardType = Models.LotR.CardType.Campaign,
-                
-                HasSecondImage = true,
                 SlugIncludesType = true,
                 Id = "952913FB-ACC2-4A0C-A802-D841D9F18198",
-                
                 OppositeTitle = "The Lord of the Rings Part 5",
-                Text =
-@"You are playing in Campaign Mode.
-
-Setup: Shuffle the burder treachery cards Pursued by the Enemy and Shadow of Fear, into the encounter deck. Add the burden objective cards Grievous Wound and Overcome by Grief to the staging area.",
+                Text = "You are playing in Campaign Mode.\r\nSetup: Shuffle the burder treachery cards Pursued by the Enemy and Shadow of Fear, into the encounter deck. Add the burden objective cards Grievous Wound and Overcome by Grief to the staging area.",
                 FlavorText = "\"Well, well!\" said the wizard. \"The passage is blocked behind us now and there is only one way out - on the other side of the mountains.\" -The Fellowship of the Ring",
                 OppositeText = "Resolution: The first player must choose one of the burden treachery cards (Pursued by the Enemy or Shadow of Fear), and one of the burden objective cards (Grievous Wound or Overcome by Grief) and add to the Campaign Pool. If The Balrog is still in play, the first player must choose all 4 burden cards instead. The chosen burdens have been earned by the players.",
                 OppositeFlavorText = "They ran on. The light grew before them; great shafts pierced the roof. They ran swifter. They passed into a hall, bright with daylight from its high windows in the east. They fled across it. Through its huge broken doors they passed, and suddenly before them the Great Gates opened, an arch of blazing light. -The Fellowship of the Ring",
@@ -738,10 +717,7 @@ Setup: Shuffle the burder treachery cards Pursued by the Enemy and Shadow of Fea
             {
                 Title = "The Long Dark of Moria",
                 Id = "1C1EC6D0-14E5-4563-A52C-7B2B51FCA760",
-                
-                HasSecondImage = true,
                 CardType = CardType.Quest,
-                
                 StageNumber = 1,
                 EncounterSet = "Journey in the Dark",
                 Text = "Setup: Set The ~Balrog, The Great ~Bridge, and Chamber of Mazarbul aside out of play. Add Doom, Doom, Doom to the staging area and place 10 damage tokens on it. Each player adds 1 different location to the staging area.",
@@ -757,21 +733,13 @@ Setup: Shuffle the burder treachery cards Pursued by the Enemy and Shadow of Fea
             {
                 Title = "Drums in the Deep",
                 Id = "8AF12E34-E1F4-490E-9926-74929D6F9649",
-                
-                HasSecondImage = true,
                 CardType = CardType.Quest,
-                
                 StageNumber = 2,
                 EncounterSet = "Journey in the Dark",
                 Text = "When Revealed: Add Chamber of Mazarbul to the staging area.",
                 FlavorText = "Then there came an echoing blast: a great horn was blown in the hall, and answering horns and harsh cries were heard further off. There was a hurrying sound of many feet. -The Fellowship of the Ring",
                 QuestPoints = 9,
-                OppositeText = 
-@"If there are no enemies in the staging area at the beginning of the quest phase, the first player reveals an additional encounter card during the staging step.
-
-The players cannot advance unless there are X resource tokens on this stage. X is the number of players times 3.
-
-Forced: After an enemy is defeated, place 1 resource token on this stage.",
+                OppositeText = "If there are no enemies in the staging area at the beginning of the quest phase, the first player reveals an additional encounter card during the staging step.\r\nThe players cannot advance unless there are X resource tokens on this stage. X is the number of players times 3.\r\nForced: After an enemy is defeated, place 1 resource token on this stage.",
                 CardNumber = 41,
                 Quantity = 1,
                 Artist = Artist.Nate_Abell
@@ -780,18 +748,13 @@ Forced: After an enemy is defeated, place 1 resource token on this stage.",
             {
                 Title = "The Bridge of Khazad-dûm",
                 Id = "F836D78D-C291-43DE-A562-144D4ABC4F4A",
-                HasSecondImage = true,
                 CardType = CardType.Quest,
-                
                 StageNumber = 3,
                 EncounterSet = "Journey in the Dark",
                 Text = "When Revealed: Add The Great ~Bridge to the staging area. Each player reveals 1 encounter card and removes 1 damage token from ~Doom, ~Doom, ~Doom.",
                 FlavorText = "The outer door could only be reached by a slender bridge of stone, without kerb or rail, that spanned the chasm with one curving spring of fifty feet. -The Fellowship of the Ring",
                 QuestPoints = 15,
-                OppositeText =
-@"No more than 5 progress can be placed on this stage each round.
-
-The players cannot defeat this stage while The Great Bridge is in play. If the players defeat this stage, they win the game.",
+                OppositeText = "No more than 5 progress can be placed on this stage each round.\r\nThe players cannot defeat this stage while The Great Bridge is in play. If the players defeat this stage, they win the game.",
                 OppositeFlavorText = "\"Now for the last race!\" said Gandalf. \"If the sun is shining outside we may still escape. After me!\" -The Fellowship of the Ring",
                 CardNumber = 42,
                 Quantity = 1,
@@ -1091,17 +1054,10 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
             {
                 Title = "Breaking of the Fellowship",
                 CardType = Models.LotR.CardType.Campaign,
-                
-                HasSecondImage = true,
-                
-                //CampaignCardType = Models.CampaignCardType.Campaign,
                 SlugIncludesType = true,
                 Id = "EC6105D0-33EE-436B-83CC-A7DF744E68CC",
                 OppositeTitle = "The Lord of the Rings Part 6",
-                Text =
-@"You are playing in Campaign Mode.
-
-Setup: Starting with the first player, each player chooses 1 of the following boon cards: Phial of Galadriel, Three Golden Hairs, Lórien Rope, or Leaf-wrapped Lembas, and attaches it to a hero he controls. The chosen boon cards have been earned by the players. Shuffle Followed by Night and Ill Fate into the encounter deck.",
+                Text = "You are playing in Campaign Mode.\r\nSetup: Starting with the first player, each player chooses 1 of the following boon cards: Phial of Galadriel, Three Golden Hairs, Lórien Rope, or Leaf-wrapped Lembas, and attaches it to a hero he controls. The chosen boon cards have been earned by the players. Shuffle Followed by Night and Ill Fate into the encounter deck.",
                 FlavorText = "\"But this I will say to you: your Quest stands upon the edge of a knife. Stray but a little and it will fail, to the ruin of all.\" -Galadriel, The Fellowship of the Ring",
                 OppositeText = "Resolution: If Fallen into Evil is attached to a hero, add that hero to the list of Fallen Heroes in the Campaign Log.\r\nThe first player chooses either Followed by Night or Ill Fate to be added to the campaign pool. The chosen burden card has been earned by the players.\r\nEach player chooses 1 hero he controls (other than the Ring-bearer or Aragorn) to be taken captive. Record the name of each \"captive\" in the Notes section of the Campaign Log.",
                 OppositeFlavorText = "I would have guided Frodo to Mordor and gone with him to the end; but if I seek him now in the wilderness, I must abandon the captives to torment and death. My heart speaks clearly at last: the fate of the Bearer is in my hands no longer. The Company has played its part. Yet we that remain cannot forsake our companions while we have strength left. Come! We will go now. Leave all that can be spared behind! We will press on by day and dark! -Aragorn, The Two Towers",
@@ -1114,10 +1070,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "The Great River",
                 Id = "9B5F7D5B-895F-479A-937B-7F4ADB7ECEEB",
-                
                 CardType = CardType.Quest,
-                HasSecondImage = true,
-                
                 StageNumber = 1,
                 QuestPoints = 12,
                 Text = "Setup: Set Frodo's Choice, Seat of Seeing, and Parth Galen aside, out of play. Add The Argonath and Sarn Gebir to the staging area.",
@@ -1133,10 +1086,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "The Company Divided",
                 Id = "40144880-A0D8-4B0D-94C1-4E882C10A10E",
-                
                 CardType = CardType.Quest,
-                HasSecondImage = true,
-                
                 StageNumber = 2,
                 QuestPoints = null,
                 Text = "When Revealed: Remove the Ring-bearer, and each card attached to it, from the game (treat The One Ring's text as blank while resolving this effect). Reduce each enemy's engagement cost to 0 until the end of the encounter phase. Skip the travel phase this round.",
@@ -1151,10 +1101,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "Searching the Woods",
                 Id = "F97A9D56-D91E-42CA-805C-6F0326B9F606",
-                
                 CardType = CardType.Quest,
-                HasSecondImage = true,
-                
                 StageNumber = 3,
                 QuestPoints = null,
                 Text = "Forced: After stage 2B is discarded, if the total Threat of the encounter cards in this staging area is less than 4, reveal 1 encounter card.",
@@ -1169,10 +1116,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "Guard the Hobbits",
                 Id = "93652F64-1A7A-453D-95B5-5C8DBCF1EDFF",
-                
                 CardType = CardType.Quest,
-                HasSecondImage = true,
-                
                 StageNumber = 3,
                 QuestPoints = null,
                 Text = "Forced: After stage 2B is discarded, if the total Threat of encounter cards in this staging area is less than 4, reveal 1 encounter card.",
@@ -1187,10 +1131,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "The Seat of Amon Hen",
                 Id = "B3AEC66C-0D33-4043-8719-A75782AE3CA4",
-                
                 CardType = CardType.Quest,
-                HasSecondImage = true,
-                
                 StageNumber = 3,
                 QuestPoints = null,
                 Text = "Forced: After stage 2B is discarded, if the total Threat of encounter cards in this staging area is less than 4, reveal 1 encounter card.",
@@ -1205,10 +1146,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "Orc Hunting",
                 Id = "BFA38F37-C2BC-42E1-9595-A2BB78712952",
-                
                 CardType = CardType.Quest,
-                HasSecondImage = true,
-                
                 StageNumber = 3,
                 QuestPoints = null,
                 Text = "Forced: After stage 2B is discarded, if the total Threat of encounter cards in this staging area is less than 4, reveal 1 encounter card.",
@@ -1223,10 +1161,7 @@ Setup: Starting with the first player, each player chooses 1 of the following bo
             {
                 Title = "The Ring-bearer Sets Out",
                 Id = "E667DDD0-93ED-4B3C-AE34-AD69A3D5220C",
-                
                 CardType = CardType.Quest,
-                HasSecondImage = true,
-                
                 StageNumber = 4,
                 QuestPoints = 16,
                 Text = "When Revealed: Add Parth Galen to the staging area. If it is your quest phase, end the phase (do not resolve the quest).",

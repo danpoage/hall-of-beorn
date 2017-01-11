@@ -20,13 +20,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Title = "The Old Forest Introduction",
                 Id = "1C97EC47-0AF3-4038-9FE1-FC308E965487",
                 CardType = CardType.GenCon_Setup,
-                HasSecondImage = true,
-                OppositeText = 
-@"~Escape the agents of ~Mordor searching for you in the ~Shire by braving a trip through the strange woods on its border in The Old ~Forest, a scenario designed for The Lord of the ~Rings : The Card Game special event at Gen Con 2014! This scenario can be played as a stand-alone adventure or as part of your Lord of the ~Rings campaign. To play The Old ~Forest in campaign mode, see page 4/4 of this expansion.
-
-Expansion Symbol
-
-The cards in The Old ~Forest scenario can be identified by this symbol before each card's collector number.",
+                OppositeText = "~Escape the agents of ~Mordor searching for you in the ~Shire by braving a trip through the strange woods on its border in The Old ~Forest, a scenario designed for The Lord of the ~Rings : The Card Game special event at Gen Con 2014! This scenario can be played as a stand-alone adventure or as part of your Lord of the ~Rings campaign. To play The Old ~Forest in campaign mode, see page 4/4 of this expansion.\r\nExpansion Symbol\r\nThe cards in The Old ~Forest scenario can be identified by this symbol before each card's collector number.",
                 OppositeFlavorText = "\"But you won't have any luck in the Old Forest,\" objected Fedegar, \"No one ever had luck there. You'll get lost.\"\r\n-The Fellowship of the Ring",
                 CardNumber = 0,
                 Quantity = 1,
@@ -37,7 +31,6 @@ The cards in The Old ~Forest scenario can be identified by this symbol before ea
                 Title = "The Old Forest Scenario Rules",
                 Id = "D54CFC5A-86CD-4CDD-BB8F-91FEE2D19171",
                 CardType = CardType.GenCon_Setup,
-                HasSecondImage = true,
                 Text =
 @"New Staging Rules
 
@@ -107,12 +100,9 @@ The Lord of the ~Rings : The Black Riders Saga Expansion is required to play The
                 Title = "Farewell to the Shire",
                 Id = "1351C3CA-4CC0-445E-BF8F-7FBE21E3F407",
                 CardType = Models.LotR.CardType.Quest,
-                HasSecondImage = true,
-                
                 StageNumber = 1,
                 QuestPoints = 0,
-                Text = 
-@"Setup: Set Old Man Willow and Withywindle aside, out of play. Each player searches the encounter deck and adds 1 different location to the staging area. Shuffle the encounter deck.",
+                Text = "Setup: Set Old Man Willow and Withywindle aside, out of play. Each player searches the encounter deck and adds 1 different location to the staging area. Shuffle the encounter deck.",
                 FlavorText = "After being pursued through the Shire by mysterious riders in black, Frodo and his friends decide that the safest way for them to continue their journey to Rivendell is to travel through the Old Forest.",
                 OppositeText = "When Revealed: Each player draws 1 card. Advance to a random stage 2A.",
                 OppositeFlavorText = "\"You have left the Shire, and are now outside, and on the edge of the Old Forest.\" -Merry, The Fellowship of the Ring",
@@ -128,17 +118,11 @@ The Lord of the ~Rings : The Black Riders Saga Expansion is required to play The
                 OppositeTitle = "Dark Bad Place",
                 SlugIncludesOppositeTitle = true,
                 CardType = CardType.Quest,
-                HasSecondImage = true,
-                
                 StageNumber = 2,
                 QuestPoints = null,
-                Text = 
-@"When Revealed: If the number of locations in the staging area is less than the number of players in the game, search the encounter deck and discard pile for a location and add it to the staging area. Shuffle the encounter deck.",
+                Text = "When Revealed: If the number of locations in the staging area is less than the number of players in the game, search the encounter deck and discard pile for a location and add it to the staging area. Shuffle the encounter deck.",
                 FlavorText = "\"Everything in it is very much more alive, more aware of what is going on, so to speak, than things are in the Shire. And the trees do not like strangers.\"\r\n-Merry, The Fellowship of the Ring",
-                OppositeText = 
-@"Forced: At the beginning of the planning phase, each player must exhaust a hero he controls.
-
-Forced: After placing progress as a result of questing successfully, if there are X or more total victory points on locations in the victory display, advance to stage 3A. Otherwise, advance to a different random stage 2A. X is the number of players in the game times 5.",
+                OppositeText = "Forced: At the beginning of the planning phase, each player must exhaust a hero he controls.\r\nForced: After placing progress as a result of questing successfully, if there are X or more total victory points on locations in the victory display, advance to stage 3A. Otherwise, advance to a different random stage 2A. X is the number of players in the game times 5.",
                 EncounterSet = "The Old Forest",
                 CardNumber = 2,
                 Quantity = 1,
@@ -152,16 +136,11 @@ Forced: After placing progress as a result of questing successfully, if there ar
                 OppositeTitle = "Choked with Brambles",
                 SlugIncludesOppositeTitle = true,
                 CardType = CardType.Quest,
-                HasSecondImage = true,
                 StageNumber = 2,
                 QuestPoints = null,
-                Text =
-@"When Revealed: If the number of locations in the staging area is less than the number of players in the game, search the encounter deck and discard pile for a location and add it to the staging area. Shuffle the encounter deck.",
+                Text = "When Revealed: If the number of locations in the staging area is less than the number of players in the game, search the encounter deck and discard pile for a location and add it to the staging area. Shuffle the encounter deck.",
                 FlavorText = "\"Everything in it is very much more alive, more aware of what is going on, so to speak, than things are in the Shire. And the trees do not like strangers.\"\r\n-Merry, The Fellowship of the Ring",
-                OppositeText =
-@"Forced: At the beginning of the ropund, remove all progress from each location in play.
-
-Forced: After placing progress as a result of questing successfully, if there are X or more total victory points on locations in the victory display, advance to stage 3A. Otherwise, advance to a different random stage 2A. X is the number of players in the game times 5.",
+                OppositeText = "Forced: At the beginning of the ropund, remove all progress from each location in play.\r\nForced: After placing progress as a result of questing successfully, if there are X or more total victory points on locations in the victory display, advance to stage 3A. Otherwise, advance to a different random stage 2A. X is the number of players in the game times 5.",
                 EncounterSet = "The Old Forest",
                 CardNumber = 3,
                 Quantity = 1,
@@ -175,16 +154,11 @@ Forced: After placing progress as a result of questing successfully, if there ar
                 OppositeTitle = "Shifting Trees",
                 SlugIncludesOppositeTitle = true,
                 CardType = CardType.Quest,
-                HasSecondImage = true,
                 StageNumber = 2,
                 QuestPoints = null,
-                Text =
-@"When Revealed: If the number of locations in the staging area is less than the number of players in the game, search the encounter deck and discard pile for a location and add it to the staging area. Shuffle the encounter deck.",
+                Text = "When Revealed: If the number of locations in the staging area is less than the number of players in the game, search the encounter deck and discard pile for a location and add it to the staging area. Shuffle the encounter deck.",
                 FlavorText = "\"Everything in it is very much more alive, more aware of what is going on, so to speak, than things are in the Shire. And the trees do not like strangers.\"\r\n-Merry, The Fellowship of the Ring",
-                OppositeText =
-@"Forced: At the end of the round, discard a random location from the victory display.
-
-Forced: After placing progress as a result of questing successfully, if there are X or more total victory points on locations in the victory display, advance to stage 3A. Otherwise, advance to a different random stage 2A. X is the number of players in the game times 5.",
+                OppositeText = "Forced: At the end of the round, discard a random location from the victory display.\r\nForced: After placing progress as a result of questing successfully, if there are X or more total victory points on locations in the victory display, advance to stage 3A. Otherwise, advance to a different random stage 2A. X is the number of players in the game times 5.",
                 EncounterSet = "The Old Forest",
                 CardNumber = 4,
                 Quantity = 1,
@@ -198,16 +172,11 @@ Forced: After placing progress as a result of questing successfully, if there ar
                 OppositeTitle = "Closing in Around Them",
                 SlugIncludesOppositeTitle = true,
                 CardType = CardType.Quest,
-                HasSecondImage = true,
                 StageNumber = 2,
                 QuestPoints = null,
-                Text =
-@"When Revealed: If the number of locations in the staging area is less than the number of players in the game, search the encounter deck and discard pile for a location and add it to the staging area. Shuffle the encounter deck.",
+                Text = "When Revealed: If the number of locations in the staging area is less than the number of players in the game, search the encounter deck and discard pile for a location and add it to the staging area. Shuffle the encounter deck.",
                 FlavorText = "\"Everything in it is very much more alive, more aware of what is going on, so to speak, than things are in the Shire. And the trees do not like strangers.\"\r\n-Merry, The Fellowship of the Ring",
-                OppositeText =
-@"Forced: The first player reveals 1 additional encounter card during the quest phase.
-
-Forced: After placing progress as a result of questing successfully, if there are X or more total victory points on locations in the victory display, advance to stage 3A. Otherwise, advance to a different random stage 2A. X is the number of players in the game times 5.",
+                OppositeText = "Forced: The first player reveals 1 additional encounter card during the quest phase.\r\nForced: After placing progress as a result of questing successfully, if there are X or more total victory points on locations in the victory display, advance to stage 3A. Otherwise, advance to a different random stage 2A. X is the number of players in the game times 5.",
                 EncounterSet = "The Old Forest",
                 CardNumber = 5,
                 Quantity = 1,
@@ -219,17 +188,12 @@ Forced: After placing progress as a result of questing successfully, if there ar
                 Title = "The Wicked Willow",
                 Id = "A4F9F2CD-4D9A-46FB-A247-B97FE669CAF8",
                 CardType = CardType.Quest,
-                HasSecondImage = true,
                 StageNumber = 3,
                 QuestPoints = 18,
-                Text =
-@"When Revealed: Add Old Man Willow and Withywindle to the staging area. Reveal X encounter cards where X is the number of players in the game minus 1.",
+                Text = "When Revealed: Add Old Man Willow and Withywindle to the staging area. Reveal X encounter cards where X is the number of players in the game minus 1.",
                 FlavorText = "He lifted his heavy eyes and saw leaning over him a huge willow-tree, old and hoary. Enormous it looked, its sprawling branches going up like reaching arms with many long-fingered hands... -The Fellowship of the Ring",
                 OppositeFlavorText = "\"I don't like this great big tree. I don't trust it. Hark at it singing about sleep now!\" -Sam, The Fellowship of the Ring",
-                OppositeText = 
-@"Old Man Willow cannot leave the staging area but is considered to be engaged with each player and attacks each player in turn order during the combat phase (deal and resolve a shadow card for each attack).
-
-If the players defeat this stage, they win the game.",
+                OppositeText = "Old Man Willow cannot leave the staging area but is considered to be engaged with each player and attacks each player in turn order during the combat phase (deal and resolve a shadow card for each attack).\r\nIf the players defeat this stage, they win the game.",
                 EncounterSet = "The Old Forest",
                 CardNumber = 6,
                 Quantity = 1,

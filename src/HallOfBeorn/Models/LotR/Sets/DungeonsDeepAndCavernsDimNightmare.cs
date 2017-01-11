@@ -18,8 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Dungeons Deep and Caverns Dim Nightmare",
-                HasSecondImage = true,
-                
                 Id = "128B10F6-8EF0-4AD2-A880-D43B175298D0",
                 CardType = CardType.Nightmare_Setup,
                 Text =

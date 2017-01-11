@@ -18,8 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Flight to the Ford Nightmare",
-                HasSecondImage = true,
-                
                 Id = "954C80B3-ABAD-464D-BA2F-985610926BEB",
                 CardType = CardType.Nightmare_Setup,
                 Text =

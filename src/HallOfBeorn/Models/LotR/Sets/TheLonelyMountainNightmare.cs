@@ -18,7 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "The Lonely Mountain Nightmare",
-                HasSecondImage = true,
                 Id = "EF3EB70C-DB62-4936-8436-1C4AC260E5EC",
                 CardType = CardType.Nightmare_Setup,
                 Text =

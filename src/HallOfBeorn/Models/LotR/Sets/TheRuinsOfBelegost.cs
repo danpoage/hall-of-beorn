@@ -40,7 +40,6 @@ Page 1/4",
             {
                 Title = "The Ruins of Belegost Scenario Rules (2-3)",
                 CardType = CardType.GenCon_Setup,
-                HasSecondImage = true,
                 Text = 
 @"SCENARIO RULES
 Discover X

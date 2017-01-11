@@ -18,7 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "A Knife in the Dark Nightmare",
-                HasSecondImage = true,
                 Id = "29431129-B0BA-4589-AB3D-329247065C52",
                 CardType = CardType.Nightmare_Setup,
                 Text = "You are playing Nightmare mode.\r\nWhile Bill Ferny is in the staging area, he gains: \"Immune to player card effects.\"",

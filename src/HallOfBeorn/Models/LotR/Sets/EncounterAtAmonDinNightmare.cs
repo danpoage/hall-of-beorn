@@ -19,7 +19,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Encounter at Amon Dîn Nightmare",
-                HasSecondImage = true,
                 Id = "0D3A05E0-7224-4964-AEDE-9DCD0F40DBB4",
                 CardType = CardType.Nightmare_Setup,
                 Text =

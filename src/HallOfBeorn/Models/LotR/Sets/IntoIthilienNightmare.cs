@@ -18,7 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Into Ithilien Nightmare",
-                HasSecondImage = true,
                 Id = "F5979D4C-BC5B-467A-ADAB-B0EB70A0C3CC",
                 CardType = CardType.Nightmare_Setup,
                 Text =

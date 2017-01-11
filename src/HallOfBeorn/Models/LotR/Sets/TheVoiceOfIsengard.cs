@@ -1027,12 +1027,9 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new LotRCard()
             {
                 Title = "Fight at the Fords",
-                HasSecondImage = true,
                 StageNumber = 1,
-                
                 Id = "4BEF0C09-6FB2-4021-BD27-816EEBFBDDCC",
                 CardType = CardType.Quest,
-                
                 QuestPoints = 6,
                 EncounterSet = "The Fords of Isen",
                 FlavorText = "Riding north to the Gap of Rohan, you come upon a battle at the Fords of Isen. A Small number of Rohirrim have taken a defensive position, on the islet in the river's center where a large force of wild Dunlending assails them. You must move swifty lest the river run red with blood of Rohan...",
@@ -1047,12 +1044,9 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new LotRCard()
             {
                 Title = "Dunlending Attack",
-                HasSecondImage = true,
                 StageNumber = 2,
-                
                 Id = "FEBD2BE9-DF9E-4391-A498-86EE6758E2AB",
                 CardType = CardType.Quest,
-                
                 QuestPoints = 14,
                 EncounterSet = "The Fords of Isen",
                 FlavorText = "After driving the Wild Men back from the islet, you are surprised to find king Théoden's personal advisor, Gríma Wormtongue, among the men defending the fords. He tells you that he was on his way to Isengard when he was caught in the attack. Before he can say more of his errand, the Dunlendings redouble their assault. \"Save me!\" Gríma cries as he shrinks behind you. The life of the king's counselor is in your hands...",
@@ -1066,12 +1060,9 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new LotRCard()
             {
                 Title = "Hold the Fords",
-                HasSecondImage = true,
                 StageNumber = 3,
-                
                 Id = "8D5B83EB-5A77-492D-897A-1A5341550731",
                 CardType = CardType.Quest,
-                
                 QuestPoints = 16,
                 EncounterSet = "The Fords of Isen",
                 FlavorText = "The Dunlendings' assault is relentless and your arms grow weary. \"Take me to Isengard!\" Gríma pleads, but you will not abandon the defense. You will either break the will of the enemy, or give your life in a heroic last stand...",
@@ -1085,12 +1076,9 @@ If Gríma leaves play, the players lose the game.",
             });
             Cards.Add(new LotRCard() {
                 Title = "Orders from Orthanc",
-                HasSecondImage = true,
                 StageNumber = 1,
-                
                 Id = "3ED48AE6-66BB-45B2-B07A-0F549A952F75",
                 CardType = CardType.Quest,
-                
                 QuestPoints = null,
                 EncounterSet = "To Catch an Orc",
                 FlavorText = "Saruman has tasked you with a dangerous mission: journey up the Misty Mountains' southern peack in search of the Orc, Mugash, and capture him alive.",
@@ -1104,12 +1092,9 @@ If Gríma leaves play, the players lose the game.",
             });
             Cards.Add(new LotRCard() {
                 Title = "Searching for Mugash",
-                HasSecondImage = true,
                 StageNumber = 2,
-                
                 Id = "EA763FD7-64E8-4E39-B318-0F110B20F241",
                 CardType = CardType.Quest,
-                
                 QuestPoints = null,
                 EncounterSet = "To Catch an Orc",
                 FlavorText = "Orcs prowl the mountainside on the lookout for intruders. A single horn-call from one of the sentries would have every Orc in Methedras scurrying out of their holes to fight. You must move carefully to avoid detection while you search for their captain...",
@@ -1122,12 +1107,9 @@ If Gríma leaves play, the players lose the game.",
             });
             Cards.Add(new LotRCard() {
                 Title = "The Wizard's Prize",
-                HasSecondImage = true,
                 StageNumber = 3,
-                
                 Id = "BAD7F11E-961B-49B0-9B67-7924E52F7309",
                 CardType = CardType.Quest,
-                
                 QuestPoints = 15,
                 EncounterSet = "To Catch an Orc",
                 FlavorText = "You've found Mugash, but the Orc captain won't be taken without a fight! He howls and rages against you with the ferocity of a cornered animal. All the commotion is sure to draw more Orcs to the fray, yet you must subdue the huge Uruk before you can retreat down the mountain...",
@@ -1141,12 +1123,9 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new LotRCard()
             {
                 Title = "Into the Woods",
-                HasSecondImage = true,
                 StageNumber = 1,
-                
                 Id = "3D3EFB85-5EDA-45EB-A992-A8146673AECA",
                 CardType = CardType.Quest,
-                
                 QuestPoints = 9,
                 EncounterSet = "Into Fangorn",
                 FlavorText = "You've captured the Orc captain, Mugash, in the mountains above Isengard. But as you make your way down Methedras, your captive escaped and flees east into Fangorn.",
@@ -1162,12 +1141,9 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new LotRCard()
             {
                 Title = "Escape from Fangorn",
-                HasSecondImage = true,
                 StageNumber = 2,
-                
                 Id = "C3572881-CF4C-421A-B555-7D40DC91E720",
                 CardType = CardType.Quest,
-                
                 QuestPoints = 12,
                 EncounterSet = "Into Fangorn",
                 FlavorText = "You've rescued Mugash from the trees, but your sense the forest itself seethes with anger toward you. The thankless Orc struggles against you and the tree branches grasp at you. It's going to be a hard fight to get out of Fangorn with your captive...",
@@ -1182,12 +1158,9 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new LotRCard()
             {
                 Title = "The Angry Forest",
-                HasSecondImage = true,
                 StageNumber = 3,
-                
                 Id = "AD53EA8E-E050-4BCE-B826-945EF6A6F227",
                 CardType = CardType.Quest,
-                
                 QuestPoints = null,
                 EncounterSet = "Into Fangorn",
                 FlavorText = "Mugash has disappeared deeper into the woods. As you continue to search for him, the trees close in around you and you can feel their roots and limbs shaking with anger. Their branches rattle like a raging temptest, but without any wind. You're beginning to regret the decision to enter Fangorn. You need to find Mugash and get out...",

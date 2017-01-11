@@ -18,8 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "The Hunt for Gollum Nightmare",
-                HasSecondImage = true,
-                
                 Id = "EAC4C67B-297A-4E6D-AA8E-DA33D57C87E7",
                 CardType = CardType.Nightmare_Setup,
                 Text =

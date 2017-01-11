@@ -18,22 +18,12 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Flight from Moria Nightmare",
-                HasSecondImage = true,
-                
                 Id = "96C0EDF3-550B-4966-99D6-095521DCCB5A",
                 CardType = CardType.Nightmare_Setup,
-                Text =
-@"You are playing Nightmare mode.
-
-When a quest card is bypassed, shuffle it into the quest deck instead of placing it on the bottom.
-
-While the ~Escape from Darkness quest card is in play, the Refresh Action on Abandoned ~Tools can only be triggered once each round.",
+                Text = "You are playing Nightmare mode.\r\nWhen a quest card is bypassed, shuffle it into the quest deck instead of placing it on the bottom.\r\nWhile the ~Escape from Darkness quest card is in play, the Refresh Action on Abandoned ~Tools can only be triggered once each round.",
                 FlavorText = "\"Fly! This is a foe beyond any of you.\". -Gandalf, The Fellowship of the Ring",
-
-                OppositeText =
-@"Begin with the standard quest deck and encounter deck for the Flight from Moria scenario.
-
-Remove the following cards, in the specified quantities, from the standard encounter deck:
+                OppositeText = 
+@"Begin with the standard quest deck and encounter deck for the Flight from Moria scenario.\r\nRemove the following cards, in the specified quantities, from the standard encounter deck:
 
 1x Blocked by ~Shadow
 1x New Devilry
@@ -58,8 +48,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             {
                 Title = "Search for an Exit",
                 OppositeTitle = "Pursued By Shadow",
-                HasSecondImage = true,
-                
                 SlugIncludesOppositeTitle = true,
                 Id = "A1380AE9-1895-48A7-9C5D-FF3D941DD1D9",
                 CardType = CardType.Quest,
@@ -82,8 +70,6 @@ Players may bypass this quest card at the end of the combat phase.",
             {
                 Title = "Search for an Exit",
                 OppositeTitle = "Blocked by Flame",
-                HasSecondImage = true,
-                
                 SlugIncludesOppositeTitle = true,
                 Id = "1A4E5458-13CC-41B1-8A44-6FC3FF25693E",
                 CardType = CardType.Quest,
@@ -106,8 +92,6 @@ If The ~Nameless Fear has 10 or more damage on it, remove all damage from it and
             {
                 Title = "Search for an Exit",
                 OppositeTitle = "Ghâsh",
-                HasSecondImage = true,
-                
                 SlugIncludesOppositeTitle = true,
                 Id = "A1EDC2C0-0F79-45C1-BFF6-B314BEDFBC6B",
                 CardType = CardType.Quest,

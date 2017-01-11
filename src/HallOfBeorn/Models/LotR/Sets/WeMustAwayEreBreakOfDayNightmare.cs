@@ -18,8 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "We Must Away, Ere Break of Day Nightmare",
-                HasSecondImage = true,
-                
                 Id = "4AB41CDE-413A-4410-89D9-E201DA9D21AD",
                 CardType = CardType.Nightmare_Setup,
                 Text = 

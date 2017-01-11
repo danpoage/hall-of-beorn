@@ -18,8 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "The Hills of Emyn Muil Nightmare",
-                HasSecondImage = true,
-                
                 Id = "EB6E672D-7D48-4A52-A6C8-69ACDFE99AB3",
                 CardType = CardType.Nightmare_Setup,
                 Text =

@@ -20,7 +20,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Title = "Road to Rivendell Nightmare",
                 Id = "1770122B-7F4B-424A-A714-A23DB128E355",
                 CardType = Models.LotR.CardType.Nightmare_Setup,
-                HasSecondImage = true,
                 Text =
 @"You are playing in Nightmare mode.
 
@@ -54,7 +53,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             {
                 Title = "Ambush in the Night",
                 Id = "2EC4C17D-CB7C-4B1A-94AB-A755644577C5",
-                HasSecondImage = true,
                 CardType = CardType.Quest,
                 StageNumber = 2,
                 QuestPoints = 12,

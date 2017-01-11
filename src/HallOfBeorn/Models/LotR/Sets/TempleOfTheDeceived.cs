@@ -75,7 +75,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithIncludedEncounterSets(EncounterSet.RuinsOfNumenor, EncounterSet.DrownedDead, EncounterSet.TheStormcallerElite)
                 .WithInfo(67, 1, Artist.Sara_Winters));
             Cards.Add(LotRCard.Location("The Grotto's Entrance", "", setName, 2, 8)
-                .WithSecondImage("Temple-of-the-Deceived")
+                .WithOppositeTitle("Temple of the Deceived")
                 .WithUnique()
                 .WithTraits("Ruins.")
                 .WithKeywords("Uncharted.")
@@ -83,7 +83,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithOppositeText("Uncharted. Immune to player card effects.\r\nTravel: Exhaust the ~Gate ~Key to travel here.\r\nForced: After Temple of the Deceived becomes the active location, flip it over.")
                 .WithInfo(68, 1, Artist.Sara_Winters));
             Cards.Add(LotRCard.Location("Temple Halls", "", setName, 5, 5)
-                .WithSecondImage("Temple-of-the-Deceived")
+                .WithOppositeTitle("Temple of the Deceived")
                 .WithTraits("Ruins.")
                 .WithKeywords("Uncharted.")
                 .WithText("While Temple Halls is the active location, each character gets -1 Attack and -1 Defense.\r\nForced: When Temple Halls is flipped over while active, put Temple ~Guardian into play from the victory display, engaged with the player with the highest threat.")
@@ -102,21 +102,21 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithInfo(71, 1, Artist.Katy_Grierson));
             Cards.Add(LotRCard.Location("Jagged Cliffs", "", setName, 4, 4)
                 .WithTraits("Mountain.")
-                .WithSecondImage("Lost-Island")
+                .WithOppositeTitle("Lost Island")
                 .WithKeywords("Uncharted.")
                 .WithOppositeText("Uncharted.\r\nCannot have player card attachments.\r\nForced: After Lost Island becomes the active location, flip it over.\r\nAction: Remove 4 progress from Lost Island to look at its facedown side.")
                 .WithText("While Jagged Cliffs is the active location, the location to its right is not considered to be in the staging area.\r\nForced: When Jagged Cliffs is flipped over while active, look at the facedown side of each adjacent copy of Lost Island.")
                 .WithInfo(72, 2, Artist.Katy_Grierson));
             Cards.Add(LotRCard.Location("Winding Caverns", "", setName, 2, 6)
                 .WithTraits("Underground.")
-                .WithSecondImage("Lost-Island")
+                .WithOppositeTitle("Lost Island")
                 .WithKeywords("Uncharted.")
                 .WithOppositeText("Uncharted.\r\nCannot have player card attachments.\r\nForced: After Lost Island becomes the active location, flip it over.\r\nAction: Remove 4 progress from Lost Island to look at its facedown side.")
                 .WithText("While Winding Caverns is the active location, each enemy gets +10 engagement cost.\r\nWhen you travel from Winding Caverns to another location, you may travel to a location up to 3 locations away. (You must still pay that location's Travel cost in order to travel there.)")
                 .WithInfo(73, 2, Artist.Katy_Grierson));
             Cards.Add(LotRCard.Location("Jungle Path", "", setName, 4, 4)
                 .WithTraits("Underground.")
-                .WithSecondImage("Lost-Island")
+                .WithOppositeTitle("Lost Island")
                 .WithKeywords("Uncharted.")
                 .WithOppositeText("Uncharted.\r\nCannot have player card attachments.\r\nForced: After Lost Island becomes the active location, flip it over.\r\nAction: Remove 4 progress from Lost Island to look at its facedown side.")
                 .WithText("While Jungle Path is the active location, the locations immediately above and below it are not considered to be in the staging area.\r\nForced: When Jungle Path is flipped over while active, each player must exhaust a character with at least 2 Attack.")

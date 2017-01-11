@@ -186,8 +186,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "The Trials Begin",
-                
-                HasSecondImage = true,
                 Id = "C3367A1E-7110-4025-8274-DBA2836778BC",
                 CardType = Models.LotR.CardType.Quest,
                 Quantity = 1,
@@ -205,8 +203,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "The Trial of Strength",
-                
-                HasSecondImage = true,
                 Id = "704201A2-5A88-465A-B304-1AF7CBCEA156",
                 CardType = CardType.Quest,
                 Quantity = 1,
@@ -226,8 +222,6 @@ When the players control the current trial's Key objective, add all Barrow locat
             Cards.Add(new LotRCard()
             {
                 Title = "The Trial of Perseverance",
-                
-                HasSecondImage = true,
                 Id = "AF8B9515-2CCE-45CC-BB9C-D77733AD45F4",
                 CardType = CardType.Quest,
                 Quantity = 1,
@@ -247,8 +241,6 @@ When the players control the current trial's Key objective, add all Guardian ene
             Cards.Add(new LotRCard()
             {
                 Title = "The Trial of Intuition",
-                
-                HasSecondImage = true,
                 Id = "3C484CBD-ADFF-4C20-8AF3-FDFAD91C50EA",
                 CardType = CardType.Quest,
                 Quantity = 1,
@@ -268,8 +260,6 @@ When the players control the current trial's Key objective, add all Guardian ene
             Cards.Add(new LotRCard()
             {
                 Title = "The Antlered Crown",
-                
-                HasSecondImage = true,
                 Id = "9331EBC1-B5A5-407F-9841-D753BD080546",
                 CardType = CardType.Quest,
                 Quantity = 1,

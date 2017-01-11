@@ -18,7 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "The Siege of Cair Andros Nightmare",
-                HasSecondImage = true,
                 Id = "8974A088-4939-47A4-8133-55C037B03656",
                 CardType = CardType.Nightmare_Setup,
                 Text =

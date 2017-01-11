@@ -18,8 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "A Journey to Rhosgobel Nightmare",
-                HasSecondImage = true,
-                
                 Id = "146793CB-7609-49D7-B8F5-FC25826CC85E",
                 CardType = CardType.Nightmare_Setup,
                 Text =

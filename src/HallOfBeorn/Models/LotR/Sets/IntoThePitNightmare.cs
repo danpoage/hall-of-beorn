@@ -18,8 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Into the Pit Nightmare",
-                HasSecondImage = true,
-                
                 Id = "97E64088-69B6-4A71-87B5-7F11FBAD94E3",
                 CardType = CardType.Nightmare_Setup,
                 Text =
@@ -54,8 +52,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Goblin Ambush",
-                
-                HasSecondImage = true,
                 Id = "F2F24396-EBA3-45D6-B7BD-01FAF787F13C",
                 CardType = CardType.Quest,
                 StageNumber = 2,

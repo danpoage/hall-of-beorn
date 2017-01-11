@@ -1842,9 +1842,7 @@ Travel: Each player must discard 1 random card from his hand.",
             });
             Cards.Add(new LotRCard() {
                 Title = "At Last Upon the Wolf",
-                HasSecondImage = true,
                 StageNumber = 2,
-                
                 Id = "e0d350d5-742f-4924-863a-4db922a71a8a",
                 CardType = CardType.Quest,
                 Quantity = 1,
@@ -1862,9 +1860,7 @@ If Carcharoth the Tormented is destroyed, you have recovered the Silmaril and wo
             });
             Cards.Add(new LotRCard() {
                 Title = "Ride Forth in the Morning",
-                HasSecondImage = true,
                 StageNumber = 1,
-                
                 Id = "1187c127-c5ef-45fa-962f-ff3d54ac7fe9",
                 CardType = CardType.Quest,
                 QuestPoints = 20,
@@ -1882,9 +1878,7 @@ Players cannot advance to stage 2 unless Carcharoth has at least 10 damage on hi
             });
             Cards.Add(new LotRCard() {
                 Title = "Ruin Upon the World",
-                HasSecondImage = true,
                 StageNumber = 3,
-                
                 Id = "444d39bf-aee8-488e-ad06-ee36445e5ec4",
                 CardType = CardType.Quest,
                 QuestPoints = null,
@@ -1905,8 +1899,6 @@ If Gates of Menegroth is destroyed, the players lose the game.",
             Cards.Add(new LotRCard() {
                 Title = "Hunting of the Wolf",
                 SlugIncludesType = true,
-                
-                HasSecondImage = true,
                 Id = "db41eb04-4428-4b6f-8a7f-358cb4507a74",
                 CardType = CardType.Campaign,
                 Text = 
@@ -2334,8 +2326,6 @@ Response: After High Tower is explored as the active location, remove one Condit
             Cards.Add(new LotRCard() {
                 Title = "The Pits of Sauron",
                 StageNumber = 2,
-                
-                HasSecondImage = true,
                 Id = "62abfd48-b415-402f-bcd8-df92ae5a1b27",
                 CardType = CardType.Quest,
                 QuestPoints = null,
@@ -2354,8 +2344,6 @@ If the captured hero is destroyed, the players lose the game. If Devouring Werew
             Cards.Add(new LotRCard() {
                 Title = "Tol-in-Gaurhoth",
                 StageNumber = 3,
-                
-                HasSecondImage = true,
                 Id = "4016a752-46bf-4574-9c14-a51e4835bc0b",
                 CardType = CardType.Quest,
                 QuestPoints = null,
@@ -2374,8 +2362,6 @@ If the players destroy Wolf-Sauron, they have rescued the prisoners and won the 
             Cards.Add(new LotRCard() {
                 Title = "Upon the Bridge",
                 StageNumber = 1,
-                
-                HasSecondImage = true,
                 Id = "c794640f-5ecb-4ba2-a414-374ccc8d466f",
                 CardType = CardType.Quest,
                 QuestPoints = 20,
@@ -2392,8 +2378,6 @@ When this stage is completed, advance to stage 3A. This stage cannot be complete
             Cards.Add(new LotRCard() {
                 Title = "Isle of Werewolves",
                 SlugIncludesType = true,
-                
-                HasSecondImage = true,
                 Id = "f03bc416-e4cd-4bda-944c-51a33a55b1d0",
                 CardType = CardType.Campaign,
                 Text = 
@@ -2868,8 +2852,6 @@ Response: After Pits of Angband leaves play, add Angband Sword to the staging ar
             Cards.Add(new LotRCard() {
                 Title = "Descent into Darkness",
                 StageNumber = 2,
-                
-                HasSecondImage = true,
                 Id = "53d6dc87-a084-4220-ad38-a39e655f1d44",
                 CardType = CardType.Quest,
                 QuestPoints = null,
@@ -2888,8 +2870,6 @@ The players cannot advance unless Nethermost Hall is in the victory display.",
             Cards.Add(new LotRCard() {
                 Title = "Doors of Angband",
                 StageNumber = 1,
-                
-                HasSecondImage = true,
                 Id = "5d55e464-f59d-454f-971c-a35f1376a420",
                 CardType = CardType.Quest,
                 QuestPoints = 15,
@@ -2906,8 +2886,6 @@ If Carcharoth has 0 hit points, advance to stage 2 immediately.",
             Cards.Add(new LotRCard() {
                 Title = "The Greatest Deed",
                 StageNumber = 3,
-                
-                HasSecondImage = true,
                 Id = "7272499a-1047-4431-82d8-83e88e7de3e5",
                 CardType = CardType.Quest,
                 QuestPoints = 1,
@@ -2925,8 +2903,6 @@ The players cannot advance to the next stage unless they control the Silmaril ob
             Cards.Add(new LotRCard() {
                 Title = "To See the Light",
                 StageNumber = 4,
-                
-                HasSecondImage = true,
                 Id = "8432e9fc-ecb8-4948-a6dd-d75dad26e42e",
                 CardType = CardType.Quest,
                 QuestPoints = 15,
@@ -2943,8 +2919,6 @@ If the players defeat this stage or Carcharoth has 0 hit points, the players hav
             Cards.Add(new LotRCard() {
                 Title = "The Seat of Morgoth",
                 SlugIncludesType = true,
-                
-                HasSecondImage = true,
                 Id = "1ad0b223-e659-4358-bf3e-fbc687cba2aa",
                 CardType = CardType.Campaign,
                 Text =

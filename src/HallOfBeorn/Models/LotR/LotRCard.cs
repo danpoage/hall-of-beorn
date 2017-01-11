@@ -401,42 +401,13 @@ namespace HallOfBeorn.Models.LotR
             return this;
         }
 
-        public LotRCard WithSecondImage(string secondImagePath)
-        {
-            this.hasSecondImage = true;
-            this.secondImagePath = secondImagePath;
-            return this;
-        }
-
         public LotRCard WithStageLetter(char letter)
         {
             StageLetter = letter;
             return this;
         }
 
-        /*
-        public LotRCard Flavor(string flavor)
-        {
-            effects.Add(new Effect(CardEffectType.Flavor_Text, LayoutType.Block).Flavor(flavor));
-            return this;
-        }
-
-        public LotRCard Important(string important)
-        {
-            effects.Add(new Effect(CardEffectType.Flavor_Text, LayoutType.Important).Text(important));
-            return this;
-        }
-
-        public LotRCard Effect(Effect effect)
-        {
-            effects.Add(effect);
-            return this;
-        }
-        */
-
         #endregion
-
-        //public int ScenarioNumber { private get; set; }
 
         public uint StageNumber { get; set; }
         public char StageLetter { get; set; }
@@ -481,27 +452,6 @@ namespace HallOfBeorn.Models.LotR
         public bool SlugIncludesOppositeTitle { get; set; }
         public bool SlugIncludesType { get; set; }
         
-        private bool hasSecondImage;
-        public bool HasSecondImage {
-            get
-            {
-                if (CardType == Models.LotR.CardType.Quest)
-                {
-                    return true;
-                }
-
-                return hasSecondImage;
-            }
-            set { hasSecondImage = value; }
-        }
-
-        private string secondImagePath;
-
-        public string SecondImagePath
-        {
-            get { return secondImagePath; }
-        }
-
         protected override string getSetAbbreviation()
         {
             return CardSet.Abbreviation.ToUrlSafeString();
@@ -754,7 +704,6 @@ namespace HallOfBeorn.Models.LotR
                 CardType = CardType.Quest,
                 Title = title,
                 NormalizedTitle = title.NormalizeCaseSensitiveString(),
-                HasSecondImage = true,
                 EncounterSet = encounterSet,
                 QuestPoints = questPoints,
                 IsVariableQuestPoints = questPoints == (byte)254,
@@ -770,7 +719,6 @@ namespace HallOfBeorn.Models.LotR
                 CardType = CardType.Campaign,
                 Title = title,
                 NormalizedTitle = title.NormalizeCaseSensitiveString(),
-                HasSecondImage = true,
                 EncounterSet = encounterSet,
                 SlugIncludesType = true,
                 OppositeTitle = oppositeTitle
@@ -784,7 +732,6 @@ namespace HallOfBeorn.Models.LotR
                 CardType = CardType.Nightmare_Setup,
                 Title = title,
                 NormalizedTitle = title.NormalizeCaseSensitiveString(),
-                HasSecondImage = true,
                 Id = string.Empty,
                 EncounterSet = encounterSet
             };
@@ -797,7 +744,6 @@ namespace HallOfBeorn.Models.LotR
                 CardType = CardType.GenCon_Setup,
                 Title = title,
                 NormalizedTitle = title.NormalizeCaseSensitiveString(),
-                HasSecondImage = true,
                 Id = string.Empty,
                 EncounterSet = encounterSet
             };
@@ -810,7 +756,6 @@ namespace HallOfBeorn.Models.LotR
                 CardType = CardType.Scenario,
                 Title = title,
                 NormalizedTitle = title.NormalizeCaseSensitiveString(),
-                HasSecondImage = true,
                 Id = string.Empty,
                 EncounterSet = encounterSet,
                 OppositeTitle = oppositeTitle
@@ -955,6 +900,11 @@ namespace HallOfBeorn.Models.LotR
         {
             this.Text = text;
             return this;
+        }
+
+        public LotRCard WithOppositeTitle(string title)
+        {
+            return WithOppositeTitle(title, false);
         }
 
         public LotRCard WithOppositeTitle(string title, bool includedInSlug)

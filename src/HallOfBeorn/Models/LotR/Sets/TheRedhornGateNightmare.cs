@@ -20,7 +20,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Title = "The Redhorn Gate Nightmare",
                 Id = "F8597C3E-9FCA-4ED4-9326-AD1A383605DA",
                 CardType = Models.LotR.CardType.Nightmare_Setup,
-                HasSecondImage = true,
                 Text = 
 @"You are playing in Nightmare mode.
 

@@ -18,7 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Peril in Pelargir Nightmare",
-                HasSecondImage = true,
                 Id = "432019A2-BF0A-493B-A13E-D50D55AB3467",
                 CardType = CardType.Nightmare_Setup,
                 Text =

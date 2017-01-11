@@ -20,7 +20,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = setName,
-                HasSecondImage = true,
                 CardType = CardType.Nightmare_Setup,
                 Text = "You are playing Nightmare mode.\r\nEach engaged Guardian enemy contributes its Threat to the total Threat in the staging area.\r\nWhile the Trial of Intuition is the current trial, each Guardian enemy cannot be damaged, and each Barrow location cannot be the active location and is immune to player card effects.",
                 FlavorText = "\"I am not ready for such a trial, if indeed I shall ever be so...\"\r\n-Gandalf, The Two Towers",

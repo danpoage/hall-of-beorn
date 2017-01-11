@@ -18,7 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Assault on Osgiliath Nightmare",
-                HasSecondImage = true,
                 Id = "0D18C8EE-8B52-4114-AB43-28CF4CC7E796",
                 CardType = CardType.Nightmare_Setup,
                 Text = "You are playing Nightmare mode.\r\nSetup: Add Palace Remains to the staging area.\r\nIf there are more Osgiliath locations in the staging area than players in the game, this card gains: \"Response: At the beginning of the quest phase, choose 1 non-unique location. If the players quest successfully this phase, remaining progress made beyond the active location's quest points is placed on the chosen location",

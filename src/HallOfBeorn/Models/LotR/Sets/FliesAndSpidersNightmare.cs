@@ -18,7 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Flies and Spiders Nightmare",
-                HasSecondImage = true,
                 Id = "BE5BF36B-9CB2-4135-9A8B-8D51492BB0B9",
                 CardType = CardType.Nightmare_Setup,
                 Text =

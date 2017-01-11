@@ -18,8 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Journey Along the Anduin Nightmare",
-                HasSecondImage = true,
-                
                 Id = "9AE317F1-0CDF-410C-A063-C6A0A340DE45",
                 CardType = CardType.Nightmare_Setup,
                 Text = "You are playing Nightmare mode.\r\n\r\nAll Troll enemies gain the text: \"Cannot have attachments.\"\r\n\r\nIf the encounter deck is empty (at any time), shuffle the encounter discard pile back into the encounter deck.",

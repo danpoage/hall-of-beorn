@@ -18,8 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Foundations of Stone Nightmare",
-                HasSecondImage = true,
-                
                 Id = "42D3C22B-7DAA-4C93-A7EE-2AA5927E8304",
                 CardType = CardType.Nightmare_Setup,
                 Text =

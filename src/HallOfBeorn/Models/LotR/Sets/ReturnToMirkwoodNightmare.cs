@@ -18,8 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Return to Mirkwood Nightmare",
-                HasSecondImage = true,
-                
                 Id = "C9A56A9F-F13D-4DA9-916C-D6CE5408B7A5",
                 CardType = CardType.Nightmare_Setup,
                 Text = "You are playing Nightmare mode.\r\n\r\nForced: At the beginning of the quest phase, the player who is guarding ~Gollum must either exhaust a hero he controls or resolve the \"when revealed\" effect of the topmost Tantrum card in the encounter discard pile.\r\n\r\nForced: When Stage 4A is revealed, search the encounter deck and discard pile for 1 copy of Attercop, Attercop and add it to the staging area, if able. Shuffle the encounter deck.",

@@ -18,8 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "The Seventh Level Nightmare",
-                HasSecondImage = true,
-                
                 Id = "4A2A4373-7D97-4664-A502-C083A6D6079E",
                 CardType = CardType.Nightmare_Setup,
                 Text =

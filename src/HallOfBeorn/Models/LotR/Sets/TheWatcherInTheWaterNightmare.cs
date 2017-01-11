@@ -20,7 +20,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Title = "The Watcher in the Water Nightmare",
                 Id = "F0B86657-B29E-4428-BD3D-7111E78A8B3A",
                 CardType = CardType.Nightmare_Setup,
-                HasSecondImage = true,
                 Text =
 @"You are playing in Nightmare mode.
 

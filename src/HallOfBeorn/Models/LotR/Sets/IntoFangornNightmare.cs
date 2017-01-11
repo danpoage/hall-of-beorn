@@ -20,7 +20,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = setName,
-                HasSecondImage = true,
                 CardType = CardType.Nightmare_Setup,
                 Text = "You are playing Nightmare mode.\r\nSetup: Each player searches the encounter deck for a Huorn enemy and puts it into play engaged with him. Shuffle the encounter deck.\r\nThe Player cannot defeat stage 1B or 2B unless Edge of Fangorn is in the victory display.",
                 FlavorText = "Ever nearer the tree-clad slopes of Fangorn loomed, slowly darkling as the sun went west. -The Two Towers",

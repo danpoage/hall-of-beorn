@@ -20,7 +20,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = setName,
-                HasSecondImage = true,
                 CardType = CardType.Nightmare_Setup,
                 Text = "You are playing Nightmare mode.\r\nSetup: Each player shuffles 1 copy of Vigilant Orc into his out of play deck. Set both copiues of Mugash's Rage and any remaining copies of Vigilant Orc aside, out of play.\r\nForced: When the players advance to stage 3A, shuffle both copies of Mugash's Rage into the encounter deck.",
                 FlavorText = "There they picked up the trail of the Orcs. It needed little skill to find. -The Two Towers",
