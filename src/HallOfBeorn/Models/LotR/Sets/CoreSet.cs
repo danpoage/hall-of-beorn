@@ -25,7 +25,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Defense = 2,
                 Willpower = 2,
                 HitPoints = 5,
-                Traits = new List<string>() { "Dúnedain.", "Noble.", "Ranger." },
                 Text = "Response: After Aragorn commits to a quest, spend 1 resource from his resource pool to ready him.",
                 FlavorText = "\"I am Aragorn son of Arathorn; and if by life or death I can save you, I will.\" -The Fellowship of the Ring",
                 HtmlTemplate = "<p>{keyword:Sentinel.}<p><p><b>Response:</b> After {self} commits to a quest, spend 1 resource from his resource pool to ready him.</p><p class='flavor-text'>&quot;I am Aragorn son of Arathorn; and if by life or death I can save you, I will.&quot;<br>&ndash;The Fellowship of the Ring</p>",
@@ -34,10 +33,9 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Year = 2010,
                 Artist = Artist.John_Stanko,
                 CardNumber = 1
-            });
+            }.WithTraits("Dúnedain.", "Noble.", "Ranger."));
             Cards.Add(new LotRCard()
             {
-                
                 Title = "Théodred",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9002",
                 CardType = CardType.Hero,
@@ -48,14 +46,13 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Defense = 1,
                 Willpower = 1,
                 HitPoints = 4,
-                Traits = new List<string>() { "Noble.", "Rohan.", "Warrior." },
                 Text = "Response: After Théodred commits to a quest, choose a hero committed to that quest. Add 1 resource to that hero's resource pool.",
                 FlavorText = "\"Not all is dark. Take courage, Lord of the Mark...\"\r\n\r\n-Gandalf, The Two Towers",
                 HtmlTemplate = "<p><b>Response:</b> After {self} commits to a quest, choose a hero committed to that quest. Add 1 resource to that hero's resource pool.<p><p class='flavor-text'>&quot;Not all is dark. Take courage, Lord of the Mark...&quot;<br>&ndash;Gandalf, The Two Towers</p>",
                 Quantity = 1,
                 CardNumber = 2,
                 Artist = Artist.Jeff_Himmelman
-            });
+            }.WithTraits("Noble.", "Rohan.", "Warrior."));
             Cards.Add(new LotRCard() {
                 Title = "Glóin",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9003",

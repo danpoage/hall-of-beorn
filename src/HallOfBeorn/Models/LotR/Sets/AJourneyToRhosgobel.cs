@@ -26,13 +26,12 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Defense = 2,
                 Willpower = 2,
                 HitPoints = 4,
-                Traits = new List<string>() { "Gondor.", " Noble." },
                 Text = "Response: After a character leaves play, ready Prince Imrahil. (Limit once per round.)",
                 FlavorText = "But beyond, in the great fief of Belfalas, dwelt Prince Imrahil in his castle of Dol Amroth by the sea, and he was of high blood, and his fold also, tall men and proud with sea-grey eyes. -The Return of the King.",
                 Quantity = 1,
                 CardNumber = 50,
                 Artist = Artist.David_A_Nash
-            });
+            }.WithTraits("Gondor.", " Noble."));
             Cards.Add(new LotRCard() {
                 Title = "Haldir of Lórien",
                 Id = "51223bd0-ffd1-11df-a976-0801203c9002",
@@ -96,13 +95,12 @@ namespace HallOfBeorn.Models.LotR.Sets
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Spirit,
                 ResourceCost = 1,
-                Traits = new List<string>() { "Mathom." },
                 Text = "Attach to a location.\r\nResponse: After attached location is explored, the first player draws 3 cards.",
                 FlavorText = "The Mathom-house it was called; for anything that Hobbits had no immediate use for, but were unwilling to throw away, they called a mathom. Their dwellings were apt to become rather crowded with mathoms... -The Fellowship of the Ring",
                 Quantity = 3,
                 CardNumber = 56,
                 Artist = Artist.Anna_Mohrbacher
-            });
+            }.WithTraits("Mathom."));
             Cards.Add(new LotRCard() {
                 
                 Title = "Infighting",
@@ -135,12 +133,11 @@ namespace HallOfBeorn.Models.LotR.Sets
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Leadership,
                 ResourceCost = 2,
-                Traits = new List<string>() { "Signal." },
                 Text = "Attach to a hero.\r\nAttached hero gains +1 Willpower.\r\nAction: Pay 1 resource from attached hero's pool to attach Dunedain Quest to another hero.",
                 Quantity = 3,
                 CardNumber = 51,
                 Artist = Artist.Leonardo_Borazio
-            });
+            }.WithTraits("Signal."));
             Cards.Add(new LotRCard() {
                 
                 Title = "Escort from Edoras",

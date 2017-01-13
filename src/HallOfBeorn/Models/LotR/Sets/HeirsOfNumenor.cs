@@ -22,12 +22,11 @@ namespace HallOfBeorn.Models.LotR.Sets
                 CardType = CardType.Objective,
                 IsUnique = true,
                 Quantity = 1,
-                Traits = new List<string>() { "Scroll." },
                 Text = "If unattached, return Alcaron's Scroll to the staging area and it gains: 'Action: Exhaust a hero to attach Alcaron's Scroll to that hero.'Forced: When the hero with Alcaron's Scroll attached is damaged by an enemy attack, attach Alcaron's Scroll to that enemy.",
                 EncounterSet = "Peril in Pelargir",
                 CardNumber = 19,
                 Artist = Artist.Jason_Ward
-            });
+            }.WithTraits("Scroll."));
             Cards.Add(new LotRCard() {
                 
                 Title = "A Watchful Peace",

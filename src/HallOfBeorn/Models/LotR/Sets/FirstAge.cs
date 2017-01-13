@@ -2969,21 +2969,18 @@ When engaged with an enemy with the Sneak keyword, players may cancel all progre
                 CardNumber = 153,
                 Artist = Artist.Sarah_Finnigan
             });
-            Cards.Add(new LotRCard() {
+            addCard(new LotRCard() {
                 Title = "Evil Lust",
-                
                 Id = "092d5e7a-6483-4ded-98c3-fa4478169f1f",
                 CardType = CardType.Treachery,
-                Traits = new List<string>() { "Condition." },
                 Quantity = 2,
                 Text = "When Revealed: Attach to a hero. (Counts as a Condition attachment with the text: 'This hero must be declared as the defender against Morgoth (even if exhausted). Morgoth uses his Threat to attack and the attached hero uses his Willpower to defend. Limit 1 per hero.')",
                 EncounterSet = "The Seat of Morgoth",
                 CardNumber = 158,
                 Artist = Artist.Andreas_Marschall
-            });
-            Cards.Add(new LotRCard() {
+            }.WithTraits("Condition."));
+            addCard(new LotRCard() {
                 Title = "Filth and Desolation",
-                
                 Id = "074cb89d-4815-49d8-aa9b-07abd3c5331a",
                 CardType = CardType.Treachery,
                 Quantity = 2,
@@ -2993,19 +2990,17 @@ When engaged with an enemy with the Sneak keyword, players may cancel all progre
                 CardNumber = 156,
                 Artist = Artist.Aledin
             });
-            Cards.Add(new LotRCard() {
+            addCard(new LotRCard() {
                 Title = "Foolish Ruckus",
-                
                 Id = "715771dc-35aa-477e-a28f-e0d9e2954b54",
                 CardType = CardType.Treachery,
-                Traits = new List<string>() { "Noise." },
                 Quantity = 3,
                 Text = "When Revealed: Raise the Threat of the active enemy by 3 until the end of the phase. If there is no active enemy, raise the Threat of all enemies in the staging area by 1 until the end of the phase.",
                 Shadow = "Shadow: If this attack destroys a character, raise the defending player's threat by 2.",
                 EncounterSet = "The Seat of Morgoth",
                 CardNumber = 155,
                 Artist = Artist.Unknown
-            });
+            }.WithTraits("Noise."));
             Cards.Add(new LotRCard() {
                 Title = "Heroic Diversion",
                 

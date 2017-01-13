@@ -27,15 +27,11 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Attack = 0,
                 Defense = 0,
                 HitPoints = 4,
-                Traits = new List<string> { "Noldor.", "Noble." },
-                Text = 
-@"Galadriel cannot quest, attack, or defend. Allies you control do not exhaust to commit to the quest during the round they enter play.
-
-Action: Exhaust Galadriel to choose a player. That player reduces his threat by 1 and draws 1 card. (Limit once per round.)",
+                Text = "Galadriel cannot quest, attack, or defend. Allies you control do not exhaust to commit to the quest during the round they enter play.\r\nAction: Exhaust Galadriel to choose a player. That player reduces his threat by 1 and draws 1 card. (Limit once per round.)",
                 CardNumber = 112,
                 Quantity = 1,
                 Artist = Artist.Magali_Villeneuve
-            });
+            }.WithTraits("Noldor.", "Noble."));
             Cards.Add(new LotRCard()
             {
                 Title = "Heir of Mardil",

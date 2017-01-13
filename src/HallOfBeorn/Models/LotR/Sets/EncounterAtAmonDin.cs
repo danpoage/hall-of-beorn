@@ -28,13 +28,12 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Attack = 1,
                 Defense = 1,
                 HitPoints = 2,
-                Traits = new List<string>() { "Hobbit." },
                 Text = "If each hero you control has the Hobbit trait, Pippin gains: 'Response: After an enemy engages you, raise your threat by 3 to return it to the staging area. Until the end of the round, that enemy cannot engage you.'",
                 FlavorText = "\"There must be someone with intelligence in the party.\" -The Fellowship of the Ring",
                 Quantity = 1,
                 CardNumber = 56,
                 Artist = Artist.Magali_Villeneuve
-            });
+            }.WithTraits("Hobbit."));
             Cards.Add(new LotRCard() {
                 
                 Title = "Denethor",

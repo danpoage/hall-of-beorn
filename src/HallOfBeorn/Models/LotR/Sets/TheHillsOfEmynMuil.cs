@@ -20,7 +20,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Title = "Amon Hen",
                 Id = "51223bd0-ffd1-11df-a976-0801204c9001",
                 CardType = CardType.Location,
-                Traits = new List<string>() { "Emyn Muil." },
                 Quantity = 1,
                 IsUnique = true,
                 Text = "X is double the number of players in the game.\r\nWhile Amon Hen is the active location, players cannot play events.",
@@ -31,7 +30,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 VictoryPoints = 5,
                 CardNumber = 83,
                 Artist = Artist.Vincent_Proce
-            });
+            }.WithTraits("Emyn Muil."));
             Cards.Add(new LotRCard() {
                 
                 Title = "Amon Lhaw",

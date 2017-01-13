@@ -27,13 +27,12 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Defense = 2,
                 Willpower = 2,
                 HitPoints = 2,
-                Traits = new List<string>() { "Hobbit." },
                 Text = "Response: After Frodo ~Baggins is damaged, cancel the damage and instead raise your threat by the amount of damage he would have been dealt. (Limit once per phase.)",
                 FlavorText = "Frodo began to feel restless, and the old paths seemed too well-trodden. he looked at maps and wondered what lay beyond their edges... -The Fellowship of the Ring",
                 Quantity = 1,
                 CardNumber = 25,
                 Artist = Artist.John_Stanko
-            });
+            }.WithTraits("Hobbit."));
             Cards.Add(new LotRCard() {
                 Title = "A Frightened Beast",
                 Id = "51223bd0-ffd1-11df-a976-0801202c9002",

@@ -65,17 +65,13 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Attack = 5,
                 Defense = 3,
                 HitPoints = 4,
-                Traits = new List<string> { "Goblin.", "Orc." },
-                Text = 
-@"Goblin Eagle-hunter gets +1 hit point per player.
-
-Forced: At the end of the combat phase, deal 1 damage to Wilyador",
+                Text = "Goblin Eagle-hunter gets +1 hit point per player.\r\nForced: At the end of the combat phase, deal 1 damage to Wilyador",
                 Shadow = "Shadow: If Wilyador has 10 or less damage on him, deal 2 damage to Wilyador.",
                 EncounterSet = "A Journey to Rhosgobel Nightmare",
                 Quantity = 3,
                 CardNumber = 2,
                 Artist = Artist.Mike_Nash
-            });
+            }.WithTraits("Goblin.", "Orc."));
             Cards.Add(new LotRCard()
             {
                 Title = "Treetop Bird-eater",

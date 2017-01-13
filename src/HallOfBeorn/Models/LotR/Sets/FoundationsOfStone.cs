@@ -24,13 +24,12 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Quantity = 3,
                 ResourceCost = 2,
                 IsUnique = true,
-                Traits = new List<string>() { "Mount." },
                 Text = "Attach to a Noldor or Silvan hero.\r\nAction: Exhaust Asfaloth to place 1 progress token on any location. (2 tokens instead if attached hero is Glorfindel.)",
                 FlavorText = "Suddenly into view below came a white horse, gleaming in the shadows, running swiftly. In the dusk its headstall flickered and flashed as if it were studded with gems like living stars. -The Fellowship of the Ring",
                 HtmlTemplate = "<p>Attach to a {traits-hero:Noldor,Silvan}.</p><b>Action:</b> Exhaust {self} to place 1 progress token on any location. (2 tokens instead if attached hero is <a title='Glorfindel Hero' href='/Cards/Search?Query=%2Btitle%3DGlorfindel&CardType=Hero' target='_blank'>Glorfindel</a>.)<p></p><p class='flavor-text'>Suddenly into view below came a white horse, gleaming in the shadows, running swiftly. In the dusk its headstall flickered and flashed as if it were studded with gems like living stars. &ndash;The Fellowship of the Ring</p>",
                 CardNumber = 110,
                 Artist = Artist.Sandara_Tang
-            });
+            }.WithTraits("Mount."));
             Cards.Add(new LotRCard() {
                 
                 Title = "Below the Mines",
