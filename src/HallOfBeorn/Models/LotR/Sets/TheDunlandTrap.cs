@@ -180,7 +180,7 @@ in Mordor where the shadows are.
                 Id = "3D87FA7B-09A6-46C9-9117-E052902B842D",
                 CardType = CardType.Event,
                 ResourceCost = 254,
-                IsVariableCost = true,
+                //IsVariableCost = true,
                 Sphere = Models.LotR.Sphere.Neutral,
                 Quantity = 3,
                 Text = 

@@ -57,7 +57,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 CardType = CardType.Event,
                 Sphere = Sphere.Leadership,
                 ResourceCost = 254,
-                IsVariableCost = true,
+                //IsVariableCost = true,
                 Traits = new List<string>() { "Outlands." },
                 Text = "Action: Return X Outlands allies from your discard pile to your hand.",
                 FlavorText = "Death in the morning and at day's ending\r\nlords took and lowly. Long now they sleep\r\nunder grass in Gondor by the Great River.\r\n-The Return of the King ",

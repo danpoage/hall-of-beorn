@@ -410,7 +410,7 @@ namespace HallOfBeorn.Models.LotR
         #endregion
 
         public uint StageNumber { get; set; }
-        public char StageLetter { get; set; }
+        public char StageLetter { get; private set; }
 
         public CardSet CardSet { get; set; }
 
@@ -420,10 +420,21 @@ namespace HallOfBeorn.Models.LotR
 
         public byte? MaxPerDeck { get; set; }
         public byte? ThreatCost { get; set; }
-        public byte? ResourceCost { get; set; }
+
+        private byte? resourceCost;
+        public byte? ResourceCost { 
+            get { return resourceCost; } 
+            set {
+                if (value != null && value.Value == 254) {
+                    IsVariableCost = true;
+                }
+                resourceCost = value;
+            }
+        }
+
         public byte? EngagementCost { get; set; }
         public byte? Threat { get; set; }
-        public bool IsVariableCost { get; set; }
+        public bool IsVariableCost { get; private set; }
         public bool IsVariableThreat { get; set; }
         public bool IsVariableQuestPoints { get; set; }
         public bool IsVariableWillpower { get; set; }
