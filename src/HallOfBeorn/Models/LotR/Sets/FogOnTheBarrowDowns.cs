@@ -219,8 +219,7 @@ Forced: After this stage is defeated, advance to stage 3B at the beginning of th
                 Title = "Ancient Barrow",
                 Id = "DCECC2B9-7AAE-4E77-8268-07DD49FCFFF9",
                 CardType = Models.LotR.CardType.Location,
-                Threat = 0,
-                IsVariableThreat = true,
+                Threat = Card.VALUE_X,
                 QuestPoints = 4,
                 Traits = new List<string> { "Ruins.", "Downs." },
                 Text = "X is 1 plus the number of facedown cards under this location.\r\nForced: After Ancient Barrow enters play, each player places an ally he controls facedown under this location. When Ancient Barrow leaves play as an explored location, return each ally under this location to its owner's hand.",
@@ -229,7 +228,6 @@ Forced: After this stage is defeated, advance to stage 3B at the beginning of th
                 EasyModeQuantity = 2,
                 CardNumber = 8,
                 Artist = Artist.Ferdinand_Dumago_Ladera
-
             });
             Cards.Add(new LotRCard()
             {

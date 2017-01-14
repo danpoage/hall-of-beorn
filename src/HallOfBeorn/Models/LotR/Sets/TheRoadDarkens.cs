@@ -878,11 +878,9 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
             {
                 Title = "Moria Archer",
                 Id = "798A9EB5-AB16-4DC6-9228-61E670EF5784",
-                
                 CardType = CardType.Enemy,
                 EngagementCost = 42,
-                Threat = 0,
-                IsVariableThreat = true,
+                Threat = Card.VALUE_X,
                 Attack = 3,
                 Defense = 3,
                 HitPoints = 3,
@@ -1211,11 +1209,9 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
             {
                 Title = "Uruk-hai Archer",
                 Id = "E5C15C13-4405-4B0A-961A-B192D1B9FD5B",
-                
                 CardType = CardType.Enemy,
                 EngagementCost = 44,
-                Threat = 0,
-                IsVariableThreat = true,
+                Threat = Card.VALUE_X,
                 Attack = 4,
                 Defense = 1,
                 HitPoints = 4,
@@ -1310,10 +1306,8 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
                 Title = "The Argonath",
                 IsUnique = true,
                 Id = "DB8709C6-128D-4C9F-B6FA-4D5C6E3EB63C",
-                
                 CardType = CardType.Location,
-                Threat = 0,
-                IsVariableThreat = true,
+                Threat = Card.VALUE_X,
                 QuestPoints = 2,
                 Traits = new List<string> { "River." },
                 Text = "Immune to player card effects. X is the number of players in the game.\r\nThe players cannot travel here while Sarn Gebir is in play. While The Argonath is the active location, skip the combat phase.",

@@ -62,14 +62,13 @@ Response: After attached hero gains any number of resources from a card effect, 
                 Attack = 2,
                 Defense = 0,
                 HitPoints = 2,
-                Traits = new List<string> { "Silvan.", "Scout." },
-                Keywords = new List<string> { "Ranged." },
                 Text = "Response: After Orophin enters play, return a Silvan ally from your discard pile to your hand.",
                 FlavorText = "\"Orophin has now gone in haste back to our dwellings to warn our people.\" -Haldir, The Fellowship of the Ring",
                 CardNumber = 114,
                 Quantity = 3,
                 Artist = Artist.Magali_Villeneuve
-            });
+            }.WithTraits("Silvan.", "Scout.")
+            .WithKeywords("Ranged."));
             Cards.Add(new LotRCard()
             {
                 Title = "Henneth Annûn Guard",
@@ -192,7 +191,6 @@ Exhaust Mirror of Galadriel to search the top 10 cards of your deck for a card a
                 StageNumber = 1,
                 Text = "Setup: Add Bellach, The Orcs' Search, and The Secret Chamber to the staging area. Attach Celebrimbor's Mould to The Secret Chamber. Each player adds a different Ost-in-Edhil location to the staging area. Shuffle the encounter deck.",
                 FlavorText = "You have finally reached the ruins of Ost-in-Edhil, but Bellach and his Orcs have arrived before you. They appear to be searching for the hidden chamber. If you want to reach it first, you will have to move quickly and carefully...",
-                Keywords = new List<string> { "Time 3." },
                 OppositeText = "Forced: After the last time counter is removed from this stage, trigger each Scour effect currently in play. Place 3 time counters on this stage.\r\nBallach is immune to player card effects and cannot be engaged.\r\nThe players cannot advance unless Celebrimbor's Mould is attached to a hero.",
                 QuestPoints = 14,
                 EncounterSet = "Celebrimbor's Secret",
@@ -200,7 +198,7 @@ Exhaust Mirror of Galadriel to search the top 10 cards of your deck for a card a
                 CardNumber = 122,
                 Quantity = 1,
                 Artist = Artist.Ben_Zweifel
-            });
+            }.WithKeywords("Time 3."));
             Cards.Add(new LotRCard()
             {
                 Title = "The Enemy's Servant",
@@ -209,20 +207,14 @@ Exhaust Mirror of Galadriel to search the top 10 cards of your deck for a card a
                 StageNumber = 2,
                 Text = "When Revealed: Trigger each Scour effect currently in play. Bellach makes an attack against the player who controls Celebrimbor's Mould. Then, attach Celebrimbor's Mould to Bellach.",
                 FlavorText = "You have just recovered a partial ring-mould from Celebrimbor's secret forge when you are struck from behind. You look up to see Bellach holding the mould and gloating, \"Fools! My master will be pleased.\" As he turns to leave, he shouts to his servants, \"Kill them!\" You must escape the Orcs and recapture the mould!",
-                Keywords = new List<string> { "Time 3." },
-                OppositeText = 
-@"Forced: After the last time counter is removed from this stage, trigger each scour effect currently in play. Place 3 time counters on this stage.
-
-Unless there is at last 12 progress on this stage, Bellach is immune to player card effects and cannot be engaged.
-
-The players cannot win unless Celebrimbor's Mould is attached to a hero. If the players defeat this stage, they win the game.",
+                OppositeText = "Forced: After the last time counter is removed from this stage, trigger each scour effect currently in play. Place 3 time counters on this stage.\r\nUnless there is at last 12 progress on this stage, Bellach is immune to player card effects and cannot be engaged.The players cannot win unless Celebrimbor's Mould is attached to a hero. If the players defeat this stage, they win the game.",
                 QuestPoints = 12,
                 EncounterSet = "Celebrimbor's Secret",
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.MistyMountainOrcs, EncounterSet.BrokenLands },
                 CardNumber = 123,
                 Quantity = 1,
                 Artist = Artist.Rafal_Hrynkiewicz
-            });
+            }.WithKeywords("Time 3."));
             Cards.Add(new LotRCard()
             {
                 Title = "Bellach",
@@ -230,8 +222,7 @@ The players cannot win unless Celebrimbor's Mould is attached to a hero. If the 
                 IsUnique = true,
                 CardType = CardType.Enemy,
                 EngagementCost = 50,
-                Threat = 0,
-                IsVariableThreat = true,
+                Threat = Card.VALUE_X,
                 Attack = 5,
                 Defense = 4,
                 HitPoints = 7,
@@ -257,13 +248,12 @@ Forced: At the end of the refresh phase, raise each player's threat by 1 for eac
                 Quantity = 1,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
-            Cards.Add(new LotRCard()
+            addCard(new LotRCard()
             {
                 Title = "The Secret Chamber",
                 Id = "7D355C4E-216A-44E5-9D05-BDD6E12F7C3B",
                 CardType = CardType.Location,
-                Threat = 0,
-                IsVariableThreat = true,
+                Threat = Card.VALUE_X,
                 QuestPoints = 6,
                 Traits = new List<string> { "Ost-in-Edhil.", "Ruins" },
                 Text = "X is the number of players in the game. Immune to player card effects.\r\nTravel: Remove 3 progress from the current quest to travel here.\r\nIf the Secret Chamber is placed underneath The Orcs' Search, the players lose the game.",
@@ -354,14 +344,13 @@ Scour: Prowling ~Orc engages the player with the highest threat and makes an imm
                 Threat = 1,
                 QuestPoints = 4,
                 Traits = new List<string> { "Ost-in-Edhil.", "Ruins." },
-                Keywords = new List<string> { "Surge." },
                 Text = "Scour: Return this location to the staging area and place 2 damage here.",
                 Shadow = "Shadow: Excess damage from this attack must be placed on the active location, if able.",
                 EncounterSet = "Celebrimbor's Secret",
                 CardNumber = 131,
                 Quantity = 2,
                 Artist = Artist.Anthony_Feliciano
-            });
+            }.WithKeywords("Surge."));
             Cards.Add(new LotRCard()
             {
                 Title = "Ancient Foundation",

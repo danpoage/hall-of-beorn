@@ -12,7 +12,10 @@ namespace HallOfBeorn.Models
             AlternateSlug = string.Empty;
 
             Text = string.Empty;
+            FlavorText = string.Empty;
         }
+
+        public const byte VALUE_X = 254;
 
         private readonly List<string> traits = new List<string>();
         private readonly List<string> normalizedTraits = new List<string>();
@@ -114,7 +117,7 @@ namespace HallOfBeorn.Models
 
         public bool IsUnique { get; set; }
         public byte VictoryPoints { get; set; }
-        
+
         public ushort CardNumber { get; set; }
         public byte Quantity { get; set; }
         public Artist Artist { get; set; }

@@ -50,13 +50,10 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard() {
                 Title = "Barahir",
-                
                 Id = "ccb27322-b28f-4cec-8998-bc3a38da9d7a",
                 IsUnique = true,
                 CardType = CardType.Ally,
                 Sphere = Sphere.Leadership,
-                Traits = new List<string>() { "Edain.", "House of Bëor." },
-                Keywords = new List<string>() { "Sentinel." },
                 ResourceCost = 3,
                 Willpower = 1,
                 Attack = 1,
@@ -66,7 +63,8 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "First Age",
                 CardNumber = 38,
                 Artist = Artist.Saturnoarg
-            });
+            }.WithTraits("Edain.", "House of Bëor.")
+            .WithKeywords("Sentinel."));
             Cards.Add(new LotRCard() {
                 Title = "Bëor",
                 Id = "a71937a2-dd20-40d3-bfb6-a6cf7856011a",
@@ -244,13 +242,10 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Kuun_Suru
             });
             Cards.Add(new LotRCard() {
-                Title = "Gondolin Guard",
-                
+                Title = "Gondolin Guard",                
                 Id = "4b61a531-071c-44a9-b569-261c41f182d7",
                 CardType = CardType.Ally,
                 Sphere = Sphere.Tactics,
-                Traits = new List<string>() { "Noldor." },
-                Keywords = new List<string>() { "Sentinel." },
                 ResourceCost = 2,
                 Willpower = 0,
                 Attack = 1,
@@ -259,15 +254,13 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "First Age",
                 CardNumber = 27,
                 Artist = Artist.Unknown
-            });
+            }.WithTraits("Noldor.")
+            .WithKeywords("Sentinel."));
             Cards.Add(new LotRCard() {
                 Title = "Green-elf Ranger",
-                
                 Id = "d9de0bc8-78fa-4f1d-b2a6-8d952daefe55",
                 CardType = CardType.Ally,
                 Sphere = Sphere.Lore,
-                Traits = new List<string>() { "Nandor.", "Ranger." },
-                Keywords = new List<string>() { "Ranged." },
                 ResourceCost = 2,
                 Willpower = 1,
                 Attack = 1,
@@ -277,15 +270,14 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "First Age",
                 CardNumber = 32,
                 Artist = Artist.Paolo_Puggioni
-            });
+            }.WithTraits("Nandor.", "Ranger.")
+            .WithKeywords("Ranged."));
             Cards.Add(new LotRCard() {
                 Title = "Hador",
-                
                 Id = "1490551a-e98f-4f75-b619-90c4c510eff0",
                 IsUnique = true,
                 CardType = CardType.Ally,
                 Sphere = Sphere.Leadership,
-                Traits = new List<string>() { "Edain.", "House of Hador." },
                 ResourceCost = 3,
                 Willpower = 1,
                 Attack = 2,
@@ -295,10 +287,9 @@ namespace HallOfBeorn.Models.LotR.Sets
                 EncounterSet = "First Age",
                 CardNumber = 37,
                 Artist = Artist.Unknown
-            });
+            }.WithTraits("Edain.", "House of Hador."));
             Cards.Add(new LotRCard() {
                 Title = "Haladin Woodsman",
-                
                 Id = "b1d66533-fa81-466a-a26c-eb0ddf3ea2a6",
                 CardType = CardType.Ally,
                 Sphere = Sphere.Spirit,
@@ -535,17 +526,15 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IsUnique = true,
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Mastery,
-                Traits = new List<string>() { "Item.", "Weapon." },
-                Keywords = new List<string>() { "Restricted." },
                 ResourceCost = 2,
                 Text = "Attach to a hero with a printed Mastery icon.\r\nAction: Exhaust Aranrúth to give attached hero a Leadership, Lore, Tactics, or Spirit icon until the end of the phase.\r\nIf attached hero is Thingol, Aranrúth gains, 'Attached hero gets +2 Attack.'",
                 EncounterSet = "First Age",
                 CardNumber = 161,
                 Artist = Artist.Mathieu_Degrotte
-            });
+            }.WithTraits("Item.", "Weapon.")
+            .WithKeywords("Restricted."));
             Cards.Add(new LotRCard() {
                 Title = "Ard-galen Horse",
-                
                 Id = "b9ef5e42-ff98-4189-9d36-12d6d57a20ae",
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Lore,
@@ -571,38 +560,29 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Peter_Xavier_Pric
             });
             Cards.Add(new LotRCard() {
-                Title = "Dragon-helm",
-                
+                Title = "Dragon-helm",                
                 Id = "9288286a-a88b-41a8-889b-83e8f4c1e91d",
                 IsUnique = true,
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Tactics,
-                Traits = new List<string>() { "Item.", "Armor.", "Artifact." },
-                Keywords = new List<string> { "Restricted." },
                 ResourceCost = 3,
-                Text =
-@"Attach to a hero with the House of Hador trait.
-
-Response: After attached hero is damaged, exhaust Dragon-helm and raise your threat by 3 to cancel all damage from that attack.
-                
-If attached hero is Túrin, Dragon-helm gains, 'Response: After an enemy engages with you, it gets -1 Attack and -1 Defense until the end of the round.'",
+                Text = "Attach to a hero with the House of Hador trait.\r\nResponse: After attached hero is damaged, exhaust Dragon-helm and raise your threat by 3 to cancel all damage from that attack.\r\nIf attached hero is Túrin, Dragon-helm gains, 'Response: After an enemy engages with you, it gets -1 Attack and -1 Defense until the end of the round.'",
                 EncounterSet = "First Age",
                 CardNumber = 64,
                 Artist = Artist.Mahdi_Mehrnegar
-            });
+            }.WithTraits("Item.", "Armor.", "Artifact.")
+            .WithKeywords("Restricted."));
             Cards.Add(new LotRCard() {
                 Title = "Elf-friend",
-                
                 Id = "9972048e-4e59-4444-8957-17d5b43164a7",
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Spirit,
-                Traits = new List<string>() { "Title." },
                 ResourceCost = 1,
-                Text = "Attach to an Edain hero.Attached hero gains the Noldor trait.",
+                Text = "Attach to an Edain hero.\r\nAttached hero gains the Noldor trait.",
                 EncounterSet = "First Age",
                 CardNumber = 45,
                 Artist = Artist.Anke_Eissmann
-            });
+            }.WithTraits("Title."));
             Cards.Add(new LotRCard() {
                 Title = "Galvorn Armor",
                 
@@ -821,58 +801,42 @@ Action: Spend 1 resource from Oath of Vengeance to give attached hero +1 Willpow
                 Artist = Artist.Anke_Eissmann
             });
             Cards.Add(new LotRCard() {
-                Title = "Ringil",
-                
+                Title = "Ringil",                
                 Id = "818a434c-d23a-4ec3-ac46-63e2665f4510",
                 IsUnique = true,
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Tactics,
-                Traits = new List<string>() { "Item.", "Weapon." },
-                Keywords = new List<string> { "Restricted." },
                 ResourceCost = 2,
-                Text =
-@"Attach to a hero with the House of Fingolfin trait.
-
-Attached hero gets +1 Attack (+2 Attack if Fingolfin). 
-                
-If the attached hero is Fingolfin, Ringil gains: 'Response: After the attached character attacks alone, cancel all damage from the attack and reduce your threat by that amount instead.'",
+                Text = "Attach to a hero with the House of Fingolfin trait.\r\nAttached hero gets +1 Attack (+2 Attack if Fingolfin).\r\nIf the attached hero is Fingolfin, Ringil gains: 'Response: After the attached character attacks alone, cancel all damage from the attack and reduce your threat by that amount instead.'",
                 EncounterSet = "First Age",
                 CardNumber = 61,
                 Artist = Artist.Sarafiel
-            });
+            }.WithTraits("Item.", "Weapon.")
+            .WithKeywords("Restricted."));
             Cards.Add(new LotRCard() {
                 Title = "Rochallor",
-                
                 Id = "3d3a2ede-39f8-420d-a121-93f19d284253",
                 IsUnique = true,
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Tactics,
-                Traits = new List<string>() { "Mount." },
                 ResourceCost = 2,
                 Text = "Attach to Fingolfin.Combat Action: Choose an enemy in the staging area. Exhaust Rochallor and the attached hero to make an attack on that enemy. The attached hero gets +1 Attack (+2 Attack if the enemy is unique).",
                 EncounterSet = "First Age",
                 CardNumber = 62,
                 Artist = Artist.Hector_Hanoteau
-            });
+            }.WithTraits("Mount."));
             Cards.Add(new LotRCard() {
                 Title = "Shadowy Cloak",
-                
                 Id = "3ae5e27e-a66a-43a1-a967-c102e9ab9da3",
                 IsUnique = true,
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Spirit,
-                Traits = new List<string>() { "Enchantment." },
                 ResourceCost = 2,
-                Text =
-@"Attach to Lúthien.
-
-Resources on Shadowy Cloak can only be used to pay for Lúthien's ability.
-                
-Action: Exhaust Shadowy Cloak to either add 1 resource to Shadowy Cloak or ready Lúthien.",
+                Text = "Attach to Lúthien.\r\nResources on Shadowy Cloak can only be used to pay for Lúthien's ability.\r\nAction: Exhaust Shadowy Cloak to either add 1 resource to Shadowy Cloak or ready Lúthien.",
                 EncounterSet = "First Age",
                 CardNumber = 46,
                 Artist = Artist.Ted_Nasmith
-            });
+            }.WithTraits("Enchantment."));
             Cards.Add(new LotRCard() {
                 Title = "Solitary Outlaw",
                 
@@ -1164,22 +1128,19 @@ Attached hero gets +2 Willpower, +2 Attack, +2 Defense, +2 hit points and does n
                 Artist = Artist.Ted_Nasmith
             });
             Cards.Add(new LotRCard() {
-                Title = "Open Battle",
-                
+                Title = "Open Battle",                
                 Id = "6cd143f3-4f7b-40c7-a09d-3f37b910676b",
                 CardType = CardType.Event,
                 Sphere = Sphere.Mastery,
-                Traits = new List<string>() { "Plan." },
-                Keywords = new List<string>() { "Doomed 2." },
                 ResourceCost = 0,
                 Text = "Action: Each player may search his deck for a Weapon or Armor attachment and add it to his hand.",
                 EncounterSet = "First Age",
                 CardNumber = 97,
                 Artist = Artist.Unknown
-            });
+            }.WithTraits("Plan.")
+            .WithKeywords("Doomed 2."));
             Cards.Add(new LotRCard() {
                 Title = "Passed in Peace",
-                
                 Id = "495c08de-1f3d-4d5c-9c27-2767c3dab2f3",
                 CardType = CardType.Event,
                 Sphere = Sphere.Lore,
@@ -1191,7 +1152,6 @@ Attached hero gets +2 Willpower, +2 Attack, +2 Defense, +2 hit points and does n
             });
             Cards.Add(new LotRCard() {
                 Title = "Secret Toil",
-                
                 Id = "78970cd3-4c09-4c5d-83a7-261fb7dddfd6",
                 CardType = CardType.Event,
                 Sphere = Sphere.Leadership,
@@ -1393,14 +1353,11 @@ Action: Place 1 Corruption on Fëanor to play an attachment from any sphere of i
                 Artist = Artist.Vishal
             });
             Cards.Add(new LotRCard() {
-                Title = "Fingolfin",
-                
+                Title = "Fingolfin",                
                 Id = "2aa57f53-97d0-45e9-9254-9c064889d1ea",
                 IsUnique = true,
                 CardType = CardType.Hero,
                 Sphere = Sphere.Tactics,
-                Traits = new List<string>() { "Noldor.", "House of Fingolfin.", "Noble." },
-                Keywords = new List<string>() { "Sentinel." },
                 ThreatCost = 11,
                 Willpower = 1,
                 Attack = 1,
@@ -1410,15 +1367,14 @@ Action: Place 1 Corruption on Fëanor to play an attachment from any sphere of i
                 EncounterSet = "First Age",
                 CardNumber = 10,
                 Artist = Artist.Murat_Calis
-            });
+            }.WithTraits("Noldor.", "House of Fingolfin.", "Noble.")
+            .WithKeywords("Sentinel."));
             Cards.Add(new LotRCard() {
                 Title = "Fingon",
-                
                 Id = "69a4e781-151b-4d30-a24e-6137009bf22e",
                 IsUnique = true,
                 CardType = CardType.Hero,
                 Sphere = Sphere.Leadership,
-                Traits = new List<string>() { "Noldor.", "House of Fingolfin.", "Noble." },
                 ThreatCost = 11,
                 Willpower = 3,
                 Attack = 1,
@@ -1428,7 +1384,7 @@ Action: Place 1 Corruption on Fëanor to play an attachment from any sphere of i
                 EncounterSet = "First Age",
                 CardNumber = 3,
                 Artist = Artist.Venlian
-            });
+            }.WithTraits("Noldor.", "House of Fingolfin.", "Noble."));
             Cards.Add(new LotRCard() {
                 Title = "Finrod Felagund",
                 
@@ -1572,99 +1528,76 @@ Action: Place 1 Corruption on Fëanor to play an attachment from any sphere of i
             });
             Cards.Add(new LotRCard() {
                 Title = "Carcharoth the Wolf of Angband",
-                
                 Id = "0577b869-c00d-47dd-bb49-95e0b08022ec",
                 IsUnique = true,
                 CardType = CardType.Enemy,
-                Traits = new List<string>() { "Creature.", "Werewolf." },
-                Keywords = new List<string>() { "Indestructible." },
                 EngagementCost = 50,
                 Threat = 6,
                 Attack = 5,
                 Defense = 8,
                 HitPoints = 20,
                 Quantity = 3,
-                Text = 
-@"Immune to player card effects.\r\nForced: While Carcharoth the Wolf of Angband is in the staging area, he attacks a random location in play during the combat phase (the first player may declare a defender if it is the active location).
-
-When Revealed: Add 1 damage to the current quest stage.",
+                Text = "Immune to player card effects.\r\nForced: While Carcharoth the Wolf of Angband is in the staging area, he attacks a random location in play during the combat phase (the first player may declare a defender if it is the active location).\r\nWhen Revealed: Add 1 damage to the current quest stage.",
                 EncounterSet = "Hunting of the Wolf",
                 CardNumber = 167,
                 Artist = Artist.Razielmn
-            });
+            }.WithTraits("Creature.", "Werewolf.")
+            .WithKeywords("Indestructible."));
             Cards.Add(new LotRCard() {
                 Title = "Carcharoth the Devouring Spirit",
-                
                 Id = "63ab237a-2da9-41a1-977a-9a64cd17cb74",
                 IsUnique = true,
                 CardType = CardType.Enemy,
-                Traits = new List<string>() { "Creature.", "Werewolf." },
-                Keywords = new List<string>() { "Indestructible." },
                 EngagementCost = 50,
                 Threat = 4,
                 Attack = 8,
                 Defense = 6,
                 HitPoints = 20,
                 Quantity = 3,
-                Text = 
-@"Immune to player card effects.\r\nForced: While Carcharoth the Devouring Spirit is in the staging area, he attacks a random location in play during the combat phase (the first player may declare a defender if it is the active location).
-                
-When Revealed: Carcharoth the Devouring Spirit makes an immediate attack on the first player.",
+                Text = "Immune to player card effects.\r\nForced: While Carcharoth the Devouring Spirit is in the staging area, he attacks a random location in play during the combat phase (the first player may declare a defender if it is the active location).\r\nWhen Revealed: Carcharoth the Devouring Spirit makes an immediate attack on the first player.",
                 EncounterSet = "Hunting of the Wolf",
                 CardNumber = 168,
                 Artist = Artist.Nasko_Moskov
-            });
+            }.WithTraits("Creature.", "Werewolf.")
+            .WithKeywords("Indestructible."));
             Cards.Add(new LotRCard() {
-                Title = "Carcharoth the Red Maw",
-                
+                Title = "Carcharoth the Red Maw",                
                 Id = "b2fb8e22-c2c4-4cab-be7a-2fb1f30916bc",
                 IsUnique = true,
                 CardType = CardType.Enemy,
-                Traits = new List<string>() { "Creature.", "Werewolf." },
-                Keywords = new List<string>() { "Indestructible." },
                 EngagementCost = 50,
                 Threat = 5,
                 Attack = 6,
                 Defense = 7,
                 HitPoints = 20,
                 Quantity = 3,
-                Text = 
-@"Immune to player card effects.\r\nForced: While Carcharoth the Red Maw is in the staging area, he attacks a random location in play during the combat phase (the first player may declare a defender if it is the active location).
-
-Forced: Caracharoth the Red Maw makes two attacks during the combat phase. (Deal a separate shadow card for each attack.)",
+                Text = "Immune to player card effects.\r\nForced: While Carcharoth the Red Maw is in the staging area, he attacks a random location in play during the combat phase (the first player may declare a defender if it is the active location).\r\nForced: Caracharoth the Red Maw makes two attacks during the combat phase. (Deal a separate shadow card for each attack.)",
                 EncounterSet = "Hunting of the Wolf",
                 CardNumber = 166,
                 Artist = Artist.WavingMonsterStudios
-            });
+            }.WithTraits("Creature.", "Werewolf.")
+            .WithKeywords("Indestructible."));
             Cards.Add(new LotRCard() {
                 Title = "Carcharoth the Tormented",
-                
                 Id = "1b1b1030-6a1c-43dc-94d3-85a2515e4e81",
                 IsUnique = true,
                 CardType = CardType.Enemy,
-                Traits = new List<string>() { "Creature.", "Werewolf." },
-                Keywords = new List<string>() { "Relentless." },
                 EngagementCost = 1,
                 Threat = 6,
                 Attack = 9,
                 Defense = 9,
                 HitPoints = 25,
                 Quantity = 1,
-                Text = 
-@"Cannot leave play.\r\nForced: Carcharoth the Tormented engages the first player during the encounter phase.
-
-Forced: After an attack by Carcharoth the Tormented resolves, discard one character the defending player controls.",
+                Text = "Cannot leave play.\r\nForced: Carcharoth the Tormented engages the first player during the encounter phase.\r\nForced: After an attack by Carcharoth the Tormented resolves, discard one character the defending player controls.",
                 EncounterSet = "Hunting of the Wolf",
                 CardNumber = 169,
                 Artist = Artist.Dechambo
-            });
+            }.WithTraits("Creature.", "Werewolf.")
+            .WithKeywords("Relentless."));
             Cards.Add(new LotRCard() {
-                Title = "Banks of the Esgalduin",
-                
+                Title = "Banks of the Esgalduin",                
                 Id = "20e151a1-5ed2-49c7-9d6c-f8fa7cea829d",
                 CardType = CardType.Location,
-                Traits = new List<string>() { "River.", "Water." },
-                Keywords = new List<string>() { "Hunt 1." },
                 Threat = 2,
                 QuestPoints = 5,
                 Quantity = 2,
@@ -1672,14 +1605,12 @@ Forced: After an attack by Carcharoth the Tormented resolves, discard one charac
                 EncounterSet = "Hunting of the Wolf",
                 CardNumber = 175,
                 Artist = Artist.Ao_Yi_Chuan
-            });
+            }.WithTraits("River.", "Water.")
+            .WithKeywords("Hunt 1."));
             Cards.Add(new LotRCard() {
                 Title = "Brethil Dwelling",
-                
                 Id = "e6eb53ee-ae0c-4cec-b221-10fbe03b6d91",
                 CardType = CardType.Location,
-                Traits = new List<string>() { "Outpost." },
-                Keywords = new List<string>() { "Hunt 2." },
                 Threat = 3,
                 QuestPoints = 5,
                 Quantity = 3,
@@ -1687,71 +1618,55 @@ Forced: After an attack by Carcharoth the Tormented resolves, discard one charac
                 EncounterSet = "Hunting of the Wolf",
                 CardNumber = 173,
                 Artist = Artist.Unknown
-            });
+            }.WithTraits("Outpost.")
+            .WithKeywords("Hunt 2."));
             Cards.Add(new LotRCard() {
-                Title = "Dark Valley",
-                
+                Title = "Dark Valley",                
                 Id = "e24b29f1-50ac-4c3d-a844-a5d75298f1c7",
                 IsUnique = true,
                 CardType = CardType.Location,
-                Traits = new List<string>() { "Valley.", "Water." },
-                Keywords = new List<string>() { "Hunt 3." },
                 Threat = 2,
                 QuestPoints = 6,
                 Quantity = 2,
-                Text = 
-@"While Dark Valley is the active location, you may choose which Carcharoth is revealed at the beginning of the quest phase. Shuffle the Carcharoth deck.
-                
-Travel: Carcharoth makes an immediate attack against the first player.",
+                Text = "While Dark Valley is the active location, you may choose which Carcharoth is revealed at the beginning of the quest phase. Shuffle the Carcharoth deck.\r\nTravel: Carcharoth makes an immediate attack against the first player.",
                 EncounterSet = "Hunting of the Wolf",
                 CardNumber = 179,
                 Artist = Artist.Albert_Bierstadt
-            });
+            }.WithTraits("Valley.", "Water.")
+            .WithKeywords("Hunt 3."));
             Cards.Add(new LotRCard() {
-                Title = "Dimbar Field",
-                
+                Title = "Dimbar Field",                
                 Id = "a89e2f4f-67fd-41e8-aae4-2635b066784c",
                 CardType = CardType.Location,
-                Traits = new List<string>() { "Plain." },
-                Keywords = new List<string>() { "Hunt 1." },
                 Threat = 2,
                 QuestPoints = 5,
                 Quantity = 2,
-                Text = 
-@"While Dimbar Field is the active location, all heroes gain ranged.
-
-Travel: Discard all allies in each player's hand.",
+                Text = "While Dimbar Field is the active location, all heroes gain ranged.\r\nTravel: Discard all allies in each player's hand.",
                 Shadow = "Shadow: The attacking enemy makes an additional attack after this one.",
                 EncounterSet = "Hunting of the Wolf",
                 CardNumber = 172,
                 Artist = Artist.Bobby_Fieldhouse
-            });
+            }.WithTraits("Plain.")
+            .WithKeywords("Hunt 1."));
             Cards.Add(new LotRCard() {
                 Title = "Eaves of Region",
-                
                 Id = "2c2b1c05-919a-43a3-bccb-828d09d4a1f2",
                 CardType = CardType.Location,
-                Traits = new List<string>() { "Forest." },
-                Keywords = new List<string>() { "Hunt 1." },
                 Threat = 2,
                 QuestPoints = 3,
                 Quantity = 3,
-                Text = 
-@"While Eaves of Region is the active location, Carcharoth takes 1 damage at the end of the round.
-
-Travel: Each player must discard 1 random card from his hand.",
+                Text = "While Eaves of Region is the active location, Carcharoth takes 1 damage at the end of the round.\r\nTravel: Each player must discard 1 random card from his hand.",
                 Shadow = "Shadow: Either destroy a location in play or choose a new defender. (You may choose a location that is the target of this attack.)",
                 EncounterSet = "Hunting of the Wolf",
                 CardNumber = 174,
                 Artist = Artist.FrozenStocks
-            });
+            }.WithTraits("Forest.")
+            .WithKeywords("Hunt 1."));
             Cards.Add(new LotRCard() {
-                Title = "Gates of Menegroth",
-                
+                Title = "Gates of Menegroth",                
                 Id = "da73fa42-76b3-4ca0-8d93-339a6c503691",
                 IsUnique = true,
                 CardType = CardType.Location,
-                Traits = new List<string>() { "Fortification." },
                 Threat = 4,
                 QuestPoints = 10,
                 Quantity = 1,
@@ -1759,15 +1674,12 @@ Travel: Each player must discard 1 random card from his hand.",
                 EncounterSet = "Hunting of the Wolf",
                 CardNumber = 178,
                 Artist = Artist.Ilya_Nazarov
-            });
+            }.WithTraits("Fortification."));
             Cards.Add(new LotRCard() {
                 Title = "Iant Iaur",
-                
                 Id = "36475989-914f-4190-a619-6bc032c19034",
                 IsUnique = true,
                 CardType = CardType.Location,
-                Traits = new List<string>() { "Bridge.", " Water." },
-                Keywords = new List<string>() { "Hunt 1." },
                 Threat = 5,
                 QuestPoints = 4,
                 Quantity = 1,
@@ -1775,14 +1687,12 @@ Travel: Each player must discard 1 random card from his hand.",
                 EncounterSet = "Hunting of the Wolf",
                 CardNumber = 177,
                 Artist = Artist.Nimarra
-            });
+            }.WithTraits("Bridge.", "Water.")
+            .WithKeywords("Hunt 1."));
             Cards.Add(new LotRCard() {
                 Title = "Neldoreth Settlement",
-                
                 Id = "f477641e-650d-4025-9abb-a5ef12bd9663",
                 CardType = CardType.Location,
-                Traits = new List<string>() { "Outpost." },
-                Keywords = new List<string>() { "Hunt 2." },
                 Threat = 3,
                 QuestPoints = 6,
                 Quantity = 3,
@@ -1791,15 +1701,13 @@ Travel: Each player must discard 1 random card from his hand.",
                 EncounterSet = "Hunting of the Wolf",
                 CardNumber = 176,
                 Artist = Artist.Ron_Crabb
-            });
+            }.WithTraits("Outpost.")
+            .WithKeywords("Hunt 2."));
             Cards.Add(new LotRCard() {
                 Title = "Pass of Anach",
-                
                 Id = "5f09bd7b-f321-4531-81e3-58a8c1e4befb",
                 IsUnique = true,
                 CardType = CardType.Location,
-                Traits = new List<string>() { "Mountain." },
-                Keywords = new List<string>() { "Hunt 2." },
                 Threat = 3,
                 QuestPoints = 4,
                 Quantity = 1,
@@ -1807,14 +1715,12 @@ Travel: Each player must discard 1 random card from his hand.",
                 EncounterSet = "Hunting of the Wolf",
                 CardNumber = 171,
                 Artist = Artist.Ferdinand_Dumago_Ladera
-            });
+            }.WithTraits("Mountain.")
+            .WithKeywords("Hunt 2."));
             Cards.Add(new LotRCard() {
-                Title = "Taur-nu-Fuin",
-                
+                Title = "Taur-nu-Fuin",                
                 Id = "a2ca8cfa-856d-43ab-bae7-fea5c55bb786",
                 CardType = CardType.Location,
-                Traits = new List<string>() { "Forest.", "Dark." },
-                Keywords = new List<string>() { "Hunt 2." },
                 Threat = 4,
                 QuestPoints = 2,
                 Quantity = 2,
@@ -1822,10 +1728,10 @@ Travel: Each player must discard 1 random card from his hand.",
                 EncounterSet = "Hunting of the Wolf",
                 CardNumber = 170,
                 Artist = Artist.Darek_Zabrocki
-            });
+            }.WithTraits("Forest.", "Dark.")
+            .WithKeywords("Hunt 2."));
             Cards.Add(new LotRCard() {
-                Title = "Beleg Strongbow",
-                
+                Title = "Beleg Strongbow",                
                 Id = "cad9261a-140a-4aaf-82d3-07229e9f1fce",
                 IsUnique = true,
                 CardType = CardType.Objective,
@@ -1998,20 +1904,17 @@ When Carcharoth attacks a location, subtract the threat of the location from Car
             });
             Cards.Add(new LotRCard() {
                 Title = "Stood Now in Wrath",
-                
                 Id = "9a0d9373-9886-4f4a-848e-969d612b5212",
                 CardType = CardType.Treachery,
-                Keywords = new List<string>() { "Surge." },
                 Quantity = 2,
                 Text = "When Revealed: Discard Carcharoth and reveal and add the next card from the Carcharoth deck.",
                 Shadow = "Shadow: The attacking enemy gets +1 Attack. (+3 Attack instead if the attacking enemy has more than 5 damage on him.)",
                 EncounterSet = "Hunting of the Wolf",
                 CardNumber = 181,
                 Artist = Artist.HazelFibonacci
-            });
+            }.WithKeywords("Surge."));
             Cards.Add(new LotRCard() {
                 Title = "Crazed Thrall",
-                
                 Id = "eb8ca983-1634-4be3-a327-e2c881a9490a",
                 CardType = CardType.Enemy,
                 Traits = new List<string>() { "Thrall." },
@@ -2046,12 +1949,9 @@ When Carcharoth attacks a location, subtract the threat of the location from Car
             });
             Cards.Add(new LotRCard() {
                 Title = "Draugluin",
-                
                 Id = "fe9fb08b-52e3-4bc1-b55d-d5994fbab19c",
                 IsUnique = true,
                 CardType = CardType.Enemy,
-                Traits = new List<string>() { "Creature.", "Werewolf." },
-                Keywords = new List<string>() { "Relentless." },
                 EngagementCost = 45,
                 Threat = 4,
                 Attack = 7,
@@ -2063,7 +1963,8 @@ When Carcharoth attacks a location, subtract the threat of the location from Car
                 EncounterSet = "The Isle of Werewolves",
                 CardNumber = 117,
                 Artist = Artist.Taina_Dos
-            });
+            }.WithTraits("Creature.", "Werewolf.")
+            .WithKeywords("Relentless."));
             Cards.Add(new LotRCard() {
                 Title = "Guard Wolf",
                 
@@ -2156,12 +2057,9 @@ When Carcharoth attacks a location, subtract the threat of the location from Car
             });
             Cards.Add(new LotRCard() {
                 Title = "Wolf-Sauron",
-                
                 Id = "86f818f2-aad7-4a8f-9bc8-c06ef4fae756",
                 IsUnique = true,
                 CardType = CardType.Enemy,
-                Traits = new List<string>() { "Maia.", "Werewolf." },
-                Keywords = new List<string>() { "Relentless." },
                 EngagementCost = 48,
                 Threat = 5,
                 Attack = 9,
@@ -2173,10 +2071,10 @@ When Carcharoth attacks a location, subtract the threat of the location from Car
                 EncounterSet = "The Isle of Werewolves",
                 CardNumber = 118,
                 Artist = Artist.Blaz_Porenta
-            });
-            Cards.Add(new LotRCard() {
-                Title = "No Living Creature",
-                
+            }.WithTraits("Maia.", "Werewolf.")
+            .WithKeywords("Relentless."));
+            addCard(new LotRCard() {
+                Title = "No Living Creature",                
                 Id = "ec67d8da-eac3-461b-ab76-e7eea78542a4",
                 CardType = CardType.Event,
                 Traits = new List<string>() { "Maia." },
@@ -2462,11 +2360,8 @@ Heroes in the pit area are immune to player card effects and cannot leave the pi
             });
             Cards.Add(new LotRCard() {
                 Title = "Angband Orc",
-                
                 Id = "c020347f-a024-48f6-97de-8a9e73003739",
                 CardType = CardType.Enemy,
-                Traits = new List<string>() { "Orc." },
-                Keywords = new List<string>() { "Sneak.", "Doomed 1." },
                 EngagementCost = 25,
                 Threat = 2,
                 Attack = 4,
@@ -2478,14 +2373,12 @@ Heroes in the pit area are immune to player card effects and cannot leave the pi
                 EncounterSet = "The Seat of Morgoth",
                 CardNumber = 142,
                 Artist = Artist.Christian_Quinot
-            });
+            }.WithTraits("Orc.")
+            .WithKeywords("Sneak.", "Doomed 1."));
             Cards.Add(new LotRCard() {
                 Title = "Balrog of Angband",
-                
                 Id = "a35bb6d5-566b-4836-a792-3ab6b14c775e",
                 CardType = CardType.Enemy,
-                Traits = new List<string>() { "Balrog." },
-                Keywords = new List<string>() { "Sneak." },
                 EngagementCost = 37,
                 Threat = 4,
                 Attack = 7,
@@ -2498,39 +2391,29 @@ Heroes in the pit area are immune to player card effects and cannot leave the pi
                 EncounterSet = "The Seat of Morgoth",
                 CardNumber = 136,
                 Artist = Artist.Echo539
-            });
+            }.WithTraits("Balrog.")
+            .WithKeywords("Sneak."));
             Cards.Add(new LotRCard() {
                 Title = "Carcharoth",
-                
                 Id = "ad033513-3b27-4410-9171-5e890667fa15",
                 IsUnique = true,
                 CardType = CardType.Enemy,
-                Traits = new List<string>() { "Creature.", "Werewolf." },
-                Keywords = new List<string>() { "Relentless.", "Indestructible." },
                 EngagementCost = 4,
-                Threat = 0,
-                IsVariableThreat = true,
+                Threat = Card.VALUE_X,
                 Attack = 7,
                 Defense = 4,
                 HitPoints = 15,
                 Quantity = 1,
-                Text = 
-@"Cannot leave play.
-
-X is 5 times the number of players.
-                
-Forced: Players cannot reduce their threat while Carcharoth is in play.",
+                Text = "Cannot leave play.\r\nX is 5 times the number of players.\r\nForced: Players cannot reduce their threat while Carcharoth is in play.",
                 EncounterSet = "The Seat of Morgoth",
                 CardNumber = 135,
                 Artist = Artist.Aogachou
-            });
+            }.WithTraits("Creature.", "Werewolf.")
+            .WithKeywords("Relentless.", "Indestructible."));
             Cards.Add(new LotRCard() {
                 Title = "Fire-drake",
-                
                 Id = "e1a095dc-996f-4b3c-b17a-a20bc10f8953",
                 CardType = CardType.Enemy,
-                Traits = new List<string>() { "Dragon." },
-                Keywords = new List<string>() { "Sneak." },
                 EngagementCost = 42,
                 Threat = 5,
                 Attack = 9,
@@ -2543,15 +2426,13 @@ Forced: Players cannot reduce their threat while Carcharoth is in play.",
                 EncounterSet = "The Seat of Morgoth",
                 CardNumber = 138,
                 Artist = Artist.Sansyu
-            });
+            }.WithTraits("Dragon.")
+            .WithKeywords("Sneak."));
             Cards.Add(new LotRCard() {
                 Title = "Gothmog",
-                
                 Id = "28ae9d78-15e7-4fbe-b156-e9ead6a37886",
                 IsUnique = true,
                 CardType = CardType.Enemy,
-                Traits = new List<string>() { "Balrog." },
-                Keywords = new List<string>() { "Sneak." },
                 EngagementCost = 40,
                 Threat = 5,
                 Attack = 10,
@@ -2563,14 +2444,12 @@ Forced: Players cannot reduce their threat while Carcharoth is in play.",
                 EncounterSet = "The Seat of Morgoth",
                 CardNumber = 139,
                 Artist = Artist.Anja
-            });
+            }.WithTraits("Balrog.")
+            .WithKeywords("Sneak."));
             Cards.Add(new LotRCard() {
                 Title = "Long-worm",
-                
                 Id = "4f26696d-0dc1-4e1e-883d-5ee7789c6339",
                 CardType = CardType.Enemy,
-                Traits = new List<string>() { "Dragon." },
-                Keywords = new List<string>() { "Sneak." },
                 EngagementCost = 40,
                 Threat = 5,
                 Attack = 8,
@@ -2582,15 +2461,13 @@ Forced: Players cannot reduce their threat while Carcharoth is in play.",
                 EncounterSet = "The Seat of Morgoth",
                 CardNumber = 137,
                 Artist = Artist.Joas_Kleine
-            });
+            }.WithTraits("Dragon.")
+            .WithKeywords("Sneak."));
             Cards.Add(new LotRCard() {
-                Title = "Morgoth",
-                
+                Title = "Morgoth",                
                 Id = "f01c44ef-3494-48b4-abe7-f4d5213a3216",
                 IsUnique = true,
                 CardType = CardType.Enemy,
-                Traits = new List<string>() { "Vala." },
-                Keywords = new List<string>() { "Indestructible." },
                 EngagementCost = 50,
                 Threat = 8,
                 Attack = 15,
@@ -2601,14 +2478,12 @@ Forced: Players cannot reduce their threat while Carcharoth is in play.",
                 EncounterSet = "The Seat of Morgoth",
                 CardNumber = 134,
                 Artist = Artist.Gerwell
-            });
+            }.WithTraits("Vala.")
+            .WithKeywords("Indestructible."));
             Cards.Add(new LotRCard() {
-                Title = "Orc Captain",
-                
+                Title = "Orc Captain",                
                 Id = "08a9cee0-543b-4251-a085-2cb869140cd4",
                 CardType = CardType.Enemy,
-                Traits = new List<string>() { "Orc." },
-                Keywords = new List<string>() { "Sneak." },
                 EngagementCost = 28,
                 Threat = 3,
                 Attack = 5,
@@ -2619,14 +2494,12 @@ Forced: Players cannot reduce their threat while Carcharoth is in play.",
                 EncounterSet = "The Seat of Morgoth",
                 CardNumber = 141,
                 Artist = Artist.Christian_Quinot
-            });
+            }.WithTraits("Orc.")
+            .WithKeywords("Sneak."));
             Cards.Add(new LotRCard() {
                 Title = "Troll of Angband",
-                
                 Id = "ad8cf095-594e-4d14-adef-aafa4f31e60c",
                 CardType = CardType.Enemy,
-                Traits = new List<string>() { "Troll." },
-                Keywords = new List<string>() { "Sneak." },
                 EngagementCost = 30,
                 Threat = 2,
                 Attack = 6,
@@ -2638,7 +2511,8 @@ Forced: Players cannot reduce their threat while Carcharoth is in play.",
                 EncounterSet = "The Seat of Morgoth",
                 CardNumber = 140,
                 Artist = Artist.Ben_Daugherty
-            });
+            }.WithTraits("Troll.")
+            .WithKeywords("Sneak."));
             Cards.Add(new LotRCard() {
                 Title = "Echoing Corridor",
                 
@@ -2801,41 +2675,35 @@ Response: After Pits of Angband leaves play, add Angband Sword to the staging ar
             });
             Cards.Add(new LotRCard() {
                 Title = "Angband Sword",
-                
                 Id = "0921abfd-2cd7-493f-878b-ad4cb99e010c",
                 CardType = CardType.Objective,
-                Traits = new List<string>() { "Item.", "Weapon." },
-                Keywords = new List<string>() { "Restricted." },
                 Quantity = 1,
                 Text = "Attached hero gains +5 Attack. Attached hero gains an additional +1 Attack for each resource on Angband Sword.Action: Attach Angband Sword to a hero. Place 1 Corruption on that hero.Response: After attached hero deals damage, add 1 resource to Angband Sword.",
                 EncounterSet = "The Seat of Morgoth",
                 CardNumber = 131,
                 Artist = Artist.Daniel_Ljunggren
-            });
+            }.WithTraits("Item.", "Weapon.")
+            .WithKeywords("Restricted."));
             Cards.Add(new LotRCard() {
-                Title = "Dreadful Garments",
-                
+                Title = "Dreadful Garments",                
                 Id = "78db9650-a652-4a3d-bff4-1423cbfb83e2",
                 CardType = CardType.Objective,
-                Traits = new List<string>() { "Disguise." },
                 Quantity = 1,
                 Text = "Action: Attach Dreadful Garments to a hero.Action: Exhaust Dreadful Garments to place 5 progress tokens on the active enemy.",
                 EncounterSet = "The Seat of Morgoth",
                 CardNumber = 132,
                 Artist = Artist.Ted_Nasmith
-            });
+            }.WithTraits("Disguise."));
             Cards.Add(new LotRCard() {
                 Title = "Element of Surprise",
-                
                 Id = "d2d61431-56a0-4aa4-8900-d9ba9aec4703",
                 CardType = CardType.Objective,
-                Traits = new List<string>() { "Initiative." },
                 Quantity = 1,
                 Text = "Action: Attach Element of Surprise to a hero.Combat Action: Exhaust Element of Surprise. Player attacks are made before enemy attacks during this phase.",
                 EncounterSet = "The Seat of Morgoth",
                 CardNumber = 133,
                 Artist = Artist.Kieran_Tatsue
-            });
+            }.WithTraits("Initiative."));
             Cards.Add(new LotRCard() {
                 Title = "Silmaril",
                 
@@ -2945,30 +2813,26 @@ When engaged with an enemy with the Sneak keyword, players may cancel all progre
                 Artist = Artist.StrangerToTheRain
             });
             Cards.Add(new LotRCard() {
-                Title = "Clumsy Step",
-                
+                Title = "Clumsy Step",                
                 Id = "d17ece37-4951-4dbf-a5b9-0b07092e8c5f",
                 CardType = CardType.Treachery,
-                Traits = new List<string>() { "Noise." },
-                Keywords = new List<string>() { "Doomed 2." },
                 Quantity = 3,
                 Text = "When Revealed: Discard an additional encounter card when resolving Sneak tests this round. If there is no active enemy, Clumsy Step gains surge.",
                 EncounterSet = "The Seat of Morgoth",
                 CardNumber = 154,
                 Artist = Artist.Sam_R_Kennedy
-            });
+            }.WithTraits("Noise.")
+            .WithKeywords("Doomed 2."));
             Cards.Add(new LotRCard() {
                 Title = "Devouring Spirit",
-                
                 Id = "11916b96-fe83-4a57-985d-4fb1746d4cfc",
                 CardType = CardType.Treachery,
-                Traits = new List<string>() { "Condition." },
                 Quantity = 2,
                 Text = "When Revealed: Attach to the enemy in play with the lowest Threat. Attached enemy gets +1 Threat, +1 Attack, +1 Defense, and +3 hit points. If there are no enemies in play, Devouring Spirit gains surge.",
                 EncounterSet = "The Seat of Morgoth",
                 CardNumber = 153,
                 Artist = Artist.Sarah_Finnigan
-            });
+            }.WithTraits("Condition."));
             addCard(new LotRCard() {
                 Title = "Evil Lust",
                 Id = "092d5e7a-6483-4ded-98c3-fa4478169f1f",
@@ -3003,16 +2867,14 @@ When engaged with an enemy with the Sneak keyword, players may cancel all progre
             }.WithTraits("Noise."));
             Cards.Add(new LotRCard() {
                 Title = "Heroic Diversion",
-                
                 Id = "083af9c9-b1b3-4185-b09b-59eff4440f10",
                 CardType = CardType.Treachery,
-                Keywords = new List<string>() { "Doomed 1." },
                 Quantity = 3,
                 Text = "When Revealed: Each player must either discard 1 character or raise his threat by 5.",
                 EncounterSet = "The Seat of Morgoth",
                 CardNumber = 157,
                 Artist = Artist.Jenny_Dolfen
-            });
+            }.WithKeywords("Doomed 1."));
         }
     }
 }

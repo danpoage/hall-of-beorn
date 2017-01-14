@@ -447,6 +447,11 @@ namespace HallOfBeorn
             }
         }
 
+        public static string Description(this byte? self)
+        {
+            return self.Description(self != null && self == 254, "-");
+        }
+
         public static string Description(this byte? self, bool isVariable)
         {
             return self.Description(isVariable, string.Empty);

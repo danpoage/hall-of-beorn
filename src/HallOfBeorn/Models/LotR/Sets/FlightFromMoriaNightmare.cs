@@ -133,14 +133,11 @@ Players may bypass this quest card at the end of the combat phase.",
             Cards.Add(new LotRCard()
             {
                 Title = "Coal-Black Orc",
-                
                 Id = "7DDD73A9-F6E1-4610-B78D-3D349C9CC057",
                 CardType = CardType.Enemy,
                 EngagementCost = 34,
-                Threat = 0,
-                IsVariableThreat = true,
-                Attack = 0,
-                IsVariableAttack = true,
+                Threat = Card.VALUE_X,
+                Attack = Card.VALUE_X,
                 Defense = 3,
                 HitPoints = 5,
                 Traits = new List<string> { "Orc." },

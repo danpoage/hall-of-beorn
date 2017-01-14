@@ -360,24 +360,18 @@ Forced: After the engaged player draws any number of cards, put a resource token
             Cards.Add(new LotRCard()
             {
                 Title = "Hithaeglir Foothills",
-                
                 Id = "02AB39BB-FC95-494D-9BC5-0ADE106A02BA",
                 CardType = CardType.Location,
-                Threat = 0,
-                IsVariableThreat = true,
+                Threat = Card.VALUE_X,
                 QuestPoints = 4,
                 Quantity = 2,
                 EasyModeQuantity = 1,
                 Traits = new List<string> { "Enedwaith.", "Hills." },
-                Keywords = new List<string> { "Surge." },
-                Text = 
-@"X is the number of resource tokens on this card.
-
-Forced: After a player draws any number of cards, place 1 resource token here.",
+                Text = "X is the number of resource tokens on this card.\r\nForced: After a player draws any number of cards, place 1 resource token here.",
                 EncounterSet = "The Dunland Trap",
                 CardNumber = 19,
                 Artist = Artist.Michael_Rasmussen
-            });
+            }.WithKeywords("Surge."));
             Cards.Add(new LotRCard()
             {
                 Title = "Hills of Dunland",

@@ -36,16 +36,13 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Winona_Nelson
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "Bard the Bowman",
                 Id = "e2cf87be-ccdc-48e9-8127-57bee67d4a0c",
                 CardType = CardType.Hero,
                 Sphere = Sphere.Tactics,
                 IsUnique = true,
-                Keywords = new List<string>() { "Ranged." },
                 ThreatCost = 11,
                 Quantity = 1,
-                Traits = new List<string>() { "Esgaroth.", " Warrior." },
                 Willpower = 2,
                 HitPoints = 4,
                 Attack = 3,
@@ -54,9 +51,10 @@ namespace HallOfBeorn.Models.LotR.Sets
                 FlavorText = "Now he shot with a great yew bow, till all his arrows but one were spent. -The Hobbit",
                 CardNumber = 3,
                 Artist = Artist.Magali_Villeneuve
-            });
+            }
+            .WithTraits("Esgaroth.", "Warrior.")
+            .WithKeywords("Ranged."));
             Cards.Add(new LotRCard() {
-                
                 Title = "Bifur",
                 Id = "c4b959f5-92a9-4f46-8656-f9da08a5cb86",
                 CardType = CardType.Ally,
@@ -703,8 +701,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 Text = "Immune to player card effects.\r\nX is the number of players in the game.Cannot leave the staging area.The first Goblin revealed each round gains surge.",
                 EncounterSet = "The Battle of Five Armies",
                 EngagementCost = 50,
-                Threat = 0,
-                IsVariableThreat = true,
+                Threat = Card.VALUE_X,
                 CardNumber = 53,
                 Artist = Artist.Jim_Pavelec
             });
@@ -1161,13 +1158,11 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 Text = "Immune to player card effects. Cannot be engaged.\r\nX is the number of non-Burglar characters committed to the quest.\r\nForced: After the 6th progress token is placed here, the players advance to stage 4A.",
                 EncounterSet = "The Lonely Mountain",
                 EngagementCost = 50,
-                Threat = 0,
-                IsVariableThreat = true,
+                Threat = Card.VALUE_X,
                 CardNumber = 40,
                 Artist = Artist.Christopher_Burdett
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "Smaug the Magnificent",
                 Id = "65ad784f-d82e-4659-8d1c-53d2e4d19336",
                 CardType = CardType.Enemy,

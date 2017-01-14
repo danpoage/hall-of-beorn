@@ -48,13 +48,11 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Attack = 1,
                 Defense = 0,
                 HitPoints = 2,
-                Traits = new List<string> { "Noldor.", "Scout." },
-                Keywords = new List<string> { "Secrecy 2." },
-                Text = string.Empty,
                 FlavorText = "\"Elrond is sending Elves, and they will get in touch with the Rangers, and maybe with Thranduil's folk in Mirkwood.\" -Gandalf, The Fellowship of the Ring",
                 CardNumber = 26,
                 Artist = Artist.Ilich_Henriquez
-            });
+            }.WithTraits("Noldor.", "Scout.")
+            .WithKeywords("Secrecy 2."));
             Cards.Add(new LotRCard()
             {
                 Title = "Feigned Voices",
@@ -447,21 +445,14 @@ If Key of the Raven is discarded, add it to the staging area.",
             Cards.Add(new LotRCard()
             {
                 Title = "Hallowed Circle",
-                
                 Id = "394D9B67-A302-4493-8D3F-497F5327DD4A",
                 CardType = Models.LotR.CardType.Location,
                 IsUnique = true,
                 Quantity = 1,
-                Threat = 0,
-                IsVariableThreat = true,
+                Threat = Card.VALUE_X,
                 QuestPoints = 12,
                 Traits = new List<string> { "Forest.", "Hills." },
-                Text =
-@"Immune to player card effects. X is the number of players in the game.
-
-Travel: The players must exhaust 3 Key objectives.
-
-Forced: After the players travel here, each engaged Guardian enemy makes an immediate attack.",
+                Text = "Immune to player card effects. X is the number of players in the game.\r\nTravel: The players must exhaust 3 Key objectives.\r\nForced: After the players travel here, each engaged Guardian enemy makes an immediate attack.",
                 VictoryPoints = 5,
                 EncounterSet = "The Three Trials",
                 CardNumber = 49,
@@ -470,7 +461,6 @@ Forced: After the players travel here, each engaged Guardian enemy makes an imme
             Cards.Add(new LotRCard()
             {
                 Title = "Spirit of the Wild",
-                
                 Id = "9D9C0590-43C6-434D-A277-CA2EE47B3132",
                 CardType = Models.LotR.CardType.Enemy,
                 Quantity = 5,
@@ -506,13 +496,11 @@ Forced: After the players travel here, each engaged Guardian enemy makes an imme
             Cards.Add(new LotRCard()
             {
                 Title = "Grim Foothills",
-                
                 Id = "3B2A21DF-E6D2-4A3F-8F22-D059E32BB051",
                 CardType = Models.LotR.CardType.Location,
                 Quantity = 3,
                 EasyModeQuantity = 2,
-                Threat = 0,
-                IsVariableThreat = true,
+                Threat = Card.VALUE_X,
                 QuestPoints = 3,
                 Traits = new List<string> { "Hills." },
                 Keywords = new List<string> { "Doomed 2." },
@@ -524,7 +512,6 @@ Forced: After the players travel here, each engaged Guardian enemy makes an imme
             Cards.Add(new LotRCard()
             {
                 Title = "Curse of the Wild Men",
-                
                 Id = "E1286A47-B5AC-4F10-806E-8C2179AB3B7D",
                 CardType = Models.LotR.CardType.Treachery,
                 Quantity = 2,

@@ -173,7 +173,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Stephen_M_Mabee
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "Elder Nameless Thing",
                 Id = "51223bd0-ffd1-11df-a976-0801212c9015",
                 CardType = CardType.Enemy,
@@ -182,11 +181,9 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Quantity = 3,
                 EasyModeQuantity = 1,
                 EngagementCost = 40,
-                Attack = 0,
-                IsVariableAttack = true,
+                Attack = Card.VALUE_X,
                 Defense = 4,
-                HitPoints = 0,
-                IsVariableHitPoints = true,
+                HitPoints = Card.VALUE_X,
                 Text = "Forced: After Elder ~Nameless Thing engages a player, attach the top 3 cards of that player's deck to it.\r\nX is the printed cost of all attached cards on this card. If there are no cards attached, X is 4.",
                 Threat = 4,
                 VictoryPoints = 3,
@@ -335,7 +332,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "Nameless Thing",
                 Id = "51223bd0-ffd1-11df-a976-0801212c9025",
                 CardType = CardType.Enemy,
@@ -344,11 +340,9 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Quantity = 5,
                 EasyModeQuantity = 3,
                 EngagementCost = 27,
-                Attack = 0,
-                IsVariableAttack = true,
+                Attack = Card.VALUE_X,
                 Defense = 3,
-                HitPoints = 0,
-                IsVariableHitPoints = true,
+                HitPoints = Card.VALUE_X,
                 Text = "Forced: After ~Nameless Thing engages a player, attach the top 2 cards of that player's deck to it.\r\nX is the printed cost of all attached cards on this card. If there are no cards attached, X is 3.",
                 Threat = 3,
                 VictoryPoints = 1,
@@ -356,7 +350,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Timo_Karhula
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "Out of the Depths",
                 StageNumber = 5,
                 Id = "51223bd0-ffd1-11df-a976-0801212c9026",

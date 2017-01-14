@@ -21,7 +21,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Id = "51223bd0-ffd1-11df-a976-0801210c9001",
                 CardType = CardType.Hero,
                 Sphere = Sphere.Lore,
-                Traits = new List<string>() { "Dúnedain.", " Ranger." },
+                Traits = new List<string>() {  },
                 Quantity = 1,
                 ThreatCost = 12,
                 IsUnique = true,
@@ -31,10 +31,10 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HitPoints = 5,
                 Text = "Refresh Action: Reduce your threat to your starting threat level. (Limit once per game.)",
                 HtmlTemplate = "<p>{keyword:Sentinel.}</p><p><b>Refresh Action:</b> Reduce your threat to your starting threat level. (Limit once per game.)</p><p class='flavor-text'>&quot;I am older than I look, I might prove useful.&quot;<br/>&ndash;The Fellowship of the Ring</p>",
-                Keywords = new List<string>() { "Sentinel." },
                 CardNumber = 53,
                 Artist = Artist.Tony_Foti
-            });
+            }.WithTraits("Dúnedain.", " Ranger.")
+            .WithKeywords("Sentinel."));
             Cards.Add(new LotRCard() {
                 Title = "Arwen Undómiel",
                 Id = "51223bd0-ffd1-11df-a976-0801210c9002",

@@ -27,14 +27,14 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Attack = 2,
                 Defense = 3,
                 HitPoints = 4,
-                Traits = new List<string> { "Rohan.", "Warrior." },
-                Keywords = new List<string> { "Sentinel." },
                 Text = "While Erkenbrand is defending, he gains: \"Response: Deal 1 damage to Erkenbrand to cancel a shadow effect just triggered.\"",
                 FlavorText = "Down from the hills leaped Erkenbrand, lord of Westfold. -The Two Towers",
                 CardNumber = 137,
                 Quantity = 1,
                 Artist = Artist.Sebastian_Giacobino
-            });
+            }
+            .WithTraits("Rohan.", "Warrior.")
+            .WithKeywords("Sentinel."));
             Cards.Add(new LotRCard()
             {
                 Title = "Warden of Helm's Deep",
@@ -46,14 +46,13 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Attack = 1,
                 Defense = 3,
                 HitPoints = 2,
-                Traits = new List<string> { "Rohan.", "Warrior." },
-                Keywords = new List<string> { "Sentinel."  },
                 Text = "",
                 FlavorText = "They now learned to their joy that Erkenbrand had left many men to hold Helm's Gate, and more had since escaped thither. -The Two Towers",
                 CardNumber = 138,
                 Quantity = 3,
                 Artist = Artist.Jarreau_Wimberly
-            });
+            }.WithTraits("Rohan.", "Warrior.")
+            .WithKeywords("Sentinel."));
             Cards.Add(new LotRCard()
             {
                 Title = "The Day's Rising",

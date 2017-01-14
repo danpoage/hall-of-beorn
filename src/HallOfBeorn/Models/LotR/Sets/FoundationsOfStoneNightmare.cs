@@ -97,20 +97,14 @@ Forced: At the end of the combat phase, if ~Giant Centipede is engaged with a pl
             {
                 Title = "Unspeakable Thing",
                 Id = "D004426E-A967-4D47-AA80-58067833C531",
-                
                 CardType = CardType.Enemy,
                 EngagementCost = 15,
                 Threat = 5,
-                Attack = 0,
-                IsVariableAttack = true,
+                Attack = Card.VALUE_X,
                 Defense = 5,
-                HitPoints = 0,
-                IsVariableHitPoints = true,
+                HitPoints = Card.VALUE_X,
                 Traits = new List<string> { "Nameless." },
-                Text = 
-@"Forced: When Unspeakable Thing enages a player or attacks a player, attach the top card of that player's deck to it.
-
-X is the printed cost of all attached cards on this card. If there are no cards attached, X is 5.",
+                Text = "Forced: When Unspeakable Thing enages a player or attacks a player, attach the top card of that player's deck to it.\r\nX is the printed cost of all attached cards on this card. If there are no cards attached, X is 5.",
                 EncounterSet = "Foundations of Stone Nightmare",
                 Quantity = 3,
                 CardNumber = 4,
@@ -120,20 +114,14 @@ X is the printed cost of all attached cards on this card. If there are no cards 
             {
                 Title = "Primeval Thing",
                 Id = "93BC53CD-B8C6-4385-B80E-AD244AC73CA6",
-                
                 CardType = CardType.Enemy,
                 EngagementCost = 45,
                 Threat = 6,
-                Attack = 0,
-                IsVariableAttack = true,
+                Attack = Card.VALUE_X,
                 Defense = 6,
-                HitPoints = 0,
-                IsVariableHitPoints = true,
+                HitPoints = Card.VALUE_X,
                 Traits = new List<string> { "Nameless." },
-                Text = 
-@"Forced: When Primeval Thing enters play, attach cards from the top of the first player's deck to it until the total printed cost of all attached cards is 6 or higher.
-
-X is the printed cost of all attached cards on this card. If there are no cards attached, X is 6.",
+                Text = "Forced: When Primeval Thing enters play, attach cards from the top of the first player's deck to it until the total printed cost of all attached cards is 6 or higher.\r\nX is the printed cost of all attached cards on this card. If there are no cards attached, X is 6.",
                 EncounterSet = "Foundations of Stone Nightmare",
                 Quantity = 2,
                 CardNumber = 5,

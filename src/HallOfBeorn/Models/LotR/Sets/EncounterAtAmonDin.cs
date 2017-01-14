@@ -254,24 +254,17 @@ When the players defeat this stage, end the game. Compare the number of tokens o
                 Artist = Artist.Greg_Opalinski
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "Ghulat",
                 Id = "fd89bdbf-7475-4f3e-96fc-8f5315a93071",
                 IsUnique = true,
                 CardType = CardType.Enemy,
                 EngagementCost = 30,
                 Threat = 3,
-                Attack = 0,
-                IsVariableAttack = true,
+                Attack = Card.VALUE_X,
                 Defense = 3,
                 HitPoints = 7,
                 Traits = new List<string>() { "Orc.", " Uruk." },
-                Text =
-@"X is the number of damage tokens on Dead Villagers.
-
-Forced: When Ghulat attacks, place 1 damage token on Dead Villagers.
-
-While Ghulat is in play, the game cannot end.",
+                Text = "X is the number of damage tokens on Dead Villagers.\r\nForced: When Ghulat attacks, place 1 damage token on Dead Villagers.\r\nWhile Ghulat is in play, the game cannot end.",
                 EncounterSet = "Encounter at Amon Dîn",
                 VictoryPoints = 2,
                 Quantity = 1,

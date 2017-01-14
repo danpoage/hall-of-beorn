@@ -413,32 +413,20 @@ If the players defeat this stage, they have escaped the Blackroot Vale with Deru
                 Traits = new List<string>() { "Blackroot Vale." },
                 Quantity = 1,
                 IsUnique = true,
-                Text =
-@"Immune to player card effects. X is twice the number of players in the game.
-
-While The Stone of Erech is that active location, characters with less than 2 Willpower cannot ready.
-
-Travel: Exhaust each character with less than 2 Willpower.",
-                Threat = 0,
-                IsVariableThreat = true,
+                Text = "Immune to player card effects. X is twice the number of players in the game.\r\nWhile The Stone of Erech is that active location, characters with less than 2 Willpower cannot ready.\r\nTravel: Exhaust each character with less than 2 Willpower.",
+                Threat = Card.VALUE_X,
                 QuestPoints = 6,
                 VictoryPoints = 5,
                 CardNumber = 6,
                 Artist = Artist.Titus_Lunter
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "Vale of Shadows",
                 Id = "c57661b7-62f9-4906-b2eb-73af91fd8252",
                 CardType = CardType.Location,
                 EncounterSet = "The Stone of Erech",
                 Traits = new List<string>() { "Blackroot Vale." },
-                Text =
-@"When Revealed: Make Vale of Shadows the active location. If another location is currently active, return it to the staging area.
-
-Dusk. Vale of Shadows gets +2 quest points.
-
-Midnight. Vale of Shadows gets +4 quest points.",
+                Text = "When Revealed: Make Vale of Shadows the active location. If another location is currently active, return it to the staging area.\r\nDusk. Vale of Shadows gets +2 quest points.\r\nMidnight. Vale of Shadows gets +4 quest points.",
                 Quantity = 2,
                 Threat = 1,
                 QuestPoints = 3,

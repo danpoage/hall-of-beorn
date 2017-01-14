@@ -55,14 +55,13 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Attack = 4,
                 Defense = 2,
                 HitPoints = 4,
-                Traits = new List<string> { "Harad." },
-                Keywords = new List<string> { "Archery 5." },
                 Text = "Damage from each round's achery total may be assigned to Battleground locations, as well as characters.",
                 EncounterSet = "The Siege of Cair Andros Nightmare",
                 CardNumber = 2,
                 Quantity = 3,
                 Artist = Artist.Dleoblack
-            });
+            }.WithTraits("Harad.")
+            .WithKeywords("Archery 5."));
             Cards.Add(new LotRCard()
             {
                 Title = "Orc Saboteur",

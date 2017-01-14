@@ -61,20 +61,13 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "The Mere of Dead Faces",
-                
                 IsUnique = true,
                 Id = "1F4F1442-91FE-4DE6-9093-C127F238B7E9",
                 CardType = CardType.Location,
-                Threat = 0,
-                IsVariableThreat = true,
+                Threat = Card.VALUE_X,
                 QuestPoints = null,
                 Traits = new List<string> { "Dead Marshes." },
-                Text = 
-@"X is the number of resource tokens here. Cannot leave the staging area.
-
-If Gollum is not in play, any resource tokens that would be placed on Gollum are placed here instead.
-
-Forced: After Gollum enters play, place 2 resource tokens on Gollum, then move all resource tokens from The Mere of Dead Faces to Gollum.",
+                Text = "X is the number of resource tokens here. Cannot leave the staging area.\r\nIf Gollum is not in play, any resource tokens that would be placed on Gollum are placed here instead.\r\nForced: After Gollum enters play, place 2 resource tokens on Gollum, then move all resource tokens from The Mere of Dead Faces to Gollum.",
                 EncounterSet = "The Dead Marshes Nightmare",
                 Quantity = 1,
                 CardNumber = 2,
@@ -83,7 +76,6 @@ Forced: After Gollum enters play, place 2 resource tokens on Gollum, then move a
             Cards.Add(new LotRCard()
             {
                 Title = "Stagnant Quagmire",
-                
                 Id = "58E63798-5F44-487B-9EF8-D4F08417E6B6",
                 CardType = CardType.Location,
                 Threat = 3,

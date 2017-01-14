@@ -15,16 +15,14 @@ namespace HallOfBeorn.Models.LotR.Sets
             SetType = Models.SetType.Adventure_Pack;
             Cycle = "Shadows of Mirkwood";
 
-            Cards.Add(new LotRCard() {
-                
+            addCard(new LotRCard() {
                 Title = "Amon Hen",
                 Id = "51223bd0-ffd1-11df-a976-0801204c9001",
                 CardType = CardType.Location,
                 Quantity = 1,
                 IsUnique = true,
                 Text = "X is double the number of players in the game.\r\nWhile Amon Hen is the active location, players cannot play events.",
-                Threat = 0,
-                IsVariableThreat = true,
+                Threat = Card.VALUE_X,
                 QuestPoints = 5,
                 EncounterSet = "The Hills of Emyn Muil",
                 VictoryPoints = 5,
@@ -32,7 +30,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Vincent_Proce
             }.WithTraits("Emyn Muil."));
             Cards.Add(new LotRCard() {
-                
                 Title = "Amon Lhaw",
                 Id = "51223bd0-ffd1-11df-a976-0801204c9002",
                 CardType = CardType.Location,
@@ -40,8 +37,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Quantity = 1,
                 IsUnique = true,
                 Text = "X is double the number of players in the game.\r\nWhile Amon Lhaw is the active location, treat all attachments as if their printed text boxes were blank.",
-                Threat = 0,
-                IsVariableThreat = true,
+                Threat = Card.VALUE_X,
                 QuestPoints = 5,
                 EncounterSet = "The Hills of Emyn Muil",
                 VictoryPoints = 5,
@@ -49,7 +45,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Vincent_Proce
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "Brand son of Bain",
                 Id = "51223bd0-ffd1-11df-a976-0801204c9003",
                 CardType = CardType.Hero,

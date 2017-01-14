@@ -50,7 +50,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Id = "51223bd0-ffd1-11df-a976-0801213c9003",
                 CardType = CardType.Enemy,
                 EncounterSet = "Shadow and Flame",
-                Traits = new List<string>() { "Balrog.", " Flame.", " Shadow." },
                 Quantity = 1,
                 EngagementCost = 1,
                 IsUnique = true,
@@ -58,19 +57,17 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Defense = 3,
                 HitPoints = 27,
                 Text = "Players cannot play attachments on Durin's Bane.Durin's Bane cannot leave the staging area, is considered to be engaged with each player whose threat is 1 or greater, and attacks each of those players in turn during the combat phase (deal and discard a new shadow card each attack).",
-                Keywords = new List<string>() { "Regenerate 3.", " Indestructible." },
                 HtmlTemplate = "<p>{keyword:Regenerate 3.} {keyword:Indestructible.} Players cannot play attachments on {self}.</p><p>{self} cannot leave the staging area, is considered to be engaged with each player whose threat is 1 or greater, and attacks each of those players in turn during the combat phase <i>(deal and discard a new shadow card each attack)</i>.</p>",
                 Threat = 4,
                 CardNumber = 150,
                 Artist = Artist.Magali_Villeneuve
-            });
+            }.WithTraits("Balrog.", "Flame.", "Shadow.")
+            .WithKeywords("Regenerate 3.", "Indestructible."));
             Cards.Add(new LotRCard() {
-                
                 Title = "Elrond",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9004",
                 CardType = CardType.Hero,
                 Sphere = Sphere.Lore,
-                Traits = new List<string>() { "Noldor.", " Noble." },
                 Quantity = 1,
                 ThreatCost = 13,
                 IsUnique = true,
@@ -83,23 +80,20 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HtmlTemplate = "<p>You may spend resources from {self}'s resource pool to pay for {sphere:Spirit}, {sphere:Leadership}, and {sphere:Tactics} {type:Ally@allies.}</p><p><b>Response:</b> After a character is healed by another card effect, heal 1 damage on it.</p><p class='flavor-text'>&quot;But you do not stand alone.&quot;<br>&ndash;The Fellowship of the Ring</p>",
                 CardNumber = 128,
                 Artist = Artist.Magali_Villeneuve
-            });
+            }.WithTraits("Noldor.", "Noble."));
             Cards.Add(new LotRCard() {
-                
                 Title = "Fiery Sword",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9005",
                 CardType = CardType.Treachery,
                 EncounterSet = "Shadow and Flame",
-                Traits = new List<string>() { "Weapon.", " Flame." },
                 Quantity = 2,
                 IsUnique = true,
                 Text = "When Revealed: Attach Fiery Sword to Durin's Bane as a Weapon attachment with the text: 'Attached enemy gets +3 Attack.'",
                 HtmlTemplate = "<p><b>When Revealed:</b> Attach {self} to {card:Durin&#39;s-Bane-SaF@Durin&#39;s Bane} as a {trait:Weapon.@Weapon} attachment with the text:<blockquote>Attached enemy gets +3 {Attack}.</blockquote></p><p class='flavor-text'>In its right hand was a blade like a stabbing tongue of fire...<br>&ndash;The Fellowship of the Ring</p>",
                 CardNumber = 152,
                 Artist = Artist.Timo_Karhula
-            });
+            }.WithTraits("Weapon.", "Flame."));
             Cards.Add(new LotRCard() {
-                
                 Title = "Fires in the Deep",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9006",
                 CardType = CardType.Treachery,
@@ -112,7 +106,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Nick_Deligaris
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "Hands Upon the Bow",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9007",
                 CardType = CardType.Event,
@@ -125,7 +118,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "Hardy Leadership",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9008",
                 CardType = CardType.Attachment,
@@ -152,20 +144,17 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Matthew_Starbuck
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "Inner Shadow",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9010",
                 CardType = CardType.Treachery,
                 EncounterSet = "Shadow and Flame",
                 Quantity = 3,
                 Text = "When Revealed: Heal 5 damage from Durin's Bane, if able. The first player may remove 1 questing hero he controls from the quest to cancel this effect.",
-                Keywords = new List<string>() { "Surge." },
                 HtmlTemplate = "<p>{keyword:Surge.}</p><p><b>When Revealed:</b> Heal 5 damage from {card:Durin&#39;s-Bane-SaF@Durin&#39;s Bane}, if able. The first player may remove 1 questing hero he controls from the quest to cancel this effect.</p><p class='flavor-text'>The fire in it seemed to die, but the darkness grew.<br>&ndash;The Fellowship of the Ring</p>",
                 CardNumber = 147,
                 Artist = Artist.Rafal_Hrynkiewicz
-            });
+            }.WithKeywords("Surge."));
             Cards.Add(new LotRCard() {
-                
                 Title = "Last Lord of Moria",
                 StageNumber = 3,
                 Id = "51223bd0-ffd1-11df-a976-0801213c9011",
@@ -258,7 +247,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.DeepsOfMoria }
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "A Elbereth! Gilthonial!",
                 AlternateSlug = "O-Elbereth-Gilthonial-SaF",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9019",
@@ -267,13 +255,11 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Quantity = 3,
                 ResourceCost = 4,
                 Text = "Response: After a non-unique enemy attacks you, put that enemy on the bottom of the encounter deck. If your threat is lower than that enemy's engagement cost, set your threat equal to the engagement cost of that enemy.",
-                Keywords = new List<string>() { "Secrecy 4." },
                 CardNumber = 132,
                 Artist = Artist.Aaron_B_Miller,
                 HasErrata = true
-            });
+            }.WithKeywords("Secrecy 4."));
             Cards.Add(new LotRCard() {
-                
                 Title = "Peace, and Thought",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9020",
                 CardType = CardType.Event,
@@ -304,7 +290,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Jasper_Sandner
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "Risk Some Light",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9022",
                 CardType = CardType.Event,
@@ -312,12 +297,10 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Quantity = 3,
                 ResourceCost = 3,
                 Text = "Action: Look at the top 3 cards of the encounter deck. You may select 1 card and move it to the bottom of the encounter deck. Return any unselected cards to the top of the encounter deck, in any order.",
-                Keywords = new List<string>() { "Secrecy 3." },
                 CardNumber = 136,
                 Artist = Artist.Dmitry_Burmak
-            });
+            }.WithKeywords("Secrecy 3."));
             Cards.Add(new LotRCard() {
-                
                 Title = "Second Deep",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9023",
                 CardType = CardType.Location,

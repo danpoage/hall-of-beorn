@@ -28,14 +28,13 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Defense = 2,
                 HitPoints = 4,
                 Title = "Théoden",
-                Traits = new List<string>() { "Rohan.", "Noble.", "Warrior." },
-                Keywords = new List<string>() { "Sentinel." },
                 Text = "Each hero with a printed Tactics resource icon gets +1 Willpower.",
                 FlavorText = "'To me! To me!' cried Théoden. 'Up Eorlingas! Fear no darkness!' - The Return of the King",
                 Quantity = 1,
                 CardNumber = 134
-            });
-
+            }
+            .WithTraits("Rohan.", "Noble.", "Warrior.")
+            .WithKeywords("Sentinel."));
             Cards.Add(new LotRCard()
             {
                 Id = "1f28f098-09d4-43fa-8fba-eae551a5d4fe",
@@ -402,8 +401,8 @@ If 10 or more progress tokens are on To the Tower, the players have lost the gam
                 Id = "95f2f7ac-5d85-43e5-930d-d866b00bef26",
                 CardType = CardType.Location,
                 Title = "The White Bridge",
-                IsVariableThreat = true,
-                IsVariableQuestPoints = true,
+                Threat = Card.VALUE_X,
+                QuestPoints = Card.VALUE_X,
                 Traits = new List<string> { "Bridge." },
                 Text = "X is the number of progress tokens on To the Tower.",
                 FlavorText = "So they came slowly to the white bridge.\r\n-The Two Towers",

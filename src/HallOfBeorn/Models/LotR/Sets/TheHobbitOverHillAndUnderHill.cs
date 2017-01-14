@@ -776,16 +776,8 @@ The players have won the game.",
                 Traits = new List<string>() { "Cave." },
                 Quantity = 1,
                 IsUnique = true,
-                Text = 
-@"X is twice the number of players in the game.
-
-Players cannot travel here.
-
-Immune to player card effects.
-
-Forced: After players advance to stage 3, remove Lake in the Cavern from the game.",
-                Threat = 0,
-                IsVariableThreat = true,
+                Text = "X is twice the number of players in the game.\r\nPlayers cannot travel here.\r\nImmune to player card effects.\r\nForced: After players advance to stage 3, remove Lake in the Cavern from the game.",
+                Threat = Card.VALUE_X,
                 QuestPoints = byte.MaxValue,
                 CardNumber = 78,
                 Artist = Artist.Cristi_Balanescu
@@ -1096,8 +1088,7 @@ Forced: After players advance to stage 3, remove Lake in the Cavern from the gam
                 IsUnique = true,
                 Text = "X is the number of players in the game.\r\n\r\nForced: At the end of the round, remove X progress tokens from the current quest.",
                 FlavorText = "There were many paths that led up into those mountains, and many passes over them. But most of the paths were cheats and deceptions and led nowhere or to bad ends. -The Hobbit",
-                Threat = 0,
-                IsVariableThreat = true,
+                Threat = Card.VALUE_X,
                 QuestPoints = 5,
                 CardNumber = 69,
                 Artist = Artist.Titus_Lunter

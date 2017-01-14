@@ -28,12 +28,13 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Response: After Aragorn commits to a quest, spend 1 resource from his resource pool to ready him.",
                 FlavorText = "\"I am Aragorn son of Arathorn; and if by life or death I can save you, I will.\" -The Fellowship of the Ring",
                 HtmlTemplate = "<p>{keyword:Sentinel.}<p><p><b>Response:</b> After {self} commits to a quest, spend 1 resource from his resource pool to ready him.</p><p class='flavor-text'>&quot;I am Aragorn son of Arathorn; and if by life or death I can save you, I will.&quot;<br>&ndash;The Fellowship of the Ring</p>",
-                Keywords = new List<string>() { "Sentinel." },
                 Quantity = 1,
                 Year = 2010,
                 Artist = Artist.John_Stanko,
                 CardNumber = 1
-            }.WithTraits("Dúnedain.", "Noble.", "Ranger."));
+            }
+            .WithTraits("Dúnedain.", "Noble.", "Ranger.")
+            .WithKeywords("Sentinel."));
             Cards.Add(new LotRCard()
             {
                 Title = "Théodred",

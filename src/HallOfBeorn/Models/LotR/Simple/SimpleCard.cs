@@ -231,7 +231,7 @@ namespace HallOfBeorn.Models.LotR.Simple
         private void InitializeLocation(LotRCard card)
         {
             this.Front.Stats[STAT_THREAT] = card.IsVariableThreat ? "X" : card.Threat.ToString();
-            this.Front.Stats[STAT_QUEST_POINTS] = card.IsVariableQuestPoints || !card.QuestPoints.HasValue ? "X" : card.QuestPoints.Value.ToString();
+            this.Front.Stats[STAT_QUEST_POINTS] = card.QuestPoints.Description(card.QuestPoints == Card.VALUE_X, "-");
         }
 
         private void InitializeEncounterSet(LotRCard card)

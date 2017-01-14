@@ -28,14 +28,14 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Attack = 3,
                 Defense = 1,
                 HitPoints = 3,
-                Traits = new List<string> { "Silvan.", "Ranger.", "Scout." },
-                Keywords = new List<string> { "Ranged." },
                 Text = "Combat Action: If you have not engaged an enemy this round, exhaust Haldir of Lórien to declare him as an attacker (and resolve his attack) against an enemy not engaged with you. Limit once per round.",
                 FlavorText = "\"We allow no strangers to spy out the secrets of the Naith...\" -The Fellowship of the Ring",
                 CardNumber = 56,
                 Quantity = 1,
                 Artist = Artist.Sebastian_Giacobino
-            });
+            }
+            .WithTraits("Silvan.", "Ranger.", "Scout.")
+            .WithKeywords("Ranged."));
             Cards.Add(new LotRCard()
             {
                 Title = "Herald of Anórien",
@@ -247,11 +247,10 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard()
             {
                 Title = "Bellach",
-                Id = "",
                 CardType = CardType.Enemy,
                 IsUnique = true,
                 EngagementCost = 50,
-                IsVariableThreat = true,
+                Threat = Card.VALUE_X,
                 Attack = 5,
                 Defense = 4,
                 HitPoints = 7,

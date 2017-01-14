@@ -55,16 +55,14 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Attack = 6,
                 Defense = 3,
                 HitPoints = 6,
-                Traits = new List<string> { "Creature.", "Spider." },
-                Keywords = new List<string> { "Venom." },
-                Text =
-@"Attercop gets -1 engagement cost for each poison in play.
-Poisoned characters cannot be declared as attackers or defenders against Attercop.",
+                Text = "Attercop gets -1 engagement cost for each poison in play.\r\nPoisoned characters cannot be declared as attackers or defenders against Attercop.",
                 EncounterSet = "Flies and Spiders Nightmare",
                 Quantity = 3,
                 CardNumber = 2,
                 Artist = Artist.Jon_Bosco
-            });
+            }
+            .WithTraits("Creature.", "Spider.")
+            .WithKeywords("Venom."));
             Cards.Add(new LotRCard()
             {
                 Title = "Venomous Spider",
@@ -104,8 +102,7 @@ Poisoned characters cannot be declared as attackers or defenders against Atterco
                 Title = "Mirkwood Path",
                 Id = "025C830F-367E-4B63-A2E3-FD0487AE6CFA",
                 CardType = CardType.Location,
-                Threat = 0,
-                IsVariableThreat = true,
+                Threat = Card.VALUE_X,
                 QuestPoints = 3,
                 Traits = new List<string> { "Forest." },
                 Text = "X is the number of poison in play.\r\nForced: When this location is explored, make 1 hero unconscious.",

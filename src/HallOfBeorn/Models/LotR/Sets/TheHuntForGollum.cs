@@ -310,15 +310,13 @@ The crownless again shall be king.
                 Artist = Artist.Timo_Karhula
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "The Old Ford",
                 Id = "51223bd0-ffd1-11df-a976-0801201c9020",
                 CardType = CardType.Location,
                 Traits = new List<string>() { "Riverland." },
                 Text = "X is the number of ally cards in play.",
                 Shadow = "Shadow: Discard from play all allies with a printed cost lower than the number of Riverland locations in play.",
-                Threat = 0,
-                IsVariableThreat = true,
+                Threat = Card.VALUE_X,
                 QuestPoints = 2,
                 EncounterSet = "The Hunt for Gollum",
                 Quantity = 2,
@@ -327,7 +325,6 @@ The crownless again shall be king.
                 Artist = Artist.Timo_Karhula
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "The West Bank",
                 Id = "51223bd0-ffd1-11df-a976-0801201c9021",
                 CardType = CardType.Location,

@@ -282,11 +282,11 @@ namespace HallOfBeorn.Services.LotR
                 }
                 else if (model.QuestPoints != "X")
                 {
-                    filters.Add(new SearchFilter((s, c) => { return c.QuestPoints.HasValue && c.QuestPoints.Value != byte.MaxValue && !c.IsVariableQuestPoints && c.QuestPoints.CompareTo(s.QuestPointsOp, s.QuestPoints); }, 100, "Quest Points " + model.QuestPointsOp.ToEnumDisplayString() + " '" + model.QuestPoints + "'"));
+                    filters.Add(new SearchFilter((s, c) => { return c.QuestPoints.HasValue && c.QuestPoints.Value != byte.MaxValue && c.QuestPoints.Value != Card.VALUE_X && c.QuestPoints.CompareTo(s.QuestPointsOp, s.QuestPoints); }, 100, "Quest Points " + model.QuestPointsOp.ToEnumDisplayString() + " '" + model.QuestPoints + "'"));
                 }
                 else
                 {
-                    filters.Add(new SearchFilter((s, c) => { return c.QuestPoints.HasValue && c.QuestPoints.Value != byte.MaxValue && c.IsVariableQuestPoints; }, 100, "Quest Points are 'X'"));
+                    filters.Add(new SearchFilter((s, c) => { return c.QuestPoints.HasValue && c.QuestPoints.Value != byte.MaxValue && c.QuestPoints.Value == Card.VALUE_X; }, 100, "Quest Points are 'X'"));
                 }
             }
 

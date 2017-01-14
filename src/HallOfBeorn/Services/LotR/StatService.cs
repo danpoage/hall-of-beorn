@@ -145,9 +145,9 @@ namespace HallOfBeorn.Services.LotR
             }
 
             byte questPointsKey = 0; var questPointsValue = string.Empty;
-            if (card.IsVariableQuestPoints)
+            if (card.QuestPoints.HasValue && card.QuestPoints.Value == Models.Card.VALUE_X)
             {
-                questPointsKey = (byte)254;
+                questPointsKey = Models.Card.VALUE_X;
                 questPointsValue = "X";
             }
             else if (card.QuestPoints.HasValue && card.QuestPoints.Value == byte.MaxValue)

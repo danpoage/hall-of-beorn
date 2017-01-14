@@ -299,15 +299,13 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Simon_Dominic
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "Glade of Cleansing",
                 Id = "801078c6-56a9-45f2-b5a4-7e38cb5bc507",
                 CardType = CardType.Location,
                 Traits = new List<string>() { "Forest." },
                 Text = "Each Wose enemy gains Archery 1.\r\nX is equal to the total archery value of the highest archery Wose enemy in play.",
                 FlavorText = "\"...they are woodcrafty beyond compare.\" -Elfhelm, The Return of the King",
-                Threat = 0,
-                IsVariableThreat = true,
+                Threat = Card.VALUE_X,
                 QuestPoints = 5,
                 EncounterSet = "The Drúadan Forest",
                 Quantity = 3,

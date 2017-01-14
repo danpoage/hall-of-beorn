@@ -55,16 +55,10 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 Id = "F2F24396-EBA3-45D6-B7BD-01FAF787F13C",
                 CardType = CardType.Quest,
                 StageNumber = 2,
-                QuestPoints = 254,
-                IsVariableQuestPoints = true,
+                QuestPoints = Card.VALUE_X,
                 Text = "When Revealed: The first player must search the encounter deck and discard pile for X Orc enemies and add them to the staging area, where X is 1 plus the number of players in the game. One of these choices must be Patrol Sentry and one must be Patrol Leader, if able.",
                 FlavorText = "You hear the sounds of many scampering feet. As you move closer to investiage, you find your party set upon on all sides by a patrol of Orcs!",
-                OppositeText = 
-@"X is 1 plus the number of players in the game.
-
-Forced: After an enemy is defeated, place 1 progress on this stage.
-
-Progress cannot be placed on ~Goblin Ambush expect by the above effect.",
+                OppositeText = "X is 1 plus the number of players in the game.\r\nForced: After an enemy is defeated, place 1 progress on this stage.\r\nProgress cannot be placed on ~Goblin Ambush expect by the above effect.",
                 EncounterSet = "Into the Pit Nightmare",
                 Quantity = 1,
                 CardNumber = 2,
@@ -131,13 +125,10 @@ Progress cannot be placed on ~Goblin Ambush expect by the above effect.",
             Cards.Add(new LotRCard()
             {
                 Title = "Twisting Shadows",
-                
                 Id = "580CB1FA-38F7-4A24-9007-9F45BDE823DA",
                 CardType = CardType.Location,
-                Threat = 0,
-                IsVariableThreat = true,
-                QuestPoints = 254,
-                IsVariableQuestPoints = true,
+                Threat = Card.VALUE_X,
+                QuestPoints = Card.VALUE_X,
                 Traits = new List<string> { "Underground.", "Dark." },
                 Text = "X is the number of Dark locations in play.\r\n\r\nWhen Revealed: Remove all progress from each Dark location in play.",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack for each Dark location in play.",
@@ -149,7 +140,6 @@ Progress cannot be placed on ~Goblin Ambush expect by the above effect.",
             Cards.Add(new LotRCard()
             {
                 Title = "Narrow Fissure",
-                
                 Id = "291F486B-DC64-4AAE-B479-F7730786E2EA",
                 CardType = CardType.Location,
                 Threat = 3,

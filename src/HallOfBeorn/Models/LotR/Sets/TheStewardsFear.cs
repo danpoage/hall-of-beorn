@@ -16,7 +16,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cycle = "Against the Shadow";
 
             Cards.Add(new LotRCard() {
-                
                 Title = "Hirluin the Fair",
                 Id = "85699571-9cc3-4ccc-98b0-0e1664893ef5",
                 CardType = CardType.Hero,
@@ -27,16 +26,15 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Defense = 1,
                 Willpower = 1,
                 HitPoints = 4,
-                Traits = new List<string>() { "Outlands." },
                 Text = "You may use resources from Hirluin the Fair's resource pool to pay for Outlands ally cards of any sphere.",
                 FlavorText = "Hirluin the Fair of the Green Hills from Pinnath Gelin... -The Return of the King",
-                Keywords = new List<string>() { "Ranged." },
                 Quantity = 1,
                 CardNumber = 1,
                 Artist = Artist.Tony_Foti
-            });
+            }
+            .WithTraits("Outlands.")
+            .WithKeywords("Ranged."));
             Cards.Add(new LotRCard() {
-                
                 Title = "Warrior of Lossarnach",
                 Id = "2e84d805-365c-47ea-9c4f-e3f75daeb9a6",
                 CardType = CardType.Ally,
@@ -54,7 +52,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Mark_Winters
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "Gaining Strength",
                 Id = "add42229-f5d1-4c39-a5dd-ec00ad7d0d76",
                 CardType = CardType.Event,

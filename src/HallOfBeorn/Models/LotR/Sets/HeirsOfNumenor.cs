@@ -41,14 +41,11 @@ namespace HallOfBeorn.Models.LotR.Sets
                 HasErrata = true
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "Battering Ram",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9003",
                 CardType = CardType.Enemy,
-                Keywords = new List<string>() { "Doomed 2." },
                 Quantity = 3,
                 EasyModeQuantity = 2,
-                Traits = new List<string>() { "Besieger." },
                 HitPoints = 5,
                 Attack = 7,
                 Defense = 3,
@@ -59,9 +56,9 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Threat = 2,
                 CardNumber = 31,
                 Artist = Artist.Lin_Bo
-            });
+            }.WithTraits("Besieger.")
+            .WithKeywords("Doomed 2."));
             Cards.Add(new LotRCard() {
-                
                 Title = "Behind Strong Walls",
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9004",
                 CardType = CardType.Event,

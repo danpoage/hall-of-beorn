@@ -112,14 +112,10 @@ Forced: After Snow-Giant engages you, discard the ally you control with the high
                 Title = "Icy Cavern",
                 Id = "47B84E97-41DB-4F98-B3CE-5F8690EECDC6",
                 CardType = CardType.Location,
-                Threat = 0,
-                IsVariableThreat = true,
+                Threat = Card.VALUE_X,
                 QuestPoints = 6,
                 Traits = new List<string> { "Mountain.", "Snow." },
-                Text =
-@"X is the number of Snow cards in the staging area.
-
-Travel: Search the encounter deck and discard pile for 1 copy of Freezing Cold and reveal it to travel here. Shuffle the encounter deck.",
+                Text = "X is the number of Snow cards in the staging area.\r\nTravel: Search the encounter deck and discard pile for 1 copy of Freezing Cold and reveal it to travel here. Shuffle the encounter deck.",
                 Shadow = "Shadow: Defending character gets -1 Willpower. Deal the attacking enemy 1 additional shadow card.",
                 EncounterSet = "The Redhorn Gate Nightmare",
                 Quantity = 3,

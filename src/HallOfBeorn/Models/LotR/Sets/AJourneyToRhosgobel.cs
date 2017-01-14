@@ -43,13 +43,13 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Defense = 2,
                 Willpower = 2,
                 HitPoints = 3,
-                Traits = new List<string>() { "Silvan." },
-                Keywords = new List<string>() { "Ranged.", " Sentinel." },
                 FlavorText = "\"But there are some of us still who go abroad for the gathering of news and the watching of our enemies, and they speak the languages of other lands.\" -The Fellowship of the Ring",
                 Quantity = 3,
                 CardNumber = 57,
                 Artist = Artist.Magali_Villeneuve
-            });
+            }
+            .WithTraits("Silvan.")
+            .WithKeywords("Ranged.", " Sentinel."));
             Cards.Add(new LotRCard() {
                 
                 Title = "Radagast",
@@ -261,16 +261,14 @@ namespace HallOfBeorn.Models.LotR.Sets
                 CardNumber = 70,
                 Artist = Artist.Brandon_Leach
             });
-            Cards.Add(new LotRCard() {
-                
+            addCard(new LotRCard() {
                 Title = "Rhosgobel",
                 Id = "51223bd0-ffd1-11df-a976-0801203c9017",
                 CardType = CardType.Location,
                 IsUnique = true,
                 Traits = new List<string>() { "Forest." },
                 Text = "X is the number of players in the game.\r\nWhile Rhosgobel is in the staging area, Wilyador cannot be healed.\r\nTravel: Players must complete stage one of this quest before they can travel to Rhosgobel.",
-                Threat = 0,
-                IsVariableThreat = true,
+                Threat = Card.VALUE_X,
                 QuestPoints = 4,
                 EncounterSet = "A Journey to Rhosgobel",
                 Quantity = 1,

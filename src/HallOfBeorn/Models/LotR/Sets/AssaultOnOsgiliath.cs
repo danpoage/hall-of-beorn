@@ -27,13 +27,15 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Attack = 2,
                 Defense = 2,
                 HitPoints = 5,
-                Keywords = new List<string>() { "Ranged." },
+
                 Text = "Faramir gets +1 Attack for each enemy in the staging area.",
                 FlavorText = "\"The road may pass, but they shall not! Not while Faramir is Captain.\" -Mablung, The Two Towers",
                 Quantity = 1,
                 CardNumber = 81,
                 Artist = Artist.Magali_Villeneuve
-            }.WithTraits("Gondor.", " Ranger.", " Noble."));
+            }
+            .WithTraits("Gondor.", " Ranger.", " Noble.")
+            .WithKeywords("Ranged."));
             Cards.Add(new LotRCard() {
                 
                 Title = "Sword of Morthond",

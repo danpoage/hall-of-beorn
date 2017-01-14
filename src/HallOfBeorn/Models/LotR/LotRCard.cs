@@ -425,27 +425,76 @@ namespace HallOfBeorn.Models.LotR
         public byte? ResourceCost { 
             get { return resourceCost; } 
             set {
-                if (value != null && value.Value == 254) {
+                if (value != null && value.Value == VALUE_X) {
                     IsVariableCost = true;
                 }
                 resourceCost = value;
             }
         }
+        public bool IsVariableCost { get; private set; }
 
         public byte? EngagementCost { get; set; }
-        public byte? Threat { get; set; }
-        public bool IsVariableCost { get; private set; }
-        public bool IsVariableThreat { get; set; }
-        public bool IsVariableQuestPoints { get; set; }
-        public bool IsVariableWillpower { get; set; }
-        public bool IsVariableAttack { get; set; }
-        public bool IsVariableDefense { get; set; }
-        public bool IsVariableHitPoints { get; set; }
-        public bool IsVariableVictoryPoints { get; set; }
-        public byte? Willpower { get; set; }
-        public byte? Attack { get; set; }
-        public byte? Defense { get; set; }
-        public byte? HitPoints { get; set; }
+
+        private byte? threat;
+        public byte? Threat { 
+            get { return threat; }
+            set {
+                if (value != null && value.Value == VALUE_X) {
+                    IsVariableThreat = true;
+                }
+                threat = value;
+            }
+        }
+        public bool IsVariableThreat { get; private set; }
+
+        private byte? willpower;
+        public byte? Willpower {
+            get { return willpower; }
+            set {
+                if (value != null && value.Value == VALUE_X) {
+                    IsVariableWillpower = true;
+                }
+                willpower = value;
+            }
+        }
+        public bool IsVariableWillpower { get; private set; }
+
+        private byte? attack;
+        public byte? Attack { 
+            get { return attack; }
+            set {
+                if (value != null && value.Value == VALUE_X) {
+                    IsVariableAttack = true;
+                }
+                attack = value;
+            }
+        }
+        public bool IsVariableAttack { get; private set; }
+
+        private byte? defense;
+        public byte? Defense { 
+            get { return defense; }
+            set {
+                if (value != null && value.Value == VALUE_X) {
+                    IsVariableDefense = true;
+                }
+                defense = value;
+            }
+        }
+        public bool IsVariableDefense { get; private set; }
+
+        private byte? hitPoints;
+        public byte? HitPoints { 
+            get { return hitPoints; }
+            set {
+                if (value != null && value.Value == VALUE_X) {
+                    IsVariableHitPoints = true;
+                }
+                hitPoints = value;
+            }
+        }
+        public bool IsVariableHitPoints { get; private set; }
+
         public byte? QuestPoints { get; set; }
 
         public List<Category> Categories { get; private set; }
@@ -717,7 +766,6 @@ namespace HallOfBeorn.Models.LotR
                 NormalizedTitle = title.NormalizeCaseSensitiveString(),
                 EncounterSet = encounterSet,
                 QuestPoints = questPoints,
-                IsVariableQuestPoints = questPoints == (byte)254,
                 StageNumber = stageNumber,
                 StageLetter = stageLetter
             };
