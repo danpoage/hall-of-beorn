@@ -53,7 +53,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Reduce the cost to play Halbarad by 1 for each enemy engaged with you.\r\nEach enemy engaged with you gets +10 engagement cost.")
                 .WithFlavor("\"Halbarad Dunadan, Ranger of the North I am...\"\r\n-The Return of the King")
                 .WithInfo(6, 3, Artist.Adam_Lane));
-            Cards.Add(LotRCard.Ally("Ghân-buri-Ghân", "", Sphere.Lore, 2, 254, 1, 1, 2)
+            Cards.Add(LotRCard.Ally("Ghân-buri-Ghân", "", Sphere.Lore, 2, Card.VALUE_X, 1, 1, 2)
                 .WithNormalizedTitle("Ghan-buri-Ghan")
                 .WithUnique()
                 .WithTraits("Wose.")
@@ -189,7 +189,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithShadow("Shadow: Either attach a set aside Overcome by Fear to your threat dial, or attacking enemy makes an additional attack after this one.")
                 .WithEasyModeQuantity(1)
                 .WithInfo(29, 2, Artist.Preston_Stone));
-            Cards.Add(LotRCard.Location("Great Corsair Ship", string.Empty, setTheSiegeOfGondor, 255, 5)
+            Cards.Add(LotRCard.Location("Great Corsair Ship", string.Empty, setTheSiegeOfGondor, Card.VALUE_X, 5)
                 .WithUnique()
                 .WithTraits("Ship.")
                 .WithText("X is the number of resources on The Corsair Fleet.\r\nThe players cannot travel here unless there are at least 3 ship locations in the victory display.\r\nTravel: Each player searches the encounter deck and discard pile for a Corsair enemy and adds it to the staging area. Once of those enemies must be Corsair Captain, if able.")
@@ -262,7 +262,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTraits("Gondor.", "City.")
                 .WithText("Minas Tirith has 30 hit points plus 10 for each player.\r\nForced: At the end of the round, deal 1 damage to Minas Tirith for each enemy in the staging area. Then, if Minas Tirith has no hit points remaining, the players lose the game.")
                 .WithInfo(43, 1, Artist.Kamila_Tzutenberg));
-            Cards.Add(LotRCard.Location("Grond", string.Empty, setTheBattleOfThePelennorFields, 254, 3)
+            addCard(LotRCard.Location("Grond", string.Empty, setTheBattleOfThePelennorFields, Card.VALUE_X, 3)
                 .WithUnique()
                 .WithTraits("Siege.")
                 .WithText("Immune to player card effects.\r\nX is the number of resources on Grond.\r\nForced: At the beginning of the quest phase, place 1 resource on Grond. Then, deal X damage to Minas Tirith.\r\nTravel: The Witch-king makes an immediate attack against each player, in turn order.")
@@ -378,13 +378,13 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Setup: Add Wraith on Wings to the staging area.\r\nCannot have non-Morgul attachments.\r\nWraith on Wings gets +1 Threat and -1 enagement cost for each resource on it.\r\nForced: At the beginning of the quest phase, place 1 resource on Wraith on Wings (Limit 5 resources.)")
                 .WithVictoryPoints(5)
                 .WithInfo(62, 4, Artist.S_C_Watson));
-            Cards.Add(LotRCard.Quest("The Forbidden Door", 1, setThePassingOfTheGreyCompany, null)
+            addCard(LotRCard.Quest("The Forbidden Door", 1, setThePassingOfTheGreyCompany, Card.VALUE_NA)
                 .WithFlavor("\"I must take new counsel for myself and my kindred. We must ride our own road, and no longer in secret. For me the time of stealth has passed. I will ride by the swiftest way, and I will take the Paths of the Dead.\" -Aragorn, The Return of the King")
                 .WithText("Setup: Set The Stone of Erech and Army of the Dead aside, out of play. Each player attaches a copy of Overcome by ~Fear to his threat dial. Remove each unattached copy of Overcome by ~Fear from the game.")
                 .WithOppositeFlavor("\"This is an evil door,\" said Halbarad, \"and my death lies beyond it. I will dare to pass nonetheless...\" -The Return of the King")
                 .WithOppositeText("When Revealed: Each player may add 1 resource to the resource pool of each hero he controls. Each player who does so must raise his threat by 3.\r\nForced: At the end of the planning phase, discard all cards in each player’s hand and advance to stage 2A.")
                 .WithInfo(63, 1, Artist.Yoann_Boissonnet));
-            Cards.Add(LotRCard.Quest("The Paths of the Dead", 2, setThePassingOfTheGreyCompany, 254)
+            addCard(LotRCard.Quest("The Paths of the Dead", 2, setThePassingOfTheGreyCompany, Card.VALUE_X)
                 .WithFlavor("He could see nothing but the dim flame of the torches; but if the company halted, there seemed an endless whisper of voices all about him, a murmur of words in no tongue that he had ever heard before. -The Return of the King")
                 .WithText("When Revealed: Each player searches the encounter deck for a different location and adds it to the staging area. Shuffle the encounter deck.")
                 .WithOppositeFlavor("...there could be no turning back; all the paths behind were thronged by an unseen host that followed in the dark. -The Return of the King")
@@ -402,7 +402,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithOppositeText("Resolution: Add each copy of Overcome by Fear attached to a player's threat dial to the campaign pool and record the name of each player it was attached to. If Army of the Dead is in the victory display, add the Army of the Dead boon to the campaign pool. The players have earned each card added to the campaign pool")
                 .WithOppositeFlavor("Then Aragorn said: \"The hour is come at last. Now I go to Pelargir upon Anduin, and ye shall come after me. And when all this land is clean of the servants of Sauron, I will hold the oath fulfilled, and ye shall have peace and depart for ever. For I am Elessar, Isildur's heir of Gondor.\" -The Return of the King")
                 .WithInfo(66, 1, Artist.Yoann_Boissonnet));
-            Cards.Add(LotRCard.Enemy("Army of the Dead", string.Empty, setThePassingOfTheGreyCompany, 50, 255, 6, 2, 8)
+            Cards.Add(LotRCard.Enemy("Army of the Dead", string.Empty, setThePassingOfTheGreyCompany, 50, Card.VALUE_X, 6, 2, 8)
                 .WithSlugIncludesType()
                 .WithUnique()
                 .WithTraits("Undead.", "Oathbreaker.")
@@ -450,7 +450,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithOppositeFlavor("...companies came and were hailed and cheered and passed through the Gate, men of the Outlands marching to defend the City of Gondor in a dark hour.\r\n-The Return of the King")
                 .WithOppositeText("Skip the quest phase and combat phase.\r\nForced: At the end of the planning phase, place 1 progress here.")
                 .WithInfo(73, 1, Artist.Alvaro_Calvo_Escudero));
-            Cards.Add(LotRCard.Quest("Retreat from Osgiliath", 2, setTheBattleOfThePelennorFields, 254)
+            addCard(LotRCard.Quest("Retreat from Osgiliath", 2, setTheBattleOfThePelennorFields, Card.VALUE_X)
                 .WithFlavor("\"The enemy,\" men murmured. \"The dike is down. Here they come pouring through the breaches!\" -The Return of the King")
                 .WithText("When Revealed: Each player adds 1 set aside ~Wraith on Wings to the staging area and reveals an encounter card. Starting with the first player, each player discards cards from the top of his deck until he discards an ally that is not in play. Put the discarded ally into play in the staging area and treat its text box as if it were blank until the end of the phase.")
                 .WithOppositeFlavor("\"Where are our own folk?\" -Men of Gondor, The Return of the King")

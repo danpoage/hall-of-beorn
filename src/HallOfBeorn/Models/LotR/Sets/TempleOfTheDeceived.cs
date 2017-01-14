@@ -89,7 +89,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("While Temple Halls is the active location, each character gets -1 Attack and -1 Defense.\r\nForced: When Temple Halls is flipped over while active, put Temple ~Guardian into play from the victory display, engaged with the player with the highest threat.")
                 .WithOppositeText("Uncharted. Immune to player card effects.\r\nTravel: Exhaust the ~Gate ~Key to travel here.\r\nForced: After Temple of the Deceived becomes the active location, flip it over.")
                 .WithInfo(69, 2, Artist.Nicholas_Gregory));
-            Cards.Add(LotRCard.Enemy("Temple Guardian", "", setName, 50, 255, 6, 4, 10)
+            Cards.Add(LotRCard.Enemy("Temple Guardian", "", setName, 50, Card.VALUE_X, 6, 4, 10)
                 .WithUnique()
                 .WithTraits("Undead.")
                 .WithText("X is the number of players in the game.\r\nImmune to player card effects. Cannot be optionally engaged.\r\nTemple ~Guardian gets -50 engagement cost while Cursed Temple is the active location.")

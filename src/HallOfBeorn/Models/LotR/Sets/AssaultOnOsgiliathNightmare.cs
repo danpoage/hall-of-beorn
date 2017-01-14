@@ -53,7 +53,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithText("Forced: After Invading ~Orc attacks and destroys a character, that character's controller returns a location he controls to the staging area.")
                 .WithShadow("Shadow: If this attack destroys a character, return a location you control to the staging area.")
                 .WithInfo(2, 3, Artist.Alvaro_Calvo_Escudero));
-            Cards.Add(LotRCard.Enemy("Haradrim Warrior", "39BF7B4D-81F2-404F-8F7D-4F10D8C32BE0", "Assault on Osgiliath Nightmare", 30, 255, 3, 3, 4)
+            Cards.Add(LotRCard.Enemy("Haradrim Warrior", "39BF7B4D-81F2-404F-8F7D-4F10D8C32BE0", "Assault on Osgiliath Nightmare", 30, Card.VALUE_X, 3, 3, 4)
                 .WithTraits("Harad.")
                 .WithKeywords("Archery X.")
                 .WithText("X is the number of locations controlled by the first player.\r\nForced: After Haradrim ~Warrior engages a player, it gets +X Attack and +X Defense until the end of the round.")

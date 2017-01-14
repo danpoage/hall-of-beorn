@@ -38,7 +38,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Action: Discard 1 Corruption for Bór the Faithful to ready him. He gets +2 Attack and +1 Willpower until the end of the round. (Limit once per round.)")
                 .WithFlavor("...and they followed Maedhros and Maglor, and cheated the hope of Morgoth, and were faithful.\r\n-The Silmarillion")
                 .WithInfo(253, 1, Artist.Chris_Quilliams));
-            Cards.Add(LotRCard.Ally("Brethil Hound", "", Sphere.Spirit, 3, 1, 2, 1, 2)
+            addCard(LotRCard.Ally("Brethil Hound", string.Empty, Sphere.Spirit, 3, 1, 2, 1, 2)
                 .WithGeneric()
                 .WithTraits("Hound.", "House of Haleth.")
                 .WithText("Response: After Brethil Hound participates in an attack that destroys an enemy, choose a player. That player reduces his threat by 1. (Limit once per phase.)")

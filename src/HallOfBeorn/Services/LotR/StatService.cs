@@ -53,14 +53,14 @@ namespace HallOfBeorn.Services.LotR
 
             var attackKey = card.Attack.HasValue ? card.Attack.Value : (byte)0;
             var attackValue = card.Attack.HasValue ? card.Attack.Value.ToString() : string.Empty;
-            if (card.IsVariableAttack)
+            if (card.Attack.IsX())
             {
-                attackKey = (byte)254;
+                attackKey = Models.Card.VALUE_X;
                 attackValue = "X";
             }
-            else if (card.Attack.HasValue && card.Attack.Value == byte.MaxValue)
+            else if (card.Attack.IsNA())
             {
-                attackKey = byte.MaxValue;
+                attackKey = Models.Card.VALUE_NA;
                 attackValue = "-";
             }
 
@@ -71,14 +71,14 @@ namespace HallOfBeorn.Services.LotR
 
             var defenseKey = card.Defense.HasValue ? card.Defense.Value : (byte)0;
             var defenseValue = card.Defense.HasValue ? card.Defense.Value.ToString() : string.Empty;
-            if (card.IsVariableDefense)
+            if (card.Defense.IsX())
             {
-                defenseKey = (byte)254;
+                defenseKey = Models.Card.VALUE_X;
                 defenseValue = "X";
             }
             else if (card.Defense.HasValue && card.Defense.Value == byte.MaxValue)
             {
-                defenseKey = byte.MaxValue;
+                defenseKey = Models.Card.VALUE_NA;
                 defenseValue = "-";
             }
 
@@ -88,14 +88,14 @@ namespace HallOfBeorn.Services.LotR
             }
 
             byte hitPointsKey = 0; var hitPointsValue = string.Empty;
-            if (card.IsVariableHitPoints)
+            if (card.HitPoints.IsX())
             {
-                hitPointsKey = (byte)254;
+                hitPointsKey = Models.Card.VALUE_X;
                 hitPointsValue = "X";
             }
-            else if (card.HitPoints.HasValue && card.HitPoints.Value == byte.MaxValue)
+            else if (card.HitPoints.IsNA())
             {
-                hitPointsKey = byte.MaxValue;
+                hitPointsKey = Models.Card.VALUE_NA;
                 hitPointsValue = "-";
             }
             else
@@ -110,14 +110,14 @@ namespace HallOfBeorn.Services.LotR
 
             var willpowerKey = card.Willpower.HasValue ? card.Willpower.Value : (byte)0;
             var willpowerValue = card.Willpower.HasValue ? card.Willpower.Value.ToString() : string.Empty;
-            if (card.IsVariableWillpower)
+            if (card.Willpower.IsX())
             {
-                willpowerKey = (byte)254;
+                willpowerKey = Models.Card.VALUE_X;
                 willpowerValue = "X";
             }
-            else if (card.Willpower.HasValue && card.Willpower.Value == byte.MaxValue)
+            else if (card.Willpower.IsNA())
             {
-                willpowerKey = byte.MaxValue;
+                willpowerKey = Models.Card.VALUE_NA;
                 willpowerValue = "-";
             }
 
@@ -128,14 +128,14 @@ namespace HallOfBeorn.Services.LotR
 
             var threatKey = card.Threat.HasValue ? card.Threat.Value : (byte)0;
             var threatValue = card.Threat.HasValue ? card.Threat.Value.ToString() : string.Empty;
-            if (card.IsVariableThreat)
+            if (card.Threat.IsX())
             {
-                threatKey = (byte)254;
+                threatKey = Models.Card.VALUE_X;
                 threatValue = "X";
             }
             else if (card.Threat.HasValue && card.Threat.Value == byte.MaxValue)
             {
-                threatKey = byte.MaxValue;
+                threatKey = Models.Card.VALUE_NA;
                 threatValue = "-";
             }
 
@@ -173,7 +173,7 @@ namespace HallOfBeorn.Services.LotR
 
         public IEnumerable<string> ResourceCosts()
         {
-            return cards.Where(x => !string.IsNullOrEmpty(x.ResourceCost.Description(x.IsVariableCost))).OrderBy(x => x.ResourceCost).Select(x => x.ResourceCost.Description(x.IsVariableCost)).Distinct();
+            return cards.Where(x => !string.IsNullOrEmpty(x.ResourceCost.Description())).OrderBy(x => x.ResourceCost).Select(x => x.ResourceCost.Description()).Distinct();
         }
 
         public IEnumerable<string> ThreatCosts()

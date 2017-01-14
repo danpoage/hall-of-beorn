@@ -67,7 +67,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Attach to a character.\r\nAttached character gains the Noldor and Silvan traits.")
                 .WithFlavor("\"I name you Elf-friend; and may the stars shine upon the end of your road!\"\r\n-Gildor, The Fellowship of the Ring")
                 .WithInfo(93, 3, Artist.Sebastian_Giacobino));
-            Cards.Add(LotRCard.Quest("Secrets of Rhudaur", 1, setName, 255)
+            Cards.Add(LotRCard.Quest("Secrets of Rhudaur", 1, setName, Card.VALUE_NA)
                 .WithKeywords("Time 5.")
                 .WithFlavor("You have decided to explore the ruins of this ancient keep, but Thaurdir pursues you, and time is of the essence.")
                 .WithText("Setup: Make The Great Hall the active location. Set Thaurdir aside, out of play. Add the 3 Treachery of Rhudaur side quests to the staging area, quest side faceup. Search the encounter deck for 1 copy of Ancient Causeway, and add it to the staging area (2 copies instead if there are 3 or 4 players in the game). The first player gains control of Amarthiúl.")

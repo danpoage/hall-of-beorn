@@ -124,7 +124,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("While Umbar Square is the active location, it gains: \"Response: After an enemy is defeated, place 1 progress on the main quest, bypassing the active location.\"\r\nTravel: Reveal the top card of the encounter deck to travel here.")
                 .WithFlavor("The loss of Umbar was grievous to Gondor...\r\n-The Return of the King")
                 .WithInfo(18, 3, Artist.Mariusz_Gandzel));
-            addCard(LotRCard.Location("Port of Harad", string.Empty, setEscape, 254, 4)
+            addCard(LotRCard.Location("Port of Harad", string.Empty, setEscape, Card.VALUE_X, 4)
                 .WithTraits("City.")
                 .WithText("X is the number of engaged enemies.\r\nTravel: Assign X damage among characters in play to travel here.")
                 .WithFlavor("Often those on who suspicion fell had fled to Umbar and there joined the rebels...\r\n-The Return of the King")
@@ -158,7 +158,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("While the temperature is 40 or higher, Burnt Sands gets +2 Threat.\r\nForced: After Burnt Sands becomes the active location, increase the temperature by 2.")
                 .WithFlavor("...all seemed ruinous and dead, a desert burned and choked. -The Return of the King")
                 .WithInfo(25, 4, Artist.Katy_Grierson));
-            addCard(LotRCard.Location("Scorched Hamada", string.Empty, setCrossing, 254, 4)
+            addCard(LotRCard.Location("Scorched Hamada", string.Empty, setCrossing, Card.VALUE_X, 4)
                 .WithTraits("Desert.")
                 .WithText("X is the tens digit of the temperature.\r\nForced: After Scorched Hamada becomes the active location, assign X damage among characters in play.")
                 .WithShadow("Shadow: Raise your threat by X, where X is the tens digit of the temperature.")
@@ -168,7 +168,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTraits("Desert.")
                 .WithText("While Parched Wadi is in the staging area, each Creature enemy gets +1 Threat and +1 Attack.\r\nForced: After Parched Wadi becomes the active location, shuffle the encounter discard pile into the encounter deck and discard cards from the top until a Creature enemy is discarded. Add that enemy to the staging area.")
                 .WithInfo(27, 2, Artist.Katy_Grierson));
-            addCard(LotRCard.Enemy("Were-worm", string.Empty, setCrossing, 22, 255, 255, 255, 5)
+            addCard(LotRCard.Enemy("Were-worm", string.Empty, setCrossing, 22, Card.VALUE_X, Card.VALUE_X, Card.VALUE_X, 5)
                 .WithTraits("Creature.")
                 .WithText("X is the tens digit of the temperature.\r\nForced: After Were-worm engages you, it makes an immediate attack. (Do not deal it a shadow card.)")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the temperature is 40 or higher).")
@@ -204,12 +204,12 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithKeywords("Sentinel.")
                 .WithText("Response: After Jubayr is declared as a defender, discard 1 facedown shadow card from a non-unique enemy. (Limit once per phase.)\r\nIf Jubayr leaves play, you are eliminated from the game.")
                 .WithInfo(34, 1, Artist.Colin_Boyer));
-            addCard(LotRCard.Enemy("Sauron's Enforcers", string.Empty, setLongArm, 30, 255, 255, 255, 3)
+            addCard(LotRCard.Enemy("Sauron's Enforcers", string.Empty, setLongArm, 30, Card.VALUE_X, Card.VALUE_X, Card.VALUE_X, 3)
                 .WithTraits("Orc.", "Uruk.")
                 .WithText("X is the sequence number on the main quest.\r\nForced: At the end of the round, assign X damage among characters in play.")
                 .WithFlavor("Fierce and shrill rose the yells of the Orcs...\r\n-The Fellowship of the Ring")
                 .WithInfo(35, 4, Artist.Ken_McCuen));
-            addCard(LotRCard.Location("Southron Boma", string.Empty, setLongArm, 254, 4)
+            addCard(LotRCard.Location("Southron Boma", string.Empty, setLongArm, Card.VALUE_X, 4)
                 .WithTraits("Forest.", "Village.")
                 .WithText("X is the stage number of the main quest.\r\nTravel: Each player spends 1 resource to travel here.")
                 .WithShadow("Shadow: If the defending character is an objective-hero, ready it and cancel all damage from this attack.")

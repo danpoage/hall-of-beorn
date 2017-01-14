@@ -342,7 +342,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Forced: After Haradrim Soldier engages you, it makes an immediate attack.")
                 .WithShadow("Shadow: Attacking enemy makes an additional attack against you after this one.")
                 .WithInfo(57, 3, Artist.Jon_Bosco));
-            Cards.Add(LotRCard.Enemy("Haradrim Archer", "", "Men of Harad", 42, 255, 3, 1, 5)
+            addCard(LotRCard.Enemy("Haradrim Archer", "", "Men of Harad", 42, Card.VALUE_X, 3, 1, 5)
                 .WithTraits("Harad.")
                 .WithKeywords("Archery X.")
                 .WithText("X is the number of players in the game.\r\nForced: After Haradrim Archer engages you, assign X damage among characters you control.")
@@ -416,7 +416,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithOppositeText("Resolution: Each player who chose to shuffle a copy of Brace of Coneys into his deck during setup has earned that boon. Add each earned copy to the campaign pool. Record the name and quantity of each enemy underneath The Black Gate in the notes section of the campaign log.")
                 .WithOppositeFlavor("\"Here is the last parting of our ways,\" said Faramir.\r\n\"If you take my counsel, you will not turn eastward yet. Go straight on, for thus you will have the cover of the woodland for many miles.\" -The Two Towers")
                 .WithInfo(69, 1, Artist.Julepe));
-            Cards.Add(LotRCard.Quest("The Stairs of Cirith Ungol", 1, "Shelob's Lair", 255)
+            Cards.Add(LotRCard.Quest("The Stairs of Cirith Ungol", 1, "Shelob's Lair", Card.VALUE_NA)
                 .WithFlavor("Sméagol has led Frodo and Sam to the Morgul Vale, where he promises to show them a secret way over the Mountains of Shadow and into the land of Mordor, but Sam fears that Gollum may be leading them into a trap...")
                 .WithText("Setup: Set Cleft of Cirith Ungol, Shelob and The Great ~Spider encounter set aside, out of play. Put Sméagol into play under the first player's control. Make ~Morgul Vale the active location. Add Sméagol's Secret Way to the staging area. Shuffle the encounter deck.")
                 .WithOppositeText("Progress cannot be placed on Underground locations.\r\nResponse: After Sméagol's Secret Way is explored, discard 3 random cards from each player's hand to discard each Nazgûl enemy in the staging area.\r\nForced: At the end of the quest phase, if Sméagol's Secret Way is in the victory display, advance to stage 2A.")

@@ -46,7 +46,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 CardNumber = 1,
                 Artist = Artist.Piya_Wannachaiwong
             });
-            Cards.Add(LotRCard.Enemy("Black Númenorean", "07C0FBEC-771B-4FD2-AF0E-B9AC9165A500", "The Blood of Gondor Nightmare", 35, 255, 5, 4, 9)
+            addCard(LotRCard.Enemy("Black Númenorean", "07C0FBEC-771B-4FD2-AF0E-B9AC9165A500", "The Blood of Gondor Nightmare", 35, Card.VALUE_X, 5, 4, 9)
                 .WithUnique()
                 .WithNormalizedTitle("Black Numenorean")
                 .WithTraits("Mordor.")

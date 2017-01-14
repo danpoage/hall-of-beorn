@@ -365,27 +365,27 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public string ResourceCost
         {
-            get { return _card.ResourceCost.Description(_card.IsVariableCost); }
+            get { return _card.ResourceCost.Description(); }
         }
 
         public string Willpower
         {
-            get { return _card.Willpower.Description(_card.IsVariableWillpower); }
+            get { return _card.Willpower.Description(); }
         }
 
         public string Attack
         {
-            get {return _card.Attack.Description(_card.IsVariableAttack); }
+            get {return _card.Attack.Description(); }
         }
 
         public string Defense
         {
-            get { return _card.Defense.Description(_card.IsVariableDefense);  }
+            get { return _card.Defense.Description();  }
         }
 
         public string HitPoints
         {
-            get { return _card.HitPoints.Description(_card.IsVariableHitPoints); }
+            get { return _card.HitPoints.Description(); }
         }
 
         public string EncounterSet

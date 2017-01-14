@@ -60,7 +60,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithText("Forced: After the engaged player discards any number of cards from his out-of-play deck, Guard Warg makes an immediate attack.")
                 .WithShadow("Shadow: Deal 1 damage to the defending character.")
                 .WithInfo(4, 2, Artist.Joel_Hustak));
-            Cards.Add(LotRCard.Location("Methedras Peak", "", setName, 254, 5)
+            Cards.Add(LotRCard.Location("Methedras Peak", "", setName, Card.VALUE_X, 5)
                 .WithTraits("Mountain.")
                 .WithText("X is the number of characters controlled by the first player.\r\nForced: After Methedras Peak leaves play as an explored location, each player searches 3.")
                 .WithFlavor("...they had come to the feet of the mountains, and to the green roots of tall Methedras. -The Two Towers")

@@ -119,13 +119,13 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithShadow("Shadow: If the defending character has 0 Defense, discard it. Otherwise, the defending character gets –2 Defense for this attack.")
                 .WithEasyModeQuantity(1)
                 .WithInfo(48, 2, Artist.Nikolas_Hagialas));
-            Cards.Add(LotRCard.Enemy("The Thing in the Depths", "", setName, 50, 2, 5, 254, 8)
+            Cards.Add(LotRCard.Enemy("The Thing in the Depths", "", setName, 50, 2, 5, Card.VALUE_NA, 8)
                 .WithUnique()
                 .WithTraits("Creature.")
                 .WithText("Immune to player card effects. Cannot be engaged.\r\nThe Thing in the Depths gets +3 hit points per player.\r\nForced: When a Creature enemy is destroyed, deal damage to The Thing in the Depths equal to that enemy’s Threat.")
                 .WithVictoryPoints(10)
                 .WithInfo(49, 1, Artist.Alvaro_Calvo_Escudero));
-            Cards.Add(LotRCard.Enemy("Eye of the Beast", "", setName, 0, 2, 254, 5, 5)
+            Cards.Add(LotRCard.Enemy("Eye of the Beast", "", setName, 0, 2, Card.VALUE_NA, 5, 5)
                 .WithTraits("Creature.", "Tentacle.")
                 .WithKeywords("Surge.")
                 .WithText("Eye of the Beast cannot attack.\r\nWhile Eye of the Beast is engaged with a player, The Thing in the Depths attacks that player during the combat phase (deal and resolve a shadow card for this attack).")

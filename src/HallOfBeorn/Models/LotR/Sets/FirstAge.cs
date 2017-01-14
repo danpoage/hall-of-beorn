@@ -686,7 +686,7 @@ All enemies get -1 Threat and -10 engagement cost.",
             });
             Cards.Add(new LotRCard() {
                 Title = "Nauglamír",
-                Id = "4186631e-c283-4a5e-b364-7a8ade2255ab",
+                //Id = "4186631e-c283-4a5e-b364-7a8ade2255ab",
                 IsUnique = true,
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Mastery,
@@ -1354,7 +1354,7 @@ Action: Place 1 Corruption on Fëanor to play an attachment from any sphere of i
             });
             Cards.Add(new LotRCard() {
                 Title = "Fingolfin",                
-                Id = "2aa57f53-97d0-45e9-9254-9c064889d1ea",
+                //Id = "2aa57f53-97d0-45e9-9254-9c064889d1ea",
                 IsUnique = true,
                 CardType = CardType.Hero,
                 Sphere = Sphere.Tactics,

@@ -56,7 +56,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithKeywords("Surge.")
                 .WithText("While the engaged player has 3 or more cards in hand, Savage Hillman cannot take damage.\r\nWhile the engaged player has 5 or more cards in hand, Savage Hillman gets +2 Attack.")
                 .WithInfo(4, 3, Artist.Suzanne_Helmigh));
-            Cards.Add(LotRCard.Location("Western Shore", "", setName, 254, 4)
+            Cards.Add(LotRCard.Location("Western Shore", "", setName, Card.VALUE_X, 4)
                 .WithTraits("River.", "Valley.")
                 .WithText("X is the number of cards in the first player's hand.\r\nWhile Western Shore is in the staging area, each enemy gets -X enegagement cost.")
                 .WithShadow("Shadow: If you have 5 or more cards in your hand, this attack is considered undefended.")

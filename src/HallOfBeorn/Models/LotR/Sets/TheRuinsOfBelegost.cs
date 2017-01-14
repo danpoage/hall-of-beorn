@@ -124,7 +124,7 @@ Page 4/4",
                 .WithFlavor("The book you recovered explains how the Dwarves kept their treasure in secret vaults: each one marked by a stone guardian. As you explore the mines, you find what looks like a doorway blocked by the statue of a Dwarf sentry. One of the guard's eyes is a glittering gem, but the other socket is empty. Perhaps if you can find the missing gem you could open the hidden passageway...")
                 .WithOppositeText("During the travel phase, the players must travel to a location, if able.\r\nForced: After resolving the Discover keyword, if no Hazard card was revealed by that effect, reveal the top card of the encounter deck.\r\nForced: When this stage is defeated, if Blue Mountain Gem is attached to a hero advance to stage 4A. Otherwise, advance to stage 3A.")
                 .WithInfo(6, 1, Artist.Yoann_Boissonnet));
-            Cards.Add(LotRCard.Quest("The Beast of Belegost", 4, "The Ruins of Belegost", 255)
+            Cards.Add(LotRCard.Quest("The Beast of Belegost", 4, "The Ruins of Belegost", Card.VALUE_NA)
                 .WithText("When Revealed: Add Naurlhûg and Naurlhûg's Lair to the staging area. Shuffle the Sword of Belegost, and the encounter discard pile into the encounter deck.")
                 .WithFlavor("After fleeing the breaking of Thangorodrim, the great worm Naurlhûg hid itself in the ruins of Belegost. The fire dragon hoarded the wealth it found there into a giant, golden bed at the center of a large, underground lake. If you wish to claim the treasure for yourself, then you must slay Naurlhûg.")
                 .WithOppositeText("While Naurlhûg's Lair is in the victory display, Naurlhûg loses the text: \"Cannot take damage.\"\r\nForced: After Naurlhûg attacks, if it was dealt a shadow card with no shadow effect, it engages the next player. Then, it makes an immediate attack. Do not deal it a shadow card for this attack.\r\nWhen Naurlhûg is defeated, the players win the game.")
@@ -170,7 +170,7 @@ Page 4/4",
                 .WithKeywords("Loot.")
                 .WithText("If unattached, the fist player claims Blue Mountain Gem and attaches it to a hero he controls.\r\nAction: Exhaust Blue Mountain Gem to choose a player. Reduce that player's threat by 1.")
                 .WithInfo(14, 1, Artist.Lucas_Durham));
-            Cards.Add(LotRCard.Enemy("Naurlhûg", "", "The Ruins of Belegost", 20, 255, 7, 5, 20)
+            Cards.Add(LotRCard.Enemy("Naurlhûg", "", "The Ruins of Belegost", 20, Card.VALUE_X, 7, 5, 20)
                 .WithNormalizedTitle("Naurlhug")
                 .WithUnique()
                 .WithTraits("Dragon.")
@@ -183,7 +183,7 @@ Page 4/4",
                 .WithText("Cannot have attachments.\r\nLurker of the Depths cannot be engaged or take more than 4 damage each round.\r\nWhile Lurker of the Depths is in the staging area, it is considered to be engaged with each player.")
                 .WithVictoryPoints(5)
                 .WithInfo(16, 1, Artist.Ethan_Patrick_Harris));
-            Cards.Add(LotRCard.Enemy("Nameless Cave Dweller", "", "The Ruins of Belegost", 35, 255, 255, 255, 5)
+            Cards.Add(LotRCard.Enemy("Nameless Cave Dweller", "", "The Ruins of Belegost", 35, Card.VALUE_X, Card.VALUE_X, Card.VALUE_X, 5)
                 .WithTraits("Nameless.", "Hazard.")
                 .WithText("Cannot have player card attachments.\r\nX is 1 more than the Discover value on the active location.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if you control a Loot objective).")

@@ -180,17 +180,12 @@ namespace HallOfBeorn.Services.LotR
 
             if (model.HasResourceCost())
             {
-                if (model.Cost == "-")
-                {
-                    filters.Add(new SearchFilter((s, c) => { return c.ResourceCost.HasValue && c.ResourceCost.Value == byte.MaxValue; }, 100, "Cost is '-'"));
-                }
-                else if (model.Cost != "X")
-                {
-                    filters.Add(new SearchFilter((s, c) => { return c.ResourceCost.CompareTo(s.CostOperator, s.Cost); }, 100, "Cost " + model.CostOperator.ToEnumDisplayString() + " '" + model.Cost + "'"));
-                }
-                else
-                {
-                    filters.Add(new SearchFilter((s, c) => { return s.Cost == c.ResourceCost.Description(c.IsVariableCost); }, 100, "Cost is 'X'"));
+                if (model.Cost == "-") {
+                    filters.Add(new SearchFilter((s, c) => { return c.ResourceCost.IsNA(); }, 100, "Cost is '-'"));
+                } else if (model.Cost != "X") {
+                    filters.Add(new SearchFilter((s, c) => { return c.ResourceCost.IsDefined() && c.ResourceCost.CompareTo(s.CostOperator, s.Cost); }, 100, "Cost " + model.CostOperator.ToEnumDisplayString() + " '" + model.Cost + "'"));
+                } else {
+                    filters.Add(new SearchFilter((s, c) => { return s.Cost == c.ResourceCost.Description(); }, 100, "Cost is 'X'"));
                 }
             }
 
@@ -198,7 +193,7 @@ namespace HallOfBeorn.Services.LotR
             {
                 if (model.Attack == "-")
                 {
-                    filters.Add(new SearchFilter((s, c) => { return c.Attack.HasValue && c.Attack.Value == byte.MaxValue; }, 100, "Attack is '-'"));
+                    filters.Add(new SearchFilter((s, c) => { return c.Attack.IsNA(); }, 100, "Attack is '-'"));
                 }
                 else if (model.Attack != "X")
                 {
@@ -206,7 +201,7 @@ namespace HallOfBeorn.Services.LotR
                 }
                 else
                 {
-                    filters.Add(new SearchFilter((s, c) => { return c.Attack.HasValue && c.Attack.Value != byte.MaxValue && c.IsVariableAttack; }, 100, "Attack is 'X'"));
+                    filters.Add(new SearchFilter((s, c) => { return c.Attack.IsX(); }, 100, "Attack is 'X'"));
                 } 
             }
 
@@ -214,7 +209,7 @@ namespace HallOfBeorn.Services.LotR
             {
                 if (model.Defense == "-")
                 {
-                    filters.Add(new SearchFilter((s, c) => { return c.Defense.HasValue && c.Defense.Value == byte.MaxValue; }, 100, "Defense is '-'"));
+                    filters.Add(new SearchFilter((s, c) => { return c.Defense.IsNA(); }, 100, "Defense is '-'"));
                 }
                 else if (model.Defense != "X")
                 {
@@ -222,7 +217,7 @@ namespace HallOfBeorn.Services.LotR
                 }
                 else
                 {
-                    filters.Add(new SearchFilter((s, c) => { return c.Defense.HasValue && c.Defense.Value != byte.MaxValue && c.IsVariableDefense; }, 100, "Defense is 'X'"));
+                    filters.Add(new SearchFilter((s, c) => { return c.Defense.IsX(); }, 100, "Defense is 'X'"));
                 }
             }
 
@@ -230,7 +225,7 @@ namespace HallOfBeorn.Services.LotR
             {
                 if (model.HitPoints == "-")
                 {
-                    filters.Add(new SearchFilter((s, c) => { return c.HitPoints.HasValue && c.HitPoints.Value == byte.MaxValue; }, 100, "Hit Points are '-'"));
+                    filters.Add(new SearchFilter((s, c) => { return c.HitPoints.HasValue && c.HitPoints.IsNA(); }, 100, "Hit Points are '-'"));
                 }
                 else if (model.HitPoints != "X")
                 {
@@ -238,7 +233,7 @@ namespace HallOfBeorn.Services.LotR
                 }
                 else
                 {
-                    filters.Add(new SearchFilter((s, c) => { return c.HitPoints.HasValue && c.HitPoints.Value != byte.MaxValue && c.IsVariableHitPoints; }, 100, "Hit Points are 'X'"));
+                    filters.Add(new SearchFilter((s, c) => { return c.HitPoints.IsX(); }, 100, "Hit Points are 'X'"));
                 }
             }
 
@@ -246,15 +241,15 @@ namespace HallOfBeorn.Services.LotR
             {
                 if (model.Willpower == "-")
                 {
-                    filters.Add(new SearchFilter((s, c) => { return c.Willpower.HasValue && c.Willpower.Value == byte.MaxValue; }, 100, "Willpower is '-'"));
+                    filters.Add(new SearchFilter((s, c) => { return c.Willpower.IsNA(); }, 100, "Willpower is '-'"));
                 }
                 else if (model.Willpower != "X")
                 {
-                    filters.Add(new SearchFilter((s, c) => { return c.Willpower.HasValue && c.Willpower.Value != byte.MaxValue && !c.IsVariableWillpower && c.Willpower.CompareTo(s.WillpowerOp, s.Willpower); }, 100, "Willpower " + model.WillpowerOp.ToEnumDisplayString() + " '" + model.Willpower + "'"));
+                    filters.Add(new SearchFilter((s, c) => { return c.Willpower.IsDefined() && c.Willpower.CompareTo(s.WillpowerOp, s.Willpower); }, 100, "Willpower " + model.WillpowerOp.ToEnumDisplayString() + " '" + model.Willpower + "'"));
                 }
                 else
                 {
-                    filters.Add(new SearchFilter((s, c) => { return c.Willpower.HasValue && c.Willpower.Value != byte.MaxValue && c.IsVariableWillpower; }, 100, "Willpower is 'X'"));
+                    filters.Add(new SearchFilter((s, c) => { return c.Willpower.IsX(); }, 100, "Willpower is 'X'"));
                 }
             }
 
@@ -262,15 +257,15 @@ namespace HallOfBeorn.Services.LotR
             {
                 if (model.Threat == "-")
                 {
-                    filters.Add(new SearchFilter((s, c) => { return c.Threat.HasValue && c.Threat.Value == byte.MaxValue; }, 100, "Threat is '-'"));
+                    filters.Add(new SearchFilter((s, c) => { return c.Threat.IsNA(); }, 100, "Threat is '-'"));
                 }
                 else if (model.Threat != "X")
                 {
-                    filters.Add(new SearchFilter((s, c) => { return c.Threat.HasValue && c.Threat.Value != byte.MaxValue && !c.IsVariableThreat && c.Threat.CompareTo(s.ThreatOp, s.Threat); }, 100, "Threat " + model.ThreatOp.ToEnumDisplayString() + " '" + model.Threat + "'"));
+                    filters.Add(new SearchFilter((s, c) => { return c.Threat.IsDefined() && c.Threat.CompareTo(s.ThreatOp, s.Threat); }, 100, "Threat " + model.ThreatOp.ToEnumDisplayString() + " '" + model.Threat + "'"));
                 }
                 else
                 {
-                    filters.Add(new SearchFilter((s, c) => { return c.Threat.HasValue && c.Threat.Value != byte.MaxValue && c.IsVariableThreat; }, 100, "Threat is 'X'"));
+                    filters.Add(new SearchFilter((s, c) => { return c.Threat.IsX(); }, 100, "Threat is 'X'"));
                 }
             }
 

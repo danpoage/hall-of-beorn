@@ -46,7 +46,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTemplate2("<p class='flavor-text'>Someone has broken into The Prancing Pony, murdered a guest and made off with the victim's belongings. Barliman Butterbur begs you to find the killer before the trail grows cold.</p><p>No more than 4 progress can be placed on this stage each round.</p><p><b>Forced:</b> At the beginning of the quest phase, each player must choose: either raise his threat by 2, or reveal an additional encounter card this phase.</p>")
                 .WithIncludedEncounterSets(EncounterSet.Investigation)
                 .WithInfo(1, 1, Artist.Adam_Lane));
-            Cards.Add(LotRCard.Quest("Running out of Time", 2, setName, 255)
+            Cards.Add(LotRCard.Quest("Running out of Time", 2, setName, Card.VALUE_NA)
                 .WithFlavor("Your investigation has uncovered a small but dangerous web of criminals lurking in the shadows of Bree-land. You suspect the killer you seek is the leader of this outlaw gang. It is imperative that you find the rogue and bring him to justice.")
                 .WithText("When Revealed: Shuffle the encounter discard pile into the encounter deck and discard cards from the top of the encounter deck until X locations are discarded. X is the number of players in the game. Add each discarded location to the staging area.")
                 .WithOppositeText("Forced: After the players quest unsuccessfully, choose 1 random card from the investigation deck and remove it from the game (without looking at it).\r\nForced: After the players place progress on this stage from questing successfully, the first player must choose: either reveal an encounter card and remain at this stage, or make the accusation (see rules) and advance to stage 3A.")
@@ -54,7 +54,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTemplate2("<p><b>Forced:</b> After the players quest unsuccessfully, choose 1 random card from the investigation deck and remove it from the game (without looking at it).</p><p><b>Forced:</b> After the players place progress on this stage from questing successfully, the first player must choose: either reveal an encounter card and remain at this stage, or make the accusation (see rules) and advance to {card:Apprehending-the-Killer-MatPP@stage 3A}.</p>")
                 .WithIncludedEncounterSets(EncounterSet.Investigation)
                 .WithInfo(2, 1, Artist.Romana_Kendelic));
-            Cards.Add(LotRCard.Quest("Apprehending the Killer", 3, setName, 255)
+            Cards.Add(LotRCard.Quest("Apprehending the Killer", 3, setName, Card.VALUE_NA)
                 .WithFlavor("You've discovered the identity of the killer and the location of the rogue's secret hideout, but the villain is aware of your pursuit. You must move swiftly to apprehend the brigand!")
                 .WithText("When Revealed: Each player besides the first player searches the encounter deck and discard pile for a Brigand enemy and adds it to the staging area. Shuffle the encounter deck.")
                 .WithOppositeText("Ignore the Investigate keyword when the active location is explored.\r\nForced: At the beginning of the encounter phase, each suspect enemy in play engages the first player.\r\nWhile at least 1 Hideout location is in play, Suspect enemies cannot take damage. If there are no Suspect enemies in play, the players win the game.")
@@ -99,7 +99,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Cannot have attachments.\r\nExcess combat damage dealt by Todd the ~Troll (damage dealt beyond the remaining hit points of the character damaged by this attack) must be assigned as an increase to your threat.")
                 .WithVictoryPoints(5)
                 .WithInfo(9, 1, Artist.Rafal_Hrynkiewicz));
-            Cards.Add(LotRCard.Enemy("Susie the Spider", "", investigationSetName, 45, 255, 5, 3, 8)
+            Cards.Add(LotRCard.Enemy("Susie the Spider", "", investigationSetName, 45, Card.VALUE_X, 5, 3, 8)
                 .WithUnique()
                 .WithTraits("Suspect.", "Brigand.")
                 .WithText("Cannot have attachments.\r\nX is the number of Brigand enemies in play.\r\nWhile at least 1 other Brigand is in play, Susie the ~Spider cannot take damage.")

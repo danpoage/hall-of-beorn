@@ -156,17 +156,15 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Shadow-fall",
-                
-                Id = "58254459-502F-4C22-B1CD-BA3FA15D4C6B",
+                //Id = "58254459-502F-4C22-B1CD-BA3FA15D4C6B",
                 CardType = CardType.Treachery,
-                Keywords = new List<string> { "Surge." },
                 Text = "When Revealed: Attach to a non-Dark location in play. (Counts as a Condition attachment with the text: \"Attached location gains the Dark trait and gets +3 quest points.\")",
                 Shadow = "Shadow: Attacking enemy gets +3 Defense this phase.",
                 EncounterSet = "Into the Pit Nightmare",
                 Quantity = 3,
                 CardNumber = 8,
                 Artist = Artist.Anthony_Feliciano
-            });
+            }.WithKeywords("Surge."));
         }
     }
 }

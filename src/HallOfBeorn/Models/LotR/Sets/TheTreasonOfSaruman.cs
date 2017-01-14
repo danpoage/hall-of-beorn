@@ -179,7 +179,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("While Eastemnet is the active location, it gains: \"Response: After Eastemnet is explored, add 1 resource to each hero's resource pool.\"\r\nTravel: Increase the pursuit value by 1.")
                 .WithFlavor("...the Horse-lords had formerly kept many herds and studs in the Eastemnet, this easterly region of their realm... -The Two Towers")
                 .WithInfo(27, 3, Artist.Katy_Grierson));
-            Cards.Add(LotRCard.Location("Plains of Rohan", "4F078A73-FD2E-4FAA-A720-6381C0FA35EC", "The Uruk-hai", 254, 4)
+            Cards.Add(LotRCard.Location("Plains of Rohan", "4F078A73-FD2E-4FAA-A720-6381C0FA35EC", "The Uruk-hai", Card.VALUE_X, 4)
                 .WithTraits("Plains.")
                 .WithText("X is the number of locations in the staging area.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, increase the pursuit value by 1.")
@@ -240,7 +240,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("While Deeping Wall is the active location, each hero gets +1 Defense.\r\nForced: When Deeping Wall is explored, raise each player's threat by 4.")
                 .WithFlavor("The Deeping Wall was twenty feet high, and so thick that four men could walk abreast along the top, sheltered by a parapet over which only a tall man could look. -The Two Towers")
                 .WithInfo(38, 4, Artist.Jose_Vega));
-            Cards.Add(LotRCard.Location("Deeping Culvert", "26D3320F-F710-478A-BBE6-EE8CBC3E61E6", "Helm's Deep", 255, 2)
+            Cards.Add(LotRCard.Location("Deeping Culvert", "26D3320F-F710-478A-BBE6-EE8CBC3E61E6", "Helm's Deep", Card.VALUE_X, 2)
                 .WithTraits("Helm's Deep.")
                 .WithText("X is the 1 more than the number of allies controlled by the first player.\r\nForced: When Deeping Culvert is explored, each player searches the encounter deck and discard pile for an enemy, reveals it, and adds it to the staging area. Shuffle the encounter deck.")
                 .WithFlavor("Orcs had crept like rats through the culvert through which the stream flowed out. -The Two Towers")
@@ -346,7 +346,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("While Steaming Vent is in the staging area, it gains: \"Forced: After a player commits characters to the quest, he deals 1 damage to a questing character he controls.\"\r\nWizardry: Assign X damage among characters in play. X is 1 more than the number of players in the game.")
                 .WithInfo(57, 3, Artist.Mariusz_Gandzel)
                 .WithEasyModeQuantity(1));
-            Cards.Add(LotRCard.Location("Plain of Isengard", "A70F9342-518C-4B97-B0D1-ACA88DD2B501", "The Road to Isengard", 254, 3)
+            Cards.Add(LotRCard.Location("Plain of Isengard", "A70F9342-518C-4B97-B0D1-ACA88DD2B501", "The Road to Isengard", Card.VALUE_X, 3)
                 .WithTraits("Isengard.")
                 .WithText("X is the number of players in the game.\r\nWhile Plain of Isengard is in the staging area, archery damage must be assigned to allies, if able.\r\nWizardry: Each player discards 1 ally he controls.")
                 .WithInfo(58, 2, Artist.Jose_Vega)
@@ -405,14 +405,14 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithKeywords("Peril.", "Doomed 2.")
                 .WithText("When Revealed: Remove a hero from the quest and attach Saruman's Voice to that hero. (Counts as a Condition attachment with the text: \"Forced: When attached hero commits to a quest, is declared and attacker or defender, or triggers its ability, its controller must discard 1 card from his hand.\")")
                 .WithInfo(68, 1, Artist.Ilich_Henriquez));
-            Cards.Add(LotRCard.Quest("Follow the Orcs", 1, "The Uruk-hai", 254)
+            Cards.Add(LotRCard.Quest("Follow the Orcs", 1, "The Uruk-hai", Card.VALUE_X)
                 .WithFlavor("The Orcs that attached the Fellowship at Amon Hen captured several members of the Company and are carrying them to Isengard. Aragorn and his companions decide to chase the Uruk-hai in an effort to rescue their friends...")
                 .WithText("Setup: Make Estemnet the active location. Add Uglúk and To Isengard! to the staging area. Each player chooses 1 non-Fellowship hero he controls to be a Captive and places it faceup underneath to Isengard! (If playing campaign mode, choose each \"captive\" from the Campaign Log instead). Set the pursuit value to 10.")
                 .WithOppositeFlavor("\"With hope or without hope we will follow the trail of our enemies. And woe to them, if we prove the swifter!\" -Aragorn, The Two Towers")
                 .WithOppositeText("X is the Pursuit value.\r\nUglúk cannot leave the staging area or take damage.\r\nForced: At the end of the combat phase, increase the pursuit value by 1 for each enemy in the staging area.")
                 .WithIncludedEncounterSets(EncounterSet.OrcsOfTheWhiteHand, EncounterSet.SnagaOrcs)
                 .WithInfo(69, 1, Artist.Nicholas_Gregory));
-            Cards.Add(LotRCard.Quest("Rescue the Captives", 2, "The Uruk-hai", 254)
+            Cards.Add(LotRCard.Quest("Rescue the Captives", 2, "The Uruk-hai", Card.VALUE_X)
                 .WithFlavor("As their pursuers close in on them, the Uruk-hai race towards the forest of Fangorn with redoubled speed. If the Orcs reach its borders, they will escape into the woods, taking their captives with them...")
                 .WithText("When Revealed: Each player searches the encounter deck and discard pile for an Uruk-hai enemy, reveals it, and adds it to the staging area. Shuffle the encounter deck.")
                 .WithOppositeFlavor("\"Run! There's the forest,\" he shouted, pointing ahead. \"Get to it! It's your best hope. Off you go!\" -Uglúk, The Two Towers")
@@ -425,7 +425,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithOppositeText("Resolution: If the pursuit value is 25 or lower, the players must choose: either each player earns one of the Skill boons (Intimidation, Hands of a Healer, Forewarned, or Leader of Men) and attached it to a hero he controls, or one player ears the boon Beyond All Hope and chooses a hero from the list of fallen heroes. That player takes control of the chosen hero (removing it from the list of fallen heroes) and attaches Beyond All Hope to it. If a player controls more than 3 non-Fellowship heroes, he must remove heroes from the Campaign Log until he controls only 3 heroes. Changing heroes as a result of earning Beyond All Hope does not incur a +1 threat penalty. Add the earned cards to the Campaign Pool.")
                 .WithOppositeFlavor("Then when they had laid their fallen comrades in a mound and had sung their praises, the Riders made a great fire and scattered the ashes of their enemies. So ended the raid, and no news of it came ever back either to Mordor or Isengard; but the smoke of the burning rose hight ot heaven and was seen by many watchful eyes. -The Two Towers")
                 .WithInfo(71, 1, Artist.Nicholas_Gregory));
-            Cards.Add(LotRCard.Quest("The King of the Golden Hall", 1, "Helm's Deep", 255)
+            Cards.Add(LotRCard.Quest("The King of the Golden Hall", 1, "Helm's Deep", Card.VALUE_NA)
                 .WithFlavor("The pursuit of the Uruk-hai has brought the Heir of Elendil to Rohan just as Saruman declares war on that land. Aragorn and his companions travel to Edoras to aid King Théoden, but their arrival is met with suspicion...")
                 .WithText("Setup: Set The ~Defense of Helm's Deep and 1 copy of Deeping Wall aside, out of play. Each player sets 1 copy of Soldier of ~Isengard aside, out of play. Then, the players must choose: either each player shuffles 1 copy of Poisoned Counsels into his deck, or advance to stage 2A (bypassing stage 1B).")
                 .WithOppositeFlavor("\"Hail, Théoden son of Thengel! I have returned. For behold! the storm comes, and now all friends should gather together...\" -Gandalf, The Two Towers")
@@ -455,7 +455,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithOppositeText("Forced: After a character is destroyed, place 1 progress on this stage (bypassing any active location).\r\nIf this stage is defeated, the players lose the game.")
                 .WithIncludedEncounterSets(EncounterSet.OrcsOfTheWhiteHand)
                 .WithInfo(75, 1, Artist.Anthony_Devine));
-            Cards.Add(LotRCard.Quest("The King Rides Out", 5, "Helm's Deep", 255)
+            Cards.Add(LotRCard.Quest("The King Rides Out", 5, "Helm's Deep", Card.VALUE_NA)
                 .WithFlavor("As dawn breaks in the East, a blast from Helm's Horn echoes in the valley and the Riders of Rohan charge out from Helm's Gate with King Théoden and Aragorn at their head.")
                 .WithText("When Revealed: Shuffle the encounter discard pile into the encounter deck. Discard cards from the encounter deck until X enemies are discarded. X is the number of players. Add each enemy discarded this way to the staging area.")
                 .WithOppositeFlavor("With a cry and a great noise they charged. Down from the gates they roared, over the causeway they swept, and they drove through the hosts of Isengard as a wind among grass. -The Two Towers")
@@ -468,13 +468,13 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithOppositeText("Resolution: Each player with a copy of Poisoned Counsels in his hand, deck or discard pile has earned that burden. Add the earned cards to the campaign pool.")
                 .WithOppositeFlavor("Down through the breach of the Dike charged the king's company. Down from the hills leaped Erkenbrand, lord of Westfold. Down leaped Shadowfax, like a deer that runs surefooted in the mountains. The White Rider was upon them, and the terror of his coming filled the enemy with madness. The wild men fell on their faces before him. The Orcs reeled and screamed and cast aside both sword and spear. Like a black smoke driven by a mounting wind they fled. -The Two Towers")
                 .WithInfo(77, 1, Artist.Katy_Grierson));
-            Cards.Add(LotRCard.Quest("Rouse the Ents", 1, "The Road to Isengard", 255)
+            Cards.Add(LotRCard.Quest("Rouse the Ents", 1, "The Road to Isengard", Card.VALUE_NA)
                 .WithFlavor("Saruman's army has been defeated at Helm's Deep, but the Wizard's fortress is beyond Rohan's power to capture. However, the Ents of Fangorn have also suffered great injury because of Saruman and his Orcs. They have the strength to break Isengard, but only if they can be roused to attack.")
                 .WithText("Setup: Set Gates of Isengard, Orthanc, Saruman, and Saruman's Staff aside, out of play. Add each copy of Ent of Fangorn to the staging area. Shuffle the encounter deck.")
                 .WithOppositeText("Players cannot draw cards or gain resources. Do not commit to the quest or reveal encounter cards during the quest phase.\r\nForced: At the end of the round, place 1 resource here. Then, the players may advance to stage 2. If the players advance, the first player shuffle the encounter discard pile into the encounter deck and reveals 1 encounter card for each resource here. Then, remove each Ent objective in the staging area from the game.")
                 .WithIncludedEncounterSets(EncounterSet.SnagaOrcs)
                 .WithInfo(78, 1, Artist.Adam_Lane));
-            Cards.Add(LotRCard.Quest("Breaking Isengard", 2, "The Road to Isengard", 255)
+            Cards.Add(LotRCard.Quest("Breaking Isengard", 2, "The Road to Isengard", Card.VALUE_NA)
                 .WithFlavor("\"To Isengard! Though Isengard be ringed and barred with doors of stone;\r\nThough Isengard be strong and hard, as cold as stone and bare as bone,\r\nWe go, we go, we go to war, to hew the stone and break the door;\r\nFor bole and bough are burning now, the furnace roars - we go to war!\"\r\n-The Ents, The Two Towers")
                 .WithText("When Revealed: Make Gates of Isengard the active location. Add Saruman and Orthanc to the staging area.")
                 .WithOppositeFlavor("The power of Saruman must be broken and the fortress of Isengard destroyed!")

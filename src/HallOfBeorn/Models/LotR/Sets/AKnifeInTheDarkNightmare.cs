@@ -102,7 +102,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithTraits("Road.")
                 .WithText("The Old Road enters play with 3 resource tokens on it.\r\nForced: At the end of the round, discard 1 resource token here. Then, if there are no resource tokens here, shuffle 1 out of play Ringwraith into the encounter deck.")
                 .WithInfo(6, 3, Artist.Juan_Carlos_Barquet));
-            Cards.Add(LotRCard.Location("Forsaken Inn", "9F04DEA7-A655-4941-8DFC-16AFF7B9748B", "A Knife in the Dark Nightmare", 254, 4)
+            addCard(LotRCard.Location("Forsaken Inn", "9F04DEA7-A655-4941-8DFC-16AFF7B9748B", "A Knife in the Dark Nightmare", Card.VALUE_X, 4)
                 .WithTraits("Inn.")
                 .WithText("X is the number of characters the first player controls.\r\nTravel: The first player searches the encounter deck and discard pile for a Spy enemy, reveals it, and adds it to the staging area. Shuffle the encounter deck.")
                 .WithFlavor("\"I don't know if the Road has ever been measured in miles beyond the Forsaken Inn...\" -The Fellowship of the Ring")

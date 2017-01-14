@@ -48,12 +48,12 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithText("Each Captain enemy gets +1 Defense.\r\nForced: At the end of the round, heal all damage from each Captain enemy in play.")
                 .WithShadow("Shadow: Heal all damage from each Captain enemy in play.")
                 .WithInfo(2, 3, Artist.Guillaume_Ducos));
-            Cards.Add(LotRCard.Enemy("Orc Captor", "07F255F3-A756-4BBF-B342-47B2F165B34D", "The Morgul Vale Nightmare", 18, 2, 4, 3, 5)
+            Cards.Add(LotRCard.Enemy("Orc Captor", string.Empty, "The Morgul Vale Nightmare", 18, 2, 4, 3, 5)
                 .WithTraits("Orc.", "Mordor.")
                 .WithText("Forced: At the end of the round, if ~Orc Captor is in the staging area, place 1 progress token on To the Tower.")
                 .WithShadow("Shadow: Attacking enemy gets +3 Defense until the end of the combat phase.")
                 .WithInfo(3, 3, Artist.Niten));
-            Cards.Add(LotRCard.Enemy("Sentry of the White Bridge", "3062BC6A-F29C-40B1-ADAF-EB08F815B02A", "The Morgul Vale Nightmare", 37, 255, 255, 4, 5)
+            Cards.Add(LotRCard.Enemy("Sentry of the White Bridge", "3062BC6A-F29C-40B1-ADAF-EB08F815B02A", "The Morgul Vale Nightmare", 37, Card.VALUE_X, Card.VALUE_X, 4, 5)
                 .WithTraits("Orc.", "Mordor.")
                 .WithText("X is the number of progress tokens on To the Tower.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, place 1 progress on To the Tower.")

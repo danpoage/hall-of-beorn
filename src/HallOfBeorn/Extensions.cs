@@ -447,6 +447,21 @@ namespace HallOfBeorn
             }
         }
 
+        public static bool IsX(this byte? self)
+        {
+            return self.HasValue && self.Value == 254;
+        }
+
+        public static bool IsNA(this byte? self)
+        {
+            return self.HasValue && self.Value == 255;
+        }
+
+        public static bool IsDefined(this byte? self)
+        {
+            return self.HasValue && self.Value < 254;
+        }
+
         public static string Description(this byte? self)
         {
             return self.Description(self != null && self == 254, "-");

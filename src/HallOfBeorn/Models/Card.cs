@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models
         }
 
         public const byte VALUE_X = 254;
+        public const byte VALUE_NA = 255;
 
         private readonly List<string> traits = new List<string>();
         private readonly List<string> normalizedTraits = new List<string>();

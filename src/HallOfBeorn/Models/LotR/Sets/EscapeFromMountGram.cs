@@ -66,15 +66,15 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(LotRCard.Event("Keen as Lances", "", Sphere.Neutral, 5)
                 .WithText("Reduce the cost to play Keen as Lances by 1 for each card worth no victory points in the victory display.\r\nAction: Add Keen as Lances to the victory display. Then, choose one: add 2 resources to a hero's resource pool, draw 3 cards, or reduce your threat by 4.")
                 .WithInfo(37, 3, Artist.Magali_Villeneuve));
-            Cards.Add(LotRCard.Quest("Unexpected Rescue", 1, "Escape from Mount Gram", 255)
+            addCard(LotRCard.Quest("Unexpected Rescue", 1, "Escape from Mount Gram", Card.VALUE_NA)
                 .WithFlavor("You have been captured and imprisoned by the goblins of Mount Gram.")
                 .WithText("Setup: Each player shuffles his starting hand into his deck. Each player prepares a separate captured deck (see insert). Each player adds 2 resources to his starting hero and sets his threat to that hero's threat cost. Set Southern ~Gate, Jailor Gornákh and the Angmar Orcs encounter set aside, out of play. Shuffle the encounter deck. Each player draws a new starting hand of 3 cards.")
                 .WithOppositeFlavor("You have endured much during your imprisonment in Mount Gram at the hands of a cruel goblin known as Gornákh. But before you are taken north as prizes for \"Lord Daechanar,\" Amarthiúl comes to your rescue. After he frees you, he slips off to find Iârion, whom you suspect is imprisoned nearby. Armed with only your wits and resolve, you must find the rest of your company.")
                 .WithOppositeText("When Revealed: Each player creates his own staging area and advances to a different stage 2A.")
                 .WithIncludedEncounterSets(EncounterSet.AngmarOrcs)
                 .WithInfo(38, 1, Artist.Tomasz_Jedruszek));
-            Cards.Add(LotRCard.Quest("Gornákh's Dungeons", 2, "Escape from Mount Gram", 255)
-                .WithNormalizedTitle("Gornakh's Dungeons")
+            addCard(LotRCard.Quest("Gornákh's Dungeons", 2, "Escape from Mount Gram", Card.VALUE_NA)
+                //.WithNormalizedTitle("Gornakh's Dungeons")
                 .WithFlavor("Alone and without your equipment, you steel yourself and being to search for your companions and belongings.")
                 .WithKeywords("Capture 7.")
                 .WithText("When Revealed: Search the encounter deck for 1 copy of Prison Cell, reveal it, and add it to your staging area. Then capture an additional 2 cards from the top of your captured deck underneath that copy of Prison Cell.")
@@ -113,7 +113,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithKeywords("Capture 1.")
                 .WithText("Response: After the captured card(s) underneath Dungeon Guard are rescued, the players may put 1 of them into play at no cost.")
                 .WithInfo(44, 3, Artist.Anthony_Feliciano));
-            Cards.Add(LotRCard.Enemy("Goblin Tormentor", "", "Escape from Mount Gram", 28, 2, 255, 1, 3)
+            Cards.Add(LotRCard.Enemy("Goblin Tormentor", "", "Escape from Mount Gram", 28, 2, Card.VALUE_X, 1, 3)
                 .WithTraits("Goblin.", "Orc.")
                 .WithKeywords("Capture 1.")
                 .WithText("X is the number of cards in play with 1 or more captured cards underneath them.")
@@ -132,7 +132,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Travel: Each player raises his threat by 3 to travel here.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the defending player's threat is 20 or higher).")
                 .WithInfo(47, 2, Artist.Jordan_Saia));
-            Cards.Add(LotRCard.Location("Tunnels of Mount Gram", "", "Escape from Mount Gram", 254, 4)
+            addCard(LotRCard.Location("Tunnels of Mount Gram", "", "Escape from Mount Gram", Card.VALUE_X, 4)
                 .WithTraits("Underground.")
                 .WithKeywords("Capture 1.")
                 .WithText("X is the number of captured cards underneath Tunnels of Mount Gram.")

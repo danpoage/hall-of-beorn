@@ -156,7 +156,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithOppositeText("Progress cannot be placed on Explore the Island except by quest effects.\r\nForced: After a location is explored, add progress to Explore the Island equal to that location’s printed quest points.\r\nForced: When an Uncharted location becomes the active location, add 1 copy of Lost Island from the top of the Uncharted deck to the staging area.")
                 .WithIncludedEncounterSets(EncounterSet.DrownedDead, EncounterSet.RuinsOfNumenor)
                 .WithInfo(25, 1, Artist.Jon_Bosco));
-            Cards.Add(LotRCard.Quest("A Fateful Discovery", 2, "The Fate of Númenor", 255)
+            Cards.Add(LotRCard.Quest("A Fateful Discovery", 2, "The Fate of Númenor", Card.VALUE_NA)
                 .WithFlavor("Markings on Adûnaic suggest the existence of a grand shrine somewhere on the island. Perhaps there, you will find answers.")
                 .WithText("When Revealed: Add 2 copies of Lost Island from the top of the Uncharted deck to the staging area. Add Shrine to Morgoth to the staging area, Lost Island side faceup. Remove all progress from each Uncharted location in the staging area and shuffle them so that the players do not know which one is which.")
                 .WithOppositeFlavor("You search for the shrine, unsure of its exact location...")
@@ -220,7 +220,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithOppositeText("Forced: At the end of the combat phase, deal X damage to the Aflame location in play with the lowest Aflame value. X is the number of Corsair enemies in play.")
                 .WithIncludedEncounterSets(EncounterSet.CorsairRaiders, EncounterSet.TheStormcallerElite)
                 .WithInfo(36, 1, Artist.Simon_Dominic));
-            Cards.Add(LotRCard.Quest("Sahír's Advance", 2, "Raid on the Grey Havens", 255)
+            Cards.Add(LotRCard.Quest("Sahír's Advance", 2, "Raid on the Grey Havens", Card.VALUE_NA)
                 .WithNormalizedTitle("Sahir's Advance")
                 .WithFlavor("A menacing ship leads the raiders, its charismatic captain bellowing orders to the Corsairs: \"Kill the defenders!\" he shouts. \"Destroy their ships!\"")
                 .WithText("When Revealed: Add Na’asiyah and Captain Sahír to the staging area, enemy side faceup. Each player reveals the top card of the encounter deck. Place resources on Na’asiyah and Captain Sahír equal to the amount of damage on The Dream-chaser. Add 1 resource to each other Raider enemy in play.")
@@ -230,7 +230,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(LotRCard.Objective("The Havens Burn", "", "Raid on the Grey Havens")
                 .WithText("Forced: When a card is placed underneath The Havens Burn, reveal the top card of the encounter deck.\r\nIf there are X or more cards underneath The Havens Burn, the Corsairs have destroyed the Elven fleet and the players lose the game. X is 3 more than the number of players in the game.")
                 .WithInfo(38, 1, Artist.Nate_Abell));
-            Cards.Add(LotRCard.Location("Dream-chaser", "", "Raid on the Grey Havens", 2, 255)
+            addCard(LotRCard.Location("Dream-chaser", string.Empty, "Raid on the Grey Havens", 2, Card.VALUE_NA)
                 .WithUnique()
                 .WithSlugIncludesType()
                 .WithTraits("Grey Havens.", "Ship.")

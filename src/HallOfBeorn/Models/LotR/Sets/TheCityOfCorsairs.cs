@@ -72,7 +72,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Progress cannot be placed on The Coast of Umbar if the players are off-course.\r\nIf the Stormcaller is destroyed (or if this stage has 15 or more progress on it), advance to stage 2.")
                 .WithIncludedEncounterSets(EncounterSet.CorsairRaiders, EncounterSet.StormyWeather, EncounterSet.UmbarFleet, EncounterSet.VoyageAcrossBelegaer, EncounterSet.TheDreamChasersFleet)
                 .WithInfo(147, 1, Artist.Simon_Dominic));
-            Cards.Add(LotRCard.Quest("Fate of the Dream-chaser", 2, setCoast, 255)
+            Cards.Add(LotRCard.Quest("Fate of the Dream-chaser", 2, setCoast, Card.VALUE_NA)
                 .WithFlavor("Suddenly, all of the beacons and lights along the watch-tower are snuffed as fog rolls in from the west. \"Pull up the sails!\" you hear, but it is too late. The Corsair ships turn at once, and the Dream-chaser smashes into the rocks. You are plunged into the cold waters, struggling to stay afloat.")
                 .WithText("When Revealed: Each player assigns damage among non-Ship characters he controls equal to the total damage on each Ship objective he controls. Discard all Ship enemies, Ship objective and Ocean locations in play.")
                 .WithOppositeFlavor("Your ships have shattered upon the rocks. You barely manage to make it to shore.")
@@ -85,7 +85,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithIncludedEncounterSets(EncounterSet.CorsairRaiders)
                 .WithOppositeFlavor("\"Find them!\" You can here shouting throughout the city. Sahír has raised the alarm. Set upon on all sides by Corsairs, you must fight your way through and stop the captain.")
                 .WithInfo(149, 1, Artist.DinoDrawing));
-            Cards.Add(LotRCard.Quest("Final Confrontation", 4, setCity, 255)
+            Cards.Add(LotRCard.Quest("Final Confrontation", 4, setCity, Card.VALUE_NA)
                 .WithFlavor("You chase Sahír through the streets, eventually cornering him in the broken monument atop a hill overlooking the city. He grins as you confront him. \"You're not easy to kill,\" he scoffs, and unsheaths a long dark blade.")
                 .WithText("When Revealed: Add The Shattered Monument to the staging area. Put Captain Sahír into play, engaged with the first player. Each player searches the encounter deck and discard pile for an enemy and adds it to the staging area. Shuffle the encounter deck. Add 1 resource to each Raider enemy in play.")
                 .WithOppositeFlavor("Sahír cackles, a crazed look in his eyes. \"With the power of this sword, I will rule the seas from here to the Grey Havens!\"")
@@ -147,7 +147,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("When faced with the option to travel, if Streets of Umbar is in the staging area, the players must either travel to a location named Streets of Umbar or add 2 resources to a Raider enemy in play.")
                 .WithShadow("Shadow: If attacking enemy is a Raider, deal it an additional shadow card for each resource token on it, to a maximum of 3 additional shadow cards.")
                 .WithInfo(160, 3, Artist.DinoDrawing));
-            Cards.Add(LotRCard.Location("City of Corsairs", string.Empty, setCity, 254, 4)
+            Cards.Add(LotRCard.Location("City of Corsairs", string.Empty, setCity, Card.VALUE_X, 4)
                 .WithTraits("Umbar.", "City.")
                 .WithText("X is the highest number of resources on a Raider enemy in play.\r\nTravel: Search the encounter deck and discard pile for a Corsair enemy and add it to the staging area. Shuffle the encounter deck.")
                 .WithEasyModeQuantity(1)

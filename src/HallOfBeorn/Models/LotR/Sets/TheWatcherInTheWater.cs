@@ -66,7 +66,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Cristi_Balanescu
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "Doors of Durin",
                 Id = "51223bd0-ffd1-11df-a976-0801210c9004",
                 CardType = CardType.Location,
@@ -77,7 +76,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Progress tokens that would be placed on Doors of Durin are instead placed on the current quest card.\r\nAction: Each player may discard any number of cards from his hand. Then, discard the top card of the encounter deck. If the first letter of the encounter card's title matches that of one of the discarded player cards, add Doors of Durin to your victory display. (Limit once per round.)",
                 HtmlTemplate = "<p>Progress tokens that would be placed on {self} are instead placed on the current quest card.</p><p><b>Action:</b> Each player may discard any number of cards from his hand. Then, discard the top card of the encounter deck. If the first letter of the encounter card's title matches that of one of the discarded player cards, add {self} to your victory display. (Limit once per round.)</p>{victory:3}",
                 Threat = 2,
-                QuestPoints = 255,
+                QuestPoints = Card.VALUE_NA,
                 VictoryPoints = 3,
                 CardNumber = 65,
                 Artist = Artist.Ben_Zweifel

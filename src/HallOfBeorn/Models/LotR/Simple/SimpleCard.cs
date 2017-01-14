@@ -193,45 +193,45 @@ namespace HallOfBeorn.Models.LotR.Simple
 
         private void InitializeHero(LotRCard card)
         {
-            this.Front.Stats[STAT_THREAT_COST] = card.ThreatCost.ToString();
-            this.Front.Stats[STAT_WILLPOWER] = card.Willpower.ToString();
-            this.Front.Stats[STAT_ATTACK] = card.Attack.ToString();
-            this.Front.Stats[STAT_DEFENSE] = card.Defense.ToString();
-            this.Front.Stats[STAT_HIT_POINTS] = !card.HitPoints.HasValue ? "X" : card.HitPoints.ToString();
+            this.Front.Stats[STAT_THREAT_COST] = card.ThreatCost.Description();
+            this.Front.Stats[STAT_WILLPOWER] = card.Willpower.Description();
+            this.Front.Stats[STAT_ATTACK] = card.Attack.Description();
+            this.Front.Stats[STAT_DEFENSE] = card.Defense.Description();
+            this.Front.Stats[STAT_HIT_POINTS] = card.HitPoints.Description();
         }
 
         private void InitializeAlly(LotRCard card)
         {
-            this.Front.Stats[STAT_RESOURCE_COST] = card.IsVariableCost || !card.ResourceCost.HasValue ? "X" : card.ResourceCost.Value.ToString();
-            this.Front.Stats[STAT_WILLPOWER] = card.Willpower.ToString();
-            this.Front.Stats[STAT_ATTACK] = card.IsVariableAttack ? "X" : card.Attack.ToString();
-            this.Front.Stats[STAT_DEFENSE] = card.Defense.ToString();
-            this.Front.Stats[STAT_HIT_POINTS] = !card.HitPoints.HasValue ? "X" : card.HitPoints.Value.ToString();
+            this.Front.Stats[STAT_RESOURCE_COST] = card.ResourceCost.Description();
+            this.Front.Stats[STAT_WILLPOWER] = card.Willpower.Description();
+            this.Front.Stats[STAT_ATTACK] = card.Attack.Description();
+            this.Front.Stats[STAT_DEFENSE] = card.Defense.Description();
+            this.Front.Stats[STAT_HIT_POINTS] = card.HitPoints.Description();
         }
 
         private void InitializeAttachment(LotRCard card)
         {
-            this.Front.Stats[STAT_RESOURCE_COST] = card.IsVariableCost || !card.ResourceCost.HasValue ? "X" : card.ResourceCost.Value.ToString();
+            this.Front.Stats[STAT_RESOURCE_COST] = card.ResourceCost.Description();
         }
 
         private void InitializeEvent(LotRCard card)
         {
-            this.Front.Stats[STAT_RESOURCE_COST] = card.IsVariableCost || !card.ResourceCost.HasValue ? "X" : card.ResourceCost.Value.ToString();
+            this.Front.Stats[STAT_RESOURCE_COST] = card.ResourceCost.Description();
         }
 
         private void InitializeEnemy(LotRCard card)
         {
-            this.Front.Stats[STAT_ENGAGEMENT_COST] = card.EngagementCost.HasValue ? card.EngagementCost.Value.ToString() : "X";
-            this.Front.Stats[STAT_THREAT] = card.IsVariableThreat ? "X" : card.Threat.ToString();
-            this.Front.Stats[STAT_ATTACK] = card.IsVariableAttack ? "X" : card.Attack.ToString();
-            this.Front.Stats[STAT_DEFENSE] = card.Defense.ToString();
-            this.Front.Stats[STAT_HIT_POINTS] = card.IsVariableHitPoints || !card.HitPoints.HasValue ? "X" : card.HitPoints.Value.ToString();
+            this.Front.Stats[STAT_ENGAGEMENT_COST] = card.EngagementCost.Description();
+            this.Front.Stats[STAT_THREAT] = card.Threat.Description();
+            this.Front.Stats[STAT_ATTACK] = card.Attack.Description();
+            this.Front.Stats[STAT_DEFENSE] = card.Defense.Description();
+            this.Front.Stats[STAT_HIT_POINTS] = card.HitPoints.Description();
         }
 
         private void InitializeLocation(LotRCard card)
         {
-            this.Front.Stats[STAT_THREAT] = card.IsVariableThreat ? "X" : card.Threat.ToString();
-            this.Front.Stats[STAT_QUEST_POINTS] = card.QuestPoints.Description(card.QuestPoints == Card.VALUE_X, "-");
+            this.Front.Stats[STAT_THREAT] = card.Threat.Description();
+            this.Front.Stats[STAT_QUEST_POINTS] = card.QuestPoints.Description();
         }
 
         private void InitializeEncounterSet(LotRCard card)
@@ -253,24 +253,24 @@ namespace HallOfBeorn.Models.LotR.Simple
         {
             if (card.HitPoints > 0)
             {
-                this.Front.Stats[STAT_WILLPOWER] = card.Willpower.ToString();
-                this.Front.Stats[STAT_ATTACK] = card.IsVariableAttack ? "X" : card.Attack.ToString();
-                this.Front.Stats[STAT_DEFENSE] = card.Defense.ToString();
-                this.Front.Stats[STAT_HIT_POINTS] = !card.HitPoints.HasValue ? "X" : card.HitPoints.Value.ToString();
+                this.Front.Stats[STAT_WILLPOWER] = card.Willpower.Description();
+                this.Front.Stats[STAT_ATTACK] = card.Attack.Description();
+                this.Front.Stats[STAT_DEFENSE] = card.Defense.Description();
+                this.Front.Stats[STAT_HIT_POINTS] = card.HitPoints.Description();
             }
         }
 
         private void InitializeBoon(LotRCard card)
         {
-            if (card.HitPoints > 0)
+            if (card.HitPoints.IsDefined())
             {
-                this.Front.Stats[STAT_WILLPOWER] = card.Willpower.ToString();
-                this.Front.Stats[STAT_ATTACK] = card.IsVariableAttack ? "X" : card.Attack.ToString();
-                this.Front.Stats[STAT_DEFENSE] = card.Defense.ToString();
-                this.Front.Stats[STAT_HIT_POINTS] = !card.HitPoints.HasValue ? "X" : card.HitPoints.Value.ToString();
+                this.Front.Stats[STAT_WILLPOWER] = card.Willpower.Description();
+                this.Front.Stats[STAT_ATTACK] = card.Attack.Description();
+                this.Front.Stats[STAT_DEFENSE] = card.Defense.Description();
+                this.Front.Stats[STAT_HIT_POINTS] = card.HitPoints.Description();
             }
 
-            this.Front.Stats[STAT_RESOURCE_COST] = !card.ResourceCost.HasValue ? "X" : card.ResourceCost.Value.ToString();
+            this.Front.Stats[STAT_RESOURCE_COST] = card.ResourceCost.Description();
         }
 
         private void InitializeQuest(LotRCard card)

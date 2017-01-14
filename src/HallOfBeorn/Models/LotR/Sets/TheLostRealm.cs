@@ -632,7 +632,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithOppositeText("Enemies do not make engagement checks.\r\nForced: At the end of the refresh phase, raise each player's threat by 1 for each enemy in the staging area.\r\nThe players cannot defeat this stage unless the first player controls Iârion. If the players defeat this stage, they win the game.")
                 .WithIncludedEncounterSets(EncounterSet.Iarion, EncounterSet.EriadorWilds, EncounterSet.AngmarOrcs)
                 .WithInfo(68, 1, Artist.Nicholas_Gregory));
-            Cards.Add(LotRCard.Quest("Scattered Among the Hills", 1, "The Weather Hills", 255)
+            Cards.Add(LotRCard.Quest("Scattered Among the Hills", 1, "The Weather Hills", Card.VALUE_NA)
                 .WithFlavor("You've pursued the remnants of an Orc war party east from the borders of Bree-land and into the wilderness beyond. Their trail climbs out of the lowlands and into the Weather Hills.")
                 .WithText("Setup: Set Orc Ambush and Amon Forn aside, out of play. Create the Orc deck (see insert) and set it next to the quest deck. Make Exposed Ridge the active location. Add Hunting the Orcs and 1 Weather Hilltop to the staging area. Shuffle the encounter deck.")
                 .WithOppositeFlavor("As you pursue the Orcs, the weather itself turns against you. Now you must contend with the elements while you hunt the enemy.")

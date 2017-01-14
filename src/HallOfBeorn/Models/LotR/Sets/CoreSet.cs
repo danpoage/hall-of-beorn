@@ -858,14 +858,12 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 CardNumber = 50,
                 Artist = Artist.Ryan_Barger
             });
-            Cards.Add(new LotRCard() {
-                
+            addCard(new LotRCard() {
                 Title = "Stand and Fight",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9051",
                 CardType = CardType.Event,
                 Sphere = Sphere.Spirit,
-                ResourceCost = 254,
-                //IsVariableCost = true,
+                ResourceCost = Card.VALUE_X,
                 Text = "Action: Choose an ally with a printed cost of X in any player's discard pile. Put that ally into play under your control. (The chosen ally can belong to any sphere of influence.)",
                 FlavorText = "\"...we will fight on.\" -Boromir, The Fellowship of the Ring",
                 Quantity = 3,
@@ -1099,14 +1097,13 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 CardNumber = 66,
                 Artist = Artist.Empty_Room_Studios
             });
-            Cards.Add(new LotRCard() {
+            addCard(new LotRCard() {
                 
                 Title = "Gandalf's Search",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9067",
                 CardType = CardType.Event,
                 Sphere = Sphere.Lore,
-                ResourceCost = 254,
-                //IsVariableCost = true,
+                ResourceCost = Card.VALUE_X,
                 Text = "Action: Look at the top X cards of any player's deck, add 1 of those cards to its owner's hand, and return the rest to the top of the deck in any order.",
                 FlavorText = "\"Less welcome did the Lord Denethor show me then than of old, and grudgingly he permitted me to search among his hoarded scrolls and books.\"\r\n-Gandalf, The Fellowship of the Ring",
                 Quantity = 2,

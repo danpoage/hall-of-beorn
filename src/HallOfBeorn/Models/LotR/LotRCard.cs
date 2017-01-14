@@ -420,81 +420,14 @@ namespace HallOfBeorn.Models.LotR
 
         public byte? MaxPerDeck { get; set; }
         public byte? ThreatCost { get; set; }
-
-        private byte? resourceCost;
-        public byte? ResourceCost { 
-            get { return resourceCost; } 
-            set {
-                if (value != null && value.Value == VALUE_X) {
-                    IsVariableCost = true;
-                }
-                resourceCost = value;
-            }
-        }
-        public bool IsVariableCost { get; private set; }
-
+        public byte? ResourceCost { get; set; }
         public byte? EngagementCost { get; set; }
 
-        private byte? threat;
-        public byte? Threat { 
-            get { return threat; }
-            set {
-                if (value != null && value.Value == VALUE_X) {
-                    IsVariableThreat = true;
-                }
-                threat = value;
-            }
-        }
-        public bool IsVariableThreat { get; private set; }
-
-        private byte? willpower;
-        public byte? Willpower {
-            get { return willpower; }
-            set {
-                if (value != null && value.Value == VALUE_X) {
-                    IsVariableWillpower = true;
-                }
-                willpower = value;
-            }
-        }
-        public bool IsVariableWillpower { get; private set; }
-
-        private byte? attack;
-        public byte? Attack { 
-            get { return attack; }
-            set {
-                if (value != null && value.Value == VALUE_X) {
-                    IsVariableAttack = true;
-                }
-                attack = value;
-            }
-        }
-        public bool IsVariableAttack { get; private set; }
-
-        private byte? defense;
-        public byte? Defense { 
-            get { return defense; }
-            set {
-                if (value != null && value.Value == VALUE_X) {
-                    IsVariableDefense = true;
-                }
-                defense = value;
-            }
-        }
-        public bool IsVariableDefense { get; private set; }
-
-        private byte? hitPoints;
-        public byte? HitPoints { 
-            get { return hitPoints; }
-            set {
-                if (value != null && value.Value == VALUE_X) {
-                    IsVariableHitPoints = true;
-                }
-                hitPoints = value;
-            }
-        }
-        public bool IsVariableHitPoints { get; private set; }
-
+        public byte? Threat { get; set; }
+        public byte? Willpower { get; set; }
+        public byte? Attack { get; set; }
+        public byte? Defense { get; set; }
+        public byte? HitPoints { get; set; }
         public byte? QuestPoints { get; set; }
 
         public List<Category> Categories { get; private set; }
@@ -582,7 +515,6 @@ namespace HallOfBeorn.Models.LotR
                 Sphere = sphere,
                 ThreatCost = threatCost,
                 Willpower = willpower,
-                IsVariableWillpower = (willpower == 254),
                 Attack = attack,
                 Defense = defense,
                 HitPoints = hitPoints
@@ -601,7 +533,6 @@ namespace HallOfBeorn.Models.LotR
                 Sphere = sphere,
                 ResourceCost = resourceCost,
                 Willpower = willpower,
-                IsVariableWillpower = (willpower == 254),
                 Attack = attack,
                 Defense = defense,
                 HitPoints = hitPoints
@@ -645,7 +576,6 @@ namespace HallOfBeorn.Models.LotR
                 EncounterSet = encounterSet,
                 IsUnique = true,
                 Willpower = willpower,
-                IsVariableWillpower = (willpower == 254),
                 Attack = attack,
                 Defense = defense,
                 HitPoints = hitPoints
@@ -654,31 +584,6 @@ namespace HallOfBeorn.Models.LotR
 
         public static LotRCard Enemy(string title, string id, string encounterSet, byte? engagementCost, byte? threat, byte? attack, byte? defense, byte? hitPoints)
         {
-            var isVariableThreat = threat.HasValue && threat.Value == byte.MaxValue;
-            var isVariableAttack = attack.HasValue && attack.Value == byte.MaxValue;
-            var isVariableDefense = defense.HasValue && defense.Value == byte.MaxValue;
-            var isVariableHitPoints = hitPoints.HasValue && hitPoints.Value == byte.MaxValue;
-
-            if (threat == 254)
-            {
-                threat = 255;
-            }
-
-            if (attack == 254)
-            {
-                attack = 255;
-            }
-
-            if (defense == 254)
-            {
-                defense = 255;
-            }
-
-            if (hitPoints == 254)
-            {
-                hitPoints = 255;
-            }
-
             return new LotRCard()
             {
                 CardType = Models.LotR.CardType.Enemy,
@@ -687,13 +592,9 @@ namespace HallOfBeorn.Models.LotR
                 Id = string.IsNullOrEmpty(id) ? Guid.NewGuid().ToString() : id,
                 EngagementCost = engagementCost,
                 Threat = threat,
-                IsVariableThreat = isVariableThreat,
                 Attack = attack,
-                IsVariableAttack = isVariableAttack,
                 Defense = defense,
-                IsVariableDefense = isVariableDefense,
                 HitPoints = hitPoints,
-                IsVariableHitPoints = isVariableHitPoints,
                 EncounterSet = encounterSet
             };
         }
@@ -704,10 +605,9 @@ namespace HallOfBeorn.Models.LotR
             {
                 CardType = Models.LotR.CardType.Location,
                 Title = title,
+                Id = id,
                 NormalizedTitle = title.NormalizeCaseSensitiveString(),
-                Id = string.IsNullOrEmpty(id) ? Guid.NewGuid().ToString() : id,
                 Threat = threat,
-                IsVariableThreat = threat.HasValue && threat.Value == (byte)254,
                 QuestPoints = questPoints,
                 EncounterSet = encounterSet
             };
@@ -720,7 +620,7 @@ namespace HallOfBeorn.Models.LotR
                 CardType = Models.LotR.CardType.Treachery,
                 Title = title,
                 NormalizedTitle = title.NormalizeCaseSensitiveString(),
-                Id = string.IsNullOrEmpty(id) ? Guid.NewGuid().ToString() : id,
+                Id = id,
                 EncounterSet = encounterSet
             };
         }
@@ -732,7 +632,7 @@ namespace HallOfBeorn.Models.LotR
                 CardType = CardType.Encounter_Side_Quest,
                 Title = title,
                 NormalizedTitle = title.NormalizeCaseSensitiveString(),
-                Id = string.IsNullOrEmpty(id) ? Guid.NewGuid().ToString() : id,
+                Id = id,
                 EncounterSet = encounterSet,
                 QuestPoints = questPoints
             };

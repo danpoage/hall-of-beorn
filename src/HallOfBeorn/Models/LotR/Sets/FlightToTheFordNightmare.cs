@@ -62,7 +62,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithTraits("Forest.")
                 .WithText("While Trollshaw ~Forest is in the staging area, it gains: \"Forced: After a 'when revealed' effect is canceled, reduce the Ring-bearer's life by 1.\"\r\nTravel: Reduce the Ring-bearer's life by 1 to travel here.")
                 .WithInfo(4, 3, Artist.Julian_Kok));
-            Cards.Add(LotRCard.Location("Great East Road", "73B1FDBB-BEF6-4859-AB4E-729F83D3711B", "Flight to the Ford Nightmare", 254, 5)
+            addCard(LotRCard.Location("Great East Road", "73B1FDBB-BEF6-4859-AB4E-729F83D3711B", "Flight to the Ford Nightmare", Card.VALUE_X, 5)
                 .WithTraits("Road.")
                 .WithText("X is 1 plus the number of Nazgûl enemies in play.\r\nWhile Great East ~Road is in the staging area, each Nazgûl enemy gets -5 engagement cost.")
                 .WithShadow("Shadow: After this attack, attacking enemy engages the next player then makes an immediate attack.")

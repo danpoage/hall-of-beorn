@@ -93,7 +93,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Immune to player card effects.\r\nLieutenant of ~Angmar cannot take damage unless there is at least 10 progress on the main quest.\r\nForced: At the end of the round, Lieutenant of ~Angmar moves to the staging area with the lowest total Threat and makes an immediate attack against the first player.")
                 .WithVictoryPoints(4)
                 .WithInfo(13, 1, Artist.Sam_Lamont));
-            Cards.Add(LotRCard.Location("Battering Ram", string.Empty, setName, 254, 5)
+            Cards.Add(LotRCard.Location("Battering Ram", string.Empty, setName, Card.VALUE_X, 5)
                 .WithUnique()
                 .WithTraits("Siege.")
                 .WithText("X is 1 more than the number of resources on Battering Ram. Immune to player card effects.\r\nForced: At the end of the round, place 1 resource on Battering Ram. Then, deal X damage to Annúminas.\r\nTravel: Reveal 1 encounter card per player to travel here.")
@@ -123,7 +123,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("When Revealed: Any player may spend 1 resource to take control of Dúnedain of Annúminas. Otherwise, discard it.")
                 .WithShadow("Ready the defending character and give it +2 Defense for this attack.")
                 .WithInfo(18, 3, Artist.Andreia_Ugrai));
-            Cards.Add(LotRCard.Location("Gate of Annúminas", string.Empty, setName, 254, 5)
+            addCard(LotRCard.Location("Gate of Annúminas", string.Empty, setName, Card.VALUE_X, 5)
                 .WithTraits("Arnor.", "City.")
                 .WithText("X is 1 more than the number of enemies in play.\r\nTravel: Each player engages an enemy in the staging area to travel here.")
                 .WithFlavor("\"...the Men of Westernesse were diminished, and their city of of Annúminas beside lake Evendim fell into ruin...\"\r\n-Elrond, The Fellowship of the Ring")

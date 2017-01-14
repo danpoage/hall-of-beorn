@@ -176,18 +176,12 @@ in Mordor where the shadows are.
             Cards.Add(new LotRCard()
             {
                 Title = "The White Council",
-                
                 Id = "3D87FA7B-09A6-46C9-9117-E052902B842D",
                 CardType = CardType.Event,
-                ResourceCost = 254,
-                //IsVariableCost = true,
+                ResourceCost = Card.VALUE_X,
                 Sphere = Models.LotR.Sphere.Neutral,
                 Quantity = 3,
-                Text = 
-@"X is the number of players in the game.
-
-Action: Starting with the first player, each player chooses 1 different option: ready a hero he controls, add 1 resource to the resource pool of
-a hero he controls, draw 1 card, or shuffle 1 card from his discard pile into his deck.",
+                Text = "X is the number of players in the game.\r\nAction: Starting with the first player, each player chooses 1 different option: ready a hero he controls, add 1 resource to the resource pool of a hero he controls, draw 1 card, or shuffle 1 card from his discard pile into his deck.",
                 FlavorText = "\"I it was who first summoned the White Council.\"\r\n–Galadriel, The Fellowship of the Ring",
                 CardNumber = 10,
                 Artist = Artist.Sacha_Diener
@@ -260,8 +254,7 @@ Forced: After the last time counter is removed from this stage, the players make
             {
                 Title = "Chief Turch",
                 IsUnique = true,
-                
-                Id = "3511164D-A255-4324-A95E-1810737D9AC4",
+                //Id = "3511164D-A255-4324-A95E-1810737D9AC4",
                 CardType = CardType.Enemy,
                 EngagementCost = 50,
                 Threat = 3,

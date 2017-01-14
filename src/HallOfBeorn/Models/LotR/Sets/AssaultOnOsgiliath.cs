@@ -51,23 +51,12 @@ namespace HallOfBeorn.Models.LotR.Sets
                 CardNumber = 82,
                 Artist = Artist.Sara_K_Diesel
             });
+            addCard(LotRCard.Event("Men of the West", string.Empty, Sphere.Leadership, Card.VALUE_X)
+                .WithTraits("Outlands.")
+                .WithText("Action: Return X Outlands allies from your discard pile to your hand.")
+                .WithFlavor("Death in the morning and at day's ending\r\nlords took and lowly. Long now they sleep\r\nunder grass in Gondor by the Great River.\r\n-The Return of the King")
+                .WithInfo(83, 3, Artist.Darek_Zabrocki));
             Cards.Add(new LotRCard() {
-                
-                Title = "Men of the West",
-                Id = "a2d440c4-6150-4b6f-9a36-faa51ace7908",
-                CardType = CardType.Event,
-                Sphere = Sphere.Leadership,
-                ResourceCost = 254,
-                //IsVariableCost = true,
-                Traits = new List<string>() { "Outlands." },
-                Text = "Action: Return X Outlands allies from your discard pile to your hand.",
-                FlavorText = "Death in the morning and at day's ending\r\nlords took and lowly. Long now they sleep\r\nunder grass in Gondor by the Great River.\r\n-The Return of the King ",
-                Quantity = 3,
-                CardNumber = 83,
-                Artist = Artist.Darek_Zabrocki
-            });
-            Cards.Add(new LotRCard() {
-                
                 Title = "Knight of Minas Tirith",
                 Id = "237b31e7-d0b0-4c1e-bd4a-40a175f7d7d1",
                 CardType = CardType.Ally,
