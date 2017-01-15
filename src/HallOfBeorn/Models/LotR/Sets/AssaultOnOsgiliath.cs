@@ -18,7 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(new LotRCard() {
                 
                 Title = "Faramir",
-                Id = "323ebfa3-57e5-4394-9f55-284b2f7ee0be",
                 IsUnique = true,
                 CardType = CardType.Hero,
                 Sphere = Sphere.Lore,
@@ -27,7 +26,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Attack = 2,
                 Defense = 2,
                 HitPoints = 5,
-
                 Text = "Faramir gets +1 Attack for each enemy in the staging area.",
                 FlavorText = "\"The road may pass, but they shall not! Not while Faramir is Captain.\" -Mablung, The Two Towers",
                 Quantity = 1,
@@ -37,9 +35,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             .WithTraits("Gondor.", " Ranger.", " Noble.")
             .WithKeywords("Ranged."));
             Cards.Add(new LotRCard() {
-                
                 Title = "Sword of Morthond",
-                Id = "98ba9e54-d6c3-41ff-b886-81a29e29eb64",
                 IsUnique = true,
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Leadership,

@@ -72,7 +72,7 @@ namespace HallOfBeorn.Services.LotR
                     sortedResults = results.Where(x => x.Value.Score() > 0).OrderBy(x => x.Value.Card.CardSet.Product.FirstReleased).ThenBy(x => x.Value.Card.CardSet.Number).Select(x => x.Value).Take(takeCount).ToList();
                     break;
                 case Models.LotR.Sort.Popularity:
-                    sortedResults = results.Where(x => x.Value.Score() > 0).OrderByDescending(x => x.Value.Card.Popularity(popularityLookup)).ThenBy(x => x.Value.Card.CardSet.Number).ThenBy(x => x.Value.Card.CardNumber).Select(x => x.Value).Take(takeCount).ToList();
+                    sortedResults = results.Where(x => x.Value.Score() > 0).OrderByDescending(x => popularityLookup(x.Value.Card.Slug)).ThenBy(x => x.Value.Card.CardSet.Number).ThenBy(x => x.Value.Card.CardNumber).Select(x => x.Value).Take(takeCount).ToList();
                     break;
                 default:
                     sortedResults = results.Where(x => x.Value.Score() > 0).OrderByDescending(x => x.Value.Score()).Select(y => y.Value).Take(takeCount).ToList();

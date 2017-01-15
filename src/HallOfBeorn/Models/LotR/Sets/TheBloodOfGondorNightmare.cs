@@ -48,7 +48,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             });
             addCard(LotRCard.Enemy("Black Númenorean", "07C0FBEC-771B-4FD2-AF0E-B9AC9165A500", "The Blood of Gondor Nightmare", 35, Card.VALUE_X, 5, 4, 9)
                 .WithUnique()
-                .WithNormalizedTitle("Black Numenorean")
                 .WithTraits("Mordor.")
                 .WithText("X is the total number of hidden cards in the game.\r\nForced: When Black Númenórean engages you, turn all hidden cards in your play area faceup.\r\nForced: At the end of the round, each player must raise his threat by 1 for each hidden card in his play area.")
                 .WithInfo(2, 1, Artist.Melanie_Maier));

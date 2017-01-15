@@ -18,13 +18,11 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cycle = "Angmar Awakened";
 
             Cards.Add(LotRCard.Hero("Arwen Undómiel", "", Sphere.Spirit, 9, 3, 1, 2, 3)
-                .WithNormalizedTitle("Arwen Undomiel")
                 .WithTraits("Noldor.", "Noble.")
                 .WithText("Action: Discard a card from your hand to add 1 resource to a Noldor hero's resource pool, or to Aragorn's resource pool. (Limit once per round.)")
                 .WithFlavor("...the light of stars was in her bright eyes, grey as a cloudless night; yet queenly she looked, and thought and knowledge were in her glance, as of one who has known many things that the years bring.\r\n-The Fellowship of the Ring")
                 .WithInfo(140, 1, Artist.Magali_Villeneuve));
-            Cards.Add(LotRCard.Ally("Éothain", "", Sphere.Leadership, 4, 2, 2, 1, 3)
-                .WithNormalizedTitle("Eothain")
+            Cards.Add(LotRCard.Ally("Éothain", Sphere.Leadership, 4, 2, 2, 1, 3)
                 .WithUnique()
                 .WithTraits("Rohan.", "Warrior.")
                 .WithText("Response: After a Rohan ally is discarded from play by a card effect, ready Éothain.")
@@ -32,15 +30,13 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTemplate("<p><b>Response:</b> After a {trait:Rohan.@Rohan} ally is discarded from play by a card effect, ready {self}.</p><p class='flavor-text'>&quot;We must hasten south, lord. Let us leave these wild folk to their fancies. Or let us bind them and take them to our king.&quot;<br>&ndash;The Two Towers</p>")
                 .WithInfo(141, 3, Artist.Glen_Osterberger));
             Cards.Add(LotRCard.Attachment("Sword of Númenor", "", Sphere.Leadership, 1)
-                .WithNormalizedTitle("Sword of Numenor")
                 .WithTraits("Item.", "Weapon.")
                 .WithKeywords("Restricted.")
                 .WithText("Attach to a Dúnedain or Gondor hero.\r\nAttached hero gets +1 Attack.\r\nResponse: After attached hero participates in an attack that destroys an enemy with 5 or more printed hit points, exhaust Sword of Númenor to add 1 resource to attached hero's resource pool.")
                 .WithFlavor("...the flowing characters of Númenor glinted like fire upon the blade.\r\n-The Fellowship of the Ring")
                 .WithTemplate("<p>Attach to a {traits-hero:Dúnedain,Gondor}. {keyword:Restricted.}</p><p>Attached hero gets +1 {Attack}.</p><p><b>Response:</b> After attached hero participates in an attack that destroys an enemy with 5 or more printed hit points, exhaust {self} to add 1 resource to attached hero's resource pool.</p><p class='flavor-text'>...the flowing characters of Númenor glinted like fire upon the blade.<br>&ndash;The Fellowship of the Ring</p>")
                 .WithInfo(142, 3, Artist.Romana_Kendelic));
-            Cards.Add(LotRCard.Ally("Fornost Bowman", "", Sphere.Tactics, 3, 1, 1, 1, 3)
-                .WithGeneric()
+            Cards.Add(LotRCard.Ally("Fornost Bowman", Sphere.Tactics, 3, 1, 1, 1, 3)
                 .WithTraits("Dúnedain.", "Ranger.")
                 .WithKeywords("Ranged.")
                 .WithText("Fornost Bowman gets +1 Attack for each enemy engaged with you.")
@@ -55,13 +51,11 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithFlavor("Then Aragorn was abashed, for he saw the elven-light in her eyes and the wisdom of many days...\r\n-The Return of the King")
                 .WithInfo(145, 3, Artist.Magali_Villeneuve));
             Cards.Add(LotRCard.Event("Tale of Tinúviel", "", Sphere.Spirit, 1)
-                .WithNormalizedTitle("Tale of Tinuviel")
                 .WithTraits("Song.")
                 .WithText("Action: Exhaust a Noldor character to ready a Dúnedain character, or vice-versa. Until the end of the phase, add the exhausted character's printed Willpower to the other character's Willpower, Attack, and Defense.")
                 .WithFlavor("Long was the way that fate them bore,\r\nO'er stony mountains cold and grey,\r\nThrough halls of iron and darkling door,\r\nAnd woods of nightshade morrowless.\r\n-The Fellowship of the Ring")
                 .WithInfo(146, 3, Artist.Magali_Villeneuve));
-            Cards.Add(LotRCard.Ally("Galadhrim Healer", "", Sphere.Lore, 2, 1, 0, 1, 1)
-                .WithGeneric()
+            Cards.Add(LotRCard.Ally("Galadhrim Healer", Sphere.Lore, 2, 1, 0, 1, 1)
                 .WithTraits("Silvan.", "Healer.")
                 .WithText("Response: After Galadhrim Healer enters play, choose a player. Heal 1 damage from each hero controlled by that player.")
                 .WithFlavor("\"Even if your Quest did not concern us closely, you should have refuge in this City, until you were healed and refreshed.\"\r\n-Celeborn, The Fellowship of the Ring")
@@ -78,7 +72,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithFlavor("\"But why, lord, did you receive me as sword-thain, if not to stay by your side?\"\r\n-Merry, The Return of the King")
                 .WithInfo(149, 3, Artist.Tomasz_Jedruszek));
             Cards.Add(LotRCard.Quest("The Catacombs of Carn Dûm", 1, setName, 18)
-                .WithNormalizedTitle("The Catacombs of Carn Dum")
                 .WithFlavor("As you descend into the catacombs beneath Carn Dûm, you find yourself overcome with terror. Still, you press onward, knowing that Iârion's fate-and perhaps the fate of the north-lies in your hand.")
                 .WithText("Setup: Set Daechanar and Altar of Midwinter aside, out of play. Each player reveals an encounter card from the top of the encounter deck. Each player reanimates the top card of his deck.")
                 .WithOppositeFlavor("Daechanar's powers of sorcery and necromancy are strongest here, in the capital of the Witch-realm where the lord of the Nazgûl once resided.")
@@ -119,7 +112,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithEasyModeQuantity(2)
                 .WithInfo(156, 3, Artist.Anthony_Devine));
             Cards.Add(LotRCard.Enemy("Wraith of Carn Dûm", "", setName, 18, 2, 4, 0, 5)
-                .WithNormalizedTitle("Wraith of Carn Dum")
                 .WithTraits("Undead.", "Wraith.")
                 .WithText("Forced: When Wraith of Carn Dûm leaves play, attach it to a character in play. (Counts as a Sorcery attachment with the text: \"Attached character has -1 Willpower, -1 Attack, and -1 Defense. If the attached character leaves play, return Wraith of Carn Dûm to the staging area as an enemy.\")")
                 .WithInfo(157, 2, Artist.Ilich_Henriquez));
@@ -129,7 +121,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithShadow("Shadow: Discard the top 2 cards of the encounter deck. Resolve the \"when revealed\" effects of each Sorcery card discarded by this effect.")
                 .WithInfo(158, 3, Artist.Rafal_Hrynkiewicz));
             Cards.Add(LotRCard.Location("Tombs of Carn Dûm", "", setName, 3, 3)
-                .WithNormalizedTitle("Tombs of Carn Dum")
                 .WithTraits("Carn Dûm.", "Underground.")
                 .WithText("ForcedL At the end of the round, discard the top card of each player's deck. Each player must reanimate each ally discarded by this effect.\r\nTravel: Deal 1 shadow card to each Undead enemy in play to travel here.")
                 .WithFlavor("He could see nothing but the dim flame of the torches; but if the company halted, there seemed and endless whisper of voices all about him...\r\n-The Return of the King")

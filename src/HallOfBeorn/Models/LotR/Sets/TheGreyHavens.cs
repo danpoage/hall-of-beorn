@@ -15,7 +15,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             SetType = Models.SetType.Deluxe_Expansion;
 
             Cards.Add(LotRCard.Hero("Círdan the Shipwright", "", Sphere.Spirit, 12, 4, 2, 2, 4)
-                .WithNormalizedTitle("Cirdan the Shipwright")
                 .WithTraits("Noldor.", "Noble.")
                 .WithText("Draw 1 additional card at the beginning of the resource phase.\r\nForced: After drawing cards at the beginning of the resource phase, choose and discard 1 of those cards.")
                 .WithFlavor("Very tall he was, and his beard was long, and he was grey and old, save that his eyes were keen as stars...\r\n-The Return of the King")
@@ -25,8 +24,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Response: After drawing your setup hand, instead of taking a mulligan, you may discard any number of cards from your hand. Then, draw that many cards.\r\nAction: If you have no cards in your hand, draw 6 cards. (Limit once per game.)")
                 .WithFlavor("\"What power still remains lies with us...\"\r\n-The Fellowship of the Ring")
                 .WithInfo(2, 1, Artist.Lukasz_Jaskolski));
-            Cards.Add(LotRCard.Ally("Mithlond Sea-watcher", "", Sphere.Tactics, 2, 1, 1, 0, 2)
-                .WithGeneric()
+            Cards.Add(LotRCard.Ally("Mithlond Sea-watcher", Sphere.Tactics, 2, 1, 1, 0, 2)
                 .WithTraits("Noldor.", "Warrior.")
                 .WithText("While the top card of your discard pile is an ally, Mithlond Sea-watcher gets +2 Attack and gains ranged.")
                 .WithFlavor("But it was an old tradition that away over there stood the Grey Havens, from which at times elven-ships set sail, never to return.\r\n-The Fellowship of the Ring")
@@ -38,8 +36,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTraits("Item.")
                 .WithText("Attach to a character.\r\nQuest Action: Discard Grappling Hook and exhaust attached character to commit attached character to the quest, using its Attack instead of its Willpower (or instead of its Defense if the current quest has the siege keyword).")
                 .WithInfo(5, 3, Artist.Kara_Williams));
-            Cards.Add(LotRCard.Ally("Warden of the Havens", "", Sphere.Leadership, 2, 0, 1, 1, 3)
-                .WithGeneric()
+            Cards.Add(LotRCard.Ally("Warden of the Havens", Sphere.Leadership, 2, 0, 1, 1, 3)
                 .WithTraits("Noldor.", "Warrior.")
                 .WithText("While the top card of your discard pile is an attachment, Warden of the Havens gets +2 Defense and gains sentinel.")
                 .WithFlavor("\"...and if he comes, assailing the White Towers and the Havens, hereafter the Elves may have no escape from the lengthening shadows of Middle-earth.\"\r\n-Galdor, The Fellowship of the Ring")
@@ -51,8 +48,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTraits("Item.")
                 .WithText("Attach to a Leadership or a Scout character.\r\nResponse: At the beginning of the travel phase, exhaust Mariner's Compass and attached character to search the top 5 cards of the encounter deck for a location. Switch that location with a location in the staging area. Shuffle the encounter deck.")
                 .WithInfo(8, 3, Artist.Lucas_Durham));
-            Cards.Add(LotRCard.Ally("Lindon Navigator", "", Sphere.Lore, 2, 2, 1, 1, 2)
-                .WithGeneric()
+            Cards.Add(LotRCard.Ally("Lindon Navigator", Sphere.Lore, 2, 2, 1, 1, 2)
                 .WithTraits("Noldor.", "Scout.")
                 .WithText("Lindon Navigator does not exhaust to commit to a quest, and can commit to quests while exhausted.\r\nForced: After resolving a quest to which Lindon Navigator was committed, either discard it from play or discard 1 card from your hand.")
                 .WithInfo(9, 3, Artist.Tiziano_Baracchi));
@@ -61,12 +57,10 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithFlavor("...for ever still a herald on\r\nar errand that should never rest\r\nto bear his shining lamp afar,\r\nthe Flammifer of Westernesse.\r\n-The Fellowship of the Ring")
                 .WithInfo(10, 3, Artist.Katy_Grierson));
             Cards.Add(LotRCard.Attachment("Explorer's Almanac", "", Sphere.Lore, 0)
-                .WithGeneric()
                 .WithTraits("Item.")
                 .WithText("Attach to a location in the staging area.\r\nProgress from questing successfully may be placed on the attached location before it is placed on the current quest.")
                 .WithInfo(11, 3, Artist.Ed_Mattinian));
-            Cards.Add(LotRCard.Ally("Sailor of Lune", "", Sphere.Spirit, 2, 1, 1, 0, 2)
-                .WithGeneric()
+            Cards.Add(LotRCard.Ally("Sailor of Lune", Sphere.Spirit, 2, 1, 1, 0, 2)
                 .WithTraits("Noldor.", "Scout.")
                 .WithText("While the top card of your discard pile is an event, Sailor of Lune gets +1 Willpower and gains: \"Cannot be damaged while committed to the quest.\"")
                 .WithFlavor("\"They are sailing, sailing, sailing over the Sea, they are going into the West and leaving us,\" said Sam, half chanting the words, shaking his head sadly and solemnly.\r\n-The Fellowship of the Ring")
@@ -134,7 +128,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithIncludedEncounterSets(EncounterSet.VastOceans, EncounterSet.StormyWeather, EncounterSet.UmbarFleet, EncounterSet.CorsairPirates, EncounterSet.TheDreamChasersFleet)
                 .WithInfo(21, 1, Artist.Nicholas_Gregory));
             Cards.Add(LotRCard.ShipEnemy("Scouting Ship", "Voyage Across Belegaer", 35, 2, 5, 2, 7)
-                .WithGeneric()
                 .WithTraits("Corsair.", "Ship.")
                 .WithKeywords("Boarding 1.")
                 .WithText("Cannot have attachments. Scouting Ship gets -15 engagement cost while you are off course (Cloudy, Rainy, or Stormy).")
@@ -221,7 +214,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithIncludedEncounterSets(EncounterSet.CorsairRaiders, EncounterSet.TheStormcallerElite)
                 .WithInfo(36, 1, Artist.Simon_Dominic));
             Cards.Add(LotRCard.Quest("Sahír's Advance", 2, "Raid on the Grey Havens", Card.VALUE_NA)
-                .WithNormalizedTitle("Sahir's Advance")
                 .WithFlavor("A menacing ship leads the raiders, its charismatic captain bellowing orders to the Corsairs: \"Kill the defenders!\" he shouts. \"Destroy their ships!\"")
                 .WithText("When Revealed: Add Na’asiyah and Captain Sahír to the staging area, enemy side faceup. Each player reveals the top card of the encounter deck. Place resources on Na’asiyah and Captain Sahír equal to the amount of damage on The Dream-chaser. Add 1 resource to each other Raider enemy in play.")
                 .WithOppositeText("Any time players would place progress on this quest, remove an equal amount of damage from locations in play instead. (Progress is placed on the active location before triggering this effect.)\r\nEach Raider enemy revealed by the encounter deck enters play with 1 resource on it.\r\nIf Captain Sahír is in the victory display and each location in play has no damage, the players win the game. ")
@@ -242,7 +234,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("When Revealed: Either deal 2 damage to an Aflame location in play, or search the encounter deck and discard pile for an Aflame location with the highest Aflame X value, and add it to the staging area.")
                 .WithInfo(40, 3, Artist.Leanna_Teneycke));
             Cards.Add(LotRCard.Enemy("Sahír's Ravager", "", "Raid on the Grey Havens", 36, 3, 4, 3, 5)
-                .WithNormalizedTitle("Sahir's Ravager")
                 .WithTraits("Corsair.", "Raider.")
                 .WithText("Forced: After Sahír’s Ravager attacks, place 1 resource on it. Then, deal X damage to the Aflame location in play with the lowest Aflame value, where X is the number of resources on Sahír's Ravager.")
                 .WithEasyModeQuantity(1)
@@ -439,7 +430,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(LotRCard.Enemy("Captain Sahír", "", "The Stormcaller Elite", 4, 6, 6, 2, 5)
                 .WithTypeBasedSlug()
                 .WithUnique()
-                .WithNormalizedTitle("Captain Sahir")
                 .WithTraits("Corsair.", "Raider.")
                 .WithText("Captain Sahír engages the first player.\r\nFor each point of damage Captain Sahír would take, discard 1 resource from him and cancel that damage.\r\nForced: After Captain Sahír attacks, place 2 resource tokens on him (4 instead if his attack destroyed a character).")
                 .WithVictoryPoints(6)
@@ -447,7 +437,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(LotRCard.ObjectiveAlly("Captain Sahír", "", "The Stormcaller Elite", 0, 0, 2, 5)
                 .WithTypeBasedSlug()
                 .WithUnique()
-                .WithNormalizedTitle("Captain Sahir")
                 .WithTraits("Corsair.", "Raider.")
                 .WithText("The first player gains control of Captain Sahír.\r\nCaptain Sahír gets +1 Willpower and +1 Attack for each resource on him (max +6).\r\nAction: Spend 1 resource from a hero you control to place 1 resource on Captain Sahír. (Limit once per round).\r\nIf Captain Sahír leaves play, the players lose.")
                 .WithInfo(77, 1, Artist.Sara_Winters));
@@ -475,7 +464,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Immune to player card effects.\r\nRaise your starting threat by 3.\r\nDraw 1 additional card during the resource phase.\r\nIf the Dawn Star is destroyed, its controller is eliminated from the game.")
                 .WithInfo(81, 1, Artist.Titus_Lunter));
             Cards.Add(LotRCard.ShipObjective("Nárelenya", "The Dream-chaser's Fleet", 3, 3, 5, 15)
-                .WithNormalizedTitle("Narelenya")
                 .WithTraits("Grey Havens.", "Ship.")
                 .WithKeywords("Sentinel.")
                 .WithText("Immune to player card effects.\r\nReduce the cost of the first ally you play each round by 1.\r\nIf the Nárelenya is destroyed, its controller is eliminated from the game.")

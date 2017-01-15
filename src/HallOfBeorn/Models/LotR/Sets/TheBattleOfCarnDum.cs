@@ -19,14 +19,12 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cycle = "Angmar Awakened";
 
             Cards.Add(LotRCard.Hero("Amarthiúl", "", Sphere.Leadership, 10, 1, 3, 3, 3)
-                .WithNormalizedTitle("Amarthiul")
                 .WithTraits("Dúnedain.", "Ranger.", "Warrior.")
                 .WithText("While you are engaged with at least 1 enemy, Amarthiúl gains the Tactics resource icon.\r\nWhile you are engaged with at least 2 enemies, add 1 additional resource to Amarthiúl's resource pool when you collect resources during the resource phase.")
                 .WithFlavor("\"The heirs of Elendil do not forget all things past...\" -Aragorn, The Return of the King")
                 .WithTemplate("<p>While you are engaged with at least 1 enemy, {self} gains the {sphere:Tactics} resource icon.</p><p>While you are engaged with at least 2 enemies, add 1 additional resource to {self}'s resource pool when you collect resources during the resource phase.</p><p class='flavor-text'>&quot;The heirs of Elendil do not forget all things past...&quot;<br>&ndash;Aragorn, The Return of the King</p>")
                 .WithInfo(115, 1, Artist.Tomasz_Jedruszek));
-            Cards.Add(LotRCard.Ally("Guardian of Arnor", "", Sphere.Leadership, 3, 1, 1, 1, 3)
-                .WithGeneric()
+            Cards.Add(LotRCard.Ally("Guardian of Arnor", Sphere.Leadership, 3, 1, 1, 1, 3)
                 .WithTraits("Dúnedain.", "Ranger.")
                 .WithKeywords("Sentinel.")
                 .WithText("Guardian of Arnor gets +1 Defense for each enemy engaged with you.")
@@ -38,7 +36,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithFlavor("\"Dooms hangs still on a thread. Yet hope there is still, if we can stand but unconquered for a little while.\" -Gandalf, The Two Towers")
                 .WithTemplate("<p><b>Planning Action:</b> Until the end of the round, players do not raise their threat from questing unsuccessfully.</p><p><b>Valour Planning Action:</b> Raise each player's threat by 2 to skip the quest phase this round.</p><p class='flavor-text'>&quot;Dooms hangs still on a thread. Yet hope there is still, if we can stand but unconquered for a little while.&quot;<br>&ndash;Gandalf, The Two Towers</p>")
                 .WithInfo(117, 3, Artist.Tomasz_Jedruszek));
-            Cards.Add(LotRCard.Ally("Beechbone", "", Sphere.Tactics, 3, 2, 2, 1, 4)
+            Cards.Add(LotRCard.Ally("Beechbone", Sphere.Tactics, 3, 2, 2, 1, 4)
                 .WithUnique()
                 .WithTraits("Ent.")
                 .WithText("Cannot have restricted attachments.\r\nEnters play exhausted.\r\nResponse: After Beechbone is declared as an attacker, deal 1 damage to him to deal X damage to the defending enemy. X is the amount of damage on Beechbone.")
@@ -48,7 +46,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithFlavor("Aragorn and Boromir did not heed the command, but still held their ground, side by side, behind Gandalf at the far end of the bridge. -The Fellowship of the Ring")
                 .WithTemplate("<p><b>Action:</b> Choose and ready a sentinel character.</p><p><b>Valour Action:</b> Ready all sentinel characters.</p><p class='flavor-text'>Aragorn and Boromir did not heed the command, but still held their ground, side by side, behind Gandalf at the far end of the bridge.<br>&ndash;The Fellowship of the Ring</p>")
                 .WithInfo(119, 3, Artist.Alvaro_Calvo_Escudero));
-            Cards.Add(LotRCard.Ally("Lindir", "", Sphere.Spirit, 3, 2, 1, 2, 2)
+            Cards.Add(LotRCard.Ally("Lindir", Sphere.Spirit, 3, 2, 1, 2, 2)
                 .WithUnique()
                 .WithTraits("Noldor.")
                 .WithText("Response: After Lindir enters play, if you have less than 3 cards in your hand, draw until you have 3 cards in your hand.")
@@ -109,7 +107,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTemplate("<p>{keyword:Indestructible.} Cannot have attachments.</p><p>Each other enemy gets -10 engagement cost.</p><p><b>Forced:</b> After {self} is flipped or a treachery with the {trait:Sorcery.@Sorcery} trait is revealed, {self} heals 3 damage and makes an immediate attack against the first player.</p>")
                 .WithInfo(128, 1, Artist.Brian_Valenzuela));
             Cards.Add(LotRCard.Enemy("Carn Dûm Garrison", "", setName, 40, 1, 4, 3, 5)
-                .WithNormalizedTitle("Carn Dum Garrison")
                 .WithTraits("Orc.")
                 .WithText("Carn Dûm gets +1 Threat for each shadow card currently dealt to it.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack for each shadow card currently dealt to it.")
@@ -143,7 +140,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTemplate("<p>While {self} is the active location, each shadow card with no shadow effect gains: <i>&quot;<b>Shadow:</b> Raise defending player's threat by 2.&quot;</i></p>{shadow}<p class='shadow-text'><b>Shadow:</b> Raise defending player's threat by 2.</p>")
                 .WithInfo(133, 2, Artist.Sergey_Glushakov));
             Cards.Add(LotRCard.Location("Blight of Carn Dûm", "", setName, 3, 3)
-                .WithNormalizedTitle("Blight of Carn Dum")
                 .WithTraits("Blight.", "Plains.")
                 .WithText("Forced: After an enemy attacks, heal 1 damage from it.\r\nTravel: Deal each enemy in play 1 shadow card to travel here.")
                 .WithShadow("Shadow: If the attacking enemy is Thaurdir, heal 3 damage from him.")

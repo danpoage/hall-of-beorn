@@ -330,8 +330,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithFlavor("Some of the Orcs have broken from the war party to hinder your pursuit. Until you deal with them, it will be difficult to continue your chase...")
                 .WithVictoryPoints(10)
                 .WithInfo(23, 1, Artist.Jon_Bosco));
-            Cards.Add(LotRCard.EncounterSideQuest("Rescue Iârion", "EC970E93-A6A1-4BEC-9C36-DBCF8C6F27A5", "Intruders in Chetwood", 6)
-                .WithNormalizedTitle("Rescue Iarion")
+            addCard(LotRCard.EncounterSideQuest("Rescue Iârion", "EC970E93-A6A1-4BEC-9C36-DBCF8C6F27A5", "Intruders in Chetwood", 6)
                 .WithKeywords("Time 4.")
                 .WithText("When Revealed: The first player loses control of Iârion and places him facedown underneath this stage. When this stage is defeated, the first player takes control of Iârion and exhausts him.\r\nForced: After the last time counter is removed from this stage, discard Iârion.")
                 .WithFlavor("While scouting ahead, Iârion is ambushed by several Orcs. The Ranger is knoced unconscious and dragged away by the Orcs. You must rescue him!")

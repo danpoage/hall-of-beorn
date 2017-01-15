@@ -38,19 +38,19 @@ namespace HallOfBeorn
             var categoryService = new CategoryService(cardRepository);
             System.Web.HttpContext.Current.Application[Extensions.CategoryServiceKey] = categoryService;
 
-            var scenarioService = new ScenarioService(productRepository, cardRepository);
+            var scenarioService = new ScenarioService(categoryService, productRepository, cardRepository);
             System.Web.HttpContext.Current.Application[Extensions.ScenarioServiceKey] = scenarioService;
 
             var ringsDbService = new RingsDbService(cardRepository);
             System.Web.HttpContext.Current.Application[Extensions.RingsDbKey] = ringsDbService;
 
-            var advancedSearchService = new AdvancedSearchService();
+            var advancedSearchService = new AdvancedSearchService(categoryService);
             var sortService = new SearchSortService(ringsDbService);
 
             var noteService = new NoteService();
             System.Web.HttpContext.Current.Application[Extensions.NoteServiceKey] = noteService;
 
-            var searchService = new SearchService(productRepository, cardRepository, scenarioService, advancedSearchService, sortService, ringsDbService, noteService);
+            var searchService = new SearchService(productRepository, cardRepository, scenarioService, advancedSearchService, sortService, ringsDbService, noteService, categoryService);
             System.Web.HttpContext.Current.Application[Extensions.SearchServiceKey] = searchService;
 
             var statService = new StatService(cardRepository);

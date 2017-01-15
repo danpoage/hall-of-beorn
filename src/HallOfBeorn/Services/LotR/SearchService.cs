@@ -13,7 +13,7 @@ namespace HallOfBeorn.Services.LotR
 {
     public class SearchService
     {
-        public SearchService(ProductRepository productRepository, CardRepository cardRepository, ScenarioService scenarioService, AdvancedSearchService advancedSearchService, SearchSortService sortService, RingsDbService ringsDbService, NoteService noteService)
+        public SearchService(ProductRepository productRepository, CardRepository cardRepository, ScenarioService scenarioService, AdvancedSearchService advancedSearchService, SearchSortService sortService, RingsDbService ringsDbService, NoteService noteService, CategoryService categoryService)
         {
             this.productRepository = productRepository;
             this.cardRepository = cardRepository;
@@ -23,6 +23,7 @@ namespace HallOfBeorn.Services.LotR
             this.cards = cardRepository.Cards();
             this.ringsDbService = ringsDbService;
             this.noteService = noteService;
+            this.categoryService = categoryService;
             this.getPopularity = (slug) => { return ringsDbService.GetPopularity(slug); };
         }
 
@@ -34,6 +35,7 @@ namespace HallOfBeorn.Services.LotR
         private readonly IEnumerable<LotRCard> cards;
         private readonly RingsDbService ringsDbService;
         private readonly NoteService noteService;
+        private readonly CategoryService categoryService;
         private readonly Func<string, byte> getPopularity;
 
         public IEnumerable<CardScore> SearchNew(SearchViewModel model)
@@ -114,6 +116,11 @@ namespace HallOfBeorn.Services.LotR
             return card.Keywords.Any(x => x != null && string.Equals(x.Trim().Replace("~", string.Empty), keyword));
         }
 
+        private byte? Popularity(Func<string, byte> lookup, string slug)
+        {
+            return lookup(slug);
+        }
+
         public IEnumerable<CardScore> Search(SearchViewModel model)
         {
             var filters = new List<SearchFilter>();
@@ -170,13 +177,13 @@ namespace HallOfBeorn.Services.LotR
                 filters.Add(new SearchFilter((s, c) => { return s.Sphere == c.Sphere; }, 100, "Has Sphere '" + model.Sphere.ToEnumDisplayString() + "'"));
 
             if (model.HasCategory())
-                filters.Add(new SearchFilter((s, c) => { return c.Categories.Any(x => x == s.GetCategory()); }, 100, "Has Category '" + model.Category + "'"));
+                filters.Add(new SearchFilter((s, c) => { return categoryService.HasPlayerCategory(c, s.GetCategory()); }, 100, "Has Category '" + model.Category + "'"));
 
             if (model.HasEncounterCategory())
-                filters.Add(new SearchFilter((s, c) => { return c.EncounterCategories.Any(x => x == s.GetEncounterCategory()); }, 100, "Has Encounter Category '" + model.EncounterCategory + "'"));
+                filters.Add(new SearchFilter((s, c) => { return categoryService.HasEncounterCategory(c, s.GetEncounterCategory()); }, 100, "Has Encounter Category '" + model.EncounterCategory + "'"));
 
             if (model.HasQuestCategory())
-                filters.Add(new SearchFilter((s, c) => { return c.QuestCategories.Any(x => x == s.GetQuestCategory()); }, 100, "Has Quest Category '" + model.QuestCategory + "'"));
+                filters.Add(new SearchFilter((s, c) => { return categoryService.HasQuestCategory(c, s.GetQuestCategory()); }, 100, "Has Quest Category '" + model.QuestCategory + "'"));
 
             if (model.HasResourceCost())
             {
@@ -287,7 +294,7 @@ namespace HallOfBeorn.Services.LotR
 
             if (model.Popularity.IsDefinedFilter())
             {
-                filters.Add(new SearchFilter((s, c) => { var pop = c.Popularity(getPopularity);  return pop > 0 && pop.CompareTo(s.PopularityOp, s.Popularity); }, 100, "Popularity " + model.PopularityOp.ToEnumDisplayString() + " '" + model.Popularity + "'"));
+                filters.Add(new SearchFilter((s, c) => { byte? pop = getPopularity(c.Slug);  return pop > 0 && pop.CompareTo(s.PopularityOp, s.Popularity); }, 100, "Popularity " + model.PopularityOp.ToEnumDisplayString() + " '" + model.Popularity + "'"));
             }
 
             if (model.Errata.HasValue && model.Errata.Value != ErrataVersion.Any)

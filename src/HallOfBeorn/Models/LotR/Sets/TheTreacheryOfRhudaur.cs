@@ -41,8 +41,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Action: All enemies get -1 Attack until the end of the phase.\r\nValour Action: Choose a player. Each enemy engaged with that player gets -3 Attack until the end of the phase.")
                 .WithFlavor("Loud the challenge rang and bellowed, like the shout of many throats under the cavernous roof.\r\n-The Fellowship of the Ring")
                 .WithInfo(88, 3, Artist.David_Vargo));
-            Cards.Add(LotRCard.Ally("Galadhrim Weaver", "", Sphere.Spirit, 1, 1, 0, 0, 1)
-                .WithGeneric()
+            Cards.Add(LotRCard.Ally("Galadhrim Weaver", Sphere.Spirit, 1, 1, 0, 0, 1)
                 .WithTraits("Silvan.", "Craftsman.")
                 .WithText("Cannot attack or defend.\r\nResponse: After Galadhrim Weaver enters play, shuffle the top card of your discard pile into your deck.")
                 .WithFlavor("\"You are indeed high in the favour of the Lady! For she herself and her maidens wove this...\" -Lórien Elf, The Fellowship of the Ring")
@@ -53,7 +52,8 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Attach to a Spirit hero.\r\nResponse: After a card is discarded from your hand, exhaust Silver Harp to return that card to your hand.")
                 .WithFlavor("Elrond wore a mantle of grey and had a star upon his forehead, and a silver harp was in his hand... -The Return of the King")
                 .WithInfo(90, 3, Artist.Arden_Beckwith));
-            Cards.Add(LotRCard.Ally("Galdor of the Havens", "", Sphere.Lore, 4, 2, 2, 1, 4)
+            Cards.Add(LotRCard.Ally("Galdor of the Havens", Sphere.Lore, 4, 2, 2, 1, 4)
+                .WithUnique()
                 .WithTraits("Noldor.")
                 .WithText("Response:  After 1 or more cards are discarded from your hand, draw 1 card. Limit once per round.")
                 .WithFlavor("\"But have they the strength, have we here the strength to withstand the Enemy, the coming of Sauron at the last, when all else is overthrown?\"\r\n-The Fellowship of the Ring")
@@ -87,7 +87,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithInfo(95, 1, Artist.Anthony_Devine));
             Cards.Add(LotRCard.ObjectiveAlly("Amarthiúl", "", setName, 1, 3, 3, 3)
                 .WithUnique()
-                .WithNormalizedTitle("Amarthiul")
                 .WithTraits("Dúnedain.", "Ranger.", "Warrior.")
                 .WithText("Response: After an enemy engages a player, give control of Amarthiúl to that player.\r\nIf Amarthiúl leaves play, the players lose the game.")
                 .WithInfo(96, 1, Artist.Tomasz_Jedruszek));
@@ -184,7 +183,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTemplate("<p class='flavor-text'>You search through the ashes of the keep's destroyed rooms. If you are diligent, you may be able to find a clue as to Iârion's ancestry.</b></p><p>While {self} is the current quest, each location in the staging area gets +1 {Threat}</p><p><b>Forced:</b> After a location is explored, place 2 progress on {self}.</p><p><b>When this quest is defeated, {card:Heirloom-of-Iarchon-TToR@flip it over}.</b></p>")
                 .WithInfo(111, 1, Artist.Tomasz_Jedruszek));
             Cards.Add(LotRCard.Objective("Heirloom of Iârchon", "", setName)
-                .WithNormalizedTitle("Heirloom of Iarchon")
                 .WithTraits("Clue.")
                 .WithText("Action: Exhaust Amarthiúl or a hero to claim Heirloom of Iârchon. Then, attach Heirloom of Iârchon to that character.\r\nAttached character gets +1 Willpower.")
                 .WithFlavor("You find a pendant, similar to the one you've seen Iârion wearing. The inscription on the back says:\r\n\"Iârchon, may this pendant guide you away from the shadow that dwells within us all. -Your loving father\"")

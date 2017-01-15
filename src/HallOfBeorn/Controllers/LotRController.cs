@@ -92,7 +92,10 @@ namespace HallOfBeorn.Controllers
 
         private CardViewModel GetCardViewModel(LotRCard card)
         {
-            var viewModel = new CardViewModel(card);
+            var getPlayerCategories = new Func<string, IEnumerable<Category>>((slug) => { return categoryService.PlayerCategories(slug); });
+            var getEncounterCategories = new Func<string, IEnumerable<EncounterCategory>>((slug) => { return categoryService.EncounterCategories(slug); });
+            var getQuestCategories = new Func<string, IEnumerable<QuestCategory>>((slug) => { return categoryService.QuestCategories(slug); });
+            var viewModel = new CardViewModel(card, getPlayerCategories, getEncounterCategories, getQuestCategories);
 
             if (string.IsNullOrEmpty(card.HtmlTemplate))
             {
@@ -148,6 +151,10 @@ namespace HallOfBeorn.Controllers
 
         public ActionResult Browse(string id)
         {
+            var getPlayerCategories = new Func<string, IEnumerable<Category>>((slug) => { return categoryService.PlayerCategories(slug); });
+            var getEncounterCategories = new Func<string, IEnumerable<EncounterCategory>>((slug) => { return categoryService.EncounterCategories(slug); });
+            var getQuestCategories = new Func<string, IEnumerable<QuestCategory>>((slug) => { return categoryService.QuestCategories(slug); });
+
             if (HttpContext.Request.Url.AbsolutePath.Contains("/Cards"))
             {
                 if (string.IsNullOrEmpty(id))
@@ -184,7 +191,7 @@ namespace HallOfBeorn.Controllers
                         return Redirect(string.Format("/LotR/Browse/{0}", product.Name.NormalizeCaseSensitiveString().ToUrlSafeString()));
                     }
                     
-                    model.Detail = new BrowseProductViewModel(product);
+                    model.Detail = new BrowseProductViewModel(product, getPlayerCategories, getEncounterCategories, getQuestCategories);
                 }
             }
 
@@ -207,7 +214,9 @@ namespace HallOfBeorn.Controllers
 
             ScenarioListViewModel model;
             var lookupCard = new Func<string, LotRCard>((slug) => { return cardRepository.FindBySlug(slug); });
-
+            var getPlayerCategories = new Func<string, IEnumerable<Category>>((slug) => { return categoryService.PlayerCategories(slug); });
+            var getEncounterCategories = new Func<string, IEnumerable<EncounterCategory>>((slug) => { return categoryService.EncounterCategories(slug); });
+            var getQuestCategories = new Func<string, IEnumerable<QuestCategory>>((slug) => { return categoryService.QuestCategories(slug); });
 
             if (string.IsNullOrEmpty(id))
             {
@@ -238,7 +247,7 @@ namespace HallOfBeorn.Controllers
                 }
 
                 model = new ScenarioListViewModel();
-                model.Detail = new ScenarioViewModel(scenario, lookupCard);
+                model.Detail = new ScenarioViewModel(scenario, lookupCard, getPlayerCategories, getEncounterCategories, getQuestCategories);
 
                 return View(model);
             }
@@ -582,7 +591,11 @@ namespace HallOfBeorn.Controllers
 
             foreach (var score in searchService.Search(model))
             {
-                var viewModel = new CardViewModel(score);
+                var getPlayerCategories = new Func<string, IEnumerable<Category>>((slug) => { return categoryService.PlayerCategories(slug); });
+                var getEncounterCategories = new Func<string, IEnumerable<EncounterCategory>>((slug) => { return categoryService.EncounterCategories(slug); });
+                var getQuestCategories = new Func<string, IEnumerable<QuestCategory>>((slug) => { return categoryService.QuestCategories(slug); });
+
+                var viewModel = new CardViewModel(score, getPlayerCategories, getEncounterCategories, getQuestCategories);
                 viewModel.Popularity = ringsDbService.GetPopularity(viewModel.Slug);
 
                 model.Cards.Add(viewModel);

@@ -21,7 +21,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithFlavor("\"He is one of the wandering folk - Rangers we call them.\"\r\n-Barliman Butterbur, The Fellowship of the Ring")
                 .WithInfo(28, 1, Artist.Alvaro_Calvo_Escudero));
             Cards.Add(LotRCard.Attachment("Steed of the North", string.Empty, Sphere.Leadership, 1)
-                .WithGeneric()
                 .WithTraits("Mount.")
                 .WithKeywords("Restricted.")
                 .WithText("Attach to a Dúnedain or Ranger hero.\r\nResponse: After you engage an enemy, exhaust Steed of the North to ready attached hero.")

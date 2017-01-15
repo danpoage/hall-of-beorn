@@ -31,7 +31,6 @@ namespace HallOfBeorn.Models.LotR.Simple
     public class SimpleCard
     {
         public SimpleCard(LotRCard card)
-            : this()
         {
             this.Front = new Side() { ImagePath = GetFrontImagePath(card) };
 
@@ -153,7 +152,7 @@ namespace HallOfBeorn.Models.LotR.Simple
 
         private string GetFrontImagePath(LotRCard card)
         {
-            var viewModel = new CardViewModel(card);
+            var viewModel = new CardViewModel(card, null, null, null);
             return (!string.IsNullOrEmpty(viewModel.ImagePath1)) ?
                 viewModel.ImagePath1
                 : viewModel.ImagePath;
@@ -175,6 +174,7 @@ namespace HallOfBeorn.Models.LotR.Simple
 
         private void InitializeCategories(LotRCard card)
         {
+            /*
             foreach (var category in card.Categories)
             {
                 this.Categories.Add(category.ToString().Replace("_", " "));
@@ -188,7 +188,7 @@ namespace HallOfBeorn.Models.LotR.Simple
             foreach (var category in card.EncounterCategories)
             {
                 this.Categories.Add(category.ToString().Replace("_", " "));
-            }
+            }*/
         }
 
         private void InitializeHero(LotRCard card)

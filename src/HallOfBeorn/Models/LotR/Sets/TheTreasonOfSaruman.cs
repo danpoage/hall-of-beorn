@@ -31,27 +31,26 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Cannot have restricted attachments.\r\nAction: Deal 1 damage to Treebeard to give him +1 Willpower and +1 Attack until the end of the phase. (Limit 5 times per phase.)")
                 //.WithTemplate("<p><b>Action:</b> Deal 1 damage to {self} to give him +1 {Willpower} and +1 {Attack} until the end of the phase. (Limit 5 times per phase.)</p><p class='flavor-text'>&quot;I am not altogether on anybody's side, because nobody is altogether on my side...&quot;<br>&ndash;The Two Towers</p>")
                 .WithInfo(3, 1, Artist.Guillaume_Ducos));
-            Cards.Add(LotRCard.Ally("Gimli", "8C4FBDC9-60C4-446D-B7E9-14AECD7DC0C6", Sphere.Leadership, 4, 2, 2, 2, 3)
+            Cards.Add(LotRCard.Ally("Gimli", Sphere.Leadership, 4, 2, 2, 2, 3)
                 .WithUnique()
                 .WithTraits("Dwarf.", "Warrior.")
                 .WithKeywords("Sentinel.")
                 .WithText("Response: After an enemy is revealed from the encounter deck, ready Gimli.")
                 .WithInfo(4, 3, Artist.Lukasz_Jaskolski));
-            Cards.Add(LotRCard.Ally("Legolas", "7727D4B3-D23D-403D-8BC2-2C77665CBE93", Sphere.Tactics, 4, 1, 3, 1, 3)
+            Cards.Add(LotRCard.Ally("Legolas", Sphere.Tactics, 4, 1, 3, 1, 3)
                 .WithUnique()
                 .WithTraits("Silvan.", "Warrior.")
                 .WithKeywords("Ranged.")
                 .WithText("Response: After Legolas participates in an attack that destroys an enemy, draw 1 card.")
                 .WithFlavor("\"He stands not alone,\" said Legolas, bending his bow and fitting an arrow with hands that moved quicker than sight. -The Two Towers")
                 .WithInfo(5, 3, Artist.Sebastian_Giacobino));
-            Cards.Add(LotRCard.Ally("Quickbeam", "84910290-AC5D-4904-8998-9851A598B9AB", Sphere.Lore, 2, 2, 3, 1, 3)
+            Cards.Add(LotRCard.Ally("Quickbeam", Sphere.Lore, 2, 2, 3, 1, 3)
                 .WithUnique()
                 .WithTraits("Ent.")
                 .WithText("Cannot have restricted attachments. Enters play exhausted.\r\nResponse: After Quickbeam enters play, deal 1 damage to him to ready him.")
                 .WithFlavor("\"I am Bregalad, that is Quickbeam in your language. But it is only a nickname, of course.\" -The Two Towers")
                 .WithInfo(6, 3, Artist.Mike_Nash));
-            Cards.Add(LotRCard.Ally("Háma", "7EFDF1B5-E3B9-4563-8E12-A2E0C60845F7", Sphere.Spirit, 3, 1, 2, 2, 2)
-                .WithNormalizedTitle("Hama")
+            Cards.Add(LotRCard.Ally("Háma", Sphere.Spirit, 3, 1, 2, 2, 2)
                 .WithUnique()
                 .WithTraits("Rohan.", "Warrior.")
                 .WithText("Combat Action: Ready Háma. He gets +3 Defense until the end of the phase. At the end of the phase, discard Háma. (Limit once per round.)")
@@ -129,7 +128,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithFlavor("\"Beyond all hope you return to us in our need!\" -Aragorn, The Two Towers")
                 .WithInfo(19, 1, Artist.Ilich_Henriquez));
             Cards.Add(LotRCard.Attachment("Palantír of Orthanc", "8D9A389B-C84A-48B4-9DBE-29076536B52C", Sphere.Neutral, 0)
-                .WithNormalizedTitle("Palantir of Orthanc")
                 .WithUnique()
                 .WithBoon()
                 .WithTraits("Artifact.", "Item.")
@@ -146,7 +144,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Treat each Captive's text box as blank. Captives are in play but are not under any player's control. If there are no Captives in play, the players lose the game.\r\nForced: At the end of the refresh phase, increase the pursuit value by 1. Then, if the pursuit value is 30 or greater, the players lose the game.")
                 .WithInfo(22, 1, Artist.Niten));
             Cards.Add(LotRCard.Enemy("Uglúk", "BA97CFE3-1F65-4497-8A29-EEF290EFF967", "The Uruk-hai", 10, 3, 5, 1, 6)
-                .WithNormalizedTitle("Ugluk")
                 .WithUnique()
                 .WithTraits("Orc.", "Uruk-hai.")
                 .WithKeywords("Toughness 3.")
@@ -155,14 +152,12 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithVictoryPoints(5)
                 .WithInfo(23, 1, Artist.Sebastian_Giacobino));
             Cards.Add(LotRCard.Enemy("Grishnákh", "0B7B42C9-EBD0-4FF2-81E2-50C331FBA1F3", "The Uruk-hai", 40, 4, 3, 4, 5)
-                .WithNormalizedTitle("Grishnakh")
                 .WithUnique()
                 .WithTraits("Orc.", "Mordor.")
                 .WithText("Forced: After Grishnákh enters play, the first player attached 1 of the Captives to him. If Grishnákh is defeated, place the attached Captive faceup underneath To Isengard!\r\nForced: At the end of the quest phase, deal 1 damage to the attached Captive.")
                 .WithVictoryPoints(5)
                 .WithInfo(24, 1, Artist.Claudio_Pozas));
             Cards.Add(LotRCard.Enemy("Uglúk's Uruk-hai", "BB6D77FC-4F47-48B2-B8FE-08FBDB5CDD83", "The Uruk-hai", 38, 2, 4, 2, 5)
-                .WithNormalizedTitle("Ugluk's Uruk-hai")
                 .WithTraits("Orc.", "Uruk-hai")
                 .WithKeywords("Peril.", "Toughness 1.", "Archery 1.")
                 .WithText("When Revealed: Either increase the pursuit value by 3, or reveal an additional encounter card.")

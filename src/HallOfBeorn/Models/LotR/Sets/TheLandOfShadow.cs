@@ -45,22 +45,26 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Reduce the cost of the first Trap card you play each round by 1 (to a minimum of 0).\r\nResponse: After a Trap card you control is attached to an enemy, draw 1 card.")
                 .WithFlavor("\"See! Some of the Southrons have broken from the trap and are flying from the road.\" -The Two Towers")
                 .WithInfo(3, 1, Artist.Joshua_Cairos));
-            Cards.Add(LotRCard.Ally("Anborn", "", Sphere.Leadership, 4, 1, 3, 1, 3)
+            Cards.Add(LotRCard.Ally("Anborn", Sphere.Leadership, 4, 1, 3, 1, 3)
+                .WithUnique()
                 .WithTraits("Gondor.", "Ranger.")
                 .WithText("Response: After an enemy is added to the staging area, exhaust Anborn to give that enemy +5 engagement cost until the end of the round. Then, deal 1 damage to that enemy.")
                 .WithFlavor("\"Now I have him at arrow-point.\" -The Two Towers")
                 .WithInfo(4, 3, Artist.Owen_William_Weber));
-            Cards.Add(LotRCard.Ally("Mablung", "", Sphere.Lore, 2, 2, 1, 0, 2)
+            Cards.Add(LotRCard.Ally("Mablung", Sphere.Lore, 2, 2, 1, 0, 2)
+                .WithUnique()
                 .WithTraits("Gondor.", "Ranger.")
                 .WithText("Response: After Mablung enters play, choose an enemy to get +5 engagement cost until the end of the round. Then, you may engage that enemy, or return it to the staging area.")
                 .WithFlavor("\"But still we will not sit idle and let Him do all as He would.\" -The Two Towers")
                 .WithInfo(5, 3, Artist.Beth_Sobel));
-            Cards.Add(LotRCard.Ally("Skinbark", "", Sphere.Tactics, 3, 0, 4, 2, 3)
+            Cards.Add(LotRCard.Ally("Skinbark", Sphere.Tactics, 3, 0, 4, 2, 3)
+                .WithUnique()
                 .WithTraits("Ent.")
                 .WithText("Cannot have restricted attachments. Enters play exhausted.\r\nWhile Skinbark is attacking alone against an Orc enemy, that enemy does not count its Defense.")
                 .WithFlavor("\"He was wounded by the Orcs, and many of his folk and his tree-herds have been murdered and destroyed.\" -Treebeard, The Two Towers")
                 .WithInfo(6, 3, Artist.Dimitri_Bielak));
-            Cards.Add(LotRCard.Ally("Gamling", "", Sphere.Spirit, 3, 1, 1, 2, 2)
+            Cards.Add(LotRCard.Ally("Gamling", Sphere.Spirit, 3, 1, 1, 2, 2)
+                .WithUnique()
                 .WithTraits("Rohan.", "Warrior.")
                 .WithText("Response: After a Rohan ally you control is discarded from play, exhaust Gamling to return that ally to your hand.")
                 .WithFlavor("\"...we have a thousand fit to fight on foot,\" said Gamling, an old man, the leader of those that watched the Dike. -The Two Towers")
@@ -192,7 +196,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithInfo(30, 1, Artist.Cristina_Vela));
             Cards.Add(LotRCard.Location("Henneth Annûn", "", "Journey to the Cross-roads", 1, 1)
                 .WithUnique()
-                .WithNormalizedTitle("Henneth Annun")
                 .WithTraits("Refuge.")
                 .WithText("While Henneth Annûn is the active location, skip both the encounter phase and combat phase, and ignore the Forced effects on stage 1B and The Black Gate.\r\nForced: After Henneth Annûn becomes the active location, return each engaged enemy to the staging area.")
                 .WithFlavor("\"This is the Window of the Sunset, Henneth Annûn, fairest of all the falls of Ithilien...\" —Faramir, The Two Towers")
@@ -204,7 +207,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithEasyModeQuantity(1)
                 .WithInfo(32, 2, Artist.Julepe));
             Cards.Add(LotRCard.Location("Foothills of Ephel Dúath", "", "Journey to the Cross-roads", 3, 6)
-                .WithNormalizedTitle("Foothills of Ephel Duath")
                 .WithTraits("Hills.")
                 .WithText("While Foothills of Ephel Dúath is the active location, each Harad enemy gets -1 Threat.\r\nTravel: The first player engages an enemy in the staging area to travel here.")
                 .WithFlavor("\"And they go ever more heedlessly, we learn, thinking that the power of their new master is great enough, so that the mere shadow of His hills will protect them.\" —Mablung, The Two Towers")
@@ -266,7 +268,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithInfo(43, 1, Artist.Chris_Rahn));
             Cards.Add(LotRCard.Location("Sméagol's Secret Way", "", "Shelob's Lair", 2, 2)
                 .WithUnique()
-                .WithNormalizedTitle("Smeagol's Secret Way")
                 .WithTraits("Mountain.")
                 .WithText("Immune to player card effects.\r\nTravel: Either exhaust Sméagol, or discard 1 random card from each player's hand.\r\nForced: After Sméagol's Secret Way is explored, each player either exhausts a character he controls, or discards 1 random card from his hand.")
                 .WithFlavor("\"...a stair, a narrow stair, O yes, very long and narrow. And then more stairs.\" —Gollum, The Two Towers")
@@ -376,7 +377,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Setup: The first player claims The One ~Ring and attaches it to the Ring-bearer.\r\nAttached hero does not count against the hero limit. The first player gains control of attached hero.\r\nIf The One Ring leaves play, the players lose the game.")
                 .WithInfo(63, 1, Artist.Mike_Nash));
             Cards.Add(LotRCard.Quest("The Taming of Sméagol", 1, "The Passage of the Marshes", 6)
-                .WithNormalizedTitle("The Taming of Smeagol")
                 .WithFlavor("Frodo and Sam left the Fellowship above the falls of Rauros and crossed the great river to climb the Emyn Muil upon the Eastern shore. After days of wandering through that maze of rocky crags, they have finally reached the edge of the Dead Marshes only to discover that Gollum is following them.")
                 .WithText("Setup: Put Gollum into play engaged with the first player. Each player searches the encounter deck for 1 location, reveals it, and adds it to the staging area. Shuffle the encounter deck.")
                 .WithOppositeFlavor("Things would have gone ill with Sam, if he had been alone. But Frodo sprang up, and drew Sting from its sheath. —The Two Towers")
@@ -448,7 +448,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithInfo(75, 1, Artist.Lukasz_Jaskolski));
             Cards.Add(LotRCard.ObjectiveAlly("Sméagol", "", "Gollum", 2, 2, 2, 5)
                 .WithUnique()
-                .WithNormalizedTitle("Smeagol")
                 .WithTraits("Gollum.")
                 .WithText("Immune to player card effects. The first player gains control of Sméagol.\r\nForced: After the players quest unsuccessfully, flip Sméagol to ~Gollum.\r\nIf Sméagol is destroyed, the players lose the game.")
                 .WithInfo(76, 1, Artist.Lukasz_Jaskolski));

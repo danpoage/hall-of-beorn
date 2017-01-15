@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 {
     public class BrowseProductViewModel
     {
-        public BrowseProductViewModel(Product product)
+        public BrowseProductViewModel(Product product, Func<string, IEnumerable<Category>> getPlayerCategories, Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, Func<string, IEnumerable<QuestCategory>> getQuestCategories)
         {
             this.product = product;
 
@@ -17,7 +17,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             {
                 foreach (var card in cardSet.Cards.OrderBy(x => x.CardNumber))
                 {
-                    cardViewModels.Add(new CardViewModel(card));
+                    cardViewModels.Add(new CardViewModel(card, getPlayerCategories, getEncounterCategories, getQuestCategories));
                 }
             }
 

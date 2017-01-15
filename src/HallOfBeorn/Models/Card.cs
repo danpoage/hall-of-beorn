@@ -81,7 +81,7 @@ namespace HallOfBeorn.Models
                 }
             }
         }
-        public string NormalizedTitle { get; protected set; }
+        public string NormalizedTitle { get; private set; }
 
         private string oppositeTitle;
         public string OppositeTitle

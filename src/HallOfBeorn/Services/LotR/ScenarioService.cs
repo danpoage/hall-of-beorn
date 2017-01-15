@@ -10,8 +10,9 @@ namespace HallOfBeorn.Services.LotR
 {
     public class ScenarioService
     {
-        public ScenarioService(ProductRepository productRepository, CardRepository cardRepository)
+        public ScenarioService(CategoryService categoryService, ProductRepository productRepository, CardRepository cardRepository)
         {
+            this.categoryService = categoryService;
             this.cardRepository = cardRepository;
             this.cards = cardRepository.Cards().ToList();
             foreach (var card in this.cards.Where(x => !string.IsNullOrEmpty(x.EncounterSet)))
@@ -39,12 +40,16 @@ namespace HallOfBeorn.Services.LotR
 
             listViewModel = new ScenarioListViewModel();
             var lookupCard = new Func<string, LotRCard>((slug) => { return cardRepository.FindBySlug(slug); });
+            var getPlayerCategories = new Func<string, IEnumerable<Category>>((slug) => { return categoryService.PlayerCategories(slug); });
+            var getEncounterCategories = new Func<string, IEnumerable<EncounterCategory>>((slug) => { return categoryService.EncounterCategories(slug); });
+            var getQuestCategories = new Func<string, IEnumerable<QuestCategory>>((slug) => { return categoryService.QuestCategories(slug); });
             foreach (var scenarioGroup in ScenarioGroups())
             {
-                listViewModel.ScenarioGroups.Add(new ScenarioGroupViewModel(scenarioGroup, lookupCard));
+                listViewModel.ScenarioGroups.Add(new ScenarioGroupViewModel(scenarioGroup, lookupCard, getPlayerCategories, getEncounterCategories, getQuestCategories));
             }
         }
 
+        private readonly CategoryService categoryService;
         private readonly CardRepository cardRepository;
         private readonly IList<LotRCard> cards;
         private readonly IDictionary<string, List<LotRCard>> cardsByEncounterSet = new Dictionary<string, List<LotRCard>>();

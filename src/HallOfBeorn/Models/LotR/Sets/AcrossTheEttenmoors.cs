@@ -30,13 +30,11 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithFlavor("\"Rangers have been here lately. It is they who left the firewood behind.\"\r\n-Aragorn, The Fellowship of the Ring")
                 .WithInfo(55, 3, Artist.Drazenka_Kimpel));
             Cards.Add(LotRCard.Event("Dúnedain Message", "", Sphere.Leadership, 1)
-                .WithNormalizedTitle("Dunedain Message")
                 .WithTraits("Signal.")
                 .WithText("Action: Search your deck for a side quest and add it to your hand. Shuffle your deck.")
                 .WithFlavor("\"I called for the help of the Dúnedain, and their watch was doubled...\"\r\n-Gandalf, The Fellowship of the Ring")
                 .WithInfo(56, 3, Artist.Sara_Biddle));
-            Cards.Add(LotRCard.Ally("Longbeard Sentry", "", Sphere.Tactics, 3, 0, 1, 2, 3)
-                .WithGeneric()
+            Cards.Add(LotRCard.Ally("Longbeard Sentry", Sphere.Tactics, 3, 0, 1, 2, 3)
                 .WithTraits("Dwarf.", "Warrior.")
                 .WithText("Action: Discard 2 cards from the top of your deck to give Longbeard Sentry sentinel and +1 Defense until the end of the phase. (Limit once per phase.)")
                 .WithFlavor("\"...many of them have had experience in the dreadful dwarf and goblin wars, of which you have no doubt heard.\"\r\n-Bilbo Baggins, The Hobbit")
@@ -56,8 +54,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Action: Choose a Noldor or Silvan character.\r\nUntil the end of the phase, add that character's Willpower to its Attack.")
                 .WithFlavor("\"...you saw him for a moment as he is upon the other side: one of the mighty of the Firstborn.\"\r\n-Gandalf, The Fellowship of the Ring")
                 .WithInfo(60, 3, Artist.Magali_Villeneuve));
-            Cards.Add(LotRCard.Ally("Wellinghall Preserver", "", Sphere.Lore, 3, 3, 2, 2, 3)
-                .WithGeneric()
+            Cards.Add(LotRCard.Ally("Wellinghall Preserver", Sphere.Lore, 3, 3, 2, 2, 3)
                 .WithTraits("Ent.")
                 .WithText("Cannot have restricted attachments.\r\nEnters play exhausted.\r\nResponse: After Wellinghall Preserver readies, heal 1 damage from an Ent character.")
                 .WithInfo(61, 3, Artist.Tomasz_Jedruszek));
@@ -93,7 +90,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithInfo(66, 1, Artist.Victor_Garcia));
             Cards.Add(LotRCard.ObjectiveAlly("Amarthiúl", "", setName, 1, 3, 3, 3)
                 .WithUnique()
-                .WithNormalizedTitle("Amarthiul")
                 .WithTraits("Dúnedain.", "Ranger.", "Warrior.")
                 .WithText("Response: After an enemy engages a player, give control of Amarthiúl to that player.\r\nIf Amarthiúl leaves play, the players lose the game.")
                 .WithInfo(67, 1, Artist.Tomasz_Jedruszek));

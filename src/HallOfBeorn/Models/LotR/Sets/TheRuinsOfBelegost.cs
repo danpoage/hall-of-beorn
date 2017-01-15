@@ -152,7 +152,6 @@ Page 4/4",
                 .WithText("If unattached, the fist player claims Keys of Belegost and attaches it to a hero he controls.\r\nAction: Exhaust Keys of Belegost to choose a hero. Add 1 resource to that hero's resource pool.")
                 .WithInfo(11, 1, Artist.Lucas_Durham));
             Cards.Add(LotRCard.Objective("Book of Aulë's Children", "", "The Ruins of Belegost")
-                .WithNormalizedTitle("Book of Aule's Children")
                 .WithUnique()
                 .WithTraits("Artifact.", "Item.")
                 .WithKeywords("Loot.")
@@ -171,7 +170,6 @@ Page 4/4",
                 .WithText("If unattached, the fist player claims Blue Mountain Gem and attaches it to a hero he controls.\r\nAction: Exhaust Blue Mountain Gem to choose a player. Reduce that player's threat by 1.")
                 .WithInfo(14, 1, Artist.Lucas_Durham));
             Cards.Add(LotRCard.Enemy("Naurlhûg", "", "The Ruins of Belegost", 20, Card.VALUE_X, 7, 5, 20)
-                .WithNormalizedTitle("Naurlhug")
                 .WithUnique()
                 .WithTraits("Dragon.")
                 .WithText("Immune to player card effects, Cannot take damage.\r\nX is the number of resources on Stalking the Ruins.\r\nForced: When Naurlhûg makes an attack, the defending player assigns X damage among characters he controls.")
@@ -204,7 +202,6 @@ Page 4/4",
                 .WithShadow("Shadow: If you control a Loot objective, put Blue Mountain Goblin into play engaged with you and deal it a shadow card.")
                 .WithInfo(20, 3, Artist.Sam_Lamont));
             Cards.Add(LotRCard.Location("Naurlhûg's Lair", "", "The Ruins of Belegost", 4, 6)
-                .WithNormalizedTitle("Naurlhug's Lair")
                 .WithUnique()
                 .WithTraits("Underground.")
                 .WithKeywords("Discover 5.")

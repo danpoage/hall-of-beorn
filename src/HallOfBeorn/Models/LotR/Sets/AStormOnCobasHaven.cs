@@ -30,14 +30,12 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Response: After you declare a Noble character as a defender against an attack made by an engaged enemy, return that enemy to the staging area. Then, cancel the attack.")
                 .WithFlavor("So great a power and royalty was revealed in Aragorn...that many of the wild men paused, and looked back over their shoulders to the valley, and some looked up doubtfully at the sky.\r\n-The Two Towers")
                 .WithInfo(111, 3, Artist.Jason_Cheeseman_Meyer));
-            Cards.Add(LotRCard.Ally("Veteran Sword-elf", string.Empty, Sphere.Tactics, 3, 1, 1, 1, 3)
-                .WithGeneric()
+            Cards.Add(LotRCard.Ally("Veteran Sword-elf", Sphere.Tactics, 3, 1, 1, 1, 3)
                 .WithTraits("Noldor.", "Warrior.")
                 .WithText("~Veteran Sword-elf gets +1 Attack and +1 Defense for each copy of ~Veteran Sword-elf in your discard pile.")
                 .WithFlavor("The elves were the first to charge. Their hatred for the goblins is cold and bitter.\r\n-The Hobbit")
                 .WithInfo(112, 3, Artist.Unknown));
             Cards.Add(LotRCard.Attachment("Vigilant Guard", string.Empty, Sphere.Tactics, 3)
-                .WithGeneric()
                 .WithTraits("Skill.")
                 .WithText("Attach to a Warrior character. Limit 1 per character.\r\nAttached character gets +2 hit points.\r\nResponse: When another character would be assigned any amount of damage, place 1 of that damage on attached character instead.")
                 .WithInfo(113, 3, Artist.Lukasz_Jaskolski));
@@ -45,8 +43,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Action: Choose a player. Each enemy engaged with that player gets -1 Defense until the end of the phase. Then, the players as a group may spend 2 Lore resources to have the chosen player draw 1 card each time he attacks and destroys an enemy this phase.")
                 .WithFlavor("\"Good!\" said Legolas. \"But my count is now two dozen. It has been knife-work up here.\" -The Two Towers")
                 .WithInfo(114, 3, Artist.Joshua_Cairos));
-            Cards.Add(LotRCard.Ally("Linhir Sea-captain", string.Empty, Sphere.Spirit, 3, 2, 0, 1, 2)
-                .WithGeneric()
+            Cards.Add(LotRCard.Ally("Linhir Sea-captain", Sphere.Spirit, 3, 2, 0, 1, 2)
                 .WithTraits("Gondor.")
                 .WithText("Response: After you play Linhir Sea-captain from your hand, if you paid all of its resouce cost from a single hero's resource pool, both that hero and Linhir Sea-captain do not exhaust to quest this round.")
                 .WithInfo(115, 3, Artist.Kim_Sokol));
@@ -57,7 +54,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Attach to a Spirit hero, or to Éowyn.\r\nAttached character gets +1 Willpower.\r\nResponse: After attached character is removed from the quest, exhaust Windfola to commit attached hero to the quest.")
                 .WithFlavor("...the great grey steed Windfola made little of the burden; for Dernhelm was less in weight than many men, though lithe and well-knit in frame. -The Return of the King")
                 .WithInfo(116, 3, Artist.Sandara_Tang));
-            Cards.Add(LotRCard.Ally("Ioreth", "", Sphere.Lore, 0, 0, 0, 0, 1)
+            Cards.Add(LotRCard.Ally("Ioreth", Sphere.Lore, 0, 0, 0, 0, 1)
                 .WithUnique()
                 .WithTraits("Gondor.", "Healer.")
                 .WithText("Cannot attack or defend.\r\nAction: Spend 1 Lore resource and exhaust Ioreth. Then, heal 3 points of damage on a character. Any player may trigger this action.")

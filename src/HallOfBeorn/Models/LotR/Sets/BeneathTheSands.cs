@@ -15,9 +15,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             SetType = Models.SetType.Adventure_Pack;
             Cycle = "Haradrim";
 
-            Cards.Add(LotRCard.Ally("Dúnedain Lookout", string.Empty, Sphere.Lore, 2, 1, 1, 1, 2)
-                .WithGeneric()
-                .WithNormalizedTitle("Dunedain Lookout")
+            Cards.Add(LotRCard.Ally("Dúnedain Lookout", Sphere.Lore, 2, 1, 1, 1, 2)
                 .WithTraits("Dúnedain.")
                 .WithText("Response: Discard Dúnedain Lookout to cancel the 'When Revealed' effects of an enemy just revealed from the encounter deck.")
                 .WithFlavor("\"Travellers scowl at us, and countrymen gives us scornful names.\"\r\n-Aragorn, The Fellowship of the Ring")

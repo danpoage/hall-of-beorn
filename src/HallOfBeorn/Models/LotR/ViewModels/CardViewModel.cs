@@ -9,21 +9,24 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 {
     public class CardViewModel
     {
-        public CardViewModel(LotRCard card)
-            : this(card, 0f, string.Empty)
+        public CardViewModel(LotRCard card, Func<string, IEnumerable<Category>> getPlayerCategories, Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, Func<string, IEnumerable<QuestCategory>> getQuestCategories)
+            : this(card, 0f, string.Empty, getPlayerCategories, getEncounterCategories, getQuestCategories)
         {
         }
 
-        public CardViewModel(CardScore score)
-            : this(score.Card, score.Score(), score.Description)
+        public CardViewModel(CardScore score, Func<string, IEnumerable<Category>> getPlayerCategories, Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, Func<string, IEnumerable<QuestCategory>> getQuestCategories)
+            : this(score.Card, score.Score(), score.Description, getPlayerCategories, getEncounterCategories, getQuestCategories)
         {
         }
 
-        public CardViewModel(LotRCard card, float score, string searchDescription)
+        public CardViewModel(LotRCard card, float score, string searchDescription, Func<string, IEnumerable<Category>> getPlayerCategories, Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, Func<string, IEnumerable<QuestCategory>> getQuestCategories)
         {
             _card = card;
             _score = score;
             _searchDescription = searchDescription;
+            this.getPlayerCategories = getPlayerCategories;
+            this.getEncounterCategories = getEncounterCategories;
+            this.getQuestCategories = getQuestCategories;
 
             foreach (var encounterSet in _card.IncludedEncounterSets)
             {
@@ -34,6 +37,10 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         private LotRCard _card;
         private float _score;
         private string _searchDescription;
+
+        private Func<string, IEnumerable<Category>> getPlayerCategories;
+        private Func<string, IEnumerable<EncounterCategory>> getEncounterCategories;
+        private Func<string, IEnumerable<QuestCategory>> getQuestCategories;
 
         private readonly List<CardEffect> _keywordEffects = new List<CardEffect>();
         private readonly List<CardEffect> _textEffects = new List<CardEffect>();
@@ -775,24 +782,24 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public bool HasCategories
         {
-            get { return _card.Categories.Count > 0; }
+            get { return getPlayerCategories(_card.Slug).Count() > 0; }
         }
 
         public bool HasEncounterCategories
         {
-            get { return _card.EncounterCategories.Count > 0; }
+            get { return getEncounterCategories(_card.Slug).Count() > 0; }
         }
 
         public bool HasQuestCategories
         {
-            get { return _card.QuestCategories.Count > 0; }
+            get { return getQuestCategories(_card.Slug).Count() > 0; }
         }
 
         public Dictionary<string, string> Categories()
         {
             var categoryMap = new Dictionary<string, string>();
 
-            foreach (var category in _card.Categories)
+            foreach (var category in getPlayerCategories(_card.Slug))
             {
                 var key = category.ToString().Replace('_', ' ');
                 var value = string.Format("/Cards/Search?Category={0}", category.ToString().Replace('_', '+'));
@@ -809,7 +816,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             var categoryMap = new Dictionary<string, string>();
 
-            foreach (var category in _card.EncounterCategories)
+            foreach (var category in getEncounterCategories(_card.Slug))
             {
                 var key = category.ToString().Replace('_', ' ');
                 var value = string.Format("/Cards/Search?EncounterCategory={0}", category.ToString().Replace('_', '+'));
@@ -826,7 +833,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             var categoryMap = new Dictionary<string, string>();
 
-            foreach (var category in _card.QuestCategories)
+            foreach (var category in getQuestCategories(_card.Slug))
             {
                 var key = category.ToString().Replace('_', ' ');
                 var value = string.Format("/Cards/Search?QuestCategory={0}", category.ToString().Replace('_', '+'));

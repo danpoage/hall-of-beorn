@@ -33,36 +33,31 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithInfo(232, 1, Artist.Denman_Rooke));
 
             Cards.Add(LotRCard.Hero("Bór the Faithful", "", Sphere.Spirit, 6, 2, 1, 1, 3)
-                .WithNormalizedTitle("Bor the Faithful")
                 .WithTraits("Easterling.")
                 .WithText("Action: Discard 1 Corruption for Bór the Faithful to ready him. He gets +2 Attack and +1 Willpower until the end of the round. (Limit once per round.)")
                 .WithFlavor("...and they followed Maedhros and Maglor, and cheated the hope of Morgoth, and were faithful.\r\n-The Silmarillion")
                 .WithInfo(253, 1, Artist.Chris_Quilliams));
-            addCard(LotRCard.Ally("Brethil Hound", string.Empty, Sphere.Spirit, 3, 1, 2, 1, 2)
-                .WithGeneric()
+            addCard(LotRCard.Ally("Brethil Hound", Sphere.Spirit, 3, 1, 2, 1, 2)
                 .WithTraits("Hound.", "House of Haleth.")
                 .WithText("Response: After Brethil Hound participates in an attack that destroys an enemy, choose a player. That player reduces his threat by 1. (Limit once per phase.)")
                 .WithInfo(254, 3, Artist.K_LeCrone));
-            Cards.Add(LotRCard.Ally("Algund", "", Sphere.Mastery, 0, 2, 1, 1, 3)
+            Cards.Add(LotRCard.Ally("Algund", Sphere.Mastery, 0, 2, 1, 1, 3)
                 .WithUnique()
                 .WithTraits("Gaurwaith.")
                 .WithKeywords("Ransom 3.")
                 .WithText("Response: When the discard pile is shuffled back into the encounter deck, deal X Corruption to Algund to choose X cards in the discard pile. These cards are not shuffled back into the encounter deck.")
                 .WithFlavor("...and others also came from that land: old Algund, the oldest of the fellowship, who had fled from the Nirnaeth...\r\n-The Children of Húrin")
                 .WithInfo(255, 3, Artist.J_Lantta));
-            Cards.Add(LotRCard.Ally("Fostered Son", "", Sphere.Leadership, 1, 1, 0, 0, 1)
-                .WithGeneric()
+            Cards.Add(LotRCard.Ally("Fostered Son", Sphere.Leadership, 1, 1, 0, 0, 1)
                 .WithTraits("Edain.", "Noble.")
                 .WithText("Action: Discard Fostered Son to reduce the cost of the next unique Edain character you play this phase by 2.")
                 .WithFlavor("Thus it was that the sons of Galdor were fostered in Brethil by Haldir their uncle, according to the custom of Men in that time...\r\n-The Silmarillion")
                 .WithInfo(256, 3, Artist.Andrew_Ryan));
-            Cards.Add(LotRCard.Ally("Elder of the Realm", "", Sphere.Lore, 3, 2, 1, 1, 2)
-                .WithGeneric()
+            Cards.Add(LotRCard.Ally("Elder of the Realm", Sphere.Lore, 3, 2, 1, 1, 2)
                 .WithTraits("Teleri.")
                 .WithText("Response: After a treachery is revealed, discard a card from hand (spend 1 Lore to discard the top card of your deck instead). If the first letter of the treachery card's title matches that of the discarded card, cancel the \"when revealed\" effects of the revealed card. (Limit once per game.)")
                 .WithInfo(256, 3, Artist.Unknown));
-            Cards.Add(LotRCard.Ally("Wolf-man", "", Sphere.Mastery, 0, 0, 3, 1, 2)
-                .WithGeneric()
+            Cards.Add(LotRCard.Ally("Wolf-man",  Sphere.Mastery, 0, 0, 3, 1, 2)
                 .WithTraits("Gaurwaith.")
                 .WithKeywords("Ransom 4.")
                 .WithText("Action: Exhaust Wolf-man to immediately declare him as an attacker (and resolve his attack) against an engaged enemy with one hit point remaining.")

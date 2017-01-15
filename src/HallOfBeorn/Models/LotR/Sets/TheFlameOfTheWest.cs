@@ -35,26 +35,25 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Response: After Beregond defends an attack and takes no damage, reduce the defending player's threat by 1. (Limit once per round.)")
                 .WithFlavor("\"The Lord does not permit those who wear the black and silver to leave their post for any cause...\"\r\n-The Return of the King")
                 .WithInfo(3, 1, Artist.Adam_Lane));
-            Cards.Add(LotRCard.Ally("Grimbold", "", Sphere.Tactics, 3, 2, 1, 1, 2)
+            Cards.Add(LotRCard.Ally("Grimbold", Sphere.Tactics, 3, 2, 1, 1, 2)
                 .WithUnique()
                 .WithTraits("Rohan.", "Warrior.")
                 .WithText("Combat Action: Discard Grimbold to choose an enemy engaged with a player. That enemy cannot attack that player this phase.")
                 .WithFlavor("Grimbold's men turned aside and passed round to a great gap in the wall further eastward.\r\n-The Return of the King")
                 .WithInfo(4, 3, Artist.Lucas_Durham));
-            Cards.Add(LotRCard.Ally("Prince Imrahil", "", Sphere.Spirit, 4, 2, 2, 2, 3)
+            Cards.Add(LotRCard.Ally("Prince Imrahil", Sphere.Spirit, 4, 2, 2, 2, 3)
                 .WithUnique()
                 .WithTraits("Gondor.", "Noble.")
                 .WithText("While there is a hero in your discard pile, Prince Imrahil loses the ally card type and gains the hero card type.")
                 .WithFlavor("\"We must gather all of the strength that we can find.\r\n-The Return of the King")
                 .WithInfo(5, 3, Artist.Gabriel_Verdon));
-            Cards.Add(LotRCard.Ally("Halbarad", "", Sphere.Leadership, 4, 2, 2, 2, 3)
+            Cards.Add(LotRCard.Ally("Halbarad", Sphere.Leadership, 4, 2, 2, 2, 3)
                 .WithUnique()
                 .WithTraits("Dúnedain.", "Ranger.")
                 .WithText("Reduce the cost to play Halbarad by 1 for each enemy engaged with you.\r\nEach enemy engaged with you gets +10 engagement cost.")
                 .WithFlavor("\"Halbarad Dunadan, Ranger of the North I am...\"\r\n-The Return of the King")
                 .WithInfo(6, 3, Artist.Adam_Lane));
-            Cards.Add(LotRCard.Ally("Ghân-buri-Ghân", "", Sphere.Lore, 2, Card.VALUE_X, 1, 1, 2)
-                .WithNormalizedTitle("Ghan-buri-Ghan")
+            Cards.Add(LotRCard.Ally("Ghân-buri-Ghân", Sphere.Lore, 2, Card.VALUE_X, 1, 1, 2)
                 .WithUnique()
                 .WithTraits("Wose.")
                 .WithText("X is the Threat of the active location.\r\nTravel Action: Discard Ghân-buri-Ghân to travel to a location without resolving its Travel effect.")
@@ -75,7 +74,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithFlavor("His golden shield was uncovered, and lo! it shone like an image of the Sun...\r\n-The Return of the King")
                 .WithInfo(10, 3, Artist.Unknown));
             Cards.Add(LotRCard.Attachment("Livery of the Tower", "", Sphere.Spirit, 0)
-                .WithGeneric()
                 .WithTraits("Item.", "Armor.")
                 .WithKeywords("Restricted.")
                 .WithText("Attach to a Gondor hero.\r\nResponse: Spend X resources from attached hero's pool to cancel X damage just dealt to attached hero.")
@@ -139,14 +137,12 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithShadow("Shadow: Either raise your your threat by 2, or return attacking enemy to the staging area after this attack.")
                 .WithInfo(21, 3, Artist.Stephen_Najarian));
             Cards.Add(LotRCard.Enemy("Dead Man of Dunharrow", string.Empty, setThePassingOfTheGreyCompany, 30, 2, 2, 1, 3)
-                .WithGeneric()
                 .WithTraits("Undead.", "Oathbreaker.")
                 .WithKeywords("Phantom.")
                 .WithText("Forced: After Dead Man of Dunharrow engages you, either attach a set aside Overcome by Fear to your threat dial, or raise your threat by 2.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack.")
                 .WithInfo(22, 4, Artist.Anthony_Devine));
             Cards.Add(LotRCard.Enemy("Faithless Dead", string.Empty, setThePassingOfTheGreyCompany, 35, 2, 3, 1, 4)
-                .WithGeneric()
                 .WithTraits("Undead.", "Oathbreaker.")
                 .WithKeywords("Peril.", "Phantom.")
                 .WithText("When Revealed: Either raise each player's threat by 2, or reveal an additional encounter card.")
@@ -154,14 +150,12 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithEasyModeQuantity(2)
                 .WithInfo(23, 3, Artist.Chris_Grun));
             Cards.Add(LotRCard.Enemy("Ghosts of Men", string.Empty, setThePassingOfTheGreyCompany, 40, 3, 3, 1, 5)
-                .WithGeneric()
                 .WithTraits("Undead.", "Oathbreaker.")
                 .WithKeywords("Peril.", "Phantom.")
                 .WithText("When Revealed: Either attach a set aside Overcome by Fear to your threat dial, or Ghosts of Men makes an immediate attack against you.")
                 .WithFlavor("...a rumour came after him like the shadow-sound of many feet. -The Return of the King")
                 .WithInfo(24, 2, Artist.Jose_Vega));
             Cards.Add(LotRCard.Enemy("Shadow Host", string.Empty, setThePassingOfTheGreyCompany, 45, 4, 4, 2, 6)
-                .WithGeneric()
                 .WithTraits("Undead.", "Oathbreaker.")
                 .WithKeywords("Phantom.")
                 .WithText("Forced: When Shadow Host engages you, either attach a set aside Overcome by Fear to your threat dial, or it makes an immediate attack.")

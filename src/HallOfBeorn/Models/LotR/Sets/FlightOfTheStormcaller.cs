@@ -29,12 +29,12 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithFlavor("\"The last Steward of Gondor begs leave to surrender his office.\" And he held out a white rod.\r\n-The Return of the King")
                 .WithInfo(2, 3, Artist.Unknown));
             Cards.Add(LotRCard.Attachment("In Service of the Steward", "", Sphere.Leadership, 1)
-                .WithGeneric()
                 .WithTraits("Title.")
                 .WithText("Attach to a character.\r\nAttached character gains the Gondor trait.")
                 .WithFlavor("But be it know that I have sworn him to my service...\r\n-The Return of the King")
                 .WithInfo(3, 3, Artist.Jason_Cheeseman_Meyer));
-            Cards.Add(LotRCard.Ally("Azain Silverbeard", "", Sphere.Tactics, 3, 0, 3, 2, 2)
+            Cards.Add(LotRCard.Ally("Azain Silverbeard", Sphere.Tactics, 3, 0, 3, 2, 2)
+                .WithUnique()
                 .WithTraits("Dwarf.", "Warrior.")
                 .WithText("Response: After Azain Silverbeard participates in an attack that destroys an enemy, spend 1 Tactics resource to deal 2 damage to another enemy that shares a Trait with the destroyed enemy. Any player may trigger this response.")
                 .WithInfo(4, 3, Artist.Unknown));
@@ -42,7 +42,8 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Response: After a Warrior character is destroyed while defending against an enemy attack, deal damage to the attacking enemy equal to that character's printed Attack.")
                 .WithFlavor("In a grave along under the shadow of the Hornburg lay Háma, captain of the King's guard. He fell before the Gate.\r\n-The Two Towers")
                 .WithInfo(5, 3, Artist.Arden_Beckwith));
-            Cards.Add(LotRCard.Ally("Glorfindel", "", Sphere.Spirit, 5, 3, 3, 1, 4)
+            Cards.Add(LotRCard.Ally("Glorfindel", Sphere.Spirit, 5, 3, 3, 1, 4)
+                .WithUnique()
                 .WithTraits("Noldor.", "Noble.", "Warrior.")
                 .WithText("Glorfindel can be played from your discard pile.\r\nAction: Discard a card from your hand to ready Glorfindel. (Limit once per phase.)")
                 .WithFlavor("\"Glorfindel is an Elf-lord of a house of princes.\"\r\n-Gandalf, The Fellowship of the Ring")
@@ -51,8 +52,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Response: When a shadow card increases an enemy's Attack by any amount, increase the defending character's Defense by 3 for that attack. Then, the players as a group may spend 2 Tactics resources to ready the defending character and give it +3 Attack for its next attack this phase.")
                 .WithFlavor("...the tides of fate had turned against them and their doom was at hand.\r\n-The Return of the King")
                 .WithInfo(7, 3, Artist.Sam_Lamont));
-            Cards.Add(LotRCard.Ally("Imladris Caregiver", "", Sphere.Lore, 2, 1, 0, 1, 2)
-                .WithGeneric()
+            Cards.Add(LotRCard.Ally("Imladris Caregiver", Sphere.Lore, 2, 1, 0, 1, 2)
                 .WithTraits("Noldor.", "Healer.")
                 .WithText("Action: Discard a card from your hand to heal 1 damage on any characer. (Limit twice per round).")
                 .WithFlavor("\"You are in Rivendell, and you need not worry about anything for the present.\"\r\n-Gandalf, The Fellowship of the Ring")
@@ -60,8 +60,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(LotRCard.Event("Heed the Dream", "", Sphere.Lore, 1)
                 .WithText("Action: Choose a player. That player searches the top 5 cards of his deck for a card, adds it to his hand, and shuffles his deck. Then, players as a group may spend 3 Leadership resources to have that player search his deck for another card, add it to his hand, and shuffle his deck.")
                 .WithInfo(9, 3, Artist.Joshua_Cairos));
-            Cards.Add(LotRCard.Ally("Guardian of Rivendell", "", Sphere.Neutral, 3, 1, 2, 3, 3)
-                .WithGeneric()
+            Cards.Add(LotRCard.Ally("Guardian of Rivendell", Sphere.Neutral, 3, 1, 2, 3, 3)
                 .WithTraits("Noldor.", "Warrior.")
                 .WithText("As an additional cost to play ~Guardian of Rivendell from your hand, you must discard 2 cards from your hand.")
                 .WithFlavor("\"Indeed there is a power in Rivendell to withstand the might of Mordor, for a while.\"\r\n-Gandalf, The Fellowship of the Ring")
@@ -126,7 +125,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("Cannot have attachments.\r\nWhen the Stormcaller advances to the next quest stage, return it to the Stormcaller's area.\r\nIf the Stormcaller leaves play, the players win the game.")
                 .WithInfo(19, 1, Artist.Davis_Engel));
             Cards.Add(LotRCard.ShipEnemy("Sahír's Escort", setName, 46, 2, 4, 3, 6)
-                .WithNormalizedTitle("Sahir's Escort")
                 .WithTraits("Corsair.", "Ship.")
                 .WithKeywords("Boarding 1.")
                 .WithText("Cannot have attachments.\r\nWhile Sahír's Escort is in the Stormcaller’s area, it contributes its Threat to the amount of progress the Stormcaller places on its quest stage each round.\r\nWhen Revealed: Add Sahír’s Escort to the Stormcaller’s area, instead of the players’ staging area.")

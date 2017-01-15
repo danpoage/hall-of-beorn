@@ -11,6 +11,13 @@ namespace HallOfBeorn.Services.LotR
 {
     public class AdvancedSearchService
     {
+        private readonly CategoryService categoryService;
+
+        public AdvancedSearchService(CategoryService categoryService)
+        {
+            this.categoryService = categoryService;
+        }
+
         private Func<CardScore, bool> NegateFilter(Func<CardScore, bool> predicate)
         {
             return (score) => { return !predicate(score); };
@@ -240,7 +247,7 @@ namespace HallOfBeorn.Services.LotR
                     predicate = (score) => { return enums.Any(y => y.ToEnum<Sphere>() == score.Card.Sphere); };
                     break;
                 case "category":
-                    predicate = (score) => { return enums.Any(y => score.Card.Categories.Any(z => y.ToEnum<Category>() == z)); };
+                    predicate = (score) => { return enums.Any(y => categoryService.HasPlayerCategory(score.Card, y.ToEnum<Category>())); };
                     break;
                 default:
                     break;

@@ -21,14 +21,14 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithFlavor("...the Southrons were bold men and grim...\r\n-The Return of the King")
                 .WithInfo(1, 1, Artist.Unknown));
 
-            addCard(LotRCard.Ally("Jubayr", string.Empty, Sphere.Spirit, 5, 1, 2, 3, 3)
+            addCard(LotRCard.Ally("Jubayr", Sphere.Spirit, 5, 1, 2, 3, 3)
                 .WithUnique()
                 .WithTraits("Harad.", "Warrior.")
                 .WithKeywords("Sentinel.")
                 .WithText("Response: After Jubayr exhausts to defend an attack, discard 1 facedown shadow card from a non-unique enemy. (Limit once per phase.)")
                 .WithInfo(6, 3, Artist.Colin_Boyer));
 
-            addCard(LotRCard.Ally("Firyal", string.Empty, Sphere.Lore, 5, 3, 1, 2, 3)
+            addCard(LotRCard.Ally("Firyal", Sphere.Lore, 5, 3, 1, 2, 3)
                 .WithUnique()
                 .WithTraits("Harad.", "Scout.")
                 .WithText("Response: After Firyal commits to the quest, look at the top card of the encounter deck. Then, you may discard the looked at card.")

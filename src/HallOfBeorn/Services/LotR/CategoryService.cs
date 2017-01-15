@@ -23,6 +23,10 @@ namespace HallOfBeorn.Services.LotR
         private readonly Dictionary<string, EncounterCategory> encounterCategories = new Dictionary<string, EncounterCategory>();
         private readonly Dictionary<string, QuestCategory> questCategories = new Dictionary<string, QuestCategory>();
 
+        private readonly Dictionary<string, List<Category>> playerCategoriesBySlug = new Dictionary<string,List<Category>>();
+        private readonly Dictionary<string, List<EncounterCategory>> encounterCategoriesBySlug = new Dictionary<string,List<EncounterCategory>>();
+        private readonly Dictionary<string, List<QuestCategory>> questCategoriesBySlug = new Dictionary<string, List<QuestCategory>>();
+
         private bool IsCategorizable(LotRCard card)
         {
             if (string.IsNullOrEmpty(card.Text) && card.Keywords.Count() == 0)
@@ -259,7 +263,10 @@ namespace HallOfBeorn.Services.LotR
                     if (category == EncounterCategory.None)
                         continue;
 
-                    card.EncounterCategories.Add(category);
+                    if (!encounterCategoriesBySlug.ContainsKey(card.Slug)) {
+                        encounterCategoriesBySlug[card.Slug] = new List<EncounterCategory>();
+                    }
+                    encounterCategoriesBySlug[card.Slug].Add(category);
 
                     var categoryKey = category.ToString();
                     if (!encounterCategories.ContainsKey(categoryKey))
@@ -297,7 +304,10 @@ namespace HallOfBeorn.Services.LotR
                     if (category == QuestCategory.None)
                         continue;
 
-                    card.QuestCategories.Add(category);
+                    if (!questCategoriesBySlug.ContainsKey(card.Slug)) {
+                        questCategoriesBySlug[card.Slug] = new List<QuestCategory>();
+                    }
+                    questCategoriesBySlug[card.Slug].Add(category);
 
                     var categoryKey = category.ToString();
                     if (!questCategories.ContainsKey(categoryKey))
@@ -358,7 +368,10 @@ namespace HallOfBeorn.Services.LotR
                     if (category == Category.None)
                         continue;
 
-                    card.Categories.Add(category);
+                    if (!playerCategoriesBySlug.ContainsKey(card.Slug)) {
+                        playerCategoriesBySlug[card.Slug] = new List<Category>();
+                    }
+                    playerCategoriesBySlug[card.Slug].Add(category);
 
                     var categoryKey = category.ToString();
                     if (!categories.ContainsKey(categoryKey))
@@ -371,17 +384,17 @@ namespace HallOfBeorn.Services.LotR
 
         public bool HasPlayerCategory(LotRCard card, Category category)
         {
-            return false;
+            return playerCategoriesBySlug.ContainsKey(card.Slug) && playerCategoriesBySlug[card.Slug].Any(x => x == category);
         }
 
         public bool HasEncounterCategory(LotRCard card, EncounterCategory category)
         {
-            return false;
+            return encounterCategoriesBySlug.ContainsKey(card.Slug) && encounterCategoriesBySlug[card.Slug].Any(x => x == category);
         }
 
         public bool HasQuestCategory(LotRCard card, QuestCategory category)
         {
-            return false;
+            return questCategoriesBySlug.ContainsKey(card.Slug) && questCategoriesBySlug[card.Slug].Any(x => x == category);
         }
 
         public IEnumerable<string> CategoryNames()
@@ -397,6 +410,21 @@ namespace HallOfBeorn.Services.LotR
         public IEnumerable<string> QuestCategoryNames()
         {
             return questCategories.Values.ToList().Select(x => x.ToString().Replace('_', ' ')).OrderBy(x => x);
+        }
+
+        public IEnumerable<Category> PlayerCategories(string slug)
+        {
+            return playerCategoriesBySlug.ContainsKey(slug) ? playerCategoriesBySlug[slug] : Enumerable.Empty<Category>();
+        }
+
+        public IEnumerable<EncounterCategory> EncounterCategories(string slug)
+        {
+            return encounterCategoriesBySlug.ContainsKey(slug) ? encounterCategoriesBySlug[slug] : Enumerable.Empty<EncounterCategory>();
+        }
+
+        public IEnumerable<QuestCategory> QuestCategories(string slug)
+        {
+            return questCategoriesBySlug.ContainsKey(slug) ? questCategoriesBySlug[slug] : Enumerable.Empty<QuestCategory>();
         }
     }
 }
