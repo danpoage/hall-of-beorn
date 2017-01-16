@@ -23,7 +23,7 @@ namespace HallOfBeorn.Models
         private readonly List<string> keywords = new List<string>();
         private readonly List<string> normalizedKeywords = new List<string>();
 
-        protected abstract string getSetAbbreviation();
+        protected INamed NamedProduct { get; set; }
 
         protected virtual string getSlug()
         {
@@ -39,7 +39,7 @@ namespace HallOfBeorn.Models
                 parts.Add(SlugSuffix);
             }
 
-            parts.Add(getSetAbbreviation());
+            parts.Add(NamedProduct.Abbreviation.ToUrlSafeString());
 
             return string.Join("-", parts);
         }

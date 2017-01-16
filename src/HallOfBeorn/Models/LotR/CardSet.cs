@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR
 {
-    public abstract class CardSet
+    public abstract class CardSet : INamed
     {
         protected CardSet()
         {
@@ -72,34 +72,6 @@ namespace HallOfBeorn.Models.LotR
         }
 
         private static List<CardSet> all = new List<CardSet>();
-
-        /*
-        private static void AddCardSlugsByType(CardSet cardSet, Func<LotRCard, bool> typePredicate)
-        {
-            var slugNum = 97; //a
-            var shortSlug = string.Empty;
-            var octgnSlug = string.Empty;
-
-            foreach (var card in cardSet.Cards.Where(typePredicate).OrderBy(y => y.CardNumber))
-            {
-                shortSlug = ((char)slugNum).ToString();
-                octgnSlug = cardSet.ShortSlug + shortSlug;
-                card.WithShortSlug(shortSlug);
-                card.WithOctgnSlug(octgnSlug);
-                slugNum++;
-            }
-        }*/
-
-        /*
-        private static void AddCardShortSlugs(CardSet cardSet)
-        {
-            AddCardSlugsByType(cardSet, (c) => { return c.CardType == CardType.Hero; });
-            AddCardSlugsByType(cardSet, (c) => { return c.CardType == CardType.Ally; });
-            AddCardSlugsByType(cardSet, (c) => { return c.CardType == CardType.Attachment; });
-            AddCardSlugsByType(cardSet, (c) => { return c.CardType == CardType.Event; });
-            AddCardSlugsByType(cardSet, (c) => { return c.CardType == CardType.Player_Side_Quest; });
-        }
-        */
 
         private static void Add(CardSet cardSet)
         {

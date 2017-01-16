@@ -20,11 +20,6 @@ namespace HallOfBeorn.Models.LotR
             AlternateEncounterSet = string.Empty;
         }
 
-        protected override string getSetAbbreviation()
-        {
-            return CardSet.Abbreviation.ToUrlSafeString();
-        }
-
         protected override string getSlug()
         {
             var title = !string.IsNullOrEmpty(NormalizedTitle) ? NormalizedTitle.ToUrlSafeString() : Title.ToUrlSafeString();
@@ -70,7 +65,14 @@ namespace HallOfBeorn.Models.LotR
         public uint StageNumber { get; set; }
         public char StageLetter { get; private set; }
 
-        public CardSet CardSet { get; set; }
+        private CardSet cardSet;
+        public CardSet CardSet {
+            get { return cardSet; } 
+            set {
+                cardSet = value;
+                NamedProduct = value;
+            }
+        }
 
         public CardType CardType { get; set; }
         public CardSubtype CardSubtype { get; set; }

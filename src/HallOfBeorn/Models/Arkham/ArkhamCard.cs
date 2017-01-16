@@ -20,7 +20,14 @@ namespace HallOfBeorn.Models.Arkham
         private readonly List<SkillIcon> skillTestIcons = new List<SkillIcon>();
         private readonly List<ConnectionSymbol> connections = new List<ConnectionSymbol>();
 
-        public ArkhamProduct Product { get; set; }
+        private ArkhamProduct product;
+        public ArkhamProduct Product { 
+            get { return product; }
+            set {
+                product = value;
+                NamedProduct = value;
+            }
+        }
         public ArkhamDeckType DeckType { get; set; }
         public ArkhamCardType CardType { get; set; }
         public ArkhamCardType? BackCardType { get; set; }
@@ -82,11 +89,6 @@ namespace HallOfBeorn.Models.Arkham
         protected void addSkillTestIcons(IEnumerable<SkillIcon> skillIcons)
         {
             this.skillTestIcons.AddRange(skillIcons);
-        }
-
-        protected override string getSetAbbreviation()
-        {
-            return Product.Abbreviation.ToUrlSafeString();
         }
 
         protected override string getSlug()

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Arkham
 {
-    public class ArkhamProduct
+    public class ArkhamProduct : INamed
     {
         public ArkhamProduct(string name, string abbreviation, string productCode, ushort productNumber, DateTime releaseDate)
         {
