@@ -20,17 +20,17 @@ namespace HallOfBeorn.Controllers
     {
         public LotRController()
         {
-            cardRepository = (CardRepository)System.Web.HttpContext.Current.Application[Extensions.CardRepositoryKey];
-            productRepository = (ProductRepository)System.Web.HttpContext.Current.Application[Extensions.ProductRepositoryKey];
-            searchService = (SearchService)System.Web.HttpContext.Current.Application[Extensions.SearchServiceKey];
-            categoryService = (CategoryService)System.Web.HttpContext.Current.Application[Extensions.CategoryServiceKey];
-            noteService = (NoteService)System.Web.HttpContext.Current.Application[Extensions.NoteServiceKey];
-            scenarioService = (ScenarioService)System.Web.HttpContext.Current.Application[Extensions.ScenarioServiceKey];
-            statService = (StatService)System.Web.HttpContext.Current.Application[Extensions.StatServiceKey];
-            octgnService = (OctgnService)System.Web.HttpContext.Current.Application[Extensions.OctgnServiceKey];
-            ringsDbService = (RingsDbService)System.Web.HttpContext.Current.Application[Extensions.RingsDbKey];
-            templateService = (TemplateService)System.Web.HttpContext.Current.Application[Extensions.TemplateServiceKey];
-            tagService = (TagService)System.Web.HttpContext.Current.Application[Extensions.TagServiceKey];
+            cardRepository = (CardRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.CardRepository];
+            productRepository = (ProductRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.ProductRepository];
+            searchService = (SearchService)System.Web.HttpContext.Current.Application[LotRServiceNames.SearchService];
+            categoryService = (CategoryService)System.Web.HttpContext.Current.Application[LotRServiceNames.CategoryService];
+            noteService = (NoteService)System.Web.HttpContext.Current.Application[LotRServiceNames.NoteService];
+            scenarioService = (ScenarioService)System.Web.HttpContext.Current.Application[LotRServiceNames.ScenarioService];
+            statService = (StatService)System.Web.HttpContext.Current.Application[LotRServiceNames.StatService];
+            octgnService = (OctgnService)System.Web.HttpContext.Current.Application[LotRServiceNames.OctgnService];
+            ringsDbService = (RingsDbService)System.Web.HttpContext.Current.Application[LotRServiceNames.RingsDbService];
+            templateService = (TemplateService)System.Web.HttpContext.Current.Application[LotRServiceNames.TemplateService];
+            tagService = (TagService)System.Web.HttpContext.Current.Application[LotRServiceNames.TagService];
         }
 
         private readonly SearchService searchService;

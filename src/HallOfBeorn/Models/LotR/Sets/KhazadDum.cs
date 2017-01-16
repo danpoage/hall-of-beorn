@@ -812,14 +812,11 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "Search for an Exit",
-                SlugIncludesOppositeTitle = true,
                 StageNumber = 2,
                 OppositeTitle = "Heading Down",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9056",
                 CardType = CardType.Quest,
-                
                 EncounterSet = "Flight from Moria",
                 Quantity = 1,
                 Text = "While Search for an Exit is the active quest card, only flip it to side 2B at the beginning of the staging step.",
@@ -831,16 +828,13 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Magali_Villeneuve,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
-            });
+            }.WithSuffix("Heading Down"));
             Cards.Add(new LotRCard() {
-                
                 Title = "Search for an Exit",
-                SlugIncludesOppositeTitle = true,
                 StageNumber = 2,
                 OppositeTitle = "Heading Up",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9058",
                 CardType = CardType.Quest,
-                
                 EncounterSet = "Flight from Moria",
                 Quantity = 1,
                 Text = "While Search for an Exit is the active quest card, only flip it to side 2B at the beginning of the staging step.",
@@ -852,16 +846,13 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Magali_Villeneuve,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
-            });
+            }.WithSuffix("Heading Up"));
             Cards.Add(new LotRCard() {
-                
                 Title = "Search for an Exit",
-                SlugIncludesOppositeTitle = true,
                 StageNumber = 2,
                 OppositeTitle = "A Wrong Turn",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9060",
                 CardType = CardType.Quest,
-                
                 EncounterSet = "Flight from Moria",
                 Quantity = 1,
                 Text = "While Search for an Exit is the active quest card, only flip it to side 2B at the beginning of the staging step.",
@@ -873,16 +864,13 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.David_Lecossu,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
-            });
-            Cards.Add(new LotRCard() {
-                
+            }.WithSuffix("A Wrong Turn"));
+            Cards.Add(new LotRCard() {    
                 Title = "Search for an Exit",
-                SlugIncludesOppositeTitle = true,
                 StageNumber = 2,
                 OppositeTitle = "Narrow Paths",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9062",
                 CardType = CardType.Quest,
-                
                 EncounterSet = "Flight from Moria",
                 Quantity = 1,
                 Text = "While Search for an Exit is the active quest card, only flip it to side 2B at the beginning of the staging step.",
@@ -894,16 +882,13 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Ilich_Henriquez,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
-            });
+            }.WithSuffix("Narrow Paths"));
             Cards.Add(new LotRCard() {
-                
                 Title = "Search for an Exit",
-                SlugIncludesOppositeTitle = true,
                 StageNumber = 2,
                 OppositeTitle = "Hasty Council",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9064",
                 CardType = CardType.Quest,
-                
                 EncounterSet = "Flight from Moria",
                 Quantity = 1,
                 Text = "While Search for an Exit is the active quest card, only flip it to side 2B at the beginning of the staging step.",
@@ -914,16 +899,13 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Stacey_Diana_Clark,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
-            });
+            }.WithSuffix("Hasty Council"));
             Cards.Add(new LotRCard() {
-                
                 Title = "Search for an Exit",
-                SlugIncludesOppositeTitle = true,
                 StageNumber = 2,
                 OppositeTitle = "Blocked By Shadow",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9066",
                 CardType = CardType.Quest,
-                
                 EncounterSet = "Flight from Moria",
                 Quantity = 1,
                 Text = "While Search for an Exit is the active quest card, only flip it to side 2B at the beginning of the staging step.",
@@ -939,17 +921,14 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Magali_Villeneuve,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
-            });
+            }.WithSuffix("Blocked By Shadow"));
             addCard(new LotRCard()
             {
-                
                 Title = "Search for an Exit",
-                SlugIncludesOppositeTitle = true,
                 StageNumber = 2,
                 OppositeTitle = "Escape from Darkness",
                 Id = "51223bd0-ffd1-11df-a976-0801207c9068",
                 CardType = CardType.Quest,
-                
                 EncounterSet = "Flight from Moria",
                 Quantity = 1,
                 Text = "While Search for an Exit is the active quest card, only flip it to side 2B at the beginning of the staging step.",
@@ -960,7 +939,7 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Magali_Villeneuve,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
-            });
+            }.WithSuffix("Escape from Darkness"));
             Cards.Add(new LotRCard() {
                 Title = "Search for the Chamber",
                 StageNumber = 1,

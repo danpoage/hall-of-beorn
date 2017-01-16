@@ -397,7 +397,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithOppositeFlavor("Then Aragorn said: \"The hour is come at last. Now I go to Pelargir upon Anduin, and ye shall come after me. And when all this land is clean of the servants of Sauron, I will hold the oath fulfilled, and ye shall have peace and depart for ever. For I am Elessar, Isildur's heir of Gondor.\" -The Return of the King")
                 .WithInfo(66, 1, Artist.Yoann_Boissonnet));
             Cards.Add(LotRCard.Enemy("Army of the Dead", string.Empty, setThePassingOfTheGreyCompany, 50, Card.VALUE_X, 6, 2, 8)
-                .WithSlugIncludesType()
+                .WithSuffix("Enemy")
                 .WithUnique()
                 .WithTraits("Undead.", "Oathbreaker.")
                 .WithKeywords("Phantom.")
@@ -405,8 +405,8 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithVictoryPoints(6)
                 .WithInfo(67, 1, Artist.Uwe_Jarling));
             Cards.Add(LotRCard.ObjectiveAlly("Army of the Dead", string.Empty, setThePassingOfTheGreyCompany, 4, 6, 2, 8)
+                .WithSuffix("Objective-Ally")
                 .WithBoon()
-                .WithSlugIncludesType()
                 .WithUnique()
                 .WithTraits("Undead.")
                 .WithText("Immune to player card effects. The first player gains control of Army of the Dead.\r\nSetup: The first player takes control of Army of the Dead.\r\nIf Army of the Dead leaves play, remove it from the game.")

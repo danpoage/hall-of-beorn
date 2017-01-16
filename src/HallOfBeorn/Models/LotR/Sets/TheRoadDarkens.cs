@@ -344,13 +344,9 @@ Response: After attached hero exhausts to defend an attack, discard the top card
             {
                 Title = "The Ring Goes South",
                 CardType = Models.LotR.CardType.Campaign,
-                SlugIncludesType = true,
                 Id = "DFF44707-3468-4E8F-AB49-DF4E5E6D93FC",
                 OppositeTitle = "The Lord of the Rings Part 4",
-                Text = 
-@"You are playing in Campaign Mode.
-
-Setup: Each player may change hero cards he controls without incurring the +1 threat penalty. The players have earned the boon cards: Sting, Mithril Shirt, Glamdring, and Andúril. Each player chooses one and adds it to his hand. If any of those boon cards remain unchosen, shuffle them into the first player's deck.",
+                Text = "You are playing in Campaign Mode.\r\nSetup: Each player may change hero cards he controls without incurring the +1 threat penalty. The players have earned the boon cards: Sting, Mithril Shirt, Glamdring, and Andúril. Each player chooses one and adds it to his hand. If any of those boon cards remain unchosen, shuffle them into the first player's deck.",
                 FlavorText = "\"I think that this task is appointed for you, Frodo; and that if you do not find a way, no one will.\" -Elrond, The Fellowship of the Ring",
                 OppositeText = "Resolution: If Lust for the Ring is attached to a hero, the players have earned that burden.",
                 OppositeFlavorText = "They were just in time. Sam and Frodo were only a few steps up, and Gandalf had just begun to climb, when the groping tentacles writhed across the narrow shore and fingered the cliff-wall and the doors. One came wriggling over the threshold, glistening in the starlight. Gandalf turned and paused. If he was considering what word would close the gate again from within, there was no need. Many coiling arms seized the doors on either side, and with horrible strength, swung them round. With a shattering echo they slammed, and all light was lost. -The Fellowship of the Ring",
@@ -358,7 +354,7 @@ Setup: Each player may change hero cards he controls without incurring the +1 th
                 CardNumber = 19,
                 Quantity = 1,
                 Artist = Artist.Ignacio_Bazan_Lazcano
-            });
+            }.WithSuffix("Campaign"));
             Cards.Add(new LotRCard()
             {
                 Title = "The Council of Elrond",
@@ -701,7 +697,6 @@ Forced: When ~Hills of Hollin is explored, each player raises his threat by 1 fo
             {
                 Title = "Journey in the Dark",
                 CardType = Models.LotR.CardType.Campaign,
-                SlugIncludesType = true,
                 Id = "952913FB-ACC2-4A0C-A802-D841D9F18198",
                 OppositeTitle = "The Lord of the Rings Part 5",
                 Text = "You are playing in Campaign Mode.\r\nSetup: Shuffle the burder treachery cards Pursued by the Enemy and Shadow of Fear, into the encounter deck. Add the burden objective cards Grievous Wound and Overcome by Grief to the staging area.",
@@ -712,7 +707,7 @@ Forced: When ~Hills of Hollin is explored, each player raises his threat by 1 fo
                 CardNumber = 39,
                 Quantity = 1,
                 Artist = Artist.Juan_Carlos_Barquet
-            });
+            }.WithSuffix("Campaign"));
             Cards.Add(new LotRCard()
             {
                 Title = "The Long Dark of Moria",
@@ -1052,7 +1047,6 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
             {
                 Title = "Breaking of the Fellowship",
                 CardType = Models.LotR.CardType.Campaign,
-                SlugIncludesType = true,
                 Id = "EC6105D0-33EE-436B-83CC-A7DF744E68CC",
                 OppositeTitle = "The Lord of the Rings Part 6",
                 Text = "You are playing in Campaign Mode.\r\nSetup: Starting with the first player, each player chooses 1 of the following boon cards: Phial of Galadriel, Three Golden Hairs, Lórien Rope, or Leaf-wrapped Lembas, and attaches it to a hero he controls. The chosen boon cards have been earned by the players. Shuffle Followed by Night and Ill Fate into the encounter deck.",
@@ -1063,7 +1057,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
                 CardNumber = 60,
                 Quantity = 1,
                 Artist = Artist.Katy_Grierson
-            });
+            }.WithSuffix("Campaign"));
             Cards.Add(new LotRCard()
             {
                 Title = "The Great River",

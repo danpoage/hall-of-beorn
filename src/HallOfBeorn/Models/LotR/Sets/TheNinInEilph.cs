@@ -196,7 +196,6 @@ namespace HallOfBeorn.Models.LotR.Sets
             {
                 Title = "Through the Marsh",
                 OppositeTitle = "No End in Sight",
-                SlugIncludesOppositeTitle = true,
                 Id = "694301EA-DB10-426F-9534-7187BE76CBEE",
                 CardType = CardType.Quest,
                 StageNumber = 2,
@@ -210,12 +209,11 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Quantity = 1,
                 Artist = Artist.Mariusz_Gandzel,
                 SecondArtist = Artist.Titus_Lunter
-            });
+            }.WithSuffix("No End in Sight"));
             Cards.Add(new LotRCard()
             {
                 Title = "Through the Marsh",
                 OppositeTitle = "A Weary Passage",
-                SlugIncludesOppositeTitle = true,
                 Id = "DF7328BE-5545-4A0E-9252-B82E5CF578C9",
                 CardType = CardType.Quest,
                 StageNumber = 2,
@@ -229,12 +227,11 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Quantity = 1,
                 Artist = Artist.Mariusz_Gandzel,
                 SecondArtist = Artist.Adam_Lane
-            });
+            }.WithSuffix("A Weary Passage"));
             Cards.Add(new LotRCard()
             {
                 Title = "Through the Marsh",
                 OppositeTitle = "A Forgotten Land",
-                SlugIncludesOppositeTitle = true,
                 Id = "713D0422-C8CD-42A7-90A4-17FE35E91345",
                 CardType = CardType.Quest,
                 StageNumber = 2,
@@ -248,12 +245,11 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Quantity = 1,
                 Artist = Artist.Mariusz_Gandzel,
                 SecondArtist = Artist.Adam_Lane
-            });
+            }.WithSuffix("A Forgotten Land"));
             Cards.Add(new LotRCard()
             {
                 Title = "Lost in the Swanfleet",
                 OppositeTitle = "Impassable Marshland",
-                SlugIncludesOppositeTitle = true,
                 Id = "50DB49B4-DC96-44CE-9AC4-5656EAAA05BB",
                 CardType = CardType.Quest,
                 StageNumber = 3,
@@ -268,12 +264,11 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Quantity = 1,
                 Artist = Artist.Silver_Saaremael,
                 SecondArtist = Artist.Ilich_Henriquez
-            });
+            }.WithSuffix("Impassable Marshland"));
             Cards.Add(new LotRCard()
             {
                 Title = "Lost in the Swanfleet",
                 OppositeTitle = "A Treacherous Swamp",
-                SlugIncludesOppositeTitle = true,
                 Id = "5520B64E-D343-4D82-AA67-255A53498A4E",
                 CardType = CardType.Quest,
                 StageNumber = 3,
@@ -288,12 +283,11 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Quantity = 1,
                 Artist = Artist.Silver_Saaremael,
                 SecondArtist = Artist.Matt_Bradbury
-            });
+            }.WithSuffix("A Treacherous Swamp"));
             Cards.Add(new LotRCard()
             {
                 Title = "Lost in the Swanfleet",
                 OppositeTitle = "Creatures of a Forgotten Age",
-                SlugIncludesOppositeTitle = true,
                 Id = "75C13731-B19C-4721-AA05-671FE5BAE81C",
                 CardType = CardType.Quest,
                 StageNumber = 3,
@@ -308,7 +302,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Quantity = 1,
                 Artist = Artist.Silver_Saaremael,
                 SecondArtist = Artist.Silver_Saaremael
-            });
+            }.WithSuffix("Creatures of a Forgotten Age"));
             Cards.Add(new LotRCard()
             {
                 Title = "Out of the Swamp",

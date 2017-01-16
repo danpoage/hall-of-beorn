@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR
     {
         public ScenarioCardViewModel(ScenarioCard scenarioCard)
         {
-            Title = scenarioCard.Card.SlugIncludesType ? string.Format("{0} ({1})", scenarioCard.Title, scenarioCard.Card.CardType.ToString().Replace('_', ' ')) : scenarioCard.Title;
+            Title = !string.IsNullOrEmpty(scenarioCard.Card.SlugSuffix) ? string.Format("{0} ({1})", scenarioCard.Title, scenarioCard.Card.SlugSuffix) : scenarioCard.Title;
             EncounterSet = scenarioCard.EncounterSet;
             EncounterSetLink = string.Format("/Cards/Search?EncounterSet={0}", scenarioCard.EncounterSet.Replace(" ", "%20"));
             EncounterSetImage = scenarioCard.EncounterSetImage;

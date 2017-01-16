@@ -31,10 +31,8 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Sandara_Tang
             }.WithTraits("Mount."));
             Cards.Add(new LotRCard() {
-                
                 Title = "Below the Mines",
                 StageNumber = 4,
-                SlugIncludesOppositeTitle = true,
                 OppositeTitle = "Sheltered Rocks",
                 Id = "51223bd0-ffd1-11df-a976-0801212c9002",
                 CardType = CardType.Quest,
@@ -47,12 +45,10 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.David_Lecossu,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.HazardsOfThePit, EncounterSet.TwistsAndTurns }
-            });
+            }.WithSuffix("Sheltered Rocks"));
             Cards.Add(new LotRCard() {
-                
                 Title = "Below the Mines",
                 StageNumber = 4,
-                SlugIncludesOppositeTitle = true,
                 OppositeTitle = "The Endless Caves",
                 Id = "51223bd0-ffd1-11df-a976-0801212c9004",
                 CardType = CardType.Quest,
@@ -65,12 +61,10 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Cristi_Balanescu,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.HazardsOfThePit, EncounterSet.TwistsAndTurns }
-            });
+            }.WithSuffix("The Endless Caves"));
             Cards.Add(new LotRCard() {
-                
                 Title = "Below the Mines",
                 StageNumber = 4,
-                SlugIncludesOppositeTitle = true,
                 OppositeTitle = "The Shivering Bank",
                 Id = "51223bd0-ffd1-11df-a976-0801212c9006",
                 CardType = CardType.Quest,
@@ -83,12 +77,10 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Cristi_Balanescu,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.HazardsOfThePit, EncounterSet.TwistsAndTurns }
-            });
+            }.WithSuffix("The Shivering Bank"));
             Cards.Add(new LotRCard() {
-                
                 Title = "Below the Mines",
                 StageNumber = 4,
-                SlugIncludesOppositeTitle = true,
                 OppositeTitle = "Old One Lair",
                 Id = "51223bd0-ffd1-11df-a976-0801212c9008",
                 CardType = CardType.Quest,
@@ -101,7 +93,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Cristi_Balanescu,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.HazardsOfThePit, EncounterSet.TwistsAndTurns }
-            });
+            }.WithSuffix("Old One Lair"));
             Cards.Add(new LotRCard() {
                 
                 Title = "Daeron's Runes",

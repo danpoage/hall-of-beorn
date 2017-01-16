@@ -23,7 +23,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithInfo(0, 1, Artist.Arman_Akopian));
 
             Cards.Add(LotRCard.Enemy("Androg", "", setName, 0, 1, 3, 2, 5)
-                .WithSlugIncludesType()
+                .WithSuffix("Enemy")
                 .WithUnique()
                 .WithTraits("Gaurwaith.")
                 .WithKeywords("Relentless.")

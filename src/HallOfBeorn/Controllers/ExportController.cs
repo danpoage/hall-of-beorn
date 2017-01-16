@@ -17,10 +17,10 @@ namespace HallOfBeorn.Controllers
     {
         public ExportController()
         {
-            productRepository = (ProductRepository)System.Web.HttpContext.Current.Application[Extensions.ProductRepositoryKey];
-            cardRepository = (CardRepository)System.Web.HttpContext.Current.Application[Extensions.CardRepositoryKey];
-            scenarioService = (ScenarioService)System.Web.HttpContext.Current.Application[Extensions.ScenarioServiceKey];
-            searchService = (SearchService)System.Web.HttpContext.Current.Application[Extensions.SearchServiceKey];
+            productRepository = (ProductRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.ProductRepository];
+            cardRepository = (CardRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.CardRepository];
+            scenarioService = (ScenarioService)System.Web.HttpContext.Current.Application[LotRServiceNames.ScenarioService];
+            searchService = (SearchService)System.Web.HttpContext.Current.Application[LotRServiceNames.SearchService];
         }
 
         private SearchService searchService;

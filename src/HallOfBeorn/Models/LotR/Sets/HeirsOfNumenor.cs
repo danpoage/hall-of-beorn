@@ -342,11 +342,9 @@ namespace HallOfBeorn.Models.LotR.Sets
             });
             Cards.Add(new LotRCard() {
                 Title = "The Leaping Fish",
-                SlugIncludesType = true,
                 StageNumber = 1,
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9021",
                 CardType = CardType.Quest,
-                
                 Quantity = 1,
                 QuestPoints = 6,
                 Keywords = new List<string> { "Battle." },
@@ -358,7 +356,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 CardNumber = 65,
                 Artist = Artist.Darek_Zabrocki,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.StreetsOfGondor, EncounterSet.Brigands }
-            });
+            }.WithSuffix("Quest"));
             Cards.Add(new LotRCard() {
                 
                 Title = "Fighting in the Streets",
@@ -1160,9 +1158,7 @@ If the players defeat this stage, they have won the game.",
                 Artist = Artist.Michael_Rasmussen
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "The Leaping Fish",
-                SlugIncludesType = true,
                 Id = "4823aae3-46ef-4a75-89f9-cbd3aa1b9082",
                 CardType = CardType.Location,
                 IsUnique = true,
@@ -1175,7 +1171,7 @@ If the players defeat this stage, they have won the game.",
                 VictoryPoints = 3,
                 CardNumber = 21,
                 Artist = Artist.Darek_Zabrocki
-            });
+            }.WithSuffix("Location"));
             Cards.Add(new LotRCard() {
                 
                 Title = "The Master's Malice",

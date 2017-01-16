@@ -57,6 +57,8 @@ namespace HallOfBeorn.Services.LotR
         private readonly Dictionary<string, Scenario> scenariosByTitle = new Dictionary<string, Scenario>();
         private readonly ScenarioListViewModel listViewModel;
 
+        private const string selectListSeparator = "————————————————————";
+
         private void AddScenario(Scenario scenario)
         {
             var escapedTitle = scenario.Title.ToUrlSafeString();
@@ -138,7 +140,7 @@ namespace HallOfBeorn.Services.LotR
                 {
                     if (!string.IsNullOrEmpty(previous.Cycle) || previous.SetType != set.SetType)
                     {
-                        setNames.Add(Extensions.SelectListSeparator);
+                        setNames.Add(selectListSeparator);
                     }
 
                     if (!string.IsNullOrEmpty(set.Cycle))

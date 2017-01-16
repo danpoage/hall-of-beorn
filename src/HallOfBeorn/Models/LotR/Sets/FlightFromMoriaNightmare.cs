@@ -48,7 +48,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             {
                 Title = "Search for an Exit",
                 OppositeTitle = "Pursued By Shadow",
-                SlugIncludesOppositeTitle = true,
                 Id = "A1380AE9-1895-48A7-9C5D-FF3D941DD1D9",
                 CardType = CardType.Quest,
                 StageNumber = 2,
@@ -65,12 +64,11 @@ Players may bypass this quest card at the end of the combat phase.",
                 CardNumber = 2,
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Gabriel_Verdon
-            });
+            }.WithSuffix("Pursued By Shadow"));
             Cards.Add(new LotRCard()
             {
                 Title = "Search for an Exit",
                 OppositeTitle = "Blocked by Flame",
-                SlugIncludesOppositeTitle = true,
                 Id = "1A4E5458-13CC-41B1-8A44-6FC3FF25693E",
                 CardType = CardType.Quest,
                 StageNumber = 2,
@@ -87,21 +85,17 @@ If The ~Nameless Fear has 10 or more damage on it, remove all damage from it and
                 CardNumber = 3,
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Alvaro_Calvo_Escudero
-            });
+            }.WithSuffix("Blocked by Flame"));
             Cards.Add(new LotRCard()
             {
                 Title = "Search for an Exit",
                 OppositeTitle = "Ghâsh",
-                SlugIncludesOppositeTitle = true,
                 Id = "A1EDC2C0-0F79-45C1-BFF6-B314BEDFBC6B",
                 CardType = CardType.Quest,
                 StageNumber = 2,
                 Text = "While Search for an Exit is the active quest card, only flip it to side 2B at the beginning of the staging step.",
                 FlavorText = "As the presence draws near, doubt and fear surround you like a vast shadow. You must find daylight, your must escape from the Black Pit...",
-                OppositeText = 
-@"When Revealed: Deal 1 damage to each questing character.
-
-Players may bypass this quest card at the end of the combat phase.",
+                OppositeText = "When Revealed: Deal 1 damage to each questing character.\r\nPlayers may bypass this quest card at the end of the combat phase.",
                 OppositeFlavorText = "\"As I stood there I could hear orc-voices on the other side: at any moment I though they would burst it open. I could not hear what was said; they seemed to be talking in their own hideous language. All I caught was ghâsh: that is 'fire'.\"\r\n-Gandalf, The Fellowship of the Ring",
                 QuestPoints = 1,
                 VictoryPoints = 1,
@@ -110,7 +104,7 @@ Players may bypass this quest card at the end of the combat phase.",
                 CardNumber = 4,
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Mark_Behm
-            });
+            }.WithSuffix("Ghash"));
             Cards.Add(new LotRCard()
             {
                 Title = "Swarming Goblins",

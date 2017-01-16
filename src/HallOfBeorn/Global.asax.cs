@@ -30,40 +30,40 @@ namespace HallOfBeorn
             System.Web.HttpContext.Current.Application.Lock();
             
             var productRepository = new ProductRepository();
-            System.Web.HttpContext.Current.Application[Extensions.ProductRepositoryKey] = productRepository;
+            System.Web.HttpContext.Current.Application[LotRServiceNames.ProductRepository] = productRepository;
 
             var cardRepository = new CardRepository(productRepository);
-            System.Web.HttpContext.Current.Application[Extensions.CardRepositoryKey] = cardRepository;
+            System.Web.HttpContext.Current.Application[LotRServiceNames.CardRepository] = cardRepository;
 
             var categoryService = new CategoryService(cardRepository);
-            System.Web.HttpContext.Current.Application[Extensions.CategoryServiceKey] = categoryService;
+            System.Web.HttpContext.Current.Application[LotRServiceNames.CategoryService] = categoryService;
 
             var scenarioService = new ScenarioService(categoryService, productRepository, cardRepository);
-            System.Web.HttpContext.Current.Application[Extensions.ScenarioServiceKey] = scenarioService;
+            System.Web.HttpContext.Current.Application[LotRServiceNames.ScenarioService] = scenarioService;
 
             var ringsDbService = new RingsDbService(cardRepository);
-            System.Web.HttpContext.Current.Application[Extensions.RingsDbKey] = ringsDbService;
+            System.Web.HttpContext.Current.Application[LotRServiceNames.RingsDbService] = ringsDbService;
 
             var advancedSearchService = new AdvancedSearchService(categoryService);
             var sortService = new SearchSortService(ringsDbService);
 
             var noteService = new NoteService();
-            System.Web.HttpContext.Current.Application[Extensions.NoteServiceKey] = noteService;
+            System.Web.HttpContext.Current.Application[LotRServiceNames.NoteService] = noteService;
 
             var searchService = new SearchService(productRepository, cardRepository, scenarioService, advancedSearchService, sortService, ringsDbService, noteService, categoryService);
-            System.Web.HttpContext.Current.Application[Extensions.SearchServiceKey] = searchService;
+            System.Web.HttpContext.Current.Application[LotRServiceNames.SearchService] = searchService;
 
             var statService = new StatService(cardRepository);
-            System.Web.HttpContext.Current.Application[Extensions.StatServiceKey] = statService;
+            System.Web.HttpContext.Current.Application[LotRServiceNames.StatService] = statService;
 
             var octgnService = new OctgnService(productRepository, cardRepository);
-            System.Web.HttpContext.Current.Application[Extensions.OctgnServiceKey] = octgnService;
+            System.Web.HttpContext.Current.Application[LotRServiceNames.OctgnService] = octgnService;
 
             var templateService = new TemplateService();
-            System.Web.HttpContext.Current.Application[Extensions.TemplateServiceKey] = templateService;
+            System.Web.HttpContext.Current.Application[LotRServiceNames.TemplateService] = templateService;
 
             var tagService = new TagService();
-            System.Web.HttpContext.Current.Application[Extensions.TagServiceKey] = tagService;
+            System.Web.HttpContext.Current.Application[LotRServiceNames.TagService] = tagService;
 
             System.Web.HttpContext.Current.Application.UnLock();
         }

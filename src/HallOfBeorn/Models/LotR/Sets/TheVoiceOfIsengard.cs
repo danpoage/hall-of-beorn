@@ -33,7 +33,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 CardNumber = 1,
                 Artist = Artist.Magali_Villeneuve
             });
-            Cards.Add(new LotRCard() {
+            addCard(new LotRCard() {
                 Title = "Gríma",
                 Id = "2BECB7B6-5D0C-46D1-83C3-DDE505ABEB5E",
                 CardType = CardType.Hero,
@@ -49,9 +49,8 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Text = "Action: Lower the cost of the next card you play from your hand this round by 1. That card gains Doomed 1. (Limit once per round.)",
                 FlavorText = "\"Let your counsellor Gríma keep all things till your return - and I pray that we may see it, though no wise man will deem it hopeful.\" -The Two Towers",
                 CardNumber = 2,
-                SlugIncludesType = true,
                 Artist = Artist.Matt_Stewart
-            });
+            }.WithSuffix("Hero"));
             Cards.Add(new LotRCard() {
                 Title = "Saruman",
                 
@@ -275,27 +274,20 @@ Response: After Saruman enters play, choose a non-unique enemy or location in th
             Cards.Add(new LotRCard() {
                 Title = "Gríma",
                 IsUnique = true,
-                
                 Id = "C6DFAF1C-E925-4EF2-A5F2-E0B30B2BC8A8",
                 CardType = CardType.Objective_Ally,
-                SlugIncludesType = true,
                 EncounterSet = "The Fords of Isen",
                 Willpower = 2,
                 Attack = 1,
                 Defense = 2,
                 HitPoints = 3,
                 Traits = new List<string> { "Rohan." },
-                Text =
-@"If free of encounters, the first player gains control of Gríma.
-
-Action: Exhaust Gríma to draw a card.
-
-If Gríma leaves play, the players lose the game.",
+                Text = "If free of encounters, the first player gains control of Gríma.\r\nAction: Exhaust Gríma to draw a card.\r\nIf Gríma leaves play, the players lose the game.",
                 FlavorText = "Behind him cringing between two other men, came Gríma the Wormtongue. -The Two Towers",
                 Quantity = 1,
                 CardNumber = 16,
                 Artist = Artist.Nacho_Molina
-            });
+            }.WithSuffix("Objective-Ally"));
             Cards.Add(new LotRCard() {
                 Title = "The Islet",
                 IsUnique = true,
@@ -408,8 +400,6 @@ If Gríma leaves play, the players lose the game.",
             {
                 Title = "Mugash",
                 IsUnique = true,
-                SlugIncludesType = true,
-                
                 Id = "EB8CE576-9546-4D19-9070-F7D47638E069",
                 CardType = CardType.Enemy,
                 EncounterSet = "To Catch an Orc",
@@ -424,7 +414,7 @@ If Gríma leaves play, the players lose the game.",
                 EasyModeQuantity = 1,
                 CardNumber = 24,
                 Artist = Artist.Brent_Hollowel
-            });
+            }.WithSuffix("Enemy"));
             Cards.Add(new LotRCard()
             {
                 Title = "Mugash's Guard",
@@ -532,19 +522,17 @@ If Gríma leaves play, the players lose the game.",
             {
                 Title = "Mugash",
                 IsUnique = true,
-                SlugIncludesType = true,
-                
                 Id = "D926470B-02E3-4A06-9428-5F3F5186E62A",
                 CardType = CardType.Objective,
                 EncounterSet = "Into Fangorn",
                 Traits = new List<string> { "Orc.", "Uruk." },
                 Keywords = new List<string> { "Guarded." },
-                Text = "Action: Exhaust a hero to claim this objective when it is free of encounters. Attach Mugash to that hero.\r\n\r\nForced: After attached hero takes damage, return Mugash to the top of the encounter deck.",
+                Text = "Action: Exhaust a hero to claim this objective when it is free of encounters. Attach Mugash to that hero.\r\nForced: After attached hero takes damage, return Mugash to the top of the encounter deck.",
                 Quantity = 1,
                 EasyModeQuantity = 1,
                 CardNumber = 31,
                 Artist = Artist.Brent_Hollowel
-            });
+            }.WithSuffix("Objective"));
             Cards.Add(new LotRCard()
             {
                 Title = "Edge of Fangorn",
@@ -883,8 +871,6 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new LotRCard()
             {
                 Title = "Ancient Forest",
-                SlugIncludesType = true,
-                
                 Id = "AA0B89D9-02C5-4A15-9C81-0E1AF2CC906D",
                 CardType = CardType.Location,
                 EncounterSet = "Ancient Forest",
@@ -897,11 +883,10 @@ If Gríma leaves play, the players lose the game.",
                 EasyModeQuantity = 1,
                 CardNumber = 50,
                 Artist = Artist.Ben_Zweifel
-            });
+            }.WithSuffix("Location"));
             Cards.Add(new LotRCard()
             {
                 Title = "Tangled Woods",
-                
                 Id = "1DEE93C2-E861-48CD-9DD0-02CB46491D4E",
                 CardType = CardType.Location,
                 EncounterSet = "Ancient Forest",
@@ -952,8 +937,6 @@ If Gríma leaves play, the players lose the game.",
             Cards.Add(new LotRCard()
             {
                 Title = "Broken Lands",
-                SlugIncludesType = true,
-                
                 Id = "39982128-25C4-49E7-B7CB-66916E62A69A",
                 CardType = CardType.Location,
                 EncounterSet = "Broken Lands",
@@ -966,7 +949,7 @@ If Gríma leaves play, the players lose the game.",
                 EasyModeQuantity = 3,
                 CardNumber = 54,
                 Artist = Artist.Joel_Hustak
-            });
+            }.WithSuffix("Location"));
             Cards.Add(new LotRCard()
             {
                 Title = "Take Cover!",

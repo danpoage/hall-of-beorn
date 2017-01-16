@@ -1197,9 +1197,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 Artist = Artist.Emilio_Rodriguez
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "The Lonely Mountain",
-                SlugIncludesType = true,
                 Id = "0554f2f9-c578-4644-9c28-b617e846b787",
                 CardType = CardType.Location,
                 IsUnique = true,
@@ -1212,7 +1210,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 VictoryPoints = 10,
                 CardNumber = 43,
                 Artist = Artist.Joel_Hustak
-            });
+            }.WithSuffix("Location"));
             Cards.Add(new LotRCard() {
                 
                 Title = "The Spider's Glade",

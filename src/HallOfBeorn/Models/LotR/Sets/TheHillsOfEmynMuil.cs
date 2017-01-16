@@ -292,8 +292,6 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Artist = Artist.Bill_Corbett
             });
             Cards.Add(new LotRCard() {
-                
-                SlugIncludesType = true,
                 Title = "The Hills of Emyn Muil",
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-0801204c9019",

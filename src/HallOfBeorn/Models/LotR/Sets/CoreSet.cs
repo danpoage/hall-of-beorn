@@ -1446,9 +1446,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Santiago_Villa
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "Dol Guldur Orcs",
-                SlugIncludesType = true,
                 Id = "51223bd0-ffd1-11df-a976-0801200c9089",
                 CardType = CardType.Enemy,
                 EngagementCost = 10,
@@ -1463,9 +1461,8 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Quantity = 3,
                 CardNumber = 89,
                 Artist = Artist.Anna_Christenson
-            });
+            }.WithSuffix("Enemy"));
             Cards.Add(new LotRCard() {
-                
                 Title = "Chieftan Ufthak",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9090",
                 CardType = CardType.Enemy,
@@ -1947,14 +1944,11 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood }
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "A Chosen Path",
                 StageNumber = 3,
-                SlugIncludesOppositeTitle = true,
                 OppositeTitle = "Don't Leave the Path",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9123",
                 CardType = CardType.Quest,
-                
                 EncounterSet = "Passage Through Mirkwood",
                 FlavorText = "The trail winds into one of the darkest, most tangled parts of the forest...\r\n\r\nYou sense that foul, dark presence is hunting you, and you move quickly in an attempt to avoid its evil.",
                 OppositeText = "When Revealed: Each player must search the encounter deck and discard pile for 1 Spider card of his choice, and add it to the staging area.\r\nThe players must find and defeat Ungoliant's Spawn to win this game.",
@@ -1965,16 +1959,13 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Yoann_Boissonnet,
                 BackArtist = Artist.Ben_Zweifel,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood }
-            });
-            Cards.Add(new LotRCard() {
-                
+            }.WithSuffix("Don't Leave the Path"));
+            Cards.Add(new LotRCard() {    
                 Title = "A Chosen Path",
                 StageNumber = 3,
-                SlugIncludesOppositeTitle = true,
                 OppositeTitle = "Beorn's Path",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9125",
                 CardType = CardType.Quest,
-                
                 EncounterSet = "Passage Through Mirkwood",
                 FlavorText = "The trail winds into one of the darkest, most tangled parts of the forest...\r\n\r\nYou sense that foul, dark presence is hunting you, and you move quickly in an attempt to avoid its evil.",
                 OppositeText = "Players cannot defeat this stage while Ungoliant's Spawn is in play. If players defeat this stage, they have won the game.",
@@ -1985,7 +1976,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Artist = Artist.Yoann_Boissonnet,
                 BackArtist = Artist.David_Lecossu,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood }
-            });
+            }.WithSuffix("Beorn's Path"));
             Cards.Add(new LotRCard() {
                 Title = "The Necromancer's Tower",
                 StageNumber = 1,

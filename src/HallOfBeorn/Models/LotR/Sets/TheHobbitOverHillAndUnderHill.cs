@@ -1058,12 +1058,10 @@ The players have won the game.",
                 Artist = Artist.David_Demaret
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "The Great Goblin",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9078",
                 CardType = CardType.Enemy,
                 EncounterSet = "The Great Goblin",
-                SlugIncludesType = true,
                 Traits = new List<string>() { "Goblin.", " Orc." },
                 Quantity = 1,
                 EngagementCost = 15,
@@ -1076,7 +1074,7 @@ The players have won the game.",
                 VictoryPoints = 3,
                 CardNumber = 63,
                 Artist = Artist.Johann_Bodin
-            });
+            }.WithSuffix("Enemy"));
             Cards.Add(new LotRCard() {
                 
                 Title = "The High Pass",

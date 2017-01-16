@@ -18,7 +18,6 @@ namespace HallOfBeorn.Models.LotR
             Html2 = string.Empty;
 
             AlternateEncounterSet = string.Empty;
-            //Suffix = string.Empty;
         }
 
         protected override string getSetAbbreviation()
@@ -29,11 +28,9 @@ namespace HallOfBeorn.Models.LotR
         protected override string getSlug()
         {
             var title = !string.IsNullOrEmpty(NormalizedTitle) ? NormalizedTitle.ToUrlSafeString() : Title.ToUrlSafeString();
-            var subtitle = SlugIncludesOppositeTitle ? string.Format("{0}-", OppositeTitle.ToUrlSafeString()) : string.Empty;
-            var suffix = !string.IsNullOrEmpty(SlugSuffix) ? string.Format("{0}-", SlugSuffix) : string.Empty;
-            var type = SlugIncludesType ? string.Format("{0}-", CardType.ToString().ToUrlSafeString()) : string.Empty;
+            var suffix = !string.IsNullOrEmpty(SlugSuffix) ? string.Format("{0}-", SlugSuffix.ToUrlSafeString()) : string.Empty;
             var set = CardSet.Abbreviation.ToString().ToUrlSafeString();
-            return string.Format("{0}-{1}{2}{3}{4}", title, subtitle, suffix, type, set);
+            return string.Format("{0}-{1}{2}", title, suffix, set);
         }
 
         private string html;
@@ -43,7 +40,7 @@ namespace HallOfBeorn.Models.LotR
             {
                 if (!string.IsNullOrEmpty(HtmlTemplate) && string.IsNullOrEmpty(html)) 
                 {
-                    html = HtmlTemplate.Render(Slug, Title);
+                    html = new TextTemplate(this).RenderFrontHtml();
                 }
 
                 return html;
@@ -60,7 +57,7 @@ namespace HallOfBeorn.Models.LotR
             {
                 if (!string.IsNullOrEmpty(HtmlTemplate2) && string.IsNullOrEmpty(html2))
                 {
-                    html2 = HtmlTemplate2.Render(Slug, Title);
+                    html2 = new TextTemplate(this).RenderBackHtml();
                 }
 
                 return html2;
@@ -98,9 +95,6 @@ namespace HallOfBeorn.Models.LotR
         public bool? PassValue { get; set; }
         public byte? EasyModeQuantity { get; set; }
         public byte? NightmareModeQuantity { get; set; }
-
-        public bool SlugIncludesOppositeTitle { get; set; }
-        public bool SlugIncludesType { get; set; }
 
         public bool HasErrata { get; set; }
 
@@ -307,7 +301,7 @@ namespace HallOfBeorn.Models.LotR
                 CardType = CardType.Campaign,
                 Title = title,
                 EncounterSet = encounterSet,
-                SlugIncludesType = true,
+                SlugSuffix = "Campaign",
                 OppositeTitle = oppositeTitle
             };
         }
@@ -420,12 +414,6 @@ namespace HallOfBeorn.Models.LotR
             return this;
         }
 
-        public LotRCard WithSlugIncludesType()
-        {
-            this.SlugIncludesType = true;
-            return this;
-        }
-
         public LotRCard WithEasyModeQuantity(byte quantity)
         {
             this.EasyModeQuantity = quantity;
@@ -464,7 +452,7 @@ namespace HallOfBeorn.Models.LotR
         public LotRCard WithOppositeTitle(string title, bool includedInSlug)
         {
             this.OppositeTitle = title;
-            this.SlugIncludesOppositeTitle = includedInSlug;
+            this.SlugSuffix = title;
             return this;
         }
 
@@ -524,12 +512,6 @@ namespace HallOfBeorn.Models.LotR
         public LotRCard WithErrata()
         {
             this.HasErrata = true;
-            return this;
-        }
-
-        public LotRCard WithTypeBasedSlug()
-        {
-            this.SlugIncludesType = true;
             return this;
         }
 

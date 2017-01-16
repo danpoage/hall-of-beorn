@@ -404,9 +404,7 @@ If the players defeat this stage, they have escaped the Blackroot Vale with Deru
                 Artist = Artist.Magali_Villeneuve
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "The Stone of Erech",
-                SlugIncludesType = true,
                 Id = "822ca699-4763-4b8c-baff-d8d828c002a9",
                 CardType = CardType.Location,
                 EncounterSet = "The Stone of Erech",
@@ -419,7 +417,7 @@ If the players defeat this stage, they have escaped the Blackroot Vale with Deru
                 VictoryPoints = 5,
                 CardNumber = 6,
                 Artist = Artist.Titus_Lunter
-            });
+            }.WithSuffix("Location"));
             Cards.Add(new LotRCard() {
                 Title = "Vale of Shadows",
                 Id = "c57661b7-62f9-4906-b2eb-73af91fd8252",

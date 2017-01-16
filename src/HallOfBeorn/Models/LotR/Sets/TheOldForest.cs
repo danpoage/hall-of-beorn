@@ -116,7 +116,6 @@ The Lord of the ~Rings : The Black Riders Saga Expansion is required to play The
                 Title = "The Living Forest",
                 Id = "F63FC7D8-D1BD-46FD-8E3C-8DB75003E524",
                 OppositeTitle = "Dark Bad Place",
-                SlugIncludesOppositeTitle = true,
                 CardType = CardType.Quest,
                 StageNumber = 2,
                 QuestPoints = null,
@@ -128,13 +127,12 @@ The Lord of the ~Rings : The Black Riders Saga Expansion is required to play The
                 Quantity = 1,
                 Artist = Artist.Silver_Saaremael,
                 SecondArtist = Artist.Nathalia_Gomes
-            });
+            }.WithSuffix("Dark Bad Place"));
             Cards.Add(new LotRCard()
             {
                 Title = "The Living Forest",
                 Id = "CA2C0050-2E27-49BE-B539-880551CE3983",
                 OppositeTitle = "Choked with Brambles",
-                SlugIncludesOppositeTitle = true,
                 CardType = CardType.Quest,
                 StageNumber = 2,
                 QuestPoints = null,
@@ -146,13 +144,12 @@ The Lord of the ~Rings : The Black Riders Saga Expansion is required to play The
                 Quantity = 1,
                 Artist = Artist.Silver_Saaremael,
                 SecondArtist = Artist.Silver_Saaremael
-            });
+            }.WithSuffix("Choked with Brambles"));
             Cards.Add(new LotRCard()
             {
                 Title = "The Living Forest",
                 Id = "2C31C1F5-2AA5-46A7-8641-767A6D8B16E6",
                 OppositeTitle = "Shifting Trees",
-                SlugIncludesOppositeTitle = true,
                 CardType = CardType.Quest,
                 StageNumber = 2,
                 QuestPoints = null,
@@ -164,13 +161,12 @@ The Lord of the ~Rings : The Black Riders Saga Expansion is required to play The
                 Quantity = 1,
                 Artist = Artist.Jose_Vega,
                 SecondArtist = Artist.Nathalia_Gomes
-            });
+            }.WithSuffix("Shifting Trees"));
             Cards.Add(new LotRCard()
             {
                 Title = "The Living Forest",
                 Id = "64FFA0F3-FDF4-4694-B20E-DC079F6DD958",
                 OppositeTitle = "Closing in Around Them",
-                SlugIncludesOppositeTitle = true,
                 CardType = CardType.Quest,
                 StageNumber = 2,
                 QuestPoints = null,
@@ -182,7 +178,7 @@ The Lord of the ~Rings : The Black Riders Saga Expansion is required to play The
                 Quantity = 1,
                 Artist = Artist.Silver_Saaremael,
                 SecondArtist = Artist.Joel_Hustak
-            });
+            }.WithSuffix("Closing in Around Them"));
             Cards.Add(new LotRCard()
             {
                 Title = "The Wicked Willow",
@@ -466,13 +462,9 @@ While Withywindle is the active location, the first player reveals 1 additional 
             {
                 Title = "The Old Forest",
                 OppositeTitle = "The Lord of the Rings Part 1.1",
-                SlugIncludesType = true,
                 Id = "17EC1E54-1D21-49FF-9B10-2E44AB8AA993",
                 CardType = CardType.Campaign,
-                Text = 
-@"You are playing Campaign Mode.
-
-Setup: The first player attaches Old Bogey-stories to a hero in play.",
+                Text = "You are playing Campaign Mode.\r\nSetup: The first player attaches Old Bogey-stories to a hero in play.",
                 FlavorText = "It was not called the Old Forest without reason, for it was indeed ancient, a survivor of vast forgotten woods; and in it there lived yet, ageing no quicker than the hills, the fathers of the fathers of trees, remembering times when they were lords. The countless years had filled them with pride and rooted wisdom, and with malice. -The Fellowship of the Ring",
                 OppositeText = "Resolution: If there are at least 12 damage tokens on Old Man Willow, the players have earned the Old Bogey-Stories boon card.",
                 OppositeFlavorText = "Tom Bombadil burst out laughing, \"Well, my little fellows!\" said he, stooping so that he peered into their faces. \"You shall come home with me! The table is all laden with yellow cream, honeycomb, and white bread and butter. Goldberry is waiting. Time enough for questions around the supper table. You follow after me as quick as you are able!\" With that he picked up his lilies, and then with a beckoning wave of his hand went hopping and dancing along the path eastward, still singing loudly and nonsensically.\r\n-The Fellowship of the Ring",
@@ -480,7 +472,7 @@ Setup: The first player attaches Old Bogey-stories to a hero in play.",
                 CardNumber = 23,
                 Quantity = 1,
                 Artist = Artist.Brian_Valenzuela
-            });
+            }.WithSuffix("Campaign"));
             Cards.Add(new LotRCard()
             {
                 Title = "Old Bogey-stories",

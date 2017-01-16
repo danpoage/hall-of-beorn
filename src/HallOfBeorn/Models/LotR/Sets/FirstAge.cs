@@ -1387,7 +1387,6 @@ Action: Place 1 Corruption on Fëanor to play an attachment from any sphere of i
             }.WithTraits("Noldor.", "House of Fingolfin.", "Noble."));
             Cards.Add(new LotRCard() {
                 Title = "Finrod Felagund",
-                
                 Id = "cf173190-392e-47d7-8d04-b3401434296e",
                 IsUnique = true,
                 CardType = CardType.Hero,
@@ -1804,34 +1803,15 @@ If Gates of Menegroth is destroyed, the players lose the game.",
             });
             Cards.Add(new LotRCard() {
                 Title = "Hunting of the Wolf",
-                SlugIncludesType = true,
                 Id = "db41eb04-4428-4b6f-8a7f-358cb4507a74",
                 CardType = CardType.Campaign,
-                Text = 
-@"Corruption
-
-When a character takes Corruption, place a progress token on it. If a character ever has Corruption greater than its willpower, it has become Corrupted. A Corrupted character loses the 'ally' or 'here' trait and gains the 'enemy' trait, immediately engaging the player that used to control it. The Willpower of the Corrupted character becomes its Threat and its engagement cost is 0.
-
-Relentless
-
-An enemy with Relentless cannot have its attack canceled or be prevented from attacking by any player card effect.",
-                OppositeText = 
-@"Carcharoth Deck
-
-During the quest phase, reveal the top card of the Carcharoth deck after characters have commited to the quest and before staging. Place this card in the staging area and discard any previous copies of Carcharoth into a separate discard pile for the Carcharoth deck. Transfer any damage and attachments to the new version of Carcharoth. If the Carcharoth deck is empty when you need to reveal a card from this deck, shuffle the discard pile for the Carcharoth deck to form a new Carcharoth deck.
-
-Hunt
-
-When a location with the Hunt keyword is explored as the active location, add it to the victory display. During the encounter phase, players may discard 5 Hunt points worth of locations from the victory display to engage Carcharoth. The players may decide which player will engage with Carcharoth.
-
-Carcharoth Combat
-
-When Carcharoth attacks a location, subtract the threat of the location from Carcharoth's attack. The difference is the number of damage tokens placed on the location. If a location receives damage equal to its quest points, it is considered to be destroyed and is discarded. If Carcharoth attacks the active location, the first player may declare a defender. Note that Carcharoth the Red Maw attacks twice during the combat phase. Choose a random location for each attack. He may attack the same location twice if it is chosen twice.",
+                Text = "Corruption\r\n\r\nWhen a character takes Corruption, place a progress token on it. If a character ever has Corruption greater than its willpower, it has become Corrupted. A Corrupted character loses the 'ally' or 'here' trait and gains the 'enemy' trait, immediately engaging the player that used to control it. The Willpower of the Corrupted character becomes its Threat and its engagement cost is 0.\r\n\r\nRelentless\r\n\r\nAn enemy with Relentless cannot have its attack canceled or be prevented from attacking by any player card effect.",
+                OppositeText = "Carcharoth Deck\r\n\r\nDuring the quest phase, reveal the top card of the Carcharoth deck after characters have commited to the quest and before staging. Place this card in the staging area and discard any previous copies of Carcharoth into a separate discard pile for the Carcharoth deck. Transfer any damage and attachments to the new version of Carcharoth. If the Carcharoth deck is empty when you need to reveal a card from this deck, shuffle the discard pile for the Carcharoth deck to form a new Carcharoth deck.\r\n\r\nHunt\r\n\r\nWhen a location with the Hunt keyword is explored as the active location, add it to the victory display. During the encounter phase, players may discard 5 Hunt points worth of locations from the victory display to engage Carcharoth. The players may decide which player will engage with Carcharoth.\r\n\r\nCarcharoth Combat\r\n\r\nWhen Carcharoth attacks a location, subtract the threat of the location from Carcharoth's attack. The difference is the number of damage tokens placed on the location. If a location receives damage equal to its quest points, it is considered to be destroyed and is discarded. If Carcharoth attacks the active location, the first player may declare a defender. Note that Carcharoth the Red Maw attacks twice during the combat phase. Choose a random location for each attack. He may attack the same location twice if it is chosen twice.",
                 Quantity = 1,
                 EncounterSet = "Hunting of the Wolf",
                 CardNumber = 161,
                 Artist = Artist.Dechambo
-            });
+            }.WithSuffix("Campaign"));
             Cards.Add(new LotRCard() {
                 Title = "A Doom Fulfilled",
                 
@@ -2193,7 +2173,6 @@ Response: After High Tower is explored as the active location, remove one Condit
             });
             Cards.Add(new LotRCard() {
                 Title = "Eyes in the Dark",
-                
                 Id = "111d8917-7733-41a8-8941-b24698ed17e4",
                 CardType = CardType.Objective,
                 Traits = new List<string>() { "Devoured." },
@@ -2205,11 +2184,9 @@ Response: After High Tower is explored as the active location, remove one Condit
             });
             Cards.Add(new LotRCard() {
                 Title = "Finrod Felagund",
-                SlugIncludesType = true,
-                
                 Id = "829081e4-0ffa-41ea-9bb4-cb6d64aa06cc",
                 IsUnique = true,
-                CardType = CardType.Objective,
+                CardType = CardType.Objective_Ally,
                 Traits = new List<string>() { "Noldor.", "House of Finarfin.", "Noble." },
                 Willpower = 3,
                 Attack = 3,
@@ -2220,7 +2197,7 @@ Response: After High Tower is explored as the active location, remove one Condit
                 EncounterSet = "The Isle of Werewolves",
                 CardNumber = 116,
                 Artist = Artist.Elfkin
-            });
+            }.WithSuffix("Objective-Ally"));
             Cards.Add(new LotRCard() {
                 Title = "The Pits of Sauron",
                 StageNumber = 2,
@@ -2275,7 +2252,6 @@ When this stage is completed, advance to stage 3A. This stage cannot be complete
             });
             Cards.Add(new LotRCard() {
                 Title = "Isle of Werewolves",
-                SlugIncludesType = true,
                 Id = "f03bc416-e4cd-4bda-944c-51a33a55b1d0",
                 CardType = CardType.Campaign,
                 Text = 
@@ -2296,7 +2272,7 @@ Heroes in the pit area are immune to player card effects and cannot leave the pi
                 EncounterSet = "The Isle of Werewolves",
                 CardNumber = 112,
                 Artist = Artist.Unknown
-            });
+            }.WithSuffix("Campaign"));
             Cards.Add(new LotRCard() {
                 Title = "Foul Vapour",
                 
@@ -2786,7 +2762,6 @@ If the players defeat this stage or Carcharoth has 0 hit points, the players hav
             });
             Cards.Add(new LotRCard() {
                 Title = "The Seat of Morgoth",
-                SlugIncludesType = true,
                 Id = "1ad0b223-e659-4358-bf3e-fbc687cba2aa",
                 CardType = CardType.Campaign,
                 Text =
@@ -2811,7 +2786,7 @@ When engaged with an enemy with the Sneak keyword, players may cancel all progre
                 EncounterSet = "The Seat of Morgoth",
                 CardNumber = 125,
                 Artist = Artist.StrangerToTheRain
-            });
+            }.WithSuffix("Campaign"));
             Cards.Add(new LotRCard() {
                 Title = "Clumsy Step",                
                 Id = "d17ece37-4951-4dbf-a5b9-0b07092e8c5f",

@@ -399,7 +399,6 @@ Forced: After this stage is defeated, advance to stage 3B at the beginning of th
             {
                 Title = "Fog on the Barrow-downs",
                 OppositeTitle = "The Lord of the Rings Part 1.2",
-                SlugIncludesType = true,
                 Id = "ACC07870-CD7F-4B88-A8A5-6C1FBFF6A55D",
                 CardType = CardType.Campaign,
                 Text = "You are playing Campaign Mode.\r\nSetup: While any player is at stage 4B, the first player cannot lose control of the first player token.",
@@ -410,7 +409,7 @@ Forced: After this stage is defeated, advance to stage 3B at the beginning of th
                 CardNumber = 20,
                 Quantity = 1,
                 Artist = Artist.Emrah_Elmasli
-            });
+            }.WithSuffix("Campaign"));
             Cards.Add(new LotRCard()
             {
                 Title = "Ho! Tom Bombadil!",

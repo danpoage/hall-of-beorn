@@ -206,6 +206,7 @@
     <Compile Include="Models\LotR\Scenarios\TheCityOfCorsairs.cs" />
     <Compile Include="Models\LotR\Scenarios\TheLongArmOfMordor.cs" />
     <Compile Include="Models\LotR\Scenarios\TheSandsOfHarad.cs" />
+    <Compile Include="Models\LotR\TextTemplate.cs" />
     <Compile Include="Models\LotR\ViewModels\AdvancedSearchViewModel.cs" />
     <Compile Include="Models\Arkham\ArkhamCardSubtype.cs" />
     <Compile Include="Models\Arkham\ArkhamDeckType.cs" />
@@ -623,6 +624,7 @@
     <Compile Include="Services\LotR\RelationshipService.cs" />
     <Compile Include="Services\LotR\ScenarioService.cs" />
     <Compile Include="Services\LotR\SearchSortService.cs" />
+    <Compile Include="Services\LotR\LotRServiceNames.cs" />
     <Compile Include="Services\LotR\StatService.cs" />
     <Compile Include="Services\LotR\TagService.cs" />
     <Compile Include="Services\TemplateRepository.cs" />
