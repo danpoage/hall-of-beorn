@@ -34,7 +34,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTraits("Noldor.", "Warrior.")
                 .WithText("~Veteran Sword-elf gets +1 Attack and +1 Defense for each copy of ~Veteran Sword-elf in your discard pile.")
                 .WithFlavor("The elves were the first to charge. Their hatred for the goblins is cold and bitter.\r\n-The Hobbit")
-                .WithInfo(112, 3, Artist.Unknown));
+                .WithInfo(112, 3, Artist.Ramon_Puasa_Jr));
             Cards.Add(LotRCard.Attachment("Vigilant Guard", string.Empty, Sphere.Tactics, 3)
                 .WithTraits("Skill.")
                 .WithText("Attach to a Warrior character. Limit 1 per character.\r\nAttached character gets +2 hit points.\r\nResponse: When another character would be assigned any amount of damage, place 1 of that damage on attached character instead.")

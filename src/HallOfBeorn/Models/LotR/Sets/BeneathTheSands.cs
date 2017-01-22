@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTraits("Dúnedain.")
                 .WithText("Response: Discard Dúnedain Lookout to cancel the 'When Revealed' effects of an enemy just revealed from the encounter deck.")
                 .WithFlavor("\"Travellers scowl at us, and countrymen gives us scornful names.\"\r\n-Aragorn, The Fellowship of the Ring")
-                .WithInfo(52, 3, Artist.Unknown));
+                .WithInfo(52, 3, Artist.Aleksander_Karcz));
             Cards.Add(LotRCard.PlayerSideQuest("Keep Watch", string.Empty, Sphere.Tactics, 1, 6)
                 .WithText("Limit 1 copy of Keep Watch in the victory display.\r\nWhile Keep Watch is in the victory display, each non-unique enemy engaged with a player gets -1 Attack.")
                 .WithFlavor("\"I called for the help of the Dúnedain, and their watch was doubled...\"\r\n-Gandalf, The Fellowship of the Ring")

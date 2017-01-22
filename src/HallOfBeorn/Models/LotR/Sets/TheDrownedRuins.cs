@@ -26,7 +26,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTraits("Dwarf.", "Warrior.")
                 .WithText("Forced: At the end of the round, discard Dwarven Sellsword unless the players as a group spend 1 Leadership resource.")
                 .WithFlavor("...he did not altogether approve of dwarves and their love of gold...\r\n-The Hobbit")
-                .WithInfo(83, 3, Artist.Unknown));
+                .WithInfo(83, 3, Artist.Marius_Bota));
             Cards.Add(LotRCard.Attachment("Dúnedain Remedy", string.Empty, Sphere.Leadership, 0)
                 .WithTraits("Signal.")
                 .WithText("Attach to a hero.\r\nResponse: After ~Dúnedain Remedy is attached to a hero, heal 1 damage on that hero.\r\nAction: Pay 1 resource from attached hero's resource pool to attach ~Dúnedain Remedy to another hero.")
@@ -63,7 +63,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithUnique()
                 .WithText("Attach to a hero.\r\nWhile you control 2 or fewer heroes, attached hero does not exhaust to commit to the quest.\r\nWhile you control 5 or fewer characters, attached hero gets +2 Willpower.")
                 .WithFlavor("\"Strider can take you by paths that are seldom tridden. Will you have him?\"\r\n-Aragorn, The Fellowship of the Ring")
-                .WithInfo(91, 3, Artist.Unknown));
+                .WithInfo(91, 3, Artist.Ken_McCuen));
 
             Cards.Add(LotRCard.Quest("The Grotto", 1, setName, 15)
                 .WithFlavor("In the sunken ruins of the temple, you find a grotto leading deep below the sea level. Much of the grotto is submerged underwater.")

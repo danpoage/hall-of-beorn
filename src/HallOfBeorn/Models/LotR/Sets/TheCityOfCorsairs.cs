@@ -21,7 +21,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(LotRCard.Hero("Prince Imrahil", "", Sphere.Tactics, 11, 2, 3, 2, 4)
                 .WithTraits("Gondor.", "Noble.", "Warrior.")
                 .WithText("Combat Action: Spend 1 resource from Prince Imrahil's resource pool to search the top 5 cards of your deck for an ally who shares at least 1 Trait with him, and put that ally into play. Shuffle your deck. At the end of the phase, if that ally is still in play, shuffle it into your deck. (Limit once per round.)")
-                .WithInfo(138, 1, Artist.Unknown));
+                .WithInfo(138, 1, Artist.Micah_Epstein));
             Cards.Add(LotRCard.Ally("Knight of the White Tower", Sphere.Leadership, 4, 2, 2, 3, 3)
                 .WithTraits("Gondor.", "Warrior.")
                 .WithText("Knight of the White Tower's resource cost must be paid from a single hero’s resource pool.")
@@ -103,7 +103,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTraits("Corsair.", "Raider.")
                 .WithText("Corsair Slaver gets +1 Attack and +1 Threat for each resource on it.\r\nForced: After the engaged player spends any number of resources, place 1 of those resources on Umbar Slaver.")
                 .WithEasyModeQuantity(1)
-                .WithInfo(153, 3, Artist.Monztre));
+                .WithInfo(153, 3, Artist.Ramon_Puasa_Jr));
             Cards.Add(LotRCard.Location("Southern Belfalas", string.Empty, setCoast, 3, 5)
                 .WithTraits("Ocean.", "Coastland.")
                 .WithText("Travel: One player must reveal the top card of the Corsair deck and engage it to travel here.")

@@ -27,7 +27,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTraits("Item.")
                 .WithText("Attach to a Gondor hero.\r\nAction: Spend 2 resources from attached hero's resource pool to draw 1 card.")
                 .WithFlavor("\"The last Steward of Gondor begs leave to surrender his office.\" And he held out a white rod.\r\n-The Return of the King")
-                .WithInfo(2, 3, Artist.Unknown));
+                .WithInfo(2, 3, Artist.Drazenka_Kimpel));
             Cards.Add(LotRCard.Attachment("In Service of the Steward", "", Sphere.Leadership, 1)
                 .WithTraits("Title.")
                 .WithText("Attach to a character.\r\nAttached character gains the Gondor trait.")
@@ -37,7 +37,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithUnique()
                 .WithTraits("Dwarf.", "Warrior.")
                 .WithText("Response: After Azain Silverbeard participates in an attack that destroys an enemy, spend 1 Tactics resource to deal 2 damage to another enemy that shares a Trait with the destroyed enemy. Any player may trigger this response.")
-                .WithInfo(4, 3, Artist.Unknown));
+                .WithInfo(4, 3, Artist.Marius_Bota));
             Cards.Add(LotRCard.Event("Last Stand", "", Sphere.Tactics, 0)
                 .WithText("Response: After a Warrior character is destroyed while defending against an enemy attack, deal damage to the attacking enemy equal to that character's printed Attack.")
                 .WithFlavor("In a grave along under the shadow of the Hornburg lay Háma, captain of the King's guard. He fell before the Gate.\r\n-The Two Towers")

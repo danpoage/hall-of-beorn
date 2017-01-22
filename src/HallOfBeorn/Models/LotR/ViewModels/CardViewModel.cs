@@ -709,6 +709,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                     case LotR.CardType.Scenario:
                     case LotR.CardType.Campaign:
                     case LotR.CardType.GenCon_Setup:
+                        return !string.IsNullOrEmpty(_card.OppositeText);
                     case LotR.CardType.Nightmare_Setup:
                         return true;
                     default:

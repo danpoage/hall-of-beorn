@@ -475,7 +475,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithInfo(83, 1, Artist.Nele_Klumpe));
             Cards.Add(LotRCard.Objective("Navigation", "", "")
                 .WithText("Sunny, Cloudy, Rainy, Stormy")
-                .WithInfo(84, 1, Artist.Unknown));
+                .WithInfo(84, 1, null));
         }
     }
 }

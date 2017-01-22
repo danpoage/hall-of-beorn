@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTraits("Harad.", "Noble.")
                 .WithText("You may use resources from Kahliel's resource pool to pay for Harad ally cards of any sphere.\r\nAction: Discard a Harad ally card from your hand to ready a Harad character in play. (Limit once per phase.)")
                 .WithFlavor("...the Southrons were bold men and grim...\r\n-The Return of the King")
-                .WithInfo(1, 1, Artist.Unknown));
+                .WithInfo(1, 1, Artist.Ryan_Valle));
 
             addCard(LotRCard.Ally("Jubayr", Sphere.Spirit, 5, 1, 2, 3, 3)
                 .WithUnique()

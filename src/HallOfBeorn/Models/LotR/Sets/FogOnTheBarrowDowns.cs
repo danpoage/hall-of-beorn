@@ -37,8 +37,7 @@ Players cannot affect players or cards that do not share a common staging area. 
 
 During the encounter phase, players only reveal 1 card per player that shares their staging area. Encounter card effects are limited to players and cards at that stage. Effects that reference 'each player' only affect each player at that staging area.",
                 CardNumber = 0,
-                Quantity = 1,
-                Artist = Artist.Unknown
+                Quantity = 1
             });
             Cards.Add(new LotRCard()
             {
@@ -68,8 +67,7 @@ Fog on the Barrow-downs expansion includes 2 cards that can only be used when pl
 
 The Lord of the ~Rings: The Black Riders Saga Expansion is required to play Fog on the Barrow-downs in campaign mode.",
                 CardNumber = 0,
-                Quantity = 1,
-                Artist = Artist.Unknown
+                Quantity = 1
             });
             Cards.Add(new LotRCard()
             {

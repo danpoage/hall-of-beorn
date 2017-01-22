@@ -53,8 +53,7 @@ Indestructible
 
 An enemy with the indestructible keyword cannot be destroyed by damage, even when it has damage on it equal to its hit points.",
                 CardNumber = 0,
-                Quantity = 1,
-                Artist = Artist.Unknown
+                Quantity = 1
             });
             Cards.Add(new LotRCard()
             {
@@ -70,8 +69,7 @@ The Old ~Forest expansion includes 2 cards that can only be used when playing th
 
 The Lord of the ~Rings : The Black Riders Saga Expansion is required to play The Old ~Forest in campaign mode.",
                 CardNumber = 0,
-                Quantity = 1,
-                Artist = Artist.Unknown
+                Quantity = 1
             });
             Cards.Add(new LotRCard()
             {

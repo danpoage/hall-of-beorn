@@ -315,7 +315,7 @@ namespace HallOfBeorn.Services.LotR
                 filters.Add(new SearchFilter((s, c) => { return c.EngagementCost.CompareTo(s.EngagementCostOperator, s.EngagementCost); }, 100, "Engagement Cost" + model.EngagementCostOperator.ToEnumDisplayString() + " '" + model.EngagementCost + "'"));
 
             if (model.HasArtist())
-                filters.Add(new SearchFilter((s, c) => { return s.Artist == c.Artist.Name; }, 100, "Has Artist '" + model.Artist + "'"));
+                filters.Add(new SearchFilter((s, c) => { return c.Artist != null && s.Artist == c.Artist.Name; }, 100, "Has Artist '" + model.Artist + "'"));
 
             if (model.HasEncounterSet())
                 filters.Add(new SearchFilter((s, c) => { return s.EncounterSet == c.EncounterSet || s.EncounterSet == c.AlternateEncounterSet; }, 100, "Has Encounter Set '" + model.EncounterSet + "'"));

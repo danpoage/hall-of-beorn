@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models
 
             Text = string.Empty;
             FlavorText = string.Empty;
+
+            Artist = Artist.None;
         }
 
         public const byte VALUE_X = 254;

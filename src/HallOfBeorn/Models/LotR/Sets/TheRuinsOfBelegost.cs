@@ -25,7 +25,7 @@ in the Blue Mountains were ruined at the
 breaking of Thangorodrim.
             -The Return of the King
 
-Explore flooded ruins and encounter ancient evils in The Ruins of Belegost, a scenario designed for The Lord of the Rings: The Card Game special event at Gen Con 2015. This scenario can be played in both standard mode and easy mode, remove each card with a gold-bordered encounter set icon from the encounter deck and add 1 resource to each hero's resource pool when setting up the game.
+Explore flooded ruins and encounter ancient evils in The Ruins of Belegost, a scenario designed for The Lord of the ~Rings: The Card Game special event at Gen Con 2015. This scenario can be played in both standard mode and easy mode, remove each card with a gold-bordered encounter set icon from the encounter deck and add 1 resource to each hero's resource pool when setting up the game.
 
 Expansion Symbol
 
@@ -33,8 +33,7 @@ The cards in The Ruins of Belegost scenario can be identified by this symbol bef
 
 Page 1/4",
                 CardNumber = 0,
-                Quantity = 1,
-                Artist = Artist.Unknown
+                Quantity = 1
             });
             Cards.Add(new LotRCard()
             {
@@ -66,8 +65,7 @@ Loot is a new keyword that appears on some objective cards in The Ruins of Beleg
 If a card with the Loot keyword is revealed from the encounter deck, discard it and reveal another card from the top of the encounter deck.
 
 Page 3/4",
-                CardNumber = 0,
-                Artist = Artist.Unknown
+                CardNumber = 0
             });
             Cards.Add(new LotRCard()
             {
@@ -83,8 +81,7 @@ Immune to player card effects
 Cards with the text 'Immune to player card effects' ignore the effects of all player cards. Additionally, cards that are immune to player card effects cannot be chosen as targets of player card effects.
 
 Page 4/4",
-                CardNumber = 0,
-                Artist = Artist.Unknown
+                CardNumber = 0
             });
             Cards.Add(LotRCard.Hero("Gimli", "", Sphere.Tactics, 11, 2, 2, 2, 5)
                 .WithTraits("Dwarf.", "Noble.", "Warrior.")
