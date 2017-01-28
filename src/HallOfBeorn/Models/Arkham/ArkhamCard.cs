@@ -244,6 +244,11 @@ namespace HallOfBeorn.Models.Arkham
             };
         }
 
+        public static ArkhamCard Treachery(string title, ArkhamEncounterSet encounterSet)
+        {
+            return Treachery(title, ArkhamCardSubtype.None, encounterSet);
+        }
+
         public static ArkhamCard Treachery(string title, ArkhamCardSubtype subtype)
         {
             return Treachery(title, subtype, null);

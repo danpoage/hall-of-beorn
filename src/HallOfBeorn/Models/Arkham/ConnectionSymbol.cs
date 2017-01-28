@@ -43,6 +43,11 @@ namespace HallOfBeorn.Models.Arkham
         Forgotten_Marsh,
         Wilderness,
         Foul_Swamp,
-        Unhallowed_Land
+        Unhallowed_Land,
+
+        //The Dunwich Legacy
+        Administration,
+        Alchemy_Labs,
+        Back_Hall_Doorway
     }
 }

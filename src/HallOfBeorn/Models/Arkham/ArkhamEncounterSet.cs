@@ -58,5 +58,10 @@ namespace HallOfBeorn.Models.Arkham
 
         public static ArkhamEncounterSet CurseOfTheRougarou = new ArkhamEncounterSet { Name = "Curse of the Rougarou" };
         public static ArkhamEncounterSet TheBayou = new ArkhamEncounterSet { Name = "The Bayou" };
+
+        public static ArkhamEncounterSet ExtracurricularActivity = new ArkhamEncounterSet { Name = "Extracurricular Activity" };
+        public static ArkhamEncounterSet TheHouseAlwaysWins = new ArkhamEncounterSet { Name = "The House Always Wins" };
+        public static ArkhamEncounterSet BeastThralls = new ArkhamEncounterSet { Name = "Beast-thralls" };
+        public static ArkhamEncounterSet Sorcery = new ArkhamEncounterSet { Name = "Sorcery" };
     }
 }
