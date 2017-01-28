@@ -21,6 +21,16 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithFlavor("...the Southrons were bold men and grim...\r\n-The Return of the King")
                 .WithInfo(1, 1, Artist.Ryan_Valle));
 
+            addCard(LotRCard.PlayerSideQuest("Prepare for Battle", string.Empty, Sphere.Leadership, 1, 6)
+                .WithFlavor("\"Soon there will be battle on the fields. A sortie must be made ready.\"\r\n-Gandalf, The Return of the King")
+                .WithText("Limit 1 copy of Prepare for Battle in the victory display.\r\nWhile this quest is in the victory display, the first player draws an additional card during the resource phase.")
+                .WithVictoryPoints(1)
+                .WithInfo(3, 3, Artist.Sebastian_Zakrzewski));
+
+            addCard(LotRCard.Event("Wait no Longer", string.Empty, Sphere.Tactics, 2)
+                .WithText("Response: At the beginning of the quest phase, search the top 5 cards of the encounter deck for an enemy and put it into play engaged with you. Then, reveal one less encounter card this phase (to a minimum of 0). Shuffle the encounter deck.")
+                .WithFlavor("\"We must press our Enemy, and no longer wait upon him for the move.\"\r\n-Aragorn, The Return of the King")
+                .WithInfo(5, 3, Artist.John_Pacer));
             addCard(LotRCard.Ally("Jubayr", Sphere.Spirit, 5, 1, 2, 3, 3)
                 .WithUnique()
                 .WithTraits("Harad.", "Warrior.")

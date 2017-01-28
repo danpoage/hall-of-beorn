@@ -561,6 +561,7 @@ namespace HallOfBeorn.Models
 
             //The Mumakil
             all.Add(Artist.Ryan_Valle);
+            all.Add(Artist.Sebastian_Zakrzewski);
 
             //Murder at the Prancing Pony
             all.Add(Artist.Lutful_Valeriya_Romanovna);
@@ -1057,6 +1058,7 @@ namespace HallOfBeorn.Models
         public static Artist Sarah_Morris = new Artist { Name = "Sarah Morris", URL = "https://www.google.com/search?q=sarah+morris+fantasy+art" };
         public static Artist Scott_Murphy = new Artist { Name = "Scott Murphy", URL = "http://murphyillustration.deviantart.com" };
         public static Artist Sebastian_Giacobino = new Artist { Name = "Sebastian Giacobino", URL = "http://giacobino.deviantart.com" };
+        public static Artist Sebastian_Zakrzewski = new Artist { Name = "Sebastian Zakrzewski", URL = "https://www.artstation.com/artist/vxm" };
         public static Artist Sidharth_Chatursedi = new Artist { Name = "Sidharth Chatursedi", URL = "http://sidharthchaturvedi.deviantart.com" };
         public static Artist Silver_Saaremael = new Artist { Name = "Silver Saaremäel", URL = "http://sept13.deviantart.com" };
         public static Artist Simon_Dominic = new Artist { Name = "Simon Dominic", URL = "https://www.google.com/search?q=Simon+Dominic+fantasy+art" };
