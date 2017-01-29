@@ -1126,5 +1126,7 @@ namespace HallOfBeorn.Models
         public static Artist Chris_Peuler = new Artist { Name = "Chris Peuler", URL = "http://www.chrispeuler.com" };
         public static Artist Clark_Huggins = new Artist { Name = "Clark Huggins", URL = "http://www.clarkhugginsillustrations.com" };
         public static Artist Vlad_Ricean = new Artist { Name = "Vlad Ricean", URL = "https://www.artstation.com/artist/vladracean" };
+        public static Artist Jonny_Klein = new Artist { Name = "Jonny Klein", URL = "http://jonnyklein.deviantart.com" };
+        public static Artist Bryce_Cook = new Artist { Name = "Bryce Cook", URL = "https://www.artstation.com/artist/hammins" };
     }
 }

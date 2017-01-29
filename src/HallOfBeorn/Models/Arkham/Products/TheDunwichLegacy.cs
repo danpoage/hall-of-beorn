@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.Arkham.Products
         private ArkhamEncounterSet house = ArkhamEncounterSet.TheHouseAlwaysWins;
         private ArkhamEncounterSet beast = ArkhamEncounterSet.BeastThralls;
         private ArkhamEncounterSet sorcery = ArkhamEncounterSet.Sorcery;
+        private ArkhamEncounterSet hideous = ArkhamEncounterSet.HideousAbominations;
+        private ArkhamEncounterSet badLuck = ArkhamEncounterSet.BadLuck;
 
         public TheDunwichLegacy()
             : base("The Dunwich Legacy", "TDL", "AHC02", 2, new DateTime(2016, 12, 31))
@@ -41,6 +43,12 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithAssetSlot(AssetSlot.One_Hand)
                 .WithInfo(16, 2, Artist.Matthew_Cowdery));
 
+            addCard(ArkhamCard.Asset("Clarity of Mind", ClassSymbol.Mystic, 2)
+                .WithAssetSlot(AssetSlot.Arcane)
+                .WithTraits("Spell.")
+                .WithKeywords("Uses 3.")
+                .WithText("Uses (3 charges).\r\n{Action} Spend 1 charge: Heal 1 horror from an investigator at your location.")
+                .WithInfo(30, 2, Artist.Aaron_B_Miller));
             addCard(ArkhamCard.Event("Bind Monster", ClassSymbol.Mystic, 3)
                 .WithLevel(2)
                 .WithIcons(SkillIcon.Willpower, SkillIcon.Intellect)
@@ -53,6 +61,11 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithTraits("Tactic.")
                 .WithText("{Evade}. If you succeed, if the enemy is non-{t:Elite}, evade the enemy and move it to a connecting location.")
                 .WithInfo(34, 2, Artist.Rafal_Hrynkiewicz));
+
+            addCard(ArkhamCard.Treachery("Chronophobia", ArkhamCardSubtype.Basic_Weakness)
+                .WithTraits("Madness.")
+                .WithText("{Revelation} – Put Chronophobia into play in your threat area.\r\n{Forced} – At the end of your turn: Take 1 direct horror.\r\n{Action} {Action}: Discard Chronophobia.")
+                .WithInfo(39, 2, Artist.Sara_Biddle));
 
             addCard(ArkhamCard.Act("After Hours", "The Head Janitor", 1, Number.Of(3).PerInvestigator(), ArkhamEncounterSet.ExtracurricularActivity)
                 .WithFlavor("Professor Rice was last seen several hours ago by one of Armitage's students, in the Humanities building.")
@@ -91,6 +104,13 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithText("{Revelation} – Put \"Jazz\" Mulligan into play at your location.\r\nWhile \"Jazz\" Mulligan is not controlled by a player, he gains: \"{Action}: {Parley}. Test {Intellect} (3). If successful, take control of 'Jazz' Mulligan.\"\r\nWhile you control \"Jazz\" Mulligan, you ignore the text on each unrevealed {t:Miskatonic} location.")
                 .WithInfo(60, 1, Artist.Nicholas_Elias));
 
+            addCard(ArkhamCard.Agenda("Chaos in the Clover Club", "The Building Collapses", 3, Number.Of(7), house)
+                .WithFlavor("Amidst the chaos and confusion, the strange abominations attack everyone in the club. Screams echo through the halls as the blood begins to spray.")
+                .WithText("{Forced} – At the start of the enemy phase: Discard each {t:Criminal} enemy in the same location as an {t:Abomination} enemy.")
+                .WithBackFlavor("As the strange abominations continue to rampage through the club, the building’s foundations shake and tremble. You flee toward the exit, but you are caught in the collapsing rubble as the club is destroyed.")
+                .WithBackText("<b>(&rarr;R4)</b>")
+                .WithInfo(65, 1, Artist.Matthew_Cowdery));
+
             addCard(ArkhamCard.Act("Beginner's Luck", "High Roller", 1, Number.Of(4).PerInvestigator(), house)
                 .WithFlavor("You need to find Dr. Morgan. The club is packed; perhaps somebody knows where he is.")
                 .WithText("{Reaction} When you reveal a chaos token: You may treat that token as if it were any other token in the chaos bag. If you do, remember that you have \"cheated.\" (Group limit once per round.)\r\n{Objective} – When the investigators have collected the requisite number of clues, they must immediately spend them and advance.")
@@ -105,6 +125,27 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithBackText("– If an investigator resigned with Dr. Francis Morgan under his or her control, <b>(&rarr; R2)</b>– Otherwise, <b>(&rarr; R1)</b>")
                 .WithInfo(68, 1, Artist.Chris_Peuler));
 
+            addCard(ArkhamCard.Location("Clover Club Lounge", ConnectionSymbol.Clover_Club_Lounge, Number.Of(2), Number.Of(0), house)
+                .WithTraits("Clover Club.")
+                .WithFlavor("Comfortable leather couches, mahogany furniture, and an array of beautiful art greets gamblers, tempting them into the life of the would-be affluent.")
+                .WithText("While it is Act 1, Clover Club Lounge gains: \"{Action} Discard an {t:Ally} asset from your hand: Gain 2 clues from the token pool. (Limit once per game.)\"")
+                .WithInfo(71, 1, Artist.Yoann_Boissonnet));
+            addCard(ArkhamCard.Location("Clover Club Bar", ConnectionSymbol.Clover_Club_Bar, Number.Of(3), Number.Of(0), house)
+                .WithTraits("Clover Club.")
+                .WithFlavor("The shelves behind the bar sag beneath the weight of all manner of bootlegged drinks: cheap ales, moonshine, expensive bottles of wine, aged whiskey. If only you had a couple hours to kill...")
+                .WithBackText("While it is Act 1, Clover Club Bar gains: \"{Action} Spend 2 resources: Gain 2 clues from the token pool and draw 2 cards. Remember that you have ‘had a drink.’ (Limit once per game.)\"")
+                .WithInfo(72, 1, Artist.Romana_Kendelic));
+            addCard(ArkhamCard.Location("Clover Club Cardroom", ConnectionSymbol.Clover_Club_Cardroom, Number.Of(3), Number.Of(0), house)
+                .WithTraits("Clover Club.")
+                .WithFlavor("As you approach the cardroom, the clinking of poker chips and the shuffling of cards is punctuated by shouts of revelry and frustration. Your thoughts are nearly drowned out by the racket.")
+                .WithBackText("While it is Act 1, Clover Club Cardroom gains: \"{Action} Spend 2 resources: Reveal a random chaos token.<br>If it is a {Elder Sign} symbol, gain 2 clues and 2 resources from the token bank.<br>If it is an even number, gain 2 clues from the token bank.<br>If it is an odd number or a {Skull}, {Cultist}, {Tablet}, [Elder Thing], or {Tentacle} symbol, nothing happens.\"")
+                .WithInfo(73, 1, Artist.Jonny_Klein));
+            addCard(ArkhamCard.Location("Darkened Hall", ConnectionSymbol.Darkened_Hall, Number.Of(4), Number.Of(0), house)
+                .WithTraits("Clover Club.")
+                .WithFlavor("A heavy oak door stands in a secluded corner of the club. As you approach it, the air grows heavy and the clamor of the cardroom fades behind you.")
+                .WithBackText("{Forced} – When Darkened Hall is revealed: Put into play the 3 set-aside Back Hall Doorway locations.")
+                .WithBackFlavor("The door slams shut behind you, and you stand in sudden silence. This area of the club is lonesome and devoid of warmth and color. Somehow, the spotless floor and walls seem more sinister than inviting.")
+                .WithInfo(74, 1, Artist.Mark_Molnar));
             addCard(ArkhamCard.Location("Back Hall Doorway", ConnectionSymbol.Back_Hall_Doorway, Number.Of(2), Number.Of(1).PerInvestigator(), house)
                 .WithSubtitle("Art Gallery")
                 .WithTraits("Clover Club.")
@@ -132,12 +173,27 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithVictoryPoints(1)
                 .WithBackArtist(Artist.Mark_Molnar)
                 .WithInfo(77, 1, Artist.Yoann_Boissonnet));
+            addCard(ArkhamCard.Enemy("Clover Club Pit Boss", Number.Of(3), Number.Of(4), Number.Of(3), Number.Of(2), Number.Of(0), house)
+                .WithTraits("Criminal.", "Elite.")
+                .WithKeywords("Hunter.")
+                .WithText("Prey – Highest {Intellect}.\r\n{k:Hunter}\r\n{Forced} – After an investigator at Clover Club Pit Boss’s location gains any number of clues: Clover Club Pit Boss readies, engages that investigator, and makes an immediate attack.")
+                .WithInfo(78, 1, Artist.Bryce_Cook));
+
+            addCard(ArkhamCard.Treachery("Arousing Suspicions", house)
+                .WithText("{Revelation} – Place 1 doom on each {t:Criminal} enemy at your location. If no doom was placed by this effect, lose 2 resources.")
+                .WithFlavor("Eyes are all around you, watching your every move.")
+                .WithInfo(82, 2, Artist.Clark_Huggins));
 
             addCard(ArkhamCard.Treachery("Beyond the Veil", sorcery)
                 .WithTraits("Hex.")
                 .WithKeywords("Surge.")
                 .WithText("Surge.\r\n{Revelation} – Put Beyond the Veil into play in your threat area if there is no copy of Beyond the Veil in your threat area.\r\n{Forced} – If your deck has no cards in it: Take 10 damage and discard Beyond the Veil.")
                 .WithInfo(84, 3, Artist.Brian_Valenzuela));
+
+            addCard(ArkhamCard.Treachery("Cursed Luck", badLuck)
+                .WithTraits("Omen.")
+                .WithText("{Revelation} – Put Cursed Luck into play in your threat area.\r\nYou get –1 skill value during skill tests.\r\n{Forced} – After you succeed at a skill test by 1 or more: Discard Cursed Luck.")
+                .WithInfo(92, 3, Artist.Adam_Lane));
 
             addCard(ArkhamCard.Enemy("Avian Thrall", Number.Of(5), Number.Of(4), Number.Of(3), Number.Of(1), Number.Of(1), beast)
                 .WithTraits("Creature.", "Monster.", "Abomination.")
@@ -150,10 +206,11 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithText("{Revelation} – If there are no {t:Abomination} enemies in play, Altered Beast gains surge. Otherwise, choose an {t:Abomination} enemy. Heal all damage from that enemy and attached Altered Beast to it.\r\n{Forced} – When you enter attached enemy's location (or vice-versa): Take 1 horror.")
                 .WithInfo(96, 2, Artist.Chun_Lo));
 
-            addCard(ArkhamCard.Treachery("Arousing Suspicions", house)
-                .WithText("{Revelation} – Place 1 doom on each {t:Criminal} enemy at your location. If no doom was placed by this effect, lose 2 resources.")
-                .WithFlavor("Eyes are all around you, watching your every move.")
-                .WithInfo(82, 2, Artist.Clark_Huggins));
+            addCard(ArkhamCard.Enemy("Conglomeration of Spheres", Number.Of(1), Number.Of(6), Number.Of(4), Number.Of(1), Number.Of(1), hideous)
+                .WithTraits("Monster.", "Abomination.")
+                .WithKeywords("Hunter.")
+                .WithText("Prey – Lowest {Willpower}.\r\n{k:Hunter}\r\n{Forced} – After you perform an attack against the Conglomeration of Spheres using a Melee card: Discard that card.")
+                .WithInfo(103, 2, Artist.Stephen_Somers));
         }
     }
 }

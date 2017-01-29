@@ -63,5 +63,7 @@ namespace HallOfBeorn.Models.Arkham
         public static ArkhamEncounterSet TheHouseAlwaysWins = new ArkhamEncounterSet { Name = "The House Always Wins" };
         public static ArkhamEncounterSet BeastThralls = new ArkhamEncounterSet { Name = "Beast-thralls" };
         public static ArkhamEncounterSet Sorcery = new ArkhamEncounterSet { Name = "Sorcery" };
+        public static ArkhamEncounterSet HideousAbominations = new ArkhamEncounterSet { Name = "Hideous Abominations" };
+        public static ArkhamEncounterSet BadLuck = new ArkhamEncounterSet { Name = "Bad Luck" };
     }
 }

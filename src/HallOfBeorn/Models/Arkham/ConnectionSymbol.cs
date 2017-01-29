@@ -48,6 +48,10 @@ namespace HallOfBeorn.Models.Arkham
         //The Dunwich Legacy
         Administration,
         Alchemy_Labs,
-        Back_Hall_Doorway
+        Back_Hall_Doorway,
+        Clover_Club_Bar,
+        Clover_Club_Cardroom,
+        Clover_Club_Lounge,
+        Darkened_Hall
     }
 }
