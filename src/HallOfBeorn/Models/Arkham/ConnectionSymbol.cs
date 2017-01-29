@@ -52,6 +52,7 @@ namespace HallOfBeorn.Models.Arkham
         Clover_Club_Bar,
         Clover_Club_Cardroom,
         Clover_Club_Lounge,
-        Darkened_Hall
+        Darkened_Hall,
+        Dormitories
     }
 }

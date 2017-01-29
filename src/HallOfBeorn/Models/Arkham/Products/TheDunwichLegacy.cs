@@ -36,12 +36,24 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithBackText("Deck Size: 30.\r\nDeckbuilding Options: Survivor cards ([Survivor]) level 0-5, Neutral cards level 0-5, up to five level 0 cards from any other class.\r\nDeckbuilding Requirements (do not count towards deck size): Duke, Wracked by Nightmares, 1 random basic weakness.")
                 .WithInfo(5, 1, Artist.Jake_Murray));
 
+            addCard(ArkhamCard.Asset("Duke", ClassSymbol.None, 2)
+                .WithUnique()
+                .WithTraits("Ally.", "Companion.")
+                .WithHealth(2).WithSanity(3)
+                .WithText("\"Ashcan\" Pete deck only.\r\n{Action} Exhaust Duke: {Fight}. You attack with a base {Combat} skill of 4. This attack deals +1 damage.\r\n{Action} Exhaust Duke: Investigate. You investigate with a base {Intellect} skill of 4. You may move to a connecting location immediately before investigating with this effect.")
+                .WithInfo(14, 1, Artist.Owen_William_Weber));
+
             addCard(ArkhamCard.Asset("Blackjack", ClassSymbol.Guardian, 1)
                 .WithIcons(SkillIcon.Combat)
                 .WithTraits("Item.", "Weapon.", "Melee.")
                 .WithText("{Action}: {Fight}. You get +1 {Combat} for this attack. If you perform this attack against an enemy engaged with another investigator and you fail, you deal no damage.")
                 .WithAssetSlot(AssetSlot.One_Hand)
                 .WithInfo(16, 2, Artist.Matthew_Cowdery));
+
+            addCard(ArkhamCard.Skill("Double or Nothing", ClassSymbol.Rogue, 0)
+                .WithTraits("Fortune.")
+                .WithText("Max 1 committed per skill test.\r\nDouble the difficulty of this skill test. If this skill test is successful, resolve the effects of the successful test twice.")
+                .WithInfo(26, 2, Artist.Mark_Molnar));
 
             addCard(ArkhamCard.Asset("Clarity of Mind", ClassSymbol.Mystic, 2)
                 .WithAssetSlot(AssetSlot.Arcane)
@@ -66,6 +78,21 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithTraits("Madness.")
                 .WithText("{Revelation} – Put Chronophobia into play in your threat area.\r\n{Forced} – At the end of your turn: Take 1 direct horror.\r\n{Action} {Action}: Discard Chronophobia.")
                 .WithInfo(39, 2, Artist.Sara_Biddle));
+            addCard(ArkhamCard.Asset("Dr. Henry Armitage", ClassSymbol.None, 2, AssetSlot.Ally)
+                .WithUnique()
+                .WithHealth(2).WithSanity(2)
+                .WithIcons(SkillIcon.Wild, SkillIcon.Wild)
+                .WithTraits("Ally.", "Miskatonic.")
+                .WithText("{Reaction} After you draw a card, discard that card and exhaust Dr. Henry Armitage: Gain 3 resources.")
+                .WithFlavor("Armitage knew he would be meddling with terrible powers, yet saw that there was no other way to annul the deeper and more malign meddling which others had done before him.<br>–H. P. Lovecraft, \"The Dunwich Horror\"")
+                .WithInfo(40, 1, Artist.Anders_Finer));
+
+            addCard(ArkhamCard.Agenda("Dead of Night", "An Experiment Gone Wrong", 2, Number.Of(3), extra)
+                .WithFlavor("Professor Rice’s disappearance isn’t the only thing amiss at the university. You’re unsure exactly what is going on, but you’re starting to believe Armitage was right in asking for your help.")
+                .WithText("Each investigator’s maximum hand size is reduced by 3 while checking his or her hand size during the upkeep phase.")
+                .WithBackFlavor("A cry of fear echoes through the campus, and several students flee from the eastern side of the university, where the Science building can be found. Could this commotion be linked to Professor Rice’s disappearance?")
+                .WithBackText("If the Dormitories location is not in play, put it into play.\r\nIf The Experiment is in play, move it 1 location towards the Dormitories.\r\nIf The Experiment is not in play, spawn it in the Science Building.")
+                .WithInfo(43, 1, Artist.Yoann_Boissonnet));
 
             addCard(ArkhamCard.Act("After Hours", "The Head Janitor", 1, Number.Of(3).PerInvestigator(), ArkhamEncounterSet.ExtracurricularActivity)
                 .WithFlavor("Professor Rice was last seen several hours ago by one of Armitage's students, in the Humanities building.")
@@ -80,6 +107,14 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithBackText("<b>(&rarr;R3)</b>")
                 .WithInfo(47, 1, Artist.Tomasz_Jedruszek));
 
+            addCard(ArkhamCard.Location("Dormitories", ConnectionSymbol.Dormitories, Number.Of(1), Number.Of(3).PerInvestigator(), extra)
+                .WithTraits("Miskatonic.")
+                .WithText("The door leading into the Dormitories is locked. You cannot move into the Dormitories.")
+                .WithFlavor("The red brick form of the west dormitory could be seen through the trees...<br>–Graham McNeill, Ghouls of the Miskatonic")
+                .WithBackText("{Objective} – If investigators in the Dormitories spend 3 {Per Investigator} clues, as a group: <b>(&rarr;R2)</b>")
+                .WithBackFlavor("As you explore these old, well-kept buildings, you find yourself wondering whether the beds are comfortable...")
+                .WithVictoryPoints(1)
+                .WithInfo(52, 1, Artist.Ignacio_Bazan_Lazcano));
             addCard(ArkhamCard.Location("Administration", ConnectionSymbol.Administration, Number.Of(4), Number.Of(1).PerInvestigator(), extra)
                 .WithTraits("Miskatonic.")
                 .WithFlavor("Around the aged administration building, creepers of ivy climb from the ground in an effort to claim it. The old hall stands alone in an isolated section of the campus, apart from the day-to-day bustle of students.")
@@ -178,6 +213,14 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithKeywords("Hunter.")
                 .WithText("Prey – Highest {Intellect}.\r\n{k:Hunter}\r\n{Forced} – After an investigator at Clover Club Pit Boss’s location gains any number of clues: Clover Club Pit Boss readies, engages that investigator, and makes an immediate attack.")
                 .WithInfo(78, 1, Artist.Bryce_Cook));
+
+            addCard(ArkhamCard.Asset("Dr. Francis Morgan", ClassSymbol.None, 3, AssetSlot.Ally)
+                .WithIcons(SkillIcon.Combat, SkillIcon.Wild)
+                .WithUnique()
+                .WithHealth(4).WithSanity(1)
+                .WithTraits("Ally.", "Miskatonic.")
+                .WithText("You get +1 {Combat}.\r\n{Reaction} After you defeat an enemy, exhaust Dr. Francis Morgan: Draw 1 card.")
+                .WithInfo(80, 1, Artist.Falk));
 
             addCard(ArkhamCard.Treachery("Arousing Suspicions", house)
                 .WithText("{Revelation} – Place 1 doom on each {t:Criminal} enemy at your location. If no doom was placed by this effect, lose 2 resources.")
