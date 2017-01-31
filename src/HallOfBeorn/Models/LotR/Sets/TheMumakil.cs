@@ -7,6 +7,8 @@ namespace HallOfBeorn.Models.LotR.Sets
 {
     public class TheMumakil : CardSet
     {
+        private const string setName = "The Mûmakil";
+
         protected override void Initialize()
         {
             Name = "The Mûmakil";
@@ -21,7 +23,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithFlavor("...the Southrons were bold men and grim...\r\n-The Return of the King")
                 .WithInfo(1, 1, Artist.Ryan_Valle));
             addCard(LotRCard.Ally("Andrath Guardsman", Sphere.Leadership, 2, 1, 0, 1, 2)
-                .WithTraits("Dúnedain", "Ranger")
+                .WithTraits("Dúnedain.", "Ranger.")
                 .WithText("Response: After you play Andrath Guardsman from your hand, choose a non-unique enemy engaged with you. That enemy cannot attack you this round.")
                 .WithFlavor("They forgot or ignored what little they had known of the Guardians, and of the labours of those that made possible the long peace of the Shire.\r\n-The Fellowship of the Ring")
                 .WithInfo(2, 3, Artist.Adam_Lane));
@@ -65,6 +67,89 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithKeywords("Restricted.")
                 .WithText("Each Harad character gets +1 Willpower.\r\nRefresh Action: Exhaust Khaliel's Headdress to shuffle the topmost Harad ally in your discard pile into your deck.")
                 .WithInfo(10, 3, Artist.Lucas_Durham));
+            addCard(LotRCard.Objective("Horse-hair Lasso", string.Empty, setName)
+                .WithTraits("Capture.")
+                .WithText("Response: After the attached enemy is dealt any amount of damage, the engaged player shuffles his deck and discards the top card. If the discarded card’s cost is equal to or greater than the attached enemy’s remaining hit points, add Horse-hair Lasso and attached enemy to the victory display.")
+                .WithVictoryPoints(1)
+                .WithInfo(11, 1, Artist.Nikolas_Hagialas));
+            addCard(LotRCard.Objective("Poisoned Spear", string.Empty, setName)
+                .WithTraits("Capture.")
+                .WithText("Response: After the players quest successfully, the engaged player discards the top card of the encounter deck. If the discarded card’s [Threat] is equal to or greater than the attached enemy’s remaining hit points, add Poisoned Spear and attached enemy to the victory display.")
+                .WithVictoryPoints(1)
+                .WithInfo(12, 1, Artist.Leanna_Crossan));
+            addCard(LotRCard.Objective("Pit Trap", string.Empty, setName)
+                .WithTraits("Capture.")
+                .WithText("Response: After the players travel to a location, if the active location's printed Threat is equal to or greater than the attached enemy's remaining hit points, the engaged player adds Pit Trap and attached enemy to the victory display.")
+                .WithVictoryPoints(1)
+                .WithInfo(13, 1, Artist.Lucas_Staniec));
+            addCard(LotRCard.Objective("Noose of Vines", string.Empty, setName)
+                .WithTraits("Capture.")
+                .WithText("Response: After a character defends an attack against the attached enemy, if the defending character has more remaining hit points than the attached enemy, add Noose of Vines and attached enemy to the victory display.")
+                .WithVictoryPoints(1)
+                .WithInfo(14, 1, Artist.Dani_Hartel));
+            addCard(LotRCard.Enemy("Wild Mûmak", string.Empty, setName, 40, 3, 6, 3, 9)
+                .WithTraits("Creature.")
+                .WithKeywords("Indestructible.")
+                .WithText("Immune to player card effects.\r\nCannot take more tha 3 damage each round.\r\nForced: At the end of the round, the engaged player must choose: either return Wild Mûmak to the staging area, or it makes an immediate attack.")
+                .WithVictoryPoints(3)
+                .WithInfo(15, 4, Artist.Alvaro_Calvo_Escudero));
+            addCard(LotRCard.Enemy("Harad Tiger", string.Empty, setName, 0, 4, 4, 3, 5)
+                .WithTraits("Creature.")
+                .WithText("Cannot be optionally engaged.\r\nForced: After Harad Tiger attacks and destroys a character, return it to the staging area.")
+                .WithShadow("Shadow: Attacking enemy makes an additional attack against you after this one.")
+                .WithInfo(16, 1, Artist.Ramon_Puasa_Jr));
+            addCard(LotRCard.Enemy("Territorial Ape", string.Empty, setName, 35, 2, 2, 2, 4)
+                .WithTraits("Creature.")
+                .WithText("Territorial Ape gets +X Threat and + X Attack, where X is the Threat of the active location.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if a location was explored this round).")
+                .WithInfo(17, 4, Artist.Guillaume_Ducos));
+            addCard(LotRCard.Enemy("Strangling Python", string.Empty, setName, 25, 1, 3, 1, 3)
+                .WithTraits("Creature.")
+                .WithKeywords("Surge.")
+                .WithText("Forced: After Strangling Python damages a character, attach it to that character. (Counts as a Condition attachment with the text: \"Attached character cannot ready.\")")
+                .WithInfo(18, 2, Artist.Dmitry_Prosvirnin));
+            addCard(LotRCard.Enemy("Giant Centipede", string.Empty, setName, 30, 3, 3, 1, 2)
+                .WithTraits("Creature.")
+                .WithText("Forced: After Giant Centipede damages a character, treat that character’s text box as if it were blank until the end of the round (except for Traits).")
+                .WithShadow("Shadow: Treat the defending character’s text box as blank until the end of the round.")
+                .WithInfo(19, 2, Artist.Dmitry_Prosvirnin));
+            addCard(LotRCard.Location("Mûmak Trail", string.Empty, setName, 2, 3)
+                .WithTraits("Forest.")
+                .WithText("While Mumak Trail is the active location, it gains: \"Response: When Mumak Trail leaves play as an explored location, search the encounter deck and discard pile for a Wild Mumak and add it to the staging area. Shuffle the encounter deck.\"\r\nTravel: Raise each player's threat by 1 to travel here.")
+                .WithInfo(20, 4, Artist.Lucas_Staniec));
+            addCard(LotRCard.Treachery("Stampeding Oliphaunt", string.Empty, setName)
+                .WithKeywords("Doomed 1.")
+                .WithText("When Revealed: Choose a Wild Mûmak in the staging area to attack the first player. If no attacks are made this way, search the encounter deck and discard pile for a Mûmak Trail and add it to the staging area. Shuffle the encounter deck.")
+                .WithFlavor("On the great beast thundered, blundering in blind wrath through pool and thicket. -The Two Towers")
+                .WithInfo(21, 2, Artist.Alvaro_Calvo_Escudero));
+            addCard(LotRCard.Treachery("The Savage South", string.Empty, setName)
+                .WithText("When Revealed: Each player discards the top 5 cards of his deck. Each player discards each card he controls that shares a title with any of the 5 cards he just discarded.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, return attacking enemy to the staging area.")
+                .WithInfo(22, 2, Artist.Dimitri_Bielak));
+            addCard(LotRCard.Treachery("Terrible Fever", string.Empty, setName)
+                .WithText("When Revealed: Remove a hero from the quest and attach Terrible Fever to that hero. (Counts as a Condition attachment with the text: \"Forced: At the end of the round, deal 1 damage to attached character.\")")
+                .WithShadow("Shadow: Defending character cannot ready until the end of the round.")
+                .WithInfo(23, 2, Artist.Marius_Bota));
+            addCard(LotRCard.Treachery("Biting Insects", string.Empty, setName)
+                .WithText("When Revealed: Each player discards a random card from his hand and assigns X damage among characters he controls. X is the discarded card's cost.")
+                .WithShadow("Shadow: Discard a random card from your hand and assign X damage among characters you control. X is the discarded card's cost.")
+                .WithInfo(24, 2, Artist.Alexandr_Elichev));
+            addCard(LotRCard.EncounterSideQuest("Guardians of the Jungle", string.Empty, setName, 6)
+                .WithFlavor("The great apes of the jungle gather in the trees around you. They shadow your steps and slow your progress.")
+                .WithText("Each location gets +1 Threat.\r\nForced: When Guardians of the Jungle becomes the current quest, search the encounter deck and discard pile for a Territorial Ape and put it into play engaged with the first player.")
+                .WithVictoryPoints(10)
+                .WithInfo(25, 1, Artist.Alvaro_Calvo_Escudero));
+            addCard(LotRCard.Quest("Welcome to the Jungle", 1, setName, 12)
+                .WithFlavor("After seeing his village destroyed by Sauron’s Orcs, Kahliel has decided to travel north with you to Gondor. But it is a long road, and you will need mounts to ride. So your Haradrim allies have led you into the great jungle of Harad in search of the might Mumakil.")
+                .WithText("Setup: Set each copy of Wild Mûmak and each Capture objective aside, out of play. Each player adds 1 different location to the staging area. Shuffle the encounter deck.")
+                .WithOppositeFlavor("The jungle is full of danger. The Haradrim warn you to stay alert lest the hunters become the hunted.")
+                .WithOppositeText("Forced: After the active location leaves play as an explored location, shuffle 1 set aside Wild Mûmak into the encounter deck.\r\nThe players cannot advance unless the number of Wild Mûmak in play is equal to the number of players.")
+                .WithInfo(26, 1, Artist.Joshua_Cairos));
+            addCard(LotRCard.Quest("Capture the Oliphaunts", 2, setName, 8)
+                .WithFlavor("You’ve tracked the Mûmakil through miles of dense jungle and battled with the creatures that dwell therein, but now comes the hard part: you must actually capture the Oliphaunts alive.")
+                .WithText("When Revealed: Starting with the first player, each player attaches 1 random set-aside Capture objective to a Wild Mûmak in play.")
+                .WithOppositeText("Forced: At the beginning of the quest phase, if there is no active location, reveal an additional encounter card this phase.\r\nThis stage cannot be defeated while there are any Capture objectives in play. If the players defeat this stage, they win the game.")
+                .WithInfo(27, 1, Artist.Alexander_Gustafson));
         }
     }
 }

@@ -562,6 +562,8 @@ namespace HallOfBeorn.Models
             //The Mumakil
             all.Add(Artist.Ryan_Valle);
             all.Add(Artist.Sebastian_Zakrzewski);
+            all.Add(Artist.Lucas_Staniec);
+            all.Add(Artist.Alexander_Gustafson);
 
             //Murder at the Prancing Pony
             all.Add(Artist.Lutful_Valeriya_Romanovna);
@@ -623,6 +625,7 @@ namespace HallOfBeorn.Models
         public static Artist Aleksi_Briclot = new Artist { Name = "Aleksi Briclot", URL = "http://aleksi--briclot.deviantart.com" };
         public static Artist Alex_McVey = new Artist { Name = "Alex McVey", URL = "http://www.alexmcvey.com" };
         public static Artist Alex_Ruiz = new Artist { Name = "Alex Ruiz", URL = "http://www.conceptmonster.net" };
+        public static Artist Alexander_Gustafson = new Artist { Name = "Alexander Gustafson", URL = "http://www.illustratedpixels.com" };
         public static Artist Alexander_Nanitchkov = new Artist { Name = "Alexander Nanitchkov", URL = "http://tsabo6.deviantart.com" };
         public static Artist Alexandr_Sumerky = new Artist { Name = "Alexandr Sumerky", URL = "http://sumerky.deviantart.com" };
         public static Artist Ali_Kasapoglu = new Artist { Name = "Ali Kasapoglu", URL = "http://alikasapoglu.deviantart.com/gallery" };
@@ -980,6 +983,7 @@ namespace HallOfBeorn.Models
         public static Artist Louis_Green = new Artist { Name = "Louis Green", URL = "http://louisgreen.blogspot.com" };
         public static Artist Lucas_Durham = new Artist { Name = "Lucas Durham", URL = "https://www.google.com/search?q=lucas+durham+art" };
         public static Artist Lucas_Graciano = new Artist { Name = "Lucas Graciano", URL = "http://lucasgraciano.deviantart.com" };
+        public static Artist Lucas_Staniec = new Artist { Name = "Lucas Staniec", URL = "https://www.artstation.com/artist/lucasstaniec" };
         public static Artist Lukasz_Jaskolski = new Artist { Name = "Lukasz Jaskolski", URL = "http://www.fadingray.com" };
         public static Artist Magali_Villeneuve = new Artist { Name = "Magali Villeneuve", URL = "http://magali-villeneuve.blogspot.com" };
         public static Artist Marc_Scheff = new Artist { Name = "Marc Scheff", URL = "http://www.marcscheff.com" };
