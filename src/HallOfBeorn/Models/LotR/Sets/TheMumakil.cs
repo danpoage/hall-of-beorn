@@ -61,11 +61,11 @@ namespace HallOfBeorn.Models.LotR.Sets
             addCard(LotRCard.Event("Coney in a Trap", string.Empty, Sphere.Lore, 1)
                 .WithText("Play only if you control a unique character with the Ranger trait and another unique character with the Warrior trait.\r\nResponse: After you engage an enemy, that enemy cannot attack you until the end of the round.")
                 .WithInfo(9, 3, Artist.Jon_Bosco));
-            addCard(LotRCard.Attachment("Khaliel's Headdress", string.Empty, Sphere.Neutral, 3)
+            addCard(LotRCard.Attachment("Kahliel's Headdress", string.Empty, Sphere.Neutral, 3)
                 .WithUnique()
                 .WithTraits("Artifact.", "Item.")
                 .WithKeywords("Restricted.")
-                .WithText("Each Harad character gets +1 Willpower.\r\nRefresh Action: Exhaust Khaliel's Headdress to shuffle the topmost Harad ally in your discard pile into your deck.")
+                .WithText("Attach to Kahliel. Each Harad character gets +1 Willpower.\r\nRefresh Action: Exhaust Kahliel's Headdress to shuffle the topmost Harad ally in your discard pile into your deck.")
                 .WithInfo(10, 3, Artist.Lucas_Durham));
             addCard(LotRCard.Objective("Horse-hair Lasso", string.Empty, setName)
                 .WithTraits("Capture.")
