@@ -153,8 +153,8 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithKeywords("Mire 1.")
                 .WithText("Forced: When Soft Mires is discarded by the Mire keyword, the first player reveals an encounter card.\r\nTravel: Raise each player's threat by 1 to travel here.")
                 .WithFlavor("The hobbits soon found that what had looked like one vast fen was really an endless network of pools, and soft mires... —The Two Towers")
-                .WithEasyModeQuantity(2)
-                .WithInfo(23, 3, Artist.Carlos_Palma_Cruchaga));
+                .WithEasyModeQuantity(3)
+                .WithInfo(23, 4, Artist.Carlos_Palma_Cruchaga));
             Cards.Add(LotRCard.Treachery("Creeping Marshes", "", "The Passage of the Marshes")
                 .WithKeywords("Surge.", "Doomed 1.")
                 .WithText("When Revealed: Attach to the current quest. (Counts as a Condition attachment with the text: \"Forced: At the end of the refresh phase, place 1 mire token on each location in the staging area. Then, discard Creeping Marshes.\")")
@@ -220,7 +220,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTraits("Forest.", "Hills.")
                 .WithText("While Hills of Ithilien is the active location, it gains: \"Forced: After a player engages a Harad enemy, deal 1 damage to that enemy.\"")
                 .WithShadow("Shadow: Discard a non-objective attachment you control.")
-                .WithInfo(35, 3, Artist.Julepe));
+                .WithInfo(35, 4, Artist.Julepe));
             Cards.Add(LotRCard.Treachery("The Dark Lord's Summons", "", "Journey to the Cross-roads")
                 .WithKeywords("Peril.")
                 .WithText("When Revealed: Either place the lowest Attack Harad enemy engaged with you facedown under The Black Gate, or reveal the top card from under The Cross-roads and put it into play engaged with you.")
@@ -240,7 +240,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Cards.Add(LotRCard.Treachery("Arrows Thick in the Air", "", "Journey to the Cross-roads")
                 .WithText("When Revealed: Until the end of the round, each Harad enemy gains Archery 2.")
                 .WithShadow("Shadow: Either place attacking enemy facedown under The Black Gate after this attack, or it makes an additional attack against you after this one.")
-                .WithInfo(39, 2, Artist.Julepe));
+                .WithInfo(39, 3, Artist.Julepe));
             Cards.Add(LotRCard.Enemy("Shelob", "", "Shelob's Lair", 50, 4, 4, 4, 8)
                 .WithUnique()
                 .WithTraits("Spider.")
