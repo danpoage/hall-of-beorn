@@ -388,7 +388,7 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet TheCityOfCorsairs = new EncounterSet { Name = "The City of Corsairs", Set = "The City of Corsairs" };
         public static EncounterSet CoastOfUmbar = new EncounterSet { Name = "Coast of Umbar", Set = "The City of Corsairs" };
 
-        //The Sands of Harad and Harradrim
+        //The Sands of Harad and Haradrim
         public static EncounterSet EscapeFromUmbar = new EncounterSet { Name = "Escape from Umbar", Set = "The Sands of Harad" };
         public static EncounterSet TheLongArmOfMordor = new EncounterSet { Name = "The Long Arm of Mordor", Set = "The Sands of Harad" };
         public static EncounterSet MordorOrcs = new EncounterSet { Name = "Mordor Orcs", Set = "The Sands of Harad" };
@@ -398,6 +398,7 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet HaradTerritory = new EncounterSet { Name = "Harad Territory", Set = "The Sands of Harad" };
         public static EncounterSet JungleForest = new EncounterSet { Name = "Jungle Forest", Set = "The Sands of Harad" };
         public static EncounterSet DesertSands = new EncounterSet { Name = "Desert Sands", Set = "The Sands of Harad" };
+        public static EncounterSet TheMumakil = new EncounterSet { Name = "The Mûmakil", Set = "The Mûmakil" };
 
         //The Hobbit: Over Hill and Under Hill
         public static EncounterSet WeMustAwayEreBreakOfDay = new EncounterSet { Name = "We Must Away, Ere Break of Day", Set = "The Hobbit: Over Hill and Under Hill" };

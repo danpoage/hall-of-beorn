@@ -206,6 +206,7 @@
     <Compile Include="Models\LotR\Scenarios\EscapeFromUmbar.cs" />
     <Compile Include="Models\LotR\Scenarios\TheCityOfCorsairs.cs" />
     <Compile Include="Models\LotR\Scenarios\TheLongArmOfMordor.cs" />
+    <Compile Include="Models\LotR\Scenarios\TheMumakil.cs" />
     <Compile Include="Models\LotR\Scenarios\TheSandsOfHarad.cs" />
     <Compile Include="Models\LotR\TextTemplate.cs" />
     <Compile Include="Models\LotR\ViewModels\AdvancedSearchViewModel.cs" />

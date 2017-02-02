@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Products
             : base("The Mûmakil", "MEC56", ImageType.Jpg)
         {
             AddCardSet(CardSet.TheMumakil);
+
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheMumakil());
         }
     }
 }

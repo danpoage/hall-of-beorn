@@ -97,6 +97,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTraits("Creature.")
                 .WithText("Cannot be optionally engaged.\r\nForced: After Harad Tiger attacks and destroys a character, return it to the staging area.")
                 .WithShadow("Shadow: Attacking enemy makes an additional attack against you after this one.")
+                .WithEasyModeQuantity(0)
                 .WithInfo(16, 1, Artist.Ramon_Puasa_Jr));
             addCard(LotRCard.Enemy("Territorial Ape", string.Empty, setName, 35, 2, 2, 2, 4)
                 .WithTraits("Creature.")
@@ -107,6 +108,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithTraits("Creature.")
                 .WithKeywords("Surge.")
                 .WithText("Forced: After Strangling Python damages a character, attach it to that character. (Counts as a Condition attachment with the text: \"Attached character cannot ready.\")")
+                .WithEasyModeQuantity(1)
                 .WithInfo(18, 2, Artist.Dmitry_Prosvirnin));
             addCard(LotRCard.Enemy("Giant Centipede", string.Empty, setName, 30, 3, 3, 1, 2)
                 .WithTraits("Creature.")
@@ -129,10 +131,12 @@ namespace HallOfBeorn.Models.LotR.Sets
             addCard(LotRCard.Treachery("Terrible Fever", string.Empty, setName)
                 .WithText("When Revealed: Remove a hero from the quest and attach Terrible Fever to that hero. (Counts as a Condition attachment with the text: \"Forced: At the end of the round, deal 1 damage to attached character.\")")
                 .WithShadow("Shadow: Defending character cannot ready until the end of the round.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(23, 2, Artist.Marius_Bota));
             addCard(LotRCard.Treachery("Biting Insects", string.Empty, setName)
                 .WithText("When Revealed: Each player discards a random card from his hand and assigns X damage among characters he controls. X is the discarded card's cost.")
                 .WithShadow("Shadow: Discard a random card from your hand and assign X damage among characters you control. X is the discarded card's cost.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(24, 2, Artist.Alexandr_Elichev));
             addCard(LotRCard.EncounterSideQuest("Guardians of the Jungle", string.Empty, setName, 6)
                 .WithFlavor("The great apes of the jungle gather in the trees around you. They shadow your steps and slow your progress.")
