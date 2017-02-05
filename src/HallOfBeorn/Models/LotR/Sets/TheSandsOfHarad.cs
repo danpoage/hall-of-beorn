@@ -198,7 +198,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithInfo(34, 1, Artist.Colin_Boyer));
             addCard(LotRCard.Enemy("Sauron's Enforcers", string.Empty, setLongArm, 30, Card.VALUE_X, Card.VALUE_X, Card.VALUE_X, 3)
                 .WithTraits("Orc.", "Uruk.")
-                .WithText("X is the sequence number on the main quest.\r\nForced: At the end of the round, assign X damage among characters in play.")
+                .WithText("X is the stage number on the main quest.\r\nForced: At the end of the round, assign X damage among characters in play.")
                 .WithFlavor("Fierce and shrill rose the yells of the Orcs...\r\n-The Fellowship of the Ring")
                 .WithInfo(35, 4, Artist.Ken_McCuen));
             addCard(LotRCard.Location("Southron Boma", string.Empty, setLongArm, Card.VALUE_X, 4)
