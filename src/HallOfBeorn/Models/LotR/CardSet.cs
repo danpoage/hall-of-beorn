@@ -135,6 +135,8 @@ namespace HallOfBeorn.Models.LotR
             Add(RaceAcrossHarad);
             Add(BeneathTheSands);
             Add(TheBlackSerpent);
+            Add(TheDungeonsOfCirithGurat);
+            Add(TheCrossingsOfPoros);
 
             Add(TheHobbitOverHillAndUnderHill);
             Add(TheHobbitOnTheDoorstep);
