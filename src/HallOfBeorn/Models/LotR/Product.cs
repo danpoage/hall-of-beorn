@@ -125,6 +125,8 @@ namespace HallOfBeorn.Models.LotR
         public static Product RaceAcrossHarad = new RaceAcrossHaradProduct();
         public static Product BeneathTheSands = new BeneathTheSandsProduct();
         public static Product TheBlackSerpent = new TheBlackSerpentProduct();
+        public static Product TheDungeonsOfCirithGurat = new TheDungeonsOfCirithGuratProduct();
+        public static Product TheCrossingsOfPoros = new TheCrossingsOfPorosProduct();
 
         //The Hobbit Saga
         public static Product TheHobbitOverHillAndUnderHill = new TheHobbitOverHillAndUnderHillProduct();

@@ -15,6 +15,8 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
             AddProduct(Product.RaceAcrossHarad);
             AddProduct(Product.BeneathTheSands);
             AddProduct(Product.TheBlackSerpent);
+            AddProduct(Product.TheDungeonsOfCirithGurat);
+            AddProduct(Product.TheCrossingsOfPoros);
         }
     }
 }

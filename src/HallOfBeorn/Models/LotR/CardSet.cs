@@ -266,6 +266,8 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet RaceAcrossHarad = new Sets.RaceAcrossHarad();
         public static CardSet BeneathTheSands = new Sets.BeneathTheSands();
         public static CardSet TheBlackSerpent = new Sets.TheBlackSerpent();
+        public static CardSet TheDungeonsOfCirithGurat = new Sets.TheDungeonsOfCirithGurat();
+        public static CardSet TheCrossingsOfPoros = new Sets.TheCrossingsOfPoros();
 
         public static CardSet TheHobbitOverHillAndUnderHill = new Sets.TheHobbitOverHillandUnderHill().WithShortSlug("Y");
         public static CardSet TheHobbitOnTheDoorstep = new Sets.TheHobbitOntheDoorstep().WithShortSlug("Z");
