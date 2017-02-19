@@ -13,6 +13,7 @@ namespace HallOfBeorn.Models.Arkham.Products
         private ArkhamEncounterSet sorcery = ArkhamEncounterSet.Sorcery;
         private ArkhamEncounterSet hideous = ArkhamEncounterSet.HideousAbominations;
         private ArkhamEncounterSet badLuck = ArkhamEncounterSet.BadLuck;
+        private ArkhamEncounterSet whippoorwills = ArkhamEncounterSet.Whippoorwills;
 
         public TheDunwichLegacy()
             : base("The Dunwich Legacy", "TDL", "AHC02", 2, new DateTime(2016, 12, 31))
@@ -86,6 +87,10 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithText("{Reaction} After you draw a card, discard that card and exhaust Dr. Henry Armitage: Gain 3 resources.")
                 .WithFlavor("Armitage knew he would be meddling with terrible powers, yet saw that there was no other way to annul the deeper and more malign meddling which others had done before him.<br>–H. P. Lovecraft, \"The Dunwich Horror\"")
                 .WithInfo(40, 1, Artist.Anders_Finer));
+            addCard(ArkhamCard.ScenarioReference("Extracurricular Activity", "Scenario Reference", extra)
+                .WithText("{Skull}: –1. If you fail, discard the top 3 cards of your deck.\r\n{Cultist}: –1 (–3 instead if there are 10 or more cards in your discard pile).\r\n{Elder Thing}: –X. Discard the top 2 cards of your deck. X is the total printed cost of those discarded cards.")
+                .WithBackText("{Skull}: –2. If you fail, discard the top 5 cards of your deck.\r\n{Cultist}: –1 (–5 instead if there are 10 or more cards in your discard pile).\r\n{Elder Thing}: –X. Discard the top 3 cards of your deck. X is the total printed cost of those discarded cards.")
+                .WithInfo(41, 1, Artist.None));
 
             addCard(ArkhamCard.Agenda("Dead of Night", "An Experiment Gone Wrong", 2, Number.Of(3), extra)
                 .WithFlavor("Professor Rice’s disappearance isn’t the only thing amiss at the university. You’re unsure exactly what is going on, but you’re starting to believe Armitage was right in asking for your help.")
@@ -120,6 +125,14 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithFlavor("Around the aged administration building, creepers of ivy climb from the ground in an effort to claim it. The old hall stands alone in an isolated section of the campus, apart from the day-to-day bustle of students.")
                 .WithBackText("Forced – After Administration is revealed: Put the set-aside Faculty Offices into play.\r\nForced – At the end of your turn, if you are in Administration: Discard the top card of your deck.")
                 .WithInfo(53, 1, Artist.Tomasz_Jedruszek));
+            addCard(ArkhamCard.Location("Faculty Offices", ConnectionSymbol.Faculty_Offices, Number.Of(2), Number.Of(2).PerInvestigator(), extra)
+                .WithSubtitle("The Night is Still Young")
+                .WithTraits("Miskatonic.")
+                .WithText("The door leading into the Faculty Offices is locked. You cannot move into the Faculty Offices.")
+                .WithFlavor("You come to a locked door at the top of the stairs leading to the third floor of the administration building. Through its frosted window, you glimpse a shadow darting across the hall.")
+                .WithBackText("{Forced} – After Faculty Offices is revealed: Search the encounter deck and discard pile for a {t:Humanoid} enemy and spawn it here. Shuffle the encounter deck.\r\n{Objective} – If investigators in the Faculty Offices spend 2 {Per Investigator} clues, as a group: <b>(&rarr;R1)</b>")
+                .WithVictoryPoints(1)
+                .WithInfo(54, 1, Artist.Tomasz_Jedruszek));
 
             addCard(ArkhamCard.Location("Alchemy Labs", ConnectionSymbol.Alchemy_Labs, Number.Of(5), Number.Of(0), extra)
                 .WithTraits("Miskatonic.")
@@ -233,6 +246,11 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithText("Surge.\r\n{Revelation} – Put Beyond the Veil into play in your threat area if there is no copy of Beyond the Veil in your threat area.\r\n{Forced} – If your deck has no cards in it: Take 10 damage and discard Beyond the Veil.")
                 .WithInfo(84, 3, Artist.Brian_Valenzuela));
 
+            addCard(ArkhamCard.Treachery("Eager for Death", whippoorwills)
+                .WithTraits("Omen.")
+                .WithText("{Revelation} - Test {Willpower} (2). Increase this skill test’s difficulty by 1 for each damage on you. If you fail, take 2 horror.")
+                .WithFlavor("If they can catch the fleeing soul when it leaves the body, they instantly flutter away chittering in daemonic laughter... –H. P. Lovecraft, “The Dunwich Horror”")
+                .WithInfo(91, 2, Artist.Unknown)); //Artist.Frej_Agelii));
             addCard(ArkhamCard.Treachery("Cursed Luck", badLuck)
                 .WithTraits("Omen.")
                 .WithText("{Revelation} – Put Cursed Luck into play in your threat area.\r\nYou get –1 skill value during skill tests.\r\n{Forced} – After you succeed at a skill test by 1 or more: Discard Cursed Luck.")
