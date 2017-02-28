@@ -1041,7 +1041,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 HitPoints = 2,
                 Traits = new List<string>() { "Minstrel.", "Rohan." },
                 Text = "Action: Exhaust Gléowine to choose a player. That player draws 1 card.",
-                FlavorText = "Then the Riders of the King's House upon white horses rode round about the barrow and sang together a song of Théoden Thengle's son that Gléowine his minstrel made...\r\n-The Return of the King",
+                FlavorText = "Then the Riders of the King's House upon white horses rode round about the barrow and sang together a song of Théoden Thengel's son that Gléowine his minstrel made...\r\n-The Return of the King",
                 Quantity = 2,
                 CardNumber = 62,
                 Artist = Artist.Tony_Foti
