@@ -455,7 +455,7 @@ and the City shall be blessed.
                 Sphere = Sphere.Leadership,
                 ResourceCost = 1,
                 Text = "Response: After an ally card leaves play, that card's controller draws 2 cards.",
-                FlavorText = "\"He fell defending the Hobbits, while I was away upon the hill.\r\n-Aragorn, The Two Towers",
+                FlavorText = "\"He fell defending the Hobbits, while I was away upon the hill.\"\r\n-Aragorn, The Two Towers",
                 Quantity = 2,
                 CardNumber = 24,
                 Artist = Artist.David_A_Nash
