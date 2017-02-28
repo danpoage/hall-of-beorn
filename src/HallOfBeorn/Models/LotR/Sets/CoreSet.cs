@@ -599,7 +599,7 @@ and the City shall be blessed.
                 Sphere = Sphere.Tactics,
                 ResourceCost = 1,
                 Text = "Action: Exhaust a character you control with the ranged keyword to choose a player. Deal 1 damage to each enemy engaged with that player.",
-                FlavorText = "Arrows thick as the rain came whistling over the battlements, and fell clinking and glancing on th estones. Many found their mark. -The Two Towers",
+                FlavorText = "Arrows thick as the rain came whistling over the battlements, and fell clinking and glancing on the stones. Many found their mark. -The Two Towers",
                 Quantity = 2,
                 CardNumber = 33,
                 Artist = Artist.Frank_Walls
@@ -798,7 +798,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Sphere = Sphere.Spirit,
                 ResourceCost = 3,
                 Text = "Action: Reduce one player's threat by 6, or reduce each player's threat by 2.",
-                FlavorText = "\"Welcome to Caras Galadhan!\" he said. \"Here is the city of the Galadhrim where dwell the Lord Celeborn and Galadriel the Lady of Lórien\" -The Fellowship of the Ring",
+                FlavorText = "\"Welcome to Caras Galadhan!\" he said. \"Here is the city of the Galadhrim where dwell the Lord Celeborn and Galadriel the Lady of Lórien.\" -The Fellowship of the Ring",
                 Quantity = 2,
                 CardNumber = 46,
                 Artist = Artist.Magali_Villeneuve
@@ -824,7 +824,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Sphere = Sphere.Spirit,
                 ResourceCost = 1,
                 Text = "Response: Cancel a shadow effect just triggered during combat.",
-                FlavorText = "'The hasy stroke goes oft astray,' said Aragorn. 'We must press our Enemy, and no longer wait on him for the next move.' -The Return of the King",
+                FlavorText = "'The hasty stroke goes oft astray,' said Aragorn. 'We must press our Enemy, and no longer wait on him for the next move.' -The Return of the King",
                 Quantity = 2,
                 CardNumber = 48,
                 Artist = Artist.Lius_Lasahido
@@ -892,7 +892,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Sphere = Sphere.Spirit,
                 ResourceCost = 1,
                 Text = "Action: Return 1 Spirit card from your discard pile to your hand.",
-                FlavorText = "The dwarves no more shall suffer wrong,\r\nThe dwarves of your made mighty spells,\r\nWhile hammers fell like ringing bells\r\nIn places deep, where dark things sleep,\r\nIn hollow halls beneath the fells.\r\n-The Hobbit",
+                FlavorText = "The dwarves no more shall suffer wrong,\r\nThe dwarves of yore made mighty spells,\r\nWhile hammers fell like ringing bells\r\nIn places deep, where dark things sleep,\r\nIn hollow halls beneath the fells.\r\n-The Hobbit",
                 Quantity = 1,
                 CardNumber = 53,
                 Artist = Artist.Kaya
@@ -905,7 +905,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 Sphere = Sphere.Spirit,
                 ResourceCost = 5,
                 Text = "Action: Choose a hero in any player's discard pile. Put that card into play, under its owner's control.",
-                FlavorText = "'Yes, fortune or fate have heped you,' said Gandalf, 'not to mention courage.'\r\n-The Fellowship of the Ring",
+                FlavorText = "'Yes, fortune or fate have helped you,' said Gandalf, 'not to mention courage.'\r\n-The Fellowship of the Ring",
                 Quantity = 1,
                 CardNumber = 54,
                 Artist = Artist.Igor_Kieryluk
