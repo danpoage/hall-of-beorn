@@ -24,7 +24,7 @@
     "Banner of Elendil", "Desperate Defense", "Esquire of Gondor", "Esquire of Rohan", "Ghan-buri-Ghan", "Golden Shield", "Grimbold", "Livery of the Tower", "Roheryn", "Sterner than Steel",
     "Na'asiyah", "Rune-master", "Terrible to Behold", "Veteran Sword-elf", "Vigilant Guard", "Knife-work", "Linhir Sea-captain", "Windfola", "Ioreth", "The Houses of Healing", "Justice Shall Be Done",
     "Knight of the White Tower", "Hold the Line", "Soldier of Dol Amroth", "Sulien", "Inspiring Presence", "Guardian of Ithilien", "Ranger Spear", "Prince of Dol Amroth",
-    "Greenwood Archer", "Erebor Guard", "Halfling Bounder", "Vigilan Dunadan", "Unlikely Friendship", "Well Warned", "Dour-handed", "Dwarven Shield", "Mirkwood Long-knife", "The Road Goes Ever On", "The Storm Comes",
+    "Greenwood Archer", "Erebor Guard", "Halfling Bounder", "Vigilant Dunadan", "Unlikely Friendship", "Well Warned", "Dour-handed", "Dwarven Shield", "Mirkwood Long-knife", "The Road Goes Ever On", "The Storm Comes",
     "Kahliel", "Andrath Guardsman", "Prepare for Battle", "Yazan", "Wait no Longer", "Jubayr", "Dwarf Pipe", "Firyal", "Coney in a Trap", "Kahliel's Headdress",
           "+set:",
           "-set:",
