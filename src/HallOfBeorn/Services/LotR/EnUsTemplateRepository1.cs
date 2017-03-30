@@ -1958,7 +1958,7 @@ namespace HallOfBeorn.Services.LotR
 
             //The Massing at Osgiliath
             AddHtml("Ruins-of-Osgiliath-TMaO", "<p class='main-text'>If the players have not crossed the Anduin, {self} gets +3 {threat}.</p><p class='flavor-text'>...but Osgiliath which lay between was deserted and in its ruins shadows walked.<br>&ndash;The Fellowship of the Ring</p>");
-            AddHtml("The-Witch-King-TMaO", "<p class='main-text'>No {type:Attachment@attachments}.</p><p>While {self} is in the staging area, each character gets -1 {Willpower}.</p><p><b>Forced:</b> After {self} attacks, he returns to the staging area unless the defending player raises his threat by 3.</p>");
+            AddHtml("The-Witch-king-TMaO", "<p class='main-text'>Players cannot play {type:Attachment@attachments} on The Witch-king.</p><p>While {self} is in the staging area, each character gets -1 {Willpower}.</p><p><b>Forced:</b> After {self} attacks, he returns to the staging area unless the defending player raises his threat by 3.</p>");
             AddHtml("Snaga-Scouts-TMaO", "<p class='main-text'><b>Forced:</b> At the beginning of the encounter phase, all copies of {self} engage the player with the lowest threat. (The first player chooses in case of a tie.)</p>");
             AddHtml("Wolves-from-Mordor-TMaO", "<p class='main-text'><b>Forced:</b> After {self} attack and destroy a character, shuffle {self} into the encounter deck.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Deal 2 damage to the defending character.</p>");
             AddHtml("Wainriders-TMaO", "<p class='main-text'>Each damage dealt by {self} raises the defending player's threat by 1.</p>");
