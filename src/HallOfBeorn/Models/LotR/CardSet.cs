@@ -146,6 +146,7 @@ namespace HallOfBeorn.Models.LotR
             Add(TheTreasonOfSaruman);
             Add(TheLandOfShadow);
             Add(TheFlameOfTheWest);
+            Add(TheMountainOfFire);
 
             Add(TheMassingAtOsgiliath);
             Add(TheBattleOfLakeTown);
@@ -279,7 +280,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheTreasonOfSaruman = new Sets.TheTreasonOfSaruman().WithShortSlug("3");
         public static CardSet TheLandOfShadow = new Sets.TheLandOfShadow().WithShortSlug("4");
         public static CardSet TheFlameOfTheWest = new Sets.TheFlameOfTheWest().WithShortSlug("5");
-        //Saga #6
+        public static CardSet TheMountainOfFire = new Sets.TheMountainOfFire().WithShortSlug("6");
 
         public static CardSet TheMassingAtOsgiliath = new Sets.TheMassingatOsgiliath();
         public static CardSet TheBattleOfLakeTown = new Sets.TheBattleofLakeTown();
