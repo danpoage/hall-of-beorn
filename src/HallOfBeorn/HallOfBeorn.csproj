@@ -203,6 +203,7 @@
     <Compile Include="Models\LotR\LayoutType.cs" />
     <Compile Include="Models\LotR\Products\TheCrossingsOfPorosProduct.cs" />
     <Compile Include="Models\LotR\Products\TheDungeonsOfCirithGuratProduct.cs" />
+    <Compile Include="Models\LotR\Products\TheMountainOfFireProduct.cs" />
     <Compile Include="Models\LotR\Scenarios\AStormOnCobasHaven.cs" />
     <Compile Include="Models\LotR\Scenarios\DesertCrossing.cs" />
     <Compile Include="Models\LotR\Scenarios\EscapeFromUmbar.cs" />
@@ -212,6 +213,7 @@
     <Compile Include="Models\LotR\Scenarios\TheSandsOfHarad.cs" />
     <Compile Include="Models\LotR\Sets\TheCrossingsOfPoros.cs" />
     <Compile Include="Models\LotR\Sets\TheDungeonsOfCirithGurat.cs" />
+    <Compile Include="Models\LotR\Sets\TheMountainOfFire.cs" />
     <Compile Include="Models\LotR\TextTemplate.cs" />
     <Compile Include="Models\LotR\ViewModels\AdvancedSearchViewModel.cs" />
     <Compile Include="Models\Arkham\ArkhamCardSubtype.cs" />

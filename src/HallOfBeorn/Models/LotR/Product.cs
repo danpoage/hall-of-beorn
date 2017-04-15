@@ -138,6 +138,7 @@ namespace HallOfBeorn.Models.LotR
         public static Product TheTreasonOfSaruman = new TheTreasonOfSarumanProduct();
         public static Product TheLandOfShadow = new TheLandOfShadowProduct();
         public static Product TheFlameOfTheWest = new TheFlameOfTheWestProduct();
+        public static Product TheMountainOfFire = new TheMountainOfFireProduct();
 
         //GenCon and Fellowship Event Decks
         public static Product TheMassingAtOsgiliath = new TheMassingAtOsgiliathProduct();

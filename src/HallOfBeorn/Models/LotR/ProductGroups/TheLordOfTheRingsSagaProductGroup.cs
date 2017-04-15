@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
             AddProduct(Product.TheTreasonOfSaruman);
             AddProduct(Product.TheLandOfShadow);
             AddProduct(Product.TheFlameOfTheWest);
+            AddProduct(Product.TheMountainOfFire);
         }
     }
 }
