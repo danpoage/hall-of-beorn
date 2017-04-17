@@ -615,6 +615,7 @@
     <Compile Include="Models\LotR\Sphere.cs" />
     <Compile Include="Models\LotR\Token.cs" />
     <Compile Include="Models\LotR\Uniqueness.cs" />
+    <Compile Include="Models\RingsDb\RingsDbDeckList.cs" />
     <Compile Include="Models\View.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\LotR\AdvancedSearchService.cs" />
