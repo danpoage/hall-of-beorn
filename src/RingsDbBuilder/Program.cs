@@ -29,6 +29,7 @@ namespace RingsDbBuilder
 
             using (var client = new System.Net.Http.HttpClient())
             {
+                const int startDeckId = 2969;
                 const int maxDeckId = 4969;
                 RingsDbDeckList deck;
                 var slug = string.Empty;
@@ -36,11 +37,12 @@ namespace RingsDbBuilder
                 //const int mainDeckMultiplier = 4;
                 //const int sideboardMultiplier = 1;
 
-                for (var i = 1; i <= maxDeckId; i++) {
+                for (var i = startDeckId; i <= maxDeckId; i++) {
+                    Console.WriteLine(string.Format("Deck: {0}", i));
                     var url = string.Format("http://ringsdb.com/api/public/decklist/{0}.json", i);
                     var response = client.GetAsync(url).Result;
 
-                    System.Threading.Thread.Sleep(2000);
+                    System.Threading.Thread.Sleep(1000);
 
                     if (response.IsSuccessStatusCode)
                     {
@@ -110,38 +112,38 @@ namespace RingsDbBuilder
                 //Console.WriteLine("Press ENTER to close this window");
                 //Console.ReadLine();
 
-                var minHeroTally = heroTally.Values.Min();
-                var avgHeroTally = heroTally.Values.Average();
-                var maxHeroTally = heroTally.Values.Max();
-                var minCardTally = cardTally.Values.Min();
-                var avgCardTally = cardTally.Values.Average();
-                var maxCardTally = cardTally.Values.Max();
+                //var minHeroTally = heroTally.Values.Min();
+                //var avgHeroTally = heroTally.Values.Average();
+                //var maxHeroTally = heroTally.Values.Max();
+                //var minCardTally = cardTally.Values.Min();
+                //var avgCardTally = cardTally.Values.Average();
+                //var maxCardTally = cardTally.Values.Max();
                 
-                var heroScores = new Dictionary<string, byte>();
-                var cardScores = new Dictionary<string, byte>();
+                //var heroScores = new Dictionary<string, byte>();
+                //var cardScores = new Dictionary<string, byte>();
 
-                var oldRange = 0;
-                const int newMin = 1;
-                const int newMax = 5;
-                var newRange = 0;
-                decimal newScore = 0;
+                //var oldRange = 0;
+                //const int newMin = 1;
+                //const int newMax = 5;
+                //var newRange = 0;
+                //decimal newScore = 0;
 
-                foreach (var tally in heroTally.Keys) {
-                    oldRange = (maxHeroTally - minHeroTally);  
-                    newRange = (newMax - newMin);
-                    newScore = (((heroTally[tally] - minHeroTally) * newRange) / oldRange) + newMin;
-                    heroScores[tally] = (byte)Math.Truncate(newScore); //new Tuple<decimal,int>(newScore, heroTally[tally]);
-
-                    Console.WriteLine(string.Format("addPopularity(\"{0}\", {1});"));
+                foreach (var tally in heroTally.Keys.OrderByDescending(x => heroTally[x])) {
+                    //oldRange = (maxHeroTally - minHeroTally);  
+                    //newRange = (newMax - newMin);
+                    //newScore = (((heroTally[tally] - minHeroTally) * newRange) / oldRange) + newMin;
+                    //heroScores[tally] = (byte)Math.Truncate(newScore); 
+                    
+                    Console.WriteLine(string.Format("addPopularity(\"{0}\", {1});", tally, heroTally[tally]));
                 }
 
-                foreach (var tally in cardTally.Keys) {
-                    oldRange = (maxCardTally - minCardTally);  
-                    newRange = (newMax - newMin);
-                    newScore = (((cardTally[tally] - minCardTally) * newRange) / oldRange) + newMin;
-                    cardScores[tally] = (byte)Math.Truncate(newScore); //new Tuple<decimal, int>(newScore, cardTally[tally]);
-
-                    Console.WriteLine(string.Format("addPopularity(\"{0}\", {1});"));
+                foreach (var tally in cardTally.Keys.OrderByDescending(x => cardTally[x])) {
+                    //oldRange = (maxCardTally - minCardTally);  
+                    //newRange = (newMax - newMin);
+                    //newScore = (((cardTally[tally] - minCardTally) * newRange) / oldRange) + newMin;
+                    //cardScores[tally] = (byte)Math.Truncate(newScore); 
+                    
+                    Console.WriteLine(string.Format("addPopularity(\"{0}\", {1});", tally, cardTally[tally]));
                 }
 
                 //var x = heroScores;
