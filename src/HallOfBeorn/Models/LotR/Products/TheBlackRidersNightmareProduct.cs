@@ -10,7 +10,6 @@ namespace HallOfBeorn.Models.LotR.Products
         public TheBlackRidersNightmareProduct()
             : base("The Black Riders Nightmare Decks", "MEN19", ImageType.Jpg, new DateTime(2015, 4, 10))
         {
-            IsPremier = true;
             IsNewSubGroup = true;
             AddCardSet(CardSet.AShadowOfThePastNightmare);
             AddCardSet(CardSet.AKnifeInTheDarkNightmare);

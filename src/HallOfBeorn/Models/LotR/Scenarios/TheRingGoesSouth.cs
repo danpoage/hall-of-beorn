@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios
             QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/lotr-the-road-darkens-quest-the-ring-goes-south.html";
 
             AddEncounterSet(EncounterSet.TheRingGoesSouth);
+            AddEncounterSet(EncounterSet.TheRingGoesSouthNightmare);
 
             AddQuestCardId("The-Council-of-Elrond-RD");
             AddQuestCardId("The-Nine-Walkers-RD");
@@ -25,6 +26,12 @@ namespace HallOfBeorn.Models.LotR.Scenarios
             ExcludeFromEasyMode("Regiments-of-Crows-RD", 1);
             ExcludeFromEasyMode("Storm-of-Howls-RD", 1);
 
+            ExcludeFromNightmareMode("Crebain-from-Dunland-RD", 2);
+            ExcludeFromNightmareMode("Howling-Warg-RD", 2);
+            ExcludeFromNightmareMode("Tree-crowned-Hill-RD", 1);
+            ExcludeFromNightmareMode("Hills-of-Hollin-RD", 3);
+            ExcludeFromNightmareMode("Snowdrifts-RD", 2);
+            ExcludeFromNightmareMode("Storm-of-Howls-RD", 1);
         }
     }
 }

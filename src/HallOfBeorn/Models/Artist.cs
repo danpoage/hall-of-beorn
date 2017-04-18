@@ -583,6 +583,9 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Javier_Charro_Martinez);
             all.Add(Artist.David_Keen);
 
+            //The Road Darkens Nightmare
+            all.Add(Artist.Bon_Bernardo);
+
             //The Flame of the West
             all.Add(Artist.Stephen_Najarian);
             all.Add(Artist.Uriah_Voth);
@@ -843,6 +846,7 @@ namespace HallOfBeorn.Models
         public static Artist Bill_Corbett = new Artist { Name = "Bill Corbett", URL = "http://billcorbett.deviantart.com" };
         public static Artist Bill_Thompson = new Artist { Name = "Bill Thompson", URL = "http://billyt1978.deviantart.com" };
         public static Artist Blake_Henriksen = new Artist { Name = "Blake Henriksen", URL = "http://pinkhavok.deviantart.com" };
+        public static Artist Bon_Bernardo = new Artist { Name = "Bon Bernardo", URL = "http://bonify.deviantart.com" };
         public static Artist Brandon_Leach = new Artist { Name = "Brandon Leach", URL = "http://b-nine.deviantart.com" };
         public static Artist Brent_Hollowel = new Artist { Name = "Brent Hollowel", URL = "http://brenthollowellart.blogspot.com" };
         public static Artist Brian_Valenzuela = new Artist { Name = "Brian Valenzuela", URL = "http://bval05.deviantart.com" };

@@ -263,6 +263,9 @@ namespace HallOfBeorn.Models.LotR
             Add(AKnifeInTheDarkNightmare);
             Add(FlightToTheFordNightmare);
 
+            //The Lord of the Rings: The Road Darkens Nightmare Decks
+            Add(TheRingGoesSouthNightmare);
+
             //First Age
             Add(HuntingOfTheWolf);
             Add(TheIsleOfWerewolves);
@@ -517,6 +520,9 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet AShadowOfThePastNightmare = new EncounterSet { Name = "A Shadow of the Past Nightmare", Set = "A Shadow of the Past Nightmare" };
         public static EncounterSet AKnifeInTheDarkNightmare = new EncounterSet { Name = "A Knife in the Dark Nightmare", Set = "A Knife in the Dark Nightmare" };
         public static EncounterSet FlightToTheFordNightmare = new EncounterSet { Name = "Flight to the Ford Nightmare", Set = "Flight to the Ford Nightmare" };
+
+        //The Lord of the Rings: The Road Darkens Nightmare Decks
+        public static EncounterSet TheRingGoesSouthNightmare = new EncounterSet { Name = "The Ring Goes South Nightmare", Set = "The Rings Goes South Nightmare" };
 
         //First Age
         public static EncounterSet HuntingOfTheWolf = new EncounterSet { Name = "Hunting of the Wolf", Set = "First Age" };

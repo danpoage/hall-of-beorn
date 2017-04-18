@@ -214,6 +214,7 @@
     <Compile Include="Models\LotR\Sets\TheCrossingsOfPoros.cs" />
     <Compile Include="Models\LotR\Sets\TheDungeonsOfCirithGurat.cs" />
     <Compile Include="Models\LotR\Sets\TheMountainOfFire.cs" />
+    <Compile Include="Models\LotR\Sets\TheRingGoesSouthNightmare.cs" />
     <Compile Include="Models\LotR\TextTemplate.cs" />
     <Compile Include="Models\LotR\ViewModels\AdvancedSearchViewModel.cs" />
     <Compile Include="Models\Arkham\ArkhamCardSubtype.cs" />
