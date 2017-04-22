@@ -206,6 +206,7 @@ namespace HallOfBeorn.Models.LotR
             Add(FlightToTheFordNightmare);
 
             Add(TheRingGoesSouthNightmare);
+            Add(JourneyInTheDarkNightmare);
 
             Add(FirstAge);
             Add(TrialUponTheMarches);
@@ -337,6 +338,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet AKnifeInTheDarkNightmare = new Sets.AKnifeInTheDarkNightmare();
         public static CardSet FlightToTheFordNightmare = new Sets.FlightToTheFordNightmare();
         public static CardSet TheRingGoesSouthNightmare = new Sets.TheRingGoesSouthNightmare();
+        public static CardSet JourneyInTheDarkNightmare = new Sets.JourneyInTheDarkNightmare();
 
         public static CardSet TheOldForest = new Sets.TheOldForest().WithShortSlug("8");
         public static CardSet FogOnTheBarrowDowns = new Sets.FogOnTheBarrowDowns().WithShortSlug("9");

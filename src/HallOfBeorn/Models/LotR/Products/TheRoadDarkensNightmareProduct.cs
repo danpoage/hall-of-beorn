@@ -11,6 +11,7 @@ namespace HallOfBeorn.Models.LotR.Products
             : base("The Road Darkens Nightmare", "MEN20", ImageType.Jpg)
         {
             AddCardSet(CardSet.TheRingGoesSouthNightmare);
+            AddCardSet(CardSet.JourneyInTheDarkNightmare);
         }
     }
 }

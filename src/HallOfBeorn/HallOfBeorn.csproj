@@ -211,6 +211,7 @@
     <Compile Include="Models\LotR\Scenarios\TheLongArmOfMordor.cs" />
     <Compile Include="Models\LotR\Scenarios\TheMumakil.cs" />
     <Compile Include="Models\LotR\Scenarios\TheSandsOfHarad.cs" />
+    <Compile Include="Models\LotR\Sets\JourneyInTheDarkNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheCrossingsOfPoros.cs" />
     <Compile Include="Models\LotR\Sets\TheDungeonsOfCirithGurat.cs" />
     <Compile Include="Models\LotR\Sets\TheMountainOfFire.cs" />

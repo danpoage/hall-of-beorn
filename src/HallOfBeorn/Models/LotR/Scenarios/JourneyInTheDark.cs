@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios
             QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/lotr-the-road-darkens-quest-journey-in-the-dark.html";
 
             AddEncounterSet(EncounterSet.JourneyInTheDark);
+            AddEncounterSet(EncounterSet.JourneyInTheDarkNightmare);
 
             AddQuestCardId("The-Long-Dark-of-Moria-RD");
             AddQuestCardId("Drums-in-the-Deep-RD");
@@ -26,6 +27,10 @@ namespace HallOfBeorn.Models.LotR.Scenarios
             ExcludeFromEasyMode("Uruk-from-Mordor-RD", 1);
             ExcludeFromEasyMode("We-Cannot-Get-Out-RD", 1);
 
+            ExcludeFromNightmareMode("Moria-Archer-RD", 3);
+            ExcludeFromNightmareMode("Mines-of-Moria-RD", 4);
+            ExcludeFromNightmareMode("We-Cannot-Get-Out-RD", 1);
+            ExcludeFromNightmareMode("Deep-Fissure-RD", 3);
         }
     }
 }
