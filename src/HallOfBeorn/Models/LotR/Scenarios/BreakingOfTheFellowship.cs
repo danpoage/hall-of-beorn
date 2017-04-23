@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios
             QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/lotr-the-road-darkens-quest-breaking-of-the-fellowship.html";
 
             AddEncounterSet(EncounterSet.BreakingOfTheFellowship);
+            AddEncounterSet(EncounterSet.BreakingOfTheFellowshipNightmare);
 
             AddQuestCardId("The-Great-River-RD");
             AddQuestCardId("The-Company-Divided-RD");
@@ -28,6 +29,10 @@ namespace HallOfBeorn.Models.LotR.Scenarios
             ExcludeFromEasyMode("Uruk-hai-Tracker-RD", 1);
             ExcludeFromEasyMode("Wooded-Shoreline-RD", 2);
 
+            ExcludeFromNightmareMode("Uruk-hai-Archer-RD", 4);
+            ExcludeFromNightmareMode("River-Anduin-RD", 2);
+            ExcludeFromNightmareMode("Slopes-of-Amon-Hen-RD", 1);
+            ExcludeFromNightmareMode("Black-Feathered-Arrows-RD", 2);
         }
     }
 }
