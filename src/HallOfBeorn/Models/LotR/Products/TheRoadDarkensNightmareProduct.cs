@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.LotR.Products
         {
             AddCardSet(CardSet.TheRingGoesSouthNightmare);
             AddCardSet(CardSet.JourneyInTheDarkNightmare);
+            AddCardSet(CardSet.BreakingOfTheFellowshipNightmare);
         }
     }
 }
