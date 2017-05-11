@@ -16,7 +16,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios
             AddEncounterSet(EncounterSet.TheHillsOfEmynMuil);
             AddEncounterSet(EncounterSet.TheHillsOfEmynMuilNightmare);
 
-            AddQuestCardId("The-Hills-of-Emyn-Muil-Quest-THoEM");
+            AddQuestCardId("The-Hills-of-Emyn-Muil-THoEM");
 
             ExcludeFromEasyMode("Chieftan-Ufthak-Core", 1);
             ExcludeFromEasyMode("Dol-Guldur-Beastmaster-Core", 1);
