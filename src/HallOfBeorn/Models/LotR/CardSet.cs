@@ -192,6 +192,11 @@ namespace HallOfBeorn.Models.LotR
             Add(TheThreeTrialsNightmare);
             Add(TroubleInTharbadNightmare);
             Add(TheNinInEilphNightmare);
+            Add(CelebrimborsSecretNightmare);
+            Add(TheAntleredCrownNightmare);
+
+            Add(TheWastesOfEriadorNightmare);
+            Add(AcrossTheEttenmoorsNightmare);
 
             Add(WeMustAwayEreBreakOfDayNightmare);
             Add(OverTheMistyMountainsGrimNightmare);
@@ -328,6 +333,9 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheNinInEilphNightmare = new Sets.TheNinInEilphNightmare();
         public static CardSet CelebrimborsSecretNightmare = new Sets.CelebrimborsSecretNightmare();
         public static CardSet TheAntleredCrownNightmare = new Sets.TheAntleredCrownNightmare();
+
+        public static CardSet TheWastesOfEriadorNightmare = new Sets.TheWastesOfEriadorNightmare();
+        public static CardSet AcrossTheEttenmoorsNightmare = new Sets.AcrossTheEttenmoorsNightmare();
 
         public static CardSet WeMustAwayEreBreakOfDayNightmare = new Sets.WeMustAwayEreBreakOfDayNightmare();
         public static CardSet OverTheMistyMountainsGrimNightmare = new Sets.OverTheMistyMountainsGrimNightmare();
