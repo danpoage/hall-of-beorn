@@ -15,7 +15,7 @@ namespace HallOfBeorn.Models.LotR.Sets
             Abbreviation = "AtEN";
             SetType = Models.SetType.Nightmare_Expansion;
             Cycle = "NIGHTMARE";
-            Number = 2076;
+            Number = 2077;
 
             addCard(LotRCard.NightmareSetup(setName, setName)
                 .WithText("You are playing Nightmare mode.\r\nForced: When resolving the 'when revealed' effect on stage 2A or stage 3A, also discard cards from the top of the encounter deck until a location with the safe keyword is discarded. Attach that location to the newly revealed side quest, as a guarded objective.")

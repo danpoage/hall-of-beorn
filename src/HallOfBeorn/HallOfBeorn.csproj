@@ -202,6 +202,7 @@
     <Compile Include="Models\INamed.cs" />
     <Compile Include="Models\LotR\LayoutType.cs" />
     <Compile Include="Models\LotR\Products\AcrossTheEttenmoorsNightmareProduct.cs" />
+    <Compile Include="Models\LotR\Products\EscapeFromMountGramNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\TheCrossingsOfPorosProduct.cs" />
     <Compile Include="Models\LotR\Products\TheDungeonsOfCirithGuratProduct.cs" />
     <Compile Include="Models\LotR\Products\TheMountainOfFireProduct.cs" />
@@ -215,6 +216,7 @@
     <Compile Include="Models\LotR\Scenarios\TheSandsOfHarad.cs" />
     <Compile Include="Models\LotR\Sets\AcrossTheEttenmoorsNightmare.cs" />
     <Compile Include="Models\LotR\Sets\BreakingOfTheFellowshipNightmare.cs" />
+    <Compile Include="Models\LotR\Sets\EscapeFromMountGramNightmare.cs" />
     <Compile Include="Models\LotR\Sets\JourneyInTheDarkNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheCrossingsOfPoros.cs" />
     <Compile Include="Models\LotR\Sets\TheDungeonsOfCirithGurat.cs" />

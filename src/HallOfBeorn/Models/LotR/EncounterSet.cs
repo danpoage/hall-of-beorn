@@ -247,6 +247,12 @@ namespace HallOfBeorn.Models.LotR
             Add(ToCatchAnOrcNightmare);
             Add(IntoFangornNightmare);
 
+            //The Lost Realm and Angmar Awakened Nightmare Decks
+            Add(TheWastesOfEriadorNightmare);
+            Add(EscapeFromMountGramNightmare);
+            Add(AngmarOrcsNightmare);
+            Add(AcrossTheEttenmoorsNightmare);
+
             //The Hobbit: Over Hill and Under Hill Nightmare Decks
             Add(WeMustAwayEreBreakOfDayNightmare);
             Add(OverTheMistyMountainsGrimNightmare);
@@ -507,6 +513,12 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet TheThreeTrialsNightmare = new EncounterSet { Name = "The Three Trials Nightmare", Set = "The Three Trials Nightmare" };
         public static EncounterSet TroubleInTharbadNightmare = new EncounterSet { Name = "Trouble in Tharbad Nightmare", Set = "Trouble in Tharbad Nightmare" };
 
+        //The Lost Realm and Angmar Awakened Nightmare Decks
+        public static EncounterSet TheWastesOfEriadorNightmare = new EncounterSet { Name = "The Wastes of Eriador Nightmare", Set = "The Wastes of Eriador Nightmare" };
+        public static EncounterSet EscapeFromMountGramNightmare = new EncounterSet { Name = "Escape from Mount Gram Nightmare", Set = "Escape from Mount Gram Nightmare" };
+        public static EncounterSet AngmarOrcsNightmare = new EncounterSet { Name = "Angmar Orcs Nightmare", Set = "Escape from Mount Gram Nightmare" };
+        public static EncounterSet AcrossTheEttenmoorsNightmare = new EncounterSet { Name = "Across the Ettenmoors Nightmare", Set = "Across the Ettenmoors Nightmare" };
+        
         //The Hobbit: Over Hill and Under Hill Nightmare Decks
         public static EncounterSet WeMustAwayEreBreakOfDayNightmare = new EncounterSet { Name = "We Must Away, Ere Break of Day Nightmare", Set = "We Must Away, Ere Break of Day Nightmare" };
         public static EncounterSet OverTheMistyMountainsGrimNightmare = new EncounterSet { Name = "Over the Misty Mountains Grim Nightmare", Set = "Over the Misty Mountains Grim Nightmare" };
