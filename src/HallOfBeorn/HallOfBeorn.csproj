@@ -208,6 +208,7 @@
     <Compile Include="Models\LotR\Products\TheMountainOfFireProduct.cs" />
     <Compile Include="Models\LotR\Products\TheWastesOfEriadorNightmareProduct.cs" />
     <Compile Include="Models\LotR\Scenarios\AStormOnCobasHaven.cs" />
+    <Compile Include="Models\LotR\Scenarios\BeneathTheSands.cs" />
     <Compile Include="Models\LotR\Scenarios\DesertCrossing.cs" />
     <Compile Include="Models\LotR\Scenarios\EscapeFromUmbar.cs" />
     <Compile Include="Models\LotR\Scenarios\TheCityOfCorsairs.cs" />

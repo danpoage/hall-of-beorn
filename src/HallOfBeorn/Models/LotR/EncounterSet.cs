@@ -149,6 +149,9 @@ namespace HallOfBeorn.Models.LotR
             Add(HaradSoldiers);
             Add(HaradTerritory);
             Add(DesertSands);
+            Add(TheMumakil);
+            Add(RaceAcrossHarad);
+            Add(BeneathTheSands);
 
             //The Hobbit: Over Hill and Under Hill
             Add(WeMustAwayEreBreakOfDay);
@@ -410,6 +413,8 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet JungleForest = new EncounterSet { Name = "Jungle Forest", Set = "The Sands of Harad" };
         public static EncounterSet DesertSands = new EncounterSet { Name = "Desert Sands", Set = "The Sands of Harad" };
         public static EncounterSet TheMumakil = new EncounterSet { Name = "The Mûmakil", Set = "The Mûmakil" };
+        public static EncounterSet RaceAcrossHarad = new EncounterSet { Name = "Race Across Harad", Set = "Race Across Harad" };
+        public static EncounterSet BeneathTheSands = new EncounterSet { Name = "Beneath the Sands", Set = "Beneath the Sands" };
 
         //The Hobbit: Over Hill and Under Hill
         public static EncounterSet WeMustAwayEreBreakOfDay = new EncounterSet { Name = "We Must Away, Ere Break of Day", Set = "The Hobbit: Over Hill and Under Hill" };

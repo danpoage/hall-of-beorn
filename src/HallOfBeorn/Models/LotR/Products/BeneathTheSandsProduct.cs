@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Products
             : base("Beneath the Sands", "MEC58", ImageType.Png)
         {
             AddCardSet(CardSet.BeneathTheSands);
+
+            AddScenario(new Scenarios.BeneathTheSands());
         }
     }
 }
