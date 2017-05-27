@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Products
             : base("Race Across Harad", "MEC57", ImageType.Jpg)
         {
             AddCardSet(CardSet.RaceAcrossHarad);
+
+            AddScenario(new Scenarios.RaceAcrossHarad());
         }
     }
 }
