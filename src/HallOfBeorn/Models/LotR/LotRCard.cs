@@ -292,7 +292,8 @@ namespace HallOfBeorn.Models.LotR
                 EncounterSet = encounterSet,
                 QuestPoints = questPoints,
                 StageNumber = stageNumber,
-                StageLetter = stageLetter
+                StageLetter = stageLetter,
+                SlugSuffix = stageLetter == 'A' ? string.Empty : stageLetter.ToString()
             };
         }
 
@@ -549,6 +550,9 @@ namespace HallOfBeorn.Models.LotR
 
         public LotRCard WithStageLetter(char letter)
         {
+            if (letter != 'A') {
+                SlugSuffix = letter.ToString();
+            }
             StageLetter = letter;
             return this;
         }
