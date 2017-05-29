@@ -188,6 +188,7 @@ namespace HallOfBeorn.Models.LotR
         public static Product CelebrimborsSecretNightmare = new CelebrimborsSecretNightmareProoduct();
         public static Product TheAntleredCrownNightmare = new TheAntleredCrownNightmareProduct();
 
+        public static Product TheLostRealmNightmare = new TheLostRealmNightmareProduct();
         public static Product TheWastesOfEriadorNightmare = new TheWastesOfEriadorNightmareProduct();
         public static Product EscapeFromMountGramNightmare = new EscapeFromMountGramNightmareProduct();
         public static Product AcrossTheEttenmoorsNightmare = new AcrossTheEttenmoorsNightmareProduct();

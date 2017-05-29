@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.LotR.Products
     public class TheWastesOfEriadorNightmareProduct : Product
     {
         public TheWastesOfEriadorNightmareProduct()
-            : base("The Wastes of Eriador Nightmare", "MEN38", ImageType.Jpg)
+            : base("The Wastes of Eriador Nightmare", "MEN37", ImageType.Jpg)
         {
             AddCardSet(CardSet.TheWastesOfEriadorNightmare);
         }

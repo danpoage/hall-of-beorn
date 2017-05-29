@@ -22,16 +22,12 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
             AddProduct(Product.ReturnToMirkwoodNightmare);
 
             AddProduct(Product.KhazadDumNightmare);
-
             AddProduct(Product.TheRedhornGateNightmare);
             AddProduct(Product.RoadToRivendellNightmare);
             AddProduct(Product.TheWatcherInTheWaterNightmare);
             AddProduct(Product.TheLongDarkNightmare);
             AddProduct(Product.FoundationsOfStoneNightmare);
             AddProduct(Product.ShadowAndFlameNightmare);
-
-            AddProduct(Product.TheHobbitOverHillAndUnderHillNightmare);
-            AddProduct(Product.TheHobbitOnTheDoorstepNightmare);
 
             AddProduct(Product.HeirsOfNumenorNightmare);
             AddProduct(Product.TheStewardsFearNightmare);
@@ -49,9 +45,13 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
             AddProduct(Product.CelebrimborsSecretNightmare);
             AddProduct(Product.TheAntleredCrownNightmare);
 
+            AddProduct(Product.TheLostRealmNightmare);
             AddProduct(Product.TheWastesOfEriadorNightmare);
             AddProduct(Product.EscapeFromMountGramNightmare);
             AddProduct(Product.AcrossTheEttenmoorsNightmare);
+
+            AddProduct(Product.TheHobbitOverHillAndUnderHillNightmare);
+            AddProduct(Product.TheHobbitOnTheDoorstepNightmare);
 
             AddProduct(Product.TheBlackRidersNightmare);
             AddProduct(Product.TheRoadDarkensNightmare);

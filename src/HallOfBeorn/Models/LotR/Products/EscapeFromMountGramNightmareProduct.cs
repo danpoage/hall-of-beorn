@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.LotR.Products
     public class EscapeFromMountGramNightmareProduct : Product
     {
         public EscapeFromMountGramNightmareProduct()
-            : base("Escape from Mount Gram Nightmare", "MEN39", ImageType.Jpg)
+            : base("Escape from Mount Gram Nightmare", "MEN38", ImageType.Jpg)
         {
             AddCardSet(CardSet.EscapeFromMountGramNightmare);
         }

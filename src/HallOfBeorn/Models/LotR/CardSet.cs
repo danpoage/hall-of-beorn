@@ -195,6 +195,8 @@ namespace HallOfBeorn.Models.LotR
             Add(CelebrimborsSecretNightmare);
             Add(TheAntleredCrownNightmare);
 
+            Add(IntrudersInChetwoodNightmare);
+
             Add(TheWastesOfEriadorNightmare);
             Add(EscapeFromMountGramNightmare);
             Add(AcrossTheEttenmoorsNightmare);
@@ -335,6 +337,8 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet CelebrimborsSecretNightmare = new Sets.CelebrimborsSecretNightmare();
         public static CardSet TheAntleredCrownNightmare = new Sets.TheAntleredCrownNightmare();
 
+        public static CardSet IntrudersInChetwoodNightmare = new Sets.IntrudersInChetwoodNightmare();
+        
         public static CardSet TheWastesOfEriadorNightmare = new Sets.TheWastesOfEriadorNightmare();
         public static CardSet EscapeFromMountGramNightmare = new Sets.EscapeFromMountGramNightmare();
         public static CardSet AcrossTheEttenmoorsNightmare = new Sets.AcrossTheEttenmoorsNightmare();

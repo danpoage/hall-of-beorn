@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets
 
             addCard(LotRCard.NightmareSetup(setName, setName)
                 .WithText("You are playing Nightmare mode.\r\nForced: When resolving the 'when revealed' effect on stage 2A or stage 3A, also discard cards from the top of the encounter deck until a location with the safe keyword is discarded. Attach that location to the newly revealed side quest, as a guarded objective.")
-                .WithFlavor("\"I reached here at last by a long hard road, up the Hoarwell and through the Ettenmoors, and down from the north. It took me nearly fourteen days from Weathertop, for I could not ride among the rocks of the troll-fells, and Shadowfax departed.\"\r\n-Gandalf, The Fellowship of the Rings")
+                .WithFlavor("\"I reached here at last by a long hard road, up the Hoarwell and through the Ettenmoors, and down from the north. It took me nearly fourteen days from Weathertop, for I could not ride among the rocks of the troll-fells, and Shadowfax departed.\"\r\n-Gandalf, The Fellowship of the Ring")
                 .WithOppositeText(
 @"Begin with the standard quest deck and encounter deck for the Across the ~Ettenmoors scenario.
 
