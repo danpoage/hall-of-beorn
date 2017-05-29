@@ -59,7 +59,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithText("Forced: At the end of the round, if Greenway Path is in the staging area, search the encounter deck, discard pile and victory display for Shadow the War Party, and reveal it.")
                 .WithShadow("Shadow: Return attacking enemy to the staging area after this attack.")
                 .WithInfo(5, 2, Artist.Unknown));
-            addCard(LotRCard.Location("Outskirts Archet", string.Empty, setName, 5, 3)
+            addCard(LotRCard.Location("Outskirts of Archet", string.Empty, setName, 5, 3)
                 .WithTraits("Arnor.")
                 .WithText("Travel: Search the encounter deck, discard pile and victory display for Protect the Bree-landers, and reveal it.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack. if this attack destroys a character, raise your threat by 3.")
