@@ -196,6 +196,8 @@ namespace HallOfBeorn.Models.LotR
             Add(TheAntleredCrownNightmare);
 
             Add(IntrudersInChetwoodNightmare);
+            Add(TheWeatherHillsNightmare);
+            Add(DeadmensDikeNightmare);
 
             Add(TheWastesOfEriadorNightmare);
             Add(EscapeFromMountGramNightmare);
@@ -338,6 +340,8 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheAntleredCrownNightmare = new Sets.TheAntleredCrownNightmare();
 
         public static CardSet IntrudersInChetwoodNightmare = new Sets.IntrudersInChetwoodNightmare();
+        public static CardSet TheWeatherHillsNightmare = new Sets.TheWeatherHillsNightmare();
+        public static CardSet DeadmensDikeNightmare = new Sets.DeadmensDikeNightmare();
         
         public static CardSet TheWastesOfEriadorNightmare = new Sets.TheWastesOfEriadorNightmare();
         public static CardSet EscapeFromMountGramNightmare = new Sets.EscapeFromMountGramNightmare();

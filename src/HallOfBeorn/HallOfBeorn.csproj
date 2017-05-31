@@ -219,6 +219,7 @@
     <Compile Include="Models\LotR\Scenarios\TheSandsOfHarad.cs" />
     <Compile Include="Models\LotR\Sets\AcrossTheEttenmoorsNightmare.cs" />
     <Compile Include="Models\LotR\Sets\BreakingOfTheFellowshipNightmare.cs" />
+    <Compile Include="Models\LotR\Sets\DeadmensDikeNightmare.cs" />
     <Compile Include="Models\LotR\Sets\EscapeFromMountGramNightmare.cs" />
     <Compile Include="Models\LotR\Sets\IntrudersInChetwoodNightmare.cs" />
     <Compile Include="Models\LotR\Sets\JourneyInTheDarkNightmare.cs" />
@@ -227,6 +228,7 @@
     <Compile Include="Models\LotR\Sets\TheMountainOfFire.cs" />
     <Compile Include="Models\LotR\Sets\TheRingGoesSouthNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheWastesOfEriadorNightmare.cs" />
+    <Compile Include="Models\LotR\Sets\TheWeatherHillsNightmare.cs" />
     <Compile Include="Models\LotR\TextTemplate.cs" />
     <Compile Include="Models\LotR\ViewModels\AdvancedSearchViewModel.cs" />
     <Compile Include="Models\Arkham\ArkhamCardSubtype.cs" />

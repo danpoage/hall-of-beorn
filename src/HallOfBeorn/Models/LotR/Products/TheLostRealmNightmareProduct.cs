@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Products
             IsPremier = true;
             IsNewSubGroup = true;
             AddCardSet(CardSet.IntrudersInChetwoodNightmare);
+            AddCardSet(CardSet.TheWeatherHillsNightmare);
+            AddCardSet(CardSet.DeadmensDikeNightmare);
         }
     }
 }
