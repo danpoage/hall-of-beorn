@@ -251,6 +251,9 @@ namespace HallOfBeorn.Models.LotR
             Add(IntoFangornNightmare);
 
             //The Lost Realm and Angmar Awakened Nightmare Decks
+            Add(IntrudersInChetwoodNightmare);
+            Add(TheWeatherHillsNightmare);
+            Add(DeadmensDikeNightmare);
             Add(TheWastesOfEriadorNightmare);
             Add(EscapeFromMountGramNightmare);
             Add(AngmarOrcsNightmare);
@@ -519,6 +522,9 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet TroubleInTharbadNightmare = new EncounterSet { Name = "Trouble in Tharbad Nightmare", Set = "Trouble in Tharbad Nightmare" };
 
         //The Lost Realm and Angmar Awakened Nightmare Decks
+        public static EncounterSet IntrudersInChetwoodNightmare = new EncounterSet { Name = "Intruders in Chetwood Nightmare", Set = "Intruders in Chetwood Nightmare" };
+        public static EncounterSet TheWeatherHillsNightmare = new EncounterSet { Name = "The Weather Hills Nightmare", Set = "The Weather Hills Nightmare" };
+        public static EncounterSet DeadmensDikeNightmare = new EncounterSet { Name = "Deadmen's Dike Nightmare", Set = "Deadmen's Dike Nightmare" };
         public static EncounterSet TheWastesOfEriadorNightmare = new EncounterSet { Name = "The Wastes of Eriador Nightmare", Set = "The Wastes of Eriador Nightmare" };
         public static EncounterSet EscapeFromMountGramNightmare = new EncounterSet { Name = "Escape from Mount Gram Nightmare", Set = "Escape from Mount Gram Nightmare" };
         public static EncounterSet AngmarOrcsNightmare = new EncounterSet { Name = "Angmar Orcs Nightmare", Set = "Escape from Mount Gram Nightmare" };
