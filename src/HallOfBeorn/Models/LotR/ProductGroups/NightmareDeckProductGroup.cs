@@ -49,6 +49,7 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
             AddProduct(Product.TheWastesOfEriadorNightmare);
             AddProduct(Product.EscapeFromMountGramNightmare);
             AddProduct(Product.AcrossTheEttenmoorsNightmare);
+            AddProduct(Product.TheTreacheryOfRhudaurNightmare);
 
             AddProduct(Product.TheHobbitOverHillAndUnderHillNightmare);
             AddProduct(Product.TheHobbitOnTheDoorstepNightmare);

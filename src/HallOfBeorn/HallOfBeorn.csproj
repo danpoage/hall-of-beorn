@@ -207,6 +207,7 @@
     <Compile Include="Models\LotR\Products\TheDungeonsOfCirithGuratProduct.cs" />
     <Compile Include="Models\LotR\Products\TheLostRealmNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\TheMountainOfFireProduct.cs" />
+    <Compile Include="Models\LotR\Products\TheTreacheryOfRhudaurNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\TheWastesOfEriadorNightmareProduct.cs" />
     <Compile Include="Models\LotR\Scenarios\AStormOnCobasHaven.cs" />
     <Compile Include="Models\LotR\Scenarios\BeneathTheSands.cs" />
@@ -227,6 +228,7 @@
     <Compile Include="Models\LotR\Sets\TheDungeonsOfCirithGurat.cs" />
     <Compile Include="Models\LotR\Sets\TheMountainOfFire.cs" />
     <Compile Include="Models\LotR\Sets\TheRingGoesSouthNightmare.cs" />
+    <Compile Include="Models\LotR\Sets\TheTreacheryOfRhudaurNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheWastesOfEriadorNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheWeatherHillsNightmare.cs" />
     <Compile Include="Models\LotR\TextTemplate.cs" />
