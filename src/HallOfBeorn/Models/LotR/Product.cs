@@ -194,6 +194,7 @@ namespace HallOfBeorn.Models.LotR
         public static Product AcrossTheEttenmoorsNightmare = new AcrossTheEttenmoorsNightmareProduct();
         public static Product TheTreacheryOfRhudaurNightmare = new TheTreacheryOfRhudaurNightmareProduct();
         public static Product TheBattleOfCarnDumNightmare = new TheBattleOfCarnDumNightmareProduct();
+        public static Product TheDreadRealmNightmare = new TheDreadRealmNightmareProduct();
 
         public static Product TheHobbitOverHillAndUnderHillNightmare = new TheHobbitOverHillAndUnderHillNightmareProduct();
         public static Product TheHobbitOnTheDoorstepNightmare = new TheHobbitOnTheDoorstepNightmareProduct();

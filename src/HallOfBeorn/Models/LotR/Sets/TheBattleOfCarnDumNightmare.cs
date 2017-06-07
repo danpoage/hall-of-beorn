@@ -22,7 +22,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithText("You are playing Nightmare mode.")
                 .WithFlavor("Fear fell on all who beheld him; be he singled out the Captain of Gondor for the fullness of his hatred, and with a terrible cry he rode straight upon him.\r\n-The Return of the King")
                 .WithOppositeText(
-@"Begin with the standard quest deck and encounter deck for The The Battle of Carn Dûm scenario.
+@"Begin with the standard quest deck and encounter deck for The Battle of Carn Dûm scenario.
 
 Remove the following cards, in the specified quantities, from the standard encounter deck:
 
