@@ -203,6 +203,7 @@
     <Compile Include="Models\LotR\LayoutType.cs" />
     <Compile Include="Models\LotR\Products\AcrossTheEttenmoorsNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\EscapeFromMountGramNightmareProduct.cs" />
+    <Compile Include="Models\LotR\Products\TheBattleOfCarnDumNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\TheCrossingsOfPorosProduct.cs" />
     <Compile Include="Models\LotR\Products\TheDungeonsOfCirithGuratProduct.cs" />
     <Compile Include="Models\LotR\Products\TheLostRealmNightmareProduct.cs" />
@@ -224,6 +225,7 @@
     <Compile Include="Models\LotR\Sets\EscapeFromMountGramNightmare.cs" />
     <Compile Include="Models\LotR\Sets\IntrudersInChetwoodNightmare.cs" />
     <Compile Include="Models\LotR\Sets\JourneyInTheDarkNightmare.cs" />
+    <Compile Include="Models\LotR\Sets\TheBattleOfCarnDumNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheCrossingsOfPoros.cs" />
     <Compile Include="Models\LotR\Sets\TheDungeonsOfCirithGurat.cs" />
     <Compile Include="Models\LotR\Sets\TheMountainOfFire.cs" />

@@ -258,6 +258,8 @@ namespace HallOfBeorn.Models.LotR
             Add(EscapeFromMountGramNightmare);
             Add(AngmarOrcsNightmare);
             Add(AcrossTheEttenmoorsNightmare);
+            Add(TheTreacheryOfRhudaurNightmare);
+            Add(TheBattleOfCarnDumNightmare);
 
             //The Hobbit: Over Hill and Under Hill Nightmare Decks
             Add(WeMustAwayEreBreakOfDayNightmare);
@@ -529,7 +531,9 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet EscapeFromMountGramNightmare = new EncounterSet { Name = "Escape from Mount Gram Nightmare", Set = "Escape from Mount Gram Nightmare" };
         public static EncounterSet AngmarOrcsNightmare = new EncounterSet { Name = "Angmar Orcs Nightmare", Set = "Escape from Mount Gram Nightmare" };
         public static EncounterSet AcrossTheEttenmoorsNightmare = new EncounterSet { Name = "Across the Ettenmoors Nightmare", Set = "Across the Ettenmoors Nightmare" };
-        
+        public static EncounterSet TheTreacheryOfRhudaurNightmare = new EncounterSet { Name = "The Treachery of Rhudaur Nightmare", Set = "The Treachery of Rhudaur Nightmare" };
+        public static EncounterSet TheBattleOfCarnDumNightmare = new EncounterSet { Name = "The Battle of Carn Dûm Nightmare", Set = "The Battle of Carn Dûm Nightmare" };
+
         //The Hobbit: Over Hill and Under Hill Nightmare Decks
         public static EncounterSet WeMustAwayEreBreakOfDayNightmare = new EncounterSet { Name = "We Must Away, Ere Break of Day Nightmare", Set = "We Must Away, Ere Break of Day Nightmare" };
         public static EncounterSet OverTheMistyMountainsGrimNightmare = new EncounterSet { Name = "Over the Misty Mountains Grim Nightmare", Set = "Over the Misty Mountains Grim Nightmare" };

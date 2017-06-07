@@ -203,6 +203,7 @@ namespace HallOfBeorn.Models.LotR
             Add(EscapeFromMountGramNightmare);
             Add(AcrossTheEttenmoorsNightmare);
             Add(TheTreacheryOfRhudaurNightmare);
+            Add(TheBattleOfCarnDumNightmare);
 
             Add(WeMustAwayEreBreakOfDayNightmare);
             Add(OverTheMistyMountainsGrimNightmare);
@@ -348,6 +349,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet EscapeFromMountGramNightmare = new Sets.EscapeFromMountGramNightmare();
         public static CardSet AcrossTheEttenmoorsNightmare = new Sets.AcrossTheEttenmoorsNightmare();
         public static CardSet TheTreacheryOfRhudaurNightmare = new Sets.TheTreacheryOfRhudaurNightmare();
+        public static CardSet TheBattleOfCarnDumNightmare = new Sets.TheBattleOfCarnDumNightmare();
 
         public static CardSet WeMustAwayEreBreakOfDayNightmare = new Sets.WeMustAwayEreBreakOfDayNightmare();
         public static CardSet OverTheMistyMountainsGrimNightmare = new Sets.OverTheMistyMountainsGrimNightmare();
