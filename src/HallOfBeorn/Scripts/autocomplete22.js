@@ -26,6 +26,8 @@
     "Knight of the White Tower", "Hold the Line", "Soldier of Dol Amroth", "Sulien", "Inspiring Presence", "Guardian of Ithilien", "Ranger Spear", "Prince of Dol Amroth",
     "Greenwood Archer", "Erebor Guard", "Halfling Bounder", "Vigilant Dunadan", "Unlikely Friendship", "Well Warned", "Dour-handed", "Dwarven Shield", "Mirkwood Long-knife", "The Road Goes Ever On", "The Storm Comes",
     "Kahliel", "Andrath Guardsman", "Prepare for Battle", "Yazan", "Wait no Longer", "Jubayr", "Dwarf Pipe", "Firyal", "Coney in a Trap", "Kahliel's Headdress",
+    "Thurindir", "Kahliel's Tribesman", "Steed of the North", "Mighty Warrior", "Proud Hunters", "Dunedain Pathfinder", "Backtrack", "Eryn Galen Settler", "Explore Secret Ways", "Steward of Orthanc",
+    "Hirgon", "Haradrim Spear", "Hunting Party", "The Red Arrow", "Keep Watch", "Rider of Rohan", "Fireside Song", "Dunedain Lookout", "Doughty Ranger", "The Free Peoples", "Brood Mother",
           "+set:",
           "-set:",
           "+type:",
