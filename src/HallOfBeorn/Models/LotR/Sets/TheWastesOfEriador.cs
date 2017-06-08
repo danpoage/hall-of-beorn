@@ -33,7 +33,7 @@ namespace HallOfBeorn.Models.LotR.Sets
                 .WithInfo(3, 3, Artist.Lukasz_Jaskolski));
             Cards.Add(LotRCard.Ally("Honour Guard", Sphere.Tactics, 2, 0, 0, 1, 3)
                 .WithTraits("Gondor.", "Warrior.")
-                .WithText("Response: Exhaust Honour Guard to cancel the first point of damage just dealt to a character.\r\nValour Response: Exhaust and discard Honour Guard to cancel up to 5 damage just dealt to a character.")
+                .WithText("Response: Exhaust Honour Guard to cancel 1 point of damage just dealt to a character.\r\nValour Response: Exhaust and discard Honour Guard to cancel up to 5 damage just dealt to a character.")
                 .WithInfo(4, 3, Artist.Owen_William_Weber));
             Cards.Add(LotRCard.Attachment("Raven-winged Helm", "", Sphere.Tactics, 2)
                 .WithTraits("Item.", "Armor.")
