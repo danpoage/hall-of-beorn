@@ -229,7 +229,7 @@ namespace HallOfBeorn.Models.LotR
             };
         }
 
-        public static LotRCard Location(string title, string id, string encounterSet, byte? threat, byte questPoints)
+        public static LotRCard Location(string title, string id, string encounterSet, byte? threat, byte? questPoints)
         {
             return new LotRCard()
             {
@@ -253,7 +253,7 @@ namespace HallOfBeorn.Models.LotR
             };
         }
 
-        public static LotRCard EncounterSideQuest(string title, string id, string encounterSet, byte questPoints)
+        public static LotRCard EncounterSideQuest(string title, string id, string encounterSet, byte? questPoints)
         {
             return new LotRCard()
             {

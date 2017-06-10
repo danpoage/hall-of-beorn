@@ -200,6 +200,8 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Arkham\Products\CurseOfTheRougarou.cs" />
     <Compile Include="Models\INamed.cs" />
+    <Compile Include="Models\LotR\EncounterSets\CoreSet\CoreSetEncounterSet.cs" />
+    <Compile Include="Models\LotR\EncounterSets\CoreSet\PassageThroughMirkwood.cs" />
     <Compile Include="Models\LotR\LayoutType.cs" />
     <Compile Include="Models\LotR\Products\AcrossTheEttenmoorsNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\EscapeFromMountGramNightmareProduct.cs" />
@@ -876,6 +878,27 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\LotR\EncounterSets\AgainstTheShadow\" />
+    <Folder Include="Models\LotR\EncounterSets\AngmarAwakened\" />
+    <Folder Include="Models\LotR\EncounterSets\Dreamchaser\" />
+    <Folder Include="Models\LotR\EncounterSets\Dwarrowdelf\" />
+    <Folder Include="Models\LotR\EncounterSets\Haradrim\" />
+    <Folder Include="Models\LotR\EncounterSets\HeirsOfNumenor\" />
+    <Folder Include="Models\LotR\EncounterSets\KhazadDum\" />
+    <Folder Include="Models\LotR\EncounterSets\RingMaker\" />
+    <Folder Include="Models\LotR\EncounterSets\ShadowsOfMirkwood\" />
+    <Folder Include="Models\LotR\EncounterSets\TheGreyHavens\" />
+    <Folder Include="Models\LotR\EncounterSets\TheHobbitSaga\OnTheDoorstep\" />
+    <Folder Include="Models\LotR\EncounterSets\TheHobbitSaga\OverHillAndUnderHill\" />
+    <Folder Include="Models\LotR\EncounterSets\TheLordOfTheRingsSaga\TheBlackRiders\" />
+    <Folder Include="Models\LotR\EncounterSets\TheLordOfTheRingsSaga\TheFlameOfTheWest\" />
+    <Folder Include="Models\LotR\EncounterSets\TheLordOfTheRingsSaga\TheLandOfShadow\" />
+    <Folder Include="Models\LotR\EncounterSets\TheLordOfTheRingsSaga\TheMountainOfFire\" />
+    <Folder Include="Models\LotR\EncounterSets\TheLordOfTheRingsSaga\TheRoadDarkens\" />
+    <Folder Include="Models\LotR\EncounterSets\TheLordOfTheRingsSaga\TheTreasonOfSaruman\" />
+    <Folder Include="Models\LotR\EncounterSets\TheLostRealm\" />
+    <Folder Include="Models\LotR\EncounterSets\TheSandsOfHarad\" />
+    <Folder Include="Models\LotR\EncounterSets\TheVoiceOfIsengard\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

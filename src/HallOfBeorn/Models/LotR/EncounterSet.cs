@@ -12,6 +12,66 @@ namespace HallOfBeorn.Models.LotR
             AlternateName = string.Empty;
         }
 
+        protected EncounterSet(string name, string cardSetName)
+        {
+            this.Name = name;
+            this.Set = cardSetName;
+        }
+
+        private readonly List<LotRCard> cards = new List<LotRCard>();
+        
+        public IEnumerable<LotRCard> Cards()
+        {
+            return cards;
+        }
+
+        private void addCard(LotRCard card)
+        {
+            cards.Add(card);
+        }
+
+        protected LotRCard Quest(string title, uint stageNumber, char stageLetter, byte? questPoints)
+        {
+            var quest = LotRCard.Quest(title, stageNumber, this.Name, questPoints, stageLetter);
+            addCard(quest);
+            return quest;
+        }
+
+        protected LotRCard Enemy(string title, byte? engagementCost, byte? threat, byte? attack, byte? defense, byte? hitPoints)
+        {
+            var enemy = LotRCard.Enemy(title, string.Empty, this.Name, engagementCost, threat, attack, defense, hitPoints);
+            addCard(enemy);
+            return enemy;
+        }
+
+        protected LotRCard Location(string title, byte? threat, byte? questPoints)
+        {
+            var location = LotRCard.Location(title, string.Empty, this.Name, threat, questPoints);
+            addCard(location);
+            return location;
+        }
+
+        protected LotRCard Treachery(string title)
+        {
+            var treachery = LotRCard.Treachery(title, string.Empty, this.Name);
+            addCard(treachery);
+            return treachery;
+        }
+
+        protected LotRCard SideQuest(string title, byte? questPoints)
+        {
+            var sideQuest = LotRCard.EncounterSideQuest(title, string.Empty, this.Name, questPoints);
+            addCard(sideQuest);
+            return sideQuest;
+        }
+
+        protected LotRCard NightmareSetup()
+        {
+            var setup = LotRCard.NightmareSetup(this.Name, this.Name);
+            addCard(setup);
+            return setup;
+        }
+
         public string Set { get; set; }
 
         private string normalizedSet;
@@ -139,7 +199,7 @@ namespace HallOfBeorn.Models.LotR
             Add(AStormOnCobasHaven);
             Add(TheCityOfCorsairs);
 
-            //The Sands of Harad and Harradrim
+            //The Sands of Harad and Haradrim
             Add(EscapeFromUmbar);
             Add(TheLongArmOfMordor);
             Add(MordorOrcs);
@@ -302,7 +362,7 @@ namespace HallOfBeorn.Models.LotR
         }
 
         //Core Set and Shadows of Mirkwood
-        public static EncounterSet PassageThroughMirkwood = new EncounterSet { Name = "Passage Through Mirkwood", Set = "Core Set" };
+        public static EncounterSet PassageThroughMirkwood = new EncounterSets.CoreSet.PassageThroughMirkwood();
         public static EncounterSet DolGuldurOrcs = new EncounterSet { Name = "Dol Guldur Orcs", Set = "Core Set" };
         public static EncounterSet SpidersOfMirkwood = new EncounterSet { Name = "Spiders of Mirkwood", Set = "Core Set" };
         public static EncounterSet JourneyAlongTheAnduin = new EncounterSet { Name = "Journey Along the Anduin", Set = "Core Set"};
