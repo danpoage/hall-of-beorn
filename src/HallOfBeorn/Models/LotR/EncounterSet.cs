@@ -30,46 +30,41 @@ namespace HallOfBeorn.Models.LotR
             cards.Add(card);
         }
 
-        protected LotRCard Quest(string title, uint stageNumber, char stageLetter, byte? questPoints)
+        protected void includes(params LotRCard[] cards)
         {
-            var quest = LotRCard.Quest(title, stageNumber, this.Name, questPoints, stageLetter);
-            addCard(quest);
-            return quest;
+            foreach (var card in cards) {
+                addCard(card);
+            }
         }
 
-        protected LotRCard Enemy(string title, byte? engagementCost, byte? threat, byte? attack, byte? defense, byte? hitPoints)
+        protected static LotRCard Quest(string encounterSet, string title, uint stageNumber, char stageLetter, byte? questPoints)
         {
-            var enemy = LotRCard.Enemy(title, string.Empty, this.Name, engagementCost, threat, attack, defense, hitPoints);
-            addCard(enemy);
-            return enemy;
+            return LotRCard.Quest(title, stageNumber, encounterSet, questPoints, stageLetter);
         }
 
-        protected LotRCard Location(string title, byte? threat, byte? questPoints)
+        protected static LotRCard Enemy(string encounterSet, string title, byte? engagementCost, byte? threat, byte? attack, byte? defense, byte? hitPoints)
         {
-            var location = LotRCard.Location(title, string.Empty, this.Name, threat, questPoints);
-            addCard(location);
-            return location;
+            return LotRCard.Enemy(title, string.Empty, encounterSet, engagementCost, threat, attack, defense, hitPoints);
         }
 
-        protected LotRCard Treachery(string title)
+        protected static LotRCard Location(string encounterSet, string title, byte? threat, byte? questPoints)
         {
-            var treachery = LotRCard.Treachery(title, string.Empty, this.Name);
-            addCard(treachery);
-            return treachery;
+            return LotRCard.Location(title, string.Empty, encounterSet, threat, questPoints);
         }
 
-        protected LotRCard SideQuest(string title, byte? questPoints)
+        protected static LotRCard Treachery(string encounterSet, string title)
         {
-            var sideQuest = LotRCard.EncounterSideQuest(title, string.Empty, this.Name, questPoints);
-            addCard(sideQuest);
-            return sideQuest;
+            return LotRCard.Treachery(title, string.Empty, encounterSet);
         }
 
-        protected LotRCard NightmareSetup()
+        protected static LotRCard SideQuest(string encounterSet, string title, byte? questPoints)
         {
-            var setup = LotRCard.NightmareSetup(this.Name, this.Name);
-            addCard(setup);
-            return setup;
+            return LotRCard.EncounterSideQuest(title, string.Empty, encounterSet, questPoints);
+        }
+
+        protected static LotRCard NightmareSetup(string encounterSet)
+        {
+            return LotRCard.NightmareSetup(encounterSet, encounterSet);
         }
 
         public string Set { get; set; }
