@@ -203,6 +203,8 @@
     <Compile Include="Models\LotR\EncounterSets\CoreSet\CoreSetEncounterSet.cs" />
     <Compile Include="Models\LotR\EncounterSets\CoreSet\DolGuldurOrcs.cs" />
     <Compile Include="Models\LotR\EncounterSets\CoreSet\PassageThroughMirkwood.cs" />
+    <Compile Include="Models\LotR\EncounterSets\CoreSet\PassageThroughMirkwoodNightmare.cs" />
+    <Compile Include="Models\LotR\EncounterSets\CoreSet\SpidersOfMirkwood.cs" />
     <Compile Include="Models\LotR\LayoutType.cs" />
     <Compile Include="Models\LotR\Products\AcrossTheEttenmoorsNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\EscapeFromMountGramNightmareProduct.cs" />
@@ -356,7 +358,7 @@
     <Compile Include="Models\LotR\Scenarios\JourneyToTheCrossroads.cs" />
     <Compile Include="Models\LotR\Scenarios\MurderAtThePrancingPony.cs" />
     <Compile Include="Models\LotR\Scenarios\OverTheMistyMountainsGrim.cs" />
-    <Compile Include="Models\LotR\Scenarios\PassageThroughMirkwood.cs" />
+    <Compile Include="Models\LotR\Scenarios\CoreSet\PassageThroughMirkwood.cs" />
     <Compile Include="Models\LotR\Scenarios\PerilInPelargir.cs" />
     <Compile Include="Models\LotR\Scenarios\RaidOnTheGreyHavens.cs" />
     <Compile Include="Models\LotR\Scenarios\ReturnToMirkwood.cs" />

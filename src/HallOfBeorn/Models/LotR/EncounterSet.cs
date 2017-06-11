@@ -25,16 +25,9 @@ namespace HallOfBeorn.Models.LotR
             return cards;
         }
 
-        private void addCard(LotRCard card)
-        {
-            cards.Add(card);
-        }
-
         protected void includes(params LotRCard[] cards)
         {
-            foreach (var card in cards) {
-                addCard(card);
-            }
+            this.cards.AddRange(cards);
         }
 
         protected static LotRCard Quest(string encounterSet, string title, uint stageNumber, char stageLetter, byte? questPoints)
@@ -358,8 +351,8 @@ namespace HallOfBeorn.Models.LotR
 
         //Core Set and Shadows of Mirkwood
         public static EncounterSet PassageThroughMirkwood = new EncounterSets.CoreSet.PassageThroughMirkwood();
-        public static EncounterSet DolGuldurOrcs = new EncounterSet { Name = "Dol Guldur Orcs", Set = "Core Set" };
-        public static EncounterSet SpidersOfMirkwood = new EncounterSet { Name = "Spiders of Mirkwood", Set = "Core Set" };
+        public static EncounterSet DolGuldurOrcs = new EncounterSets.CoreSet.DolGuldurOrcs();
+        public static EncounterSet SpidersOfMirkwood = new EncounterSets.CoreSet.SpidersOfMirkwood();
         public static EncounterSet JourneyAlongTheAnduin = new EncounterSet { Name = "Journey Along the Anduin", Set = "Core Set"};
         public static EncounterSet SauronsReach = new EncounterSet { Name = "Sauron's Reach", Set = "Core Set" };
         public static EncounterSet Wilderlands = new EncounterSet { Name = "Wilderlands", Set = "Core Set" };
@@ -538,7 +531,7 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet TheSiegeOfAnnuminas = new EncounterSet { Name = "The Siege of Annúminas", Set = "The Siege of Annúminas" };
 
         //Core Set and Shadows of Mirkwood Nightmare Decks
-        public static EncounterSet PassageThroughMirkwoodNightmare = new EncounterSet { Name = "Passage Through Mirkwood Nightmare", Set = "Passage Through Mirkwood Nightmare" };
+        public static EncounterSet PassageThroughMirkwoodNightmare = new EncounterSets.CoreSet.PassageThroughMirkwoodNightmare(); //new EncounterSet { Name = "Passage Through Mirkwood Nightmare", Set = "Passage Through Mirkwood Nightmare" };
         public static EncounterSet JourneyAlongTheAnduinNightmare = new EncounterSet { Name = "Journey Along the Anduin Nightmare", Set = "Journey Along the Anduin Nightmare" };
         public static EncounterSet EscapeFromDolGuldurNightmare = new EncounterSet { Name = "Escape from Dol Guldur Nightmare", Set = "Escape from Dol Guldur Nightmare" };
         public static EncounterSet TheHuntForGollumNightmare = new EncounterSet { Name = "The Hunt for Gollum Nightmare", Set = "The Hunt for Gollum Nightmare" };

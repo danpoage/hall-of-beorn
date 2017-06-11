@@ -54,6 +54,33 @@ namespace HallOfBeorn.Models.LotR
         protected void AddEncounterSet(EncounterSet set)
         {
             encounterSets[set.Name] = set;
+
+            foreach (var card in set.Cards()) {
+
+                switch (card.CardType) {
+                    case CardType.Quest:
+                        AddQuestCard(card);
+                        break;
+                    case CardType.Nightmare_Setup:
+                        //throw new Exception("!!!! WTF !!!");
+
+                        applyNightmareExclusions(card);
+                        break;
+                    default:
+                        if (card.EasyModeQuantity.HasValue && card.Quantity > card.EasyModeQuantity.Value) {
+                            var numberExcluded = (byte)(card.Quantity - card.EasyModeQuantity.Value);
+                            ExcludeFromEasyMode(card.Slug, numberExcluded);
+                        }
+                        break;
+                }
+            }
+        }
+
+        protected void addEncounterSets(params EncounterSet[] sets)
+        {
+            foreach (var set in sets) {
+                AddEncounterSet(set);
+            }
         }
 
         protected void AddQuestCardId(string slug)
@@ -63,13 +90,39 @@ namespace HallOfBeorn.Models.LotR
 
         protected void ExcludeFromEasyMode(string slug, byte numberExcluded)
         {
-            excludedEasyModeCards.Add(slug, numberExcluded);
+            excludedEasyModeCards[slug] = numberExcluded;
         }
 
         protected void ExcludeFromNightmareMode(string slug, byte numberExcluded)
         {
-            excludedNightmareModeCards.Add(slug, numberExcluded);
+            excludedNightmareModeCards[slug] = numberExcluded;
         }
+
+        protected void applyNightmareExclusions(LotRCard nightmareSetup)
+        {
+            var cards = new List<LotRCard>();
+
+            foreach (var set in encounterSets.Values.Where(x => !x.IsNightmare))
+            {
+                cards.AddRange(set.Cards());
+            }
+
+            var map = nightmareSetup.NightmareExclusions(cards);
+
+            foreach (var item in map) {
+                ExcludeFromNightmareMode(item.Key, item.Value);
+            }
+        }
+
+        /*
+        protected void excludeCardFromNightmare(LotRCard card, byte numberExcluded)
+        {
+            if (card == null) {
+                throw new ArgumentNullException("card is null");
+            }
+
+            ExcludeFromNightmareMode(card.Slug, 
+        }*/
 
         public int Number { get; set; }
         public string GroupName { get; set; }

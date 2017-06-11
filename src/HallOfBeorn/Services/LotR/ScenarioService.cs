@@ -202,7 +202,7 @@ namespace HallOfBeorn.Services.LotR
         {
             var scenarios = new List<Scenario>();
 
-            scenarios.Add(new HallOfBeorn.Models.LotR.Scenarios.PassageThroughMirkwood());
+            scenarios.Add(new HallOfBeorn.Models.LotR.Scenarios.CoreSet.PassageThroughMirkwood());
             scenarios.Add(new HallOfBeorn.Models.LotR.Scenarios.JourneyAlongTheAnduin());
             scenarios.Add(new HallOfBeorn.Models.LotR.Scenarios.EscapeFromDolGuldur());
 

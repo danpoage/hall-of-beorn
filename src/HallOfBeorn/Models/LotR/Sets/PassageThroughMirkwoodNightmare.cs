@@ -20,11 +20,8 @@ namespace HallOfBeorn.Models.LotR.Sets
                 Title = "Passage Through Mirkwood Nightmare",
                 Id = "e84f94bf-201b-4adf-95d2-0012e0bb5001",
                 CardType = CardType.Nightmare_Setup,
-                Text =
-@"You are playing Nightmare mode.
-
-Forced: During setup, each player reveals 1 card from the encounter deck and adds it to the staging area.",
-                OppositeText =
+                Text = "You are playing Nightmare mode.\r\nForced: During setup, each player reveals 1 card from the encounter deck and adds it to the staging area.",
+                OppositeText = 
 @"Begin with the standard quest deck and encounter deck for the Passage Through Mirkwood scenario found in the LOTR LCG core set.
 
 Remove the following cards, in the specified quantities, from the standard encounter deck:

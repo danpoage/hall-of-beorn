@@ -14,6 +14,12 @@ namespace HallOfBeorn.Models.LotR.Sets
             Number = 1;
             SetType = Models.SetType.Core;
 
+            addEncounterSets(
+                EncounterSet.PassageThroughMirkwood,
+                EncounterSet.DolGuldurOrcs,
+                EncounterSet.SpidersOfMirkwood
+            );
+
             Cards.Add(new LotRCard() {
                 Title = "Aragorn",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9001",
@@ -638,10 +644,7 @@ and the City shall be blessed.
                 CardType = CardType.Event,
                 Sphere = Sphere.Tactics,
                 ResourceCost = 3,
-                Text = 
-@"You must use resources from 3 different heroes' pools to pay for this card.
-                
-Action: Choose a player. That player's engaged enemies cannot attack that player this phase.",
+                Text = "You must use resources from 3 different heroes' pools to pay for this card.\r\nAction: Choose a player. That player's engaged enemies cannot attack that player this phase.",
                 FlavorText = "With a word or cry, suddenly, the Riders halted. A thicket of spears were pointed towards the strangers...\r\n-The Two Towers",
                 Quantity = 2,
                 CardNumber = 36,
@@ -1197,6 +1200,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 CardNumber = 73,
                 Artist = Artist.Lucas_Graciano
             });
+            /*
             Cards.Add(new LotRCard() {
                 
                 Title = "King Spider",
@@ -1307,6 +1311,8 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 CardNumber = 80,
                 Artist = Artist.Daryl_Mandryk
             });
+            */
+
             Cards.Add(new LotRCard() {
                 
                 Title = "Wolf Rider",
@@ -1445,6 +1451,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 CardNumber = 88,
                 Artist = Artist.Santiago_Villa
             });
+            /*
             Cards.Add(new LotRCard() {
                 Title = "Dol Guldur Orcs",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9089",
@@ -1555,6 +1562,9 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 CardNumber = 95,
                 Artist = Artist.Ben_Zweifel
             });
+             */
+
+            /*
             Cards.Add(new LotRCard() {
                 
                 Title = "Forest Spider",
@@ -1639,6 +1649,8 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 CardNumber = 100,
                 Artist = Artist.Ben_Zweifel
             });
+             */
+
             Cards.Add(new LotRCard() {
                 
                 Title = "Dungeon Jailor",
@@ -1910,6 +1922,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 CardNumber = 118,
                 Artist = Artist.David_Lecossu
             });
+            /*
             Cards.Add(new LotRCard() {
                 Title = "Flies and Spiders",
                 StageNumber = 1,
@@ -1977,6 +1990,7 @@ Action: Choose a player. That player's engaged enemies cannot attack that player
                 BackArtist = Artist.David_Lecossu,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood }
             }.WithSuffix("Beorn's Path"));
+             */
             Cards.Add(new LotRCard() {
                 Title = "The Necromancer's Tower",
                 StageNumber = 1,

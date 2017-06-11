@@ -61,6 +61,25 @@ namespace HallOfBeorn.Models.LotR
         public List<LotRCard> Cards { get; protected set; }
         public Product Product { get; set; }
 
+        private readonly List<EncounterSet> encounterSets = new List<EncounterSet>();
+        protected void addEncounterSets(params EncounterSet[] sets)
+        {
+            foreach (var encounterSet in sets) {
+
+                foreach (var card in encounterSet.Cards()) {
+                    if (card.CardSet == null) {
+                        card.CardSet = this;
+                    }
+                }
+
+                this.encounterSets.Add(encounterSet);
+            }
+        }
+        public IEnumerable<EncounterSet> EncounterSets()
+        {
+            return encounterSets;
+        }
+
         public string AlternateName { get; protected set; }
 
         public bool IsNightmare { get { return !string.IsNullOrEmpty(Name) && Name.EndsWith(" Nightmare"); } }

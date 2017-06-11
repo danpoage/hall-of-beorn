@@ -15,9 +15,23 @@ namespace HallOfBeorn.Services.LotR
             {
                 foreach (var cardSet in product.CardSets())
                 {
+                    //Player cards (and quest/encounter cards for old-style sets)
                     foreach (var card in cardSet.Cards)
                     {
                         this.cards.Add(card);
+                    }
+
+                    foreach (var encounterSet in cardSet.EncounterSets())
+                    {
+                        foreach (var card in encounterSet.Cards())
+                        {
+                            //TODO: Find a way to remove this
+                            if (card.CardSet == null) {
+                                card.CardSet = cardSet;
+                            }
+
+                            this.cards.Add(card);
+                        }
                     }
                 }
             }

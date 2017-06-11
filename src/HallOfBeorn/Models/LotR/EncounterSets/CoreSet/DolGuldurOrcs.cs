@@ -27,7 +27,7 @@ namespace HallOfBeorn.Models.LotR.EncounterSets.CoreSet
             .WithSuffix("Enemy")
             .WithTraits("Dol Guldur.", "Orc.")
             .WithText("When Revealed: The first player chooses 1 character currently committed to a quest. Deal 2 damage to that character.")
-            .WithSuffix("Shadow: attacking enemy gets +1 Attack. (+3 Attack instead if this attack is undefended.)")
+            .WithShadow("Shadow: attacking enemy gets +1 Attack. (+3 Attack instead if this attack is undefended.)")
             .WithInfo(89, 3, Artist.Anna_Christenson);
         public static LotRCard ChieftanUfthak = Enemy(setName, "Chieftan Ufthak", 35, 2, 3, 3, 6)
             .WithTraits("Dol Guldur.", "Orc.")
