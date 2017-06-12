@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HallOfBeorn.Models.LotR.EncounterSets.CoreSet
+namespace HallOfBeorn.Models.LotR.EncounterSets.Core
 {
-    public abstract class CoreSetEncounterSet : EncounterSet
+    public abstract class CoreEncounterSet : EncounterSet
     {
-        protected CoreSetEncounterSet(string name)
+        protected CoreEncounterSet(string name)
         {
             this.Set = "Core Set";
             this.Name = name;

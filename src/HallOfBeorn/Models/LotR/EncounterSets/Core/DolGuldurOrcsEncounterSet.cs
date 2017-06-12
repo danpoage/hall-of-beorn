@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HallOfBeorn.Models.LotR.EncounterSets.CoreSet
+namespace HallOfBeorn.Models.LotR.EncounterSets.Core
 {
-    public class DolGuldurOrcs : CoreSetEncounterSet
+    public class DolGuldurOrcsEncounterSet : CoreEncounterSet
     {
         private const string setName = "Dol Guldur Orcs";
 
-        public DolGuldurOrcs()
+        public DolGuldurOrcsEncounterSet()
             : base(setName)
         {
             includes(

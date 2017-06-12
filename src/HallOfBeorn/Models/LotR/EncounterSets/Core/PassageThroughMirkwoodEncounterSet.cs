@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HallOfBeorn.Models.LotR.EncounterSets.CoreSet
+namespace HallOfBeorn.Models.LotR.EncounterSets.Core
 {
-    public class PassageThroughMirkwood : CoreSetEncounterSet
+    public class PassageThroughMirkwoodEncounterSet : CoreEncounterSet
     {
         private const string setName = "Passage Through Mirkwood";
 
-        public PassageThroughMirkwood()
+        public PassageThroughMirkwoodEncounterSet()
             : base(setName)
         {
             includes(

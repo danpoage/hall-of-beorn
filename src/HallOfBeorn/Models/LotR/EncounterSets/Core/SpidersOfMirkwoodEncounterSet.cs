@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HallOfBeorn.Models.LotR.EncounterSets.CoreSet
+namespace HallOfBeorn.Models.LotR.EncounterSets.Core
 {
-    public class SpidersOfMirkwood : CoreSetEncounterSet
+    public class SpidersOfMirkwoodEncounterSet : CoreEncounterSet
     {
         private const string setName = "Spiders of Mirkwood";
 
-        public SpidersOfMirkwood()
+        public SpidersOfMirkwoodEncounterSet()
             : base(setName)
         {
             includes(

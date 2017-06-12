@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using HallOfBeorn;
 using HallOfBeorn.Models;
 
-namespace HallOfBeorn.Models.LotR.Sets
+namespace HallOfBeorn.Models.LotR.Sets.Core
 {
     public class CoreSet : CardSet
     {

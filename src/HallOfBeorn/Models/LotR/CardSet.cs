@@ -252,7 +252,7 @@ namespace HallOfBeorn.Models.LotR
         }
 
         #region Static Members
-        public static CardSet CoreSet = new Sets.CoreSet().WithShortSlug("a");
+        public static CardSet CoreSet = new Sets.Core.CoreSet().WithShortSlug("a");
         public static CardSet TheHuntForGollum = new Sets.TheHuntforGollum().WithShortSlug("b");
         public static CardSet ConflictAtTheCarrock = new Sets.ConflictattheCarrock().WithShortSlug("c");
         public static CardSet AJourneyToRhosgobel = new Sets.AJourneytoRhosgobel().WithShortSlug("d");

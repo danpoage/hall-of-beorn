@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HallOfBeorn.Models.LotR.EncounterSets.CoreSet
+namespace HallOfBeorn.Models.LotR.EncounterSets.Core
 {
-    public class PassageThroughMirkwoodNightmare : EncounterSet
+    public class PassageThroughMirkwoodNightmareEncounterSet : EncounterSet
     {
         private const string setName = "Passage Through Mirkwood Nightmare";
 
-        public PassageThroughMirkwoodNightmare()
+        public PassageThroughMirkwoodNightmareEncounterSet()
             : base(setName, setName)
         {
             includes(
@@ -28,14 +28,14 @@ namespace HallOfBeorn.Models.LotR.EncounterSets.CoreSet
         public static LotRCard PassageThroughMirkwoodNightmareSetup = NightmareSetup(setName)
             .WithText("You are playing Nightmare mode.\r\nForced: During setup, each player reveals 1 card from the encounter deck and adds it to the staging area.")
             .WithOppositeText("Begin with the standard quest deck and encounter deck for the Passage Through Mirkwood scenario found in the LOTR LCG core set.\r\nRemove the following cards, in the specified quantities, from the standard encounter deck:\r\nUngoliant's Spawn x1\r\nBlack ~Forest Bats x1\r\n~Forest ~Spider x3\r\nDol Guldur Orcs x3\r\nOld ~Forest ~Road x1\r\n~Forest ~Gate x2\r\nMountains of ~Mirkwood x3\r\nCaught in a Web x2\r\nThen, shuffle the encounter cards in this Nightmare Deck into the remainder of the standard Passage Through Mirkwood encounter deck.\r\nFinally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.")
-            .WithNightmareExclusion(EncounterSets.CoreSet.SpidersOfMirkwood.UngoliantsSpawn, 1)
-            .WithNightmareExclusion(EncounterSets.CoreSet.PassageThroughMirkwood.BlackForestBats, 1)
-            .WithNightmareExclusion(EncounterSets.CoreSet.PassageThroughMirkwood.ForestSpider, 3)
-            .WithNightmareExclusion(EncounterSets.CoreSet.DolGuldurOrcs.DolGuldurOrcsEnemy, 3)
-            .WithNightmareExclusion(EncounterSets.CoreSet.PassageThroughMirkwood.OldForestRoad, 1)
-            .WithNightmareExclusion(EncounterSets.CoreSet.PassageThroughMirkwood.ForestGate, 2)
-            .WithNightmareExclusion(EncounterSets.CoreSet.SpidersOfMirkwood.MountainsOfMirkwood, 3)
-            .WithNightmareExclusion(EncounterSets.CoreSet.SpidersOfMirkwood.CaughtInAWeb, 2)
+            .WithNightmareExclusion(SpidersOfMirkwoodEncounterSet.UngoliantsSpawn, 1)
+            .WithNightmareExclusion(PassageThroughMirkwoodEncounterSet.BlackForestBats, 1)
+            .WithNightmareExclusion(PassageThroughMirkwoodEncounterSet.ForestSpider, 3)
+            .WithNightmareExclusion(DolGuldurOrcsEncounterSet.DolGuldurOrcsEnemy, 3)
+            .WithNightmareExclusion(PassageThroughMirkwoodEncounterSet.OldForestRoad, 1)
+            .WithNightmareExclusion(PassageThroughMirkwoodEncounterSet.ForestGate, 2)
+            .WithNightmareExclusion(SpidersOfMirkwoodEncounterSet.MountainsOfMirkwood, 3)
+            .WithNightmareExclusion(SpidersOfMirkwoodEncounterSet.CaughtInAWeb, 2)
             .WithInfo(1, 1, Artist.Stacey_Diana_Clark);
         public static LotRCard UngoliantsSpawn = Enemy(setName, "Ungoliant's Spawn", 32, 3, 5, 3, 9)
             .WithTraits("Creature.", "Spider.")
