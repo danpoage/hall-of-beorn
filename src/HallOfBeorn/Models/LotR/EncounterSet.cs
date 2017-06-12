@@ -79,8 +79,6 @@ namespace HallOfBeorn.Models.LotR
             get { return !string.IsNullOrEmpty(Name) && Name.EndsWith(" Nightmare"); }
         }
 
-        private static List<EncounterSet> all = new List<EncounterSet>();
-
         static EncounterSet()
         {
             //Core Set and Shadows of Mirkwood
@@ -340,6 +338,8 @@ namespace HallOfBeorn.Models.LotR
             Add(TrialUponTheMarches);
             Add(AmongTheOutlaws);
         }
+
+        private static List<EncounterSet> all = new List<EncounterSet>();
 
         private static void Add(EncounterSet set)
         {
