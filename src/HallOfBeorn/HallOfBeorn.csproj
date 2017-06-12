@@ -205,6 +205,8 @@
     <Compile Include="Models\LotR\EncounterSets\Core\PassageThroughMirkwoodEncounterSet.cs" />
     <Compile Include="Models\LotR\EncounterSets\Core\PassageThroughMirkwoodNightmareEncounterSet.cs" />
     <Compile Include="Models\LotR\EncounterSets\Core\SpidersOfMirkwoodEncounterSet.cs" />
+    <Compile Include="Models\LotR\EncounterSets\TheHobbit\WeMustAwayEreBreakOfDay.cs" />
+    <Compile Include="Models\LotR\EncounterSets\TheLordOfTheRings\AShadowOfThePast.cs" />
     <Compile Include="Models\LotR\LayoutType.cs" />
     <Compile Include="Models\LotR\Products\AcrossTheEttenmoorsNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\EscapeFromMountGramNightmareProduct.cs" />
@@ -892,14 +894,6 @@
     <Folder Include="Models\LotR\EncounterSets\RingMaker\" />
     <Folder Include="Models\LotR\EncounterSets\ShadowsOfMirkwood\" />
     <Folder Include="Models\LotR\EncounterSets\TheGreyHavens\" />
-    <Folder Include="Models\LotR\EncounterSets\TheHobbitSaga\OnTheDoorstep\" />
-    <Folder Include="Models\LotR\EncounterSets\TheHobbitSaga\OverHillAndUnderHill\" />
-    <Folder Include="Models\LotR\EncounterSets\TheLordOfTheRingsSaga\TheBlackRiders\" />
-    <Folder Include="Models\LotR\EncounterSets\TheLordOfTheRingsSaga\TheFlameOfTheWest\" />
-    <Folder Include="Models\LotR\EncounterSets\TheLordOfTheRingsSaga\TheLandOfShadow\" />
-    <Folder Include="Models\LotR\EncounterSets\TheLordOfTheRingsSaga\TheMountainOfFire\" />
-    <Folder Include="Models\LotR\EncounterSets\TheLordOfTheRingsSaga\TheRoadDarkens\" />
-    <Folder Include="Models\LotR\EncounterSets\TheLordOfTheRingsSaga\TheTreasonOfSaruman\" />
     <Folder Include="Models\LotR\EncounterSets\TheLostRealm\" />
     <Folder Include="Models\LotR\EncounterSets\TheSandsOfHarad\" />
     <Folder Include="Models\LotR\EncounterSets\TheVoiceOfIsengard\" />
