@@ -52,6 +52,26 @@ namespace HallOfBeorn.Models.LotR
             return LotRCard.Treachery(title, string.Empty, encounterSet);
         }
 
+        protected static LotRCard Objective(string encounterSet, string title)
+        {
+            return LotRCard.Objective(title, string.Empty, encounterSet);
+        }
+        
+        protected static LotRCard ObjectiveHero(string encounterSet, string title, byte willpower, byte attack, byte defense, byte hitPoints)
+        {
+            return LotRCard.ObjectiveHero(title, encounterSet, willpower, attack, defense, hitPoints);
+        }
+
+        protected static LotRCard ObjectiveAlly(string encounterSet, string title, byte willpower, byte attack, byte defense, byte hitPoints)
+        {
+            return LotRCard.ObjectiveAlly(title, string.Empty, encounterSet, willpower, attack, defense, hitPoints);
+        }
+
+        protected static LotRCard ObjectiveLocation(string encounterSet, string title, byte questPoints)
+        {
+            return LotRCard.ObjectiveLocation(title, encounterSet, questPoints);
+        }
+
         protected static LotRCard SideQuest(string encounterSet, string title, byte? questPoints)
         {
             return LotRCard.EncounterSideQuest(title, string.Empty, encounterSet, questPoints);
@@ -357,8 +377,8 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet SpidersOfMirkwood = new SpidersOfMirkwoodEncounterSet();
         public static EncounterSet JourneyAlongTheAnduin = new EncounterSet { Name = "Journey Along the Anduin", Set = "Core Set"};
         public static EncounterSet SauronsReach = new EncounterSet { Name = "Sauron's Reach", Set = "Core Set" };
-        public static EncounterSet Wilderlands = new EncounterSet { Name = "Wilderlands", Set = "Core Set" };
-        public static EncounterSet EscapeFromDolGuldur = new EncounterSet { Name = "Escape from Dol Guldur", Set = "Core Set" };
+        public static EncounterSet Wilderlands = new WilderlandsEncounterSet();
+        public static EncounterSet EscapeFromDolGuldur = new EscapeFromDolGuldurEncounterSet();
         public static EncounterSet TheHuntForGollum = new EncounterSet { Name = "The Hunt for Gollum", Set = "The Hunt for Gollum" };
         public static EncounterSet ConflictAtTheCarrock = new EncounterSet { Name = "Conflict at the Carrock", Set = "Conflict at the Carrock" };
         public static EncounterSet AJourneyToRhosgobel = new EncounterSet { Name = "A Journey to Rhosgobel", Set = "A Journey to Rhosgobel" };

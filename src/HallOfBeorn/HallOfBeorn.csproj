@@ -202,9 +202,11 @@
     <Compile Include="Models\INamed.cs" />
     <Compile Include="Models\LotR\EncounterSets\Core\CoreEncounterSet.cs" />
     <Compile Include="Models\LotR\EncounterSets\Core\DolGuldurOrcsEncounterSet.cs" />
+    <Compile Include="Models\LotR\EncounterSets\Core\EscapeFromDolGuldurEncounterSet.cs" />
     <Compile Include="Models\LotR\EncounterSets\Core\PassageThroughMirkwoodEncounterSet.cs" />
     <Compile Include="Models\LotR\EncounterSets\Core\PassageThroughMirkwoodNightmareEncounterSet.cs" />
     <Compile Include="Models\LotR\EncounterSets\Core\SpidersOfMirkwoodEncounterSet.cs" />
+    <Compile Include="Models\LotR\EncounterSets\Core\WilderlandsEncounterSet.cs" />
     <Compile Include="Models\LotR\EncounterSets\TheHobbit\WeMustAwayEreBreakOfDay.cs" />
     <Compile Include="Models\LotR\EncounterSets\TheLordOfTheRings\AShadowOfThePast.cs" />
     <Compile Include="Models\LotR\LayoutType.cs" />
