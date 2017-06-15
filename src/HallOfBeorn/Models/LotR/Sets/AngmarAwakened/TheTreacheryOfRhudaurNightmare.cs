@@ -61,11 +61,16 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithTraits("Undead.")
                 .WithText("While you are engaged with Apostate of Angmar, you cannot attack Thaurdir.")
                 .WithShadow("Shadow: Discard the top card of the encounter deck. Attacking enemy gets +X Attack, where X is that card's printed threat.")
-                .WithInfo(7, 2, Artist.Unknown));
+                .WithInfo(7, 3, Artist.Unknown));
             addCard(LotRCard.Location("Secret Antechamber", string.Empty, setName, 2, 5)
                 .WithTraits("Ruins.")
                 .WithText("Immune to player card effects.\r\nWhile Secret Antechamber is in the staging area, no more than 5 progress can be placed on the main quest each round.\r\nTravel: Raise each player's threat by 3 to travel here.")
-                .WithInfo(8, 2, Artist.Federico_Musetti));
+                .WithInfo(8, 3, Artist.Federico_Musetti));
+            addCard(LotRCard.Treachery("Life Drain", string.Empty, setName)
+                .WithTraits("Sorcery.")
+                .WithText("When Revealed: Deal Life Drain to Thaurdir, as a shadow card.")
+                .WithShadow("Shadow: If attacking enemy is Thaurdir, he gets +3 for this attack. If this attack destroys a character, attach Life Drain to Thaurdir. (Counts as a Condition attachment with the text: \"Thaurdir gets +3 hit points.\")")
+                .WithInfo(9, 3, Artist.Unknown));
         }
     }
 }

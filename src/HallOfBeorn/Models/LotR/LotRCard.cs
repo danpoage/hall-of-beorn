@@ -557,33 +557,6 @@ namespace HallOfBeorn.Models.LotR
             return this;
         }
 
-        public LotRCard WithNightmareExclusion(LotRCard card, byte numberToExclude)
-        {
-            nightmareExclusions.Add(
-                (c) => { return c.Slug == card.Slug ? numberToExclude : (byte)0; }
-            );
-            return this;
-        }
-
-        private readonly List<Func<LotRCard, byte>> nightmareExclusions = new List<Func<LotRCard, byte>>();
-
-        public Dictionary<string, byte> NightmareExclusions(IEnumerable<LotRCard> cards)
-        {
-            var map = new Dictionary<string, byte>();
-
-            byte exclude = 0;
-            foreach (var card in cards) {
-                foreach (var func in nightmareExclusions) {
-                    exclude = func(card);
-                    if (exclude > 0) {
-                        map[card.Slug] = exclude;
-                    }
-                }
-            }
-
-            return map;
-        }
-
         #endregion
     }
 }

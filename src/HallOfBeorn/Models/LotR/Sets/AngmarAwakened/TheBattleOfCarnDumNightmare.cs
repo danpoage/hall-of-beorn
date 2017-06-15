@@ -47,7 +47,7 @@ If a quest card has the siege keyword, when characters are commited to that ques
                 .WithTraits("Orc.", "Undead.")
                 .WithText("Forced: After Orc Wight enters play, deal it 2 shadow cards.")
                 .WithShadow("Shadow: If attacking enemy has at least 1 other shadow card currently dealt to it, return it to the staging area after this attack.")
-                .WithInfo(2, 2, Artist.Alexander_Kozachenko));
+                .WithInfo(2, 3, Artist.Alexander_Kozachenko));
             addCard(LotRCard.Enemy("Thaurdir's Elite", string.Empty, setName, 45, 2, 5, 4, 6)
                 .WithTraits("Orc.")
                 .WithText("Forced: If there are 3 shadow cards dealt to Thaurdir's Elite, discard all shadow cards dealt to it and each player must discard an ally he controls.")
@@ -70,29 +70,24 @@ If a quest card has the siege keyword, when characters are commited to that ques
                 .WithText("When Revealed: Either deal 1 shadow card to each enemy in the staging area, or search the encounter deck and discard pile for a side quest and add it to the staging area. Shuffle the encounter deck if it is searched.")
                 .WithShadow("Shadow: Deal 1 shadow card to each enemy engaged with you that has not attacked this phase.")
                 .WithInfo(7, 2, Artist.Unknown));
-            addCard(LotRCard.Treachery("Life Drain", string.Empty, setName)
-                .WithTraits("Sorcery.")
-                .WithText("When Revealed: Deal Life Drain to Thaurdir, as a shadow card.")
-                .WithShadow("Shadow: If attacking enemy is Thaurdir, he gets +3 for this attack. If this attack destroys a character, attach Life Drain to Thaurdir. (Counts as a Condition attachment with the text: \"Thaurdir gets +3 hit points.\")")
-                .WithInfo(8, 2, Artist.Unknown));
             addCard(LotRCard.EncounterSideQuest("Protect the Flanks", string.Empty, setName, 6)
                 .WithFlavor("Orcs close in on all sides. If you do not hold them back, your forces will not survive long.")
                 .WithKeywords("Siege.")
                 .WithText("Forced: At the end of the combat phase, assign X damage among characters in play, where X is the total number of shadow cards dealt to enemies in the staging area.")
                 .WithVictoryPoints(10)
-                .WithInfo(9, 1, Artist.Rafal_Hrynkiewicz));
+                .WithInfo(8, 1, Artist.Rafal_Hrynkiewicz));
             addCard(LotRCard.EncounterSideQuest("Rally the Fighters", string.Empty, setName, 8)
                 .WithFlavor("Your task seems hopeless and your fate dire, but somehow you must inspire your companions to fight onward!")
                 .WithKeywords("Surge.")
                 .WithText("~Shadow cards are immune to player card effects.\r\nResponse: After this quest is defeated, discard 1 shadow card from each enemy in play.")
                 .WithVictoryPoints(10)
-                .WithInfo(10, 1, Artist.Arden_Beckwith));
+                .WithInfo(9, 1, Artist.Arden_Beckwith));
             addCard(LotRCard.EncounterSideQuest("Sever the Head", string.Empty, setName, 6)
                 .WithFlavor("Your adversary Thaurdir will not let you interrupt his master's ritual. Only by fighting through his ranks of Orcs can you hope to do battle with the wraith himself.")
                 .WithKeywords("Battle.")
                 .WithText("Thaurdir gets +2 Threat, +2 Attack, and cannot take damage.")
                 .WithVictoryPoints(10)
-                .WithInfo(11, 1, Artist.Unknown));
+                .WithInfo(10, 1, Artist.Unknown));
         }
     }
 }

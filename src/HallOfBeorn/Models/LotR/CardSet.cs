@@ -30,7 +30,6 @@ namespace HallOfBeorn.Models.LotR
 
         public string Id { get; protected set; }
         public string Name { get; protected set; }
-        //public string ShortSlug { get; protected set; }
         
         public string NormalizedName
         {
@@ -84,20 +83,10 @@ namespace HallOfBeorn.Models.LotR
 
         public bool IsNightmare { get { return !string.IsNullOrEmpty(Name) && Name.EndsWith(" Nightmare"); } }
 
-        /*
-        public CardSet WithShortSlug(string shortSlug)
-        {
-            this.ShortSlug = shortSlug;
-            return this;
-        }
-         * */
-
         private static List<CardSet> all = new List<CardSet>();
 
         private static void Add(CardSet cardSet)
         {
-            //AddCardShortSlugs(cardSet);
-
             all.Add(cardSet);
         }
 

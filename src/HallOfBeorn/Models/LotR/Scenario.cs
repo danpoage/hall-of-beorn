@@ -55,6 +55,7 @@ namespace HallOfBeorn.Models.LotR
         {
             encounterSets[set.Name] = set;
 
+            /*
             foreach (var card in set.Cards()) {
 
                 switch (card.CardType) {
@@ -74,14 +75,17 @@ namespace HallOfBeorn.Models.LotR
                         break;
                 }
             }
+            */
         }
 
+        /*
         protected void addEncounterSets(params EncounterSet[] sets)
         {
             foreach (var set in sets) {
                 AddEncounterSet(set);
             }
         }
+        */
 
         protected void AddQuestCardId(string slug)
         {
@@ -97,32 +101,6 @@ namespace HallOfBeorn.Models.LotR
         {
             excludedNightmareModeCards[slug] = numberExcluded;
         }
-
-        protected void applyNightmareExclusions(LotRCard nightmareSetup)
-        {
-            var cards = new List<LotRCard>();
-
-            foreach (var set in encounterSets.Values.Where(x => !x.IsNightmare))
-            {
-                cards.AddRange(set.Cards());
-            }
-
-            var map = nightmareSetup.NightmareExclusions(cards);
-
-            foreach (var item in map) {
-                ExcludeFromNightmareMode(item.Key, item.Value);
-            }
-        }
-
-        /*
-        protected void excludeCardFromNightmare(LotRCard card, byte numberExcluded)
-        {
-            if (card == null) {
-                throw new ArgumentNullException("card is null");
-            }
-
-            ExcludeFromNightmareMode(card.Slug, 
-        }*/
 
         public int Number { get; set; }
         public string GroupName { get; set; }

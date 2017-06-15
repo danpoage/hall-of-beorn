@@ -1219,43 +1219,6 @@ namespace HallOfBeorn.Controllers
             return result;
         }
 
-        /*
-        public ActionResult OctgnDeck(Deck deck)
-        {
-            foreach (var slug in deck.Cards)
-            {
-                var cardGuid = octgnService.GetCardOctgnGuid(slug);
-                if (!string.IsNullOrEmpty(cardGuid))
-                {
-                    deck.OctgnCards.Add(cardGuid);
-                }
-            }
-
-            return View(deck);
-        }
-
-        private List<DeckItemViewModel> getDeckItems(IEnumerable<string> guids)
-        {
-            var items = new List<DeckItemViewModel>();
-
-            foreach (var guid in guids)
-            {
-                var slug = octgnService.GetCardSlug(guid);
-                if (!string.IsNullOrEmpty(slug))
-                {
-                    var card = cardRepository.FindBySlug(slug);
-                    if (card != null)
-                    {
-                        var viewModel = new CardViewModel(card);
-                        viewModel.OctgnGuid = guid;
-                        items.Add(new DeckItemViewModel(viewModel));
-                    }
-                }
-            }
-
-            return items;
-        }*/
-
         public JsonResult TopDecks(string slug)
         {
             try
@@ -1295,69 +1258,5 @@ namespace HallOfBeorn.Controllers
                 return Json(string.Empty, JsonRequestBehavior.AllowGet);
             }
         }
-
-        /*
-        public JsonResult DeckItems(string guidList)
-        {
-            var guids = guidList.SafeSplit(',');
-            
-            var items = getDeckItems(guids);
-
-            return Json(items, JsonRequestBehavior.AllowGet);
-        }
-
-        public JsonResult DeckItemsByShortSlugs(string shortSlugList, string type)
-        {
-            var shortSlugs = shortSlugList.SafeSplit(',');
-            var guids = new List<string>();
-
-            var countsByGuid = new Dictionary<string, byte>();
-
-            foreach (var shortSlug in shortSlugs)
-            {
-                var octgnSlug = shortSlug;
-
-                if (string.IsNullOrEmpty(shortSlug))
-                {
-                    continue;
-                }
-
-                byte count = 1;
-                if (shortSlug.Contains('_'))
-                {
-                    var parts = shortSlug.SafeSplit('_');
-                    if (parts.Length == 2)
-                    {
-                        octgnSlug = parts[0];
-
-                        byte testCount = 0;
-                        if (byte.TryParse(parts[1], out testCount))
-                        {
-                            count = (byte)testCount;
-                        }
-                    }
-                }
-
-                var octgnGuid = octgnService.GetCardOctgnGuidByOctgnSlug(octgnSlug, type);
-                if (!string.IsNullOrEmpty(octgnGuid))
-                {
-                    countsByGuid[octgnGuid] = count;
-                    guids.Add(octgnGuid);
-                }
-            }
-
-            var items = getDeckItems(guids);
-
-            foreach (var item in items)
-            {
-                if (countsByGuid.ContainsKey(item.OctgnGuid))
-                {
-                    item.Count = countsByGuid[item.OctgnGuid];
-                }
-            }
-            
-            return Json(items, JsonRequestBehavior.AllowGet);
-        }
-        */
     }
 }
