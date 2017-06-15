@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-using HallOfBeorn.Models.LotR.EncounterSets.Core;
-
 namespace HallOfBeorn.Models.LotR
 {
     public class EncounterSet
@@ -372,13 +370,13 @@ namespace HallOfBeorn.Models.LotR
         }
 
         //Core Set and Shadows of Mirkwood
-        public static EncounterSet PassageThroughMirkwood = new PassageThroughMirkwoodEncounterSet();
-        public static EncounterSet DolGuldurOrcs = new DolGuldurOrcsEncounterSet();
-        public static EncounterSet SpidersOfMirkwood = new SpidersOfMirkwoodEncounterSet();
+        public static EncounterSet PassageThroughMirkwood = new EncounterSet { Name = "Passage Through Mirkwood", Set = "Core Set" };
+        public static EncounterSet DolGuldurOrcs = new EncounterSet { Name = "Dol Guldur Orcs", Set = "Core Set" };
+        public static EncounterSet SpidersOfMirkwood = new EncounterSet { Name = "Spiders of Mirkwood", Set = "Core Set" };
         public static EncounterSet JourneyAlongTheAnduin = new EncounterSet { Name = "Journey Along the Anduin", Set = "Core Set"};
         public static EncounterSet SauronsReach = new EncounterSet { Name = "Sauron's Reach", Set = "Core Set" };
-        public static EncounterSet Wilderlands = new WilderlandsEncounterSet();
-        public static EncounterSet EscapeFromDolGuldur = new EscapeFromDolGuldurEncounterSet();
+        public static EncounterSet Wilderlands = new EncounterSet { Name = "Wilderlands", Set = "Core Set" };
+        public static EncounterSet EscapeFromDolGuldur = new EncounterSet { Name = "Escape from Dol Guldur", Set = "Core Set" };
         public static EncounterSet TheHuntForGollum = new EncounterSet { Name = "The Hunt for Gollum", Set = "The Hunt for Gollum" };
         public static EncounterSet ConflictAtTheCarrock = new EncounterSet { Name = "Conflict at the Carrock", Set = "Conflict at the Carrock" };
         public static EncounterSet AJourneyToRhosgobel = new EncounterSet { Name = "A Journey to Rhosgobel", Set = "A Journey to Rhosgobel" };
@@ -553,7 +551,7 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet TheSiegeOfAnnuminas = new EncounterSet { Name = "The Siege of Annúminas", Set = "The Siege of Annúminas" };
 
         //Core Set and Shadows of Mirkwood Nightmare Decks
-        public static EncounterSet PassageThroughMirkwoodNightmare = new PassageThroughMirkwoodNightmareEncounterSet();
+        public static EncounterSet PassageThroughMirkwoodNightmare = new EncounterSet { Name = "Passage Through Mirkwood Nightmare", Set = "Passage Through Mirkwood Nightmare" };
         public static EncounterSet JourneyAlongTheAnduinNightmare = new EncounterSet { Name = "Journey Along the Anduin Nightmare", Set = "Journey Along the Anduin Nightmare" };
         public static EncounterSet EscapeFromDolGuldurNightmare = new EncounterSet { Name = "Escape from Dol Guldur Nightmare", Set = "Escape from Dol Guldur Nightmare" };
         public static EncounterSet TheHuntForGollumNightmare = new EncounterSet { Name = "The Hunt for Gollum Nightmare", Set = "The Hunt for Gollum Nightmare" };

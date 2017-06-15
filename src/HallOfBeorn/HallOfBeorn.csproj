@@ -200,15 +200,6 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Arkham\Products\CurseOfTheRougarou.cs" />
     <Compile Include="Models\INamed.cs" />
-    <Compile Include="Models\LotR\EncounterSets\Core\CoreEncounterSet.cs" />
-    <Compile Include="Models\LotR\EncounterSets\Core\DolGuldurOrcsEncounterSet.cs" />
-    <Compile Include="Models\LotR\EncounterSets\Core\EscapeFromDolGuldurEncounterSet.cs" />
-    <Compile Include="Models\LotR\EncounterSets\Core\PassageThroughMirkwoodEncounterSet.cs" />
-    <Compile Include="Models\LotR\EncounterSets\Core\PassageThroughMirkwoodNightmareEncounterSet.cs" />
-    <Compile Include="Models\LotR\EncounterSets\Core\SpidersOfMirkwoodEncounterSet.cs" />
-    <Compile Include="Models\LotR\EncounterSets\Core\WilderlandsEncounterSet.cs" />
-    <Compile Include="Models\LotR\EncounterSets\TheHobbit\WeMustAwayEreBreakOfDay.cs" />
-    <Compile Include="Models\LotR\EncounterSets\TheLordOfTheRings\AShadowOfThePast.cs" />
     <Compile Include="Models\LotR\LayoutType.cs" />
     <Compile Include="Models\LotR\Products\AcrossTheEttenmoorsNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\EscapeFromMountGramNightmareProduct.cs" />
@@ -362,7 +353,7 @@
     <Compile Include="Models\LotR\Scenarios\JourneyToTheCrossroads.cs" />
     <Compile Include="Models\LotR\Scenarios\MurderAtThePrancingPony.cs" />
     <Compile Include="Models\LotR\Scenarios\OverTheMistyMountainsGrim.cs" />
-    <Compile Include="Models\LotR\Scenarios\CoreSet\PassageThroughMirkwood.cs" />
+    <Compile Include="Models\LotR\Scenarios\PassageThroughMirkwood.cs" />
     <Compile Include="Models\LotR\Scenarios\PerilInPelargir.cs" />
     <Compile Include="Models\LotR\Scenarios\RaidOnTheGreyHavens.cs" />
     <Compile Include="Models\LotR\Scenarios\ReturnToMirkwood.cs" />
@@ -886,32 +877,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\LotR\EncounterSets\AgainstTheShadow\" />
-    <Folder Include="Models\LotR\EncounterSets\AngmarAwakened\" />
-    <Folder Include="Models\LotR\EncounterSets\Dreamchaser\" />
-    <Folder Include="Models\LotR\EncounterSets\Dwarrowdelf\" />
-    <Folder Include="Models\LotR\EncounterSets\Haradrim\" />
-    <Folder Include="Models\LotR\EncounterSets\HeirsOfNumenor\" />
-    <Folder Include="Models\LotR\EncounterSets\KhazadDum\" />
-    <Folder Include="Models\LotR\EncounterSets\RingMaker\" />
-    <Folder Include="Models\LotR\EncounterSets\ShadowsOfMirkwood\" />
-    <Folder Include="Models\LotR\EncounterSets\TheGreyHavens\" />
-    <Folder Include="Models\LotR\EncounterSets\TheLostRealm\" />
-    <Folder Include="Models\LotR\EncounterSets\TheSandsOfHarad\" />
-    <Folder Include="Models\LotR\EncounterSets\TheVoiceOfIsengard\" />
-    <Folder Include="Models\LotR\Scenarios\AgainstTheShadow\" />
-    <Folder Include="Models\LotR\Scenarios\AngmarAwakened\" />
-    <Folder Include="Models\LotR\Scenarios\DreamChaser\" />
-    <Folder Include="Models\LotR\Scenarios\Dwarrowdelf\" />
-    <Folder Include="Models\LotR\Scenarios\Haradrim\" />
-    <Folder Include="Models\LotR\Scenarios\HeirsOfNumenor\" />
-    <Folder Include="Models\LotR\Scenarios\KhazadDum\" />
-    <Folder Include="Models\LotR\Scenarios\ShadowsOfMirkwood\" />
-    <Folder Include="Models\LotR\Scenarios\TheGreyHavens\" />
-    <Folder Include="Models\LotR\Scenarios\TheLostRealm\" />
-    <Folder Include="Models\LotR\Scenarios\TheRingMaker\" />
-    <Folder Include="Models\LotR\Scenarios\TheSandsOfHarad\" />
-    <Folder Include="Models\LotR\Scenarios\TheVoiceOfIsengard\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

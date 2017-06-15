@@ -14,12 +14,6 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
             Number = 1;
             SetType = Models.SetType.Core;
 
-            addEncounterSets(
-                EncounterSet.PassageThroughMirkwood,
-                EncounterSet.DolGuldurOrcs,
-                EncounterSet.SpidersOfMirkwood
-            );
-
             Cards.Add(new LotRCard() {
                 Title = "Aragorn",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9001",
@@ -1200,7 +1194,595 @@ and the City shall be blessed.
                 CardNumber = 73,
                 Artist = Artist.Lucas_Graciano
             });
-            
+            Cards.Add(new LotRCard() {
+                
+                Title = "King Spider",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9074",
+                CardType = CardType.Enemy,
+                EngagementCost = 20,
+                Attack = 3,
+                Defense = 1,
+                HitPoints = 3,
+                Traits = new List<string>() { "Creature.", " Spider." },
+                Text = "When Revealed: Each player must choose and exhaust 1 character he controls.",
+                Shadow = "Shadow: Defending player must choose and exhaust 1 character he controls. (2 characters instead if this attack is undefended.)",
+                Threat = 2,
+                EncounterSet = "Spiders of Mirkwood",
+                Quantity = 2,
+                CardNumber = 74,
+                Artist = Artist.John_Wigley
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Hummerhorns",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9075",
+                CardType = CardType.Enemy,
+                EngagementCost = 40,
+                Attack = 2,
+                Defense = 0,
+                HitPoints = 3,
+                Traits = new List<string>() { "Creature.", " Insect." },
+                Text = "Forced: After Hummerhorns engages you, deal 5 damage to a single hero you control.",
+                Shadow = "Shadow: Deal 1 damage to each character the defending player controls. (2 damage instead if this attack is undefended.)",
+                Threat = 1,
+                EncounterSet = "Spiders of Mirkwood",
+                Quantity = 1,
+                EasyModeQuantity = 0,
+                VictoryPoints = 5,
+                CardNumber = 75,
+                Artist = Artist.David_Lecossu
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Ungoliant's Spawn",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9076",
+                CardType = CardType.Enemy,
+                EngagementCost = 32,
+                Attack = 5,
+                Defense = 2,
+                HitPoints = 9,
+                Traits = new List<string>() { "Creature.", " Spider." },
+                Text = "When Revealed: Each character currently committed to a quest gets -1 Willpower until the end of the phase.",
+                Shadow = "Shadow: Raise defending player's threat by 4. (Raise defending player's threat by 8 instead if this attack is undefended.)",
+                Threat = 3,
+                EncounterSet = "Spiders of Mirkwood",
+                Quantity = 1,
+                CardNumber = 76,
+                Artist = Artist.Andrew_Olson
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Great Forest Web",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9077",
+                CardType = CardType.Location,
+                Traits = new List<string>() { "Forest." },
+                Text = "Travel: Each player must exhaust 1 hero he controls to travel here.",
+                FlavorText = "As he drew nearer, he saw that it was made with spider-webs one behind and over and tangled with another.\r\n-The Hobbit",
+                Threat = 2,
+                QuestPoints = 2,
+                EncounterSet = "Spiders of Mirkwood",
+                Quantity = 2,
+                CardNumber = 77,
+                Artist = Artist.Jason_Ward
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Mountains of Mirkwood",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9078",
+                CardType = CardType.Location,
+                Traits = new List<string>() { "Forest.", " Mountain." },
+                Text = "Travel: Reveal the top card of the encounter deck and add it to the staging area to travel here.Response: After Mountains of Mirkwood leaves play as an explored location, each player may search the top 5 cards of his deck for 1 card and add it to his hand. Shuffle the rest of the searched cards back into their owners' decks.",
+                Threat = 2,
+                QuestPoints = 3,
+                EncounterSet = "Spiders of Mirkwood",
+                Quantity = 3,
+                CardNumber = 78,
+                Artist = Artist.Ben_Zweifel
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Eyes of the Forest",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9079",
+                CardType = CardType.Treachery,
+                Text = "When Revealed: Each player discards all event cards in his hand.",
+                FlavorText = "...he would see gleams in the darkness around them, and sometimes pairs of yellow or red or green eyes would stare at him from a little distance, and then slowly fade and disappear and slowly shine out again in another place.\r\n-The Hobbit",
+                EncounterSet = "Spiders of Mirkwood",
+                Quantity = 1,
+                EasyModeQuantity = 0,
+                CardNumber = 79,
+                Artist = Artist.Yoann_Boissonnet
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Caught in a Web",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9080",
+                CardType = CardType.Treachery,
+                Text = "When Revealed: The player with the highest threat level attaches this card to one of his heroes. (Counts as a Condition attachment with the text: 'Attached hero does not ready during the refresh phase unless you pay 2 resources from that hero's pool.')",
+                EncounterSet = "Spiders of Mirkwood",
+                Quantity = 2,
+                EasyModeQuantity = 0,
+                CardNumber = 80,
+                Artist = Artist.Daryl_Mandryk
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Wolf Rider",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9081",
+                CardType = CardType.Enemy,
+                EngagementCost = 10,
+                Attack = 2,
+                Defense = 0,
+                HitPoints = 2,
+                Traits = new List<string>() { "Goblin.", " Orc." },
+                Text = " ",
+                Shadow = "Shadow: Wolf Rider attacks the defending player. That player may declare 1 character as a defender. Deal Wolf Rider its own Shadow card. After combat, return Wolf Rider to the top of the encounter deck.",
+                Keywords = new List<string>() { "Surge." },
+                Threat = 1,
+                EncounterSet = "Wilderlands",
+                Quantity = 1,
+                CardNumber = 81,
+                Artist = Artist.Alexandru_Sabo
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Hill Troll",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9082",
+                CardType = CardType.Enemy,
+                EngagementCost = 30,
+                Attack = 6,
+                Defense = 3,
+                HitPoints = 9,
+                Traits = new List<string>() { "Troll." },
+                Text = "Excess combat damage dealt by Hill Troll (damage that is dealt beyond the remaining hit points of the character damaged by its attack) must be assigned as an increase to your threat.",
+                FlavorText = "\"Mutton yesterday, mutton today, and blimey, if it don't look like mutton again tomorrow.\"\r\n-Troll, The Hobbit",
+                Threat = 1,
+                EncounterSet = "Wilderlands",
+                Quantity = 2,
+                EasyModeQuantity = 1,
+                VictoryPoints = 4,
+                CardNumber = 82,
+                Artist = Artist.Florian_Stitz
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Goblin Sniper",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9083",
+                CardType = CardType.Enemy,
+                EngagementCost = 48,
+                Attack = 2,
+                Defense = 0,
+                HitPoints = 2,
+                Traits = new List<string>() { "Goblin.", " Orc." },
+                Text = "During the encounter phase, players cannot optionally engage Goblin Sniper if there are other enemies in the staging area.Forced: If Goblin Sniper is in the staging area at the end of the combat phase, each player deals 1 point of damage to 1 character he controls.",
+                Threat = 2,
+                EncounterSet = "Wilderlands",
+                Quantity = 2,
+                CardNumber = 83,
+                Artist = Artist.Alexandr_Shaldin
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Marsh Adder",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9084",
+                CardType = CardType.Enemy,
+                EngagementCost = 40,
+                Attack = 4,
+                Defense = 1,
+                HitPoints = 7,
+                Traits = new List<string>() { "Creature." },
+                Text = "Forced: Each time Marsh Adder attacks you, raise your threat by 1.",
+                FlavorText = "Under the boughs of Mirkwood there was deadly strife of Elves and Men and fell beasts.\r\n-The Fellowship of the Ring",
+                Threat = 3,
+                EncounterSet = "Wilderlands",
+                Quantity = 1,
+                EasyModeQuantity = 0,
+                VictoryPoints = 3,
+                CardNumber = 84,
+                Artist = Artist.Sandara_Tang
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Wargs",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9085",
+                CardType = CardType.Enemy,
+                EngagementCost = 20,
+                Attack = 3,
+                Defense = 1,
+                HitPoints = 3,
+                Traits = new List<string>() { "Creature." },
+                Text = "Forced: If Wargs is dealt a shadow card with no effect, return Wargs to the staging area after it attacks.",
+                Shadow = "Shadow: attacking enemy gets 1 Attack. (2 Attack instead if this attack is undefended.)",
+                Threat = 2,
+                EncounterSet = "Wilderlands",
+                Quantity = 2,
+                CardNumber = 85,
+                Artist = Artist.Ryan_Barger
+            });
+            Cards.Add(new LotRCard()
+            {
+                
+                Title = "Despair",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9086",
+                CardType = CardType.Treachery,
+                Text = "When Revealed: Remove 4 progress tokens from the current quest card. (If there are fewer than 4 progress tokens on the quest, remove all progress tokens from that quest.)",
+                Shadow = "Shadow: Defending character does not count its Defense.",
+                EncounterSet = "Wilderlands",
+                Quantity = 2,
+                EasyModeQuantity = 0,
+                CardNumber = 86,
+                Artist = Artist.Marc_Scheff
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "The Brown Lands",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9087",
+                CardType = CardType.Location,
+                Traits = new List<string>() { "Wasteland." },
+                Text = "Forced: After the players travel to The Brown Lands, place 1 progress token on it.",
+                FlavorText = "They had come to the Brown Lands that lay, vast and desolate, between Southern Mirkwood and the hills of the Emyn Muil. What pestilence or war or evil deed of the Enemy had so blasted all that region even Aragorn could not tell.\r\n-The Fellowship of the Ring",
+                Threat = 5,
+                QuestPoints = 1,
+                EncounterSet = "Wilderlands",
+                Quantity = 2,
+                CardNumber = 87,
+                Artist = Artist.Ben_Zweifel
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "The East Bight",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9088",
+                CardType = CardType.Location,
+                Traits = new List<string>() { "Wasteland." },
+                Text = "When faced with the option to travel, the players must travel to The East Bight if there is no active location.",
+                FlavorText = "\"...to the east the lands are waste, and full of Sauron's creatures...\"\r\n-Haldir, The Fellowship of the Ring",
+                Threat = 1,
+                QuestPoints = 6,
+                EncounterSet = "Wilderlands",
+                Quantity = 2,
+                CardNumber = 88,
+                Artist = Artist.Santiago_Villa
+            });
+            Cards.Add(new LotRCard() {
+                Title = "Dol Guldur Orcs",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9089",
+                CardType = CardType.Enemy,
+                EngagementCost = 10,
+                Attack = 2,
+                Defense = 0,
+                HitPoints = 3,
+                Traits = new List<string>() { "Dol Guldur.", " Orc." },
+                Text = "When Revealed: The first player chooses 1 character currently committed to a quest. Deal 2 damage to that character.",
+                Shadow = "Shadow: attacking enemy gets 1 Attack. (3 Attack instead if this attack is undefended.)",
+                Threat = 2,
+                EncounterSet = "Dol Guldur Orcs",
+                Quantity = 3,
+                CardNumber = 89,
+                Artist = Artist.Anna_Christenson
+            }.WithSuffix("Enemy"));
+            Cards.Add(new LotRCard() {
+                Title = "Chieftan Ufthak",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9090",
+                CardType = CardType.Enemy,
+                EngagementCost = 35,
+                Attack = 3,
+                Defense = 3,
+                HitPoints = 6,
+                Traits = new List<string>() { "Dol Guldur.", " Orc." },
+                Text = "Chieftain Ufthak get 2 Attack for each resource token on him.\r\nForced: After Chieftain Ufthak attacks, place 1 resource token on him.",
+                Threat = 2,
+                EncounterSet = "Dol Guldur Orcs",
+                Quantity = 1,
+                EasyModeQuantity = 0,
+                VictoryPoints = 4,
+                CardNumber = 90,
+                Artist = Artist.Mathias_Kollros
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Dol Guldur Beastmaster",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9091",
+                CardType = CardType.Enemy,
+                EngagementCost = 35,
+                Attack = 3,
+                Defense = 1,
+                HitPoints = 5,
+                Traits = new List<string>() { "Dol Guldur.", " Orc." },
+                Text = "Forced: When Dol Guldur Beastmaster attacks, deal it 1 additional shadow card.",
+                Threat = 2,
+                EncounterSet = "Dol Guldur Orcs",
+                Quantity = 2,
+                EasyModeQuantity = 1,
+                CardNumber = 91,
+                Artist = Artist.David_Lecossu,
+                HasErrata = true
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Driven by Shadow",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9092",
+                CardType = CardType.Treachery,
+                Text = "When Revealed: Each enemy and each location currently in the staging area gets 1 Threat until the end of the phase. If there are no cards in the staging area, Driven by Shadow gains surge.",
+                Shadow = "Shadow: Choose and discard 1 attachment from the defending character. (If this attack is undefended, discard all attachments you control.)",
+                EncounterSet = "Dol Guldur Orcs",
+                Quantity = 1,
+                CardNumber = 92,
+                Artist = Artist.Alexandru_Sabo
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "The Necromancer's Reach",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9093",
+                CardType = CardType.Treachery,
+                Text = "When Revealed: Deal 1 damage to each exhausted character.",
+                FlavorText = "There was an eye in the Dark Tower that did not sleep. He knew that it had become aware of his gaze. A fierce eager will was there. - The Fellowship of the Ring",
+                EncounterSet = "Dol Guldur Orcs",
+                Quantity = 3,
+                EasyModeQuantity = 1,
+                CardNumber = 93,
+                Artist = Artist.Anna_Christenson
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Necromancer's Pass",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9094",
+                CardType = CardType.Location,
+                Traits = new List<string>() { "Stronghold.", " Dol Guldur." },
+                Text = "Travel: The first player must discard 2 cards from his hand at random to travel here.",
+                FlavorText = "\"It is clad in a forest of dark fir, where the trees strive one against another and their branches rot and wither. In the midst upon a stony height stands Dol Guldur, where long the hidden Enemy had his dwelling.\"\r\n-Haldir, The Fellowship of the Ring",
+                Threat = 3,
+                QuestPoints = 2,
+                EasyModeQuantity = 0,
+                EncounterSet = "Dol Guldur Orcs",
+                Quantity = 2,
+                CardNumber = 94,
+                Artist = Artist.Daryl_Mandryk
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Enchanted Stream",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9095",
+                CardType = CardType.Location,
+                Traits = new List<string>() { "Forest." },
+                Text = "While Enchanted Stream is the active location, players cannot draw cards.",
+                FlavorText = "\"There is one stream, I know, black and strong which crosses the path. That you should neither drink of, nor bathe in; for I have heard that it carries enchantment and a great drowsiness and forgetfulness.\"\r\n-Beorn, The Hobbit",
+                Threat = 2,
+                QuestPoints = 2,
+                EncounterSet = "Dol Guldur Orcs",
+                Quantity = 2,
+                CardNumber = 95,
+                Artist = Artist.Ben_Zweifel
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Forest Spider",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9096",
+                CardType = CardType.Enemy,
+                EngagementCost = 25,
+                Attack = 2,
+                Defense = 1,
+                HitPoints = 4,
+                Traits = new List<string>() { "Creature.", " Spider." },
+                Text = "Forced: After Forest Spider engages a player, it gets 1 Attack until the end of the round.",
+                Shadow = "Shadow: Defending player must choose and discard 1 attachment he controls.",
+                Threat = 2,
+                EncounterSet = "Passage Through Mirkwood",
+                Quantity = 4,
+                CardNumber = 96,
+                Artist = Artist.Marco_Caradonna
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "East Bight Patrol",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9097",
+                CardType = CardType.Enemy,
+                EngagementCost = 5,
+                Attack = 3,
+                Defense = 1,
+                HitPoints = 2,
+                Traits = new List<string>() { "Goblin.", " Orc." },
+                Text = " ",
+                Shadow = "Shadow: attacking enemy gets 1 Attack. (If this attack is undefended, also raise your threat by 3.)",
+                Threat = 3,
+                EncounterSet = "Passage Through Mirkwood",
+                Quantity = 1,
+                CardNumber = 97,
+                Artist = Artist.Nikolay_Stoyanov
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Black Forest Bats",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9098",
+                CardType = CardType.Enemy,
+                EngagementCost = 15,
+                Attack = 1,
+                Defense = 0,
+                HitPoints = 2,
+                Traits = new List<string>() { "Creature." },
+                Text = "When Revealed: Each player must choose 1 character currently committed to a quest, and remove that character from the quest. (The chosen character does not ready.)",
+                FlavorText = "They could not stand that, nor the huge bats, black as a top-hat, either...\r\n-The Hobbit",
+                Threat = 1,
+                EncounterSet = "Passage Through Mirkwood",
+                Quantity = 1,
+                CardNumber = 98,
+                Artist = Artist.David_Lecossu
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Old Forest Road",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9099",
+                CardType = CardType.Location,
+                Traits = new List<string>() { "Forest." },
+                Text = "Response: After you travel to Old Forest Road, the first player may choose and ready 1 character he controls.",
+                FlavorText = "...Beorn had warned them that that way was now often used by the goblins, while the forest-road itself, he had heard, was overgrown and disused on the eastern end and led to impassable marshes where the path had long been lost.\r\n-The Hobbit",
+                Threat = 1,
+                QuestPoints = 3,
+                EncounterSet = "Passage Through Mirkwood",
+                Quantity = 2,
+                CardNumber = 99,
+                Artist = Artist.Ben_Zweifel
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Forest Gate",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9100",
+                CardType = CardType.Location,
+                Traits = new List<string>() { "Forest." },
+                Text = "Response: After you travel to Forest Gate, the first player may draw 2 cards.",
+                FlavorText = "The path itself was narrow and wound in and out among the trunks. Soon the light in the gate was like a little bright hole far behind, and the quiet was so deep that their feet seemed to thump along while the trees leaned over them and listened.\r\n-The Hobbit",
+                Threat = 2,
+                QuestPoints = 4,
+                EncounterSet = "Passage Through Mirkwood",
+                Quantity = 2,
+                CardNumber = 100,
+                Artist = Artist.Ben_Zweifel
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Dungeon Jailor",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9101",
+                CardType = CardType.Enemy,
+                EngagementCost = 38,
+                Attack = 2,
+                Defense = 3,
+                HitPoints = 5,
+                Traits = new List<string>() { "Dol Guldur.", " Orc." },
+                Text = "Forced: If Dungeon Jailor is in the staging area after the players have just quested unsuccessfully, shuffle 1 unclaimed objective card from the staging area back into the encounter deck.",
+                Threat = 1,
+                EncounterSet = "Escape from Dol Guldur",
+                Quantity = 2,
+                EasyModeQuantity = 0,
+                VictoryPoints = 5,
+                CardNumber = 101,
+                Artist = Artist.Tiziano_Baracchi
+            });
+            Cards.Add(new LotRCard() {
+                Title = "Nazgûl of Dol Guldur",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9102",
+                CardType = CardType.Enemy,
+                EngagementCost = 40,
+                Attack = 4,
+                Defense = 3,
+                HitPoints = 9,
+                Traits = new List<string>() { "Nazgûl." },
+                Text = "No attachments.\r\nForced: When the prisoner is 'rescued', move Nazgûl of Dol Guldur into the staging area.\r\nForced: After a shadow effect dealt to Nazgûl of Dol Guldur resolves, the engaged player must choose and discard 1 character he controls.",
+                Threat = 5,
+                EncounterSet = "Escape from Dol Guldur",
+                Quantity = 1,
+                CardNumber = 102,
+                Artist = Artist.David_A_Nash,
+                HasErrata = true
+            });
+            Cards.Add(new LotRCard() {
+                Title = "Cavern Guardian",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9103",
+                CardType = CardType.Enemy,
+                EngagementCost = 8,
+                Attack = 2,
+                Defense = 1,
+                HitPoints = 2,
+                Traits = new List<string>() { "Undead." },
+                Text = " ",
+                Shadow = "Shadow: Choose and discard 1 attachment you control. Discarded  objective cards are returned to the staging area. (If this attack is  undefended, discard all attachments you control.)",
+                Keywords = new List<string>() { "Doomed 1." },
+                Threat = 2,
+                EncounterSet = "Escape from Dol Guldur",
+                Quantity = 2,
+                CardNumber = 103,
+                Artist = Artist.Mark_Winters
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Under the Shadow",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9104",
+                CardType = CardType.Treachery,
+                Text = "When Revealed: Until the end of the phase, raise the total Threat in the  staging area by X, where X is the number of players in the game.",
+                Shadow = "Shadow: Defending player raises his threat by the number of enemies  with which he is engaged.",
+                EncounterSet = "Escape from Dol Guldur",
+                Quantity = 2,
+                CardNumber = 104,
+                Artist = Artist.Igor_Kieryluk
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Iron Shackles",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9105",
+                CardType = CardType.Treachery,
+                Text = "When Revealed: Attach Iron Shackles to the top of the first player's deck. (Counts as a Condition attachment with the text: 'The next time a player would draw 1 or more cards from attached deck, discard Iron Shackles instead.')",
+                Shadow = "Shadow: Resolve the 'When Revealed' effect of Iron Shackles.",
+                EncounterSet = "Escape from Dol Guldur",
+                Quantity = 1,
+                CardNumber = 105,
+                Artist = Artist.Drew_Whitmore
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Endless Caverns",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9106",
+                CardType = CardType.Location,
+                Traits = new List<string>() { "Dungeon." },
+                Keywords = new List<string>() { "Doomed 1.", " Surge." },
+                FlavorText = "\"I alone of you have ever been in the dungeons of the Dark Lord, and only in his older and lesser dwelling in Dol Guldur.\"\r\n-Gandalf, The Fellowship of the Ring",
+                Threat = 1,
+                QuestPoints = 3,
+                EncounterSet = "Escape from Dol Guldur",
+                Quantity = 2,
+                CardNumber = 106,
+                Artist = Artist.Even_Mehl_Amundsen
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Tower Gate",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9107",
+                CardType = CardType.Location,
+                Traits = new List<string>() { "Dungeon." },
+                Text = "Forced: After travelling to Tower Gate, each player places the top card of his deck, face down in front of him, as if it just engaged him from the staging area. These cards are called 'Orc Guard', and act as enemies with: 1 hit point, 1 Attack, and 1 Defense.",
+                FlavorText = "\"I myself dared to pass the doors of the Necromancer in Dol Guldur, and secretly explored his ways.\"\r\n-Gandalf, The Fellowship of the Ring",
+                Threat = 2,
+                QuestPoints = 1,
+                EncounterSet = "Escape from Dol Guldur",
+                Quantity = 2,
+                CardNumber = 107,
+                Artist = Artist.West_Clendinning
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Gandalf's Map",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9108",
+                CardType = CardType.Objective,
+                Traits = new List<string>() { "Item." },
+                Text = "Action: Raise your threat by 2 to claim this objective when it is free of encounters. When claimed, attach Gandalf's Map to a hero you control. (Counts as an attachment. If detached, return Gandalf's Map to the staging area.) Attached hero cannot attack or defend.",
+                Keywords = new List<string>() { "Guarded.", " Restricted." },
+                EncounterSet = "Escape from Dol Guldur",
+                Quantity = 1,
+                CardNumber = 108,
+                Artist = Artist.Mike_Nash
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Dungeon Torch",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9109",
+                CardType = CardType.Objective,
+                Traits = new List<string>() { "Item." },
+                Text = "Action: Raise your threat by 2 to claim this objective when it is free of encounters. When claimed, attach Dungeon Torch to a hero you control. (Counts as an attachment. If detached, return Dungeon Torch to the staging area.)Forced: At the end of each round, raise attached hero's controller's threat by 2.",
+                Keywords = new List<string>() { "Guarded.", " Restricted." },
+                EncounterSet = "Escape from Dol Guldur",
+                Quantity = 1,
+                CardNumber = 109,
+                Artist = Artist.David_Lecossu
+            });
+            Cards.Add(new LotRCard() {
+                
+                Title = "Shadow Key",
+                Id = "51223bd0-ffd1-11df-a976-0801200c9110",
+                CardType = CardType.Objective,
+                Traits = new List<string>() { "Item." },
+                Text = "Action: Raise your threat by 2 to claim this objective when it is free of encounters. When claimed, attach Shadow Key to a hero you control. (Counts as an attachment. If detached, return Shadow Key to the staging area.)Forced: At the end of each round, attached hero suffers 1 damage.",
+                Keywords = new List<string>() { "Guarded.", " Restricted." },
+                EncounterSet = "Escape from Dol Guldur",
+                Quantity = 1,
+                CardNumber = 110,
+                Artist = Artist.Nicholas_Cloister
+            });
             Cards.Add(new LotRCard() {
                 
                 Title = "Misty Mountain Goblins",
@@ -1325,7 +1907,7 @@ and the City shall be blessed.
                 CardNumber = 118,
                 Artist = Artist.David_Lecossu
             });
-            /*
+
             Cards.Add(new LotRCard() {
                 Title = "Flies and Spiders",
                 StageNumber = 1,
@@ -1393,7 +1975,6 @@ and the City shall be blessed.
                 BackArtist = Artist.David_Lecossu,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood }
             }.WithSuffix("Beorn's Path"));
-             */
             Cards.Add(new LotRCard() {
                 Title = "The Necromancer's Tower",
                 StageNumber = 1,
