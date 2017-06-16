@@ -325,6 +325,9 @@ namespace HallOfBeorn.Models.LotR
             Add(AngmarOrcsNightmare);
             Add(AcrossTheEttenmoorsNightmare);
             Add(TheTreacheryOfRhudaurNightmare);
+            Add(SiftThroughTheDebris);
+            Add(DecipherAncientTexts);
+            Add(QuietTheSpirits);
             Add(TheBattleOfCarnDumNightmare);
             Add(TheDreadRealmNightmare);
 
@@ -601,6 +604,9 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet AngmarOrcsNightmare = new EncounterSet { Name = "Angmar Orcs Nightmare", Set = "Escape from Mount Gram Nightmare" };
         public static EncounterSet AcrossTheEttenmoorsNightmare = new EncounterSet { Name = "Across the Ettenmoors Nightmare", Set = "Across the Ettenmoors Nightmare" };
         public static EncounterSet TheTreacheryOfRhudaurNightmare = new EncounterSet { Name = "The Treachery of Rhudaur Nightmare", Set = "The Treachery of Rhudaur Nightmare" };
+        public static EncounterSet DecipherAncientTexts = new EncounterSet { Name = "Decipher Ancient Texts", Set = "The Treachery of Rhudaur" };
+        public static EncounterSet SiftThroughTheDebris = new EncounterSet { Name = "Sift through the Debris", Set = "The Treachery of Rhudaur" };
+        public static EncounterSet QuietTheSpirits = new EncounterSet { Name = "Quiet the Spirits", Set = "The Treachery of Rhudaur" };
         public static EncounterSet TheBattleOfCarnDumNightmare = new EncounterSet { Name = "The Battle of Carn Dûm Nightmare", Set = "The Battle of Carn Dûm Nightmare" };
         public static EncounterSet TheDreadRealmNightmare = new EncounterSet { Name = "The Dread Realm Nightmare", Set = "The Dread Realm Nightmare" };
 
