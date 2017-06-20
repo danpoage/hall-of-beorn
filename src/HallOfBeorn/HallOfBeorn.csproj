@@ -207,9 +207,11 @@
     <Compile Include="Models\LotR\Products\TheCrossingsOfPorosProduct.cs" />
     <Compile Include="Models\LotR\Products\TheDreadRealmNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\TheDungeonsOfCirithGuratProduct.cs" />
+    <Compile Include="Models\LotR\Products\TheLandOfShadowNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\TheLostRealmNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\TheMountainOfFireProduct.cs" />
     <Compile Include="Models\LotR\Products\TheTreacheryOfRhudaurNightmareProduct.cs" />
+    <Compile Include="Models\LotR\Products\TheTreasonOfSarumanNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\TheWastesOfEriadorNightmareProduct.cs" />
     <Compile Include="Models\LotR\Scenarios\AStormOnCobasHaven.cs" />
     <Compile Include="Models\LotR\Scenarios\BeneathTheSands.cs" />
@@ -222,6 +224,7 @@
     <Compile Include="Models\LotR\Scenarios\TheSandsOfHarad.cs" />
     <Compile Include="Models\LotR\Sets\AngmarAwakened\AcrossTheEttenmoorsNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\BreakingOfTheFellowshipNightmare.cs" />
+    <Compile Include="Models\LotR\Sets\TheLordOfTheRings\ThePassageOfTheMarshesNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\TheLostRealm\DeadmensDikeNightmare.cs" />
     <Compile Include="Models\LotR\Sets\AngmarAwakened\EscapeFromMountGramNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheLostRealm\IntrudersInChetwoodNightmare.cs" />

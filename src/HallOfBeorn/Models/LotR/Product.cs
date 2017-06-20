@@ -201,6 +201,8 @@ namespace HallOfBeorn.Models.LotR
 
         public static Product TheBlackRidersNightmare = new TheBlackRidersNightmareProduct();
         public static Product TheRoadDarkensNightmare = new TheRoadDarkensNightmareProduct();
+        public static Product TheTreasonOfSarumanNightmare = new TheTreasonOfSarumanNightmareProduct();
+        public static Product TheLandOfShadowNightmare = new TheLandOfShadowNightmareProduct();
 
         //Custom Expansions
         public static Product FirstAge = new FirstAgeProduct();

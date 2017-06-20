@@ -58,6 +58,8 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
 
             AddProduct(Product.TheBlackRidersNightmare);
             AddProduct(Product.TheRoadDarkensNightmare);
+            AddProduct(Product.TheTreasonOfSarumanNightmare);
+            AddProduct(Product.TheLandOfShadowNightmare);
         }
     }
 }
