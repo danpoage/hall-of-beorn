@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.LotR.Products
         {
             AddCardSet(CardSet.MurderAtThePrancingPony);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.MurderAtThePrancingPony());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand.MurderAtThePrancingPony());
         }
     }
 }

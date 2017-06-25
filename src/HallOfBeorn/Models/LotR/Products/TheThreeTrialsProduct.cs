@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products
 
             AddCardSet(CardSet.TheThreeTrials);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheThreeTrials());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheRingMaker.TheThreeTrials());
         }
     }
 }

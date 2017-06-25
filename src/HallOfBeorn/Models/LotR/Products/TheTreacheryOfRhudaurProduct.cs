@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.LotR.Products
         {
             AddCardSet(CardSet.TheTreacheryOfRhudaur);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheTreacheryOfRhudaur());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened.TheTreacheryOfRhudaur());
         }
     }
 }

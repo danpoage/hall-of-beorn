@@ -14,9 +14,9 @@ namespace HallOfBeorn.Models.LotR.Products
 
             AddCardSet(CardSet.TheLandOfShadow);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.ThePassageOfTheMarshes());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.JourneyToTheCrossRoads());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.ShelobsLair());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings.ThePassageOfTheMarshes());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings.JourneyToTheCrossRoads());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings.ShelobsLair());
         }
     }
 }

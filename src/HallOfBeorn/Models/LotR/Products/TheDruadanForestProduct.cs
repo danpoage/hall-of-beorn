@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products
 
             AddCardSet(CardSet.TheDruadanForest);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheDruadanForest());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow.TheDruadanForest());
         }
     }
 }

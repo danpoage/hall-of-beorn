@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products
 
             AddCardSet(CardSet.TheDunlandTrap);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheDunlandTrap());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheRingMaker.TheDunlandTrap());
         }
     }
 }

@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products
 
             AddCardSet(CardSet.AssaultOnOsgiliath);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.AssaultOnOsgiliath());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow.AssaultOnOsgiliath());
         }
     }
 }

@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.LotR.Products
         {
             AddCardSet(CardSet.TheOldForest);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheOldForest());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand.TheOldForest());
         }
     }
 }

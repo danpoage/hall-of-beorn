@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products
 
             AddCardSet(CardSet.TempleOfTheDeceived);
 
-            AddScenario(new Scenarios.TempleOfTheDeceived());
+            AddScenario(new Scenarios.DreamChaser.TempleOfTheDeceived());
         }
     }
 }

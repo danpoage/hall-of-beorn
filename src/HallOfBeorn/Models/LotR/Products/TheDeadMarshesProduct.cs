@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products
 
             AddCardSet(CardSet.TheDeadMarshes);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheDeadMarshes());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood.TheDeadMarshes());
         }
     }
 }

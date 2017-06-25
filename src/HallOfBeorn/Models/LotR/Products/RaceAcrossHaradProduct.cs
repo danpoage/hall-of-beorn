@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.LotR.Products
         {
             AddCardSet(CardSet.RaceAcrossHarad);
 
-            AddScenario(new Scenarios.RaceAcrossHarad());
+            AddScenario(new Scenarios.Haradrim.RaceAcrossHarad());
         }
     }
 }

@@ -169,8 +169,6 @@ namespace HallOfBeorn.Services.LotR
 
         public IEnumerable<ScenarioGroup> ScenarioGroups()
         {
-            //return getScenarioGroups();
-
             var scenarioGroups = new Dictionary<string, ScenarioGroup>();
 
             foreach (var scenario in scenariosByTitle)
@@ -186,41 +184,6 @@ namespace HallOfBeorn.Services.LotR
             }
 
             return scenarioGroups.Values.ToList();
-        }
-
-        private IEnumerable<ScenarioGroup> getScenarioGroups()
-        {
-            var scenarioGroups = new List<ScenarioGroup>();
-
-            scenarioGroups.Add(new ScenarioGroup("Core Set", getCoreSetScenarios()));
-            scenarioGroups.Add(new ScenarioGroup("Shadows of Mirkwood", getShadowsOfMirkwoodScenarios()));
-
-            return scenarioGroups;
-        }
-
-        private List<Scenario> getCoreSetScenarios()
-        {
-            var scenarios = new List<Scenario>();
-
-            scenarios.Add(new HallOfBeorn.Models.LotR.Scenarios.CoreSet.PassageThroughMirkwood());
-            scenarios.Add(new HallOfBeorn.Models.LotR.Scenarios.JourneyAlongTheAnduin());
-            scenarios.Add(new HallOfBeorn.Models.LotR.Scenarios.EscapeFromDolGuldur());
-
-            return scenarios;
-        }
-
-        private List<Scenario> getShadowsOfMirkwoodScenarios()
-        {
-            var scenarios = new List<Scenario>();
-
-            scenarios.Add(new HallOfBeorn.Models.LotR.Scenarios.TheHuntForGollum());
-            scenarios.Add(new HallOfBeorn.Models.LotR.Scenarios.ConflictAtTheCarrock());
-            scenarios.Add(new HallOfBeorn.Models.LotR.Scenarios.AJourneyToRhosgobel());
-            scenarios.Add(new HallOfBeorn.Models.LotR.Scenarios.TheHillsOfEmynMuil());
-            scenarios.Add(new HallOfBeorn.Models.LotR.Scenarios.TheDeadMarshes());
-            scenarios.Add(new HallOfBeorn.Models.LotR.Scenarios.ReturnToMirkwood());
-
-            return scenarios;
         }
 
         public IEnumerable<string> ScenarioTitles()

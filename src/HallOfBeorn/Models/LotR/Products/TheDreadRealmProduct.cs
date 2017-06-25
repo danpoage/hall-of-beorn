@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.LotR.Products
         {
             AddCardSet(CardSet.TheDreadRealm);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheDreadRealm());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened.TheDreadRealm());
         }
     }
 }

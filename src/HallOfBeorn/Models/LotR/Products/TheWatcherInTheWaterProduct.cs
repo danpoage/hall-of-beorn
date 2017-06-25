@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products
 
             AddCardSet(CardSet.TheWatcherInTheWater);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheWatcherInTheWater());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf.TheWatcherInTheWater());
         }
     }
 }

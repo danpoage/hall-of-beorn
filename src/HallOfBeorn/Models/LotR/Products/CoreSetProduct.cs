@@ -16,9 +16,9 @@ namespace HallOfBeorn.Models.LotR.Products
 
             AddCardSet(CardSet.CoreSet);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.CoreSet.PassageThroughMirkwood());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.JourneyAlongTheAnduin());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.EscapeFromDolGuldur());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.Core.PassageThroughMirkwood());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.Core.JourneyAlongTheAnduin());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.Core.EscapeFromDolGuldur());
         }
     }
 }

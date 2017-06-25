@@ -16,9 +16,9 @@ namespace HallOfBeorn.Models.LotR.Products
 
             AddCardSet(CardSet.HeirsOfNumenor);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.PerilInPelargir());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.IntoIthilien());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheSiegeOfCairAndros());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.HeirsOfNumenor.PerilInPelargir());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.HeirsOfNumenor.IntoIthilien());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.HeirsOfNumenor.TheSiegeOfCairAndros());
         }
     }
 }

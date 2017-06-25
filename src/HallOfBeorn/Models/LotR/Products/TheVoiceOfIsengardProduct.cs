@@ -16,9 +16,9 @@ namespace HallOfBeorn.Models.LotR.Products
 
             AddCardSet(CardSet.TheVoiceOfIsengard);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheFordsOfIsen());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.ToCatchAnOrc());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.IntoFangorn());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheVoiceOfIsengard.TheFordsOfIsen());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheVoiceOfIsengard.ToCatchAnOrc());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheVoiceOfIsengard.IntoFangorn());
         }
     }
 }

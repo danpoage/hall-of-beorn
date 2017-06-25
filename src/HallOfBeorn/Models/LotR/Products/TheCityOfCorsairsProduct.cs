@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.LotR.Products
         {
             AddCardSet(CardSet.TheCityOfCorsairs);
 
-            AddScenario(new Scenarios.TheCityOfCorsairs());
+            AddScenario(new Scenarios.DreamChaser.TheCityOfCorsairs());
         }
     }
 }

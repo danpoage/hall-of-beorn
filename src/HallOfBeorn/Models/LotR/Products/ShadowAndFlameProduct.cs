@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products
 
             AddCardSet(CardSet.ShadowAndFlame);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.ShadowAndFlame());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf.ShadowAndFlame());
         }
     }
 }

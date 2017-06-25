@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.LotR.Products
         {
             AddCardSet(CardSet.BeneathTheSands);
 
-            AddScenario(new Scenarios.BeneathTheSands());
+            AddScenario(new Scenarios.Haradrim.BeneathTheSands());
         }
     }
 }

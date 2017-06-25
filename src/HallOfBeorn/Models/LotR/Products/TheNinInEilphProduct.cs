@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products
 
             AddCardSet(CardSet.TheNinInEilph);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheNinInEilph());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheRingMaker.TheNinInEilph());
         }
     }
 }

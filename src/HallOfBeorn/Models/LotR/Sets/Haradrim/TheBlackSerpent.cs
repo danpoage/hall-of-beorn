@@ -21,7 +21,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithFlavor("\"I will not say the Day is done.\r\nnor bid the Stars farewell.\"\r\n-Sam Gamgee, The Return of the King")
                 .WithInfo(82, 3, Artist.Micah_Epstein));
             addCard(LotRCard.Event("Burst into Song", string.Empty, Sphere.Leadership, 2)
-                .WithText("Ready each hero with a Song attachment.")
+                .WithText("Action: Ready each hero with a Song attachment.")
                 .WithFlavor("And then all the host of Rohan burst into song, and they sang as they slew, for the joy of battle was on them, and the sound of their singing that was fair and terrible came even to the City.\r\n-The Return of the King")
                 .WithInfo(83, 3, Artist.Javier_Charro_Martinez));
 

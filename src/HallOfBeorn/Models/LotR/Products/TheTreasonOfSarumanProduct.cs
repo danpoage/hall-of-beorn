@@ -16,9 +16,9 @@ namespace HallOfBeorn.Models.LotR.Products
 
             AddCardSet(CardSet.TheTreasonOfSaruman);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheUrukHai());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.HelmsDeep());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheRoadToIsengard());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings.TheUrukHai());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings.HelmsDeep());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings.TheRoadToIsengard());
         }
     }
 }

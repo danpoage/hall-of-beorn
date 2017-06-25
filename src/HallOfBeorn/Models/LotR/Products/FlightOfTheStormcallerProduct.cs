@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products
 
             AddCardSet(CardSet.FlightOfTheStormcaller);
 
-            AddScenario(new Scenarios.FlightOfTheStormcaller());
+            AddScenario(new Scenarios.DreamChaser.FlightOfTheStormcaller());
         }
     }
 }

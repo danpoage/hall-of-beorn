@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products
 
             AddCardSet(CardSet.AcrossTheEttenmoors);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.AcrossTheEttenmoors());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened.AcrossTheEttenmoors());
         }
     }
 }

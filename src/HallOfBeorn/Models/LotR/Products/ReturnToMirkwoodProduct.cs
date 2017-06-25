@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products
 
             AddCardSet(CardSet.ReturnToMirkwood);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.ReturnToMirkwood());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood.ReturnToMirkwood());
         }
     }
 }

@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products
 
             AddCardSet(CardSet.EscapeFromMountGram);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.EscapeFromMountGram());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened.EscapeFromMountGram());
         }
     }
 }

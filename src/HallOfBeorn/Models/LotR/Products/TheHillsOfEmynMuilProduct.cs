@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products
 
             AddCardSet(CardSet.TheHillsOfEmynMuil);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheHillsOfEmynMuil());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood.TheHillsOfEmynMuil());
         }
     }
 }

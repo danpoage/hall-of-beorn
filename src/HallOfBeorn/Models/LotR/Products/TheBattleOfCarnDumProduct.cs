@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.LotR.Products
         {
             AddCardSet(CardSet.TheBattleOfCarnDum);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheBattleOfCarnDum());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened.TheBattleOfCarnDum());
         }
     }
 }

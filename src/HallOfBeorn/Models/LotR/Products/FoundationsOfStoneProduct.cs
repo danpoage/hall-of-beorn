@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products
 
             AddCardSet(CardSet.FoundationsOfStone);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.FoundationsOfStone());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf.FoundationsOfStone());
         }
     }
 }

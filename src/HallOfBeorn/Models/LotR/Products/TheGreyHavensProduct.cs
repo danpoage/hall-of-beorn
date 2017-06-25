@@ -14,9 +14,9 @@ namespace HallOfBeorn.Models.LotR.Products
 
             AddCardSet(CardSet.TheGreyHavens);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.VoyageAcrossBelegaer());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheFateOfNumenor());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.RaidOnTheGreyHavens());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheGreyHavens.VoyageAcrossBelegaer());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheGreyHavens.TheFateOfNumenor());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheGreyHavens.RaidOnTheGreyHavens());
         }
     }
 }

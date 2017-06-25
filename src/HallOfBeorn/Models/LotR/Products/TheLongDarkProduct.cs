@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products
 
             AddCardSet(CardSet.TheLongDark);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheLongDark());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf.TheLongDark());
         }
     }
 }

@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products
 
             AddCardSet(CardSet.RoadToRivendell);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.RoadToRivendell());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf.RoadToRivendell());
         }
     }
 }

@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.LotR.Products
         {
             AddCardSet(CardSet.AStormOnCobasHaven);
 
-            AddScenario(new Scenarios.AStormOnCobasHaven());
+            AddScenario(new Scenarios.DreamChaser.AStormOnCobasHaven());
         }
     }
 }

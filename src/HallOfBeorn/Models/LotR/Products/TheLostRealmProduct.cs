@@ -16,9 +16,9 @@ namespace HallOfBeorn.Models.LotR.Products
 
             AddCardSet(CardSet.TheLostRealm);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.IntrudersInChetwood());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheWeatherHills());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.DeadmensDike());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheLostRealm.IntrudersInChetwood());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheLostRealm.TheWeatherHills());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheLostRealm.DeadmensDike());
         }
     }
 }

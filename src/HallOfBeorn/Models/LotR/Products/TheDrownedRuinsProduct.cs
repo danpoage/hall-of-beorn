@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.LotR.Products
         {
             AddCardSet(CardSet.TheDrownedRuins);
 
-            AddScenario(new Scenarios.TheDrownedRuins());
+            AddScenario(new Scenarios.DreamChaser.TheDrownedRuins());
 
             RulesUrl = "https://images-cdn.fantasyflightgames.com/filer_public/09/2f/092fb408-c906-4521-994e-031fd90b11ba/mec51_rules.pdf";
         }
