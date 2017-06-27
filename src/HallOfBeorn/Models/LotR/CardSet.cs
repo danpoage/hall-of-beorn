@@ -315,9 +315,9 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheRuinsOfBelegost = new Sets.PrintOnDemand.TheRuinsOfBelegost();
         public static CardSet TheSiegeOfAnnuminas = new Sets.PrintOnDemand.TheSiegeOfAnnuminas();
 
-        public static CardSet PassageThroughMirkwoodNightmare = new Sets.Core.PassageThroughMirkwoodNightmare();
-        public static CardSet JourneyAlongTheAnduinNightmare = new Sets.Core.JourneyAlongTheAnduinNightmare();
-        public static CardSet EscapeFromDolGuldurNightmare = new Sets.Core.EscapeFromDolGuldurNightmare();
+        public static CardSet PassageThroughMirkwoodNightmare = new Sets.Core.PassageThroughMirkwoodNightmareSet();
+        public static CardSet JourneyAlongTheAnduinNightmare = new Sets.Core.JourneyAlongTheAnduinNightmareSet();
+        public static CardSet EscapeFromDolGuldurNightmare = new Sets.Core.EscapeFromDolGuldurNightmareSet();
 
         public static CardSet TheHuntForGollumNightmare = new Sets.ShadowsOfMirkwood.TheHuntForGollumNightmare();
         public static CardSet ConflictAtTheCarrockNightmare = new Sets.ShadowsOfMirkwood.ConflictAtTheCarrockNightmare();
@@ -391,8 +391,8 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet MurderAtThePrancingPony = new Sets.PrintOnDemand.MurderAtThePrancingPony();
 
         public static CardSet FirstAge = new Sets.FirstAge.FirstAgeSet();
-        public static CardSet TrialUponTheMarches = new Sets.FirstAge.TrialUponTheMarches();
-        public static CardSet AmongTheOutlaws = new Sets.FirstAge.AmongTheOutlaws();
+        public static CardSet TrialUponTheMarches = new Sets.FirstAge.TrialUponTheMarchesSet();
+        public static CardSet AmongTheOutlaws = new Sets.FirstAge.AmongTheOutlawsSet();
         #endregion
     }
 }
