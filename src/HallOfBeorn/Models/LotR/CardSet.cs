@@ -232,6 +232,10 @@ namespace HallOfBeorn.Models.LotR
             Add(JourneyInTheDarkNightmare);
             Add(BreakingOfTheFellowshipNightmare);
 
+            Add(TheUrukHaiNightmare);
+
+            Add(ThePassageOfTheMarshesNightmare);
+
             Add(FirstAge);
             Add(TrialUponTheMarches);
             Add(AmongTheOutlaws);
@@ -383,6 +387,8 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheRingGoesSouthNightmare = new Sets.TheLordOfTheRings.TheRingGoesSouthNightmare();
         public static CardSet JourneyInTheDarkNightmare = new Sets.TheLordOfTheRings.JourneyInTheDarkNightmare();
         public static CardSet BreakingOfTheFellowshipNightmare = new Sets.TheLordOfTheRings.BreakingOfTheFellowshipNightmare();
+
+        public static CardSet TheUrukHaiNightmare = new Sets.TheLordOfTheRings.TheUrukHaiNightmare();
 
         public static CardSet ThePassageOfTheMarshesNightmare = new Sets.TheLordOfTheRings.ThePassageOfTheMarshesNightmareSet();
 
