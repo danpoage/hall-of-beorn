@@ -586,6 +586,10 @@ namespace HallOfBeorn.Models
             //The Road Darkens Nightmare
             all.Add(Artist.Bon_Bernardo);
 
+            //The Treason of Saruman Nightmare
+            all.Add(Artist.Monztre);
+            all.Add(Artist.Tropa_Entertainment);
+
             //The Flame of the West
             all.Add(Artist.Stephen_Najarian);
             all.Add(Artist.Uriah_Voth);
@@ -795,6 +799,7 @@ namespace HallOfBeorn.Models
         public static Artist Thomas_Rouillard = new Artist { Name = "Thomas Rouillard", URL = "http://tolkiengateway.net/wiki/Category:Images_by_Thomas_Rouillard" };
         public static Artist Thomas_Scholes = new Artist { Name = "Thomas Scholes", URL = "http://www.artofscholes.com" };
         public static Artist Tristan_Denecke = new Artist { Name = "Tristan Denecke", URL = "http://princepssenatus.deviantart.com" };
+        public static Artist Tropa_Entertainment = new Artist { Name = "Tropa Entertainment", URL = "http://www.tropaentertainment.com" };
         public static Artist Tyler_Edlin = new Artist { Name = "Tyler Edlin", URL = "http://tyleredlinart.deviantart.com" };
         public static Artist Unknown = new Artist { Name = "Unknown", URL = "https://www.google.com/search?q=unknown+artist" };
         public static Artist Uriah_Voth = new Artist { Name = "Uriah Voth", URL = "http://www.uriahvoth.com" };
@@ -1022,6 +1027,7 @@ namespace HallOfBeorn.Models
         public static Artist Mikhail_Greuli = new Artist { Name = "Mikail Greuli", URL = "http://mgreuli.deviantart.com" };
         public static Artist Mikhail_Yakovlev = new Artist { Name = "Mikhail Yakovlev", URL = "http://yakovlevart.blogspot.com" };
         public static Artist Milek_Jakubiec = new Artist { Name = "Milek Jakubiec", URL = "http://ethicallychallenged.deviantart.com" };
+        public static Artist Monztre = new Artist { Name = "Monztre", URL = "https://www.artstation.com/artist/monztre" };
         public static Artist Nacho_Molina = new Artist { Name = "Nacho Molina", URL = "http://nachomolina.deviantart.com" };
         public static Artist Nate_Abell = new Artist { Name = "Nate Abell", URL = "http://www.nateabell.com" };
         public static Artist Nele_Diel = new Artist { Name = "Nele Diel", URL = "http://nele-diel.deviantart.com" };
