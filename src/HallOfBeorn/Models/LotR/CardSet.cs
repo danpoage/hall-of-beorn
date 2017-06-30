@@ -237,6 +237,8 @@ namespace HallOfBeorn.Models.LotR
             Add(TheRoadToIsengardNightmare);
 
             Add(ThePassageOfTheMarshesNightmare);
+            Add(JourneyToTheCrossRoadsNightmare);
+            Add(ShelobsLairNightmare);
 
             Add(FirstAge);
             Add(TrialUponTheMarches);
@@ -395,6 +397,8 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheRoadToIsengardNightmare = new Sets.TheLordOfTheRings.TheRoadToIsengardNightmareSet();
 
         public static CardSet ThePassageOfTheMarshesNightmare = new Sets.TheLordOfTheRings.ThePassageOfTheMarshesNightmareSet();
+        public static CardSet JourneyToTheCrossRoadsNightmare = new Sets.TheLordOfTheRings.JourneyToTheCrossRoadsNightmareSet();
+        public static CardSet ShelobsLairNightmare = new Sets.TheLordOfTheRings.ShelobsLairNightmareSet();
 
         public static CardSet TheOldForest = new Sets.PrintOnDemand.TheOldForest();
         public static CardSet FogOnTheBarrowDowns = new Sets.PrintOnDemand.FogOnTheBarrowDowns();

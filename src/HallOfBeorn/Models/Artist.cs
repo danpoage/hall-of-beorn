@@ -590,6 +590,9 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Monztre);
             all.Add(Artist.Tropa_Entertainment);
 
+            //The Land of Shadows Nightmare
+            all.Add(Artist.Martin_de_Diego_Sadaba);
+
             //The Flame of the West
             all.Add(Artist.Stephen_Najarian);
             all.Add(Artist.Uriah_Voth);
@@ -742,6 +745,7 @@ namespace HallOfBeorn.Models
         public static Artist Marius_Bota = new Artist { Name = "Marius Bota", URL = "http://mariusbota.deviantart.com" };
         public static Artist Mathia_Arkoniel = new Artist { Name = "Mathia Arkoniel", URL = "http://mathiaarkoniel.deviantart.com" };
         public static Artist Mathieu_Degrotte = new Artist { Name = "Mathieu Degrotte", URL = "http://md-arts.deviantart.com" };
+        public static Artist Martin_de_Diego_Sadaba = new Artist { Name = "Martin de Diego Sádaba", URL = "http://almanegra.deviantart.com" };
         public static Artist Martin_Pastyrik = new Artist { Name = "Martin Pastyrik", URL = "http://mrwallpaper.deviantart.com/gallery" };
         public static Artist Meanor = new Artist { Name = "Meanor", URL = "http://meanor.deviantart.com" };
         public static Artist Miao_Yu = new Artist { Name = "Miao Yu", URL = "http://moonblossom.deviantart.com" };

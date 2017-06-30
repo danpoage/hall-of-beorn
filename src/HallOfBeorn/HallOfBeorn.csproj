@@ -225,6 +225,8 @@
     <Compile Include="Models\LotR\Sets\AngmarAwakened\AcrossTheEttenmoorsNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\BreakingOfTheFellowshipNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\HelmsDeepNightmareSet.cs" />
+    <Compile Include="Models\LotR\Sets\TheLordOfTheRings\JourneyToTheCrossRoadsNightmareSet.cs" />
+    <Compile Include="Models\LotR\Sets\TheLordOfTheRings\ShelobsLairNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\ThePassageOfTheMarshesNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\TheRoadToIsengardNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\TheUrukHaiNightmare.cs" />
