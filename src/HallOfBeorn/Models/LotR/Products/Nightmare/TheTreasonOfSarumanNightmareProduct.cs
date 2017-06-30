@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Products.Nightmare
             : base("The Treason of Saruman Nightmare", "MEN36", ImageType.Jpg)
         {
             AddCardSet(CardSet.TheUrukHaiNightmare);
+            AddCardSet(CardSet.HelmsDeepNightmare);
+            AddCardSet(CardSet.TheRoadToIsengardNightmare);
         }
     }
 }
