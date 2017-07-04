@@ -25,6 +25,10 @@ namespace HallOfBeorn.Models
         Susurros_del_Bosque_Viejo,
         El_Libro_Rojo_de_Bolson_Cerrado,
         Expecting_Mischief,
-        Die_Manner_von_Gondor
+        Die_Manner_von_Gondor,
+
+        Hall_of_Beorn_Card_Detail,
+        Hall_of_Beorn_Card_Image,
+        Hall_of_Beorn_Character,
     }
 }

@@ -202,6 +202,8 @@
     <Compile Include="Models\INamed.cs" />
     <Compile Include="Models\LotR\Character.cs" />
     <Compile Include="Models\LotR\Characters\AragornCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\ArwenUndomielCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\ElrondCharacter.cs" />
     <Compile Include="Models\LotR\LayoutType.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\AcrossTheEttenmoorsNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\EscapeFromMountGramNightmareProduct.cs" />
@@ -654,6 +656,7 @@
     <Compile Include="Services\Arkham\ArkhamProductRepository.cs" />
     <Compile Include="Services\Arkham\ArkhamSearchService.cs" />
     <Compile Include="Services\LotR\CardRepository.cs" />
+    <Compile Include="Services\LotR\CharacterRepository.cs" />
     <Compile Include="Services\LotR\EncounterSetRepository.cs" />
     <Compile Include="Services\LotR\EnUsTemplateRepository1.cs" />
     <Compile Include="Services\LotR\EnUsTemplateRepository2.cs" />
@@ -885,6 +888,7 @@
     <Content Include="Error.html" />
     <Content Include="Views\Arkham\Search.cshtml" />
     <Content Include="Views\Arkham\Details.cshtml" />
+    <Content Include="Views\LotR\Characters.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

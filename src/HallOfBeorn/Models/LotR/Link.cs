@@ -15,9 +15,20 @@ namespace HallOfBeorn.Models.LotR
         public Link(LinkType type, LotRCard card, string title)
         {
             this.Type = type;
-            this.Title = string.IsNullOrEmpty(title) ? getTitle(type) : title;
-            this.Text = this.Title;
+
+            var linkTitle = string.IsNullOrEmpty(title) ? getTitle(type) : title;
+            this.Title = linkTitle;
+
+            this.Text = getText(type, card, linkTitle);
             this.Url = getUrl(type, card, defaltLanguage);
+        }
+
+        public Link(LinkType type, string url, string title)
+        {
+            this.Type = type;
+            this.Title = title;
+            this.Text = title;
+            this.Url = url;
         }
 
         private const string defaltLanguage = "en";
@@ -63,6 +74,10 @@ namespace HallOfBeorn.Models.LotR
                     return string.Format("https://ellibrorojodebolsoncerrado.wordpress.com/?s={0}", title);
                 case LinkType.Die_Manner_von_Gondor:
                     return string.Format("https://menofgondor.wordpress.com/?s={0}", title);
+
+                case LinkType.Hall_of_Beorn_Card_Detail:
+                case LinkType.Hall_of_Beorn_Card_Image:
+                    return string.Format("/LotR/Details/{0}", card.Slug);
                 default:
                     return string.Empty;
             }
@@ -71,6 +86,13 @@ namespace HallOfBeorn.Models.LotR
         private static string getTitle(LinkType type)
         {
             return type.ToString().Replace('_', ' ');
+        }
+
+        private static string getText(LinkType type, LotRCard card, string title)
+        {
+            return type == LinkType.Hall_of_Beorn_Card_Image ?
+                string.Format("<img src=\"https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}.jpg\" title=\"{2}\" style=\"height:180px\"></img>", card.CardSet.Name.ToUrlSafeString(), card.Title.ToUrlSafeString(), title.Replace("'", "’"))
+                : title;
         }
 
         public LinkType Type { get; set; }

@@ -21,21 +21,45 @@ namespace HallOfBeorn.Models.LotR
             this.Race = race;
         }
 
-        private readonly List<CardTag> family = new List<CardTag>();
-        private readonly List<string> aliases = new List<string>();
+        private readonly List<Link> family = new List<Link>();
+        private readonly List<Link> aliases = new List<Link>();
         private readonly List<string> books = new List<string>();
         private readonly List<string> cards = new List<string>();
 
         protected void Alias(string alias)
         {
-            this.aliases.Add(alias);
+            this.Alias(alias, string.Empty);
+        }
+
+        protected void Alias(string alias, string slug)
+        {
+            var type = LinkType.None;
+            var url = string.Empty;
+
+            if (!string.IsNullOrEmpty(slug)) {
+                type = LinkType.Hall_of_Beorn_Card_Detail;
+                url = string.Format("/LotR/Details/{0}", slug);
+            }
+
+            aliases.Add(new Link(type, url, alias));
+        }
+
+        protected void addFamily(string name)
+        {
+            this.addFamily(name, string.Empty);
         }
 
         protected void addFamily(string name, string slug)
         {
-            var url = !string.IsNullOrEmpty(slug) ? string.Format("/LotR/Details/{0}", slug) : string.Empty;
+            var type = LinkType.None;
+            var url = string.Empty;
 
-            this.family.Add(new CardTag { Text = name, Url = url });
+            if (!string.IsNullOrEmpty(slug)) {
+                type = LinkType.Hall_of_Beorn_Character;
+                url = string.Format("/LotR/Characters/{0}", slug);
+            }
+
+            this.family.Add(new Link(type, url, name));
         }
 
         protected void TheHobbit()
@@ -70,11 +94,14 @@ namespace HallOfBeorn.Models.LotR
 
         public string Race { get; protected set; }
         
-        public IEnumerable<CardTag> Family { get { return family; } }
+        public IEnumerable<Link> Family()
+        {
+            return family;
+        }
 
         public string Bio { get; protected set; }
 
-        public IEnumerable<string> Aliases()
+        public IEnumerable<Link> Aliases()
         {
             return aliases;
         }

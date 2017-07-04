@@ -1,0 +1,56 @@
+﻿@using HallOfBeorn.Models
+@using HallOfBeorn.Models.LotR
+@using HallOfBeorn.Models.LotR.ViewModels
+@model CharacterViewModel
+
+@{
+    ViewBag.Title = @Model.Title;
+}
+
+<div style="font-size:1.75em;font-family:Verdana;">@Model.Title</div>
+
+<span style="display: inline-block; vertical-align: top;">
+<img src="@Model.ImageUrl" style="max-width: 400px; margin: 4px;" class="card-image"/>
+</span>
+<span style="display: inline-block; max-width: 500px;margin: 4px;">
+@Html.Raw(@Model.Bio)
+</span>
+
+@if (@Model.HasAliases) {
+    <h3>Titles, Aliases, and Descriptions</h3>
+    <div>
+        @foreach (var alias in @Model.Aliases) {
+            <span style="margin:4px 6px; display:inline-block">
+                @if (!string.IsNullOrEmpty(@alias.Url)) {
+                    <a href="@alias.Url" target="_blank" title="@alias.Title">@alias.Text</a>
+                } else {
+                    @alias.Text
+                }
+            </span>   
+        }
+    </div>
+}
+
+@if (@Model.HasFamily) {
+    <h3>Family</h3>
+    <div>
+        @foreach (var family in @Model.Family) {
+            <span style="margin:4px 6px; display:inline-block">
+                @if (!string.IsNullOrEmpty(@family.Url)) {
+                    <a href="@family.Url" target="_blank" title="@family.Title">@family.Text</a>
+                } else {
+                    @family.Text
+                }
+            </span>   
+        }
+    </div>   
+}
+
+<h3>Cards</h3>
+<div>
+    @foreach (var cardLink in @Model.CardLinks) {
+        <span style="margin: 4px;display:inline-block;">
+            <a href="@cardLink.Url" target="_blank" title="@cardLink.Title">@Html.Raw(@cardLink.Text)</a>
+        </span>
+    }
+</div>

@@ -9,6 +9,7 @@ namespace HallOfBeorn.Services.LotR
     {
         public static string ProductRepository = "productRepository";
         public static string CardRepository = "cardRepository";
+        public static string CharacterRepository = "characterRepository";
 
         public static string CategoryService = "categoryService";
         public static string NoteService = "noteService";

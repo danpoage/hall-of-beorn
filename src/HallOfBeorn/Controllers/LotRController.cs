@@ -22,6 +22,7 @@ namespace HallOfBeorn.Controllers
         {
             cardRepository = (CardRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.CardRepository];
             productRepository = (ProductRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.ProductRepository];
+            characterRepository = (CharacterRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.CharacterRepository];
             searchService = (SearchService)System.Web.HttpContext.Current.Application[LotRServiceNames.SearchService];
             categoryService = (CategoryService)System.Web.HttpContext.Current.Application[LotRServiceNames.CategoryService];
             noteService = (NoteService)System.Web.HttpContext.Current.Application[LotRServiceNames.NoteService];
@@ -36,6 +37,7 @@ namespace HallOfBeorn.Controllers
         private readonly SearchService searchService;
         private readonly CardRepository cardRepository;
         private readonly ProductRepository productRepository;
+        private readonly CharacterRepository characterRepository;
         private readonly CategoryService categoryService;
         private readonly NoteService noteService;
         private readonly ScenarioService scenarioService;
@@ -1092,6 +1094,26 @@ namespace HallOfBeorn.Controllers
                     }
                 }
             }   
+
+            return View(model);
+        }
+
+        public ActionResult Characters(string id)
+        {
+            var character = characterRepository.Lookup(id);
+
+            if (character == null) {
+                return HttpNotFound("Could not find a character by the name of '" + id.ToUrlSafeString() + "'");
+            }
+
+            var model = new CharacterViewModel(character);
+
+            foreach (var cardSlug in character.Cards()) {
+                var card = cardRepository.FindBySlug(cardSlug);
+                if (card != null) {
+                    model.AddCardLink(card);
+                }
+            }
 
             return View(model);
         }
