@@ -15,6 +15,8 @@ namespace HallOfBeorn.Services.LotR
             add(new AragornCharacter());
             add(new ArwenUndomielCharacter());
             add(new ElrondCharacter());
+            add(new ElladanCharacter());
+            add(new ElrohirCharacter());
         }
 
         private readonly Dictionary<string, Character> all = new Dictionary<string, Character>();

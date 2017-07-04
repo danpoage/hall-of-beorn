@@ -17,6 +17,8 @@ namespace HallOfBeorn.Models.LotR.Characters
 <p>Arwen is a minor character in The Lord of the Rings, but she serves as inspiration and motivation for Aragorn, who must become King of both Arnor and Gondor before Elrond would allow her to marry him.</p>
 <p>The Tale of Aragorn and Arwen relates that Aragorn and Arwen had a son, Eldarion, and at least two unnamed daughters. In F.A. 121, one year after Aragorn's death, Arwen gave up her life, at the age of 2,901, at Cerin Amroth.</p>";
 
+            BioSourceUrl = "https://en.wikipedia.org/wiki/Arwen";
+
             TheFellowshipOfTheRing();
             TheReturnOfTheKing();
 

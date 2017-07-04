@@ -9,13 +9,17 @@
 
 <div style="font-size:1.75em;font-family:Verdana;">@Model.Title</div>
 
-<span style="display: inline-block; vertical-align: top;">
-<img src="@Model.ImageUrl" style="max-width: 400px; margin: 4px;" class="card-image"/>
-</span>
-<span style="display: inline-block; max-width: 500px;margin: 4px;">
-@Html.Raw(@Model.Bio)
-</span>
-
+<div style="display: block;">
+    <div style="display: inline-block; vertical-align: top;">
+        <img src="@Model.ImageUrl" style="max-width: 400px; margin: 4px;" class="card-image"/>
+    </div>
+    <div style="display: inline-block; vertical-align: top; margin: 4px 6px;">
+        <div style="display: block; overflow: auto; height: 400px; width: 400px;">
+            <div style="margin-top: -14px;">@Html.Raw(@Model.Bio)</div>
+            <div><a href="@Model.BioSourceUrl" target="_blank" title="Source">Source</a></div>
+        </div>
+    </div>
+</div>
 @if (@Model.HasAliases) {
     <h3>Titles, Aliases, and Descriptions</h3>
     <div>

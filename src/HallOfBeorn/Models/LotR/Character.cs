@@ -100,6 +100,7 @@ namespace HallOfBeorn.Models.LotR
         }
 
         public string Bio { get; protected set; }
+        public string BioSourceUrl { get; protected set; }
 
         public IEnumerable<Link> Aliases()
         {
