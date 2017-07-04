@@ -30,11 +30,11 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithFlavor("\"Mauhúr and his lads are in the forest, and they should turn up any time now.\" -Uglúk, The Two Towers")
                 .WithVictoryPoints(4)
                 .WithInfo(2, 1, Artist.Monztre));
-            addCard(LotRCard.Enemy("Lugdash", string.Empty, setName, 32, 3, 4, 2, 5)
+            addCard(LotRCard.Enemy("Lugdush", string.Empty, setName, 32, 3, 4, 2, 5)
                 .WithUnique()
                 .WithTraits("Orc.", "Uruk-hai.")
                 .WithKeywords("Toughness 2.")
-                .WithText("While Lugdash is engaged with a player, each other enemy cannot take damage.")
+                .WithText("While Lugdush is engaged with a player, each other enemy cannot take damage.")
                 .WithShadow("Shadow: If attacking enemy is unique, it cannot take damage until the end of the round.")
                 .WithVictoryPoints(3)
                 .WithInfo(3, 1, Artist.Monztre));

@@ -22,7 +22,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithFlavor("Often they floundered, stepping or falling hands-first into waters as noisome as a cesspool, till they were slimed and fouled almost up to their necks and stank in one another's nostrils. -The Two Towers")
                 .WithOppositeText("Begin with the standard quest deck and encounter deck for The Passage of the Marshes scenario.\r\nRemove the following cards, in the specified quantities, from the standard encounter deck:\r\n3x Groping Dead\r\n3x Dead Things\r\n3x Soft Mires\r\n3x Haunted Mere\r\n3x Bitter Reek\r\nThen, shuffle the encounter cards in this Nightmare ~Deck into the remainder of the standard The Passage of the Marshes encounter deck.\r\nFinally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.")
                 .WithInfo(1, 1, Artist.Lucas_Staniec));
-            addCard(LotRCard.Location("Festering Mere", string.Empty, setName, 5, 6)
+            addCard(LotRCard.Location("Festering Mire", string.Empty, setName, 5, 6)
                 .WithTraits("Marsh.")
                 .WithKeywords("Mire 2.")
                 .WithText("Forced: When Festering Mire is discarded by the Mire keyword, each player discards his hand.\r\nTravel: Each player discard 1 random card from his hand to travel here.")
