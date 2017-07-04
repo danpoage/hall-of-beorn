@@ -42,7 +42,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithTraits("Creature.")
                 .WithText("Forced: After Deadly Marsh Adder engages you, discard a damaged character you control.\r\nForced: After the players advance to a quest stage return Deadly Marsh Adder to the staging area.")
                 .WithInfo(2, 3, Artist.Rafal_Hrynkiewicz));
-            Cards.Add(LotRCard.Enemy("Swarm of Mosquitoes", "", setName, 25, 2, 3, 1, 7)
+            Cards.Add(LotRCard.Enemy("Swarms of Mosquitoes", "", setName, 25, 2, 3, 1, 7)
                 .WithTraits("Creature.", "Insect.")
                 .WithText("Cannot have attachments.\r\nWhile Swarm of Mosquitoes is in the victory display, it gains: \"Forced: After the players advance to a quest stage, return Swarm of Mosquitoes to the staging area.\"")
                 .WithInfo(3, 3, Artist.Yog_Joshi));

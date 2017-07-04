@@ -200,6 +200,8 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Arkham\Products\CurseOfTheRougarou.cs" />
     <Compile Include="Models\INamed.cs" />
+    <Compile Include="Models\LotR\Character.cs" />
+    <Compile Include="Models\LotR\Characters\AragornCharacter.cs" />
     <Compile Include="Models\LotR\LayoutType.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\AcrossTheEttenmoorsNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\EscapeFromMountGramNightmareProduct.cs" />
@@ -288,6 +290,7 @@
     <Compile Include="Models\LotR\DeckType.cs" />
     <Compile Include="Models\LotR\EncounterCategory.cs" />
     <Compile Include="Models\LotR\EncounterSet.cs" />
+    <Compile Include="Models\LotR\ViewModels\CharacterViewModel.cs" />
     <Compile Include="Models\LotR\ViewModels\EncounterSetViewModel.cs" />
     <Compile Include="Models\LotR\ErrataVersion.cs" />
     <Compile Include="Models\Language.cs" />
