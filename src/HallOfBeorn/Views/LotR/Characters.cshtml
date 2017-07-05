@@ -50,6 +50,36 @@
     </div>   
 }
 
+@if (@Model.HasFriends) {
+    <h3>Friends and Associates</h3>
+    <div>
+        @foreach (var friend in @Model.Friends) {
+            <span style="margin:4px 6px; display:inline-block">
+                @if (!string.IsNullOrEmpty(@friend.Url)) {
+                    <a href="@friend.Url" target="_blank" title="@friend.Title">@friend.Text</a>
+                } else {
+                    @friend.Text
+                }
+            </span>   
+        }
+    </div>   
+}
+
+@if (@Model.HasItems) {
+    <h3>Items and Mounts</h3>
+    <div>
+        @foreach (var item in @Model.Items) {
+            <span style="margin:4px 6px; display:inline-block">
+                @if (!string.IsNullOrEmpty(@item.Url)) {
+                    <a href="@item.Url" target="_blank" title="@item.Title">@item.Text</a>
+                } else {
+                    @item.Text
+                }
+            </span>   
+        }
+    </div>   
+}
+
 <h3>Cards</h3>
 <div>
     @foreach (var cardLink in @Model.CardLinks) {

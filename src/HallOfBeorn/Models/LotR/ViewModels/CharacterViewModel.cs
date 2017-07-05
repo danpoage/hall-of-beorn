@@ -24,11 +24,17 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             get { return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Characters/{0}.jpg", character.NormalizedName.ToUrlSafeString()); }
         }
 
-        public IEnumerable<Link> Aliases { get { return character.Aliases(); } } 
-        public bool HasAliases { get { return character.Aliases().Count() > 0; } }
+        public IEnumerable<Link> Aliases { get { return character.Aliases; } } 
+        public bool HasAliases { get { return character.Aliases.Count() > 0; } }
 
-        public IEnumerable<Link> Family { get { return character.Family(); } }
-        public bool HasFamily { get { return character.Family().Count() > 0; } }
+        public IEnumerable<Link> Family { get { return character.Family; } }
+        public bool HasFamily { get { return character.Family.Count() > 0; } }
+
+        public IEnumerable<Link> Friends { get { return character.Friends; } }
+        public bool HasFriends { get { return character.Friends.Count() > 0; } }
+
+        public IEnumerable<Link> Items { get { return character.Items; } }
+        public bool HasItems { get { return character.Items.Count() > 0; } }
 
         public IEnumerable<Link> CardLinks { get { return cardLinks; } }
 

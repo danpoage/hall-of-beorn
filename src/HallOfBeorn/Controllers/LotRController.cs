@@ -1108,7 +1108,7 @@ namespace HallOfBeorn.Controllers
 
             var model = new CharacterViewModel(character);
 
-            foreach (var cardSlug in character.Cards()) {
+            foreach (var cardSlug in character.Cards) {
                 var card = cardRepository.FindBySlug(cardSlug);
                 if (card != null) {
                     model.AddCardLink(card);

@@ -41,7 +41,7 @@ namespace HallOfBeorn.Services.LotR
         public IEnumerable<Character> WithSlug(string slug)
         {
             foreach (var c in all.Values) {
-                foreach (var cardSlug in c.Cards()) {
+                foreach (var cardSlug in c.Cards) {
                     yield return c;
                 }
             }

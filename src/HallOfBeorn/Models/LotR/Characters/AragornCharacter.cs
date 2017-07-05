@@ -43,6 +43,16 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFamily("Elrond (Father-in-Law)", "Elrond");
             addFamily("Elladan (Brother-in-Law)", "Elladan");
             addFamily("Elrohir (Brother-in-Law)", "Elrohir");
+
+            addFriend("Gandalf", "Gandalf");
+            addFriend("Halbarad", "Halbarad");
+
+            addItem("Celebrían's Stone", "Celebrian's-Stone-Core");
+            addItem("Shards of Narsil", "Sword-that-was-Broken-TWitW");
+            addItem("Ring of Barahir", "Ring-of-Barahir-TSF");
+            addItem("Roheryn", "Roheryn-TFotW");
+            addItem("Anduril", "Anduril-RD");
+            addItem("Banner of Elendil", "Banner-of-Elendil-TFotW");
         }
     }
 }

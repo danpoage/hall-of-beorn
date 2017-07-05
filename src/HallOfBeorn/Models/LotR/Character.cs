@@ -22,6 +22,8 @@ namespace HallOfBeorn.Models.LotR
         }
 
         private readonly List<Link> family = new List<Link>();
+        private readonly List<Link> friends = new List<Link>();
+        private readonly List<Link> items = new List<Link>();
         private readonly List<Link> aliases = new List<Link>();
         private readonly List<string> books = new List<string>();
         private readonly List<string> cards = new List<string>();
@@ -46,20 +48,68 @@ namespace HallOfBeorn.Models.LotR
 
         protected void addFamily(string name)
         {
-            this.addFamily(name, string.Empty);
+            addCharacterLink(this.family, name, string.Empty);
         }
 
         protected void addFamily(string name, string slug)
+        {
+            addCharacterLink(this.family, name, slug);
+        }
+
+        protected void addFriend(string name)
+        {
+            addCharacterLink(this.friends, name, string.Empty);
+        }
+
+        protected void addFriend(string name, string slug)
+        {
+            addCharacterLink(this.friends, name, slug);
+        }
+
+        protected void addItem(string name)
+        {
+            addDetailLink(this.items, name, string.Empty);
+        }
+
+        protected void addItem(string name, string slug)
+        {
+            addDetailLink(this.items, name, slug);
+        }
+
+        private void addCharacterLink(List<Link> links, string title, string slug)
         {
             var type = LinkType.None;
             var url = string.Empty;
 
             if (!string.IsNullOrEmpty(slug)) {
                 type = LinkType.Hall_of_Beorn_Character;
-                url = string.Format("/LotR/Characters/{0}", slug);
+                url = getCharacterUrl(slug);
             }
 
-            this.family.Add(new Link(type, url, name));
+            links.Add(new Link(type, url, title));
+        }
+
+        private void addDetailLink(List<Link> links, string title, string slug)
+        {
+            var type = LinkType.None;
+            var url = string.Empty;
+
+            if (!string.IsNullOrEmpty(slug)) {
+                type = LinkType.Hall_of_Beorn_Card_Detail;
+                url = getDetailUrl(slug);
+            }
+
+            links.Add(new Link(type, url, title));
+        }
+
+        private string getCharacterUrl(string slug)
+        {
+            return string.Format("/LotR/Characters/{0}", slug);
+        }
+
+        private string getDetailUrl(string slug)
+        {
+            return string.Format("/LotR/Details/{0}", slug);
         }
 
         protected void TheHobbit()
@@ -94,27 +144,15 @@ namespace HallOfBeorn.Models.LotR
 
         public string Race { get; protected set; }
         
-        public IEnumerable<Link> Family()
-        {
-            return family;
-        }
+        public IEnumerable<Link> Family { get { return family; } }
+        public IEnumerable<Link> Friends { get { return friends; } }
+        public IEnumerable<Link> Items { get { return items; } }
 
         public string Bio { get; protected set; }
         public string BioSourceUrl { get; protected set; }
 
-        public IEnumerable<Link> Aliases()
-        {
-            return aliases;
-        }
-
-        public IEnumerable<string> Books()
-        {
-            return books;
-        }
-
-        public IEnumerable<string> Cards()
-        {
-            return cards;
-        }
+        public IEnumerable<Link> Aliases { get { return aliases; } }
+        public IEnumerable<string> Books { get { return books; } }
+        public IEnumerable<string> Cards { get { return cards; } }
     }
 }
