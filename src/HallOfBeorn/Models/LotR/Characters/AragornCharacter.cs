@@ -39,13 +39,13 @@ namespace HallOfBeorn.Models.LotR.Characters
             Card("Aragorn-FotBD");
 
             addFamily("Arathorn (Father)", string.Empty);
-            addFamily("Arwen Undomiel (Wife)", "Arwen-Undomiel");
+            addFamily("Arwen Undómiel (Wife)", "Arwen-Undomiel");
             addFamily("Elrond (Father-in-Law)", "Elrond");
             addFamily("Elladan (Brother-in-Law)", "Elladan");
             addFamily("Elrohir (Brother-in-Law)", "Elrohir");
 
             addFriend("Gandalf", "Gandalf");
-            addFriend("Halbarad", "Halbarad");
+            addFriend("Halbarad");
 
             addItem("Celebrían's Stone", "Celebrian's-Stone-Core");
             addItem("Shards of Narsil", "Sword-that-was-Broken-TWitW");

@@ -22,7 +22,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             addFamily("Elrond (Father)", "Elrond");
             addFamily("Elrohir (Brother)", "Elrohir");
-            addFamily("Arwen Undomiel (Sister)", "Arwen-Undomiel");
+            addFamily("Arwen Undómiel (Sister)", "Arwen-Undomiel");
             addFamily("Aragorn (Brother-in-Law)", "Aragorn");
             
             Card("Elladan-RtR");

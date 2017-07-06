@@ -203,9 +203,11 @@
     <Compile Include="Models\LotR\Character.cs" />
     <Compile Include="Models\LotR\Characters\AragornCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ArwenUndomielCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\BilboBagginsCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ElladanCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ElrohirCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ElrondCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\GandalfCharacter.cs" />
     <Compile Include="Models\LotR\LayoutType.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\AcrossTheEttenmoorsNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\EscapeFromMountGramNightmareProduct.cs" />

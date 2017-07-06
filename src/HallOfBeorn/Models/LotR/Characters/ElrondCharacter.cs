@@ -32,7 +32,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFamily("Celebrían (Wife)"); //, "Celebrian");
             addFamily("Elladan (Son)", "Elladan");
             addFamily("Elrohir (Son)", "Elrohir");
-            addFamily("Arwen Undomiel (Daughter)", "Arwen-Undomiel");
+            addFamily("Arwen Undómiel (Daughter)", "Arwen-Undomiel");
             addFamily("Aragorn (Son-in-Law)", "Aragorn");
 
             Card("Elrond-SaF");
