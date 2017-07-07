@@ -65,6 +65,21 @@
     </div>   
 }
 
+@if (@Model.HasGroups) {
+    <h3>Groups</h3>
+    <div>
+        @foreach (var group in @Model.Groups) {
+            <span style="margin:4px 6px; display:inline-block">
+                @if (!string.IsNullOrEmpty(@group.Url)) {
+                    <a href="@group.Url" target="_blank" title="@group.Title">@group.Text</a>
+                } else {
+                    @group.Text
+                }
+            </span>   
+        }
+    </div>   
+}
+
 @if (@Model.HasItems) {
     <h3>Items and Mounts</h3>
     <div>
@@ -74,6 +89,21 @@
                     <a href="@item.Url" target="_blank" title="@item.Title">@item.Text</a>
                 } else {
                     @item.Text
+                }
+            </span>   
+        }
+    </div>   
+}
+
+@if (@Model.HasMembers) {
+    <h3>Members</h3>
+    <div>
+        @foreach (var member in @Model.Members) {
+            <span style="margin:4px 6px; display:inline-block">
+                @if (!string.IsNullOrEmpty(@member.Url)) {
+                    <a href="@member.Url" target="_blank" title="@member.Title">@member.Text</a>
+                } else {
+                    @member.Text
                 }
             </span>   
         }

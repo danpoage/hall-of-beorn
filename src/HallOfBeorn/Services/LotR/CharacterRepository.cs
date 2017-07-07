@@ -19,6 +19,7 @@ namespace HallOfBeorn.Services.LotR
             add(new ElrohirCharacter());
             add(new ElrondCharacter());
             add(new GandalfCharacter());
+            add(new TheFellowshipOfTheRingCharacter());
         }
 
         private readonly Dictionary<string, Character> all = new Dictionary<string, Character>();

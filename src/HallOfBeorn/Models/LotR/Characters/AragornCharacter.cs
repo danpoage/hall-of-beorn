@@ -47,6 +47,8 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFriend("Gandalf", "Gandalf");
             addFriend("Halbarad");
 
+            addGroup("The Fellowship", "The-Fellowship");
+
             addItem("Celebrían's Stone", "Celebrian's-Stone-Core");
             addItem("Shards of Narsil", "Sword-that-was-Broken-TWitW");
             addItem("Ring of Barahir", "Ring-of-Barahir-TSF");

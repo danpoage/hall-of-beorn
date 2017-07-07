@@ -25,6 +25,8 @@ namespace HallOfBeorn.Models.LotR
         private readonly List<Link> friends = new List<Link>();
         private readonly List<Link> items = new List<Link>();
         private readonly List<Link> aliases = new List<Link>();
+        private readonly List<Link> groups = new List<Link>();
+        private readonly List<Link> members = new List<Link>();
         private readonly List<string> books = new List<string>();
         private readonly List<string> cards = new List<string>();
 
@@ -74,6 +76,26 @@ namespace HallOfBeorn.Models.LotR
         protected void addItem(string name, string slug)
         {
             addDetailLink(this.items, name, slug);
+        }
+
+        protected void addGroup(string name)
+        {
+            addCharacterLink(this.groups, name, string.Empty);
+        }
+
+        protected void addGroup(string name, string slug)
+        {
+            addCharacterLink(this.groups, name, slug);
+        }
+
+        protected void addMember(string name)
+        {
+            addCharacterLink(this.members, name, string.Empty);
+        }
+
+        protected void addMember(string name, string slug)
+        {
+            addCharacterLink(this.members, name, slug);
         }
 
         private void addCharacterLink(List<Link> links, string title, string slug)
@@ -146,6 +168,8 @@ namespace HallOfBeorn.Models.LotR
         
         public IEnumerable<Link> Family { get { return family; } }
         public IEnumerable<Link> Friends { get { return friends; } }
+        public IEnumerable<Link> Groups { get { return groups; } }
+        public IEnumerable<Link> Members { get { return members; } }
         public IEnumerable<Link> Items { get { return items; } }
 
         public string Bio { get; protected set; }
