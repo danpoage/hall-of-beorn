@@ -207,7 +207,9 @@
     <Compile Include="Models\LotR\Characters\ElladanCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ElrohirCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ElrondCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\FrodoBagginsCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GandalfCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\LegolasCharacter.cs" />
     <Compile Include="Models\LotR\Characters\TheFellowshipOfTheRingCharacter.cs" />
     <Compile Include="Models\LotR\LayoutType.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\AcrossTheEttenmoorsNightmareProduct.cs" />

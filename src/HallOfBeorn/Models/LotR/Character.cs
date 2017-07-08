@@ -68,6 +68,11 @@ namespace HallOfBeorn.Models.LotR
             addCharacterLink(this.friends, name, slug);
         }
 
+        protected void addFriendCard(string name, string slug)
+        {
+            addDetailLink(this.friends, name, slug);
+        }
+
         protected void addItem(string name)
         {
             addDetailLink(this.items, name, string.Empty);
@@ -174,6 +179,7 @@ namespace HallOfBeorn.Models.LotR
 
         public string Bio { get; protected set; }
         public string BioSourceUrl { get; protected set; }
+        public Artist ImageArtist { get; protected set; }
 
         public IEnumerable<Link> Aliases { get { return aliases; } }
         public IEnumerable<string> Books { get { return books; } }

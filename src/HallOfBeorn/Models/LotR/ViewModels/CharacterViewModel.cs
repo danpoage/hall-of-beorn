@@ -19,6 +19,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public string Bio { get { return character.Bio; } }
         public string BioSourceUrl { get { return character.BioSourceUrl; } }
+        public string ArtistName { get { return character.ImageArtist.Name; } }
+        public string ArtistUrl { get { return character.ImageArtist.URL; } }
 
         public string ImageUrl { 
             get { return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Characters/{0}.jpg", character.NormalizedName.ToUrlSafeString()); }

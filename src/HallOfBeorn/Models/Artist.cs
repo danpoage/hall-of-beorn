@@ -1147,5 +1147,8 @@ namespace HallOfBeorn.Models
         public static Artist Jonny_Klein = new Artist { Name = "Jonny Klein", URL = "http://jonnyklein.deviantart.com" };
         public static Artist Bryce_Cook = new Artist { Name = "Bryce Cook", URL = "https://www.artstation.com/artist/hammins" };
         public static Artist Anders_Finer = new Artist { Name = "Anders Finer", URL = "http://fantasygallery.net/finer" };
+
+        //Character-only Artists
+        public static Artist Donato_Giancola = new Artist { Name = "Donato Giancola", URL = "http://www.donatoart.com" };
     }
 }

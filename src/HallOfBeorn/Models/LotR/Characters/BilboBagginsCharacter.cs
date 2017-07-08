@@ -28,6 +28,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 <p>After the quest to destroy the Ring was fulfilled in The Return of the King, Gandalf and the four Hobbits visited Rivendell on their way back to the Shire and found Bilbo still living there. He gave Frodo a set of manuscripts that later became Translations from the Elvish, and also gave Sam a small bag of gold that represented the last of his share from Smaug's vast hoard. Two years later Bilbo accompanied Gandalf, Elrond, Galadriel, and Frodo to the Grey Havens, there to take ship for Tol Eressëa across the sea, on 29th 'September' T.A. 3021. He had already celebrated his 131st birthday by this time, surpassing the Old Took by one year and becoming the oldest Hobbit ever in Middle-earth. (The natural lifespan of Hobbits is about 100 years.)[3]</p>";
 
             BioSourceUrl = "https://en.wikipedia.org/wiki/Bilbo_Baggins";
+            ImageArtist = Artist.Magali_Villeneuve;
 
             TheHobbit();
             TheFellowshipOfTheRing();
@@ -35,11 +36,14 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             Alias("Burglar Baggins", "Burglar-Baggins-THOHaUH");
 
-            addFamily("Frodo Baggins (Nephew)");
+            addFamily("Frodo Baggins (Cousin)", "Frodo-Baggins");
 
             addFriend("Gandalf", "Gandalf");
 
+            addGroup("Thorin and Company", "Thorin-and-Company");
+
             addItem("Sting", "Sting-THOHaUH");
+            addItem("Mithril Shirt", "Mithril-Shirt-THOtD");
             addItem("The One Ring", "Bilbo's-Magic-Ring-THOtD");
 
             Card("Bilbo-Baggins-THfG");

@@ -18,6 +18,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 <p>The Tale of Aragorn and Arwen relates that Aragorn and Arwen had a son, Eldarion, and at least two unnamed daughters. In F.A. 121, one year after Aragorn's death, Arwen gave up her life, at the age of 2,901, at Cerin Amroth.</p>";
 
             BioSourceUrl = "https://en.wikipedia.org/wiki/Arwen";
+            ImageArtist = Artist.Magali_Villeneuve;
 
             TheFellowshipOfTheRing();
             TheReturnOfTheKing();

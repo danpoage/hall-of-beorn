@@ -18,7 +18,9 @@ namespace HallOfBeorn.Services.LotR
             add(new ElladanCharacter());
             add(new ElrohirCharacter());
             add(new ElrondCharacter());
+            add(new FrodoBagginsCharacter());
             add(new GandalfCharacter());
+            add(new LegolasCharacter());
             add(new TheFellowshipOfTheRingCharacter());
         }
 

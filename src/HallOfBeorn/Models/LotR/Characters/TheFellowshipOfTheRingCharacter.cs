@@ -27,6 +27,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 <p>In The Lord of the Rings, Tolkien speaks more often of the 'Company' of the Ring rather than the 'Fellowship', as reflected in the page references in Robert Foster's The Complete Guide to Middle-earth. However, as it appears in the title of the book, 'Fellowship' has become the familiar term.</p>";
             
             BioSourceUrl = "https://en.wikipedia.org/wiki/The_Fellowship_of_the_Ring#Members_of_the_Fellowship_of_the_Ring";
+            ImageArtist = Artist.Michael_Komarck;
 
             Alias("The Company of the Ring");
             Alias("The Nine Walkers");

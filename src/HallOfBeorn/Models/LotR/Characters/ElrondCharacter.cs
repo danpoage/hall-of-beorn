@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 <p>Although Elrond was considered half-elven, that was not meant to be an exact percentage value. Through Lúthien, daughter of Melian the Maia, he and his brother Elros were also descended from the Maiar, angelic beings who had come to Middle-earth thousands of years before. Both his mother and his father had mixed human-elf ancestry, and as a result Elrond himself was 6/16 human, 9/16 elf and 1/16 Maia. Elrond, along with his parents, his brother, and his children, were granted a choice between Elven or human fates by the Valar. Elrond chose to live as an immortal Elf, while his twin Elros chose the mortality of Men.</p>";
 
             BioSourceUrl = "https://en.wikipedia.org/wiki/Elrond";
+            ImageArtist = Artist.Magali_Villeneuve;
 
             TheHobbit();
             TheFellowshipOfTheRing();
