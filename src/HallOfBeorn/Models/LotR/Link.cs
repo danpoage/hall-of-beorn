@@ -91,7 +91,7 @@ namespace HallOfBeorn.Models.LotR
         private static string getText(LinkType type, LotRCard card, string title)
         {
             return type == LinkType.Hall_of_Beorn_Card_Image ?
-                string.Format("<img src=\"https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}.jpg\" title=\"{2}\" style=\"height:180px\"></img>", card.CardSet.Name.ToUrlSafeString(), card.Title.ToUrlSafeString(), title.Replace("'", "’"))
+                string.Format("<img src=\"https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}.jpg\" title=\"{2}\" style=\"height:180px\"></img>", card.CardSet.Name.NormalizeCaseSensitiveString().ToUrlSafeString(), card.Title.ToUrlSafeString(), title.Replace("'", "’"))
                 : title;
         }
 
