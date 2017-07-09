@@ -19,14 +19,17 @@ namespace HallOfBeorn.Services.LotR
             add(new ElladanCharacter());
             add(new ElrohirCharacter());
             add(new ElrondCharacter());
+            add(new EowynCharacter());
             add(new FrodoBagginsCharacter());
             add(new GandalfCharacter());
             add(new GimliCharacter());
+            add(new GloinCharacter());
             add(new LegolasCharacter());
             add(new MerryCharacter());
             add(new PippinCharacter());
             add(new SamGamgeeCharacter());
             add(new TheFellowshipOfTheRingCharacter());
+            add(new ThorinsCompanyCharacter());
         }
 
         private readonly Dictionary<string, Character> all = new Dictionary<string, Character>();

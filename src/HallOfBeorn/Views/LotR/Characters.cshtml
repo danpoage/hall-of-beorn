@@ -21,7 +21,7 @@
             <img src="@Model.ImageUrl" style="width: 300px; margin: 4px;" class="card-image"/>
         </div>
         <div style="display: inline-block; vertical-align: top; margin: 4px 6px;">
-            <div style="display: block; overflow: auto; height: 300px; width: 300px;">
+            <div style="display: inline-block; overflow: auto; height: 300px; min-width: 300px; max-width: 600px;">
                 <div style="margin-top: -14px;">@Html.Raw(@Model.Bio)</div>
                 <div><a href="@Model.BioSourceUrl" target="_blank" title="Source">Source</a></div>
             </div>
