@@ -1100,13 +1100,22 @@ namespace HallOfBeorn.Controllers
 
         public ActionResult Characters(string id)
         {
+            CharacterViewModel model = null;
+            
+            if (string.IsNullOrEmpty(id)) {
+                model = new CharacterViewModel(Character.Empty());
+                model.AddCharacters(characterRepository.All());
+                return View(model);
+            }
+
             var character = characterRepository.Lookup(id);
 
             if (character == null) {
-                return HttpNotFound("Could not find a character by the name of '" + id.ToUrlSafeString() + "'");
+                var url = string.Format("/Details/{0}", id.ToUrlSafeString());
+                return RedirectToAction(url);
             }
 
-            var model = new CharacterViewModel(character);
+            model = new CharacterViewModel(character);
 
             foreach (var cardSlug in character.Cards) {
                 var card = cardRepository.FindBySlug(cardSlug);

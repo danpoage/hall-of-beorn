@@ -184,5 +184,15 @@ namespace HallOfBeorn.Models.LotR
         public IEnumerable<Link> Aliases { get { return aliases; } }
         public IEnumerable<string> Books { get { return books; } }
         public IEnumerable<string> Cards { get { return cards; } }
+
+        public static Character Empty()
+        {
+            var empty = new Character("Characters", "Characters", string.Empty)
+            {
+                ImageArtist = Artist.None
+            };
+
+            return empty;
+        }
     }
 }

@@ -57,5 +57,21 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
             cardLinks.Add(new Link(LinkType.Hall_of_Beorn_Card_Image, card, title));
         }
+
+        private readonly Dictionary<string, string> allCharacters = new Dictionary<string, string>();
+
+        public bool HasAllCharacters { get { return allCharacters.Count > 0; } } 
+
+        public IEnumerable<KeyValuePair<string, string>> AllCharacters()
+        {
+            return allCharacters;
+        }
+
+        public void AddCharacters(IEnumerable<Character> characters)
+        {
+            foreach (var character in characters) {
+                allCharacters.Add(character.Name, string.Format("/LotR/Characters/{0}", character.Name.NormalizeCaseSensitiveString().ToUrlSafeString()));
+            }
+        }
     }
 }

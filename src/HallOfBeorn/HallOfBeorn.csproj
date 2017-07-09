@@ -212,6 +212,8 @@
     <Compile Include="Models\LotR\Characters\GandalfCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GimliCharacter.cs" />
     <Compile Include="Models\LotR\Characters\LegolasCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\MerryCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\PippinCharacter.cs" />
     <Compile Include="Models\LotR\Characters\SamGamgeeCharacter.cs" />
     <Compile Include="Models\LotR\Characters\TheFellowshipOfTheRingCharacter.cs" />
     <Compile Include="Models\LotR\LayoutType.cs" />

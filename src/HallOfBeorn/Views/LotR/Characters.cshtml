@@ -7,115 +7,123 @@
     ViewBag.Title = @Model.Title;
 }
 
-<div style="font-size:1.75em;font-family:Verdana;">@Model.Title</div>
-
-<div style="display: block;">
-    <div style="display: inline-block; vertical-align: top;">
-        <img src="@Model.ImageUrl" style="max-width: 400px; margin: 4px;" class="card-image"/>
-    </div>
-    <div style="display: inline-block; vertical-align: top; margin: 4px 6px;">
-        <div style="display: block; overflow: auto; height: 400px; width: 400px;">
-            <div style="margin-top: -14px;">@Html.Raw(@Model.Bio)</div>
-            <div><a href="@Model.BioSourceUrl" target="_blank" title="Source">Source</a></div>
+@if (@Model.HasAllCharacters) {
+    <h2>@Model.Title</h2>
+    foreach (var pair in @Model.AllCharacters()) {
+        <div style="margin: 5px;"><a href="@pair.Value" title="@pair.Key">@pair.Key</a></div>
+    }
+} else {
+    <a href="/Cards/Characters">Back to Character List</a>
+    <br />
+    <h2>@Model.Title</h2>
+    <div style="display: block;">
+        <div style="display: inline-block; vertical-align: top;">
+            <img src="@Model.ImageUrl" style="width: 300px; margin: 4px;" class="card-image"/>
+        </div>
+        <div style="display: inline-block; vertical-align: top; margin: 4px 6px;">
+            <div style="display: block; overflow: auto; height: 300px; width: 300px;">
+                <div style="margin-top: -14px;">@Html.Raw(@Model.Bio)</div>
+                <div><a href="@Model.BioSourceUrl" target="_blank" title="Source">Source</a></div>
+            </div>
         </div>
     </div>
-</div>
-<div><a style="color:gray;font-size:10px;" href="@Model.ArtistUrl" target="_blank" title="Artist Site: @Model.ArtistName">Illus. @Model.ArtistName</a></div>
-@if (@Model.HasAliases) {
-    <h3>Titles, Aliases, and Descriptions</h3>
+    <div><a style="color:gray;font-size:10px;" href="@Model.ArtistUrl" target="_blank" title="Artist Site: @Model.ArtistName">Illus. @Model.ArtistName</a></div>
+    if (@Model.HasAliases) {
+        <h3>Titles, Aliases, and Descriptions</h3>
+        <div>
+            @foreach (var alias in @Model.Aliases) {
+                <span style="margin:4px 6px; display:inline-block">
+                    @if (!string.IsNullOrEmpty(@alias.Url)) {
+                        <a href="@alias.Url" target="_blank" title="@alias.Title">@alias.Text</a>
+                    } else {
+                        @alias.Text
+                    }
+                </span>   
+            }
+        </div>
+    }
+
+    if (@Model.HasFamily) {
+        <h3>Family</h3>
+        <div>
+            @foreach (var family in @Model.Family) {
+                <span style="margin:4px 6px; display:inline-block">
+                    @if (!string.IsNullOrEmpty(@family.Url)) {
+                        <a href="@family.Url" title="@family.Title">@family.Text</a>
+                    } else {
+                        @family.Text
+                    }
+                </span>   
+            }
+        </div>   
+    }
+
+    if (@Model.HasFriends) {
+        <h3>Friends and Associates</h3>
+        <div>
+            @foreach (var friend in @Model.Friends) {
+                <span style="margin:4px 6px; display:inline-block">
+                    @if (!string.IsNullOrEmpty(@friend.Url)) {
+                        <a href="@friend.Url" title="@friend.Title">@friend.Text</a>
+                    } else {
+                        @friend.Text
+                    }
+                </span>   
+            }
+        </div>   
+    }
+
+    if (@Model.HasGroups) {
+        <h3>Groups</h3>
+        <div>
+            @foreach (var group in @Model.Groups) {
+                <span style="margin:4px 6px; display:inline-block">
+                    @if (!string.IsNullOrEmpty(@group.Url)) {
+                        <a href="@group.Url" title="@group.Title">@group.Text</a>
+                    } else {
+                        @group.Text
+                    }
+                </span>   
+            }
+        </div>   
+    }
+
+    if (@Model.HasItems) {
+        <h3>Items and Mounts</h3>
+        <div>
+            @foreach (var item in @Model.Items) {
+                <span style="margin:4px 6px; display:inline-block">
+                    @if (!string.IsNullOrEmpty(@item.Url)) {
+                        <a href="@item.Url" title="@item.Title">@item.Text</a>
+                    } else {
+                        @item.Text
+                    }
+                </span>   
+            }
+        </div>   
+    }
+
+    if (@Model.HasMembers) {
+        <h3>Members</h3>
+        <div>
+            @foreach (var member in @Model.Members) {
+                <span style="margin:4px 6px; display:inline-block">
+                    @if (!string.IsNullOrEmpty(@member.Url)) {
+                        <a href="@member.Url" title="@member.Title">@member.Text</a>
+                    } else {
+                        @member.Text
+                    }
+                </span>   
+            }
+        </div>   
+    }
+
+    <h3>Cards</h3>
     <div>
-        @foreach (var alias in @Model.Aliases) {
-            <span style="margin:4px 6px; display:inline-block">
-                @if (!string.IsNullOrEmpty(@alias.Url)) {
-                    <a href="@alias.Url" target="_blank" title="@alias.Title">@alias.Text</a>
-                } else {
-                    @alias.Text
-                }
-            </span>   
+        @foreach (var cardLink in @Model.CardLinks) {
+            <span style="margin: 4px;display:inline-block;">
+                <a href="@cardLink.Url" target="_blank" title="@cardLink.Title">@Html.Raw(@cardLink.Text)</a>
+            </span>
         }
     </div>
 }
-
-@if (@Model.HasFamily) {
-    <h3>Family</h3>
-    <div>
-        @foreach (var family in @Model.Family) {
-            <span style="margin:4px 6px; display:inline-block">
-                @if (!string.IsNullOrEmpty(@family.Url)) {
-                    <a href="@family.Url" target="_blank" title="@family.Title">@family.Text</a>
-                } else {
-                    @family.Text
-                }
-            </span>   
-        }
-    </div>   
-}
-
-@if (@Model.HasFriends) {
-    <h3>Friends and Associates</h3>
-    <div>
-        @foreach (var friend in @Model.Friends) {
-            <span style="margin:4px 6px; display:inline-block">
-                @if (!string.IsNullOrEmpty(@friend.Url)) {
-                    <a href="@friend.Url" target="_blank" title="@friend.Title">@friend.Text</a>
-                } else {
-                    @friend.Text
-                }
-            </span>   
-        }
-    </div>   
-}
-
-@if (@Model.HasGroups) {
-    <h3>Groups</h3>
-    <div>
-        @foreach (var group in @Model.Groups) {
-            <span style="margin:4px 6px; display:inline-block">
-                @if (!string.IsNullOrEmpty(@group.Url)) {
-                    <a href="@group.Url" target="_blank" title="@group.Title">@group.Text</a>
-                } else {
-                    @group.Text
-                }
-            </span>   
-        }
-    </div>   
-}
-
-@if (@Model.HasItems) {
-    <h3>Items and Mounts</h3>
-    <div>
-        @foreach (var item in @Model.Items) {
-            <span style="margin:4px 6px; display:inline-block">
-                @if (!string.IsNullOrEmpty(@item.Url)) {
-                    <a href="@item.Url" target="_blank" title="@item.Title">@item.Text</a>
-                } else {
-                    @item.Text
-                }
-            </span>   
-        }
-    </div>   
-}
-
-@if (@Model.HasMembers) {
-    <h3>Members</h3>
-    <div>
-        @foreach (var member in @Model.Members) {
-            <span style="margin:4px 6px; display:inline-block">
-                @if (!string.IsNullOrEmpty(@member.Url)) {
-                    <a href="@member.Url" target="_blank" title="@member.Title">@member.Text</a>
-                } else {
-                    @member.Text
-                }
-            </span>   
-        }
-    </div>   
-}
-
-<h3>Cards</h3>
-<div>
-    @foreach (var cardLink in @Model.CardLinks) {
-        <span style="margin: 4px;display:inline-block;">
-            <a href="@cardLink.Url" target="_blank" title="@cardLink.Title">@Html.Raw(@cardLink.Text)</a>
-        </span>
-    }
-</div>
