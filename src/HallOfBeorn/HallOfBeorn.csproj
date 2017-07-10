@@ -218,6 +218,8 @@
     <Compile Include="Models\LotR\Characters\PippinCharacter.cs" />
     <Compile Include="Models\LotR\Characters\SamGamgeeCharacter.cs" />
     <Compile Include="Models\LotR\Characters\TheFellowshipOfTheRingCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\TheodredCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\TheRohirrimCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ThorinsCompanyCharacter.cs" />
     <Compile Include="Models\LotR\LayoutType.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\AcrossTheEttenmoorsNightmareProduct.cs" />

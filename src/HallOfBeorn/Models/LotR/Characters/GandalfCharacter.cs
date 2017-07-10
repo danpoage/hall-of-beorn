@@ -44,6 +44,9 @@ namespace HallOfBeorn.Models.LotR.Characters
             addItem("Glamdring", "Glamdring-RD");
             addItem("Narya", "Narya-TGH");
             addItem("Shadowfax", "Shadowfax-ToS");
+
+            addGroup("The Fellowship", "The-Fellowship");
+            addGroup("Thorin's Company", "Thorin's-Company");
         }
     }
 }

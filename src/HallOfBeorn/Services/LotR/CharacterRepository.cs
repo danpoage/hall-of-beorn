@@ -29,6 +29,8 @@ namespace HallOfBeorn.Services.LotR
             add(new PippinCharacter());
             add(new SamGamgeeCharacter());
             add(new TheFellowshipOfTheRingCharacter());
+            add(new TheRohirrimCharacter());
+            add(new TheodredCharacter());
             add(new ThorinsCompanyCharacter());
         }
 
