@@ -23,6 +23,11 @@ namespace HallOfBeorn.Models.LotR.Characters
             addMember("Éomund", "Eomund");
             addMember("Éomer", "Eomer");
             addMember("Éowyn", "Eowyn");
+            addMember("Erkenbrand", "Erkenbrand");
+            addMember("Dúnhere", "Dunhere");
+            addMember("Háma", "Hama");
+            addMember("Gamling", "Gamling");
+            addMember("Grimbold", "Grimbold");
 
             Card("Mustering-the-Rohirrim-THfG");
             Card("Charge-of-the-Rohirrim-CS");

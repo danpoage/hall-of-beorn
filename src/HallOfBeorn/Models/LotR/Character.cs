@@ -12,6 +12,8 @@ namespace HallOfBeorn.Models.LotR
         private const string BOOK_TOWERS = "The Two Towers";
         private const string BOOK_RETURN = "The Return of the King";
         private const string BOOK_SILMARILLION = "The Silmarillion";
+        private const string BOOK_UNFINISHED = "Unfinished Tales";
+        private const string BOOK_HURIN = "Children of Húrin";
 
         protected Character(string name, string fullName, string race)
         {
@@ -157,6 +159,21 @@ namespace HallOfBeorn.Models.LotR
         protected void TheReturnOfTheKing()
         {
             this.books.Add(BOOK_RETURN);
+        }
+
+        protected void TheSilmarillion()
+        {
+            this.books.Add(BOOK_SILMARILLION);
+        }
+
+        protected void UnfinishedTales()
+        {
+            this.books.Add(BOOK_UNFINISHED);
+        }
+
+        protected void ChildrenOfHurin()
+        {
+            this.books.Add(BOOK_HURIN);
         }
 
         protected void Card(string card)
