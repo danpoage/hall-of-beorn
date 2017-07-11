@@ -27,7 +27,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithText("Reduce the cost to play Halfast Gamgee by 1 for each side quest in the victory display.\r\nResponse: After Halfast Gamgee enters play, add 1 resource to a hero's resource pool.")
                 .WithFlavor("\"He works for Mr. Boffin at Overhill and goes up to the Northfarthing for the hunting.\"\r\n-Sam Gamgee, The Fellowship of the Ring")
                 .WithInfo(136, 3, Artist.Stanislav_Dikolenko));
-            addCard(LotRCard.Event("Bulwark-of-the-West", string.Empty, Sphere.Leadership, 0)
+            addCard(LotRCard.Event("Bulwark of the West", string.Empty, Sphere.Leadership, 0)
                 .WithText("Action: Discard an ally you control to choose and discard a Condition attachment.")
                 .WithFlavor("\"By our valour the wildfolk of the East are still restrained, and the terror of Morgul kept at bay; and thus alone are peace and freedom maintained in the lads behind us...\r\n-Boromir, The Fellowship of the Ring")
                 .WithInfo(137, 3, Artist.Stanislav_Dikolenko));
