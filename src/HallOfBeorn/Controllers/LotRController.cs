@@ -1076,6 +1076,12 @@ namespace HallOfBeorn.Controllers
                     model.OctgnGuid = octgnGuid;
                 }
 
+                var character = characterRepository.Lookup(card.Title.NormalizeCaseSensitiveString().ToUrlSafeString());
+                if (character != null)
+                {
+                    model.CharacterUrl = character.Url;
+                }
+
                 model.LoadNotes(noteService.Notes(card.Slug));
                 model.LoadTags(tagService.GetTags(card.Slug));
 

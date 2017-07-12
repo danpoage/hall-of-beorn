@@ -33,7 +33,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithInfo(137, 3, Artist.Stanislav_Dikolenko));
             addCard(LotRCard.Ally("Beorning Guardian", Sphere.Tactics, 3, 0, 3, 1, 3)
                 .WithTraits("Beorning.")
-                .WithText("Response: After Beorning Guardian participates in an attack that destroys an enemy, discard Beorning Guardian to place X progress on a location, where X is the destroyed enemy's printed Threat.")
+                .WithText("Response: After ~Beorning ~Guardian participates in an attack that destroys an enemy, discard ~Beorning ~Guardian to place X progress on a location, where X is the destroyed enemy's printed Threat.")
                 .WithFlavor("\"...if it were not for the Beornings, the passage from Dale to Rivendell would long ago have become impossible.\"\r\n-Glóin, The Fellowship of the Ring")
                 .WithInfo(138, 3, Artist.Marius_Bota));
             addCard(LotRCard.Attachment("Followed", string.Empty, Sphere.Tactics, 1)

@@ -981,6 +981,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             set;
         }
 
+        public string CharacterUrl { get; set; }
+
         public string PopularityHtml
         {
             get

@@ -30,6 +30,7 @@ namespace HallOfBeorn.Services.LotR
             add(new LegolasCharacter());
             add(new MerryCharacter());
             add(new PippinCharacter());
+            add(new PrinceImrahilCharacter());
             add(new SamGamgeeCharacter());
             add(new TheFellowshipOfTheRingCharacter());
             add(new TheRohirrimCharacter());

@@ -527,9 +527,14 @@
         {
             <span style="margin-left:10px;margin-top:10px;display:inline-block;"><a title="Official LotR FAQ" href="@Model.ErrataUrl" target="_blank">Errata</a></span>
         }
+        @if (!string.IsNullOrEmpty(@Model.CharacterUrl))
+        {
+            <div style="font-weight:bold;margin-left:4px;margin-top:10px;margin-bottom:4px;">
+                <a href="@Model.CharacterUrl" target="_blank" title="@Model.Title Character Profile">Character Profile</a>
+            </div>
+        }
         @if (@Model.HasCategories)
         {
-            <br />
             <div style="font-weight:bold;margin-left:6px;margin-top:10px;margin-bottom:4px;">Categories</div>
             foreach (var category in @Model.Categories())
             {

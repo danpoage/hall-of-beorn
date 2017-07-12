@@ -211,5 +211,10 @@ namespace HallOfBeorn.Models.LotR
 
             return empty;
         }
+
+        public string Url
+        {
+            get { return string.Format("/LotR/Characters/{0}", NormalizedName.ToUrlSafeString()); }
+        }
     }
 }
