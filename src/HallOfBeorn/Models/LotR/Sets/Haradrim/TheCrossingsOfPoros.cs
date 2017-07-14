@@ -18,8 +18,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
             Cycle = "Haradrim";
 
             addCard(LotRCard.Hero("Quickbeam", string.Empty, Sphere.Tactics, 12, 2, 4, 1, 5)
-                .WithText("Cannot have restricted attachments.\r\nAction: Deal 2 damage to Quickbeam to ready him.")
-                .WithFlavor("\"...he can move like a wind when he is roused\"\r\n-Pippin, The Two Towers")
+                .WithText("Cannot have restricted attachments.\r\nAction: Deal 2 damage to Quickbeam to ready him. (Limit once per phase.)")
+                .WithFlavor("\"...he can move like a wind when he is roused.\"\r\n-Pippin, The Two Towers")
                 .WithInfo(135, 1, Artist.Guillaume_Ducos));
             addCard(LotRCard.Ally("Halfast Gamgee", Sphere.Leadership, 3, 2, 1, 0, 2)
                 .WithUnique()

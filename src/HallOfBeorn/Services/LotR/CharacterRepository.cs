@@ -16,6 +16,8 @@ namespace HallOfBeorn.Services.LotR
             add(new ArwenUndomielCharacter());
             add(new BilboBagginsCharacter());
             add(new BoromirCharacter());
+            add(new BrandSonOfBainCharacter());
+            add(new DainIronfootCharacter());
             add(new DenethorCharacter());
             add(new DunhereCharacter());
             add(new ElladanCharacter());

@@ -205,6 +205,8 @@
     <Compile Include="Models\LotR\Characters\ArwenUndomielCharacter.cs" />
     <Compile Include="Models\LotR\Characters\BilboBagginsCharacter.cs" />
     <Compile Include="Models\LotR\Characters\BoromirCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\BrandSonOfBainCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\DainIronfootCharacter.cs" />
     <Compile Include="Models\LotR\Characters\DenethorCharacter.cs" />
     <Compile Include="Models\LotR\Characters\DunhereCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ElladanCharacter.cs" />
