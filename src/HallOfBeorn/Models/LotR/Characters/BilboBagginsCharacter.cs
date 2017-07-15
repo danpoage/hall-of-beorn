@@ -40,7 +40,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             addFriend("Gandalf", "Gandalf");
 
-            addGroup("Thorin and Company", "Thorin-and-Company");
+            addGroup("Thorin's Company", "Thorin's-Company");
 
             addItem("Sting", "Sting-THOHaUH");
             addItem("Mithril Shirt", "Mithril-Shirt-THOtD");

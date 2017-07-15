@@ -22,11 +22,11 @@ namespace HallOfBeorn.Models.LotR.Characters
             addMember("Gandalf", "Gandalf");
             addMember("Bilbo Baggins", "Bilbo-Baggins");
             addMember("Balin");
-            addMember("Bifur");
+            addMember("Bifur", "Bifur");
             addMember("Bofur");
             addMember("Bombur");
             addMember("Dori");
-            addMember("Dwalin");
+            addMember("Dwalin", "Dwalin");
             addMember("Fili");
             addMember("Glóin", "Gloin");
             addMember("Kili");

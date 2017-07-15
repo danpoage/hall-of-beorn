@@ -31,6 +31,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFriend("Elrond", "Elrond");
 
             addItem("Asfaloth", "Asfaloth");
+            addItem("Elf-stone", "Elf-stone-TBR");
 
             Card("Glorfindel-Core");
             Card("Glorfindel-FoS");

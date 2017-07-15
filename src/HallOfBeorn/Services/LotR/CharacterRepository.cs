@@ -14,12 +14,14 @@ namespace HallOfBeorn.Services.LotR
         {
             add(new AragornCharacter());
             add(new ArwenUndomielCharacter());
+            add(new BifurCharacter());
             add(new BilboBagginsCharacter());
             add(new BoromirCharacter());
             add(new BrandSonOfBainCharacter());
             add(new DainIronfootCharacter());
             add(new DenethorCharacter());
             add(new DunhereCharacter());
+            add(new DwalinCharacter());
             add(new ElladanCharacter());
             add(new ElrohirCharacter());
             add(new ElrondCharacter());
