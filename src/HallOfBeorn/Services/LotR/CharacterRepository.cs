@@ -14,6 +14,7 @@ namespace HallOfBeorn.Services.LotR
         {
             add(new AragornCharacter());
             add(new ArwenUndomielCharacter());
+            add(new BeregondCharacter());
             add(new BifurCharacter());
             add(new BilboBagginsCharacter());
             add(new BoromirCharacter());
@@ -31,6 +32,7 @@ namespace HallOfBeorn.Services.LotR
             add(new GimliCharacter());
             add(new GloinCharacter());
             add(new GlorfindelCharacter());
+            add(new HamaCharacter());
             add(new LegolasCharacter());
             add(new MerryCharacter());
             add(new PippinCharacter());

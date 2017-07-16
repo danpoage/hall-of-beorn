@@ -14,6 +14,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             BioSourceUrl = "https://en.wikipedia.org/wiki/Peregrin_Took";
             ImageArtist = Artist.Tony_Foti;
 
+            Alias("Pippin");
             Alias("Pip");
             Alias("Ernil i Pheriannath");
             Alias("Thain Peregrin I");

@@ -203,6 +203,7 @@
     <Compile Include="Models\LotR\Character.cs" />
     <Compile Include="Models\LotR\Characters\AragornCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ArwenUndomielCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\BeregondCharacter.cs" />
     <Compile Include="Models\LotR\Characters\BifurCharacter.cs" />
     <Compile Include="Models\LotR\Characters\BilboBagginsCharacter.cs" />
     <Compile Include="Models\LotR\Characters\BoromirCharacter.cs" />
@@ -221,6 +222,7 @@
     <Compile Include="Models\LotR\Characters\GloinCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GlorfindelCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GondorCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\HamaCharacter.cs" />
     <Compile Include="Models\LotR\Characters\LegolasCharacter.cs" />
     <Compile Include="Models\LotR\Characters\MerryCharacter.cs" />
     <Compile Include="Models\LotR\Characters\PippinCharacter.cs" />

@@ -13,6 +13,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addMember("Denethor", "Denethor");
             addMember("Boromir", "Boromir");
             addMember("Faramir", "Faramir");
+            addMember("Beregond", "Beregond");
             addMember("Prince Imrahil", "Prince-Imrahil");
             addMember("Mablung", "Mablung");
             addMember("Damrod", "Damrod");
