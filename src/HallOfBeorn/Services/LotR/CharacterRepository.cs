@@ -27,12 +27,15 @@ namespace HallOfBeorn.Services.LotR
             add(new ElrohirCharacter());
             add(new ElrondCharacter());
             add(new EowynCharacter());
+            add(new FaramirCharacter());
             add(new FrodoBagginsCharacter());
             add(new GandalfCharacter());
             add(new GimliCharacter());
             add(new GloinCharacter());
             add(new GlorfindelCharacter());
+            add(new GondorCharacter());
             add(new HamaCharacter());
+            add(new HirluinTheFairCharacter());
             add(new LegolasCharacter());
             add(new MerryCharacter());
             add(new PippinCharacter());
@@ -40,6 +43,7 @@ namespace HallOfBeorn.Services.LotR
             add(new SamGamgeeCharacter());
             add(new TheFellowshipOfTheRingCharacter());
             add(new TheRohirrimCharacter());
+            add(new TheodenCharacter());
             add(new TheodredCharacter());
             add(new ThorinsCompanyCharacter());
         }

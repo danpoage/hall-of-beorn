@@ -216,6 +216,7 @@
     <Compile Include="Models\LotR\Characters\ElrohirCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ElrondCharacter.cs" />
     <Compile Include="Models\LotR\Characters\EowynCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\FaramirCharacter.cs" />
     <Compile Include="Models\LotR\Characters\FrodoBagginsCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GandalfCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GimliCharacter.cs" />
@@ -223,12 +224,14 @@
     <Compile Include="Models\LotR\Characters\GlorfindelCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GondorCharacter.cs" />
     <Compile Include="Models\LotR\Characters\HamaCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\HirluinTheFairCharacter.cs" />
     <Compile Include="Models\LotR\Characters\LegolasCharacter.cs" />
     <Compile Include="Models\LotR\Characters\MerryCharacter.cs" />
     <Compile Include="Models\LotR\Characters\PippinCharacter.cs" />
     <Compile Include="Models\LotR\Characters\PrinceImrahilCharacter.cs" />
     <Compile Include="Models\LotR\Characters\SamGamgeeCharacter.cs" />
     <Compile Include="Models\LotR\Characters\TheFellowshipOfTheRingCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\TheodenCharacter.cs" />
     <Compile Include="Models\LotR\Characters\TheodredCharacter.cs" />
     <Compile Include="Models\LotR\Characters\TheRohirrimCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ThorinsCompanyCharacter.cs" />
