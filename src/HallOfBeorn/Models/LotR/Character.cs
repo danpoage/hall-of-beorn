@@ -181,6 +181,11 @@ namespace HallOfBeorn.Models.LotR
             this.cards.Add(card);
         }
 
+        protected void addLeader(string name, string slug)
+        {
+            this.Leader = new Link(LinkType.Hall_of_Beorn_Character, getCharacterUrl(slug), name);
+        }
+
         public string Name { get; private set; }
         public string NormalizedName { get; private set; }
 
@@ -188,6 +193,8 @@ namespace HallOfBeorn.Models.LotR
 
         public string Race { get; protected set; }
         
+        public Link Leader { get; private set; }
+    
         public IEnumerable<Link> Family { get { return family; } }
         public IEnumerable<Link> Friends { get { return friends; } }
         public IEnumerable<Link> Groups { get { return groups; } }

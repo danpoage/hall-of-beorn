@@ -27,8 +27,8 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             addFamily("Eärendil (Father)"); //, "Earendil");
             addFamily("Elwing (Mother)"); //, "Elwing");
-            addFamily("Galadriel (Mother-in-Law)"); //, "Galadriel");
-            addFamily("Celeborn (Father-in-Law)"); //, "Celeborn");
+            addFamily("Galadriel (Mother-in-Law)", "Galadriel");
+            addFamily("Celeborn (Father-in-Law)", "Celeborn");
             addFamily("Elros (Brother)");
             addFamily("Celebrían (Wife)"); //, "Celebrian");
             addFamily("Elladan (Son)", "Elladan");
@@ -36,10 +36,12 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFamily("Arwen Undómiel (Daughter)", "Arwen-Undomiel");
             addFamily("Aragorn (Son-in-Law)", "Aragorn");
 
+            addItem("Vilya", "Vilya-SaF");
+            addItem("Elrond's Counsel", "Elrond's-Counsel-TWitW");
+            addItem("Message from Elrond", "Message-from-Elrond-TTT");
+
             Card("Elrond-SaF");
             Card("Elrond-RD");
-            Card("Elrond's-Counsel-TWitW");
-            Card("Message-from-Elrond-TTT");
         }
     }
 }

@@ -42,12 +42,14 @@ namespace HallOfBeorn.Services.LotR
             add(new MerryCharacter());
             add(new PippinCharacter());
             add(new PrinceImrahilCharacter());
+            add(new QuickbeamCharacter());
             add(new SamGamgeeCharacter());
             add(new TheFellowshipOfTheRingCharacter());
             add(new TheRohirrimCharacter());
             add(new TheodenCharacter());
             add(new TheodredCharacter());
             add(new ThorinsCompanyCharacter());
+            add(new TreebeardCharacter());
         }
 
         private readonly Dictionary<string, Character> all = new Dictionary<string, Character>();

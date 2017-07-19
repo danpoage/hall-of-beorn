@@ -231,12 +231,15 @@
     <Compile Include="Models\LotR\Characters\MerryCharacter.cs" />
     <Compile Include="Models\LotR\Characters\PippinCharacter.cs" />
     <Compile Include="Models\LotR\Characters\PrinceImrahilCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\QuickbeamCharacter.cs" />
     <Compile Include="Models\LotR\Characters\SamGamgeeCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\TheEnts.cs" />
     <Compile Include="Models\LotR\Characters\TheFellowshipOfTheRingCharacter.cs" />
     <Compile Include="Models\LotR\Characters\TheodenCharacter.cs" />
     <Compile Include="Models\LotR\Characters\TheodredCharacter.cs" />
     <Compile Include="Models\LotR\Characters\TheRohirrimCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ThorinsCompanyCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\TreebeardCharacter.cs" />
     <Compile Include="Models\LotR\LayoutType.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\AcrossTheEttenmoorsNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\EscapeFromMountGramNightmareProduct.cs" />
