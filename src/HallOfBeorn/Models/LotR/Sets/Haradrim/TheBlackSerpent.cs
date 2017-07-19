@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
         protected override void Initialize()
         {
             Name = "The Black Serpent";
-            Abbreviation = "RaH";
+            Abbreviation = "TBS";
             Number = 46;
             SetType = Models.SetType.Adventure_Pack;
             Cycle = "Haradrim";

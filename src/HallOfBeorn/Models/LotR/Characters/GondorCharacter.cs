@@ -24,9 +24,10 @@ namespace HallOfBeorn.Models.LotR.Characters
             addMember("Prince Imrahil", "Prince-Imrahil");
             addMember("Mablung", "Mablung");
             addMember("Damrod", "Damrod");
+            addMember("Hirgon", "Hirgon");
             addMember("Anborn", "Anborn");
             addMember("Ingold", "Ingold");
-
+            
             Card("For-Gondor-Core");
             Card("Light-the-Beacons-HoN");
         }

@@ -28,6 +28,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addMember("Háma", "Hama");
             addMember("Gamling", "Gamling");
             addMember("Grimbold", "Grimbold");
+            addMember("Fastred", "Fastred");
 
             Card("Mustering-the-Rohirrim-THfG");
             Card("Charge-of-the-Rohirrim-CS");
