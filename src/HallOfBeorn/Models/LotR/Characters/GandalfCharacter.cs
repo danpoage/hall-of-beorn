@@ -47,6 +47,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             addGroup("The Fellowship", "The-Fellowship");
             addGroup("Thorin's Company", "Thorin's-Company");
+            addGroup("The White Council", "The-White-Council");
         }
     }
 }

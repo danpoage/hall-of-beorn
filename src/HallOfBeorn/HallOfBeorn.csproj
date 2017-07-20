@@ -239,6 +239,7 @@
     <Compile Include="Models\LotR\Characters\TheodenCharacter.cs" />
     <Compile Include="Models\LotR\Characters\TheodredCharacter.cs" />
     <Compile Include="Models\LotR\Characters\TheRohirrimGroup.cs" />
+    <Compile Include="Models\LotR\Characters\TheWhiteCouncilGroup.cs" />
     <Compile Include="Models\LotR\Characters\ThorinsCompanyGroup.cs" />
     <Compile Include="Models\LotR\Characters\TreebeardCharacter.cs" />
     <Compile Include="Models\LotR\LayoutType.cs" />

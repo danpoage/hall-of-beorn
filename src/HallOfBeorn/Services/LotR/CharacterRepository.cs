@@ -46,8 +46,9 @@ namespace HallOfBeorn.Services.LotR
             add(new SamGamgeeCharacter());
             add(new TheEntsGroup());
             add(new TheFellowshipOfTheRingGroup());
-            add(new TheRohirrimGroup());
             add(new TheodenCharacter());
+            add(new TheRohirrimGroup());
+            add(new TheWhiteCouncilGroup());
             add(new TheodredCharacter());
             add(new ThorinsCompanyGroup());
             add(new TreebeardCharacter());

@@ -23,8 +23,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             TheReturnOfTheKing();
 
             Alias("Half-elven");
-            Alias("Of the White Council", "The-White-Council-TDT");
-
+            
             addFamily("Eärendil (Father)"); //, "Earendil");
             addFamily("Elwing (Mother)"); //, "Elwing");
             addFamily("Galadriel (Mother-in-Law)", "Galadriel");
@@ -39,6 +38,8 @@ namespace HallOfBeorn.Models.LotR.Characters
             addItem("Vilya", "Vilya-SaF");
             addItem("Elrond's Counsel", "Elrond's-Counsel-TWitW");
             addItem("Message from Elrond", "Message-from-Elrond-TTT");
+
+            addGroup("The White Council", "The-White-Council");
 
             Card("Elrond-SaF");
             Card("Elrond-RD");
