@@ -31,7 +31,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithInfo(83, 3, Artist.Javier_Charro_Martinez));
             addCard(LotRCard.Ally("Defender of Cair Andros", Sphere.Tactics, 4, 1, 1, 0, 3)
                 .WithTraits("Gondor.", "Warrior.")
-                .WithText("Defender of Cair Andros gets +X Defense, where X is the tens digit of your threat. (Limit +4 [Defense].)\r\nValour Response: After Defender of Cair Andros is declared as a defender, deal 1 damage to the attacking enemy.")
+                .WithText("Defender of Cair Andros gets +X Defense, where X is the tens digit of your threat. (Limit +4 Defense.)\r\nValour Response: After Defender of Cair Andros is declared as a defender, deal 1 damage to the attacking enemy.")
                 .WithInfo(84, 3, Artist.Kim_Sokol));
             addCard(LotRCard.Event("Oath of Eorl", string.Empty, Sphere.Tactics, 3)
                 .WithText("Play only if you control a unique character with the Rohan trait and another unique character with the Gondor trait.\r\nResponse: At the beginning of the combat phase, you resolve the step in which you attack enemies before resolving enemy attacks this phase. (Each other player resolves the combat phase as normal after you resolve your attacks.)")
