@@ -34,7 +34,7 @@ namespace HallOfBeorn.Services.LotR
             add(new GimliCharacter());
             add(new GloinCharacter());
             add(new GlorfindelCharacter());
-            add(new GondorCharacter());
+            add(new GondorGroup());
             add(new HamaCharacter());
             add(new HirgonCharacter());
             add(new HirluinTheFairCharacter());
@@ -44,11 +44,12 @@ namespace HallOfBeorn.Services.LotR
             add(new PrinceImrahilCharacter());
             add(new QuickbeamCharacter());
             add(new SamGamgeeCharacter());
-            add(new TheFellowshipOfTheRingCharacter());
-            add(new TheRohirrimCharacter());
+            add(new TheEntsGroup());
+            add(new TheFellowshipOfTheRingGroup());
+            add(new TheRohirrimGroup());
             add(new TheodenCharacter());
             add(new TheodredCharacter());
-            add(new ThorinsCompanyCharacter());
+            add(new ThorinsCompanyGroup());
             add(new TreebeardCharacter());
         }
 

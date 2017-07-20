@@ -201,6 +201,7 @@
     <Compile Include="Models\Arkham\Products\CurseOfTheRougarou.cs" />
     <Compile Include="Models\INamed.cs" />
     <Compile Include="Models\LotR\Character.cs" />
+    <Compile Include="Models\LotR\CharacterGroup.cs" />
     <Compile Include="Models\LotR\Characters\AragornCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ArwenUndomielCharacter.cs" />
     <Compile Include="Models\LotR\Characters\BeregondCharacter.cs" />
@@ -223,7 +224,7 @@
     <Compile Include="Models\LotR\Characters\GimliCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GloinCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GlorfindelCharacter.cs" />
-    <Compile Include="Models\LotR\Characters\GondorCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\GondorGroup.cs" />
     <Compile Include="Models\LotR\Characters\HamaCharacter.cs" />
     <Compile Include="Models\LotR\Characters\HirgonCharacter.cs" />
     <Compile Include="Models\LotR\Characters\HirluinTheFairCharacter.cs" />
@@ -233,12 +234,12 @@
     <Compile Include="Models\LotR\Characters\PrinceImrahilCharacter.cs" />
     <Compile Include="Models\LotR\Characters\QuickbeamCharacter.cs" />
     <Compile Include="Models\LotR\Characters\SamGamgeeCharacter.cs" />
-    <Compile Include="Models\LotR\Characters\TheEnts.cs" />
-    <Compile Include="Models\LotR\Characters\TheFellowshipOfTheRingCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\TheEntsGroup.cs" />
+    <Compile Include="Models\LotR\Characters\TheFellowshipOfTheRingGroup.cs" />
     <Compile Include="Models\LotR\Characters\TheodenCharacter.cs" />
     <Compile Include="Models\LotR\Characters\TheodredCharacter.cs" />
-    <Compile Include="Models\LotR\Characters\TheRohirrimCharacter.cs" />
-    <Compile Include="Models\LotR\Characters\ThorinsCompanyCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\TheRohirrimGroup.cs" />
+    <Compile Include="Models\LotR\Characters\ThorinsCompanyGroup.cs" />
     <Compile Include="Models\LotR\Characters\TreebeardCharacter.cs" />
     <Compile Include="Models\LotR\LayoutType.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\AcrossTheEttenmoorsNightmareProduct.cs" />

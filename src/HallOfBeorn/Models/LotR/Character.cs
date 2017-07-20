@@ -5,6 +5,12 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR
 {
+    public enum CharacterType: byte
+    {
+        Individual = 0,
+        Group = 1
+    }
+
     public class Character
     {
         private const string BOOK_HOBBIT = "The Hobbit";
@@ -15,20 +21,33 @@ namespace HallOfBeorn.Models.LotR
         private const string BOOK_UNFINISHED = "Unfinished Tales";
         private const string BOOK_HURIN = "Children of Húrin";
 
+        protected Character(string name, string fullName)
+        {
+            this.Type = CharacterType.Individual;
+            this.Name = name;
+            this.NormalizedName = name.NormalizeCaseSensitiveString();
+            this.FullName = fullName;
+        }
+
         protected Character(string name, string fullName, string race)
         {
+            this.Type = CharacterType.Individual;
             this.Name = name;
             this.NormalizedName = name.NormalizeCaseSensitiveString();
             this.FullName = fullName;
             this.Race = race;
         }
 
+        public CharacterType Type { get; protected set; }
+
+        protected readonly List<Link> leaders = new List<Link>();
+        protected readonly List<Link> members = new List<Link>();
+
         private readonly List<Link> family = new List<Link>();
         private readonly List<Link> friends = new List<Link>();
         private readonly List<Link> items = new List<Link>();
         private readonly List<Link> aliases = new List<Link>();
         private readonly List<Link> groups = new List<Link>();
-        private readonly List<Link> members = new List<Link>();
         private readonly List<string> books = new List<string>();
         private readonly List<string> cards = new List<string>();
 
@@ -95,17 +114,7 @@ namespace HallOfBeorn.Models.LotR
             addCharacterLink(this.groups, name, slug);
         }
 
-        protected void addMember(string name)
-        {
-            addCharacterLink(this.members, name, string.Empty);
-        }
-
-        protected void addMember(string name, string slug)
-        {
-            addCharacterLink(this.members, name, slug);
-        }
-
-        private void addCharacterLink(List<Link> links, string title, string slug)
+        protected void addCharacterLink(List<Link> links, string title, string slug)
         {
             var type = LinkType.None;
             var url = string.Empty;
@@ -118,7 +127,7 @@ namespace HallOfBeorn.Models.LotR
             links.Add(new Link(type, url, title));
         }
 
-        private void addDetailLink(List<Link> links, string title, string slug)
+        protected void addDetailLink(List<Link> links, string title, string slug)
         {
             var type = LinkType.None;
             var url = string.Empty;
@@ -131,12 +140,12 @@ namespace HallOfBeorn.Models.LotR
             links.Add(new Link(type, url, title));
         }
 
-        private string getCharacterUrl(string slug)
+        protected string getCharacterUrl(string slug)
         {
             return string.Format("/LotR/Characters/{0}", slug);
         }
 
-        private string getDetailUrl(string slug)
+        protected string getDetailUrl(string slug)
         {
             return string.Format("/LotR/Details/{0}", slug);
         }
@@ -181,11 +190,6 @@ namespace HallOfBeorn.Models.LotR
             this.cards.Add(card);
         }
 
-        protected void addLeader(string name, string slug)
-        {
-            this.Leader = new Link(LinkType.Hall_of_Beorn_Character, getCharacterUrl(slug), name);
-        }
-
         public string Name { get; private set; }
         public string NormalizedName { get; private set; }
 
@@ -193,12 +197,12 @@ namespace HallOfBeorn.Models.LotR
 
         public string Race { get; protected set; }
         
-        public Link Leader { get; private set; }
-    
+        public IEnumerable<Link> Leaders { get { return leaders; } }
+        public IEnumerable<Link> Members { get { return members; } }
+
         public IEnumerable<Link> Family { get { return family; } }
         public IEnumerable<Link> Friends { get { return friends; } }
         public IEnumerable<Link> Groups { get { return groups; } }
-        public IEnumerable<Link> Members { get { return members; } }
         public IEnumerable<Link> Items { get { return items; } }
 
         public string Bio { get; protected set; }

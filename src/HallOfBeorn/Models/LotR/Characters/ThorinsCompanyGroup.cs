@@ -5,10 +5,10 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Characters
 {
-    public class ThorinsCompanyCharacter : Character
+    public class ThorinsCompanyGroup : CharacterGroup
     {
-        public ThorinsCompanyCharacter()
-            : base("Thorin's Company", "Thorin's Company", string.Empty)
+        public ThorinsCompanyGroup()
+            : base("Thorin's Company", "Thorin's Company")
         {
             Bio =
 @"<p>Thorin and Company were a group of thirteen Dwarves, the Wizard Gandalf, and the Hobbit Bilbo Baggins, led by Thorin Oakenshield in TA 2941. Their main purpose was to regain the lost Dwarven kingdom of the Lonely Mountain from the Dragon Smaug.</p>
@@ -18,7 +18,8 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             Alias("Thorin and Company");
 
-            addMember("Thorin-Oakenshield");
+            addLeader("Thorin Oakenshield", "Thorin-Oakenshield");
+
             addMember("Gandalf", "Gandalf");
             addMember("Bilbo Baggins", "Bilbo-Baggins");
             addMember("Balin");

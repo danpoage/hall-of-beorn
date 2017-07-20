@@ -42,7 +42,6 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFriend("Pippin", "Pippin");
 
             addItem("Ent Draught", "Ent-Draught-ToS");
-            addItem("Entmoot", "Entmoot-ToS");
 
             Card("Treebeard-ToS");
             Card("Treebeard-TAC");

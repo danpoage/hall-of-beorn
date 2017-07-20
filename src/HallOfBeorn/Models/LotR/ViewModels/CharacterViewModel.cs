@@ -41,6 +41,9 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         public IEnumerable<Link> Groups { get { return character.Groups; } }
         public bool HasGroups { get { return character.Groups.Count() > 0; } }
 
+        public IEnumerable<Link> Leaders { get { return character.Leaders; } }
+        public bool HasLeaders { get { return character.Leaders.Count() > 0; } }
+
         public IEnumerable<Link> Members { get { return character.Members; } }
         public bool HasMembers { get { return character.Members.Count() > 0; } }
 
@@ -59,6 +62,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         }
 
         private readonly Dictionary<string, string> allCharacters = new Dictionary<string, string>();
+        private readonly Dictionary<string, string> allGroups = new Dictionary<string, string>();
 
         public bool HasAllCharacters { get { return allCharacters.Count > 0; } } 
 
@@ -67,10 +71,22 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             return allCharacters;
         }
 
+        public IEnumerable<KeyValuePair<string, string>> AllGroups()
+        {
+            return allGroups;
+        }
+
         public void AddCharacters(IEnumerable<Character> characters)
         {
             foreach (var character in characters) {
-                allCharacters.Add(character.Name, string.Format("/LotR/Characters/{0}", character.Name.NormalizeCaseSensitiveString().ToUrlSafeString()));
+                var key = character.Name;
+                var value = string.Format("/LotR/Characters/{0}", character.Name.NormalizeCaseSensitiveString().ToUrlSafeString());
+
+                if (character.Type == CharacterType.Individual) {
+                    allCharacters.Add(key, value);
+                } else if (character.Type == CharacterType.Group) {
+                    allGroups.Add(key, value);
+                }
             }
         }
     }

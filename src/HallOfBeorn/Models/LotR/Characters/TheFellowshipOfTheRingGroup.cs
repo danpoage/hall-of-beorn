@@ -5,10 +5,10 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Characters
 {
-    public class TheFellowshipOfTheRingCharacter : Character
+    public class TheFellowshipOfTheRingGroup : CharacterGroup
     {
-        public TheFellowshipOfTheRingCharacter()
-            : base("The Fellowship", "The Fellowship of the Ring", string.Empty)
+        public TheFellowshipOfTheRingGroup()
+            : base("The Fellowship", "The Fellowship of the Ring")
         {
             Bio =
 @"<p>The Fellowship was formed at Rivendell in late T.A. 3018 following the Council of Elrond. It was decided that it should be a relatively small company; the number was set at nine to symbolically oppose the nine Nazgûl. In order of announcement the members of the Fellowship were:</p>
@@ -32,12 +32,13 @@ namespace HallOfBeorn.Models.LotR.Characters
             Alias("The Company of the Ring");
             Alias("The Nine Walkers");
             
+            addLeader("Gandalf", "Gandalf");
+            addLeader("Aragorn", "Aragorn");
+
             addMember("Frodo Baggins", "Frodo-Baggins");
             addMember("Sam Gamgee", "Sam-Gamgee");
-            addMember("Gandalf", "Gandalf");
             addMember("Legolas", "Legolas");
             addMember("Gimli", "Gimli");
-            addMember("Aragorn", "Aragorn");
             addMember("Boromir", "Boromir");
             addMember("Merry", "Merry");
             addMember("Pippin", "Pippin");
