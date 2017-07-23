@@ -77,6 +77,7 @@ namespace HallOfBeorn.Models.LotR
 
                 case LinkType.Hall_of_Beorn_Card_Detail:
                 case LinkType.Hall_of_Beorn_Card_Image:
+                    var slug = string.IsNullOrEmpty(card.SlugSuffix) ? card.Slug : card.Slug + card.SlugSuffix;
                     return string.Format("/LotR/Details/{0}", card.Slug);
                 default:
                     return string.Empty;
@@ -90,9 +91,12 @@ namespace HallOfBeorn.Models.LotR
 
         private static string getText(LinkType type, LotRCard card, string title)
         {
-            return type == LinkType.Hall_of_Beorn_Card_Image ?
-                string.Format("<img src=\"https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}.jpg\" title=\"{2}\" style=\"height:180px\"></img>", card.CardSet.Name.NormalizeCaseSensitiveString().ToUrlSafeString(), card.Title.ToUrlSafeString(), title.Replace("'", "’"))
-                : title;
+            if (type == LinkType.Hall_of_Beorn_Card_Image) {
+                var slug = string.IsNullOrEmpty(card.SlugSuffix) ? card.Title.ToUrlSafeString() : string.Format("{0}-{1}", card.Title.ToUrlSafeString(), card.SlugSuffix);
+                return string.Format("<img src=\"https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}.jpg\" title=\"{2}\" style=\"height:180px\"></img>", card.CardSet.Name.NormalizeCaseSensitiveString().ToUrlSafeString(), slug, title.Replace("'", "’"));
+            } else {
+                return title;
+            }
         }
 
         public LinkType Type { get; set; }

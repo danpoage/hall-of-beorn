@@ -26,6 +26,7 @@ namespace HallOfBeorn.Services.LotR
             add(new ElladanCharacter());
             add(new ElrohirCharacter());
             add(new ElrondCharacter());
+            add(new EomerCharacter());
             add(new EowynCharacter());
             add(new FaramirCharacter());
             add(new FastredCharacter());
@@ -35,6 +36,7 @@ namespace HallOfBeorn.Services.LotR
             add(new GloinCharacter());
             add(new GlorfindelCharacter());
             add(new GondorGroup());
+            add(new GrimaCharacter());
             add(new HamaCharacter());
             add(new HirgonCharacter());
             add(new HirluinTheFairCharacter());

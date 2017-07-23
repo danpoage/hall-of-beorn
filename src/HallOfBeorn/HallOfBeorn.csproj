@@ -216,6 +216,7 @@
     <Compile Include="Models\LotR\Characters\ElladanCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ElrohirCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ElrondCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\EomerCharacter.cs" />
     <Compile Include="Models\LotR\Characters\EowynCharacter.cs" />
     <Compile Include="Models\LotR\Characters\FaramirCharacter.cs" />
     <Compile Include="Models\LotR\Characters\FastredCharacter.cs" />
@@ -225,6 +226,7 @@
     <Compile Include="Models\LotR\Characters\GloinCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GlorfindelCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GondorGroup.cs" />
+    <Compile Include="Models\LotR\Characters\GrimaCharacter.cs" />
     <Compile Include="Models\LotR\Characters\HamaCharacter.cs" />
     <Compile Include="Models\LotR\Characters\HirgonCharacter.cs" />
     <Compile Include="Models\LotR\Characters\HirluinTheFairCharacter.cs" />

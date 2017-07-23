@@ -1152,6 +1152,7 @@ namespace HallOfBeorn.Models
         public static Artist Angus_McBride = new Artist { Name = "Angus McBride", URL = "https://en.wikipedia.org/wiki/Angus_McBride" };
         public static Artist David_T_Wenzel = new Artist { Name = "David T. Wenzel", URL = "http://www.davidwenzel.com" };
         public static Artist Donato_Giancola = new Artist { Name = "Donato Giancola", URL = "http://www.donatoart.com" };
+        public static Artist Harold_Shull = new Artist { Name = "Harold Shull", URL = "https://fineartamerica.com/profiles/harold-shull.html" };
         public static Artist Olga_G = new Artist { Name = "Olga G", URL = "http://steamey.deviantart.com" };
     }
 }

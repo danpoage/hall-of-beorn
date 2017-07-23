@@ -40,6 +40,8 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             addFriend("Aragorn", "Aragorn");
             addFriend("Bilbo Baggins", "Bilbo-Baggins");
+            addFriend("Radagast", "Radagast");
+            addFriend("Galadriel", "Galadriel");
 
             addItem("Glamdring", "Glamdring-RD");
             addItem("Narya", "Narya-TGH");
