@@ -212,6 +212,7 @@
     <Compile Include="Models\LotR\Characters\CelebornCharacter.cs" />
     <Compile Include="Models\LotR\Characters\DainIronfootCharacter.cs" />
     <Compile Include="Models\LotR\Characters\DenethorCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\DoriCharacter.cs" />
     <Compile Include="Models\LotR\Characters\DunhereCharacter.cs" />
     <Compile Include="Models\LotR\Characters\DwalinCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ElladanCharacter.cs" />

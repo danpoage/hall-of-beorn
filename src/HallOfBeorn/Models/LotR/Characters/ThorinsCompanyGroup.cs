@@ -26,7 +26,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addMember("Bifur", "Bifur");
             addMember("Bofur");
             addMember("Bombur");
-            addMember("Dori");
+            addMember("Dori", "Dori");
             addMember("Dwalin", "Dwalin");
             addMember("Fili");
             addMember("Glóin", "Gloin");

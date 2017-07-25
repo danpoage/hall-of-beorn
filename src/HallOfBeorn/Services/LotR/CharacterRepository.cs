@@ -22,6 +22,7 @@ namespace HallOfBeorn.Services.LotR
             add(new CelebornCharacter());
             add(new DainIronfootCharacter());
             add(new DenethorCharacter());
+            add(new DoriCharacter());
             add(new DunhereCharacter());
             add(new DwalinCharacter());
             add(new ElladanCharacter());
