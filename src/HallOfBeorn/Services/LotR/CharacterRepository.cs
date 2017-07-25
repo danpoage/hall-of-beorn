@@ -38,10 +38,12 @@ namespace HallOfBeorn.Services.LotR
             add(new GlorfindelCharacter());
             add(new GondorGroup());
             add(new GrimaCharacter());
+            add(new HaldirOfLorienCharacter());
             add(new HamaCharacter());
             add(new HirgonCharacter());
             add(new HirluinTheFairCharacter());
             add(new LegolasCharacter());
+            add(new MablungCharacter());
             add(new MerryCharacter());
             add(new PippinCharacter());
             add(new PrinceImrahilCharacter());

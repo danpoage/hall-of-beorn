@@ -55,6 +55,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(new LotRCard()
             {
                 Title = "Drû-buri-Drû",
+                IsUnique = true,
                 Id = "BCE2E476-6F9D-4AAA-A749-6FA7126FDE5B",
                 CardType = Models.LotR.CardType.Enemy,
                 EngagementCost = 1,

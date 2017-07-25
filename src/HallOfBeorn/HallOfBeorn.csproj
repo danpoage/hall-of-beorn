@@ -228,10 +228,12 @@
     <Compile Include="Models\LotR\Characters\GlorfindelCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GondorGroup.cs" />
     <Compile Include="Models\LotR\Characters\GrimaCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\HaldirOfLorienCharacter.cs" />
     <Compile Include="Models\LotR\Characters\HamaCharacter.cs" />
     <Compile Include="Models\LotR\Characters\HirgonCharacter.cs" />
     <Compile Include="Models\LotR\Characters\HirluinTheFairCharacter.cs" />
     <Compile Include="Models\LotR\Characters\LegolasCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\MablungCharacter.cs" />
     <Compile Include="Models\LotR\Characters\MerryCharacter.cs" />
     <Compile Include="Models\LotR\Characters\PippinCharacter.cs" />
     <Compile Include="Models\LotR\Characters\PrinceImrahilCharacter.cs" />
