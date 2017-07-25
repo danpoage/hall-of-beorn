@@ -219,6 +219,7 @@
     <Compile Include="Models\LotR\Characters\ElrondCharacter.cs" />
     <Compile Include="Models\LotR\Characters\EomerCharacter.cs" />
     <Compile Include="Models\LotR\Characters\EowynCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\ErkenbrandCharacter.cs" />
     <Compile Include="Models\LotR\Characters\FaramirCharacter.cs" />
     <Compile Include="Models\LotR\Characters\FastredCharacter.cs" />
     <Compile Include="Models\LotR\Characters\FrodoBagginsCharacter.cs" />

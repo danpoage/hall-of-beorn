@@ -29,6 +29,7 @@ namespace HallOfBeorn.Services.LotR
             add(new ElrondCharacter());
             add(new EomerCharacter());
             add(new EowynCharacter());
+            add(new ErkenbrandCharacter());
             add(new FaramirCharacter());
             add(new FastredCharacter());
             add(new FrodoBagginsCharacter());
