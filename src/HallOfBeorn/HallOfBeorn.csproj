@@ -222,6 +222,7 @@
     <Compile Include="Models\LotR\Characters\FaramirCharacter.cs" />
     <Compile Include="Models\LotR\Characters\FastredCharacter.cs" />
     <Compile Include="Models\LotR\Characters\FrodoBagginsCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\GaladrielCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GandalfCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GimliCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GloinCharacter.cs" />

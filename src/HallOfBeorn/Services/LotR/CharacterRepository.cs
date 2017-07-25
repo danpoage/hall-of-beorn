@@ -32,6 +32,7 @@ namespace HallOfBeorn.Services.LotR
             add(new FaramirCharacter());
             add(new FastredCharacter());
             add(new FrodoBagginsCharacter());
+            add(new GaladrielCharacter());
             add(new GandalfCharacter());
             add(new GimliCharacter());
             add(new GloinCharacter());
