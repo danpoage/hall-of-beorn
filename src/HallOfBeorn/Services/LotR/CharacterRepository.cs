@@ -48,6 +48,7 @@ namespace HallOfBeorn.Services.LotR
             add(new PippinCharacter());
             add(new PrinceImrahilCharacter());
             add(new QuickbeamCharacter());
+            add(new RangersOfIthilienGroup());
             add(new SamGamgeeCharacter());
             add(new TheEntsGroup());
             add(new TheFellowshipOfTheRingGroup());

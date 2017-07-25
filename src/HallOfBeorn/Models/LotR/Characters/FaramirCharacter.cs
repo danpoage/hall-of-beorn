@@ -33,6 +33,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFriend("Sam Gamgee", "Sam-Gamgee");
 
             addGroup("Gondor", "Gondor");
+            addGroup("Rangers of Ithilien", "Rangers-of-Ithilien");
 
             Card("Faramir-AoO");
             Card("Faramir-TLoS");

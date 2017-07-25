@@ -25,7 +25,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFriend("Anborn", "Anborn");
 
             addGroup("Gondor", "Gondor");
-            addGroup("The Rangers of Ithilien");
+            addGroup("Rangers of Ithilien", "Rangers-of-Ithilien");
 
             Card("Mablung-NiE");
             Card("Mablung-TLoS");
