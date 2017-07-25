@@ -40,6 +40,7 @@ namespace HallOfBeorn.Services.LotR
             add(new GlorfindelCharacter());
             add(new GondorGroup());
             add(new GrimaCharacter());
+            add(new HalbaradCharacter());
             add(new HaldirOfLorienCharacter());
             add(new HamaCharacter());
             add(new HirgonCharacter());

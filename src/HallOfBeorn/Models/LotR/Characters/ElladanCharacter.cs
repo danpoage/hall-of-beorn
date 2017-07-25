@@ -26,6 +26,8 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFamily("Arwen Undómiel (Sister)", "Arwen-Undomiel");
             addFamily("Aragorn (Brother-in-Law)", "Aragorn");
             
+            addGroup("The Grey Company");
+
             Card("Elladan-RtR");
             Card("Elladan-TMoF");
         }

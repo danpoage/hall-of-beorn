@@ -230,6 +230,7 @@
     <Compile Include="Models\LotR\Characters\GlorfindelCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GondorGroup.cs" />
     <Compile Include="Models\LotR\Characters\GrimaCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\HalbaradCharacter.cs" />
     <Compile Include="Models\LotR\Characters\HaldirOfLorienCharacter.cs" />
     <Compile Include="Models\LotR\Characters\HamaCharacter.cs" />
     <Compile Include="Models\LotR\Characters\HirgonCharacter.cs" />
