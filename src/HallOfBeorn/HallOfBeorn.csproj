@@ -210,6 +210,7 @@
     <Compile Include="Models\LotR\Characters\BoromirCharacter.cs" />
     <Compile Include="Models\LotR\Characters\BrandSonOfBainCharacter.cs" />
     <Compile Include="Models\LotR\Characters\CelebornCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\CirdanTheShipwrightCharacter.cs" />
     <Compile Include="Models\LotR\Characters\DainIronfootCharacter.cs" />
     <Compile Include="Models\LotR\Characters\DenethorCharacter.cs" />
     <Compile Include="Models\LotR\Characters\DoriCharacter.cs" />
@@ -220,6 +221,7 @@
     <Compile Include="Models\LotR\Characters\ElrondCharacter.cs" />
     <Compile Include="Models\LotR\Characters\EomerCharacter.cs" />
     <Compile Include="Models\LotR\Characters\EowynCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\ErestorCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ErkenbrandCharacter.cs" />
     <Compile Include="Models\LotR\Characters\FaramirCharacter.cs" />
     <Compile Include="Models\LotR\Characters\FastredCharacter.cs" />

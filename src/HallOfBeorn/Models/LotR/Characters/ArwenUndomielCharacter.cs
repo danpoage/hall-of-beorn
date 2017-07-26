@@ -32,6 +32,8 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFamily("Elladan (Brother)", "Elladan");
             addFamily("Elrohir (Brother)", "Elrohir");
 
+            addGroup("The House of Elrond");
+
             Card("Arwen-Undomiel-TWitW");
             Card("Arwen-Undomiel-TRG");
             Card("Arwen-Undomiel-RTR");

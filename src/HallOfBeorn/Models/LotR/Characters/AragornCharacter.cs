@@ -50,6 +50,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             addGroup("The Fellowship", "The-Fellowship");
             addGroup("The Grey Company");
+            addGroup("The House of Elrond");
 
             addItem("Celebrían's Stone", "Celebrian's-Stone-Core");
             addItem("Shards of Narsil", "Sword-that-was-Broken-TWitW");

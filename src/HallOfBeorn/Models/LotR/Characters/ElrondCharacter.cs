@@ -40,6 +40,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addItem("Message from Elrond", "Message-from-Elrond-TTT");
 
             addGroup("The White Council", "The-White-Council");
+            addGroup("The House of Elrond");
 
             Card("Elrond-SaF");
             Card("Elrond-RD");

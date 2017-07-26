@@ -20,6 +20,7 @@ namespace HallOfBeorn.Services.LotR
             add(new BoromirCharacter());
             add(new BrandSonOfBainCharacter());
             add(new CelebornCharacter());
+            add(new CirdanTheShipwrightCharacter());
             add(new DainIronfootCharacter());
             add(new DenethorCharacter());
             add(new DoriCharacter());
@@ -30,6 +31,7 @@ namespace HallOfBeorn.Services.LotR
             add(new ElrondCharacter());
             add(new EomerCharacter());
             add(new EowynCharacter());
+            add(new ErestorCharacter());
             add(new ErkenbrandCharacter());
             add(new FaramirCharacter());
             add(new FastredCharacter());
