@@ -26,6 +26,11 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("The first player gains control of Aragorn.\r\nAction: Spend 1 resource from Aragorn's pool to ready him. (Limit once per phase.)\r\nIf Aragorn leaves play the players lose the game.")
                 .WithFlavor("\"As I have begun, so I will go on.\"\r\n-The Return of the King")
                 .WithInfo(2, 1, Artist.David_A_Nash));
+            addCard(LotRCard.Hero("Éomer", string.Empty, Sphere.Leadership, 10, 1, 3, 2, 4)
+                .WithTraits("Rohan.", "Noble.", "Warrior.")
+                .WithText("Response: After Éomer commits to the quest, spend 1 resource from his resource pool to immediately declare him as an attacker (and resolve his attack) against an enemy in the staging area.")
+                .WithFlavor("...he was young, and he was king; the lord of a fell people.\r\n-The Return of the King")
+                .WithInfo(3, 1, Artist.Ryan_Valle));
             addCard(LotRCard.Ally("Elladan", Sphere.Lore, 3, 2, 1, 1, 3)
                 .WithUnique()
                 .WithTraits("Noldor.", "Ranger.")
@@ -38,6 +43,13 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("While Elladan is in play, Elrohir gets +2 Defense.\r\nResponse: After you optionally engage an Orc enemy, ready Elrohir.")
                 .WithFlavor("\"From the North we came with this purpose, and from Elrond our father we brought this very counsel.\"\r\n-The Return of the King")
                 .WithInfo(8, 3, Artist.Jason_Jenicke));
+            addCard(LotRCard.Attachment("Gúthwinë", string.Empty, Sphere.Leadership, 2)
+                .WithUnique()
+                .WithTraits("Item.", "Weapon.")
+                .WithKeywords("Restricted.")
+                .WithText("Attach to a Rohan hero.\r\nResponse: After attached hero is declared as an attacker, exhaust Gúthwinë to give that hero +2 Attack for this attack. If this attack destroys an enemy, return a Rohan ally from your discard pile to your hand.")
+                .WithFlavor("\"Gúthwinë!\" cried Éomer. \"Gúthwinë for the Mark!\"\r\n-The Two Towers")
+                .WithInfo(11, 3, Artist.Kamila_Tzutenberg));
         }
     }
 }

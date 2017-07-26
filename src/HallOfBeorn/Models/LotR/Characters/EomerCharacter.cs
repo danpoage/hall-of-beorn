@@ -39,9 +39,10 @@ namespace HallOfBeorn.Models.LotR.Characters
             addGroup("The Rohirrim", "The-Rohirrim");
 
             addItem("Firefoot", "Firefoot-TDT");
-            addItem("Gúthwinë");
+            addItem("Gúthwinë", "Guthwine-TMoF");
 
             Card("Eomer-VoI");
+            Card("Eomer-TMoF");
         }
     }
 }
