@@ -52,8 +52,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithText("Play only if you control a unique character with the Ent trait and another unique character with the Hobbit trait.\r\nAction: Ready each damaged Ent character you control.")
                 .WithInfo(142, 3, Artist.DinoDrawing));
             addCard(LotRCard.Attachment("Magic Ring", string.Empty, Sphere.Neutral, 2)
-                .WithTraits("Artificat.", "Item.", "Ring.")
-                .WithText("Attach to a hero. Limit 1 per hero and 1 per deck.\r\nAction: Exhaust Magic Ring and raise your threat by 1 to (choose 1): heal 1 damage from attached hero, add 1 resource to attached hero's pool, or ready attached hero.")
+                .WithTraits("Artifact.", "Item.", "Ring.")
+                .WithText("Attach to a hero. Limit 1 per hero and 1 per deck.\r\nAction: Exhaust Magic ~Ring and raise your threat by 1 to (choose 1): heal 1 damage from attached hero, add 1 resource to attached hero's pool, or ready attached hero.")
                 .WithFlavor("\"In Eregion long ago many Elven-rings were made, magic rings as you call them, and they were, of course, of various kinds...\"\r\n-Gandalf, The Fellowship of the Ring")
                 .WithInfo(143, 3, Artist.Lucas_Durham));
             addCard(LotRCard.Event("Wind from the Sea", string.Empty, Sphere.Neutral, byte.MaxValue)
