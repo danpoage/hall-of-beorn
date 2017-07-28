@@ -50,7 +50,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             Card("Bilbo-Baggins-THfG");
             Card("Bilbo-Baggins-THOHAUH");
             Card("Bilbo-Baggins-THOtD");
-
+            Card("Bilbo-Baggins-RD");
         }
     }
 }
