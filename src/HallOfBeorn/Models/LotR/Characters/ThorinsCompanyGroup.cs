@@ -31,6 +31,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addMember("Fili");
             addMember("Glóin", "Gloin");
             addMember("Kili");
+            addMember("Nori", "Nori");
             addMember("Ori");
             addMember("Óin");
             addMember("Ori");

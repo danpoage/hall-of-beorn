@@ -55,6 +55,7 @@ namespace HallOfBeorn.Services.LotR
             add(new LegolasCharacter());
             add(new MablungCharacter());
             add(new MerryCharacter());
+            add(new NoriCharacter());
             add(new PippinCharacter());
             add(new PrinceImrahilCharacter());
             add(new QuickbeamCharacter());
@@ -67,6 +68,7 @@ namespace HallOfBeorn.Services.LotR
             add(new TheRohirrimGroup());
             add(new TheWhiteCouncilGroup());
             add(new TheodredCharacter());
+            add(new ThorinOakenshieldCharacter());
             add(new ThorinsCompanyGroup());
             add(new TreebeardCharacter());
         }

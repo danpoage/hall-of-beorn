@@ -22,8 +22,8 @@ namespace HallOfBeorn.Models.LotR.Characters
             Alias("King of Durin's Folk");
 
             addFamily("Náin (Father)");
-            addFamily("Thorin III Stonehelm (Son)");
-            addFamily("Thorin II Oakenshield (Cousin)", "Thorin-Oakenshield");
+            addFamily("Thorin Stonehelm (Son)");
+            addFamily("Thorin Oakenshield (Cousin)", "Thorin-Oakenshield");
 
             addFriend("Brand son of Bain", "Brand-son-of-Bain");
             addFriend("Balin", "Balin");

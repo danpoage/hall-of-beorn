@@ -245,6 +245,7 @@
     <Compile Include="Models\LotR\Characters\LegolasCharacter.cs" />
     <Compile Include="Models\LotR\Characters\MablungCharacter.cs" />
     <Compile Include="Models\LotR\Characters\MerryCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\NoriCharacter.cs" />
     <Compile Include="Models\LotR\Characters\PippinCharacter.cs" />
     <Compile Include="Models\LotR\Characters\PrinceImrahilCharacter.cs" />
     <Compile Include="Models\LotR\Characters\QuickbeamCharacter.cs" />
@@ -257,6 +258,7 @@
     <Compile Include="Models\LotR\Characters\RangersOfIthilienGroup.cs" />
     <Compile Include="Models\LotR\Characters\TheRohirrimGroup.cs" />
     <Compile Include="Models\LotR\Characters\TheWhiteCouncilGroup.cs" />
+    <Compile Include="Models\LotR\Characters\ThorinOakenshieldCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ThorinsCompanyGroup.cs" />
     <Compile Include="Models\LotR\Characters\TreebeardCharacter.cs" />
     <Compile Include="Models\LotR\LayoutType.cs" />
