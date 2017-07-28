@@ -39,6 +39,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             Card("Legolas-Core");
             Card("Legolas-TSoH");
+            Card("Legolas-MatPP");
             Card("Legolas-ToS");
         }
     }

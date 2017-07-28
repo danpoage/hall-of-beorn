@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
         protected override void Initialize()
         {
             Name = setName;
+            NormalizedName = "The Siege of Annuminas";
             Abbreviation = "TSoA";
             SetType = Models.SetType.Fellowship_Deck;
             Cycle = "GenCon";

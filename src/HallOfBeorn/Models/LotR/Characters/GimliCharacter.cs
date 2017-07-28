@@ -28,6 +28,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             Card("Gimli-Core");
             Card("Gimli-ToS");
+            Card("Gimli-TRoB");
             Card("Gimli-TSoH");
         }
     }

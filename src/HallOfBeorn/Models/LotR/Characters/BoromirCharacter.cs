@@ -32,6 +32,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             Card("Boromir-TDM");
             Card("Boromir-HoN");
+            Card("Boromir-TSoA");
             Card("Boromir-RD");
         }
     }
