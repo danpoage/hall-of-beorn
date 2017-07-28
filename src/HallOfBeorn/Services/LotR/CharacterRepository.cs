@@ -14,6 +14,7 @@ namespace HallOfBeorn.Services.LotR
         {
             add(new AragornCharacter());
             add(new ArwenUndomielCharacter());
+            add(new BeornCharacter());
             add(new BeregondCharacter());
             add(new BifurCharacter());
             add(new BilboBagginsCharacter());
@@ -45,6 +46,7 @@ namespace HallOfBeorn.Services.LotR
             add(new GlorfindelCharacter());
             add(new GondorGroup());
             add(new GrimaCharacter());
+            add(new GrimbeornTheOldCharacter());
             add(new HalbaradCharacter());
             add(new HaldirOfLorienCharacter());
             add(new HamaCharacter());

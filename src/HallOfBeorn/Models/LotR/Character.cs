@@ -69,6 +69,11 @@ namespace HallOfBeorn.Models.LotR
             aliases.Add(new Link(type, url, alias));
         }
 
+        protected void AliasLink(string alias, string url)
+        {
+            aliases.Add(new Link(LinkType.None, url, alias));
+        }
+
         protected void addFamily(string name)
         {
             addCharacterLink(this.family, name, string.Empty);

@@ -204,6 +204,7 @@
     <Compile Include="Models\LotR\CharacterGroup.cs" />
     <Compile Include="Models\LotR\Characters\AragornCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ArwenUndomielCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\BeornCharacter.cs" />
     <Compile Include="Models\LotR\Characters\BeregondCharacter.cs" />
     <Compile Include="Models\LotR\Characters\BifurCharacter.cs" />
     <Compile Include="Models\LotR\Characters\BilboBagginsCharacter.cs" />
@@ -235,6 +236,7 @@
     <Compile Include="Models\LotR\Characters\GlorfindelCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GondorGroup.cs" />
     <Compile Include="Models\LotR\Characters\GrimaCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\GrimbeornTheOldCharacter.cs" />
     <Compile Include="Models\LotR\Characters\HalbaradCharacter.cs" />
     <Compile Include="Models\LotR\Characters\HaldirOfLorienCharacter.cs" />
     <Compile Include="Models\LotR\Characters\HamaCharacter.cs" />
