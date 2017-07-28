@@ -26,6 +26,7 @@ namespace HallOfBeorn.Services.LotR
             add(new DoriCharacter());
             add(new DunhereCharacter());
             add(new DwalinCharacter());
+            add(new ElfhelmCharacter());
             add(new ElladanCharacter());
             add(new ElrohirCharacter());
             add(new ElrondCharacter());

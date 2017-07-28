@@ -216,6 +216,7 @@
     <Compile Include="Models\LotR\Characters\DoriCharacter.cs" />
     <Compile Include="Models\LotR\Characters\DunhereCharacter.cs" />
     <Compile Include="Models\LotR\Characters\DwalinCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\ElfhelmCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ElladanCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ElrohirCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ElrondCharacter.cs" />

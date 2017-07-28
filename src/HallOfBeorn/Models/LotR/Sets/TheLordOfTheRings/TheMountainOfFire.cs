@@ -31,6 +31,12 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("Response: After Éomer commits to the quest, spend 1 resource from his resource pool to immediately declare him as an attacker (and resolve his attack) against an enemy in the staging area.")
                 .WithFlavor("...he was young, and he was king; the lord of a fell people.\r\n-The Return of the King")
                 .WithInfo(3, 1, Artist.Ryan_Valle));
+            addCard(LotRCard.Ally("Elfhelm", Sphere.Tactics, 4, 1, 2, 2, 3)
+                .WithUnique()
+                .WithTraits("Rohan.", "Warrior.")
+                .WithText("Action: Spend 1 resource from a Rohan hero's resource pool to put Elfhelm into play from your hand under your control. At the end of the phase, discard Elfhelm if he is still in play.")
+                .WithFlavor("\"...my lord sends word that we must set ourselves in readiness; orders may come for a sudden move.\"\r\n-The Return of the King")
+                .WithInfo(6, 3, Artist.Javier_Charro_Martinez));
             addCard(LotRCard.Ally("Elladan", Sphere.Lore, 3, 2, 1, 1, 3)
                 .WithUnique()
                 .WithTraits("Noldor.", "Ranger.")

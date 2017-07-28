@@ -27,13 +27,17 @@ namespace HallOfBeorn.Models.LotR.Characters
             addMember("Erkenbrand", "Erkenbrand");
             addMember("Dúnhere", "Dunhere");
             addMember("Háma", "Hama");
+            addMember("Elfhelm", "Elfhelm");
             addMember("Gamling", "Gamling");
             addMember("Grimbold", "Grimbold");
             addMember("Fastred", "Fastred");
             addMember("Gríma", "Grima");
 
             Card("Mustering-the-Rohirrim-THfG");
+            Card("Ride-to-Ruin-THoEM");
+            Card("Forth-Eorlingas-TMV");
             Card("Charge-of-the-Rohirrim-CS");
+            Card("Ride-Them-Down-TAC");
         }
     }
 }
