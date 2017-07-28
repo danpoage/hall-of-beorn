@@ -23,6 +23,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             addFriend("Legolas", "Legolas");
 
+            addGroup("The Council of Elrond", "The-Council-of-Elrond");
             addGroup("The Fellowship", "The-Fellowship");
 
             Card("Gimli-Core");

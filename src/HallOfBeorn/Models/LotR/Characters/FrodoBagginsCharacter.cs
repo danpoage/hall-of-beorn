@@ -31,6 +31,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFriendCard("Farmer Maggot", "Farmer-Maggot-TBR");
             addFriendCard("Barliman Butterbur", "Barliman-Butterbur-TBR");
 
+            addGroup("The Council of Elrond", "The-Council-of-Elrond");
             addGroup("The Fellowship", "The-Fellowship");
 
             addItem("Sting", "Sting-RD");

@@ -27,6 +27,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addItem("Horn of Gondor", "Horn-of-Gondor-Core");
             addItem("Gondorian Shield", "Gondorian-Shield-TSF");
 
+            addGroup("The Council of Elrond", "The-Council-of-Elrond");
             addGroup("The Fellowship", "The-Fellowship");
 
             Card("Boromir-TDM");

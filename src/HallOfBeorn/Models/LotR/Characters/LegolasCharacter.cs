@@ -34,6 +34,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addItem("Mirkwood Long-knife", "Mirkwood-Long-knife-TSoH");
             addItem("Arod", "Arid-ToS");
 
+            addGroup("The Council of Elrond", "The-Council-of-Elrond");
             addGroup("The Fellowship", "The-Fellowship");
 
             Card("Legolas-Core");

@@ -48,8 +48,9 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFriend("Gandalf", "Gandalf");
             addFriend("Halbarad");
 
-            addGroup("The Fellowship", "The-Fellowship");
             addGroup("The Grey Company");
+            addGroup("The Council of Elrond", "The-Council-of-Elrond");
+            addGroup("The Fellowship", "The-Fellowship");
             addGroup("The House of Elrond");
 
             addItem("Celebrían's Stone", "Celebrian's-Stone-Core");

@@ -47,9 +47,10 @@ namespace HallOfBeorn.Models.LotR.Characters
             addItem("Narya", "Narya-TGH");
             addItem("Shadowfax", "Shadowfax-ToS");
 
-            addGroup("The Fellowship", "The-Fellowship");
-            addGroup("Thorin's Company", "Thorin's-Company");
             addGroup("The White Council", "The-White-Council");
+            addGroup("Thorin's Company", "Thorin's-Company");
+            addGroup("The Council of Elrond", "The-Council-of-Elrond");
+            addGroup("The Fellowship", "The-Fellowship");
         }
     }
 }

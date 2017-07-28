@@ -50,6 +50,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFriend("Gandalf", "Gandalf");
 
             addGroup("The White Council", "The-White-Council");
+            addGroup("The Grey Havens");
 
             addItem("Narya", "Narya-TGH");
 

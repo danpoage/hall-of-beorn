@@ -36,10 +36,10 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFamily("Aragorn (Son-in-Law)", "Aragorn");
 
             addItem("Vilya", "Vilya-SaF");
-            addItem("Elrond's Counsel", "Elrond's-Counsel-TWitW");
             addItem("Message from Elrond", "Message-from-Elrond-TTT");
 
             addGroup("The White Council", "The-White-Council");
+            addGroup("The Council of Elrond", "The-Council-of-Elrond");
             addGroup("The House of Elrond");
 
             Card("Elrond-SaF");

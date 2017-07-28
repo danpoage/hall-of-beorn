@@ -33,6 +33,9 @@ namespace HallOfBeorn.Models.LotR.Characters
             addItem("Asfaloth", "Asfaloth");
             addItem("Elf-stone", "Elf-stone-TBR");
 
+            addGroup("The Council of Elrond", "The-Council-of-Elrond");
+            addGroup("The House of Elrond");
+
             Card("Glorfindel-Core");
             Card("Glorfindel-FoS");
             Card("Glorfindel-FotS");

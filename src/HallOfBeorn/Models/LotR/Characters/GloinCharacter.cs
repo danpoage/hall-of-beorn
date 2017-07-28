@@ -26,6 +26,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addItem("Dwarven Shield", "Dwarven-Shield-TSoH");
 
             addGroup("Thorin's Company", "Thorin's-Company");
+            addGroup("The Council of Elrond", "The-Council-of-Elrond");
 
             Card("Gloin-Core");
             Card("Gloin-THOtD");

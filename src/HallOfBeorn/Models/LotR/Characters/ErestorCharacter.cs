@@ -20,6 +20,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFriend("Arwen Undómiel", "Arwen-Undomiel");
             addFriend("Glorfindel", "Glorfindel");
 
+            addGroup("The Council of Elrond", "The-Council-of-Elrond");
             addGroup("The House of Elrond");
 
             Card("Erestor-TToR");

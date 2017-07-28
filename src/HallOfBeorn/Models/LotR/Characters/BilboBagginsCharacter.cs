@@ -41,6 +41,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFriend("Gandalf", "Gandalf");
 
             addGroup("Thorin's Company", "Thorin's-Company");
+            addGroup("The Council of Elrond", "The-Council-of-Elrond");
 
             addItem("Sting", "Sting-THOHaUH");
             addItem("Mithril Shirt", "Mithril-Shirt-THOtD");

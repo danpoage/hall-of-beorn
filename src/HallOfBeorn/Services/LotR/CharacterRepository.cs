@@ -38,6 +38,7 @@ namespace HallOfBeorn.Services.LotR
             add(new FastredCharacter());
             add(new FrodoBagginsCharacter());
             add(new GaladrielCharacter());
+            add(new GaldorOfTheHavensCharacter());
             add(new GandalfCharacter());
             add(new GimliCharacter());
             add(new GloinCharacter());
@@ -57,6 +58,7 @@ namespace HallOfBeorn.Services.LotR
             add(new QuickbeamCharacter());
             add(new RangersOfIthilienGroup());
             add(new SamGamgeeCharacter());
+            add(new TheCouncilOfElrondGroup());
             add(new TheEntsGroup());
             add(new TheFellowshipOfTheRingGroup());
             add(new TheodenCharacter());
