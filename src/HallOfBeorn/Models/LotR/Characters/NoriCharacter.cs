@@ -25,7 +25,9 @@ namespace HallOfBeorn.Models.LotR.Characters
             BioSourceUrl = "http://tolkiengateway.net/wiki/Nori";
             ImageArtist = Artist.None;
 
+            addFriend("Thorin Oakenshield", "Thorin-Oakenshield");
             addFriend("Dori", "Dori");
+            addFriend("Ori", "Ori");
 
             addGroup("Thorin's Company", "Thorin's Company");
 

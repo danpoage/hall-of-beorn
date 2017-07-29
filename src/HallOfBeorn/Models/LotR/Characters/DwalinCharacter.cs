@@ -18,6 +18,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             BioSourceUrl = "https://en.wikipedia.org/wiki/Middle-earth_dwarf_characters#Dwalin";
             ImageArtist = Artist.Tony_Foti;
 
+            addFamily("Fundin (Father)");
             addFamily("Balin (Brother)", "Balin");
 
             addFriend("Thorin Oakenshield", "Thorin-Oakenshield");

@@ -14,6 +14,8 @@ namespace HallOfBeorn.Services.LotR
         {
             add(new AragornCharacter());
             add(new ArwenUndomielCharacter());
+            add(new BalinCharacter());
+            add(new BardTheBowmanCharacter());
             add(new BeornCharacter());
             add(new BeregondCharacter());
             add(new BifurCharacter());
@@ -56,6 +58,7 @@ namespace HallOfBeorn.Services.LotR
             add(new MablungCharacter());
             add(new MerryCharacter());
             add(new NoriCharacter());
+            add(new OriCharacter());
             add(new PippinCharacter());
             add(new PrinceImrahilCharacter());
             add(new QuickbeamCharacter());

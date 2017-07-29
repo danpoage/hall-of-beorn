@@ -204,6 +204,8 @@
     <Compile Include="Models\LotR\CharacterGroup.cs" />
     <Compile Include="Models\LotR\Characters\AragornCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ArwenUndomielCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\BalinCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\BardTheBowmanCharacter.cs" />
     <Compile Include="Models\LotR\Characters\BeornCharacter.cs" />
     <Compile Include="Models\LotR\Characters\BeregondCharacter.cs" />
     <Compile Include="Models\LotR\Characters\BifurCharacter.cs" />
@@ -246,6 +248,7 @@
     <Compile Include="Models\LotR\Characters\MablungCharacter.cs" />
     <Compile Include="Models\LotR\Characters\MerryCharacter.cs" />
     <Compile Include="Models\LotR\Characters\NoriCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\OriCharacter.cs" />
     <Compile Include="Models\LotR\Characters\PippinCharacter.cs" />
     <Compile Include="Models\LotR\Characters\PrinceImrahilCharacter.cs" />
     <Compile Include="Models\LotR\Characters\QuickbeamCharacter.cs" />

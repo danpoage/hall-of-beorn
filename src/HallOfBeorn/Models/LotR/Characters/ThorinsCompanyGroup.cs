@@ -22,7 +22,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             addMember("Gandalf", "Gandalf");
             addMember("Bilbo Baggins", "Bilbo-Baggins");
-            addMember("Balin");
+            addMember("Balin", "Balin");
             addMember("Bifur", "Bifur");
             addMember("Bofur");
             addMember("Bombur");
@@ -32,10 +32,9 @@ namespace HallOfBeorn.Models.LotR.Characters
             addMember("Glóin", "Gloin");
             addMember("Kili");
             addMember("Nori", "Nori");
-            addMember("Ori");
             addMember("Óin");
-            addMember("Ori");
-
+            addMember("Ori", "Ori");
+            
             Card("A-Very-Good-Tale-THOHaUH");
             Card("Desperate-Alliance-THOtD");
         }
