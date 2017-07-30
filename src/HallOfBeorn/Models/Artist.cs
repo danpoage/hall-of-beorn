@@ -952,7 +952,7 @@ namespace HallOfBeorn.Models
         public static Artist Jasper_Sandner = new Artist { Name = "Jasper Sandner", URL = "http://jaspersandner.deviantart.com" };
         public static Artist Javier_Charro_Martinez = new Artist { Name = "Javier Charro Martinez", URL = "http://www.charroart.com/work#1" };
         public static Artist Jeff_Himmelman = new Artist { Name = "Jeff Himmelman", URL = "http://jhimmelman.deviantart.com" };
-        public static Artist Jeff_Lee_Johnson = new Artist { Name = "Jeff Lee Johnson", URL = "http://jeffleejohnsonart.com/jeffleejohnsonart.com/home.html" };
+        public static Artist Jeff_Lee_Johnson = new Artist { Name = "Jeff Lee Johnson", URL = "http://jeffleejohnson.deviantart.com" };
         public static Artist Jen_Zee = new Artist { Name = "Jen Zee", URL = "http://jenzee.deviantart.com" };
         public static Artist Jenn_Tran = new Artist { Name = "Jenn Tran", URL = "https://www.google.com/search?q=jenn+tran+art" };
         public static Artist Jim_Pavelec = new Artist { Name = "Jim Pavelec", URL = "http://www.jimpavelec.com" };
@@ -1149,10 +1149,14 @@ namespace HallOfBeorn.Models
         public static Artist Anders_Finer = new Artist { Name = "Anders Finer", URL = "http://fantasygallery.net/finer" };
 
         //Character-only Artists
+        public static Artist Alex_Tooth = new Artist { Name = "Alex Tooth", URL = "http://www.alextooth.com" };
+        public static Artist Angelo_Montanini = new Artist { Name = "Angelo Montanini", URL = "http://tolkiengateway.net/wiki/Angelo_Montanini" };
         public static Artist Angus_McBride = new Artist { Name = "Angus McBride", URL = "https://en.wikipedia.org/wiki/Angus_McBride" };
+        public static Artist Daniel_Govar = new Artist { Name = "Daniel Govar", URL = "https://www.danielgovar.com" };
         public static Artist David_T_Wenzel = new Artist { Name = "David T. Wenzel", URL = "http://www.davidwenzel.com" };
         public static Artist Donato_Giancola = new Artist { Name = "Donato Giancola", URL = "http://www.donatoart.com" };
         public static Artist Harold_Shull = new Artist { Name = "Harold Shull", URL = "https://fineartamerica.com/profiles/harold-shull.html" };
+        public static Artist Joe_Shawcross = new Artist { Name = "Joe Shawcross", URL = "http://joeshawcross.deviantart.com" };
         public static Artist Olga_G = new Artist { Name = "Olga G", URL = "http://steamey.deviantart.com" };
         public static Artist Quinton_Hoover = new Artist { Name = "Quinton Hoover", URL = "https://en.wikipedia.org/wiki/Quinton_Hoover" };
     }

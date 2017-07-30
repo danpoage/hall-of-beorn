@@ -20,11 +20,14 @@ namespace HallOfBeorn.Services.LotR
             add(new BeregondCharacter());
             add(new BifurCharacter());
             add(new BilboBagginsCharacter());
+            add(new BofurCharacter());
+            add(new BomburCharacter());
             add(new BoromirCharacter());
             add(new BrandSonOfBainCharacter());
             add(new CelebornCharacter());
             add(new CirdanTheShipwrightCharacter());
             add(new DainIronfootCharacter());
+            add(new DamrodCharacter());
             add(new DenethorCharacter());
             add(new DoriCharacter());
             add(new DunhereCharacter());
@@ -39,6 +42,8 @@ namespace HallOfBeorn.Services.LotR
             add(new ErkenbrandCharacter());
             add(new FaramirCharacter());
             add(new FastredCharacter());
+            add(new FattyBolgerCharacter());
+            add(new FiliCharacter());
             add(new FrodoBagginsCharacter());
             add(new GaladrielCharacter());
             add(new GaldorOfTheHavensCharacter());
@@ -54,10 +59,12 @@ namespace HallOfBeorn.Services.LotR
             add(new HamaCharacter());
             add(new HirgonCharacter());
             add(new HirluinTheFairCharacter());
+            add(new KiliCharacter());
             add(new LegolasCharacter());
             add(new MablungCharacter());
             add(new MerryCharacter());
             add(new NoriCharacter());
+            add(new OinCharacter());
             add(new OriCharacter());
             add(new PippinCharacter());
             add(new PrinceImrahilCharacter());

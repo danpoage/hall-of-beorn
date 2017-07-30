@@ -23,14 +23,17 @@ namespace HallOfBeorn.Models.LotR.Characters
             TheReturnOfTheKing();
 
             Alias("Mr. Underhill", "Mr-Underhill-TBR");
+            Alias("The Ring-bearer");
 
             addFamily("Bilbo Baggins (Cousin)", "Bilbo-Baggins");
 
             addFriend("Merry", "Merry");
             addFriend("Pippin", "Pippin");
+            addFriend("Fatty Bolger", "Fatty-Bolger");
             addFriendCard("Farmer Maggot", "Farmer-Maggot-TBR");
             addFriendCard("Barliman Butterbur", "Barliman-Butterbur-TBR");
 
+            addGroup("The Conspiracy");
             addGroup("The Council of Elrond", "The-Council-of-Elrond");
             addGroup("The Fellowship", "The-Fellowship");
 

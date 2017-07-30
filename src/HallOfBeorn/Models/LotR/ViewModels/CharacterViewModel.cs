@@ -17,6 +17,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public string Title { get { return character.FullName; } }
 
+        public string Race { get { return character.Race; } }
+
         public string Bio { get { return character.Bio; } }
         public string BioSourceUrl { get { return character.BioSourceUrl; } }
         public string ArtistName { get { return character.ImageArtist.Name; } }

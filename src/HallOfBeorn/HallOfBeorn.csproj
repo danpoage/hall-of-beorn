@@ -210,11 +210,14 @@
     <Compile Include="Models\LotR\Characters\BeregondCharacter.cs" />
     <Compile Include="Models\LotR\Characters\BifurCharacter.cs" />
     <Compile Include="Models\LotR\Characters\BilboBagginsCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\BofurCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\BomburCharacter.cs" />
     <Compile Include="Models\LotR\Characters\BoromirCharacter.cs" />
     <Compile Include="Models\LotR\Characters\BrandSonOfBainCharacter.cs" />
     <Compile Include="Models\LotR\Characters\CelebornCharacter.cs" />
     <Compile Include="Models\LotR\Characters\CirdanTheShipwrightCharacter.cs" />
     <Compile Include="Models\LotR\Characters\DainIronfootCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\DamrodCharacter.cs" />
     <Compile Include="Models\LotR\Characters\DenethorCharacter.cs" />
     <Compile Include="Models\LotR\Characters\DoriCharacter.cs" />
     <Compile Include="Models\LotR\Characters\DunhereCharacter.cs" />
@@ -229,6 +232,8 @@
     <Compile Include="Models\LotR\Characters\ErkenbrandCharacter.cs" />
     <Compile Include="Models\LotR\Characters\FaramirCharacter.cs" />
     <Compile Include="Models\LotR\Characters\FastredCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\FattyBolgerCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\FiliCharacter.cs" />
     <Compile Include="Models\LotR\Characters\FrodoBagginsCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GaladrielCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GaldorOfTheHavensCharacter.cs" />
@@ -244,10 +249,12 @@
     <Compile Include="Models\LotR\Characters\HamaCharacter.cs" />
     <Compile Include="Models\LotR\Characters\HirgonCharacter.cs" />
     <Compile Include="Models\LotR\Characters\HirluinTheFairCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\KiliCharacter.cs" />
     <Compile Include="Models\LotR\Characters\LegolasCharacter.cs" />
     <Compile Include="Models\LotR\Characters\MablungCharacter.cs" />
     <Compile Include="Models\LotR\Characters\MerryCharacter.cs" />
     <Compile Include="Models\LotR\Characters\NoriCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\OinCharacter.cs" />
     <Compile Include="Models\LotR\Characters\OriCharacter.cs" />
     <Compile Include="Models\LotR\Characters\PippinCharacter.cs" />
     <Compile Include="Models\LotR\Characters\PrinceImrahilCharacter.cs" />

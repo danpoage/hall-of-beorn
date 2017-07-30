@@ -17,6 +17,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             ImageArtist = Artist.David_T_Wenzel;
 
             Alias("Thorin and Company");
+            Alias("The Quest of Erebor");
 
             addLeader("Thorin Oakenshield", "Thorin-Oakenshield");
 
@@ -24,18 +25,19 @@ namespace HallOfBeorn.Models.LotR.Characters
             addMember("Bilbo Baggins", "Bilbo-Baggins");
             addMember("Balin", "Balin");
             addMember("Bifur", "Bifur");
-            addMember("Bofur");
-            addMember("Bombur");
+            addMember("Bofur", "Bofur");
+            addMember("Bombur", "Bombur");
             addMember("Dori", "Dori");
             addMember("Dwalin", "Dwalin");
-            addMember("Fili");
+            addMember("Fili", "Fili");
             addMember("Glóin", "Gloin");
-            addMember("Kili");
+            addMember("Kili", "Kili");
             addMember("Nori", "Nori");
-            addMember("Óin");
+            addMember("Óin", "Ori");
             addMember("Ori", "Ori");
             
             Card("A-Very-Good-Tale-THOHaUH");
+            Card("To-me-O-my-kinsfolk-THOtD");
             Card("Desperate-Alliance-THOtD");
         }
 

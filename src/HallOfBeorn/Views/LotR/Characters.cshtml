@@ -1,4 +1,5 @@
-﻿@using HallOfBeorn.Models
+﻿@using HallOfBeorn;
+@using HallOfBeorn.Models
 @using HallOfBeorn.Models.LotR
 @using HallOfBeorn.Models.LotR.ViewModels
 @model CharacterViewModel
@@ -9,7 +10,13 @@
 
 @if (@Model.HasAllCharacters) {
     <h2>Characters</h2>
+    var firstLetter = string.Empty;
     foreach (var pair in @Model.AllCharacters()) {
+        var checkFirst = pair.Key.Substring(0, 1).NormalizeCaseSensitiveString();
+        if (checkFirst != firstLetter) {
+            <h4>@checkFirst</h4>
+        }
+        firstLetter = checkFirst;
         <div style="margin: 5px;"><a href="@pair.Value" title="@pair.Key">@pair.Key</a></div>
     }
     <h2>Groups</h2>
@@ -19,7 +26,13 @@
 } else {
     <a href="/LotR/Characters">Back to Character List</a>
     <br />
-    <h2>@Model.Title</h2>
+    <br />
+    <div>
+        <span style="font-size: 1.75em;font-weight:bold;">@Model.Title</span>
+        @if (!string.IsNullOrEmpty(@Model.Race)) {
+            <span style="margin-left:12px;font-size: 1em;">@Model.Race</span>
+        }
+    </div>
     <div style="display: block;">
         <div style="display: inline-block; vertical-align: top;">
             <img src="@Model.ImageUrl" style="width: 300px; margin: 4px;" class="card-image"/>

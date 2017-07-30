@@ -57,6 +57,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFriend("Bilbo Baggins", "Bilbo-Baggins");
 
             addGroup("Thorin's Company", "Thorin's-Company");
+            addGroup("Balin's Colony");
 
             Card("Balin-THOtD");
             Card("Balin's-Doom-TSLN");
