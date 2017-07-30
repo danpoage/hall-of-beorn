@@ -227,6 +227,7 @@
     <Compile Include="Models\LotR\Characters\ElrohirCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ElrondCharacter.cs" />
     <Compile Include="Models\LotR\Characters\EomerCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\EomundCharacter.cs" />
     <Compile Include="Models\LotR\Characters\EowynCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ErestorCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ErkenbrandCharacter.cs" />
@@ -239,6 +240,7 @@
     <Compile Include="Models\LotR\Characters\GaldorOfTheHavensCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GandalfCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GimliCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\GleowineCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GloinCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GlorfindelCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GondorGroup.cs" />

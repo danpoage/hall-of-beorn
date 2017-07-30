@@ -37,6 +37,7 @@ namespace HallOfBeorn.Services.LotR
             add(new ElrohirCharacter());
             add(new ElrondCharacter());
             add(new EomerCharacter());
+            add(new EomundCharacter());
             add(new EowynCharacter());
             add(new ErestorCharacter());
             add(new ErkenbrandCharacter());
@@ -49,6 +50,7 @@ namespace HallOfBeorn.Services.LotR
             add(new GaldorOfTheHavensCharacter());
             add(new GandalfCharacter());
             add(new GimliCharacter());
+            add(new GleowineCharacter());
             add(new GloinCharacter());
             add(new GlorfindelCharacter());
             add(new GondorGroup());
