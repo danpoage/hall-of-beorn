@@ -62,6 +62,7 @@ namespace HallOfBeorn.Services.LotR
             add(new HirgonCharacter());
             add(new HirluinTheFairCharacter());
             add(new KiliCharacter());
+            add(new LandrovalCharacter());
             add(new LegolasCharacter());
             add(new MablungCharacter());
             add(new MerryCharacter());
