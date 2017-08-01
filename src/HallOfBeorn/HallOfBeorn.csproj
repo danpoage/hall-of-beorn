@@ -239,6 +239,7 @@
     <Compile Include="Models\LotR\Characters\GaladrielCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GaldorOfTheHavensCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GandalfCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\GildorInglorionCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GimliCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GleowineCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GloinCharacter.cs" />
@@ -262,6 +263,7 @@
     <Compile Include="Models\LotR\Characters\PippinCharacter.cs" />
     <Compile Include="Models\LotR\Characters\PrinceImrahilCharacter.cs" />
     <Compile Include="Models\LotR\Characters\QuickbeamCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\RadagastCharacter.cs" />
     <Compile Include="Models\LotR\Characters\SamGamgeeCharacter.cs" />
     <Compile Include="Models\LotR\Characters\TheCouncilOfElrondGroup.cs" />
     <Compile Include="Models\LotR\Characters\TheEntsGroup.cs" />

@@ -24,7 +24,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFamily("Denethor (Father)", "Denethor");
             addFamily("Finduilas (Mother)");
             addFamily("Boromir (Brother)", "Boromir");
-            addFriend("Éowyn (Wife)", "Eowyn");
+            addFamily("Éowyn (Wife)", "Eowyn");
 
             addFriend("Mablung", "Mablung");
             addFriend("Damrod", "Damrod");
@@ -38,6 +38,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             Card("Faramir-AoO");
             Card("Faramir-TLoS");
             Card("Faramir-Core");
+            Card("Faramir-TBoG");
         }
     }
 }

@@ -49,6 +49,7 @@ namespace HallOfBeorn.Services.LotR
             add(new GaladrielCharacter());
             add(new GaldorOfTheHavensCharacter());
             add(new GandalfCharacter());
+            add(new GildorInglorionCharacter());
             add(new GimliCharacter());
             add(new GleowineCharacter());
             add(new GloinCharacter());
@@ -72,6 +73,7 @@ namespace HallOfBeorn.Services.LotR
             add(new PippinCharacter());
             add(new PrinceImrahilCharacter());
             add(new QuickbeamCharacter());
+            add(new RadagastCharacter());
             add(new RangersOfIthilienGroup());
             add(new SamGamgeeCharacter());
             add(new TheCouncilOfElrondGroup());
