@@ -25,8 +25,8 @@ namespace HallOfBeorn.Models.LotR.Characters
             ImageArtist = Artist.Jan_Pospisil;
 
             Alias("Lord of Lossarnach");
-            Alias("the Fat");
-            Alias("the Old");
+            Alias("Forlong the Fat");
+            Alias("Forlong the Old");
 
             addFriend("Hirluin the Fair", "Hirluin-the-Fair");
 
