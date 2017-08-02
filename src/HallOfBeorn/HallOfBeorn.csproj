@@ -248,6 +248,7 @@
     <Compile Include="Models\LotR\Characters\GondorGroup.cs" />
     <Compile Include="Models\LotR\Characters\GrimaCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GrimbeornTheOldCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\GuthlafCharacter.cs" />
     <Compile Include="Models\LotR\Characters\HalbaradCharacter.cs" />
     <Compile Include="Models\LotR\Characters\HaldirOfLorienCharacter.cs" />
     <Compile Include="Models\LotR\Characters\HamaCharacter.cs" />

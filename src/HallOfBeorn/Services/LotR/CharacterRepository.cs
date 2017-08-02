@@ -58,6 +58,7 @@ namespace HallOfBeorn.Services.LotR
             add(new GondorGroup());
             add(new GrimaCharacter());
             add(new GrimbeornTheOldCharacter());
+            add(new GuthlafCharacter());
             add(new HalbaradCharacter());
             add(new HaldirOfLorienCharacter());
             add(new HamaCharacter());
