@@ -19,6 +19,8 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             Alias("Hirluin of the Green Hills");
 
+            addFriend("Forlong", "Forlong");
+
             addGroup("Gondor", "Gondor");
 
             addItem("Lord-of-Morthond-");

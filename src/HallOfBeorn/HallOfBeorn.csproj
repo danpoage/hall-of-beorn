@@ -235,6 +235,7 @@
     <Compile Include="Models\LotR\Characters\FastredCharacter.cs" />
     <Compile Include="Models\LotR\Characters\FattyBolgerCharacter.cs" />
     <Compile Include="Models\LotR\Characters\FiliCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\ForlongCharacter.cs" />
     <Compile Include="Models\LotR\Characters\FrodoBagginsCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GaladrielCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GaldorOfTheHavensCharacter.cs" />

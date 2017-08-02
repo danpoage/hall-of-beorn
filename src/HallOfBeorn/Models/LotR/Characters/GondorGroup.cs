@@ -28,6 +28,8 @@ namespace HallOfBeorn.Models.LotR.Characters
             addMember("Hirgon", "Hirgon");
             addMember("Anborn", "Anborn");
             addMember("Ingold", "Ingold");
+            addMember("Hirluin the Fair", "Hirluin-the-Fair");
+            addMember("Forlong", "Forlong");
             
             Card("For-Gondor-Core");
             Card("Light-the-Beacons-HoN");
