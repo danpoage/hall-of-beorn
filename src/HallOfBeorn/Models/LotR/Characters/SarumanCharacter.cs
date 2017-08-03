@@ -67,7 +67,7 @@ In Valinor, a council was called by Manwë. This was likely in the middle of the
             Alias("Of many colours");
             Alias("Sharkey");
 
-            addFriend("Gandalf", "Radagast");
+            addFriend("Gandalf", "Gandalf");
             addFriend("Radagast", "Radagast");
             addFriend("Gríma", "Grima");
             addFriend("Théoden", "Theoden");
