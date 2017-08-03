@@ -12,6 +12,7 @@ namespace HallOfBeorn.Services.LotR
     {
         public CharacterRepository()
         {
+            add(new AnbornCharacter());
             add(new AragornCharacter());
             add(new ArwenUndomielCharacter());
             add(new BalinCharacter());
@@ -59,6 +60,7 @@ namespace HallOfBeorn.Services.LotR
             add(new GrimaCharacter());
             add(new GrimbeornTheOldCharacter());
             add(new GuthlafCharacter());
+            add(new GwaihirCharacter());
             add(new HalbaradCharacter());
             add(new HaldirOfLorienCharacter());
             add(new HamaCharacter());
@@ -78,6 +80,7 @@ namespace HallOfBeorn.Services.LotR
             add(new RadagastCharacter());
             add(new RangersOfIthilienGroup());
             add(new SamGamgeeCharacter());
+            add(new SarumanCharacter());
             add(new TheCouncilOfElrondGroup());
             add(new TheEntsGroup());
             add(new TheFellowshipOfTheRingGroup());

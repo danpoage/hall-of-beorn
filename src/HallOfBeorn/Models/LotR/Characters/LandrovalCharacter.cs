@@ -23,7 +23,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             addFamily("Gwaihir (Brother)", "Gwaihir");
 
-            addGroup("Eagles of the Eyrie");
+            addGroup("The Eagles");
 
             Card("Landroval-AJtR");
         }

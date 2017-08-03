@@ -202,6 +202,7 @@
     <Compile Include="Models\INamed.cs" />
     <Compile Include="Models\LotR\Character.cs" />
     <Compile Include="Models\LotR\CharacterGroup.cs" />
+    <Compile Include="Models\LotR\Characters\AnbornCharacter.cs" />
     <Compile Include="Models\LotR\Characters\AragornCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ArwenUndomielCharacter.cs" />
     <Compile Include="Models\LotR\Characters\BalinCharacter.cs" />
@@ -249,6 +250,7 @@
     <Compile Include="Models\LotR\Characters\GrimaCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GrimbeornTheOldCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GuthlafCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\GwaihirCharacter.cs" />
     <Compile Include="Models\LotR\Characters\HalbaradCharacter.cs" />
     <Compile Include="Models\LotR\Characters\HaldirOfLorienCharacter.cs" />
     <Compile Include="Models\LotR\Characters\HamaCharacter.cs" />
@@ -267,6 +269,7 @@
     <Compile Include="Models\LotR\Characters\QuickbeamCharacter.cs" />
     <Compile Include="Models\LotR\Characters\RadagastCharacter.cs" />
     <Compile Include="Models\LotR\Characters\SamGamgeeCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\SarumanCharacter.cs" />
     <Compile Include="Models\LotR\Characters\TheCouncilOfElrondGroup.cs" />
     <Compile Include="Models\LotR\Characters\TheEntsGroup.cs" />
     <Compile Include="Models\LotR\Characters\TheFellowshipOfTheRingGroup.cs" />
