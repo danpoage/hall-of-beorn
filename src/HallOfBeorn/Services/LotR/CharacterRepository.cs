@@ -66,6 +66,7 @@ namespace HallOfBeorn.Services.LotR
             add(new HamaCharacter());
             add(new HirgonCharacter());
             add(new HirluinTheFairCharacter());
+            add(new IngoldCharacter());
             add(new KiliCharacter());
             add(new LandrovalCharacter());
             add(new LegolasCharacter());
@@ -74,11 +75,13 @@ namespace HallOfBeorn.Services.LotR
             add(new NoriCharacter());
             add(new OinCharacter());
             add(new OriCharacter());
+            add(new OrophinCharacter());
             add(new PippinCharacter());
             add(new PrinceImrahilCharacter());
             add(new QuickbeamCharacter());
             add(new RadagastCharacter());
             add(new RangersOfIthilienGroup());
+            add(new RumilCharacter());
             add(new SamGamgeeCharacter());
             add(new SarumanCharacter());
             add(new TheCouncilOfElrondGroup());

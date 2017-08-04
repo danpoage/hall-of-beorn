@@ -1157,6 +1157,7 @@ namespace HallOfBeorn.Models
         public static Artist Donato_Giancola = new Artist { Name = "Donato Giancola", URL = "http://www.donatoart.com" };
         public static Artist Harold_Shull = new Artist { Name = "Harold Shull", URL = "https://fineartamerica.com/profiles/harold-shull.html" };
         public static Artist Joe_Shawcross = new Artist { Name = "Joe Shawcross", URL = "http://joeshawcross.deviantart.com" };
+        public static Artist Michelle_Tolo = new Artist { Name = "Michelle Tolo", URL = "http://manweri.deviantart.com/" };
         public static Artist Oleksandra_Ishchenko = new Artist { Name = "Oleksandra Ishchenko", URL = "http://sagasketchbook.deviantart.com" };
         public static Artist Olga_G = new Artist { Name = "Olga G", URL = "http://steamey.deviantart.com" };
         public static Artist Piotr_Arendzikowski = new Artist { Name = "Piotr Arendzikowski", URL = "https://www.artstation.com/artist/wildheadache" };
