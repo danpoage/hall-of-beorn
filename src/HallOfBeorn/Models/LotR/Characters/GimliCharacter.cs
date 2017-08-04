@@ -25,6 +25,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             addGroup("The Council of Elrond", "The-Council-of-Elrond");
             addGroup("The Fellowship", "The-Fellowship");
+            addGroup("The Three Hunters");
 
             Card("Gimli-Core");
             Card("Gimli-ToS");
