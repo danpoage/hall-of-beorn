@@ -12,6 +12,11 @@ namespace HallOfBeorn.Services.LotR
     {
         public CharacterRepository()
         {
+            Action<string, RelationshipType, string> addRel = (subName, type, objName) =>
+            {
+                relationship(subName, type, objName);
+            };
+
             add(new AnbornCharacter());
             add(new AragornCharacter());
             add(new ArwenUndomielCharacter());
@@ -105,6 +110,7 @@ namespace HallOfBeorn.Services.LotR
             add(new TheEntsGroup());
             add(new TheFellowshipOfTheRingGroup());
             add(new TheodenCharacter());
+            add(new TheOneRingThing());
             add(new TheRohirrimGroup());
             add(new TheWhiteCouncilGroup());
             add(new TheodredCharacter());
@@ -115,24 +121,46 @@ namespace HallOfBeorn.Services.LotR
         }
 
         private readonly Dictionary<string, Character> all = new Dictionary<string, Character>();
+        private readonly Dictionary<string, List<CharacterRelationship>> relationshipsBySubject = new Dictionary<string, List<CharacterRelationship>>();
+        private readonly Dictionary<string, List<CharacterRelationship>> relationshipsByObject = new Dictionary<string, List<CharacterRelationship>>();
 
         private void add(Character character)
         {
-            all.Add(character.NormalizedName.ToUrlSafeString(), character);
+            all.Add(character.Slug, character);
+        }
+
+        private void relationship(string subjectName, RelationshipType type, string objectName)
+        {
+            var rel = new CharacterRelationship(subjectName, type, objectName);
+
+            if (!relationshipsBySubject.ContainsKey(rel.SubjectSlug)) {
+                relationshipsBySubject[rel.SubjectSlug] = new List<CharacterRelationship>();
+            }
+            relationshipsBySubject[rel.SubjectSlug].Add(rel);
+
+            if (!relationshipsByObject.ContainsKey(rel.ObjectSlug)) {
+                relationshipsByObject[rel.ObjectSlug] = new List<CharacterRelationship>();
+            }
+            relationshipsByObject[rel.ObjectSlug].Add(rel);
         }
 
         public bool Exists(string name)
         {
-            return all.ContainsKey(name);
+            var slug = name.Slugify();
+
+            return all.ContainsKey(slug);
         }
 
         public Character Lookup(string name)
         {
-            return Exists(name) ?
-                all[name]
+            var slug = name.Slugify();
+
+            return Exists(slug) ?
+                all[slug]
                 : null;
         }
 
+        /*
         public IEnumerable<Character> WithSlug(string slug)
         {
             foreach (var c in all.Values) {
@@ -140,7 +168,7 @@ namespace HallOfBeorn.Services.LotR
                     yield return c;
                 }
             }
-        }
+        }*/
 
         public IEnumerable<Character> All()
         {

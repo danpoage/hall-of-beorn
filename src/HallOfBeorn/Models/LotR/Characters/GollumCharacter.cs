@@ -71,8 +71,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFriend("Bilbo Baggins", "Bilbo-Baggins");
             addFriend("Frodo Baggins", "Frodo-Baggins");
 
-            addItem("Bilbo's Magic Ring", "Bilbo's-Magic-Ring-THOHaUH");
-            addItem("The One Ring", "The-One-Ring-TBR");
+            addItemThing("The One Ring");
             addItem("Gollum's Bite", "Gollum's-Bite-RtM");
 
             Card("Gollum-TDM");

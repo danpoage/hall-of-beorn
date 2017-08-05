@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         private readonly Character character;
         private readonly List<Link> cardLinks = new List<Link>();
 
+        public string Slug { get { return character.Slug; } }
         public string Title { get { return character.FullName; } }
 
         public string Race { get { return character.Race; } }
@@ -25,7 +26,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         public string ArtistUrl { get { return character.ImageArtist.URL; } }
 
         public string ImageUrl { 
-            get { return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Characters/{0}.jpg", character.NormalizedName.ToUrlSafeString()); }
+            get { return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Characters/{0}.jpg", character.Slug); }
         }
 
         public IEnumerable<Link> Aliases { get { return character.Aliases; } } 
@@ -84,7 +85,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 var key = character.Name;
                 var value = string.Format("/LotR/Characters/{0}", character.Name.NormalizeCaseSensitiveString().ToUrlSafeString());
 
-                if (character.Type == CharacterType.Individual) {
+                if (character.Type == CharacterType.Individual || character.Type == CharacterType.Thing) {
                     allCharacters.Add(key, value);
                 } else if (character.Type == CharacterType.Group) {
                     allGroups.Add(key, value);

@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.LotR
     public abstract class CharacterGroup : Character
     {
         protected CharacterGroup(string name, string fullName)
-            : base(name, fullName)
+            : base(name, fullName, string.Empty)
         {
             Type = CharacterType.Group;
         }

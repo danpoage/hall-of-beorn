@@ -25,6 +25,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFriend("Frodo Baggins", "Frodo-Baggins");
             addFriend("Bill the Pony", "Bill-the-Pony");
 
+            addItemThing("The One Ring");
             addItem("Lórien Rope", "Lorien-Rope-RD");
 
             Card("Sam-Gamgee-TBR");

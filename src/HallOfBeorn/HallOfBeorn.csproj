@@ -202,6 +202,7 @@
     <Compile Include="Models\INamed.cs" />
     <Compile Include="Models\LotR\Character.cs" />
     <Compile Include="Models\LotR\CharacterGroup.cs" />
+    <Compile Include="Models\LotR\CharacterRelationship.cs" />
     <Compile Include="Models\LotR\Characters\AnbornCharacter.cs" />
     <Compile Include="Models\LotR\Characters\AragornCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ArwenUndomielCharacter.cs" />
@@ -296,12 +297,14 @@
     <Compile Include="Models\LotR\Characters\TheodenCharacter.cs" />
     <Compile Include="Models\LotR\Characters\TheodredCharacter.cs" />
     <Compile Include="Models\LotR\Characters\RangersOfIthilienGroup.cs" />
+    <Compile Include="Models\LotR\Characters\TheOneRingThing.cs" />
     <Compile Include="Models\LotR\Characters\TheRohirrimGroup.cs" />
     <Compile Include="Models\LotR\Characters\TheWhiteCouncilGroup.cs" />
     <Compile Include="Models\LotR\Characters\ThorinOakenshieldCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ThorinsCompanyGroup.cs" />
     <Compile Include="Models\LotR\Characters\TomBombadilCharacter.cs" />
     <Compile Include="Models\LotR\Characters\TreebeardCharacter.cs" />
+    <Compile Include="Models\LotR\CharacterThing.cs" />
     <Compile Include="Models\LotR\LayoutType.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\AcrossTheEttenmoorsNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\EscapeFromMountGramNightmareProduct.cs" />

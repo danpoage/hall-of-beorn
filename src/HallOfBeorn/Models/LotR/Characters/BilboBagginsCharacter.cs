@@ -43,10 +43,10 @@ namespace HallOfBeorn.Models.LotR.Characters
             addGroup("Thorin's Company", "Thorin's-Company");
             addGroup("The Council of Elrond", "The-Council-of-Elrond");
 
+            addItemThing("The One Ring");
             addItem("Sting", "Sting-THOHaUH");
             addItem("Mithril Shirt", "Mithril-Shirt-THOtD");
-            addItem("The One Ring", "Bilbo's-Magic-Ring-THOtD");
-
+            
             Card("Bilbo-Baggins-THfG");
             Card("Bilbo-Baggins-THOHAUH");
             Card("Bilbo-Baggins-THOtD");

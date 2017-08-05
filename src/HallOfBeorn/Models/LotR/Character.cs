@@ -7,8 +7,9 @@ namespace HallOfBeorn.Models.LotR
 {
     public enum CharacterType: byte
     {
-        Individual = 0,
-        Group = 1
+        Individual,
+        Thing,
+        Group
     }
 
     public class Character
@@ -21,19 +22,11 @@ namespace HallOfBeorn.Models.LotR
         private const string BOOK_UNFINISHED = "Unfinished Tales";
         private const string BOOK_HURIN = "Children of Húrin";
 
-        protected Character(string name, string fullName)
-        {
-            this.Type = CharacterType.Individual;
-            this.Name = name;
-            this.NormalizedName = name.NormalizeCaseSensitiveString();
-            this.FullName = fullName;
-        }
-
         protected Character(string name, string fullName, string race)
         {
             this.Type = CharacterType.Individual;
             this.Name = name;
-            this.NormalizedName = name.NormalizeCaseSensitiveString();
+            this.Slug = name.Slugify();
             this.FullName = fullName;
             this.Race = race;
         }
@@ -107,6 +100,11 @@ namespace HallOfBeorn.Models.LotR
         protected void addItem(string name, string slug)
         {
             addDetailLink(this.items, name, slug);
+        }
+
+        protected void addItemThing(string name)
+        {
+            addCharacterLink(this.items, name, name.Slugify());
         }
 
         protected void addGroup(string name)
@@ -196,7 +194,7 @@ namespace HallOfBeorn.Models.LotR
         }
 
         public string Name { get; private set; }
-        public string NormalizedName { get; private set; }
+        public string Slug { get; private set; }
 
         public string FullName { get; private set; }
 
@@ -230,7 +228,7 @@ namespace HallOfBeorn.Models.LotR
 
         public string Url
         {
-            get { return string.Format("/LotR/Characters/{0}", NormalizedName.ToUrlSafeString()); }
+            get { return string.Format("/LotR/Characters/{0}", Slug); }
         }
     }
 }

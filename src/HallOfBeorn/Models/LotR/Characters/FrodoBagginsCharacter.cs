@@ -38,9 +38,9 @@ namespace HallOfBeorn.Models.LotR.Characters
             addGroup("The Council of Elrond", "The-Council-of-Elrond");
             addGroup("The Fellowship", "The-Fellowship");
 
+            addItemThing("The One Ring");
             addItem("Sting", "Sting-RD");
             addItem("Mithril Shirt", "Mithril-Shirt-RD");
-            addItem("The One Ring", "The-One-Ring-TBR");
             addItem("Phial of Galadriel", "Phial-of-Galadriel-RD");
 
             Card("Frodo-Baggins-CatC");

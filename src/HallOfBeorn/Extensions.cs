@@ -641,5 +641,10 @@ namespace HallOfBeorn
 
             return self.Split(separator);
         }
+
+        public static string Slugify(this string self)
+        {
+            return string.IsNullOrEmpty(self) ? string.Empty : self.NormalizeCaseSensitiveString().ToUrlSafeString();
+        }
     }
 }
