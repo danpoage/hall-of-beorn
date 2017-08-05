@@ -248,15 +248,19 @@
     <Compile Include="Models\LotR\Characters\FrodoBagginsCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GaladrielCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GaldorOfTheHavensCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\GamlingCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GandalfCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\GhanBuriGhanCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GildorInglorionCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GimliCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GleowineCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GloinCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GlorfindelCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\GollumCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GondorGroup.cs" />
     <Compile Include="Models\LotR\Characters\GrimaCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GrimbeornTheOldCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\GrimboldCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GuthlafCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GwaihirCharacter.cs" />
     <Compile Include="Models\LotR\Characters\HalbaradCharacter.cs" />
@@ -296,6 +300,7 @@
     <Compile Include="Models\LotR\Characters\TheWhiteCouncilGroup.cs" />
     <Compile Include="Models\LotR\Characters\ThorinOakenshieldCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ThorinsCompanyGroup.cs" />
+    <Compile Include="Models\LotR\Characters\TomBombadilCharacter.cs" />
     <Compile Include="Models\LotR\Characters\TreebeardCharacter.cs" />
     <Compile Include="Models\LotR\LayoutType.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\AcrossTheEttenmoorsNightmareProduct.cs" />

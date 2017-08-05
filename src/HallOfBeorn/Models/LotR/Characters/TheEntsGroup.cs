@@ -40,8 +40,15 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFriend("Pippin", "Pippin");
             addFriend("Saruman (The White)", "Saruman");
 
+            Card("Wandering-Ent-CS");
+            Card("Booming-Ent-TAC");
+            Card("Derndingle-Warrior-EfMG");
+            Card("Wellinghall-Preserver-AtE");
+            Card("Ent-of-Fangorn-ToS");
             Card("Entmoot-ToS");
+            Card("Ent-Draught-ToS");
             Card("Boomed-and-Trumpeted-EfMG");
+            Card("The-Dam-Bursts-CoP");
         }
     }
 }

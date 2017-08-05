@@ -58,15 +58,19 @@ namespace HallOfBeorn.Services.LotR
             add(new FrodoBagginsCharacter());
             add(new GaladrielCharacter());
             add(new GaldorOfTheHavensCharacter());
+            add(new GamlingCharacter());
             add(new GandalfCharacter());
+            add(new GhanBuriGhanCharacter());
             add(new GildorInglorionCharacter());
             add(new GimliCharacter());
             add(new GleowineCharacter());
             add(new GloinCharacter());
             add(new GlorfindelCharacter());
+            add(new GollumCharacter());
             add(new GondorGroup());
             add(new GrimaCharacter());
             add(new GrimbeornTheOldCharacter());
+            add(new GrimboldCharacter());
             add(new GuthlafCharacter());
             add(new GwaihirCharacter());
             add(new HalbaradCharacter());
@@ -106,6 +110,7 @@ namespace HallOfBeorn.Services.LotR
             add(new TheodredCharacter());
             add(new ThorinOakenshieldCharacter());
             add(new ThorinsCompanyGroup());
+            add(new TomBombadilCharacter());
             add(new TreebeardCharacter());
         }
 
