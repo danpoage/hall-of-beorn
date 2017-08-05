@@ -68,7 +68,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFamily("Finarfin (Father)");
             addFamily("Eärwen (Mother)");
             addFamily("Celeborn (Husband)", "Celeborn");
-            addFamily("Celebrían (Daughter)");
+            addFamily("Celebrían (Daughter)", "Celebrian");
             addFamily("Elrond (Son-in-Law)", "Elrond");
             addFamily("Elladan (Grandson)", "Elladan");
             addFamily("Elrohir (Grandson)", "Elrohir");

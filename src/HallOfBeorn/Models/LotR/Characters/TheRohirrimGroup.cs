@@ -32,7 +32,10 @@ namespace HallOfBeorn.Models.LotR.Characters
             addMember("Grimbold", "Grimbold");
             addMember("Fastred", "Fastred");
             addMember("Gríma", "Grima");
+            addMember("Déorwine", "Deorwine");
+            addMember("Éothain", "Eothain");
             addMember("Gléowine", "Gleowine");
+            addMember("Ceorl", "Ceorl");
             addMember("Guthláf", "Guthlaf");
 
             Card("Mustering-the-Rohirrim-THfG");

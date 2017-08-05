@@ -23,7 +23,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addGroup("The Fellowship", "The-Fellowship");
 
             addFriend("Frodo Baggins", "Frodo-Baggins");
-            addFriendCard("Bill the Pony", "Bill-the-Pony-TBR");
+            addFriend("Bill the Pony", "Bill-the-Pony");
 
             addItem("Lórien Rope", "Lorien-Rope-RD");
 

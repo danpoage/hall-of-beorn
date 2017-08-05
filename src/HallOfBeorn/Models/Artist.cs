@@ -1150,13 +1150,16 @@ namespace HallOfBeorn.Models
 
         //Character-only Artists
         public static Artist Alex_Tooth = new Artist { Name = "Alex Tooth", URL = "http://www.alextooth.com" };
+        public static Artist Angela_Rizza = new Artist { Name = "Angela Rizza", URL = "http://angelarizza.com" };
         public static Artist Angelo_Montanini = new Artist { Name = "Angelo Montanini", URL = "http://tolkiengateway.net/wiki/Angelo_Montanini" };
         public static Artist Angus_McBride = new Artist { Name = "Angus McBride", URL = "https://en.wikipedia.org/wiki/Angus_McBride" };
+        public static Artist Christina_Wald = new Artist { Name = "Christina Wald", URL = "http://www.christinawald.com" };
         public static Artist Daniel_Govar = new Artist { Name = "Daniel Govar", URL = "https://www.danielgovar.com" };
         public static Artist David_T_Wenzel = new Artist { Name = "David T. Wenzel", URL = "http://www.davidwenzel.com" };
         public static Artist Donato_Giancola = new Artist { Name = "Donato Giancola", URL = "http://www.donatoart.com" };
         public static Artist Harold_Shull = new Artist { Name = "Harold Shull", URL = "https://fineartamerica.com/profiles/harold-shull.html" };
         public static Artist Joe_Shawcross = new Artist { Name = "Joe Shawcross", URL = "http://joeshawcross.deviantart.com" };
+        public static Artist Mary_Sanche = new Artist { Name = "Mary Sanche", URL = "http://marysanche.com/about.html" };
         public static Artist Michelle_Tolo = new Artist { Name = "Michelle Tolo", URL = "http://manweri.deviantart.com/" };
         public static Artist Oleksandra_Ishchenko = new Artist { Name = "Oleksandra Ishchenko", URL = "http://sagasketchbook.deviantart.com" };
         public static Artist Olga_G = new Artist { Name = "Olga G", URL = "http://steamey.deviantart.com" };

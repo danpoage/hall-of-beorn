@@ -27,6 +27,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             addFamily("Bilbo Baggins (Cousin)", "Bilbo-Baggins");
 
+            addFriend("Sam Gamgee", "Sam-Gamgee");
             addFriend("Merry", "Merry");
             addFriend("Pippin", "Pippin");
             addFriend("Fatty Bolger", "Fatty-Bolger");

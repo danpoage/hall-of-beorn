@@ -28,11 +28,15 @@ namespace HallOfBeorn.Models.LotR.Characters
             Alias("Elven-light", "Elven-light-TDR");
 
             addFamily("Elrond (Father)", "Elrond");
+            addFamily("Celebrían (Mother)", "Celebrian");
             addFamily("Aragorn (Husband)", "Aragorn");
             addFamily("Elladan (Brother)", "Elladan");
             addFamily("Elrohir (Brother)", "Elrohir");
 
             addGroup("The House of Elrond");
+            addGroup("Lórien");
+
+            addItem("Celebrían's Stone", "Celebrian's-Stone-Core");
 
             Card("Arwen-Undomiel-TWitW");
             Card("Arwen-Undomiel-TRG");

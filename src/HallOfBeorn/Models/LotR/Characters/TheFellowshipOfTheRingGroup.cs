@@ -42,6 +42,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addMember("Boromir", "Boromir");
             addMember("Merry", "Merry");
             addMember("Pippin", "Pippin");
+            addMember("Bill the Pony", "Bill-the-Pony");
 
             Card("Fellowship-of-the-Ring-RD");
         }
