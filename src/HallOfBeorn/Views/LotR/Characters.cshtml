@@ -17,13 +17,13 @@
             <h4>@checkFirst</h4>
         }
         firstLetter = checkFirst;
-        var id = @pair.Key.Slugify();
-        <div style="margin: 5px;"><a id="@id" href="@pair.Value" title="@pair.Key">@pair.Key</a></div>
+        var charId = @pair.Key.Slugify();
+        <div style="margin: 5px;"><a id="@charId" href="@pair.Value" title="@pair.Key">@pair.Key</a></div>
     }
     <h2>Groups</h2>
     foreach (var pair in @Model.AllGroups()) {
-        var id = @pair.Key.Slugify();
-        <div style="margin: 5px;"><a id="@id" href="@pair.Value" title="@pair.Key">@pair.Key</a></div>
+        var groupId = @pair.Key.Slugify();
+        <div style="margin: 5px;"><a id="@groupId" href="@pair.Value" title="@pair.Key">@pair.Key</a></div>
     }
 } else {
     <a href="/LotR/Characters#@Model.Slug">Back to Character List</a>

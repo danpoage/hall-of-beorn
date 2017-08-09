@@ -22,7 +22,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             addFriend("Aragorn", "Aragorn");
 
-            addGroup("The Grey Company");
+            addGroup("The Grey Company", "The Grey Company");
 
             Card("Halbarad-TLR");
             Card("Halbarad-TFotW");

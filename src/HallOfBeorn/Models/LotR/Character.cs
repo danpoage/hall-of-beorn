@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+using HallOfBeorn;
+
 namespace HallOfBeorn.Models.LotR
 {
     public enum CharacterType: byte

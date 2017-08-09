@@ -491,7 +491,7 @@ namespace HallOfBeorn.Models.LotR
             return this;
         }
 
-        public LotRCard WithInfo(ushort number, byte quantity, Artist artist)
+        public LotRCard WithInfo(byte number, byte quantity, Artist artist)
         {
             this.CardNumber = number;
             this.Quantity = quantity;

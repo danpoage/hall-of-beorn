@@ -109,6 +109,7 @@ namespace HallOfBeorn.Services.LotR
             add(new TheCouncilOfElrondGroup());
             add(new TheEntsGroup());
             add(new TheFellowshipOfTheRingGroup());
+            add(new TheGreyCompanyGroup());
             add(new TheodenCharacter());
             add(new TheOneRingThing());
             add(new TheRohirrimGroup());

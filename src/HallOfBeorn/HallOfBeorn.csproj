@@ -294,6 +294,7 @@
     <Compile Include="Models\LotR\Characters\TheCouncilOfElrondGroup.cs" />
     <Compile Include="Models\LotR\Characters\TheEntsGroup.cs" />
     <Compile Include="Models\LotR\Characters\TheFellowshipOfTheRingGroup.cs" />
+    <Compile Include="Models\LotR\Characters\TheGreyCompanyGroup.cs" />
     <Compile Include="Models\LotR\Characters\TheodenCharacter.cs" />
     <Compile Include="Models\LotR\Characters\TheodredCharacter.cs" />
     <Compile Include="Models\LotR\Characters\RangersOfIthilienGroup.cs" />

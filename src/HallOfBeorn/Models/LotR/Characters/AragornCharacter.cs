@@ -46,9 +46,9 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFamily("Elrohir (Brother-in-Law)", "Elrohir");
 
             addFriend("Gandalf", "Gandalf");
-            addFriend("Halbarad");
+            addFriend("Halbarad", "Halbarad");
 
-            addGroup("The Grey Company");
+            addGroup("The Grey Company", "The Grey Company");
             addGroup("The Council of Elrond", "The-Council-of-Elrond");
             addGroup("The Fellowship", "The-Fellowship");
             addGroup("The House of Elrond");

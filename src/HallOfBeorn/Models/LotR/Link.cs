@@ -92,7 +92,13 @@ namespace HallOfBeorn.Models.LotR
         private static string getText(LinkType type, LotRCard card, string title)
         {
             if (type == LinkType.Hall_of_Beorn_Card_Image) {
-                var slug = string.IsNullOrEmpty(card.SlugSuffix) ? card.Title.ToUrlSafeString() : string.Format("{0}-{1}", card.Title.ToUrlSafeString(), card.SlugSuffix);
+                var slug = string.Empty;
+                if (card.CardType == CardType.Campaign) {
+                    slug = string.Format("{0}-SetupA", card.Title.ToUrlSafeString());
+                }
+                else {
+                    slug = string.IsNullOrEmpty(card.SlugSuffix) ? card.Title.ToUrlSafeString() : string.Format("{0}-{1}", card.Title.ToUrlSafeString(), card.SlugSuffix);
+                }
                 return string.Format("<img src=\"https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}.jpg\" title=\"{2}\" style=\"height:180px\"></img>", card.CardSet.Name.NormalizeCaseSensitiveString().ToUrlSafeString(), slug, title.Replace("'", "’"));
             } else {
                 return title;
