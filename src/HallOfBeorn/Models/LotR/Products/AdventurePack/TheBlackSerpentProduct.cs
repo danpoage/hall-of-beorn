@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
             : base("The Black Serpent", "MEC59", ImageType.Png)
         {
             AddCardSet(CardSet.TheBlackSerpent);
+
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.Haradrim.TheBlackSerpentScenario());
         }
     }
 }

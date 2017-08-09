@@ -90,11 +90,13 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithInfo(95, 4, Artist.Kim_Sokol));
             addCard(LotRCard.Location("The Serpent's Redoubt", string.Empty, setName, 4, 4)
                 .WithTraits("Desert.", "Ruins.")
-                .WithText("While The Serpent’s Redoubt is in the staging area, it gains: \"Forced: After a player plays an ally from his hand, either remove 1 progress from the main quest, or exhaust that ally.\"\r\nTravel: The first player searches the encounter deck and discard pile for an enemy and puts it into play engaged with him. Shuffle the encounter deck.")
+                .WithText("While The Serpent's Redoubt is in the staging area, it gains: \"Forced: After a player plays an ally from his hand, either remove 1 progress from the main quest, or exhaust that ally.\"\r\nTravel: The first player searches the encounter deck and discard pile for an enemy and puts it into play engaged with him. Shuffle the encounter deck.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(96, 2, Artist.DinoDrawing));
             addCard(LotRCard.Location("Roofless Tower", string.Empty, setName, 2, 4)
                 .WithTraits("Desert.", "Ruins.")
                 .WithText("While Roofless Tower is in the staging area, it gains: \"Forced: When a player plays an event, either remove 1 progress from the main quest, or cancel the effects of that event.\"\r\nTravel: Exhaust a hero to travel here.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(97, 2, Artist.Jokubas_Uoginitas));
             addCard(LotRCard.Location("Desert Bastion", string.Empty, setName, 1, 5)
                 .WithTraits("Desert.", "Ruins.")
@@ -110,15 +112,18 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithKeywords("Surge.")
                 .WithText("While Broken Courtyard is in the staging area, the main quest cannot have progress tokens beyond its printed quest points value.")
                 .WithShadow("Shadow: Either remove 2 progress from main quest, or return attacking enemy to staging area after this attack.")
+                .WithEasyModeQuantity(2)
                 .WithInfo(100, 3, Artist.Jokubas_Uoginitas));
             addCard(LotRCard.Treachery("Bold and Grim", string.Empty, setName)
                 .WithKeywords("Surge.", "Doomed 1.")
                 .WithText("When Revealed: Deal 1 damage to each hero with an objective attached.")
                 .WithShadow("Shadow: If attacking enemy is non-unique, either attach a Harad objective you control to attacking enemy, or it makes an additional attack after this one.")
+                .WithEasyModeQuantity(2)
                 .WithInfo(101, 3, Artist.Rafal_Hrynkiewicz));
             addCard(LotRCard.Treachery("No Quarter", string.Empty, setName)
                 .WithText("When Revealed: Either reveal 2 encounter cards, or detach a Harad objective from a hero, reveal it, and add it to the staging area.")
                 .WithShadow("Shadow: If this attack destroys a character, attach a Harad objective you control to a non-unique encounter card in the staging area.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(102, 2, Artist.Dimitri_Bielak));
             addCard(LotRCard.Treachery("Chaos in the Night", string.Empty, setName)
                 .WithText("When Revealed: The first player must choose: either raise each player's threat by 3, or progress cannot be placed on quest cards until the end of the round.")
