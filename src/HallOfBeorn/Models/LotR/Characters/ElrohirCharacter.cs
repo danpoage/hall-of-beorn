@@ -27,7 +27,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFamily("Aragorn (Brother-in-Law)", "Aragorn");
             
             addGroup("The Grey Company", "The Grey Company");
-            addGroup("The House of Elrond");
+            addGroup("Rivendell", "Rivendell");
 
             Card("Elrohir-TRG");
             Card("Elrohir-TMoF");

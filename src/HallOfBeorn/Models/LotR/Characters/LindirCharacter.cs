@@ -20,7 +20,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             addFriend("Elrond", "Elrond");
 
-            addGroup("The House of Elrond");
+            addGroup("Rivendell", "Rivendell");
 
             Card("Lindir-TBoCD");
         }

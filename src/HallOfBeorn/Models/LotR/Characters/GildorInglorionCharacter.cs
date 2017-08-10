@@ -39,7 +39,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFriend("Aragorn", "Aragorn");
             addFriend("Frodo Baggins", "Frodo-Baggins");
 
-            addGroup("House of Elrond");
+            addGroup("Rivendell", "Rivendell");
 
             Card("Gildor-Inglorion-THoEM");
             Card("Gildor-Inglorion-TBR");

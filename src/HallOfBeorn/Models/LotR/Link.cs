@@ -95,6 +95,8 @@ namespace HallOfBeorn.Models.LotR
                 var slug = string.Empty;
                 if (card.CardType == CardType.Campaign) {
                     slug = string.Format("{0}-SetupA", card.Title.ToUrlSafeString());
+                } else if (card.CardType == CardType.Quest) {
+                    slug = string.Format("{0}-{1}{2}", card.Title.ToUrlSafeString(), card.StageNumber, card.StageLetter);
                 }
                 else {
                     slug = string.IsNullOrEmpty(card.SlugSuffix) ? card.Title.ToUrlSafeString() : string.Format("{0}-{1}", card.Title.ToUrlSafeString(), card.SlugSuffix);

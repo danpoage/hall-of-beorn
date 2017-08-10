@@ -21,7 +21,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFriend("Glorfindel", "Glorfindel");
 
             addGroup("The Council of Elrond", "The-Council-of-Elrond");
-            addGroup("The House of Elrond");
+            addGroup("Rivendell", "Rivendell");
 
             Card("Erestor-TToR");
             Card("Erestor-TLD");

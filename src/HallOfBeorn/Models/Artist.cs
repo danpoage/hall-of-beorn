@@ -1164,6 +1164,7 @@ namespace HallOfBeorn.Models
         public static Artist Michelle_Tolo = new Artist { Name = "Michelle Tolo", URL = "http://manweri.deviantart.com/" };
         public static Artist Oleksandra_Ishchenko = new Artist { Name = "Oleksandra Ishchenko", URL = "http://sagasketchbook.deviantart.com" };
         public static Artist Olga_G = new Artist { Name = "Olga G", URL = "http://steamey.deviantart.com" };
+        public static Artist Philip_Straub = new Artist { Name = "Philip Straub", URL = "https://philipstraub.deviantart.com" };
         public static Artist Piotr_Arendzikowski = new Artist { Name = "Piotr Arendzikowski", URL = "https://www.artstation.com/artist/wildheadache" };
         public static Artist Quinton_Hoover = new Artist { Name = "Quinton Hoover", URL = "https://en.wikipedia.org/wiki/Quinton_Hoover" };
         public static Artist The_Brothers_Hildebrandt = new Artist { Name = "The Brothers Hildebrandt", URL = "http://www.brothershildebrandt.com" };

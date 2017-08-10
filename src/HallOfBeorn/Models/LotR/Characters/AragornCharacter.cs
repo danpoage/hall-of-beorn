@@ -51,7 +51,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addGroup("The Grey Company", "The Grey Company");
             addGroup("The Council of Elrond", "The-Council-of-Elrond");
             addGroup("The Fellowship", "The-Fellowship");
-            addGroup("The House of Elrond");
+            addGroup("Rivendell", "Rivendell");
             addGroup("The Three Hunters");
 
             addItem("Celebrían's Stone", "Celebrian's-Stone-Core");

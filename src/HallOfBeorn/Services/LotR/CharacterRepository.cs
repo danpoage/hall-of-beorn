@@ -101,6 +101,7 @@ namespace HallOfBeorn.Services.LotR
             add(new QuickbeamCharacter());
             add(new RadagastCharacter());
             add(new RangersOfIthilienGroup());
+            add(new RivendellGroup());
             add(new RobinSmallburrowCharacter());
             add(new RumilCharacter());
             add(new SamGamgeeCharacter());

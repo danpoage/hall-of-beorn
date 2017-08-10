@@ -33,7 +33,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFamily("Elladan (Brother)", "Elladan");
             addFamily("Elrohir (Brother)", "Elrohir");
 
-            addGroup("The House of Elrond");
+            addGroup("Rivendell", "Rivendell");
             addGroup("Lórien");
 
             addItem("Celebrían's Stone", "Celebrian's-Stone-Core");

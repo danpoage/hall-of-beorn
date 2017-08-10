@@ -42,6 +42,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             addGroup("Thorin's Company", "Thorin's-Company");
             addGroup("The Council of Elrond", "The-Council-of-Elrond");
+            addGroup("Rivendell", "Rivendell");
 
             addItemThing("The One Ring");
             addItem("Sting", "Sting-THOHaUH");

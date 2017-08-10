@@ -286,6 +286,7 @@
     <Compile Include="Models\LotR\Characters\PrinceImrahilCharacter.cs" />
     <Compile Include="Models\LotR\Characters\QuickbeamCharacter.cs" />
     <Compile Include="Models\LotR\Characters\RadagastCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\RivendellGroup.cs" />
     <Compile Include="Models\LotR\Characters\RobinSmallburrowCharacter.cs" />
     <Compile Include="Models\LotR\Characters\RumilCharacter.cs" />
     <Compile Include="Models\LotR\Characters\SamGamgeeCharacter.cs" />
