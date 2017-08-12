@@ -80,6 +80,9 @@ namespace HallOfBeorn.Models.LotR.Characters
             addItem("Nenya", "Nenya-CS");
             addItem("Mirror of Galadriel", "Mirror-of-Galadriel-CS");
 
+            addGroup("Lórien", "Lorien");
+            addGroup("The White Council", "The-White-Council");
+
             Card("Galadriel-CS");
             Card("Galadriel-RD");
         }

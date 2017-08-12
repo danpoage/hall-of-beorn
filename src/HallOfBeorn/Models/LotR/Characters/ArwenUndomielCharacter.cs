@@ -34,7 +34,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFamily("Elrohir (Brother)", "Elrohir");
 
             addGroup("Rivendell", "Rivendell");
-            addGroup("Lórien");
+            addGroup("Lórien", "Lorien");
 
             addItem("Celebrían's Stone", "Celebrian's-Stone-Core");
 

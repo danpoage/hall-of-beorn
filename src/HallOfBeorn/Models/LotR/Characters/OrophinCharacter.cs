@@ -30,7 +30,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addItem("Bow of the Galadhrim", "Bow-of-the-Galadhrim-NiE");
             addItem("Cloak of Lórien", "Cloak-of-Lorien-CS");
 
-            addGroup("The Galadhrim");
+            addGroup("Lórien", "Lorien");
 
             Card("Orophin-CS");
         }

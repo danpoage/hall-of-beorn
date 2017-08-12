@@ -90,6 +90,7 @@ namespace HallOfBeorn.Services.LotR
             add(new LandrovalCharacter());
             add(new LegolasCharacter());
             add(new LindirCharacter());
+            add(new LorienGroup());
             add(new MablungCharacter());
             add(new MerryCharacter());
             add(new NoriCharacter());

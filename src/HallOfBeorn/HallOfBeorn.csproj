@@ -276,6 +276,7 @@
     <Compile Include="Models\LotR\Characters\LandrovalCharacter.cs" />
     <Compile Include="Models\LotR\Characters\LegolasCharacter.cs" />
     <Compile Include="Models\LotR\Characters\LindirCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\LorienGroup.cs" />
     <Compile Include="Models\LotR\Characters\MablungCharacter.cs" />
     <Compile Include="Models\LotR\Characters\MerryCharacter.cs" />
     <Compile Include="Models\LotR\Characters\NoriCharacter.cs" />

@@ -26,7 +26,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFamily("Arwen Undómiel (Daughter)", "Arwen-Undomiel");
 
             addGroup("Rivendell", "Rivendell");
-            addGroup("Lórien");
+            addGroup("Lórien", "Lorien");
 
             Card("Celebrian's-Stone-Core");
         }

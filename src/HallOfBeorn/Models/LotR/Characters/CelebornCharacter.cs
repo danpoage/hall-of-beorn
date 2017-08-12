@@ -44,6 +44,8 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFriend("Orophin", "Orophin");
             addFriend("Rúmil", "Rumil");
 
+            addGroup("Lórien", "Lorien");
+
             addItem("O Lórien!", "O-Lorien-TiT");
 
             Card("Celeborn-TDT");
