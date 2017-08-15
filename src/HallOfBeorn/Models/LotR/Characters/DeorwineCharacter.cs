@@ -16,7 +16,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 <p>An outstanding warrior, Déorwine and six of his knights were slain at the Battle of the Pelennor Fields.</p>
 <h4>Etymology</h4>
 <p>The name Déorwine probably means 'brave-friend' in Old English, consisting of dēor ('brave, bold (as a wild beast)' + wine ('friend').</p>";
-            BioSourceUrl = "";
+            BioSourceUrl = "http://tolkiengateway.net/wiki/Deorwine";
             ImageArtist = Artist.Aleksander_Karcz;
 
             addFriend("Théoden", "Theoden");

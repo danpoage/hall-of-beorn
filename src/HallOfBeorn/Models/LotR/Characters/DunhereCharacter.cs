@@ -11,11 +11,14 @@ namespace HallOfBeorn.Models.LotR.Characters
             : base("Dúnhere", "Dúnhere", "Man")
         {
             Bio =
-@"<p>In J. R. R. Tolkien's Middle-earth legendarium, Dúnhere was the lord of Harrowdale in Rohan (Middle-earth) and Chieftain of the folk of Dunharrow. He is a nephew of Erkenbrand.</p>
-<p>He appears in The Return of the King, the third volume of the fantasy novel The Lord of the Rings as originally published. He also appears in the posthumously published Unfinished Tales, as the captain of the riders that allowed their companions to escape of the siege of the uruk-hai during the Battles of the Fords of Isen. There he fought alongside Théodred and Grimbold.</p>
-<p>He was not in the siege of Helm's Deep because he had been ordered to gather the Muster of Rohan in Dunharrow by Gandalf, whom he trusted as he was riding Shadowfax, one of the mearas. He received King Théoden when he came to the dale after the battle. He was also at his pavilion when the messenger from Gondor came asking for their aid.</p>
-<p>In the Battle of the Pelennor Fields he fought in the éored of Grimbold. He died there, as well as his marshal and other well known warriors, whose names appear in the Song of the Mounds of Mundburg.</p>";
-            BioSourceUrl = "https://en.wikipedia.org/wiki/D%C3%BAnhere";
+@"<p>Dúnhere was the chieftain of the folk of Harrowdale, and a valiant captain who fought in the First Battle of the Fords of Isen and the Battle of the Pelennor Fields.</p>
+<h4>History</h4>
+<p>Dúnhere was a nephew of Erkenbrand.[1] He served under Grimbold during the First Battle of the Fords of Isen, where his skill as a horseman proved important to the Rohirrim's weakened defenses.</p>
+<p>Dúnhere did not accompany Gandalf and Erkenbrand to the Battle of the Hornburg; instead, they sent him to oversee the muster of the Rohirrim in his native Harrowdale. Several days later, Théoden and the rest of the riders gathered there to set out to Minas Tirith.</p>
+<p>At the Battle of the Pelennor Fields, Dúnhere was slain. He was remembered in the Song of the Mounds of Mundburg.</p>
+<h4>Etymology</h4>
+<p>The name Dúnhere means 'hill warrior' in Old English, consisting of dūn ('hill') + here ('army, host').</p>";
+            BioSourceUrl = "http://tolkiengateway.net/wiki/Dunhere";
             ImageArtist = Artist.Jeff_Himmelman;
 
             TheReturnOfTheKing();
