@@ -11,23 +11,19 @@ namespace HallOfBeorn.Models.LotR.Characters
             : base("Gríma", "Gríma", "Man")
         {
             Bio =
-@"<p>Gríma, called (the) Wormtongue, is a fictional character in J. R. R. Tolkien's The Lord of the Rings. He appears in the second and third volumes of the work, The Two Towers and The Return of the King, and his role is expanded upon in Unfinished Tales. He is introduced in The Two Towers as the chief advisor to King Théoden of Rohan and henchman of Saruman. Gríma serves as an archetypal sycophant, flatterer, liar, and manipulator, and is considered to be based by Tolkien on the Beowulf character Unferth.</p>
-<p>The name Gríma derives from the Old English or Icelandic word meaning 'mask', 'helmet' or 'spectre'. It is also possible to link the name to the English word 'grim', which among other characteristics means 'ugly' in Old English.</p>
-<p>Gríma, son of Gálmód, was at first a faithful servant, but he eventually fell in league with Saruman, and from then on worked to weaken Théoden and his kingdom through lies and persuasion.</p>
-<p>Tolkien describes him as 'a wizened figure of a man, with a pale wise face, and heavy lidded eyes', with a 'long pale tongue'.</p>
-<p>He was widely disliked in Edoras; everyone except Théoden called him 'Wormtongue'. Gandalf repeatedly compares him to a snake:</p>
-<blockquote>
-The wise speak only of what they know, Gríma son of Gálmód. A witless worm have you become. Therefore be silent, and keep your forked tongue behind your teeth. I have not passed through fire and death to bandy crooked words with a serving-man till the lightning falls.
-&nbsp;&nbsp;— Gandalf, The Two Towers
-<br>
-See, Théoden, here is a snake! To slay it would be just. But it was not always as it now is. Once it was a man, and it did you service in its fashion.
-&nbsp;&nbsp;— Gandalf, The Two Towers
-</blockquote>
-<p>It is implied that Saruman had promised him Éowyn, the king's niece, as a reward for his services. Her brother Éomer accused him of 'watching her under his lids and haunting her steps'. His schemes were foiled when Gandalf the White and his companions arrived at Edoras, and convinced the king that he was not as weak as his adviser had made him seem. Upon Théoden's restoration, 'many things which men had missed' were found locked in Gríma's trunk, including the king's sword, Herugrim. Théoden decided to go forth to battle at the Fords of Isen, and Gríma was given a choice: prove his loyalty and ride into battle with the king, or ride into exile. Choosing the latter, he went to Saruman at Orthanc. Following the confrontation between Saruman and Gandalf, Gríma mistakenly threw the palantír of Orthanc at the Rohirrim accompanying Gandalf, or possibly at Saruman himself, and so permitted its capture by Peregrin Took.</p>
-<p>Gríma accompanied Saruman to the Shire, where Saruman sought revenge for his defeat at Orthanc in petty tyranny over the Hobbits. During this time, Saruman shortened Gríma's nickname to 'Worm'. When Saruman was overthrown by a hobbit rebellion and ordered to leave, Frodo Baggins implored Gríma not to follow him, and even offered him food and shelter. Saruman countered by revealing to the Hobbits that Gríma had murdered and possibly eaten Lotho Sackville-Baggins, a kinsman of Frodo; whereupon Gríma killed Saruman and was shot by Hobbit archers.</p>
-<p>Gríma played a major role in the back-story to The Lord of the Rings, prior to his first appearance in The Two Towers. In Unfinished Tales Tolkien writes that on 20 September in T.A. 3018 Gríma was captured by the Nazgûl in the fields of the Rohirrim, while on his way to Isengard to inform Saruman of Gandalf's arrival at Edoras. He divulged what he knew of Saruman's plans to the Nazgûl, specifically his interest in the Shire, and its location. Gríma was set free, and the Nazgûl set out immediately for the Shire. In another version within the same chapter, this role is given to the squint-eyed southerner that the hobbits encounter at Bree.</p>
-<p>In the same book, Tolkien intimates that Gríma may have given Théoden 'subtle poisons' that caused him to age at an accelerated pace.</p>";
-            BioSourceUrl = "https://en.wikipedia.org/wiki/Gr%C3%ADma_Wormtongue";
+@"<p><b>Gríma Wormtongue</b> (died Third Age November 3, 3019)[2] was the chief advisor to King Théoden of Rohan. He was the son of Gálmód.</p>
+<h4>History</h4>
+<p>Gríma was secretly in thrall to Saruman, who had promised him Éowyn. Gríma not only informed Saruman about the secrets of Rohan, but also worked to weaken Théoden and his kingdom with his words and poison.</p>
+<p>During the War of the Ring, the Nine Nazgûl came to Rohan and questioned Wormtongue, who, terrified, answered that the Wizard Gandalf had passed through Rohan, and also revealed to them where the Shire was. He also told them that Saruman had lied to them in this information, revealing his treachery against Sauron.</p>
+<p>Upon Gandalf's arrival, he tried to discredit Gandalf, until he managed to heal Théoden. After this, 'many things which men had missed' were found locked in Gríma's trunk and he was given a grim choice: ride into battle or into exile.[1] Choosing the latter, he went to dwell with Saruman at Orthanc, where he witnessed the Battle of Isengard. Following the confrontation between Saruman and Gandalf, he mistakenly threw a 'heavy rock'—which was actually the palantír of Orthanc—at the Rohirrim accompanying Gandalf, an act for which Saruman seems to have punished him severely.</p>
+<p>While being held there, he was reduced more weak and thin. When Treebeard released them in August, they left. On their way, they were confronted by Gandalf, Celeborn, Galadriel and the Hobbits on their way to northern Dunland. They found them as traveling beggars and Saruman kicked Gríma to move on, as he exclaimed how he hated his master. Galadriel told Gríma that he was free to leave him but he did not reply.</p>
+<p>Saruman had already been exerting his control over the Shire from afar by sending evil Men there, thus Saruman sought his revenge in petty tyranny over the hobbits. During this time Gríma became increasingly degraded until he was a crawling wretch, almost resembling Gollum, and Saruman shortened his nickname to 'Worm'. During this time he killed Lotho Sackville-Baggins, and may have eaten him.</p>
+<p>Spurred by the words of Frodo that he did not have to follow Saruman, and being pushed over the edge when Saruman scorned him, he used a hidden knife to slit the throat of Saruman and darted down the road. He was quickly killed by several Hobbit arrows, and thus Wormtongue was the final casualty of the War of the Ring.</p>
+<h4>Etymology</h4>
+<p>The name Gríma derives from the Old English or Icelandic word meaning 'mask, visor, helmet' or 'spectre'. It is also possible to link the name to the English word 'grim', which among other characteristics meant 'ugly' in Old English.</p>
+<p>Wormtongue is a modernized form of Old English wyrm-tunge ('snake-tongue').</p>";
+            
+            BioSourceUrl = "http://tolkiengateway.net/wiki/Grima";
             ImageArtist = Artist.Harold_Shull;
 
             Alias("Wormtongue");

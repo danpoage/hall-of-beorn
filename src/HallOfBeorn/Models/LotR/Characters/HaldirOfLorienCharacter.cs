@@ -11,11 +11,20 @@ namespace HallOfBeorn.Models.LotR.Characters
             : base("Haldir of Lórien", "Haldir of Lórien", "Silvan Elf")
         {
             Bio =
-@"<p>Haldir was an Elf of Lothlórien, probably a Silvan Elf: a marchwarden who guarded the forest's northern borders. When the Fellowship of the Ring arrived in Lórien, he became their guide to Caras Galadhon. He and his companions are described as wearing grey hooded cloaks and living on platforms in the trees.</p>
-<p>Haldir was seen with his brothers, Rúmil and Orophin, when the fellowship entered Lórien. They are little discussed by Tolkien in the book and much less, if at all in the movie.</p>
-<p>Haldir was one of the few Elves of Lórien who could speak Westron (unlike either of his brothers).</p>
-<p>As Haldir led the Fellowship inside Lothlórien, law required him to blindfold Gimli the Dwarf until the company was brought before Galadriel and Celeborn. Haldir and other Silvan Elves still bore grudges against Dwarves as a result of long-past events in the First Age involving King Thingol, and treated Gimli as a potential foe. Aragorn, in his wisdom, suggested that all of the Fellowship, including Legolas the Elf, be blindfolded as well. Haldir successfully led the Fellowship so that they did not even stub their toes. After the company leaves Lothlórien, Tolkien never mentions him again.</p>";
-            BioSourceUrl = "https://en.wikipedia.org/wiki/List_of_Middle-earth_Elves#Haldir";
+@"<blockquote>
+&ldquo;But there are some of us still who go abroad for the gathering of news and the watching of our enemies, and they speak the languages of other lands. I am one. Haldir is my name.&rdquo;
+<br>― Haldir
+</blockquote>
+<p><b>Haldir</b> was an Elf of Lothlórien, probably a Silvan Elf, and a marchwarden who guarded the forest's northern borders.</p>
+<h4>History</h4>
+<p>Haldir was one of the Galadhrim; unlike his brothers, Rúmil and Orophin, Haldir had traveled outside Lórien and knew Westron. He and his companions are described as wearing grey hooded cloaks and living on flets in the trees.</p>
+<p>Haldir was accompanied by his brothers between 15 and 16 February, T.A. 3019[2] when they encountered the Fellowship of the Ring who arrived in Lórien. His brothers interacted little with the Fellowship because they spoke little of the Common Speech. He treated Gimli rather poorly due to bad relations between Elves and Dwarves. He made him go blindfolded through the wood until Galadriel said he did not have to.</p>
+<p>He had heard of Aragorn, but there is no indication that they had met before.[1] Haldir became their guide to the city of Caras Galadhon.</p>
+<p>After Celeborn and Galadriel had nourished their guests, and they were set to depart, Haldir led them to their Elven boats.</p>
+<h4>Etymology</h4>
+<p>Tolkien explained the name Haldir as Sindarin for 'Hidden Hero', though this Haldir refers to the (later omitted) son of Orodreth.</p>";
+
+            BioSourceUrl = "http://tolkiengateway.net/wiki/Haldir";
             ImageArtist = Artist.Sebastian_Giacobino;
 
             Alias("Marchwarden of Lórien");
