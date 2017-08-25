@@ -11,7 +11,8 @@ namespace HallOfBeorn.Models.LotR
     {
         Individual,
         Thing,
-        Group
+        Group,
+        Place
     }
 
     public class Character

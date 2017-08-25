@@ -5,10 +5,10 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Characters
 {
-    public class TheRohirrimGroup : CharacterGroup
+    public class RohanGroup : CharacterPlace
     {
-        public TheRohirrimGroup()
-            : base("The Rohirrim", "The People of Rohan")
+        public RohanGroup()
+            : base("Rohan", "Rohan")
         {
             Bio =
 @"<p><b>Rohan</b> was a Mannish kingdom on the northern borders of Gondor. It was the territory of the Rohirrim, a people of herdsmen and farmers. Well-known for their horses and cavalry, they were Gondor's most important ally.</p>

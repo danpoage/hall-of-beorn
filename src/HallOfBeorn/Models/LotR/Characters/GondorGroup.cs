@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Characters
 {
-    public class GondorGroup : CharacterGroup
+    public class GondorGroup : CharacterPlace
     {
         public GondorGroup()
             : base("Gondor", "The People of Gondor")

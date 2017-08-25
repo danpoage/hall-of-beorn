@@ -1174,6 +1174,7 @@ namespace HallOfBeorn.Models
         public static Artist Philip_Straub = new Artist { Name = "Philip Straub", URL = "https://philipstraub.deviantart.com" };
         public static Artist Piotr_Arendzikowski = new Artist { Name = "Piotr Arendzikowski", URL = "https://www.artstation.com/artist/wildheadache" };
         public static Artist Quinton_Hoover = new Artist { Name = "Quinton Hoover", URL = "https://en.wikipedia.org/wiki/Quinton_Hoover" };
+        public static Artist Sceith_A = new Artist { Name = "Sceith-A", URL = "https://sceith-a.deviantart.com" };
         public static Artist The_Brothers_Hildebrandt = new Artist { Name = "The Brothers Hildebrandt", URL = "http://www.brothershildebrandt.com" };
     }
 }

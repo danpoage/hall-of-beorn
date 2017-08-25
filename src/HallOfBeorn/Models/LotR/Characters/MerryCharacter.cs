@@ -66,6 +66,7 @@ During the following trip to Rivendell, Merry seemed to have a greater knowledge
             addFriend("Pippin", "Pippin");
             addFriend("Éowyn", "Eowyn");
 
+            addGroup("The Shire", "The-Shire");
             addGroup("The Fellowship", "The-Fellowship");
 
             addItem("Dagger of Westernesse", "Dagger-of-Westernesse-TBR");

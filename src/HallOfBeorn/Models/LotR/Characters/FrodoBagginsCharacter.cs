@@ -113,6 +113,7 @@ Frodo heard a sweet singing running in his mind: a song that seemed to come like
             addFriendCard("Farmer Maggot", "Farmer-Maggot-TBR");
             addFriendCard("Barliman Butterbur", "Barliman-Butterbur-TBR");
 
+            addGroup("The Shire", "The-Shire");
             addGroup("The Conspiracy");
             addGroup("The Council of Elrond", "The-Council-of-Elrond");
             addGroup("The Fellowship", "The-Fellowship");

@@ -104,6 +104,8 @@ namespace HallOfBeorn.Services.LotR
             add(new RangersOfIthilienGroup());
             add(new RivendellGroup());
             add(new RobinSmallburrowCharacter());
+            add(new RohanGroup());
+            add(new RosieCottonCharacter());
             add(new RumilCharacter());
             add(new SamGamgeeCharacter());
             add(new SarumanCharacter());
@@ -114,12 +116,13 @@ namespace HallOfBeorn.Services.LotR
             add(new TheGreyCompanyGroup());
             add(new TheodenCharacter());
             add(new TheOneRingThing());
-            add(new TheRohirrimGroup());
+            add(new TheShirePlace());
             add(new TheWhiteCouncilGroup());
             add(new TheodredCharacter());
             add(new ThorinOakenshieldCharacter());
             add(new ThorinsCompanyGroup());
             add(new TomBombadilCharacter());
+            add(new TomCottonCharacter());
             add(new TreebeardCharacter());
         }
 

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Characters
 {
-    public class RivendellGroup : CharacterGroup
+    public class RivendellGroup : CharacterPlace
     {
         public RivendellGroup()
             : base("Rivendell", "Rivendell")

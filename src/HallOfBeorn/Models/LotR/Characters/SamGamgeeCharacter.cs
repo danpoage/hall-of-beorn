@@ -65,10 +65,13 @@ namespace HallOfBeorn.Models.LotR.Characters
             BioSourceUrl = "http://tolkiengateway.net/wiki/Sam_Gamgee";
             ImageArtist = Artist.Magali_Villeneuve;
 
-            Alias("Samwise Gardner");
+            Alias("Samwise Gardener");
+            Alias("Banazîr");
 
             addFamily("Gaffer Gamgee (Father)");
+            addFamily("Rosie Cotton (Wife)", "Rosie-Cotton");
 
+            addGroup("The Shire", "The-Shire");
             addGroup("The Fellowship", "The-Fellowship");
 
             addFriend("Frodo Baggins", "Frodo-Baggins");

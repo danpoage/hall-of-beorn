@@ -31,6 +31,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             addFriend("Frodo Baggins", "Frodo-Baggins");
 
+            addGroup("The Shire", "The-Shire");
             addGroup("The Conspiracy");
 
             Card("Fatty-Bolger-TBR");

@@ -7,6 +7,9 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 {
     public class CharacterViewModel
     {
+        private const string characterImageBaseUrl = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Characters/";
+        private const string characterDetailBaseUrl = "/LotR/Characters/";
+
         public CharacterViewModel(Character character)
         {
             this.character = character;
@@ -26,7 +29,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         public string ArtistUrl { get { return character.ImageArtist.URL; } }
 
         public string ImageUrl { 
-            get { return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Characters/{0}.jpg", character.Slug); }
+            get { return string.Format("{0}{1}.jpg", characterImageBaseUrl, character.Slug); }
         }
 
         public IEnumerable<Link> Aliases { get { return character.Aliases; } } 
@@ -65,13 +68,19 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         }
 
         private readonly Dictionary<string, string> allCharacters = new Dictionary<string, string>();
+        private readonly Dictionary<string, string> allPlaces = new Dictionary<string, string>();
         private readonly Dictionary<string, string> allGroups = new Dictionary<string, string>();
 
-        public bool HasAllCharacters { get { return allCharacters.Count > 0; } } 
+        public bool IsListView { get { return allCharacters.Count > 0; } }
 
         public IEnumerable<KeyValuePair<string, string>> AllCharacters()
         {
             return allCharacters;
+        }
+
+        public IEnumerable<KeyValuePair<string, string>> AllPlaces()
+        {
+            return allPlaces;
         }
 
         public IEnumerable<KeyValuePair<string, string>> AllGroups()
@@ -82,13 +91,18 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         public void AddCharacters(IEnumerable<Character> characters)
         {
             foreach (var character in characters) {
-                var key = character.Name;
-                var value = string.Format("/LotR/Characters/{0}", character.Name.NormalizeCaseSensitiveString().ToUrlSafeString());
+                var url = characterDetailBaseUrl + character.Slug;
 
-                if (character.Type == CharacterType.Individual || character.Type == CharacterType.Thing) {
-                    allCharacters.Add(key, value);
-                } else if (character.Type == CharacterType.Group) {
-                    allGroups.Add(key, value);
+                switch (character.Type) {
+                    case CharacterType.Group:
+                        allGroups.Add(character.Name, url);
+                        break;
+                    case CharacterType.Place:
+                        allPlaces.Add(character.Name, url);
+                        break;
+                    default:
+                        allCharacters.Add(character.Name, url);
+                        break;
                 }
             }
         }

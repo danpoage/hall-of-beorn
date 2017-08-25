@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Characters
 {
-    public class LorienGroup : CharacterGroup
+    public class LorienGroup : CharacterPlace
     {
         public LorienGroup()
             : base("Lórien", "Lothlórien")

@@ -76,6 +76,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFriend("Beregond", "Beregond");
             addFriend("Bergil");
 
+            addGroup("The Shire", "The-Shire");
             addGroup("The Fellowship", "The-Fellowship");
 
             addItem("Dagger of Westernesse", "Dagger-of-Westernesse-TBR");

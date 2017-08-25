@@ -24,8 +24,8 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFriend("Sam Gamgee", "Sam-Gamgee");
             addFriend("Gaffer Gamgee");
 
-            addGroup("Hobbiton");
-            addGroup("Shirrif");
+            addGroup("The Shire", "The-Shire");
+            //addGroup("Shirrif");
 
             Card("Robin-Smallburrow-TDRu");
         }

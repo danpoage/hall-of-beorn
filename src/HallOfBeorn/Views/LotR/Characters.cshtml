@@ -8,7 +8,7 @@
     ViewBag.Title = @Model.Title;
 }
 
-@if (@Model.HasAllCharacters) {
+@if (@Model.IsListView) {
     <h2>Characters</h2>
     var firstLetter = string.Empty;
     foreach (var pair in @Model.AllCharacters()) {
@@ -19,6 +19,11 @@
         firstLetter = checkFirst;
         var charId = @pair.Key.Slugify();
         <div style="margin: 5px;"><a id="@charId" href="@pair.Value" title="@pair.Key">@pair.Key</a></div>
+    }
+    <h2>Places</h2>
+    foreach (var pair in @Model.AllPlaces()) {
+        var placeId = @pair.Key.Slugify();
+        <div style="margin: 5px;"><a id="@placeId" href="@pair.Value" title="@pair.Key">@pair.Key</a></div>
     }
     <h2>Groups</h2>
     foreach (var pair in @Model.AllGroups()) {

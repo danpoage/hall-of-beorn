@@ -34,7 +34,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFriend("Tom Bombadil", "Tom-Bombadil");
             addFriend("Frodo Baggins", "Frodo-Baggins");
             
-            addGroup("The Shire");
+            addGroup("The Shire", "The-Shire");
 
             Card("Famer-Maggot-TBR");
         }
