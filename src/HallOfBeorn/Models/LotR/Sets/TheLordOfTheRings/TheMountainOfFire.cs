@@ -34,12 +34,12 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
             addCard(LotRCard.Hero("Tom Cotton", string.Empty, Sphere.Tactics, 8, 1, 1, 3, 3)
                 .WithTraits("Hobbit.")
                 .WithText("While you are engaged with an enemy with an engagement cost higher than your threat, the first Hobbit ally you play each round does not require a resource match.\r\nResponse: After a Hobbit ally enters play, it gets +2 Attack until the end of the round.")
-                .WithInfo(4, 1, Artist.Unknown));
+                .WithInfo(4, 1, Artist.Nicholas_Gregory));
             addCard(LotRCard.Ally("Rosie Cotton", Sphere.Leadership, 2, 2, 0, 0, 2)
                 .WithUnique()
                 .WithTraits("Hobbit.")
                 .WithText("Action: Exhaust Rosie Cotton to choose a Hobbit hero and an attribute (Willpower, Attack, Defense). Add Rosie Cotton's Willpower to that hero's chosen attribute until the end of the phase. (Limit once per phase.)")
-                .WithInfo(5, 3, Artist.Unknown));
+                .WithInfo(5, 3, Artist.Gabriela_Birchal));
             addCard(LotRCard.Ally("Elfhelm", Sphere.Tactics, 4, 1, 2, 2, 3)
                 .WithUnique()
                 .WithTraits("Rohan.", "Warrior.")
@@ -58,6 +58,12 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("While Elladan is in play, Elrohir gets +2 Defense.\r\nResponse: After you optionally engage an Orc enemy, ready Elrohir.")
                 .WithFlavor("\"From the North we came with this purpose, and from Elrond our father we brought this very counsel.\"\r\n-The Return of the King")
                 .WithInfo(8, 3, Artist.Jason_Jenicke));
+            addCard(LotRCard.Event("Captains of the West", string.Empty, Sphere.Leadership, 3)
+                .WithText("Quest Action: Until the end of the phase, each Noble hero gets +1 Willpower and does not exhaust to commit to the quest.")
+                .WithInfo(9, 3, Artist.Igor_Artyomenko));
+            addCard(LotRCard.Event("Raise the Shire", string.Empty, Sphere.Tactics, 1)
+                .WithText("Response: After you engage an enemy, search the top 5 cards of your deck for a Hobbit ally and put it into play (search you entire deck instead if that enemy's engagement cost is higher than your threat). Shuffle your deck. At the end of the round, if that ally is still in play, return it to your hand.")
+                .WithInfo(10, 3, Artist.Nikolas_Hagialas));
             addCard(LotRCard.Attachment("Gúthwinë", string.Empty, Sphere.Leadership, 2)
                 .WithUnique()
                 .WithTraits("Item.", "Weapon.")
@@ -69,17 +75,11 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithTraits("Condition.")
                 .WithText("Attach to a Hobbit hero. Limit 2 copies of Friend of Friends in play.\r\nWhile another hero has Friend of Friends attached, attached hero gets +1 Willpower, +1 Attack, +1 Defense and +1 hit point.")
                 .WithFlavor("\"Come, Mr. Frodo!\" he cried, \"I can't carry it for you, but I can carry you and it as well\"\r\n-Sam Gamgee, The Return of the King")
-                .WithInfo(12, 3, Artist.Unknown));
+                .WithInfo(12, 3, Artist.Aleksander_Karcz));
             addCard(LotRCard.Attachment("Orc Disguise", string.Empty, Sphere.Fellowship, 1)
                 .WithTraits("Item.", "Armor.")
                 .WithText("Attach to the Ring-bearer. Limit 1 per hero.\r\nWhile an Orc is making an enagement check with you, it gets +5 engagement cost.\r\nResponse: After an Orc engages you, discard Orc Disguise. Until the end of the round, that enemy cannot attack you.")
-                .WithInfo(13, 3, Artist.Unknown));
-            addCard(LotRCard.Event("Captains of the West", string.Empty, Sphere.Leadership, 3)
-                .WithText("Quest Action: Until the end of the phase, each Noble hero gets +1 Willpower and does not exhaust to commit to the quest.")
-                .WithInfo(14, 3, Artist.Unknown));
-            addCard(LotRCard.Event("Raise the Shire", string.Empty, Sphere.Tactics, 1)
-                .WithText("Response: After you engage an enemy, search the top 5 cards of your deck for a Hobbit ally and put it into play (search you entire deck instead if that enemy's engagement cost is higher than your threat). Shuffle your deck. At the end of the round, if that ally is still in play, return it to your hand.")
-                .WithInfo(15, 3, Artist.Unknown));
+                .WithInfo(13, 3, Artist.Borja_Pindado));
         }
     }
 }
