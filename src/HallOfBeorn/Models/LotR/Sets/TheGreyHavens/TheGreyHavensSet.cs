@@ -453,22 +453,26 @@ namespace HallOfBeorn.Models.LotR.Sets.TheGreyHavens
                 .WithText("The last player gains controls of Na'asiyah.\r\nAction: While Na'asiyah is attacking or defending, spend 1 resource from her to give her +2 Attack or +2 Defense for this attack.\r\nAction: Spend 1 resource from a hero you control to place 1 resource on Na'asiyah. (Limit once per round).\r\nIf Na'asiyah leaves play, the players lose.")
                 .WithInfo(79, 1, Artist.Ilich_Henriquez));
             Cards.Add(LotRCard.ShipObjective("Dream-chaser", "The Dream-chaser's Fleet", 5, 4, 4, 18)
+                .WithUnique()
                 .WithSuffix("Ship-Objective")
                 .WithTraits("Grey Havens.", "Ship.")
                 .WithKeywords("Sentinel.")
                 .WithText("Immune to player card effects.\r\nThe Dream-chaser can always be committed to sailing tests (even if you are not the first player), and counts as 2 characters when committed to a Sailing test.\r\nIf the Dream-chaser is destroyed, the players lose the game.")
                 .WithInfo(80, 1, Artist.Nele_Klumpe));
             Cards.Add(LotRCard.ShipObjective("Dawn Star", "The Dream-chaser's Fleet", 3, 3, 4, 16)
+                .WithUnique()
                 .WithTraits("Gondor.", "Ship.")
                 .WithKeywords("Sentinel.")
                 .WithText("Immune to player card effects.\r\nRaise your starting threat by 3.\r\nDraw 1 additional card during the resource phase.\r\nIf the Dawn Star is destroyed, its controller is eliminated from the game.")
                 .WithInfo(81, 1, Artist.Titus_Lunter));
             Cards.Add(LotRCard.ShipObjective("Nárelenya", "The Dream-chaser's Fleet", 3, 3, 5, 15)
+                .WithUnique()
                 .WithTraits("Grey Havens.", "Ship.")
                 .WithKeywords("Sentinel.")
                 .WithText("Immune to player card effects.\r\nReduce the cost of the first ally you play each round by 1.\r\nIf the Nárelenya is destroyed, its controller is eliminated from the game.")
                 .WithInfo(82, 1, Artist.Nele_Klumpe));
             Cards.Add(LotRCard.ShipObjective("Silver Wing", "The Dream-chaser's Fleet", 2, 4, 2, 14)
+                .WithUnique()
                 .WithTraits("Gondor.", "Ship.")
                 .WithKeywords("Sentinel.", "Ranged.")
                 .WithText("Immune to player card effects.\r\nReduce your starting threat by 3.\r\nEach hero you control gets +1 Attack.\r\nIf the Silver Wing is destroyed, its controller is eliminated from the game.")

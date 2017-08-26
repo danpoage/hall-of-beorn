@@ -901,7 +901,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public bool HasSphere
         {
-            get { return _card.Sphere == Models.LotR.Sphere.Leadership || _card.Sphere == Models.LotR.Sphere.Tactics || _card.Sphere == Models.LotR.Sphere.Spirit || _card.Sphere == Models.LotR.Sphere.Lore || _card.Sphere == Models.LotR.Sphere.Mastery || _card.Sphere == Models.LotR.Sphere.Fellowship; }
+            get { return _card.Sphere == Models.LotR.Sphere.Leadership || _card.Sphere == Models.LotR.Sphere.Tactics || _card.Sphere == Models.LotR.Sphere.Spirit || _card.Sphere == Models.LotR.Sphere.Lore || _card.Sphere == Models.LotR.Sphere.Mastery || _card.Sphere == Models.LotR.Sphere.Fellowship || _card.Sphere == LotR.Sphere.Baggins; }
         }
 
         public bool HasEncounterSet

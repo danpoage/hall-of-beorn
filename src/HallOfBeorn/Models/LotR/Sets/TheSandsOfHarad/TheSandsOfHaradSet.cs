@@ -181,6 +181,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheSandsOfHarad
             addCard(LotRCard.ObjectiveHero("Kahliel", setLongArm, 2, 2, 2, 3)
                 .WithTraits("Harad.", "Noble.")
                 .WithText("Response: At the beginning of the planning phase, add 1 resource to a hero's pool.\r\nIf Kahliel leaves play, you are eliminated from the game.")
+                .WithTemplate("<p class='main-text'><b>Response:</b> At the beginning of the planning phase, add 1 resource to a hero's pool.<br><br><b>If {self} leaves play, you are eliminated from the game.</b></p>")
                 .WithInfo(31, 1, Artist.David_A_Nash));
             addCard(LotRCard.ObjectiveHero("Firyal", setLongArm, 3, 1, 2, 3)
                 .WithTraits("Harad.", "Scout.")

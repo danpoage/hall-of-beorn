@@ -478,8 +478,8 @@ namespace HallOfBeorn
         private static Dictionary<string, string> getNormalizeMap()
         {
             return new Dictionary<string, string> {
-                {"À", "A"}, {"Â", "A"}, {"Á", "A"}, {"Æ", "AE"}, {"Ǣ", "AE"}, {"Å", "A"},
-                {"à", "A"}, {"â", "A"}, {"á", "A"}, {"æ", "AE"}, {"ǣ", "AE"}, {"ā", "A"},
+                {"À", "A"}, {"Â", "A"}, {"Á", "A"}, {"Æ", "AE"}, {"Ǣ", "AE"}, {"Å", "A"}, {"Ä", "A"},
+                {"à", "A"}, {"â", "A"}, {"á", "A"}, {"æ", "AE"}, {"ǣ", "AE"}, {"ā", "A"}, {"ä", "A"},
 
                 {"Ç", "C"},
                 {"č", "C"},
@@ -527,8 +527,8 @@ namespace HallOfBeorn
         private static Dictionary<string, string> getCaseSensitiveNormalizeMap()
         {
             return new Dictionary<string, string> {
-                {"À", "A"}, {"Â", "A"}, {"Á", "A"}, {"Æ", "AE"}, {"Ǣ", "AE"}, {"Å", "A"},
-                {"à", "a"}, {"â", "a"}, {"á", "a"}, {"æ", "ae"}, {"ǣ", "ae"}, {"ā", "a"},
+                {"À", "A"}, {"Â", "A"}, {"Á", "A"}, {"Æ", "AE"}, {"Ǣ", "AE"}, {"Å", "A"}, {"Ä", "A"},
+                {"à", "a"}, {"â", "a"}, {"á", "a"}, {"æ", "ae"}, {"ǣ", "ae"}, {"ā", "a"}, {"ä", "a"},
 
                 {"Ç", "C"},
                 {"č", "c"},

@@ -385,7 +385,6 @@ namespace HallOfBeorn.Models.LotR
             {
                 CardType = CardType.Ship_Objective,
                 Title = title,
-                IsUnique = true,
                 Id = string.Empty,
                 EncounterSet = encounterSet,
                 Willpower = willpower,

@@ -365,21 +365,12 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 CardNumber = 46,
                 Artist = Artist.Tiziano_Baracchi
             });
+            addCard(LotRCard.Attachment("Song of Eärendil", string.Empty, Sphere.Spirit, 1)
+                .WithTraits("Song.")
+                .WithText("Attach to a Spirit hero.\r\nResponse: After ~Song of Eärendil enters play, draw 1 card.\r\nResponse: After another player raises his threat, raise your threat by 1 to reduce that player's threat by 1.")
+                .WithTemplate("<p>Attach to a {sphere:Spirit} hero.</p><p><b>Response:</b> After {self} enters play, draw 1 card.</p><p><b>Response:</b> After another player raises his threat, raise your threat by 1 to reduce that player's threat by 1.</p>")
+                .WithInfo(34, 3, Artist.K_R_Harris));
             Cards.Add(new LotRCard() {
-                Title = "Song of Eärendil",
-                Id = "51223bd0-ffd1-11df-a976-0801209c9026",
-                CardType = CardType.Attachment,
-                Sphere = Sphere.Spirit,
-                Traits = new List<string>() { "Song." },
-                Quantity = 3,
-                ResourceCost = 1,
-                Text = "Attach to a Spirit hero.\r\nResponse: After ~Song of Eärendil enters play, draw 1 card.\r\nResponse: After another player raises his threat, raise your threat by 1 to reduce that player's threat by 1.",
-                HtmlTemplate = "<p>Attach to a {sphere:Spirit} hero.</p><p><b>Response:</b> After {self} enters play, draw 1 card.</p><p><b>Response:</b> After another player raises his threat, raise your threat by 1 to reduce that player's threat by 1.</p>",
-                CardNumber = 34,
-                Artist = Artist.K_R_Harris
-            });
-            Cards.Add(new LotRCard() {
-                
                 Title = "The End Comes",
                 Id = "51223bd0-ffd1-11df-a976-0801209c9027",
                 CardType = CardType.Event,
