@@ -43,7 +43,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             addCard(LotRCard.Enemy("Necromancer of Carn Dûm", string.Empty, setName, 28, 2, 254, 3, 3)
                 .WithTraits("Sorcerer.")
                 .WithText("Forced: When Necromancer of Carn Dûm would attack you, instead reanimate the top card of your deck and deal it each of the Necromancer of Carn Dûm's shadow cards.")
-                .WithInfo(3, 2, Artist.Sara_Biddle));
+                .WithInfo(3, 3, Artist.Sara_Biddle));
             addCard(LotRCard.Location("Inner Sanctum", string.Empty, setName, 6, 4)
                 .WithTraits("Carn Dûm.", "Underground.")
                 .WithText("Progress cannot be placed on Inner Sanctum while it is in the staging area.\r\nTravel: Discard the top 3 cards of the encounter deck. Resolve the 'when revealed' effects of each Sorcery card discarded by this effect.")
@@ -52,18 +52,18 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithTraits("Carn Dûm.", "Underground.")
                 .WithText("While Cursed Halls is in the staging area, Sorcery attachments are immune to player card effects.")
                 .WithShadow("Shadow: Until the end of the phase, attacking enemy gets +1 Attack and +1 Defense for each Reanimated Dead engaged with you.")
-                .WithInfo(5, 2, Artist.Federico_Musetti));
+                .WithInfo(5, 3, Artist.Federico_Musetti));
             addCard(LotRCard.Treachery("Power Beyond Death", string.Empty, setName)
                 .WithTraits("Sorcery.")
                 .WithKeywords("Surge.")
                 .WithText("When Revealed: Attach to the main quest. (Counts as a Condition attachment with the text: \"Daechanar gets +2 Defense.\")")
                 .WithShadow("Shadow: If this attack destroys a character, resolve this card's 'when revealed' effect.")
-                .WithInfo(6, 2, Artist.JB_Casacop));
+                .WithInfo(6, 3, Artist.JB_Casacop));
             addCard(LotRCard.Treachery("Daechanar's Curse", string.Empty, setName)
                 .WithTraits("Sorcery.")
                 .WithKeywords("Surge.")
                 .WithText("When Revealed: Attach Daechanar's Curse to the top of the first player's deck. (Counts as a Condition attachment with the text: \"The next time a player would draw 1 or more cards from attached deck, reanimate those cards instead. Then, discard Daechanar's Curse.\")")
-                .WithInfo(7, 2, Artist.Jokubas_Uoginitas));
+                .WithInfo(7, 3, Artist.Jokubas_Uoginitas));
             addCard(LotRCard.Treachery("All is Lost", string.Empty, setName)
                 .WithTraits("Sorcery.")
                 .WithText("When Revealed: Attach All is Lost to the first player's threat dial. (Counts as a Condition attachment with the text: \"Each time you attack a Reanimated Dead, raise your threat by 1.\")")
