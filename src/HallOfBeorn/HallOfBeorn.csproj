@@ -321,6 +321,7 @@
     <Compile Include="Models\LotR\Products\AdventurePack\TheDungeonsOfCirithGuratProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheLandOfShadowNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheLostRealmNightmareProduct.cs" />
+    <Compile Include="Models\LotR\Products\PrintOnDemand\AssaultOnDolGuldurProduct.cs" />
     <Compile Include="Models\LotR\Products\Saga\TheMountainOfFireProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheTreacheryOfRhudaurNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheTreasonOfSarumanNightmareProduct.cs" />
@@ -336,6 +337,7 @@
     <Compile Include="Models\LotR\Scenarios\Haradrim\TheMumakil.cs" />
     <Compile Include="Models\LotR\Scenarios\TheSandsOfHarad\TheSandsOfHaradScenario.cs" />
     <Compile Include="Models\LotR\Sets\AngmarAwakened\AcrossTheEttenmoorsNightmare.cs" />
+    <Compile Include="Models\LotR\Sets\PrintOnDemand\AssaultOnDolGuldurSet.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\BreakingOfTheFellowshipNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\HelmsDeepNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\JourneyToTheCrossRoadsNightmareSet.cs" />

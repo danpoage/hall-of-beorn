@@ -18,6 +18,7 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
             AddProduct(Product.TheRuinsOfBelegost);
             AddProduct(Product.MurderAtThePrancingPony);
             AddProduct(Product.TheSiegeOfAnnuminas);
+            AddProduct(Product.AssaultOnDolGuldur);
         }
     }
 }
