@@ -192,10 +192,15 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithText("When Revealed: Each player deals 1 damage to a hero he controls. If that hero is questing, remove it from the quest. Until the end of the round, treat each damaged character's text box as if it were blank (except for Traits).")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the defender is damaged).")
                 .WithInfo(32, 3, Artist.Andreia_Ugrai));
-            Cards.Add(LotRCard.Hero("Boromir", "", Sphere.Tactics, 11, 1, 3, 2, 5)
+            addCard(LotRCard.Hero("Boromir", string.Empty, Sphere.Tactics, 11, 1, 3, 2, 5)
                 .WithTraits("Gondor.", "Noble.", "Warrior.")
                 .WithText("Action: Raise your threat by 1 to ready Boromir.\r\nAction: Discard Boromir to deal 2 damage to each enemy engaged with a single player.")
                 .WithInfo(95, 1, Artist.Aurore_Folay));
+            addCard(LotRCard.Hero("Faramir", string.Empty, Sphere.Leadership, 11, 2, 2, 2, 5)
+                .WithTraits("Gondor.", "Noble.", "Ranger.")
+                .WithKeywords("Ranged.")
+                .WithText("Response: After you engage an enemy, ready an ally you control. (Limit once per phase.)")
+                .WithInfo(2, 1, Artist.Aurore_Folay));
         }
     }
 }
