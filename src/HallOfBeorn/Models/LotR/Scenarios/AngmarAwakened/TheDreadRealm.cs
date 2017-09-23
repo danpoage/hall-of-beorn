@@ -17,6 +17,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/angmar-awakened-quest-the-dread-realm.html";
 
             AddEncounterSet(EncounterSet.TheDreadRealm);
+            AddEncounterSet(EncounterSet.TheDreadRealmNightmare);
             AddEncounterSet(EncounterSet.DarkSorcery);
             AddEncounterSet(EncounterSet.CursedDead);
 
@@ -32,6 +33,13 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             ExcludeFromEasyMode("Tombs-of-Carn-Dum-TDR", 3);
             ExcludeFromEasyMode("Possession-TDR", 2);
             ExcludeFromEasyMode("Death-and-Calamity-TDR", 2);
+
+            ExcludeFromNightmareMode("Witch-of-Angmar-TDR", 3);
+            ExcludeFromNightmareMode("A-Fell-Dread-TDR", 2);
+            ExcludeFromNightmareMode("Unholy-Crypt-TDR", 1);
+            ExcludeFromNightmareMode("Sinister-Dungeon-TDR", 1);
+            ExcludeFromNightmareMode("Dead-Lord-TLR", 2);
+            ExcludeFromNightmareMode("Terror-of-the-North-TLR", 3);
         }
     }
 }

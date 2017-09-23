@@ -40,6 +40,24 @@ Remove the following cards, in the specified quantities, from the standard encou
 Then, shuffle the encounter cards in this Nightmare Deck into the remainder of the standard The Wasts of Eriador encounter deck.
 
 Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.")
+                .WithTemplate2(
+@"<p>Begin with the standard quest deck and encounter deck for The Wastes of Eriador scenario.</p>
+<p>Remove the following cards, in the specified quantities, from the standard encounter deck:</p>
+<ul style='list-style-type:none'><b>
+<li>2x Northern Warg</li>
+<li>1x White Warg</li>
+<li>1x Sudden Darkness</li>
+<li>1x North Downs</li>
+<li>2x Eriador Wastes</li>
+<li>1x Cold from Angmar</li>
+<li>3x Biting Wind</li>
+<li>1x Freezing Blast</li>
+<li>1x Shrouded Hills</li>
+<li>3x Rugged Country</li>
+<li>2x Pressing Needs</li>
+</b></ul>
+<p>Then, shuffle the encounter cards in this Nightmare Deck into the remainder of the standard The Wasts of Eriador encounter deck.</p>
+<p>Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.</p>")
                 .WithInfo(1, 1, Artist.Guillaume_Ducos));
             addCard(LotRCard.Enemy("Pack Hunters", string.Empty, setName, 45, 3, 2, 1, 3)
                 .WithTraits("Creature.", "Warg.")

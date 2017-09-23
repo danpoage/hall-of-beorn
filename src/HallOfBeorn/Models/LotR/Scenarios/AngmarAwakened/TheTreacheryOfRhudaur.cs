@@ -14,6 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             AddEncounterSet(EncounterSet.CursedDead);
             AddEncounterSet(EncounterSet.RuinsOfArnor);
             AddEncounterSet(EncounterSet.TheTreacheryOfRhudaur);
+            AddEncounterSet(EncounterSet.TheTreacheryOfRhudaurNightmare);
 
             AddQuestCardId("Secrets-of-Rhudaur-TToR");
             AddQuestCardId("Thaurdir's-Pursuit-TToR");
@@ -28,6 +29,12 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             ExcludeFromEasyMode("Ghostly-Ruins-TToR", 2);
             ExcludeFromEasyMode("Traitorous-Wight-TToR", 1);
 
+            ExcludeFromNightmareMode("Decrepit-Remains-TToR", 2);
+            ExcludeFromNightmareMode("Eerie-Halls-TToR", 2);
+            ExcludeFromNightmareMode("Dark-Covenant-TToR", 1);
+            ExcludeFromNightmareMode("Ruins-of-Arnor-TLR", 2);
+            ExcludeFromNightmareMode("Tragic-Discovery-TLR", 2);
+            ExcludeFromNightmareMode("Cursed-Dead-TLR", 5);
         }
     }
 }

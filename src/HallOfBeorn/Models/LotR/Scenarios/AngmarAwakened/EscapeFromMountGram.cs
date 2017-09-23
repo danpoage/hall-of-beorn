@@ -13,6 +13,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
 
             AddEncounterSet(EncounterSet.AngmarOrcs);
             AddEncounterSet(EncounterSet.EscapeFromMountGram);
+            AddEncounterSet(EncounterSet.EscapeFromMountGramNightmare);
 
             AddQuestCardId("Unexpected-Rescue-EfMG");
             AddQuestCardId("Gornakh's-Dungeons-EfMG");
@@ -24,6 +25,12 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             ExcludeFromEasyMode("Goblin-Tormentor-EfMG", 2);
             ExcludeFromEasyMode("Sound-the-Alarm-EfMG", 1);
 
+            ExcludeFromNightmareMode("Prison-Cell-EfMG", 4);
+            ExcludeFromNightmareMode("Dungeon-Guard-EfMG", 3);
+            ExcludeFromNightmareMode("Jailor-Gornakh-EfMG", 1);
+            ExcludeFromNightmareMode("Interrogation-EfMG", 2);
+            ExcludeFromNightmareMode("Goblin-Tormentor-EfMG", 1);
+            ExcludeFromNightmareMode("Cruel-Torturer-EfMG", 1);
         }
     }
 }

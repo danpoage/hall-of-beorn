@@ -22,7 +22,25 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
 
             addCard(LotRCard.NightmareSetup(setName, setName)
                 .WithText("You are playing Nightmare mode.\r\nSetup: Set the Sift through the Debris, Decipher Ancient Texts and Quiet the Spirits encounter sets aside, out of play. These sets are indicated by the following icons, respectively:\r\n\r\nForced: After you advance to stage 2b, for each of the above sidequests that was not defeated, shuffle the encounter set that matches its title into the encounter deck, and shuffle the encounter discard pile into the encounter deck.")
-                .WithOppositeText("Begin with the standard quest deck and encounter deck for The Treachery of Rhudaur scenario.\r\n\r\nRemove the following cards, in the specified quantities, from the standard encounter deck:\r\n\r\n2x Decrepit Ramains\r\n2x Eerie Halls\r\n1x ~Dark Covenant\r\n2x ~Ruins of ~Arnor\r\n2x Tragic Discovery\r\n5x Cursed Dead\r\n\r\nThen, shuffle the encounter cards in this Nightmare ~Deck into the remainder of the standard The Treachery of Rhudaur encounter deck.\r\n\r\nFinally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.")
+                .WithTemplate(
+@"<p>You are playing Nightmare mode.</p>
+<p><b>Setup:</b> Set the Sift through the Debris, Decipher Ancient Texts and Quiet the Spirits encounter sets aside, out of play. These sets are indicated by the following icons, respectively:</p>
+<div style='text-align:center'><img src='https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/The-Treachery-of-Rhudaur-Nightmare/Sift-through-the-Debris.png' style='margin:2px 12px 2px 12px;height:30xp;width:30px;'/><img src='https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/The-Treachery-of-Rhudaur-Nightmare/Decipher-Ancient-Texts.png' style='margin:2px 12px 2px 12px;height:30xp;width:30px;'/><img src='https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/The-Treachery-of-Rhudaur-Nightmare/Quiet-the-Spirits.png' style='margin:2px 12px 2px 12px;height:30xp;width:30px;'/></div>
+<p><b>Forced:</b> After you advance to stage 2b, for each of the above sidequests that was not defeated, shuffle the encounter set that matches its title into the encounter deck, and shuffle the encounter discard pile into the encounter deck.</p>")
+                .WithOppositeText("Begin with the standard quest deck and encounter deck for The Treachery of Rhudaur scenario.\r\n\r\nRemove the following cards, in the specified quantities, from the standard encounter deck:\r\n\r\n2x Decrepit Remains\r\n2x Eerie Halls\r\n1x ~Dark Covenant\r\n2x ~Ruins of ~Arnor\r\n2x Tragic Discovery\r\n5x Cursed Dead\r\n\r\nThen, shuffle the encounter cards in this Nightmare ~Deck into the remainder of the standard The Treachery of Rhudaur encounter deck.\r\n\r\nFinally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.")
+                .WithTemplate2(
+@"<p>Begin with the standard quest deck and encounter deck for The Treachery of Rhudaur scenario.</p>
+<p>Remove the following cards, in the specified quantities, from the standard encounter deck:</p>
+<ul style='list-style-type: none;'><b>
+<li>2x Decrepit Remains</li>
+<li>2x Eerie Halls</li>
+<li>1x Dark Covenant</li>
+<li>2x Ruins of Arnor</li>
+<li>2x Tragic Discovery</li>
+<li>5x Cursed Dead</li>
+</b></ul>
+<p>Then, shuffle the encounter cards in this Nightmare Deck into the remainder of the standard The Treachery of Rhudaur encounter deck.</p>
+<p>Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.</p>")
                 .WithInfo(1, 1, Artist.Unknown));
             addCard(LotRCard.Enemy("Thaurdir's Hunter", string.Empty, setName, 16, 2, 2, 1, 6)
                 .WithTraits("Undead.")

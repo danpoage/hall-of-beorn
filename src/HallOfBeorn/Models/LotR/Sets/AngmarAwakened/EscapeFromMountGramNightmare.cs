@@ -19,10 +19,10 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
             Number = 2076;
 
             addCard(LotRCard.NightmareSetup(setName, setName)
-                .WithText("You are playing Nightmare mode.\r\nForced: After choosing a starting hero and randomly setting another hero aside facedown, instead of the standard captured deck setup, shuffle any remaining heroes into your captured deck, then place the facedown set aside hero on the bottom of your captured deck.\r\nThe player cannot win the game while a hero is captured (underneath an encounter card, or in their captured deck).")
+                .WithText("You are playing Nightmare mode.\r\nForced: After choosing a starting hero and randomly setting another hero aside facedown, instead of the standard captured deck setup, shuffle any remaining heroes into your captured deck, then place the facedown set aside hero on the bottom of your captured deck.\r\nThe players cannot win the game while a hero is captured (underneath an encounter card, or in their captured deck).")
                 .WithFlavor("\"Slash them! Beat them! Bite them! Gnash them! Take them away to dark holes full of snakes, and never let them see the light again!\"\r\n-The Great Goblin, The Hobbit")
                 .WithOppositeText(
-@"Begin with the standard quest deck and encounter deck for the Escape from ~Mount ~Gram scenario.
+@"Begin with the standard quest deck and encounter deck for the ~Escape from ~Mount ~Gram scenario.
 
 Remove the following cards, in the specified quantities, from the standard encounter deck:
 
@@ -38,6 +38,20 @@ Then, shuffle the encounter cards in this Nightmare Deck into the remainder of t
 Note: This Nightmare Deck includes a card for the Angmar Orcs encounter set, Orc of Thaurdir. During setup, this card should be set aside along with the rest of the Angmar Orcs encounter set.
 
 Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.")
+                .WithTemplate2(
+@"<p>Begin with the standard quest deck and encounter deck for the Escape from Mount Gram scenario.</p>
+<p>Remove the following cards, in the specified quantities, from the standard encounter deck:</p>
+<ul style='list-style-type:none'><b>
+<li>4x Prison Cell</li>
+<li>3x Dungeon Guard</li>
+<li>1x Jailor Gornákh</li>
+<li>2x Interrogation</li>
+<li>1x Goblin Tormentor</li>
+<li>1x Cruel Torturer</li>
+<b></ul>
+<p>Then, shuffle the encounter cards in this Nightmare Deck into the remainder of the standard Escape from Mount Gram encounter deck.</p>
+<p><b>Note:</b> This Nightmare Deck includes a card for the Angmar Orcs encounter set, Orc of Thaurdir. During setup, this card should be set aside along with the rest of the Angmar Orcs encounter set.</p>
+<p>Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.</p>")
                 .WithInfo(1, 1, Artist.Guillaume_Ducos));
             addCard(LotRCard.Enemy("Jailor Gornákh", string.Empty, setName, 45, 4, 5, 5, 14)
                 .WithUnique()

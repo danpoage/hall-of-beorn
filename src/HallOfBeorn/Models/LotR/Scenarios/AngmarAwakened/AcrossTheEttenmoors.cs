@@ -12,10 +12,12 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/angmar-awakened-quest-across-the-ettenmoors.html";
 
             AddEncounterSet(EncounterSet.AcrossTheEttenmoors);
+            AddEncounterSet(EncounterSet.AcrossTheEttenmoorsNightmare);
             AddEncounterSet(EncounterSet.EriadorWilds);
             AddEncounterSet(EncounterSet.FoulWeather);
 
             AddQuestCardId("Into-the-Ettenmoors-AtE");
+            AddQuestCardId("Into-the-Ettenmoors-AtEN");
             AddQuestCardId("A-Miserable-Journey-AtE");
             AddQuestCardId("Journey's-End-AtE");
 
@@ -30,6 +32,13 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             ExcludeFromEasyMode("Cold-from-Angmar-TLR", 1);
             ExcludeFromEasyMode("Freezing-Blast-TLR", 1);
 
+            ExcludeFromNightmareMode("Into-the-Ettenmoors-AtE", 1);
+            ExcludeFromNightmareMode("Shrouded-Hills-TLR", 2);
+            ExcludeFromNightmareMode("No-Rest-AtE", 3);
+            ExcludeFromNightmareMode("Arador's-Bane-AtE", 2);
+            ExcludeFromNightmareMode("Troll-fells-AtE", 1);
+            ExcludeFromNightmareMode("Goblin-Pursuer-AtE", 2);
+            ExcludeFromNightmareMode("Cold-from-Angmar-TLR", 2);
         }
     }
 }

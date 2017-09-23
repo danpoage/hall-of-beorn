@@ -17,6 +17,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/angmar-awakened-quest-the-battle-of-carn-dum.html";
 
             AddEncounterSet(EncounterSet.TheBattleOfCarnDum);
+            AddEncounterSet(EncounterSet.TheBattleOfCarnDumNightmare);
             AddEncounterSet(EncounterSet.AngmarOrcs);
             AddEncounterSet(EncounterSet.DarkSorcery);
 
@@ -32,6 +33,15 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             ExcludeFromEasyMode("Fortress-Walls-TBoCD", 2);
             ExcludeFromEasyMode("The-Sky-Darkens-TBoCD", 2);
             ExcludeFromEasyMode("Daechanar's-Will-TBoCD", 1);
+
+            ExcludeFromNightmareMode("Vile-Afflication-TBoCD", 1);
+            ExcludeFromNightmareMode("Furious-Charge-TBoCD", 1);
+            ExcludeFromNightmareMode("Orc-Ambush-TLR", 1);
+            ExcludeFromNightmareMode("Angmar-Orc-TLR", 1);
+            ExcludeFromNightmareMode("Angmar-Marauder-TLR", 3);
+            ExcludeFromNightmareMode("Terror-of-the-North-TBoCD", 3);
+            ExcludeFromNightmareMode("Accursed-Battlefield-TBoCD", 2);
+            ExcludeFromNightmareMode("Blight-of-Carn-Dum-TBoCD", 1);
         }
     }
 }
