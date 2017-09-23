@@ -33,6 +33,17 @@ Remove the following cards, in the specified quantities, from the standard encou
 Then, shuffle the encounter cards in this Nightmare Deck into the remainder of the standard Deadmen's Dike encounter deck.
 
 Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.")
+                .WithTemplate2(
+@"<p>Begin with the standard quest deck and encounter deck for the Deadmen's Dike scenario.</p>
+<p>Remove the following cards, in the specified quantities, from the standard encounter deck:</p>
+<ul style='list-style-type:none'><b>
+<li>2x Fornost Square</li>
+<li>3x Broken Battlements</li>
+<li>2x Norbury Tombs</li>
+<li>2x Restless Evil</li>
+</b></ul>
+<p>Then, shuffle the encounter cards in this Nightmare Deck into the remainder of the standard Deadmen's Dike encounter deck.</p>
+<p>Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.</p>")
                 .WithInfo(19, 1, Artist.Guillaume_Ducos));
             addCard(LotRCard.Enemy("Undead Horde", string.Empty, setName, 34, 4, 6, 3, 8)
                 .WithTraits("Undead.")

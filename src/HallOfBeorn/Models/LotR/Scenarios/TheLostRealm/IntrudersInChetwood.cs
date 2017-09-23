@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLostRealm
             AddEncounterSet(EncounterSet.EriadorWilds);
             AddEncounterSet(EncounterSet.Iarion);
             AddEncounterSet(EncounterSet.IntrudersInChetwood);
+            AddEncounterSet(EncounterSet.IntrudersInChetwoodNightmare);
 
             AddQuestCardId("Stop-the-War-Party-TLR");
 
@@ -30,6 +31,15 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLostRealm
             ExcludeFromEasyMode("Sudden-Assault-TLR", 2);
             ExcludeFromEasyMode("Surprising-Speed-TLR", 1);
 
+            ExcludeFromNightmareMode("Angmar-Orc-TLR", 1);
+            ExcludeFromNightmareMode("Angmar-Marauder-TLR", 3);
+            ExcludeFromNightmareMode("Chetwood-Forest-TLR", 2);
+            ExcludeFromNightmareMode("Outlying-Homestead-TLR", 1);
+            ExcludeFromNightmareMode("Borders-of-Bree-land-TLR", 2);
+            ExcludeFromNightmareMode("Rugged-Country-TLR", 1);
+            ExcludeFromNightmareMode("Shrouded-Hills-TLR", 1);
+            ExcludeFromNightmareMode("Surprising-Speed-TLR", 3);
+            ExcludeFromNightmareMode("Sudden-Assault-TLR", 2);
         }
     }
 }

@@ -17,7 +17,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLostRealm
             Number = 2073;
 
             addCard(LotRCard.NightmareSetup(setName, setName)
-                .WithText("You are playing Nightmare mode.\r\nSetup: Shuffle each copy of Captive Villager and Rearguard Ambusher into the Orc deck.\r\nThe players cannot win the game while a Captive Villager is guarded by an encounter card. If a Captive Villager leaves play, the players lose the game.")
+                .WithText("You are playing Nightmare mode.\r\nSetup: Shuffle each copy of ~Captive Villager and Rearguard Ambusher into the ~Orc deck.\r\nThe players cannot win the game while a Captive Villager is guarded by an encounter card. If a Captive Villager leaves play, the players lose the game.")
                 .WithFlavor("The land before them began to rise again, Away in the distance eastward they could not see a line of hills.\r\n-The Fellowship of the Ring")
                 .WithOppositeText(
 @"Begin with the standard quest deck and encounter deck for The ~Weather Hills scenario.
@@ -35,6 +35,20 @@ Remove the following cards, in the specified quantities, from the standard encou
 Then, shuffle the encounter cards in this Nightmare Deck into the remainder of the standard The Weather Hills encounter deck.
 
 Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.")
+                .WithTemplate2(
+@"<p>Begin with the standard quest deck and encounter deck for The Weather Hills scenario.</p>
+<p>Remove the following cards, in the specified quantities, from the standard encounter deck:</p>
+<ul style='list-style-type:none'><b>
+<li>3x Cornered Orc</li>
+<li>3x Sheltered Valley</li>
+<li>1x Concealed Orc-camp</li>
+<li>1x Angmar Marauder</li>
+<li>2x Angmar Orc</li>
+<li>3x Ruins of Arnor</li>
+<li>2x Tragic Discovery</li>
+</b></ul>
+<p>Then, shuffle the encounter cards in this Nightmare Deck into the remainder of the standard The Weather Hills encounter deck.</p>
+<p>Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.</p>")
                 .WithInfo(11, 1, Artist.Juan_Carlos_Barquet));
             addCard(LotRCard.ObjectiveAlly("Captive Villager", string.Empty, setName, 0, 0, 1, 2)
                 .WithTraits("Bree.")

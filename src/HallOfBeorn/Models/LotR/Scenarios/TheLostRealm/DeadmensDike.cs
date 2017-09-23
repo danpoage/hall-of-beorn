@@ -14,6 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLostRealm
             AddEncounterSet(EncounterSet.CursedDead);
             AddEncounterSet(EncounterSet.DarkSorcery);
             AddEncounterSet(EncounterSet.DeadmensDike);
+            AddEncounterSet(EncounterSet.DeadmensDikeNightmare);
             AddEncounterSet(EncounterSet.Iarion);
 
             AddQuestCardId("The-Shades-of-Angmar-TLR");
@@ -27,6 +28,11 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLostRealm
             ExcludeFromEasyMode("Haunted-Keep-TLR", 1);
             ExcludeFromEasyMode("Thaurdir's-Damned-TLR", 2);
             ExcludeFromEasyMode("Unnatural-Fog-TLR", 1);
+
+            ExcludeFromNightmareMode("Fornost-Square-TLR", 2);
+            ExcludeFromNightmareMode("Broken-Battlements-TLR", 3);
+            ExcludeFromNightmareMode("Norbury-Tombs-TLR", 2);
+            ExcludeFromNightmareMode("Restless-Evil-TLR", 2);
         }
     }
 }
