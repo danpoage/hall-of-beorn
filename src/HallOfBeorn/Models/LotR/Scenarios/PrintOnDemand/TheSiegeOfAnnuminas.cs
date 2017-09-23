@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             GroupName = "GenCon";
             Number = 7;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/print-on-demand-quest-the-siege-of-annuminas.html";
+
             AddEncounterSet(EncounterSet.TheSiegeOfAnnuminas);
 
             AddQuestCardId("Rebuild-the-Defenses-TSoA");
