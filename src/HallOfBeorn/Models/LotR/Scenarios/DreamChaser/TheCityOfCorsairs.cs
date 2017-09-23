@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DreamChaser
             GroupName = "Dream-chaser";
             Number = 6;
 
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/the-dream-chaser-quest-the-city-of-corsairs.html";
+
             AddEncounterSet(EncounterSet.TheCityOfCorsairs);
             AddEncounterSet(EncounterSet.CoastOfUmbar);
             AddEncounterSet(EncounterSet.CorsairRaiders);

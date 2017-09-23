@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheSandsOfHarad
             GroupName = "The Sands of Harad";
             Number = 3;
 
-            //QuestCompanionUrl = "";
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/sands-of-harad-quest-the-long-arm-of-mordor.html";
 
             AddEncounterSet(EncounterSet.TheLongArmOfMordor);
             AddEncounterSet(EncounterSet.MordorOrcs);

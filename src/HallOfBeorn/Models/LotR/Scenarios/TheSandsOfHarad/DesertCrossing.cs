@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheSandsOfHarad
             GroupName = "The Sands of Harad";
             Number = 2;
 
-            //QuestCompanionUrl = "";
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/sands-of-harad-quest-desert-crossing.html";
 
             AddEncounterSet(EncounterSet.DesertCrossing);
             AddEncounterSet(EncounterSet.DesertCreatures);

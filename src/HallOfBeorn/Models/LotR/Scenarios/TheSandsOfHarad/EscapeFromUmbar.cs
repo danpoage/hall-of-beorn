@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheSandsOfHarad
             GroupName = "The Sands of Harad";
             Number = 1;
 
-            //QuestCompanionUrl = "";
+            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/sands-of-harad-quest-escape-from-umbar.html";
 
             AddEncounterSet(EncounterSet.EscapeFromUmbar);
             AddEncounterSet(EncounterSet.HaradTerritory);
