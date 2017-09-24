@@ -609,6 +609,7 @@ namespace HallOfBeorn.Models
             //The Mountain of Fire
             all.Add(Artist.Borja_Pindado);
             all.Add(Artist.Gabriela_Birchal);
+            all.Add(Artist.Sebastian_Rodriguez);
 
             //Arkham Horrom Core
             //all.Add(Artist.Vincent_Dutrait);
@@ -792,6 +793,7 @@ namespace HallOfBeorn.Models
         public static Artist Sasha_Jones = new Artist { Name = "Sasha Jones", URL = "http://sasharjones.deviantart.com" };
         public static Artist Sattarov = new Artist { Name = "Sattarov", URL = "http://sattarov.deviantart.com" };
         public static Artist Saturnoarg = new Artist { Name = "saturnoarg", URL = "http://saturnoarg.deviantart.com" };
+        public static Artist Sebastian_Rodriguez = new Artist { Name = "Sebastian Rodriguez", URL = "https://www.artstation.com/shevi1437" };
         public static Artist Sergey_Glushakov = new Artist { Name = "Sergey Glushakov", URL = "https://www.google.com/search?q=Sergey+Glushakov+Art" };
         public static Artist Sergey_Musin = new Artist { Name = "Sergey Musin", URL = "http://www.samfx.com" };
         public static Artist Silvery = new Artist { Name = "Silvery", URL = "http://silvery.deviantart.com" };
