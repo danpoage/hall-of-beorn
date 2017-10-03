@@ -544,6 +544,11 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet TheSiegeOfGondor = new EncounterSet { Name = "The Siege of Gondor", Set = "The Flame of the West" };
         public static EncounterSet TheBattleOfThePelennorFields = new EncounterSet { Name = "The Battle of the Pelennor Fields", Set = "The Flame of the West" };
 
+        //The Lord of the Rings: The Mountain of Fire
+        public static EncounterSet TheTowerOfCirithUngol = new EncounterSet { Name = "The Tower of Cirith Ungol", Set = "The Mountain of Fire" };
+        public static EncounterSet OrcsOfMordor = new EncounterSet { Name = "Orcs of Mordor", Set = "The Mountain of Fire" };
+        public static EncounterSet DeepShadows = new EncounterSet { Name = "Deep Shadows", Set = "The Mountain of Fire" };
+
         //Gen Con and Fellowship Decks
         public static EncounterSet TheMassingAtOsgiliath = new EncounterSet { Name = "The Massing at Osgiliath", Set = "The Massing at Osgiliath" };
         public static EncounterSet TheBattleOfLakeTown = new EncounterSet { Name = "The Battle of Lake-town", Set = "The Battle of Lake-town" };
