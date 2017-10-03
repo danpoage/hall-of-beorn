@@ -548,6 +548,7 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet TheTowerOfCirithUngol = new EncounterSet { Name = "The Tower of Cirith Ungol", Set = "The Mountain of Fire" };
         public static EncounterSet OrcsOfMordor = new EncounterSet { Name = "Orcs of Mordor", Set = "The Mountain of Fire" };
         public static EncounterSet DeepShadows = new EncounterSet { Name = "Deep Shadows", Set = "The Mountain of Fire" };
+        public static EncounterSet TheBlackGateOpens = new EncounterSet { Name = "The Black Gate Opens", Set = "The Mountain of Fire" };
 
         //Gen Con and Fellowship Decks
         public static EncounterSet TheMassingAtOsgiliath = new EncounterSet { Name = "The Massing at Osgiliath", Set = "The Massing at Osgiliath" };
