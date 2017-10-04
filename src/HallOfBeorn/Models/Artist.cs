@@ -610,6 +610,7 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Borja_Pindado);
             all.Add(Artist.Gabriela_Birchal);
             all.Add(Artist.Sebastian_Rodriguez);
+            all.Add(Artist.Audrey_Hotte);
 
             //Arkham Horrom Core
             //all.Add(Artist.Vincent_Dutrait);
@@ -653,6 +654,7 @@ namespace HallOfBeorn.Models
         public static Artist Arman_Akopian = new Artist { Name = "Arman Akopian", URL = "http://i-guyjin-i.deviantart.com/gallery" };
         public static Artist Ashley_Lange = new Artist { Name = "Ashley Lange", URL = "http://ashlelang.tumblr.com" };
         public static Artist Atomhawk = new Artist { Name = "Atomhawk", URL = "http://www.atomhawk.com" };
+        public static Artist Audrey_Hotte = new Artist { Name = "Audrey Hotte", URL = "https://www.artstation.com/ayhotte" };
         public static Artist Ben_Daugherty = new Artist { Name = "Ben Daugherty", URL = "https://www.google.com/search?q=Ben+Daugherty+Art" };
         public static Artist Blaz_Porenta = new Artist { Name = "Blaz Porenta", URL = "http://ninja2assn.deviantart.com" };
         public static Artist Bobby_Fieldhouse = new Artist { Name = "Bobby Fieldhouse", URL = "https://www.google.com/search?q=Bobby+Fieldhouse+Art" };

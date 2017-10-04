@@ -95,6 +95,7 @@ namespace HallOfBeorn.Models.LotR
         public string AlternateEncounterSet { get; set; }
         public List<EncounterSet> IncludedEncounterSets { get; set; }
         public bool? PassValue { get; set; }
+        public byte? EyeIcon { get; set; }
         public byte? EasyModeQuantity { get; set; }
         public byte? NightmareModeQuantity { get; set; }
 
@@ -508,6 +509,12 @@ namespace HallOfBeorn.Models.LotR
         public LotRCard WithBurden()
         {
             this.CardSubtype = CardSubtype.Burden;
+            return this;
+        }
+
+        public LotRCard WithEyeIcon()
+        {
+            this.EyeIcon += 1;
             return this;
         }
 
