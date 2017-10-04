@@ -142,13 +142,13 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("When Revealed: Deal 1 damage to each enemy in the staging area. Until the end of the phase, each enemy gets +1 Threat for each damage on it. If there are no enemies in the staging area, Orcish Howls gains surge.")
                 .WithShadow("Shadow: If you are engaged with another enemy, resolve this attack against that enemy.")
                 .WithInfo(23, 3, Artist.Borja_Pindado));
-            addCard(LotRCard.Location("The Black Gate", string.Empty, setBlackGate, 0, 254)
+            addCard(LotRCard.Location("The Black Gate", string.Empty, setBlackGate, 0, 255)
                 .WithUnique()
                 .WithTraits("Mordor.")
                 .WithText("Immune to player card effects. The players cannot travel here.\r\nThe Black Gate gets +1 Threat for each resource on it.\r\nForced: At the beginning of the quest phase, place 1 resource here and raise each player's threat by 1.")
                 .WithFlavor("The great doors of the Black Gate swung back wide. Out of it streamed a great host as swiftly as swirling waters when a sluice is lifted.\r\n-The Return of the King")
                 .WithInfo(24, 1, Artist.Igor_Artyomenko));
-            addCard(LotRCard.Location("Towers of the Teeth", string.Empty, setBlackGate, 255, 8)
+            addCard(LotRCard.Location("Towers of the Teeth", string.Empty, setBlackGate, 254, 8)
                 .WithTraits("Plains.")
                 .WithText("Immune to player card effects.\r\nX is the number of characters controlled by the player with the most characters.\r\nWhile Towers of the Teeth is the active location, players cannot play allies.")
                 .WithFlavor("...now near loomed the great rampart of Cirith Gorgor, and the Black Gate amidmost, and the Two Towers of the Teeth tall and dark upon either side.\r\n-The Return of the King")
@@ -251,7 +251,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("Players do not raise their threat at the end of the refresh phase.\r\nForced: Forced: At the end of the round, each player raises his threat by 1 for each non-Fellowship character he controls.")
                 .WithFlavor("...blacker and darker than the vast shades amid which it stood, the cruel pinnacles and iron crown of the topmost tower of Barad-dûr.\r\n-Return of the King")
                 .WithInfo(42, 1, Artist.DinoDrawing));
-            addCard(LotRCard.Location("Mount Doom", string.Empty, setMountDoom, 255, 9)
+            addCard(LotRCard.Location("Mount Doom", string.Empty, setMountDoom, 254, 9)
                 .WithUnique()
                 .WithTraits("Mordor.")
                 .WithText("Immune to player card effects. X is the tens digit of the first player's threat dial.\r\nThe players cannot travel here unless there is at least 20 progress on stage 3B.\r\nTravel: Each player makes a Fortitude test. If a player fails this test, raise his threat by 9.")
@@ -317,7 +317,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack for each ally you control.")
                 .WithEyeIcon()
                 .WithInfo(52, 3, Artist.Audrey_Hotte));
-            addCard(LotRCard.Enemy("Little Sniffler", string.Empty, setMountDoom, 33, 1, 3, 2, 3)
+            addCard(LotRCard.Enemy("Little Snuffler", string.Empty, setMountDoom, 33, 1, 3, 2, 3)
                 .WithTraits("Orc.", "Snaga.")
                 .WithKeywords("Peril.", "Surge.")
                 .WithText("When Revealed: Either raise your threat by 1 for each ally you control, or discard an ally you control.\r\n(|)")
@@ -393,7 +393,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithTraits("Artifact.", "Item.", "Ring.")
                 .WithText("Setup: The first player claims The One ~Ring and attaches it to the Ring-bearer.\r\nAttached hero does not count against the hero limit. The first player gains control of attached hero.\r\nIf The One ~Ring leaves play, the players lose the game.")
                 .WithInfo(65, 1, Artist.Mike_Nash));
-            addCard(LotRCard.Quest("Pass the Two Towers", 1, setTower, 0)
+            addCard(LotRCard.Quest("Pass the Two Watchers", 1, setTower, 0)
                 .WithFlavor("Frodo has been captured by the Orcs of Cirith Ungol and imprisoned at the top of their tower, but Sam is determined to rescue his master.")
                 .WithText("Setup: Set Shagrat aside, out of play. Add The Two Wachers (location side faceup) and Topmost Chamber to the staging area. The first player loses control of the Ring-bearer and place it faceup under Topmost Chamber as a guarded objective. Then, the first player attaches Last of the Company to a hero he controls and attaches The One Ring to that hero.")
                 .WithOppositeFlavor("He could see no obstacle, but something too strong for his will to overcome barred the way. -The Return of the King")
@@ -438,7 +438,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithOppositeText("When Revealed: In player order, each player places the top card of his deck faceup in front of him until their are a total of 4 faceup player cards between the players. Place the top 4 cards of the encounter deck faceup. Starting with the highest cost player card, pair each player card with the highest threat encounter card remaining until their are 4 pairs. For each pair, the first player must choose: either discard both cards in the pair, or reveal the encounter card to play the player card at no cost.")
                 .WithIncludedEncounterSets(EncounterSet.OrcsOfMordor)
                 .WithInfo(72, 1, Artist.Rafal_Hrynkiewicz));
-            addCard(LotRCard.Quest("The Battle of the Morannon", 2, setBlackGate, 254)
+            addCard(LotRCard.Quest("The Battle of the Morannon", 2, setBlackGate, 255)
                 .WithKeywords("Dire.")
                 .WithFlavor("He gave a great cry, and turned, leaded upon his steed, and with his company galloped madly back to Cirith Gorgor. But as they went his soldiers blew their horns in signal long arranged: and even before they came to the gate Sauron sprang his trap. -The Return of the King")
                 .WithText("When Revealed: Each player searches the encounter deck and discard pile for a different Orc, Troll, or Nazgûl enemy and adds it to the staging area. Shuffle Gwaihir into the encounter deck.")
@@ -458,7 +458,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithOppositeFlavor("Fordo and Sam gazed out in mingled loathing and wonder on this hateful land. Between them and the smoking mountain, and about it north and south, all seemed ruinous and dead, a desert burned and choked.\r\n-The Return of the King")
                 .WithOppositeText("Dire. This stage gets +4 quest points for each player.\r\nThe first treachery revealed each quest phase is immune to player card effects and gains surge.")
                 .WithInfo(75, 1, Artist.Chris_Rahn));
-            addCard(LotRCard.Quest("The Road to Isenmouthe", 2, setMountDoom, 254)
+            addCard(LotRCard.Quest("The Road to Isenmouthe", 2, setMountDoom, 255)
                 .WithKeywords("Dire.")
                 .WithFlavor("They had gone some miles, and the road was at last running down a long slope into a plain, when Frodo's strength began to give out and his will wavered. He lurched and stumbled. Desperately Sam tried to help him and hold him up...\r\n-The Return of the King")
                 .WithText("When Revealed: Search the encounter deck and discard pile and victory display for Mordor Road and add it to the staging area. Shuffle the encounter discard pile into the encounter deck and travel to Mordor Road.")
@@ -470,7 +470,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("When Revealed: Shuffle the encounter discard pile into the encounter deck and discard cards from the top until X locations are discarded, where X is the number of players in the game. Add each location discarded this way to the staging area.")
                 .WithOppositeText("Dire. The first treachery revealed each quest phase is immune to player card effects and gains surge.\r\nForced: At the beginning of the quest phase, the first player makes a Fortitude test. If the first player fails this test, no more than 5 progress can be placed here this round.\r\nThis stage cannot be defeated unless Mount Doom is the active location.")
                 .WithInfo(77, 1, Artist.Aleksander_Karcz));
-            addCard(LotRCard.Quest("The Crack of Doom", 4, setMountDoom, 254)
+            addCard(LotRCard.Quest("The Crack of Doom", 4, setMountDoom, 255)
                 .WithKeywords("Dire.")
                 .WithFlavor("He was come to the heart of the realm of Sauron and the forges of his ancient might, greatest in Middle-earth; all other powers were here subdued.\r\n-The Return of the King")
                 .WithText("When Revealed: Shuffle the encounter discard pile into the encounter deck and discard cards from the top until X enemies are discarded, where X is the number of players. Add each enemy discarded this way to the staging area.")
