@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
         private const string setDeepShadows = "Deep Shadows";
         private const string setMountainOfFireEpicMultiplayer = "Mountain of Fire Epic Multiplayer";
         private const string setBlackGate = "The Black Gate Opens";
+        private const string setMountDoom = "Mount Doom";
 
         protected override void Initialize()
         {
@@ -186,7 +187,56 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("Immune to player card effects. Cannot leave the staging area.\r\nForced: After a player cancels a 'when revealed' effect, The Mouth of Sauron makes an immediate attack against that player.")
                 .WithFlavor("The Lieutenant of the Tower of Barad-dûr he was...\r\n-The Return of the King")
                 .WithInfo(31, 1, Artist.Jason_Jenicke));
-
+            addCard(LotRCard.Enemy("Nazgûl of Mordor", string.Empty, setBlackGate, 66, 4, 6, 4, 9)
+                .WithTraits("Nazgûl.")
+                .WithText("Cannot have non-Morgul attachments.\r\nForced: After Nazgûl of Mordor attacks, either raise your threat by 4, or return Nazgûl of Mordor to the staging area.")
+                .WithFlavor("...out of the gathering mirk the Nazgûl came with their cold voices crying words of death; and then all hope was quenched.\r\n-The Return of the King")
+                .WithEasyModeQuantity(2)
+                .WithInfo(32, 3, Artist.Dmitry_Prosvirnin));
+            addCard(LotRCard.Enemy("Gorgoroth Hill-troll", string.Empty, setBlackGate, 56, 3, 7, 3, 8)
+                .WithTraits("Troll.")
+                .WithText("Cannot have attachments.\r\nForced: After Gorgoroth Hill-troll attacks and destroys a character, the defending player discards a random card from his and hand and raises his threat by that card's printed cost.")
+                .WithFlavor("...these fell creatures would bite the throats of those that they threw down.\r\n-The Return of the King")
+                .WithEasyModeQuantity(1)
+                .WithInfo(33, 2, Artist.Dmitry_Prosvirnin));
+            addCard(LotRCard.Enemy("Easterling Bowman", string.Empty, setBlackGate, 54, 2, 3, 1, 4)
+                .WithTraits("Easterling.")
+                .WithKeywords("Peril.", "Archery 1.")
+                .WithText("When Revealed: Deal 1 damage to a questing character you control.")
+                .WithShadow("Shadow: After this attack, attacking enemy engages the next player then makes an attack.")
+                .WithInfo(34, 3, Artist.Nikolas_Hagialas));
+            addCard(LotRCard.Enemy("Warrior of Rhûn", string.Empty, setBlackGate, 34, 1, 4, 3, 4)
+                .WithTraits("Easterling.")
+                .WithKeywords("Peril.")
+                .WithText("When Revealed: Choose a questing character you control and remove it from the quest.")
+                .WithShadow("Shadow: Defending character cannot ready until the end of the round.")
+                .WithInfo(35, 3, Artist.Aleksander_Karcz));
+            addCard(LotRCard.Treachery("Hell-hawk", string.Empty, setBlackGate)
+                .WithTraits("Morgul.")
+                .WithKeywords("Peril.")
+                .WithText("When Revealed: Either search the encounter deck, discard pile, and victory display for a Nazgûl enemy and add it to the staging area, or attach Hell-hawk to a Nazgûl enemy in play. (Counts as a Mount attachment with the text: \"Limit 1 per enemy. Attached enemy gets +2 Threat, +2 Attack, +2 Defense and is immune to play card effects.\")")
+                .WithEasyModeQuantity(1)
+                .WithInfo(36, 2, Artist.Sam_Lamont));
+            addCard(LotRCard.Treachery("The Hour of Doom", string.Empty, setBlackGate)
+                .WithKeywords("Doomed 1.")
+                .WithText("When Revealed: Each player must choose: either raise your threat by 1 for each character you control, or discard the highest cost ally you control.")
+                .WithShadow("Shadow: Discard a non-objective attachment you control.")
+                .WithInfo(37, 3, Artist.Sam_Lamont));
+            addCard(LotRCard.Treachery("Jaws of Steel", string.Empty, setBlackGate)
+                .WithText("When Revealed: Each player assigns X damage among characters he controls, where X is the number of resources on The Black Gate.")
+                .WithShadow("Shadow: Shadow: Attacking enemy gets +1 Attack for each resource on The Black Gate.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(38, 2, Artist.Aleksander_Karcz));
+            addCard(LotRCard.Treachery("Rage Filled Him", string.Empty, setBlackGate)
+                .WithKeywords("Peril.")
+                .WithText("When Revealed: The Mouth of Sauron makes an immediate attack against you. If this attack destroys a character, raise your threat by 4.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack (+3 Attack instead if it is The Mouth of Sauron).")
+                .WithInfo(39, 3, Artist.Jason_Jenicke));
+            addCard(LotRCard.Treachery("Onslaught of Mordor", string.Empty, setBlackGate)
+                .WithText("When Revealed: Each player deals 1 damage to a questing character he controls. Until the end of the phase, each damaged character gets -1 Willpower and cannot be healed.")
+                .WithShadow("Shadow: Choose a non-unique enemy in the staging area. Engage it and deal it a shadow card.")
+                .WithEasyModeQuantity(2)
+                .WithInfo(40, 3, Artist.Sebastian_Rodriguez));
             addCard(LotRCard.ObjectiveAlly("Gwaihir", string.Empty, string.Empty, 3, 3, 3, 5)
                 .WithBoon()
                 .WithUnique()
@@ -195,6 +245,19 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("When Revealed: The first player must choose: either take control of Gwaihir, or spend 1 Fellowship resource and discard Gwahir to discard a non-unique enemy in the staging area.")
                 .WithShadow("Shadow: This attack deals no damage.")
                 .WithInfo(41, 1, Artist.Dmitry_Prosvirnin));
+            addCard(LotRCard.Objective("The Tower of Barad-dûr", string.Empty, setMountDoom)
+                .WithUnique()
+                .WithTraits("Mordor.")
+                .WithText("Players do not raise their threat at the end of the refresh phase.\r\nForced: Forced: At the end of the round, each player raises his threat by 1 for each non-Fellowship character he controls.")
+                .WithFlavor("...blacker and darker than the vast shades amid which it stood, the cruel pinnacles and iron crown of the topmost tower of Barad-dûr.\r\n-Return of the King")
+                .WithInfo(42, 1, Artist.DinoDrawing));
+            addCard(LotRCard.Location("Mount Doom", string.Empty, setMountDoom, 255, 9)
+                .WithUnique()
+                .WithTraits("Mordor.")
+                .WithText("Immune to player card effects. X is the tens digit of the first player's threat dial.\r\nThe players cannot travel here unless there is at least 20 progress on stage 3B.\r\nTravel: Each player makes a Fortitude test. If a player fails this test, raise his threat by 9.")
+                .WithFlavor("He raised his eyes with difficulty to the dark slopes of Mount Doom towering above him...\r\n-The Return of the King")
+                .WithVictoryPoints(9)
+                .WithInfo(43, 1, Artist.Chris_Rahn));
 
             addCard(LotRCard.Enemy("Orc of Mordor", string.Empty, setOrcsOfMordor, 28, 1, 3, 1, 3)
                 .WithTraits("Orc.")
@@ -296,6 +359,53 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithOppositeText("Resolution: Record the number of resource tokens on The Black Gate in the notes section of the campaign log. If a Wraith on Wings is in the victory display, remove that copy from the campaign pool. If the first player controls Gwaihir, add him to the campaign pool. The players have earned that boon. If a hero is in its controller's discard pile, do not add that hero's name to the list of fallen heroes.")
                 .WithOppositeFlavor("\"So it ends as I guessed it would,\" his thought said, even as it fluttered away; and it laughed a little within him ere it fled, almost gay it seemed to be casting off at last all doubt and care and fear. And then even as it winged away into forgetfulness it heard voices, and they seemed to be crying in some forgotten world far above: \"The Eagles are coming! The Eagles are coming!\"\r\n-The Return of the King")
                 .WithInfo(74, 1, Artist.Rafal_Hrynkiewicz));
+            addCard(LotRCard.Quest("The Land of Mordor", 1, setMountDoom, 4)
+                .WithKeywords("Dire.")
+                .WithFlavor("Against all odds, the Ring-bearer has found his way into The Black Land of Modor, but a dangerous journey still lies before him and The Eye of Sauron yet searches for the spies who escaped from Cirith Ungol.")
+                .WithText("Setup: Add Mount Doom and The Tower of Barad-dûr to the staging area. Make Brake of Thorns the active location. Each player searches the encounter deck for a different location and adds it to the staging area. Shuffle the encounter deck.")
+                .WithOppositeFlavor("Fordo and Sam gazed out in mingled loathing and wonder on this hateful land. Between them and the smoking mountain, and about it north and south, all seemed ruinous and dead, a desert burned and choked.\r\n-The Return of the King")
+                .WithOppositeText("Dire. This stage gets +4 quest points for each player.\r\nThe first treachery revealed each quest phase is immune to player card effects and gains surge.")
+                .WithInfo(75, 1, Artist.Chris_Rahn));
+            addCard(LotRCard.Quest("The Road to Isenmouthe", 2, setMountDoom, 254)
+                .WithKeywords("Dire.")
+                .WithFlavor("They had gone some miles, and the road was at last running down a long slope into a plain, when Frodo's strength began to give out and his will wavered. He lurched and stumbled. Desperately Sam tried to help him and hold him up...\r\n-The Return of the King")
+                .WithText("When Revealed: Search the encounter deck and discard pile and victory display for Mordor Road and add it to the staging area. Shuffle the encounter discard pile into the encounter deck and travel to Mordor Road.")
+                .WithOppositeText("Dire. Forced: After placing progress here from questing successfully, each player makes a Fortitude test. If a player passes this test, he places a resource here. If a player fails this test, he discards cards from the top of the encounter deck until an enemy is discarded and puts that enemy into play engaged with him.\r\nAt the end of the quest phase, if the number of resources here is equal to or greater than the number of players, advance to stage 3A.")
+                .WithInfo(76, 1, Artist.Stanislav_Dikolenko));
+            addCard(LotRCard.Quest("The Last Gasp", 3, setMountDoom, 20)
+                .WithKeywords("Dire.")
+                .WithFlavor("The last stage of their journey to Orodruin came, and it was a torment greater than Sam had ever thought he could bear. He was in pain, and so parched that he could no longer swallow even a mouthful of food.\r\n-The Return of the King")
+                .WithText("When Revealed: Shuffle the encounter discard pile into the encounter deck and discard cards from the top until X locations are discarded, where X is the number of players in the game. Add each location discarded this way to the staging area.")
+                .WithOppositeText("Dire. The first treachery revealed each quest phase is immune to player card effects and gains surge.\r\nForced: At the beginning of the quest phase, the first player makes a Fortitude test. If the first player fails this test, no more than 5 progress can be placed here this round.\r\nThis stage cannot be defeated unless Mount Doom is the active location.")
+                .WithInfo(77, 1, Artist.Aleksander_Karcz));
+            addCard(LotRCard.Quest("The Crack of Doom", 4, setMountDoom, 254)
+                .WithKeywords("Dire.")
+                .WithFlavor("He was come to the heart of the realm of Sauron and the forges of his ancient might, greatest in Middle-earth; all other powers were here subdued.\r\n-The Return of the King")
+                .WithText("When Revealed: Shuffle the encounter discard pile into the encounter deck and discard cards from the top until X enemies are discarded, where X is the number of players. Add each enemy discarded this way to the staging area.")
+                .WithOppositeText("Dire. Allies cannot enter play and 'when revealed' effects cannot be canceled.\r\nForced: When Mount Doom is explored, the first player makes a Fortitude test. Discard 1 extra encounter card for each player. If the first player fails this test, the Ring-bearer claims The One Ring and the players lose the game. If the test is successful, the Ring-bearer completes the quest and the players win the game.")
+                .WithInfo(78, 1, Artist.Dmitry_Prosvirnin));
+            addCard(LotRCard.Campaign("Mount Doom", setMountDoom, "The Lord of the Rings - Part 18")
+                .WithText("Setup: Each player may change heroes he controls without incurring the +1 threat penalty. Place X resource tokens on this card, where X is the number of resource tokens on The Black Gate, as recorded in the campaign log. Remove each burden with the following burden set icons from the encounter deck: Helm's Deep, The Road to Isengard, The Passing of the Grey Company\r\nForced: At the end of the round, remove 1 resource token from this card. Then, if there are no resource tokens here, the players lose the game.")
+                .WithOppositeText("Resolution: The first player must choose: - Keep The One Ring card and succumb to the power of Sauron. Then, the players lose the campaign.\r\n- Destroy The One Ring card and defeat the power of Sauron. Then, the players win the campaign.")
+                .WithOppositeFlavor("\"I have come,\" he said. \"But I do not choose to do what I came to do. I will not do this deed. The Ring is mine!\" And suddenly, as he set it on his finger, he vanished from Sam's sight.\r\n-The Return of the King\r\n\r\n\"The realm of Sauron is ended!\" said Gandalf. \"The Ring-bearer has fulfilled his Quest.\" And as the Captains gazed south to the Land of Mordor, it seemded to them that, black against the pall of cloud, there rose a huge shape of shadow, impenetrable, lightning-crowned, filling all the sky. Enormous it reared above the world, and stretched out towards them a vast threatening hand, terrible but impotent: for even as it leaned over them, a great wind took it, and it was all blown away, and passed; and then a hush fell.\r\n-The Return of the King")
+                .WithInfo(79, 1, Artist.Chris_Rahn));
+            addCard(LotRCard.Campaign("Epic Multiplayer Mode", setMountainOfFireEpicMultiplayer, "The Black Gate Opens & Mount Doom")
+                .WithText("Setup: Create two separate staging areas: one for The Black Gate Opens and one for Mount Doom. Divide the players into 2 teams, one for each scenario. No more than 4 players can be assigned to each scenario and the number of players assigned to Mount Doom cannot be more than the number of assigned to The Black Gate Opens. Shuffle 1 copy of In Darkness Bind Them into each encounter deck. Place The Eye of Sauron in the Mount Doom staging area with its correspdonding side faceup. Flip this card over and set it next to the Mount Doom quest deck.")
+                .WithOppositeText("Ignore the Forced effect on the Mount Doom campaign card if it is in play.\r\nForced: At the end of the round, the first player chooses a scenario (The Black Gate Opens or Mount Doom). Each player at the chosen scenario draws 1 card. Each player at the other scenario reduces his threat by 3. Then, the player who controls the Gwaihir objective-ally may give control of it to another player (at either scenario).\r\nAt the end of the round, if the last player at either scenario is defeated, both teams lose the game. If the Mount Doom scenario is defeated, both teams win the game.")
+                .WithOppositeFlavor("\"His eye is now straining towards us, blind almost to all else that is moving. So we must keep it. Therein lies all our hope.\"\r\n-Gandalf, The Return of the King")
+                .WithInfo(80, 1, Artist.Stanislav_Dikolenko));
+            addCard(LotRCard.Objective("The Eye of Sauron", string.Empty, setMountainOfFireEpicMultiplayer)
+                .WithUnique()
+                .WithSuffix("Mount-Doom")
+                .WithTraits("Mordor.")
+                .WithText("Add Eye to each Fortitude test.\r\nForced: At the end of the round, flip The Eye of Sauron, then move it and each Nazgûl enemy in the staging area to The Black Gate Opens staging area. The first player may raise each player's threat by 3 to cancel this effect.")
+                .WithInfo(81, 1, Artist.Stanislav_Dikolenko));
+            addCard(LotRCard.Objective("The Eye of Sauron", string.Empty, setMountainOfFireEpicMultiplayer)
+                .WithUnique()
+                .WithSuffix("The-Black-Gate-Opens")
+                .WithTraits("Mordor.")
+                .WithText("Each enemy in the staging area gets +1 Threat and -10 engagement cost.\r\nForced: At the end of the round, flip The Eye of Sauron, the move it and each Nazgûl enemy in the staging area to the Mount Doom staging area. The first player may raise each player's threat by 3 to cancel this effect.")
+                .WithInfo(82, 1, Artist.Stanislav_Dikolenko));
         }
     }
 }
