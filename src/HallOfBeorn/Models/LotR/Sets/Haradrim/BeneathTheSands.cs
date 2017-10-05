@@ -70,6 +70,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithUnique()
                 .WithTraits("Creature.", "Spider.")
                 .WithText("Cannot have attachments. Cannot take damage.\r\nBrood Mother engages the first player.\r\nForced: At the end of the round, search the encounter deck and discard pile for a Spider Broodling and add it to the staging area, if able. Shuffle the encounter deck.")
+                .WithVictoryPoints(4)
                 .WithInfo(65, 1, Artist.Dimitri_Bielak));
             addCard(LotRCard.Enemy("Hive Guardian", string.Empty, setName, 40, 3, 3, 2, 5)
                 .WithTraits("Creature.", "Spider.")
