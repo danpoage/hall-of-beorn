@@ -139,6 +139,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheSandsOfHarad
                 .WithFlavor("You must find a cool place to rest, out of the sun’s burning gaze...")
                 .WithKeywords("Surge.")
                 .WithText("Forced: At the end of the round, remove X progress from the main quest. X is the tens digit of the temperature.\r\nResponse: When Seek Shade is defeated, reduce the temperature by 10.")
+                .WithVictoryPoints(10)
                 .WithInfo(23, 1, Artist.Victor_Garcia));
             addCard(LotRCard.Enemy("Carrion Bird", string.Empty, setCrossing, 40, 2, 2, 1, 3)
                 .WithTraits("Creature.")
@@ -222,6 +223,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheSandsOfHarad
                 .WithInfo(39, 3, Artist.Mariusz_Gandzel));
             addCard(LotRCard.EncounterSideQuest("Southron Champion", string.Empty, setHaradSoldiers, 4)
                 .WithText("When Revealed: Discard cards from the encounter deck until a Harad enemy is discarded. Add that enemy to the staging area and place a resource token on it. That enemy is \"the Champion.\" While this stage is in play, the Champion gets +2 Threat, +2 Attack, +2 Defense and gains: Immune to player card effects. The main quest stage cannot be defeated while the Champion is in play.\"\r\nThe champion cannot take damage unless there are at least 4 progress tokens here. This stage cannot be defeated while the champion is in play.")
+                .WithVictoryPoints(10)
                 .WithInfo(40, 1, Artist.Alexandr_Elichev));
             addCard(LotRCard.Enemy("Southron Captain", string.Empty, setHaradSoldiers, 40, 2, 5, 3, 6)
                 .WithUnique()
@@ -249,6 +251,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheSandsOfHarad
                 .WithFlavor("Alone in a hostile land, cut off from help, you struggle to find your bearings...")
                 .WithKeywords("Surge.")
                 .WithText("Each player cannot have more than 5 cards in his hand. (If you have more than 5, immediately choose and discard cards from hand until you have only 5.)\r\nResponse: When this stage is defeated, each player draws a card.")
+                .WithVictoryPoints(10)
                 .WithInfo(45, 1, Artist.Will_O_Brien));
             addCard(LotRCard.Treachery("Injured Companion", string.Empty, setHaradTerritory)
                 .WithText("When Revealed: Each player must choose: either raise your threat by 1 for each character you control, or discard a character you control.")
@@ -263,6 +266,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheSandsOfHarad
             addCard(LotRCard.EncounterSideQuest("Find Water", string.Empty, setSands, 6)
                 .WithFlavor("Your companions grow weary from thirst. They need water to drink.")
                 .WithText("Characters cannot be readied by player card effects.\r\nResponse: When this stage is defeated, each player readies 1 hero he controls.")
+                .WithVictoryPoints(10)
                 .WithInfo(48, 1, Artist.Marius_Bota));
             addCard(LotRCard.Location("Towering Dunes", string.Empty, setSands, 3, 4)
                 .WithTraits("Desert.")
@@ -286,6 +290,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheSandsOfHarad
             addCard(LotRCard.EncounterSideQuest("Craft Remedy", string.Empty, setCreatures, 6)
                 .WithFlavor("Some of your companions have been poisoned! They need a remedy to counteract the venom.")
                 .WithText("Treat the printed text box of each damaged character as if it were blank (except for Traits).\r\nResponse: When this is defeated, heal 1 damage from each character in play.")
+                .WithVictoryPoints(10)
                 .WithInfo(53, 1, Artist.Ashley_Lange));
             addCard(LotRCard.Enemy("Sand Viper", string.Empty, setCreatures, 44, 4, 1, 1, 3)
                 .WithTraits("Creature.")
@@ -324,6 +329,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheSandsOfHarad
                 .WithFlavor("The Uruks of Mordor attack with a savagery that is difficult to match.")
                 .WithKeywords("Surge.")
                 .WithText("Each Orc enemy in the staging area gets -5 engagement cost.\r\nEach Orc enemy engaged with a player gets +1 Threat.")
+                .WithVictoryPoints(10)
                 .WithInfo(60, 1, Artist.Victor_Garcia));
             addCard(LotRCard.Enemy("Uruk Chieftain", string.Empty, setMordorOrcs, 50, 4, 5, 3, 6)
                 .WithUnique()
