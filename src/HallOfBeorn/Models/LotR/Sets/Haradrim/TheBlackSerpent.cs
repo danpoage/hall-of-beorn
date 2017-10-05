@@ -132,8 +132,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
             addCard(LotRCard.EncounterSideQuest("Don't Let Them Escape!", string.Empty, setName, 6)
                 .WithFlavor("Some of the Serpent’s men are trying to flee on horseback. If you don’t act quickly they could escape and bring news to Cirith Gurat.")
                 .WithText("Forced: At the end of the round, discard all progress from the main quest.\r\nForced: After this quest is chosen as the current quest, reveal an encounter card.")
+                .WithVictoryPoints(10)
                 .WithInfo(104, 1, Artist.Rafal_Hrynkiewicz));
-
             addCard(LotRCard.Quest("The Crossroads Fort", 1, setName, 6)
                 .WithFlavor("The Black Serpent’s caravan has taken shelter in a dilapidated desert fortress on their way to Mordor. Their wagons are loaded with tribute for the Dark Lord. Your plan is to seize the wagons and use the caravan to infiltrate Cirith Gurat.")
                 .WithText("Setup: Set each Harad objective aside, out of play. Add The Black Serpent to the staging area. Shuffle the encounter deck. The first player randomly selects 1 set aside Harad objective, reveals it, and adds it to the staging area.")

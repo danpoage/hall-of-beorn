@@ -71,6 +71,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithUnique()
                 .WithTraits("Desert.", "River.")
                 .WithText("Immune to player card effects.\r\nThe players cannot travel here unless there are at least 20 progress tokens on stage 4B.\r\nTravel: Reveal 1 encounter card per player.\r\nStage 4B cannot be defeated while River Harnen is in play.")
+                .WithVictoryPoints(4)
                 .WithInfo(39, 1, Artist.Jokubas_Uoginitas));
             addCard(LotRCard.Location("Expanse of Harad", string.Empty, setName, 2, 5)
                 .WithTraits("Desert.")
