@@ -319,6 +319,7 @@
     <Compile Include="Models\LotR\Products\AdventurePack\TheCrossingsOfPorosProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheDreadRealmNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\TheDungeonsOfCirithGuratProduct.cs" />
+    <Compile Include="Models\LotR\Products\Nightmare\TheGreyHavensNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheLandOfShadowNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheLostRealmNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\PrintOnDemand\AssaultOnDolGuldurProduct.cs" />

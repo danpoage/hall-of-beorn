@@ -23,8 +23,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheGreyHavens
                 .WithOppositeText(
 @"Begin with the standard quest deck and encounter deck for the Voyage Across Belegaer scenario.\r\nRemove the following cards, in the specified quantities, from the standard encounter deck:
 
-2x ~Southron Sailor
-1x Starlit ~Sea
+2x Southron Sailor
+1x Starlit Sea
 1x Fog Bank
 2x Calm Waters
 2x Thrown Off Course
@@ -35,6 +35,19 @@ Then shuffle the encounter cards in this Nightmare Deck into the remainder of th
 Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.
 
 ☸*: Some Cards in the Grey Havens Nightmare Decks have Sailing Success symbols (☸) with an asterisk (*) next to them. This indicates that the card has a Forced effect which will trigger when the card is discarded during a sailing test.")
+                .WithTemplate2(
+@"<p>Begin with the standard quest deck and encounter deck for the Voyage Across Belegaer scenario.\r\nRemove the following cards, in the specified quantities, from the standard encounter deck:</p>
+<ul style='list-style-type:none'><b>
+<li>2x Southron Sailor</li>
+<li>1x Starlit Sea</li>
+<li>1x Fog Bank</li>
+<li>2x Calm Waters</li>
+<li>2x Thrown Off Course</li>
+<li>1x Scouting Ship</li>
+</b></ul>
+<p>Then shuffle the encounter cards in this Nightmare Deck into the remainder of the standard Voyage Across Belegaer encounter deck.</p>
+<p>Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.</p>
+<p><b>☸*:</b> Some Cards in the Grey Havens Nightmare Decks have Sailing Success symbols (<b>☸</b>) with an asterisk (<b>*</b>) next to them. This indicates that the card has a <b>Forced</b> effect which will trigger when the card is discarded during a sailing test.</p>")
                 .WithInfo(1, 1, Artist.Leanna_Crossan));
             addCard(LotRCard.Quest("Corsair Confrontation", 2, setName, 255)
                 .WithKeywords("Sailing.")

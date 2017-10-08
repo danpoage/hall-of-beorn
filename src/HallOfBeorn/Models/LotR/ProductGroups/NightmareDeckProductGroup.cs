@@ -53,6 +53,8 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
             AddProduct(Product.TheBattleOfCarnDumNightmare);
             AddProduct(Product.TheDreadRealmNightmare);
 
+            AddProduct(Product.TheGreyHavensNightmare);
+
             AddProduct(Product.TheHobbitOverHillAndUnderHillNightmare);
             AddProduct(Product.TheHobbitOnTheDoorstepNightmare);
 

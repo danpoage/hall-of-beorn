@@ -19,6 +19,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheGreyHavens
             AddEncounterSet(EncounterSet.CorsairRaiders);
             AddEncounterSet(EncounterSet.TheStormcallerElite);
             AddEncounterSet(EncounterSet.RaidOnTheGreyHavens);
+            AddEncounterSet(EncounterSet.RaidOnTheGreyHavensNightmare);
 
             AddQuestCardId("The-Corsairs'-Assault-TGH");
             AddQuestCardId("Sahir's-Advance-TGH");
@@ -30,6 +31,11 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheGreyHavens
 
             ExcludeCorsairRaidersFromEasyMode();
             ExcludeDrownedDeadFromEasyMode();
+
+            ExcludeFromNightmareMode("Sahir's-Advance-TGH", 1);
+            ExcludeFromNightmareMode("Corsair-Arsonist-TGH", 3);
+            ExcludeFromNightmareMode("Elven-Wave-runner-TGH", 2);
+            ExcludeFromNightmareMode("Umbar-Raider-TGH", 1);
         }
     }
 }

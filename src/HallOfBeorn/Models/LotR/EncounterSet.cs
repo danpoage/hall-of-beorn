@@ -340,6 +340,11 @@ namespace HallOfBeorn.Models.LotR
             Add(TheBattleOfCarnDumNightmare);
             Add(TheDreadRealmNightmare);
 
+            //The Grey Havens and Dream-chaser Nightmare Decks
+            Add(VoyageAcrossBelegaerNightmare);
+            Add(TheFateOfNumenorNightmare);
+            Add(RaidOnTheGreyHavensNightmare);
+
             //The Hobbit: Over Hill and Under Hill Nightmare Decks
             Add(WeMustAwayEreBreakOfDayNightmare);
             Add(OverTheMistyMountainsGrimNightmare);
@@ -626,6 +631,10 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet QuietTheSpirits = new EncounterSet { Name = "Quiet the Spirits", Set = "The Treachery of Rhudaur" };
         public static EncounterSet TheBattleOfCarnDumNightmare = new EncounterSet { Name = "The Battle of Carn Dûm Nightmare", Set = "The Battle of Carn Dûm Nightmare" };
         public static EncounterSet TheDreadRealmNightmare = new EncounterSet { Name = "The Dread Realm Nightmare", Set = "The Dread Realm Nightmare" };
+
+        public static EncounterSet VoyageAcrossBelegaerNightmare = new EncounterSet { Name = "Voyage Across Belegaer Nightmare", Set = "Voyage Across Belegaer Nightmare" };
+        public static EncounterSet TheFateOfNumenorNightmare = new EncounterSet { Name = "The Fate of Númenor Nightmare", Set = "The Fate of Númenor Nightmare" };
+        public static EncounterSet RaidOnTheGreyHavensNightmare = new EncounterSet { Name = "Raid on the Grey Havens Nightmare", Set = "Raid on the Grey Havens Nightmare" };
 
         //The Hobbit: Over Hill and Under Hill Nightmare Decks
         public static EncounterSet WeMustAwayEreBreakOfDayNightmare = new EncounterSet { Name = "We Must Away, Ere Break of Day Nightmare", Set = "We Must Away, Ere Break of Day Nightmare" };
