@@ -11,6 +11,10 @@ namespace HallOfBeorn.Models.LotR.Products.Saga
             : base("The Mountain of Fire", "MEC62", ImageType.Jpg)
         {
             AddCardSet(CardSet.TheMountainOfFire);
+
+            AddScenario(new Scenarios.TheLordOfTheRings.TheTowerOfCirithUngol());
+            AddScenario(new Scenarios.TheLordOfTheRings.TheBlackGateOpens());
+            AddScenario(new Scenarios.TheLordOfTheRings.MountDoom());
         }
     }
 }

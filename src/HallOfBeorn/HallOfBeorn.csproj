@@ -330,6 +330,9 @@
     <Compile Include="Models\LotR\Scenarios\DreamChaser\AStormOnCobasHaven.cs" />
     <Compile Include="Models\LotR\Scenarios\Haradrim\BeneathTheSands.cs" />
     <Compile Include="Models\LotR\Scenarios\Haradrim\TheBlackSerpentScenario.cs" />
+    <Compile Include="Models\LotR\Scenarios\TheLordOfTheRings\MountDoom.cs" />
+    <Compile Include="Models\LotR\Scenarios\TheLordOfTheRings\TheBlackGateOpens.cs" />
+    <Compile Include="Models\LotR\Scenarios\TheLordOfTheRings\TheTowerOfCirithUngol.cs" />
     <Compile Include="Models\LotR\Scenarios\TheSandsOfHarad\DesertCrossing.cs" />
     <Compile Include="Models\LotR\Scenarios\TheSandsOfHarad\EscapeFromUmbar.cs" />
     <Compile Include="Models\LotR\Scenarios\Haradrim\RaceAcrossHarad.cs" />
