@@ -10,7 +10,6 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
         protected override void Initialize()
         {
             Name = "The Nîn-in-Eilph";
-            NormalizedName = "The Nin-in-Eilph";
             AlternateName = "Nin-in-Eilph";
             Abbreviation = "NiE";
             Number = 26;

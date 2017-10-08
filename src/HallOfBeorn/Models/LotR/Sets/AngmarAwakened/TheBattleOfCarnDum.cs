@@ -12,7 +12,6 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
         protected override void Initialize()
         {
             Name = setName;
-            NormalizedName = "The Battle of Carn Dum";
             Abbreviation = "TBoCD";
             Number = 33;
             SetType = Models.SetType.Adventure_Pack;

@@ -10,7 +10,6 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
         protected override void Initialize()
         {
             Name = "The Drúadan Forest Nightmare";
-            NormalizedName = "The Druadan Forest Nightmare";
             Abbreviation = "TDFN";
             SetType = Models.SetType.Nightmare_Expansion;
             Cycle = "NIGHTMARE";

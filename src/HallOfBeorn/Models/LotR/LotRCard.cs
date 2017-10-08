@@ -449,13 +449,9 @@ namespace HallOfBeorn.Models.LotR
 
         public LotRCard WithOppositeTitle(string title)
         {
-            return WithOppositeTitle(title, false);
-        }
-
-        public LotRCard WithOppositeTitle(string title, bool includedInSlug)
-        {
             this.OppositeTitle = title;
             this.SlugSuffix = title;
+        
             return this;
         }
 

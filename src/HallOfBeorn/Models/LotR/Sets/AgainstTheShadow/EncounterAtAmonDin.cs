@@ -10,7 +10,6 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
         protected override void Initialize()
         {
             Name = "Encounter at Amon Dîn";
-            NormalizedName = "Encounter at Amon Din";
             Abbreviation = "EaAD";
             Number = 18;
             SetType = Models.SetType.Adventure_Pack;

@@ -12,7 +12,6 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
         protected override void Initialize()
         {
             Name = "The Mûmakil";
-            NormalizedName = "The Mumakil";
             Abbreviation = "TMk";
             Number = 43;
             SetType = Models.SetType.Adventure_Pack;

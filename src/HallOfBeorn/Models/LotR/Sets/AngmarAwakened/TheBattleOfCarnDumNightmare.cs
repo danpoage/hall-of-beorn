@@ -12,7 +12,6 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
         protected override void Initialize()
         {
             Name = setName;
-            NormalizedName = "The Battle of Carn Dum Nightmare";
             Abbreviation = "TBoCDN";
             SetType = Models.SetType.Nightmare_Expansion;
             Cycle = "NIGHTMARE";

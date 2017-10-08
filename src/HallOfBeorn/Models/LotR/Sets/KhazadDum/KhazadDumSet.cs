@@ -10,7 +10,6 @@ namespace HallOfBeorn.Models.LotR.Sets.KhazadDum
         protected override void Initialize()
         {
             Name = "Khazad-dûm";
-            NormalizedName = "Khazad-dum";
             Abbreviation = "KD";
             Number = 8;
             SetType = Models.SetType.Deluxe_Expansion;

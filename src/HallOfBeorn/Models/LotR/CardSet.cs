@@ -29,7 +29,19 @@ namespace HallOfBeorn.Models.LotR
         }
 
         public string Id { get; protected set; }
-        public string Name { get; protected set; }
+
+        private string name;
+        public string Name 
+        {
+            get { return name; }
+            protected set {
+                name = value;
+                var norm = name.NormalizeCaseSensitiveString();
+                if (norm != name) {
+                    normalizedName = norm;
+                }
+            }
+        }
         
         public string NormalizedName
         {
@@ -38,10 +50,6 @@ namespace HallOfBeorn.Models.LotR
                 return (!string.IsNullOrEmpty(normalizedName)) ?
                     normalizedName
                     : Name;
-            }
-            protected set
-            {
-                normalizedName = value;
             }
         }
 

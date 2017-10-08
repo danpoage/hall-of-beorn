@@ -10,7 +10,6 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
         protected override void Initialize()
         {
             Name = "The Drúadan Forest";
-            NormalizedName = "The Druadan Forest";
             Abbreviation = "TDF";
             Number = 17;
             SetType = Models.SetType.Adventure_Pack;

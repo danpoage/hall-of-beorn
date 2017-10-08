@@ -10,7 +10,6 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
         protected override void Initialize()
         {
             Name = "Encounter at Amon Dîn Nightmare";
-            NormalizedName = "Encounter at Amon Din Nightmare";
             Abbreviation = "EaADN";
             SetType = Models.SetType.Nightmare_Expansion;
             Cycle = "NIGHTMARE";

@@ -12,7 +12,6 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
         protected override void Initialize()
         {
             Name = setName;
-            NormalizedName = "The Nin-in-Eilph Nightmare";
             Abbreviation = "NiEN";
             SetType = Models.SetType.Nightmare_Expansion;
             Cycle = "NIGHTMARE";
@@ -65,7 +64,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithShadow("Shadow: Deal 1 damage to the defending character.")
                 .WithInfo(7, 2, Artist.Nele_Diel));
             Cards.Add(LotRCard.Quest("Through the Marsh", 2, setName, 13)
-                .WithOppositeTitle("An Arduous Journey", true)
+                .WithOppositeTitle("An Arduous Journey")
                 .WithIncludedEncounterSets(EncounterSet.WearyTravelers)
                 .WithFlavor("As you trudge through endless swamp, you begin to wonder if you will ever reach the other side.")
                 .WithText("When Revealed: Raise each player's threat by 1.")
@@ -74,7 +73,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithBackArtist(Artist.Von_Caberte)
                 .WithInfo(8, 1, Artist.Mariusz_Gandzel));
             Cards.Add(LotRCard.Quest("Lost in the Swanfleet", 3, setName, 16)
-                .WithOppositeTitle("Deadly Waters", true)
+                .WithOppositeTitle("Deadly Waters")
                 .WithIncludedEncounterSets(EncounterSet.WearyTravelers)
                 .WithFlavor("Lost as you are, your presence in the marsh has not gone unnoticed. An ancient and foul swamp creature stalks your company...")
                 .WithText("When Revealed: Raise each player's threat by 1. Add Ancient Marsh-dweller to the staging area (from out of play or engaged with a player) and heal all damage from it.")
