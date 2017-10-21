@@ -8,16 +8,18 @@
 }
 
 @section scripts {
-<script type="text/javascript" src="~/Scripts/cardSearch.js"></script>
-<script type="text/javascript" src="~/Scripts/storage.js"></script>
-<script type="text/javascript" src="~/Scripts/autocomplete22.js"></script>
+<script type="text/javascript" src="~/Scripts/cardSearch.js" defer></script>
+<script type="text/javascript" src="~/Scripts/storage.js" defer></script>
+<script type="text/javascript" src="~/Scripts/autocomplete22.js" defer></script>
 <script type="text/javascript">
-    $(function () {
-        $("#Query").autocomplete({
-            source: autocompleteSource,
-            minLength: 2
+    window.addEventListener('DOMContentLoaded', function() {
+        $(function () {
+            $("#Query").autocomplete({
+                source: autocompleteSource,
+                minLength: 2
+            });
+            $("#Query").autocomplete("widget").addClass("autocompleteClass");
         });
-        $("#Query").autocomplete("widget").addClass("autocompleteClass");
     });
 </script>    
 }
