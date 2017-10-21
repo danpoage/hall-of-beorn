@@ -670,6 +670,19 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             }
         }
 
+        public string ThumbImagePath
+        {
+            get
+            {
+                var set = !string.IsNullOrEmpty(_card.CardSet.NormalizedName) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
+                var title = _card.Title.ToUrlSafeString();
+                var suffix = !string.IsNullOrEmpty(_card.SlugSuffix) ? string.Format("-{0}", _card.SlugSuffix.ToUrlSafeString()) : string.Empty;
+                var thumb = _card.HasThumbnail ? "_thumb" : string.Empty;
+
+                return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}{2}{3}.jpg", set, title, suffix, thumb);
+            }
+        }
+
         public string getQuestCardImagePath(bool isFirst)
         {
             var set = (Card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();

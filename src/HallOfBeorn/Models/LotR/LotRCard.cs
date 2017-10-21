@@ -62,6 +62,8 @@ namespace HallOfBeorn.Models.LotR
 
         public string HtmlTemplate2;
 
+        public bool HasThumbnail { get; set; }
+
         public uint StageNumber { get; set; }
         public char StageLetter { get; private set; }
 
@@ -556,6 +558,12 @@ namespace HallOfBeorn.Models.LotR
                 SlugSuffix = letter.ToString();
             }
             StageLetter = letter;
+            return this;
+        }
+
+        public LotRCard WithThumbnail()
+        {
+            this.HasThumbnail = true;
             return this;
         }
 

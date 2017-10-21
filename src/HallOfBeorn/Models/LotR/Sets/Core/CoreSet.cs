@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
             Number = 1;
             SetType = Models.SetType.Core;
 
-            Cards.Add(new LotRCard() {
+            addCard(new LotRCard() {
                 Title = "Aragorn",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9001",
                 CardType = CardType.Hero,
@@ -32,11 +32,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 Year = 2010,
                 Artist = Artist.John_Stanko,
                 CardNumber = 1
-            }
-            .WithTraits("Dúnedain.", "Noble.", "Ranger.")
-            .WithKeywords("Sentinel."));
-            Cards.Add(new LotRCard()
-            {
+            }.WithTraits("Dúnedain.", "Noble.", "Ranger.").WithKeywords("Sentinel.").WithThumbnail());
+            addCard(new LotRCard() {
                 Title = "Théodred",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9002",
                 CardType = CardType.Hero,
@@ -53,8 +50,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 Quantity = 1,
                 CardNumber = 2,
                 Artist = Artist.Jeff_Himmelman
-            }.WithTraits("Noble.", "Rohan.", "Warrior."));
-            Cards.Add(new LotRCard() {
+            }.WithTraits("Noble.", "Rohan.", "Warrior.").WithThumbnail());
+            addCard(new LotRCard() {
                 Title = "Glóin",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9003",
                 CardType = CardType.Hero,
@@ -72,9 +69,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 Quantity = 1,
                 CardNumber = 3,
                 Artist = Artist.Tom_Garden
-            });
-            Cards.Add(new LotRCard() {
-                
+            }.WithThumbnail());
+            addCard(new LotRCard() {
                 Title = "Gimli",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9004",
                 CardType = CardType.Hero,
@@ -92,9 +88,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 Quantity = 1,
                 CardNumber = 4,
                 Artist = Artist.Tony_Foti
-            });
-            Cards.Add(new LotRCard() {
-                
+            }.WithThumbnail());
+            addCard(new LotRCard() {
                 Title = "Legolas",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9005",
                 CardType = CardType.Hero,
@@ -113,9 +108,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 Quantity = 1,
                 CardNumber = 5,
                 Artist = Artist.Magali_Villeneuve
-            });
-            Cards.Add(new LotRCard() {
-                
+            }.WithThumbnail());
+            addCard(new LotRCard() {
                 Title = "Thalin",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9006",
                 CardType = CardType.Hero,
@@ -134,8 +128,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 CardNumber = 6,
                 Artist = Artist.Jen_Zee,
                 HasErrata = true
-            });
-            Cards.Add(new LotRCard() {
+            }.WithThumbnail());
+            addCard(new LotRCard() {
                 Title = "Éowyn",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9007",
                 CardType = CardType.Hero,
@@ -152,9 +146,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 Quantity = 1,
                 CardNumber = 7,
                 Artist = Artist.Gabrielle_Portal
-            });
-            Cards.Add(new LotRCard() {
-                
+            }.WithThumbnail());
+            addCard(new LotRCard() {
                 Title = "Eleanor",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9008",
                 CardType = CardType.Hero,
@@ -173,9 +166,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 CardNumber = 8,
                 Artist = Artist.Magali_Villeneuve,
                 HasErrata = true
-            });
-            Cards.Add(new LotRCard() {
-                
+            }.WithThumbnail());
+            addCard(new LotRCard() {
                 Title = "Dúnhere",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9009",
                 CardType = CardType.Hero,
@@ -193,9 +185,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 Quantity = 1,
                 CardNumber = 9,
                 Artist = Artist.Jeff_Himmelman
-            });
-            Cards.Add(new LotRCard() {
-                
+            }.WithThumbnail());
+            addCard(new LotRCard() {
                 Title = "Denethor",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9010",
                 CardType = CardType.Hero,
@@ -213,9 +204,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 Quantity = 1,
                 CardNumber = 10,
                 Artist = Artist.Tiziano_Baracchi
-            });
-            Cards.Add(new LotRCard() {
-                
+            }.WithThumbnail());
+            addCard(new LotRCard() {
                 Title = "Glorfindel",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9011",
                 CardType = CardType.Hero,
@@ -233,9 +223,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 Quantity = 1,
                 CardNumber = 11,
                 Artist = Artist.Katherine_Dinger
-            });
-            Cards.Add(new LotRCard() {
-                
+            }.WithThumbnail());
+            addCard(new LotRCard() {
                 Title = "Beravor",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9012",
                 CardType = CardType.Hero,
@@ -254,7 +243,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 CardNumber = 12,
                 Artist = Artist.Tiziano_Baracchi,
                 HasErrata = true
-            });
+            }.WithThumbnail());
             Cards.Add(new LotRCard() {
                 
                 Title = "Guard of the Citadel",
