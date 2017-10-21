@@ -6,9 +6,9 @@
         <title>Hall of Beorn</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <link rel="apple-touch-icon" href="~/Images/HallOfBeorn-AppleTouchIcon.png"/>
-        <link href="@Url.Content("~/Content/themes/base/minified/jquery-ui.min.css")" rel="stylesheet" type="text/css" />
+        @* <link href="@Url.Content("~/Content/themes/base/minified/jquery-ui.min.css")" rel="stylesheet" type="text/css" /> *@
         <meta name="viewport" content="width=device-width" />
-        @Styles.Render("~/Content/css")
+        @* @Styles.Render("~/Content/css") *@
         @* <script src="/Scripts/modernizr-2.6.2.js" defer></script> *@
         <script src="/Scripts/jquery-1.8.2.min.js" defer></script>
         <script src="/Scripts/jquery-ui-1.8.24.min.js" defer></script>
@@ -16,6 +16,11 @@
         @Scripts.Render("~/bundles/modernizr")
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/jqueryui") *@
+
+        <noscript>
+            <link rel="stylesheet" type="text/css" href="/Content/themes/base/minified/jquery-ui.min.css" />
+            <link rel="stylesheet" type="text/css" href="/Content/site.css" />
+        </noscript>
     </head>
     <body>
         <header>
@@ -70,6 +75,21 @@
                     <p>This website is not produced, endorsed, supported, or affiliated with Fantasy Flight Games. The copyrightable portions of The Lord of the Rings: The Card Game and its expansions are © 2011 - @DateTime.Now.Year Fantasy Flight Publishing, Inc. The Lord of the Rings, and the characters, items, events and places therein are trademarks or registered trademarks of The Saul Zaentz Company d/b/a Middle-earth Enterprises and are used, under license, by Fantasy Flight Games. Living Card Game, LCG, LCG logo and Fantasy Flight Supply are trademarks and/or registered trademarks of Fantasy Flight Publishing, Inc. All Rights Reserved to their respective owners.</p>
                 </div>
             </div>
+            <script type="text/javascript">
+                var cssLink1 = document.createElement('link');
+                cssLink1.rel = 'stylesheet';
+                cssLink1.href = '/Content/themes/base/minified/jquery-ui.min.css';
+                cssLink1.type = 'text/css';
+                var linkElem1 = document.getElementsByTagName('link')[0];
+                linkElem1.parentNode.insertBefore(cssLink1, linkElem1);
+
+                var cssLink2 = document.createElement('link');
+                cssLink2.rel = 'stylesheet';
+                cssLink2.href = '/Content/site.css';
+                cssLink2.type = 'text/css';
+                var linkElem2 = document.getElementsByTagName('link')[0];
+                linkElem2.parentNode.insertBefore(cssLink2, linkElem2);
+        </script>
         </footer>
         @RenderSection("scripts", required: false)
     </body>

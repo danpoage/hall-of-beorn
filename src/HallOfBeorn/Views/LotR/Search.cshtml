@@ -134,13 +134,13 @@
             <div class="search-items">
                 <div class="search-sub-section">
                     <span class="search-filter">
-                    <span class="search-label-short"><img src="/Images/attack.png" class="search-icon" style="height:16px;"></span>
+                    <span class="search-label-short"><img src="/Images/attack-small.png" class="search-icon" style="height:16px;"></span>
                     @Html.DropDownListFor(x => x.AttackOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
                     @Html.DropDownListFor(x => x.Attack, SearchViewModel.AttackStrengthValues, new { @class = "search-select-short" })
                     </span>
 
                     <span class="search-filter">
-                    <span class="search-label-short"><img src="/Images/defense.png" class="search-icon" style="height:16px;"></span>
+                    <span class="search-label-short"><img src="/Images/defense-small.png" class="search-icon" style="height:16px;"></span>
                     @Html.DropDownListFor(x => x.DefenseOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
                     @Html.DropDownListFor(x => x.Defense, SearchViewModel.DefenseStrengthValues, new { @class = "search-select-short" })
                     </span>
@@ -153,13 +153,13 @@
                 </div>
                 <div class="search-sub-section">
                     <span class="search-filter">
-                    <span class="search-label-short"><img src="/Images/willpower.png" class="search-icon" style="height:16px;"></span>
+                    <span class="search-label-short"><img src="/Images/willpower-small.png" class="search-icon" style="height:16px;"></span>
                     @Html.DropDownListFor(x => x.WillpowerOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
                     @Html.DropDownListFor(x => x.Willpower, SearchViewModel.WillpowerStrengthValues, new { @class = "search-select-short" })
                     </span>
 
                     <span class="search-filter">
-                    <span class="search-label-short"><img src="/Images/threat.png" class="search-icon" style="height:16px;"></span>
+                    <span class="search-label-short"><img src="/Images/threat-small.png" class="search-icon" style="height:16px;"></span>
                     @Html.DropDownListFor(x => x.ThreatOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
                     @Html.DropDownListFor(x => x.Threat, SearchViewModel.ThreatStrengthValues, new { @class = "search-select-short" })
                     </span>
@@ -451,7 +451,7 @@
                 <div style="display:inline-block;">
                     @if ((!@Model.View.HasValue || @Model.View != View.Card_Image) && @card.HasSphere)
                     {
-                        <span><img style="width:30px;height:30px;margin:4px 1px 4px 6px;" src='@string.Format("/Images/{0}.png", @card.Sphere)' /></span>
+                        <span><img style="width:30px;height:30px;margin:4px 1px 4px 6px;" src='@string.Format("/Images/{0}-med.png", @card.Sphere)' /></span>
                     }
                     @if (@card.HasEncounterSet)
                     {
@@ -486,17 +486,17 @@
                         {
                             case CardType.Hero:
                                 <span style="color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.ThreatCost</span><span style="color:#616161;">)</span>
-                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Willpower</span><img style="margin-bottom:-3px;height:16px;" src="/Images/willpower.png" /></span>
-                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Attack</span><img style="margin-bottom:-3px;height:16px;" src="/Images/attack.png" /></span>
-                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Defense</span><img style="margin-bottom:-3px;height:16px;" src="/Images/defense.png" /></span>
-                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.HitPoints</span><img style="margin-bottom:-4px;height:16px;" src="/Images/heart.png"/></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Willpower</span><img style="margin-bottom:-3px;height:16px;" src="/Images/willpower-small.png" /></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Attack</span><img style="margin-bottom:-3px;height:16px;" src="/Images/attack-small.png" /></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Defense</span><img style="margin-bottom:-3px;height:16px;" src="/Images/defense-small.png" /></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.HitPoints</span><img style="margin-bottom:-4px;height:16px;" src="/Images/heart-small.png"/></span>
                                 break;
                             case CardType.Ally:
                                 <span style="color:#616161;">[</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.ResourceCost</span><span style="color:#616161;">]</span>
-                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Willpower</span><img style="margin-bottom:-3px;height:16px;" src="/Images/willpower.png" /></span>
-                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Attack</span><img style="margin-bottom:-3px;height:16px;" src="/Images/attack.png" /></span>
-                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Defense</span><img style="margin-bottom:-3px;height:16px;" src="/Images/defense.png" /></span>
-                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.HitPoints</span><img style="margin-bottom:-4px;height:16px;" src="/Images/heart.png"/></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Willpower</span><img style="margin-bottom:-3px;height:16px;" src="/Images/willpower-small.png" /></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Attack</span><img style="margin-bottom:-3px;height:16px;" src="/Images/attack-small.png" /></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Defense</span><img style="margin-bottom:-3px;height:16px;" src="/Images/defense-small.png" /></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.HitPoints</span><img style="margin-bottom:-4px;height:16px;" src="/Images/heart-small.png"/></span>
                                 break;
                             case CardType.Attachment:
                                 <span style="width:50px;color:#616161;">[</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.ResourceCost</span><span style="color:#616161;">]</span>
@@ -510,13 +510,13 @@
                             case CardType.Enemy:
                             case CardType.Ship_Enemy:
                                 <span style="color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.EngagementCost</span><span style="color:#616161;">)</span>
-                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Threat</span><img style="margin-bottom:-3px;height:16px;" src="/Images/threat.png" /></span>
-                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Attack</span><img style="margin-bottom:-3px;height:16px;" src="/Images/attack.png" /></span>
-                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Defense</span><img style="margin-bottom:-3px;height:16px;" src="/Images/defense.png" /></span>
-                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.HitPoints</span><img style="margin-bottom:-4px;height:16px;" src="/Images/heart.png"/></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Threat</span><img style="margin-bottom:-3px;height:16px;" src="/Images/threat-small.png" /></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Attack</span><img style="margin-bottom:-3px;height:16px;" src="/Images/attack-small.png" /></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Defense</span><img style="margin-bottom:-3px;height:16px;" src="/Images/defense-small.png" /></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.HitPoints</span><img style="margin-bottom:-4px;height:16px;" src="/Images/heart-small.png"/></span>
                                 break;
                             case CardType.Location:
-                                <span style="width:24px;"><span style="margin-right:2px;font-weight:bold;">@card.Threat</span><img style="margin-bottom:-3px;height:16px;" src="/Images/threat.png" /></span>
+                                <span style="width:24px;"><span style="margin-right:2px;font-weight:bold;">@card.Threat</span><img style="margin-bottom:-3px;height:16px;" src="/Images/threat-small.png" /></span>
                                 <span style="width:60px;margin-left:14px;color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.QuestPoints</span><span style="width:60px;color:#616161;">)</span>
                                 break;
                             case CardType.Objective_Location:
@@ -528,10 +528,10 @@
                             case CardType.Ship_Objective:
                                 if (@card.CardType == CardType.Objective_Ally || @card.HasCharacterStats)
                                 {
-                                <span style="width:24px;"><span style="margin-right:2px;font-weight:bold;">@card.Willpower</span><img style="margin-bottom:-3px;height:16px;" src="/Images/willpower.png" /></span>
-                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Attack</span><img style="margin-bottom:-3px;height:16px;" src="/Images/attack.png" /></span>
-                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Defense</span><img style="margin-bottom:-3px;height:16px;" src="/Images/defense.png" /></span>
-                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.HitPoints</span><img style="margin-bottom:-4px;height:16px;" src="/Images/heart.png"/></span>
+                                <span style="width:24px;"><span style="margin-right:2px;font-weight:bold;">@card.Willpower</span><img style="margin-bottom:-3px;height:16px;" src="/Images/willpower-small.png" /></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Attack</span><img style="margin-bottom:-3px;height:16px;" src="/Images/attack-small.png" /></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Defense</span><img style="margin-bottom:-3px;height:16px;" src="/Images/defense-small.png" /></span>
+                                <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.HitPoints</span><img style="margin-bottom:-4px;height:16px;" src="/Images/heart-small.png"/></span>
                                 }
                                 break;
                             case CardType.Quest:
@@ -550,7 +550,7 @@
                         }
                         @if (!string.IsNullOrEmpty(@card.PopularityHtml))
                         {
-                            <span style="margin-left: 4px; display:inline-block">
+                            <span style="margin-left: 14px; display:inline-block">
                             @Html.Raw(@card.PopularityHtml)
                             </span>
                         }

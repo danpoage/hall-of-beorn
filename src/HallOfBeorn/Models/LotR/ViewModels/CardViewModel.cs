@@ -468,6 +468,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 case Models.LotR.Sphere.Tactics:
                 case Models.LotR.Sphere.Spirit:
                 case Models.LotR.Sphere.Lore:
+                case Models.LotR.Sphere.Baggins:
+                case Models.LotR.Sphere.Fellowship:
                     return string.Format("/Images/{0}.png", _card.Sphere.ToString());
                 default:
                     if (_card.CardType == Models.LotR.CardType.Enemy || _card.CardType == Models.LotR.CardType.Location || _card.CardType == Models.LotR.CardType.Treachery || _card.CardType == Models.LotR.CardType.Objective || _card.CardType == Models.LotR.CardType.Objective_Ally || _card.CardType == Models.LotR.CardType.Objective_Location || _card.CardType == Models.LotR.CardType.Encounter_Side_Quest)
@@ -486,6 +488,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 case Models.LotR.Sphere.Tactics:
                 case Models.LotR.Sphere.Spirit:
                 case Models.LotR.Sphere.Lore:
+                case Models.LotR.Sphere.Baggins:
+                case Models.LotR.Sphere.Fellowship:
                     return "-5px";
                 default:
                     if (_card.CardType == Models.LotR.CardType.Enemy || _card.CardType == Models.LotR.CardType.Location || _card.CardType == Models.LotR.CardType.Treachery || _card.CardType == Models.LotR.CardType.Objective || _card.CardType == Models.LotR.CardType.Objective_Ally || _card.CardType == Models.LotR.CardType.Objective_Location || _card.CardType == Models.LotR.CardType.Encounter_Side_Quest)
@@ -505,6 +509,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 case Models.LotR.Sphere.Tactics:
                 case Models.LotR.Sphere.Spirit:
                 case Models.LotR.Sphere.Lore:
+                case Models.LotR.Sphere.Baggins:
+                case Models.LotR.Sphere.Fellowship:
                     return "48px";
                 default:
                     if (_card.CardType == Models.LotR.CardType.Enemy || _card.CardType == Models.LotR.CardType.Location || _card.CardType == Models.LotR.CardType.Treachery || _card.CardType == Models.LotR.CardType.Objective || _card.CardType == Models.LotR.CardType.Objective_Ally || _card.CardType == Models.LotR.CardType.Objective_Location || _card.CardType == Models.LotR.CardType.Encounter_Side_Quest)
@@ -523,6 +529,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 case Models.LotR.Sphere.Tactics:
                 case Models.LotR.Sphere.Spirit:
                 case Models.LotR.Sphere.Lore:
+                case Models.LotR.Sphere.Baggins:
+                case Models.LotR.Sphere.Fellowship:
                     return "200px";
                 default:
                     if (_card.CardType == Models.LotR.CardType.Enemy || _card.CardType == Models.LotR.CardType.Location || _card.CardType == Models.LotR.CardType.Treachery || _card.CardType == Models.LotR.CardType.Objective || _card.CardType == Models.LotR.CardType.Objective_Ally || _card.CardType == Models.LotR.CardType.Objective_Location || _card.CardType == Models.LotR.CardType.Encounter_Side_Quest)
@@ -541,6 +549,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 case Models.LotR.Sphere.Tactics:
                 case Models.LotR.Sphere.Spirit:
                 case Models.LotR.Sphere.Lore:
+                case Models.LotR.Sphere.Baggins:
+                case Models.LotR.Sphere.Fellowship:
                     return "200";
                 default:
                     if (_card.CardType == Models.LotR.CardType.Enemy || _card.CardType == Models.LotR.CardType.Location || _card.CardType == Models.LotR.CardType.Treachery || _card.CardType == Models.LotR.CardType.Objective || _card.CardType == Models.LotR.CardType.Objective_Ally || _card.CardType == Models.LotR.CardType.Objective_Location || _card.CardType == Models.LotR.CardType.Encounter_Side_Quest)
@@ -563,6 +573,10 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                     return "rgba(0, 0, 255, .05)";
                 case Models.LotR.Sphere.Lore:
                     return "rgba(0, 128, 0, .1)";
+                case Models.LotR.Sphere.Baggins:
+                    return "rgba(255, 255, 0, .1)";
+                case Models.LotR.Sphere.Fellowship:
+                    return "rgba(255, 210, 0, .1)";
                 case Models.LotR.Sphere.Neutral:
                     return "#e4e4e4";
                 default:
