@@ -382,7 +382,7 @@
                             <div style="margin-bottom:2px;">
                             @if (@card.IsUnique)
                             {
-                                <img src="/Images/unique-card.png" style="margin-bottom:-3px;margin-right:-4px;height:16px;width:16px;"/>
+                                <img src="/Images/unique-card-small.png" style="margin-bottom:-3px;margin-right:-4px;"/>
                             }
                             @Html.ActionLink(@card.TitleTrimmed, "Details", new { id = @card.Slug }, new { style = "margin-bottom:2px;font-size:medium;font-weight:bold;display:inline-block;" })
                             </div>
@@ -425,7 +425,7 @@
                     <div style="margin-bottom:2px;">
                     @if (@card.IsUnique)
                     {
-                        <img src="/Images/unique-card.png" style="margin-bottom:-3px;margin-right:-4px;height:16px;width:16px;"/>
+                        <img src="/Images/unique-card-small.png" style="margin-bottom:-3px;margin-right:-4px;"/>
                     }
                     @if (@Model.View.HasValue && @Model.View == View.Card_Image)
                     {

@@ -932,6 +932,7 @@
     <Content Include="Images\Tactics.png" />
     <Content Include="Images\threat.png" />
     <Content Include="Images\threat_med.png" />
+    <Content Include="Images\unique-card-small.png" />
     <Content Include="Images\unique-card.png" />
     <Content Include="Images\willpower.gif" />
     <Content Include="Images\willpower.png" />
