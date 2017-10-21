@@ -140,6 +140,7 @@ function getProductCodes() {
     return codes;
 }
 
+/*
 function checkForProductFilters() {
     //console.log('checkForProductFilters');
     
@@ -166,6 +167,7 @@ function clearProductCodes() {
         $('#' + codes[i]).prop('checked', false);
     }
 }
+*/
 
 $(document).ready(function () {
 

@@ -9,7 +9,7 @@
 
 @section scripts {
 <script type="text/javascript" src="~/Scripts/cardSearch.js" defer></script>
-<script type="text/javascript" src="~/Scripts/storage.js" defer></script>
+@* <script type="text/javascript" src="~/Scripts/storage.js" defer></script> *@
 <script type="text/javascript" src="~/Scripts/autocomplete22.js" defer></script>
 <script type="text/javascript">
     window.addEventListener('DOMContentLoaded', function() {
@@ -234,7 +234,7 @@
             </div>
         </div>
 
-        <span class="centered-container"><a id="toggleProductFilters" href="#" class="show-button">Show Product Filters</a></span>
+        <span class="centered-container"><a id="toggleProductFilters" href="#" class="show-button" style="display:none;">Show Product Filters</a></span>
         <div id="productFiltersContainer" class="search-row search-product-filters" style="display:none">
             <div class="product-filters-notes">
                 <p><i>Product filters are optional.</i> Leave them blank to include all products in your search. Alternatively, check any products to include them in your search.</p><p><b><i>If at least 1 product filter is checked, any products not checked will be excluded from search results.</i></b></p>

@@ -29,18 +29,19 @@
                     <div style="display:inline-block">
                         <a href="/Home" style="text-align:center;display:inline-block;"><img src="/Images/LotRBeornSmall.jpg" width="64" height="48" title="Lord of the Rings LCG Card Search" /></a>
                         <span class="site-title" style="color: brown; font-family:Tolkien;min-width:230px;display:inline-block;margin-left:0px;">HALL OF BEORN</span>
-                        <a href="/Arkham" style="text-align:left"><img src="/Images/ArkhamBeornSmall.jpg" width="64" height="48" title="Arkham Horror LCG Card Search" style="margin-bottom:-4px;"/></a>
+                        @* <a href="/Arkham" style="text-align:left"><img src="/Images/ArkhamBeornSmall.jpg" width="64" height="48" title="Arkham Horror LCG Card Search" style="margin-bottom:-4px;"/></a> *@
                     </div>
-                    <div style="min-width:230px;margin-bottom:6px;text-align:center">Cooperative LCG Card Search</div>
+                    <div style="min-width:230px;margin-bottom:6px;text-align:center">LotR LCG Card Search</div>
                 </div>
                 <div>
-                    <!--
+                    @*
                     <section id="login">
                         @Html.Partial("_LoginPartial")
                     </section>
-                        -->
+                    *@
+
                     <nav>
-                        @if (@Request.Url.LocalPath.Contains("/LotR")) {
+                        @* @if (@Request.Url.LocalPath.Contains("/LotR")) { *@
                         <ul id="menu">
                             <li>@Html.ActionLink("LotR", "Index", "Home")</li>
                             <li><a title="Browse Products" href="/LotR/Browse">Browse</a></li>
@@ -50,13 +51,13 @@
                             <li><a title="The Grey Company Podcast" href="http://greycompanypodcast.wordpress.com/" target="_blank">Podcast</a></li>
                             <li><a title="Patreon Page" href="https://www.patreon.com/Beorn" target="_blank"><img title="Patreon Donors" alt="Patreon Donors" src="/Images/Patreon.png" /></a></li>
                         </ul>
-                        } else {
+                        @* } else {
                         <ul id="menu">
                             <li>@Html.ActionLink("Arkham", "Search", "Arkham")</li>
                             <li><a title="Mythos Busters Podcast" href="https://mythosbusterspodcast.wordpress.com/" target="_blank">Mythos Busters</a></li>
                             <li><a title="Patreon Page" href="https://www.patreon.com/Beorn" target="_blank"><img title="Patreon Donors" alt="Patreon Donors" src="/Images/Patreon.png" /></a></li>
                         </ul>
-                        }
+                        } *@
                     </nav>
                 </div>
             </div>
@@ -76,19 +77,21 @@
                 </div>
             </div>
             <script type="text/javascript">
-                var cssLink1 = document.createElement('link');
-                cssLink1.rel = 'stylesheet';
-                cssLink1.href = '/Content/themes/base/minified/jquery-ui.min.css';
-                cssLink1.type = 'text/css';
-                var linkElem1 = document.getElementsByTagName('link')[0];
-                linkElem1.parentNode.insertBefore(cssLink1, linkElem1);
+                window.addEventListener('DOMContentLoaded', function () {
+                    var cssLink1 = document.createElement('link');
+                    cssLink1.rel = 'stylesheet';
+                    cssLink1.href = '/Content/themes/base/minified/jquery-ui.min.css';
+                    cssLink1.type = 'text/css';
+                    var linkElem1 = document.getElementsByTagName('link')[0];
+                    linkElem1.parentNode.insertBefore(cssLink1, linkElem1);
 
-                var cssLink2 = document.createElement('link');
-                cssLink2.rel = 'stylesheet';
-                cssLink2.href = '/Content/site.css';
-                cssLink2.type = 'text/css';
-                var linkElem2 = document.getElementsByTagName('link')[0];
-                linkElem2.parentNode.insertBefore(cssLink2, linkElem2);
+                    var cssLink2 = document.createElement('link');
+                    cssLink2.rel = 'stylesheet';
+                    cssLink2.href = '/Content/Site.min.css';
+                    cssLink2.type = 'text/css';
+                    var linkElem2 = document.getElementsByTagName('link')[0];
+                    linkElem2.parentNode.insertBefore(cssLink2, linkElem2);
+                });
         </script>
         </footer>
         @RenderSection("scripts", required: false)
