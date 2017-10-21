@@ -900,6 +900,7 @@
     <Content Include="Images\attack-small.png" />
     <Content Include="Images\Baggins-med.png" />
     <Content Include="Images\Baggins-small.png" />
+    <Content Include="Images\Baggins.png" />
     <Content Include="Images\close-button.png" />
     <Content Include="Images\compass-rose.png" />
     <Content Include="Images\defense-med.png" />
@@ -908,6 +909,7 @@
     <Content Include="Images\error.jpg" />
     <Content Include="Images\Fellowship-med.png" />
     <Content Include="Images\Fellowship-small.png" />
+    <Content Include="Images\Fellowship.png" />
     <Content Include="Images\gold-ring.png" />
     <Content Include="Images\HallOfBeorn-AppleTouchIcon.png" />
     <Content Include="Images\heading-cloudy.png" />
@@ -918,9 +920,13 @@
     <Content Include="Images\heading-stormy2.png" />
     <Content Include="Images\heading-sunny.png" />
     <Content Include="Images\heading-sunny2.png" />
+    <Content Include="Images\heart-med.png" />
+    <Content Include="Images\heart-small.png" />
     <Content Include="Images\heart.png" />
     <Content Include="Images\Leadership-med.png" />
+    <Content Include="Images\Leadership.png" />
     <Content Include="Images\Lore-med.png" />
+    <Content Include="Images\Lore.png" />
     <Content Include="Images\LotRBeornSmall.jpg" />
     <Content Include="Images\Mastery.png" />
     <Content Include="Images\octgn-logo.png" />
@@ -930,7 +936,9 @@
     <Content Include="Images\sailing-success.png" />
     <Content Include="Images\ShadowDivider.png" />
     <Content Include="Images\Spirit-med.png" />
+    <Content Include="Images\Spirit.png" />
     <Content Include="Images\Tactics-med.png" />
+    <Content Include="Images\Tactics.png" />
     <Content Include="Images\threat-med.png" />
     <Content Include="Images\threat-small.png" />
     <Content Include="Images\unique-card-med.png" />
