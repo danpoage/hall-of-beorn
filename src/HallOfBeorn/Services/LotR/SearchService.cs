@@ -349,7 +349,11 @@ namespace HallOfBeorn.Services.LotR
             {
                 if (model.SetType.Value != SetType.None)
                 {
-                    if (model.SetType.Value == SetType.Non_Nightmare)
+                    if (model.SetType.Value == SetType.PRINT_ON_DEMAND)
+                    {
+                        filters.Add(new SearchFilter((s, c) => { return c.CardSet.SetType == SetType.Fellowship_Deck || c.CardSet.SetType == SetType.GenCon_Expansion || c.CardSet.SetType == SetType.GenConSaga_Expansion || c.CardSet.SetType == SetType.Nightmare_Expansion; }, 50f, 0f, "Has Print on Demand Set Type"));
+                    }
+                    else if (model.SetType.Value == SetType.Non_Nightmare)
                     {
                         filters.Add(new SearchFilter((s, c) => { return c.CardSet.SetType != SetType.Nightmare_Expansion; }, 50f, 0f, "Is Not From A Nightmare Set"));
                     }
