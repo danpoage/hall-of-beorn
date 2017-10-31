@@ -239,16 +239,16 @@ namespace HallOfBeorn.Models.LotR
                     sb.AppendFormat("<a title='Search: {0} Event' href='/LotR/Search?Sphere={0}&CardType=Event' target='_blank'><img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:16px;width:16px;' src='/Images/{0}.png' /> event</a>", key);
                     break;
                 case "willpower":
-                    sb.Append("<img src='/Images/willpower.gif' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' />");
+                    sb.Append("<img src='/Images/willpower-small.png' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' />");
                     break;
                 case "threat":
-                    sb.Append("<img src='/Images/threat.png' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' />");
+                    sb.Append("<img src='/Images/threat-small.png' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' />");
                     break;
                 case "attack":
-                    sb.Append("<img src='/Images/attack.gif' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' />");
+                    sb.Append("<img src='/Images/attack-small.png' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' />");
                     break;
                 case "defense":
-                    sb.Append("<img src='/Images/defense.gif' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' />");
+                    sb.Append("<img src='/Images/defense-small.png' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' />");
                     break;
                 case "victory":
                     sb.AppendFormat("<div class='victory-text'><a style='text-decoration:none;' href='/LotR/Search?VictoryPoints=Victory+{0}.' target='_blank' title='Victory: {0}'><span style='padding-left:4px;padding-right:4px;border-style:solid;border-width:1px;border-color:black;'>Victory {0}</span></a></div>", key);
