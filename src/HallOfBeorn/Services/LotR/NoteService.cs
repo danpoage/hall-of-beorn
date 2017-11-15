@@ -21,8 +21,9 @@ namespace HallOfBeorn.Services.LotR
         private readonly Dictionary<string, List<CardNote>> notesBySlug = new Dictionary<string,List<CardNote>>();
 
         private const double firstFaqVersion = 1.0;
-        private const double latestFaqVersion = 1.8;
-        private const string latestFaqUrl = "https://images-cdn.fantasyflightgames.com/ffg_content/lotr-lcg/support/lotr-lcg-faq-low-res.pdf";
+        private const double latestFaqVersion = 1.9;
+        private const string latestFaqUrl = "https://images-cdn.fantasyflightgames.com/filer_public/2e/31/2e3129b3-dc51-4c27-81ed-6a72f13e82f3/lotr_faq_19.pdf";
+        // previous "https://images-cdn.fantasyflightgames.com/ffg_content/lotr-lcg/support/lotr-lcg-faq-low-res.pdf";
 
         private void loadDates()
         {
@@ -35,6 +36,7 @@ namespace HallOfBeorn.Services.LotR
             datesByVersion[1.6] = new DateTime(2014, 2, 6);
             datesByVersion[1.7] = new DateTime(2015, 1, 20);
             datesByVersion[1.8] = new DateTime(2016, 1, 26);
+            datesByVersion[1.9] = new DateTime(2017, 11, 15);
         }
 
         private void loadFaq11()
@@ -115,6 +117,18 @@ namespace HallOfBeorn.Services.LotR
             addFaq("The-Passage-of-the-Marshes-Campaign-TLoS", "<p>Should read: <blockquote><b>Setup:</b> Each player may change hero cards he controls without incurring the +1 threat penalty. Each player shuffles 1 copy...</blockquote></p>", version);
         }
 
+        private void loadFaq19()
+        {
+            var version = 1.9;
+            addFaq("Wandering-Took-Core", "<p>Should read: <blockquote>(Limit once per round.)</blockquote></p>", version);
+            addFaq("Boromir-TDM", "<p>Should read: <blockquote>Raise your threat by 1 to ready Boromir. (Limit once per phase.)</blockquote></p>", version);
+            addFaq("Out-of-the-Wild-RtR", "<p>Should read: <blockquote>Shuffle the encounter deck. Add Out of the Wild to the victory display.</blockquote></p>", version);
+            addFaq("Hama-TLD", "<p>Should read: <blockquote>(Limit 3 times per game for the group.)</blockquote></p>", version);
+            addFaq("We-Are-Not-Idle-SaF", "<p>Should read: <blockquote>Exhaust X <b><i>Dwarf</i></b> heroes to add X...</blockquote></p>", version);
+            addFaq("Caldara-TBoG", "<p>Should read: <blockquote>(Limit once per game.)</blockquote></p>", version);
+            addFaq("Wingfoot-NiE", "<p>Should read: <blockquote>If a card of the named type is revealed during this quest phase, exhaust Wingfoot to ready attached hero.</blockquote></p>", version);
+        }
+
         private void loadFaqs()
         {
             loadFaq11();
@@ -125,6 +139,7 @@ namespace HallOfBeorn.Services.LotR
             loadFaq16();
             loadFaq17();
             loadFaq18();
+            loadFaq19();
         }
 
         private void loadRulings()

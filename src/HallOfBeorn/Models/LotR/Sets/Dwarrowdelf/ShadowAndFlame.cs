@@ -372,10 +372,11 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 Sphere = Sphere.Leadership,
                 Quantity = 3,
                 ResourceCost = 0,
-                Text = "Action: Exhaust X Dwarf characters to add X resources to a hero's resource pool and draw 1 card.",
+                Text = "Action: Exhaust X Dwarf heroes to add X resources to a hero's resource pool and draw 1 card.",
                 FlavorText = "\"You should see the stone-paved roads of many colours! And the halls and cavernous streets under the earth with arches carved like trees; and the terraces and towers upon the Mountain's sides! Then you would see that we have not been idle.\" -Glóin, The Fellowship of the Ring",
                 CardNumber = 129,
-                Artist = Artist.Charles_Urbach
+                Artist = Artist.Charles_Urbach,
+                HasErrata = true
             });
             Cards.Add(new LotRCard() {
                 

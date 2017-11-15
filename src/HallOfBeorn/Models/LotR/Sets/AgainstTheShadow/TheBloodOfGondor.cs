@@ -28,11 +28,12 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 Defense = 2,
                 HitPoints = 3,
                 Traits = new List<string>() { "Gondor." },
-                Text = "Action: Discard Caldara to put 1 Spirit ally from your discard pile into play for each other hero you control with a printed Spirit resource icon.",
+                Text = "Action: Discard Caldara to put 1 Spirit ally from your discard pile into play for each other hero you control with a printed Spirit resource icon. (Limit once per game.)",
                 FlavorText = "...there is no purpose higher in the world as it now stands than the good of Gondor...\r\n-Denethor, The Return of the King",
                 Quantity = 1,
                 CardNumber = 107,
-                Artist = Artist.Magali_Villeneuve
+                Artist = Artist.Magali_Villeneuve,
+                HasErrata = true
             });
             Cards.Add(new LotRCard() {
                 

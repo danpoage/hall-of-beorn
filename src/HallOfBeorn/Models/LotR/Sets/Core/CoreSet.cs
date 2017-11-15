@@ -734,11 +734,12 @@ and the City shall be blessed.
                 Willpower = 1,
                 HitPoints = 2,
                 Traits = new List<string>() { "Hobbit." },
-                Text = "Action: Reduce your threat by 3 to give control of Wandering Took to another player. Raise that player's threat by 3.",
+                Text = "Action: Reduce your threat by 3 to give control of Wandering Took to another player. Raise that player's threat by 3. (Limit once per round.)",
                 FlavorText = "...but certainly there was something not entirely hobbit-like about them, and once in a while members of the Took-clan would go and have adventures. -The Hobbit",
                 Quantity = 2,
                 CardNumber = 43,
-                Artist = Artist.Tony_Foti
+                Artist = Artist.Tony_Foti,
+                HasErrata = true
             });
             Cards.Add(new LotRCard() {
                 

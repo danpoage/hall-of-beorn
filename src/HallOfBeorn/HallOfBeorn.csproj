@@ -322,7 +322,7 @@
     <Compile Include="Models\LotR\Products\Nightmare\TheGreyHavensNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheLandOfShadowNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheLostRealmNightmareProduct.cs" />
-    <Compile Include="Models\LotR\Products\PrintOnDemand\AssaultOnDolGuldurProduct.cs" />
+    <Compile Include="Models\LotR\Products\PrintOnDemand\AttackOnDolGuldurProduct.cs" />
     <Compile Include="Models\LotR\Products\Saga\TheMountainOfFireProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheTreacheryOfRhudaurNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheTreasonOfSarumanNightmareProduct.cs" />
@@ -341,7 +341,7 @@
     <Compile Include="Models\LotR\Scenarios\Haradrim\TheMumakil.cs" />
     <Compile Include="Models\LotR\Scenarios\TheSandsOfHarad\TheSandsOfHaradScenario.cs" />
     <Compile Include="Models\LotR\Sets\AngmarAwakened\AcrossTheEttenmoorsNightmare.cs" />
-    <Compile Include="Models\LotR\Sets\PrintOnDemand\AssaultOnDolGuldurSet.cs" />
+    <Compile Include="Models\LotR\Sets\PrintOnDemand\AttackOnDolGuldurSet.cs" />
     <Compile Include="Models\LotR\Sets\TheGreyHavens\RaidOnTheGreyHavensNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheGreyHavens\TheFateOfNumenorNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheGreyHavens\VoyageAcrossBelegaerNightmare.cs" />

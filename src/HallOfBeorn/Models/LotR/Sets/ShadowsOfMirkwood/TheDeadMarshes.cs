@@ -44,10 +44,11 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 Defense = 2,
                 Willpower = 1,
                 HitPoints = 5,
-                Text = "Action: Raise your threat by 1 to ready Boromir.\r\nAction: Discard Boromir to deal 2 damage to each enemy engaged with a single player.",
+                Text = "Action: Raise your threat by 1 to ready Boromir. (Limit once per phase.)\r\nAction: Discard Boromir to deal 2 damage to each enemy engaged with a single player.",
                 FlavorText = "\"...in Gondor we must trust to such weapons as we have.\" -The Fellowship of the Ring",
                 CardNumber = 95,
-                Artist = Artist.Tiziano_Baracchi
+                Artist = Artist.Tiziano_Baracchi,
+                HasErrata = true
             });
             Cards.Add(new LotRCard() {
                 Title = "Dúnedain Cache",

@@ -253,10 +253,11 @@ Attached hero gets +1 Defense.",
                 Defense = 1,
                 Willpower = 1,
                 HitPoints = 4,
-                Text = "Response: After Hama is declared as an attacker, return a Tactics event from your discard pile to your hand. Then, choose and discard 1 card from your hand.",
+                Text = "Response: After Hama is declared as an attacker, return a Tactics event from your discard pile to your hand. Then, choose and discard 1 card from your hand. (Limit 3 times per game for the group.)",
                 HtmlTemplate = "<p><b>Response:</b> After {self} is declared as an attacker, return a {sphere-event:Tactics} from your discard pile to your hand. Then, choose and discard 1 card from your hand.</p><p class='flavor-text'>&quot;Yet in doubt a man of worth will trust to his own wisdom.&quot; &ndash;The Two Towers</p>",
                 CardNumber = 76,
-                Artist = Artist.Magali_Villeneuve
+                Artist = Artist.Magali_Villeneuve,
+                HasErrata = true
             });
             Cards.Add(new LotRCard() {
                 Title = "Journey in the Black Pit",

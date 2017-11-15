@@ -175,7 +175,7 @@ namespace HallOfBeorn.Models.LotR
             Add(FogOnTheBarrowDowns);
             Add(MurderAtThePrancingPony);
             Add(TheSiegeOfAnnuminas);
-            Add(AssaultOnDolGuldur);
+            Add(AttackOnDolGuldur);
 
             Add(PassageThroughMirkwoodNightmare);
             Add(JourneyAlongTheAnduinNightmare);
@@ -335,7 +335,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheStoneOfErech = new Sets.PrintOnDemand.TheStoneofErech();
         public static CardSet TheRuinsOfBelegost = new Sets.PrintOnDemand.TheRuinsOfBelegost();
         public static CardSet TheSiegeOfAnnuminas = new Sets.PrintOnDemand.TheSiegeOfAnnuminas();
-        public static CardSet AssaultOnDolGuldur = new Sets.PrintOnDemand.AssaultOnDolGuldurSet();
+        public static CardSet AttackOnDolGuldur = new Sets.PrintOnDemand.AttackOnDolGuldurSet();
 
         public static CardSet PassageThroughMirkwoodNightmare = new Sets.Core.PassageThroughMirkwoodNightmareSet();
         public static CardSet JourneyAlongTheAnduinNightmare = new Sets.Core.JourneyAlongTheAnduinNightmareSet();

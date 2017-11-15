@@ -283,10 +283,11 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 Sphere = Sphere.Lore,
                 Quantity = 3,
                 ResourceCost = 3,
-                Text = "Action: Search the top 5 cards of the encounter deck for any 1 non-objective card worth no victory points and add it to your victory display. Shuffle the encounter deck.",
+                Text = "Action: Search the top 5 cards of the encounter deck for any 1 non-objective card worth no victory points and add it to your victory display. Shuffle the encounter deck. Add Out of the Wild to the victory display.",
                 Keywords = new List<string>() { "Secrecy 2." },
                 CardNumber = 36,
-                Artist = Artist.Magali_Villeneuve
+                Artist = Artist.Magali_Villeneuve,
+                HasErrata = true
             });
             Cards.Add(new LotRCard() {
                 

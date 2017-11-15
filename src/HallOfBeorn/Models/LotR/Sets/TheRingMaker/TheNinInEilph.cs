@@ -153,11 +153,12 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 Sphere = Sphere.Lore,
                 ResourceCost = 1,
                 Traits = new List<string> { "Title." },
-                Text = "Attach to a Ranger hero.\r\nResponse: After attached hero commits to a quest, name enemy, location or treachery. If a card of the named type is revealed during this quest phase, ready attached hero.",
+                Text = "Attach to a Ranger hero.\r\nResponse: After attached hero commits to a quest, name enemy, location or treachery. If a card of the named type is revealed during this quest phase, exhaust Wingfoot to ready attached hero.",
                 FlavorText = "\"Wingfoot I name you. This deed of the three friends should be sung in many a hall. Forty leagues and five you have measured ere the forth day is ended!\"\r\n-Éomer, The Two Towers",
                 CardNumber = 92,
                 Quantity = 3,
-                Artist = Artist.Gabriel_Verdon
+                Artist = Artist.Gabriel_Verdon,
+                HasErrata = true
             });
             Cards.Add(new LotRCard()
             {
