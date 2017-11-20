@@ -58,7 +58,7 @@ namespace HallOfBeorn.Services.LotR
         {
             var version = 1.3;
             addFaq("Beravor-Core", "<p>Should read: <blockquote><b>Action:</b> Exhaust Beravor to choose a player. That player draws 2 cards. Limit once per round.</blockquote></p>", version);
-            addFaq("Protector-of-Lorien-Core", "<p>Should read: <blockquote><b>Action:</b> Discard a card from your hand to give attached hero +1 <img src='/Images/defense.gif' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' /> or +1 <img src='/Images/willpower.gif' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' /> until the end of the phase. Limit 3 times per phase.</blockquote></p>", version);
+            addFaq("Protector-of-Lorien-Core", "<p>Should read: <blockquote><b>Action:</b> Discard a card from your hand to give attached hero +1 <img src='/Images/defense-small.png' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' /> or +1 <img src='/Images/willpower-small.png' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' /> until the end of the phase. Limit 3 times per phase.</blockquote></p>", version);
             addFaq("Zigil-Miner-KD", "<p>Should read: <blockquote><b>Action:</b> Exhaust Zigil Miner and name a number to discard the top 2 cards of your deck. If at least one of those cards has cost equal to the named number, choose a hero you control. For each card that matches the named number, add 1 resource to that hero’s resource pool.</blockquote></p>", version);
         }
 

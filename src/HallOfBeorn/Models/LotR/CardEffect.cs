@@ -122,13 +122,13 @@ namespace HallOfBeorn.Models.LotR
             switch (normalized)
             {
                 case "Willpower":
-                    return "/Images/willpower.gif";
+                    return "/Images/willpower-small.png";
                 case "Attack":
-                    return "/Images/attack.gif";
+                    return "/Images/attack-small.png";
                 case "Defense":
-                    return "/Images/defense.gif";
+                    return "/Images/defense-small.png";
                 case "Threat":
-                    return "/Images/threat.png";
+                    return "/Images/threat-small.png";
                 case "Leadership":
                     return "/Images/Leadership.png";
                 case "Tactics":
