@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Products.PrintOnDemand
             : base("Attack on Dol Guldur", "OP050", ImageType.Jpg)
         {
             AddCardSet(CardSet.AttackOnDolGuldur);
+
+            AddScenario(new Scenarios.PrintOnDemand.AttackOnDolGuldur());
         }
     }
 }
