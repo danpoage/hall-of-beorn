@@ -286,6 +286,7 @@ namespace HallOfBeorn.Models.LotR
             Add(MurderAtThePrancingPony);
             Add(Investigation);
             Add(TheSiegeOfAnnuminas);
+            Add(AttackOnDolGuldur);
 
             //Core Set and Shadows of Mirkwood Nightmare Decks
             Add(PassageThroughMirkwoodNightmare);
@@ -575,6 +576,7 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet MurderAtThePrancingPony = new EncounterSet { Name = "Murder at the Prancing Pony", Set = "Murder at the Prancing Pony" };
         public static EncounterSet Investigation = new EncounterSet { Name = "Investigation", Set = "Murder at the Prancing Pony" };
         public static EncounterSet TheSiegeOfAnnuminas = new EncounterSet { Name = "The Siege of Annúminas", Set = "The Siege of Annúminas" };
+        public static EncounterSet AttackOnDolGuldur = new EncounterSet { Name = "Attack on Dol Guldur", Set = "Attack on Dol Guldur", AlternateName = "Assault on Dol Guldur" };
 
         //Core Set and Shadows of Mirkwood Nightmare Decks
         public static EncounterSet PassageThroughMirkwoodNightmare = new EncounterSet { Name = "Passage Through Mirkwood Nightmare", Set = "Passage Through Mirkwood Nightmare" };

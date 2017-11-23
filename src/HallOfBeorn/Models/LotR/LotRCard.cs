@@ -100,6 +100,7 @@ namespace HallOfBeorn.Models.LotR
         public byte? EyeIcon { get; set; }
         public byte? EasyModeQuantity { get; set; }
         public byte? NightmareModeQuantity { get; set; }
+        public byte? SiegePoints { get; set; }
 
         public bool HasErrata { get; set; }
 
@@ -564,6 +565,12 @@ namespace HallOfBeorn.Models.LotR
         public LotRCard WithThumbnail()
         {
             this.HasThumbnail = true;
+            return this;
+        }
+
+        public LotRCard WithSiegePoints(byte value)
+        {
+            this.SiegePoints = value;
             return this;
         }
 

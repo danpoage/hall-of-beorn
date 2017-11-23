@@ -460,6 +460,14 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             }
         }
 
+        public string SiegePoints
+        {
+            get
+            {
+                return _card.SiegePoints.HasValue ? string.Format("SIEGE {0}", _card.SiegePoints) : string.Empty;
+            }
+        }
+
         public string BackgroundImage()
         {
             switch (_card.Sphere) 
