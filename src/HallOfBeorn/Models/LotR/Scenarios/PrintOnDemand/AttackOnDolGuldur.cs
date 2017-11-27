@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
         public AttackOnDolGuldur()
         {
             Title = setName;
+            AlternateTitle = "Assault on Dol Guldur";
             ProductName = setName;
             GroupName = "GenCon";
             Number = 8;
