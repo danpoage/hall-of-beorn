@@ -59,6 +59,7 @@ namespace HallOfBeorn.Services.LotR
             add(new FastredCharacter());
             add(new FattyBolgerCharacter());
             add(new FiliCharacter());
+            add(new FolcoBoffinCharacter());
             add(new ForlongCharacter());
             add(new FrodoBagginsCharacter());
             add(new GaladrielCharacter());
