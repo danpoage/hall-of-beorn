@@ -24,7 +24,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithInfo(109, 1, Artist.Unknown));
             addCard(LotRCard.Ally("Knight of Dale", Sphere.Leadership, 4, 2, 2, 1, 3)
                 .WithTraits("Dale.", "Warrior.")
-                .WithText("Action: Spend 1 Leadership Resource to ready the Knight of Dale. (limit once per round).\r\nValor Action: Ready the Dale Knight (limit once per round.).")
+                .WithText("Action: Spend 1 Leadership Resource to ready the Knight of Dale. (limit once per round).\r\nValour Action: Ready the Dale Knight (limit once per round.).")
                 .WithInfo(110, 3, Artist.Unknown));
             addCard(LotRCard.Ally("Knight of the Riddermark", Sphere.Tactics, 2, 0, 2, 0, 2)
                 .WithTraits("Rohan.", "Warrior.")
