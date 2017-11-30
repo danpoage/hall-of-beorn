@@ -49,7 +49,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithText("Attach to a hero.\r\nAttached hero gets +1 Attack for each side quest in the victory display. (Limit +3 Attack.)")
                 .WithFlavor("...glad would he have been to know its fate who wrought it slowly long ago in the North-kingdom when the Dúnedain were young...\r\n-The Return of the King")
                 .WithInfo(115, 3, Artist.Lucas_Durham));
-            addCard(LotRCard.Event("Tough Defense", string.Empty, Sphere.Tactics, 3)
+            addCard(LotRCard.Event("Fierce Defense", string.Empty, Sphere.Tactics, 3)
                 .WithText("Combat Action: Deal 3 damage to a non-unique enemy engaged with you.\r\nValour Combat Action: Discard a non-unique enemy engaged with you.")
                 .WithInfo(116, 3, Artist.Unknown));
             addCard(LotRCard.Event("Heir of Eärendil", string.Empty, Sphere.Spirit, 1)
