@@ -36,6 +36,10 @@ namespace HallOfBeorn.Services.LotR
 
         private void addPopularity(string cardId, byte popularity)
         {
+            if (popularityByCardId.ContainsKey(cardId)) {
+                return;
+            }
+
             popularityByCardId[cardId] = popularity;
         }
 
