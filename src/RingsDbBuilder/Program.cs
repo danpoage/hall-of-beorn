@@ -30,7 +30,7 @@ namespace RingsDbBuilder
             using (var client = new System.Net.Http.HttpClient())
             {
                 const int startDeckId = 2969;
-                const int maxDeckId = 4969;
+                const int maxDeckId = 7054;
                 RingsDbDeckList deck;
                 var slug = string.Empty;
                 var quantity = 0;
