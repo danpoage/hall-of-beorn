@@ -1519,6 +1519,8 @@ namespace HallOfBeorn.Services.LotR
                     return 144;
                 case "TFotW":
                     return 145;
+                case "TMoF":
+                    return 146;
                 default:
                     return 0;
             }
