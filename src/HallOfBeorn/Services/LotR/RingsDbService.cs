@@ -142,16 +142,16 @@ namespace HallOfBeorn.Services.LotR
             addPopularity("144001", 1);
 
             //5++ star player cards
-            addPopularity("01050", 5);
-            addPopularity("01073", 5);
-            addPopularity("01026", 5);
-            addPopularity("01057", 5);
-            addPopularity("01023", 5);
-            addPopularity("01034", 5);
-            addPopularity("04108", 5);
-            addPopularity("04059", 5);
-            addPopularity("04083", 5);
-            addPopularity("01046", 5);
+            addPopularity("01050", 5); //A Test of Will
+            addPopularity("01073", 5); //Gandalf (Core)
+            addPopularity("01026", 5); //Steward of Gondor
+            addPopularity("01057", 5); //Unexpected Courage
+            addPopularity("01023", 5); //Sneak Attack
+            addPopularity("01034", 5); //Feint
+            addPopularity("04108", 5); //Daeron's Runes
+            addPopularity("04059", 5); //Elrond's Counsel
+            addPopularity("04083", 5); //Warden of Healing
+            addPopularity("01046", 5); //Galadhrim's Greeting
 
             //5+ star player cards
             addPopularity("04107", 5);

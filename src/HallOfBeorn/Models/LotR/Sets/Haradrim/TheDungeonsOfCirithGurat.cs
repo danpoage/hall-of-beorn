@@ -26,11 +26,11 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithTraits("Dale.", "Warrior.")
                 .WithText("Action: Spend 1 Leadership Resource to ready the Knight of Dale. (limit once per round).\r\nValour Action: Ready the Dale Knight (limit once per round.).")
                 .WithInfo(110, 3, Artist.Unknown));
-            addCard(LotRCard.Ally("Knight of the Riddermark", Sphere.Tactics, 2, 0, 2, 0, 2)
+            addCard(LotRCard.Ally("Riddermark Knight", Sphere.Tactics, 2, 0, 2, 0, 2)
                 .WithTraits("Rohan.", "Warrior.")
                 .WithText("Response: When the Knight of the Riddermark is declared as an attacker, he gains +2 Attack for that attack. At the end of this attack, discard the Knight of the Riddermark.")
                 .WithInfo(111, 3, Artist.Unknown));
-            addCard(LotRCard.Ally("Survivor of Eregion", Sphere.Spirit, 2, 1, 1, 1, 3)
+            addCard(LotRCard.Ally("Eregion Survivor", Sphere.Spirit, 2, 1, 1, 1, 3)
                 .WithTraits("Noldor.")
                 .WithText("As long as you do not have cards in your hand, Survivor of Eregion gains +1 Willpower, +1 Attack and +1 Defense.")
                 .WithInfo(112, 3, Artist.Unknown));
@@ -52,7 +52,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
             addCard(LotRCard.Event("Fierce Defense", string.Empty, Sphere.Tactics, 3)
                 .WithText("Combat Action: Deal 3 damage to a non-unique enemy engaged with you.\r\nValour Combat Action: Discard a non-unique enemy engaged with you.")
                 .WithInfo(116, 3, Artist.Unknown));
-            addCard(LotRCard.Event("Heir of Eärendil", string.Empty, Sphere.Spirit, 1)
+            addCard(LotRCard.Event("Heirs of Eärendil", string.Empty, Sphere.Spirit, 1)
                 .WithText("Play only if you control a unique character with the Noldor trait and another unique character with the Dúnedain trait.\r\nAction: Choose a non-unique location in the staging area and increase your threat by X to discard it. X is the number of quest points printed on the chosen location.")
                 .WithInfo(117, 3, Artist.Unknown));
             addCard(LotRCard.Event("Open the Armory", string.Empty, Sphere.Neutral, 1)
