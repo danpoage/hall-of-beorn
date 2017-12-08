@@ -28,11 +28,11 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithInfo(110, 3, Artist.Unknown));
             addCard(LotRCard.Ally("Riddermark Knight", Sphere.Tactics, 2, 0, 2, 0, 2)
                 .WithTraits("Rohan.", "Warrior.")
-                .WithText("Response: When the Knight of the Riddermark is declared as an attacker, he gains +2 Attack for that attack. At the end of this attack, discard the Knight of the Riddermark.")
+                .WithText("Response: When Riddermark Knight is declared as an attacker, he gains +2 Attack for that attack. At the end of this attack, discard Riddermark Knight.")
                 .WithInfo(111, 3, Artist.Unknown));
             addCard(LotRCard.Ally("Eregion Survivor", Sphere.Spirit, 2, 1, 1, 1, 3)
                 .WithTraits("Noldor.")
-                .WithText("As long as you do not have cards in your hand, Survivor of Eregion gains +1 Willpower, +1 Attack and +1 Defense.")
+                .WithText("As long as you do not have cards in your hand, Eregion Survivor gets +1 Willpower, +1 Attack and +1 Defense.")
                 .WithInfo(112, 3, Artist.Unknown));
             addCard(LotRCard.Ally("Leaflock", Sphere.Lore, 3, 0, 2, 2, 3)
                 .WithUnique()
