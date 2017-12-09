@@ -32,6 +32,7 @@ namespace HallOfBeorn.Models.LotR
         public static ProductGroup AngmarAwakened = new AngmarAwakenedProductGroup();
         public static ProductGroup DreamChaser = new DreamChaserProductGroup();
         public static ProductGroup Haradrim = new HaradrimProductGroup();
+        public static ProductGroup Rhovanion = new RhovanionProductGroup();
         public static ProductGroup TheHobbitSaga = new TheHobbitSagaProductGroup();
         public static ProductGroup TheLordOfTheRingsSaga = new TheLordOfTheRingsSagaProductGroup();
         public static ProductGroup GenConDeck = new GenConDeckProductGroup();

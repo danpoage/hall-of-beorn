@@ -314,6 +314,8 @@
     <Compile Include="Models\LotR\Characters\TreebeardCharacter.cs" />
     <Compile Include="Models\LotR\CharacterThing.cs" />
     <Compile Include="Models\LotR\LayoutType.cs" />
+    <Compile Include="Models\LotR\ProductGroups\RhovanionProductGroup.cs" />
+    <Compile Include="Models\LotR\Products\Deluxe\TheWildsOfRhovanionProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\AcrossTheEttenmoorsNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\EscapeFromMountGramNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheBattleOfCarnDumNightmareProduct.cs" />
@@ -367,6 +369,7 @@
     <Compile Include="Models\LotR\Sets\AngmarAwakened\TheTreacheryOfRhudaurNightmare.cs" />
     <Compile Include="Models\LotR\Sets\AngmarAwakened\TheWastesOfEriadorNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheLostRealm\TheWeatherHillsNightmare.cs" />
+    <Compile Include="Models\LotR\Sets\TheWildsOfRhovanion\TheWildsOfRhovanionSet.cs" />
     <Compile Include="Models\LotR\TextTemplate.cs" />
     <Compile Include="Models\LotR\ViewModels\AdvancedSearchViewModel.cs" />
     <Compile Include="Models\Arkham\ArkhamCardSubtype.cs" />

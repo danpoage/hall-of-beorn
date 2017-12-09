@@ -156,6 +156,8 @@ namespace HallOfBeorn.Models.LotR
             Add(TheDungeonsOfCirithGurat);
             Add(TheCrossingsOfPoros);
 
+            Add(TheWildsOfRhovanion);
+
             Add(TheHobbitOverHillAndUnderHill);
             Add(TheHobbitOnTheDoorstep);
 
@@ -319,6 +321,8 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheBlackSerpent = new Sets.Haradrim.TheBlackSerpent();
         public static CardSet TheDungeonsOfCirithGurat = new Sets.Haradrim.TheDungeonsOfCirithGurat();
         public static CardSet TheCrossingsOfPoros = new Sets.Haradrim.TheCrossingsOfPoros();
+
+        public static CardSet TheWildsOfRhovanion = new Sets.TheWildsOfRhovanion.TheWildsOfRhovanionSet();
 
         public static CardSet TheHobbitOverHillAndUnderHill = new Sets.TheHobbit.OverHillandUnderHillSet();
         public static CardSet TheHobbitOnTheDoorstep = new Sets.TheHobbit.OntheDoorstepSet();
