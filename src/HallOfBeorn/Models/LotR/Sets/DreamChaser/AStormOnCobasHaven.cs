@@ -61,7 +61,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithFlavor("Thus spake Ioreth, wise-woman of Gondor: The hands of the king are the hands of a healer, and so shall the rightful king be known. -The Return of the King")
                 .WithInfo(117, 3, Artist.Aleksander_Karcz));
             Cards.Add(LotRCard.Event("The Houses of Healing", string.Empty, Sphere.Lore, 5)
-                .WithText("Response: You may exhaust any number of Healer characters you control as part of this card's cost. Reduce the cost to play this card by 1 for each Healer character you exhaust in this way.\r\nRefresh Action: Choose a hero in any player's discard pile. Put that hero into play under its owner's control, with 1 damage token on it.")
+                .WithText("You may exhaust any number of Healer characters you control as part of this card's cost. Reduce the cost to play this card by 1 for each Healer character you exhaust in this way.\r\nRefresh Action: Choose a hero in any player's discard pile. Put that hero into play under its owner's control, with 1 damage token on it.")
                 .WithInfo(118, 3, Artist.Mariusz_Gandzel));
             Cards.Add(LotRCard.Event("Justice Shall Be Done", "", Sphere.Neutral, 0)
                 .WithText("Limit 1 per deck.\r\nPlanning Action: Add Justice Shall Be Done to the victory display to draw 3 cards and add 3 resources to the resource pool of each hero you control. At the end of the round, you are eliminated from the game.")
