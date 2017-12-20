@@ -51,7 +51,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithInfo(115, 3, Artist.Lucas_Durham));
             addCard(LotRCard.Event("Fierce Defense", string.Empty, Sphere.Tactics, 3)
                 .WithText("Combat Action: Deal 3 damage to a non-unique enemy engaged with you.\r\nValour Combat Action: Discard a non-unique enemy engaged with you.")
-                .WithTemplate("<p class='main-text'><b>Combat Action:</b> Deal 3 damage to a non-unique enemy engaged with you.<br><b>Valour Combat Action:</b> Discard a non-unique enemy engaged with you.</p><p class='flavor-text'>When thirteen had fallen the rest fled shrieking, leaving the defenders unharmed, except for Sam who had a scrath along the scalp.<br>&mdash;The Fellowship of the Ring</p>")
+                .WithTemplate("<p class='main-text'><b>Combat Action:</b> Deal 3 damage to a non-unique enemy engaged with you.</p><p class='main-text'><b>Valour Combat Action:</b> Discard a non-unique enemy engaged with you.</p><p class='flavor-text'>When thirteen had fallen the rest fled shrieking, leaving the defenders unharmed, except for Sam who had a scrath along the scalp.<br>&mdash;The Fellowship of the Ring</p>")
                 .WithInfo(116, 3, Artist.Stanislav_Dikolenko));
             addCard(LotRCard.Event("Heirs of Eärendil", string.Empty, Sphere.Spirit, 1)
                 .WithText("Play only if you control a unique character with the Noldor trait and another unique character with the Dúnedain trait.\r\nAction: Choose a non-unique location in the staging area and increase your threat by X to discard it. X is the chosen location's printed quest points.")
