@@ -231,6 +231,8 @@ namespace HallOfBeorn.Models.LotR
             Add(TheFateOfNumenorNightmare);
             Add(RaidOnTheGreyHavensNightmare);
 
+            Add(FlightOfTheStormcallerNightmare);
+
             Add(WeMustAwayEreBreakOfDayNightmare);
             Add(OverTheMistyMountainsGrimNightmare);
             Add(DungeonsDeepAndCavernsDimNightmare);
@@ -399,6 +401,8 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet VoyageAcrossBelegaerNightmare = new Sets.TheGreyHavens.VoyageAcrossBelegaerNightmare();
         public static CardSet TheFateOfNumenorNightmare = new Sets.TheGreyHavens.TheFateOfNumenorNightmare();
         public static CardSet RaidOnTheGreyHavensNightmare = new Sets.TheGreyHavens.RaidOnTheGreyHavensNightmare();
+
+        public static CardSet FlightOfTheStormcallerNightmare = new Sets.DreamChaser.FlightOfTheStormcallerNightmare();
 
         public static CardSet WeMustAwayEreBreakOfDayNightmare = new Sets.TheHobbit.WeMustAwayEreBreakOfDayNightmare();
         public static CardSet OverTheMistyMountainsGrimNightmare = new Sets.TheHobbit.OverTheMistyMountainsGrimNightmare();

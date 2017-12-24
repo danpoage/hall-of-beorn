@@ -21,6 +21,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DreamChaser
             AddEncounterSet(EncounterSet.CorsairPirates);
             AddEncounterSet(EncounterSet.TheDreamChasersFleet);
             AddEncounterSet(EncounterSet.FlightOfTheStormcaller);
+            AddEncounterSet(EncounterSet.FlightOfTheStormcallerNightmare);
 
             AddQuestCardId("Swift-Departure-FotS");
             AddQuestCardId("Full-Sail-Ahead-AB-FotS");
@@ -39,6 +40,13 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DreamChaser
             ExcludeFromEasyMode("Serpent's-Blade-FotS", 1);
             ExcludeFromEasyMode("Vast-Coastland-FotS", 1);
             ExcludeFromEasyMode("Raging-Squall-FotS", 1);
+
+            ExcludeFromNightmareMode("Calm-Waters-TGH", 2);
+            ExcludeFromNightmareMode("Corsair-Skiff-FotS", 2);
+            ExcludeFromNightmareMode("Southron-Sailors-TGH", 2);
+            ExcludeFromNightmareMode("Serpent's-Blade-FotS", 2);
+            ExcludeFromNightmareMode("Hidden-Cove-FotS", 1);
+            ExcludeFromNightmareMode("Jagged-Reef-FotS", 2);
         }
     }
 }

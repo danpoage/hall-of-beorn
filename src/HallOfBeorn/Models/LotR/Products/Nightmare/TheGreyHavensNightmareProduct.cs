@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Products.Nightmare
         public TheGreyHavensNightmareProduct()
             : base("The Grey Havens Nightmare", "MEN44", ImageType.Jpg)
         {
+            IsPremier = true;
+            IsNewSubGroup = true;
             AddCardSet(CardSet.VoyageAcrossBelegaerNightmare);
             AddCardSet(CardSet.TheFateOfNumenorNightmare);
             AddCardSet(CardSet.RaidOnTheGreyHavensNightmare);
