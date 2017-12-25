@@ -10,6 +10,7 @@ namespace HallOfBeorn.Models.LotR.Products.Nightmare
         public TempleOfTheDeceivedNightmareProduct()
             : base("Temple of the Deceived Nightmare", "MEN47", ImageType.Jpg)
         {
+            AddCardSet(CardSet.TempleOfTheDeceivedNightmare);
         }
     }
 }

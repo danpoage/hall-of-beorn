@@ -20,6 +20,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DreamChaser
             AddEncounterSet(EncounterSet.TheStormcallerElite);
             AddEncounterSet(EncounterSet.TheThingInTheDepths);
             AddEncounterSet(EncounterSet.TheStormcaller);
+            AddEncounterSet(EncounterSet.TheThingInTheDepthsNightmare);
+            AddEncounterSet(EncounterSet.CorsairRaidersNightmare);
+            AddEncounterSet(EncounterSet.TheStormcallerNightmare);
 
             AddQuestCardId("Take-the-Ship-TTiTD");
             AddQuestCardId("Change-of-Plans-TTiTD");
@@ -31,6 +34,12 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DreamChaser
             ExcludeFromEasyMode("Quarter-Deck-TTiTD", 1);
             ExcludeFromEasyMode("Hold-Steady-TTiTD", 1);
             ExcludeFromEasyMode("Lashing-Tentacles-TTiTD", 2);
+
+            ExcludeFromNightmareMode("Corsair-Infiltrator-TGH", 2);
+            ExcludeFromNightmareMode("Crew-Quarters-TTiTD", 1);
+            ExcludeFromNightmareMode("Crushing-Arm-TTiTD", 1);
+            ExcludeFromNightmareMode("Grasping-Arm-TTiTD", 1);
+            ExcludeFromNightmareMode("Giant-Arm-TTiTD", 1);
         }
     }
 }

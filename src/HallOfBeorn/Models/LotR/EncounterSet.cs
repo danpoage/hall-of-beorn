@@ -347,6 +347,8 @@ namespace HallOfBeorn.Models.LotR
             Add(RaidOnTheGreyHavensNightmare);
             Add(FlightOfTheStormcallerNightmare);
             Add(TheThingInTheDepthsNightmare);
+            Add(TheStormcallerNightmare);
+            Add(CorsairRaidersNightmare);
             Add(TempleOfTheDeceivedNightmare);
 
             //The Hobbit: Over Hill and Under Hill Nightmare Decks
@@ -644,6 +646,8 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet RaidOnTheGreyHavensNightmare = new EncounterSet { Name = "Raid on the Grey Havens Nightmare", Set = "Raid on the Grey Havens Nightmare" };
         public static EncounterSet FlightOfTheStormcallerNightmare = new EncounterSet { Name = "Flight of the Stormcaller Nightmare", Set = "Flight of the Stormcaller Nightmare" };
         public static EncounterSet TheThingInTheDepthsNightmare = new EncounterSet { Name = "The Thing in the Depths Nightmare", Set = "The Thing in the Depths Nightmare" };
+        public static EncounterSet TheStormcallerNightmare = new EncounterSet { Name = "The Stormcaller Nightmare", Set = "The Thing in the Depths Nightmare" };
+        public static EncounterSet CorsairRaidersNightmare = new EncounterSet { Name = "Corsair Raiders Nightmare", Set = "The Thing in the Depths Nightmare" };
         public static EncounterSet TempleOfTheDeceivedNightmare = new EncounterSet { Name = "Temple of the Deceived Nightmare", Set = "Temple of the Deceived Nightmare" };
 
         //The Hobbit: Over Hill and Under Hill Nightmare Decks

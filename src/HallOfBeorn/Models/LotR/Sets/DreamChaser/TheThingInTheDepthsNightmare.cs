@@ -8,6 +8,8 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
     public class TheThingInTheDepthsNightmare : CardSet
     {
         private const string setName = "The Thing in the Depths Nightmare";
+        private const string setStormcaller = "The Stormcaller Nightmare";
+        private const string setCorsair = "Corsair Raiders Nightmare";
 
         protected override void Initialize()
         {
@@ -46,21 +48,21 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
 <p>Then shuffle the encounter cards in this Nightmare Deck into the remainder of the standard <i>The Thing in the Depths</i> encounter deck.</p>
 <p>Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.</p>")
                 .WithInfo(1, 1, Artist.Nicholas_Gregory));
-            addCard(LotRCard.Location("Captain's Quarters", string.Empty, setName, 5, 5)
+            addCard(LotRCard.Location("Captain's Quarters", string.Empty, setStormcaller, 5, 5)
                 .WithUnique()
                 .WithTraits("Ship.")
                 .WithText("While Captain's Quarters is grappled, Raider characters are considered to have no resources.\r\nTravel: Add 2 resources to Captain Sahír (even if he is out of play) and 1 resource to each other Raider card in play.")
                 .WithInfo(2, 1, Artist.Unknown));
-            addCard(LotRCard.Location("Aft Cabin", string.Empty, setName, 3, 3)
+            addCard(LotRCard.Location("Aft Cabin", string.Empty, setStormcaller, 3, 3)
                 .WithTraits("Ship.", "Deck.")
                 .WithText("While Aft Cabin is in the staging area, each enemy grappled with each Deck location adds 3 Threat instead of 2 Threat.\r\nForced: After an enemy is detached from Aft Cabin, that enemy gets +3 Defense until the end of the round.")
                 .WithInfo(3, 2, Artist.Guillaume_Ducos));
-            addCard(LotRCard.Treachery("Tumultuous Waters", string.Empty, setName)
+            addCard(LotRCard.Treachery("Tumultuous Waters", string.Empty, setStormcaller)
                 .WithTraits("Weather.")
                 .WithText("When Revealed: Exhaust each character with 1 or less Willpower. Remove all resources from each ready hero and objective-ally.")
                 .WithShadow("Shadow: If the defending character has 1 or less Willpower, treat this attack as undefended.")
                 .WithInfo(4, 2, Artist.Guillaume_Ducos));
-            addCard(LotRCard.Enemy("Corsair Duelist", string.Empty, setName, 36, 3, 3, 1, 3)
+            addCard(LotRCard.Enemy("Corsair Duelist", string.Empty, setCorsair, 36, 3, 3, 1, 3)
                 .WithTraits("Corsair.", "Raider.")
                 .WithText("Corsair Duelist enters play with 2 resources on it.\r\nForced: When Corsair Duelist would be defeated, remove 1 resource and all damage from it instead.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack for each resource on it.")
