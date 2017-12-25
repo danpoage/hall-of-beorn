@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.LotR.Products.Nightmare
     public class FlightOfTheStormcallerNightmareProduct : Product
     {
         public FlightOfTheStormcallerNightmareProduct()
-            : base("Flight of the Stormcaller Nightmare", "MEN45", ImageType.Png)
+            : base("Flight of the Stormcaller Nightmare", "MEN45", ImageType.Jpg)
         {
             AddCardSet(CardSet.FlightOfTheStormcallerNightmare);
         }
