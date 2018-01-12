@@ -67,7 +67,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             addCard(LotRCard.Location("Prison Cell", string.Empty, setName, 2, 3)
                 .WithTraits("Underground.")
                 .WithKeywords("Capture 1.")
-                .WithText("While Prison Cell is the active location, it gains: \"Planning Action: Rescue a random cards from underneath Prison Cell. Then, raise each player's threat by X, where X is that card's printed cost. (Limit once per round).\"")
+                .WithText("While Prison Cell is the active location, it gains: \"Planning Action: Rescue a random card from underneath Prison Cell. Then, raise each player's threat by X, where X is that card's printed cost. (Limit once per round).\"")
                 .WithInfo(4, 2, Artist.Guillaume_Ducos));
             addCard(LotRCard.Location("Torture Chamber", string.Empty, setName, 0, 255)
                 .WithTraits("Underground.")
