@@ -159,11 +159,9 @@ Planning Action: Exhuast a hero. Any player may trigger this action.",
                 Id = "c29c98de-5660-498c-a5cc-a1800985d221",
                 CardType = CardType.Treachery,
                 EncounterSet = "The Stone of Erech",
-                Text =
-@"When Revealed: Starting with the first player, each player must search the encounter deck and discard pile for an Undead enemy, reveal it, and add it to the staging area. Shuffle the encounter deck.
-
-Midnight. THe effect cannot be canceled.",
+                Text = "When Revealed: Starting with the first player, each player must search the encounter deck and discard pile for an Undead enemy, reveal it, and add it to the staging area. Shuffle the encounter deck.\r\nMidnight. This effect cannot be canceled.",
                 Shadow = "Attacking enemy gets +1 Attack (Dusk. +2 Attack instead. Midnight. +3 Attack instead).",
+                HtmlTemplate = "<p class='main-text'><b>When Revealed:</b> Starting with the first player, each player must search the encounter deck and discard pile for an {trait:Undead@Undead.} enemy, reveal it, and add it to the staging area. Shuffle the encounter deck.<br/><b>Midnight.</b> This effect cannot be canceled.</p>{Shadow}<p class='shadow-text'><b>Shadow:</b> Attacking enemy gets +1 {Attack}<br/>(<b>Dusk.</b> +2 {Attack} instead. <b>Midnight.</b> +3 {Attack} instead).</p>'",
                 Quantity = 2,
                 CardNumber = 22,
                 Artist = Artist.Ignacio_Bazan_Lazcano
