@@ -28,6 +28,8 @@
     "Kahliel", "Andrath Guardsman", "Prepare for Battle", "Yazan", "Wait no Longer", "Jubayr", "Dwarf Pipe", "Firyal", "Coney in a Trap", "Kahliel's Headdress",
     "Thurindir", "Kahliel's Tribesman", "Steed of the North", "Mighty Warrior", "Proud Hunters", "Dunedain Pathfinder", "Backtrack", "Eryn Galen Settler", "Explore Secret Ways", "Steward of Orthanc",
     "Hirgon", "Haradrim Spear", "Hunting Party", "The Red Arrow", "Keep Watch", "Rider of Rohan", "Fireside Song", "Dunedain Lookout", "Doughty Ranger", "The Free Peoples", "Brood Mother",
+    "Fastred", "Song of Hope", "Burst Into Song", "Defender of Cair Andros", "Oath of Eorl", "Fearless Scout", "Rally the West", "Dunedain Pipe", "Old Toby", "Southron Refugee", "The Black Serpent",
+    "Folco Boffin", "Knight of Dale", "Riddermark Knight", "Eregion Survivor", "Leaflock", "Diligent Noble", "Legacy Blade", "Fierce Defense", "Heirs of Earendil", "Open the Armory",
           "+set:",
           "-set:",
           "+type:",
