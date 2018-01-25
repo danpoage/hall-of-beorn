@@ -5,6 +5,7 @@ using System.Web;
 
 using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.Characters;
+using HallOfBeorn.Models.LotR.Characters.Groups;
 
 namespace HallOfBeorn.Services.LotR
 {
@@ -112,6 +113,7 @@ namespace HallOfBeorn.Services.LotR
             add(new SarumanCharacter());
             add(new SkinbarkCharacter());
             add(new TheCouncilOfElrondGroup());
+            add(new TheEaglesGroup());
             add(new TheEntsGroup());
             add(new TheFellowshipOfTheRingGroup());
             add(new TheGreyCompanyGroup());

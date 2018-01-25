@@ -56,7 +56,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addMember("Quickbeam", "Quickbeam");
             addMember("Skinbark", "Skinbark");
             addMember("Beechbone", "Beechbone");
-            addMember("Leaflock");
+            addMember("Leaflock", "Leaflock");
 
             addFriend("Gandalf", "Gandalf");
             addFriend("Merry", "Merry");
