@@ -60,6 +60,8 @@ namespace HallOfBeorn.Models.LotR.Characters.Groups
             addFriend("Gandalf", "Gandalf");
             addFriend("Radagast", "Radagast");
 
+            addArticle("https://visionofthepalantir.wordpress.com/2018/01/24/the-eagles/", "Vision of the Palantir Trait Review");
+
             Card("Gwaihir-TiT");
             Card("Gwaihir-TMoF");
             Card("Landroval-AJtM");

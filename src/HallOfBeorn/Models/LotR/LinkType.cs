@@ -22,6 +22,7 @@ namespace HallOfBeorn.Models
         Warden_of_Arnor,
         Heroes_of_the_Rings,
         Very_Late_Adventurer,
+        Vision_of_the_Palantir,
         Susurros_del_Bosque_Viejo,
         El_Libro_Rojo_de_Bolson_Cerrado,
         Expecting_Mischief,

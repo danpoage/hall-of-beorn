@@ -59,6 +59,9 @@ namespace HallOfBeorn.Models.LotR.Characters
             addMember("Farmer Maggot", "Farmer-Maggot");
             addMember("Tom Cotton", "Tom-Cotton");
             addMember("Rosie Cotton", "Rosie-Cotton");
+            addMember("Folco Boffin", "Folco-Boffin");
+
+            addArticle("https://visionofthepalantir.wordpress.com/2018/01/25/hobbits/", "Vision of the Palantir Trait Review");
 
             Card("Raise-the-Shire-TMoF");
             Card("Farewell-to-the-Shire-TOF");

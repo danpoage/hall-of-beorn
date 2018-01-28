@@ -157,6 +157,17 @@
         </div>   
     }
 
+    if (@Model.HasArticles) {
+        <h3>Articles</h3>
+        <div>
+            @foreach (var article in @Model.Articles) {
+                <span style="margin: 4px 6px; display: inline-block">
+                    <a href="@article.Url" title="@article.Title" target="_blank">@article.Text</a>
+                </span>
+            }
+        </div>   
+    }
+    
     <h3>Cards</h3>
     <div>
         @foreach (var cardLink in @Model.CardLinks) {

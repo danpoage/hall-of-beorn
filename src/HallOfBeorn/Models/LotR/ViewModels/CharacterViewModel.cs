@@ -53,6 +53,9 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         public IEnumerable<Link> Members { get { return character.Members; } }
         public bool HasMembers { get { return character.Members.Count() > 0; } }
 
+        public IEnumerable<Link> Articles { get { return character.Articles; } }
+        public bool HasArticles { get { return character.Articles.Count() > 0; } }
+
         public IEnumerable<Link> CardLinks { get { return cardLinks; } }
 
         public void AddCardLink(LotRCard card)
