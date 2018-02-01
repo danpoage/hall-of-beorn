@@ -17,17 +17,21 @@ namespace HallOfBeorn.Models.LotR.Characters
             BioSourceUrl = "http://tolkiengateway.net/wiki/Brand";
             ImageArtist = Artist.Donato_Giancola;
 
-            Alias("King of Dale");
+            Alias("King of Dale", "King-of-Dale-TWoR");
 
             addFamily("Bard the Bowman (Grandfather)", "Bard-the-Bowman");
             addFamily("Bain (Father)");
+            addFamily("Bard son of Brand (Son)", "Bard-son-of-Brand");
 
             addFriend("Dain Ironfoot", "Dain-Ironfoot");
             addFriend("Glóin", "Gloin");
 
             addItem("Great Yew Bow", "Great-Yew-Bow-THOHaUH");
+            addItem("Bow of Yew", "Bow-of-Yew-TWoR");
+            addItem("Necklace of Girion", "Necklace-of-Girion-TWoR");
 
-            Card("Brand-son-of-Bain-THOtD");
+            Card("Brand-son-of-Bain-THoEM");
+            Card("Brand-son-of-Bain-TWoR");
         }
     }
 }

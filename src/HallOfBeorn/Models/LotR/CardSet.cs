@@ -28,6 +28,21 @@ namespace HallOfBeorn.Models.LotR
             this.Cards.Add(card);
         }
 
+        protected LotRCard addHero(string title, byte threatCost, Sphere sphere, byte willpower, byte attack, byte defense, byte hitPoints)
+        {
+            var hero = LotRCard.Hero(title, string.Empty, sphere, threatCost, willpower, attack, defense, hitPoints);
+            addCard(hero);
+            return hero;
+        }
+
+        protected LotRCard addAttachment(string title, byte resourceCost, Sphere sphere, bool isUnique)
+        {
+            var attachment = LotRCard.Attachment(title, string.Empty, sphere, resourceCost);
+            attachment.IsUnique = isUnique;
+            addCard(attachment);
+            return attachment;
+        }
+
         public string Id { get; protected set; }
 
         private string name;

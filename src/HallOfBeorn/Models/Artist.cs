@@ -612,6 +612,10 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Sebastian_Rodriguez);
             all.Add(Artist.Audrey_Hotte);
 
+            //The Wilds of Rhovanion
+            all.Add(Artist.Antonio_Jose_Manzanedo);
+            all.Add(Artist.Rankin_Bass);
+
             //Arkham Horrom Core
             //all.Add(Artist.Vincent_Dutrait);
             //all.Add(Artist.Jacob_Murray);
@@ -649,6 +653,7 @@ namespace HallOfBeorn.Models
         public static Artist Andreas_Marschall = new Artist { Name = "Andreas Marschall", URL = "http://marschall-arts.com/Website/Willkommen.html" };
         public static Artist Anke_Eissmann = new Artist { Name = "Anke Eissmann", URL = "http://www.anke.edoras-art.de" };
         public static Artist Anssiart = new Artist { Name = "Anssiart", URL = "http://anssiart.deviantart.com" };
+        public static Artist Antonio_Jose_Manzanedo = new Artist { Name = "Antonio José Manzanedo", URL = "https://manzanedo.deviantart.com" };
         public static Artist Ao_Yi_Chuan = new Artist { Name = "Ao Yi Chuan", URL = "http://mcfrog.deviantart.com" };
         public static Artist Aogachou = new Artist { Name = "Aogachou", URL = "http://aogachou.deviantart.com" };
         public static Artist Arman_Akopian = new Artist { Name = "Arman Akopian", URL = "http://i-guyjin-i.deviantart.com/gallery" };
@@ -1064,6 +1069,7 @@ namespace HallOfBeorn.Models
         public static Artist Piya_Wannachaiwong = new Artist { Name = "Piya Wannachaiwong", URL = "http://www.piyastudios.com" };
         public static Artist Rafal_Hrynkiewicz = new Artist { Name = "Rafał Hrynkiewicz", URL = "http://mcf.deviantart.com" };
         public static Artist Ramon_Puasa_Jr = new Artist { Name = "Ramon Puasa Jr.", URL = "http://monpuasajr.deviantart.com" };
+        public static Artist Rankin_Bass = new Artist { Name = "Rankin Bass", URL = "https://en.wikipedia.org/wiki/Rankin/Bass_Productions" };
         public static Artist Raymond_Bonilla = new Artist { Name = "Raymond Bonilla", URL = "http://raybonilla.deviantart.com" };
         public static Artist Regis_Moulun = new Artist { Name = "Régis Moulun", URL = "http://moulunerie.deviantart.com" };
         public static Artist Rick_Price = new Artist { Name = "Rick Price", URL = "https://www.google.com/search?q=rick+price+fantasy+art" };

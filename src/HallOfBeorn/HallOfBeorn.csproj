@@ -208,6 +208,7 @@
     <Compile Include="Models\LotR\Characters\AragornCharacter.cs" />
     <Compile Include="Models\LotR\Characters\ArwenUndomielCharacter.cs" />
     <Compile Include="Models\LotR\Characters\BalinCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\BardSonOfBrandCharacter.cs" />
     <Compile Include="Models\LotR\Characters\BardTheBowmanCharacter.cs" />
     <Compile Include="Models\LotR\Characters\BarlimanButterburCharacter.cs" />
     <Compile Include="Models\LotR\Characters\BeechboneCharacter.cs" />

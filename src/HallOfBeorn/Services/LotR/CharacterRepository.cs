@@ -22,6 +22,7 @@ namespace HallOfBeorn.Services.LotR
             add(new AragornCharacter());
             add(new ArwenUndomielCharacter());
             add(new BalinCharacter());
+            add(new BardSonOfBrandCharacter());
             add(new BardTheBowmanCharacter());
             add(new BarlimanButterburCharacter());
             add(new BeechboneCharacter());
