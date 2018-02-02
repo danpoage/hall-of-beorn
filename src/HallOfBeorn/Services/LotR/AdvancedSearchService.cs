@@ -271,6 +271,9 @@ namespace HallOfBeorn.Services.LotR
             var query = searchModel.Query;
             var filters = query.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToListSafe().Where(x => x.StartsWith("-") || x.StartsWith("+")).ToListSafe();
 
+            var orMode = false;
+            var orResults = new List<CardScore>();
+
             foreach (var filter in filters)
             {
                 var fields = filter.Split(new char[] { ':', '=' }, StringSplitOptions.RemoveEmptyEntries).ToListSafe();
@@ -287,25 +290,36 @@ namespace HallOfBeorn.Services.LotR
                     value = fields[1];
                 }
 
+                List<CardScore> filterResults = new List<CardScore>();
+
                 switch (field)
                 {
-                    case "title":
-                        results = FilterByString(field, value, results, negate);
+                    case "and":
+                        orMode = false;
+                        if (orResults.Count > 0) {
+                            results = orResults.Distinct().ToList();
+                        }
+                        break;
+                    case "or":
+                        orMode = true;
+                        break;
+                    case "title": 
+                        filterResults = FilterByString(field, value, results, negate);
                         break;
                     case "cycle":
-                        results = FilterByString(field, value, results, negate);
+                        filterResults = FilterByString(field, value, results, negate);
                         break;
                     case "set":
-                        results = FilterByString(field, value, results, negate);
+                        filterResults = FilterByString(field, value, results, negate);
                         break;
                     case "product":
-                        results = FilterByString(field, value, results, negate);
+                        filterResults = FilterByString(field, value, results, negate);
                         break;
                     case "type":
-                        results = FilterByEnum<CardType>(value, results, negate);
+                        filterResults = FilterByEnum<CardType>(value, results, negate);
                         break;
                     case "sphere":
-                        results = FilterByEnum<Sphere>(value, results, negate);
+                        filterResults = FilterByEnum<Sphere>(value, results, negate);
                         break;
                     case "rcost":
                     case "tcost":
@@ -315,50 +329,48 @@ namespace HallOfBeorn.Services.LotR
                     case "atk":
                     case "def":
                     case "hp":
-                        results = FilterByByte(field, value, results, negate);
+                        filterResults = FilterByByte(field, value, results, negate);
                         break;
                     case "trait":
-                        results = FilterByString(field, value, results, negate);
+                        filterResults = FilterByString(field, value, results, negate);
                         break;
                     case "keyword":
-                        results = FilterByString(field, value, results, negate);
+                        filterResults = FilterByString(field, value, results, negate);
                         break;
                     case "encounter":
-                        results = FilterByString(field, value, results, negate);
+                        filterResults = FilterByString(field, value, results, negate);
                         break;
                     case "artist":
-                        results = FilterByString(field, value, results, negate);
+                        filterResults = FilterByString(field, value, results, negate);
                         break;
                     case "category":
-                        results = FilterByEnum<Category>(value, results, negate);
+                        filterResults = FilterByEnum<Category>(value, results, negate);
                         break;
                     case "victory":
-                        results = FilterByByte(field, value, results, negate);
+                        filterResults = FilterByByte(field, value, results, negate);
                         break;
                     case "unique":
-                        results = FilterByBool(field, results, negate);
+                        filterResults = FilterByBool(field, results, negate);
                         break;
                     case "saga":
-                        results = FilterByBool(field, results, negate);
+                        filterResults = FilterByBool(field, results, negate);
                         break;
                     case "text":
                     case "shadow":
-                        results = FilterByString(field, value, results, negate);
+                        filterResults = FilterByString(field, value, results, negate);
                         break;
-                    /*
-                    case "custom":
-                        results = FilterByBool(field, results, negate);
-                        if (!negate)
-                        {
-                            searchModel.Custom = true;
-                        }
-                        break;*/
                     default:
                         break;
                 }
+
+                if (orMode) {
+                    orResults.AddRange(filterResults);
+                } else {
+                    results = filterResults;
+                }
             }
 
-            return results;
+            return orMode ? orResults.Distinct().ToList() : results;
         }
     }
 }
