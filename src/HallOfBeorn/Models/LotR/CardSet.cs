@@ -43,6 +43,48 @@ namespace HallOfBeorn.Models.LotR
             return attachment;
         }
 
+        protected LotRCard addQuest(string title, string encounterSet, uint stageNumber, char stageLetter, byte? questPoints)
+        {
+            var quest = LotRCard.Quest(title, stageNumber, encounterSet, questPoints, stageLetter);
+            addCard(quest);
+            return quest;
+        }
+
+        protected LotRCard addEnemy(string title, string encounterSet, byte? engagementCost, byte? threat, byte? attack, byte? defense, byte? hitPoints)
+        {
+            var enemy = LotRCard.Enemy(title, string.Empty, encounterSet, engagementCost, threat, attack, defense, hitPoints);
+            addCard(enemy);
+            return enemy;
+        }
+
+        protected LotRCard addLocation(string title, string encounterSet, byte? threat, byte? questPoints)
+        {
+            var location = LotRCard.Location(title, string.Empty, encounterSet, threat, questPoints);
+            addCard(location);
+            return location;
+        }
+
+        protected LotRCard addTreachery(string title, string encounterSet)
+        {
+            var treachery = LotRCard.Treachery(title, string.Empty, encounterSet);
+            addCard(treachery);
+            return treachery;
+        }
+
+        protected LotRCard addEncounterSideQuest(string title, string encounterSet, byte? questPoints)
+        {
+            var sideQuest = LotRCard.EncounterSideQuest(title, string.Empty, encounterSet, questPoints);
+            addCard(sideQuest);
+            return sideQuest;
+        }
+
+        protected LotRCard addObjectiveAlly(string title, string encounterSet, byte willpower, byte attack, byte defense, byte hitPoints)
+        {
+            var objectiveAlly = LotRCard.ObjectiveAlly(title, string.Empty, encounterSet, willpower, attack, defense, hitPoints);
+            addCard(objectiveAlly);
+            return objectiveAlly;
+        }
+
         public string Id { get; protected set; }
 
         private string name;

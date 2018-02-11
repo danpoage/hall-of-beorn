@@ -219,6 +219,9 @@ namespace HallOfBeorn.Models.LotR
             Add(RaceAcrossHarad);
             Add(BeneathTheSands);
             Add(TheBlackSerpent);
+            Add(TheDungeonsOfCirithGurat);
+            Add(TheCrossingsOfPoros);
+            Add(MountainsOfShadow);
 
             //The Hobbit: Over Hill and Under Hill
             Add(WeMustAwayEreBreakOfDay);
@@ -513,6 +516,9 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet RaceAcrossHarad = new EncounterSet { Name = "Race Across Harad", Set = "Race Across Harad" };
         public static EncounterSet BeneathTheSands = new EncounterSet { Name = "Beneath the Sands", Set = "Beneath the Sands" };
         public static EncounterSet TheBlackSerpent = new EncounterSet { Name = "The Black Serpent", Set = "The Black Serpent" };
+        public static EncounterSet TheDungeonsOfCirithGurat = new EncounterSet { Name = "The Dungeons of Cirith Gurat", Set = "The Dungeons of Cirith Gurat" };
+        public static EncounterSet TheCrossingsOfPoros = new EncounterSet { Name = "The Crossings of Poros", Set = "The Crossings of Poros" };
+        public static EncounterSet MountainsOfShadow = new EncounterSet { Name = "Mountains of Shadow", Set = "The Crossings of Poros" };
 
         //The Hobbit: Over Hill and Under Hill
         public static EncounterSet WeMustAwayEreBreakOfDay = new EncounterSet { Name = "We Must Away, Ere Break of Day", Set = "The Hobbit: Over Hill and Under Hill" };

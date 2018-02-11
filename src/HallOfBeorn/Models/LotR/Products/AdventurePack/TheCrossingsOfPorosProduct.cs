@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
             : base("The Crossings of Poros", "MEC61", ImageType.Png)
         {
             AddCardSet(CardSet.TheCrossingsOfPoros);
+
+            AddScenario(new Scenarios.Haradrim.TheCrossingsOfPorosScenario());
         }
     }
 }
