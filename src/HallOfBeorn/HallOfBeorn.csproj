@@ -299,7 +299,7 @@
     <Compile Include="Models\LotR\Characters\SarumanCharacter.cs" />
     <Compile Include="Models\LotR\Characters\SkinbarkCharacter.cs" />
     <Compile Include="Models\LotR\Characters\TheCouncilOfElrondGroup.cs" />
-    <Compile Include="Models\LotR\Characters\TheEntsGroup.cs" />
+    <Compile Include="Models\LotR\Characters\Groups\TheEntsGroup.cs" />
     <Compile Include="Models\LotR\Characters\TheFellowshipOfTheRingGroup.cs" />
     <Compile Include="Models\LotR\Characters\TheGreyCompanyGroup.cs" />
     <Compile Include="Models\LotR\Characters\TheodenCharacter.cs" />

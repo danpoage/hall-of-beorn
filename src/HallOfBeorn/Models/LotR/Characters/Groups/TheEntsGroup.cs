@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HallOfBeorn.Models.LotR.Characters
+namespace HallOfBeorn.Models.LotR.Characters.Groups
 {
     public class TheEntsGroup : CharacterGroup
     {
@@ -62,6 +62,8 @@ namespace HallOfBeorn.Models.LotR.Characters
             addFriend("Merry", "Merry");
             addFriend("Pippin", "Pippin");
             addFriend("Saruman (The White)", "Saruman");
+
+            addArticle("https://visionofthepalantir.wordpress.com/2018/02/12/ents/", "Vision of the Palantir Trait Review");
 
             Card("Wandering-Ent-CS");
             Card("Booming-Ent-TAC");
