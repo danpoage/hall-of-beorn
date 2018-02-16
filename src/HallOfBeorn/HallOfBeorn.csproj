@@ -917,6 +917,7 @@
     <Content Include="Images\Baggins.png" />
     <Content Include="Images\close-button.png" />
     <Content Include="Images\compass-rose.png" />
+    <Content Include="Images\Copy of Mastery.png" />
     <Content Include="Images\defense-med.png" />
     <Content Include="Images\defense-small.png" />
     <Content Include="Images\encounter-card-back.jpg" />
@@ -942,6 +943,7 @@
     <Content Include="Images\Lore-med.png" />
     <Content Include="Images\Lore.png" />
     <Content Include="Images\LotRBeornSmall.jpg" />
+    <Content Include="Images\Mastery-med.png" />
     <Content Include="Images\Mastery.png" />
     <Content Include="Images\octgn-logo.png" />
     <Content Include="Images\Patreon.png" />
