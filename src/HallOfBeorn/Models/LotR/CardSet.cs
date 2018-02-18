@@ -78,6 +78,13 @@ namespace HallOfBeorn.Models.LotR
             return sideQuest;
         }
 
+        protected LotRCard addObjective(string title, string encounterSet)
+        {
+            var objective = LotRCard.Objective(title, string.Empty, encounterSet);
+            addCard(objective);
+            return objective;
+        }
+
         protected LotRCard addObjectiveAlly(string title, string encounterSet, byte willpower, byte attack, byte defense, byte hitPoints)
         {
             var objectiveAlly = LotRCard.ObjectiveAlly(title, string.Empty, encounterSet, willpower, attack, defense, hitPoints);

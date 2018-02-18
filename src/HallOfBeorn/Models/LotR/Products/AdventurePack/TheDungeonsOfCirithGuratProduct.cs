@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
             : base("The Dungeons of Cirith Gurat", "MEC60", ImageType.Png)
         {
             AddCardSet(CardSet.TheDungeonsOfCirithGurat);
+
+            AddScenario(new Scenarios.Haradrim.TheDungeonsOfCirithGuratScenario());
         }
     }
 }
