@@ -40,7 +40,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
             addCard(LotRCard.Attachment("Followed", string.Empty, Sphere.Tactics, 1)
                 .WithTraits("Condition.", "Trap.")
                 .WithText("Play into your play area unattached.\r\nWhile unattached, attach to the next eligible enemy that engages you.\r\nWhile attached enemy is engaged with you, reduce the total Threat in the staging area by X, where X is attached enemy's printed Threat.")
-                .WithInfo(139, 3, Artist.Unknown));
+                .WithInfo(139, 3, Artist.Dimitri_Bielak));
             addCard(LotRCard.Event("Flight to the Sea", string.Empty, Sphere.Spirit, 2)
                 .WithText("Play only if you control a Noldor or Silvan hero.\r\nPlanning Action: Shuffle a set aside ~Wind from the ~Sea into the encounter deck. Then, remove Flight to the Sea from the game.")
                 .WithFlavor("\"...they may pass to the Sea unhindered and leave the Middle-earth forever.\"\r\n-Haldir, The Two Towers")
