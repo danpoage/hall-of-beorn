@@ -247,7 +247,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.DeepsOfMoria }
             });
             Cards.Add(new LotRCard() {
-                Title = "A Elbereth! Gilthonial!",
+                Title = "A Elbereth! Gilthoniel!",
                 AlternateSlug = "O-Elbereth-Gilthonial-SaF",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9019",
                 CardType = CardType.Event,
