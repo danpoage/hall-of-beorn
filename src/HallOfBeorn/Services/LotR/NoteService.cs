@@ -98,7 +98,7 @@ namespace HallOfBeorn.Services.LotR
         {
             var version = 1.7;
             addFaq("Will-of-the-West-Core", "<p>Should read: <blockquote><b>Action:</b> Choose a player. Shuffle that player’s discard pile back into his deck. Remove Will of the West from the game.</blockquote></p>", version);
-            addFaq("A-Elbereth-Gilthonial-SaF", "<p>Title should read: “A Elbereth! Gilthoniel!”</p><p>Should read: <blockquote><b>Resonse:</b> After a non-unique enemy attacks you...</blockquote></p>", version);
+            addFaq("A-Elbereth-Gilthoniel-SaF", "<p>Title should read: “A Elbereth! Gilthoniel!”</p><p>Should read: <blockquote><b>Resonse:</b> After a non-unique enemy attacks you...</blockquote></p>", version);
             addFaq("Secret-Entrance-THOtD", "<p>Should read: <blockquote>Then, look at the top card of the encounter deck. If the looked at card is not...</blockquote></p>", version);
             addFaq("A-Watchful-Peace-HoN", "<p>Should read: <blockquote><b>Response:</b> After a location worth no victory points leaves play as an explored location...</blockquote></p>", version);
             addFaq("The-Power-of-Mordor-HoN", "<p>Should read: <blockquote>...Reveal an equal number of cards from the encounter deck...</blockquote><br>Omit the word “Then”</p>", version);
