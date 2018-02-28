@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             GroupName = "The Hobbit";
             Number = 3;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/the-hobbit-over-hill-and-under-hill-quest-dungeons-deep-and-caverns-dim.html";
+            QuestCompanionSlug = "the-hobbit-over-hill-and-under-hill-quest-dungeons-deep-and-caverns-dim";
 
             AddEncounterSet(EncounterSet.DungeonsDeepAndCavernsDim);
             AddEncounterSet(EncounterSet.DungeonsDeepAndCavernsDimNightmare);

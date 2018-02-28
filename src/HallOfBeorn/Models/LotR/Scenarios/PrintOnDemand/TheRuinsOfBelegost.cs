@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             GroupName = "GenCon";
             Number = 6;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/print-on-demand-quest-the-ruins-of-belegost.html";
+            QuestCompanionSlug = "print-on-demand-quest-the-ruins-of-belegost";
 
             AddEncounterSet(EncounterSet.TheRuinsOfBelegost);
 

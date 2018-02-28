@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             GroupName = "The Lord of the Rings";
             Number = 11;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/lotr-the-land-of-shadow-saga-expansion-quest-journey-to-the-cross-roads.html";
+            QuestCompanionSlug = "lotr-the-land-of-shadow-saga-expansion-quest-journey-to-the-cross-roads";
 
             AddEncounterSet(EncounterSet.MenOfHarad);
             AddEncounterSet(EncounterSet.JourneyToTheCrossRoads);

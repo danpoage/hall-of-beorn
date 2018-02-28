@@ -7,9 +7,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             Title = "Trouble in Tharbad";
             ProductName = "Trouble in Tharbad";
             GroupName = "The Ring-maker";
-            Number = 0;
+            Number = 3;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/the-ring-maker-quest-trouble-in-tharbad.html";
+            QuestCompanionSlug = "the-ring-maker-quest-trouble-in-tharbad";
 
             AddEncounterSet(EncounterSet.MistyMountainOrcs);
             AddEncounterSet(EncounterSet.TroubleInTharbad);

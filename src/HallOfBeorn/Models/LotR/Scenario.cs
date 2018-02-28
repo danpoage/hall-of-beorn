@@ -109,7 +109,11 @@ namespace HallOfBeorn.Models.LotR
         public string RulesUrl { get; set; }
         public string AlternateTitle { get; set; }
 
-        public string QuestCompanionUrl { get; set; }
+        public string QuestCompanionSlug { get; set; }
+        public string QuestCompanionUrl
+        {
+            get { return string.Format("http://lotrlcgcompanion.com/{0}.html", QuestCompanionSlug); }
+        }
 
         public ScenarioCard CampaignCard
         {

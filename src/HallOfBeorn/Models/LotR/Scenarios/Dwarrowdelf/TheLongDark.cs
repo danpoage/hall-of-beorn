@@ -7,9 +7,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             Title = "The Long Dark";
             ProductName = "The Long Dark";
             GroupName = "Dwarrowdelf";
-            Number = 0;
+            Number = 4;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/dwarrowdelf-quest-the-long-dark.html";
+            QuestCompanionSlug = "dwarrowdelf-quest-the-long-dark";
 
             AddEncounterSet(EncounterSet.DeepsOfMoria);
             AddEncounterSet(EncounterSet.TheLongDark);

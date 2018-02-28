@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DreamChaser
             GroupName = "Dream-chaser";
             Number = 2;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/the-dream-chaser-quest-the-thing-in-the-depths.html";
+            QuestCompanionSlug = "the-dream-chaser-quest-the-thing-in-the-depths";
 
             AddEncounterSet(EncounterSet.CorsairRaiders);
             AddEncounterSet(EncounterSet.TheStormcallerElite);

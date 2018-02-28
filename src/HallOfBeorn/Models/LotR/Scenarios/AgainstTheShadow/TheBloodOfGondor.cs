@@ -7,9 +7,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
             Title = "The Blood of Gondor";
             ProductName = "The Blood of Gondor";
             GroupName = "Against the Shadow";
-            Number = 0;
+            Number = 5;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/against-the-shadow-quest-the-blood-of-gondor.html";
+            QuestCompanionSlug = "against-the-shadow-quest-the-blood-of-gondor";
 
             AddEncounterSet(EncounterSet.RavagingOrcs);
             AddEncounterSet(EncounterSet.TheBloodOfGondor);

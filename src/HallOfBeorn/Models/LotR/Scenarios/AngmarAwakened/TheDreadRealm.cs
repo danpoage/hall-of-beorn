@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             GroupName = "Angmar Awakened";
             Number = 6;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/angmar-awakened-quest-the-dread-realm.html";
+            QuestCompanionSlug = "angmar-awakened-quest-the-dread-realm";
 
             AddEncounterSet(EncounterSet.TheDreadRealm);
             AddEncounterSet(EncounterSet.TheDreadRealmNightmare);

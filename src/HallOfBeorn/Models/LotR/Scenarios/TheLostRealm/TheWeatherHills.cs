@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLostRealm
             GroupName = "The Lost Realm";
             Number = 2;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/the-lost-realm-quest-the-weather-hills.html";
+            QuestCompanionSlug = "the-lost-realm-quest-the-weather-hills";
 
             AddEncounterSet(EncounterSet.AngmarOrcs);
             AddEncounterSet(EncounterSet.FoulWeather);

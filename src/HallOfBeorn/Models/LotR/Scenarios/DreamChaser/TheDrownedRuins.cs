@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DreamChaser
             GroupName = "Dream-chaser";
             Number = 4;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/the-dream-chaser-quest-the-drowned-ruins.html";
+            QuestCompanionSlug = "the-dream-chaser-quest-the-drowned-ruins";
 
             AddEncounterSet(EncounterSet.TheDrownedRuins);
             AddEncounterSet(EncounterSet.DrownedDead);

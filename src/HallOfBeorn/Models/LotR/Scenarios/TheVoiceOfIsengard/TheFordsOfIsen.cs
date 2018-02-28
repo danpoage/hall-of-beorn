@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheVoiceOfIsengard
             GroupName = "The Voice of Isengard";
             Number = 1;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/voice-of-isengard-quest-the-fords-of-isen.html";
+            QuestCompanionSlug = "voice-of-isengard-quest-the-fords-of-isen";
 
             AddEncounterSet(EncounterSet.DunlandRaiders);
             AddEncounterSet(EncounterSet.DunlandWarriors);

@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             GroupName = "The Lord of the Rings";
             Number = 16;
 
-            //QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/.html";
+            //QuestCompanionSlug = "http://lotr-lcg-quest-companion.com/.html";
 
             AddEncounterSet(EncounterSet.TheTowerOfCirithUngol);
             AddEncounterSet(EncounterSet.OrcsOfMordor);

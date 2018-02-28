@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             GroupName = "The Lord of the Rings";
             Number = 1;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/lotr-the-black-riders-quest-a-shadow-of-the-past.html";
+            QuestCompanionSlug = "lotr-the-black-riders-quest-a-shadow-of-the-past";
 
             AddEncounterSet(EncounterSet.AShadowOfThePast);
             AddEncounterSet(EncounterSet.AShadowOfThePastNightmare);

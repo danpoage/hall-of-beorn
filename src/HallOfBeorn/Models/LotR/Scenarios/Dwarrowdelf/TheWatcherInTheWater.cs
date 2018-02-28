@@ -7,9 +7,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             Title = "The Watcher in the Water";
             ProductName = "The Watcher in the Water";
             GroupName = "Dwarrowdelf";
-            Number = 0;
+            Number = 3;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/dwarrowdelf-quest-the-watcher-in-the-water.html";
+            QuestCompanionSlug = "dwarrowdelf-quest-the-watcher-in-the-water";
 
             AddEncounterSet(EncounterSet.MistyMountains);
             AddEncounterSet(EncounterSet.TheWatcherInTheWater);

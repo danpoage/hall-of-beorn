@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             GroupName = "The Lord of the Rings";
             Number = 4;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/lotr-the-road-darkens-quest-the-ring-goes-south.html";
+            QuestCompanionSlug = "lotr-the-road-darkens-quest-the-ring-goes-south";
 
             AddEncounterSet(EncounterSet.TheRingGoesSouth);
             AddEncounterSet(EncounterSet.TheRingGoesSouthNightmare);

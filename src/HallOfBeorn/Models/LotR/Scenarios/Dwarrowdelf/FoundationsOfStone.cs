@@ -7,9 +7,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             Title = "Foundations of Stone";
             ProductName = "Foundations of Stone";
             GroupName = "Dwarrowdelf";
-            Number = 0;
+            Number = 5;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/dwarrowdelf-quest-foundations-of-stone.html";
+            QuestCompanionSlug = "dwarrowdelf-quest-foundations-of-stone";
 
             AddEncounterSet(EncounterSet.FoundationsOfStone);
             AddEncounterSet(EncounterSet.FoundationsOfStoneNightmare);

@@ -7,9 +7,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             Title = "The Antlered Crown";
             ProductName = "The Antlered Crown";
             GroupName = "The Ring-maker";
-            Number = 0;
+            Number = 6;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/the-ring-maker-quest-the-antlered-crown.html";
+            QuestCompanionSlug = "the-ring-maker-quest-the-antlered-crown";
 
             AddEncounterSet(EncounterSet.DunlandRaiders);
             AddEncounterSet(EncounterSet.DunlandWarriors);

@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             GroupName = "GenCon";
             Number = 3;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/print-on-demand-quest-the-stone-of-erech.html";
+            QuestCompanionSlug = "print-on-demand-quest-the-stone-of-erech";
 
             AddEncounterSet(EncounterSet.TheStoneOfErech);
 

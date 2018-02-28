@@ -7,9 +7,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             Title = "The Hunt for Gollum";
             ProductName = "The Hunt for Gollum";
             GroupName = "Shadows of Mirkwood";
-            Number = 0;
+            Number = 1;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/cycle-shadows-of-mirkwood.html";
+            QuestCompanionSlug = "shadows-of-mirkwood-quest-the-hunt-for-gollum";
 
             AddEncounterSet(EncounterSet.JourneyAlongTheAnduin);
             AddEncounterSet(EncounterSet.SauronsReach);

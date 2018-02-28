@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             GroupName = "Angmar Awakened";
             Number = 5;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/angmar-awakened-quest-the-battle-of-carn-dum.html";
+            QuestCompanionSlug = "angmar-awakened-quest-the-battle-of-carn-dum";
 
             AddEncounterSet(EncounterSet.TheBattleOfCarnDum);
             AddEncounterSet(EncounterSet.TheBattleOfCarnDumNightmare);

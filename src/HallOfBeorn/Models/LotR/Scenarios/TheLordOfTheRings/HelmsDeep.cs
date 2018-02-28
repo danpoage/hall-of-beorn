@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             GroupName = "The Lord of the Rings";
             Number = 8;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/lotr-the-treason-of-saruman-saga-expansion-quest-helms-deep.html";
+            QuestCompanionSlug = "lotr-the-treason-of-saruman-saga-expansion-quest-helms-deep";
 
             AddEncounterSet(EncounterSet.HelmsDeep);
             AddEncounterSet(EncounterSet.OrcsOfTheWhiteHand);

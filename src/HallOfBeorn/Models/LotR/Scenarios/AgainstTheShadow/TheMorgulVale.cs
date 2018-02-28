@@ -7,9 +7,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
             Title = "The Morgul Vale";
             ProductName = "The Morgul Vale";
             GroupName = "Against the Shadow";
-            Number = 0;
+            Number = 6;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/against-the-shadow-quest-the-morgul-vale.html";
+            QuestCompanionSlug = "against-the-shadow-quest-the-morgul-vale";
 
             AddEncounterSet(EncounterSet.CreaturesOfTheForest);
             AddEncounterSet(EncounterSet.MordorElite);

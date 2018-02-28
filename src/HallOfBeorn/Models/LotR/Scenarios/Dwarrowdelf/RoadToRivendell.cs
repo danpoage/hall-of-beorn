@@ -7,9 +7,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             Title = "Road to Rivendell";
             ProductName = "Road to Rivendell";
             GroupName = "Dwarrowdelf";
-            Number = 0;
+            Number = 2;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/dwarrowdelf-quest-road-to-rivendell.html";
+            QuestCompanionSlug = "dwarrowdelf-quest-road-to-rivendell";
 
             AddEncounterSet(EncounterSet.MistyMountains);
             AddEncounterSet(EncounterSet.PlunderingGoblins);

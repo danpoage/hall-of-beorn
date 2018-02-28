@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
             GroupName = "Core Set";
             Number = 3;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/core-set-quest-escape-from-dol-guldur.html";
+            QuestCompanionSlug = "core-set-quest-escape-from-dol-guldur";
 
             AddEncounterSet(EncounterSet.DolGuldurOrcs);
             AddEncounterSet(EncounterSet.EscapeFromDolGuldur);

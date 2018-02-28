@@ -7,9 +7,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
             Title = "Encounter at Amon Dîn";
             ProductName = "Encounter at Amon Dîn";
             GroupName = "Against the Shadow";
-            Number = 0;
+            Number = 3;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/against-the-shadow-quest-encounter-at-amon-din.html";
+            QuestCompanionSlug = "against-the-shadow-quest-encounter-at-amon-din";
 
             AddEncounterSet(EncounterSet.EncounterAtAmonDin);
             AddEncounterSet(EncounterSet.EncounterAtAmonDinNightmare);

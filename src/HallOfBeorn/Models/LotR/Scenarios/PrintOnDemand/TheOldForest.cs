@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             GroupName = "GenCon";
             Number = 4;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/print-on-demand-quest-the-old-forest.html";
+            QuestCompanionSlug = "print-on-demand-quest-the-old-forest";
             
             AddEncounterSet(EncounterSet.TheOldForest);
 

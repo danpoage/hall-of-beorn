@@ -7,9 +7,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             Title = "The Dead Marshes";
             ProductName = "The Dead Marshes";
             GroupName = "Shadows of Mirkwood";
-            Number = 0;
+            Number = 5;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/shadows-of-mirkwood-quest-the-dead-marshes.html";
+            QuestCompanionSlug = "shadows-of-mirkwood-quest-the-dead-marshes";
 
             AddEncounterSet(EncounterSet.SauronsReach);
             AddEncounterSet(EncounterSet.TheDeadMarshes);

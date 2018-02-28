@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Haradrim
             GroupName = "Haradrim";
             Number = 1;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/haradrim-cycle-quest-the-mumakil.html";
+            QuestCompanionSlug = "haradrim-cycle-quest-the-mumakil";
 
             AddEncounterSet(EncounterSet.TheMumakil);
             AddEncounterSet(EncounterSet.JungleForest);

@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             GroupName = "GenCon";
             Number = 2;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/print-on-demand-quest-the-battle-of-laketown.html";
+            QuestCompanionSlug = "print-on-demand-quest-the-battle-of-laketown";
 
             AddEncounterSet(EncounterSet.TheBattleOfLakeTown);
 

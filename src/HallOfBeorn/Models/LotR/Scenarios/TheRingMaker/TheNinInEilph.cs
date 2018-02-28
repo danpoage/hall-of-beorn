@@ -7,9 +7,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             Title = "The Nîn-in-Eilph";
             ProductName = "The Nîn-in-Eilph";
             GroupName = "The Ring-maker";
-            Number = 0;
+            Number = 4;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/the-ring-maker-quest-the-nin-in-eilph.html";
+            QuestCompanionSlug = "the-ring-maker-quest-the-nin-in-eilph";
 
             AddEncounterSet(EncounterSet.TheNinInEilph);
             AddEncounterSet(EncounterSet.WearyTravelers);

@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
             GroupName = "Core Set";
             Number = 1;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/core-set-quest-passage-through-mirkwood.html";
+            QuestCompanionSlug = "core-set-quest-passage-through-mirkwood";
 
             AddEncounterSet(EncounterSet.DolGuldurOrcs);
             AddEncounterSet(EncounterSet.PassageThroughMirkwood);

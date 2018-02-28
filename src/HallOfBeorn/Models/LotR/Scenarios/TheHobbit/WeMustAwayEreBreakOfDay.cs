@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             GroupName = "The Hobbit";
             Number = 1;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/the-hobbit-over-hill-and-under-hill-quest-we-must-away-ere-break-of-day.html";
+            QuestCompanionSlug = "the-hobbit-over-hill-and-under-hill-quest-we-must-away-ere-break-of-day";
 
             AddEncounterSet(EncounterSet.WeMustAwayEreBreakOfDay);
             AddEncounterSet(EncounterSet.WeMustAwayEreBreakOfDayNightmare);

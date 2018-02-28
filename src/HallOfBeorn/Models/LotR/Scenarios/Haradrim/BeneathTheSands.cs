@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Haradrim
             GroupName = "Haradrim";
             Number = 3;
 
-            //QuestCompanionUrl = "";
+            //QuestCompanionSlug = "";
 
             AddEncounterSet(EncounterSet.BeneathTheSands);
             AddEncounterSet(EncounterSet.DesertCreatures);

@@ -17,7 +17,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             GroupName = "GenCon";
             Number = 8;
 
-            //QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/print-on-demand-quest-.html";
+            QuestCompanionSlug = "print-on-demand-quest-the-massing-at-osgiliath";
 
             AddEncounterSet(EncounterSet.AttackOnDolGuldur);
 

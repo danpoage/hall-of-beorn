@@ -7,9 +7,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             Title = "Celebrimbor's Secret";
             ProductName = "Celebrimbor's Secret";
             GroupName = "The Ring-maker";
-            Number = 0;
+            Number = 5;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/the-ring-maker-quest-celebrimbors-secret.html";
+            QuestCompanionSlug = "the-ring-maker-quest-celebrimbors-secret";
 
             AddEncounterSet(EncounterSet.BrokenLands);
             AddEncounterSet(EncounterSet.CelebrimborsSecret);

@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Haradrim
             GroupName = "Haradrim";
             Number = 2;
 
-            //QuestCompanionUrl = "";
+            //QuestCompanionSlug = "";
 
             AddEncounterSet(EncounterSet.RaceAcrossHarad);
             AddEncounterSet(EncounterSet.MordorOrcs);

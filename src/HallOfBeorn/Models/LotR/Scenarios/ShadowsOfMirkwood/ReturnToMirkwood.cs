@@ -7,9 +7,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             Title = "Return to Mirkwood";
             ProductName = "Return to Mirkwood";
             GroupName = "Shadows of Mirkwood";
-            Number = 0;
+            Number = 6;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/shadows-of-mirkwood-quest-return-to-mirkwood.html";
+            QuestCompanionSlug = "shadows-of-mirkwood-quest-return-to-mirkwood";
 
             AddEncounterSet(EncounterSet.ReturnToMirkwood);
             AddEncounterSet(EncounterSet.ReturnToMirkwoodNightmare);

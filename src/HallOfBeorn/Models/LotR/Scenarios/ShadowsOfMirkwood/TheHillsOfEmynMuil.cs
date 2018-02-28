@@ -7,9 +7,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             Title = "The Hills of Emyn Muil";
             ProductName = "The Hills of Emyn Muil";
             GroupName = "Shadows of Mirkwood";
-            Number = 0;
+            Number = 4;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/shadows-of-mirkwood-quest-the-hills-of-emyn-muil.html";
+            QuestCompanionSlug = "shadows-of-mirkwood-quest-the-hills-of-emyn-muil";
 
             AddEncounterSet(EncounterSet.DolGuldurOrcs);
             AddEncounterSet(EncounterSet.SauronsReach);

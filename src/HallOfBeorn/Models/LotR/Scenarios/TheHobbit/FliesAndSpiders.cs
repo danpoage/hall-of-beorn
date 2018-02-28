@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             GroupName = "The Hobbit";
             Number = 4;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/the-hobbit-on-the-doorstep-quest-flies-and-spiders.html";
+            QuestCompanionSlug = "the-hobbit-on-the-doorstep-quest-flies-and-spiders";
 
             AddEncounterSet(EncounterSet.FliesAndSpiders);
             AddEncounterSet(EncounterSet.FliesAndSpidersNightmare);

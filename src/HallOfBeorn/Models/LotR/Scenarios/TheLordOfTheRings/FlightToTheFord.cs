@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             GroupName = "The Lord of the Rings";
             Number = 3;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/lotr-the-black-riders-quest-flight-to-the-ford.html";
+            QuestCompanionSlug = "lotr-the-black-riders-quest-flight-to-the-ford";
 
             AddEncounterSet(EncounterSet.FlightToTheFord);
             AddEncounterSet(EncounterSet.FlightToTheFordNightmare);

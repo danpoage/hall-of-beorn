@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             GroupName = "GenCon";
             Number = 5;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/print-on-demand-quest-fog-on-the-barrow-downs.html";
+            QuestCompanionSlug = "print-on-demand-quest-fog-on-the-barrow-downs";
 
             AddEncounterSet(EncounterSet.FogOnTheBarrowDowns);
 

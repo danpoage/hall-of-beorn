@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             GroupName = "The Lord of the Rings";
             Number = 15;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/lotr-the-flame-of-the-west-saga-expansion-quest-the-battle-of-the-pelennor-fields.html";
+            QuestCompanionSlug = "lotr-the-flame-of-the-west-saga-expansion-quest-the-battle-of-the-pelennor-fields";
 
             AddEncounterSet(EncounterSet.TheBattleOfThePelennorFields);
 

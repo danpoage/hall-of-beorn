@@ -7,9 +7,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             Title = "Shadow and Flame";
             ProductName = "Shadow and Flame";
             GroupName = "Dwarrowdelf";
-            Number = 0;
+            Number = 6;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/dwarrowdelf-quest-shadow-and-flame.html";
+            QuestCompanionSlug = "dwarrowdelf-quest-shadow-and-flame";
 
             AddEncounterSet(EncounterSet.DeepsOfMoria);
             AddEncounterSet(EncounterSet.GoblinsOfTheDeep);

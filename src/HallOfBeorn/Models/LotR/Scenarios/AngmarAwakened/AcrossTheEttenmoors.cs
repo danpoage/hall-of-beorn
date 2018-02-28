@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             GroupName = "Angmar Awakened";
             Number = 3;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/angmar-awakened-quest-across-the-ettenmoors.html";
+            QuestCompanionSlug = "angmar-awakened-quest-across-the-ettenmoors";
 
             AddEncounterSet(EncounterSet.AcrossTheEttenmoors);
             AddEncounterSet(EncounterSet.AcrossTheEttenmoorsNightmare);

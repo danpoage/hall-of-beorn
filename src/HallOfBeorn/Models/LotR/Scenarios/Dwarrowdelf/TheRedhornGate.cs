@@ -7,9 +7,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             Title = "The Redhorn Gate";
             ProductName = "The Redhorn Gate";
             GroupName = "Dwarrowdelf";
-            Number = 0;
+            Number = 1;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/dwarrowdelf-quest-the-redhorn-gate.html";
+            QuestCompanionSlug = "dwarrowdelf-quest-the-redhorn-gate";
 
             AddEncounterSet(EncounterSet.MistyMountains);
             AddEncounterSet(EncounterSet.TheRedhornGate);

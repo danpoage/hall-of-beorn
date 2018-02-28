@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DreamChaser
             GroupName = "Dream-chaser";
             Number = 5;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/the-dream-chaser-quest-a-storm-on-cobas-haven.html";
+            QuestCompanionSlug = "the-dream-chaser-quest-a-storm-on-cobas-haven";
 
             AddEncounterSet(EncounterSet.AStormOnCobasHaven);
             AddEncounterSet(EncounterSet.CorsairRaiders);

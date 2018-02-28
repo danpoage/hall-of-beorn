@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             GroupName = "The Lord of the Rings";
             Number = 10;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/lotr-the-land-of-shadow-saga-expansion-quest-the-passage-of-the-marshes.html";
+            QuestCompanionSlug = "lotr-the-land-of-shadow-saga-expansion-quest-the-passage-of-the-marshes";
 
             AddEncounterSet(EncounterSet.Gollum);
             AddEncounterSet(EncounterSet.MorgulNazgul);

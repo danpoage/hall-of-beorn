@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.KhazadDum
             GroupName = "Khazad-dûm";
             Number = 3;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/khazad-dum-quest-flight-from-moria.html";
+            QuestCompanionSlug = "khazad-dum-quest-flight-from-moria";
 
             AddEncounterSet(EncounterSet.DeepsOfMoria);
             AddEncounterSet(EncounterSet.FlightFromMoria);

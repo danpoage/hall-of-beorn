@@ -17,7 +17,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Haradrim
             Number = 5;
 
             RulesUrl = string.Empty;
-            //QuestCompanionUrl = "";
+            //QuestCompanionSlug = "";
 
             AddEncounterSet(EncounterSet.TheDungeonsOfCirithGurat);
             AddEncounterSet(EncounterSet.MordorOrcs);

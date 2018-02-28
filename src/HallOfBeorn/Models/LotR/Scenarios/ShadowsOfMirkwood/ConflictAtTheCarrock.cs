@@ -7,9 +7,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             Title = "Conflict at the Carrock";
             ProductName = "Conflict at the Carrock";
             GroupName = "Shadows of Mirkwood";
-            Number = 0;
+            Number = 2;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/shadows-of-mirkwood-quest-conflict-at-the-carrock.html";
+            QuestCompanionSlug = "shadows-of-mirkwood-quest-conflict-at-the-carrock";
 
             AddEncounterSet(EncounterSet.ConflictAtTheCarrock);
             AddEncounterSet(EncounterSet.ConflictAtTheCarrockNightmare);

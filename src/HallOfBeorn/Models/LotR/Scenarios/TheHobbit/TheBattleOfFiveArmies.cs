@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             GroupName = "The Hobbit";
             Number = 6;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/the-hobbit-on-the-doorstep-quest-the-battle-of-five-armies.html";
+            QuestCompanionSlug = "the-hobbit-on-the-doorstep-quest-the-battle-of-five-armies";
 
             AddEncounterSet(EncounterSet.TheBattleOfFiveArmies);
             AddEncounterSet(EncounterSet.TheBattleOfFiveArmiesNightmare);

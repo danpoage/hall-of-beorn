@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.HeirsOfNumenor
             GroupName = "Heirs of Númenor";
             Number = 3;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/heirs-of-numenor-quest-the-siege-of-cair-andros.html";
+            QuestCompanionSlug = "heirs-of-numenor-quest-the-siege-of-cair-andros";
 
             AddEncounterSet(EncounterSet.MordorElite);
             AddEncounterSet(EncounterSet.RavagingOrcs);

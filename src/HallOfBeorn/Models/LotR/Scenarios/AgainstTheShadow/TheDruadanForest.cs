@@ -7,9 +7,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
             Title = "The Drúadan Forest";
             ProductName = "The Drúadan Forest";
             GroupName = "Against the Shadow";
-            Number = 0;
+            Number = 2;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/against-the-shadow-quest-the-druadan-forest.html";
+            QuestCompanionSlug = "against-the-shadow-quest-the-druadan-forest";
 
             AddEncounterSet(EncounterSet.BroodingForest);
             AddEncounterSet(EncounterSet.TheDruadanForest);

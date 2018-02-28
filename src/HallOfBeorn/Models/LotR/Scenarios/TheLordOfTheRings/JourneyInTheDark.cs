@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             GroupName = "The Lord of the Rings";
             Number = 5;
 
-            QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/lotr-the-road-darkens-quest-journey-in-the-dark.html";
+            QuestCompanionSlug = "lotr-the-road-darkens-quest-journey-in-the-dark";
 
             AddEncounterSet(EncounterSet.JourneyInTheDark);
             AddEncounterSet(EncounterSet.JourneyInTheDarkNightmare);
