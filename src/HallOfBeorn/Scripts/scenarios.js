@@ -1,6 +1,9 @@
 ﻿var mode = 'Normal';
 
 $(function () {
+
+    initQuestMap();
+
     var scenarioChartInitialized = false;
     var chartsInitialized = false;
     $('#toggleChart').click(function () {
@@ -50,6 +53,108 @@ $(function () {
         loadCharts();
     });
 });
+
+function initQuestMap() {
+    $('#map-tooltip').hide();
+
+    var questMap = [];
+    var imageMap = [];
+    var textMap = [];
+    var xMap = []; var yMap = [];
+    var radius = 8;
+
+    function addRange(map, number, code, label) {
+        for (var i = number - radius; i <= number + radius; i++) {
+            if (map[i] === undefined) {
+                //console.log(label + ' map not defined for value: ' + i);
+                map[i] = [code];
+            } else {
+                //console.log(label + ' map already defined for value: ' + i);
+                map[i].push(code);
+            }
+        }
+    };
+
+    function addQuest(x, y, name, questUrl, imageUrl, text) {
+        questMap[name] = questUrl;
+        imageMap[name] = imageUrl;
+        textMap[name] = text;
+
+        addRange(xMap, x, name, 'X');
+        addRange(yMap, y, name, 'Y');
+    };
+
+    function getCodes(map, number, label) {
+        return map[number] ? map[number] : [];
+    };
+
+    function arrayIntersectShouldBePartOfTheLanguage(a1, a2) {
+        return a1.filter(function (n) {
+            return a2.indexOf(n) !== -1;
+        });
+    };
+
+    function getMapX(e) {
+        return Math.round(e.pageX - $('#quest-map').offset().left)
+    }
+
+    function getMapY(e) {
+        return Math.round(e.pageY - $('#quest-map').offset().top)
+    }
+
+    function getSelectedQuest(e) {
+        var x = getMapX(e);
+        var y = getMapY(e);
+        console.log('x: ' + x + ' y: ' + y);
+        var xCodes = getCodes(xMap, x, 'X');
+        var yCodes = getCodes(yMap, y, 'Y');
+
+        //console.log('x codes');
+        //console.log(xCodes);
+        //console.log('y codes');
+        //console.log(yCodes);
+
+        return arrayIntersectShouldBePartOfTheLanguage(xCodes, yCodes);
+    };
+
+    addQuest(927, 287, 'Passage Through Mirkwood', 'Passage-Through-Mirkwood', 'Core-Set/Flies-and-Spiders-1A.jpg',
+        'You are traveling through Mirkwood forest, carrying an urgent message from King Thanduil to the Lady Galadriel of Lorien. As you move along the dark trail, the spiders gather around you...');
+    addQuest(846, 343, 'Journey Along the Anduin', 'Journey-Along-the-Anduin', 'Core-Set/To-the-River-1A.jpg',
+        'Emerging from Mirkwood Forest with an urgent message from Lady Galadriel, you must make your way south along the Anduin River in order to reach the forst of Lórien. As you leave the forest behind, you notice that you are being pursued, and thus quicken your pace...');
+    addQuest(898, 476, 'Escape from Dol Guldur', 'Escape-from-Dol-Guldur', 'Core-Set/The-Necromancer\'s-Tower-1A.jpg',
+        'The Lady Galadriel of Lórien has asked you to investigate the area in the vicinity of Dol Guldar. While doing so, one of your allies was ambushed by Orcs, captured, and is now held in a dungeon cell...');
+
+    addQuest(940, 305, 'Flies and Spiders', 'Flies-and-Spiders', 'The-Hobbit-On-the-Doorstep/Into-Mirkwood-1A.jpg',
+        '"Stick to the forest-track, keep your spirits up, hope for the best, and with a tremendous slice of luck you may come out one day and see the Long Marshes lying below you, and beyond them, high in the East, the Lonely Mountain where dear old Smaug lives."<br>-Gandalf, The Hobbit');
+
+    document.getElementById('quest-map').addEventListener('mousemove', function (e) {
+        var x = getMapX(e);
+        var y = getMapY(e);
+        console.log('mousemove x: ' + x + ' y: ' + y);
+        var quest = getSelectedQuest(e);
+        if (quest && quest.length == 1) {
+            var imageUrl = 'https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/' + imageMap[quest];
+            $('#map-tooltip').css({top: y + 'px', left: (x + 60) + 'px', position:'absolute'});
+            $('#tooltip-title').text(quest);
+            $('#tooltip-text').html(textMap[quest]);
+            $('#tooltip-link').attr({href: questMap[quest]});
+            $('#tooltip-image').show();
+            $('#tooltip-image').attr({ src: imageUrl });
+            $('#map-tooltip').show();
+        } else {
+            $('#map-tooltip').hide();
+        }
+    });
+
+    document.getElementById('quest-map').addEventListener('click', function (e) {
+        var quest = getSelectedQuest(e);
+        if (quest && quest.length == 1) {
+            var link = '/LotR/Scenarios/' + questMap[quest];
+            console.log('url: ' + link);
+            window.open(link);
+        }
+    });
+}
 
 function loadScenarioChart(id) {
     $.get("/Cards/ScenarioDetails/" + id).success(function (result) {
