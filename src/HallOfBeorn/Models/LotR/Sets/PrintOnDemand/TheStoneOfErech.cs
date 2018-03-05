@@ -330,20 +330,16 @@ Midnight. Shadow of Dwimorberg gets +4 Threat.",
                 Artist = Artist.Jose_Vega
             });
             Cards.Add(new LotRCard() {
-                
                 Title = "The Disappearance",
                 StageNumber = 1,
                 Id = "e4af5d7f-9af5-41bb-b22a-cce8b91ac791",
                 CardType = CardType.Quest,
-                
                 EncounterSet = "The Stone of Erech",
                 Quantity = 1,
                 QuestPoints = 6,
                 Text = "Setup: Make Tarlang's Next the active location. Set Derufin, The Lord of the Dead, The Stone of Erech, and the 3 Night objectives aside, out of play. Shuffle the encounter deck. Place Eventide into play, next to the current quest.",
-                OppositeText = 
-@"When Revealed: Reveal 1 encounter card per player, adding them to the staging area.
-
-Players cannot defeat this stage while Tarlang's Next is in play.",
+                FlavorText = "The Lord of Lamedon has asked you to assist him in discovering the whereabouts of his lost son, Derufin. He hasn't been seen for days, and his father fears he may be in grave peril. Your search has led you to the Blackroot Vale, where the people live in dread of the Dead Men of Dunharrow.",
+                OppositeText = "When Revealed: Reveal 1 encounter card per player, adding them to the staging area.\r\nPlayers cannot defeat this stage while Tarlang's Next is in play.",
                 CardNumber = 1,
                 Artist = Artist.Magali_Villeneuve
             });

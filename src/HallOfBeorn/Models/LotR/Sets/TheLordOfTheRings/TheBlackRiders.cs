@@ -489,14 +489,14 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
             });
             Cards.Add(new LotRCard()
             {
-                
                 Title = "Pursued by the Enemy",
                 StageNumber = 1,
                 Id = "f9824e39-fda8-4e4b-bc74-83b4bd40c72d",
                 CardType = CardType.Quest,
-                
                 Text = "Setup: Shuffle each burden card from the Flight to the Ford burden set into a Burden deck. Attach An Evil Wound to the Ring-bearer. Set Ford of Bruinen and The Witch-king aside, out of play. Add The Last Bridge and 1 Fell Rider per player to the staging area. Set the Ring-bearer's life at 15. Shuffle the encounter deck.",
+                FlavorText = "Frodo has been gravely injured in the attack on Weathertop and will perish if his companions cannot bring him to Rivendell in time. Strider leads the Hobbits towards the hidden valley, anxiously listening for the sound of Black Riders...",
                 OppositeText = "The players cannot advance unless The Last Bridge is in the victory display.\r\nForced: At the end of the round, reduce the Ring-bearer's life by 1.",
+                OppositeFlavorText = "The Road runs along the edge of the hills for many miles from the Bridge to the Ford of Bruinen. But I have not yet thought how we shall cross that water. One river at a time! We shall be fortunate indeed if we do not find the Last Bridge held against us.\r\n–Strider, The Fellowship of the Ring",
                 EncounterSet = "Flight to the Ford",
                 Quantity = 1,
                 QuestPoints = 15,
@@ -506,12 +506,10 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
             });
             Cards.Add(new LotRCard()
             {
-                
                 Title = "Race To Rivendell",
                 StageNumber = 2,
                 Id = "6b2673af-c764-4599-a265-6e43d3b75310",
                 CardType = CardType.Quest,
-                
                 OppositeText = "When Revealed: Add Ford of Bruinen and The Witch-king to the staging area.\r\nWhile at least 1 Nazgûl enemy is in play, Race to Rivendell gets +15 quest points.\r\nForced: At the end of the round, reduce the Ring-bearer's life by 1.\r\nIf the players defeat this stage, they have won the game.",
                 EncounterSet = "Flight to the Ford",
                 Quantity = 1,

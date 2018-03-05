@@ -32,11 +32,12 @@ namespace HallOfBeorn.Models.LotR.Sets.KhazadDum
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-0801207c9002",
                 CardType = CardType.Quest,
-                
                 EncounterSet = "Flight from Moria",
                 Quantity = 1,
                 Text = "Setup: Prepare the quest deck. Add The Nameless Fear to the staging area. Remove all copies of A Foe Beyond from the encounter deck. Then, shuffle 1 copy of A Foe Beyond per player back into the encounter deck.",
+                FlavorText = "You have discovered the fate of the Dwarven colony, and seek to leave Moria. But exiting may not be as simple as entering...",
                 OppositeText = "When Revealed: Reveal 1 encounter card per player, and add it to the staging area. Then, add A Presence in the Dark to your victory display.",
+                OppositeFlavorText = "As you leave Moria, the air grows thick and drums begin to roll from the deeps. A man-shape shadow, yet greater, masses at the end of the hall, and begins to head straight for you.",
                 VictoryPoints = 2,
                 CardNumber = 69,
                 Artist = Artist.Igor_Kieryluk,
@@ -944,11 +945,12 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 StageNumber = 1,
                 Id = "51223bd0-ffd1-11df-a976-0801207c9070",
                 CardType = CardType.Quest,
-                
                 EncounterSet = "The Seventh Level",
                 Quantity = 1,
                 Text = "Setup: Search the encounter deck for Book of Mazarbul, and have the first player attach it to a hero of his choice. Shuffle the encounter deck.",
+                FlavorText = "You are investigating the Seventh Level of Moria, searching for the Chamber of Records and any signs of Balin\'s Colony. In the heavy twilight of a hall, a bulky tome is discovered in the grip of a Dwarf skeleton. You carefully take possession of the book. Perhaps it will give you some answers...",
                 OppositeText = "When Revealed: Reveal 1 encounter card per player, and add it to the staging area.",
+                OppositeFlavorText = "The Dwarven runes of the book appear to hold a detailed record of the fledgling colony. But there is some Elvish script at the end which seems out of place...",
                 CardNumber = 67,
                 Artist = Artist.Cristi_Balanescu,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.PlunderingGoblins }
