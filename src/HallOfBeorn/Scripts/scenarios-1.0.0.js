@@ -224,6 +224,8 @@ function initQuestMap() {
         'Against all odds, the Ring-bearer has found his way into The Black Land of Modor, but a dangerous journey still lies before him and The Eye of Sauron yet searches for the spies who escaped from Cirith Ungol.');
 
     //GenCon and Fellowship
+    addQuest(1024, 842, 'The Massing at Osgiliath', 'The-Massing-at-Osgiliath', 'The-Massing-at-Osgiliath/Beyond-Expectations-1A.jpg',
+        'There are reports of increased Orc activity around Ithilien, and you have been sent to investigate. You enter Osgiliath and cross the river. On the outskirts of the city, you see a horde that surpassses all expectations coming down the Morgul Road.');
     addQuest(994, 235, 'The Battle of Lake-town', 'The-Battle-of-Lake-town', 'The-Battle-of-Lake-town/Terror-from-the-Mountain-1A.jpg',
         '"Then warning trumpets were suddenly sounded, and echoed along the rocky shores. The cheering stopped and the joy was quickly turned to dread. So it was that the dragon did not find them quite unprepared."<br>-The Hobbit');
     addQuest(745, 765, 'The Stone of Erech', 'The-Stone-of-Erech', 'The-Stone-of-Erech/The-Disappearance-1A.jpg',
