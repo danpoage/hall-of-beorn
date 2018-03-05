@@ -200,8 +200,9 @@ namespace HallOfBeorn.Controllers
             return View(model);
         }
 
-        public ActionResult Scenarios(string id)
+        public ActionResult Scenarios(string id, ScenarioView? view)
         {
+            try {
             if (HttpContext.Request.Url.AbsolutePath.Contains("/Cards"))
             {
                 if (string.IsNullOrEmpty(id))
@@ -223,6 +224,8 @@ namespace HallOfBeorn.Controllers
             if (string.IsNullOrEmpty(id))
             {
                 model = scenarioService.GetListViewModel();
+                model.View = view.HasValue ? view.Value : ScenarioView.List;
+
                 /*
                 foreach (var scenarioGroup in scenarioService.ScenarioGroups())
                 {
@@ -255,6 +258,11 @@ namespace HallOfBeorn.Controllers
             }
 
             return View(model);
+            }
+            catch (Exception ex) { 
+                var a = ex;
+                return null;
+            }
         }
 
         private enum Mode

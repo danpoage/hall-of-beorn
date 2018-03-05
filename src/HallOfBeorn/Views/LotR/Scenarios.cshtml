@@ -116,40 +116,48 @@
     <div style="margin-top:40px;display:none;" id="chartContainer"></div>
 }
 else {
+    if (@Model.View.HasValue && @Model.View.Value == ScenarioView.Map) {
+        <a href="/LotR/Scenarios?View=List">List View</a>
+    } else {
+        <a href="/LotR/Scenarios?View=Map">Map View</a>
+    }
+    <br />
     <h2>Scenarios</h2>
     
-    <div id="map-tooltip" class="tooltip" style="display:none">
-        <div id="tooltip-title" style="text-align:center; font-size: 1.25em;font-weight:bold;"></div>
-        <div id="tooltip-text" style="font-style: italic; font-size: 1em;max-width:288px;padding:2px 4px 2px 4px;"></div>
-        <a id="tooltip-link" target="_blank"><img id="tooltip-image" style="display:none;max-height:200px;padding:2px 4px 2px 4px;"/></a>
-    </div>
-    <img id="quest-map" alt="Middle-earth Quest Map" src="@Model.QuestMapUrl" />
-    
-    <div>
-    @foreach (var scenarioGroup in @Model.ScenarioGroups)
-    {
-        <div><h3>@scenarioGroup.Name</h3></div>
-        foreach (var scenario in @scenarioGroup.Scenarios)
-        {
-        <div>
-            <a title="Details for @scenario.Title" href="@scenario.Link">@scenario.Title</a>
+    if (@Model.View.HasValue && @Model.View.Value == ScenarioView.Map) {
+        <div id="map-tooltip" class="tooltip" style="display:none">
+            <div id="tooltip-title" style="text-align:center; font-size: 1.25em;font-weight:bold;"></div>
+            <div id="tooltip-text" style="font-style: italic; font-size: 1em;max-width:288px;padding:2px 4px 2px 4px;"></div>
+            <a id="tooltip-link" href="/" target="_blank"><img id="tooltip-image" style="display:none;max-height:200px;padding:2px 4px 2px 4px;"/></a>
         </div>
+        <img id="quest-map" alt="Middle-earth Quest Map" src="@Model.QuestMapUrl" />
+    } else {
+        <div>
+        @foreach (var scenarioGroup in @Model.ScenarioGroups)
+        {
+            <div><h3>@scenarioGroup.Name</h3></div>
+            foreach (var scenario in @scenarioGroup.Scenarios)
+            {
+            <div>
+                <a title="Details for @scenario.Title" href="@scenario.Link">@scenario.Title</a>
+            </div>
+            }
         }
+        </div>
+        <br />
+        <br />
+        <button id="toggleCharts">Show Charts</button>
+        <div id="chartsContainer" style="display:none">
+            <div><button id="easyModeButton" class="inactiveButton">Easy</button><button id="normalModeButton" class="activeButton">Normal</button><button id="nightmareModeButton" class="inactiveButton">Nightmare</button></div>
+            <div style="margin-top:40px;" id="coreTotalsContainer"></div>
+            <div style="margin-top:40px;" id="kdTotalsContainer"></div>
+            <div style="margin-top:40px;" id="honTotalsContainer"></div>
+            <div style="margin-top:40px;" id="voiTotalsContainer"></div>
+            <div style="margin-top:40px;" id="tlrTotalsContainer"></div>
+            <div style="margin-top:40px;" id="tghTotalsContainer"></div>
+            <div style="margin-top:40px;" id="hobbitTotalsContainer"></div>
+            <div style="margin-top:40px;" id="lotrTotalsContainer"></div>
+            <div style="margin-top:40px;" id="genConTotalsContainer"></div>
+        </div>
     }
-    </div>
-    <br />
-    <br />
-    <button id="toggleCharts">Show Charts</button>
-    <div id="chartsContainer" style="display:none">
-        <div><button id="easyModeButton" class="inactiveButton">Easy</button><button id="normalModeButton" class="activeButton">Normal</button><button id="nightmareModeButton" class="inactiveButton">Nightmare</button></div>
-        <div style="margin-top:40px;" id="coreTotalsContainer"></div>
-        <div style="margin-top:40px;" id="kdTotalsContainer"></div>
-        <div style="margin-top:40px;" id="honTotalsContainer"></div>
-        <div style="margin-top:40px;" id="voiTotalsContainer"></div>
-        <div style="margin-top:40px;" id="tlrTotalsContainer"></div>
-        <div style="margin-top:40px;" id="tghTotalsContainer"></div>
-        <div style="margin-top:40px;" id="hobbitTotalsContainer"></div>
-        <div style="margin-top:40px;" id="lotrTotalsContainer"></div>
-        <div style="margin-top:40px;" id="genConTotalsContainer"></div>
-    </div>
 }

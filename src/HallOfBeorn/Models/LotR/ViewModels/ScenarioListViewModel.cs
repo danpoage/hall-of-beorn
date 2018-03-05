@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             ScenarioGroups = new List<ScenarioGroupViewModel>();
         }
 
+        public ScenarioView? View { get; set; }
         public ScenarioViewModel Detail { get; set; }
         public List<ScenarioGroupViewModel> ScenarioGroups { get; set; }
 

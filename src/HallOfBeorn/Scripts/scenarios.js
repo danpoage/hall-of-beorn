@@ -105,7 +105,7 @@ function initQuestMap() {
     function getSelectedQuest(e) {
         var x = getMapX(e);
         var y = getMapY(e);
-        console.log('x: ' + x + ' y: ' + y);
+        //console.log('x: ' + x + ' y: ' + y);
         var xCodes = getCodes(xMap, x, 'X');
         var yCodes = getCodes(yMap, y, 'Y');
 
@@ -123,37 +123,72 @@ function initQuestMap() {
         'Emerging from Mirkwood Forest with an urgent message from Lady Galadriel, you must make your way south along the Anduin River in order to reach the forst of Lórien. As you leave the forest behind, you notice that you are being pursued, and thus quicken your pace...');
     addQuest(898, 476, 'Escape from Dol Guldur', 'Escape-from-Dol-Guldur', 'Core-Set/The-Necromancer\'s-Tower-1A.jpg',
         'The Lady Galadriel of Lórien has asked you to investigate the area in the vicinity of Dol Guldar. While doing so, one of your allies was ambushed by Orcs, captured, and is now held in a dungeon cell...');
+    addQuest(818, 320, 'The Hunt for Gollum', 'The-Hunt-for-Gollum', 'The-Hunt-for-Gollum/The-Hunt-Begins-1A.jpg',
+        'Gandalf has requested your assistance in the search for the elusive creature known as Gollum. Your search begins in the Anduin Valley between Mirkwood Forest and the Misty Mountains');
+    addQuest(818, 275, 'Conflict at the Carrock', 'Conflict-at-the-Carrock', 'Conflict-at-the-Carrock/Grimbeorn\'s-Quest-1A.jpg',
+        'GRRRRRR GRRRRRRR GRRRRRRR... I smell Trolls...');
+    addQuest(895, 403, 'A Journey to Rhosbogel', 'A-Journey-to-Rhosgobel', 'A-Journey-To-Rhosgobel/The-Wounded-Eagle-1A.jpg',
+        'After a fierce conflict with a group of Trolls, you come across a fallen Eagle, grievously wounded and on the verge of death.');
+    addQuest(917, 658, 'The Hills of Emyn Muil', 'The-Hills-of-Emyn-Muil', 'The-Hills-of-Emyn-Muil/The-Hills-of-Emyn-Muil-1A.jpg',
+        'The hunt for Gollum has led you to the south, and you are now approaching Rauros falls and the nearby hills of Emyn Muil...');
+    addQuest(946, 694, 'The Dead Marshes', 'The-Dead-Marshes', 'The-Dead-Marshes/Into-the-Marshes-1A.jpg',
+        'You have followed Gollum\'s trail for days, and are now closing in fast pursuit. In a last ditch effort to escape you, the creature has fled to The Dead Marshes.');
+    addQuest(950, 287, 'Return to Mirkwood', 'Return-to-Mirkwood', 'Return-to-Mirkwood/Through-the-Forest-1A.jpg',
+        'Having captured Gollum, you must now escort him through Mirkwood Forest for interrogation at Thranduil\'s Palace.');
 
+    addQuest(683, 289, 'We Must Away Ere Break of Day', 'We-Must-Away-Ere-Break-of-Day', 'The-Hobbit-Over-Hill-and-Under-Hill/An-Unexpected-Party-1A.jpg',
+        'The wizard Gandalf has chosen Bilbo Baggins to join Thorin and company on their quest to the Lonley Mountain.');
+    addQuest(757, 286, 'Over the Misty Mountains Grim', 'Over-the-Misty-Mountains-Grim', 'The-Hobbit-Over-Hill-and-Under-Hill/A-Short-Rest-1A.jpg',
+        'After a refreshing stay in the House of Elrond, Bilbo and his companions resumed their quest for the Lonely Mountain. But to reach Erebor, they first had to climb the high pass over the Misty Mountains.');
+    addQuest(780, 285, 'Dungeons Deep and Caverns Dim', 'Dungeons-Deep-and-Caverns-Dim', 'The-Hobbit-Over-Hill-and-Under-Hill/Out-of-the-Frying-Pan-1A.jpg',
+        'After killing the Great Goblin, Bilbo\'s companions fought to win their escape from the goblins. By the time they realized that Bilbo had been lost in the darkness, it was too late to turn back and search for him.');
     addQuest(940, 305, 'Flies and Spiders', 'Flies-and-Spiders', 'The-Hobbit-On-the-Doorstep/Into-Mirkwood-1A.jpg',
         '"Stick to the forest-track, keep your spirits up, hope for the best, and with a tremendous slice of luck you may come out one day and see the Long Marshes lying below you, and beyond them, high in the East, the Lonely Mountain where dear old Smaug lives."<br>-Gandalf, The Hobbit');
+    addQuest(996, 202, 'The Lonely Mountain', 'The-Lonely-Mountain', 'The-Hobbit-On-the-Doorstep/A-Warm-Welcome-1A.jpg',
+        'So one day, although autumn was now getting far on, and winds were cold, and leaves were falling fast, three large boats left Lake–town, laden with rowers, dwarves, Mr. Baggins, and many provisions.<br>–The Hobbit');
+    addQuest(1017, 216, 'The Battle of Five Armies', 'The-Battle-of-Five-Armies', 'The-Hobbit-On-the-Doorstep/The-Gathering-of-the-Clouds-1A.jpg',
+        '"Dread has come upon you all! Alas! It has come more swiftly than I guessed. The Goblins are upon you! Bolg of the North is coming. O Dain! whose father you slew in Moria. Beehold! the bats are above his army like a sea of locusts. They ride upon wolves and Wargs are in their train!"<br>- Gandalf, The Hobbit');
 
-    document.getElementById('quest-map').addEventListener('mousemove', function (e) {
-        var x = getMapX(e);
-        var y = getMapY(e);
-        console.log('mousemove x: ' + x + ' y: ' + y);
-        var quest = getSelectedQuest(e);
-        if (quest && quest.length == 1) {
-            var imageUrl = 'https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/' + imageMap[quest];
-            $('#map-tooltip').css({top: y + 'px', left: (x + 60) + 'px', position:'absolute'});
-            $('#tooltip-title').text(quest);
-            $('#tooltip-text').html(textMap[quest]);
-            $('#tooltip-link').attr({href: questMap[quest]});
-            $('#tooltip-image').show();
-            $('#tooltip-image').attr({ src: imageUrl });
-            $('#map-tooltip').show();
-        } else {
-            $('#map-tooltip').hide();
-        }
-    });
+    addQuest(994, 235, 'The Battle of Lake-town', 'The-Battle-of-Lake-town', 'The-Battle-of-Lake-town/Terror-from-the-Mountain-1A.jpg',
+        '"Then warning trumpets were suddenly sounded, and echoed along the rocky shores. The cheering stopped and the joy was quickly turned to dread. So it was that the dragon did not find them quite unprepared."<br>-The Hobbit');
+    addQuest(923, 475, 'Attack on Dol Guldur', 'Attack-on-Dol-Guldur', 'Attack-on-Dol-Guldur/Assault-on-the-Golden-Wood-1A.jpg',
+        'The Dark Lord of Mordor has declared war across Middle-earth. His Nazgûl lead the Morgul host against Minas Tirith in the south, while Easterlings lay siege to Erebor in the north. And in a move long-prepared, the armies of Dol Guldur cross the Anduin to assault Lórien...');
 
-    document.getElementById('quest-map').addEventListener('click', function (e) {
-        var quest = getSelectedQuest(e);
-        if (quest && quest.length == 1) {
-            var link = '/LotR/Scenarios/' + questMap[quest];
-            console.log('url: ' + link);
-            window.open(link);
-        }
-    });
+    var mapElement = document.getElementById('quest-map');
+    if (mapElement) {
+        //Move handler
+        mapElement.addEventListener('mousemove', function (e) {
+            var x = getMapX(e);
+            var y = getMapY(e);
+            //console.log('mousemove x: ' + x + ' y: ' + y);
+            var quest = getSelectedQuest(e);
+            if (quest && quest.length == 1) {
+                var imageUrl = 'https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/' + imageMap[quest];
+                $('#map-tooltip').css({ top: (y + 240) + 'px', left: (x + 80) + 'px', position: 'absolute' });
+                $('#tooltip-title').text(quest);
+                $('#tooltip-text').html(textMap[quest]);
+                $('#tooltip-link').attr({ href: questMap[quest] });
+                $('#tooltip-image').show();
+                $('#tooltip-image').attr({ src: imageUrl });
+                $('#map-tooltip').show();
+            } else {
+                $('#map-tooltip').hide();
+            }
+        });
+
+        //Click handler
+        mapElement.addEventListener('click', function (e) {
+            var x = getMapX(e);
+            var y = getMapY(e);
+            console.log('mousemove: ' + x + ', ' + y);
+            var quest = getSelectedQuest(e);
+            if (quest && quest.length == 1) {
+                var link = '/LotR/Scenarios/' + questMap[quest];
+                console.log('url: ' + link);
+                window.open(link);
+            }
+        });
+    }
 }
 
 function loadScenarioChart(id) {
