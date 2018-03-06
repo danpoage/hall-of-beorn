@@ -189,6 +189,9 @@ namespace HallOfBeorn.Services.LotR
             //Temple of the Deceived
             AddHtml("Searching-the-Island-TotD", "<p class='flavor-text'>Sahír has led you to an uncharted isle, and has agreed to help you find a chest he claims the black key will open. First, you must find the Gate Key that opens the way to the grand temple on the eastern side of the island.</p><p class='main-text'>{keyword:Exploration.}</p><p>For each progress that would be placed on Searching the Island, you may place it on a location in the staging area, instead.</p>");
 
+            //The City of Corsairs
+            AddHtml("The-Coast-of-Umbar-TCoC", "<p class='flavor-text'>Deep in enemy waters, you must recover the artifact from the Stormcaller.</p><p class='main-text'>{keyword:Sailing.}</p><p class='main-text'>Progress cannot be placed on The Coast of Umbar if the players are off-course ({heading-cloudy}, {heading-rainy}, or {heading-stormy}).</p><p class=''><b>If the Stormcaller is destroyed (or if this stage has 15 or more progress on it), advance to stage 2.</b></p>");
+
             AddHtml("A-Short-Rest-THOHaUH", "<p><b>When Revealed:</b> Each player may search his deck for 1 treasure card and add it to his hand, then shuffle his deck. Advance to stage 2A.</p>");
             AddHtml("Dawn-Take-You-All-THOHaUH", "<p><b>When Revealed:</b> Remove all Troll enemies and Sack cards from the game. If Troll Cave is in the victory display, the players have discovered the treasure cards Sting, Glamdring, and Orcrist.</p><p>The players have won the game.</p>");
             AddHtml("Down-Down-to-Goblin-Town-THOHaUH", "<p>Players cannot defeat this stage unless The Great Goblin is in the victory display.</p><p><b>When Revealed:</b> Reveal 3 encounter cards per player, Bilbo Baggins may spend X resources to reduce the total number of encounter cards revealed by X. (To a minimum of 1.)</p><p>If the players defeat this stage, they have won the game.</p>");

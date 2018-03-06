@@ -983,7 +983,7 @@
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\scenarios-1.0.1.js" />
+    <Content Include="Scripts\scenarios-1.0.2.js" />
     <Content Include="Scripts\storage.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

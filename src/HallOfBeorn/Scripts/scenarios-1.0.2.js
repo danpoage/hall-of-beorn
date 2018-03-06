@@ -191,6 +191,46 @@ function initQuestMap() {
     addQuest(639, 507, 'The Antlered Crown', 'The-Antlered-Crown', 'The-Antlered-Crown/Battle-for-Dunland-1A.jpg',
         'On your return journey to Isengard, you find war in Dunland. The Raven Clan has refused the Boar\'s claim to The Antlered Crown, and chief Turch asks you to join his Clan as they march to battle. Seeing an opportunity to earn Saruman the friendship of a unified Dunland, you agree to join forces and fight...');
 
+    //The Lost Realm and Angmar Awakened
+    addQuest(501, 304, 'Intruders in Chetwood', 'Intruders-in-Chetwood', 'The-Lost-Realm/Stop-the-War-Party-1A.jpg',
+        'Rangers have sighted a large group of Orcs making its way towards Bree–land. The Dúnedain, Iârion, has asked you to help him intercept the war party before it can reach the quiet village. The Orcs are a day ahead of you and moving fast, but there is hope you can catch them with the Ranger\'s tracking skill...');
+    addQuest(547, 280, 'The Weather Hills', 'The-Weather-Hills', 'The-Lost-Realm/Scattered-Among-the-Hills-1A.jpg',
+        'You\'ve pursued the remnants of an Orc war party east from the borders of Bree–land and into the wilderness beyond. Their trail climbs out of the lowlands and into the Weather Hills.');
+    addQuest(467, 246, 'Deadmen\'s Dike', 'Deadmens-Dike', 'The-Lost-Realm/The-Shades-of-Angmar-1A.jpg',
+        'You\'ve brought the prisoners you rescued from the Weather Hills to Fornost. The Rangers gathered there are shocked to hear what you discovered at Amon Forn. Before their Chieftain can decide what to do, an unnatural fog covers the ruins in darkness, and the spectres of dead warriors emerge from the mists to attack you!');
+    addQuest(537, 209, 'The Wastes of Eriador', 'The-Wastes-of-Eriador', 'The-Wastes-of-Eriador/Across-the-Wastes-1A.jpg',
+        'Following the surprise attack on Fornost, you have agreed to help the Ranger, Amarthiúl, track the villains who captured his friend, Iârion.');
+    addQuest(648, 185, 'Escape from Mount Gram', 'Escape-from-Mount-Gram', 'Escape-from-Mount-Gram/Unexpected-Rescue-1A.jpg',
+        'You have been captured and imprisoned by the goblins of Mount Gram.');
+    addQuest(692, 211, 'Across the Ettenmoors', 'Across-the-Ettenmoors', 'Across-the-Ettenmoors/Into-the-Ettenmoors-1A.jpg',
+        'You have escaped from the prisons of Mount Gram, but you are not safe yet.');
+    addQuest(721, 274, 'The Treachery of Rhudaur', 'The-Treachery-of-Rhudaur', 'The-Treachery-of-Rhudaur/Secrets-of-Rhudaur-1A.jpg',
+        'You have decided to explore the ruins of this ancient keep, but Thaurdir pursues you, and time is of the essence.');
+    addQuest(550, 97, 'The Battle of Carn Dûm', 'The-Battle-of-Carn-Dum', 'The-Battle-of-Carn-Dum/The-Clutches-of-Carn-D%C3%BBm-1A.jpg',
+        'Your company has made its way swiftly north, and finally the fortress of Carn Dûm looms before you. Unsure if you have arrived in time, you can only hope beyond hope that Iârion is still alive.');
+    addQuest(574, 97, 'The Dread Realm', 'The-Dread-Realm', 'The-Dread-Realm/The-Catacombs-of-Carn-D%C3%BBm-1A.jpg',
+        'As you descend into the catacombs beneath Carn Dûm, you find yourself overcome with terror. Still, you press onward, knowing that Iârion\'s fate–and perhaps the fate of the north–lies in your hand.');
+
+    //The Grey Havens and Dreamchaser
+    addQuest(90, 574, 'Voyage Across Belegaer', 'Voyage-Across-Belegaer', 'The-Grey-Havens/Departure-from-the-Havens-1A.jpg',
+        'The Dream-chaser and her fleet depart from the Grey Havens, in search of the island from Calphon\'s dreams. Only a week out from the coast, the black sails of Corsair can be seen in pursuit!');
+    addQuest(56, 945, 'The Fate of Númenor', 'The-Fate-of-Numenor', 'The-Grey-Havens/Explore-the-Island-1A.jpg',
+        'You arrive on the island\'s western beach, the edge of a dense jungle looming beyond. With no map to guide you and no idea of what to expect, you venture forward, deeper into the island...');
+    addQuest(258, 313, 'Raid on the Grey Havens', 'Raid-on-the-Grey-Havens', 'The-Grey-Havens/The-Corsairs\'-Assault-1A.jpg',
+        'Corsairs are attacking the Grey Havens and burning the Elven fleet. You must defend the Havens from these fierce raiders and save as many ships as you can!');
+    addQuest(313, 867, 'Flight of the Stormcaller', 'Flight-of-the-Stormcaller', 'Flight-of-the-Stormcaller/Swift-Departure-1A.jpg',
+        'Corsairs led by the treacherous Captain Sahír have stolen the black key you recovered in the ruins of Númenor. You must get it back!');
+    addQuest(339, 867, 'The Thing in the Depths', 'The-Thing-in-the-Depths', 'The-Thing-in-the-Depths/Take-the-Ship-1A.jpg',
+        'Swinging across on ropes, your company boards the Stormcaller, and a fierce battle ensues!');
+    addQuest(80, 947, 'Temple of the Deceived', 'Temple-of-the-Deceived', 'Temple-of-the-Deceived/Searching-the-Island-1A.jpg',
+        'Sahír has led you to an uncharted isle, and has agreed to help you find a chest he claims the black key will open. First, you must find the Gate Key that opens the way to the grand temple on the eastern side of the island.');
+    addQuest(66, 966, 'The Drowned Ruins', 'The-Drowned-Ruins', 'The-Drowned-Ruins/The-Grotto-1A.jpg',
+        'In the sunken ruins of the temple, you find a grotto leading deep below the sea level. Much of the grotto is submerged underwater.');
+    addQuest(716, 899, 'A Storm on Cobas Haven', 'A-Storm-on-Cobas-Haven', 'A-Storm-on-Cobas-Haven/Outmaneuver-the-Enemy-1A.jpg',
+        'Corsairs are attacking Dol Amroth to cover Sahír\'s escape to Umbar!');
+    addQuest(750, 1095, 'The City of Corsairs', 'The-City-of-Corsairs', 'The-City-of-Corsairs/The-Coast-of-Umbar-1A.jpg',
+        'Deep in enemy waters, you must recover the artifact from the Stormcaller.');
+
     //The Hobbit Saga
     addQuest(683, 289, 'We Must Away Ere Break of Day', 'We-Must-Away-Ere-Break-of-Day', 'The-Hobbit-Over-Hill-and-Under-Hill/An-Unexpected-Party-1A.jpg',
         'The wizard Gandalf has chosen Bilbo Baggins to join Thorin and company on their quest to the Lonley Mountain.');
@@ -250,6 +290,16 @@ function initQuestMap() {
         '"Then warning trumpets were suddenly sounded, and echoed along the rocky shores. The cheering stopped and the joy was quickly turned to dread. So it was that the dragon did not find them quite unprepared."<br>-The Hobbit');
     addQuest(745, 765, 'The Stone of Erech', 'The-Stone-of-Erech', 'The-Stone-of-Erech/The-Disappearance-1A.jpg',
         'The Lord of Lamedon has asked you to assist him in discovering the whereabouts of his lost son, Derufin. He hasn\'t been seen for days, and his father fears he may be in grave peril. Your search has led you to the Blackroot Vale, where the people live in dread of the Dead Men of Dunharrow.');
+    addQuest(436, 327, 'The Old Forest', 'The-Old-Forest', 'The-Old-Forest/Farewell-to-the-Shire-1A.jpg',
+        'After being pursued through the Shire by mysterious riders in black, Frodo and his friends decide that the safest way for them to continue their journey to Rivendell is to travel through the Old Forest.');
+    addQuest(460, 327, 'Fog on the Barrow-downs', 'Fog-on-the-Barrow-downs', 'Fog-on-the-Barrow-downs/The-House-of-Tom-Bombadil-1A.jpg',
+        'After rescuing the hobbits from Old Man Willow, Tom Bombadil has invited Frodo and his friends to stay the night in his house. There they are greeted warmly by his wife, Goldberry, the River–daughter.');
+    addQuest(210, 178, 'The Ruins of Belegost', 'The-Ruins-of-Belegost', 'The-Ruins-of-Belegost/Ruins-of-the-First-Age-1A.jpg',
+        'You have entered the dark, half–sunken ruins of Belegost in search of powerful artifacts and ancient treasure.');
+    addQuest(487, 326, 'Murder at the Prancing Pony', 'Murder-at-the-Prancing-Pony', 'Murder-at-the-Prancing-Pony/Investigating-the-Crime-1A.jpg',
+        'You have arrived in Bree to find the village abuzz over a recent crime.');
+    addQuest(388, 259, 'The Siege of Annuminas', 'The-Siege-of-Annuminas', 'The-Siege-of-Annuminas/Rebuild-the-Defenses-1A.jpg',
+        'An army from Angmar marches on the Dúnedain capital of Annúminas. You rush to prepare the defenses as best you can before the Orcs reach the city.');
     addQuest(923, 475, 'Attack on Dol Guldur', 'Attack-on-Dol-Guldur', 'Attack-on-Dol-Guldur/Assault-on-the-Golden-Wood-1A.jpg',
         'The Dark Lord of Mordor has declared war across Middle-earth. His Nazgûl lead the Morgul host against Minas Tirith in the south, while Easterlings lay siege to Erebor in the north. And in a move long-prepared, the armies of Dol Guldur cross the Anduin to assault Lórien...');
 
@@ -259,7 +309,7 @@ function initQuestMap() {
         mapElement.addEventListener('mousemove', function (e) {
             var x = getMapX(e);
             var y = getMapY(e);
-            //console.log('mousemove x: ' + x + ' y: ' + y);
+            //console.log('move x: ' + x + ' y: ' + y);
             var quest = getSelectedQuest(e);
             if (quest && quest.length == 1) {
                 var imageUrl = 'https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/' + imageMap[quest];
@@ -279,11 +329,11 @@ function initQuestMap() {
         mapElement.addEventListener('click', function (e) {
             var x = getMapX(e);
             var y = getMapY(e);
-            console.log('mousemove: ' + x + ', ' + y);
+            //console.log('click: ' + x + ', ' + y);
             var quest = getSelectedQuest(e);
             if (quest && quest.length == 1) {
                 var link = '/LotR/Scenarios/' + questMap[quest];
-                console.log('url: ' + link);
+                //console.log('url: ' + link);
                 window.open(link);
             }
         });

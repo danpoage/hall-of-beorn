@@ -64,7 +64,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithText("Setup: Shuffle the Coast of Umbar, Corsair Raiders, Stormy Weather, Umbar Fleet, and Voyage Across Belegaer encounter sets into one encounter deck and make it the active encounter deck. Set The City of Corsairs encounter set aside, as an inactive second encounter deck. Prepare the Corsair deck. Players prepare their fleet. Add the Stormcaller to the staging area. Add 1 copy of Southern Belfalas to the staging area (2 instead if there are 3 or 4 players in the game). Shuffle the encounter deck.")
                 .WithOppositeFlavor("Deep in enemy waters, you must recover the artifact from the Stormcaller.")
                 .WithKeywords("Sailing.")
-                .WithText("Progress cannot be placed on The Coast of Umbar if the players are off-course.\r\nIf the Stormcaller is destroyed (or if this stage has 15 or more progress on it), advance to stage 2.")
+                .WithOppositeText("Progress cannot be placed on The Coast of Umbar if the players are off-course.\r\nIf the Stormcaller is destroyed (or if this stage has 15 or more progress on it), advance to stage 2.")
                 .WithIncludedEncounterSets(EncounterSet.CorsairRaiders, EncounterSet.StormyWeather, EncounterSet.UmbarFleet, EncounterSet.VoyageAcrossBelegaer, EncounterSet.TheDreamChasersFleet)
                 .WithInfo(147, 1, Artist.Simon_Dominic));
             Cards.Add(LotRCard.Quest("Fate of the Dream-chaser", 2, setCoast, Card.VALUE_NA)
