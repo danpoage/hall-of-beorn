@@ -30,8 +30,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithInfo(2, 3, Artist.Tristan_Denecke));
             addCard(LotRCard.Enemy("Isengard Tracker", string.Empty, setName, 35, 3, 5, 1, 3)
                 .WithTraits("Orc.", "Uruk-hai.")
-                .WithKeywords("Tougness 2.", "Archery 1.")
-                .WithText("Forced: After Isengard Tracker destroys a character, move it to the first player's staging area.")
+                .WithKeywords("Toughness 2.", "Archery 1.")
+                .WithText("Forced: After ~Isengard Tracker destroys a character, move it to the first player's staging area.")
                 .WithShadow("Shadow: After this attack, move attacking enemy to the first player's staging area.")
                 .WithInfo(3, 4, Artist.Victor_Manuel_Leza_Moreno));
             addCard(LotRCard.Location("Langflood River", string.Empty, setName, 4, 4)

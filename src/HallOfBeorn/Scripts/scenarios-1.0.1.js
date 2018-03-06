@@ -171,6 +171,26 @@ function initQuestMap() {
     addQuest(1004, 796, 'The Morgul Vale', 'The-Morgul-Vale', 'The-Morgul-Vale/The-Rearguard-1A.jpg',
         'Lord Alcaron and Faramir have been captured by forces from Minas Morgul. You pursue their captors eastward into the dreaded vale.');
 
+    //The Voice of Isengard and Ring-maker
+    addQuest(662, 655, 'The Fords of Isen', 'The-Fords-of-Isen', 'The-Voice-of-Isengard/Fight-at-the-Fords-1A.jpg',
+        'Riding north to the Gap of Rohan, you come upon a battle at the Fords of Isen. A Small number of Rohirrim have taken a defensive position, on the islet in the river\'s center where a large force of wild Dunlending assails them. You must move swifty lest the river run red with blood of Rohan...');
+    addQuest(678, 603, 'To Catch an Orc', 'To-Catch-an-Orc', 'The-Voice-of-Isengard/Orders-from-Orthanc-1A.jpg',
+        'Saruman has tasked you with a dangerous mission: journey up the Misty Mountains\' southern peack in search of the Orc, Mugash, and capture him alive.');
+    addQuest(721, 593, 'Into Fangorn', 'Into-Fangorn', 'The-Voice-of-Isengard/Into-the-Woods-1A.jpg',
+        'You\'ve captured the Orc captain, Mugash, in the mountains above Isengard. But as you make your way down Methedras, your captive escaped and flees east into Fangorn.');
+    addQuest(584, 561, 'The Dunland Trap', 'The-Dunland-Trap', 'The-Dunland-Trap/The-Road-to-Tharbad-1A.jpg',
+        'You are following the Old South Road from Isengard to Tharbad on an errand for Saruman when you are attacked by Wild Men of Dunland.');
+    addQuest(593, 538, 'The Three Trials', 'The-Three-Trials', 'The-Three-Trials/The-Trials-Begin-1A.jpg',
+        'At the edge of a cursed forest, the Boar Shaman explains that you must undertake three trials in order to recover the Antlered Crown, or face death. Each trial will test your worthiness. Guardian spirits watch over three sacred swords, protecting them from the undeserving.');
+    addQuest(547, 462, 'Trouble in Tharbad', 'Trouble-in-Tharbad', 'Trouble-in-Tharbad/Double-Dealings-1A.jpg',
+        'Your meeting with Nalir is interrupted by a host of Orcs led by a man, Bellach. In the ensuing chaos, you manage to escape with the Dwarf but the Orcs pursue. Outnumbered, you must throw the Orcs off your trail if you hope to escape...');
+    addQuest(584, 453, 'The Nîn-in-Eilph', 'The-Nin-in-Eilph', 'The-Nin-in-Eilph/Fleeing-from-Tharbad-1A.jpg',
+        'You\'ve entered the vast marshlands of the Nin–in–Eilph with Nalir in order to escape Bellach and his Orcs. Now, you must cross the swamp in order to reach Hollin on the other side.');
+    addQuest(631, 465, 'Celebrimbor\'s Secret', 'Celebrimbors-Secret', 'Celebrimbor\'s-Secret/The-Ruins-of-Ost-in-Edhil-1A.jpg',
+        'You have finally reached the ruins of Ost–in–Edhil, but Bellach and his Orcs have arrived before you. They appear to be searching for the hidden chamber. If you want to reach it first, you will have to move quickly and carefully...');
+    addQuest(639, 507, 'The Antlered Crown', 'The-Antlered-Crown', 'The-Antlered-Crown/Battle-for-Dunland-1A.jpg',
+        'On your return journey to Isengard, you find war in Dunland. The Raven Clan has refused the Boar\'s claim to The Antlered Crown, and chief Turch asks you to join his Clan as they march to battle. Seeing an opportunity to earn Saruman the friendship of a unified Dunland, you agree to join forces and fight...');
+
     //The Hobbit Saga
     addQuest(683, 289, 'We Must Away Ere Break of Day', 'We-Must-Away-Ere-Break-of-Day', 'The-Hobbit-Over-Hill-and-Under-Hill/An-Unexpected-Party-1A.jpg',
         'The wizard Gandalf has chosen Bilbo Baggins to join Thorin and company on their quest to the Lonley Mountain.');

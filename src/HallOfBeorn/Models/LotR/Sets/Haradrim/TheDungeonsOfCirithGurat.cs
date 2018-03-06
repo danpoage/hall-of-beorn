@@ -117,6 +117,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
             addEncounterSideQuest("Captured!", setName, 5)
                 .WithFlavor("Orcs spring from a secret passage and pull your friends inside!")
                 .WithText("When Revealed: Each player loses control of an ally he controls and attaches it to this stage. If no allies are attached to this stage, discard it and reveal an additional encounter card.\r\nForced: When this stage is defeated, each player reduces his threat by X, where X is the cost of the ally he controls that was attached to this stage.")
+                .WithVictoryPoints(10)
                 .WithInfo(131, 1, Artist.Marius_Bota);
             addQuest("Rescue the Prisoners", setName, 1, 'A', 10)
                 .WithText("Setup: Set Uruk Chieftain aside, out of play. Add The Captives of Cirith Gurat and 1 copy of ~Dungeon Cell to the staging area. Attach Abaan to ~Dungeon Cell. Each player searches the encounter deck for a different Orc enemy and adds it to the staging area. Shuffle the encounter deck. Starting with the first player, each player discards cards from the top of his deck until an ally that is not in play is discarded and attaches that ally to an unattached enemy in the staging area.")
