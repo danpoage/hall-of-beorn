@@ -1141,6 +1141,16 @@ tr.pager td {
     width: 88%;    
 }
 
+.flavor-text-right {
+    font-family: 'Times New Roman';
+    font-size: small;
+    font-style: italic;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+    width: 88%;
+}
+
 .victory-text {
     text-align:right;
     font-weight:bold;

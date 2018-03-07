@@ -2737,6 +2737,8 @@ namespace HallOfBeorn.Services.LotR
             AddHtml("Heroic-Diversion-FA", "<p class='main-text'>Doomed 1.</p><p><b>When Revealed:</b> Each player must either discard 1 character or raise his threat by 5.</p>");
             */
 
+            AddHtml("The-Uruk-hai-Nightmare-TUHN", "<p class='main-text'>You are playing Nightmare mode.</p><p class='main-text'>Each Captive is immune to player card effects.</p><p class='main-text'><b>Setup:</b> Set Mauhúr aisde, out of play.</p><p class='main-text'><b>Forced:</b> When the players advance to stage 2A, add Mauhúr to the staging area.</p><p class='flavor-text'>&ldquo;You'll run with me behind you,&rdquo; said Uglúk. &ldquo;Run! Or you'll never see your beloved holes again.&rdquo;</p><p class='flavor-text-right'>&mdash;The Two Towers</p>");
+
             AddHtml("Among-the-Outlaws-AtO", "<p class='main-text'><b>Dilemma Deck</b></p><p>The 9 objective cards with the Dilemma trait are set aside into a separate deck at the start of the game and shuffled. When players quest unsuccessfully, the top card of the dilemma deck is revealed. Each dilemma card gives the player two options. Carrying out the first option helps the Gaurwaith while carrying out the second option, which adds the card to the victory display, helps the woodmen.</p><p><b> Corruption and Objective Allies</b></p><p>Objective allies are immune to corruption and corruption cannot be placed on objective allies for any reason.</p>");
         }
     }
