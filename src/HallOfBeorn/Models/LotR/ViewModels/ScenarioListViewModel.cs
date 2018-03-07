@@ -20,7 +20,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             get
             {
-                return "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Maps/Middle-earth-Quest-Map.png";
+                return "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Maps/Quest-Map.png";
             }
         }
     }
