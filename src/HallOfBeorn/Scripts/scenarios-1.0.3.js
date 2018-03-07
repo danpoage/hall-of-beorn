@@ -131,34 +131,64 @@ function initQuestMap() {
         return arrayIntersectShouldBePartOfTheLanguage(xCodes, yCodes);
     };
 
-    function getSelectedCycle(e) {
+    function getCyclePoints(e) {
         var quest = getSelectedQuest(e);
         if (quest && questToCycleMap[quest] !== undefined) {
-            return questToCycleMap[quest];
+            var cycle = questToCycleMap[quest];
+            return cycleToLinesMap[cycle]
         }
-        return false;
+        return [];
     }
 
     function drawLines(e, quest) {
         //console.log('drawLines');
 
-        var cycle = getSelectedCycle(e);
-        if (!cycle) {
+        var points = getCyclePoints(e);
+        if (!points || points.length < 2) {
             return;
         }
-        var points = cycleToLinesMap[cycle];
 
-        var canvas = document.getElementById("quest-map");
-        var context = canvas.getContext("2d");
+        var c = document.getElementById("quest-map");
+        var ctx = c.getContext("2d");
+        var width = 2;
+        var color = '#e3eaa7';
 
-        context.beginPath();
-        context.moveTo(points[0].x, points[0].y);
         for (var i = 1; i < points.length; i++) {
-            context.lineTo(points[i].x, points[i].y);
+            drawArrow(c, ctx, width, color, points[i - 1].x, points[i - 1].y, points[i].x, points[i].y);
         }
-        context.lineWidth = 2;
-        context.strokeStyle = "lightyellow";
-        context.stroke();
+    }
+
+    function drawArrow(c, ctx, width, color, fromx, fromy, tox, toy) {
+        var headlen = 10 / width;
+
+        var angle = Math.atan2(toy - fromy, tox - fromx);
+
+        //starting path of the arrow from the start square to the end square and drawing the stroke
+        ctx.beginPath();
+        ctx.moveTo(fromx, fromy);
+        ctx.lineTo(tox, toy);
+        ctx.strokeStyle = color; //"#cc0000";
+        ctx.lineWidth = width;
+        ctx.stroke();
+
+        //starting a new path from the head of the arrow to one of the sides of the point
+        ctx.beginPath();
+        ctx.moveTo(tox, toy);
+        ctx.lineTo(tox - headlen * Math.cos(angle - Math.PI / 7), toy - headlen * Math.sin(angle - Math.PI / 7));
+
+        //path from the side point of the arrow, to the other side point
+        ctx.lineTo(tox - headlen * Math.cos(angle + Math.PI / 7), toy - headlen * Math.sin(angle + Math.PI / 7));
+
+        //path from the side point back to the tip of the arrow, and then again to the opposite side point
+        ctx.lineTo(tox, toy);
+        ctx.lineTo(tox - headlen * Math.cos(angle - Math.PI / 7), toy - headlen * Math.sin(angle - Math.PI / 7));
+
+        //draws the paths created above
+        ctx.strokeStyle = color; //"#cc0000";
+        ctx.lineWidth = width;
+        ctx.stroke();
+        ctx.fillStyle = color; //"#cc0000";
+        ctx.fill();
     }
 
     function hideLines(e) {
