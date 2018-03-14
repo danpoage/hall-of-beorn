@@ -32,7 +32,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
 
             addAttachment("King of Dale", 2, Sphere.Spirit, true)
                 .WithTraits("Title.")
-                .WithText("Attach to a Dale or Esgaroth hero.\r\nPlanning Action: Exhaust King of Dale to reduce the cost of the next Dale ally you play this phase by 1 for each different play attachment on attached hero. That ally does not require a resource match.")
+                .WithText("Attach to a Dale or Esgaroth hero.\r\nPlanning Action: Exhaust King of Dale to reduce the cost of the next Dale ally you play this phase by 1 for each different player attachment on attached hero. That ally does not require a resource match.")
                 .WithFlavor("Then Bard II, Brand's son, became King of Dale..\r\n-The Return of the King")
                 .WithInfo(8, 3, Artist.Antonio_Jose_Manzanedo);
             addAttachment("Bow of Yew", 0, Sphere.Tactics, false)
