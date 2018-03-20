@@ -113,6 +113,7 @@ namespace HallOfBeorn.Services.LotR
             add(new SamGamgeeCharacter());
             add(new SarumanCharacter());
             add(new SkinbarkCharacter());
+            add(new TheBeorningsGroup());
             add(new TheCouncilOfElrondGroup());
             add(new TheEaglesGroup());
             add(new TheEntsGroup());
