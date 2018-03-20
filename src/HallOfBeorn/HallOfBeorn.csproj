@@ -265,6 +265,7 @@
     <Compile Include="Models\LotR\Characters\GrimaCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GrimbeornTheOldCharacter.cs" />
     <Compile Include="Models\LotR\Characters\GrimboldCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\Groups\IstariGroup.cs" />
     <Compile Include="Models\LotR\Characters\Groups\TheBeorningsGroup.cs" />
     <Compile Include="Models\LotR\Characters\Groups\TheEaglesGroup.cs" />
     <Compile Include="Models\LotR\Characters\GuthlafCharacter.cs" />

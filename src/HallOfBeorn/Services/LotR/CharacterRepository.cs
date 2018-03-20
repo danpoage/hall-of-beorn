@@ -89,6 +89,7 @@ namespace HallOfBeorn.Services.LotR
             add(new HirluinTheFairCharacter());
             add(new IngoldCharacter());
             add(new IorethCharacter());
+            add(new IstariGroup());
             add(new KiliCharacter());
             add(new LandrovalCharacter());
             add(new LegolasCharacter());
