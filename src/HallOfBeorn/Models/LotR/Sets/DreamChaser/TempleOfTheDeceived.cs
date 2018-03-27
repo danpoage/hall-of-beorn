@@ -40,7 +40,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithText("Response: While Déorwine is defending, spend 1 Leadership resource to cancel a shadow effect dealt to the attacking enemy. Any player may trigger this action.") 
                 .WithInfo(60, 3, Artist.Aleksander_Karcz));
             Cards.Add(LotRCard.Event("Revealed in Wrath", "", Sphere.Tactics, 1)
-                .WithText("Play only if you controla  Noldor hero.\r\nAction: Choose a non-unique enemy. Until the end of the phase, treat the chosen enemy's printed text box as if it were blank (except for Traits).")
+                .WithText("Play only if you control a Noldor hero.\r\nAction: Choose a non-unique enemy. Until the end of the phase, treat the chosen enemy's printed text box as if it were blank (except for Traits).")
                 .WithFlavor("\"...seeing an Elf-lord revealed in his wrath, they were dismayed, and their horses were stricken with madness.\"\r\n-Gandalf, The Fellowship of the Ring")
                 .WithInfo(61, 3, Artist.Sebastian_Giacobino));
             Cards.Add(LotRCard.Ally("Rhovanion Outrider", Sphere.Spirit, 3, 1, 2, 1, 2)
