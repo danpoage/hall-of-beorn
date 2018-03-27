@@ -628,7 +628,7 @@ and the City shall be blessed.
                 Sphere = Sphere.Tactics,
                 ResourceCost = 3,
                 Text = "You must use resources from 3 different heroes' pools to pay for this card.\r\nAction: Choose a player. That player's engaged enemies cannot attack that player this phase.",
-                FlavorText = "With a word or cry, suddenly, the Riders halted. A thicket of spears were pointed towards the strangers...\r\n-The Two Towers",
+                FlavorText = "Without a word or cry, suddenly, the Riders halted. A thicket of spears were pointed towards the strangers...\r\n-The Two Towers",
                 Quantity = 2,
                 CardNumber = 36,
                 Artist = Artist.David_Horne,
