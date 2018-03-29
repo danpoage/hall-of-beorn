@@ -109,6 +109,8 @@ namespace HallOfBeorn.Models.LotR
         public string RulesUrl { get; set; }
         public string AlternateTitle { get; set; }
 
+        public string CardsLink { get; set; }
+
         public string QuestCompanionSlug { get; set; }
         public string QuestCompanionUrl
         {

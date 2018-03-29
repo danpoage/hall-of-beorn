@@ -16,7 +16,7 @@
 {
     <a href="/Cards/Scenarios">Back to Scenario List</a>
     <br />
-    <h2>@Model.Detail.Title</h2>
+    <h2><a href="@Model.Detail.CardsLink" target="_blank">@Model.Detail.Title</a></h2>
     
     <div>
     @foreach (var questCard in @Model.Detail.QuestCards)

@@ -60,6 +60,13 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public string Title { get { return _scenario.Title; } }
         public string Link { get { return string.Format("/Cards/Scenarios/{0}", _scenario.Title.ToUrlSafeString()); } }
+        public string CardsLink {
+            get {
+                return !string.IsNullOrEmpty(_scenario.CardsLink) ? 
+                    _scenario.CardsLink : 
+                    string.Format("/LotR?Scenario={0}&Sort=Set_Number", _scenario.Title.UrlEncode());
+            }
+        }
         public string RulesUrl { get { return _scenario.RulesUrl; } }
         public string RulesLabel { get { return string.Format("Rules Sheet for {0}", _scenario.ProductName); } }
         public string QuestCompanionUrl { get { return _scenario.QuestCompanionUrl; } }
