@@ -26,6 +26,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             ExcludeFromEasyMode("Piercing-Cry-TBR", 2);
             ExcludeFromEasyMode("Pale-Blade-TBR", 2);
             ExcludeFromEasyMode("Power-In-Their-Terror-TBR", 2);
+            ExcludeFromEasyMode("Rider-of-Mordor-TBR", 2);
             ExcludeFromEasyMode("Ringwraith-TBR", 2);
 
             ExcludeFromNightmareMode("Unwanted-Attention-TBR", 1);

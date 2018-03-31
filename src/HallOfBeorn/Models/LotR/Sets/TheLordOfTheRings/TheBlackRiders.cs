@@ -864,7 +864,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 EncounterSet = "A Knife in the Dark",
                 Text = "Cannot have non-Morgul attachments.\r\nWhile Rider of Mordor is engaged with a player, characters that player controls get -1 Willpower.\r\n\r\nWhile The One ~Ring is exhausted, Rider of Mordor gets -10 engagement cost.",
                 Quantity = 2,
-                EasyModeQuantity = 2,
+                EasyModeQuantity = 0,
                 CardNumber = 50,
                 Artist = Artist.Ryan_Barger
             });
