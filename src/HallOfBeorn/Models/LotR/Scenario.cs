@@ -10,9 +10,14 @@ namespace HallOfBeorn.Models.LotR
         protected Scenario(bool hasNightmareMode)
         {
             this.hasNightmareMode = hasNightmareMode;
+
+            RulesReferenceUrl =  
+                "https://images-cdn.fantasyflightgames.com/filer_public/90/19/90191e4e-a341-4379-b398-5963b7a87ebf/mec01_online_only_rules_reference_for_website.pdf";
+            RulesReferenceLabel = "Rules Reference 1.0";
         }
 
         public Scenario()
+            : this(false)
         {
         }
 
@@ -28,64 +33,10 @@ namespace HallOfBeorn.Models.LotR
 
         private readonly Dictionary<string, Tuple<byte, byte, byte>> cardCountMap = new Dictionary<string, Tuple<byte, byte, byte>>();
 
-        /*
-        protected void DeluxeExpansion(string title, string product, int number)
-        {
-            Title = title;
-            ProductName = product;
-            GroupName = product;
-            Number = number;
-        }
-
-        protected void SagaExpansion(string title, string product, int number)
-        {
-            DeluxeExpansion(title, product, number);
-        }
-
-        protected void AdventurePack(string title, string cycle, int number)
-        {
-            Title = title;
-            ProductName = title;
-            GroupName = cycle;
-            Number = number;
-        }
-        */
-
         protected void AddEncounterSet(EncounterSet set)
         {
             encounterSets[set.Name] = set;
-
-            /*
-            foreach (var card in set.Cards()) {
-
-                switch (card.CardType) {
-                    case CardType.Quest:
-                        AddQuestCard(card);
-                        break;
-                    case CardType.Nightmare_Setup:
-                        //throw new Exception("!!!! WTF !!!");
-
-                        applyNightmareExclusions(card);
-                        break;
-                    default:
-                        if (card.EasyModeQuantity.HasValue && card.Quantity > card.EasyModeQuantity.Value) {
-                            var numberExcluded = (byte)(card.Quantity - card.EasyModeQuantity.Value);
-                            ExcludeFromEasyMode(card.Slug, numberExcluded);
-                        }
-                        break;
-                }
-            }
-            */
         }
-
-        /*
-        protected void addEncounterSets(params EncounterSet[] sets)
-        {
-            foreach (var set in sets) {
-                AddEncounterSet(set);
-            }
-        }
-        */
 
         protected void AddQuestCardId(string slug)
         {
@@ -116,6 +67,9 @@ namespace HallOfBeorn.Models.LotR
         {
             get { return string.Format("http://lotrlcgcompanion.com/{0}.html", QuestCompanionSlug); }
         }
+
+        public string RulesReferenceUrl { get; protected set; }
+        public string RulesReferenceLabel { get; protected set; }
 
         public ScenarioCard CampaignCard
         {

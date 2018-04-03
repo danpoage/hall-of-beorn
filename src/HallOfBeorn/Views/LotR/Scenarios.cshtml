@@ -57,6 +57,10 @@
         {
             <div><a title="@Model.Detail.Title on the Quest Companion" href="@Model.Detail.QuestCompanionUrl" target="_blank">Quest Companion</a></div>
         }
+        if (@Model.Detail.HasRulesReference)
+        {
+            <div><a title="@Model.Detail.RulesReferenceLabel" href="@Model.Detail.RulesReferenceUrl" target="_blank">@Model.Detail.RulesReferenceLabel</a></div>
+        }
     }
     
     if (@Model.Detail.CampaignCard != null)

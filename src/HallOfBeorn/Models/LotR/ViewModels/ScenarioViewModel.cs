@@ -68,6 +68,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             }
         }
         public string RulesUrl { get { return _scenario.RulesUrl; } }
+
+        public bool HasRulesReference { get { return !string.IsNullOrEmpty(_scenario.RulesReferenceUrl); } }
+        public string RulesReferenceUrl { get { return _scenario.RulesReferenceUrl; } }
+        public string RulesReferenceLabel { get { return _scenario.RulesReferenceLabel; } }
+
         public string RulesLabel { get { return string.Format("Rules Sheet for {0}", _scenario.ProductName); } }
         public string QuestCompanionUrl { get { return _scenario.QuestCompanionUrl; } }
 
