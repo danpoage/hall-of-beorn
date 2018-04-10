@@ -5,12 +5,13 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.ProductGroups
 {
-    public class RhovanionProductGroup : ProductGroup
+    public class EredMithrinProductGroup : ProductGroup
     {
-        public RhovanionProductGroup()
-            : base("Rhovanion Cycle")
+        public EredMithrinProductGroup()
+            : base("Ered Mithrin Cycle")
         {
             MainProduct = Product.TheWildsOfRhovanion;
+            AddProduct(Product.TheWitheredHeath);
         }
     }
 }

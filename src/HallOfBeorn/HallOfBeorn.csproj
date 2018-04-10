@@ -318,7 +318,8 @@
     <Compile Include="Models\LotR\Characters\TreebeardCharacter.cs" />
     <Compile Include="Models\LotR\CharacterThing.cs" />
     <Compile Include="Models\LotR\LayoutType.cs" />
-    <Compile Include="Models\LotR\ProductGroups\RhovanionProductGroup.cs" />
+    <Compile Include="Models\LotR\ProductGroups\EredMithrinProductGroup.cs" />
+    <Compile Include="Models\LotR\Products\AdventurePack\TheWitheredHeathProduct.cs" />
     <Compile Include="Models\LotR\Products\Deluxe\TheWildsOfRhovanionProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\AcrossTheEttenmoorsNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\EscapeFromMountGramNightmareProduct.cs" />
@@ -358,6 +359,7 @@
     <Compile Include="Models\LotR\Sets\DreamChaser\FlightOfTheStormcallerNightmare.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\TempleOfTheDeceivedNightmare.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\TheThingInTheDepthsNightmare.cs" />
+    <Compile Include="Models\LotR\Sets\EredMithrin\TheWitheredHeathSet.cs" />
     <Compile Include="Models\LotR\Sets\PrintOnDemand\AttackOnDolGuldurSet.cs" />
     <Compile Include="Models\LotR\Sets\TheGreyHavens\RaidOnTheGreyHavensNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheGreyHavens\TheFateOfNumenorNightmare.cs" />

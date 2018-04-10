@@ -1472,6 +1472,8 @@ namespace HallOfBeorn.Services.LotR
                     return 12;
                 case "Haradrim":
                     return 17;
+                case "Ered Mithrin":
+                    return 19;
                 default:
                     break;
             }
@@ -1505,6 +1507,10 @@ namespace HallOfBeorn.Services.LotR
                 //The Sands of Harad
                 case "TSoH":
                     return 16;
+
+                //The Wilds of Rhovanion
+                case "TWoR":
+                    return 18;
 
                 //The Hobbit
                 case "THOHaUH":

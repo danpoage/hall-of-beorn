@@ -35,12 +35,27 @@ namespace HallOfBeorn.Models.LotR
             return hero;
         }
 
+        protected LotRCard addAlly(string title, byte resourceCost, Sphere sphere, bool isUnique, byte willpower, byte attack, byte defense, byte hitPoints)
+        {
+            var card = LotRCard.Ally(title, sphere, resourceCost, willpower, attack, defense, hitPoints);
+            card.IsUnique = isUnique;
+            addCard(card);
+            return card;
+        }
+
         protected LotRCard addAttachment(string title, byte resourceCost, Sphere sphere, bool isUnique)
         {
             var attachment = LotRCard.Attachment(title, string.Empty, sphere, resourceCost);
             attachment.IsUnique = isUnique;
             addCard(attachment);
             return attachment;
+        }
+
+        protected LotRCard addEvent(string title, byte resourceCost, Sphere sphere)
+        {
+            var card = LotRCard.Event(title, string.Empty, sphere, resourceCost);
+            addCard(card);
+            return card;
         }
 
         protected LotRCard addQuest(string title, string encounterSet, uint stageNumber, char stageLetter, byte? questPoints)
@@ -221,6 +236,7 @@ namespace HallOfBeorn.Models.LotR
             Add(TheCrossingsOfPoros);
 
             Add(TheWildsOfRhovanion);
+            Add(TheWitheredHeath);
 
             Add(TheHobbitOverHillAndUnderHill);
             Add(TheHobbitOnTheDoorstep);
@@ -391,6 +407,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheCrossingsOfPoros = new Sets.Haradrim.TheCrossingsOfPoros();
 
         public static CardSet TheWildsOfRhovanion = new Sets.TheWildsOfRhovanion.TheWildsOfRhovanionSet();
+        public static CardSet TheWitheredHeath = new Sets.EredMithrin.TheWitheredHeathSet();
 
         public static CardSet TheHobbitOverHillAndUnderHill = new Sets.TheHobbit.OverHillandUnderHillSet();
         public static CardSet TheHobbitOnTheDoorstep = new Sets.TheHobbit.OntheDoorstepSet();

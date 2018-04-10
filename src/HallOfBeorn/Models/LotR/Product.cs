@@ -128,8 +128,9 @@ namespace HallOfBeorn.Models.LotR
         public static Product TheDungeonsOfCirithGurat = new Products.AdventurePack.TheDungeonsOfCirithGuratProduct();
         public static Product TheCrossingsOfPoros = new Products.AdventurePack.TheCrossingsOfPorosProduct();
 
-        //The Wilds of Rhovanion
+        //The Wilds of Rhovanion and Ered Mithin Cycle
         public static Product TheWildsOfRhovanion = new Products.Deluxe.TheWildsOfRhovanionProduct();
+        public static Product TheWitheredHeath = new Products.AdventurePack.TheWitheredHeathProduct();
 
         //The Hobbit Saga
         public static Product TheHobbitOverHillAndUnderHill = new Products.Saga.TheHobbitOverHillAndUnderHillProduct();
