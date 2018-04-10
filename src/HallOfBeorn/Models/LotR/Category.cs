@@ -51,6 +51,7 @@ namespace HallOfBeorn.Models.LotR
         Enemy_Attack_Reduction,
         Enemy_Defense_Reduction,
         Encounter_Reveal_Reduction,
-        Target_Not_Engaged
+        Target_Not_Engaged,
+        Attachment_Movement
     }
 }

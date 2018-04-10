@@ -322,7 +322,7 @@ namespace HallOfBeorn.Services.LotR
         {
             var filters = new List<Func<LotRCard, Category>>
             {
-                CreateCategoryFilter(@"add[\s]{1}([\d]{1}|X)[\s]{1}resource", Category.Resource_Acceleration),
+                CreateCategoryFilter(@"(an additional|add[\s]{1}([\d]{1}|X))[\s]{1}resource", Category.Resource_Acceleration),
                 CreateCategoryFilter(@"move[\s]{1}.*[\s]{1}resource|Pay 1 resource from a hero's resource pool to add 1 resource|add 1 resource to a Gondor or Noble|give attached hero a (Leadership|Tactics|Spirit|Lore)|gains a (Leadership|Tactics|Spirit|Lore)|you can spend resources of any sphere", Category.Resource_Smoothing),
                 CreateCategoryFilter(@"(ally|allies){1,}.*into[\s]play|put into play the revealed card for no cost", Category.Mustering),
                 CreateCategoryFilter(@"\+[\d]*[\s]Attack|add its Attack|its Attack for this attack", Category.Attack_Bonus),
@@ -365,7 +365,8 @@ namespace HallOfBeorn.Services.LotR
                 CreateCategoryFilter("(-(1|2|3|4|X) Defense|does not count its defense)", Category.Enemy_Defense_Reduction),
                 CreateCategoryFilter("reveal 1 less", Category.Encounter_Reveal_Reduction),
                 CreateCategoryFilter("(engage (the chosen|that) enemy|into play engaged with you)", Category.Engagement_Control),
-                CreateCategoryFilter("not engaged with you", Category.Target_Not_Engaged)
+                CreateCategoryFilter("not engaged with you", Category.Target_Not_Engaged),
+                CreateCategoryFilter("(attach .* to another (hero|ally|character)|move an .*attachment)", Category.Attachment_Movement)
             };
 
             foreach (var card in cards.Where(x => IsCategorizable(x)))
