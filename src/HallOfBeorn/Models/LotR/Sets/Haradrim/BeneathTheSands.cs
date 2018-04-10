@@ -44,7 +44,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithInfo(59, 3, Artist.Alvaro_Calvo_Escudero));
             addCard(LotRCard.Ally("Rider of Rohan", Sphere.Spirit, 3, 2, 2, 0, 2)
                 .WithTraits("Rohan.", "Scout.")
-                .WithText("While a side quest is in the victory display, Rider of Rohan does not exaust to quest.")
+                .WithText("While a side quest is in the victory display, Rider of ~Rohan does not exaust to quest.")
                 .WithFlavor("\"Who are you, and what are you doing in this land?\" said the Rider, using the Common Speech of the West...\r\n-The Two Towers")
                 .WithInfo(60, 3, Artist.Javier_Charro_Martinez));
             addCard(LotRCard.Attachment("Fireside Song", string.Empty, Sphere.Spirit, 2)

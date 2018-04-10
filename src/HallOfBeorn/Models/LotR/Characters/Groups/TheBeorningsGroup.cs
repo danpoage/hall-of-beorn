@@ -37,6 +37,7 @@ namespace HallOfBeorn.Models.LotR.Characters.Groups
 
             Card("Beorning-Beekeeper-CatC");
             Card("Beorning-Guardian-CoP");
+            Card("Beorn's-Rage-TWH");
         }
     }
 }

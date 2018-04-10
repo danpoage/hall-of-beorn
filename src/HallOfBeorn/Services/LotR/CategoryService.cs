@@ -366,7 +366,9 @@ namespace HallOfBeorn.Services.LotR
                 CreateCategoryFilter("reveal 1 less", Category.Encounter_Reveal_Reduction),
                 CreateCategoryFilter("(engage (the chosen|that) enemy|into play engaged with you)", Category.Engagement_Control),
                 CreateCategoryFilter("not engaged with you", Category.Target_Not_Engaged),
-                CreateCategoryFilter("(attach .* to another (hero|ally|character)|move an .*attachment)", Category.Attachment_Movement)
+                CreateCategoryFilter("(attach .* to another (hero|ally|character)|move an .*attachment)", Category.Attachment_Movement),
+                CreateCategoryFilter("a unique character with the .* trait and another unique character with the .* trait", Category.Trait_Pairing),
+                CreateCategoryFilter("side quest (in|is in) the victory display", Category.Side_Quest_Bonus)
             };
 
             foreach (var card in cards.Where(x => IsCategorizable(x)))

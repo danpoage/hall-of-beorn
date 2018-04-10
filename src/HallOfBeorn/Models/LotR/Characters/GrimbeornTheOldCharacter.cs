@@ -21,6 +21,8 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             Alias("Chieftain of the Beornings");
 
+            addGroup("The Beornings", "The-Beornings");
+
             addFamily("Beorn (Father)", "Beorn");
 
             Card("Grimbeorn-the-Old-TWH");

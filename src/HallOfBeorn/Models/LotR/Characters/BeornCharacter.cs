@@ -39,6 +39,8 @@ namespace HallOfBeorn.Models.LotR.Characters
             Alias("Slayer of Bolg");
             AliasLink("Fearless Killing Machine", "https://www.youtube.com/watch?v=NtG7sUqOS4w");
 
+            addGroup("The Beornings", "The-Beornings");
+
             addFamily("Grimbeorn the Old (Son)", "Grimbeorn-the-Old");
 
             addFriend("Gandalf", "Gandalf");
@@ -46,6 +48,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             Card("Beorn-THOHaUH");
             Card("Beorn-Core");
+            Card("Beorn's-Rage-TWH");
         }
     }
 }
