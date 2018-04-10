@@ -23,6 +23,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             addFamily("Beorn (Father)", "Beorn");
 
+            Card("Grimbeorn-the-Old-TWH");
             Card("Grimbeorn-the-Old-CatC");
         }
     }

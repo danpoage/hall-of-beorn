@@ -25,6 +25,7 @@ namespace HallOfBeorn.Models.LotR
         Defense_Bonus,
         Hit_Point_Bonus,
         Combat_Control,
+        Engagement_Control,
         Location_Control,
         Encounter_Control,
         Staging_Area_Control,
@@ -43,6 +44,13 @@ namespace HallOfBeorn.Models.LotR
         Discard_Pile,
         Quest_Control,
         Two_Or_Fewer_Heroes,
-        Group_Effect
+        Group_Effect,
+        Declared_Attack,
+        Attachment_Bonus,
+        Staging_Threat_Reduction,
+        Enemy_Attack_Reduction,
+        Enemy_Defense_Reduction,
+        Encounter_Reveal_Reduction,
+        Target_Not_Engaged
     }
 }

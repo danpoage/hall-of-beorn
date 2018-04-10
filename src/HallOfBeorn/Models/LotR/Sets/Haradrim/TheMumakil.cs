@@ -39,7 +39,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithText("Response: After Yazan is declared as an attacker, deal 1 damage to a non-unique enemy in play. (Limit once per phase.)")
                 .WithInfo(4, 3, Artist.David_A_Nash));
             addCard(LotRCard.Event("Wait no Longer", string.Empty, Sphere.Tactics, 2)
-                .WithText("Response: At the beginning of the quest phase, search the top 5 cards of the encounter deck for an enemy and put it into play engaged with you. Then, reveal one less encounter card this phase (to a minimum of 0). Shuffle the encounter deck.")
+                .WithText("Response: At the beginning of the quest phase, search the top 5 cards of the encounter deck for an enemy and put it into play engaged with you. Then, reveal 1 less encounter card this phase (to a minimum of 0). Shuffle the encounter deck.")
                 .WithFlavor("\"We must press our Enemy, and no longer wait upon him for the move.\"\r\n-Aragorn, The Return of the King")
                 .WithInfo(5, 3, Artist.John_Pacer));
             addCard(LotRCard.Ally("Jubayr", Sphere.Spirit, 5, 1, 2, 3, 3)

@@ -340,11 +340,11 @@ namespace HallOfBeorn.Services.LotR
                 CreateCategoryFilter("ready.*(character|hero|ally|allies|him|her|them|Prince|Boromir)", Category.Readying, "While Dain Ironfoot is ready"),
                 CreateCategoryFilter(@"(return.*discard[\s]pile.*hand|shuffle.*discard[\s]pile.*back|discard pile.*into play|discard pile.*shuffle|shuffle.*card.*discard pile.*into.*deck|(from|in) (your|the) discard pile)", Category.Recursion, "encounter discard pile", "Shuffle the encounter deck"),
                 CreateCategoryFilter(@"deal[\s]([\d]|X)*[\s]damage|damage to the attacking enemy|damage to the defending enemy|Excess damage dealt by this attack is assigned|assigned as damage to the chosen enemy|deal an additional.*damage", Category.Direct_Damage, "1 damage to Erkenbrand", "deal 1 damage to him to ready him", "deal 1 damage to Treebeard", "deal 1 damage to Eärendil", "Deal 1 damage to Derndingle"),
-                CreateCategoryFilter(@"(look at|revealed|enters play|top of the).*encounter[\s]deck", Category.Encounter_Control),
+                CreateCategoryFilter(@"(reveal 1 less|look at|revealed|enters play|top of the).*encounter[\s]deck", Category.Encounter_Control),
                 CreateCategoryFilter(@"cancel.*shadow|shadow[\s]cards|look at 1 shadow card|Discard (a|each) shadow card", Category.Shadow_Control), 
                 CreateCategoryFilter(@"(reduce|reduces|lower).*(his|your|player).*threat", Category.Threat_Control, "your threat is lower"),
                 CreateCategoryFilter(@"((enemy|enemies).*staging[\s]area.*attack|attacker.*against.*enemy not engaged with you|Any character may choose attached enemy as the target of an attack)|deal 1 damage to an enemy in the staging area|attacking an enemy in the staging area|attacker against enemies in the staging area|Choose a.*enemy.*instead assigned as damage to the chosen enemy", Category.Staging_Area_Attack),
-                CreateCategoryFilter("(choose (an enemy|a location).*(staging area|not engaged with you))|add.*each enemy's engagement cost|each enemy.*gets.*engagement cost|return that enemy to the staging area", Category.Staging_Area_Control),
+                CreateCategoryFilter("(choose (an enemy|a location).*staging area)|add.*each enemy's engagement cost|each enemy.*gets.*engagement cost|return that enemy to the staging area", Category.Staging_Area_Control),
                 CreateCategoryFilter(@"after[\s].*[\s](enters|enters or leaves)[\s]play", Category.Enters_Play),
                 CreateCategoryFilter(@"(after[\s].*[\s]leaves[\s]play|return (it|him|Keen-eyed Took) to your hand)|if that ally is still in play, add it to your hand", Category.Leaves_Play, "After attached location leaves play"),
                 CreateCategoryFilter(@"(after[\s]you[\s]play[\s].*[\s]from[\s]your[\s]hand|after you play)", Category.Played_From_Hand),
@@ -357,7 +357,15 @@ namespace HallOfBeorn.Services.LotR
                 CreateCategoryFilter("(commit .* to|remove it from) the quest", Category.Quest_Control),
                 CreateCategoryFilter("(two|2) or fewer heroes", Category.Two_Or_Fewer_Heroes),
                 CreateCategoryFilter("(players as a group.*spend|triggered by each player|any player may trigger)", Category.Group_Effect),
-                CreateCategoryFilter("(is discarded from the top of your deck|discard the top card of your deck|discard the top 2 cards of your deck|discard 2 cards from the top of your deck|the top 2 cards of your deck. Add 1 to your hand and discard the other)", Category.Discard_From_Deck)
+                CreateCategoryFilter("(is discarded from the top of your deck|discard the top card of your deck|discard the top 2 cards of your deck|discard 2 cards from the top of your deck|the top 2 cards of your deck. Add 1 to your hand and discard the other)", Category.Discard_From_Deck),
+                CreateCategoryFilter("declare .* attacker", Category.Declared_Attack),
+                CreateCategoryFilter("(player|player card) attachment", Category.Attachment_Bonus),
+                CreateCategoryFilter("((enemy|location) .* -(1|2|3|4|X) Threat|does not (count|contribute) its Threat)", Category.Staging_Threat_Reduction),
+                CreateCategoryFilter("-(1|2|3|4|X) Attack", Category.Enemy_Attack_Reduction),
+                CreateCategoryFilter("(-(1|2|3|4|X) Defense|does not count its defense)", Category.Enemy_Defense_Reduction),
+                CreateCategoryFilter("reveal 1 less", Category.Encounter_Reveal_Reduction),
+                CreateCategoryFilter("(engage (the chosen|that) enemy|into play engaged with you)", Category.Engagement_Control),
+                CreateCategoryFilter("not engaged with you", Category.Target_Not_Engaged)
             };
 
             foreach (var card in cards.Where(x => IsCategorizable(x)))
