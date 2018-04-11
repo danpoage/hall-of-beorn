@@ -368,7 +368,9 @@ namespace HallOfBeorn.Services.LotR
                 CreateCategoryFilter("not engaged with you", Category.Target_Not_Engaged),
                 CreateCategoryFilter("(attach .* to another (hero|ally|character)|move an .*attachment)", Category.Attachment_Movement),
                 CreateCategoryFilter("a unique character with the .* trait and another unique character with the .* trait", Category.Trait_Pairing),
-                CreateCategoryFilter("side quest (in|is in) the victory display", Category.Side_Quest_Bonus)
+                CreateCategoryFilter("side quest (in|is in) the victory display", Category.Side_Quest_Bonus),
+                CreateCategoryFilter((card) => { return card.Keywords.Any(kw => kw.Contains("Guarded")); }, Category.Guarded_Attachment),
+                CreateCategoryFilter(@"attach to (an ([\S]*\s{1})ally|a ([\S]*\s{1})character)", Category.Ally_Attachment)
             };
 
             foreach (var card in cards.Where(x => IsCategorizable(x)))

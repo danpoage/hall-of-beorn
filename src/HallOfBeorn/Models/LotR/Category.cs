@@ -54,6 +54,8 @@ namespace HallOfBeorn.Models.LotR
         Target_Not_Engaged,
         Attachment_Movement,
         Trait_Pairing,
-        Side_Quest_Bonus
+        Side_Quest_Bonus,
+        Guarded_Attachment,
+        Ally_Attachment
     }
 }
