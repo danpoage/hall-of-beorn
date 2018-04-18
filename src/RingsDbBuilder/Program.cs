@@ -16,7 +16,7 @@ namespace RingsDbBuilder
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("RingsDB Popularity Ranker");
+            Console.WriteLine("RingsDB Popularity Ranker v1.0.3 (2018-04-17)");
 
             var productRepo = new ProductRepository();
             var cardRepo = new CardRepository(productRepo);
@@ -24,16 +24,18 @@ namespace RingsDbBuilder
 
             var heroTally = new Dictionary<string, int>();
             var cardTally = new Dictionary<string, int>();
+            var createdTally = new Dictionary<string, int>();
 
             var unknownCards = new List<string>();
 
             using (var client = new System.Net.Http.HttpClient())
             {
                 const int startDeckId = 2969;
-                const int maxDeckId = 7054;
+                const int maxDeckId = 8496;
                 RingsDbDeckList deck;
                 var slug = string.Empty;
                 var quantity = 0;
+                var created = string.Empty;
                 //const int mainDeckMultiplier = 4;
                 //const int sideboardMultiplier = 1;
 
@@ -58,6 +60,16 @@ namespace RingsDbBuilder
 
                         if (deck == null) {
                             continue;
+                        }
+
+                        if (!string.IsNullOrWhiteSpace(deck.date_creation) && deck.date_creation.Length >= 10)
+                        {
+                            created = deck.date_creation.Substring(0, 10);
+                            if (!createdTally.ContainsKey(created)) {
+                                createdTally[created] = 0;
+                            }
+                            
+                            createdTally[created] += 1;
                         }
 
                         foreach (var heroId in deck.heroes.Keys)
@@ -144,6 +156,10 @@ namespace RingsDbBuilder
                     //cardScores[tally] = (byte)Math.Truncate(newScore); 
                     
                     Console.WriteLine(string.Format("addPopularity(\"{0}\", {1});", tally, cardTally[tally]));
+                }
+
+                foreach (var date in createdTally.Keys.OrderBy(x => x)) {
+                    Console.WriteLine(string.Format("DATE: {0} COUNT: {1}", date, createdTally[date]));
                 }
 
                 //var x = heroScores;
