@@ -280,6 +280,7 @@
     <Compile Include="Models\LotR\Characters\IorethCharacter.cs" />
     <Compile Include="Models\LotR\Characters\KiliCharacter.cs" />
     <Compile Include="Models\LotR\Characters\LandrovalCharacter.cs" />
+    <Compile Include="Models\LotR\Characters\LeaflockCharacter.cs" />
     <Compile Include="Models\LotR\Characters\LegolasCharacter.cs" />
     <Compile Include="Models\LotR\Characters\LindirCharacter.cs" />
     <Compile Include="Models\LotR\Characters\Groups\LorienGroup.cs" />

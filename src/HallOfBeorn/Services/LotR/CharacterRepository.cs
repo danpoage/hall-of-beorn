@@ -92,6 +92,7 @@ namespace HallOfBeorn.Services.LotR
             add(new IstariGroup());
             add(new KiliCharacter());
             add(new LandrovalCharacter());
+            add(new LeaflockCharacter());
             add(new LegolasCharacter());
             add(new LindirCharacter());
             add(new LorienGroup());
