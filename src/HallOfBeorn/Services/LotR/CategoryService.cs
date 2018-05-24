@@ -370,7 +370,8 @@ namespace HallOfBeorn.Services.LotR
                 CreateCategoryFilter("a unique character with the .* trait and another unique character with the .* trait", Category.Trait_Pairing),
                 CreateCategoryFilter("side quest (in|is in) the victory display", Category.Side_Quest_Bonus),
                 CreateCategoryFilter((card) => { return card.Keywords.Any(kw => kw.Contains("Guarded")); }, Category.Guarded_Attachment),
-                CreateCategoryFilter(@"attach to (an(\s{1}[\S]*\s{1}|\s)ally|a(\s{1}[\S]*\s{1}|\s{1})character)", Category.Ally_Attachment)
+                CreateCategoryFilter(@"attach to (an(\s{1}[\S]*\s{1}|\s)ally|a(\s{1}[\S]*\s{1}|\s{1})character)", Category.Ally_Attachment),
+                CreateCategoryFilter("attach to (a|the active) location", Category.Location_Attachment)
             };
 
             foreach (var card in cards.Where(x => IsCategorizable(x)))

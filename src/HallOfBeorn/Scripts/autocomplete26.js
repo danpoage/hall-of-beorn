@@ -31,6 +31,7 @@
     "Fastred", "Song of Hope", "Burst Into Song", "Defender of Cair Andros", "Oath of Eorl", "Fearless Scout", "Rally the West", "Dunedain Pipe", "Old Toby", "Southron Refugee", "The Black Serpent",
     "Folco Boffin", "Knight of Dale", "Riddermark Knight", "Eregion Survivor", "Leaflock", "Diligent Noble", "Legacy Blade", "Fierce Defense", "Heirs of Earendil", "Open the Armory",
     "Halfast Gamgee", "Bulwark of the West", "Beorning Guardian", "Followed", "Flight to the Sea", "Emyn Arnen Ranger", "The Dam Bursts", "Magic Ring", "Wind from the Sea",
+    "Tom Cotton", "Rosie Cotton", "Captains of the West", "Raise the Shire", "Guthwine", "Friend of Friends", "Orc Disguise",
           "+set:",
           "-set:",
           "+type:",

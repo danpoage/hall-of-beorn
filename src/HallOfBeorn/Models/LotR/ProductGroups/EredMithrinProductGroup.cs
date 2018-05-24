@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
         {
             MainProduct = Product.TheWildsOfRhovanion;
             AddProduct(Product.TheWitheredHeath);
+            AddProduct(Product.RoamAcrossRhovanion);
         }
     }
 }

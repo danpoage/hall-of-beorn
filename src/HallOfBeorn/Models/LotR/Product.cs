@@ -131,6 +131,7 @@ namespace HallOfBeorn.Models.LotR
         //The Wilds of Rhovanion and Ered Mithin Cycle
         public static Product TheWildsOfRhovanion = new Products.Deluxe.TheWildsOfRhovanionProduct();
         public static Product TheWitheredHeath = new Products.AdventurePack.TheWitheredHeathProduct();
+        public static Product RoamAcrossRhovanion = new Products.AdventurePack.RoamAcrossRhovanionProduct();
 
         //The Hobbit Saga
         public static Product TheHobbitOverHillAndUnderHill = new Products.Saga.TheHobbitOverHillAndUnderHillProduct();
