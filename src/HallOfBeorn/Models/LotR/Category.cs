@@ -57,6 +57,8 @@ namespace HallOfBeorn.Models.LotR
         Side_Quest_Bonus,
         Guarded_Attachment,
         Ally_Attachment,
-        Location_Attachment
+        Location_Attachment,
+        Damage_Control,
+        Cost_Reduction
     }
 }

@@ -371,7 +371,9 @@ namespace HallOfBeorn.Services.LotR
                 CreateCategoryFilter("side quest (in|is in) the victory display", Category.Side_Quest_Bonus),
                 CreateCategoryFilter((card) => { return card.Keywords.Any(kw => kw.Contains("Guarded")); }, Category.Guarded_Attachment),
                 CreateCategoryFilter(@"attach to (an(\s{1}[\S]*\s{1}|\s)ally|a(\s{1}[\S]*\s{1}|\s{1})character)", Category.Ally_Attachment),
-                CreateCategoryFilter("attach to (a|the active) location", Category.Location_Attachment)
+                CreateCategoryFilter("attach.* to (a|the active|that) location", Category.Location_Attachment),
+                CreateCategoryFilter("(cancel|prevent) 1 point of damage|place 1 of that damage|takes all damage assigned", Category.Damage_Control),
+                CreateCategoryFilter("reduce the cost (of|to)", Category.Cost_Reduction)
             };
 
             foreach (var card in cards.Where(x => IsCategorizable(x)))
