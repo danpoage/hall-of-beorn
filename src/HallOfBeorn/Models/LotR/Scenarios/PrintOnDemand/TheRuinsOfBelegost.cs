@@ -15,10 +15,10 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
 
             AddQuestCardId("Ruins-of-the-First-Age-TRoB");
             AddQuestCardId("Ancient-Evils-Disturbed-TRoB");
-            AddQuestCardId("Deeper-into-the-Past-TRoB");
+            AddQuestCardId("Deeper-into-the-Past-C-TRoB");
             AddQuestCardId("The-Servants-of-Morgoth-TRoB");
-            AddQuestCardId("The-Roots-of-Ered-Luin-TRoB");
-            AddQuestCardId("The-Mines-of-Belegost-TRoB");
+            AddQuestCardId("The-Roots-of-Ered-Luin-C-TRoB");
+            AddQuestCardId("The-Mines-of-Belegost-E-TRoB");
             AddQuestCardId("The-Beast-of-Belegost-TRoB");
 
             ExcludeFromEasyMode("Flooded-Hall-TRoB", 2);
