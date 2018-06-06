@@ -170,6 +170,16 @@ namespace HallOfBeorn.Services.LotR
                         predicate = (score) => { return names.All(y => (!string.IsNullOrEmpty(score.Card.Shadow) && score.Card.Shadow.ContainsLower(y))); };
                     }
                     break;
+                case "flavor":
+                    if (orFilters)
+                    {
+                        predicate = (score) => { return names.Any(y => (!string.IsNullOrEmpty(score.Card.FlavorText) && score.Card.FlavorText.ContainsLower(y))); };
+                    }
+                    else
+                    {
+                        predicate = (score) => { return names.All(y => (!string.IsNullOrEmpty(score.Card.FlavorText) && score.Card.FlavorText.ContainsLower(y))); };
+                    }
+                    break;
                 default:
                     break;
             }
@@ -357,6 +367,7 @@ namespace HallOfBeorn.Services.LotR
                         break;
                     case "text":
                     case "shadow":
+                    case "flavor":
                         filterResults = FilterByString(field, value, results, negate);
                         break;
                     default:
