@@ -49,7 +49,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(LotRCard.Enemy("Blocking Huorn", "", setName, 28, 2, 3, 3, 8)
                 .WithTraits("Huorn.")
                 .WithKeywords("Hinder.")
-                .WithText("Cannot have attachments.\r\nWhile Blocking Huron is engaged with a player, it adds its Threat to the staging area.")
+                .WithText("Cannot have attachments.\r\nWhile Blocking Huorn is engaged with a player, it adds its Threat to the staging area.")
                 .WithShadow("Shadow: Put Blocking Huorn into play engaged with you.")
                 .WithInfo(3, 2, Artist.Katy_Grierson));
             Cards.Add(LotRCard.Enemy("Wicked Huorn", "", setName, 33, 3, 6, 4, 7)
@@ -64,7 +64,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithInfo(5, 3, Artist.Mariusz_Gandzel));
             Cards.Add(LotRCard.Location("Entwood", "", setName, 3, 4)
                 .WithTraits("Forest.")
-                .WithText("While Entwood is in the staging area, each Huron enemy in the staging area gains: \"Immune to player card effects.\"\r\nTravel: The first player engages the highest engagement cost Huorn enemy in the staging area.")
+                .WithText("While Entwood is in the staging area, each Huorn enemy in the staging area gains: \"Immune to player card effects.\"\r\nTravel: The first player engages the highest engagement cost Huorn enemy in the staging area.")
                 .WithInfo(6, 3, Artist.Julian_Kok));
             Cards.Add(LotRCard.Location("Dark Corner of Fangorn", "", setName, 3, 5)
                 .WithTraits("Forest.")

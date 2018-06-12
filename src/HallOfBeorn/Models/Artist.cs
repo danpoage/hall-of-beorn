@@ -615,6 +615,7 @@ namespace HallOfBeorn.Models
             //The Wilds of Rhovanion
             all.Add(Artist.Antonio_Jose_Manzanedo);
             all.Add(Artist.Rankin_Bass);
+            all.Add(Artist.Torbjorn_Kallstrom);
 
             //Arkham Horrom Core
             //all.Add(Artist.Vincent_Dutrait);
@@ -815,6 +816,7 @@ namespace HallOfBeorn.Models
         public static Artist Ted_Nasmith = new Artist { Name = "Ted Nasmith", URL = "http://tednasmith.mymiddleearth.com" };
         public static Artist Thomas_Rouillard = new Artist { Name = "Thomas Rouillard", URL = "http://tolkiengateway.net/wiki/Category:Images_by_Thomas_Rouillard" };
         public static Artist Thomas_Scholes = new Artist { Name = "Thomas Scholes", URL = "http://www.artofscholes.com" };
+        public static Artist Torbjorn_Kallstrom = new Artist { Name = "Torbjörn Källström", URL = "https://www.artstation.com/tobba" };
         public static Artist Tristan_Denecke = new Artist { Name = "Tristan Denecke", URL = "http://princepssenatus.deviantart.com" };
         public static Artist Tropa_Entertainment = new Artist { Name = "Tropa Entertainment", URL = "http://www.tropaentertainment.com" };
         public static Artist Tyler_Edlin = new Artist { Name = "Tyler Edlin", URL = "http://tyleredlinart.deviantart.com" };

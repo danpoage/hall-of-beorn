@@ -809,6 +809,7 @@
     <Compile Include="Services\LotR\ProductRepository.cs" />
     <Compile Include="Services\LotR\RelationshipService.cs" />
     <Compile Include="Services\LotR\ScenarioService.cs" />
+    <Compile Include="Services\LotR\SearchService2.cs" />
     <Compile Include="Services\LotR\SearchSortService.cs" />
     <Compile Include="Services\LotR\LotRServiceNames.cs" />
     <Compile Include="Services\LotR\StatService.cs" />
