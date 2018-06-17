@@ -97,6 +97,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
             addTreachery("Frenzied Creature", EncounterSet.JourneyUpTheAnduin.Name)
                 .WithText("When Revealed: Add the top card of the Evil Creatures deck to the staging area and attach Frenzied Creature to it. (Counts as a Condition attachment with the text: \"Attached enemy gets +1 Threat, +1 Attack, +1 Defense and is immune to player card effects\")")
                 .WithShadow("Shadow: Attach this card to attacking enemy.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(18, 2, Artist.Alexander_Kozachenko);
             addTreachery("Dangerous Crossing", EncounterSet.JourneyUpTheAnduin.Name)
                 .WithText("When Revealed: Each player assigns X damage among characters he controls, where X is the total [Threat] of the active location. If X is less than 3, Treacherous Crossing gains surge.")
@@ -106,36 +107,44 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
                 .WithTraits("Orc.", "Goblin.")
                 .WithText("Cannot have player card attachments.\r\nWhile Goblin Troop is engaged with you, each other Goblin enemy engaged with you gets +1 Attack and +1 Defense.")
                 .WithShadow("Shadow: Attacking enemy gets +2 Attack.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(20, 2, Artist.Stanislav_Dikolenko);
             addEnemy("Stray Goblin", EncounterSet.GreyMountainGoblins.Name, 50, 1, 2, 0, 3)
                 .WithTraits("Orc.", "Goblin.")
                 .WithKeywords("Surge.")
                 .WithText("Cannot be optionally engaged.\r\nWhile Stray Goblin is in the staging area, it gains: \"Forced: After a player engages an enemy, Stray Goblin engages that player.\"")
                 .WithShadow("Shadow: Add Stray Goblin to staging area.")
+                .WithEasyModeQuantity(2)
                 .WithInfo(21, 3, Artist.Carolina_Eade);
             addEnemy("Pack of Wargs", EncounterSet.HillsOfWilderland.Name, 40, 4, 4, 3, 5)
                 .WithTraits("Creature.", "Warg.")
                 .WithText("Forced: If Pack of Wargs is dealt a shadow card with no effect, Pack of Wargs makes an additional attack after this one. (Do not deal it a shadow card.)")
                 .WithShadow("Shadow: Return attacking enemy to the staging area after this attack.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(22, 2, Artist.Lukasz_Jaskolski);
             addLocation("Hills of Wilderland", EncounterSet.HillsOfWilderland.Name, 254, 254)
                 .WithTraits("Hills.")
                 .WithText("X is the number of characters controlled by the player with the most characters.\r\nQuest Action: Exhaust a character to reduce Hills of Wilderland [Threat] by 1 until the end of the phase. Only the first player can trigger this effect.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(23, 2, Artist.Leanna_Crossan);
             addLocation("Lonely Lands", EncounterSet.HillsOfWilderland.Name, 2, 5)
                 .WithTraits("Hills.")
                 .WithText("Lonely Lands gets +2 Threat for each facedown card under it.\r\nWhile Lonely Lands is in the staging area, it gains: \"Forced: After an event is played during the quest phase, place it facedown under Lonely Lands.\"")
+                .WithEasyModeQuantity(2)
                 .WithInfo(24, 3, Artist.Leanna_Crossan);
             addTreachery("Ruined Supplies", EncounterSet.LostInWilderland.Name)
                 .WithKeywords("Doomed 1.")
                 .WithText("When Revealed: Each player must choose: either raise your threat by 1 for each ally you control, or deal 1 damage to each ally you control.")
                 .WithShadow("Shadow: Raise your threat by 1 for each enemy engaged with you.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(25, 2, Artist.Diego_Gisbert_Llorens);
             addTreachery("Lost in the Wild", EncounterSet.LostInWilderland.Name)
                 .WithText("When Revealed: The player with the most cards in his hand without a copy of Lost in the Wilderness adds Lost in the Wild to his hand. (While in a player’s hand, Lost in the Wild gains: \"Cannot be discarded by player card effect. Forced: After you play a card, discard each card in your hand.\")")
+                .WithEasyModeQuantity(1)
                 .WithInfo(26, 2, Artist.Borja_Pindado);
             addTreachery("Weighed Down", EncounterSet.LostInWilderland.Name)
                 .WithText("When Revealed: Attach to the hero with the most attachments without Weighed Down attached. Then, exhaust attached hero. (Counts as a Condition attachment with the text: \"Forced: After attached hero readies, choose and discard an attachment from it. You cannot choose Weighed Down unless attached hero has no other non-objective attachments.\")")
+                .WithEasyModeQuantity(1)
                 .WithInfo(27, 2, Artist.David_Keen);
             addObjective("Searching for a Way Out", EncounterSet.LostInMirkwood.Name)
                 .WithText("Each objective-location, and each card guarding one, is immune to player card effects.\r\nForced: When progress would be placed on the main quest, if there are no objective-locations in play, discard an equal number of cards from the encounter deck instead. Then, put the topmost objective-location in the encounter discard pile into play.")
@@ -163,20 +172,24 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
             addLocation("Twilight Hall", EncounterSet.LostInMirkwood.Name, 2, 6)
                 .WithTraits("Forest.", "Dark.")
                 .WithText("Twilight Hall gets +2 Threat for each resource on it.\r\nForced: After a Forest location is explored, place 1 resource here.\r\nTravel: Raise each player's threat by 1 for each resource here. If there are no resources on Twilight Hall, the players cannot travel here.")
+                .WithEasyModeQuantity(2)
                 .WithInfo(33, 3, Artist.Katy_Grierson);
             addEnemy("Mirkwood Patrol", EncounterSet.LostInMirkwood.Name, 40, 4, 5, 3, 6)
                 .WithTraits("Orc.")
                 .WithText("Forced: At the end of the encounter phase, if Mirkwood Patrol is in the staging area with an unguarded objective-location, attach that objective-location to Mirkwood Patrol, guarding it.")
                 .WithShadow("Shadow: The defender cannot ready this round.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(34, 2, Artist.Matt_Stewart);
             addEnemy("Ravenous Spider", EncounterSet.LostInMirkwood.Name, 36, 3, 4, 3, 5)
                 .WithTraits("Creature.", "Spider.")
                 .WithText("Forced: After Ravenous Spider engages you, it makes an immediate attack.")
                 .WithShadow("Shadow: Attacking enemy makes an additional attack against you after this one.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(35, 2, Artist.Alvaro_Calvo_Escudero);
             addTreachery("Unseen Danger", EncounterSet.LostInMirkwood.Name)
                 .WithText("When Revealed: Each player removes a character he controls from the quest and discards the top card of the encounter deck. If the discarded card's printed Threat is greater than the removed character's Willpower, discard that character.")
                 .WithShadow("Shadow: Attacking enemy gets +2 Attack and +2 Defense if it is guarding a card.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(36, 2, Artist.Joe_Wilson);
             addTreachery("Vastness of Mirkwood", EncounterSet.LostInMirkwood.Name)
                 .WithText("When Revealed: Until the end of the phase, each non-objective location in the staging area gets +1 Threat (+2 Threat instead if it has at least 1 progress token on it). If the number of non-objective locations in the staging area is less than the number of players, Vastness of Mirkwood gains surge.")
@@ -185,19 +198,23 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
                 .WithTraits("Forest.", "Dark.")
                 .WithText("While Accursed Forest is in the staging area, \"when revealed\" effects cannot be canceled.\r\nTravel: Reveal the top card of the encounter deck.")
                 .WithFlavor("There was a breath of air and a noise of wind, but it had a sad sound.\r\n-The Hobbit")
+                .WithEasyModeQuantity(1)
                 .WithInfo(38, 2, Artist.Leanna_Crossan);
             addLocation("Dark Black Woods", EncounterSet.DarkWoods.Name, 3, 3)
                 .WithTraits("Forest.", "Dark.")
                 .WithText("While Dark Black Woods is in the staging area, no more than 1 progress can be placed on each Forest location in the staging area each round.\r\nTravel: Each player discards the top card of the encounter deck. Add each enemy discarded this way to the staging area.")
+                .WithEasyModeQuantity(2)
                 .WithInfo(39, 3, Artist.Leanna_Crossan);
             addTreachery("Gathering Gloom", EncounterSet.GatheringGloom.Name)
                 .WithKeywords("Doomed 1.")
                 .WithText("When Revealed: Each player must choose: either raise your threat by 1 for each ally you control, or reveal an encounter card.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, discard an ally you control.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(40, 2, Artist.Borja_Pindado);
             addTreachery("Swarm of Bats", EncounterSet.GatheringGloom.Name)
                 .WithText("When Revealed: Each player discards each resource from each of his hero's resource pools and raises his threat by 1 for each resource he discarded this way. If no resources were discarded this way, Swarm of Bats gains surge.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the defending character has an attachment).")
+                .WithEasyModeQuantity(2)
                 .WithInfo(41, 3, Artist.Nicholas_Gregory);
             addEnemy("Fire Drake", EncounterSet.TheKingsQuest.Name, 35, 0, 7, 254, 17)
                 .WithUnique()
@@ -212,6 +229,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
             addLocation("Iron Hills Mine", EncounterSet.TheKingsQuest.Name, 4, 4)
                 .WithTraits("Underground.")
                 .WithText("While Iron Hills Mine is the active location, it gains: \"Response: When Iron Hills Mine is explored, each player may return 1 card from his discard pile to his hand.\"\r\nTravel: Each player discards the top 4 cards of his deck to travel here.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(44, 2, Artist.Igor_Burlakov);
             addLocation("Contested Depths", EncounterSet.TheKingsQuest.Name, 1, 5)
                 .WithTraits("Underground.")
@@ -222,27 +240,33 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
                 .WithKeywords("Deep.")
                 .WithText("When faced with the option to travel, the players must travel to Deep Chasm if there is no active location.")
                 .WithFlavor("The chasm was long and dark, and filled with the noise of wind and rushing water and echoing stone.\r\n-The Fellowship of the Ring")
+                .WithEasyModeQuantity(1)
                 .WithInfo(46, 2, Artist.Leanna_Crossan);
             addTreachery("Denizen of the Deep", EncounterSet.TheKingsQuest.Name)
                 .WithText("When Revealed: The highest Attack enemy in the staging area makes an immediate attack against the first player. If no attack is made this way, Denizen of the Deep gains surge.")
                 .WithShadow("Shadow: Attacking enemy makes an additional attack against you after this one.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(47, 2, Artist.Jon_Bosco);
             addTreachery("Afraid of the Dark", EncounterSet.AfraidOfTheDark.Name)
                 .WithText("When Revealed: Attach to a questing hero and remove it from the quest. (Counts as a Condition attachment with the text: \"Limit 1 per hero. While the active location has the Dark trait, reduce attached hero's Willpower to 0 and treat its text box as if it were blank, except for Traits.\")")
+                .WithEasyModeQuantity(1)
                 .WithInfo(48, 2, Artist.Borja_Pindado);
             addEnemy("Stone Troll", EncounterSet.FellBeasts.Name, 36, 3, 6, 3, 9)
                 .WithTraits("Troll.")
                 .WithText("Cannot have non-objective attachments.\r\nForced: After Stone Troll attacks and destroys a character you control, discard 1 card from your hand for each excess point of damage dealt.")
                 .WithShadow("Shadow: Discard an attachment you control.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(49, 2, Artist.Sebastian_Zakrzewski);
             addEnemy("Hobgoblin", EncounterSet.FellBeasts.Name, 38, 1, 1, 1, 5)
                 .WithTraits("Orc.")
                 .WithText("While Hobgoblin is guarding a card, it gets +X Threat, +X Attack, and +X Defense, where X is that card's cost.\r\nForced: After Hobgoblin enters play, the first player attaches the top card of his deck to Hobgoblin faceup as a guarded attachment. When Hobgoblin leaves play, return the card it was guarding to its owner’s hand.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(50, 2, Artist.Martin_de_Diego_Sadaba);
             addEnemy("Werewolf", EncounterSet.WildCreatures.Name, 33, 3, 2, 1, 8)
                 .WithTraits("Creature.")
                 .WithText("Werewolf gets +1 Attack for each damage on it.\r\nForced: After Werewolf is dealt a shadow card with no shadow effect, deal 1 damage to it and the defending character.")
                 .WithShadow("Shadow: Deal 1 damage to the defending character.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(51, 2, Artist.Jon_Bosco);
             addEnemy("Giant Spider", EncounterSet.WildCreatures.Name, 28, 2, 3, 2, 3)
                 .WithTraits("Creature.", "Spider.")
@@ -253,12 +277,14 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
                 .WithTraits("Creature.")
                 .WithKeywords("Surge.")
                 .WithText("While the active location has the Dark trait, Black Bats cannot take damage.\r\nShadow: If the active location has the Dark trait, attacking enemy cannot take damage this phase.")
+                .WithEasyModeQuantity(2)
                 .WithInfo(53, 3, Artist.Lukasz_Jaskolski);
             addLocation("Dark Tunnel", EncounterSet.DeepUnderground.Name, 3, 3)
                 .WithTraits("Underground.", "Dark.")
                 .WithKeywords("Deep.")
                 .WithText("While Dark Tunnel is in the staging area, progress cannot be placed on Dark locations in the staging area.")
                 .WithFlavor("The tunnel seemed to have no end. All he knew was that it was going down pretty steadily...\r\n-The Hobbit")
+                .WithEasyModeQuantity(3)
                 .WithInfo(54, 4, Artist.Leanna_Crossan);
             addLocation("Forked Passage", EncounterSet.DeepUnderground.Name, 2, 2)
                 .WithTraits("Underground.", "Dark.")
@@ -273,45 +299,54 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
                 .WithKeywords("Doomed 1.")
                 .WithText("When Revealed: Each player must choose: either raise your threat by 1 for each questing character you control, or discard a questing character you control.")
                 .WithShadow("Shadow: If this attack is undefended, discard an ally you control.")
+                .WithEasyModeQuantity(2)
                 .WithInfo(57, 3, Artist.Sam_Lamont);
             addTreachery("Dragon Breath", EncounterSet.DragonMight.Name)
                 .WithTraits("Dragon.")
                 .WithKeywords("Surge.")
                 .WithText("When Revealed: Attach to a Dragon enemy. (Counts as a Condition attachment with the text: \"Limit 1 per enemy. Forced: When attached enemy attacks you, deal 1 damage to each character you control. Then, discard Dragon Breath.\")")
+                .WithEasyModeQuantity(1)
                 .WithInfo(58, 2, Artist.Matthew_Cowdery);
             addTreachery("Dragon Scales", EncounterSet.DragonMight.Name)
                 .WithTraits("Dragon.")
                 .WithKeywords("Surge.")
                 .WithText("When Revealed: Attach to a Dragon enemy. (Counts as a Condition attachment with the text: \"Limit 1 per enemy. Forced: When attached enemy would take any amount of damage, cancel all of that damage. Then, discard Dragon Scales.\")")
+                .WithEasyModeQuantity(1)
                 .WithInfo(59, 2, Artist.Matthew_Cowdery);
             addLocation("Lost Armory", EncounterSet.LostCaves.Name, 2, 2)
                 .WithTraits("Underground.")
                 .WithText("Response: After Lost Armory becomes the active location, each player may search his deck for a Weapon or Armor attachment, add it to his hand, and shuffle his deck. Limit once per game for the group.")
                 .WithFlavor("Behind him where the walls were nearest could dimly be seen coats of mail, helms and axes, swords and spears hanging...\r\n-The Hobbit")
+                .WithVictoryPoints(1)
                 .WithInfo(60, 1, Artist.Leanna_Crossan);
             addLocation("Ancient Treasury", EncounterSet.LostCaves.Name, 3, 3)
                 .WithTraits("Underground.")
                 .WithText("Response: After Ancient Treasury becomes the active location, each player may (choose one): reduce his threat by 3, draw 2 cards, or add 1 resource to a hero's resource pool. Limit once per game for the group.")
                 .WithFlavor("...there in rows stood great jars and vessels filled with a wealth that could not be guessed.\r\n-The Hobbit")
+                .WithVictoryPoints(1)
                 .WithInfo(61, 1, Artist.Leanna_Crossan);
             addLocation("Frightful Den", EncounterSet.LostCaves.Name, 4, 4)
                 .WithTraits("Underground.", "Dark.")
                 .WithText("Forced: After Frightful Den becomes the active location, shuffle the encounter discard pile into the encounter deck and discard cards from the top until X enemies are discarded, where X is the number of players. Add each enemy discarded this way to the staging area.")
+                .WithVictoryPoints(1)
                 .WithInfo(62, 1, Artist.Jose_Vega);
             addLocation("Lightless Grotto", EncounterSet.LostCaves.Name, 5, 5)
                 .WithTraits("Underground.", "Dark.")
                 .WithText("Forced: After the players commit characters to the quest, discard cards from the encounter deck until a treachery is discarded. Resolve the ‘when revealed’ effect on that treachery.")
                 .WithFlavor("He did not go much further, but sat down on the cold floor and gave himself up to complete miserableness...\r\n-The Hobbit")
+                .WithVictoryPoints(1)
                 .WithInfo(63, 1, Artist.Ivan_Dixon);
             addLocation("Crumbling Cavern", EncounterSet.LostCaves.Name, 6, 6)
                 .WithTraits("Underground.", "Dark.")
                 .WithText("Forced: After Crumbling Cavern becomes the active location, each player assigns X damage among characters he controls, where X is the number of characters he controls.")
                 .WithFlavor("...he was slipping - beginning to fall down, down, goodness knows where to.\r\n-The Hobbit")
+                .WithVictoryPoints(1)
                 .WithInfo(64, 1, Artist.Jose_Vega);
             addLocation("Underground Lake", EncounterSet.LostCaves.Name, 254, 254)
                 .WithTraits("Underground.", "Dark.")
                 .WithText("X is the number of characters controlled by the player who controls the most characters.\r\nForced: After an ally enters player, exhaust it.")
                 .WithFlavor("...without warning he trotted splash into water! Ugh! it was icy cold. That pulled him up sharp and short.\r\n-The Hobbit")
+                .WithVictoryPoints(1)
                 .WithInfo(65, 1, Artist.Nele_Diel);
             addQuest("Traveling North", EncounterSet.JourneyUpTheAnduin.Name, 1, 'A', 10)
                 .WithIncludedEncounterSets(EncounterSet.GreyMountainGoblins, EncounterSet.HillsOfWilderland, EncounterSet.LostInWilderland, EncounterSet.JourneyAlongTheAnduin, EncounterSet.Wilderlands)

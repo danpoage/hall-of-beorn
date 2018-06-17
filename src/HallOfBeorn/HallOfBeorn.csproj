@@ -356,6 +356,9 @@
     <Compile Include="Models\LotR\Scenarios\TheSandsOfHarad\TheLongArmOfMordor.cs" />
     <Compile Include="Models\LotR\Scenarios\Haradrim\TheMumakil.cs" />
     <Compile Include="Models\LotR\Scenarios\TheSandsOfHarad\TheSandsOfHaradScenario.cs" />
+    <Compile Include="Models\LotR\Scenarios\TheWildsOfRhovanion\JourneyUpTheAnduin.cs" />
+    <Compile Include="Models\LotR\Scenarios\TheWildsOfRhovanion\LostInMirkwood.cs" />
+    <Compile Include="Models\LotR\Scenarios\TheWildsOfRhovanion\TheKingsQuest.cs" />
     <Compile Include="Models\LotR\ScenarioView.cs" />
     <Compile Include="Models\LotR\Sets\AngmarAwakened\AcrossTheEttenmoorsNightmare.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\FlightOfTheStormcallerNightmare.cs" />
