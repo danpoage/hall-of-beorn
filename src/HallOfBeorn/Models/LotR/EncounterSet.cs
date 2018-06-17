@@ -223,6 +223,26 @@ namespace HallOfBeorn.Models.LotR
             Add(TheCrossingsOfPoros);
             Add(MountainsOfShadow);
 
+            //The Wilds of Rhovanion and Ered Mithrin
+            Add(LostInMirkwood);
+            Add(JourneyUpTheAnduin);
+            Add(TheKingsQuest);
+            Add(LostInWilderland);
+            Add(FellBeasts);
+            Add(HillsOfWilderland);
+            Add(GreyMountainGoblins);
+            Add(GatheringGloom);
+            Add(DragonMight);
+            Add(DeepUnderground);
+            Add(WildCreatures);
+            Add(LostCaves);
+            Add(AfraidOfTheDark);
+            Add(DarkWoods);
+
+            //Ered Mithrin APs
+            Add(TheWitheredHeath);
+            Add(RoamAcrossRhovanion);
+
             //The Hobbit: Over Hill and Under Hill
             Add(WeMustAwayEreBreakOfDay);
             Add(WesternLands);
@@ -519,6 +539,25 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet TheDungeonsOfCirithGurat = new EncounterSet { Name = "The Dungeons of Cirith Gurat", Set = "The Dungeons of Cirith Gurat" };
         public static EncounterSet TheCrossingsOfPoros = new EncounterSet { Name = "The Crossings of Poros", Set = "The Crossings of Poros" };
         public static EncounterSet MountainsOfShadow = new EncounterSet { Name = "Mountains of Shadow", Set = "The Crossings of Poros" };
+
+        //The Wilds of Rhovanion and Ered Mithrin
+        private const string setNameWilds = "The Wilds of Rhovanion";
+        public static EncounterSet LostInMirkwood = new EncounterSet { Name = "Lost in Mirkwood", Set = setNameWilds };
+        public static EncounterSet JourneyUpTheAnduin = new EncounterSet { Name = "Journey up the Anduin", Set = setNameWilds };
+        public static EncounterSet TheKingsQuest = new EncounterSet { Name = "The King's Quest", Set = setNameWilds };
+        public static EncounterSet LostInWilderland = new EncounterSet { Name = "Lost in the Wilderness", Set = setNameWilds };
+        public static EncounterSet FellBeasts = new EncounterSet { Name = "Fell Beasts", Set = setNameWilds };
+        public static EncounterSet HillsOfWilderland = new EncounterSet { Name = "Hills of Wilderland", Set = setNameWilds };
+        public static EncounterSet GreyMountainGoblins = new EncounterSet { Name = "Grey Mountain Goblins", Set = setNameWilds };
+        public static EncounterSet GatheringGloom = new EncounterSet { Name = "Gathering Gloom", Set = setNameWilds };
+        public static EncounterSet DragonMight = new EncounterSet { Name = "Dragon Might", Set = setNameWilds };
+        public static EncounterSet DeepUnderground = new EncounterSet { Name = "Deep Underground", Set = setNameWilds };
+        public static EncounterSet WildCreatures = new EncounterSet { Name = "Wild Creatures", Set = setNameWilds };
+        public static EncounterSet LostCaves = new EncounterSet { Name = "Lost Caves", Set = setNameWilds };
+        public static EncounterSet AfraidOfTheDark = new EncounterSet { Name = "Afraid of the Dark", Set = setNameWilds };
+        public static EncounterSet DarkWoods = new EncounterSet { Name = "Dark Woods", Set = setNameWilds };
+        public static EncounterSet TheWitheredHeath = new EncounterSet { Name = "The Withered Heath", Set = "The Withered Heath" };
+        public static EncounterSet RoamAcrossRhovanion = new EncounterSet { Name = "Roam Across Rhovanion", Set = "Roam Across Rhovanion" };
 
         //The Hobbit: Over Hill and Under Hill
         public static EncounterSet WeMustAwayEreBreakOfDay = new EncounterSet { Name = "We Must Away, Ere Break of Day", Set = "The Hobbit: Over Hill and Under Hill" };

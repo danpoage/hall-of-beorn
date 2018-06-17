@@ -107,6 +107,18 @@ namespace HallOfBeorn.Models.LotR
             return objectiveAlly;
         }
 
+        protected LotRCard addObjectiveLocation(string title, string encounterSet, byte questPoints, bool isUnique, byte? victoryPoints)
+        {
+            var objectiveLocation = LotRCard.ObjectiveLocation(title, encounterSet, questPoints);
+            objectiveLocation.IsUnique = isUnique;
+            if (victoryPoints.HasValue)
+            {
+                objectiveLocation.VictoryPoints = victoryPoints.Value;
+            }
+            return objectiveLocation;
+        }
+
+
         public string Id { get; protected set; }
 
         private string name;
