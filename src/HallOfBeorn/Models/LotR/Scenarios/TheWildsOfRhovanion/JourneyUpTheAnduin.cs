@@ -42,7 +42,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheWildsOfRhovanion
             //Wilderlands (Core)
             ExcludeFromEasyMode("Hill-Troll-Core", 1);
             ExcludeFromEasyMode("Marsh-Adder-Core", 1);
-            ExcludeFromEasyMode("Despair-Core", 2);
+            ExcludeFromAllModes("Despair-Core");
+            ExcludeFromAllModes("The-Brown-Lands-Core");
+            ExcludeFromAllModes("The-East-Bight-Core");
         }
     }
 }

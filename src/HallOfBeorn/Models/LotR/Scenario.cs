@@ -30,6 +30,7 @@ namespace HallOfBeorn.Models.LotR
         private readonly Dictionary<string, byte> questCardIds = new Dictionary<string, byte>();
         private readonly Dictionary<string, byte> excludedEasyModeCards = new Dictionary<string, byte>();
         private readonly Dictionary<string, byte> excludedNightmareModeCards = new Dictionary<string, byte>();
+        private readonly Dictionary<string, byte> excludedAllModeCards = new Dictionary<string, byte>();
 
         private readonly Dictionary<string, Tuple<byte, byte, byte>> cardCountMap = new Dictionary<string, Tuple<byte, byte, byte>>();
 
@@ -46,6 +47,11 @@ namespace HallOfBeorn.Models.LotR
         protected void ExcludeFromEasyMode(string slug, byte numberExcluded)
         {
             excludedEasyModeCards[slug] = numberExcluded;
+        }
+
+        protected void ExcludeFromAllModes(string slug)
+        {
+            excludedAllModeCards[slug] = 0;
         }
 
         protected void ExcludeFromNightmareMode(string slug, byte numberExcluded)
@@ -138,11 +144,21 @@ namespace HallOfBeorn.Models.LotR
 
         public byte NormalModeCount(string slug, byte releaseQuantity)
         {
+            if (excludedAllModeCards.ContainsKey(slug))
+            {
+                return 0;
+            }
+
             return releaseQuantity;
         }
 
         public byte EasyModeCount(string slug, byte releaseQuantity)
         {
+            if (excludedAllModeCards.ContainsKey(slug))
+            {
+                return 0;
+            }
+
             if (excludedEasyModeCards.ContainsKey(slug))
             {
                 return (byte)(releaseQuantity - excludedEasyModeCards[slug]);
@@ -153,6 +169,11 @@ namespace HallOfBeorn.Models.LotR
 
         public byte NightmareModeCount(string slug, byte releaseQuantity)
         {
+            if (excludedAllModeCards.ContainsKey(slug))
+            {
+                return 0;
+            }
+
             if (excludedNightmareModeCards.ContainsKey(slug))
             {
                 return (byte)(releaseQuantity - excludedNightmareModeCards[slug]);
