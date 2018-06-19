@@ -23,10 +23,15 @@ namespace HallOfBeorn.Services.LotR.Search
 
         private void BuildFilters(SearchViewModel model)
         {
-            if (HasFilter(model.Artist))
-                AddFilter((score) => score.Card.Artist != null && score.Card.Artist.Name == model.Artist);
-            if (HasFilter(model.Attack))
-                AddNumericFilter<byte?>((score) => score.Card.Attack, model.AttackOp, model.Attack);
+            AddFilter(new StringExactFilter((score) => score.Card.Artist.Name, model.Artist));
+            AddFilter(new ByteComparisonFilter((score) => score.Card.Attack, model.Attack, model.AttackOp));
+            AddFilter(new EnumFilter<CardSubtype>((score) => score.Card.CardSubtype, model.CardSubtype));
+            AddFilter(new ByteComparisonFilter((score) => score.Card.Defense, model.Defense, model.DefenseOp));
+
+            //if (HasFilter(model.Artist))
+            //    AddFilter((score) => score.Card.Artist != null && score.Card.Artist.Name == model.Artist);
+            //if (HasFilter(model.Attack))
+            //    AddNumericFilter<byte?>((score) => score.Card.Attack, model.AttackOp, model.Attack);
         }
 
         private void BuildSorts(SearchViewModel model)
@@ -35,11 +40,6 @@ namespace HallOfBeorn.Services.LotR.Search
 
         private void BuildLimits(SearchViewModel model)
         {
-        }
-
-        private bool HasFilter(string value)
-        {
-            return !string.IsNullOrWhiteSpace(value) && value != "Any";
         }
 
         private IEnumerable<IComponent> Steps()
@@ -52,13 +52,12 @@ namespace HallOfBeorn.Services.LotR.Search
                 yield return limit;
         }
 
-        private void AddFilter(Func<CardScore, bool> predicate)
+        private void AddFilter(Filter filter)
         {
-            filters.Add(new Filter(predicate));
-        }
+            if (filter == null)
+                return;
 
-        private void AddNumericFilter<TValue>(Func<CardScore, TValue> valueSelector, NumericOperator? op, string target)
-        {
+            filters.Add(filter);
         }
 
         private void AddSortAscending<TKey>(Func<CardScore, TKey> keySelector)

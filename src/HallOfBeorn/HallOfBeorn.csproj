@@ -814,6 +814,8 @@
     <Compile Include="Services\LotR\ScenarioService.cs" />
     <Compile Include="Services\LotR\SearchSortService.cs" />
     <Compile Include="Services\LotR\LotRServiceNames.cs" />
+    <Compile Include="Services\LotR\Search\ByteComparisonFilter.cs" />
+    <Compile Include="Services\LotR\Search\EnumFilter.cs" />
     <Compile Include="Services\LotR\Search\Filter.cs" />
     <Compile Include="Services\LotR\Search\IComponent.cs" />
     <Compile Include="Services\LotR\Search\Limit.cs" />
@@ -821,6 +823,7 @@
     <Compile Include="Services\LotR\Search\PlanBuilder.cs" />
     <Compile Include="Services\LotR\Search\SearchService.cs" />
     <Compile Include="Services\LotR\Search\Sort.cs" />
+    <Compile Include="Services\LotR\Search\StringExactFilter.cs" />
     <Compile Include="Services\LotR\StatService.cs" />
     <Compile Include="Services\LotR\TagService.cs" />
     <Compile Include="Services\TemplateRepository.cs" />
