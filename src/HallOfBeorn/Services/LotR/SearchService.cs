@@ -162,7 +162,7 @@ namespace HallOfBeorn.Services.LotR
                 filters.Add(new SearchFilter((s, c) => { return s.DeckType == c.DeckType; }, 100, "Deck Type matches '" + model.DeckType.ToEnumDisplayString() + "'"));
 
             if (model.HasCardSet())
-                filters.Add(new SearchFilter((s, c) => { return s.CardSetMatches(c) || (!string.IsNullOrEmpty(c.CardSet.Cycle) && s.CardSet.ToUpper() == c.CardSet.Cycle.ToUpper()); }, 100, "Card Set matches '" + model.CardSet + "'"));
+                filters.Add(new SearchFilter((s, c) => { return c.MatchesCardSet(s.CardSet) || (!string.IsNullOrEmpty(c.CardSet.Cycle) && s.CardSet.ToUpper() == c.CardSet.Cycle.ToUpper()); }, 100, "Card Set matches '" + model.CardSet + "'"));
 
             if (model.HasScenario())
                 filters.Add(new SearchFilter((s, c) => { return scenarioService.BelongsToScenario(c.Slug, c.CardType, s.Scenario); }, 100, "Scenario matches '" + model.Scenario + "'"));

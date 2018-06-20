@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.ViewModels;
 
@@ -223,6 +224,23 @@ namespace HallOfBeorn.Services.LotR
             }
 
             return scenario.ScenarioCards.Any(x => x.Card.Slug == cardSlug);
+        }
+
+        public bool HasSetType(LotRCard card, SetType? setType)
+        {
+            if (!setType.HasValue || setType.Value == SetType.None || setType.Value == SetType.OFFICIAL)
+                return card.CardSet.SetType != SetType.CUSTOM;
+
+            if (setType.Value == SetType.ALL_SETS)
+                return true;
+
+            if (setType.Value == SetType.PRINT_ON_DEMAND)
+                return card.CardSet.SetType == SetType.Fellowship_Deck || card.CardSet.SetType == SetType.GenCon_Expansion || card.CardSet.SetType == SetType.GenConSaga_Expansion || card.CardSet.SetType == SetType.Nightmare_Expansion;
+
+            if (setType.Value == SetType.Non_Nightmare)
+                return card.CardSet.SetType != SetType.Nightmare_Expansion;
+
+            return card.CardSet.SetType == setType.Value;
         }
     }
 }

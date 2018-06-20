@@ -41,9 +41,11 @@ namespace HallOfBeorn.Services.LotR.Search
 
         public IEnumerable<CardScore> Search(SearchViewModel model)
         {            
-            var plan = new PlanBuilder(model).ToPlan();
-
-            var scores = plan.Execute(InitialScores());
+            var builder = new PlanBuilder(model, scenarioService, categoryService);
+            
+            var scores = builder
+                .ToPlan()
+                .Execute(InitialScores());
 
             return scores;
         }

@@ -491,16 +491,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 return CardType == card.CardType;
         }
 
-        public bool CardSetMatches(LotRCard card)
-        {
-            return MatchesCardSet(card, this.CardSet);
+        //public bool CardSetMatches(LotRCard card)
+        //{
+            //return card.MatchesCardSet(this.CardSet);
             //return card.CardSet.Name == this.CardSet || (!string.IsNullOrEmpty(card.CardSet.AlternateName) && card.CardSet.AlternateName == this.CardSet) || (!string.IsNullOrEmpty(card.CardSet.NormalizedName) && card.CardSet.NormalizedName == this.CardSet) || (!string.IsNullOrEmpty(card.CardSet.Cycle) && card.CardSet.Cycle.ToUpper() == this.CardSet);
-        }
-
-        public static bool MatchesCardSet(LotRCard card, string targetCardSet)
-        {
-            return card.CardSet.Name == targetCardSet || (!string.IsNullOrEmpty(card.CardSet.AlternateName) && card.CardSet.AlternateName == targetCardSet) || (!string.IsNullOrEmpty(card.CardSet.NormalizedName) && card.CardSet.NormalizedName == targetCardSet) || (!string.IsNullOrEmpty(card.CardSet.Cycle) && card.CardSet.Cycle.ToUpper() == targetCardSet);
-        }
+        //}
 
         public bool CardIsCustom(LotRCard card)
         {

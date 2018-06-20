@@ -329,10 +329,10 @@ namespace HallOfBeorn
             return self.SplitOn('=');
         }
 
-        public static bool IsDefined(this string self)
-        {
-            return !string.IsNullOrEmpty(self);
-        }
+        //public static bool IsDefined(this string self)
+        //{
+        //    return !string.IsNullOrEmpty(self);
+        //}
 
         public static string ToLowerSafe(this string self)
         {
@@ -645,6 +645,11 @@ namespace HallOfBeorn
         public static string Slugify(this string self)
         {
             return string.IsNullOrEmpty(self) ? string.Empty : self.NormalizeCaseSensitiveString().ToUrlSafeString();
+        }
+
+        public static bool IsDefined(this string self)
+        {
+            return !string.IsNullOrWhiteSpace(self) && self != "Any";
         }
     }
 }

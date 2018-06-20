@@ -143,6 +143,11 @@ namespace HallOfBeorn.Models.LotR
             }
         }
 
+        public bool MatchesCardSet(string targetCardSet)
+        {
+            return CardSet.Name == targetCardSet || (!string.IsNullOrEmpty(CardSet.AlternateName) && CardSet.AlternateName == targetCardSet) || (!string.IsNullOrEmpty(CardSet.NormalizedName) && CardSet.NormalizedName == targetCardSet) || (!string.IsNullOrEmpty(CardSet.Cycle) && CardSet.Cycle.ToUpper() == targetCardSet);
+        }
+
         #region Static Fluent Helpers
 
         public static LotRCard Hero(string title, string id, Sphere sphere, byte threatCost, byte willpower, byte attack, byte defense, byte hitPoints)
