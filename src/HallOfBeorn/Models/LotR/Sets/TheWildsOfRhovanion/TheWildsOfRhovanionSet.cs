@@ -154,7 +154,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
                 .WithKeywords("Guarded (location).")
                 .WithText("Travel: Shuffle the encounter discard pile into the encounter deck. Each player discards the top card of the encounter deck and assigns X damage among characters he controls, where X is that card's Threat.\r\nForced: After the players travel here, advance to the next stage A, if able.")
                 .WithInfo(29, 1, Artist.Rafal_Hrynkiewicz);
-            addObjectiveLocation("Adandoned Village", EncounterSet.LostInMirkwood.Name, 4, true, 4)
+            addObjectiveLocation("Abandoned Village", EncounterSet.LostInMirkwood.Name, 4, true, 4)
                 .WithTraits("Forest.")
                 .WithKeywords("Guarded (location).")
                 .WithText("Travel: Shuffle the encounter discard pile into the encounter deck. Each player discards the top card of the encounter deck. Add each enemy discarded this way to the staging area.\r\nForced: After the players travel here, advance to the next stage C, if able.")

@@ -25,9 +25,11 @@ namespace HallOfBeorn.Services.LotR.Search
         {
             AddFilter(new StringExactFilter((score) => score.Card.Artist.Name, model.Artist));
             AddFilter(new ByteComparisonFilter((score) => score.Card.Attack, model.Attack, model.AttackOp));
+            //AddFilter(new StringFuzzyFilter((score) => score.Card.CardSet.
+                //Name, model.CardSet, (s1, s2) => );
             AddFilter(new EnumFilter<CardSubtype>((score) => score.Card.CardSubtype, model.CardSubtype));
             AddFilter(new ByteComparisonFilter((score) => score.Card.Defense, model.Defense, model.DefenseOp));
-
+            
             //if (HasFilter(model.Artist))
             //    AddFilter((score) => score.Card.Artist != null && score.Card.Artist.Name == model.Artist);
             //if (HasFilter(model.Attack))
@@ -54,7 +56,7 @@ namespace HallOfBeorn.Services.LotR.Search
 
         private void AddFilter(Filter filter)
         {
-            if (filter == null)
+            if (filter == null || filter.IsEmpty)
                 return;
 
             filters.Add(filter);

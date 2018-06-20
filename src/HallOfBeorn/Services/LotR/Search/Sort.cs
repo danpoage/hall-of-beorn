@@ -17,6 +17,11 @@ namespace HallOfBeorn.Services.LotR.Search
         private readonly Func<CardScore, TKey> keySelector;
         private readonly bool isAscending;
 
+        public bool IsEmpty
+        {
+            get { return keySelector == null; }
+        }
+
         public IEnumerable<CardScore> Apply(IEnumerable<CardScore> scores)
         {
             return isAscending ? scores.OrderBy(keySelector)

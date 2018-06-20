@@ -7,18 +7,11 @@ using HallOfBeorn.Models.LotR;
 
 namespace HallOfBeorn.Services.LotR.Search
 {
-    public class StringExactFilter : Filter
+    public class StringExactFilter : StringFuzzyFilter
     {
         public StringExactFilter(Func<CardScore, string> getValue, string target)
+            : base(getValue, target, (s1, s2) => s1 == s2)
         {
-            if (string.IsNullOrWhiteSpace(target) || target == defaultValue)
-                return;
-
-            predicate = (score) => {
-                var match = getValue(score) == target;
-                score.AddScore(match ? 1 : 0);
-                return match;
-            };
         }
     }
 }

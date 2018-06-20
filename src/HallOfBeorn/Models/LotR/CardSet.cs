@@ -115,6 +115,7 @@ namespace HallOfBeorn.Models.LotR
             {
                 objectiveLocation.VictoryPoints = victoryPoints.Value;
             }
+            addCard(objectiveLocation);
             return objectiveLocation;
         }
 

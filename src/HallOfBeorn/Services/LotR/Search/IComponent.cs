@@ -9,6 +9,7 @@ namespace HallOfBeorn.Services.LotR.Search
 {
     public interface IComponent
     {
+        bool IsEmpty { get; }
         IEnumerable<CardScore> Apply(IEnumerable<CardScore> scores);
     }
 }

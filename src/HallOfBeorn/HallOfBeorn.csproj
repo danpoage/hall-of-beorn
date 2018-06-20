@@ -824,6 +824,7 @@
     <Compile Include="Services\LotR\Search\SearchService.cs" />
     <Compile Include="Services\LotR\Search\Sort.cs" />
     <Compile Include="Services\LotR\Search\StringExactFilter.cs" />
+    <Compile Include="Services\LotR\Search\StringFuzzyFilter.cs" />
     <Compile Include="Services\LotR\StatService.cs" />
     <Compile Include="Services\LotR\TagService.cs" />
     <Compile Include="Services\TemplateRepository.cs" />

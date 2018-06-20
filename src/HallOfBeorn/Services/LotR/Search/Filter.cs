@@ -21,6 +21,11 @@ namespace HallOfBeorn.Services.LotR.Search
         protected const string defaultValue = "Any";
         protected Func<CardScore, bool> predicate;
 
+        public bool IsEmpty
+        {
+            get { return predicate == null; }
+        }
+
         public IEnumerable<CardScore> Apply(IEnumerable<CardScore> scores)
         {
             return scores.Where(predicate);

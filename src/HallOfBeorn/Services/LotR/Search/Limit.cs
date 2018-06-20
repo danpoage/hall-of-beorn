@@ -15,6 +15,11 @@ namespace HallOfBeorn.Services.LotR.Search
 
         private readonly int count;
 
+        public bool IsEmpty
+        {
+            get { return count > 0; }
+        }
+
         public IEnumerable<CardScore> Apply(IEnumerable<CardScore> scores)
         {
             return scores.Take(count);
