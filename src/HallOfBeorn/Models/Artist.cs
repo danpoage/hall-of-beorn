@@ -624,6 +624,9 @@ namespace HallOfBeorn.Models
             //all.Add(Artist.Falk);
             //all.Add(Artist.Linda_Tso);
 
+            //Characters
+            all.Add(Artist.Weta_Workshop);
+
             all.Add(Artist.None);
         }
 
@@ -829,6 +832,7 @@ namespace HallOfBeorn.Models
         public static Artist Virginie_Carquin = new Artist { Name = "Virginie Carquin", URL = "http://virginiecarquin.deviantart.com" };
         public static Artist Vishal = new Artist { Name = "Vishal", URL = "https://www.google.com/search?q=Vishal+Art" };
         public static Artist WavingMonsterStudios = new Artist { Name = "Waving Monster Studios", URL = "http://wavingmonsterstudios.deviantart.com" };
+        public static Artist Weta_Workshop = new Artist { Name = "Weta Workshop", URL = "https://www.wetaworkshop.com" };
         public static Artist ZavgoSpb = new Artist { Name = "Zavgo-Spb", URL = "http://zavgospb.deviantart.com" };
 
         public static Artist Aaron_B_Miller = new Artist { Name = "Aaron B. Miller", URL = "http://aaronmiller.deviantart.com" };

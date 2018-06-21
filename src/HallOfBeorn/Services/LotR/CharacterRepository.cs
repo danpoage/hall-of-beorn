@@ -127,6 +127,7 @@ namespace HallOfBeorn.Services.LotR
             add(new TheWhiteCouncilGroup());
             add(new TheodredCharacter());
             add(new ThorinOakenshieldCharacter());
+            add(new ThorinStonehelmCharacter());
             add(new ThorinsCompanyGroup());
             add(new TomBombadilCharacter());
             add(new TomCottonCharacter());

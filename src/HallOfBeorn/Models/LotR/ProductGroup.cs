@@ -35,6 +35,7 @@ namespace HallOfBeorn.Models.LotR
         public static ProductGroup EredMithrin = new EredMithrinProductGroup();
         public static ProductGroup TheHobbitSaga = new TheHobbitSagaProductGroup();
         public static ProductGroup TheLordOfTheRingsSaga = new TheLordOfTheRingsSagaProductGroup();
+        public static ProductGroup LimitedEdition = new LimitedEditionProductGroup();
         public static ProductGroup GenConDeck = new GenConDeckProductGroup();
         public static ProductGroup NightmareDeck = new NightmareDeckProductGroup();
         public static ProductGroup DoomMastered = new DoomMasteredProductGroup();
