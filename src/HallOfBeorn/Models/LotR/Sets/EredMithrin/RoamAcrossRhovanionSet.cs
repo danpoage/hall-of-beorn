@@ -33,11 +33,11 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithInfo(30, 3, Artist.Leanna_Crossan);
             addAlly("Meneldor", 3, Sphere.Tactics, true, 2, 2, 1, 2)
                 .WithTraits("Creature.", "Eagle.")
-                .WithText("")
+                .WithText("Cannot have restricted attachments.\r\nResponse: After Meneldor enters or leaves play, place 2 progress on a location.")
                 .WithFlavor("...Meneldor young and swift. -The Return of the King")
                 .WithInfo(31, 3, Artist.Dmitry_Prosvirnin);
             addEvent("Flight of the Eagles", 0, Sphere.Tactics)
-                .WithText("Action: Return an Eagle ally to your hand to shuffle a set-aside Eagle of the North into the encounter deck. Then, remove Flight of the Eagles from the game.")
+                .WithText("Action: Return an Eagle ally to your hand to shuffle a set-aside ~Eagle of the North into the encounter deck. Then, remove Flight of the Eagles from the game.")
                 .WithFlavor("Behind them in long swift lines came all their vassals from the northern mountains, speeding on a gathering wind.\r\n-The Return of the King")
                 .WithInfo(32, 3, Artist.Carlos_Palma_Cruchaga);
 

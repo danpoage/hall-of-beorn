@@ -100,7 +100,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
                 .WithEasyModeQuantity(1)
                 .WithInfo(18, 2, Artist.Alexander_Kozachenko);
             addTreachery("Dangerous Crossing", EncounterSet.JourneyUpTheAnduin.Name)
-                .WithText("When Revealed: Each player assigns X damage among characters he controls, where X is the total [Threat] of the active location. If X is less than 3, Treacherous Crossing gains surge.")
+                .WithText("When Revealed: Each player assigns X damage among characters he controls, where X is the total Threat of the active location. If X is less than 3, Treacherous Crossing gains surge.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the defending character is damaged).")
                 .WithInfo(19, 3, Artist.John_Gravato);
             addEnemy("Goblin Troop", EncounterSet.GreyMountainGoblins.Name, 35, 3, 5, 4, 6)
@@ -124,7 +124,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
                 .WithInfo(22, 2, Artist.Lukasz_Jaskolski);
             addLocation("Hills of Wilderland", EncounterSet.HillsOfWilderland.Name, 254, 254)
                 .WithTraits("Hills.")
-                .WithText("X is the number of characters controlled by the player with the most characters.\r\nQuest Action: Exhaust a character to reduce Hills of Wilderland [Threat] by 1 until the end of the phase. Only the first player can trigger this effect.")
+                .WithText("X is the number of characters controlled by the player with the most characters.\r\nQuest Action: Exhaust a character to reduce Hills of Wilderland Threat by 1 until the end of the phase. Only the first player can trigger this effect.")
                 .WithEasyModeQuantity(1)
                 .WithInfo(23, 2, Artist.Leanna_Crossan);
             addLocation("Lonely Lands", EncounterSet.HillsOfWilderland.Name, 2, 5)
