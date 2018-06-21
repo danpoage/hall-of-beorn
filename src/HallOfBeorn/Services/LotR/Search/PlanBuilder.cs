@@ -62,14 +62,40 @@ namespace HallOfBeorn.Services.LotR.Search
             AddFilter(new CategoryFilter<Category>((score, cat) => categoryService.HasPlayerCategory(score.Card, cat), model.Category));
             AddFilter(new CategoryFilter<EncounterCategory>((score, cat) => categoryService.HasEncounterCategory(score.Card, cat), model.EncounterCategory));
             AddFilter(new CategoryFilter<QuestCategory>((score, cat) => categoryService.HasQuestCategory(score.Card, cat), model.QuestCategory));
+
+            if (filters.Count == 1 && !model.SetType.HasValue)
+            {
+                //
+            }
         }
 
         private void BuildSorts(SearchViewModel model)
         {
+            if (!model.Sort.HasValue)
+                return;
+
+            if (model.Sort.Value == Sort.Alphabetical)
+                AddSortAscending((score) => score.Card.Title);
+            if (model.Sort.Value == Sort.Popularity)
+                AddSortAscending((score) => score.Score());
+            if (model.Sort.Value == Sort.Released)
+                AddSortAscending((score) => score.Card.CardSet.Product.FirstReleased);
+            if (model.Sort.Value == Sort.Set_Number)
+            {
+                AddSortAscending((score) => score.Card.CardSet.Product.Code);
+                AddSortAscending((score) => score.Card.CardNumber);
+            }
+            if (model.Sort.Value == Sort.Sphere_Type_Cost)
+            {
+                AddSortAscending((score) => score.Card.Sphere);
+                AddSortAscending((score) => score.Card.CardType);
+                AddSortAscending((score) => score.Card.SortCost());
+            }
         }
 
         private void BuildLimits(SearchViewModel model)
         {
+            AddLimit(100);
         }
 
         private IEnumerable<IComponent> Steps()

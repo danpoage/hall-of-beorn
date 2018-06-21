@@ -148,6 +148,25 @@ namespace HallOfBeorn.Models.LotR
             return CardSet.Name == targetCardSet || (!string.IsNullOrEmpty(CardSet.AlternateName) && CardSet.AlternateName == targetCardSet) || (!string.IsNullOrEmpty(CardSet.NormalizedName) && CardSet.NormalizedName == targetCardSet) || (!string.IsNullOrEmpty(CardSet.Cycle) && CardSet.Cycle.ToUpper() == targetCardSet);
         }
 
+        public byte SortCost()
+        {
+            switch (CardType)
+            {
+                case LotR.CardType.Hero:
+                    return ThreatCost.HasValue ? ThreatCost.Value : (byte)0;
+                case LotR.CardType.Ally:
+                case LotR.CardType.Attachment:
+                case LotR.CardType.Event:
+                case LotR.CardType.Player_Side_Quest:
+                    return ResourceCost.HasValue ? ResourceCost.Value : (byte)0;
+                case LotR.CardType.Enemy:
+                case LotR.CardType.Ship_Enemy:
+                    return EngagementCost.HasValue ? EngagementCost.Value : (byte)0;
+                default:
+                    return 0;
+            }
+        }
+
         #region Static Fluent Helpers
 
         public static LotRCard Hero(string title, string id, Sphere sphere, byte threatCost, byte willpower, byte attack, byte defense, byte hitPoints)
