@@ -14,7 +14,8 @@ namespace HallOfBeorn.Services.LotR.Search
         {
             this.scenarioService = scenarioService;
             this.categoryService = categoryService;
-            this.getVotes = (slug) => { return ringsDbService.GetVotes(slug); };
+            this.getPopularity = (slug) => { return ringsDbService.GetPopularity(slug); };
+            this.getVotes = (card) => { return card.CardType == CardType.Hero ? 10000 + ringsDbService.GetVotes(card.Slug) : ringsDbService.GetVotes(card.Slug); };
 
             BuildFilters(model);
             BuildSorts(model);
@@ -24,7 +25,8 @@ namespace HallOfBeorn.Services.LotR.Search
 
         private readonly ScenarioService scenarioService;
         private readonly CategoryService categoryService;
-        private readonly Func<string, ushort> getVotes;
+        private readonly Func<string, byte> getPopularity;
+        private readonly Func<LotRCard, int> getVotes;
 
         private readonly List<IComponent> filters = new List<IComponent>();
         private readonly List<IComponent> sorts = new List<IComponent>();
@@ -38,7 +40,7 @@ namespace HallOfBeorn.Services.LotR.Search
 
         private void BuildFilters(SearchViewModel model)
         {
-            AddFilter(new StringExactFilter((score) => score.Card.Title, model.Query));
+            AddFilter(new StringBasicQueryFilter(model.BasicQuery()));
 
             AddFilter(new StringExactFilter((score) => score.Card.Artist.Name, model.Artist));
             
@@ -84,7 +86,12 @@ namespace HallOfBeorn.Services.LotR.Search
         private void BuildSorts(SearchViewModel model)
         {
             if (!model.Sort.HasValue)
+            {
+                AddSort((score) => score.Score(), false, true);
+                AddSort((score) => getPopularity(score.Card.Slug), false, false);
+                AddSort((score) => getVotes(score.Card), false, false);
                 return;
+            }
 
             if (model.Sort.Value == Sort.Alphabetical)
             {
@@ -92,7 +99,10 @@ namespace HallOfBeorn.Services.LotR.Search
                 AddSort((score) => (int)score.Card.CardType, true, false);
             }
             if (model.Sort.Value == Sort.Popularity)
-                AddSort((score) => getVotes(score.Card.Slug), false, true);
+            {
+                AddSort((score) => getPopularity(score.Card.Slug), false, true);
+                AddSort((score) => getVotes(score.Card), false, false);
+            }
             if (model.Sort.Value == Sort.Released)
                 AddSort((score) => score.Card.CardSet.Product.Code, false, true);
             if (model.Sort.Value == Sort.Set_Number)

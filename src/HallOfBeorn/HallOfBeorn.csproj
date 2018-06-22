@@ -831,6 +831,7 @@
     <Compile Include="Services\LotR\Search\PlanBuilder.cs" />
     <Compile Include="Services\LotR\Search\SearchService.cs" />
     <Compile Include="Services\LotR\Search\Sort.cs" />
+    <Compile Include="Services\LotR\Search\StringBasicQueryFilter.cs" />
     <Compile Include="Services\LotR\Search\StringExactFilter.cs" />
     <Compile Include="Services\LotR\Search\StringFuzzyFilter.cs" />
     <Compile Include="Services\LotR\Search\TraitFilter.cs" />

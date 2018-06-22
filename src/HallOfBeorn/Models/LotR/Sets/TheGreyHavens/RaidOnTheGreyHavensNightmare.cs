@@ -35,7 +35,7 @@ Then shuffle the encounter cards in this Nightmare Deck into the remainder of th
 
 Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.")
                 .WithTemplate2(
-@"<p>Begin with the standard quest deck and encounter deck for the Raid on the Grey Havens scenario.\r\nRemove the following cards, in the specified quantities, from the standard encounter deck:</p>
+@"<p>Begin with the standard quest deck and encounter deck for the Raid on the Grey Havens scenario.</p><p>Remove the following cards, in the specified quantities, from the standard encounter deck:</p>
 <ul style='list-style-type:none'><b>
 <li>1x Sahír's Advance (quest stage 2)</li>
 <li>3x Corsair Arsonist</li>
