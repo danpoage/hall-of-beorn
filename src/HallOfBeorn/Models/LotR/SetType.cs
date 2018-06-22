@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models
         Adventure_Pack,
         Deluxe_Expansion,
         Saga_Expansion,
-        Limited_Edition,
+        Starter,
         PRINT_ON_DEMAND,
         GenCon_Expansion,
         GenConSaga_Expansion,

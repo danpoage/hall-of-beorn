@@ -13,7 +13,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
             AlternateName = "Two-Player Starter";
             Abbreviation = "TPLES";
             Number = 201;
-            SetType = Models.SetType.Limited_Edition;
+            SetType = Models.SetType.Starter;
 
             addHero("Gildor Inglorion", 9, Sphere.Leadership, 3, 2, 1, 3)
                 .WithTraits("Noldor.", "Noble.")
