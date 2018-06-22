@@ -22,7 +22,7 @@ namespace HallOfBeorn.Services.LotR
             productGroups.Add(ProductGroup.EredMithrin);
             productGroups.Add(ProductGroup.TheHobbitSaga);
             productGroups.Add(ProductGroup.TheLordOfTheRingsSaga);
-            productGroups.Add(ProductGroup.LimitedEdition);
+            productGroups.Add(ProductGroup.Starter);
             productGroups.Add(ProductGroup.GenConDeck);
             productGroups.Add(ProductGroup.NightmareDeck);
             productGroups.Add(ProductGroup.DoomMastered);

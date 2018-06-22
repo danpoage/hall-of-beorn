@@ -321,7 +321,7 @@
     <Compile Include="Models\LotR\CharacterThing.cs" />
     <Compile Include="Models\LotR\LayoutType.cs" />
     <Compile Include="Models\LotR\ProductGroups\EredMithrinProductGroup.cs" />
-    <Compile Include="Models\LotR\ProductGroups\LimitedEditionProductGroup.cs" />
+    <Compile Include="Models\LotR\ProductGroups\StarterProductGroup.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\RoamAcrossRhovanionProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\TheWitheredHeathProduct.cs" />
     <Compile Include="Models\LotR\Products\Deluxe\TheWildsOfRhovanionProduct.cs" />

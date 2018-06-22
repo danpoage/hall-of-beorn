@@ -5,12 +5,12 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.ProductGroups
 {
-    public class LimitedEditionProductGroup : ProductGroup
+    public class StarterProductGroup : ProductGroup
     {
-        public LimitedEditionProductGroup()
+        public StarterProductGroup()
             : base("Starter")
         {
-            MainProduct = Product.TwoPlayerLimitedEditionStarter;
+            AddProduct(Product.TwoPlayerLimitedEditionStarter);
         }
     }
 }
