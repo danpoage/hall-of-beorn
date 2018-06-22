@@ -26,9 +26,9 @@ namespace HallOfBeorn.Services.LotR.Search
             get { return predicate == null; }
         }
 
-        public IEnumerable<CardScore> Apply(IEnumerable<CardScore> scores)
+        public IOrderedEnumerable<CardScore> Apply(IOrderedEnumerable<CardScore> scores)
         {
-            return scores.Where(predicate);
+            return scores.Where(predicate).OrderBy(s => 1);
         }
     }
 }

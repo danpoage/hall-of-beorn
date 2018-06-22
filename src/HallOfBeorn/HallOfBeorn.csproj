@@ -325,7 +325,7 @@
     <Compile Include="Models\LotR\Products\AdventurePack\RoamAcrossRhovanionProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\TheWitheredHeathProduct.cs" />
     <Compile Include="Models\LotR\Products\Deluxe\TheWildsOfRhovanionProduct.cs" />
-    <Compile Include="Models\LotR\Products\LimitedEdition\TwoPlayerStarterProduct.cs" />
+    <Compile Include="Models\LotR\Products\Starter\TwoPlayerLimitedEditionStarterProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\AcrossTheEttenmoorsNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\EscapeFromMountGramNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\FlightOfTheStormcallerNightmareProduct.cs" />
@@ -369,7 +369,7 @@
     <Compile Include="Models\LotR\Sets\DreamChaser\TheThingInTheDepthsNightmare.cs" />
     <Compile Include="Models\LotR\Sets\EredMithrin\RoamAcrossRhovanionSet.cs" />
     <Compile Include="Models\LotR\Sets\EredMithrin\TheWitheredHeathSet.cs" />
-    <Compile Include="Models\LotR\Sets\LimitedEdition\TwoPlayerStarterSet.cs" />
+    <Compile Include="Models\LotR\Sets\Starter\TwoPlayerLimitedEditionStarterSet.cs" />
     <Compile Include="Models\LotR\Sets\PrintOnDemand\AttackOnDolGuldurSet.cs" />
     <Compile Include="Models\LotR\Sets\TheGreyHavens\RaidOnTheGreyHavensNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheGreyHavens\TheFateOfNumenorNightmare.cs" />
@@ -826,6 +826,7 @@
     <Compile Include="Services\LotR\Search\KeywordFilter.cs" />
     <Compile Include="Services\LotR\Search\Limit.cs" />
     <Compile Include="Services\LotR\Search\GenericFilter.cs" />
+    <Compile Include="Services\LotR\Search\Offset.cs" />
     <Compile Include="Services\LotR\Search\Plan.cs" />
     <Compile Include="Services\LotR\Search\PlanBuilder.cs" />
     <Compile Include="Services\LotR\Search\SearchService.cs" />

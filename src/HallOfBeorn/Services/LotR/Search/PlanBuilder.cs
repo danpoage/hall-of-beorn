@@ -10,25 +10,36 @@ namespace HallOfBeorn.Services.LotR.Search
 {
     public class PlanBuilder
     {
-        public PlanBuilder(SearchViewModel model, ScenarioService scenarioService, CategoryService categoryService)
+        public PlanBuilder(SearchViewModel model, ScenarioService scenarioService, CategoryService categoryService, RingsDbService ringsDbService)
         {
             this.scenarioService = scenarioService;
             this.categoryService = categoryService;
+            this.getVotes = (slug) => { return ringsDbService.GetVotes(slug); };
 
             BuildFilters(model);
             BuildSorts(model);
+            BuildOffsets(model);
             BuildLimits(model);
         }
 
         private readonly ScenarioService scenarioService;
         private readonly CategoryService categoryService;
+        private readonly Func<string, ushort> getVotes;
 
         private readonly List<IComponent> filters = new List<IComponent>();
         private readonly List<IComponent> sorts = new List<IComponent>();
+        private readonly List<IComponent> offsets = new List<IComponent>();
         private readonly List<IComponent> limits = new List<IComponent>();
+
+        private const string defaultCardSet = "Core Set";
+        private const CardType defaultCardType = CardType.Hero;
+        private const int defaultOffset = 0;
+        private const int defaultLimit = 100;
 
         private void BuildFilters(SearchViewModel model)
         {
+            AddFilter(new StringExactFilter((score) => score.Card.Title, model.Query));
+
             AddFilter(new StringExactFilter((score) => score.Card.Artist.Name, model.Artist));
             
             AddFilter(new GenericFilter(model.CardSet, (score, target) => score.Card.MatchesCardSet(target)));
@@ -65,7 +76,8 @@ namespace HallOfBeorn.Services.LotR.Search
 
             if (filters.Count == 1 && !model.SetType.HasValue)
             {
-                //
+                AddFilter(new StringExactFilter((score) => score.Card.CardSet.Name, defaultCardSet));
+                AddFilter(new EnumFilter<CardType>((score) => score.Card.CardType, defaultCardType));
             }
         }
 
@@ -75,27 +87,37 @@ namespace HallOfBeorn.Services.LotR.Search
                 return;
 
             if (model.Sort.Value == Sort.Alphabetical)
-                AddSortAscending((score) => score.Card.Title);
+            {
+                AddSort((score) => score.Card.Title, true, true);
+                AddSort((score) => (int)score.Card.CardType, true, false);
+            }
             if (model.Sort.Value == Sort.Popularity)
-                AddSortAscending((score) => score.Score());
+                AddSort((score) => getVotes(score.Card.Slug), false, true);
             if (model.Sort.Value == Sort.Released)
-                AddSortAscending((score) => score.Card.CardSet.Product.FirstReleased);
+                AddSort((score) => score.Card.CardSet.Product.Code, false, true);
             if (model.Sort.Value == Sort.Set_Number)
             {
-                AddSortAscending((score) => score.Card.CardSet.Product.Code);
-                AddSortAscending((score) => score.Card.CardNumber);
+                AddSort((score) => score.Card.CardSet.Product.Code, true, true);
+                AddSort((score) => score.Card.CardNumber, true, false);
             }
             if (model.Sort.Value == Sort.Sphere_Type_Cost)
             {
-                AddSortAscending((score) => score.Card.Sphere);
-                AddSortAscending((score) => score.Card.CardType);
-                AddSortAscending((score) => score.Card.SortCost());
+                AddSort((score) => score.Card.Sphere, true, true);
+                AddSort((score) => score.Card.CardType, true, false);
+                AddSort((score) => score.Card.SortCost(), true, false);
             }
+        }
+
+        private void BuildOffsets(SearchViewModel model)
+        {
+            var offset = model.Offset.HasValue ? model.Offset.Value : defaultOffset;
+            AddOffset(offset);
         }
 
         private void BuildLimits(SearchViewModel model)
         {
-            AddLimit(100);
+            var limit = model.Limit.HasValue ? model.Limit.Value : defaultLimit;
+            AddLimit(limit);
         }
 
         private IEnumerable<IComponent> Steps()
@@ -104,6 +126,8 @@ namespace HallOfBeorn.Services.LotR.Search
                 yield return filter;
             foreach (var sort in sorts)
                 yield return sort;
+            foreach (var offset in offsets)
+                yield return offset;
             foreach (var limit in limits)
                 yield return limit;
         }
@@ -116,14 +140,14 @@ namespace HallOfBeorn.Services.LotR.Search
             filters.Add(filter);
         }
 
-        private void AddSortAscending<TKey>(Func<CardScore, TKey> keySelector)
+        private void AddSort<TKey>(Func<CardScore, TKey> keySelector, bool isAscending, bool isTopLevel)
         {
-            sorts.Add(new Sort<TKey>(keySelector, true));
+            sorts.Add(new Sort<TKey>(keySelector, isAscending, isTopLevel));
         }
 
-        private void AddSortDescending<TKey>(Func<CardScore, TKey> keySelector)
+        private void AddOffset(int count)
         {
-            sorts.Add(new Sort<TKey>(keySelector, false));
+            offsets.Add(new Offset(count));
         }
 
         private void AddLimit(int count)

@@ -32,6 +32,8 @@ namespace HallOfBeorn.Controllers
             ringsDbService = (RingsDbService)System.Web.HttpContext.Current.Application[LotRServiceNames.RingsDbService];
             templateService = (TemplateService)System.Web.HttpContext.Current.Application[LotRServiceNames.TemplateService];
             tagService = (TagService)System.Web.HttpContext.Current.Application[LotRServiceNames.TagService];
+
+            searchService2 = new Services.LotR.Search.SearchService(productRepository, cardRepository, scenarioService, categoryService, ringsDbService);
         }
 
         private readonly SearchService searchService;
@@ -46,6 +48,7 @@ namespace HallOfBeorn.Controllers
         private readonly RingsDbService ringsDbService;
         private readonly TemplateService templateService;
         private readonly TagService tagService;
+        private readonly Services.LotR.Search.SearchService searchService2;
 
         private void InitializeSearch(SearchViewModel model)
         {
@@ -607,6 +610,7 @@ namespace HallOfBeorn.Controllers
 
                 var viewModel = new CardViewModel(score, getPlayerCategories, getEncounterCategories, getQuestCategories);
                 viewModel.Popularity = ringsDbService.GetPopularity(viewModel.Slug);
+                viewModel.Votes = ringsDbService.GetVotes(viewModel.Slug);
 
                 model.Cards.Add(viewModel);
             }

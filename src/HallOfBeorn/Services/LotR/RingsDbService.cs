@@ -28,6 +28,7 @@ namespace HallOfBeorn.Services.LotR
         private readonly Dictionary<string, LotRCard> cardsBySlug = new Dictionary<string,LotRCard>();
         private readonly Dictionary<string, string> slugByCardId = new Dictionary<string, string>();
         private readonly Dictionary<string, byte> popularityByCardId = new Dictionary<string, byte>();
+        private readonly Dictionary<string, ushort> votesByCardId = new Dictionary<string, ushort>();
 
         private void addHeroPopularity(string cardId, ushort votes)
         {
@@ -37,15 +38,15 @@ namespace HallOfBeorn.Services.LotR
             const ushort hero_2 = 87;
 
             if (votes > hero_5)
-                addPopularity(cardId, 5);
+                addPopularity(cardId, 5, votes);
             else if (votes > hero_4)
-                addPopularity(cardId, 4);
+                addPopularity(cardId, 4, votes);
             else if (votes > hero_3)
-                addPopularity(cardId, 3);
+                addPopularity(cardId, 3, votes);
             else if (votes > hero_2)
-                addPopularity(cardId, 2);
+                addPopularity(cardId, 2, votes);
             else
-                addPopularity(cardId, 1);
+                addPopularity(cardId, 1, votes);
         }
 
         private void addCardPopularity(string cardId, ushort votes)
@@ -56,22 +57,29 @@ namespace HallOfBeorn.Services.LotR
             const ushort votes_2 = 100;
 
             if (votes > votes_5)
-                addPopularity(cardId, 5);
+                addPopularity(cardId, 5, votes);
             else if (votes > votes_4)
-                addPopularity(cardId, 4);
+                addPopularity(cardId, 4, votes);
             else if (votes > votes_3)
-                addPopularity(cardId, 3);
+                addPopularity(cardId, 3, votes);
             else if (votes > votes_2)
-                addPopularity(cardId, 2);
+                addPopularity(cardId, 2, votes);
             else
-                addPopularity(cardId, 1);
+                addPopularity(cardId, 1, votes);
         }
 
         private void addPopularity(string cardId, byte popularity, ushort votes)
         {
-            addPopularity(cardId, popularity);
+            //addPopularity(cardId, popularity);
+            if (popularityByCardId.ContainsKey(cardId)) {
+                return;
+            }
+
+            popularityByCardId[cardId] = popularity;
+            votesByCardId[cardId] = votes;
         }
 
+        /*
         private void addPopularity(string cardId, byte popularity)
         {
             if (popularityByCardId.ContainsKey(cardId)) {
@@ -79,7 +87,7 @@ namespace HallOfBeorn.Services.LotR
             }
 
             popularityByCardId[cardId] = popularity;
-        }
+        }*/
 
         private void initializePopularity()
         {
@@ -885,6 +893,7 @@ namespace HallOfBeorn.Services.LotR
             addCardPopularity("146001", 1);
         }
 
+        /*
         private void initializePopularityOld()
         {
             //5++ Star Heroes (200+ votes)
@@ -1639,11 +1648,8 @@ namespace HallOfBeorn.Services.LotR
             addPopularity("132022", 1);
             addPopularity("132023", 1);
             addPopularity("132024", 1);
-
-            /*
-            
-            */
         }
+        */
 
         private uint getRingsDbSet(CardSet set)
         {
@@ -1767,6 +1773,15 @@ namespace HallOfBeorn.Services.LotR
             return popularityByCardId.ContainsKey(cardId) ?
                 popularityByCardId[cardId]
                 : (byte)0;
+        }
+
+        public ushort GetVotes(string slug)
+        {
+            var cardId = GetCardId(slug);
+
+            return votesByCardId.ContainsKey(cardId) ?
+                votesByCardId[cardId]
+                : (ushort)0;
         }
     }
 }

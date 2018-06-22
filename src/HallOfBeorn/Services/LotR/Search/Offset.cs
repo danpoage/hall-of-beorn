@@ -6,9 +6,9 @@ using HallOfBeorn.Models.LotR;
 
 namespace HallOfBeorn.Services.LotR.Search
 {
-    public class Limit : IComponent
+    public class Offset : IComponent
     {
-        public Limit(int count)
+        public Offset(int count)
         {
             this.count = count;
         }
@@ -22,7 +22,7 @@ namespace HallOfBeorn.Services.LotR.Search
 
         public IOrderedEnumerable<CardScore> Apply(IOrderedEnumerable<CardScore> scores)
         {
-            return scores.Take(count).OrderBy(s => 1);
+            return scores.Skip(count).OrderBy(s => 1);
         }
     }
 }

@@ -15,7 +15,7 @@ namespace HallOfBeorn.Services.LotR.Search
 
         private readonly IEnumerable<IComponent> steps;
         
-        public IEnumerable<CardScore> Execute(IEnumerable<CardScore> scores)
+        public IOrderedEnumerable<CardScore> Execute(IOrderedEnumerable<CardScore> scores)
         {
             var results = scores;
 

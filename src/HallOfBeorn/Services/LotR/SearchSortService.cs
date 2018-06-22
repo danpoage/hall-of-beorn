@@ -17,12 +17,14 @@ namespace HallOfBeorn.Services.LotR
             this.ringsDbService = ringsDbService;
 
             this.popularityLookup = (slug) => { return ringsDbService.GetPopularity(slug); };
+            this.voteLookup = (card) => { return card.CardType == CardType.Hero ? ringsDbService.GetVotes(card.Slug) + 100000 : ringsDbService.GetVotes(card.Slug); };
         }
 
         const int MAX_RESULTS = 128;
 
         private readonly RingsDbService ringsDbService;
         private readonly Func<string, byte> popularityLookup;
+        private readonly Func<LotRCard, int> voteLookup;
 
         public List<CardScore> Sort(SearchViewModel model, List<SearchFilter> filters, Dictionary<string, CardScore> results)
         {
@@ -72,7 +74,7 @@ namespace HallOfBeorn.Services.LotR
                     sortedResults = results.Where(x => x.Value.Score() > 0).OrderBy(x => x.Value.Card.CardSet.Product.FirstReleased).ThenBy(x => x.Value.Card.CardSet.Number).Select(x => x.Value).Take(takeCount).ToList();
                     break;
                 case Models.LotR.Sort.Popularity:
-                    sortedResults = results.Where(x => x.Value.Score() > 0).OrderByDescending(x => popularityLookup(x.Value.Card.Slug)).ThenBy(x => x.Value.Card.CardSet.Number).ThenBy(x => x.Value.Card.CardNumber).Select(x => x.Value).Take(takeCount).ToList();
+                    sortedResults = results.Where(x => x.Value.Score() > 0).OrderByDescending(x => popularityLookup(x.Value.Card.Slug)).ThenByDescending(x => voteLookup(x.Value.Card)).Select(x => x.Value).Take(takeCount).ToList();
                     break;
                 default:
                     sortedResults = results.Where(x => x.Value.Score() > 0).OrderByDescending(x => x.Value.Score()).Select(y => y.Value).Take(takeCount).ToList();

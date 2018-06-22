@@ -209,6 +209,9 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         [Display(Name = "Errata")]
         public ErrataVersion? Errata { get; set; }
 
+        public int? Limit { get; set; }
+        public int? Offset { get; set; }
+
         public bool IsCardView()
         {
             return (!View.HasValue || (View != Models.View.Product));

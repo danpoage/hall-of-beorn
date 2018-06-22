@@ -145,8 +145,8 @@ namespace HallOfBeorn.Models.LotR
         public static Product TheFlameOfTheWest = new Products.Saga.TheFlameOfTheWestProduct();
         public static Product TheMountainOfFire = new Products.Saga.TheMountainOfFireProduct();
 
-        //Limited Edition
-        public static Product TwoPlayerStarter = new Products.LimitedEdition.TwoPlayerStarterProduct();
+        //Starter
+        public static Product TwoPlayerLimitedEditionStarter = new Products.Starter.TwoPlayerLimitedEditionStarterProduct();
 
         //GenCon and Fellowship Event Decks
         public static Product TheMassingAtOsgiliath = new Products.PrintOnDemand.TheMassingAtOsgiliathProduct();

@@ -9,39 +9,44 @@ namespace HallOfBeorn.Services.LotR.Search
 {
     public class SearchService
     {
-        public SearchService(ProductRepository productRepository, CardRepository cardRepository, ScenarioService scenarioService, AdvancedSearchService advancedSearchService, SearchSortService sortService, RingsDbService ringsDbService, NoteService noteService, CategoryService categoryService)
+        public SearchService(ProductRepository productRepository, CardRepository cardRepository, ScenarioService scenarioService, 
+            CategoryService categoryService, RingsDbService ringsDbService)
+            //AdvancedSearchService advancedSearchService, SearchSortService sortService, RingsDbService ringsDbService, NoteService noteService, CategoryService categoryService)
         {
             this.productRepository = productRepository;
             this.cardRepository = cardRepository;
             this.scenarioService = scenarioService;
-            this.advancedSearchService = advancedSearchService;
-            this.sortService = sortService;
-            this.cards = cardRepository.Cards();
+            //this.advancedSearchService = advancedSearchService;
+            //this.sortService = sortService;
+            //this.cards = cardRepository.Cards();
             this.ringsDbService = ringsDbService;
-            this.noteService = noteService;
+            //this.noteService = noteService;
             this.categoryService = categoryService;
-            this.getPopularity = (slug) => { return ringsDbService.GetPopularity(slug); };
+            //this.getPopularity = (slug) => { return ringsDbService.GetPopularity(slug); };
         }
 
         private readonly ProductRepository productRepository;
         private readonly CardRepository cardRepository;
         private readonly ScenarioService scenarioService;
-        private readonly AdvancedSearchService advancedSearchService;
-        private readonly SearchSortService sortService;
-        private readonly IEnumerable<LotRCard> cards;
+        //private readonly AdvancedSearchService advancedSearchService;
+        //private readonly SearchSortService sortService;
+        //private readonly IOredeEnumerable<LotRCard> cards;
         private readonly RingsDbService ringsDbService;
-        private readonly NoteService noteService;
+        //private readonly NoteService noteService;
         private readonly CategoryService categoryService;
-        private readonly Func<string, byte> getPopularity;
+        //private readonly Func<string, byte> getPopularity;
 
-        private IEnumerable<CardScore> InitialScores()
+        private IOrderedEnumerable<CardScore> InitialScores()
         {
-            return cardRepository.Cards().Select(card => new CardScore(card, 1, string.Empty));
+            return cardRepository
+                .Cards()
+                .Select(card => new CardScore(card, 1, string.Empty))
+                .OrderBy(s => 1);
         }
 
-        public IEnumerable<CardScore> Search(SearchViewModel model)
+        public IOrderedEnumerable<CardScore> Search(SearchViewModel model)
         {            
-            var builder = new PlanBuilder(model, scenarioService, categoryService);
+            var builder = new PlanBuilder(model, scenarioService, categoryService, ringsDbService);
             
             var scores = builder
                 .ToPlan()

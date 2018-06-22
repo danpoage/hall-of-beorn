@@ -1010,11 +1010,9 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             set;
         }
 
-        public byte Popularity
-        {
-            get;
-            set;
-        }
+        public byte Popularity { get; set; }
+
+        public ushort Votes { get; set; }
 
         public string CharacterUrl { get; set; }
 
@@ -1024,7 +1022,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             {
                 if (Popularity > 0)
                 {
-                    const string icon = "<img src='/Images/gold-ring.png' height='16' width='16' title='Popularity'/>";
+                    var icon = string.Format("<img src='/Images/gold-ring.png' style='margin-bottom:-2px;' height='16' width='16' title='Popularity {0}/5  ({1} Votes)'/>", Popularity, Votes);
 
                     var html = new System.Text.StringBuilder();
 
@@ -1032,6 +1030,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                     {
                         html.Append(icon);
                     }
+
+                    html.AppendFormat("<span style='color:gray;font-size:12px;margin-left:8px;margin-bottom:2px;'>({0})</span>", Votes);
 
                     return html.ToString();
                 }

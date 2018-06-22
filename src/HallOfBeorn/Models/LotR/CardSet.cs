@@ -262,7 +262,7 @@ namespace HallOfBeorn.Models.LotR
             Add(TheFlameOfTheWest);
             Add(TheMountainOfFire);
 
-            Add(TwoPlayerStarter);
+            Add(TwoPlayerLimitedEditionStarter);
 
             Add(TheMassingAtOsgiliath);
             Add(TheBattleOfLakeTown);
@@ -436,7 +436,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheFlameOfTheWest = new Sets.TheLordOfTheRings.TheFlameOfTheWest();
         public static CardSet TheMountainOfFire = new Sets.TheLordOfTheRings.TheMountainOfFire();
 
-        public static CardSet TwoPlayerStarter = new Sets.LimitedEdition.TwoPlayerStarterSet();
+        public static CardSet TwoPlayerLimitedEditionStarter = new Sets.Starter.TwoPlayerLimitedEditionStarterSet();
 
         public static CardSet TheMassingAtOsgiliath = new Sets.PrintOnDemand.TheMassingatOsgiliath();
         public static CardSet TheBattleOfLakeTown = new Sets.PrintOnDemand.TheBattleofLakeTown();

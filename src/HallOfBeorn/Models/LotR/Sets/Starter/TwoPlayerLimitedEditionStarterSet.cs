@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HallOfBeorn.Models.LotR.Sets.LimitedEdition
+namespace HallOfBeorn.Models.LotR.Sets.Starter
 {
-    public class TwoPlayerStarterSet : CardSet
+    public class TwoPlayerLimitedEditionStarterSet : CardSet
     {
         protected override void Initialize()
         {
-            Name = "Two-Player Starter";
-            Abbreviation = "TPS";
+            Name = "Two-Player Limited Edition Starter";
+            AlternateName = "Two-Player Starter";
+            Abbreviation = "TPLES";
             Number = 201;
             SetType = Models.SetType.Limited_Edition;
 

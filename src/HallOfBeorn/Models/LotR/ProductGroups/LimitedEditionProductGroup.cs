@@ -8,9 +8,9 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
     public class LimitedEditionProductGroup : ProductGroup
     {
         public LimitedEditionProductGroup()
-            : base("Limited Edition")
+            : base("Starter")
         {
-            MainProduct = Product.TwoPlayerStarter;
+            MainProduct = Product.TwoPlayerLimitedEditionStarter;
         }
     }
 }
