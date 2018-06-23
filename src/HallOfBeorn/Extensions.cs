@@ -472,7 +472,7 @@ namespace HallOfBeorn
                 return defaultValue;
             }
 
-            return self.Value == byte.MaxValue ? "–" : self.Value.ToString();
+            return self.Value == byte.MaxValue ? "-" : self.Value.ToString();
         }
 
         private static Dictionary<string, string> getNormalizeMap()

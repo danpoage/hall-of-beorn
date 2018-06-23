@@ -19,8 +19,16 @@ namespace HallOfBeorn.Services.LotR.Search
             if (string.IsNullOrWhiteSpace(target) || target == defaultValue || !op.HasValue)
                 return null;
 
+            var normalizedTarget = target;
+            if (target == "-") {
+                normalizedTarget = "255";
+            } else if (target == "X")
+            {
+                normalizedTarget = "254";
+            }
+
             byte targetByte = 0;
-            if (!byte.TryParse(target, out targetByte))
+            if (!byte.TryParse(normalizedTarget, out targetByte))
                 return null;
 
             return (score) => {
@@ -31,13 +39,13 @@ namespace HallOfBeorn.Services.LotR.Search
                 switch (op)
                 {
                     case NumericOperator.lt:
-                        return value < targetByte;
+                        return value < targetByte && value < 254;
                     case NumericOperator.lteq:
-                        return value <= targetByte;
+                        return value <= targetByte && value < 254;
                     case NumericOperator.gt:
-                        return value > targetByte;
+                        return value > targetByte && value < 254;
                     case NumericOperator.gteq:
-                        return value >= targetByte;
+                        return value >= targetByte && value < 254;
                     case NumericOperator.eq:
                     default:
                         return value.Value == targetByte;
