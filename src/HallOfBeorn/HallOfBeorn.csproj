@@ -819,6 +819,7 @@
     <Compile Include="Services\LotR\SearchSortService.cs" />
     <Compile Include="Services\LotR\LotRServiceNames.cs" />
     <Compile Include="Services\LotR\Search\ByteComparisonFilter.cs" />
+    <Compile Include="Services\LotR\Search\CardTypeFilter.cs" />
     <Compile Include="Services\LotR\Search\CategoryFilter.cs" />
     <Compile Include="Services\LotR\Search\EnumFilter.cs" />
     <Compile Include="Services\LotR\Search\Filter.cs" />

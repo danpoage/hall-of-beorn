@@ -51,7 +51,7 @@ namespace HallOfBeorn.Services.LotR.Search
             AddFilter(new GenericFilter(model.Scenario, (score, target) =>  scenarioService.BelongsToScenario(score.Card.Slug, score.Card.CardType, target)));
             AddFilter(new GenericFilter(model.EncounterSet, (score, target) => score.Card.EncounterSet == target, (score, target) => score.Card.AlternateEncounterSet == target));
 
-            AddFilter(new EnumFilter<CardType>((score) => score.Card.CardType, model.CardType));
+            AddFilter(new CardTypeFilter(model.CardType));
             AddFilter(new EnumFilter<CardSubtype>((score) => score.Card.CardSubtype, model.CardSubtype, (target) => { return target == "No Subtype" ? "None" : target; }));
             AddFilter(new EnumFilter<DeckType>((score) => score.Card.DeckType, model.DeckType));
 
