@@ -9,6 +9,7 @@ using System.Web.Routing;
 
 using HallOfBeorn.Services;
 using HallOfBeorn.Services.LotR;
+using HallOfBeorn.Services.LotR.Search;
 
 namespace HallOfBeorn
 {
@@ -53,7 +54,7 @@ namespace HallOfBeorn
             var noteService = new NoteService();
             System.Web.HttpContext.Current.Application[LotRServiceNames.NoteService] = noteService;
 
-            var searchService = new SearchService(productRepository, cardRepository, scenarioService, advancedSearchService, sortService, ringsDbService, noteService, categoryService);
+            var searchService = new SearchService(productRepository, cardRepository, scenarioService, advancedSearchService, categoryService, ringsDbService);
             System.Web.HttpContext.Current.Application[LotRServiceNames.SearchService] = searchService;
 
             var statService = new StatService(cardRepository);

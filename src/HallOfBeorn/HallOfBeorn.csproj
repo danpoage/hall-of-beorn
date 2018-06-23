@@ -811,7 +811,7 @@
     <Compile Include="Services\LotR\NoteService.cs" />
     <Compile Include="Services\LotR\OctgnService.cs" />
     <Compile Include="Services\LotR\RingsDbService.cs" />
-    <Compile Include="Services\LotR\SearchService.cs" />
+    <Compile Include="Services\LotR\OldSearchService.cs" />
     <Compile Include="Services\LotR\CategoryService.cs" />
     <Compile Include="Services\LotR\ProductRepository.cs" />
     <Compile Include="Services\LotR\RelationshipService.cs" />
@@ -831,6 +831,7 @@
     <Compile Include="Services\LotR\Search\PlanBuilder.cs" />
     <Compile Include="Services\LotR\Search\SearchService.cs" />
     <Compile Include="Services\LotR\Search\Sort.cs" />
+    <Compile Include="Services\LotR\Search\StringAdvancedQueryFilter.cs" />
     <Compile Include="Services\LotR\Search\StringBasicQueryFilter.cs" />
     <Compile Include="Services\LotR\Search\StringExactFilter.cs" />
     <Compile Include="Services\LotR\Search\StringFuzzyFilter.cs" />

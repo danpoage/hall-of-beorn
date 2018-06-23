@@ -10,10 +10,11 @@ namespace HallOfBeorn.Services.LotR.Search
 {
     public class PlanBuilder
     {
-        public PlanBuilder(SearchViewModel model, ScenarioService scenarioService, CategoryService categoryService, RingsDbService ringsDbService)
+        public PlanBuilder(SearchViewModel model, ScenarioService scenarioService, CategoryService categoryService, RingsDbService ringsDbService, AdvancedSearchService advancedSearchService)
         {
             this.scenarioService = scenarioService;
             this.categoryService = categoryService;
+            this.advancedSearchService = advancedSearchService;
             this.getPopularity = (slug) => { return ringsDbService.GetPopularity(slug); };
             this.getVotes = (card) => { return card.CardType == CardType.Hero ? 10000 + ringsDbService.GetVotes(card.Slug) : ringsDbService.GetVotes(card.Slug); };
 
@@ -25,6 +26,7 @@ namespace HallOfBeorn.Services.LotR.Search
 
         private readonly ScenarioService scenarioService;
         private readonly CategoryService categoryService;
+        private readonly AdvancedSearchService advancedSearchService;
         private readonly Func<string, byte> getPopularity;
         private readonly Func<LotRCard, int> getVotes;
 
@@ -41,6 +43,7 @@ namespace HallOfBeorn.Services.LotR.Search
         private void BuildFilters(SearchViewModel model)
         {
             AddFilter(new StringBasicQueryFilter(model.BasicQuery()));
+            AddFilter(new StringAdvancedQueryFilter(model.Query, advancedSearchService));
 
             AddFilter(new StringExactFilter((score) => score.Card.Artist.Name, model.Artist));
             
@@ -142,7 +145,7 @@ namespace HallOfBeorn.Services.LotR.Search
                 yield return limit;
         }
 
-        private void AddFilter(Filter filter)
+        private void AddFilter(IComponent filter)
         {
             if (filter == null || filter.IsEmpty)
                 return;

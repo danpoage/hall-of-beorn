@@ -10,6 +10,7 @@ using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.Simple;
 using HallOfBeorn.Models.LotR.ViewModels;
 using HallOfBeorn.Services.LotR;
+using HallOfBeorn.Services.LotR.Search;
 
 namespace HallOfBeorn.Controllers
 {
@@ -23,7 +24,7 @@ namespace HallOfBeorn.Controllers
             searchService = (SearchService)System.Web.HttpContext.Current.Application[LotRServiceNames.SearchService];
         }
 
-        private SearchService searchService;
+        private readonly SearchService searchService;
         private readonly ProductRepository productRepository;
         private readonly CardRepository cardRepository;
         private readonly ScenarioService scenarioService;

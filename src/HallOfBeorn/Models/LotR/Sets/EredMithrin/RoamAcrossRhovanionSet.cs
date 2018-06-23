@@ -23,7 +23,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithInfo(26, 1, Artist.Alexander_Kozachenko);
             addAlly("Wiglaf", 5, Sphere.Leadership, true, 2, 2, 1, 3)
                 .WithTraits("Dale.", "Scout.", "Warrior.")
-                .WithText("Response: After you play Wiglaf, play an Item attachment on him from your hand for no cost.\r\nAction: Exhaust an attachment on Wiglaf to ready him. (Limie once per phase.)")
+                .WithText("Response: After you play Wiglaf, play an Item attachment on him from your hand for no cost.\r\nAction: Exhaust an attachment on Wiglaf to ready him. (Limit once per phase.)")
                 .WithInfo(27, 3, Artist.Unknown);
 
             addAttachment("Woodmen's Path", 1, Sphere.Lore, false)

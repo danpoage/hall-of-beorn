@@ -9,32 +9,24 @@ namespace HallOfBeorn.Services.LotR.Search
 {
     public class SearchService
     {
-        public SearchService(ProductRepository productRepository, CardRepository cardRepository, ScenarioService scenarioService, 
+        public SearchService(ProductRepository productRepository, CardRepository cardRepository, 
+            ScenarioService scenarioService, AdvancedSearchService advancedSearchService,
             CategoryService categoryService, RingsDbService ringsDbService)
-            //AdvancedSearchService advancedSearchService, SearchSortService sortService, RingsDbService ringsDbService, NoteService noteService, CategoryService categoryService)
         {
             this.productRepository = productRepository;
             this.cardRepository = cardRepository;
             this.scenarioService = scenarioService;
-            //this.advancedSearchService = advancedSearchService;
-            //this.sortService = sortService;
-            //this.cards = cardRepository.Cards();
+            this.advancedSearchService = advancedSearchService;
             this.ringsDbService = ringsDbService;
-            //this.noteService = noteService;
             this.categoryService = categoryService;
-            //this.getPopularity = (slug) => { return ringsDbService.GetPopularity(slug); };
         }
 
         private readonly ProductRepository productRepository;
         private readonly CardRepository cardRepository;
         private readonly ScenarioService scenarioService;
-        //private readonly AdvancedSearchService advancedSearchService;
-        //private readonly SearchSortService sortService;
-        //private readonly IOredeEnumerable<LotRCard> cards;
+        private readonly AdvancedSearchService advancedSearchService;
         private readonly RingsDbService ringsDbService;
-        //private readonly NoteService noteService;
         private readonly CategoryService categoryService;
-        //private readonly Func<string, byte> getPopularity;
 
         private IOrderedEnumerable<CardScore> InitialScores()
         {
@@ -46,7 +38,7 @@ namespace HallOfBeorn.Services.LotR.Search
 
         public IOrderedEnumerable<CardScore> Search(SearchViewModel model)
         {            
-            var builder = new PlanBuilder(model, scenarioService, categoryService, ringsDbService);
+            var builder = new PlanBuilder(model, scenarioService, categoryService, ringsDbService, advancedSearchService);
             
             var scores = builder
                 .ToPlan()

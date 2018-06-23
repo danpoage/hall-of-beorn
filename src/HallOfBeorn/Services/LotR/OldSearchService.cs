@@ -11,9 +11,10 @@ using HallOfBeorn.Models.LotR.ViewModels;
 
 namespace HallOfBeorn.Services.LotR
 {
-    public class SearchService
+    [Obsolete]
+    public class OldSearchService
     {
-        public SearchService(ProductRepository productRepository, CardRepository cardRepository, ScenarioService scenarioService, AdvancedSearchService advancedSearchService, SearchSortService sortService, RingsDbService ringsDbService, NoteService noteService, CategoryService categoryService)
+        public OldSearchService(ProductRepository productRepository, CardRepository cardRepository, ScenarioService scenarioService, AdvancedSearchService advancedSearchService, SearchSortService sortService, RingsDbService ringsDbService, NoteService noteService, CategoryService categoryService)
         {
             this.productRepository = productRepository;
             this.cardRepository = cardRepository;
