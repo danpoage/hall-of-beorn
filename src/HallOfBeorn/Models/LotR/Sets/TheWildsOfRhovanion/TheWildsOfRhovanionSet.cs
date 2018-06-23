@@ -216,7 +216,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the defending character has an attachment).")
                 .WithEasyModeQuantity(2)
                 .WithInfo(41, 3, Artist.Nicholas_Gregory);
-            addEnemy("Fire Drake", EncounterSet.TheKingsQuest.Name, 35, 0, 7, 254, 17)
+            addEnemy("Fire-drake", EncounterSet.TheKingsQuest.Name, 35, 0, 7, 254, 17)
                 .WithUnique()
                 .WithTraits("Dragon.")
                 .WithText("Cannot have non-Dragon attachments.\r\nX is 1 more than the number of players.\r\nForced: After the active location is explored, Fire-drake returns to the staging area and makes an immediate attack against each player in turn order.")
@@ -251,9 +251,9 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
                 .WithText("When Revealed: Attach to a questing hero and remove it from the quest. (Counts as a Condition attachment with the text: \"Limit 1 per hero. While the active location has the Dark trait, reduce attached hero's Willpower to 0 and treat its text box as if it were blank, except for Traits.\")")
                 .WithEasyModeQuantity(1)
                 .WithInfo(48, 2, Artist.Borja_Pindado);
-            addEnemy("Stone Troll", EncounterSet.FellBeasts.Name, 36, 3, 6, 3, 9)
+            addEnemy("Stone-troll", EncounterSet.FellBeasts.Name, 36, 3, 6, 3, 9)
                 .WithTraits("Troll.")
-                .WithText("Cannot have non-objective attachments.\r\nForced: After Stone Troll attacks and destroys a character you control, discard 1 card from your hand for each excess point of damage dealt.")
+                .WithText("Cannot have non-objective attachments.\r\nForced: After Stone-troll attacks and destroys a character you control, discard 1 card from your hand for each excess point of damage dealt.")
                 .WithShadow("Shadow: Discard an attachment you control.")
                 .WithEasyModeQuantity(1)
                 .WithInfo(49, 2, Artist.Sebastian_Zakrzewski);
