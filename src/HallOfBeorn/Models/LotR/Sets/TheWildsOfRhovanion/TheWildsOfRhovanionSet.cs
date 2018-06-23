@@ -216,7 +216,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the defending character has an attachment).")
                 .WithEasyModeQuantity(2)
                 .WithInfo(41, 3, Artist.Nicholas_Gregory);
-            addEnemy("Fire-drake", EncounterSet.TheKingsQuest.Name, 35, 0, 7, 254, 17)
+            addEnemy("Fire-drake", EncounterSet.TheKingsQuest.Name, 35, 254, 7, 254, 17)
                 .WithUnique()
                 .WithTraits("Dragon.")
                 .WithText("Cannot have non-Dragon attachments.\r\nX is 1 more than the number of players.\r\nForced: After the active location is explored, Fire-drake returns to the staging area and makes an immediate attack against each player in turn order.")
