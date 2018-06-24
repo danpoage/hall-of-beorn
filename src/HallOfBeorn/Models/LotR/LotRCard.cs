@@ -407,7 +407,7 @@ namespace HallOfBeorn.Models.LotR
             };
         }
 
-        public static LotRCard ShipObjective(string title, string encounterSet, byte willpower, byte attack, byte defense, byte hitPoints)
+        public static LotRCard ShipObjective(string title, string encounterSet, byte? willpower, byte? attack, byte? defense, byte? hitPoints)
         {
             return new LotRCard()
             {

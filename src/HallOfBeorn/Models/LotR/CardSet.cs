@@ -133,6 +133,13 @@ namespace HallOfBeorn.Models.LotR
             return objectiveLocation;
         }
 
+        protected LotRCard addShipObjective(string title, string encounterSet, bool isUnique, byte? willpower, byte? attack, byte? defense, byte? hitPoints)
+        {
+            var shipObjective = LotRCard.ShipObjective(title, encounterSet, willpower, attack, defense, hitPoints);
+            shipObjective.IsUnique = isUnique;
+            addCard(shipObjective);
+            return shipObjective;
+        }
 
         public string Id { get; protected set; }
 
