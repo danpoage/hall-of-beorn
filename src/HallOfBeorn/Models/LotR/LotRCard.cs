@@ -438,6 +438,12 @@ namespace HallOfBeorn.Models.LotR
             };
         }
 
+        public LotRCard WithAlternateSlug(string slug)
+        {
+            this.AlternateSlug = slug;
+            return this;
+        }
+
         public LotRCard WithUnique()
         {
             this.IsUnique = true;

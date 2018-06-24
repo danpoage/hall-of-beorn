@@ -18,10 +18,11 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
             SetType = Models.SetType.Adventure_Pack;
             Cycle = "Dream-chaser";
 
-            Cards.Add(LotRCard.Hero("Prince Imrahil", "", Sphere.Tactics, 11, 2, 3, 2, 4)
+            addHero("Prince Imrahil", 11, Sphere.Tactics, 2, 3, 2, 4)
+                .WithAlternateSlug("Timrahil")
                 .WithTraits("Gondor.", "Noble.", "Warrior.")
                 .WithText("Combat Action: Spend 1 resource from Prince Imrahil's resource pool to search the top 5 cards of your deck for an ally who shares at least 1 Trait with him, and put that ally into play. Shuffle your deck. At the end of the phase, if that ally is still in play, shuffle it into your deck. (Limit once per round.)")
-                .WithInfo(138, 1, Artist.Micah_Epstein));
+                .WithInfo(138, 1, Artist.Micah_Epstein);
             Cards.Add(LotRCard.Ally("Knight of the White Tower", Sphere.Leadership, 4, 2, 2, 3, 3)
                 .WithTraits("Gondor.", "Warrior.")
                 .WithText("Knight of the White Tower's resource cost must be paid from a single hero’s resource pool.")

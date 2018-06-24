@@ -55,44 +55,16 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 CardNumber = 1,
                 Artist = Artist.Alyn_Spiller
             });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Tunneling Nameless Thing",
-                
-                Id = "B7A0F4CE-99FE-4DC8-8406-6ED68C1C1A0E",
-                CardType = CardType.Enemy,
-                EngagementCost = 50,
-                Threat = 4,
-                Attack = 6,
-                Defense = 4,
-                HitPoints = 10,
-                Traits = new List<string> { "Nameless." },
-                Text = "Forced: After the players travel to a location, Tunneling Nameless Thing engages the first player.\r\n\r\nIf there is no active location, return Tunneling Nameless Thing to the staging area.",
-                Shadow = "Shadow:",
-                EncounterSet = "The Hills of Emyn Muil Nightmare",
-                Quantity = 3,
-                CardNumber = 2,
-                Artist = Artist.Sandara_Tang
-            });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Orc Interceptor",
-                
-                Id = "EF5B610D-F818-4430-8448-C91480D86BEA",
-                CardType = CardType.Enemy,
-                EngagementCost = 39,
-                Threat = 2,
-                Attack = 2,
-                Defense = 3,
-                HitPoints = 5,
-                Traits = new List<string> { "Mordor.", "Orc." },
-                Text = "Orc Interceptor gets +1 Threat and +1 Attack for each resource token on it.\r\n\r\nForced: After a location leaves play as an explored location, place a resource token on Orc Interceptor.",
-                Shadow = "Shadow:",
-                EncounterSet = "The Hills of Emyn Muil Nightmare",
-                Quantity = 2,
-                CardNumber = 3,
-                Artist = Artist.Mariusz_Gandzel
-            });
+            addEnemy("Tunneling Nameless Thing", EncounterSet.TheHillsOfEmynMuilNightmare.Name, 50, 4, 6, 4, 10)
+                .WithTraits("Nameless.")
+                .WithText("Forced: After the players travel to a location, Tunneling Nameless Thing engages the first player.\r\n\r\nIf there is no active location, return Tunneling Nameless Thing to the staging area.")
+                .WithTemplate("<p class='main-text'><b>Forced:</b> After the players travel to a location, {self} engages the first player.</p><p class='main-text'>If there is no active location, return {self} to the staging area.</p>")
+                .WithInfo(2, 3, Artist.Sandara_Tang);
+            addEnemy("Orc Interceptor", EncounterSet.TheHillsOfEmynMuilNightmare.Name, 39, 2, 2, 3, 5)
+                .WithTraits("Mordor.", "Orc.")
+                .WithText("Orc Interceptor gets +1 Threat and +1 Attack for each resource token on it.\r\nForced: After a location leaves play as an explored location, place a resource token on Orc Interceptor.")
+                .WithTemplate("<p class='main-text'>{self} gets +1 {Threat} and +1 {Attack} for each resource token on it.</p><p class='main-text'><b>Forced:</b> After a location leaves play as an explored location, place a resource token on {self}.</p>")
+                .WithInfo(3, 2, Artist.Mariusz_Gandzel);
             Cards.Add(new LotRCard()
             {
                 Title = "Brambles and Thorns",
@@ -141,21 +113,13 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 CardNumber = 6,
                 Artist = Artist.Michael_Rasmussen
             });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Blast of Savage Wind",
-                
-                Id = "12FB8290-3BEC-44E4-A3D0-62B5C55FCBE1",
-                CardType = CardType.Treachery,
-                Traits = new List<string> { "Hazard." },
-                Keywords = new List<string> { "Doomed 2." },
-                Text = "When Revealed: Remove all progress from each Emyn Muil location in play. Each Emyn Muil location gets +2 Threat until the end of the round.",
-                Shadow = "Shadow: Remove all progress from each Emyn Muil location in play.",
-                EncounterSet = "The Hills of Emyn Muil Nightmare",
-                Quantity = 3,
-                CardNumber = 7,
-                Artist = Artist.Christina_Davis
-            });
+            addTreachery("Blast of Savage Wind", EncounterSet.TheHillsOfEmynMuilNightmare.Name)
+                .WithTraits("Hazard.")
+                .WithKeywords("Doomed 2.")
+                .WithText("When Revealed: Remove all progress from each Emyn Muil location in play. Each Emyn Muil location gets +2 Threat until the end of the round.")
+                .WithShadow("Shadow: Remove all progress from each Emyn Muil location in play.")
+                .WithTemplate("<p class='main-text'>{keyword:Doomed 2.}</p><p class='main-text'><b>When Revealed:</b> Remove all progress from each {trait:Emyn Muil.@Emyn Muil} location in play. Each {trait:Emyn Muil.@Emyn Muil} location gets +2 {Threat} until the end of the round.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Remove all progress from each {trait:Emyn Muil.@Emyn Muil} location in play.</p>")
+                .WithInfo(7, 3, Artist.Christina_Davis);
             Cards.Add(new LotRCard()
             {
                 Title = "Hazardous Terrain",
