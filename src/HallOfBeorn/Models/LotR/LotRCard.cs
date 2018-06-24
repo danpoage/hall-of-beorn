@@ -422,7 +422,7 @@ namespace HallOfBeorn.Models.LotR
             };
         }
 
-        public static LotRCard ShipEnemy(string title, string encounterSet, byte engagementCost, byte threat, byte attack, byte defense, byte hitPoints)
+        public static LotRCard ShipEnemy(string title, string encounterSet, byte? engagementCost, byte? threat, byte? attack, byte? defense, byte? hitPoints)
         {
             return new LotRCard()
             {

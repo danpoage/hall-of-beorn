@@ -58,6 +58,13 @@ namespace HallOfBeorn.Models.LotR
             return card;
         }
 
+        protected LotRCard addNightmareSetup(string encounterSet)
+        {
+            var card = LotRCard.NightmareSetup(encounterSet, encounterSet);
+            addCard(card);
+            return card;
+        }
+
         protected LotRCard addQuest(string title, string encounterSet, uint stageNumber, char stageLetter, byte? questPoints)
         {
             var quest = LotRCard.Quest(title, stageNumber, encounterSet, questPoints, stageLetter);
@@ -70,6 +77,13 @@ namespace HallOfBeorn.Models.LotR
             var enemy = LotRCard.Enemy(title, string.Empty, encounterSet, engagementCost, threat, attack, defense, hitPoints);
             addCard(enemy);
             return enemy;
+        }
+
+        protected LotRCard addShipEnemy(string title, string encounterSet, byte? engagementCost, byte? threat, byte? attack, byte? defense, byte? hitPoints)
+        {
+            var shipEnemy = LotRCard.ShipEnemy(title, encounterSet, engagementCost, threat, attack, defense, hitPoints);
+            addCard(shipEnemy);
+            return shipEnemy;
         }
 
         protected LotRCard addLocation(string title, string encounterSet, byte? threat, byte? questPoints)
