@@ -225,7 +225,7 @@ namespace HallOfBeorn.Models.LotR
             };
         }
 
-        public static LotRCard ObjectiveHero(string title, string encounterSet, byte willpower, byte attack, byte defense, byte hitPoints)
+        public static LotRCard ObjectiveHero(string title, string encounterSet, byte? willpower, byte? attack, byte? defense, byte? hitPoints)
         {
             return new LotRCard()
             {
@@ -380,7 +380,7 @@ namespace HallOfBeorn.Models.LotR
             };
         }
 
-        public static LotRCard ObjectiveAlly(string title, string id, string encounterSet, byte willpower, byte attack, byte defense, byte hitPoints)
+        public static LotRCard ObjectiveAlly(string title, string id, string encounterSet, byte? willpower, byte? attack, byte? defense, byte? hitPoints)
         {
             return new LotRCard()
             {
@@ -395,7 +395,7 @@ namespace HallOfBeorn.Models.LotR
             };
         }
 
-        public static LotRCard ObjectiveLocation(string title, string encounterSet, byte questPoints)
+        public static LotRCard ObjectiveLocation(string title, string encounterSet, byte? questPoints)
         {
             return new LotRCard()
             {

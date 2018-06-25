@@ -12,12 +12,6 @@ namespace HallOfBeorn.Models.LotR
             AlternateName = string.Empty;
         }
 
-        protected EncounterSet(string name, string cardSetName)
-        {
-            this.Name = name;
-            this.Set = cardSetName;
-        }
-
         private readonly List<LotRCard> cards = new List<LotRCard>();
         
         public IEnumerable<LotRCard> Cards()
@@ -25,9 +19,25 @@ namespace HallOfBeorn.Models.LotR
             return cards;
         }
 
+        protected virtual void init()
+        {
+        }
+
         protected void includes(params LotRCard[] cards)
         {
-            this.cards.AddRange(cards);
+            if (cards == null)
+                return;
+
+            foreach (var card in cards)
+                addCard(card);
+        }
+
+        protected void addCard(LotRCard card)
+        {
+            if (card == null || cards.Any(c => c.Slug == card.Slug))
+                return;
+
+            cards.Add(card);
         }
 
         protected static LotRCard Quest(string encounterSet, string title, uint stageNumber, char stageLetter, byte? questPoints)
@@ -95,6 +105,94 @@ namespace HallOfBeorn.Models.LotR
         public bool IsNightmare
         {
             get { return !string.IsNullOrEmpty(Name) && Name.EndsWith(" Nightmare"); }
+        }
+
+        public LotRCard Quest(string title, uint stageNumber, char stageLetter, byte? questPoints)
+        {
+            var quest = LotRCard.Quest(title, stageNumber, Name, questPoints);
+            addCard(quest);
+            return quest;
+        }
+
+        public LotRCard Enemy(string title, bool isUnique, byte? engagementCost, byte? threat, byte? attack, byte? defense, byte? hitPoints)
+        {
+            var enemy = LotRCard.Enemy(title, string.Empty, Name, engagementCost, threat, attack, defense, hitPoints);
+            enemy.IsUnique = isUnique;
+            addCard(enemy);
+            return enemy;
+        }
+
+        public LotRCard Location(string title, bool isUnique, byte? threat, byte? questPoints)
+        {
+            var location = LotRCard.Location(title, string.Empty, Name, threat, questPoints);
+            location.IsUnique = isUnique;
+            addCard(location);
+            return location;
+        }
+
+        public LotRCard Treachery(string title)
+        {
+            var treachery = LotRCard.Treachery(title, string.Empty, Name);
+            addCard(treachery);
+            return treachery;
+        }
+
+        public LotRCard Objective(string title, bool isUnique)
+        {
+            var objective = LotRCard.Objective(title, string.Empty, Name);
+            objective.IsUnique = isUnique;
+            addCard(objective);
+            return objective;
+        }
+
+        public LotRCard ObjectiveAlly(string title, bool isUnique, byte? willpower, byte? attack, byte? defense, byte? hitPoints)
+        {
+            var objAlly = LotRCard.ObjectiveAlly(title, string.Empty, Name, willpower, attack, defense, hitPoints);
+            addCard(objAlly);
+            return objAlly;
+        }
+
+        public LotRCard ObjectiveHero(string title, byte? willpower, byte? attack, byte? defense, byte? hitPoints)
+        {
+            var objHero = LotRCard.ObjectiveHero(title, Name, willpower, attack, defense, hitPoints);
+            addCard(objHero);
+            return objHero;
+        }
+
+        public LotRCard ObjectiveLocation(string title, bool isUnique, byte? questPoints)
+        {
+            var objLocation = LotRCard.ObjectiveLocation(title, Name, questPoints);
+            objLocation.IsUnique = isUnique;
+            addCard(objLocation);
+            return objLocation;
+        }
+
+        public LotRCard EncounterSideQuest(string title, byte? questPoints)
+        {
+            var sideQuest = LotRCard.EncounterSideQuest(title, string.Empty, Name, questPoints);
+            addCard(sideQuest);
+            return sideQuest;
+        }
+
+        public LotRCard Campaign(string title, string oppositeTitle)
+        {
+            var campaign = LotRCard.Campaign(title, Name, oppositeTitle);
+            addCard(campaign);
+            return campaign;
+        }
+
+        public LotRCard NightmareSetup()
+        {
+            var setup = LotRCard.NightmareSetup(Name, Name);
+            addCard(setup);
+            return setup;
+        }
+
+        public LotRCard GenConSetup(string title)
+        {
+            var setup = LotRCard.GenConSetup(title, Name);
+            addCard(setup);
+            return setup;
         }
 
         static EncounterSet()
