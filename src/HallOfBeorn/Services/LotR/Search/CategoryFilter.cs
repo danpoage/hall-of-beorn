@@ -16,8 +16,10 @@ namespace HallOfBeorn.Services.LotR.Search
             if (string.IsNullOrWhiteSpace(target) || target == defaultValue)
                 return;
 
+            var normalizedTarget = target.Replace(' ', '_');
+
             var targetEnum = default(TEnum);
-            if (!Enum.TryParse<TEnum>(target, out targetEnum))
+            if (!Enum.TryParse<TEnum>(normalizedTarget, out targetEnum))
                 return;
 
             predicate = (score) => {

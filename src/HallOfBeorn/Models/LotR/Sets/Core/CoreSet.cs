@@ -14,121 +14,58 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
             Number = 1;
             SetType = Models.SetType.Core;
 
-            addCard(new LotRCard() {
-                Title = "Aragorn",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9001",
-                CardType = CardType.Hero,
-                Sphere = Sphere.Leadership,
-                ThreatCost = 12,
-                IsUnique = true,
-                Attack = 3,
-                Defense = 2,
-                Willpower = 2,
-                HitPoints = 5,
-                Text = "Response: After Aragorn commits to a quest, spend 1 resource from his resource pool to ready him.",
-                FlavorText = "\"I am Aragorn son of Arathorn; and if by life or death I can save you, I will.\" -The Fellowship of the Ring",
-                HtmlTemplate = "<p>{keyword:Sentinel.}<p><p><b>Response:</b> After {self} commits to a quest, spend 1 resource from his resource pool to ready him.</p><p class='flavor-text'>&quot;I am Aragorn son of Arathorn; and if by life or death I can save you, I will.&quot;<br>&ndash;The Fellowship of the Ring</p>",
-                Quantity = 1,
-                Year = 2010,
-                Artist = Artist.John_Stanko,
-                CardNumber = 1
-            }.WithTraits("Dúnedain.", "Noble.", "Ranger.").WithKeywords("Sentinel.").WithThumbnail());
-            addCard(new LotRCard() {
-                Title = "Théodred",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9002",
-                CardType = CardType.Hero,
-                Sphere = Sphere.Leadership,
-                ThreatCost = 8,
-                IsUnique = true,
-                Attack = 2,
-                Defense = 1,
-                Willpower = 1,
-                HitPoints = 4,
-                Text = "Response: After Théodred commits to a quest, choose a hero committed to that quest. Add 1 resource to that hero's resource pool.",
-                FlavorText = "\"Not all is dark. Take courage, Lord of the Mark...\"\r\n\r\n-Gandalf, The Two Towers",
-                HtmlTemplate = "<p><b>Response:</b> After {self} commits to a quest, choose a hero committed to that quest. Add 1 resource to that hero's resource pool.<p><p class='flavor-text'>&quot;Not all is dark. Take courage, Lord of the Mark...&quot;<br>&ndash;Gandalf, The Two Towers</p>",
-                Quantity = 1,
-                CardNumber = 2,
-                Artist = Artist.Jeff_Himmelman
-            }.WithTraits("Noble.", "Rohan.", "Warrior.").WithThumbnail());
-            addCard(new LotRCard() {
-                Title = "Glóin",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9003",
-                CardType = CardType.Hero,
-                Sphere = Sphere.Leadership,
-                ThreatCost = 9,
-                IsUnique = true,
-                Attack = 2,
-                Defense = 1,
-                Willpower = 2,
-                HitPoints = 4,
-                Traits = new List<string>() { "Dwarf.", "Noble." },
-                Text = "Response: After Glóin suffers damage, add 1 resource to his resource pool for each point of damage he just suffered.",
-                FlavorText = "His beard, very long and forked, was white, nearly as white as the snow-white cloth of his garments.\r\n-The Fellowship of the Ring",
-                HtmlTemplate = "<p><b>Response:</b> After {self} suffers damage, add 1 resource to his resource pool for each point of damage he just suffered.</p><p class='flavor-text'>His beard, very long and forked, was white, nearly as white as the snow-white cloth of his garments.<br>&ndash;The Fellowship of the Ring</p>",
-                Quantity = 1,
-                CardNumber = 3,
-                Artist = Artist.Tom_Garden
-            }.WithThumbnail());
-            addCard(new LotRCard() {
-                Title = "Gimli",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9004",
-                CardType = CardType.Hero,
-                Sphere = Sphere.Tactics,
-                ThreatCost = 11,
-                IsUnique = true,
-                Attack = 2,
-                Defense = 2,
-                Willpower = 2,
-                HitPoints = 5,
-                Traits = new List<string>() { "Dwarf.", "Noble.", "Warrior." },
-                Text = "Gimli gets +1 Attack for each damage token on him.",
-                FlavorText = "\"Men need many words before deeds. My axe is restless in my hands\" -The Two Towers",
-                HtmlTemplate = "<p>{self} gets +1 {Attack} for each damage token on him.</p><p class='flavor-text'>&quot;Men need many words before deeds. My axe is restless in my hands.&quot<br>&ndash;The Two Towers</p>",
-                Quantity = 1,
-                CardNumber = 4,
-                Artist = Artist.Tony_Foti
-            }.WithThumbnail());
-            addCard(new LotRCard() {
-                Title = "Legolas",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9005",
-                CardType = CardType.Hero,
-                Sphere = Sphere.Tactics,
-                ThreatCost = 9,
-                IsUnique = true,
-                Attack = 3,
-                Defense = 1,
-                Willpower = 1,
-                HitPoints = 4,
-                Traits = new List<string>() { "Noble.", "Silvan.", "Warrior." },
-                Text = "Response: After Legolas participates in an attack that destroys an enemy, place 2 progress tokens on the current quest.",
-                FlavorText = "\"I can walk this path, but others have not this skill.\"\r\n-The Fellowship of the Ring",
-                //HtmlTemplate = "<p><b>Response:</b> After {self} participates in an attack that destroys an enemy, place 2 progress tokens on the current quest.</p><p class='flavor-text'>&quot;I can walk this path, but others have not this skill.&quot;<br>&ndash;The Fellowship of the Ring</p>",
-                Keywords = new List<string>() { "Ranged." },
-                Quantity = 1,
-                CardNumber = 5,
-                Artist = Artist.Magali_Villeneuve
-            }.WithThumbnail());
-            addCard(new LotRCard() {
-                Title = "Thalin",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9006",
-                CardType = CardType.Hero,
-                Sphere = Sphere.Tactics,
-                ThreatCost = 9,
-                IsUnique = true,
-                Attack = 2,
-                Defense = 2,
-                Willpower = 1,
-                HitPoints = 4,
-                Traits = new List<string>() { "Dwarf.", "Warrior." },
-                Text = "While Thalin is committed to a quest, deal 1 damage to each enemy as it is revealed by the encounter deck.",
-                FlavorText = "There hammer on the anvil smote,\r\nThere chisel clove, and graver wrote;\r\nThere forged was blade, and bound was hilt;\r\nThe delver mined, the mason built.\r\n-The Fellowship of the Ring",
-                HtmlTemplate = "<p>While {self} is committed to a quest, deal 1 damage to each enemy as it is revealed by the encounter deck.</p><p class='flavor-text'>There hammer on the anvil smote,<br>There chisel clove, and graver wrote;<br>There forged was blade, and bound was hilt;<br>The delver mined, the mason built.<br>&ndash;The Fellowship of the Ring</p>",
-                Quantity = 1,
-                CardNumber = 6,
-                Artist = Artist.Jen_Zee,
-                HasErrata = true
-            }.WithThumbnail());
+            addHero("Aragorn", 12, Sphere.Leadership, 2, 3, 2, 5)
+                .WithTraits("Dúnedain.", "Noble.", "Ranger.")
+                .WithKeywords("Sentinel.")
+                .WithText("Response: After Aragorn commits to a quest, spend 1 resource from his resource pool to ready him.")
+                .WithFlavor("\"I am Aragorn son of Arathorn; and if by life or death I can save you, I will.\"\r\n-The Fellowship of the Ring")
+                .WithTemplate("<p class='main-text'>{keyword:Sentinel.}</p><p class='main-text'><b>Response:</b> After {self} commits to a quest, spend 1 resource from his resource pool to ready him.</p><p class='flavor-text'>&quot;I am Aragorn son of Arathorn; and if by life or death I can save you, I will.&quot;<br>&ndash;The Fellowship of the Ring</p>")
+                .WithYear(2010)
+                .WithThumbnail()
+                .WithInfo(1, 1, Artist.John_Stanko);
+            addHero("Théodred", 8, Sphere.Leadership, 1, 2, 1, 4)
+                .WithTraits("Noble.", "Rohan.", "Warrior.")
+                .WithText("Response: After Théodred commits to a quest, choose a hero committed to that quest. Add 1 resource to that hero's resource pool.")
+                .WithFlavor("\"Not all is dark. Take courage, Lord of the Mark...\"\r\n-Gandalf, The Two Towers")
+                .WithTemplate("<p class='main-text'><b>Response:</b> After {self} commits to a quest, choose a hero committed to that quest. Add 1 resource to that hero's resource pool.</p><p class='flavor-text'>&quot;Not all is dark. Take courage, Lord of the Mark...&quot;<br>&ndash;Gandalf, The Two Towers</p>")
+                .WithYear(2010)
+                .WithThumbnail()
+                .WithInfo(2, 1, Artist.Jeff_Himmelman);
+            addHero("Glóin", 9, Sphere.Leadership, 2, 2, 1, 4)
+                .WithTraits("Dwarf.", "Noble.")
+                .WithText("Response: After Glóin suffers damage, add 1 resource to his resource pool for each point of damage he just suffered.")
+                .WithFlavor("His beard, very long and forked, was white, nearly as white as the snow-white cloth of his garments.\r\n-The Fellowship of the Ring")
+                .WithTemplate("<p class='main-text'><b>Response:</b> After {self} suffers damage, add 1 resource to his resource pool for each point of damage he just suffered.</p><p class='flavor-text'>His beard, very long and forked, was white, nearly as white as the snow-white cloth of his garments.<br>&ndash;The Fellowship of the Ring</p>")
+                .WithYear(2010)
+                .WithThumbnail()
+                .WithInfo(3, 1, Artist.Tom_Garden);
+            addHero("Gimli", 11, Sphere.Tactics, 2, 2, 2, 5)
+                .WithTraits("Dwarf.", "Noble.", "Warrior.")
+                .WithText("Gimli gets +1 Attack for each damage token on him.")
+                .WithFlavor("\"Men need many words before deeds. My axe is restless in my hands\"\r\n-The Two Towers")
+                .WithTemplate("<p class='main-text'>{self} gets +1 {Attack} for each damage token on him.</p><p class='flavor-text'>&quot;Men need many words before deeds. My axe is restless in my hands.&quot<br>&ndash;The Two Towers</p>")
+                .WithYear(2010)
+                .WithThumbnail()
+                .WithInfo(4, 1, Artist.Tony_Foti);
+            addHero("Legolas", 9, Sphere.Tactics, 1, 3, 1, 4)
+                .WithTraits("Noble.", "Silvan.", "Warrior.")
+                .WithKeywords("Ranged.")
+                .WithText("Response: After Legolas participates in an attack that destroys an enemy, place 2 progress tokens on the current quest.")
+                .WithFlavor("\"I can walk this path, but others have not this skill.\"\r\n-The Fellowship of the Ring")
+                .WithTemplate("<p class='main-text'>{keyword:Ranged.}</p><p class='main-text'><b>Response:</b> After {self} participates in an attack that destroys an enemy, place 2 progress tokens on the current quest.</p><p class='flavor-text'>&quot;I can walk this path, but others have not this skill.&quot;<br>&ndash;The Fellowship of the Ring</p>")
+                .WithYear(2010)
+                .WithThumbnail()
+                .WithInfo(5, 1, Artist.Magali_Villeneuve);
+            addHero("Thalin", 9, Sphere.Tactics, 1, 2, 2, 4)
+                .WithTraits("Dwarf.", "Warrior.")
+                .WithText("While Thalin is committed to a quest, deal 1 damage to each enemy as it is revealed by the encounter deck.")
+                .WithFlavor("There hammer on the anvil smote,\r\nThere chisel clove, and graver wrote;\r\nThere forged was blade, and bound was hilt;\r\nThe delver mined, the mason built.\r\n-The Fellowship of the Ring")
+                .WithTemplate("<p>While {self} is committed to a quest, deal 1 damage to each enemy as it is revealed by the encounter deck.</p><p class='flavor-text'>There hammer on the anvil smote,<br>There chisel clove, and graver wrote;<br>There forged was blade, and bound was hilt;<br>The delver mined, the mason built.<br>&ndash;The Fellowship of the Ring</p>")
+                .WithYear(2010)
+                .WithThumbnail()
+                .WithErrata()
+                .WithInfo(6, 1, Artist.Jen_Zee);
+
             addCard(new LotRCard() {
                 Title = "Éowyn",
                 Id = "51223bd0-ffd1-11df-a976-0801200c9007",
