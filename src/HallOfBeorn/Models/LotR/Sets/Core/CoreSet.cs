@@ -65,371 +65,135 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithThumbnail()
                 .WithErrata()
                 .WithInfo(6, 1, Artist.Jen_Zee);
+            addHero("Éowyn", 9, Sphere.Spirit, 4, 1, 1, 3)
+                .WithTraits("Noble.", "Rohan.")
+                .WithText("Action: Discard 1 card from your hand to give Éowyn +1 Willpower until the end of the phase. This effect may be triggered by each player once each round.")
+                .WithTemplate("<p class='main-text'><b>Action:</b> Discard 1 card from your hand to give {self} +1 {Willpower} until the end of the phase. This effect may be triggered by each player once each round.</p><p class='flavor-text'>Slender and tall she was in her white robe girt with silver; but strong she seemed and stern as steel, a daughter of kings.<br>&ndash;The Two Towers</p>")
+                .WithYear(2010)
+                .WithThumbnail()
+                .WithInfo(7, 1, Artist.Gabrielle_Portal);
+            addHero("Eleanor", 7, Sphere.Spirit, 1, 1, 2, 3)
+                .WithTraits("Gondor.", "Noble.")
+                .WithText("Response: Exhaust Eleanor to cancel the 'when revealed' effects of a treachery card just revealed by the encounter deck. Then, discard that card, and replace it with the next card from the encounter deck.")
+                .WithFlavor("\"Gondor wanes, you say. But Gondor stands, and even the end of its strength is very strong.\"\r\n-Boromir, The Fellowship of the Ring")
+                .WithTemplate("<p class='main-text'><b>Response:</b> Exhaust {self} to cancel the &quot;when revealed&quot; effects of a treachery card just revealed by the encounter deck. Then, discard that card, and replace it with the next card from the encounter deck.</p><p class='flavor-text'>&quot;Gondor wanes, you say. But Gondor stands, and even the end of its strength is very strong.&quot;<br>&ndash;Boromir, The Fellowship of the Ring</p>")
+                .WithYear(2010)
+                .WithThumbnail()
+                .WithErrata()
+                .WithInfo(8, 1, Artist.Magali_Villeneuve);
+            addHero("Dúnhere", 8, Sphere.Spirit, 1, 2, 1, 4)
+                .WithTraits("Rohan.", "Warrior.")
+                .WithText("Dúnhere can target enemies in the staging area when he attacks alone. When doing so, he gets +1 Attack.")
+                .WithFlavor("Captains rode to meet him at the ford, bearing messages from Gandalf. Dúnhere, chieftain of the folk of Harrowdale, was at their head.\r\n-The Return of the King")
+                .WithTemplate("<p class='main-text'>{self} can target enemies in the staging area when he attacks alone. When doing so, he gets +1 {Attack}.</p><p class='flavor-text'>Captains rode to meet him at the ford, bearing messages from Gandalf. Dúnhere, chieftain of the folk of Harrowdale, was at their head.<br>&ndash;The Return of the King</p>")
+                .WithYear(2010)
+                .WithThumbnail()
+                .WithInfo(9, 1, Artist.Jeff_Himmelman);
+            addHero("Denethor", 8, Sphere.Lore, 1, 1, 3, 3)
+                .WithTraits("Gondor.", "Noble.", "Steward.")
+                .WithText("Action: Exhaust Denethor to look at the top card of the encounter deck. You may move that card to the bottom of the deck.")
+                .WithFlavor("\"And the lord Denethor is unlike other men: he sees far.\"\r\n-Beregond, The Return of the King")
+                .WithTemplate("<p><b>Action:</b> Exhaust {self} to look at the top card of the encounter deck. You may move that card to the bottom of the deck.</p><p class='flavor-text'>&quot;And the lord Denethor is unlike other men: he sees far.&quot;<br>&ndash;Beregond, The Return of the King</p>")
+                .WithYear(2010)
+                .WithThumbnail()
+                .WithInfo(10, 1, Artist.Tiziano_Baracchi);
+            addHero("Glorfindel.", 12, Sphere.Lore, 3, 3, 1, 5)
+                .WithTraits("Noble.", "Noldor.", "Warrior.")
+                .WithText("Action: Pay 1 resource from Glorfindel's pool to heal 1 damage on any character. (Limit once per round.)")
+                .WithFlavor("\"You saw him for a moment as he is upon the other side: one of the mighty of the firstborn.\"\r\n-Gandalf, The Fellowship of the Ring")
+                .WithTemplate("<p class='main-text'><b>Action:</b> Pay 1 resource from {self}'s pool to heal 1 damage on any character. (Limit once per round.)</p><p class='flavor-text'>&quot;You saw him for a moment as he is upon the other side: one of the mighty of the firstborn.&quot;<br>&ndash;Gandalf, The Fellowship of the Ring</p>")
+                .WithYear(2010)
+                .WithThumbnail()
+                .WithInfo(11, 1, Artist.Katherine_Dinger);
+            addHero("Beravor", 10, Sphere.Lore, 2, 2, 2, 4)
+                .WithTraits("Dúnedain.", "Ranger.")
+                .WithText("Action: Exhaust Beravor to choose a player. That player draws 2 cards. Limit once per round.")
+                .WithFlavor("But in the wild lands beyond Bree there were mysterious wanderers. The Bree-folk called them Rangers, and knew nothing of their origin.\r\n-The Fellowship of the Ring")
+                .WithTemplate("<p><b>Action:</b> Exhaust {self} to choose a player. That player draws 2 cards. Limit once per round.</p><p class='flavor-text'>But in the wild lands beyond Bree there were mysterious wanderers. The Bree-folk called them Rangers, and knew nothing of their origin.<br>&ndash;The Fellowship of the Ring</p>")
+                .WithYear(2010)
+                .WithThumbnail()
+                .WithErrata()
+                .WithInfo(12, 1, Artist.Tiziano_Baracchi);
+            addAlly("Guard of the Citadel", 2, Sphere.Leadership, false, 1, 1, 0, 2)
+                .WithTraits("Gondor.", "Warrior.")
+                .WithFlavor("\"But the Lords of Minas Tirith still fight on, defying our enemies, keeping the passage of the River from Argonath to the Sea.\"\r\n-Elrond, The Fellowship of the Ring")
+                .WithTemplate("<p class='flavor-text'>&quot;But the Lords of Minas Tirith still fight on, defying our enemies, keeping the passage of the River from Argonath to the Sea.&quot;<br>&ndash;Elrond, The Fellowship of the Ring</p>")
+                .WithInfo(13, 3, Artist.Leonardo_Borazio);
+            addAlly("Faramir", 4, Sphere.Leadership, true, 2, 1, 2, 3)
+                .WithTraits("Gondor.", "Noble.", "Ranger.")
+                .WithText("Action: Exhaust Faramir to choose a player. Each character controlled by that player gets +1 Willpower until the end of the phase.")
+                .WithFlavor("\"He leads now in all perilous ventures. But his life is charmed, or fate spares him for some other end.\"\r\n-Mablung, Ranger of Ithilien,\r\nThe Two Towers")
+                .WithTemplate("<p class='main-text'><b>Action:</b> Exhaust {self} to choose a player. Each character controlled by that player gets +1 {Willpower} until the end of the phase.</p><p class='flavor-text'>&quot;He leads now in all perilous ventures. But his life is charmed, or fate spares him for some other end.&quot;<br>&ndash;Mablung, Ranger of Ithilien,<br>The Two Towers</p>")
+                .WithInfo(14, 2, Artist.Jeff_Himmelman);
+            addAlly("Son of Arnor", 3, Sphere.Leadership, false, 0, 2, 0, 2)
+                .WithTraits("Dúnedain.")
+                .WithText("Response: After Son of Arnor enters play, choose an enemy card in the staging area or currently engaged with another player. Engage that enemy.")
+                .WithFlavor("...and the North-realm they made in Arnor, and the South-realm in Gondor above the mouths of Anduin.\r\n-The Fellowship of the Ring")
+                .WithTemplate("<p class='main-text'><b>Response:</b> After {self} enters play, choose an enemy card in the staging area or currently engaged with another player. Engage that enemy.</p><p class='flavor-text'>...and the North-realm they made in Arnor, and the South-realm in Gondor above the mouths of Anduin.<br>&ndash;The Fellowship of the Ring</p>")
+                .WithInfo(15, 2, Artist.Ryan_Barger);
+            addAlly("Snowbourn Scout", 1, Sphere.Leadership, false, 0, 0, 1, 1)
+                .WithTraits("Rohan.", "Scout.")
+                .WithText("Response: After Snowbourn Scout enters play, choose a location. Place 1 progress token on that location.")
+                .WithFlavor("...he saw not a shadow, nor a blur, but the small figures of horsemen, many horsemen, and the glint of morning on the tips of their spears was like the twinkle of minute stars beyond the edge of mortal sight.\r\n-The Two Towers")
+                .WithTemplate("<p><b>Response:</b> After {self} enters play, choose a location. Place 1 progress token on that location.</p><p class='flavor-text'>...he saw not a shadow, nor a blur, but the small figures of horsemen, many horsemen, and the glint of morning on the tips of their spears was like the twinkle of minute stars beyond the edge of mortal sight.<br>&ndash;The Two Towers</p>")
+                .WithInfo(16, 3, Artist.David_Horne);
+            addAlly("Silverlode Archer", 3, Sphere.Leadership, false, 1, 2, 0, 1)
+                .WithTraits("Archer.", "Silvan.")
+                .WithKeywords("Ranged.")
+                .WithFlavor("\"We have been keeping watch on the rivers, ever since we saw a great troop of Orcs going north towards Moria, along the skirts of the mountains, many days ago.\"\r\n-Haldir of Lórien, The Fellowship of the Ring")
+                .WithTemplate("<p class='main-text'>{keyword:Ranged.}</p><p class='flavor-text'>&quot;We have been keeping watch on the rivers, ever since we saw a great troop of Orcs going north towards Moria, along the skirts of the mountains, many days ago.&quot;<br>&ndash;Haldir of Lórien, The Fellowship of the Ring</p>")
+                .WithInfo(17, 2, Artist.A_M_Sartor);
+            addAlly("Longbeard Orc Slayer", 4, Sphere.Leadership, false, 0, 2, 1, 3)
+                .WithTraits("Dwarf.", "Warrior.")
+                .WithText("Response: After Longbeard Orc Slayer enters play, deal 1 damage to each Orc enemy in play.")
+                .WithFlavor("Five dead Orcs lay there. They had been hewn with many cruel strokes, and two had been beheaded. The ground was wet with their dark blood.\r\n-The Two Towers")
+                .WithTemplate("<p class='main-text'><b>Response:</b> After {self} enters play, deal 1 damage to each Orc enemy in play.</p><p class='flavor-text'>Five dead Orcs lay there. They had been hewn with many cruel strokes, and two had been beheaded. The ground was wet with their dark blood.<br>&ndash;The Two Towers</p>")
+                .WithInfo(18, 2, Artist.Kaya);
+            addAlly("Brok Ironfist", 6, Sphere.Leadership, true, 2, 2, 1, 4)
+                .WithTraits("Dwarf.", "Warrior.")
+                .WithText("Response: After a Dwarf hero you control leaves play, put Brok Ironfist into play from your hand.")
+                .WithFlavor("...there is no knowing what a Dwarf will not dare and do for revenge and the recovery of his own.\r\n-The Hobbit")
+                .WithTemplate("<p class='main-text'><b>Response:</b> After a {trait-hero:Dwarf.@Dwarf} you control leaves play, put {self} into play from your hand.</p><p class='flavor-text'>...there is no knowing what a Dwarf will not dare and do for revenge and the recovery of his own.<br>&ndash;The Hobbit</p>")
+                .WithInfo(19, 1, Artist.Even_Mehl_Amundsen);
+            addEvent("Ever Vigilant", 1, Sphere.Leadership)
+                .WithText("Action: Choose and ready 1 ally card.")
+                .WithFlavor("\"...no road looks toward safety any longer. Be vigilant!\"\r\n-Gandalf, The Return of the King")
+                .WithInfo(20, 2, Artist.Daarken);
+            addEvent("Common Cause", 0, Sphere.Leadership)
+                .WithText("Action: Exhaust 1 hero you control to choose and ready a different hero.")
+                .WithFlavor("\"We will make such a chase as shall be accounted a marvel among the Three Kindreds: Elves, Dwarves, and Men.\"\r\n-Aragorn, The Two Towers")
+                .WithInfo(21, 2, Artist.Tony_Foti);
+            addEvent("For Gondor!", 2, Sphere.Leadership)
+                .WithText("Action: Until the end of the phase, all characters get +1 Attack. All Gondor characters also get +1 Defense until the end of the phase.")
+                .WithFlavor("And the tree that was withered shall be renewed,\r\nand he shall plant it in high places,\r\n\r\nand the City shall be blessed.\r\n-The Return of the King")
+                .WithTemplate("<p class='main-text'><b>Action:</b> Until the end of the phase, all characters get +1 {Attack}. All {trait:Gondor.@Gondor} characters also get +1 {Defense} until the end of the phase.</p><p class='flavor-text'>And the tree that was withered shall be renewed,<br>and he shall plant it in high places,<br>and the City shall be blessed.<br>&ndash;The Return of the King</p>")
+                .WithInfo(22, 2, Artist.Margaret_Hardy);
+            addEvent("Sneak Attack", 1, Sphere.Leadership)
+                .WithText("Action: Put 1 ally card into play from your hand. At the end of the phase, if that ally is still in play, return it to your hand.")
+                .WithFlavor("There is a seed of courage hidden (often deeply, it is true) in the heart of the fattest and most timid hobbit, waiting for some final and desperate danger to make it grow.\r\n-The Fellowship of the Ring")
+                .WithTemplate("<p class='main-text'><b>Action:</b> Put 1 {type:Ally@ally} card into play from your hand. At the end of the phase, if that ally is still in play, return it to your hand.</p><p class='flavor-text'>There is a seed of courage hidden (often deeply, it is true) in the heart of the fattest and most timid hobbit, waiting for some final and desperate danger to make it grow.<br>&ndash;The Fellowship of the Ring</p>")
+                .WithInfo(23, 2, Artist.Winona_Nelson);
+            addEvent("Valiant Sacrifice", 1, Sphere.Leadership)
+                .WithText("Response: After an ally card leaves play, that card's controller draws 2 cards.")
+                .WithFlavor("\"He fell defending the Hobbits, while I was away upon the hill.\"\r\n-Aragorn, The Two Towers")
+                .WithInfo(24, 2, Artist.David_A_Nash);
+            addEvent("Grim Resolve", 5, Sphere.Leadership)
+                .WithText("Action: Ready all character cards in play.")
+                .WithFlavor("\"If there is only one way, then I must take it. What comes after must come.\"\r\n-Frodo Baggins, The Two Towers")
+                .WithInfo(25, 1, Artist.Daarken);
+            addAttachment("Steward of Gondor", 2, Sphere.Leadership, true)
+                .WithTraits("Gondor.", "Title.")
+                .WithText("Attach to a hero. Attached hero gains the Gondor trait.\r\nAction: Exhaust Steward of Gondor to add 2 resources to attached hero's resource pool.")
+                .WithFlavor("\"It was commanded yesterday.\" -Denethor, The Return of the King")
+                .WithTemplate("<p class='main-text'>Attach to a hero.</p><p>Attached hero gains the {trait:Gondor.@Gondor} trait.</p><p><b>Action:</b> Exhaust {self} to add 2 resources to attached hero's resource pool.</p><p class='flavor-text'>&quot;It was commanded yesterday.&quot;<br>&ndash;Denethor, The Return of the King</p>")
+                .WithInfo(26, 2, Artist.Empty_Room_Studios);
+            addAttachment("Celebrían's Stone", 2, Sphere.Leadership, true)
+                .WithTraits("Artifact.", "Item.")
+                .WithKeywords("Restricted.")
+                .WithText("Attach to a hero.\r\nAttached hero gains +2 Willpower.\r\nIf attached hero is Aragorn, he also gains a Spirit resource icon.")
+                .WithFlavor("\"You needn't,\" said Bilbo. \"As a matter of fact it was all mine. Except that Aragorn insisted on my putting in a green stone. He seemed to think it important. I don't know why.\"\r\n-The Fellowship of the Ring")
+                .WithInfo(27, 1, Artist.Sara_Biddle);
 
-            addCard(new LotRCard() {
-                Title = "Éowyn",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9007",
-                CardType = CardType.Hero,
-                Sphere = Sphere.Spirit,
-                ThreatCost = 9,
-                IsUnique = true,
-                Attack = 1,
-                Defense = 1,
-                Willpower = 4,
-                HitPoints = 3,
-                Traits = new List<string>() { "Noble.", "Rohan." },
-                Text = "Action: Discard 1 card from your hand to give Éowyn +1 Willpower until the end of the phase. This effect may be triggered by each player once each round.",
-                HtmlTemplate = "<p><b>Action:</b> Discard 1 card from your hand to give Éowyn +1 {Willpower} until the end of the phase. This effect may be triggered by each player once each round.</p><p class='flavor-text'>Slender and tall she was in her white robe girt with silver; but strong she seemed and stern as steel, a daughter of kings.<br>&ndash;The Two Towers</p>",
-                Quantity = 1,
-                CardNumber = 7,
-                Artist = Artist.Gabrielle_Portal
-            }.WithThumbnail());
-            addCard(new LotRCard() {
-                Title = "Eleanor",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9008",
-                CardType = CardType.Hero,
-                Sphere = Sphere.Spirit,
-                ThreatCost = 7,
-                IsUnique = true,
-                Attack = 1,
-                Defense = 2,
-                Willpower = 1,
-                HitPoints = 3,
-                Traits = new List<string>() { "Gondor.", "Noble." },
-                Text = "Response: Exhaust Eleanor to cancel the 'when revealed' effects of a treachery card just revealed by the encounter deck. Then, discard that card, and replace it with the next card from the encounter deck.",
-                FlavorText = "\"Gondor wanes, you say. But Gondor stands, and even the end of its strength is very strong.\" -Boromir, The Fellowship of the Ring",
-                HtmlTemplate = "<p><b>Response:</b> Exhaust {self} to cancel the &quot;when revealed&quot; effects of a treachery card just revealed by the encounter deck. Then, discard that card, and replace it with the next card from the encounter deck.</p><p class='flavor-text'>&quot;Gondor wanes, you say. But Gondor stands, and even the end of its strength is very strong.&quot;<br>&ndash;Boromir, The Fellowship of the Ring</p>",
-                Quantity = 1,
-                CardNumber = 8,
-                Artist = Artist.Magali_Villeneuve,
-                HasErrata = true
-            }.WithThumbnail());
-            addCard(new LotRCard() {
-                Title = "Dúnhere",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9009",
-                CardType = CardType.Hero,
-                Sphere = Sphere.Spirit,
-                ThreatCost = 8,
-                IsUnique = true,
-                Attack = 2,
-                Defense = 1,
-                Willpower = 1,
-                HitPoints = 4,
-                Traits = new List<string>() { "Rohan.", "Warrior." },
-                Text = "Dúnhere can target enemies in the staging area when he attacks alone. When doing so, he gets +1 Attack.",
-                FlavorText = "Captains rode to meet him at the ford, bearing messages from Gandalf. Dúnhere, chieftain of the folk of Harrowdale, was at their head.\r\n-The Return of the King",
-                HtmlTemplate = "<p>{self} can target enemies in the staging area when he attacks alone. When doing so, he gets +1 {Attack}.</p><p class='flavor-text'>Captains rode to meet him at the ford, bearing messages from Gandalf. Dúnhere, chieftain of the folk of Harrowdale, was at their head.<br>&ndash;The Return of the King</p>",
-                Quantity = 1,
-                CardNumber = 9,
-                Artist = Artist.Jeff_Himmelman
-            }.WithThumbnail());
-            addCard(new LotRCard() {
-                Title = "Denethor",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9010",
-                CardType = CardType.Hero,
-                Sphere = Sphere.Lore,
-                ThreatCost = 8,
-                IsUnique = true,
-                Attack = 1,
-                Defense = 3,
-                Willpower = 1,
-                HitPoints = 3,
-                Traits = new List<string>() { "Gondor.", "Noble.", "Steward." },
-                Text = "Action: Exhaust Denethor to look at the top card of the encounter deck. You may move that card to the bottom of the deck.",
-                FlavorText = "\"And the lord Denethor is unlike other men: he sees far.\"\r\n-Beregond, The Return of the King",
-                HtmlTemplate = "<p><b>Action:</b> Exhaust {self} to look at the top card of the encounter deck. You may move that card to the bottom of the deck.</p><p class='flavor-text'>&quot;And the lord Denethor is unlike other men: he sees far.&quot;<br>&ndash;Beregond, The Return of the King</p>",
-                Quantity = 1,
-                CardNumber = 10,
-                Artist = Artist.Tiziano_Baracchi
-            }.WithThumbnail());
-            addCard(new LotRCard() {
-                Title = "Glorfindel",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9011",
-                CardType = CardType.Hero,
-                Sphere = Sphere.Lore,
-                ThreatCost = 12,
-                IsUnique = true,
-                Attack = 3,
-                Defense = 1,
-                Willpower = 3,
-                HitPoints = 5,
-                Traits = new List<string>() { "Noble.", "Noldor.", "Warrior." },
-                Text = "Action: Pay 1 resource from Glorfindel's pool to heal 1 damage on any character. (Limit once per round.)",
-                FlavorText = "\"You saw him for a moment as he is upon the other side: one of the mighty of the firstborn.\"\r\n-Gandalf, The Fellowship of the Ring",
-                HtmlTemplate = "<p><b>Action:</b> Pay 1 resource from {self}'s pool to heal 1 damage on any character. (Limit once per round.)</p><p class='flavor-text'>&quot;You saw him for a moment as he is upon the other side: one of the mighty of the firstborn.&quot;<br>&ndash;Gandalf, The Fellowship of the Ring</p>",
-                Quantity = 1,
-                CardNumber = 11,
-                Artist = Artist.Katherine_Dinger
-            }.WithThumbnail());
-            addCard(new LotRCard() {
-                Title = "Beravor",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9012",
-                CardType = CardType.Hero,
-                Sphere = Sphere.Lore,
-                ThreatCost = 10,
-                IsUnique = true,
-                Attack = 2,
-                Defense = 2,
-                Willpower = 2,
-                HitPoints = 4,
-                Traits = new List<string>() { "Dúnedain.", "Ranger." },
-                Text = "Action: Exhaust Beravor to choose a player. That player draws 2 cards. Limit once per round.",
-                FlavorText = "But in the wild lands beyond Bree there were mysterious wanderers. The Bree-folk called them Rangers, and knew nothing of their origin.\r\n-The Fellowship of the Ring",
-                HtmlTemplate = "<p><b>Action:</b> Exhaust {self} to choose a player. That player draws 2 cards. Limit once per round.</p><p class='flavor-text'>But in the wild lands beyond Bree there were mysterious wanderers. The Bree-folk called them Rangers, and knew nothing of their origin.<br>&ndash;The Fellowship of the Ring</p>",
-                Quantity = 1,
-                CardNumber = 12,
-                Artist = Artist.Tiziano_Baracchi,
-                HasErrata = true
-            }.WithThumbnail());
-            Cards.Add(new LotRCard() {
-                
-                Title = "Guard of the Citadel",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9013",
-                CardType = CardType.Ally,
-                Sphere = Sphere.Leadership,
-                ResourceCost = 2,
-                Attack = 1,
-                Defense = 0,
-                Willpower = 1,
-                HitPoints = 2,
-                Traits = new List<string>() { "Gondor.", "Warrior." },
-                FlavorText = "\"But the Lords of Minas Tirith still fight on, defying our enemies, keeping the passage of the River from Argonath to the Sea.\"\r\n-Elrond, The Fellowship of the Ring",
-                Quantity = 3,
-                HtmlTemplate = "<p class='flavor-text'>&quot;But the Lords of Minas Tirith still fight on, defying our enemies, keeping the passage of the River from Argonath to the Sea.&quot;<br>&ndash;Elrond, The Fellowship of the Ring</p>",
-                CardNumber = 13,
-                Artist = Artist.Leonardo_Borazio
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Faramir",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9014",
-                CardType = CardType.Ally,
-                Sphere = Sphere.Leadership,
-                ResourceCost = 4,
-                IsUnique = true,
-                Attack = 1,
-                Defense = 2,
-                Willpower = 2,
-                HitPoints = 3,
-                Traits = new List<string>() { "Gondor.", "Noble.", "Ranger." },
-                Text = "Action: Exhaust Faramir to choose a player. Each character controlled by that player gets +1 Willpower until the end of the phase.",
-                FlavorText = "\"He leads now in all perilous ventures. But his life is charmed, or fate spares him for some other end.\"\r\n-Mablung, Ranger of Ithilien,\r\nThe Two Towers",
-                HtmlTemplate = "<p><b>Action:</b> Exhaust {self} to choose a player. Each character controlled by that player gets +1 {Willpower} until the end of the phase.</p><p class='flavor-text'>&quot;He leads now in all perilous ventures. But his life is charmed, or fate spares him for some other end.&quot;<br>&ndash;Mablung, Ranger of Ithilien,<br>The Two Towers</p>",
-                Quantity = 2,
-                CardNumber = 14,
-                Artist = Artist.Jeff_Himmelman
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Son of Arnor",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9015",
-                CardType = CardType.Ally,
-                Sphere = Sphere.Leadership,
-                ResourceCost = 3,
-                Attack = 2,
-                Defense = 0,
-                Willpower = 0,
-                HitPoints = 2,
-                Traits = new List<string>() { "Dúnedain." },
-                Text = "Response: After Son of Arnor enters play, choose an enemy card in the staging area or currently engaged with another player. Engage that enemy.",
-                FlavorText = "...and the North-realm they made in Arnor, and the South-realm in Gondor above the mouths of Anduin. -The Fellowship of the Ring",
-                HtmlTemplate = "<p><b>Response:</b> After {self} enters play, choose an enemy card in the staging area or currently engaged with another player. Engage that enemy.</p><p class='flavor-text'>...and the North-realm they made in Arnor, and the South-realm in Gondor above the mouths of Anduin.<br>&ndash;The Fellowship of the Ring</p>",
-                Quantity = 2,
-                CardNumber = 15,
-                Artist = Artist.Ryan_Barger
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Snowbourn Scout",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9016",
-                CardType = CardType.Ally,
-                Sphere = Sphere.Leadership,
-                ResourceCost = 1,
-                Attack = 0,
-                Defense = 1,
-                Willpower = 0,
-                HitPoints = 1,
-                Traits = new List<string>() { "Rohan.", "Scout." },
-                Text = "Response: After Snowbourn Scout enters play, choose a location. Place 1 progress token on that location.",
-                FlavorText = "...he saw not a shadow, nor a blur, but the small figures of horsemen, many horsemen, and the glint of morning on the tips of their spears was like the twinkle of minute stars beyond the edge of mortal sight. -The Two Towers",
-                HtmlTemplate = "<p><b>Response:</b> After {self} enters play, choose a location. Place 1 progress token on that location.</p><p class='flavor-text'>...he saw not a shadow, nor a blur, but the small figures of horsemen, many horsemen, and the glint of morning on the tips of their spears was like the twinkle of minute stars beyond the edge of mortal sight.<br>&ndash;The Two Towers</p>",
-                Quantity = 3,
-                CardNumber = 16,
-                Artist = Artist.David_Horne
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Silverlode Archer",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9017",
-                CardType = CardType.Ally,
-                Sphere = Sphere.Leadership,
-                ResourceCost = 3,
-                Attack = 2,
-                Defense = 0,
-                Willpower = 1,
-                HitPoints = 1,
-                Traits = new List<string>() { "Archer.", "Silvan." },
-                Keywords = new List<string>() { "Ranged." },
-                FlavorText = "\"We have been keeping watch on the rivers, ever since we saw a great troop of Orcs going north towards Moria, along the skirts of the mountains, many days ago.\" -Haldir of Lórien, The Fellowship of the Ring",
-                HtmlTemplate = "<p>{keyword:Ranged.}</p><p class='flavor-text'>&quot;We have been keeping watch on the rivers, ever since we saw a great troop of Orcs going north towards Moria, along the skirts of the mountains, many days ago.&quot;<br>&ndash;Haldir of Lórien, The Fellowship of the Ring</p>",
-                Quantity = 2,
-                CardNumber = 17,
-                Artist = Artist.A_M_Sartor
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Longbeard Orc Slayer",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9018",
-                CardType = CardType.Ally,
-                Sphere = Sphere.Leadership,
-                ResourceCost = 4,
-                Attack = 2,
-                Defense = 1,
-                Willpower = 0,
-                HitPoints = 3,
-                Traits = new List<string>() { "Dwarf.", "Warrior." },
-                Text = "Response: After Longbeard Orc Slayer enters play, deal 1 damage to each Orc enemy in play.",
-                FlavorText = "Five dead Orcs lay there. They had been hewn with many cruel strokes, and two had been beheaded. The ground was wet with their dark blood.\r\n-The Two Towers",
-                HtmlTemplate = "<p><b>Response:</b> After {self} enters play, deal 1 damage to each Orc enemy in play.</p><p class='flavor-text'>Five dead Orcs lay there. They had been hewn with many cruel strokes, and two had been beheaded. The ground was wet with their dark blood.<br>&ndash;The Two Towers</p>",
-                Quantity = 2,
-                CardNumber = 18,
-                Artist = Artist.Kaya
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Brok Ironfist",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9019",
-                CardType = CardType.Ally,
-                Sphere = Sphere.Leadership,
-                ResourceCost = 6,
-                IsUnique = true,
-                Attack = 2,
-                Defense = 1,
-                Willpower = 2,
-                HitPoints = 4,
-                Traits = new List<string>() { "Dwarf.", "Warrior." },
-                Text = "Response: After a Dwarf hero you control leaves play, put Brok Ironfist into play from your hand.",
-                FlavorText = "...there is no knowing what a Dwarf will not dare and do for revenge and the recovery of his own.\r\n-The Hobbit",
-                HtmlTemplate = "<p><b>Response:</b> After a {trait-hero:Dwarf.@Dwarf} you control leaves play, put {self} into play from your hand.</p><p class='flavor-text'>...there is no knowing what a Dwarf will not dare and do for revenge and the recovery of his own.<br>&ndash;The Hobbit</p>",
-                Quantity = 1,
-                CardNumber = 19,
-                Artist = Artist.Even_Mehl_Amundsen
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Ever Vigilant",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9020",
-                CardType = CardType.Event,
-                Sphere = Sphere.Leadership,
-                ResourceCost = 1,
-                Text = "Action: Choose and ready 1 ally card.",
-                FlavorText = "\"...no road looks toward safety any longer. Be vigilant!\"\r\n-Gandalf, The Return of the King",
-                Quantity = 2,
-                CardNumber = 20,
-                Artist = Artist.Daarken
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Common Cause",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9021",
-                CardType = CardType.Event,
-                Sphere = Sphere.Leadership,
-                ResourceCost = 0,
-                Text = "Action: Exhaust 1 hero you control to choose and ready a different hero.",
-                FlavorText = "\"We will make such a chase as shall be accounted a marvel among the Three Kindreds: Elves, Dwarves, and Men.\"\r\n-Aragorn, The Two Towers",
-                Quantity = 2,
-                CardNumber = 21,
-                Artist = Artist.Tony_Foti
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "For Gondor!",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9022",
-                CardType = CardType.Event,
-                Sphere = Sphere.Leadership,
-                ResourceCost = 2,
-                Text = "Action: Until the end of the phase, all characters get +1 Attack. All Gondor characters also get +1 Defense until the end of the phase.",
-                FlavorText = 
-@"And the tree that was withered shall be renewed,
-and he shall plant it in high places,
-and the City shall be blessed.
--The Return of the King",
-                HtmlTemplate = "<p><b>Action:</b> Until the end of the phase, all characters get +1 {Attack}. All {trait:Gondor.@Gondor} characters also get +1 {Defense} until the end of the phase.</p><p class='flavor-text'>And the tree that was withered shall be renewed,<br>and he shall plant it in high places,<br>and the City shall be blessed.<br>&ndash;The Return of the King</p>",
-                Quantity = 2,
-                CardNumber = 22,
-                Artist = Artist.Margaret_Hardy
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Sneak Attack",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9023",
-                CardType = CardType.Event,
-                Sphere = Sphere.Leadership,
-                ResourceCost = 1,
-                Text = "Action: Put 1 ally card into play from your hand. At the end of the phase, if that ally is still in play, return it to your hand.",
-                FlavorText = "There is a seed of courage hidden (often deeply, it is true) in the heart of the fattest and most timid hobbit, waiting for some final and desperate danger to make it grow.\r\n-The Fellowship of the Ring",
-                HtmlTemplate = "<p><b>Action:</b> Put 1 {type:Ally@ally} card into play from your hand. At the end of the phase, if that ally is still in play, return it to your hand.</p><p class='flavor-text'>There is a seed of courage hidden (often deeply, it is true) in the heart of the fattest and most timid hobbit, waiting for some final and desperate danger to make it grow.<br>&ndash;The Fellowship of the Ring</p>",
-                Quantity = 2,
-                CardNumber = 23,
-                Artist = Artist.Winona_Nelson
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Valiant Sacrifice",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9024",
-                CardType = CardType.Event,
-                Sphere = Sphere.Leadership,
-                ResourceCost = 1,
-                Text = "Response: After an ally card leaves play, that card's controller draws 2 cards.",
-                FlavorText = "\"He fell defending the Hobbits, while I was away upon the hill.\"\r\n-Aragorn, The Two Towers",
-                Quantity = 2,
-                CardNumber = 24,
-                Artist = Artist.David_A_Nash
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Grim Resolve",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9025",
-                CardType = CardType.Event,
-                Sphere = Sphere.Leadership,
-                ResourceCost = 5,
-                Text = "Action: Ready all character cards in play.",
-                FlavorText = "\"If there is only one way, then I must take it. What comes after must come.\" -Frodo Baggins, The Two Towers",
-                Quantity = 1,
-                CardNumber = 25,
-                Artist = Artist.Daarken
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Steward of Gondor",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9026",
-                CardType = CardType.Attachment,
-                Sphere = Sphere.Leadership,
-                ResourceCost = 2,
-                IsUnique = true,
-                Traits = new List<string>() { "Gondor.", "Title." },
-                Text = "Attach to a hero. Attached hero gains the Gondor trait.\r\nAction: Exhaust Steward of Gondor to add 2 resources to attached hero's resource pool.",
-                FlavorText = "\"It was commanded yesterday.\" -Denethor, The Return of the King",
-                HtmlTemplate = "<p>Attach to a hero.</p><p>Attached hero gains the {trait:Gondor.@Gondor} trait.</p><p><b>Action:</b> Exhaust {self} to add 2 resources to attached hero's resource pool.</p><p class='flavor-text'>&quot;It was commanded yesterday.&quot;<br>&ndash;Denethor, The Return of the King</p>",
-                Quantity = 2,
-                CardNumber = 26,
-                Artist = Artist.Empty_Room_Studios
-            });
-            Cards.Add(new LotRCard() {
-                Title = "Celebrían's Stone",
-                Id = "51223bd0-ffd1-11df-a976-0801200c9027",
-                CardType = CardType.Attachment,
-                Sphere = Sphere.Leadership,
-                ResourceCost = 2,
-                IsUnique = true,
-                Traits = new List<string>() { "Artifact.", "Item." },
-                Text = "Attach to a hero.\r\nAttached hero gains +2 Willpower.\r\nIf attached hero is Aragorn, he also gains a Spirit resource icon.",
-                FlavorText = "\"You needn't,\" said Bilbo. \"As a matter of fact it was all mine. Except that Aragorn insisted on my putting in a green stone. He seemed to think it important. I don't know why.\"\r\n-The Fellowship of the Ring",
-                Keywords = new List<string>() { "Restricted." },
-                Quantity = 1,
-                CardNumber = 27,
-                Artist = Artist.Sara_Biddle
-            });
             Cards.Add(new LotRCard() {
                 
                 Title = "Veteran Axehand",
