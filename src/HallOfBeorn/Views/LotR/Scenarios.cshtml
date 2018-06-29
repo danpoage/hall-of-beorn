@@ -9,13 +9,12 @@
 
 @section scripts {
     <script type="text/javascript" src="/Scripts/highcharts.js" defer></script>
-    <script type="text/javascript" src="/Scripts/scenarios-1.0.3.js" defer></script>
+    <script type="text/javascript" src="/Scripts/scenarios-1.0.4.js" defer></script>
 }
 
 @if (@Model.Detail != null)
 {
-    <a href="/Cards/Scenarios">Back to Scenario List</a>
-    <br />
+    <a href="/Cards/Scenarios" class="scenario-view-link">Back to Scenario List</a>
     <h2><a href="@Model.Detail.CardsLink" target="_blank">@Model.Detail.Title</a></h2>
     
     <div>
@@ -132,9 +131,14 @@
 }
 else {
     if (@Model.View.HasValue && @Model.View.Value == ScenarioView.Map) {
-        <a href="/LotR/Scenarios?View=List">List View</a>
+        <a href="/LotR/Scenarios?View=List" class="scenario-view-link">List View</a>
+        <a href="/LotR/Scenarios?View=Charts" class="scenario-view-link">Charts View</a>
+    } else if (@Model.View.HasValue && @Model.View.Value == ScenarioView.Charts) {
+        <a href="/LotR/Scenarios?View=List" class="scenario-view-link">List View</a>
+        <a href="/LotR/Scenarios?View=Map" class="scenario-view-link">Map View</a> 
     } else {
-        <a href="/LotR/Scenarios?View=Map">Map View</a>
+        <a href="/LotR/Scenarios?View=Map" class="scenario-view-link">Map View</a>
+        <a href="/LotR/Scenarios?View=Charts" class="scenario-view-link">Charts View</a>
     }
     <br />
     <h2>Scenarios</h2>
@@ -147,28 +151,8 @@ else {
         </div>
         <!-- <img id="quest-map" alt="Middle-earth Quest Map" src="@Model.QuestMapUrl" /> -->
         <canvas id="quest-map" width="1125" height="1125" style="background-image:url('@Model.QuestMapUrl');"></canvas>
-    } else {
-        <div>
-        @foreach (var scenarioGroup in @Model.ScenarioGroups)
-        {
-            <div><h3>@scenarioGroup.Name</h3></div>
-            var lastProduct = string.Empty;
-            foreach (var scenario in @scenarioGroup.Scenarios)
-            {
-                if (@scenario.ProductName != lastProduct && @scenario.IsSubGroup) {
-                    <div class="scenario-sub-group">@scenario.ProductName</div>
-                }
-                lastProduct = scenario.ProductName;
-            <div>
-                <a title="Details for @scenario.Title" href="@scenario.Link">@scenario.Title</a>
-            </div>
-            }
-        }
-        </div>
-        <br />
-        <br />
-        <button id="toggleCharts">Show Charts</button>
-        <div id="chartsContainer" style="display:none">
+    } else if (@Model.View.HasValue && @Model.View.Value == ScenarioView.Charts) {
+        <div id="chartsContainer">
             <div><button id="easyModeButton" class="inactiveButton">Easy</button><button id="normalModeButton" class="activeButton">Normal</button><button id="nightmareModeButton" class="inactiveButton">Nightmare</button></div>
             <div style="margin-top:40px;" id="coreTotalsContainer"></div>
             <div style="margin-top:40px;" id="kdTotalsContainer"></div>
@@ -176,9 +160,48 @@ else {
             <div style="margin-top:40px;" id="voiTotalsContainer"></div>
             <div style="margin-top:40px;" id="tlrTotalsContainer"></div>
             <div style="margin-top:40px;" id="tghTotalsContainer"></div>
+            <div style="margin-top:40px;" id="tsohTotalsContainer"></div>
+            <div style="margin-top:40px;" id="tworTotalsContainer"></div>
             <div style="margin-top:40px;" id="hobbitTotalsContainer"></div>
             <div style="margin-top:40px;" id="lotrTotalsContainer"></div>
             <div style="margin-top:40px;" id="genConTotalsContainer"></div>
+        </div>
+    } else {
+        <div style="margin-bottom: 20px;">
+            <div style="float:left; margin: 4px 4px 4px 12px;">
+                @foreach (var scenarioGroup in @Model.ScenarioStandardGroups())
+                {
+                    <div><h3>@scenarioGroup.Name</h3></div>
+                    var lastProduct = string.Empty;
+                    foreach (var scenario in @scenarioGroup.Scenarios)
+                    {
+                        if (@scenario.ProductName != lastProduct && @scenario.IsSubGroup) {
+                            <div class="scenario-sub-group">@scenario.ProductName</div>
+                        }
+                        lastProduct = scenario.ProductName;
+                    <div>
+                        <a title="Details for @scenario.Title" href="@scenario.Link">@scenario.Title</a>
+                    </div>
+                    }
+                }
+            </div>
+            <div style="float:right; margin: 4px 12px 4px 4px;">
+                @foreach (var scenarioGroup in @Model.ScenarioSagaGroups())
+                {
+                    <div><h3>@scenarioGroup.Name</h3></div>
+                    var lastProduct = string.Empty;
+                    foreach (var scenario in @scenarioGroup.Scenarios)
+                    {
+                        if (@scenario.ProductName != lastProduct && @scenario.IsSubGroup) {
+                            <div class="scenario-sub-group">@scenario.ProductName</div>
+                        }
+                        lastProduct = scenario.ProductName;
+                    <div>
+                        <a title="Details for @scenario.Title" href="@scenario.Link">@scenario.Title</a>
+                    </div>
+                    }
+                }
+            </div>
         </div>
     }
 }

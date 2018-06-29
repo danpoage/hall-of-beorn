@@ -15,7 +15,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             IsSubGroup = true;
             Number = 16;
 
-            //QuestCompanionSlug = "http://lotr-lcg-quest-companion.com/.html";
+            QuestCompanionSlug = "the-lord-of-the-rings-the-mountain-of-fire-saga-expansion-quest-the-tower-of-cirith-ungol";
 
             AddEncounterSet(EncounterSet.TheTowerOfCirithUngol);
             AddEncounterSet(EncounterSet.OrcsOfMordor);

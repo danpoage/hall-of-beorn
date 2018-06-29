@@ -15,7 +15,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             IsSubGroup = true;
             Number = 18;
 
-            //QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/.html";
+            QuestCompanionSlug = "the-lord-of-the-rings-the-mountain-of-fire-saga-expansion-quest-mount-doom";
 
             AddEncounterSet(EncounterSet.MountDoom);
             AddEncounterSet(EncounterSet.DeepShadows);

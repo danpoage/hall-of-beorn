@@ -1703,3 +1703,9 @@ tr.pager td {
     font-size: 14px; 
     color: gray;
 }
+
+.scenario-view-link {
+    margin: 4px 8px 4px 8px; 
+    font-weight: bold; 
+    color: darkgrey;
+}

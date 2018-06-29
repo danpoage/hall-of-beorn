@@ -15,7 +15,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             IsSubGroup = true;
             Number = 17;
 
-            //QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/.html";
+            QuestCompanionSlug = "the-lord-of-the-rings-the-mountain-of-fire-saga-expansion-quest-the-black-gate-opens";
 
             AddEncounterSet(EncounterSet.TheBlackGateOpens);
             AddEncounterSet(EncounterSet.OrcsOfMordor);

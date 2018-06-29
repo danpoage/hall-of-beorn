@@ -6,6 +6,12 @@ $(function () {
 
     var scenarioChartInitialized = false;
     var chartsInitialized = false;
+
+    if (!chartsInitialized) {
+        loadCharts();
+        chartsInitialized = true;
+    }
+
     $('#toggleChart').click(function () {
         if (!scenarioChartInitialized) {
             var scenariosIndex = window.location.href.lastIndexOf("/Scenarios/");
@@ -21,7 +27,7 @@ $(function () {
         var newText = text == 'Show Chart' ? 'Hide Chart' : 'Show Chart';
         $('#toggleChart').html(newText);
     });
-    $('#toggleCharts').click(function () {
+    /*$('#toggleCharts').click(function () {
         if (!chartsInitialized) {
             loadCharts();
             chartsInitialized = true;
@@ -30,7 +36,7 @@ $(function () {
         var text = $('#toggleCharts').html();
         var newText = text == 'Show Charts' ? 'Hide Charts' : 'Show Charts';
         $('#toggleCharts').html(newText);
-    });
+    });*/
     $('#easyModeButton').click(function () {
         $('#easyModeButton').removeClass('inactiveButton').addClass('activeButton');
         $('#normalModeButton').removeClass('activeButton').addClass('inactiveButton');
@@ -841,13 +847,19 @@ function loadCharts() {
     $.get("/Cards/ScenarioTotals?id=The+Grey+Havens,Dream-chaser").success(function (data) {
         loadTotals('#tghTotalsContainer', 'The Grey Havens and Dream-chaser', data);
     });
+    $.get("/Cards/ScenarioTotals?id=The+Sands+of+Harad,Haradrim").success(function (data) {
+        loadTotals('#tsohTotalsContainer', 'The Sands of Harad and Haradrim', data);
+    });
+    $.get("/Cards/ScenarioTotals?id=The+Wilds+of+Rhovanion,Ered+Mithrin").success(function (data) {
+        loadTotals('#tworTotalsContainer', 'The Wilds of Rhovanion and Ered Mithrin', data);
+    });
     $.get("/Cards/ScenarioTotals?id=The+Hobbit").success(function (data) {
-        loadTotals('#hobbitTotalsContainer', 'The Hobbit', data);
+        loadTotals('#hobbitTotalsContainer', 'The Hobbit Saga', data);
     });
     $.get("/Cards/ScenarioTotals?id=The+Lord+of+the+Rings").success(function (data) {
-        loadTotals('#lotrTotalsContainer', 'The Lord of the Rings', data);
+        loadTotals('#lotrTotalsContainer', 'The Lord of the Rings Saga', data);
     });
-    $.get("/Cards/ScenarioTotals?id=GenCon").success(function (data) {
-        loadTotals('#genConTotalsContainer', 'GenCon', data);
+    $.get("/Cards/ScenarioTotals?id=Gen+Con+%26+Fellowship").success(function (data) {
+        loadTotals('#genConTotalsContainer', 'Gen Con & Fellowship', data);
     });
 }

@@ -9,6 +9,7 @@ namespace HallOfBeorn.Models.LotR
     {
         None = 0,
         List = 1,
-        Map = 2
+        Map = 2,
+        Charts = 3,
     }
 }

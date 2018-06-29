@@ -16,6 +16,24 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         public ScenarioViewModel Detail { get; set; }
         public List<ScenarioGroupViewModel> ScenarioGroups { get; set; }
 
+        public IEnumerable<ScenarioGroupViewModel> ScenarioStandardGroups()
+        {
+            return ScenarioGroups.Where(sg =>
+                sg.Name != "The Hobbit" &&
+                sg.Name != "The Lord of the Rings" &&
+                sg.Name != "Gen Con & Fellowship" &&
+                sg.Name != "First Age");
+        }
+
+        public IEnumerable<ScenarioGroupViewModel> ScenarioSagaGroups()
+        {
+            return ScenarioGroups.Where(sg =>
+                sg.Name == "The Hobbit" ||
+                sg.Name == "The Lord of the Rings" ||
+                sg.Name == "Gen Con & Fellowship" ||
+                sg.Name == "First Age");
+        }
+
         public string QuestMapUrl
         {
             get
