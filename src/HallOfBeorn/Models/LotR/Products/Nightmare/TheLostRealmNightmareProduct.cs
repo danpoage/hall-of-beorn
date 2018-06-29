@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.LotR.Products.Nightmare
     public class TheLostRealmNightmareProduct : Product
     {
         public TheLostRealmNightmareProduct()
-            : base("The Lost Realm Nightmare", "MEN35", ImageType.Jpg)
+            : base("The Lost Realm Nightmare", "MEN35", ImageType.Jpg, new DateTime(2016, 6, 2))
         {
             IsPremier = true;
             IsNewSubGroup = true;

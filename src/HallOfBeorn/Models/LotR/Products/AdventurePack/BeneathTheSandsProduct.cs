@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
     public class BeneathTheSandsProduct : Product
     {
         public BeneathTheSandsProduct()
-            : base("Beneath the Sands", "MEC58", ImageType.Png)
+            : base("Beneath the Sands", "MEC58", ImageType.Png, new DateTime(2017, 5, 1))
         {
             AddCardSet(CardSet.BeneathTheSands);
 

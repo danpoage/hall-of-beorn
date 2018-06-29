@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
     public class TheDungeonsOfCirithGuratProduct : Product
     {
         public TheDungeonsOfCirithGuratProduct()
-            : base("The Dungeons of Cirith Gurat", "MEC60", ImageType.Png)
+            : base("The Dungeons of Cirith Gurat", "MEC60", ImageType.Png, new DateTime(2018, 1, 1))
         {
             AddCardSet(CardSet.TheDungeonsOfCirithGurat);
 

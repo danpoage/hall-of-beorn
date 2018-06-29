@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.LotR.Products.PrintOnDemand
     public class AttackOnDolGuldurProduct : Product
     {
         public AttackOnDolGuldurProduct()
-            : base("Attack on Dol Guldur", "OP050", ImageType.Jpg)
+            : base("Attack on Dol Guldur", "OP050", ImageType.Jpg, new DateTime(2018, 2, 15))
         {
             AddCardSet(CardSet.AttackOnDolGuldur);
 

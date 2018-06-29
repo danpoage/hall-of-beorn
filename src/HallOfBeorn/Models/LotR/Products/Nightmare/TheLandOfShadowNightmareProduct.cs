@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.LotR.Products.Nightmare
     public class TheLandOfShadowNightmareProduct : Product
     {
         public TheLandOfShadowNightmareProduct()
-            : base("The Land of Shadow Nightmare", "MEN43", ImageType.Jpg)
+            : base("The Land of Shadow Nightmare", "MEN43", ImageType.Jpg, new DateTime(2017, 4, 1))
         {
             AddCardSet(CardSet.ThePassageOfTheMarshesNightmare);
             AddCardSet(CardSet.JourneyToTheCrossRoadsNightmare);

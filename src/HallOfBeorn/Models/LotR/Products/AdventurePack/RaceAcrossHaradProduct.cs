@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
     public class RaceAcrossHaradProduct : Product
     {
         public RaceAcrossHaradProduct()
-            : base("Race Across Harad", "MEC57", ImageType.Jpg)
+            : base("Race Across Harad", "MEC57", ImageType.Jpg, new DateTime(2017, 3, 15))
         {
             AddCardSet(CardSet.RaceAcrossHarad);
 

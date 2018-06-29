@@ -8,11 +8,8 @@ namespace HallOfBeorn.Models.LotR.Products.Deluxe
     public class TheWildsOfRhovanionProduct : Product
     {
         public TheWildsOfRhovanionProduct()
-            : base("The Wilds of Rhovanion", "MEC65", ImageType.Jpg)
+            : base("The Wilds of Rhovanion", "MEC65", ImageType.Jpg, new DateTime(2018, 6, 15))
         {
-            FirstReleased = new DateTime(2018, 6, 15);
-            RulesImageCount = 7;
-
             AddCardSet(CardSet.TheWildsOfRhovanion);
             AddScenario(new Scenarios.TheWildsOfRhovanion.JourneyUpTheAnduin());
             AddScenario(new Scenarios.TheWildsOfRhovanion.LostInMirkwood());

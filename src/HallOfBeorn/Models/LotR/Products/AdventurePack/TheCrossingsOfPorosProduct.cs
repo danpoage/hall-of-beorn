@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
     public class TheCrossingsOfPorosProduct : Product
     {
         public TheCrossingsOfPorosProduct()
-            : base("The Crossings of Poros", "MEC61", ImageType.Png)
+            : base("The Crossings of Poros", "MEC61", ImageType.Png, new DateTime(2018, 2, 1))
         {
             AddCardSet(CardSet.TheCrossingsOfPoros);
 

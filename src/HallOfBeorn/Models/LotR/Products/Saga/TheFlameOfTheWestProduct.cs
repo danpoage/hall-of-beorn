@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.LotR.Products.Saga
     public class TheFlameOfTheWestProduct : Product
     {
         public TheFlameOfTheWestProduct()
-            : base("The Flame of the West", "MEC54", ImageType.Jpg)
+            : base("The Flame of the West", "MEC54", ImageType.Jpg, new DateTime(2016, 8, 1))
         {
             AddCardSet(CardSet.TheFlameOfTheWest);
 

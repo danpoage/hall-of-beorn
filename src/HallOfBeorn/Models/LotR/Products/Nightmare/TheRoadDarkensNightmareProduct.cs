@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.LotR.Products.Nightmare
     public class TheRoadDarkensNightmareProduct : Product
     {
         public TheRoadDarkensNightmareProduct()
-            : base("The Road Darkens Nightmare", "MEN20", ImageType.Jpg)
+            : base("The Road Darkens Nightmare", "MEN20", ImageType.Jpg, new DateTime(2016, 3, 1))
         {
             AddCardSet(CardSet.TheRingGoesSouthNightmare);
             AddCardSet(CardSet.JourneyInTheDarkNightmare);

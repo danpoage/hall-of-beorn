@@ -9,11 +9,6 @@ namespace HallOfBeorn.Models.LotR
 {
     public class Product
     {
-        protected Product(string name, string code, ImageType imageType)
-            : this(name, code, imageType, DateTime.Now)
-        {
-        }
-
         protected Product(string name, string code, ImageType imageType, DateTime firstReleased)
         {
             this.Name = name;
@@ -49,7 +44,6 @@ namespace HallOfBeorn.Models.LotR
         public string RulesUrl { get; protected set; }
         public string BuyLink { get; protected set; }
         public DateTime FirstReleased { get; protected set; }
-        public int RulesImageCount { get; protected set; }
 
         public IEnumerable<CardSet> CardSets()
         {

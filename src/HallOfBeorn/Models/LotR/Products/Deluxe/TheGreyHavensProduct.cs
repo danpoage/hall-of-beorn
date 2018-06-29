@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.LotR.Products.Deluxe
     public class TheGreyHavensProduct : Product
     {
         public TheGreyHavensProduct()
-            : base("The Grey Havens", "MEC47", ImageType.Jpg)
+            : base("The Grey Havens", "MEC47", ImageType.Jpg, new DateTime(2016, 2, 1))
         {
             RulesUrl = "https://images-cdn.fantasyflightgames.com/filer_public/82/67/82674691-bd21-4e45-8a31-2749ca2e5bd9/mec47_rules.pdf";
 
