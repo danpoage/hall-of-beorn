@@ -64,6 +64,7 @@ namespace HallOfBeorn.Models.LotR
         public string Title { get; set; }
         public string ProductName { get; set; }
         public string RulesUrl { get; set; }
+        public int RulesImageCount { get; set; }
         public string AlternateTitle { get; set; }
 
         public string CardsLink { get; set; }
@@ -71,7 +72,12 @@ namespace HallOfBeorn.Models.LotR
         public string QuestCompanionSlug { get; set; }
         public string QuestCompanionUrl
         {
-            get { return string.Format("http://lotrlcgcompanion.com/{0}.html", QuestCompanionSlug); }
+            get
+            {
+                return !string.IsNullOrWhiteSpace(QuestCompanionSlug) ?
+                    string.Format("http://lotrlcgcompanion.com/{0}.html", QuestCompanionSlug)
+                    : string.Empty;
+            }
         }
 
         public string RulesReferenceUrl { get; protected set; }

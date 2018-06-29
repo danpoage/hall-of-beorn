@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheWildsOfRhovanion
             GroupName = "The Wilds of Rhovanion";
             Number = 3;
 
+            RulesImageCount = 7;
+
             AddEncounterSet(EncounterSet.FellBeasts);
             AddEncounterSet(EncounterSet.WildCreatures);
             AddEncounterSet(EncounterSet.DeepUnderground);

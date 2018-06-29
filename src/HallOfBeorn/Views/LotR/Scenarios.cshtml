@@ -46,12 +46,23 @@
     }
     </div>
     
-    if (!string.IsNullOrEmpty(@Model.Detail.RulesUrl) || !string.IsNullOrEmpty(@Model.Detail.QuestCompanionUrl))
+    if (!string.IsNullOrEmpty(@Model.Detail.RulesUrl) || !string.IsNullOrEmpty(@Model.Detail.QuestCompanionUrl) || @Model.Detail.HasRulesImages)
     {
         <h3>Resources</h3>
         if (!string.IsNullOrEmpty(@Model.Detail.RulesUrl))
         {
             <div><a title="@Model.Detail.RulesLabel" href="@Model.Detail.RulesUrl" target="_blank">Rules Sheet</a></div>
+        }
+        if (@Model.Detail.HasRulesImages)
+        {
+            var ruleImageNumber = 0;
+            @: <div><span>Rules: </span>
+            foreach (var ruleImageLink in @Model.Detail.RulesImageLinks())
+            {
+                ruleImageNumber++;
+                @: <a title="Rules Page @ruleImageNumber" href="@ruleImageLink" target="_blank" style="padding: 4px 6px 4px 6px;">Page @ruleImageNumber</a>
+            }
+            @: </div>
         }
         if (!string.IsNullOrEmpty(@Model.Detail.QuestCompanionUrl))
         {

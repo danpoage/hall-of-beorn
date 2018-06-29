@@ -7,13 +7,6 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 {
     public class ScenarioViewModel
     {
-        /*
-        public ScenarioViewModel(Scenario scenario)
-            : this(scenario, null)
-        {
-        }
-        */
-
         public ScenarioViewModel(Scenario scenario, Func<string, LotRCard> lookupCard, Func<string, IEnumerable<Category>> getPlayerCategories, Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, Func<string, IEnumerable<QuestCategory>> getQuestCategories)
         {
             _scenario = scenario;
@@ -68,6 +61,25 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             }
         }
         public string RulesUrl { get { return _scenario.RulesUrl; } }
+
+        
+        public bool HasRulesImages
+        {
+            get { return _scenario.RulesImageCount > 0; }
+        }
+
+        public IEnumerable<string> RulesImageLinks()
+        {
+            if (_scenario.RulesImageCount < 1)
+                yield return string.Empty;
+
+            var productName = _scenario.ProductName.ToUrlSafeString();
+
+            for (var i = 1; i <= _scenario.RulesImageCount; i++)
+            {
+                yield return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Rules/{0}/Rules-{1:00}.jpg", productName, i);
+            }
+        }
 
         public bool HasRulesReference { get { return !string.IsNullOrEmpty(_scenario.RulesReferenceUrl); } }
         public string RulesReferenceUrl { get { return _scenario.RulesReferenceUrl; } }

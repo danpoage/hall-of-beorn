@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheWildsOfRhovanion
             GroupName = "The Wilds of Rhovanion";
             Number = 2;
  
+            RulesImageCount = 7;
+
             AddEncounterSet(EncounterSet.DarkWoods);
             AddEncounterSet(EncounterSet.GatheringGloom);
             AddEncounterSet(EncounterSet.PassageThroughMirkwood);

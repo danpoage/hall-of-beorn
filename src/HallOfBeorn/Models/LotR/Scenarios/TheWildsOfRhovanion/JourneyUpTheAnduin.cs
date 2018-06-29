@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheWildsOfRhovanion
             ProductName = "The Wilds of Rhovanion";
             GroupName = "The Wilds of Rhovanion";
             Number = 1;
+            
+            RulesImageCount = 7;
 
             AddEncounterSet(EncounterSet.GreyMountainGoblins);
             AddEncounterSet(EncounterSet.HillsOfWilderland);
