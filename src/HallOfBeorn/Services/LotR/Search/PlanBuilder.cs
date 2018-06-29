@@ -45,7 +45,7 @@ namespace HallOfBeorn.Services.LotR.Search
             AddFilter(new StringBasicQueryFilter(model.BasicQuery()));
             AddFilter(new StringAdvancedQueryFilter(model.Query, advancedSearchService));
 
-            AddFilter(new StringExactFilter((score) => score.Card.Artist.Name, model.Artist));
+            AddFilter(new StringExactFilter((score) => score.Card.Artist != null ? score.Card.Artist.Name : string.Empty, model.Artist));
             
             AddFilter(new GenericFilter(model.CardSet, (score, target) => score.Card.MatchesCardSet(target)));
             AddFilter(new GenericFilter(model.Scenario, (score, target) =>  scenarioService.BelongsToScenario(score.Card.Slug, score.Card.CardType, target)));
