@@ -344,7 +344,7 @@
     <Compile Include="Models\LotR\Products\Nightmare\TheTreasonOfSarumanNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheWastesOfEriadorNightmareProduct.cs" />
     <Compile Include="Models\LotR\Scenarios\DreamChaser\AStormOnCobasHaven.cs" />
-    <Compile Include="Models\LotR\Scenarios\Haradrim\BeneathTheSands.cs" />
+    <Compile Include="Models\LotR\Scenarios\Haradrim\BeneathTheSandsScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\Haradrim\TheCrossingsOfPorosScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\Haradrim\TheBlackSerpentScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\Haradrim\TheDungeonsOfCirithGuratScenario.cs" />
@@ -354,10 +354,10 @@
     <Compile Include="Models\LotR\Scenarios\TheLordOfTheRings\TheTowerOfCirithUngol.cs" />
     <Compile Include="Models\LotR\Scenarios\TheSandsOfHarad\DesertCrossing.cs" />
     <Compile Include="Models\LotR\Scenarios\TheSandsOfHarad\EscapeFromUmbar.cs" />
-    <Compile Include="Models\LotR\Scenarios\Haradrim\RaceAcrossHarad.cs" />
+    <Compile Include="Models\LotR\Scenarios\Haradrim\RaceAcrossHaradScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\DreamChaser\TheCityOfCorsairs.cs" />
     <Compile Include="Models\LotR\Scenarios\TheSandsOfHarad\TheLongArmOfMordor.cs" />
-    <Compile Include="Models\LotR\Scenarios\Haradrim\TheMumakil.cs" />
+    <Compile Include="Models\LotR\Scenarios\Haradrim\TheMumakilScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\TheSandsOfHarad\TheSandsOfHaradScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\TheWildsOfRhovanion\JourneyUpTheAnduin.cs" />
     <Compile Include="Models\LotR\Scenarios\TheWildsOfRhovanion\LostInMirkwood.cs" />

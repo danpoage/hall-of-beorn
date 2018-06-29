@@ -7,6 +7,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Title = "A Knife in the Dark";
             ProductName = "The Black Riders";
             GroupName = "The Lord of the Rings";
+            IsSubGroup = true;
             Number = 2;
 
             QuestCompanionSlug = "lotr-the-black-riders-quest-a-knife-in-the-dark";

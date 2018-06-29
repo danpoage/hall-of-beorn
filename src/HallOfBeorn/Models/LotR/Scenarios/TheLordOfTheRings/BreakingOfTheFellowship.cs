@@ -7,6 +7,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Title = "Breaking of the Fellowship";
             ProductName = "The Road Darkens";
             GroupName = "The Lord of the Rings";
+            IsSubGroup = true;
             Number = 6;
 
             QuestCompanionSlug = "lotr-the-road-darkens-quest-breaking-of-the-fellowship";

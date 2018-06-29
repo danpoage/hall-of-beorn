@@ -7,6 +7,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Title = "The Passage of the Marshes";
             ProductName = "The Land of Shadow";
             GroupName = "The Lord of the Rings";
+            IsSubGroup = true;
             Number = 10;
 
             QuestCompanionSlug = "lotr-the-land-of-shadow-saga-expansion-quest-the-passage-of-the-marshes";

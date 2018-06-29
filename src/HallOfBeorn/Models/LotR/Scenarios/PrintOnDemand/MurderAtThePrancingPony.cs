@@ -11,8 +11,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             : base()
         {
             Title = "Murder at the Prancing Pony";
-            ProductName = "Murder at the Prancing Pony";
-            GroupName = "GenCon";
+            ProductName = "2015";
+            GroupName = "Gen Con & Fellowship";
             Number = 6;
 
             QuestCompanionSlug = "print-on-demand-quest-murder-at-the-prancing-pony";

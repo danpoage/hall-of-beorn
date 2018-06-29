@@ -7,6 +7,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Title = "Journey in the Dark";
             ProductName = "The Road Darkens";
             GroupName = "The Lord of the Rings";
+            IsSubGroup = true;
             Number = 5;
 
             QuestCompanionSlug = "lotr-the-road-darkens-quest-journey-in-the-dark";

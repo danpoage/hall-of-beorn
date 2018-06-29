@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Haradrim
             GroupName = "Haradrim";
             Number = 4;
 
-            //QuestCompanionSlug = "";
+            QuestCompanionSlug = "haradrim-cycle-quest-the-black-serpent";
 
             AddEncounterSet(EncounterSet.TheBlackSerpent);
             AddEncounterSet(EncounterSet.HaradSoldiers);

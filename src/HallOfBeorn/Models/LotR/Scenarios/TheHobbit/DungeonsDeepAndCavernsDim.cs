@@ -7,6 +7,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             Title = "Dungeons Deep and Caverns Dim";
             ProductName = "The Hobbit: Over Hill and Under Hill";
             GroupName = "The Hobbit";
+            IsSubGroup = true;
             Number = 3;
 
             QuestCompanionSlug = "the-hobbit-over-hill-and-under-hill-quest-dungeons-deep-and-caverns-dim";

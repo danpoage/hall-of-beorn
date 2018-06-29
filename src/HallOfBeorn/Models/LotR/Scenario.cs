@@ -61,6 +61,8 @@ namespace HallOfBeorn.Models.LotR
 
         public int Number { get; set; }
         public string GroupName { get; set; }
+        public bool IsSubGroup { get; set; }
+        //public string SubGroupName
         public string Title { get; set; }
         public string ProductName { get; set; }
         public string RulesUrl { get; set; }
@@ -75,7 +77,7 @@ namespace HallOfBeorn.Models.LotR
             get
             {
                 return !string.IsNullOrWhiteSpace(QuestCompanionSlug) ?
-                    string.Format("http://lotrlcgcompanion.com/{0}.html", QuestCompanionSlug)
+                    string.Format("http://www.lotr-lcg-quest-companion.gamersdungeon.net/{0}.html", QuestCompanionSlug)
                     : string.Empty;
             }
         }

@@ -7,6 +7,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             Title = "Over the Misty Mountains Grim";
             ProductName = "The Hobbit: Over Hill and Under Hill";
             GroupName = "The Hobbit";
+            IsSubGroup = true;
             Number = 2;
 
             QuestCompanionSlug = "the-hobbit-over-hill-and-under-hill-quest-over-the-misty-mountains-grim";

@@ -5,8 +5,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
         public TheOldForest()
         {
             Title = "The Old Forest";
-            ProductName = "The Old Forest";
-            GroupName = "GenCon";
+            ProductName = "2014";
+            GroupName = "Gen Con & Fellowship";
+            IsSubGroup = true;
             Number = 4;
 
             QuestCompanionSlug = "print-on-demand-quest-the-old-forest";

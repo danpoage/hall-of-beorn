@@ -13,8 +13,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
         {
             Title = setName;
             AlternateTitle = "Assault on Dol Guldur";
-            ProductName = setName;
-            GroupName = "GenCon";
+            ProductName = "2017";
+            GroupName = "Gen Con & Fellowship";
+            IsSubGroup = true;
             Number = 8;
 
             QuestCompanionSlug = "print-on-demand-quest-the-massing-at-osgiliath";

@@ -10,8 +10,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
         public TheSiegeOfAnnuminas()
         {
             Title = "The Siege of Annúminas";
-            ProductName = "The Siege of Annúminas";
-            GroupName = "GenCon";
+            ProductName = "2016";
+            GroupName = "Gen Con & Fellowship";
+            IsSubGroup = true;
             Number = 7;
 
             QuestCompanionSlug = "print-on-demand-quest-the-siege-of-annuminas";

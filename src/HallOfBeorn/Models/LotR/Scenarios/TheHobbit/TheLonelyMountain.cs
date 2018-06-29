@@ -7,6 +7,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             Title = "The Lonely Mountain";
             ProductName = "The Hobbit: On the Doorstep";
             GroupName = "The Hobbit";
+            IsSubGroup = true;
             Number = 5;
 
             QuestCompanionSlug = "the-hobbit-on-the-doorstep-quest-the-lonely-mountain";

@@ -7,6 +7,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Title = "The Ring Goes South";
             ProductName = "The Road Darkens";
             GroupName = "The Lord of the Rings";
+            IsSubGroup = true;
             Number = 4;
 
             QuestCompanionSlug = "lotr-the-road-darkens-quest-the-ring-goes-south";

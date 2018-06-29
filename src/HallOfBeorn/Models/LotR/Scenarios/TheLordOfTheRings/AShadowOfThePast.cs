@@ -7,6 +7,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Title = "A Shadow of the Past";
             ProductName = "The Black Riders";
             GroupName = "The Lord of the Rings";
+            IsSubGroup = true;
             Number = 1;
 
             QuestCompanionSlug = "lotr-the-black-riders-quest-a-shadow-of-the-past";

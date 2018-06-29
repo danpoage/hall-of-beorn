@@ -7,6 +7,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             Title = "The Battle of Five Armies";
             ProductName = "The Hobbit: On the Doorstep";
             GroupName = "The Hobbit";
+            IsSubGroup = true;
             Number = 6;
 
             QuestCompanionSlug = "the-hobbit-on-the-doorstep-quest-the-battle-of-five-armies";

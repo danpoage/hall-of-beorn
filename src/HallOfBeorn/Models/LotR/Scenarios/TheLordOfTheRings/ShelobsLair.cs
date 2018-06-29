@@ -7,6 +7,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Title = "Shelob's Lair";
             ProductName = "The Land of Shadow";
             GroupName = "The Lord of the Rings";
+            IsSubGroup = true;
             Number = 12;
 
             QuestCompanionSlug = "lotr-the-land-of-shadow-saga-expansion-quest-shelobs-lair";

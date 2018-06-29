@@ -5,16 +5,16 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Scenarios.Haradrim
 {
-    public class RaceAcrossHarad : Scenarios.TheSandsOfHarad.TheSandsOfHaradScenario
+    public class RaceAcrossHaradScenario : Scenarios.TheSandsOfHarad.TheSandsOfHaradScenario
     {
-        public RaceAcrossHarad()
+        public RaceAcrossHaradScenario()
         {
             Title = "Race Across Harad";
             ProductName = "Race Across Harad";
             GroupName = "Haradrim";
             Number = 2;
 
-            //QuestCompanionSlug = "";
+            QuestCompanionSlug = "haradrim-cycle-quest-race-across-harad";
 
             AddEncounterSet(EncounterSet.RaceAcrossHarad);
             AddEncounterSet(EncounterSet.MordorOrcs);

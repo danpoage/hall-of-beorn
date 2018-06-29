@@ -88,6 +88,9 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         public string RulesLabel { get { return string.Format("Rules Sheet for {0}", _scenario.ProductName); } }
         public string QuestCompanionUrl { get { return _scenario.QuestCompanionUrl; } }
 
+        public string GroupName { get { return _scenario.GroupName; } }
+        public bool IsSubGroup { get { return _scenario.IsSubGroup; } }
+        public string ProductName { get { return _scenario.ProductName; } }
         public ScenarioCardViewModel CampaignCard { get { return _campaignCard; } }
         public List<ScenarioQuestViewModel> QuestCards { get { return _questCards; } }
         public List<ScenarioCardViewModel> ScenarioCards { get { return _scenarioCards; } }

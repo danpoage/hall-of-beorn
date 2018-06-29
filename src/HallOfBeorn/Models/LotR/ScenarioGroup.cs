@@ -24,6 +24,7 @@ namespace HallOfBeorn.Models.LotR
         private readonly List<Scenario> scenarios = new List<Scenario>();
 
         public string Name { get; set; }
+        
         public IEnumerable<Scenario> Scenarios
         {
             get

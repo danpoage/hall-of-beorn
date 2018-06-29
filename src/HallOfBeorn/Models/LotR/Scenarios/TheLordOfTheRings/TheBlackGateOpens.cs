@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Title = "The Black Gate Opens";
             ProductName = "The Mountain of Fire";
             GroupName = "The Lord of the Rings";
+            IsSubGroup = true;
             Number = 17;
 
             //QuestCompanionUrl = "http://lotr-lcg-quest-companion.com/.html";

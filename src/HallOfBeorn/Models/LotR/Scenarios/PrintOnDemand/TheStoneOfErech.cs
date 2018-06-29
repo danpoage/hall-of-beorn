@@ -5,8 +5,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
         public TheStoneOfErech()
         {
             Title = "The Stone of Erech";
-            ProductName = "The Stone of Erech GenCon 2013";
-            GroupName = "GenCon";
+            ProductName = "2013";
+            GroupName = "Gen Con & Fellowship";
+            IsSubGroup = true;
             Number = 3;
 
             QuestCompanionSlug = "print-on-demand-quest-the-stone-of-erech";
@@ -16,8 +17,6 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             AddQuestCardId("The-Disappearance-TSoE");
             AddQuestCardId("Terror-of-the-Dead-TSoE");
             AddQuestCardId("The-Shadow-Host-TSoE");
-
-
         }
     }
 }

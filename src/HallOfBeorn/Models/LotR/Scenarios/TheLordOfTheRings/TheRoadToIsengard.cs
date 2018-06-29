@@ -7,6 +7,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Title = "The Road to Isengard";
             ProductName = "The Treason of Saruman";
             GroupName = "The Lord of the Rings";
+            IsSubGroup = true;
             Number = 9;
 
             QuestCompanionSlug = "lotr-the-treason-of-saruman-saga-expansion-quest-the-road-to-isengard";

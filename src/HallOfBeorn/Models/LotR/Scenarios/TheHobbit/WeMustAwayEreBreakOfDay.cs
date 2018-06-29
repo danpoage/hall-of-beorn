@@ -7,6 +7,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             Title = "We Must Away, Ere Break of Day";
             ProductName = "The Hobbit: Over Hill and Under Hill";
             GroupName = "The Hobbit";
+            IsSubGroup = true;
             Number = 1;
 
             QuestCompanionSlug = "the-hobbit-over-hill-and-under-hill-quest-we-must-away-ere-break-of-day";

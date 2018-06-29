@@ -5,8 +5,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
         public TheRuinsOfBelegost()
         {
             Title = "The Ruins of Belegost";
-            ProductName = "The Ruins of Belegost";
-            GroupName = "GenCon";
+            ProductName = "2015";
+            GroupName = "Gen Con & Fellowship";
+            IsSubGroup = true;
             Number = 6;
 
             QuestCompanionSlug = "print-on-demand-quest-the-ruins-of-belegost";

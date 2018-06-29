@@ -5,8 +5,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
         public FogOnTheBarrowDowns()
         {
             Title = "Fog on the Barrow-downs";
-            ProductName = "Fog on the Barrow-downs";
-            GroupName = "GenCon";
+            ProductName = "2014";
+            GroupName = "Gen Con & Fellowship";
             Number = 5;
 
             QuestCompanionSlug = "print-on-demand-quest-fog-on-the-barrow-downs";

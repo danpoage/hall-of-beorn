@@ -15,7 +15,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Haradrim
             Number = 6;
 
             RulesUrl = string.Empty;
-            //QuestCompanionSlug = "";
+            QuestCompanionSlug = "haradrim-cycle-quest-the-crossing-of-poros";
 
             AddEncounterSet(EncounterSet.TheCrossingsOfPoros);
             AddEncounterSet(EncounterSet.MountainsOfShadow);

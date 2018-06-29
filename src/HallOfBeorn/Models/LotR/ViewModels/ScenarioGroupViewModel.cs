@@ -18,7 +18,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             }
         }
 
-        public string Name { get; set; }
+        public string Name { get; private set; }
         public List<ScenarioViewModel> Scenarios { get; private set; }
     }
 }

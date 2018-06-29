@@ -7,6 +7,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Title = "Flight to the Ford";
             ProductName = "The Black Riders";
             GroupName = "The Lord of the Rings";
+            IsSubGroup = true;
             Number = 3;
 
             QuestCompanionSlug = "lotr-the-black-riders-quest-flight-to-the-ford";

@@ -5,16 +5,16 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Scenarios.Haradrim
 {
-    public class BeneathTheSands : Scenarios.TheSandsOfHarad.TheSandsOfHaradScenario
+    public class BeneathTheSandsScenario : Scenarios.TheSandsOfHarad.TheSandsOfHaradScenario
     {
-        public BeneathTheSands()
+        public BeneathTheSandsScenario()
         {
             Title = "Beneath the Sands";
             ProductName = "Beneath the Sands";
             GroupName = "Haradrim";
             Number = 3;
 
-            //QuestCompanionSlug = "";
+            QuestCompanionSlug = "haradrim-cycle-quest-beneath-the-sands";
 
             AddEncounterSet(EncounterSet.BeneathTheSands);
             AddEncounterSet(EncounterSet.DesertCreatures);

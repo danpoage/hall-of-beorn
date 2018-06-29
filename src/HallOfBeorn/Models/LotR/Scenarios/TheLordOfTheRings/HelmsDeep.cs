@@ -7,6 +7,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Title = "Helm's Deep";
             ProductName = "The Treason of Saruman";
             GroupName = "The Lord of the Rings";
+            IsSubGroup = true;
             Number = 8;
 
             QuestCompanionSlug = "lotr-the-treason-of-saruman-saga-expansion-quest-helms-deep";

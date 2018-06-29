@@ -7,6 +7,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             Title = "Flies and Spiders";
             ProductName = "The Hobbit: On the Doorstep";
             GroupName = "The Hobbit";
+            IsSubGroup = true;
             Number = 4;
 
             QuestCompanionSlug = "the-hobbit-on-the-doorstep-quest-flies-and-spiders";

@@ -12,8 +12,10 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Title = "The Battle of the Pelennor Fields";
             ProductName = "The Flame of the West";
             GroupName = "The Lord of the Rings";
+            IsSubGroup = true;
             Number = 15;
 
+            RulesUrl = "https://images-cdn.fantasyflightgames.com/filer_public/03/0a/030a4e90-544d-4d24-a160-c5e05f34c778/mec56_rule_set.pdf";
             QuestCompanionSlug = "lotr-the-flame-of-the-west-saga-expansion-quest-the-battle-of-the-pelennor-fields";
 
             AddEncounterSet(EncounterSet.TheBattleOfThePelennorFields);

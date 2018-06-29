@@ -7,6 +7,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Title = "The Uruk-hai";
             ProductName = "The Treason of Saruman";
             GroupName = "The Lord of the Rings";
+            IsSubGroup = true;
             Number = 7;
 
             QuestCompanionSlug = "lotr-the-treason-of-saruman-saga-expansion-quest-the-uruk-hai";

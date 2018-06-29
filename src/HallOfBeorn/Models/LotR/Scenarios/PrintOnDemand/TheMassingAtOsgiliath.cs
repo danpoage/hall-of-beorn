@@ -5,8 +5,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
         public TheMassingAtOsgiliath()
         {
             Title = "The Massing at Osgiliath";
-            ProductName = "The Massing at Osgiliath GenCon 2011";
-            GroupName = "GenCon";
+            ProductName = "2011";
+            GroupName = "Gen Con & Fellowship";
+            IsSubGroup = true;
             Number = 1;
 
             QuestCompanionSlug = "print-on-demand-quest-the-massing-at-osgiliath";

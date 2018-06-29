@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Title = "The Tower of Cirith Ungol";
             ProductName = "The Mountain of Fire";
             GroupName = "The Lord of the Rings";
+            IsSubGroup = true;
             Number = 16;
 
             //QuestCompanionSlug = "http://lotr-lcg-quest-companion.com/.html";

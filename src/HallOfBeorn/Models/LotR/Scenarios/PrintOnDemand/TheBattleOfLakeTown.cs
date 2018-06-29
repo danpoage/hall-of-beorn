@@ -6,8 +6,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
         {
             Title = "The Battle of Lake-town";
             AlternateTitle = "The Battle of Lake-Town";
-            ProductName = "The Battle of Lake-town GenCon 2012";
-            GroupName = "GenCon";
+            ProductName = "2012";
+            GroupName = "Gen Con & Fellowship";
+            IsSubGroup = true;
             Number = 2;
 
             QuestCompanionSlug = "print-on-demand-quest-the-battle-of-laketown";

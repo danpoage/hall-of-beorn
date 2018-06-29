@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
 
             AddCardSet(CardSet.TheMumakil);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.Haradrim.TheMumakil());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.Haradrim.TheMumakilScenario());
         }
     }
 }

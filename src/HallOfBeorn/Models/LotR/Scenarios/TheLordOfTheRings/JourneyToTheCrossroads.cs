@@ -7,6 +7,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Title = "Journey to the Cross-roads";
             ProductName = "The Land of Shadow";
             GroupName = "The Lord of the Rings";
+            IsSubGroup = true;
             Number = 11;
 
             QuestCompanionSlug = "lotr-the-land-of-shadow-saga-expansion-quest-journey-to-the-cross-roads";
