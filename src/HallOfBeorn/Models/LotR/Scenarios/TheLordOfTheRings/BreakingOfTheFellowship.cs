@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Number = 6;
 
             QuestCompanionSlug = "lotr-the-road-darkens-quest-breaking-of-the-fellowship";
+            DifficultyRating = 7.0f;
+            Votes = 22;
 
             AddEncounterSet(EncounterSet.BreakingOfTheFellowship);
             AddEncounterSet(EncounterSet.BreakingOfTheFellowshipNightmare);

@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
             Number = 2;
 
             QuestCompanionSlug = "against-the-shadow-quest-the-druadan-forest";
+            DifficultyRating = 5.6f;
+            Votes = 54;
 
             AddEncounterSet(EncounterSet.BroodingForest);
             AddEncounterSet(EncounterSet.TheDruadanForest);

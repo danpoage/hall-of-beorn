@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Number = 3;
 
             QuestCompanionSlug = "lotr-the-black-riders-quest-flight-to-the-ford";
+            DifficultyRating = 5.6f;
+            Votes = 38;
 
             AddEncounterSet(EncounterSet.FlightToTheFord);
             AddEncounterSet(EncounterSet.FlightToTheFordNightmare);

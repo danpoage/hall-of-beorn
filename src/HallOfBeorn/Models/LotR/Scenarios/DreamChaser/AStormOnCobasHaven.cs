@@ -15,6 +15,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DreamChaser
             Number = 5;
 
             QuestCompanionSlug = "the-dream-chaser-quest-a-storm-on-cobas-haven";
+            DifficultyRating = 7.8f;
+            Votes = 12;
 
             AddEncounterSet(EncounterSet.AStormOnCobasHaven);
             AddEncounterSet(EncounterSet.CorsairRaiders);

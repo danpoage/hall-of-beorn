@@ -15,6 +15,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheSandsOfHarad
             Number = 3;
 
             QuestCompanionSlug = "sands-of-harad-quest-the-long-arm-of-mordor";
+            DifficultyRating = 6.9f;
+            Votes = 8;
 
             AddEncounterSet(EncounterSet.TheLongArmOfMordor);
             AddEncounterSet(EncounterSet.MordorOrcs);

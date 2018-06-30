@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             Number = 1;
 
             QuestCompanionSlug = "the-ring-maker-quest-the-dunland-trap";
+            DifficultyRating = 7.5f;
+            Votes = 42;
 
             AddEncounterSet(EncounterSet.DunlandWarriors);
             AddEncounterSet(EncounterSet.TheDunlandTrap);

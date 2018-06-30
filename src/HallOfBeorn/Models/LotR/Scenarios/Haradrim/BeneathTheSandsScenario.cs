@@ -15,6 +15,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Haradrim
             Number = 3;
 
             QuestCompanionSlug = "haradrim-cycle-quest-beneath-the-sands";
+            DifficultyRating = 6.0f;
+            Votes = 3;
 
             AddEncounterSet(EncounterSet.BeneathTheSands);
             AddEncounterSet(EncounterSet.DesertCreatures);

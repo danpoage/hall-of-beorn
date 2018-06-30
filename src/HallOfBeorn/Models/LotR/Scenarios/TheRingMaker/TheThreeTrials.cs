@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             Number = 2;
 
             QuestCompanionSlug = "the-ring-maker-quest-the-three-trials";
+            DifficultyRating = 7.2f;
+            Votes = 30;
 
             AddEncounterSet(EncounterSet.AncientForest);
             AddEncounterSet(EncounterSet.TheThreeTrials);

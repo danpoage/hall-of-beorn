@@ -15,6 +15,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DreamChaser
             Number = 6;
 
             QuestCompanionSlug = "the-dream-chaser-quest-the-city-of-corsairs";
+            DifficultyRating = 7.2f;
+            Votes = 12;
 
             AddEncounterSet(EncounterSet.TheCityOfCorsairs);
             AddEncounterSet(EncounterSet.CoastOfUmbar);

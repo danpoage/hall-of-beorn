@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
             Number = 1;
 
             QuestCompanionSlug = "against-the-shadow-quest-the-stewards-fear";
+            DifficultyRating = 6.2f;
+            Votes = 54;
 
             AddEncounterSet(EncounterSet.Brigands);
             AddEncounterSet(EncounterSet.StreetsOfGondor);

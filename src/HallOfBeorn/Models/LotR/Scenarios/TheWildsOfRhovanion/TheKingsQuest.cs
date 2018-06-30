@@ -15,6 +15,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheWildsOfRhovanion
             Number = 3;
 
             RulesImageCount = 7;
+            //QuestCompanionSlug = "";
+            //DifficultyRating = 7.6f;
+            //Votes = 5;
 
             AddEncounterSet(EncounterSet.FellBeasts);
             AddEncounterSet(EncounterSet.WildCreatures);

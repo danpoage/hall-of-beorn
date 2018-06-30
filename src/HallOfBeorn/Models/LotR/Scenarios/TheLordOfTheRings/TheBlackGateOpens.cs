@@ -16,6 +16,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Number = 17;
 
             QuestCompanionSlug = "the-lord-of-the-rings-the-mountain-of-fire-saga-expansion-quest-the-black-gate-opens";
+            DifficultyRating = 8.8f;
+            Votes = 4;
 
             AddEncounterSet(EncounterSet.TheBlackGateOpens);
             AddEncounterSet(EncounterSet.OrcsOfMordor);

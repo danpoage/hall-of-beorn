@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
             Number = 3;
 
             QuestCompanionSlug = "against-the-shadow-quest-encounter-at-amon-din";
+            DifficultyRating = 3.0f;
+            Votes = 63;
 
             AddEncounterSet(EncounterSet.EncounterAtAmonDin);
             AddEncounterSet(EncounterSet.EncounterAtAmonDinNightmare);

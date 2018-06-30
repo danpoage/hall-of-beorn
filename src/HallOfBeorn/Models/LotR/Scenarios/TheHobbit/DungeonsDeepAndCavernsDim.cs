@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             Number = 3;
 
             QuestCompanionSlug = "the-hobbit-over-hill-and-under-hill-quest-dungeons-deep-and-caverns-dim";
+            DifficultyRating = 6.4f;
+            Votes = 35;
 
             AddEncounterSet(EncounterSet.DungeonsDeepAndCavernsDim);
             AddEncounterSet(EncounterSet.DungeonsDeepAndCavernsDimNightmare);

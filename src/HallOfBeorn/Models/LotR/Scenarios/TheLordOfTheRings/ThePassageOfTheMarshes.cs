@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Number = 10;
 
             QuestCompanionSlug = "lotr-the-land-of-shadow-saga-expansion-quest-the-passage-of-the-marshes";
+            DifficultyRating = 6.2f;
+            Votes = 17;
 
             AddEncounterSet(EncounterSet.Gollum);
             AddEncounterSet(EncounterSet.MorgulNazgul);

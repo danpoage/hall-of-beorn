@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             Number = 1;
 
             QuestCompanionSlug = "print-on-demand-quest-the-massing-at-osgiliath";
+            DifficultyRating = 7.5f;
+            Votes = 52;
 
             AddEncounterSet(EncounterSet.TheMassingAtOsgiliath);
 

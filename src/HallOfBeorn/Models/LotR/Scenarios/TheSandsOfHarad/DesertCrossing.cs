@@ -15,6 +15,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheSandsOfHarad
             Number = 2;
 
             QuestCompanionSlug = "sands-of-harad-quest-desert-crossing";
+            DifficultyRating = 5.4f;
+            Votes = 8;
 
             AddEncounterSet(EncounterSet.DesertCrossing);
             AddEncounterSet(EncounterSet.DesertCreatures);

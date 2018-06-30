@@ -15,6 +15,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Haradrim
             Number = 2;
 
             QuestCompanionSlug = "haradrim-cycle-quest-race-across-harad";
+            DifficultyRating = 6.3f;
+            Votes = 3;
 
             AddEncounterSet(EncounterSet.RaceAcrossHarad);
             AddEncounterSet(EncounterSet.MordorOrcs);

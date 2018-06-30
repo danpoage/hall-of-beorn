@@ -16,6 +16,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             Number = 6;
 
             QuestCompanionSlug = "print-on-demand-quest-murder-at-the-prancing-pony";
+            DifficultyRating = 7.6f;
+            Votes = 14;
 
             AddEncounterSet(EncounterSet.MurderAtThePrancingPony);
             AddEncounterSet(EncounterSet.Investigation);

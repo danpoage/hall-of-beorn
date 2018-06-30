@@ -12,6 +12,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             Number = 2;
 
             QuestCompanionSlug = "print-on-demand-quest-the-battle-of-laketown";
+            DifficultyRating = 8.9f;
+            Votes = 44;
 
             AddEncounterSet(EncounterSet.TheBattleOfLakeTown);
 

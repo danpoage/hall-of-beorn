@@ -17,7 +17,6 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
 
             RulesUrl = "https://images-cdn.fantasyflightgames.com/filer_public/03/0a/030a4e90-544d-4d24-a160-c5e05f34c778/mec56_rule_set.pdf";
             QuestCompanionSlug = "lotr-the-flame-of-the-west-saga-expansion-quest-the-passing-of-the-grey-company";
-
             DifficultyRating = 6.5f;
             Votes = 15;
 

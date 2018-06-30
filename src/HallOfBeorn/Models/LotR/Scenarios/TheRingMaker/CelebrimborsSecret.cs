@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             Number = 5;
 
             QuestCompanionSlug = "the-ring-maker-quest-celebrimbors-secret";
+            DifficultyRating = 5.7f;
+            Votes = 19;
 
             AddEncounterSet(EncounterSet.BrokenLands);
             AddEncounterSet(EncounterSet.CelebrimborsSecret);

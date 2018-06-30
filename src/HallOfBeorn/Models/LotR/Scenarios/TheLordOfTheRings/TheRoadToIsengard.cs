@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Number = 9;
 
             QuestCompanionSlug = "lotr-the-treason-of-saruman-saga-expansion-quest-the-road-to-isengard";
+            DifficultyRating = 6.9f;
+            Votes = 22;
 
             AddEncounterSet(EncounterSet.SnagaOrcs);
             AddEncounterSet(EncounterSet.TheRoadToIsengard);

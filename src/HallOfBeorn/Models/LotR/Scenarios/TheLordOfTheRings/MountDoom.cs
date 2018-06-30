@@ -16,6 +16,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Number = 18;
 
             QuestCompanionSlug = "the-lord-of-the-rings-the-mountain-of-fire-saga-expansion-quest-mount-doom";
+            DifficultyRating = 9.3f;
+            Votes = 4;
 
             AddEncounterSet(EncounterSet.MountDoom);
             AddEncounterSet(EncounterSet.DeepShadows);

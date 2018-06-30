@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLostRealm
             Number = 2;
 
             QuestCompanionSlug = "the-lost-realm-quest-the-weather-hills";
+            DifficultyRating = 6.3f;
+            Votes = 28;
 
             AddEncounterSet(EncounterSet.AngmarOrcs);
             AddEncounterSet(EncounterSet.FoulWeather);

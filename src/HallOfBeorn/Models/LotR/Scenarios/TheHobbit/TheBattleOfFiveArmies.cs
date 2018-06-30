@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             Number = 6;
 
             QuestCompanionSlug = "the-hobbit-on-the-doorstep-quest-the-battle-of-five-armies";
+            DifficultyRating = 6.9f;
+            Votes = 29;
 
             AddEncounterSet(EncounterSet.TheBattleOfFiveArmies);
             AddEncounterSet(EncounterSet.TheBattleOfFiveArmiesNightmare);

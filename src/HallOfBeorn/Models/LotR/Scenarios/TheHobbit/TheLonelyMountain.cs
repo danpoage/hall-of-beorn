@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             Number = 5;
 
             QuestCompanionSlug = "the-hobbit-on-the-doorstep-quest-the-lonely-mountain";
+            DifficultyRating = 7.3f;
+            Votes = 27;
 
             AddEncounterSet(EncounterSet.TheLonelyMountain);
             AddEncounterSet(EncounterSet.TheLonelyMountainNightmare);

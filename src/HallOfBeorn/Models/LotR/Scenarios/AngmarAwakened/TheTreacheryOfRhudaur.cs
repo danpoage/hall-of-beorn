@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             Number = 4;
 
             QuestCompanionSlug = "angmar-awakened-quest-the-treachery-of-rhudaur";
+            DifficultyRating = 6.1f;
+            Votes = 27;
 
             AddEncounterSet(EncounterSet.CursedDead);
             AddEncounterSet(EncounterSet.RuinsOfArnor);

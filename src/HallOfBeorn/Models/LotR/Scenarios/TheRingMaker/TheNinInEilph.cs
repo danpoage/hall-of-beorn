@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             Number = 4;
 
             QuestCompanionSlug = "the-ring-maker-quest-the-nin-in-eilph";
+            DifficultyRating = 6.8f;
+            Votes = 26;
 
             AddEncounterSet(EncounterSet.TheNinInEilph);
             AddEncounterSet(EncounterSet.WearyTravelers);

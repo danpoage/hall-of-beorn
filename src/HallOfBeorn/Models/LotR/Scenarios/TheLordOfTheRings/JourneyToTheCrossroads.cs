@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Number = 11;
 
             QuestCompanionSlug = "lotr-the-land-of-shadow-saga-expansion-quest-journey-to-the-cross-roads";
+            DifficultyRating = 7.9f;
+            Votes = 21;
 
             AddEncounterSet(EncounterSet.MenOfHarad);
             AddEncounterSet(EncounterSet.JourneyToTheCrossRoads);

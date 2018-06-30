@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             Number = 2;
 
             QuestCompanionSlug = "angmar-awakened-quest-escape-from-mount-gram";
+            DifficultyRating = 3.5f;
+            Votes = 29;
 
             AddEncounterSet(EncounterSet.AngmarOrcs);
             AddEncounterSet(EncounterSet.EscapeFromMountGram);

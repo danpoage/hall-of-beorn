@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             Number = 3;
 
             QuestCompanionSlug = "the-ring-maker-quest-trouble-in-tharbad";
+            DifficultyRating = 3.9f;
+            Votes = 31;
 
             AddEncounterSet(EncounterSet.MistyMountainOrcs);
             AddEncounterSet(EncounterSet.TroubleInTharbad);

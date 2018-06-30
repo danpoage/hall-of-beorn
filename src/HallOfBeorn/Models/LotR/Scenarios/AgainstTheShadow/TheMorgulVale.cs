@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
             Number = 6;
 
             QuestCompanionSlug = "against-the-shadow-quest-the-morgul-vale";
+            DifficultyRating = 8.0f;
+            Votes = 44;
 
             AddEncounterSet(EncounterSet.CreaturesOfTheForest);
             AddEncounterSet(EncounterSet.MordorElite);

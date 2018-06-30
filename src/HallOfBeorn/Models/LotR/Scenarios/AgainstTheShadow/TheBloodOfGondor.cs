@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
             Number = 5;
 
             QuestCompanionSlug = "against-the-shadow-quest-the-blood-of-gondor";
+            DifficultyRating = 5.7f;
+            Votes = 43;
 
             AddEncounterSet(EncounterSet.RavagingOrcs);
             AddEncounterSet(EncounterSet.TheBloodOfGondor);

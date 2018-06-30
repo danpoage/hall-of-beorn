@@ -18,6 +18,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Haradrim
 
             RulesUrl = string.Empty;
             QuestCompanionSlug = "haradrim-cycle-quest-the-dungeons-of-cirith-gurat";
+            DifficultyRating = 6.7f;
+            Votes = 3;
 
             AddEncounterSet(EncounterSet.TheDungeonsOfCirithGurat);
             AddEncounterSet(EncounterSet.MordorOrcs);

@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             Number = 6;
 
             QuestCompanionSlug = "print-on-demand-quest-the-ruins-of-belegost";
+            DifficultyRating = 8.1f;
+            Votes = 14;
 
             AddEncounterSet(EncounterSet.TheRuinsOfBelegost);
 

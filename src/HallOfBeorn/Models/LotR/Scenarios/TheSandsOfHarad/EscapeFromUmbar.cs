@@ -15,6 +15,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheSandsOfHarad
             Number = 1;
 
             QuestCompanionSlug = "sands-of-harad-quest-escape-from-umbar";
+            DifficultyRating = 5.3f;
+            Votes = 8;
 
             AddEncounterSet(EncounterSet.EscapeFromUmbar);
             AddEncounterSet(EncounterSet.HaradTerritory);

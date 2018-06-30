@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheVoiceOfIsengard
             Number = 3;
 
             QuestCompanionSlug = "voice-of-isengard-quest-into-fangorn";
+            DifficultyRating = 4.3f;
+            Votes = 35;
 
             AddEncounterSet(EncounterSet.AncientForest);
             AddEncounterSet(EncounterSet.IntoFangorn);

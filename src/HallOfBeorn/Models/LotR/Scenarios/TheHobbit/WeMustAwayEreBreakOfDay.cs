@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             Number = 1;
 
             QuestCompanionSlug = "the-hobbit-over-hill-and-under-hill-quest-we-must-away-ere-break-of-day";
+            DifficultyRating = 6.6f;
+            Votes = 54;
 
             AddEncounterSet(EncounterSet.WeMustAwayEreBreakOfDay);
             AddEncounterSet(EncounterSet.WeMustAwayEreBreakOfDayNightmare);

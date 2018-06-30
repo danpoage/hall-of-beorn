@@ -16,6 +16,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Number = 16;
 
             QuestCompanionSlug = "the-lord-of-the-rings-the-mountain-of-fire-saga-expansion-quest-the-tower-of-cirith-ungol";
+            DifficultyRating = 6.7f;
+            Votes = 3;
 
             AddEncounterSet(EncounterSet.TheTowerOfCirithUngol);
             AddEncounterSet(EncounterSet.OrcsOfMordor);

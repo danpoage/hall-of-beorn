@@ -15,6 +15,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DreamChaser
             Number = 1;
 
             QuestCompanionSlug = "the-dream-chaser-quest-flight-of-the-stormcaller";
+            DifficultyRating = 6.1f;
+            Votes = 17;
 
             AddEncounterSet(EncounterSet.VastOceans);
             AddEncounterSet(EncounterSet.StormyWeather);

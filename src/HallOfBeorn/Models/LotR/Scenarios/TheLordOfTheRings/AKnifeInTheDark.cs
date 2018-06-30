@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Number = 2;
 
             QuestCompanionSlug = "lotr-the-black-riders-quest-a-knife-in-the-dark";
+            DifficultyRating = 6.7f;
+            Votes = 50;
 
             AddEncounterSet(EncounterSet.AKnifeInTheDark);
             AddEncounterSet(EncounterSet.AKnifeInTheDarkNightmare);

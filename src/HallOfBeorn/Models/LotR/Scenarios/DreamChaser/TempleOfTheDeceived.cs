@@ -15,6 +15,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DreamChaser
             Number = 3;
 
             QuestCompanionSlug = "the-dream-chaser-quest-temple-of-the-deceived";
+            DifficultyRating = 4.1f;
+            Votes = 15;
 
             AddEncounterSet(EncounterSet.TempleOfTheDeceived);
             AddEncounterSet(EncounterSet.RuinsOfNumenor);

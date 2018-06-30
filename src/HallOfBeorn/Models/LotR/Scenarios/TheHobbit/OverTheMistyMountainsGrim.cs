@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             Number = 2;
 
             QuestCompanionSlug = "the-hobbit-over-hill-and-under-hill-quest-over-the-misty-mountains-grim";
+            DifficultyRating = 5.3f;
+            Votes = 42;
 
             AddEncounterSet(EncounterSet.MistyMountainGoblins);
             AddEncounterSet(EncounterSet.OverTheMistyMountainsGrim);

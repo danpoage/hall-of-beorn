@@ -15,6 +15,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Haradrim
             Number = 4;
 
             QuestCompanionSlug = "haradrim-cycle-quest-the-black-serpent";
+            DifficultyRating = 7.3f;
+            Votes = 3;
 
             AddEncounterSet(EncounterSet.TheBlackSerpent);
             AddEncounterSet(EncounterSet.HaradSoldiers);

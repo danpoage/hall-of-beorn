@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Number = 5;
 
             QuestCompanionSlug = "lotr-the-road-darkens-quest-journey-in-the-dark";
+            DifficultyRating = 7.9f;
+            Votes = 32;
 
             AddEncounterSet(EncounterSet.JourneyInTheDark);
             AddEncounterSet(EncounterSet.JourneyInTheDarkNightmare);

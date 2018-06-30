@@ -15,6 +15,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DreamChaser
             Number = 2;
 
             QuestCompanionSlug = "the-dream-chaser-quest-the-thing-in-the-depths";
+            DifficultyRating = 5.4f;
+            Votes = 16;
 
             AddEncounterSet(EncounterSet.CorsairRaiders);
             AddEncounterSet(EncounterSet.TheStormcallerElite);

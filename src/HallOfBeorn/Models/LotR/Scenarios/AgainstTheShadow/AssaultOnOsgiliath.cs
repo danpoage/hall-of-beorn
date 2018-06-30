@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
             Number = 4;
 
             QuestCompanionSlug = "against-the-shadow-quest-assault-on-osgiliath";
+            DifficultyRating = 5.2f;
+            Votes = 44;
 
             AddEncounterSet(EncounterSet.AssaultOnOsgiliath);
             AddEncounterSet(EncounterSet.AssaultOnOsgiliathNightmare);

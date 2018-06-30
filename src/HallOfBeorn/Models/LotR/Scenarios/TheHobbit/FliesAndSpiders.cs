@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             Number = 4;
 
             QuestCompanionSlug = "the-hobbit-on-the-doorstep-quest-flies-and-spiders";
+            DifficultyRating = 6.1f;
+            Votes = 29;
 
             AddEncounterSet(EncounterSet.FliesAndSpiders);
             AddEncounterSet(EncounterSet.FliesAndSpidersNightmare);

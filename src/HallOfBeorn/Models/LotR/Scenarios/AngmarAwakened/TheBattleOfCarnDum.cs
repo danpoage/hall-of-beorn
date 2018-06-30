@@ -15,6 +15,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             Number = 5;
 
             QuestCompanionSlug = "angmar-awakened-quest-the-battle-of-carn-dum";
+            DifficultyRating = 9.6f;
+            Votes = 40;
 
             AddEncounterSet(EncounterSet.TheBattleOfCarnDum);
             AddEncounterSet(EncounterSet.TheBattleOfCarnDumNightmare);

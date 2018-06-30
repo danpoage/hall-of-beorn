@@ -15,6 +15,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             Number = 6;
 
             QuestCompanionSlug = "angmar-awakened-quest-the-dread-realm";
+            DifficultyRating = 8.1f;
+            Votes = 16;
 
             AddEncounterSet(EncounterSet.TheDreadRealm);
             AddEncounterSet(EncounterSet.TheDreadRealmNightmare);

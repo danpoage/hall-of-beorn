@@ -16,6 +16,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             Number = 7;
 
             QuestCompanionSlug = "print-on-demand-quest-the-siege-of-annuminas";
+            DifficultyRating = 8.3f;
+            Votes = 13;
 
             AddEncounterSet(EncounterSet.TheSiegeOfAnnuminas);
 

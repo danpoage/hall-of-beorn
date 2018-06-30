@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Number = 1;
 
             QuestCompanionSlug = "lotr-the-black-riders-quest-a-shadow-of-the-past";
+            DifficultyRating = 6.3f;
+            Votes = 53;
 
             AddEncounterSet(EncounterSet.AShadowOfThePast);
             AddEncounterSet(EncounterSet.AShadowOfThePastNightmare);

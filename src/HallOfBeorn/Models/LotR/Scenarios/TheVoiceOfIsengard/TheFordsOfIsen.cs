@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheVoiceOfIsengard
             Number = 1;
 
             QuestCompanionSlug = "voice-of-isengard-quest-the-fords-of-isen";
+            DifficultyRating = 5.7f;
+            Votes = 41;
 
             AddEncounterSet(EncounterSet.DunlandRaiders);
             AddEncounterSet(EncounterSet.DunlandWarriors);

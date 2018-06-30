@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Number = 8;
 
             QuestCompanionSlug = "lotr-the-treason-of-saruman-saga-expansion-quest-helms-deep";
+            DifficultyRating = 8.2f;
+            Votes = 30;
 
             AddEncounterSet(EncounterSet.HelmsDeep);
             AddEncounterSet(EncounterSet.OrcsOfTheWhiteHand);

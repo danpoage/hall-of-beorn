@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             Number = 5;
 
             QuestCompanionSlug = "print-on-demand-quest-fog-on-the-barrow-downs";
+            DifficultyRating = 7.8f;
+            Votes = 28;
 
             AddEncounterSet(EncounterSet.FogOnTheBarrowDowns);
 

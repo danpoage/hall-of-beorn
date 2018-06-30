@@ -15,6 +15,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheGreyHavens
             Number = 1;
 
             QuestCompanionSlug = "the-grey-havens-quest-voyage-across-belegaer";
+            DifficultyRating = 4.8f;
+            Votes = 19;
 
             AddEncounterSet(EncounterSet.VastOceans);
             AddEncounterSet(EncounterSet.StormyWeather);

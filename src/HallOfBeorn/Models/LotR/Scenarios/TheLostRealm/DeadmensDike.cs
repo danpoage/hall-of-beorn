@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLostRealm
             Number = 3;
 
             QuestCompanionSlug = "the-lost-realm-quest-deadmens-dike";
+            DifficultyRating = 7.7f;
+            Votes = 30;
 
             AddEncounterSet(EncounterSet.CursedDead);
             AddEncounterSet(EncounterSet.DarkSorcery);

@@ -15,6 +15,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheGreyHavens
             Number = 3;
 
             QuestCompanionSlug = "the-grey-havens-quest-raid-on-the-grey-havens";
+            DifficultyRating = 7.6f;
+            Votes = 17;
 
             AddEncounterSet(EncounterSet.CorsairRaiders);
             AddEncounterSet(EncounterSet.TheStormcallerElite);

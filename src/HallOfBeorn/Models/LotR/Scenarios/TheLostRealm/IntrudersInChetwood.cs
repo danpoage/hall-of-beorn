@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLostRealm
             Number = 1;
 
             QuestCompanionSlug = "the-lost-realm-quest-intruders-in-chetwood";
+            DifficultyRating = 5.7f;
+            Votes = 39;
 
             AddEncounterSet(EncounterSet.AngmarOrcs);
             AddEncounterSet(EncounterSet.EriadorWilds);

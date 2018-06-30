@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Number = 7;
 
             QuestCompanionSlug = "lotr-the-treason-of-saruman-saga-expansion-quest-the-uruk-hai";
+            DifficultyRating = 6.0f;
+            Votes = 23;
 
             AddEncounterSet(EncounterSet.OrcsOfTheWhiteHand);
             AddEncounterSet(EncounterSet.SnagaOrcs);

@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             Number = 6;
 
             QuestCompanionSlug = "the-ring-maker-quest-the-antlered-crown";
+            DifficultyRating = 6.9f;
+            Votes = 17;
 
             AddEncounterSet(EncounterSet.DunlandRaiders);
             AddEncounterSet(EncounterSet.DunlandWarriors);

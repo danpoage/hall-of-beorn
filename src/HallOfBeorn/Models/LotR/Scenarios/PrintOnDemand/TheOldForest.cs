@@ -11,7 +11,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             Number = 4;
 
             QuestCompanionSlug = "print-on-demand-quest-the-old-forest";
-            
+            DifficultyRating = 5.7f;
+            Votes = 17;
+
             AddEncounterSet(EncounterSet.TheOldForest);
 
             AddQuestCardId("Farewell-to-the-Shire-TOF");

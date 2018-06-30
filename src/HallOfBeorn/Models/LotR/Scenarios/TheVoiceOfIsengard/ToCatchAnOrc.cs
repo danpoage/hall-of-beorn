@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheVoiceOfIsengard
             Number = 2;
 
             QuestCompanionSlug = "voice-of-isengard-quest-to-catch-an-orc";
+            DifficultyRating = 7.0f;
+            Votes = 50;
 
             AddEncounterSet(EncounterSet.BrokenLands);
             AddEncounterSet(EncounterSet.MistyMountainOrcs);

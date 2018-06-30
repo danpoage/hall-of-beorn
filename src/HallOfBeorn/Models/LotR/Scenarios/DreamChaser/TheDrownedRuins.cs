@@ -15,6 +15,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DreamChaser
             Number = 4;
 
             QuestCompanionSlug = "the-dream-chaser-quest-the-drowned-ruins";
+            DifficultyRating = 4.9f;
+            Votes = 9;
 
             AddEncounterSet(EncounterSet.TheDrownedRuins);
             AddEncounterSet(EncounterSet.DrownedDead);

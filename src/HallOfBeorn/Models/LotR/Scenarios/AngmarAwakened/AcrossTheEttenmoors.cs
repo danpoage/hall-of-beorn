@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             Number = 3;
 
             QuestCompanionSlug = "angmar-awakened-quest-across-the-ettenmoors";
+            DifficultyRating = 4.4f;
+            Votes = 27;
 
             AddEncounterSet(EncounterSet.AcrossTheEttenmoors);
             AddEncounterSet(EncounterSet.AcrossTheEttenmoorsNightmare);

@@ -15,7 +15,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheGreyHavens
             Number = 2;
 
             QuestCompanionSlug = "the-grey-havens-quest-the-fate-of-numenor";
-
+            DifficultyRating = 4.2f;
+            Votes = 19;
+            
             AddEncounterSet(EncounterSet.DrownedDead);
             AddEncounterSet(EncounterSet.RuinsOfNumenor);
             AddEncounterSet(EncounterSet.TheFateOfNumenor);

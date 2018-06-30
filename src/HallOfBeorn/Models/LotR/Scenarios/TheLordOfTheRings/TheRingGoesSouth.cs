@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Number = 4;
 
             QuestCompanionSlug = "lotr-the-road-darkens-quest-the-ring-goes-south";
+            DifficultyRating = 6.0f;
+            Votes = 28;
 
             AddEncounterSet(EncounterSet.TheRingGoesSouth);
             AddEncounterSet(EncounterSet.TheRingGoesSouthNightmare);

@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Number = 12;
 
             QuestCompanionSlug = "lotr-the-land-of-shadow-saga-expansion-quest-shelobs-lair";
+            DifficultyRating = 7.3f;
+            Votes = 16;
 
             AddEncounterSet(EncounterSet.Gollum);
             AddEncounterSet(EncounterSet.MorgulNazgul);

@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             Number = 1;
 
             QuestCompanionSlug = "angmar-awakened-quest-the-wastes-of-eriador";
+            DifficultyRating = 7.2f;
+            Votes = 30;
 
             AddEncounterSet(EncounterSet.EriadorWilds);
             AddEncounterSet(EncounterSet.FoulWeather);

@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             Number = 3;
 
             QuestCompanionSlug = "print-on-demand-quest-the-stone-of-erech";
+            DifficultyRating = 6.5f;
+            Votes = 27;
 
             AddEncounterSet(EncounterSet.TheStoneOfErech);
 
