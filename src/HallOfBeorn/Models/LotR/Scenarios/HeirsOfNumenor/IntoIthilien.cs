@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.HeirsOfNumenor
             Number = 2;
 
             QuestCompanionSlug = "heirs-of-numenor-quest-into-ithilien";
+            DifficultyRating = 7.7f;
+            Votes = 84;
 
             AddEncounterSet(EncounterSet.BroodingForest);
             AddEncounterSet(EncounterSet.CreaturesOfTheForest);

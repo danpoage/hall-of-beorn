@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             Number = 6;
 
             QuestCompanionSlug = "dwarrowdelf-quest-shadow-and-flame";
+            DifficultyRating = 7.9f;
+            Votes = 59;
 
             AddEncounterSet(EncounterSet.DeepsOfMoria);
             AddEncounterSet(EncounterSet.GoblinsOfTheDeep);

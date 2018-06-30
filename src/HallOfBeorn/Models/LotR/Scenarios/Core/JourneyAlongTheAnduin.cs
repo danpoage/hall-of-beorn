@@ -12,6 +12,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
 
             QuestCompanionSlug = "core-set-quest-journey-down-the-anduin";
 
+            DifficultyRating = 5.3f;
+            Votes = 160;
+
             AddEncounterSet(EncounterSet.DolGuldurOrcs);
             AddEncounterSet(EncounterSet.JourneyAlongTheAnduin);
             AddEncounterSet(EncounterSet.JourneyAlongTheAnduinNightmare);

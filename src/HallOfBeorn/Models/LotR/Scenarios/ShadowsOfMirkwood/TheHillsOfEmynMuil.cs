@@ -11,6 +11,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
 
             QuestCompanionSlug = "shadows-of-mirkwood-quest-the-hills-of-emyn-muil";
 
+            DifficultyRating = 2.7f;
+            Votes = 81;
+
             AddEncounterSet(EncounterSet.DolGuldurOrcs);
             AddEncounterSet(EncounterSet.SauronsReach);
             AddEncounterSet(EncounterSet.TheHillsOfEmynMuil);

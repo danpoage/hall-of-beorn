@@ -11,6 +11,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
 
             QuestCompanionSlug = "shadows-of-mirkwood-quest-a-journey-to-rhosgobel";
 
+            DifficultyRating = 6.1f;
+            Votes = 84;
+
             AddEncounterSet(EncounterSet.AJourneyToRhosgobel);
             AddEncounterSet(EncounterSet.AJourneyToRhosgobelNightmare);
             AddEncounterSet(EncounterSet.DolGuldurOrcs);

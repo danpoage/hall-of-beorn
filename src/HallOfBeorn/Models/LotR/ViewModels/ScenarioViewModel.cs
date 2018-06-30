@@ -81,6 +81,35 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             }
         }
 
+        public byte Difficulty { get { return _scenario.Difficulty; } }
+        public int Votes { get { return _scenario.Votes; } }
+
+        public string DifficultyHtml
+        {
+            get
+            {
+                if (Difficulty > 0)
+                {
+                    var icon = string.Format("<img src='/Images/eye-small.png' class='difficulty-icon' height='16' width='16' title='Difficulty {0} / 10  ({1} Votes)'/>", _scenario.DifficultyRating, Votes);
+
+                    var html = new System.Text.StringBuilder();
+
+                    for (var i = 0; i < Difficulty; i++)
+                    {
+                        html.Append(icon);
+                    }
+
+                    //html.AppendFormat("<span class='difficulty-votes'>({0})</span>", Votes);
+
+                    return !string.IsNullOrEmpty(QuestCompanionUrl) ?
+                        string.Format("<a href='{0}' target='_blank'>{1}</a>", QuestCompanionUrl, html.ToString())
+                        : html.ToString();
+                }
+
+                return string.Empty;
+            }
+        }
+
         public bool HasRulesReference { get { return !string.IsNullOrEmpty(_scenario.RulesReferenceUrl); } }
         public string RulesReferenceUrl { get { return _scenario.RulesReferenceUrl; } }
         public string RulesReferenceLabel { get { return _scenario.RulesReferenceLabel; } }

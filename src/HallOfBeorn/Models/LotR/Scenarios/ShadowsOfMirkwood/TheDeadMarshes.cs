@@ -11,6 +11,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
 
             QuestCompanionSlug = "shadows-of-mirkwood-quest-the-dead-marshes";
 
+            DifficultyRating = 3.8f;
+            Votes = 84;
+
             AddEncounterSet(EncounterSet.SauronsReach);
             AddEncounterSet(EncounterSet.TheDeadMarshes);
             AddEncounterSet(EncounterSet.TheDeadMarshesNightmare);

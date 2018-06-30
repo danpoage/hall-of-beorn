@@ -16,6 +16,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Haradrim
 
             RulesUrl = "https://images-cdn.fantasyflightgames.com/filer_public/03/0a/030a4e90-544d-4d24-a160-c5e05f34c778/mec56_rule_set.pdf";
             QuestCompanionSlug = "haradrim-cycle-quest-the-mumakil";
+            DifficultyRating = 5.4f;
+            Votes = 8;
 
             AddEncounterSet(EncounterSet.TheMumakil);
             AddEncounterSet(EncounterSet.JungleForest);

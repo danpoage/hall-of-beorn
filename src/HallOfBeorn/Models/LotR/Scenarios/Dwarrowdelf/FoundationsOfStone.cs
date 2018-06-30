@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             Number = 5;
 
             QuestCompanionSlug = "dwarrowdelf-quest-foundations-of-stone";
+            DifficultyRating = 6.0f;
+            Votes = 54;
 
             AddEncounterSet(EncounterSet.FoundationsOfStone);
             AddEncounterSet(EncounterSet.FoundationsOfStoneNightmare);

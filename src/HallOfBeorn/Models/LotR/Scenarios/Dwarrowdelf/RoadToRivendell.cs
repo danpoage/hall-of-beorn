@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             Number = 2;
 
             QuestCompanionSlug = "dwarrowdelf-quest-road-to-rivendell";
+            DifficultyRating = 5.2f;
+            Votes = 53;
 
             AddEncounterSet(EncounterSet.MistyMountains);
             AddEncounterSet(EncounterSet.PlunderingGoblins);

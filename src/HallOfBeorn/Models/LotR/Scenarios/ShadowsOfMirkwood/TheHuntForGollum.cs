@@ -11,6 +11,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
 
             QuestCompanionSlug = "shadows-of-mirkwood-quest-the-hunt-for-gollum";
 
+            DifficultyRating = 4.1f;
+            Votes = 109;
+
             AddEncounterSet(EncounterSet.JourneyAlongTheAnduin);
             AddEncounterSet(EncounterSet.SauronsReach);
             AddEncounterSet(EncounterSet.TheHuntForGollum);

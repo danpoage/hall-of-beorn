@@ -1698,8 +1698,8 @@ tr.pager td {
 }
 
 .scenario-sub-group {
-    margin: 10px 0px 2px 12px; 
-    font-family: 'Segoe UI'; 
+    margin: 12px 0px 0px 24px;
+    font-family: Arial; 
     font-size: 14px; 
     color: gray;
 }
@@ -1708,4 +1708,27 @@ tr.pager td {
     margin: 4px 8px 4px 8px; 
     font-weight: bold; 
     color: darkgrey;
+}
+
+.scenario-title {
+    display: inline-block;
+    width: 220px;
+    margin: 4px;
+}
+
+.scenario-difficulty {
+    display:inline-block;
+    width: 200px;
+    margin-left: 4px;
+}
+
+.difficulty-icon {
+    margin-bottom: -2px;
+}
+
+.difficulty-votes {
+    color:gray;
+    font-size:12px;
+    margin-left:8px;
+    margin-bottom:2px;
 }

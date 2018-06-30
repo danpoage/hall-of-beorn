@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             Number = 1;
 
             QuestCompanionSlug = "dwarrowdelf-quest-the-redhorn-gate";
+            DifficultyRating = 5.6f;
+            Votes = 56;
 
             AddEncounterSet(EncounterSet.MistyMountains);
             AddEncounterSet(EncounterSet.TheRedhornGate);

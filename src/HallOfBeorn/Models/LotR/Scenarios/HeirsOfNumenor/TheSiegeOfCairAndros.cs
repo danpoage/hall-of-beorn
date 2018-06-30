@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.HeirsOfNumenor
             Number = 3;
 
             QuestCompanionSlug = "heirs-of-numenor-quest-the-siege-of-cair-andros";
+            DifficultyRating = 8.2f;
+            Votes = 70;
 
             AddEncounterSet(EncounterSet.MordorElite);
             AddEncounterSet(EncounterSet.RavagingOrcs);

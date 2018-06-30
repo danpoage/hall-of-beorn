@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.KhazadDum
             Number = 3;
 
             QuestCompanionSlug = "khazad-dum-quest-flight-from-moria";
+            DifficultyRating = 6.0f;
+            Votes = 62;
 
             AddEncounterSet(EncounterSet.DeepsOfMoria);
             AddEncounterSet(EncounterSet.FlightFromMoria);

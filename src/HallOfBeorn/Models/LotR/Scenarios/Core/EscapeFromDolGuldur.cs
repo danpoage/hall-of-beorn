@@ -11,6 +11,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
 
             QuestCompanionSlug = "core-set-quest-escape-from-dol-guldur";
 
+            DifficultyRating = 7.8f;
+            Votes = 136;
+
             AddEncounterSet(EncounterSet.DolGuldurOrcs);
             AddEncounterSet(EncounterSet.EscapeFromDolGuldur);
             AddEncounterSet(EncounterSet.EscapeFromDolGuldurNightmare);

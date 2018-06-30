@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.KhazadDum
             Number = 1;
 
             QuestCompanionSlug = "khazad-dum-quest-into-the-pit";
+            DifficultyRating = 4.9f;
+            Votes = 69;
 
             AddEncounterSet(EncounterSet.GoblinsOfTheDeep);
             AddEncounterSet(EncounterSet.HazardsOfThePit);

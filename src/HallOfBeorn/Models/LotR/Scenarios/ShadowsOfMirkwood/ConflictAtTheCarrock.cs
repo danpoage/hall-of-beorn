@@ -11,6 +11,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
 
             QuestCompanionSlug = "shadows-of-mirkwood-quest-conflict-at-the-carrock";
 
+            DifficultyRating = 6.2f;
+            Votes = 101;
+
             AddEncounterSet(EncounterSet.ConflictAtTheCarrock);
             AddEncounterSet(EncounterSet.ConflictAtTheCarrockNightmare);
             AddEncounterSet(EncounterSet.JourneyAlongTheAnduin);

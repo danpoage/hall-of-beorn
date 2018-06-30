@@ -11,6 +11,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
 
             QuestCompanionSlug = "shadows-of-mirkwood-quest-return-to-mirkwood";
 
+            DifficultyRating = 7.2f;
+            Votes = 71;
+
             AddEncounterSet(EncounterSet.ReturnToMirkwood);
             AddEncounterSet(EncounterSet.ReturnToMirkwoodNightmare);
             AddEncounterSet(EncounterSet.SpidersOfMirkwood);

@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.HeirsOfNumenor
             Number = 1;
 
             QuestCompanionSlug = "http://lotr-lcg-quest-companion.com/heirs-of-numenor-quest-peril-in-pelargir.html";
+            DifficultyRating = 6.8f;
+            Votes = 59;
 
             AddEncounterSet(EncounterSet.Brigands);
             AddEncounterSet(EncounterSet.PerilInPelargir);

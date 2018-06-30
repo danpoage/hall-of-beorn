@@ -179,9 +179,13 @@ else {
                             <div class="scenario-sub-group">@scenario.ProductName</div>
                         }
                         lastProduct = scenario.ProductName;
-                    <div>
-                        <a title="Details for @scenario.Title" href="@scenario.Link">@scenario.Title</a>
-                    </div>
+                        <div>
+                            <span class="scenario-title"><a title="Details for @scenario.Title" href="@scenario.Link">@scenario.Title</a></span>
+                            @if (!string.IsNullOrEmpty(@scenario.DifficultyHtml))
+                            {
+                                <span class="scenario-difficulty">@Html.Raw(@scenario.DifficultyHtml)</span>
+                            }
+                        </div>
                     }
                 }
             </div>
@@ -196,9 +200,13 @@ else {
                             <div class="scenario-sub-group">@scenario.ProductName</div>
                         }
                         lastProduct = scenario.ProductName;
-                    <div>
-                        <a title="Details for @scenario.Title" href="@scenario.Link">@scenario.Title</a>
-                    </div>
+                        <div>
+                            <span class="scenario-title"><a title="Details for @scenario.Title" href="@scenario.Link">@scenario.Title</a></span>
+                            @if (!string.IsNullOrEmpty(@scenario.DifficultyHtml))
+                            {
+                                <span class="scenario-difficulty">@Html.Raw(@scenario.DifficultyHtml)</span>
+                            }
+                        </div>
                     }
                 }
             </div>

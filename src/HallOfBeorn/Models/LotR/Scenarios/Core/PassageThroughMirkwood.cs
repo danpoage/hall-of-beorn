@@ -11,6 +11,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
 
             QuestCompanionSlug = "core-set-quest-passage-through-mirkwood";
 
+            DifficultyRating = 2.2f;
+            Votes = 222;
+
             AddEncounterSet(EncounterSet.DolGuldurOrcs);
             AddEncounterSet(EncounterSet.PassageThroughMirkwood);
             AddEncounterSet(EncounterSet.PassageThroughMirkwoodNightmare);

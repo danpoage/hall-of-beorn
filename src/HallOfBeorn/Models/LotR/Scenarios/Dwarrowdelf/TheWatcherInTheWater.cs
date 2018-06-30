@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             Number = 3;
 
             QuestCompanionSlug = "dwarrowdelf-quest-the-watcher-in-the-water";
+            DifficultyRating = 6.3f;
+            Votes = 47;
 
             AddEncounterSet(EncounterSet.MistyMountains);
             AddEncounterSet(EncounterSet.TheWatcherInTheWater);

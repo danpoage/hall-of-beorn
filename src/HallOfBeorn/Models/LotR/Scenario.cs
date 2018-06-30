@@ -62,12 +62,15 @@ namespace HallOfBeorn.Models.LotR
         public int Number { get; set; }
         public string GroupName { get; set; }
         public bool IsSubGroup { get; set; }
-        //public string SubGroupName
         public string Title { get; set; }
         public string ProductName { get; set; }
         public string RulesUrl { get; set; }
         public int RulesImageCount { get; set; }
         public string AlternateTitle { get; set; }
+
+        public float DifficultyRating { get; set; }
+        public byte Difficulty { get { return (byte)Math.Round(DifficultyRating, 0); } }
+        public int Votes { get; set; }
 
         public string CardsLink { get; set; }
 

@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.KhazadDum
             Number = 2;
 
             QuestCompanionSlug = "khazad-dum-quest-the-seventh-level";
+            DifficultyRating = 4.3f;
+            Votes = 66;
 
             AddEncounterSet(EncounterSet.GoblinsOfTheDeep);
             AddEncounterSet(EncounterSet.PlunderingGoblins);

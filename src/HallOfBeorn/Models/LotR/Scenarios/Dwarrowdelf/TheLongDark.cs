@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             Number = 4;
 
             QuestCompanionSlug = "dwarrowdelf-quest-the-long-dark";
+            DifficultyRating = 3.7f;
+            Votes = 47;
 
             AddEncounterSet(EncounterSet.DeepsOfMoria);
             AddEncounterSet(EncounterSet.TheLongDark);

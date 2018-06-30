@@ -845,7 +845,7 @@
     <Compile Include="Views\SelectListItemExtends.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Site-1.0.0.min.css" />
+    <Content Include="Content\Site-1.0.1.min.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -957,6 +957,7 @@
     <Content Include="Images\defense-small.png" />
     <Content Include="Images\encounter-card-back.jpg" />
     <Content Include="Images\error.jpg" />
+    <Content Include="Images\eye-small.png" />
     <Content Include="Images\Fellowship-med.png" />
     <Content Include="Images\Fellowship-small.png" />
     <Content Include="Images\Fellowship.png" />
@@ -1028,7 +1029,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Content\Site-1.0.0.css" />
+    <Content Include="Content\Site-1.0.1.css" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
