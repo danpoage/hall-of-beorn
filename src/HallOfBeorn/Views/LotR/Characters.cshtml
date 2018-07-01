@@ -9,29 +9,33 @@
 }
 
 @if (@Model.IsListView) {
-    <h2>Characters</h2>
     var firstLetter = string.Empty;
-    foreach (var pair in @Model.AllCharacters()) {
-        var checkFirst = pair.Key.Substring(0, 1).NormalizeCaseSensitiveString();
-        if (checkFirst != firstLetter) {
-            <h4>@checkFirst</h4>
+    <div class="list-left">
+        <h2>Characters</h2>
+        @foreach (var pair in @Model.AllCharacters()) {
+            var checkFirst = pair.Key.Substring(0, 1).NormalizeCaseSensitiveString();
+            if (checkFirst != firstLetter) {
+                <h4>@checkFirst</h4>
+            }
+            firstLetter = checkFirst;
+            var charId = @pair.Key.Slugify();
+            <div class="character-list-item"><a id="@charId" href="@pair.Value" title="@pair.Key">@pair.Key</a></div>
         }
-        firstLetter = checkFirst;
-        var charId = @pair.Key.Slugify();
-        <div style="margin: 5px;"><a id="@charId" href="@pair.Value" title="@pair.Key">@pair.Key</a></div>
-    }
-    <h2>Places</h2>
-    foreach (var pair in @Model.AllPlaces()) {
-        var placeId = @pair.Key.Slugify();
-        <div style="margin: 5px;"><a id="@placeId" href="@pair.Value" title="@pair.Key">@pair.Key</a></div>
-    }
-    <h2>Groups</h2>
-    foreach (var pair in @Model.AllGroups()) {
-        var groupId = @pair.Key.Slugify();
-        <div style="margin: 5px;"><a id="@groupId" href="@pair.Value" title="@pair.Key">@pair.Key</a></div>
-    }
+    </div>
+    <div class="list-right">
+        <h2>Places</h2>
+        @foreach (var pair in @Model.AllPlaces()) {
+            var placeId = @pair.Key.Slugify();
+            <div class="character-list-item"><a id="@placeId" href="@pair.Value" title="@pair.Key">@pair.Key</a></div>
+        }
+        <h2>Groups</h2>
+        @foreach (var pair in @Model.AllGroups()) {
+            var groupId = @pair.Key.Slugify();
+            <div class="character-list-item"><a id="@groupId" href="@pair.Value" title="@pair.Key">@pair.Key</a></div>
+        }
+    </div>
 } else {
-    <a href="/LotR/Characters#@Model.Slug">Back to Character List</a>
+    <a href="/LotR/Characters#@Model.Slug" class="scenario-view-link">Back to Character List</a>
     <br />
     <br />
     <div>
