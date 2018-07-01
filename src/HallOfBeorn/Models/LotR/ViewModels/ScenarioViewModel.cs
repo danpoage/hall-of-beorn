@@ -99,8 +99,6 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                         html.Append(icon);
                     }
 
-                    //html.AppendFormat("<span class='difficulty-votes'>({0})</span>", Votes);
-
                     return !string.IsNullOrEmpty(QuestCompanionUrl) ?
                         string.Format("<a href='{0}' target='_blank'>{1}</a>", QuestCompanionUrl, html.ToString())
                         : html.ToString();

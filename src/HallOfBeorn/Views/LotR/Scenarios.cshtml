@@ -16,7 +16,6 @@
 {
     <a href="/Cards/Scenarios" class="scenario-view-link">Back to Scenario List</a>
     <h2><a href="@Model.Detail.CardsLink" target="_blank">@Model.Detail.Title</a></h2>
-    
     <div>
     @foreach (var questCard in @Model.Detail.QuestCards)
     {
@@ -48,6 +47,10 @@
     if (!string.IsNullOrEmpty(@Model.Detail.RulesUrl) || !string.IsNullOrEmpty(@Model.Detail.QuestCompanionUrl) || @Model.Detail.HasRulesImages)
     {
         <h3>Resources</h3>
+        if (@Model.Detail.HasRulesReference)
+        {
+            <div><a title="@Model.Detail.RulesReferenceLabel" href="@Model.Detail.RulesReferenceUrl" target="_blank">@Model.Detail.RulesReferenceLabel</a></div>
+        } 
         if (!string.IsNullOrEmpty(@Model.Detail.RulesUrl))
         {
             <div><a title="@Model.Detail.RulesLabel" href="@Model.Detail.RulesUrl" target="_blank">Rules Sheet</a></div>
@@ -66,10 +69,10 @@
         if (!string.IsNullOrEmpty(@Model.Detail.QuestCompanionUrl))
         {
             <div><a title="@Model.Detail.Title on the Quest Companion" href="@Model.Detail.QuestCompanionUrl" target="_blank">Quest Companion</a></div>
-        }
-        if (@Model.Detail.HasRulesReference)
+        }  
+        if (!string.IsNullOrEmpty(@Model.Detail.DifficultyHtml))
         {
-            <div><a title="@Model.Detail.RulesReferenceLabel" href="@Model.Detail.RulesReferenceUrl" target="_blank">@Model.Detail.RulesReferenceLabel</a></div>
+            <div><span class="scenario-difficulty">Difficulty: @Html.Raw(@Model.Detail.DifficultyHtml)<span class='difficulty-votes'>(@Model.Detail.Votes)</span></span></div>
         }
     }
     
