@@ -59,6 +59,8 @@ namespace HallOfBeorn.Models.LotR
         Ally_Attachment,
         Location_Attachment,
         Damage_Control,
-        Cost_Reduction
+        Cost_Reduction,
+        Mono_Sphere_Bonus,
+        Mono_Sphere_Required
     }
 }

@@ -373,7 +373,9 @@ namespace HallOfBeorn.Services.LotR
                 CreateCategoryFilter(@"attach to (an(\s{1}[\S]*\s{1}|\s)ally|a(\s{1}[\S]*\s{1}|\s{1})character)|attach to (a|an) [\S]* or [\S]* character", Category.Ally_Attachment),
                 CreateCategoryFilter("attach.* to (a|the active|that) location", Category.Location_Attachment),
                 CreateCategoryFilter("(cancel|prevent) 1 point of damage|place 1 of that damage|takes all damage assigned", Category.Damage_Control),
-                CreateCategoryFilter("reduce the cost (of|to)", Category.Cost_Reduction)
+                CreateCategoryFilter("reduce the cost (of|to)", Category.Cost_Reduction),
+                CreateCategoryFilter("for each hero you control with (a|the) printed (Leadership|Tactics|Spirit|Lore) resource icon", Category.Mono_Sphere_Bonus),
+                CreateCategoryFilter("Play only if each hero you control has (a|the) printed (Leadership|Tactics|Spirit|Lore)", Category.Mono_Sphere_Required)
             };
 
             foreach (var card in cards.Where(x => IsCategorizable(x)))
