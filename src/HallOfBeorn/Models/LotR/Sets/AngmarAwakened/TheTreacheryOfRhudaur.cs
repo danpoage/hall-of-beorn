@@ -24,7 +24,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTemplate("<p>Draw 3 additional cards at the beginning of the resource phase.</p><p>At the end of the round, discard all cards in your hand.</p><p class='flavor-text'>&quot;That is the path of despair. Of folly, I would say, if the long wisdom of Elrond did not forbid me.&quot;<br>&ndash;The Fellowship of the Ring</p>")
                 .WithInfo(84, 1, Artist.Arden_Beckwith));
             Cards.Add(LotRCard.Event("Reinforcements", "", Sphere.Leadership, 3)
-                .WithText("You must spend resources from 3 different heroes' resource pools to play this card.\r\nAction: The players, as a group, can put up to 2 allies into play from their hands. Each of these allies may enter play under any player's control. At the end of the phase, return each of those allies that are still in play to their owners' hands.")
+                .WithText("You must use resources from 3 different heroes' pools to play this card.\r\nAction: The players, as a group, can put up to 2 allies into play from their hands. Each of these allies may enter play under any player's control. At the end of the phase, return each of those allies that are still in play to their owners' hands.")
                 .WithInfo(85, 3, Artist.Oleg_Saakyan));
             Cards.Add(LotRCard.PlayerSideQuest("Send for Aid", "", Sphere.Leadership, 1, 6)
                 .WithFlavor("\"Often the Rohirrim have aided us, but now the Lord Denethor asks for all your strength and all your speed...\"\r\n-Hirgon, The Return of the King")
