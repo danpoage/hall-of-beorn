@@ -374,7 +374,7 @@ namespace HallOfBeorn.Services.LotR
                 CreateCategoryFilter("attach.* to (a|the active|that) location", Category.Location_Attachment),
                 CreateCategoryFilter("(cancel|prevent) 1 point of damage|place 1 of that damage|takes all damage assigned", Category.Damage_Control),
                 CreateCategoryFilter("reduce the cost (of|to)", Category.Cost_Reduction),
-                CreateCategoryFilter("for each hero you control with (a|the) printed (Leadership|Tactics|Spirit|Lore) resource icon", Category.Mono_Sphere_Bonus),
+                CreateCategoryFilter("each hero you control with (a|the) printed (Leadership|Tactics|Spirit|Lore) resource icon|if each of your heroes has a printed (Leadership|Tactics|Spirit|Lore) resource icon", Category.Mono_Sphere_Bonus),
                 CreateCategoryFilter("Play only if each hero you control has (a|the) printed (Leadership|Tactics|Spirit|Lore)|You must use resources from 3 different heroes' pools", Category.Mono_Sphere_Required)
             };
 
