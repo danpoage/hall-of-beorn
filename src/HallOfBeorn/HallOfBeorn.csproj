@@ -803,7 +803,9 @@
     <Compile Include="Models\RingsDb\RingsDbDeckList.cs" />
     <Compile Include="Models\View.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\LotR\Characters\ICharacterRepository.cs" />
+    <Compile Include="Services\LotR\ICardRepository.cs" />
+    <Compile Include="Services\LotR\ICharacterRepository.cs" />
+    <Compile Include="Services\LotR\IProductRepository.cs" />
     <Compile Include="Services\LotR\Octgn\IOctgnService.cs" />
     <Compile Include="Services\LotR\Scenarios\IScenarioService.cs" />
     <Compile Include="Services\LotR\Search\AdvancedSearchService.cs" />
@@ -814,8 +816,7 @@
     <Compile Include="Services\LotR\Categories\EncounterCategoryService.cs" />
     <Compile Include="Services\LotR\Categories\PlayerCategoryService.cs" />
     <Compile Include="Services\LotR\Categories\QuestCategoryService.cs" />
-    <Compile Include="Services\LotR\Characters\CharacterRepository.cs" />
-    <Compile Include="Services\LotR\EncounterSetRepository.cs" />
+    <Compile Include="Services\LotR\CharacterRepository.cs" />
     <Compile Include="Services\LotR\Templates\EnUsTemplateRepository1.cs" />
     <Compile Include="Services\LotR\Templates\EnUsTemplateRepository2.cs" />
     <Compile Include="Services\LotR\Categories\ICategoryService.cs" />
@@ -825,12 +826,12 @@
     <Compile Include="Services\LotR\Octgn\OctgnService.cs" />
     <Compile Include="Services\LotR\RingsDb\IRingsDbService.cs" />
     <Compile Include="Services\LotR\RingsDb\RingsDbService.cs" />
-    <Compile Include="Services\LotR\OldSearchService.cs" />
-    <Compile Include="Services\LotR\OldCategoryService.cs" />
+    <Compile Include="Services\LotR\Legacy\OldSearchService.cs" />
+    <Compile Include="Services\LotR\Legacy\OldCategoryService.cs" />
     <Compile Include="Services\LotR\ProductRepository.cs" />
-    <Compile Include="Services\LotR\RelationshipService.cs" />
+    <Compile Include="Services\LotR\Legacy\OldRelationshipService.cs" />
     <Compile Include="Services\LotR\Scenarios\ScenarioService.cs" />
-    <Compile Include="Services\LotR\OldSearchSortService.cs" />
+    <Compile Include="Services\LotR\Legacy\OldSearchSortService.cs" />
     <Compile Include="Services\LotR\LotRServiceNames.cs" />
     <Compile Include="Services\LotR\Search\ByteComparisonFilter.cs" />
     <Compile Include="Services\LotR\Search\CardTypeFilter.cs" />

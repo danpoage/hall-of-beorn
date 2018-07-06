@@ -7,9 +7,10 @@ using HallOfBeorn.Models.LotR;
 
 namespace HallOfBeorn.Services.LotR
 {
-    public class RelationshipService
+    [Obsolete]
+    public class OldRelationshipService
     {
-        public RelationshipService(CardRepository cardRepository)
+        public OldRelationshipService(CardRepository cardRepository)
         {
             cards = cardRepository.Cards();
         }

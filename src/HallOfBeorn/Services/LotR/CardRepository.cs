@@ -7,7 +7,7 @@ using HallOfBeorn.Models.LotR;
 
 namespace HallOfBeorn.Services.LotR
 {
-    public class CardRepository
+    public class CardRepository : ICardRepository
     {
         public CardRepository(ProductRepository productRepository)
         {

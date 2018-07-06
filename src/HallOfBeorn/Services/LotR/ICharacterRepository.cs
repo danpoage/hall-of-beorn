@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HallOfBeorn.Models.LotR;
-namespace HallOfBeorn.Services.LotR.Characters
+namespace HallOfBeorn.Services.LotR
 {
     public interface ICharacterRepository
     {

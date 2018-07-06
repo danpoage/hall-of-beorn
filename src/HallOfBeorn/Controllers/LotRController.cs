@@ -14,7 +14,6 @@ using HallOfBeorn.Models.LotR.ViewModels;
 using HallOfBeorn.Services;
 using HallOfBeorn.Services.LotR;
 using HallOfBeorn.Services.LotR.Categories;
-using HallOfBeorn.Services.LotR.Characters;
 using HallOfBeorn.Services.LotR.Octgn;
 using HallOfBeorn.Services.LotR.RingsDb;
 using HallOfBeorn.Services.LotR.Scenarios;
@@ -29,10 +28,10 @@ namespace HallOfBeorn.Controllers
     {
         public LotRController()
         {
-            cardRepository = (CardRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.CardRepository];
-            productRepository = (ProductRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.ProductRepository];
+            cardRepository = (ICardRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.CardRepository];
+            productRepository = (IProductRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.ProductRepository];
             characterRepository = (ICharacterRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.CharacterRepository];
-            searchService = (SearchService)System.Web.HttpContext.Current.Application[LotRServiceNames.SearchService];
+            searchService = (ISearchService)System.Web.HttpContext.Current.Application[LotRServiceNames.SearchService];
             playerCategoryService = (ICategoryService<PlayerCategory>)System.Web.HttpContext.Current.Application[LotRServiceNames.PlayerCategoryService];
             encounterCategoryService = (ICategoryService<EncounterCategory>)System.Web.HttpContext.Current.Application[LotRServiceNames.EncounterCategoryService];
             questCategoryService = (ICategoryService<QuestCategory>)System.Web.HttpContext.Current.Application[LotRServiceNames.QuestCategoryService];
@@ -55,8 +54,8 @@ namespace HallOfBeorn.Controllers
         }
 
         private readonly ISearchService searchService;
-        private readonly CardRepository cardRepository;
-        private readonly ProductRepository productRepository;
+        private readonly ICardRepository cardRepository;
+        private readonly IProductRepository productRepository;
         private readonly ICharacterRepository characterRepository;
         private readonly ICategoryService<PlayerCategory> playerCategoryService;
         private readonly ICategoryService<EncounterCategory> encounterCategoryService;

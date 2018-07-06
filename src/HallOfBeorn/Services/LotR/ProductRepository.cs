@@ -8,7 +8,7 @@ using HallOfBeorn.Models.LotR.Products;
 
 namespace HallOfBeorn.Services.LotR
 {
-    public class ProductRepository
+    public class ProductRepository : IProductRepository
     {
         public ProductRepository()
         {

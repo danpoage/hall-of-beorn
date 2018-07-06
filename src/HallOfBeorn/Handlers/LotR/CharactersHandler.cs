@@ -5,19 +5,18 @@ using System.Web;
 using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.ViewModels;
 using HallOfBeorn.Services.LotR;
-using HallOfBeorn.Services.LotR.Characters;
 
 namespace HallOfBeorn.Handlers.LotR
 {
     public class CharactersHandler
     {
-        public CharactersHandler(CardRepository cardRepository, ICharacterRepository characterRepository)
+        public CharactersHandler(ICardRepository cardRepository, ICharacterRepository characterRepository)
         {
             _cardRepository = cardRepository;
             _characterRepository = characterRepository;
         }
 
-        private readonly CardRepository _cardRepository;
+        private readonly ICardRepository _cardRepository;
         private readonly ICharacterRepository _characterRepository;
 
         public CharacterViewModel HandleCharacters(string id)

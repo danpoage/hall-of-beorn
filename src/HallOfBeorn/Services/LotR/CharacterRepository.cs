@@ -7,7 +7,7 @@ using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.Characters;
 using HallOfBeorn.Models.LotR.Characters.Groups;
 
-namespace HallOfBeorn.Services.LotR.Characters
+namespace HallOfBeorn.Services.LotR
 {
     public class CharacterRepository : ICharacterRepository
     {

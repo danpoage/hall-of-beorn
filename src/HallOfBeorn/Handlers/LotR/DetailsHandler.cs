@@ -7,7 +7,6 @@ using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.ViewModels;
 using HallOfBeorn.Services.LotR;
 using HallOfBeorn.Services.LotR.Categories;
-using HallOfBeorn.Services.LotR.Characters;
 using HallOfBeorn.Services.LotR.Octgn;
 using HallOfBeorn.Services.LotR.RingsDb;
 using HallOfBeorn.Services.LotR.Stats;
@@ -18,7 +17,7 @@ namespace HallOfBeorn.Handlers.LotR
 {
     public class DetailsHandler
     {
-        public DetailsHandler(CardRepository cardRepository,
+        public DetailsHandler(ICardRepository cardRepository,
             ICharacterRepository characterRepository,
             ICategoryService<PlayerCategory> playerCategoryService,
             ICategoryService<EncounterCategory> encounterCategoryService,
@@ -40,7 +39,7 @@ namespace HallOfBeorn.Handlers.LotR
             _octgnService = octgnService;
         }
 
-        private readonly CardRepository _cardRepository;
+        private readonly ICardRepository _cardRepository;
         private readonly ICharacterRepository _characterRepository;
         private readonly ICategoryService<PlayerCategory> _playerCategoryService;
         private readonly ICategoryService<EncounterCategory> _encounterCategoryService;
