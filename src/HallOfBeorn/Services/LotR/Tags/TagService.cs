@@ -7,7 +7,7 @@ using HallOfBeorn.Models;
 
 namespace HallOfBeorn.Services.LotR.Tags
 {
-    public class TagService
+    public class TagService : ITagService
     {
         public TagService()
         {
