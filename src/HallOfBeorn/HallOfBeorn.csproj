@@ -196,8 +196,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Handlers\LotR\BrowseHandler.cs" />
     <Compile Include="Handlers\LotR\CharactersHandler.cs" />
     <Compile Include="Handlers\LotR\DetailsHandler.cs" />
+    <Compile Include="Handlers\LotR\RingsDbHandler.cs" />
+    <Compile Include="Handlers\LotR\ScenariosHandler.cs" />
     <Compile Include="Handlers\LotR\SearchHandler.cs" />
     <Compile Include="HtmlHelperExtensions.cs" />
     <Compile Include="Models\AccountModels.cs" />

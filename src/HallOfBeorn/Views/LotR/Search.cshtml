@@ -30,7 +30,7 @@
 {
     <div class="form-group">
         <div style="margin-bottom:10px;">
-            <div style="display:inline-block;min-width:300px;margin-right:4px;">@Html.TextBoxFor(x => x.Query, new { style = "text-align:left;width:95%;margin-right:4px;" })</div>
+            <div style="display:inline-block;min-width:300px;margin-right:4px;">@Html.TextBoxFor(x => x.Query, new { style = "text-align:left;width:95%;margin-right:4px;", @autofocus = "autofocus" })</div>
             <div style="display:inline-block;">
                 <input type="submit" value="Search" class="search-button" />
                 <a id="resetButton" href="#" class="clear-button">Clear</a>
