@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HallOfBeorn.Services.LotR
+namespace HallOfBeorn.Services.LotR.Octgn
 {
-    public class OctgnService
+    public class OctgnService : IOctgnService
     {
         public OctgnService(ProductRepository productRepository, CardRepository cardRepository)
         {
@@ -14,7 +14,6 @@ namespace HallOfBeorn.Services.LotR
 
             loadSetMaps();
             loadCardMaps();
-            
         }
 
         private readonly ProductRepository productRepository;

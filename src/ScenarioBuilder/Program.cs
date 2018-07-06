@@ -8,6 +8,8 @@ using HallOfBeorn;
 using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Services.LotR;
+using HallOfBeorn.Services.LotR.Categories;
+using HallOfBeorn.Services.LotR.Scenarios;
 
 namespace ScenarioBuilder
 {
@@ -17,8 +19,11 @@ namespace ScenarioBuilder
         {
             var productRepo = new ProductRepository();
             var cardRepo = new CardRepository(productRepo);
-            var categoryService = new CategoryService(cardRepo);
-            var scenarioService = new ScenarioService(categoryService, productRepo, cardRepo);
+            var playerCategoryService = new PlayerCategoryService(cardRepo);
+            var encounterCategoryService = new EncounterCategoryService(cardRepo);
+            var questCategoryService = new QuestCategoryService(cardRepo);
+            var scenarioService = new ScenarioService(playerCategoryService, encounterCategoryService, questCategoryService,
+                productRepo, cardRepo);
 
             Console.WriteLine("Scenario Builder");
 

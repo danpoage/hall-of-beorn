@@ -11,7 +11,9 @@ namespace HallOfBeorn.Services.LotR
         public static string CardRepository = "cardRepository";
         public static string CharacterRepository = "characterRepository";
 
-        public static string CategoryService = "categoryService";
+        public static string PlayerCategoryService = "playerCategoryService";
+        public static string EncounterCategoryService = "encounterCategoryService";
+        public static string QuestCategoryService = "questCategoryService";
         public static string NoteService = "noteService";
         public static string ScenarioService = "scenarioService";
         public static string SearchService = "searchService";

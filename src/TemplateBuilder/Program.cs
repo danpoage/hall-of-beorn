@@ -10,12 +10,13 @@ using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.ViewModels;
 using HallOfBeorn.Services.LotR;
+using HallOfBeorn.Services.LotR.Stats;
 
 namespace TemplateBuilder
 {
     class Program
     {
-        private static StatService statService;
+        private static IStatService statService;
 
         static void Main(string[] args)
         {

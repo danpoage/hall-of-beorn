@@ -8,13 +8,17 @@ using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.Products;
 using HallOfBeorn.Models.LotR.Search;
 using HallOfBeorn.Models.LotR.ViewModels;
+using HallOfBeorn.Services.LotR.RingsDb;
+using HallOfBeorn.Services.LotR.Scenarios;
+using HallOfBeorn.Services.LotR.Search;
+using HallOfBeorn.Services.LotR.Tags;
 
 namespace HallOfBeorn.Services.LotR
 {
     [Obsolete]
     public class OldSearchService
     {
-        public OldSearchService(ProductRepository productRepository, CardRepository cardRepository, ScenarioService scenarioService, AdvancedSearchService advancedSearchService, SearchSortService sortService, RingsDbService ringsDbService, NoteService noteService, CategoryService categoryService)
+        public OldSearchService(ProductRepository productRepository, CardRepository cardRepository, ScenarioService scenarioService, AdvancedSearchService advancedSearchService, OldSearchSortService sortService, RingsDbService ringsDbService, NoteService noteService, OldCategoryService categoryService)
         {
             this.productRepository = productRepository;
             this.cardRepository = cardRepository;
@@ -32,11 +36,11 @@ namespace HallOfBeorn.Services.LotR
         private readonly CardRepository cardRepository;
         private readonly ScenarioService scenarioService;
         private readonly AdvancedSearchService advancedSearchService;
-        private readonly SearchSortService sortService;
+        private readonly OldSearchSortService sortService;
         private readonly IEnumerable<LotRCard> cards;
         private readonly RingsDbService ringsDbService;
         private readonly NoteService noteService;
-        private readonly CategoryService categoryService;
+        private readonly OldCategoryService categoryService;
         private readonly Func<string, byte> getPopularity;
 
         public IEnumerable<CardScore> SearchNew(SearchViewModel model)

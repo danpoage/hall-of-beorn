@@ -4,45 +4,40 @@ using System.Linq;
 using System.Web;
 using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.ViewModels;
+using HallOfBeorn.Services.LotR.Categories;
+using HallOfBeorn.Services.LotR.RingsDb;
 
 namespace HallOfBeorn.Services.LotR.Search
 {
-    public class SearchService
+    public class SearchService : ISearchService
     {
-        public SearchService(ProductRepository productRepository, CardRepository cardRepository, 
-            ScenarioService scenarioService, AdvancedSearchService advancedSearchService,
-            CategoryService categoryService, RingsDbService ringsDbService)
+        public SearchService(CardRepository cardRepository, PlanBuilder builder)
         {
-            this.productRepository = productRepository;
-            this.cardRepository = cardRepository;
-            this.scenarioService = scenarioService;
-            this.advancedSearchService = advancedSearchService;
-            this.ringsDbService = ringsDbService;
-            this.categoryService = categoryService;
+            _cardRepository = cardRepository;
+            _builder = builder;
         }
 
-        private readonly ProductRepository productRepository;
-        private readonly CardRepository cardRepository;
-        private readonly ScenarioService scenarioService;
-        private readonly AdvancedSearchService advancedSearchService;
-        private readonly RingsDbService ringsDbService;
-        private readonly CategoryService categoryService;
+        private readonly CardRepository _cardRepository;
+        private readonly PlanBuilder _builder;
 
         private IOrderedEnumerable<CardScore> InitialScores()
         {
-            return cardRepository
+            return _cardRepository
                 .Cards()
                 .Select(card => new CardScore(card, 1, string.Empty))
                 .OrderBy(s => 1);
         }
 
         public IOrderedEnumerable<CardScore> Search(SearchViewModel model)
-        {            
-            var builder = new PlanBuilder(model, scenarioService, categoryService, ringsDbService, advancedSearchService);
-            
-            var scores = builder
-                .ToPlan()
-                .Execute(InitialScores());
+        {
+            var all = _cardRepository
+                .Cards()
+                .Select(card => new CardScore(card, 1, string.Empty))
+                .OrderBy(s => 1);
+
+            var scores = _builder
+                .Build(model)
+                .Execute(all);
 
             return scores;
         }

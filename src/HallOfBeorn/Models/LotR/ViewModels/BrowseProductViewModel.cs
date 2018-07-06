@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 {
     public class BrowseProductViewModel
     {
-        public BrowseProductViewModel(Product product, Func<string, IEnumerable<Category>> getPlayerCategories, Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, Func<string, IEnumerable<QuestCategory>> getQuestCategories)
+        public BrowseProductViewModel(Product product, Func<string, IEnumerable<PlayerCategory>> getPlayerCategories, Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, Func<string, IEnumerable<QuestCategory>> getQuestCategories)
         {
             this.product = product;
 

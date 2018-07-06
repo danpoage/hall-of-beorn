@@ -9,7 +9,15 @@ using System.Web.Routing;
 
 using HallOfBeorn.Services;
 using HallOfBeorn.Services.LotR;
+using HallOfBeorn.Services.LotR.Categories;
+using HallOfBeorn.Services.LotR.Characters;
+using HallOfBeorn.Services.LotR.Octgn;
+using HallOfBeorn.Services.LotR.RingsDb;
+using HallOfBeorn.Services.LotR.Scenarios;
 using HallOfBeorn.Services.LotR.Search;
+using HallOfBeorn.Services.LotR.Stats;
+using HallOfBeorn.Services.LotR.Tags;
+using HallOfBeorn.Services.LotR.Templates;
 
 namespace HallOfBeorn
 {
@@ -39,22 +47,29 @@ namespace HallOfBeorn
             var characterRepository = new CharacterRepository();
             System.Web.HttpContext.Current.Application[LotRServiceNames.CharacterRepository] = characterRepository;
 
-            var categoryService = new CategoryService(cardRepository);
-            System.Web.HttpContext.Current.Application[LotRServiceNames.CategoryService] = categoryService;
+            var playerCategoryService = new PlayerCategoryService(cardRepository);
+            System.Web.HttpContext.Current.Application[LotRServiceNames.PlayerCategoryService] = playerCategoryService;
 
-            var scenarioService = new ScenarioService(categoryService, productRepository, cardRepository);
+            var encounterCategoryService = new EncounterCategoryService(cardRepository);
+            System.Web.HttpContext.Current.Application[LotRServiceNames.EncounterCategoryService] = encounterCategoryService;
+
+            var questCategoryService = new QuestCategoryService(cardRepository);
+            System.Web.HttpContext.Current.Application[LotRServiceNames.QuestCategoryService] = questCategoryService;
+
+            var scenarioService = new ScenarioService(playerCategoryService, encounterCategoryService, questCategoryService, 
+                productRepository, cardRepository);
             System.Web.HttpContext.Current.Application[LotRServiceNames.ScenarioService] = scenarioService;
 
             var ringsDbService = new RingsDbService(cardRepository);
             System.Web.HttpContext.Current.Application[LotRServiceNames.RingsDbService] = ringsDbService;
 
-            var advancedSearchService = new AdvancedSearchService(categoryService);
-            var sortService = new SearchSortService(ringsDbService);
-
             var noteService = new NoteService();
             System.Web.HttpContext.Current.Application[LotRServiceNames.NoteService] = noteService;
 
-            var searchService = new SearchService(productRepository, cardRepository, scenarioService, advancedSearchService, categoryService, ringsDbService);
+            var advancedSearchService = new AdvancedSearchService(playerCategoryService, encounterCategoryService, questCategoryService);
+            var planBuilder = new PlanBuilder(scenarioService, playerCategoryService, encounterCategoryService, questCategoryService, ringsDbService, advancedSearchService);
+
+            var searchService = new SearchService(cardRepository, planBuilder);
             System.Web.HttpContext.Current.Application[LotRServiceNames.SearchService] = searchService;
 
             var statService = new StatService(cardRepository);

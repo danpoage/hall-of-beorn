@@ -9,17 +9,17 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 {
     public class CardViewModel
     {
-        public CardViewModel(LotRCard card, Func<string, IEnumerable<Category>> getPlayerCategories, Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, Func<string, IEnumerable<QuestCategory>> getQuestCategories)
+        public CardViewModel(LotRCard card, Func<string, IEnumerable<PlayerCategory>> getPlayerCategories, Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, Func<string, IEnumerable<QuestCategory>> getQuestCategories)
             : this(card, 0f, string.Empty, getPlayerCategories, getEncounterCategories, getQuestCategories)
         {
         }
 
-        public CardViewModel(CardScore score, Func<string, IEnumerable<Category>> getPlayerCategories, Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, Func<string, IEnumerable<QuestCategory>> getQuestCategories)
+        public CardViewModel(CardScore score, Func<string, IEnumerable<PlayerCategory>> getPlayerCategories, Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, Func<string, IEnumerable<QuestCategory>> getQuestCategories)
             : this(score.Card, score.Score(), score.Description, getPlayerCategories, getEncounterCategories, getQuestCategories)
         {
         }
 
-        public CardViewModel(LotRCard card, float score, string searchDescription, Func<string, IEnumerable<Category>> getPlayerCategories, Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, Func<string, IEnumerable<QuestCategory>> getQuestCategories)
+        public CardViewModel(LotRCard card, float score, string searchDescription, Func<string, IEnumerable<PlayerCategory>> getPlayerCategories, Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, Func<string, IEnumerable<QuestCategory>> getQuestCategories)
         {
             _card = card;
             _score = score;
@@ -38,7 +38,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         private float _score;
         private string _searchDescription;
 
-        private Func<string, IEnumerable<Category>> getPlayerCategories;
+        private Func<string, IEnumerable<PlayerCategory>> getPlayerCategories;
         private Func<string, IEnumerable<EncounterCategory>> getEncounterCategories;
         private Func<string, IEnumerable<QuestCategory>> getQuestCategories;
 

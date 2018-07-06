@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR
 {
-    public enum Category
+    public enum PlayerCategory
     {
         None = 0,
         Resource_Acceleration,

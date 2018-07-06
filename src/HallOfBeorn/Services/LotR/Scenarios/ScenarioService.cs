@@ -6,14 +6,21 @@ using System.Web;
 using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.ViewModels;
+using HallOfBeorn.Services.LotR.Categories;
 
-namespace HallOfBeorn.Services.LotR
+namespace HallOfBeorn.Services.LotR.Scenarios
 {
-    public class ScenarioService
+    public class ScenarioService : IScenarioService
     {
-        public ScenarioService(CategoryService categoryService, ProductRepository productRepository, CardRepository cardRepository)
+        public ScenarioService(ICategoryService<PlayerCategory> playerCategoryService, 
+            ICategoryService<EncounterCategory> encounterCategoryService,
+            ICategoryService<QuestCategory> questCategoryService,
+            ProductRepository productRepository, CardRepository cardRepository)
         {
-            this.categoryService = categoryService;
+            _playerCategoryService = playerCategoryService;
+            _encounterCategoryService = encounterCategoryService;
+            _questCategoryService = questCategoryService;
+
             this.cardRepository = cardRepository;
             this.cards = cardRepository.Cards().ToList();
             foreach (var card in this.cards.Where(x => !string.IsNullOrEmpty(x.EncounterSet)))
@@ -41,16 +48,18 @@ namespace HallOfBeorn.Services.LotR
 
             listViewModel = new ScenarioListViewModel();
             var lookupCard = new Func<string, LotRCard>((slug) => { return cardRepository.FindBySlug(slug); });
-            var getPlayerCategories = new Func<string, IEnumerable<Category>>((slug) => { return categoryService.PlayerCategories(slug); });
-            var getEncounterCategories = new Func<string, IEnumerable<EncounterCategory>>((slug) => { return categoryService.EncounterCategories(slug); });
-            var getQuestCategories = new Func<string, IEnumerable<QuestCategory>>((slug) => { return categoryService.QuestCategories(slug); });
+            var getPlayerCategories = new Func<string, IEnumerable<PlayerCategory>>((slug) => { return _playerCategoryService.Categories(slug); });
+            var getEncounterCategories = new Func<string, IEnumerable<EncounterCategory>>((slug) => { return _encounterCategoryService.Categories(slug); });
+            var getQuestCategories = new Func<string, IEnumerable<QuestCategory>>((slug) => { return _questCategoryService.Categories(slug); });
             foreach (var scenarioGroup in ScenarioGroups())
             {
                 listViewModel.ScenarioGroups.Add(new ScenarioGroupViewModel(scenarioGroup, lookupCard, getPlayerCategories, getEncounterCategories, getQuestCategories));
             }
         }
 
-        private readonly CategoryService categoryService;
+        private readonly ICategoryService<PlayerCategory> _playerCategoryService;
+        private readonly ICategoryService<EncounterCategory> _encounterCategoryService;
+        private readonly ICategoryService<QuestCategory> _questCategoryService;
         private readonly CardRepository cardRepository;
         private readonly IList<LotRCard> cards;
         private readonly IDictionary<string, List<LotRCard>> cardsByEncounterSet = new Dictionary<string, List<LotRCard>>();

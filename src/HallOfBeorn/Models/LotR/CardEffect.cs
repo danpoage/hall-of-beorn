@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-using HallOfBeorn.Services.LotR;
+using HallOfBeorn.Services.LotR.Stats;
 
 namespace HallOfBeorn.Models.LotR
 {
@@ -156,7 +156,7 @@ namespace HallOfBeorn.Models.LotR
             "the players cannot"
         };
 
-        public static CardEffect Parse(StatService statService, LotRCard card, string text)
+        public static CardEffect Parse(IStatService statService, LotRCard card, string text)
         {
             if (text == null)
                 return null;

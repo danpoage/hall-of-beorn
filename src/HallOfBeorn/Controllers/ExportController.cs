@@ -10,6 +10,7 @@ using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.Simple;
 using HallOfBeorn.Models.LotR.ViewModels;
 using HallOfBeorn.Services.LotR;
+using HallOfBeorn.Services.LotR.Scenarios;
 using HallOfBeorn.Services.LotR.Search;
 
 namespace HallOfBeorn.Controllers
@@ -20,14 +21,14 @@ namespace HallOfBeorn.Controllers
         {
             productRepository = (ProductRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.ProductRepository];
             cardRepository = (CardRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.CardRepository];
-            scenarioService = (ScenarioService)System.Web.HttpContext.Current.Application[LotRServiceNames.ScenarioService];
+            scenarioService = (IScenarioService)System.Web.HttpContext.Current.Application[LotRServiceNames.ScenarioService];
             searchService = (SearchService)System.Web.HttpContext.Current.Application[LotRServiceNames.SearchService];
         }
 
         private readonly SearchService searchService;
         private readonly ProductRepository productRepository;
         private readonly CardRepository cardRepository;
-        private readonly ScenarioService scenarioService;
+        private readonly IScenarioService scenarioService;
 
         private bool IsPlayerCard(LotRCard card)
         {

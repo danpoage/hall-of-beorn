@@ -7,12 +7,14 @@ using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.Search;
 using HallOfBeorn.Models.LotR.ViewModels;
+using HallOfBeorn.Services.LotR.RingsDb;
 
 namespace HallOfBeorn.Services.LotR
 {
-    public class SearchSortService
+    [Obsolete]
+    public class OldSearchSortService
     {
-        public SearchSortService(RingsDbService ringsDbService)
+        public OldSearchSortService(RingsDbService ringsDbService)
         {
             this.ringsDbService = ringsDbService;
 

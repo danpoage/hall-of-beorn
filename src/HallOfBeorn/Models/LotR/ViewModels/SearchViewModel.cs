@@ -27,13 +27,376 @@ namespace HallOfBeorn.Models.LotR.ViewModels
     {
         public SearchViewModel()
         {
+            Cards = new List<CardViewModel>();
+            Products = new List<ProductViewModel>();
         }
 
         public Func<Scenario> GetScenario { get; set; }
 
         public void Initialize()
         {
-            /*
+            var model = this;
+
+            if (string.IsNullOrEmpty(model.CardSet) || model.CardSet == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.CardSet = null;
+            }
+            if (string.IsNullOrEmpty(model.EncounterSet) || model.EncounterSet == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.EncounterSet = null;
+            }
+            if (string.IsNullOrEmpty(model.Scenario) || model.Scenario == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.Scenario = null;
+            }
+            if (string.IsNullOrEmpty(model.Quest) || model.Quest == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.Quest = null;
+            }
+            if (model.CardType.HasValue && model.CardType.Value == Models.LotR.CardType.None)
+            {
+                model.CardType = null;
+            }
+            if (string.IsNullOrEmpty(model.CardSubtype) || model.CardSubtype == SearchViewModel.DEFAULT_FILTER_VALUE || model.CardSubtype == "None")
+            {
+                model.CardSubtype = null;
+            }
+            if (model.SetType.HasValue && model.SetType.Value == Models.SetType.None)
+            {
+                model.SetType = null;
+            }
+            if (model.Sort.HasValue && model.Sort.Value == Models.LotR.Sort.None)
+            {
+                model.Sort = null;
+            }
+            if (model.View.HasValue && model.View.Value == Models.View.None)
+            {
+                model.View = null;
+            }
+            if (model.DeckType.HasValue && model.DeckType.Value == Models.DeckType.None)
+            {
+                model.DeckType = null;
+            }
+            if (string.IsNullOrEmpty(model.Trait) || model.Trait == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.Trait = null;
+            }
+            if (string.IsNullOrEmpty(model.Keyword) || model.Keyword == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.Keyword = null;
+            }
+            if (string.IsNullOrEmpty(model.Artist) || model.Artist == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.Artist = null;
+            }
+            if (model.Sphere.HasValue && model.Sphere.Value == Models.LotR.Sphere.None)
+            {
+                model.Sphere = null;
+            }
+            if (string.IsNullOrEmpty(model.Category) || model.Category == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.Category = null;
+            }
+            if (string.IsNullOrEmpty(model.EncounterCategory) || model.EncounterCategory == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.EncounterCategory = null;
+            }
+            if (string.IsNullOrEmpty(model.QuestCategory) || model.QuestCategory == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.QuestCategory = null;
+            }
+            if (string.IsNullOrEmpty(model.VictoryPoints) || model.VictoryPoints == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.VictoryPoints = null;
+            }
+
+            if (model.IsUnique.HasValue && model.IsUnique.Value == Uniqueness.Any)
+            {
+                model.IsUnique = null;
+            }
+            if (model.HasShadow.HasValue && model.HasShadow.Value == Models.HasShadow.Any)
+            {
+                model.HasShadow = null;
+            }
+
+            if (model.ThreatCostOperator.HasValue && model.ThreatCostOperator == NumericOperator.eq && (string.IsNullOrEmpty(model.ThreatCost) || model.ThreatCost == "Any"))
+            {
+                model.ThreatCost = null;
+                model.ThreatCostOperator = null;
+            }
+            if (model.CostOperator.HasValue && model.CostOperator == NumericOperator.eq && (string.IsNullOrEmpty(model.Cost) || model.Cost == "Any"))
+            {
+                model.Cost = null;
+                model.CostOperator = null;
+            }
+            if (model.EngagementCostOperator.HasValue && model.EngagementCostOperator == NumericOperator.eq && (string.IsNullOrEmpty(model.EngagementCost) || model.EngagementCost == "Any"))
+            {
+                model.EngagementCost = null;
+                model.EngagementCostOperator = null;
+            }
+            if (model.AttackOp.HasValue && model.AttackOp == NumericOperator.eq && (string.IsNullOrEmpty(model.Attack) || model.Attack == "Any"))
+            {
+                model.Attack = null;
+                model.AttackOp = null;
+            }
+            if (model.DefenseOp.HasValue && model.DefenseOp == NumericOperator.eq && (string.IsNullOrEmpty(model.Defense) || model.Defense == "Any"))
+            {
+                model.Defense = null;
+                model.DefenseOp = null;
+            }
+            if (model.WillpowerOp.HasValue && model.WillpowerOp == NumericOperator.eq && (string.IsNullOrEmpty(model.Willpower) || model.Willpower == "Any"))
+            {
+                model.Willpower = null;
+                model.WillpowerOp = null;
+            }
+            if (model.ThreatOp.HasValue && model.ThreatOp == NumericOperator.eq && (string.IsNullOrEmpty(model.Threat) || model.Threat == "Any"))
+            {
+                model.Threat = null;
+                model.ThreatOp = null;
+            }
+            if (model.HitPointsOp.HasValue && model.HitPointsOp == NumericOperator.eq && (string.IsNullOrEmpty(model.HitPoints) || model.HitPoints == "Any"))
+            {
+                model.HitPoints = null;
+                model.HitPointsOp = null;
+            }
+            if (model.QuestPointsOp.HasValue && model.QuestPointsOp == NumericOperator.eq && (string.IsNullOrEmpty(model.QuestPoints) || model.QuestPoints == "Any"))
+            {
+                model.QuestPoints = null;
+                model.QuestPointsOp = null;
+            }
+            if (model.PopularityOp.HasValue && model.PopularityOp == NumericOperator.eq && (string.IsNullOrEmpty(model.Popularity) || model.Popularity == "Any" || model.Popularity == "-1"))
+            {
+                model.Popularity = null;
+                model.PopularityOp = null;
+            }
+            if (model.Errata.HasValue && model.Errata.Value == ErrataVersion.Any)
+            {
+                model.Errata = null;
+            }
+
+            if (model.MEC01.HasValue && !model.MEC01.Value)
+            {
+                model.MEC01 = null;
+            }
+            if (model.MEC02.HasValue && !model.MEC02.Value)
+            {
+                model.MEC02 = null;
+            }
+            if (model.MEC03.HasValue && !model.MEC03.Value)
+            {
+                model.MEC03 = null;
+            }
+            if (model.MEC04.HasValue && !model.MEC04.Value)
+            {
+                model.MEC04 = null;
+            }
+            if (model.MEC05.HasValue && !model.MEC05.Value)
+            {
+                model.MEC05 = null;
+            }
+            if (model.MEC06.HasValue && !model.MEC06.Value)
+            {
+                model.MEC06 = null;
+            }
+            if (model.MEC07.HasValue && !model.MEC07.Value)
+            {
+                model.MEC07 = null;
+            }
+
+            if (model.MEC08.HasValue && !model.MEC08.Value)
+            {
+                model.MEC08 = null;
+            }
+            if (model.MEC09.HasValue && !model.MEC09.Value)
+            {
+                model.MEC09 = null;
+            }
+            if (model.MEC10.HasValue && !model.MEC10.Value)
+            {
+                model.MEC10 = null;
+            }
+            if (model.MEC11.HasValue && !model.MEC11.Value)
+            {
+                model.MEC11 = null;
+            }
+            if (model.MEC12.HasValue && !model.MEC12.Value)
+            {
+                model.MEC12 = null;
+            }
+            if (model.MEC13.HasValue && !model.MEC13.Value)
+            {
+                model.MEC13 = null;
+            }
+            if (model.MEC14.HasValue && !model.MEC14.Value)
+            {
+                model.MEC14 = null;
+            }
+
+            if (model.MEC17.HasValue && !model.MEC17.Value)
+            {
+                model.MEC17 = null;
+            }
+
+            if (model.MEC18.HasValue && !model.MEC18.Value)
+            {
+                model.MEC18 = null;
+            }
+            if (model.MEC19.HasValue && !model.MEC19.Value)
+            {
+                model.MEC19 = null;
+            }
+            if (model.MEC20.HasValue && !model.MEC20.Value)
+            {
+                model.MEC20 = null;
+            }
+            if (model.MEC21.HasValue && !model.MEC21.Value)
+            {
+                model.MEC21 = null;
+            }
+            if (model.MEC22.HasValue && !model.MEC22.Value)
+            {
+                model.MEC22 = null;
+            }
+            if (model.MEC23.HasValue && !model.MEC23.Value)
+            {
+                model.MEC23 = null;
+            }
+
+            if (model.MEC25.HasValue && !model.MEC25.Value)
+            {
+                model.MEC25 = null;
+            }
+            if (model.MEC26.HasValue && !model.MEC26.Value)
+            {
+                model.MEC26 = null;
+            }
+            if (model.MEC27.HasValue && !model.MEC27.Value)
+            {
+                model.MEC27 = null;
+            }
+            if (model.MEC28.HasValue && !model.MEC28.Value)
+            {
+                model.MEC28 = null;
+            }
+            if (model.MEC29.HasValue && !model.MEC29.Value)
+            {
+                model.MEC29 = null;
+            }
+            if (model.MEC30.HasValue && !model.MEC30.Value)
+            {
+                model.MEC30 = null;
+            }
+            if (model.MEC31.HasValue && !model.MEC31.Value)
+            {
+                model.MEC31 = null;
+            }
+
+            if (model.MEC38.HasValue && !model.MEC38.Value)
+            {
+                model.MEC38 = null;
+            }
+            if (model.MEC39.HasValue && !model.MEC39.Value)
+            {
+                model.MEC39 = null;
+            }
+            if (model.MEC40.HasValue && !model.MEC40.Value)
+            {
+                model.MEC40 = null;
+            }
+            if (model.MEC41.HasValue && !model.MEC41.Value)
+            {
+                model.MEC41 = null;
+            }
+            if (model.MEC42.HasValue && !model.MEC42.Value)
+            {
+                model.MEC42 = null;
+            }
+            if (model.MEC43.HasValue && !model.MEC43.Value)
+            {
+                model.MEC43 = null;
+            }
+            if (model.MEC44.HasValue && !model.MEC44.Value)
+            {
+                model.MEC44 = null;
+            }
+
+            if (model.MEC47.HasValue && !model.MEC47.Value)
+            {
+                model.MEC47 = null;
+            }
+
+            if (model.MEC48.HasValue && !model.MEC48.Value)
+            {
+                model.MEC48 = null;
+            }
+            if (model.MEC49.HasValue && !model.MEC49.Value)
+            {
+                model.MEC49 = null;
+            }
+            if (model.MEC50.HasValue && !model.MEC50.Value)
+            {
+                model.MEC50 = null;
+            }
+            if (model.MEC51.HasValue && !model.MEC51.Value)
+            {
+                model.MEC51 = null;
+            }
+            if (model.MEC52.HasValue && !model.MEC52.Value)
+            {
+                model.MEC52 = null;
+            }
+            if (model.MEC53.HasValue && !model.MEC53.Value)
+            {
+                model.MEC53 = null;
+            }
+
+            if (model.MEC16.HasValue && !model.MEC16.Value)
+            {
+                model.MEC16 = null;
+            }
+            if (model.MEC24.HasValue && !model.MEC24.Value)
+            {
+                model.MEC24 = null;
+            }
+
+            if (model.MEC32.HasValue && !model.MEC32.Value)
+            {
+                model.MEC32 = null;
+            }
+            if (model.MEC34.HasValue && !model.MEC34.Value)
+            {
+                model.MEC34 = null;
+            }
+            if (model.MEC45.HasValue && !model.MEC45.Value)
+            {
+                model.MEC45 = null;
+            }
+            if (model.MEC46.HasValue && !model.MEC46.Value)
+            {
+                model.MEC46 = null;
+            }
+            if (model.MEC54.HasValue && !model.MEC54.Value)
+            {
+                model.MEC54 = null;
+            }
+
+            if (model.FA01.HasValue && !model.FA01.Value)
+            {
+                model.FA01 = null;
+            }
+            if (model.FA02.HasValue && !model.FA02.Value)
+            {
+                model.FA02 = null;
+            }
+            if (model.FA03.HasValue && !model.FA03.Value)
+            {
+                model.FA03 = null;
+            }
+        }
+
+        /*
+        public void addDefinitions()
+        {
             definitions.Add(new QueryFilterDefinition());
 
             definitions.Add(new SimpleFilterDefinition("Card Set", (m) => { return m.CardSet; }, (s, c) => { return s.CardSetMatches(c); }, 100));
@@ -47,9 +410,6 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             definitions.Add(new EnumFilterDefinition("Sphere", (m) => { return m.Sphere; }, (s, c) => { return s.Sphere.Value == c.Sphere; }, 100));
             definitions.Add(new SimpleFilterDefinition("Unique", (m) => { return m.IsUnique; }, (s, c) => { return c.IsUnique == (s.IsUnique != null && s.IsUnique == Uniqueness.Yes); }, 100));
             definitions.Add(new EnumFilterDefinition("Set Type", (m) => { return m.SetType; }, (s, c) => { return (s.SetType == Models.SetType.OFFICIAL && c.CardSet.SetType != Models.SetType.CUSTOM) || (s.SetType.Value == c.CardSet.SetType); }, 100));
-            */
-
-            /*
             //definitions.Add(new EnumFilterDefinition("Scenario", (m) => { return m.Scenario; }, (s, c) => { return s.Scenario == c.ScenarioTitle; }));
             definitions.Add(new EnumFilterDefinition("Encounter Set", (m) => { return m.EncounterSet; }));
 
@@ -82,8 +442,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             definitions.Add(new FilterDefinition("Quest Card Category", (m) => { return m.QuestCategory; }));
 
             definitions.Add(new FilterDefinition("Artist", (m) => { return m.Artist; }));
-            */
         }
+        */
 
         private readonly List<FilterDefinition> definitions = new List<FilterDefinition>();
 
@@ -257,15 +617,15 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             else return "80%";
         }
 
-        public Category GetCategory()
+        public PlayerCategory GetCategory()
         {
-            var category = HallOfBeorn.Models.LotR.Category.None;
+            var category = HallOfBeorn.Models.LotR.PlayerCategory.None;
             if (string.IsNullOrEmpty(this.Category))
                 return category;
 
             var decoded = HttpUtility.HtmlDecode(this.Category).Replace(' ', '_');
 
-            Enum.TryParse<HallOfBeorn.Models.LotR.Category>(decoded, true, out category);
+            Enum.TryParse<HallOfBeorn.Models.LotR.PlayerCategory>(decoded, true, out category);
             
             return category;
         }
@@ -375,7 +735,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public bool HasCategory()
         {
-            return this.GetCategory() != Models.LotR.Category.None;
+            return this.GetCategory() != Models.LotR.PlayerCategory.None;
         }
 
         public bool HasEncounterCategory()

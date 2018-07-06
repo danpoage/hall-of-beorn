@@ -7,7 +7,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 {
     public class ScenarioViewModel
     {
-        public ScenarioViewModel(Scenario scenario, Func<string, LotRCard> lookupCard, Func<string, IEnumerable<Category>> getPlayerCategories, Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, Func<string, IEnumerable<QuestCategory>> getQuestCategories)
+        public ScenarioViewModel(Scenario scenario, Func<string, LotRCard> lookupCard, Func<string, IEnumerable<PlayerCategory>> getPlayerCategories, Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, Func<string, IEnumerable<QuestCategory>> getQuestCategories)
         {
             _scenario = scenario;
 

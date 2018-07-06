@@ -5,9 +5,9 @@ using System.Web;
 
 using HallOfBeorn.Models.LotR;
 
-namespace HallOfBeorn.Services.LotR
+namespace HallOfBeorn.Services.LotR.Stats
 {
-    public class StatService
+    public class StatService : IStatService
     {
         public StatService(CardRepository cardRepository)
         {

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HallOfBeorn.Services
+namespace HallOfBeorn.Services.LotR.Templates
 {
-    public abstract class TemplateRepository
+    public abstract class TemplateRepository : ITemplateRepository
     {
         public TemplateRepository()
         {

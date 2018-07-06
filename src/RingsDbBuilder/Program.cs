@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 
 using HallOfBeorn.Models.RingsDb;
 using HallOfBeorn.Services.LotR;
+using HallOfBeorn.Services.LotR.RingsDb;
 
 namespace RingsDbBuilder
 {

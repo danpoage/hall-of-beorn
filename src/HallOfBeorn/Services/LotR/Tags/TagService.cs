@@ -5,7 +5,7 @@ using System.Web;
 
 using HallOfBeorn.Models;
 
-namespace HallOfBeorn.Services.LotR
+namespace HallOfBeorn.Services.LotR.Tags
 {
     public class TagService
     {

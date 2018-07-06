@@ -6,17 +6,24 @@ using System.Web;
 using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.ViewModels;
+using HallOfBeorn.Services.LotR.Categories;
 
-namespace HallOfBeorn.Services.LotR
+namespace HallOfBeorn.Services.LotR.Search
 {
-    public class AdvancedSearchService
+    public class AdvancedSearchService : IAdvancedSearchService
     {
-        private readonly CategoryService categoryService;
-
-        public AdvancedSearchService(CategoryService categoryService)
+        public AdvancedSearchService(ICategoryService<PlayerCategory> playerCategoryService,
+            ICategoryService<EncounterCategory> encounterCategoryService, 
+            ICategoryService<QuestCategory> questCategoryService)
         {
-            this.categoryService = categoryService;
+            _playerCategoryService = playerCategoryService;
+            _encounterCategoryService = encounterCategoryService;
+            _questCategoryService = questCategoryService;
         }
+
+        private readonly ICategoryService<PlayerCategory> _playerCategoryService;
+        private readonly ICategoryService<EncounterCategory> _encounterCategoryService;
+        private readonly ICategoryService<QuestCategory> _questCategoryService;
 
         private Func<CardScore, bool> NegateFilter(Func<CardScore, bool> predicate)
         {
@@ -257,7 +264,13 @@ namespace HallOfBeorn.Services.LotR
                     predicate = (score) => { return enums.Any(y => y.ToEnum<Sphere>() == score.Card.Sphere); };
                     break;
                 case "category":
-                    predicate = (score) => { return enums.Any(y => categoryService.HasPlayerCategory(score.Card, y.ToEnum<Category>())); };
+                    predicate = (score) => { return enums.Any(y => _playerCategoryService.HasCategory(score.Card, y.ToEnum<PlayerCategory>())); };
+                    break;
+                case "ecategory":
+                    predicate = (score) => { return enums.Any(y => _encounterCategoryService.HasCategory(score.Card, y.ToEnum<EncounterCategory>())); };
+                    break;
+                case "qcategory":
+                    predicate = (score) => { return enums.Any(y => _questCategoryService.HasCategory(score.Card, y.ToEnum<QuestCategory>())); };
                     break;
                 default:
                     break;
@@ -354,7 +367,9 @@ namespace HallOfBeorn.Services.LotR
                         filterResults = FilterByString(field, value, results, negate);
                         break;
                     case "category":
-                        filterResults = FilterByEnum<Category>(value, results, negate);
+                    case "ecategory":
+                    case "qcategory":
+                        filterResults = FilterByEnum<PlayerCategory>(value, results, negate);
                         break;
                     case "victory":
                         filterResults = FilterByByte(field, value, results, negate);

@@ -9,32 +9,32 @@ namespace HallOfBeorn.Services.LotR.Search
 {
     public class StringAdvancedQueryFilter : IComponent
     {
-        public StringAdvancedQueryFilter(string query, AdvancedSearchService service)
+        public StringAdvancedQueryFilter(string query, IAdvancedSearchService service)
         {
             if (string.IsNullOrWhiteSpace(query))
                 return;
 
-            filters = query.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToListSafe().Where(x => x.StartsWith("-") || x.StartsWith("+")).ToListSafe();
-            if (filters.Count == 0)
+            _filters = query.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToListSafe().Where(x => x.StartsWith("-") || x.StartsWith("+")).ToListSafe();
+            if (_filters.Count == 0)
                 return;
 
-            this.query = query;
-            this.service = service;
+            _query = query;
+            _service = service;
         }
 
-        private readonly string query;
-        private readonly List<string> filters;
-        private readonly AdvancedSearchService service;
+        private readonly string _query;
+        private readonly List<string> _filters;
+        private readonly IAdvancedSearchService _service;
 
         public bool IsEmpty
         {
-            get { return service == null; }
+            get { return _service == null; }
         }
 
         public IOrderedEnumerable<CardScore> Apply(IOrderedEnumerable<CardScore> scores)
         {
-            var model = new SearchViewModel { Query = query };
-            return service.Search(model, scores.ToList()).OrderBy(r => 1);
+            var model = new SearchViewModel { Query = _query };
+            return _service.Search(model, scores.ToList()).OrderBy(r => 1);
         }
     }
 }
