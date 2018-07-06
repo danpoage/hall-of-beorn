@@ -817,6 +817,7 @@
     <Compile Include="Services\LotR\Categories\PlayerCategoryService.cs" />
     <Compile Include="Services\LotR\Categories\QuestCategoryService.cs" />
     <Compile Include="Services\LotR\CharacterRepository.cs" />
+    <Compile Include="Services\LotR\Search\IPlanBuilder.cs" />
     <Compile Include="Services\LotR\Templates\EnUsTemplateRepository1.cs" />
     <Compile Include="Services\LotR\Templates\EnUsTemplateRepository2.cs" />
     <Compile Include="Services\LotR\Categories\ICategoryService.cs" />

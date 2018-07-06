@@ -15,7 +15,7 @@ namespace HallOfBeorn.Services.LotR.Scenarios
         public ScenarioService(ICategoryService<PlayerCategory> playerCategoryService, 
             ICategoryService<EncounterCategory> encounterCategoryService,
             ICategoryService<QuestCategory> questCategoryService,
-            ProductRepository productRepository, CardRepository cardRepository)
+            IProductRepository productRepository, ICardRepository cardRepository)
         {
             _playerCategoryService = playerCategoryService;
             _encounterCategoryService = encounterCategoryService;
@@ -60,7 +60,7 @@ namespace HallOfBeorn.Services.LotR.Scenarios
         private readonly ICategoryService<PlayerCategory> _playerCategoryService;
         private readonly ICategoryService<EncounterCategory> _encounterCategoryService;
         private readonly ICategoryService<QuestCategory> _questCategoryService;
-        private readonly CardRepository cardRepository;
+        private readonly ICardRepository cardRepository;
         private readonly IList<LotRCard> cards;
         private readonly IDictionary<string, List<LotRCard>> cardsByEncounterSet = new Dictionary<string, List<LotRCard>>();
         private readonly Dictionary<string, Scenario> scenariosByAlternateTitle = new Dictionary<string, Scenario>();

@@ -9,7 +9,7 @@ namespace HallOfBeorn.Services.LotR.Stats
 {
     public class StatService : IStatService
     {
-        public StatService(CardRepository cardRepository)
+        public StatService(ICardRepository cardRepository)
         {
             cards = cardRepository.Cards();
             foreach (var card in cards)

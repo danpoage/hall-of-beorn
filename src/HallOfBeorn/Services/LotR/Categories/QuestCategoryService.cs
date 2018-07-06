@@ -8,7 +8,7 @@ namespace HallOfBeorn.Services.LotR.Categories
 {
     public class QuestCategoryService : CategoryServiceBase<QuestCategory>
     {
-        public QuestCategoryService(CardRepository cardRepository)
+        public QuestCategoryService(ICardRepository cardRepository)
             : base(cardRepository)
         {
         }

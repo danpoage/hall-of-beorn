@@ -8,7 +8,7 @@ namespace HallOfBeorn.Services.LotR.Categories
 {
     public class PlayerCategoryService : CategoryServiceBase<PlayerCategory>
     {
-        public PlayerCategoryService(CardRepository cardRepository)
+        public PlayerCategoryService(ICardRepository cardRepository)
             : base(cardRepository)
         {
         }

@@ -7,7 +7,7 @@ namespace HallOfBeorn.Services.LotR.Octgn
 {
     public class OctgnService : IOctgnService
     {
-        public OctgnService(ProductRepository productRepository, CardRepository cardRepository)
+        public OctgnService(IProductRepository productRepository, ICardRepository cardRepository)
         {
             this.productRepository = productRepository;
             this.cardRepository = cardRepository;
@@ -16,8 +16,8 @@ namespace HallOfBeorn.Services.LotR.Octgn
             loadCardMaps();
         }
 
-        private readonly ProductRepository productRepository;
-        private readonly CardRepository cardRepository;
+        private readonly IProductRepository productRepository;
+        private readonly ICardRepository cardRepository;
 
         private readonly Dictionary<string, string> setNamesByGuid = new Dictionary<string,string>();
         private readonly Dictionary<string, string> setGuidsByName = new Dictionary<string, string>();

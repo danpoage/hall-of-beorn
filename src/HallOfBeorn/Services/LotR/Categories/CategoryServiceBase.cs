@@ -9,7 +9,7 @@ namespace HallOfBeorn.Services.LotR.Categories
     public abstract class CategoryServiceBase<TCategory> : ICategoryService<TCategory>
         where TCategory: struct
     {
-        protected CategoryServiceBase(CardRepository cardRepository)
+        protected CategoryServiceBase(ICardRepository cardRepository)
         {
             _cardRepository = cardRepository;
 
@@ -37,7 +37,7 @@ namespace HallOfBeorn.Services.LotR.Categories
             }
         }
 
-        private readonly CardRepository _cardRepository;
+        private readonly ICardRepository _cardRepository;
         private readonly Dictionary<string, TCategory> categories = new Dictionary<string, TCategory>();
         private readonly Dictionary<string, List<TCategory>> categoriesBySlug = new Dictionary<string,List<TCategory>>();
 

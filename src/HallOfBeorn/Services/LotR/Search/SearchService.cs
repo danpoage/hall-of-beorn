@@ -11,14 +11,14 @@ namespace HallOfBeorn.Services.LotR.Search
 {
     public class SearchService : ISearchService
     {
-        public SearchService(CardRepository cardRepository, PlanBuilder builder)
+        public SearchService(ICardRepository cardRepository, IPlanBuilder builder)
         {
             _cardRepository = cardRepository;
             _builder = builder;
         }
 
-        private readonly CardRepository _cardRepository;
-        private readonly PlanBuilder _builder;
+        private readonly ICardRepository _cardRepository;
+        private readonly IPlanBuilder _builder;
 
         private IOrderedEnumerable<CardScore> InitialScores()
         {

@@ -11,7 +11,7 @@ using HallOfBeorn.Services.LotR.Scenarios;
 
 namespace HallOfBeorn.Services.LotR.Search
 {
-    public class PlanBuilder
+    public class PlanBuilder : IPlanBuilder
     {
         public PlanBuilder(IScenarioService scenarioService, 
             ICategoryService<PlayerCategory> playerCategoryService, 
