@@ -43,8 +43,8 @@ namespace HallOfBeorn.Handlers.LotR
 
         private void InitializeSearch(SearchViewModel model)
         {
-            //model.Cards = new List<CardViewModel>();
-            //model.Products = new List<ProductViewModel>();
+            model.Cards = new List<CardViewModel>();
+            model.Products = new List<ProductViewModel>();
 
             SearchViewModel.Keywords = _statService.Keywords().GetSelectListItems();
             SearchViewModel.Traits = _statService.Traits().GetSelectListItems();

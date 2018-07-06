@@ -27,8 +27,6 @@ namespace HallOfBeorn.Models.LotR.ViewModels
     {
         public SearchViewModel()
         {
-            Cards = new List<CardViewModel>();
-            Products = new List<ProductViewModel>();
         }
 
         public Func<Scenario> GetScenario { get; set; }
