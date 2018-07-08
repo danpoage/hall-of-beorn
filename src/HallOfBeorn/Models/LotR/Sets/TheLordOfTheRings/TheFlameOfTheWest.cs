@@ -130,7 +130,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithInfo(19, 3, Artist.Leanna_Crossan));
             Cards.Add(LotRCard.Location("Deadly Road", string.Empty, setThePassingOfTheGreyCompany, 2, 3)
                 .WithTraits("Underground.")
-                .WithText("While Deadly Road is in the staging area, it gains: \"Forced: After a 'when revealed' effecvt is canceled, raise each player's threat by 1.\"\r\nTravel: Spend 1 Fellowship resource to travel here.")
+                .WithText("While Deadly ~Road is in the staging area, it gains: \"Forced: After a 'when revealed' effect is canceled, raise each player's threat by 1.\"\r\nTravel: Spend 1 Fellowship resource to travel here.")
                 .WithFlavor("\"I was held to the road only by the will of Aragorn.\"\r\n-Gimli, The Return of the King")
                 .WithInfo(20, 3, Artist.Pedro_Amato));
             Cards.Add(LotRCard.Location("Haunted Path", string.Empty, setThePassingOfTheGreyCompany, 1, 4)

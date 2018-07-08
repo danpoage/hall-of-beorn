@@ -316,7 +316,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithFlavor("\"Ugh! That smell!\" he said. \"It's getting stronger and stronger.\" —The Two Towers")
                 .WithInfo(50, 2, Artist.Dimitri_Bielak));
             Cards.Add(LotRCard.Treachery("Many Openings", "", "Shelob's Lair")
-                .WithText("When Revealed: Each location in the staging area gets +1 Attack until the end of the round. If the number of locations in the staging area is less than the number of players in the game, reveal an additional encounter card.")
+                .WithText("When Revealed: Each location in the staging area gets +1 Threat until the end of the round. If the number of locations in the staging area is less than the number of players in the game, reveal an additional encounter card.")
                 .WithShadow("Shadow: Attacking enemy gets +X Attack, where X is the active location's Threat.")
                 .WithEasyModeQuantity(1)
                 .WithInfo(51, 2, Artist.Jokubas_Uoginitas));
