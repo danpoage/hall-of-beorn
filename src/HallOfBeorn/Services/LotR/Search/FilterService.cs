@@ -45,6 +45,22 @@ namespace HallOfBeorn.Services.LotR.Search
                     neg)
                 );
 
+            Register("rcost", (val, neg) => new ByteComparisonFilter((score) => score.Card.ResourceCost, val, neg));
+            Register("tcost", (val, neg) => new ByteComparisonFilter((score) => score.Card.ThreatCost, val, neg));
+            Register("ecost", (val, neg) => new ByteComparisonFilter((score) => score.Card.EngagementCost, val, neg));
+            
+            Register("threat", (val, neg) => new ByteComparisonFilter((score) => score.Card.Threat, val, neg));
+            Register("wp", (val, neg) => new ByteComparisonFilter((score) => score.Card.Willpower, val, neg));
+            Register("atk", (val, neg) => new ByteComparisonFilter((score) => score.Card.Attack, val, neg));
+            Register("def", (val, neg) => new ByteComparisonFilter((score) => score.Card.Defense, val, neg));
+            Register("qp", (val, neg) => new ByteComparisonFilter((score) => score.Card.QuestPoints, val, neg));
+            Register("hp", (val, neg) => new ByteComparisonFilter((score) => score.Card.HitPoints, val, neg));
+            Register("victory", (val, neg) => new ByteComparisonFilter((score) => score.Card.VictoryPoints, val, neg));
+
+            Register("trait", (val, neg) => new TraitFilter(val, neg));
+
+            Register("keyword", (val, neg) => new KeywordFilter(val, neg));
+
             Register("artist", (val, neg) =>
                 new StringFuzzyFilter(
                     (score) => score.Card.Artist != null ? score.Card.Artist.Name : string.Empty, val,

@@ -811,7 +811,7 @@
     <Compile Include="Services\LotR\IProductRepository.cs" />
     <Compile Include="Services\LotR\Octgn\IOctgnService.cs" />
     <Compile Include="Services\LotR\Scenarios\IScenarioService.cs" />
-    <Compile Include="Services\LotR\Search\AdvancedSearchService.cs" />
+    <Compile Include="Services\LotR\Legacy\OldAdvancedSearchService.cs" />
     <Compile Include="Services\Arkham\ArkhamProductRepository.cs" />
     <Compile Include="Services\Arkham\ArkhamSearchService.cs" />
     <Compile Include="Services\LotR\CardRepository.cs" />
@@ -823,7 +823,7 @@
     <Compile Include="Services\LotR\Search\BooleanFilter.cs" />
     <Compile Include="Services\LotR\Search\FilterService.cs" />
     <Compile Include="Services\LotR\Search\IFilterService.cs" />
-    <Compile Include="Services\LotR\Search\IPlanBuilder.cs" />
+    <Compile Include="Services\LotR\Search\IPlanService.cs" />
     <Compile Include="Services\LotR\Templates\EnUsTemplateRepository1.cs" />
     <Compile Include="Services\LotR\Templates\EnUsTemplateRepository2.cs" />
     <Compile Include="Services\LotR\Categories\ICategoryService.cs" />
@@ -845,7 +845,7 @@
     <Compile Include="Services\LotR\Search\CategoryFilter.cs" />
     <Compile Include="Services\LotR\Search\EnumFilter.cs" />
     <Compile Include="Services\LotR\Search\Filter.cs" />
-    <Compile Include="Services\LotR\Search\IAdvancedSearchService.cs" />
+    <Compile Include="Services\LotR\Legacy\IAdvancedSearchService.cs" />
     <Compile Include="Services\LotR\Search\IComponent.cs" />
     <Compile Include="Services\LotR\Search\ISearchService.cs" />
     <Compile Include="Services\LotR\Search\KeywordFilter.cs" />
@@ -853,7 +853,7 @@
     <Compile Include="Services\LotR\Search\GenericFilter.cs" />
     <Compile Include="Services\LotR\Search\Offset.cs" />
     <Compile Include="Services\LotR\Search\Plan.cs" />
-    <Compile Include="Services\LotR\Search\PlanBuilder.cs" />
+    <Compile Include="Services\LotR\Search\PlanService.cs" />
     <Compile Include="Services\LotR\Search\SearchService.cs" />
     <Compile Include="Services\LotR\Search\Sort.cs" />
     <Compile Include="Services\LotR\Search\StringAdvancedQueryFilter.cs" />

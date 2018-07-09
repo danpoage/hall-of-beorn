@@ -10,9 +10,10 @@ using HallOfBeorn.Services.LotR.Categories;
 
 namespace HallOfBeorn.Services.LotR.Search
 {
-    public class AdvancedSearchService : IAdvancedSearchService
+    [Obsolete]
+    public class OldAdvancedSearchService : IAdvancedSearchService
     {
-        public AdvancedSearchService(ICategoryService<PlayerCategory> playerCategoryService,
+        public OldAdvancedSearchService(ICategoryService<PlayerCategory> playerCategoryService,
             ICategoryService<EncounterCategory> encounterCategoryService, 
             ICategoryService<QuestCategory> questCategoryService)
         {

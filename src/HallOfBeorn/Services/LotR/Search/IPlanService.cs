@@ -7,8 +7,8 @@ using HallOfBeorn.Models.LotR.ViewModels;
 
 namespace HallOfBeorn.Services.LotR.Search
 {
-    public interface IPlanBuilder
+    public interface IPlanService
     {
-        Plan Build(SearchViewModel model);
+        Plan CreatePlan(SearchViewModel model);
     }
 }

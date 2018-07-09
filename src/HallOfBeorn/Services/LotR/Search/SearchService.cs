@@ -11,14 +11,14 @@ namespace HallOfBeorn.Services.LotR.Search
 {
     public class SearchService : ISearchService
     {
-        public SearchService(ICardRepository cardRepository, IPlanBuilder builder)
+        public SearchService(ICardRepository cardRepository, IPlanService planService)
         {
             _cardRepository = cardRepository;
-            _builder = builder;
+            _planService = planService;
         }
 
         private readonly ICardRepository _cardRepository;
-        private readonly IPlanBuilder _builder;
+        private readonly IPlanService _planService;
 
         private IOrderedEnumerable<CardScore> InitialScores()
         {
@@ -35,8 +35,8 @@ namespace HallOfBeorn.Services.LotR.Search
                 .Select(card => new CardScore(card, 1, string.Empty))
                 .OrderBy(s => 1);
 
-            var scores = _builder
-                .Build(model)
+            var scores = _planService
+                .CreatePlan(model)
                 .Execute(all);
 
             return scores;

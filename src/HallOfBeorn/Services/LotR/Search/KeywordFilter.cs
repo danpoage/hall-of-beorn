@@ -35,7 +35,7 @@ namespace HallOfBeorn.Services.LotR.Search
                     var match = false;
                     foreach (var target in values)
                     {
-                        match = !score.Card.Keywords.Any(k => k == target) && !score.Card.NormalizedKeywords.Any(k => k == target);
+                        match = score.Card.Keywords.All(k => k != target) && score.Card.NormalizedKeywords.All(k => k != target);
                         if (!match)
                             break;
                     }

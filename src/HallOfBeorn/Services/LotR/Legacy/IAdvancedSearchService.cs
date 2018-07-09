@@ -8,6 +8,7 @@ using HallOfBeorn.Models.LotR.ViewModels;
 
 namespace HallOfBeorn.Services.LotR.Search
 {
+    [Obsolete]
     public interface IAdvancedSearchService
     {
         List<CardScore> Search(SearchViewModel searchModel, List<CardScore> results);
