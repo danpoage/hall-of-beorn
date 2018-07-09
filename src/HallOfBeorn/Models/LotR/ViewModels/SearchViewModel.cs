@@ -606,10 +606,12 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             }
         }
 
-        public string ItemWidth()
+        public string ItemWidth(CardType type)
         {
             if (this.View.HasValue && View == Models.View.Card_Image)
             {
+                if (type == LotR.CardType.Quest || type == LotR.CardType.Encounter_Side_Quest || type == LotR.CardType.Player_Side_Quest)
+                    return "400px;";
                 return "200px;";
             }
             else return "80%";

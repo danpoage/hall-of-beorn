@@ -20,5 +20,32 @@ namespace HallOfBeorn.Services.LotR.Search
                 return match;
             };
         }
+
+        public StringFuzzyFilter(Func<CardScore, string> getValue, string target, Func<string, string, bool> compareValues, bool isNegation)
+        {
+            if (string.IsNullOrWhiteSpace(target) || target == defaultValue)
+                return;
+
+            var values = GetStringValues(target, string.Empty);
+
+            if (isNegation)
+            {
+                predicate = (score) =>
+                {
+                    var match = values.All(v => !compareValues(getValue(score), v));
+                    score.AddScore(match ? 1 : 0);
+                    return match;
+                };
+            }
+            else
+            {
+                predicate = (score) =>
+                {
+                    var match = values.Any(v => compareValues(getValue(score), v));
+                    score.AddScore(match ? 1 : 0);
+                    return match;
+                };
+            }
+        }
     }
 }

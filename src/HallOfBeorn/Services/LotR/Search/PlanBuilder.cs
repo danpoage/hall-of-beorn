@@ -18,13 +18,15 @@ namespace HallOfBeorn.Services.LotR.Search
             ICategoryService<EncounterCategory> encounterCategoryService, 
             ICategoryService<QuestCategory> questCategoryService, 
             IRingsDbService ringsDbService, 
-            IAdvancedSearchService advancedSearchService)
+            IAdvancedSearchService advancedSearchService,
+            IFilterService filterService)
         {
             _scenarioService = scenarioService;
             _playerCategoryService = playerCategoryService;
             _encounterCategoryService = encounterCategoryService;
             _questCategoryService = questCategoryService;
             _advancedSearchService = advancedSearchService;
+            _filterService = filterService;
             _getPopularity = (slug) => { return ringsDbService.GetPopularity(slug); };
             _getVotes = (card) => { return card.CardType == CardType.Hero ? 10000 + ringsDbService.GetVotes(card.Slug) : ringsDbService.GetVotes(card.Slug); };
         }
@@ -34,6 +36,7 @@ namespace HallOfBeorn.Services.LotR.Search
         private readonly ICategoryService<EncounterCategory> _encounterCategoryService;
         private readonly ICategoryService<QuestCategory> _questCategoryService;
         private readonly IAdvancedSearchService _advancedSearchService;
+        private readonly IFilterService _filterService;
         private readonly Func<string, byte> _getPopularity;
         private readonly Func<LotRCard, int> _getVotes;
 
@@ -52,7 +55,7 @@ namespace HallOfBeorn.Services.LotR.Search
             _filters.Clear();
 
             AddFilter(new StringBasicQueryFilter(model.BasicQuery()));
-            AddFilter(new StringAdvancedQueryFilter(model.Query, _advancedSearchService));
+            AddFilter(new StringAdvancedQueryFilter(model.Query, _advancedSearchService, _filterService));
 
             AddFilter(new StringExactFilter((score) => score.Card.Artist != null ? score.Card.Artist.Name : string.Empty, model.Artist));
             

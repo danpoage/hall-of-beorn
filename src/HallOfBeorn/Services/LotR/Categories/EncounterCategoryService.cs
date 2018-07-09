@@ -44,7 +44,10 @@ namespace HallOfBeorn.Services.LotR.Categories
                 case CardType.Enemy:
                 case CardType.Location:
                 case CardType.Treachery:
+                case CardType.Encounter_Side_Quest:
                 case CardType.Ship_Enemy:
+                case CardType.Objective:
+                case CardType.Objective_Location:
                     return true;
                 default:
                     return false;

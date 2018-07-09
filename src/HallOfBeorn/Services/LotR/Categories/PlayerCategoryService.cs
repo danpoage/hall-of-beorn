@@ -59,6 +59,8 @@ namespace HallOfBeorn.Services.LotR.Categories
                     return true;
                 case CardType.Event:
                     return true;
+                case CardType.Player_Side_Quest:
+                    return true;
                 default:
                     return false;
             }
@@ -75,7 +77,7 @@ namespace HallOfBeorn.Services.LotR.Categories
                 CreateCategoryFilter(@"\+[\d]*[\s]Defense", PlayerCategory.Defense_Bonus),
                 CreateCategoryFilter(@"\+[\d]*[\s]Willpower|add.*Willpower", PlayerCategory.Willpower_Bonus, "Willpower to its Attack"),
                 CreateCategoryFilter(@"\+[\d]*[\s]Hit[\s]Point", PlayerCategory.Hit_Point_Bonus),
-                CreateCategoryFilter(@"(draw|draws)[\s][\w]*[\s]card|look at the top 2 cards of your deck. Add 1 to your hand|take it into your hand|a card and add it to your hand|(draw|draws) 1 additional card", PlayerCategory.Card_Draw),
+                CreateCategoryFilter(@"(draw|draws)[\s][\w]*[\s]card|look at the top 2 cards of your deck. Add 1 to your hand|take it into your hand|a card and add it to your hand|(draw|draws) (1|an) additional card", PlayerCategory.Card_Draw),
                 CreateCategoryFilter(@"search[\s].*your[\s]deck", PlayerCategory.Card_Search),
                 CreateCategoryFilter(@"(look|looks)[\s]at[\s].*[\s]deck|the top card of your deck faceup|exchange a card in your hand with the top card of your deck|reveal the top card of each player's deck", PlayerCategory.Player_Scrying, "encounter deck", "Add 1 to your hand and discard the other"),
                 CreateCategoryFilter(@"(look|looks)[\s]at[\s].*encounter[\s]deck", PlayerCategory.Encounter_Scrying),
