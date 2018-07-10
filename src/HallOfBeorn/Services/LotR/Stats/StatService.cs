@@ -48,7 +48,8 @@ namespace HallOfBeorn.Services.LotR.Stats
 
             if (card.VictoryPoints > 0 && !victoryPointsValues.ContainsKey(card.VictoryPoints))
             {
-                victoryPointsValues.Add(card.VictoryPoints, string.Format("Victory {0}.", card.VictoryPoints));
+                var victoryPoint = card.VictoryPoints == Models.Card.VALUE_X ? "X" : card.VictoryPoints.ToString();
+                victoryPointsValues.Add(card.VictoryPoints, string.Format("Victory {0}.", victoryPoint));
             }
 
             var attackKey = card.Attack.HasValue ? card.Attack.Value : (byte)0;

@@ -24,8 +24,13 @@ namespace HallOfBeorn.Services.LotR.Search
             }
 
             byte victoryPoints = 0;
-            if (!byte.TryParse(target.Replace("Victory", string.Empty).Trim('.'), out victoryPoints))
-                return;
+            if (target == "Victory X.")
+            {
+                victoryPoints = Models.Card.VALUE_X;
+            } else {
+                if (!byte.TryParse(target.Replace("Victory ", string.Empty).Trim('.'), out victoryPoints))
+                    return;
+            }
 
             predicate = (score) => {
                 var match = score.Card.VictoryPoints == victoryPoints;
