@@ -17,6 +17,8 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
             SetType = Models.SetType.Adventure_Pack;
             Cycle = "Ered Mithrin";
 
+            IsSpoiler = true;
+
             addHero("Grimbeorn the Old", 11, Sphere.Tactics, 0, 3, 3, 5)
                 .WithTraits("Beorning.", "Warrior.")
                 .WithKeywords("Sentinel.")

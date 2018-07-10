@@ -204,6 +204,8 @@ namespace HallOfBeorn.Models.LotR
 
         public bool IsNightmare { get { return !string.IsNullOrEmpty(Name) && Name.EndsWith(" Nightmare"); } }
 
+        public bool IsSpoiler { get; protected set; }
+
         private static List<CardSet> all = new List<CardSet>();
 
         private static void Add(CardSet cardSet)
