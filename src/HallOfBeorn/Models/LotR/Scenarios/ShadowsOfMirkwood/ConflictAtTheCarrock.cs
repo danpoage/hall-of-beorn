@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             DifficultyRating = 6.2f;
             Votes = 101;
 
+            AddPlayLink(LinkType.The_White_Tower, "https://thewhitetower.wordpress.com/2018/07/16/conflict-at-the-carrock-quest-analysis/", "Conflict at the Carrock - Quest Analysis");
+
             AddEncounterSet(EncounterSet.ConflictAtTheCarrock);
             AddEncounterSet(EncounterSet.ConflictAtTheCarrockNightmare);
             AddEncounterSet(EncounterSet.JourneyAlongTheAnduin);

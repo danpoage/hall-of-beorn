@@ -16,6 +16,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheWildsOfRhovanion
  
             RulesImageCount = 7;
 
+            AddPlayLink(LinkType.Warriors_of_the_West, "https://warriorsofthewestblog.wordpress.com/2018/07/11/turn-by-turn-report-lost-in-mirkwood/", "Turn by Turn - Lost in Mirkwood");
+
             AddEncounterSet(EncounterSet.DarkWoods);
             AddEncounterSet(EncounterSet.GatheringGloom);
             AddEncounterSet(EncounterSet.PassageThroughMirkwood);

@@ -20,26 +20,26 @@
     @foreach (var questCard in @Model.Detail.QuestCards)
     {
         <div style="display:inline-block;">
-        <div>
-            <span>@questCard.StageNumber</span><span style="margin-left:2px;display:inline-block;"><a title="Details for @questCard.FullTitle" href="@questCard.Url">@questCard.FullTitle</a></span>
-            @if (@questCard.IsNightmare)
-            {
-                <span>[NIGHTMARE]</span>
-            }   
-        </div>
-        <div>
-            @if (@questCard.HasSecondImage)
-            {
-                <span>
-                    <img src="@questCard.ImagePath1" style="max-height:200px;"/>
-                    <img src="@questCard.ImagePath2" style="max-height:200px;"/>
-                </span>
-            }
-            else
-            {
-                <img src="@questCard.ImagePath" style="max-width:285px;max-height:400px;"/>
-            }
-        </div>
+            <div>
+                <span>@questCard.StageNumber</span><span style="margin-left:2px;display:inline-block;"><a title="Details for @questCard.FullTitle" href="@questCard.Url">@questCard.FullTitle</a></span>
+                @if (@questCard.IsNightmare)
+                {
+                    <span>[NIGHTMARE]</span>
+                }   
+            </div>
+            <div>
+                @if (@questCard.HasSecondImage)
+                {
+                    <span>
+                        <img src="@questCard.ImagePath1" style="max-height:200px;"/>
+                        <img src="@questCard.ImagePath2" style="max-height:200px;"/>
+                    </span>
+                }
+                else
+                {
+                    <img src="@questCard.ImagePath" style="max-width:285px;max-height:400px;"/>
+                }
+            </div>
         </div>
     }
     </div>
@@ -72,8 +72,30 @@
         }  
         if (!string.IsNullOrEmpty(@Model.Detail.DifficultyHtml))
         {
-            <div><span class="scenario-difficulty">Difficulty: @Html.Raw(@Model.Detail.DifficultyHtml)<span class='difficulty-votes'>(@Model.Detail.Votes)</span></span></div>
+            <div><span class="scenario-difficulty" style="width: 300px;">Difficulty: @Html.Raw(@Model.Detail.DifficultyHtml)<span class='difficulty-votes'>(@Model.Detail.Votes)</span></span></div>
         }
+    }
+    
+    if (@Model.Detail.HasPlayLinks)
+    {
+        @: <h3>Reviews and Tutorials</h3>
+        <div style="margin: 4px;">
+        @foreach (var link in @Model.Detail.PlayLinks)
+        {
+            <span style='display:inline-block;width:222px;margin: 4px 8px 4px 8px;border-width:1px;border-color:gray;border-style:solid;border-radius:6px;background-color:black'>
+                <a href='@link.Url' target='_blank' title='@link.FullTitle'>
+                    <span style='display:inline-block;width:220px;text-align:center;color:ghostwhite;'><b>@link.TypeName</b></span>
+                    <span style='display:inline-block;width:220px;height:36px;text-align:center;color:ghostwhite;'>@link.Title</span>
+                    @if (@link.HasThumbnail)
+                    {
+                        <span style="display:inline-block;width:220px;text-align:center;">
+                            <img src='@link.ThumbnailUrl' height='@link.ThumbnailHeight px' width='@link.ThumbnailWidth px' title='@link.FullTitle'/>
+                        </span>
+                    }
+                </a>
+            </span>
+        }
+        </div>
     }
     
     if (@Model.Detail.CampaignCard != null)

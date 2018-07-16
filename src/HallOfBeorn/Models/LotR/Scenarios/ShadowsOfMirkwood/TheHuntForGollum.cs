@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             DifficultyRating = 4.1f;
             Votes = 109;
 
+            AddPlayLink(LinkType.The_White_Tower, "https://thewhitetower.wordpress.com/2018/05/29/the-hunt-for-gollum-quest-analysis/", "The Hunt for Gollum - Quest Analysis");
+
             AddEncounterSet(EncounterSet.JourneyAlongTheAnduin);
             AddEncounterSet(EncounterSet.SauronsReach);
             AddEncounterSet(EncounterSet.TheHuntForGollum);

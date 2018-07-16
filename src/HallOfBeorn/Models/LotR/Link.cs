@@ -24,11 +24,25 @@ namespace HallOfBeorn.Models.LotR
         }
 
         public Link(LinkType type, string url, string title)
+            : this(type, url, title, string.Empty, null, null)
+        {
+        }
+
+        public Link(LinkType type, string url, string title, string thumbnailUrl)
+            : this(type, url, title, thumbnailUrl, null, null)
+        {
+        }
+
+        public Link(LinkType type, string url, string title, string thumbnailUrl, int? thumbnailHeight, int? thumbnailWidth)
         {
             this.Type = type;
             this.Title = title;
             this.Text = title;
             this.Url = url;
+            this.ThumbnailUrl = thumbnailUrl;
+            
+            _thumbnailHeight = thumbnailHeight;
+            _thumbnailWidth = thumbnailWidth;
         }
 
         private const string defaltLanguage = "en";
@@ -107,9 +121,15 @@ namespace HallOfBeorn.Models.LotR
             }
         }
 
+        private readonly int? _thumbnailHeight;
+        private readonly int? _thumbnailWidth;
+
         public LinkType Type { get; set; }
         public string Title { get; set; }
         public string Text { get; set; }
         public string Url { get; set; }
+        public string ThumbnailUrl { get; private set; }
+        public int ThumbnailHeight { get { return _thumbnailHeight.HasValue ? _thumbnailHeight.Value : 118; } } 
+        public int ThumbnailWidth { get { return _thumbnailWidth.HasValue ? _thumbnailWidth.Value : 210; } }
     }
 }

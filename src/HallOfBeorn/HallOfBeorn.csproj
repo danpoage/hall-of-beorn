@@ -487,6 +487,7 @@
     <Compile Include="Models\LotR\Products\AdventurePack\TheTreacheryOfRhudaurProduct.cs" />
     <Compile Include="Models\LotR\Products\Custom\TrialUponTheMarchesProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TroubleInTharbadNightmareProduct.cs" />
+    <Compile Include="Models\LotR\ViewModels\LinkViewModel.cs" />
     <Compile Include="Models\RingsDb\RingsDbDeck.cs" />
     <Compile Include="Models\LotR\Scenarios\AngmarAwakened\AcrossTheEttenmoors.cs" />
     <Compile Include="Models\LotR\Scenarios\ShadowsOfMirkwood\AJourneyToRhosgobel.cs" />

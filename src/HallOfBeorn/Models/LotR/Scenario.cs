@@ -34,6 +34,23 @@ namespace HallOfBeorn.Models.LotR
 
         private readonly Dictionary<string, Tuple<byte, byte, byte>> cardCountMap = new Dictionary<string, Tuple<byte, byte, byte>>();
 
+        private readonly List<Link> _playLinks = new List<Link>();
+
+        protected void AddPlayLink(LinkType type, string url, string title)
+        {
+            AddPlayLink(type, url, title, string.Empty, null, null);
+        }
+
+        protected void AddPlayLink(LinkType type, string url, string title, string thumbnailUrl)
+        {
+            AddPlayLink(type, url, title, thumbnailUrl, null, null);
+        }
+
+        protected void AddPlayLink(LinkType type, string url, string title, string thumbnailUrl, int? height, int? width)
+        {
+            _playLinks.Add(new Link(type, url, title, thumbnailUrl, height, width));
+        }
+
         protected void AddEncounterSet(EncounterSet set)
         {
             encounterSets[set.Name] = set;
@@ -87,6 +104,8 @@ namespace HallOfBeorn.Models.LotR
 
         public string RulesReferenceUrl { get; protected set; }
         public string RulesReferenceLabel { get; protected set; }
+
+        public IEnumerable<Link> PlayLinks { get { return _playLinks; } }
 
         public ScenarioCard CampaignCard
         {

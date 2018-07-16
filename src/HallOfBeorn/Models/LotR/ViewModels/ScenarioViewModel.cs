@@ -62,7 +62,6 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         }
         public string RulesUrl { get { return _scenario.RulesUrl; } }
 
-        
         public bool HasRulesImages
         {
             get { return _scenario.RulesImageCount > 0; }
@@ -79,6 +78,12 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             {
                 yield return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Rules/{0}/Rules-{1:00}.jpg", productName, i);
             }
+        }
+
+        public bool HasPlayLinks { get { return _scenario.PlayLinks.Count() > 0; } }
+        public IEnumerable<LinkViewModel> PlayLinks
+        { 
+            get { return _scenario.PlayLinks.Select(pl => new LinkViewModel(pl)); }
         }
 
         public byte Difficulty { get { return _scenario.Difficulty; } }
