@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             DifficultyRating = 6.7f;
             Votes = 50;
 
+            AddPlayLink(LinkType.Path_Less_Traveled, "https://darklingdoor.wordpress.com/2017/10/02/path-less-traveled-a-knife-in-the-dark/", "A Knife in the Dark");
+
             AddEncounterSet(EncounterSet.AKnifeInTheDark);
             AddEncounterSet(EncounterSet.AKnifeInTheDarkNightmare);
             AddEncounterSet(EncounterSet.Hunted);

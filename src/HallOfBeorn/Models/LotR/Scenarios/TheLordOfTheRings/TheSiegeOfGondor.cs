@@ -20,7 +20,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             DifficultyRating = 6.7f;
             Votes = 12;
 
-            AddPlayLink(LinkType.Cardboard_of_Rings_Podcast, "https://www.youtube.com/watch?v=Wm-AMpC0Rb0", "Chad's Campaign: The Siege of Gondor", "https://i.ytimg.com/vi/Wm-AMpC0Rb0/hqdefault.jpg");
+            AddCardboardOfTheRingsLink("https://www.youtube.com/watch?v=Wm-AMpC0Rb0", "Chad's Campaign: The Siege of Gondor", "https://i.ytimg.com/vi/Wm-AMpC0Rb0/hqdefault.jpg");
 
             AddEncounterSet(EncounterSet.TheSiegeOfGondor);
 

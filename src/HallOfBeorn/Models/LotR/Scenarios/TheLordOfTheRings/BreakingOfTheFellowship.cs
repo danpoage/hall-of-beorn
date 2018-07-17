@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             DifficultyRating = 7.0f;
             Votes = 22;
 
+            AddPlayLink(LinkType.Path_Less_Traveled, "https://darklingdoor.wordpress.com/2018/06/26/path-less-traveled-the-breaking-of-the-fellowship/", "Breaking of the Fellowship");
+
             AddEncounterSet(EncounterSet.BreakingOfTheFellowship);
             AddEncounterSet(EncounterSet.BreakingOfTheFellowshipNightmare);
 

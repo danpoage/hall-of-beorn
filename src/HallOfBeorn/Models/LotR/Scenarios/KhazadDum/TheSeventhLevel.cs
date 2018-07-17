@@ -13,6 +13,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.KhazadDum
             DifficultyRating = 4.3f;
             Votes = 66;
 
+            AddPlayLink(LinkType.Beorn__s_Path, "https://www.youtube.com/watch?v=oDfVi8SfOOY", "The Seventh Level", "https://i.ytimg.com/vi/oDfVi8SfOOY/hqdefault.jpg");
+            AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2018/02/19/path-less-traveled-the-seventh-level/");
+
             AddEncounterSet(EncounterSet.GoblinsOfTheDeep);
             AddEncounterSet(EncounterSet.PlunderingGoblins);
             AddEncounterSet(EncounterSet.TheSeventhLevel);

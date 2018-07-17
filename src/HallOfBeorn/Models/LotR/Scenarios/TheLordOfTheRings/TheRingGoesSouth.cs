@@ -14,6 +14,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             DifficultyRating = 6.0f;
             Votes = 28;
 
+            AddPlayLink(LinkType.Path_Less_Traveled, "https://darklingdoor.wordpress.com/2018/05/30/path-less-traveled-the-ring-goes-south-standalone/", "The Ring Goes South (Standalone)");
+            AddPlayLink(LinkType.Path_Less_Traveled, "https://darklingdoor.wordpress.com/2018/06/05/path-less-traveled-the-ring-goes-south-campaign/", "The Ring Goes South (Campaign)");
+
             AddEncounterSet(EncounterSet.TheRingGoesSouth);
             AddEncounterSet(EncounterSet.TheRingGoesSouthNightmare);
 

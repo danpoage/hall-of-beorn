@@ -13,6 +13,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLostRealm
             DifficultyRating = 5.7f;
             Votes = 39;
 
+            AddTheGreyCompanyLink("https://www.youtube.com/watch?v=zWUH7-lySIY", "Intruders in Chetwood", "https://i.ytimg.com/vi/zWUH7-lySIY/hqdefault.jpg");
+            AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2017/07/18/path-less-traveled-intruders-in-chetwood/");
+
             AddEncounterSet(EncounterSet.AngmarOrcs);
             AddEncounterSet(EncounterSet.EriadorWilds);
             AddEncounterSet(EncounterSet.Iarion);

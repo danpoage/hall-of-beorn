@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             DifficultyRating = 7.9f;
             Votes = 32;
 
+            AddPlayLink(LinkType.Path_Less_Traveled, "https://darklingdoor.wordpress.com/2018/06/12/path-less-traveled-journey-in-the-dark/", "Journey in the Dark");
+
             AddEncounterSet(EncounterSet.JourneyInTheDark);
             AddEncounterSet(EncounterSet.JourneyInTheDarkNightmare);
 

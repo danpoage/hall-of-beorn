@@ -17,7 +17,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheGreyHavens
             QuestCompanionSlug = "the-grey-havens-quest-the-fate-of-numenor";
             DifficultyRating = 4.2f;
             Votes = 19;
-            
+
+            AddPlayLink(LinkType.Path_Less_Traveled, "https://darklingdoor.wordpress.com/2017/06/17/path-less-traveled-the-fate-of-numenor/", "The Fate of Númenor");
+
             AddEncounterSet(EncounterSet.DrownedDead);
             AddEncounterSet(EncounterSet.RuinsOfNumenor);
             AddEncounterSet(EncounterSet.TheFateOfNumenor);

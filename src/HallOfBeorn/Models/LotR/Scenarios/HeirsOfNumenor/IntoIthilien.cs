@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.HeirsOfNumenor
             DifficultyRating = 7.7f;
             Votes = 84;
 
+            AddTheHallOfBeornBlogLink("https://hallofbeorn.wordpress.com/2014/07/29/deck-out-of-ithilien/", "Deck: Out of Ithilien");
+
             AddEncounterSet(EncounterSet.BroodingForest);
             AddEncounterSet(EncounterSet.CreaturesOfTheForest);
             AddEncounterSet(EncounterSet.IntoIthilien);

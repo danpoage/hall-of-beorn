@@ -17,7 +17,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public string Url { get { return _link.Url; } }
 
-        public string TypeName { get { return Enum.GetName(typeof(LinkType), _link.Type).Replace("_", " "); } }
+        public string TypeName { get { return Enum.GetName(typeof(LinkType), _link.Type).Replace("__", "'").Replace("_", " "); } }
         
         public string Title { get { return _link.Title; } }
 

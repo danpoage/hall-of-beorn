@@ -13,6 +13,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.KhazadDum
             DifficultyRating = 6.0f;
             Votes = 62;
 
+            AddPlayLink(LinkType.Beorn__s_Path, "https://www.youtube.com/watch?v=kG4CjacD1XE", "Flight from Moria", "https://i.ytimg.com/vi/kG4CjacD1XE/hqdefault.jpg");
+            AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2018/03/20/path-less-traveled-flight-from-moria/");
+
             AddEncounterSet(EncounterSet.DeepsOfMoria);
             AddEncounterSet(EncounterSet.FlightFromMoria);
             AddEncounterSet(EncounterSet.FlightFromMoriaNightmare);

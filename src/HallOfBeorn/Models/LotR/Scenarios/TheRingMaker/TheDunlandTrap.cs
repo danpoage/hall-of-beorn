@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             DifficultyRating = 7.5f;
             Votes = 42;
 
+            AddTheGreyCompanyLink("https://www.youtube.com/watch?v=HtZcKbz47cY", "The Dunland Trap", "https://i.ytimg.com/vi/HtZcKbz47cY/hqdefault.jpg");
+
             AddEncounterSet(EncounterSet.DunlandWarriors);
             AddEncounterSet(EncounterSet.TheDunlandTrap);
             AddEncounterSet(EncounterSet.WearyTravelers);

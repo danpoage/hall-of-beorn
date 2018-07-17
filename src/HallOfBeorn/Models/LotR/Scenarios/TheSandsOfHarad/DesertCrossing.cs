@@ -18,6 +18,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheSandsOfHarad
             DifficultyRating = 5.4f;
             Votes = 8;
 
+            AddPlayLink(LinkType.Path_Less_Traveled, "https://darklingdoor.wordpress.com/2017/12/14/path-less-traveled-desert-crossing/", "Desert Crossing");
+
             AddEncounterSet(EncounterSet.DesertCrossing);
             AddEncounterSet(EncounterSet.DesertCreatures);
             AddEncounterSet(EncounterSet.DesertSands);

@@ -13,11 +13,12 @@ namespace HallOfBeorn.Models
         Tolkien_Gateway,
         Encyclopedia_of_Arda,
 
-        The_Grey_Company_Podcast,
+        The_Grey_Company,
         Hall_of_Beorn,
+        Beorn__s_Path,
         Tales_from_the_Cards,
         
-        Cardboard_of_Rings_Podcast,
+        Cardboard_of_Rings,
 
         The_Hive_Tyrant,
         The_Progression_Series,
@@ -28,6 +29,8 @@ namespace HallOfBeorn.Models
         The_White_Tower,
 
         Warriors_of_the_West,
+        Path_Less_Traveled,
+        Thematic_Nightmare,
 
         Master_of_Lore,
         Dor_Cuarthol,

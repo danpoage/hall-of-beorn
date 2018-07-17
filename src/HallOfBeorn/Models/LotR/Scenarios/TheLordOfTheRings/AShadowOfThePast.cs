@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             DifficultyRating = 6.3f;
             Votes = 53;
 
+            AddPlayLink(LinkType.Path_Less_Traveled, "https://darklingdoor.wordpress.com/2017/09/19/path-less-traveled-a-shadow-of-the-past/", "A Shadow of the Past");
+
             AddEncounterSet(EncounterSet.AShadowOfThePast);
             AddEncounterSet(EncounterSet.AShadowOfThePastNightmare);
             AddEncounterSet(EncounterSet.Hunted);

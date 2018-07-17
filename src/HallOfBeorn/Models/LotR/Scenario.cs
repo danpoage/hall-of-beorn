@@ -36,6 +36,45 @@ namespace HallOfBeorn.Models.LotR
 
         private readonly List<Link> _playLinks = new List<Link>();
 
+        private const string DarklingDoorLogo = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Partners/Darkling-Door.png";
+        private const string TheWhiteTowerLogo = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Partners/The-White-Tower.png";
+        private const string TheHallOfBeornBlogLogo = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Partners/Hall-of-Beorn-Blog.jpg";
+
+        protected void AddBeornsPathLink(string url)
+        {
+            AddPlayLink(LinkType.Beorn__s_Path, url, Title, TheHallOfBeornBlogLogo);
+        }
+
+        protected void AddCardboardOfTheRingsLink(string url, string title, string thumbnailUrl)
+        {
+            AddPlayLink(LinkType.Cardboard_of_Rings, url, title, thumbnailUrl);
+        }
+
+        public void AddPathLessTraveledLink(string url)
+        {
+            AddPlayLink(LinkType.Path_Less_Traveled, url, Title, DarklingDoorLogo);
+        }
+
+        public void AddTheGreyCompanyLink(string url, string title, string thumbnailUrl)
+        {
+            AddPlayLink(LinkType.The_Grey_Company, url, title, thumbnailUrl);
+        }
+
+        public void AddTheHallOfBeornBlogLink(string url, string title)
+        {
+            AddPlayLink(LinkType.Hall_of_Beorn, url, title, TheHallOfBeornBlogLogo);
+        }
+
+        protected void AddThematicNightmareLink(string url)
+        {
+            AddPlayLink(LinkType.Thematic_Nightmare, url, Title + " Nightmare", DarklingDoorLogo);
+        }
+
+        protected void AddTheWhiteTowerLink(string url, string title)
+        {
+            AddPlayLink(LinkType.The_White_Tower, url, title, TheWhiteTowerLogo);
+        }
+
         protected void AddPlayLink(LinkType type, string url, string title)
         {
             AddPlayLink(type, url, title, string.Empty, null, null);

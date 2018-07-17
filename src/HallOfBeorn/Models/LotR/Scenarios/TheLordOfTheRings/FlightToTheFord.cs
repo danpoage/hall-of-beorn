@@ -14,6 +14,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             DifficultyRating = 5.6f;
             Votes = 38;
 
+            AddTheGreyCompanyLink("https://www.youtube.com/watch?v=-IU2yhbqRDk", "Flight to the Ford", "https://i.ytimg.com/vi/-IU2yhbqRDk/hqdefault.jpg");
+            AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2017/10/24/path-less-traveled-flight-to-the-ford/");
+
             AddEncounterSet(EncounterSet.FlightToTheFord);
             AddEncounterSet(EncounterSet.FlightToTheFordNightmare);
             AddEncounterSet(EncounterSet.Hunted);

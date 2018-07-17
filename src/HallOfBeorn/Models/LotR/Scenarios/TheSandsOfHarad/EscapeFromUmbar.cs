@@ -18,6 +18,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheSandsOfHarad
             DifficultyRating = 5.3f;
             Votes = 8;
 
+            AddPlayLink(LinkType.Path_Less_Traveled, "https://darklingdoor.wordpress.com/2017/11/14/path-less-traveled-escape-from-umbar/", "Escape from Umbar");
+
             AddEncounterSet(EncounterSet.EscapeFromUmbar);
             AddEncounterSet(EncounterSet.HaradTerritory);
             AddEncounterSet(EncounterSet.HaradSoldiers);

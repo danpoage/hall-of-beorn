@@ -18,6 +18,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheGreyHavens
             DifficultyRating = 7.6f;
             Votes = 17;
 
+            AddPlayLink(LinkType.Path_Less_Traveled, "https://darklingdoor.wordpress.com/2017/06/27/path-less-traveled-raid-on-the-grey-havens/", "Raid on the Grey Havens");
+
             AddEncounterSet(EncounterSet.CorsairRaiders);
             AddEncounterSet(EncounterSet.TheStormcallerElite);
             AddEncounterSet(EncounterSet.RaidOnTheGreyHavens);
