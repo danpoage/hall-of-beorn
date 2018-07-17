@@ -65,6 +65,11 @@ namespace HallOfBeorn.Models.LotR
             AddPlayLink(LinkType.Hall_of_Beorn, url, title, TheHallOfBeornBlogLogo);
         }
 
+        public void AddTheLineUnbrokenLink(string url, string title, string thumbnailUrl)
+        {
+            AddPlayLink(LinkType.The_Line_Unbroken, url, title, thumbnailUrl);
+        }
+
         protected void AddThematicNightmareLink(string url)
         {
             AddPlayLink(LinkType.Thematic_Nightmare, url, Title + " Nightmare", DarklingDoorLogo);
