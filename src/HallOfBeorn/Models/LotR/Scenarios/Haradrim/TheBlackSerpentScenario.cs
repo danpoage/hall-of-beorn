@@ -18,6 +18,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Haradrim
             DifficultyRating = 7.3f;
             Votes = 3;
 
+            AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2017/09/03/turn-by-turn-report-the-black-serpent/", Title);
+
             AddEncounterSet(EncounterSet.TheBlackSerpent);
             AddEncounterSet(EncounterSet.HaradSoldiers);
 

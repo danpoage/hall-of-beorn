@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             DifficultyRating = 5.7f;
             Votes = 17;
 
+            AddTheGreyCompanyLink("https://www.youtube.com/watch?v=_uUyMjiLA4U", "The Old Forest", "https://i.ytimg.com/vi/_uUyMjiLA4U/hqdefault.jpg");
+
             AddEncounterSet(EncounterSet.TheOldForest);
 
             AddQuestCardId("Farewell-to-the-Shire-TOF");

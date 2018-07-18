@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
 
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2013/07/22/beorns-path-part-9-conflict-at-the-carrock/");
             AddTheWhiteTowerLink("https://thewhitetower.wordpress.com/2018/07/16/conflict-at-the-carrock-quest-analysis/", "Conflict at the Carrock - Quest Analysis");
+            AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2016/12/01/turn-by-turn-report-conflict-at-the-carrock/", Title);
 
             AddEncounterSet(EncounterSet.ConflictAtTheCarrock);
             AddEncounterSet(EncounterSet.ConflictAtTheCarrockNightmare);

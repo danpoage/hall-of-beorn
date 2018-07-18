@@ -18,7 +18,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheGreyHavens
             DifficultyRating = 4.2f;
             Votes = 19;
 
-            AddPlayLink(LinkType.Path_Less_Traveled, "https://darklingdoor.wordpress.com/2017/06/17/path-less-traveled-the-fate-of-numenor/", "The Fate of Númenor");
+            AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2017/06/17/path-less-traveled-the-fate-of-numenor/");
+            AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2016/10/09/warriors-of-the-west-the-fate-of-numenor/", Title);
+            AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2017/10/12/nightmare-review-the-fate-of-numenor/", "Nightmare " + Title);
 
             AddEncounterSet(EncounterSet.DrownedDead);
             AddEncounterSet(EncounterSet.RuinsOfNumenor);

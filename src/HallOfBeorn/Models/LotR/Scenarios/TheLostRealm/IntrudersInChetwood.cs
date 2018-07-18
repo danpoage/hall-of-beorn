@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLostRealm
 
             AddTheGreyCompanyLink("https://www.youtube.com/watch?v=zWUH7-lySIY", "Intruders in Chetwood", "https://i.ytimg.com/vi/zWUH7-lySIY/hqdefault.jpg");
             AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2017/07/18/path-less-traveled-intruders-in-chetwood/");
+            AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2016/10/28/nightmare-review-intruders-in-chetwood/", "Nightmare " + Title);
 
             AddEncounterSet(EncounterSet.AngmarOrcs);
             AddEncounterSet(EncounterSet.EriadorWilds);

@@ -19,6 +19,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             DifficultyRating = 8.3f;
             Votes = 13;
 
+            AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2017/10/02/review-siege-of-annuminas/", Title);
+
             AddEncounterSet(EncounterSet.TheSiegeOfAnnuminas);
 
             AddQuestCardId("Rebuild-the-Defenses-TSoA");

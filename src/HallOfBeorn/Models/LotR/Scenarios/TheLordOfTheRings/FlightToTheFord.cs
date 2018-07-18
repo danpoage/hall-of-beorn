@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
 
             AddTheGreyCompanyLink("https://www.youtube.com/watch?v=-IU2yhbqRDk", "Flight to the Ford", "https://i.ytimg.com/vi/-IU2yhbqRDk/hqdefault.jpg");
             AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2017/10/24/path-less-traveled-flight-to-the-ford/");
+            AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2016/11/28/nightmare-review-flight-to-the-fordnightmare-campaign-part-3/", "Nightmare " + Title);
 
             AddEncounterSet(EncounterSet.FlightToTheFord);
             AddEncounterSet(EncounterSet.FlightToTheFordNightmare);

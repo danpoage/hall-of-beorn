@@ -13,7 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             DifficultyRating = 7.5f;
             Votes = 42;
 
-            AddTheGreyCompanyLink("https://www.youtube.com/watch?v=HtZcKbz47cY", "The Dunland Trap", "https://i.ytimg.com/vi/HtZcKbz47cY/hqdefault.jpg");
+            AddTheGreyCompanyLink("https://www.youtube.com/watch?v=HtZcKbz47cY", Title, "https://i.ytimg.com/vi/HtZcKbz47cY/hqdefault.jpg");
+            AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2016/10/08/warriors-of-the-west-the-dunland-trap/", Title);
 
             AddEncounterSet(EncounterSet.DunlandWarriors);
             AddEncounterSet(EncounterSet.TheDunlandTrap);

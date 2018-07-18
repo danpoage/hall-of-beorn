@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             DifficultyRating = 6.1f;
             Votes = 27;
 
+            AddTheGreyCompanyLink("https://www.youtube.com/watch?v=OyuHE-Jvn38", Title, "https://i.ytimg.com/vi/OyuHE-Jvn38/hqdefault.jpg");
+
             AddEncounterSet(EncounterSet.CursedDead);
             AddEncounterSet(EncounterSet.RuinsOfArnor);
             AddEncounterSet(EncounterSet.TheTreacheryOfRhudaur);

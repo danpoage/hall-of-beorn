@@ -39,6 +39,7 @@ namespace HallOfBeorn.Models.LotR
         private const string DarklingDoorLogo = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Partners/Darkling-Door.png";
         private const string TheWhiteTowerLogo = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Partners/The-White-Tower.png";
         private const string TheHallOfBeornBlogLogo = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Partners/Hall-of-Beorn-Blog.jpg";
+        private const string WarriorsOfTheWestLogo = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Partners/Warriors-of-the-West.jpg";
 
         protected void AddBeornsPathLink(string url)
         {
@@ -53,6 +54,11 @@ namespace HallOfBeorn.Models.LotR
         public void AddPathLessTraveledLink(string url)
         {
             AddPlayLink(LinkType.Path_Less_Traveled, url, Title, DarklingDoorLogo);
+        }
+
+        public void AddProgressionSeriesLink(string url, string title, string thumbnailUrl)
+        {
+            AddPlayLink(LinkType.The_Progression_Series, url, title, thumbnailUrl);
         }
 
         public void AddTheGreyCompanyLink(string url, string title, string thumbnailUrl)
@@ -78,6 +84,11 @@ namespace HallOfBeorn.Models.LotR
         protected void AddTheWhiteTowerLink(string url, string title)
         {
             AddPlayLink(LinkType.The_White_Tower, url, title, TheWhiteTowerLogo);
+        }
+
+        protected void AddWarriorsOfTheWestLink(string url, string title)
+        {
+            AddPlayLink(LinkType.Warriors_of_the_West, url, title, WarriorsOfTheWestLogo);
         }
 
         protected void AddPlayLink(LinkType type, string url, string title)

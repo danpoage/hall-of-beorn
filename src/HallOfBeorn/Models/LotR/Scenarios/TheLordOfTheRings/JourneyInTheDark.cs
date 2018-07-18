@@ -14,7 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             DifficultyRating = 7.9f;
             Votes = 32;
 
-            AddPlayLink(LinkType.Path_Less_Traveled, "https://darklingdoor.wordpress.com/2018/06/12/path-less-traveled-journey-in-the-dark/", "Journey in the Dark");
+            AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2018/06/12/path-less-traveled-journey-in-the-dark/");
+            AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2017/08/29/nightmare-review-journey-in-the-darknightmare-campaign-part-5/", "Nightmare " + Title);
 
             AddEncounterSet(EncounterSet.JourneyInTheDark);
             AddEncounterSet(EncounterSet.JourneyInTheDarkNightmare);

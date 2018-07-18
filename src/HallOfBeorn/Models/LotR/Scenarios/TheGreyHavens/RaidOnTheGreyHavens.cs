@@ -18,7 +18,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheGreyHavens
             DifficultyRating = 7.6f;
             Votes = 17;
 
-            AddPlayLink(LinkType.Path_Less_Traveled, "https://darklingdoor.wordpress.com/2017/06/27/path-less-traveled-raid-on-the-grey-havens/", "Raid on the Grey Havens");
+            AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2017/06/27/path-less-traveled-raid-on-the-grey-havens/");
+            AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2016/10/22/warriors-of-the-west-raid-on-the-grey-havens/", Title);
 
             AddEncounterSet(EncounterSet.CorsairRaiders);
             AddEncounterSet(EncounterSet.TheStormcallerElite);

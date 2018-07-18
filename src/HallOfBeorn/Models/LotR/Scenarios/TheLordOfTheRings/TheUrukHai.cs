@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             DifficultyRating = 6.0f;
             Votes = 23;
 
+            AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2018/07/10/nightmare-review-the-uruk-hai-nightmare-campaign-part-7/", "Nightmare " + Title);
+
             AddEncounterSet(EncounterSet.OrcsOfTheWhiteHand);
             AddEncounterSet(EncounterSet.SnagaOrcs);
             AddEncounterSet(EncounterSet.TheUrukHai);
