@@ -5,13 +5,13 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR
 {
-    public class Link
+    public class Link : ILink
     {
         public Link(LinkType type, LotRCard card)
             : this(type, card, null)
         {
         }
-
+        
         public Link(LinkType type, LotRCard card, string title)
         {
             this.Type = type;
@@ -47,7 +47,7 @@ namespace HallOfBeorn.Models.LotR
 
         private const string defaltLanguage = "en";
 
-        private static string getUrl(LinkType type, LotRCard card, string language)
+        private static string getUrl(LinkType type, Card card, string language)
         {
             var title = card.Title.ToUrlSafeString();
 

@@ -15,7 +15,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
             DifficultyRating = 5.3f;
             Votes = 160;
 
-            AddProgressionSeriesLink("https://www.youtube.com/watch?v=Lx5RL9_0yBA&index=29&list=PLmkDVibqfjU65cexxMcQDhPC52XKgWWVp&t=0s", "2: Journey Along the Anduin", "https://i.ytimg.com/vi/Lx5RL9_0yBA/hqdefault.jpg");
+            AddProgressionSeriesLink("2: Journey Along the Anduin", "Lx5RL9_0yBA");
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2013/02/04/beorns-path-part-4-journey-along-the-anduin/");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2016/11/06/journey-along-the-anduin/");
 

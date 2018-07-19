@@ -190,7 +190,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             links.Add(new Link(LinkType.Susurros_del_Bosque_Viejo, _card, "Susurros del Bosque Viejo (ES)"));
             links.Add(new Link(LinkType.El_Libro_Rojo_de_Bolson_Cerrado, _card, "El Libro Rojo De Bolsón Cerrado (ES)"));
             links.Add(new Link(LinkType.Die_Manner_von_Gondor, _card, "Die Männer von Gondor (DE)"));
-
+            
             return links;
         }
 
@@ -204,7 +204,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             links.Add(new Link(LinkType.Tolkien_Gateway, _card));
             links.Add(new Link(LinkType.Lord_of_the_Rings_Wiki, _card));
             links.Add(new Link(LinkType.Encyclopedia_of_Arda, _card));
-
+            
             return links;
         }
 

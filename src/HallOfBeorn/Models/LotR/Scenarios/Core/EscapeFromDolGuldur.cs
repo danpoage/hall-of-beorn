@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
             DifficultyRating = 7.8f;
             Votes = 136;
 
-            AddProgressionSeriesLink("https://www.youtube.com/watch?v=Q6eM2DnPtHo&index=28&list=PLmkDVibqfjU65cexxMcQDhPC52XKgWWVp&t=0s", "3: Escape from Dol Guldur", "https://i.ytimg.com/vi/Q6eM2DnPtHo/hqdefault.jpg");
+            AddProgressionSeriesLink("3: Escape from Dol Guldur", "Q6eM2DnPtHo");
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2013/02/12/beorns-path-part-6-escape-from-dol-guldur/");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2016/11/12/escape-from-dol-guldur-quest-analysis/");
 

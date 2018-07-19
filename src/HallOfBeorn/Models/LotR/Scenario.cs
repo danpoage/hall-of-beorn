@@ -51,27 +51,27 @@ namespace HallOfBeorn.Models.LotR
             AddPlayLink(LinkType.Cardboard_of_Rings, url, title, thumbnailUrl);
         }
 
-        public void AddPathLessTraveledLink(string url)
+        protected void AddPathLessTraveledLink(string url)
         {
             AddPlayLink(LinkType.Path_Less_Traveled, url, Title, DarklingDoorLogo);
         }
 
-        public void AddProgressionSeriesLink(string url, string title, string thumbnailUrl)
+        protected void AddProgressionSeriesLink(string title, string videoId)
         {
-            AddPlayLink(LinkType.The_Progression_Series, url, title, thumbnailUrl);
+            AddYouTubeLink(LinkType.The_Progression_Series, title, videoId);
         }
 
-        public void AddTheGreyCompanyLink(string url, string title, string thumbnailUrl)
+        protected void AddTheGreyCompanyLink(string url, string title, string thumbnailUrl)
         {
             AddPlayLink(LinkType.The_Grey_Company, url, title, thumbnailUrl);
         }
 
-        public void AddTheHallOfBeornBlogLink(string url, string title)
+        protected void AddTheHallOfBeornBlogLink(string url, string title)
         {
             AddPlayLink(LinkType.Hall_of_Beorn, url, title, TheHallOfBeornBlogLogo);
         }
 
-        public void AddTheLineUnbrokenLink(string url, string title, string thumbnailUrl)
+        protected void AddTheLineUnbrokenLink(string url, string title, string thumbnailUrl)
         {
             AddPlayLink(LinkType.The_Line_Unbroken, url, title, thumbnailUrl);
         }
@@ -89,6 +89,13 @@ namespace HallOfBeorn.Models.LotR
         protected void AddWarriorsOfTheWestLink(string url, string title)
         {
             AddPlayLink(LinkType.Warriors_of_the_West, url, title, WarriorsOfTheWestLogo);
+        }
+
+        protected void AddYouTubeLink(LinkType type, string title, string videoId)
+        {
+            var url = string.Format("https://www.youtube.com/watch?v={0}", videoId);
+            var thumbnailUrl = string.Format("https://i.ytimg.com/vi/{0}/hqdefault.jpg", videoId);
+            AddPlayLink(type, url, title, thumbnailUrl);
         }
 
         protected void AddPlayLink(LinkType type, string url, string title)
