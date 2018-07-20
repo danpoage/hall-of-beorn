@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.KhazadDum
             DifficultyRating = 4.9f;
             Votes = 69;
 
+            AddProgressionSeriesLink("11", "H2vbJgdBcdE");
+            AddTheLineUnbrokenLink("10", "A0UX9vsSiw0");
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2014/07/16/beorns-path-part-14-into-the-pit/");
             AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2018/02/06/path-less-traveled-into-the-pit/");
 

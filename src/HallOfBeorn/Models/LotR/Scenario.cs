@@ -56,9 +56,9 @@ namespace HallOfBeorn.Models.LotR
             AddPlayLink(LinkType.Path_Less_Traveled, url, Title, DarklingDoorLogo);
         }
 
-        protected void AddProgressionSeriesLink(string title, string videoId)
+        protected void AddProgressionSeriesLink(string episode, string videoId)
         {
-            AddYouTubeLink(LinkType.The_Progression_Series, title, videoId);
+            AddYouTubeLink(LinkType.The_Progression_Series, string.Format("{0}: {1}", episode, Title), videoId);
         }
 
         protected void AddTheGreyCompanyLink(string url, string title, string thumbnailUrl)
@@ -71,9 +71,9 @@ namespace HallOfBeorn.Models.LotR
             AddPlayLink(LinkType.Hall_of_Beorn, url, title, TheHallOfBeornBlogLogo);
         }
 
-        protected void AddTheLineUnbrokenLink(string url, string title, string thumbnailUrl)
+        protected void AddTheLineUnbrokenLink(string episode, string videoId)
         {
-            AddPlayLink(LinkType.The_Line_Unbroken, url, title, thumbnailUrl);
+            AddYouTubeLink(LinkType.The_Line_Unbroken, string.Format("{0}: {1}", episode, Title), videoId);
         }
 
         protected void AddThematicNightmareLink(string url)

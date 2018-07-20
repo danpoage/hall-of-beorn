@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             DifficultyRating = 6.1f;
             Votes = 84;
 
+            AddProgressionSeriesLink("6", "dLJeHba9PFg");
+            AddTheLineUnbrokenLink("6", "nMyk9ujtN14");
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2013/07/28/beorns-path-part-10-a-journey-to-rhosgobel/");
 
             AddEncounterSet(EncounterSet.AJourneyToRhosgobel);

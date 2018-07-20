@@ -14,7 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
             DifficultyRating = 7.8f;
             Votes = 136;
 
-            AddProgressionSeriesLink("3: Escape from Dol Guldur", "Q6eM2DnPtHo");
+            AddProgressionSeriesLink("3", "Q6eM2DnPtHo");
+            AddTheLineUnbrokenLink("3", "YnWmafDZ3_Y");
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2013/02/12/beorns-path-part-6-escape-from-dol-guldur/");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2016/11/12/escape-from-dol-guldur-quest-analysis/");
 

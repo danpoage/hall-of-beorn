@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             DifficultyRating = 2.7f;
             Votes = 81;
 
+            AddProgressionSeriesLink("7", "7VejBJcRwJ0");
+            AddTheLineUnbrokenLink("7", "hngSYXX6X94");
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2013/09/01/beorns-path-part-11-the-hills-of-emyn-muil/");
 
             AddEncounterSet(EncounterSet.DolGuldurOrcs);

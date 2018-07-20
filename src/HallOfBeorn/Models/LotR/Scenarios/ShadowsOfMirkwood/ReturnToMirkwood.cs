@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             DifficultyRating = 7.2f;
             Votes = 71;
 
+            AddProgressionSeriesLink("9", "pWJZO1oZ9_k");
+            AddTheLineUnbrokenLink("9", "40hlQhpPmvk");
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2013/09/22/beorns-path-part-13-return-to-mirkwood/");
 
             AddEncounterSet(EncounterSet.ReturnToMirkwood);

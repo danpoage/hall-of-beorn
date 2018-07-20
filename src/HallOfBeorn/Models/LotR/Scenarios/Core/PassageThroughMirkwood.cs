@@ -14,8 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
             DifficultyRating = 2.2f;
             Votes = 222;
 
-            AddProgressionSeriesLink("1: Passage Through Mirkwood", "aJ242SoRyVQ");
-            AddTheLineUnbrokenLink("https://www.youtube.com/watch?v=bF3H-ekuwEI", "1: Passage Through Mirkwood", "https://i.ytimg.com/vi/bF3H-ekuwEI/hqdefault.jpg");
+            AddProgressionSeriesLink("1", "aJ242SoRyVQ");
+            AddTheLineUnbrokenLink("1", "bF3H-ekuwEI");
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2013/01/25/beorns-path-part-2-playtesting/");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2016/10/28/passage-through-mirkwood/");
             

@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             DifficultyRating = 3.8f;
             Votes = 84;
 
+            AddProgressionSeriesLink("8", "iK5XcHJxV8w");
+            AddTheLineUnbrokenLink("8", "ST0570g_QQc");
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2013/09/12/beorns-path-part-12-the-dead-marshes/");
 
             AddEncounterSet(EncounterSet.SauronsReach);
