@@ -39,6 +39,7 @@ namespace HallOfBeorn.Models.LotR
         private const string DarklingDoorLogo = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Partners/Darkling-Door.png";
         private const string TheWhiteTowerLogo = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Partners/The-White-Tower.png";
         private const string TheHallOfBeornBlogLogo = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Partners/Hall-of-Beorn-Blog.jpg";
+        private const string TheRoadLogo = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Partners/The-Road.jpg";
         private const string WarriorsOfTheWestLogo = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Partners/Warriors-of-the-West.jpg";
 
         protected void AddBeornsPathLink(string url)
@@ -79,6 +80,11 @@ namespace HallOfBeorn.Models.LotR
         protected void AddThematicNightmareLink(string url)
         {
             AddPlayLink(LinkType.Thematic_Nightmare, url, Title + " Nightmare", DarklingDoorLogo);
+        }
+
+        protected void AddTheRoadLink(ushort chapter, string url)
+        {
+            AddPlayLink(LinkType.The_Road, url, string.Format("Chapter {0}: {1}", chapter, Title), TheRoadLogo);
         }
 
         protected void AddTheWhiteTowerLink(string url, string title)

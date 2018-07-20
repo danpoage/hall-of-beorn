@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             Votes = 17;
 
             AddTheGreyCompanyLink("https://www.youtube.com/watch?v=_uUyMjiLA4U", "The Old Forest", "https://i.ytimg.com/vi/_uUyMjiLA4U/hqdefault.jpg");
+            AddTheRoadLink(2, "https://theroadlotr.wordpress.com/the-old-forest/");
 
             AddEncounterSet(EncounterSet.TheOldForest);
 

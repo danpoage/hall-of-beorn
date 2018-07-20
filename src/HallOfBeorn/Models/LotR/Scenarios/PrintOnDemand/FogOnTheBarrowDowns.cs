@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             DifficultyRating = 7.8f;
             Votes = 28;
 
+            AddTheRoadLink(3, "https://theroadlotr.wordpress.com/fog-on-the-barrow-downs/");
+
             AddEncounterSet(EncounterSet.FogOnTheBarrowDowns);
 
             AddQuestCardId("The-House-of-Tom-Bombadil-FotBD");

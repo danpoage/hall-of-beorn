@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
 
             AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2017/10/02/path-less-traveled-a-knife-in-the-dark/");
             AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2016/11/19/nightmare-review-a-knife-in-the-darknightmare-campaign-part-2/", "Nightmare " + Title);
+            AddTheRoadLink(4, "https://theroadlotr.wordpress.com/a-knife-in-the-dark/");
 
             AddEncounterSet(EncounterSet.AKnifeInTheDark);
             AddEncounterSet(EncounterSet.AKnifeInTheDarkNightmare);

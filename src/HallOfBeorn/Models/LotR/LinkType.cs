@@ -26,6 +26,7 @@ namespace HallOfBeorn.Models.LotR
         Warden_of_Arnor,
         The_Line_Unbroken,
 
+        The_Road,
         The_White_Tower,
 
         Warriors_of_the_West,
@@ -36,7 +37,6 @@ namespace HallOfBeorn.Models.LotR
         Dor_Cuarthol,
         Second_Hand_Took,
         The_Mirkwood_Runner,
-        
         
         Heroes_of_the_Rings,
         Very_Late_Adventurer,
