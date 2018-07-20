@@ -807,6 +807,7 @@
     <Compile Include="Models\LotR\Uniqueness.cs" />
     <Compile Include="Models\RingsDb\RingsDbDeckList.cs" />
     <Compile Include="Models\View.cs" />
+    <Compile Include="Models\YouTube\RingsDbCardLink.cs" />
     <Compile Include="Models\YouTube\YouTubeLink.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\LotR\ICardRepository.cs" />
