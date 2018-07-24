@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             AddEncounterSet(EncounterSet.BrokenLands);
             AddEncounterSet(EncounterSet.CelebrimborsSecret);
             AddEncounterSet(EncounterSet.MistyMountainOrcs);
+            AddEncounterSet(EncounterSet.CelebrimborsSecretNightmare);
 
             AddQuestCardId("The-Ruins-of-Ost-in-Edhil-CS");
             AddQuestCardId("The-Enemy's-Servant-CS");
@@ -28,6 +29,15 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             ExcludeFromEasyMode("Orc-Hound-VoI", 1);
             ExcludeFromEasyMode("Orc-Hunter-VoI", 2);
 
+            ExcludeFromNightmareMode("Orc-Skirmisher-VoI", 1);
+            ExcludeFromNightmareMode("Orc-Hunter-VoI", 1);
+            ExcludeFromNightmareMode("Prowling-Wolf-VoI", 3);
+            ExcludeFromNightmareMode("Ruined-Plaza-CS", 1);
+            ExcludeFromNightmareMode("City-Remains-CS", 1);
+            ExcludeFromNightmareMode("Ancient-Foundation-CS", 1);
+            ExcludeFromNightmareMode("Broken-Lands-Location-VoI", 3);
+            ExcludeFromNightmareMode("Spies-from-Mordor-CS", 1);
+            ExcludeFromNightmareMode("Orc-Hunting-Party-VoI", 2);
         }
     }
 }

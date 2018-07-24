@@ -446,6 +446,12 @@ namespace HallOfBeorn.Models.LotR
             Add(TheFordsOfIsenNightmare);
             Add(ToCatchAnOrcNightmare);
             Add(IntoFangornNightmare);
+            Add(TheDunlandTrapNightmare);
+            Add(TheThreeTrialsNightmare);
+            Add(TroubleInTharbadNightmare);
+            Add(TheNinInEilphNightmare);
+            Add(CelebrimborsSecretNightmare);
+            Add(TheAntleredCrownNightmare);
 
             //The Lost Realm and Angmar Awakened Nightmare Decks
             Add(IntrudersInChetwoodNightmare);
@@ -767,6 +773,9 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet TheDunlandTrapNightmare = new EncounterSet { Name = "The Dunland Trap Nightmare", Set = "The Dunland Trap Nightmare" };
         public static EncounterSet TheThreeTrialsNightmare = new EncounterSet { Name = "The Three Trials Nightmare", Set = "The Three Trials Nightmare" };
         public static EncounterSet TroubleInTharbadNightmare = new EncounterSet { Name = "Trouble in Tharbad Nightmare", Set = "Trouble in Tharbad Nightmare" };
+        public static EncounterSet TheNinInEilphNightmare = new EncounterSet { Name = "The Nîn-in-Eilph Nightmare", Set = "The Nîn-in-Eilph Nightmare", NormalizedSet = "The Nin-in-Eilph Nightmare" };
+        public static EncounterSet CelebrimborsSecretNightmare = new EncounterSet { Name = "Celebrimbor's Secret Nightmare", Set = "Celebrimbor's Secret Nightmare" };
+        public static EncounterSet TheAntleredCrownNightmare = new EncounterSet { Name = "The Antlered Crown Nightmare", Set = "The Antlered Crown Nightmare" };
 
         //The Lost Realm and Angmar Awakened Nightmare Decks
         public static EncounterSet IntrudersInChetwoodNightmare = new EncounterSet { Name = "Intruders in Chetwood Nightmare", Set = "Intruders in Chetwood Nightmare" };

@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
 
             AddEncounterSet(EncounterSet.TheNinInEilph);
             AddEncounterSet(EncounterSet.WearyTravelers);
+            AddEncounterSet(EncounterSet.TheNinInEilphNightmare);
 
             AddQuestCardId("Fleeing-from-Tharbad-NiE");
             AddQuestCardId("Through-the-Marsh-No-End-in-Sight-NiE");
@@ -32,6 +33,13 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             ExcludeFromEasyMode("In-Need-of-Rest-VoI", 1);
             ExcludeFromEasyMode("Low-on-Provisions-VoI", 1);
 
+            ExcludeFromNightmareMode("Through-the-Marsh-A-Weary-Passage-NiE", 1);
+            ExcludeFromNightmareMode("Lost-in-the-Swanfleet-Impassable-Marshland-NiE", 1);
+            ExcludeFromNightmareMode("Neekerbreekers-NiE", 3);
+            ExcludeFromNightmareMode("Hidden-Eyot-NiE", 1);
+            ExcludeFromNightmareMode("Finger-of-Glanduin-NiE", 3);
+            ExcludeFromNightmareMode("Off-Track-VoI", 2);
+            ExcludeFromNightmareMode("Low-on-Provisions-VoI", 1);
         }
     }
 }

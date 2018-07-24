@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             AddEncounterSet(EncounterSet.DunlandRaiders);
             AddEncounterSet(EncounterSet.DunlandWarriors);
             AddEncounterSet(EncounterSet.TheAntleredCrown);
+            AddEncounterSet(EncounterSet.TheAntleredCrownNightmare);
 
             AddQuestCardId("Battle-for-Dunland-TAC");
             AddQuestCardId("The-Raven-Clan-TAC");
@@ -31,6 +32,12 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             ExcludeFromEasyMode("Raven-War-camp-TAC", 2);
             ExcludeFromEasyMode("Raven-Warrior-TAC", 1);
 
+            ExcludeFromNightmareMode("Dunland-Prowler-VoI", 1);
+            ExcludeFromNightmareMode("Dunland-Berserker-VoI", 1);
+            ExcludeFromNightmareMode("Dunlending-Bandit-VoI", 2);
+            ExcludeFromNightmareMode("Raven-Skirmisher-TAC", 3);
+            ExcludeFromNightmareMode("Raven-War-Camp-TAC", 3);
+            ExcludeFromNightmareMode("Driven-Back-TAC", 2);
         }
     }
 }
