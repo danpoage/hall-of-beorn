@@ -12,11 +12,13 @@ namespace HallOfBeorn.Services.LotR.Search
             if (string.IsNullOrWhiteSpace(target) || target == defaultValue)
                 return;
 
+            target = target.Trim();
+
             if (!target.EndsWith("."))
                 target = target + ".";
 
             predicate = (score) => {
-                var match = score.Card.Traits.Any(t => t == target) || score.Card.NormalizedTraits.Any(t => t == target);
+                var match = score.Card.Traits.Any(tr => tr.Trim() == target) || score.Card.NormalizedTraits.Any(tr => tr.Trim() == target);
                 score.AddScore(match ? 1 : 0);
                 return match;
             };
@@ -35,7 +37,7 @@ namespace HallOfBeorn.Services.LotR.Search
                     var match = false;
                     foreach (var target in values)
                     {
-                        match = score.Card.Traits.All(tr => tr != target) && score.Card.NormalizedTraits.All(tr => tr != target);
+                        match = score.Card.Traits.All(tr => tr.Trim() != target) && score.Card.NormalizedTraits.All(tr => tr.Trim() != target);
                         if (!match)
                             break;
                     }
@@ -49,7 +51,7 @@ namespace HallOfBeorn.Services.LotR.Search
                     var match = false;
                     foreach (var target in values)
                     {
-                        match = score.Card.Traits.Any(tr => tr == target) || score.Card.NormalizedTraits.Any(tr => tr == target);
+                        match = score.Card.Traits.Any(tr => tr.Trim() == target) || score.Card.NormalizedTraits.Any(tr => tr.Trim() == target);
                         if (match)
                             break;
                     }

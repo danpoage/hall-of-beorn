@@ -12,11 +12,13 @@ namespace HallOfBeorn.Services.LotR.Search
             if (string.IsNullOrWhiteSpace(target) || target == defaultValue)
                 return;
 
+            target = target.Trim();
+
             if (!target.EndsWith("."))
                 target = target + ".";
 
             predicate = (score) => {
-                var match = score.Card.Keywords.Any(k => k == target) || score.Card.NormalizedKeywords.Any(k => k == target);
+                var match = score.Card.Keywords.Any(kw => kw.Trim() == target) || score.Card.NormalizedKeywords.Any(kw => kw.Trim() == target);
                 score.AddScore(match ? 1 : 0);
                 return match;
             };
@@ -35,7 +37,7 @@ namespace HallOfBeorn.Services.LotR.Search
                     var match = false;
                     foreach (var target in values)
                     {
-                        match = score.Card.Keywords.All(k => k != target) && score.Card.NormalizedKeywords.All(k => k != target);
+                        match = score.Card.Keywords.All(kw => kw.Trim() != target) && score.Card.NormalizedKeywords.All(kw => kw.Trim() != target);
                         if (!match)
                             break;
                     }
