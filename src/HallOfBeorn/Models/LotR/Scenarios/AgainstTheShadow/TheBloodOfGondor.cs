@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
             DifficultyRating = 5.7f;
             Votes = 43;
 
+            AddTheLineUnbrokenLink("32", "n8DEB_iuF6M");
+
             AddEncounterSet(EncounterSet.RavagingOrcs);
             AddEncounterSet(EncounterSet.TheBloodOfGondor);
             AddEncounterSet(EncounterSet.TheBloodOfGondorNightmare);

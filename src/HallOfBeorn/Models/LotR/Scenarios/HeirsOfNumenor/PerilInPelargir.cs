@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.HeirsOfNumenor
             DifficultyRating = 6.8f;
             Votes = 59;
 
+            AddTheLineUnbrokenLink("22", "63aHSRFozWk");
+
             AddEncounterSet(EncounterSet.Brigands);
             AddEncounterSet(EncounterSet.PerilInPelargir);
             AddEncounterSet(EncounterSet.PerilInPelargirNightmare);

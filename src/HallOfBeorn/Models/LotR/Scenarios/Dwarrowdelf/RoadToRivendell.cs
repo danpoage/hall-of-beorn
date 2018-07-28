@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             DifficultyRating = 5.2f;
             Votes = 53;
 
+            AddTheLineUnbrokenLink("14", "s_6mBCPPuuw");
+
             AddEncounterSet(EncounterSet.MistyMountains);
             AddEncounterSet(EncounterSet.PlunderingGoblins);
             AddEncounterSet(EncounterSet.RoadToRivendell);

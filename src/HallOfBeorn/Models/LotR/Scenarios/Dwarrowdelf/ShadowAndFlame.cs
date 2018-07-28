@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             DifficultyRating = 7.9f;
             Votes = 59;
 
+            AddTheLineUnbrokenLink("18", "Or-4_WHvtmo");
+
             AddEncounterSet(EncounterSet.DeepsOfMoria);
             AddEncounterSet(EncounterSet.GoblinsOfTheDeep);
             AddEncounterSet(EncounterSet.ShadowAndFlame);

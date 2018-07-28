@@ -13,6 +13,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.HeirsOfNumenor
             DifficultyRating = 8.2f;
             Votes = 70;
 
+            AddTheLineUnbrokenLink("24", "KQZipAZIstU");
+            AddTheLineUnbrokenLink("24.5", "lE9Hk7CwgCs");
+
             AddEncounterSet(EncounterSet.MordorElite);
             AddEncounterSet(EncounterSet.RavagingOrcs);
             AddEncounterSet(EncounterSet.Southrons);

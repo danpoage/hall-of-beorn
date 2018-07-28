@@ -13,6 +13,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             DifficultyRating = 3.9f;
             Votes = 31;
 
+            AddTheLineUnbrokenLink("39", "xlGiadgaQJ4");
             AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2016/10/03/warriors-of-the-west-trouble-in-tharbad/", Title);
             AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2016/10/20/nightmare-review-trouble-in-tharbad/", "Nightmare " + Title);
 

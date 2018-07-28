@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             DifficultyRating = 6.5f;
             Votes = 27;
 
+            AddTheLineUnbrokenLink("G3", "uEJrbal-c3A");
+
             AddEncounterSet(EncounterSet.TheStoneOfErech);
 
             AddQuestCardId("The-Disappearance-TSoE");

@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             DifficultyRating = 5.6f;
             Votes = 56;
 
+            AddTheLineUnbrokenLink("13", "iTjMI97tsqA");
+
             AddEncounterSet(EncounterSet.MistyMountains);
             AddEncounterSet(EncounterSet.TheRedhornGate);
             AddEncounterSet(EncounterSet.TheRedhornGateNightmare);

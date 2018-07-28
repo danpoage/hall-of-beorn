@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheVoiceOfIsengard
             DifficultyRating = 4.3f;
             Votes = 35;
 
+            AddTheLineUnbrokenLink("36", "AGrntMwPbcQ");
+
             AddEncounterSet(EncounterSet.AncientForest);
             AddEncounterSet(EncounterSet.IntoFangorn);
             AddEncounterSet(EncounterSet.IntoFangornNightmare);

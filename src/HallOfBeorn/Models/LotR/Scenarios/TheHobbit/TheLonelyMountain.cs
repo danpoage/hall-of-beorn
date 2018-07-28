@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             DifficultyRating = 7.3f;
             Votes = 27;
 
+            AddTheLineUnbrokenLink("26", "X7mgbuEEITE");
+
             AddEncounterSet(EncounterSet.TheLonelyMountain);
             AddEncounterSet(EncounterSet.TheLonelyMountainNightmare);
             AddEncounterSet(EncounterSet.Wilderland);

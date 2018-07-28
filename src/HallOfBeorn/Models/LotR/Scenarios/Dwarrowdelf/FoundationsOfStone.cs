@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             DifficultyRating = 6.0f;
             Votes = 54;
 
+            AddTheLineUnbrokenLink("17", "oVhEKDp1CzE");
+
             AddEncounterSet(EncounterSet.FoundationsOfStone);
             AddEncounterSet(EncounterSet.FoundationsOfStoneNightmare);
             AddEncounterSet(EncounterSet.GoblinsOfTheDeep);

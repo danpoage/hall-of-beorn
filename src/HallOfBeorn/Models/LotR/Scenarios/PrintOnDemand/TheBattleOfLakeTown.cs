@@ -15,6 +15,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             DifficultyRating = 8.9f;
             Votes = 44;
 
+            AddTheLineUnbrokenLink("G2", "-m0eaSiyhcQ");
+
             AddEncounterSet(EncounterSet.TheBattleOfLakeTown);
 
             AddQuestCardId("Terror-from-the-Mountain-TBoLT");

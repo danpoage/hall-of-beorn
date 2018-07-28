@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
             DifficultyRating = 6.2f;
             Votes = 54;
 
+            AddTheLineUnbrokenLink("28", "UTOX8V99QKc");
+
             AddEncounterSet(EncounterSet.Brigands);
             AddEncounterSet(EncounterSet.StreetsOfGondor);
             AddEncounterSet(EncounterSet.TheStewardsFear);

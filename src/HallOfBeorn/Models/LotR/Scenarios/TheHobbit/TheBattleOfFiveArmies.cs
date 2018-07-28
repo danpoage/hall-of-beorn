@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             DifficultyRating = 6.9f;
             Votes = 29;
 
+            AddTheLineUnbrokenLink("27", "5Qc8pBNMyVk");
+
             AddEncounterSet(EncounterSet.TheBattleOfFiveArmies);
             AddEncounterSet(EncounterSet.TheBattleOfFiveArmiesNightmare);
             AddEncounterSet(EncounterSet.Wilderland);

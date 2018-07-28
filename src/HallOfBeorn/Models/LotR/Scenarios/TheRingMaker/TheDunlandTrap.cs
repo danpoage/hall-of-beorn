@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             Votes = 42;
 
             AddTheGreyCompanyLink("https://www.youtube.com/watch?v=HtZcKbz47cY", Title, "https://i.ytimg.com/vi/HtZcKbz47cY/hqdefault.jpg");
+            AddTheLineUnbrokenLink("37 part 1", "OcL2vnzviIo");
+            AddTheLineUnbrokenLink("37 parts 2 and 3", "-cpEbISzWdM");
             AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2016/10/08/warriors-of-the-west-the-dunland-trap/", Title);
 
             AddEncounterSet(EncounterSet.DunlandWarriors);

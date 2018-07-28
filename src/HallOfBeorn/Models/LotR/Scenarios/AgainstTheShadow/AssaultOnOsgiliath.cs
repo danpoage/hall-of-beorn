@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
             DifficultyRating = 5.2f;
             Votes = 44;
 
+            AddTheLineUnbrokenLink("31", "t3l__Hzubmc");
+
             AddEncounterSet(EncounterSet.AssaultOnOsgiliath);
             AddEncounterSet(EncounterSet.AssaultOnOsgiliathNightmare);
             AddEncounterSet(EncounterSet.MordorElite);

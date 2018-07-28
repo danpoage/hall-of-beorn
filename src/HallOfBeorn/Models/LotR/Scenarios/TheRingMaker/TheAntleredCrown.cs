@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             DifficultyRating = 6.9f;
             Votes = 17;
 
+            AddTheLineUnbrokenLink("42", "L_shKNxxSnw");
+
             AddEncounterSet(EncounterSet.DunlandRaiders);
             AddEncounterSet(EncounterSet.DunlandWarriors);
             AddEncounterSet(EncounterSet.TheAntleredCrown);

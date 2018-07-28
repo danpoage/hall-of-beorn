@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheVoiceOfIsengard
             DifficultyRating = 7.0f;
             Votes = 50;
 
+            AddTheLineUnbrokenLink("35", "dzcwT6noaZs");
+
             AddEncounterSet(EncounterSet.BrokenLands);
             AddEncounterSet(EncounterSet.MistyMountainOrcs);
             AddEncounterSet(EncounterSet.ToCatchAnOrc);

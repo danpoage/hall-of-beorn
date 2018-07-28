@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             DifficultyRating = 6.8f;
             Votes = 26;
 
+            AddTheLineUnbrokenLink("40", "gf8OSXVfZ4M");
+
             AddEncounterSet(EncounterSet.TheNinInEilph);
             AddEncounterSet(EncounterSet.WearyTravelers);
             AddEncounterSet(EncounterSet.TheNinInEilphNightmare);

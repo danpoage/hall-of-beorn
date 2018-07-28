@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             DifficultyRating = 6.4f;
             Votes = 35;
 
+            AddTheLineUnbrokenLink("21", "i3ER7Gb3wFc");
+
             AddEncounterSet(EncounterSet.DungeonsDeepAndCavernsDim);
             AddEncounterSet(EncounterSet.DungeonsDeepAndCavernsDimNightmare);
             AddEncounterSet(EncounterSet.MistyMountainGoblins);

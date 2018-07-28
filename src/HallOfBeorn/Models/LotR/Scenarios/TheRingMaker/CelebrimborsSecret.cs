@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             DifficultyRating = 5.7f;
             Votes = 19;
 
+            AddTheLineUnbrokenLink("41", "iwAFduhcaAM");
+
             AddEncounterSet(EncounterSet.BrokenLands);
             AddEncounterSet(EncounterSet.CelebrimborsSecret);
             AddEncounterSet(EncounterSet.MistyMountainOrcs);

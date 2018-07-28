@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             DifficultyRating = 3.7f;
             Votes = 47;
 
+            AddTheLineUnbrokenLink("16", "0mpExRl9oIU");
+
             AddEncounterSet(EncounterSet.DeepsOfMoria);
             AddEncounterSet(EncounterSet.TheLongDark);
             AddEncounterSet(EncounterSet.TheLongDarkNightmare);

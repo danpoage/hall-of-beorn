@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             DifficultyRating = 6.6f;
             Votes = 54;
 
+            AddTheLineUnbrokenLink("19", "8GS-c0teAOs");
+
             AddEncounterSet(EncounterSet.WeMustAwayEreBreakOfDay);
             AddEncounterSet(EncounterSet.WeMustAwayEreBreakOfDayNightmare);
             AddEncounterSet(EncounterSet.WesternLands);

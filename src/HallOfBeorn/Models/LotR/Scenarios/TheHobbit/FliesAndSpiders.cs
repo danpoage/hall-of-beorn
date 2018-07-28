@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             DifficultyRating = 6.1f;
             Votes = 29;
 
+            AddTheLineUnbrokenLink("25", "jt6VXP9V0Us");
+
             AddEncounterSet(EncounterSet.FliesAndSpiders);
             AddEncounterSet(EncounterSet.FliesAndSpidersNightmare);
             AddEncounterSet(EncounterSet.Wilderland);

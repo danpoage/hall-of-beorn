@@ -14,6 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLostRealm
             Votes = 28;
 
             AddTheGreyCompanyLink("https://www.youtube.com/watch?v=b-cCXvTTtcU", "The Weather Hills", "https://i.ytimg.com/vi/b-cCXvTTtcU/hqdefault.jpg");
+            AddTheLineUnbrokenLink("44", "EuznH6_k0UE");
             AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2017/08/08/path-less-traveled-the-weather-hills/");
             AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2016/11/07/nightmare-review-the-weather-hills/", "Nightmare " + Title);
 

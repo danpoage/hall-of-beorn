@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheVoiceOfIsengard
             DifficultyRating = 5.7f;
             Votes = 41;
 
+            AddTheLineUnbrokenLink("34", "CXAnAdODdNw");
+
             AddEncounterSet(EncounterSet.DunlandRaiders);
             AddEncounterSet(EncounterSet.DunlandWarriors);
             AddEncounterSet(EncounterSet.TheFordsOfIsen);

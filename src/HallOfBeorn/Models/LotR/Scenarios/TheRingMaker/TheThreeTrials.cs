@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             DifficultyRating = 7.2f;
             Votes = 30;
 
+            AddTheLineUnbrokenLink("38", "9LSluFqf02c");
+
             AddEncounterSet(EncounterSet.AncientForest);
             AddEncounterSet(EncounterSet.TheThreeTrials);
             AddEncounterSet(EncounterSet.TheThreeTrialsNightmare);

@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
             DifficultyRating = 8.0f;
             Votes = 44;
 
+            AddTheLineUnbrokenLink("33", "0zXQhQq6iEY");
+
             AddEncounterSet(EncounterSet.CreaturesOfTheForest);
             AddEncounterSet(EncounterSet.MordorElite);
             AddEncounterSet(EncounterSet.TheMorgulVale);

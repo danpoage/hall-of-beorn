@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             DifficultyRating = 6.3f;
             Votes = 47;
 
+            AddTheLineUnbrokenLink("15", "QdiQXRDXz74");
+
             AddEncounterSet(EncounterSet.MistyMountains);
             AddEncounterSet(EncounterSet.TheWatcherInTheWater);
             AddEncounterSet(EncounterSet.TheWatcherInTheWaterNightmare);

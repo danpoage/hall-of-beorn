@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.HeirsOfNumenor
             DifficultyRating = 7.7f;
             Votes = 84;
 
+            AddTheLineUnbrokenLink("23", "p2dLH2EnwK4");
+            AddTheLineUnbrokenLink("23.5", "1EWPWryuE28");
             AddTheHallOfBeornBlogLink("https://hallofbeorn.wordpress.com/2014/07/29/deck-out-of-ithilien/", "Deck: Out of Ithilien");
             AddTheHallOfBeornBlogLink("https://hallofbeorn.wordpress.com/2014/11/17/breaking-news-giant-bear-dominates-in-battle-none-surprised/", "Nightmare Into Ithilien - Deck: Beorn the Arrow-eater");
 

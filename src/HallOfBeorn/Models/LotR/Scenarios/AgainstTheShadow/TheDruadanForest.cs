@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
             DifficultyRating = 5.6f;
             Votes = 54;
 
+            AddTheLineUnbrokenLink("29", "jXdNOWjqnZ4");
+
             AddEncounterSet(EncounterSet.BroodingForest);
             AddEncounterSet(EncounterSet.TheDruadanForest);
             AddEncounterSet(EncounterSet.TheDruadanForestNightmare);
