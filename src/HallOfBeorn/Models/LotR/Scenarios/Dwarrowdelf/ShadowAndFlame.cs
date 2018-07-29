@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             Votes = 59;
 
             AddTheLineUnbrokenLink("18", "Or-4_WHvtmo");
+            AddTheLineUnbrokenLink("N18", "zYf8ZISJjL4");
+            AddTheLineUnbrokenLink("N18.2", "3tNEP2ReD6A");
 
             AddEncounterSet(EncounterSet.DeepsOfMoria);
             AddEncounterSet(EncounterSet.GoblinsOfTheDeep);

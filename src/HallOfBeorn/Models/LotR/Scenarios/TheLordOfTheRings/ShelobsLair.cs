@@ -14,6 +14,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             DifficultyRating = 7.3f;
             Votes = 16;
 
+            AddTheLineUnbrokenLink("C12", "Nx4E2Q6VR18");
+            AddTheLineUnbrokenLink("C12.2", "ONfMXXC66Ys");
+
             AddEncounterSet(EncounterSet.Gollum);
             AddEncounterSet(EncounterSet.MorgulNazgul);
             AddEncounterSet(EncounterSet.ShelobsLair);

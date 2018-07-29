@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
 
             AddProgressionSeriesLink("1", "aJ242SoRyVQ");
             AddTheLineUnbrokenLink("1", "bF3H-ekuwEI");
+            AddTheLineUnbrokenLink("N1", "2Tb3YiRSyQE");
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2013/01/25/beorns-path-part-2-playtesting/");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2016/10/28/passage-through-mirkwood/");
             

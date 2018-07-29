@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.HeirsOfNumenor
             Votes = 59;
 
             AddTheLineUnbrokenLink("22", "63aHSRFozWk");
+            AddTheLineUnbrokenLink("N25", "X69QGvaDNxY");
+            AddTheLineUnbrokenLink("N25.1", "OvGeAnrFEHw");
 
             AddEncounterSet(EncounterSet.Brigands);
             AddEncounterSet(EncounterSet.PerilInPelargir);

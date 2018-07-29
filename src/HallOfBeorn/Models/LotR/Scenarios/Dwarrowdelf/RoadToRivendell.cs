@@ -14,6 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             Votes = 53;
 
             AddTheLineUnbrokenLink("14", "s_6mBCPPuuw");
+            AddTheLineUnbrokenLink("N14", "gUGhtPi8X7I");
 
             AddEncounterSet(EncounterSet.MistyMountains);
             AddEncounterSet(EncounterSet.PlunderingGoblins);

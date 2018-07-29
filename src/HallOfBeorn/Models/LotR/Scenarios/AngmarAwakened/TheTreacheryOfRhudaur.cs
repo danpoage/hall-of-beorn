@@ -14,6 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             Votes = 27;
 
             AddTheGreyCompanyLink("https://www.youtube.com/watch?v=OyuHE-Jvn38", Title, "https://i.ytimg.com/vi/OyuHE-Jvn38/hqdefault.jpg");
+            AddTheLineUnbrokenLink("49", "3UyYN7lZJLI");
 
             AddEncounterSet(EncounterSet.CursedDead);
             AddEncounterSet(EncounterSet.RuinsOfArnor);

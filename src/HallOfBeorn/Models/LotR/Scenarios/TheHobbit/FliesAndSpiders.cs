@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             Votes = 29;
 
             AddTheLineUnbrokenLink("25", "jt6VXP9V0Us");
+            AddTheLineUnbrokenLink("N22", "JX_Tc4sRAmc");
 
             AddEncounterSet(EncounterSet.FliesAndSpiders);
             AddEncounterSet(EncounterSet.FliesAndSpidersNightmare);

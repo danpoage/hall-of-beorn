@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.HeirsOfNumenor
 
             AddTheLineUnbrokenLink("23", "p2dLH2EnwK4");
             AddTheLineUnbrokenLink("23.5", "1EWPWryuE28");
+            AddTheLineUnbrokenLink("N26", "Kw5ehMrnL4w");
             AddTheHallOfBeornBlogLink("https://hallofbeorn.wordpress.com/2014/07/29/deck-out-of-ithilien/", "Deck: Out of Ithilien");
             AddTheHallOfBeornBlogLink("https://hallofbeorn.wordpress.com/2014/11/17/breaking-news-giant-bear-dominates-in-battle-none-surprised/", "Nightmare Into Ithilien - Deck: Beorn the Arrow-eater");
 

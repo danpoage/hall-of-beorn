@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.KhazadDum
 
             AddProgressionSeriesLink("11", "H2vbJgdBcdE");
             AddTheLineUnbrokenLink("10", "A0UX9vsSiw0");
+            AddTheLineUnbrokenLink("N10", "LFPxWbCV6gA");
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2014/07/16/beorns-path-part-14-into-the-pit/");
             AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2018/02/06/path-less-traveled-into-the-pit/");
 

@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             Votes = 54;
 
             AddTheLineUnbrokenLink("19", "8GS-c0teAOs");
+            AddTheLineUnbrokenLink("N19", "9q0suPxxjGg");
 
             AddEncounterSet(EncounterSet.WeMustAwayEreBreakOfDay);
             AddEncounterSet(EncounterSet.WeMustAwayEreBreakOfDayNightmare);

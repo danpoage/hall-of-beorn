@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             DifficultyRating = 6.2f;
             Votes = 17;
 
+            AddTheLineUnbrokenLink("C10", "RgnR-N3wRfo");
+
             AddEncounterSet(EncounterSet.Gollum);
             AddEncounterSet(EncounterSet.MorgulNazgul);
             AddEncounterSet(EncounterSet.ThePassageOfTheMarshes);

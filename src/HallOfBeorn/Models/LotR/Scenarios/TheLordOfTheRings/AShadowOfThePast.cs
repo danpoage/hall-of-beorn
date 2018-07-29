@@ -14,6 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             DifficultyRating = 6.3f;
             Votes = 53;
 
+            AddTheLineUnbrokenLink("C1", "ozXDK-W6d2g");
             AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2017/09/19/path-less-traveled-a-shadow-of-the-past/");
             AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2016/11/12/nightmare-review-a-shadow-of-the-pastnightmare-campaign-part-1/", "Nightmare " + Title);
             AddTheRoadLink(1, "https://theroadlotr.wordpress.com/a-shadow-of-the-past/");

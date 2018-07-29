@@ -14,6 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             Votes = 47;
 
             AddTheLineUnbrokenLink("15", "QdiQXRDXz74");
+            AddTheLineUnbrokenLink("N15", "Fjo3Y6QrlQg");
 
             AddEncounterSet(EncounterSet.MistyMountains);
             AddEncounterSet(EncounterSet.TheWatcherInTheWater);

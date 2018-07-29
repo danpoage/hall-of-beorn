@@ -18,6 +18,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             DifficultyRating = 8.1f;
             Votes = 16;
 
+            AddTheLineUnbrokenLink("51", "3tYbgyWscpU");
+
             AddEncounterSet(EncounterSet.TheDreadRealm);
             AddEncounterSet(EncounterSet.TheDreadRealmNightmare);
             AddEncounterSet(EncounterSet.DarkSorcery);

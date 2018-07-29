@@ -18,6 +18,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             DifficultyRating = 9.6f;
             Votes = 40;
 
+            AddTheLineUnbrokenLink("50", "1VHJ6jEwCG0");
+
             AddEncounterSet(EncounterSet.TheBattleOfCarnDum);
             AddEncounterSet(EncounterSet.TheBattleOfCarnDumNightmare);
             AddEncounterSet(EncounterSet.AngmarOrcs);

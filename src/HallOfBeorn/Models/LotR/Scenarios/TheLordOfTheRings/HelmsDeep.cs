@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             DifficultyRating = 8.2f;
             Votes = 30;
 
+            AddTheLineUnbrokenLink("C8", "4iWunMbDBVc");
+
             AddEncounterSet(EncounterSet.HelmsDeep);
             AddEncounterSet(EncounterSet.OrcsOfTheWhiteHand);
 

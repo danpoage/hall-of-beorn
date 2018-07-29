@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
 
             AddProgressionSeriesLink("3", "Q6eM2DnPtHo");
             AddTheLineUnbrokenLink("3", "YnWmafDZ3_Y");
+            AddTheLineUnbrokenLink("N3", "f4euaXWkbNc");
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2013/02/12/beorns-path-part-6-escape-from-dol-guldur/");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2016/11/12/escape-from-dol-guldur-quest-analysis/");
 

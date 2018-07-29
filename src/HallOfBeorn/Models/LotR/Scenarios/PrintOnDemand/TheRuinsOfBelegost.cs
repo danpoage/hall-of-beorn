@@ -14,6 +14,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             DifficultyRating = 8.1f;
             Votes = 14;
 
+            AddTheLineUnbrokenLink("G6", "hg-QXsiOiyE");
+            AddTheLineUnbrokenLink("G6.2", "6on97G5zkRY");
+
             AddEncounterSet(EncounterSet.TheRuinsOfBelegost);
 
             AddQuestCardId("Ruins-of-the-First-Age-TRoB");

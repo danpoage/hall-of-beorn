@@ -16,6 +16,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
 
             AddProgressionSeriesLink("9", "pWJZO1oZ9_k");
             AddTheLineUnbrokenLink("9", "40hlQhpPmvk");
+            AddTheLineUnbrokenLink("N9", "Sva47T3B52A");
+            AddTheLineUnbrokenLink("N9.2", "IHJExMbmgAo");
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2013/09/22/beorns-path-part-13-return-to-mirkwood/");
 
             AddEncounterSet(EncounterSet.ReturnToMirkwood);

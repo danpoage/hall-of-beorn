@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             DifficultyRating = 3.5f;
             Votes = 29;
 
+            AddTheLineUnbrokenLink("47", "6T0a9JMcp_4");
+
             AddEncounterSet(EncounterSet.AngmarOrcs);
             AddEncounterSet(EncounterSet.EscapeFromMountGram);
             AddEncounterSet(EncounterSet.EscapeFromMountGramNightmare);

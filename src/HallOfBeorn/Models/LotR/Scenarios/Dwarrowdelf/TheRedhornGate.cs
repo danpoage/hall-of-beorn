@@ -14,6 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             Votes = 56;
 
             AddTheLineUnbrokenLink("13", "iTjMI97tsqA");
+            AddTheLineUnbrokenLink("N13", "lkIGd0RNEK0");
 
             AddEncounterSet(EncounterSet.MistyMountains);
             AddEncounterSet(EncounterSet.TheRedhornGate);

@@ -19,6 +19,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             DifficultyRating = 7.6f;
             Votes = 14;
 
+            AddTheLineUnbrokenLink("G7", "xuK6zLmZoTc");
+
             AddEncounterSet(EncounterSet.MurderAtThePrancingPony);
             AddEncounterSet(EncounterSet.Investigation);
 

@@ -14,6 +14,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             DifficultyRating = 7.9f;
             Votes = 21;
 
+            AddTheLineUnbrokenLink("C11", "_WXE3XE8PYE");
+            AddTheLineUnbrokenLink("C11.2", "Uwh4BPZlt_w");
+
             AddEncounterSet(EncounterSet.MenOfHarad);
             AddEncounterSet(EncounterSet.JourneyToTheCrossRoads);
 

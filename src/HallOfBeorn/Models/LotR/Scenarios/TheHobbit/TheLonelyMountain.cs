@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             Votes = 27;
 
             AddTheLineUnbrokenLink("26", "X7mgbuEEITE");
+            AddTheLineUnbrokenLink("N23", "0YhlHKOZORA");
 
             AddEncounterSet(EncounterSet.TheLonelyMountain);
             AddEncounterSet(EncounterSet.TheLonelyMountainNightmare);

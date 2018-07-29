@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
 
             AddProgressionSeriesLink("4", "B8Hq1LLxWtU");
             AddTheLineUnbrokenLink("4", "CwBfByFcSFM");
+            AddTheLineUnbrokenLink("N4", "-lezqJk4gqs");
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2013/04/08/beorns-path-part-8-playtesting-the-hunt-for-gollum/");
             AddTheWhiteTowerLink("https://thewhitetower.wordpress.com/2018/05/29/the-hunt-for-gollum-quest-analysis/", "The Hunt for Gollum - Quest Analysis");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2016/11/24/the-hunt-for-gollum/");

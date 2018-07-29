@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             Votes = 29;
 
             AddTheLineUnbrokenLink("27", "5Qc8pBNMyVk");
+            AddTheLineUnbrokenLink("N24", "zA73SNP5f2g");
 
             AddEncounterSet(EncounterSet.TheBattleOfFiveArmies);
             AddEncounterSet(EncounterSet.TheBattleOfFiveArmiesNightmare);

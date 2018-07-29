@@ -13,6 +13,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             DifficultyRating = 7.8f;
             Votes = 28;
 
+            AddTheLineUnbrokenLink("C1.2/G5", "xXjwG5zCr1g");
             AddTheRoadLink(3, "https://theroadlotr.wordpress.com/fog-on-the-barrow-downs/");
 
             AddEncounterSet(EncounterSet.FogOnTheBarrowDowns);

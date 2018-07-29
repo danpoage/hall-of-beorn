@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
 
             AddProgressionSeriesLink("6", "dLJeHba9PFg");
             AddTheLineUnbrokenLink("6", "nMyk9ujtN14");
+            AddTheLineUnbrokenLink("N6", "f509ktuzawI");
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2013/07/28/beorns-path-part-10-a-journey-to-rhosgobel/");
 
             AddEncounterSet(EncounterSet.AJourneyToRhosgobel);

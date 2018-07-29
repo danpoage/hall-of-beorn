@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             Votes = 35;
 
             AddTheLineUnbrokenLink("21", "i3ER7Gb3wFc");
+            AddTheLineUnbrokenLink("N21", "8znP0NIjnDk");
 
             AddEncounterSet(EncounterSet.DungeonsDeepAndCavernsDim);
             AddEncounterSet(EncounterSet.DungeonsDeepAndCavernsDimNightmare);

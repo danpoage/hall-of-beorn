@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             DifficultyRating = 6.9f;
             Votes = 22;
 
+            AddTheLineUnbrokenLink("C9", "6EbEiwbBEMI");
+
             AddEncounterSet(EncounterSet.SnagaOrcs);
             AddEncounterSet(EncounterSet.TheRoadToIsengard);
 

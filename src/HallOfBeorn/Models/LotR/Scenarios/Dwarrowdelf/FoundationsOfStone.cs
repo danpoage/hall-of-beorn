@@ -14,6 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             Votes = 54;
 
             AddTheLineUnbrokenLink("17", "oVhEKDp1CzE");
+            AddTheLineUnbrokenLink("N17", "Pgxr2Kgz32s");
 
             AddEncounterSet(EncounterSet.FoundationsOfStone);
             AddEncounterSet(EncounterSet.FoundationsOfStoneNightmare);

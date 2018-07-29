@@ -14,6 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
             Votes = 54;
 
             AddTheLineUnbrokenLink("29", "jXdNOWjqnZ4");
+            AddTheLineUnbrokenLink("N29", "J89b4tYpnSo");
 
             AddEncounterSet(EncounterSet.BroodingForest);
             AddEncounterSet(EncounterSet.TheDruadanForest);

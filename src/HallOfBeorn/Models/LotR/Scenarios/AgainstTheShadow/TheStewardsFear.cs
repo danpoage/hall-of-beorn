@@ -14,6 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
             Votes = 54;
 
             AddTheLineUnbrokenLink("28", "UTOX8V99QKc");
+            AddTheLineUnbrokenLink("N28", "iQKTWarQGBs");
 
             AddEncounterSet(EncounterSet.Brigands);
             AddEncounterSet(EncounterSet.StreetsOfGondor);

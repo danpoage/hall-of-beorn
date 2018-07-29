@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             DifficultyRating = 4.4f;
             Votes = 27;
 
+            AddTheLineUnbrokenLink("48", "5k3ZRulOtKE");
+
             AddEncounterSet(EncounterSet.AcrossTheEttenmoors);
             AddEncounterSet(EncounterSet.AcrossTheEttenmoorsNightmare);
             AddEncounterSet(EncounterSet.EriadorWilds);

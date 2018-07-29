@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
             Votes = 42;
 
             AddTheLineUnbrokenLink("20", "MFzFrYAZe4Y");
+            AddTheLineUnbrokenLink("N20", "79QVTxiU510");
 
             AddEncounterSet(EncounterSet.MistyMountainGoblins);
             AddEncounterSet(EncounterSet.OverTheMistyMountainsGrim);

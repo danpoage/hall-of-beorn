@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             DifficultyRating = 7.2f;
             Votes = 30;
 
+            AddTheLineUnbrokenLink("46", "RHr1bLYKzec");
+
             AddEncounterSet(EncounterSet.EriadorWilds);
             AddEncounterSet(EncounterSet.FoulWeather);
             AddEncounterSet(EncounterSet.TheWastesOfEriador);

@@ -14,6 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             DifficultyRating = 6.0f;
             Votes = 28;
 
+            AddTheLineUnbrokenLink("C4", "QRYdChjLfvc");
             AddPlayLink(LinkType.Path_Less_Traveled, "https://darklingdoor.wordpress.com/2018/05/30/path-less-traveled-the-ring-goes-south-standalone/", "The Ring Goes South (Standalone)");
             AddPlayLink(LinkType.Path_Less_Traveled, "https://darklingdoor.wordpress.com/2018/06/05/path-less-traveled-the-ring-goes-south-campaign/", "The Ring Goes South (Campaign)");
             AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2016/12/30/nightmare-review-the-ring-goes-southnightmare-campaign-part-4/", "Nightmare " + Title);

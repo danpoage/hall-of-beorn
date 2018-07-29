@@ -15,6 +15,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.HeirsOfNumenor
 
             AddTheLineUnbrokenLink("24", "KQZipAZIstU");
             AddTheLineUnbrokenLink("24.5", "lE9Hk7CwgCs");
+            AddTheLineUnbrokenLink("N27", "1AvtuSKUL_s");
+            AddTheLineUnbrokenLink("N27.1", "VArGJjckDBQ");
 
             AddEncounterSet(EncounterSet.MordorElite);
             AddEncounterSet(EncounterSet.RavagingOrcs);
