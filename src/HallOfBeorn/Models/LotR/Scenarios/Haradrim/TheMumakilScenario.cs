@@ -19,6 +19,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Haradrim
             DifficultyRating = 5.4f;
             Votes = 8;
 
+            AddLotRDeckTechLink("Boromir Catches a Mumak", "FX3_k2doCVM");
+
             AddEncounterSet(EncounterSet.TheMumakil);
             AddEncounterSet(EncounterSet.JungleForest);
 

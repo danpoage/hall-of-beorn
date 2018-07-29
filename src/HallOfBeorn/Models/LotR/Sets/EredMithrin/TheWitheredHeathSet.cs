@@ -37,7 +37,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTemplate("<p class='main-text'>Attach to an ally. {keyword:Restricted.}</p><p class='main-text'>Limit 1 per ally.</p><p class='main-text'>Attached ally gets +2 hit points.</p><p class='flavor-text'>&ldquo;There are no great weapon-hoards here, lord,&rdquo; answered Éomer. &ldquo;Maybe a light helm might be found to fit him...&rdquo;<br>&ndash;The Return of the King</p>")
                 .WithInfo(3, 3, Artist.Sara_Biddle);
             addEvent("Beorn's Rage", 1, Sphere.Tactics)
-                .WithText("Response: After a Beorning character is declared as an attacker or defender against and enemy, that enemy gets -2 Attack and -2 Defense until the end of the phase.")
+                .WithText("Response: After a Beorning character is declared as an attacker or defender against an enemy, that enemy gets -2 Attack and -2 Defense until the end of the phase.")
                 .WithFlavor("Swiftly he returned and his wrath ewas redoubled, so that nothing could withstand him, and no weapon seemed to bite upon him. -The Hobbit")
                 .WithInfo(7, 3, Artist.Guillaume_Ducos);
             addEvent("The Hidden Way", 2, Sphere.Lore)

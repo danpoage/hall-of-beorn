@@ -19,6 +19,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             Votes = 16;
 
             AddTheLineUnbrokenLink("51", "3tYbgyWscpU");
+            AddMrUnderhillLink(Title + " Nightmare Mode", "IzE6Gd5-lhg");
 
             AddEncounterSet(EncounterSet.TheDreadRealm);
             AddEncounterSet(EncounterSet.TheDreadRealmNightmare);

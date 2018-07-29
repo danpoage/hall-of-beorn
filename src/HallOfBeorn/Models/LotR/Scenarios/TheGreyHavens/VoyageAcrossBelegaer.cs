@@ -18,7 +18,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheGreyHavens
             DifficultyRating = 4.8f;
             Votes = 19;
 
-            AddPlayLink(LinkType.Path_Less_Traveled, "https://darklingdoor.wordpress.com/2017/05/30/path-less-traveled-voyage-across-belegaer/", "Voyage Across Belegaer");
+            AddWanderingTookVideoLink("Twitch Recast: " + Title, "wrbPRLUbl6s");
+            AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2017/05/30/path-less-traveled-voyage-across-belegaer/");
 
             AddEncounterSet(EncounterSet.VastOceans);
             AddEncounterSet(EncounterSet.StormyWeather);

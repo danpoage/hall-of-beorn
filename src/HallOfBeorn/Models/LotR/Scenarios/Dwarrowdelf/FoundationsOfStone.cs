@@ -15,6 +15,10 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
 
             AddTheLineUnbrokenLink("17", "oVhEKDp1CzE");
             AddTheLineUnbrokenLink("N17", "Pgxr2Kgz32s");
+            AddMrUnderhillLink(Title + " - Two Player", "PSx9Vtl0I8M");
+            AddLotRDeckTechLink("Deck Tech: Strider vs Foundations of Stone", "vRLLytmArvo");
+            AddLotRDeckTechLink("Strider vs Foundations of Stone", "VCvcXIk7qAY");
+            AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/05/07/foundations-of-stone/");
 
             AddEncounterSet(EncounterSet.FoundationsOfStone);
             AddEncounterSet(EncounterSet.FoundationsOfStoneNightmare);

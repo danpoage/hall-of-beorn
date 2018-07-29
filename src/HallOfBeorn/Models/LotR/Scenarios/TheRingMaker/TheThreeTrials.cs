@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             Votes = 30;
 
             AddTheLineUnbrokenLink("38", "9LSluFqf02c");
+            AddThematicNightmareLink("https://darklingdoor.wordpress.com/2018/04/24/nightmare-the-three-trials/");
 
             AddEncounterSet(EncounterSet.AncientForest);
             AddEncounterSet(EncounterSet.TheThreeTrials);

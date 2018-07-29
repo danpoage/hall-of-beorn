@@ -25,9 +25,13 @@ namespace HallOfBeorn.Models.LotR
 
         Warden_of_Arnor,
         The_Line_Unbroken,
+        
+        Mr_Underhill,
+        LotR_Deck_Tech,
 
         The_Road,
         The_White_Tower,
+        Wandering_Took,
 
         Warriors_of_the_West,
         Path_Less_Traveled,

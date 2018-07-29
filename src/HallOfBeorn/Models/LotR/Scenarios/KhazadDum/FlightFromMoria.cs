@@ -16,8 +16,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.KhazadDum
             AddProgressionSeriesLink("13", "DYA9unwUn3I");
             AddTheLineUnbrokenLink("12", "26q9pMEgiok");
             AddTheLineUnbrokenLink("N12", "Fv-9gq3pvqs");
-            AddPlayLink(LinkType.Beorn__s_Path, "https://www.youtube.com/watch?v=kG4CjacD1XE", "Flight from Moria", "https://i.ytimg.com/vi/kG4CjacD1XE/hqdefault.jpg");
+            AddBeornsPathLink(Title, "kG4CjacD1XE");
             AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2018/03/20/path-less-traveled-flight-from-moria/");
+            AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/03/06/flight-from-moria/");
 
             AddEncounterSet(EncounterSet.DeepsOfMoria);
             AddEncounterSet(EncounterSet.FlightFromMoria);

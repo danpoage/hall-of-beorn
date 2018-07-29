@@ -16,8 +16,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.KhazadDum
             AddProgressionSeriesLink("12", "oD8BbrgztbA");
             AddTheLineUnbrokenLink("11", "Xo_SlBNrFgA");
             AddTheLineUnbrokenLink("N11", "-cPiaICZd2k");
-            AddPlayLink(LinkType.Beorn__s_Path, "https://www.youtube.com/watch?v=oDfVi8SfOOY", "The Seventh Level", "https://i.ytimg.com/vi/oDfVi8SfOOY/hqdefault.jpg");
+            AddBeornsPathLink(Title, "oDfVi8SfOOY");
             AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2018/02/19/path-less-traveled-the-seventh-level/");
+            AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/02/27/the-seventh-level/");
             AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2016/10/17/nightmare-review-the-seventh-level/", "Nightmare " + Title);
 
             AddEncounterSet(EncounterSet.GoblinsOfTheDeep);

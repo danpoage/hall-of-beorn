@@ -42,9 +42,30 @@ namespace HallOfBeorn.Models.LotR
         private const string TheRoadLogo = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Partners/The-Road.jpg";
         private const string WarriorsOfTheWestLogo = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Partners/Warriors-of-the-West.jpg";
 
+        
+        private void AddPlayLink(LinkType type, string url, string title)
+        {
+            AddPlayLink(type, url, title, string.Empty, null, null);
+        }
+
+        private void AddPlayLink(LinkType type, string url, string title, string thumbnailUrl)
+        {
+            AddPlayLink(type, url, title, thumbnailUrl, null, null);
+        }
+
+        private void AddPlayLink(LinkType type, string url, string title, string thumbnailUrl, int? height, int? width)
+        {
+            _playLinks.Add(new Link(type, url, title, thumbnailUrl, height, width));
+        }
+
         protected void AddBeornsPathLink(string url)
         {
             AddPlayLink(LinkType.Beorn__s_Path, url, Title, TheHallOfBeornBlogLogo);
+        }
+
+        protected void AddBeornsPathLink(string title, string videoId)
+        {
+            AddYouTubeLink(LinkType.Beorn__s_Path, title, videoId);
         }
 
         protected void AddCardboardOfTheRingsLink(string url, string title, string thumbnailUrl)
@@ -52,9 +73,24 @@ namespace HallOfBeorn.Models.LotR
             AddPlayLink(LinkType.Cardboard_of_Rings, url, title, thumbnailUrl);
         }
 
+        protected void AddLotRDeckTechLink(string title, string videoId)
+        {
+            AddYouTubeLink(LinkType.LotR_Deck_Tech, title, videoId);
+        }
+
+        protected void AddMrUnderhillLink(string title, string videoId)
+        {
+            AddYouTubeLink(LinkType.Mr_Underhill, title, videoId);
+        }
+
         protected void AddPathLessTraveledLink(string url)
         {
             AddPlayLink(LinkType.Path_Less_Traveled, url, Title, DarklingDoorLogo);
+        }
+
+        protected void AddPathLessTraveledLink(string url, string title)
+        {
+            AddPlayLink(LinkType.Path_Less_Traveled, url, title, DarklingDoorLogo);
         }
 
         protected void AddProgressionSeriesLink(string episode, string videoId)
@@ -82,6 +118,11 @@ namespace HallOfBeorn.Models.LotR
             AddPlayLink(LinkType.Thematic_Nightmare, url, Title + " Nightmare", DarklingDoorLogo);
         }
 
+        protected void AddThematicNightmareLink(string url, string title)
+        {
+            AddPlayLink(LinkType.Thematic_Nightmare, url, title, DarklingDoorLogo);
+        }
+
         protected void AddTheRoadLink(ushort chapter, string url)
         {
             AddPlayLink(LinkType.The_Road, url, string.Format("Chapter {0}: {1}", chapter, Title), TheRoadLogo);
@@ -90,6 +131,11 @@ namespace HallOfBeorn.Models.LotR
         protected void AddTheWhiteTowerLink(string url, string title)
         {
             AddPlayLink(LinkType.The_White_Tower, url, title, TheWhiteTowerLogo);
+        }
+
+        protected void AddWanderingTookVideoLink(string title, string videoId)
+        {
+            AddYouTubeLink(LinkType.Wandering_Took, title, videoId);
         }
 
         protected void AddWarriorsOfTheWestLink(string url, string title)
@@ -102,21 +148,6 @@ namespace HallOfBeorn.Models.LotR
             var url = string.Format("https://www.youtube.com/watch?v={0}", videoId);
             var thumbnailUrl = string.Format("https://i.ytimg.com/vi/{0}/hqdefault.jpg", videoId);
             AddPlayLink(type, url, title, thumbnailUrl);
-        }
-
-        protected void AddPlayLink(LinkType type, string url, string title)
-        {
-            AddPlayLink(type, url, title, string.Empty, null, null);
-        }
-
-        protected void AddPlayLink(LinkType type, string url, string title, string thumbnailUrl)
-        {
-            AddPlayLink(type, url, title, thumbnailUrl, null, null);
-        }
-
-        protected void AddPlayLink(LinkType type, string url, string title, string thumbnailUrl, int? height, int? width)
-        {
-            _playLinks.Add(new Link(type, url, title, thumbnailUrl, height, width));
         }
 
         protected void AddEncounterSet(EncounterSet set)

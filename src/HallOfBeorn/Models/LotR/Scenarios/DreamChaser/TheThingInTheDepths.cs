@@ -18,6 +18,10 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DreamChaser
             DifficultyRating = 5.4f;
             Votes = 16;
 
+            AddMrUnderhillLink(Title + " Nightmare Mode - Two Player (Attempt 2)", "X7mLiDyH-j0");
+            AddWanderingTookVideoLink("Twitch Recast: " + Title, "_VUd5G_8GGs");
+            AddWanderingTookVideoLink("Twitch Recast: " + Title, "Td3QMjH8zZg");
+
             AddEncounterSet(EncounterSet.CorsairRaiders);
             AddEncounterSet(EncounterSet.TheStormcallerElite);
             AddEncounterSet(EncounterSet.TheThingInTheDepths);

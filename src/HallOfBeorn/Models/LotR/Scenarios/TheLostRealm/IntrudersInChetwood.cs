@@ -13,8 +13,11 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLostRealm
             DifficultyRating = 5.7f;
             Votes = 39;
 
-            AddTheGreyCompanyLink("https://www.youtube.com/watch?v=zWUH7-lySIY", "Intruders in Chetwood", "https://i.ytimg.com/vi/zWUH7-lySIY/hqdefault.jpg");
+            AddTheGreyCompanyLink("https://www.youtube.com/watch?v=zWUH7-lySIY", Title, "https://i.ytimg.com/vi/zWUH7-lySIY/hqdefault.jpg");
             AddTheLineUnbrokenLink("43", "gPakjtY76Ic");
+            AddMrUnderhillLink(Title + " Nightmare Mode", "_IazU4YQ6yU");
+            AddMrUnderhillLink(Title + ", First Turn Win", "W5Eb4eo_LBc");
+            AddLotRDeckTechLink("Gamgees in Chetwood", "gAhC7cBmXno");
             AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2017/07/18/path-less-traveled-intruders-in-chetwood/");
             AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2016/10/28/nightmare-review-intruders-in-chetwood/", "Nightmare " + Title);
 

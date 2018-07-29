@@ -18,6 +18,10 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
             AddProgressionSeriesLink("2", "Lx5RL9_0yBA");
             AddTheLineUnbrokenLink("2.1", "Fpv3YJAoHNk");
             AddTheLineUnbrokenLink("N2", "k84HvCq6uRo");
+            AddMrUnderhillLink(Title + " Nightmare Mode, Attempt One", "IaO8wJmLt_I");
+            AddMrUnderhillLink(Title + " Nightmare Mode, Attempt Two", "LwsqbhhOA1c");
+            AddLotRDeckTechLink("Rossiel, Keen as Lances vs The Anduin", "PlQrthtPULc");
+            AddLotRDeckTechLink("Argalad Along the Anduin", "bICTQO1uVUo");
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2013/02/04/beorns-path-part-4-journey-along-the-anduin/");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2016/11/06/journey-along-the-anduin/");
 

@@ -16,6 +16,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheWildsOfRhovanion
             
             RulesImageCount = 7;
 
+            AddLotRDeckTechLink("Flailing Up the Anduin", "jf1Koi3OB0U");
+
             AddEncounterSet(EncounterSet.GreyMountainGoblins);
             AddEncounterSet(EncounterSet.HillsOfWilderland);
             AddEncounterSet(EncounterSet.LostInWilderland);

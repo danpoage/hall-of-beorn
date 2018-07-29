@@ -19,6 +19,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             DifficultyRating = 8.3f;
             Votes = 13;
 
+            AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/06/11/the-seige-of-annuminas/", Title);
             AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2017/10/02/review-siege-of-annuminas/", Title);
 
             AddEncounterSet(EncounterSet.TheSiegeOfAnnuminas);

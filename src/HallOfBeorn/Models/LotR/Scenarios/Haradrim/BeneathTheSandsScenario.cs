@@ -18,6 +18,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Haradrim
             DifficultyRating = 6.0f;
             Votes = 3;
 
+            AddMrUnderhillLink(Title + " - Vigilant Dúnadan", "FWCsh8cnAY4");
+            AddWanderingTookVideoLink("Twitch Recast: " + Title, "wKhhTLSemJE");
+
             AddEncounterSet(EncounterSet.BeneathTheSands);
             AddEncounterSet(EncounterSet.DesertCreatures);
             AddEncounterSet(EncounterSet.HaradTerritory);

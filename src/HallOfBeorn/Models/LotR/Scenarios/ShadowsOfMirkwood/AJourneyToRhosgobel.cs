@@ -18,6 +18,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             AddTheLineUnbrokenLink("6", "nMyk9ujtN14");
             AddTheLineUnbrokenLink("N6", "f509ktuzawI");
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2013/07/28/beorns-path-part-10-a-journey-to-rhosgobel/");
+            AddThematicNightmareLink("https://darklingdoor.wordpress.com/2016/12/18/a-journey-to-rhosgobel/");
+            AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/02/10/play-report-a-journey-to-rhosgobel/", "Play Report: " + Title);
 
             AddEncounterSet(EncounterSet.AJourneyToRhosgobel);
             AddEncounterSet(EncounterSet.AJourneyToRhosgobelNightmare);

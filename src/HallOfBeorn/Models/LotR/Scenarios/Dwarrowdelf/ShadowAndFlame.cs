@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             AddTheLineUnbrokenLink("18", "Or-4_WHvtmo");
             AddTheLineUnbrokenLink("N18", "zYf8ZISJjL4");
             AddTheLineUnbrokenLink("N18.2", "3tNEP2ReD6A");
+            AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/05/16/shadow-and-flame/");
 
             AddEncounterSet(EncounterSet.DeepsOfMoria);
             AddEncounterSet(EncounterSet.GoblinsOfTheDeep);

@@ -21,6 +21,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Haradrim
             DifficultyRating = 6.7f;
             Votes = 3;
 
+            AddMrUnderhillLink(Title + " - Old Dogs, New Tricks", "UbMH3nJtlgM");
+            AddWanderingTookVideoLink("Twitch Recast: " + Title, "OuL4VCNeb40");
+
             AddEncounterSet(EncounterSet.TheDungeonsOfCirithGurat);
             AddEncounterSet(EncounterSet.MordorOrcs);
             AddEncounterSet(EncounterSet.HaradTerritory);

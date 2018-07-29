@@ -14,6 +14,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
             Votes = 63;
 
             AddTheLineUnbrokenLink("30", "FBZvfJTkh7s");
+            AddMrUnderhillLink(Title + " Normal + Nightmare - Two Players", "apkxfJOyeb0");
+            AddMrUnderhillLink(Title + " Nightmare Mode - Two Players", "LC5Q-mLU6GI");
+            AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/10/18/nightmare-encounter-at-amon-din/");
 
             AddEncounterSet(EncounterSet.EncounterAtAmonDin);
             AddEncounterSet(EncounterSet.EncounterAtAmonDinNightmare);

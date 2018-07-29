@@ -16,6 +16,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
 
             AddTheLineUnbrokenLink("G6", "hg-QXsiOiyE");
             AddTheLineUnbrokenLink("G6.2", "6on97G5zkRY");
+            AddMrUnderhillLink(Title + " - Two Players", "vhNz23-wrqc");
+            AddMrUnderhillLink("Return to " + Title + " - Two Players", "LzX_wTItaGg");
 
             AddEncounterSet(EncounterSet.TheRuinsOfBelegost);
 

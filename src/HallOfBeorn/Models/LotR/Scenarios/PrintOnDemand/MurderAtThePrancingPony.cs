@@ -20,6 +20,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             Votes = 14;
 
             AddTheLineUnbrokenLink("G7", "xuK6zLmZoTc");
+            AddThematicNightmareLink("https://darklingdoor.wordpress.com/2018/01/16/murder-at-the-prancing-pony/", Title);
 
             AddEncounterSet(EncounterSet.MurderAtThePrancingPony);
             AddEncounterSet(EncounterSet.Investigation);

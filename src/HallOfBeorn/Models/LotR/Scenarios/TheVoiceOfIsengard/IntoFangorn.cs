@@ -14,6 +14,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheVoiceOfIsengard
             Votes = 35;
 
             AddTheLineUnbrokenLink("36", "AGrntMwPbcQ");
+            AddWanderingTookVideoLink("Secret Twitch: " + Title, "7zG9sVYWEks");
+            AddLotRDeckTechLink("Argalad Shoots at Trees", "3SgbYiq4uy4");
+            AddThematicNightmareLink("https://darklingdoor.wordpress.com/2018/03/14/nightmare-into-fangorn/");
 
             AddEncounterSet(EncounterSet.AncientForest);
             AddEncounterSet(EncounterSet.IntoFangorn);

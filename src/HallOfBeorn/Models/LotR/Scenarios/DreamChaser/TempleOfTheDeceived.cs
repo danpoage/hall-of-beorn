@@ -18,6 +18,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DreamChaser
             DifficultyRating = 4.1f;
             Votes = 15;
 
+            AddMrUnderhillLink(Title + " Nightmare Mode - Two Player", "lVljr0k__Es");
+
             AddEncounterSet(EncounterSet.TempleOfTheDeceived);
             AddEncounterSet(EncounterSet.RuinsOfNumenor);
             AddEncounterSet(EncounterSet.DrownedDead);

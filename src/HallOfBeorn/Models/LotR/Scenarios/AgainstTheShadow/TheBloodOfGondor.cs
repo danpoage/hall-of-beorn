@@ -14,6 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
             Votes = 43;
 
             AddTheLineUnbrokenLink("32", "n8DEB_iuF6M");
+            AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/11/21/nightmare-blood-of-gondor/");
 
             AddEncounterSet(EncounterSet.RavagingOrcs);
             AddEncounterSet(EncounterSet.TheBloodOfGondor);

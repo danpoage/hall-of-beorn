@@ -18,6 +18,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DreamChaser
             DifficultyRating = 4.9f;
             Votes = 9;
 
+            AddLotRDeckTechLink("The Boffin, or, Here and Gone Again", "od6N0xTp0nw");
+
             AddEncounterSet(EncounterSet.TheDrownedRuins);
             AddEncounterSet(EncounterSet.DrownedDead);
             AddEncounterSet(EncounterSet.TheStormcallerElite);

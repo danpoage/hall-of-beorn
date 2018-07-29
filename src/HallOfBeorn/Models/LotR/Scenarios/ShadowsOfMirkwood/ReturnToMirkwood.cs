@@ -19,6 +19,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             AddTheLineUnbrokenLink("N9", "Sva47T3B52A");
             AddTheLineUnbrokenLink("N9.2", "IHJExMbmgAo");
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2013/09/22/beorns-path-part-13-return-to-mirkwood/");
+            AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/01/08/return-to-mirkwood/");
+            AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/01/12/return-to-mirkwood-play-report/", "Play Report: " + Title);
 
             AddEncounterSet(EncounterSet.ReturnToMirkwood);
             AddEncounterSet(EncounterSet.ReturnToMirkwoodNightmare);

@@ -13,8 +13,10 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             DifficultyRating = 6.3f;
             Votes = 47;
 
+            AddProgressionSeriesLink("16", "8arK4L_1tAI");
             AddTheLineUnbrokenLink("15", "QdiQXRDXz74");
             AddTheLineUnbrokenLink("N15", "Fjo3Y6QrlQg");
+            AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/04/17/the-watcher-in-the-water/");
 
             AddEncounterSet(EncounterSet.MistyMountains);
             AddEncounterSet(EncounterSet.TheWatcherInTheWater);

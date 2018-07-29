@@ -14,6 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             Votes = 19;
 
             AddTheLineUnbrokenLink("41", "iwAFduhcaAM");
+            AddMrUnderhillLink(Title + " Nightmare Mode - \"Shoot First\" Deck", "K8cujVld-KE");
 
             AddEncounterSet(EncounterSet.BrokenLands);
             AddEncounterSet(EncounterSet.CelebrimborsSecret);

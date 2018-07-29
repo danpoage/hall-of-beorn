@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
 
             AddTheLineUnbrokenLink("19", "8GS-c0teAOs");
             AddTheLineUnbrokenLink("N19", "9q0suPxxjGg");
+            AddMrUnderhillLink(Title + " Nightmare Mode - Two Players", "97ls-LtzpRM");
 
             AddEncounterSet(EncounterSet.WeMustAwayEreBreakOfDay);
             AddEncounterSet(EncounterSet.WeMustAwayEreBreakOfDayNightmare);

@@ -16,8 +16,10 @@ namespace HallOfBeorn.Models.LotR.Scenarios.KhazadDum
             AddProgressionSeriesLink("11", "H2vbJgdBcdE");
             AddTheLineUnbrokenLink("10", "A0UX9vsSiw0");
             AddTheLineUnbrokenLink("N10", "LFPxWbCV6gA");
+            AddMrUnderhillLink(Title + " Nightmare Mode - Dwarven Miners", "06n4scyR20Q");
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2014/07/16/beorns-path-part-14-into-the-pit/");
             AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2018/02/06/path-less-traveled-into-the-pit/");
+            AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/02/12/into-the-pit/");
 
             AddEncounterSet(EncounterSet.GoblinsOfTheDeep);
             AddEncounterSet(EncounterSet.HazardsOfThePit);

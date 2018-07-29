@@ -18,7 +18,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheSandsOfHarad
             DifficultyRating = 6.9f;
             Votes = 8;
 
-            AddPlayLink(LinkType.Path_Less_Traveled, "https://darklingdoor.wordpress.com/2018/01/01/path-less-traveled-the-long-arm-of-mordor/", "The Long Arm of Mordor");
+            AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2018/01/01/path-less-traveled-the-long-arm-of-mordor/");
 
             AddEncounterSet(EncounterSet.TheLongArmOfMordor);
             AddEncounterSet(EncounterSet.MordorOrcs);

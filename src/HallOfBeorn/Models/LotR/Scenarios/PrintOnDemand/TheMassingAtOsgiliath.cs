@@ -17,6 +17,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             AddProgressionSeriesLink("10", "ggTyUxpfq8o");
             AddTheLineUnbrokenLink("G1", "QiDrBJOv3EE");
             AddTheLineUnbrokenLink("G1.1", "of9GMF__rJ0");
+            AddLotRDeckTechLink("Songs vs Captured Watchtower", "EyHf7WQCTJ4");
+            AddLotRDeckTechLink("Boromir vs the Witch-king", "LYRoJ7K52xg");
+            AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/01/29/the-massing-at-osgiliath/", Title);
 
             AddEncounterSet(EncounterSet.TheMassingAtOsgiliath);
 

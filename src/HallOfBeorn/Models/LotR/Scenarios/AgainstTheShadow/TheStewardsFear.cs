@@ -15,6 +15,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
 
             AddTheLineUnbrokenLink("28", "UTOX8V99QKc");
             AddTheLineUnbrokenLink("N28", "iQKTWarQGBs");
+            AddWanderingTookVideoLink("Twitch Recast: " + Title, "Ug1w2oHsOIY");
+            AddLotRDeckTechLink("Silvan Tracker vs Steward's Fear", "dUxOSPXapTc");
+            AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/09/12/nightmare-the-stewards-fear/");
 
             AddEncounterSet(EncounterSet.Brigands);
             AddEncounterSet(EncounterSet.StreetsOfGondor);

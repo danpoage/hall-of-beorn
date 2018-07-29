@@ -16,8 +16,12 @@ namespace HallOfBeorn.Models.LotR.Scenarios.HeirsOfNumenor
             AddTheLineUnbrokenLink("23", "p2dLH2EnwK4");
             AddTheLineUnbrokenLink("23.5", "1EWPWryuE28");
             AddTheLineUnbrokenLink("N26", "Kw5ehMrnL4w");
+            AddMrUnderhillLink(Title + " Nightmare Mode", "I35rcEDKKsQ");
+            AddMrUnderhillLink("How to Beat " + Title, "sav1QR_x0xw");
+            AddLotRDeckTechLink("Out of the Wild vs Into Ithilien", "DaCTHoWegsI");
             AddTheHallOfBeornBlogLink("https://hallofbeorn.wordpress.com/2014/07/29/deck-out-of-ithilien/", "Deck: Out of Ithilien");
             AddTheHallOfBeornBlogLink("https://hallofbeorn.wordpress.com/2014/11/17/breaking-news-giant-bear-dominates-in-battle-none-surprised/", "Nightmare Into Ithilien - Deck: Beorn the Arrow-eater");
+            AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/08/04/nightmare-into-ithilien/");
 
             AddEncounterSet(EncounterSet.BroodingForest);
             AddEncounterSet(EncounterSet.CreaturesOfTheForest);

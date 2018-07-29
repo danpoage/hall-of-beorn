@@ -13,8 +13,10 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             DifficultyRating = 5.6f;
             Votes = 56;
 
+            AddProgressionSeriesLink("14", "aqFGU0f7XBU");
             AddTheLineUnbrokenLink("13", "iTjMI97tsqA");
             AddTheLineUnbrokenLink("N13", "lkIGd0RNEK0");
+            AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/03/20/the-redhorn-gate/");
 
             AddEncounterSet(EncounterSet.MistyMountains);
             AddEncounterSet(EncounterSet.TheRedhornGate);

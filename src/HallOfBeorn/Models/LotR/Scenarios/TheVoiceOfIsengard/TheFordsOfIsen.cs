@@ -14,6 +14,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheVoiceOfIsengard
             Votes = 41;
 
             AddTheLineUnbrokenLink("34", "CXAnAdODdNw");
+            AddMrUnderhillLink(Title + " Nightmare Mode - Two Players", "6_7refnVFKU");
+            AddLotRDeckTechLink("The Fords of Erkenbrand", "ctD3J4XUmv4");
+            AddThematicNightmareLink("https://darklingdoor.wordpress.com/2018/02/13/nightmare-the-fords-of-isen/");
 
             AddEncounterSet(EncounterSet.DunlandRaiders);
             AddEncounterSet(EncounterSet.DunlandWarriors);

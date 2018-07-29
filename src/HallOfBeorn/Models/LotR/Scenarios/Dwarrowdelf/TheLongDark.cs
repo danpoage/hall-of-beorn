@@ -13,8 +13,10 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             DifficultyRating = 3.7f;
             Votes = 47;
 
+            AddProgressionSeriesLink("17", "DlrNVcUZhnM");
             AddTheLineUnbrokenLink("16", "0mpExRl9oIU");
             AddTheLineUnbrokenLink("N16", "f-zDqgdf6V8");
+            AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/04/23/the-long-dark/");
 
             AddEncounterSet(EncounterSet.DeepsOfMoria);
             AddEncounterSet(EncounterSet.TheLongDark);

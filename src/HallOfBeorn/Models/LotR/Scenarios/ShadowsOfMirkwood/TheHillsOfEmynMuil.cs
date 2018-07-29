@@ -18,6 +18,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             AddTheLineUnbrokenLink("7", "hngSYXX6X94");
             AddTheLineUnbrokenLink("N7", "YBuqRpJ8-ps");
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2013/09/01/beorns-path-part-11-the-hills-of-emyn-muil/");
+            AddThematicNightmareLink("https://darklingdoor.wordpress.com/2016/12/24/the-hills-of-emyn-muil/");
 
             AddEncounterSet(EncounterSet.DolGuldurOrcs);
             AddEncounterSet(EncounterSet.SauronsReach);

@@ -14,6 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             Votes = 30;
 
             AddTheLineUnbrokenLink("46", "RHr1bLYKzec");
+            AddMrUnderhillLink(Title + " - Two Player", "lkLWwrBF56M");
 
             AddEncounterSet(EncounterSet.EriadorWilds);
             AddEncounterSet(EncounterSet.FoulWeather);

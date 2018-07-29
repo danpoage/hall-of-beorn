@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Votes = 17;
 
             AddTheLineUnbrokenLink("C10", "RgnR-N3wRfo");
+            AddMrUnderhillLink(Title + " - Boromir Deck", "REmISg50GvI");
 
             AddEncounterSet(EncounterSet.Gollum);
             AddEncounterSet(EncounterSet.MorgulNazgul);
