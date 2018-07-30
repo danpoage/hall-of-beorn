@@ -89,7 +89,7 @@ If The ~Nameless Fear has 10 or more damage on it, remove all damage from it and
             Cards.Add(new LotRCard()
             {
                 Title = "Search for an Exit",
-                OppositeTitle = "Ghâsh",
+                OppositeTitle = "Ghâsh!",
                 Id = "A1EDC2C0-0F79-45C1-BFF6-B314BEDFBC6B",
                 CardType = CardType.Quest,
                 StageNumber = 2,

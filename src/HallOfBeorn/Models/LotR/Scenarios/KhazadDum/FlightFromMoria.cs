@@ -36,7 +36,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.KhazadDum
             AddQuestCardId("Search-for-an-Exit-Escape-from-Darkness-KD");
             AddQuestCardId("Search-for-an-Exit-Pursued-By-Shadow-FfMN");
             AddQuestCardId("Search-for-an-Exit-Blocked-by-Flame-FfMN");
-            AddQuestCardId("Search-for-an-Exit-Ghâsh-FfMN");
+            AddQuestCardId("Search-for-an-Exit-Ghash-FfMN");
 
             ExcludeFromEasyMode("Great-Cave-troll-KD", 2);
             ExcludeFromEasyMode("Massing-in-the-Deep-KD", 2);
