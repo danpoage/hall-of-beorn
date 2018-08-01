@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
             AddTheLineUnbrokenLink("33", "0zXQhQq6iEY");
             AddMrUnderhillLink(Title + " Nightmare Mode - Two Players", "Ep1MD4NNJgU");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/12/26/nightmare-the-morgul-vale/");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2018/05/07/the-morgul-vale/");
 
             AddEncounterSet(EncounterSet.CreaturesOfTheForest);
             AddEncounterSet(EncounterSet.MordorElite);

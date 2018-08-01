@@ -18,6 +18,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Haradrim
             DifficultyRating = 6.3f;
             Votes = 3;
 
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2018/07/09/race-across-harad/");
+
             AddEncounterSet(EncounterSet.RaceAcrossHarad);
             AddEncounterSet(EncounterSet.MordorOrcs);
             AddEncounterSet(EncounterSet.DesertSands);

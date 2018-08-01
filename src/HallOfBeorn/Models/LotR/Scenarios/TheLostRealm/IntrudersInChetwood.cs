@@ -13,7 +13,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLostRealm
             DifficultyRating = 5.7f;
             Votes = 39;
 
-            AddTheGreyCompanyLink("https://www.youtube.com/watch?v=zWUH7-lySIY", Title, "https://i.ytimg.com/vi/zWUH7-lySIY/hqdefault.jpg");
+            AddTheGreyCompanyLink(Title, "zWUH7-lySIY");
             AddTheLineUnbrokenLink("43", "gPakjtY76Ic");
             AddMrUnderhillLink(Title + " Nightmare Mode", "_IazU4YQ6yU");
             AddMrUnderhillLink(Title + ", First Turn Win", "W5Eb4eo_LBc");

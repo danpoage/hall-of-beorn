@@ -19,6 +19,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             AddLotRDeckTechLink("Deck Tech: Strider vs Foundations of Stone", "vRLLytmArvo");
             AddLotRDeckTechLink("Strider vs Foundations of Stone", "VCvcXIk7qAY");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/05/07/foundations-of-stone/");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/03/04/foundations-of-stone/");
 
             AddEncounterSet(EncounterSet.FoundationsOfStone);
             AddEncounterSet(EncounterSet.FoundationsOfStoneNightmare);

@@ -21,6 +21,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Votes = 12;
 
             AddCardboardOfTheRingsLink("https://www.youtube.com/watch?v=Wm-AMpC0Rb0", "Chad's Campaign: The Siege of Gondor", "https://i.ytimg.com/vi/Wm-AMpC0Rb0/hqdefault.jpg");
+            AddTheRoadLink(18, "https://theroadlotr.wordpress.com/the-siege-of-gondor/");
 
             AddEncounterSet(EncounterSet.TheSiegeOfGondor);
 

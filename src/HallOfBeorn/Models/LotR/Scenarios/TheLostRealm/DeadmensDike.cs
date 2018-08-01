@@ -13,7 +13,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLostRealm
             DifficultyRating = 7.7f;
             Votes = 30;
 
-            AddTheGreyCompanyLink("https://www.youtube.com/watch?v=Dhr_KfxWrQk", "Deadmen's Dike", "https://i.ytimg.com/vi/Dhr_KfxWrQk/hqdefault.jpg");
+            AddTheGreyCompanyLink(Title, "Dhr_KfxWrQk");
             AddTheLineUnbrokenLink("45", "rEIshIfPXPY");
             AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2017/09/05/path-less-traveled-deadmens-dike/");
 

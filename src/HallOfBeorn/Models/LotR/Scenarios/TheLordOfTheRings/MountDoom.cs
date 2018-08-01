@@ -19,6 +19,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             DifficultyRating = 9.3f;
             Votes = 4;
 
+            AddTheRoadLink(22, "https://theroadlotr.wordpress.com/mount-doom/");
+
             AddEncounterSet(EncounterSet.MountDoom);
             AddEncounterSet(EncounterSet.DeepShadows);
             AddEncounterSet(EncounterSet.MountainOfFireEpicMultiplayer);

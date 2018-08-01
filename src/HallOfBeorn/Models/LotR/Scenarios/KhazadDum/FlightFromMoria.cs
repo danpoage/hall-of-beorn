@@ -19,6 +19,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.KhazadDum
             AddBeornsPathLink(Title, "kG4CjacD1XE");
             AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2018/03/20/path-less-traveled-flight-from-moria/");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/03/06/flight-from-moria/");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/02/16/flight-from-moria/");
 
             AddEncounterSet(EncounterSet.DeepsOfMoria);
             AddEncounterSet(EncounterSet.FlightFromMoria);

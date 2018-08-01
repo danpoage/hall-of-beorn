@@ -14,6 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             Votes = 17;
 
             AddTheLineUnbrokenLink("42", "L_shKNxxSnw");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2018/07/23/the-antlered-crown/");
 
             AddEncounterSet(EncounterSet.DunlandRaiders);
             AddEncounterSet(EncounterSet.DunlandWarriors);

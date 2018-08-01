@@ -19,6 +19,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             DifficultyRating = 6.7f;
             Votes = 3;
 
+            AddTheRoadLink(20, "https://theroadlotr.wordpress.com/the-tower-of-cirith-ungol/");
+
             AddEncounterSet(EncounterSet.TheTowerOfCirithUngol);
             AddEncounterSet(EncounterSet.OrcsOfMordor);
             AddEncounterSet(EncounterSet.DeepShadows);

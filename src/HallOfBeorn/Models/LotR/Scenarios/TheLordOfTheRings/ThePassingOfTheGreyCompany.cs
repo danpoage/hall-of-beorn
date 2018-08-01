@@ -20,6 +20,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             DifficultyRating = 6.5f;
             Votes = 15;
 
+            AddTheRoadLink(17, "https://theroadlotr.wordpress.com/the-passing-of-the-grey-company/");
+
             AddEncounterSet(EncounterSet.ThePassingOfTheGreyCompany);
 
             AddQuestCardId("The-Forbidden-Door-TFotW");

@@ -13,7 +13,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             DifficultyRating = 6.1f;
             Votes = 27;
 
-            AddTheGreyCompanyLink("https://www.youtube.com/watch?v=OyuHE-Jvn38", Title, "https://i.ytimg.com/vi/OyuHE-Jvn38/hqdefault.jpg");
+            AddTheGreyCompanyLink(Title, "OyuHE-Jvn38");
             AddTheLineUnbrokenLink("49", "3UyYN7lZJLI");
 
             AddEncounterSet(EncounterSet.CursedDead);

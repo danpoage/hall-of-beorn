@@ -17,6 +17,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             AddTheLineUnbrokenLink("C6", "1TAupYL66kg");
             AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2018/06/26/path-less-traveled-the-breaking-of-the-fellowship/");
             AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2018/06/20/nightmare-review-breaking-of-the-fellowship-nightmare-campaign-part-6/", "Nightmare " + Title);
+            AddTheRoadLink(9, "https://theroadlotr.wordpress.com/breaking-of-the-fellowship/");
 
             AddEncounterSet(EncounterSet.BreakingOfTheFellowship);
             AddEncounterSet(EncounterSet.BreakingOfTheFellowshipNightmare);

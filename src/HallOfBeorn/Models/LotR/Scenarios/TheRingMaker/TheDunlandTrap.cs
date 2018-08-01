@@ -13,13 +13,14 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             DifficultyRating = 7.5f;
             Votes = 42;
 
-            AddTheGreyCompanyLink("https://www.youtube.com/watch?v=HtZcKbz47cY", Title, "https://i.ytimg.com/vi/HtZcKbz47cY/hqdefault.jpg");
+            AddTheGreyCompanyLink(Title, "HtZcKbz47cY");
             AddTheLineUnbrokenLink("37 part 1", "OcL2vnzviIo");
             AddTheLineUnbrokenLink("37 parts 2 and 3", "-cpEbISzWdM");
             AddMrUnderhillLink(Title + " - Two Players", "ozV8st3pqfY");
             AddMrUnderhillLink(Title + " Nightmare Mode - Two Players", "fo2vWh0Ku8w");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2018/03/27/nightmare-the-dunland-trap/");
             AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2016/10/08/warriors-of-the-west-the-dunland-trap/", Title);
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2018/07/03/the-dunland-trap/");
 
             AddEncounterSet(EncounterSet.DunlandWarriors);
             AddEncounterSet(EncounterSet.TheDunlandTrap);

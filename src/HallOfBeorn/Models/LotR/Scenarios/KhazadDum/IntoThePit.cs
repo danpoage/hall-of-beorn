@@ -20,6 +20,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.KhazadDum
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2014/07/16/beorns-path-part-14-into-the-pit/");
             AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2018/02/06/path-less-traveled-into-the-pit/");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/02/12/into-the-pit/");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/02/07/into-the-pit/");
 
             AddEncounterSet(EncounterSet.GoblinsOfTheDeep);
             AddEncounterSet(EncounterSet.HazardsOfThePit);

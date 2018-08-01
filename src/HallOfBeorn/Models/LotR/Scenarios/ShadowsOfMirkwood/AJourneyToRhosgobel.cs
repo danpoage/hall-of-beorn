@@ -20,6 +20,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2013/07/28/beorns-path-part-10-a-journey-to-rhosgobel/");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2016/12/18/a-journey-to-rhosgobel/");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/02/10/play-report-a-journey-to-rhosgobel/", "Play Report: " + Title);
+            AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/01/31/a-journey-to-rhosgobel/");
 
             AddEncounterSet(EncounterSet.AJourneyToRhosgobel);
             AddEncounterSet(EncounterSet.AJourneyToRhosgobelNightmare);

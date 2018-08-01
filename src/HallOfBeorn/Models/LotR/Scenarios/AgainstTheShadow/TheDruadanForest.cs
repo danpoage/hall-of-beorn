@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
             AddTheLineUnbrokenLink("29", "jXdNOWjqnZ4");
             AddTheLineUnbrokenLink("N29", "J89b4tYpnSo");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/09/27/nightmare-the-druadan-forest/");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/04/25/the-druadan-forest/");
 
             AddEncounterSet(EncounterSet.BroodingForest);
             AddEncounterSet(EncounterSet.TheDruadanForest);

@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
 
             AddTheLineUnbrokenLink("C12", "Nx4E2Q6VR18");
             AddTheLineUnbrokenLink("C12.2", "ONfMXXC66Ys");
+            AddTheRoadLink(16, "https://theroadlotr.wordpress.com/shelobs-lair/");
 
             AddEncounterSet(EncounterSet.Gollum);
             AddEncounterSet(EncounterSet.MorgulNazgul);

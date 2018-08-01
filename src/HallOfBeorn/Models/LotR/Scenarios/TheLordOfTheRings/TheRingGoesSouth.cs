@@ -18,6 +18,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2018/05/30/path-less-traveled-the-ring-goes-south-standalone/", "The Ring Goes South (Standalone)");
             AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2018/06/05/path-less-traveled-the-ring-goes-south-campaign/", "The Ring Goes South (Campaign)");
             AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2016/12/30/nightmare-review-the-ring-goes-southnightmare-campaign-part-4/", "Nightmare " + Title);
+            AddTheRoadLink(7, "https://theroadlotr.wordpress.com/the-ring-goes-south/");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2018/06/24/the-ring-goes-south/");
 
             AddEncounterSet(EncounterSet.TheRingGoesSouth);
             AddEncounterSet(EncounterSet.TheRingGoesSouthNightmare);

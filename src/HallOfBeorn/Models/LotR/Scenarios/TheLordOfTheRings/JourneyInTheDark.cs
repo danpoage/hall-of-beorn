@@ -17,6 +17,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             AddTheLineUnbrokenLink("C5", "SrQe0OW8lgA");
             AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2018/06/12/path-less-traveled-journey-in-the-dark/");
             AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2017/08/29/nightmare-review-journey-in-the-darknightmare-campaign-part-5/", "Nightmare " + Title);
+            AddTheRoadLink(8, "https://theroadlotr.wordpress.com/journey-in-the-dark/");
 
             AddEncounterSet(EncounterSet.JourneyInTheDark);
             AddEncounterSet(EncounterSet.JourneyInTheDarkNightmare);

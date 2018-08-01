@@ -19,6 +19,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.HeirsOfNumenor
             AddTheLineUnbrokenLink("N27.1", "VArGJjckDBQ");
             AddMrUnderhillLink("How to Beat " + Title, "QmhQ-s0mYbk");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/08/15/nightmare-the-siege-of-cair-andros/");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/03/24/the-siege-of-cair-andros/");
 
             AddEncounterSet(EncounterSet.MordorElite);
             AddEncounterSet(EncounterSet.RavagingOrcs);

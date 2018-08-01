@@ -22,6 +22,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.HeirsOfNumenor
             AddTheHallOfBeornBlogLink("https://hallofbeorn.wordpress.com/2014/07/29/deck-out-of-ithilien/", "Deck: Out of Ithilien");
             AddTheHallOfBeornBlogLink("https://hallofbeorn.wordpress.com/2014/11/17/breaking-news-giant-bear-dominates-in-battle-none-surprised/", "Nightmare Into Ithilien - Deck: Beorn the Arrow-eater");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/08/04/nightmare-into-ithilien/");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/03/18/into-ithilien/");
 
             AddEncounterSet(EncounterSet.BroodingForest);
             AddEncounterSet(EncounterSet.CreaturesOfTheForest);

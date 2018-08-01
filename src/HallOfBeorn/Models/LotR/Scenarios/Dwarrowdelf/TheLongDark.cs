@@ -17,6 +17,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             AddTheLineUnbrokenLink("16", "0mpExRl9oIU");
             AddTheLineUnbrokenLink("N16", "f-zDqgdf6V8");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/04/23/the-long-dark/");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/02/28/the-long-dark/");
 
             AddEncounterSet(EncounterSet.DeepsOfMoria);
             AddEncounterSet(EncounterSet.TheLongDark);

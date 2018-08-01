@@ -20,6 +20,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.KhazadDum
             AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2018/02/19/path-less-traveled-the-seventh-level/");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/02/27/the-seventh-level/");
             AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2016/10/17/nightmare-review-the-seventh-level/", "Nightmare " + Title);
+            AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/02/10/the-seventh-level/");
 
             AddEncounterSet(EncounterSet.GoblinsOfTheDeep);
             AddEncounterSet(EncounterSet.PlunderingGoblins);

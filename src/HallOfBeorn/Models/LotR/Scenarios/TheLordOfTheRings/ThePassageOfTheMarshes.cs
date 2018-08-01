@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
 
             AddTheLineUnbrokenLink("C10", "RgnR-N3wRfo");
             AddMrUnderhillLink(Title + " - Boromir Deck", "REmISg50GvI");
+            AddTheRoadLink(14, "https://theroadlotr.wordpress.com/the-passage-of-the-marshes/");
 
             AddEncounterSet(EncounterSet.Gollum);
             AddEncounterSet(EncounterSet.MorgulNazgul);

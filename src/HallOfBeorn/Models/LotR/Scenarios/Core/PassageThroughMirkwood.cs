@@ -20,7 +20,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
             AddLotRDeckTechLink("Just One Core vs Too Many Spiders", "Pyk_PrY58g8");
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2013/01/25/beorns-path-part-2-playtesting/");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2016/10/28/passage-through-mirkwood/");
-            
+            AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/01/20/ptm/");
+
             AddEncounterSet(EncounterSet.DolGuldurOrcs);
             AddEncounterSet(EncounterSet.PassageThroughMirkwood);
             AddEncounterSet(EncounterSet.PassageThroughMirkwoodNightmare);

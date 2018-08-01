@@ -24,6 +24,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
             AddLotRDeckTechLink("Argalad Along the Anduin", "bICTQO1uVUo");
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2013/02/04/beorns-path-part-4-journey-along-the-anduin/");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2016/11/06/journey-along-the-anduin/");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/01/20/journey-along-the-anduin/");
 
             AddEncounterSet(EncounterSet.DolGuldurOrcs);
             AddEncounterSet(EncounterSet.JourneyAlongTheAnduin);

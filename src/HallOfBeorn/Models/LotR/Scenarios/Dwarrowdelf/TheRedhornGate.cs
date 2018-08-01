@@ -17,6 +17,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             AddTheLineUnbrokenLink("13", "iTjMI97tsqA");
             AddTheLineUnbrokenLink("N13", "lkIGd0RNEK0");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/03/20/the-redhorn-gate/");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/02/18/the-redhorn-gate/");
 
             AddEncounterSet(EncounterSet.MistyMountains);
             AddEncounterSet(EncounterSet.TheRedhornGate);

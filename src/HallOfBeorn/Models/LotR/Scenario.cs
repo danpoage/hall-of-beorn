@@ -40,9 +40,9 @@ namespace HallOfBeorn.Models.LotR
         private const string TheWhiteTowerLogo = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Partners/The-White-Tower.png";
         private const string TheHallOfBeornBlogLogo = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Partners/Hall-of-Beorn-Blog.jpg";
         private const string TheRoadLogo = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Partners/The-Road.jpg";
+        private const string VisionOfThePalantirLogo = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Partners/Vision-of-the-Palantir.jpg";
         private const string WarriorsOfTheWestLogo = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Partners/Warriors-of-the-West.jpg";
 
-        
         private void AddPlayLink(LinkType type, string url, string title)
         {
             AddPlayLink(type, url, title, string.Empty, null, null);
@@ -98,9 +98,9 @@ namespace HallOfBeorn.Models.LotR
             AddYouTubeLink(LinkType.The_Progression_Series, string.Format("{0}: {1}", episode, Title), videoId);
         }
 
-        protected void AddTheGreyCompanyLink(string url, string title, string thumbnailUrl)
+        protected void AddTheGreyCompanyLink(string title, string videoId)
         {
-            AddPlayLink(LinkType.The_Grey_Company, url, title, thumbnailUrl);
+            AddYouTubeLink(LinkType.The_Grey_Company, title, videoId);
         }
 
         protected void AddTheHallOfBeornBlogLink(string url, string title)
@@ -131,6 +131,11 @@ namespace HallOfBeorn.Models.LotR
         protected void AddTheWhiteTowerLink(string url, string title)
         {
             AddPlayLink(LinkType.The_White_Tower, url, title, TheWhiteTowerLogo);
+        }
+
+        protected void AddVisionOfThePalantirLink(string url)
+        {
+            AddPlayLink(LinkType.Vision_of_the_Palantir, url, Title, VisionOfThePalantirLogo);
         }
 
         protected void AddWanderingTookVideoLink(string title, string videoId)

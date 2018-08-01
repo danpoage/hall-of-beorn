@@ -19,6 +19,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             DifficultyRating = 8.8f;
             Votes = 4;
 
+            AddTheRoadLink(21, "https://theroadlotr.wordpress.com/the-black-gate-opens/");
+
             AddEncounterSet(EncounterSet.TheBlackGateOpens);
             AddEncounterSet(EncounterSet.OrcsOfMordor);
             AddEncounterSet(EncounterSet.MountainOfFireEpicMultiplayer);

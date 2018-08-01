@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
 
             AddTheLineUnbrokenLink("C11", "_WXE3XE8PYE");
             AddTheLineUnbrokenLink("C11.2", "Uwh4BPZlt_w");
+            AddTheRoadLink(15, "https://theroadlotr.wordpress.com/journey-to-the-cross-roads/");
 
             AddEncounterSet(EncounterSet.MenOfHarad);
             AddEncounterSet(EncounterSet.JourneyToTheCrossRoads);

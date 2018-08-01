@@ -19,6 +19,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.HeirsOfNumenor
             AddMrUnderhillLink(Title + " Nightmare Mode", "uYOtgef1ZCs");
             AddMrUnderhillLink("How to Beat " + Title, "KnjoCxYAzjA");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/07/10/nightmare-peril-in-pelargir/");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/03/13/peril-in-pelargir/");
 
             AddEncounterSet(EncounterSet.Brigands);
             AddEncounterSet(EncounterSet.PerilInPelargir);

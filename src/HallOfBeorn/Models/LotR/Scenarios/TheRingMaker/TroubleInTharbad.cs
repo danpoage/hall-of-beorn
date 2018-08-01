@@ -18,6 +18,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2018/05/08/nightmare-trouble-in-tharbad/");
             AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2016/10/03/warriors-of-the-west-trouble-in-tharbad/", Title);
             AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2016/10/20/nightmare-review-trouble-in-tharbad/", "Nightmare " + Title);
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2018/06/05/trouble-in-tharbad/");
 
             AddEncounterSet(EncounterSet.MistyMountainOrcs);
             AddEncounterSet(EncounterSet.TroubleInTharbad);

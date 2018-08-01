@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheVoiceOfIsengard
 
             AddTheLineUnbrokenLink("35", "dzcwT6noaZs");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2018/03/06/nightmare-to-catch-an-orc/");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2018/05/15/to-catch-an-orc/");
 
             AddEncounterSet(EncounterSet.BrokenLands);
             AddEncounterSet(EncounterSet.MistyMountainOrcs);

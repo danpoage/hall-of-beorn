@@ -17,6 +17,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheVoiceOfIsengard
             AddWanderingTookVideoLink("Secret Twitch: " + Title, "7zG9sVYWEks");
             AddLotRDeckTechLink("Argalad Shoots at Trees", "3SgbYiq4uy4");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2018/03/14/nightmare-into-fangorn/");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2018/06/11/into-fangorn/");
 
             AddEncounterSet(EncounterSet.AncientForest);
             AddEncounterSet(EncounterSet.IntoFangorn);

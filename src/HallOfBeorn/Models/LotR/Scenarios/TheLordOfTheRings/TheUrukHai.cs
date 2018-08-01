@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
 
             AddTheLineUnbrokenLink("C7", "wlUBoRQxUgo");
             AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2018/07/10/nightmare-review-the-uruk-hai-nightmare-campaign-part-7/", "Nightmare " + Title);
+            AddTheRoadLink(11, "https://theroadlotr.wordpress.com/the-uruk-hai/");
 
             AddEncounterSet(EncounterSet.OrcsOfTheWhiteHand);
             AddEncounterSet(EncounterSet.SnagaOrcs);

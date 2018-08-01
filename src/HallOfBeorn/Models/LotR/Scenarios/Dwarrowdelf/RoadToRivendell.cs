@@ -17,6 +17,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             AddTheLineUnbrokenLink("14", "s_6mBCPPuuw");
             AddTheLineUnbrokenLink("N14", "gUGhtPi8X7I");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/04/02/road-to-rivendell/");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/02/24/road-to-rivendell/");
 
             AddEncounterSet(EncounterSet.MistyMountains);
             AddEncounterSet(EncounterSet.PlunderingGoblins);

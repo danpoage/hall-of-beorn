@@ -17,6 +17,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
             AddTheLineUnbrokenLink("15", "QdiQXRDXz74");
             AddTheLineUnbrokenLink("N15", "Fjo3Y6QrlQg");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/04/17/the-watcher-in-the-water/");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/03/02/the-watcher-in-the-water/");
 
             AddEncounterSet(EncounterSet.MistyMountains);
             AddEncounterSet(EncounterSet.TheWatcherInTheWater);

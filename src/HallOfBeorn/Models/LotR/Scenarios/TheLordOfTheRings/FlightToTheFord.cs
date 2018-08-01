@@ -14,11 +14,12 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             DifficultyRating = 5.6f;
             Votes = 38;
 
-            AddTheGreyCompanyLink("https://www.youtube.com/watch?v=-IU2yhbqRDk", "Flight to the Ford", "https://i.ytimg.com/vi/-IU2yhbqRDk/hqdefault.jpg");
+            AddTheGreyCompanyLink(Title, "-IU2yhbqRDk");
             AddTheLineUnbrokenLink("C3", "CE8Iyzk4P4Y");
             AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2017/10/24/path-less-traveled-flight-to-the-ford/");
             AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2016/11/28/nightmare-review-flight-to-the-fordnightmare-campaign-part-3/", "Nightmare " + Title);
             AddTheRoadLink(5, "https://theroadlotr.wordpress.com/flight-to-the-ford/");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2018/06/13/flight-to-the-ford/");
 
             AddEncounterSet(EncounterSet.FlightToTheFord);
             AddEncounterSet(EncounterSet.FlightToTheFordNightmare);

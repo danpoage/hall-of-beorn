@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             Votes = 30;
 
             AddTheLineUnbrokenLink("C8", "4iWunMbDBVc");
+            AddTheRoadLink(12, "https://theroadlotr.wordpress.com/helms-deep/");
 
             AddEncounterSet(EncounterSet.HelmsDeep);
             AddEncounterSet(EncounterSet.OrcsOfTheWhiteHand);

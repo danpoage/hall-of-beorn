@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
 
             AddTheLineUnbrokenLink("41", "iwAFduhcaAM");
             AddMrUnderhillLink(Title + " Nightmare Mode - \"Shoot First\" Deck", "K8cujVld-KE");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2018/06/30/celebrimbors-secret/");
 
             AddEncounterSet(EncounterSet.BrokenLands);
             AddEncounterSet(EncounterSet.CelebrimborsSecret);

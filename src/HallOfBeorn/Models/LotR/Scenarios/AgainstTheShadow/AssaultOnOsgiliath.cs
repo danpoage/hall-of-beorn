@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
 
             AddTheLineUnbrokenLink("31", "t3l__Hzubmc");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/10/31/nightmare-assault-on-osgiliath/");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/04/20/assault-on-osgiliath/");
 
             AddEncounterSet(EncounterSet.AssaultOnOsgiliath);
             AddEncounterSet(EncounterSet.AssaultOnOsgiliathNightmare);

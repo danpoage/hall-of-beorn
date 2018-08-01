@@ -20,6 +20,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             DifficultyRating = 7.9f;
             Votes = 11;
 
+            AddTheRoadLink(19, "https://theroadlotr.wordpress.com/the-battle-of-the-pelennor-fields/");
+
             AddEncounterSet(EncounterSet.TheBattleOfThePelennorFields);
 
             AddQuestCardId("The-Garrison-of-Gondor-TFotW");
