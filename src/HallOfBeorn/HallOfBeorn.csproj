@@ -332,6 +332,7 @@
     <Compile Include="Models\LotR\Products\AdventurePack\RoamAcrossRhovanionProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\TheWitheredHeathProduct.cs" />
     <Compile Include="Models\LotR\Products\Deluxe\TheWildsOfRhovanionProduct.cs" />
+    <Compile Include="Models\LotR\Products\PrintOnDemand\TheWizardsQuestProduct.cs" />
     <Compile Include="Models\LotR\Products\Starter\TwoPlayerLimitedEditionStarterProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\AcrossTheEttenmoorsNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\EscapeFromMountGramNightmareProduct.cs" />
@@ -376,6 +377,7 @@
     <Compile Include="Models\LotR\Sets\DreamChaser\TheThingInTheDepthsNightmare.cs" />
     <Compile Include="Models\LotR\Sets\EredMithrin\RoamAcrossRhovanionSet.cs" />
     <Compile Include="Models\LotR\Sets\EredMithrin\TheWitheredHeathSet.cs" />
+    <Compile Include="Models\LotR\Sets\PrintOnDemand\TheWizardsQuestSet.cs" />
     <Compile Include="Models\LotR\Sets\Starter\TwoPlayerLimitedEditionStarterSet.cs" />
     <Compile Include="Models\LotR\Sets\PrintOnDemand\AttackOnDolGuldurSet.cs" />
     <Compile Include="Models\LotR\Sets\TheGreyHavens\RaidOnTheGreyHavensNightmare.cs" />

@@ -76,6 +76,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             Card("Glorfindel-Core");
             Card("Glorfindel-FoS");
             Card("Glorfindel-FotS");
+            Card("Glorfindel-TWQ");
         }
     }
 }

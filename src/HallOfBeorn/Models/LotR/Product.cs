@@ -153,6 +153,7 @@ namespace HallOfBeorn.Models.LotR
         public static Product MurderAtThePrancingPony = new Products.PrintOnDemand.MurderAtThePrancingPonyProduct();
         public static Product TheSiegeOfAnnuminas = new Products.PrintOnDemand.TheSiegeOfAnnuminasProduct();
         public static Product AssaultOnDolGuldur = new Products.PrintOnDemand.AttackOnDolGuldurProduct();
+        public static Product TheWizardsQuest = new Products.PrintOnDemand.TheWizardsQuestProduct();
 
         //Nightmare Decks
         public static Product PassageThroughMirkwoodNightmare = new Products.Nightmare.PassageThroughMirkwoodNightmareProduct();
