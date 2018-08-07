@@ -274,6 +274,7 @@ namespace HallOfBeorn.Models.LotR
             Add(TheWildsOfRhovanion);
             Add(TheWitheredHeath);
             Add(RoamAcrossRhovanion);
+            Add(FireInTheNight);
 
             Add(TheHobbitOverHillAndUnderHill);
             Add(TheHobbitOnTheDoorstep);
@@ -449,6 +450,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheWildsOfRhovanion = new Sets.TheWildsOfRhovanion.TheWildsOfRhovanionSet();
         public static CardSet TheWitheredHeath = new Sets.EredMithrin.TheWitheredHeathSet();
         public static CardSet RoamAcrossRhovanion = new Sets.EredMithrin.RoamAcrossRhovanionSet();
+        public static CardSet FireInTheNight = new Sets.EredMithrin.FireInTheNightSet();
 
         public static CardSet TheHobbitOverHillAndUnderHill = new Sets.TheHobbit.OverHillandUnderHillSet();
         public static CardSet TheHobbitOnTheDoorstep = new Sets.TheHobbit.OntheDoorstepSet();
