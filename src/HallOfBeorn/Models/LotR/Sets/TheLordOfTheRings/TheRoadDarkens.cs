@@ -7,6 +7,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
 {
     public class TheRoadDarkens : CardSet
     {
+        private const string setSouth = "The Ring Goes South";
+
         protected override void Initialize()
         {
             Name = "The Road Darkens";
@@ -418,29 +420,13 @@ Response: After attached hero exhausts to defend an attack, discard the top card
                 Quantity = 1,
                 Artist = Artist.Mark_Bulahao
             });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Watcher in the Water",
-                Id = "88F28954-B4E4-4C79-AF22-578B474BF750",
-                
-                IsUnique = true,
-                CardType = CardType.Enemy,
-                EngagementCost = 50,
-                Threat = 5,
-                Attack = 6,
-                Defense = 5,
-                HitPoints = 12,
-                Traits = new List<string> { "Creature." },
-                Keywords = new List<string> { "Indestructible." },
-                Text =
-@"Immune to player card effects. Cannot leave the staging area but is considered to be engaged with the first player.
-
-Forced: After placing the 6th damage here, the first player takes control of the Ring-bearer, exhausted with 1 damage on it.",
-                EncounterSet = "The Ring Goes South",
-                CardNumber = 24,
-                Quantity = 1,
-                Artist = Artist.Florian_Devos
-            });
+            addEnemy("Watcher in the Water", setSouth, 50, 5, 6, 5, 12)
+                .WithUnique()
+                .WithTraits("Creature.")
+                .WithKeywords("Indestructible.")
+                .WithText("Immune to player card effects. Cannot leave the staging area but is considered to be engaged with each player.\r\nForced: After placing the 6th damage here, the first player takes control of the Ring-bearer, exhausted with 1 damage on it.")
+                .WithTemplate("<p class='main-text'>{keyword:Indestructible.} Immune to player card effects.</p><p class='main-text'>Cannot leave the staging area but is considered to be engaged with each player.</p><p class='main-text'><b>Forced:</b> After placing the 6th damage here, the first player takes control of the {trait:Ring-bearer.@Ring-bearer}, exhausted with 1 damage on it.</p>")
+                .WithInfo(24, 1, Artist.Florian_Devos);
             Cards.Add(new LotRCard()
             {
                 Title = "Great Warg Chief",

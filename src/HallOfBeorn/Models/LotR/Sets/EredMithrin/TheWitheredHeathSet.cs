@@ -39,7 +39,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
             addAlly("Beorning Skin-changer", 2, Sphere.Tactics, false, 1, 1, 1, 3)
                 .WithTraits("Beorning.")
                 .WithText("Combat Action: Choose a Beorning ally with printed cost 3 or more in your hand of discard pile. Discard ~Beorning Skin-changer to put that ally into play.")
-                .WithFlavor("...sometimes he is a huge black bear, sometimes he is a great strong black-haired man with huge arms and a great bear.\"\r\n-Gandalf, The Hobbit")
+                .WithFlavor("\"...sometimes he is a huge black bear, sometimes he is a great strong black-haired man with huge arms and a great beard.\"\r\n-Gandalf, The Hobbit")
                 .WithInfo(4, 3, Artist.Unknown);
             addEvent("Beorn's Rage", 1, Sphere.Tactics)
                 .WithText("Response: After a Beorning character is declared as an attacker or defender against an enemy, that enemy gets -2 Attack and -2 Defense until the end of the phase.")
