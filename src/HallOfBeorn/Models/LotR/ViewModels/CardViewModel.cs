@@ -405,6 +405,19 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             }
         }
 
+        public byte EncounterSetNumber
+        {
+            get
+            {
+                return _card.EncounterSetNumber.HasValue ? _card.EncounterSetNumber.Value : (byte)0;
+            }
+        }
+
+        public byte? EncounterCost
+        {
+            get { return _card.EncounterCost; }
+        }
+
         public string EncounterSetLink
         {
             get
@@ -942,6 +955,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         public bool HasEncounterSet
         {
             get { return !string.IsNullOrEmpty(EncounterSet); }
+        }
+
+        public bool HasEncounterSetNumber
+        {
+            get { return _card.EncounterSetNumber.HasValue; }
         }
 
         public bool HasCardSubtype

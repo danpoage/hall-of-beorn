@@ -19,13 +19,19 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
 
             IsSpoiler = true;
 
+            addTreachery("Weighed Down", string.Empty)
+                .WithSetNumberAndCost(28, 1)
+                .WithText("When Revealed: Exhaust each character with an attachment. If no character is exhausted this way, Weighed Down gains surge.")
+                .WithShadow("Shadow: Discard an attachment from the defending character.")
+                .WithInfo(34, 2, Artist.Unknown);
+
             addHero("Glorfindel", 12, Sphere.Lore, 3, 3, 1, 5)
                 .WithTraits("Noble.", "Noldor.", "Warrior.")
                 .WithText("Action: Pay 1 resource from Glorfindel's pool to heal 1 damage on any character. (Limit once per round.)")
                 .WithFlavor("\"You saw him for a moment as he is upon the other side: one of the mighty of the firstborn.\"\r\n-Gandalf, The Fellowship of the Ring")
                 .WithTemplate("<p class='main-text'><b>Action:</b> Pay 1 resource from {self}'s pool to heal 1 damage on any character. (Limit once per round.)</p>")
                 .WithYear(2018)
-                .WithInfo(11, 1, Artist.Audrey_Hotte);
+                .WithInfo(211, 1, Artist.Audrey_Hotte);
         }
     }
 }

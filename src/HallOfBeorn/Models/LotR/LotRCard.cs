@@ -85,6 +85,9 @@ namespace HallOfBeorn.Models.LotR
         public byte? ResourceCost { get; set; }
         public byte? EngagementCost { get; set; }
 
+        public byte? EncounterCost { get; set; }
+        public byte? EncounterSetNumber { get; set; }
+
         public byte? Threat { get; set; }
         public byte? Willpower { get; set; }
         public byte? Attack { get; set; }
@@ -601,6 +604,13 @@ namespace HallOfBeorn.Models.LotR
         public LotRCard WithSiegePoints(byte value)
         {
             this.SiegePoints = value;
+            return this;
+        }
+
+        public LotRCard WithSetNumberAndCost(byte? setNumber, byte? encounterCost)
+        {
+            this.EncounterSetNumber = setNumber;
+            this.EncounterCost = encounterCost;
             return this;
         }
 

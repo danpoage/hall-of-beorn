@@ -140,9 +140,18 @@ namespace HallOfBeorn.Controllers
 
         public ActionResult Search(SearchViewModel model)
         {
-            var result = new ContentResult();
+            var result = new JsonResult { JsonRequestBehavior = JsonRequestBehavior.AllowGet };
 
-            result.Content = DelimitedText(searchService.Search(model));
+            var cards = new List<SimpleCard>();
+
+            foreach (var score in searchService.Search(model))
+            {
+                cards.Add(new SimpleCard(score.Card));
+            }
+
+            result.Data = cards.Count > 0 ?
+                (object)cards
+                : "Search returned no results";
 
             return result;
         }
