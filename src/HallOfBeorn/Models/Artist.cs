@@ -617,6 +617,9 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Rankin_Bass);
             all.Add(Artist.Torbjorn_Kallstrom);
 
+            //Ered Mithin Cycle
+            all.Add(Artist.Alex_Boca);
+
             //Arkham Horrom Core
             //all.Add(Artist.Vincent_Dutrait);
             //all.Add(Artist.Jacob_Murray);
@@ -647,6 +650,7 @@ namespace HallOfBeorn.Models
         public static Artist Albert_Bierstadt = new Artist { Name = "Albert Bierstadt", URL = "http://www.albertbierstadt.org" };
         public static Artist Aledin = new Artist { Name = "Aledin", URL = "http://aledin.deviantart.com" };
         public static Artist Aleksi_Briclot = new Artist { Name = "Aleksi Briclot", URL = "http://aleksi--briclot.deviantart.com" };
+        public static Artist Alex_Boca = new Artist { Name = "Alex Boca", URL = "https://www.artstation.com/alexboca" };
         public static Artist Alex_McVey = new Artist { Name = "Alex McVey", URL = "http://www.alexmcvey.com" };
         public static Artist Alex_Ruiz = new Artist { Name = "Alex Ruiz", URL = "http://www.conceptmonster.net" };
         public static Artist Alexander_Gustafson = new Artist { Name = "Alexander Gustafson", URL = "http://www.illustratedpixels.com" };

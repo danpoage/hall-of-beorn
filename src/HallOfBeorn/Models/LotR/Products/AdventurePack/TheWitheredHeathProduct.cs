@@ -11,6 +11,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
             : base("The Withered Heath", "MEC66", ImageType.Jpg, new DateTime(2018, 7, 1))
         {
             AddCardSet(CardSet.TheWitheredHeath);
+            AddScenario(new Scenarios.EredMithrin.TheWitheredHeathScenario());
         }
     }
 }
