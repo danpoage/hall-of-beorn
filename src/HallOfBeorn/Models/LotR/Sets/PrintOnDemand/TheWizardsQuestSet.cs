@@ -89,7 +89,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithText("When Revealed: Each player deals X damage to a character he controls, where X is more than the stage number of the main quest.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the defending character has an attachment).")
                 .WithInfo(26, 1, Artist.Owen_William_Weber);
-            addLocation("Pinr Slopes", string.Empty, 2, 4)
+            addLocation("Pine Slopes", string.Empty, 2, 4)
                 .WithSetNumberAndCost(18, 0)
                 .WithTraits("Mountain.", "Forest.")
                 .WithText("When Revealed: Each Pine Slopes +2 Threat until the end of the phase.\r\nTravel: Raise your threat by 1 for each Pine Slopes in the staging area.")
