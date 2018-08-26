@@ -69,17 +69,17 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithText("Rider of Mirkwood's engagement cost is considered to be 0.\r\nThe number of damage tokens on Rider of Mirkwood cannot exceed the number of progress tokens on this stage.\r\nPlayers cannot defeat this stage while Rider of Mirkwood is in play. If the players defeat this stage, they win the game.")
                 .WithInfo(9, 1, Artist.Ben_Zweifel);
             
+            addLocation("Rhosgobel", setName, 1, 1)
+                .WithUnique()
+                .WithTraits("Forest.", "Village.")
+                .WithText("Immune to player card effects.\r\nResponse: After the players travel to Rhosgobel, add 1 resource to each hero's pool and each player draws 1 card.")
+                .WithInfo(10, 1, Artist.Unknown);
             addEnemy("Rider of Mirkwood", setName, 50, Card.VALUE_X, 6, 3, 10)
                 .WithUnique()
                 .WithTraits("Nazgûl.")
                 .WithText("Immune to player card effects.\r\nX is 1 more than the stage number of the main quest.\r\nCannot leave the staging area unless the players are at stage 3B.")
                 .WithVictoryPoints(6)
-                .WithInfo(10, 1, Artist.John_Howe);
-            addLocation("Rhosgobel", setName, 1, 1)
-                .WithUnique()
-                .WithTraits("Forest.", "Village.")
-                .WithText("Immune to player card effects.\r\nResponse: After the players travel to Rhosgobel, add 1 resource to each hero's pool and each player draws 1 card.")
-                .WithInfo(11, 1, Artist.Unknown);
+                .WithInfo(11, 1, Artist.John_Howe);
 
             addEnemy("Nazgûl of Dol Guldur", string.Empty, 36, 3, 6, 3, 9)
                 .WithSetNumberAndCost(15, 3)
