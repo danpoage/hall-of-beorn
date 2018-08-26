@@ -207,6 +207,7 @@
     <Compile Include="Models\Arkham\Products\CurseOfTheRougarou.cs" />
     <Compile Include="Models\ILink.cs" />
     <Compile Include="Models\INamed.cs" />
+    <Compile Include="Models\LotR\CardCycle.cs" />
     <Compile Include="Models\LotR\Character.cs" />
     <Compile Include="Models\LotR\CharacterGroup.cs" />
     <Compile Include="Models\LotR\CharacterPlace.cs" />
