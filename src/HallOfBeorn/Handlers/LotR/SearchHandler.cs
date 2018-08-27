@@ -90,6 +90,9 @@ namespace HallOfBeorn.Handlers.LotR
                         var memberCard = _cardRepository.FindBySlug(memberSlug);
                         if (memberCard != null)
                         {
+                            if (charactersByUrl.ContainsKey(memberCharacter.Url) || relatedCharactersByUrl.ContainsKey(memberCharacter.Url))
+                                continue;
+
                             relatedCharactersByUrl[memberCharacter.Url].AddCardLink(memberCard);
                         }
                     }
@@ -169,7 +172,13 @@ namespace HallOfBeorn.Handlers.LotR
                     }
 
                     model.Characters.AddRange(charactersByUrl.Values.OrderBy(ch => ch.Title));
-                    model.Characters.AddRange(relatedCharactersByUrl.Values.OrderBy(ch => ch.Title));
+                    foreach (var relatedPair in relatedCharactersByUrl.OrderBy(pair => pair.Value.Title))
+                    {
+                        if (charactersByUrl.ContainsKey(relatedPair.Key))
+                            continue;
+
+                        model.Characters.Add(relatedCharactersByUrl[relatedPair.Key]);
+                    }
                 }
             }
         }
