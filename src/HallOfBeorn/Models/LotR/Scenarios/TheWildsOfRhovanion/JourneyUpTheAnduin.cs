@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Scenarios.TheWildsOfRhovanion
 {
-    public class JourneyUpTheAnduin : Scenario
+    public class JourneyUpTheAnduin : Scenarios.EredMithrin.EredMithrinScenario
     {
         public JourneyUpTheAnduin()
         {
@@ -35,9 +35,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheWildsOfRhovanion
             ExcludeFromEasyMode("Pack-of-Wargs-TWoR", 1);
             ExcludeFromEasyMode("Hills-of-Wilderland-TWoR", 1);
             ExcludeFromEasyMode("Lonely-Lands-TWoR", 1);
-            ExcludeFromEasyMode("Ruined-Supplies-TWoR", 1);
-            ExcludeFromEasyMode("Lost-in-the-Wild-TWoR", 1);
-            ExcludeFromEasyMode("Weighed-Down-TWoR", 1);
+
+            ExcludeLostInTheWildernessFromEasyMode();
 
             //Journey Along the Anduin (Core)
             ExcludeFromEasyMode("Massing-at-Night-Core", 1);

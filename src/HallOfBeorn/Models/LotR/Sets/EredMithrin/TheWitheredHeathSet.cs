@@ -77,11 +77,13 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTraits("Troll.")
                 .WithText("Cannot have player card attachments.\r\nForced: After Snow-troll attacks and destroys a character, return it to the staging area.")
                 .WithShadow("Shadow: Attacking enemy makes an additional attack against you after this one.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(13, 2, Artist.Alex_Boca);
             addEnemy("Dragon Hatchling", setName, 20, 2, 2, 0, 4)
                 .WithTraits("Dragon.")
                 .WithText("Dragon Hatchling gets +1 Attack and +1 Defense for each ~Dragon ~Sign in the victory display.")
                 .WithShadow("Shadow: Until the end of the phase, attacking enemy gets +1 Attack and +1 Defense for each ~Dragon ~Sign in the victory display.")
+                .WithEasyModeQuantity(2)
                 .WithInfo(14, 3, Artist.Mariusz_Gandzel);
             addLocation("Mountain Pass", setName, 2, 4)
                 .WithTraits("Mountain.")
@@ -99,6 +101,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithKeywords("Deep.")
                 .WithText("~Cave Entrance gets +1 Threat for each ~Dragon ~Sign in the victory display.\r\nTravel: Raise each player’s threat by 1.")
                 .WithFlavor("That, of course, is the dangerous part about caves: you don’t know how far they go back, sometimes, or where a passage behind may lead to, or what is waiting for you inside.\r\n-The Hobbit")
+                .WithEasyModeQuantity(2)
                 .WithInfo(17, 3, Artist.Kamila_Tzutenberg);
             addLocation("Creature Den", setName, 4, 4)
                 .WithTraits("Mountain.", "Dark.")
@@ -109,17 +112,20 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithKeywords("Deep.")
                 .WithText("X is the number of locations in the staging area.\r\nTravel: Assign X damage among characters in play.")
                 .WithFlavor("The roar of the great falls drew nearer.\r\n-The Fellowship of the Ring")
+                .WithEasyModeQuantity(1)
                 .WithInfo(19, 2, Artist.Leanna_Crossan);
             addTreachery("Heavy Snow", setName)
                 .WithTraits("Weather.")
                 .WithKeywords("Doomed 1.")
                 .WithText("When Revealed: Exhaust a character. Until the end of the round, characters cannot be readied by player card effect.")
                 .WithShadow("Shadow: Exhaust a character you control.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(20, 2, Artist.Jose_Vega);
             addTreachery("Deadly Cold", setName)
                 .WithTraits("Weather.")
                 .WithText("When Revealed: For each ready character a player controls, he must choose: either exhaust that character, or deal 1 damage to it.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if defending character is damaged).") 
+                .WithEasyModeQuantity(2)
                 .WithInfo(21, 3, Artist.Davis_Engel);
             addQuest("Searching for Dragon Sign", setName, 1, 'A', 6)
                 .WithFlavor("You have journeyed to the Withered Heath in search of a giant Dragon. There you discover tracks that lead you to the cold heights of the Grey Mountains.")

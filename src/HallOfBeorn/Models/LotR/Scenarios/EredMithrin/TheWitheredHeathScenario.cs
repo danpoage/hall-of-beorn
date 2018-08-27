@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
 {
-    public class TheWitheredHeathScenario : Scenario
+    public class TheWitheredHeathScenario : EredMithrinScenario
     {
         private const string name = "The Withered Heath";
 
@@ -31,6 +31,16 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
             AddQuestCardId("The-Cold-Drake-Attacks-TWH");
             AddQuestCardId("Hunting-the-Beast-TWH");
             AddQuestCardId("A-Cornered-Dragon-TWH");
+
+            ExcludeFromEasyMode("Snow-troll-TWH", 1);
+            ExcludeFromEasyMode("Dragon-Hatchling-TWH", 1);
+            ExcludeFromEasyMode("Cave-Entrance-TWH", 1);
+            ExcludeFromEasyMode("High-Falls-TWH", 1);
+            ExcludeFromEasyMode("Heavy-Snow-TWH", 1);
+            ExcludeFromEasyMode("Deadly-Cold-TWH", 1);
+
+            ExcludeWildCreaturesFromEasyMode();
+            ExcludeLostInTheWildernessFromEasyMode();
         }
     }
 }
