@@ -11,6 +11,7 @@ using HallOfBeorn.Models.LotR.Search;
 
 namespace HallOfBeorn.Models.LotR.ViewModels
 {
+    /*
     public class FilterViewModel
     {
         [Display(Name="Search")]
@@ -22,6 +23,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         [Display(Name = "Set")]
         public string CardSet { get; set; }
     }
+    */
 
     public class SearchViewModel
     {
@@ -482,7 +484,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         [Display(Name = "Set")]
         public string CardSet { get; set; }
-
+        
         [Display(Name="Scenario")]
         public string Scenario { get; set; }
 
@@ -572,12 +574,17 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public bool IsCardView()
         {
-            return (!View.HasValue || (View != Models.View.Product));
+            return (!View.HasValue || (View != Models.View.Product && View != Models.View.Character));
         }
 
         public bool IsProductView()
         {
             return (View.HasValue && View == Models.View.Product);
+        }
+
+        public bool IsCharacterView()
+        {
+            return (View.HasValue && View == Models.View.Character);
         }
 
         [Display(Name = "Artist")]
@@ -670,6 +677,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         public List<CardViewModel> Cards { get; set; }
 
         public List<ProductViewModel> Products { get; set; }
+
+        public List<CharacterViewModel> Characters { get; set; }
 
         //[Display(Name = "Custom")]
         //public bool Custom { get; set; }
@@ -1075,15 +1084,19 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             var count = 0;
 
-            if (!View.HasValue || View != Models.View.Product)
+            if (!View.HasValue || (View != Models.View.Product && View != Models.View.Character))
             {
                 count = Cards != null ? Cards.Count : 0;
             }
-            else if (View.HasValue && View == Models.View.Product)
+            if (View.HasValue && View == Models.View.Product)
             {
                 count = Products != null ? Products.Count : 0;
             }
-            
+            if (View.HasValue && View == Models.View.Character)
+            {
+                count = Characters != null ? Characters.Count : 0;
+            }
+
             switch (count)
             {
                 case 0:

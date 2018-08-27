@@ -16,7 +16,9 @@ namespace HallOfBeorn.Handlers.LotR
 {
     public class SearchHandler
     {
-        public SearchHandler(ISearchService searchService,
+        public SearchHandler(ICardRepository cardRepository,
+            ICharacterRepository characterRepository,
+            ISearchService searchService,
             IScenarioService scenarioService,
             IStatService statService,
             ICategoryService<PlayerCategory> playerCategoryService,
@@ -24,6 +26,8 @@ namespace HallOfBeorn.Handlers.LotR
             ICategoryService<QuestCategory> questCategoryService,
             IRingsDbService ringsDbService)
         {
+            _cardRepository = cardRepository;
+            _characterRepository = characterRepository;
             _searchService = searchService;
             _scenarioService = scenarioService;
             _statService = statService;
@@ -33,6 +37,8 @@ namespace HallOfBeorn.Handlers.LotR
             _ringsDbService = ringsDbService;
         }
 
+        private readonly ICardRepository _cardRepository;
+        private readonly ICharacterRepository _characterRepository;
         private readonly ISearchService _searchService;
         private readonly IScenarioService _scenarioService;
         private readonly IStatService _statService;
@@ -40,11 +46,12 @@ namespace HallOfBeorn.Handlers.LotR
         private readonly ICategoryService<EncounterCategory> _encounterCategoryService;
         private readonly ICategoryService<QuestCategory> _questCategoryService;
         private readonly IRingsDbService _ringsDbService;
-
+        
         private void InitializeSearch(SearchViewModel model)
         {
             model.Cards = new List<CardViewModel>();
             model.Products = new List<ProductViewModel>();
+            model.Characters = new List<CharacterViewModel>();
 
             SearchViewModel.Keywords = _statService.Keywords().GetSelectListItems();
             SearchViewModel.Traits = _statService.Traits().GetSelectListItems();
@@ -68,6 +75,28 @@ namespace HallOfBeorn.Handlers.LotR
             SearchViewModel.QuestCategories = _questCategoryService.CategoryNames().GetSelectListItems();
         }
 
+        private void AddRelatedCharacters(IEnumerable<Link> links, Dictionary<string, CharacterViewModel> charactersByUrl, Dictionary<string, CharacterViewModel> relatedCharactersByUrl)
+        {
+            foreach (var member in links)
+            {
+                var memberTitle = member.Title.Contains("(") ? (member.Title.Split('('))[0].Trim() : member.Title;
+                var memberCharacter = _characterRepository.Lookup(memberTitle.NormalizeCaseSensitiveString().ToUrlSafeString());
+                if (memberCharacter != null && !charactersByUrl.ContainsKey(memberCharacter.Url) && !relatedCharactersByUrl.ContainsKey(memberCharacter.Url))
+                {
+                    relatedCharactersByUrl.Add(memberCharacter.Url, new CharacterViewModel(memberCharacter));
+
+                    foreach (var memberSlug in memberCharacter.Cards)
+                    {
+                        var memberCard = _cardRepository.FindBySlug(memberSlug);
+                        if (memberCard != null)
+                        {
+                            relatedCharactersByUrl[memberCharacter.Url].AddCardLink(memberCard);
+                        }
+                    }
+                }
+            }
+        }
+
         public void HandleSearch(SearchViewModel model)
         {
             InitializeSearch(model);
@@ -85,27 +114,63 @@ namespace HallOfBeorn.Handlers.LotR
                 model.Cards.Add(viewModel);
             }
 
-            if (model.View.HasValue && model.View == Models.View.Product)
+            if (model.View.HasValue)
             {
-                var productsByCode = new Dictionary<string, ProductViewModel>();
-
-                Func<string, byte> getPopularity = (slug) => {
-                    return _ringsDbService.GetPopularity(slug);
-                };
-
-                var key = string.Empty;
-                foreach (var cardViewModel in model.Cards)
+                if (model.View == Models.View.Product)
                 {
-                    key = cardViewModel.Card.CardSet.Product.Code;
-                    if (!productsByCode.ContainsKey(key))
+                    var productsByCode = new Dictionary<string, ProductViewModel>();
+
+                    Func<string, byte> getPopularity = (slug) => {
+                        return _ringsDbService.GetPopularity(slug);
+                    };
+
+                    var key = string.Empty;
+                    foreach (var cardViewModel in model.Cards)
                     {
-                        productsByCode[key] = new ProductViewModel(cardViewModel.Card.CardSet.Product, getPopularity);
+                        key = cardViewModel.Card.CardSet.Product.Code;
+                        if (!productsByCode.ContainsKey(key))
+                        {
+                            productsByCode[key] = new ProductViewModel(cardViewModel.Card.CardSet.Product, getPopularity);
+                        }
+
+                        productsByCode[key].AddCard(cardViewModel);
                     }
 
-                    productsByCode[key].AddCard(cardViewModel);
+                    model.Products.AddRange(productsByCode.Values.OrderBy(prod => prod.Code));
                 }
+                if (model.View == Models.View.Character)
+                {
+                    var charactersByUrl = new Dictionary<string, CharacterViewModel>();
+                    var relatedCharactersByUrl = new Dictionary<string, CharacterViewModel>();
 
-                model.Products.AddRange(productsByCode.Values.OrderBy(x => x.Code));
+                    foreach (var cardViewModel in model.Cards)
+                    {
+                        var character = _characterRepository.Lookup(cardViewModel.Title.NormalizeCaseSensitiveString().ToUrlSafeString());
+                        if (character != null)
+                        {
+                            if (!charactersByUrl.ContainsKey(character.Url))
+                            {
+                                charactersByUrl.Add(character.Url, new CharacterViewModel(character));
+                            }
+                            charactersByUrl[character.Url].AddCardLink(cardViewModel.Card);
+
+                            AddRelatedCharacters(character.RelatedCharacters(), charactersByUrl, relatedCharactersByUrl);
+
+                            foreach (var group in character.Groups)
+                            {
+                                var groupTitle = group.Title.Contains("(") ? (group.Title.Split('('))[0].Trim() : group.Title;
+                                var groupCharacter = _characterRepository.Lookup(groupTitle.NormalizeCaseSensitiveString().ToUrlSafeString());
+                                if (groupCharacter != null)
+                                {
+                                    AddRelatedCharacters(groupCharacter.RelatedCharacters(), charactersByUrl, relatedCharactersByUrl);
+                                }
+                            }
+                        }
+                    }
+
+                    model.Characters.AddRange(charactersByUrl.Values.OrderBy(ch => ch.Title));
+                    model.Characters.AddRange(relatedCharactersByUrl.Values.OrderBy(ch => ch.Title));
+                }
             }
         }
 

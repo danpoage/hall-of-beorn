@@ -397,7 +397,41 @@
             </div>
     }
 }
-
+@if (@Model.IsCharacterView())
+{
+    foreach (var character in @Model.Characters)
+    {
+      <div style="border-radius: 4px; border-color: gray; border-width: 1px; border-style: solid; padding: 6px; margin: 6px 2px 6px 2px;">
+        <div>
+          <a href="@string.Format("/LotR/Characters/{0}", @character.Slug)" target="_blank"><span style="font-size: 1.75em;font-weight:bold;">@character.Title</span></a>
+          @if (!string.IsNullOrEmpty(@character.Race)) {
+            <span style="margin-left:12px;font-size: 1em;">@character.Race</span>
+          }
+        </div>
+        <div style="display: block;">
+          <div style="display: inline-block; vertical-align: top;">
+            <img src="@character.ImageUrl" style="width: 300px; margin: 4px;" class="card-image"/>
+          </div>
+          <div style="display: inline-block; vertical-align: top; margin: 4px 6px;">
+            <div style="display: inline-block; overflow: auto; height: 300px; min-width: 300px; max-width: 600px;">
+              <div style="margin-top: -14px;">@Html.Raw(@character.Bio)</div>
+              <div><a href="@character.BioSourceUrl" target="_blank" title="Source">Source</a></div>
+            </div>
+          </div>
+        </div>
+        <div>
+            <a style="color:gray;font-size:10px;" href="@character.ArtistUrl" target="_blank" title="Artist Site: @character.ArtistName">Illus. @character.ArtistName</a>
+        </div>
+        <div>
+          @foreach (var cardLink in @character.CardLinks) {
+            <span style="margin: 4px;display:inline-block;">
+                <a href="@cardLink.Url" target="_blank" title="@cardLink.Title">@Html.Raw(@cardLink.Text)</a>
+            </span>
+          }
+        </div>
+      </div>
+    }
+}
 @if (@Model.IsCardView())
 {
     foreach (var card in @Model.Cards)

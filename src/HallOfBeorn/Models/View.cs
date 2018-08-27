@@ -12,6 +12,6 @@ namespace HallOfBeorn.Models
         Card_Image = 2,
         Card_Text = 3,
         Product = 11,
-        //Character = 21
+        Character = 21
     }
 }

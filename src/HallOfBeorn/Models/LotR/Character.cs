@@ -214,6 +214,22 @@ namespace HallOfBeorn.Models.LotR
 
         public IEnumerable<Link> Family { get { return family; } }
         public IEnumerable<Link> Friends { get { return friends; } }
+        
+        public IEnumerable<Link> RelatedCharacters()
+        {
+            foreach (var leader in Leaders)
+                yield return leader;
+
+            foreach (var member in Members)
+                yield return member;
+
+            foreach (var familyMember in Family)
+                yield return familyMember;
+
+            foreach (var friend in Friends)
+                yield return friend;
+        }
+        
         public IEnumerable<Link> Groups { get { return groups; } }
         public IEnumerable<Link> Items { get { return items; } }
 
