@@ -16,6 +16,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheWildsOfRhovanion
  
             RulesImageCount = 7;
 
+            DifficultyRating = 6.1f;
+            Votes = 1;
+
             AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2018/07/11/turn-by-turn-report-lost-in-mirkwood/", Title);
 
             AddEncounterSet(EncounterSet.DarkWoods);
