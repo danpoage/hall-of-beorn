@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HallOfBeorn.Models.LotR.Characters.Groups
+namespace HallOfBeorn.Models.LotR.Characters
 {
     public class ThorinStonehelmCharacter : Character
     {
@@ -29,7 +29,7 @@ namespace HallOfBeorn.Models.LotR.Characters.Groups
             addItem("Dwarven Shield", "Dwarven-Shield-TSoH");
             addItem("Dwarf Pipe", "Dwarf-Pipe-TMk");
 
-            Card("Thorin-Stonehelm-TPS");
+            Card("Thorin-Stonehelm-TPLES");
         }
     }
 }

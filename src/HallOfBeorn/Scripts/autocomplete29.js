@@ -34,6 +34,7 @@
     "Tom Cotton", "Rosie Cotton", "Captains of the West", "Raise the Shire", "Guthwine", "Friend of Friends", "Orc Disguise",
     "Bard son of Brand", "Redwater Sentry", "North Realm Lookout", "Warrior of Dale", "Long Lake Trader", "Hauberk of Mail", "King of Dale", "Bow of Yew", "Map of Rhovanion", "Necklace of Girion", "Traffic from Dale", "To Arms", "Valour of the North", "Bartering", "The Old Ford", "Fire-drake", "Dragon Hoard", "Woodmen Village", "Haldan",
     "Guardian of Esgaroth", "Squire's Helm", "Woodmen's Clearing", "The Hidden Way", "Beorning Skin-changer", "Beorn's Rage", "Long Lake Fisherman", "Grey Cloak",
+    "Thorin Stonehelm",
           "+set:",
           "-set:",
           "+type:",
