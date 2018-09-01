@@ -87,6 +87,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             Card("Elrond-SaF");
             Card("Elrond-RD");
+            Card("Elrond-TPLES");
         }
     }
 }

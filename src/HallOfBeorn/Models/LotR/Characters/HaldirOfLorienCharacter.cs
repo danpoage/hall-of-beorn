@@ -39,6 +39,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             Card("Haldir-of-Lorien-AJtR");
             Card("Haldir-of-Lorien-TiT");
+            Card("Haldir-of-Lorien-TPLES");
         }
     }
 }

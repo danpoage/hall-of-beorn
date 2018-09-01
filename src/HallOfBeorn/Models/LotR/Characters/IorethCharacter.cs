@@ -23,6 +23,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addGroup("Gondor", "Gondor");
 
             Card("Ioreth-ASoCH");
+            Card("Ioreth-TPLES");
         }
     }
 }

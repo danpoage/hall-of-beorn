@@ -92,6 +92,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             Card("Galadriel-CS");
             Card("Galadriel-RD");
+            Card("Galadriel-TPLES");
         }
     }
 }

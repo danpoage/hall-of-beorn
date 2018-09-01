@@ -33,6 +33,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addGroup("Lórien", "Lorien");
 
             Card("Orophin-CS");
+            Card("Orophin-TPLES");
         }
     }
 }

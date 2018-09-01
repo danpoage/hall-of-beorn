@@ -57,6 +57,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             Card("Arwen-Undomiel-TRG");
             Card("Arwen-Undomiel-RTR");
             Card("Arwen-Undomiel-TDR");
+            Card("Arwen-Undomeil-TPLES");
         }
     }
 }

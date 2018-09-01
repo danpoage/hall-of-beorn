@@ -153,6 +153,8 @@ Láthspell I name you, Ill-news; and ill news is an ill guest they say.
             Card("Gandalf-Core");
             Card("Gandalf-THOHaUH");
             Card("Gandalf-RD");
+            Card("Gandalf-1-TPLES");
+            Card("Gandalf-2-TPLES");
 
             addFriend("Aragorn", "Aragorn");
             addFriend("Bilbo Baggins", "Bilbo-Baggins");

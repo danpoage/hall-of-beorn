@@ -35,24 +35,12 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 Artist = Artist.Tony_Foti
             }.WithTraits("Dúnedain.", " Ranger.")
             .WithKeywords("Sentinel."));
-            Cards.Add(new LotRCard() {
-                Title = "Arwen Undómiel",
-                Id = "51223bd0-ffd1-11df-a976-0801210c9002",
-                CardType = CardType.Ally,
-                Sphere = Sphere.Spirit,
-                Traits = new List<string>() { "Noldor.", " Noble." },
-                Quantity = 3,
-                ResourceCost = 2,
-                IsUnique = true,
-                Attack = 0,
-                Defense = 1,
-                Willpower = 2,
-                HitPoints = 2,
-                Text = "Response: After Arwen Undómiel exhausts, choose a character. That character gains sentinel and gets +1 Defense until the end of the round.",
-                HtmlTemplate = "<p><b>Response:</b> After {self} exhausts, choose a character. That character gains {keyword:Sentinel.@sentinel} and gets +1 {Defense} until the end of the round.</p><p class='flavor-text'>...in whom it was said that the likeness of Lúthien had come on earth again...for she was the Evenstar of her people.<br>&ndash;The Fellowship of the Ring</p>",
-                CardNumber = 58,
-                Artist = Artist.Magali_Villeneuve
-            });
+            addAlly("Arwen Undómiel", 2, Sphere.Spirit, true, 2, 0, 1, 2)
+                .WithTraits("Noldor.", " Noble.")
+                .WithText("Response: After Arwen Undómiel exhausts, choose a character. That character gains sentinel and gets +1 Defense until the end of the round.")
+                .WithFlavor("\"...she was the Evenstar of her people.\"\r\n-The Fellowship of the Ring")
+                .WithTemplate("<p><b>Response:</b> After {self} exhausts, choose a character. That character gains {keyword:Sentinel.@sentinel} and gets +1 {Defense} until the end of the round.</p><p class='flavor-text'>...in whom it was said that the likeness of Lúthien had come on earth again...for she was the Evenstar of her people.<br>&ndash;The Fellowship of the Ring</p>")
+                .WithInfo(58, 3,Artist.Magali_Villeneuve);
             Cards.Add(new LotRCard() {
                 
                 Title = "Disturbed Waters",

@@ -86,6 +86,7 @@ Thy heart shall then rest in the forest no more.
             Card("Legolas-TSoH");
             Card("Legolas-MatPP");
             Card("Legolas-ToS");
+            Card("Legolas-TPLES");
         }
     }
 }

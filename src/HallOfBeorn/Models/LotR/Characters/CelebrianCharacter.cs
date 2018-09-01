@@ -29,6 +29,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addGroup("Lórien", "Lorien");
 
             Card("Celebrian's-Stone-Core");
+            Card("Celebrian's-Stone-TPLES");
         }
     }
 }

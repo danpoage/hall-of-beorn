@@ -65,6 +65,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             Card("Faramir-TLoS");
             Card("Faramir-Core");
             Card("Faramir-TBoG");
+            Card("Faramir-TPLES");
         }
     }
 }

@@ -82,6 +82,7 @@ If players defeat this stage, they win the game.",
                 Quantity = 3,
                 ResourceCost = 1,
                 Text = "Action: Exhaust a Dwarf character to place 2 progress tokens on the active location. (4 progress tokens instead if it is an Underground or Mountain location.)",
+                FlavorText = "\"There is a land where our fathers worked of old...\"\r\nGimli, The Fellowship of the Ring",
                 CardNumber = 12,
                 Artist = Artist.Cristi_Balanescu
             });

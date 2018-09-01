@@ -38,6 +38,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             addGroup("Thorin's Company", "Thorin's-Company");
 
             Card("Kili-THOHaUH");
+            Card("Kili-TPLES");
         }
     }
 }

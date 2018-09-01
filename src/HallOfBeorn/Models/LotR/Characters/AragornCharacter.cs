@@ -104,6 +104,7 @@ namespace HallOfBeorn.Models.LotR.Characters
             Card("Aragorn-TMoF");
             Card("Aragorn-ToF");
             Card("Aragorn-FotBD");
+            Card("Aragorn-TPLES");
 
             addFamily("Arathorn (Father)", string.Empty);
             addFamily("Arwen Undómiel (Wife)", "Arwen-Undomiel");

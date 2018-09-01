@@ -33,6 +33,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             Card("Bofur-TRG");
             Card("Bofur-THOHaUH");
+            Card("Bofur-TPLES");
         }
     }
 }

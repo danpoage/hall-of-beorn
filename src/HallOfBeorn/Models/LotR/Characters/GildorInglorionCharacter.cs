@@ -41,6 +41,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             addGroup("Rivendell", "Rivendell");
 
+            Card("Gildor-Inglorion-TPLES");
             Card("Gildor-Inglorion-THoEM");
             Card("Gildor-Inglorion-TBR");
         }

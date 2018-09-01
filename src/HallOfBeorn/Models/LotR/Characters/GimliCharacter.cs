@@ -67,6 +67,7 @@ His final kill score number was forty-two in that battle, surpassing his friend 
             Card("Gimli-ToS");
             Card("Gimli-TRoB");
             Card("Gimli-TSoH");
+            Card("Gimli-TPLES");
         }
     }
 }

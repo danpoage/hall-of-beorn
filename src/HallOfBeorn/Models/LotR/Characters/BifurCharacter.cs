@@ -45,6 +45,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             Card("Bifur-KD");
             Card("Bifur-THOtD");
+            Card("Bifur-TPLES");
         }
     }
 }

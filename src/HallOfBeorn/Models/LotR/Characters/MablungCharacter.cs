@@ -29,6 +29,7 @@ namespace HallOfBeorn.Models.LotR.Characters
 
             Card("Mablung-NiE");
             Card("Mablung-TLoS");
+            Card("Mablung-TPLES");
         }
     }
 }
