@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR
 {
-    public abstract class CardSet : INamed
+    public abstract class CardSet : ICardSet<Product, LotRCard>
     {
         protected CardSet()
         {
@@ -174,6 +174,8 @@ namespace HallOfBeorn.Models.LotR
             get { return !string.IsNullOrEmpty(publicSlug) ? publicSlug : Abbreviation.ToLower(); }
             protected set { publicSlug = value; }
         }
+
+        public string Slug { get { return PublicSlug; } }
 
         public string Cycle { get; protected set; }
         public int Number { get; protected set; }

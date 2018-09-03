@@ -8,8 +8,7 @@
 }
 
 @section scripts {
-<script type="text/javascript" src="~/Scripts/cardSearch.js" defer></script>
-@* <script type="text/javascript" src="~/Scripts/storage.js" defer></script> *@
+<script type="text/javascript" src="~/Scripts/cardSearch1.js" defer></script>
 <script type="text/javascript" src="~/Scripts/autocomplete29.js" defer></script>
 <script type="text/javascript">
     window.addEventListener('DOMContentLoaded', function() {
@@ -26,7 +25,7 @@
 
 @*<h2>Search</h2>*@
 
-@using (Html.BeginForm("Search", "Cards", FormMethod.Post))
+@using (Html.BeginForm("Search", "LotR", FormMethod.Post))
 {
     <div class="form-group">
         <div style="margin-bottom:10px;">

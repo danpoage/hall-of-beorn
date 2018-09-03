@@ -9,7 +9,7 @@ namespace HallOfBeorn.Services.LotR.RingsDb
 {
     public class RingsDbService : IRingsDbService
     {
-        public RingsDbService(ICardRepository cardRepository)
+        public RingsDbService(LotRCardRepository cardRepository)
         {
             foreach (var card in cardRepository.Cards())
             {

@@ -16,7 +16,7 @@ namespace HallOfBeorn.Handlers.LotR
 {
     public class SearchHandler
     {
-        public SearchHandler(ICardRepository cardRepository,
+        public SearchHandler(LotRCardRepository cardRepository,
             ICharacterRepository characterRepository,
             ISearchService searchService,
             IScenarioService scenarioService,
@@ -37,7 +37,7 @@ namespace HallOfBeorn.Handlers.LotR
             _ringsDbService = ringsDbService;
         }
 
-        private readonly ICardRepository _cardRepository;
+        private readonly LotRCardRepository _cardRepository;
         private readonly ICharacterRepository _characterRepository;
         private readonly ISearchService _searchService;
         private readonly IScenarioService _scenarioService;

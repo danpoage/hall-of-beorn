@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models
 {
-    public abstract class Card
+    public abstract class Card : ICard
     {
         protected Card()
         {

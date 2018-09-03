@@ -7,22 +7,25 @@ using HallOfBeorn.Models.LotR.ProductGroups;
 
 namespace HallOfBeorn.Models.LotR
 {
-    public class ProductGroup
+    public class ProductGroup : IProductGroup<Product, CardSet, LotRCard>
     {
         protected ProductGroup(string name)
         {
             Name = name;
-            ChildProducts = new List<Product>();
         }
 
         protected void AddProduct(Product product)
         {
-            ChildProducts.Add(product);
+            childProducts.Add(product);
         }
 
+        private readonly List<Product> childProducts = new List<Product>();
+
         public string Name { get; private set; }
-        public Product MainProduct { get; set; }
-        public List<Product> ChildProducts { get; private set; }
+        public string Abbreviation { get { return Name; } }
+
+        public Product MainProduct { get; protected set; }
+        public IEnumerable<Product> ChildProducts { get { return childProducts; } }
 
         #region Static Members
         public static ProductGroup ShadowsOfMirkwood = new ShadowsOfMirkwoodProductGroup();

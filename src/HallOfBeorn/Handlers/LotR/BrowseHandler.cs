@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.ViewModels;
+using HallOfBeorn.Services;
 using HallOfBeorn.Services.LotR;
 using HallOfBeorn.Services.LotR.Categories;
 using HallOfBeorn.Services.LotR.RingsDb;
@@ -12,7 +14,7 @@ namespace HallOfBeorn.Handlers.LotR
 {
     public class BrowseHandler
     {
-        public BrowseHandler(IProductRepository productRepository,
+        public BrowseHandler(ProductRepository productRepository,
             ICategoryService<PlayerCategory> playerCategoryService,
             ICategoryService<EncounterCategory> encounterCategoryService,
             ICategoryService<QuestCategory> questCategoryService,
@@ -25,7 +27,7 @@ namespace HallOfBeorn.Handlers.LotR
             _ringsDbService = ringsDbService;
         }
 
-        private readonly IProductRepository _productRepository;
+        private readonly ProductRepository _productRepository;
         private readonly ICategoryService<PlayerCategory> _playerCategoryService;
         private readonly ICategoryService<EncounterCategory> _encounterCategoryService;
         private readonly ICategoryService<QuestCategory> _questCategoryService;

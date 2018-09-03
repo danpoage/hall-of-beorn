@@ -21,9 +21,13 @@ namespace HallOfBeorn
             routes.IgnoreRoute("Content/themes/base/minified/images/{resource}.png");
             routes.IgnoreRoute("Content/themes/base/minified/{resource}.css");
             routes.IgnoreRoute("Scripts/{resource}.js");
+            routes.IgnoreRoute("Scripts/Digital/{resource}.js");
             routes.IgnoreRoute("Images/Arkham/{resource}.jpg");
             routes.IgnoreRoute("Images/Arkham/{resource}.png");
             routes.IgnoreRoute("Images/Arkham/{resource}.gif");
+            routes.IgnoreRoute("Images/Digital/{resource}.jpg");
+            routes.IgnoreRoute("Images/Digital/{resource}.png");
+            routes.IgnoreRoute("Images/Digital/{resource}.gif");
             routes.IgnoreRoute("Images/{resource}.jpg");
             routes.IgnoreRoute("Images/{resource}.png");
             routes.IgnoreRoute("Images/{resource}.gif");
@@ -46,6 +50,12 @@ namespace HallOfBeorn
                 "ArkhamDefaultRoute",
                 "Arkham/{action}/{id}",
                 new { controller = "Arkham", action = "Search", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                "DigitalDefaultRoute",
+                "Digital/{action}/{id}",
+                new { controller = "Digital", action = "Search", id = UrlParameter.Optional }
             );
 
             routes.MapRoute(

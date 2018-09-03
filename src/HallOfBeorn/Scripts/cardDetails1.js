@@ -1,5 +1,5 @@
 ﻿var slug = window.location.href.split('/').pop(),
-    url = '/Cards/TopDecks?slug=' + slug;
+    url = '/LotR/TopDecks?slug=' + slug;
 
 window.addEventListener('DOMContentLoaded', function () {
     $.ajax({

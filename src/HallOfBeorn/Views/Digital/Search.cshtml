@@ -1,0 +1,96 @@
+﻿@using HallOfBeorn.Models
+@using HallOfBeorn.Models.Digital
+@using HallOfBeorn.Models.Digital.ViewModels
+@model DigitalSearchViewModel
+
+@{
+    ViewBag.Title = "Lord of the Rings: Digital Card Game - Search";
+}
+
+@section scripts {
+<script type="text/javascript" src="~/Scripts/Digital/digitalCardSearch.js" defer></script>
+<script type="text/javascript" src="~/Scripts/Digital/digitalAutocomplete1.js" defer></script>
+<script type="text/javascript">
+    window.addEventListener('DOMContentLoaded', function() {
+        $(function () {
+            $("#Query").autocomplete({
+                source: autocompleteSource,
+                minLength: 2
+            });
+            $("#Query").autocomplete("widget").addClass("autocompleteClass");
+        });
+    });
+</script>    
+}
+
+@using (Html.BeginForm("Search", "LotR", FormMethod.Post))
+{
+    <div class="form-group">
+        <div style="margin-bottom:10px;">
+            <div style="display:inline-block;min-width:300px;margin-right:4px;">@Html.TextBoxFor(x => x.Query, new { style = "text-align:left;width:95%;margin-right:4px;", @autofocus = "autofocus" })</div>
+            <div style="display:inline-block;">
+                <input type="submit" value="Search" class="search-button" />
+                <a id="resetButton" href="#" class="clear-button">Clear</a>
+                <span style="display:inline-block;">
+                <span class="search-label-right">Sort</span>
+                @Html.DropDownListFor(x => x.Sort, DigitalSearchViewModel.Sorts, new { @class = "search-select-medium" })
+                </span>
+                <span style="display:inline-block">
+                <span class="search-label-right">View</span>
+                @Html.DropDownListFor(x => x.View, DigitalSearchViewModel.Views, new { @class = "search-select-medium" })
+                </span>
+            </div>
+        </div>
+    </div>
+}
+<span class="results-count-label">@Model.GetResultsCount()</span>
+@if (@Model.IsCardView) {
+    foreach (var card in @Model.Cards)
+    {
+        <hr style="color:#616161;" />
+    
+        <div style="display:inline-block;margin:6px;border: 0px solid gray;border-radius: 8px;width:80%">
+            <img src="@card.ThumbImagePath" style="display:inline-block;height: 105px" class="card-image"/>
+
+            <div style="display:inline-block;vertical-align:top;">
+                @if (@card.IsUnique)
+                {
+                    <img src="/Images/unique-card-small.png" style="margin-bottom:-3px;margin-right:-4px;"/>
+                }
+                @Html.ActionLink(@card.Title, "Details", new { id = @card.Slug }, new { style = "margin-bottom:2px;font-size:medium;font-weight:bold;display:inline-block;" })
+
+                @if (!string.IsNullOrEmpty(@card.Sphere)) {
+                    <span><img style="width:30px;height:30px;margin:4px 1px 4px 6px;" src='@string.Format("/Images/{0}-med.png", @card.Sphere)' /></span>
+                }
+
+                <div style="display:inline-block;margin-left:4px;min-width:30px;">
+                    @switch (@card.CardType)
+                    {
+                        case DigitalCardType.Hero:
+                            <span style="color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.ThreatCost</span><span style="color:#616161;">)</span>
+                            <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Willpower</span><img style="margin-bottom:-3px;height:16px;" src="/Images/willpower-small.png" /></span>
+                            <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Attack</span><img style="margin-bottom:-3px;height:16px;" src="/Images/attack-small.png" /></span>
+                            <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.HitPoints</span><img style="margin-bottom:-4px;height:16px;" src="/Images/heart-small.png"/></span>
+                            break;
+                        case DigitalCardType.Ally:
+                            <span style="color:#616161;">[</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.ResourceCost</span><span style="color:#616161;">]</span>
+                            <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Willpower</span><img style="margin-bottom:-3px;height:16px;" src="/Images/willpower-small.png" /></span>
+                            <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Attack</span><img style="margin-bottom:-3px;height:16px;" src="/Images/attack-small.png" /></span>
+                            <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.HitPoints</span><img style="margin-bottom:-4px;height:16px;" src="/Images/heart-small.png"/></span>
+                            break;
+                        case DigitalCardType.Attachment:
+                            <span style="width:50px;color:#616161;">[</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.ResourceCost</span><span style="color:#616161;">]</span>
+                            break;
+                        case DigitalCardType.Event:
+                            <span style="width:50px;color:#616161;">[</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.ResourceCost</span><span style="color:#616161;">]</span>
+                            break;
+                    }
+                </div>
+                <div>
+                    @card.Text
+                </div>
+                <div><b>@card.Trait</b></div>
+            </div>
+        </div>
+    }
+}

@@ -26,8 +26,8 @@ namespace HallOfBeorn.Controllers
     {
         public LotRController()
         {
-            var cardRepository = (ICardRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.CardRepository];
-            var productRepository = (IProductRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.ProductRepository];
+            var cardRepository = (LotRCardRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.CardRepository];
+            var productRepository = (ProductRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.ProductRepository];
             var characterRepository = (ICharacterRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.CharacterRepository];
             var searchService = (ISearchService)System.Web.HttpContext.Current.Application[LotRServiceNames.SearchService];
             var playerCategoryService = (ICategoryService<PlayerCategory>)System.Web.HttpContext.Current.Application[LotRServiceNames.PlayerCategoryService];

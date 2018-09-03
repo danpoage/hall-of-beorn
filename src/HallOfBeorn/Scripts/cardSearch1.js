@@ -160,6 +160,7 @@ function checkForProductFilters() {
     }
 
 }
+*/
 
 function clearProductCodes() {
     var codes = getProductCodes();
@@ -167,7 +168,6 @@ function clearProductCodes() {
         $('#' + codes[i]).prop('checked', false);
     }
 }
-*/
 
 $(document).ready(function () {
 
@@ -216,6 +216,7 @@ $(document).ready(function () {
 
     $('#resetButton').click(function () {
         $('#Sort').val('Any');
+        $('#View').val('Any');
         $('#Query').focus().val('');
 
         $('#CardSet').val('Any');
@@ -263,7 +264,7 @@ $(document).ready(function () {
         $('#Popularity').val('Any');
         $('#Errata').val('Any');
 
-        clearProductCodes();
+        //clearProductCodes();
     });
 
     $('#Query').keypress(function (e) {

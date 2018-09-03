@@ -23,7 +23,7 @@ namespace TemplateBuilder
             Console.WriteLine("Hall of Beorn Card Search\r\nHTML TemplateBuilder 0.0.1");
 
             var productRepo = new ProductRepository();
-            var cardRepo = new CardRepository(productRepo);
+            var cardRepo = new LotRCardRepository(productRepo);
 
             statService = new StatService(cardRepo);
 

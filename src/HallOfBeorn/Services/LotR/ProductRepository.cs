@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.Products;
 
 namespace HallOfBeorn.Services.LotR
 {
-    public class ProductRepository : IProductRepository
+    public class ProductRepository : IProductRepository<ProductGroup, Product, CardSet, LotRCard>
     {
         public ProductRepository()
         {
@@ -57,17 +58,17 @@ namespace HallOfBeorn.Services.LotR
             {
                 if (group.MainProduct != null)
                 {
-                    foreach (var set in group.MainProduct.CardSets())
+                    foreach (var cardSet in group.MainProduct.CardSets)
                     {
-                        yield return set;
+                        yield return cardSet;
                     }
                 }
 
                 foreach (var product in group.ChildProducts)
                 {
-                    foreach (var set in product.CardSets())
+                    foreach (var cardSet in product.CardSets)
                     {
-                        yield return set;
+                        yield return cardSet;
                     }
                 }
             }

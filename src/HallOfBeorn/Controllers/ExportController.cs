@@ -20,14 +20,14 @@ namespace HallOfBeorn.Controllers
         public ExportController()
         {
             productRepository = (ProductRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.ProductRepository];
-            cardRepository = (CardRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.CardRepository];
+            cardRepository = (LotRCardRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.CardRepository];
             scenarioService = (IScenarioService)System.Web.HttpContext.Current.Application[LotRServiceNames.ScenarioService];
             searchService = (SearchService)System.Web.HttpContext.Current.Application[LotRServiceNames.SearchService];
         }
 
         private readonly SearchService searchService;
         private readonly ProductRepository productRepository;
-        private readonly CardRepository cardRepository;
+        private readonly LotRCardRepository cardRepository;
         private readonly IScenarioService scenarioService;
 
         private bool IsPlayerCard(LotRCard card)

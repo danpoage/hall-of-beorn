@@ -10,7 +10,7 @@ namespace HallOfBeorn.Services.LotR
     [Obsolete]
     public class OldRelationshipService
     {
-        public OldRelationshipService(CardRepository cardRepository)
+        public OldRelationshipService(LotRCardRepository cardRepository)
         {
             cards = cardRepository.Cards();
         }

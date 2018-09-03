@@ -40,7 +40,7 @@ namespace HallOfBeorn
             var productRepository = new ProductRepository();
             System.Web.HttpContext.Current.Application[LotRServiceNames.ProductRepository] = productRepository;
 
-            var cardRepository = new CardRepository(productRepository);
+            var cardRepository = new LotRCardRepository(productRepository);
             System.Web.HttpContext.Current.Application[LotRServiceNames.CardRepository] = cardRepository;
 
             var characterRepository = new CharacterRepository();

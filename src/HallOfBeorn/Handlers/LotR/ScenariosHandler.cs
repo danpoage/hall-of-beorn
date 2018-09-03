@@ -13,7 +13,7 @@ namespace HallOfBeorn.Handlers.LotR
 {
     public class ScenariosHandler
     {
-        public ScenariosHandler(ICardRepository cardRepository, 
+        public ScenariosHandler(LotRCardRepository cardRepository, 
             ICategoryService<PlayerCategory> playerCategoryService,
             ICategoryService<EncounterCategory> encounterCategoryService,
             ICategoryService<QuestCategory> questCategoryService,
@@ -26,7 +26,7 @@ namespace HallOfBeorn.Handlers.LotR
             _scenarioService = scenarioService;
         }
 
-        private readonly ICardRepository _cardRepository;
+        private readonly LotRCardRepository _cardRepository;
         private readonly ICategoryService<PlayerCategory> _playerCategoryService;
         private readonly ICategoryService<EncounterCategory> _encounterCategoryService;
         private readonly ICategoryService<QuestCategory> _questCategoryService;

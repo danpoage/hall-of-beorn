@@ -18,7 +18,7 @@ namespace ScenarioBuilder
         static void Main(string[] args)
         {
             var productRepo = new ProductRepository();
-            var cardRepo = new CardRepository(productRepo);
+            var cardRepo = new LotRCardRepository(productRepo);
             var playerCategoryService = new PlayerCategoryService(cardRepo);
             var encounterCategoryService = new EncounterCategoryService(cardRepo);
             var questCategoryService = new QuestCategoryService(cardRepo);

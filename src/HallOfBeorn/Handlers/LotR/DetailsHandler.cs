@@ -17,7 +17,7 @@ namespace HallOfBeorn.Handlers.LotR
 {
     public class DetailsHandler
     {
-        public DetailsHandler(ICardRepository cardRepository,
+        public DetailsHandler(LotRCardRepository cardRepository,
             ICharacterRepository characterRepository,
             ICategoryService<PlayerCategory> playerCategoryService,
             ICategoryService<EncounterCategory> encounterCategoryService,
@@ -39,7 +39,7 @@ namespace HallOfBeorn.Handlers.LotR
             _octgnService = octgnService;
         }
 
-        private readonly ICardRepository _cardRepository;
+        private readonly LotRCardRepository _cardRepository;
         private readonly ICharacterRepository _characterRepository;
         private readonly ICategoryService<PlayerCategory> _playerCategoryService;
         private readonly ICategoryService<EncounterCategory> _encounterCategoryService;
@@ -135,7 +135,7 @@ namespace HallOfBeorn.Handlers.LotR
 
             if (IsId(id))
             {
-                card = _cardRepository.Find(id);
+                card = _cardRepository.FindById(id);
                 if (card != null)
                 {
                     redirectUrl = string.Format("/LotR/Details/{0}", card.Slug);

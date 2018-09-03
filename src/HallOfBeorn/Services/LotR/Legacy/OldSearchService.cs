@@ -18,7 +18,7 @@ namespace HallOfBeorn.Services.LotR
     [Obsolete]
     public class OldSearchService
     {
-        public OldSearchService(ProductRepository productRepository, CardRepository cardRepository, ScenarioService scenarioService, OldAdvancedSearchService advancedSearchService, OldSearchSortService sortService, RingsDbService ringsDbService, NoteService noteService, OldCategoryService categoryService)
+        public OldSearchService(ProductRepository productRepository, LotRCardRepository cardRepository, ScenarioService scenarioService, OldAdvancedSearchService advancedSearchService, OldSearchSortService sortService, RingsDbService ringsDbService, NoteService noteService, OldCategoryService categoryService)
         {
             this.productRepository = productRepository;
             this.cardRepository = cardRepository;
@@ -33,7 +33,7 @@ namespace HallOfBeorn.Services.LotR
         }
 
         private readonly ProductRepository productRepository;
-        private readonly CardRepository cardRepository;
+        private readonly LotRCardRepository cardRepository;
         private readonly ScenarioService scenarioService;
         private readonly OldAdvancedSearchService advancedSearchService;
         private readonly OldSearchSortService sortService;

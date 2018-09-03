@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
             double popCardCount = 0;
             double totalPop = 0;
-            foreach (var set in product.CardSets().Where(setHasPopularity))
+            foreach (var set in product.CardSets.Where(setHasPopularity))
             {
                 foreach (var card in set.Cards)
                 {
@@ -124,7 +124,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             get
             {
-                return _product.CardSets().Any(x => x.SetType == SetType.Core || x.SetType == SetType.Deluxe_Expansion || x.SetType == SetType.Saga_Expansion) ?
+                return _product.CardSets.Any(x => x.SetType == SetType.Core || x.SetType == SetType.Deluxe_Expansion || x.SetType == SetType.Saga_Expansion) ?
                     235 : 142;
             }
         }

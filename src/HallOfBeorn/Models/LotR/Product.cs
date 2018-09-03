@@ -7,7 +7,7 @@ using HallOfBeorn.Models.LotR.Products;
 
 namespace HallOfBeorn.Models.LotR
 {
-    public class Product
+    public class Product : IProduct<Product, CardSet, LotRCard>
     {
         protected Product(string name, string code, ImageType imageType, DateTime firstReleased)
         {
@@ -37,6 +37,7 @@ namespace HallOfBeorn.Models.LotR
         }
 
         public string Name { get; private set; }
+        public string Abbreviation { get { return Code; } }
         public string Code { get; private set; }
         public ImageType ImageType { get; private set; }
         public bool IsPremier { get; protected set; }
@@ -45,9 +46,9 @@ namespace HallOfBeorn.Models.LotR
         public string BuyLink { get; protected set; }
         public DateTime FirstReleased { get; protected set; }
 
-        public IEnumerable<CardSet> CardSets()
+        public IEnumerable<CardSet> CardSets
         {
-            return cardSets;
+            get { return cardSets; }
         }
 
         public IEnumerable<Scenario> Scenarios()

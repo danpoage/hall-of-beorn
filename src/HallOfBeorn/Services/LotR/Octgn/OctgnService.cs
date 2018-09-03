@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using HallOfBeorn.Models.LotR;
 
 namespace HallOfBeorn.Services.LotR.Octgn
 {
     public class OctgnService : IOctgnService
     {
-        public OctgnService(IProductRepository productRepository, ICardRepository cardRepository)
+        public OctgnService(ProductRepository productRepository, ICardRepository<LotRCard> cardRepository)
         {
             this.productRepository = productRepository;
             this.cardRepository = cardRepository;
@@ -16,8 +17,8 @@ namespace HallOfBeorn.Services.LotR.Octgn
             loadCardMaps();
         }
 
-        private readonly IProductRepository productRepository;
-        private readonly ICardRepository cardRepository;
+        private readonly ProductRepository productRepository;
+        private readonly ICardRepository<LotRCard> cardRepository;
 
         private readonly Dictionary<string, string> setNamesByGuid = new Dictionary<string,string>();
         private readonly Dictionary<string, string> setGuidsByName = new Dictionary<string, string>();

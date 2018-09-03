@@ -7,7 +7,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 {
     public class ProductGroupViewModel
     {
-        public ProductGroupViewModel(ProductGroup productGroup, Func<string, byte> getPopularity)
+        public ProductGroupViewModel(IProductGroup<Product, CardSet, LotRCard> productGroup, Func<string, byte> getPopularity)
         {
             Name = productGroup.Name;
 

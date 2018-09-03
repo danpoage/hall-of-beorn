@@ -187,6 +187,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ArkhamController.cs" />
+    <Compile Include="Controllers\DigitalController.cs" />
     <Compile Include="Controllers\LotRController.cs" />
     <Compile Include="Controllers\ExportController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -196,6 +197,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Handlers\Digital\SearchHandler.cs" />
     <Compile Include="Handlers\LotR\BrowseHandler.cs" />
     <Compile Include="Handlers\LotR\CharactersHandler.cs" />
     <Compile Include="Handlers\LotR\DetailsHandler.cs" />
@@ -205,8 +207,26 @@
     <Compile Include="HtmlHelperExtensions.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Arkham\Products\CurseOfTheRougarou.cs" />
+    <Compile Include="Models\Digital\CardSets\StarterSet.cs" />
+    <Compile Include="Models\Digital\DigitalCard.cs" />
+    <Compile Include="Models\Digital\DigitalCardSet.cs" />
+    <Compile Include="Models\Digital\DigitalCardTrait.cs" />
+    <Compile Include="Models\Digital\DigitalCardType.cs" />
+    <Compile Include="Models\Digital\DigitalProduct.cs" />
+    <Compile Include="Models\Digital\DigitalProductGroup.cs" />
+    <Compile Include="Models\Digital\DigitalSort.cs" />
+    <Compile Include="Models\Digital\DigitalSphere.cs" />
+    <Compile Include="Models\Digital\DigitalView.cs" />
+    <Compile Include="Models\Digital\ProductGroups\StarterProductGroup.cs" />
+    <Compile Include="Models\Digital\Products\StarterProduct.cs" />
+    <Compile Include="Models\Digital\ViewModels\DigitalCardViewModel.cs" />
+    <Compile Include="Models\Digital\ViewModels\DigitalSearchViewModel.cs" />
+    <Compile Include="Models\ICard.cs" />
+    <Compile Include="Models\ICardSet.cs" />
     <Compile Include="Models\ILink.cs" />
     <Compile Include="Models\INamed.cs" />
+    <Compile Include="Models\IProduct.cs" />
+    <Compile Include="Models\IProductGroup.cs" />
     <Compile Include="Models\LotR\CardCycle.cs" />
     <Compile Include="Models\LotR\Character.cs" />
     <Compile Include="Models\LotR\CharacterGroup.cs" />
@@ -817,15 +837,17 @@
     <Compile Include="Models\YouTube\RingsDbCardLink.cs" />
     <Compile Include="Models\YouTube\YouTubeLink.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\LotR\ICardRepository.cs" />
+    <Compile Include="Services\Digital\DigitalProductRepository.cs" />
+    <Compile Include="Services\ICardRepository.cs" />
+    <Compile Include="Services\IProductRepository.cs" />
     <Compile Include="Services\LotR\ICharacterRepository.cs" />
-    <Compile Include="Services\LotR\IProductRepository.cs" />
+    <Compile Include="Services\LotR\LotRCardRepository.cs" />
     <Compile Include="Services\LotR\Octgn\IOctgnService.cs" />
     <Compile Include="Services\LotR\Scenarios\IScenarioService.cs" />
     <Compile Include="Services\LotR\Legacy\OldAdvancedSearchService.cs" />
     <Compile Include="Services\Arkham\ArkhamProductRepository.cs" />
     <Compile Include="Services\Arkham\ArkhamSearchService.cs" />
-    <Compile Include="Services\LotR\CardRepository.cs" />
+    <Compile Include="Services\CardRepository.cs" />
     <Compile Include="Services\LotR\Categories\CategoryServiceBase.cs" />
     <Compile Include="Services\LotR\Categories\EncounterCategoryService.cs" />
     <Compile Include="Services\LotR\Categories\PlayerCategoryService.cs" />
@@ -1039,8 +1061,10 @@
     <Content Include="Scripts\arkhamAutocomplete1.js" />
     <Content Include="Scripts\arkhamCardSearch.js" />
     <Content Include="Scripts\autocomplete29.js" />
-    <Content Include="Scripts\cardDetails.js" />
-    <Content Include="Scripts\cardSearch.js" />
+    <Content Include="Scripts\cardDetails1.js" />
+    <Content Include="Scripts\cardSearch1.js" />
+    <Content Include="Scripts\Digital\digitalAutocomplete1.js" />
+    <Content Include="Scripts\Digital\digitalCardSearch1.js" />
     <Content Include="Scripts\highcharts.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -1109,6 +1133,7 @@
     <Content Include="Views\Arkham\Search.cshtml" />
     <Content Include="Views\Arkham\Details.cshtml" />
     <Content Include="Views\LotR\Characters.cshtml" />
+    <Content Include="Views\Digital\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -20,7 +20,7 @@ namespace RingsDbBuilder
             Console.WriteLine("RingsDB Popularity Ranker v1.0.3 (2018-04-17)");
 
             var productRepo = new ProductRepository();
-            var cardRepo = new CardRepository(productRepo);
+            var cardRepo = new LotRCardRepository(productRepo);
             var lookupService = new RingsDbService(cardRepo);
 
             var heroTally = new Dictionary<string, int>();

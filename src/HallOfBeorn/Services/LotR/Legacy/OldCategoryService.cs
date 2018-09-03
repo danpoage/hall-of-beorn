@@ -10,7 +10,7 @@ namespace HallOfBeorn.Services.LotR
     [Obsolete]
     public class OldCategoryService
     {
-        public OldCategoryService(CardRepository cardRepository)
+        public OldCategoryService(LotRCardRepository cardRepository)
         {
             cards = cardRepository.Cards();
 

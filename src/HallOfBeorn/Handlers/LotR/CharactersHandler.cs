@@ -10,13 +10,13 @@ namespace HallOfBeorn.Handlers.LotR
 {
     public class CharactersHandler
     {
-        public CharactersHandler(ICardRepository cardRepository, ICharacterRepository characterRepository)
+        public CharactersHandler(LotRCardRepository cardRepository, ICharacterRepository characterRepository)
         {
             _cardRepository = cardRepository;
             _characterRepository = characterRepository;
         }
 
-        private readonly ICardRepository _cardRepository;
+        private readonly LotRCardRepository _cardRepository;
         private readonly ICharacterRepository _characterRepository;
 
         public CharacterViewModel HandleCharacters(string id)

@@ -13,7 +13,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             this.product = product;
 
-            foreach (var cardSet in product.CardSets())
+            foreach (var cardSet in product.CardSets)
             {
                 foreach (var card in cardSet.Cards.OrderBy(x => x.CardNumber))
                 {
@@ -21,11 +21,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 }
             }
 
-            if (product.CardSets().Count() == 1)
+            if (product.CardSets.Count() == 1)
                 {
                     var cardSet = string.Empty;
 
-                    var first = product.CardSets().FirstOrDefault();
+                    var first = product.CardSets.FirstOrDefault();
                     if (first != null)
                     {
                         cardSet = first.Name.Replace(' ', '+');

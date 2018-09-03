@@ -8,7 +8,7 @@ namespace HallOfBeorn.Services.LotR.Categories
 {
     public class EncounterCategoryService : CategoryServiceBase<EncounterCategory>
     {
-        public EncounterCategoryService(ICardRepository cardRepository)
+        public EncounterCategoryService(ICardRepository<LotRCard> cardRepository)
             : base(cardRepository)
         {
         }
