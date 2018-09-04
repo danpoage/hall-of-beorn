@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.ViewModels;
+using HallOfBeorn.Services;
 using HallOfBeorn.Services.LotR;
 
 namespace HallOfBeorn.Handlers.LotR

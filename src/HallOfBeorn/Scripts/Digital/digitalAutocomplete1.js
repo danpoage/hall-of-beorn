@@ -1,3 +1,3 @@
 ﻿var digitalAutocompleteSource = [
-    'Aragorn', 'Arwen', 'Gimli', 'Legolas', 'Tom Took'
+    'Aragorn', 'Arwen', 'Eowyn', 'Faramir', 'Gimli', 'Legolas', 'Tom Took'
 ];

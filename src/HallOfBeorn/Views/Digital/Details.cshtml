@@ -1,0 +1,132 @@
+﻿@using HallOfBeorn.Models
+@using HallOfBeorn.Models.Digital
+@using HallOfBeorn.Models.Digital.ViewModels
+@model DigitalCardViewModel
+
+@{
+    ViewBag.Title = @Model.Title;
+}
+
+@section scripts {
+<script type="text/javascript" src="~/Scripts/Digital/digitalCardDetails1.js"></script>
+}
+
+<div class="titleBox" style="display:inline-block;max-width:310px;margin-right:10px;">
+    <div class="titleNameBox">
+        @if (@Model.IsUnique)
+        {
+            <div style="font-size:1.75em;font-family:Verdana;"><img src="/Images/unique-card.png" style="margin-right:3px;margin-bottom:-5px;height:28px;width:28px;"/>@Model.Title</div>
+        } else {
+            <div style="font-size:1.75em;font-family:Verdana;">@Model.Title</div>
+        
+            if (!string.IsNullOrEmpty(@Model.OppositeTitle))
+            {
+                <div style="font-size:1em;font-family:Verdana;color:#34282C;">@Model.OppositeTitle</div>
+            }
+        }
+        <div style="margin-top:4px;margin-bottom:2px;">
+            <span style="display:inline-block;max-width:154px;"><a href="@Model.CardSetSearchUrl" title="Search for @Model.CardSetName">@Model.CardSetName</a></span><span style="margin-left:8px;display:inline-block;">@string.Format("#{0}", @Model.Number)</span>
+            <span style="display:inline-block;margin-left: 6px;">@Model.Rarity</span>
+            @if (@Model.Level.HasValue)
+            {
+                <span style="margin-left:4px">( Lv. @Model.Level )</span>
+            }
+        </div>
+    </div>
+    <img src="@Model.ImagePath" style="max-width: 285px;max-height: 400px;"  class="card-image"/>
+    @if (!string.IsNullOrEmpty(@Model.ArtistName)) {
+        <div>
+            <span style="margin-left:5px;margin-right:-3px;">Illus.</span>
+            @if (!string.IsNullOrEmpty(@Model.ArtistUrl))
+            {
+                <a style="margin-left:5px;margin-right:10px;" href="@Model.ArtistUrl" target="_blank">@Model.ArtistName</a>
+            } else {
+                @Model.ArtistName
+            }
+        </div>
+    }
+    @if (!string.IsNullOrEmpty(@Model.CharacterUrl))
+    {
+        <div style="font-weight:bold;margin-left:4px;margin-top:10px;margin-bottom:4px;">
+            <a href="@Model.CharacterUrl" target="_blank" title="@Model.Title Character Profile">Character Profile</a>
+        </div>
+    }
+</div>
+<div class="statBox" style="display:inline-block;max-width:300px;vertical-align:top;">
+    <div style="display:inline-block;min-width:30px;min-height:300px;">
+        <div class="statHeaderBox" style="min-height:120px;">
+            <div class="statTypeBox">
+                @if (!string.IsNullOrEmpty(@Model.Sphere))
+                {
+                    <img style="margin-bottom:-4px;margin-right:8px;" src='@string.Format("/Images/{0}-med.png", @Model.Sphere)' />
+                }
+                <div style="display:inline-block;">
+                    <div style="font-weight:bold;font-size:20pt;">@Model.CardTypeName</div>
+                </div>
+            </div>
+            <div class="statValueBox" style="margin-top:2px;margin-bottom:8px;">
+                <div style="display:inline-block;">
+                @switch (@Model.CardType)
+                {
+                    case DigitalCardType.Hero:
+                        {
+                            <span style="margin-left:2px;width:40px;color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.ThreatCost</span><span style="color:#616161;">)</span>
+                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Attack</span><img style="margin-bottom:-3px;height:20px" src="/Images/attack-med.png" /></span>
+                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Willpower</span><img style="margin-bottom:-3px;height:20px" src="/Images/willpower-med.png" /></span>
+                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.HitPoints</span><img style="margin-bottom:-4px;height:20px;" src="/Images/heart-med.png"/></span>
+                        }
+                        break;
+                    case DigitalCardType.Ally:
+                        {
+                            <span style="margin-left:2px;width:40px;color:#616161;">[</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.ResourceCost</span><span style="color:#616161;">]</span>
+                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Attack</span><img style="margin-bottom:-3px;height:20px" src="/Images/attack-med.png" /></span>        
+                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Willpower</span><img style="margin-bottom:-3px;height:20px" src="/Images/willpower-med.png" /></span>
+                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.HitPoints</span><img style="margin-bottom:-4px;height:20px;" src="/Images/heart-med.png"/></span>
+                        }
+                        break;
+                    case DigitalCardType.Attachment:
+                        {
+                            <span style="margin-left:2px;width:40px;color:#616161;">[</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.ResourceCost</span><span style="color:#616161;">]</span>
+                        }
+                        break;
+                    case DigitalCardType.Event:
+                        {
+                            <span style="margin-left:2px;width:40px;color:#616161;">[</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.ResourceCost</span><span style="color:#616161;">]</span>
+                        }
+                        break;
+                    case DigitalCardType.Enemy:
+                        {
+                            @*
+                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Attack</span><img style="margin-bottom:-3px;height:20px" src="/Images/attack-med.png" /></span>
+                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.HitPoints</span><img style="margin-bottom:-4px;height:20px;" src="/Images/heart-med.png"/></span>
+                            *@
+                        }
+                        break;
+                    case DigitalCardType.Treachery:
+                        {
+                        }
+                        break;
+                    case DigitalCardType.Objective:
+                        {
+                        }
+                        break;
+                    default:
+                        break;
+                }
+                </div>
+            </div>
+            
+            <div class="statTextBox" style="margin:2px;padding-top:0px;padding-left:6px;padding-right:6px;border: 1px solid gray;border-radius:4px;max-width:500px;min-height:180px;min-width:200px;position:relative;background-color:@Model.BackgroundColor();">
+                @if (!string.IsNullOrEmpty(@Model.BackgroundImage()))
+                {
+                    <img src='@Model.BackgroundImage()' style="pointer-events:none;position: absolute;left:@Model.BackgroundImageLeft();top:@Model.BackgroundImageTop();width:@Model.BackgroundImageWidth();height:@Model.BackgroundImageHeight();opacity:.08;" />
+                }
+
+                <p>@Html.Raw(@Model.Html)</p>
+            </div>
+            @if (!string.IsNullOrEmpty(@Model.Trait)) {
+                <p style="text-align:center"><a href="@Model.TraitSearchUrl"><b>@Model.Trait</b></a></p>
+            }
+        </div>
+    </div>
+</div>

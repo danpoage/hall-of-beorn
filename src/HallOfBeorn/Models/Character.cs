@@ -5,7 +5,7 @@ using System.Web;
 
 using HallOfBeorn;
 
-namespace HallOfBeorn.Models.LotR
+namespace HallOfBeorn.Models
 {
     public enum CharacterType: byte
     {
@@ -36,15 +36,15 @@ namespace HallOfBeorn.Models.LotR
 
         public CharacterType Type { get; protected set; }
 
-        protected readonly List<Link> leaders = new List<Link>();
-        protected readonly List<Link> members = new List<Link>();
+        protected readonly List<ILink> leaders = new List<ILink>();
+        protected readonly List<ILink> members = new List<ILink>();
 
-        private readonly List<Link> family = new List<Link>();
-        private readonly List<Link> friends = new List<Link>();
-        private readonly List<Link> items = new List<Link>();
-        private readonly List<Link> aliases = new List<Link>();
-        private readonly List<Link> groups = new List<Link>();
-        private readonly List<Link> articles = new List<Link>();
+        private readonly List<ILink> family = new List<ILink>();
+        private readonly List<ILink> friends = new List<ILink>();
+        private readonly List<ILink> items = new List<ILink>();
+        private readonly List<ILink> aliases = new List<ILink>();
+        private readonly List<ILink> groups = new List<ILink>();
+        private readonly List<ILink> articles = new List<ILink>();
         private readonly List<string> books = new List<string>();
         private readonly List<string> cards = new List<string>();
         
@@ -126,7 +126,7 @@ namespace HallOfBeorn.Models.LotR
             articles.Add(new Link(LinkType.None, url, title));
         }
 
-        protected void addCharacterLink(List<Link> links, string title, string slug)
+        protected void addCharacterLink(List<ILink> links, string title, string slug)
         {
             var type = LinkType.None;
             var url = string.Empty;
@@ -139,7 +139,7 @@ namespace HallOfBeorn.Models.LotR
             links.Add(new Link(type, url, title));
         }
 
-        protected void addDetailLink(List<Link> links, string title, string slug)
+        protected void addDetailLink(List<ILink> links, string title, string slug)
         {
             var type = LinkType.None;
             var url = string.Empty;
@@ -209,13 +209,13 @@ namespace HallOfBeorn.Models.LotR
 
         public string Race { get; protected set; }
         
-        public IEnumerable<Link> Leaders { get { return leaders; } }
-        public IEnumerable<Link> Members { get { return members; } }
+        public IEnumerable<ILink> Leaders { get { return leaders; } }
+        public IEnumerable<ILink> Members { get { return members; } }
 
-        public IEnumerable<Link> Family { get { return family; } }
-        public IEnumerable<Link> Friends { get { return friends; } }
+        public IEnumerable<ILink> Family { get { return family; } }
+        public IEnumerable<ILink> Friends { get { return friends; } }
         
-        public IEnumerable<Link> RelatedCharacters()
+        public IEnumerable<ILink> RelatedCharacters()
         {
             foreach (var leader in Leaders)
                 yield return leader;
@@ -230,16 +230,16 @@ namespace HallOfBeorn.Models.LotR
                 yield return friend;
         }
         
-        public IEnumerable<Link> Groups { get { return groups; } }
-        public IEnumerable<Link> Items { get { return items; } }
+        public IEnumerable<ILink> Groups { get { return groups; } }
+        public IEnumerable<ILink> Items { get { return items; } }
 
-        public IEnumerable<Link> Articles { get { return articles; } }
+        public IEnumerable<ILink> Articles { get { return articles; } }
 
         public string Bio { get; protected set; }
         public string BioSourceUrl { get; protected set; }
         public Artist ImageArtist { get; protected set; }
 
-        public IEnumerable<Link> Aliases { get { return aliases; } }
+        public IEnumerable<ILink> Aliases { get { return aliases; } }
         public IEnumerable<string> Books { get { return books; } }
         public IEnumerable<string> Cards { get { return cards; } }
 

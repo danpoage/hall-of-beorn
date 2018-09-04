@@ -24,13 +24,20 @@ namespace HallOfBeorn.Models.Digital
 
         protected abstract void Initialize();
 
-        protected DigitalCardSet addHero(string title, DigitalSphere sphere, byte threatCost, byte attack, byte willpower, byte hitPoints, DigitalCardTrait trait, string text)
+        private void addCard(DigitalCard card)
+        {
+            cards.Add(card);
+        }
+
+        protected DigitalCardSet addHero(string title, DigitalSphere sphere, byte threatCost, byte attack, byte willpower, byte hitPoints, DigitalTrait trait, string text, string html, Artist artist)
         {
             var hero = new DigitalCard
             {
                 Title = title,
+                Sphere = sphere,
                 CardType = DigitalCardType.Hero,
                 IsUnique = true,
+                Rarity = DigitalRarity.Hero,
                 Slug = getSlug(title),
                 ThreatCost = threatCost,
                 Trait = trait,
@@ -38,11 +45,39 @@ namespace HallOfBeorn.Models.Digital
                 Willpower = willpower,
                 HitPoints = hitPoints,
                 Text = text,
+                Html = html,
+                Artist = artist,
                 CardSet = this,
             };
 
-            cards.Add(hero);
+            addCard(hero);
             return this;
+        }
+
+        protected DigitalCard addAlly(string title, bool isUnique, DigitalSphere sphere, byte level, byte resourceCost, byte attack, byte willpower, byte hitPoints, DigitalTrait trait, string text, string html, Artist artist)
+        {
+            var ally = new DigitalCard
+            {
+                CardSet = this,
+                CardType = DigitalCardType.Ally,
+                Rarity = DigitalRarity.Starter,
+                Slug = getSlug(title),
+
+                Title = title,
+                IsUnique = isUnique,
+                Level = level,
+                Sphere = sphere,
+                ResourceCost = resourceCost,
+                Attack = attack,
+                Willpower = willpower,
+                HitPoints = hitPoints,
+                Trait = trait,
+                Text = text,
+                Html = html,
+                Artist = artist
+            };
+            addCard(ally);
+            return ally;
         }
 
         public string Name { get; private set; }

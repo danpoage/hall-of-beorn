@@ -13,6 +13,9 @@ namespace HallOfBeorn.Models.Digital.ViewModels
         public DigitalSort? Sort { get; set; }
         public DigitalView? View { get; set; }
 
+        public DigitalTrait? Trait { get; set; }
+        public DigitalKeyword? Keyword { get; set; }
+
         public List<DigitalCardViewModel> Cards { get; set; }
 
         //public List<DigitalProductViewModel> Products { get; set; }
@@ -31,9 +34,9 @@ namespace HallOfBeorn.Models.Digital.ViewModels
             return Cards.Count > 1 ? string.Format("{0} Results", Cards.Count) : "1 Result";
         }
 
-        public bool IsCardView { get { return true; } }
-        public bool IsProductView { get { return false; } }
-        public bool IsCharacterView { get { return false; } } 
+        public bool? IsCardView { get { return true; } }
+        public bool? IsProductView { get { return false; } }
+        public bool? IsCharacterView { get { return false; } } 
 
         public static IEnumerable<SelectListItem> Sorts
         {

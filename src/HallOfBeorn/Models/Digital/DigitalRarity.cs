@@ -5,15 +5,14 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Digital
 {
-    public enum DigitalCardTrait
+    public enum DigitalRarity
     {
         None = 0,
-        Dwarf,
-        Hobbit,
-        Dunadan,
-        Gondor,
-        Noldor,
-        Rohan,
-        Silvan
+        Hero,
+        Starter,
+        Common,
+        Uncommon,
+        Rare,
+        Legendary
     }
 }

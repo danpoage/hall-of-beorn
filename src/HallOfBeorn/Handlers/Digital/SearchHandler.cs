@@ -26,6 +26,22 @@ namespace HallOfBeorn.Handlers.Digital
             {
                 foreach (var card in cardSet.Cards)
                 {
+                    if (model.Trait.HasValue && model.Trait.Value != DigitalTrait.None && card.Trait != model.Trait)
+                        continue;
+
+                    if (model.Keyword.HasValue && model.Keyword.Value != DigitalKeyword.None)
+                    {
+                        var keyword = model.Keyword.Value.ToString().ToLower();
+                        if (!card.Text.StartsWithLower(keyword) && !card.Text.ContainsLower(" " + keyword))
+                            continue;
+                    }
+
+                    if (!string.IsNullOrEmpty(model.Query))
+                    {
+                        if (!card.Title.ContainsLower(model.Query) && !card.Text.ContainsLower(model.Query) && (!card.Trait.HasValue || !card.Trait.Value.ToString().ContainsLower(model.Query)))
+                            continue;
+                    }
+
                     model.Cards.Add(new DigitalCardViewModel(card));
                 }
             }

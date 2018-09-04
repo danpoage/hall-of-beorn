@@ -6,7 +6,7 @@ using System.Web;
 using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
 
-namespace HallOfBeorn.Services.LotR
+namespace HallOfBeorn.Services
 {
     public class CardRepository<TRepo, TGroup, TProduct, TCardSet, TCard> : ICardRepository<TCard>
         where TRepo: IProductRepository<TGroup, TProduct, TCardSet, TCard>

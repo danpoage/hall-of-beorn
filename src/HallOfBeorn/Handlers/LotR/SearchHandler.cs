@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.Simple;
 using HallOfBeorn.Models.LotR.ViewModels;
+using HallOfBeorn.Services;
 using HallOfBeorn.Services.LotR;
 using HallOfBeorn.Services.LotR.Categories;
 using HallOfBeorn.Services.LotR.RingsDb;
@@ -75,7 +77,7 @@ namespace HallOfBeorn.Handlers.LotR
             SearchViewModel.QuestCategories = _questCategoryService.CategoryNames().GetSelectListItems();
         }
 
-        private void AddRelatedCharacters(IEnumerable<Link> links, Dictionary<string, CharacterViewModel> charactersByUrl, Dictionary<string, CharacterViewModel> relatedCharactersByUrl)
+        private void AddRelatedCharacters(IEnumerable<ILink> links, Dictionary<string, CharacterViewModel> charactersByUrl, Dictionary<string, CharacterViewModel> relatedCharactersByUrl)
         {
             foreach (var member in links)
             {

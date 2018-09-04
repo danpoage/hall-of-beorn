@@ -14,7 +14,7 @@
     window.addEventListener('DOMContentLoaded', function() {
         $(function () {
             $("#Query").autocomplete({
-                source: autocompleteSource,
+                source: digitalAutocompleteSource,
                 minLength: 2
             });
             $("#Query").autocomplete("widget").addClass("autocompleteClass");
@@ -23,7 +23,7 @@
 </script>    
 }
 
-@using (Html.BeginForm("Search", "LotR", FormMethod.Post))
+@using (Html.BeginForm("Search", "Digital", FormMethod.Post))
 {
     <div class="form-group">
         <div style="margin-bottom:10px;">
@@ -44,7 +44,7 @@
     </div>
 }
 <span class="results-count-label">@Model.GetResultsCount()</span>
-@if (@Model.IsCardView) {
+@if (!@Model.IsCardView.HasValue || @Model.IsCardView.Value) {
     foreach (var card in @Model.Cards)
     {
         <hr style="color:#616161;" />
@@ -68,14 +68,14 @@
                     {
                         case DigitalCardType.Hero:
                             <span style="color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.ThreatCost</span><span style="color:#616161;">)</span>
+                            <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Attack</span><img style="margin-bottom:-3px;height:16px;" src="/Images/attack-small.png" /></span>        
                             <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Willpower</span><img style="margin-bottom:-3px;height:16px;" src="/Images/willpower-small.png" /></span>
-                            <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Attack</span><img style="margin-bottom:-3px;height:16px;" src="/Images/attack-small.png" /></span>
                             <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.HitPoints</span><img style="margin-bottom:-4px;height:16px;" src="/Images/heart-small.png"/></span>
                             break;
                         case DigitalCardType.Ally:
                             <span style="color:#616161;">[</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.ResourceCost</span><span style="color:#616161;">]</span>
+                            <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Attack</span><img style="margin-bottom:-3px;height:16px;" src="/Images/attack-small.png" /></span>        
                             <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Willpower</span><img style="margin-bottom:-3px;height:16px;" src="/Images/willpower-small.png" /></span>
-                            <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Attack</span><img style="margin-bottom:-3px;height:16px;" src="/Images/attack-small.png" /></span>
                             <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.HitPoints</span><img style="margin-bottom:-4px;height:16px;" src="/Images/heart-small.png"/></span>
                             break;
                         case DigitalCardType.Attachment:
@@ -87,9 +87,11 @@
                     }
                 </div>
                 <div>
-                    @card.Text
+                    @Html.Raw(@card.Html)
                 </div>
-                <div><b>@card.Trait</b></div>
+                @if (!string.IsNullOrEmpty(@card.Trait)) {
+                    <div>@card.Trait</div>
+                }
             </div>
         </div>
     }

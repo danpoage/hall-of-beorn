@@ -32,31 +32,31 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             get { return string.Format("{0}{1}.jpg", characterImageBaseUrl, character.Slug); }
         }
 
-        public IEnumerable<Link> Aliases { get { return character.Aliases; } } 
+        public IEnumerable<ILink> Aliases { get { return character.Aliases; } } 
         public bool HasAliases { get { return character.Aliases.Count() > 0; } }
 
-        public IEnumerable<Link> Family { get { return character.Family; } }
+        public IEnumerable<ILink> Family { get { return character.Family; } }
         public bool HasFamily { get { return character.Family.Count() > 0; } }
 
-        public IEnumerable<Link> Friends { get { return character.Friends; } }
+        public IEnumerable<ILink> Friends { get { return character.Friends; } }
         public bool HasFriends { get { return character.Friends.Count() > 0; } }
 
-        public IEnumerable<Link> Items { get { return character.Items; } }
+        public IEnumerable<ILink> Items { get { return character.Items; } }
         public bool HasItems { get { return character.Items.Count() > 0; } }
 
-        public IEnumerable<Link> Groups { get { return character.Groups; } }
+        public IEnumerable<ILink> Groups { get { return character.Groups; } }
         public bool HasGroups { get { return character.Groups.Count() > 0; } }
 
-        public IEnumerable<Link> Leaders { get { return character.Leaders; } }
+        public IEnumerable<ILink> Leaders { get { return character.Leaders; } }
         public bool HasLeaders { get { return character.Leaders.Count() > 0; } }
 
-        public IEnumerable<Link> Members { get { return character.Members; } }
+        public IEnumerable<ILink> Members { get { return character.Members; } }
         public bool HasMembers { get { return character.Members.Count() > 0; } }
 
-        public IEnumerable<Link> Articles { get { return character.Articles; } }
+        public IEnumerable<ILink> Articles { get { return character.Articles; } }
         public bool HasArticles { get { return character.Articles.Count() > 0; } }
 
-        public IEnumerable<Link> CardLinks { get { return cardLinks; } }
+        public IEnumerable<ILink> CardLinks { get { return cardLinks; } }
 
         public void AddCardLink(LotRCard card)
         {

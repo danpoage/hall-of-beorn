@@ -64,8 +64,11 @@ namespace HallOfBeorn.Models.LotR
 
         public bool HasThumbnail { get; set; }
 
-        public uint StageNumber { get; set; }
-        public char StageLetter { get; private set; }
+        public override string CardSetName { get { return cardSet != null ? cardSet.Name : string.Empty; } }
+        public override bool IsCampaign { get { return this.CardType == LotR.CardType.Campaign; } }
+        public override bool IsQuest { get { return this.CardType == LotR.CardType.Quest; } }
+        public override uint StageNumber { get; set; }
+        public override char StageLetter { get; set; }
 
         private CardSet cardSet;
         public CardSet CardSet {

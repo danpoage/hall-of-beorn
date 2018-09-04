@@ -9,11 +9,18 @@ namespace HallOfBeorn.Models
     public interface ICard
     {
         string Slug { get; }
+        string SlugSuffix { get; }
         string AlternateSlug { get; }
 
         string Title { get; }
         string NormalizedTitle { get; }
         
         string Text { get; }
+
+        string CardSetName { get; }
+        bool IsCampaign { get; }
+        bool IsQuest { get; }
+        uint StageNumber { get; }
+        char StageLetter { get; }
     }
 }

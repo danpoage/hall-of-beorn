@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.Characters;
 using HallOfBeorn.Models.LotR.Characters.Groups;
 
-namespace HallOfBeorn.Services.LotR
+namespace HallOfBeorn.Services
 {
     public class CharacterRepository : ICharacterRepository
     {

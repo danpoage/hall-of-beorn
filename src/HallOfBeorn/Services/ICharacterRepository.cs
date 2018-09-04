@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using HallOfBeorn.Models.LotR;
-namespace HallOfBeorn.Services.LotR
+
+using HallOfBeorn.Models;
+
+namespace HallOfBeorn.Services
 {
     public interface ICharacterRepository
     {

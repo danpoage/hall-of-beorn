@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HallOfBeorn.Models.LotR
+namespace HallOfBeorn.Models
 {
     public class Link : ILink
     {
-        public Link(LinkType type, LotRCard card)
+        public Link(LinkType type, ICard card)
             : this(type, card, null)
         {
         }
         
-        public Link(LinkType type, LotRCard card, string title)
+        public Link(LinkType type, ICard card, string title)
         {
             this.Type = type;
 
@@ -47,7 +47,7 @@ namespace HallOfBeorn.Models.LotR
 
         private const string defaltLanguage = "en";
 
-        private static string getUrl(LinkType type, Card card, string language)
+        private static string getUrl(LinkType type, ICard card, string language)
         {
             var title = card.Title.ToUrlSafeString();
 
@@ -103,19 +103,19 @@ namespace HallOfBeorn.Models.LotR
             return type.ToString().Replace('_', ' ');
         }
 
-        private static string getText(LinkType type, LotRCard card, string title)
+        private static string getText(LinkType type, ICard card, string title)
         {
             if (type == LinkType.Hall_of_Beorn_Card_Image) {
                 var slug = string.Empty;
-                if (card.CardType == CardType.Campaign) {
+                if (card.IsCampaign) {
                     slug = string.Format("{0}-SetupA", card.Title.ToUrlSafeString());
-                } else if (card.CardType == CardType.Quest) {
+                } else if (card.IsQuest) {
                     slug = string.Format("{0}-{1}{2}", card.Title.ToUrlSafeString(), card.StageNumber, card.StageLetter);
                 }
                 else {
                     slug = string.IsNullOrEmpty(card.SlugSuffix) ? card.Title.ToUrlSafeString() : string.Format("{0}-{1}", card.Title.ToUrlSafeString(), card.SlugSuffix);
                 }
-                return string.Format("<img src=\"https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}.jpg\" title=\"{2}\" style=\"height:180px\"></img>", card.CardSet.Name.NormalizeCaseSensitiveString().ToUrlSafeString(), slug, title.Replace("'", "’"));
+                return string.Format("<img src=\"https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}.jpg\" title=\"{2}\" style=\"height:180px\"></img>", card.CardSetName.NormalizeCaseSensitiveString().ToUrlSafeString(), slug, title.Replace("'", "’"));
             } else {
                 return title;
             }

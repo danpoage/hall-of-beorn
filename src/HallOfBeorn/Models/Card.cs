@@ -160,5 +160,11 @@ namespace HallOfBeorn.Models
         {
             get { return normalizedKeywords; }
         }
+
+        public virtual string CardSetName { get { return string.Empty; } }
+        public virtual bool IsCampaign { get { return false; } }
+        public virtual bool IsQuest { get { return false; } }
+        public virtual uint StageNumber { get { return 0; }  set {} }
+        public virtual char StageLetter { get { return '\0'; } set {} }
     }
 }
