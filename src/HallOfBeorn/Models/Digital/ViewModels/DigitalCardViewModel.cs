@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.Digital.ViewModels
 
         public DigitalCard Card { get; private set; }
 
+        public string DetailsUrl { get { return string.Format("/Digital/Details/{0}", Card.Slug); } }
+
         public string CardSetName { get { return Card.CardSetName; } }
         public string CardSetSearchUrl { get { return string.Format("/Digital/Search?CardSet={0}", Card.CardSetName.ToSearchString()); } }
         public uint Number { get { return Card.Number; } }
