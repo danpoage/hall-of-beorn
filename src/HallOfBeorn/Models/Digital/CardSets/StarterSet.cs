@@ -39,6 +39,29 @@ Ghan-buri-Ghan	Lore	1	3	1	0	5	Wose	Stealth. Gain +1 Willpower for each Objective
 
 //Attachments
 /*
+Dunedain Letter	Leadership	1	2	Special	Gain +1 Health, then gain Stealth this round.	Starter
+Dwarven Axe	Tactics	1	2	Weapon	Gain +1 Attack, or +2 attack if a dwarf.	Starter
+Favor of the Lady	Spirit	1	1	Special	Gain +1 Willpower.	Starter
+Round Shield 	Tactics	1	2	Armor	Gain Block.	Starter
+Self-Preservation	Lore	1	2	Special	Upkeep: Restore 1 Health	Starter
+Spike Trap	Lore	1	0	Special	Non-Unique enemy only. Upkeep: Deal 1 damage to this enemy.	Starter
+Warrior Sword	Tactics	1	0	Weapon	Gain +1 Attack.	Starter
+*/
+
+//Events
+/*
+A Watchful Peace	Spirit	1	1	Event	Lose 2 Threat	Starter	Starter
+Advance Warning	Lore	1	1	Preparation	Exhaust the next Enemy that enters play during the Adventure phase	Starter	Starter
+Beorns Hospitality	Lore	1	2	Event	Choose: Restore 1 Health to every Character; or restore 4 Health to a Hero	Starter	Starter
+Careful Planning	Spirit	1	1	Preparation	Lose Threat equal to the cost of the next Event of 1 Resource cost or greater that Sauron plays	Starter	Starter
+Common Cause	Leadership	1	0	Event	Exhaust an Ally to ready another Character	Starter	Starter
+Favor of the Valar	Neutral	1	2	Preparation	If the Threat Meter would reach 50, lose 3 Threat instead	Starter	Starter
+Feint	Tactics	1	1	Event	Reduce a non-unique Enemy to 0 Attack this round.	Starter	Starter
+Gaining Strength	Leadership	1	0	Event	Gain +1 Resource	Starter	Starter
+Mithrandir's Advice	Lore	1	1	Event	Draw 2 cards	Starter	Starter
+Secret Paths	Spirit	1	1	Event	Apply 2 progress	Starter	Starter
+Sneak Attack	Leadership	1	1	Event	Play a random Ally. That Ally gains Fleeting	Starter	Starter
+Spear Wall	Tactics	1	4	Event	Every Enemy loses 2 Attack this round (minimum 0)	Starter	Starter
 */
 
         protected override void Initialize()
@@ -97,6 +120,53 @@ Ghan-buri-Ghan	Lore	1	3	1	0	5	Wose	Stealth. Gain +1 Willpower for each Objective
             addAlly("Man of Dale", false, DigitalSphere.Tactics, 1, 2, 1, 1, 4, DigitalTrait.Dale,
                 "Ranged", "<p><a href='/Digital/Search?Keyword=Ranged' target='_blank'><b>Ranged.</b></a></p>", Artist.Unknown);
 
+            addAttachment("Dúnedain Letter", false, DigitalSphere.Leadership, 1, 2, AttachmentSlot.Special,
+                "Gain +1 Health, then gain Stealth this round.", "<p>Gain +1 ❤, then gain <b>Stealth</b> this round.</p>", Artist.Unknown);
+            addAttachment("Dwarven Axe", false, DigitalSphere.Tactics, 1, 2, AttachmentSlot.Weapon,
+                "Gain +1 Attack, or +2 attack if a dwarf.", "<p>Gain +1 ⚔️, or +2 ⚔️ if a dwarf.</p>", Artist.Unknown);
+            addAttachment("Favor of the Lady", false, DigitalSphere.Spirit, 1, 1, AttachmentSlot.Special,
+                "Gain +1 Willpower.", "<p>Gain +1 ♢.</p>", Artist.Magali_Villeneuve);
+            addAttachment("Round Shield", false, DigitalSphere.Tactics, 1, 2, AttachmentSlot.Armor,
+                "Gain Block.", "<p>Gain <b>Block.</b></p>", Artist.Unknown);
+            addAttachment("Self-preservation", false, DigitalSphere.Lore, 1, 2, AttachmentSlot.Special,
+                "Upkeep: Restore 1 Health", "<p><b>Upkeep:</b> Restore 1 ❤</p>", Artist.Unknown);
+            addAttachment("Spike Trap", false, DigitalSphere.Lore, 1, 0, AttachmentSlot.Special,
+                "Non-Unique enemy only. Upkeep: Deal 1 damage to this enemy.", "<p>Non-Unique enemy only. <b>Upkeep:</b> Deal 1 damage to this enemy.</p>", Artist.Unknown);
+            addAttachment("Warrior Sword", false, DigitalSphere.Tactics, 1, 0, AttachmentSlot.Weapon,
+                "Gain +1 Attack.", "<p>Gain +1 ⚔️</p>", Artist.Unknown);
+
+            addEvent("A Watchful Peace", DigitalSphere.Spirit, 1, 1, null,
+                "Lose 2 Threat", "<p>Lose 2 Threat</p>", Artist.Unknown);
+            addEvent("Advance Warning", DigitalSphere.Lore, 1, 1, DigitalTrait.Preparation,
+                "Exhaust the next Enemy that enters play during the Adventure phase", 
+                "<p>Exhaust the next Enemy that enters play during the Adventure phase</p>", Artist.Unknown);
+            addEvent("Beorn's Hospitality", DigitalSphere.Lore, 1, 2, null,
+                "Choose: Restore 1 Health to every Character; or restore 4 Health to a Hero",
+                "<p><b>Choose:</b> Restore 1 ❤ to every Character; or restore 4 ❤ to a Hero</p>", Artist.Unknown);
+            addEvent("Careful Planning", DigitalSphere.Spirit, 1, 1, DigitalTrait.Preparation,
+                "Lose Threat equal to the cost of the next Event of 1 Resource cost or greater that Sauron plays",
+                "<p>Lose Threat equal to the cost of the next Event of 1 Resource cost or greater that Sauron plays</p>", Artist.Unknown);
+            addEvent("Common Cause", DigitalSphere.Leadership, 1, 0, null,
+                "Exhaust an Ally to ready another Character",
+                "<p>Exhaust an Ally to ready another Character</p>", Artist.Unknown);
+            addEvent("Favor of the Valar", DigitalSphere.None, 1, 2, DigitalTrait.Preparation,
+                "If the Threat Meter would reach 50, lose 3 Threat instead",
+                "<p>If the Threat Meter would reach 50, lose 3 Threat instead</p>", Artist.Unknown);
+            addEvent("Feint", DigitalSphere.Tactics, 1, 1, null,
+                "Reduce a non-unique Enemy to 0 Attack this round.",
+                "<p>Reduce a non-unique Enemy to 0 Attack this round.</p>", Artist.Unknown);
+            addEvent("Gaining Strength", DigitalSphere.Leadership, 1, 0, null,
+                "Gain +1 Resource", "<p>Gain +1 Resource</p>", Artist.Unknown);
+            addEvent("Mithrandir's Advice", DigitalSphere.Lore, 1, 1, null,
+                "Draw 2 cards", "<p>Draw 2 cards</p>", Artist.Unknown);
+            addEvent("Secret Paths", DigitalSphere.Spirit, 1, 1, null,
+                "Apply 2 progress", "<p>Apply 2 progress</p>", Artist.Unknown);
+            addEvent("Sneak Attack", DigitalSphere.Leadership, 1, 1, null,
+                "Play a random Ally. That Ally gains Fleeting", 
+                "<p>Play a random Ally. That Ally gains <b>Fleeting</b></p>", Artist.Unknown);
+            addEvent("Spear Wall", DigitalSphere.Tactics, 1, 4, null,
+                "Every Enemy loses 2 Attack this round (minimum 0)",
+                "<p>Every Enemy loses 2 Attack this round (minimum 0)</p>", Artist.Unknown);
         }
     }
 }

@@ -7,12 +7,12 @@ namespace HallOfBeorn.Models.Digital
 {
     public static class Extensions
     {
-        public static string SphereName(this DigitalSphere? sphere)
+        public static string SphereName(this DigitalSphere sphere)
         {
-            if (!sphere.HasValue || sphere.Value == DigitalSphere.None)
+            if (sphere == DigitalSphere.Any || sphere == DigitalSphere.None)
                 return string.Empty;
 
-            return sphere.Value.ToString();
+            return sphere.ToString();
         }
 
         public static string TraitName(this DigitalTrait? trait)

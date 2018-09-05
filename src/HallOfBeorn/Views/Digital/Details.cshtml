@@ -127,6 +127,9 @@
             @if (!string.IsNullOrEmpty(@Model.Trait)) {
                 <p style="text-align:center"><a href="@Model.TraitSearchUrl"><b>@Model.Trait</b></a></p>
             }
+            @if (!string.IsNullOrEmpty(@Model.Slot)) {
+                <p style="text-align:center"><a href="@Model.SlotSearchUrl"><b>@Model.Slot</b></a></p>
+            }
         </div>
     </div>
 </div>

@@ -208,6 +208,8 @@
     <Compile Include="HtmlHelperExtensions.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Arkham\Products\CurseOfTheRougarou.cs" />
+    <Compile Include="Models\Digital\AttachmentSlot.cs" />
+    <Compile Include="Models\Digital\CardSets\LegolasSet.cs" />
     <Compile Include="Models\Digital\CardSets\StarterSet.cs" />
     <Compile Include="Models\Digital\DigitalCard.cs" />
     <Compile Include="Models\Digital\DigitalCardSet.cs" />

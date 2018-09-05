@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.Digital
         Dunadan,
         Gondor,
         Noldor,
+        Preparation,
         Rohan,
         Silvan
     }

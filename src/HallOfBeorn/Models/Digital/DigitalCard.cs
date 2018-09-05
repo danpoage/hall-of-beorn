@@ -15,7 +15,8 @@ namespace HallOfBeorn.Models.Digital
         public string Title { get; set; }
         public string NormalizedTitle { get { return Title.NormalizeCaseSensitiveString(); } }
         public DigitalCardType CardType { get; set; }
-        public DigitalSphere? Sphere { get; set; }
+        public DigitalSphere Sphere { get; set; }
+        public AttachmentSlot? Slot { get; set; }
         public bool IsUnique { get; set; }
 
         public byte? Level { get; set; }

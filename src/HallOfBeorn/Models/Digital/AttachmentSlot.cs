@@ -5,11 +5,12 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Digital
 {
-    public enum DigitalSort
+    public enum AttachmentSlot
     {
-        None,
-        Title,
-        Rarity,
-        Sphere_Type_Cost
+        None = 0,
+        Weapon,
+        Armor,
+        Special,
+        Shadow
     }
 }

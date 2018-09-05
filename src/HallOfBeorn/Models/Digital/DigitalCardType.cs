@@ -7,6 +7,7 @@ namespace HallOfBeorn.Models.Digital
 {
     public enum DigitalCardType
     {
+        None = 0,
         Hero,
         Ally,
         Attachment,

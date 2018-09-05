@@ -30,6 +30,17 @@ namespace HallOfBeorn.Models.Digital.ViewModels
 
         public DigitalCardType CardType { get { return Card.CardType; } }
         public string CardTypeName { get { return Card.CardType.ToString(); } }
+        public string Slot
+        {
+            get { 
+                return Card.Slot.HasValue && Card.Slot.Value != Digital.AttachmentSlot.None ? Card.Slot.ToString() : string.Empty;
+            }
+        }
+
+        public string SlotSearchUrl
+        {
+            get { return !string.IsNullOrEmpty(Slot) ? string.Format("/Digital/Search?Slot={0}", Slot) : string.Empty; }
+        }
 
         public string Sphere { get { return Card.Sphere.SphereName(); } }
         

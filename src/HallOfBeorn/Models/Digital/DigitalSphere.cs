@@ -7,10 +7,11 @@ namespace HallOfBeorn.Models.Digital
 {
     public enum DigitalSphere
     {
-        None = 0,
-        Leadership = 1,
-        Tactics = 2,
-        Spirit = 3,
-        Lore = 4
+        Any = 0,
+        None = 1,
+        Leadership = 2,
+        Tactics = 3,
+        Spirit = 4,
+        Lore = 5
     }
 }

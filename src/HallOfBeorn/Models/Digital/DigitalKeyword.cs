@@ -14,6 +14,7 @@ namespace HallOfBeorn.Models.Digital
         Fleeting,
         Power,
         Ranged,
+        Stealth,
         Surge,
         Upkeep
     }

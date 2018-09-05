@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models.Digital
 
         private string getSlug(string title)
         {
-            return string.Format("{0}-{1}", title.NormalizeCaseSensitiveString(), Slug);
+            return string.Format("{0}-{1}", title.NormalizeCaseSensitiveString().Replace(" ", "-"), Slug);
         }
 
         protected abstract void Initialize();
@@ -54,20 +54,20 @@ namespace HallOfBeorn.Models.Digital
             return this;
         }
 
-        protected DigitalCard addAlly(string title, bool isUnique, DigitalSphere sphere, byte level, byte resourceCost, byte attack, byte willpower, byte hitPoints, DigitalTrait trait, string text, string html, Artist artist)
+        protected DigitalCard addAlly(string title, bool isUnique, DigitalSphere sphere, byte level, byte cost, byte attack, byte willpower, byte hitPoints, DigitalTrait trait, string text, string html, Artist artist, DigitalRarity rarity = DigitalRarity.Starter)
         {
             var ally = new DigitalCard
             {
                 CardSet = this,
                 CardType = DigitalCardType.Ally,
-                Rarity = DigitalRarity.Starter,
+                Rarity = rarity,
                 Slug = getSlug(title),
 
                 Title = title,
                 IsUnique = isUnique,
                 Level = level,
                 Sphere = sphere,
-                ResourceCost = resourceCost,
+                ResourceCost = cost,
                 Attack = attack,
                 Willpower = willpower,
                 HitPoints = hitPoints,
@@ -78,6 +78,52 @@ namespace HallOfBeorn.Models.Digital
             };
             addCard(ally);
             return ally;
+        }
+
+        protected DigitalCard addAttachment(string title, bool isUnique, DigitalSphere sphere, byte level, byte cost, 
+            AttachmentSlot slot, string text, string html, Artist artist, DigitalRarity rarity = DigitalRarity.Starter)
+        {
+            var attachment = new DigitalCard
+            {
+                CardSet = this,
+                CardType = DigitalCardType.Attachment,
+                Rarity = rarity,
+                Slug = getSlug(title),
+
+                Title = title,
+                IsUnique = isUnique,
+                Level = level,
+                Sphere = sphere,
+                ResourceCost = cost,
+                Slot = slot,
+                Text = text,
+                Html = html,
+                Artist = artist
+            };
+            addCard(attachment);
+            return attachment;
+        }
+
+        //Advance Warning	Lore	1	1	Preparation	Exhaust the next Enemy that enters play during the Adventure phase
+        protected DigitalCard addEvent(string title, DigitalSphere sphere, byte level, byte cost, 
+            DigitalTrait? trait, string text, string html, Artist artist, DigitalRarity rarity = DigitalRarity.Starter)
+        {
+            var eventCard = new DigitalCard
+            {
+                CardSet = this,
+                CardType = DigitalCardType.Event,
+                Rarity = rarity,
+                Slug = getSlug(title),
+
+                Title = title,
+                IsUnique = false,
+                Level = level,
+                Sphere = sphere,
+                ResourceCost = cost,
+                Trait = trait
+            };
+            addCard(eventCard);
+            return eventCard;
         }
 
         public string Name { get; private set; }
