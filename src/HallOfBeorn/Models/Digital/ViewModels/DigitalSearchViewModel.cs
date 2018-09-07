@@ -180,7 +180,9 @@ namespace HallOfBeorn.Models.Digital.ViewModels
         public static IEnumerable<SelectListItem> CardSets
         {
             get { return new List<string>{
-                "Starter", "Valor", "Dwalin Pack", "Eowyn Pack", "Faramir Pack", "Legolas Pack" 
+                "Starter", 
+                //"Valor Cards", 
+                "Dwalin Pack", "Eowyn Pack", "Faramir Pack", "Legolas Pack" 
             }.GetSelectListItems(); }
         }
         

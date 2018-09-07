@@ -120,7 +120,9 @@ namespace HallOfBeorn.Models.Digital
                 Level = level,
                 Sphere = sphere,
                 ResourceCost = cost,
-                Trait = trait
+                Trait = trait,
+                Text = text,
+                Html = html
             };
             addCard(eventCard);
             return eventCard;
@@ -140,6 +142,11 @@ namespace HallOfBeorn.Models.Digital
 
         #region Static Properties
         public static DigitalCardSet Starter = new CardSets.StarterSet();
+        public static DigitalCardSet ValorCards = new CardSets.ValorCards();
+        public static DigitalCardSet DwalinPack = new CardSets.DwalinPack();
+        public static DigitalCardSet EowynPack = new CardSets.EowynPack();
+        public static DigitalCardSet FaramirPack = new CardSets.FaramirPack();
+        public static DigitalCardSet LegolasPack = new CardSets.LegolasPack();
         #endregion
     }
 }

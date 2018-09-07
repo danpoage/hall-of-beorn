@@ -14,8 +14,10 @@ namespace HallOfBeorn.Models.Digital
         Fleeting,
         Power,
         Ranged,
+        Revenge,
         Stealth,
         Surge,
-        Upkeep
+        Upkeep,
+        Vanquish
     }
 }

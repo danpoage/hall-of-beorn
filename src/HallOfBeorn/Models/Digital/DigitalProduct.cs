@@ -31,6 +31,11 @@ namespace HallOfBeorn.Models.Digital
 
         #region Static Properties
         public static DigitalProduct Starter = new Products.StarterProduct();
+        public static DigitalProduct ValorCards = new Products.ValorCardsProduct();
+        public static DigitalProduct DwalinPack = new Products.DwalinPackProduct();
+        public static DigitalProduct EowynPack = new Products.EowynPackProduct();
+        public static DigitalProduct FaramirPack = new Products.FaramirPackProduct();
+        public static DigitalProduct LegolasPack = new Products.LegolasPackProduct();
         #endregion
     }
 }

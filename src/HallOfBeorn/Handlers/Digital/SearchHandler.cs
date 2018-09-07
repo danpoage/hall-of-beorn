@@ -30,7 +30,9 @@ namespace HallOfBeorn.Handlers.Digital
 
         public bool CardSetFilter(DigitalSearchViewModel model, DigitalCard card)
         {
-            return string.IsNullOrEmpty(model.CardSet) || model.CardSet == "Any" || model.CardSet == card.CardSet.Name;
+            return string.IsNullOrEmpty(model.CardSet) 
+                || model.CardSet == "Any" 
+                || model.CardSet.NormalizeCaseSensitiveString() == card.CardSet.Name.NormalizeCaseSensitiveString();
         }
 
         private bool CardTypeFilter(DigitalSearchViewModel model, DigitalCard card)
@@ -118,6 +120,9 @@ namespace HallOfBeorn.Handlers.Digital
                 foreach (var card in cardSet.Cards)
                 {
                     if (!QueryFilter(model, card))
+                        continue;
+
+                    if (!CardSetFilter(model, card))
                         continue;
 
                     if (!CardTypeFilter(model, card))

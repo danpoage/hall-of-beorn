@@ -12,6 +12,8 @@ namespace HallOfBeorn.Services.Digital
         public DigitalProductRepository()
         {
             addProductGroup(new StarterProductGroup());
+            addProductGroup(new HeroPacksProductGroup());
+            addProductGroup(new ValorProductGroup());
         }
 
         private readonly List<DigitalProductGroup> productGroups = new List<DigitalProductGroup>();
