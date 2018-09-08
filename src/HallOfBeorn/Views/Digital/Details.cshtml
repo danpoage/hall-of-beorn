@@ -25,13 +25,15 @@
             }
         }
         <div style="margin-top:4px;margin-bottom:2px;">
-            <span style="display:inline-block;max-width:154px;"><a href="@Model.CardSetSearchUrl" title="Search for @Model.CardSetName">@Model.CardSetName</a></span>
+            <div style="max-width:154px;"><a href="@Model.CardSetSearchUrl" title="Search for @Model.CardSetName">@Model.CardSetName</a></div>
             @* <span style="margin-left:8px;display:inline-block;">@string.Format("#{0}", @Model.Number)</span> *@
-            <span style="display:inline-block;margin-left: 4px;">@Model.Rarity</span>
-            @if (@Model.Level.HasValue)
-            {
-                <span style="margin-left:4px">( Lv. @Model.Level )</span>
-            }
+            <div style="max-width: 154px;">
+                <span style="display:inline-block;margin-left: 4px;">@Model.Rarity</span>
+                @if (@Model.Level.HasValue)
+                {
+                    <span style="margin-left:4px">( <a href="@Model.LevelSearchUrl">Level @Model.Level</a> )</span>
+                }
+            </div>
         </div>
     </div>
     <img src="@Model.ImagePath" style="max-width: 285px;max-height: 400px;"  class="card-image"/>
@@ -117,7 +119,7 @@
                 </div>
             </div>
             
-            <div class="statTextBox" style="margin:2px;padding-top:0px;padding-left:6px;padding-right:6px;border: 1px solid gray;border-radius:4px;max-width:500px;min-height:180px;min-width:200px;position:relative;background-color:@Model.BackgroundColor();">
+            <div class="statTextBox" style="margin:2px;padding-top:0px;padding-left:6px;padding-right:6px;border: 1px solid gray;border-radius:4px;width:200px;min-height:180px;position:relative;background-color:@Model.BackgroundColor();">
                 @if (!string.IsNullOrEmpty(@Model.BackgroundImage()))
                 {
                     <img src='@Model.BackgroundImage()' style="pointer-events:none;position: absolute;left:@Model.BackgroundImageLeft();top:@Model.BackgroundImageTop();width:@Model.BackgroundImageWidth();height:@Model.BackgroundImageHeight();opacity:.08;" />
@@ -126,7 +128,7 @@
                 <p>@Html.Raw(@Model.Html)</p>
             </div>
             @if (!string.IsNullOrEmpty(@Model.Trait)) {
-                <p style="text-align:center"><a href="@Model.TraitSearchUrl"><b>@Model.Trait</b></a></p>
+                <p style="text-align:center"><a href="@Model.TraitSearchUrl"><b><i>@Model.Trait</i></b></a></p>
             }
             @if (!string.IsNullOrEmpty(@Model.Slot)) {
                 <p style="text-align:center"><a href="@Model.SlotSearchUrl"><b>@Model.Slot</b></a></p>

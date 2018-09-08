@@ -33,21 +33,23 @@ namespace HallOfBeorn.Models.Digital
         {
             var hero = new DigitalCard
             {
-                Title = title,
-                Sphere = sphere,
+                CardSet = this,
                 CardType = DigitalCardType.Hero,
-                IsUnique = true,
                 Rarity = DigitalRarity.Hero,
                 Slug = getSlug(title),
+                Title = title,
+                Sphere = sphere,
+                
+                IsUnique = true,                
                 ThreatCost = threatCost,
                 Trait = trait,
                 Attack = attack,
                 Willpower = willpower,
                 HitPoints = hitPoints,
                 Text = text,
-                Html = html,
+                //Html = html,
                 Artist = artist,
-                CardSet = this,
+                
             };
 
             addCard(hero);
@@ -73,7 +75,7 @@ namespace HallOfBeorn.Models.Digital
                 HitPoints = hitPoints,
                 Trait = trait,
                 Text = text,
-                Html = html,
+                //Html = html,
                 Artist = artist
             };
             addCard(ally);
@@ -97,7 +99,7 @@ namespace HallOfBeorn.Models.Digital
                 ResourceCost = cost,
                 Slot = slot,
                 Text = text,
-                Html = html,
+                //Html = html,
                 Artist = artist
             };
             addCard(attachment);
@@ -122,7 +124,8 @@ namespace HallOfBeorn.Models.Digital
                 ResourceCost = cost,
                 Trait = trait,
                 Text = text,
-                Html = html
+                //Html = html,
+                Artist = artist
             };
             addCard(eventCard);
             return eventCard;

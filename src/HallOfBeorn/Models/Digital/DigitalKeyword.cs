@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.Digital
         Block,
         Defend,
         Fleeting,
+        Guard,
         Power,
         Ranged,
         Revenge,

@@ -26,6 +26,11 @@ namespace HallOfBeorn.Models.Digital.ViewModels
         public string Slug { get { return Card.Slug; } }
         public bool IsUnique { get { return Card.IsUnique; } }
         public byte? Level { get { return Card.Level; } }
+        public string LevelSearchUrl
+        {
+            get { return Level.HasValue ? string.Format("/Digital/Search?Level={0}", Level.Value) : string.Empty; }
+        }
+
         public DigitalRarity? Rarity { get { return Card.Rarity; } }
 
         public DigitalCardType CardType { get { return Card.CardType; } }
@@ -114,13 +119,13 @@ namespace HallOfBeorn.Models.Digital.ViewModels
                 case DigitalSphere.Tactics:
                 case DigitalSphere.Spirit:
                 case DigitalSphere.Lore:
-                    return "48px";
+                    return "6px";
                 default:
                     if (Card.CardType == DigitalCardType.Enemy || Card.CardType == DigitalCardType.Treachery || Card.CardType == DigitalCardType.Objective)
                     {
                         return "0px";
                     }
-                    return "48px";
+                    return "6px";
             }
         }
 

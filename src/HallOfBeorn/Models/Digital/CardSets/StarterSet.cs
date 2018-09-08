@@ -125,13 +125,16 @@ Spear Wall	Tactics	1	4	Event	Every Enemy loses 2 Attack this round (minimum 0)	S
             addAttachment("Dwarven Axe", false, DigitalSphere.Tactics, 1, 2, AttachmentSlot.Weapon,
                 "Gain +1 Attack, or +2 attack if a dwarf.", "<p>Gain +1 ⚔️, or +2 ⚔️ if a dwarf.</p>", Artist.Unknown);
             addAttachment("Favor of the Lady", false, DigitalSphere.Spirit, 1, 1, AttachmentSlot.Special,
-                "Gain +1 Willpower.", "<p>Gain +1 ♢.</p>", Artist.Magali_Villeneuve);
+                "Gain +1 Willpower.", null, Artist.Magali_Villeneuve);
             addAttachment("Round Shield", false, DigitalSphere.Tactics, 1, 2, AttachmentSlot.Armor,
-                "Gain Block.", "<p>Gain <b>Block.</b></p>", Artist.Unknown);
+                "Gain Block.", null, Artist.Unknown);
             addAttachment("Self-preservation", false, DigitalSphere.Lore, 1, 2, AttachmentSlot.Special,
-                "Upkeep: Restore 1 Health", "<p><b>Upkeep:</b> Restore 1 ❤</p>", Artist.Unknown);
+                "Upkeep: Restore 1 Health", 
+                null, Artist.Unknown);
             addAttachment("Spike Trap", false, DigitalSphere.Lore, 1, 0, AttachmentSlot.Special,
-                "Non-Unique enemy only. Upkeep: Deal 1 damage to this enemy.", "<p>Non-Unique enemy only. <b>Upkeep:</b> Deal 1 damage to this enemy.</p>", Artist.Unknown);
+                "Non-Unique enemy only.\nUpkeep: Deal 1 damage to this enemy.",
+                null,
+                Artist.Unknown);
             addAttachment("Warrior Sword", false, DigitalSphere.Tactics, 1, 0, AttachmentSlot.Weapon,
                 "Gain +1 Attack.", "<p>Gain +1 ⚔️</p>", Artist.Unknown);
 

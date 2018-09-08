@@ -71,6 +71,11 @@ namespace HallOfBeorn.Handlers.Digital
             return !model.Rarity.HasValue || model.Rarity.Value == DigitalRarity.None || model.Rarity.Value == card.Rarity;
         }
 
+        private bool LevelFilter(DigitalSearchViewModel model, DigitalCard card)
+        {
+            return !model.Level.HasValue || (card.Level.HasValue && model.Level.Value == card.Level.Value);
+        }
+
         private bool NumericFilter(NumericOperator? op, DigitalCard card, byte target, Func<DigitalCard, byte?> getStat)
         {
             if (!op.HasValue)
@@ -141,6 +146,9 @@ namespace HallOfBeorn.Handlers.Digital
                         continue;
 
                     if (!RarityFilter(model, card))
+                        continue;
+
+                    if (!LevelFilter(model, card))
                         continue;
 
                     if (hasCostFilter && !NumericFilter(model.CostOperator, card, costTarget, (c) => c.ResourceCost))

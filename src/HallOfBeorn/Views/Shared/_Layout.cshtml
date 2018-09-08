@@ -28,11 +28,11 @@
                 <div style="display:inline-block;text-align:center;">
                     <div style="display:inline-block">
                         <a href="/Home" style="text-align:center;display:inline-block;"><img src="/Images/LotRBeornSmall.jpg" width="64" height="48" title="Lord of the Rings LCG Card Search" /></a>
-                        <span class="site-title" style="color: brown; font-family:Tolkien;min-width:230px;display:inline-block;margin-left:0px;">HALL OF BEORN</span>
+                        <span class="site-title" style="color: brown; font-family:Tolkien;min-width:200px;display:inline-block;margin:2px 0px -10px 0px;font-size:28.6px; vertical-align:top;">HALL OF BEORN</span>
                         <a href="/Digital" style="text-align:center;display:inline-block;"><img src="/Images/LotRDigitalBeornSmall.jpg" width="64" height="48" title="Lord of the Rings Digital Card Search" /></a>
                         @* <a href="/Arkham" style="text-align:left"><img src="/Images/ArkhamBeornSmall.jpg" width="64" height="48" title="Arkham Horror LCG Card Search" style="margin-bottom:-4px;"/></a> *@
                     </div>
-                    <div style="min-width:230px;margin-bottom:6px;text-align:center">LotR LCG Card Search</div>
+                    <div style="min-width:200px;margin:-12px 0px 16px 0px;text-align:center">LotR LCG Card Search</div>
                 </div>
                 <div>
                     @*
@@ -55,6 +55,7 @@
                         } else if (@Request.Url.LocalPath.Contains("/Digital")) {
                         <ul id="menu">
                             <li>@Html.ActionLink("Digital", "Search", "Digital")</li>
+                            @* <li><a title="Browse Characters" href="/LotR/Characters/">Characters</a></li> *@
                             <li><a title="Patreon Page" href="https://www.patreon.com/Beorn" target="_blank"><img title="Patreon Donors" alt="Patreon Donors" src="/Images/Patreon.png" /></a></li>
                         </ul>
                         } @* else if (@Request.Url.LocalPath.Contains("/Arkham")) {

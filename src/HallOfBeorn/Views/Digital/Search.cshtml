@@ -63,23 +63,18 @@
                 </span>
             </div>
         </div>
-
+        
         <div class="search-row">
-            <div class="search-section">Text</div>
+            <div class="search-section">Power</div>
             <div class="search-items">
                 <span class="search-filter">
-                <span class="search-label-short">Trait</span>
-                @Html.DropDownListFor(x => x.Trait, DigitalSearchViewModel.Traits, new { @class = "search-select" })
+                <span class="search-label-short">Rarity</span>
+                @Html.DropDownListFor(x => x.Rarity, DigitalSearchViewModel.Rarities, new { @class = "search-select-short-padded" })
                 </span>
 
                 <span class="search-filter">
-                <span class="search-label-short">Keyword</span>
-                @Html.DropDownListFor(x => x.Keyword, DigitalSearchViewModel.Keywords, new { @class = "search-select" })
-                </span>
-
-                <span class="search-filter">
-                <span class="search-label-short">Slot</span>
-                @Html.DropDownListFor(x => x.Slot, DigitalSearchViewModel.Slots, new { @class = "search-select-short-padded" })
+                <span class="search-label-short">Level</span>
+                @Html.DropDownListFor(x => x.Level, DigitalSearchViewModel.Levels, new { @class = "search-select-short-padded" })
                 </span>
             </div>
         </div>
@@ -98,14 +93,8 @@
                 @Html.DropDownListFor(x => x.ThreatCostOperator, DigitalSearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
                 @Html.DropDownListFor(x => x.ThreatCost, DigitalSearchViewModel.ThreatCosts, new { @class = "search-select-short" })
                 </span>
-
-                <span class="search-filter">
-                <span class="search-label-short">Rarity</span>
-                @Html.DropDownListFor(x => x.Rarity, DigitalSearchViewModel.Rarities, new { @class = "search-select-short-padded" })
-                </span>
             </div>
         </div>
-
 
         <div class="search-row">
             <div class="search-section">Stats</div>
@@ -131,6 +120,26 @@
                 </div>
             </div>
         </div>
+
+        <div class="search-row">
+            <div class="search-section">Text</div>
+            <div class="search-items">
+                <span class="search-filter">
+                <span class="search-label-short">Trait</span>
+                @Html.DropDownListFor(x => x.Trait, DigitalSearchViewModel.Traits, new { @class = "search-select" })
+                </span>
+
+                <span class="search-filter">
+                <span class="search-label-short">Keyword</span>
+                @Html.DropDownListFor(x => x.Keyword, DigitalSearchViewModel.Keywords, new { @class = "search-select" })
+                </span>
+
+                <span class="search-filter">
+                <span class="search-label-short">Slot</span>
+                @Html.DropDownListFor(x => x.Slot, DigitalSearchViewModel.Slots, new { @class = "search-select-short-padded" })
+                </span>
+            </div>
+        </div>
     </div>
 }
 <span class="results-count-label">@Model.GetResultsCount()</span>
@@ -143,17 +152,21 @@
             <a href="@card.DetailsUrl"><img src="@card.ThumbImagePath" style="display:inline-block;height: 105px" class="card-image"/></a>
 
             <div style="display:inline-block;vertical-align:top;">
-                @if (@card.IsUnique)
-                {
-                    <img src="/Images/unique-card-small.png" style="margin-bottom:-3px;margin-right:-4px;"/>
-                }
-                @Html.ActionLink(@card.Title, "Details", new { id = @card.Slug }, new { style = "margin-bottom:2px;font-size:medium;font-weight:bold;display:inline-block;" })
+                <div style="display:inline-block">
+                    @if (@card.IsUnique)
+                    {
+                        <img src="/Images/unique-card-small.png" style="margin-bottom:-3px;margin-right:-4px;"/>
+                    }
+                    @Html.ActionLink(@card.Title, "Details", new { id = @card.Slug }, new { style = "margin-bottom:2px;font-size:medium;font-weight:bold;display:inline-block;" })
 
+                    <div style="font-size:12px;color:red;">@card.Rarity (@card.Level)</div>
+                </div>
+                
                 @if (!string.IsNullOrEmpty(@card.Sphere)) {
                     <span><img style="width:30px;height:30px;margin:4px 1px 4px 6px;" src='@string.Format("/Images/{0}-med.png", @card.Sphere)' /></span>
                 }
 
-                <div style="display:inline-block;margin-left:4px;min-width:30px;">
+                <div style="display:inline-block;margin: 4px 0px 0px 6px;min-width:30px;vertical-align:top;">
                     @switch (@card.CardType)
                     {
                         case DigitalCardType.Hero:
@@ -180,7 +193,14 @@
                     @Html.Raw(@card.Html)
                 </div>
                 @if (!string.IsNullOrEmpty(@card.Trait)) {
-                    <div>@card.Trait</div>
+                    <div>
+                        <a href="@card.TraitSearchUrl" target="_blank" style="color:gray"><b><i>@card.Trait</i></b></a>
+                    </div>
+                }
+                @if (!string.IsNullOrEmpty(@card.Slot)) {
+                    <div>
+                        <a href="@card.SlotSearchUrl" target="_blank" style="color:gray"><b>@card.Slot</b></a>
+                    </div>
                 }
             </div>
         </div>

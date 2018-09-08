@@ -21,6 +21,7 @@ namespace HallOfBeorn.Models.Digital.ViewModels
         public DigitalKeyword? Keyword { get; set; }
         public AttachmentSlot? Slot { get; set; }
         public DigitalRarity? Rarity { get; set; }
+        public byte? Level { get; set; }
 
         public NumericOperator? CostOperator { get; set; }
         public string Cost { get; set; }
@@ -213,7 +214,7 @@ namespace HallOfBeorn.Models.Digital.ViewModels
 
         public static IEnumerable<SelectListItem> Levels
         {
-            get { return new string[]{"1", "2", "3"}.GetSelectListItems(); }
+            get { return new string[]{"0", "1", "2", "3"}.GetSelectListItems(); }
         }
     }
 }
