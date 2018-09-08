@@ -92,7 +92,7 @@ namespace HallOfBeorn.Models.Digital.CardSets
                 "Play a random non-unique Ally from your deck", 
                 null, 
                 Artist.Unknown, DigitalRarity.Uncommon);
-            addEvent("Sudden Riposte", DigitalSphere.Lore, 1, 1, null, "Exhaust an Enemy", null, 
+            addEvent("Sudden Riposte", DigitalSphere.Lore, 2, 1, null, "Exhaust an Enemy", null, 
                 Artist.Unknown, DigitalRarity.Uncommon);
         }
     }
