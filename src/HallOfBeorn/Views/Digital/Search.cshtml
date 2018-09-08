@@ -159,7 +159,12 @@
                     }
                     @Html.ActionLink(@card.Title, "Details", new { id = @card.Slug }, new { style = "margin-bottom:2px;font-size:medium;font-weight:bold;display:inline-block;" })
 
-                    <div style="font-size:12px;color:red;">@card.Rarity (@card.Level)</div>
+                    <div style="font-size:12px;color:red;">
+                        @card.Rarity
+                        @if (@card.Level.HasValue) {
+                            @: (@card.Level)
+                        }
+                    </div>
                 </div>
                 
                 @if (!string.IsNullOrEmpty(@card.Sphere)) {
