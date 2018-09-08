@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.Digital
         Power,
         Ranged,
         Revenge,
+        Stalwart,
         Stealth,
         Surge,
         Upkeep,

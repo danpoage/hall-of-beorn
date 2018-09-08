@@ -181,7 +181,7 @@ namespace HallOfBeorn.Models.Digital.ViewModels
         {
             get { return new List<string>{
                 "Starter", 
-                //"Valor Cards", 
+                "Valor Cards", 
                 "Dwalin Pack", "Eowyn Pack", "Faramir Pack", "Legolas Pack" 
             }.GetSelectListItems(); }
         }
