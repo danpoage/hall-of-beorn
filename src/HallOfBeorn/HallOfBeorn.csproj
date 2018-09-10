@@ -1082,7 +1082,7 @@
     <Content Include="Scripts\autocomplete29.js" />
     <Content Include="Scripts\cardDetails1.js" />
     <Content Include="Scripts\cardSearch1.js" />
-    <Content Include="Scripts\Digital\digitalAutocomplete2.js" />
+    <Content Include="Scripts\Digital\digitalAutocomplete3.js" />
     <Content Include="Scripts\Digital\digitalCardDetails1.js" />
     <Content Include="Scripts\Digital\digitalCardSearch1.js" />
     <Content Include="Scripts\highcharts.js" />

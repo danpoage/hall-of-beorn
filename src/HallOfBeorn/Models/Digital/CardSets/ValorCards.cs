@@ -71,6 +71,10 @@ namespace HallOfBeorn.Models.Digital.CardSets
                 null,
                 Artist.Unknown, DigitalRarity.Uncommon);
 
+            addEvent("Ever Vigilant", DigitalSphere.Leadership, 1, 1, null, "Ready a Character", null, 
+                Artist.Daarken, DigitalRarity.Common);
+            addEvent("Lembas", DigitalSphere.Lore, 1, 2, null, "Restor 2 Health to a Character; then ready them", null, 
+                Artist.Sara_Biddle, DigitalRarity.Common);
             addEvent("Borne Aloft", DigitalSphere.Spirit, 1, 1, DigitalTrait.Preparation, 
                 "The next Ally from your deck that is defeated returns to your hand instead",
                 null, 
@@ -91,8 +95,6 @@ namespace HallOfBeorn.Models.Digital.CardSets
                 "Play a random non-unique Ally from your deck", 
                 null, 
                 Artist.Unknown, DigitalRarity.Uncommon);
-            addEvent("Lembas", DigitalSphere.Lore, 1, 2, null, "Restor 2 Health to a Character; then ready them", null, 
-                Artist.Sara_Biddle, DigitalRarity.Common);
             addEvent("Sudden Riposte", DigitalSphere.Lore, 2, 1, null, "Exhaust an Enemy", null, 
                 Artist.Unknown, DigitalRarity.Uncommon);
         }
