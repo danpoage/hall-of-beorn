@@ -17,7 +17,7 @@ namespace HallOfBeorn.Models.Digital.CardSets
             addAlly("Tom Bombadil", true, DigitalSphere.None, 0, 5, 3, 3, 4, DigitalTrait.Legend,
                 "Fleeting. Arrival: Defeat a non-unique Enemy", 
                 null, 
-                Artist.Unknown, DigitalRarity.Legendary);
+                Artist.Romana_Kendelic, DigitalRarity.Legendary);
             addAlly("Trollshaw Scout", false, DigitalSphere.Lore, 1, 3, 2, 2, 5, DigitalTrait.Noldor,
                 "Revenge: Exhaust a random Enemy",
                 null, 
@@ -29,15 +29,15 @@ namespace HallOfBeorn.Models.Digital.CardSets
             addAlly("Galadriel's Handmaiden", false, DigitalSphere.Spirit, 1, 1, 0, 2, 2, DigitalTrait.Silvan,
                 "Arrival: Lose 1 Threat", 
                 null,
-                Artist.Unknown, DigitalRarity.Common);
+                Artist.Sara_Betsy, DigitalRarity.Common);
             addAlly("Ghan-buri-Ghan", true, DigitalSphere.Lore, 1, 2, 1, 0,	5, DigitalTrait.Wose,
                 "Stealth. Gain +1 Willpower for each Objective in play",
                 null, 
-                Artist.Unknown, DigitalRarity.Rare);
+                Artist.Piya_Wannachaiwong, DigitalRarity.Rare);
             addAlly("Erkenbrand", true, DigitalSphere.Leadership, 1, 4,	2, 0, 6, DigitalTrait.Rohan,
                 "Block. Guard",
                 null, 
-                Artist.Unknown, DigitalRarity.Rare);
+                Artist.Sebastian_Giacobino, DigitalRarity.Rare);
             addAlly("Westfold Outrider", false, DigitalSphere.Tactics, 1, 2, 2, 0, 3, DigitalTrait.Rohan,
                 "Arrival: Deal 2 damage to an unwounded Enemy",
                 null, 
@@ -47,10 +47,9 @@ namespace HallOfBeorn.Models.Digital.CardSets
                 null,
                 Artist.Unknown, DigitalRarity.Rare);
             addAlly("Beorn", true, DigitalSphere.Tactics, 1, 5, 2, 1, 6, DigitalTrait.Beorning, 
-                "Cannot equip Attachments. Gain +1 Attack for each point below maximum Health",
+                "Gain +1 Attack for each point below maximum Health.\nCannot equip Attachments.",
                 null,
                 Artist.Tiziano_Baracchi, DigitalRarity.Rare);
-
             addAttachment("Star Brooch", false, DigitalSphere.Spirit, 1, 2, AttachmentSlot.Special,
                 "Gain Stalwart",
                 null, 
@@ -66,7 +65,7 @@ namespace HallOfBeorn.Models.Digital.CardSets
             addAttachment("Forest Snare", false, DigitalSphere.Lore, 1, 3, AttachmentSlot.Special, 
                 "Exhaust a non-unique enemy. That enemy does not ready during upkeep",
                 null,
-                Artist.Unknown, DigitalRarity.Uncommon);
+                Artist.Alexandru_Sabo, DigitalRarity.Uncommon);
             addAttachment("Ranger's Blade", false, DigitalSphere.Leadership, 1, 1, AttachmentSlot.Weapon,
                 "Gain +1 Attack", 
                 null,
@@ -92,6 +91,8 @@ namespace HallOfBeorn.Models.Digital.CardSets
                 "Play a random non-unique Ally from your deck", 
                 null, 
                 Artist.Unknown, DigitalRarity.Uncommon);
+            addEvent("Lembas", DigitalSphere.Lore, 1, 2, null, "Restor 2 Health to a Character; then ready them", null, 
+                Artist.Sara_Biddle, DigitalRarity.Common);
             addEvent("Sudden Riposte", DigitalSphere.Lore, 2, 1, null, "Exhaust an Enemy", null, 
                 Artist.Unknown, DigitalRarity.Uncommon);
         }

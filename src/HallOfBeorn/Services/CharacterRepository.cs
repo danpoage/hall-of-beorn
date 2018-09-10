@@ -5,8 +5,8 @@ using System.Web;
 
 using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
-using HallOfBeorn.Models.LotR.Characters;
-using HallOfBeorn.Models.LotR.Characters.Groups;
+using HallOfBeorn.Models.Characters;
+using HallOfBeorn.Models.Characters.Groups;
 
 namespace HallOfBeorn.Services
 {

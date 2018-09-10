@@ -89,10 +89,13 @@ namespace HallOfBeorn.Models
                 case LinkType.Die_Manner_von_Gondor:
                     return string.Format("https://menofgondor.wordpress.com/?s={0}", title);
 
-                case LinkType.Hall_of_Beorn_Card_Detail:
-                case LinkType.Hall_of_Beorn_Card_Image:
-                    var slug = string.IsNullOrEmpty(card.SlugSuffix) ? card.Slug : card.Slug + card.SlugSuffix;
+                case LinkType.Hall_of_Beorn_LotR_Detail:
+                case LinkType.Hall_of_Beorn_LotR_Image:
+                    //var slug = string.IsNullOrEmpty(card.SlugSuffix) ? card.Slug : card.Slug + card.SlugSuffix;
                     return string.Format("/LotR/Details/{0}", card.Slug);
+                case LinkType.Hall_of_Beorn_Digital_Detail:
+                case LinkType.Hall_of_Beorn_Digital_Image:
+                    return string.Format("/Digital/Details/{0}", card.Slug);
                 default:
                     return string.Empty;
             }
@@ -105,7 +108,7 @@ namespace HallOfBeorn.Models
 
         private static string getText(LinkType type, ICard card, string title)
         {
-            if (type == LinkType.Hall_of_Beorn_Card_Image) {
+            if (type == LinkType.Hall_of_Beorn_LotR_Image) {
                 var slug = string.Empty;
                 if (card.IsCampaign) {
                     slug = string.Format("{0}-SetupA", card.Title.ToUrlSafeString());
@@ -116,6 +119,9 @@ namespace HallOfBeorn.Models
                     slug = string.IsNullOrEmpty(card.SlugSuffix) ? card.Title.ToUrlSafeString() : string.Format("{0}-{1}", card.Title.ToUrlSafeString(), card.SlugSuffix);
                 }
                 return string.Format("<img src=\"https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}.jpg\" title=\"{2}\" style=\"height:180px\"></img>", card.CardSetName.NormalizeCaseSensitiveString().ToUrlSafeString(), slug, title.Replace("'", "’"));
+            } else if (type == LinkType.Hall_of_Beorn_Digital_Image) {
+                var slug = card.Title.NormalizeCaseSensitiveString().ToUrlSafeString();
+                return string.Format("<img src=\"https://s3.amazonaws.com/hallofbeorn-resources/Images/Digital/{0}/{1}.jpg\" title=\"{2}\" style=\"height:180px\"></img>", card.CardSetName.NormalizeCaseSensitiveString().ToUrlSafeString(), slug, title.Replace("'", "’"));
             } else {
                 return title;
             }

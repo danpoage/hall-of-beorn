@@ -45,7 +45,12 @@ namespace HallOfBeorn.Controllers
                 playerCategoryService, encounterCategoryService, questCategoryService,
                 ringsDbService);
 
-            _charactersHandler = new CharactersHandler(cardRepository, characterRepository);
+            //TODO: Move this to a CharacterController
+            var digitalCardRepository = new Services.Digital.DigitalCardRepository(
+                new Services.Digital.DigitalProductRepository()
+                );
+
+            _charactersHandler = new CharactersHandler(cardRepository, digitalCardRepository, characterRepository);
 
             _detailsHandler = new DetailsHandler(cardRepository, characterRepository, 
                 playerCategoryService, encounterCategoryService, questCategoryService,

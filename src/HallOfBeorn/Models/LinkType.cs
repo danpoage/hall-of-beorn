@@ -50,8 +50,11 @@ namespace HallOfBeorn.Models
         Expecting_Mischief,
         Die_Manner_von_Gondor,
 
-        Hall_of_Beorn_Card_Detail,
-        Hall_of_Beorn_Card_Image,
-        Hall_of_Beorn_Character
+        Hall_of_Beorn_LotR_Detail,
+        Hall_of_Beorn_LotR_Image,
+        Hall_of_Beorn_Digital_Detail,
+        Hall_of_Beorn_Digital_Image,
+        Hall_of_Beorn_Character,
+        
     }
 }

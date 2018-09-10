@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using HallOfBeorn.Models.Digital;
 
 namespace HallOfBeorn.Models.LotR.ViewModels
 {
@@ -58,7 +59,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public IEnumerable<ILink> CardLinks { get { return cardLinks; } }
 
-        public void AddCardLink(LotRCard card)
+        public void AddLotRCardLink(LotRCard card)
         {
             if (card == null) {
                 return;
@@ -67,7 +68,19 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             var sphere = card.Sphere != Sphere.None ? card.Sphere.ToString() + " " : string.Empty;
             var title = string.Format("{0} ({1}{2})", card.Title, sphere, card.CardType.ToString().Replace("_", "-"));
 
-            cardLinks.Add(new Link(LinkType.Hall_of_Beorn_Card_Image, card, title));
+            cardLinks.Add(new Link(LinkType.Hall_of_Beorn_LotR_Image, card, title));
+        }
+
+        public void AddDigitalCardLink(DigitalCard card)
+        {
+            if (card == null) {
+                return;
+            }
+
+            var sphere = card.Sphere != DigitalSphere.None ? card.Sphere.ToString() + " " : string.Empty;
+            var title = string.Format("{0} ({1}{2})", card.Title, sphere, card.CardType.ToString().Replace("_", "-"));
+
+            cardLinks.Add(new Link(LinkType.Hall_of_Beorn_Digital_Image, card, title));
         }
 
         private readonly Dictionary<string, string> allCharacters = new Dictionary<string, string>();

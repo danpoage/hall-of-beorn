@@ -30,6 +30,27 @@ namespace HallOfBeorn.Models.Digital.ViewModels
         {
             get { return Level.HasValue ? string.Format("/Digital/Search?Level={0}", Level.Value) : string.Empty; }
         }
+        public string LevelHint
+        {
+            get
+            {
+                if (!Level.HasValue)
+                    return "This card has no level";
+
+                switch (Level.Value)
+                {
+                    case 3:
+                        return string.Format("Can only be included in decks with 3 {0} Heroes", Card.Sphere);
+                    case 2:
+                    case 1:
+                        return string.Format("Can only be included in decks with {0} or more {1} Heroes", Level.Value, Card.Sphere);
+                    case 0:
+                    default:
+                        return "Can be included in any deck";
+                }
+            }
+        }
+
 
         public DigitalRarity? Rarity { get { return Card.Rarity; } }
 

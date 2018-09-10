@@ -46,7 +46,9 @@ namespace HallOfBeorn.Models
         private readonly List<ILink> groups = new List<ILink>();
         private readonly List<ILink> articles = new List<ILink>();
         private readonly List<string> books = new List<string>();
-        private readonly List<string> cards = new List<string>();
+
+        private readonly List<string> lotrCards = new List<string>();
+        private readonly List<string> digitalCards = new List<string>();
         
         protected void Alias(string alias)
         {
@@ -59,7 +61,7 @@ namespace HallOfBeorn.Models
             var url = string.Empty;
 
             if (!string.IsNullOrEmpty(slug)) {
-                type = LinkType.Hall_of_Beorn_Card_Detail;
+                type = LinkType.Hall_of_Beorn_LotR_Detail;
                 url = string.Format("/LotR/Details/{0}", slug);
             }
 
@@ -145,7 +147,7 @@ namespace HallOfBeorn.Models
             var url = string.Empty;
 
             if (!string.IsNullOrEmpty(slug)) {
-                type = LinkType.Hall_of_Beorn_Card_Detail;
+                type = LinkType.Hall_of_Beorn_LotR_Detail;
                 url = getDetailUrl(slug);
             }
 
@@ -197,9 +199,14 @@ namespace HallOfBeorn.Models
             this.books.Add(BOOK_HURIN);
         }
 
-        protected void Card(string card)
+        protected void LotRCard(string card)
         {
-            this.cards.Add(card);
+            lotrCards.Add(card);
+        }
+
+        protected void DigitalCard(string card)
+        {
+            digitalCards.Add(card);
         }
 
         public string Name { get; private set; }
@@ -241,7 +248,9 @@ namespace HallOfBeorn.Models
 
         public IEnumerable<ILink> Aliases { get { return aliases; } }
         public IEnumerable<string> Books { get { return books; } }
-        public IEnumerable<string> Cards { get { return cards; } }
+
+        public IEnumerable<string> LotRCards { get { return lotrCards; } }
+        public IEnumerable<string> DigitalCards { get { return digitalCards; } }
 
         public static Character Empty()
         {

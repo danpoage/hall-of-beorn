@@ -12,58 +12,6 @@ namespace HallOfBeorn.Models.Digital.CardSets
         {
         }
 
-/*
-Hero	Sphere	Threat	Attack	Willpower	Health	Traits	Effect	Source
-Legolas	Tactics	9	2	1	9	Silvan	Ranged. Upkeep: Deal 1 damage	Legolas Pack
-Eowyn	Spirit	9	2	1	8	Rohan	Gain +2 Willpower this round after the first time a Character is damage in the round.	Eowyn Pack
-Faramir	Lore	11	2	1	10	Gondor	Ranged. Vanquish: Draw 1 card	Faramir Pack
-Dwalin	Leadership	10	2	1	10	Dwarf	Gain +1 Attack and +1 Willpower when at 5 health or less	Dwalin Pack
- */
-
-//Other expansions
-/*
-Erebor Record Keeper	Lore	1	2	1	2	4	Dwarf	Upkeep: Draw a card	Dwalin Pack	Common
-Erkenbrand	Leadership	1	4	2	0	6	Rohan	Block. Guard	Valor	Rare
-Galadriel's Handmaiden	Spirit	1	1	0	2	2	Silvan	Arrival: Lose 1 Threat	Valor	Common
-Tom Bombadil	Neutral	0	5	3	3	4	Legend	Fleeting. Arrival: Defeat a non unique Enemy	Valor	Legendary
-Trollshaw Scout	Lore	1	3	2	2	5	Noldor	Revenge: Exhaust a random Enemy	Valor	Common
-Zigil Miner	Leadership	1	1	1	1	3	Dwarf	Exhaust Zigil Miner to gain +1 Resource	Valor	Common
-Westfold Outrider	Tactics	1	2	2	0	3	Rohan	Arrival: Deal 2 damage to an unwounded Enemy	Valor	Common
-Escort from Edoras	Leadership	1	1	1	1	2	Rohan	Revenge: Ready a Character	Eowyn Pack	Common
-Barliman Butterbur	Spirit	1	2	1	1	5	Bree	Spend 1 Resource and exhaust Barliman Butterbur to draw a card	Valor	Rare
-Silvan Tracker	Lore	1	1	1	1	3	Silvan	Arrival: Give a Character Stealth this round	Legolas Pack	Common
-Mablung	Lore	2	4	2	1	5	Gondor	Ranged. Arrival: Exhaust a non unique Enemy	Faramir Pack	Legendary
-Beorn	Tactics	1	5	2	1	6	Beorning	Cannot equip Attachments. Gain +1 Attack for each point below maximum Health	Valor	Rare
-Ghan-buri-Ghan	Lore	1	3	1	0	5	Wose	Stealth. Gain +1 Willpower for each Objective in play	Valor	Rare
-*/
-
-//Attachments
-/*
-Dunedain Letter	Leadership	1	2	Special	Gain +1 Health, then gain Stealth this round.	Starter
-Dwarven Axe	Tactics	1	2	Weapon	Gain +1 Attack, or +2 attack if a dwarf.	Starter
-Favor of the Lady	Spirit	1	1	Special	Gain +1 Willpower.	Starter
-Round Shield 	Tactics	1	2	Armor	Gain Block.	Starter
-Self-Preservation	Lore	1	2	Special	Upkeep: Restore 1 Health	Starter
-Spike Trap	Lore	1	0	Special	Non-Unique enemy only. Upkeep: Deal 1 damage to this enemy.	Starter
-Warrior Sword	Tactics	1	0	Weapon	Gain +1 Attack.	Starter
-*/
-
-//Events
-/*
-A Watchful Peace	Spirit	1	1	Event	Lose 2 Threat	Starter	Starter
-Advance Warning	Lore	1	1	Preparation	Exhaust the next Enemy that enters play during the Adventure phase	Starter	Starter
-Beorns Hospitality	Lore	1	2	Event	Choose: Restore 1 Health to every Character; or restore 4 Health to a Hero	Starter	Starter
-Careful Planning	Spirit	1	1	Preparation	Lose Threat equal to the cost of the next Event of 1 Resource cost or greater that Sauron plays	Starter	Starter
-Common Cause	Leadership	1	0	Event	Exhaust an Ally to ready another Character	Starter	Starter
-Favor of the Valar	Neutral	1	2	Preparation	If the Threat Meter would reach 50, lose 3 Threat instead	Starter	Starter
-Feint	Tactics	1	1	Event	Reduce a non-unique Enemy to 0 Attack this round.	Starter	Starter
-Gaining Strength	Leadership	1	0	Event	Gain +1 Resource	Starter	Starter
-Mithrandir's Advice	Lore	1	1	Event	Draw 2 cards	Starter	Starter
-Secret Paths	Spirit	1	1	Event	Apply 2 progress	Starter	Starter
-Sneak Attack	Leadership	1	1	Event	Play a random Ally. That Ally gains Fleeting	Starter	Starter
-Spear Wall	Tactics	1	4	Event	Every Enemy loses 2 Attack this round (minimum 0)	Starter	Starter
-*/
-
         protected override void Initialize()
         {
             addHero("Aragorn", DigitalSphere.Leadership, 11, 2, 2, 11, DigitalTrait.Dunadan, 
