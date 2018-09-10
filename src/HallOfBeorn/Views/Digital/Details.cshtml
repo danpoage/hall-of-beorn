@@ -28,7 +28,7 @@
             <div style="max-width:154px;"><a href="@Model.CardSetSearchUrl" title="Search for @Model.CardSetName">@Model.CardSetName</a></div>
             @* <span style="margin-left:8px;display:inline-block;">@string.Format("#{0}", @Model.Number)</span> *@
             <div style="max-width: 154px;">
-                <span style="display:inline-block;margin-left: 4px;">@Model.Rarity</span>
+                <span style="display:inline-block;margin-left: 4px;" title="Card Rarity">@Model.Rarity</span>
                 @if (@Model.Level.HasValue)
                 {
                     <span style="margin-left:4px">(<a href="@Model.LevelSearchUrl" title="@Model.LevelHint">Level @Model.Level</a>)</span>
