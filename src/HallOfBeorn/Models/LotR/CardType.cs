@@ -17,6 +17,7 @@ namespace HallOfBeorn.Models.LotR
         Treasure = 37,
         Player_Side_Quest = 38,
         Quest = 100,
+        Setup = 101,
         Nightmare_Setup = 102,
         Campaign = 103,
         GenCon_Setup = 104,

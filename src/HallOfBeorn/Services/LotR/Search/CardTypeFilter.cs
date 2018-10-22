@@ -46,11 +46,15 @@ namespace HallOfBeorn.Services.LotR.Search
             }
             else if (type == Models.LotR.CardType.Encounter)
             {
-                return card.CardType == Models.LotR.CardType.Enemy || card.CardType == Models.LotR.CardType.Location || card.CardType == Models.LotR.CardType.Treachery || card.CardType == Models.LotR.CardType.Objective || card.CardType == Models.LotR.CardType.Objective_Ally || card.CardType == Models.LotR.CardType.Objective_Location || card.CardType == Models.LotR.CardType.Encounter_Side_Quest || card.CardType == Models.LotR.CardType.Ship_Objective || card.CardType == Models.LotR.CardType.Ship_Enemy;
+                return card.CardType == Models.LotR.CardType.Enemy || card.CardType == Models.LotR.CardType.Location || card.CardType == Models.LotR.CardType.Treachery || card.CardType == Models.LotR.CardType.Objective || card.CardType == Models.LotR.CardType.Objective_Hero || card.CardType == Models.LotR.CardType.Objective_Ally || card.CardType == Models.LotR.CardType.Objective_Location || card.CardType == Models.LotR.CardType.Encounter_Side_Quest || card.CardType == Models.LotR.CardType.Ship_Objective || card.CardType == Models.LotR.CardType.Ship_Enemy;
             }
             else if (type == Models.LotR.CardType.Objective)
             {
                 return card.CardType == Models.LotR.CardType.Objective || card.CardType == Models.LotR.CardType.Objective_Ally;
+            }
+            else if (type == Models.LotR.CardType.Setup)
+            {
+                return card.CardType == Models.LotR.CardType.Nightmare_Setup || card.CardType == Models.LotR.CardType.GenCon_Setup || card.CardType == Models.LotR.CardType.Campaign || card.CardType == Models.LotR.CardType.Scenario;
             }
             else
             {
