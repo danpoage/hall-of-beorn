@@ -476,7 +476,7 @@
                         }
                         else
                         {
-                               <span class="detail-label">@card.SetName</span>
+                            <span class="detail-label">@card.SetName</span>
                         }
                         <span class="detail-label">@card.CountLabel</span>
                     </div>                
@@ -510,13 +510,31 @@
                             }
                             else
                             {
-                            <img src="@card.ThumbImagePath" style="height: 180px" class="card-image"/>
+                              <img src="@card.ThumbImagePath" style="height: 180px" class="card-image"/>
+                            }
+                        </a>
+                    </div>
+                }
+                @if (@Model.View.HasValue && @Model.View == View.Card_Art)
+                {
+                    <div style="float:left;margin-right:4px;">
+                        <a href="@Href(string.Format("/Cards/Details/{0}", @card.Slug))">
+                            @if (@card.HasSecondArtImage)
+                            {
+                                <span style="text-align:left;">
+                                    <img src="@card.ArtImagePath1" style="height: 67px" class="card-image"/>
+                                    <img src="@card.ArtImagePath2" style="height: 67px; margin-left: 4px;" class="card-image"/>
+                                </span>
+                            }
+                            else
+                            {
+                              <img src="@card.ArtImagePath" style="height: 100px" class="card-image"/>
                             }
                         </a>
                     </div>
                 }
 
-                @if (!@Model.View.HasValue || (@Model.View.HasValue && (@Model.View == View.Card || @Model.View == View.Card_Text)))
+                @if (!@Model.View.HasValue || (@Model.View.HasValue && (@Model.View == View.Card || @Model.View == View.Card_Text || @Model.View == View.Card_Art)))
                 {
                     <div style="display:inline-block;margin-left:4px;min-width:30px;">
                         @switch (@card.CardType)

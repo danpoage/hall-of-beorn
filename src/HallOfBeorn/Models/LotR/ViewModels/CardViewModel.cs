@@ -705,16 +705,65 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             }
         }
 
+        private static string getImagePath(LotRCard card, string directory)
+        {
+            var set = !string.IsNullOrEmpty(card.CardSet.NormalizedName) ? card.CardSet.NormalizedName.ToUrlSafeString() : card.CardSet.Name.ToUrlSafeString();
+            var title = card.Title.ToUrlSafeString();
+            var suffix = !string.IsNullOrEmpty(card.SlugSuffix) ? string.Format("-{0}", card.SlugSuffix.ToUrlSafeString()) : string.Empty;
+            
+            return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/{0}/{1}/{2}{3}.jpg", directory, set, title, suffix);
+        }
+
         public string ThumbImagePath
         {
             get
             {
-                var set = !string.IsNullOrEmpty(_card.CardSet.NormalizedName) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
-                var title = _card.Title.ToUrlSafeString();
-                var suffix = !string.IsNullOrEmpty(_card.SlugSuffix) ? string.Format("-{0}", _card.SlugSuffix.ToUrlSafeString()) : string.Empty;
-                var thumb = _card.HasThumbnail ? "_thumb" : string.Empty;
+                return getImagePath(_card, "Thumbnails");
+                //var set = !string.IsNullOrEmpty(_card.CardSet.NormalizedName) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
+                //var title = _card.Title.ToUrlSafeString();
+                //var suffix = !string.IsNullOrEmpty(_card.SlugSuffix) ? string.Format("-{0}", _card.SlugSuffix.ToUrlSafeString()) : string.Empty;
+                //var thumb = _card.HasThumbnail ? "_thumb" : string.Empty;
 
-                return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}{2}{3}.jpg", set, title, suffix, thumb);
+                //return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Thumbnails/{0}/{1}{2}.jpg", set, title, suffix);
+            }
+        }
+
+        public string ArtImagePath
+        {
+            get
+            {
+                return getImagePath(_card, "Art");
+            }
+        }
+
+        public string ArtImagePath1
+        {
+            get {
+                switch (_card.CardType)
+                {
+                    case Models.LotR.CardType.Quest:
+                        return getQuestCardArtImagePath(true); 
+                    case Models.LotR.CardType.Campaign:
+                    case Models.LotR.CardType.Nightmare_Setup:
+                    case Models.LotR.CardType.GenCon_Setup:
+                    case Models.LotR.CardType.Scenario:
+                        return getSetupCardArtImagePath(true);
+                    default:
+                        return null;
+                }
+            }
+        }
+
+        public string ArtImagePath2
+        {
+            get {
+                switch (_card.CardType)
+                {
+                    case Models.LotR.CardType.Quest:
+                        return getQuestCardArtImagePath(false);
+                    default:
+                        return null;
+                }
             }
         }
 
@@ -743,6 +792,31 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}-Setup{2}.jpg", set, title, letter);
         }
 
+        public string getQuestCardArtImagePath(bool isFirst)
+        {
+            var set = (Card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
+            var title = Title.ToUrlSafeString();
+            var suffix = !string.IsNullOrEmpty(_card.SlugSuffix) ? string.Format("-{0}", _card.SlugSuffix.ToUrlSafeString()) : string.Empty;
+            var number = _card.StageNumber.ToString();
+
+            var letter = isFirst ? "A" : "B";
+            if (_card.StageLetter != 'A')
+            {
+                letter = isFirst ? _card.StageLetter.ToString() : GetSecondStageLetter().ToString();
+            }
+
+            return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Art/{0}/{1}{2}-{3}{4}.jpg", set, title, suffix, number, letter);
+        }
+
+        public string getSetupCardArtImagePath(bool isFirst)
+        {
+            var set = (_card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
+            var title = _card.Title.ToUrlSafeString();
+            var letter = isFirst ? "A" : "B";
+
+            return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Art/{0}/{1}-Setup{2}.jpg", set, title, letter);
+        }
+
         public bool HasSecondImage
         {
             get
@@ -763,6 +837,18 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                     default:
                         return false;
                 }
+            }
+        }
+
+        public bool HasSecondArtImage
+        {
+            get
+            {
+                if (_card.CardType == LotR.CardType.Location && !string.IsNullOrEmpty(_card.OppositeTitle)) {
+                    return true;
+                }
+
+                return _card.CardType == LotR.CardType.Quest;
             }
         }
 
