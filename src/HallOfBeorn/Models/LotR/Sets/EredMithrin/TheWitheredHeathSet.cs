@@ -43,7 +43,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithInfo(5, 3, Artist.Preston_Stone);
             addAlly("Beorning Skin-changer", 2, Sphere.Tactics, false, 1, 1, 1, 3)
                 .WithTraits("Beorning.")
-                .WithText("Combat Action: Choose a Beorning ally with printed cost 3 or more in your hand of discard pile. Discard ~Beorning Skin-changer to put that ally into play.")
+                .WithText("Combat Action: Choose a Beorning ally with printed cost 3 or more in your hand or discard pile. Discard ~Beorning Skin-changer to put that ally into play.")
                 .WithFlavor("\"...sometimes he is a huge black bear, sometimes he is a great strong black-haired man with huge arms and a great beard.\"\r\n-Gandalf, The Hobbit")
                 .WithInfo(6, 3, Artist.Jason_Jenicke);
             addEvent("Beorn's Rage", 1, Sphere.Tactics)
