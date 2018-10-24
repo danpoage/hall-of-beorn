@@ -40,7 +40,7 @@ namespace HallOfBeorn.Services.LotR.Search
         private const string defaultCardSet = "Core Set";
         private const CardType defaultCardType = CardType.Hero;
         private const int defaultOffset = 0;
-        private const int defaultLimit = 100;
+        private const int defaultLimit = 200;
 
         private IEnumerable<IComponent> CreateFilters(SearchViewModel model)
         {
