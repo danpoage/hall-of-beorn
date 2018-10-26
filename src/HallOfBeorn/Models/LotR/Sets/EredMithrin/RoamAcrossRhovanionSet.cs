@@ -17,8 +17,6 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
             SetType = Models.SetType.Adventure_Pack;
             Cycle = "Ered Mithrin";
 
-            IsSpoiler = true;
-
             addHero("Haldan", 10, Sphere.Lore, 2, 3, 1, 4)
                 .WithTraits("Woodman.", "Scout.")
                 .WithText("While the active location has an attachment on it, Haldan does not exhaust to quest.\r\nResponse: When the active location is explored, draw 1 card for each attachment on it.")

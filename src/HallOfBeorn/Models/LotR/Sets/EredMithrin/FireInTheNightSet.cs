@@ -35,6 +35,16 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithText("Attach to a hero.\r\nAttached hero gets +2 Attack.\r\nResponse: After attached hero drestroys an enemy, add 1 resource to attached hero's pool.")
                 .WithTemplate("<p class='main-text'>{keyword:Guarded+%28enemy+or+location%29.@Guarded (enemy or location).}</p><p class='main-text'>Attach to a hero. {keyword:Restricted.}</p><p class='main-text'>Attached hero gets +2 {Attack}.</p><p class='main-text'><b>Response:</b> After attach hero destroys an enemy, add 1 resource to attached hero's pool.</p>")
                 .WithInfo(58, 3, Artist.Aleksander_Karcz);
+            addAttachment("Leather Boots", 1, Sphere.Lore, false)
+                .WithTraits("Item.")
+                .WithText("Attach to a Lore or Ranger character. Limit 1 per character.\r\nResponse: After a Location is revealed from the encounter deck, exhaust Leather Boots to ready attached character.")
+                .WithFlavor("His legs were stretched out, stuck in long soft boots that fit him just right\r\n-The Fellowship of the Ring")
+                .WithInfo(60, 3, Artist.Yoann_Boissonnet);
+            addAlly("Giant Bear", 5, Sphere.Tactics, false, 0, 4, 3, 4)
+                .WithTraits("Creature.", "Beorning.")
+                .WithText("Cannot have attachments.\r\nAction: Ready Giant Bear. At the end of the phase, if you have used this ability, shuffle Giant Bear into your deck. (Limit once per phase.)")
+                .WithFlavor("\"He roams around as a bear\"\r\n-Gandalf, The Hobbit")
+                .WithInfo(61, 3, Artist.Brendan_C_Murphy);
             addAlly("Galion", 0, Sphere.Spirit, true, 0, 0, 0, 1)
                 .WithTraits("Silvan.")
                 .WithText("Cannot attack or defend.\r\nResponse: After Galion enters play, he gets +1 Willpower until the end of the round.")

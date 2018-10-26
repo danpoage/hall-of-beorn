@@ -619,6 +619,7 @@ namespace HallOfBeorn.Models
 
             //Ered Mithin Cycle
             all.Add(Artist.Alex_Boca);
+            all.Add(Artist.Brendan_C_Murphy);
 
             //Arkham Horrom Core
             //all.Add(Artist.Vincent_Dutrait);
@@ -881,6 +882,7 @@ namespace HallOfBeorn.Models
         public static Artist Bon_Bernardo = new Artist { Name = "Bon Bernardo", URL = "http://bonify.deviantart.com" };
         public static Artist Borja_Pindado = new Artist { Name = "Borja Pindado", URL = "https://borjapindado.deviantart.com" };
         public static Artist Brandon_Leach = new Artist { Name = "Brandon Leach", URL = "http://b-nine.deviantart.com" };
+        public static Artist Brendan_C_Murphy = new Artist { Name = "Brendan C. Murphy", URL = "https://www.brendancmurphy.com" };
         public static Artist Brent_Hollowel = new Artist { Name = "Brent Hollowel", URL = "http://brenthollowellart.blogspot.com" };
         public static Artist Brian_Valenzuela = new Artist { Name = "Brian Valenzuela", URL = "http://bval05.deviantart.com" };
         public static Artist C_B_Sorge = new Artist { Name = "C. B. Sorge", URL = "http://psychohazard.deviantart.com" };

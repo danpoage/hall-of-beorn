@@ -1079,7 +1079,7 @@
     <Content Include="Images\willpower-small.png" />
     <Content Include="Scripts\arkhamAutocomplete1.js" />
     <Content Include="Scripts\arkhamCardSearch.js" />
-    <Content Include="Scripts\autocomplete29.js" />
+    <Content Include="Scripts\autocomplete30.js" />
     <Content Include="Scripts\cardDetails1.js" />
     <Content Include="Scripts\cardSearch1.js" />
     <Content Include="Scripts\Digital\digitalAutocomplete3.js" />
