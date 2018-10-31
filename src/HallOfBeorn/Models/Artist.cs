@@ -620,6 +620,7 @@ namespace HallOfBeorn.Models
             //Ered Mithin Cycle
             all.Add(Artist.Alex_Boca);
             all.Add(Artist.Brendan_C_Murphy);
+            all.Add(Artist.Derek_D_Edgell);
 
             //Arkham Horrom Core
             //all.Add(Artist.Vincent_Dutrait);
@@ -695,6 +696,7 @@ namespace HallOfBeorn.Models
         public static Artist Dechambo = new Artist { Name = "Dechambo", URL = "http://www.dechambo.com/Dechambo_Artwork/www.dechambo.com.html" };
         public static Artist Deelane = new Artist { Name = "Deelane", URL = "http://deelane.deviantart.com" };
         public static Artist Denman_Rooke = new Artist { Name = "Denman Rooke", URL = "http://denmanrooke.deviantart.com" };
+        public static Artist Derek_D_Edgell = new Artist { Name = "Derek D. Edgell", URL = "http://www.derekdedgell.com" };
         public static Artist DinoDrawing = new Artist { Name = "Sergey Glushakov", URL = "http://dinodrawing.deviantart.com" };
         public static Artist Dylan_Palmer = new Artist { Name = "Dylan Palmer", URL = "http://deelock.deviantart.com" };
         public static Artist Ebe_Kastein = new Artist { Name = "Ebe Kastein", URL = "http://ebe-kastein.deviantart.com" };
