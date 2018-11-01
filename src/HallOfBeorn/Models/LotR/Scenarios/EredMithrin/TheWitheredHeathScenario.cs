@@ -16,8 +16,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
             GroupName = "Ered Mithrin";
             Number = 4;
 
-            //QuestCompanionSlug = "the-dream-chaser-quest-a-storm-on-cobas-haven";
-            DifficultyRating = 6.5f;
+            QuestCompanionSlug = "ered-mithrin-quest-the-withered-heath";
+            DifficultyRating = 6.4f;
             Votes = 1;
 
             RulesImageCount = 2;
@@ -40,7 +40,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
             ExcludeFromEasyMode("Deadly-Cold-TWH", 1);
 
             ExcludeWildCreaturesFromEasyMode();
-            ExcludeLostInTheWildernessFromEasyMode();
+            ExcludeLostInWilderlandFromEasyMode();
         }
     }
 }

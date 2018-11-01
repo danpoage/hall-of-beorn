@@ -39,7 +39,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheWildsOfRhovanion
             ExcludeFromEasyMode("Hills-of-Wilderland-TWoR", 1);
             ExcludeFromEasyMode("Lonely-Lands-TWoR", 1);
 
-            ExcludeLostInTheWildernessFromEasyMode();
+            ExcludeLostInWilderlandFromEasyMode();
 
             //Journey Along the Anduin (Core)
             ExcludeFromEasyMode("Massing-at-Night-Core", 1);

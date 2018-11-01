@@ -124,6 +124,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithText("Setup: The first player takes control of Urdug, objective side face-up. Set each other objective and objective-ally aside, out of play. Shuffle the encounter deck and discard cards from the top until X locations are discarded, where X is the number of players. Add each discarded location to the staging area.")
                 .WithOppositeFlavor("You have agreed to help the Goblin in return for his assistance, but you keep a wary eye on him all the same.")
                 .WithOppositeText("Progress cannot be placed on locations in the staging area.\r\nForced: When the active location is explored, if the first player controls Urdug, advance to a random stage 2A.")
+                .WithIncludedEncounterSets(EncounterSet.FellBeasts, EncounterSet.LostInWilderland, EncounterSet.HillsOfWilderland)
                 .WithInfo(47, 1, Artist.Marius_Bota);
             addQuest("Rescue Tiny", setName, 2, 'A', 5)
                 .WithFlavor("Urdug's friend, Tiny, turns out to be an enormous Hill-troll. You find him trapped in a deep bog and Urdug begs you to help rescue him.")
@@ -135,6 +136,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithFlavor("You thought Urdug's story about being chased by a Giant sounded funny until you come upon a mean-looking Giant using the Goblin's horn as a tooth-pick. Urdug insists he won't lead you anywhere without that horn.")
                 .WithText("When Revealed: The first player searches the encounter deck, discard pile, and victory display for a Grey Mountain Giant, adds it to the staging area, and attaches the set-aside Urdug's Horn to it as a guarded objective. Shuffle the encounter deck. Each other player reveals an encounter card.")
                 .WithOppositeText("Each enemy with 1 or more guarded attachments gets +2 Threat and +2 Defense.\r\nForced: When the players defeat this stage, remove it from the game. Advance to a random stage 2A, if able. Otherwise, advane to stage 3A.\r\nThe Grey Mountain Giant guarding Urdug's Horn cannot take damage unless there is at least 5 progress on this stage. This stage cannot be defeated unless the first player controls Urdug with Urdug's Horn attached.")
+                .WithIncludedEncounterSets(EncounterSet.FellBeasts, EncounterSet.LostInWilderland, EncounterSet.HillsOfWilderland)
                 .WithInfo(49, 1, Artist.Sebastian_Zakrzewski);
             addQuest("Find Durin's Key", setName, 2, 'A', 5)
                 .WithFlavor("You have your doubts about Durin's Key, as well as Urdug, but the Goblin insists he dropped it in a ravine as he was fleeing for his life. You follow him as he retraces his steps back to the ravine.")
@@ -145,8 +147,8 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
             addQuest("Urdug's Gambit", setName, 3, 'A', 5)
                 .WithFlavor("You suspected Urdug would betray you once you gathered the things he required, so you're not surprised when he and Tiny try to sneak away in the night. Urdug hisses at Tiny to keep quiet, but the lumbering Troll is about as subtle as a thunder storm. You grab your weapons and chase after them.")
                 .WithText("When Revealed:  The first player loses control of both Urdug and Tiny, flips them to their enemy sides, and adds them to the staging area. (Remove any damage that was one them.) Each other player reveals an encounter card.")
-                .WithIncludedEncounterSets(EncounterSet.FellBeasts, EncounterSet.LostInWilderland, EncounterSet.HillsOfWilderland)
                 .WithOppositeText("Progress cannot be placed on this quest from questing successfully.\r\nForced: When the players quest unsuccessfully, they do not raise their threat. Instead, place X progress here, where X is the amount by which they would have raised their threat. Then, if this stage has progress equal to its quest points, the player lose the game.\r\nWhen Urdug has no hit points remaining, the players win the game.")
+                .WithIncludedEncounterSets(EncounterSet.FellBeasts, EncounterSet.LostInWilderland, EncounterSet.HillsOfWilderland)
                 .WithInfo(51, 1, Artist.Ivan_Dixon);
             addObjectiveAlly("Urdug", setName, 2, 3, 2, 5)
                 .WithSuffix("Objective-Ally")
