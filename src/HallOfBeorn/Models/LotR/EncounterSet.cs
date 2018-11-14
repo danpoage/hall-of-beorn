@@ -341,6 +341,11 @@ namespace HallOfBeorn.Models.LotR
             Add(TheWitheredHeath);
             Add(RoamAcrossRhovanion);
 
+            //Two Player Starter
+            Add(TheOath);
+            Add(TheGoblins);
+            Add(TheCavesOfNibinDum);
+
             //The Hobbit: Over Hill and Under Hill
             Add(WeMustAwayEreBreakOfDay);
             Add(WesternLands);
@@ -663,6 +668,11 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet DarkWoods = new EncounterSet { Name = "Dark Woods", Set = setNameWilds };
         public static EncounterSet TheWitheredHeath = new EncounterSet { Name = "The Withered Heath", Set = "The Withered Heath" };
         public static EncounterSet RoamAcrossRhovanion = new EncounterSet { Name = "Roam Across Rhovanion", Set = "Roam Across Rhovanion" };
+
+        //Two Player Starter
+        public static EncounterSet TheOath = new EncounterSet { Name = "The Oath" };
+        public static EncounterSet TheGoblins = new EncounterSet { Name = "The Goblins" };
+        public static EncounterSet TheCavesOfNibinDum = new EncounterSet { Name = "The Caves of Nibin-Dûm" };
 
         //The Hobbit: Over Hill and Under Hill
         public static EncounterSet WeMustAwayEreBreakOfDay = new EncounterSet { Name = "We Must Away, Ere Break of Day", Set = "The Hobbit: Over Hill and Under Hill" };

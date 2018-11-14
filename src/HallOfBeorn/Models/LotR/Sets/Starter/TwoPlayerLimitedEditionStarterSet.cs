@@ -7,6 +7,10 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
 {
     public class TwoPlayerLimitedEditionStarterSet : CardSet
     {
+        private const string setOath = "The Oath";
+        private const string setGoblins = "The Goblins";
+        private const string setCaves = "The Caves of Nibin-Dûm";
+
         protected override void Initialize()
         {
             Name = "Two-Player Limited Edition Starter";
@@ -323,12 +327,148 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
                 .WithInfo(63, 2, Artist.Igor_Kieryluk);
             addEvent("Daeron's Runes", 0, Sphere.Lore)
                 .WithText("Action: Draw 2 cards. Then, discard 1 card for your hand.")
-                .WithFlavor("\"These are Daeron's RUnes, such as were used of old in Moria...\"\r\n-Gandalf, The Fellowship of the Ring")
+                .WithFlavor("\"These are Daeron's Runes, such as were used of old in Moria...\"\r\n-Gandalf, The Fellowship of the Ring")
                 .WithInfo(64, 2, Artist.Carolina_Eade);
             addEvent("Pursuing the Enemy", 0, Sphere.Tactics)
                 .WithText("Action: Return a Silvan ally you control to your hand to choose a player. Deal 1 damage to each enemy engaged with that player.")
                 .WithFlavor("The marauding orcs had been waylaid and almost all destroyed...\r\n-The Fellowship of the Ring")
                 .WithInfo(65, 2, Artist.Cristi_Balanescu);
+            addEnemy("Spiders of Mirkwood", setOath, 18, 3, 2, 2, 4)
+                .WithTraits("Spider.")
+                .WithText("While it is engaged with you, Spiders of Mirkwood gets +1 Attack for each exhausted character you control.")
+                .WithShadow("Shadow: Choose and exhaust 1 character you control. If this attack was undefended, also deal that character 2 damage.")
+                .WithEasyModeQuantity(0)
+                .WithInfo(66, 2, Artist.Andrew_Ryan);
+            addEnemy("Great Spider", setOath, 34, 2, 3, 1, 3)
+                .WithTraits("Spider.")
+                .WithText("Forced: After Gret Spider engages you, exhaust a character you control.")
+                .WithShadow("Shadow: Deal 1 damage to an exhausted character you control.")
+                .WithInfo(67, 2, Artist.Matt_Stewart);
+            addLocation("The Eaves of Mirkwood", setOath, 2, 2)
+                .WithTraits("Forest.")
+                .WithText("While The Eaves of Mirkwood is the active location, encounter card effects cannot be canceled.")
+                .WithFlavor("By the afternoon they had reached the eaves of Mirkwood, and were resting almost beneath the great overhanging boughs of its outer trees.\r\n-The Hobbit")
+                .WithInfo(68, 2, Artist.Timo_Karhula);
+            addLocation("Tangled Grove", setOath, Card.VALUE_X, 3)
+                .WithTraits("Forest.")
+                .WithText("X is the number of locations in the staging area.\r\nTravel: Each player must discard 1 random card from his hand to travel here.")
+                .WithEasyModeQuantity(0)
+                .WithInfo(69, 2, Artist.John_Howe);
+            addLocation("Forest Gate", setOath, 2, 4)
+                .WithTraits("Forest.")
+                .WithText("Response: After you travel to Forest Gate, the first player draws 2 cards.")
+                .WithFlavor("Soon the light in the gate was like a little bright hole far behind, and the quiet was so deep that their feet seemed to thump along while the trees leaned over them and listened.\r\n-The Hobbit")
+                .WithInfo(70, 2, Artist.Ben_Zweifel);
+            addLocation("Spider Den", setOath, 4, 4)
+                .WithTraits("Forest.")
+                .WithText("Quest Action: Search the encounter deck and discard pile for a Spider enemy and put it into play engaged with you to discard Spider Den. (Any player may trigger this effect.)")
+                .WithInfo(71, 2, Artist.Jokubas_Uoginitas);
+            addLocation("Goblin Trail", setOath, 3, 6)
+                .WithTraits("Forest.")
+                .WithText("Travel: Reveal the top card of the encounter deck to travel here.\r\nResponse: When Goblin Trail leaves play as an explored location, place 6 progress on the current quest.")
+                .WithVictoryPoints(3)
+                .WithInfo(72, 2, Artist.Jokubas_Uoginitas);
+            addTreachery("Driven by Shadow", setOath)
+                .WithText("When Revealed: Each enemy and each location currently in the staging area gets +1 Threat until the end of the phase. If there are no cards in the staging area, Driven by Shadow gains surge.")
+                .WithShadow("Shadow: Choose and discard 1 attachment from the defending character. (If this attack is undefended, discard all attachments you control.)")
+                .WithInfo(73, 2, Artist.Alexandru_Sabo);
+            addTreachery("Surprising Speed", setOath)
+                .WithText("When Revealed: Each player returns 1 enemy engaged with him to the staging area. If no enemy was returned to the staging area this way, Surprising Speed gains surge and doomed 1.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack. Return attacking enemy to the staging area after this attack.")
+                .WithInfo(74, 2, Artist.Matthew_Cowdery);
+            addTreachery("Caught in a Web", setOath)
+                .WithText("When Revealed: The player with the highest threat level attached this card to one of his heroes. (Counts as a Condition attachment with the text: \"Attached hero does not ready during the refresh phase unless you pay 2 resources from that hero's pool.\")")
+                .WithEasyModeQuantity(0)
+                .WithInfo(75, 1, Artist.Daryl_Mandryk);
+            addEnemy("Goblin Troop", setGoblins, 35, 3, 5, 3, 6)
+                .WithTraits("Goblin.", "Orc.")
+                .WithText("Cannot have attachments.\r\nWhile Goblin Troop is engaged with you, each other Goblin enemy engaged with you gets +1 Attack and +1 Defense.")
+                .WithShadow("Shadow: Attacking enemy gets +2 Attack.")
+                .WithInfo(76, 1, Artist.Matt_Stewart);
+            addEnemy("Goblin Sniper", setGoblins, 48, 2, 2, 0, 2)
+                .WithTraits("Goblin.", "Orc.")
+                .WithText("During the encounter phase, players cannot optionally engage Goblin Sniper if there are other enemies in the staging area.\r\nForced: If Goblin Sniper is in the staging area at the end of the combat phase, each player deals 1 point of damage to 1 character he controls.")
+                .WithInfo(77, 2, Artist.Alexandr_Shaldin);
+            addEnemy("Goblin Runners", setGoblins, 20, 1, 3, 1, 2)
+                .WithTraits("Goblin.", "Orc.")
+                .WithKeywords("Surge.")
+                .WithFlavor("Shadow: Attacking enemy makes an additional attack immediately after this one. (Deal a new shadow card for that attack.)")
+                .WithEasyModeQuantity(0)
+                .WithInfo(78, 2, Artist.Stephane_Gantiez);
+            addEnemy("Goblintown Scavengers", setGoblins, 12, 1, 1, 0, 3)
+                .WithTraits("Goblin.", "Orc.")
+                .WithText("When Revealed: Discard the top card of each player's deck. Until the end of the phase, increase Goblintown Savengers' Threat by the total printed cost of all cards discarded in this way.")
+                .WithInfo(79, 2, Artist.Jarreau_Wimberly);
+            addTreachery("Goblins are Upon You!", setGoblins)
+                .WithText("When Revealed: Each player must search the encounter deck and discard pile for a Goblin enemy and put it into play, engaged with him. Then, shuffle the encounter deck. (This effect cannot be canceled.)")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack for each Goblin enemy engaged with you.")
+                .WithEasyModeQuantity(0)
+                .WithInfo(80, 1, Artist.Diego_Gisbert_Llorens);
+            addTreachery("Eyes in the Dark", setGoblins)
+                .WithKeywords("Doomed 1.")
+                .WithText("When Revealed: Each player must choose: Either raise your threat by 1 for each questing character you control, or discard a questing character you control.")
+                .WithShadow("Shadow: If this attack is undefended, discard an ally you control.")
+                .WithInfo(81, 2, Artist.Sam_Lamont);
+            addEnemy("Goblin Chieftain", setCaves, 40, Card.VALUE_X, Card.VALUE_X, Card.VALUE_X, 8)
+                .WithUnique()
+                .WithTraits("Goblin.", "Orc.")
+                .WithText("X is the stage number of the quest.\r\nCannot take damage. Cannot have attachments.\r\nForced: After Goblin Chieftain attacks, either remove X progress from the quest, or return it to the staging area.")
+                .WithInfo(82, 1, Artist.Alexander_Kozachenko);
+            addLocation("Cracked Pillar", setCaves, 2, 2)
+                .WithUnique()
+                .WithTraits("Underground.")
+                .WithText("While Cracked Pillar is in the staging area, it gains: \"The first player may declare an attack against Cracked Pillar during the combat phase as if it was an enemy engaged with him. Use Cracked Pillar's Threat as its Defense during this attack.\"\r\nTravel: Remove 4 damage from Cracked Pillar to travel here.")
+                .WithInfo(83, 1, Artist.Leanna_Crossan);
+            addObjective("Cave Torch", setCaves)
+                .WithTraits("Light.")
+                .WithKeywords("Restricted.")
+                .WithText("Attach to a hero.\r\nAction: Exhause Cave Torch to place up to 3 progress tokens on a Dark location.\r\nForced: After Cave Torch exhausts, discard the top card of the encounter deck. If that card is an enemy, add it to the staging area.")
+                .WithInfo(84, 1, Artist.David_Lecossu);
+            addEnemy("Great Cave-troll", setCaves, 36, 3, 6, 4, 6)
+                .WithTraits("Troll.")
+                .WithText("Cannot have attachments.\r\nFor each point of excess combat damage dealt by Great Cave-troll (damage that is dealt beyond the remaining hit points of the character damaged by its attack) remove 1 progress from the current quest.")
+                .WithEasyModeQuantity(0)
+                .WithInfo(85, 2, Artist.Nicholas_Gregory);
+            addEnemy("Cavern Warg", setCaves, 33, 2, 3, 2, 3)
+                .WithTraits("Creature.", "Warg.")
+                .WithText("Response: When Cavern Warg attacks you, exhaust Cave Torch to cancel the attack and return Cavern Warg to the staging area.")
+                .WithShadow("Shadow: If this attack destroys a character, return attacking enemy to the staging area after this attack.")
+                .WithInfo(86, 2, Artist.Stanislav_Dikolenko);
+            addLocation("Goblin Tunnels", setCaves, 2, 7)
+                .WithTraits("Underground.", "Dark.")
+                .WithText("While Goblin Tunnels is in the staging area, it gains: \"Forced: After a Goblin is revealed from the encounter deck, remove a progress token from the current quest card.\"")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack. (+3 Attack instead if attacking enemy is a Goblin.)")
+                .WithInfo(87, 2, Artist.Michael_Rasmussen);
+            addLocation("Lightless Passage", setCaves, 4, 4)
+                .WithTraits("Underground.", "Dark.")
+                .WithText("Travel: Players must exhaust a Cave Torch to travel here.")
+                .WithShadow("Shadow: Cancel all combat damage dealt to attacking enemy.")
+                .WithInfo(88, 2, Artist.Stu_Barnes);
+            addLocation("Branching Paths", setCaves, 1, 3)
+                .WithTraits("Underground.", "Dark.")
+                .WithText("While Branching Paths is in the staging area, each Dark location gets +1 Threat.\r\nForced: After Branching Paths leaves play as an explored location, look at the top 3 cards of the encounter deck. Players must choose 1 of those to reveal and add to the staging area, moving the other 2 to the bottom of the deck.")
+                .WithEasyModeQuantity(0)
+                .WithInfo(89, 2, Artist.David_A_Nash);
+            addLocation("Collapsed Mine", setCaves, 2, 6)
+                .WithTraits("Underground.", "Dark.")
+                .WithText("While Collapsed Mine is in the staging area, no more than 4 progress can be placed on the quest each round.")
+                .WithShadow("Shadow: Raise your threat by 1 for each point of damage dealt by this attack.")
+                .WithInfo(90, 2, Artist.Leanna_Crossan);
+            addLocation("Goblin Dungeon", setCaves, 3, 5)
+                .WithTraits("Underground.")
+                .WithText("Travel: Reveal the top card of the encounter deck to travel here.\r\nResponse: After Goblin Dungeon leaves play as an explored location, the first player searches the top 5 cards of his deck for an ally and puts it into play under his control. Shuffle the rest of the searched cards back into his deck.")
+                .WithInfo(91, 2, Artist.Leanna_Crossan);
+            addTreachery("Crumbling Ruin", setCaves)
+                .WithText("When Revealed: Each player must exhaust a character and discard the top card of his deck, if able. If the printed cost of the discarded card is equal to or higher than the remaining hit points of the exhausted character, discard the exhausted character.")
+                .WithInfo(92, 2, Artist.Magali_Villeneuve);
+            addTreachery("Lost in the Dark", setCaves)
+                .WithText("When Revealed: The player who controls Cave Torch must choose: Either exhaust Cave Torch, or progress cannot be placed on the quest until the end of the phase. (Progress can still be placed on the active location.)")
+                .WithShadow("Shadow: Deal 1 damage to the defending character.")
+                .WithInfo(93, 2, Artist.Nicholas_Gregory);
+            addTreachery("Watchful Eyes", setCaves)
+                .WithText("When Revealed: The first player attaches Watchful Eyes to one of his heroes. (Counts as a Condition attachment with the text: \"Limit 1 per hero. Forced: If attached hero is exhausted at the end of the combat phase, reveal 1 card from the encounter deck and add it to the staging area.\")")
+                .WithEasyModeQuantity(0)
+                .WithInfo(94, 1, Artist.Tiziano_Baracchi);
         }
     }
 }
