@@ -188,7 +188,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
             Cards.Add(LotRCard.Location("Great Corsair Ship", string.Empty, setTheSiegeOfGondor, Card.VALUE_X, 5)
                 .WithUnique()
                 .WithTraits("Ship.")
-                .WithText("X is the number of resources on The Corsair Fleet.\r\nThe players cannot travel here unless there are at least 3 ship locations in the victory display.\r\nTravel: Each player searches the encounter deck and discard pile for a Corsair enemy and adds it to the staging area. Once of those enemies must be Corsair Captain, if able.")
+                .WithText("X is the number of resources on The ~Corsair Fleet.\r\nThe players cannot travel here unless there are at least 3 Ship locations in the victory display.\r\nTravel: Each player searches the encounter deck and discard pile for a Corsair enemy and adds it to the staging area. One of those enemies must be ~Corsair ~Captain, if able.")
                 .WithVictoryPoints(5)
                 .WithInfo(30, 1, Artist.Johan_Tornlund));
             Cards.Add(LotRCard.Location("Umbar War Galley", string.Empty, setTheSiegeOfGondor, 3, 3)

@@ -469,6 +469,50 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
                 .WithText("When Revealed: The first player attaches Watchful Eyes to one of his heroes. (Counts as a Condition attachment with the text: \"Limit 1 per hero. Forced: If attached hero is exhausted at the end of the combat phase, reveal 1 card from the encounter deck and add it to the staging area.\")")
                 .WithEasyModeQuantity(0)
                 .WithInfo(94, 1, Artist.Tiziano_Baracchi);
+            addQuest("After the Raid", setOath, 1, 'A', 9)
+                .WithFlavor("Marauding Goblins have raided a woodman village on the eaves of Mirkwood forest. The Goblins killed the guards and took many of the villages captive. Those left behind beg you to rescue their loved ones.")
+                .WithText("Setup: ~Search the encounter deck for 1 copy of The Eaves of ~Mirkwood and ~Goblin Troop. Add The Eaves of ~Mirkwood to the staging area and set ~Goblin Troop aside, out of play. Shuffle of the encounter deck.")
+                .WithOppositeFlavor("You swear an oath to the survivors that you will rescue the captured woodmen and bring justice to the Goblins who attacked them, then you enter Mirkwood forest to find their trail.")
+                .WithIncludedEncounterSets(EncounterSet.TheGoblins)
+                .WithInfo(95, 1, Artist.Stanislav_Dikolenko);
+            addQuest("Mirkwood Forest", setOath, 2, 'A', 12)
+                .WithFlavor("The Goblins' trail leads you deeper into the dark forest of Mirkwood. The enemy has a significant lead, but the sign of their passing is easy to follow. You may yet overtake them if you press on.")
+                .WithOppositeText("When Revealed: Each player searches the encounter deck and discard pile for a Forest location and adds it to the staging area. Shuffle the encounter deck. This stage cannot be defeated unless at least 1 copy of ~Goblin Trail is in the vitory display.")
+                .WithIncludedEncounterSets(EncounterSet.TheGoblins)
+                .WithInfo(96, 1, Artist.Jeff_Lee_Johnson);
+            addQuest("The Rearguard", setOath, 3, 'A', 6)
+                .WithText("When Revealed: The first player adds the set-aside ~Goblin Troop to the staging area. Each other player searches the encounter deck and discard pile for a Goblin enemy and adds it to the staging area.")
+                .WithOppositeFlavor("The Goblins are aware of your pursuit and form a rearguard to confront you while the others retreat to their secret hideaway. You must defeat this troop before you can continue your chanse.")
+                .WithOppositeText("This stage cannot be defeated while Goblin Troop is in play. When this stage is defeated, the heroes discover the trail to the Goblins' secret lair and the players win the game.")
+                .WithIncludedEncounterSets(EncounterSet.TheGoblins)
+                .WithInfo(97, 1, Artist.Stanislav_Dikolenko);
+            addQuest("The Dark of Nibin-Dûm", setCaves, 1, 'A', 8)
+                .WithFlavor("You have pursued the Goblins that attacked a woodman village to the mountains of Mirkwood. The trail leads over a steep ridge where you discover the forgotten Dwarf home of Nibin-Dûm. You light a torch and enter in.")
+                .WithText("Setup: ~Search the encounter deck for ~Goblin ~Chieftain, Cracked Pillar, and ~Cave ~Torch. Set ~Goblin ~Chieftain and Cracked Pillar aside, out of play. The first player attached ~Cave ~Torch to one of his heroes. Shuffle the encounter deck.")
+                .WithOppositeFlavor("The Dwarves abandonded Nibin-Dûm after an earthquake collapsed part of the mine, but it seems these Goblins have since adopted it as their home. The flickering light of your torch reveals a network of dark passages and you set about searching for signs of the enemy.")
+                .WithOppositeText("When Revealed: Each player searches the encounter deck for a different location and adds it to the staging area. Shuffle the encounter deck.")
+                .WithIncludedEncounterSets(EncounterSet.TheGoblins)
+                .WithInfo(98, 1, Artist.Jason_Jenicke);
+            addQuest("Surprise Attack", setCaves, 2, 'A', 0)
+                .WithFlavor("As you search the caves of Nibin-Dûm you are ambushed by Goblins!")
+                .WithText("When Revealed: Add ~Goblin Chieftain to the staging area. Each player searches the encounter deck and discard pile for a different enemy of his choice and adds it to the staging area. Shuffle the encounter deck.")
+                .WithOppositeFlavor("The Goblins are led by a large chieftain who whips them into a frenzy. His soldiers attack you with reckless savagery and you struggle to gain the upper hand.")
+                .WithOppositeText("During the encounter phase, treat each enemy's engagement cost as if it were 0.\r\nThe stage gets +4 quest points for each enemy in play.")
+                .WithIncludedEncounterSets(EncounterSet.TheGoblins)
+                .WithInfo(99, 1, Artist.Stanislav_Dikolenko);
+            addQuest("The Chasm", setCaves, 3, 'A', Card.VALUE_NA)
+                .WithFlavor("The Goblins retreat down a dark tunnel, and you chase them into a large hall of many pillars. A wide chasm runs the width of the hall and the Goblins race across on a large plank. Their chieftain casts the plan into the depths of the chasm and disappeats, leaving you stranded on the other side.")
+                .WithText("When Revealed: Set ~Goblin ~Chieftain aside, out of play. Add Cracked Pillar to the staging area.")
+                .WithOppositeFlavor("As you search for a way across, you see that one tall pillar near the edge of the chasm has cracked where it meets the ceiling. If you topple the pillar, it could serve to bridge the gap.")
+                .WithOppositeText("Forced: Reveal an additional encounter card during the quest phase.\r\nProgress cannot be placed on Cracked Pillar while it is in the staging area.\r\nAfter Cracked Pillar leaves play as an explored location, advance to stage 4A.")
+                .WithIncludedEncounterSets(EncounterSet.TheGoblins)
+                .WithInfo(100, 1, Artist.Stanislav_Dikolenko);
+            addQuest("Oathkeepers", setCaves, 4, 'A', 8)
+                .WithFlavor("You've made it across the chasm and resumed the chase. The Goblins rally around their chieftain outside the dungeons where the woodmen villagers are being held. You must defeat the big Goblin if you are to fulfill your oath and rescue the captives.")
+                .WithText("When Revealed: Add ~Goblin ~Chieftain to the staging area.")
+                .WithOppositeText("While there are at least 8 progress tokens on this stage, ~Goblin ~Chieftain loses the text: \"Cannot take damage.\"\r\nThis stage cannot be defeated while ~Goblin ~Chieftain is in play. When this stage is defeated, the heroes rescue the captives, fulfilling their oaths, and the players win the game!")
+                .WithIncludedEncounterSets(EncounterSet.TheGoblins)
+                .WithInfo(101, 1, Artist.Alexander_Kozachenko);
         }
     }
 }

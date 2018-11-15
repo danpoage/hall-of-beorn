@@ -670,9 +670,9 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet RoamAcrossRhovanion = new EncounterSet { Name = "Roam Across Rhovanion", Set = "Roam Across Rhovanion" };
 
         //Two Player Starter
-        public static EncounterSet TheOath = new EncounterSet { Name = "The Oath" };
-        public static EncounterSet TheGoblins = new EncounterSet { Name = "The Goblins" };
-        public static EncounterSet TheCavesOfNibinDum = new EncounterSet { Name = "The Caves of Nibin-Dûm" };
+        public static EncounterSet TheOath = new EncounterSet { Name = "The Oath", Set = "Two-Player Limited Edition Starter" };
+        public static EncounterSet TheGoblins = new EncounterSet { Name = "The Goblins", Set = "Two-Player Limited Edition Starter" };
+        public static EncounterSet TheCavesOfNibinDum = new EncounterSet { Name = "The Caves of Nibin-Dûm", Set = "Two-Player Limited Edition Starter" };
 
         //The Hobbit: Over Hill and Under Hill
         public static EncounterSet WeMustAwayEreBreakOfDay = new EncounterSet { Name = "We Must Away, Ere Break of Day", Set = "The Hobbit: Over Hill and Under Hill" };

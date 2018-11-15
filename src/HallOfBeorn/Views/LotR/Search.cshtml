@@ -500,7 +500,7 @@
                 @if (!@Model.View.HasValue || (@Model.View.HasValue && (@Model.View == View.Card || @Model.View == View.Card_Image)))
                 {
                     <div style="float:left;margin-right:4px;">
-                        <a href="@Href(string.Format("/Cards/Details/{0}", @card.Slug))">
+                        <a href="@Href(string.Format("/LotR/Details/{0}", @card.Slug))">
                             @if (@card.HasSecondImage)
                             {
                                 <span style="text-align:left;">
