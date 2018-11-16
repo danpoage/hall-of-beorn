@@ -75,6 +75,8 @@ namespace HallOfBeorn.Services.LotR.Search
             AddFilter(filters, new ByteComparisonFilter((score) => score.Card.Threat, model.Threat, model.ThreatOp));
             AddFilter(filters, new ByteComparisonFilter((score) => score.Card.QuestPoints, model.QuestPoints, model.QuestPointsOp));
 
+            AddFilter(filters, new NumericComparisonFilter((score) => _getPopularity(score.Card.Slug), model.Popularity, model.PopularityOp));
+
             AddFilter(filters, new TraitFilter(model.Trait));
             AddFilter(filters, new KeywordFilter(model.Keyword));
             AddFilter(filters, new VictoryPointFilter(model.VictoryPoints));

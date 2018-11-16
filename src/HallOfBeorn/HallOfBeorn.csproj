@@ -879,6 +879,7 @@
     <Compile Include="Services\LotR\Search\FilterService.cs" />
     <Compile Include="Services\LotR\Search\IFilterService.cs" />
     <Compile Include="Services\LotR\Search\IPlanService.cs" />
+    <Compile Include="Services\LotR\Search\NumericComparisonFilter.cs" />
     <Compile Include="Services\LotR\Templates\EnUsTemplateRepository1.cs" />
     <Compile Include="Services\LotR\Templates\EnUsTemplateRepository2.cs" />
     <Compile Include="Services\LotR\Categories\ICategoryService.cs" />
