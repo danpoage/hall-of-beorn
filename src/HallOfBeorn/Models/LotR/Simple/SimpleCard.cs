@@ -25,6 +25,7 @@ namespace HallOfBeorn.Models.LotR.Simple
         public List<string> Traits { get; private set; }
         public List<string> Keywords { get; private set; }
         public List<string> Text { get; private set; }
+        public string Shadow { get; set; }
         public string FlavorText { get; set; }
     }
 
@@ -247,6 +248,12 @@ namespace HallOfBeorn.Models.LotR.Simple
             {
                 this.EncounterInfo.EasyModeQuantity = card.EasyModeQuantity.Value;
             }
+
+            if (card.CardType == LotR.CardType.Quest)
+            {
+                this.EncounterInfo.StageNumber = card.StageNumber;
+                this.EncounterInfo.StageLetter = card.StageLetter;
+            }
         }
 
         private void InitializeObjective(LotRCard card)
@@ -294,19 +301,31 @@ namespace HallOfBeorn.Models.LotR.Simple
             */
         }
 
+        private string NormalizeText(string text)
+        {
+            return string.IsNullOrWhiteSpace(text) ?
+                text
+                : text.Replace('"', '`').Replace("~", string.Empty).Replace("'", "`");
+        }
+
         private void InitializeText(LotRCard card)
         {
             if (!string.IsNullOrEmpty(card.Text))
             {
                 foreach (var effect in card.Text.Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries))
                 {
-                    this.Front.Text.Add(effect.Replace('"', '`').Replace("~", string.Empty).Replace("'", "`"));
+                    this.Front.Text.Add(NormalizeText(effect));
                 }
+            }
+
+            if (!string.IsNullOrWhiteSpace(card.Shadow))
+            {
+                this.Front.Shadow = NormalizeText(card.Shadow);
             }
 
             if (!string.IsNullOrEmpty(card.FlavorText))
             {
-                this.Front.FlavorText = card.FlavorText.Replace('"', '`').Replace("'", "`");
+                this.Front.FlavorText = NormalizeText(card.FlavorText);
             }
 
             if (!string.IsNullOrEmpty(card.OppositeText))
@@ -318,7 +337,7 @@ namespace HallOfBeorn.Models.LotR.Simple
 
                 foreach (var effect in card.OppositeText.Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries))
                 {
-                    this.Back.Text.Add(effect.Replace('"', '`').Replace("~", string.Empty).Replace("'", "`"));
+                    this.Back.Text.Add(NormalizeText(effect));
                 }
             }
 
@@ -329,7 +348,7 @@ namespace HallOfBeorn.Models.LotR.Simple
                     this.Back = new Side();
                 }
 
-                this.Back.FlavorText = card.OppositeFlavorText.Replace('"', '`').Replace("'", "`");
+                this.Back.FlavorText = NormalizeText(card.OppositeFlavorText);
             }
         }
     }

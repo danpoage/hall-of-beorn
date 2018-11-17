@@ -15,5 +15,7 @@ namespace HallOfBeorn.Models.LotR.Simple
         public string EncounterSet { get; set; }
         public uint EasyModeQuantity { get; set; }
         public List<string> IncludedEncounterSets { get; private set; }
+        public uint? StageNumber { get; set; }
+        public char? StageLetter { get; set; }
     }
 }
