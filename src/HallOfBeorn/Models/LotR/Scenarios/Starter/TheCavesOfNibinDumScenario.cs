@@ -17,10 +17,10 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Starter
             DifficultyRating = 3.5f;
             Votes = 1;
 
-            AddEncounterSet(EncounterSet.TheOath);
+            AddEncounterSet(EncounterSet.TheCavesOfNibinDum);
             AddEncounterSet(EncounterSet.TheGoblins);
 
-            AddQuestCardId("The Dark of Nibin-Dûm-TPLES");
+            AddQuestCardId("The-Dark-of-Nibin-Dum-TPLES");
             AddQuestCardId("Surprise-Attack-TPLES");
             AddQuestCardId("The-Chasm-TPLES");
             AddQuestCardId("Oathkeepers-TPLES");
