@@ -97,7 +97,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithYear(2010)
                 .WithThumbnail()
                 .WithInfo(10, 1, Artist.Tiziano_Baracchi);
-            addHero("Glorfindel.", 12, Sphere.Lore, 3, 3, 1, 5)
+            addHero("Glorfindel", 12, Sphere.Lore, 3, 3, 1, 5)
                 .WithTraits("Noble.", "Noldor.", "Warrior.")
                 .WithText("Action: Pay 1 resource from Glorfindel's pool to heal 1 damage on any character. (Limit once per round.)")
                 .WithFlavor("\"You saw him for a moment as he is upon the other side: one of the mighty of the firstborn.\"\r\n-Gandalf, The Fellowship of the Ring")
