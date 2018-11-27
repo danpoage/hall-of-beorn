@@ -27,7 +27,7 @@
             <div class="content-wrapper">
                 <div style="display:inline-block;text-align:center;">
                     <div style="display:inline-block">
-                        <a href="/Home" style="text-align:center;display:inline-block;"><img src="/Images/LotRBeornSmall.jpg" width="64" height="48" title="Lord of the Rings LCG Card Search" /></a>
+                        <a href="/LotR" style="text-align:center;display:inline-block;"><img src="/Images/LotRBeornSmall.jpg" width="64" height="48" title="Lord of the Rings LCG Card Search" /></a>
                         <span class="site-title" style="color: brown; font-family:Tolkien;min-width:180px;display:inline-block;margin:6px 0px -10px 0px;font-size:27px; vertical-align:top;">HALL of BEORN</span>
                         <a href="/Digital" style="text-align:center;display:inline-block;"><img src="/Images/LotRDigitalBeornSmall.jpg" width="64" height="48" title="Lord of the Rings Digital Card Search" /></a>
                         @* <a href="/Arkham" style="text-align:left"><img src="/Images/ArkhamBeornSmall.jpg" width="64" height="48" title="Arkham Horror LCG Card Search" style="margin-bottom:-4px;"/></a> *@
@@ -44,7 +44,7 @@
                     <nav>
                         @if (@Request.Url.LocalPath.Contains("/LotR")) {
                         <ul id="menu">
-                            <li>@Html.ActionLink("LotR", "Index", "Home")</li>
+                            <li><a title="Search Cards" href="/LotR">LotR</a></li>
                             <li><a title="Browse Products" href="/LotR/Browse">Browse</a></li>
                             <li><a title="Browse Scenarios" href="/LotR/Scenarios/">Scenarios</a></li>
                             <li><a title="Browse Characters" href="/LotR/Characters/">Characters</a></li>
