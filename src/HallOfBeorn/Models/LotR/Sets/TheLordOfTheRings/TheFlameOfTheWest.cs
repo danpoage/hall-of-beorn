@@ -70,7 +70,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithUnique()
                 .WithTraits("Item.", "Armor.")
                 .WithKeywords("Restricted.")
-                .WithText("Attach to a Rohan hero. Response: After attached hero is declared as a defender, exhaust Golden Shield to add attached hero's Willpower to it's Defense for this attack.")
+                .WithText("Attach to a Rohan hero.\r\nResponse: After attached hero is declared as a defender, exhaust Golden Shield to add attached hero's Willpower to its Defense for this attack.")
                 .WithFlavor("His golden shield was uncovered, and lo! it shone like an image of the Sun...\r\n-The Return of the King")
                 .WithInfo(10, 3, Artist.Sasha_Jones));
             Cards.Add(LotRCard.Attachment("Livery of the Tower", "", Sphere.Spirit, 0)
