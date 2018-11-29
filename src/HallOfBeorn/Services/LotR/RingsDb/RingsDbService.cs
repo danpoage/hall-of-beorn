@@ -53,8 +53,8 @@ namespace HallOfBeorn.Services.LotR.RingsDb
         private void addCardPopularity(string cardId, ushort votes)
         {
             const ushort votes_5 = 800;
-            const ushort votes_4 = 600;
-            const ushort votes_3 = 500;
+            const ushort votes_4 = 550;
+            const ushort votes_3 = 450;
             const ushort votes_2 = 300;
 
             if (votes > votes_5)
@@ -376,8 +376,6 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             addCardPopularity("04135", 608);
             addCardPopularity("143010", 602);
             addCardPopularity("131008", 601);
-
-            //3 Ring Cards
             addCardPopularity("01022", 597);
             addCardPopularity("06002", 596);
             addCardPopularity("08092", 591);
@@ -402,6 +400,8 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             addCardPopularity("03013", 557);
             addCardPopularity("04057", 555);
             addCardPopularity("04128", 553);
+
+            //3 Ring Cards
             addCardPopularity("16003", 548);
             addCardPopularity("10033", 547);
             addCardPopularity("131016", 541);
@@ -431,8 +431,6 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             addCardPopularity("10059", 512);
             addCardPopularity("142004", 511);
             addCardPopularity("01015", 502);
-
-            //2 Ring Cards
             addCardPopularity("08112", 497);
             addCardPopularity("01001", 496);
             addCardPopularity("08027", 494);
@@ -455,6 +453,8 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             addCardPopularity("12139", 453);
             addCardPopularity("141004", 452);
             addCardPopularity("142005", 450);
+
+            //2 Ring Cards
             addCardPopularity("12083", 448);
             addCardPopularity("16011", 447);
             addCardPopularity("05014", 443);
