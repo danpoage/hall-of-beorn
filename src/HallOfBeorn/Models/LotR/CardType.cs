@@ -34,4 +34,60 @@ namespace HallOfBeorn.Models.LotR
         Objective_Location = 125,
         Ship_Objective = 129,
     }
+
+    public static class CardTypeExtensionMethods
+    {
+        public static bool IsPlayerCard(this CardType self)
+        {
+            switch (self)
+            {
+                case CardType.Hero:
+                case CardType.Ally:
+                case CardType.Attachment:
+                case CardType.Event:
+                case CardType.Player_Side_Quest:
+                case CardType.Treasure:
+                    return true;
+                default:
+                    return false;
+            }
+        }
+
+        public static bool IsEncounterCard(this CardType self)
+        {
+            switch (self)
+            {
+                case CardType.Encounter:
+                case CardType.Encounter_Side_Quest:
+                case CardType.Enemy:
+                case CardType.Location:
+                case CardType.Treachery:
+                case CardType.Objective:
+                case CardType.Objective_Ally:
+                case CardType.Objective_Hero:
+                case CardType.Objective_Location:
+                case CardType.Ship_Enemy:
+                case CardType.Ship_Objective:
+                case CardType.Treasure:
+                    return true;
+                default:
+                    return false;
+            }
+        }
+
+        public static bool IsQuestCard(this CardType self)
+        {
+            switch (self)
+            {
+                case CardType.Quest:
+                case CardType.Campaign:
+                case CardType.GenCon_Setup:
+                case CardType.Nightmare_Setup:
+                case CardType.Scenario:
+                    return true;
+                default:
+                    return false;
+            }
+        }
+    }
 }

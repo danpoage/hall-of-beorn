@@ -35,5 +35,20 @@ namespace HallOfBeorn.Services.LotR
         {
             return Cards().Where(x => x.Id == id).FirstOrDefault();
         }
+
+        public IEnumerable<LotRCard> OfficialPlayerCards()
+        {
+            return Cards().Where(card => card.CardType.IsPlayerCard() && card.CardSet.SetType != Models.SetType.CUSTOM);
+        }
+
+        public IEnumerable<LotRCard> OfficialEncounterCards()
+        {
+            return Cards().Where(card => card.CardType.IsEncounterCard() && card.CardSet.SetType != Models.SetType.CUSTOM);
+        }
+
+        public IEnumerable<LotRCard> OfficialQuestCards()
+        {
+            return Cards().Where(card => card.CardType.IsQuestCard() && card.CardSet.SetType != Models.SetType.CUSTOM);
+        }
     }
 }
