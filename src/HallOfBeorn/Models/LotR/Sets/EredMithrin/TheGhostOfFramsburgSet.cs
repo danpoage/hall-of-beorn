@@ -35,7 +35,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
             addAttachment("Warrior Sword", 1, Sphere.Tactics, false)
                 .WithTraits("Item.", "Weapon.")
                 .WithKeywords("Restricted.")
-                .WithText("Attach to a Tactics or Warrior character.\r\nLimit 1 per character.\r\nAttached character gets +1 Attach for each enemy engaged with you. (Limit +3 Attack.)")
+                .WithText("Attach to a Tactics or Warrior character.\r\nLimit 1 per character.\r\nAttached character gets +1 Attack for each enemy engaged with you. (Limit +3 Attack.)")
                 .WithFlavor("He gripped tighter on the hilt of his sword and went on doggedly.-The Fellowship of the Ring")
                 .WithInfo(89, 3, Artist.Aleksander_Karcz);
             addEvent("Swift and Strong", 1, Sphere.Tactics)
