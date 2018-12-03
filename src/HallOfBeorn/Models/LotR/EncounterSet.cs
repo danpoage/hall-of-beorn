@@ -340,6 +340,8 @@ namespace HallOfBeorn.Models.LotR
             //Ered Mithrin APs
             Add(TheWitheredHeath);
             Add(RoamAcrossRhovanion);
+            Add(FireInTheNight);
+            Add(TheGhostOfFramsburg);
 
             //Two Player Starter
             Add(TheOath);
@@ -668,6 +670,8 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet DarkWoods = new EncounterSet { Name = "Dark Woods", Set = setNameWilds };
         public static EncounterSet TheWitheredHeath = new EncounterSet { Name = "The Withered Heath", Set = "The Withered Heath" };
         public static EncounterSet RoamAcrossRhovanion = new EncounterSet { Name = "Roam Across Rhovanion", Set = "Roam Across Rhovanion" };
+        public static EncounterSet FireInTheNight = new EncounterSet { Name = "Fire in the Night", Set = "Fire in the Night" };
+        public static EncounterSet TheGhostOfFramsburg = new EncounterSet { Name = "The Ghost of Framsburg", Set = "The Ghost of Framsburg" };
 
         //Two Player Starter
         public static EncounterSet TheOath = new EncounterSet { Name = "The Oath", Set = "Two-Player Limited Edition Starter" };
