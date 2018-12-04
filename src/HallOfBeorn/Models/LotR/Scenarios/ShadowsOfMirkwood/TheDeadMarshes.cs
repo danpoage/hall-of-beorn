@@ -45,6 +45,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             ExcludeFromNightmareMode("Treacherous-Fog-Core", 2);
             ExcludeFromNightmareMode("A-Wisp-of-Pale-Sheen-TDM", 1);
             ExcludeFromNightmareMode("Fens-and-Mires-TDM", 4);
+            ExcludeFromNightmareMode("Giant-Marsh-Worm-TDM", 2);
             ExcludeFromNightmareMode("Through-the-Mist-TDM", 1);
             ExcludeFromNightmareMode("Despair-Core", 2);
             ExcludeFromNightmareMode("Goblin-Sniper-Core", 2);

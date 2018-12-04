@@ -262,7 +262,7 @@ If 10 or more progress tokens are on To the Tower, the players have lost the gam
                 Text = "Any damage that would be dealt to a Captain enemy is dealt to 1 Morgul Bodyguard instead.",
                 Shadow = "Shadow: Attacking enemy engages the next player and makes an immediate attack, if able.",
                 EncounterSet = "The Morgul Vale",
-                Quantity = 3,
+                Quantity = 4,
                 CardNumber = 148,
                 Artist = Artist.Rafal_Hrynkiewicz
             });

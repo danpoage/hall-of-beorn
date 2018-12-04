@@ -24,6 +24,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
             AddEncounterSet(EncounterSet.StreetsOfGondor);
             AddEncounterSet(EncounterSet.TheStewardsFear);
             AddEncounterSet(EncounterSet.TheStewardsFearNightmare);
+            AddEncounterSet(EncounterSet.BrigandsNightmare);
 
             AddQuestCardId("Conspiracy-TSF");
             AddQuestCardId("The-Grand-Design-TSF");

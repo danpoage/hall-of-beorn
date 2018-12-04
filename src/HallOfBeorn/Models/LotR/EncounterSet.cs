@@ -444,6 +444,7 @@ namespace HallOfBeorn.Models.LotR
             Add(IntoIthilienNightmare);
             Add(TheSiegeOfCairAndrosNightmare);
             Add(TheStewardsFearNightmare);
+            Add(BrigandsNightmare);
             Add(TheDruadanForestNightmare);
             Add(EncounterAtAmonDinNightmare);
             Add(AssaultOnOsgiliathNightmare);
@@ -776,6 +777,7 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet IntoIthilienNightmare = new EncounterSet { Name = "Into Ithilien Nightmare", Set = "Into Ithilien Nightmare" };
         public static EncounterSet TheSiegeOfCairAndrosNightmare = new EncounterSet { Name = "The Siege of Cair Andros Nightmare", Set = "The Siege of Cair Andros Nightmare" };
         public static EncounterSet TheStewardsFearNightmare = new EncounterSet { Name = "The Steward's Fear Nightmare", Set = "The Steward's Fear Nightmare" };
+        public static EncounterSet BrigandsNightmare = new EncounterSet { Name = "Brigands Nightmare", Set = "The Steward's Fear Nightmare" };
         public static EncounterSet TheDruadanForestNightmare = new EncounterSet { Name = "The Drúadan Forest Nightmare", Set = "The Drúadan Forest Nightmare", NormalizedSet = "The Druadan Forest Nightmare" };
         public static EncounterSet EncounterAtAmonDinNightmare = new EncounterSet { Name = "Encounter at Amon Dîn Nightmare", Set = "Encounter at Amon Dîn Nightmare", NormalizedSet = "Encounter at Amon Din Nightmare", };
         public static EncounterSet AssaultOnOsgiliathNightmare = new EncounterSet { Name = "Assault on Osgiliath Nightmare", Set = "Assault on Osgiliath Nightmare" };
