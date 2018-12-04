@@ -30,6 +30,17 @@ namespace HallOfBeorn.Services.LotR.RingsDb
         private readonly Dictionary<string, string> slugByCardId = new Dictionary<string, string>();
         private readonly Dictionary<string, byte> popularityByCardId = new Dictionary<string, byte>();
         private readonly Dictionary<string, ushort> votesByCardId = new Dictionary<string, ushort>();
+        private readonly Dictionary<string, Dictionary<string, int>> linkMap = new Dictionary<string, Dictionary<string, int>>();
+
+        private void addCardLink(string parentId, string childId, int count)
+        {
+            if (!linkMap.ContainsKey(parentId))
+            {
+                linkMap.Add(parentId, new Dictionary<string,int>());
+            }
+
+            linkMap[parentId][childId] = count;
+        }
 
         private void addHeroPopularity(string cardId, ushort votes)
         {
@@ -1150,6 +1161,13 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             return votesByCardId.ContainsKey(cardId) ?
                 votesByCardId[cardId]
                 : (ushort)0;
+        }
+
+        public IEnumerable<KeyValuePair<string, int>> GetLinks(string slug)
+        {
+            return linkMap.ContainsKey(slug) ?
+                linkMap[slug]
+                : Enumerable.Empty<KeyValuePair<string, int>>();
         }
     }
 }

@@ -17,7 +17,7 @@ namespace RingsDbBuilder
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("RingsDB Popularity Ranker v1.0.4 (2018-11-28)");
+            Console.WriteLine("RingsDB Popularity Ranker v1.0.5 (2018-12-03)");
 
             var productRepo = new ProductRepository();
             var cardRepo = new LotRCardRepository(productRepo);
@@ -26,13 +26,15 @@ namespace RingsDbBuilder
             var heroTally = new Dictionary<string, int>();
             var cardTally = new Dictionary<string, int>();
             var createdTally = new Dictionary<string, int>();
-
             var unknownCards = new List<string>();
+
+            var linkMap = new Dictionary<string, Dictionary<string, int>>();
+            var deckMap = new Dictionary<string, int>();
 
             using (var client = new System.Net.Http.HttpClient())
             {
-                const int startDeckId = 2969; //2902??
-                const int maxDeckId = 10437;
+                const int startDeckId = 2969;
+                const int maxDeckId = 10490;
                 RingsDbDeckList deck;
                 var slug = string.Empty;
                 var quantity = 0;
@@ -47,81 +49,119 @@ namespace RingsDbBuilder
 
                     System.Threading.Thread.Sleep(1000);
 
-                    if (response.IsSuccessStatusCode)
+                    if (!response.IsSuccessStatusCode)
+                        continue;
+                    
+                    var responseContent = response.Content;
+                    string responseString = responseContent.ReadAsStringAsync().Result;
+
+                    deck = null;
+                    try {
+                        deck = Newtonsoft.Json.JsonConvert.DeserializeObject<RingsDbDeckList>(responseString);
+                    } catch (Exception ex) {
+                        Console.WriteLine("ERROR FOR DECK # " + i + ": " + ex.Message);
+                    }
+
+                    if (deck == null) {
+                        continue;
+                    }
+
+                    deckMap.Clear();
+
+                    if (!string.IsNullOrWhiteSpace(deck.date_creation) && deck.date_creation.Length >= 10)
                     {
-                        var responseContent = response.Content;
-                        string responseString = responseContent.ReadAsStringAsync().Result;
-
-                        deck = null;
-                        try {
-                            deck = Newtonsoft.Json.JsonConvert.DeserializeObject<RingsDbDeckList>(responseString);
-                        } catch (Exception ex) {
-                            Console.WriteLine("ERROR FOR DECK # " + i + ": " + ex.Message);
+                        created = deck.date_creation.Substring(0, 10);
+                        if (!createdTally.ContainsKey(created)) {
+                            createdTally[created] = 0;
                         }
-
-                        if (deck == null) {
-                            continue;
-                        }
-
-                        if (!string.IsNullOrWhiteSpace(deck.date_creation) && deck.date_creation.Length >= 10)
-                        {
-                            created = deck.date_creation.Substring(0, 10);
-                            if (!createdTally.ContainsKey(created)) {
-                                createdTally[created] = 0;
-                            }
                             
-                            createdTally[created] += 1;
+                        createdTally[created] += 1;
+                    }
+
+                    foreach (var heroId in deck.heroes.Keys)
+                    {
+                        slug = lookupService.GetSlug(heroId);
+                        if (string.IsNullOrEmpty(slug)) {
+                            unknownCards.Add(heroId);
+                            //continue;
                         }
 
-                        foreach (var heroId in deck.heroes.Keys)
-                        {
-                            slug = lookupService.GetSlug(heroId);
-                            if (string.IsNullOrEmpty(slug)) {
-                                unknownCards.Add(heroId);
-                                //continue;
-                            }
-
-                            if (!heroTally.ContainsKey(heroId)) {
-                                heroTally[heroId] = 0;
-                            }
-
-                            //Console.WriteLine(string.Format("  Hero {0} +1", slug));
-
-                            heroTally[heroId] += 1;
+                        if (!heroTally.ContainsKey(heroId)) {
+                            heroTally[heroId] = 0;
                         }
 
-                        foreach (var cardId in deck.slots.Keys)
-                        {
-                            slug = lookupService.GetSlug(cardId);
-                            if (string.IsNullOrEmpty(slug)) {
-                                unknownCards.Add(cardId);
-                                //continue;
-                            }
+                        //Console.WriteLine(string.Format("  Hero {0} +1", slug));
 
-                            if (!cardTally.ContainsKey(cardId)) {
-                                cardTally[cardId] = 0;
-                            }
+                        heroTally[heroId] += 1;
 
-                            quantity = deck.slots[cardId];
+                        if (!deckMap.ContainsKey(heroId))
+                            deckMap.Add(heroId, 1);
+                    }
 
-                            //Console.WriteLine(string.Format("  Player Card {0} + {1}", slug, quantity));
-
-                            cardTally[cardId] += quantity;
+                    foreach (var cardId in deck.slots.Keys)
+                    {
+                        slug = lookupService.GetSlug(cardId);
+                        if (string.IsNullOrEmpty(slug)) {
+                            unknownCards.Add(cardId);
+                            //continue;
                         }
 
-                        /*
-                        foreach (var cardId in deck.sideslots.Keys)
-                        {
-                            if (!cardScores.ContainsKey(cardId)) {
-                                cardScores[cardId] = 0;
-                            }
+                        if (!cardTally.ContainsKey(cardId)) {
+                            cardTally[cardId] = 0;
+                        }
 
-                            cardScores[cardId] += sideboardMultiplier;
-                        }*/
+                        quantity = deck.slots[cardId];
+
+                        if (!deckMap.ContainsKey(cardId))
+                            deckMap.Add(cardId, quantity);
+
+                        //Console.WriteLine(string.Format("  Player Card {0} + {1}", slug, quantity));
+
+                        cardTally[cardId] += quantity;
+                    }
+
+                    foreach (var parentId in deckMap.Keys)
+                    {
+                        if (!linkMap.ContainsKey(parentId))
+                            linkMap.Add(parentId, new Dictionary<string, int>());
+
+                        foreach (var childId in deckMap.Keys)
+                        {
+                            //A card cannot link to itself
+                            if (childId == parentId)
+                                continue;
+
+                            if (!linkMap[parentId].ContainsKey(childId))
+                                linkMap[parentId].Add(childId, deckMap[childId]);
+                            else
+                                linkMap[parentId][childId] = linkMap[parentId][childId] + deckMap[childId];
+                        }
+                    }
+
+                    /*
+                    foreach (var cardId in deck.sideslots.Keys)
+                    {
+                        if (!cardScores.ContainsKey(cardId)) {
+                            cardScores[cardId] = 0;
+                        }
+
+                        cardScores[cardId] += sideboardMultiplier;
+                    }*/
+                }
+
+                Console.WriteLine("LINKS");
+
+                foreach (var parentId in linkMap.Keys)
+                {
+                    var topChildren = linkMap[parentId].OrderByDescending(kvp => kvp.Value).Take(10);
+                    foreach (var child in topChildren)
+                    {
+                        Console.WriteLine(string.Format("            addCardLink(\"{0}\", \"{1}\", {2});", parentId, child.Key, child.Value));
                     }
                 }
 
-                Console.WriteLine("DONE");
+                Console.WriteLine();
+                Console.WriteLine("POPULARITY");
                 //Console.WriteLine("Press ENTER to close this window");
                 //Console.ReadLine();
 
