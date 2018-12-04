@@ -43,6 +43,11 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithText("Response: After a character you control attacks and destroys an enemy, exhaust a Weapon attached to that character to ready that character and give it +2 Attack for its next attack this phase.")
                 .WithFlavor("The sword is sharp, the spear is long,\r\nThe arrow swift, the Gate is strong.\r\n-The Hobbit")
                 .WithInfo(90, 3, Artist.JB_Casacop);
+            addAlly("Descendant of Girion", 4, Sphere.Spirit, false, 2, 2, 2, 2)
+                .WithTraits("Dale.")
+                .WithText("Reduce the cost to play Item attachments on Descendant of Girion by 1.")
+                .WithFlavor("-Glóin, The Fellowship of the Ring")
+                .WithInfo(91, 3, Artist.Unknown);
             addAttachment("Thrór's Ring", 1, Sphere.Neutral, true)
                 .WithTraits("Artifact.", "Ring.")
                 .WithKeywords("Guarded (enemy or location).")
