@@ -171,6 +171,10 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         }
         */
 
+        public bool HasLinkedCards { get { return LinkedCards != null && LinkedCards.Count > 0; } }
+        
+        public List<Link> LinkedCards { get; set; }
+
         public bool HasBlogs { get { return true; } }
 
         public List<Link> Blogs()

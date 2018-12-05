@@ -626,6 +626,17 @@
         </div>
         <div>
             <div class="footer-section">
+            @if (@Model.HasLinkedCards)
+            {
+                    <div style="margin-top:12px;"><b>Associated Cards</b></div>
+                    foreach (var link in @Model.LinkedCards)
+                    {
+                        <div><a href="@link.Url" title="@link.Title" target="_blank">@link.Text</a></div>
+                    }
+            }
+            </div>
+            @*
+            <div class="footer-section">
             @if (@Model.HasBlogs)
             {
                     <div style="margin-top:12px;"><b>Blogs</b></div>
@@ -635,6 +646,7 @@
                     }
             }
             </div>
+            *@
             <div class="footer-section">
                 @if (@Model.HasReferences)
                 {

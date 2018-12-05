@@ -73,6 +73,8 @@ namespace HallOfBeorn.Handlers.LotR
             var getQuestCategories = new Func<string, IEnumerable<QuestCategory>>((slug) => { return _questCategoryService.Categories(slug); });
             var viewModel = new CardViewModel(card, getPlayerCategories, getEncounterCategories, getQuestCategories);
 
+            viewModel.LinkedCards = GetLinkedCards(card);
+
             if (string.IsNullOrEmpty(card.HtmlTemplate))
             {
                 card.HtmlTemplate = _templateService.GetFrontHtml(card.Slug);
@@ -93,6 +95,28 @@ namespace HallOfBeorn.Handlers.LotR
                 viewModel.ShadowEffects.Add(CardEffect.Parse(_statService, card, card.Shadow));
 
             return viewModel;
+        }
+
+        public List<Link> GetLinkedCards(LotRCard card)
+        {
+            var links = new List<Link>();
+
+            var children = _ringsDbService.GetLinks(card.Slug);
+
+            foreach (var child in children)
+            {
+                var childSlug = _ringsDbService.GetSlug(child.Key);
+                if (string.IsNullOrWhiteSpace(childSlug))
+                    continue;
+
+                var childCard = _cardRepository.FindBySlug(childSlug);
+                if (childCard == null)
+                    continue;
+
+                links.Add(new Link(LinkType.Hall_of_Beorn_LotR_Detail, childCard, childCard.Title)); 
+            }
+
+            return links;
         }
 
         private IEnumerable<CardEffect> ParseCardEffects(LotRCard card, string text)
