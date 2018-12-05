@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
             AddProduct(Product.RoamAcrossRhovanion);
             AddProduct(Product.FireInTheNight);
             AddProduct(Product.TheGhostOfFramsburg);
+            AddProduct(Product.MountGundabad);
         }
     }
 }

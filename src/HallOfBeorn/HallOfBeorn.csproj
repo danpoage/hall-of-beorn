@@ -360,6 +360,7 @@
     <Compile Include="Models\LotR\ProductGroups\EredMithrinProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\StarterProductGroup.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\FireInTheNightProduct.cs" />
+    <Compile Include="Models\LotR\Products\AdventurePack\MountGundabadProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\RoamAcrossRhovanionProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\TheGhostOfFramsburgProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\TheWitheredHeathProduct.cs" />
@@ -414,6 +415,7 @@
     <Compile Include="Models\LotR\Sets\DreamChaser\TempleOfTheDeceivedNightmare.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\TheThingInTheDepthsNightmare.cs" />
     <Compile Include="Models\LotR\Sets\EredMithrin\FireInTheNightSet.cs" />
+    <Compile Include="Models\LotR\Sets\EredMithrin\MountGundabadSet.cs" />
     <Compile Include="Models\LotR\Sets\EredMithrin\RoamAcrossRhovanionSet.cs" />
     <Compile Include="Models\LotR\Sets\EredMithrin\TheGhostOfFramsburgSet.cs" />
     <Compile Include="Models\LotR\Sets\EredMithrin\TheWitheredHeathSet.cs" />

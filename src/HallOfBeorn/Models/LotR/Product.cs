@@ -130,6 +130,7 @@ namespace HallOfBeorn.Models.LotR
         public static Product RoamAcrossRhovanion = new Products.AdventurePack.RoamAcrossRhovanionProduct();
         public static Product FireInTheNight = new Products.AdventurePack.FireInTheNightProduct();
         public static Product TheGhostOfFramsburg = new Products.AdventurePack.TheGhostOfFramsburgProduct();
+        public static Product MountGundabad = new Products.AdventurePack.MountGundabadProduct();
 
         //The Hobbit Saga
         public static Product TheHobbitOverHillAndUnderHill = new Products.Saga.TheHobbitOverHillAndUnderHillProduct();
