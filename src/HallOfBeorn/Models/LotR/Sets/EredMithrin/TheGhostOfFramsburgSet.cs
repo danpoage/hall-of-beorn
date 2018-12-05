@@ -28,8 +28,16 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTraits("Dwarf.", "Warrior.")
                 .WithText("Action: Discard the top 3 cards from your deck to ready Soldier of ~Erebor. (Limit once per round.)")
                 .WithInfo(85, 3, Artist.Matthew_Cowdery);
-
-            addEvent("Familiar Territory", 1, Sphere.Lore)
+            addEvent("Man the Walls", 0, Sphere.Leadership)
+                .WithText("Play only if no other copies of Man the Walls have been played this round.\r\nPlanning Action: Reduce the cost of the next ally played by each player this phase by 1. Those allies cannot quest this round.")
+                .WithInfo(86, 3, Artist.Unknown);
+            addAlly("Mirkwood Hunter", 4, Sphere.Lore, false, 2, 2, 2, 3)
+                .WithTraits("Woodman.", "Ranger.")
+                .WithKeywords("Ranged.")
+                .WithText("Reduce the cost to play Mirkwood Hunter by 1 for each attachment on the active location.")
+                .WithFlavor("...they were brave and well-armed and even the Wargs dated not attack them if there were many together...\r\n-The Hobbit")
+                .WithInfo(87, 3, Artist.Unknown);
+            addEvent("Familiar Lands", 1, Sphere.Lore)
                 .WithText("Action: Each location with an attachment gets -2 Threat until the end of the phase.")
                 .WithInfo(88, 3, Artist.Leanna_Crossan);
             addAttachment("Warrior Sword", 1, Sphere.Tactics, false)
@@ -48,6 +56,11 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithText("Reduce the cost to play Item attachments on Descendant of Girion by 1.")
                 .WithFlavor("-Glóin, The Fellowship of the Ring")
                 .WithInfo(91, 3, Artist.Unknown);
+            addEvent("Valiant Determination", 2, Sphere.Spirit)
+                .WithTraits("Condition.")
+                .WithText("Attach to an ally.\r\nAttached ally does not exhaust to quest.")
+                .WithFlavor("-The Hobbit")
+                .WithInfo(92, 3, Artist.Unknown);
             addAttachment("Thrór's Ring", 1, Sphere.Neutral, true)
                 .WithTraits("Artifact.", "Ring.")
                 .WithKeywords("Guarded (enemy or location).")
