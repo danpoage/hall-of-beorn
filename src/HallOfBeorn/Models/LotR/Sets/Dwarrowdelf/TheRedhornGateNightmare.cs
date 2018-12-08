@@ -7,9 +7,11 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
 {
     public class TheRedhornGateNightmare : CardSet
     {
+        private const string setName = "The Redhorn Gate Nightmare";
+
         protected override void Initialize()
         {
-            Name = "The Redhorn Gate Nightmare";
+            Name = setName;
             Abbreviation = "TRGN";
             SetType = Models.SetType.Nightmare_Expansion;
             Cycle = "NIGHTMARE";
@@ -86,27 +88,11 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 CardNumber = 3,
                 Artist = Artist.Aurelien_Hubert
             });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Snow-Giant",
-                Id = "CAA9EE36-ABFA-4AE4-A059-9C5812761A8F",
-                CardType = CardType.Enemy,
-                EngagementCost = 42,
-                Threat = 4,
-                Attack = 6,
-                Defense = 4,
-                HitPoints = 10,
-                Traits = new List<string> { "Giant.", "Snow." },
-                Text = 
-@"While Snow-Giant is in the staging area, it attacks the first player during the combat phase, as if it were engaged.
-
-Forced: After Snow-Giant engages you, discard the ally you control with the highest Willpower.",
-                VictoryPoints = 1,
-                EncounterSet = "The Redhorn Gate Nightmare",
-                Quantity = 3,
-                CardNumber = 4,
-                Artist = Artist.Jason_Ward
-            });
+            addEnemy("Snow-Giant", setName, 42, 4, 6, 4, 10)
+                .WithTraits("Giant.", "Snow.")
+                .WithText("While Snow-Giant is in the staging area, it attacks the first player during the combat phase, as if it were engaged.\r\nForced: After Snow-Giant engages you, discard the ally you control with the highest Willpower.")
+                .WithVictoryPoints(1)
+                .WithInfo(4, 2, Artist.Jason_Ward);
             Cards.Add(new LotRCard()
             {
                 Title = "Icy Cavern",
