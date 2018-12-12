@@ -17,8 +17,6 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
             SetType = Models.SetType.Adventure_Pack;
             Cycle = "Ered Mithrin";
 
-            IsSpoiler = true;
-
             addHero("Thranduil", 9, Sphere.Leadership, 1, 1, 3, 4)
                 .WithTraits("Silvan.", "Noble.")
                 .WithText("Combat Action: Play a Silvan ally from your hand. You do not need a resource match for this ally. (Limit once per round.)")
@@ -35,30 +33,38 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithText("Attach to a hero.\r\nAttached hero gets +2 Attack.\r\nResponse: After attached hero drestroys an enemy, add 1 resource to attached hero's pool.")
                 .WithTemplate("<p class='main-text'>{keyword:Guarded+%28enemy+or+location%29.@Guarded (enemy or location).}</p><p class='main-text'>Attach to a hero. {keyword:Restricted.}</p><p class='main-text'>Attached hero gets +2 {Attack}.</p><p class='main-text'><b>Response:</b> After attach hero destroys an enemy, add 1 resource to attached hero's pool.</p>")
                 .WithInfo(58, 3, Artist.Aleksander_Karcz);
+            addAlly("Forest Road Traveler", 2, Sphere.Lore, false, 1, 1, 1, 2)
+                .WithTraits("Woodman.", "Scout.")
+                .WithText("~Forest ~Road Traveler gets +1 Willpower, +1 Attack, and +1 Defense for each attachment on the active location.")
+                .WithFlavor("Only on the Road would travellers be found...\r\n-The Fellowship of the Ring")
+                .WithInfo(59, 3, Artist.Derek_D_Edgell);
             addAttachment("Leather Boots", 1, Sphere.Lore, false)
                 .WithTraits("Item.")
                 .WithText("Attach to a Lore or Ranger character. Limit 1 per character.\r\nResponse: After a Location is revealed from the encounter deck, exhaust Leather Boots to ready attached character.")
-                .WithFlavor("His legs were stretched out, stuck in long soft boots that fit him just right\r\n-The Fellowship of the Ring")
+                .WithFlavor("His legs were stretched out before him, showing high boots of supple leather the fitted him well...\r\n-The Fellowship of the Ring")
                 .WithInfo(60, 3, Artist.Yoann_Boissonnet);
             addAlly("Giant Bear", 5, Sphere.Tactics, false, 0, 4, 3, 4)
                 .WithTraits("Creature.", "Beorning.")
-                .WithText("Cannot have attachments.\r\nAction: Ready Giant Bear. At the end of the phase, if you have used this ability, shuffle Giant Bear into your deck. (Limit once per phase.)")
-                .WithFlavor("\"He roams around as a bear\"\r\n-Gandalf, The Hobbit")
+                .WithText("Cannot have attachments.\r\nAction: Ready ~Giant Bear. At the end of the phase in which you trigger this effect, shuffle ~Giant Bear into your deck. (Limit once per phase.)")
+                .WithFlavor("\"As a bear he ranged far and wide\"\r\n-Gandalf, The Hobbit")
                 .WithInfo(61, 3, Artist.Brendan_C_Murphy);
+            addAttachment("Outmatched", 1, Sphere.Tactics, false)
+                .WithTraits("Condition.", "Trap.")
+                .WithText("Play into your play area unattached.\r\nIf unattached, attach to the next eligible enemy that engages you.\r\nResponse: After attached enemy resolves its attack, ready the defending character.")
+                .WithInfo(62, 3, Artist.Preston_Stone);
             addAlly("Galion", 0, Sphere.Spirit, true, 0, 0, 0, 1)
                 .WithTraits("Silvan.")
                 .WithText("Cannot attack or defend.\r\nResponse: After Galion enters play, he gets +1 Willpower until the end of the round.")
                 .WithFlavor("\"Here am I waiting and waiting down hero, while you fellows drink and make merry and forget your tasks. Small wonder if I fall asleep from weariness!\"\r\n-The Hobbit")
                 .WithInfo(63, 3, Artist.Torbjorn_Kallstrom);
-            addAlly("Forest Road Traveler", 2, Sphere.Lore, false, 1, 1, 1, 2)
-                .WithTraits("Woodman.", "Scout.")
-                .WithText("~Forest ~Road Traveler gets +1 Willpower, +1 Attack, and +1 Defense for each attachment on the active location.")
-                .WithFlavor("Only on the Road would travellers be found...\r\n-The Fellowship of the Ring")
-                .WithInfo(67, 3, Artist.Unknown);
+            addEvent("Quicker Than Sight", 0, Sphere.Spirit)
+                .WithText("Response: Return a Silvan ally you control to your hand to cancel a shadow effect just triggered during combat.")
+                .WithFlavor("\"You would die before your stroke fell.\"\r\n-Legolas, The Two Towers")
+                .WithInfo(64, 3, Artist.Monztre);
             addAlly("Thalion", 4, Sphere.Neutral, true, 2, 2, 2, 3)
                 .WithTraits("Dúnedain.", "Ranger.")
                 .WithText("While there is at least 1 side quest in the victory display, ready Thalion at the beginning of the combat phase.\r\nWhile there are at least 3 side quests in the victory display, Thalion loses the ally card type, gains the hero card type and the resource icons of each sphere on a side quest in the victory display.")
-                .WithInfo(69, 3, Artist.Unknown);
+                .WithInfo(65, 3, Artist.Aleksander_Karcz);
 
         }
     }
