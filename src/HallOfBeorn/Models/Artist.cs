@@ -619,6 +619,7 @@ namespace HallOfBeorn.Models
 
             //Ered Mithin Cycle
             all.Add(Artist.Alex_Boca);
+            all.Add(Artist.Andreas_Adamek);
             all.Add(Artist.Brendan_C_Murphy);
             all.Add(Artist.Derek_D_Edgell);
 
@@ -858,6 +859,7 @@ namespace HallOfBeorn.Models
         public static Artist Alvaro_Calvo_Escudero = new Artist { Name = "Álvaro Calvo Escudero", URL = "http://escudero.deviantart.com" };
         public static Artist Alyn_Spiller = new Artist { Name = "Alyn Spiller", URL = "http://niltrace.deviantart.com" };
         public static Artist Andreia_Ugrai = new Artist { Name = "Andreia Ugrai", URL = "http://andreiaugrai.deviantart.com" };
+        public static Artist Andreas_Adamek = new Artist { Name = "Andreas Adamek", URL = "https://www.artstation.com/paintangel" };
         public static Artist Andrew_Johanson = new Artist { Name = "Andrew Johanson", URL = "http://andrewjohanson.blogspot.com" };
         public static Artist Andrew_Olson = new Artist { Name = "Andrew Olson", URL = "http://mysticaldonkey1.deviantart.com" };
         public static Artist Andrew_Ryan = new Artist { Name = "Andrew Ryan", URL = "http://andrewryanart.deviantart.com" };
