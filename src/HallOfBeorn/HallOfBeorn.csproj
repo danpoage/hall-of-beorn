@@ -387,6 +387,7 @@
     <Compile Include="Models\LotR\Products\Nightmare\TheWastesOfEriadorNightmareProduct.cs" />
     <Compile Include="Models\LotR\Scenarios\DreamChaser\AStormOnCobasHaven.cs" />
     <Compile Include="Models\LotR\Scenarios\EredMithrin\EredMithrinScenario.cs" />
+    <Compile Include="Models\LotR\Scenarios\EredMithrin\FireInTheNightScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\EredMithrin\RoamAcrossRhovanionScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\EredMithrin\TheWitheredHeathScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\Haradrim\BeneathTheSandsScenario.cs" />

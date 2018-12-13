@@ -115,6 +115,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTraits("Goblin.", "Orc.")
                 .WithText("Forced: After The Dragon’s Thrall engages you, either deal 3 damage to Hrogar’s Hill, or it makes an immediate attack against you.")
                 .WithShadow("Shadow: If this attack destroys a character, deal 3 damage to Hrogar's Hill.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(75, 3, Artist.Martin_de_Diego_Sadaba);
             addEnemy("Orc of the Flame", setName, 25, 2, 2, 2, 3)
                 .WithTraits("Goblin.", "Orc.")
@@ -124,6 +125,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
             addLocation("Town Gate", setName, 3, 4)
                 .WithTraits("Town.")
                 .WithText("While Town Gate is in the staging area, it gains: \"Forced: At the end of the quest phase, place 1 resource here. Then, if there are 3 resources here, discard Town Gate and deal 4 damage to Hrogar's Hill.\"\r\nTravel: Dagnir makes an immediate attack against the first player.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(77, 2, Artist.Jose_Vega);
             addLocation("Wooden Palisade", setName, 2, 3)
                 .WithTraits("Town.")
@@ -133,6 +135,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
             addLocation("Burning Watchtower", setName, Card.VALUE_X, 5)
                 .WithTraits("Town.")
                 .WithText("X is 1 more than the number of side quests in the victory display.\r\nTravel: Each player assigns X damage among characters he controls.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(79, 3, Artist.Alvaro_Calvo_Escudero);
             addTreachery("Powerful in Wrath", setName)
                 .WithKeywords("Doomed 1.")
@@ -142,10 +145,12 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
             addTreachery("The Dragon's Fury", setName)
                 .WithText("When Revealed: Dagnir makes an immediate attack against the first player. Undefended damage from this attack must be dealt to Hrogar's Hill.")
                 .WithShadow("Shadow: Attacking enemy makes an additional attack against you after this one.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(81, 3, Artist.Preston_Stone);
             addTreachery("Bright Flames", setName)
                 .WithText("When Revealed: Each player assigns X damage among characters he controls, where X is 1 more than the number of side quests in the victory display.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack for each side quest in the victory display.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(82, 2, Artist.Alyn_Spiller);
             addQuest("Hrogar's Hill", setName, 1, 'A', 50)
                 .WithFlavor("The Woodmen of Hrogar’s Hill have agreed to help you in your quest, but shortly after they welcome you to their town it is attacked by the very Dragon you seek: Dagnir has come to take vengeance on Wilderland!")

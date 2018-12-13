@@ -11,6 +11,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
             : base("Fire in the Night", "MEC68", ImageType.Jpg, new DateTime(2018, 12, 11))
         {
             AddCardSet(CardSet.FireInTheNight);
+            AddScenario(new Scenarios.EredMithrin.FireInTheNightScenario());
         }
     }
 }

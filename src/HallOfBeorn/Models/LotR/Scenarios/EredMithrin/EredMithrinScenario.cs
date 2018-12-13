@@ -32,5 +32,23 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
             ExcludeFromEasyMode("Hills-of-Wilderland-TWoR", 1);
             ExcludeFromEasyMode("Lonely-Lands-TWoR", 1);
         }
+
+        protected void ExcludeGreyMountainGoblinsFromEasyMode()
+        {
+            ExcludeFromEasyMode("Goblin-Troop-TWoR", 1);
+            ExcludeFromEasyMode("Stray-Goblin-TWoR", 1);
+        }
+
+        protected void ExcludeDarkWoodsFromEasyMode()
+        {
+            ExcludeFromEasyMode("Accursed-Forest-TWoR", 1);
+            ExcludeFromEasyMode("Dark-Black-Woods-TWoR", 1);
+        }
+
+        protected void ExcludeGatheringGloomFromEasyMode()
+        {
+            ExcludeFromEasyMode("Gathering-Gloom-TWoR", 1);
+            ExcludeFromEasyMode("Swarm-of-Bats-TWoR", 1);
+        }
     }
 }
