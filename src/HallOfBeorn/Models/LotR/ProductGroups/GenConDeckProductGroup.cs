@@ -20,6 +20,7 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
             AddProduct(Product.TheSiegeOfAnnuminas);
             AddProduct(Product.AssaultOnDolGuldur);
             AddProduct(Product.TheWizardsQuest);
+            AddProduct(Product.TheWoodlandRealm);
         }
     }
 }

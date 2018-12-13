@@ -303,6 +303,7 @@ namespace HallOfBeorn.Models.LotR
             Add(TheSiegeOfAnnuminas);
             Add(AttackOnDolGuldur);
             Add(TheWizardsQuest);
+            Add(TheWoodlandRealm);
 
             Add(PassageThroughMirkwoodNightmare);
             Add(JourneyAlongTheAnduinNightmare);
@@ -477,6 +478,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheSiegeOfAnnuminas = new Sets.PrintOnDemand.TheSiegeOfAnnuminas();
         public static CardSet AttackOnDolGuldur = new Sets.PrintOnDemand.AttackOnDolGuldurSet();
         public static CardSet TheWizardsQuest = new Sets.PrintOnDemand.TheWizardsQuestSet();
+        public static CardSet TheWoodlandRealm = new Sets.PrintOnDemand.TheWoodlandRealmSet();
 
         public static CardSet PassageThroughMirkwoodNightmare = new Sets.Core.PassageThroughMirkwoodNightmareSet();
         public static CardSet JourneyAlongTheAnduinNightmare = new Sets.Core.JourneyAlongTheAnduinNightmareSet();

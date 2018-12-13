@@ -197,10 +197,15 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithOppositeText("While Dol Guldur's city strength is 0, each Lieutenant enemy loses indestructible.\r\nWhile the players are at stage 3, this card gains: \"Forced: After resolving the Forced effect on Dol Guldur, the team with Dol Guldur in their staging area resolves the forced effect on the stage 3 that was not in play at any stage this round. Then, each team discards all progress from their stage 3 and advances to a new stage 3 of their choice. Each team must choose a different stage.\"\r\nResponse: At the end of the round, a player who controls Host of Lórien or Power of Lórien may give control of that card to another player at any stage.\r\nIf the last player at a stage is eliminated, the siege falls and the entire group loses the game. At the end of the round, if Dol Guldur's city strength is 0 and there are no Lieutenant enemies in play at each stage, Dol Guldur is captured and the players win the game.")
                 .WithOppositeFlavor("They took Dol Guldur, and Galadriel threw down its walls and laid bare its pits, and the forest was cleared.\r\n-The Return of the King")
                 .WithInfo(32, 1, Artist.Carlos_Palma_Cruchaga));
-            addCard(LotRCard.Hero("Celeborn", string.Empty, Sphere.Leadership, 11, 3, 2, 2, 4)
+            addHero("Celeborn", 11, Sphere.Leadership, 3, 2, 2, 4)
                 .WithTraits("Silvan.", "Noble.")
                 .WithText("Response: After a Silvan ally enters play, that ally gets +1 Willpower, +1 Attack, and +1 Defense until the end of the round.")
-                .WithInfo(1, 1, Artist.Drazenka_Kimpel));
+                .WithInfo(1, 1, Artist.Drazenka_Kimpel);
+            addHero("Galadriel", 9, Sphere.Spirit, 4, 0, 0, 4)
+                .WithTraits("Noldor.", "Noble.")
+                .WithText("Galadriel cannot quest, attack or defend. Allies you control do not exhaust to commit to the quest during the round they enter play.\r\nAction: Exhaust Galadriel to choose a player. That player reduces his threat by 1 and draws 1 card. (Limit once per round.)")
+                .WithInfo(112, 1, Artist.Drazenka_Kimpel);
+
         }
     }
 }
