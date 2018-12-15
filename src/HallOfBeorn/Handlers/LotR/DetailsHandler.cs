@@ -113,7 +113,8 @@ namespace HallOfBeorn.Handlers.LotR
                 if (childCard == null)
                     continue;
 
-                links.Add(new Link(LinkType.Hall_of_Beorn_LotR_Detail, childCard, childCard.Title)); 
+                var qualifiedTitle = string.Format("{0} ({1})", childCard.Title, childCard.CardSet.Abbreviation);
+                links.Add(new Link(LinkType.Hall_of_Beorn_LotR_Detail, childCard, qualifiedTitle)); 
             }
 
             return links;
@@ -232,6 +233,7 @@ namespace HallOfBeorn.Handlers.LotR
                 var popularity = _ringsDbService.GetPopularity(model.Slug);
                 if (popularity > 0)
                 {
+                    model.Votes = _ringsDbService.GetVotes(model.Slug);
                     model.Popularity = popularity;
                 }
             }
