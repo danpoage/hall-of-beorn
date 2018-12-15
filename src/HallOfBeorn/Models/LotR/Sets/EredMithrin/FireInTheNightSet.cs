@@ -108,7 +108,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
             addEnemy("Dagnir", setName, 50, Card.VALUE_X, 7, 5, 20)
                 .WithUnique()
                 .WithTraits("Dragon.")
-                .WithText("Immune to player card effects. X is 1 more than the number of side quests in the victory display.\r\nCannot leave the staging are or take more than X damage from non-quest effects each round.\r\nWhile at least 3 side quests are in the victory display, Dagnir is considered to be enaged with each player.")
+                .WithText("Immune to player card effects. X is 1 more than the number of side quests in the victory display.\r\nCannot leave the staging are or take more than X damage from non-quest effects each round.\r\nWhile at least 3 side quests are in the victory display, Dagnir is considered to be engaged with each player.")
                 .WithVictoryPoints(5)
                 .WithInfo(74, 1, Artist.Antonio_Jose_Manzanedo);
             addEnemy("Dragon's Thrall", setName, 30, 3, 3, 3, 4)

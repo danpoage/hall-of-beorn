@@ -225,6 +225,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
                 .WithUnique()
                 .WithTraits("Underground.", "Dark.", "Lair.")
                 .WithText("Immune to player card effects.\r\nFire-drake cannot take damage.\r\nResponse: After Dragon Hoard becomes the active location, the first player chooses a player to attach an Artifact attachment from his hand to Dragon Hoard. That attachment gains the guarded (location) keyword. If that attachment has the printed guarded keyword, do not resolve it when the attachment enters play.")
+                .WithVictoryPoints(1)
                 .WithInfo(43, 1, Artist.Nele_Diel);
             addLocation("Iron Hills Mine", EncounterSet.TheKingsQuest.Name, 4, 4)
                 .WithTraits("Underground.")
