@@ -35,7 +35,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTraits("Woodman.", "Ranger.")
                 .WithKeywords("Ranged.")
                 .WithText("Reduce the cost to play Mirkwood Hunter by 1 for each attachment on the active location.")
-                .WithFlavor("...they were brave and well-armed and even the Wargs dated not attack them if there were many together...\r\n-The Hobbit")
+                .WithFlavor("...they were brave and well-armed and even the Wargs dared not attack them if there were many together...\r\n-The Hobbit")
                 .WithInfo(87, 3, Artist.Unknown);
             addEvent("Familiar Lands", 1, Sphere.Lore)
                 .WithText("Action: Each location with an attachment gets -2 Threat until the end of the phase.")
