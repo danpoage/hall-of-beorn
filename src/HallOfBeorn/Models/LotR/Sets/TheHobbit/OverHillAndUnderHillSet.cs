@@ -1,4 +1,4 @@
-using System;
+Ôªøusing System;
 using System.Collections.Generic;
 using HallOfBeorn;
 using HallOfBeorn.Models;
@@ -179,7 +179,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
             Cards.Add(new LotRCard() {
                 
                 Title = "Beorn",
-                AlternateSlug = "Bjorn-THOHaUH",
+                AlternateSlug = "üêª",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9015",
                 CardType = CardType.Hero,
                 Sphere = Sphere.Tactics,
@@ -830,7 +830,7 @@ The players have won the game.",
                 EncounterSet = "Western Lands",
                 Quantity = 1,
                 Text = "When Revealed: Discard all Baggins resources.",
-                FlavorText = "\"As soon as I clapped eyes on the little fellow bobbing and puffing on the mat, I had my doubts. He looks more like a grocer than a burglar!\" -GlÛin The Hobbit",
+                FlavorText = "\"As soon as I clapped eyes on the little fellow bobbing and puffing on the mat, I had my doubts. He looks more like a grocer than a burglar!\" -Gl√≥in The Hobbit",
                 Shadow = "Shadow: Resolve this card's 'When Revealed' effect.",
                 CardNumber = 57,
                 Artist = Artist.Magali_Villeneuve
@@ -1141,7 +1141,7 @@ The players have won the game.",
                 Artist = Artist.Tiziano_Baracchi
             });
             Cards.Add(new LotRCard() {
-                Title = "ThrÛr's Map",
+                Title = "Thr√≥r's Map",
                 Id = "51223bd0-ffd1-11df-a976-1801204c9084",
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Lore,
@@ -1149,7 +1149,7 @@ The players have won the game.",
                 Quantity = 3,
                 ResourceCost = 1,
                 IsUnique = true,
-                Text = "Attach to a hero.\r\nTravel Action: Exhaust ThrÛr's Map to choose a location in the staging area. Make that location the active location. (If there is another active location, return it to the staging area.)",
+                Text = "Attach to a hero.\r\nTravel Action: Exhaust Thr√≥r's Map to choose a location in the staging area. Make that location the active location. (If there is another active location, return it to the staging area.)",
                 FlavorText = "\"This was made by Thror, your grandfather, Thorin.\" he said in answer to the dwarves' excited questions. \"It is a plan of the Mountain.\" -Gandalf, The Hobbit",
                 CardNumber = 13,
                 Artist = Artist.Jake_Murray,
