@@ -91,6 +91,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithTraits("Mount.", "Mearas.")
                 .WithText("Attach to Gandalf.\r\nGandalf gains ranged and sentinel.\r\nAction: Exhaust Shadowfax to ready Gandalf.")
                 .WithFlavor("\"He is the chief of the Mearas, lords of horses, and not even Théoden, King of Rohan, has ever looked on a better.\" -Gandalf, The Two Towers")
+                .WithAlternateSlug("🐎")
                 .WithInfo(14, 3, Artist.Smirtouille));
             Cards.Add(LotRCard.Attachment("Intimidation", "11AD2994-C7E7-4A23-99BA-E6FCA169BA48", Sphere.Neutral, 0)
                 .WithBoon()
