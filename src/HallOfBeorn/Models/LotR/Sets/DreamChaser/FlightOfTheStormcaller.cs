@@ -21,6 +21,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithTraits("Gondor.", "Noble.", "Steward.")
                 .WithText("Setup: Add 2 resources to Denethor's resource pool.\r\nAction: Move 1 resource from Denethor's resource pool to another Gondor hero's resource pool. (Limit once per round.)")
                 .WithFlavor("\"...why should I sit here in my tower and think, and watch, and wait, spending even my sons? For I can still wield a brand.\"\r\n-The Return of the King")
+                .WithAlternateSlug("🍅")
                 .WithInfo(1, 1, Artist.Joshua_Cairos));
             Cards.Add(LotRCard.Attachment("Rod of the Steward", "", Sphere.Leadership, 0)
                 .WithUnique()
