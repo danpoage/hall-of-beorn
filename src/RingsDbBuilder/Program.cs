@@ -1,23 +1,48 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-
-using Newtonsoft.Json;
-
-using HallOfBeorn.Models.RingsDb;
-using HallOfBeorn.Services.LotR;
-using HallOfBeorn.Services.LotR.RingsDb;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Net;
+//using System.Text;
+//using System.Threading.Tasks;
+//using Newtonsoft.Json;
+//using HallOfBeorn.Models.RingsDb;
+//using HallOfBeorn.Services.LotR;
+//using HallOfBeorn.Services.LotR.RingsDb;
 
 namespace RingsDbBuilder
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private const string title = "RingsDB Popularity Ranker v1.0.8 (2018-12-26)";
+
+        public static void Main(string[] args)
         {
-            Console.WriteLine("RingsDB Popularity Ranker v1.0.6 (2018-12-15)");
+            Console.WriteLine(title);
+
+            var helper = new RingsDbHelper();
+            var options = new Options();
+
+            var cardLinkBuilder = new CardLinkBuilder(options);
+            var popularityBuilder = new PopularityBuilder(options);
+
+            for (var deckId = options.MinimumDeckId; deckId <= options.MaximumDeckId; deckId++)
+            {
+                var strategy = new Strategy(options, helper, cardLinkBuilder, popularityBuilder);
+                strategy.Execute(deckId);
+            }
+
+            cardLinkBuilder.PrintLinks();
+            popularityBuilder.PrintHeroPopularity();
+            popularityBuilder.PrintCardPopularity();
+        }
+
+        /*
+        private const int delayInMilliseconds = 1000;
+        private const string ringsDbDeckUrlFormat = "http://ringsdb.com/api/public/decklist/{0}.json";
+        
+        public static void Main2(string[] args)
+        {
+            Console.WriteLine(title);
 
             var productRepo = new ProductRepository();
             var cardRepo = new LotRCardRepository(productRepo);
@@ -35,7 +60,7 @@ namespace RingsDbBuilder
             using (var client = new System.Net.Http.HttpClient())
             {
                 const int startDeckId = 2969;
-                const int maxDeckId = 10601;
+                const int maxDeckId = 10660;
                 RingsDbDeckList deck;
                 var slug = string.Empty;
                 var quantity = 0;
@@ -43,12 +68,12 @@ namespace RingsDbBuilder
                 //const int mainDeckMultiplier = 4;
                 //const int sideboardMultiplier = 1;
 
-                for (var i = startDeckId; i <= maxDeckId; i++) {
-                    Console.WriteLine(string.Format("Deck: {0}", i));
-                    var url = string.Format("http://ringsdb.com/api/public/decklist/{0}.json", i);
+                for (var deckId = startDeckId; deckId <= maxDeckId; deckId++) {
+                    Console.WriteLine(string.Format("Deck: {0}", deckId));
+                    var url = string.Format(ringsDbDeckUrlFormat, deckId);
                     var response = client.GetAsync(url).Result;
 
-                    System.Threading.Thread.Sleep(1000);
+                    System.Threading.Thread.Sleep(delayInMilliseconds);
 
                     if (!response.IsSuccessStatusCode)
                         continue;
@@ -58,9 +83,11 @@ namespace RingsDbBuilder
 
                     deck = null;
                     try {
+                        //var fileName = string.Format("json\\{0}.json", deckId);
+                        //System.IO.File.WriteAllText(fileName, responseString);
                         deck = Newtonsoft.Json.JsonConvert.DeserializeObject<RingsDbDeckList>(responseString);
                     } catch (Exception ex) {
-                        Console.WriteLine("ERROR FOR DECK # " + i + ": " + ex.Message);
+                        Console.WriteLine("ERROR FOR DECK # " + deckId + ": " + ex.Message);
                     }
 
                     if (deck == null) {
@@ -113,6 +140,7 @@ namespace RingsDbBuilder
 
                         quantity = deck.slots[cardId];
 
+                        //cardLinkStrategy.MapCard(cardId);
                         if (!deckMap.ContainsKey(cardId))
                             deckMap.Add(cardId, quantity);
 
@@ -121,6 +149,8 @@ namespace RingsDbBuilder
                         cardTally[cardId] += quantity;
                     }
 
+
+                    //cardLinkStrategy.GenerateLinks
                     foreach (var parentId in deckMap.Keys)
                     {
                         if (!linkMap.ContainsKey(parentId))
@@ -143,15 +173,14 @@ namespace RingsDbBuilder
                         }
                     }
 
-                    /*
-                    foreach (var cardId in deck.sideslots.Keys)
-                    {
-                        if (!cardScores.ContainsKey(cardId)) {
-                            cardScores[cardId] = 0;
-                        }
-
-                        cardScores[cardId] += sideboardMultiplier;
-                    }*/
+                    
+                    //foreach (var cardId in deck.sideslots.Keys)
+                    //{
+                    //    if (!cardScores.ContainsKey(cardId)) {
+                    //        cardScores[cardId] = 0;
+                    //    }
+                    //    cardScores[cardId] += sideboardMultiplier;
+                    //}
                 }
 
                 Console.WriteLine("LINKS");
@@ -326,5 +355,6 @@ namespace RingsDbBuilder
             map.Add("07006", 804);
             return map;
         }
+        */
     }
 }

@@ -46,8 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CardLinkBuilder.cs" />
+    <Compile Include="Strategy.cs" />
+    <Compile Include="DeckReader.cs" />
+    <Compile Include="DeckWriter.cs" />
+    <Compile Include="DownloadJson.cs" />
+    <Compile Include="Options.cs" />
+    <Compile Include="PopularityBuilder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadFileJson.cs" />
+    <Compile Include="RingsDbHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
