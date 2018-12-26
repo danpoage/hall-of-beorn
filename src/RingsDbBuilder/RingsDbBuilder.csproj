@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeckAnalyzer.cs" />
     <Compile Include="CardLinkBuilder.cs" />
+    <Compile Include="DeckInfo.cs" />
     <Compile Include="Strategy.cs" />
     <Compile Include="DeckReader.cs" />
     <Compile Include="DeckWriter.cs" />

@@ -19,19 +19,21 @@ namespace RingsDbBuilder
         private const string successFormat = "Success writing Deck ID {0} to {1}";
         private const string errorFormat = "Error writing Deck ID {0} to {1}: {2}";
 
-        public void WriteDeckFile(int deckId, string json)
+        public bool Execute(DeckInfo info)
         {
-            var path = string.Empty;
+            if (info.FileExists)
+                return true;
 
             try
             {
-                path = _options.GetFilePath(deckId);
-                File.WriteAllText(path, json);
-                Console.WriteLine(string.Format(successFormat, deckId, path));
+                File.WriteAllText(info.Path, info.Json);
+                Console.WriteLine(string.Format(successFormat, info.DeckId, info.Path));
+                return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(string.Format(errorFormat, deckId, path, ex.Message));
+                Console.WriteLine(string.Format(errorFormat, info.DeckId, info.Path, ex.Message));
+                return false;
             }
         }
     }

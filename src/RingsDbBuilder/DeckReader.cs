@@ -14,16 +14,17 @@ namespace RingsDbBuilder
     {
         private const string errorFormat = "Error deserializing Deck ID {0}: {1}";
 
-        public RingsDbDeckList ReadDeck(int deckId, string json)
+        public bool Execute(DeckInfo info)
         {
             try
             {
-                return JsonConvert.DeserializeObject<RingsDbDeckList>(json);
+                info.Deck = JsonConvert.DeserializeObject<RingsDbDeckList>(info.Json);
+                return info.Deck != null;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(string.Format(errorFormat, deckId, ex.Message));
-                return null;
+                Console.WriteLine(string.Format(errorFormat, info.DeckId, ex.Message));
+                return false;
             }
         }
     }

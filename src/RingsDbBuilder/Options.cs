@@ -14,7 +14,7 @@ namespace RingsDbBuilder
             DownloadDirectory = ".\\json\\";
 
             MinimumDeckId = 2969;
-            MaximumDeckId = 10674; //10660;
+            MaximumDeckId = 10676;
         }
 
         private const string _deckFormat = "json";

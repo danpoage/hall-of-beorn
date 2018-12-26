@@ -17,18 +17,20 @@ namespace RingsDbBuilder
 
         private readonly Options _options;
 
-        private const string contentDefault = "";
         private const string successFormat = "Success downloading Deck ID {0}";
+        private const string failureFormat = "Failed downloading Deck ID {0}";
         private const string errorFormat = "Error downloading Deck ID {0}: {1}";
 
-        public string GetDeckString(int deckId)
+        public bool Execute(DeckInfo info)
         {
+            if (info.FileExists)
+                return true;
+
             try
             {
                 using (var client = new HttpClient())
                 {
-                    var url = _options.GetDownloadUrl(deckId);
-                    var response = client.GetAsync(url)
+                    var response = client.GetAsync(info.Url)
                         .GetAwaiter()
                         .GetResult();
 
@@ -36,21 +38,24 @@ namespace RingsDbBuilder
 
                     if (!response.IsSuccessStatusCode || response.Content == null)
                     {
-                        return contentDefault;
+                        Console.WriteLine(string.Format(failureFormat, info.DeckId));
+                        return false;
                     }
 
-                    Console.WriteLine(string.Format(successFormat, deckId)); 
-
-                    return response.Content
+                    info.Json = response.Content
                         .ReadAsStringAsync()
                         .GetAwaiter()
                         .GetResult();
+
+                    Console.WriteLine(string.Format(successFormat, info.DeckId));
                 }
+
+                return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(string.Format(errorFormat, deckId, ex.Message));
-                return contentDefault;
+                Console.WriteLine(string.Format(errorFormat, info.DeckId, ex.Message));
+                return false;
             }
         }
     }

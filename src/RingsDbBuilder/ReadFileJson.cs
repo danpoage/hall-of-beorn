@@ -16,21 +16,22 @@ namespace RingsDbBuilder
 
         private readonly Options _options;
 
-        private const string contentDefault = "";
         private const string errorFormat = "Error reading Deck ID {0}: {1}";
 
-        public string GetDeckString(int deckId)
+        public bool Execute(DeckInfo info)
         {
+            if (!string.IsNullOrEmpty(info.Json))
+                return true;
+
             try
             {
-                var path = _options.GetFilePath(deckId);
-
-                return File.ReadAllText(path);
+                info.Json = File.ReadAllText(info.Path);
+                return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(string.Format(errorFormat, deckId, ex.Message));
-                return contentDefault;
+                Console.WriteLine(string.Format(errorFormat, info.DeckId, ex.Message));
+                return false;
             }
         }
     }
