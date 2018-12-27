@@ -21,7 +21,7 @@ namespace OctgnBuilder
 
         private const string errorFormat = "Error deserializing OCTNG set {0}: {1}";
 
-        public OctgnSet ReadSet(string path)
+        public OctgnSet Read(string path)
         {
             try
             {

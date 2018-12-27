@@ -16,6 +16,8 @@ namespace OctgnBuilder
 
         private readonly Options _options;
 
+        private const string fileNameSet = "set.xml";
+
         public IEnumerable<string> Files(string path)
         {
             if (!Directory.Exists(path))
@@ -30,6 +32,14 @@ namespace OctgnBuilder
                 return Enumerable.Empty<string>();
 
             return Directory.GetDirectories(path);
+        }
+
+        public IEnumerable<string> SetFiles()
+        {
+            foreach (var setDirectoryPath in Subdirectories(_options.SetsDirectory))
+            {
+                yield return Path.Combine(setDirectoryPath, fileNameSet);
+            }
         }
     }
 }
