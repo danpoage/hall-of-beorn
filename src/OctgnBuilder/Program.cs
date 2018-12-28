@@ -26,20 +26,26 @@ namespace OctgnBuilder
 
                 var fsReader = new FileSystemReader(options);
                 var setReader = new SetXmlReader(options);
+                var setNameMapper = new SetNameMapper();
+                var cardNameMapper = new CardNameMapper();
 
                 foreach (var setPath in fsReader.SetFiles())
                 {
                     var octgnSet = setReader.Read(setPath);
 
                     var setId = octgnSet.Id;
-                    var setName = octgnSet.Name;
+
+                    if (setNameMapper.IsExcluded(octgnSet.Name))
+                        continue;
+
+                    var setName = setNameMapper.MapName(octgnSet.Name, setId);
                     Console.WriteLine();
                     Console.WriteLine(string.Format(setMapFormat, setId, setName));
 
                     foreach (var octgnCard in octgnSet.Cards)
                     {
                         var cardId = octgnCard.Id;
-                        var cardName = octgnCard.Name;
+                        var cardName = cardNameMapper.MapName(octgnCard.Name);
                         Console.WriteLine(string.Format(cardMapFormat, setId, cardId, cardName));
                     }
 

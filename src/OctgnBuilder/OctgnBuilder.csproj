@@ -41,11 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CardNameMapper.cs" />
     <Compile Include="FileSystemReader.cs" />
+    <Compile Include="NameMapperBase.cs" />
     <Compile Include="OctgnHelper.cs" />
     <Compile Include="Options.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetNameMapper.cs" />
     <Compile Include="SetXmlReader.cs" />
   </ItemGroup>
   <ItemGroup>
