@@ -67,6 +67,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                     case "MEC35":
                     case "MEC36":
                     case "MEC37":
+                    case "MEC75":
                         return false;
                     default:
                         return true;

@@ -36,6 +36,7 @@
     "Guardian of Esgaroth", "Squire's Helm", "Woodmen's Clearing", "The Hidden Way", "Beorning Skin-changer", "Beorn's Rage", "Long Lake Fisherman", "Grey Cloak",
     "Thorin Stonehelm",
     "Wiglaf", "Ancestral Armor", "Woodmen's Path", "Meneldor", "Flight of the Eagles", "Wild Stallion", "South Away", "Eagle of the North",
+    "Thranduil", "The Elvenking", "Leather Boots", "Galion", "Giant Bear", "Forest Road Traveler", "Quicker Than Sight", "Outmatched", "Thalion", "Dagnir",
           "+set:",
           "-set:",
           "+type:",
