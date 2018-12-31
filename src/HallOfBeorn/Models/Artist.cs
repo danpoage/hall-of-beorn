@@ -603,7 +603,7 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Sasha_Jones);
 
             //The Siege of Annuminas
-            all.Add(Artist.Aurore_Folay);
+            all.Add(Artist.Aurore_Folny);
             all.Add(Artist.Stanislav_Dikolenko);
 
             //The Mountain of Fire
@@ -876,7 +876,7 @@ namespace HallOfBeorn.Models
         public static Artist Arden_Beckwith = new Artist { Name = "Arden Beckwith", URL = "http://ardenbeckwith.blogspot.com" };
         public static Artist Asahi = new Artist { Name = "Asahi", URL = "http://asahisuperdry.deviantart.com" };
         public static Artist Aurelien_Hubert = new Artist { Name = "Aurelien Hubert", URL = "http://aurelien-hubert-ash.blogspot.com" };
-        public static Artist Aurore_Folay = new Artist { Name = "Aurore Folay", URL = "http://google.com/search?q=Aurore+Folay" };
+        public static Artist Aurore_Folny = new Artist { Name = "Aurore Folny", URL = "https://www.aurorefolny.com" };
         public static Artist Ben_Peek = new Artist { Name = "Ben Peek", URL = "https://www.google.com/search?q=been+peek+art" };
         public static Artist Ben_Zweifel = new Artist { Name = "Ben Zweifel", URL = "http://benzweifel.com" };
         public static Artist Beth_Sobel = new Artist { Name = "Beth Sobel", URL = "http://www.bethsobel.com" };

@@ -244,7 +244,7 @@ namespace HallOfBeorn.Models.Arkham.Products
                 .WithTraits("Talent.")
                 .WithIcons(SkillIcon.Intellect, SkillIcon.Agility)
                 .WithText("{Free Action} Spend 1 resource: You get +1 {Intellect} for this skill test.\r\n{Free Action} Spend 1 resource: You get +1 {Agility} for this skill test.")
-                .WithInfo(34, 1, Artist.Aurore_Folay));
+                .WithInfo(34, 1, Artist.Aurore_Folny));
             addCard(ArkhamCard.Asset("Medical Texts", ClassSymbol.Seeker, 2, AssetSlot.One_Hand)
                 .WithTraits("Item.", "Tome.")
                 .WithIcons(SkillIcon.Combat)
