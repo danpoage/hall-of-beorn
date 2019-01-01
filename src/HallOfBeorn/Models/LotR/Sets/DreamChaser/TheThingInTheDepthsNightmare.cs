@@ -25,7 +25,8 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
 @"<p class='main-text'>You are playing Nightmare mode.</p>
 <p class='main-text'>Forced: After The Thing in the Depths enemy enters play, it attacks each player in turn order from the staging area (deal and resolve a shadow card for each attack).</p><p class='main-text'>Stage 3B gains: <blockquote><b>Forced:</b> At the beginning of the quest phase, if there are fewer locations in play than the number of players, discard cards from the top of the encounter deck until a location is discarded. Reveal that location.</blockquote></p><p class='main-text'><b>Forced:</b> At the end of the refresh phase, resolve the grapple keyword on each <b><i>Tentacle</i></b> enemy in play.</p>")
                 .WithOppositeText(
-@"Begin with the standard quest deck and encounter deck for the The Thing in the Depths scenario.\r\nRemove the following cards, in the specified quantities, from the standard encounter deck:
+@"Begin with the standard quest deck and encounter deck for the The Thing in the Depths scenario.
+Remove the following cards, in the specified quantities, from the standard encounter deck:
 
 2x Corsair Infiltrator
 1x Crew Quarters

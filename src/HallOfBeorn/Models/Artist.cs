@@ -612,6 +612,9 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Sebastian_Rodriguez);
             all.Add(Artist.Audrey_Hotte);
 
+            //The Woodland Realm
+            all.Add(Artist.Cris_Griffin);
+
             //The Wilds of Rhovanion
             all.Add(Artist.Antonio_Jose_Manzanedo);
             all.Add(Artist.Rankin_Bass);
@@ -906,6 +909,7 @@ namespace HallOfBeorn.Models
         public static Artist Christopher_Burdett = new Artist { Name = "Christopher Burdett", URL = "http://christopherburdett.deviantart.com" };
         public static Artist Chun_Lo = new Artist { Name = "Chun Lo", URL = "http://chunlo.deviantart.com" };
         public static Artist Claudio_Pozas = new Artist { Name = "Claudio Pozas", URL = "http://www.claudiopozas.com" };
+        public static Artist Cris_Griffin = new Artist { Name = "Cris Griffin", URL = "https://www.deviantart.com/quickreaver" };
         public static Artist Cristi_Balanescu = new Artist { Name = "Cristi Balanescu", URL = "http://cristi-b.deviantart.com" };
         public static Artist Cristina_Vela = new Artist { Name = "Cristina Vela", URL = "http://mielytu.deviantart.com" };
         public static Artist Cynthia_Sheppard = new Artist { Name = "Cynthia Sheppard", URL = "http://sheppard-arts.blogspot.com" };
