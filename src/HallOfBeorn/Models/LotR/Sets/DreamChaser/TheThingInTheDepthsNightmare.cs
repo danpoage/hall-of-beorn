@@ -56,32 +56,32 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             addCard(LotRCard.Location("Aft Cabin", string.Empty, setStormcaller, 3, 3)
                 .WithTraits("Ship.", "Deck.")
                 .WithText("While Aft Cabin is in the staging area, each enemy grappled with each Deck location adds 3 Threat instead of 2 Threat.\r\nForced: After an enemy is detached from Aft Cabin, that enemy gets +3 Defense until the end of the round.")
-                .WithInfo(3, 2, Artist.Guillaume_Ducos));
+                .WithInfo(3, 3, Artist.Guillaume_Ducos));
             addCard(LotRCard.Treachery("Tumultuous Waters", string.Empty, setStormcaller)
                 .WithTraits("Weather.")
                 .WithText("When Revealed: Exhaust each character with 1 or less Willpower. Remove all resources from each ready hero and objective-ally.")
                 .WithShadow("Shadow: If the defending character has 1 or less Willpower, treat this attack as undefended.")
-                .WithInfo(4, 2, Artist.Guillaume_Ducos));
+                .WithInfo(4, 3, Artist.Guillaume_Ducos));
             addCard(LotRCard.Enemy("Corsair Duelist", string.Empty, setCorsair, 36, 3, 3, 1, 3)
                 .WithTraits("Corsair.", "Raider.")
                 .WithText("Corsair Duelist enters play with 2 resources on it.\r\nForced: When Corsair Duelist would be defeated, remove 1 resource and all damage from it instead.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack for each resource on it.")
-                .WithInfo(5, 2, Artist.Adam_Lane));
+                .WithInfo(5, 3, Artist.Adam_Lane));
             addCard(LotRCard.Enemy("Slithering Arm", string.Empty, setName, 0, 0, 4, 1, 5)
                 .WithTraits("Creature.", "Tentacle.")
                 .WithKeywords("Surge.", "Grapple (most enemies grappled).")
                 .WithText("Forced: After Slitering Arm engages a player, it makes an immediate attack against that player.")
-                .WithInfo(6, 2, Artist.Nicholas_Gregory));
+                .WithInfo(6, 3, Artist.Nicholas_Gregory));
             addCard(LotRCard.Enemy("Crashing Arm", string.Empty, setName, 27, 2, 6, 1, 7)
                 .WithTraits("Creature.", "Tentacle.")
                 .WithKeywords("Grapple (fewest enemies grappled).")
                 .WithText("Forced: After Crashing Arm is detaced from a location, deal it 3 shadow cards.")
                 .WithShadow("Shadow: Attacking enemy makes an additional attack after this one.")
-                .WithInfo(7, 2, Artist.Nicholas_Gregory));
+                .WithInfo(7, 3, Artist.Nicholas_Gregory));
             addCard(LotRCard.Treachery("Deep Maelstrom", string.Empty, setName)
                 .WithText("When Revealed: For each location in play that is not grappled, reveal the top card of the encounter deck. If no cards are revealed by this effect, Deep Maelstrom gains Doomed 5. Cannot be canceled.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack for each enemy grappled with a location.")
-                .WithInfo(8, 2, Artist.Guillaume_Ducos));
+                .WithInfo(8, 3, Artist.Guillaume_Ducos));
         }
     }
 }
