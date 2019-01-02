@@ -61,6 +61,7 @@ namespace HallOfBeorn.Models.LotR
         Damage_Control,
         Cost_Reduction,
         Mono_Sphere_Bonus,
-        Mono_Sphere_Required
+        Mono_Sphere_Required,
+        Beorn_Support
     }
 }
