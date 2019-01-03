@@ -99,6 +99,37 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithText("When Revealed: Until the end of the round, treat each character's printed text box as if it were blank (except for Traits).")
                 .WithShadow("Shadow: Treat the defending character's text box as if it were blank until the end of the phase (except for Traits).")
                 .WithInfo(14, 2, Artist.Marc_Scheff);
+            addEnemy("Chieftain Ufthak", emptySetName, 36, 3, 6, 3, 6)
+                .WithSetNumberAndCost(2, 3)
+                .WithUnique()
+                .WithTraits("Orc.")
+                .WithText("Cannot have non-objective player card attachments or take non-combat damage.\r\nForced: After Chieftain Ufthak engages you, the opposing team searches the encounter deck and discard pile for an Orc enemy of cost 1 or less and puts it into play engaged with you. Shuffle the encounter deck.")
+                .WithInfo(15, 1, Artist.Mathias_Kollros);
+            addLocation("Abandoned Camp", emptySetName, 2, 2)
+                .WithSetNumberAndCost(2, 0)
+                .WithTraits("Forest.")
+                .WithText("Forced: When Abandoned Camp leaves play as an explored location, the opposing team chooses a card in the encounter discard pile and shuffles it into the encounter deck.")
+                .WithInfo(16, 2, Artist.Dana_Li);
+            addTreachery("Gathering Gloom", emptySetName)
+                .WithSetNumberAndCost(2, 0)
+                .WithText("When Revealed: Each player raises his threat by X, where X is 1 more than the stage number of the main quest.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if your threat is 35 or higher)")
+                .WithInfo(17, 2, Artist.Borja_Pindado);
+            addEnemy("Black Forest Bats", emptySetName, 13, 1, 2, 1, 3)
+                .WithSetNumberAndCost(3, 0)
+                .WithTraits("Creature.")
+                .WithText("When Revealed: The opposing team chooses a questing character. Remove that character from the quest.")
+                .WithShadow("Shadow: Shuffle Black Forest Bats into the encounter deck.")
+                .WithInfo(18, 2, Artist.Aurelien_Hubert);
+            addLocation("Enchanted Steam", emptySetName, 2, 6)
+                .WithSetNumberAndCost(3, 3)
+                .WithText("While Enchanted Steam is in the staging area, progress cannot be placed on the main quest.\r\nTravel: Each player exhausts a hero he controls. Those heroes cannot ready while Enchanted Stream is the active location.")
+                .WithInfo(19, 1, Artist.Ben_Zweifel);
+            addTreachery("Exhaustion", emptySetName)
+                .WithSetNumberAndCost(3, 0)
+                .WithText("When Revealed: Each player exhausts a character he controls. Until the end of the round, characters cannot be readied by player card effects.")
+                .WithShadow("Shadow: Defending character cannot ready until the end of the round.")
+                .WithInfo(20, 2, Artist.Marco_Caradonna);
         }
     }
 }
