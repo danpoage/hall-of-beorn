@@ -130,6 +130,38 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithText("When Revealed: Each player exhausts a character he controls. Until the end of the round, characters cannot be readied by player card effects.")
                 .WithShadow("Shadow: Defending character cannot ready until the end of the round.")
                 .WithInfo(20, 2, Artist.Marco_Caradonna);
+            addEnemy("Spiders of Mirkwood", emptySetName, 22, 2, 2, 1, 2)
+                .WithSetNumberAndCost(4, 0)
+                .WithTraits("Spider.")
+                .WithText("Forced: After Spiders of Mirkwood engages you, exhaust a character you control.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if it has the Spider trait).")
+                .WithInfo(21, 3, Artist.Andrew_Ryan);
+            addLocation("The Spiders' Ring", emptySetName, 4, 4)
+                .WithSetNumberAndCost(4, 2)
+                .WithUnique()
+                .WithTraits("Forest.")
+                .WithText("While The Spiders' Ring is in the staging area, each Spider enemy gets +1 Threat.\r\nForced: When The Spiders' Ring is explored, the opposing team searches the encounter deck and discard pile for a non-unique Spider enemy and adds it to the staging area.")
+                .WithInfo(22, 1, Artist.Andrew_Johanson);
+            addTreachery("Caught in a Web", emptySetName)
+                .WithSetNumberAndCost(4, 1)
+                .WithText("When Revealed: The opposing team attaches Caught in a Web to a hero and exhausts that hero. (Counts as a Condition attachment with the text: \"Limit 1 per hero. Attached hero cannot ready unless its controller first spends 2 resource from its pool.\")")
+                .WithInfo(23, 1, Artist.Daryl_Mandryk);
+            addEnemy("Wolf Rider", emptySetName, 23, 2, 2, 2, 2)
+                .WithSetNumberAndCost(5, 0)
+                .WithTraits("Orc.")
+                .WithText("When Revealed: If there is another Orc enemy in the staging area, Wolf Rider gains surge.")
+                .WithShadow("Shadow: If attacking enemy is an Orc, put Wolf Rider into play engaged with you.")
+                .WithInfo(24, 3, Artist.Alexandru_Sabo);
+            addLocation("The Goblins' Cave", emptySetName, 3, 5)
+                .WithSetNumberAndCost(5, 2)
+                .WithUnique()
+                .WithTraits("Mountain.", "Cave.")
+                .WithText("While The Goblins' Cave is in the staging area, each Orc enemy gets +1 Attack.\r\nForced: When The Goblin's Cave is explored, the opposing team searches the encounter deck and discard pile for a non-unique Orc enemy and adds it to the staging area.")
+                .WithInfo(25, 1, Artist.David_Demaret);
+            addTreachery("Driven by Shadow", emptySetName)
+                .WithSetNumberAndCost(5, 1)
+                .WithText("When Revealed: The opposing team attaches Driven by Shadow to an enemy and returns it to the staging area. (Counts as a Condition attachment with the text: \"Limit 1 per enemy. Attached enemy gets +2 Threat, +2 Attack, +2 Defense and is immune to player card effects.\") If there is no enemy in play, Driven by Shadow gains surge.")
+                .WithInfo(26, 1, Artist.Alexandru_Sabo);
         }
     }
 }
