@@ -162,6 +162,39 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithSetNumberAndCost(5, 1)
                 .WithText("When Revealed: The opposing team attaches Driven by Shadow to an enemy and returns it to the staging area. (Counts as a Condition attachment with the text: \"Limit 1 per enemy. Attached enemy gets +2 Threat, +2 Attack, +2 Defense and is immune to player card effects.\") If there is no enemy in play, Driven by Shadow gains surge.")
                 .WithInfo(26, 1, Artist.Alexandru_Sabo);
+            addEnemy("Beast of Taur-nu-Fuin", emptySetName, 28, 3, 3, 1, 8)
+                .WithSetNumberAndCost(6, 2)
+                .WithTraits("Creature.")
+                .WithText("Beast of Taur-nu-Fuin gets +1 Attack for each damage on it.\r\nForced: When Beast of Taur-nu-Fuin is dealt a shadow card with no shadow effect, deal 1 damage to it and the defending character.")
+                .WithInfo(27, 1, Artist.Guillaume_Ducos);
+            addLocation("Dark Black Woods", emptySetName, 1, 4)
+                .WithSetNumberAndCost(6, 0)
+                .WithTraits("Forest.")
+                .WithText("Dark Black Woods gets +1 Threat for each Dark Black Woods in the staging area.\r\nTravel: Each player must discard 1 card from his hand for each Dark Black Woods in the staging area.")
+                .WithInfo(28, 3, Artist.Leanna_Crossan);
+            addTreachery("Wind-whipped Rain", emptySetName)
+                .WithSetNumberAndCost(6, 1)
+                .WithTraits("Weather.")
+                .WithText("When Revealed: Each player must choose: either choose 1 card from his hand and discard the rest, or assign X damage among characters he controls, where X is the number of cards in his hand.")
+                .WithShadow("Shadow: Discard 1 random card from your hand.")
+                .WithInfo(29, 1, Artist.Blake_Henriksen);
+            addEnemy("Giant Spider", emptySetName, 30, 3, 3, 2, 5)
+                .WithSetNumberAndCost(7, 1)
+                .WithTraits("Spider.")
+                .WithText("When Revealed: Each player exhausts a character he controls.")
+                .WithShadow("Shadow: Exhaust a character you control.")
+                .WithInfo(30, 2, Artist.Rafal_Hrynkiewicz);
+            addLocation("Giant Web", emptySetName, 2, 4)
+                .WithSetNumberAndCost(7, 0)
+                .WithTraits("Forest.")
+                .WithText("When Revealed: Make Giant Web the active location. Return any previous location to the staging area.")
+                .WithInfo(31, 2, Artist.Trudi_Castle);
+            addTreachery("Eyes of the Forest", emptySetName)
+                .WithSetNumberAndCost(7, 1)
+                .WithKeywords("Doomed 1.")
+                .WithText("When Revealed: The opposing team looks at each player's hand and discards 1 card from each.")
+                .WithShadow("Shadow: Attacking enemy gets +X Attack, where X is the stage number of the current quest.")
+                .WithInfo(32, 1, Artist.Yoann_Boissonnet);
         }
     }
 }
