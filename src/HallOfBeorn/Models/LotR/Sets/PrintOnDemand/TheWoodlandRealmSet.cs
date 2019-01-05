@@ -195,6 +195,115 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithText("When Revealed: The opposing team looks at each player's hand and discards 1 card from each.")
                 .WithShadow("Shadow: Attacking enemy gets +X Attack, where X is the stage number of the current quest.")
                 .WithInfo(32, 1, Artist.Yoann_Boissonnet);
+            addEnemy("Mirkwood Patrol", emptySetName, 34, 3, 4, 3, 5)
+                .WithSetNumberAndCost(8, 1)
+                .WithTraits("Orc.")
+                .WithText("While Mirkwood Patrol is in the staging area, enemies cannot be optionally engaged.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if it was engaged this round).")
+                .WithInfo(33, 2, Artist.Matt_Stewart);
+            addLocation("Mountains of Mirkwood", emptySetName, 2, 4)
+                .WithSetNumberAndCost(8, 0)
+                .WithTraits("Mountains.")
+                .WithText("While Mountains of Mirkwood is in the staging area, it gains: \"Forced: At the end of the round, raise each player's threat by 2.\"")
+                .WithShadow("Shadow: Either raise your threat by 2, or the attacking enemy gets +2 Attack.")
+                .WithInfo(34, 2, Artist.Ben_Zweifel);
+            addTreachery("Hatred Rekindled", emptySetName)
+                .WithSetNumberAndCost(8, 1)
+                .WithText("When Revealed: Each engaged enemy makes an immediate attack. If no attacks were made this way, Hatred Rekindled gains surge.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack. Deal it an additional shadow card. That card's shadow effects cannot be canceled.")
+                .WithInfo(35, 1, Artist.Adam_Lane);
+            addEnemy("Wild Bear", emptySetName, 33, Card.VALUE_X, 4, Card.VALUE_X, 5)
+                .WithSetNumberAndCost(9, 1)
+                .WithTraits("Creature.")
+                .WithText("X is 1 more than the stage number of the main quest.")
+                .WithShadow("Shadow: Attacking enemy gets +X Defense until the end of the phase, where X is the stage number of the main quest.")
+                .WithInfo(36, 2, Artist.Salvador_Trakal);
+            addLocation("Labyrinthine Woods", emptySetName, 2, 3)
+                .WithSetNumberAndCost(9, 0)
+                .WithTraits("Forest.")
+                .WithText("When Revealed: Until the end of the phase, each location in the staging area gets +1 Threat.")
+                .WithShadow("Shadow: Each enemy engaged with you gets +1 Attack until the end of the phase.")
+                .WithInfo(37, 2, Artist.Trudi_Castle);
+            addTreachery("Vastness of Mirkwood", emptySetName)
+                .WithSetNumberAndCost(9, 1)
+                .WithText("When Revealed: The opposing team searches the top 5 cards of the encounter deck for a card with cost equal to or less than the stage number of the main quest, sets it aside and shuffles the encounter deck. Then, reveal the set aside card.")
+                .WithShadow("Shadow: If this attack destroys a character, reveal the top card of the encounter deck.")
+                .WithInfo(38, 1, Artist.Katy_Grierson);
+            addEnemy("Mirkwood Flock", emptySetName, 12, 1, 2, 1, 2)
+                .WithSetNumberAndCost(10, 1)
+                .WithKeywords("Surge.")
+                .WithShadow("Shadow: Add Mirkwood Flock to the staging area.")
+                .WithInfo(39, 2, Artist.Brandon_Leach);
+            addLocation("The Eaves of Mirkwood", emptySetName, 2, 4)
+                .WithSetNumberAndCost(10, 0)
+                .WithTraits("Forest.")
+                .WithText("While The Eaves of Mirkwood is in the staging area, no more than 1 progress can be placed on each location in the staging area each round.\r\nTravel: Each player discards 1 random card from his hand.")
+                .WithInfo(40, 2, Artist.Timo_Karhula);
+            addTreachery("Massing at Night", emptySetName)
+                .WithSetNumberAndCost(10, 1)
+                .WithText("When Revealed: The opposing team searches the encounter deck and discard pile for one different 0 cost enemy per player (limit 2) and adds them to the staging area.")
+                .WithShadow("Shadow: If this attack destroys a character, attacking enemy makes an additional attack against you after this one.")
+                .WithInfo(41, 1, Artist.Mathias_Kollros);
+            addEnemy("Wild Wargs", emptySetName, 25, 2, 3, 1, 3)
+                .WithSetNumberAndCost(11, 1)
+                .WithTraits("Warg.")
+                .WithText("Forced: After Wild Wargs is dealt a shadow card with no shadow effect, return it to the staging area.")
+                .WithShadow("Shadow: Return attacking enemy to the staging area after this attack.")
+                .WithInfo(42, 2, Artist.Piya_Wannachaiwong);
+            addLocation("Dry Watercourse", emptySetName, 2, 4)
+                .WithSetNumberAndCost(11, 0)
+                .WithTraits("Forest.")
+                .WithText("While Dry Watercourse in in the staging area, each player cannot reduce his threat by more than 1 each round.\r\nTravel: Raise each player's threat by 1.")
+                .WithInfo(43, 2, Artist.Bill_Corbett);
+            addTreachery("Turned Around", emptySetName)
+                .WithSetNumberAndCost(11, 1)
+                .WithText("When Revealed: Remove 5 progress tokens from the main quest and attach Turned Around to it. (Counts as a Condition attachment with the text: \"Attached quest gets +5 quest points.\")")
+                .WithInfo(44, 1, Artist.Darek_Zabrocki);
+            addEnemy("Pack of Wargs", emptySetName, 36, 3, 4, 2, 6)
+                .WithSetNumberAndCost(12, 1)
+                .WithText("Cannot have non-objective player card attachments or take non-combat damage.\r\nForced: After Pack of Wargs is dealt a shadow card with no shadow effect, it makes an additional attack after this one. Do not deal it a shadow card for this attack.")
+                .WithInfo(45, 1, Artist.Lukasz_Jaskolski);
+            addLocation("Dark-wood Grove", emptySetName, 3, 4)
+                .WithSetNumberAndCost(12, 1)
+                .WithTraits("Forest.")
+                .WithText("While Dark-wood Grove is in the staging area, it gains: \"Forced: After a 'when revealed' effect is canceled, raise each player's threat by 3.\"\r\nTravel: Reveal the top card of the encounter deck.")
+                .WithInfo(46, 2, Artist.Trudi_Castle);
+            addTreachery("Lost and Witless", emptySetName)
+                .WithSetNumberAndCost(12, 0)
+                .WithText("When Revealed: Each player reveals his hand and discards each ally card revealed this way.")
+                .WithShadow("Shadow: If this attack is undefended, discard an ally you control.")
+                .WithInfo(47, 2, Artist.Romana_Kendelic);
+            addEnemy("Wicked Spider", emptySetName, 34, 2, 4, 2, 4)
+                .WithSetNumberAndCost(13, 1)
+                .WithTraits("Spider.")
+                .WithText("Forced: After Wicked Spider engages you, discard an exhausted character you control.")
+                .WithShadow("Shadow: Attacking enemy cannot take damage this phase.")
+                .WithInfo(48, 1, Artist.Aurelien_Hubert);
+            addLocation("Old Forest Road", emptySetName, 4, 4)
+                .WithSetNumberAndCost(13, 1)
+                .WithText("Response: After the players travel to Old Forest Road, the first player discards the top card of his deck. If that card is an ally, he puts it into play.\r\nTravel: Discard the top card of the encounter deck, if that card is an enemy, add it to the staging area.")
+                .WithInfo(49, 2, Artist.Ben_Zweifel);
+            addTreachery("A Frightened Beast", emptySetName)
+                .WithSetNumberAndCost(13, 0)
+                .WithText("When Revealed: Each player must choose: either raise your threat by 1 for each questing character you control, or discard a questing character you control.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, raise each player's threat by 1.")
+                .WithInfo(50, 2, Artist.David_A_Nash);
+            addEnemy("Ambushing Orcs", emptySetName, 30, 2, 3, 1, 4)
+                .WithSetNumberAndCost(14, 1)
+                .WithTraits("Orc.")
+                .WithText("When Revealed: Ambushing Orcs makes an immediate attack against the first player.")
+                .WithShadow("Shadow: Engaged the lowest engagement cost enemy in the staging area and deal it a shadow card.")
+                .WithInfo(51, 1, Artist.Darek_Zabrocki);
+            addLocation("Mirkwood Path", emptySetName, 3, 1)
+                .WithSetNumberAndCost(14, 0)
+                .WithTraits("Forest.")
+                .WithText("Forced: When Mirkwood Path is explored, discard the top card of the encounter deck. If that card is a location, add it to the staging area.")
+                .WithInfo(52, 2, Artist.Trudi_Castle);
+            addTreachery("Wasted Provisions", emptySetName)
+                .WithSetNumberAndCost(14, 1)
+                .WithText("When Revealed: Each player discards each resource from each of his heroes' resource pools and raises his threat by 1 for each resource he discarded this way. If no resources were discarded this way, Wasted Provisions gains surge.")
+                .WithShadow("Shadow: Discard an attachment you control.")
+                .WithInfo(53, 2, Artist.David_A_Nash);
         }
     }
 }
