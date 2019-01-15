@@ -130,7 +130,7 @@ Response: After attached hero gains any number of resources from a card effect, 
                 Text = 
 @"Attach to Galadriel.
 
-Exhaust Mirror of Galadriel to search the top 10 cards of your deck for a card and add it to your hand. Shuffle the rest back into your deck. Then, discard a random card from your hand.",
+Action: Exhaust Mirror of Galadriel to search the top 10 cards of your deck for a card and add it to your hand. Shuffle the rest back into your deck. Then, discard a random card from your hand.",
                 FlavorText = "\"What you will see, if you leave the Mirror free to work, I cannot tell. For it shows things that were, things that are, things that yet may be.\"\r\n-Galadriel, The Fellowship of the Ring",
                 CardNumber = 118,
                 Quantity = 3,
