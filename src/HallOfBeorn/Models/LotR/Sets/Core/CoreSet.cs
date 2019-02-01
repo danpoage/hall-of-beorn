@@ -1222,7 +1222,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 FlavorText = "\"It is clad in a forest of dark fir, where the trees strive one against another and their branches rot and wither. In the midst upon a stony height stands Dol Guldur, where long the hidden Enemy had his dwelling.\"\r\n-Haldir, The Fellowship of the Ring",
                 Threat = 3,
                 QuestPoints = 2,
-                EasyModeQuantity = 0,
+                EasyModeQuantity = 1,
                 EncounterSet = "Dol Guldur Orcs",
                 Quantity = 2,
                 CardNumber = 94,

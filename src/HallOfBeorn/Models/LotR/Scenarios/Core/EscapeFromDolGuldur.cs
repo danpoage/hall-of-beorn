@@ -32,7 +32,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
 
             ExcludeFromEasyMode("Chieftan-Ufthak-Core", 1);
             ExcludeFromEasyMode("Dol-Guldur-Beastmaster-Core", 1);
-            ExcludeFromEasyMode("Necromancer's-Pass-Core", 2);
+            ExcludeFromEasyMode("Necromancer's-Pass-Core", 1);
             ExcludeFromEasyMode("The-Necromancer's-Reach-Core", 2);
             ExcludeFromEasyMode("Dungeon-Jailor-Core", 2);
             ExcludeFromEasyMode("Caught-in-a-Web-Core", 2);
