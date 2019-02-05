@@ -497,7 +497,7 @@
                 </div>
             </div>
             <div style="display:inline-block">
-                @if (!@Model.View.HasValue || (@Model.View.HasValue && (@Model.View == View.Card || @Model.View == View.Card_Image)))
+                @if (!@Model.View.HasValue || (@Model.View.HasValue && (@Model.View == View.Card || @Model.View == View.Card_Image || @Model.View == View.Card_Art)))
                 {
                     <div style="float:left;margin-right:4px;">
                         <a href="@Href(string.Format("/LotR/Details/{0}", @card.Slug))">
@@ -515,6 +515,7 @@
                         </a>
                     </div>
                 }
+                @*
                 @if (@Model.View.HasValue && @Model.View == View.Card_Art)
                 {
                     <div style="float:left;margin-right:4px;">
@@ -533,6 +534,7 @@
                         </a>
                     </div>
                 }
+                *@
 
                 @if (!@Model.View.HasValue || (@Model.View.HasValue && (@Model.View == View.Card || @Model.View == View.Card_Text || @Model.View == View.Card_Art)))
                 {
