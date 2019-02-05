@@ -20,6 +20,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
             DifficultyRating = 6.7f;
             Votes = 1;
 
+            RulesImageCount = 2;
+
             AddEncounterSet(EncounterSet.FireInTheNight);
             AddEncounterSet(EncounterSet.GreyMountainGoblins);
             AddEncounterSet(EncounterSet.DarkWoods);
