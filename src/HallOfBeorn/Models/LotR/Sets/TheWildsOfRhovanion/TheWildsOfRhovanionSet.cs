@@ -387,9 +387,9 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
             addQuest("Spiders of Mirkwood", EncounterSet.LostInMirkwood.Name, 2, 'A', 255)
                 .WithIncludedEncounterSets(EncounterSet.DarkWoods, EncounterSet.GatheringGloom, EncounterSet.PassageThroughMirkwood, EncounterSet.SpidersOfMirkwood, EncounterSet.DolGuldurOrcs)
                 .WithFlavor("You've got a better idea of where you are, but you have unfortunately wandered too far north and into the territory of the giant spiders of Mirkwood.")
-                .WithText("When Revealed: Shuffle the Spiders of Mirkwood encounter set into the encounter deck. Then, reveal 1 encounter card per player.")
-                .WithOppositeFlavor("There is a bitter fight not only to drive back the spiders but to avoid being separated in the pitch black. When the first light of dawn rises to reveal your surroundings, you see only endless trees and no sign of your path. You begin searching about for some type of landmark to point you in the right direction.")
-                .WithOppositeText("Each player’s threat cannot be reduced by player card effect.\r\nForced: After an enemy engages a player, raise that player’s threat by 1.")
+                .WithText("When Revealed: Shuffle the Spiders of ~Mirkwood encounter set into the encounter deck. Then, reveal 1 encounter card per player.")
+                .WithOppositeFlavor("You fight to keep the spiders at bay as you continue to search for landmarks or a better view of the forest to find your way out.")
+                .WithOppositeText("The first Spider enemy revealed each quest phase gains surge.\r\nForced: When a Spider enemy attacks and damages a character, that character cannot ready until the end of the round.")
                 .WithInfo(72, 1, Artist.Nikolas_Hagialas);
             addQuest("Dol Guldur Orcs", EncounterSet.LostInMirkwood.Name, 2, 'C', 255)
                 .WithIncludedEncounterSets(EncounterSet.DarkWoods, EncounterSet.GatheringGloom, EncounterSet.PassageThroughMirkwood, EncounterSet.SpidersOfMirkwood, EncounterSet.DolGuldurOrcs)
