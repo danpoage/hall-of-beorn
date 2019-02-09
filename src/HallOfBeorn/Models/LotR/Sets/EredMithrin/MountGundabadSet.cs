@@ -54,7 +54,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithInfo(118, 3, Artist.Sara_Biddle);
             addAlly("Erebor Toymaker", 3, Sphere.Spirit, false, 2, 0, 0, 2)
                 .WithTraits("Dwarf.", "Craftsman.")
-                .WithText("Response: After you play Erebor Toymaker from your hand, reduce the cost of the next attachment played this phase by 2.")
+                .WithText("Response: After you play ~Erebor Toymaker from your hand, reduce the cost of the next attachment played this phase by 2.")
                 .WithFlavor("There were toys the like of which they had never seen before, all beautiful and some obviously magical.\r\n-The Fellowship of the Ring")
                 .WithInfo(119, 3, Artist.Ryan_Valle);
             addAttachment("Armor of Erebor", 2, Sphere.Spirit, false)
