@@ -17,8 +17,6 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
             SetType = Models.SetType.Adventure_Pack;
             Cycle = "Ered Mithrin";
 
-            IsSpoiler = true;
-
             addHero("Dáin Ironfoot", 11, Sphere.Spirit, 1, 2, 3, 5)
                 .WithTraits("Dwarf.", "Noble.", "Warrior.")
                 .WithText("While Dáin Ironfoot is defending, he gains, \"Action: Discard the top card of your deck to give Dáin Ironfoot +1 Defense for this attack. (Limit 3 times per phase.)\"")

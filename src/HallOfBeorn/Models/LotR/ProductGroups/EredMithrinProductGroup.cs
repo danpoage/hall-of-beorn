@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
             AddProduct(Product.FireInTheNight);
             AddProduct(Product.TheGhostOfFramsburg);
             AddProduct(Product.MountGundabad);
+            AddProduct(Product.TheFateOfWilderland);
         }
     }
 }

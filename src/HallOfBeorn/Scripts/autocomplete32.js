@@ -37,6 +37,7 @@
     "Thorin Stonehelm",
     "Wiglaf", "Ancestral Armor", "Woodmen's Path", "Meneldor", "Flight of the Eagles", "Wild Stallion", "South Away", "Eagle of the North",
     "Thranduil", "The Elvenking", "Leather Boots", "Galion", "Giant Bear", "Forest Road Traveler", "Quicker Than Sight", "Outmatched", "Thalion", "Dagnir",
+    "Soldier of Erebor", "Man the Walls", "Mirkwood Hunter", "Familiar Lands", "Warrior Sword", "Swift and Strong", "Descendant of Girion", "Valiant Determination", "Thror's Ring",
           "+set:",
           "-set:",
           "+type:",

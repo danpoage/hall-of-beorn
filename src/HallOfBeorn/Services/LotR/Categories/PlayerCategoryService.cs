@@ -120,7 +120,7 @@ namespace HallOfBeorn.Services.LotR.Categories
                 CreateCategoryFilter((card) => { return card.Keywords.Any(kw => kw.Contains("Guarded")); }, PlayerCategory.Guarded_Attachment),
                 CreateCategoryFilter(@"attach to (an(\s{1}[\S]*\s{1}|\s)ally|a(\s{1}[\S]*\s{1}|\s{1})character)|attach to (a|an) [\S]* or [\S]* character", PlayerCategory.Ally_Attachment),
                 CreateCategoryFilter("attach.* to (a|the active|that) location", PlayerCategory.Location_Attachment),
-                CreateCategoryFilter("(cancel|prevent) 1 point of damage|place 1 of that damage|takes all damage assigned|place that damage|cancel X damage", PlayerCategory.Damage_Control),
+                CreateCategoryFilter("(cancel|prevent) 1 point of damage|place 1 of that damage|takes all damage assigned|(place|reduce) that damage|cancel X damage|cancel up to 2 damage", PlayerCategory.Damage_Control),
                 CreateCategoryFilter("reduce the cost (of|to)", PlayerCategory.Cost_Reduction),
                 CreateCategoryFilter("each hero you control with (a|the) printed (Leadership|Tactics|Spirit|Lore) resource icon|(?<!only )if each (of your heroes|hero you control) has a printed (Leadership|Tactics|Spirit|Lore) resource icon|If each hero you control belongs to the same sphere of influence", PlayerCategory.Mono_Sphere_Bonus),
                 CreateCategoryFilter("Play only if each hero you control has (a|the) printed (Leadership|Tactics|Spirit|Lore)|You must use resources from 3 different heroes' pools", PlayerCategory.Mono_Sphere_Required),
@@ -136,6 +136,7 @@ namespace HallOfBeorn.Services.LotR.Categories
                         case "Landroval-AJtR":
                         case "Dori-THOHaUH":
                         case "Honour-Guard-TWoE":
+                        case "Loyal-Hound-TFoW":
                         case "Vigilant-Guard-ASoCH":
                         case "Close-Call-TDT":
                         case "Fortune-or-Fate-Core":
