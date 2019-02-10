@@ -54,7 +54,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithText("Reduce the cost to play Item attachments on Descendant of Girion by 1.")
                 .WithFlavor("-Glóin, The Fellowship of the Ring")
                 .WithInfo(91, 3, Artist.Unknown);
-            addEvent("Valiant Determination", 2, Sphere.Spirit)
+            addAttachment("Valiant Determination", 2, Sphere.Spirit, false)
                 .WithTraits("Condition.")
                 .WithText("Attach to an ally.\r\nAttached ally does not exhaust to quest.")
                 .WithFlavor("-The Hobbit")
