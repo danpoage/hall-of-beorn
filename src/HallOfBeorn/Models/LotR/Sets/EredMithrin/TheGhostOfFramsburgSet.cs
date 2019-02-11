@@ -59,10 +59,10 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithText("Attach to an ally.\r\nAttached ally does not exhaust to quest.")
                 .WithFlavor("-The Hobbit")
                 .WithInfo(92, 3, Artist.Unknown);
-            addAttachment("Thrór's Ring", 1, Sphere.Neutral, true)
+            addAttachment("Ring of Thrór", 1, Sphere.Neutral, true)
                 .WithTraits("Artifact.", "Ring.")
                 .WithKeywords("Guarded (enemy or location).")
-                .WithText("Attach to a Dwarf hero.\r\nAction: Exhaust Thrór's ~Ring and discard the top card of your deck to ready attached hero. If the discarded card is an attachment, put it into play.")
+                .WithText("Attach to a Dwarf hero.\r\nAction: Exhaust ~Ring of Thrór and discard the top card of your deck to ready attached hero. If the discarded card is an attachment, put it into play.")
                 .WithInfo(93, 3, Artist.Unknown);
         }
     }
