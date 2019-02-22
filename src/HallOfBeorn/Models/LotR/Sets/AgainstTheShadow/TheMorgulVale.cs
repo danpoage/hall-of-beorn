@@ -7,9 +7,11 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
 {
     public class TheMorgulVale : CardSet
     {
+        private const string setName = "The Morgul Vale";
+
         protected override void Initialize()
         {
-            Name = "The Morgul Vale";
+            Name = setName;
             Abbreviation = "TMV";
             Number = 21;
             SetType = Models.SetType.Adventure_Pack;
@@ -29,7 +31,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 HitPoints = 4,
                 Title = "Théoden",
                 Text = "Each hero with a printed Tactics resource icon gets +1 Willpower.",
-                FlavorText = "'To me! To me!' cried Théoden. 'Up Eorlingas! Fear no darkness!' - The Return of the King",
+                FlavorText = "'To me! To me!' cried Théoden. 'Up Eorlingas! Fear no darkness!' -The Return of the King",
                 Quantity = 1,
                 CardNumber = 134
             }
@@ -186,7 +188,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 Text = "Set aside Lord Alcaron, ~Nazgûl of Minas ~Morgul, and The White ~Bridge. Add To the Tower, Murzag and 1 copy of ~Morgul Vale to the staging area.",
                 OppositeFlavorText = "You are betrayed! Lord Alcaron has revealed himself as in league with the Enemy. A large Uruk, Murzag, has been left in charge of finishing you off while Faramir is rushed ahead to the Dead City.",
                 OppositeText = "Murzag cannot leave play unless destroyed. If Murzag is defeated, advance to the next stage.",
-                EncounterSet = "The Morgul Vale",
+                EncounterSet = setName,
                 Quantity = 1,
                 CardNumber = 144,
                 Artist = Artist.Sidharth_Chatursedi,
@@ -203,7 +205,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 Text = "When Revealed: Add Lord Alcaron to the staging area.",
                 OppositeText = "Lord Alcaron cannot leave play unless destroyed. If Lord Alcaron is defeated, advance to the next stage.",
                 OppositeFlavorText = "Alcaron utters an ancient word, and a ghastly shriek rises from Minas Morgul. Something cold and terrible has awoken. Something that is aware of your presence. A short distance ahread, the Uruk carrying Faramir pauses, intimidated by the carrion cry from the city. There may still be time. But first you must deal with the traitor...",
-                EncounterSet = "The Morgul Vale",
+                EncounterSet = setName,
                 Quantity = 1,
                 CardNumber = 145,
                 Artist = Artist.Magali_Villeneuve,
@@ -217,13 +219,8 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 Title = "The Morgul Rider",
                 FlavorText = "You've delivered justice to the traitor Alcaron. You rush forward to help Lord Faramir, who is still struggling with his captors. Then another shrill crwy emanates from the city. It pierces your ears and chills your heart. With a dull clangor; the gates of Minas Morgul open. Mounted on a great black horse, a Nazgûl rides forth to claim Sauron's prize.",
                 Text = "When Revealed: Add ~Nazgûl of Minas ~Morgul and The White ~Bridge to the staging area.",
-                OppositeText = 
-@"When Revealed: Reveal 1 card per player from the encounter deck and add it to the staging area.
-
-~Nazgûl of Minas ~Morgul cannot leave play unless destroyed.
-
-If ~Nazgûl of Minas ~Morgul is defeated, the players have won the game.",
-                EncounterSet = "The Morgul Vale",
+                OppositeText = "When Revealed: Reveal 1 card per player from the encounter deck and add it to the staging area.\r\n~Nazgûl of Minas ~Morgul cannot leave play unless destroyed.\r\nIf ~Nazgûl of Minas ~Morgul is defeated, the players have won the game.",
+                EncounterSet = setName,
                 Quantity = 1,
                 CardNumber = 146,
                 Artist = Artist.Magali_Villeneuve,
@@ -236,13 +233,8 @@ If ~Nazgûl of Minas ~Morgul is defeated, the players have won the game.",
                 CardType = CardType.Objective,
                 Title = "To the Tower",
                 Traits = new List<string> { "Captured." },
-                Text = 
-@"To the Tower cannot leave the staging area.
-
-Remove Faramir from the game.
-
-If 10 or more progress tokens are on To the Tower, the players have lost the game.",
-                EncounterSet = "The Morgul Vale",
+                Text = "To the Tower cannot leave the staging area.\r\nRemove Faramir from the game.\r\nIf 10 or more progress tokens are on To the Tower, the players have lost the game.",
+                EncounterSet = setName,
                 Quantity = 1,
                 CardNumber = 147,
                 Artist = Artist.Darek_Zabrocki
@@ -261,7 +253,7 @@ If 10 or more progress tokens are on To the Tower, the players have lost the gam
                 Traits = new List<string> { "Mordor." },
                 Text = "Any damage that would be dealt to a Captain enemy is dealt to 1 Morgul Bodyguard instead.",
                 Shadow = "Shadow: Attacking enemy engages the next player and makes an immediate attack, if able.",
-                EncounterSet = "The Morgul Vale",
+                EncounterSet = setName,
                 Quantity = 4,
                 CardNumber = 148,
                 Artist = Artist.Rafal_Hrynkiewicz
@@ -280,7 +272,7 @@ If 10 or more progress tokens are on To the Tower, the players have lost the gam
                 Traits = new List<string> { "Mordor." },
                 Text = "Forced: After any number of progress tokens are placed on To the Tower, deal Morgul Sorcerer a shadow card.",
                 Shadow = "Shadow: Defending player must place 1 progress token on To the Tower or treat this attack as undefended.",
-                EncounterSet = "The Morgul Vale",
+                EncounterSet = setName,
                 Quantity = 2,
                 CardNumber = 149,
                 Artist = Artist.Jim_Pavelec
@@ -299,7 +291,7 @@ If 10 or more progress tokens are on To the Tower, the players have lost the gam
                 Traits = new List<string> { "Orc.", "Mordor." },
                 Text = "Forced: When Morgul Tracker is optionally engaged, place 1 progress token on To the Tower.",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack. If undefended, place 1 progress token on To the Tower as well.",
-                EncounterSet = "The Morgul Vale",
+                EncounterSet = setName,
                 Quantity = 3,
                 CardNumber = 150,
                 Artist = Artist.Yigit_Koroglu
@@ -318,7 +310,7 @@ If 10 or more progress tokens are on To the Tower, the players have lost the gam
                 HitPoints = 7,
                 Traits = new List<string> { "Orc.", "Uruk.", "Captain." },
                 Text = "Forced: After Murzag attacks, reveal the top card of the encounter deck. If that card is an enemy, put it into play engaged with the defending player.",
-                EncounterSet = "The Morgul Vale",
+                EncounterSet = setName,
                 Quantity = 1,
                 CardNumber = 151,
                 Artist = Artist.Jim_Pavelec
@@ -337,7 +329,7 @@ If 10 or more progress tokens are on To the Tower, the players have lost the gam
                 HitPoints = 5,
                 Traits = new List<string> { "Gondor.", "Traitor.", "Captain." },
                 Text = "Forced: When Lord Alcaron attacks, place 1 progress token on To the Tower.\r\nForced: When Lord Alcaron is dealt a shadow card with no shadow effect, he makes an additional attack after this one (deal and resolve another shadow card).",
-                EncounterSet = "The Morgul Vale",
+                EncounterSet = setName,
                 Quantity = 1,
                 CardNumber = 152,
                 Artist = Artist.Magali_Villeneuve
@@ -357,7 +349,7 @@ If 10 or more progress tokens are on To the Tower, the players have lost the gam
                 Traits = new List<string> { "Nazgûl.", "Captain." },
                 Text = "Cannot have attachments.\r\nReduce any amount of damage dealt to Nazgûl of Minas Morgul to 1.",
                 FlavorText = "\"Come not between the Nazgûl and his prey!\"\r\n-The Witch King, The Return of the King",
-                EncounterSet = "The Morgul Vale",
+                EncounterSet = setName,
                 Quantity = 1,
                 CardNumber = 153,
                 Artist = Artist.Jake_Murray
@@ -373,7 +365,7 @@ If 10 or more progress tokens are on To the Tower, the players have lost the gam
                 Traits = new List<string> { "Road." },
                 Text = "Response: After Morgul Road leaves play as an explored location, the first player may remove 1 progress token from To the Tower or deal 1 damage to any enemy in play.",
                 Shadow = "Shadow: Return attacking enemy to the staging area after this attack.",
-                EncounterSet = "The Morgul Vale",
+                EncounterSet = setName,
                 Quantity = 3,
                 CardNumber = 154,
                 Artist = Artist.Trudi_Castle
@@ -390,8 +382,8 @@ If 10 or more progress tokens are on To the Tower, the players have lost the gam
                 Traits = new List<string> { "Valley." },
                 Text = "Forced: At the end of the round, each player returns 1 enemy engaged with him to the staging area.",
                 Shadow = "Shadow: If this attack destroys a character, place 1 progress token on To the Tower.",
-                EncounterSet = "The Morgul Vale",
-                Quantity = 2,
+                EncounterSet = setName,
+                Quantity = 3,
                 CardNumber = 155,
                 Artist = Artist.Jake_Murray
             });
@@ -406,7 +398,7 @@ If 10 or more progress tokens are on To the Tower, the players have lost the gam
                 Traits = new List<string> { "Bridge." },
                 Text = "X is the number of progress tokens on To the Tower.",
                 FlavorText = "So they came slowly to the white bridge.\r\n-The Two Towers",
-                EncounterSet = "The Morgul Vale",
+                EncounterSet = setName,
                 Quantity = 1,
                 CardNumber = 156,
                 Artist = Artist.Jake_Murray
@@ -419,7 +411,7 @@ If 10 or more progress tokens are on To the Tower, the players have lost the gam
                 Title = "Impenetrable Fog",
                 Text = "When Revealed: The first player either places 3 progress tokens on To the Tower or reveals X additional cards from the encounter deck and adds them to the staging area. X is the number of players in the game.",
                 FlavorText = "The air above was heavy with fog, and a reek lay on the land about them.\r\n-The Two Towers",
-                EncounterSet = "The Morgul Vale",
+                EncounterSet = setName,
                 Quantity = 2,
                 EasyModeQuantity = 0,
                 CardNumber = 157,
@@ -435,7 +427,7 @@ If 10 or more progress tokens are on To the Tower, the players have lost the gam
                 Keywords = new List<string> { "Doomed 2." },
                 Text = "When Revealed: Each player must discard 3 random cards from his hand or place 1 progress token on To the Tower.",
                 Shadow = "Shadow: Return attacking enemy to the staging area after this attack.",
-                EncounterSet = "The Morgul Vale",
+                EncounterSet = setName,
                 Quantity = 2,
                 CardNumber = 158,
                 Artist = Artist.Jim_Pavelec
@@ -449,8 +441,8 @@ If 10 or more progress tokens are on To the Tower, the players have lost the gam
                 Keywords = new List<string> { "Surge." },
                 Text = "When Revealed: Place 1 progress token on To the Tower.",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack for each progress token on To the Tower.",
-                EncounterSet = "The Morgul Vale",
-                Quantity = 2,
+                EncounterSet = setName,
+                Quantity = 3,
                 CardNumber = 159,
                 Artist = Artist.Darek_Zabrocki
             });
@@ -462,7 +454,7 @@ If 10 or more progress tokens are on To the Tower, the players have lost the gam
                 Title = "The Dead City Looms",
                 Text = "When Revealed: Raise each players' threat by the number of progress tokens on To the Tower. If there are no progress tokens on To the Tower, The Dead City Looms gains surge.",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack for each progress token on To the Tower.",
-                EncounterSet = "The Morgul Vale",
+                EncounterSet = setName,
                 Quantity = 2,
                 EasyModeQuantity = 1,
                 CardNumber = 160,
