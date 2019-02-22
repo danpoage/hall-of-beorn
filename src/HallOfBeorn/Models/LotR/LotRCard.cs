@@ -486,6 +486,21 @@ namespace HallOfBeorn.Models.LotR
             return this;
         }
 
+        public LotRCard WithTextLine(string text)
+        {
+            if (string.IsNullOrEmpty(this.Text))
+                this.Text = text + Environment.NewLine;
+            else
+                this.Text = this.Text + text + Environment.NewLine;
+            return this;
+        }
+
+        public LotRCard WithWhenRevealed(string text)
+        {
+            this.Text = "When Revealed: " + text;
+            return this;
+        }
+
         public LotRCard WithOppositeTitle(string title)
         {
             this.OppositeTitle = title;
@@ -497,6 +512,15 @@ namespace HallOfBeorn.Models.LotR
         public LotRCard WithOppositeText(string text)
         {
             this.OppositeText = text;
+            return this;
+        }
+
+        public LotRCard WithOppositeTextLine(string text)
+        {
+            if (string.IsNullOrEmpty(this.Text))
+                this.OppositeText = text + Environment.NewLine;
+            else
+                this.OppositeText = this.OppositeText + text + Environment.NewLine;
             return this;
         }
 
@@ -516,6 +540,11 @@ namespace HallOfBeorn.Models.LotR
 
         public LotRCard WithShadow(string shadow)
         {
+            const string prefix = "Shadow: ";
+
+            if (!shadow.StartsWith(prefix))
+                shadow = prefix + shadow;
+
             this.Shadow = shadow;
             return this;
         }
@@ -574,6 +603,12 @@ namespace HallOfBeorn.Models.LotR
         public LotRCard WithFlavor(string flavor)
         {
             this.FlavorText = flavor;
+            return this;
+        }
+
+        public LotRCard WithFlavor(string flavor, string source)
+        {
+            this.FlavorText = flavor + Environment.NewLine + "–" + source;
             return this;
         }
 
