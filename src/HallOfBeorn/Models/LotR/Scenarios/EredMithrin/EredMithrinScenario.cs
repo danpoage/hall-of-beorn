@@ -7,6 +7,12 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
 {
     public abstract class EredMithrinScenario : Scenario
     {
+        protected void ExcludeAfraidOfTheDarkFromEasyMode()
+        {
+            ExcludeFromEasyMode("Eyes-in-the-Dark-TWoR", 1);
+            ExcludeFromEasyMode("Afraid-of-the-Dark-TWoR", 1);
+        }
+
         protected void ExcludeWildCreaturesFromEasyMode()
         {
             ExcludeFromEasyMode("Werewolf-TWoR", 1);

@@ -105,11 +105,13 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTextLine("X is the tens digit of the first player's threat.")
                 .WithTextLine("Forced: When Crypt Stalker attacks, raise the defending player's threat by 1.")
                 .WithShadow("Either raise your threat by 2, or return attacking enemy to the staging area.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(99, 2, Artist.Brendan_C_Murphy);
             addEnemy("Evil Spectre", setName, 35, 2, 4, 2, 4)
                 .WithTraits("Undead.", "Hazard.")
                 .WithText("Forced: When Evil Spectre is destroyed, shuffle it back into the encounter deck if the active location has the Dark trait.")
                 .WithShadow("Attacking enemy gets +1 Attack (+2 Attack instead if the active location has the Dark trait.)")
+                .WithEasyModeQuantity(2)
                 .WithInfo(100, 3, Artist.Alex_Boca);
             addLocation("Forgotten Crypt", setName, 2, 2)
                 .WithTraits("Ruins.", "Dark.")
@@ -122,6 +124,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithKeywords("Discover 4.")
                 .WithText("While Haunted Hall is in the staging area, it gains, \"Forced: After a player places any amount of progress on a Dark location in the staging area, he raises his threat by 1.\"")
                 .WithFlavor("Nothing assailed the company nor withstood their passage, and yet steadily fear grew...", "The Return of the King")
+                .WithEasyModeQuantity(1)
                 .WithInfo(102, 2, Artist.Jose_Vega);
             addLocation("Hidden Staircase", setName, Card.VALUE_X, 4)
                 .WithTraits("Ruins.", "Dark.", "Hazard.")
@@ -134,21 +137,25 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithKeywords("Discover 2.")
                 .WithText("While Moonlit Passage is in the staging area, each player's threat cannot be reduced by more than 1 via player card effects each round.")
                 .WithShadow("Raise your threat by 1.")
+                .WithEasyModeQuantity(2)
                 .WithInfo(104, 3, Artist.Jose_Vega);
             addLocation("Cursed Tower", setName, 3, 3)
                 .WithTraits("Ruins.", "Dark.")
                 .WithKeywords("Discover 3.")
                 .WithText("While Cursed Tower is in the staging area, it gains: \"Forced: After a player plays an event, raise his threat by 1.\"")
                 .WithShadow("Discard a non-objective attachment you control.")
+                .WithEasyModeQuantity(2)
                 .WithInfo(105, 3, Artist.Matthew_Cowdery);
             addTreachery("Abandoned Ruins", setName)
                 .WithWhenRevealed("Each player resolves the Discover keyword of the active location in turn order. If they cannot, Abandoned ~Ruins gains surge and doomed 2.")
+                .WithEasyModeQuantity(1)
                 .WithShadow("Attacking enemy makes an additional attack against you after this one.")
                 .WithInfo(106, 2, Artist.Matthew_Cowdery);
             addTreachery("Terrible Shadows", setName)
                 .WithTraits("Hazard.")
                 .WithWhenRevealed("Each character gets -1 Willpower, -1 Attack, and -1 Defense until the end of the round.")
                 .WithShadow("Attacking enemy gets +1 Attack. If this attack destroys a character, raise the defending player's threat by 3.")
+                .WithEasyModeQuantity(0)
                 .WithInfo(107, 2, Artist.Greg_Opalinski);
             addTreachery("Slammed Shut", setName)
                 .WithTraits("Hazard.")

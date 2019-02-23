@@ -11,6 +11,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
             : base("The Ghost of Framsburg", "MEC69", ImageType.Png, new DateTime(2018, 12, 6))
         {
             AddCardSet(CardSet.TheGhostOfFramsburg);
+            AddScenario(new Scenarios.EredMithrin.TheGhostOfFramsburgScenario());
         }
     }
 }
