@@ -5,9 +5,9 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Scenarios.TheWildsOfRhovanion
 {
-    public class JourneyUpTheAnduin : Scenarios.EredMithrin.EredMithrinScenario
+    public class JourneyUpTheAnduinScenario : Scenarios.EredMithrin.EredMithrinScenario
     {
-        public JourneyUpTheAnduin()
+        public JourneyUpTheAnduinScenario()
         {
             Title = "Journey Up the Anduin";
             ProductName = "The Wilds of Rhovanion";
@@ -16,8 +16,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheWildsOfRhovanion
             
             RulesImageCount = 7;
 
+            QuestCompanionSlug = "the-wilds-of-rhovanion-deluxe-expansion-quest-journey-up-the-anduin";
             DifficultyRating = 6.0f;
-            Votes = 1;
+            Votes = 8;
 
             AddLotRDeckTechLink("Flailing Up the Anduin", "jf1Koi3OB0U");
 

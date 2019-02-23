@@ -16,11 +16,11 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
             GroupName = "Ered Mithrin";
             Number = 5;
 
-            QuestCompanionSlug = "ered-mithrin-quest-roam-across-rhovanion";
-            DifficultyRating = 6.5f;
-            Votes = 1;
-
             RulesImageCount = 2;
+
+            QuestCompanionSlug = "ered-mithrin-quest-roam-across-rhovanion";
+            DifficultyRating = 6f;
+            Votes = 5;
 
             AddEncounterSet(EncounterSet.RoamAcrossRhovanion);
             AddEncounterSet(EncounterSet.FellBeasts);
@@ -42,7 +42,6 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
             ExcludeFellBeastsFromEasyMode();
             ExcludeLostInWilderlandFromEasyMode();
             ExcludeHillsOfWilderlandFromEasyMode();
-            
         }
     }
 }

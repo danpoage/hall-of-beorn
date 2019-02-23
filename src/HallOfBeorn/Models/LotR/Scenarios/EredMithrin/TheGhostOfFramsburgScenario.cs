@@ -16,9 +16,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
             GroupName = "Ered Mithrin";
             Number = 7;
 
-            QuestCompanionSlug = "ered-mithrin-quest-roam-across-rhovanion";
-            DifficultyRating = 6.5f;
-            Votes = 1;
+            QuestCompanionSlug = "ered-mithrin-quest-the-ghost-of-framsburg";
+            DifficultyRating = 6f;
+            Votes = 3;
 
             AddEncounterSet(EncounterSet.TheGhostOfFramsburg);
             AddEncounterSet(EncounterSet.WildCreatures);

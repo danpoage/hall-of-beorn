@@ -14,8 +14,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Starter
             GroupName = "Two-Player Limited Edition Starter";
             Number = 2;
 
-            DifficultyRating = 3.5f;
-            Votes = 1;
+            QuestCompanionSlug = "starter-set-quest-the-caves-of-nibin-dum";
+            DifficultyRating = 4.7f;
+            Votes = 4;
 
             AddEncounterSet(EncounterSet.TheCavesOfNibinDum);
             AddEncounterSet(EncounterSet.TheGoblins);

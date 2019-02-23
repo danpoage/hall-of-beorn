@@ -16,11 +16,11 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
             GroupName = "Ered Mithrin";
             Number = 6;
 
-            QuestCompanionSlug = "ered-mithrin-quest-fire-in-the-night";
-            DifficultyRating = 6.7f;
-            Votes = 1;
-
             RulesImageCount = 2;
+
+            QuestCompanionSlug = "ered-mithrin-quest-fire-in-the-night";
+            DifficultyRating = 7.8f;
+            Votes = 5;
 
             AddEncounterSet(EncounterSet.FireInTheNight);
             AddEncounterSet(EncounterSet.GreyMountainGoblins);

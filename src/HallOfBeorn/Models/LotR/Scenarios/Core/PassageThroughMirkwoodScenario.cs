@@ -1,8 +1,8 @@
 namespace HallOfBeorn.Models.LotR.Scenarios.Core
 {
-    public class PassageThroughMirkwood : Scenario
+    public class PassageThroughMirkwoodScenario : Scenario
     {
-        public PassageThroughMirkwood()
+        public PassageThroughMirkwoodScenario()
         {
             Title = "Passage Through Mirkwood";
             ProductName = "Core Set";
@@ -10,7 +10,6 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
             Number = 1;
 
             QuestCompanionSlug = "core-set-quest-passage-through-mirkwood";
-
             DifficultyRating = 2.2f;
             Votes = 222;
 

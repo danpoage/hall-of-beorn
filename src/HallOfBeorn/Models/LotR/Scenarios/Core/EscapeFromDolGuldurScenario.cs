@@ -1,8 +1,8 @@
 namespace HallOfBeorn.Models.LotR.Scenarios.Core
 {
-    public class EscapeFromDolGuldur : Scenario
+    public class EscapeFromDolGuldurScenario : Scenario
     {
-        public EscapeFromDolGuldur()
+        public EscapeFromDolGuldurScenario()
         {
             Title = "Escape from Dol Guldur";
             ProductName = "Core Set";
@@ -10,7 +10,6 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
             Number = 3;
 
             QuestCompanionSlug = "core-set-quest-escape-from-dol-guldur";
-
             DifficultyRating = 7.8f;
             Votes = 136;
 

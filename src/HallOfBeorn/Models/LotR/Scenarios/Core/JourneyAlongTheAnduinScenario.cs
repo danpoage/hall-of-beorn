@@ -1,8 +1,8 @@
 namespace HallOfBeorn.Models.LotR.Scenarios.Core
 {
-    public class JourneyAlongTheAnduin : Scenario
+    public class JourneyAlongTheAnduinScenario : Scenario
     {
-        public JourneyAlongTheAnduin()
+        public JourneyAlongTheAnduinScenario()
         {
             Title = "Journey Along the Anduin";
             AlternateTitle = "Journey Down the Anduin";
@@ -11,7 +11,6 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
             Number = 2;
 
             QuestCompanionSlug = "core-set-quest-journey-down-the-anduin";
-
             DifficultyRating = 5.3f;
             Votes = 160;
 

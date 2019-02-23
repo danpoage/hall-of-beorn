@@ -65,6 +65,7 @@ namespace HallOfBeorn.Services.LotR.Scenarios
         private readonly IDictionary<string, List<LotRCard>> cardsByEncounterSet = new Dictionary<string, List<LotRCard>>();
         private readonly Dictionary<string, Scenario> scenariosByAlternateTitle = new Dictionary<string, Scenario>();
         private readonly Dictionary<string, Scenario> scenariosByTitle = new Dictionary<string, Scenario>();
+        private readonly Dictionary<string, Scenario> scenariosByNormalizedTitle = new Dictionary<string, Scenario>();
         private readonly ScenarioListViewModel listViewModel;
 
         private const string selectListSeparator = "————————————————————";
@@ -78,6 +79,7 @@ namespace HallOfBeorn.Services.LotR.Scenarios
             }
 
             scenariosByTitle.Add(escapedTitle, scenario);
+            scenariosByNormalizedTitle.Add(escapedTitle.NormalizeCaseSensitiveString(), scenario);
 
             if (!string.IsNullOrEmpty(scenario.AlternateTitle))
             {
@@ -208,9 +210,18 @@ namespace HallOfBeorn.Services.LotR.Scenarios
                 return scenariosByAlternateTitle[scenarioTitle];
             }
 
-            return scenariosByTitle.ContainsKey(scenarioTitle) ?
-                scenariosByTitle[scenarioTitle]
-                : null;
+            if (scenariosByTitle.ContainsKey(scenarioTitle))
+            {
+                return scenariosByTitle[scenarioTitle];
+            }
+
+            var normalizedTitle = scenarioTitle.NormalizeCaseSensitiveString();
+            if (scenariosByNormalizedTitle.ContainsKey(normalizedTitle))
+            {
+                return scenariosByNormalizedTitle[normalizedTitle];
+            }
+
+            return null;
         }
 
         public ScenarioListViewModel GetListViewModel()

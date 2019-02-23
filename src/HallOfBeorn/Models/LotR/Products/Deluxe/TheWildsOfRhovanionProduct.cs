@@ -11,9 +11,9 @@ namespace HallOfBeorn.Models.LotR.Products.Deluxe
             : base("The Wilds of Rhovanion", "MEC65", ImageType.Jpg, new DateTime(2018, 6, 15))
         {
             AddCardSet(CardSet.TheWildsOfRhovanion);
-            AddScenario(new Scenarios.TheWildsOfRhovanion.JourneyUpTheAnduin());
-            AddScenario(new Scenarios.TheWildsOfRhovanion.LostInMirkwood());
-            AddScenario(new Scenarios.TheWildsOfRhovanion.TheKingsQuest());
+            AddScenario(new Scenarios.TheWildsOfRhovanion.JourneyUpTheAnduinScenario());
+            AddScenario(new Scenarios.TheWildsOfRhovanion.LostInMirkwoodScenario());
+            AddScenario(new Scenarios.TheWildsOfRhovanion.TheKingsQuestScenario());
         }
     }
 }

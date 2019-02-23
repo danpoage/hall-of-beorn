@@ -14,8 +14,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Starter
             GroupName = "Two-Player Limited Edition Starter";
             Number = 1;
 
-            DifficultyRating = 3f;
-            Votes = 1;
+            QuestCompanionSlug = "starter-set-quest-the-oath";
+            DifficultyRating = 2.3f;
+            Votes = 4;
 
             AddEncounterSet(EncounterSet.TheOath);
             AddEncounterSet(EncounterSet.TheGoblins);

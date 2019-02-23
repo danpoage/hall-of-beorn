@@ -5,9 +5,9 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Scenarios.TheWildsOfRhovanion
 {
-    public class TheKingsQuest : Scenario
+    public class TheKingsQuestScenario : Scenario
     {
-        public TheKingsQuest()
+        public TheKingsQuestScenario()
         {
             Title = "The King's Quest";
             ProductName = "The Wilds of Rhovanion";
@@ -15,9 +15,10 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheWildsOfRhovanion
             Number = 3;
 
             RulesImageCount = 7;
-            //QuestCompanionSlug = "";
-            DifficultyRating = 7.0f;
-            Votes = 1;
+
+            QuestCompanionSlug = "the-wilds-of-rhovanion-deluxe-expansion-quest-the-kings-quest";
+            DifficultyRating = 6.9f;
+            Votes = 7;
 
             AddEncounterSet(EncounterSet.FellBeasts);
             AddEncounterSet(EncounterSet.WildCreatures);

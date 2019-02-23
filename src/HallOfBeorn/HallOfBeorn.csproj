@@ -410,9 +410,9 @@
     <Compile Include="Models\LotR\Scenarios\TheSandsOfHarad\TheLongArmOfMordor.cs" />
     <Compile Include="Models\LotR\Scenarios\Haradrim\TheMumakilScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\TheSandsOfHarad\TheSandsOfHaradScenario.cs" />
-    <Compile Include="Models\LotR\Scenarios\TheWildsOfRhovanion\JourneyUpTheAnduin.cs" />
-    <Compile Include="Models\LotR\Scenarios\TheWildsOfRhovanion\LostInMirkwood.cs" />
-    <Compile Include="Models\LotR\Scenarios\TheWildsOfRhovanion\TheKingsQuest.cs" />
+    <Compile Include="Models\LotR\Scenarios\TheWildsOfRhovanion\JourneyUpTheAnduinScenario.cs" />
+    <Compile Include="Models\LotR\Scenarios\TheWildsOfRhovanion\LostInMirkwoodScenario.cs" />
+    <Compile Include="Models\LotR\Scenarios\TheWildsOfRhovanion\TheKingsQuestScenario.cs" />
     <Compile Include="Models\LotR\ScenarioView.cs" />
     <Compile Include="Models\LotR\Sets\AngmarAwakened\AcrossTheEttenmoorsNightmare.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\FlightOfTheStormcallerNightmare.cs" />
@@ -553,7 +553,7 @@
     <Compile Include="Models\LotR\Scenarios\DreamChaser\DreamChaserScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\TheHobbit\DungeonsDeepAndCavernsDim.cs" />
     <Compile Include="Models\LotR\Scenarios\AgainstTheShadow\EncounterAtAmonDin.cs" />
-    <Compile Include="Models\LotR\Scenarios\Core\EscapeFromDolGuldur.cs" />
+    <Compile Include="Models\LotR\Scenarios\Core\EscapeFromDolGuldurScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\AngmarAwakened\EscapeFromMountGram.cs" />
     <Compile Include="Models\LotR\Scenarios\TheHobbit\FliesAndSpiders.cs" />
     <Compile Include="Models\LotR\Scenarios\KhazadDum\FlightFromMoria.cs" />
@@ -567,12 +567,12 @@
     <Compile Include="Models\LotR\Scenarios\HeirsOfNumenor\IntoIthilien.cs" />
     <Compile Include="Models\LotR\Scenarios\KhazadDum\IntoThePit.cs" />
     <Compile Include="Models\LotR\Scenarios\TheLostRealm\IntrudersInChetwood.cs" />
-    <Compile Include="Models\LotR\Scenarios\Core\JourneyAlongTheAnduin.cs" />
+    <Compile Include="Models\LotR\Scenarios\Core\JourneyAlongTheAnduinScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\TheLordOfTheRings\JourneyInTheDark.cs" />
     <Compile Include="Models\LotR\Scenarios\TheLordOfTheRings\JourneyToTheCrossroads.cs" />
     <Compile Include="Models\LotR\Scenarios\PrintOnDemand\MurderAtThePrancingPony.cs" />
     <Compile Include="Models\LotR\Scenarios\TheHobbit\OverTheMistyMountainsGrim.cs" />
-    <Compile Include="Models\LotR\Scenarios\Core\PassageThroughMirkwood.cs" />
+    <Compile Include="Models\LotR\Scenarios\Core\PassageThroughMirkwoodScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\HeirsOfNumenor\PerilInPelargir.cs" />
     <Compile Include="Models\LotR\Scenarios\TheGreyHavens\RaidOnTheGreyHavens.cs" />
     <Compile Include="Models\LotR\Scenarios\ShadowsOfMirkwood\ReturnToMirkwood.cs" />

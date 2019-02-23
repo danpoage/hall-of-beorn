@@ -5,9 +5,9 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Scenarios.TheWildsOfRhovanion
 {
-    public class LostInMirkwood : Scenario
+    public class LostInMirkwoodScenario : Scenario
     {
-        public LostInMirkwood()
+        public LostInMirkwoodScenario()
         {
             Title = "Lost in Mirkwood";
             ProductName = "The Wilds of Rhovanion";
@@ -16,8 +16,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheWildsOfRhovanion
  
             RulesImageCount = 7;
 
-            DifficultyRating = 6.1f;
-            Votes = 1;
+            QuestCompanionSlug = "the-wilds-of-rhovanion-deluxe-expansion-quest-lost-in-mirkwood";
+            DifficultyRating = 5.4f;
+            Votes = 7;
 
             AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2018/07/11/turn-by-turn-report-lost-in-mirkwood/", Title);
 
