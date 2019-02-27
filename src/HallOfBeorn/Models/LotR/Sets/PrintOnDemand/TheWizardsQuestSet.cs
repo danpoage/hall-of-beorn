@@ -126,7 +126,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithInfo(19, 1, Artist.Katy_Grierson);
             addTreachery("Swarming Mosquitoes", string.Empty)
                 .WithSetNumberAndCost(17, 0)
-                .WithText("When Revealed: Each player deals X damage to a character he controls, where X is more than the stage number of the main quest.")
+                .WithText("When Revealed: Each player deals X damage to a character he controls, where X is 1 more than the stage number of the main quest.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the defending character has an attachment).")
                 .WithInfo(20, 1, Artist.Owen_William_Weber);
             addEnemy("Goblin Sniper", string.Empty, 38, 2, 4, 2, 5)
