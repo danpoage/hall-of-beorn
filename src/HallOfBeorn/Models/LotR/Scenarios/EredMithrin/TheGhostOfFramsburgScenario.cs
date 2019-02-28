@@ -16,6 +16,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
             GroupName = "Ered Mithrin";
             Number = 7;
 
+            RulesImageCount = 2;
+
             QuestCompanionSlug = "ered-mithrin-quest-the-ghost-of-framsburg";
             DifficultyRating = 6f;
             Votes = 3;
