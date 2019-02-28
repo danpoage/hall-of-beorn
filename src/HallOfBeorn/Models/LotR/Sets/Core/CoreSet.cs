@@ -153,7 +153,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithTraits("Dwarf.", "Warrior.")
                 .WithText("Response: After a Dwarf hero you control leaves play, put Brok Ironfist into play from your hand.")
                 .WithFlavor("...there is no knowing what a Dwarf will not dare and do for revenge and the recovery of his own.\r\n-The Hobbit")
-                .WithTemplate("<p class='main-text'><b>Response:</b> After a {trait-hero:Dwarf.@Dwarf} you control leaves play, put {self} into play from your hand.</p><p class='flavor-text'>...there is no knowing what a Dwarf will not dare and do for revenge and the recovery of his own.<br>&ndash;The Hobbit</p>")
+                .WithTemplate("<p class='main-text'><b>Response:</b> After a {trait-hero:Dwarf.@Dwarf} hero you control leaves play, put {self} into play from your hand.</p><p class='flavor-text'>...there is no knowing what a Dwarf will not dare and do for revenge and the recovery of his own.<br>&ndash;The Hobbit</p>")
                 .WithInfo(19, 1, Artist.Even_Mehl_Amundsen);
             addEvent("Ever Vigilant", 1, Sphere.Leadership)
                 .WithText("Action: Choose and ready 1 ally card.")
