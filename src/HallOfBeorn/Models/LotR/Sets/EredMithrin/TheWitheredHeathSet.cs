@@ -139,7 +139,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
             addQuest("The Cold-Drake Attacks!", setName, 2, 'A', 3)
                 .WithFlavor("You've followed the Dragon tracks high up the Ered Mithrin mountain range to a sheltered hollow where you find the beast waiting for you. It lets out a roar that shakes the mountain, and rocks tumble down as it charges toward you in a rage!")
                 .WithText("When Revealed: Add the set-aside Cold-Drake to the staging area.")
-                .WithOppositeText("Ignore the Deep keyword.\r\nCold-Drake cannot leave the staging area (even if it has damage equal to its quest points), but it is considered to be engaged with each player.\r\nNo more than 6 damage can be placed on the Cold-drake each round and it cannot have more than 18 damage.\r\nThis stage cannot be defeated while Ice Drake has any hit points remaining.")
+                .WithOppositeText("Ignore the Deep keyword.\r\nCold-Drake cannot leave the staging area (even if it has damage equal to its hit points), but it is considered to be engaged with each player.\r\nNo more than 6 damage can be placed on Cold-Drake each round and it cannot have more than 18 damage.\r\nThis stage cannot be defeated while Cold-Drake has any hit points remaining.")
                 .WithInfo(23, 1, Artist.Alvaro_Calvo_Escudero);
             addQuest("Hunting the Beast", setName, 3, 'A', 9)
                 .WithFlavor("The injured drake retreats among the rising slopes of Ered Mithrin and you chase afterit, carefully searching each potential hiding place.")
