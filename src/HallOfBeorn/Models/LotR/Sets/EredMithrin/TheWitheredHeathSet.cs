@@ -67,6 +67,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithUnique()
                 .WithTraits("Dragon.")
                 .WithText("Cannot have attachments or take non-combat damage.\r\nCold-Drake gets +1 Threat and +1 Defense for each ~Dragon ~Sign in the victory display.\r\nForced: After Cold-Drake is dealt a shadow card with no shadow effect, the defending character cannot ready until the end of the round.")
+                .WithVictoryPoints(6)
                 .WithInfo(11, 1, Artist.Matthew_Cowdery);
             addObjective("Dragon Sign", setName)
                 .WithTraits("Clue.")
@@ -81,13 +82,13 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithInfo(13, 2, Artist.Alex_Boca);
             addEnemy("Dragon Hatchling", setName, 20, 2, 2, 0, 4)
                 .WithTraits("Dragon.")
-                .WithText("Dragon Hatchling gets +1 Attack and +1 Defense for each ~Dragon ~Sign in the victory display.")
+                .WithText("~Dragon Hatchling gets +1 Attack and +1 Defense for each ~Dragon ~Sign in the victory display.")
                 .WithShadow("Shadow: Until the end of the phase, attacking enemy gets +1 Attack and +1 Defense for each ~Dragon ~Sign in the victory display.")
                 .WithEasyModeQuantity(2)
                 .WithInfo(14, 3, Artist.Mariusz_Gandzel);
             addLocation("Mountain Pass", setName, 2, 4)
                 .WithTraits("Mountain.")
-                .WithText("While Mountain Pass is in the staging area, the 'when revealed' effects of Weather treachery cards cannot be canceled.")
+                .WithText("While ~Mountain Pass is in the staging area, the 'when revealed' effects of Weather treachery cards cannot be canceled.")
                 .WithFlavor("\"We may well be seen by watchers on that narrow path, and waylaid by some evil; but the weather may prove a more deadly enemy than any.\"\r\n-Gandalf, The Fellowship of the Ring")
                 .WithInfo(15, 3, Artist.Mariusz_Gandzel);
             addLocation("Dwarven Door", setName, 3, 3)
@@ -104,8 +105,9 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithEasyModeQuantity(2)
                 .WithInfo(17, 3, Artist.Kamila_Tzutenberg);
             addLocation("Creature Den", setName, 4, 4)
-                .WithTraits("Mountain.", "Dark.")
-                .WithText("Response: After the players travel to Creature Den, search the Caves deck for a Dragon Sign and attach it to Creature Den as a guarded objective. Shuffle the Caves deck.\r\nTravel: Shuffle the encounter discard pile into the encounter deck and discard cards from the top until an enemy is discarded. Add that enemy to the staging area.")
+                .WithTraits("Mountain.")
+                .WithText("Response: After the players travel to ~Creature Den, search the Caves deck for a ~Dragon Sign and attach it to ~Creature Den as a guarded objective. Shuffle the Caves deck.\r\nTravel: Shuffle the encounter discard pile into the encounter deck and discard cards from the top until an enemy is discarded. Add that enemy to the staging area.")
+                .WithVictoryPoints(4)
                 .WithInfo(18, 2, Artist.Nele_Diel);
             addLocation("High Falls", setName, Card.VALUE_X, 6)
                 .WithTraits("Mountain.")
