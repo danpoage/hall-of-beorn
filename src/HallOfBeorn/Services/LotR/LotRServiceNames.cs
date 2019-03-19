@@ -24,5 +24,6 @@ namespace HallOfBeorn.Services.LotR
         public static string RingsDbService = "ringsDBService";
         public static string TagService = "tagService";
         public static string TemplateService = "templateService";
+        public static string TranslationService = "translationService";
     }
 }

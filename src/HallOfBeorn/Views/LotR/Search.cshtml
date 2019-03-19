@@ -462,11 +462,11 @@
                     }
                     @if (@Model.View.HasValue && @Model.View == View.Card_Image)
                     {
-                        @Html.ActionLink(@card.TitleTrimmed, "Details", new { id = @card.Slug }, new { style = "margin-bottom:2px;font-size:medium;font-weight:bold;display:inline-block;" })
+                        @Html.ActionLink(@card.TitleTrimmed, "Details", new { id = @card.Slug, Lang = @card.Lang }, new { style = "margin-bottom:2px;font-size:medium;font-weight:bold;display:inline-block;" })
                     }
                     else
                     {
-                        @Html.ActionLink(@card.Title, "Details", new { id = @card.Slug }, new { style = "margin-bottom:2px;font-size:medium;font-weight:bold;display:inline-block;" })
+                        @Html.ActionLink(@card.Title, "Details", new { id = @card.Slug, Lang = @card.Lang }, new { style = "margin-bottom:2px;font-size:medium;font-weight:bold;display:inline-block;" })
                     }
                     </div>
                     <div>

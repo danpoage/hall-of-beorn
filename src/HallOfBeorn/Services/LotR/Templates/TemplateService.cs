@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using HallOfBeorn.Models;
 
 namespace HallOfBeorn.Services.LotR.Templates
 {
@@ -9,46 +10,49 @@ namespace HallOfBeorn.Services.LotR.Templates
     {
         public TemplateService()
         {
-            RegisterFrontRepository(DefaultLanguage, new EnUsTemplateRepository1());
-            RegisterBackRepository(DefaultLanguage, new EnUsTemplateRepository2());
+            RegisterFrontRepository(DefaultLanguage, new EnTemplateRepository1());
+            RegisterBackRepository(DefaultLanguage, new EnTemplateRepository2());
+
+            RegisterFrontRepository(Language.DE, new DeTemplateRepository1());
         }
 
-        private readonly Dictionary<string, ITemplateRepository> _frontTemplateRepositories = new Dictionary<string, ITemplateRepository>();
-        private readonly Dictionary<string, ITemplateRepository> _backTemplateRepositories = new Dictionary<string, ITemplateRepository>();
+        private readonly Dictionary<Language, ITemplateRepository> _frontTemplateRepositories = new Dictionary<Language, ITemplateRepository>();
+        private readonly Dictionary<Language, ITemplateRepository> _backTemplateRepositories = new Dictionary<Language, ITemplateRepository>();
 
-        private void RegisterFrontRepository(string language, ITemplateRepository repository)
+        private void RegisterFrontRepository(Language lang, ITemplateRepository repository)
         {
-            _frontTemplateRepositories[language] = repository;
+
+            _frontTemplateRepositories[lang] = repository;
         }
 
-        private void RegisterBackRepository(string language, ITemplateRepository repository)
+        private void RegisterBackRepository(Language lang, ITemplateRepository repository)
         {
-            _backTemplateRepositories[language] = repository;
+            _backTemplateRepositories[lang] = repository;
         }
 
-        public const string DefaultLanguage = "en-US";
+        public readonly Language DefaultLanguage = Language.EN;
 
-        public string GetFrontHtml(string slug)
+        public string GetFrontHtml(string slug, Language? lang)
         {
-            return GetFrontHtml(slug, DefaultLanguage);
-        }
+            var useLang = lang.HasValue ? lang.Value : DefaultLanguage;
 
-        public string GetFrontHtml(string slug, string language)
-        {
-            return (_frontTemplateRepositories.ContainsKey(language)) ?
-                _frontTemplateRepositories[language].GetHtmlTemplate(slug)
+            if (_frontTemplateRepositories.ContainsKey(useLang))
+                return _frontTemplateRepositories[useLang].GetHtmlTemplate(slug);
+
+            return (_frontTemplateRepositories.ContainsKey(DefaultLanguage)) ?
+                _frontTemplateRepositories[DefaultLanguage].GetHtmlTemplate(slug)
                 : string.Empty;
         }
 
-        public string GetBackHtml(string slug)
+        public string GetBackHtml(string slug, Language? lang)
         {
-            return GetBackHtml(slug, DefaultLanguage);
-        }
+            var useLang = lang.HasValue ? lang.Value : DefaultLanguage;
 
-        public string GetBackHtml(string slug, string language)
-        {
-            return (_backTemplateRepositories.ContainsKey(language)) ?
-                _backTemplateRepositories[language].GetHtmlTemplate(slug)
+            if (_backTemplateRepositories.ContainsKey(useLang))
+                return _backTemplateRepositories[useLang].GetHtmlTemplate(slug);
+
+            return (_backTemplateRepositories.ContainsKey(DefaultLanguage)) ?
+                _backTemplateRepositories[DefaultLanguage].GetHtmlTemplate(slug)
                 : string.Empty;
         }
     }

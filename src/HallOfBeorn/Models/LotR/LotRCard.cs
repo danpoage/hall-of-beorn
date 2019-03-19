@@ -14,8 +14,8 @@ namespace HallOfBeorn.Models.LotR
 
             StageLetter = 'A';
 
-            Html = string.Empty;
-            Html2 = string.Empty;
+            //Html = string.Empty;
+            //Html2 = string.Empty;
 
             AlternateEncounterSet = string.Empty;
         }
@@ -28,23 +28,96 @@ namespace HallOfBeorn.Models.LotR
             return string.Format("{0}-{1}{2}", title, suffix, set);
         }
 
+        /*
         private string html;
         public string Html
         {
             get
             {
-                if (!string.IsNullOrEmpty(HtmlTemplate) && string.IsNullOrEmpty(html)) 
+                if (string.IsNullOrEmpty(html))
                 {
-                    html = new TextTemplate(this).RenderFrontHtml();
+                    var renderedHtml = GetHtml(DefaultLang);
+                    if (!string.IsNullOrEmpty(renderedHtml))
+                    {
+                        html = renderedHtml;
+                    }
                 }
 
                 return html;
             }
             set { html = value; }
         }
+        */
 
-        public string HtmlTemplate;
+        public string GetFrontHtml(Language lang)
+        {
+            var template = GetFrontHtmlTemplate(lang);
+            return !string.IsNullOrEmpty(template) ?
+                new TextTemplate(this).RenderHtml(template)
+                : string.Empty;
+        }
 
+        private readonly Dictionary<Language, string> frontHtmlTemplates = new Dictionary<Language, string>();
+
+        public string HtmlTemplate
+        {
+            get { return GetFrontHtmlTemplate(DefaultLang); }
+            set { frontHtmlTemplates[DefaultLang] = value;  }
+        }
+
+        public string GetFrontHtmlTemplate(Language? lang)
+        {
+            var useLang = lang.HasValue ? lang.Value : DefaultLang;
+
+            if (frontHtmlTemplates.ContainsKey(useLang))
+                return frontHtmlTemplates[useLang];
+
+            return frontHtmlTemplates.ContainsKey(DefaultLang) ?
+                frontHtmlTemplates[DefaultLang]
+                : string.Empty;
+        }
+
+        public LotRCard WithFrontHtmlTemplate(Language lang, string template)
+        {
+            frontHtmlTemplates[lang] = template;
+            return this;
+        }
+
+        public string GetBackHtml(Language lang)
+        {
+            var template = GetBackHtmlTemplate(lang);
+            return !string.IsNullOrEmpty(template) ?
+                new TextTemplate(this).RenderHtml(template)
+                : string.Empty;
+        }
+
+        private readonly Dictionary<Language, string> backHtmlTemplates = new Dictionary<Language, string>();
+
+        public string HtmlTemplate2
+        {
+            get { return GetBackHtmlTemplate(DefaultLang); }
+            set { backHtmlTemplates[DefaultLang] = value;  }
+        }
+
+        public string GetBackHtmlTemplate(Language? lang)
+        {
+            var useLang = lang.HasValue ? lang.Value : DefaultLang;
+
+            if (backHtmlTemplates.ContainsKey(useLang))
+                return backHtmlTemplates[useLang];
+
+            return backHtmlTemplates.ContainsKey(DefaultLang) ?
+                backHtmlTemplates[DefaultLang]
+                : string.Empty;
+        }
+
+        public LotRCard WithBackHtmlTemplate(Language lang, string template)
+        {
+            backHtmlTemplates[lang] = template;
+            return this;
+        }
+
+        /*
         private string html2;
         public string Html2
         {
@@ -59,8 +132,8 @@ namespace HallOfBeorn.Models.LotR
             }
             set { html2 = value; }
         }
-
         public string HtmlTemplate2;
+         */
 
         public bool HasThumbnail { get; set; }
 
@@ -467,6 +540,12 @@ namespace HallOfBeorn.Models.LotR
             addTraits(traits);
             return this;
         }
+        
+        public LotRCard WithTraits(Language lang, params string[] traits)
+        {
+            addTraits(traits, lang);
+            return this;
+        }
 
         public LotRCard WithVictoryPoints(byte victoryPoints)
         {
@@ -480,9 +559,21 @@ namespace HallOfBeorn.Models.LotR
             return this;
         }
 
+        public LotRCard WithKeywords(Language lang, params string[] keywords)
+        {
+            addKeywords(keywords, lang);
+            return this;
+        }
+
         public LotRCard WithText(string text)
         {
-            this.Text = text;
+            SetText(DefaultLang, text);
+            return this;
+        }
+
+        public LotRCard WithText(string text, Language lang)
+        {
+            SetText(lang, text);
             return this;
         }
 
@@ -492,6 +583,12 @@ namespace HallOfBeorn.Models.LotR
                 this.Text = text + Environment.NewLine;
             else
                 this.Text = this.Text + text + Environment.NewLine;
+            return this;
+        }
+
+        public LotRCard WithTitle(Language lang, string title)
+        {
+            SetTitle(lang, title);
             return this;
         }
 
@@ -589,6 +686,12 @@ namespace HallOfBeorn.Models.LotR
         }
 
         public LotRCard WithTemplate(string htmlTemplate)
+        {
+            this.HtmlTemplate = htmlTemplate;
+            return this;
+        }
+
+        public LotRCard WithTemplate(string htmlTemplate, Language lang)
         {
             this.HtmlTemplate = htmlTemplate;
             return this;

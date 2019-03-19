@@ -197,6 +197,7 @@
     <Compile Include="Handlers\LotR\RingsDbHandler.cs" />
     <Compile Include="Handlers\LotR\ScenariosHandler.cs" />
     <Compile Include="Handlers\LotR\SearchHandler.cs" />
+    <Compile Include="Handlers\LotR\TranslationHandler.cs" />
     <Compile Include="HtmlHelperExtensions.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Arkham\Products\CurseOfTheRougarou.cs" />
@@ -882,8 +883,9 @@
     <Compile Include="Services\LotR\Search\IFilterService.cs" />
     <Compile Include="Services\LotR\Search\IPlanService.cs" />
     <Compile Include="Services\LotR\Search\NumericComparisonFilter.cs" />
-    <Compile Include="Services\LotR\Templates\EnUsTemplateRepository1.cs" />
-    <Compile Include="Services\LotR\Templates\EnUsTemplateRepository2.cs" />
+    <Compile Include="Services\LotR\Templates\DeTemplateRepository1.cs" />
+    <Compile Include="Services\LotR\Templates\EnTemplateRepository1.cs" />
+    <Compile Include="Services\LotR\Templates\EnTemplateRepository2.cs" />
     <Compile Include="Services\LotR\Categories\ICategoryService.cs" />
     <Compile Include="Services\LotR\Tags\INoteService.cs" />
     <Compile Include="Services\LotR\Tags\ITagService.cs" />
@@ -927,6 +929,8 @@
     <Compile Include="Services\LotR\Templates\ITemplateService.cs" />
     <Compile Include="Services\LotR\Templates\TemplateRepository.cs" />
     <Compile Include="Services\LotR\Templates\TemplateService.cs" />
+    <Compile Include="Services\LotR\Translation\ITranslationService.cs" />
+    <Compile Include="Services\LotR\Translation\TranslationService.cs" />
     <Compile Include="Views\SelectListItemExtends.cs" />
   </ItemGroup>
   <ItemGroup>

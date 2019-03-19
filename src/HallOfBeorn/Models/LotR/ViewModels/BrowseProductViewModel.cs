@@ -17,7 +17,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             {
                 foreach (var card in cardSet.Cards.OrderBy(x => x.CardNumber))
                 {
-                    cardViewModels.Add(new CardViewModel(card, getPlayerCategories, getEncounterCategories, getQuestCategories));
+                    cardViewModels.Add(new CardViewModel(card, getPlayerCategories, getEncounterCategories, getQuestCategories, null));
                 }
             }
 

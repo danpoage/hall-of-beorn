@@ -9,21 +9,35 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 {
     public class CardViewModel
     {
-        public CardViewModel(LotRCard card, Func<string, IEnumerable<PlayerCategory>> getPlayerCategories, Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, Func<string, IEnumerable<QuestCategory>> getQuestCategories)
-            : this(card, 0f, string.Empty, getPlayerCategories, getEncounterCategories, getQuestCategories)
+        public CardViewModel(LotRCard card, 
+            Func<string, IEnumerable<PlayerCategory>> getPlayerCategories, 
+            Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, 
+            Func<string, IEnumerable<QuestCategory>> getQuestCategories,
+            Language? lang)
+            : this(card, 0f, string.Empty, getPlayerCategories, getEncounterCategories, getQuestCategories, lang)
         {
         }
 
-        public CardViewModel(CardScore score, Func<string, IEnumerable<PlayerCategory>> getPlayerCategories, Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, Func<string, IEnumerable<QuestCategory>> getQuestCategories)
-            : this(score.Card, score.Score(), score.Description, getPlayerCategories, getEncounterCategories, getQuestCategories)
+        public CardViewModel(CardScore score, 
+            Func<string, IEnumerable<PlayerCategory>> getPlayerCategories, 
+            Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, 
+            Func<string, IEnumerable<QuestCategory>> getQuestCategories,
+            Language? lang)
+            : this(score.Card, score.Score(), score.Description, getPlayerCategories, getEncounterCategories, getQuestCategories, lang)
         {
         }
 
-        public CardViewModel(LotRCard card, float score, string searchDescription, Func<string, IEnumerable<PlayerCategory>> getPlayerCategories, Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, Func<string, IEnumerable<QuestCategory>> getQuestCategories)
+        public CardViewModel(LotRCard card, float score, string searchDescription, 
+            Func<string, IEnumerable<PlayerCategory>> getPlayerCategories, 
+            Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, 
+            Func<string, IEnumerable<QuestCategory>> getQuestCategories,
+            Language? lang = Language.EN)
         {
             _card = card;
             _score = score;
             _searchDescription = searchDescription;
+            _lang = lang.HasValue ? lang.Value : _card.DefaultLang;
+
             this.getPlayerCategories = getPlayerCategories;
             this.getEncounterCategories = getEncounterCategories;
             this.getQuestCategories = getQuestCategories;
@@ -37,6 +51,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         private LotRCard _card;
         private float _score;
         private string _searchDescription;
+        private Language _lang;
 
         private Func<string, IEnumerable<PlayerCategory>> getPlayerCategories;
         private Func<string, IEnumerable<EncounterCategory>> getEncounterCategories;
@@ -49,6 +64,12 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         private readonly List<EncounterSetViewModel> _includedEncounterSets = new List<EncounterSetViewModel>();
 
         public List<CardEffect> KeywordEffects { get { return _keywordEffects; } }
+        
+        public void AddTranslatedKeywords(IEnumerable<CardEffect> keywords)
+        {
+            KeywordEffects.AddRange(keywords);
+        }
+
         public List<CardEffect> TextEffects { get { return _textEffects; } }
         public List<CardEffect> OppositeTextEffects { get { return _oppositeTextEffects; } }
         public List<CardEffect> ShadowEffects { get { return _shadowEffects; } }
@@ -100,7 +121,12 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public string Title
         {
-            get { return _card.Title; }
+            get { return _card.GetTitle(_lang); }
+        }
+
+        public void SetTranslatedTitle(Language lang, string title)
+        {
+            _card.SetTitle(lang, title);
         }
 
         public string Description
@@ -311,16 +337,21 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             get
             {
-                foreach (var keyword in _card.Keywords)
+                foreach (var keyword in _card.KeywordsByLang(_lang))
                 {
-                    yield return keyword.ToDisplayString(_card.Title);
+                    yield return keyword.ToDisplayString(_card.GetTitle(_lang));
                 }
             }
         }
 
         public IEnumerable<string> Traits
         {
-            get { return _card.Traits; }
+            get { return _card.TraitsByLang(_lang); }
+        }
+
+        public void AddTranslatedTraits(Language lang, IEnumerable<string> traits)
+        {
+            _card.WithTraits(lang, traits.ToArray());
         }
 
         public CardType CardType
@@ -335,7 +366,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public string CardTypeName
         {
-            get { return _card.CardType.ToString().Replace('_', '-'); }
+            get;
+            set;
         }
 
         public string CampaignCardType
@@ -483,6 +515,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             {
                 return _card.SiegePoints.HasValue ? string.Format("SIEGE {0}", _card.SiegePoints) : string.Empty;
             }
+        }
+
+        public Language Lang
+        {
+            get { return _lang; }
         }
 
         public string BackgroundImage()
@@ -635,8 +672,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         public string Text
         {
             get {
-                return !string.IsNullOrEmpty(_card.Text) ?
-                    _card.Text.ToDisplayString(_card.Title)
+                return !string.IsNullOrEmpty(_card.GetText(_lang)) ?
+                    _card.GetText(_lang).ToDisplayString(_card.GetTitle(_lang))
                     : string.Empty;
             }
         }
@@ -699,22 +736,43 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public string ImagePath
         {
-            get
+            get { return GetImagePathForLanguage(_lang); }
+        }
+
+        public string GetImagePathForLanguage(Language? lang)
+        {
+            var useLang = lang.HasValue ? lang.Value : _card.DefaultLang;
+
+            if (useLang == Language.EN)
             {
                 var set = !string.IsNullOrEmpty(_card.CardSet.NormalizedName) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
                 var title = _card.Title.ToUrlSafeString();
                 var suffix = !string.IsNullOrEmpty(_card.SlugSuffix) ? string.Format("-{0}", _card.SlugSuffix.ToUrlSafeString()) : string.Empty;
 
                 return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}{2}.jpg", set, title, suffix);
+            } else
+            {
+                var set = !string.IsNullOrEmpty(_card.CardSet.NormalizedName) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
+                var title = _card.Title.ToUrlSafeString();
+                var suffix = !string.IsNullOrEmpty(_card.SlugSuffix) ? string.Format("-{0}", _card.SlugSuffix.ToUrlSafeString()) : string.Empty;
+
+                var langDirectory = Enum.GetName(typeof(Language), useLang);
+
+                return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Cards/{0}/{1}/{2}{3}.jpg", langDirectory, set, title, suffix);
             }
         }
 
-        private static string getImagePath(LotRCard card, string directory)
+        private static string getImagePath(LotRCard card, string directory, Language lang)
         {
             var set = !string.IsNullOrEmpty(card.CardSet.NormalizedName) ? card.CardSet.NormalizedName.ToUrlSafeString() : card.CardSet.Name.ToUrlSafeString();
             var title = card.Title.ToUrlSafeString();
             var suffix = !string.IsNullOrEmpty(card.SlugSuffix) ? string.Format("-{0}", card.SlugSuffix.ToUrlSafeString()) : string.Empty;
             
+            if (lang != default(Language))
+            {
+                directory += "/" + Enum.GetName(typeof(Language), lang);
+            }
+
             return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/{0}/{1}/{2}{3}.jpg", directory, set, title, suffix);
         }
 
@@ -722,7 +780,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             get
             {
-                return getImagePath(_card, "Thumbnails");
+                return getImagePath(_card, "Thumbnails", _lang);
                 //var set = !string.IsNullOrEmpty(_card.CardSet.NormalizedName) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
                 //var title = _card.Title.ToUrlSafeString();
                 //var suffix = !string.IsNullOrEmpty(_card.SlugSuffix) ? string.Format("-{0}", _card.SlugSuffix.ToUrlSafeString()) : string.Empty;
@@ -734,10 +792,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public string ArtImagePath
         {
-            get
-            {
-                return getImagePath(_card, "Art");
-            }
+            get { return getImagePath(_card, "Art", _lang); }
         }
 
         public string ArtImagePath1
@@ -1088,22 +1143,22 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public bool HasHtml
         {
-            get { return !string.IsNullOrEmpty(_card.Html); }
+            get { return !string.IsNullOrEmpty(Html); }
         }
 
         public string Html
         {
-            get { return _card.Html; }
+            get { return _card.GetFrontHtml(_lang); }
         }
 
         public bool HasHtml2
         {
-            get { return !string.IsNullOrEmpty(_card.Html2); }
+            get { return !string.IsNullOrEmpty(Html2); }
         }
 
         public string Html2
         {
-            get { return _card.Html2; }
+            get { return _card.GetBackHtml(_lang); }
         }
 
         public string OctgnGuid

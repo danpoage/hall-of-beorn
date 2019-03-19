@@ -9257,7 +9257,7 @@ namespace HallOfBeorn.Services.LotR.RingsDb
         {
             var cardId = GetCardId(slug);
 
-            return popularityByCardId.ContainsKey(cardId) ?
+            return cardId != null && popularityByCardId.ContainsKey(cardId) ?
                 popularityByCardId[cardId]
                 : (byte)0;
         }

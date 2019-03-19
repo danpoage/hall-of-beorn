@@ -651,5 +651,27 @@ namespace HallOfBeorn
         {
             return !string.IsNullOrWhiteSpace(self) && self != "Any";
         }
+
+        public static void SafeAddForKey<K, V>(this Dictionary<K, List<V>> self, K key, V item)
+        {
+            if (!self.ContainsKey(key))
+                self[key] = new List<V>();
+
+            self[key].Add(item);
+        }
+
+        public static void SafeAddRangeForKey<K, V>(this Dictionary<K, List<V>> self, K key, IEnumerable<V> items)
+        {
+            if (!self.ContainsKey(key))
+                self[key] = new List<V>();
+
+            foreach (var item in items)
+            {
+                if (self[key].Contains(item))
+                    continue;
+
+                self[key].Add(item);
+            }
+        }
     }
 }

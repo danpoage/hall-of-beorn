@@ -656,6 +656,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         [Display(Name = "Quest Category")]
         public string QuestCategory { get; set; }
 
+        public Language? Lang { get; set; }
+
         public QuestCategory GetQuestCategory()
         {
             var questCategory = HallOfBeorn.Models.LotR.QuestCategory.None;
@@ -1188,5 +1190,10 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         }
 
         public static IEnumerable<SelectListItem> VictoryPointValues { get; set; }
+
+        public static IEnumerable<SelectListItem> LanguageValues
+        {
+            get { return typeof(Language).GetSelectListItems(); }
+        }
     }
 }

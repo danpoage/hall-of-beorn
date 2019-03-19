@@ -19,11 +19,12 @@ namespace HallOfBeorn.Models
 
         public const byte VALUE_X = 254;
         public const byte VALUE_NA = 255;
+        public readonly Language DefaultLang = Language.EN;
 
-        private readonly List<string> traits = new List<string>();
-        private readonly List<string> normalizedTraits = new List<string>();
-        private readonly List<string> keywords = new List<string>();
-        private readonly List<string> normalizedKeywords = new List<string>();
+        private readonly Dictionary<Language, List<string>> traits = new Dictionary<Language, List<string>>();
+        private readonly Dictionary<Language, List<string>> normalizedTraits = new Dictionary<Language, List<string>>();
+        private readonly Dictionary<Language, List<string>> keywords = new Dictionary<Language, List<string>>();
+        private readonly Dictionary<Language, List<string>> normalizedKeywords = new Dictionary<Language, List<string>>();
 
         protected INamed NamedProduct { get; set; }
 
@@ -31,7 +32,7 @@ namespace HallOfBeorn.Models
         {
             var parts = new List<string>();
 
-            parts.Add(Title.NormalizeCaseSensitiveString());
+            parts.Add(GetTitle(DefaultLang).NormalizeCaseSensitiveString());
 
             if (!string.IsNullOrEmpty(SlugSubtitle)) {
                 parts.Add(SlugSubtitle);
@@ -46,44 +47,68 @@ namespace HallOfBeorn.Models
             return string.Join("-", parts);
         }
 
-        protected void addTraits(IEnumerable<string> traits)
+        protected void addTraits(IEnumerable<string> traits, Language lang = Language.EN)
         {
             foreach (var trait in traits) {
                 var norm = trait.NormalizeCaseSensitiveString();
                 if (norm != trait) {
-                    normalizedTraits.Add(norm);
+                    normalizedTraits.SafeAddForKey(lang, norm);
                 }
             }
 
-            this.traits.AddRange(traits);
+            this.traits.SafeAddRangeForKey(lang, traits);
         }
 
-        protected void addKeywords(IEnumerable<string> keywords)
+        protected void addKeywords(IEnumerable<string> keywords, Language lang = Language.EN)
         {
             foreach (var keyword in keywords) {
                 var norm = keyword.NormalizeCaseSensitiveString();
                 if (norm != keyword) {
-                    normalizedKeywords.Add(norm);
+                    normalizedKeywords.SafeAddForKey(lang, norm);
                 }
             }
 
-            this.keywords.AddRange(keywords);
+            this.keywords.SafeAddRangeForKey(lang, keywords);
         }
 
         //TODO: Remove
         public string Id { get; set; }
 
-        private string title;
+        private readonly Dictionary<Language, string> titles = new Dictionary<Language,string>();
+        
         public string Title { 
-            get { return title; }
-            set {
-                title = value;
-                if (value.NormalizeCaseSensitiveString() != value) {
-                    NormalizedTitle = value.NormalizeCaseSensitiveString();
-                }
+            get { return GetTitle(DefaultLang); }
+            set { SetTitle(DefaultLang, value); }
+        }
+
+        public string GetTitle(Language lang)
+        {
+            if (titles.ContainsKey(lang))
+                return titles[lang];
+
+            return titles.ContainsKey(DefaultLang) ?
+                titles[DefaultLang] :
+                string.Empty;
+        }
+
+        public void SetTitle(Language lang, string title)
+        {
+            titles[lang] = title;
+            if (title.NormalizeCaseSensitiveString() != title) {
+                normalizedTitles[lang] = title.NormalizeCaseSensitiveString();
             }
         }
-        public string NormalizedTitle { get; private set; }
+
+        private readonly Dictionary<Language, string> normalizedTitles = new Dictionary<Language, string>();
+        public string NormalizedTitle
+        {
+            get
+            {
+                return normalizedTitles.ContainsKey(DefaultLang) ?
+                    normalizedTitles[DefaultLang]
+                    : string.Empty;
+            }
+        }
 
         private string oppositeTitle;
         public string OppositeTitle
@@ -112,7 +137,28 @@ namespace HallOfBeorn.Models
 
         public string AlternateSlug { get; set; }
 
-        public string Text { get; set; }
+        private readonly Dictionary<Language, string> texts = new Dictionary<Language, string>();
+        public string Text
+        {
+            get { return GetText(DefaultLang); }
+            set { SetText(DefaultLang, value); }
+        }
+
+        public void SetText(Language lang, string text)
+        {
+            texts[lang] = text;
+        }
+
+        public string GetText(Language lang)
+        {
+            if (texts.ContainsKey(lang))
+                return texts[lang];
+
+            return texts.ContainsKey(DefaultLang) ?
+                texts[DefaultLang]
+                : string.Empty;
+        }
+
         public string FlavorText { get; set; }
         
         public string OppositeText { get; set; }
@@ -131,7 +177,7 @@ namespace HallOfBeorn.Models
 
         public IEnumerable<string> Traits
         {
-            get { return traits; }
+            get { return TraitsByLang(DefaultLang); }
 
             //TODO: Remove this
             set {
@@ -140,14 +186,28 @@ namespace HallOfBeorn.Models
             }
         }
 
+        public IEnumerable<string> TraitsByLang(Language lang)
+        {
+            return traits.ContainsKey(lang) ?
+                traits[lang]
+                : Enumerable.Empty<string>();
+        }
+
         public IEnumerable<string> NormalizedTraits
         {
-            get { return normalizedTraits; }
+            get { return NormalizedTraitsByLang(DefaultLang); }
+        }
+
+        public IEnumerable<string> NormalizedTraitsByLang(Language lang)
+        {
+            return traits.ContainsKey(lang) ?
+                traits[lang]
+                : Enumerable.Empty<string>();
         }
 
         public IEnumerable<string> Keywords
         {
-            get { return keywords; }
+            get { return KeywordsByLang(DefaultLang); }
             
             //TODO: Remove this
             set {
@@ -156,9 +216,27 @@ namespace HallOfBeorn.Models
             }
         }
 
+        public IEnumerable<string> KeywordsByLang(Language? lang)
+        {
+            var useLang = lang.HasValue ? lang.Value : DefaultLang;
+
+            return keywords.ContainsKey(useLang) ?
+                keywords[useLang]
+                : Enumerable.Empty<string>();
+        }
+
         public IEnumerable<string> NormalizedKeywords
         {
-            get { return normalizedKeywords; }
+            get { return NormalizedKeywordsByLang(DefaultLang); }
+        }
+
+        public IEnumerable<string> NormalizedKeywordsByLang(Language? lang)
+        {
+            var useLang = lang.HasValue ? lang.Value : DefaultLang;
+
+            return normalizedKeywords.ContainsKey(useLang) ?
+                normalizedKeywords[useLang]
+                : Enumerable.Empty<string>();
         }
 
         public virtual string CardSetName { get { return string.Empty; } }

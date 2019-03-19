@@ -17,6 +17,7 @@ using HallOfBeorn.Services.LotR.Search;
 using HallOfBeorn.Services.LotR.Stats;
 using HallOfBeorn.Services.LotR.Tags;
 using HallOfBeorn.Services.LotR.Templates;
+using HallOfBeorn.Services.LotR.Translation;
 
 namespace HallOfBeorn
 {
@@ -85,6 +86,9 @@ namespace HallOfBeorn
 
             var tagService = new TagService();
             System.Web.HttpContext.Current.Application[LotRServiceNames.TagService] = tagService;
+
+            var translationService = new TranslationService();
+            HttpContext.Current.Application[LotRServiceNames.TranslationService] = translationService;
 
             System.Web.HttpContext.Current.Application.UnLock();
         }

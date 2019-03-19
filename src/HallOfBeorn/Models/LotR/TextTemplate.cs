@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR
 
         private readonly LotRCard card;
 
-        private string renderHtml(string template)
+        public string RenderHtml(string template)
         {
             if (string.IsNullOrEmpty(template))
             {
@@ -303,12 +303,12 @@ namespace HallOfBeorn.Models.LotR
 
         public string RenderFrontHtml()
         {
-            return renderHtml(card.HtmlTemplate);
+            return RenderHtml(card.HtmlTemplate);
         }
 
         public string RenderBackHtml()
         {
-            return renderHtml(card.HtmlTemplate2);
+            return RenderHtml(card.HtmlTemplate2);
         }
     }
 }

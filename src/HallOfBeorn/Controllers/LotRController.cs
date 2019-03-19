@@ -19,6 +19,7 @@ using HallOfBeorn.Services.LotR.Search;
 using HallOfBeorn.Services.LotR.Stats;
 using HallOfBeorn.Services.LotR.Tags;
 using HallOfBeorn.Services.LotR.Templates;
+using HallOfBeorn.Services.LotR.Translation;
 
 namespace HallOfBeorn.Controllers
 {
@@ -40,6 +41,9 @@ namespace HallOfBeorn.Controllers
             var ringsDbService = (IRingsDbService)System.Web.HttpContext.Current.Application[LotRServiceNames.RingsDbService];
             var templateService = (ITemplateService)System.Web.HttpContext.Current.Application[LotRServiceNames.TemplateService];
             var tagService = (ITagService)System.Web.HttpContext.Current.Application[LotRServiceNames.TagService];
+            var translationService = (ITranslationService)System.Web.HttpContext.Current.Application[LotRServiceNames.TranslationService];
+
+            _translationHandler = new TranslationHandler(statService, templateService, translationService);
 
             _browseHandler = new BrowseHandler(productRepository, 
                 playerCategoryService, encounterCategoryService, questCategoryService,
@@ -52,9 +56,11 @@ namespace HallOfBeorn.Controllers
 
             _charactersHandler = new CharactersHandler(cardRepository, digitalCardRepository, characterRepository);
 
-            _detailsHandler = new DetailsHandler(cardRepository, characterRepository, 
+            _detailsHandler = new DetailsHandler(_translationHandler, 
+                cardRepository, characterRepository, 
                 playerCategoryService, encounterCategoryService, questCategoryService,
-                ringsDbService, statService, noteService, tagService, templateService, octgnService);
+                ringsDbService, statService, noteService, tagService, 
+                templateService, octgnService);
 
             _ringsDbHandler = new RingsDbHandler(ringsDbService);
 
@@ -63,7 +69,8 @@ namespace HallOfBeorn.Controllers
 
             _searchHandler = new SearchHandler(cardRepository, characterRepository,
                 searchService, scenarioService, statService, playerCategoryService, encounterCategoryService, 
-                questCategoryService, ringsDbService);
+                questCategoryService, ringsDbService, _translationHandler);
+
         }
 
         private readonly BrowseHandler _browseHandler;
@@ -72,7 +79,10 @@ namespace HallOfBeorn.Controllers
         private readonly RingsDbHandler _ringsDbHandler;
         private readonly ScenariosHandler _scenariosHandler;
         private readonly SearchHandler _searchHandler;
-        
+        private readonly TranslationHandler _translationHandler;
+
+        private readonly Language defaultLang = Language.EN;
+
         public ActionResult Index()
         {
             var model = new SearchViewModel();
@@ -176,7 +186,7 @@ namespace HallOfBeorn.Controllers
             return RedirectToAction("Search", model);
         }
 
-        public ActionResult Details(string id)
+        public ActionResult Details(string id, Language? lang)
         {
             if (HttpContext.Request.Url.AbsolutePath.Contains("/Cards"))
             {
@@ -189,7 +199,9 @@ namespace HallOfBeorn.Controllers
                 return Redirect(redirectUrl);
             }
 
-            var model = _detailsHandler.HandleDetails(id);
+            var targetLang = lang.HasValue ? lang.Value : defaultLang;
+
+            var model = _detailsHandler.HandleDetails(id, targetLang);
 
             return View(model);
         }

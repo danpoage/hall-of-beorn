@@ -26,7 +26,8 @@ namespace HallOfBeorn.Handlers.LotR
             ICategoryService<PlayerCategory> playerCategoryService,
             ICategoryService<EncounterCategory> encounterCategoryService, 
             ICategoryService<QuestCategory> questCategoryService,
-            IRingsDbService ringsDbService)
+            IRingsDbService ringsDbService,
+            TranslationHandler translationHandler)
         {
             _cardRepository = cardRepository;
             _characterRepository = characterRepository;
@@ -37,6 +38,7 @@ namespace HallOfBeorn.Handlers.LotR
             _encounterCategoryService = encounterCategoryService;
             _questCategoryService = questCategoryService;
             _ringsDbService = ringsDbService;
+            _translationHandler = translationHandler;
         }
 
         private readonly LotRCardRepository _cardRepository;
@@ -48,6 +50,7 @@ namespace HallOfBeorn.Handlers.LotR
         private readonly ICategoryService<EncounterCategory> _encounterCategoryService;
         private readonly ICategoryService<QuestCategory> _questCategoryService;
         private readonly IRingsDbService _ringsDbService;
+        private readonly TranslationHandler _translationHandler;
         
         private void InitializeSearch(SearchViewModel model)
         {
@@ -106,15 +109,19 @@ namespace HallOfBeorn.Handlers.LotR
         {
             InitializeSearch(model);
 
+            var useLang = model.Lang.HasValue ? model.Lang.Value : default(Language);
+
             foreach (var score in _searchService.Search(model))
             {
                 var getPlayerCategories = new Func<string, IEnumerable<PlayerCategory>>((slug) => { return _playerCategoryService.Categories(slug); });
                 var getEncounterCategories = new Func<string, IEnumerable<EncounterCategory>>((slug) => { return _encounterCategoryService.Categories(slug); });
                 var getQuestCategories = new Func<string, IEnumerable<QuestCategory>>((slug) => { return _questCategoryService.Categories(slug); });
 
-                var viewModel = new CardViewModel(score, getPlayerCategories, getEncounterCategories, getQuestCategories);
+                var viewModel = new CardViewModel(score, getPlayerCategories, getEncounterCategories, getQuestCategories, useLang);
                 viewModel.Popularity = _ringsDbService.GetPopularity(viewModel.Slug);
                 viewModel.Votes = _ringsDbService.GetVotes(viewModel.Slug);
+
+                _translationHandler.Translate(useLang, score.Card, viewModel);
 
                 model.Cards.Add(viewModel);
             }

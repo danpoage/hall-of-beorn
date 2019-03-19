@@ -13,20 +13,24 @@ using HallOfBeorn.Services.LotR.RingsDb;
 using HallOfBeorn.Services.LotR.Stats;
 using HallOfBeorn.Services.LotR.Tags;
 using HallOfBeorn.Services.LotR.Templates;
+using HallOfBeorn.Services.LotR.Translation;
 
 namespace HallOfBeorn.Handlers.LotR
 {
     public class DetailsHandler
     {
-        public DetailsHandler(LotRCardRepository cardRepository,
+        public DetailsHandler(TranslationHandler translationHandler,
+            LotRCardRepository cardRepository,
             ICharacterRepository characterRepository,
             ICategoryService<PlayerCategory> playerCategoryService,
             ICategoryService<EncounterCategory> encounterCategoryService,
             ICategoryService<QuestCategory> questCategoryService,
             IRingsDbService ringsDbService,
             IStatService statService, INoteService noteService, ITagService tagService,
-            ITemplateService templateService, IOctgnService octgnService)
+            ITemplateService templateService,
+            IOctgnService octgnService)
         {
+            _translationHandler = translationHandler;
             _cardRepository = cardRepository;
             _characterRepository = characterRepository;
             _playerCategoryService = playerCategoryService;
@@ -40,6 +44,7 @@ namespace HallOfBeorn.Handlers.LotR
             _octgnService = octgnService;
         }
 
+        private readonly TranslationHandler _translationHandler;
         private readonly LotRCardRepository _cardRepository;
         private readonly ICharacterRepository _characterRepository;
         private readonly ICategoryService<PlayerCategory> _playerCategoryService;
@@ -66,33 +71,16 @@ namespace HallOfBeorn.Handlers.LotR
             return true;
         }
 
-        private CardViewModel GetCardViewModel(LotRCard card)
+        private CardViewModel GetCardViewModel(LotRCard card, Language lang)
         {
             var getPlayerCategories = new Func<string, IEnumerable<PlayerCategory>>((slug) => { return _playerCategoryService.Categories(slug); });
             var getEncounterCategories = new Func<string, IEnumerable<EncounterCategory>>((slug) => { return _encounterCategoryService.Categories(slug); });
             var getQuestCategories = new Func<string, IEnumerable<QuestCategory>>((slug) => { return _questCategoryService.Categories(slug); });
-            var viewModel = new CardViewModel(card, getPlayerCategories, getEncounterCategories, getQuestCategories);
+            var viewModel = new CardViewModel(card, getPlayerCategories, getEncounterCategories, getQuestCategories, lang);
 
             viewModel.LinkedCards = GetLinkedCards(card);
 
-            if (string.IsNullOrEmpty(card.HtmlTemplate))
-            {
-                card.HtmlTemplate = _templateService.GetFrontHtml(card.Slug);
-            }
-            if (string.IsNullOrEmpty(card.HtmlTemplate2) && !string.IsNullOrEmpty(card.OppositeText))
-            {
-                card.HtmlTemplate2 = _templateService.GetBackHtml(card.Slug);
-            }
-
-            //TODO: Remove effects once the HTML templates are complete
-            foreach (var keyword in card.Keywords)
-                viewModel.KeywordEffects.Add(CardEffect.Parse(_statService, card, keyword));
-
-            viewModel.TextEffects.AddRange(ParseCardEffects(card, card.Text));
-            viewModel.OppositeTextEffects.AddRange(ParseCardEffects(card, card.OppositeText));
-
-            if (!string.IsNullOrEmpty(card.Shadow))
-                viewModel.ShadowEffects.Add(CardEffect.Parse(_statService, card, card.Shadow));
+            _translationHandler.Translate(lang, card, viewModel);
 
             return viewModel;
         }
@@ -119,25 +107,6 @@ namespace HallOfBeorn.Handlers.LotR
 
             return links;
         }
-
-        private IEnumerable<CardEffect> ParseCardEffects(LotRCard card, string text)
-        {
-            if (string.IsNullOrEmpty(text))
-                return Enumerable.Empty<CardEffect>();
-
-            var effects = new List<CardEffect>();
-
-            foreach (var line in text.Split(new string[] { "\r\n" }, StringSplitOptions.None))
-            {
-                if (string.IsNullOrEmpty(line))
-                    continue;
-
-                effects.Add(CardEffect.Parse(_statService, card, line));
-            }
-
-            return effects;
-        }
-
         
         private bool isPlayerCard(LotRCard card)
         {
@@ -198,14 +167,14 @@ namespace HallOfBeorn.Handlers.LotR
             return lookup.Item2;
         }
 
-        public CardViewModel HandleDetails(string id)
+        public CardViewModel HandleDetails(string id, Language lang)
         {
             var lookup = GetCardAndRedirect(id);
             if (lookup.Item1 == null)
                 return null;
 
             var card = lookup.Item1;
-            var model = GetCardViewModel(card);
+            var model = GetCardViewModel(card, lang);
 
             var octgnGuid = _octgnService.GetCardOctgnGuid(card.Slug);
             if (!string.IsNullOrEmpty(octgnGuid))

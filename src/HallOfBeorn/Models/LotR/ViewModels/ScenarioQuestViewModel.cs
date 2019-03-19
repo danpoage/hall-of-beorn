@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         public ScenarioQuestViewModel(ScenarioQuestCard questCard, Func<string, IEnumerable<PlayerCategory>> getPlayerCategories, Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, Func<string, IEnumerable<QuestCategory>> getQuestCategories)
         {
             _questCard = questCard;
-            _cardViewModel = new CardViewModel(questCard.Quest, getPlayerCategories, getEncounterCategories, getQuestCategories);
+            _cardViewModel = new CardViewModel(questCard.Quest, getPlayerCategories, getEncounterCategories, getQuestCategories, null);
         }
 
         private ScenarioQuestCard _questCard;

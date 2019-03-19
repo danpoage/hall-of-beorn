@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Services.LotR.Templates
 {
-    public class EnUsTemplateRepository1 : TemplateRepository
+    public class EnTemplateRepository1 : TemplateRepository
     {
         protected override void Initialize()
         {
