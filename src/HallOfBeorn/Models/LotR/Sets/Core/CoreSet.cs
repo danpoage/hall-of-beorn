@@ -19,6 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithKeywords("Sentinel.")
                 .WithText("Response: After Aragorn commits to a quest, spend 1 resource from his resource pool to ready him.")
                 .WithText("Reaktion: Nachdem Aragorn sich einem Abenteuer gestellt hat, kannst du 1 Ressource aus seinem Ressourcenvorrat ausgeben, um ihn wieder spielbereit zu machen.", Language.DE)
+                .WithText("Réponse: quand Aragorn s'engage dans une quête, dépensez I ressource de sa réserve pour le redresser.", Language.FR)
                 .WithFlavor("\"I am Aragorn son of Arathorn; and if by life or death I can save you, I will.\"\r\n-The Fellowship of the Ring")
                 .WithTemplate("<p class='main-text'>{keyword:Sentinel.}</p><p class='main-text'><b>Response:</b> After {self} commits to a quest, spend 1 resource from his resource pool to ready him.</p><p class='flavor-text'>&quot;I am Aragorn son of Arathorn; and if by life or death I can save you, I will.&quot;<br>&ndash;The Fellowship of the Ring</p>")
                 .WithYear(2010)

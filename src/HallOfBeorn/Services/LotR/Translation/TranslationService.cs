@@ -24,14 +24,27 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Sentinel.", "Schildwache." }
             });
 
+            keywordMap.Add(Language.FR, new Dictionary<string, string> {
+                { "Sentinel.", "Sentinelle." }
+            });
+
             titleMap.Add(Language.DE, new Dictionary<string, string> {
                 { "Guard of the Citadel", "Wächter der Veste" }
+            });
+
+            titleMap.Add(Language.FR, new Dictionary<string, string> {
+                { "Guard of the Citadel", "Garde de la Citadelle" }
             });
 
             traitMap.Add(Language.DE, new Dictionary<string, string> {
                 { "Noble.", "Adlig." },
                 { "Ranger.", "Waldläufer." },
                 { "Warrior.", "Krieger." }
+            });
+
+            traitMap.Add(Language.FR, new Dictionary<string, string> {
+                { "Ranger.", "Rôdeur." },
+                { "Warrior.", "Guerrier." }
             });
         }
 
