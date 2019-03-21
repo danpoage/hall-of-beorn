@@ -9,6 +9,7 @@ namespace HallOfBeorn.Models
     {
         EN = 0,
         DE,
-        FR
+        ES,
+        FR,
     }
 }

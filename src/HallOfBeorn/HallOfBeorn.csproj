@@ -925,6 +925,7 @@
     <Compile Include="Services\LotR\Stats\IStatService.cs" />
     <Compile Include="Services\LotR\Stats\StatService.cs" />
     <Compile Include="Services\LotR\Tags\TagService.cs" />
+    <Compile Include="Services\LotR\Templates\EsTemplateRepository1.cs" />
     <Compile Include="Services\LotR\Templates\FrTemplateRepository1.cs" />
     <Compile Include="Services\LotR\Templates\ITemplateRepository.cs" />
     <Compile Include="Services\LotR\Templates\ITemplateService.cs" />

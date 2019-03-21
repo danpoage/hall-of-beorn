@@ -20,8 +20,28 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Enemy", "Gegner" },
             });
 
+            cardTypeNameMap.Add(Language.ES, new Dictionary<string, string> {
+                { "Hero", "Héroe" },
+                { "Ally", "Aliado" },
+                { "Attachment", "Vinculada" },
+                { "Event", "Evento" },
+                { "Enemy", "Enemigo" }
+            });
+
+            cardTypeNameMap.Add(Language.FR, new Dictionary<string, string> {
+                { "Hero", "Héros" },
+                { "Ally", "Allié" },
+                { "Attachment", "Attachement" },
+                { "Event", "Événement" },
+                { "Enemy", "Ennemi" }
+            });
+
             keywordMap.Add(Language.DE, new Dictionary<string, string> {
                 { "Sentinel.", "Schildwache." }
+            });
+
+            keywordMap.Add(Language.ES, new Dictionary<string, string> {
+                { "Sentinel.", "Cintinela." }
             });
 
             keywordMap.Add(Language.FR, new Dictionary<string, string> {
@@ -32,23 +52,34 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Guard of the Citadel", "Wächter der Veste" }
             });
 
+            titleMap.Add(Language.ES, new Dictionary<string, string> {
+                { "Guard of the Citadel", "Guardia de La Ciudadela" }
+            });
+
             titleMap.Add(Language.FR, new Dictionary<string, string> {
                 { "Guard of the Citadel", "Garde de la Citadelle" }
             });
 
             traitMap.Add(Language.DE, new Dictionary<string, string> {
+                { "Beorning.", "Beorninger." },
                 { "Noble.", "Adlig." },
                 { "Ranger.", "Waldläufer." },
                 { "Warrior.", "Krieger." }
             });
 
+            traitMap.Add(Language.ES, new Dictionary<string, string> {
+                { "Beorning.", "Beórnida." },
+                { "Gondor.", "Góndor." },
+                { "Ranger.", "Montaraz." },
+                { "Warrior.", "Guerrero." },
+            });
+
             traitMap.Add(Language.FR, new Dictionary<string, string> {
+                { "Beorning.", "Beornide." },
                 { "Ranger.", "Rôdeur." },
                 { "Warrior.", "Guerrier." }
             });
         }
-
-        //private readonly Language defaultLang = Language.EN;
 
         private readonly Dictionary<Language, Dictionary<string, string>> cardTypeNameMap = new Dictionary<Language, Dictionary<string, string>>();
         private readonly Dictionary<Language, Dictionary<string, string>> keywordMap = new Dictionary<Language, Dictionary<string, string>>();

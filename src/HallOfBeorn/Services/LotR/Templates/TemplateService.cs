@@ -14,6 +14,7 @@ namespace HallOfBeorn.Services.LotR.Templates
             RegisterBackRepository(DefaultLanguage, new EnTemplateRepository2());
 
             RegisterFrontRepository(Language.DE, new DeTemplateRepository1());
+            RegisterFrontRepository(Language.ES, new EsTemplateRepository1());
             RegisterFrontRepository(Language.FR, new FrTemplateRepository1());
         }
 
