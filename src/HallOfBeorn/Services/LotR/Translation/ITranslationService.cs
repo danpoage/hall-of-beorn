@@ -11,9 +11,13 @@ namespace HallOfBeorn.Services.LotR.Translation
 {
     public interface ITranslationService
     {
-        string CardTypeName(Language lang, CardType type);
-        string Keyword(Language lang, string keyord);
-        string Title(Language lang, string title);
-        string Trait(Language lang, string trait);
+        string EnglishCardTypeName(Language lang, CardType type);
+        string EnglishKeyword(Language lang, string keyord);
+        string EnglishTitle(Language lang, string title);
+        string EnglishTrait(Language lang, string trait);
+        string TranslateCardTypeName(Language lang, CardType type);
+        string TranslateKeyword(Language lang, string keyord);
+        string TranslateTitle(Language lang, string title);
+        string TranslateTrait(Language lang, string trait);
     }
 }

@@ -71,17 +71,17 @@ namespace HallOfBeorn.Handlers.LotR
             //TODO: Change this to a series of translation functions
             if (lang != defaultLang)
             {
-                viewModel.SetTranslatedTitle(lang, _translationService.Title(lang, card.Title));
+                viewModel.SetTranslatedTitle(lang, _translationService.TranslateTitle(lang, card.Title));
 
                 viewModel.AddTranslatedTraits(
                     lang,
-                    card.Traits.Select(t => _translationService.Trait(lang, t))
+                    card.Traits.Select(t => _translationService.TranslateTrait(lang, t))
                 );
 
                 viewModel.AddTranslatedKeywords(
                     card.Keywords.Select(k =>
                     {
-                        var translatedKeyword = _translationService.Keyword(lang, k);
+                        var translatedKeyword = _translationService.TranslateKeyword(lang, k);
                         return CardEffect.Parse(_statService, card, translatedKeyword);
                     })
                 );
@@ -93,7 +93,7 @@ namespace HallOfBeorn.Handlers.LotR
             if (!string.IsNullOrEmpty(card.Shadow))
                 viewModel.ShadowEffects.Add(CardEffect.Parse(_statService, card, card.Shadow));
 
-            viewModel.CardTypeName = _translationService.CardTypeName(lang, viewModel.CardType);
+            viewModel.CardTypeName = _translationService.TranslateCardTypeName(lang, viewModel.CardType);
         }
     }
 }

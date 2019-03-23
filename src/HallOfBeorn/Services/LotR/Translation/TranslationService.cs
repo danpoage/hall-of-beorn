@@ -81,40 +81,49 @@ namespace HallOfBeorn.Services.LotR.Translation
             });
         }
 
-        private readonly Dictionary<Language, Dictionary<string, string>> cardTypeNameMap = new Dictionary<Language, Dictionary<string, string>>();
-        private readonly Dictionary<Language, Dictionary<string, string>> keywordMap = new Dictionary<Language, Dictionary<string, string>>();
-        private readonly Dictionary<Language, Dictionary<string, string>> titleMap = new Dictionary<Language, Dictionary<string, string>>();
-        private readonly Dictionary<Language, Dictionary<string, string>> traitMap = new Dictionary<Language, Dictionary<string, string>>();
-        
+        private readonly TranslationMap cardTypeNameMap = new TranslationMap((s) => s.Replace('_', '-'));
+        private readonly TranslationMap keywordMap = new TranslationMap();
+        private readonly TranslationMap titleMap = new TranslationMap();
+        private readonly TranslationMap traitMap = new TranslationMap();
 
-        public string CardTypeName(Language lang, CardType type)
+        public string EnglishCardTypeName(Language lang, CardType type)
         {
-            var name = type.ToString().Replace('_', '-');
-
-            return cardTypeNameMap.ContainsKey(lang) && cardTypeNameMap[lang].ContainsKey(name) ?
-                cardTypeNameMap[lang][name]
-                : name;
+            return cardTypeNameMap.GetEnglish(lang, type.ToString());
         }
 
-        public string Keyword(Language lang, string keyword)
+        public string EnglishKeyword(Language lang, string keyword)
         {
-            return keywordMap.ContainsKey(lang) && keywordMap[lang].ContainsKey(keyword) ?
-                keywordMap[lang][keyword]
-                : keyword;
+            return keywordMap.GetEnglish(lang, keyword);
         }
 
-        public string Title(Language lang, string title)
+        public string EnglishTitle(Language lang, string title)
         {
-            return titleMap.ContainsKey(lang) && titleMap[lang].ContainsKey(title) ?
-                titleMap[lang][title]
-                : title;
+            return titleMap.GetEnglish(lang, title);
         }
 
-        public string Trait(Language lang, string trait)
+        public string EnglishTrait(Language lang, string trait)
         {
-            return traitMap.ContainsKey(lang) && traitMap[lang].ContainsKey(trait) ?
-                traitMap[lang][trait]
-                : trait;
+            return traitMap.GetEnglish(lang, trait);
+        }
+
+        public string TranslateCardTypeName(Language lang, CardType type)
+        {
+            return cardTypeNameMap.GetTranslation(lang, type.ToString());
+        }
+
+        public string TranslateKeyword(Language lang, string keyword)
+        {
+            return keywordMap.GetTranslation(lang, keyword);
+        }
+
+        public string TranslateTitle(Language lang, string title)
+        {
+            return titleMap.GetTranslation(lang, title);
+        }
+
+        public string TranslateTrait(Language lang, string trait)
+        {
+            return traitMap.GetTranslation(lang, trait);
         }
     }
 }
