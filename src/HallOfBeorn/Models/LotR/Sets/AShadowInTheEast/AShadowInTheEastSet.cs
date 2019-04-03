@@ -20,6 +20,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithTraits("Artifact.", "Ring.", "Master.")
                 .WithKeywords("Restricted.")
                 .WithText("Immune to non-Master card effects.\r\nSetup: Attach to a hero you control and search your deck for a Master card. Add it to your hand and shuffle your deck. Your threat elimination level is reduced by 5.\r\nIf The One Ring leaves play, the players lose the game.")
+                .WithTemplate("<p class='main-text'>{keyword:Restricted.} Immune to non-{trait:Master.@Master} card effects.</p><p class='main-text'><b>Setup:</b> Attach to a hero you control and search your deck for a {trait:Master.@Master} card. Add it to your hand and shuffle your deck. Your threat elimination level is reduced by 5.</p><p class='main-text'><b>If {self} leaves play, the players lose the game.</p>")
                 .WithInfo(1, 1, Artist.Unknown);
 
             addEvent("The Master Ring", 0, Sphere.Neutral)
