@@ -21,6 +21,7 @@ namespace HallOfBeorn.Services.LotR
             productGroups.Add(ProductGroup.DreamChaser);
             productGroups.Add(ProductGroup.Haradrim);
             productGroups.Add(ProductGroup.EredMithrin);
+            productGroups.Add(ProductGroup.VengeanceOfMordor);
             productGroups.Add(ProductGroup.TheHobbitSaga);
             productGroups.Add(ProductGroup.TheLordOfTheRingsSaga);
             productGroups.Add(ProductGroup.Starter);

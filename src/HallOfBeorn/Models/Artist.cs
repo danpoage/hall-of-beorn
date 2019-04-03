@@ -626,6 +626,9 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Brendan_C_Murphy);
             all.Add(Artist.Derek_D_Edgell);
 
+            //A Shadow in the East
+            all.Add(Artist.Martin_de_Diego_Sadaba);
+
             //Arkham Horrom Core
             //all.Add(Artist.Vincent_Dutrait);
             //all.Add(Artist.Jacob_Murray);
@@ -1050,6 +1053,7 @@ namespace HallOfBeorn.Models
         public static Artist Mark_Winters = new Artist { Name = "Mark Winters", URL = "http://markwinters.deviantart.com" };
         public static Artist Mateusz_Ozminski = new Artist { Name = "Mateusz Ozminski", URL = "http://www.ozminski.com" };
         public static Artist Mathias_Kollros = new Artist { Name = "Mathias Kollros", URL = "http://guterrez.deviantart.com" };
+        public static Artist MartinDeDiegoSadaba = new Artist { Name = "Martin de Diego Sádaba", URL = "https://www.deviantart.com/almanegra" };
         public static Artist Matt_Bradbury = new Artist { Name = "Matt Bradbury", URL = "http://bradburydigital.deviantart.com" };
         public static Artist Matt_Smith = new Artist { Name = "Matt Smith", URL = "https://www.google.com/search?q=matt+smith+fantasy+art" };
         public static Artist Matt_Stawicki = new Artist { Name = "Matt Stawicki", URL = "http://www.mattstawicki.com" };

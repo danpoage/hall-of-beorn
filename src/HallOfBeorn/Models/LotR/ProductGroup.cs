@@ -36,6 +36,7 @@ namespace HallOfBeorn.Models.LotR
         public static ProductGroup DreamChaser = new DreamChaserProductGroup();
         public static ProductGroup Haradrim = new HaradrimProductGroup();
         public static ProductGroup EredMithrin = new EredMithrinProductGroup();
+        public static ProductGroup VengeanceOfMordor = new VengeanceOfMordorProductGroup();
         public static ProductGroup TheHobbitSaga = new TheHobbitSagaProductGroup();
         public static ProductGroup TheLordOfTheRingsSaga = new TheLordOfTheRingsSagaProductGroup();
         public static ProductGroup Starter = new StarterProductGroup();

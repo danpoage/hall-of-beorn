@@ -133,6 +133,9 @@ namespace HallOfBeorn.Models.LotR
         public static Product MountGundabad = new Products.AdventurePack.MountGundabadProduct();
         public static Product TheFateOfWilderland = new Products.AdventurePack.TheFateOfWilderlandProduct();
 
+        //A Shadow in the East and Vengeance of Mordor Cycle
+        public static Product AShadowInTheEast = new Products.Deluxe.AShadowInTheEastProduct();
+
         //The Hobbit Saga
         public static Product TheHobbitOverHillAndUnderHill = new Products.Saga.TheHobbitOverHillAndUnderHillProduct();
         public static Product TheHobbitOnTheDoorstep = new Products.Saga.TheHobbitOnTheDoorstepProduct();

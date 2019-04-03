@@ -281,6 +281,8 @@ namespace HallOfBeorn.Models.LotR
             Add(MountGundabad);
             Add(TheFateOfWilderland);
 
+            Add(AShadowInTheEast);
+
             Add(TheHobbitOverHillAndUnderHill);
             Add(TheHobbitOnTheDoorstep);
 
@@ -460,6 +462,8 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheGhostOfFramsburg = new Sets.EredMithrin.TheGhostOfFramsburgSet();
         public static CardSet MountGundabad = new Sets.EredMithrin.MountGundabadSet();
         public static CardSet TheFateOfWilderland = new Sets.EredMithrin.TheFateOfWilderlandSet();
+
+        public static CardSet AShadowInTheEast = new Sets.AShadowInTheEast.AShadowInTheEastSet();
 
         public static CardSet TheHobbitOverHillAndUnderHill = new Sets.TheHobbit.OverHillandUnderHillSet();
         public static CardSet TheHobbitOnTheDoorstep = new Sets.TheHobbit.OntheDoorstepSet();

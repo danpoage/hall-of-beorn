@@ -343,6 +343,9 @@ namespace HallOfBeorn.Models.LotR
             Add(FireInTheNight);
             Add(TheGhostOfFramsburg);
 
+            //A Shadow in the East
+            Add(GollumAndSmeagol);
+
             //Two Player Starter
             Add(TheOath);
             Add(TheGoblins);
@@ -673,6 +676,9 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet RoamAcrossRhovanion = new EncounterSet { Name = "Roam Across Rhovanion", Set = "Roam Across Rhovanion" };
         public static EncounterSet FireInTheNight = new EncounterSet { Name = "Fire in the Night", Set = "Fire in the Night" };
         public static EncounterSet TheGhostOfFramsburg = new EncounterSet { Name = "The Ghost of Framsburg", Set = "The Ghost of Framsburg" };
+
+        //A Shadow in the East and Vengeance of Mordor
+        public static EncounterSet GollumAndSmeagol = new EncounterSet { Name = "Gollum and Smeagol", Set = "A Shadow in the East" }; 
 
         //Two Player Starter
         public static EncounterSet TheOath = new EncounterSet { Name = "The Oath", Set = "Two-Player Limited Edition Starter" };
