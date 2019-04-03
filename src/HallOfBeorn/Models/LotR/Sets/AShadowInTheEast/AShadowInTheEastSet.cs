@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
             Number = 56;
             SetType = Models.SetType.Deluxe_Expansion;
 
+            IsSpoiler = true;
+
             addAttachment("The One Ring", 0, Sphere.Neutral, true)
                 .WithTraits("Artifact.", "Ring.", "Master.")
                 .WithKeywords("Restricted.")
@@ -22,7 +24,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
 
             addEvent("The Master Ring", 0, Sphere.Neutral)
                 .WithTraits("Master.")
-                .WithText("Response: Exhaust The One Ring and raise your threat by 1 to cancel the effects of an encounter card just revealed from the encounter deck and discard that card. Then, reveal an encounter card.")
+                .WithText("Response: Exhaust The One ~Ring and raise your threat by 1 to cancel the effects of an encounter card just revealed from the encounter deck and discard that card. Then, reveal an encounter card.")
                 .WithFlavor("\"If I, wearing it, were to command you, you would obey, even if it were to leap from a precipice or to cast yourself into the fire.\"\r\n-Frodo, The Two Towers")
                 .WithInfo(9, 3, Artist.Marius_Bota);
 
@@ -40,6 +42,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithUnique()
                 .WithTraits("Gollum.")
                 .WithText("Immune to non-Gollum card effects.\r\n~Gollum engages the first player.\r\nForced: When ~Gollum is defeated, flip him to Sméagol and return him to his owner's control, exhausted.")
+                .WithTemplate("<p class='main-text'>Immune to non-{trait:Gollum.@Gollum} card effects.</p><p class='main-text'>{self} engages the first player.</p><p class='main-text'><b>Forced:</b> When {self} is defeated, flip him to Sméagol and return him to his owner's control, exhausted.</p>") 
                 .WithInfo(73, 1, Artist.Unknown);
         }
     }
