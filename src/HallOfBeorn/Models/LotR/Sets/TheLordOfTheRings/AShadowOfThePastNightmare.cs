@@ -48,13 +48,14 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             });
             addCard(LotRCard.Enemy("Khamûl the Easterling", "53468A89-8BF6-4252-8B39-F525E30011EC", "A Shadow of the Past Nightmare", 40, 5, 6, 4, 8)
                 .WithUnique()
-                .WithTraits("Nazgûl")
-                .WithText("Cannot have non-Morgul attachments.\r\nKhamûl the Easterling gets -30 engagement cost while The One Ring is exhausted.\r\nForced: At the beginning of the refresh phase, the engaged player makes a Hide 2 test. If the engaged player fails the hide test, Khamûl the Easterling makes an immediate attack.")
+                .WithTraits("Nazgûl.")
+                .WithText("Cannot have non-Morgul attachments.\r\nKhamûl the ~Easterling gets -30 engagement cost while The One ~Ring is exhausted.\r\nForced: At the beginning of the refresh phase, the engaged player makes a Hide 2 test. If the engaged player fails the hide test, Khamûl the ~Easterling makes an immediate attack.")
                 .WithInfo(2, 1, Artist.Smirtouille));
             Cards.Add(LotRCard.Enemy("Dark Horseman", "885855BB-4B46-4C1A-B96B-5D594D81EAFC", "A Shadow of the Past Nightmare", 25, 3, 3, 4, 6)
-                .WithTraits("Nazgûl")
+                .WithTraits("Nazgûl.")
                 .WithKeywords("Peril.", "Hide 2.")
-                .WithText("Cannot have non-Morgul attachments.\r\nWhile Dark Horseman is engaged with you, characters you control get -1 Willpower during Hide tests.")
+                .WithText("Cannot have non-Morgul attachments.\r\nWhile ~Dark Horseman is engaged with you, characters you control get -1 Willpower during Hide tests.")
+                .WithTemplate("<p class='main-text'>{keyword:Peril.} {keyword:Hide 2.}</p><p class='main-text'>Cannot have non-{trait:Morgul.@Morgul} attachments.</p><p class='main-text'>While {self} is engaged with you, characters you control get -1 {Willpower} during Hide tests.</p><p class='flavor-text'>&ldquo;There&apos;s been a strange customer asking for Mr. Baggins of Bag End...&rdquo;<br>&ndash;The Gaffer, The Fellowship of the Ring</p>")
                 .WithFlavor("\"There's been a strange customer asking for Mr. Baggins of Bag End...\" -THe Gaffer, The Fellowship of the Ring")
                 .WithInfo(3, 2, Artist.Helge_C_Balzer));
             Cards.Add(LotRCard.Location("Eastfarthing", "546980BE-9E0F-46AB-ACD7-11658E7CAAFF", "A Shadow of the Past Nightmare", 2, 9)
