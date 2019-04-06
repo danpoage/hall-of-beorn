@@ -473,8 +473,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             get
             {
-                char from = _card.StageLetter;
-                char to = (Char)(Convert.ToUInt16(_card.StageLetter) + 1);
+                var from = _card.StageLetter;
+                var to = GetSecondStageLetter();
 
                 return string.Format("{0}-{1}", from, to);
             }
@@ -482,8 +482,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public char GetSecondStageLetter()
         {
-            var second = (Char)(Convert.ToUInt16(_card.StageLetter) + 1);
-            return second;
+            return _card.BackStageLetter.HasValue ? _card.BackStageLetter.Value : (Char)(Convert.ToUInt16(_card.StageLetter) + 1);
         }
 
         public string QuestPoints

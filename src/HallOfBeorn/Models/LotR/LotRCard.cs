@@ -142,6 +142,7 @@ namespace HallOfBeorn.Models.LotR
         public override bool IsQuest { get { return this.CardType == LotR.CardType.Quest; } }
         public override uint StageNumber { get; set; }
         public override char StageLetter { get; set; }
+        public char? BackStageLetter { get; set; }
 
         private CardSet cardSet;
         public CardSet CardSet {
@@ -733,6 +734,12 @@ namespace HallOfBeorn.Models.LotR
                 SlugSuffix = letter.ToString();
             }
             StageLetter = letter;
+            return this;
+        }
+
+        public LotRCard WithBackStageLetter(char letter)
+        {
+            BackStageLetter = letter;
             return this;
         }
 
