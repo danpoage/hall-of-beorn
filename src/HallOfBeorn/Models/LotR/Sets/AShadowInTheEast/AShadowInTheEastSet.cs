@@ -22,6 +22,19 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithText("Immune to non-Master card effects.\r\nSetup: Attach to a hero you control and search your deck for a Master card. Add it to your hand and shuffle your deck. Your threat elimination level is reduced by 5.\r\nIf The One Ring leaves play, the players lose the game.")
                 .WithTemplate("<p class='main-text'>{keyword:Restricted.} Immune to non-{trait:Master.@Master} card effects.</p><p class='main-text'><b>Setup:</b> Attach to a hero you control and search your deck for a {trait:Master.@Master} card. Add it to your hand and shuffle your deck. Your threat elimination level is reduced by 5.</p><p class='main-text'><b>If {self} leaves play, the players lose the game.</b></p>")
                 .WithInfo(1, 1, Artist.Unknown);
+            addHero("Frodo Baggins", 7, Sphere.Leadership, 2, 1, 2, 2)
+                .WithTraits("Hobbit.")
+                .WithText("Response: After Frodo commits to a quest, spend 1 resource from his resource pool to ready another questing unique character. If you quest successfully, reduce your threat by 1.")
+                .WithInfo(2, 1, Artist.Unknown);
+            addContract("Fellowship")
+                .WithText("You can neither play.... [...] allies (or OF allies)\nEach character who... [...] gets +1 Attack, +1 Willpower and...")
+                .WithInfo(3, 1, Artist.Unknown);
+            addAlly("Derufin", 3, Sphere.Spirit, true, 1, 2, 1, 2)
+                .WithTraits("Gondor.", "Warrior.")
+                .WithKeywords("Ranged.")
+                .WithText("Response: After Derufin participates in an attack which destroys an enemy engaged with a player, discard Derufin to reduce the engaged player's threat by X, where X is the destroyed enemy's printed Threat.")
+                .WithTemplate("<p class='main-text'>{keyword:Ranged.}</p><p class='main-text'><b>Response:</b> After {self} participates in an attack which destroys an enemy engaged with a player, discard {self} to reduce the engaged player's threat by X, where X is the destroyed enemy's printed {Threat}.</p>")
+                .WithInfo(4, 3, Artist.Unknown);
 
             addEvent("The Master Ring", 0, Sphere.Neutral)
                 .WithTraits("Master.")

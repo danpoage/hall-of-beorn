@@ -58,6 +58,13 @@ namespace HallOfBeorn.Models.LotR
             return card;
         }
 
+        protected LotRCard addContract(string title)
+        {
+            var card = LotRCard.Contract(title);
+            addCard(card);
+            return card;
+        }
+
         protected LotRCard addNightmareSetup(string encounterSet)
         {
             var card = LotRCard.NightmareSetup(encounterSet, encounterSet);

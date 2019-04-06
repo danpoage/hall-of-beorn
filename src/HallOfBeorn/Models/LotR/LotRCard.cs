@@ -305,6 +305,16 @@ namespace HallOfBeorn.Models.LotR
             };
         }
 
+        public static LotRCard Contract(string title)
+        {
+            return new LotRCard
+            {
+                CardType = Models.LotR.CardType.Contract,
+                Title = title,
+                Sphere = Sphere.Neutral
+            };
+        }
+
         public static LotRCard ObjectiveHero(string title, string encounterSet, byte? willpower, byte? attack, byte? defense, byte? hitPoints)
         {
             return new LotRCard()

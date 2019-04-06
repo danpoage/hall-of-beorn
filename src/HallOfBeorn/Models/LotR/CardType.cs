@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR
         Event = 36,
         Treasure = 37,
         Player_Side_Quest = 38,
+        Contract = 39,
         Quest = 100,
         Setup = 101,
         Nightmare_Setup = 102,
@@ -46,6 +47,7 @@ namespace HallOfBeorn.Models.LotR
                 case CardType.Attachment:
                 case CardType.Event:
                 case CardType.Player_Side_Quest:
+                case CardType.Contract:
                 case CardType.Treasure:
                     return true;
                 default:
