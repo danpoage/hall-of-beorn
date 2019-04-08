@@ -56,5 +56,16 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
             ExcludeFromEasyMode("Gathering-Gloom-TWoR", 1);
             ExcludeFromEasyMode("Swarm-of-Bats-TWoR", 1);
         }
+
+        protected void ExcludeDeepUndergroundFromEasyMode()
+        {
+            ExcludeFromEasyMode("Dark-Tunnel-TWoR", 1);
+        }
+
+        protected void ExcludeDragonMightFromEasyMode()
+        {
+            ExcludeFromEasyMode("Dragon-Breath-TWoR", 1);
+            ExcludeFromEasyMode("Dragon-Scales-TWoR", 1);
+        }
     }
 }
