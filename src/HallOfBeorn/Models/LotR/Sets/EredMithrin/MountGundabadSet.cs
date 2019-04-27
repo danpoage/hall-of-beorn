@@ -71,7 +71,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
             addLocation("The First Forge", setName, 1, 1)
                 .WithUnique()
                 .WithTraits("Underground.")
-                .WithText("Immune to player card effects.\r\nForced: After The First Forge becomes the active location, exhaust the hero with Wormsbane attached. That hero cannot ready while The First Forge is the active location.\r\nResponse: After the First Forge is explored, flip Wormsbane to its Reforged side and attach it to any hero.")
+                .WithText("Immune to player card effects.\r\nForced: After The First ~Forge becomes the active location, exhaust the hero with Wormsbane attached. That hero cannot ready while The First ~Forge is the active location.\r\nResponse: After the First Forge is explored, flip Wormsbane to its Reforged side and attach it to any hero.")
                 .WithVictoryPoints(1)
                 .WithInfo(122, 1, Artist.Tomasz_Jedruszek);
             addLocation("Dagnir's Hoard", setName, 7, 7)
@@ -83,7 +83,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
             addLocation("Throat of the Mountain", setName, 4, 4)
                 .WithUnique()
                 .WithTraits("Underground.", "Dark.")
-                .WithText("Response: When Throat of the Mountain is explored, search the quest deck for a quest card and make it the current main quest. Then, flip it over. Shuffle the rest of the quest deck.")
+                .WithText("Response: When Throat of the ~Mountain is explored, search the quest deck for a quest card and make it the current main quest. Then, flip it over. Shuffle the rest of the quest deck.")
                 .WithFlavor("At the end of the hall the floor vanished and fell to an unknown depth.\r\n-The Fellowship of the Ring")
                 .WithVictoryPoints(1)
                 .WithInfo(124, 1, Artist.Lucas_Staniec);
