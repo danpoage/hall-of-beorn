@@ -46,6 +46,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTraits("Artifact.", "Item.", "Weapon.")
                 .WithKeywords("Guarded (enemy).", "Restricted.")
                 .WithText("Attach to a Hobbit hero.\r\nAttached hero gets +1 Willpower, +1 Attack, and +1 Defense.\r\nResponse: After attached hero is declared as an attacker or defender against an enemy, deal 1 damage to that enemy.")
+                .WithTemplate("<p class='main-text'>{keyword:Guarded (enemy)}.</p><p class='main-text'>Attach to a {trait:Hobbit.@Hobbit} hero. {keyword:Restricted}</p><p class='main-text'>Attach hero gets +1 {Willpower}, +1 {Attack}, and +1 {Defense}.</p><p class='main-text'><b>Response:</b> After attached hero is declared as an attacker or defender against an enemy, deal 1 damage to that enemy.</p>")
                 .WithInfo(117, 3, Artist.Tropa_Entertainment);
             addAttachment("Round Shield", 0, Sphere.Tactics, false)
                 .WithTraits("Item.", "Armor.")
