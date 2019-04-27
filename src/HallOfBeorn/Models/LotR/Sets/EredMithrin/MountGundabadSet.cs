@@ -51,7 +51,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
             addAttachment("Round Shield", 0, Sphere.Tactics, false)
                 .WithTraits("Item.", "Armor.")
                 .WithKeywords("Restricted.")
-                .WithText("Attach to a character.\r\nResponse: After a shadow effect is triggered during combat, exhaust Round Shield to give attached character +2 Defense for this attack.")
+                .WithText("Attach to a character. Restricted.\r\nResponse: After a shadow effect is triggered during combat, exhaust Round Shield to give attached character +2 Defense for this attack.")
                 .WithInfo(118, 3, Artist.Sara_Biddle);
             addAlly("Erebor Toymaker", 3, Sphere.Spirit, false, 2, 0, 0, 2)
                 .WithTraits("Dwarf.", "Craftsman.")
