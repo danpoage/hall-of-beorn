@@ -16,6 +16,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
             GroupName = "Ered Mithrin";
             Number = 8;
 
+            RulesImageCount = 2;
+
             QuestCompanionSlug = "ered-mithrin-quest-mount-gundabad";
             DifficultyRating = 6.0f;
             Votes = 1;

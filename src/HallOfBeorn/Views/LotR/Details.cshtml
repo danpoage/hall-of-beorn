@@ -372,7 +372,20 @@
                         }
                     }
 
-                    @if (!string.IsNullOrEmpty(@Model.VictoryPoints))
+                    @if (@Model.HasFlavorText)
+                    {   
+                        <div style="text-align:center;padding:4px;font-size:small;">
+                            @if (@Model.HasFlavorText)
+                            {
+                                foreach (var line in @Model.FlavorText)
+                                {
+                                    <i>@line</i><br />
+                                }
+                            }
+                        </div>
+                    }
+
+                    @if (!string.IsNullOrEmpty(@Model.VictoryPoints) && @Model.CardType != CardType.Quest)
                     {
                         <br />
                         <div style="text-align:right;font-weight:bold;"><span style="padding-left:4px;padding-right:4px;border-style:solid;border-width:1px;border-color:black;">@Model.VictoryPoints.ToUpper()</span></div>
@@ -393,20 +406,6 @@
                         <div style="text-align:right;font-weight:bold;">@Model.PassValue</div>
                     }
                 </div>
-                
-                if (@Model.HasFlavorText)
-                {
-                    
-                <div style="text-align:center;padding:4px;font-size:small;">
-                    @if (@Model.HasFlavorText)
-                    {
-                        foreach (var line in @Model.FlavorText)
-                        {
-                            <i>@line</i><br />
-                        }
-                    }
-                </div>
-                }
             }
             </div>
 
@@ -489,6 +488,12 @@
                             }
                         }
                         </div>
+                        
+                        if (!string.IsNullOrEmpty(@Model.VictoryPoints) && @Model.CardType == CardType.Quest)
+                        {
+                            <br />
+                            <div style="text-align:right;font-weight:bold;margin-bottom:6px;"><span style="padding-left:4px;padding-right:4px;border-style:solid;border-width:1px;border-color:black;">@Model.VictoryPoints.ToUpper()</span></div>
+                        }
                     }
                 </div>
             }

@@ -104,23 +104,12 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
                 CardNumber = 19,
                 Artist = Artist.Magali_Villeneuve
             });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Black Arrow",
-                Id = "ae16236d-886e-4f65-9129-5ead1d373bfe",
-                CardType = CardType.Attachment,
-                Sphere = Sphere.Tactics,
-                IsUnique = true,
-                ResourceCost = 0,
-                Quantity = 3,
-                Traits = new List<string>() { "Artifact.", " Item." },
-                Text = "Limit 1 per deck. Attach to a hero with Ranged.\r\nResponse: After attached hero declares an attack, add Black Arrow to the victory display to give attached hero +5 Attack for this attack.",
-                FlavorText = "\"I have saved you to the last...\" -Bard, The Hobbit",
-                VictoryPoints = 1,
-                CardNumber = 15,
-                Artist = Artist.Melissa_Findley,
-                MaxPerDeck = 1
-            });
+            addAttachment("Black Arrow", 0, Sphere.Tactics, true)
+                .WithTraits("Artifact.", "Item.")
+                .WithText("Limit 1 per deck. Attach to a hero with Ranged.\r\nResponse: After attached hero declares an attack, add Black Arrow to the victory display to give attached hero +5 Attack for this attack.")
+                .WithFlavor("\"I have saved you to the last...\" -Bard, The Hobbit")
+                .WithVictoryPoints(1)
+                .WithInfo(15, 3, Artist.Melissa_Findley);
             Cards.Add(new LotRCard() {
                 
                 Title = "Bombur",
