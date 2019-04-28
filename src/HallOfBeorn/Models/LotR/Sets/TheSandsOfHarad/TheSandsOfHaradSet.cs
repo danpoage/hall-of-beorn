@@ -87,11 +87,11 @@ namespace HallOfBeorn.Models.LotR.Sets.TheSandsOfHarad
                 .WithText("Attach to a quest card in play.\r\nResponse: When attached quest is defeated, the first player chooses a player. That player searches his deck for a side quest, adds it to his hand, and shuffles his deck.")
                 .WithFlavor("\"Now far ahead the Road has gone,\r\nAnd I must follow, if I can...\"\r\n-Frodo Baggins, The Fellowship of the Ring")
                 .WithInfo(12, 3, Artist.Jason_Jenicke));
-            addCard(LotRCard.PlayerSideQuest("The Storm Comes", string.Empty, Sphere.Neutral, 0, 5)
+            addPlayerSideQuest("The Storm Comes", 0, Sphere.Neutral, 5)
                 .WithText("Limit 1 copy of The Storm Comes in the victory display.\r\nWhile this quest is in the victory display, the first ally played by each player each round does not require a resource match.")
                 .WithFlavor("\"For behold! The storm comes, and now all friends should gather together, lest each singly be destroyed.\"\r\n-Gandalf, The Two Towers")
                 .WithVictoryPoints(1)
-                .WithInfo(13, 3, Artist.Tomasz_Jedruszek));
+                .WithInfo(13, 3, Artist.Tomasz_Jedruszek);
             addCard(LotRCard.Objective("\"Seize Them!\"", string.Empty, setEscape)
                 .WithText("Forced: After an enemy attacks and destroys a character, remove X progress from the main quest, X is the attacking enemy's Threat.\r\nAt the end of the round, if the main quest has been in play the entire round and there are no progress tokens on it, the players lose the game.")
                 .WithInfo(14, 1, Artist.Victor_Manuel_Leza_Moreno));

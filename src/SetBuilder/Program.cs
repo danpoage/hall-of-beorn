@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
+using HallOfBeorn;
 using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
 
@@ -11,26 +12,23 @@ namespace SetBuilder
 {
     class Program
     {
-        private const string namespaceFormat     = "namespace HallOfBeorn.Models.LotR.Sets.{0}";
-        private const string classFormat         = "    public class {0}Set : CardSet";
-        private const string addHeroFormat       = "        addHero(\"{0}\", {1}, {2}, {3}, {4}, {5}, {6})";
-        private const string addAllyFormat       = "        addAlly(\"{0}\", {1}, {2}, {3}, {4}, {5}, {6}, {7})";
-        private const string addAttachmentFormat = "        addAttachment(\"{0}\", {1}, {2}, {3})";
-        private const string addEventFormat      = "        addEvent(\"{0}\", {1}, {2})";
-        private const string withTraitsFormat    = "            .WithTraits({0})";
-        private const string withKeywordsFormat  = "            .WithKeywords({0})";
-        private const string withTextFormat      = "            .WithText(\"{0}\")";
-        private const string withFlavorFormat    = "            .WithFlavor(\"{0}\")";
-        private const string withInfoFormat      = "            .WithInfo({0}, {1}, Artist.{2});";
-
-        private static string title(string token)
-        {
-            return Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(token);
-        }
+        private const string namespaceFormat           = "namespace HallOfBeorn.Models.LotR.Sets.{0}";
+        private const string classFormat               = "    public class {0}Set : CardSet";
+        private const string addHeroFormat             = "        addHero(\"{0}\", {1}, {2}, {3}, {4}, {5}, {6})";
+        private const string addAllyFormat             = "        addAlly(\"{0}\", {1}, {2}, {3}, {4}, {5}, {6}, {7})";
+        private const string addAttachmentFormat       = "        addAttachment(\"{0}\", {1}, {2}, {3})";
+        private const string addEventFormat            = "        addEvent(\"{0}\", {1}, {2})";
+        private const string addPlayerSideQuestFormat  = "        addPlayerSideQuest(\"{0}\", {1}, {2}, {3})";
+        private const string withTraitsFormat          = "            .WithTraits({0})";
+        private const string withKeywordsFormat        = "            .WithKeywords({0})";
+        private const string withTextFormat            = "            .WithText(\"{0}\")";
+        private const string withFlavorFormat          = "            .WithFlavor(\"{0}\")";
+        private const string withVPFormat              = "            .WithVictoryPoints({0})";
+        private const string withInfoFormat            = "            .WithInfo({0}, {1}, Artist.{2});";
 
         private static string init(CardSet cardSet)
         {
-            var s = new StringBuilder();
+            var s = new StringBuilder(string.Empty);
 
             s.AppendFormat("            Name = \"{0}\";", cardSet.Name);
             s.AppendLine();
@@ -41,7 +39,7 @@ namespace SetBuilder
             s.AppendFormat("            Number = {0};", cardSet.Number);
             s.AppendLine();
 
-            s.AppendFormat("            SetType = SetType.{0};", Enum.GetName(typeof(SetType), cardSet.SetType));
+            s.AppendFormat("            SetType = Models.SetType.{0};", Enum.GetName(typeof(SetType), cardSet.SetType));
             s.AppendLine();
 
             if (string.IsNullOrWhiteSpace(cardSet.Cycle))
@@ -53,20 +51,31 @@ namespace SetBuilder
             return s.ToString();
         }
 
-        private static string normalizedSetName(CardSet cardSet)
+        private static string normalizeName(string name, string separator)
         {
-            return string.Join(string.Empty, cardSet.Name.Split(' ')
-                .Select(token => title(token))
+            if (string.IsNullOrWhiteSpace(name))
+                return string.Empty;
+
+            return string.Join(separator, name.Split(' ')
+                .Select(token => 
+                    Thread.CurrentThread.CurrentCulture.TextInfo
+                        .ToTitleCase(token)
+                        .Replace('-', '_')
+                        .Replace('.', '_')
+                        .NormalizeCaseSensitiveString()
+                    )
             );
         }
 
         private static string header(CardSet cardSet)
         {
-            var setName = normalizedSetName(cardSet);
+            var setName = normalizeName(cardSet.Name, string.Empty);
 
-            var cycleName = !string.IsNullOrWhiteSpace(cardSet.Cycle) ? title(cardSet.Cycle) : setName;
+            var cycleName = !string.IsNullOrWhiteSpace(cardSet.Cycle) 
+                ? normalizeName(cardSet.Cycle, string.Empty) 
+                : setName;
 
-            var s = new StringBuilder();
+            var s = new StringBuilder(string.Empty);
             s.AppendLine("/* Generated CardSet class */");
             s.AppendLine();
 
@@ -91,7 +100,7 @@ namespace SetBuilder
 
         private static string footer()
         {
-            var s = new StringBuilder();
+            var s = new StringBuilder(string.Empty);
             
             s.AppendLine("        }");
             s.AppendLine("    }");
@@ -147,23 +156,40 @@ namespace SetBuilder
                 card.FlavorText) + Environment.NewLine;
         }
 
+        private static string cardTextGlyphs(LotRCard card)
+        {
+            var s = new StringBuilder(string.Empty);
+
+            if (card.VictoryPoints > 0)
+            {
+                s.AppendFormat(withVPFormat, card.VictoryPoints);
+                s.AppendLine();
+            }
+
+            return s.ToString();
+        }
+
         private static string withInfo(LotRCard card)
         {
+            var artist = card.Artist != null ? normalizeName(card.Artist.Name, "_") : "Unknown";
+
             return string.Format(withInfoFormat,
                 card.CardNumber,
                 card.Quantity,
-                Enum.GetName(typeof(Artist), card.Artist)
+                artist
                 );
         }
 
         private static string cardTextBox(LotRCard card)
         {
-            var s = new StringBuilder();
+            var s = new StringBuilder(string.Empty);
 
             s.Append(withTraits(card));
             s.Append(withKeywords(card));
             s.Append(withText(card));
             s.Append(withFlavor(card));
+
+            s.Append(cardTextGlyphs(card));
 
             s.AppendLine(withInfo(card));
 
@@ -213,8 +239,7 @@ namespace SetBuilder
 
         private static string addAttachment(LotRCard attachment)
         {
-            var s = new StringBuilder();
-
+            var s = new StringBuilder(string.Empty);
             s.AppendFormat(addAttachmentFormat, 
                 attachment.Title,
                 attachment.ResourceCost.GetValueOrDefault(),
@@ -228,18 +253,33 @@ namespace SetBuilder
             return s.ToString();
         }
 
-        private static string addEvent(LotRCard ev)
+        private static string addEvent(LotRCard playerEvent)
         {
-            var s = new StringBuilder();
-
+            var s = new StringBuilder(string.Empty);
             s.AppendFormat(addEventFormat,
-                ev.Title,
-                ev.ResourceCost.GetValueOrDefault(),
-                sphere(ev)
+                playerEvent.Title,
+                playerEvent.ResourceCost.GetValueOrDefault(),
+                sphere(playerEvent)
                 );
             s.AppendLine();
 
-            s.Append(cardTextBox(ev));
+            s.Append(cardTextBox(playerEvent));
+
+            return s.ToString();
+        }
+
+        private static string addPlayerSideQuest(LotRCard sideQuest)
+        {
+            var s = new StringBuilder(string.Empty);
+            s.AppendFormat(addPlayerSideQuestFormat,
+                sideQuest.Title,
+                sideQuest.ResourceCost.GetValueOrDefault(),
+                sphere(sideQuest),
+                sideQuest.QuestPoints.GetValueOrDefault()
+                );
+            s.AppendLine();
+
+            s.Append(cardTextBox(sideQuest));
 
             return s.ToString();
         }
@@ -249,16 +289,19 @@ namespace SetBuilder
             { CardType.Hero, hero => addHero(hero) },
             { CardType.Ally, ally => addAlly(ally) },
             { CardType.Attachment, attachment => addAttachment(attachment) },
-            { CardType.Event, ev => addEvent(ev) },
+            { CardType.Event, playerEvent => addEvent(playerEvent) },
+            { CardType.Player_Side_Quest, sideQuest => addPlayerSideQuest(sideQuest) }
         };
 
-        static int Main(string[] args)
+        public static int Main(string[] args)
         {
             if (args.Length < 1)
             {
                 Console.WriteLine("usage: sb [set-abbreviation]");
                 return 1;
             }
+
+            Console.WriteLine("set abbreviation: " + args[0] ?? string.Empty);
 
             var abbreviation = args[0] ?? string.Empty;
 

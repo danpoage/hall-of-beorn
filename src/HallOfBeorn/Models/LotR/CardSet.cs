@@ -58,6 +58,13 @@ namespace HallOfBeorn.Models.LotR
             return card;
         }
 
+        protected LotRCard addPlayerSideQuest(string title, byte resourceCost, Sphere sphere, byte questPoints)
+        {
+            var sideQuest = LotRCard.PlayerSideQuest(title, string.Empty, sphere, resourceCost, questPoints);
+            addCard(sideQuest);
+            return sideQuest;
+        }
+
         protected LotRCard addContract(string title)
         {
             var card = LotRCard.Contract(title);
