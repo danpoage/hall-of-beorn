@@ -17,8 +17,6 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
             SetType = Models.SetType.Adventure_Pack;
             Cycle = "Ered Mithrin";
 
-            IsSpoiler = true;
-
             addHero("Bilbo Baggins", 9, Sphere.Tactics, 1, 1, 2, 2)
                 .WithTraits("Hobbit.", "Burglar.")
                 .WithText("Response: After Bilbo ~Baggins commits to the quest, choose an enemy in the staging area. Until the end of the phase, Bilbo ~Baggins gets +X Willpower where X is that enemy's Threat. If the players quest successfully, deal 1 damage to that enemy (2 damage instead if it is guarding a card).")

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RingsDbBuilder", "RingsDbBu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OctgnBuilder", "OctgnBuilder\OctgnBuilder.csproj", "{6FC8270E-0ED5-438F-A52A-3A3B562A00F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetBuilder", "SetBuilder\SetBuilder.csproj", "{6A20157E-8AC7-4722-BC09-FE0BBF9F6EB8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{6FC8270E-0ED5-438F-A52A-3A3B562A00F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FC8270E-0ED5-438F-A52A-3A3B562A00F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FC8270E-0ED5-438F-A52A-3A3B562A00F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A20157E-8AC7-4722-BC09-FE0BBF9F6EB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A20157E-8AC7-4722-BC09-FE0BBF9F6EB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A20157E-8AC7-4722-BC09-FE0BBF9F6EB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A20157E-8AC7-4722-BC09-FE0BBF9F6EB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
