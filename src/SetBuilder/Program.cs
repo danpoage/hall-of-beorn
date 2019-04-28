@@ -14,37 +14,47 @@ namespace SetBuilder
     {
         private const string namespaceFormat           = "namespace HallOfBeorn.Models.LotR.Sets.{0}";
         private const string classFormat               = "    public class {0}Set : CardSet";
-        private const string addHeroFormat             = "        addHero(\"{0}\", {1}, {2}, {3}, {4}, {5}, {6})";
-        private const string addAllyFormat             = "        addAlly(\"{0}\", {1}, {2}, {3}, {4}, {5}, {6}, {7})";
-        private const string addAttachmentFormat       = "        addAttachment(\"{0}\", {1}, {2}, {3})";
-        private const string addEventFormat            = "        addEvent(\"{0}\", {1}, {2})";
-        private const string addPlayerSideQuestFormat  = "        addPlayerSideQuest(\"{0}\", {1}, {2}, {3})";
-        private const string withTraitsFormat          = "            .WithTraits({0})";
-        private const string withKeywordsFormat        = "            .WithKeywords({0})";
-        private const string withTextFormat            = "            .WithText(\"{0}\")";
-        private const string withFlavorFormat          = "            .WithFlavor(\"{0}\")";
-        private const string withVPFormat              = "            .WithVictoryPoints({0})";
-        private const string withInfoFormat            = "            .WithInfo({0}, {1}, Artist.{2});";
+        private const string initNameFormat            = "            Name = \"{0}\";";
+        private const string initAbbreviationFormat    = "            Abbreviation = \"{0}\";";
+        private const string initNumberFormat          = "            Number = {0};";
+        private const string initSetTypeFormat         = "            SetType = Models.SetType.{0};";
+        private const string initCycleFormat           = "            Cycle = \"{0}\";";
+        private const string addHeroFormat             = "            addHero(\"{0}\", {1}, {2}, {3}, {4}, {5}, {6})";
+        private const string addAllyFormat             = "            addAlly(\"{0}\", {1}, {2}, {3}, {4}, {5}, {6}, {7})";
+        private const string addAttachmentFormat       = "            addAttachment(\"{0}\", {1}, {2}, {3})";
+        private const string addEventFormat            = "            addEvent(\"{0}\", {1}, {2})";
+        private const string addPlayerSideQuestFormat  = "            addPlayerSideQuest(\"{0}\", {1}, {2}, {3})";
+        private const string withTraitsFormat          = "                .WithTraits({0})";
+        private const string withKeywordsFormat        = "                .WithKeywords({0})";
+        private const string withTextFormat            = "                .WithText(\"{0}\")";
+        private const string withFlavorFormat          = "                .WithFlavor(\"{0}\")";
+        private const string withTemplateFormat        = "                .WithTemplate(\"{0}\")";
+        private const string withVictoryPointsFormat   = "                .WithVictoryPoints({0})";
+        private const string withInfoFormat            = "                .WithInfo({0}, {1}, Artist.{2});";
 
+        private const int codePageWesternEurope = 1252;
+        private const string textQuote = "\\\"";
+        private const string textLineBreak = "\\r\\n";
+        
         private static string init(CardSet cardSet)
         {
             var s = new StringBuilder(string.Empty);
 
-            s.AppendFormat("            Name = \"{0}\";", cardSet.Name);
+            s.AppendFormat(initNameFormat, cardSet.Name);
             s.AppendLine();
 
-            s.AppendFormat("            Abbreviation = \"{0}\";", cardSet.Abbreviation);
+            s.AppendFormat(initAbbreviationFormat, cardSet.Abbreviation);
             s.AppendLine();
 
-            s.AppendFormat("            Number = {0};", cardSet.Number);
+            s.AppendFormat(initNumberFormat, cardSet.Number);
             s.AppendLine();
 
-            s.AppendFormat("            SetType = Models.SetType.{0};", Enum.GetName(typeof(SetType), cardSet.SetType));
+            s.AppendFormat(initSetTypeFormat, Enum.GetName(typeof(SetType), cardSet.SetType));
             s.AppendLine();
 
             if (string.IsNullOrWhiteSpace(cardSet.Cycle))
             {
-                s.AppendFormat("            Cycle = \"{0}\";", cardSet.Cycle);
+                s.AppendFormat(initCycleFormat, cardSet.Cycle);
                 s.AppendLine();
             }
 
@@ -67,6 +77,16 @@ namespace SetBuilder
             );
         }
 
+        private static string normalizeText(string text, string quote, string lineBreak)
+        {
+            if (string.IsNullOrWhiteSpace(text))
+                return string.Empty;
+
+            return text
+                .Replace("\"", quote)
+                .Replace("\r\n", lineBreak); 
+        }
+
         private static string header(CardSet cardSet)
         {
             var setName = normalizeName(cardSet.Name, string.Empty);
@@ -76,7 +96,8 @@ namespace SetBuilder
                 : setName;
 
             var s = new StringBuilder(string.Empty);
-            s.AppendLine("/* Generated CardSet class */");
+            s.AppendFormat("/* Generated CardSet class: {0} */", cardSet.Name);
+            s.AppendLine();
             s.AppendLine();
 
             s.AppendLine("using System;");
@@ -93,7 +114,7 @@ namespace SetBuilder
             s.AppendLine("        protected override void Initialize()");
             s.AppendLine("        {");
 
-            s.AppendLine(init(cardSet));
+            s.Append(init(cardSet));
 
             return s.ToString();
         }
@@ -144,7 +165,8 @@ namespace SetBuilder
                 return string.Empty;
 
             return string.Format(withTextFormat,
-                card.Text) + Environment.NewLine;
+                normalizeText(card.Text, textQuote, textLineBreak)) 
+                + Environment.NewLine;
         }
 
         private static string withFlavor(LotRCard card)
@@ -153,7 +175,18 @@ namespace SetBuilder
                 return string.Empty;
 
             return string.Format(withFlavorFormat,
-                card.FlavorText) + Environment.NewLine;
+                normalizeText(card.FlavorText, textQuote, textLineBreak)) 
+                + Environment.NewLine;
+        }
+
+        private static string withTemplate(LotRCard card)
+        {
+            if (string.IsNullOrWhiteSpace(card.HtmlTemplate))
+                return string.Empty;
+
+            return string.Format(withTemplateFormat,
+                card.HtmlTemplate)
+                + Environment.NewLine;
         }
 
         private static string cardTextGlyphs(LotRCard card)
@@ -162,7 +195,7 @@ namespace SetBuilder
 
             if (card.VictoryPoints > 0)
             {
-                s.AppendFormat(withVPFormat, card.VictoryPoints);
+                s.AppendFormat(withVictoryPointsFormat, card.VictoryPoints);
                 s.AppendLine();
             }
 
@@ -188,10 +221,11 @@ namespace SetBuilder
             s.Append(withKeywords(card));
             s.Append(withText(card));
             s.Append(withFlavor(card));
+            s.Append(withTemplate(card));
 
             s.Append(cardTextGlyphs(card));
 
-            s.AppendLine(withInfo(card));
+            s.Append(withInfo(card));
 
             return s.ToString();
         }
@@ -295,13 +329,14 @@ namespace SetBuilder
 
         public static int Main(string[] args)
         {
+            //NOTE: The code page needs to be 1252 in order to handle accent characters
+            Console.OutputEncoding = Encoding.GetEncoding(codePageWesternEurope);
+
             if (args.Length < 1)
             {
                 Console.WriteLine("usage: sb [set-abbreviation]");
                 return 1;
             }
-
-            Console.WriteLine("set abbreviation: " + args[0] ?? string.Empty);
 
             var abbreviation = args[0] ?? string.Empty;
 
