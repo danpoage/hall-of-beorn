@@ -12,25 +12,37 @@ namespace SetBuilder
 {
     class Program
     {
-        private const string namespaceFormat           = "namespace HallOfBeorn.Models.LotR.Sets.{0}";
-        private const string classFormat               = "    public class {0}Set : CardSet";
-        private const string initNameFormat            = "            Name = \"{0}\";";
-        private const string initAbbreviationFormat    = "            Abbreviation = \"{0}\";";
-        private const string initNumberFormat          = "            Number = {0};";
-        private const string initSetTypeFormat         = "            SetType = Models.SetType.{0};";
-        private const string initCycleFormat           = "            Cycle = \"{0}\";";
-        private const string addHeroFormat             = "            addHero(\"{0}\", {1}, {2}, {3}, {4}, {5}, {6})";
-        private const string addAllyFormat             = "            addAlly(\"{0}\", {1}, {2}, {3}, {4}, {5}, {6}, {7})";
-        private const string addAttachmentFormat       = "            addAttachment(\"{0}\", {1}, {2}, {3})";
-        private const string addEventFormat            = "            addEvent(\"{0}\", {1}, {2})";
-        private const string addPlayerSideQuestFormat  = "            addPlayerSideQuest(\"{0}\", {1}, {2}, {3})";
-        private const string withTraitsFormat          = "                .WithTraits({0})";
-        private const string withKeywordsFormat        = "                .WithKeywords({0})";
-        private const string withTextFormat            = "                .WithText(\"{0}\")";
-        private const string withFlavorFormat          = "                .WithFlavor(\"{0}\")";
-        private const string withTemplateFormat        = "                .WithTemplate(\"{0}\")";
-        private const string withVictoryPointsFormat   = "                .WithVictoryPoints({0})";
-        private const string withInfoFormat            = "                .WithInfo({0}, {1}, Artist.{2});";
+        private const string namespaceFormat            = "namespace HallOfBeorn.Models.LotR.Sets.{0}";
+        private const string classFormat                = "    public class {0}Set : CardSet";
+        private const string initNameFormat             = "            Name = \"{0}\";";
+        private const string initAbbreviationFormat     = "            Abbreviation = \"{0}\";";
+        private const string initNumberFormat           = "            Number = {0};";
+        private const string initSetTypeFormat          = "            SetType = Models.SetType.{0};";
+        private const string initCycleFormat            = "            Cycle = \"{0}\";";
+        private const string addHeroFormat              = "            addHero(\"{0}\", {1}, {2}, {3}, {4}, {5}, {6})";
+        private const string addAllyFormat              = "            addAlly(\"{0}\", {1}, {2}, {3}, {4}, {5}, {6}, {7})";
+        private const string addAttachmentFormat        = "            addAttachment(\"{0}\", {1}, {2}, {3})";
+        private const string addEnemyFormat             = "            addEnemy(\"{0}\", \"{1}\", {2}, {3}, {4}, {5}, {6})";
+        private const string addEventFormat             = "            addEvent(\"{0}\", {1}, {2})";
+        private const string addPlayerSideQuestFormat   = "            addPlayerSideQuest(\"{0}\", {1}, {2}, {3})";
+        private const string addQuestFormat             = "            addQuest(\"{0}\", \"{1}\", {2}, '{3}', {4})";
+        private const string withTraitsFormat           = "                .WithTraits({0})";
+        private const string withKeywordsFormat         = "                .WithKeywords({0})";
+        private const string withTextFormat             = "                .WithText(\"{0}\")";
+        private const string withShadowFormat           = "                .WithShadow(\"{0}\")";
+        private const string withFlavorFormat           = "                .WithFlavor(\"{0}\")";
+        private const string withTemplateFormat         = "                .WithTemplate(\"{0}\")";
+        private const string withOppositeTitleFormat    = "                .WithOppositeTitle(\"{0}\")";
+        private const string withOppositeTextFormat     = "                .WithOppositeText(\"{0}\")";
+        private const string withOppositeFlavorFormat   = "                .WithOppositeFlavor(\"{0}\")";
+        private const string withOppositeTemplateFormat = "                .WithTemplate2(\"{0}\")";
+        private const string withEncounterSetsFormat    = "                .WithIncludedEncounterSets({0})";
+        private const string withVictoryPointsFormat    = "                .WithVictoryPoints({0})";
+        private const string withBackArtistFormat       = "                .WithBackArtist(Artist.{0})";
+        private const string withBackStageLetterFormat  = "                .WithBackStageLetter('{0}')";
+        private const string withUniqueTag              = "                .WithUnique()";
+        private const string withEasyModeQuantityFormat = "                .WithEasyModeQuantity({0})";
+        private const string withInfoFormat             = "                .WithInfo({0}, {1}, Artist.{2});";
 
         private const int codePageWesternEurope = 1252;
         private const string textQuote = "\\\"";
@@ -135,6 +147,24 @@ namespace SetBuilder
             return "Sphere." + Enum.GetName(typeof(Sphere), card.Sphere);
         }
 
+        private static string stat(byte? stat)
+        {
+            if (!stat.HasValue)
+            {
+                return "null";
+            }
+
+            switch (stat.Value)
+            {
+                case Card.VALUE_NA:
+                    return "Card.VALUE_NA";
+                case Card.VALUE_X:
+                    return "Card.VALUE_X";
+                default:
+                    return stat.Value.ToString();
+            }
+        }
+
         private static string withTraits(LotRCard card)
         {
             if (card.Traits == null || card.Traits.Count() == 0)
@@ -169,6 +199,16 @@ namespace SetBuilder
                 + Environment.NewLine;
         }
 
+        private static string withShadow(LotRCard card)
+        {
+            if (string.IsNullOrWhiteSpace(card.Shadow))
+                return string.Empty;
+
+            return string.Format(withShadowFormat,
+                normalizeText(card.Shadow, textQuote, textLineBreak)) 
+                + Environment.NewLine;
+        }
+
         private static string withFlavor(LotRCard card)
         {
             if (string.IsNullOrWhiteSpace(card.FlavorText))
@@ -180,6 +220,37 @@ namespace SetBuilder
         }
 
         private static string withTemplate(LotRCard card)
+        {
+            if (string.IsNullOrWhiteSpace(card.HtmlTemplate))
+                return string.Empty;
+
+            return string.Format(withTemplateFormat,
+                card.HtmlTemplate)
+                + Environment.NewLine;
+        }
+
+        
+        private static string withOppositeText(LotRCard card)
+        {
+            if (string.IsNullOrWhiteSpace(card.OppositeText))
+                return string.Empty;
+
+            return string.Format(withTextFormat,
+                normalizeText(card.Text, textQuote, textLineBreak)) 
+                + Environment.NewLine;
+        }
+
+        private static string withOppositeFlavor(LotRCard card)
+        {
+            if (string.IsNullOrWhiteSpace(card.FlavorText))
+                return string.Empty;
+
+            return string.Format(withFlavorFormat,
+                normalizeText(card.FlavorText, textQuote, textLineBreak)) 
+                + Environment.NewLine;
+        }
+
+        private static string withOppositeTemplate(LotRCard card)
         {
             if (string.IsNullOrWhiteSpace(card.HtmlTemplate))
                 return string.Empty;
@@ -202,14 +273,19 @@ namespace SetBuilder
             return s.ToString();
         }
 
+        private static string artist(string name)
+        {
+            return name != null ? normalizeName(name, "_") : "Unknown";
+        }
+
         private static string withInfo(LotRCard card)
         {
-            var artist = card.Artist != null ? normalizeName(card.Artist.Name, "_") : "Unknown";
-
+            var artistName = card.Artist != null ? card.Artist.Name : null;
+            
             return string.Format(withInfoFormat,
                 card.CardNumber,
                 card.Quantity,
-                artist
+                artist(artistName)
                 );
         }
 
@@ -220,10 +296,38 @@ namespace SetBuilder
             s.Append(withTraits(card));
             s.Append(withKeywords(card));
             s.Append(withText(card));
+            s.Append(withShadow(card));
             s.Append(withFlavor(card));
             s.Append(withTemplate(card));
+            s.Append(withOppositeText(card));
+            s.Append(withOppositeFlavor(card));
+            s.Append(withOppositeTemplate(card));
 
             s.Append(cardTextGlyphs(card));
+
+            if (!string.IsNullOrWhiteSpace(card.OppositeTitle))
+            {
+                s.AppendFormat(withOppositeTitleFormat, card.OppositeTitle);
+                s.AppendLine();
+            }
+
+            if (card.BackArtist != null)
+            {
+                s.AppendFormat(withBackArtistFormat, artist(card.BackArtist.Name));
+                s.AppendLine();
+            }
+
+            if (card.BackStageLetter.HasValue)
+            {
+                s.AppendFormat(withBackStageLetterFormat, card.BackStageLetter.Value);
+                s.AppendLine();
+            }
+            
+            if (card.EasyModeQuantity.HasValue && card.EasyModeQuantity.Value != card.Quantity)
+            {
+                s.AppendFormat(withEasyModeQuantityFormat, card.EasyModeQuantity.Value);
+                s.AppendLine();
+            }
 
             s.Append(withInfo(card));
 
@@ -318,13 +422,63 @@ namespace SetBuilder
             return s.ToString();
         }
 
+        private static string addQuest(LotRCard quest)
+        {
+            var s = new StringBuilder(string.Empty);
+            s.AppendFormat(addQuestFormat,
+                quest.Title,
+                quest.EncounterSet,
+                quest.StageNumber,
+                quest.StageLetter,
+                stat(quest.QuestPoints)
+                );
+            s.AppendLine();
+
+            var encounterSets = string.Join(",",
+                quest.IncludedEncounterSets
+                    .Select(es => '"' + es.Name + '"')
+                );
+            s.AppendFormat(withEncounterSetsFormat,
+                encounterSets);
+
+            s.Append(cardTextBox(quest));
+
+            return s.ToString();
+        }
+
+        private static string addEnemy(LotRCard enemy)
+        {
+            var s = new StringBuilder();
+            s.AppendFormat(addEnemyFormat,
+                enemy.Title,
+                enemy.EncounterSet,
+                stat(enemy.EngagementCost),
+                stat(enemy.Threat),
+                stat(enemy.Attack),
+                stat(enemy.Defense),
+                stat(enemy.HitPoints)
+                );
+
+            if (enemy.IsUnique)
+            {
+                s.Append(withUniqueTag);
+                s.AppendLine();
+            }
+
+            s.Append(cardTextBox(enemy));
+            
+            return s.ToString();
+        }
+
         private static Dictionary<CardType, Func<LotRCard, string>> map = new Dictionary<CardType, Func<LotRCard, string>>
         {
             { CardType.Hero, hero => addHero(hero) },
             { CardType.Ally, ally => addAlly(ally) },
             { CardType.Attachment, attachment => addAttachment(attachment) },
             { CardType.Event, playerEvent => addEvent(playerEvent) },
-            { CardType.Player_Side_Quest, sideQuest => addPlayerSideQuest(sideQuest) }
+            { CardType.Player_Side_Quest, sideQuest => addPlayerSideQuest(sideQuest) },
+            { CardType.Quest, quest => addQuest(quest) },
+            { CardType.Enemy, enemy => addEnemy(enemy) }
         };
 
         public static int Main(string[] args)
