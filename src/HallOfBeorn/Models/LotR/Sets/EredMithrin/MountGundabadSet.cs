@@ -75,7 +75,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithInfo(122, 1, Artist.Tomasz_Jedruszek);
             addLocation("Dagnir's Hoard", setName, 7, 7)
                 .WithUnique()
-                .WithTraits("Undergound.")
+                .WithTraits("Underground.")
                 .WithText("Forced: When Dagnir's Hoard is explored, Dagnir returns to the staging area and makes an immediate attack against each player in turn order.\r\nResponse: After Dagnir's Hoard is explored, each player may search his deck for an Item attachment, add it to his hand, and shuffle his deck.")
                 .WithVictoryPoints(1)
                 .WithInfo(123, 1, Artist.Nele_Diel);

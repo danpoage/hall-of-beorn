@@ -203,8 +203,8 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithInfo(33, 2, Artist.Matt_Stewart);
             addLocation("Mountains of Mirkwood", emptySetName, 2, 4)
                 .WithSetNumberAndCost(8, 0)
-                .WithTraits("Mountains.")
-                .WithText("While Mountains of Mirkwood is in the staging area, it gains: \"Forced: At the end of the round, raise each player's threat by 2.\"")
+                .WithTraits("Mountain.")
+                .WithText("While Mountains of ~Mirkwood is in the staging area, it gains: \"Forced: At the end of the round, raise each player's threat by 2.\"")
                 .WithShadow("Shadow: Either raise your threat by 2, or the attacking enemy gets +2 Attack.")
                 .WithInfo(34, 2, Artist.Ben_Zweifel);
             addTreachery("Hatred Rekindled", emptySetName)
