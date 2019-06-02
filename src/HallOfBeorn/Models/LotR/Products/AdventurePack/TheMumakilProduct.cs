@@ -13,7 +13,6 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
             RulesUrl = "https://images-cdn.fantasyflightgames.com/filer_public/03/0a/030a4e90-544d-4d24-a160-c5e05f34c778/mec56_rule_set.pdf";
 
             AddCardSet(CardSet.TheMumakil);
-
             AddScenario(new HallOfBeorn.Models.LotR.Scenarios.Haradrim.TheMumakilScenario());
         }
     }

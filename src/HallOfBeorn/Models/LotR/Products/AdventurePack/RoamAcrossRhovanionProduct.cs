@@ -12,6 +12,8 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
         {
             AddCardSet(CardSet.RoamAcrossRhovanion);
             AddScenario(new HallOfBeorn.Models.LotR.Scenarios.EredMithrin.RoamAcrossRhovanionScenario());
+
+            RulesUrl = "https://images-cdn.fantasyflightgames.com/filer_public/b8/22/b822ee1e-d5ba-4d72-831c-3a23c007fc18/mec67_roam_across_rhovanion_rules-insert-compressed.pdf";
         }
     }
 }

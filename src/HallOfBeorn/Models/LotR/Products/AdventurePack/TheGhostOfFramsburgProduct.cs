@@ -12,6 +12,8 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
         {
             AddCardSet(CardSet.TheGhostOfFramsburg);
             AddScenario(new Scenarios.EredMithrin.TheGhostOfFramsburgScenario());
+
+            RulesUrl = "https://images-cdn.fantasyflightgames.com/filer_public/f7/3c/f73c7c71-40db-4832-b34f-9bf4806e989f/mec69_web_the_ghost_of_framsburg_rules.pdf";
         }
     }
 }
