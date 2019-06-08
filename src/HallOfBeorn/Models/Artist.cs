@@ -625,6 +625,7 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Andreas_Adamek);
             all.Add(Artist.Brendan_C_Murphy);
             all.Add(Artist.Derek_D_Edgell);
+            all.Add(Artist.Greg_Bobrowski);
 
             //A Shadow in the East
             all.Add(Artist.Martin_de_Diego_Sadaba);
@@ -725,6 +726,7 @@ namespace HallOfBeorn.Models
         public static Artist FrozenStocks = new Artist { Name = "frozenstocks", URL = "http://frozenstocks.deviantart.com" };
         public static Artist Gerwell = new Artist { Name = "Gerwell", URL = "http://gerwell.deviantart.com" };
         public static Artist Graeme_Skinner = new Artist { Name = "Graeme Skinner", URL = "http://graemeskinner.deviantart.com" };
+        public static Artist Greg_Bobrowski = new Artist { Name = "Greg Bobrowski", URL = "https://www.artstation.com/gregbobrowski" };
         public static Artist Greg_Taylor = new Artist { Name = "Greg Taylor", URL = "http://gregtaylorart.deviantart.com" };
         public static Artist Carlo_Pagulayan = new Artist { Name = "Carlo Pagulayan", URL = "http://guisadong-gulay.deviantart.com" };
         public static Artist Han_Park = new Artist { Name = "Han Park", URL = "http://reaper78.deviantart.com" };

@@ -193,7 +193,9 @@ namespace HallOfBeorn.Models.LotR
                 {
                     token.Prefix = count > 1 ? " " : string.Empty;
 
-                    if (!escaped && normalized != "Attack")
+                    var statNames = new List<string> { "Attack", "Defense" };
+
+                    if (!escaped && !statNames.Contains(normalized))
                     {
                         //NOTE: A Sphere token has priority over a Trait token
                         if (statService.Traits().Any(x => string.Equals(x, normalized + ".")) && !statService.Spheres().Any(x => string.Equals(x, normalized)))

@@ -343,6 +343,7 @@ namespace HallOfBeorn.Models.LotR
             Add(FireInTheNight);
             Add(TheGhostOfFramsburg);
             Add(MountGundabad);
+            Add(TheFateOfWilderland);
 
             //A Shadow in the East
             Add(GollumAndSmeagol);
@@ -678,6 +679,7 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet FireInTheNight = new EncounterSet { Name = "Fire in the Night", Set = "Fire in the Night" };
         public static EncounterSet TheGhostOfFramsburg = new EncounterSet { Name = "The Ghost of Framsburg", Set = "The Ghost of Framsburg" };
         public static EncounterSet MountGundabad = new EncounterSet { Name = "Mount Gundabad", Set = "Mount Gundabad" };
+        public static EncounterSet TheFateOfWilderland = new EncounterSet { Name = "The Fate of Wilderland", Set = "The Fate of Wilderland" };
 
         //A Shadow in the East and Vengeance of Mordor
         public static EncounterSet GollumAndSmeagol = new EncounterSet { Name = "Gollum and Smeagol", Set = "A Shadow in the East" }; 
