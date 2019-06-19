@@ -26,21 +26,39 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithTraits("Hobbit.")
                 .WithText("Response: After Frodo commits to a quest, spend 1 resource from his resource pool to ready another questing unique character. If you quest successfully, reduce your threat by 1.")
                 .WithInfo(2, 1, Artist.Unknown);
-            addContract("Fellowship")
-                .WithText("You can neither play.... [...] allies (or OF allies)\nEach character who... [...] gets +1 Attack, +1 Willpower and...")
-                .WithInfo(3, 1, Artist.Unknown);
+            
             addAlly("Derufin", 3, Sphere.Spirit, true, 1, 2, 1, 2)
                 .WithTraits("Gondor.", "Warrior.")
                 .WithKeywords("Ranged.")
-                .WithText("Response: After Derufin participates in an attack which destroys an enemy engaged with a player, discard Derufin to reduce the engaged player's threat by X, where X is the destroyed enemy's printed Threat.")
+                .WithText("Ranged. Response: After Derufin participates in an attack which destroys an enemy engaged with a player, discard Derufin to reduce the engaged player's threat by X, where X is the destroyed enemy's printed Threat.")
                 .WithTemplate("<p class='main-text'>{keyword:Ranged.}</p><p class='main-text'><b>Response:</b> After {self} participates in an attack which destroys an enemy engaged with a player, discard {self} to reduce the engaged player's threat by X, where X is the destroyed enemy's printed {Threat}.</p>")
                 .WithInfo(4, 3, Artist.Unknown);
+            addAlly("Merry", 2, Sphere.Leadership, true, 2, 0, 0, 2)
+                .WithTraits("Hobbit.")
+                .WithText("Response: After Merry enters play, each unique ally you control gets +1 Willpower until the end of the round.")
+                .WithInfo(5, 3, Artist.Unknown);
+            addAlly("Pippin", 2, Sphere.Tactics, true, 2, 0, 0, 2)
+                .WithTraits("Hobbit.")
+                .WithText("Pippin gets +2 Attack while attacking an enemy with an engagement cost higher than your threat.\r\nResponse: After you engage an enemy with an engagement cost higher than your threat, ready Pippin.")
+                .WithInfo(6, 3, Artist.Unknown);
+            addAlly("Faramir", 4, Sphere.Lore, true, 2, 1, 2, 3)
+                .WithTraits("Gondor.", "Noble.", "Ranger.")
+                .WithText("Response: After Faramir enters play, choose a non-unique enemy in the staging area. Engage that enemy and deal 2 damage to it (4 damage instead if it has an attachment on it).")
+                .WithInfo(7, 3, Artist.Unknown);
 
             addEvent("The Master Ring", 0, Sphere.Neutral)
                 .WithTraits("Master.")
                 .WithText("Response: Exhaust The One ~Ring and raise your threat by 1 to cancel the effects of an encounter card just revealed from the encounter deck and discard that card. Then, reveal an encounter card.")
                 .WithFlavor("\"If I, wearing it, were to command you, you would obey, even if it were to leap from a precipice or to cast yourself into the fire.\"\r\n-Frodo, The Two Towers")
                 .WithInfo(9, 3, Artist.Marius_Bota);
+            addEvent("The Ring of Power", 0, Sphere.Neutral)
+                .WithTraits("Master.")
+                .WithText("Action: Exhaust The One Ring and raise your threat by 1 to ready the hero with The One Ring Attached. That hero gets +1 Willpower, +1 Attack, and +1 Defense until the end of the phase.")
+                .WithInfo(10, 3, Artist.Unknown);
+            addEvent("The Ruling Ring", 0, Sphere.Neutral)
+                .WithTraits("Master.")
+                .WithText("Combat Action: Exhaust The One Ring and raise your threat by 1 to choose a non-Nazgul enemy engaged with you. Until the end of the phase, that enemy cannot attack you.")
+                .WithInfo(11, 3, Artist.Unknown);
 
             addTreachery("Stinker", EncounterSet.GollumAndSmeagol.Name)
                 .WithTraits("Gollum.")
@@ -58,6 +76,10 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithText("Immune to non-Gollum card effects.\r\n~Gollum engages the first player.\r\nForced: When ~Gollum is defeated, flip him to Sméagol and return him to his owner's control, exhausted.")
                 .WithTemplate("<p class='main-text'>Immune to non-{trait:Gollum.@Gollum} card effects.</p><p class='main-text'>{self} engages the first player.</p><p class='main-text'><b>Forced:</b> When {self} is defeated, flip him to Sméagol and return him to his owner's control, exhausted.</p>") 
                 .WithInfo(73, 1, Artist.Unknown);
+            addContract("Fellowship")
+                .WithText("You cannot play non-unique allies or put non-unique allies into play.\r\nForced: When you control exactly 9 unique characters, flip this card over.")
+                .WithOppositeText("You cannot play allies or put allies into play.\r\nEach character you control gets +1 Willpower, +1 Attack, and +1 Defense.\r\nForced: After a character you control leaves play, flip this card over.")
+                .WithInfo(74, 1, Artist.Unknown);
         }
     }
 }

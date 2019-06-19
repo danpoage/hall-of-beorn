@@ -850,6 +850,15 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}-Setup{2}.jpg", set, title, letter);
         }
 
+        public string getContractCardImagePath(bool isFirst)
+        {
+            var set = (_card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
+            var title = _card.Title.ToUrlSafeString();
+            var letter = isFirst ? "A" : "B";
+
+            return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}-Side{2}.jpg", set, title, letter);
+        }
+
         public string getQuestCardArtImagePath(bool isFirst)
         {
             var set = (Card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
@@ -891,6 +900,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                     case LotR.CardType.Scenario:
                     case LotR.CardType.Campaign:
                     case LotR.CardType.Nightmare_Setup:
+                    case LotR.CardType.Contract:
                         return true;
                     default:
                         return false;
@@ -941,6 +951,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                     case Models.LotR.CardType.GenCon_Setup:
                     case Models.LotR.CardType.Scenario:
                         return getSetupCardImagePath(true);
+                    case Models.LotR.CardType.Contract:
+                        return getContractCardImagePath(true);
                     default:
                         return null;
                 }
@@ -966,6 +978,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                     case Models.LotR.CardType.GenCon_Setup:
                     case Models.LotR.CardType.Scenario:
                         return getSetupCardImagePath(false);
+                    case Models.LotR.CardType.Contract:
+                        return getContractCardImagePath(false);
                     default:
                         return null;
                 }
