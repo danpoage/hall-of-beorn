@@ -458,7 +458,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheThingInTheDepths = new Sets.DreamChaser.TheThingInTheDepths();
         public static CardSet TempleOfTheDeceived = new Sets.DreamChaser.TempleOfTheDeceived();
         public static CardSet TheDrownedRuins = new Sets.DreamChaser.TheDrownedRuins();
-        public static CardSet AStormOnCobasHaven = new Sets.DreamChaser.AStormOnCobasHaven();
+        public static CardSet AStormOnCobasHaven = new Sets.DreamChaser.AStormOnCobasHavenSet();
         public static CardSet TheCityOfCorsairs = new Sets.DreamChaser.TheCityOfCorsairs();
 
         public static CardSet TheSandsOfHarad = new Sets.TheSandsOfHarad.TheSandsOfHaradSet();

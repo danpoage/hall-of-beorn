@@ -745,7 +745,7 @@
     <Compile Include="Models\LotR\Sets\AgainstTheShadow\AssaultOnOsgiliath.cs" />
     <Compile Include="Models\LotR\Sets\ShadowsOfMirkwood\AJourneyToRhosgobel.cs" />
     <Compile Include="Models\LotR\Sets\AgainstTheShadow\AssaultOnOsgiliathNightmare.cs" />
-    <Compile Include="Models\LotR\Sets\DreamChaser\AStormOnCobasHaven.cs" />
+    <Compile Include="Models\LotR\Sets\DreamChaser\AStormOnCobasHavenSet.cs" />
     <Compile Include="Models\LotR\Sets\Haradrim\BeneathTheSands.cs" />
     <Compile Include="Models\LotR\Sets\TheRingMaker\CelebrimborsSecret.cs" />
     <Compile Include="Models\LotR\Sets\TheRingMaker\CelebrimborsSecretNightmare.cs" />

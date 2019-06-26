@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
 {
-    public class AStormOnCobasHaven : CardSet
+    public class AStormOnCobasHavenSet : CardSet
     {
         private const string setName = "A Storm on Cobas Haven";
 
@@ -95,7 +95,8 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithUnique()
                 .WithTraits("Corsair.", "Ship.")
                 .WithKeywords("Boarding 1.")
-                .WithText("Immune to player card effectss.\r\nOnly Ship enemies can be declared as attackers against Raider Flagship.\r\nForced: At the end of the encounter phase, the engaged player reveals the top card of the Corsair deck and engages it.")
+                .WithText("Immune to player card effects.\r\nOnly Ship objectives can be declared as attackers against ~Raider Flagship.\r\nForced: At the end of the encounter phase, the engaged player reveals the top card of the ~Corsair deck and engages it.")
+                .WithTemplate("<p class='main-text'>{keyword:Boarding 1.} Immune to player card effects.</p><p class='main-text'>Only {trait:Ship.@Ship} objectives can be declared as attackers againt {self}.<p class='main-text'><b>Forced:</b> At the end of the encounter phase, the engaged player reveals the top card of the Corsair deck and engages it.</p>{victory:20}")
                 .WithVictoryPoints(20)
                 .WithInfo(124, 1, Artist.Michael_Rasmussen);
             addShipEnemy("Corsair Skirmisher", setName, 28, 3, 4, 4, 6)

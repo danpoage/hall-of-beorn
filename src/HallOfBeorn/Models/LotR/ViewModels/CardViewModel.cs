@@ -521,8 +521,33 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             get { return _lang; }
         }
 
+        private bool IsEncounterCard()
+        {
+            var encounterCardTypes = new HashSet<CardType>
+            {
+                CardType.Enemy,
+                CardType.Ship_Enemy,
+                CardType.Location,
+                CardType.Treachery,
+                CardType.Objective,
+                CardType.Objective_Ally,
+                CardType.Objective_Hero,
+                CardType.Objective_Location,
+                CardType.Encounter_Side_Quest
+            };
+
+            return encounterCardTypes.Contains(_card.CardType);
+        }
+
+        private bool IsQuestCard()
+        {
+            return _card.CardType == CardType.Quest;
+        }
+
         public string BackgroundImage()
         {
+
+
             switch (_card.Sphere) 
             {
                 case Models.LotR.Sphere.Leadership:
@@ -533,7 +558,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 case Models.LotR.Sphere.Fellowship:
                     return string.Format("/Images/{0}.png", _card.Sphere.ToString());
                 default:
-                    if (_card.CardType == Models.LotR.CardType.Enemy || _card.CardType == Models.LotR.CardType.Location || _card.CardType == Models.LotR.CardType.Treachery || _card.CardType == Models.LotR.CardType.Objective || _card.CardType == Models.LotR.CardType.Objective_Ally || _card.CardType == Models.LotR.CardType.Objective_Location || _card.CardType == Models.LotR.CardType.Encounter_Side_Quest)
+                    if (IsEncounterCard())
                     {
                         return "/Images/encounter-card-back.jpg";
                     }
@@ -553,7 +578,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 case Models.LotR.Sphere.Fellowship:
                     return "-5px";
                 default:
-                    if (_card.CardType == Models.LotR.CardType.Enemy || _card.CardType == Models.LotR.CardType.Location || _card.CardType == Models.LotR.CardType.Treachery || _card.CardType == Models.LotR.CardType.Objective || _card.CardType == Models.LotR.CardType.Objective_Ally || _card.CardType == Models.LotR.CardType.Objective_Location || _card.CardType == Models.LotR.CardType.Encounter_Side_Quest)
+                    if (IsEncounterCard())
                     {
                         return "0px";
                     }
@@ -574,7 +599,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 case Models.LotR.Sphere.Fellowship:
                     return "48px";
                 default:
-                    if (_card.CardType == Models.LotR.CardType.Enemy || _card.CardType == Models.LotR.CardType.Location || _card.CardType == Models.LotR.CardType.Treachery || _card.CardType == Models.LotR.CardType.Objective || _card.CardType == Models.LotR.CardType.Objective_Ally || _card.CardType == Models.LotR.CardType.Objective_Location || _card.CardType == Models.LotR.CardType.Encounter_Side_Quest)
+                    if (IsEncounterCard())
                     {
                         return "0px";
                     }
@@ -594,7 +619,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 case Models.LotR.Sphere.Fellowship:
                     return "200px";
                 default:
-                    if (_card.CardType == Models.LotR.CardType.Enemy || _card.CardType == Models.LotR.CardType.Location || _card.CardType == Models.LotR.CardType.Treachery || _card.CardType == Models.LotR.CardType.Objective || _card.CardType == Models.LotR.CardType.Objective_Ally || _card.CardType == Models.LotR.CardType.Objective_Location || _card.CardType == Models.LotR.CardType.Encounter_Side_Quest)
+                    if (IsEncounterCard())
                     {
                         return "100%";
                     }
@@ -614,7 +639,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 case Models.LotR.Sphere.Fellowship:
                     return "200";
                 default:
-                    if (_card.CardType == Models.LotR.CardType.Enemy || _card.CardType == Models.LotR.CardType.Location || _card.CardType == Models.LotR.CardType.Treachery || _card.CardType == Models.LotR.CardType.Objective || _card.CardType == Models.LotR.CardType.Objective_Ally || _card.CardType == Models.LotR.CardType.Objective_Location || _card.CardType == Models.LotR.CardType.Encounter_Side_Quest)
+                    if (IsEncounterCard())
                     {
                         return "100%";
                     }
@@ -641,11 +666,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 case Models.LotR.Sphere.Neutral:
                     return "#e4e4e4";
                 default:
-                    if (_card.CardType == Models.LotR.CardType.Enemy || _card.CardType == Models.LotR.CardType.Location || _card.CardType == Models.LotR.CardType.Treachery || _card.CardType == Models.LotR.CardType.Objective || _card.CardType == Models.LotR.CardType.Objective_Ally || _card.CardType == Models.LotR.CardType.Objective_Location || _card.CardType == Models.LotR.CardType.Encounter_Side_Quest)
+                    if (IsEncounterCard())
                     {
                         return "rgba(0, 0, 0, .1)";
                     }
-                    else if (_card.CardType == Models.LotR.CardType.Quest)
+                    else if (IsQuestCard())
                     {
                         return "#d3d3d3";
                     }
