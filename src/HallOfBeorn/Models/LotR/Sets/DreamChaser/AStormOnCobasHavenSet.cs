@@ -51,6 +51,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithKeywords("Restricted.")
                 .WithText("Attach to a Spirit hero, or to Éowyn.\r\nAttached character gets +1 Willpower.\r\nResponse: After attached character is removed from the quest, exhaust Windfola to commit attached hero to the quest.")
                 .WithFlavor("...the great grey steed Windfola made little of the burden; for Dernhelm was less in weight than many men, though lithe and well-knit in frame. -The Return of the King")
+                .WithTemplate("<p class='main-text'>Attach to a {sphere:Spirit} hero, or to {title:Eowyn@Éowyn}. {keyword:Restricted.}</p><p class='main-text'>Attached hero gets +1 {Willpower}.</p><p class='main-text'><b>Response:</b> After attached character is removed from the quest, exhaust {self} to commit attached hero to the quest.</p><p class='flavor-text'>...the great grey steed Windfola made little of the burden; for Dernhelm was less in weight than many men, though lithe and well-knit in frame. &ndash;The Return of the King</p>")
                 .WithInfo(116, 3, Artist.Sandara_Tang);
             addAlly("Ioreth", 0, Sphere.Lore, true, 0, 0, 0, 1)
                 .WithUnique()

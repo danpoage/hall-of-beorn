@@ -17,6 +17,11 @@ namespace HallOfBeorn.Services.LotR.Search
 
             Register("cardtype", (val, neg) => new CardTypeFilter(val, neg));
 
+            Register("title", (val, neg) => new StringFuzzyFilter((score) => new Tuple<string, string>(score.Card.Title, score.Card.NormalizedTitle), val,
+                (title, t) => title.MatchesWildcard(t),
+                neg)
+                );
+
             Register("cycle", (val, neg) =>
                 new StringFuzzyFilter(
                     (score) => score.Card.CardSet.Cycle, val,
@@ -95,6 +100,7 @@ namespace HallOfBeorn.Services.LotR.Search
                 score.Card.Sphere == Sphere.Baggins || score.Card.Sphere == Sphere.Fellowship || score.Card.CardType == CardType.Treasure ||
                 score.Card.CardSubtype == Models.CardSubtype.Boon || score.Card.CardSubtype == Models.CardSubtype.Burden, 
                 neg));
+            Register("has_keyword", (val, neg) => new BooleanFilter((score) => score.Card.Keywords.Count() > 0, neg));
 
             Register("text", (val, neg) => 
                 new StringFuzzyFilter(

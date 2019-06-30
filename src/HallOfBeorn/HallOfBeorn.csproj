@@ -737,7 +737,7 @@
     <Compile Include="Models\LotR\ViewModels\SearchViewModel.cs" />
     <Compile Include="Models\LotR\Search\QueryFilterDefinition.cs" />
     <Compile Include="Models\LotR\Search\SimpleFilterDefinition.cs" />
-    <Compile Include="Models\LotR\Sets\AngmarAwakened\AcrossTheEttenmoors.cs" />
+    <Compile Include="Models\LotR\Sets\AngmarAwakened\AcrossTheEttenmoorsSet.cs" />
     <Compile Include="Models\LotR\Sets\ShadowsOfMirkwood\AJourneyToRhosgobelNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\AKnifeInTheDarkNightmare.cs" />
     <Compile Include="Models\LotR\Sets\FirstAge\AmongTheOutlawsSet.cs" />
@@ -773,8 +773,8 @@
     <Compile Include="Models\LotR\Products\Nightmare\KhazadDumNightmareProduct.cs" />
     <Compile Include="Models\LotR\Sets\PrintOnDemand\MurderAtThePrancingPony.cs" />
     <Compile Include="Models\LotR\Sets\HeirsOfNumenor\PerilInPelargirNightmare.cs" />
-    <Compile Include="Models\LotR\Sets\Haradrim\RaceAcrossHarad.cs" />
-    <Compile Include="Models\LotR\Sets\DreamChaser\TempleOfTheDeceived.cs" />
+    <Compile Include="Models\LotR\Sets\Haradrim\RaceAcrossHaradSet.cs" />
+    <Compile Include="Models\LotR\Sets\DreamChaser\TempleOfTheDeceivedSet.cs" />
     <Compile Include="Models\LotR\Sets\TheRingMaker\TheAntleredCrown.cs" />
     <Compile Include="Models\LotR\Sets\TheRingMaker\TheAntleredCrownNightmare.cs" />
     <Compile Include="Models\LotR\Sets\AngmarAwakened\TheBattleOfCarnDum.cs" />
@@ -786,14 +786,14 @@
     <Compile Include="Models\LotR\Sets\DreamChaser\TheDrownedRuins.cs" />
     <Compile Include="Models\LotR\Sets\AgainstTheShadow\TheDruadanForestNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheRingMaker\TheDunlandTrapNightmare.cs" />
-    <Compile Include="Models\LotR\Sets\TheLordOfTheRings\TheFlameOfTheWest.cs" />
+    <Compile Include="Models\LotR\Sets\TheLordOfTheRings\TheFlameOfTheWestSet.cs" />
     <Compile Include="Models\LotR\Sets\TheVoiceOfIsengard\TheFordsOfIsenNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheGreyHavens\TheGreyHavensSet.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\TheLandOfShadow.cs" />
     <Compile Include="Models\LotR\Sets\TheHobbit\TheLonelyMountainNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheLostRealm\TheLostRealmSet.cs" />
     <Compile Include="Models\LotR\Sets\AgainstTheShadow\TheMorgulValeNightmare.cs" />
-    <Compile Include="Models\LotR\Sets\Haradrim\TheMumakil.cs" />
+    <Compile Include="Models\LotR\Sets\Haradrim\TheMumakilSet.cs" />
     <Compile Include="Models\LotR\Sets\TheRingMaker\TheNinInEilph.cs" />
     <Compile Include="Models\LotR\Sets\TheHobbit\OverTheMistyMountainsGrimNightmare.cs" />
     <Compile Include="Models\LotR\Sets\Core\PassageThroughMirkwoodNightmareSet.cs" />
@@ -801,7 +801,7 @@
     <Compile Include="Models\LotR\Sets\ShadowsOfMirkwood\ReturnToMirkwoodNightmare.cs" />
     <Compile Include="Models\LotR\Sets\Dwarrowdelf\RoadToRivendell.cs" />
     <Compile Include="Models\LotR\Sets\Dwarrowdelf\RoadToRivendellNightmare.cs" />
-    <Compile Include="Models\LotR\Sets\Dwarrowdelf\ShadowAndFlame.cs" />
+    <Compile Include="Models\LotR\Sets\Dwarrowdelf\ShadowAndFlameSet.cs" />
     <Compile Include="Models\LotR\Sets\Dwarrowdelf\ShadowAndFlameNightmare.cs" />
     <Compile Include="Models\LotR\Sets\PrintOnDemand\TheBattleOfLakeTown.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\TheBlackRiders.cs" />
@@ -834,7 +834,7 @@
     <Compile Include="Models\LotR\Sets\AgainstTheShadow\TheStewardsFear.cs" />
     <Compile Include="Models\LotR\Sets\AgainstTheShadow\TheStewardsFearNightmare.cs" />
     <Compile Include="Models\LotR\Sets\PrintOnDemand\TheStoneOfErech.cs" />
-    <Compile Include="Models\LotR\Sets\DreamChaser\TheThingInTheDepths.cs" />
+    <Compile Include="Models\LotR\Sets\DreamChaser\TheThingInTheDepthsSet.cs" />
     <Compile Include="Models\LotR\Sets\TheRingMaker\TheThreeTrials.cs" />
     <Compile Include="Models\LotR\Sets\TheRingMaker\TheThreeTrialsNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\TheTreasonOfSaruman.cs" />

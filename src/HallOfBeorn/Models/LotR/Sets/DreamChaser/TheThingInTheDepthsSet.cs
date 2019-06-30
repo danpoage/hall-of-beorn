@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
 {
-    public class TheThingInTheDepths : CardSet
+    public class TheThingInTheDepthsSet : CardSet
     {
         private const string setName = "The Thing in the Depths";
         private const string stormcallerSet = "The Stormcaller";
@@ -18,12 +18,13 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
             SetType = Models.SetType.Adventure_Pack;
             Cycle = "Dream-chaser";
 
-            Cards.Add(LotRCard.Hero("Lanwyn", "", Sphere.Spirit, 9, 2, 3, 1, 3)
+            addHero("Lanwyn", 9, Sphere.Spirit, 2, 3, 1, 3)
                 .WithTraits("Dale.", "Scout.")
                 .WithKeywords("Ranged.")
                 .WithText("Response: After an encounter card with surge is revealed, either ready Lanwyn or give her +2 Willpower until the end of the phase. (Limit twice per phase.)")
                 .WithFlavor("\"The Men of Dale used to have the trick of understanding their language, and used them for messengers to fly to the Men of the Lake...\"\r\n-Thorin, The Hobbit")
-                .WithInfo(30, 1, Artist.Aleksander_Karcz));
+                .WithTemplate("<p class='main-text'>{keyword:Ranged.}</p><p class='main-text'><b>Response:</b> After an encounter card with surge is revealed, either ready {self} or give her +2 {Willpower} until the end of the phase. (Limit twice per phase.)</p><p class='flavor-text'>&ldquo;The Men of Dale used to have the trick of understanding their language, and used them for messengers to fly to the Men of the Lake...&rdquo;<br>&ndash;Thorin, The Hobbit</p>")
+                .WithInfo(30, 1, Artist.Aleksander_Karcz);
             Cards.Add(LotRCard.Ally("Eldahir", Sphere.Leadership, 4, 1, 2, 2, 3)
                 .WithUnique()
                 .WithTraits("Dúnedain.", "Noble.")

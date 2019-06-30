@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
 {
-    public class AcrossTheEttenmoors : CardSet
+    public class AcrossTheEttenmoorsSet : CardSet
     {
         private const string setName = "Across the Ettenmoors";
 
@@ -17,13 +17,12 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
             SetType = Models.SetType.Adventure_Pack;
             Cycle = "Angmar Awakened";
 
-            Cards.Add(LotRCard.Hero("Dori", "", Sphere.Tactics, 10, 1, 2, 2, 5)
+            addHero("Dori", 10, Sphere.Tactics, 1, 2, 2, 5)
                 .WithTraits("Dwarf.")
                 .WithKeywords("Sentinel.")
                 .WithText("Response: After another hero is declared as a defender, exhaust Dori to add his Defense to the defending hero's Defense for this attack.")
                 .WithFlavor("Dori was really a decent fellow in spite of his grumbling.\r\n-The Hobbit")
-                .WithTemplate("<p><b>Response:</b> After another hero is declared as a defender, exhaust {self} to add his {Defense} to the defending hero's {Defense} for this attack.</p><p class='flavor-text'>Dori was really a decent fellow in spite of his grumbling.<br>&ndash;The Hobbit</p>")
-                .WithInfo(54, 1, Artist.Sebastian_Giacobino));
+                .WithInfo(54, 1, Artist.Sebastian_Giacobino);
             Cards.Add(LotRCard.Attachment("Ranger Provisions", "", Sphere.Leadership, 1)
                 .WithTraits("Item.")
                 .WithText("Attach to a location. Limit 1 per location.\r\nResponse: After attached location is explored, the first player adds 1 resource to each of his heroes' resource pools.")

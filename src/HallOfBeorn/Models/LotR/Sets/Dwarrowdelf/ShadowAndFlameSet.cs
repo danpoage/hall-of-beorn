@@ -289,17 +289,11 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 CardNumber = 151,
                 Artist = Artist.Jasper_Sandner
             });
-            Cards.Add(new LotRCard() {
-                Title = "Risk Some Light",
-                Id = "51223bd0-ffd1-11df-a976-0801213c9022",
-                CardType = CardType.Event,
-                Sphere = Sphere.Lore,
-                Quantity = 3,
-                ResourceCost = 3,
-                Text = "Action: Look at the top 3 cards of the encounter deck. You may select 1 card and move it to the bottom of the encounter deck. Return any unselected cards to the top of the encounter deck, in any order.",
-                CardNumber = 136,
-                Artist = Artist.Dmitry_Burmak
-            }.WithKeywords("Secrecy 3."));
+            addEvent("Risk Some Light", 3, Sphere.Lore)
+                .WithKeywords("Secrecy 3.")
+                .WithText("Action: Look at the top 3 cards of the encounter deck. You may select 1 card and move it to the bottom of the encounter deck. Return any unselected cards to the top of the encounter deck, in any order.")
+                .WithTemplate("<p class='main-text'>{keyword:Secrecy 3.}</p><p class='main-text'><b>Action:</b> Look at the top 3 cards of the encounter deck. You may select 1 card and move it to the bottom of the encounter deck. Return any unselected cards to the top of the encounter deck, in any order.</p>")
+                .WithInfo(136, 3, Artist.Dmitry_Burmak);
             Cards.Add(new LotRCard() {
                 Title = "Second Deep",
                 Id = "51223bd0-ffd1-11df-a976-0801213c9023",

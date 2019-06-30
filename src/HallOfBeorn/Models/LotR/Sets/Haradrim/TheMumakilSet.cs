@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Sets.Haradrim
 {
-    public class TheMumakil : CardSet
+    public class TheMumakilSet : CardSet
     {
         private const string setName = "The Mûmakil";
 
@@ -32,22 +32,22 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithText("Limit 1 copy of Prepare for Battle in the victory display.\r\nWhile this quest is in the victory display, the first player draws an additional card during the resource phase.")
                 .WithVictoryPoints(1)
                 .WithInfo(3, 3, Artist.Sebastian_Zakrzewski));
-            addCard(LotRCard.Ally("Yazan", Sphere.Tactics, 5, 2, 3, 1, 3)
-                .WithUnique()
+            addAlly("Yazan", 5, Sphere.Tactics, true, 2, 3, 1, 3)
                 .WithTraits("Harad.", "Ranger.")
                 .WithKeywords("Ranged.")
                 .WithText("Response: After Yazan is declared as an attacker, deal 1 damage to a non-unique enemy in play. (Limit once per phase.)")
-                .WithInfo(4, 3, Artist.David_A_Nash));
+                .WithTemplate("<p class='main-text'>{keyword:Ranged.}</p><p class='main-text'><b>Response:</b> After {self} is declared as an attacker, deal 1 damage to a non-unique enemy in play. (Limit once per phase.)</p>")
+                .WithInfo(4, 3, Artist.David_A_Nash);
             addCard(LotRCard.Event("Wait no Longer", string.Empty, Sphere.Tactics, 2)
                 .WithText("Response: At the beginning of the quest phase, search the top 5 cards of the encounter deck for an enemy and put it into play engaged with you. Then, reveal 1 less encounter card this phase (to a minimum of 0). Shuffle the encounter deck.")
                 .WithFlavor("\"We must press our Enemy, and no longer wait upon him for the move.\"\r\n-Aragorn, The Return of the King")
                 .WithInfo(5, 3, Artist.John_Pacer));
-            addCard(LotRCard.Ally("Jubayr", Sphere.Spirit, 5, 1, 2, 3, 3)
-                .WithUnique()
+            addAlly("Jubayr", 5, Sphere.Spirit, true, 1, 2, 3, 3)
                 .WithTraits("Harad.", "Warrior.")
                 .WithKeywords("Sentinel.")
                 .WithText("Response: After Jubayr exhausts to defend an attack, discard 1 facedown shadow card from a non-unique enemy. (Limit once per phase.)")
-                .WithInfo(6, 3, Artist.Colin_Boyer));
+                .WithTemplate("<p class='main-text'>{keyword:Sentinel.}</p><p class='main-text'><b>Response:</b> After {self} exhausts to defend an attack, discard 1 facedown shadow card from a non-unique enemy. (Limit once per phase.)</p>")
+                .WithInfo(6, 3, Artist.Colin_Boyer);
             addCard(LotRCard.Attachment("Dwarf Pipe", string.Empty, Sphere.Spirit, 1)
                 .WithTraits("Item.", "Pipe.")
                 .WithText("Attach to a Dwarf character. Limit 1 per character.\r\nResponse: After a card is discarded from the top of your deck, exhaust ~Dwarf ~Pipe to place that card on the bottom of your deck.")

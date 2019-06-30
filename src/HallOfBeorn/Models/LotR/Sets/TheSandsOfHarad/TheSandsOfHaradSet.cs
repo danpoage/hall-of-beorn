@@ -24,30 +24,34 @@ namespace HallOfBeorn.Models.LotR.Sets.TheSandsOfHarad
             Number = 42;
             SetType = Models.SetType.Deluxe_Expansion;
 
-            addCard(LotRCard.Hero("Gimli", string.Empty, Sphere.Leadership, 11, 2, 2, 2, 5)
+            addHero("Gimli", 11, Sphere.Leadership, 2, 2, 2, 5)
                 .WithTraits("Dwarf.", "Noble.", "Warrior.")
                 .WithKeywords("Sentinel.")
                 .WithText("Response: After Gimli is declared as a defender, spend 1 resource from his pool to ready another hero. If that hero is Legolas, he gets +1 Attack until the end of the phase. (Limit once per phase.)")
                 .WithFlavor("\"Faithless is he that says farewell when the road darkens...\"\r\n-The Fellowship of the Ring")
-                .WithInfo(1, 1, Artist.Owen_William_Weber));
-            addCard(LotRCard.Hero("Legolas", string.Empty, Sphere.Spirit, 9, 1, 3, 1, 4)
+                .WithTemplate("<p class='main-text'>{keyword:Sentinel.}</p><p class='main-text'><b>Response:</b> After {self} is declared as a defender, spend 1 resource from his pool to ready another hero. If that hero is {title:Legolas}, he gets +1 {Attack} until the end of the phase. (Limit once per phase.)</p><p class='flavor-text'>&ldquo;Faithless is he that says farewell when the road darkens...&rdquo;<br>&ndash;The Fellowship of the Ring</p>")
+                .WithInfo(1, 1, Artist.Owen_William_Weber);
+            addHero("Legolas", 9, Sphere.Spirit, 1, 3, 1, 4)
                 .WithTraits("Silvan.", "Noble.", "Scout.")
                 .WithKeywords("Ranged.")
                 .WithText("Response: After Legolas commits to a quest, discard a card from your hand to ready another hero. If that hero is Gimli, he gets +1 Willpower until the end of the phase. (Limit once per phase.)")
                 .WithFlavor("\"I go to find the Sun!\"\r\n-The Fellowship of the Ring")
-                .WithInfo(2, 1, Artist.Aleksander_Karcz));
-            addCard(LotRCard.Ally("Greenwood Archer", Sphere.Leadership, 2, 0, 2, 0, 1)
+                .WithTemplate("<p class='main-text'>{keyword:Ranged.}</p><p class='main-text'><b>Response:</b> After {self} commits to a quest, discard a card from your hand to ready another hero. If that hero is {title:Gimli}, he gets +1 {Willpower} until the end of the phase. (Limit once per phase.)</p><p class='flavor-text'>&ldquo;I go to find the Sun!&rdquo;<br>&ndash;The Fellowship of the Ring</p>")
+                .WithInfo(2, 1, Artist.Aleksander_Karcz);
+            addAlly("Greenwood Archer", 2, Sphere.Leadership, false, 0, 2, 0, 1)
                 .WithTraits("Silvan.")
                 .WithKeywords("Ranged.")
                 .WithText("Response: After Greenwood Archer enters play, ready a hero.")
                 .WithFlavor("They dwelt most often by the edges of the woods, from which they could escape at times to hunt...\r\n-The Hobbit")
-                .WithInfo(3, 3, Artist.Tawny_Fritzinger));
-            addCard(LotRCard.Ally("Erebor Guard", Sphere.Spirit, 4, 0, 1, 2, 3)
+                .WithTemplate("<p class='main-text'>{keyword:Ranged.}</p><p class='main-text'><b>Response:</b> After {self} enters play, ready a hero.</p><p class='flavor-text'>They dwelt most often by the edges of the woods, from which they could escape at times to hunt...<br>&ndash;The Hobbit</p>")
+                .WithInfo(3, 3, Artist.Tawny_Fritzinger);
+            addAlly("Erebor Guard", 4, Sphere.Spirit, false, 0, 1, 2, 3)
                 .WithTraits("Dwarf.", "Warrior.")
                 .WithKeywords("Sentinel.")
                 .WithText("Response: When you play Erebor Guard from your hand, discard the top 2 cards of your deck to reduce its cost by 2.")
                 .WithFlavor("...the fortress of the dwarves could not be taken by surprise.\r\n-The Hobbit")
-                .WithInfo(4, 3, Artist.Marius_Bota));
+                .WithTemplate("<p class='main-text'>{keyword:Sentinel.}</p><p class='main-text'><b>Response:</b> When you play {self} from your hand, discard the top 2 cards of your deck to reduce its cost by 2.</p><p class='flavor-text'>...the fortress of the dwarves could not be taken by surprise. &ndash;The Hobbit</p>")
+                .WithInfo(4, 3, Artist.Marius_Bota);
             addCard(LotRCard.Ally("Halfling Bounder", Sphere.Lore, 2, 1, 1, 0, 2)
                 .WithTraits("Hobbit.")
                 .WithText("While there is a side quest in the victory display, Halfling Bounder gains: \"Response: Discard Halfling Bounder to cancel the 'when revealed' effects of an encounter card that was just revealed from the encounter deck.\"")
@@ -70,18 +74,20 @@ namespace HallOfBeorn.Models.LotR.Sets.TheSandsOfHarad
                 .WithText("Action: Deal X damage to an enemy engaged with you. X is the number of side quests in the victory display.")
                 .WithFlavor("...the tides of fate had turned against them and their doom was at hand. -The Return of the King")
                 .WithInfo(9, 3, Artist.JB_Casacop));
-            addCard(LotRCard.Attachment("Dwarven Shield", string.Empty, Sphere.Leadership, 2)
+            addAttachment("Dwarven Shield", 2, Sphere.Leadership, false)
                 .WithTraits("Item.", "Armor.")
                 .WithKeywords("Restricted.")
                 .WithText("Attach to a Dwarf hero.\r\nAttached hero gets +1 Defense.\r\nResponse: After attached hero takes damage from an enemy attack, exhaust Dwarven Shield to add 1 resource to attached hero's pool.")
                 .WithFlavor("...each of them had also a short broad sword at his side and a round shield slung at his back.\r\n-The Hobbit")
-                .WithInfo(10, 3, Artist.Mariusz_Gandzel));
-            addCard(LotRCard.Attachment("Mirkwood Long-knife", string.Empty, Sphere.Spirit, 2)
+                .WithTemplate("<p class='main-text'>Attach to a {trait:Dwarf.@Dwarf} hero. {keyword:Restricted.}</p><p class='main-text'>Attached hero gets +1 {Defense}.</p><p class='main-text'><b>Response:</b> After attached hero takes damage from an enemy attack, exhaust {self} to add 1 resource to attached hero's pool.</p><p class='flavor-text'>...each of them had also a short broad sword at his side and a round shield slung at his back.<br>&ndash;The Hobbit</p>")
+                .WithInfo(10, 3, Artist.Mariusz_Gandzel);
+            addAttachment("Mirkwood Long-knife", 2, Sphere.Spirit, false)
                 .WithTraits("Item.", "Weapon.")
                 .WithKeywords("Restricted.")
                 .WithText("Attach to a Silvan hero.\r\nAttached hero gets +1 Willpower and +1 Attack.")
                 .WithFlavor("Legolas had a bow and a quiver, and at his belt a long white knife.\r\n-The Fellowship of the Ring")
-                .WithInfo(11, 3, Artist.Alexandr_Elichev));
+                .WithTemplate("<p class='main-text'>Attach to a {trait:Silvan.@Silvan} hero. {keyword:Restricted.}</p><p class='main-text'>Attached hero gets +1 {Willpower} and +1 {Attack}.</p><p class='flavor-text'>Legolas had a bow and a quiver, and at his belt a long white knife.<br>&ndash;The Fellowship of the Ring</p>")
+                .WithInfo(11, 3, Artist.Alexandr_Elichev);
             addCard(LotRCard.Attachment("The Road Goes Ever On", string.Empty, Sphere.Lore, 0)
                 .WithTraits("Song.")
                 .WithText("Attach to a quest card in play.\r\nResponse: When attached quest is defeated, the first player chooses a player. That player searches his deck for a side quest, adds it to his hand, and shuffles his deck.")

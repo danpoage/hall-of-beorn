@@ -47,5 +47,33 @@ namespace HallOfBeorn.Services.LotR.Search
                 };
             }
         }
+
+        public StringFuzzyFilter(Func<CardScore, Tuple<string, string>> getValues, string target, Func<string, string, bool> compareValues, bool isNegation)
+        {
+            if (string.IsNullOrWhiteSpace(target) || target == defaultValue)
+                return;
+
+            var values = GetStringValues(target, string.Empty);
+
+            if (isNegation)
+            {
+                predicate = (score) =>
+                {
+
+                    var match = values.All(v => !compareValues(getValues(score).Item1, v) && !compareValues(getValues(score).Item2, v));
+                    score.AddScore(match ? 1 : 0);
+                    return match;
+                };
+            }
+            else
+            {
+                predicate = (score) =>
+                {
+                    var match = values.Any(v => compareValues(getValues(score).Item1, v) || compareValues(getValues(score).Item2, v));
+                    score.AddScore(match ? 1 : 0);
+                    return match;
+                };
+            }
+        }
     }
 }

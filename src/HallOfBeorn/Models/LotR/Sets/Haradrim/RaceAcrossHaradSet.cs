@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Sets.Haradrim
 {
-    public class RaceAcrossHarad : CardSet
+    public class RaceAcrossHaradSet : CardSet
     {
         private const string setName = "Race Across Harad";
 
@@ -27,12 +27,13 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithText("Action: Exhaust Kahliel’s Tribesman to choose another Harad character. That character gets +1 Willpower, +1 Attack, and +1 Defense until the end of the phase.")
                 .WithFlavor("But the Haradrim, being now driven to the brink, turned at bay, and they were fierce in despair...\r\n-The Return of the King")
                 .WithInfo(29, 3, Artist.Ryan_Valle));
-            addCard(LotRCard.Attachment("Steed of the North", string.Empty, Sphere.Leadership, 1)
+            addAttachment("Steed of the North", 1, Sphere.Leadership, false)
                 .WithTraits("Mount.")
                 .WithKeywords("Restricted.")
                 .WithText("Attach to a Dúnedain or Ranger hero.\r\nResponse: After you engage an enemy, exhaust Steed of the North to ready attached hero.")
                 .WithFlavor("Their horses were strong and of proud bearing, but rough-haired...\r\n-The Return of the King")
-                .WithInfo(30, 3, Artist.Alvaro_Calvo_Escudero));
+                .WithTemplate("<p class='main-text'>Attach to a {trait:Dúnedain.@Dúnedain} or {trait:Ranger.@Ranger} hero. {keyword:Restricted.}</p><p class='main-text'><b>Response:</b> After you engage an enemy, exhaust {self} to ready attached hero.</p><p class='flavor-text'>Their horses were strong and of proud bearing, but rough-haired...<br>&ndash;The Return of the King</p>")
+                .WithInfo(30, 3, Artist.Alvaro_Calvo_Escudero);
             addCard(LotRCard.Attachment("Mighty Warrior", string.Empty, Sphere.Tactics, 1)
                 .WithTraits("Skill.")
                 .WithText("Attach to a hero. Limit 1 per hero.\r\nAttached hero gains the Warrior trait.\r\nResponse: After you play Mighty Warrior from your hand, draw a card.")

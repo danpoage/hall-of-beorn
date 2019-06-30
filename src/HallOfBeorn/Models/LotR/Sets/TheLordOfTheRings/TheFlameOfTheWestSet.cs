@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
 {
-    public class TheFlameOfTheWest : CardSet
+    public class TheFlameOfTheWestSet : CardSet
     {
         private const string setThePassingOfTheGreyCompany = "The Passing of the Grey Company";
         private const string setTheSiegeOfGondor = "The Siege of Gondor";
@@ -29,12 +29,13 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("Setup: Reduce your threat by 3.\r\nAction: Raise your threat by 3 to ready Éowyn. She gets +9 Attack until the end of the phase. (Limit once per game for the group.)")
                 .WithFlavor("\"But no living man am I! You look upon a woman. Éowyn I am, Éomund's daughter.\"\r\n-The Return of the King")
                 .WithInfo(2, 1, Artist.Magali_Villeneuve));
-            Cards.Add(LotRCard.Hero("Beregond", "", Sphere.Spirit, 10, 0, 1, 4, 4)
+            addHero("Beregond", 10, Sphere.Spirit, 0, 1, 4, 4)
                 .WithTraits("Gondor.", "Warrior.")
                 .WithKeywords("Sentinel.")
                 .WithText("Response: After Beregond defends an attack and takes no damage, reduce the defending player's threat by 1. (Limit once per round.)")
                 .WithFlavor("\"The Lord does not permit those who wear the black and silver to leave their post for any cause...\"\r\n-The Return of the King")
-                .WithInfo(3, 1, Artist.Adam_Lane));
+                .WithTemplate("<p class='main-text'>{keyword:Sentinel.}</p><p class='main-text'><b>Response:</b> After {self} defends an attack and takes no damage, reduce the defending player's threat by 1. (Limit once per round.)</p><p class='flavor-text'>&ldquo;The Lord does not permit those who wear the black and silver to leave their post for any cause...&rdquo;<br>&ndash;The Return of the King</p>")
+                .WithInfo(3, 1, Artist.Adam_Lane);
             Cards.Add(LotRCard.Ally("Grimbold", Sphere.Tactics, 3, 2, 1, 1, 2)
                 .WithUnique()
                 .WithTraits("Rohan.", "Warrior.")
@@ -66,13 +67,13 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("Response: After a sentinel character is declared as a defender, it gets +2 Defense for this attack. If this attack deals no damage, ready the defending character.")
                 .WithFlavor("...but alone in the porch upon the topmost step stood Beregond, clad in the black and silver of the Guard; and he held the door against them.\r\n-The Return of the King")
                 .WithInfo(9, 3, Artist.Adam_Lane));
-            Cards.Add(LotRCard.Attachment("Golden Shield", "", Sphere.Tactics, 1)
-                .WithUnique()
+            addAttachment("Golden Shield", 1, Sphere.Tactics, true)
                 .WithTraits("Item.", "Armor.")
                 .WithKeywords("Restricted.")
                 .WithText("Attach to a Rohan hero.\r\nResponse: After attached hero is declared as a defender, exhaust Golden Shield to add attached hero's Willpower to its Defense for this attack.")
                 .WithFlavor("His golden shield was uncovered, and lo! it shone like an image of the Sun...\r\n-The Return of the King")
-                .WithInfo(10, 3, Artist.Sasha_Jones));
+                .WithTemplate("<p class='main-text'>Attach to a {trait:Rohan} hero. {keyword:Restricted.}</p><p class='main-text'><b>Response:</b> After attached hero is declared as a defender, exhaust {self} to add attached hero's {Willpower} to its {Defense} for this attack.</p><p class='flavor-text'>His golden shield was uncovered, and lo! it shone like an image of the Sun...<br>&ndash;The Return of the King</p>")
+                .WithInfo(10, 3, Artist.Sasha_Jones);
             Cards.Add(LotRCard.Attachment("Livery of the Tower", "", Sphere.Spirit, 0)
                 .WithTraits("Item.", "Armor.")
                 .WithKeywords("Restricted.")

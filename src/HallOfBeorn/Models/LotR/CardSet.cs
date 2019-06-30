@@ -448,22 +448,22 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheLostRealm = new Sets.TheLostRealm.TheLostRealmSet();
         public static CardSet TheWastesOfEriador = new Sets.AngmarAwakened.TheWastesOfEriador();
         public static CardSet EscapeFromMountGram = new Sets.AngmarAwakened.EscapeFromMountGram();
-        public static CardSet AcrossTheEttenmoors = new Sets.AngmarAwakened.AcrossTheEttenmoors();
+        public static CardSet AcrossTheEttenmoors = new Sets.AngmarAwakened.AcrossTheEttenmoorsSet();
         public static CardSet TheTreacheryOfRhudaur = new Sets.AngmarAwakened.TheTreacheryOfRhudaur();
         public static CardSet TheBattleOfCarnDum = new Sets.AngmarAwakened.TheBattleOfCarnDum();
         public static CardSet TheDreadRealm = new Sets.AngmarAwakened.TheDreadRealm();
 
         public static CardSet TheGreyHavens = new Sets.TheGreyHavens.TheGreyHavensSet();
         public static CardSet FlightOfTheStormcaller = new Sets.DreamChaser.FlightOfTheStormcaller();
-        public static CardSet TheThingInTheDepths = new Sets.DreamChaser.TheThingInTheDepths();
-        public static CardSet TempleOfTheDeceived = new Sets.DreamChaser.TempleOfTheDeceived();
+        public static CardSet TheThingInTheDepths = new Sets.DreamChaser.TheThingInTheDepthsSet();
+        public static CardSet TempleOfTheDeceived = new Sets.DreamChaser.TempleOfTheDeceivedSet();
         public static CardSet TheDrownedRuins = new Sets.DreamChaser.TheDrownedRuins();
         public static CardSet AStormOnCobasHaven = new Sets.DreamChaser.AStormOnCobasHavenSet();
         public static CardSet TheCityOfCorsairs = new Sets.DreamChaser.TheCityOfCorsairs();
 
         public static CardSet TheSandsOfHarad = new Sets.TheSandsOfHarad.TheSandsOfHaradSet();
-        public static CardSet TheMumakil = new Sets.Haradrim.TheMumakil();
-        public static CardSet RaceAcrossHarad = new Sets.Haradrim.RaceAcrossHarad();
+        public static CardSet TheMumakil = new Sets.Haradrim.TheMumakilSet();
+        public static CardSet RaceAcrossHarad = new Sets.Haradrim.RaceAcrossHaradSet();
         public static CardSet BeneathTheSands = new Sets.Haradrim.BeneathTheSands();
         public static CardSet TheBlackSerpent = new Sets.Haradrim.TheBlackSerpent();
         public static CardSet TheDungeonsOfCirithGurat = new Sets.Haradrim.TheDungeonsOfCirithGurat();
@@ -486,7 +486,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheRoadDarkens = new Sets.TheLordOfTheRings.TheRoadDarkens();
         public static CardSet TheTreasonOfSaruman = new Sets.TheLordOfTheRings.TheTreasonOfSaruman();
         public static CardSet TheLandOfShadow = new Sets.TheLordOfTheRings.TheLandOfShadow();
-        public static CardSet TheFlameOfTheWest = new Sets.TheLordOfTheRings.TheFlameOfTheWest();
+        public static CardSet TheFlameOfTheWest = new Sets.TheLordOfTheRings.TheFlameOfTheWestSet();
         public static CardSet TheMountainOfFire = new Sets.TheLordOfTheRings.TheMountainOfFire();
 
         public static CardSet TwoPlayerLimitedEditionStarter = new Sets.Starter.TwoPlayerLimitedEditionStarterSet();

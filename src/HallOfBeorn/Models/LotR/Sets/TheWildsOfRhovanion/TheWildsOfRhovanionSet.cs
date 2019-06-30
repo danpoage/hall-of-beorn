@@ -54,8 +54,9 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
             addAttachment("Bow of Yew", 0, Sphere.Tactics, false)
                 .WithTraits("Item.", "Weapon.")
                 .WithKeywords("Restricted.")
-                .WithText("Attach to a Dale or Warrior character.\r\nResponse: After attack character is declared as an attacker, exhaust Bow of Yew to deal 1 damage to the defending enemy.")
+                .WithText("Attach to a Dale or Warrior character.\r\nResponse: After attached character is declared as an attacker, exhaust Bow of Yew to deal 1 damage to the defending enemy.")
                 .WithFlavor("\"They would shoot at us with their great bows of yew...\"\r\n-The Lord of the Eagles, The Hobbit")
+                .WithTemplate("<p class='main-text'>Attach to a {trait:Dale.@Dale} or {trait:Warrior.@Warrior} character. {keyword:Restricted.}</p><p class='main-text'><b>Response:</b> After attached character is declared as an attacker, exhaust {self} to deal 1 damage to the defending enemy.</p><p class='flavor-text'>&ldquo;They would shoot at us with their great bows of yew...&rdquo;<br>&ndash;The Lord of the Eagles, The Hobbit</p>")
                 .WithInfo(9, 3, Artist.Sara_Biddle);
             addAttachment("Map of Rhovanion", 1, Sphere.Lore, false)
                 .WithTraits("Item.")
