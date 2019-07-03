@@ -8,6 +8,7 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
             : base("Vengeance of Mordor Cycle")
         {
             MainProduct = Product.AShadowInTheEast;
+            AddProduct(Product.WrathAndRuin);
         }
     }
 }

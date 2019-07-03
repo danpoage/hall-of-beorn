@@ -135,6 +135,7 @@ namespace HallOfBeorn.Models.LotR
 
         //A Shadow in the East and Vengeance of Mordor Cycle
         public static Product AShadowInTheEast = new Products.Deluxe.AShadowInTheEastProduct();
+        public static Product WrathAndRuin = new Products.AdventurePack.WrathAndRuinProduct();
 
         //The Hobbit Saga
         public static Product TheHobbitOverHillAndUnderHill = new Products.Saga.TheHobbitOverHillAndUnderHillProduct();

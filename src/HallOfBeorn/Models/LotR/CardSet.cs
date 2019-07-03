@@ -296,6 +296,7 @@ namespace HallOfBeorn.Models.LotR
             Add(TheFateOfWilderland);
 
             Add(AShadowInTheEast);
+            Add(WrathAndRuin);
 
             Add(TheHobbitOverHillAndUnderHill);
             Add(TheHobbitOnTheDoorstep);
@@ -478,6 +479,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheFateOfWilderland = new Sets.EredMithrin.TheFateOfWilderlandSet();
 
         public static CardSet AShadowInTheEast = new Sets.AShadowInTheEast.AShadowInTheEastSet();
+        public static CardSet WrathAndRuin = new Sets.VengeanceOfMordor.WrathAndRuinSet();
 
         public static CardSet TheHobbitOverHillAndUnderHill = new Sets.TheHobbit.OverHillandUnderHillSet();
         public static CardSet TheHobbitOnTheDoorstep = new Sets.TheHobbit.OntheDoorstepSet();
