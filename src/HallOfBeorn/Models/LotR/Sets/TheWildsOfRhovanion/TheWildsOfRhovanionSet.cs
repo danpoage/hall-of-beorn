@@ -69,6 +69,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
                 .WithKeywords("Guarded (enemy or location).")
                 .WithText("Attach to a hero.\r\nAttached hero gets +2 Willpower and collects an additional resource during the resource phase.")
                 .WithFlavor("...the necklace of Girion, Lord of Dale, made of five hundred emeralds green as grass, which he gave for the arming of his eldest son...\r\n-The Hobbit")
+                .WithTemplate("<p class='main-text'>{keyword:Guarded (enemy or location).}</p><p class='main-text'>Attach to a hero.</p><p class='main-text'>Attached hero gets +2 {Willpower} and collects an additional resource during the resource phase.</p><p class='flavor-text'>...the necklace of Girion, Lord of Dale, made of five hundred emeralds green as grass, which he gave for the arming of his eldest son...&ndash;The Hobbit</p>")
                 .WithInfo(11, 3, Artist.Drazenka_Kimpel));
             addCard(LotRCard.Event("Traffic from Dale", string.Empty, Sphere.Leadership, 1)
                 .WithText("Planning Action: Choose a Dale hero you control. Add 1 resource to its pool for each character you control with a player attachment. You can only play 1 copy of Traffic from ~Dale each round.")

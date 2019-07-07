@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Sets.Haradrim
 {
-    public class BeneathTheSands : CardSet
+    public class BeneathTheSandsSet : CardSet
     {
         private const string setName = "Beneath the Sands";
 
@@ -22,11 +22,12 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithText("Response: After Hirgon quests successfully, play a Tactics ally from your hand, reducing its cost by 1 (to a minimum of 1). Then, you may raise your threat by 1 to give that ally +1 Attack and +1 Defense until the end of the round.")
                 .WithFlavor("\"Hirgon I am, errand-rider of Denethor, who bring you this token of war.\"\r\n-The Return of the King")
                 .WithInfo(55, 1, Artist.Aleksander_Karcz));
-            addCard(LotRCard.Attachment("Haradrim Spear", string.Empty, Sphere.Leadership, 2)
+            addAttachment("Haradrim Spear", 2, Sphere.Leadership, false)
                 .WithTraits("Item.", "Weapon.")
                 .WithKeywords("Restricted.")
                 .WithText("Attach to a Haradrim character.\r\nAttached character gets +1 Attack.\r\nResponse: After attached character is declared as an attacker, it gets +3 Attack for this attack. After this attack resolves, discard Haradrim Spear.")
-                .WithInfo(56, 3, Artist.Lucas_Durham));
+                .WithTemplate("<p class='main-text'>Attach to a {trait-character:Harad.@Harad} character. {keyword:Restricted.}</p><p class='main-text'>Attached character gets +1 {Attack}.</p><p class='main-text'><b>Response:</b> After attached character is declared as an attacker, it gets +3 {Attack} for this attack. After this attack resolves, discard {self}.</p>")
+                .WithInfo(56, 3, Artist.Lucas_Durham);
             addCard(LotRCard.Event("Hunting Party", string.Empty, Sphere.Leadership, 1)
                 .WithText("Play only if you control a unique character with the Warrior trait and another unique character with the Scout trait.\r\nResponse: After the players have committed characters to the quest, discard a non-unique enemy in the staging area. Then, reveal an encounter card.")
                 .WithInfo(57, 3, Artist.Andreia_Ugrai));

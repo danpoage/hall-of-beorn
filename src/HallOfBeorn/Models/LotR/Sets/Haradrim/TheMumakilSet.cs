@@ -61,12 +61,12 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
             addCard(LotRCard.Event("Coney in a Trap", string.Empty, Sphere.Lore, 1)
                 .WithText("Play only if you control a unique character with the Ranger trait and another unique character with the Warrior trait.\r\nResponse: After you engage an enemy, that enemy cannot attack you until the end of the round.")
                 .WithInfo(9, 3, Artist.Jon_Bosco));
-            addCard(LotRCard.Attachment("Kahliel's Headdress", string.Empty, Sphere.Neutral, 3)
-                .WithUnique()
+            addAttachment("Kahliel's Headdress", 3, Sphere.Neutral, true)
                 .WithTraits("Artifact.", "Item.")
                 .WithKeywords("Restricted.")
                 .WithText("Attach to Kahliel. Each Harad character gets +1 Willpower.\r\nRefresh Action: Exhaust Kahliel's Headdress to shuffle the topmost Harad ally in your discard pile into your deck.")
-                .WithInfo(10, 3, Artist.Lucas_Durham));
+                .WithTemplate("<p class='main-text'>Attach to {title:Kahliel}. {keyword:Restricted.}</p><p class='main-text'>Each {trait:Harad.@Harad} character gets +1 {Willpower}.</p><p class='main-text'><b>Refresh Action:</b> Exhaust {self} to shuffle the topmost {trait-ally:Harad.@Harad} ally in your discard pile into your deck.</p>")
+                .WithInfo(10, 3, Artist.Lucas_Durham);
             addCard(LotRCard.Objective("Horse-hair Lasso", string.Empty, setName)
                 .WithTraits("Capture.")
                 .WithText("Response: After the attached enemy is dealt any amount of damage, the engaged player shuffles his deck and discards the top card. If the discarded card’s cost is equal to or greater than the attached enemy’s remaining hit points, add Horse-hair Lasso and attached enemy to the victory display.")

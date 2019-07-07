@@ -74,12 +74,13 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithFlavor("His golden shield was uncovered, and lo! it shone like an image of the Sun...\r\n-The Return of the King")
                 .WithTemplate("<p class='main-text'>Attach to a {trait:Rohan} hero. {keyword:Restricted.}</p><p class='main-text'><b>Response:</b> After attached hero is declared as a defender, exhaust {self} to add attached hero's {Willpower} to its {Defense} for this attack.</p><p class='flavor-text'>His golden shield was uncovered, and lo! it shone like an image of the Sun...<br>&ndash;The Return of the King</p>")
                 .WithInfo(10, 3, Artist.Sasha_Jones);
-            Cards.Add(LotRCard.Attachment("Livery of the Tower", "", Sphere.Spirit, 0)
+            addAttachment("Livery of the Tower", 0, Sphere.Spirit, false)
                 .WithTraits("Item.", "Armor.")
                 .WithKeywords("Restricted.")
                 .WithText("Attach to a Gondor hero.\r\nResponse: Spend X resources from attached hero's pool to cancel X damage just dealt to attached hero.")
                 .WithFlavor("This was the livery of the heirs of Elendil, and none wore it now in all Gondor, save the Guards of the Citadel...\r\n-The Return of the King")
-                .WithInfo(11, 3, Artist.Suzanne_Helmigh));
+                .WithTemplate("<p class='main-text'>Attach to {trait-hero:Gondor.@Gondor} hero. {keyword:Restricted.}</p><p class='main-text'><b>Response:</b> Spend X resources from attached hero's pool to cancel X damage just dealt to attached hero.</p><p class='flavor-text'>This was the livery of the heirs of Elendil, and none wore it now in all Gondor, save the Guards of the Citadel...<br>&ndash;The Return of the King</p>")
+                .WithInfo(11, 3, Artist.Suzanne_Helmigh);
             Cards.Add(LotRCard.Attachment("Roheryn", "", Sphere.Leadership, 2)
                 .WithUnique()
                 .WithTraits("Mount.")

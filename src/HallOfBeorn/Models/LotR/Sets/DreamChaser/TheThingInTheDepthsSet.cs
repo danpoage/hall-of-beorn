@@ -30,6 +30,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithTraits("Dúnedain.", "Noble.")
                 .WithKeywords("Sentinel.")
                 .WithText("Action: Spend 1 Lore resource to look at a facedown shadow card dealt to an engaged enemy. If that card has a shadow effect, Eldahir gets +2 Defense until the end of the phase. Any player may trigger this action. (Limit once per phase.)")
+                .WithTemplate("<p class='main-text'>{keyword:Sentinel.}</p><p class='main-text'><b>Action:</b> Spend 1 {sphere:Lore} resource to look at a facedown shadow card dealt to an engaged enemy. If that card has a shadow effect, {self} gets +2 {Defense} until the end of the phase. Any player may trigger this action. (Limit once per phase.)</p>")
                 .WithInfo(31, 3, Artist.Kim_Sokol));
             Cards.Add(LotRCard.Event("Captain's Wisdom", "", Sphere.Leadership, 0)
                 .WithText("Resource Action: Exhaust a Noble hero you control to add 2 resources to that hero's resource pool.")

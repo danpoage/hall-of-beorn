@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Sets.Haradrim
 {
-    public class TheCrossingsOfPoros : CardSet
+    public class TheCrossingsOfPorosSet : CardSet
     {
         private const string setNameCrossings = "The Crossings of Poros";
         private const string setNameMountains = "Mountains of Shadow";
@@ -58,11 +58,12 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithText("Attach to a hero. Limit 1 per hero and 1 per deck.\r\nAction: Exhaust Magic ~Ring and raise your threat by 1 to (choose 1): heal 1 damage from attached hero, add 1 resource to attached hero's pool, or ready attached hero.")
                 .WithFlavor("\"In Eregion long ago many Elven-rings were made, magic rings as you call them, and they were, of course, of various kinds...\"\r\n-Gandalf, The Fellowship of the Ring")
                 .WithInfo(143, 3, Artist.Lucas_Durham));
-            addCard(LotRCard.Event("Wind from the Sea", string.Empty, Sphere.Neutral, byte.MaxValue)
+            addEvent("Wind from the Sea", Card.VALUE_NA, Sphere.Neutral)
                 .WithKeywords("Encounter.")
                 .WithText("When Revealed: Ready each hero committed to the quest and remove Wind from the Sea from the game.")
                 .WithShadow("Shadow: Ready the defending character.")
-                .WithInfo(144, 3, Artist.Davis_Engel));
+                .WithTemplate("<p class='main-text'>{keyword:Encounter.}</p><p class='main-text'><b>When Revealed:</b> Ready each hero committed to the quest and remove {self} from the game.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Ready the defending character.</p>")
+                .WithInfo(144, 3, Artist.Davis_Engel);
             addObjectiveAlly("Poros Garrison", setNameCrossings, 3, 4, 3, 6)
                 .WithUnique().WithTraits("Gondor.")
                 .WithText("The first player gains control of Poros Garrison.\r\nImmune to player card effects.\r\nYou can optionally engage an additional enemy during the encounter phase.\r\nIf Poros Garrison leaves play, the players lose the game.")

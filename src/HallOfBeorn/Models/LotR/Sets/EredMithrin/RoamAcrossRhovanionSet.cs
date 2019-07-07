@@ -29,12 +29,13 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTraits("Item.", "Armor.")
                 .WithKeywords("Restricted.")
                 .WithText("Attach to a Leadership or Noble character. Limit 1 per character\r\nAttached character gets +2 Defense and +2 hit points.")
-                .WithTemplate("<p class='main-text'>Attach to a {sphere:Leadership} or {trait:Noble.@Noble} character. {keyword:Restricted.}<br>Limit 1 per character.</p><p>Attached character gets +2 {Defense} and +2 hit points.</p><p class='flavor-text'>&ldquo;May it keep you well!&rdquo; said Théoden. &ldquo;It was made for me in Thengel's day, while still I was a boy.&rdquo;<br>&ndash;The Two Towers</p>")
+                .WithTemplate("<p class='main-text'>Attach to a {sphere:Leadership} or {trait:Noble.@Noble} character. {keyword:Restricted.} Limit 1 per character.</p><p>Attached character gets +2 {Defense} and +2 hit points.</p><p class='flavor-text'>&ldquo;May it keep you well!&rdquo; said Théoden. &ldquo;It was made for me in Thengel's day, while still I was a boy.&rdquo; &ndash;The Two Towers</p>")
                 .WithInfo(28, 3, Artist.Aleksander_Karcz);
             addAttachment("Glamdring", 1, Sphere.Lore, true)
                 .WithTraits("Artifact.", "Item.", "Weapon.")
                 .WithKeywords("Guarded (enemy or location).", "Restricted.")
                 .WithText("Attach to a hero or Gandalf.\r\nAttached character gets +2 Attack.\r\nResponse: After attached character destroys an enemy, draw 1 card.")
+                .WithTemplate("<p class='main-text'>{keyword:Guarded (enemy or location).}</p><p class='main-text'>Attach to a hero or {title:Gandalf}. {keyword:Restricted.}</p><p class='main-text'>Attached character gets +2 {Attack}.</p><b>Response:</b> After attached character destroys an enemy, draw 1 card.</p>")
                 .WithInfo(29, 3, Artist.Tropa_Entertainment);
             addAttachment("Woodmen's Path", 1, Sphere.Lore, false)
                 .WithTraits("Condition.")
@@ -63,6 +64,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTraits("Creature.", "Eagle.")
                 .WithKeywords("Encounter.", "Surge.")
                 .WithText("Cannot have restricted attachments.\r\nWhen Revealed: The first player chooses a player to take control of Eagle of the North. The chosen player may choose and discard a non-unique enemy in the staging area.")
+                .WithTemplate("<p class='main-text'>{keyword:Encounter.} {keyword:Surge.}</p><p class='main-text'>Cannot have restricted attachments.</p><p class='main-text'><b>When Revealed:</b> The first player chooses a player to take control of {self}. The chosen player may choose and discard a non-unique enemy in the staging area.</p>")
                 .WithInfo(35, 3, Artist.Alvaro_Calvo_Escudero);
             addObjective("Durin's Key", setName)
                 .WithUnique()

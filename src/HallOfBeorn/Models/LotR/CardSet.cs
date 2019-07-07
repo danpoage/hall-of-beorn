@@ -465,10 +465,10 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheSandsOfHarad = new Sets.TheSandsOfHarad.TheSandsOfHaradSet();
         public static CardSet TheMumakil = new Sets.Haradrim.TheMumakilSet();
         public static CardSet RaceAcrossHarad = new Sets.Haradrim.RaceAcrossHaradSet();
-        public static CardSet BeneathTheSands = new Sets.Haradrim.BeneathTheSands();
+        public static CardSet BeneathTheSands = new Sets.Haradrim.BeneathTheSandsSet();
         public static CardSet TheBlackSerpent = new Sets.Haradrim.TheBlackSerpent();
-        public static CardSet TheDungeonsOfCirithGurat = new Sets.Haradrim.TheDungeonsOfCirithGurat();
-        public static CardSet TheCrossingsOfPoros = new Sets.Haradrim.TheCrossingsOfPoros();
+        public static CardSet TheDungeonsOfCirithGurat = new Sets.Haradrim.TheDungeonsOfCirithGuratSet();
+        public static CardSet TheCrossingsOfPoros = new Sets.Haradrim.TheCrossingsOfPorosSet();
 
         public static CardSet TheWildsOfRhovanion = new Sets.TheWildsOfRhovanion.TheWildsOfRhovanionSet();
         public static CardSet TheWitheredHeath = new Sets.EredMithrin.TheWitheredHeathSet();

@@ -62,7 +62,8 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
             addAttachment("The Arkenstone", 1, Sphere.Neutral, true)
                 .WithTraits("Artifact.", "Item.")
                 .WithKeywords("Guarded (enemy or location).")
-                .WithText("Attach to a hero.\r\nEach unique character you control gains +1 Willpower.\r\nAction: Reduce your threat by 2 to attach The Arkenstone to a hero controller by another player and raise that player's threat by 2. (Limit once per round.)")
+                .WithText("Attach to a hero.\r\nEach unique character you control gains +1 Willpower.\r\nAction: Reduce your threat by 2 to attach The Arkenstone to a hero controlled by another player and raise that player's threat by 2. (Limit once per round.)")
+                .WithTemplate("<p class='main-text'>{keyword:Guarded (enemy or location).}</p><p class='main-text'>Attach to a hero.</p><p class='main-text'>Each unique character you control gains +1 {Willpower}.</p><p class='main-text'><b>Action:</b> Reduce your threat by 2 to attach {self} to a hero controlled by another player and raise that player's threat by 2. (Limit once per round.)</p>")
                 .WithInfo(10, 3, Artist.Emilio_Rodriguez);
             addEnemy("Cold-Drake", setName, 10, 1, 6, 1, 18)
                 .WithUnique()

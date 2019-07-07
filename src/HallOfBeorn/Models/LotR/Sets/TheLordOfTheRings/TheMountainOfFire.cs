@@ -32,6 +32,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithKeywords("Sentinel.")
                 .WithText("The first player gains control of Aragorn.\r\nAction: Spend 1 resource from Aragorn's pool to ready him. (Limit once per phase.)\r\nIf Aragorn leaves play the players lose the game.")
                 .WithFlavor("\"As I have begun, so I will go on.\"\r\n-The Return of the King")
+                .WithTemplate("<p class='main-text'>{keyword:Sentinel.} The first player gains control of {self}.</p><p class='main-text'><b>Action:</b> Spend 1 resource from {self}'s pool to ready him. (Limit once per phase.)</p><p class='main-text'><b>If {self} leaves play the players lose the game.</b></p><p class='flavor-text'>&ldquo;As I have begun, so I will go on.&rdquo;<br>&ndash;The Return of the King</p>")
                 .WithInfo(2, 1, Artist.David_A_Nash));
             addCard(LotRCard.Hero("Éomer", string.Empty, Sphere.Leadership, 10, 1, 3, 2, 4)
                 .WithTraits("Rohan.", "Noble.", "Warrior.")
@@ -77,6 +78,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithKeywords("Restricted.")
                 .WithText("Attach to a Rohan hero.\r\nResponse: After attached hero is declared as an attacker, exhaust Gúthwinë to give that hero +2 Attack for this attack. If this attack destroys an enemy, return a Rohan ally from your discard pile to your hand.")
                 .WithFlavor("\"Gúthwinë!\" cried Éomer. \"Gúthwinë for the Mark!\"\r\n-The Two Towers")
+                .WithTemplate("<p class='main-text'>Attach to a {trait:Rohan.@Rohan} hero. {keyword:Restricted.}</p><p class='main-text'><b>Response:</b> After attached hero is declared as an attacker, exhaust {self} to give that hero +2 {Attack} for this attack. If this attack destroys an enemy, return a {trait-ally:Rohan.@Rohan} ally from your discard pile to your hand.</p><p class='flavor-text'>&ldquo;Gúthwinë!&rdquo; cried Éomer. &ldquo;Gúthwinë for the Mark!&rdquo;<br>&ndash;The Two Towers</p>")
                 .WithInfo(11, 3, Artist.Kamila_Tzutenberg));
             addCard(LotRCard.Attachment("Friend of Friends", string.Empty, Sphere.Neutral, 1)
                 .WithTraits("Condition.")

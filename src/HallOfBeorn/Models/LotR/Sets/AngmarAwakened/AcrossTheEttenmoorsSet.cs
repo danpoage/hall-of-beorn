@@ -41,6 +41,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
             Cards.Add(LotRCard.PlayerSideQuest("Delay the Enemy", "", Sphere.Tactics, 0, 8)
                 .WithKeywords("Battle.")
                 .WithText("Limit 1 per deck.\r\nResponse: When this stage is defeated, each player may choose and discard a non-unique enemy engaged with him.")
+                //.WithTemplate("<p class='main-text'>Limit 1 per deck.</p><p class='main-text'>{keyword:Battle.} <i>(Characters use their {Attack} instead of {Willpower} when questing here.)</i></p><p class='main-text'><b>Response:</b> When this stage is defeated, each player may choose and discard a non-unique enemy engaged with him.</p>{victory:1}")
                 .WithVictoryPoints(1)
                 .WithInfo(58, 3, Artist.Mark_Behm));
             Cards.Add(LotRCard.Attachment("Steed of Imladris", "", Sphere.Spirit, 1)
