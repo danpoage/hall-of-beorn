@@ -761,7 +761,7 @@
     <Compile Include="Models\LotR\Sets\AngmarAwakened\EscapeFromMountGram.cs" />
     <Compile Include="Models\LotR\Sets\TheHobbit\FliesAndSpidersNightmare.cs" />
     <Compile Include="Models\LotR\Sets\KhazadDum\FlightFromMoriaNightmare.cs" />
-    <Compile Include="Models\LotR\Sets\DreamChaser\FlightOfTheStormcaller.cs" />
+    <Compile Include="Models\LotR\Sets\DreamChaser\FlightOfTheStormcallerSet.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\FlightToTheFordNightmare.cs" />
     <Compile Include="Models\LotR\Sets\PrintOnDemand\FogOnTheBarrowDowns.cs" />
     <Compile Include="Models\LotR\Sets\Dwarrowdelf\FoundationsOfStone.cs" />

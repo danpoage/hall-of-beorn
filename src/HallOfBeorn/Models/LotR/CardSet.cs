@@ -455,7 +455,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheDreadRealm = new Sets.AngmarAwakened.TheDreadRealm();
 
         public static CardSet TheGreyHavens = new Sets.TheGreyHavens.TheGreyHavensSet();
-        public static CardSet FlightOfTheStormcaller = new Sets.DreamChaser.FlightOfTheStormcaller();
+        public static CardSet FlightOfTheStormcaller = new Sets.DreamChaser.FlightOfTheStormcallerSet();
         public static CardSet TheThingInTheDepths = new Sets.DreamChaser.TheThingInTheDepthsSet();
         public static CardSet TempleOfTheDeceived = new Sets.DreamChaser.TempleOfTheDeceivedSet();
         public static CardSet TheDrownedRuins = new Sets.DreamChaser.TheDrownedRuins();

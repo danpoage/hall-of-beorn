@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
 {
-    public class FlightOfTheStormcaller : CardSet
+    public class FlightOfTheStormcallerSet : CardSet
     {
         private const string setName = "Flight of the Stormcaller";
 
@@ -53,11 +53,11 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithText("Response: When a shadow card increases an enemy's Attack by any amount, increase the defending character's Defense by 3 for that attack. Then, the players as a group may spend 2 Tactics resources to ready the defending character and give it +3 Attack for its next attack this phase.")
                 .WithFlavor("...the tides of fate had turned against them and their doom was at hand.\r\n-The Return of the King")
                 .WithInfo(7, 3, Artist.Sam_Lamont));
-            Cards.Add(LotRCard.Ally("Imladris Caregiver", Sphere.Lore, 2, 1, 0, 1, 2)
+            addAlly("Imladris Caregiver", 2, Sphere.Lore, false, 1, 0, 1, 2)
                 .WithTraits("Noldor.", "Healer.")
-                .WithText("Action: Discard a card from your hand to heal 1 damage on any characer. (Limit twice per round).")
+                .WithText("Action: Discard a card from your hand to heal 1 damage on any character. (Limit twice per round).")
                 .WithFlavor("\"You are in Rivendell, and you need not worry about anything for the present.\"\r\n-Gandalf, The Fellowship of the Ring")
-                .WithInfo(8, 3, Artist.Aleksander_Karcz));
+                .WithInfo(8, 3, Artist.Aleksander_Karcz);
             Cards.Add(LotRCard.Event("Heed the Dream", "", Sphere.Lore, 1)
                 .WithText("Action: Choose a player. That player searches the top 5 cards of his deck for a card, adds it to his hand, and shuffles his deck. Then, players as a group may spend 3 Leadership resources to have that player search his deck for another card, add it to his hand, and shuffle his deck.")
                 .WithInfo(9, 3, Artist.Joshua_Cairos));
