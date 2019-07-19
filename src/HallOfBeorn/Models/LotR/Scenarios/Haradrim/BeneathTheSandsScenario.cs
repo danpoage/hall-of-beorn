@@ -14,6 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Haradrim
             GroupName = "Haradrim";
             Number = 3;
 
+            RulesUrl = "https://images-cdn.fantasyflightgames.com/filer_public/a5/a8/a5a88cea-5920-4c3c-b9c0-aa8d7bd3c455/mec58_web_beneath_the_sands-rules.pdf";
             QuestCompanionSlug = "haradrim-cycle-quest-beneath-the-sands";
             DifficultyRating = 6.0f;
             Votes = 3;

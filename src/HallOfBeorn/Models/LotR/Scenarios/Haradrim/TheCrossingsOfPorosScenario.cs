@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Haradrim
             GroupName = "Haradrim";
             Number = 6;
 
-            RulesUrl = string.Empty;
+            RulesUrl = "https://images-cdn.fantasyflightgames.com/filer_public/32/39/3239576b-d63a-4b52-a07c-a66453424f63/mec61_web_the_crossing_of_poros-rules.pdf";
             QuestCompanionSlug = "haradrim-cycle-quest-the-crossing-of-poros";
             DifficultyRating = 8.0f;
             Votes = 5;

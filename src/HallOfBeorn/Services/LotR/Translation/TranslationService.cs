@@ -88,7 +88,7 @@ namespace HallOfBeorn.Services.LotR.Translation
 
         public string EnglishCardTypeName(Language lang, CardType type)
         {
-            return cardTypeNameMap.GetEnglish(lang, type.ToString());
+            return cardTypeNameMap.GetEnglish(lang, Enum.GetName(typeof(CardType), type));
         }
 
         public string EnglishKeyword(Language lang, string keyword)

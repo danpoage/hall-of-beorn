@@ -94,6 +94,7 @@ namespace HallOfBeorn.Handlers.LotR
                 viewModel.ShadowEffects.Add(CardEffect.Parse(_statService, card, card.Shadow));
 
             viewModel.CardTypeName = _translationService.TranslateCardTypeName(lang, viewModel.CardType);
+            var x = viewModel.CardTypeName;
         }
     }
 }

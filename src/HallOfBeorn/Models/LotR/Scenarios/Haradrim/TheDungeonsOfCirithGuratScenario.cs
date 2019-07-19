@@ -16,7 +16,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Haradrim
             GroupName = "Haradrim";
             Number = 5;
 
-            RulesUrl = string.Empty;
+            RulesUrl = "https://images-cdn.fantasyflightgames.com/filer_public/bf/7c/bf7c5348-f104-4efe-a619-5a00a256b157/mec60_web_the_dungeons_of_cirith-rules.pdf";
             QuestCompanionSlug = "haradrim-cycle-quest-the-dungeons-of-cirith-gurat";
             DifficultyRating = 6.7f;
             Votes = 3;

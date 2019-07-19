@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models
     public class TranslationMap
     {
         public TranslationMap()
-            : this(null)
+            : this((s) => s)
         {
         }
 
@@ -36,13 +36,20 @@ namespace HallOfBeorn.Models
         private readonly Dictionary<Language, Dictionary<string, string>> reverseRawMap = new Dictionary<Language, Dictionary<string, string>>();
         private readonly Dictionary<Language, Dictionary<string, string>> reverseNormalMap = new Dictionary<Language, Dictionary<string, string>>();
 
+        private string getFormattedString(string s)
+        {
+            return format != null ?
+                format(s)
+                : s;
+        }
+
         public void Add<T>(Language lang, T english, string translation)
             where T: class
         {
             if (lang == Language.EN)
                 return;
 
-            var formatted = format != null ? format(english.ToString()) : english.ToString();
+            var formatted = getFormattedString(english.ToString());
 
             var normalizedEnglish = formatted.NormalizeCaseSensitiveString();
             var normalizedTranslation = formatted.NormalizeCaseSensitiveString();
@@ -63,7 +70,9 @@ namespace HallOfBeorn.Models
         public string GetTranslation(Language lang, string english)
         {
             if (lang == Language.EN)
-                return english;
+            {
+                return getFormattedString(english);
+            }
 
             return forwardRawMap[lang].ContainsKey(english) ?
                 forwardNormalMap[lang][english]
@@ -75,7 +84,9 @@ namespace HallOfBeorn.Models
             var norm = english.NormalizeCaseSensitiveString();
 
             if (lang == Language.EN)
-                return norm;
+            {
+                return getFormattedString(norm);
+            }
 
             return forwardNormalMap[lang].ContainsKey(norm) ?
                 forwardNormalMap[lang][norm]
@@ -85,7 +96,9 @@ namespace HallOfBeorn.Models
         public string GetEnglish(Language lang, string translation)
         {
             if (lang == Language.EN)
-                return translation;
+            {
+                return getFormattedString(translation);
+            }
 
             return reverseRawMap.ContainsKey(lang) && reverseRawMap[lang].ContainsKey(translation) ?
                 reverseRawMap[lang][translation]
@@ -97,7 +110,9 @@ namespace HallOfBeorn.Models
             var norm = translation.NormalizeCaseSensitiveString();
 
             if (lang == Language.EN)
-                return norm;
+            {
+                return getFormattedString(norm);
+            }
 
             return reverseNormalMap.ContainsKey(lang) && reverseNormalMap[lang].ContainsKey(norm) ?
                 reverseNormalMap[lang][norm]

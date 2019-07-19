@@ -14,6 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Haradrim
             GroupName = "Haradrim";
             Number = 4;
 
+            RulesUrl = "https://images-cdn.fantasyflightgames.com/filer_public/93/f7/93f700b6-5273-4d47-9e8a-76b2a2259d7a/mec59_web_the_black_serpent-rules.pdf";
             QuestCompanionSlug = "haradrim-cycle-quest-the-black-serpent";
             DifficultyRating = 7.3f;
             Votes = 3;
