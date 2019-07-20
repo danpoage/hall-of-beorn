@@ -7,6 +7,7 @@ using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.ViewModels;
 using HallOfBeorn.Services.LotR.Categories;
+using HallOfBeorn.Services.LotR.RingsDb;
 
 namespace HallOfBeorn.Services.LotR.Scenarios
 {
@@ -15,11 +16,13 @@ namespace HallOfBeorn.Services.LotR.Scenarios
         public ScenarioService(ICategoryService<PlayerCategory> playerCategoryService, 
             ICategoryService<EncounterCategory> encounterCategoryService,
             ICategoryService<QuestCategory> questCategoryService,
+            IRingsDbService ringsDbService,
             ProductRepository productRepository, ICardRepository<LotRCard> cardRepository)
         {
             _playerCategoryService = playerCategoryService;
             _encounterCategoryService = encounterCategoryService;
             _questCategoryService = questCategoryService;
+            _ringsDbService = ringsDbService;
 
             this.cardRepository = cardRepository;
             this.cards = cardRepository.Cards().ToList();
@@ -60,6 +63,7 @@ namespace HallOfBeorn.Services.LotR.Scenarios
         private readonly ICategoryService<PlayerCategory> _playerCategoryService;
         private readonly ICategoryService<EncounterCategory> _encounterCategoryService;
         private readonly ICategoryService<QuestCategory> _questCategoryService;
+        private readonly IRingsDbService _ringsDbService;
         private readonly ICardRepository<LotRCard> cardRepository;
         private readonly IList<LotRCard> cards;
         private readonly IDictionary<string, List<LotRCard>> cardsByEncounterSet = new Dictionary<string, List<LotRCard>>();
@@ -246,9 +250,20 @@ namespace HallOfBeorn.Services.LotR.Scenarios
             return scenario.ScenarioCards.Any(x => x.Card.Slug == cardSlug);
         }
 
-        public IEnumerable<Scenario> AssociatedScenarios(string cardSlug, CardType cardType)
+        private void addAssociatedScenario(Dictionary<string, Tuple<Scenario, double>> map, Scenario scenario, double score)
         {
-            var associated = new Dictionary<string, Scenario>();
+            if (!map.ContainsKey(scenario.Title))
+            {
+                map[scenario.Title] = new Tuple<Scenario,double>(scenario, score);
+            } else {
+                var existingScore = map[scenario.Title].Item2;
+                map[scenario.Title] = new Tuple<Scenario,double>(scenario, existingScore + score);
+            }
+        }
+
+        public IEnumerable<Tuple<Scenario, double>> AssociatedScenarios(string cardSlug, CardType cardType, double score)
+        {
+            var map = new Dictionary<string, Tuple<Scenario, double>>();
 
             foreach (var group in ScenarioGroups())
             {
@@ -258,20 +273,30 @@ namespace HallOfBeorn.Services.LotR.Scenarios
                     {
                         if (scenario.QuestCards.Any(qc => qc.Quest.Slug == cardSlug))
                         {
-                            associated[scenario.Title] = scenario;
+                            addAssociatedScenario(map, scenario, score);
                         }
                     }
-                    else
+                    else if (cardType.IsEncounterCard())
                     {
                         if (scenario.ScenarioCards.Any(sc => sc.Card.Slug == cardSlug))
                         {
-                            associated[scenario.Title] = scenario;
+                            addAssociatedScenario(map, scenario, score);
+                        }
+                    }
+                    else if (cardType.IsPlayerCard())
+                    {
+                        foreach (var deckId in scenario.RelatedDecks)
+                        {
+                            if (_ringsDbService.DeckIncludesCard(deckId, cardSlug))
+                            {
+                                addAssociatedScenario(map, scenario, score);
+                            }
                         }
                     }
                 }
             }
 
-            return associated.Values;
+            return map.Values;
         }
 
         public bool HasSetType(LotRCard card, SetType? setType)

@@ -35,6 +35,7 @@ namespace HallOfBeorn.Models.LotR
         private readonly Dictionary<string, Tuple<byte, byte, byte>> cardCountMap = new Dictionary<string, Tuple<byte, byte, byte>>();
 
         private readonly List<Link> _playLinks = new List<Link>();
+        private readonly Dictionary<string, string> _relatedDecks = new Dictionary<string, string>();
 
         private const string DarklingDoorLogo = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Partners/Darkling-Door.png";
         private const string TheWhiteTowerLogo = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Partners/The-White-Tower.png";
@@ -180,6 +181,16 @@ namespace HallOfBeorn.Models.LotR
             excludedNightmareModeCards[slug] = numberExcluded;
         }
 
+        protected void AddRelatedDeck(string deckId, string title)
+        {
+            if (_relatedDecks.ContainsKey(deckId))
+            {
+                return;
+            }
+
+            _relatedDecks[deckId] = title;
+        }
+
         public int Number { get; set; }
         public string GroupName { get; set; }
         public bool IsSubGroup { get; set; }
@@ -210,6 +221,7 @@ namespace HallOfBeorn.Models.LotR
         public string RulesReferenceLabel { get; protected set; }
 
         public IEnumerable<Link> PlayLinks { get { return _playLinks; } }
+        public IEnumerable<string> RelatedDecks { get { return _relatedDecks.Keys; } }
 
         public ScenarioCard CampaignCard
         {

@@ -56,12 +56,12 @@ namespace HallOfBeorn
             var questCategoryService = new QuestCategoryService(cardRepository);
             System.Web.HttpContext.Current.Application[LotRServiceNames.QuestCategoryService] = questCategoryService;
 
-            var scenarioService = new ScenarioService(playerCategoryService, encounterCategoryService, questCategoryService, 
-                productRepository, cardRepository);
-            System.Web.HttpContext.Current.Application[LotRServiceNames.ScenarioService] = scenarioService;
-
             var ringsDbService = new RingsDbService(cardRepository);
             System.Web.HttpContext.Current.Application[LotRServiceNames.RingsDbService] = ringsDbService;
+
+            var scenarioService = new ScenarioService(playerCategoryService, encounterCategoryService, questCategoryService, 
+                ringsDbService, productRepository, cardRepository);
+            System.Web.HttpContext.Current.Application[LotRServiceNames.ScenarioService] = scenarioService;
 
             var noteService = new NoteService();
             System.Web.HttpContext.Current.Application[LotRServiceNames.NoteService] = noteService;

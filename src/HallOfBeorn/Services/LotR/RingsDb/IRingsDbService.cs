@@ -13,5 +13,6 @@ namespace HallOfBeorn.Services.LotR.RingsDb
         byte GetPopularity(string slug);
         ushort GetVotes(string slug);
         IEnumerable<KeyValuePair<string, int>> GetLinks(string slug);
+        bool DeckIncludesCard(string deckId, string slug);
     }
 }

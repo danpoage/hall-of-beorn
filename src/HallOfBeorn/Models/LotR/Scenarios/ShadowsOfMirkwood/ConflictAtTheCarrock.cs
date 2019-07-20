@@ -26,6 +26,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2016/12/01/turn-by-turn-report-conflict-at-the-carrock/", Title);
             AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/01/25/conflict-at-the-carrock/");
 
+            AddRelatedDeck("732", "Beorn's Path 5 - Conflict at the Carrock (Leadership/Lore)");
+
             AddEncounterSet(EncounterSet.ConflictAtTheCarrock);
             AddEncounterSet(EncounterSet.ConflictAtTheCarrockNightmare);
             AddEncounterSet(EncounterSet.JourneyAlongTheAnduin);

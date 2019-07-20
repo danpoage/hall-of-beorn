@@ -192,28 +192,54 @@ namespace HallOfBeorn.Handlers.LotR
                 }
                 if (model.View == Models.View.Community)
                 {
-                    var linksByUrl = new Dictionary<string, LinkViewModel>();
-                    var scenariosByTitle = new Dictionary<string, Scenario>();
+                    var linksByUrl = new Dictionary<string, Tuple<LinkViewModel, double>>();
+                    var scenariosByTitle = new Dictionary<string, Tuple<Scenario, double>>();
 
                     foreach (var cardViewModel in model.Cards)
                     {
                         var associatedScenarios = _scenarioService.AssociatedScenarios(
-                            cardViewModel.Card.Slug, cardViewModel.Card.CardType);
+                            cardViewModel.Card.Slug, cardViewModel.Card.CardType, cardViewModel.Score);
 
-                        foreach (var scenario in associatedScenarios)
-                            scenariosByTitle[scenario.Title] = scenario;
-                    }
-
-                    foreach (var scenario in scenariosByTitle.Values)
-                    {
-                        foreach (var link in scenario.PlayLinks)
+                        foreach (var result in associatedScenarios)
                         {
-                            if (!linksByUrl.ContainsKey(link.Url))
-                                linksByUrl[link.Url] = new LinkViewModel(link);
+                            if (!scenariosByTitle.ContainsKey(result.Item1.Title))
+                            {
+                                scenariosByTitle[result.Item1.Title] = 
+                                    new Tuple<Scenario, double>(result.Item1, result.Item2);
+                            }
+                            else
+                            {
+                                var existingScore = scenariosByTitle[result.Item1.Title].Item2;
+                                scenariosByTitle[result.Item1.Title] = 
+                                    new Tuple<Scenario, double>(result.Item1, existingScore + result.Item2);
+                            }
                         }
                     }
 
-                    model.Links.AddRange(linksByUrl.Values.OrderBy(ln => ln.Title));
+                    foreach (var result in scenariosByTitle.Values)
+                    {
+                        foreach (var link in result.Item1.PlayLinks)
+                        {
+                            if (!linksByUrl.ContainsKey(link.Url))
+                            {
+                                linksByUrl[link.Url] = 
+                                    new Tuple<LinkViewModel, double>(new LinkViewModel(link), result.Item2);
+                            }
+                            else
+                            {
+                                var existingLink = linksByUrl[link.Url].Item1;
+                                var existingScore = linksByUrl[link.Url].Item2;
+                                linksByUrl[link.Url] =
+                                    new Tuple<LinkViewModel, double>(existingLink, existingScore + result.Item2);
+                            }
+                        }
+                    }
+
+                    model.Links.AddRange(
+                        linksByUrl.Values
+                            .OrderBy(ln => ln.Item2)
+                            .Select(ln => ln.Item1)
+                    );
                 }
             }
         }
