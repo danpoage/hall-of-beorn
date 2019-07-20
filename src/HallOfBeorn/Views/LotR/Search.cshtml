@@ -431,6 +431,26 @@
       </div>
     }
 }
+@if (@Model.IsCommunityView())
+{
+    foreach (var link in @Model.Links)
+    {
+        <span style='display:inline-block;width:222px;margin: 4px 8px 4px 8px;border-width:1px;border-color:gray;border-style:solid;border-radius:6px;background-color:black'>
+        <a href='@link.Url' target='_blank' title='@link.FullTitle'>
+            <span style='display:inline-block;width:220px;text-align:center;color:ghostwhite;'><b>@link.TypeName</b></span>
+            <span style='display:inline-block;width:220px;height:36px;text-align:center;color:ghostwhite;'>@link.Title</span>
+            @if (@link.HasThumbnail)
+            {
+                <span style="display:inline-block;width:220px;text-align:center;">
+                    <img src='@link.ThumbnailUrl' height='@link.ThumbnailHeight px' width='@link.ThumbnailWidth px' title='@link.FullTitle'/>
+                </span>
+            } else {
+                <span style="display:inline-block;height:118px;width:220px;"></span>
+            }
+        </a>
+        </span>
+    }
+}
 @if (@Model.IsCardView())
 {
     foreach (var card in @Model.Cards)

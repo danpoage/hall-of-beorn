@@ -587,6 +587,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             return (View.HasValue && View == Models.View.Character);
         }
 
+        public bool IsCommunityView()
+        {
+            return (View.HasValue && View == Models.View.Community);
+        }
+
         [Display(Name = "Artist")]
         public string Artist { get; set; }
 
@@ -681,6 +686,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         public List<ProductViewModel> Products { get; set; }
 
         public List<CharacterViewModel> Characters { get; set; }
+
+        public List<LinkViewModel> Links { get; set; }
 
         //[Display(Name = "Custom")]
         //public bool Custom { get; set; }
@@ -1086,7 +1093,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             var count = 0;
 
-            if (!View.HasValue || (View != Models.View.Product && View != Models.View.Character))
+            if (!View.HasValue || 
+                (View != Models.View.Product && View != Models.View.Character && View != Models.View.Community))
             {
                 count = Cards != null ? Cards.Count : 0;
             }
@@ -1097,6 +1105,10 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             if (View.HasValue && View == Models.View.Character)
             {
                 count = Characters != null ? Characters.Count : 0;
+            }
+            if (View.HasValue && View == Models.View.Community)
+            {
+                count = Links != null ? Links.Count : 0;
             }
 
             switch (count)

@@ -246,6 +246,34 @@ namespace HallOfBeorn.Services.LotR.Scenarios
             return scenario.ScenarioCards.Any(x => x.Card.Slug == cardSlug);
         }
 
+        public IEnumerable<Scenario> AssociatedScenarios(string cardSlug, CardType cardType)
+        {
+            var associated = new Dictionary<string, Scenario>();
+
+            foreach (var group in ScenarioGroups())
+            {
+                foreach (var scenario in group.Scenarios)
+                {
+                    if (cardType == CardType.Quest)
+                    {
+                        if (scenario.QuestCards.Any(qc => qc.Quest.Slug == cardSlug))
+                        {
+                            associated[scenario.Title] = scenario;
+                        }
+                    }
+                    else
+                    {
+                        if (scenario.ScenarioCards.Any(sc => sc.Card.Slug == cardSlug))
+                        {
+                            associated[scenario.Title] = scenario;
+                        }
+                    }
+                }
+            }
+
+            return associated.Values;
+        }
+
         public bool HasSetType(LotRCard card, SetType? setType)
         {
             if (!setType.HasValue || setType.Value == SetType.None || setType.Value == SetType.OFFICIAL)

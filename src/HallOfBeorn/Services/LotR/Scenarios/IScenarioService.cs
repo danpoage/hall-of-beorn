@@ -18,6 +18,7 @@ namespace HallOfBeorn.Services.LotR.Scenarios
         IEnumerable<string> ScenarioTitles();
         Scenario GetScenario(string scenarioTitle);
         ScenarioListViewModel GetListViewModel();
+        IEnumerable<Scenario> AssociatedScenarios(string cardSlug, CardType cardType);
         bool BelongsToScenario(string cardSlug, CardType cardType, string scenarioTitle);
         bool HasSetType(LotRCard card, SetType? setType);
     }

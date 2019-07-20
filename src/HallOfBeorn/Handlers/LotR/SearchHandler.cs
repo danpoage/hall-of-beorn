@@ -57,6 +57,7 @@ namespace HallOfBeorn.Handlers.LotR
             model.Cards = new List<CardViewModel>();
             model.Products = new List<ProductViewModel>();
             model.Characters = new List<CharacterViewModel>();
+            model.Links = new List<LinkViewModel>();
 
             SearchViewModel.Keywords = _statService.Keywords().GetSelectListItems();
             SearchViewModel.Traits = _statService.Traits().GetSelectListItems();
@@ -188,6 +189,31 @@ namespace HallOfBeorn.Handlers.LotR
 
                         model.Characters.Add(relatedCharactersByUrl[relatedPair.Key]);
                     }
+                }
+                if (model.View == Models.View.Community)
+                {
+                    var linksByUrl = new Dictionary<string, LinkViewModel>();
+                    var scenariosByTitle = new Dictionary<string, Scenario>();
+
+                    foreach (var cardViewModel in model.Cards)
+                    {
+                        var associatedScenarios = _scenarioService.AssociatedScenarios(
+                            cardViewModel.Card.Slug, cardViewModel.Card.CardType);
+
+                        foreach (var scenario in associatedScenarios)
+                            scenariosByTitle[scenario.Title] = scenario;
+                    }
+
+                    foreach (var scenario in scenariosByTitle.Values)
+                    {
+                        foreach (var link in scenario.PlayLinks)
+                        {
+                            if (!linksByUrl.ContainsKey(link.Url))
+                                linksByUrl[link.Url] = new LinkViewModel(link);
+                        }
+                    }
+
+                    model.Links.AddRange(linksByUrl.Values.OrderBy(ln => ln.Title));
                 }
             }
         }
