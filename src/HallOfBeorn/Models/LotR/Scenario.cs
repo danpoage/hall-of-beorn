@@ -34,7 +34,8 @@ namespace HallOfBeorn.Models.LotR
 
         private readonly Dictionary<string, Tuple<byte, byte, byte>> cardCountMap = new Dictionary<string, Tuple<byte, byte, byte>>();
 
-        private readonly List<Link> _playLinks = new List<Link>();
+        private readonly Dictionary<string, Tuple<Link, HashSet<string>>> _playLinks = 
+            new Dictionary<string, Tuple<Link, HashSet<string>>>();
         private readonly Dictionary<string, string> _relatedDecks = new Dictionary<string, string>();
 
         private const string DarklingDoorLogo = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Partners/Darkling-Door.png";
@@ -56,7 +57,11 @@ namespace HallOfBeorn.Models.LotR
 
         private void AddPlayLink(LinkType type, string url, string title, string thumbnailUrl, int? height, int? width)
         {
-            _playLinks.Add(new Link(type, url, title, thumbnailUrl, height, width));
+            _playLinks.Add(
+                url, new Tuple<Link, HashSet<string>>(
+                    new Link(type, url, title, thumbnailUrl, height, width),
+                    new HashSet<string>())
+                );
         }
 
         protected void AddBeornsPathLink(string url)
@@ -181,7 +186,7 @@ namespace HallOfBeorn.Models.LotR
             excludedNightmareModeCards[slug] = numberExcluded;
         }
 
-        protected void AddRelatedDeck(string deckId, string title)
+        protected void AddRelatedDeck(string deckId, string title, params string[] urls)
         {
             if (_relatedDecks.ContainsKey(deckId))
             {
@@ -189,6 +194,19 @@ namespace HallOfBeorn.Models.LotR
             }
 
             _relatedDecks[deckId] = title;
+
+            if (urls == null)
+            {
+                return;
+            }
+
+            foreach (var url in urls)
+            {
+                if (_playLinks.ContainsKey(url))
+                {
+                    _playLinks[url].Item2.Add(deckId);
+                }
+            }
         }
 
         public int Number { get; set; }
@@ -220,7 +238,7 @@ namespace HallOfBeorn.Models.LotR
         public string RulesReferenceUrl { get; protected set; }
         public string RulesReferenceLabel { get; protected set; }
 
-        public IEnumerable<Link> PlayLinks { get { return _playLinks; } }
+        public IEnumerable<Tuple<Link, HashSet<string>>> PlayLinks { get { return _playLinks.Values; } }
         public IEnumerable<string> RelatedDecks { get { return _relatedDecks.Keys; } }
 
         public ScenarioCard CampaignCard

@@ -194,6 +194,7 @@ namespace HallOfBeorn.Handlers.LotR
                 {
                     var linksByUrl = new Dictionary<string, Tuple<LinkViewModel, double>>();
                     var scenariosByTitle = new Dictionary<string, Tuple<Scenario, double>>();
+                    var relevantDecks = new HashSet<string>();
 
                     foreach (var cardViewModel in model.Cards)
                     {
@@ -202,6 +203,25 @@ namespace HallOfBeorn.Handlers.LotR
 
                         foreach (var result in associatedScenarios)
                         {
+                            var isRelevant = false;
+                            foreach (var link in result.Item1.PlayLinks)
+                            {
+                                if (link.Item2.Any(deckId => 
+                                    _ringsDbService.DeckIncludesCard(deckId, cardViewModel.Slug)))
+                                {
+                                    foreach (var deckId in link.Item2)
+                                        relevantDecks.Add(deckId);
+
+                                    isRelevant = true;
+                                    break;
+                                }
+                            }
+
+                            if (!isRelevant)
+                            {
+                                continue;
+                            }
+
                             if (!scenariosByTitle.ContainsKey(result.Item1.Title))
                             {
                                 scenariosByTitle[result.Item1.Title] = 
@@ -218,8 +238,26 @@ namespace HallOfBeorn.Handlers.LotR
 
                     foreach (var result in scenariosByTitle.Values)
                     {
-                        foreach (var link in result.Item1.PlayLinks)
+                        foreach (var linkItem in result.Item1.PlayLinks)
                         {
+                            var link = linkItem.Item1;
+                            var includedDecks = linkItem.Item2;
+
+                            var isRelevant = false;
+                            foreach (var deckId in includedDecks)
+                            {
+                                if (relevantDecks.Contains(deckId))
+                                {
+                                    isRelevant = true;
+                                    break;
+                                }
+                            }
+
+                            if (!isRelevant)
+                            {
+                                continue;
+                            }
+
                             if (!linksByUrl.ContainsKey(link.Url))
                             {
                                 linksByUrl[link.Url] = 

@@ -83,7 +83,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         public bool HasPlayLinks { get { return _scenario.PlayLinks.Count() > 0; } }
         public IEnumerable<LinkViewModel> PlayLinks
         { 
-            get { return _scenario.PlayLinks.Select(pl => new LinkViewModel(pl)); }
+            get { return _scenario.PlayLinks.Select(pl => new LinkViewModel(pl.Item1)); }
         }
 
         public byte Difficulty { get { return _scenario.Difficulty; } }
