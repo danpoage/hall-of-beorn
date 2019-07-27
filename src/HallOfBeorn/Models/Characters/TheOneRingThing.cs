@@ -80,6 +80,7 @@ One Ring to bring them all and in the darkness bind them.<br>
             
             LotRCard("Bilbo's-Magic-Ring-THOHaUH");
             LotRCard("Bilbo's-Magic-Ring-THOtD");
+            LotRCard("The-One-Ring-ASitE");
             LotRCard("The-One-Ring-TBR");
             LotRCard("The-One-Ring-RD");
             LotRCard("The-One-Ring-TLoS");

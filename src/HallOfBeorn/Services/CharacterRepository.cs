@@ -65,8 +65,10 @@ namespace HallOfBeorn.Services
             add(new FolcoBoffinCharacter());
             add(new ForlongCharacter());
             add(new FrodoBagginsCharacter());
+            add(new GafferGamgeeCharacter());
             add(new GaladrielCharacter());
             add(new GaldorOfTheHavensCharacter());
+            add(new GalionCharacter());
             add(new GamlingCharacter());
             add(new GandalfCharacter());
             add(new GhanBuriGhanCharacter());
@@ -98,6 +100,7 @@ namespace HallOfBeorn.Services
             add(new LindirCharacter());
             add(new LorienGroup());
             add(new MablungCharacter());
+            add(new MeneldorCharacter());
             add(new MerryCharacter());
             add(new NoriCharacter());
             add(new OinCharacter());
@@ -132,6 +135,7 @@ namespace HallOfBeorn.Services
             add(new ThorinsCompanyGroup());
             add(new TomBombadilCharacter());
             add(new TomCottonCharacter());
+            add(new ThranduilCharacter());
             add(new TreebeardCharacter());
         }
 

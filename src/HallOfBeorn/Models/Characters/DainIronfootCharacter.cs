@@ -45,7 +45,7 @@ namespace HallOfBeorn.Models.Characters
             Alias("King of Durin's Folk");
 
             addFamily("Náin (Father)");
-            addFamily("Thorin Stonehelm (Son)");
+            addFamily("Thorin Stonehelm (Son)", "Thorin-Stonehelm");
             addFamily("Thorin Oakenshield (Cousin)", "Thorin-Oakenshield");
 
             addFriend("Brand son of Bain", "Brand-son-of-Bain");
@@ -53,6 +53,7 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Glóin", "Gloin");
 
             LotRCard("Dain-Ironfoot-RtM");
+            LotRCard("Dain-Ironfoot-TGoF");
         }
     }
 }

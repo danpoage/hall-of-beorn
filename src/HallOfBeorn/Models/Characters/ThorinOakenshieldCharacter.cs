@@ -62,10 +62,13 @@ It was Thorin, but you could only have told it by his golden chain, and by the c
             addFamily("Dáin Ironfoot (Cousin)", "Dain-Ironfoot");
 
             addItem("Orcrist", "Orcrist-THOHaUH");
+            addItem("Orcrist", "Orcrist-FitN");
             addItem("Thrór's Battle Axe", "Thror's-Battle-Axe-THOtD");
             addItem("Thrór's Hunting Bow", "Thror's-Hunting-Bow-THOtD");
             addItem("Thrór's Golden Cup", "Thror's-Golden-Cup-THOtD");
+            addItem("Ring of Thrór", "Ring-of-Thror-TGoF");
             addItem("The Arkenstone", "The-Arkenstone-THOtD");
+            addItem("The Arkenstone", "The-Arkenstone-TWH");
             addItem("Dwarven Shield", "Dwarven-Shield-TSoH");
             addItem("Dwarf Pipe", "Dwarf-Pipe-TMk");
 

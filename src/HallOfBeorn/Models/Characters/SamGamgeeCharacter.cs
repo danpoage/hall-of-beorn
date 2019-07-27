@@ -68,7 +68,7 @@ namespace HallOfBeorn.Models.Characters
             Alias("Samwise Gardener");
             Alias("Banazîr");
 
-            addFamily("Gaffer Gamgee (Father)");
+            addFamily("Gaffer Gamgee (Father)", "Gaffer-Gamgee");
             addFamily("Rosie Cotton (Wife)", "Rosie-Cotton");
 
             addGroup("The Shire", "The-Shire");

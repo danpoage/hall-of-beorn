@@ -201,6 +201,10 @@
     <Compile Include="HtmlHelperExtensions.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Arkham\Products\CurseOfTheRougarou.cs" />
+    <Compile Include="Models\Characters\GafferGamgeeCharacter.cs" />
+    <Compile Include="Models\Characters\GalionCharacter.cs" />
+    <Compile Include="Models\Characters\MeneldorCharacter.cs" />
+    <Compile Include="Models\Characters\ThranduilCharacter.cs" />
     <Compile Include="Models\Digital\AttachmentSlot.cs" />
     <Compile Include="Models\Digital\CardSets\DwalinPack.cs" />
     <Compile Include="Models\Digital\CardSets\EowynPack.cs" />

@@ -84,6 +84,7 @@ namespace HallOfBeorn.Models.Characters
 
             LotRCard("Pippin-TBR");
             LotRCard("Pippin-EaAD");
+            LotRCard("Pippin-ASitE");
         }
     }
 }

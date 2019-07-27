@@ -56,6 +56,7 @@ namespace HallOfBeorn.Models.Characters.Groups
             addLeader("Gwaihir", "Gwaihir");
 
             addMember("Landroval", "Landroval");
+            addMember("Meneldor", "Meneldor");
             
             addFriend("Gandalf", "Gandalf");
             addFriend("Radagast", "Radagast");
@@ -65,13 +66,18 @@ namespace HallOfBeorn.Models.Characters.Groups
             LotRCard("Gwaihir-TiT");
             LotRCard("Gwaihir-TMoF");
             LotRCard("Landroval-AJtM");
+            LotRCard("Meneldor-RAR");
             LotRCard("Descendant-of-Thorondor-THoEM");
             LotRCard("Eagles-of-the-Misty-Mountains-RtM");
             LotRCard("Vassal-of-the-Windlord-TDM");
             LotRCard("Wilyador-AJtR");
             LotRCard("Misty-Mountain-Eagle-THOtD");
+            LotRCard("Eagle-of-the-North-RAR");
             LotRCard("Support-of-the-Eagles-RtM");
             LotRCard("The-Eagles-Are-Coming-THfG");
+            LotRCard("Meneldor's-Flight-THoEM");
+            LotRCard("Flight-of-the-Eagles-RAR");
+            LotRCard("Gwaihir's-Debt-TFoW");
         }
     }
 }

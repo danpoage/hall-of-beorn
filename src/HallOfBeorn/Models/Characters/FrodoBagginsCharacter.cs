@@ -110,6 +110,7 @@ Frodo heard a sweet singing running in his mind: a song that seemed to come like
             addFriend("Merry", "Merry");
             addFriend("Pippin", "Pippin");
             addFriend("Fatty Bolger", "Fatty-Bolger");
+            addFriend("Gaffer Gamgee", "Gaffer-Gamgee");
             addFriendCard("Farmer Maggot", "Farmer-Maggot-TBR");
             addFriendCard("Barliman Butterbur", "Barliman-Butterbur-TBR");
 
@@ -124,6 +125,7 @@ Frodo heard a sweet singing running in his mind: a song that seemed to come like
             addItem("Phial of Galadriel", "Phial-of-Galadriel-RD");
 
             LotRCard("Frodo-Baggins-CatC");
+            LotRCard("Frodo-Baggins-ASitE");
             LotRCard("Frodo-Baggins-TBR");
             LotRCard("Frodo-Baggins-RD");
             LotRCard("Frodo-Baggins-ToS");

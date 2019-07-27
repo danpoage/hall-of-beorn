@@ -53,6 +53,7 @@ namespace HallOfBeorn.Models.Characters.Groups
             addMember("Bilbo Baggins", "Bilbo-Baggins");
             addMember("Frodo Baggins", "Frodo-Baggins");
             addMember("Sam Gamgee", "Sam-Gamgee");
+            addMember("Gaffer Gamgee", "Gaffer-Gamgee");
             addMember("Merry", "Merry");
             addMember("Pippin", "Pippin");
             addMember("Fatty Bolger", "Fatty-Bolger");

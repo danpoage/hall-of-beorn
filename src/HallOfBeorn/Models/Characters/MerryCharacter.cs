@@ -74,6 +74,7 @@ During the following trip to Rivendell, Merry seemed to have a greater knowledge
 
             LotRCard("Merry-TBR");
             LotRCard("Merry-TWoE");
+            LotRCard("Merry-ASitE");
         }
     }
 }
