@@ -8,13 +8,16 @@ namespace RingsDbBuilder
 {
     public class Options
     {
-        public Options()
+        public Options(string[] args)
         {
-            DownloadDelay = 1000;
+            DownloadDelay = 3000;
             DownloadDirectory = ".\\json\\";
+            DatabaseName = "RingsDB.data";
 
             MinimumDeckId = 2969;
-            MaximumDeckId = 10676;
+            MaximumDeckId = 12702;
+
+            Verbose = false;
         }
 
         private const string _deckFormat = "json";
@@ -23,9 +26,12 @@ namespace RingsDbBuilder
 
         public int DownloadDelay { get; set; }
         public string DownloadDirectory { get; set; }
+        public string DatabaseName { get; set; }
 
         public int MinimumDeckId { get; set; }
         public int MaximumDeckId { get; set; }
+
+        public bool Verbose { get; set; }
 
         public string GetDownloadUrl(int deckId)
         {

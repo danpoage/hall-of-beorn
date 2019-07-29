@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Linq;
 using System.Web;
 
@@ -25,9 +26,11 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             initializeHeroPopularity();
             initializeCardPopularity();
             initializeCardLinks();
-            initializeDeckCards();
+
+            repository = new RingsDbRepository();
         }
 
+        private readonly RingsDbRepository repository;
         private readonly Dictionary<string, LotRCard> cardsBySlug = new Dictionary<string,LotRCard>();
         private readonly Dictionary<string, string> slugByCardId = new Dictionary<string, string>();
         private readonly Dictionary<string, byte> popularityByCardId = new Dictionary<string, byte>();
@@ -102,38 +105,6 @@ namespace HallOfBeorn.Services.LotR.RingsDb
 
             popularityByCardId[cardId] = popularity;
             votesByCardId[cardId] = votes;
-        }
-
-        private void initializeDeckCards()
-        {
-            addDeckCard("732", "01001", 1);
-            addDeckCard("732", "01002", 1);
-            addDeckCard("732", "01010", 1);
-            addDeckCard("732", "01013", 3);
-            addDeckCard("732", "01014", 2);
-            addDeckCard("732", "01015", 2);
-            addDeckCard("732", "01016", 3);
-            addDeckCard("732", "01022", 2);
-            addDeckCard("732", "01023", 2);
-            addDeckCard("732", "01024", 2);
-            addDeckCard("732", "01026", 2);
-            addDeckCard("732", "01027", 1);
-            addDeckCard("732", "01058", 3);
-            addDeckCard("732", "01059", 2);
-            addDeckCard("732", "01060", 1);
-            addDeckCard("732", "01061", 2);
-            addDeckCard("732", "01062", 2);
-            addDeckCard("732", "01065", 2);
-            addDeckCard("732", "01066", 2);
-            addDeckCard("732", "01069", 2);
-            addDeckCard("732", "01070", 2);
-            addDeckCard("732", "01072", 1);
-            addDeckCard("732", "01073", 3);
-            addDeckCard("732", "02002", 2);
-            addDeckCard("732", "02008", 2);
-            addDeckCard("732", "02010", 1);
-            addDeckCard("732", "02026", 2);
-            addDeckCard("732", "02033", 2);
         }
 
         private void initializeCardLinks()
@@ -9332,7 +9303,17 @@ namespace HallOfBeorn.Services.LotR.RingsDb
                 return false;
             }
 
-            return deckMap.ContainsKey(deckId) && deckMap[deckId].ContainsKey(cardId);
+            try
+            {
+                var deck = repository.GetDeckList(deckId);
+                return (deck != null && deck.heroes != null && deck.slots != null && 
+                        (deck.heroes.ContainsKey(cardId) || deck.slots.ContainsKey(cardId))
+                    );
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }

@@ -17,6 +17,7 @@ namespace RingsDbBuilder
 
         private readonly Options _options;
 
+        private const string foundFormat = "Deck already downloaded: {0}";
         private const string successFormat = "Success downloading Deck ID {0}";
         private const string failureFormat = "Failed downloading Deck ID {0}";
         private const string errorFormat = "Error downloading Deck ID {0}: {1}";
@@ -24,7 +25,13 @@ namespace RingsDbBuilder
         public bool Execute(DeckInfo info)
         {
             if (info.FileExists)
+            {
+                if (_options.Verbose)
+                {
+                    Console.WriteLine(string.Format(foundFormat, info.Path));
+                }
                 return true;
+            }
 
             try
             {
@@ -38,7 +45,10 @@ namespace RingsDbBuilder
 
                     if (!response.IsSuccessStatusCode || response.Content == null)
                     {
-                        Console.WriteLine(string.Format(failureFormat, info.DeckId));
+                        if (_options.Verbose)
+                        {
+                            Console.WriteLine(string.Format(failureFormat, info.DeckId));
+                        }
                         return false;
                     }
 
@@ -47,7 +57,10 @@ namespace RingsDbBuilder
                         .GetAwaiter()
                         .GetResult();
 
-                    Console.WriteLine(string.Format(successFormat, info.DeckId));
+                    if (_options.Verbose)
+                    {
+                        Console.WriteLine(string.Format(successFormat, info.DeckId));
+                    }
                 }
 
                 return true;

@@ -9,25 +9,21 @@ namespace RingsDbBuilder
 {
     public class Strategy
     {
-        public Strategy(Options options, RingsDbHelper helper, CardLinkBuilder cardLinkBuilder, PopularityBuilder popularityBuilder)
+        public Strategy(Options options, RingsDbHelper helper, 
+            CardLinkBuilder cardLinkBuilder, PopularityBuilder popularityBuilder, DeckCardBuilder deckCardBuilder)
         {
             _options = options;
-            _helper = helper;
-            _cardLinkBuilder = cardLinkBuilder;
-            _popularityBuilder = popularityBuilder;
+            _analyzer = new DeckAnalyzer(helper, cardLinkBuilder, popularityBuilder, deckCardBuilder);
 
             _steps.Add((info) => { return new DownloadJson(_options).Execute(info); });
             _steps.Add((info) => { return new DeckWriter(_options).Execute(info); });
             _steps.Add((info) => { return new ReadFileJson(_options).Execute(info); });
             _steps.Add((info) => { return new DeckReader().Execute(info); });
-            _steps.Add((info) => { return new DeckAnalyzer(_helper, _cardLinkBuilder, _popularityBuilder).Execute(info); });
+            _steps.Add((info) => { return _analyzer.Execute(info); });
         }
 
         private readonly Options _options;
-        private readonly RingsDbHelper _helper;
-        private readonly CardLinkBuilder _cardLinkBuilder;
-        private readonly PopularityBuilder _popularityBuilder;
-
+        private readonly DeckAnalyzer _analyzer;
         private readonly List<Func<DeckInfo, bool>> _steps = new List<Func<DeckInfo, bool>>();
 
         private const string errorFormat = "Error executing deck stategy for Deck ID {0}: {1}";

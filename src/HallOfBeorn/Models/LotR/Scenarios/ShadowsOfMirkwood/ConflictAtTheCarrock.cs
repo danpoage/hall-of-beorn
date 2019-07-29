@@ -29,6 +29,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             AddRelatedDeck("732", "Beorn's Path 5 - Conflict at the Carrock (Leadership/Lore)",
                 "https://hallofbeorn.wordpress.com/2013/07/22/beorns-path-part-9-conflict-at-the-carrock/");
 
+            AddRelatedDeck("7942", "Gamgees at the Carrock",
+                "https://www.youtube.com/watch?v=TFQlivqlaaY");
+
             AddEncounterSet(EncounterSet.ConflictAtTheCarrock);
             AddEncounterSet(EncounterSet.ConflictAtTheCarrockNightmare);
             AddEncounterSet(EncounterSet.JourneyAlongTheAnduin);
