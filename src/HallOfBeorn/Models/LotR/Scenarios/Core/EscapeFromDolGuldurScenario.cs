@@ -20,6 +20,20 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2016/11/12/escape-from-dol-guldur-quest-analysis/");
             AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/01/21/escape-from-dol-guldur/");
 
+            AddRelatedDeck("305", "Beorn's Path Leadership/Lore",
+                "https://hallofbeorn.wordpress.com/2013/02/12/beorns-path-part-6-escape-from-dol-guldur/");
+            AddRelatedDeck("305", "Beorn's Path Spirit/Tactics",
+                "https://hallofbeorn.wordpress.com/2013/02/12/beorns-path-part-6-escape-from-dol-guldur/");
+
+            AddRelatedDeck("1871", "The Line Unbroken - Core Set Deck 1",
+                "https://wardenofarnor.wordpress.com/2015/03/14/the-line-unbroken-1-the-core-set/",
+                "https://www.youtube.com/watch?v=YnWmafDZ3_Y");
+            AddRelatedDeck("1872", "The Line Unbroken - Core Set Deck 2",
+                "https://wardenofarnor.wordpress.com/2015/03/14/the-line-unbroken-1-the-core-set/",
+                "https://www.youtube.com/watch?v=YnWmafDZ3_Y");
+            AddRelatedDeck("5524", "Flawless Victory",
+                "https://www.youtube.com/watch?v=f4euaXWkbNc");
+
             AddEncounterSet(EncounterSet.DolGuldurOrcs);
             AddEncounterSet(EncounterSet.EscapeFromDolGuldur);
             AddEncounterSet(EncounterSet.EscapeFromDolGuldurNightmare);

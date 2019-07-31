@@ -21,6 +21,13 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2016/10/28/passage-through-mirkwood/");
             AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/01/20/ptm/");
 
+            AddRelatedDeck("7299", "Just One Core vs Too Many Spiders",
+                "https://www.youtube.com/watch?v=Pyk_PrY58g8");
+            AddRelatedDeck("293", "Beorn's Path Leadership/Lore",
+                "https://hallofbeorn.wordpress.com/2013/01/25/beorns-path-part-2-playtesting/");
+            AddRelatedDeck("3415", "People of the Golden Wood",
+                "https://darklingdoor.wordpress.com/2016/10/28/passage-through-mirkwood/");
+
             AddEncounterSet(EncounterSet.DolGuldurOrcs);
             AddEncounterSet(EncounterSet.PassageThroughMirkwood);
             AddEncounterSet(EncounterSet.PassageThroughMirkwoodNightmare);

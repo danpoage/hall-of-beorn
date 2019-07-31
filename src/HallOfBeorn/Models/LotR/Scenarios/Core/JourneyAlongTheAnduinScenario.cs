@@ -25,6 +25,31 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2016/11/06/journey-along-the-anduin/");
             AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/01/20/journey-along-the-anduin/");
 
+            AddRelatedDeck("5524", "Flawless Victory",
+                "https://www.youtube.com/watch?v=IaO8wJmLt_I",
+                "https://www.youtube.com/watch?v=LwsqbhhOA1c");
+            
+            AddRelatedDeck("1871", "The Line Unbroken - Core Set Deck 1",
+                "https://www.youtube.com/watch?v=Fpv3YJAoHNk");
+            AddRelatedDeck("1872", "The Line Unbroken - Core Set Deck 2",
+                "https://www.youtube.com/watch?v=Fpv3YJAoHNk");
+            AddRelatedDeck("5935", "The Line Unbroken - NM Journey Down the Anduin Deck 1",
+                "https://www.youtube.com/watch?v=k84HvCq6uRo");
+            AddRelatedDeck("5936", "The Line Unbroken - NM Journey Down the Anduin Deck 2",
+                "https://www.youtube.com/watch?v=k84HvCq6uRo");
+            AddRelatedDeck("7155", "Rossiel Rides to Victory",
+                "https://www.youtube.com/watch?v=PlQrthtPULc");
+            AddRelatedDeck("7534", "Argalad, Double Daggers",
+                "https://www.youtube.com/watch?v=bICTQO1uVUo");
+            AddRelatedDeck("305", "Beorn's Path Leadership/Lore",
+                "https://hallofbeorn.wordpress.com/2013/02/04/beorns-path-part-4-journey-along-the-anduin/");
+            AddRelatedDeck("3529", "[Thematic Nightmare] Green and Gold",
+                "https://darklingdoor.wordpress.com/2016/11/06/journey-along-the-anduin/");
+
+            AddRelatedDeck("9005", "Deck Tech: Dale Starter Deck",
+                "https://visionofthepalantir.wordpress.com/2018/01/20/journey-along-the-anduin/",
+                "https://www.youtube.com/watch?v=8mKOOq9t-7w");
+
             AddEncounterSet(EncounterSet.DolGuldurOrcs);
             AddEncounterSet(EncounterSet.JourneyAlongTheAnduin);
             AddEncounterSet(EncounterSet.JourneyAlongTheAnduinNightmare);
