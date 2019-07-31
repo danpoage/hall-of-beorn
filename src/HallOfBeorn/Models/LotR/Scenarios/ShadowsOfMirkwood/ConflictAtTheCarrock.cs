@@ -29,8 +29,27 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             AddRelatedDeck("732", "Beorn's Path 5 - Conflict at the Carrock (Leadership/Lore)",
                 "https://hallofbeorn.wordpress.com/2013/07/22/beorns-path-part-9-conflict-at-the-carrock/");
 
+            //Chrsjxn
             AddRelatedDeck("7942", "Gamgees at the Carrock",
                 "https://www.youtube.com/watch?v=TFQlivqlaaY");
+
+            //Authraw
+            AddRelatedDeck("3833", "[Thematic Nightmare] The Birds and the Beasts", 
+                "https://darklingdoor.wordpress.com/2016/12/09/conflict-at-the-carrock/");
+
+            //Psychorocka
+            AddRelatedDeck("3840", "An Unlikely Friendship",
+                "https://warriorsofthewestblog.wordpress.com/2016/12/01/turn-by-turn-report-conflict-at-the-carrock/");
+            AddRelatedDeck("3841", "Vilya+Nenya",
+                "https://warriorsofthewestblog.wordpress.com/2016/12/01/turn-by-turn-report-conflict-at-the-carrock/");
+
+            //BGamerJoe
+            AddRelatedDeck("961", "Seastan's Single Core Set Solo",
+                "https://visionofthepalantir.wordpress.com/2018/01/25/conflict-at-the-carrock/");
+            AddRelatedDeck("3011", "Smoke Yourself Thin",
+                "https://visionofthepalantir.wordpress.com/2018/01/25/conflict-at-the-carrock/");
+            AddRelatedDeck("6675", "The Swords of the Noldor",
+                "https://visionofthepalantir.wordpress.com/2018/01/25/conflict-at-the-carrock/");
 
             AddEncounterSet(EncounterSet.ConflictAtTheCarrock);
             AddEncounterSet(EncounterSet.ConflictAtTheCarrockNightmare);

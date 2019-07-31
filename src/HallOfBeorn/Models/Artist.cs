@@ -628,6 +628,8 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Greg_Bobrowski);
 
             //A Shadow in the East
+            all.Add(Artist.Alexander_Chelyshev);
+            all.Add(Artist.Echo_Chernik);
             all.Add(Artist.Martin_de_Diego_Sadaba);
 
             //Arkham Horrom Core
@@ -663,6 +665,7 @@ namespace HallOfBeorn.Models
         public static Artist Alex_Boca = new Artist { Name = "Alex Boca", URL = "https://www.artstation.com/alexboca" };
         public static Artist Alex_McVey = new Artist { Name = "Alex McVey", URL = "http://www.alexmcvey.com" };
         public static Artist Alex_Ruiz = new Artist { Name = "Alex Ruiz", URL = "http://www.conceptmonster.net" };
+        public static Artist Alexander_Chelyshev = new Artist { Name = "Alexander Chelyshev", URL = "https://www.artstation.com/sanchiko" };
         public static Artist Alexander_Gustafson = new Artist { Name = "Alexander Gustafson", URL = "http://www.illustratedpixels.com" };
         public static Artist Alexander_Nanitchkov = new Artist { Name = "Alexander Nanitchkov", URL = "http://tsabo6.deviantart.com" };
         public static Artist Alexandr_Sumerky = new Artist { Name = "Alexandr Sumerky", URL = "http://sumerky.deviantart.com" };
@@ -945,6 +948,7 @@ namespace HallOfBeorn.Models
         public static Artist Drazenka_Kimpel = new Artist { Name = "Drazenka Kimpel", URL = "http://www.creativedust.com" };
         public static Artist Drew_Whitmore = new Artist { Name = "Drew Whitmore", URL = "http://toasty.deviantart.com" };
         public static Artist Dylan_Pierpont = new Artist { Name = "Dylan Pierpont", URL = "http://www.dylanpierpont.com" };
+        public static Artist Echo_Chernik = new Artist { Name = "Echo Chernik", URL = "https://www.artstation.com/echochernik" };
         public static Artist Ed_Mattinian = new Artist { Name = "Ed Mattinian", URL = "http://mattinian.deviantart.com" };
         public static Artist Ellyson_Ferrari_Lifante = new Artist { Name = "Ellyson Ferrari Lifante", URL = "http://ellysonfl.deviantart.com" };
         public static Artist Emile_Denis = new Artist { Name = "Emile Denis", URL = "http://trishkell.deviantart.com" };

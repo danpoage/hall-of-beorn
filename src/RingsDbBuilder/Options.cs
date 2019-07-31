@@ -14,7 +14,7 @@ namespace RingsDbBuilder
             DownloadDirectory = ".\\json\\";
             DatabaseName = "RingsDB.data";
 
-            MinimumDeckId = 2969;
+            MinimumDeckId = 1; //2969;
             MaximumDeckId = 12702;
 
             Verbose = false;
