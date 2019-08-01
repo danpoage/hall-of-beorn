@@ -24,6 +24,23 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2016/11/24/the-hunt-for-gollum/");
             AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/01/24/the-hunt-for-gollum/");
 
+            AddRelatedDeck("306", "Beorn's Path Leadership/Lore",
+                "https://hallofbeorn.wordpress.com/2013/04/08/beorns-path-part-8-playtesting-the-hunt-for-gollum/");
+            AddRelatedDeck("2890", "The Line Unbroken - Hunt for Gollum Deck 1",
+                "https://www.youtube.com/watch?v=CwBfByFcSFM",
+                "https://wardenofarnor.wordpress.com/2015/03/25/the-line-unbroken-4-hunt-for-gollum/");
+            AddRelatedDeck("2891", "The Line Unbroken - Hunt for Gollum Deck 2",
+                "https://www.youtube.com/watch?v=CwBfByFcSFM",
+                "https://wardenofarnor.wordpress.com/2015/03/25/the-line-unbroken-4-hunt-for-gollum/");
+            AddRelatedDeck("5939", "The Line Unbroken - NM Hunt for Gollum Deck 1",
+                "https://wardenofarnor.wordpress.com/2016/12/18/the-line-unbroken-n4-nightmare-hunt-for-gollum/",
+                "https://www.youtube.com/watch?v=-lezqJk4gqs");
+            AddRelatedDeck("5940", "The Line Unbroken - NM Hunt for Gollum Deck 1",
+                "https://wardenofarnor.wordpress.com/2016/12/18/the-line-unbroken-n4-nightmare-hunt-for-gollum/",
+                "https://www.youtube.com/watch?v=-lezqJk4gqs");
+            AddRelatedDeck("3703", "In Pursuit of Gollum",
+                "https://darklingdoor.wordpress.com/2016/11/24/the-hunt-for-gollum/");
+
             AddEncounterSet(EncounterSet.JourneyAlongTheAnduin);
             AddEncounterSet(EncounterSet.SauronsReach);
             AddEncounterSet(EncounterSet.TheHuntForGollum);
