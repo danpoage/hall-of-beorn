@@ -22,6 +22,23 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/02/10/play-report-a-journey-to-rhosgobel/", "Play Report: " + Title);
             AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/01/31/a-journey-to-rhosgobel/");
 
+            AddRelatedDeck("733", "Beorn's Path Leadership/Lore",
+                "https://hallofbeorn.wordpress.com/2013/07/28/beorns-path-part-10-a-journey-to-rhosgobel/");
+
+            //The Line Unbroken
+            AddRelatedDeck("2895", "The Line Unbroken - A Journey to Rhosgobel Deck 1",
+                "https://www.youtube.com/watch?v=nMyk9ujtN14");
+            AddRelatedDeck("2894", "The Line Unbroken - A Journey to Rhosgobel Deck 2",
+                "https://www.youtube.com/watch?v=nMyk9ujtN14");
+            AddRelatedDeck("5943", "The Line Unbroken - NM A Journey to Rhosgobel Deck",
+                "https://www.youtube.com/watch?v=f509ktuzawI");
+            AddRelatedDeck("5944", "The Line Unbroken - NM A Journey to Rhosgobel Deck",
+                "https://www.youtube.com/watch?v=f509ktuzawI");
+
+            AddRelatedDeck("3933", "The Hands of the King",
+                "https://darklingdoor.wordpress.com/2016/12/18/a-journey-to-rhosgobel/",
+                "https://darklingdoor.wordpress.com/2017/02/10/play-report-a-journey-to-rhosgobel/");
+
             AddEncounterSet(EncounterSet.AJourneyToRhosgobel);
             AddEncounterSet(EncounterSet.AJourneyToRhosgobelNightmare);
             AddEncounterSet(EncounterSet.DolGuldurOrcs);
