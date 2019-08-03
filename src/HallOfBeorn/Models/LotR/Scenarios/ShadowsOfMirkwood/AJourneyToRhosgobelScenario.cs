@@ -1,8 +1,8 @@
 namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
 {
-    public class AJourneyToRhosgobel : Scenario
+    public class AJourneyToRhosgobelScenario : Scenario
     {
-        public AJourneyToRhosgobel()
+        public AJourneyToRhosgobelScenario()
         {
             Title = "A Journey to Rhosgobel";
             ProductName = "A Journey to Rhosgobel";

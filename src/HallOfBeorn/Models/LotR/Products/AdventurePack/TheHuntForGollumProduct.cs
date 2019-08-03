@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
 
             AddCardSet(CardSet.TheHuntForGollum);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood.TheHuntForGollum());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood.TheHuntForGollumScenario());
         }
     }
 }

@@ -1,8 +1,8 @@
 namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
 {
-    public class TheDeadMarshes : Scenario
+    public class TheDeadMarshesScenario : Scenario
     {
-        public TheDeadMarshes()
+        public TheDeadMarshesScenario()
         {
             Title = "The Dead Marshes";
             ProductName = "The Dead Marshes";
@@ -20,6 +20,30 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2013/09/12/beorns-path-part-12-the-dead-marshes/");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/01/02/the-dead-marshes/");
             AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/02/02/the-dead-marshes/");
+
+            //The Line Unbroken
+            AddRelatedDeck("2918", "The Line Unbroken - The Dead Marshes Deck 1",
+                "https://www.youtube.com/watch?v=ST0570g_QQc",
+                "https://wardenofarnor.wordpress.com/2015/04/21/the-line-unbroken-8-the-dead-marshes/");
+            AddRelatedDeck("2919", "The Line Unbroken - The Dead Marshes Deck 2",
+                "https://www.youtube.com/watch?v=ST0570g_QQc",
+                "https://wardenofarnor.wordpress.com/2015/04/21/the-line-unbroken-8-the-dead-marshes/");
+
+            //The Line Unbroken Nightmare
+            AddRelatedDeck("5948", "The Line Unbroken - NM The Dead Marshes Deck 1",
+                "https://www.youtube.com/watch?v=MnSeSciaiPk",
+                "https://wardenofarnor.wordpress.com/2017/01/18/the-line-unbroken-n8-nightmare-the-dead-marshes/");
+            AddRelatedDeck("5949", "The Line Unbroken - NM The Dead Marshes Deck 2",
+                "https://www.youtube.com/watch?v=MnSeSciaiPk",
+                "https://wardenofarnor.wordpress.com/2017/01/18/the-line-unbroken-n8-nightmare-the-dead-marshes/");
+
+            //Hall of Beorn
+            AddRelatedDeck("736", "Beorn's Path Leadership/Lore",
+                "https://hallofbeorn.wordpress.com/2013/09/12/beorns-path-part-12-the-dead-marshes/");
+
+            //Darkling Door
+            AddRelatedDeck("4055", "By Sheer Force of Will",
+                "https://darklingdoor.wordpress.com/2017/01/02/the-dead-marshes/");
 
             AddEncounterSet(EncounterSet.SauronsReach);
             AddEncounterSet(EncounterSet.TheDeadMarshes);

@@ -1,8 +1,8 @@
 namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
 {
-    public class TheHillsOfEmynMuil : Scenario
+    public class TheHillsOfEmynMuilScenario : Scenario
     {
-        public TheHillsOfEmynMuil()
+        public TheHillsOfEmynMuilScenario()
         {
             Title = "The Hills of Emyn Muil";
             ProductName = "The Hills of Emyn Muil";
@@ -20,6 +20,28 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2013/09/01/beorns-path-part-11-the-hills-of-emyn-muil/");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2016/12/24/the-hills-of-emyn-muil/");
             AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/01/28/the-hills-of-emyn-muil/");
+
+            //The Line Unbroken
+            AddRelatedDeck("2896", "The Line Unbroken - Hills of Emyn Muil Deck 1",
+                "https://www.youtube.com/watch?v=hngSYXX6X94",
+                "https://wardenofarnor.wordpress.com/2015/04/14/the-line-unbroken-7-hills-of-emyn-muil/");
+            AddRelatedDeck("2897", "The Line Unbroken - Hills of Emyn Muil Deck 2",
+                "https://www.youtube.com/watch?v=hngSYXX6X94",
+                "https://wardenofarnor.wordpress.com/2015/04/14/the-line-unbroken-7-hills-of-emyn-muil/");
+
+            //The Line Unbroken Nightmare
+            AddRelatedDeck("5946", "The Line Unbroken - NM Hills of Emyn Muil Deck 1",
+                "https://www.youtube.com/watch?v=YBuqRpJ8-ps",
+                "https://wardenofarnor.wordpress.com/2017/01/13/the-line-unbroken-n7-nightmare-hills-of-emyn-muil/");
+            AddRelatedDeck("5947", "The Line Unbroken - NM Hills of Emyn Muil Deck 2",
+                "https://www.youtube.com/watch?v=YBuqRpJ8-ps",
+                "https://wardenofarnor.wordpress.com/2017/01/13/the-line-unbroken-n7-nightmare-hills-of-emyn-muil/");
+
+            AddRelatedDeck("734", "Beorn's Path Leadership/Lore",
+                "https://hallofbeorn.wordpress.com/2013/09/01/beorns-path-part-11-the-hills-of-emyn-muil/");
+
+            AddRelatedDeck("4005", "Counsel of Elves",
+                "https://darklingdoor.wordpress.com/2016/12/24/the-hills-of-emyn-muil/");
 
             AddEncounterSet(EncounterSet.DolGuldurOrcs);
             AddEncounterSet(EncounterSet.SauronsReach);

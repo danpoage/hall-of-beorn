@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
 
             AddCardSet(CardSet.ConflictAtTheCarrock);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood.ConflictAtTheCarrock());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood.ConflictAtTheCarrockScenario());
         }
     }
 }

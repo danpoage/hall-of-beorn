@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
 
             AddCardSet(CardSet.AJourneyToRhosgobel);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood.AJourneyToRhosgobel());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood.AJourneyToRhosgobelScenario());
         }
     }
 }

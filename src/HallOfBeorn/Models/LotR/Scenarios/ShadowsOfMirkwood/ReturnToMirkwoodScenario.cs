@@ -1,8 +1,8 @@
 namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
 {
-    public class ReturnToMirkwood : Scenario
+    public class ReturnToMirkwoodScenario : Scenario
     {
-        public ReturnToMirkwood()
+        public ReturnToMirkwoodScenario()
         {
             Title = "Return to Mirkwood";
             ProductName = "Return to Mirkwood";
@@ -22,6 +22,32 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/01/08/return-to-mirkwood/");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/01/12/return-to-mirkwood-play-report/", "Play Report: " + Title);
             AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/02/04/return-to-mirkwood/");
+
+            //The Line Unbroken
+            AddRelatedDeck("2920", "The Line Unbroken - Return to Mirkwood Deck 1",
+                "https://www.youtube.com/watch?v=40hlQhpPmvk",
+                "https://wardenofarnor.wordpress.com/2015/04/28/the-line-unbroken-9-return-to-mirkwood/");
+            AddRelatedDeck("2921", "The Line Unbroken - Return to Mirkwood Deck 2",
+                "https://www.youtube.com/watch?v=40hlQhpPmvk",
+                "https://wardenofarnor.wordpress.com/2015/04/28/the-line-unbroken-9-return-to-mirkwood/");
+
+            //The Line Unbroken Nightmare
+            AddRelatedDeck("5950", "The Line Unbroken - NM Return to Mirkwood Deck 1",
+                "https://www.youtube.com/watch?v=Sva47T3B52A",
+                "https://www.youtube.com/watch?v=IHJExMbmgAo",
+                "https://wardenofarnor.wordpress.com/2017/01/28/the-line-unbroken-n9-nightmare-return-to-mirkwood/");
+            AddRelatedDeck("5951", "The Line Unbroken - NM Return to Mirkwood Deck 2",
+                "https://www.youtube.com/watch?v=Sva47T3B52A",
+                "https://www.youtube.com/watch?v=IHJExMbmgAo",
+                "https://wardenofarnor.wordpress.com/2017/01/28/the-line-unbroken-n9-nightmare-return-to-mirkwood/");
+
+            //Hall of Beorn
+            AddRelatedDeck("737", "Beorn's Path 9 - Return to Mirkwood (Tactics/Spirit)",
+                "https://hallofbeorn.wordpress.com/2013/09/22/beorns-path-part-13-return-to-mirkwood/");
+
+            //Darkling Door
+            AddRelatedDeck("4112", "Opposing the Shadow",
+                "https://darklingdoor.wordpress.com/2017/01/12/return-to-mirkwood-play-report/");
 
             AddEncounterSet(EncounterSet.ReturnToMirkwood);
             AddEncounterSet(EncounterSet.ReturnToMirkwoodNightmare);

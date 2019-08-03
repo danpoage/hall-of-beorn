@@ -1,8 +1,8 @@
 namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
 {
-    public class TheHuntForGollum : Scenario
+    public class TheHuntForGollumScenario : Scenario
     {
-        public TheHuntForGollum()
+        public TheHuntForGollumScenario()
         {
             Title = "The Hunt for Gollum";
             ProductName = "The Hunt for Gollum";
