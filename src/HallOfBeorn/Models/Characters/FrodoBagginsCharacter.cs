@@ -120,8 +120,8 @@ Frodo heard a sweet singing running in his mind: a song that seemed to come like
             addGroup("The Fellowship", "The-Fellowship");
 
             addItemThing("The One Ring");
-            addItem("Sting", "Sting-RD");
-            addItem("Mithril Shirt", "Mithril-Shirt-RD");
+            addItemThing("Sting");
+            addItemThing("Mithril Shirt");
             addItem("Phial of Galadriel", "Phial-of-Galadriel-RD");
 
             LotRCard("Frodo-Baggins-CatC");

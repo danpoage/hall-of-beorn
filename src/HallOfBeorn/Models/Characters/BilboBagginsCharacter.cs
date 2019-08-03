@@ -132,11 +132,8 @@ But Bilbo was not quite so unlearned in dragon-lore as all that, and if Smaug ho
             addGroup("Rivendell", "Rivendell");
 
             addItemThing("The One Ring");
-            addItem("Sting", "Sting-MG");
-            addItem("Sting", "Sting-THOHaUH");
-            addItem("Mithril Shirt", "Mithril-Shirt-TFoW");
-            addItem("Mithril Shirt", "Mithril-Shirt-THOtD");
-            addItem("Mithril Shirt", "Mithril-Shirt-RD");
+            addItemThing("Sting");
+            addItemThing("Mithril Shirt");
             
             LotRCard("Bilbo-Baggins-THfG");
             LotRCard("Bilbo-Baggins-MG");

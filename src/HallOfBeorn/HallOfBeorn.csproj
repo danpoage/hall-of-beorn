@@ -208,6 +208,8 @@
     <Compile Include="Models\Characters\GafferGamgeeCharacter.cs" />
     <Compile Include="Models\Characters\GalionCharacter.cs" />
     <Compile Include="Models\Characters\MeneldorCharacter.cs" />
+    <Compile Include="Models\Characters\Things\MithrilShirt.cs" />
+    <Compile Include="Models\Characters\Things\Sting.cs" />
     <Compile Include="Models\Characters\ThranduilCharacter.cs" />
     <Compile Include="Models\Digital\AttachmentSlot.cs" />
     <Compile Include="Models\Digital\CardSets\DwalinPack.cs" />
@@ -355,7 +357,7 @@
     <Compile Include="Models\Characters\TheodenCharacter.cs" />
     <Compile Include="Models\Characters\TheodredCharacter.cs" />
     <Compile Include="Models\Characters\Groups\RangersOfIthilienGroup.cs" />
-    <Compile Include="Models\Characters\TheOneRingThing.cs" />
+    <Compile Include="Models\Characters\Things\TheOneRing.cs" />
     <Compile Include="Models\Characters\Groups\RohanGroup.cs" />
     <Compile Include="Models\Characters\Groups\TheShirePlace.cs" />
     <Compile Include="Models\Characters\Groups\TheWhiteCouncilGroup.cs" />

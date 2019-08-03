@@ -84,8 +84,9 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         }
 
         private readonly Dictionary<string, string> allCharacters = new Dictionary<string, string>();
-        private readonly Dictionary<string, string> allPlaces = new Dictionary<string, string>();
         private readonly Dictionary<string, string> allGroups = new Dictionary<string, string>();
+        private readonly Dictionary<string, string> allPlaces = new Dictionary<string, string>();
+        private readonly Dictionary<string, string> allThings = new Dictionary<string, string>();
 
         public bool IsListView { get { return allCharacters.Count > 0; } }
 
@@ -94,14 +95,19 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             return allCharacters;
         }
 
+        public IEnumerable<KeyValuePair<string, string>> AllGroups()
+        {
+            return allGroups;
+        }
+
         public IEnumerable<KeyValuePair<string, string>> AllPlaces()
         {
             return allPlaces;
         }
 
-        public IEnumerable<KeyValuePair<string, string>> AllGroups()
+        public IEnumerable<KeyValuePair<string, string>> AllThings()
         {
-            return allGroups;
+            return allThings;
         }
 
         public void AddCharacters(IEnumerable<Character> characters)
@@ -115,6 +121,9 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                         break;
                     case CharacterType.Place:
                         allPlaces.Add(character.Name, url);
+                        break;
+                    case CharacterType.Thing:
+                        allThings.Add(character.Name, url);
                         break;
                     default:
                         allCharacters.Add(character.Name, url);

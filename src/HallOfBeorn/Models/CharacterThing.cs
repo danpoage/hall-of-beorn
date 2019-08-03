@@ -7,8 +7,8 @@ namespace HallOfBeorn.Models
 {
     public abstract class CharacterThing : Character
     {
-        public CharacterThing(string name, string fullName)
-            : base(name, fullName, string.Empty)
+        public CharacterThing(string name, string fullName, string type)
+            : base(name, fullName, type)
         {
             Type = CharacterType.Thing;
         }

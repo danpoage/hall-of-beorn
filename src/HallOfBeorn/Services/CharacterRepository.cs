@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.Characters;
 using HallOfBeorn.Models.Characters.Groups;
+using HallOfBeorn.Models.Characters.Things;
 
 namespace HallOfBeorn.Services
 {
@@ -102,6 +101,7 @@ namespace HallOfBeorn.Services
             add(new MablungCharacter());
             add(new MeneldorCharacter());
             add(new MerryCharacter());
+            add(new MithrilShirt());
             add(new NoriCharacter());
             add(new OinCharacter());
             add(new OriCharacter());
@@ -119,6 +119,7 @@ namespace HallOfBeorn.Services
             add(new SamGamgeeCharacter());
             add(new SarumanCharacter());
             add(new SkinbarkCharacter());
+            add(new Sting());
             add(new TheBeorningsGroup());
             add(new TheCouncilOfElrondGroup());
             add(new TheEaglesGroup());

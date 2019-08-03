@@ -24,15 +24,20 @@
             }
         </div>
         <div class="list-right">
+            <h2>Groups</h2>
+            @foreach (var pair in @Model.AllGroups()) {
+                var groupId = @pair.Key.Slugify();
+                <div class="character-list-item"><a id="@groupId" href="@pair.Value" title="@pair.Key">@pair.Key</a></div>
+            }
             <h2>Places</h2>
             @foreach (var pair in @Model.AllPlaces()) {
                 var placeId = @pair.Key.Slugify();
                 <div class="character-list-item"><a id="@placeId" href="@pair.Value" title="@pair.Key">@pair.Key</a></div>
             }
-            <h2>Groups</h2>
-            @foreach (var pair in @Model.AllGroups()) {
-                var groupId = @pair.Key.Slugify();
-                <div class="character-list-item"><a id="@groupId" href="@pair.Value" title="@pair.Key">@pair.Key</a></div>
+            <h2>Things</h2>
+            @foreach (var pair in @Model.AllThings()) {
+                var thingId = @pair.Key.Slugify();
+                <div class="character-list-item"><a id="@thingId" href="@pair.Value" title="@pair.Key">@pair.Key</a></div>
             }
         </div>
     </div>

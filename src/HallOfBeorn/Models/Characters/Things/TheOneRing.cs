@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HallOfBeorn.Models.Characters
+namespace HallOfBeorn.Models.Characters.Things
 {
     public class TheOneRingThing : CharacterThing
     {
         public TheOneRingThing()
-            : base("The One Ring", "The One Ring")
+            : base("The One Ring", "The One Ring", "Ring")
         {
             Bio =
 @"<blockquote>
