@@ -78,7 +78,22 @@
         </div>
     }
 
-        if (@Model.HasLeaders) {
+    if (@Model.HasPlaces) {
+        <h3>Places</h3>
+        <div>
+            @foreach (var place in @Model.Places) {
+                <span style="margin:4px 6px; display:inline-block">
+                    @if (!string.IsNullOrEmpty(@place.Url)) {
+                        <a href="@place.Url" title="@place.Title">@place.Text</a>
+                    } else {
+                        @place.Text
+                    }
+                </span>   
+            }
+        </div>   
+    }
+    
+    if (@Model.HasLeaders) {
         <h3>Leaders</h3>
         <div>
             @foreach (var leader in @Model.Leaders) {

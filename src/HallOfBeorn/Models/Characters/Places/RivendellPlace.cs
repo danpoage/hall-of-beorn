@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HallOfBeorn.Models.Characters.Groups
+namespace HallOfBeorn.Models.Characters.Places
 {
-    public class RivendellGroup : CharacterPlace
+    public class RivendellPlace : CharacterPlace
     {
-        public RivendellGroup()
+        public RivendellPlace()
             : base("Rivendell", "Rivendell")
         {
             Bio =

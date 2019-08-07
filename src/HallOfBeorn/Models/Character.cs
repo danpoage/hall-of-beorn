@@ -43,6 +43,7 @@ namespace HallOfBeorn.Models
         private readonly List<ILink> friends = new List<ILink>();
         private readonly List<ILink> items = new List<ILink>();
         private readonly List<ILink> aliases = new List<ILink>();
+        private readonly List<ILink> places = new List<ILink>();
         private readonly List<ILink> groups = new List<ILink>();
         private readonly List<ILink> articles = new List<ILink>();
         private readonly List<string> books = new List<string>();
@@ -96,6 +97,16 @@ namespace HallOfBeorn.Models
         protected void addFriendCard(string name, string slug)
         {
             addDetailLink(this.friends, name, slug);
+        }
+
+        protected void addPlace(string name)
+        {
+            addCharacterLink(this.places, name, string.Empty);
+        }
+
+        protected void addPlace(string name, string slug)
+        {
+            addCharacterLink(this.places, name, slug);
         }
 
         protected void addItem(string name)
@@ -216,6 +227,8 @@ namespace HallOfBeorn.Models
 
         public string Race { get; protected set; }
         
+        public IEnumerable<ILink> Places { get { return places; } }
+
         public IEnumerable<ILink> Leaders { get { return leaders; } }
         public IEnumerable<ILink> Members { get { return members; } }
 

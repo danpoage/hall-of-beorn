@@ -209,6 +209,8 @@
     <Compile Include="Models\Characters\GafferGamgeeCharacter.cs" />
     <Compile Include="Models\Characters\GalionCharacter.cs" />
     <Compile Include="Models\Characters\MeneldorCharacter.cs" />
+    <Compile Include="Models\Characters\Places\FangornPlace.cs" />
+    <Compile Include="Models\Characters\Places\TheEyriePlace.cs" />
     <Compile Include="Models\Characters\Things\MithrilShirt.cs" />
     <Compile Include="Models\Characters\Things\Sting.cs" />
     <Compile Include="Models\Characters\ThranduilCharacter.cs" />
@@ -310,7 +312,7 @@
     <Compile Include="Models\Characters\GloinCharacter.cs" />
     <Compile Include="Models\Characters\GlorfindelCharacter.cs" />
     <Compile Include="Models\Characters\GollumCharacter.cs" />
-    <Compile Include="Models\Characters\Groups\GondorGroup.cs" />
+    <Compile Include="Models\Characters\Places\GondorPlace.cs" />
     <Compile Include="Models\Characters\GrimaCharacter.cs" />
     <Compile Include="Models\Characters\GrimbeornTheOldCharacter.cs" />
     <Compile Include="Models\Characters\GrimboldCharacter.cs" />
@@ -333,7 +335,7 @@
     <Compile Include="Models\Characters\LeaflockCharacter.cs" />
     <Compile Include="Models\Characters\LegolasCharacter.cs" />
     <Compile Include="Models\Characters\LindirCharacter.cs" />
-    <Compile Include="Models\Characters\Groups\LorienGroup.cs" />
+    <Compile Include="Models\Characters\Places\LorienPlace.cs" />
     <Compile Include="Models\Characters\MablungCharacter.cs" />
     <Compile Include="Models\Characters\MerryCharacter.cs" />
     <Compile Include="Models\Characters\NoriCharacter.cs" />
@@ -344,7 +346,7 @@
     <Compile Include="Models\Characters\PrinceImrahilCharacter.cs" />
     <Compile Include="Models\Characters\QuickbeamCharacter.cs" />
     <Compile Include="Models\Characters\RadagastCharacter.cs" />
-    <Compile Include="Models\Characters\Groups\RivendellGroup.cs" />
+    <Compile Include="Models\Characters\Places\RivendellPlace.cs" />
     <Compile Include="Models\Characters\RobinSmallburrowCharacter.cs" />
     <Compile Include="Models\Characters\RosieCottonCharacter.cs" />
     <Compile Include="Models\Characters\RumilCharacter.cs" />
@@ -359,8 +361,8 @@
     <Compile Include="Models\Characters\TheodredCharacter.cs" />
     <Compile Include="Models\Characters\Groups\RangersOfIthilienGroup.cs" />
     <Compile Include="Models\Characters\Things\TheOneRing.cs" />
-    <Compile Include="Models\Characters\Groups\RohanGroup.cs" />
-    <Compile Include="Models\Characters\Groups\TheShirePlace.cs" />
+    <Compile Include="Models\Characters\Places\RohanPlace.cs" />
+    <Compile Include="Models\Characters\Places\TheShirePlace.cs" />
     <Compile Include="Models\Characters\Groups\TheWhiteCouncilGroup.cs" />
     <Compile Include="Models\Characters\ThorinOakenshieldCharacter.cs" />
     <Compile Include="Models\Characters\Groups\ThorinsCompanyGroup.cs" />

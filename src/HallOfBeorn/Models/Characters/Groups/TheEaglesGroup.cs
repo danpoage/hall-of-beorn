@@ -53,6 +53,8 @@ namespace HallOfBeorn.Models.Characters.Groups
             BioSourceUrl = "http://tolkiengateway.net/wiki/Eagles";
             ImageArtist = Artist.Mike_Nash;
 
+            addPlace("The Eyrie", "The-Eyrie");
+
             addLeader("Gwaihir", "Gwaihir");
 
             addMember("Landroval", "Landroval");

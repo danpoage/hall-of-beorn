@@ -5,6 +5,7 @@ using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.Characters;
 using HallOfBeorn.Models.Characters.Groups;
+using HallOfBeorn.Models.Characters.Places;
 using HallOfBeorn.Models.Characters.Things;
 
 namespace HallOfBeorn.Services
@@ -57,6 +58,7 @@ namespace HallOfBeorn.Services
             add(new EowynCharacter());
             add(new ErestorCharacter());
             add(new ErkenbrandCharacter());
+            add(new FangornPlace());
             add(new FaramirCharacter());
             add(new FarmerMaggotCharacter());
             add(new FastredCharacter());
@@ -78,7 +80,7 @@ namespace HallOfBeorn.Services
             add(new GloinCharacter());
             add(new GlorfindelCharacter());
             add(new GollumCharacter());
-            add(new GondorGroup());
+            add(new GondorPlace());
             add(new GrimaCharacter());
             add(new GrimbeornTheOldCharacter());
             add(new GrimboldCharacter());
@@ -98,7 +100,7 @@ namespace HallOfBeorn.Services
             add(new LeaflockCharacter());
             add(new LegolasCharacter());
             add(new LindirCharacter());
-            add(new LorienGroup());
+            add(new LorienPlace());
             add(new MablungCharacter());
             add(new MeneldorCharacter());
             add(new MerryCharacter());
@@ -112,9 +114,9 @@ namespace HallOfBeorn.Services
             add(new QuickbeamCharacter());
             add(new RadagastCharacter());
             add(new RangersOfIthilienGroup());
-            add(new RivendellGroup());
+            add(new RivendellPlace());
             add(new RobinSmallburrowCharacter());
-            add(new RohanGroup());
+            add(new RohanPlace());
             add(new RosieCottonCharacter());
             add(new RumilCharacter());
             add(new SamGamgeeCharacter());
@@ -125,6 +127,7 @@ namespace HallOfBeorn.Services
             add(new TheCouncilOfElrondGroup());
             add(new TheEaglesGroup());
             add(new TheEntsGroup());
+            add(new TheEyriePlace());
             add(new TheFellowshipOfTheRingGroup());
             add(new TheGreyCompanyGroup());
             add(new TheodenCharacter());

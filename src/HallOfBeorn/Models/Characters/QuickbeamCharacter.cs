@@ -19,6 +19,9 @@ namespace HallOfBeorn.Models.Characters
 
             Alias("Bregalad");
 
+            addGroup("The Ents", "The-Ents");
+            addPlace("Fangorn Forest", "Fangorn-Forest");
+
             addFriend("Treebeard", "Treebeard");
             addFriend("Skinbark", "Skinbark");
             addFriend("Beechbone", "Beechbone");

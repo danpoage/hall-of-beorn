@@ -17,6 +17,8 @@ namespace HallOfBeorn.Models.Characters
             BioSourceUrl = "http://tolkiengateway.net/wiki/Skinbark";
             ImageArtist = Artist.John_Howe;
 
+            addPlace("Fangorn Forest", "Fangorn-Forest");
+
             addFriend("Treebeard", "Treebeard");
             addFriend("Leaflock");
 

@@ -20,6 +20,7 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Treebeard", "Treebeard");
 
             addGroup("The Ents", "The-Ents");
+            addPlace("Fangorn Forest", "Fangorn-Forest");
 
             LotRCard("Beechbone-TBoCD");
         }

@@ -36,6 +36,10 @@ namespace HallOfBeorn.Models.Characters
             BioSourceUrl = "http://tolkiengateway.net/wiki/Treebeard";
             ImageArtist = Artist.Suzanne_Helmigh;
 
+            addPlace("Fangorn Forest", "Fangorn-Forest");
+
+            addGroup("The Ents", "The-Ents");
+
             Alias("Fangorn");
             Alias("The Ent");
 

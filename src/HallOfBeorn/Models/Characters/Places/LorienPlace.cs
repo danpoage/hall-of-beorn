@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HallOfBeorn.Models.Characters.Groups
+namespace HallOfBeorn.Models.Characters.Places
 {
-    public class LorienGroup : CharacterPlace
+    public class LorienPlace : CharacterPlace
     {
-        public LorienGroup()
+        public LorienPlace()
             : base("Lórien", "Lothlórien")
         {
             Bio =

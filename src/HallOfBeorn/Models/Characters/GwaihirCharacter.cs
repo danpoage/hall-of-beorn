@@ -31,6 +31,8 @@ namespace HallOfBeorn.Models.Characters
 
             addFamily("Landroval (Brother)", "Landroval");
 
+            addPlace("The Eyrie", "The-Eyrie");
+            
             addGroup("The Eagles");
 
             LotRCard("Gwaihir-TiT");

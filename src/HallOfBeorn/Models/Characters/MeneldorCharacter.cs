@@ -18,13 +18,16 @@ namespace HallOfBeorn.Models.Characters
             BioSourceUrl = "http://tolkiengateway.net/wiki/Meneldor";
             ImageArtist = Artist.Dmitry_Prosvirnin;
 
+            addPlace("The Eyrie", "The-Eyrie");
+
             addGroup("The Eagles", "The-Eagles");
+
+            addItem("Meneldor's Flight", "Meneldor's-Flight-THoEM");
 
             addFriend("Gwaihir", "Gwaihir");
             addFriend("Landroval", "Landroval");
 
             LotRCard("Meneldor-RAR");
-            LotRCard("Meneldor's-Flight-THoEM");
         }
     }
 }

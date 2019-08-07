@@ -42,6 +42,9 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         public IEnumerable<ILink> Friends { get { return character.Friends; } }
         public bool HasFriends { get { return character.Friends.Count() > 0; } }
 
+        public IEnumerable<ILink> Places { get { return character.Places; } }
+        public bool HasPlaces { get { return character.Places.Count() > 0; } }
+
         public IEnumerable<ILink> Items { get { return character.Items; } }
         public bool HasItems { get { return character.Items.Count() > 0; } }
 

@@ -20,6 +20,8 @@ namespace HallOfBeorn.Models.Characters
             BioSourceUrl = "http://tolkiengateway.net/wiki/Leaflock";
             ImageArtist = Artist.Mike_Nash;
 
+            addPlace("Fangorn Forest", "Fangorn-Forest");
+
             addFriend("Treebeard", "Treebeard");
 
             addGroup("The Ents", "The-Ents");
