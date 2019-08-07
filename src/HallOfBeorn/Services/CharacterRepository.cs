@@ -43,6 +43,7 @@ namespace HallOfBeorn.Services
             add(new DamrodCharacter());
             add(new DenethorCharacter());
             add(new DeorwineCharacter());
+            add(new DerufinCharacter());
             add(new DoriCharacter());
             add(new DunhereCharacter());
             add(new DwalinCharacter());

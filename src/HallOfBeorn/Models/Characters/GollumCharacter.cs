@@ -64,9 +64,9 @@ namespace HallOfBeorn.Models.Characters
             BioSourceUrl = "http://tolkiengateway.net/wiki/Gollum";
             ImageArtist = Artist.Jake_Murray;
 
-            Alias("Sméagol", "Smeagol-TLoS");
+            Alias("Sméagol");
             Alias("Slinker");
-            Alias("Stinker");
+            Alias("Stinker", "Stinker-ASitE");
 
             addFriend("Bilbo Baggins", "Bilbo-Baggins");
             addFriend("Frodo Baggins", "Frodo-Baggins");
@@ -74,6 +74,9 @@ namespace HallOfBeorn.Models.Characters
             addItemThing("The One Ring");
             addItem("Gollum's Bite", "Gollum's-Bite-RtM");
 
+            LotRCard("Smeagol-ASitE");
+            LotRCard("Smeagol-TLoS");
+            LotRCard("Gollum-ASitE");
             LotRCard("Gollum-TDM");
             LotRCard("Gollum-RtM");
             LotRCard("Gollum-THOHaUH");
