@@ -61,8 +61,7 @@ It was Thorin, but you could only have told it by his golden chain, and by the c
             addFamily("Thráin (Father)");
             addFamily("Dáin Ironfoot (Cousin)", "Dain-Ironfoot");
 
-            addItem("Orcrist", "Orcrist-THOHaUH");
-            addItem("Orcrist", "Orcrist-FitN");
+            addItemThing("Orcrist");
             addItem("Thrór's Battle Axe", "Thror's-Battle-Axe-THOtD");
             addItem("Thrór's Hunting Bow", "Thror's-Hunting-Bow-THOtD");
             addItem("Thrór's Golden Cup", "Thror's-Golden-Cup-THOtD");

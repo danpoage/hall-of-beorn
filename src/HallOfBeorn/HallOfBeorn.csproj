@@ -211,7 +211,9 @@
     <Compile Include="Models\Characters\MeneldorCharacter.cs" />
     <Compile Include="Models\Characters\Places\FangornPlace.cs" />
     <Compile Include="Models\Characters\Places\TheEyriePlace.cs" />
+    <Compile Include="Models\Characters\Things\Glamdring.cs" />
     <Compile Include="Models\Characters\Things\MithrilShirt.cs" />
+    <Compile Include="Models\Characters\Things\Orcrist.cs" />
     <Compile Include="Models\Characters\Things\Sting.cs" />
     <Compile Include="Models\Characters\ThranduilCharacter.cs" />
     <Compile Include="Models\Digital\AttachmentSlot.cs" />

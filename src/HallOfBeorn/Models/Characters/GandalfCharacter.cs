@@ -162,7 +162,7 @@ Láthspell I name you, Ill-news; and ill news is an ill guest they say.
             addFriend("Radagast", "Radagast");
             addFriend("Galadriel", "Galadriel");
 
-            addItem("Glamdring", "Glamdring-RD");
+            addItemThing("Glamdring");
             addItem("Narya", "Narya-TGH");
             addItem("Shadowfax", "Shadowfax-ToS");
 

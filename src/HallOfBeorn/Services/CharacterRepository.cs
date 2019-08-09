@@ -104,7 +104,6 @@ namespace HallOfBeorn.Services
             add(new MablungCharacter());
             add(new MeneldorCharacter());
             add(new MerryCharacter());
-            add(new MithrilShirt());
             add(new NoriCharacter());
             add(new OinCharacter());
             add(new OriCharacter());
@@ -122,7 +121,6 @@ namespace HallOfBeorn.Services
             add(new SamGamgeeCharacter());
             add(new SarumanCharacter());
             add(new SkinbarkCharacter());
-            add(new Sting());
             add(new TheBeorningsGroup());
             add(new TheCouncilOfElrondGroup());
             add(new TheEaglesGroup());
@@ -131,7 +129,6 @@ namespace HallOfBeorn.Services
             add(new TheFellowshipOfTheRingGroup());
             add(new TheGreyCompanyGroup());
             add(new TheodenCharacter());
-            add(new TheOneRingThing());
             add(new TheShirePlace());
             add(new TheWhiteCouncilGroup());
             add(new TheodredCharacter());
@@ -142,6 +139,13 @@ namespace HallOfBeorn.Services
             add(new TomCottonCharacter());
             add(new ThranduilCharacter());
             add(new TreebeardCharacter());
+
+            //Things
+            add(new Glamdring());
+            add(new MithrilShirt());
+            add(new Orcrist());
+            add(new Sting());
+            add(new TheOneRingThing());
         }
 
         private readonly Dictionary<string, Character> all = new Dictionary<string, Character>();
