@@ -346,6 +346,18 @@ namespace HallOfBeorn.Models.LotR
             Add(TheFateOfWilderland);
 
             //A Shadow in the East
+            Add(TheRiverRunning);
+            Add(RidersOfRhun);
+            Add(EasterlingRiders);
+            Add(RollingPlains);
+            Add(DangerInDorwinion);
+            Add(ServantsOfSauron);
+            Add(CityOfRhun);
+            Add(UnderGuard);
+            Add(TempleOfDoom);
+            Add(UlchorsGuard);
+            Add(TwistedTunnels);
+            Add(ThePowerOfMordor);
             Add(GollumAndSmeagol);
 
             //Two Player Starter
@@ -682,6 +694,18 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet TheFateOfWilderland = new EncounterSet { Name = "The Fate of Wilderland", Set = "The Fate of Wilderland" };
 
         //A Shadow in the East and Vengeance of Mordor
+        public static EncounterSet TheRiverRunning = new EncounterSet { Name = "The River Running", Set = "A Shadow in the East" };
+        public static EncounterSet RidersOfRhun = new EncounterSet { Name = "Riders of Rhûn", Set = "A Shadow in the East" };
+        public static EncounterSet EasterlingRiders = new EncounterSet { Name = "Easterling Riders", Set = "A Shadow in the East" };
+        public static EncounterSet RollingPlains = new EncounterSet { Name = "Rolling Plains", Set = "A Shadow in the East" };
+        public static EncounterSet DangerInDorwinion = new EncounterSet { Name = "Danger in Dorwinion", Set = "A Shadow in the East" };
+        public static EncounterSet ServantsOfSauron = new EncounterSet { Name = "Servants of Sauron", Set = "A Shadow in the East" };
+        public static EncounterSet CityOfRhun = new EncounterSet { Name = "City of Rhûn", Set = "A Shadow in the East" };
+        public static EncounterSet UnderGuard = new EncounterSet { Name = "Under Guard", Set = "A Shadow in the East" };
+        public static EncounterSet TempleOfDoom = new EncounterSet { Name = "Temple of Doom", Set = "A Shadow in the East" };
+        public static EncounterSet UlchorsGuard = new EncounterSet { Name = "Ulchor's Guard", Set = "A Shadow in the East" };
+        public static EncounterSet TwistedTunnels = new EncounterSet { Name = "Twisted Tunnels", Set = "A Shadow in the East" };
+        public static EncounterSet ThePowerOfMordor = new EncounterSet { Name = "The Power of Mordor", Set = "A Shadow in the East" };
         public static EncounterSet GollumAndSmeagol = new EncounterSet { Name = "Gollum and Smeagol", Set = "A Shadow in the East" }; 
 
         //Two Player Starter

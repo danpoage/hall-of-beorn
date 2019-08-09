@@ -7,9 +7,24 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
 {
     public class AShadowInTheEastSet : CardSet
     {
+        private const string setName = "A Shadow in the East";
+        private const string setTheRiverRunning = "The River Running";
+        private const string setRidersOfRhun = "Riders of Rhûn";
+        private const string setEasterlingRiders = "Easterling Riders";
+        private const string setRollingPlains = "Rolling Plains";
+        private const string setDangerInDorwinion = "Danger in Dorwinion";
+        private const string setServantsOfSauron = "Servants of Sauron";
+        private const string setCityOfRhun = "City of Rhûn";
+        private const string setUnderGuard = "Under Guard";
+        private const string setTempleOfDoom = "Temple of Doom";
+        private const string setUlchorsGuard = "Ulchor's Guard";
+        private const string setTwistedTunnels = "Twisted Tunnels";
+        private const string setThePowerOfMordor = "The Power of Mordor";
+        private const string setGollumAndSmeagol = "Gollum and Sméagol";
+
         protected override void Initialize()
         {
-            Name = "A Shadow in the East";
+            Name = setName;
             Abbreviation = "ASitE";
             Number = 56;
             SetType = Models.SetType.Deluxe_Expansion;
@@ -68,7 +83,47 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithText("Action: Exhaust The One Ring and raise your threat by 1 to ready the hero with The One Ring Attached. That hero gets +1 Willpower, +1 Attack, and +1 Defense until the end of the phase.")    
                 .WithFlavor("\"And behold! in our need chance brings to light the Ring of Power.\"\r\n-Boromir, The Fellowship of the Ring")
                 .WithInfo(11, 3, Artist.Echo_Chernik);
-            
+            addObjective("Easterling Pursuit", setTheRiverRunning)
+                .WithText("Forced: At the end of the round, place 1 resource here. Then if there are at lest 3 resources here, remove 3 of them and shuffle the encounter discard pile into the encounter deck. Discard cards from the top until X enemies are discarded, where X is the number of players. Add each enemy discarded this way to the staging area.")
+                .WithInfo(12, 1, Artist.Guillaume_Ducos);
+            addEnemy("Easterling Outrider", setTheRiverRunning, 24, 1, 2, 1, 2)
+                .WithTraits("Easterling.")
+                .WithKeywords("Surge.")
+                .WithText("Surge.\r\nForced: After Easterling Outrider engages a player, either place 1 resource on Easterling Pursuit, or Easterling Outrider makes an immediate attack.")
+                .WithShadow("Shadow: Discard an attachment you control.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(13, 3, Artist.Guillaume_Ducos);
+            addLocation("River Running", setTheRiverRunning, 2, 5)
+                .WithTraits("Riverland.")
+                .WithText("While River Running is in the staging area, enemies cannot be optionally engaged.\r\nTravel: The first player engages the highest engagement cost enemy in the staging area.")
+                .WithFlavor("...below them were trees that looked like oaks and elms, and wide grass lands, and a river running through it all.\r\n-The Hobbit")
+                .WithInfo(14, 2, Artist.Carlos_Palma_Cruchaga);
+            addLocation("Exposed Riverbank", setTheRiverRunning, 4, 4)
+                .WithTraits("Riverland.")
+                .WithText("While Exposed Riverbank is in the staging area, it gains: \"Forced: After a 'when revealed' effect is canceled, place 1 resource on Easterling Pursuit.\"\r\nTravel: Place 1 resource on Easterling Pursuit.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(15, 2, Artist.Guillaume_Ducos);
+            addTreachery("Enemies Close Behind", setTheRiverRunning)
+                .WithText("When Revealed: Place 1 resource on Easterling Pursuit. Then, raise each player's threat by 1 for each resource on Easterling Pursuit.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, place 1 resource on Easterling Pursuit.")
+                .WithInfo(16, 2, Artist.Leanna_Crossan);
+            addEnemy("Easterling Captain", setRidersOfRhun, 36, 3, 6, 3, 6)
+                .WithUnique()
+                .WithTraits("Easterling.")
+                .WithText("Forced: When Easterling Captain enters play, discard cards from the encounter deck until an Easterling treachery is discarded. Attach that treachery to Easterling Captain.\r\nForced: When Easterling Captain would take any amount of damage, discard an Easterling attachment from him. Then, cancel the damage.")
+                .WithVictoryPoints(6)
+                .WithInfo(17, 1, Artist.Antonio_Jose_Manzanedo);
+            addEnemy("Rider of Rhûn", setRidersOfRhun, 40, 2, 5, 2, 5)
+                .WithTraits("Easterling.")
+                .WithKeywords("Archery 2.")
+                .WithText("Archery 2.\r\nRider of Rhûn gets -10 enagement cost for each Easterling attachment it has.\r\nWhen Revealed: Search the encounter deck and discard pile for an Easterling Horse and attach it to Rider of Rhûn. Shuffle the encounter deck.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(18, 2, Artist.Marco_Caradonna);
+            addTreachery("Easterling Horse", setRidersOfRhun)
+                .WithTraits("Easterling.")
+                .WithText("While attached to an enemy, counts as a Mount attachment with the text: \"Attached enemy gets +2 Threat. Forced: At the end of the round, return attached enemy to the staging area.\"\r\nWhen Revealed: Attach to the lowest engagement cost Easterling enemy without an Easterling Horse and return it to the staging area. Otherwise, Easterling Horse gains surge.")
+                .WithInfo(19, 3, Artist.Guillaume_Ducos);
+
             addTreachery("Stinker", EncounterSet.GollumAndSmeagol.Name)
                 .WithTraits("Gollum.")
                 .WithKeywords("Surge.")
