@@ -230,6 +230,72 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithText("When Revealed: Attach to the highest attack ally in play. (Counts as a Condition attachment with the text: \"Attached ally loses the ally card type, gains the enemy card type, and engages its owner. Treat attached ally's text box as if it were blank. If Secret Cultist is discarded, or the attached ally's owner is eliminated, discard attached ally.\")")
                 .WithEasyModeQuantity(1)
                 .WithInfo(39, 2, Artist.Nikolas_Hagialas);
+            addEnemy("Messenger from Mordor", setServantsOfSauron, 34, 2, 4, 2, 4)
+                .WithTraits("Mordor.")
+                .WithText("When Revealed: Either raise each player's threat by X, where X is the active location's Threat, or Messenger from Mordor makes an immediate attack against the first player.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack.")
+                .WithInfo(40, 3, Artist.Unknown);
+            addEnemy("Servant of Sauron", setServantsOfSauron, 36, 1, 2, 1, 3)
+                .WithTraits("Mordor.")
+                .WithKeywords("Surge.")
+                .WithText("Servant of Sauron engages the first player.\r\nForced: After the engaged player raises his threat, Servant of Sauron makes an immediate attack. (Limit once per phase.)")
+                .WithEasyModeQuantity(1)
+                .WithInfo(41, 2, Artist.Rafal_Hrynkiewicz);
+            addTreachery("Overwhelmed", setServantsOfSauron)
+                .WithKeywords("Doomed 1.")
+                .WithText("When Revealed: Until the end of the round, enemies engaged with the first player cannot take damage.")
+                .WithShadow("Shadow: Either raise your threat by 2, or attacking enemy cannot take damage this round.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(42, 2, Artist.Greg_Bobrowski);
+            addEncounterSideQuest("Shadow of Fear", setServantsOfSauron, 6)
+                .WithFlavor("The shadow of Mordor is on the servants of the Enemy, and they inspire fear in your companions. Only a stout heart can stand against them.")
+                .WithKeywords("Surge.")
+                .WithText("Forced: After an enemy engages a player, that player raises his threat by 1.\r\nResponse: When Shadow of Fear is defeated, reduce each player's threat by 3.")
+                .WithVictoryPoints(10)
+                .WithInfo(43, 1, Artist.Jarreau_Wimberly);
+            addEnemy("Rhûn Backstabber", setCityOfRhun, 28, 2, 3, 2, 3)
+                .WithTraits("Easterling.")
+                .WithText("Forced: After Rhûn Backstabber engages you, either raise your threat by 2, or discard an ally you control with printed cost 2 or higher.")
+                .WithShadow("Shadow: Raise your threat by 1 for each enemy engaged with you.")
+                .WithInfo(44, 2, Artist.Jon_Bosco);
+            addEnemy("Treacherous Easterling", setCityOfRhun, 32, 3, 3, 1, 5)
+                .WithTraits("Easterling.")
+                .WithText("Treacherous Easterlings gets +1 Attack and +1 Defense for each resource token on it (Limit +3 Attack and +3 Defense.)\r\nForced: After the engaged player raises his threat, place 1 resource token on Treacherous Easterling.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(45, 2, Artist.Romana_Kendelic);
+            addLocation("City Forum", setCityOfRhun, 1, 5)
+                .WithTraits("City.")
+                .WithText("City Forum gets +1 Threat for each resource here.\r\nWhile City Forum is in the staging area, it gains: \"Forced: After a location is explored, place 1 resource here.\"\r\nTravel: Each player raises his threat by 1 for each resource here.")
+                .WithInfo(46, 2, Artist.Aleksander_Karcz);
+            addLocation("Seedy Tavern", setCityOfRhun, 2, 5)
+                .WithTraits("City.")
+                .WithText("Immune to player card effects.\r\nForced: When Seedy Travern is explored, reveal each facedown card under it.\r\nTravel: Look at the top 5 cards of the encounter deck. Put one of those cards facedown under Seedy Tavern and shuffle the rest back into the encounter deck.")
+                .WithVictoryPoints(2)
+                .WithInfo(47, 2, Artist.Nikolas_Hagialas);
+            addTreachery("Dakrness in the East", setCityOfRhun)
+                .WithText("When Revealed: Raise each player's threat by X, where X is the active location's Threat. If there is no active location, Darkness in the East gains surge.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if you raised your threat this round).")
+                .WithInfo(48, 2, Artist.Lucas_Staniec);
+            addLocation("Side Street", setUnderGuard, 3, 3)
+                .WithTraits("City.")
+                .WithText("While Side Street is in the staging area, progress cannot be placed on other locations in the staging area.\r\nTravel: Shuffle the encounter discard pile into the encounter deck and discard cards until a location is discarded. Add that location to the staging area.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(49, 2, Artist.Carlos_Palma_Cruchaga);
+            addLocation("Catacombs", setUnderGuard, 4, 4)
+                .WithTraits("City.")
+                .WithText("While Catacombs is in the staging area, enemes in the staging area cannot take damage.\r\nTravel: Each player discards the top card of the encounter deck. If a player discards an enemy this way, he puts it into play engaged with him.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(50, 2, Artist.Dimitri_Bielak);
+            addTreachery("Under Guard", setUnderGuard)
+                .WithText("When Revealed: Resolve the Travel effect on the active location. If there is no active location, discard cards from the encounter deck until a location is discarded. Add that location to the staging area.")
+                .WithShadow("Shadow: If this attack destroys a character, resolve the Travel effect on the active location.")
+                .WithEasyModeQuantity(2)
+                .WithInfo(51, 3, Artist.Aleksander_Karcz);
+            addEncounterSideQuest("Unwelcome Travelers", setUnderGuard, 5)
+                .WithFlavor("The longer you wander the streets, the more unwanted attention you attract.")
+                .WithText("Each location in the staging area gets +1 Threat.\r\nForced: After Unwelcome Travelers becomes the current quest, the first player discards cards from the top of the encounter deck until an enemy is discarded and puts it into play engaged with him.")
+                .WithVictoryPoints(10)
+                .WithInfo(52, 1, Artist.Marius_Bota);
 
             addTreachery("Stinker", EncounterSet.GollumAndSmeagol.Name)
                 .WithTraits("Gollum.")
