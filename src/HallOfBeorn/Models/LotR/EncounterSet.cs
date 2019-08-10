@@ -348,7 +348,7 @@ namespace HallOfBeorn.Models.LotR
             //A Shadow in the East
             Add(TheRiverRunning);
             Add(RidersOfRhun);
-            Add(EasterlingRiders);
+            Add(EasterlingRaiders);
             Add(RollingPlains);
             Add(DangerInDorwinion);
             Add(ServantsOfSauron);
@@ -696,7 +696,7 @@ namespace HallOfBeorn.Models.LotR
         //A Shadow in the East and Vengeance of Mordor
         public static EncounterSet TheRiverRunning = new EncounterSet { Name = "The River Running", Set = "A Shadow in the East" };
         public static EncounterSet RidersOfRhun = new EncounterSet { Name = "Riders of Rhûn", Set = "A Shadow in the East" };
-        public static EncounterSet EasterlingRiders = new EncounterSet { Name = "Easterling Riders", Set = "A Shadow in the East" };
+        public static EncounterSet EasterlingRaiders = new EncounterSet { Name = "Easterling Raiders", Set = "A Shadow in the East" };
         public static EncounterSet RollingPlains = new EncounterSet { Name = "Rolling Plains", Set = "A Shadow in the East" };
         public static EncounterSet DangerInDorwinion = new EncounterSet { Name = "Danger in Dorwinion", Set = "A Shadow in the East" };
         public static EncounterSet ServantsOfSauron = new EncounterSet { Name = "Servants of Sauron", Set = "A Shadow in the East" };

@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
         private const string setName = "A Shadow in the East";
         private const string setTheRiverRunning = "The River Running";
         private const string setRidersOfRhun = "Riders of Rhûn";
-        private const string setEasterlingRiders = "Easterling Riders";
+        private const string setEasterlingRaiders = "Easterling Raiders";
         private const string setRollingPlains = "Rolling Plains";
         private const string setDangerInDorwinion = "Danger in Dorwinion";
         private const string setServantsOfSauron = "Servants of Sauron";
@@ -89,7 +89,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
             addEnemy("Easterling Outrider", setTheRiverRunning, 24, 1, 2, 1, 2)
                 .WithTraits("Easterling.")
                 .WithKeywords("Surge.")
-                .WithText("Surge.\r\nForced: After Easterling Outrider engages a player, either place 1 resource on Easterling Pursuit, or Easterling Outrider makes an immediate attack.")
+                .WithText("Forced: After Easterling Outrider engages a player, either place 1 resource on Easterling Pursuit, or Easterling Outrider makes an immediate attack.")
                 .WithShadow("Shadow: Discard an attachment you control.")
                 .WithEasyModeQuantity(1)
                 .WithInfo(13, 3, Artist.Guillaume_Ducos);
@@ -116,13 +116,120 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
             addEnemy("Rider of Rhûn", setRidersOfRhun, 40, 2, 5, 2, 5)
                 .WithTraits("Easterling.")
                 .WithKeywords("Archery 2.")
-                .WithText("Archery 2.\r\nRider of Rhûn gets -10 enagement cost for each Easterling attachment it has.\r\nWhen Revealed: Search the encounter deck and discard pile for an Easterling Horse and attach it to Rider of Rhûn. Shuffle the encounter deck.")
+                .WithText("Rider of Rhûn gets -10 enagement cost for each Easterling attachment it has.\r\nWhen Revealed: Search the encounter deck and discard pile for an Easterling Horse and attach it to Rider of Rhûn. Shuffle the encounter deck.")
                 .WithEasyModeQuantity(1)
                 .WithInfo(18, 2, Artist.Marco_Caradonna);
             addTreachery("Easterling Horse", setRidersOfRhun)
                 .WithTraits("Easterling.")
                 .WithText("While attached to an enemy, counts as a Mount attachment with the text: \"Attached enemy gets +2 Threat. Forced: At the end of the round, return attached enemy to the staging area.\"\r\nWhen Revealed: Attach to the lowest engagement cost Easterling enemy without an Easterling Horse and return it to the staging area. Otherwise, Easterling Horse gains surge.")
                 .WithInfo(19, 3, Artist.Guillaume_Ducos);
+            addEnemy("Easterling Raider", setEasterlingRaiders, 28, 2, 2, 2, 3)
+                .WithTraits("Easterling.")
+                .WithKeywords("Archery 1.")
+                .WithText("Easterling Raider gets +1 Attack and +1 Defense for each Easterling attachment on it.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if it has an Easterling attachment).")
+                .WithInfo(20, 3, Artist.Sebastian_Zakrzewski);
+            addEnemy("Warrior of Rhûn", setEasterlingRaiders, 34, 3, 3, 3, 4)
+                .WithTraits("Easterling.")
+                .WithText("Forced: When Warrior of Rhûn attacks, attach the top Easterling treachery in the discard pile to it.")
+                .WithShadow("Shadow: Attach the top Easterling treachery in the discard pile to attacking enemy.")
+                .WithEasyModeQuantity(2)
+                .WithInfo(21, 3, Artist.Chris_Grun);
+            addTreachery("Sword of Rhûn", setEasterlingRaiders)
+                .WithTraits("Easterling.")
+                .WithKeywords("Surge.")
+                .WithText("While attached to an enemy, counts as a Weapon attachment with the text: \"Attached enemy gets +2 Attack.\"\r\nWhen Revealed: Attach to the Easterling enemy with the lowest Attack without a Sword of Rhûn.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(22, 2, Artist.Sebastian_Zakrzewski);
+            addTreachery("Recurve Bow", setEasterlingRaiders)
+                .WithTraits("Easterling.")
+                .WithKeywords("Surge.")
+                .WithText("While attached to an enemy, counts as a Weapon attachment with the text: \"Attached enemy gains Archery 2.\"\r\nWhen Revealed: Attach to the highest engagement cost Easterling enemy without a Recurve Bow.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(23, 2, Artist.Martin_de_Diego_Sadaba);
+            addEncounterSideQuest("Warriors of the East", setEasterlingRaiders, 8)
+                .WithFlavor("The Easterlings are fearless warriors, but a stern defense may dissuade them.")
+                .WithKeywords("Surge.")
+                .WithText("When Revealed: After an Easterling enemy enters play, attach the top Easterling treachery in the discard pile to that enemy.\r\nForced: After Warriors of the East becomes the current quest, the highest Attack Easterling enemy in the staging area attacks the first player.")
+                .WithVictoryPoints(10)
+                .WithInfo(24, 1, Artist.Alvaro_Calvo_Escudero);
+            addLocation("Rollings Plains", setRollingPlains, 2, 4)
+                .WithTraits("Plains.")
+                .WithText("When Revealed: Each copy of Rolling Plains gets +2 Threat until the end of the phase.\r\nTravel: Raise each player's threat by 2.")
+                .WithFlavor("The falling stream vanished into a deep growth of cresses and water-plants, and they could hear it tinkling away in green tunnels, down long gentle slopes...\r\n-The Two Towers")
+                .WithEasyModeQuantity(3)
+                .WithInfo(25, 4, Artist.Alyn_Spiller);
+            addLocation("Rocky Outcrop", setRollingPlains, 3, 3)
+                .WithTraits("Plains.")
+                .WithText("While Rocky Outcrop is in the staging area, characters cannot be readied by player card effects.\r\nTravel: The first player exhausts a hero he controls.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(26, 2, Artist.Alyn_Spiller);
+            addTreachery("Weary Lands", setRollingPlains)
+                .WithKeywords("Doomed 1.")
+                .WithText("When Revealed: Each exhausted character gets -1 Willpower until the end of the phase.")
+                .WithShadow("Shadow: Deal 1 damage to the defending character.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(27, 2, Artist.Dual_Brush_Studios);
+            addTreachery("Painful Fatigue", setRollingPlains)
+                .WithText("When Revealed: Each player exhausts a character he controls and deals 1 damage to it.")
+                .WithShadow("Shadow: Either exhaust a character you control, or return attacking enemy to the staging area after this attack.")
+                .WithInfo(28, 2, Artist.JB_Casacop);
+            addEncounterSideQuest("An Arduous Journey", setRollingPlains, 6)
+                .WithFlavor("The lonely plains appear to stretch endlessly in each direction, and you tire just from looking at them.")
+                .WithText("Each player cannot ready more than 6 characters he controls during the refresh phase.\r\nResponse: When this stage is defeated, each player may ready a hero he controls.")
+                .WithVictoryPoints(10)
+                .WithInfo(29, 1, Artist.Dual_Brush_Studios);
+            addEnemy("Priest of Sauron", setDangerInDorwinion, 38, 3, 6, 2, 8)
+                .WithUnique()
+                .WithTraits("Cultist.")
+                .WithText("Immune to player card effects.\r\nCannot be optionally engaged.\r\nForced: After Priest of Sauron attacks and destroys an ally, raise each player's threat by 2.")
+                .WithVictoryPoints(6)
+                .WithInfo(30, 1, Artist.Matthew_Cowdery);
+            addEnemy("The Governor", setDangerInDorwinion, 44, 3, 4, 3, 8)
+                .WithUnique()
+                .WithTraits("Cultist.")
+                .WithText("Immune to player card effects.\r\nForced: After a location is revealed from the encounter deck, The Governor engages the first player and makes an immediate attack.")
+                .WithFlavor("\"In all the long wars with the Dark Tower treason has ever been our greatest foe.\"\r\n-Gandalf, The Fellowship of the Ring")
+                .WithVictoryPoints(6)
+                .WithInfo(31, 1, Artist.Greg_Bobrowski);
+            addEnemy("Black Númenórean", setDangerInDorwinion, 40, 3, 5, 1, 9)
+                .WithUnique()
+                .WithTraits("Cultist.")
+                .WithText("Immune to player card effects.\r\nDo not discard shadow cards dealt to Black Númenórean if they have a shadow effect.\r\nForward: When Black Númenórean attacks, resolve each of his faceup shadow cards as if they had been dealt this round.")
+                .WithVictoryPoints(6)
+                .WithInfo(32, 1, Artist.Stanislav_Dikolenko);
+            addObjective("Bribes", setDangerInDorwinion)
+                .WithTraits("Plot.")
+                .WithText("Add +1 to the total Threat in the staging area for each resource here.\r\nForced: When the active location is explored, discard the top X cards of each player's deck, when X is that location's Threat. Then, place 1 resource here for each event discarded this way.")
+                .WithInfo(33, 1, Artist.Lukasz_Jaskolski);
+            addObjective("Submit or Die", setDangerInDorwinion)
+                .WithTraits("Plot.")
+                .WithText("Each non-unique enemy gets +1 Attack.\r\nForced: After an enemy attacks and destroys a character, place 1 damage token here. Then, if there are X damage tokens here, the players lose the game. X is 4 more than the number of players.")
+                .WithInfo(34, 1, Artist.Lukasz_Jaskolski);
+            addObjective("Sauron Worship", setDangerInDorwinion)
+                .WithTraits("Plot.")
+                .WithText("Sauron Worship enters play with 1 damage token on it.\r\nEach player's threat elimination level is reduced by 1 for each damage token here.\r\nForced: At the end of the round, place 1 damage token here.")
+                .WithInfo(35, 1, Artist.Lukasz_Jaskolski);
+            addObjective("Evidence of the Cult", setDangerInDorwinion)
+                .WithTraits("Clue.")
+                .WithKeywords("Guarded (enemy).")
+                .WithText("Attached enemy gets +1 Threat, +1 Attack, and +1 Defense.\r\nWhen Evidence of the Cult is free of encounters, add it to the victory display. Then, place 1 resource on the main quest.")
+                .WithVictoryPoints(1)
+                .WithInfo(36, 3, Artist.Romana_Kendelic);
+            addLocation("Hillside Manor", setDangerInDorwinion, 2, 4)
+                .WithTraits("City.")
+                .WithText("While Hillside Manor is in the staging area, each player's threat cannot be reduced by more than 1 each round by player card effects.\r\nTravel: Each player discards 1 random card from his hand.")
+                .WithFlavor("The wine of Dorwinion brings deep and pleasant dreams.\r\n-The Hobbit")
+                .WithInfo(37, 3, Artist.Greg_Bobrowski);
+            addTreachery("Disappearances", setDangerInDorwinion)
+                .WithText("When Revealed: Each player discards all ally cards from his hand. If no cards are discarded this way, Disappearances gains doomed 2.")
+                .WithShadow("Shadow: Discard an attachment you control.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(38, 2, Artist.Drazenka_Kimpel);
+            addTreachery("Secret Cultist", setDangerInDorwinion)
+                .WithText("When Revealed: Attach to the highest attack ally in play. (Counts as a Condition attachment with the text: \"Attached ally loses the ally card type, gains the enemy card type, and engages its owner. Treat attached ally's text box as if it were blank. If Secret Cultist is discarded, or the attached ally's owner is eliminated, discard attached ally.\")")
+                .WithEasyModeQuantity(1)
+                .WithInfo(39, 2, Artist.Nikolas_Hagialas);
 
             addTreachery("Stinker", EncounterSet.GollumAndSmeagol.Name)
                 .WithTraits("Gollum.")

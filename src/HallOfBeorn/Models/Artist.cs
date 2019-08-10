@@ -629,6 +629,7 @@ namespace HallOfBeorn.Models
 
             //A Shadow in the East
             all.Add(Artist.Alexander_Chelyshev);
+            all.Add(Artist.Dual_Brush_Studios);
             all.Add(Artist.Echo_Chernik);
             all.Add(Artist.Martin_de_Diego_Sadaba);
 
@@ -947,6 +948,7 @@ namespace HallOfBeorn.Models
         public static Artist Dominique_Peyronnet = new Artist { Name = "Dominique Peyronnet", URL = "https://www.google.com/search?q=dominique+peyronnet+art" };
         public static Artist Drazenka_Kimpel = new Artist { Name = "Drazenka Kimpel", URL = "http://www.creativedust.com" };
         public static Artist Drew_Whitmore = new Artist { Name = "Drew Whitmore", URL = "http://toasty.deviantart.com" };
+        public static Artist Dual_Brush_Studios = new Artist { Name = "Dual Brush Studios", URL = "http://www.dualbrushstudios.com/" };
         public static Artist Dylan_Pierpont = new Artist { Name = "Dylan Pierpont", URL = "http://www.dylanpierpont.com" };
         public static Artist Echo_Chernik = new Artist { Name = "Echo Chernik", URL = "https://www.artstation.com/echochernik" };
         public static Artist Ed_Mattinian = new Artist { Name = "Ed Mattinian", URL = "http://mattinian.deviantart.com" };
