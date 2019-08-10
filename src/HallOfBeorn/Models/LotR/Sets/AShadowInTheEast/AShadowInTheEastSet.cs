@@ -234,7 +234,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithTraits("Mordor.")
                 .WithText("When Revealed: Either raise each player's threat by X, where X is the active location's Threat, or Messenger from Mordor makes an immediate attack against the first player.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack.")
-                .WithInfo(40, 3, Artist.Unknown);
+                .WithInfo(40, 3, Artist.Kevin_Zamir_Goeke);
             addEnemy("Servant of Sauron", setServantsOfSauron, 36, 1, 2, 1, 3)
                 .WithTraits("Mordor.")
                 .WithKeywords("Surge.")
@@ -296,7 +296,104 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithText("Each location in the staging area gets +1 Threat.\r\nForced: After Unwelcome Travelers becomes the current quest, the first player discards cards from the top of the encounter deck until an enemy is discarded and puts it into play engaged with him.")
                 .WithVictoryPoints(10)
                 .WithInfo(52, 1, Artist.Marius_Bota);
-
+            addEncounterSideQuest("Tribute to Mordor", setTempleOfDoom, 12)
+                .WithFlavor("The servants of Sauron perform ritual sacrifice to invoke the power of Mordor.")
+                .WithText("Forced: At the end of the round, place 1 damage token here. Then, if there are 4 or more damage tokens here, remove 4 of them and reveal the top card of the Power of Mordor deck. If you cannot, the player lose the game.\r\nThis stage cannot be the active quest while Thane Ulchor has any hit points remaining. When this stage is defeated, the players win the game.")
+                .WithVictoryPoints(10)
+                .WithInfo(53, 1, Artist.Aleksander_Karcz);
+            addEnemy("Than Ulchor", setTempleOfDoom, 50, Card.VALUE_X, 6, 4, 9)
+                .WithUnique()
+                .WithTraits("Mordor.")
+                .WithKeywords("Indestructible.")
+                .WithText("Immune to player card effects.\r\nX is 1 more than the number of quest stages in the victory display. Cannot be engaged unless X is equal to 5.\r\nForced: When Thane Ulchor attacks and destroys a character, place 1 damage token on Tribute to Mordor.")
+                .WithVictoryPoints(6)
+                .WithInfo(54, 1, Artist.Ivan_Dixon);
+            addLocation("Temple of Sauron", setTempleOfDoom, 4, 1)
+                .WithTraits("Underground.")
+                .WithText("Forced: When Temple of Sauron leaves play, place 1 damage token on Tribute to Mordor.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack for each quest stage in the victory display.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(55, 2, Artist.Alexander_Chelyshev);
+            addLocation("Hall of Horrors", setTempleOfDoom, Card.VALUE_X, 5)
+                .WithTraits("Underground.")
+                .WithText("X is 1 more than the number of quest stages in the victory display.\r\nForced: When Hall of Horrors leaves play, each player deals X damage to a character he controls.")
+                .WithFlavor("...they had worshipped Sauron in the Dark Years.\r\n-The Return of the King")
+                .WithEasyModeQuantity(2)
+                .WithInfo(56, 3, Artist.Alvaro_Calvo_Escudero);
+            addTreachery("Place of Evil", setTempleOfDoom)
+                .WithText("When Revealed: Place 1 damage token on Tribute to Mordor. Then, either place 1 additional damage token on Tribute to Mordor, or Place of Evil gains surge.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, place 1 damage token on Tribute to Mordor.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(57, 3, Artist.Federico_Musetti);
+            addEnemy("Ulchor's Guard", setUlchorsGuard, 25, 2, 4, 1, 5)
+                .WithTraits("Easterling.")
+                .WithText("While Thane of Ulchor is engaged with a player, Ulchor's Guard engages that player.")
+                .WithShadow("Shadow: Attacking enemy gets +2 Defense until the end of the phase.")
+                .WithEasyModeQuantity(3)
+                .WithInfo(58, 4, Artist.Kevin_Zamir_Goeke);
+            addTreachery("Ulchor's Rage", setUlchorsGuard)
+                .WithText("When Revealed: Thane Ulchor makes an immediate attack against the first player. If no attack is made this way, Ulchor's Rage gains surge.")
+                .WithShadow("Shadow: Deal 1 damage to the defening character.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(59, 3, Artist.Ivan_Dixon);
+            addTreachery("Fanaticism", setUlchorsGuard)
+                .WithTraits("Easterling.")
+                .WithText("While attached to an enemy, counts as a Condition attachment with the text: \"Attached enemy gets +1 Threat, +1 Attack, +1 Defense, and is immune to player card effects.\"\r\nWhen Revealed: Attach to the Easterling enemy with the lowest Defense without a copy of Fanaticism. Otherwise, Fanaticism gains surge.")
+                .WithInfo(60, 2, Artist.Guillaume_Ducos);
+            addLocation("Twisted Tunnel", setTwistedTunnels, 2, 2)
+                .WithTraits("Underground.")
+                .WithText("When Revealed: Discard cards from the top of the encounter deck until an enemy is discarded. Add that enemy to the staging area.")
+                .WithShadow("Shadow: Discard the top card of the encounter deck. If that card is an enemy, add it to the staging area.")
+                .WithInfo(61, 2, Artist.Dual_Brush_Studios);
+            addLocation("Narrow Opening", setTwistedTunnels, 3, 3)
+                .WithTraits("Underground.")
+                .WithText("While Narrow Opening is the active location, each player cannot play more than 1 card each round.\r\nForced: When Narrow Opening leaves play, each player discards 1 random card from his hand.")
+                .WithFlavor("\"I got stuck in the door, which was only open a crack, and I lost lots of buttons...\"\r\n-Bilbo, The Hobbit")
+                .WithInfo(62, 2, Artist.Dimitri_Bielak);
+            addLocation("Crumbling Passage", setTwistedTunnels, 5, 3)
+                .WithTraits("Underground.")
+                .WithText("When Revealed: Make Crumbling Passage the active location, returning any previously active location to the staging area.\r\nForced: When Crumbling Passage leaves play, deal 1 damage to each exhausted character.")
+                .WithEasyModeQuantity(1)
+                .WithFlavor("...at that moment a stone hurtling from above smote heavily on his helm, and he fell with a crash and knew no more.\r\n-The Hobbit")
+                .WithInfo(63, 2, Artist.Matthew_Cowdery);
+            addTreachery("Fearful Shadows", setTwistedTunnels)
+                .WithKeywords("Doomed 1.")
+                .WithText("When Revealed: Until the end of the round, treat the printed text box of each character as if it were blank (except for Traits).")
+                .WithShadow("Shadow: Defending character cannot ready until the end of the round.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(64, 2, Artist.Drazenka_Kimpel);
+            addEncounterSideQuest("Lost in the Dark", setTwistedTunnels, 8)
+                .WithFlavor("It's nearly impossible to find your way through this maze of dark tunnels.")
+                .WithText("When Revealed: Each player places the top 10 cards of his deck facedown under his threat dial (without looking at them). When this stage is defeated, each player shuffles all cards under his threat dial back into his deck.\r\nForced: After a player raises his threat by any amount, he discards the top card from under his threat dial.")
+                .WithVictoryPoints(10)
+                .WithInfo(65, 1, Artist.Ilich_Henriquez);
+            addEnemy("Khamûl the Easterling", setThePowerOfMordor, 49, 4, 6, 4, 9)
+                .WithUnique()
+                .WithTraits("Nazgûl.", "Easterling.", "Mordor.")
+                .WithText("Immune to player card effects.\r\nKhamûl the Easterling engages the first player.\r\nOnly the engaged player can declare attackers or defenders against Khamûl the Easterling.")
+                .WithInfo(66, 1, Artist.Sam_Lamont);
+            addLocation("The Tower of Barad-dûr", setThePowerOfMordor, 5, Card.VALUE_NA)
+                .WithUnique()
+                .WithTraits("Mordor.")
+                .WithText("Immune to player card effects.\r\nThe player cannot travel here.\r\nEach player's threat elimination level is reduced by 5.")
+                .WithFlavor("...wall upon wall, battlement upon battlement, black, immeasurably strong, mountain of iron, gate of steel, tower of adamant, he saw it: Barad-dûr, Fortress of Sauron. All hope left him.\r\n-The Fellowship of the Ring")
+                .WithInfo(67, 1, Artist.Federico_Musetti);
+            addObjective("Under the Watchful Eye", setThePowerOfMordor)
+                .WithTraits("Mordor.")
+                .WithText("When Revealed: Each player with more than 5 cards in his hand discards cards from his hand until he has only 5.\r\nForced: After a player draws any number of cards, he raises his threat by 1.")
+                .WithFlavor("\"Nothing can hide from them.\"\r\n-Gollum, The Two Towers")
+                .WithInfo(68, 1, Artist.Tomasz_Jedruszek);
+            addObjective("The Armies of Mordor", setThePowerOfMordor)
+                .WithTraits("Mordor.")
+                .WithText("Forced: After a non-unique enemy engages a player, that enemy cannot take damage until the end of the round.")
+                .WithFlavor("...here the Dark Power, moving its armies like pieces on the board, was gathering them together.\r\n-The Return of the King")
+                .WithInfo(69, 1, Artist.Stanislav_Dikolenko);
+            addObjective("Covered in Darkness", setThePowerOfMordor)
+                .WithTraits("Mordor.")
+                .WithKeywords("Doomed 5.")
+                .WithText("Each player's threat cannot be reduced by more than 1 each round by player card effects.")
+                .WithFlavor("Darkness lay there under the Sun. Fire glowed amid the smoke. Mount Doom was burning, and a great reek rising.\r\n-The Fellowship of the Ring")
+                .WithInfo(70, 1, Artist.Dimitri_Bielak);
             addTreachery("Stinker", EncounterSet.GollumAndSmeagol.Name)
                 .WithTraits("Gollum.")
                 .WithKeywords("Surge.")
@@ -317,6 +414,78 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithText("You cannot play non-unique allies or put non-unique allies into play.\r\nForced: When you control exactly 9 unique characters, flip this card over.")
                 .WithOppositeText("You cannot play allies or put allies into play.\r\nEach character you control gets +1 Willpower, +1 Attack, and +1 Defense.\r\nForced: After a character you control leaves play, flip this card over.")
                 .WithInfo(74, 1, Artist.Leanna_Crossan);
+            addQuest("Chased by Easterlings", setTheRiverRunning, 1, 'A', 5)
+                .WithFlavor("You are traveling south along the River Running on your way to Dorwinion when you are attacked by Easterling raiders in the night. The raiders set fire to your boat, trapping you on the east side of the river, and you are forced to flee south on foot.")
+                .WithText("Setup: Set Warriors of the East aside, out of play. Add Easterling Pursuit and 1 copy of River Running to the staging area. Each player adds 1 different Easterling enemy to the staging area. Shuffle the encounter deck.")
+                .WithOppositeFlavor("Your only hope is to reach the safety of Dorwinion by the Crossing of Araw before your Easterling pursuers overtake you.")
+                .WithOppositeText("This stage gets +5 quest points per player.\r\nAdd +1 Threat to the total threat in the staging area for each resource token on Easterling Pursuit.")
+                .WithIncludedEncounterSets(EncounterSet.RidersOfRhun, EncounterSet.EasterlingRaiders, EncounterSet.RollingPlains)
+                .WithInfo(75, 1, Artist.Aleksander_Karcz);
+            addQuest("The Crossing of Araw", setTheRiverRunning, 2, 'A', 15)
+                .WithFlavor("You have reached the crossing, but some of your enemies anticipated this course of action and raced here ahead of you. They fight to delay your escape while their comrades close in from behind.")
+                .WithText("When Revealed: Add Warriors of the East to the staging area. Shuffle the encounter discard pile into the encounter deck and discard cards from the top until X enemies are discarded, where X is the number of players. Add each enemy discarded this way to the staging area.")
+                .WithOppositeFlavor("You must fight your way past the Easterlings to cross into Dorwinion.")
+                .WithOppositeText("Each enemy in the staging area gets -10 enagement cost.\r\nWhile at least one player is engaged with an enemy, no more than 5 progress can be placed here each round.\r\nWhen this stage is defeated, the players win the game.")
+                .WithIncludedEncounterSets(EncounterSet.RidersOfRhun, EncounterSet.EasterlingRaiders, EncounterSet.RollingPlains)
+                .WithInfo(76, 1, Artist.Chris_Grun);
+            addQuest("A City in Turmoil", setDangerInDorwinion, 1, 'A', 5)
+                .WithFlavor("A shadow hangs over the capital of Dorwinion. Fear grips the heart of the city on the Sea of Rhûn. People have been disappearing, and it is rumored that a cult of Sauron worshippers are responsible.")
+                .WithText("Setup: Set each plot objective and each Cultist enemy aside, out of play. Each player searches the encounter deck for a different location and adds it to the staging area. One of those locations must be Side Street. Shuffle the encounter deck.")
+                .WithOppositeFlavor("The people you came to help beg you to uncover the truth of these rumors and rescue their lost loved ones if you can.")
+                .WithOppositeText("Forced: After the active location leaves play as an explored location, place 1 resource here.\r\nThis stage cannot be defeated unless there are at least 2 resources here.")
+                .WithIncludedEncounterSets(EncounterSet.ServantsOfSauron, EncounterSet.CityOfRhun, EncounterSet.UnderGuard)
+                .WithInfo(77, 1, Artist.Lucas_Staniec);
+            addQuest("The Shadow of Mordor", setDangerInDorwinion, 2, 'A', 0)
+                .WithFlavor("Your investigation has found that the rumors are true: a cult of Sauron worshippers has taken root in Dorwinion, and they are plotting to overthrow the peaceful country.")
+                .WithText("When Revealed: Add 1 random set aside Plot objective to the staging area. Reveal 1 encounter card per player.")
+                .WithOppositeFlavor("You must find the leader of the cult in order to put an end to this evil plot.")
+                .WithOppositeText("Forced: After the active location leaves play as an explored location, reveal the top card of the encounter deck. Then, place 1 resource here.\r\nThis stage cannot be defeated unless there are at least X resources here, where X is 3 more than the number of players.")
+                .WithIncludedEncounterSets(EncounterSet.ServantsOfSauron, EncounterSet.CityOfRhun, EncounterSet.UnderGuard)
+                .WithInfo(78, 1, Artist.Matthew_Cowdery);
+            addQuest("Leader of the Cult", setDangerInDorwinion, 3, 'A', Card.VALUE_NA)
+                .WithFlavor("You have discovered the cult's secret meeting place in the catacombs below the city.")
+                .WithText("When Revealed: Add 1 random set-aside Cultist enemy to the staging area. Shuffle the encounter discard pile into the encounter deck and discard cards until X enemies are discarded, where X is one less than the number of players. Add each enemy discarded this way to the staging area.")
+                .WithOppositeFlavor("Inside the catacombs you see evidence of evil deeds done in Sauron's name, and the leader of the cult at the center of it. You must defeat this agent of Mordor in order order to put an end to these atrocities.")
+                .WithOppositeText("The Cultist cannot take more than X damage each round, where X is the printed quest points of the active location.\r\nWhen the Cultist enemy is defeated, the players win the game.")
+                .WithIncludedEncounterSets(EncounterSet.ServantsOfSauron, EncounterSet.CityOfRhun, EncounterSet.UnderGuard)
+                .WithInfo(79, 1, Artist.Sebastian_Zakrzewski);
+            addQuest("The Forgotten Temple", setTempleOfDoom, 1, 'A', Card.VALUE_NA)
+                .WithFlavor("Your search for the missing Dorwinions has led you up the mountains of Rhûn. There you discover the remains of an ancient temple built to honor Sauron during the dark years of Middle-earth.")
+                .WithText("Setup: Shuffle each of the stage 2 quest cards together and place them facedown under this stage. Create The Power of Mordor deck (see insert) and set it next to the quest deck. Add Thane Ulchor and Tribute to Mordor to the staging area. Shuffle the encounter deck.")
+                .WithOppositeFlavor("The journey to reach this place has been difficult and you take a moment to prepare yourself before entering the dark temple.")
+                .WithOppositeText("Skip the quest phase.\r\nForced: At the end of the planning phase, place 1 resource token here. Then, if there are 2 resource tokens here, add this stage to the victory display and advance to the topmost stage 2A.")
+                .WithIncludedEncounterSets(EncounterSet.UlchorsGuard, EncounterSet.TwistedTunnels, EncounterSet.EasterlingRaiders, EncounterSet.ThePowerOfMordor)
+                .WithVictoryPoints(10)
+                .WithInfo(80, 1, Artist.Kevin_Zamir_Goeke);
+            addQuest("The Legacy of Mordor", setTempleOfDoom, 2, 'A', 8)
+                .WithFlavor("Rows of iron-barred cells line both sides of a dark dungeon built beneath the old temple. You shudder to think what horrible fate befell the captives that were held here in years past as you continue to search for the missing Dorwinions.")
+                .WithText("When Revealed: Reveal 1 encounter card per player.")
+                .WithOppositeText("Forced: At the beginning of the quest phase, each player deals 1 damage to a hero he controls and exhausts that hero. That hero cannot ready or be healed until the refresh phase.\r\nWhile there are 4 quest stages in the victory display, progress cannot be placed here.")
+                .WithVictoryPoints(1)
+                .WithIncludedEncounterSets(EncounterSet.UlchorsGuard, EncounterSet.TwistedTunnels, EncounterSet.EasterlingRaiders, EncounterSet.ThePowerOfMordor)
+                .WithVictoryPoints(1)
+                .WithInfo(81, 1, Artist.Stanislav_Dikolenko);
+            addQuest("Memory of the Dark Years", setTempleOfDoom, 2, 'A', 12)
+                .WithFlavor("All about you are the cruel trappings of Mordor: evidence of torture and death callously strewn about the cavern floor. You search among the bones and debris for fresh signs of those you seek.")
+                .WithText("When Revealed: Reveal 1 encounter card per player.")
+                .WithOppositeText("Forced: At the beginning of the quest phase, discard X cards from the top of the encounter deck, where X is 1 more than the number of quest stages in the victory display. Add 2 to the total Threat in the staging area for each different card type discarded this way.\r\nWhile there are 4 quest stages in the victory display, progress cannot be place here.")
+                .WithIncludedEncounterSets(EncounterSet.UlchorsGuard, EncounterSet.TwistedTunnels, EncounterSet.EasterlingRaiders, EncounterSet.ThePowerOfMordor)
+                .WithVictoryPoints(1)
+                .WithInfo(83, 1, Artist.Dual_Brush_Studios);
+            addQuest("Shrine to Sauron", setTempleOfDoom, 2, 'A', 16)
+                .WithFlavor("A blood-stained altar to the Dark Lord of Mordor looks to have been used recently. Though the carved stone is ancient, the blood and cloth you find on it are fresh. You search about frantically to find the captive Dorwinions before more are slaughtered.")
+                .WithText("When Revealed: Reveal 1 encounter card per player.")
+                .WithOppositeText("Forced: At the beginning of the quest phase, each player discards the top X cards of his deck, where X is 1 more than the number of quest stages in the victory display. Each player examines the cards he controls and the cards in his hand. If any of these cards are copies of the cards he just discarded from the top of his deck, he must discard those copies as well.\r\nWhile there are 4 quest stages in the victory display, progress cannot be placed here.")
+                .WithIncludedEncounterSets(EncounterSet.UlchorsGuard, EncounterSet.TwistedTunnels, EncounterSet.EasterlingRaiders, EncounterSet.ThePowerOfMordor)
+                .WithVictoryPoints(1)
+                .WithInfo(84, 1, Artist.Stanislav_Dikolenko);
+            addQuest("The Lord of Middle-earth", setTempleOfDoom, 2, 'A', 0)
+                .WithFlavor("At the center of a large temple room is a hideous state of Sauron seated upon an iron throne. It is a terrible reminder of the darkness that awaits Middle-earth should you fail in your vigilance.")
+                .WithText("When Revealed: Reveal 1 encounter card per player.")
+                .WithOppositeText("This stage gets +4 quest points per player.\r\nForced: At the beginning of the quest phase, each player discards 1 card from his hand. Until the end of the round, no more than X progress can be placed on this stage. X is the total cost of each card discarded by this effect.\r\nWhile there are 4 quest stages in the victory display, progress cannot be placed here.")
+                .WithIncludedEncounterSets(EncounterSet.UlchorsGuard, EncounterSet.TwistedTunnels, EncounterSet.EasterlingRaiders, EncounterSet.ThePowerOfMordor)
+                .WithVictoryPoints(1)
+                .WithInfo(85, 1, Artist.Alexander_Chelyshev);
         }
     }
 }

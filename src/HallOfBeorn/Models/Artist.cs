@@ -631,6 +631,7 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Alexander_Chelyshev);
             all.Add(Artist.Dual_Brush_Studios);
             all.Add(Artist.Echo_Chernik);
+            all.Add(Artist.Kevin_Zamir_Goeke);
             all.Add(Artist.Martin_de_Diego_Sadaba);
 
             //Arkham Horrom Core
@@ -763,6 +764,7 @@ namespace HallOfBeorn.Models
         public static Artist Kamila_Tzutenberg = new Artist { Name = "Kamila Tzutenberg", URL = "https://www.artstation.com/artist/karamissa" };
         public static Artist Katayanagi = new Artist { Name = "Katayanagi", URL = "http://aldok.deviantart.com" };
         public static Artist Ken_McCuen = new Artist { Name = "Ken McCuen", URL = "https://www.artstation.com/artist/kenmccuen" };
+        public static Artist Kevin_Zamir_Goeke = new Artist { Name = "Kevin Zamir Goeke", URL = "https://www.artstation.com/kevinzamirgoeke" };
         public static Artist Kieran_Tatsue = new Artist { Name = "Kieran Tatsue", URL = "http://valravnclaw.deviantart.com/" };
         public static Artist Kimberly80 = new Artist { Name = "kimberly80", URL = "http://kimberly80.deviantart.com" };
         public static Artist Kip_Ayers = new Artist { Name = "Kip Ayers", URL = "http://www.kipayersillustration.com" };
