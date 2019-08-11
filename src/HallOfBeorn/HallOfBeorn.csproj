@@ -405,6 +405,10 @@
     <Compile Include="Models\LotR\Products\Nightmare\TheTreacheryOfRhudaurNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheTreasonOfSarumanNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheWastesOfEriadorNightmareProduct.cs" />
+    <Compile Include="Models\LotR\Scenarios\AShadowInTheEast\AShadowInTheEastScenario.cs" />
+    <Compile Include="Models\LotR\Scenarios\AShadowInTheEast\DangerInDorwinionScenario.cs" />
+    <Compile Include="Models\LotR\Scenarios\AShadowInTheEast\TempleOfDoomScenario.cs" />
+    <Compile Include="Models\LotR\Scenarios\AShadowInTheEast\TheRiverRunningScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\DreamChaser\AStormOnCobasHaven.cs" />
     <Compile Include="Models\LotR\Scenarios\EredMithrin\EredMithrinScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\EredMithrin\FireInTheNightScenario.cs" />

@@ -353,8 +353,8 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
             addLocation("Crumbling Passage", setTwistedTunnels, 5, 3)
                 .WithTraits("Underground.")
                 .WithText("When Revealed: Make Crumbling Passage the active location, returning any previously active location to the staging area.\r\nForced: When Crumbling Passage leaves play, deal 1 damage to each exhausted character.")
-                .WithEasyModeQuantity(1)
                 .WithFlavor("...at that moment a stone hurtling from above smote heavily on his helm, and he fell with a crash and knew no more.\r\n-The Hobbit")
+                .WithEasyModeQuantity(1)
                 .WithInfo(63, 2, Artist.Matthew_Cowdery);
             addTreachery("Fearful Shadows", setTwistedTunnels)
                 .WithKeywords("Doomed 1.")
