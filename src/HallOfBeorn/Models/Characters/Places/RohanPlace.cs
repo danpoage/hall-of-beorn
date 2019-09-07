@@ -61,7 +61,7 @@ namespace HallOfBeorn.Models.Characters.Places
 <p>The antipathy between the Rohirrim and the Dunlendings resembles the historical tension between the Anglo-Saxon settlers of Britain and the native Celts.</p>";
 
             BioSourceUrl = "http://tolkiengateway.net/wiki/Rohan";
-            ImageArtist = Artist.Julia_Alekseeva;
+            ImageArtist = Artist.Ted_Nasmith;
 
             Alias("The Horse Lords of Rohan");
 
