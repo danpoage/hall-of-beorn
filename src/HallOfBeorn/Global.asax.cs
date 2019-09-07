@@ -69,7 +69,7 @@ namespace HallOfBeorn
             var filterService = new FilterService(playerCategoryService, encounterCategoryService, questCategoryService);
             System.Web.HttpContext.Current.Application[LotRServiceNames.FilterService] = filterService;
 
-            var planService = new PlanService(scenarioService, playerCategoryService, encounterCategoryService, questCategoryService, ringsDbService, filterService);
+            var planService = new PlanService(noteService, scenarioService, playerCategoryService, encounterCategoryService, questCategoryService, ringsDbService, filterService);
             System.Web.HttpContext.Current.Application[LotRServiceNames.PlanService] = planService;
 
             var searchService = new SearchService(cardRepository, planService);

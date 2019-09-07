@@ -8,18 +8,21 @@ using HallOfBeorn.Models.LotR.ViewModels;
 using HallOfBeorn.Services.LotR.Categories;
 using HallOfBeorn.Services.LotR.RingsDb;
 using HallOfBeorn.Services.LotR.Scenarios;
+using HallOfBeorn.Services.LotR.Tags;
 
 namespace HallOfBeorn.Services.LotR.Search
 {
     public class PlanService : IPlanService
     {
-        public PlanService(IScenarioService scenarioService, 
+        public PlanService(INoteService noteService,
+            IScenarioService scenarioService,
             ICategoryService<PlayerCategory> playerCategoryService, 
             ICategoryService<EncounterCategory> encounterCategoryService, 
             ICategoryService<QuestCategory> questCategoryService, 
             IRingsDbService ringsDbService,
             IFilterService filterService)
         {
+            _noteService = noteService;
             _scenarioService = scenarioService;
             _playerCategoryService = playerCategoryService;
             _encounterCategoryService = encounterCategoryService;
@@ -29,6 +32,7 @@ namespace HallOfBeorn.Services.LotR.Search
             _getVotes = (card) => { return card.CardType == CardType.Hero ? 10000 + ringsDbService.GetVotes(card.Slug) : ringsDbService.GetVotes(card.Slug); };
         }
 
+        private readonly INoteService _noteService;
         private readonly IScenarioService _scenarioService;
         private readonly ICategoryService<PlayerCategory> _playerCategoryService;
         private readonly ICategoryService<EncounterCategory> _encounterCategoryService;
@@ -76,6 +80,8 @@ namespace HallOfBeorn.Services.LotR.Search
             AddFilter(filters, new ByteComparisonFilter((score) => score.Card.QuestPoints, model.QuestPoints, model.QuestPointsOp));
 
             AddFilter(filters, new NumericComparisonFilter((score) => _getPopularity(score.Card.Slug), model.Popularity, model.PopularityOp));
+
+            AddFilter(filters, new ErrataFilter((score, version) => _noteService.HasErrata(score.Card.Slug, version), model.Errata));
 
             AddFilter(filters, new TraitFilter(model.Trait));
             AddFilter(filters, new KeywordFilter(model.Keyword));

@@ -907,6 +907,7 @@
     <Compile Include="Services\LotR\Categories\QuestCategoryService.cs" />
     <Compile Include="Services\CharacterRepository.cs" />
     <Compile Include="Services\LotR\Search\BooleanFilter.cs" />
+    <Compile Include="Services\LotR\Search\ErrataFilter.cs" />
     <Compile Include="Services\LotR\Search\FilterService.cs" />
     <Compile Include="Services\LotR\Search\IFilterService.cs" />
     <Compile Include="Services\LotR\Search\IPlanService.cs" />
