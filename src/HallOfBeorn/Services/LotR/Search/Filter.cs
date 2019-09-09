@@ -55,7 +55,7 @@ namespace HallOfBeorn.Services.LotR.Search
             return values;
         }
 
-        public bool IsEmpty
+        public virtual bool IsEmpty
         {
             get { return predicate == null; }
         }

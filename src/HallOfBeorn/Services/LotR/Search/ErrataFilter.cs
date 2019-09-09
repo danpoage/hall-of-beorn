@@ -12,6 +12,17 @@ namespace HallOfBeorn.Services.LotR.Search
             ErrataVersion? target)
             : base((score) => Check(score, predicate, target), false) 
         {
+            _target = target;
+        }
+
+        private readonly ErrataVersion? _target;
+
+        public override bool IsEmpty
+        {
+            get
+            {
+                return !_target.HasValue || _target.Value == ErrataVersion.Any;
+            }
         }
 
         private static bool Check(CardScore score, 
