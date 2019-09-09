@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
 
             AddCardSet(CardSet.TheStewardsFear);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow.TheStewardsFear());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow.TheStewardsFearScenario());
         }
     }
 }

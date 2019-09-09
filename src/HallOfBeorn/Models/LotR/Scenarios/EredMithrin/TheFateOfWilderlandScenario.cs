@@ -18,7 +18,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
 
             //RulesImageCount = 2;
 
-            //QuestCompanionSlug = "ered-mithrin-quest-the-fate-of-wilderland";
+            QuestCompanionSlug = "ered-mithrin-quest-the-fate-of-wilderland";
             DifficultyRating = 8.0f;
             Votes = 1;
 

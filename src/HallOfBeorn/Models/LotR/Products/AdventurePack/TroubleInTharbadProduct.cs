@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
 
             AddCardSet(CardSet.TroubleInTharbad);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheRingMaker.TroubleInTharbad());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheRingMaker.TroubleInTharbadScenario());
         }
     }
 }

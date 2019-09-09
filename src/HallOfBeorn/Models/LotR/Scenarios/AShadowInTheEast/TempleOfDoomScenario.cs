@@ -18,7 +18,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AShadowInTheEast
 
             //RulesImageCount = 2;
 
-            //QuestCompanionSlug = "a-shadow-in-the-east-temple-of-doom";
+            QuestCompanionSlug = "a-shadow-in-the-east-deluxe-expansion-quest-the-temple-of-doom";
             DifficultyRating = 7.6f;
             Votes = 1;
 

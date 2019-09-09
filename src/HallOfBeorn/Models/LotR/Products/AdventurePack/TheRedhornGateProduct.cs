@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
 
             AddCardSet(CardSet.TheRedhornGate);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf.TheRedhornGate());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf.TheRedhornGateScenario());
         }
     }
 }

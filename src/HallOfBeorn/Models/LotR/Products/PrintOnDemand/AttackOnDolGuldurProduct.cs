@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.LotR.Products.PrintOnDemand
         {
             AddCardSet(CardSet.AttackOnDolGuldur);
 
-            AddScenario(new Scenarios.PrintOnDemand.AttackOnDolGuldur());
+            AddScenario(new Scenarios.PrintOnDemand.AttackOnDolGuldurScenario());
         }
     }
 }

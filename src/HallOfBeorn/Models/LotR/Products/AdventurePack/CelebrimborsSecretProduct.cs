@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
 
             AddCardSet(CardSet.CelebrimborsSecret);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheRingMaker.CelebrimborsSecret());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheRingMaker.CelebrimborsSecretScenario());
         }
     }
 }

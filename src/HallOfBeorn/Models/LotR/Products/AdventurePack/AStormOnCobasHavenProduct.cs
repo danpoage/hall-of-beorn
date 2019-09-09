@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
 
             AddCardSet(CardSet.AStormOnCobasHaven);
 
-            AddScenario(new Scenarios.DreamChaser.AStormOnCobasHaven());
+            AddScenario(new Scenarios.DreamChaser.AStormOnCobasHavenScenario());
         }
     }
 }

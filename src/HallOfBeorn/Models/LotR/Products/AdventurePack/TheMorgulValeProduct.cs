@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
 
             AddCardSet(CardSet.TheMorgulVale);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow.TheMorgulVale());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow.TheMorgulValeScenario());
         }
     }
 }

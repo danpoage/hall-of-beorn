@@ -15,7 +15,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AShadowInTheEast
 
             //RulesImageCount = 2;
 
-            //QuestCompanionSlug = "a-shadow-in-the-east-the-river-running";
+            QuestCompanionSlug = "a-shadow-in-the-east-deluxe-expansion-quest-the-river-running";
             DifficultyRating = 7.0f;
             Votes = 1;
 

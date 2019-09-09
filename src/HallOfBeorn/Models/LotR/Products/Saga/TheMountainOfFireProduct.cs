@@ -12,9 +12,9 @@ namespace HallOfBeorn.Models.LotR.Products.Saga
         {
             AddCardSet(CardSet.TheMountainOfFire);
 
-            AddScenario(new Scenarios.TheLordOfTheRings.TheTowerOfCirithUngol());
-            AddScenario(new Scenarios.TheLordOfTheRings.TheBlackGateOpens());
-            AddScenario(new Scenarios.TheLordOfTheRings.MountDoom());
+            AddScenario(new Scenarios.TheLordOfTheRings.TheTowerOfCirithUngolScenario());
+            AddScenario(new Scenarios.TheLordOfTheRings.TheBlackGateOpensScenario());
+            AddScenario(new Scenarios.TheLordOfTheRings.MountDoomScenario());
         }
     }
 }

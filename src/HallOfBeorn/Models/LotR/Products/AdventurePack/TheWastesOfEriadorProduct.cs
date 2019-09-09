@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
 
             AddCardSet(CardSet.TheWastesOfEriador);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened.TheWastesOfEriador());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened.TheWastesOfEriadorScenario());
         }
     }
 }

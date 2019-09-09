@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.LotR.Products.PrintOnDemand
         {
             AddCardSet(CardSet.TheSiegeOfAnnuminas);
 
-            AddScenario(new Scenarios.PrintOnDemand.TheSiegeOfAnnuminas());
+            AddScenario(new Scenarios.PrintOnDemand.TheSiegeOfAnnuminasScenario());
         }
     }
 }

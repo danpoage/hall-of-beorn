@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
 
             AddCardSet(CardSet.TheDrownedRuins);
 
-            AddScenario(new Scenarios.DreamChaser.TheDrownedRuins());
+            AddScenario(new Scenarios.DreamChaser.TheDrownedRuinsScenario());
         }
     }
 }

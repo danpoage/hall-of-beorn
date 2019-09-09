@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
 
             AddCardSet(CardSet.EncounterAtAmonDin);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow.EncounterAtAmonDin());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow.EncounterAtAmonDinScenario());
         }
     }
 }

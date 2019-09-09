@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.LotR.Products.PrintOnDemand
         {
             AddCardSet(CardSet.FogOnTheBarrowDowns);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand.FogOnTheBarrowDowns());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand.FogOnTheBarrowDownsScenario());
         }
     }
 }

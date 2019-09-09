@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
 
             AddCardSet(CardSet.TheCityOfCorsairs);
 
-            AddScenario(new Scenarios.DreamChaser.TheCityOfCorsairs());
+            AddScenario(new Scenarios.DreamChaser.TheCityOfCorsairsScenario());
         }
     }
 }

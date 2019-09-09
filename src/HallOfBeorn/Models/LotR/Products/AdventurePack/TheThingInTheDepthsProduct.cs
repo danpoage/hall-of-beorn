@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
 
             AddCardSet(CardSet.TheThingInTheDepths);
 
-            AddScenario(new Scenarios.DreamChaser.TheThingInTheDepths());
+            AddScenario(new Scenarios.DreamChaser.TheThingInTheDepthsScenario());
         }
     }
 }

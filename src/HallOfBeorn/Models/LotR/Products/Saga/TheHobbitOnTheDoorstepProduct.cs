@@ -14,9 +14,9 @@ namespace HallOfBeorn.Models.LotR.Products.Saga
 
             AddCardSet(CardSet.TheHobbitOnTheDoorstep);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheHobbit.FliesAndSpiders());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheHobbit.TheLonelyMountain());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheHobbit.TheBattleOfFiveArmies());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheHobbit.FliesAndSpidersScenario());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheHobbit.TheLonelyMountainScenario());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheHobbit.TheBattleOfFiveArmiesScenario());
         }
     }
 }

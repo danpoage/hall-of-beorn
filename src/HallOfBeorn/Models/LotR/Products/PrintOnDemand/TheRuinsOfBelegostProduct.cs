@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.LotR.Products.PrintOnDemand
         {
             AddCardSet(CardSet.TheRuinsOfBelegost);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand.TheRuinsOfBelegost());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand.TheRuinsOfBelegostScenario());
         }
     }
 }

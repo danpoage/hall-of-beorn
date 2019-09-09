@@ -16,9 +16,9 @@ namespace HallOfBeorn.Models.LotR.Products.Saga
 
             AddCardSet(CardSet.TheRoadDarkens);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings.TheRingGoesSouth());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings.JourneyInTheDark());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings.BreakingOfTheFellowship());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings.TheRingGoesSouthScenario());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings.JourneyInTheDarkScenario());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings.BreakingOfTheFellowshipScenario());
         }
     }
 }

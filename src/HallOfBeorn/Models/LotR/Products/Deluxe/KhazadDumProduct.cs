@@ -16,9 +16,9 @@ namespace HallOfBeorn.Models.LotR.Products.Deluxe
 
             AddCardSet(CardSet.KhazadDum);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.KhazadDum.IntoThePit());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.KhazadDum.TheSeventhLevel());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.KhazadDum.FlightFromMoria());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.KhazadDum.IntoThePitScenario());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.KhazadDum.TheSeventhLevelScenario());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.KhazadDum.FlightFromMoriaScenario());
         }
     }
 }

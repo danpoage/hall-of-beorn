@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.LotR.Products.PrintOnDemand
         {
             AddCardSet(CardSet.TheStoneOfErech);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand.TheStoneOfErech());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand.TheStoneOfErechScenario());
         }
     }
 }

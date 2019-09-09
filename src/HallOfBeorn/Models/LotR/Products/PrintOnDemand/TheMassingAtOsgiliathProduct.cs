@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.LotR.Products.PrintOnDemand
         {
             AddCardSet(CardSet.TheMassingAtOsgiliath);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand.TheMassingAtOsgiliath());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand.TheMassingAtOsgiliathScenario());
         }
     }
 }

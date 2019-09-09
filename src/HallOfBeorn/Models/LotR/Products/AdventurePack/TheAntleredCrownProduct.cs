@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
 
             AddCardSet(CardSet.TheAntleredCrown);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheRingMaker.TheAntleredCrown());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheRingMaker.TheAntleredCrownScenario());
         }
     }
 }

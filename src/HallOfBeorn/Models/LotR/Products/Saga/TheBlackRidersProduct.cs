@@ -16,9 +16,9 @@ namespace HallOfBeorn.Models.LotR.Products.Saga
 
             AddCardSet(CardSet.TheBlackRiders);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings.AShadowOfThePast());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings.AKnifeInTheDark());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings.FlightToTheFord());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings.AShadowOfThePastScenario());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings.AKnifeInTheDarkScenario());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings.FlightToTheFordScenario());
         }
     }
 }

@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.LotR.Products.PrintOnDemand
         {
             AddCardSet(CardSet.TheBattleOfLakeTown);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand.TheBattleOfLakeTown());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand.TheBattleOfLakeTownScenario());
         }
     }
 }

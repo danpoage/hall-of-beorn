@@ -14,9 +14,9 @@ namespace HallOfBeorn.Models.LotR.Products.Saga
 
             AddCardSet(CardSet.TheHobbitOverHillAndUnderHill);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheHobbit.WeMustAwayEreBreakOfDay());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheHobbit.OverTheMistyMountainsGrim());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheHobbit.DungeonsDeepAndCavernsDim());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheHobbit.WeMustAwayEreBreakOfDayScenario());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheHobbit.OverTheMistyMountainsGrimScenario());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheHobbit.DungeonsDeepAndCavernsDimScenario());
         }
     }
 }

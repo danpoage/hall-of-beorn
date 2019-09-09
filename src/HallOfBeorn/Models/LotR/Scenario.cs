@@ -230,7 +230,7 @@ namespace HallOfBeorn.Models.LotR
             get
             {
                 return !string.IsNullOrWhiteSpace(QuestCompanionSlug) ?
-                    string.Format("http://www.lotr-lcg-quest-companion.gamersdungeon.net/{0}.html", QuestCompanionSlug)
+                    string.Format("http://www.lotr-lcg-quest-companion.gamersdungeon.net/#{0}", QuestCompanionSlug)
                     : string.Empty;
             }
         }

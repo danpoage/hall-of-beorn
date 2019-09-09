@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
 
             AddCardSet(CardSet.TheBloodOfGondor);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow.TheBloodOfGondor());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow.TheBloodOfGondorScenario());
         }
     }
 }

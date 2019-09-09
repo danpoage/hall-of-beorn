@@ -12,9 +12,9 @@ namespace HallOfBeorn.Models.LotR.Products.Custom
         {
             AddCardSet(CardSet.FirstAge);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.FirstAge.HuntingOfTheWolf());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.FirstAge.TheIsleOfWerewolves());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.FirstAge.TheSeatOfMorgoth());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.FirstAge.HuntingOfTheWolfScenario());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.FirstAge.TheIsleOfWerewolvesScenario());
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.FirstAge.TheSeatOfMorgothScenario());
         }
     }
 }
