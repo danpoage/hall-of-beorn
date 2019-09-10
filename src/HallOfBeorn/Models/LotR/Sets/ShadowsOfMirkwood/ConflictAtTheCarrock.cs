@@ -136,20 +136,14 @@ Players cannot defeat this stage if there are any Troll enemies in play.",
                 CardNumber = 30,
                 Artist = Artist.Katherine_Dinger
             });
-            Cards.Add(new LotRCard() {
-                Title = "A Burning Brand",
-                Id = "51223bd0-ffd1-11df-a976-0801202c9010",
-                CardType = CardType.Attachment,
-                Sphere = Sphere.Lore,
-                Traits = new List<string>() { "Item." },
-                Quantity = 3,
-                ResourceCost = 2,
-                Text = "Attach to a Lore character.\r\nWhile attached character is defending, cancel any shadow effects on cards dealt to the attacking enemy.",
-                FlavorText = "\"Keep close to the fire, with your faces outward!\" cried Strider. \"Keep some of th elonger sticks ready in your hands.\" -The Fellowship of the Ring",
-                HtmlTemplate = "<p>Attach to a {sphere-character:Lore}.</p><p>While attached character is defending, cancel any shadow effects on cards dealt to the attacking enemy.</p><p class='flavor-text'>&quot;Keep close to the fire, with your faces outward!&quot; cried Strider. &quot;Keep some of th elonger sticks ready in your hands.&quot;<br>&ndash;The Fellowship of the Ring</p>",
-                CardNumber = 33,
-                Artist = Artist.Toni_Justamante_Jacobs
-            });
+            addAttachment("A Burning Brand", 2, Sphere.Lore, false)
+                .WithTraits("Item.")
+                .WithKeywords("Restricted.")
+                .WithText("Attach to a Lore character. Restricted.\r\nResponse: Exhaust A Burning Brand to cancel a shadow effect just triggered during an attack that attached character is defending.")
+                .WithFlavor("\"Keep close to the fire, with your faces outward!\" cried Strider. \"Keep some of the longer sticks ready in your hands.\" -The Fellowship of the Ring")
+                .WithTemplate("<p>Attach to a {sphere-character:Lore}. {keyword:Restricted.}</p><p><b>Response:</b> Exhaust {self} to cancel a shadow effect just triggered during an attack that attached character is defending.</p><p class='flavor-text'>&quot;Keep close to the fire, with your faces outward!&quot; cried Strider. &quot;Keep some of the longer sticks ready in your hands.&quot;<br>&ndash;The Fellowship of the Ring</p>")
+                .WithErrata()
+                .WithInfo(33, 3, Artist.Toni_Justamante_Jacobs);
             Cards.Add(new LotRCard() {
                 
                 Title = "Grimbeorn the Old",

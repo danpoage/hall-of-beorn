@@ -47,6 +47,9 @@ namespace HallOfBeorn.Models.LotR.Search
                 case ErrataVersion.FAQ_1_9:
                     faq = 1.9;
                     break;
+                case ErrataVersion.FAQ_2_0:
+                    faq = 2.0;
+                    break;
                 default:
                     break;
             }

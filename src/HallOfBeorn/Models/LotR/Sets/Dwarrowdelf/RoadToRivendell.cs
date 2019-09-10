@@ -275,20 +275,11 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 CardNumber = 50,
                 Artist = Artist.Mark_Tarrisse
             });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Out of the Wild",
-                Id = "51223bd0-ffd1-11df-a976-0801209c9020",
-                CardType = CardType.Event,
-                Sphere = Sphere.Lore,
-                Quantity = 3,
-                ResourceCost = 3,
-                Text = "Action: Search the top 5 cards of the encounter deck for any 1 non-objective card worth no victory points and add it to your victory display. Shuffle the encounter deck. Add Out of the Wild to the victory display.",
-                Keywords = new List<string>() { "Secrecy 2." },
-                CardNumber = 36,
-                Artist = Artist.Magali_Villeneuve,
-                HasErrata = true
-            });
+            addEvent("Out of the Wild", 3, Sphere.Lore)
+                .WithKeywords("Secrecy 2.")
+                .WithText("Secrecy 2.\r\nAction: Search the top 5 cards of the encounter deck for any 1 non-objective card worth no victory points and add it to your victory display. Shuffle the encounter deck. Add Out of the Wild to the victory display.")
+                .WithErrata()
+                .WithInfo(36, 3, Artist.Magali_Villeneuve);
             Cards.Add(new LotRCard() {
                 
                 Title = "Pathless Country",

@@ -21,7 +21,7 @@ namespace HallOfBeorn.Services.LotR.Tags
         private readonly Dictionary<string, List<CardNote>> notesBySlug = new Dictionary<string,List<CardNote>>();
 
         private const double firstFaqVersion = 1.0;
-        private const double latestFaqVersion = 1.9;
+        private const double latestFaqVersion = 2.0;
         private const string latestFaqUrl = "https://images-cdn.fantasyflightgames.com/filer_public/2e/31/2e3129b3-dc51-4c27-81ed-6a72f13e82f3/lotr_faq_19.pdf";
         // previous "https://images-cdn.fantasyflightgames.com/ffg_content/lotr-lcg/support/lotr-lcg-faq-low-res.pdf";
 
@@ -37,6 +37,7 @@ namespace HallOfBeorn.Services.LotR.Tags
             datesByVersion[1.7] = new DateTime(2015, 1, 20);
             datesByVersion[1.8] = new DateTime(2016, 1, 26);
             datesByVersion[1.9] = new DateTime(2017, 11, 15);
+            datesByVersion[2.0] = new DateTime(2019, 9, 9);
         }
 
         private void loadFaq11()
@@ -88,7 +89,7 @@ namespace HallOfBeorn.Services.LotR.Tags
         private void loadFaq16()
         {
             var version = 1.6;
-            addFaq("Erebor-Battle-Master-TLD", "<p>Should read: <blockquote>Erebor Battle Master gets +1 <img src='/Images/attack.gif' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' /> for each other <b><i>Dwarf</i></b> ally you control.</blockquote></p>", version);
+            addFaq("Erebor-Battle-Master-TLD", "<p>Should read: <blockquote>Erebor Battle Master gets +1 <img src='/Images/attack-med.png' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' /> for each other <b><i>Dwarf</i></b> ally you control.</blockquote></p>", version);
             addFaq("Expert-Treasure-hunter-THOtD", "<p>Should read: </blockquote>Attach to a hero. Limit 1 per hero.</blockquote></p>", version);
             addFaq("The-Ambush-TBoG", "<p>Should read: <blockquote>At the beginning of the combat phase, each player must either turn each of his hidden cards faceup, or take 1 hidden card.</blockquote></p>", version);
             addFaq("The-Cross-roads-TBoG", "<p>Should read: <blockquote>The current quest card gains siege (and loses battle).</blockquote></p>", version);
@@ -129,6 +130,15 @@ namespace HallOfBeorn.Services.LotR.Tags
             addFaq("Wingfoot-NiE", "<p>Should read: <blockquote>If a card of the named type is revealed during this quest phase, exhaust Wingfoot to ready attached hero.</blockquote></p>", version);
         }
 
+        private void loadFaq20()
+        {
+            var version = 2.0;
+            addFaq("A-Burning-Brand-CatC", "<p>Should read: <blockquote>Restricted. <b>Response:</b> Exhaust A Burning Brand to cancel a shadow effect just triggered during an attack that attached character is defending.</blockquote></p>", version);
+            addFaq("Legacy-of-Durin-TWitW", "<p>Should read: <blockquote><b>Response:</b> After you play a <b><i>Dwarf</i></b> character from your hand, exhaust Legacy of Durin to draw 1 card.</blockquote></p>", version);
+            addFaq("Erebor-Battle-Master-TLD", "<p>Should read: <blockquote>Erebor Battle Master gets +1 <img src='/Images/attack-med.png' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' /> for each other <b><i>Dwarf</i></b> ally you control. (Limit +4 <img src='/Images/attack-med.png' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' />.)</blockquote></p>", version);
+            addFaq("Thror's-Map-THOHaUH", "<p>Should read: <blockquote><b>Travel Action:</b> Discard Thrór's Map to choose a location in the staging area.</blockquote></p>", version);
+        }
+
         private void loadFaqs()
         {
             loadFaq11();
@@ -140,6 +150,7 @@ namespace HallOfBeorn.Services.LotR.Tags
             loadFaq17();
             loadFaq18();
             loadFaq19();
+            loadFaq20();
         }
 
         private void loadRulings()

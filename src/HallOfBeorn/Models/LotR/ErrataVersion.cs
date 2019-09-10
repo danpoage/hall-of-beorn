@@ -18,6 +18,7 @@ namespace HallOfBeorn.Models
         FAQ_1_6 = 16,
         FAQ_1_7 = 17,
         FAQ_1_8 = 18,
-        FAQ_1_9 = 19
+        FAQ_1_9 = 19,
+        FAQ_2_0 = 20,
     }
 }

@@ -128,20 +128,11 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 CardNumber = 70,
                 Artist = Artist.Cristi_Balanescu
             });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Legacy of Durin",
-                Id = "51223bd0-ffd1-11df-a976-0801210c9009",
-                CardType = CardType.Attachment,
-                Sphere = Sphere.Lore,
-                Traits = new List<string>() { "Condition." },
-                Quantity = 3,
-                ResourceCost = 1,
-                IsUnique = true,
-                Text = "Attach to a Dwarf hero.\r\nResponse: After you play a Dwarf character from your hand, draw 1 card.",
-                CardNumber = 61,
-                Artist = Artist.Ilich_Henriquez
-            });
+            addAttachment("Legacy of Durin", 1, Sphere.Lore, true)
+                .WithTraits("Condition.")
+                .WithText("Attach to a Dwarf hero.\r\nResponse: After you play a Dwarf character from your hand, exhaust Legacy of Durin to draw 1 card.")
+                .WithErrata()
+                .WithInfo(61, 3, Artist.Ilich_Henriquez);
             Cards.Add(new LotRCard() {
                 
                 Title = "Makeshift Passage",

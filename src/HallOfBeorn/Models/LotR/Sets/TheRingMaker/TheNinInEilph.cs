@@ -144,22 +144,12 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 Quantity = 3,
                 Artist = Artist.Melanie_Maier
             });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Wingfoot",
-                Id = "3BF23B7E-44B9-4973-9C07-D288FDB24FAA",
-                IsUnique = true,
-                CardType = CardType.Attachment,
-                Sphere = Sphere.Lore,
-                ResourceCost = 1,
-                Traits = new List<string> { "Title." },
-                Text = "Attach to a Ranger hero.\r\nResponse: After attached hero commits to a quest, name enemy, location or treachery. If a card of the named type is revealed during this quest phase, exhaust Wingfoot to ready attached hero.",
-                FlavorText = "\"Wingfoot I name you. This deed of the three friends should be sung in many a hall. Forty leagues and five you have measured ere the forth day is ended!\"\r\n-Éomer, The Two Towers",
-                CardNumber = 92,
-                Quantity = 3,
-                Artist = Artist.Gabriel_Verdon,
-                HasErrata = true
-            });
+            addAttachment("Wingfoot", 1, Sphere.Lore, true)
+                .WithTraits("Title.")
+                .WithText("Attach to a Ranger hero.\r\nResponse: After attached hero commits to a quest, name enemy, location or treachery. If a card of the named type is revealed during this quest phase, exhaust Wingfoot to ready attached hero.")
+                .WithFlavor("\"Wingfoot I name you. This deed of the three friends should be sung in many a hall. Forty leagues and five you have measured ere the forth day is ended!\"\r\n-Éomer, The Two Towers")
+                .WithErrata()
+                .WithInfo(92, 3, Artist.Gabriel_Verdon);
             Cards.Add(new LotRCard()
             {
                 Title = "Defender of the West",

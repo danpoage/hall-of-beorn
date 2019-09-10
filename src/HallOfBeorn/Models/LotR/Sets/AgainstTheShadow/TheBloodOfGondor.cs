@@ -15,26 +15,12 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
             SetType = Models.SetType.Adventure_Pack;
             Cycle = "Against the Shadow";
 
-            Cards.Add(new LotRCard() {
-                
-                Title = "Caldara",
-                Id = "60725069-031c-4251-9b2c-3f368545e9ac",
-                IsUnique = true,
-                CardType = CardType.Hero,
-                Sphere = Sphere.Spirit,
-                ThreatCost = 8,
-                Willpower = 2,
-                Attack = 1,
-                Defense = 2,
-                HitPoints = 3,
-                Traits = new List<string>() { "Gondor." },
-                Text = "Action: Discard Caldara to put 1 Spirit ally from your discard pile into play for each other hero you control with a printed Spirit resource icon. (Limit once per game.)",
-                FlavorText = "...there is no purpose higher in the world as it now stands than the good of Gondor...\r\n-Denethor, The Return of the King",
-                Quantity = 1,
-                CardNumber = 107,
-                Artist = Artist.Magali_Villeneuve,
-                HasErrata = true
-            });
+            addHero("Caldara", 8, Sphere.Spirit, 2, 1, 2, 3)
+                .WithTraits("Gondor.")
+                .WithText("Action: Discard Caldara to put 1 Spirit ally from your discard pile into play for each other hero you control with a printed Spirit resource icon. (Limit once per game.)")
+                .WithFlavor("...there is no purpose higher in the world as it now stands than the good of Gondor...\r\n-Denethor, The Return of the King")
+                .WithErrata()
+                .WithInfo(107, 1, Artist.Magali_Villeneuve);
             Cards.Add(new LotRCard() {
                 
                 Title = "Anborn",

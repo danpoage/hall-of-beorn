@@ -30,26 +30,12 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 CardNumber = 108,
                 Artist = Artist.Carolina_Eade
             });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Boromir",
-                Id = "51223bd0-ffd1-11df-a976-0801205c9002",
-                CardType = CardType.Hero,
-                Sphere = Sphere.Tactics,
-                Traits = new List<string>() { "Gondor.", " Noble.", " Warrior." },
-                Quantity = 1,
-                ThreatCost = 11,
-                IsUnique = true,
-                Attack = 3,
-                Defense = 2,
-                Willpower = 1,
-                HitPoints = 5,
-                Text = "Action: Raise your threat by 1 to ready Boromir. (Limit once per phase.)\r\nAction: Discard Boromir to deal 2 damage to each enemy engaged with a single player.",
-                FlavorText = "\"...in Gondor we must trust to such weapons as we have.\" -The Fellowship of the Ring",
-                CardNumber = 95,
-                Artist = Artist.Tiziano_Baracchi,
-                HasErrata = true
-            });
+            addHero("Boromir", 11, Sphere.Tactics, 1, 3, 2, 5)
+                .WithTraits("Gondor.", "Noble.", "Warrior.")
+                .WithText("Action: Raise your threat by 1 to ready Boromir. (Limit once per phase.)\r\nAction: Discard Boromir to deal 2 damage to each enemy engaged with a single player.")
+                .WithFlavor("\"...in Gondor we must trust to such weapons as we have.\" -The Fellowship of the Ring")
+                .WithErrata()
+                .WithInfo(95, 1, Artist.Tiziano_Baracchi);
             Cards.Add(new LotRCard() {
                 Title = "Dúnedain Cache",
                 Id = "51223bd0-ffd1-11df-a976-0801205c9003",

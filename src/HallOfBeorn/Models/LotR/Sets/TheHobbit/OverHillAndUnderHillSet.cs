@@ -1140,21 +1140,12 @@ The players have won the game.",
                 CardNumber = 2,
                 Artist = Artist.Tiziano_Baracchi
             });
-            Cards.Add(new LotRCard() {
-                Title = "Thrór's Map",
-                Id = "51223bd0-ffd1-11df-a976-1801204c9084",
-                CardType = CardType.Attachment,
-                Sphere = Sphere.Lore,
-                Traits = new List<string>() { "Artifact.", " Item." },
-                Quantity = 3,
-                ResourceCost = 1,
-                IsUnique = true,
-                Text = "Attach to a hero.\r\nTravel Action: Exhaust Thrór's Map to choose a location in the staging area. Make that location the active location. (If there is another active location, return it to the staging area.)",
-                FlavorText = "\"This was made by Thror, your grandfather, Thorin.\" he said in answer to the dwarves' excited questions. \"It is a plan of the Mountain.\" -Gandalf, The Hobbit",
-                CardNumber = 13,
-                Artist = Artist.Jake_Murray,
-                HasErrata = true
-            });
+            addAttachment("Thrór's Map", 1, Sphere.Lore, true)
+                .WithTraits("Artifact.", "Item.")
+                .WithText("Attach to a hero.\r\nTravel Action: Discard Thrór's Map to choose a location in the staging area. Make that location the active location. (If there is another active location, return it to the staging area.)")
+                .WithFlavor("\"This was made by Thrór, your grandfather, Thorin.\" he said in answer to the dwarves' excited questions. \"It is a plan of the Mountain.\" -Gandalf, The Hobbit")
+                .WithErrata()
+                .WithInfo(13, 3, Artist.Jake_Murray);
             Cards.Add(new LotRCard() {
                 
                 Title = "Tom",

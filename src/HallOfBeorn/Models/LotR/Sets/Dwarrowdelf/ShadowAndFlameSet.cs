@@ -358,20 +358,11 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 CardNumber = 137,
                 Artist = Artist.Sara_Biddle
             });
-            Cards.Add(new LotRCard() {
-                
-                Title = "We Are Not Idle",
-                Id = "51223bd0-ffd1-11df-a976-0801213c9028",
-                CardType = CardType.Event,
-                Sphere = Sphere.Leadership,
-                Quantity = 3,
-                ResourceCost = 0,
-                Text = "Action: Exhaust X Dwarf heroes to add X resources to a hero's resource pool and draw 1 card.",
-                FlavorText = "\"You should see the stone-paved roads of many colours! And the halls and cavernous streets under the earth with arches carved like trees; and the terraces and towers upon the Mountain's sides! Then you would see that we have not been idle.\" -Glóin, The Fellowship of the Ring",
-                CardNumber = 129,
-                Artist = Artist.Charles_Urbach,
-                HasErrata = true
-            });
+            addEvent("We Are Not Idle", 0, Sphere.Leadership)
+                .WithText("Action: Exhaust X Dwarf heroes to add X resources to a hero's resource pool and draw 1 card.")
+                .WithFlavor("\"You should see the stone-paved roads of many colours! And the halls and cavernous streets under the earth with arches carved like trees; and the terraces and towers upon the Mountain's sides! Then you would see that we have not been idle.\" -Glóin, The Fellowship of the Ring")
+                .WithErrata()
+                .WithInfo(129, 3, Artist.Charles_Urbach);
             Cards.Add(new LotRCard() {
                 
                 Title = "Whip Lash",
