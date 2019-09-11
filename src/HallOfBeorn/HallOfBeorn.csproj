@@ -208,6 +208,7 @@
     <Compile Include="Models\Characters\DerufinCharacter.cs" />
     <Compile Include="Models\Characters\GafferGamgeeCharacter.cs" />
     <Compile Include="Models\Characters\GalionCharacter.cs" />
+    <Compile Include="Models\Characters\LothirielCharacter.cs" />
     <Compile Include="Models\Characters\MeneldorCharacter.cs" />
     <Compile Include="Models\Characters\Places\FangornPlace.cs" />
     <Compile Include="Models\Characters\Places\TheEyriePlace.cs" />

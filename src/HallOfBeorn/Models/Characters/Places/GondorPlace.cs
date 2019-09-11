@@ -132,8 +132,10 @@ The reign of Tarannon was an unhappy one: he married Berúthiel, nefarious and l
 
             addMember("Boromir", "Boromir");
             addMember("Faramir", "Faramir");
+            addMember("Éowyn", "Eowyn");
             addMember("Beregond", "Beregond");
             addMember("Prince Imrahil", "Prince-Imrahil");
+            addMember("Lothíriel", "Lothiriel");
             addMember("Mablung", "Mablung");
             addMember("Damrod", "Damrod");
             addMember("Hirgon", "Hirgon");

@@ -101,6 +101,7 @@ namespace HallOfBeorn.Services
             add(new LegolasCharacter());
             add(new LindirCharacter());
             add(new LorienPlace());
+            add(new LothirielCharacter());
             add(new MablungCharacter());
             add(new MeneldorCharacter());
             add(new MerryCharacter());

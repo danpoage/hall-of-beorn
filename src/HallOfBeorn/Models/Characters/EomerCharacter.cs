@@ -61,7 +61,7 @@ namespace HallOfBeorn.Models.Characters
 
             addFamily("Éomund (Father)", "Eomund");
             addFamily("Théodwyn (Mother)");
-            addFamily("Lothíriel (Wife)");
+            addFamily("Lothíriel (Wife)", "Lothiriel");
             addFamily("Éowyn (Sister)", "Eowyn");
             addFamily("Théoden (Uncle)", "Theoden");
             addFamily("Théodred (Cousin)", "Theodred");

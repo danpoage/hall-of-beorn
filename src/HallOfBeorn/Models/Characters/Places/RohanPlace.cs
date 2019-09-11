@@ -70,6 +70,7 @@ namespace HallOfBeorn.Models.Characters.Places
             addMember("Théodred", "Theodred");
             addMember("Éomund", "Eomund");
             addMember("Éomer", "Eomer");
+            addMember("Lothíriel", "Lothiriel");
             addMember("Éowyn", "Eowyn");
             addMember("Erkenbrand", "Erkenbrand");
             addMember("Dúnhere", "Dunhere");
