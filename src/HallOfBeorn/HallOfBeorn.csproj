@@ -205,6 +205,7 @@
     <Compile Include="HtmlHelperExtensions.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Arkham\Products\CurseOfTheRougarou.cs" />
+    <Compile Include="Models\Characters\AngborTheFearlessCharacter.cs" />
     <Compile Include="Models\Characters\DerufinCharacter.cs" />
     <Compile Include="Models\Characters\GafferGamgeeCharacter.cs" />
     <Compile Include="Models\Characters\GalionCharacter.cs" />

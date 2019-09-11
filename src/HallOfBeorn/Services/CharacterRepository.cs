@@ -20,6 +20,7 @@ namespace HallOfBeorn.Services
             };
 
             add(new AnbornCharacter());
+            add(new AngborTheFearlessCharacter());
             add(new AragornCharacter());
             add(new ArwenUndomielCharacter());
             add(new BalinCharacter());
