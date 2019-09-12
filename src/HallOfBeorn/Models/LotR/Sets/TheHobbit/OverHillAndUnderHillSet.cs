@@ -1195,20 +1195,13 @@ The players have won the game.",
                 CardNumber = 37,
                 Artist = Artist.Michael_Rasmussen
             });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Troll Key",
-                Id = "51223bd0-ffd1-11df-a976-1801204c9088",
-                CardType = CardType.Objective,
-                EncounterSet = "We Must Away, Ere Break of Day",
-                Traits = new List<string>() { "Item." },
-                Quantity = 1,
-                IsUnique = true,
-                Text = "If ~Troll Key is discarded, add it to the staging area.If ~Troll Key is unattached and in the staging area, attach it to a Troll enemy, if able.Response: After attached Troll enemy takes damage as the result of an attack, the first player may exhaust Bilbo ~Baggins to claim this objective and attach it to him.",
-                CardNumber = 43,
-                Artist = Artist.Trudi_Castle,
-                HasErrata = true
-            });
+            addObjective("Troll Key", "We Must Away, Ere Break of Day")
+                .WithUnique()
+                .WithTraits("Item.")
+                .WithText("If ~Troll ~Key is discarded, add it to the staging area. If ~Troll ~Key is unattached and in the staging area, attach it to a Troll enemy, if able. Response: After attached Troll enemy takes damage as the result of an attack, the first player may exhaust Bilbo ~Baggins to claim this objective and attach it to him.")
+                .WithTemplate("<p class='main-text'>If {self} is discarded, add it to the staging area.</p><p class='main-text'>If {self} is unattached and in the staging area, attach it to a {trait:Troll.@Troll} enemy, if able.</p><p class='main-text'><b>Response:</b> After attached {trait:Troll.@Troll} enemy takes damage as the result of an attack, the first player may exhaust {card:Bilbo-Baggins-THOHaUH@Bilbo Baggins} to claim this objective and attach it to him.</p>")
+                .WithErrata()
+                .WithInfo(43, 1, Artist.Trudi_Castle);
             Cards.Add(new LotRCard() {
                 
                 Title = "Troll Purse",
