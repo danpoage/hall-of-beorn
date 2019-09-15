@@ -35,7 +35,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
             addAttachment("Keen Longbow", 2, Sphere.Lore, false)
                 .WithTraits("Item.", "Weapon.")
                 .WithKeywords("Restricted.")
-                .WithText("Attach to a Lore hero. Limit 1 per hero.\r\nRestricted.\r\nAttached hero gains ranged.\r\nResponse: After attached hero is declared an as attacker against an enemy, discard up to 3 cards from your hard to deal 1 damage to that enemy for each card discarded this way.")
+                .WithText("Attach to a Lore hero. Limit 1 per hero.\r\nRestricted.\r\nAttached hero gains ranged.\r\nResponse: After attached hero is declared an as attacker against an enemy, discard up to 3 cards from your hand to deal 1 damage to that enemy for each card discarded this way.")
                 .WithInfo(31, 3, Artist.Unknown);
             addAttachment("War Axe", 1, Sphere.Tactics, false)
                 .WithTraits("Item.", "Weapon.")
