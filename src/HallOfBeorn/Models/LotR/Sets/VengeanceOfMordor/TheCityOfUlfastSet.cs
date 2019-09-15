@@ -54,7 +54,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithText("Response: After Knight of Belfalas enters play, return a Gondor ally from your discard pile to your hand.")
                 .WithFlavor("The mounted knights returned, and at their rear the banner of Dol Amroth...\r\n-The Return of the King")
                 .WithInfo(34, 3, Artist.Unknown);
-            addContract("Forth, The Three Hunters")
+            addContract("Forth, The Three Hunters!")
                 .WithText("Your deck cannot include ally cards.\r\nEach of your heroes can have 1 additional restricted attachment. Reduce the cost of the first restricted attachment you play on each of your heroes each round by 1.\r\nRefresh Action: If each of your heroes has at least 2 restricted attachments, flip this card over.")
                 .WithFlavor("\"...we that remain cannot forsake our companions while we have strength left.\"\r\n-Aragorn, The Two Towers")
                 .WithOppositeText("Each of your heroes can have 1 additional restricted attachment and gets +1 Willpower for each restricted attachment on it.\r\nAction: Exhaust this card to heal 1 damage from each of your heroes.")
