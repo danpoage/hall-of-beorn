@@ -139,6 +139,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTraits("Arnor.", "Plains.")
                 .WithText("While Eriador Wastes is in the staging area, no more than 5 progress can be placed on the current quest each round.\r\nTravel: The first player engages a Warg enemy in the staging area and deals it a shadow card.")
                 .WithFlavor("\"...the long leagues of Eriador still lie before us.\" -Aragorn, The Fellowship of the Ring")
+                .WithEasyModeQuantity(1)
                 .WithInfo(23, 2, Artist.Dawn_Carlos));
             Cards.Add(LotRCard.Location("Warg's Den", "", "The Wastes of Eriador", 4, 1)
                 .WithTraits("Arnor.")

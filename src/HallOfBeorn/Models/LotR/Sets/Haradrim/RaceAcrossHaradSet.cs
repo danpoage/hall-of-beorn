@@ -98,6 +98,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithTraits("Creature.")
                 .WithKeywords("Surge.")
                 .WithText("When Revealed: Attach to an Orc enemy. Limit 1 per enemy. (Counts as a Mount attachment with the text: \"Attached enemy gets +1 Threat, +1 Attack, +1 Defense, and +1 hit point. Forced: When attached enemy leaves play, return Racing Warg to the staging area.\")")
+                .WithEasyModeQuantity(2)
                 .WithInfo(44, 3, Artist.Alexander_Gustafson));
             addCard(LotRCard.Treachery("Pursuers from Mordor", string.Empty, setName)
                 .WithKeywords("Doomed 2.")
@@ -107,6 +108,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
             addCard(LotRCard.Treachery("Howling at their Heels", string.Empty, setName)
                 .WithText("When Revealed: If the players are not at the same stage as the Orcs, add the total Threat of each card in the Orc's area to the total Threat in the staging area until the end of the phase. If the players are at the same stage as the Orcs, each enemy gets +1 Threat until the end of the phase.")
                 .WithShadow("Shadow: Raise your threat by 1.")
+                .WithEasyModeQuantity(2)
                 .WithInfo(46, 3, Artist.Alexander_Gustafson));
             addCard(LotRCard.Quest("Setting Out", 1, setName, 0)
                 .WithStageLetter('A')

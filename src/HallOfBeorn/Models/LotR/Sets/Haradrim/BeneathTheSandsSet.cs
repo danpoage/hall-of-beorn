@@ -77,6 +77,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithTraits("Creature.", "Spider.")
                 .WithText("While On Track is in play, Hive Guardian gets +2 Attack and -5 engagement cost.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if On Track is in play).")
+                .WithEasyModeQuantity(2)
                 .WithInfo(66, 3, Artist.Sandara_Tang));
             addCard(LotRCard.Enemy("Spider Broodling", string.Empty, setName, 20, 1, 2, 1, 2)
                 .WithTraits("Creature.", "Spider.")
@@ -91,6 +92,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithTraits("Underground.")
                 .WithKeywords("Track 4.")
                 .WithText("X is the number of characters controlled by the first player.\r\nTravel: Reveal the top card of the encounter deck to travel here.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(69, 2, Artist.Leanna_Crossan));
             addCard(LotRCard.Location("Nest of Vermin", string.Empty, setName, 3, 4)
                 .WithTraits("Underground.")
@@ -112,10 +114,12 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
             addCard(LotRCard.Treachery("Forced Off Track", string.Empty, setName)
                 .WithText("When Revealed: Either flip the Search objective to Off Track, or deal 1 damage to each questing character.")
                 .WithShadow("Shadow: If On Track is in play, attacking enemy makes an additional attack against you after this one.")
+                .WithEasyModeQuantity(2)
                 .WithInfo(73, 3, Artist.Alvaro_Calvo_Escudero));
             addCard(LotRCard.Treachery("Grabbed by Spiders", string.Empty, setName)
                 .WithKeywords("Surge.", "Doomed 1.")
                 .WithText("When Revealed: Attach to the main quest. Limit 1 per quest. (Counts as a Condition attachment with the text: \"Forced: After the Search objective is flipped to Off Track, each player discards an ally he controls. Then, discard Grabbed by Spiders.\"")
+                .WithEasyModeQuantity(2)
                 .WithInfo(74, 3, Artist.Rafal_Hrynkiewicz));
             addCard(LotRCard.EncounterSideQuest("Lost Underground", string.Empty, setName, 5)
                 .WithFlavor("You've lost your way underground. You must retrace your steps to get on track.")

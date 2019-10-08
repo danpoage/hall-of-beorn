@@ -97,6 +97,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
             addLocation("Uruk Guardroom", setName, 4, 4)
                 .WithTraits("Dungeon.")
                 .WithText("While Uruk Guardroom is in the staging area, increase the cost to play each ally by 1.\r\nTravel: Shuffle the encounter discard pile into the encounter deck and discard cards until an Orc enemy is discarded. Add that enemy to the staging area.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(126, 2, Artist.Federico_Musetti);
             addLocation("Mines of Cirith Gurat", setName, 2, 3)
                 .WithTraits("Dungeon.")

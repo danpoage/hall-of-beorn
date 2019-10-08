@@ -437,6 +437,7 @@ Forced: After the engaged player draws any number of cards, put a resource token
                 Text = "When Revealed: Attach to the active location. (Counts as a Condition attachment with the text: \"Limit 1 per location. Forced: After attached location is explored, each player searches the encounter deck and discard pile for a Dunland enemy and puts it into play engaged with him. Shuffle the encounter deck.\")",
                 EncounterSet = "The Dunland Trap",
                 CardNumber = 24,
+                EasyModeQuantity = 1,
                 Artist = Artist.Claudio_Pozas
             });
         } 
