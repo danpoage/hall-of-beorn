@@ -153,7 +153,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithText("When Revealed: After an Easterling enemy enters play, attach the top Easterling treachery in the discard pile to that enemy.\r\nForced: After Warriors of the East becomes the current quest, the highest Attack Easterling enemy in the staging area attacks the first player.")
                 .WithVictoryPoints(10)
                 .WithInfo(24, 1, Artist.Alvaro_Calvo_Escudero);
-            addLocation("Rollings Plains", setRollingPlains, 2, 4)
+            addLocation("Rolling Plains", setRollingPlains, 2, 4)
                 .WithTraits("Plains.")
                 .WithText("When Revealed: Each copy of Rolling Plains gets +2 Threat until the end of the phase.\r\nTravel: Raise each player's threat by 2.")
                 .WithFlavor("The falling stream vanished into a deep growth of cresses and water-plants, and they could hear it tinkling away in green tunnels, down long gentle slopes...\r\n-The Two Towers")
@@ -272,7 +272,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithText("Immune to player card effects.\r\nForced: When Seedy Travern is explored, reveal each facedown card under it.\r\nTravel: Look at the top 5 cards of the encounter deck. Put one of those cards facedown under Seedy Tavern and shuffle the rest back into the encounter deck.")
                 .WithVictoryPoints(2)
                 .WithInfo(47, 2, Artist.Nikolas_Hagialas);
-            addTreachery("Dakrness in the East", setCityOfRhun)
+            addTreachery("Darkness in the East", setCityOfRhun)
                 .WithText("When Revealed: Raise each player's threat by X, where X is the active location's Threat. If there is no active location, Darkness in the East gains surge.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if you raised your threat this round).")
                 .WithInfo(48, 2, Artist.Lucas_Staniec);
@@ -301,7 +301,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithText("Forced: At the end of the round, place 1 damage token here. Then, if there are 4 or more damage tokens here, remove 4 of them and reveal the top card of the Power of Mordor deck. If you cannot, the player lose the game.\r\nThis stage cannot be the active quest while Thane Ulchor has any hit points remaining. When this stage is defeated, the players win the game.")
                 .WithVictoryPoints(10)
                 .WithInfo(53, 1, Artist.Aleksander_Karcz);
-            addEnemy("Than Ulchor", setTempleOfDoom, 50, Card.VALUE_X, 6, 4, 9)
+            addEnemy("Thane Ulchor", setTempleOfDoom, 50, Card.VALUE_X, 6, 4, 9)
                 .WithUnique()
                 .WithTraits("Mordor.")
                 .WithKeywords("Indestructible.")
