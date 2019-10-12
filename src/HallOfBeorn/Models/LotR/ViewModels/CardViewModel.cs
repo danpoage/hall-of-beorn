@@ -1280,5 +1280,25 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 this.tags.Add(tag);
             }
         }
+
+        private readonly List<LinkViewModel> contentLinks = new List<LinkViewModel>();
+
+        public IEnumerable<LinkViewModel> ContentLinks
+        {
+            get { return contentLinks; }
+        }
+
+        public void LoadContentLinks(IEnumerable<ILink> links)
+        {
+            foreach (var link in links)
+            {
+                contentLinks.Add(new LinkViewModel(link));
+            }
+        }
+
+        public bool HasContentLinks()
+        {
+            return contentLinks.Count > 0;
+        }
     }
 }

@@ -12,6 +12,7 @@ using HallOfBeorn.Models.LotR.ViewModels;
 using HallOfBeorn.Services;
 using HallOfBeorn.Services.LotR;
 using HallOfBeorn.Services.LotR.Categories;
+using HallOfBeorn.Services.LotR.Links;
 using HallOfBeorn.Services.LotR.Octgn;
 using HallOfBeorn.Services.LotR.RingsDb;
 using HallOfBeorn.Services.LotR.Scenarios;
@@ -34,6 +35,7 @@ namespace HallOfBeorn.Controllers
             var playerCategoryService = (ICategoryService<PlayerCategory>)System.Web.HttpContext.Current.Application[LotRServiceNames.PlayerCategoryService];
             var encounterCategoryService = (ICategoryService<EncounterCategory>)System.Web.HttpContext.Current.Application[LotRServiceNames.EncounterCategoryService];
             var questCategoryService = (ICategoryService<QuestCategory>)System.Web.HttpContext.Current.Application[LotRServiceNames.QuestCategoryService];
+            var linkService = (ILinkService)System.Web.HttpContext.Current.Application[LotRServiceNames.LinkService];
             var noteService = (INoteService)System.Web.HttpContext.Current.Application[LotRServiceNames.NoteService];
             var scenarioService = (IScenarioService)System.Web.HttpContext.Current.Application[LotRServiceNames.ScenarioService];
             var statService = (IStatService)System.Web.HttpContext.Current.Application[LotRServiceNames.StatService];
@@ -59,7 +61,8 @@ namespace HallOfBeorn.Controllers
             _detailsHandler = new DetailsHandler(_translationHandler, 
                 cardRepository, characterRepository, 
                 playerCategoryService, encounterCategoryService, questCategoryService,
-                ringsDbService, statService, noteService, tagService, 
+                ringsDbService, statService, 
+                linkService, noteService, tagService, 
                 templateService, octgnService);
 
             _ringsDbHandler = new RingsDbHandler(ringsDbService);

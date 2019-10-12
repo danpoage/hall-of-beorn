@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.YouTube
             Url = string.Format("http://ringsdb.com/card/{0:00}{1:000}", setId, cardId);
         }
 
+        public LinkType Type { get { return LinkType.RingsDB; } }
+
         public string Title { get; private set; }
 
         public string Text { get; private set; }

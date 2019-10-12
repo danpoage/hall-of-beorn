@@ -16,6 +16,7 @@ namespace HallOfBeorn.Services.LotR
         public static string QuestCategoryService = "questCategoryService";
         public static string PlanService = "planService";
         public static string FilterService = "filterService";
+        public static string LinkService = "linkService";
         public static string NoteService = "noteService";
         public static string ScenarioService = "scenarioService";
         public static string SearchService = "searchService";

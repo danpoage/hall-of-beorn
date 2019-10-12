@@ -20,6 +20,8 @@ namespace HallOfBeorn.Models.YouTube
         private const int thumbnailHeight = 118;
         private const int thumbnailWidth = 210;
 
+        public LinkType Type { get { return LinkType.YouTube; } }
+
         public string Title { get; private set; }
 
         public string Text { get; private set; }

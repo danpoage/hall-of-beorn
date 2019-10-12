@@ -45,6 +45,7 @@ namespace HallOfBeorn.Models
         Heroes_of_the_Rings,
         Very_Late_Adventurer,
         Vision_of_the_Palantir,
+        Card_Talk,
         Susurros_del_Bosque_Viejo,
         El_Libro_Rojo_de_Bolson_Cerrado,
         Expecting_Mischief,
@@ -56,5 +57,7 @@ namespace HallOfBeorn.Models
         Hall_of_Beorn_Digital_Image,
         Hall_of_Beorn_Character,
         
+        YouTube,
+        RingsDB,
     }
 }

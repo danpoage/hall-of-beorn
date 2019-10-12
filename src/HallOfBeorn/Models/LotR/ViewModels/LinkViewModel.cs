@@ -8,12 +8,12 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 {
     public class LinkViewModel
     {
-        public LinkViewModel(Link link)
+        public LinkViewModel(ILink link)
         {
             _link = link;
         }
 
-        private readonly Link _link;
+        private readonly ILink _link;
 
         public string Url { get { return _link.Url; } }
 

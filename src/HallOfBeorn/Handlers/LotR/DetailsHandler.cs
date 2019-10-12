@@ -8,6 +8,7 @@ using HallOfBeorn.Models.LotR.ViewModels;
 using HallOfBeorn.Services;
 using HallOfBeorn.Services.LotR;
 using HallOfBeorn.Services.LotR.Categories;
+using HallOfBeorn.Services.LotR.Links;
 using HallOfBeorn.Services.LotR.Octgn;
 using HallOfBeorn.Services.LotR.RingsDb;
 using HallOfBeorn.Services.LotR.Stats;
@@ -25,8 +26,8 @@ namespace HallOfBeorn.Handlers.LotR
             ICategoryService<PlayerCategory> playerCategoryService,
             ICategoryService<EncounterCategory> encounterCategoryService,
             ICategoryService<QuestCategory> questCategoryService,
-            IRingsDbService ringsDbService,
-            IStatService statService, INoteService noteService, ITagService tagService,
+            IRingsDbService ringsDbService, IStatService statService, 
+            ILinkService linkService, INoteService noteService, ITagService tagService,
             ITemplateService templateService,
             IOctgnService octgnService)
         {
@@ -38,6 +39,7 @@ namespace HallOfBeorn.Handlers.LotR
             _questCategoryService = questCategoryService;
             _ringsDbService = ringsDbService;
             _statService = statService;
+            _linkService = linkService;
             _noteService = noteService;
             _tagService = tagService;
             _templateService = templateService;
@@ -52,6 +54,7 @@ namespace HallOfBeorn.Handlers.LotR
         private readonly ICategoryService<QuestCategory> _questCategoryService;
         private readonly IRingsDbService _ringsDbService;
         private readonly IStatService _statService;
+        private readonly ILinkService _linkService;
         private readonly INoteService _noteService;
         private readonly ITagService _tagService;
         private readonly ITemplateService _templateService;
@@ -190,6 +193,7 @@ namespace HallOfBeorn.Handlers.LotR
 
             model.LoadNotes(_noteService.Notes(card.Slug));
             model.LoadTags(_tagService.GetTags(card.Slug));
+            model.LoadContentLinks(_linkService.GetLinks(card.Slug));
 
             if (isPlayerCard(card))
             {

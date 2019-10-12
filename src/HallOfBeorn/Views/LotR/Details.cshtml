@@ -631,16 +631,32 @@
         }
         </div>
         <div>
-            <div class="footer-section">
+            @if (@Model.HasContentLinks())
+            {
+                <div>
+                    <div style="margin-top:12px;"><b>Community Content</b></div>
+                    @foreach (var link in @Model.ContentLinks)
+                    {
+                        <div style="margin: 4px;display:inline-block;background-color:black;color:white">
+                            <a href="@link.Url" target="_blank" title="@link.Title">
+                                <img src="@link.ThumbnailUrl" title="@link.Title" height="@link.ThumbnailHeight"/>
+                            </a>
+                            <div style="text-align:center;">@link.Title</div>
+                        </div>
+                    }
+                </div>
+            }
             @if (@Model.HasLinkedCards)
             {
-                    <div style="margin-top:12px;"><b>Associated Cards</b></div>
-                    foreach (var link in @Model.LinkedCards)
+                <div class="footer-section">
+                <div style="margin-top:12px;"><b>Associated Cards</b></div>
+                    @foreach (var link in @Model.LinkedCards)
                     {
                         <div><a href="@link.Url" title="@link.Title" target="_blank">@link.Text</a></div>
                     }
+                </div>
             }
-            </div>
+            
             @*
             <div class="footer-section">
             @if (@Model.HasBlogs)

@@ -8,6 +8,7 @@ namespace HallOfBeorn.Models
 {
     public interface ILink
     {
+        LinkType Type { get; }
         string Title { get; }
         string Text { get; }
         string Url { get; }

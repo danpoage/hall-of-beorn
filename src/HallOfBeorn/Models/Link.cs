@@ -7,6 +7,10 @@ namespace HallOfBeorn.Models
 {
     public class Link : ILink
     {
+        private const string parterBaseUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Partners";
+        private const int defaultThumbnailWidth = 210;
+        private const int defaultThumbnailHeight = 118;
+
         public Link(LinkType type, ICard card)
             : this(type, card, null)
         {
@@ -40,9 +44,25 @@ namespace HallOfBeorn.Models
             this.Text = title;
             this.Url = url;
             this.ThumbnailUrl = thumbnailUrl;
-            
+
             _thumbnailHeight = thumbnailHeight;
             _thumbnailWidth = thumbnailWidth;
+
+            if (string.IsNullOrWhiteSpace(thumbnailUrl))
+            {
+                switch (type)
+                {
+                    case LinkType.Card_Talk:
+                        ThumbnailUrl = string.Format("{0}/Card-Talk.jpg", parterBaseUrl);
+                        _thumbnailWidth = defaultThumbnailWidth;
+                        _thumbnailHeight = defaultThumbnailHeight;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            
+            
         }
 
         private const string defaltLanguage = "en";
