@@ -9,6 +9,7 @@ using HallOfBeorn.Models.LotR.ViewModels;
 using HallOfBeorn.Services;
 using HallOfBeorn.Services.LotR;
 using HallOfBeorn.Services.LotR.Categories;
+using HallOfBeorn.Services.LotR.Links;
 using HallOfBeorn.Services.LotR.RingsDb;
 using HallOfBeorn.Services.LotR.Scenarios;
 using HallOfBeorn.Services.LotR.Search;
@@ -22,6 +23,7 @@ namespace HallOfBeorn.Handlers.LotR
             ICharacterRepository characterRepository,
             ISearchService searchService,
             IScenarioService scenarioService,
+            ILinkService linkService,
             IStatService statService,
             ICategoryService<PlayerCategory> playerCategoryService,
             ICategoryService<EncounterCategory> encounterCategoryService, 
@@ -33,6 +35,7 @@ namespace HallOfBeorn.Handlers.LotR
             _characterRepository = characterRepository;
             _searchService = searchService;
             _scenarioService = scenarioService;
+            _linkService = linkService;
             _statService = statService;
             _playerCategoryService = playerCategoryService;
             _encounterCategoryService = encounterCategoryService;
@@ -45,6 +48,7 @@ namespace HallOfBeorn.Handlers.LotR
         private readonly ICharacterRepository _characterRepository;
         private readonly ISearchService _searchService;
         private readonly IScenarioService _scenarioService;
+        private readonly ILinkService _linkService;
         private readonly IStatService _statService;
         private readonly ICategoryService<PlayerCategory> _playerCategoryService;
         private readonly ICategoryService<EncounterCategory> _encounterCategoryService;
@@ -198,6 +202,12 @@ namespace HallOfBeorn.Handlers.LotR
 
                     foreach (var cardViewModel in model.Cards)
                     {
+                        var communityLinks = _linkService.GetLinks(cardViewModel.Card.Slug);
+                        foreach (var link in communityLinks)
+                        {
+                            linksByUrl[link.Url] = new Tuple<LinkViewModel, double>(new LinkViewModel(link), 200);
+                        }
+
                         var associatedScenarios = _scenarioService.AssociatedScenarios(
                             cardViewModel.Card.Slug, cardViewModel.Card.CardType, cardViewModel.Score);
 
@@ -275,7 +285,7 @@ namespace HallOfBeorn.Handlers.LotR
 
                     model.Links.AddRange(
                         linksByUrl.Values
-                            .OrderBy(ln => ln.Item2)
+                            .OrderByDescending(ln => ln.Item2)
                             .Select(ln => ln.Item1)
                     );
                 }

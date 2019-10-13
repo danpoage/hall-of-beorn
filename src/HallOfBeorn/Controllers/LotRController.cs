@@ -71,8 +71,9 @@ namespace HallOfBeorn.Controllers
                 questCategoryService, scenarioService);
 
             _searchHandler = new SearchHandler(cardRepository, characterRepository,
-                searchService, scenarioService, statService, playerCategoryService, encounterCategoryService, 
-                questCategoryService, ringsDbService, _translationHandler);
+                searchService, scenarioService, linkService, statService, 
+                playerCategoryService, encounterCategoryService, questCategoryService, 
+                ringsDbService, _translationHandler);
 
         }
 
