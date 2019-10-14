@@ -57,6 +57,11 @@ namespace HallOfBeorn.Models
                         _thumbnailWidth = defaultThumbnailWidth;
                         _thumbnailHeight = defaultThumbnailHeight;
                         break;
+                    case LinkType.Vision_of_the_Palantir:
+                        ThumbnailUrl = string.Format("{0}/Vision-of-the-Palantir.jpg", parterBaseUrl);
+                        _thumbnailWidth = defaultThumbnailWidth;
+                        _thumbnailHeight = defaultThumbnailHeight;
+                        break;
                     default:
                         break;
                 }

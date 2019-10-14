@@ -11,6 +11,7 @@ namespace HallOfBeorn.Services.LotR.Links
     {
         public LinkService()
         {
+            //Card Talk
             AddLink("Andrath-Guardsman-TMk", LinkType.Card_Talk, "https://cardtalk2018.libsyn.com/andrath-guardsman", "Andrath Guardsman");
             AddLink("Aragorn-Core", LinkType.Card_Talk, "https://cardtalk2018.libsyn.com/leadership-aragorn", "Leadership Aragorn");
             AddLink("Aragorn-Core", LinkType.Card_Talk, "https://cardtalk2018.libsyn.com/which-aragorn", "Which Aragorn?");
@@ -103,6 +104,41 @@ namespace HallOfBeorn.Services.LotR.Links
             AddLink("Theoden-TMV", LinkType.Card_Talk, "https://cardtalk2018.libsyn.com/guest-host-samuel-shreeve", "Guest Host Samuel Shreeve");
             AddLink("Theoden-ToS", LinkType.Card_Talk, "https://cardtalk2018.libsyn.com/spirit-theoden", "Spirit Théoden");
             AddLink("Thranduil-FitN", LinkType.Card_Talk, "https://cardtalk2018.libsyn.com/thranduil", "Thranduil");
+
+            //Vision of the Palantir
+            AddLink("Bard-son-of-Brand-TWoR", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
+            AddLink("Beregond-TFotW", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
+            AddLink("Bilbo-Baggins-THfG", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/03/26/hunt-for-gollum/#BilboBaggins", "Player Card Review");
+            AddLink("Campfire-Tales-THfG", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/03/26/hunt-for-gollum/#CampfireTales", "Player Card Review");
+            AddLink("Celebrian's-Stone-Core", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
+            AddLink("Dunedain-Mark-THfG", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/03/26/hunt-for-gollum/#D%C3%BAnedainMark", "Player Card Review");
+            AddLink("Frodo-Baggins-CatC", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
+            AddLink("Gandalf-RD", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
+            AddLink("Glamdring-RAR", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
+            AddLink("Golden-Shield-TFoW", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
+            AddLink("Hands-Upon-the-Bow-SAF", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
+            AddLink("Herugrim-ToS", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
+            AddLink("Mustering-the-Rohirrim-THfG", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/03/26/hunt-for-gollum/#MusteringtheRohirrim", "Player Card Review");
+            AddLink("Mithril-Shirt-TFoW", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
+            AddLink("Necklace-of-Girion-TWoR", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
+            AddLink("Raven-winged-Helm-TWoE", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
+            AddLink("Resourceful-TWitW", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
+            AddLink("Ring-of-Barahir-TSF", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
+            AddLink("Ring-of-Thror-TGoF", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
+            AddLink("Rivendell-Minstrel-THfG", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/03/26/hunt-for-gollum/#RivendellMinstrel", "Player Card Review");
+            AddLink("Rosie-Cotton-TMoF", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
+            AddLink("Song-of-Kings-THfG", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/03/26/hunt-for-gollum/#SongofKings", "Player Card Review");
+            AddLink("Sting-MG", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
+            AddLink("Strider's-Path-THfG", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/03/26/hunt-for-gollum/#Strider'sPath", "Player Card Review");
+            AddLink("Sword-thain-TDR", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
+            AddLink("The-Eagles-Are-Coming-THfG", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/03/26/hunt-for-gollum/#TheEaglesAreComing!", "Player Card Review");
+            AddLink("The-King's-Return-TFoW", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
+            AddLink("Tom-Cotton-TMoF", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
+            AddLink("Well-Equipped-TBoG", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
+            AddLink("West-Road-Traveller-RTM", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
+            AddLink("Westfold-Horse-breaker-THfG", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/03/26/hunt-for-gollum/#WestfoldHorse-Breaker", "Player Card Review");
+            AddLink("Winged-Guardian-THfG", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/03/26/hunt-for-gollum/#WingedGuardian", "Player Card Review");
+            
         }
 
         private readonly Dictionary<string, List<ILink>> linksBySlug
