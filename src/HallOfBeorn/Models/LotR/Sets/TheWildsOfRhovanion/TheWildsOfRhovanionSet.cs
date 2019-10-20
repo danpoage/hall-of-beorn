@@ -95,6 +95,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
                 .WithTraits("Riverland.")
                 .WithText("Forced: When Wooded Riverbank is explored, put the top card of the Evil Creatures deck into play engaged with the first player.")
                 .WithShadow("Shadow: Deal 1 damage to the defending character.")
+                .WithEasyModeQuantity(2)
                 .WithInfo(17, 3, Artist.David_Demaret);
             addTreachery("Frenzied Creature", EncounterSet.JourneyUpTheAnduin.Name)
                 .WithText("When Revealed: Add the top card of the Evil Creatures deck to the staging area and attach Frenzied Creature to it. (Counts as a Condition attachment with the text: \"Attached enemy gets +1 Threat, +1 Attack, +1 Defense and is immune to player card effects\")")

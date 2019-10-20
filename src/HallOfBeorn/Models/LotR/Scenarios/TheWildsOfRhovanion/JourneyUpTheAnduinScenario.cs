@@ -39,6 +39,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheWildsOfRhovanion
             ExcludeFromEasyMode("Pack-of-Wargs-TWoR", 1);
             ExcludeFromEasyMode("Hills-of-Wilderland-TWoR", 1);
             ExcludeFromEasyMode("Lonely-Lands-TWoR", 1);
+            ExcludeFromEasyMode("Wooded-Riverbank-TWoR", 1);
 
             ExcludeLostInWilderlandFromEasyMode();
 
