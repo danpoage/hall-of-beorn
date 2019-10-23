@@ -132,7 +132,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithEasyModeQuantity(2)
                 .WithInfo(20, 3, Artist.Mariusz_Gandzel));
             Cards.Add(LotRCard.ShipEnemy("Swift Raider", setName, 38, 3, 5, 4, 8)
-                .WithTraits("Cosair.", "Ship.")
+                .WithTraits("Corsair.", "Ship.")
                 .WithKeywords("Boarding 2.")
                 .WithText("Cannot have attachments.\r\nWhile Swift Raider is in the staging area, it gains: “Forced: After a player commits 4 or more characters to a Sailing test or to the quest, Swift Raider engages that player.”")
                 .WithEasyModeQuantity(1)

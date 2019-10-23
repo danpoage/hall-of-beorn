@@ -29,7 +29,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithVictoryPoints(2)
                 .WithInfo(2, 3, Artist.Lucas_Staniec));
             addCard(LotRCard.Location("Candle-lit Pool", string.Empty, setName, 4, 5)
-                .WithTraits("Marhs.")
+                .WithTraits("Marsh.")
                 .WithKeywords("Mire 3.")
                 .WithText("Forced: When Candle-lit Pool is discarded by the Mire keyword, each player searches the encounter deck and discard pile for an Undead enemy and puts it into play engaged with him.\r\nTravel: Spend 2 Fellowship resources to travel here.")
                 .WithVictoryPoints(3)
