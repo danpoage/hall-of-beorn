@@ -216,7 +216,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithInfo(34, 3, Artist.Anthony_Devine));
             Cards.Add(LotRCard.Enemy("Warrior of Dunland", "07052600-1902-45B6-A502-EF82C106C951", "Helm's Deep", 44, 4, 5, 1, 5)
                 .WithTraits("Dunland.")
-                .WithKeywords("Peril.", "Archery.")
+                .WithKeywords("Peril.", "Archery 1.")
                 .WithText("When Revealed: Warrior of Dunland makes an immediate attack against you.\r\nForced: After Warrior of Dunland attacks and destroys a character, place 3 progress on the active location.")
                 .WithInfo(35, 2, Artist.Claudio_Pozas)
                 .WithEasyModeQuantity(0));
@@ -385,7 +385,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithEasyModeQuantity(1));
             Cards.Add(LotRCard.Enemy("Snaga", "F6632E8B-1E39-45CD-A67D-361CCED2A8AD", "Snaga Orcs", 44, 1, 3, 1, 3)
                 .WithTraits("Orc.")
-                .WithKeywords("Peril.", "Archery 1")
+                .WithKeywords("Peril.", "Archery 1.")
                 .WithText("When Revealed: Discard 1 random card from your hand. Snaga gets +X Threat until the end of the round, where X is the discarded card's printed cost.")
                 .WithFlavor("Round them were many smaller goblins. -The Two Towers")
                 .WithInfo(66, 3, Artist.Jake_Bullock)

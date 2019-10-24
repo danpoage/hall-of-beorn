@@ -25,7 +25,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
             addCard(LotRCard.Enemy("Mauhúr", string.Empty, setName, 24, 4, 5, 2, 4)
                 .WithUnique()
                 .WithTraits("Orc.", "Uruk-hai.")
-                .WithKeywords("Toughness 1.", "Archer 2.")
+                .WithKeywords("Toughness 1.", "Archery 2.")
                 .WithText("Forced: After Mauhúr attacks, increase the pursuit value by 1.")
                 .WithFlavor("\"Mauhúr and his lads are in the forest, and they should turn up any time now.\" -Uglúk, The Two Towers")
                 .WithVictoryPoints(4)
