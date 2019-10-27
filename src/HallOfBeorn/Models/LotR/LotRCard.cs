@@ -638,6 +638,12 @@ namespace HallOfBeorn.Models.LotR
             return this;
         }
 
+        public LotRCard WithAlternateEncounterSet(string alternateEncounterSet)
+        {
+            this.AlternateEncounterSet = alternateEncounterSet;
+            return this;
+        }
+
         public LotRCard WithIncludedEncounterSets(params EncounterSet[] sets)
         {
             foreach (var set in sets)

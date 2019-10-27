@@ -106,23 +106,13 @@ Forced: At the beginning of the combat phase, Anduin Troll Spawn engages a playe
                 CardNumber = 4,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
-            Cards.Add(new LotRCard()
-            {
-                Title = "A Flooded Ford",
-                
-                Id = "F5DA8E4F-B12C-4BF0-A261-EBD642F32EE9",
-                CardType = CardType.Location,
-                Threat = 3,
-                QuestPoints = 6,
-                Traits = new List<string> { "Riverland." },
-                Text = "Each card revealed by the encounter deck gains doomed X. X is the number of progress tokens on this card.",
-                Shadow = "Shadow: If this attack is undefended, put A Flooded Ford into the staging area with 1 progress token on it.",
-                EncounterSet = "Journey Along the Anduin Nightmare",
-                AlternateEncounterSet = "Journey Down the Anduin Nightmare",
-                Quantity = 1,
-                CardNumber = 5,
-                Artist = Artist.Alexandre_Dainche
-            });
+            addLocation("A Flooded Ford", EncounterSet.JourneyAlongTheAnduinNightmare.Name, 3, 6)
+                .WithTraits("Riverland.")
+                .WithText("Each card revealed by the encounter deck gains doomed X. X is the number of progress tokens on this card.")
+                .WithShadow("Shadow: If this attack is undefended, put A Flooded Ford into the staging area with 1 progress token on it.")
+                .WithAlternateEncounterSet("Journey Down the Anduin Nightmare")
+                .WithInfo(5, 2, Artist.Alexandre_Dainche);
+            
             Cards.Add(new LotRCard()
             {
                 Title = "Gladden Marshlands",

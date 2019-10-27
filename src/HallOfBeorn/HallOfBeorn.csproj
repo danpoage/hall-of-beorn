@@ -445,10 +445,10 @@
     <Compile Include="Models\LotR\Scenarios\TheWildsOfRhovanion\LostInMirkwoodScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\TheWildsOfRhovanion\TheKingsQuestScenario.cs" />
     <Compile Include="Models\LotR\ScenarioView.cs" />
-    <Compile Include="Models\LotR\Sets\AngmarAwakened\AcrossTheEttenmoorsNightmare.cs" />
+    <Compile Include="Models\LotR\Sets\AngmarAwakened\AcrossTheEttenmoorsNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\AShadowInTheEast\AShadowInTheEastSet.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\FlightOfTheStormcallerNightmare.cs" />
-    <Compile Include="Models\LotR\Sets\DreamChaser\TempleOfTheDeceivedNightmare.cs" />
+    <Compile Include="Models\LotR\Sets\DreamChaser\TempleOfTheDeceivedNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\TheThingInTheDepthsNightmare.cs" />
     <Compile Include="Models\LotR\Sets\EredMithrin\FireInTheNightSet.cs" />
     <Compile Include="Models\LotR\Sets\EredMithrin\MountGundabadSet.cs" />
@@ -470,11 +470,11 @@
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\ThePassageOfTheMarshesNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\TheRoadToIsengardNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\TheUrukHaiNightmare.cs" />
-    <Compile Include="Models\LotR\Sets\TheLostRealm\DeadmensDikeNightmare.cs" />
-    <Compile Include="Models\LotR\Sets\AngmarAwakened\EscapeFromMountGramNightmare.cs" />
-    <Compile Include="Models\LotR\Sets\TheLostRealm\IntrudersInChetwoodNightmare.cs" />
+    <Compile Include="Models\LotR\Sets\TheLostRealm\DeadmensDikeNightmareSet.cs" />
+    <Compile Include="Models\LotR\Sets\AngmarAwakened\EscapeFromMountGramNightmareSet.cs" />
+    <Compile Include="Models\LotR\Sets\TheLostRealm\IntrudersInChetwoodNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\JourneyInTheDarkNightmare.cs" />
-    <Compile Include="Models\LotR\Sets\AngmarAwakened\TheBattleOfCarnDumNightmare.cs" />
+    <Compile Include="Models\LotR\Sets\AngmarAwakened\TheBattleOfCarnDumNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\Haradrim\TheCrossingsOfPorosSet.cs" />
     <Compile Include="Models\LotR\Sets\AngmarAwakened\TheDreadRealmNightmare.cs" />
     <Compile Include="Models\LotR\Sets\Haradrim\TheDungeonsOfCirithGuratSet.cs" />
@@ -482,7 +482,7 @@
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\TheRingGoesSouthNightmare.cs" />
     <Compile Include="Models\LotR\Sets\AngmarAwakened\TheTreacheryOfRhudaurNightmare.cs" />
     <Compile Include="Models\LotR\Sets\AngmarAwakened\TheWastesOfEriadorNightmare.cs" />
-    <Compile Include="Models\LotR\Sets\TheLostRealm\TheWeatherHillsNightmare.cs" />
+    <Compile Include="Models\LotR\Sets\TheLostRealm\TheWeatherHillsNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\TheWildsOfRhovanion\TheWildsOfRhovanionSet.cs" />
     <Compile Include="Models\LotR\Sets\VengeanceOfMordor\TheCityOfUlfastSet.cs" />
     <Compile Include="Models\LotR\Sets\VengeanceOfMordor\WrathAndRuinSet.cs" />
