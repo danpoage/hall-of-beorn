@@ -151,6 +151,29 @@ namespace HallOfBeorn.Services.LotR.Links
             AddLink("Tom-Cotton-TMoF", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
             AddLink("Well-Equipped-TBoG", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
             AddLink("West-Road-Traveller-RTM", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
+
+            AddLink("Aragorn-TWitW", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
+            AddLink("Arwen-Undomiel-TDR", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
+            AddLink("Glorfindel-FoS", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
+            AddLink("Dunedain-Pathfinder-RAH", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
+            AddLink("Galadriel's-Handmaiden-CS", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
+            AddLink("Gandalf-Core", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
+            AddLink("Henamarth-Riversong-Core", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
+            AddLink("Mablung-TLoS", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
+            AddLink("Northern-Tracker-Core", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
+            AddLink("Quickbeam-ToS", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
+            AddLink("Silvan-Refugeee-TDF", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
+            AddLink("Treebeard-TAC", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
+            AddLink("A-Burning-Brand-CatC", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
+            AddLink("Lembas-TiT", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
+            AddLink("Light-of-Valinor-FoS", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
+            AddLink("Protector-of-Lorien-Core", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
+            AddLink("Unexpected-Courge-Core", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
+            AddLink("A-Test-of-Will-Core", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
+            AddLink("Dearon's-Runes-FoS", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
+            AddLink("Elrond's-Counsel-TWiT", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
+            AddLink("Elven-light-TDR", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
+
         }
 
         private readonly Dictionary<string, List<ILink>> linksBySlug

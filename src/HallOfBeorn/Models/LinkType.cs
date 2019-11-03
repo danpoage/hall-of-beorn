@@ -50,6 +50,7 @@ namespace HallOfBeorn.Models
         El_Libro_Rojo_de_Bolson_Cerrado,
         Expecting_Mischief,
         Die_Manner_von_Gondor,
+        The_Book_of_Elessar,
 
         Hall_of_Beorn_LotR_Detail,
         Hall_of_Beorn_LotR_Image,

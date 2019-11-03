@@ -17,8 +17,6 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
             Cycle = "GenCon";
             Number = 3009;
 
-            IsSpoiler = true;
-
             addQuest("Radagast's Request", setName, 1, 'A', 10)
                 .WithFlavor("Concerned about the growing darkness in southern Mirkwood, Radagast sent an Eagle to spy on Dol Guldur. When the Eagle returned with an evil wound, the Wizard sent word to the White Council and asked for heroes to investigate.")
                 .WithText("Setup: Add Rhosgobel to the staging area. The opposing team searches the encounter deck for one different 0 cost enemy or 0 cost location per player and adds them to the staging area. Shuffle the encounter deck.")

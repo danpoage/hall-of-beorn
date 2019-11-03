@@ -62,6 +62,11 @@ namespace HallOfBeorn.Models
                         _thumbnailWidth = defaultThumbnailWidth;
                         _thumbnailHeight = defaultThumbnailHeight;
                         break;
+                    case LinkType.The_Book_of_Elessar:
+                        ThumbnailUrl = string.Format("{0}/The-Book-of-Elessar.jpg", parterBaseUrl);
+                        _thumbnailWidth = defaultThumbnailWidth;
+                        _thumbnailHeight = defaultThumbnailHeight;
+                        break;
                     default:
                         break;
                 }
