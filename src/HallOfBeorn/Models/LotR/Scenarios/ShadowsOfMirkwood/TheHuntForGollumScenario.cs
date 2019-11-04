@@ -23,7 +23,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             AddTheWhiteTowerLink("https://thewhitetower.wordpress.com/2018/05/29/the-hunt-for-gollum-quest-analysis/", "The Hunt for Gollum - Quest Analysis");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2016/11/24/the-hunt-for-gollum/");
             AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/01/24/the-hunt-for-gollum/");
-
+            AddTheBookOfElessarLink("https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/");
+            AddYouTubeLink(LinkType.The_Book_of_Elessar, Title, "mfjEwukJzAk");
+            
             AddRelatedDeck("306", "Beorn's Path Leadership/Lore",
                 "https://hallofbeorn.wordpress.com/2013/04/08/beorns-path-part-8-playtesting-the-hunt-for-gollum/");
             AddRelatedDeck("2890", "The Line Unbroken - Hunt for Gollum Deck 1",

@@ -44,6 +44,7 @@ namespace HallOfBeorn.Models.LotR
         private const string TheRoadLogo = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Partners/The-Road.jpg";
         private const string VisionOfThePalantirLogo = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Partners/Vision-of-the-Palantir.jpg";
         private const string WarriorsOfTheWestLogo = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Partners/Warriors-of-the-West.jpg";
+        private const string TheBookOfElessarLogo = "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Partners/The-Book-of-Elessar.jpg";
 
         private void AddPlayLink(LinkType type, string url, string title)
         {
@@ -152,6 +153,16 @@ namespace HallOfBeorn.Models.LotR
         protected void AddWarriorsOfTheWestLink(string url, string title)
         {
             AddPlayLink(LinkType.Warriors_of_the_West, url, title, WarriorsOfTheWestLogo);
+        }
+
+        protected void AddTheBookOfElessarLink(string url)
+        {
+            AddTheBookOfElessarLink(url, Title);
+        }
+
+        protected void AddTheBookOfElessarLink(string url, string title)
+        {
+            AddPlayLink(LinkType.The_Book_of_Elessar, url, title, TheBookOfElessarLogo);
         }
 
         protected void AddYouTubeLink(LinkType type, string title, string videoId)

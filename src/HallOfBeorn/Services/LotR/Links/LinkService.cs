@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using HallOfBeorn.Models;
+using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.Community.VisionOfThePalantir;
 
 namespace HallOfBeorn.Services.LotR.Links
@@ -10,7 +11,17 @@ namespace HallOfBeorn.Services.LotR.Links
     public class LinkService
         : ILinkService
     {
-        public LinkService()
+        public LinkService(ICardRepository<LotRCard> cardRepository)
+        {
+            this.cardRepository = cardRepository;
+            Initialize();
+        }
+
+        private readonly ICardRepository<LotRCard> cardRepository;
+        private readonly Dictionary<string, List<ILink>> linksBySlug
+            = new Dictionary<string, List<ILink>>();
+
+        private void Initialize()
         {
             //Card Talk
             AddLink("Andrath-Guardsman-TMk", LinkType.Card_Talk, "https://cardtalk2018.libsyn.com/andrath-guardsman", "Andrath Guardsman");
@@ -152,46 +163,202 @@ namespace HallOfBeorn.Services.LotR.Links
             AddLink("Well-Equipped-TBoG", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
             AddLink("West-Road-Traveller-RTM", LinkType.Vision_of_the_Palantir, "https://visionofthepalantir.com/2019/09/16/guarded-cards/", "Guarded Cards");
 
-            AddLink("Aragorn-TWitW", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
-            AddLink("Arwen-Undomiel-TDR", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
-            AddLink("Glorfindel-FoS", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
-            AddLink("Dunedain-Pathfinder-RAH", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
-            AddLink("Galadriel's-Handmaiden-CS", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
-            AddLink("Gandalf-Core", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
-            AddLink("Henamarth-Riversong-Core", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
-            AddLink("Mablung-TLoS", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
-            AddLink("Northern-Tracker-Core", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
-            AddLink("Quickbeam-ToS", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
-            AddLink("Silvan-Refugeee-TDF", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
-            AddLink("Treebeard-TAC", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
-            AddLink("A-Burning-Brand-CatC", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
-            AddLink("Lembas-TiT", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
-            AddLink("Light-of-Valinor-FoS", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
-            AddLink("Protector-of-Lorien-Core", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
-            AddLink("Unexpected-Courge-Core", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
-            AddLink("A-Test-of-Will-Core", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
-            AddLink("Dearon's-Runes-FoS", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
-            AddLink("Elrond's-Counsel-TWiT", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
-            AddLink("Elven-light-TDR", LinkType.The_Book_of_Elessar, "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/", "The Hunt for Gollum");
+            //The Book of Elessar
+            AddTheBookOfElessarHuntForGollum("Aragorn-XLore");
+            AddTheBookOfElessarHuntForGollum("Arwen-Undomiel-TDR");
+            AddTheBookOfElessarHuntForGollum("Glorfindel-FoS");
+            AddTheBookOfElessarHuntForGollum("Dunedain-Pathfinder-RAH");
+            AddTheBookOfElessarHuntForGollum("Galadriel's-Handmaiden-CS");
+            AddTheBookOfElessarHuntForGollum("Gandalf-Core");
+            AddTheBookOfElessarHuntForGollum("Henamarth-Riversong-Core");
+            AddTheBookOfElessarHuntForGollum("Mablung-TLoS");
+            AddTheBookOfElessarHuntForGollum("Northern-Tracker-Core");
+            AddTheBookOfElessarHuntForGollum("Quickbeam-ToS");
+            AddTheBookOfElessarHuntForGollum("Silvan-Refugeee-TDF");
+            AddTheBookOfElessarHuntForGollum("Treebeard-TAC");
+            AddTheBookOfElessarHuntForGollum("A-Burning-Brand-CatC");
+            AddTheBookOfElessarHuntForGollum("Lembas-TiT");
+            AddTheBookOfElessarHuntForGollum("Light-of-Valinor-FoS");
+            AddTheBookOfElessarHuntForGollum("Protector-of-Lorien-Core");
+            AddTheBookOfElessarHuntForGollum("Unexpected-Courge-Core");
+            AddTheBookOfElessarHuntForGollum("A-Test-of-Will-Core");
+            AddTheBookOfElessarHuntForGollum("Dearon's-Runes-FoS");
+            AddTheBookOfElessarHuntForGollum("Elrond's-Counsel-TWiT");
+            AddTheBookOfElessarHuntForGollum("Elven-light-TDR");
 
+            AddTheBookOfElessarConflictAtTheCarrock("Aragorn-XTactics");
+            AddTheBookOfElessarConflictAtTheCarrock("Arwen-Undomiel-TDR");
+            AddTheBookOfElessarConflictAtTheCarrock("Glorfindel-FoS");
+            AddTheBookOfElessarConflictAtTheCarrock("Dunedain-Hunter-XTactics");
+            AddTheBookOfElessarConflictAtTheCarrock("Dunedain-Pathfinder-XSpirit");
+            AddTheBookOfElessarConflictAtTheCarrock("Galadriel's-Handmaiden-XSpirit");
+            AddTheBookOfElessarConflictAtTheCarrock("Gandalf-Core");
+            AddTheBookOfElessarConflictAtTheCarrock("Legolas-XTacticsAlly");
+            AddTheBookOfElessarConflictAtTheCarrock("Treebeard-XNeutral");
+            AddTheBookOfElessarConflictAtTheCarrock("A-Burning-Brand-CatC");
+            AddTheBookOfElessarConflictAtTheCarrock("Ancient-Mathom-XSpirit");
+            AddTheBookOfElessarConflictAtTheCarrock("Dagger-of-Westernesse-XTactics");
+            AddTheBookOfElessarConflictAtTheCarrock("Ring-of-Barahir-XSpirit");
+            AddTheBookOfElessarConflictAtTheCarrock("Rivendell-Blade-XTactics");
+            AddTheBookOfElessarConflictAtTheCarrock("Unexpected-Courage-Core");
+            AddTheBookOfElessarConflictAtTheCarrock("A-Test-of-Will-Core");
+            AddTheBookOfElessarConflictAtTheCarrock("Elrond's-Counsel-XSpirit");
+            AddTheBookOfElessarConflictAtTheCarrock("Elven-light-XSpirit");
+            AddTheBookOfElessarConflictAtTheCarrock("Feint-Core");
+            AddTheBookOfElessarConflictAtTheCarrock("Power-of-Orthanc-XSpirit");
+            AddTheBookOfElessarConflictAtTheCarrock("Double-Back");
+            AddTheBookOfElessarConflictAtTheCarrock("Gather-Information");
+
+            AddTheBookOfElessarAJourneyToRhosgobel("Aragorn-XLore");
+            AddTheBookOfElessarAJourneyToRhosgobel("Arwen-Undomiel-TDR");
+            AddTheBookOfElessarAJourneyToRhosgobel("Legolas-TSoH");
+            AddTheBookOfElessarAJourneyToRhosgobel("Dunedain-Pathfinder-XSpirit");
+            AddTheBookOfElessarAJourneyToRhosgobel("Galadriel's-Handmaiden-XSpirit");
+            AddTheBookOfElessarAJourneyToRhosgobel("Haldir-of-Lórien-XLoreAlly");
+            AddTheBookOfElessarAJourneyToRhosgobel("Radagast-XNeutralAlly");
+            AddTheBookOfElessarAJourneyToRhosgobel("Warden-of-Healing-XLore");
+            AddTheBookOfElessarAJourneyToRhosgobel("A-Burning-Brand-XLore");
+            AddTheBookOfElessarAJourneyToRhosgobel("Healing-Herbs-XLore");
+            AddTheBookOfElessarAJourneyToRhosgobel("Light-of-Valinor-FoS");
+            AddTheBookOfElessarAJourneyToRhosgobel("Mirkwood-Long-knife-TSoH");
+            AddTheBookOfElessarAJourneyToRhosgobel("Unexpected-Courage-Core");
+            AddTheBookOfElessarAJourneyToRhosgobel("A-Test-of-Will-Core");
+            AddTheBookOfElessarAJourneyToRhosgobel("Daeron's-Runes-FoS");
+            AddTheBookOfElessarAJourneyToRhosgobel("Distant-Stars-XLore");
+            AddTheBookOfElessarAJourneyToRhosgobel("Elrond's-Counsel-XSpirit");
+            AddTheBookOfElessarAJourneyToRhosgobel("Elven-light-XSpirit");
+            AddTheBookOfElessarAJourneyToRhosgobel("Lore-of-Imladris-Core");
+            AddTheBookOfElessarAJourneyToRhosgobel("Lorien's-Wealth-Core");
+            AddTheBookOfElessarAJourneyToRhosgobel("Double-Back");
+
+            AddTheBookOfElessarTheHillsOfEmynMuil("Aragorn-TWitW");
+            AddTheBookOfElessarTheHillsOfEmynMuil("Idrean");
+            AddTheBookOfElessarTheHillsOfEmynMuil("Thurindir");
+            AddTheBookOfElessarTheHillsOfEmynMuil("Arwen-Undomiel-TWitW");
+            AddTheBookOfElessarTheHillsOfEmynMuil("Dunedain-Lookout-XLore");
+            AddTheBookOfElessarTheHillsOfEmynMuil("Dunedain-Pathfinder-XSpirit");
+            AddTheBookOfElessarTheHillsOfEmynMuil("East-Road-Ranger-XLore");
+            AddTheBookOfElessarTheHillsOfEmynMuil("Northern-Tracker-Core");
+            AddTheBookOfElessarTheHillsOfEmynMuil("Warden-of-Healing-XLore");
+            AddTheBookOfElessarTheHillsOfEmynMuil("A-Burning-Brand-XLore");
+            AddTheBookOfElessarTheHillsOfEmynMuil("Ancient-Mathom-XSpirit");
+            AddTheBookOfElessarTheHillsOfEmynMuil("Dunedain-Pipe-XLore");
+            AddTheBookOfElessarTheHillsOfEmynMuil("Elf-stone-XLore");
+            AddTheBookOfElessarTheHillsOfEmynMuil("Unexpected-Courage-Core");
+            AddTheBookOfElessarTheHillsOfEmynMuil("Warden-of-Arnor-XSpirit");
+            AddTheBookOfElessarTheHillsOfEmynMuil("A-Test-of-Will-Core");
+            AddTheBookOfElessarTheHillsOfEmynMuil("Backtrack-XSpirit");
+            AddTheBookOfElessarTheHillsOfEmynMuil("Daeron's-Runes-FoS");
+            AddTheBookOfElessarTheHillsOfEmynMuil("Secret-Paths-Core");
+            AddTheBookOfElessarTheHillsOfEmynMuil("Strider's-Path-XLore");
+            AddTheBookOfElessarTheHillsOfEmynMuil("Double-Back");
+            AddTheBookOfElessarTheHillsOfEmynMuil("Gather-Information");
+            AddTheBookOfElessarTheHillsOfEmynMuil("Scout-Ahead");
+
+            AddTheBookOfElessarTheDeadMarshes("Aragorn-Core");
+            AddTheBookOfElessarTheDeadMarshes("Arwen-Undomiel-TDR");
+            AddTheBookOfElessarTheDeadMarshes("Beravor-Core");
+            AddTheBookOfElessarTheDeadMarshes("Dunedain-Pathfinder-XSpirit");
+            AddTheBookOfElessarTheDeadMarshes("Galadhrim-Minstrel-XLore");
+            AddTheBookOfElessarTheDeadMarshes("Galadriel's-Handmaiden-XSpirit");
+            AddTheBookOfElessarTheDeadMarshes("Gandalf-Core");
+            AddTheBookOfElessarTheDeadMarshes("Henamarth-Riversong-Core");
+            AddTheBookOfElessarTheDeadMarshes("Celebrian's-Stone-Core");
+            AddTheBookOfElessarTheDeadMarshes("Dunedain-Pipe-XLore");
+            AddTheBookOfElessarTheDeadMarshes("Dunedain-Warning-XLeadership");
+            AddTheBookOfElessarTheDeadMarshes("Light-of-Valinor-FoS");
+            AddTheBookOfElessarTheDeadMarshes("Ring-of-Barahir-XSpirit");
+            AddTheBookOfElessarTheDeadMarshes("Sword-that-was-Broken-Leadership");
+            AddTheBookOfElessarTheDeadMarshes("Unexpected-Courage-Core");
+            AddTheBookOfElessarTheDeadMarshes("A-Test-of-Will-Core");
+            AddTheBookOfElessarTheDeadMarshes("Daeron's-Runes-FoS");
+            AddTheBookOfElessarTheDeadMarshes("Elrond's-Counsel-XSpirit");
+            AddTheBookOfElessarTheDeadMarshes("Elven-light-XSpirit");
+            AddTheBookOfElessarTheDeadMarshes("Sneak-Attack-Core");
+            AddTheBookOfElessarTheDeadMarshes("Tale-of-Tinuviel-XSpirit");
+
+            AddTheBookOfElessarTheReturnToMirkwood("Aragorn-TWitW");
+            AddTheBookOfElessarTheReturnToMirkwood("Arwen-Undomiel-TDR");
+            AddTheBookOfElessarTheReturnToMirkwood("Glorfindel-FoS");
+            AddTheBookOfElessarTheReturnToMirkwood("Dunedain-Pathfinder-XSpirit");
+            AddTheBookOfElessarTheReturnToMirkwood("Galadriel's-Handmaiden");
+            AddTheBookOfElessarTheReturnToMirkwood("Gandalf-Core");
+            AddTheBookOfElessarTheReturnToMirkwood("Henamarth-Riversong-Core");
+            AddTheBookOfElessarTheReturnToMirkwood("Silvan-Refugee-XSpirit");
+            AddTheBookOfElessarTheReturnToMirkwood("Woodland-Courier-XSpirit");
+            AddTheBookOfElessarTheReturnToMirkwood("Asfaloth-FoS");
+            AddTheBookOfElessarTheReturnToMirkwood("Dunedain-Pipe-XLore");
+            AddTheBookOfElessarTheReturnToMirkwood("Forest-Snare-Core");
+            AddTheBookOfElessarTheReturnToMirkwood("Lembas-XLore");
+            AddTheBookOfElessarTheReturnToMirkwood("Light-of-Valinor-FoS");
+            AddTheBookOfElessarTheReturnToMirkwood("Ranger-Bow-XLore");
+            AddTheBookOfElessarTheReturnToMirkwood("Unexpected-Courage-Core");
+            AddTheBookOfElessarTheReturnToMirkwood("A-Test-of-Will-Core");
+            AddTheBookOfElessarTheReturnToMirkwood("Daeron's-Runes-FoS");
+            AddTheBookOfElessarTheReturnToMirkwood("Elrond's-Counsel-XSpirit");
+            AddTheBookOfElessarTheReturnToMirkwood("Elven-light-XSpirit");
+            AddTheBookOfElessarTheReturnToMirkwood("Out-of-the-Wild-XLore");
+            AddTheBookOfElessarTheReturnToMirkwood("Risk-Some-Light-XLore");
+            AddTheBookOfElessarTheReturnToMirkwood("Scout-Ahead-XLore");
         }
-
-        private readonly Dictionary<string, List<ILink>> linksBySlug
-            = new Dictionary<string, List<ILink>>();
 
         private void AddLink(string slug, Link link)
         {
-            if (!linksBySlug.ContainsKey(slug))
+            var normalizedSlug = GetNormalizedSlug(slug);
+
+            if (!linksBySlug.ContainsKey(normalizedSlug))
             {
-                linksBySlug[slug] = new List<ILink>();
+                linksBySlug[normalizedSlug] = new List<ILink>();
             }
 
-            linksBySlug[slug].Add(link);
+            linksBySlug[normalizedSlug].Add(link);
         }
 
         private void AddLink(string slug, LinkType linkType, string url, string title)
         {
             AddLink(slug, new Link(linkType, url, title));
+        }
+
+        private void AddTheBookOfElessarHuntForGollum(string slug)
+        {
+            AddLink(slug, new Link(LinkType.The_Book_of_Elessar,
+                "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hunt-for-gollum/",
+                "Hunt for Gollum"));
+        }
+
+        private void AddTheBookOfElessarConflictAtTheCarrock(string slug)
+        {
+            AddLink(slug, new Link(LinkType.The_Book_of_Elessar, 
+                "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/conflict-at-the-carrock/",
+                "Conflict at the Carrock"));
+        }
+
+        private void AddTheBookOfElessarAJourneyToRhosgobel(string slug)
+        {
+            AddLink(slug, new Link(LinkType.The_Book_of_Elessar,
+                "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/a-journey-to-rhosgobel/",
+                "A Journey to Rhosgobel"));
+        }
+
+        private void AddTheBookOfElessarTheHillsOfEmynMuil(string slug)
+        {
+            AddLink(slug, new Link(LinkType.The_Book_of_Elessar,
+                "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hills-of-emyn-muil/",
+                "The Hills of Emyn Muil"));
+        }
+
+        private void AddTheBookOfElessarTheDeadMarshes(string slug)
+        {
+            AddLink(slug, new Link(LinkType.The_Book_of_Elessar,
+                "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-dead-marshes/",
+                "The Dead Marshes"));
+        }
+
+        private void AddTheBookOfElessarTheReturnToMirkwood(string slug)
+        {
+            AddLink(slug, new Link(LinkType.The_Book_of_Elessar,
+                "https://bookofelessar.com/decks/shadows-of-mirkwood-decks/return-to-mirkwood/",
+                "The Return to Mirkwood"));
         }
 
         private void AddVisionOfThePalantirHuntForGollum(string slug, string cardName)
@@ -224,10 +391,45 @@ namespace HallOfBeorn.Services.LotR.Links
             AddLink(slug, PlayerCardAnalysisLink.ReturnToMirkwood(cardName));
         }
 
+        private string GetNormalizedSlug(string slug)
+        {
+            var card = cardRepository.FindBySlug(slug);
+            return card != null
+                ? card.Slug
+                : string.Empty;
+        }
+
         public IEnumerable<ILink> GetLinks(string slug)
         {
-            return linksBySlug.ContainsKey(slug) ?
-                linksBySlug[slug]
+            if (string.IsNullOrWhiteSpace(slug))
+            {
+                return Enumerable.Empty<ILink>();
+            }
+
+            //Remove the Two Player Limited Edition Starter slug suffix
+            //so that we can get the links for the original version of this card
+            if (slug.EndsWith("-TPLES"))
+            {
+                if (slug == "Gandalf-TPLES")
+                {
+                    slug = "Gandalf-Core";
+                }
+                else 
+                {
+                    var card = cardRepository.FindBySlug(slug);
+                    if (card != null)
+                    {
+                        var sphere = card.Sphere.ToEnumDisplayString();
+                        var suffix = "-X" + sphere;
+                        slug = slug.Replace("-TPLES", suffix);
+                    }
+                }
+            }
+
+            var normalizedSlug = GetNormalizedSlug(slug);
+            
+            return linksBySlug.ContainsKey(normalizedSlug) ?
+                linksBySlug[normalizedSlug]
                 : Enumerable.Empty<ILink>();
         }
     }

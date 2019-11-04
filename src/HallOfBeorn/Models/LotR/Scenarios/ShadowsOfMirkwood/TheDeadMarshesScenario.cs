@@ -20,6 +20,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2013/09/12/beorns-path-part-12-the-dead-marshes/");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/01/02/the-dead-marshes/");
             AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/02/02/the-dead-marshes/");
+            AddTheBookOfElessarLink("https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-dead-marshes/");
+            AddYouTubeLink(LinkType.The_Book_of_Elessar, Title, "MY6OT6OfSzU");
 
             //The Line Unbroken
             AddRelatedDeck("2918", "The Line Unbroken - The Dead Marshes Deck 1",

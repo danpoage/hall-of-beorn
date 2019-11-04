@@ -20,6 +20,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             AddBeornsPathLink("https://hallofbeorn.wordpress.com/2013/09/01/beorns-path-part-11-the-hills-of-emyn-muil/");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2016/12/24/the-hills-of-emyn-muil/");
             AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/01/28/the-hills-of-emyn-muil/");
+            AddTheBookOfElessarLink("https://bookofelessar.com/decks/shadows-of-mirkwood-decks/the-hills-of-emyn-muil/");
+            AddYouTubeLink(LinkType.The_Book_of_Elessar, Title, "QBOG-2GnJNw");
 
             //The Line Unbroken
             AddRelatedDeck("2896", "The Line Unbroken - Hills of Emyn Muil Deck 1",

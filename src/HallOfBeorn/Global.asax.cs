@@ -64,7 +64,7 @@ namespace HallOfBeorn
                 ringsDbService, productRepository, cardRepository);
             System.Web.HttpContext.Current.Application[LotRServiceNames.ScenarioService] = scenarioService;
 
-            var linkService = new LinkService();
+            var linkService = new LinkService(cardRepository);
             System.Web.HttpContext.Current.Application[LotRServiceNames.LinkService] = linkService;
 
             var noteService = new NoteService();

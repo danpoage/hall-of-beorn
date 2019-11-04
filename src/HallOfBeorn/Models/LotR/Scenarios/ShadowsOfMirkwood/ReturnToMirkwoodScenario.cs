@@ -22,6 +22,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/01/08/return-to-mirkwood/");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/01/12/return-to-mirkwood-play-report/", "Play Report: " + Title);
             AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/02/04/return-to-mirkwood/");
+            AddTheBookOfElessarLink("https://bookofelessar.com/decks/shadows-of-mirkwood-decks/return-to-mirkwood/");
+            AddYouTubeLink(LinkType.The_Book_of_Elessar, Title, "NCCL9OrUJ3c");
 
             //The Line Unbroken
             AddRelatedDeck("2920", "The Line Unbroken - Return to Mirkwood Deck 1",

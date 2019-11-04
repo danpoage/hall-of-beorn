@@ -21,6 +21,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2016/12/18/a-journey-to-rhosgobel/");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2017/02/10/play-report-a-journey-to-rhosgobel/", "Play Report: " + Title);
             AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/01/31/a-journey-to-rhosgobel/");
+            AddTheBookOfElessarLink("https://bookofelessar.com/decks/shadows-of-mirkwood-decks/a-journey-to-rhosgobel/");
+            AddYouTubeLink(LinkType.The_Book_of_Elessar, Title, "YOab58znthI");
 
             AddRelatedDeck("733", "Beorn's Path Leadership/Lore",
                 "https://hallofbeorn.wordpress.com/2013/07/28/beorns-path-part-10-a-journey-to-rhosgobel/");
