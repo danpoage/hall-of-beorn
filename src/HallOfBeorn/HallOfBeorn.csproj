@@ -188,6 +188,7 @@
     <Compile Include="Controllers\ExportController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ImageController.cs" />
+    <Compile Include="Controllers\MarvelController.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -573,6 +574,15 @@
     <Compile Include="Models\LotR\Products\Custom\TrialUponTheMarchesProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TroubleInTharbadNightmareProduct.cs" />
     <Compile Include="Models\LotR\ViewModels\LinkViewModel.cs" />
+    <Compile Include="Models\Marvel\MarvelCard.cs" />
+    <Compile Include="Models\Marvel\MarvelCardType.cs" />
+    <Compile Include="Models\Marvel\MarvelProduct.cs" />
+    <Compile Include="Models\Marvel\MarvelSearchResult.cs" />
+    <Compile Include="Models\Marvel\Products\CoreSet.cs" />
+    <Compile Include="Models\Marvel\MarvelTrait.cs" />
+    <Compile Include="Models\Marvel\ViewModels\MarvelCardViewModel.cs" />
+    <Compile Include="Models\Marvel\ViewModels\MarvelSearchSort.cs" />
+    <Compile Include="Models\Marvel\ViewModels\MarvelSearchView.cs" />
     <Compile Include="Models\RingsDb\RingsDbDeck.cs" />
     <Compile Include="Models\LotR\Scenarios\AngmarAwakened\AcrossTheEttenmoorsScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\ShadowsOfMirkwood\AJourneyToRhosgobelScenario.cs" />
@@ -974,6 +984,8 @@
     <Compile Include="Services\LotR\Translation\ITranslationService.cs" />
     <Compile Include="Services\LotR\Translation\Phrase.cs" />
     <Compile Include="Services\LotR\Translation\TranslationService.cs" />
+    <Compile Include="Services\Marvel\MarvelProductRepository.cs" />
+    <Compile Include="Services\Marvel\MarvelSearchService.cs" />
     <Compile Include="Views\SelectListItemExtends.cs" />
   </ItemGroup>
   <ItemGroup>
