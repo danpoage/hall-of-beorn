@@ -576,6 +576,7 @@
     <Compile Include="Models\LotR\ViewModels\LinkViewModel.cs" />
     <Compile Include="Models\Marvel\MarvelCard.cs" />
     <Compile Include="Models\Marvel\MarvelCardType.cs" />
+    <Compile Include="Models\Marvel\MarvelDeckType.cs" />
     <Compile Include="Models\Marvel\MarvelProduct.cs" />
     <Compile Include="Models\Marvel\MarvelSearchResult.cs" />
     <Compile Include="Models\Marvel\Products\CoreSet.cs" />
@@ -583,6 +584,7 @@
     <Compile Include="Models\Marvel\ViewModels\MarvelCardViewModel.cs" />
     <Compile Include="Models\Marvel\ViewModels\MarvelSearchSort.cs" />
     <Compile Include="Models\Marvel\ViewModels\MarvelSearchView.cs" />
+    <Compile Include="Models\Marvel\ViewModels\MarvelSearchViewModel.cs" />
     <Compile Include="Models\RingsDb\RingsDbDeck.cs" />
     <Compile Include="Models\LotR\Scenarios\AngmarAwakened\AcrossTheEttenmoorsScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\ShadowsOfMirkwood\AJourneyToRhosgobelScenario.cs" />
@@ -1168,6 +1170,8 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\Marvel\marvelAutocomplete1.js" />
+    <Content Include="Scripts\Marvel\marvelCardSearch1.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\scenarios-1.0.4.js" />
     <Content Include="Scripts\storage.js" />
@@ -1224,6 +1228,7 @@
     <Content Include="Views\LotR\Characters.cshtml" />
     <Content Include="Views\Digital\Search.cshtml" />
     <Content Include="Views\Digital\Details.cshtml" />
+    <Content Include="Views\Marvel\Search.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

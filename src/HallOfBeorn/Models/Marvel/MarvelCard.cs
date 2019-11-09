@@ -8,6 +8,7 @@ namespace HallOfBeorn.Models.Marvel
     public class MarvelCard
         : Card
     {
+        public MarvelCardType CardType { get; set; }
         public string HeroName { get; set; }
         public byte? Thwart { get; set; }
         public byte? Attack { get; set; }

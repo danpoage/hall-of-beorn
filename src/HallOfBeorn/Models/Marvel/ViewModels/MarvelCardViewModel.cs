@@ -17,17 +17,37 @@ namespace HallOfBeorn.Models.Marvel.ViewModels
 
         private readonly MarvelCard card;
 
+        public MarvelCardType CardType { get { return card.CardType; } }
+
         public string Title { get { return card.Title; } }
+
+        public bool IsUnique { get { return card.IsUnique; } }
+
+        public byte? Thwart { get { return card.Thwart; } }
+        public byte? Attack { get { return card.Attack; } }
+        public byte? Defense { get { return card.Defense; } }
+        public byte? Recover { get { return card.Recover; } }
+        public byte? HeroHitPoints { get { return card.HeroHitPoints; } }
+        public byte? AlterEgoHitPoints { get { return card.AlterEgoHitPoints; } }
+        public byte? HeroHandSize { get { return card.HeroHandSize; } }
+        public byte? AlterEgoHandSize { get { return card.AlterEgoHandSize; } }
+
+        public string SearchUrl
+        {
+            get { return string.Format("/Marvel/Details/{0}", card.Slug); }
+        }
 
         public string CardImagePath
         {
             get
             {
-                return string.Format(
-                    "{0}/{1}-{2}", 
-                    cardImagePath, 
-                    card.Title.ToUrlSafeString(), 
-                    card.Product.Abbreviation.ToUrlSafeString());
+                return CardType == MarvelCardType.Hero 
+                    ? HeroImagePath 
+                    : string.Format(
+                        "{0}/{1}-{2}", 
+                        cardImagePath, 
+                        card.Title.ToUrlSafeString(), 
+                        card.Product.Abbreviation.ToUrlSafeString());
             }
         }
 
@@ -53,6 +73,16 @@ namespace HallOfBeorn.Models.Marvel.ViewModels
                     card.AlterEgoName.ToUrlSafeString(), 
                     card.Product.Abbreviation.ToUrlSafeString());
             }
+        }
+
+        public int ImageHeight
+        {
+            get { return 300; }
+        }
+
+        public int ImageWidth
+        {
+            get { return 212; }
         }
     }
 }

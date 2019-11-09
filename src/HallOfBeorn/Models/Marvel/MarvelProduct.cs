@@ -31,6 +31,7 @@ namespace HallOfBeorn.Models.Marvel
         {
             var card = new MarvelCard
             {
+                CardType = MarvelCardType.Hero,
                 HeroName = name,
                 Thwart = thwart,
                 Attack = attack,
