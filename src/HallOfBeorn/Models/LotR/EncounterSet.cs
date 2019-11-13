@@ -360,6 +360,9 @@ namespace HallOfBeorn.Models.LotR
             Add(ThePowerOfMordor);
             Add(GollumAndSmeagol);
 
+            //Vengeance of Mordor APs
+            Add(WrathAndRuin);
+
             //Two Player Starter
             Add(TheOath);
             Add(TheGoblins);
@@ -707,6 +710,9 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet TwistedTunnels = new EncounterSet { Name = "Twisted Tunnels", Set = "A Shadow in the East" };
         public static EncounterSet ThePowerOfMordor = new EncounterSet { Name = "The Power of Mordor", Set = "A Shadow in the East" };
         public static EncounterSet GollumAndSmeagol = new EncounterSet { Name = "Gollum and Smeagol", Set = "A Shadow in the East" }; 
+
+        //Vengeance of Mordor
+        public static EncounterSet WrathAndRuin = new EncounterSet { Name = "Wrath and Ruin", Set = "Wrath and Ruin" };
 
         //Two Player Starter
         public static EncounterSet TheOath = new EncounterSet { Name = "The Oath", Set = "Two-Player Limited Edition Starter" };

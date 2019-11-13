@@ -11,6 +11,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
             : base("Wrath and Ruin", "MEC78", ImageType.Jpg, new DateTime(2019, 11, 12))
         {
             AddCardSet(CardSet.WrathAndRuin);
+            AddScenario(new Scenarios.VengeanceOfMordor.WrathAndRuinScenario());
         }
     }
 }

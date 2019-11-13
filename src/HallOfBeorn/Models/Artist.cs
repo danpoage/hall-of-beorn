@@ -637,6 +637,7 @@ namespace HallOfBeorn.Models
             //Wrath and Ruin
             all.Add(Artist.Sam_White);
             all.Add(Artist.Nino_Vecia);
+            all.Add(Artist.Imad_Awan);
 
             //Arkham Horrom Core
             //all.Add(Artist.Vincent_Dutrait);
@@ -746,6 +747,7 @@ namespace HallOfBeorn.Models
         public static Artist Bogdan_Amidzic = new Artist { Name = "Bogdan Amidzic", URL = "http://htogrom.deviantart.com" };
         public static Artist Igor_Kordey = new Artist { Name = "Kordej", URL = "http://en.wikipedia.org/wiki/Igor_Kordey" };
         public static Artist Ilya_Nazarov = new Artist { Name = "Ilya Nazarov", URL = "http://ilyanazarov.deviantart.com" };
+        public static Artist Imad_Awan = new Artist { Name = "Imad Awan", URL = "https://www.artstation.com/imadawan" };
         public static Artist J_Lantta = new Artist { Name = "J. Lantta", URL = "http://raakile.deviantart.com" };
         public static Artist Jan_Pospisil = new Artist { Name = "Jan Pospisil", URL = "http://merlkir.deviantart.com" };
         public static Artist Jason_Yong_Wee_Seng = new Artist { Name = "Jason Yong Wee Seng", URL = "http://gtmais.deviantart.com" };
