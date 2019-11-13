@@ -72,11 +72,13 @@ In Valinor, a council was called by Manwë. This was likely in the middle of the
             addFriend("Gríma", "Grima");
             addFriend("Théoden", "Theoden");
 
-            addItem("Saruman's Staff", "Saruman's-Staff-ToS");
+            addItem("Saruman's Staff (Attachment)", "Saruman's-Staff-TWC");
+            addItem("Saruman's Staff (Objective)", "Saruman's-Staff-ToS");
             addItem("Saruman's Voice", "Saruman's-Voice-ToS");
 
             addGroup("The Istari");
 
+            LotRCard("Saruman-TWC");
             LotRCard("Saruman-VoI");
             LotRCard("Saruman-ToS");
         }

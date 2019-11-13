@@ -10,6 +10,7 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
             MainProduct = Product.AShadowInTheEast;
             AddProduct(Product.WrathAndRuin);
             AddProduct(Product.TheCityOfUlfast);
+            AddProduct(Product.TheWainridersChallenge);
         }
     }
 }

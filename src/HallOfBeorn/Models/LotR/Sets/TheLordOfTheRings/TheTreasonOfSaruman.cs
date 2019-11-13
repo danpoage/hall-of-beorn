@@ -399,7 +399,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithBurden()
                 .WithTraits("Enchantment.")
                 .WithKeywords("Peril.", "Doomed 2.")
-                .WithText("When Revealed: Remove a hero from the quest and attach Saruman's Voice to that hero. (Counts as a Condition attachment with the text: \"Forced: When attached hero commits to a quest, is declared and attacker or defender, or triggers its ability, its controller must discard 1 card from his hand.\")")
+                .WithText("Peril. Doomed 2.\r\nWhen Revealed: Remove a hero from the quest and attach Saruman's Voice to that hero. (Counts as a Condition attachment with the text: \"Forced: When attached hero commits to a quest, is declared and attacker or defender, or triggers its ability, its controller must discard 1 card from his hand.\")")
                 .WithInfo(68, 1, Artist.Ilich_Henriquez));
             Cards.Add(LotRCard.Quest("Follow the Orcs", 1, "The Uruk-hai", Card.VALUE_X)
                 .WithFlavor("The Orcs that attached the Fellowship at Amon Hen captured several members of the Company and are carrying them to Isengard. Aragorn and his companions decide to chase the Uruk-hai in an effort to rescue their friends...")
