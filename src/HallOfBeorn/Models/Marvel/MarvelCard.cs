@@ -31,7 +31,15 @@ namespace HallOfBeorn.Models.Marvel
         public byte? SetItemNumber { get; private set; }
         public byte? SetItemTotal { get; private set; }
 
-        public MarvelProduct Product { get; set; }
+        private MarvelProduct product;
+        public MarvelProduct Product { 
+            get { return product; }
+            set
+            {
+                product = value;
+                NamedProduct = value;
+            }
+        }
 
         private readonly List<MarvelTrait> heroTraits = new List<MarvelTrait>();
         private readonly List<MarvelTrait> alterEgoTraits = new List<MarvelTrait>();

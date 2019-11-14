@@ -1,7 +1,6 @@
 ﻿namespace HallOfBeorn.Models.Marvel.ViewModels
 {
-    public enum MarvelSearchView 
-        : byte
+    public enum MarvelSearchView
     {
         None = 0,
         Card,

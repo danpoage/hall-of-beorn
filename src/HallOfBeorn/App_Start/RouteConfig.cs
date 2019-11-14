@@ -59,6 +59,12 @@ namespace HallOfBeorn
             );
 
             routes.MapRoute(
+                "MarvelDefaultRoute",
+                "Marvel/{action}/{id}",
+                new { controller = "Marvel", action = "Search", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
                 "CardImageRoute",
                 "Images/Cards/{setName}/{imageName}",
                 new { controller = "Image", action = "GetCardImage", setName = UrlParameter.Optional, imageName = UrlParameter.Optional }

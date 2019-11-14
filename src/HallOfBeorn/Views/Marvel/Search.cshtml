@@ -44,7 +44,7 @@
         <div class="search-items">
             <span class="search-filter-fixed-long">
             <span class="search-label-short">Product</span>
-            @* @Html.DropDownListFor(x => x.Product, MarvelSearchViewModel.Products, new { @class = "search-select" }) *@
+            @Html.DropDownListFor(x => x.Product, MarvelSearchViewModel.Products, new { @class = "search-select" })
             </span>
         </div>
     </div>
@@ -96,25 +96,25 @@
         <div class="search-section">Stats</div>
         <div class="search-items">
             <span class="search-filter-fixed">
-            <span class="search-label-tiny2"><img src="/Images/Arkham/Willpower.png"></span>
+            <span class="search-label-tiny2">TWH</span>
             @Html.DropDownListFor(x => x.ThwartOp, MarvelSearchViewModel.NumericOperators, new { @class = "search-select-tiny2" })
             @* @Html.DropDownListFor(x => x.Thwart, MarvelSearchViewModel.ThwartValues, new { @class = "search-select-tiny2" }) *@
             </span>
 
             <span class="search-filter-fixed">
-            <span class="search-label-tiny2"><img src="/Images/Arkham/Intellect.png"></span>
+            <span class="search-label-tiny2">ATT</span>
             @Html.DropDownListFor(x => x.AttackOp, MarvelSearchViewModel.NumericOperators, new { @class = "search-select-tiny2" })
             @* @Html.DropDownListFor(x => x.Attack, MarvelSearchViewModel.AttackValues, new { @class = "search-select-tiny2" }) *@
             </span>
 
             <span class="search-filter-fixed">
-            <span class="search-label-tiny2"><img src="/Images/Arkham/Combat.png"></span>
+            <span class="search-label-tiny2">DEF</span>
             @Html.DropDownListFor(x => x.DefenseOp, MarvelSearchViewModel.NumericOperators, new { @class = "search-select-tiny2" })
             @* @Html.DropDownListFor(x => x.Defense, MarvelSearchViewModel.CombatValues, new { @class = "search-select-tiny2" }) *@
             </span>
 
             <span class="search-filter-fixed">
-            <span class="search-label-tiny2"><img src="/Images/Arkham/Agility.png"></span>
+            <span class="search-label-tiny2">REC</span>
             @Html.DropDownListFor(x => x.RecoverOp, MarvelSearchViewModel.NumericOperators, new { @class = "search-select-tiny2" })
             @* @Html.DropDownListFor(x => x.Recover, MarvelSearchViewModel.RecoverValues, new { @class = "search-select-tiny2" }) *@
             </span>
@@ -124,13 +124,13 @@
         <div class="search-section"></div>
         <div class="search-items">
             <span class="search-filter-fixed">
-            <span class="search-label-tiny2"><img src="/Images/Arkham/Health.png" width="17" height="20"></span>
+            <span class="search-label-tiny2">HIT POINTS</span>
             @Html.DropDownListFor(x => x.HitPointsOp, MarvelSearchViewModel.NumericOperators, new { @class = "search-select-tiny2" })
             @* @Html.DropDownListFor(x => x.HitPoints, MarvelSearchViewModel.HitPointValues, new { @class = "search-select-tiny2" }) *@
             </span>
 
             <span class="search-filter-fixed">
-            <span class="search-label-tiny2"><img src="/Images/Arkham/Sanity.png" width="20" height="16"></span>
+            <span class="search-label-tiny2">HAND SIZE</span>
             @Html.DropDownListFor(x => x.HandSizeOp, MarvelSearchViewModel.NumericOperators, new { @class = "search-select-tiny2" })
             @* @Html.DropDownListFor(x => x.HandSize, MarvelSearchViewModel.HandSizeValues, new { @class = "search-select-tiny2" }) *@
             </span>
@@ -173,13 +173,11 @@
     
         if (!@Model.View.HasValue || @Model.View.Value == MarvelSearchView.Card || @Model.View.Value == MarvelSearchView.Card_Image) {
             <div style="display: inline-block">
-                <div><img src="@card.CardImagePath" height="@card.ImageHeight" width="@card.ImageWidth" /></div>
-                @*
-                @if (!string.IsNullOrEmpty(@card.ImagePathBack))
+                <div style="display: inline-block"><img src="@card.CardFrontImagePath" height="@card.ImageHeight" width="@card.ImageWidth" /></div>
+                @if (!string.IsNullOrEmpty(@card.CardBackImagePath))
                 {
-                    <div><img src="@card.ImagePathBack" height="@card.ImageHeight"/></div>
+                    <div style="display:inline-block"><img src="@card.CardBackImagePath" height="@card.ImageHeight"/></div>
                 }
-                *@
             </div>
         }
         <div style="display:inline-block;max-width:500px;vertical-align:top;margin-left: 4px;">
@@ -195,16 +193,15 @@
                     </div>
                 </div>
                 
-                @*
                 @if (@card.CardType == MarvelCardType.Hero) {
                     <div class="arkham-statBox arkham-skillSection">
-                        <a href="/Marvel?Willpower=@card.Thwart&WillpowerOp=eq"><span class="arkham-skillBox"><span class="arkham-skillValue">@card.Willpower</span><img src="/Images/Arkham/Willpower.png" title="Willpower" class="arkham-skillIcon"/></span></a>
-                        <a href="/Marvel?Intellect=@card.Intellect&IntellectOp=eq"><span class="arkham-skillBox"><span class="arkham-skillValue">@card.Intellect</span><img src="/Images/Arkham/Intellect.png" title="Intellect" class="arkham-skillIcon"/></span></a>
-                        <a href="/Marvel?Combat=@card.Combat&CombatOp=eq"><span class="arkham-skillBox"><span class="arkham-skillValue">@card.Combat</span><img src="/Images/Arkham/Combat.png" title="Combat" class="arkham-skillIcon"/></span></a>
-                        <a href="/Marvel?Agility=@card.Agility&AgilityOp=eq"><span class="arkham-skillBox"><span class="arkham-skillValue">@card.Agility</span><img src="/Images/Arkham/Agility.png" title="Agility" class="arkham-skillIcon"/></span></a>
+                        <a href="/Marvel?Thwart=@card.Thwart&ThwartOp=eq"><span class="arkham-skillBox">THW</span><span class="arkham-skillValue">@card.Thwart</span></a>
+                        <a href="/Marvel?Attack=@card.Attack&AttackOp=eq"><span class="arkham-skillBox">ATT</span><span class="arkham-skillValue">@card.Attack</span></a>
+                        <a href="/Marvel?Defense=@card.Defense&DefenseOp=eq"><span class="arkham-skillBox">DEF</span><span class="arkham-skillValue">@card.Defense</span></a>
+                        <a href="/Marvel?Recover=@card.Recover&RecoverOp=eq"><span class="arkham-skillBox">REC</span><span class="arkham-skillValue">@card.Recover</span></a>
                     </div>
                 }
-
+                @*
                 @if (!string.IsNullOrEmpty(@card.Cost)) {
                     <div class="arkham-statBox top"><a href="/Arkham?Cost=@card.Cost&CostOp=eq"><span class="arkham-circle arkham-cost" title="Cost"><span class="arkham-valueInner">@card.Cost</span></span></a></div>
                 }

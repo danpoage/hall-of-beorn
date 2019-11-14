@@ -6,7 +6,6 @@ using System.Web;
 namespace HallOfBeorn.Models.Marvel
 {
     public enum MarvelDeckType
-        : byte
     {
         None = 0,
         Player,

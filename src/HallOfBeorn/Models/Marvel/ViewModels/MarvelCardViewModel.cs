@@ -37,7 +37,7 @@ namespace HallOfBeorn.Models.Marvel.ViewModels
             get { return string.Format("/Marvel/Details/{0}", card.Slug); }
         }
 
-        public string CardImagePath
+        public string CardFrontImagePath
         {
             get
             {
@@ -51,15 +51,25 @@ namespace HallOfBeorn.Models.Marvel.ViewModels
             }
         }
 
+        public string CardBackImagePath
+        {
+            get
+            {
+                return CardType == MarvelCardType.Hero
+                    ? AlterEgoImagePath
+                    : null;
+            }
+        }
+
         public string HeroImagePath
         {
             get
             { 
                 return string.Format(
-                    "{0}/{1}-{2}", 
+                    "{0}/{1}/{2}.jpg", 
                     cardImagePath, 
-                    card.HeroName.ToUrlSafeString(), 
-                    card.Product.Abbreviation.ToUrlSafeString()); 
+                    card.Product.Abbreviation.ToUrlSafeString(),
+                    card.HeroName.ToUrlSafeString()); 
             }
         }
 
@@ -68,10 +78,10 @@ namespace HallOfBeorn.Models.Marvel.ViewModels
             get
             {
                 return string.Format(
-                    "{0}/{1}-{2}", 
+                    "{0}/{1}/{2}.jpg", 
                     cardImagePath, 
-                    card.AlterEgoName.ToUrlSafeString(), 
-                    card.Product.Abbreviation.ToUrlSafeString());
+                    card.Product.Abbreviation.ToUrlSafeString(),
+                    card.AlterEgoName.ToUrlSafeString());
             }
         }
 

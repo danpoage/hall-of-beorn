@@ -6,7 +6,6 @@ using System.Web;
 namespace HallOfBeorn.Models.Marvel
 {
     public enum MarvelTrait
-        : ushort
     {
         None = 0,
         Attorney,

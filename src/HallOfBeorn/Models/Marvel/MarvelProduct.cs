@@ -6,6 +6,7 @@ using System.Web;
 namespace HallOfBeorn.Models.Marvel
 {
     public class MarvelProduct
+        : INamed
     {
         public MarvelProduct(
             string name, string abbreviation, string productCode, ushort productNumber, DateTime releaseDate)
@@ -39,6 +40,7 @@ namespace HallOfBeorn.Models.Marvel
                 HeroHandSize = handSize,
                 HeroHitPoints = hitPoints,
                 Product = this,
+                IsUnique = true,
             };
             card.WithHeroTraits(traits);
             cards.Add(card);

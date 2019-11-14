@@ -84,10 +84,11 @@ namespace HallOfBeorn.Models.Marvel.ViewModels
             get { return typeof(MarvelDeckType).GetSelectListItems(" "); }
         }
 
-        //public static IEnumerable<SelectListItem> Products
-        //{
-        //    get { 
-        //}
+        public static IEnumerable<SelectListItem> Products
+        {
+            get;
+            set;
+        }
 
         public int GetResultsCount()
         {
@@ -97,6 +98,26 @@ namespace HallOfBeorn.Models.Marvel.ViewModels
         public IEnumerable<MarvelCardViewModel> Cards()
         {
             return cards;
+        }
+
+        public void Init(IEnumerable<MarvelProduct> products)
+        {
+            if (string.IsNullOrEmpty(Product) || Product == "None" || Product == "Any") {
+                Product = null;
+            }
+            if (CardType.HasValue && CardType.Value == MarvelCardType.None) {
+                CardType = null;
+            }
+            if (DeckType.HasValue && DeckType.Value == MarvelDeckType.None) {
+                DeckType = null;
+            }
+
+            Products = products.Select(p => p.Name).GetSelectListItems();
+        }
+
+        public void LoadCards(IEnumerable<MarvelCardViewModel> viewModels)
+        {
+            cards.AddRange(viewModels);
         }
     }
 }

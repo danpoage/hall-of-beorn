@@ -7,6 +7,7 @@ namespace HallOfBeorn.Models.Marvel
 {
     public enum MarvelCardType
     {
+        None = 0,
         Hero,
         Ally,
         Upgrade,
