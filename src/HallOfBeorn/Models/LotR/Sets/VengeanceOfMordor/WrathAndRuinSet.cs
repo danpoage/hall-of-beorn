@@ -25,7 +25,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithInfo(1, 1, Artist.Rafal_Hrynkiewicz);
             addAlly("Soldier of Gondor", 2, Sphere.Leadership, false, 1, 1, 1, 2)
                 .WithTraits("Gondor.")
-                .WithText("Response: After Soldier of Gondor enters play, seach the top 5 cards of your deck for a Gondor ally and add it to your hand (any number of Gondor allies instead if your threat is 40 or higher). Shuffle your deck.")
+                .WithText("Response: After Soldier of ~Gondor enters play, seach the top 5 cards of your deck for a Gondor ally and add it to your hand (any number of Gondor allies instead if your threat is 40 or higher). Shuffle your deck.")
                 .WithInfo(2, 3, Artist.Stanislav_Dikolenko);
             addEvent("Pillars of the Kings", 4, Sphere.Leadership)
                 .WithText("While your threat is less than 40, reduce the cost to play Pillars of the Kings by 4.\r\nAction: Set your threat to 40. If this effect raised your threat, draw a card (draw 4 cards instead if it raised your threat by 10 or more).")

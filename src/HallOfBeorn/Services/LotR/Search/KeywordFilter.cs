@@ -14,11 +14,8 @@ namespace HallOfBeorn.Services.LotR.Search
 
             target = target.Trim();
 
-            if (!target.EndsWith("."))
-                target = target + ".";
-
             predicate = (score) => {
-                var match = score.Card.Keywords.Any(kw => kw.Trim() == target) || score.Card.NormalizedKeywords.Any(kw => kw.Trim() == target);
+                var match = score.Card.Keywords.Any(kw => kw.Trim().StartsWith(target)) || score.Card.NormalizedKeywords.Any(kw => kw.Trim().StartsWith(target));
                 score.AddScore(match ? 1 : 0);
                 return match;
             };
@@ -29,7 +26,7 @@ namespace HallOfBeorn.Services.LotR.Search
             if (string.IsNullOrWhiteSpace(value) || value == defaultValue)
                 return;
 
-            var values = GetStringValues(value, ".");
+            var values = GetStringValues(value, string.Empty);
 
             if (isNegation)
             {
@@ -37,7 +34,8 @@ namespace HallOfBeorn.Services.LotR.Search
                     var match = false;
                     foreach (var target in values)
                     {
-                        match = score.Card.Keywords.All(kw => kw.Trim() != target) && score.Card.NormalizedKeywords.All(kw => kw.Trim() != target);
+                        match = score.Card.Keywords.All(kw => !kw.Trim().StartsWith(target)) 
+                            && score.Card.NormalizedKeywords.All(kw => !kw.Trim().StartsWith(target));
                         if (!match)
                             break;
                     }
@@ -51,7 +49,8 @@ namespace HallOfBeorn.Services.LotR.Search
                     var match = false;
                     foreach (var target in values)
                     {
-                        match = score.Card.Keywords.Any(k => k == target) || score.Card.NormalizedKeywords.Any(k => k == target);
+                        match = score.Card.Keywords.Any(k => k.Trim().StartsWith(target)) 
+                            || score.Card.NormalizedKeywords.Any(k => k.Trim().StartsWith(target));
                         if (match)
                             break;
                     }

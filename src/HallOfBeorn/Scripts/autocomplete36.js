@@ -42,6 +42,7 @@
     "Greenwood Defender", "Elf Guide", "Gaffer Gamgee", "Drinking Song", "Round Shield", "Erebor Toymaker", "Armor of Erebor", "The Shirefolk",
     "Messenger Raven", "The King's Return", "Loyal Hound", "The Great Hunt", "Bywater Shirriff", "Gwaihir's Debt", "Reforged", "Radagast's Staff", "Urdug",
     "The Gathering Storm", "Put Off Pursuit", "The Master Ring", "The Ruling Ring", "The Ring of Power", "Stinker", "Fellowship",
+    "Soldier of Gondor", "Pillars of the Kings", "Cautious Halfling", "Tom Bombadillo!", "Charge into Battle", "Silver Circlet", "Inner Strength", "The Burglar's Turn", "Thane Ulchor",
           "+set:",
           "-set:",
           "+type:",
