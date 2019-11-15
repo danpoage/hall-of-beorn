@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
 {
-    public class TheWainridersChallengeSet 
+    public class ChallengeOfTheWainridersSet 
         : CardSet
     {
         public const string setName = "The Wainriders' Challenge";
@@ -13,7 +13,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
         protected override void Initialize()
         {
             Name = setName;
-            Abbreviation = "TWC";
+            Abbreviation = "CotW";
             Number = 59;
             SetType = Models.SetType.Adventure_Pack;
             Cycle = "Vengeance of Mordor";
