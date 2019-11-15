@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
     public class ChallengeOfTheWainridersSet 
         : CardSet
     {
-        public const string setName = "The Wainriders' Challenge";
+        public const string setName = "Challenge of the Wainriders";
 
         protected override void Initialize()
         {
