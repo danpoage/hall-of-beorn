@@ -12,37 +12,47 @@ namespace SetBuilder
 {
     class Program
     {
-        private const string namespaceFormat            = "namespace HallOfBeorn.Models.LotR.Sets.{0}";
-        private const string classFormat                = "    public class {0}Set : CardSet";
-        private const string initNameFormat             = "            Name = \"{0}\";";
-        private const string initAbbreviationFormat     = "            Abbreviation = \"{0}\";";
-        private const string initNumberFormat           = "            Number = {0};";
-        private const string initSetTypeFormat          = "            SetType = Models.SetType.{0};";
-        private const string initCycleFormat            = "            Cycle = \"{0}\";";
-        private const string addHeroFormat              = "            addHero(\"{0}\", {1}, {2}, {3}, {4}, {5}, {6})";
-        private const string addAllyFormat              = "            addAlly(\"{0}\", {1}, {2}, {3}, {4}, {5}, {6}, {7})";
-        private const string addAttachmentFormat        = "            addAttachment(\"{0}\", {1}, {2}, {3})";
-        private const string addEnemyFormat             = "            addEnemy(\"{0}\", \"{1}\", {2}, {3}, {4}, {5}, {6})";
-        private const string addEventFormat             = "            addEvent(\"{0}\", {1}, {2})";
-        private const string addPlayerSideQuestFormat   = "            addPlayerSideQuest(\"{0}\", {1}, {2}, {3})";
-        private const string addQuestFormat             = "            addQuest(\"{0}\", \"{1}\", {2}, '{3}', {4})";
-        private const string withTraitsFormat           = "                .WithTraits({0})";
-        private const string withKeywordsFormat         = "                .WithKeywords({0})";
-        private const string withTextFormat             = "                .WithText(\"{0}\")";
-        private const string withShadowFormat           = "                .WithShadow(\"{0}\")";
-        private const string withFlavorFormat           = "                .WithFlavor(\"{0}\")";
-        private const string withTemplateFormat         = "                .WithTemplate(\"{0}\")";
-        private const string withOppositeTitleFormat    = "                .WithOppositeTitle(\"{0}\")";
-        private const string withOppositeTextFormat     = "                .WithOppositeText(\"{0}\")";
-        private const string withOppositeFlavorFormat   = "                .WithOppositeFlavor(\"{0}\")";
-        private const string withOppositeTemplateFormat = "                .WithTemplate2(\"{0}\")";
-        private const string withEncounterSetsFormat    = "                .WithIncludedEncounterSets({0})";
-        private const string withVictoryPointsFormat    = "                .WithVictoryPoints({0})";
-        private const string withBackArtistFormat       = "                .WithBackArtist(Artist.{0})";
-        private const string withBackStageLetterFormat  = "                .WithBackStageLetter('{0}')";
-        private const string withUniqueTag              = "                .WithUnique()";
-        private const string withEasyModeQuantityFormat = "                .WithEasyModeQuantity({0})";
-        private const string withInfoFormat             = "                .WithInfo({0}, {1}, Artist.{2});";
+        private const string namespaceFormat             = "namespace HallOfBeorn.Models.LotR.Sets.{0}";
+        private const string classFormat                 = "    public class {0}Set : CardSet";
+        private const string initNameFormat              = "            Name = \"{0}\";";
+        private const string initAbbreviationFormat      = "            Abbreviation = \"{0}\";";
+        private const string initNumberFormat            = "            Number = {0};";
+        private const string initSetTypeFormat           = "            SetType = Models.SetType.{0};";
+        private const string initCycleFormat             = "            Cycle = \"{0}\";";
+        private const string addHeroFormat               = "            addHero(\"{0}\", {1}, {2}, {3}, {4}, {5}, {6})";
+        private const string addAllyFormat               = "            addAlly(\"{0}\", {1}, {2}, {3}, {4}, {5}, {6}, {7})";
+        private const string addAttachmentFormat         = "            addAttachment(\"{0}\", {1}, {2}, {3})";
+        private const string addContractFormat           = "            addContract(\"{0}\")";
+        private const string addEncounterSideQuestFormat = "            addEncounterSideQuest(\"{0}\", \"{1}\", {2})";
+        private const string addEnemyFormat              = "            addEnemy(\"{0}\", \"{1}\", {2}, {3}, {4}, {5}, {6})";
+        private const string addEventFormat              = "            addEvent(\"{0}\", {1}, {2})";
+        private const string addLocationFormat           = "            addLocation(\"{0}\", \"{1}\", {2}, {3})";
+        private const string addPlayerSideQuestFormat    = "            addPlayerSideQuest(\"{0}\", {1}, {2}, {3})";
+        private const string addQuestFormat              = "            addQuest(\"{0}\", \"{1}\", {2}, '{3}', {4})";
+        private const string addShipEnemyFormat          = "            addShipEnemy(\"{0}\", \"{1}\", {2}, {3}, {4}, {5}, {6})";
+        private const string addShipObjectiveFormat      = "            addShipObjective(\"{0}\", \"{1}\", {2}, {3}, {4}, {5}, {6})";
+        private const string addTreacheryFormat          = "            addTreachery(\"{0}\", \"{1}\")";
+        private const string addObjectiveFormat          = "            addObjective(\"{0}\", \"{1}\")";
+        private const string addObjectiveAllyFormat      = "            addObjectiveAlly(\"{0}\", \"{1}\", {2}, {3}, {4}, {5})";
+        private const string addObjectiveLocationFormat  = "            addObjectiveLocation(\"{0}\", \"{1}\", {2}, {3}, {4})";
+        private const string addObjectiveHeroFormat      = "            addObjectiveHero(\"{0}\", \"{1}\", {2}, {3}, {4}, {5})";
+        private const string withTraitsFormat            = "                .WithTraits({0})";
+        private const string withKeywordsFormat          = "                .WithKeywords({0})";
+        private const string withTextFormat              = "                .WithText(\"{0}\")";
+        private const string withShadowFormat            = "                .WithShadow(\"{0}\")";
+        private const string withFlavorFormat            = "                .WithFlavor(\"{0}\")";
+        private const string withTemplateFormat          = "                .WithTemplate(\"{0}\")";
+        private const string withOppositeTitleFormat     = "                .WithOppositeTitle(\"{0}\")";
+        private const string withOppositeTextFormat      = "                .WithOppositeText(\"{0}\")";
+        private const string withOppositeFlavorFormat    = "                .WithOppositeFlavor(\"{0}\")";
+        private const string withOppositeTemplateFormat  = "                .WithTemplate2(\"{0}\")";
+        private const string withEncounterSetsFormat     = "                .WithIncludedEncounterSets({0})";
+        private const string withVictoryPointsFormat     = "                .WithVictoryPoints({0})";
+        private const string withBackArtistFormat        = "                .WithBackArtist(Artist.{0})";
+        private const string withBackStageLetterFormat   = "                .WithBackStageLetter('{0}')";
+        private const string withUniqueTag               = "                .WithUnique()";
+        private const string withEasyModeQuantityFormat  = "                .WithEasyModeQuantity({0})";
+        private const string withInfoFormat              = "                .WithInfo({0}, {1}, Artist.{2});";
 
         private const int codePageWesternEurope = 1252;
         private const string textQuote = "\\\"";
@@ -422,6 +432,19 @@ namespace SetBuilder
             return s.ToString();
         }
 
+        private static string addContract(LotRCard contract)
+        {
+            var s = new StringBuilder(string.Empty);
+            s.AppendFormat(addContractFormat, 
+                contract.Title
+                );
+            s.AppendLine();
+
+            s.Append(cardTextBox(contract));
+
+            return s.ToString();
+        }
+
         private static string addQuest(LotRCard quest)
         {
             var s = new StringBuilder(string.Empty);
@@ -458,6 +481,7 @@ namespace SetBuilder
                 stat(enemy.Defense),
                 stat(enemy.HitPoints)
                 );
+            s.AppendLine();
 
             if (enemy.IsUnique)
             {
@@ -470,6 +494,177 @@ namespace SetBuilder
             return s.ToString();
         }
 
+        private static string addShipEnemy(LotRCard enemy)
+        {
+            var s = new StringBuilder();
+            s.AppendFormat(addShipEnemyFormat,
+                enemy.Title,
+                enemy.EncounterSet,
+                stat(enemy.EngagementCost),
+                stat(enemy.Threat),
+                stat(enemy.Attack),
+                stat(enemy.Defense),
+                stat(enemy.HitPoints)
+                );
+            s.AppendLine();
+
+            if (enemy.IsUnique)
+            {
+                s.Append(withUniqueTag);
+                s.AppendLine();
+            }
+
+            s.Append(cardTextBox(enemy));
+            
+            return s.ToString();
+        }
+
+        private static string addLocation(LotRCard location)
+        {
+            var s = new StringBuilder(string.Empty);
+            s.AppendFormat(addLocationFormat,
+                location.Title,
+                location.EncounterSet,
+                stat(location.Threat),
+                stat(location.QuestPoints)
+                );
+            s.AppendLine();
+
+            if (location.IsUnique)
+            {
+                s.Append(withUniqueTag);
+                s.AppendLine();
+            }
+
+            s.Append(cardTextBox(location));
+
+            return s.ToString();
+        }
+
+        private static string addTreachery(LotRCard treachery)
+        {
+            var s = new StringBuilder(string.Empty);
+            s.AppendFormat(addTreacheryFormat,
+                treachery.Title, 
+                treachery.EncounterSet
+                );
+            s.AppendLine();
+
+            s.Append(cardTextBox(treachery));
+
+            return s.ToString();
+        }
+
+        private static string addEncounterSideQuest(LotRCard quest)
+        {
+            var s = new StringBuilder(string.Empty);
+            s.AppendFormat(addEncounterSideQuestFormat,
+                quest.Title,
+                quest.EncounterSet,
+                stat(quest.QuestPoints)
+                );
+            s.AppendLine();
+
+            s.Append(cardTextBox(quest));
+
+            return s.ToString();
+        }
+
+        private static string addObjective(LotRCard objective)
+        {
+            var s = new StringBuilder(string.Empty);
+            s.AppendFormat(addObjectiveFormat,
+                objective.Title,
+                objective.EncounterSet
+                );
+            s.AppendLine();
+
+            if (objective.IsUnique)
+            {
+                s.Append(withUniqueTag);
+                s.AppendLine();
+            }
+
+            s.Append(cardTextBox(objective));
+
+            return s.ToString();
+        }
+
+        private static string addObjectiveHero(LotRCard objectiveHero)
+        {
+            var s = new StringBuilder(string.Empty);
+            s.AppendFormat(addObjectiveHeroFormat,
+                objectiveHero.Title,
+                objectiveHero.EncounterSet,
+                stat(objectiveHero.Willpower),
+                stat(objectiveHero.Attack),
+                stat(objectiveHero.Defense),
+                stat(objectiveHero.HitPoints)
+                );
+
+            s.Append(cardTextBox(objectiveHero));
+
+            return s.ToString();
+        }
+
+        private static string addObjectiveAlly(LotRCard objectiveAlly)
+        {
+            var s = new StringBuilder(string.Empty);
+            s.AppendFormat(addObjectiveAllyFormat,
+                objectiveAlly.Title,
+                objectiveAlly.EncounterSet,
+                stat(objectiveAlly.Willpower),
+                stat(objectiveAlly.Attack),
+                stat(objectiveAlly.Defense),
+                stat(objectiveAlly.HitPoints)
+                );
+
+            if (objectiveAlly.IsUnique)
+            {
+                s.AppendLine(withUniqueTag);
+            }
+
+            s.Append(cardTextBox(objectiveAlly));
+
+            return s.ToString();
+        }
+
+        private static string addObjectiveLocation(LotRCard objectiveLocation)
+        {
+            var s = new StringBuilder(string.Empty);
+            s.AppendFormat(addObjectiveLocationFormat,
+                objectiveLocation.Title,
+                objectiveLocation.EncounterSet,
+                stat(objectiveLocation.QuestPoints),
+                objectiveLocation.IsUnique,
+                objectiveLocation.VictoryPoints
+                );
+            s.AppendLine();
+
+            s.Append(cardTextBox(objectiveLocation));
+
+            return s.ToString();
+        }
+
+        private static string addShipObjective(LotRCard shipObjective)
+        {
+            var s = new StringBuilder(string.Empty);
+            s.AppendFormat(addShipObjectiveFormat,
+                shipObjective.Title,
+                shipObjective.EncounterSet,
+                shipObjective.IsUnique,
+                stat(shipObjective.Willpower),
+                stat(shipObjective.Attack),
+                stat(shipObjective.Defense),
+                stat(shipObjective.HitPoints)
+                );
+            s.AppendLine();
+
+            s.Append(cardTextBox(shipObjective));
+
+            return s.ToString();
+        }
+
         private static Dictionary<CardType, Func<LotRCard, string>> map = new Dictionary<CardType, Func<LotRCard, string>>
         {
             { CardType.Hero, hero => addHero(hero) },
@@ -477,8 +672,18 @@ namespace SetBuilder
             { CardType.Attachment, attachment => addAttachment(attachment) },
             { CardType.Event, playerEvent => addEvent(playerEvent) },
             { CardType.Player_Side_Quest, sideQuest => addPlayerSideQuest(sideQuest) },
+            { CardType.Contract, contract => addContract(contract) },
             { CardType.Quest, quest => addQuest(quest) },
-            { CardType.Enemy, enemy => addEnemy(enemy) }
+            { CardType.Enemy, enemy => addEnemy(enemy) },
+            { CardType.Ship_Enemy, shipEnemy => addShipEnemy(shipEnemy) },
+            { CardType.Ship_Objective, shipObjective => addShipObjective(shipObjective) },
+            { CardType.Location, location => addLocation(location) },
+            { CardType.Treachery, treachery => addTreachery(treachery) },
+            { CardType.Encounter_Side_Quest, sideQuest => addEncounterSideQuest(sideQuest) },
+            { CardType.Objective, objective => addObjective(objective) },
+            { CardType.Objective_Ally, objectiveAlly => addObjectiveAlly(objectiveAlly) },
+            { CardType.Objective_Hero, objectiveHero => addObjectiveHero(objectiveHero) },
+            { CardType.Objective_Location, objectiveLocation => addObjectiveLocation(objectiveLocation) },
         };
 
         public static int Main(string[] args)
