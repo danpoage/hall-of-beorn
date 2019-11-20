@@ -29,6 +29,9 @@ namespace SetBuilder
         private const string addLocationFormat           = "            addLocation(\"{0}\", \"{1}\", {2}, {3})";
         private const string addPlayerSideQuestFormat    = "            addPlayerSideQuest(\"{0}\", {1}, {2}, {3})";
         private const string addQuestFormat              = "            addQuest(\"{0}\", \"{1}\", {2}, '{3}', {4})";
+        private const string addNightmareSetupFormat     = "            addNightmareSetup(\"{0}\")";
+        private const string addGenConSetupFormat        = "            addGenConSetup(\"{0}\", \"{1}\")";
+        private const string addCampaignFormat           = "            addCampaign(\"{0}\", \"{1}\", \"{2}\")";
         private const string addShipEnemyFormat          = "            addShipEnemy(\"{0}\", \"{1}\", {2}, {3}, {4}, {5}, {6})";
         private const string addShipObjectiveFormat      = "            addShipObjective(\"{0}\", \"{1}\", {2}, {3}, {4}, {5}, {6})";
         private const string addTreacheryFormat          = "            addTreachery(\"{0}\", \"{1}\")";
@@ -36,23 +39,29 @@ namespace SetBuilder
         private const string addObjectiveAllyFormat      = "            addObjectiveAlly(\"{0}\", \"{1}\", {2}, {3}, {4}, {5})";
         private const string addObjectiveLocationFormat  = "            addObjectiveLocation(\"{0}\", \"{1}\", {2}, {3}, {4})";
         private const string addObjectiveHeroFormat      = "            addObjectiveHero(\"{0}\", \"{1}\", {2}, {3}, {4}, {5})";
-        private const string withTraitsFormat            = "                .WithTraits({0})";
-        private const string withKeywordsFormat          = "                .WithKeywords({0})";
-        private const string withTextFormat              = "                .WithText(\"{0}\")";
-        private const string withShadowFormat            = "                .WithShadow(\"{0}\")";
-        private const string withFlavorFormat            = "                .WithFlavor(\"{0}\")";
-        private const string withTemplateFormat          = "                .WithTemplate(\"{0}\")";
-        private const string withOppositeTitleFormat     = "                .WithOppositeTitle(\"{0}\")";
-        private const string withOppositeTextFormat      = "                .WithOppositeText(\"{0}\")";
-        private const string withOppositeFlavorFormat    = "                .WithOppositeFlavor(\"{0}\")";
-        private const string withOppositeTemplateFormat  = "                .WithTemplate2(\"{0}\")";
-        private const string withEncounterSetsFormat     = "                .WithIncludedEncounterSets({0})";
-        private const string withVictoryPointsFormat     = "                .WithVictoryPoints({0})";
-        private const string withBackArtistFormat        = "                .WithBackArtist(Artist.{0})";
-        private const string withBackStageLetterFormat   = "                .WithBackStageLetter('{0}')";
-        private const string withUniqueTag               = "                .WithUnique()";
-        private const string withEasyModeQuantityFormat  = "                .WithEasyModeQuantity({0})";
-        private const string withInfoFormat              = "                .WithInfo({0}, {1}, Artist.{2});";
+        private const string withTraitsFormat                = "                .WithTraits({0})";
+        private const string withKeywordsFormat              = "                .WithKeywords({0})";
+        private const string withTextLineFormat              = "                .WithTextLine(\"{0}\")";
+        private const string withShadowFormat                = "                .WithShadow(\"{0}\")";
+        private const string withFlavorFormat                = "                .WithFlavor(\"{0}\")";
+        private const string withTemplateFormat              = "                .WithTemplate(\"{0}\")";
+        private const string withOppositeTitleFormat         = "                .WithOppositeTitle(\"{0}\")";
+        private const string withOppositeTextLineFormat      = "                .WithOppositeTextLine(\"{0}\")";
+        private const string withOppositeFlavorFormat        = "                .WithOppositeFlavor(\"{0}\")";
+        private const string withOppositeTemplateFormat      = "                .WithTemplate2(\"{0}\")";
+        private const string withEncounterSetsFormat         = "                .WithIncludedEncounterSets({0})";
+        private const string withVictoryPointsFormat         = "                .WithVictoryPoints({0})";
+        private const string withBackArtistFormat            = "                .WithBackArtist(Artist.{0})";
+        private const string withBackStageLetterFormat       = "                .WithBackStageLetter('{0}')";
+        private const string withUniqueTag                   = "                .WithUnique()";
+        private const string withEasyModeQuantityFormat      = "                .WithEasyModeQuantity({0})";
+        private const string withAlternateSlugFormat         = "                .WithAlternateSlug(\"{0}\")";
+        private const string withAlternateEncounterSetFormat = "                .WithAlternateEncounterSet(\"{0}\")";
+        private const string withYearFormat                  = "                .WithYear({0})";
+        private const string withBoonFormat                  = "                .WithBoon()";
+        private const string withBurdenFormat                = "                .WithBurden()";
+        private const string withThumbnailFormat             = "                .WithThumbnail()";
+        private const string withInfoFormat                  = "                .WithInfo({0}, {1}, Artist.{2});";
 
         private const int codePageWesternEurope = 1252;
         private const string textQuote = "\\\"";
@@ -74,7 +83,7 @@ namespace SetBuilder
             s.AppendFormat(initSetTypeFormat, Enum.GetName(typeof(SetType), cardSet.SetType));
             s.AppendLine();
 
-            if (string.IsNullOrWhiteSpace(cardSet.Cycle))
+            if (!string.IsNullOrWhiteSpace(cardSet.Cycle))
             {
                 s.AppendFormat(initCycleFormat, cardSet.Cycle);
                 s.AppendLine();
@@ -181,8 +190,8 @@ namespace SetBuilder
                 return string.Empty;
 
             return string.Format(withTraitsFormat,
-                string.Join(",",
-                    card.Traits.Select(t => "\"" + t + "\"")
+                string.Join(", ",
+                    card.Traits.Select(t => "\"" + t.Trim() + "\"")
                 )
             ) + Environment.NewLine;
         }
@@ -193,8 +202,8 @@ namespace SetBuilder
                 return string.Empty;
 
             return string.Format(withKeywordsFormat,
-                string.Join(",",
-                    card.Keywords.Select(k => "\"" + k + "\"")
+                string.Join(", ",
+                    card.Keywords.Select(k => "\"" + k.Trim() + "\"")
                 )
             ) + Environment.NewLine;
         }
@@ -204,9 +213,16 @@ namespace SetBuilder
             if (string.IsNullOrWhiteSpace(card.Text))
                 return string.Empty;
 
-            return string.Format(withTextFormat,
-                normalizeText(card.Text, textQuote, textLineBreak)) 
-                + Environment.NewLine;
+            var s = new StringBuilder(string.Empty);
+
+            foreach (var line in card.Text.SplitLines())
+            {
+                s.AppendFormat(withTextLineFormat,
+                    normalizeText(line, textQuote, textLineBreak));
+                s.AppendLine();
+            }
+
+            return s.ToString();
         }
 
         private static string withShadow(LotRCard card)
@@ -239,34 +255,40 @@ namespace SetBuilder
                 + Environment.NewLine;
         }
 
-        
         private static string withOppositeText(LotRCard card)
         {
             if (string.IsNullOrWhiteSpace(card.OppositeText))
                 return string.Empty;
 
-            return string.Format(withTextFormat,
-                normalizeText(card.Text, textQuote, textLineBreak)) 
-                + Environment.NewLine;
+            var s = new StringBuilder(string.Empty);
+
+            foreach (var line in card.OppositeText.SplitLines())
+            {
+                s.AppendFormat(withOppositeTextLineFormat,
+                    normalizeText(line, textQuote, textLineBreak));
+                s.AppendLine();
+            }
+
+            return s.ToString();
         }
 
         private static string withOppositeFlavor(LotRCard card)
         {
-            if (string.IsNullOrWhiteSpace(card.FlavorText))
+            if (string.IsNullOrWhiteSpace(card.OppositeFlavorText))
                 return string.Empty;
 
-            return string.Format(withFlavorFormat,
-                normalizeText(card.FlavorText, textQuote, textLineBreak)) 
+            return string.Format(withOppositeFlavorFormat,
+                normalizeText(card.OppositeFlavorText, textQuote, textLineBreak)) 
                 + Environment.NewLine;
         }
 
         private static string withOppositeTemplate(LotRCard card)
         {
-            if (string.IsNullOrWhiteSpace(card.HtmlTemplate))
+            if (string.IsNullOrWhiteSpace(card.HtmlTemplate2))
                 return string.Empty;
 
-            return string.Format(withTemplateFormat,
-                card.HtmlTemplate)
+            return string.Format(withOppositeTemplateFormat,
+                card.HtmlTemplate2)
                 + Environment.NewLine;
         }
 
@@ -302,6 +324,32 @@ namespace SetBuilder
         private static string cardTextBox(LotRCard card)
         {
             var s = new StringBuilder(string.Empty);
+
+            if (card.HasThumbnail)
+            {
+                s.AppendLine(withThumbnailFormat);
+            }
+
+            if (card.CardSubtype == CardSubtype.Boon)
+            {
+                s.AppendLine(withBoonFormat);
+            }
+
+            if (card.CardSubtype == CardSubtype.Burden)
+            {
+                s.AppendLine(withBurdenFormat);
+            }
+
+            if (!string.IsNullOrWhiteSpace(card.AlternateEncounterSet))
+            {
+                s.AppendFormat(withAlternateEncounterSetFormat, card.AlternateEncounterSet);
+                s.AppendLine();
+            }
+
+            if (!string.IsNullOrWhiteSpace(card.AlternateSlug))
+            {
+                s.AppendLine(string.Format(withAlternateSlugFormat, card.AlternateSlug));
+            }
 
             s.Append(withTraits(card));
             s.Append(withKeywords(card));
@@ -339,6 +387,12 @@ namespace SetBuilder
                 s.AppendLine();
             }
 
+            if (card.Year > 0)
+            {
+                s.AppendFormat(withYearFormat, card.Year);
+                s.AppendLine();
+            }
+
             s.Append(withInfo(card));
 
             return s.ToString();
@@ -372,7 +426,7 @@ namespace SetBuilder
                 ally.Title,
                 ally.ResourceCost.GetValueOrDefault(),
                 sphere(ally),
-                ally.IsUnique,
+                ally.IsUnique.ToString().ToLower(),
                 ally.Willpower,
                 ally.Attack,
                 ally.Defense,
@@ -392,7 +446,7 @@ namespace SetBuilder
                 attachment.Title,
                 attachment.ResourceCost.GetValueOrDefault(),
                 sphere(attachment),
-                attachment.IsUnique
+                attachment.IsUnique.ToString().ToLower()
                 );
             s.AppendLine();
 
@@ -457,14 +511,41 @@ namespace SetBuilder
                 );
             s.AppendLine();
 
-            var encounterSets = string.Join(",",
+            var encounterSets = string.Join(", ",
                 quest.IncludedEncounterSets
-                    .Select(es => '"' + es.Name + '"')
+                    .Select(es => '"' + es.Name.Trim() + '"')
                 );
             s.AppendFormat(withEncounterSetsFormat,
                 encounterSets);
+            s.AppendLine();
 
             s.Append(cardTextBox(quest));
+
+            return s.ToString();
+        }
+
+        private static string addNightmareSetup(LotRCard setup)
+        {
+            var s = new StringBuilder(string.Empty);
+            s.AppendFormat(addNightmareSetupFormat,
+                setup.EncounterSet);
+            s.AppendLine();
+
+            s.Append(cardTextBox(setup));
+
+            return s.ToString();
+        }
+
+        private static string addGenConSetup(LotRCard setup)
+        {
+            var s = new StringBuilder(string.Empty);
+            s.AppendFormat(addGenConSetupFormat,
+                setup.Title,
+                setup.EncounterSet
+                );
+            s.AppendLine();
+
+            s.Append(cardTextBox(setup));
 
             return s.ToString();
         }
@@ -636,7 +717,7 @@ namespace SetBuilder
                 objectiveLocation.Title,
                 objectiveLocation.EncounterSet,
                 stat(objectiveLocation.QuestPoints),
-                objectiveLocation.IsUnique,
+                objectiveLocation.IsUnique.ToString().ToLower(),
                 objectiveLocation.VictoryPoints
                 );
             s.AppendLine();
@@ -652,7 +733,7 @@ namespace SetBuilder
             s.AppendFormat(addShipObjectiveFormat,
                 shipObjective.Title,
                 shipObjective.EncounterSet,
-                shipObjective.IsUnique,
+                shipObjective.IsUnique.ToString().ToLower(),
                 stat(shipObjective.Willpower),
                 stat(shipObjective.Attack),
                 stat(shipObjective.Defense),
@@ -665,6 +746,24 @@ namespace SetBuilder
             return s.ToString();
         }
 
+        private static void writeCardSet(CardSet cardSet)
+        {
+            Console.WriteLine(header(cardSet));
+
+            if (cardSet.Cards != null)
+            {
+                foreach (var card in cardSet.Cards.OrderBy(c => c.CardNumber))
+                {
+                    if (!map.ContainsKey(card.CardType))
+                        continue;
+
+                    Console.WriteLine(map[card.CardType](card));
+                }
+            }
+
+            Console.WriteLine(footer());
+        }
+
         private static Dictionary<CardType, Func<LotRCard, string>> map = new Dictionary<CardType, Func<LotRCard, string>>
         {
             { CardType.Hero, hero => addHero(hero) },
@@ -674,6 +773,8 @@ namespace SetBuilder
             { CardType.Player_Side_Quest, sideQuest => addPlayerSideQuest(sideQuest) },
             { CardType.Contract, contract => addContract(contract) },
             { CardType.Quest, quest => addQuest(quest) },
+            { CardType.GenCon_Setup, setup => addGenConSetup(setup) },
+            { CardType.Nightmare_Setup, setup => addNightmareSetup(setup) },
             { CardType.Enemy, enemy => addEnemy(enemy) },
             { CardType.Ship_Enemy, shipEnemy => addShipEnemy(shipEnemy) },
             { CardType.Ship_Objective, shipObjective => addShipObjective(shipObjective) },
@@ -717,24 +818,6 @@ namespace SetBuilder
             writeCardSet(cardSet);
             
             return 0;
-        }
-
-        private static void writeCardSet(CardSet cardSet)
-        {
-            Console.WriteLine(header(cardSet));
-
-            if (cardSet.Cards != null)
-            {
-                foreach (var card in cardSet.Cards.OrderBy(c => c.CardNumber))
-                {
-                    if (!map.ContainsKey(card.CardType))
-                        continue;
-
-                    Console.WriteLine(map[card.CardType](card));
-                }
-            }
-
-            Console.WriteLine(footer());
         }
     }
 }

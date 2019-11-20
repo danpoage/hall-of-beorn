@@ -72,6 +72,13 @@ namespace HallOfBeorn.Models.LotR
             return card;
         }
 
+        protected LotRCard addGenConSetup(string title, string encounterSet)
+        {
+            var setup = LotRCard.GenConSetup(title, encounterSet);
+            addCard(setup);
+            return setup;
+        }
+
         protected LotRCard addNightmareSetup(string encounterSet)
         {
             var card = LotRCard.NightmareSetup(encounterSet, encounterSet);
@@ -161,6 +168,13 @@ namespace HallOfBeorn.Models.LotR
             shipObjective.IsUnique = isUnique;
             addCard(shipObjective);
             return shipObjective;
+        }
+
+        protected LotRCard addCampaign(string title, string encounterSet, string oppositeTitle)
+        {
+            var campaign = LotRCard.Campaign(title, encounterSet, oppositeTitle);
+            addCard(campaign);
+            return campaign;
         }
 
         public string Id { get; protected set; }
