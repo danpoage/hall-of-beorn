@@ -80,14 +80,14 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithInfo(93, 1, Artist.Sara_Winters));
             Cards.Add(LotRCard.Location("Shrine to Morgoth", string.Empty, setName, 5, 18)
                 .WithUnique()
-                .WithSuffix("Grotto")
+                .WithSlugSuffix("Grotto")
                 .WithTraits("Ruins.", "Underground.", "Grotto.")
                 .WithText("Shrine to Morgoth cannot have attachments and cannot enter the staging area.\r\nForced: At the beginning of the quest phase, flip Shrine to Morgoth to its Underwater side, without removing its progress tokens.\r\nWhen Shrine to Morgoth is placed in the victory display, the players have escaped from the flooded grotto and win the game.")
                 .WithVictoryPoints(5)
                 .WithInfo(94, 1, Artist.Federico_Musetti));
             Cards.Add(LotRCard.Location("Shrine to Morgoth", string.Empty, setName, 5, 18)
                 .WithUnique()
-                .WithSuffix("Underwater")
+                .WithSlugSuffix("Underwater")
                 .WithTraits("Ruins.", "Underground.", "Underwater.")
                 .WithText("Shrine to Morgoth cannot have attachments and cannot enter the staging area.\r\nForced: If Shrine to Morgoth is the active location at the end of the quest phase, raise each player's threat by 5.\r\nWhen Shrine to Morgoth is placed in the victory display, the players have escaped the flooded grotto and win the game.")
                 .WithVictoryPoints(5)

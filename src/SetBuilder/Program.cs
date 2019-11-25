@@ -49,7 +49,7 @@ namespace SetBuilder
         private const string withOppositeTextLineFormat      = "                .WithOppositeTextLine(\"{0}\")";
         private const string withOppositeFlavorFormat        = "                .WithOppositeFlavor(\"{0}\")";
         private const string withOppositeTemplateFormat      = "                .WithTemplate2(\"{0}\")";
-        private const string withEncounterSetsFormat         = "                .WithIncludedEncounterSets({0})";
+        private const string withIncludedEncounterSetsFormat = "                .WithIncludedEncounterSets({0})";
         private const string withVictoryPointsFormat         = "                .WithVictoryPoints({0})";
         private const string withBackArtistFormat            = "                .WithBackArtist(Artist.{0})";
         private const string withBackStageLetterFormat       = "                .WithBackStageLetter('{0}')";
@@ -61,6 +61,11 @@ namespace SetBuilder
         private const string withBoonFormat                  = "                .WithBoon()";
         private const string withBurdenFormat                = "                .WithBurden()";
         private const string withThumbnailFormat             = "                .WithThumbnail()";
+        private const string withEyeIconFormat               = "                .WithEyeIcon({0})";
+        private const string withSlugSuffixFormat            = "                .WithSlugSuffix(\"{0}\")";
+        private const string withErrataFormat                = "                .WithErrata()";
+        private const string withSiegePointsFormat           = "                .WithSiegePoints({0})";
+        private const string withSetNumberAndCostFormat      = "                .WithSetNumberAndCost({0}, {1})";
         private const string withInfoFormat                  = "                .WithInfo({0}, {1}, Artist.{2});";
 
         private const int codePageWesternEurope = 1252;
@@ -101,10 +106,25 @@ namespace SetBuilder
                 .Select(token => 
                     Thread.CurrentThread.CurrentCulture.TextInfo
                         .ToTitleCase(token)
+                        .Replace("'", string.Empty)
                         .Replace('-', '_')
-                        .Replace('.', '_')
+                        .Replace(".", string.Empty)
                         .NormalizeCaseSensitiveString()
                     )
+            );
+        }
+
+        private static string normalizeEncounterSetName(string name)
+        {
+            return string.Join(string.Empty, name.Split(' ')
+                .Select(token =>
+                    Thread.CurrentThread.CurrentCulture.TextInfo
+                    .ToTitleCase(token)
+                    .Replace("'", string.Empty)
+                    .Replace("-", string.Empty)
+                    .Replace(" ", string.Empty)
+                    .NormalizeCaseSensitiveString()
+                )
             );
         }
 
@@ -296,9 +316,38 @@ namespace SetBuilder
         {
             var s = new StringBuilder(string.Empty);
 
+            if (!string.IsNullOrWhiteSpace(card.SlugSuffix))
+            {
+                s.AppendFormat(withSlugSuffixFormat, card.SlugSuffix);
+                s.AppendLine();
+            }
+
+            if (card.SiegePoints.HasValue && card.SiegePoints > 0)
+            {
+                s.AppendFormat(withSiegePointsFormat, card.SiegePoints);
+                s.AppendLine();
+            }
+
+            if (card.EncounterSetNumber.HasValue && card.EncounterCost.HasValue)
+            {
+                s.AppendFormat(withSetNumberAndCostFormat, card.EncounterSetNumber, card.EncounterCost);
+                s.AppendLine();
+            }
+
+            if (card.HasErrata)
+            {
+                s.AppendLine(withErrataFormat);
+            }
+
             if (card.VictoryPoints > 0)
             {
                 s.AppendFormat(withVictoryPointsFormat, card.VictoryPoints);
+                s.AppendLine();
+            }
+
+            if (card.EyeIcon.HasValue && card.EyeIcon > 0)
+            {
+                s.AppendFormat(withEyeIconFormat, card.EyeIcon);
                 s.AppendLine();
             }
 
@@ -513,9 +562,9 @@ namespace SetBuilder
 
             var encounterSets = string.Join(", ",
                 quest.IncludedEncounterSets
-                    .Select(es => '"' + es.Name.Trim() + '"')
+                    .Select(es => "EncounterSet." + normalizeEncounterSetName(es.Name))
                 );
-            s.AppendFormat(withEncounterSetsFormat,
+            s.AppendFormat(withIncludedEncounterSetsFormat,
                 encounterSets);
             s.AppendLine();
 

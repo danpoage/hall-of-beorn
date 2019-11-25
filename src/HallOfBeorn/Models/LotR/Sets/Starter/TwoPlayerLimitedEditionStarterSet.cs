@@ -42,7 +42,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
             addAlly("Gandalf", 5, Sphere.Neutral, true, 4, 4, 4, 4)
                 .WithTraits("Istari.")
                 .WithText("At the end of the round, discard Gandalf from play.\r\nResponse: After Gandalf enters play, (choose 1): draw 3 cards, deal 4 damage to 1 enemy in play, or reduce your threat by 5.")
-                .WithSuffix("1")
+                .WithSlugSuffix("1")
                 .WithInfo(4, 2, Artist.Lucas_Graciano);
             addAlly("Galadriel", 3, Sphere.Leadership, true, 3, 0, 0, 3)
                 .WithTraits("Noldor.", "Noble.")
@@ -205,7 +205,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
             addAlly("Gandalf", 5, Sphere.Neutral, true, 4, 4, 4, 4)
                 .WithTraits("Istari.")
                 .WithText("At the end of the round, discard Gandalf from play.\r\nResponse: After Gandalf enters play, (choose 1): draw 3 cards, deal 4 damage to 1 enemy in play, or reduce your threat by 5.")
-                .WithSuffix("2")
+                .WithSlugSuffix("2")
                 .WithInfo(37, 2, Artist.Lucas_Graciano);
             addAlly("Legolas", 4, Sphere.Tactics, true, 1, 3, 1, 3)
                 .WithTraits("Silvan.", "Warrior.")

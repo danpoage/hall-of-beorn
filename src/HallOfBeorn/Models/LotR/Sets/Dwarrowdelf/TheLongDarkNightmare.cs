@@ -59,50 +59,17 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 CardNumber = 1,
                 Artist = Artist.Alvaro_Calvo_Escudero
             });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Goblin Stalker",
-                Id = "3E3EBBD8-C3B2-4745-98BE-F329F68AB7D1",
-                
-                CardType = CardType.Enemy,
-                EngagementCost = 28,
-                Threat = 3,
-                Attack = 2,
-                Defense = 2,
-                HitPoints = 3,
-                Traits = new List<string> { "Goblin.", "Orc." },
-                Text = 
-@"Forced: When ~Goblin Stalker attacks, deal it 1 additional shadow card.
-
-Forced: When ~Goblin Stalker is dealt a shadow card with 'PASS' printed in its text box, it gets +2 Attack until the end of the phase.",
-                PassValue = true,
-                EncounterSet = "The Long Dark Nightmare",
-                Quantity = 4,
-                CardNumber = 2,
-                Artist = Artist.Adam_Lane
-            });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Trapdoor Spider",
-                Id = "D50CA363-DA45-4AEB-8DAC-160A23158B5D",
-                
-                CardType = CardType.Enemy,
-                EngagementCost = 42,
-                Threat = 4,
-                Attack = 5,
-                Defense = 3,
-                HitPoints = 6,
-                Traits = new List<string> { "Creature.", "Spider." },
-                Text = 
-@"Forced: If Trapdoor ~Spider damage a character, discard that character from play.
-
-Lost: Trapdoor ~Spider engages the last player and makes an immediate attack.",
-                PassValue = true,
-                EncounterSet = "The Long Dark Nightmare",
-                Quantity = 3,
-                CardNumber = 3,
-                Artist = Artist.Alvaro_Calvo_Escudero
-            });
+            addEnemy("Goblin Stalker", EncounterSet.TheLongDarkNightmare.Name, 28, 3, 2, 3, 3)
+                .WithTraits("Goblin.", "Orc.")
+                .WithText("Forced: When ~Goblin Stalker attacks, deal it 1 additional shadow card.\r\nForced: When ~Goblin Stalker is dealt a shadow card with 'PASS' printed in its text box, it gets +2 Attack until the end of the phase.")
+                .WithPassValue()
+                .WithInfo(2, 4, Artist.Adam_Lane);
+            addEnemy("Trapdoor Spider", EncounterSet.TheLongDarkNightmare.Name, 42, 4, 5, 3, 6)
+                .WithTraits("Creature.", "Spider.")
+                .WithText("Forced: If Trapdoor ~Spider damages a character, discard that character from play.\r\nLost: Trapdoor ~Spider engages the last player and makes an immediate attack.")
+                .WithPassValue()
+                .WithInfo(3, 3, Artist.Alvaro_Calvo_Escudero);
+            
             Cards.Add(new LotRCard()
             {
                 Title = "Sentinel of the Deep",

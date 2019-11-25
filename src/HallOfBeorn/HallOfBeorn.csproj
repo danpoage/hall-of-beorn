@@ -858,7 +858,7 @@
     <Compile Include="Models\LotR\Sets\ShadowsOfMirkwood\TheHillsOfEmynMuilNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheHobbit\OnTheDoorstepSet.cs" />
     <Compile Include="Models\LotR\Sets\TheHobbit\OverHillAndUnderHillSet.cs" />
-    <Compile Include="Models\LotR\Sets\ShadowsOfMirkwood\TheHuntForGollum.cs" />
+    <Compile Include="Models\LotR\Sets\ShadowsOfMirkwood\TheHuntForGollumSet.cs" />
     <Compile Include="Models\LotR\Sets\ShadowsOfMirkwood\TheHuntForGollumNightmare.cs" />
     <Compile Include="Models\LotR\Sets\Dwarrowdelf\TheLongDark.cs" />
     <Compile Include="Models\LotR\Sets\Dwarrowdelf\TheLongDarkNightmare.cs" />

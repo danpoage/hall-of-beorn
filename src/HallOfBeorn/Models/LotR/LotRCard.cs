@@ -135,13 +135,14 @@ namespace HallOfBeorn.Models.LotR
         public string HtmlTemplate2;
          */
 
-        public bool HasThumbnail { get; set; }
+        public bool HasThumbnail { get; private set; }
 
         public override string CardSetName { get { return cardSet != null ? cardSet.Name : string.Empty; } }
         public override bool IsCampaign { get { return this.CardType == LotR.CardType.Campaign; } }
         public override bool IsQuest { get { return this.CardType == LotR.CardType.Quest; } }
         public override uint StageNumber { get; set; }
-        public override char StageLetter { get; set; }
+        public override char StageLetter { get; protected set; }
+
         public char? BackStageLetter { get; set; }
 
         private CardSet cardSet;
@@ -176,8 +177,8 @@ namespace HallOfBeorn.Models.LotR
         public string EncounterSet { get; set; }
         public string AlternateEncounterSet { get; set; }
         public List<EncounterSet> IncludedEncounterSets { get; set; }
-        public bool? PassValue { get; set; }
-        public byte? EyeIcon { get; set; }
+        public bool? PassValue { get; private set; }
+        public byte? EyeIcon { get; private set; }
         public byte? EasyModeQuantity { get; set; }
         public byte? NightmareModeQuantity { get; set; }
         public byte? SiegePoints { get; set; }
@@ -603,12 +604,6 @@ namespace HallOfBeorn.Models.LotR
             return this;
         }
 
-        public LotRCard WithWhenRevealed(string text)
-        {
-            this.Text = "When Revealed: " + text;
-            return this;
-        }
-
         public LotRCard WithOppositeTitle(string title)
         {
             this.OppositeTitle = title;
@@ -690,9 +685,9 @@ namespace HallOfBeorn.Models.LotR
             return this;
         }
 
-        public LotRCard WithEyeIcon()
+        public LotRCard WithEyeIcon(byte count)
         {
-            this.EyeIcon += 1;
+            this.EyeIcon = count;
             return this;
         }
 
@@ -738,18 +733,9 @@ namespace HallOfBeorn.Models.LotR
             return this;
         }
 
-        public LotRCard WithSuffix(string suffix)
+        public LotRCard WithSlugSuffix(string suffix)
         {
             this.SlugSuffix = suffix;
-            return this;
-        }
-
-        public LotRCard WithStageLetter(char letter)
-        {
-            if (letter != 'A') {
-                SlugSuffix = letter.ToString();
-            }
-            StageLetter = letter;
             return this;
         }
 
@@ -775,6 +761,12 @@ namespace HallOfBeorn.Models.LotR
         {
             this.EncounterSetNumber = setNumber;
             this.EncounterCost = encounterCost;
+            return this;
+        }
+
+        public LotRCard WithPassValue()
+        {
+            PassValue = true;
             return this;
         }
 

@@ -411,7 +411,7 @@ If the players defeat this stage, they have escaped the Blackroot Vale with Deru
                 VictoryPoints = 5,
                 CardNumber = 6,
                 Artist = Artist.Titus_Lunter
-            }.WithSuffix("Location"));
+            }.WithSlugSuffix("Location"));
             Cards.Add(new LotRCard() {
                 Title = "Vale of Shadows",
                 Id = "c57661b7-62f9-4906-b2eb-73af91fd8252",

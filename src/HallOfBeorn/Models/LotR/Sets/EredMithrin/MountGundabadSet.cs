@@ -220,7 +220,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithInfo(142, 1, Artist.David_Keen);
             addObjective("Wormsbane", setName)
                 .WithUnique()
-                .WithSuffix("Broken")
+                .WithSlugSuffix("Broken")
                 .WithTraits("Artifact.", "Weapon.", "Broken.")
                 .WithKeywords("Restricted.")
                 .WithText("Attach to a hero.\r\nAttached hero gets +1 Attack.\r\nIf attached hero leaves play, the players lose the game.")
@@ -229,7 +229,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithInfo(143, 1, Artist.Sebastian_Zakrzewski);
             addObjective("Wormsbane", setName)
                 .WithUnique()
-                .WithSuffix("Reforged")
+                .WithSlugSuffix("Reforged")
                 .WithTraits("Artifact.", "Weapon.", "Reforged.")
                 .WithKeywords("Restricted.")
                 .WithText("Attach to a hero.\r\nAttached hero gets +X Attack, where X is 1 more than the number of quest cards in the victory display.\r\nIf attached hero leaves play, the players lose the game.")

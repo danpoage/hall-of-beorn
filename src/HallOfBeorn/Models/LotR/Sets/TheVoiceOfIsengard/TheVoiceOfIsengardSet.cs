@@ -50,7 +50,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheVoiceOfIsengard
                 FlavorText = "\"Let your counsellor Gríma keep all things till your return - and I pray that we may see it, though no wise man will deem it hopeful.\" -The Two Towers",
                 CardNumber = 2,
                 Artist = Artist.Matt_Stewart
-            }.WithSuffix("Hero"));
+            }.WithSlugSuffix("Hero"));
             Cards.Add(new LotRCard() {
                 Title = "Saruman",
                 
@@ -287,7 +287,7 @@ Response: After Saruman enters play, choose a non-unique enemy or location in th
                 Quantity = 1,
                 CardNumber = 16,
                 Artist = Artist.Nacho_Molina
-            }.WithSuffix("Objective-Ally"));
+            }.WithSlugSuffix("Objective-Ally"));
             Cards.Add(new LotRCard() {
                 Title = "The Islet",
                 IsUnique = true,
@@ -414,7 +414,7 @@ Response: After Saruman enters play, choose a non-unique enemy or location in th
                 EasyModeQuantity = 1,
                 CardNumber = 24,
                 Artist = Artist.Brent_Hollowel
-            }.WithSuffix("Enemy"));
+            }.WithSlugSuffix("Enemy"));
             Cards.Add(new LotRCard()
             {
                 Title = "Mugash's Guard",
@@ -532,7 +532,7 @@ Response: After Saruman enters play, choose a non-unique enemy or location in th
                 EasyModeQuantity = 1,
                 CardNumber = 31,
                 Artist = Artist.Brent_Hollowel
-            }.WithSuffix("Objective"));
+            }.WithSlugSuffix("Objective"));
             Cards.Add(new LotRCard()
             {
                 Title = "Edge of Fangorn",
@@ -883,7 +883,7 @@ Response: After Saruman enters play, choose a non-unique enemy or location in th
                 EasyModeQuantity = 1,
                 CardNumber = 50,
                 Artist = Artist.Ben_Zweifel
-            }.WithSuffix("Location"));
+            }.WithSlugSuffix("Location"));
             Cards.Add(new LotRCard()
             {
                 Title = "Tangled Woods",
@@ -949,7 +949,7 @@ Response: After Saruman enters play, choose a non-unique enemy or location in th
                 EasyModeQuantity = 3,
                 CardNumber = 54,
                 Artist = Artist.Joel_Hustak
-            }.WithSuffix("Location"));
+            }.WithSlugSuffix("Location"));
             Cards.Add(new LotRCard()
             {
                 Title = "Take Cover!",

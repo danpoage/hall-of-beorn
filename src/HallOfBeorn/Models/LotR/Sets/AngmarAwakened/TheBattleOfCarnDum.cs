@@ -90,7 +90,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTemplate2("<p>{card:Thaurdir-TBoCD@Thaurdir} cannot leave the staging area, is considered to be engaged with each player, and attacks each player in turn during the combat phase (deal and discard a new shadow card for each attack). At the end of the round, if {card:Thaurdir-TBoCD@Thaurdir} is {trait:Captain.@Captain} side faceup, flip him.</p><p>While {self} has 15 or more progress on it, {card:Thaurdir-TBoCD@Thaurdir} loses indestructible. You cannot defeat this stage while {card:Thaurdir-TBoCD@Thaurdir} is in play.</p><p><b>If {card:Thaurdir-TBoCD@Thaurdir} is defeated, you win the game</b></p>")
                 .WithInfo(126, 1, Artist.Tomasz_Jedruszek));
             Cards.Add(LotRCard.Enemy("Thaurdir", "", setName, 50, 4, 6, 4, 9)
-                .WithSuffix("Captain")
+                .WithSlugSuffix("Captain")
                 .WithUnique()
                 .WithTraits("Undead.", "Wraith.", "Captain.")
                 .WithKeywords("Indestructible.")
@@ -98,7 +98,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTemplate("<p>{keyword:Indestructible.} Cannot have attachments.</p><p>Each other enemy gets +10 engagement cost.</p><p><b>Forced:</b> After {self} is flipped or a treachery with the {trait:Sorcery.@Sorcery} trait is revealed, deal 1 shadow card to each enemy in play.</p>")
                 .WithInfo(127, 1, Artist.Brian_Valenzuela));
             Cards.Add(LotRCard.Enemy("Thaurdir", "", setName, 50, 4, 6, 4, 9)
-                .WithSuffix("Champion")
+                .WithSlugSuffix("Champion")
                 .WithUnique()
                 .WithTraits("Undead.", "Wraith.", "Champion.")
                 .WithKeywords("Indestructible.")

@@ -125,7 +125,7 @@ The Lord of the ~Rings : The Black Riders Saga Expansion is required to play The
                 Quantity = 1,
                 Artist = Artist.Silver_Saaremael,
                 SecondArtist = Artist.Nathalia_Gomes
-            }.WithSuffix("Dark Bad Place"));
+            }.WithSlugSuffix("Dark Bad Place"));
             Cards.Add(new LotRCard()
             {
                 Title = "The Living Forest",
@@ -142,7 +142,7 @@ The Lord of the ~Rings : The Black Riders Saga Expansion is required to play The
                 Quantity = 1,
                 Artist = Artist.Silver_Saaremael,
                 SecondArtist = Artist.Silver_Saaremael
-            }.WithSuffix("Choked with Brambles"));
+            }.WithSlugSuffix("Choked with Brambles"));
             Cards.Add(new LotRCard()
             {
                 Title = "The Living Forest",
@@ -159,7 +159,7 @@ The Lord of the ~Rings : The Black Riders Saga Expansion is required to play The
                 Quantity = 1,
                 Artist = Artist.Jose_Vega,
                 SecondArtist = Artist.Nathalia_Gomes
-            }.WithSuffix("Shifting Trees"));
+            }.WithSlugSuffix("Shifting Trees"));
             Cards.Add(new LotRCard()
             {
                 Title = "The Living Forest",
@@ -176,7 +176,7 @@ The Lord of the ~Rings : The Black Riders Saga Expansion is required to play The
                 Quantity = 1,
                 Artist = Artist.Silver_Saaremael,
                 SecondArtist = Artist.Joel_Hustak
-            }.WithSuffix("Closing in Around Them"));
+            }.WithSlugSuffix("Closing in Around Them"));
             Cards.Add(new LotRCard()
             {
                 Title = "The Wicked Willow",
@@ -470,26 +470,14 @@ While Withywindle is the active location, the first player reveals 1 additional 
                 CardNumber = 23,
                 Quantity = 1,
                 Artist = Artist.Brian_Valenzuela
-            }.WithSuffix("Campaign"));
-            Cards.Add(new LotRCard()
-            {
-                Title = "Old Bogey-stories",
-                Id = "85658147-E88C-469A-AD77-BE903B1A826F",
-                Sphere = Models.LotR.Sphere.Neutral,
-                CardType = CardType.Attachment,
-                CardSubtype = Models.CardSubtype.Boon,
-                ResourceCost = 0,
-                Traits = new List<string> { "Tale." },
-                Text = 
-@"Setup: The first player attaches Old Bogey-stories to a hero in play.
-
-Action: Add Old Bogey-stories to the victory display to shuffle your hand of at least 6 cards into your deck. Then, draw 6 cards.",
-                FlavorText = "\"If you mean the old bogey-stories Fatty's nurses used to tell him, about goblins and wolves and things of that sort, I should say no.\" -Merry, The Fellowship of the Ring",
-                VictoryPoints = 1,
-                CardNumber = 24,
-                Quantity = 1,
-                Artist = Artist.Brian_Valenzuela
-            });
+            }.WithSlugSuffix("Campaign"));
+            addAttachment("Old Bogey-stories", 0, Sphere.Neutral, false)
+                .WithBoon()
+                .WithTraits("Tale.")
+                .WithText("Setup: The first player attaches Old Bogey-stories to a hero in play.\r\nAction: Add Old Bogey-stories to the victory display to shuffle your hand of at least 6 cards into your deck. Then, draw 6 cards.")
+                .WithFlavor("\"If you mean the old bogey-stories Fatty's nurses used to tell him, about goblins and wolves and things of that sort, I should say no.\" -Merry, The Fellowship of the Ring")
+                .WithVictoryPoints(1)
+                .WithInfo(24, 1, Artist.Brian_Valenzuela);
         }
     }
 }

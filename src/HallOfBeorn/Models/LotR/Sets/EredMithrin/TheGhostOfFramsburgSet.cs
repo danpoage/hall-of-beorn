@@ -147,20 +147,20 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithEasyModeQuantity(2)
                 .WithInfo(105, 3, Artist.Matthew_Cowdery);
             addTreachery("Abandoned Ruins", setName)
-                .WithWhenRevealed("Each player resolves the Discover keyword of the active location in turn order. If they cannot, Abandoned ~Ruins gains surge and doomed 2.")
+                .WithText("When Revealed: Each player resolves the Discover keyword of the active location in turn order. If they cannot, Abandoned ~Ruins gains surge and doomed 2.")
                 .WithEasyModeQuantity(1)
                 .WithShadow("Attacking enemy makes an additional attack against you after this one.")
                 .WithInfo(106, 2, Artist.Matthew_Cowdery);
             addTreachery("Terrible Shadows", setName)
                 .WithTraits("Hazard.")
-                .WithWhenRevealed("Each character gets -1 Willpower, -1 Attack, and -1 Defense until the end of the round.")
+                .WithText("When Revealed: Each character gets -1 Willpower, -1 Attack, and -1 Defense until the end of the round.")
                 .WithShadow("Attacking enemy gets +1 Attack. If this attack destroys a character, raise the defending player's threat by 3.")
                 .WithEasyModeQuantity(0)
                 .WithInfo(107, 2, Artist.Greg_Opalinski);
             addTreachery("Slammed Shut", setName)
                 .WithTraits("Hazard.")
                 .WithKeywords("Doomed 1.")
-                .WithWhenRevealed("Each player chooses and exhausts a character he controls. Until the end of the round, character cannot be readied by player card effects.")
+                .WithText("When Revealed: Each player chooses and exhausts a character he controls. Until the end of the round, character cannot be readied by player card effects.")
                 .WithInfo(108, 3, Artist.David_Keen);
             addQuest("The Haunted Keep", setName, 1, 'A', 6)
                 .WithFlavor("The search for the legendary sword of Fram has led you to the long-forgotten city of Framsburg. There is an evil air inside the keep, and you wonder what dangers wait for you in the darkness within.")
@@ -171,7 +171,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithInfo(109, 1, Artist.Alyn_Spiller);
             addQuest("Searching the Ruins", setName, 2, 'A', 12)
                 .WithFlavor("Night deepends outside and a sense of dread grows with each passing hour you spend inside the haunted keep. You fear that if you don't find Fram's sword and escape quickly, you will lose yourself to the darkness.")
-                .WithWhenRevealed("Shuffle the encounter discard pile into the encounter deck. Then, each player reveals an encounter card.")
+                .WithText("When Revealed: Shuffle the encounter discard pile into the encounter deck. Then, each player reveals an encounter card.")
                 .WithOppositeTextLine("Forced: At the beginning of the quest phase, the first player must choose: either raise each player's threat by 2, or discard cards from the top of the encounter deck until a location is discarded and add that location to the staging area.")
                 .WithOppositeTextLine("This stage cannot be defeated unless the players control at least 2 Loot objectives.")
                 .WithIncludedEncounterSets(EncounterSet.WildCreatures, EncounterSet.AfraidOfTheDark)

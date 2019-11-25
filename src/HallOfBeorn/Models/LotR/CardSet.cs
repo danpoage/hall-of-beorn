@@ -439,7 +439,7 @@ namespace HallOfBeorn.Models.LotR
 
         #region Static Members
         public static CardSet CoreSet = new Sets.Core.CoreSet();
-        public static CardSet TheHuntForGollum = new Sets.ShadowsOfMirkwood.TheHuntforGollum();
+        public static CardSet TheHuntForGollum = new Sets.ShadowsOfMirkwood.TheHuntForGollumSet();
         public static CardSet ConflictAtTheCarrock = new Sets.ShadowsOfMirkwood.ConflictattheCarrock();
         public static CardSet AJourneyToRhosgobel = new Sets.ShadowsOfMirkwood.AJourneytoRhosgobel();
         public static CardSet TheHillsOfEmynMuil = new Sets.ShadowsOfMirkwood.TheHillsofEmynMuil();

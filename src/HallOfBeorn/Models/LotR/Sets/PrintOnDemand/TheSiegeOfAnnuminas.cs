@@ -44,49 +44,43 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithText("When Revealed: Shuffle the encounter discard pile into the encounter deck. The first player adds Battering Ram and Lieutenant of Angmar to the staging area. Each player reveals an encounter card.")
                 .WithOppositeText("Progress cannot be placed here while Battering Ram is in play.\r\nResponse: At the end of the round, raise each player's threat by 1 and reveal an encounter card to choose a non-unique enemy worth no victory points at another stage. Discard the chosen enemy.\r\nIf the Lieutenant of Angmar is in a victory display at the end of the round, the players have routed the enemy and win the game.")
                 .WithInfo(5, 1, Artist.Javier_Charro_Martinez));
-            Cards.Add(LotRCard.Quest("Raise the Levee", 1, setName, null)
-                .WithStageLetter('C')
+            addQuest("Raise the Levee", EncounterSet.TheSiegeOfAnnuminas.Name, 1, 'C', Card.VALUE_NA)
                 .WithFlavor("An army from Angmar marches on the Dúnedain city of Annúminas. You ring the alarm bells and hurry to gather what strength you can.")
                 .WithText("Setup: Set Lieutenant of Angmar, Battering Ram, Enemy Camp, Siege Tunnel, each copy of Host of Angmar, and each copy of Dúnedain of Annúminas aside, out of play. Shuffle the encounter deck. Each player discards cards from the top of the encounter deck until he discards an enemy or location. Add each enemy and location discarded in this way to the staging area.")
                 .WithOppositeFlavor("You race along the shores of Lake Nenuial to gather the Dúnedain inside the walls. \"To arms!\" you shout. \"Everyone into the city! Angmar approaches!\"")
                 .WithOppositeText("Forced: At the beginning of the round (before the resource phase), place 1 resource here. Then, if there are 4 resources here, advance to stage 2.\r\nResponse: At the end of the round, remove 10 progress from this stage. Then, the first player at each stage takes control of a set aside Dúnedain of Annúminas.")
-                .WithInfo(6, 1, Artist.Joshua_Cairos));
-            Cards.Add(LotRCard.Quest("Guard the Gate", 2, setName, 50)
-                .WithStageLetter('C')
+                .WithInfo(6, 1, Artist.Joshua_Cairos);
+            addQuest("Guard the Gate", EncounterSet.TheSiegeOfAnnuminas.Name, 2, 'C', 50)
                 .WithFlavor("You've gathered everyone you can into Annúminas but the host of Angmar is hot on your heels. Once you reach the city gate, you draw your weapons and turn to face the charging Orcs. They cannot be allowed to enter this way.")
                 .WithText("When Revealed: Shuffle the encounter discard pile into the encounter deck and discard cards from the top until X enemies are discarded. X is one less than the number of players in the game, to a minimum of 1. Add each enemy discarded this way to the staging area.")
                 .WithOppositeText("This stage gets -10 quest points for each Host of Angmar in a victory display.\r\nForced: Reveal 1 additional card during the quest phase.\r\nResponse: At the end of the round, choose a stage. Each player at that stage chooses a hero he controls and adds 1 resource to that hero's pool.")
-                .WithInfo(7, 1, Artist.Joshua_Cairos));
-            Cards.Add(LotRCard.Quest("Rescue the Captives", 3, setName, null)
-                .WithStageLetter('C')
+                .WithInfo(7, 1, Artist.Joshua_Cairos);
+            addQuest("Rescue the Captives", EncounterSet.TheSiegeOfAnnuminas.Name, 3, 'C', Card.VALUE_NA)
                 .WithFlavor("You've driven back the Orcs, but they've captured some of your companions. You won't abandon your friends, so you follow them to the enemy camp.")
                 .WithText("When Revealed: Shuffle the encounter discard pile into the encounter deck. The first player adds Enemy Camp to the staging area. Each other player reveals an encounter card. Each player at each stage chooses a hero he controls, discards all tokens and attachments from it, and places it facedown under the main quest at their stage.")
                 .WithOppositeText("Process cannot be placed here while Enemy Camp is in play.\r\nResponse: At the end of the round, raise each player's threat by 1 and reveal an encounter card to choose a non-unique enemy worth no victory points at another stage. Discard the chosen enemy.\r\nIf the Lieutenant of Angmar is in the victory display at the end of the round, the players have routed the enemy and won the game.")
-                .WithInfo(8, 1, Artist.Rafal_Hrynkiewicz));
-            Cards.Add(LotRCard.Quest("Delay the Enemy", 1, setName, null)
-                .WithStageLetter('E')
+                .WithInfo(8, 1, Artist.Rafal_Hrynkiewicz);
+            addQuest("Delay the Enemy", EncounterSet.TheSiegeOfAnnuminas.Name, 1, 'E', Card.VALUE_NA)
                 .WithFlavor("An army from Angmar marches on the Dúnedain city of Annúminas. Your friends need time to prepare the defense, so you ride out to meet the enemy.")
                 .WithText("Setup: Set Lieutenant of Angmar, Battering Ram, Enemy Camp, Siege Tunnel, each copy of Host of Angmar, and each copy of Dúnedain of Annúminas aside, out of play. Each player searches the encounter deck for a different enemy and adds it to the staging area. One of these enemies must be Vanguard of Carn Dûm. Shuffle the encounter deck.")
                 .WithOppositeFlavor("It's up to you to harry the Orcs and slow their approach to the city.")
                 .WithOppositeText("Forced: At the beginning of the round (before the resource phase), place 1 resource here. Then, if there are 4 resources here, advance to stage 2.\r\nResponse: At the end of the round, remove 10 progress from this stage, then the players at each other stage reveal 1 fewer encounter card during their next quest phase (to a minimum of 0).")
-                .WithInfo(9, 1, Artist.Javier_Charro_Martinez));
-            Cards.Add(LotRCard.Quest("Man the Walls", 2, setName, 50)
-                .WithStageLetter('E')
+                .WithInfo(9, 1, Artist.Javier_Charro_Martinez);
+            addQuest("Man the Walls", EncounterSet.TheSiegeOfAnnuminas.Name, 2, 'E', 50)
                 .WithFlavor("You've done all you can to slow the enemy, so you retreat inside Annúminas and man the walls. Grappling hooks and ladders are raised against the battlements and arrows whistle overhead as the host of Angmar attacks the city.")
                 .WithText("When Revealed: Shuffle the encounter discard pile into the encounter deck and discard cards from the top until X enemies are discarded. X is one less than the number of players in the game, to a minimum of 1. Add each enemy discarded this way to the staging area.")
                 .WithOppositeText("This stage gets -10 quest points for each Host of Angmar in a victory display.\r\nForced: At the beginning of the round, add 1 set aside Host of Angmar (from any stage's set aside area) to this staging area.\r\nResponse: At the end of the round, choose a stage. Each player at that stage draws 1 card.")
-                .WithInfo(10, 1, Artist.Andreia_Ugrai));
-            Cards.Add(LotRCard.Quest("Stop the Attack", 3, setName, null)
-                .WithStageLetter('E')
+                .WithInfo(10, 1, Artist.Andreia_Ugrai);
+            addQuest("Stop the Attack", EncounterSet.TheSiegeOfAnnuminas.Name, 3, 'E', Card.VALUE_NA)
                 .WithFlavor("You've driven the enemy from the battlements when you hear a commotion from below. Orcs have tunneled under the walls and atack you from the rear. You charge down the stairs to stem the tide of Orcs and block the tunnel entrance.")
                 .WithText("When Revealed: Shuffle the encounter discard pile into the encounter deck. The first player adds Siege Tunnel to the staging area. Each other player reveals an encounter card.")
                 .WithOppositeText("Progress cannot be placed here while Siege Tunnel is in play.\r\nResponse: At the end of the round, raise each player's threat by 1 and reveal an encounter card to choose a non-unique enemy worth no victory points at another stage. Discard the chosen enemy.\r\nIf the Lieutenant of Angmar is in the victory display at the end of the round, the players have routed the enemy and won the game.")
-                .WithInfo(11, 1, Artist.Marius_Bota));
-            Cards.Add(LotRCard.Objective("Annúminas", string.Empty, setName)
+                .WithInfo(11, 1, Artist.Marius_Bota);
+            addObjective("Annúminas", EncounterSet.TheSiegeOfAnnuminas.Name)
                 .WithUnique()
                 .WithTraits("City.")
                 .WithText("Forced: At the end of the round, deal 1 damage to Annúminas for each enemy at each stage.\r\nIf the city strength of Annúminas reaches 0, the city is overrun by the forces of Angmar and all teams lose the game.")
-                .WithInfo(12, 1, Artist.DinoDrawing));
+                .WithInfo(12, 1, Artist.DinoDrawing);
             Cards.Add(LotRCard.Enemy("Lieutenant of Angmar", string.Empty, setName, 0, 4, 6, 4, 9)
                 .WithUnique()
                 .WithTraits("Angmar.", "Sorcerer.")

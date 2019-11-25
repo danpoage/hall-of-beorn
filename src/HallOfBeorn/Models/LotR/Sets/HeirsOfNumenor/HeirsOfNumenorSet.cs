@@ -355,7 +355,7 @@ namespace HallOfBeorn.Models.LotR.Sets.HeirsOfNumenor
                 CardNumber = 65,
                 Artist = Artist.Darek_Zabrocki,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.StreetsOfGondor, EncounterSet.Brigands }
-            }.WithSuffix("Quest"));
+            }.WithSlugSuffix("Quest"));
             Cards.Add(new LotRCard() {
                 
                 Title = "Fighting in the Streets",
@@ -1170,7 +1170,7 @@ If the players defeat this stage, they have won the game.",
                 VictoryPoints = 3,
                 CardNumber = 21,
                 Artist = Artist.Darek_Zabrocki
-            }.WithSuffix("Location"));
+            }.WithSlugSuffix("Location"));
             Cards.Add(new LotRCard() {
                 
                 Title = "The Master's Malice",

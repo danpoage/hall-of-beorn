@@ -830,7 +830,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Magali_Villeneuve,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
-            }.WithSuffix("Heading Down"));
+            }.WithSlugSuffix("Heading Down"));
             Cards.Add(new LotRCard() {
                 Title = "Search for an Exit",
                 StageNumber = 2,
@@ -849,7 +849,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Magali_Villeneuve,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
-            }.WithSuffix("Heading Up"));
+            }.WithSlugSuffix("Heading Up"));
             Cards.Add(new LotRCard() {
                 Title = "Search for an Exit",
                 StageNumber = 2,
@@ -867,7 +867,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.David_Lecossu,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
-            }.WithSuffix("A Wrong Turn"));
+            }.WithSlugSuffix("A Wrong Turn"));
             Cards.Add(new LotRCard() {    
                 Title = "Search for an Exit",
                 StageNumber = 2,
@@ -885,7 +885,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Ilich_Henriquez,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
-            }.WithSuffix("Narrow Paths"));
+            }.WithSlugSuffix("Narrow Paths"));
             Cards.Add(new LotRCard() {
                 Title = "Search for an Exit",
                 StageNumber = 2,
@@ -903,7 +903,7 @@ If there are no enemies in play, immediately advance to the next stage of the sc
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Stacey_Diana_Clark,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
-            }.WithSuffix("Hasty Council"));
+            }.WithSlugSuffix("Hasty Council"));
             Cards.Add(new LotRCard() {
                 Title = "Search for an Exit",
                 StageNumber = 2,
@@ -925,7 +925,7 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Magali_Villeneuve,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
-            }.WithSuffix("Blocked By Shadow"));
+            }.WithSlugSuffix("Blocked By Shadow"));
             addCard(new LotRCard()
             {
                 Title = "Search for an Exit",
@@ -944,7 +944,7 @@ Players may bypass this quest card at the end of the combat phase. If the player
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Magali_Villeneuve,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.HazardsOfThePit, EncounterSet.DeepsOfMoria, EncounterSet.PlunderingGoblins }
-            }.WithSuffix("Escape from Darkness"));
+            }.WithSlugSuffix("Escape from Darkness"));
             Cards.Add(new LotRCard() {
                 Title = "Search for the Chamber",
                 StageNumber = 1,

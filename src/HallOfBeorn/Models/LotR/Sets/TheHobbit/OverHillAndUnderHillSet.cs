@@ -1074,7 +1074,7 @@ The players have won the game.",
                 VictoryPoints = 3,
                 CardNumber = 63,
                 Artist = Artist.Johann_Bodin
-            }.WithSuffix("Enemy"));
+            }.WithSlugSuffix("Enemy"));
             Cards.Add(new LotRCard() {
                 
                 Title = "The High Pass",

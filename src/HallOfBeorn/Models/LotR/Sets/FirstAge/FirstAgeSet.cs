@@ -1811,7 +1811,7 @@ If Gates of Menegroth is destroyed, the players lose the game.",
                 EncounterSet = "Hunting of the Wolf",
                 CardNumber = 161,
                 Artist = Artist.Dechambo
-            }.WithSuffix("Campaign"));
+            }.WithSlugSuffix("Campaign"));
             Cards.Add(new LotRCard() {
                 Title = "A Doom Fulfilled",
                 
@@ -2197,7 +2197,7 @@ Response: After High Tower is explored as the active location, remove one Condit
                 EncounterSet = "The Isle of Werewolves",
                 CardNumber = 116,
                 Artist = Artist.Elfkin
-            }.WithSuffix("Objective-Ally"));
+            }.WithSlugSuffix("Objective-Ally"));
             Cards.Add(new LotRCard() {
                 Title = "The Pits of Sauron",
                 StageNumber = 2,
@@ -2272,7 +2272,7 @@ Heroes in the pit area are immune to player card effects and cannot leave the pi
                 EncounterSet = "The Isle of Werewolves",
                 CardNumber = 112,
                 Artist = Artist.Unknown
-            }.WithSuffix("Campaign"));
+            }.WithSlugSuffix("Campaign"));
             Cards.Add(new LotRCard() {
                 Title = "Foul Vapour",
                 
@@ -2786,7 +2786,7 @@ When engaged with an enemy with the Sneak keyword, players may cancel all progre
                 EncounterSet = "The Seat of Morgoth",
                 CardNumber = 125,
                 Artist = Artist.StrangerToTheRain
-            }.WithSuffix("Campaign"));
+            }.WithSlugSuffix("Campaign"));
             Cards.Add(new LotRCard() {
                 Title = "Clumsy Step",                
                 Id = "d17ece37-4951-4dbf-a5b9-0b07092e8c5f",

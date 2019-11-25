@@ -401,7 +401,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithOppositeFlavor("Then Aragorn said: \"The hour is come at last. Now I go to Pelargir upon Anduin, and ye shall come after me. And when all this land is clean of the servants of Sauron, I will hold the oath fulfilled, and ye shall have peace and depart for ever. For I am Elessar, Isildur's heir of Gondor.\" -The Return of the King")
                 .WithInfo(66, 1, Artist.Yoann_Boissonnet));
             Cards.Add(LotRCard.Enemy("Army of the Dead", string.Empty, setThePassingOfTheGreyCompany, 50, Card.VALUE_X, 6, 2, 8)
-                .WithSuffix("Enemy")
+                .WithSlugSuffix("Enemy")
                 .WithUnique()
                 .WithTraits("Undead.", "Oathbreaker.")
                 .WithKeywords("Phantom.")
@@ -409,7 +409,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithVictoryPoints(6)
                 .WithInfo(67, 1, Artist.Uwe_Jarling));
             Cards.Add(LotRCard.ObjectiveAlly("Army of the Dead", string.Empty, setThePassingOfTheGreyCompany, 4, 6, 2, 8)
-                .WithSuffix("Objective-Ally")
+                .WithSlugSuffix("Objective-Ally")
                 .WithBoon()
                 .WithUnique()
                 .WithTraits("Undead.")
@@ -431,14 +431,14 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
             Cards.Add(LotRCard.Objective("The Corsair Fleet", string.Empty, setTheSiegeOfGondor)
                 .WithUnique()
                 .WithTraits("Corsair.")
-                .WithSuffix("Corsair")
+                .WithSlugSuffix("Corsair")
                 .WithText("Forced: At the beginning of the staging step, place 1 resource on this objective. Then, each player must choose: either reveal an encounter card, or assign X damage among characters he controls. X is the number of resources here.")
                 .WithFlavor("...ships of great draught with many oars, and with black sails bellying in the breeze. -The Return of the King")
                 .WithInfo(71, 1, Artist.Johan_Tornlund));
             Cards.Add(LotRCard.Objective("The Corsair Fleet", string.Empty, setTheSiegeOfGondor)
                 .WithUnique()
                 .WithTraits("Gondor.")
-                .WithSuffix("Gondor")
+                .WithSlugSuffix("Gondor")
                 .WithText("Forced: At the beginning of the quest phase, remove 1 resource from The Corsair Fleet. Then, if there are no resources here, the first player takes control of Aragorn and adds The Corsair Fleet to the victory display.")
                 .WithFlavor("\"The oars were now wielded by free men, and manfully they laboured...\"\r\n-Legolas, The Return of the King")
                 .WithInfo(72, 1, Artist.Johan_Tornlund));
@@ -478,13 +478,13 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithOppositeFlavor("Thus came Aragorn son of Arathorn, Elessar, Isildur's heir, out of the Paths of the Dead, borne upon a wind from the Sea to the kingdom of Gondor.\r\n-The Return of the King")
                 .WithInfo(78, 1, Artist.Alvaro_Calvo_Escudero));
             Cards.Add(LotRCard.Enemy("The Witch-king", string.Empty, setTheBattleOfThePelennorFields, 50, 6, 6, 6, 14)
-                .WithSuffix("Captain")
+                .WithSlugSuffix("Captain")
                 .WithUnique()
                 .WithTraits("Nazgûl.", "Captain.")
                 .WithText("Immune to player card effects.\r\nCannot be optionally engaged or take damage.\r\nForced: At the beginning of the quest phase, discard cards from the encounter deck until an enemy is discarded. Add the discarded enemy to the staging area.")
                 .WithInfo(79, 1, Artist.Rafal_Hrynkiewicz));
             Cards.Add(LotRCard.Enemy("The Witch-king", string.Empty, setTheBattleOfThePelennorFields, 50, 6, 6, 6, 14)
-                .WithSuffix("Sorcerer")
+                .WithSlugSuffix("Sorcerer")
                 .WithUnique()
                 .WithTraits("Nazgûl.", "Sorcerer.")
                 .WithText("Only the engaged player can declare attackers against the Witch-king.\r\nForced: At the beginning of the encounter phase, The Witch-king engages the first player. Then, it makes an immediate attack.")

@@ -1272,142 +1272,59 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 CardNumber = 76,
                 Artist = Artist.Melanie_Maier
             });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Gildor Inglorion",
-                
-                Id = "6c04a40a-0666-4b4f-a768-ddff46857cf0",
-                IsUnique = true,
-                Sphere = Models.LotR.Sphere.Neutral,
-                CardType = CardType.Objective_Ally,
-                CardSubtype = Models.CardSubtype.Boon,
-                Willpower = 3,
-                Attack = 2,
-                Defense = 3,
-                HitPoints = 3,
-                Traits = new List<string>() { "Noldor." },
-                Text = "The first player gains control of Gildor Inglorion.\r\nForced: At the end of the round, discard Gildor Inglorion. The first player may spend 1 Fellowship resource to cancel this effect.",
-                FlavorText = "\"We think you had best come now with us.\"\r\n-The Fellowship of the Ring",
-                Quantity = 1,
-                CardNumber = 77,
-                Artist = Artist.Alexandre_Dainche
-            });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Gandalf's Delay",
-                
-                Id = "d95a6076-3ead-4ff6-a1ba-ca320d2bd4e1",
-                CardType = CardType.Objective,
-                CardSubtype = Models.CardSubtype.Burden,
-                Text = "Setup: Add Gandalf's Delay to the staging area.\r\nEach player draws 1 less card in his starting hand.",
-                FlavorText = "The next day Frodo became really anxious, and kept a constant look-out for Gandalf. Thursday, his birthday morning, dawned as fair and clear as it had long ago for Bilbo's great party. Still Gandalf did not appear.\r\n-The Fellowship of the Ring",
-                EncounterSet = "A Shadow of the Past",
-                Quantity = 1,
-                CardNumber = 78,
-                Artist = Artist.Drazenka_Kimpel
-            });
-            Cards.Add(new LotRCard()
-            {
-                Title = "The Ring Draws Them",
-                Id = "1c5f4854-c10c-430b-9c40-2d84c5997b8f",
-                CardType = CardType.Treachery,
-                CardSubtype = Models.CardSubtype.Burden,
-                Keywords = new List<string>() { "Surge." },
-                Text = "When Revealed: At the end of the phase, each enemy in the staging area engages the first player. If the One ~Ring is exhausted, this effect cannot be canceled.",
-                FlavorText = "\"Also,\" he added, and his voice sank to a whisper, \"the Ring draws them\" -The Fellowship of the Ring",
-                EncounterSet = "A Shadow of the Past",
-                Quantity = 1,
-                CardNumber = 79,
-                Artist = Artist.Mike_Nash
-            });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Weight of the Ring",
-                Id = "40c95b3d-6216-4def-bb93-f44871f3ec70",
-                CardType = CardType.Treachery,
-                CardSubtype = Models.CardSubtype.Burden,
-                Keywords = new List<string>() { "Surge." },
-                Text = "When Revealed: Attach to the Ring-bearer. (Counts as a Condition attachment with the text: \"Forced: At the beginning of each quest phase, either exhaust The One ~Ring or reveal and additional encounter card this phase.\")",
-                FlavorText = "Once more the desire to slip on the Ring came over Frodo... -The Fellowship of the Ring",
-                EncounterSet = "Flight to the Ford",
-                Quantity = 1,
-                CardNumber = 80,
-                Artist = Artist.Mike_Nash
-            });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Fear of Discovery",
-                
-                Id = "074cad39-ce55-4dc1-9775-e95363682ef7",
-                CardType = CardType.Treachery,
-                CardSubtype = Models.CardSubtype.Burden,
-                Keywords = new List<string>() { "Surge." },
-                Text = "When Revealed: The first player must either exhaust the Ring-bearer or reveal and additional encounter card",
-                Shadow = "Defending player raises his threat by 3.",
-                EncounterSet = "Flight to the Ford",
-                Quantity = 1,
-                CardNumber = 81,
-                Artist = Artist.Chris_Rahn
-            });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Eaten Alive!",
-                Id = "e8f413bf-3593-47fc-8813-4553d55dbb2a",
-                CardType = CardType.Treachery,
-                CardSubtype = Models.CardSubtype.Burden,
-                Keywords = new List<string>() { "Surge." },
-                Text = "When Revealed: The first player must deal X damage divided among heroes he controls where X is the number of players in the game.",
-                Shadow = "Shadow: Deal 1 damage to defending character.",
-                EncounterSet = "Flight to the Ford",
-                Quantity = 1,
-                CardNumber = 82,
-                Artist = Artist.Melanie_Maier
-            });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Panicked",
-                Id = "50c19cd1-3094-4bf7-b2dc-e21b145827b7",
-                CardType = CardType.Treachery,
-                CardSubtype = Models.CardSubtype.Burden,
-                Keywords = new List<string>() { "Surge." },
-                Text = "When Revealed: The first player raises his threat by 3 and passes the first player token to the next player.",
-                Shadow = "Shadow: Defending player exhausts a character he controls.",
-                EncounterSet = "Flight to the Ford",
-                Quantity = 1,
-                CardNumber = 83,
-                Artist = Artist.Marcia_George_Bogdan
-            });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Overcome by Terror",
-                
-                Id = "cdc303cb-bb1a-4409-a479-aa4155bd8ed5",
-                CardType = CardType.Treachery,
-                CardSubtype = Models.CardSubtype.Burden,
-                Keywords = new List<string>() { "Surge." },
-                Text = "When Revealed: The first player must exhaust The One ~Ring. If The One ~Ring is already exhausted, the first player must discard 2 cards at random from his hand.",
-                Shadow = "Shadow: Defending player discards 1 card at random from his hand.",
-                EncounterSet = "Flight to the Ford",
-                Quantity = 1,
-                CardNumber = 84,
-                Artist = Artist.Daarken
-            });
-            Cards.Add(new LotRCard() {
-                Title = "The One Ring",
-                Id = "c9575426-59ea-4863-bf6a-407e9eae3f33",
-                IsUnique = true,
-                CardType = CardType.Objective,
-                Traits = new List<string>() { "Artifact.", " Item.", " Ring." },
-                Text = 
-@"Setup: The first player claims The One ~Ring and attaches it to the Ring-bearer.
-
-Attached hero does not count against the hero limit. The first player gains control of attached hero.
-
-If The One ~Ring leaves play, the players lose the game.",
-                Quantity = 1,
-                CardNumber = 85,
-                Artist = Artist.Mike_Nash
-            });
+            addObjectiveAlly("Gildor Inglorion", EncounterSet.AShadowOfThePast.Name, 3, 2, 3, 3)
+                .WithUnique()
+                .WithBoon()
+                .WithTraits("Noldor.")
+                .WithText("The first player gains control of Gildor Inglorion.\r\nForced: At the end of the round, discard Gildor Inglorion. The first player may spend 1 Fellowship resource to cancel this effect.")
+                .WithFlavor("\"We think you had best come now with us.\"\r\n-The Fellowship of the Ring")
+                .WithInfo(77, 1, Artist.Alexandre_Dainche);
+            addObjective("Gandalf's Delay", EncounterSet.AShadowOfThePast.Name)
+                .WithBurden()
+                .WithText("Setup: Add Gandalf's Delay to the staging area.\r\nEach player draws 1 less card in his starting hand.")
+                .WithFlavor("The next day Frodo became really anxious, and kept a constant look-out for Gandalf. Thursday, his birthday morning, dawned as fair and clear as it had long ago for Bilbo's great party. Still Gandalf did not appear.\r\n-The Fellowship of the Ring")
+                .WithInfo(78, 1, Artist.Drazenka_Kimpel);
+            addTreachery("The Ring Draws Them", EncounterSet.AShadowOfThePast.Name)
+                .WithBurden()
+                .WithKeywords("Surge.")
+                .WithText("Surge.\r\nWhen Revealed: At the end of the phase, each enemy in the staging area engages the first player. If the One ~Ring is exhausted, this effect cannot be canceled.")
+                .WithFlavor("\"Also,\" he added, and his voice sank to a whisper, \"the Ring draws them\" -The Fellowship of the Ring")
+                .WithInfo(79, 1, Artist.Mike_Nash);
+            addTreachery("Weight of the Ring", EncounterSet.AShadowOfThePast.Name)
+                .WithBurden()
+                .WithKeywords("Surge.")
+                .WithText("Surge.\r\nWhen Revealed: Attach to the Ring-bearer. (Counts as a Condition attachment with the text: \"Forced: At the beginning of each quest phase, either exhaust The One ~Ring or reveal and additional encounter card this phase.\")")
+                .WithFlavor("Once more the desire to slip on the Ring came over Frodo... -The Fellowship of the Ring")
+                .WithInfo(80, 1, Artist.Mike_Nash);
+            addTreachery("Fear of Discovery", EncounterSet.FlightToTheFord.Name)
+                .WithBurden()
+                .WithKeywords("Surge.")
+                .WithText("Surge.\r\nWhen Revealed: The first player must either exhaust the Ring-bearer or reveal and additional encounter card")
+                .WithShadow("Shadow: Defending player raises his threat by 3.")
+                .WithInfo(81, 1, Artist.Chris_Rahn);
+            addTreachery("Eaten Alive!", EncounterSet.FlightToTheFord.Name)
+                .WithBurden()
+                .WithKeywords("Surge.")
+                .WithText("Surge.\r\nWhen Revealed: The first player must deal X damage divided among heroes he controls where X is the number of players in the game.")
+                .WithShadow("Shadow: Deal 1 damage to defending character.")
+                .WithInfo(82, 1, Artist.Melanie_Maier);
+            addTreachery("Panicked", EncounterSet.FlightToTheFord.Name)
+                .WithBurden()
+                .WithKeywords("Surge.")
+                .WithText("Surge.\r\nWhen Revealed: The first player raises his threat by 3 and passes the first player token to the next player.")
+                .WithShadow("Shadow: Defending player exhausts a character he controls.")
+                .WithInfo(83, 1, Artist.Marcia_George_Bogdan);
+            addTreachery("Overcome by Terror", EncounterSet.FlightToTheFord.Name)
+                .WithBurden()
+                .WithKeywords("Surge.")
+                .WithText("Surge.\r\nWhen Revealed: The first player must exhaust The One ~Ring. If The One ~Ring is already exhausted, the first player must discard 2 cards at random from his hand.")
+                .WithShadow("Shadow: Defending player discards 1 card at random from his hand.")
+                .WithInfo(84, 1, Artist.Daarken);
+            addObjective("The One Ring", EncounterSet.TheBlackRiders.Name)
+                .WithUnique()
+                .WithTraits("Artifact.", "Item.", "Ring.")
+                .WithText("Setup: The first player claims The One ~Ring and attaches it to the Ring-bearer.\r\nAttached hero does not count against the hero limit. The first player gains control of attached hero.\r\nIf The One ~Ring leaves play, the players lose the game.")
+                .WithInfo(85, 1, Artist.Mike_Nash);
         }
     }
 }

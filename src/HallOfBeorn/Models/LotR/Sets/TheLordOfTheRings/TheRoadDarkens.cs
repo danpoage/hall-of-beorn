@@ -356,7 +356,7 @@ Response: After attached hero exhausts to defend an attack, discard the top card
                 CardNumber = 19,
                 Quantity = 1,
                 Artist = Artist.Ignacio_Bazan_Lazcano
-            }.WithSuffix("Campaign"));
+            }.WithSlugSuffix("Campaign"));
             Cards.Add(new LotRCard()
             {
                 Title = "The Council of Elrond",
@@ -693,7 +693,7 @@ Forced: When ~Hills of Hollin is explored, each player raises his threat by 1 fo
                 CardNumber = 39,
                 Quantity = 1,
                 Artist = Artist.Juan_Carlos_Barquet
-            }.WithSuffix("Campaign"));
+            }.WithSlugSuffix("Campaign"));
             Cards.Add(new LotRCard()
             {
                 Title = "The Long Dark of Moria",
@@ -1043,7 +1043,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
                 CardNumber = 60,
                 Quantity = 1,
                 Artist = Artist.Katy_Grierson
-            }.WithSuffix("Campaign"));
+            }.WithSlugSuffix("Campaign"));
             Cards.Add(new LotRCard()
             {
                 Title = "The Great River",

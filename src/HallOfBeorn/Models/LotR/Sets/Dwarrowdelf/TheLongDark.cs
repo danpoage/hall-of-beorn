@@ -15,23 +15,13 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
             SetType = Models.SetType.Adventure_Pack;
             Cycle = "Dwarrowdelf";
 
-            Cards.Add(new LotRCard() {
-                
-                Title = "Abandoned Mine",
-                Id = "51223bd0-ffd1-11df-a976-0801211c9001",
-                CardType = CardType.Location,
-                EncounterSet = "The Long Dark",
-                Traits = new List<string>() { "Underground.", " Dark." },
-                Quantity = 3,
-                Text = "Lost: Return the top 2 Goblin enemies in the encounter discard pile to the staging area, if able.",
-                FlavorText = "\"The wealth of Moria was not in gold and jewels, the toys of the Dwarves; nor in iron, their servant.\"\r\n-Gandalf, The Fellowship of the Ring",
-                PassValue = true,
-                Threat = 3,
-                QuestPoints = 3,
-                VictoryPoints = 0,
-                CardNumber = 89,
-                Artist = Artist.Paolo_Puggioni
-            });
+            addLocation("Abandoned Mine", EncounterSet.TheLongDark.Name, 3, 3)
+                .WithTraits("Underground.", "Dark.")
+                .WithText("Lost: Return the top 2 Goblin enemies in the encounter discard pile to the staging area, if able.")
+                .WithFlavor("\"The wealth of Moria was not in gold and jewels, the toys of the Dwarves; nor in iron, their servant.\"\r\n-Gandalf, The Fellowship of the Ring")
+                .WithPassValue()
+                .WithInfo(89, 3, Artist.Paolo_Puggioni);
+            
             Cards.Add(new LotRCard() {
                 
                 Title = "Cave Spider",
@@ -81,23 +71,13 @@ Attached hero gets +1 Defense.",
                 CardNumber = 88,
                 Artist = Artist.Sara_Biddle
             });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Dwarven Forge",
-                Id = "51223bd0-ffd1-11df-a976-0801211c9006",
-                CardType = CardType.Location,
-                EncounterSet = "The Long Dark",
-                Traits = new List<string>() { "Underground.", " Dark." },
-                Quantity = 2,
-                Text = "Lost: Each player must choose and discard 1 card from his hand.",
-                FlavorText = "There hammer on the anvil smote,\r\nThere chisel clove, and graver wrote;\r\nThere forged was blade, and bount was hilt...\r\n-The Fellowship of the Ring",
-                PassValue = true,
-                Threat = 2,
-                QuestPoints = 4,
-                VictoryPoints = 0,
-                CardNumber = 90,
-                Artist = Artist.Cristi_Balanescu
-            });
+            addLocation("Dwarven Forge", EncounterSet.TheLongDark.Name, 2, 4)
+                .WithTraits("Underground.", "Dark.")
+                .WithText("Lost: Each player must choose and discard 1 card from his hand.")
+                .WithFlavor("There hammer on the anvil smote,\r\nThere chisel clove, and graver wrote;\r\nThere forged was blade, and bount was hilt...\r\n-The Fellowship of the Ring")
+                .WithPassValue()
+                .WithInfo(90, 2, Artist.Cristi_Balanescu);
+            
             addAlly("Erebor Battle Master", 3, Sphere.Tactics, false, 0, 1, 1, 2)
                 .WithTraits("Dwarf.", "Warrior.")
                 .WithText("Erebor Battle Master gets +1 Attack for each other Dwarf ally you control. (Limit +4 Attack.)")
@@ -149,20 +129,12 @@ Attached hero gets +1 Defense.",
                 CardNumber = 93,
                 Artist = Artist.Charles_Urbach
             });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Foul Air",
-                Id = "51223bd0-ffd1-11df-a976-0801211c9011",
-                CardType = CardType.Treachery,
-                EncounterSet = "The Long Dark",
-                Quantity = 4,
-                EasyModeQuantity = 1,
-                Text = "When Revealed: The first player makes a locate test. If this test is failed, deal 2 damage to all characters and trigger all 'Lost:' effects in play.",
-                FlavorText = "\"...I do not like the smell of the left-hand way: there is a foul air down there, or I am not guide.\"\r\n-Gandalf, The Fellowship of the Ring",
-                PassValue = true,
-                CardNumber = 94,
-                Artist = Artist.Jasper_Sandner
-            });
+            addTreachery("Foul Air", EncounterSet.TheLongDark.Name)
+                .WithText("When Revealed: The first player makes a locate test. If this test is failed, deal 2 damage to all characters and trigger all 'Lost:' effects in play.")
+                .WithFlavor("\"...I do not like the smell of the left-hand way: there is a foul air down there, or I am not guide.\"\r\n-Gandalf, The Fellowship of the Ring")
+                .WithPassValue()
+                .WithEasyModeQuantity(1)
+                .WithInfo(94, 4, Artist.Jasper_Sandner);
             Cards.Add(new LotRCard() {
                 
                 Title = "Fresh Tracks",
@@ -175,19 +147,11 @@ Attached hero gets +1 Defense.",
                 CardNumber = 78,
                 Artist = Artist.Garret_DeChellis
             });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Gathering Ground",
-                Id = "51223bd0-ffd1-11df-a976-0801211c9013",
-                CardType = CardType.Treachery,
-                EncounterSet = "The Long Dark",
-                Quantity = 1,
-                EasyModeQuantity = 0,
-                Text = "When Revealed: Attach this card to a location in the staging area with the highest combined threat and remaining quest points. (Counts as a Condition attachment with the text: 'Each enemy revealed from the encounter deck gains surge.')",
-                PassValue = true,
-                CardNumber = 95,
-                Artist = Artist.Jason_Juta
-            });
+            addTreachery("Gathering Ground", EncounterSet.TheLongDark.Name)
+                .WithText("When Revealed: Attach this card to a location in the staging area with the highest combined threat and remaining quest points. (Counts as a Condition attachment with the text: 'Each enemy revealed from the encounter deck gains surge.')")
+                .WithPassValue()
+                .WithEasyModeQuantity(0)
+                .WithInfo(95, 1, Artist.Jason_Juta);
             Cards.Add(new LotRCard() {
                 
                 Title = "Goblin Sneak",
@@ -311,39 +275,18 @@ Attached hero gets +1 Defense.",
                 CardNumber = 100,
                 Artist = Artist.Allison_Theus
             });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Silent Caverns",
-                Id = "51223bd0-ffd1-11df-a976-0801211c9023",
-                CardType = CardType.Location,
-                EncounterSet = "The Long Dark",
-                Traits = new List<string>() { "Underground." },
-                Quantity = 2,
-                Text = "Lost: Exhaust all characters.",
-                PassValue = true,
-                Threat = 1,
-                QuestPoints = 3,
-                VictoryPoints = 0,
-                CardNumber = 91,
-                Artist = Artist.Trudi_Castle
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Twisting Passage",
-                Id = "51223bd0-ffd1-11df-a976-0801211c9024",
-                CardType = CardType.Location,
-                EncounterSet = "The Long Dark",
-                Traits = new List<string>() { "Underground.", " Dark." },
-                Quantity = 2,
-                Text = "Forced: Before placing progress tokens on Twisting Passage, the first player must make a locate test. If this test is failed, do not place any progress tokens on Twisting Passage and trigger all 'Lost:' effects in play.",
-                HtmlTemplate = "<p><b>Forced:</b> Before placing progress tokens on {self}, the first player must make a locate test. If this test is failed, do not place any progress tokens on {self} and trigger all <b>&quot;Lost:&quot;</b> effects in play.</p>{pass}",
-                PassValue = true,
-                Threat = 3,
-                QuestPoints = 5,
-                VictoryPoints = 0,
-                CardNumber = 92,
-                Artist = Artist.Ben_Zweifel
-            });
+            addLocation("Silent Caverns", EncounterSet.TheLongDark.Name, 1, 3)
+                .WithTraits("Underground.")
+                .WithText("Lost: Exhaust all characters.")
+                .WithPassValue()
+                .WithInfo(91, 2, Artist.Trudi_Castle);
+            addLocation("Twisting Passage", EncounterSet.TheLongDark.Name, 3, 5)
+                .WithTraits("Underground.", "Dark.")
+                .WithText("Forced: Before placing progress tokens on Twisting Passage, the first player must make a locate test. If this test is failed, do not place any progress tokens on Twisting Passage and trigger all 'Lost:' effects in play.")
+                .WithTemplate("<p class='main-text'><b>Forced:</b> Before placing progress tokens on {self}, the first player must make a locate test. If this test is failed, do not place any progress tokens on {self} and trigger all <b>&quot;Lost:&quot;</b> effects in play.</p>{pass}")
+                .WithPassValue()
+                .WithInfo(92, 2, Artist.Ben_Zweifel);
+            
             Cards.Add(new LotRCard() {
                 
                 Title = "Vast and Intricate",

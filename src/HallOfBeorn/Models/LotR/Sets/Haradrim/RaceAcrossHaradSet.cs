@@ -110,14 +110,13 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithShadow("Shadow: Raise your threat by 1.")
                 .WithEasyModeQuantity(2)
                 .WithInfo(46, 3, Artist.Alexander_Gustafson));
-            addCard(LotRCard.Quest("Setting Out", 1, setName, 0)
-                .WithStageLetter('A')
+            addQuest("Setting Out", EncounterSet.RaceAcrossHarad.Name, 1, 'A', 0)
                 .WithFlavor("Emerging from your hunt in the great jungle of the south, you set out across the vast desert of Harad on your long journey north to Gondor.")
                 .WithText("Setup: Set Ford of Harnen and 1 copy of Uruk Warg-rider aside, out of play. Each player takes control of a Tamed Mumak. Remove each remaining Tamed Mumak from the game. Create the Orc’s area with a second quest deck consisting of stage 1C, 2C, 3C, and 4C as well as Uruk Chieftain.")
                 .WithOppositeFlavor("Riding atop the Oliphaunts that you captured in the jungle, you set an easy pace.")
                 .WithOppositeText("When Revealed: Each player searches the encounter deck for 1 different location and adds it to the staging area. Shuffle the encounter deck. Advance to stage 2A.")
                 .WithIncludedEncounterSets(EncounterSet.MordorOrcs, EncounterSet.DesertSands)
-                .WithInfo(47, 1, Artist.Sebastian_Zakrzewski));
+                .WithInfo(47, 1, Artist.Sebastian_Zakrzewski);
             addCard(LotRCard.Quest("Racing North", 2, setName, 15)
                 .WithFlavor("During the night, you hear the howls of distant Wargs drawing nearer. The riders of Mordor are scouring the sandy plains for you and the remnant of Kahlie’s tribe. You give the Mumak’s reigns a hard shake and quicken the pace.")
                 .WithText("When Revealed: Choose the staging area or the Orc's area. Add the set aside Uruk Warg-rider to the chosen area.")

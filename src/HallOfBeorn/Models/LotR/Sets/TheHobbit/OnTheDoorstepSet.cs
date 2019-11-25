@@ -1199,7 +1199,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 VictoryPoints = 10,
                 CardNumber = 43,
                 Artist = Artist.Joel_Hustak
-            }.WithSuffix("Location"));
+            }.WithSlugSuffix("Location"));
             Cards.Add(new LotRCard() {
                 
                 Title = "The Spider's Glade",

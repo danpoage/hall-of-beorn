@@ -199,7 +199,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 Quantity = 1,
                 Artist = Artist.Mariusz_Gandzel,
                 SecondArtist = Artist.Titus_Lunter
-            }.WithSuffix("No End in Sight"));
+            }.WithSlugSuffix("No End in Sight"));
             Cards.Add(new LotRCard()
             {
                 Title = "Through the Marsh",
@@ -217,7 +217,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 Quantity = 1,
                 Artist = Artist.Mariusz_Gandzel,
                 SecondArtist = Artist.Adam_Lane
-            }.WithSuffix("A Weary Passage"));
+            }.WithSlugSuffix("A Weary Passage"));
             Cards.Add(new LotRCard()
             {
                 Title = "Through the Marsh",
@@ -235,7 +235,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 Quantity = 1,
                 Artist = Artist.Mariusz_Gandzel,
                 SecondArtist = Artist.Adam_Lane
-            }.WithSuffix("A Forgotten Land"));
+            }.WithSlugSuffix("A Forgotten Land"));
             Cards.Add(new LotRCard()
             {
                 Title = "Lost in the Swanfleet",
@@ -254,7 +254,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 Quantity = 1,
                 Artist = Artist.Silver_Saaremael,
                 SecondArtist = Artist.Ilich_Henriquez
-            }.WithSuffix("Impassable Marshland"));
+            }.WithSlugSuffix("Impassable Marshland"));
             Cards.Add(new LotRCard()
             {
                 Title = "Lost in the Swanfleet",
@@ -273,7 +273,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 Quantity = 1,
                 Artist = Artist.Silver_Saaremael,
                 SecondArtist = Artist.Matt_Bradbury
-            }.WithSuffix("A Treacherous Swamp"));
+            }.WithSlugSuffix("A Treacherous Swamp"));
             Cards.Add(new LotRCard()
             {
                 Title = "Lost in the Swanfleet",
@@ -292,7 +292,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 Quantity = 1,
                 Artist = Artist.Silver_Saaremael,
                 SecondArtist = Artist.Silver_Saaremael
-            }.WithSuffix("Creatures of a Forgotten Age"));
+            }.WithSlugSuffix("Creatures of a Forgotten Age"));
             Cards.Add(new LotRCard()
             {
                 Title = "Out of the Swamp",

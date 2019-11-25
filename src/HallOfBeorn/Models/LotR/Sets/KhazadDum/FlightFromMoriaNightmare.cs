@@ -64,7 +64,7 @@ Players may bypass this quest card at the end of the combat phase.",
                 CardNumber = 2,
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Gabriel_Verdon
-            }.WithSuffix("Pursued By Shadow"));
+            }.WithSlugSuffix("Pursued By Shadow"));
             Cards.Add(new LotRCard()
             {
                 Title = "Search for an Exit",
@@ -85,7 +85,7 @@ If The ~Nameless Fear has 10 or more damage on it, remove all damage from it and
                 CardNumber = 3,
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Alvaro_Calvo_Escudero
-            }.WithSuffix("Blocked by Flame"));
+            }.WithSlugSuffix("Blocked by Flame"));
             Cards.Add(new LotRCard()
             {
                 Title = "Search for an Exit",
@@ -104,7 +104,7 @@ If The ~Nameless Fear has 10 or more damage on it, remove all damage from it and
                 CardNumber = 4,
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Mark_Behm
-            }.WithSuffix("Ghash"));
+            }.WithSlugSuffix("Ghash"));
             Cards.Add(new LotRCard()
             {
                 Title = "Swarming Goblins",

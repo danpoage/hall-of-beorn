@@ -45,7 +45,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.David_Lecossu,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.HazardsOfThePit, EncounterSet.TwistsAndTurns }
-            }.WithSuffix("Sheltered Rocks"));
+            }.WithSlugSuffix("Sheltered Rocks"));
             Cards.Add(new LotRCard() {
                 Title = "Below the Mines",
                 StageNumber = 4,
@@ -61,7 +61,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Cristi_Balanescu,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.HazardsOfThePit, EncounterSet.TwistsAndTurns }
-            }.WithSuffix("The Endless Caves"));
+            }.WithSlugSuffix("The Endless Caves"));
             Cards.Add(new LotRCard() {
                 Title = "Below the Mines",
                 StageNumber = 4,
@@ -77,7 +77,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Cristi_Balanescu,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.HazardsOfThePit, EncounterSet.TwistsAndTurns }
-            }.WithSuffix("The Shivering Bank"));
+            }.WithSlugSuffix("The Shivering Bank"));
             Cards.Add(new LotRCard() {
                 Title = "Below the Mines",
                 StageNumber = 4,
@@ -93,7 +93,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 Artist = Artist.Cristi_Balanescu,
                 BackArtist = Artist.Cristi_Balanescu,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.GoblinsOfTheDeep, EncounterSet.HazardsOfThePit, EncounterSet.TwistsAndTurns }
-            }.WithSuffix("Old One Lair"));
+            }.WithSlugSuffix("Old One Lair"));
             Cards.Add(new LotRCard() {
                 
                 Title = "Daeron's Runes",

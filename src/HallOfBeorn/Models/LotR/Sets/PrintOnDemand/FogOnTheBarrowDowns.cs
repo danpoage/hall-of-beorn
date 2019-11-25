@@ -407,23 +407,14 @@ Forced: After this stage is defeated, advance to stage 3B at the beginning of th
                 CardNumber = 20,
                 Quantity = 1,
                 Artist = Artist.Emrah_Elmasli
-            }.WithSuffix("Campaign"));
-            Cards.Add(new LotRCard()
-            {
-                Title = "Ho! Tom Bombadil!",
-                Id = "82249D64-2D0A-484D-BB52-AA4F32D98A3E",
-                Sphere = Models.LotR.Sphere.Neutral,
-                CardType = CardType.Event,
-                CardSubtype = CardSubtype.Boon,
-                ResourceCost = 0,
-                Traits = new List<string> { "Song." },
-                Text = "Setup: The first player adds this card to his hand.\r\nResponse: Add this card to the victory display and remove it from the campaign pool to cancel the \"when revealed\" effects of an encounter card just revealed from the encounter deck.",
-                FlavorText = "By fire, sun and moon, harken now and hear us!\r\nCome, Tom Bombadil, for our need is near us!\r\n-Frodo, The Fellowship of the Ring",
-                VictoryPoints = 1,
-                CardNumber = 21,
-                Quantity = 1,
-                Artist = Artist.Romana_Kendelic
-            });
+            }.WithSlugSuffix("Campaign"));
+            addEvent("Ho! Tom Bombadil!", 0, Sphere.Neutral)
+                .WithBoon()
+                .WithTraits("Song.")
+                .WithText("Setup: The first player adds this card to his hand.\r\nResponse: Add this card to the victory display and remove it from the campaign pool to cancel the \"when revealed\" effects of an encounter card just revealed from the encounter deck.")
+                .WithFlavor("By fire, sun and moon, harken now and hear us!\r\nCome, Tom Bombadil, for our need is near us!\r\n-Frodo, The Fellowship of the Ring")
+                .WithVictoryPoints(1)
+                .WithInfo(21, 1, Artist.Romana_Kendelic);
         }
     }
 }
