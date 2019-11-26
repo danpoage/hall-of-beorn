@@ -615,8 +615,7 @@ namespace SetBuilder
 
             if (enemy.IsUnique)
             {
-                s.Append(withUniqueTag);
-                s.AppendLine();
+                s.AppendLine(withUniqueTag);
             }
 
             s.Append(cardTextBox(enemy));
@@ -640,8 +639,7 @@ namespace SetBuilder
 
             if (enemy.IsUnique)
             {
-                s.Append(withUniqueTag);
-                s.AppendLine();
+                s.AppendLine(withUniqueTag);
             }
 
             s.Append(cardTextBox(enemy));
@@ -662,8 +660,7 @@ namespace SetBuilder
 
             if (location.IsUnique)
             {
-                s.Append(withUniqueTag);
-                s.AppendLine();
+                s.AppendLine(withUniqueTag);
             }
 
             s.Append(cardTextBox(location));
@@ -711,8 +708,7 @@ namespace SetBuilder
 
             if (objective.IsUnique)
             {
-                s.Append(withUniqueTag);
-                s.AppendLine();
+                s.AppendLine(withUniqueTag);
             }
 
             s.Append(cardTextBox(objective));
@@ -731,6 +727,7 @@ namespace SetBuilder
                 stat(objectiveHero.Defense),
                 stat(objectiveHero.HitPoints)
                 );
+            s.AppendLine();
 
             s.Append(cardTextBox(objectiveHero));
 
@@ -748,6 +745,7 @@ namespace SetBuilder
                 stat(objectiveAlly.Defense),
                 stat(objectiveAlly.HitPoints)
                 );
+            s.AppendLine();
 
             if (objectiveAlly.IsUnique)
             {
