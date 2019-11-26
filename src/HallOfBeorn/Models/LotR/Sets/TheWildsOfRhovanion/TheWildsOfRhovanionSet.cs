@@ -238,7 +238,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
             addLocation("Contested Depths", EncounterSet.TheKingsQuest.Name, 1, 5)
                 .WithTraits("Underground.")
                 .WithText("Contested Depths gets +1 Threat for each location in the victory display.\r\nForced: After the players travel to Contested Depths, either raise each player's threat by 1 for each location in the victory display, or discard Contested Depths and replace it with the top card of the Caves deck.")
-                .WithInfo(45, 3, Artist.Paolo_Puggioni);
+                .WithInfo(45, 3, Artist.Paulo_Puggioni);
             addLocation("Deep Chasm", EncounterSet.TheKingsQuest.Name, 2, 6)
                 .WithTraits("Underground.", "Dark.")
                 .WithKeywords("Deep.")

@@ -727,9 +727,37 @@ namespace HallOfBeorn.Models.LotR
             return this;
         }
 
+        public LotRCard WithFlavorLine(string flavor)
+        {
+            if (string.IsNullOrWhiteSpace(FlavorText))
+            {
+                FlavorText = flavor;
+            }
+            else
+            {
+                FlavorText += Environment.NewLine + flavor;
+            }
+
+            return this;
+        }
+
         public LotRCard WithOppositeFlavor(string flavor)
         {
             this.OppositeFlavorText = flavor;
+            return this;
+        }
+
+        public LotRCard WithOppositeFlavorLine(string flavor)
+        {
+            if (string.IsNullOrWhiteSpace(OppositeFlavorText))
+            {
+                OppositeFlavorText = flavor;
+            }
+            else
+            {
+                OppositeFlavorText += Environment.NewLine + flavor;
+            }
+
             return this;
         }
 

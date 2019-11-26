@@ -447,12 +447,12 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet ReturnToMirkwood = new Sets.ShadowsOfMirkwood.ReturnToMirkwoodSet();
         
         public static CardSet KhazadDum = new Sets.KhazadDum.KhazadDumSet();
-        public static CardSet TheRedhornGate = new Sets.Dwarrowdelf.TheRedhornGate();
-        public static CardSet RoadToRivendell = new Sets.Dwarrowdelf.RoadtoRivendell();
-        public static CardSet TheWatcherInTheWater = new Sets.Dwarrowdelf.TheWatcherintheWater();
-        public static CardSet TheLongDark = new Sets.Dwarrowdelf.TheLongDark();
-        public static CardSet FoundationsOfStone = new Sets.Dwarrowdelf.FoundationsofStone();
-        public static CardSet ShadowAndFlame = new Sets.Dwarrowdelf.ShadowandFlame();
+        public static CardSet TheRedhornGate = new Sets.Dwarrowdelf.TheRedhornGateSet();
+        public static CardSet RoadToRivendell = new Sets.Dwarrowdelf.RoadToRivendellSet();
+        public static CardSet TheWatcherInTheWater = new Sets.Dwarrowdelf.TheWatcherInTheWaterSet();
+        public static CardSet TheLongDark = new Sets.Dwarrowdelf.TheLongDarkSet();
+        public static CardSet FoundationsOfStone = new Sets.Dwarrowdelf.FoundationsOfStoneSet();
+        public static CardSet ShadowAndFlame = new Sets.Dwarrowdelf.ShadowAndFlameSet();
 
         public static CardSet HeirsOfNumenor = new Sets.HeirsOfNumenor.HeirsofNumenorSet();
         public static CardSet TheStewardsFear = new Sets.AgainstTheShadow.TheStewardsFear();

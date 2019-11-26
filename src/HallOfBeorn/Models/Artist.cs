@@ -132,7 +132,7 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Kristina_Carroll);
             all.Add(Artist.Jason_Juta);
 
-            all.Add(Artist.Paolo_Puggioni);
+            all.Add(Artist.Paulo_Puggioni);
             all.Add(Artist.Charles_Urbach);
 
             all.Add(Artist.Stephen_M_Mabee);
@@ -1106,7 +1106,7 @@ namespace HallOfBeorn.Models
         public static Artist Oscar_Romer = new Artist { Name = "Oscar Römer", URL = "http://oscarromerart.blogspot.com" };
         public static Artist Owen_William_Weber = new Artist { Name = "Owen William Weber", URL = "http://oweber.blogspot.com" };
         public static Artist Paul_Guzenko = new Artist { Name = "Paul Guzenko", URL = "http://www.guzboroda.com/?author=1" };
-        public static Artist Paolo_Puggioni = new Artist { Name = "Paulo Puggioni", URL = "http://www.paolopuggioni.com" };
+        public static Artist Paulo_Puggioni = new Artist { Name = "Paulo Puggioni", URL = "http://www.paolopuggioni.com" };
         public static Artist Pedro_Amato = new Artist { Name = "Pedro Amato", URL = "http://aragah.deviantart.com" };
         public static Artist Piya_Wannachaiwong = new Artist { Name = "Piya Wannachaiwong", URL = "http://www.piyastudios.com" };
         public static Artist Rafal_Hrynkiewicz = new Artist { Name = "Rafał Hrynkiewicz", URL = "http://mcf.deviantart.com" };

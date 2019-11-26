@@ -269,7 +269,7 @@ namespace HallOfBeorn.Models.LotR.Sets.FirstAge
                 Text = "Quest Action: Exhaust Green-elf Ranger to choose enemy or location. The next encounter card of the chosen type that is added to the staging area gets -3 Threat until the end of the phase.",
                 EncounterSet = "First Age",
                 CardNumber = 32,
-                Artist = Artist.Paolo_Puggioni
+                Artist = Artist.Paulo_Puggioni
             }.WithTraits("Nandor.", "Ranger.")
             .WithKeywords("Ranged."));
             Cards.Add(new LotRCard() {

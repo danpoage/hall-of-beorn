@@ -44,10 +44,12 @@ namespace SetBuilder
         private const string withTextLineFormat              = "                .WithTextLine(\"{0}\")";
         private const string withShadowFormat                = "                .WithShadow(\"{0}\")";
         private const string withFlavorFormat                = "                .WithFlavor(\"{0}\")";
+        private const string withFlavorLineFormat            = "                .WithFlavorLine(\"{0}\")";
         private const string withTemplateFormat              = "                .WithTemplate(\"{0}\")";
         private const string withOppositeTitleFormat         = "                .WithOppositeTitle(\"{0}\")";
         private const string withOppositeTextLineFormat      = "                .WithOppositeTextLine(\"{0}\")";
         private const string withOppositeFlavorFormat        = "                .WithOppositeFlavor(\"{0}\")";
+        private const string withOppositeFlavorLineFormat    = "                .WithOppositeFlavorLine(\"{0}\")";
         private const string withOppositeTemplateFormat      = "                .WithTemplate2(\"{0}\")";
         private const string withIncludedEncounterSetsFormat = "                .WithIncludedEncounterSets({0})";
         private const string withVictoryPointsFormat         = "                .WithVictoryPoints({0})";
@@ -114,7 +116,19 @@ namespace SetBuilder
             );
         }
 
-        private static string normalizeEncounterSetName(string name)
+        private static string normalizeArtistName(string name)
+        {
+            return string.Join("_", name.Split(' ')
+                .Select(token => token
+                    .Replace("'", string.Empty)
+                    .Replace("-", string.Empty)
+                    .Replace(".", string.Empty)
+                    .NormalizeCaseSensitiveString()
+                )
+            );  
+        }
+
+        private static string normalizeSetName(string name)
         {
             return string.Join(string.Empty, name.Split(' ')
                 .Select(token =>
@@ -135,15 +149,16 @@ namespace SetBuilder
 
             return text
                 .Replace("\"", quote)
-                .Replace("\r\n", lineBreak); 
+                .Replace("\r\n", lineBreak)
+                .Trim(); 
         }
 
         private static string header(CardSet cardSet)
         {
-            var setName = normalizeName(cardSet.Name, string.Empty);
+            var setName = normalizeSetName(cardSet.Name);
 
             var cycleName = !string.IsNullOrWhiteSpace(cardSet.Cycle) 
-                ? normalizeName(cardSet.Cycle, string.Empty) 
+                ? normalizeSetName(cardSet.Cycle) 
                 : setName;
 
             var s = new StringBuilder(string.Empty);
@@ -176,7 +191,7 @@ namespace SetBuilder
             
             s.AppendLine("        }");
             s.AppendLine("    }");
-            s.AppendLine("}");
+            s.Append("}");
 
             return s.ToString();
         }
@@ -260,9 +275,16 @@ namespace SetBuilder
             if (string.IsNullOrWhiteSpace(card.FlavorText))
                 return string.Empty;
 
-            return string.Format(withFlavorFormat,
-                normalizeText(card.FlavorText, textQuote, textLineBreak)) 
-                + Environment.NewLine;
+            var s = new StringBuilder(string.Empty);
+
+            foreach (var line in card.FlavorText.SplitLines())
+            {
+                s.AppendFormat(withFlavorLineFormat,
+                    normalizeText(line, textQuote, textLineBreak));
+                s.AppendLine();
+            }
+
+            return s.ToString();
         }
 
         private static string withTemplate(LotRCard card)
@@ -297,9 +319,16 @@ namespace SetBuilder
             if (string.IsNullOrWhiteSpace(card.OppositeFlavorText))
                 return string.Empty;
 
-            return string.Format(withOppositeFlavorFormat,
-                normalizeText(card.OppositeFlavorText, textQuote, textLineBreak)) 
-                + Environment.NewLine;
+            var s = new StringBuilder(string.Empty);
+
+            foreach (var line in card.OppositeFlavorText.SplitLines())
+            {
+                s.AppendFormat(withOppositeFlavorLineFormat,
+                    normalizeText(line, textQuote, textLineBreak));
+                s.AppendLine();
+            }
+
+            return s.ToString();
         }
 
         private static string withOppositeTemplate(LotRCard card)
@@ -315,12 +344,6 @@ namespace SetBuilder
         private static string cardTextGlyphs(LotRCard card)
         {
             var s = new StringBuilder(string.Empty);
-
-            if (!string.IsNullOrWhiteSpace(card.SlugSuffix))
-            {
-                s.AppendFormat(withSlugSuffixFormat, card.SlugSuffix);
-                s.AppendLine();
-            }
 
             if (card.SiegePoints.HasValue && card.SiegePoints > 0)
             {
@@ -356,7 +379,7 @@ namespace SetBuilder
 
         private static string artist(string name)
         {
-            return name != null ? normalizeName(name, "_") : "Unknown";
+            return !string.IsNullOrWhiteSpace(name) ? normalizeArtistName(name) : "Unknown";
         }
 
         private static string withInfo(LotRCard card)
@@ -373,6 +396,18 @@ namespace SetBuilder
         private static string cardTextBox(LotRCard card)
         {
             var s = new StringBuilder(string.Empty);
+
+            if (!string.IsNullOrWhiteSpace(card.OppositeTitle))
+            {
+                s.AppendFormat(withOppositeTitleFormat, card.OppositeTitle);
+                s.AppendLine();
+            }
+
+            if (!string.IsNullOrWhiteSpace(card.SlugSuffix))
+            {
+                s.AppendFormat(withSlugSuffixFormat, card.SlugSuffix);
+                s.AppendLine();
+            }
 
             if (card.HasThumbnail)
             {
@@ -412,12 +447,6 @@ namespace SetBuilder
 
             s.Append(cardTextGlyphs(card));
 
-            if (!string.IsNullOrWhiteSpace(card.OppositeTitle))
-            {
-                s.AppendFormat(withOppositeTitleFormat, card.OppositeTitle);
-                s.AppendLine();
-            }
-
             if (card.BackArtist != null)
             {
                 s.AppendFormat(withBackArtistFormat, artist(card.BackArtist.Name));
@@ -439,6 +468,17 @@ namespace SetBuilder
             if (card.Year > 0)
             {
                 s.AppendFormat(withYearFormat, card.Year);
+                s.AppendLine();
+            }
+
+            if (card.IncludedEncounterSets != null && card.IncludedEncounterSets.Count > 0)
+            {
+                var encounterSets = string.Join(", ",
+                    card.IncludedEncounterSets
+                        .Select(es => "EncounterSet." + normalizeSetName(es.Name))
+                );
+                s.AppendFormat(withIncludedEncounterSetsFormat,
+                    encounterSets);
                 s.AppendLine();
             }
 
@@ -558,14 +598,6 @@ namespace SetBuilder
                 quest.StageLetter,
                 stat(quest.QuestPoints)
                 );
-            s.AppendLine();
-
-            var encounterSets = string.Join(", ",
-                quest.IncludedEncounterSets
-                    .Select(es => "EncounterSet." + normalizeEncounterSetName(es.Name))
-                );
-            s.AppendFormat(withIncludedEncounterSetsFormat,
-                encounterSets);
             s.AppendLine();
 
             s.Append(cardTextBox(quest));

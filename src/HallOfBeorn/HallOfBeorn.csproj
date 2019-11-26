@@ -805,7 +805,7 @@
     <Compile Include="Models\LotR\Sets\DreamChaser\FlightOfTheStormcallerSet.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\FlightToTheFordNightmare.cs" />
     <Compile Include="Models\LotR\Sets\PrintOnDemand\FogOnTheBarrowDowns.cs" />
-    <Compile Include="Models\LotR\Sets\Dwarrowdelf\FoundationsOfStone.cs" />
+    <Compile Include="Models\LotR\Sets\Dwarrowdelf\FoundationsOfStoneSet.cs" />
     <Compile Include="Models\LotR\Sets\Dwarrowdelf\FoundationsOfStoneNightmare.cs" />
     <Compile Include="Models\LotR\Sets\HeirsOfNumenor\HeirsOfNumenorSet.cs" />
     <Compile Include="Models\LotR\Sets\TheVoiceOfIsengard\IntoFangornNightmare.cs" />
@@ -842,7 +842,7 @@
     <Compile Include="Models\LotR\Sets\Core\PassageThroughMirkwoodNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\ShadowsOfMirkwood\ReturnToMirkwoodSet.cs" />
     <Compile Include="Models\LotR\Sets\ShadowsOfMirkwood\ReturnToMirkwoodNightmare.cs" />
-    <Compile Include="Models\LotR\Sets\Dwarrowdelf\RoadToRivendell.cs" />
+    <Compile Include="Models\LotR\Sets\Dwarrowdelf\RoadToRivendellSet.cs" />
     <Compile Include="Models\LotR\Sets\Dwarrowdelf\RoadToRivendellNightmare.cs" />
     <Compile Include="Models\LotR\Sets\Dwarrowdelf\ShadowAndFlameSet.cs" />
     <Compile Include="Models\LotR\Sets\Dwarrowdelf\ShadowAndFlameNightmare.cs" />
@@ -860,13 +860,13 @@
     <Compile Include="Models\LotR\Sets\TheHobbit\OverHillAndUnderHillSet.cs" />
     <Compile Include="Models\LotR\Sets\ShadowsOfMirkwood\TheHuntForGollumSet.cs" />
     <Compile Include="Models\LotR\Sets\ShadowsOfMirkwood\TheHuntForGollumNightmare.cs" />
-    <Compile Include="Models\LotR\Sets\Dwarrowdelf\TheLongDark.cs" />
+    <Compile Include="Models\LotR\Sets\Dwarrowdelf\TheLongDarkSet.cs" />
     <Compile Include="Models\LotR\Sets\Dwarrowdelf\TheLongDarkNightmare.cs" />
     <Compile Include="Models\LotR\Sets\PrintOnDemand\TheMassingAtOsgiliath.cs" />
     <Compile Include="Models\LotR\Sets\AgainstTheShadow\TheMorgulVale.cs" />
     <Compile Include="Models\LotR\Sets\TheRingMaker\TheNinInEilphNightmare.cs" />
     <Compile Include="Models\LotR\Sets\PrintOnDemand\TheOldForest.cs" />
-    <Compile Include="Models\LotR\Sets\Dwarrowdelf\TheRedhornGate.cs" />
+    <Compile Include="Models\LotR\Sets\Dwarrowdelf\TheRedhornGateSet.cs" />
     <Compile Include="Models\LotR\Sets\Dwarrowdelf\TheRedhornGateNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\TheRoadDarkens.cs" />
     <Compile Include="Models\LotR\Sets\PrintOnDemand\TheRuinsOfBelegost.cs" />
@@ -882,7 +882,7 @@
     <Compile Include="Models\LotR\Sets\TheRingMaker\TheThreeTrialsNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\TheTreasonOfSaruman.cs" />
     <Compile Include="Models\LotR\Sets\AngmarAwakened\TheWastesOfEriador.cs" />
-    <Compile Include="Models\LotR\Sets\Dwarrowdelf\TheWatcherInTheWater.cs" />
+    <Compile Include="Models\LotR\Sets\Dwarrowdelf\TheWatcherInTheWaterSet.cs" />
     <Compile Include="Models\LotR\Sets\Dwarrowdelf\TheWatcherInTheWaterNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheVoiceOfIsengard\ToCatchAnOrcNightmare.cs" />
     <Compile Include="Models\LotR\Sets\AngmarAwakened\TheTreacheryOfRhudaur.cs" />
