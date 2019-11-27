@@ -541,26 +541,26 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheAntleredCrown = new Sets.TheRingMaker.TheAntleredCrownSet();
 
         public static CardSet TheLostRealm = new Sets.TheLostRealm.TheLostRealmSet();
-        public static CardSet TheWastesOfEriador = new Sets.AngmarAwakened.TheWastesOfEriador();
-        public static CardSet EscapeFromMountGram = new Sets.AngmarAwakened.EscapeFromMountGram();
+        public static CardSet TheWastesOfEriador = new Sets.AngmarAwakened.TheWastesOfEriadorSet();
+        public static CardSet EscapeFromMountGram = new Sets.AngmarAwakened.EscapeFromMountGramSet();
         public static CardSet AcrossTheEttenmoors = new Sets.AngmarAwakened.AcrossTheEttenmoorsSet();
-        public static CardSet TheTreacheryOfRhudaur = new Sets.AngmarAwakened.TheTreacheryOfRhudaur();
-        public static CardSet TheBattleOfCarnDum = new Sets.AngmarAwakened.TheBattleOfCarnDum();
-        public static CardSet TheDreadRealm = new Sets.AngmarAwakened.TheDreadRealm();
+        public static CardSet TheTreacheryOfRhudaur = new Sets.AngmarAwakened.TheTreacheryOfRhudaurSet();
+        public static CardSet TheBattleOfCarnDum = new Sets.AngmarAwakened.TheBattleOfCarnDumSet();
+        public static CardSet TheDreadRealm = new Sets.AngmarAwakened.TheDreadRealmSet();
 
         public static CardSet TheGreyHavens = new Sets.TheGreyHavens.TheGreyHavensSet();
         public static CardSet FlightOfTheStormcaller = new Sets.DreamChaser.FlightOfTheStormcallerSet();
         public static CardSet TheThingInTheDepths = new Sets.DreamChaser.TheThingInTheDepthsSet();
         public static CardSet TempleOfTheDeceived = new Sets.DreamChaser.TempleOfTheDeceivedSet();
-        public static CardSet TheDrownedRuins = new Sets.DreamChaser.TheDrownedRuins();
+        public static CardSet TheDrownedRuins = new Sets.DreamChaser.TheDrownedRuinsSet();
         public static CardSet AStormOnCobasHaven = new Sets.DreamChaser.AStormOnCobasHavenSet();
-        public static CardSet TheCityOfCorsairs = new Sets.DreamChaser.TheCityOfCorsairs();
+        public static CardSet TheCityOfCorsairs = new Sets.DreamChaser.TheCityOfCorsairsSet();
 
         public static CardSet TheSandsOfHarad = new Sets.TheSandsOfHarad.TheSandsOfHaradSet();
         public static CardSet TheMumakil = new Sets.Haradrim.TheMumakilSet();
         public static CardSet RaceAcrossHarad = new Sets.Haradrim.RaceAcrossHaradSet();
         public static CardSet BeneathTheSands = new Sets.Haradrim.BeneathTheSandsSet();
-        public static CardSet TheBlackSerpent = new Sets.Haradrim.TheBlackSerpent();
+        public static CardSet TheBlackSerpent = new Sets.Haradrim.TheBlackSerpentSet();
         public static CardSet TheDungeonsOfCirithGurat = new Sets.Haradrim.TheDungeonsOfCirithGuratSet();
         public static CardSet TheCrossingsOfPoros = new Sets.Haradrim.TheCrossingsOfPorosSet();
 

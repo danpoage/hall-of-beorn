@@ -678,7 +678,7 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet LostInMirkwood = new EncounterSet { Name = "Lost in Mirkwood", Set = setNameWilds };
         public static EncounterSet JourneyUpTheAnduin = new EncounterSet { Name = "Journey up the Anduin", Set = setNameWilds };
         public static EncounterSet TheKingsQuest = new EncounterSet { Name = "The King's Quest", Set = setNameWilds };
-        public static EncounterSet LostInWilderland = new EncounterSet { Name = "Lost in the Wilderness", Set = setNameWilds };
+        public static EncounterSet LostInWilderland = new EncounterSet { Name = "Lost in Wilderland", Set = setNameWilds };
         public static EncounterSet FellBeasts = new EncounterSet { Name = "Fell Beasts", Set = setNameWilds };
         public static EncounterSet HillsOfWilderland = new EncounterSet { Name = "Hills of Wilderland", Set = setNameWilds };
         public static EncounterSet GreyMountainGoblins = new EncounterSet { Name = "Grey Mountain Goblins", Set = setNameWilds };
