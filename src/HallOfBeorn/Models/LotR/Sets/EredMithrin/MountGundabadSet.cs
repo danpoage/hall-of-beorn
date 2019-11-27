@@ -65,7 +65,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
             addEvent("The Shirefolk", 0, Sphere.Neutral)
                 .WithText("Play only if each of your heroes is a Hobbit.\r\nAction: Reduce your threat by 4.")
                 .WithFlavor("\"If more of us valued food and cheer and song above hoarded gold, it would be a merrier world.\"\r\n-Thorin Oakenshield, The Hobbit")
-                .WithInfo(121, 3, Artist.Carmen_Cianelli);
+                .WithInfo(121, 3, Artist.Carmen_Cianelti);
 
             addLocation("The First Forge", setName, 1, 1)
                 .WithUnique()

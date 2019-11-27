@@ -427,7 +427,7 @@ The players have won the game.",
                 HitPoints = 2,
                 Text = "Response: After you play Fili from your hand during the planning phase, search your deck for Kili and put him into play under your control. Then, shuffle your deck.",
                 CardNumber = 6,
-                Artist = Artist.Carmen_Cianelli
+                Artist = Artist.Carmen_Cianelti
             });
             Cards.Add(new LotRCard() {
                 
@@ -765,7 +765,7 @@ The players have won the game.",
                 HitPoints = 2,
                 Text = "Response: After you play Kili from your hand during the planning phase, search your deck for Fili and put him into play under your control. Then, shuffle your deck.",
                 CardNumber = 7,
-                Artist = Artist.Carmen_Cianelli
+                Artist = Artist.Carmen_Cianelti
             });
             Cards.Add(new LotRCard() {
                 
@@ -793,7 +793,7 @@ The players have won the game.",
                 Text = "Quest Action: Exhaust a character you control that is not committed to the quest to commit that character to the quest.",
                 FlavorText = "To the end of his days Bilbo could never remember how he found himself outside, without a hat, walking-stick or any money, or anything that he usually took when he went out. -The Hobbit",
                 CardNumber = 17,
-                Artist = Artist.Carmen_Cianelli
+                Artist = Artist.Carmen_Cianelti
             });
             Cards.Add(new LotRCard() {
                 

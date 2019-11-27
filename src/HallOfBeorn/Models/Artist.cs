@@ -143,7 +143,7 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Jeff_Lee_Johnson);
             all.Add(Artist.Emrah_Elmasli);
             all.Add(Artist.Matt_Smith);
-            all.Add(Artist.Marcia_George_Bogdan);
+            all.Add(Artist.Marcia_GeorgeBogdan);
             all.Add(Artist.Darek_Zabrocki);
             all.Add(Artist.Lorraine_Schleter);
             all.Add(Artist.Anna_Steinbauer);
@@ -228,7 +228,7 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Blake_Henriksen);
             all.Add(Artist.Chris_Rahn);
             all.Add(Artist.David_Demaret);
-            all.Add(Artist.Carmen_Cianelli);
+            all.Add(Artist.Carmen_Cianelti);
             all.Add(Artist.Johann_Bodin);
             all.Add(Artist.Stephane_Gantiez);
             all.Add(Artist.Chun_Lo);
@@ -913,7 +913,7 @@ namespace HallOfBeorn.Models
         public static Artist Brian_Valenzuela = new Artist { Name = "Brian Valenzuela", URL = "http://bval05.deviantart.com" };
         public static Artist C_B_Sorge = new Artist { Name = "C. B. Sorge", URL = "http://psychohazard.deviantart.com" };
         public static Artist Caravan_Studio = new Artist { Name = "Caravan Studio", URL = "http://caravanstudio.com" };
-        public static Artist Carmen_Cianelli = new Artist { Name = "Carmen Cianelti", URL = "http://arteche.deviantart.com" };
+        public static Artist Carmen_Cianelti = new Artist { Name = "Carmen Cianelti", URL = "http://arteche.deviantart.com" };
         public static Artist Carly_Janine_Mazur = new Artist { Name = "Carly Janine Mazur", URL = "http://carlyjanine.com/home.html" };
         public static Artist Carolina_Eade = new Artist { Name = "Carolina Eade", URL = "http://carolina-eade.deviantart.com" };
         public static Artist Cassandre_Bolan = new Artist { Name = "Cassandre Bolan", URL = "http://www.cassandrebolan.com" };
@@ -1057,7 +1057,7 @@ namespace HallOfBeorn.Models
         public static Artist Lukasz_Jaskolski = new Artist { Name = "Lukasz Jaskolski", URL = "http://www.fadingray.com" };
         public static Artist Magali_Villeneuve = new Artist { Name = "Magali Villeneuve", URL = "http://magali-villeneuve.blogspot.com" };
         public static Artist Marc_Scheff = new Artist { Name = "Marc Scheff", URL = "http://www.marcscheff.com" };
-        public static Artist Marcia_George_Bogdan = new Artist { Name = "Marcia George-Bogdan", URL = "https://www.google.com/search?q=marcia+george-bogdan+art" };
+        public static Artist Marcia_GeorgeBogdan = new Artist { Name = "Marcia George-Bogdan", URL = "https://www.google.com/search?q=marcia+george-bogdan+art" };
         public static Artist Marco_Caradonna = new Artist { Name = "Marco Caradonna", URL = "http://ming1918.deviantart.com" };
         public static Artist Margaret_Hardy = new Artist { Name = "Margaret Hardy", URL = "http://kiwikitty37.deviantart.com" };
         public static Artist Mariana_Vieira = new Artist { Name = "Mariana Vieira", URL = "http://mariana-vieira.deviantart.com" };
@@ -1138,7 +1138,7 @@ namespace HallOfBeorn.Models
         public static Artist Sebastian_Giacobino = new Artist { Name = "Sebastian Giacobino", URL = "http://giacobino.deviantart.com" };
         public static Artist Sebastian_Zakrzewski = new Artist { Name = "Sebastian Zakrzewski", URL = "https://www.artstation.com/artist/vxm" };
         public static Artist Sidharth_Chatursedi = new Artist { Name = "Sidharth Chatursedi", URL = "http://sidharthchaturvedi.deviantart.com" };
-        public static Artist Silver_Saaremael = new Artist { Name = "Silver Saaremäel", URL = "http://sept13.deviantart.com" };
+        public static Artist Silver_Saaremael = new Artist { Name = "Silver Saaremäel", URL = "http://sept13.deviantart.com" };
         public static Artist Simon_Dominic = new Artist { Name = "Simon Dominic", URL = "https://www.google.com/search?q=Simon+Dominic+fantasy+art" };
         public static Artist Smirtouille = new Artist { Name = "Smirtouille", URL = "http://smirtouille.deviantart.com" };
         public static Artist Soul_Core = new Artist { Name = "Soul Core", URL = "http://en.amokanet.ru" };

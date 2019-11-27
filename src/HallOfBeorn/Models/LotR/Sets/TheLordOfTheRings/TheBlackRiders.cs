@@ -1313,7 +1313,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithKeywords("Surge.")
                 .WithText("Surge.\r\nWhen Revealed: The first player raises his threat by 3 and passes the first player token to the next player.")
                 .WithShadow("Shadow: Defending player exhausts a character he controls.")
-                .WithInfo(83, 1, Artist.Marcia_George_Bogdan);
+                .WithInfo(83, 1, Artist.Marcia_GeorgeBogdan);
             addTreachery("Overcome by Terror", EncounterSet.FlightToTheFord.Name)
                 .WithBurden()
                 .WithKeywords("Surge.")

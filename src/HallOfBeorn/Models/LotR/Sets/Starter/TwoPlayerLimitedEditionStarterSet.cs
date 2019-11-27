@@ -80,12 +80,12 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
                 .WithTraits("Dwarf.")
                 .WithText("Response: After you play Fili from your hand during the planning phase, seach your deck for Kili and put him into play under your control. Then shuffle your deck.")
                 .WithFlavor("\"Fili is the youngest and still has the best sight.\"\r\n-Thorin, The Hobbit")
-                .WithInfo(11, 1, Artist.Carmen_Cianelli);
+                .WithInfo(11, 1, Artist.Carmen_Cianelti);
             addAlly("Kili", 3, Sphere.Spirit, true, 1, 1, 1, 2)
                 .WithTraits("Dwarf.")
                 .WithText("Response: After you play Kili from your hand during the planning phase, seach your deck for Fili and put him into play under your control. Then shuffle your deck.")
                 .WithFlavor("\"Let us join the throng!\"\r\n-The Hobbit")
-                .WithInfo(12, 1, Artist.Carmen_Cianelli);
+                .WithInfo(12, 1, Artist.Carmen_Cianelti);
             addAlly("Silverlode Archer", 3, Sphere.Leadership, false, 1, 2, 0, 1)
                 .WithTraits("Archer.", "Silvan.")
                 .WithKeywords("Ranged.")
@@ -263,7 +263,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
             addAlly("Defender of Rammas", 2, Sphere.Tactics, false, 0, 1, 4, 1)
                 .WithTraits("Gondor.", "Warrior.")
                 .WithFlavor("\"And the Enemy must pay dearly for the crossing of the River.\"\r\n-Denethor, The Return of the King")
-                .WithInfo(49, 2, Artist.Marcia_George_Bogdan);
+                .WithInfo(49, 2, Artist.Marcia_GeorgeBogdan);
             addAlly("Dúnedain Lookout", 2, Sphere.Lore, false, 1, 1, 1, 2)
                 .WithTraits("Dúnedain.")
                 .WithText("Response: Discard Dúnedain Lookout to cancel the 'when revealed' effects of an enemy just revealed from the encounter deck.")

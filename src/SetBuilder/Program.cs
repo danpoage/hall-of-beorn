@@ -15,6 +15,7 @@ namespace SetBuilder
         private const string namespaceFormat             = "namespace HallOfBeorn.Models.LotR.Sets.{0}";
         private const string classFormat                 = "    public class {0}Set : CardSet";
         private const string initNameFormat              = "            Name = \"{0}\";";
+        private const string initAlternateNameFormat     = "            AlternateName = \"{0}\";";
         private const string initAbbreviationFormat      = "            Abbreviation = \"{0}\";";
         private const string initNumberFormat            = "            Number = {0};";
         private const string initSetTypeFormat           = "            SetType = Models.SetType.{0};";
@@ -23,22 +24,22 @@ namespace SetBuilder
         private const string addAllyFormat               = "            addAlly(\"{0}\", {1}, {2}, {3}, {4}, {5}, {6}, {7})";
         private const string addAttachmentFormat         = "            addAttachment(\"{0}\", {1}, {2}, {3})";
         private const string addContractFormat           = "            addContract(\"{0}\")";
-        private const string addEncounterSideQuestFormat = "            addEncounterSideQuest(\"{0}\", \"{1}\", {2})";
-        private const string addEnemyFormat              = "            addEnemy(\"{0}\", \"{1}\", {2}, {3}, {4}, {5}, {6})";
+        private const string addEnemyFormat              = "            addEnemy(\"{0}\", {1}, {2}, {3}, {4}, {5}, {6})";
         private const string addEventFormat              = "            addEvent(\"{0}\", {1}, {2})";
-        private const string addLocationFormat           = "            addLocation(\"{0}\", \"{1}\", {2}, {3})";
+        private const string addLocationFormat           = "            addLocation(\"{0}\", {1}, {2}, {3})";
         private const string addPlayerSideQuestFormat    = "            addPlayerSideQuest(\"{0}\", {1}, {2}, {3})";
-        private const string addQuestFormat              = "            addQuest(\"{0}\", \"{1}\", {2}, '{3}', {4})";
-        private const string addNightmareSetupFormat     = "            addNightmareSetup(\"{0}\")";
-        private const string addGenConSetupFormat        = "            addGenConSetup(\"{0}\", \"{1}\")";
-        private const string addCampaignFormat           = "            addCampaign(\"{0}\", \"{1}\", \"{2}\")";
-        private const string addShipEnemyFormat          = "            addShipEnemy(\"{0}\", \"{1}\", {2}, {3}, {4}, {5}, {6})";
-        private const string addShipObjectiveFormat      = "            addShipObjective(\"{0}\", \"{1}\", {2}, {3}, {4}, {5}, {6})";
-        private const string addTreacheryFormat          = "            addTreachery(\"{0}\", \"{1}\")";
-        private const string addObjectiveFormat          = "            addObjective(\"{0}\", \"{1}\")";
-        private const string addObjectiveAllyFormat      = "            addObjectiveAlly(\"{0}\", \"{1}\", {2}, {3}, {4}, {5})";
-        private const string addObjectiveLocationFormat  = "            addObjectiveLocation(\"{0}\", \"{1}\", {2}, {3}, {4})";
-        private const string addObjectiveHeroFormat      = "            addObjectiveHero(\"{0}\", \"{1}\", {2}, {3}, {4}, {5})";
+        private const string addQuestFormat              = "            addQuest(\"{0}\", {1}, {2}, '{3}', {4})";
+        private const string addNightmareSetupFormat     = "            addNightmareSetup({0})";
+        private const string addGenConSetupFormat        = "            addGenConSetup(\"{0}\", {1})";
+        private const string addCampaignFormat           = "            addCampaign(\"{0}\", {1}, \"{2}\")";
+        private const string addEncounterSideQuestFormat = "            addEncounterSideQuest(\"{0}\", {1}, {2})";
+        private const string addShipEnemyFormat          = "            addShipEnemy(\"{0}\", {1}, {2}, {3}, {4}, {5}, {6})";
+        private const string addShipObjectiveFormat      = "            addShipObjective(\"{0}\", {1}, {2}, {3}, {4}, {5}, {6})";
+        private const string addTreacheryFormat          = "            addTreachery(\"{0}\", {1})";
+        private const string addObjectiveFormat          = "            addObjective(\"{0}\", {1})";
+        private const string addObjectiveAllyFormat      = "            addObjectiveAlly(\"{0}\", {1}, {2}, {3}, {4}, {5})";
+        private const string addObjectiveLocationFormat  = "            addObjectiveLocation(\"{0}\", {1}, {2}, {3}, {4})";
+        private const string addObjectiveHeroFormat      = "            addObjectiveHero(\"{0}\", {1}, {2}, {3}, {4}, {5})";
         private const string withTraitsFormat                = "                .WithTraits({0})";
         private const string withKeywordsFormat              = "                .WithKeywords({0})";
         private const string withTextLineFormat              = "                .WithTextLine(\"{0}\")";
@@ -70,6 +71,8 @@ namespace SetBuilder
         private const string withSetNumberAndCostFormat      = "                .WithSetNumberAndCost({0}, {1})";
         private const string withInfoFormat                  = "                .WithInfo({0}, {1}, Artist.{2});";
 
+        private const string encounterSetFormat = "EncounterSet.{0}";
+
         private const int codePageWesternEurope = 1252;
         private const string textQuote = "\\\"";
         private const string textLineBreak = "\\r\\n";
@@ -80,6 +83,12 @@ namespace SetBuilder
 
             s.AppendFormat(initNameFormat, cardSet.Name);
             s.AppendLine();
+
+            if (!string.IsNullOrWhiteSpace(cardSet.AlternateName))
+            {
+                s.AppendFormat(initAlternateNameFormat, cardSet.AlternateName);
+                s.AppendLine();
+            }
 
             s.AppendFormat(initAbbreviationFormat, cardSet.Abbreviation);
             s.AppendLine();
@@ -217,6 +226,11 @@ namespace SetBuilder
                 default:
                     return stat.Value.ToString();
             }
+        }
+
+        private static string encounterSet(string setName)
+        {
+            return string.Format(encounterSetFormat, normalizeSetName(setName));
         }
 
         private static string withTraits(LotRCard card)
@@ -473,12 +487,12 @@ namespace SetBuilder
 
             if (card.IncludedEncounterSets != null && card.IncludedEncounterSets.Count > 0)
             {
-                var encounterSets = string.Join(", ",
+                var includedEncounterSets = string.Join(", ",
                     card.IncludedEncounterSets
-                        .Select(es => "EncounterSet." + normalizeSetName(es.Name))
+                        .Select(es => encounterSet(es.Name))
                 );
                 s.AppendFormat(withIncludedEncounterSetsFormat,
-                    encounterSets);
+                    includedEncounterSets);
                 s.AppendLine();
             }
 
@@ -593,7 +607,7 @@ namespace SetBuilder
             var s = new StringBuilder(string.Empty);
             s.AppendFormat(addQuestFormat,
                 quest.Title,
-                quest.EncounterSet,
+                encounterSet(quest.EncounterSet),
                 quest.StageNumber,
                 quest.StageLetter,
                 stat(quest.QuestPoints)
@@ -609,7 +623,8 @@ namespace SetBuilder
         {
             var s = new StringBuilder(string.Empty);
             s.AppendFormat(addNightmareSetupFormat,
-                setup.EncounterSet);
+                encounterSet(setup.EncounterSet)
+                );
             s.AppendLine();
 
             s.Append(cardTextBox(setup));
@@ -622,7 +637,7 @@ namespace SetBuilder
             var s = new StringBuilder(string.Empty);
             s.AppendFormat(addGenConSetupFormat,
                 setup.Title,
-                setup.EncounterSet
+                encounterSet(setup.EncounterSet)
                 );
             s.AppendLine();
 
@@ -636,7 +651,7 @@ namespace SetBuilder
             var s = new StringBuilder();
             s.AppendFormat(addEnemyFormat,
                 enemy.Title,
-                enemy.EncounterSet,
+                encounterSet(enemy.EncounterSet),
                 stat(enemy.EngagementCost),
                 stat(enemy.Threat),
                 stat(enemy.Attack),
@@ -660,7 +675,7 @@ namespace SetBuilder
             var s = new StringBuilder();
             s.AppendFormat(addShipEnemyFormat,
                 enemy.Title,
-                enemy.EncounterSet,
+                encounterSet(enemy.EncounterSet),
                 stat(enemy.EngagementCost),
                 stat(enemy.Threat),
                 stat(enemy.Attack),
@@ -684,7 +699,7 @@ namespace SetBuilder
             var s = new StringBuilder(string.Empty);
             s.AppendFormat(addLocationFormat,
                 location.Title,
-                location.EncounterSet,
+                encounterSet(location.EncounterSet),
                 stat(location.Threat),
                 stat(location.QuestPoints)
                 );
@@ -705,7 +720,7 @@ namespace SetBuilder
             var s = new StringBuilder(string.Empty);
             s.AppendFormat(addTreacheryFormat,
                 treachery.Title, 
-                treachery.EncounterSet
+                encounterSet(treachery.EncounterSet)
                 );
             s.AppendLine();
 
@@ -719,7 +734,7 @@ namespace SetBuilder
             var s = new StringBuilder(string.Empty);
             s.AppendFormat(addEncounterSideQuestFormat,
                 quest.Title,
-                quest.EncounterSet,
+                encounterSet(quest.EncounterSet),
                 stat(quest.QuestPoints)
                 );
             s.AppendLine();
@@ -734,7 +749,7 @@ namespace SetBuilder
             var s = new StringBuilder(string.Empty);
             s.AppendFormat(addObjectiveFormat,
                 objective.Title,
-                objective.EncounterSet
+                encounterSet(objective.EncounterSet)
                 );
             s.AppendLine();
 
@@ -753,7 +768,7 @@ namespace SetBuilder
             var s = new StringBuilder(string.Empty);
             s.AppendFormat(addObjectiveHeroFormat,
                 objectiveHero.Title,
-                objectiveHero.EncounterSet,
+                encounterSet(objectiveHero.EncounterSet),
                 stat(objectiveHero.Willpower),
                 stat(objectiveHero.Attack),
                 stat(objectiveHero.Defense),
@@ -771,7 +786,7 @@ namespace SetBuilder
             var s = new StringBuilder(string.Empty);
             s.AppendFormat(addObjectiveAllyFormat,
                 objectiveAlly.Title,
-                objectiveAlly.EncounterSet,
+                encounterSet(objectiveAlly.EncounterSet),
                 stat(objectiveAlly.Willpower),
                 stat(objectiveAlly.Attack),
                 stat(objectiveAlly.Defense),
@@ -794,7 +809,7 @@ namespace SetBuilder
             var s = new StringBuilder(string.Empty);
             s.AppendFormat(addObjectiveLocationFormat,
                 objectiveLocation.Title,
-                objectiveLocation.EncounterSet,
+                encounterSet(objectiveLocation.EncounterSet),
                 stat(objectiveLocation.QuestPoints),
                 objectiveLocation.IsUnique.ToString().ToLower(),
                 objectiveLocation.VictoryPoints
@@ -811,7 +826,7 @@ namespace SetBuilder
             var s = new StringBuilder(string.Empty);
             s.AppendFormat(addShipObjectiveFormat,
                 shipObjective.Title,
-                shipObjective.EncounterSet,
+                encounterSet(shipObjective.EncounterSet),
                 shipObjective.IsUnique.ToString().ToLower(),
                 stat(shipObjective.Willpower),
                 stat(shipObjective.Attack),
