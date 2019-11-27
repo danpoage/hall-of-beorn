@@ -171,6 +171,12 @@ function clearProductCodes() {
 
 $(document).ready(function () {
 
+    var path = window.location.href;
+    var normalizedPath = path.replace(/%20/g, "+");
+    if (path != normalizedPath) {
+        window.history.pushState("path normalization", "Hall of Beorn", normalizedPath);
+    }
+
     //checkForProductFilters();
 
     var cardSet = getParameterByName('CardSet');

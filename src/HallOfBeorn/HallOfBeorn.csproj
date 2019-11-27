@@ -1155,7 +1155,7 @@
     <Content Include="Scripts\arkhamCardSearch.js" />
     <Content Include="Scripts\autocomplete36.js" />
     <Content Include="Scripts\cardDetails1.js" />
-    <Content Include="Scripts\cardSearch1.js" />
+    <Content Include="Scripts\cardSearch2.js" />
     <Content Include="Scripts\Digital\digitalAutocomplete3.js" />
     <Content Include="Scripts\Digital\digitalCardDetails1.js" />
     <Content Include="Scripts\Digital\digitalCardSearch1.js" />
