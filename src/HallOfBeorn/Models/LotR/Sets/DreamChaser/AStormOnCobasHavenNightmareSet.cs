@@ -34,7 +34,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithOppositeTextLine("1x Umbar Raider")
                 .WithOppositeTextLine("Then, shuffle the encounter card in this Nightmare Deck into the remainder of the standard A Storm on Cobas Haven encounter deck.")
                 .WithOppositeTextLine("Finally, flip this setup card over and placr it next to the quest deck. Its effect remains active throughout the game, which is now ready to being.")
-                .WithOppositeTextLine("Wheel*: Some cards in the A Storm on Cobas Haven Nightmare Deck having Sailing success symbols (Wheel) with an asterist (*) next to them. This indicates that the card has a Forced effect which will trigger when the card is discarded during a Sailing test.")
+                .WithOppositeTextLine("Wheel*: Some cards in the A Storm on Cobas Haven Nightmare Deck have Sailing success symbols (Wheel) with an asterisk (*) next to them. This indicates that the card has a Forced effect which will trigger when the card is discarded during a Sailing test.")
                 .WithInfo(1, 1, Artist.Logan_Feliciano);
             addObjective("Aearlang", EncounterSet.AStormOnCobasHavenNightmare)
                 .WithUnique()

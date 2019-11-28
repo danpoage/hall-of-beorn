@@ -509,6 +509,7 @@ namespace HallOfBeorn.Models.LotR
             Add(TheDrownedRuinsNightmare);
             Add(AStormOnCobasHavenNightmare);
             Add(TheCityOfCorsairsNightmare);
+            Add(CoastOfUmbarNightmare);
 
             //The Hobbit: Over Hill and Under Hill Nightmare Decks
             Add(WeMustAwayEreBreakOfDayNightmare);
@@ -865,6 +866,7 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet TheDrownedRuinsNightmare = new EncounterSet { Name = "The Drowned Ruins Nightmare", Set = "The Drowned Ruins Nightmare" };
         public static EncounterSet AStormOnCobasHavenNightmare = new EncounterSet { Name = "A Storm on Cobas Haven Nightmare", Set = "A Storm on Cobas Haven Nightmare" };
         public static EncounterSet TheCityOfCorsairsNightmare = new EncounterSet { Name = "The City of Corsairs Nightmare", Set = "The City of Corsairs Nightmare" };
+        public static EncounterSet CoastOfUmbarNightmare = new EncounterSet { Name = "Coast of Umbar Nightmare", Set = "The City of Corsairs Nightmare" };
 
         //The Hobbit: Over Hill and Under Hill Nightmare Decks
         public static EncounterSet WeMustAwayEreBreakOfDayNightmare = new EncounterSet { Name = "We Must Away, Ere Break of Day Nightmare", Set = "We Must Away, Ere Break of Day Nightmare" };

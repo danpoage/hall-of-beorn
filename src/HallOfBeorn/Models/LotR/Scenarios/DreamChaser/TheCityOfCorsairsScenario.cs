@@ -27,6 +27,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DreamChaser
             AddEncounterSet(EncounterSet.UmbarFleet);
             AddEncounterSet(EncounterSet.VoyageAcrossBelegaer);
             AddEncounterSet(EncounterSet.TheDreamChasersFleet);
+            AddEncounterSet(EncounterSet.TheCityOfCorsairsNightmare);
+            AddEncounterSet(EncounterSet.CoastOfUmbarNightmare);
 
             AddQuestCardId("The-Coast-of-Umbar-TCoC");
             AddQuestCardId("Fate-of-the-Dream-chaser-TCoC");
@@ -45,6 +47,13 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DreamChaser
             ExcludeFromEasyMode("Umbar-Harbor-TCoC", 1);
             ExcludeFromEasyMode("Foes-of-Ecthelion-TCoC", 1);
             ExcludeFromEasyMode("Fury-and-Malice-TCoC", 1);
+
+            ExcludeFromNightmareMode("Corsair-Infiltrator-TGH", 2);
+            ExcludeFromNightmareMode("Fog-Bank-TGH", 2);
+            ExcludeFromNightmareMode("Starlit-Sea-TGH", 2);
+            ExcludeFromNightmareMode("Scouting-Ship-TGH", 2);
+            ExcludeFromNightmareMode("Serpent's-Tail-TCoC", 2);
+            ExcludeFromNightmareMode("Streets-of-Umbar-TCoC", 1);
         }
     }
 }
