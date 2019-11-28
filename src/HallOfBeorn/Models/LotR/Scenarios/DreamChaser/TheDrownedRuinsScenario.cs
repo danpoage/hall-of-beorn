@@ -24,6 +24,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DreamChaser
             AddEncounterSet(EncounterSet.TheDrownedRuins);
             AddEncounterSet(EncounterSet.DrownedDead);
             AddEncounterSet(EncounterSet.TheStormcallerElite);
+            AddEncounterSet(EncounterSet.TheDrownedRuinsNightmare);
 
             AddQuestCardId("The-Grotto-TDRu");
             AddQuestCardId("Sahir's-Betrayal-TDRu");
@@ -33,6 +34,18 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DreamChaser
             ExcludeFromEasyMode("Cave-Eel-TDRu", 1);
             ExcludeFromEasyMode("Powerful-Undertow-TDRu", 2);
             ExcludeFromEasyMode("Ancient-Depths-TDRu", 2);
+
+            ExcludeFromNightmareMode("Cursed-Caverns-TDRu", 1);
+            ExcludeFromNightmareMode("Twisting-Hollow-TDRu", 1);
+            ExcludeFromNightmareMode("Undersea-Grotto-TDRu", 1);
+            ExcludeFromNightmareMode("Dark-Abyss-TDRu", 1);
+            ExcludeFromNightmareMode("Throngs-of-Unfaithful-TGH", 2);
+            ExcludeFromNightmareMode("Soulless-Cadaver-TGH", 2);
+            ExcludeFromNightmareMode("Drowned-Cave-TDRu", 2);
+            ExcludeFromNightmareMode("Into-the-Abyss-TDRu", 3);
+            ExcludeFromNightmareMode("Tangling-and-Grasping-TDRu", 1);
+            ExcludeFromNightmareMode("Sea-scorpion-TDRu", 2);
+            ExcludeFromNightmareMode("Cave-Eel-TDRu", 2);
         }
     }
 }

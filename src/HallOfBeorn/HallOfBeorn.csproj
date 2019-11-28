@@ -393,6 +393,7 @@
     <Compile Include="Models\LotR\Products\AdventurePack\TheGhostOfFramsburgProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\TheWitheredHeathProduct.cs" />
     <Compile Include="Models\LotR\Products\Deluxe\TheWildsOfRhovanionProduct.cs" />
+    <Compile Include="Models\LotR\Products\Nightmare\TheDrownedRuinsNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\PrintOnDemand\TheWizardsQuestProduct.cs" />
     <Compile Include="Models\LotR\Products\PrintOnDemand\TheWoodlandRealmProduct.cs" />
     <Compile Include="Models\LotR\Products\Starter\TwoPlayerLimitedEditionStarterProduct.cs" />
@@ -452,6 +453,7 @@
     <Compile Include="Models\LotR\Sets\AShadowInTheEast\AShadowInTheEastSet.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\FlightOfTheStormcallerNightmare.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\TempleOfTheDeceivedNightmareSet.cs" />
+    <Compile Include="Models\LotR\Sets\DreamChaser\TheDrownedRuinsNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\TheThingInTheDepthsNightmare.cs" />
     <Compile Include="Models\LotR\Sets\EredMithrin\FireInTheNightSet.cs" />
     <Compile Include="Models\LotR\Sets\EredMithrin\MountGundabadSet.cs" />
