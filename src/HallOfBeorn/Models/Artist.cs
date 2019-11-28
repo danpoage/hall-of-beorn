@@ -583,6 +583,9 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Javier_Charro_Martinez);
             all.Add(Artist.David_Keen);
 
+            //A Storm on Cobas Haven Nightmate
+            all.Add(Artist.Brenda_Bae);
+
             //The Road Darkens Nightmare
             all.Add(Artist.Bon_Bernardo);
 
@@ -908,6 +911,7 @@ namespace HallOfBeorn.Models
         public static Artist Bon_Bernardo = new Artist { Name = "Bon Bernardo", URL = "http://bonify.deviantart.com" };
         public static Artist Borja_Pindado = new Artist { Name = "Borja Pindado", URL = "https://borjapindado.deviantart.com" };
         public static Artist Brandon_Leach = new Artist { Name = "Brandon Leach", URL = "http://b-nine.deviantart.com" };
+        public static Artist Brenda_Bae = new Artist { Name = "Brenda Bae", URL = "https://www.artstation.com/brendabae88" };
         public static Artist Brendan_C_Murphy = new Artist { Name = "Brendan C. Murphy", URL = "https://www.brendancmurphy.com" };
         public static Artist Brent_Hollowel = new Artist { Name = "Brent Hollowel", URL = "http://brenthollowellart.blogspot.com" };
         public static Artist Brian_Valenzuela = new Artist { Name = "Brian Valenzuela", URL = "http://bval05.deviantart.com" };

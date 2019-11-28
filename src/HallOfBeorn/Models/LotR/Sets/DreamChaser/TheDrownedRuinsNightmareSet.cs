@@ -24,7 +24,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithOppositeTextLine("2x Soulless Cadaver")
                 .WithOppositeTextLine("2x Drowned Cave")
                 .WithOppositeTextLine("3x Into the Abyss")
-                .WithOppositeTextLine("1x Tabgling and Grasping")
+                .WithOppositeTextLine("1x Tangling and Grasping")
                 .WithOppositeTextLine("2x Sea-scorpion")
                 .WithOppositeTextLine("2x Cave Eel")
                 .WithOppositeTextLine("Then, shuffle the encounter card in this Nightmare Deck into the remainder of the standard The Drowned Ruins encounter deck.")

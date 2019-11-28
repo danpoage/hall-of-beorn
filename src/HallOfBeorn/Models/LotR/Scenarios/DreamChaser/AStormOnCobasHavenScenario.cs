@@ -26,6 +26,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DreamChaser
             AddEncounterSet(EncounterSet.UmbarFleet);
             AddEncounterSet(EncounterSet.VoyageAcrossBelegaer);
             AddEncounterSet(EncounterSet.TheDreamChasersFleet);
+            AddEncounterSet(EncounterSet.AStormOnCobasHavenNightmare);
 
             AddQuestCardId("Outmaneuver-the-Enemy-ASoCH");
             AddQuestCardId("Battle-in-the-Bay-ASoCH");
@@ -39,6 +40,15 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DreamChaser
             ExcludeFromEasyMode("Heavy-Cruiser-ASoCH", 1);
             ExcludeFromEasyMode("Coast-of-Anfalas-ASoCH", 2);
             ExcludeFromEasyMode("Taking-on-Water-ASoCH", 1);
+
+            ExcludeFromNightmareMode("Belfalas-Islet-ASoCH", 2);
+            ExcludeFromNightmareMode("Cobas-Haven-ASoCH", 2);
+            ExcludeFromNightmareMode("Fog-Bank-TGH", 2);
+            ExcludeFromNightmareMode("Corsair-Skirmisher-ASoCH", 2);
+            ExcludeFromNightmareMode("Ramming-Speed-ASoCH", 1);
+            ExcludeFromNightmareMode("Corsair-Infiltrator-TGH", 2);
+            ExcludeFromNightmareMode("Cunning-Pirate-TGH", 1);
+            ExcludeFromNightmareMode("Umbar-Raider-TGH", 1);
         }
     }
 }

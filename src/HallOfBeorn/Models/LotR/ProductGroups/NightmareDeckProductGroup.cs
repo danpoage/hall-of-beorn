@@ -58,6 +58,8 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
             AddProduct(Product.TheThingInTheDepthsNightmare);
             AddProduct(Product.TempleOfTheDeceivedNightmare);
             AddProduct(Product.TheDrownedRuinsNightmare);
+            AddProduct(Product.AStormOnCobasHavenNightmare);
+            AddProduct(Product.TheCityOfCorsairsNightmare);
 
             AddProduct(Product.TheHobbitOverHillAndUnderHillNightmare);
             AddProduct(Product.TheHobbitOnTheDoorstepNightmare);

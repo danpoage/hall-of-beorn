@@ -473,6 +473,8 @@ namespace HallOfBeorn.Models.LotR
             Add(TheThingInTheDepthsNightmare);
             Add(TempleOfTheDeceivedNightmare);
             Add(TheDrownedRuinsNightmare);
+            Add(AStormOnCobasHavenNightmare);
+            Add(TheCityOfCorsairsNightmare);
 
             Add(WeMustAwayEreBreakOfDayNightmare);
             Add(OverTheMistyMountainsGrimNightmare);
@@ -662,6 +664,8 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheThingInTheDepthsNightmare = new Sets.DreamChaser.TheThingInTheDepthsNightmare();
         public static CardSet TempleOfTheDeceivedNightmare = new Sets.DreamChaser.TempleOfTheDeceivedNightmareSet();
         public static CardSet TheDrownedRuinsNightmare = new Sets.DreamChaser.TheDrownedRuinsNightmareSet();
+        public static CardSet AStormOnCobasHavenNightmare = new Sets.DreamChaser.AStormOnCobasHavenNightmareSet();
+        public static CardSet TheCityOfCorsairsNightmare = new Sets.DreamChaser.TheCityOfCorsairsNightmareSet();
 
         public static CardSet WeMustAwayEreBreakOfDayNightmare = new Sets.TheHobbit.WeMustAwayEreBreakOfDayNightmare();
         public static CardSet OverTheMistyMountainsGrimNightmare = new Sets.TheHobbit.OverTheMistyMountainsGrimNightmare();
