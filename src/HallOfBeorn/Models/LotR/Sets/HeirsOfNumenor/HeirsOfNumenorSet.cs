@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR.Sets.HeirsOfNumenor
             addHero("Beregond", 10, Sphere.Tactics, 0, 1, 4, 4)
                 .WithTraits("Gondor.", "Warrior.")
                 .WithKeywords("Sentinel.")
+                .WithTextLine("Sentinel.")
                 .WithTextLine("Lower the cost to play Weapon and Armor attachments on Beregond by 2.")
                 .WithFlavorLine("\"It is over-late to send for aid when you are already besieged.\" -The Return of the King")
                 .WithTemplate("<p>{keyword:Sentinel.}</p><p>Lower the cost to play {traits-attachment:Weapon,Armor@attachments} on {self} by 2.</p><p class='flavor-text'>&quot;It is over-late to send for aid when you are already besiged.&quot; &ndash;The Return of the King</p>")
@@ -53,7 +54,8 @@ namespace HallOfBeorn.Models.LotR.Sets.HeirsOfNumenor
             addAttachment("Spear of the Citadel", 2, Sphere.Tactics, false)
                 .WithTraits("Item.", "Weapon.")
                 .WithKeywords("Restricted.")
-                .WithTextLine("Attach to a Tactics character. Limit 1 per character.")
+                .WithTextLine("Attach to a Tactics character. Restricted.")
+                .WithTextLine("Limit 1 per character.")
                 .WithTextLine("Response: After attached character is declared as a defender, deal 1 damage to the attacking enemy.")
                 .WithInfo(9, 3, Artist.Dan_Masso);
             addAlly("Damrod", 4, Sphere.Spirit, true, 1, 2, 2, 2)
@@ -155,6 +157,7 @@ namespace HallOfBeorn.Models.LotR.Sets.HeirsOfNumenor
                 .WithInfo(28, 2, Artist.Trudi_Castle);
             addTreachery("Blocking Wargs", EncounterSet.IntoIthilien)
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("When Revealed: Deal 1 damage to each character committed to the quest.")
                 .WithShadow("Shadow: Deal 1 damage to the defending character.")
                 .WithErrata()
@@ -163,6 +166,7 @@ namespace HallOfBeorn.Models.LotR.Sets.HeirsOfNumenor
             addEnemy("Orc Scramblers", EncounterSet.TheSiegeOfCairAndros, 15, 1, 2, 1, 2)
                 .WithTraits("Orc.", "Besieger.")
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("When Revealed: Deal 1 damage to each Battleground location in play, if able.")
                 .WithShadow("Shadow: Deal 2 damage to The Citadel if it is in play. Otherwise, attacking enemy gets +2 Attack.")
                 .WithEasyModeQuantity(2)
@@ -170,6 +174,7 @@ namespace HallOfBeorn.Models.LotR.Sets.HeirsOfNumenor
             addEnemy("Battering Ram", EncounterSet.TheSiegeOfCairAndros, 33, 2, 7, 3, 5)
                 .WithTraits("Besieger.")
                 .WithKeywords("Doomed 2.")
+                .WithTextLine("Doomed 2.")
                 .WithTextLine("When Revealed: If the active location is a Battleground, deal 3 damage to it.")
                 .WithShadow("Shadow: Deal 2 damage to The Approach if it is in play. Otherwise, attacking enemy gets +2 Attack.")
                 .WithEasyModeQuantity(2)
@@ -210,6 +215,7 @@ namespace HallOfBeorn.Models.LotR.Sets.HeirsOfNumenor
             addLocation("City Street", EncounterSet.StreetsOfGondor, 2, 2)
                 .WithTraits("City.")
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("While City Street is in the staging area, players cannot travel to a location that does not have the title City Street.")
                 .WithShadow("Shadow: attacking enemy gets +2 Attack.")
                 .WithInfo(38, 3, Artist.Stu_Barnes);
@@ -240,6 +246,7 @@ namespace HallOfBeorn.Models.LotR.Sets.HeirsOfNumenor
             addEnemy("Umbar Assassin", EncounterSet.Brigands, 40, 4, 5, 1, 5)
                 .WithTraits("Brigand.")
                 .WithKeywords("Archery 2.")
+                .WithTextLine("Archery 2.")
                 .WithTextLine("Forced: When Umbar Assassin engages a player, that player must deal 3 damage to a hero he controls. (Discard that hero instead if Umbar Assassin was not optionally engaged.)")
                 .WithEasyModeQuantity(0)
                 .WithInfo(44, 1, Artist.Greg_Opalinski);
@@ -283,6 +290,7 @@ namespace HallOfBeorn.Models.LotR.Sets.HeirsOfNumenor
             addEnemy("Southron Mercenaries", EncounterSet.Southrons, 35, 2, 3, 2, 4)
                 .WithTraits("Harad.")
                 .WithKeywords("Archery X.")
+                .WithTextLine("Archery X.")
                 .WithTextLine("X is the number of players in the game.")
                 .WithShadow("Shadow: attacking enemy gets +1 Attack. (+3 Attack instead if it has the Harad trait.)")
                 .WithInfo(52, 3, Artist.Emile_Denis);
@@ -300,6 +308,7 @@ namespace HallOfBeorn.Models.LotR.Sets.HeirsOfNumenor
                 .WithInfo(54, 1, Artist.Piya_Wannachaiwong);
             addTreachery("Southron Support", EncounterSet.Southrons)
                 .WithKeywords("Doomed 3.")
+                .WithTextLine("Doomed 3.")
                 .WithTextLine("When Revealed: Each player must search the encounter deck and discard pile for 1 Harad enemy and add it to the staging area, if able. Shuffle the encounter deck.")
                 .WithFlavorLine("... wild Southron men with red banners, shouting with harsh tongues, surging up, overtaking the retreat. -The Return of the King")
                 .WithEasyModeQuantity(0)
@@ -312,6 +321,7 @@ namespace HallOfBeorn.Models.LotR.Sets.HeirsOfNumenor
             addEnemy("Orc Arbalesters", EncounterSet.MordorElite, 35, 2, 1, 2, 5)
                 .WithTraits("Mordor.", "Orc.")
                 .WithKeywords("Archery X.")
+                .WithTextLine("Archery X.")
                 .WithTextLine("X is the number of different resource icons (Leadership, Tactics, Spirit, or Lore) on heroes in play.")
                 .WithShadow("Shadow: attacking enemy gets +2 Attack.")
                 .WithInfo(57, 3, Artist.Timo_Karhula);
@@ -334,6 +344,7 @@ namespace HallOfBeorn.Models.LotR.Sets.HeirsOfNumenor
                 .WithInfo(60, 2, Artist.Marcia_GeorgeBogdan);
             addTreachery("The Power of Mordor", EncounterSet.MordorElite)
                 .WithKeywords("Doomed 3.")
+                .WithTextLine("Doomed 3.")
                 .WithTextLine("When Revealed: Count the number of encounter cards in the staging area and shuffle them into the encounter deck. Reveal an equal number of cards from the encounter deck and add them to the staging area. This effect cannot be canceled.")
                 .WithErrata()
                 .WithInfo(61, 1, Artist.Ryan_Barger);
@@ -355,6 +366,7 @@ namespace HallOfBeorn.Models.LotR.Sets.HeirsOfNumenor
             addQuest("The Leaping Fish", EncounterSet.PerilInPelargir, 1, 'A', 6)
                 .WithSlugSuffix("Quest")
                 .WithKeywords("Battle.")
+                .WithTextLine("Battle.")
                 .WithTextLine("Setup: Search the encounter deck for The Leaping Fish and Alcaron's ~Scroll. Make The Leaping Fish the active location and attach Alcaron's ~Scroll to a hero.")
                 .WithFlavorLine("The White Council has sent you by ship to Gondor to help fight the threat of Mordor. Upon arrival in the port city of Pelargir, you are greeted by Lord Alcaron who takes you to The Leaping Fish where you can speak privately.")
                 .WithOppositeTextLine("When Revealed: Each player must search the encounter deck for a copy of Harbor Thug and add it to the staging area. Shuffle the encounter deck.")
@@ -363,6 +375,7 @@ namespace HallOfBeorn.Models.LotR.Sets.HeirsOfNumenor
                 .WithInfo(65, 1, Artist.Darek_Zabrocki);
             addQuest("Fighting in the Streets", EncounterSet.PerilInPelargir, 2, 'A', 13)
                 .WithKeywords("Battle.")
+                .WithTextLine("Battle.")
                 .WithFlavorLine("During the fight in the tavern, one of your adversaries managed to grab Alcaron's Scroll and flee outside. You chase the thief into the street where you are surrounded by a gang of his fellow brigands. You must fight your way through the mob and recover the scroll!")
                 .WithOppositeTextLine("When Revealed: Attach Alcaron's ~Scroll to the highest engagement cost enemy in play, if able. Otherwise, add Alcaron's Scroll to the staging area.")
                 .WithIncludedEncounterSets(EncounterSet.StreetsOfGondor, EncounterSet.Brigands)
@@ -377,6 +390,7 @@ namespace HallOfBeorn.Models.LotR.Sets.HeirsOfNumenor
                 .WithInfo(67, 1, Artist.Jeff_Lee_Johnson);
             addQuest("Ambush in Ithilien", EncounterSet.IntoIthilien, 1, 'A', 15)
                 .WithKeywords("Battle.")
+                .WithTextLine("Battle.")
                 .WithTextLine("Setup: Add Celador to the staging area. Search the encounter deck for a copy of Ithilien Road and make it the active location. Each player must search the encounter deck for a copy of Southron Company and add it to the staging area. Shuffle the encounter deck.")
                 .WithFlavorLine("You've arrived in Ithilien with a sealed message for Faramir, only to learn that he has gone north to defend Cair Andros from massing enemy forces.")
                 .WithOppositeTextLine("If the players complete this stage with Celador in the staging area, advance to stage 3A (bypassing stage 2).")
@@ -385,6 +399,7 @@ namespace HallOfBeorn.Models.LotR.Sets.HeirsOfNumenor
                 .WithInfo(68, 1, Artist.Jeff_Lee_Johnson);
             addQuest("Southron Counter-attack", EncounterSet.IntoIthilien, 2, 'A', 9)
                 .WithKeywords("Siege.", "Archery X.")
+                .WithTextLine("Siege. Archery X.")
                 .WithFlavorLine("The Southron army was larger and better prepared than the rangers anticipated, and now your dwindling company is painfully overmatched. Your only option is a disciplined withdrawl to Cair Andros, before being overwhelmed by the enemy reinforcements hurrying up the road to join the fight.")
                 .WithOppositeTextLine("X is the number of players in the game.")
                 .WithOppositeTextLine("After this stage is completed advance to stage 4A (bypassing stage 3).")
@@ -404,6 +419,7 @@ namespace HallOfBeorn.Models.LotR.Sets.HeirsOfNumenor
                 .WithInfo(71, 1, Artist.Emrah_Elmasli);
             addQuest("The Defense", EncounterSet.TheSiegeOfCairAndros, 1, 'A', 9)
                 .WithKeywords("Siege.")
+                .WithTextLine("Siege.")
                 .WithTextLine("Setup: Add The Approach, The Citadel, and The Banks to the staging area. Shuffle the encounter deck.")
                 .WithFlavorLine("The island fortress of Cair Andros, which guards Gondor's northernmost causeways over the river Anduin, is under siege! Battering rams rumble up the eastern causeway and rafts filled with Orcs float across the river toward the lightly defended northern banks.")
                 .WithOppositeTextLine("Players must deal damage from undefended attacks to the lowest Threat Battleground location in play. If there are no Battleground locations in play, immediate advance to the next stage.")
@@ -417,18 +433,21 @@ namespace HallOfBeorn.Models.LotR.Sets.HeirsOfNumenor
                 .WithInfo(73, 1, Artist.Timo_Karhula);
             addQuest("Breakthrough at the Approach", EncounterSet.TheSiegeOfCairAndros, 3, 'A', 7)
                 .WithKeywords("Battle.")
+                .WithTextLine("Battle.")
                 .WithFlavorLine("With a crashing boom the eastern gate shatters. A ram has broken through, and the pressing host of Orcs pour into the courtyard beyond. Engage them in hand-to-hand combat and secure the gate!")
                 .WithOppositeTextLine("Forced: After the players quest unsuccessfully, instead of raising threat each player must choose and discard 1 character he controls.")
                 .WithIncludedEncounterSets(EncounterSet.Southrons, EncounterSet.RavagingOrcs, EncounterSet.MordorElite)
                 .WithInfo(74, 1, Artist.Lin_Bo);
             addQuest("Breakthrough at the Citadel", EncounterSet.TheSiegeOfCairAndros, 4, 'A', 5)
                 .WithKeywords("Siege.")
+                .WithTextLine("Siege.")
                 .WithFlavorLine("Orc scramblers have infiltrated the island and climbed over the walls. They fought to the western gate, and the gate fell. Now a new host of enemies that were lying in wait are breaching the Citadel itself!")
                 .WithOppositeTextLine("Breakthrough at the Citadel adds 5 Threat to the staging area.")
                 .WithIncludedEncounterSets(EncounterSet.Southrons, EncounterSet.RavagingOrcs, EncounterSet.MordorElite)
                 .WithInfo(75, 1, Artist.Darek_Zabrocki);
             addQuest("The Last Battle", EncounterSet.TheSiegeOfCairAndros, 5, 'A', 15)
                 .WithKeywords("Siege.")
+                .WithTextLine("Siege.")
                 .WithOppositeTextLine("When Revealed: Reveal 1 card per player from the encounter deck and add it to the staging area.")
                 .WithOppositeTextLine("If the players have collected 4 or more victory points, The Last Battle gains Battle and loses Siege.")
                 .WithOppositeTextLine("If the players defeat this stage, they have won the game.")
