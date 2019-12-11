@@ -469,7 +469,7 @@
     <Compile Include="Models\LotR\Sets\PrintOnDemand\TheWoodlandRealmSet.cs" />
     <Compile Include="Models\LotR\Sets\Starter\TwoPlayerLimitedEditionStarterSet.cs" />
     <Compile Include="Models\LotR\Sets\PrintOnDemand\AttackOnDolGuldurSet.cs" />
-    <Compile Include="Models\LotR\Sets\TheGreyHavens\RaidOnTheGreyHavensNightmare.cs" />
+    <Compile Include="Models\LotR\Sets\TheGreyHavens\RaidOnTheGreyHavensNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\TheGreyHavens\TheFateOfNumenorNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheGreyHavens\VoyageAcrossBelegaerNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\BreakingOfTheFellowshipNightmare.cs" />
