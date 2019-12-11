@@ -25,6 +25,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithInfo(2, 3, Artist.Melissa_Findley);
             addEvent("Timely Aid", 4, Sphere.Leadership)
                 .WithKeywords("Secrecy 3.")
+                .WithTextLine("Secrecy 3.")
                 .WithTextLine("Action: Reveal the top 5 cards of your deck and put 1 revealed ally into play, if able. Shuffle all other revealed cards back into your deck.")
                 .WithInfo(3, 3, Artist.Sandara_Tang);
             addEvent("Unseen Strike", 0, Sphere.Tactics)
@@ -51,6 +52,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithInfo(8, 3, Artist.Garret_DeChellis);
             addEvent("Needful to Know", 2, Sphere.Lore)
                 .WithKeywords("Secrecy 2.")
+                .WithTextLine("Secrecy 2.")
                 .WithTextLine("Action: Raise your threat by 1 to look at the top card of the encounter deck. Then, reduce your threat by X, where X is the threat of that card.")
                 .WithInfo(9, 3, Artist.Magali_Villeneuve);
             addAttachment("Good Meal", 0, Sphere.Neutral, false)
@@ -61,7 +63,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithOppositeTitle("Up the Pass")
                 .WithSlugSuffix("Up the Pass")
                 .WithTextLine("Setup: Add Caradhras to the staging area. Remove all copies of Snowstorm from the encounter deck and set them aside, out of play. Put Arwen Undomiel into play under the control of the first player.")
-                .WithTemplate("<p class='flavor-text'>Celeborn has bid you to visit her father in Rivendell. Your journey takes you though the Redhorn Gate...</p><p><b>Setup:</b> Add <a title='Caradhras (The Redhorn Gate)' target='_blank' href='/Cards/Details/Caradhras-TRG'>Caradhras</a> to the staging area. Remove all copies of <a title='Snowstorm (The Redhorn Gate)' target='_blank' href='/Cards/Details/Snowstorm-TRG'>Snowstorm</a> from the encounter deck and set them aside, out of play. Put <a target='_blank' title='Arwen Undomiel (The Redhorn Gate)' href='/Cards/Details/Arwen-Undomiel-TRG'>Arwen Undómiel</a> into play under the control of the first player.</p>")
+                .WithTemplate("<p class='flavor-text'>Celeborn has bid you to visit her father in Rivendell. Your journey takes you though the Redhorn Gate...</p><p><b>Setup:</b> Add <a title='Caradhras (The Redhorn Gate)' target='_blank' href='/Cards/Details/Caradhras-TRG'>Caradhras</a> to the staging area. Remove all copies of <a title='Snowstorm (The Redhorn Gate)' target='_blank' href='/Cards/Details/Snowstorm-TRG'>Snowstorm</a> from the encounter deck and set them aside, out of play. Put <a target='_blank' title='Arwen Undomiel (The Redhorn Gate)' href='/Cards/Details/Arwen-Undomiel-TRG'>Arwen UndÃ³miel</a> into play under the control of the first player.</p>")
                 .WithOppositeTextLine("When Revealed: Reveal 1 card from the encounter deck per player, and add it to the staging area.")
                 .WithTemplate2("<p><b>When Revealed:</b> Reveal 1 card from the encounter deck per player, and add it to the staging area.</p>")
                 .WithIncludedEncounterSets(EncounterSet.MistyMountains)
@@ -78,7 +80,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithTemplate2("<p><b>When Revealed:</b> Shuffle all copies of <a title='Snowstorm (The Redhorn Gate) target='_blank' href='/Cards/Details/Snowstorm-TRG'>Snowstorm</a> in the encounter discard pile back into the encounter deck.</p><p>Characters are discarded from play if their {Willpower} is ever 0.</p><p><b>Players cannot defeat this stage unless they have 5 victory points. If the players defeat this stage, they have won the game.</b></p>")
                 .WithIncludedEncounterSets(EncounterSet.MistyMountains)
                 .WithInfo(13, 1, Artist.Cristi_Balanescu);
-            addObjectiveAlly("Arwen Undómiel", "The Redhorn Gate", 2, 0, 1, 2)
+            addObjectiveAlly("Arwen UndÃ³miel", "The Redhorn Gate", 2, 0, 1, 2)
                 .WithUnique()
                 .WithTraits("Noldor.", "Noble.", "Ally.")
                 .WithTextLine("The first player gains control of Arwen Undomiel, as an ally.Response: After Arwen Undomiel exhausts, choose a hero. Add 1 resource to that hero's resource pool.If Arwen Undomiel leaves play, the players are defeated.")

@@ -48,10 +48,10 @@ namespace HallOfBeorn.Models.LotR.Sets.KhazadDum
             addAttachment("Dwarrowdelf Axe", 1, Sphere.Tactics, false)
                 .WithTraits("Item.", "Weapon.")
                 .WithKeywords("Restricted.")
-                .WithTextLine("Attach to a Dwarf character.")
+                .WithTextLine("Attach to a Dwarf character. Restricted.")
                 .WithTextLine("Attached character gets +1 Attack.")
                 .WithTextLine("Response: After attached character attacks, deal 1 damage to the defending enemy.")
-                .WithFlavorLine("\"We make good armour and keen swords, but we cannot again make mail or blade to match those that were made before the dragon came.\" -Gloin, The Fellowship of the Ring")
+                .WithFlavorLine("\"We make good armour and keen swords, but we cannot again make mail or blade to match those that were made before the dragon came.\" -Glóin, The Fellowship of the Ring")
                 .WithInfo(7, 3, Artist.Carolina_Eade);
             addEvent("Khazâd! Khazâd!", 0, Sphere.Tactics)
                 .WithTextLine("Action: Choose a Dwarf character. Until the end of the phase, that character gets +3 Attack.")
@@ -90,6 +90,7 @@ namespace HallOfBeorn.Models.LotR.Sets.KhazadDum
                 .WithInfo(14, 2, Artist.David_A_Nash);
             addTreachery("Signs of Conflict", "Into the Pit")
                 .WithKeywords("Doomed 2.", "Surge.")
+                .WithTextLine("Doomed 2. Surge.")
                 .WithShadow("Shadow: Defending player raises his threat by 2.")
                 .WithEasyModeQuantity(2)
                 .WithInfo(15, 5, Artist.Cristi_Balanescu);
@@ -126,6 +127,7 @@ namespace HallOfBeorn.Models.LotR.Sets.KhazadDum
             addEnemy("Orc Horn Blower", "The Seventh Level", 45, 2, 1, 1, 3)
                 .WithTraits("Orc.", "Summoner.")
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("When Revealed: Reveal 1 card from the encounter deck and add it to the staging area.")
                 .WithEasyModeQuantity(0)
                 .WithInfo(21, 1, Artist.Ilich_Henriquez);
@@ -135,11 +137,15 @@ namespace HallOfBeorn.Models.LotR.Sets.KhazadDum
             addLocation("Upper Hall", "The Seventh Level", 3, 4)
                 .WithTraits("Underground.")
                 .WithKeywords("Doomed 2.")
+                .WithTextLine("Doomed 2.")
+                .WithFlavorLine("High up above the eastern archway through a shaft near the roof came a long pale gleam; and across the hall through the northern arch light also glimmered faint and distantly.")
+                .WithFlavorLine("-The Fellowship of the Ring")
                 .WithInfo(23, 3, Artist.David_Lecossu);
             addObjective("Book of Mazarbul", "The Seventh Level")
                 .WithUnique()
                 .WithTraits("Item.", "Artifact.")
                 .WithKeywords("Restricted.")
+                .WithTextLine("Restricted.")
                 .WithTextLine("Action: Exhaust a hero to claim this objective. Then, attach Book of Mazarbul to that hero. (If detached, return Book of Mazarbul to the staging area.)Attached hero cannot attack and does not exhaust to commit to a quest.")
                 .WithInfo(24, 1, Artist.Sara_Biddle);
             addEnemy("The Nameless Fear", "Flight from Moria", 50, Card.VALUE_X, Card.VALUE_X, Card.VALUE_X, 27)
@@ -165,6 +171,7 @@ namespace HallOfBeorn.Models.LotR.Sets.KhazadDum
             addObjective("Abandoned Tools", "Flight from Moria")
                 .WithTraits("Tools.")
                 .WithKeywords("Guarded.", "Restricted.")
+                .WithTextLine("Guarded. Restricted.")
                 .WithTextLine("Action: Exhaust a hero to claim this objective if it has no encounters attached. Then, attach Abandoned ~Tools to that hero. (If detached, return Abandoned ~Tools to the staging area.)")
                 .WithInfo(29, 1, Artist.Stu_Barnes);
             addEnemy("Chieftain of the Pit", "Plundering Goblins", 27, 2, 5, 2, 4)
@@ -215,6 +222,7 @@ namespace HallOfBeorn.Models.LotR.Sets.KhazadDum
                 .WithInfo(38, 3, Artist.David_Lecossu);
             addTreachery("Many Roads", "Twists and Turns")
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("When Revealed: Shuffle all locations in the encounter discard pile back into the encounter deck.")
                 .WithInfo(39, 1, Artist.Stu_Barnes);
             addTreachery("Burning Low", "Twists and Turns")
@@ -224,7 +232,7 @@ namespace HallOfBeorn.Models.LotR.Sets.KhazadDum
             addObjective("Cave Torch", "Twists and Turns")
                 .WithTraits("Light.")
                 .WithKeywords("Restricted.")
-                .WithTextLine("Attach to a hero.")
+                .WithTextLine("Attach to a hero. Restricted.")
                 .WithTextLine("Action: Exhaust Cave Torch to place up to 3 progress tokens on a Dark location.Forced: After Cave Torch exhausts, discard the top card of the encounter deck. If that card is an enemy, add it to the staging area.")
                 .WithTemplate("<p>Attach to a {type:Hero@hero}. {keyword:Restricted.}</p><p><b>Action:</b> Exhaust self to place up to 3 progress on a {trait:Dark.@Dark} location.</p><p><b>Forced:</b> After {self} exhausts, discard the top card of the encounter deck. If that card is an enemy, add it to the staging area.</p>")
                 .WithInfo(41, 1, Artist.David_Lecossu);
@@ -251,6 +259,7 @@ namespace HallOfBeorn.Models.LotR.Sets.KhazadDum
                 .WithInfo(45, 3, Artist.Magali_Villeneuve);
             addTreachery("Massing in the Deep", "Deeps of Moria")
                 .WithKeywords("Doomed 1.")
+                .WithTextLine("Doomed 1.")
                 .WithTextLine("When Revealed: Reveal X additional cards from the encounter deck and add them to the staging area. X is the number of players in the game.")
                 .WithShadow("Shadow: attacking enemy gets +X Attack. X is the number of players in the game.")
                 .WithEasyModeQuantity(0)

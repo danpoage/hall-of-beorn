@@ -16,7 +16,9 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
 
             addHero("Háma", 9, Sphere.Tactics, 1, 3, 1, 4)
                 .WithTraits("Rohan.", "Warrior.")
-                .WithTextLine("Response: After Hama is declared as an attacker, return a Tactics event from your discard pile to your hand. Then, choose and discard 1 card from your hand. (Limit 3 times per game for the group.)")
+                .WithTextLine("Response: After Háma is declared as an attacker, return a Tactics event from your discard pile to your hand. Then, choose and discard 1 card from your hand. (Limit 3 times per game for the group.)")
+                .WithFlavorLine("\"Yet in doubt a man of worth will trust to his own wisdom.\"")
+                .WithFlavorLine("-The Two Towers")
                 .WithTemplate("<p><b>Response:</b> After {self} is declared as an attacker, return a {sphere-event:Tactics} from your discard pile to your hand. Then, choose and discard 1 card from your hand. (Limit 3 times per game for the group.)</p><p class='flavor-text'>&quot;Yet in doubt a man of worth will trust to his own wisdom.&quot; &ndash;The Two Towers</p>")
                 .WithErrata()
                 .WithInfo(76, 1, Artist.Magali_Villeneuve);
@@ -37,7 +39,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
             addAttachment("Ring Mail", 2, Sphere.Tactics, false)
                 .WithTraits("Item.", "Armor.")
                 .WithKeywords("Restricted.")
-                .WithTextLine("Attach to a Dwarf or Hobbit character.")
+                .WithTextLine("Attach to a Dwarf or Hobbit character. Restricted.")
                 .WithTextLine("Attached character gets +1 hit point and +1 Defense.")
                 .WithFlavorLine("\"And all the arrows of all the hunters in the world would be in vain...")
                 .WithFlavorLine("-Gimli, The Fellowship of the Ring")
@@ -45,6 +47,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithInfo(80, 3, Artist.Magali_Villeneuve);
             addEvent("Out of Sight", 5, Sphere.Spirit)
                 .WithKeywords("Secrecy 3.")
+                .WithTextLine("Secrecy 3.")
                 .WithTextLine("Action: Enemies engaged with you cannot attack you this phase.")
                 .WithErrata()
                 .WithInfo(81, 3, Artist.Ilich_Henriquez);

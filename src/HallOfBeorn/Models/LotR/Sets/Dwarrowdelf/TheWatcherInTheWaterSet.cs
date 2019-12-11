@@ -15,9 +15,12 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
             Cycle = "Dwarrowdelf";
 
             addHero("Aragorn", 12, Sphere.Lore, 2, 3, 2, 5)
-                .WithTraits("Dúnedain.", "Ranger.")
+                .WithTraits("DÃºnedain.", "Ranger.")
                 .WithKeywords("Sentinel.")
+                .WithTextLine("Sentinel.")
                 .WithTextLine("Refresh Action: Reduce your threat to your starting threat level. (Limit once per game.)")
+                .WithFlavorLine("\"I am older than I look, I might prove useful.\"")
+                .WithFlavorLine("-The Fellowship of the Ring")
                 .WithTemplate("<p>{keyword:Sentinel.}</p><p><b>Refresh Action:</b> Reduce your threat to your starting threat level. (Limit once per game.)</p><p class='flavor-text'>&quot;I am older than I look, I might prove useful.&quot;<br/>&ndash;The Fellowship of the Ring</p>")
                 .WithInfo(53, 1, Artist.Tony_Foti);
             addEvent("Grave Cairn", 1, Sphere.Leadership)
@@ -33,6 +36,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
             addAlly("Watcher of the Bruinen", 2, Sphere.Tactics, false, 0, 1, 2, 2)
                 .WithTraits("Noldor.", "Warrior.")
                 .WithKeywords("Sentinel.")
+                .WithTextLine("Sentinel.")
                 .WithTextLine("Watcher of the Bruinen does not exhaust to defend.Forced: After Watcher of the Bruinen defends, either discard it from play or discard 1 card from your hand.")
                 .WithTemplate("<p>{keyword:Sentinel.}</p><p>{self} does not exhaust to defend.</p><p><b>Forced:</b> After {self} defends, either discard it from play or discard 1 card from your hand.</p>")
                 .WithInfo(56, 3, Artist.Kristina_Carroll);
@@ -41,12 +45,12 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithTextLine("Attach to a Noldor or Silvan character, or to Aragorn. Limit 1 per character.Attached character gains ranged.If attached character has a printed ranged keyword, it gets +1 Attack during a ranged attack.")
                 .WithTemplate("<p>Attach to a {traits-character:Noldor,Silvan}, or to <a title='Aragorn Character' href='/Cards/Search?CardType=Character&Query=%2Btitle%3AAragorn' target='_blank'>Aragorn</a>. Limit 1 per character.</p><p>Attached character gains {keyword:Ranged.@ranged.}</p><p>If attached character has the printed {keyword:Ranged.@ranged} keyword, it gets +1 {Attack} during a ranged attack.</p>")
                 .WithInfo(57, 3, Artist.Sara_Biddle);
-            addAlly("Arwen Undómiel", 2, Sphere.Spirit, true, 2, 0, 1, 2)
+            addAlly("Arwen UndÃ³miel", 2, Sphere.Spirit, true, 2, 0, 1, 2)
                 .WithTraits("Noldor.", "Noble.")
-                .WithTextLine("Response: After Arwen Undómiel exhausts, choose a character. That character gains sentinel and gets +1 Defense until the end of the round.")
-                .WithFlavorLine("\"...she was the Evenstar of her people.\"")
+                .WithTextLine("Response: After Arwen UndÃ³miel exhausts, choose a character. That character gains sentinel and gets +1 Defense until the end of the round.")
+                .WithFlavorLine("\"...in whom it was said that the likeness of LÃºthien had come on earth again...she was the Evenstar of her people.\"")
                 .WithFlavorLine("-The Fellowship of the Ring")
-                .WithTemplate("<p><b>Response:</b> After {self} exhausts, choose a character. That character gains {keyword:Sentinel.@sentinel} and gets +1 {Defense} until the end of the round.</p><p class='flavor-text'>...in whom it was said that the likeness of Lúthien had come on earth again...for she was the Evenstar of her people.<br>&ndash;The Fellowship of the Ring</p>")
+                .WithTemplate("<p><b>Response:</b> After {self} exhausts, choose a character. That character gains {keyword:Sentinel.@sentinel} and gets +1 {Defense} until the end of the round.</p><p class='flavor-text'>...in whom it was said that the likeness of LÃºthien had come on earth again...for she was the Evenstar of her people.<br>&ndash;The Fellowship of the Ring</p>")
                 .WithInfo(58, 3, Artist.Magali_Villeneuve);
             addEvent("Elrond's Counsel", 0, Sphere.Spirit)
                 .WithTextLine("Action: If you control a unique Noldor character, give another character +1 Willpower until the end of the phase and lower your threat by 3.")
@@ -64,6 +68,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithInfo(61, 3, Artist.Ilich_Henriquez);
             addAttachment("Resourceful", 4, Sphere.Neutral, false)
                 .WithKeywords("Secrecy 3.")
+                .WithTextLine("Secrecy 3.")
                 .WithTextLine("Attach to a hero you control.")
                 .WithTextLine("Attached hero collects 1 additional resource during the resource phase each round.")
                 .WithInfo(62, 3, Artist.Magali_Villeneuve);
@@ -125,12 +130,14 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithInfo(70, 1, Artist.Cristi_Balanescu);
             addTreachery("Disturbed Waters", "The Watcher in the Water")
                 .WithKeywords("Doomed 5.")
+                .WithTextLine("Doomed 5.")
                 .WithTemplate("<p>{keyword:Doomed+5.@Doomed 5.}</p><p class='flavor-text'>...there came a soft sound: a swish, followed by a plop, as if a fish had disturbed the still surface of the water. Turning quickly they saw ripples, black-edged with shadow in the waning light: great rings were widening outwards from a point far out in the lake. There was a bubbling noise, and then silence<br>&ndash;The Fellowship of the Ring</p>")
                 .WithInfo(71, 3, Artist.Cristi_Balanescu);
             addEnemy("The Watcher", "The Watcher in the Water", 48, 4, 5, 7, 9)
                 .WithUnique()
                 .WithTraits("Creature.", "Tentacle.")
                 .WithKeywords("Regenerate 2.")
+                .WithTextLine("Regenerate 2.")
                 .WithTextLine("While there is another Tentacle enemy in play, The Watcher cannot be optionally engaged.")
                 .WithTextLine("If The Watcher is in the staging area at the end of the combat phase, each player must deal 3 damage to 1 character he controls.")
                 .WithTemplate("<p>{keyword:Regenerate+2.@Regenerate 2}. While there is another {trait:Tentacle.@Tentacle} enemy in play, {self} cannot be optionally engaged.</p><p>If {self} is in the staging area at the end of the combat phase, each player must deal 3 damage to 1 character he controls.</p>{victory:3}")

@@ -144,6 +144,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
             addEnemy("Mirkwood Bats", "Return to Mirkwood", 22, 1, 1, 1, 1)
                 .WithTraits("Creature.")
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("Forced: After Mirkwood Bats engages a player, deal 1 damage to each character controlled by the player guarding ~Gollum.")
                 .WithTemplate("<p>{keyword:Surge.}</p><p><b>Forced:</b> After {self} engages a player, deal 1 damage to each character controlled by the player guarding <a title='Gollum (Return to Mirkwood)' target='_blank' href='/Cards/Details/Gollum-RtM'>Gollum</a>.</p>")
                 .WithEasyModeQuantity(2)

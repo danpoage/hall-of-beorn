@@ -20,7 +20,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 .WithFlavor("\"Well, my dear fellow,\" said bilbo, \"now you've heard the news, can't you spare me a moment? I want your help in something urgent.\" -The Fellowship of the Ring")
                 .WithTemplate("<p>The first player draws 1 additional card in the resource phase.</p><p class='flavor-text'>&quot;Well, my dear fellow,&quot; said Bilbo, &quot;now you've heard the news, can't you spare me a moment? I want your help in something urgent.&quot;<br>&ndash;The Fellowship of the Ring</p>")
                 .WithInfo(1, 1, Artist.Tony_Foti);
-            addAttachment("Dúnedain Mark", 1, Sphere.Leadership, false)
+            addAttachment("DÃºnedain Mark", 1, Sphere.Leadership, false)
                 .WithTraits("Signal.")
                 .WithTextLine("Attach to a hero.")
                 .WithTextLine("Attached hero gains +1 Attack.")
@@ -33,7 +33,8 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
             addAlly("Winged Guardian", 2, Sphere.Tactics, false, 0, 0, 4, 1)
                 .WithTraits("Creature.", "Eagle.")
                 .WithKeywords("Sentinel.")
-                .WithTextLine("Winged Guardian cannot have restricted attachments.Forced: After an attack in which Winged Guardian defends resolves, pay 1 Tactics resource or discard Winged Guardian from play.")
+                .WithTextLine("Sentinel. Winged Guardian cannot have restricted attachments.")
+                .WithTextLine("Forced: After an attack in which Winged Guardian defends resolves, pay 1 Tactics resource or discard Winged Guardian from play.")
                 .WithInfo(4, 3, Artist.David_A_Nash);
             addEvent("The Eagles Are Coming!", 0, Sphere.Tactics)
                 .WithTraits("Eagle.")
@@ -47,7 +48,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 .WithInfo(6, 3, Artist.Magali_Villeneuve);
             addEvent("Mustering the Rohirrim", 1, Sphere.Spirit)
                 .WithTextLine("Action: Search the top 10 cards of your deck for any 1 Rohan ally card and add it to your hand. Then, shuffle the other cards back into your deck.")
-                .WithFlavor("\"More speed we cannot make, if the strength of Rohan is to be gathered.\" -Éomer, The Return of the King")
+                .WithFlavor("\"More speed we cannot make, if the strength of Rohan is to be gathered.\" -Ã‰omer, The Return of the King")
                 .WithInfo(7, 3, Artist.Stu_Barnes);
             addAlly("Rivendell Minstrel", 3, Sphere.Lore, false, 2, 0, 0, 1)
                 .WithTraits("Noldor.")
@@ -86,6 +87,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
             addObjective("Signs of Gollum", "The Hunt for Gollum")
                 .WithTraits("Clue.")
                 .WithKeywords("Guarded.")
+                .WithTextLine("Guarded.")
                 .WithTextLine("Response: After the players quest successfully, the players may claim Signs of Gollum if it has no attached encounters. When claimed, attach Signs of Gollum to any hero committed to the quest. (Counts as a Condition attachment with: 'Forced: After attached hero is damaged or leaves play, return this card to the top of the encounter deck.')")
                 .WithInfo(14, 4, Artist.David_A_Nash);
             addLocation("The Old Ford", "The Hunt for Gollum", Card.VALUE_X, 2)
@@ -132,6 +134,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
             addTreachery("Flooding", "The Hunt for Gollum")
                 .WithTraits("Disaster.")
                 .WithKeywords("Doomed 1.", "Surge.")
+                .WithTextLine("Doomed 1. Surge.")
                 .WithTextLine("When Revealed: Remove all progress tokens from all Riverland locations.")
                 .WithShadow("Shadow: Resolve the 'when revealed' effect of this card.")
                 .WithInfo(23, 2, Artist.David_Lecossu);

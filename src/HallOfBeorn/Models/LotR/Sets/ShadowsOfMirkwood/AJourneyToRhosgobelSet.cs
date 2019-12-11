@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 .WithTextLine("Response: After a character leaves play, ready Prince Imrahil. (Limit once per round.)")
                 .WithFlavor("But beyond, in the great fief of Belfalas, dwelt Prince Imrahil in his castle of Dol Amroth by the sea, and he was of high blood, and his fold also, tall men and proud with sea-grey eyes. -The Return of the King.")
                 .WithInfo(50, 1, Artist.David_A_Nash);
-            addAttachment("Dúnedain Quest", 2, Sphere.Leadership, false)
+            addAttachment("DÃºnedain Quest", 2, Sphere.Leadership, false)
                 .WithTraits("Signal.")
                 .WithTextLine("Attach to a hero.")
                 .WithTextLine("Attached hero gains +1 Willpower.")
@@ -32,7 +32,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
             addAlly("Landroval", 5, Sphere.Tactics, true, 1, 3, 1, 4)
                 .WithTraits("Creature.", "Eagle.")
                 .WithKeywords("Sentinel.")
-                .WithTextLine("Landroval cannot have restricted attachments.")
+                .WithTextLine("Sentinel. Landroval cannot have restricted attachments.")
                 .WithTextLine("Response: After a hero card is destroyed, return Landroval to his owner's hand to put that hero back into play, with 1 damage token on it. (Limit once per game.)")
                 .WithInfo(53, 3, Artist.Allison_Theus);
             addEvent("To the Eyrie", 2, Sphere.Tactics)
@@ -50,9 +50,10 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 .WithTextLine("Response: After attached location is explored, the first player draws 3 cards.")
                 .WithFlavor("The Mathom-house it was called; for anything that Hobbits had no immediate use for, but were unwilling to throw away, they called a mathom. Their dwellings were apt to become rather crowded with mathoms... -The Fellowship of the Ring")
                 .WithInfo(56, 3, Artist.Anna_Mohrbacher);
-            addAlly("Haldir of Lórien", 4, Sphere.Lore, true, 2, 2, 2, 3)
+            addAlly("Haldir of LÃ³rien", 4, Sphere.Lore, true, 2, 2, 2, 3)
                 .WithTraits("Silvan.")
                 .WithKeywords("Ranged.", "Sentinel.")
+                .WithTextLine("Ranged. Sentinel.")
                 .WithFlavor("\"But there are some of us still who go abroad for the gathering of news and the watching of our enemies, and they speak the languages of other lands.\" -The Fellowship of the Ring")
                 .WithInfo(57, 3, Artist.Magali_Villeneuve);
             addEvent("Infighting", 1, Sphere.Lore)
@@ -84,6 +85,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
             addObjective("Athelas", "A Journey to Rhosgobel")
                 .WithTraits("Item.")
                 .WithKeywords("Guarded.")
+                .WithTextLine("Guarded.")
                 .WithTextLine("Action: Exhaust a hero to claim this objective if it has no encounters attached. Then, attach Athelas to that hero.")
                 .WithInfo(63, 4, Artist.Sara_Biddle);
             addObjectiveAlly("Wilyador", "A Journey to Rhosgobel", 1, 1, 1, 20)

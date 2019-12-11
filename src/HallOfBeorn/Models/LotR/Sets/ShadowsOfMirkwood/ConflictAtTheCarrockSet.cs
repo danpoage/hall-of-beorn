@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 .WithTextLine("Response: After Frodo ~Baggins is damaged, cancel the damage and instead raise your threat by the amount of damage he would have been dealt. (Limit once per phase.)")
                 .WithFlavor("Frodo began to feel restless, and the old paths seemed too well-trodden. he looked at maps and wondered what lay beyond their edges... -The Fellowship of the Ring")
                 .WithInfo(25, 1, Artist.John_Stanko);
-            addAttachment("Dúnedain Warning", 1, Sphere.Leadership, false)
+            addAttachment("DÃºnedain Warning", 1, Sphere.Leadership, false)
                 .WithTraits("Signal.")
                 .WithTextLine("Attach to a hero.")
                 .WithTextLine("Attached hero gains +1 Defense.")
@@ -40,10 +40,10 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 .WithTextLine("Action: Discard Born Aloft from play to return attached ally to its owner's hand.")
                 .WithFlavor("\"Very well,\" said Gandalf. \"Take us where and as far as you will!\" -The Hobbit")
                 .WithInfo(29, 3, Artist.Salvador_Trakal);
-            addAlly("Éomund", 3, Sphere.Spirit, true, 2, 1, 1, 2)
+            addAlly("Ã‰omund", 3, Sphere.Spirit, true, 2, 1, 1, 2)
                 .WithTraits("Rohan.")
-                .WithTextLine("Response: After Éomund leaves play, ready all Rohan characters in play.")
-                .WithFlavor("\"You I have not seen before, for you are young, but I have spoken with Eomund your father...\" -Aragorn, The Two Towers")
+                .WithTextLine("Response: After Ã‰omund leaves play, ready all Rohan characters in play.")
+                .WithFlavor("\"You I have not seen before, for you are young, but I have spoken with Ã‰omund your father...\" -Aragorn, The Two Towers")
                 .WithInfo(30, 3, Artist.Katherine_Dinger);
             addAttachment("Nor am I a Stranger", 1, Sphere.Spirit, false)
                 .WithTraits("Title.")

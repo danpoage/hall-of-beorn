@@ -34,6 +34,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
             addAlly("Trollshaw Scout", 2, Sphere.Tactics, false, 0, 2, 1, 2)
                 .WithTraits("Noldor.", "Scout.")
                 .WithKeywords("Ranged.")
+                .WithTextLine("Ranged.")
                 .WithTextLine("Trollshaw Scout does not exhaust to attack.Forced: After Trollshaw Scout attacks, either discard it from play or discard 1 card from your hand.")
                 .WithTemplate("<p>{keyword:Ranged.}</p><p>{self} does not exhaust to attack.</p><p><b>Forced:</b> After {self} attacks, either discard it from play or discard 1 card from your hand.</p>")
                 .WithInfo(104, 3, Artist.Anna_Steinbauer);
@@ -71,7 +72,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
             addQuest("The Dripping Walls", "Foundations of Stone", 1, 'A', 9)
                 .WithTextLine("Setup: Place the Foundations of Stone encounter set aside, out of play. The first player attaches Cave Torch to a hero of his choice.")
                 .WithFlavorLine("Your journey has led to a decrepit portion of the mines, untouched by Dwarven pick for many a year. The air grows thick with moisture, and the walls almost appear to be weeping.")
-                .WithTemplate("<p class='flavor-text'>Your journey has led to a decrepit portion of the mines, untouched by Dwarven pick for many a year. The air grows thick with moisture, and the walls almost appear to be weeping.</p><p><b>Setup:</b> Place the <a title='Foundations of Stone Encounter Set' href='/Cards/Search?CardType=Encounter&EncounterSet=Foundations+of+Stone' target='_blank'>Foundations of Stone</a> encounter set aside, out of play. The first player attaches <a title='Cave Torch (Khazad-dûm)' href='/Cards/Details/Cave-Torch-KD' target='_blank'>Cave Torch</a> to a hero of his choice.</p>")
+                .WithTemplate("<p class='flavor-text'>Your journey has led to a decrepit portion of the mines, untouched by Dwarven pick for many a year. The air grows thick with moisture, and the walls almost appear to be weeping.</p><p><b>Setup:</b> Place the <a title='Foundations of Stone Encounter Set' href='/Cards/Search?CardType=Encounter&EncounterSet=Foundations+of+Stone' target='_blank'>Foundations of Stone</a> encounter set aside, out of play. The first player attaches <a title='Cave Torch (Khazad-dÃ»m)' href='/Cards/Details/Cave-Torch-KD' target='_blank'>Cave Torch</a> to a hero of his choice.</p>")
                 .WithOppositeTextLine("When Revealed: Reveal 1 card from the encounter deck per player, and add it to the staging area.")
                 .WithOppositeFlavorLine("A low rumble sounds from below. There are a variety of underground waterways in Moria, but they should not be disturbed.")
                 .WithTemplate2("<p class='flavor-text'>A low rumble sounds from below. There are a variety of underground waterways in Moria, but they should not be disturbed.</p><p><b>When Revealed:</b> Reveal 1 card from the encounter deck per player, and add it to the staging area.</p>")
@@ -134,6 +135,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithUnique()
                 .WithTraits("Weapon.", "Artifact.")
                 .WithKeywords("Surge.", "Restricted.")
+                .WithTextLine("Surge. Restricted.")
                 .WithTextLine("Attached hero gets +3 Attack. If attached hero is a Dwarf, it gets +1 Willpower.")
                 .WithTextLine("Action: Exhaust a hero to claim this objective. Then, attach Durin's Axe to that hero as an attachment.")
                 .WithInfo(119, 1, Artist.Stephen_M_Mabee);
@@ -141,6 +143,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithUnique()
                 .WithTraits("Armor.", "Artifact.")
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("Attached hero gets +1 Defense. If attached hero is a Dwarf, it gets +2 hit points.")
                 .WithTextLine("Action: Exhaust a hero to claim this objective. Then, attach Durin's Helm to that hero as an attachment.")
                 .WithInfo(120, 1, Artist.Stephen_M_Mabee);
@@ -153,11 +156,13 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
             addLocation("Mithril Lode", "Foundations of Stone", 2, 5)
                 .WithTraits("Underground.")
                 .WithKeywords("Doomed 1.")
+                .WithTextLine("Doomed 1.")
                 .WithTextLine("While Mithril Lode is the active location, it gains: 'Refresh Action: Exhaust a character you control to place X progress tokens on the current quest card, bypassing any active location. X is the exhausted character's Willpower. (Limit once per round.)'")
                 .WithTemplate("<p>{keyword:Doomed 1.}</p><p>While {self} is the active location, it gains: <blockquote><b>Refresh Action:</b> Exhaust a character you control to place X progress tokens on the current quest card, bypassing any active location. X is the exhausted character's {Willpower}. (Limit once per round.)</blockquote></p>")
                 .WithInfo(122, 1, Artist.Cristi_Balanescu);
             addTreachery("Deep Deep Dark", "Foundations of Stone")
                 .WithKeywords("Doomed 1.", "Surge.")
+                .WithTextLine("Doomed 1. Surge.")
                 .WithTextLine("When Revealed: Attach 1 card from the top of the first player's deck to each Nameless enemy in play, if able.")
                 .WithShadow("Shadow: If attacking enemy is Nameless, the defending player must discard his hand.")
                 .WithTemplate("<p>{keyword:Doomed 1.} {keyword:Surge.}</p><p><b>When Revealed:</b> Attach 1 card from the top of the first player's deck to each {trait:Nameless.@Nameless} enemy in play, if able.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> If attacking enemy is {trait:Nameless.@Nameless}, the defending player must discard his hand.</p>")

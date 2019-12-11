@@ -23,6 +23,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
             addAlly("Dúnedain Wanderer", 5, Sphere.Leadership, false, 1, 2, 2, 2)
                 .WithTraits("Dúnedain.", "Ranger.")
                 .WithKeywords("Ranged.", "Sentinel.", "Secrecy 3.")
+                .WithTextLine("Ranged. Sentinel. Secrecy 3.")
                 .WithTemplate("<p>{keyword:Ranged.} {keyword:Sentinel.} {keyword:Secrecy 3.}</p><p class='flavor-text'>They roamed at will southwards, and eastwards even as far as the Misty Mountains; but they were no few and rarely seen.<br>&ndash;The Fellowship of the Ring</p>")
                 .WithInfo(29, 3, Artist.Ilich_Henriquez);
             addEvent("Lure of Moria", 3, Sphere.Leadership)
@@ -32,7 +33,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
             addAttachment("Rivendell Blade", 1, Sphere.Tactics, false)
                 .WithTraits("Item.", "Weapon.")
                 .WithKeywords("Restricted.")
-                .WithTextLine("Attach to a Noldor or Silvan character.")
+                .WithTextLine("Attach to a Noldor or Silvan character. Restricted.")
                 .WithTextLine("When attached character attacks an enemy, that enemy gets -2 Defense until the end of the phase.")
                 .WithInfo(31, 3, Artist.Sara_Biddle);
             addEvent("Hail of Stones", 1, Sphere.Tactics)
@@ -124,22 +125,26 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithInfo(47, 3, Artist.Jasper_Sandner);
             addTreachery("Orc Ambush", "Road to Rivendell")
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("When Revealed: All Orc enemies in the staging area engage the first player. If there are no Orc enemies in the staging area, return all Orc enemies in the encounter discard pile to the staging area, if able.")
                 .WithEasyModeQuantity(0)
                 .WithInfo(48, 2, Artist.Anton_Kolyukh);
             addEnemy("Goblin Taskmaster", "Road to Rivendell", 27, 2, 2, 2, 4)
                 .WithTraits("Goblin.", "Orc.")
                 .WithKeywords("Ambush.")
+                .WithTextLine("Ambush.")
                 .WithTextLine("Forced: After Goblin Taskmaster engages a player, that player deals 2 damage to 1 character he controls.")
                 .WithInfo(49, 4, Artist.Mike_Nash);
             addEnemy("Orc Raiders", "Road to Rivendell", 21, 1, 3, 1, 3)
                 .WithTraits("Orc.")
                 .WithKeywords("Ambush.")
+                .WithTextLine("Ambush.")
                 .WithTextLine("Forced: After Orc Raiders engages a player, that player discards 2 attachments he controls, if able.")
                 .WithInfo(50, 3, Artist.Mark_Tarrisse);
             addEnemy("Crebain", "Road to Rivendell", 35, 2, 0, 0, 3)
                 .WithTraits("Creature.")
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("While Crebain is in the staging area, encounter card effects cannot be canceled.")
                 .WithShadow("Shadow: Return attacking enemy to the staging area after it attacks.")
                 .WithTemplate("<p>{keyword:Surge.@Surge}<p><p>While {self} is in the staging area, encounter card effects cannot be canceled.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Return attacking enemy to the staging area after it attacks.</p>")
@@ -147,6 +152,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
             addEnemy("Wild Bear", "Road to Rivendell", 34, 0, 2, 3, 5)
                 .WithTraits("Creature.")
                 .WithKeywords("Ambush.")
+                .WithTextLine("Ambush.")
                 .WithTextLine("Forced: After Wild Bear engages a player, it makes an immediate attack.")
                 .WithInfo(52, 3, Artist.Salvador_Trakal);
         }

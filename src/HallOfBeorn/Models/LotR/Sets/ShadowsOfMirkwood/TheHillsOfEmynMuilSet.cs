@@ -17,8 +17,9 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
             addHero("Brand son of Bain", 10, Sphere.Tactics, 2, 3, 2, 3)
                 .WithTraits("Dale.")
                 .WithKeywords("Ranged.")
+                .WithTextLine("Ranged.")
                 .WithTextLine("Response: After Brand son of Bain attacks and defeats an enemy engaged with another player, choose and ready one of that player's characters.")
-                .WithFlavor("\"The grandson of Bard the Bowman rules them, Brand son of Bain son of Bard.\"\r\n-Glóin, The Fellowship of the Ring")
+                .WithFlavor("\"The grandson of Bard the Bowman rules them, Brand son of Bain son of Bard.\"\r\n-GlÃ³in, The Fellowship of the Ring")
                 .WithInfo(72, 1, Artist.Tiziano_Baracchi);
             addAlly("Keen-eyed Took", 2, Sphere.Leadership, false, 1, 0, 0, 2)
                 .WithTraits("Hobbit.")
@@ -46,7 +47,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 .WithInfo(77, 3, Artist.Andrew_Johanson);
             addEvent("Ride to Ruin", 1, Sphere.Spirit)
                 .WithTextLine("Action: Discard a Rohan ally to choose a location. Place 3 progress tokens on that location.")
-                .WithFlavor("\"Death! Ride, ride to ruin and the world's ending!\"\r\n-Éomer, The Return of the King")
+                .WithFlavor("\"Death! Ride, ride to ruin and the world's ending!\"\r\n-Ã‰omer, The Return of the King")
                 .WithInfo(78, 3, Artist.Erfian_Asafat);
             addAlly("Gildor Inglorion", 5, Sphere.Lore, true, 3, 2, 3, 3)
                 .WithTraits("Noldor.")
@@ -142,6 +143,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
             addEnemy("Orc Horse Thieves", "The Hills of Emyn Muil", 35, 3, 1, 2, 6)
                 .WithTraits("Mordor.", "Orc.")
                 .WithKeywords("Doomed 2.")
+                .WithTextLine("Doomed 2.")
                 .WithTextLine("Orc Horse Thieves get +1 Attack for each location in the staging area.")
                 .WithTemplate("<p>{self} get +1 {Attack} for each location in the staging area.</p>")
                 .WithEasyModeQuantity(2)

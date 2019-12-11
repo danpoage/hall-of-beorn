@@ -21,12 +21,12 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 .WithFlavor("\"...in Gondor we must trust to such weapons as we have.\" -The Fellowship of the Ring")
                 .WithErrata()
                 .WithInfo(95, 1, Artist.Tiziano_Baracchi);
-            addAlly("Dúnedain Watcher", 3, Sphere.Leadership, false, 1, 1, 1, 2)
-                .WithTraits("Dúnedain.")
+            addAlly("DÃºnedain Watcher", 3, Sphere.Leadership, false, 1, 1, 1, 2)
+                .WithTraits("DÃºnedain.")
                 .WithTextLine("Response: Discard Dunedain Watcher from play to cancel the shadow effects of a card just triggered.")
                 .WithFlavor("\"If simple folk are free from care and fear, simple they will be, and we must be secret to keep them so. That has been the task of my kindred, while the years have lengthened and the grass has grown.\" -Strider, The Fellowship of the Ring")
                 .WithInfo(96, 3, Artist.Lindsey_Messecar);
-            addAttachment("Dúnedain Cache", 2, Sphere.Leadership, false)
+            addAttachment("DÃºnedain Cache", 2, Sphere.Leadership, false)
                 .WithTraits("Item.")
                 .WithTextLine("Attach to a hero. Attached hero gains ranged.")
                 .WithTextLine("Action: Pay 1 resource from attached hero's pool to attach Dunedain Cache to another hero.")
@@ -35,7 +35,8 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
             addAlly("Vassal of the Windlord", 1, Sphere.Tactics, false, 0, 3, 0, 1)
                 .WithTraits("Creature.", "Eagle.")
                 .WithKeywords("Ranged.")
-                .WithTextLine("Vassal of the Windlord cannot have restricted attachments.Forced: After an attack in which Vassal of the Windlord attacked resolves, discard Vassal of the Windlord from play.")
+                .WithTextLine("Ranged. Vassal of the Windlord cannot have restricted attachments.")
+                .WithTextLine("Forced: After an attack in which Vassal of the Windlord attacked resolves, discard Vassal of the Windlord from play.")
                 .WithTemplate("<p>{keyword:Ranged.}{self} cannot have restricted attachments.<p><p><b>Forced:</b> After an attack in which {self} attacked resolves, discard {self} from play.</p>")
                 .WithInfo(98, 3, Artist.Anna_Christenson);
             addAttachment("Song of Mocking", 1, Sphere.Tactics, false)

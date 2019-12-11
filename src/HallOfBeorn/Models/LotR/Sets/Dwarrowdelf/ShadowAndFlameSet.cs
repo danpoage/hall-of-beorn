@@ -24,7 +24,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithInfo(128, 1, Artist.Magali_Villeneuve);
             addEvent("We Are Not Idle", 0, Sphere.Leadership)
                 .WithTextLine("Action: Exhaust X Dwarf heroes to add X resources to a hero's resource pool and draw 1 card.")
-                .WithFlavorLine("\"You should see the stone-paved roads of many colours! And the halls and cavernous streets under the earth with arches carved like trees; and the terraces and towers upon the Mountain's sides! Then you would see that we have not been idle.\" -Glóin, The Fellowship of the Ring")
+                .WithFlavorLine("\"You should see the stone-paved roads of many colours! And the halls and cavernous streets under the earth with arches carved like trees; and the terraces and towers upon the Mountain's sides! Then you would see that we have not been idle.\"")
+                .WithFlavorLine("-GlÃ³in, The Fellowship of the Ring")
                 .WithErrata()
                 .WithInfo(129, 3, Artist.Charles_Urbach);
             addAttachment("Hardy Leadership", 2, Sphere.Leadership, true)
@@ -39,6 +40,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
             addEvent("A Elbereth! Gilthoniel!", 4, Sphere.Spirit)
                 .WithAlternateSlug("O-Elbereth-Gilthonial-SaF")
                 .WithKeywords("Secrecy 4.")
+                .WithTextLine("Secrecy 4.")
                 .WithTextLine("Response: After a non-unique enemy attacks you, put that enemy on the bottom of the encounter deck. If your threat is lower than that enemy's engagement cost, set your threat equal to the engagement cost of that enemy.")
                 .WithErrata()
                 .WithInfo(132, 3, Artist.Aaron_B_Miller);
@@ -57,6 +59,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithInfo(135, 3, Artist.Magali_Villeneuve);
             addEvent("Risk Some Light", 3, Sphere.Lore)
                 .WithKeywords("Secrecy 3.")
+                .WithTextLine("Secrecy 3.")
                 .WithTextLine("Action: Look at the top 3 cards of the encounter deck. You may select 1 card and move it to the bottom of the encounter deck. Return any unselected cards to the top of the encounter deck, in any order.")
                 .WithTemplate("<p class='main-text'>{keyword:Secrecy 3.}</p><p class='main-text'><b>Action:</b> Look at the top 3 cards of the encounter deck. You may select 1 card and move it to the bottom of the encounter deck. Return any unselected cards to the top of the encounter deck, in any order.</p>")
                 .WithInfo(136, 3, Artist.Dmitry_Burmak);
@@ -127,6 +130,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithInfo(146, 3, Artist.Matthew_Starbuck);
             addTreachery("Inner Shadow", "Shadow and Flame")
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("When Revealed: Heal 5 damage from Durin's Bane, if able. The first player may remove 1 questing hero he controls from the quest to cancel this effect.")
                 .WithTemplate("<p>{keyword:Surge.}</p><p><b>When Revealed:</b> Heal 5 damage from {card:Durin&#39;s-Bane-SaF@Durin&#39;s Bane}, if able. The first player may remove 1 questing hero he controls from the quest to cancel this effect.</p><p class='flavor-text'>The fire in it seemed to die, but the darkness grew.<br>&ndash;The Fellowship of the Ring</p>")
                 .WithInfo(147, 3, Artist.Rafal_Hrynkiewicz);
@@ -145,6 +149,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithUnique()
                 .WithTraits("Balrog.", "Flame.", "Shadow.")
                 .WithKeywords("Regenerate 3.", "Indestructible.")
+                .WithTextLine("Regenerate 3. Indestructible.")
                 .WithTextLine("Players cannot play attachments on Durin's Bane.Durin's Bane cannot leave the staging area, is considered to be engaged with each player whose threat is 1 or greater, and attacks each of those players in turn during the combat phase (deal and discard a new shadow card each attack).")
                 .WithTemplate("<p>{keyword:Regenerate 3.} {keyword:Indestructible.} Players cannot play attachments on {self}.</p><p>{self} cannot leave the staging area, is considered to be engaged with each player whose threat is 1 or greater, and attacks each of those players in turn during the combat phase <i>(deal and discard a new shadow card each attack)</i>.</p>")
                 .WithInfo(150, 1, Artist.Magali_Villeneuve);
