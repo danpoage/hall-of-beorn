@@ -35,7 +35,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
             addAttachment("Elven Spear", 0, Sphere.Tactics, false)
                 .WithTraits("Item.", "Weapon.")
                 .WithKeywords("Restricted.")
-                .WithTextLine("Attach to a Noldor or Silvan hero.")
+                .WithTextLine("Attach to a Noldor or Silvan hero. Restricted.")
                 .WithTextLine("Action: Discard a card from your hand to give attached hero +1 Attack until the end of the phase. Limit 3 times per phase.")
                 .WithFlavorLine("Their spears and swords shone in the gloom with a gleam of chill flame, so deadly was the wrath of the hands that held them.")
                 .WithFlavorLine("-The Hobbit")
@@ -56,7 +56,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
             addAttachment("Silver Harp", 2, Sphere.Spirit, false)
                 .WithTraits("Item.", "Instrument.")
                 .WithKeywords("Restricted.")
-                .WithTextLine("Attach to a Spirit hero.")
+                .WithTextLine("Attach to a Spirit hero. Restricted.")
                 .WithTextLine("Response: After a card is discarded from your hand, exhaust Silver Harp to return that card to your hand.")
                 .WithFlavorLine("Elrond wore a mantle of grey and had a star upon his forehead, and a silver harp was in his hand... -The Return of the King")
                 .WithInfo(90, 3, Artist.Arden_Beckwith);
@@ -83,6 +83,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTextLine("Setup: Make The Great Hall the active location. Set Thaurdir aside, out of play. Add the 3 Treachery of Rhudaur side quests to the staging area, quest side faceup. Search the encounter deck for 1 copy of Ancient Causeway, and add it to the staging area (2 copies instead if there are 3 or 4 players in the game). The first player gains control of Amarthiúl.")
                 .WithFlavorLine("You have decided to explore the ruins of this ancient keep, but Thaurdir pursues you, and time is of the essence.")
                 .WithTemplate("<p class='flavor-text'>You have decided to explore the ruins of this ancient keep, but Thaurdir pursues you, and time is of the essence.</p><p><b>Setup:</b> Make {card:The-Great-Hall-TToR@The Great Hall} the active location. Set {card:Thaurdir-TToR@Thaurdir} aside, out of play. Add the <a href='/Cards/Search?CardSet=The+Treachery+of+Rhudaur&CardType=Encounter_Side_Quest' title='Side Quests from The Treachery of Rhudaur' target='_blank'>3 Treachery of Rhudaur side quests</a> to the staging area, quest side faceup. Search the encounter deck for 1 copy of {card:Ancient-Causeway-TLR@Ancient Causeway}, and add it to the staging area (2 copies instead if there are 3 or 4 players in the game). The first player gains control of {card:Amarthiul-TToR@Amarthiúl}.</p>")
+                .WithOppositeTextLine("Time 5.")
                 .WithOppositeTextLine("Forced: After the last time counter is removed from Secrets of Rhudaur, remove each Treachery of Rhudaur side quest from the game and immediately advance to stage 2.")
                 .WithOppositeTextLine("During the quest phase, Secrets of Rhudaur cannot be chosen as the current quest.")
                 .WithOppositeTextLine("If there are no Treachery of Rhudaur side quests in play, immediately advance to stage 2.")
@@ -116,7 +117,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithUnique()
                 .WithTraits("Undead.", "Wraith.")
                 .WithKeywords("Indestructible.")
-                .WithTextLine("Cannot have attachments.")
+                .WithTextLine("Indestructible. Cannot have attachments.")
                 .WithTextLine("Forced: After a treachery card with the Sorcery trait is revealed from the encounter deck, Thaurdir heals 3 damage and makes an immediate attack against the first player.")
                 .WithTemplate("<p>{keyword:Indestructible.} Cannot have attachments.</p><p><b>Forced:</b> After a treachery card with the {trait:Sorcery.@Sorcery} trait is revealed from the encounter deck, {self} heals 3 damage and makes an immediate attack against the first player.</p>")
                 .WithInfo(98, 1, Artist.Joel_Hustak);
@@ -163,6 +164,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithInfo(104, 2, Artist.Wibben);
             addTreachery("Centuries of Sorrow", EncounterSet.TheTreacheryOfRhudaur)
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("When Revealed: The first player must choose a new quest to be the current quest, if able.")
                 .WithShadow("Shadow: If the defending player does not control at least 1 Clue objective, this attack is considered undefended.")
                 .WithTemplate("<p>{keyword:Surge.}</p><p><b>When Revealed:</b> The first player must choose a new quest to be the current quest, if able.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> If the defending player does not control at least 1 <a title='Clue Objective (The Treachery of Rhudaur)' href='/Cards/Search?CardSet=The+Treachery+of+Rhudaur&Trait=Clue.&CardType=Objective' target='_blank'><b><i>Clue</i></b> objective</a>, this attack is considered undefended.</p>")

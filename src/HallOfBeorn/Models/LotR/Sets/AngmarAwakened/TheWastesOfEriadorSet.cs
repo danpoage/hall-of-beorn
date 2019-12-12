@@ -50,7 +50,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
             addAttachment("Hobbit Pony", 0, Sphere.Spirit, false)
                 .WithTraits("Mount.")
                 .WithKeywords("Restricted.")
-                .WithTextLine("Attach to a Hobbit hero.")
+                .WithTextLine("Attach to a Hobbit hero. Restricted.")
                 .WithTextLine("Quest Action: If attached hero is not committed to the quest, exhaust Hobbit Pony and attached hero to commit attached hero to the quest.")
                 .WithFlavorLine("He was riding a pony, and a scarf was swathed round his neck and over his chin to keep out the fog. —The Fellowship of the Ring")
                 .WithInfo(7, 3, Artist.Eva_Maria_Toker);
@@ -148,6 +148,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
             addEnemy("Wolf of Angmar", EncounterSet.TheWastesOfEriador, 25, 1, 2, 1, 3)
                 .WithTraits("Creature.", "Warg.")
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("While it is ~Night, ~Wolf of ~Angmar gets +2 Attack.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if it is ~Night).")
                 .WithEasyModeQuantity(2)

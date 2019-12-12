@@ -35,6 +35,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
             addAlly("Derndingle Warrior", 2, Sphere.Tactics, false, 1, 1, 2, 3)
                 .WithTraits("Ent.", "Warrior.")
                 .WithKeywords("Sentinel.")
+                .WithTextLine("Sentinel.")
                 .WithTextLine("Cannot have restricted attachments. Enters play exhausted.")
                 .WithTextLine("While Derndingle Warrior is defending, it gains: \"Action: Deal 1 damage to Derndingle Warrior to give it +3 Defense for this attack.\" (Limit once per attack.)")
                 .WithInfo(31, 3, Artist.Oscar_Romer);
@@ -76,6 +77,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithInfo(38, 1, Artist.Tomasz_Jedruszek);
             addQuest("Gornákh's Dungeons", EncounterSet.EscapeFromMountGram, 2, 'A', Card.VALUE_NA)
                 .WithKeywords("Capture 7.")
+                .WithTextLine("Capture 7.")
                 .WithTextLine("When Revealed: Search the encounter deck for 1 copy of Prison Cell, reveal it, and add it to your staging area. Then capture an additional 2 cards from the top of your captured deck underneath that copy of Prison Cell.")
                 .WithFlavorLine("Alone and without your equipment, you steel yourself and being to search for your companions and belongings.")
                 .WithOppositeTextLine("Any time players would place progress on this quest, resuce an equal number of captured cards at random from underneath it instead. (Progress is placed on the active location before triggering this effect.)")
@@ -109,6 +111,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
             addEnemy("Cruel Torturer", EncounterSet.EscapeFromMountGram, 36, 2, 3, 2, 3)
                 .WithTraits("Goblin.", "Orc.")
                 .WithKeywords("Capture 1.")
+                .WithTextLine("Capture 1.")
                 .WithTextLine("Forced: When Cruel Torturer would damage an ally by an attack, capture that ally underneath Cruel Torturer instead.")
                 .WithFlavorLine("\"You'll get bed and breakfast all right: more than you can stomach\"")
                 .WithFlavorLine("-Uglúk, The Two Towers")
@@ -116,11 +119,13 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
             addEnemy("Dungeon Guard", EncounterSet.EscapeFromMountGram, 16, 1, 2, 1, 2)
                 .WithTraits("Goblin.", "Orc.")
                 .WithKeywords("Capture 1.")
+                .WithTextLine("Capture 1.")
                 .WithTextLine("Response: After the captured card(s) underneath Dungeon Guard are rescued, the players may put 1 of them into play at no cost.")
                 .WithInfo(44, 3, Artist.Anthony_Feliciano);
             addEnemy("Goblin Tormentor", EncounterSet.EscapeFromMountGram, 28, 2, Card.VALUE_X, 1, 3)
                 .WithTraits("Goblin.", "Orc.")
                 .WithKeywords("Capture 1.")
+                .WithTextLine("Capture 1.")
                 .WithTextLine("X is the number of cards in play with 1 or more captured cards underneath them.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if it has no captured cards underneath it).")
                 .WithEasyModeQuantity(0)
@@ -128,6 +133,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
             addLocation("Prison Cell", EncounterSet.EscapeFromMountGram, 1, 3)
                 .WithTraits("Underground.")
                 .WithKeywords("Capture 1.")
+                .WithTextLine("Capture 1.")
                 .WithTextLine("Response: After the players travel to Prison Cell, look at the captured card(s) underneath it and choose 1 to put into play at no cost. Place the other cards back underneath Prison Cell.")
                 .WithFlavorLine("...goblins don't care who they catch, as long as it isa done smart and secret, and the prisoners are not able to defend themselves.")
                 .WithFlavorLine("-The Hobbit")
@@ -135,17 +141,20 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
             addLocation("Patrol Room", EncounterSet.EscapeFromMountGram, 3, 2)
                 .WithTraits("Underground.")
                 .WithKeywords("Capture 2.")
+                .WithTextLine("Capture 2.")
                 .WithTextLine("Travel: Each player raises his threat by 3 to travel here.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the defending player's threat is 20 or higher).")
                 .WithInfo(47, 2, Artist.Jordan_Saia);
             addLocation("Tunnels of Mount Gram", EncounterSet.EscapeFromMountGram, Card.VALUE_X, 4)
                 .WithTraits("Underground.")
                 .WithKeywords("Capture 1.")
+                .WithTextLine("Capture 1.")
                 .WithTextLine("X is the number of captured cards underneath Tunnels of Mount Gram.")
                 .WithShadow("Shadow: Capture each attachment attached to the defending character underneath the attacking enemy.")
                 .WithInfo(48, 2, Artist.Ferdinand_Dumago_Ladera);
             addTreachery("Sound the Alarm!", EncounterSet.EscapeFromMountGram)
                 .WithKeywords("Doomed 3.")
+                .WithTextLine("Doomed 3.")
                 .WithTextLine("When Revealed: Until the end of the round, each enemy gets -10 engagement cost and +1 Attack. If there are no enemies in play, search the encounter deck and discard pile for an enemy and add it to the staging area.")
                 .WithEasyModeQuantity(1)
                 .WithInfo(49, 2, Artist.Owen_William_Weber);
@@ -164,7 +173,8 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithInfo(52, 2, Artist.Rafal_Hrynkiewicz);
             addEncounterSideQuest("Stop the Executioners!", EncounterSet.EscapeFromMountGram, 6)
                 .WithKeywords("Capture 5.", "Time 4.")
-                .WithTextLine("Forced: When the last time counter is removed from this quest, discard its captured cards and remove this quest from the game. Then, raise each player's threat by 3 for each of his characters that was discarded by this effect.")
+                .WithTextLine("Capture 5.")
+                .WithTextLine("Time 4. Forced: When the last time counter is removed from this quest, discard its captured cards and remove this quest from the game. Then, raise each player's threat by 3 for each of his characters that was discarded by this effect.")
                 .WithFlavorLine("Several of your captured companions are being sent to the executioner's block. If you make it in time, you might be able to save them before they are slain!")
                 .WithVictoryPoints(10)
                 .WithInfo(53, 1, Artist.Guillaume_Ducos);
