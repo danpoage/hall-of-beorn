@@ -31,12 +31,13 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
             addAttachment("Firefoot", 2, Sphere.Tactics, true)
                 .WithTraits("Mount.")
                 .WithKeywords("Restricted.")
-                .WithTextLine("Attach to a Tactics or Rohan hero.")
+                .WithTextLine("Attach to a Tactics or Rohan hero. Restricted.")
                 .WithTextLine("Attached hero gets +1 Attack (+2 Attack instead if attached hero is E´omer).")
                 .WithTextLine("Response: After attached hero attacks alone, exhaust Firefoot to choose a non-unique enemy engaged with you. Excess damage dealt by this attack is assigned to the chosen enemy.")
                 .WithInfo(4, 3, Artist.Nora_Brisotti);
             addEvent("Close Call", 0, Sphere.Tactics)
                 .WithKeywords("Doomed X.")
+                .WithTextLine("Doomed X.")
                 .WithTextLine("Response: Cancel X damage just dealt to a hero.")
                 .WithFlavorLine("\"That spear-thrust would have skewered a wild boar!\"–Aragorn, The Fellowship of the Ring")
                 .WithInfo(5, 3, Artist.Ilich_Henriquez);
@@ -57,6 +58,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
             addAlly("Ithilien Lookout", 3, Sphere.Lore, false, 1, 2, 0, 2)
                 .WithTraits("Gondor.", "Ranger.")
                 .WithKeywords("Secrecy 2.")
+                .WithTextLine("Secrecy 2.")
                 .WithTextLine("Response: After ~Ithilien Lookout enters play, look at the top card of the encounter deck. If it is an enemy, you may discard it.")
                 .WithFlavorLine("All had swords at their sides... –The Two Towers")
                 .WithInfo(8, 3, Artist.Ilich_Henriquez);
@@ -130,6 +132,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
             addLocation("Hithaeglir Foothills", EncounterSet.TheDunlandTrap, Card.VALUE_X, 4)
                 .WithTraits("Enedwaith.", "Hills.")
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("X is the number of resource tokens on this card.")
                 .WithTextLine("Forced: After a player draws any number of cards, place 1 resource token here.")
                 .WithEasyModeQuantity(1)
@@ -156,6 +159,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithInfo(23, 3, Artist.Ilich_Henriquez);
             addTreachery("Dunlending Ambush", EncounterSet.TheDunlandTrap)
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("When Revealed: Attach to the active location. (Counts as a Condition attachment with the text: \"Limit 1 per location. Forced: After attached location is explored, each player searches the encounter deck and discard pile for a Dunland enemy and puts it into play engaged with him. Shuffle the encounter deck.\")")
                 .WithEasyModeQuantity(1)
                 .WithInfo(24, 3, Artist.Claudio_Pozas);

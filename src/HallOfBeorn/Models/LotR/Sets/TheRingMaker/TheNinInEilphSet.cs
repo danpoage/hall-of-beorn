@@ -33,19 +33,21 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
             addAlly("Galadhon Archer", 2, Sphere.Tactics, false, 0, 2, 0, 1)
                 .WithTraits("Silvan.", "Warrior.")
                 .WithKeywords("Ranged.")
+                .WithTextLine("Ranged.")
                 .WithTextLine("Response: After Galadhon Archer enters play, deal 1 damage to an enemy not engaged with you.")
                 .WithFlavorLine("\"...they say that you breathe so loud that they could shoot you in the dark.\" -Legolas, The Fellowship of the Ring")
                 .WithInfo(87, 3, Artist.Sara_K_Diesel);
             addAttachment("Bow of the Galadhrim", 1, Sphere.Tactics, false)
                 .WithTraits("Item.", "Weapon.")
                 .WithKeywords("Restricted.")
-                .WithTextLine("Attach to a Silvan character with the ranged keyword.")
+                .WithTextLine("Attach to a Silvan character with the ranged keyword. Restricted.")
                 .WithTextLine("Attached character gets +1 Attack. (+2 Attack instead if attacking an enemy not engaged with you.)")
                 .WithFlavorLine("...longer and stronger than the bows of Mirkwood, and strung with a string of elf-hair. -The Fellowship of the Ring")
                 .WithInfo(88, 3, Artist.Sara_Biddle);
             addAlly("Celduin Traveler", 3, Sphere.Spirit, false, 2, 0, 1, 2)
                 .WithTraits("Dale.", "Scout.")
                 .WithKeywords("Secrecy 2.")
+                .WithTextLine("Secrecy 2.")
                 .WithTextLine("Response: After Celduin Traveler enters play, look at the top card of the encounter deck. If it is a location, you may discard it.")
                 .WithFlavorLine("In two days going they rowed right up the Long Lake and passed out into the River Running... -The Hobbit")
                 .WithInfo(89, 3, Artist.Melanie_Maier);
@@ -205,6 +207,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithInfo(109, 3, Artist.Ben_Zweifel);
             addTreachery("Shifting Marshland", EncounterSet.TheNinInEilph)
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("When Revealed: Remove 1 time counter from the current quest.")
                 .WithShadow("Shadow: Attacking enemy makes an additional attack after this one.")
                 .WithEasyModeQuantity(2)

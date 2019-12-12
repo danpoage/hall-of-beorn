@@ -17,6 +17,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
             addHero("Haldir of Lórien", 9, Sphere.Lore, 2, 3, 1, 3)
                 .WithTraits("Silvan.", "Ranger.", "Scout.")
                 .WithKeywords("Ranged.")
+                .WithTextLine("Ranged.")
                 .WithTextLine("Combat Action: If you have not engaged an enemy this round, exhaust Haldir of Lórien to declare him as an attacker (and resolve his attack) against an enemy not engaged with you. Limit once per round.")
                 .WithFlavorLine("\"We allow no strangers to spy out the secrets of the Naith...\" -The Fellowship of the Ring")
                 .WithInfo(56, 1, Artist.Sebastian_Giacobino);
@@ -66,6 +67,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
             addAlly("Defender of the Naith", 3, Sphere.Neutral, false, 0, 1, 2, 2)
                 .WithTraits("Silvan.", "Warrior.")
                 .WithKeywords("Sentinel.")
+                .WithTextLine("Sentinel.")
                 .WithTextLine("Response: After a Silvan ally you control leaves play, ready Defender of the Naith.")
                 .WithFlavorLine("\"We have been keeping watch on the rivers, ever since we saw a great troop of Orcs going North toward Moria...\" -Haldir, The Fellowship of the Ring")
                 .WithInfo(65, 3, Artist.Christine_Griffin);
@@ -133,6 +135,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
             addLocation("Tharbad Hideout", EncounterSet.TroubleInTharbad, 1, 1)
                 .WithTraits("City.")
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("While Tharbad Hideout is the active location, time counters cannot be removed from the current quest.")
                 .WithTextLine("Forced: At the beginning of the quest phase, place 1 progress on Tharbad Hideout.")
                 .WithInfo(75, 2, Artist.Nate_Abell);

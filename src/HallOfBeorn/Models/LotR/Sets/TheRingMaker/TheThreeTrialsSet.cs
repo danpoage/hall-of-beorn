@@ -22,6 +22,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
             addAlly("Rivendell Scout", 2, Sphere.Leadership, false, 1, 1, 0, 2)
                 .WithTraits("Noldor.", "Scout.")
                 .WithKeywords("Secrecy 2.")
+                .WithTextLine("Secrecy 2.")
                 .WithFlavorLine("\"Elrond is sending Elves, and they will get in touch with the Rangers, and maybe with Thranduil's folk in Mirkwood.\" -Gandalf, The Fellowship of the Ring")
                 .WithInfo(26, 3, Artist.Ilich_Henriquez);
             addEvent("Feigned Voices", 0, Sphere.Leadership)
@@ -31,13 +32,14 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
             addAlly("Rúmil", 4, Sphere.Tactics, true, 2, 2, 1, 2)
                 .WithTraits("Silvan.", "Scout.")
                 .WithKeywords("Ranged.")
+                .WithTextLine("Ranged.")
                 .WithTextLine("Response: After you play Rúmil from your hand, choose an enemy engaged with a player. Deal X damage to that enemy where X is the number of ranged characters you control.")
                 .WithFlavorLine("...the Company set out again, guided now by Haldir and his brother Rúmil. -The Fellowship of the Ring")
                 .WithInfo(28, 3, Artist.Melanie_Maier);
             addAttachment("Elven Mail", 2, Sphere.Tactics, false)
                 .WithTraits("Item.", "Armor.")
                 .WithKeywords("Restricted.")
-                .WithTextLine("Attach to a Noldor or Silvan character.")
+                .WithTextLine("Attach to a Noldor or Silvan character. Restricted.")
                 .WithTextLine("Attached character gets +2 hit points and gains sentinel.")
                 .WithFlavorLine("...they were tall and and clad in grey mail, and from their shoulders hung long white cloaks. -The Fellowship of the Ring")
                 .WithInfo(29, 3, Artist.Sara_Betsy);
@@ -107,7 +109,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithTraits("Guardian.", "Boar.")
                 .WithKeywords("Time 2.")
                 .WithTextLine("Cannot have non-Key attachments.")
-                .WithTextLine("Forced: After the last time counter is removed from Boar's Guardian, the engaged player must discard an ally he controls. Place 2 time counters on Boar's Guardian.")
+                .WithTextLine("Time 2. Forced: After the last time counter is removed from Boar's Guardian, the engaged player must discard an ally he controls. Place 2 time counters on Boar's Guardian.")
                 .WithVictoryPoints(3)
                 .WithInfo(40, 1, Artist.Alexander_Kozachenko);
             addEnemy("Wolf's Guardian", EncounterSet.TheThreeTrials, 50, 2, 5, 3, 12)
@@ -115,7 +117,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithTraits("Guardian.", "Wolf.")
                 .WithKeywords("Time 3.")
                 .WithTextLine("Cannot have non-Key attachments.")
-                .WithTextLine("Forced: After the last time counter is removed from Wolf's Guardian, it makes an immediate attack against the engaged player. Place 3 time counters on Wolf's Guardian.")
+                .WithTextLine("Time 3. Forced: After the last time counter is removed from Wolf's Guardian, it makes an immediate attack against the engaged player. Place 3 time counters on Wolf's Guardian.")
                 .WithVictoryPoints(3)
                 .WithInfo(41, 1, Artist.Darek_Zabrocki);
             addEnemy("Raven's Guardian", EncounterSet.TheThreeTrials, 50, 3, 3, 5, 8)
@@ -123,7 +125,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithTraits("Guardian.", "Raven.")
                 .WithKeywords("Time 4.")
                 .WithTextLine("Cannot have non-Key attachments.")
-                .WithTextLine("Forced: After the last time counter is removed from Raven's Guardian, deal 1 damage to each character controlled by the engaged player. Place 4 time counters on Raven's Guardian.")
+                .WithTextLine("Time 4. Forced: After the last time counter is removed from Raven's Guardian, deal 1 damage to each character controlled by the engaged player. Place 4 time counters on Raven's Guardian.")
                 .WithVictoryPoints(3)
                 .WithInfo(42, 1, Artist.Darek_Zabrocki);
             addObjective("Key of the Boar", EncounterSet.TheThreeTrials)
@@ -187,6 +189,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
             addLocation("Grim Foothills", EncounterSet.TheThreeTrials, Card.VALUE_X, 3)
                 .WithTraits("Hills.")
                 .WithKeywords("Doomed 2.")
+                .WithTextLine("Doomed 2.")
                 .WithTextLine("X is the number of players in the game.")
                 .WithTextLine("While Grim Foothills is in the staging area, progress must be placed on Grim Foothills before it can be placed on the active location.")
                 .WithEasyModeQuantity(2)

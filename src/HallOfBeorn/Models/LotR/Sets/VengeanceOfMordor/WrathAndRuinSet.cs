@@ -51,7 +51,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithInfo(6, 3, Artist.Nino_Vecia);
             addEvent("Charge into Battle", 5, Sphere.Tactics)
                 .WithTextLine("Play only after staging step.")
-                .WithTextLine("Quest Action: You may declare and resolve an attack against each non-unique enemy in the staging are as if it were engaged with you.")
+                .WithTextLine("Quest Action: You may declare and resolve an attack against each non-unique enemy in the staging area as if it were engaged with you.")
                 .WithFlavorLine("Panic came upon the Goblins; and even as they turned to meet this new attack, the elves charged again with renewed numbers.")
                 .WithFlavorLine("-The Hobbit")
                 .WithInfo(7, 3, Artist.Vilius_Petrauskas);

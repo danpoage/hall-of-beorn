@@ -29,6 +29,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
             addAlly("Orophin", 3, Sphere.Leadership, true, 2, 2, 0, 2)
                 .WithTraits("Silvan.", "Scout.")
                 .WithKeywords("Ranged.")
+                .WithTextLine("Ranged.")
                 .WithTextLine("Response: After Orophin enters play, return a Silvan ally from your discard pile to your hand.")
                 .WithFlavorLine("\"Orophin has now gone in haste back to our dwellings to warn our people.\" -Haldir, The Fellowship of the Ring")
                 .WithInfo(114, 3, Artist.Magali_Villeneuve);
@@ -76,6 +77,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithKeywords("Time 3.")
                 .WithTextLine("Setup: Add Bellach, The Orcs' Search, and The Secret Chamber to the staging area. Attach Celebrimbor's Mould to The Secret Chamber. Each player adds a different Ost-in-Edhil location to the staging area. Shuffle the encounter deck.")
                 .WithFlavorLine("You have finally reached the ruins of Ost-in-Edhil, but Bellach and his Orcs have arrived before you. They appear to be searching for the hidden chamber. If you want to reach it first, you will have to move quickly and carefully...")
+                .WithOppositeTextLine("Time 3.")
                 .WithOppositeTextLine("Forced: After the last time counter is removed from this stage, trigger each Scour effect currently in play. Place 3 time counters on this stage.")
                 .WithOppositeTextLine("Ballach is immune to player card effects and cannot be engaged.")
                 .WithOppositeTextLine("The players cannot advance unless Celebrimbor's Mould is attached to a hero.")
@@ -85,6 +87,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithKeywords("Time 3.")
                 .WithTextLine("When Revealed: Trigger each Scour effect currently in play. Bellach makes an attack against the player who controls Celebrimbor's Mould. Then, attach Celebrimbor's Mould to Bellach.")
                 .WithFlavorLine("You have just recovered a partial ring-mould from Celebrimbor's secret forge when you are struck from behind. You look up to see Bellach holding the mould and gloating, \"Fools! My master will be pleased.\" As he turns to leave, he shouts to his servants, \"Kill them!\" You must escape the Orcs and recapture the mould!")
+                .WithOppositeTextLine("Time 3.")
                 .WithOppositeTextLine("Forced: After the last time counter is removed from this stage, trigger each scour effect currently in play. Place 3 time counters on this stage.")
                 .WithOppositeTextLine("Unless there is at last 12 progress on this stage, Bellach is immune to player card effects and cannot be engaged.The players cannot win unless Celebrimbor's Mould is attached to a hero. If the players defeat this stage, they win the game.")
                 .WithIncludedEncounterSets(EncounterSet.MistyMountainOrcs, EncounterSet.BrokenLands)
@@ -137,6 +140,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
             addLocation("Collapsed Tower", EncounterSet.CelebrimborsSecret, 1, 4)
                 .WithTraits("Ost-in-Edhil.", "Ruins.")
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("Scour: Return this location to the staging area and place 2 damage here.")
                 .WithShadow("Shadow: Excess damage from this attack must be placed on the active location, if able.")
                 .WithInfo(131, 2, Artist.Anthony_Feliciano);
