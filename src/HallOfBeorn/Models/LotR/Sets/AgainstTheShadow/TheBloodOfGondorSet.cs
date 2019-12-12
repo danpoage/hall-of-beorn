@@ -81,6 +81,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 .WithKeywords("Battle.")
                 .WithTextLine("When Revealed: Place Faramir and Lord Alcaron under Captured! (they are in play but players cannot gain control of them). Each player turns each of his hudden cards faceup.")
                 .WithFlavorLine("Faramir and Lord Alcaron have been captured! Through the throng of warriors, you see their bloodied torn forms rushed eastward by a band of Uruks. You must move quickly to prevent the unthinkable! If there is to be any hope of rescuing your friends, you must fight your way out of the ambush.")
+                .WithOppositeTextLine("Battle.")
                 .WithOppositeTextLine("At the beginning of the quest phase, each player takes 1 hidden card.")
                 .WithOppositeTextLine("If a player has 5 hidden cards, he must turn them faceup.")
                 .WithOppositeTextLine("If the players defeat this stage, they have won the game.")
@@ -147,6 +148,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
             addLocation("The Dark Woods", EncounterSet.TheBloodOfGondor, 2, 2)
                 .WithTraits("Forest.")
                 .WithKeywords("Archery X.")
+                .WithTextLine("Archery X.")
                 .WithTextLine("X is the number of players in the game.")
                 .WithTextLine("Forced: After The Dark Woods leaves play as an explored location, the first player discards 1 hidden card.")
                 .WithInfo(128, 4, Artist.Michael_Rasmussen);
@@ -156,6 +158,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 .WithInfo(129, 4, Artist.Rafal_Hrynkiewicz);
             addTreachery("Mordor Looms", EncounterSet.TheBloodOfGondor)
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("When Revealed: Each player takes 1 hidden card.")
                 .WithShadow("Shadow: If this attack destoys a characters, that character's controller turns each of his hidden cards faceup.")
                 .WithInfo(130, 3, Artist.Sidharth_Chatursedi);

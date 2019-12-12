@@ -84,6 +84,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 .WithKeywords("Siege.")
                 .WithTextLine("When Revealed: Add Drû-buri-Drû to the staging area.")
                 .WithFlavorLine("You sense that the edge of the forest must be near at hand, but Woses are master huntsmen and a band of them block your path. your situation seems hopeless: there are simply too many of them. As they begin their attack, you realize your only hope of survival is to convince the Pukel-men that you are not their enemy.")
+                .WithOppositeTextLine("Siege.")
                 .WithOppositeTextLine("Characters use their Willpower instead of Attack when attacking enemies. If an enemy would be damaged this way, place progress tokens on it instead of damage tokens. When an enemy has progress equal to its hit points, add it to the victory display and place those progress tokens on the quest.")
                 .WithOppositeTextLine("If the players defeat this stage, they have won the game.")
                 .WithIncludedEncounterSets(EncounterSet.BroodingForest)
@@ -104,12 +105,14 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
             addEnemy("Drúadan Elite", EncounterSet.TheDruadanForest, 35, 2, 3, 2, 4)
                 .WithTraits("Wose.")
                 .WithKeywords("Archery 2.", "Prowl X.")
+                .WithTextLine("Archery 2. Prowl X.")
                 .WithTextLine("X is the number of players in the game.")
                 .WithShadow("Shadow: Return attacking enemy to the staging area after it attacks unless any player pays 1 resource.")
                 .WithInfo(47, 3, Artist.Jason_Ward);
             addEnemy("Drúadan Hunter", EncounterSet.TheDruadanForest, 25, 2, 4, 3, 3)
                 .WithTraits("Wose.")
                 .WithKeywords("Prowl 1.", "Archery X.")
+                .WithTextLine("Prowl 1. Archery X.")
                 .WithTextLine("X is the number of heroes in play with no resources in their resource pool.")
                 .WithShadow("Shadow: Attacking enemy gets +2 Attack.")
                 .WithEasyModeQuantity(2)
@@ -117,6 +120,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
             addEnemy("Drúadan Thief", EncounterSet.TheDruadanForest, 5, 2, 2, 1, 2)
                 .WithTraits("Wose.")
                 .WithKeywords("Surge.", "Prowl 1.")
+                .WithTextLine("Surge. Prowl 1.")
                 .WithShadow("Shadow: Return attacking enemy to the staging area after it attacks unless any player pays 1 resource.")
                 .WithInfo(49, 3, Artist.Jason_Ward);
             addLocation("Ancestral Clearing", EncounterSet.TheDruadanForest, 4, 3)
@@ -145,11 +149,13 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 .WithInfo(53, 3, Artist.Marcia_GeorgeBogdan);
             addTreachery("Stars in Sky", EncounterSet.TheDruadanForest)
                 .WithKeywords("Prowl 2.")
+                .WithTextLine("Prowl 2.")
                 .WithTextLine("When Revealed: Each questing hero must pay 1 resource or it is removed from the quest.")
                 .WithShadow("Shadow: Discard all resources from the defending character's resource pool.")
                 .WithInfo(54, 3, Artist.Blake_Henriksen);
             addTreachery("Leaves on Tree", EncounterSet.TheDruadanForest)
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("When Revealed: Each player must pay 1 resource for each attachment he controls or discard all attachments he controls.")
                 .WithShadow("Shadow: Discard an attachment from the defending character.")
                 .WithInfo(55, 2, Artist.Jason_Ward);

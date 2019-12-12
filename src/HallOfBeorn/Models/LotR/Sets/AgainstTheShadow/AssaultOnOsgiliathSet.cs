@@ -17,6 +17,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
             addHero("Faramir", 11, Sphere.Lore, 2, 2, 2, 5)
                 .WithTraits("Gondor.", "Ranger.", "Noble.")
                 .WithKeywords("Ranged.")
+                .WithTextLine("Ranged.")
                 .WithTextLine("Faramir gets +1 Attack for each enemy in the staging area.")
                 .WithFlavorLine("\"The road may pass, but they shall not! Not while Faramir is Captain.\" -Mablung, The Two Towers")
                 .WithInfo(81, 1, Artist.Magali_Villeneuve);
@@ -59,7 +60,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
             addAttachment("Ranger Bow", 1, Sphere.Lore, false)
                 .WithTraits("Weapon.")
                 .WithKeywords("Restricted.")
-                .WithTextLine("Attach to a Ranger character.")
+                .WithTextLine("Attach to a Ranger character. Restricted.")
                 .WithTextLine("Action: Exhaust Ranger Bow and attached character to deal 1 damage to an enemy in the staging area.")
                 .WithFlavorLine("Two had great bows, almost of their own height, and great quivers of long green-feathered arrows.")
                 .WithFlavorLine("-The Two Towers")
@@ -146,6 +147,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
             addLocation("Ruined Square", EncounterSet.AssaultOnOsgiliath, 1, 2)
                 .WithTraits("Osgiliath.")
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("Response: After an enemy is defeated, place 1 progress token on Ruined Square.")
                 .WithTextLine("Forced: If a player controls Ruined Square when a character leaves play, return Ruined Square to the staging area.")
                 .WithInfo(102, 3, Artist.Darek_Zabrocki);
@@ -165,6 +167,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 .WithInfo(105, 2, Artist.Darek_Zabrocki);
             addTreachery("Counter-attack", EncounterSet.AssaultOnOsgiliath)
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("When Revealed: Each player must either return the location he controls with the highest Threat to the staging area, or raise his threat by the total Threat of all locations he controls.")
                 .WithErrata()
                 .WithEasyModeQuantity(1)

@@ -17,6 +17,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
             addHero("Théoden", 12, Sphere.Tactics, 2, 3, 2, 4)
                 .WithTraits("Rohan.", "Noble.", "Warrior.")
                 .WithKeywords("Sentinel.")
+                .WithTextLine("Sentinel.")
                 .WithTextLine("Each hero with a printed Tactics resource icon gets +1 Willpower.")
                 .WithFlavorLine("'To me! To me!' cried Théoden. 'Up Eorlingas! Fear no darkness!' -The Return of the King")
                 .WithInfo(134, 1, Artist.Magali_Villeneuve);
@@ -33,7 +34,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
             addAttachment("Spear of the Mark", 1, Sphere.Tactics, false)
                 .WithTraits("Item.", "Weapon.")
                 .WithKeywords("Restricted.")
-                .WithTextLine("Attach to a Rohan character.")
+                .WithTextLine("Attach to a Rohan character. Restricted.")
                 .WithTextLine("Attached character gets +1 Attack. (+2 Attack instead if attacking an enemy in the staging area).")
                 .WithFlavorLine("Right through the press drove Théoden Thengel's son, and his spear was shivered as he threw down thier chieftan. -The Return of the King")
                 .WithInfo(137, 3, Artist.Jon_Bosco);
@@ -159,11 +160,13 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 .WithInfo(157, 2, Artist.Oleg_Saakyan);
             addTreachery("Sleepless Malice", EncounterSet.TheMorgulVale)
                 .WithKeywords("Doomed 2.")
+                .WithTextLine("Doomed 2.")
                 .WithTextLine("When Revealed: Each player must discard 3 random cards from his hand or place 1 progress token on To the Tower.")
                 .WithShadow("Shadow: Return attacking enemy to the staging area after this attack.")
                 .WithInfo(158, 2, Artist.Jim_Pavelec);
             addTreachery("Terror Drives Them", EncounterSet.TheMorgulVale)
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("When Revealed: Place 1 progress token on To the Tower.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack for each progress token on To the Tower.")
                 .WithInfo(159, 3, Artist.Darek_Zabrocki);

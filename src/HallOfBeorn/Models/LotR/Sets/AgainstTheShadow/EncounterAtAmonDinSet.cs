@@ -50,6 +50,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
             addAlly("Ithilien Archer", 3, Sphere.Lore, false, 1, 2, 1, 2)
                 .WithTraits("Gondor.", "Ranger.")
                 .WithKeywords("Ranged.")
+                .WithTextLine("Ranged.")
                 .WithTextLine("Response: After Ithilien Archer attacks and damages an enemy, return that enemy to the staging area.")
                 .WithInfo(63, 3, Artist.Carmen_Cianelti);
             addAttachment("Ithilien Pit", 1, Sphere.Lore, false)
@@ -65,6 +66,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 .WithInfo(65, 3, Artist.Blake_Henriksen);
             addQuest("Savagery of the Orcs", EncounterSet.EncounterAtAmonDin, 1, 'A', null)
                 .WithKeywords("Villagers 5.")
+                .WithTextLine("Villagers 5.")
                 .WithTextLine("Setup: Set Ghulat aside, out of play. Put Lord Alcaron into play. Make Burning Farmhouse the active location. Add the Rescued Villagers and Dead Villagers objectives to the staging area. Then, shuffle the encounter deck and reveal 1 encounter card per player and add it to the staging area.")
                 .WithFlavorLine("Emerging from the Druadan Forest with news of the conspirators' demise, you begin your journey to Minas Tirith. As you wake the following day, you see dark plumes of smoke rising across the lands of Anórien.")
                 .WithOppositeTextLine("When progress would be placed on Savagery of the Orcs, move an equal number of villager tokens from this quest onto Rescued Villagers instead.")
@@ -119,6 +121,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
             addLocation("Burning Farmhouse", EncounterSet.EncounterAtAmonDin, 1, 5)
                 .WithTraits("Gondor.")
                 .WithKeywords("Villagers 4.")
+                .WithTextLine("Villagers 4.")
                 .WithTextLine("Forced: At the end of the round, discard 1 villager token from Burning Farmhouse.")
                 .WithFlavorLine("Houses and barns were burning. -The Return of the King")
                 .WithVictoryPoints(1)
@@ -126,6 +129,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
             addLocation("Gondorian Hamlet", EncounterSet.EncounterAtAmonDin, 2, 4)
                 .WithTraits("Gondor.")
                 .WithKeywords("Villagers 3.")
+                .WithTextLine("Villagers 3.")
                 .WithTextLine("While Gondorian Hamlet is in the staging area it gains: 'Forced: After a treachery card is revealed from the encounter deck, discard 1 villager token from Gondorian Hamlet.'")
                 .WithFlavorLine("The townlands were rich, with wide tilth and many orchards... -The Return of the King")
                 .WithVictoryPoints(1)
@@ -133,18 +137,21 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
             addLocation("Secluded Farmhouse", EncounterSet.EncounterAtAmonDin, 3, 3)
                 .WithTraits("Gondor.")
                 .WithKeywords("Villagers 2.")
+                .WithTextLine("Villagers 2.")
                 .WithTextLine("Travel: Reveal the top card of the encounter deck and add it to the staging area to travel here.")
                 .WithFlavorLine("\"...the herdsmen and husbandmen that dwelt there were not many...\" -The Return of the King")
                 .WithVictoryPoints(1)
                 .WithInfo(77, 3, Artist.Sabin_Boykinov);
             addTreachery("Burnt Homestead", EncounterSet.EncounterAtAmonDin)
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("When Revealed: Raise each player's threat by the number of damage tokens on Dead Villagers.")
                 .WithShadow("Shadow: Defending player raises his threat by 1 for each damage token on Dead Villagers.")
                 .WithEasyModeQuantity(0)
                 .WithInfo(78, 2, Artist.Darek_Zabrocki);
             addTreachery("Trapped Inside", EncounterSet.EncounterAtAmonDin)
                 .WithKeywords("Doomed 2.")
+                .WithTextLine("Doomed 2.")
                 .WithTextLine("When Revealed: Discard 1 villager token from the active location for each player in the game. If no villager tokens were removed by this effect, Trapped Inside gains surge.")
                 .WithShadow("Shadow: If this attack destroys a character, discard 1 villager token from Rescued Villagers.")
                 .WithInfo(79, 2, Artist.Jake_Murray);

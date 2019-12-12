@@ -639,10 +639,12 @@
                             <i>@trait</i> @: &nbsp;
                         }
                         <br />
+                        @*
                         @foreach (var keyword in card.Keywords)
                         {
                             @keyword @: &nbsp;
                         }
+                        *@
                         @if (!string.IsNullOrEmpty(@card.Text))
                         {
                             <div>@card.Text</div>
