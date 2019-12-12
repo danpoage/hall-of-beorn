@@ -31,13 +31,14 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
             addAttachment("Armored Destrier", 2, Sphere.Leadership, false)
                 .WithTraits("Mount.")
                 .WithKeywords("Restricted.")
-                .WithTextLine("Attach to a Leadership or sentinel hero.")
+                .WithTextLine("Attach to a Leadership or sentinel hero. Restricted.")
                 .WithTextLine("Response: After attached hero defends against an attack, exhaust Armored Destrier to ready attached hero. Then, discard a shadow card from another enemy engaged with the defending player.")
                 .WithTemplate("<p class='main-text'>Attach to a {sphere:Leadership} or sentinel hero. {keyword:Restricted.}</p><p class='main-text'><b>Response:</b> After attached hero defends against an attack, exhaust {self} to ready attached hero. Then, discard a shadow card from another enemy engaged with the defending player.</p>")
                 .WithInfo(59, 3, Artist.Sandara_Tang);
             addAlly("Déorwine", 4, Sphere.Tactics, true, 0, 1, 3, 3)
                 .WithTraits("Rohan.", "Warrior.")
                 .WithKeywords("Sentinel.")
+                .WithTextLine("Sentinel.")
                 .WithTextLine("Response: While Déorwine is defending, spend 1 Leadership resource to cancel a shadow effect dealt to the attacking enemy. Any player may trigger this action.")
                 .WithTemplate("<p class='main-text'>{keyword:Sentinel.}</p><p class='main-text'><b>Response:</b> While {self} is defending, spend 1 {sphere:Leadership} resource to cancel a shadow effect dealt to the attacking enemy. Any player may trigger this action.</p>")
                 .WithInfo(60, 3, Artist.Aleksander_Karcz);
@@ -73,6 +74,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
             addQuest("Searching the Island", EncounterSet.TempleOfTheDeceived, 1, 'A', null)
                 .WithKeywords("Exploration.")
                 .WithTextLine("Setup: Prepare the Island Map (see insert). Flip over the top-left and bottom-left locations of the Island Map (without resolving their Forced effects, if any), and choose one as the player's starting active location, using a resource token to represent which location is active. The first player takes control of Captain Sahír, and the last player takes control of Na'asiyah (objective-ally side faceup). Add Temple Guardian to the staging area and attach Gate Key to it, guarded. Shuffle the encounter deck.")
+                .WithOppositeTextLine("Exploration.")
                 .WithOppositeTextLine("For each progress that would be placed on Searching the Island, you may place it on a location in the staging area, instead.")
                 .WithOppositeFlavorLine("Sahír has led you to an uncharted isle, and has agreed to help you find a chest he claims the black key will open. First, you must find the Gate Key that opens the way to the grand temple on the eastern side of the island.")
                 .WithIncludedEncounterSets(EncounterSet.RuinsOfNumenor, EncounterSet.DrownedDead, EncounterSet.TheStormcallerElite)
@@ -180,6 +182,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithInfo(80, 3, Artist.Mariusz_Gandzel);
             addTreachery("Sunken Ruins", EncounterSet.TempleOfTheDeceived)
                 .WithKeywords("Doomed 1.")
+                .WithTextLine("Doomed 1.")
                 .WithTextLine("When Revealed: Each Uncharted location in the staging area gets +1 Threat until the end of the phase. If the active location has the Ruins trait, discard 1 resource from each hero and objective-ally in play.")
                 .WithInfo(81, 3, Artist.Sergey_Glushakov);
         }

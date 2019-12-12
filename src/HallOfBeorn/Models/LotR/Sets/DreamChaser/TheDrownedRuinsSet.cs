@@ -17,6 +17,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
             addHero("Argalad", 9, Sphere.Lore, 2, 2, 1, 4)
                 .WithTraits("Silvan.", "Scout.")
                 .WithKeywords("Ranged.")
+                .WithTextLine("Ranged.")
                 .WithTextLine("Action: Exhaust Argalad to choose an enemy in the staging area. Until the end of the phase, that enemy gets -X Threat, where X is Argalad's Attack. If this effect reduces the enemy's Threat to 0, deal 1 damage to it. (Limit once per round.)")
                 .WithInfo(82, 1, Artist.Andreia_Ugrai);
             addAlly("Dwarven Sellsword", 1, Sphere.Leadership, false, 2, 2, 2, 3)
@@ -34,6 +35,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
             addAlly("Marksman of Lórien", 3, Sphere.Tactics, false, 0, 3, 0, 2)
                 .WithTraits("Silvan.", "Warrior.")
                 .WithKeywords("Ranged.")
+                .WithTextLine("Ranged.")
                 .WithTextLine("Response: After Marksman of Lórien enters play, choose an enemy. That enemy gets -2 Defense until the end of the round.")
                 .WithFlavorLine("\"Keen are the eyes of the Elves.\"")
                 .WithFlavorLine("-Aragorn, The Two Towers")

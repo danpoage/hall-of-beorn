@@ -17,6 +17,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
             addHero("Lanwyn", 9, Sphere.Spirit, 2, 3, 1, 3)
                 .WithTraits("Dale.", "Scout.")
                 .WithKeywords("Ranged.")
+                .WithTextLine("Ranged.")
                 .WithTextLine("Response: After an encounter card with surge is revealed, either ready Lanwyn or give her +2 Willpower until the end of the phase. (Limit twice per phase.)")
                 .WithFlavorLine("\"The Men of Dale used to have the trick of understanding their language, and used them for messengers to fly to the Men of the Lake...\"")
                 .WithFlavorLine("-Thorin, The Hobbit")
@@ -25,6 +26,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
             addAlly("Eldahir", 4, Sphere.Leadership, true, 1, 2, 2, 3)
                 .WithTraits("Dúnedain.", "Noble.")
                 .WithKeywords("Sentinel.")
+                .WithTextLine("Sentinel."
                 .WithTextLine("Action: Spend 1 Lore resource to look at a facedown shadow card dealt to an engaged enemy. If that card has a shadow effect, Eldahir gets +2 Defense until the end of the phase. Any player may trigger this action. (Limit once per phase.)")
                 .WithTemplate("<p class='main-text'>{keyword:Sentinel.}</p><p class='main-text'><b>Action:</b> Spend 1 {sphere:Lore} resource to look at a facedown shadow card dealt to an engaged enemy. If that card has a shadow effect, {self} gets +2 {Defense} until the end of the phase. Any player may trigger this action. (Limit once per phase.)</p>")
                 .WithInfo(31, 3, Artist.Kim_Sokol);
@@ -138,28 +140,33 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
             addEnemy("Eye of the Beast", EncounterSet.TheThingInTheDepths, 0, 2, Card.VALUE_NA, 5, 5)
                 .WithTraits("Creature.", "Tentacle.")
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("Eye of the Beast cannot attack.")
                 .WithTextLine("While Eye of the Beast is engaged with a player, The Thing in the Depths attacks that player during the combat phase (deal and resolve a shadow card for this attack).")
                 .WithInfo(50, 2, Artist.Alvaro_Calvo_Escudero);
             addEnemy("Thrashing Arm", EncounterSet.TheThingInTheDepths, 23, 3, 5, 1, 7)
                 .WithTraits("Creature.", "Tentacle.")
                 .WithKeywords("Grapple ( lowest printed Threat ).")
+                .WithTextLine("Grapple ( lowest printed Threat ).")
                 .WithTextLine("Forced: At the end of the combat phase, if Thrashing Arm is engaged with you, deal 3 damage to a character you control.")
                 .WithInfo(51, 2, Artist.Alvaro_Calvo_Escudero);
             addEnemy("Crushing Arm", EncounterSet.TheThingInTheDepths, 17, 1, 3, 1, 5)
                 .WithTraits("Creature.", "Tentacle.")
                 .WithKeywords("Surge.", "Grapple ( highest printed quest points ).")
+                .WithTextLine("Surge. Grapple ( highest printed quest points ).")
                 .WithTextLine("Forced: After Crushing Arm is detached from a location, it makes an immediate attack against the first player.")
                 .WithInfo(52, 3, Artist.Alvaro_Calvo_Escudero);
             addEnemy("Grasping Arm", EncounterSet.TheThingInTheDepths, 20, 2, 4, 1, 4)
                 .WithTraits("Creature.", "Tentacle.")
                 .WithKeywords("Grapple ( highest printed Threat ).")
+                .WithTextLine("Grapple ( highest printed Threat ).")
                 .WithTextLine("Forced: When Grasping Arm attacks, the engaged player must exhaust a character he controls.")
                 .WithShadow("Shadow: If this attack is undefended, resolve Grasping Arm's Grapple keyword.")
                 .WithInfo(53, 3, Artist.Alvaro_Calvo_Escudero);
             addEnemy("Giant Arm", EncounterSet.TheThingInTheDepths, 13, 1, 4, 1, 6)
                 .WithTraits("Creature.", "Tentacle.")
                 .WithKeywords("Grapple ( lowest printed quest points ).")
+                .WithTextLine("Grapple ( lowest printed quest points ).")
                 .WithTextLine("Giant Arm gets +2 Attack when attacking allies.")
                 .WithShadow("Shadow: After this attack, either put Giant Arm into play engaged with you and deal it a shadow card, or resolve its Grapple ability.")
                 .WithInfo(54, 3, Artist.Alvaro_Calvo_Escudero);
