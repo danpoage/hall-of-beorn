@@ -470,8 +470,13 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         public const string DEFAULT_FILTER_VALUE = "Any";
         public const string RANDOM_KEYWORD = "+random";
 
+        private string query;
         [Display(Name = "Search")]
-        public string Query { get; set; }
+        public string Query
+        { 
+            get { return !string.IsNullOrEmpty(query) ? query.Replace("’", "'") : string.Empty; }
+            set { query = value; }
+        }
 
         [Display(Name = "Type")]
         public CardType? CardType { get; set; }
