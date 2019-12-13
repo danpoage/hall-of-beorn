@@ -30,7 +30,8 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
             addAttachment("Orcrist", 1, Sphere.Leadership, true)
                 .WithTraits("Artifact.", "Item.", "Weapon.")
                 .WithKeywords("Guarded (enemy or location).", "Restricted.")
-                .WithTextLine("Attach to a hero.")
+                .WithTextLine("Guarded (enemy or location).")
+                .WithTextLine("Attach to a hero. Restricted.")
                 .WithTextLine("Attached hero gets +2 Attack.")
                 .WithTextLine("Response: After attached hero drestroys an enemy, add 1 resource to attached hero's pool.")
                 .WithTemplate("<p class='main-text'>{keyword:Guarded+%28enemy+or+location%29.@Guarded (enemy or location).}</p><p class='main-text'>Attach to a hero. {keyword:Restricted.}</p><p class='main-text'>Attached hero gets +2 {Attack}.</p><p class='main-text'><b>Response:</b> After attach hero destroys an enemy, add 1 resource to attached hero's pool.</p>")
@@ -166,6 +167,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithInfo(79, 3, Artist.Alvaro_Calvo_Escudero);
             addTreachery("Powerful in Wrath", EncounterSet.FireInTheNight)
                 .WithKeywords("Doomed 1.")
+                .WithTextLine("Doomed 1.")
                 .WithTextLine("When Revealed: Discard the active location and deal X damage to Hrogar’s Hill, where X is that location’s [Threat]. If no damage is dealt this way, Powerful in Wraith gains surge.")
                 .WithShadow("Shadow: Excess damage from this attack must be dealt to Hrogar's Hill.")
                 .WithInfo(80, 2, Artist.Antonio_Jose_Manzanedo);
