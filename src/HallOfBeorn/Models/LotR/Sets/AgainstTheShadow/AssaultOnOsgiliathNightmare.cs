@@ -56,7 +56,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(LotRCard.Enemy("Haradrim Warrior", "39BF7B4D-81F2-404F-8F7D-4F10D8C32BE0", "Assault on Osgiliath Nightmare", 30, Card.VALUE_X, 3, 3, 4)
                 .WithTraits("Harad.")
                 .WithKeywords("Archery X.")
-                .WithText("X is the number of locations controlled by the first player.\r\nForced: After Haradrim ~Warrior engages a player, it gets +X Attack and +X Defense until the end of the round.")
+                .WithText("Archery X.\r\nX is the number of locations controlled by the first player.\r\nForced: After Haradrim ~Warrior engages a player, it gets +X Attack and +X Defense until the end of the round.")
                 .WithShadow("Shadow: Deal 1 damage to defending character.")
                 .WithInfo(3, 3, Artist.Smirtouille));
             Cards.Add(LotRCard.Location("Palace Remains", "3EAC42AA-A834-4590-9ED6-FAD6386B0641", "Assault on Osgiliath Nightmare", 0, 5)
@@ -78,7 +78,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithInfo(7, 2, Artist.Mariusz_Gandzel));
             Cards.Add(LotRCard.Treachery("Relentless Attack", "CA61D58F-1E87-486B-857B-2DC220727E80", "Assault on Osgiliath Nightmare")
                 .WithKeywords("Doomed 1.")
-                .WithText("When Revealed: Attach to the current quest. (Counts as a Condition attachment with the text: \"Each enemy gets -X engagement cost. X is the number of locations controlled by players. Forced: At the beginning of the encounter phase, if there are fewer than X enemies in the staging area, reveal an encounter card.\")")
+                .WithText("Doomed 1.\r\nWhen Revealed: Attach to the current quest. (Counts as a Condition attachment with the text: \"Each enemy gets -X engagement cost. X is the number of locations controlled by players. Forced: At the beginning of the encounter phase, if there are fewer than X enemies in the staging area, reveal an encounter card.\")")
                 .WithInfo(8, 2, Artist.Jon_Bosco));
             Cards.Add(LotRCard.Treachery("Overrun Defenses", "17B586BC-A20A-4A86-A8CE-96620E3A1835", "Assault on Osgiliath Nightmare")
                 .WithText("When Revealed: Add X to the total Threat in the staging area this phase. X is the number of locations the players control. If X is less than 4, Overrun Defenses gains doomed 2.")

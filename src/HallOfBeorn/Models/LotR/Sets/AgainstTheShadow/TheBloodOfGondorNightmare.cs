@@ -58,12 +58,14 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(LotRCard.Enemy("Uruk Marksman", "6E305E73-B5F4-4F84-B718-28B86B1A335D", "The Blood of Gondor Nightmare", 40, 4, 2, 2, 4)
                 .WithTraits("Orc.", "Uruk.", "Mordor.")
                 .WithKeywords("Archery 3.")
-                .WithText("Forced: After Uruk Marksman is turned faceup as a hidden card, deal 3 damage to a character controlled by the engaged player and return Uruk Marksman to the staging area.")
+                .WithTextLine("Archery 3.")
+                .WithTextLine("Forced: After Uruk Marksman is turned faceup as a hidden card, deal 3 damage to a character controlled by the engaged player and return Uruk Marksman to the staging area.")
                 .WithInfo(4, 3, Artist.Niten));
             Cards.Add(LotRCard.Location("Edge of Ithilien", "D78DB2CE-4A25-4B77-8CB5-A1E73BD6D314", "The Blood of Gondor Nightmare", 3, 6)
                 .WithTraits("Ithilien.", "Forest.")
                 .WithKeywords("Archery X.")
-                .WithText("X is the highest number of hidden cards in any player's play area.")
+                .WithTextLine("Archery X.")
+                .WithTextLine("X is the highest number of hidden cards in any player's play area.")
                 .WithShadow("Shadow: Turn 1 hidden card in your play area faceup. If it is a treachery card, attacking enemy makes an additional attack after this one.")
                 .WithInfo(5, 3, Artist.Jose_Vega));
             Cards.Add(LotRCard.Location("Mountains of Shadow", "F6F8BDC1-6D58-4B03-85A1-D0825145C839", "The Blood of Gondor Nightmare", 4, 4)
@@ -73,7 +75,8 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithInfo(6, 3, Artist.Mariusz_Gandzel));
             Cards.Add(LotRCard.Treachery("Surrounded by Shadow", "83CB4803-3A7D-47F7-994B-2082FCE049EC", "The Blood of Gondor Nightmare")
                 .WithKeywords("Doomed 2.")
-                .WithText("When Revealed: Each player must either take 1 hidden card for each questing hero he controls, or remove one hero he controls from the quest for each hidden card in his play area.")
+                .WithTextLine("Doomed 2.")
+                .WithTextLine("When Revealed: Each player must either take 1 hidden card for each questing hero he controls, or remove one hero he controls from the quest for each hidden card in his play area.")
                 .WithInfo(7, 3, Artist.Anthony_Devine));
             Cards.Add(LotRCard.Treachery("Sudden Onslaught", "FCDBFCA2-36BE-4AAD-95A2-74A9E799BADB", "The Blood of Gondor Nightmare")
                 .WithText("When Revealed: Each player turns each hidden card in his play area faceup. Each player then takes hidden cards equal to the number of hidden cards he just turned faceup.")
