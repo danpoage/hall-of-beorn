@@ -142,29 +142,17 @@ Forced: At the beginning of the encounter phase, Treetop Bird-eater engages the 
                 CardNumber = 6,
                 Artist = Artist.Jose_Vega
             });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Shot from the Sky",
-                Id = "C289A0CD-FC3D-4EA9-8312-F39FD59FBDBA",
-                CardType = CardType.Treachery,
-                Text = "When Revealed: Attach to an Eagle character (Counts as a Condition attachment with the text: \"Limit 1 per character. Attached character loses the Eagle trait, and takes 1 damage each time it readies.\")",
-                Shadow = "Shadow: Resolve the \"when revealed\" effect of Shot from the Sky.",
-                EncounterSet = "A Journey to Rhosgobel Nightmare",
-                Quantity = 3,
-                CardNumber = 7,
-                Artist = Artist.Gabriel_Verdon
-            }.WithKeywords("Surge."));
-            Cards.Add(new LotRCard()
-            {
-                Title = "Noxious Supplies",
-                Id = "B6DE76B6-B171-4124-B026-33C72C8C587F",
-                CardType = CardType.Treachery,
-                Text = "When Revealed: Attach to Wilyador. (Counts as a Condition attachment with the text: \"Forced: When attached character is healed by a card effect other than Athelas, the amount of damage healed is reduced to 1. Then, discard Noxious Supplies.\")",
-                EncounterSet = "A Journey to Rhosgobel Nightmare",
-                Quantity = 3,
-                CardNumber = 8,
-                Artist = Artist.Sandra_Duchiewicz
-            }.WithKeywords("Surge."));
+            addTreachery("Shot from the Sky", "A Journey to Rhosgobel Nightmare")
+                .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
+                .WithTextLine("When Revealed: Attach to an Eagle character (Counts as a Condition attachment with the text: \"Limit 1 per character. Attached character loses the Eagle trait, and takes 1 damage each time it readies.\")")
+                .WithShadow("Shadow: Resolve the \"when revealed\" effect of Shot from the Sky.")
+                .WithInfo(7, 3, Art.Gabriel_Verdon);
+            addTreachery("Noxious Supplies", "A Journey to Rhosgobel Nightmare")
+                .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
+                .WithTextLine("When Revealed: Attach to Wilyador. (Counts as a Condition attachment with the text: \"Forced: When attached character is healed by a card effect other than Athelas, the amount of damage healed is reduced to 1. Then, discard Noxious Supplies.\")")
+                .WithInfo(8, 3, Arts.Sandra_Duchiewicz);
         }
     }
 }

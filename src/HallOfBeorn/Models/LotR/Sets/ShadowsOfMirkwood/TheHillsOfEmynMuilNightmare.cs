@@ -72,17 +72,20 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             addTreachery("Blast of Savage Wind", EncounterSet.TheHillsOfEmynMuilNightmare.Name)
                 .WithTraits("Hazard.")
                 .WithKeywords("Doomed 2.")
+                .WithTextLine("Doomed 2.")
                 .WithText("When Revealed: Remove all progress from each Emyn Muil location in play. Each Emyn Muil location gets +2 Threat until the end of the round.")
                 .WithShadow("Shadow: Remove all progress from each Emyn Muil location in play.")
                 .WithTemplate("<p class='main-text'>{keyword:Doomed 2.}</p><p class='main-text'><b>When Revealed:</b> Remove all progress from each {trait:Emyn Muil.@Emyn Muil} location in play. Each {trait:Emyn Muil.@Emyn Muil} location gets +2 {Threat} until the end of the round.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Remove all progress from each {trait:Emyn Muil.@Emyn Muil} location in play.</p>")
                 .WithInfo(7, 3, Artist.Christina_Davis);
             addTreachery("Hazardous Terrain", EncounterSet.TheHillsOfEmynMuilNightmare.Name)
                 .WithKeywords("Surge.", "Doomed 2.")
+                .WithTextLine("Surge. Doomed 2.")
                 .WithText("When Revealed: Shuffle all Hazard cards from the encounter discard pile back into the encounter deck.")
                 .WithShadow("Shadow: Shuffle all Hazard cards from the encounter discard pile back into the encounter deck. Then, deal another shadow card for this attack.")
                 .WithInfo(8, 2, Artist.Alexandre_Dainche);
             addTreachery("Retraced Steps", EncounterSet.TheHillsOfEmynMuilNightmare.Name)
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithText("When Revealed: Discard a random Emyn Muil location from the victory display.")
                 .WithFlavor("...they had climbed and laboured among the barren slopes and stones of Emyn Muil, sometimes retracing their steps because they could find no way forward...\r\n-The Two Towers")
                 .WithInfo(9, 2, Artist.Jake_Murray);

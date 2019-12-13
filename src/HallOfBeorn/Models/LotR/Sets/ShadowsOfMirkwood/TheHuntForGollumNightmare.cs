@@ -153,20 +153,12 @@ Forced: After Dark Pools becomes the active location, each player must discard a
                 CardNumber = 7,
                 Artist = Artist.Cristi_Balanescu
             });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Restless Hunters",
-                
-                Id = "2B86BFA7-483E-4643-BD16-D63FC990DEE9",
-                CardType = CardType.Treachery,
-                Keywords = new List<string> { "Surge." },
-                Text = "When Revealed: The first player chooses a Clue card attached to a hero and attaches it to a Mordor enemy in play, if able.",
-                Shadow = "Shadow: Damage from this attack must be applied to a hero you control with a Clue card attached, if able.",
-                EncounterSet = "The Hunt for Gollum Nightmare",
-                Quantity = 3,
-                CardNumber = 8,
-                Artist = Artist.Adam_Lane
-            });
+            addTreachery("Resltess Hunters", "The Hunt for Gollum Nightmare")
+                .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
+                .WithTextLine("When Revealed: The first player chooses a Clue card attached to a hero and attaches it to a Mordor enemy in play, if able.")
+                .WithShadow("Shadow: Damage from this attack must be applied to a hero you control with a Clue card attached, if able.")
+                .WithInfo(8, 3, Artist.Adam_Lane);
             Cards.Add(new LotRCard()
             {
                 Title = "The Trail Goes Cold",

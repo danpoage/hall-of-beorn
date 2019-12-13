@@ -135,20 +135,13 @@ Forced: After Deceptive Path becomes the active location, shuffle the encounter 
                 CardNumber = 6,
                 Artist = Artist.Jose_Vega
             });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Isolation",
-                
-                Id = "2AFB7882-B425-4036-9518-B6A5E317012A",
-                CardType = CardType.Treachery,
-                Keywords = new List<string> { "Surge." },
-                Text = "When Revealed: Attach Isolation to the current quest. (Counts as a Condition attachment with the text: \"All characters lost the ranged and sentinel keywords. The player guarding Gollum cannot choose a new player to guard Gollum.\")",
-                FlavorText = "And he was miserable, alone, lost. -The Hobbit",
-                EncounterSet = "Return to Mirkwood Nightmare",
-                Quantity = 2,
-                CardNumber = 7,
-                Artist = Artist.Adam_Lane
-            });
+            addTreachery("Isolation", "Return to Mirkwood Nightmare")
+                .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
+                .WithTextLine("When Revealed: Attach Isolation to the current quest. (Counts as a Condition attachment with the text: \"All characters lost the ranged and sentinel keywords. The player guarding Gollum cannot choose a new player to guard Gollum.\")")
+                .WithFlavorLine("And he was miserable, alone, lost.")
+                .WithFlavorLine("-The Hobbit")
+                .WithInfo(7, 2, Artist.Adam_Lane);
             Cards.Add(new LotRCard()
             {
                 Title = "Befouled Equipment",
