@@ -50,6 +50,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
             addCard(LotRCard.Enemy("Undead Thrall", string.Empty, setName, 1, 2, 2, 2, 2)
                 .WithTraits("Undead.")
                 .WithKeywords("Indestructible.", "Surge.")
+                .WithTextLine("Indestructible. Surge.")
                 .WithShadow("Shadow: Put Undead Thrall into play engaged with the defending player and deal it a shadow card.")
                 .WithInfo(3, 2, Artist.Alexander_Kozachenko));
             addCard(LotRCard.Location("Forgotten Courtyard", string.Empty, setName, 1, 6)

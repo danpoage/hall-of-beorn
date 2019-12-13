@@ -67,18 +67,21 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             addTreachery("Paralyzing Fear", EncounterSet.DeadmensDikeNightmare.Name)
                 .WithTraits("Sorcery.")
                 .WithKeywords("Surge.")
-                .WithText("When Revealed: Attach to a hero and exhaust that hero. (Counts as a Condition attachment with the text: \"Forced: When attached hero would ready, it does not ready unless attached hero's controller discard a card from the top of his deck.\")")
+                .WithTextLine("Surge.")
+                .WithTextLine("When Revealed: Attach to a hero and exhaust that hero. (Counts as a Condition attachment with the text: \"Forced: When attached hero would ready, it does not ready unless attached hero's controller discard a card from the top of his deck.\")")
                 .WithInfo(25, 3, Artist.Unknown);
             addTreachery("Curse of Angmar", EncounterSet.DeadmensDikeNightmare.Name)
                 .WithTraits("Sorcery.")
                 .WithKeywords("Doomed 1.")
-                .WithText("When Revealed: Each player discards each card in his hand that has the same title as a card in his discard pile. If no cards are discarded by this effect, Curse of Angmar gains surge.")
+                .WithTextLine("Doomed 1.")
+                .WithTextLine("When Revealed: Each player discards each card in his hand that has the same title as a card in his discard pile. If no cards are discarded by this effect, Curse of Angmar gains surge.")
                 .WithFlavor("...the Dúnedain were now few and all the peoples of Eriador diminished. -The Return of the King")
                 .WithInfo(26, 2, Artist.Anthony_Feliciano);
             addEncounterSideQuest("Gather Your Courage", EncounterSet.DeadmensDikeNightmare.Name, 8)
                 .WithFlavor("Battling the dead drains your spirit as well as your body.")
                 .WithKeywords("Surge.")
-                .WithText("When Revealed: Each player placed the top 8 cards fo his deck facedown under this quest.\r\nForced: When this quest is defeated, shuffle each card under this quest into its owner's deck.")
+                .WithTextLine("Surge.")
+                .WithTextLine("When Revealed: Each player placed the top 8 cards fo his deck facedown under this quest.\r\nForced: When this quest is defeated, shuffle each card under this quest into its owner's deck.")
                 .WithVictoryPoints(10)
                 .WithInfo(27, 1, Artist.Aleksander_Karcz);
         }

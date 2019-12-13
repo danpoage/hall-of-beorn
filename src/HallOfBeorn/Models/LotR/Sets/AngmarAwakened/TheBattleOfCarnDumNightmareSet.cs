@@ -84,19 +84,22 @@ If a quest card has the siege keyword, when characters are commited to that ques
             addEncounterSideQuest("Protect the Flanks", EncounterSet.TheBattleOfCarnDumNightmare.Name, 6)
                 .WithFlavor("Orcs close in on all sides. If you do not hold them back, your forces will not survive long.")
                 .WithKeywords("Siege.")
-                .WithText("Forced: At the end of the combat phase, assign X damage among characters in play, where X is the total number of shadow cards dealt to enemies in the staging area.")
+                .WithTextLine("Siege.")
+                .WithTextLine("Forced: At the end of the combat phase, assign X damage among characters in play, where X is the total number of shadow cards dealt to enemies in the staging area.")
                 .WithVictoryPoints(10)
                 .WithInfo(8, 1, Artist.Rafal_Hrynkiewicz);
             addEncounterSideQuest("Rally the Fighters", EncounterSet.TheBattleOfCarnDumNightmare.Name, 8)
                 .WithFlavor("Your task seems hopeless and your fate dire, but somehow you must inspire your companions to fight onward!")
                 .WithKeywords("Surge.")
-                .WithText("~Shadow cards are immune to player card effects.\r\nResponse: After this quest is defeated, discard 1 shadow card from each enemy in play.")
+                .WithTextLine("Surge.")
+                .WithTextLine("~Shadow cards are immune to player card effects.\r\nResponse: After this quest is defeated, discard 1 shadow card from each enemy in play.")
                 .WithVictoryPoints(10)
                 .WithInfo(9, 1, Artist.Arden_Beckwith);
             addEncounterSideQuest("Sever the Head", EncounterSet.TheBattleOfCarnDumNightmare.Name, 6)
                 .WithFlavor("Your adversary Thaurdir will not let you interrupt his master's ritual. Only by fighting through his ranks of Orcs can you hope to do battle with the wraith himself.")
                 .WithKeywords("Battle.")
-                .WithText("Thaurdir gets +2 Threat, +2 Attack, and cannot take damage.")
+                .WithTextLine("Battle.")
+                .WithTextLine("Thaurdir gets +2 Threat, +2 Attack, and cannot take damage.")
                 .WithVictoryPoints(10)
                 .WithInfo(10, 1, Artist.Unknown);
         }

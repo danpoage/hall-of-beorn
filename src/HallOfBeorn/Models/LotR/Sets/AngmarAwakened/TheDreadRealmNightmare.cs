@@ -69,13 +69,15 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             addCard(LotRCard.Treachery("Power Beyond Death", string.Empty, setName)
                 .WithTraits("Sorcery.")
                 .WithKeywords("Surge.")
-                .WithText("When Revealed: Attach to the main quest. (Counts as a Condition attachment with the text: \"Daechanar gets +2 Defense.\")")
+                .WithTextLine("Surge.")
+                .WithTextLine("When Revealed: Attach to the main quest. (Counts as a Condition attachment with the text: \"Daechanar gets +2 Defense.\")")
                 .WithShadow("Shadow: If this attack destroys a character, resolve this card's 'when revealed' effect.")
                 .WithInfo(6, 3, Artist.JB_Casacop));
             addCard(LotRCard.Treachery("Daechanar's Curse", string.Empty, setName)
                 .WithTraits("Sorcery.")
                 .WithKeywords("Surge.")
-                .WithText("When Revealed: Attach Daechanar's Curse to the top of the first player's deck. (Counts as a Condition attachment with the text: \"The next time a player would draw 1 or more cards from attached deck, reanimate those cards instead. Then, discard Daechanar's Curse.\")")
+                .WithTextLine("Surge.")
+                .WithTextLine("When Revealed: Attach Daechanar's Curse to the top of the first player's deck. (Counts as a Condition attachment with the text: \"The next time a player would draw 1 or more cards from attached deck, reanimate those cards instead. Then, discard Daechanar's Curse.\")")
                 .WithInfo(7, 3, Artist.Jokubas_Uoginitas));
             addCard(LotRCard.Treachery("All is Lost", string.Empty, setName)
                 .WithTraits("Sorcery.")
@@ -85,7 +87,8 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             addCard(LotRCard.EncounterSideQuest("The Witch-king's Gift", string.Empty, setName, 8)
                 .WithFlavor("Daechanar is powerful in the art of necromancy. His army will not rest until you join them in death.")
                 .WithKeywords("Time 5.")
-                .WithText("Forced: When the last time counter is removed from this quest, reanimated each card in each player's discard pile. Then, remove The Witch-king's Gift from the game.\r\nWhen this quest is defeated, place it in the encounter discard pile.")
+                .WithTextLine("Time 5.")
+                .WithTextLine("Forced: When the last time counter is removed from this quest, reanimated each card in each player's discard pile. Then, remove The Witch-king's Gift from the game.\r\nWhen this quest is defeated, place it in the encounter discard pile.")
                 .WithInfo(9, 1, Artist.Guillaume_Ducos));
         }
     }

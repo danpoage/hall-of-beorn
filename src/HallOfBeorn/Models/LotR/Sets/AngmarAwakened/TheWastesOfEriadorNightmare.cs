@@ -86,7 +86,8 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithInfo(7, 1, Artist.Michele_Frigo));
             addCard(LotRCard.EncounterSideQuest("Forced Off Track", string.Empty, setName, 8)
                 .WithKeywords("Surge.")
-                .WithText("Forced: At the end of the round, remove X progress from the main quest, where X is the number of Warg enemies in play.\r\nResponse: When this quest is defeated, discard a non-unique Warg enemy in the staging area.")
+                .WithTextLine("Surge.")
+                .WithTextLine("Forced: At the end of the round, remove X progress from the main quest, where X is the number of Warg enemies in play.\r\nResponse: When this quest is defeated, discard a non-unique Warg enemy in the staging area.")
                 .WithVictoryPoints(10)
                 .WithInfo(8, 1, Artist.Anthony_Devine));
         }

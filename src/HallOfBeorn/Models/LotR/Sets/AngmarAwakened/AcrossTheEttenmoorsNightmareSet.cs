@@ -80,12 +80,15 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithInfo(8, 3, Artist.JB_Casacop);
             addTreachery("Barren and Desolate", EncounterSet.AcrossTheEttenmoorsNightmare.Name)
                 .WithKeywords("Surge.")
-                .WithText("When Revealed: Attach to a side quest. (Counts as a Condition attachment with the text: \"Limit 1 per quest. While attached quest is the current quest, each character gets -1 Willpower.\")")
+                .WithTextLine("Surge.")
+                .WithTextLine("When Revealed: Attach to a side quest. (Counts as a Condition attachment with the text: \"Limit 1 per quest. While attached quest is the current quest, each character gets -1 Willpower.\")")
                 .WithInfo(9, 3, Artist.Lucas_Staniec);
             addEncounterSideQuest("Isolated", EncounterSet.AcrossTheEttenmoorsNightmare.Name, 7)
                 .WithFlavor("Caught in a dense fog, you suddenly find yourself separated from your companions.")
                 .WithKeywords("Surge.")
-                .WithText("Players cannot draw cards by card effects.\r\nForced: When this stage is defeated, each player draws 1 card.")
+                .WithTextLine("Surge.")
+                .WithTextLine("Players cannot draw cards by card effects.")
+                .WithTextLine("Forced: When this stage is defeated, each player draws 1 card.")
                 .WithVictoryPoints(10)
                 .WithInfo(10, 1, Artist.Michele_Frigo);
             addEncounterSideQuest("Rescue from the Trolls", EncounterSet.AcrossTheEttenmoorsNightmare.Name, 15)

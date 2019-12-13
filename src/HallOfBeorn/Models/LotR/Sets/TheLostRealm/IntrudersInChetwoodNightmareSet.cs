@@ -89,7 +89,8 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             addEncounterSideQuest("Protect the Bree-landers", EncounterSet.IntrudersInChetwoodNightmare.Name, 10)
                 .WithFlavor("Every step brings the Orcs closer to Bree-land. If you can't find some way to delay the enemy, the war party will reach the village before you can stop them.")
                 .WithKeywords("Surge.")
-                .WithText("Forced: At the end of the quest phase, if no progress was placed on Protect the Bree-landers, place 1 resource on it. Then, raise each players threat by the number of resources on Protect the Bree-landers.")
+                .WithTextLine("Surge.")
+                .WithTextLine("Forced: At the end of the quest phase, if no progress was placed on Protect the Bree-landers, place 1 resource on it. Then, raise each players threat by the number of resources on Protect the Bree-landers.")
                 .WithVictoryPoints(10)
                 .WithInfo(10, 1, Artist.Juan_Carlos_Barquet);
         }
