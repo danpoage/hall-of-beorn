@@ -132,20 +132,12 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 CardNumber = 6,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Backtrack!",
-                
-                Id = "C399B1D6-37BD-4C51-8769-2F15B649F816",
-                CardType = CardType.Treachery,
-                Keywords = new List<string> { "Surge." },
-                Text = "When Revealed: The topmost enemy or location card in the encounter discard pile is returned to the staging area.",
-                Shadow = "Shadow: Deal and resolve the topmost Shadow effect in the encounter discard pile for this attack.",
-                EncounterSet = "Passage Through Mirkwood Nightmare",
-                Quantity = 2,
-                CardNumber = 7,
-                Artist = Artist.Magali_Villeneuve
-            });
+            addTreachery("Backtrack!", "Passage Through Mirkwood Nightmare")
+                .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
+                .WithTextLine("When Revealed: The topmost enemy or location card in the encounter discard pile is returned to the staging area.")
+                .WithShadow("Shadow: Deal and resolve the topmost Shadow effect in the encounter discard pile for this attack.")
+                .WithInfo(7, 2, Artist.Magali_Villeneuve);
             Cards.Add(new LotRCard()
             {
                 Title = "Abandoned Camp",

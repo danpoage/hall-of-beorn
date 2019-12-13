@@ -64,26 +64,13 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 CardNumber = 2,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Crazed Captive",
-                
-                Id = "54DD806E-767D-4FAB-964D-A0951475CFB9",
-                CardType = CardType.Enemy,
-                EngagementCost = 13,
-                Threat = 2,
-                Attack = 1,
-                Defense = 3,
-                HitPoints = 1,
-                Traits = new List<string> { "Captive." },
-                Keywords = new List<string> { "Doomed 1." },
-                Text = "Forced: if Crazed Captive is defeated, raise each players threat by 7.",
-                Shadow = "If attacking enemy is not defeated this phase, raise defending player's threat by 7 at the end of the phase.",
-                EncounterSet = "Escape from Dol Guldur Nightmare",
-                Quantity = 2,
-                CardNumber = 3,
-                Artist = Artist.Magali_Villeneuve
-            });
+            addEnemy("Crazed Captive", "Escape from Dol Guldur Nightmare", 13, 2, 1, 3, 1)
+                .WithTraits("Captive.")
+                .WithKeywords("Doomed 1.")
+                .WithTextLine("Doomed 1.")
+                .WithTextLine("Forced: If Crazed Captive is defeated, raise each players threat by 7.")
+                .WithShadow("Shadow: If attacking enemy is not defeated this phase, raise defending player's threat by 7 at the end of the phase.")
+                .WithInfo(3, 2, Artist.Magali_Villeneuve);
             Cards.Add(new LotRCard()
             {
                 Title = "Spider of Dol Guldur",
@@ -149,20 +136,12 @@ Forced: At the end of each round, place 1 resource token on Dungeon Labyrinth fo
                 CardNumber = 7,
                 Artist = Artist.Rafal_Hrynkiewicz
             });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Catacomb Inspection",
-                
-                Id = "A8750BE5-98C8-4D6C-ACBE-28A9E9B85B3A",
-                CardType = CardType.Treachery,
-                Keywords = new List<string> { "Surge." },
-                Text = "When Revealed: Add 1 resource token to each Dol Guldur location in play.",
-                Shadow = "Shadow: If there is a Dol Guldur location in the staging area, move 1 resource token from each of your heroes' resource pools to that location. (Resolve this effect for each Dol Guldur location.)",
-                EncounterSet = "Escape from Dol Guldur Nightmare",
-                Quantity = 2,
-                CardNumber = 8,
-                Artist = Artist.Rafal_Hrynkiewicz
-            });
+            addTreachery("Catacomb Inspection", "Escape from Dol Guldur Nightmare")
+                .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
+                .WithTextLine("When Revealed: Add 1 resource token to each Dol Guldur location in play.")
+                .WithShadow("Shadow: If there is a Dol Guldur location in the staging area, move 1 resource token from each of your heroes' resource pools to that location. (Resolve this effect for each Dol Guldur location.)")
+                .WithInfo(8, 2, Artist.Rafal_Hrynkiewicz);
             Cards.Add(new LotRCard()
             {
                 Title = "Dark Interrogation",
