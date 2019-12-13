@@ -141,7 +141,8 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
             addTreachery("Under the Shadow", string.Empty)
                 .WithSetNumberAndCost(18, 1)
                 .WithKeywords("Doomed 1.")
-                .WithText("When Revealed: Attach to the main quest. (Counts as a condition attachment with the text: \"Each player cannot play more than 1 card each phase.\")")
+                .WithTextLine("Doomed 1.")
+                .WithTextLine("When Revealed: Attach to the main quest. (Counts as a condition attachment with the text: \"Each player cannot play more than 1 card each phase.\")")
                 .WithInfo(23, 0, Artist.Igor_Kieryluk);
             addEnemy("Necromancer's Warg", string.Empty, 21, 2, 2, 1, 2)
                 .WithSetNumberAndCost(19, 0)
@@ -258,7 +259,8 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
             addTreachery("Nightfall", string.Empty)
                 .WithSetNumberAndCost(25, 1)
                 .WithKeywords("Doomed 1.")
-                .WithText("When Revealed: Attach to the first player's threat dial. (Counts as a Condition attachment with the text: \"Forced: Raise your threat by an additional point during the refresh phase.\")")
+                .WithTextLine("Doomed 1.")
+                .WithTextLine("When Revealed: Attach to the first player's threat dial. (Counts as a Condition attachment with the text: \"Forced: Raise your threat by an additional point during the refresh phase.\")")
                 .WithInfo(45, 1, Artist.David_Lecossu);
             addEnemy("Venomous Spider", string.Empty, 28, 2, 3, 2, 4)
                 .WithSetNumberAndCost(26, 1)

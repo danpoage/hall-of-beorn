@@ -21,7 +21,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
             Cards.Add(LotRCard.Hero("Legolas", "", Sphere.Tactics, 9, 1, 3, 1, 4)
                 .WithTraits("Noble.", "Silvan.", "Warrior.")
                 .WithKeywords("Ranged.")
-                .WithText("Response: After Legolas participates in an attack that destroys an enemy, place 2 progress tokens on the current quest.")
+                .WithText("Ranged.\r\nResponse: After Legolas participates in an attack that destroys an enemy, place 2 progress tokens on the current quest.")
                 .WithTemplate("<p>{keyword:Ranged.}</p><p><b>Response:</b> After {self} participates in an attack that destroys an enemy, place 2 progress tokens on the current quest.</p>")
                 .WithYear(2015)
                 .WithInfo(5, 1, Artist.Sebastian_Giacobino));
@@ -135,29 +135,29 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
             Cards.Add(LotRCard.Location("Ramshackle Manor", "", setName, 2, 3)
                 .WithTraits("Bree.")
                 .WithKeywords("Investigate 2.")
-                .WithText("When a player card effect reduces a player's threat by any amount, reducd that amount to 1.\r\nTravel: Raise each player's threat by 1 to travel here.")
+                .WithText("Investigate 2.\r\nWhen a player card effect reduces a player's threat by any amount, reducd that amount to 1.\r\nTravel: Raise each player's threat by 1 to travel here.")
                 .WithFlavor("In one of the windows he caught a glimpse of a sallow face with sly, slanting eyes; but it vanished at once.\r\n-The Fellowship of the Ring")
                 .WithInfo(16, 4, Artist.Lutful_Valeriya_Romanovna));
             Cards.Add(LotRCard.Location("Dark Alley", "", setName, 4, 3)
                 .WithTraits("Bree.")
                 .WithKeywords("Investigate 3.")
-                .WithText("Enemies in the staging area cannot take damage.\r\nTravel: Shuffle the encounter discard pile into the encounter deck and discard cards until an enemy is discarded. Add the discarded enemy to the staging area.")
+                .WithText("Investigate 3.\r\nEnemies in the staging area cannot take damage.\r\nTravel: Shuffle the encounter discard pile into the encounter deck and discard cards until an enemy is discarded. Add the discarded enemy to the staging area.")
                 .WithInfo(17, 3, Artist.Alvaro_Calvo_Escudero));
             Cards.Add(LotRCard.Location("Market Square", "", setName, 2, 4)
                 .WithTraits("Bree.")
                 .WithKeywords("Investigate 2.")
-                .WithText("Forced: After a player places any amount of progress on a location in the staging area, he raises his threat by 1.\r\nTravel: Each player spends 1 resource to travel here.")
+                .WithText("Investigate 2.\r\nForced: After a player places any amount of progress on a location in the staging area, he raises his threat by 1.\r\nTravel: Each player spends 1 resource to travel here.")
                 .WithFlavor("...the whole of Bree was buzzing with excitement.\r\n-THe Fellowship of the Ring")
                 .WithInfo(18, 3, Artist.Yoann_Boissonnet));
             Cards.Add(LotRCard.Location("Old Warehouse", "", setName, 3, 4)
                 .WithTraits("Bree.")
                 .WithKeywords("Investigate 1.")
-                .WithText("Forced: When triggering the Investigate keyword on Old Warehouse, the first player must choose: either look at 2 additional card, or reduce each player's threat by 3.\r\nTravel: Reveal the top card of the encounter deck to travel here.")
+                .WithText("Investigate 1.\r\nForced: When triggering the Investigate keyword on Old Warehouse, the first player must choose: either look at 2 additional card, or reduce each player's threat by 3.\r\nTravel: Reveal the top card of the encounter deck to travel here.")
                 .WithInfo(19, 3, Artist.Lutful_Valeriya_Romanovna));
             Cards.Add(LotRCard.Location("Village Stable", "", setName, 3, 3)
                 .WithTraits("Bree.")
                 .WithKeywords("Investigate 1.")
-                .WithText("Response: After triggering the Investigate keyword on Village Stable, if the looked at card is a Suspect or a Hideout, add Village Stable to the victory display to add that card to the staging area.\r\nTravel: Each player discards 1 random card from his hand to travel here.")
+                .WithText("Investigate 1.\r\nResponse: After triggering the Investigate keyword on Village Stable, if the looked at card is a Suspect or a Hideout, add Village Stable to the victory display to add that card to the staging area.\r\nTravel: Each player discards 1 random card from his hand to travel here.")
                 .WithInfo(20, 2, Artist.Alvaro_Calvo_Escudero));
             Cards.Add(LotRCard.Enemy("Bill Ferny", "", setName, 42, 3, 2, 3, 5)
                 .WithUnique()
@@ -187,7 +187,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithInfo(25, 3, Artist.Micah_Epstein));
             Cards.Add(LotRCard.Treachery("Hired Muscle", "", setName)
                 .WithKeywords("Surge.")
-                .WithText("When Revealed: Attach to a Brigand enemy without a copy of Hired Muscle attacked and return that enemy to the staging area. (Counts as a Condition attachment with the text: \"Attached enemy gets +1 Threat, +1 Attack, +1 Defense and gains: 'Forced: When attached enemy is defeated, look at the bottom of the Investigation deck.'\")")
+                .WithText("Surge.\r\nWhen Revealed: Attach to a Brigand enemy without a copy of Hired Muscle attacked and return that enemy to the staging area. (Counts as a Condition attachment with the text: \"Attached enemy gets +1 Threat, +1 Attack, +1 Defense and gains: 'Forced: When attached enemy is defeated, look at the bottom of the Investigation deck.'\")")
                 .WithInfo(26, 2, Artist.Rafal_Hrynkiewicz));
             Cards.Add(LotRCard.Treachery("Smoke and Mirrors", "", setName)
                 .WithText("When Revealed: Discard the top X cards of the encounter deck, where X is 1 more than the Investigate value of the active location. Until the end of the phase, add the Threat of each card discarded by this effect to the total Threat in the staging area.")

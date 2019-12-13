@@ -107,15 +107,16 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithText("X is the number of characters the first player controls.\r\nTravel: The first player searches the encounter deck and discard pile for a Spy enemy, reveals it, and adds it to the staging area. Shuffle the encounter deck.")
                 .WithFlavor("\"I don't know if the Road has ever been measured in miles beyond the Forsaken Inn...\" -The Fellowship of the Ring")
                 .WithInfo(7, 2, Artist.Mariusz_Gandzel));
-            Cards.Add(LotRCard.Treachery("The Ring's Will", "880F02B4-7C63-4078-B311-6DE55F764DC8", "A Knife in the Dark Nightmare")
-                .WithText("When Revealed: Raise each player's threat by 5. This effect cannot be canceled by the Ring-bearer's effect, or if The One Ring is exhausted.")
+            addTreachery("The Ring's Will", "A Knife in the Dark Nightmare")
+                .WithTextLine("When Revealed: Raise each player's threat by 5. This effect cannot be canceled by the Ring-bearer's effect, or if The One Ring is exhausted.")
                 .WithShadow("Shadow: After this attack, attacking enemy engages the next player then makes an immediate attack.")
-                .WithInfo(8, 2, Artist.Sara_Betsy));
-            Cards.Add(LotRCard.Treachery("Blade Tip", "993E2EB0-22F8-41BB-9E65-5498AFF37065", "A Knife in the Dark Nightmare")
+                .WithInfo(8, 2, Artist.Sara_Betsy);
+            addTreachery("Blade Tip", "A Knife in the Dark Nightmare")
                 .WithTraits("Morgul.")
                 .WithKeywords("Surge.", "Doomed 1.")
+                .WithTextLine("Surge. Doomed 1.")
                 .WithShadow("Shadow: If the defending character is damaged by this attack, attach Blade Tip to that character. (Counts as a Condition attachment with the text: \"Forced: At the end of the refresh phase, raise your threat by 2.\")")
-                .WithInfo(9, 2, Artist.Florian_Devos));
+                .WithInfo(9, 2, Artist.Florian_Devos);
         }
     }
 }

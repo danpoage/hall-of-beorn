@@ -54,7 +54,8 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(LotRCard.Enemy("Dark Horseman", "885855BB-4B46-4C1A-B96B-5D594D81EAFC", "A Shadow of the Past Nightmare", 25, 3, 3, 4, 6)
                 .WithTraits("Nazgûl.")
                 .WithKeywords("Peril.", "Hide 2.")
-                .WithText("Cannot have non-Morgul attachments.\r\nWhile ~Dark Horseman is engaged with you, characters you control get -1 Willpower during Hide tests.")
+                .WithTextLine("Peril. Hide 2.")
+                .WithTextLine("Cannot have non-Morgul attachments.\r\nWhile ~Dark Horseman is engaged with you, characters you control get -1 Willpower during Hide tests.")
                 .WithTemplate("<p class='main-text'>{keyword:Peril.} {keyword:Hide 2.}</p><p class='main-text'>Cannot have non-{trait:Morgul.@Morgul} attachments.</p><p class='main-text'>While {self} is engaged with you, characters you control get -1 {Willpower} during Hide tests.</p><p class='flavor-text'>&ldquo;There&apos;s been a strange customer asking for Mr. Baggins of Bag End...&rdquo;<br>&ndash;The Gaffer, The Fellowship of the Ring</p>")
                 .WithFlavor("\"There's been a strange customer asking for Mr. Baggins of Bag End...\" -THe Gaffer, The Fellowship of the Ring")
                 .WithInfo(3, 2, Artist.Helge_C_Balzer));
@@ -73,20 +74,22 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithText("While Stock Woods is in the staging area, players cannot commit more than 2 characters to a Hide test.\r\nTravel: The first player makes a Hide 1 test.")
                 .WithShadow("Shadow: Attacking enemy gets +2 Attack (+3 Attack instead if you have failed a Hide test this round).")
                 .WithInfo(6, 3, Artist.Dimitri_Bielak));
-            Cards.Add(LotRCard.Treachery("In the Name of Mordor!", "0DB197F2-CE0F-4B18-900C-3905F9FA82B4", "A Shadow of the Past Nightmare")
+            addTreachery("In the Name of Mordor!", "A Shadow of the Past Nightmare")
                 .WithTraits("Mordor.")
                 .WithKeywords("Surge.")
-                .WithText("When Revealed: Attach to the current quest. (Counts as a Condition attachment with the text: \"Forced: After a player fails a Hide test, he discards a random card from his hand.\")")
-                .WithInfo(7, 2, Artist.Piya_Wannachaiwong));
-            Cards.Add(LotRCard.Treachery("Followed by Shadows", "402B5339-2661-4E88-8BA7-A668B8388670", "A Shadow of the Past Nightmare")
-                .WithText("When Revealed: Starting with the first player, each player makes a Hide 2 test. Each player who fails this Hide test raises his threat by 5.")
+                .WithTextLine("Surge.")
+                .WithTextLine("When Revealed: Attach to the current quest. (Counts as a Condition attachment with the text: \"Forced: After a player fails a Hide test, he discards a random card from his hand.\")")
+                .WithInfo(7, 2, Artist.Piya_Wannachaiwong);
+            addTreachery("Followed by Shadows", "A Shadow of the Past Nightmare")
+                .WithTextLine("When Revealed: Starting with the first player, each player makes a Hide 2 test. Each player who fails this Hide test raises his threat by 5.")
                 .WithShadow("Shadow: If the defending player has failed a Hide test this round, this attack is considered undefended.")
-                .WithInfo(8, 3, Artist.Helge_C_Balzer));
-            Cards.Add(LotRCard.Treachery("Sniffing and Hissing", "4920FD14-6910-4A56-8DEE-34B03FF5BAFC", "A Shadow of the Past Nightmare")
+                .WithInfo(8, 3, Artist.Helge_C_Balzer);
+            addTreachery("Sniffing and Hissing", "A Shadow of the Past Nightmare")
                 .WithKeywords("Doomed 2.")
-                .WithText("When Revealed: The first player must either exhaust the One Ring and reveal an encounter card, or make a Hide 3 test.")
+                .WithTextLine("Doomed 2.")
+                .WithTextLine("When Revealed: The first player must either exhaust the One Ring and reveal an encounter card, or make a Hide 3 test.")
                 .WithShadow("Shadow: Attacking enemy gets +2 Attack. If this attack destroys a character, raise your threat by 3.")
-                .WithInfo(9, 2, Artist.Oleg_Saakyan));
+                .WithInfo(9, 2, Artist.Oleg_Saakyan);
         }
     }
 }

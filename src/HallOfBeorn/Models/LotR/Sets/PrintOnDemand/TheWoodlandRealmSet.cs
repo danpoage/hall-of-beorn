@@ -80,7 +80,9 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithUnique()
                 .WithTraits("Silvan.", "Scout.")
                 .WithKeywords("Ranged.", "Sentinel.")
-                .WithText("The first player gains control of Mendor.\r\nIf Mendor leaves play, the players lose the game.")
+                .WithTextLine("Ranged. Sentinel.")
+                .WithTextLine("The first player gains control of Mendor.")
+                .WithTextLine("If Mendor leaves play, the players lose the game.")
                 .WithInfo(11, 1, Artist.Cris_Griffin);
 
             addEnemy("Ungoliant's Spawn", emptySetName, 38, 3, 6, 3, 8)
@@ -192,7 +194,8 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
             addTreachery("Eyes of the Forest", emptySetName)
                 .WithSetNumberAndCost(7, 1)
                 .WithKeywords("Doomed 1.")
-                .WithText("When Revealed: The opposing team looks at each player's hand and discards 1 card from each.")
+                .WithTextLine("Doomed 1.")
+                .WithTextLine("When Revealed: The opposing team looks at each player's hand and discards 1 card from each.")
                 .WithShadow("Shadow: Attacking enemy gets +X Attack, where X is the stage number of the current quest.")
                 .WithInfo(32, 1, Artist.Yoann_Boissonnet);
             addEnemy("Mirkwood Patrol", emptySetName, 34, 3, 4, 3, 5)
@@ -232,6 +235,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
             addEnemy("Mirkwood Flock", emptySetName, 12, 1, 2, 1, 2)
                 .WithSetNumberAndCost(10, 1)
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithShadow("Shadow: Add Mirkwood Flock to the staging area.")
                 .WithInfo(39, 2, Artist.Brandon_Leach);
             addLocation("The Eaves of Mirkwood", emptySetName, 2, 4)

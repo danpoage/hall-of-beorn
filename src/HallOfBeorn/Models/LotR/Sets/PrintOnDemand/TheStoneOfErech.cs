@@ -181,24 +181,12 @@ Midnight. This effect cannot be canceled.",
                 CardNumber = 23,
                 Artist = Artist.David_Gaillet
             });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Regretful Shade",
-                Id = "f079c496-20bf-4ce4-a5ca-d644172d83fe",
-                CardType = CardType.Enemy,
-                EncounterSet = "The Stone of Erech",
-                Traits = new List<string>() { "Undead.", " Oathbreaker." },
-                Quantity = 3,
-                EngagementCost = 23,
-                Attack = 2,
-                Defense = 1,
-                HitPoints = 3,
-                Keywords = new List<string>() { "Spectral.", " Surge." },
-                Shadow = "Deal Attacking enemy 1 additional shadow card (Dusk. 2 additional cards instead. Midnight. 3 additional cards instead).",
-                Threat = 1,
-                CardNumber = 16,
-                Artist = Artist.Aurelien_Hubert
-            });
+            addEnemy("Regretful Shade", "The Stone of Erech", 23, 1, 2, 1, 3)
+                .WithTraits("Undead.", "Oathbreaker.")
+                .WithKeywords("Spectral.", "Surge.")
+                .WithTextLine("Spectral. Surge.")
+                .WithShadow("Deal Attacking enemy 1 additional shadow card (Dusk. 2 additional cards instead. Midnight. 3 additional cards instead).")
+                .WithInfo(16, 3, Artist.Aurelien_Hubert);
             Cards.Add(new LotRCard() {
                 
                 Title = "Relic from the Dark Years",
@@ -224,7 +212,7 @@ Midnight. This effect cannot be canceled.",
                 Defense = 0,
                 HitPoints = 2,
                 Keywords = new List<string>() { "Spectral." },
-                Text = "When Revealed: Return the topmost Undead enemy in the encounter discard pile to the staging area.",
+                Text = "Spectral.\r\nWhen Revealed: Return the topmost Undead enemy in the encounter discard pile to the staging area.",
                 Threat = 2,
                 CardNumber = 13,
                 Artist = Artist.Rafal_Hrynkiewicz
@@ -242,10 +230,7 @@ Midnight. This effect cannot be canceled.",
                 Defense = 1,
                 HitPoints = 6,
                 Keywords = new List<string>() { "Spectral." },
-                Text =
-@"Dusk. Shadow Host Captain gets +1 Attack and +1 Defense.
-
-Midnight. Shadow Host Captain gets +2 Attack and +2 Defense.",
+                Text = "Spectral.\r\nDusk. Shadow Host Captain gets +1 Attack and +1 Defense.\r\nMidnight. Shadow Host Captain gets +2 Attack and +2 Defense.",
                 Threat = 3,
                 CardNumber = 15,
                 Artist = Artist.Alexandre_Dainche
@@ -263,7 +248,7 @@ Midnight. Shadow Host Captain gets +2 Attack and +2 Defense.",
                 Defense = 1,
                 HitPoints = 5,
                 Keywords = new List<string>() { "Spectral." },
-                Text = "When Revealed: Players cannot play events until the end of the round.",
+                Text = "Spectral.\r\nWhen Revealed: Players cannot play events until the end of the round.",
                 Shadow = "Shadow: Attacking enemy gets +1 Attack (Dusk. +2 Attack instead. Midnight. +3 Attack instead).",
                 Threat = 2,
                 CardNumber = 12,
@@ -351,7 +336,7 @@ Midnight. Shadow of Dwimorberg gets +4 Threat.",
                 EncounterSet = "The Stone of Erech",
                 Quantity = 2,
                 Keywords = new List<string>() { "Surge." },
-                Text = "When Revealed: Add 1 progress to the current Night objective.",
+                Text = "Surge.\r\nWhen Revealed: Add 1 progress to the current Night objective.",
                 CardNumber = 27,
                 Artist = Artist.Jose_Vega
             });
@@ -369,7 +354,7 @@ Midnight. Shadow of Dwimorberg gets +4 Threat.",
                 Defense = 3,
                 HitPoints = 9,
                 Keywords = new List<string>() { "Spectral." },
-                Text = "Cannot have attachments.\r\nWhile you are engaged with The Lord of the Dead, treat all printed text boxes on characters you control as if they were blank (except Traits.)",
+                Text = "Spectral. Cannot have attachments.\r\nWhile you are engaged with The Lord of the Dead, treat all printed text boxes on characters you control as if they were blank (except Traits.)",
                 Threat = 5,
                 CardNumber = 5,
                 Artist = Artist.Jim_Pavelec
@@ -438,10 +423,7 @@ If the players defeat this stage, they have escaped the Blackroot Vale with Deru
                 Defense = 2,
                 HitPoints = 4,
                 Keywords = new List<string>() { "Spectral." },
-                Text = 
-@"Dusk. Whisperer gets +1 Threat.
-
-Midnight. Whisperer gets +2 Threat and gains Doomed 2.",
+                Text = "Spectral.\r\nDusk. Whisperer gets +1 Threat.\r\nMidnight. Whisperer gets +2 Threat and gains Doomed 2.",
                 Threat = 2,
                 CardNumber = 14,
                 Artist = Artist.Sara_Betsy

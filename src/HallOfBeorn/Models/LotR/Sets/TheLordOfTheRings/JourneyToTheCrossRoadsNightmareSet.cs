@@ -25,7 +25,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
             addCard(LotRCard.Enemy("Southron Warrior", string.Empty, setName, 46, 3, 4, 2, 5)
                 .WithTraits("Harad.")
                 .WithKeywords("Archery 2.")
-                .WithText("Forced: After ~Southron ~Warrior engages you, discard an ally you control.")
+                .WithTextLine("Archery 2.")
+                .WithTextLine("Forced: After ~Southron ~Warrior engages you, discard an ally you control.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the defending character is damaged.")
                 .WithInfo(2, 4, Artist.Guillaume_Ducos));
             addCard(LotRCard.Enemy("Southron Rearguard", string.Empty, setName, 38, 4, 6, 4, 8)
@@ -54,7 +55,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithInfo(7, 3, Artist.Ivan_Dixon));
             addCard(LotRCard.Treachery("Ware! Ware!", string.Empty, setName)
                 .WithKeywords("Peril.", "Surge.")
-                .WithText("When Revealed: Either place this card facedown under The Black Gate, or put the top card under The Cross-roads into play engaged with you.")
+                .WithTextLine("Peril. Surge.")
+                .WithTextLine("When Revealed: Either place this card facedown under The Black Gate, or put the top card under The Cross-roads into play engaged with you.")
                 .WithShadow("Shadow: Choose an enemy in the staging area. Engage that enemy and deal it a shadow card.")
                 .WithInfo(8, 2, Artist.Uriah_Voth));
         }

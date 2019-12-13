@@ -25,19 +25,22 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
             addCard(LotRCard.Location("Festering Mire", string.Empty, setName, 5, 6)
                 .WithTraits("Marsh.")
                 .WithKeywords("Mire 2.")
-                .WithText("Forced: When Festering Mire is discarded by the Mire keyword, each player discards his hand.\r\nTravel: Each player discard 1 random card from his hand to travel here.")
+                .WithTextLine("Mire 2.")
+                .WithTextLine("Forced: When Festering Mire is discarded by the Mire keyword, each player discards his hand.\r\nTravel: Each player discard 1 random card from his hand to travel here.")
                 .WithVictoryPoints(2)
                 .WithInfo(2, 3, Artist.Lucas_Staniec));
             addCard(LotRCard.Location("Candle-lit Pool", string.Empty, setName, 4, 5)
                 .WithTraits("Marsh.")
                 .WithKeywords("Mire 3.")
-                .WithText("Forced: When Candle-lit Pool is discarded by the Mire keyword, each player searches the encounter deck and discard pile for an Undead enemy and puts it into play engaged with him.\r\nTravel: Spend 2 Fellowship resources to travel here.")
+                .WithTextLine("Mire 3.")
+                .WithTextLine("Forced: When Candle-lit Pool is discarded by the Mire keyword, each player searches the encounter deck and discard pile for an Undead enemy and puts it into play engaged with him.\r\nTravel: Spend 2 Fellowship resources to travel here.")
                 .WithVictoryPoints(3)
                 .WithInfo(3, 3, Artist.Guillaume_Ducos));
             addCard(LotRCard.Location("Great Reed Thicket", string.Empty, setName, 2, 3)
                 .WithTraits("Marsh.")
                 .WithKeywords("Mire 2.")
-                .WithText("Forced: When Great Reed Thicket is discarded by the Mire keyword, either flip Sméagol to Gollum, or Gollum makes an immediate attack.\r\nTravel: Exhaust Sméagol to travel here.")
+                .WithTextLine("Mire 2.")
+                .WithTextLine("Forced: When Great Reed Thicket is discarded by the Mire keyword, either flip Sméagol to Gollum, or Gollum makes an immediate attack.\r\nTravel: Exhaust Sméagol to travel here.")
                 .WithVictoryPoints(2)
                 .WithInfo(4, 2, Artist.Lucas_Staniec));
             addCard(LotRCard.Enemy("Pale Faces", string.Empty, setName, 30, 2, 4, 3, 5)
@@ -55,7 +58,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithInfo(7, 3, Artist.Rafal_Hrynkiewicz));
             addCard(LotRCard.Treachery("Gollum's Rage", string.Empty, setName)
                 .WithKeywords("Peril.", "Surge.")
-                .WithText("When Revealed: Deal Gollum's Rage to Gollum as a facedown shadow card, if able.")
+                .WithTextLine("Peril. Surge.")
+                .WithTextLine("When Revealed: Deal Gollum's Rage to Gollum as a facedown shadow card, if able.")
                 .WithShadow("Shadow: If attacking enemy is Gollum, it gets +1 Attack and makes an additional attack against you after this one.")
                 .WithInfo(8, 2, Artist.Anthony_Devine));
         }

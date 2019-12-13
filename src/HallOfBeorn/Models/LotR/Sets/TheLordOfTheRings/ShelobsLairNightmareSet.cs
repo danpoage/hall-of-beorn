@@ -39,7 +39,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
             addCard(LotRCard.Enemy("Orc of Minas Morgul", string.Empty, setName, 35, 2, 3, 2, 4)
                 .WithTraits("Orc.")
                 .WithKeywords("Peril.")
-                .WithText("When Revealed: Either discard a random card from your hand, or engage Orc of Minas Morgul and reveal an additional encounter card.")
+                .WithTextLine("Peril.")
+                .WithTextLine("When Revealed: Either discard a random card from your hand, or engage Orc of Minas Morgul and reveal an additional encounter card.")
                 .WithShadow("Shadow: Attacking enemy gets +2 Attack.")
                 .WithInfo(5, 3, Artist.Martin_de_Diego_Sadaba));
             addCard(LotRCard.Enemy("Under-gate Sentry", string.Empty, setName, 30, 3, 5, 3, 5)
@@ -53,7 +54,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithInfo(7, 3, Artist.Alexander_Kozachenko));
             addCard(LotRCard.Treachery("Growing Stench", string.Empty, setName)
                 .WithKeywords("Surge.")
-                .WithText("When Revealed: Deal Growing Stench to Shelob as a facedown shadow card.")
+                .WithTextLine("Surge.")
+                .WithTextLine("When Revealed: Deal Growing Stench to Shelob as a facedown shadow card.")
                 .WithShadow("Shadow: Defending character cannot ready. If the attacking enemy is Shelob and this attack destroys a character, place 1 progress on Shelob.")
                 .WithInfo(8, 2, Artist.Rafal_Hrynkiewicz));
         }

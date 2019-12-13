@@ -63,20 +63,23 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
             addCard(LotRCard.ObjectiveAlly("Host of Lórien", string.Empty, setName, 3, 3, 3, 6)
                 .WithTraits("Silvan.")
                 .WithKeywords("Ranged.", "Sentinel.")
-                .WithText("Immune to player card effects.\r\nDoes not exhaust to quest.\r\nIf Host of Lórien leaves play, remove it from the game.")
+                .WithTextLine("Ranged. Sentinel.")
+                .WithTextLine("Immune to player card effects.\r\nDoes not exhaust to quest.\r\nIf Host of Lórien leaves play, remove it from the game.")
                 .WithInfo(9, 1, Artist.Stanislav_Dikolenko));
             addCard(LotRCard.Enemy("Bane of Amon Lanc", string.Empty, setName, 45, 3, 5, 3, 9)
                 .WithUnique()
                 .WithTraits("Lieutenant.", "Troll.", "Olog-hai.")
                 .WithKeywords("Indestructible.")
-                .WithText("Immune to player card effects.\r\nForced: When Bane of Amon Lanc attacks you, discard a random card from your hand. Bane of Amon Lanc gets +X Attack for this attack, where X is that card's printed cost.")
+                .WithTextLine("Indestructible. Immune to player card effects.")
+                .WithTextLine("Forced: When Bane of Amon Lanc attacks you, discard a random card from your hand. Bane of Amon Lanc gets +X Attack for this attack, where X is that card's printed cost.")
                 .WithVictoryPoints(5)
                 .WithInfo(10, 1, Artist.Alexander_Kozachenko));
             addCard(LotRCard.Enemy("Sorcerer of Dol Guldur", string.Empty, setName, 45, 3, 6, 2, 9)
                 .WithUnique()
                 .WithTraits("Lieutenant.", "Sorcerer.")
                 .WithKeywords("Indestructible.")
-                .WithText("Immune to player card effects.\r\nForced: When Sorcerer of Dol Guldur attacks you, discard the top card of your deck. Then, discard each copy of that card from play.")
+                .WithTextLine("Indestructible. Immune to player card effects.")
+                .WithTextLine("Forced: When Sorcerer of Dol Guldur attacks you, discard the top card of your deck. Then, discard each copy of that card from play.")
                 .WithFlavor("\"A great kind and sorcerer he was of old, and now he wields a deadly fear.\"\r\n-Gandalf, The Fellowship of the Ring")
                 .WithVictoryPoints(5)
                 .WithInfo(11, 1, Artist.Gabriel_Verdon));
@@ -84,21 +87,26 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithUnique()
                 .WithTraits("Lieutenant.", "Orc.", "Uruk.")
                 .WithKeywords("Indestructible.")
-                .WithText("Immune to player card effects.\r\nForced: When Chieftain Morlug attacks you, discard cards from the top of the encounter deck until an enemy is discarded and put it into play engaged with you.")
+                .WithTextLine("Indestructible. Immune to player card effects.")
+                .WithTextLine("Forced: When Chieftain Morlug attacks you, discard cards from the top of the encounter deck until an enemy is discarded and put it into play engaged with you.")
                 .WithVictoryPoints(5)
                 .WithInfo(12, 1, Artist.Ivan_Dixon));
             addCard(LotRCard.Enemy("Dungeon Dweller", string.Empty, setName, 45, 3, 4, 3, 8)
                 .WithUnique()
                 .WithTraits("Lieutenant.", "Spider.")
                 .WithKeywords("Indestructible.")
-                .WithText("Forced: When Dungeon Dweller attacks you, discard an ally you control.")
+                .WithTextLine("Indestructible.")
+                .WithTextLine("Forced: When Dungeon Dweller attacks you, discard an ally you control.")
                 .WithFlavor("Sauron would send her prisoners that he had no better uses for: he would have them driven to her hold, and report brought back to him of the play she made.\r\n-The Two Towers")
                 .WithVictoryPoints(5)
                 .WithInfo(13, 1, Artist.Guillaume_Ducos));
             addCard(LotRCard.Enemy("Host of Dol Guldur", string.Empty, setName, 40, 254, 8, 4, 12)
                 .WithTraits("Orc.")
                 .WithKeywords("Archery X.")
-                .WithText("X is the number of players.\r\nCannot have attachments.\r\nForced: At the end of the encounter phase, if Host of Dol Guldur is in the staging area, remove X progress from the main quest.")
+                .WithTextLine("Archery X.")
+                .WithTextLine("X is the number of players.")
+                .WithTextLine("Cannot have attachments.")
+                .WithTextLine("Forced: At the end of the encounter phase, if Host of Dol Guldur is in the staging area, remove X progress from the main quest.")
                 .WithSiegePoints(4)
                 .WithInfo(14, 2, Artist.Joel_Hustak));
             addCard(LotRCard.Enemy("Mirkwood Olog-hai", string.Empty, setName, 34, 4, 6, 4, 9)
@@ -109,25 +117,29 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithInfo(15, 2, Artist.Ivan_Dixon));
             addCard(LotRCard.Enemy("Beast of Taur-nu-Fuin", string.Empty, setName, 31, 3, 5, 3, 5)
                 .WithTraits("Creature.", "Werewolf.")
-                .WithText("Beast of Taur-nu-Fuin cannot have attachments and its shadow cards cannot be canceled.\r\nForced: When Beast of Taur-nu-Fuin attacks, either remove 2 progress from the main quest or deal it an additional shadow card.")
+                .WithTextLine("Beast of Taur-nu-Fuin cannot have attachments and its shadow cards cannot be canceled.")
+                .WithTextLine("Forced: When Beast of Taur-nu-Fuin attacks, either remove 2 progress from the main quest or deal it an additional shadow card.")
                 .WithSiegePoints(2)
                 .WithInfo(16, 2, Artist.Guillaume_Ducos));
             addCard(LotRCard.Enemy("Amon Lanc Archer", string.Empty, setName, 36, 2, 4, 1, 4)
                 .WithTraits("Orc.")
                 .WithKeywords("Archery 2.")
-                .WithText("Forced: After Amon Lanc Archer engages you, either remove 2 progress from the main quest, or deal 2 damage to an ally you control.")
+                .WithTextLine("Archery 2.")
+                .WithTextLine("Forced: After Amon Lanc Archer engages you, either remove 2 progress from the main quest, or deal 2 damage to an ally you control.")
                 .WithShadow("Shadow: Exhaust a character you control.")
                 .WithSiegePoints(1)
                 .WithInfo(17, 3, Artist.Rafal_Hrynkiewicz));
             addCard(LotRCard.Enemy("Dol Guldur Marauder", string.Empty, setName, 24, 2, 3, 1, 3)
                 .WithTraits("Orc.")
-                .WithText("Dol Guldur Marauder gets +1 Attack and +1 Defense for each resource on it.\r\nForced: When Dol Guldur Marauder attacks, either remove 1 progress from the main quest or place 1 resource on Dol Guldur Marauder.")
+                .WithTextLine("Dol Guldur Marauder gets +1 Attack and +1 Defense for each resource on it.")
+                .WithTextLine("Forced: When Dol Guldur Marauder attacks, either remove 1 progress from the main quest or place 1 resource on Dol Guldur Marauder.")
                 .WithSiegePoints(1)
                 .WithInfo(18, 4, Artist.Joel_Hustak));
             addCard(LotRCard.Enemy("Battle Warg", string.Empty, setName, 18, 1, 3, 2, 2)
                 .WithTraits("Creature.", "Warg.")
                 .WithKeywords("Surge.")
-                .WithText("Forced: After Battle Warg engages you, either remove 1 progress from the main quest or discard an attachment you control.")
+                .WithTextLine("Surge.")
+                .WithTextLine("Forced: After Battle Warg engages you, either remove 1 progress from the main quest or discard an attachment you control.")
                 .WithShadow("Shadow: Discard an attachment you control.")
                 .WithSiegePoints(1)
                 .WithInfo(19, 3, Artist.Guillaume_Ducos));
@@ -145,7 +157,8 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithInfo(21, 2, Artist.Julian_Kok));
             addCard(LotRCard.Location("The Shadow Road", string.Empty, setName, 2, 4)
                 .WithTraits("Dol Guldur.")
-                .WithText("The Shadow Road gets +2 Threat for each facedown card attached to it.\r\nWhile The Shadow Road is in the staging area, it gains: \"The players cannot travel or place progress here unless they are at stage 3F. Forced: After an event is played during the quest phase, attach it facedown to The Shadow Road.\"")
+                .WithTextLine("The Shadow Road gets +2 Threat for each facedown card attached to it.")
+                .WithTextLine("While The Shadow Road is in the staging area, it gains: \"The players cannot travel or place progress here unless they are at stage 3F. Forced: After an event is played during the quest phase, attach it facedown to The Shadow Road.\"")
                 .WithSiegePoints(2)
                 .WithInfo(22, 2, Artist.Katy_Grierson));
             addCard(LotRCard.Location("Dungeon Door", string.Empty, setName, 2, 4)
@@ -156,7 +169,8 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithInfo(23, 2, Artist.Stanislav_Dikolenko));
             addCard(LotRCard.Location("Forest Battleground", string.Empty, setName, 1, 5)
                 .WithTraits("Forest.")
-                .WithText("Forest Battleground gets +1 Threat for each ally controlled by the player with the most allies.\r\nForced: When Forest Battleground is explored, each player searches the encounter deck and discard pile for an Orc enemy and adds it to the staging area. Shuffle the encounter deck.")
+                .WithTextLine("Forest Battleground gets +1 Threat for each ally controlled by the player with the most allies.")
+                .WithTextLine("Forced: When Forest Battleground is explored, each player searches the encounter deck and discard pile for an Orc enemy and adds it to the staging area. Shuffle the encounter deck.")
                 .WithInfo(24, 2, Artist.Carlos_Palma_Cruchaga));
             addCard(LotRCard.Location("Blackened Woods", string.Empty, setName, 3, 3)
                 .WithTraits("Forest.")
@@ -165,12 +179,14 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithInfo(25, 3, Artist.Alyn_Spiller));
             addCard(LotRCard.Treachery("Servant of Sauron", string.Empty, setName)
                 .WithKeywords("Surge.")
-                .WithText("When Revealed: The enemy in the staging area with the highest engagement cost makes an immediate attack against the first player.")
+                .WithTextLine("Surge.")
+                .WithTextLine("When Revealed: The enemy in the staging area with the highest engagement cost makes an immediate attack against the first player.")
                 .WithShadow("Shadow: Attacking enemy makes an additional attack against you after this one.")
                 .WithInfo(26, 3, Artist.Alexander_Kozachenko));
             addCard(LotRCard.Treachery("Power Sevenfold", string.Empty, setName)
                 .WithKeywords("Doomed 1.")
-                .WithText("When Revealed: Each player must choose: either search the encounter deck and discard pile for a Dol Guldur location and add it to the staging area, or search the encounter deck and discard pile for an Orc enemy and put it into play engaged with him.")
+                .WithTextLine("Doomed 1.")
+                .WithTextLine("When Revealed: Each player must choose: either search the encounter deck and discard pile for a Dol Guldur location and add it to the staging area, or search the encounter deck and discard pile for an Orc enemy and put it into play engaged with him.")
                 .WithInfo(27, 2, Artist.Carlos_Palma_Cruchaga));
             addCard(LotRCard.Treachery("The Necromancer's Rage", string.Empty, setName)
                 .WithText("When Revealed: Deal 1 damage to each exhausted character. Until the end of the phase, each damaged character gets -1 Willpower.")
@@ -178,7 +194,8 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithInfo(28, 2, Artist.Stanislav_Dikolenko));
             addCard(LotRCard.Treachery("Fear and Despair", string.Empty, setName)
                 .WithKeywords("Doomed 1.")
-                .WithText("When Revealed: Each player exhausts a character he controls. Until the end of the round, characters cannot be readied by player card effects.")
+                .WithTextLine("Doomed 1.")
+                .WithTextLine("When Revealed: Each player exhausts a character he controls. Until the end of the round, characters cannot be readied by player card effects.")
                 .WithShadow("Shadow: Defending character cannot ready until the end of the round.")
                 .WithInfo(29, 2, Artist.Gabriel_Verdon));
             addCard(LotRCard.Treachery("Fastness of Mirkwood", string.Empty, setName)

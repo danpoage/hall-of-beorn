@@ -25,7 +25,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
             addCard(LotRCard.Enemy("Host of Isengard", string.Empty, setName, 48, 4, 8, 2, 8)
                 .WithTraits("Orc.", "Uruk-hai.")
                 .WithKeywords("Toughness 2.")
-                .WithText("Cannot have attachments.\r\nWhile Host of Isengard is in the staging area, it gains: \"Forced: At the end of the round, place 1 progress on the current quest (bypassing any active location).\"")
+                .WithTextLine("Toughness 2. Cannot have attachments.")
+                .WithTextLine("While Host of Isengard is in the staging area, it gains: \"Forced: At the end of the round, place 1 progress on the current quest (bypassing any active location).\"")
                 .WithInfo(2, 3, Artist.Nicholas_Gregory));
             addCard(LotRCard.Enemy("Bloodied Berserker", string.Empty, setName, 28, 3, 4, 2, 4)
                 .WithTraits("Dunland.")
@@ -52,7 +53,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithInfo(7, 3, Artist.Tropa_Entertainment));
             addCard(LotRCard.Treachery("Crippling Weariness", string.Empty, setName)
                 .WithKeywords("Doomed 1.")
-                .WithText("When Revealed: Each player exhausts a character he controls. Until the end of the round, characters cannot be readied by player card effects.")
+                .WithTextLine("Doomed 1.")
+                .WithTextLine("When Revealed: Each player exhausts a character he controls. Until the end of the round, characters cannot be readied by player card effects.")
                 .WithShadow("Shadow: Until the end of the round, defending character cannot ready.")
                 .WithInfo(8, 2, Artist.Kim_Sokol));
         }

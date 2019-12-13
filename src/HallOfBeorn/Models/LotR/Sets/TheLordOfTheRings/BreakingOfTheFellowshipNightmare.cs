@@ -25,13 +25,15 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
             addCard(LotRCard.Enemy("Isengard Archer", string.Empty, setName, 44, 2, 4, 2, 4)
                 .WithTraits("Orc.", "Uruk-hai.")
                 .WithKeywords("Toughness 1.", "Archery 2.")
-                .WithText("Forced: After Isengard Archer enters the staging area, each player at this stage deals 2 damage to a character he controls.")
+                .WithTextLine("Toughness 1. Archery 2.")
+                .WithTextLine("Forced: After Isengard Archer enters the staging area, each player at this stage deals 2 damage to a character he controls.")
                 .WithShadow("Shadow: Deal 2 damage to an ally you control.")
                 .WithInfo(2, 3, Artist.Tristan_Denecke));
             addCard(LotRCard.Enemy("Isengard Tracker", string.Empty, setName, 35, 3, 5, 1, 3)
                 .WithTraits("Orc.", "Uruk-hai.")
                 .WithKeywords("Toughness 2.", "Archery 1.")
-                .WithText("Forced: After ~Isengard Tracker destroys a character, move it to the first player's staging area.")
+                .WithTextLine("Toughness 2. Archery 1.")
+                .WithTextLine("Forced: After ~Isengard Tracker destroys a character, move it to the first player's staging area.")
                 .WithShadow("Shadow: After this attack, move attacking enemy to the first player's staging area.")
                 .WithInfo(3, 4, Artist.Victor_Manuel_Leza_Moreno));
             addCard(LotRCard.Location("Langflood River", string.Empty, setName, 4, 4)
@@ -40,22 +42,26 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithInfo(4, 3, Artist.Michael_Rasmussen));
             addCard(LotRCard.Location("Western Emyn Muil", string.Empty, setName, 3, 4)
                 .WithTraits("Forest.", "Hills.")
-                .WithText("While Western Emyn Muil is in the staging area, each Uruk-hai enemy at this stage gains Toughness 1.\r\nTravel: A player at this stage must engage the highest toughness enemy in the staging area to travel here.")
+                .WithTextLine("While Western Emyn Muil is in the staging area, each Uruk-hai enemy at this stage gains Toughness 1.")
+                .WithTextLine("Travel: A player at this stage must engage the highest toughness enemy in the staging area to travel here.")
                 .WithInfo(5, 3, Artist.Michael_Rasmussen));
-            addCard(LotRCard.Treachery("Arrows in the Night", string.Empty, setName)
+            addTreachery("Arrows in the Night", setName)
                 .WithKeywords("Peril.")
-                .WithText("When Revealed: Until the end of the round, add 6 to the archery total at this stage. You may discard X cards from hand to reduce the archery total at this stage by X until the end of the round.")
+                .WithTextLine("Peril.")
+                .WithTextLine("When Revealed: Until the end of the round, add 6 to the archery total at this stage. You may discard X cards from hand to reduce the archery total at this stage by X until the end of the round.")
                 .WithShadow("Shadow: Discard 1 random card from your hand.")
-                .WithInfo(6, 2, Artist.Matthew_Cowdery));
-            addCard(LotRCard.Treachery("Hunting the Ring", string.Empty, setName)
+                .WithInfo(6, 2, Artist.Matthew_Cowdery);
+            addTreachery("Hunting the Ring", setName)
                 .WithKeywords("Surge.")
-                .WithText("When Revealed: Attach to the current quest. (Counts a Condition attachment with the text: \"Forced: At the end of the round, each player at this stage raises his threat by 1 for each enemy in the staging area. Then, discard Hunting the Ring and move each enemy in this staging area to the first player's staging area.\")")
-                .WithInfo(7, 2, Artist.Tawny_Fritzinger));
-            addCard(LotRCard.Treachery("Discord and Distrust", string.Empty, setName)
+                .WithTextLine("Surge.")
+                .WithTextLine("When Revealed: Attach to the current quest. (Counts a Condition attachment with the text: \"Forced: At the end of the round, each player at this stage raises his threat by 1 for each enemy in the staging area. Then, discard Hunting the Ring and move each enemy in this staging area to the first player's staging area.\")")
+                .WithInfo(7, 2, Artist.Tawny_Fritzinger);
+            addTreachery("Discord and Distrust", setName)
                 .WithKeywords("Doomed 2.")
-                .WithText("When Revealed: Until the end of the round, players cannot trigger Action or Response effects.")
+                .WithTextLine("Doomed 2.")
+                .WithTextLine("When Revealed: Until the end of the round, players cannot trigger Action or Response effects.")
                 .WithShadow("Shadow: Until the end of the round, defending character cannot ready.")
-                .WithInfo(8, 2, Artist.JB_Casacop));
+                .WithInfo(8, 2, Artist.JB_Casacop);
         }
     }
 }

@@ -108,13 +108,16 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
             Cards.Add(LotRCard.Enemy("Host of Angmar", string.Empty, setName, 50, 4, 9, 4, 12)
                 .WithTraits("Orc.")
                 .WithKeywords("Archery 2.")
-                .WithText("Immune to player card effects.\r\nForced: After Host of Angmar attacks and destroys a character, either remove 2 progress from the main quest, or return Host of Angmar to the staging area.")
+                .WithTextLine("Archery 2.")
+                .WithTextLine("Immune to player card effects.")
+                .WithTextLine("Forced: After Host of Angmar attacks and destroys a character, either remove 2 progress from the main quest, or return Host of Angmar to the staging area.")
                 .WithVictoryPoints(4)
                 .WithInfo(17, 3, Artist.Marius_Bota));
             Cards.Add(LotRCard.ObjectiveAlly("Dúnedain of Annúminas", string.Empty, setName, 1, 2, 2, 3)
                 .WithTraits("Dúnedain.")
                 .WithKeywords("Surge.", "Ranged.", "Sentinel.")
-                .WithText("When Revealed: Any player may spend 1 resource to take control of Dúnedain of Annúminas. Otherwise, discard it.")
+                .WithTextLine("Surge. Ranged. Sentinel.")
+                .WithTextLine("When Revealed: Any player may spend 1 resource to take control of Dúnedain of Annúminas. Otherwise, discard it.")
                 .WithShadow("Ready the defending character and give it +2 Defense for this attack.")
                 .WithInfo(18, 3, Artist.Andreia_Ugrai));
             addCard(LotRCard.Location("Gate of Annúminas", string.Empty, setName, Card.VALUE_X, 5)
@@ -143,19 +146,22 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
             Cards.Add(LotRCard.Enemy("Warg of Carn Dûm", string.Empty, setName, 20, 1, 2, 1, 2)
                 .WithTraits("Creature.")
                 .WithKeywords("Surge.")
-                .WithText("Forced: After Warg of Carn Dûm engages you, either remove 1 progress from the main quest, or exhaust a character you control.")
+                .WithTextLine("Surge.")
+                .WithTextLine("Forced: After Warg of Carn Dûm engages you, either remove 1 progress from the main quest, or exhaust a character you control.")
                 .WithFlavor("Up from the dark plain below came the crying of fell voices, and the howling of many wolves\r\n-The Fellowship of the Ring")
                 .WithInfo(24, 3, Artist.Stanislav_Dikolenko));
             Cards.Add(LotRCard.Enemy("Orc of Angmar", string.Empty, setName, 30, 2, 4, 2, 3)
                 .WithTraits("Orc.")
                 .WithKeywords("Archery 1.")
-                .WithText("Forced: When Orc of Angmar attacks, either remove 1 progress from the main quest, or it gets +2 Defense until the end of the phase.")
+                .WithTextLine("Archery 1.")
+                .WithTextLine("Forced: When Orc of Angmar attacks, either remove 1 progress from the main quest, or it gets +2 Defense until the end of the phase.")
                 .WithShadow("Shadow: Defender gets -2 Defense until end of round.")
                 .WithInfo(25, 3, Artist.Marius_Bota));
             Cards.Add(LotRCard.Enemy("Angmar Warg-rider", string.Empty, setName, 35, 2, 3, 2, 4)
                 .WithTraits("Orc.")
                 .WithKeywords("Archery 1.")
-                .WithText("Forced: After Angmar Warg-rider engages you, either remove 2 progress from the main quest, or it makes an immediate attack.")
+                .WithTextLine("Archery 1.")
+                .WithTextLine("Forced: After Angmar Warg-rider engages you, either remove 2 progress from the main quest, or it makes an immediate attack.")
                 .WithShadow("Shadow: Exhaust a character you control.")
                 .WithInfo(26, 3, Artist.Stanislav_Dikolenko));
             Cards.Add(LotRCard.Enemy("Savage Werewolf", string.Empty, setName, 40, 3, 5, 2, 5)
@@ -174,7 +180,8 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithInfo(29, 2, Artist.Stanislav_Dikolenko));
             Cards.Add(LotRCard.Treachery("Sorcery of Carn Dûm", string.Empty, setName)
                 .WithKeywords("Doomed 1.")
-                .WithText("When Revealed: Each player must choose: either discard the highest cost attachment you control, or assign X damage among characters you control, where X is the number of attachments you control.")
+                .WithTextLine("Doomed 1.")
+                .WithTextLine("When Revealed: Each player must choose: either discard the highest cost attachment you control, or assign X damage among characters you control, where X is the number of attachments you control.")
                 .WithShadow("Shadow: Discard an attachment you control.")
                 .WithInfo(30, 2, Artist.Sam_Lamont));
             Cards.Add(LotRCard.Treachery("Caught in the Press", string.Empty, setName)
@@ -192,7 +199,8 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
             addCard(LotRCard.Hero("Faramir", string.Empty, Sphere.Leadership, 11, 2, 2, 2, 5)
                 .WithTraits("Gondor.", "Noble.", "Ranger.")
                 .WithKeywords("Ranged.")
-                .WithText("Response: After you engage an enemy, ready an ally you control. (Limit once per phase.)")
+                .WithTextLine("Ranged.")
+                .WithTextLine("Response: After you engage an enemy, ready an ally you control. (Limit once per phase.)")
                 .WithTemplate("<p class='main-text'>{keyword:Ranged.} <b>Response:</b> After you engage an enemy, ready an ally you control. (Limit once per phase.)</p>")
                 .WithInfo(2, 1, Artist.Aurore_Folny));
         }

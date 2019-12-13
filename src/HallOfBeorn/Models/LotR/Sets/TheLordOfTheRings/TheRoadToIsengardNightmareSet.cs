@@ -25,7 +25,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
             addCard(LotRCard.Enemy("Orthanc Archer", string.Empty, setName, 38, 2, 3, 2, 3)
                 .WithTraits("Orc.")
                 .WithKeywords("Peril.", "Archery 2.")
-                .WithText("When Revealed: Discard 1 random card from your hand and assign X damage among characters you control. X is the discarded card's printed cost.")
+                .WithTextLine("Peril. Archery 2.")
+                .WithTextLine("When Revealed: Discard 1 random card from your hand and assign X damage among characters you control. X is the discarded card's printed cost.")
                 .WithFlavor("\"There was no answer, except arrows and stones from the walls.\" -Merry, The Two Towers")
                 .WithInfo(2, 3, Artist.Guillaume_Ducos));
             addCard(LotRCard.Enemy("Half-orc of Isengard", string.Empty, setName, 33, 3, 3, 2, 4)
@@ -45,7 +46,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithInfo(5, 3, Artist.Monztre));
             addCard(LotRCard.Treachery("Traitor of Many Colors", string.Empty, setName)
                 .WithKeywords("Peril.", "Surge.")
-                .WithText("When Revealed: If Saruman is in play, he makes an immediate attack against you.")
+                .WithTextLine("Peril. Surge.")
+                .WithTextLine("When Revealed: If Saruman is in play, he makes an immediate attack against you.")
                 .WithShadow("Shadow: Either discard 1 random card from your hand, or attacking enemy makes an additional attack against you after this one.")
                 .WithInfo(6, 2, Artist.Tropa_Entertainment));
             addCard(LotRCard.Treachery("Fire and Foul Fumes", string.Empty, setName)

@@ -43,15 +43,17 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithTraits("Hills.")
                 .WithText("Forced: After a \"when revealed\" effect is cancelled, place 1 damage on each active location.\r\nForced: When Slopes of Hithaeglir is explored, each player raises his threat by 1 for each damage here.")
                 .WithInfo(6, 3, Artist.Yog_Joshi));
-            addCard(LotRCard.Treachery("Hunted in Hollin", string.Empty, setName)
+            addTreachery("Hunted in Hollin", setName)
                 .WithKeywords("Peril.")
-                .WithText("When Revealed: Either raise your threat by 6, or engage the lowest engagement cost enemy in the staging area and reveal an encounter card.")
-                .WithInfo(7, 2, Artist.Florian_Devos));
-            addCard(LotRCard.Treachery("Shelterless Land", string.Empty, setName)
+                .WithTextLine("Peril.")
+                .WithTextLine("When Revealed: Either raise your threat by 6, or engage the lowest engagement cost enemy in the staging area and reveal an encounter card.")
+                .WithInfo(7, 2, Artist.Florian_Devos);
+            addTreachery("Shelterless Land", setName)
                 .WithKeywords("Surge.", "Doomed 1.")
-                .WithText("When Revealed: Until the end of the phase, add 1 to the total $ in the staging area for each damage on each active location.")
+                .WithTextLine("Surge. Doomed 1.")
+                .WithTextLine("When Revealed: Until the end of the phase, add 1 to the total $ in the staging area for each damage on each active location.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack for each damage on each active location.")
-                .WithInfo(8, 2, Artist.JB_Casacop));
+                .WithInfo(8, 2, Artist.JB_Casacop);
         }
     }
 }

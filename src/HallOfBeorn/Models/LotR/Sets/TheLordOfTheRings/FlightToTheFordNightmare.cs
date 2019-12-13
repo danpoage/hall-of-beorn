@@ -80,13 +80,15 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(LotRCard.Treachery("Come Back!", "4C2EF7A7-EDFC-40C0-9B40-8DAD975CE7DB", "Flight to the Ford Nightmare")
                 .WithTraits("Enchantment.")
                 .WithKeywords("Peril.", "Doomed 1.")
-                .WithText("When Revealed: Reduce the Ring-bearer's life by 1 and remove all progress from the current quest.")
+                .WithTextLine("Peril. Doomed 1.")
+                .WithTextLine("When Revealed: Reduce the Ring-bearer's life by 1 and remove all progress from the current quest.")
                 .WithShadow("Shadow: Either reduce the Ring-bearer's life by 1, or this attack is considered undefended.")
                 .WithInfo(8, 2, Artist.Mark_Behm));
             Cards.Add(LotRCard.Treachery("The Twilight World", "AC9D02D0-D014-41AA-86EA-D11675E3346A", "Flight to the Ford Nightmare")
                 .WithTraits("Morgul.")
                 .WithKeywords("Doomed 2.")
-                .WithText("When Revealed: Attach to the Ring-bearer. Limit 1 per hero. (Counts as a Condition attachment with the text: \"Forced: At the beginning of the planning phase, either exhaust The One ~Ring, or reduce the Ring-bearer's life by 1.\")")
+                .WithTextLine("Doomed 2.")
+                .WithTextLine("When Revealed: Attach to the Ring-bearer. Limit 1 per hero. (Counts as a Condition attachment with the text: \"Forced: At the beginning of the planning phase, either exhaust The One ~Ring, or reduce the Ring-bearer's life by 1.\")")
                 .WithInfo(9, 2, Artist.Mark_Behm));
         }
     }

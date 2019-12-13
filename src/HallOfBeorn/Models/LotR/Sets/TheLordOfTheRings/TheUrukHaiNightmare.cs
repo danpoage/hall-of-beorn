@@ -26,7 +26,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithUnique()
                 .WithTraits("Orc.", "Uruk-hai.")
                 .WithKeywords("Toughness 1.", "Archery 2.")
-                .WithText("Forced: After Mauhúr attacks, increase the pursuit value by 1.")
+                .WithTextLine("Toughness 1. Archery 2.")
+                .WithTextLine("Forced: After Mauhúr attacks, increase the pursuit value by 1.")
                 .WithFlavor("\"Mauhúr and his lads are in the forest, and they should turn up any time now.\" -Uglúk, The Two Towers")
                 .WithVictoryPoints(4)
                 .WithInfo(2, 1, Artist.Monztre));
@@ -34,14 +35,16 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithUnique()
                 .WithTraits("Orc.", "Uruk-hai.")
                 .WithKeywords("Toughness 2.")
-                .WithText("While Lugdush is engaged with a player, each other enemy cannot take damage.")
+                .WithTextLine("Toughness 2.")
+                .WithTextLine("While Lugdush is engaged with a player, each other enemy cannot take damage.")
                 .WithShadow("Shadow: If attacking enemy is unique, it cannot take damage until the end of the round.")
                 .WithVictoryPoints(3)
                 .WithInfo(3, 1, Artist.Monztre));
             addCard(LotRCard.Enemy("Orc of the White Hand", string.Empty, setName, 28, 3, 3, 1, 3)
                 .WithTraits("Orc.", "Uruk-hai.")
                 .WithKeywords("Toughness 2.")
-                .WithText("Forced: After Orc of the White Hand attacks and destroy a character, increase the pursuit value by 1.")
+                .WithTextLine("Toughness 2.")
+                .WithTextLine("Forced: After Orc of the White Hand attacks and destroy a character, increase the pursuit value by 1.")
                 .WithShadow("Shadow: If this attack destroys a character, increase the pursuit value by 1.")
                 .WithInfo(4, 4, Artist.Guillaume_Ducos));
             addCard(LotRCard.Location("Wold of Rohan", string.Empty, setName, 5, 5)
@@ -59,17 +62,19 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithTraits("Plains.")
                 .WithText("While The Uruk's Trail is the active location, it gains: \"Response: After The Uruk's Trail is explored, reduce the pursuit value by 3.\"\r\nTravel: Search the encounter deck and discard pile for a non-unique Uruk-hai enemy and add it to the staging area. Shuffle the encounter deck.")
                 .WithInfo(7, 3, Artist.Mariusz_Gandzel));
-            addCard(LotRCard.Treachery("Uglúk's Command", string.Empty, setName)
+            addTreachery("Uglúk's Command", setName)
                 .WithKeywords("Peril.")
-                .WithText("When Revealed: Either increase the pursuit value by 4, or Uglúk makes an immediate attack against you.")
+                .WithTextLine("Peril.")
+                .WithTextLine("When Revealed: Either increase the pursuit value by 4, or Uglúk makes an immediate attack against you.")
                 .WithShadow("Shadow: Attacking enemy gets +X Attack, where X is the tens digit of the pursuit value.")
-                .WithInfo(8, 3, Artist.Guillaume_Ducos));
-            addCard(LotRCard.Treachery("Orc-draught", string.Empty, setName)
+                .WithInfo(8, 3, Artist.Guillaume_Ducos);
+            addTreachery("Orc-draught", setName)
                 .WithKeywords("Peril.", "Surge.")
-                .WithText("When Revealed: ")
+                .WithTextLine("Peril. Surge.")
+                .WithTextLine("When Revealed: Either discard an ally you control, or increase the pursuit value by 1.")
                 .WithShadow("Shadow: Exhaust a character you control.")
                 .WithFlavor("The Orcs clapped and hooted. \"Can't take his medicine,\" they jeered.\r\n-The Two Towers")
-                .WithInfo(9, 2, Artist.Rafal_Hrynkiewicz));
+                .WithInfo(9, 2, Artist.Rafal_Hrynkiewicz);
         }
     }
 }

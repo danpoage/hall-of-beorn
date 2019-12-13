@@ -30,7 +30,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
             addCard(LotRCard.Enemy("Zirakzigil Archer", string.Empty, setName, 42, 3, 4, 3, 4)
                 .WithTraits("Orc.")
                 .WithKeywords("Peril.", "Archery 2.")
-                .WithText("When Revealed: Discard a randome card from your hand. Assign X damage among characters you control, where X is the cost of the discarded card.")
+                .WithTextLine("Peril. Archery 2.")
+                .WithTextLine("When Revealed: Discard a randome card from your hand. Assign X damage among characters you control, where X is the cost of the discarded card.")
                 .WithInfo(3, 4, Artist.Javier_Charro_Martinez));
             addCard(LotRCard.Location("Glowing Fissure", string.Empty, setName, 254, 4)
                 .WithTraits("Underground.")
@@ -58,7 +59,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithInfo(8, 3, Artist.Dleoblack));
             addCard(LotRCard.Treachery("Cut Off", string.Empty, setName)
                 .WithKeywords("Peril.")
-                .WithText("When Revealed: Either deal 1 damage to each character you control, or progress cannot be placed on the quest until the end of the round.")
+                .WithTextLine("Peril.")
+                .WithTextLine("When Revealed: Either deal 1 damage to each character you control, or progress cannot be placed on the quest until the end of the round.")
                 .WithShadow("Shadow: If this attack destroys a character, remove all progress from the quest.")
                 .WithInfo(9, 2, Artist.Javier_Charro_Martinez));
         }
