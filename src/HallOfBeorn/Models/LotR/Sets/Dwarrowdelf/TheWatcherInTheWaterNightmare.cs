@@ -156,7 +156,7 @@ Travel: Reveal the topmost Tentacle enemy in the encounter discard pile to trave
                 CardType = CardType.Treachery,
                 Traits = new List<string> { "Tentacle." },
                 Keywords = new List<string> { "Surge." },
-                Text = "When Revealed: Shuffle X Tentacle enemies from the encounter discard pile into the encounter deck. Heal X damage from The Watcher, if it is in play. X is the number of players in the game.",
+                Text = "Surge.\r\nWhen Revealed: Shuffle X Tentacle enemies from the encounter discard pile into the encounter deck. Heal X damage from The Watcher, if it is in play. X is the number of players in the game.",
                 FlavorText = "Twenty other arms came rippling out.\r\n-The Fellowship of the Ring",
                 EncounterSet = "The Watcher in the Water Nightmare",
                 Quantity = 3,

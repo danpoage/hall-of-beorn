@@ -181,20 +181,12 @@ Forced: When a Goblin enemy with at least 1 resource on it is dealt any amount o
                 CardNumber = 8,
                 Artist = Artist.Michael_Rasmussen
             });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Balin's Doom",
-                
-                Id = "4F0ADDDF-50F0-49FB-88A7-E2F37B1A3BCF",
-                CardType = CardType.Treachery,
-                Keywords = new List<string> { "Surge.", "Doomed 1." },
-                Text = "When Revealed: Add 1 resource to each Goblin enemy in play.",
-                Shadow = "Shadow: If attacking enemy is a Goblin, add 1 resource to it.",
-                EncounterSet = "The Seventh Level Nightmare",
-                Quantity = 3,
-                CardNumber = 9,
-                Artist = Artist.Sebastian_Giacobino
-            });
+            addTreachery("Balin's Doom", "The Seventh Level Nightmare")
+                .WithKeywords("Surge.", "Doomed 1.")
+                .WithTextLine("Surge. Doomed 1.")
+                .WithTextLine("When Revealed: Add 1 resource to each Goblin enemy in play.")
+                .WithShadow("Shadow: If attacking enemy is a Goblin, add 1 resource to it.")
+                .WithInfo(9, 3, Artist.Sebastian_Giacobino);
             Cards.Add(new LotRCard()
             {
                 Title = "Beats and Echoes",

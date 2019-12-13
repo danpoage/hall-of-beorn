@@ -64,7 +64,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 HitPoints = 4,
                 Traits = new List<string> { "Goblin.", "Orc.", "Snow." },
                 Keywords = new List<string> { "Surge." },
-                Text = "Forced: After engaging Wolfpelt Goblin, the engaged player must deal X damage to 1 character he controls, where X is the active location's remaining quest points. Then, remove 2 progress from the active location, if able.",
+                Text = "Surge.\r\nForced: After engaging Wolfpelt Goblin, the engaged player must deal X damage to 1 character he controls, where X is the active location's remaining quest points. Then, remove 2 progress from the active location, if able.",
                 EncounterSet = "The Redhorn Gate Nightmare",
                 Quantity = 3,
                 CardNumber = 2,

@@ -141,7 +141,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 
                 CardType = CardType.Treachery,
                 Keywords = new List<string> { "Surge." },
-                Text = "When Revealed: Attach to a hero. (Counts as a Condition attachment with the text: \"Lost: Discard attached hero.\")",
+                Text = "Surge.\r\nWhen Revealed: Attach to a hero. (Counts as a Condition attachment with the text: \"Lost: Discard attached hero.\")",
                 Shadow = "Shadow: If you have no cards in your hand, discard defending character from play.",
                 EncounterSet = "The Long Dark Nightmare",
                 Quantity = 2,
