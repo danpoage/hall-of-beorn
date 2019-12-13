@@ -37,6 +37,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
             addAlly("Yazan", 5, Sphere.Tactics, true, 2, 3, 1, 3)
                 .WithTraits("Harad.", "Ranger.")
                 .WithKeywords("Ranged.")
+                .WithTextLine("Ranged.")
                 .WithTextLine("Response: After Yazan is declared as an attacker, deal 1 damage to a non-unique enemy in play. (Limit once per phase.)")
                 .WithTemplate("<p class='main-text'>{keyword:Ranged.}</p><p class='main-text'><b>Response:</b> After {self} is declared as an attacker, deal 1 damage to a non-unique enemy in play. (Limit once per phase.)</p>")
                 .WithInfo(4, 3, Artist.David_A_Nash);
@@ -48,6 +49,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
             addAlly("Jubayr", 5, Sphere.Spirit, true, 1, 2, 3, 3)
                 .WithTraits("Harad.", "Warrior.")
                 .WithKeywords("Sentinel.")
+                .WithTextLine("Sentinel.")
                 .WithTextLine("Response: After Jubayr exhausts to defend an attack, discard 1 facedown shadow card from a non-unique enemy. (Limit once per phase.)")
                 .WithTemplate("<p class='main-text'>{keyword:Sentinel.}</p><p class='main-text'><b>Response:</b> After {self} exhausts to defend an attack, discard 1 facedown shadow card from a non-unique enemy. (Limit once per phase.)</p>")
                 .WithInfo(6, 3, Artist.Colin_Boyer);
@@ -69,7 +71,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
             addAttachment("Kahliel's Headdress", 3, Sphere.Neutral, true)
                 .WithTraits("Artifact.", "Item.")
                 .WithKeywords("Restricted.")
-                .WithTextLine("Attach to Kahliel. Each Harad character gets +1 Willpower.")
+                .WithTextLine("Attach to Kahliel. Restricted.")
+                .WithTextLine("Each Harad character gets +1 Willpower.")
                 .WithTextLine("Refresh Action: Exhaust Kahliel's Headdress to shuffle the topmost Harad ally in your discard pile into your deck.")
                 .WithTemplate("<p class='main-text'>Attach to {title:Kahliel}. {keyword:Restricted.}</p><p class='main-text'>Each {trait:Harad.@Harad} character gets +1 {Willpower}.</p><p class='main-text'><b>Refresh Action:</b> Exhaust {self} to shuffle the topmost {trait-ally:Harad.@Harad} ally in your discard pile into your deck.</p>")
                 .WithInfo(10, 3, Artist.Lucas_Durham);
@@ -96,7 +99,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
             addEnemy("Wild Mûmak", EncounterSet.TheMumakil, 40, 3, 6, 3, 9)
                 .WithTraits("Creature.")
                 .WithKeywords("Indestructible.")
-                .WithTextLine("Immune to player card effects.")
+                .WithTextLine("Indestructible. Immune to player card effects.")
                 .WithTextLine("Cannot take more tha 3 damage each round.")
                 .WithTextLine("Forced: At the end of the round, the engaged player must choose: either return Wild Mûmak to the staging area, or it makes an immediate attack.")
                 .WithVictoryPoints(3)
@@ -116,6 +119,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
             addEnemy("Strangling Python", EncounterSet.TheMumakil, 25, 1, 3, 1, 3)
                 .WithTraits("Creature.")
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("Forced: After Strangling Python damages a character, attach it to that character. (Counts as a Condition attachment with the text: \"Attached character cannot ready.\")")
                 .WithEasyModeQuantity(1)
                 .WithInfo(18, 2, Artist.Dmitry_Prosvirnin);
@@ -131,6 +135,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithInfo(20, 4, Artist.Lucas_Staniec);
             addTreachery("Stampeding Oliphaunt", EncounterSet.TheMumakil)
                 .WithKeywords("Doomed 1.")
+                .WithTextLine("Doomed 1.")
                 .WithTextLine("When Revealed: Choose a Wild Mûmak in the staging area to attack the first player. If no attacks are made this way, search the encounter deck and discard pile for a Mûmak Trail and add it to the staging area. Shuffle the encounter deck.")
                 .WithFlavorLine("On the great beast thundered, blundering in blind wrath through pool and thicket. -The Two Towers")
                 .WithInfo(21, 2, Artist.Alvaro_Calvo_Escudero);

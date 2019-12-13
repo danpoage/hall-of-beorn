@@ -30,7 +30,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
             addAttachment("Steed of the North", 1, Sphere.Leadership, false)
                 .WithTraits("Mount.")
                 .WithKeywords("Restricted.")
-                .WithTextLine("Attach to a Dúnedain or Ranger hero.")
+                .WithTextLine("Attach to a Dúnedain or Ranger hero. Restricted.")
                 .WithTextLine("Response: After you engage an enemy, exhaust Steed of the North to ready attached hero.")
                 .WithFlavorLine("Their horses were strong and of proud bearing, but rough-haired...")
                 .WithFlavorLine("-The Return of the King")
@@ -117,11 +117,13 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
             addEnemy("Racing Warg", EncounterSet.RaceAcrossHarad, 10, 1, 1, 1, 1)
                 .WithTraits("Creature.")
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("When Revealed: Attach to an Orc enemy. Limit 1 per enemy. (Counts as a Mount attachment with the text: \"Attached enemy gets +1 Threat, +1 Attack, +1 Defense, and +1 hit point. Forced: When attached enemy leaves play, return Racing Warg to the staging area.\")")
                 .WithEasyModeQuantity(2)
                 .WithInfo(44, 3, Artist.Alexander_Gustafson);
             addTreachery("Pursuers from Mordor", EncounterSet.RaceAcrossHarad)
                 .WithKeywords("Doomed 2.")
+                .WithTextLine("Doomed 2.")
                 .WithTextLine("When Revealed: Discard cards from the top of the encounter deck until an Orc enemy is discarded. Add that enemy to the Orc's area.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, place 2 progress on the Orc's stage.")
                 .WithInfo(45, 2, Artist.Stanislav_Dikolenko);

@@ -68,6 +68,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithInfo(143, 3, Artist.Lucas_Durham);
             addEvent("Wind from the Sea", 255, Sphere.Neutral)
                 .WithKeywords("Encounter.")
+                .WithTextLine("Encounter.")
                 .WithTextLine("When Revealed: Ready each hero committed to the quest and remove Wind from the Sea from the game.")
                 .WithShadow("Shadow: Ready the defending character.")
                 .WithTemplate("<p class='main-text'>{keyword:Encounter.}</p><p class='main-text'><b>When Revealed:</b> Ready each hero committed to the quest and remove {self} from the game.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Ready the defending character.</p>")
@@ -115,6 +116,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithInfo(151, 4, Artist.Sergey_Glushakov);
             addTreachery("Danger Close Behind", EncounterSet.TheCrossingsOfPoros)
                 .WithKeywords("Doomed 1.")
+                .WithTextLine("Doomed 1.")
                 .WithTextLine("When Revealed: Choose 1 random card from the set aside encounter set with the most cards remaining, Reveal that card as if it was the top card of the encounter deck.")
                 .WithShadow("Shadow: If this attack destroys a character, resolve the 'when revealed' effect of this card.")
                 .WithEasyModeQuantity(1)
@@ -142,6 +144,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithInfo(155, 2, Artist.Kamila_Tzutenberg);
             addEncounterSideQuest("Find a Way Down", EncounterSet.MountainsOfShadow, 6)
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithTextLine("Each player's threat cannot be reduced.")
                 .WithTextLine("Response: When Find a Way Down is defeated, each player reduces his threat by 3.")
                 .WithFlavorLine("The path through the hills has led too far up, and now you walk along exposed heights where there's nowhere to hide. You need to find a way down.")

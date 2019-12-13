@@ -23,7 +23,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
             addAttachment("Haradrim Spear", 2, Sphere.Leadership, false)
                 .WithTraits("Item.", "Weapon.")
                 .WithKeywords("Restricted.")
-                .WithTextLine("Attach to a Haradrim character.")
+                .WithTextLine("Attach to a Haradrim character. Restricted.")
                 .WithTextLine("Attached character gets +1 Attack.")
                 .WithTextLine("Response: After attached character is declared as an attacker, it gets +3 Attack for this attack. After this attack resolves, discard Haradrim Spear.")
                 .WithTemplate("<p class='main-text'>Attach to a {trait-character:Harad.@Harad} character. {keyword:Restricted.}</p><p class='main-text'>Attached character gets +1 {Attack}.</p><p class='main-text'><b>Response:</b> After attached character is declared as an attacker, it gets +3 {Attack} for this attack. After this attack resolves, discard {self}.</p>")
@@ -112,6 +112,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
             addLocation("Pitch Black Tunnel", EncounterSet.BeneathTheSands, Card.VALUE_X, 5)
                 .WithTraits("Underground.")
                 .WithKeywords("Track 4.")
+                .WithTextLine("Track 4.")
                 .WithTextLine("X is the number of characters controlled by the first player.")
                 .WithTextLine("Travel: Reveal the top card of the encounter deck to travel here.")
                 .WithEasyModeQuantity(1)
@@ -119,6 +120,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
             addLocation("Nest of Vermin", EncounterSet.BeneathTheSands, 3, 4)
                 .WithTraits("Underground.")
                 .WithKeywords("Track 3.")
+                .WithTextLine("Track 3.")
                 .WithTextLine("Travel: Shuffle the encounter discard pile into the encounter deck and discard cards from the top until a Creature enemy is discarded. Add the discarded enemy to the staging area.")
                 .WithFlavorLine("...a nasty, dirty, wet hole, filled with the ends of worms and an oozy smell...")
                 .WithFlavorLine("-The Hobbit")
@@ -131,6 +133,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
             addLocation("Blocked Passage", EncounterSet.BeneathTheSands, 2, 6)
                 .WithTraits("Underground.")
                 .WithKeywords("Track 2.")
+                .WithTextLine("Track 2.")
                 .WithTextLine("While On Track is in play, progress cannot be placed on locations in the staging area.")
                 .WithShadow("Shadow: Discard an attachment you control.")
                 .WithInfo(72, 3, Artist.Jokubas_Uoginitas);
@@ -141,6 +144,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithInfo(73, 3, Artist.Alvaro_Calvo_Escudero);
             addTreachery("Grabbed by Spiders", EncounterSet.BeneathTheSands)
                 .WithKeywords("Surge.", "Doomed 1.")
+                .WithTextLine("Surge. Doomed 1.")
                 .WithTextLine("When Revealed: Attach to the main quest. Limit 1 per quest. (Counts as a Condition attachment with the text: \"Forced: After the Search objective is flipped to Off Track, each player discards an ally he controls. Then, discard Grabbed by Spiders.\"")
                 .WithEasyModeQuantity(2)
                 .WithInfo(74, 3, Artist.Rafal_Hrynkiewicz);
