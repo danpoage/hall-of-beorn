@@ -22,7 +22,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
             addHero("Aragorn", 12, Sphere.Leadership, 2, 3, 2, 5)
                 .WithTraits("Dúnedain.", "Noble.", "Ranger.")
                 .WithKeywords("Sentinel.")
-                .WithText("Response: After Aragorn commits to a quest, spend 1 resource from his resource pool to ready him.")
+                .WithTextLine("Sentinel.")
+                .WithTextLine("Response: After Aragorn commits to a quest, spend 1 resource from his resource pool to ready him.")
                 .WithFlavor("\"I am Aragorn son of Arathorn; and if by life or death I can save you, I will.\"\r\n-The Fellowship of the Ring")
                 .WithTemplate("<p class='main-text'>{keyword:Sentinel.}</p><p class='main-text'><b>Response:</b> After {self} commits to a quest, spend 1 resource from his resource pool to ready him.</p><p class='flavor-text'>&quot;I am Aragorn son of Arathorn; and if by life or death I can save you, I will.&quot;<br>&ndash;The Fellowship of the Ring</p>")
                 .WithYear(2018)
@@ -51,7 +52,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
             addAlly("Gimli", 4, Sphere.Leadership, true, 2, 2, 2, 3)
                 .WithTraits("Dwarf.", "Warrior.")
                 .WithKeywords("Sentinel.")
-                .WithText("Response: After an enemy is revealed from the encounter deck, ready Gimli.")
+                .WithTextLine("Sentinel.")
+                .WithTextLine("Response: After an enemy is revealed from the encounter deck, ready Gimli.")
                 .WithFlavor("\"Give me a row of orc-necks and room to swing and all weariness will fall from me!\"\r\n-The Two Towers")
                 .WithInfo(6, 1, Artist.Lukasz_Jaskolski);
             addAlly("Faramir", 4, Sphere.Leadership, true, 2, 1, 2, 3)
@@ -68,7 +70,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
             addAlly("Orophin", 3, Sphere.Leadership, true, 2, 2, 0, 2)
                 .WithTraits("Silvan.", "Scout.")
                 .WithKeywords("Ranged.")
-                .WithText("Response: After Orophin enters play, return a Silvan ally from your discard pile to your hand.")
+                .WithTextLine("Ranged.")
+                .WithTextLine("Response: After Orophin enters play, return a Silvan ally from your discard pile to your hand.")
                 .WithFlavor("\"Orophin has now gone in haste back to our dwellings to warn our people.\"\r\n-Haldir, The Fellowship of the Ring")
                 .WithInfo(9, 1, Artist.Magali_Villeneuve);
             addAlly("Bofur", 3, Sphere.Spirit, true, 2, 1, 1, 3)
@@ -89,12 +92,14 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
             addAlly("Silverlode Archer", 3, Sphere.Leadership, false, 1, 2, 0, 1)
                 .WithTraits("Archer.", "Silvan.")
                 .WithKeywords("Ranged.")
+                .WithTextLine("Ranged.")
                 .WithFlavor("\"We have been keeping watch on the rivers, ever since we saw a great troop of Orcs going north towards Moria, along the skirts of the mountains, many days ago.\"\r\n-Haldir, The Fellowship of the Ring")
                 .WithInfo(13, 2, Artist.A_M_Sartor);
             addAlly("Defender of the Naith", 3, Sphere.Neutral, false, 0, 1, 2, 2)
                 .WithTraits("Silvan.", "Warrior.")
                 .WithKeywords("Sentinel.")
-                .WithText("Response: After a Silvan ally you control leaves play, ready Defender of the Naith.")
+                .WithTextLine("Sentinel.")
+                .WithTextLine("Response: After a Silvan ally you control leaves play, ready Defender of the Naith.")
                 .WithFlavor("\"You cannot cross the rivers again, and behind you there are now secret sentinels that you cannot pass.\"\r\n-Haldir, The Fellowship of the Ring")
                 .WithInfo(14, 2, Artist.Christine_Griffin);
             addAlly("Andrath Guardsman", 2, Sphere.Leadership, false, 1, 0, 1, 2)
@@ -123,7 +128,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
             addAttachment("Celebrían's Stone", 2, Sphere.Leadership, true)
                 .WithTraits("Artifact.", "Item.")
                 .WithKeywords("Restricted.")
-                .WithText("Attach to a hero.\r\nAttached hero gains +2 Willpower. If attached hero is Aragorn, he also gains a Spirit resource icon.")
+                .WithTextLine("Attach to a hero. Restricted.")
+                .WithTextLine("Attached hero gains +2 Willpower. If attached hero is Aragorn, he also gains a Spirit resource icon.")
                 .WithTemplate("<p class='main-text'>Attach to a hero. {keyword:Restricted.}</p><p class='main-text'>Attached hero gains +2 {Willpower}</p><p class='main-text'>If attached hero is Aragorn, he also gains a {sphere:Spirit} resource icon.</p>")
                 .WithInfo(20, 2, Artist.Sara_Biddle);
             addAttachment("Steward of Gondor", 2, Sphere.Leadership, true)
@@ -210,11 +216,13 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
             addAlly("Legolas", 4, Sphere.Tactics, true, 1, 3, 1, 3)
                 .WithTraits("Silvan.", "Warrior.")
                 .WithKeywords("Ranged.")
-                .WithText("Response: After Legolas participates in an attack that destroys an enemy, draw 1 card.")
+                .WithTextLine("Ranged.")
+                .WithTextLine("Response: After Legolas participates in an attack that destroys an enemy, draw 1 card.")
                 .WithFlavor("\"He stands not alone,\" said Legolas, bending his bow and fitting an arrow with hands that moved quicker than sight.\r\n-The Two Towers")
                 .WithInfo(38, 1, Artist.Sebastian_Giacobino);
             addAlly("Haldir of Lórien", 4, Sphere.Lore, true, 2, 2, 2, 3)
                 .WithKeywords("Ranged.", "Sentinel.")
+                .WithTextLine("Ranged. Sentinel.")
                 .WithFlavor("\"But there are some of use who still go abroad for the gathering of news and the watching of our enemies, and they speak the languages of other lands.\"\r\n-The Fellowship of the Ring")
                 .WithInfo(39, 1, Artist.Magali_Villeneuve);
             addAlly("Elrond", 3, Sphere.Lore, true, 3, 2, 3, 3)
@@ -252,7 +260,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
             addAlly("Galadhon Archer", 2, Sphere.Tactics, false, 0, 2, 0, 1)
                 .WithTraits("Silvan.", "Warrior.")
                 .WithKeywords("Ranged.")
-                .WithText("Response: After Galadhon Archer enters play, deal 1 damage to an enemy not engaged with you.")
+                .WithTextLine("Ranged.")
+                .WithTextLine("Response: After Galadhon Archer enters play, deal 1 damage to an enemy not engaged with you.")
                 .WithFlavor("\"...you breathe so loud that they could shoot you in the dark.\"\r\n-Legolas, The Fellowship of the Ring")
                 .WithInfo(47, 2, Artist.Sara_K_Diesel);
             addAlly("Galadhrim Minstrel", 2, Sphere.Lore, false, 1, 0, 0, 1)
@@ -276,7 +285,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
             addAttachment("Horn of Gondor", 1, Sphere.Tactics, true)
                 .WithTraits("Item.", "Artifact.")
                 .WithKeywords("Restricted.")
-                .WithText("Attach to a hero.\r\nResponse: After a character is destroyed, add 1 resource to attached hero's pool.")
+                .WithTextLine("Attach to a hero. Restricted.")
+                .WithTextLine("Response: After a character is destroyed, add 1 resource to attached hero's pool.")
                 .WithFlavor("\"Slow should you be to wind that horn again, Boromir,\" said Elrond, \"until you stand once more on the border of your land, and dire need is on you.\"\r\n-The Fellowship of the Ring")
                 .WithInfo(52, 2, Artist.Mark_Winters);
             addAttachment("Elf-stone", 1, Sphere.Lore, true)
@@ -286,11 +296,15 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
             addAttachment("Dwarrowdelf Axe", 1, Sphere.Tactics, false)
                 .WithTraits("Item.", "Weapon.")
                 .WithKeywords("Restricted.")
-                .WithText("Attach to a Dwarf character.\r\nAttached hero gains +1 Attack.\r\nResponse: After attached character attacks, deal 1 damage to the defending character.")
+                .WithTextLine("Attach to a Dwarf character. Restricted.")
+                .WithTextLine("Attached hero gains +1 Attack.\r\nResponse: After attached character attacks, deal 1 damage to the defending character.")
                 .WithInfo(54, 2, Artist.Carolina_Eade);
             addAttachment("Blade of Gondolin", 1, Sphere.Tactics, false)
                 .WithTraits("Item.", "Weapon.")
-                .WithText("Attach to a hero.\r\nAttached hero gets +1 Attack when attacking an Orc.\r\nResponse: After attached hero attacks and destroys an enemy, place 1 progress token on the current quest.")
+                .WithKeywords("Restricted.")
+                .WithTextLine("Attach to a hero. Restricted.")
+                .WithTextLine("Attached hero gets +1 Attack when attacking an Orc.")
+                .WithTextLine("Response: After attached hero attacks and destroys an enemy, place 1 progress token on the current quest.")
                 .WithInfo(55, 2, Artist.David_Lecossu);
             addAttachment("Lembas", 1, Sphere.Lore, false)
                 .WithTraits("Item.")
@@ -392,6 +406,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
             addEnemy("Goblin Runners", setGoblins, 20, 1, 3, 1, 2)
                 .WithTraits("Goblin.", "Orc.")
                 .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
                 .WithFlavor("Shadow: Attacking enemy makes an additional attack immediately after this one. (Deal a new shadow card for that attack.)")
                 .WithEasyModeQuantity(0)
                 .WithInfo(78, 2, Artist.Stephane_Gantiez);
@@ -406,7 +421,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
                 .WithInfo(80, 1, Artist.Diego_Gisbert_Llorens);
             addTreachery("Eyes in the Dark", setGoblins)
                 .WithKeywords("Doomed 1.")
-                .WithText("When Revealed: Each player must choose: Either raise your threat by 1 for each questing character you control, or discard a questing character you control.")
+                .WithTextLine("Doomed 1.")
+                .WithTextLine("When Revealed: Each player must choose: Either raise your threat by 1 for each questing character you control, or discard a questing character you control.")
                 .WithShadow("Shadow: If this attack is undefended, discard an ally you control.")
                 .WithInfo(81, 2, Artist.Sam_Lamont);
             addEnemy("Goblin Chieftain", setCaves, 40, Card.VALUE_X, Card.VALUE_X, Card.VALUE_X, 8)
@@ -422,7 +438,9 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
             addObjective("Cave Torch", setCaves)
                 .WithTraits("Light.")
                 .WithKeywords("Restricted.")
-                .WithText("Attach to a hero.\r\nAction: Exhause Cave Torch to place up to 3 progress tokens on a Dark location.\r\nForced: After Cave Torch exhausts, discard the top card of the encounter deck. If that card is an enemy, add it to the staging area.")
+                .WithTextLine("Attach to a hero. Restricted.")
+                .WithTextLine("Action: Exhause Cave Torch to place up to 3 progress tokens on a Dark location.")
+                .WithTextLine("Forced: After Cave Torch exhausts, discard the top card of the encounter deck. If that card is an enemy, add it to the staging area.")
                 .WithInfo(84, 1, Artist.David_Lecossu);
             addEnemy("Great Cave-troll", setCaves, 36, 3, 6, 4, 6)
                 .WithTraits("Troll.")
