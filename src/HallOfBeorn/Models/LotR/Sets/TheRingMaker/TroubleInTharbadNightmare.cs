@@ -72,7 +72,8 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithInfo(7, 2, Artist.Taylor_Ingvarsson));
             Cards.Add(LotRCard.Treachery("Tharbad Patrol", "", setName)
                 .WithKeywords("Surge.")
-                .WithText("When Revealed: Attach Tharbad Patrol to a non-unique location in the staging area without a copy of Tharbad Patrol attached. (Counts as a Condition attachment with the text: \"Forced: After the players travel to attached location, each player must discard the top 2 cards from the encounter deck and engage each enemy he discarded in this way.\")")
+                .WithTextLine("Surge.")
+                .WithTextLine("When Revealed: Attach Tharbad Patrol to a non-unique location in the staging area without a copy of Tharbad Patrol attached. (Counts as a Condition attachment with the text: \"Forced: After the players travel to attached location, each player must discard the top 2 cards from the encounter deck and engage each enemy he discarded in this way.\")")
                 .WithInfo(8, 3, Artist.Mariusz_Gandzel));
         }
     }

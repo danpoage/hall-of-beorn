@@ -64,7 +64,8 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithInfo(6, 2, Artist.Alvaro_Calvo_Escudero));
             Cards.Add(LotRCard.Treachery("Cursed Burden", "", setName)
                 .WithKeywords("Surge.")
-                .WithText("When Revealed: Attach to a hero with a Key objective attached, if able. (Counts as a Condition attachment with the text: \"Limit 1 per hero. Attached hero cannot commit to the quest, and cannot attack or defend against enemies with a Trait shared by any of that hero's attached Key objectives.\")")
+                .WithTextLine("Surge.")
+                .WithTextLine("When Revealed: Attach to a hero with a Key objective attached, if able. (Counts as a Condition attachment with the text: \"Limit 1 per hero. Attached hero cannot commit to the quest, and cannot attack or defend against enemies with a Trait shared by any of that hero's attached Key objectives.\")")
                 .WithInfo(7, 3, Artist.Jessica_Savard));
             Cards.Add(LotRCard.Treachery("Trial of Ancestors", "", setName)
                 .WithText("When Revealed: Attach to the current quest. (Counts as Condition attachment with the text: \"Each non-unique characters gets -1 Willpower and cannot attack enemies that share a Trait with the current trial's Key objective.\")")

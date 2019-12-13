@@ -76,7 +76,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithInfo(7, 2, Artist.Suzanne_Helmigh));
             Cards.Add(LotRCard.Treachery("Patrolling Orcs", "", setName)
                 .WithKeywords("Surge.", "Doomed 1.")
-                .WithText("When Revealed: Attach to the current quest. (Counts as a Condition attachment with the text: \"Forced: After a player engages an enemy, he must either exhaust a character he controls, or remove 1 time counter from the current quest.\")")
+                .WithText("Surge. Doomed 1.\r\nWhen Revealed: Attach to the current quest. (Counts as a Condition attachment with the text: \"Forced: After a player engages an enemy, he must either exhaust a character he controls, or remove 1 time counter from the current quest.\")")
                 .WithInfo(8, 2, Artist.Mariusz_Gandzel));
             Cards.Add(LotRCard.Treachery("Mugash's Rage", "", setName)
                 .WithText("When Revealed: If Mugash is attached to a hero, the player who controls that hero unattaches Mugash and engages it. Then, Mugash makes an immediate attack.")

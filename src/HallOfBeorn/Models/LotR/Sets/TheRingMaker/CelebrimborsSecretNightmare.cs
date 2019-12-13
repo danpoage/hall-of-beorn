@@ -67,7 +67,8 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithInfo(7, 2, Artist.Javier_Charro_Martinez));
             Cards.Add(LotRCard.Treachery("Closing In", "", setName)
                 .WithKeywords("Surge.")
-                .WithText("When Revealed: Place Closing In facedown underneath The Orcs' Search.")
+                .WithTextLine("Surge.")
+                .WithTextLine("When Revealed: Place Closing In facedown underneath The Orcs' Search.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack for each card underneath The Orcs' Search.")
                 .WithInfo(8, 2, Artist.Lukasz_Jaskolski));
         }

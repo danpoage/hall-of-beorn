@@ -53,12 +53,14 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(LotRCard.Location("Raven Stronghold", "", setName, 2, 5)
                 .WithTraits("Dunland.")
                 .WithKeywords("Time 3.")
-                .WithText("Forced: After the last time counter is removed from this location, each player reveals the top card of the Raven deck and adds it to the staging area.\r\nForced: When this location is explored, add the top card of the Raven deck to the staging area.")
+                .WithTextLine("Time 3.")
+                .WithTextLine("Forced: After the last time counter is removed from this location, each player reveals the top card of the Raven deck and adds it to the staging area.\r\nForced: When this location is explored, add the top card of the Raven deck to the staging area.")
                 .WithInfo(5, 4, Artist.Yog_Joshi));
             Cards.Add(LotRCard.Location("Highlands of Dunland", "", setName, 4, 4)
                 .WithTraits("Dunland.")
                 .WithKeywords("Time 2.")
-                .WithText("Forced: After the last time counter is removed from this location, return each enemy in play to the staging area.")
+                .WithTextLine("Time 2.")
+                .WithTextLine("Forced: After the last time counter is removed from this location, return each enemy in play to the staging area.")
                 .WithShadow("Shadow: Either remove 1 time counter from a location in play, or return attacking enemy to the staging area after this attack.")
                 .WithInfo(6, 2, Artist.Michael_Rasmussen));
             Cards.Add(LotRCard.Treachery("Raven Talisman", "", setName)

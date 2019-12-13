@@ -43,19 +43,22 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(LotRCard.Enemy("Huorn of Fangorn", "", setName, 23, 3, 4, 3, 6)
                 .WithTraits("Huorn.")
                 .WithKeywords("Hinder.")
-                .WithText("Cannot have attachments.\r\nForced: At the beginning of each resource phase, the engaged player discards 1 attachment he controls.")
+                .WithTextLine("Hinder. Cannot have attachments.")
+                .WithTextLine("Forced: At the beginning of each resource phase, the engaged player discards 1 attachment he controls.")
                 .WithShadow("Shadow: Deal 1 damage to the defending character.")
                 .WithInfo(2, 3, Artist.Katy_Grierson));
             Cards.Add(LotRCard.Enemy("Blocking Huorn", "", setName, 28, 2, 3, 3, 8)
                 .WithTraits("Huorn.")
                 .WithKeywords("Hinder.")
-                .WithText("Cannot have attachments.\r\nWhile Blocking Huorn is engaged with a player, it adds its Threat to the staging area.")
+                .WithTextLine("Hinder. Cannot have attachments.")
+                .WithTextLine("While Blocking Huorn is engaged with a player, it adds its Threat to the staging area.")
                 .WithShadow("Shadow: Put Blocking Huorn into play engaged with you.")
                 .WithInfo(3, 2, Artist.Katy_Grierson));
             Cards.Add(LotRCard.Enemy("Wicked Huorn", "", setName, 33, 3, 6, 4, 7)
                 .WithTraits("Huorn.")
                 .WithKeywords("Hinder.")
-                .WithText("Cannot have attachments.\r\nForced: At the beginning of each resource phase, the engaged player exhausts a hero he controls.")
+                .WithTextLine("Hinder. Cannot have attachments.")
+                .WithTextLine("Forced: At the beginning of each resource phase, the engaged player exhausts a hero he controls.")
                 .WithShadow("Shadow: Attacking enemy cannot take damage until the end of the round.")
                 .WithInfo(4, 2, Artist.Mariusz_Gandzel));
             Cards.Add(LotRCard.Location("Tangled Forest", "", setName, 2, 6)
@@ -68,7 +71,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithInfo(6, 3, Artist.Julian_Kok));
             Cards.Add(LotRCard.Location("Dark Corner of Fangorn", "", setName, 3, 5)
                 .WithTraits("Forest.")
-                .WithText("While Dark Corner of Fangorn is in the staging area, each Huorn enemy loses the hunder keyword.\r\nForced: After Dark Corner of Fangorn becomes the active location, each engaged Huorn enemy makes an immediate attack.")
+                .WithText("While Dark Corner of Fangorn is in the staging area, each Huorn enemy loses the hinder keyword.\r\nForced: After Dark Corner of Fangorn becomes the active location, each engaged Huorn enemy makes an immediate attack.")
                 .WithFlavor("\"...it is perilous to touch the trees of that wood, it is said.\"\r\n-Aragorn, The Two Towers")
                 .WithInfo(7, 2, Artist.Julian_Kok));
             Cards.Add(LotRCard.Treachery("Stifling Woods", "", setName)

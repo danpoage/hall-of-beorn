@@ -54,7 +54,8 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             Cards.Add(LotRCard.Enemy("Savage Hillman", "", setName, 20, 1, 2, 1, 3)
                 .WithTraits("Dunland.")
                 .WithKeywords("Surge.")
-                .WithText("While the engaged player has 3 or more cards in hand, Savage Hillman cannot take damage.\r\nWhile the engaged player has 5 or more cards in hand, Savage Hillman gets +2 Attack.")
+                .WithTextLine("Surge.")
+                .WithTextLine("While the engaged player has 3 or more cards in hand, Savage Hillman cannot take damage.\r\nWhile the engaged player has 5 or more cards in hand, Savage Hillman gets +2 Attack.")
                 .WithInfo(4, 3, Artist.Suzanne_Helmigh));
             Cards.Add(LotRCard.Location("Western Shore", "", setName, Card.VALUE_X, 4)
                 .WithTraits("River.", "Valley.")

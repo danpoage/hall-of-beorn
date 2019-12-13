@@ -69,7 +69,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithFlavor("As you trudge through endless swamp, you begin to wonder if you will ever reach the other side.")
                 .WithText("When Revealed: Raise each player's threat by 1.")
                 .WithKeywords("Time 3.")
-                .WithOppositeText("Forced: After the last time counter is removed from this stage, advance to a different stage 2A at random. Return this stage to the quest deck.\r\nAllies enter play exhausted.\r\nForced: When the players defeat this stage, advance to a random stage 3A.")
+                .WithOppositeTextLine("Time 3. Forced: After the last time counter is removed from this stage, advance to a different stage 2A at random. Return this stage to the quest deck.\r\nAllies enter play exhausted.\r\nForced: When the players defeat this stage, advance to a random stage 3A.")
                 .WithBackArtist(Artist.Von_Caberte)
                 .WithInfo(8, 1, Artist.Mariusz_Gandzel));
             Cards.Add(LotRCard.Quest("Lost in the Swanfleet", 3, setName, 16)
@@ -78,7 +78,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithFlavor("Lost as you are, your presence in the marsh has not gone unnoticed. An ancient and foul swamp creature stalks your company...")
                 .WithText("When Revealed: Raise each player's threat by 1. Add Ancient Marsh-dweller to the staging area (from out of play or engaged with a player) and heal all damage from it.")
                 .WithKeywords("Time 3.")
-                .WithText("Forced: After the last time counter is removed from this stage, advance to a different stage 3A at random. Return this stage to the quest deck.\r\nTreachery card effects cannot be canceled.")
+                .WithOppositeTextLine("Time 3. Forced: After the last time counter is removed from this stage, advance to a different stage 3A at random. Return this stage to the quest deck.\r\nTreachery card effects cannot be canceled.")
                 .WithBackArtist(Artist.Claudio_Pozas)
                 .WithInfo(9, 1, Artist.Silver_Saaremael));
         }
