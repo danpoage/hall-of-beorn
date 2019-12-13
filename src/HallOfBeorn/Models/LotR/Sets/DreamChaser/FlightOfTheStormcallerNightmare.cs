@@ -60,13 +60,13 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             addCard(LotRCard.ShipEnemy("Tide-runner", setName, 44, 4, 4, 2, 9)
                 .WithTraits("Corsair.", "Ship.")
                 .WithKeywords("Boarding 1.")
-                .WithText("Cannot have attachments.\r\nWhile you are off-course (Cloudy, Rainy, or Stormy), Tide-runner is considered to be in the Stormcaller's area and the staging area, regardless of its current location.\r\nWhen Revealed: Either choose a player to engage Tide-runner, or add Tide-runner to the Stormcaller's area and it gains surge.")
+                .WithText("Boarding 1. Cannot have attachments.\r\nWhile you are off-course (Cloudy, Rainy, or Stormy), Tide-runner is considered to be in the Stormcaller's area and the staging area, regardless of its current location.\r\nWhen Revealed: Either choose a player to engage Tide-runner, or add Tide-runner to the Stormcaller's area and it gains surge.")
                 .WithInfo(3, 2, Artist.Unknown));
             addCard(LotRCard.ShipEnemy("Venom's Bite", setName, 34, 5, 8, 5, 14)
                 .WithUnique()
                 .WithTraits("Corsair.", "Ship.")
                 .WithKeywords("Boarding 2.")
-                .WithText("Cannot have attachments.\r\n*Forced: After this Sailing test ends, if you are off-course (Cloudy, Rainy, or Stormy), put the Venom's Bite into play in the staging area. If you are on-course (Sunny), put it into play in the Stormcaller's area instead.\r\n☸*")
+                .WithText("Boarding 2. Cannot have attachments.\r\n*Forced: After this Sailing test ends, if you are off-course (Cloudy, Rainy, or Stormy), put the Venom's Bite into play in the staging area. If you are on-course (Sunny), put it into play in the Stormcaller's area instead.\r\n☸*")
                 .WithVictoryPoints(5)
                 .WithInfo(4, 1, Artist.Unknown));
             addCard(LotRCard.Location("Sharp Jetties", string.Empty, setName, 2, 6)
@@ -80,7 +80,8 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             addCard(LotRCard.Treachery("Dark and Stormy", string.Empty, setName)
                 .WithTraits("Weather.")
                 .WithKeywords("Surge.")
-                .WithText("When Revealed: Deal 1 shadow card to each Ship enemy in play. Until the end of the round, shadow effects cannot be canceled.")
+                .WithTextLine("Surge.")
+                .WithTextLine("When Revealed: Deal 1 shadow card to each Ship enemy in play. Until the end of the round, shadow effects cannot be canceled.")
                 .WithShadow("Shadow: Attacking enemy makes an additional attack after this one.")
                 .WithInfo(7, 2, Artist.Federico_Musetti));
             addCard(LotRCard.Treachery("Sahír's Getting Away!", string.Empty, setName)

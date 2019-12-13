@@ -72,7 +72,8 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             addCard(LotRCard.Enemy("Sahír's Pursuer", string.Empty, setName, 40, 3, 7, 3, 8)
                 .WithTraits("Corsair.", "Ship.")
                 .WithKeywords("Boarding 1.")
-                .WithText("Cannot have attachments.\r\nForced: At the end of the encounter phase, if Sahír's Pursuer is in the staging area, the first player must either engage it or shift your heading off-course.")
+                .WithTextLine("Boarding 1. Cannot have attachments.")
+                .WithTextLine("Forced: At the end of the encounter phase, if Sahír's Pursuer is in the staging area, the first player must either engage it or shift your heading off-course.")
                 .WithInfo(5, 2, Artist.Jessica_Cheng));
             addCard(LotRCard.Location("Open Waters", string.Empty, setName, 2, 6)
                 .WithTraits("Ocean.")
@@ -94,7 +95,10 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             addCard(LotRCard.Treachery("Raging Squall", string.Empty, setName)
                 .WithTraits("Weather.")
                 .WithKeywords("Surge.")
-                .WithText("*Forced: After Raging Squall is discarded from the encounter deck duirng a Sailing test, deal 1 damage to each character committed to that test.\r\n\r\n☸*")
+                .WithTextLine("Surge.")
+                .WithTextLine("*Forced: After Raging Squall is discarded from the encounter deck duirng a Sailing test, deal 1 damage to each character committed to that test.")
+                .WithTextLine(string.Empty);
+                .WithTextLine("☸*")
                 .WithInfo(10, 2, Artist.Leanna_Crossan));
         }
     }

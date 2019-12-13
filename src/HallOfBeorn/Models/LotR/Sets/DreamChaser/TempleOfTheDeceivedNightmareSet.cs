@@ -82,7 +82,8 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithInfo(6, 2, Artist.Chris_Grun);
             addTreachery("Deceitful Island", EncounterSet.TempleOfTheDeceivedNightmare.Name)
                 .WithKeywords("Doomed 3.")
-                .WithText("When Revealed: Switch the placement of the active location with the location above or below it, or to its left (the active location does not change). Then, flip each adjacement location to its \"Lost Island\" or \"Edge of the Temple\" side.")
+                .WithTextLine("Doomed 3.")
+                .WithTextLine("When Revealed: Switch the placement of the active location with the location above or below it, or to its left (the active location does not change). Then, flip each adjacement location to its \"Lost Island\" or \"Edge of the Temple\" side.")
                 .WithInfo(7, 2, Artist.Jordan_Saia);
             addTreachery("Call of the Curse", EncounterSet.TempleOfTheDeceivedNightmare.Name)
                 .WithText("When Revealed: Until the end of the round, each Undead enemy gets +X Attack and +X Defense. X is the number of locations to the left of the active location (in its row). If X is 0 or 1, Call of the Curse gains surge.")

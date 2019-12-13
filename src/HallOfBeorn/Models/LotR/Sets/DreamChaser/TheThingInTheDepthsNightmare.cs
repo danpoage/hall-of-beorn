@@ -71,12 +71,14 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             addCard(LotRCard.Enemy("Slithering Arm", string.Empty, setName, 0, 0, 4, 1, 5)
                 .WithTraits("Creature.", "Tentacle.")
                 .WithKeywords("Surge.", "Grapple (most enemies grappled).")
-                .WithText("Forced: After Slitering Arm engages a player, it makes an immediate attack against that player.")
+                .WithTextLine("Surge. Grapple (most enemies grappled).")
+                .WithTextLine("Forced: After Slitering Arm engages a player, it makes an immediate attack against that player.")
                 .WithInfo(6, 3, Artist.Nicholas_Gregory));
             addCard(LotRCard.Enemy("Crashing Arm", string.Empty, setName, 27, 2, 6, 1, 7)
                 .WithTraits("Creature.", "Tentacle.")
                 .WithKeywords("Grapple (fewest enemies grappled).")
-                .WithText("Forced: After Crashing Arm is detaced from a location, deal it 3 shadow cards.")
+                .WithTextLine("Grapple (fewest enemies grappled).")
+                .WithTextLine("Forced: After Crashing Arm is detaced from a location, deal it 3 shadow cards.")
                 .WithShadow("Shadow: Attacking enemy makes an additional attack after this one.")
                 .WithInfo(7, 3, Artist.Nicholas_Gregory));
             addCard(LotRCard.Treachery("Deep Maelstrom", string.Empty, setName)
