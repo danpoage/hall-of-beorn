@@ -88,18 +88,18 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithText("When Revealed: Each player must either exhaust a Ship objective he controls or distribute 4 damage among characters he controls (6 damage instead if you are off course).")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack for each quest card in the victory display.")
                 .WithInfo(8, 3, Artist.Oleg_Saakyan));
-            addCard(LotRCard.Treachery("Dreams of Númenor", string.Empty, setName)
-                .WithText("When Revealed: Either set your heading to the worst setting (⚡) or exhaust all allies in play.\r\n☸")
+            addTreachery("Dreams of Númenor", setName)
+                .WithTextLine("When Revealed: Either set your heading to the worst setting (⚡) or exhaust all allies in play.")
+                .WithTextLine("☸")
                 .WithShadow("Shadow: If you are off-coruse (Cloudy, Rainy, or Stormy), attacking enemy makes an additional attack after this one.")
-                .WithInfo(9, 2, Artist.DinoDrawing));
-            addCard(LotRCard.Treachery("Raging Squall", string.Empty, setName)
+                .WithInfo(9, 2, Artist.DinoDrawing);
+            addTreachery("Raging Squall", setName)
                 .WithTraits("Weather.")
                 .WithKeywords("Surge.")
                 .WithTextLine("Surge.")
                 .WithTextLine("*Forced: After Raging Squall is discarded from the encounter deck duirng a Sailing test, deal 1 damage to each character committed to that test.")
-                .WithTextLine(string.Empty);
                 .WithTextLine("☸*")
-                .WithInfo(10, 2, Artist.Leanna_Crossan));
+                .WithInfo(10, 2, Artist.Leanna_Crossan);
         }
     }
 }

@@ -147,12 +147,12 @@ Forced: At the beginning of the encounter phase, Treetop Bird-eater engages the 
                 .WithTextLine("Surge.")
                 .WithTextLine("When Revealed: Attach to an Eagle character (Counts as a Condition attachment with the text: \"Limit 1 per character. Attached character loses the Eagle trait, and takes 1 damage each time it readies.\")")
                 .WithShadow("Shadow: Resolve the \"when revealed\" effect of Shot from the Sky.")
-                .WithInfo(7, 3, Art.Gabriel_Verdon);
+                .WithInfo(7, 3, Artist.Gabriel_Verdon);
             addTreachery("Noxious Supplies", "A Journey to Rhosgobel Nightmare")
                 .WithKeywords("Surge.")
                 .WithTextLine("Surge.")
                 .WithTextLine("When Revealed: Attach to Wilyador. (Counts as a Condition attachment with the text: \"Forced: When attached character is healed by a card effect other than Athelas, the amount of damage healed is reduced to 1. Then, discard Noxious Supplies.\")")
-                .WithInfo(8, 3, Arts.Sandra_Duchiewicz);
+                .WithInfo(8, 3, Artist.Sandra_Duchiewicz);
         }
     }
 }
