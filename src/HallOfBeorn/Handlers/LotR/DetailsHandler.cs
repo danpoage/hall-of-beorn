@@ -133,10 +133,11 @@ namespace HallOfBeorn.Handlers.LotR
 
             if (IsId(id))
             {
-                card = _cardRepository.FindById(id);
-                if (card != null)
+                var slug = _octgnService.GetCardSlug(id);
+                if (!string.IsNullOrWhiteSpace(slug))
                 {
-                    redirectUrl = string.Format("/LotR/Details/{0}", card.Slug);
+                    card = _cardRepository.FindBySlug(slug);
+                    redirectUrl = string.Format("/LotR/Details/{0}", slug);
                 }
             }
             else

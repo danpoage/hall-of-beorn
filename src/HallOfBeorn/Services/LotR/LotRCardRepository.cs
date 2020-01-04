@@ -31,11 +31,6 @@ namespace HallOfBeorn.Services.LotR
             }
         }
 
-        public LotRCard FindById(string id)
-        {
-            return Cards().Where(x => x.Id == id).FirstOrDefault();
-        }
-
         public IEnumerable<LotRCard> OfficialPlayerCards()
         {
             return Cards().Where(card => card.CardType.IsPlayerCard() && card.CardSet.SetType != Models.SetType.CUSTOM);
