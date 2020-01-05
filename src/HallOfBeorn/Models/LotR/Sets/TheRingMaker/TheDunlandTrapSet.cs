@@ -32,7 +32,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithTraits("Mount.")
                 .WithKeywords("Restricted.")
                 .WithTextLine("Attach to a Tactics or Rohan hero. Restricted.")
-                .WithTextLine("Attached hero gets +1 Attack (+2 Attack instead if attached hero is E´omer).")
+                .WithTextLine("Attached hero gets +1 Attack (+2 Attack instead if attached hero is Éomer).")
                 .WithTextLine("Response: After attached hero attacks alone, exhaust Firefoot to choose a non-unique enemy engaged with you. Excess damage dealt by this attack is assigned to the chosen enemy.")
                 .WithInfo(4, 3, Artist.Nora_Brisotti);
             addEvent("Close Call", 0, Sphere.Tactics)

@@ -71,7 +71,9 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithInfo(7, 3, Artist.Melanie_Maier));
             Cards.Add(LotRCard.Attachment("Staff of Lebethron", "", Sphere.Leadership, 1)
                 .WithTraits("Item.")
-                .WithText("Attach to a Gondor or Hobbit hero. Restricted.\r\nResponse: After attached hero exhausts to defend an attack from an enemy with engagement cost higher than your threat, exhaust Staff of Lebethron to discard a shadow card from that enemy.")
+                .WithKeywords("Restricted.")
+                .WithTextLine("Attach to a Gondor or Hobbit hero. Restricted.")
+                .WithTextLine("Response: After attached hero exhausts to defend an attack from an enemy with engagement cost higher than your threat, exhaust Staff of Lebethron to discard a shadow card from that enemy.")
                 .WithFlavor("\"They are made of the fair tree lebethron, beloved of the woodwrights of Gondor...\" -Faramir, The Two Towers")
                 .WithInfo(8, 3, Artist.Kara_Williams));
             Cards.Add(LotRCard.Attachment("Ambush", "", Sphere.Lore, 2)
@@ -81,8 +83,11 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithInfo(9, 3, Artist.Cristina_Vela));
             Cards.Add(LotRCard.Attachment("Snowmane", "", Sphere.Spirit, 1)
                 .WithUnique()
+                .WithKeywords("Restricted.")
                 .WithTraits("Mount.")
-                .WithText("Attach to a Rohan hero. Restricted.\r\nIf attached hero is Theoden, Snowmane loses the restricted keyword.\r\nResponse: After attached hero quests successfully, ready attached hero.")
+                .WithTextLine("Attach to a Rohan hero. Restricted.")
+                .WithTextLine("If attached hero is Theoden, Snowmane loses the restricted keyword.")
+                .WithTextLine("Response: After attached hero quests successfully, ready attached hero.")
                 .WithFlavor("Suddenly the king cried to Snowmane and the horse sprang away. -The Return of the King")
                 .WithInfo(10, 3, Artist.Julepe));
             Cards.Add(LotRCard.Event("Taste it Again!", "", Sphere.Leadership, 1)
