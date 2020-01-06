@@ -67,12 +67,14 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("Play only if you control at least 1 Ent character.\r\nAttach to a character. Limit 1 per character.\r\nAttached character gets +2 hit points.")
                 .WithFlavor("The effect of the draught began at the toes, and rose steadily through every limb, bringing refreshment and vigour as it coursed upwards, right to the tips of the hair. -The Two Towers")
                 .WithInfo(9, 3, Artist.Aurelien_Hubert));
-            Cards.Add(LotRCard.Attachment("Herugrim", "0E512381-7B67-45D3-BAE5-6CF0DDA4176B", Sphere.Spirit, 3)
-                .WithUnique()
+            addAttachment("Herugrim", 3, Sphere.Spirit, true)
+                .WithKeywords("Restricted.")
                 .WithTraits("Item.", "Weapon.")
-                .WithText("Attach to a Rohan hero. Restricted.\r\nReduce the cost to play Herugrim on Théoden by 1.\r\nResponse: After attached hero is declared as an attacker, exhaust Herugrim to add attached hero's Willpower to its Attack for this attack.")
+                .WithTextLine("Attach to a Rohan hero. Restricted.")
+                .WithTextLine("Reduce the cost to play Herugrim on Théoden by 1.")
+                .WithTextLine("Response: After attached hero is declared as an attacker, exhaust Herugrim to add attached hero's Willpower to its Attack for this attack.")
                 .WithFlavor("\"Here, lord, is Herugrim, your ancient blade.\" -Háma, The Two Towers")
-                .WithInfo(10, 3, Artist.Jason_Ward));
+                .WithInfo(10, 3, Artist.Jason_Ward);
             Cards.Add(LotRCard.Event("Entmoot", "7A734E97-BADA-48B5-BF62-561C578B6791", Sphere.Lore, 0)
                 .WithTraits("Ent.")
                 .WithText("Play only if you control at least 1 Ent character.\r\nAction: Search the top 5 cards of your deck for any number of Ent cards and add them to your hand. Shuffle the other cards back into your deck.")

@@ -73,12 +73,12 @@ namespace HallOfBeorn.Models.LotR.Sets.FirstAge
                 .WithText("Attach to a Dwarf character.\r\nAction: Exhaust Forge of Belegost and attached character to heal X damage on a character. X is the number of Item attachments on that character.")
                 .WithFlavor("...yet in the tempering of steel alone of all crafts the Dwarves were never outmatched even by the Noldor...\r\n-The Silmarillion")
                 .WithInfo(59, 3, Artist.Unknown));
-            Cards.Add(LotRCard.Attachment("Angrist", "", Sphere.Leadership, 1)
-                .WithUnique()
+            addAttachment("Angrist", 1, Sphere.Leadership, true)
                 .WithTraits("Item.", "Weapon.")
+                .WithKeywords("Restricted.")
                 .WithText("Attach to a hero with the House of House of Bëor trait. Restricted.\r\nAttached hero gets +1 Attack.\r\nAction: Exhaust Angrist and the attached hero to choose a facedown enemy. Turn that enemy faceup and deal 4 damage to it.")
                 .WithFlavor("...and from the iron claws that held it he cut a Silmaril.\r\n-The Silmarillion")
-                .WithInfo(60, 3, Artist.Vadim));
+                .WithInfo(60, 3, Artist.Vadim);
             Cards.Add(LotRCard.Event("Song of Parting", "", Sphere.Leadership, 1)
                 .WithTraits("Song.")
                 .WithText("Response: After an encounter card with at least 3 Threat is revealed from the encounter deck, choose and ready a character. That character gets +2 Willpower, +2 Attack, and +2 Defense until the end of the round.")

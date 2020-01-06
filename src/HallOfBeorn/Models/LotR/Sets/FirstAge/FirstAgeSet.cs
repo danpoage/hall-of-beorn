@@ -527,7 +527,7 @@ namespace HallOfBeorn.Models.LotR.Sets.FirstAge
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Mastery,
                 ResourceCost = 2,
-                Text = "Attach to a hero with a printed Mastery icon.\r\nAction: Exhaust Aranrúth to give attached hero a Leadership, Lore, Tactics, or Spirit icon until the end of the phase.\r\nIf attached hero is Thingol, Aranrúth gains, 'Attached hero gets +2 Attack.'",
+                Text = "Attach to a hero with a printed Mastery icon. Restricted.\r\nAction: Exhaust Aranrúth to give attached hero a Leadership, Lore, Tactics, or Spirit icon until the end of the phase.\r\nIf attached hero is Thingol, Aranrúth gains, 'Attached hero gets +2 Attack.'",
                 EncounterSet = "First Age",
                 CardNumber = 161,
                 Artist = Artist.Mathieu_Degrotte
@@ -566,7 +566,7 @@ namespace HallOfBeorn.Models.LotR.Sets.FirstAge
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Tactics,
                 ResourceCost = 3,
-                Text = "Attach to a hero with the House of Hador trait.\r\nResponse: After attached hero is damaged, exhaust Dragon-helm and raise your threat by 3 to cancel all damage from that attack.\r\nIf attached hero is Túrin, Dragon-helm gains, 'Response: After an enemy engages with you, it gets -1 Attack and -1 Defense until the end of the round.'",
+                Text = "Attach to a hero with the House of Hador trait. Restricted.\r\nResponse: After attached hero is damaged, exhaust Dragon-helm and raise your threat by 3 to cancel all damage from that attack.\r\nIf attached hero is Túrin, Dragon-helm gains, 'Response: After an enemy engages with you, it gets -1 Attack and -1 Defense until the end of the round.'",
                 EncounterSet = "First Age",
                 CardNumber = 64,
                 Artist = Artist.Mahdi_Mehrnegar
@@ -596,20 +596,13 @@ namespace HallOfBeorn.Models.LotR.Sets.FirstAge
                 CardNumber = 58,
                 Artist = Artist.Unknown
             });
-            Cards.Add(new LotRCard() {
-                Title = "Gurthang",
-                
-                Id = "2cf2b206-3dcb-41f3-abdb-c3c3282779f9",
-                IsUnique = true,
-                CardType = CardType.Attachment,
-                Sphere = Sphere.Mastery,
-                Traits = new List<string>() { "Item.", "Weapon." },
-                ResourceCost = 2,
-                Text = "Attach to a hero with a printed Mastery resource icon. Restricted.Attached hero gets +1 Attack.Response: After attached hero damages an enemy, shuffle the encounter deck and discard the top card. If it is a treachery, cancel all damage from the attack and discard a hero. Otherwise, the enemy is destroyed.",
-                EncounterSet = "First Age",
-                CardNumber = 65,
-                Artist = Artist.Elena_Kukanova
-            });
+            addAttachment("Gurthang", 2, Sphere.Mastery, true)
+                .WithTraits("Item.", "Weapon.")
+                .WithKeywords("Restricted.")
+                .WithTextLine("Attach to a hero with a printed Mastery resource icon. Restricted.")
+                .WithTextLine("Attached hero gets +1 Attack.")
+                .WithTextLine("Response: After attached hero damages an enemy, shuffle the encounter deck and discard the top card. If it is a treachery, cancel all damage from the attack and discard a hero. Otherwise, the enemy is destroyed.")
+                .WithInfo(65, 3, Artist.Elena_Kukanova);
             Cards.Add(new LotRCard() {
                 Title = "Harp of Fingon",
                 
@@ -773,19 +766,13 @@ Action: Spend 1 resource from Oath of Vengeance to give attached hero +1 Willpow
                 CardNumber = 50,
                 Artist = Artist.Meanor
             });
-            Cards.Add(new LotRCard() {
-                Title = "Poisoned Javelin",
-                
-                Id = "b113f353-7dab-4689-8f16-05c7e6935950",
-                CardType = CardType.Attachment,
-                Sphere = Sphere.Mastery,
-                Traits = new List<string>() { "Item.", "Weapon." },
-                ResourceCost = 2,
-                Text = "Attach to a Mastery character. Restricted.Response: After attached character damages an enemy, attach Poisoned Javelin to that enemy.Forced: At the end of each round, if Poisoned Javelin is attached to an enemy, deal 2 damage to that enemy. You may place 1 Corruption on a hero you control to increase this to 4 damage.",
-                EncounterSet = "First Age",
-                CardNumber = 59,
-                Artist = Artist.John_G
-            });
+            addAttachment("Poisoned Javelin", 2, Sphere.Mastery, false)
+                .WithTraits("Item.", "Weapon.")
+                .WithKeywords("Restricted.")
+                .WithTextLine("Attach to a Mastery character. Restricted.")
+                .WithTextLine("Response: After attached character damages an enemy, attach Poisoned Javelin to that enemy.")
+                .WithTextLine("Forced: At the end of each round, if Poisoned Javelin is attached to an enemy, deal 2 damage to that enemy. You may place 1 Corruption on a hero you control to increase this to 4 damage.")
+                .WithInfo(59, 3, Artist.John_G);
             Cards.Add(new LotRCard() {
                 Title = "Ring of Barahir",
                 
@@ -795,7 +782,7 @@ Action: Spend 1 resource from Oath of Vengeance to give attached hero +1 Willpow
                 Sphere = Sphere.Leadership,
                 Traits = new List<string>() { "Item.", "Artifact." },
                 ResourceCost = 2,
-                Text = "Attach to an Edain hero.Action: Discard Ring of Barahir to put a unique Noldor ally into play from your hand.",
+                Text = "Attach to an Edain hero.\r\nAction: Discard Ring of Barahir to put a unique Noldor ally into play from your hand.",
                 EncounterSet = "First Age",
                 CardNumber = 60,
                 Artist = Artist.Anke_Eissmann
@@ -807,7 +794,7 @@ Action: Spend 1 resource from Oath of Vengeance to give attached hero +1 Willpow
                 CardType = CardType.Attachment,
                 Sphere = Sphere.Tactics,
                 ResourceCost = 2,
-                Text = "Attach to a hero with the House of Fingolfin trait.\r\nAttached hero gets +1 Attack (+2 Attack if Fingolfin).\r\nIf the attached hero is Fingolfin, Ringil gains: 'Response: After the attached character attacks alone, cancel all damage from the attack and reduce your threat by that amount instead.'",
+                Text = "Attach to a hero with the House of Fingolfin trait. Restricted.\r\nAttached hero gets +1 Attack (+2 Attack if Fingolfin).\r\nIf the attached hero is Fingolfin, Ringil gains: 'Response: After the attached character attacks alone, cancel all damage from the attack and reduce your threat by that amount instead.'",
                 EncounterSet = "First Age",
                 CardNumber = 61,
                 Artist = Artist.Sarafiel
@@ -2654,7 +2641,7 @@ Response: After Pits of Angband leaves play, add Angband Sword to the staging ar
                 Id = "0921abfd-2cd7-493f-878b-ad4cb99e010c",
                 CardType = CardType.Objective,
                 Quantity = 1,
-                Text = "Attached hero gains +5 Attack. Attached hero gains an additional +1 Attack for each resource on Angband Sword.Action: Attach Angband Sword to a hero. Place 1 Corruption on that hero.Response: After attached hero deals damage, add 1 resource to Angband Sword.",
+                Text = "Attached hero gains +5 Attack. Restricted.\r\nAttached hero gains an additional +1 Attack for each resource on Angband Sword.\r\nAction: Attach Angband Sword to a hero. Place 1 Corruption on that hero.Response: After attached hero deals damage, add 1 resource to Angband Sword.",
                 EncounterSet = "The Seat of Morgoth",
                 CardNumber = 131,
                 Artist = Artist.Daniel_Ljunggren
