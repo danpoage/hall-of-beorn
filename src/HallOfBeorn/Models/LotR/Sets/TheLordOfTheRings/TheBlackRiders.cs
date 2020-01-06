@@ -254,7 +254,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 ResourceCost = 1,
                 Traits = new List<string>() { "Artifact.", "Item.", "Weapon." },
                 Keywords = new List<string>() { "Restricted." },
-                Text = "Attach to a hero.\r\nAttached hero gets +1 Attack (+2 Attack instead if attacking an enemy with an engagement cost higher than your threat).",
+                Text = "Attach to a hero. Restricted.\r\nAttached hero gets +1 Attack (+2 Attack instead if attacking an enemy with an engagement cost higher than your threat).",
                 FlavorText = "...these blades were forged many long years ago by Men of Westernesse: they were foes of the Dark Lord...\r\n-The Fellowship of the Ring",
                 Quantity = 3,
                 CardNumber = 14,

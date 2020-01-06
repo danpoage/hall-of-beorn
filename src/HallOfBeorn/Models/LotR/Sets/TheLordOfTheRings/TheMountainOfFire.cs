@@ -76,7 +76,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithUnique()
                 .WithTraits("Item.", "Weapon.")
                 .WithKeywords("Restricted.")
-                .WithText("Attach to a Rohan hero.\r\nResponse: After attached hero is declared as an attacker, exhaust Gúthwinë to give that hero +2 Attack for this attack. If this attack destroys an enemy, return a Rohan ally from your discard pile to your hand.")
+                .WithText("Attach to a Rohan hero. Restricted.\r\nResponse: After attached hero is declared as an attacker, exhaust Gúthwinë to give that hero +2 Attack for this attack. If this attack destroys an enemy, return a Rohan ally from your discard pile to your hand.")
                 .WithFlavor("\"Gúthwinë!\" cried Éomer. \"Gúthwinë for the Mark!\"\r\n-The Two Towers")
                 .WithTemplate("<p class='main-text'>Attach to a {trait:Rohan.@Rohan} hero. {keyword:Restricted.}</p><p class='main-text'><b>Response:</b> After attached hero is declared as an attacker, exhaust {self} to give that hero +2 {Attack} for this attack. If this attack destroys an enemy, return a {trait-ally:Rohan.@Rohan} ally from your discard pile to your hand.</p><p class='flavor-text'>&ldquo;Gúthwinë!&rdquo; cried Éomer. &ldquo;Gúthwinë for the Mark!&rdquo;<br>&ndash;The Two Towers</p>")
                 .WithInfo(11, 3, Artist.Kamila_Tzutenberg));
