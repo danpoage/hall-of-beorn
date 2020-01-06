@@ -266,7 +266,7 @@ Response: After attached hero exhausts to defend an attack, discard the top card
                 ResourceCost = 3,
                 Traits = new List<string> { "Artifact.", "Item.", "Weapon." },
                 Keywords = new List<string> { "Restricted." },
-                Text = "Attach to a Noble hero or Aragorn.\r\nAttached hero gets +1 Willpower, +1 Attack, and +1 Defense.\r\nResponse: After an attack in which the attached hero defended resolves, exhaust Andúril to target the enemy that just attacked. Declare attached hero as an attacker against that enemy (and resolve the attack).",
+                Text = "Attach to a Noble hero or Aragorn. Restricted.\r\nAttached hero gets +1 Willpower, +1 Attack, and +1 Defense.\r\nResponse: After an attack in which the attached hero defended resolves, exhaust Andúril to target the enemy that just attacked. Declare attached hero as an attacker against that enemy (and resolve the attack).",
                 CardNumber = 14,
                 Quantity = 1,
                 Artist = Artist.Magali_Villeneuve
