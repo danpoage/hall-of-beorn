@@ -34,6 +34,12 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
             addEvent("Need Drives Them", 3, Sphere.Leadership)
                 .WithTextLine("Action: Each player whose threat is 40 or higher readies all characters he controls.")
                 .WithInfo(29, 3, Artist.Unknown);
+            addAlly("Woodland Sentry", 3, Sphere.Lore, false, 1, 1, 1, 2)
+                .WithTraits("Silvan.")
+                .WithTextLine("Response: After you play Woodland Sentry from your hand, choose an enemy or location in play. If there is a copy of that card in the victory display, discard the chosen card.")
+                .WithFlavorLine("In the Wide World the Wood-elves lingered in the twilight of our Sun and Moon but loved best the stars...")
+                .WithFlavorLine("-The Hobbit")
+                .WithInfo(30, 3, Artist.Sara_Biddle);
             addAttachment("Keen Longbow", 2, Sphere.Lore, false)
                 .WithTraits("Item.", "Weapon.")
                 .WithKeywords("Restricted.")
@@ -50,19 +56,31 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithFlavorLine("\"Gimli Glóin's son, have you your axe ready?\"")
                 .WithFlavorLine("-Éomer, The Return of the King")
                 .WithInfo(32, 3, Artist.Unknown);
-            addAlly("Woodland Sentry", 3, Sphere.Lore, false, 1, 1, 1, 2)
-                .WithTraits("Silvan.")
-                .WithTextLine("Response: After you play Woodland Sentry from your hand, choose an enemy or location in play. If there is a copy of that card in the victory display, discard the chosen card.")
-                .WithFlavorLine("In the Wide World the Wood-elves lingered in the twilight of our Sun and Moon but loved best the stars...")
-                .WithFlavorLine("-The Hobbit")
-                .WithInfo(30, 3, Artist.Sara_Biddle);
-
+            addAttachment("Strength and Courage", 1, Sphere.Tactics, false)
+                .WithTraits("Master.")
+                .WithTextLine("Attach to the hero with The One Ring.")
+                .WithTextLine("Limit 1 per hero. Attached hero gets +1 Attack.")
+                .WithTextLine("Response: After attached hero is declared as an attacker, exhaust The One Ring and raise your threat by 1 to double attached hero's printed Attack for this attack.")
+                .WithInfo(33, 3, Artist.Unknown);
             addAlly("Knight of Belfalas", 2, Sphere.Spirit, false, 1, 2, 0, 2)
                 .WithTraits("Gondor.", "Warrior.")
                 .WithTextLine("Response: After Knight of Belfalas enters play, return a Gondor ally from your discard pile to your hand.")
                 .WithFlavorLine("The mounted knights returned, and at their rear the banner of Dol Amroth...")
                 .WithFlavorLine("-The Return of the King")
                 .WithInfo(34, 3, Artist.Unknown);
+            addAttachment("Horn of the Mark", 1, Sphere.Spirit, true)
+                .WithTraits("Artifact.", "Item.")
+                .WithKeywords("Restricted.")
+                .WithTextLine("Attach to a Rohan hero or Merry. Restricted.")
+                .WithTextLine("Response: When a character leaves play, if that character shares at least one trait with the attached hero, exhaust Horn of the AMark to draw 1 card.")
+                .WithFlavorLine("Then Éowyn gave to Merry an ancient horn, small but cunningly wrought all of fair silver with a baldric of green.")
+                .WithFlavorLine("-The Return of the King")
+                .WithInfo(35, 3, Artist.Unknown);
+            addEvent("Host of Galadhrim", 4, Sphere.Neutral)
+                .WithTextLine("Planning Action: Return each Silvan ally you control to your hand. Then, play each of those allies from your hand one at a time at no cost.")
+                .WithFlavorLine("Celeborn came forth and led the host of Lórien...")
+                .WithFlavorLine("-The Return of the King")
+                .WithInfo(36, 3, Artist.Leanna_Crossan);
             addContract("Forth, The Three Hunters!")
                 .WithTextLine("Your deck cannot include ally cards.")
                 .WithTextLine("Each of your heroes can have 1 additional restricted attachment. Reduce the cost of the first restricted attachment you play on each of your heroes each round by 1.")
@@ -74,13 +92,6 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithOppositeFlavorLine("\"With hope or without hope we will follow the trail of our enemies. And woe to them, if we prove the swifter!\"")
                 .WithOppositeFlavorLine("-Aragorn, The Two Towers")
                 .WithInfo(49, 1, Artist.Justin_Gerard);
-
-            
-            addEvent("Host of Galadhrim", 4, Sphere.Neutral)
-                .WithTextLine("Planning Action: Return each Silvan ally you control to your hand. Then, play each of those allies from your hand one at a time at no cost.")
-                .WithFlavorLine("Celeborn came forth and led the host of Lórien...")
-                .WithFlavorLine("-The Return of the King")
-                .WithInfo(36, 3, Artist.Leanna_Crossan);
         }
     }
 }
