@@ -17,8 +17,6 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
             SetType = Models.SetType.Adventure_Pack;
             Cycle = "Vengeance of Mordor";
 
-            IsSpoiler = true;
-
             addHero("Lothíriel", 8, Sphere.Spirit, 3, 1, 1, 3)
                 .WithTraits("Gondor.", "Noble.")
                 .WithTextLine("If Éomer is in play, Lothíriel gains the Rohan trait.")

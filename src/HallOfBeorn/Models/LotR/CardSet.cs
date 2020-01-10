@@ -391,6 +391,7 @@ namespace HallOfBeorn.Models.LotR
             Add(WrathAndRuin);
             Add(TheCityOfUlfast);
             Add(ChallengeOfTheWainriders);
+            Add(UnderTheAshMountains);
 
             Add(TheHobbitOverHillAndUnderHill);
             Add(TheHobbitOnTheDoorstep);
@@ -579,6 +580,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet WrathAndRuin = new Sets.VengeanceOfMordor.WrathAndRuinSet();
         public static CardSet TheCityOfUlfast = new Sets.VengeanceOfMordor.TheCityOfUlfastSet();
         public static CardSet ChallengeOfTheWainriders = new Sets.VengeanceOfMordor.ChallengeOfTheWainridersSet();
+        public static CardSet UnderTheAshMountains = new Sets.VengeanceOfMordor.UnderTheAshMountainsSet();
 
         public static CardSet TheHobbitOverHillAndUnderHill = new Sets.TheHobbit.OverHillandUnderHillSet();
         public static CardSet TheHobbitOnTheDoorstep = new Sets.TheHobbit.OntheDoorstepSet();
