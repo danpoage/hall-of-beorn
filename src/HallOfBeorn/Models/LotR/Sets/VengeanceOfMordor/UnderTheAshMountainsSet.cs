@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
             SetType = Models.SetType.Adventure_Pack;
             Cycle = "Vengeance of Mordor";
 
+            IsSpoiler = true;
+
             addHero("Gildor Inglorion", 9, Sphere.Leadership, 3, 2, 1, 3)
                 .WithTraits("Noldor.", "Noble.")
                 .WithTextLine("Action: Pay 1 resource from Gildor Inglorion's resource pool to choose a player to draw 1 card (Limit once per round.)")

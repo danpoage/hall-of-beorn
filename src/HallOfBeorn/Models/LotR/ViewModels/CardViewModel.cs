@@ -925,8 +925,9 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                     case LotR.CardType.Scenario:
                     case LotR.CardType.Campaign:
                     case LotR.CardType.Nightmare_Setup:
-                    case LotR.CardType.Contract:
                         return true;
+                    case LotR.CardType.Contract:
+                        return !string.IsNullOrWhiteSpace(_card.OppositeText);
                     default:
                         return false;
                 }

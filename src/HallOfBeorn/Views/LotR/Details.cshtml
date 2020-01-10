@@ -29,12 +29,7 @@
         </div>
     </div>
 
-    @if (@Model.CardType == CardType.Contract)
-    {
-        <div><img src="@Model.ImagePath1" style="max-width: 285px;max-height: 400px;"  class="card-image"/></div>
-        <div><img src="@Model.ImagePath2" style="max-width: 285px;max-height: 400px;"  class="card-image"/></div>
-    }
-    else if (@Model.HasSecondImage)
+    @if (@Model.HasSecondImage)
     {
         <span>
             <img src="@Model.ImagePath1" style="max-height:200px;" class="card-image"/>

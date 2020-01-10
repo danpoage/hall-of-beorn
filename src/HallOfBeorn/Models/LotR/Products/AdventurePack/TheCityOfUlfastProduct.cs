@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
     public class TheCityOfUlfastProduct : Product
     {
         public TheCityOfUlfastProduct()
-            : base("The City of Ulfast", "MEC79", ImageType.Jpg, new DateTime(2019, 12, 1))
+            : base("The City of Ulfast", "MEC79", ImageType.Jpg, new DateTime(2020, 1, 9))
         {
             AddCardSet(CardSet.TheCityOfUlfast);
         }
