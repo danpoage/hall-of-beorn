@@ -70,7 +70,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTraits("Artifact.", "Item.")
                 .WithKeywords("Restricted.")
                 .WithTextLine("Attach to a Rohan hero or Merry. Restricted.")
-                .WithTextLine("Response: When a character leaves play, if that character shares at least one trait with the attached hero, exhaust Horn of the AMark to draw 1 card.")
+                .WithTextLine("Response: When a character leaves play, if that character shares at least one trait with the attached hero, exhaust Horn of the Mark to draw 1 card.")
                 .WithFlavorLine("Then Éowyn gave to Merry an ancient horn, small but cunningly wrought all of fair silver with a baldric of green.")
                 .WithFlavorLine("-The Return of the King")
                 .WithInfo(35, 3, Artist.Unknown);
