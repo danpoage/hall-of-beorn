@@ -43,6 +43,7 @@
     "Messenger Raven", "The King's Return", "Loyal Hound", "The Great Hunt", "Bywater Shirriff", "Gwaihir's Debt", "Reforged", "Radagast's Staff", "Urdug",
     "The Gathering Storm", "Put Off Pursuit", "The Master Ring", "The Ruling Ring", "The Ring of Power", "Stinker", "Fellowship",
     "Soldier of Gondor", "Pillars of the Kings", "Cautious Halfling", "Tom Bombadillo!", "Charge into Battle", "Silver Circlet", "Inner Strength", "The Burglar's Turn", "Thane Ulchor",
+    "Lothiriel", "Angbor the Fearless", "Need Drives Them", "Woodland Sentry", "Keen Longbow", "War Axe", "Strength and Courage", "Knight of Belfalas", "Horn of the Mark", "Host of Galadhrim", "Forth, The Three Hunters",
           "+set:",
           "-set:",
           "+type:",
