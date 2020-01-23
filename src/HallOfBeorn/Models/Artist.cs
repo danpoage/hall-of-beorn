@@ -642,6 +642,11 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Nino_Vecia);
             all.Add(Artist.Imad_Awan);
 
+            //The City of Ulfast
+            all.Add(Artist.Frej_Agelii);
+            all.Add(Artist.Michael_Edward_Smith);
+            all.Add(Artist.Mauro_Dal_Bo);
+
             //Arkham Horrom Core
             //all.Add(Artist.Vincent_Dutrait);
             //all.Add(Artist.Jacob_Murray);
@@ -982,6 +987,7 @@ namespace HallOfBeorn.Models
         public static Artist Florian_Stitz = new Artist { Name = "Florian Stitz", URL = "http://fstitz.deviantart.com" };
         public static Artist Frank_Walls = new Artist { Name = "Frank Walls", URL = "http://frank-walls.deviantart.com" };
         public static Artist Fredrik_Dahl_Tyskerud = new Artist { Name = "Fredrik Dahl Tyskerud", URL = "http://dcept.deviantart.com" };
+        public static Artist Frej_Agelii = new Artist { Name = "Freq Agelii", URL = "https://www.artstation.com/frejagelii" };
         public static Artist Gabriel_Verdon = new Artist { Name = "Gabriel Verdon", URL = "http://gabriel-verdon.deviantart.com" };
         public static Artist Gabriela_Birchal = new Artist { Name = "Gabriela Birchal", URL = "https://www.artstation.com/gabirchal" };
         public static Artist Gabrielle_Portal = new Artist { Name = "Gabrielle Portal", URL = "http://gabrielleportaldesign.blogspot.com" };
@@ -1073,6 +1079,7 @@ namespace HallOfBeorn.Models
         public static Artist Mark_Poole = new Artist { Name = "Mark Poole", URL = "http://www.markpoole.net" };
         public static Artist Mark_Tarrisse = new Artist { Name = "Mark Tarrisse", URL = "http://marktarrisse.deviantart.com" };
         public static Artist Mark_Winters = new Artist { Name = "Mark Winters", URL = "http://markwinters.deviantart.com" };
+        public static Artist Mauro_Dal_Bo = new Artist { Name = "Mauro Dal Bo", URL = "https://www.artstation.com/maurodalbo" };
         public static Artist Mateusz_Ozminski = new Artist { Name = "Mateusz Ozminski", URL = "http://www.ozminski.com" };
         public static Artist Mathias_Kollros = new Artist { Name = "Mathias Kollros", URL = "http://guterrez.deviantart.com" };
         public static Artist MartinDeDiegoSadaba = new Artist { Name = "Martin de Diego Sádaba", URL = "https://www.deviantart.com/almanegra" };
@@ -1084,6 +1091,7 @@ namespace HallOfBeorn.Models
         public static Artist Matthew_Starbuck = new Artist { Name = "Matthew Starbuck", URL = "http://faxtar.deviantart.com" };
         public static Artist Melanie_Maier = new Artist { Name = "Melanie Maier", URL = "http://melaniemaier.deviantart.com" };
         public static Artist Melissa_Findley = new Artist { Name = "Melissa Findley", URL = "http://melissafindley.deviantart.com" };
+        public static Artist Michael_Edward_Smith = new Artist { Name = "Michael Edward Smith", URL = "https://www.artstation.com/medsmithart" };
         public static Artist Michael_Komarck = new Artist { Name = "Michael Komarck", URL = "http://www.komarckart.com" };
         public static Artist Michael_Rasmussen = new Artist { Name = "Michael Rasmussen", URL = "http://www.rasmussenillustration.com" };
         public static Artist Michael_Suchanek = new Artist { Name = "Michael Suchánek", URL = "http://www.michalsuchanek.cz" };
