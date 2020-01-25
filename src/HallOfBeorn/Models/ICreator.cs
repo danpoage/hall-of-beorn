@@ -7,6 +7,7 @@ namespace HallOfBeorn.Models
     {
         string Name { get; }
         string SiteUrl { get; }
+        string FeedUrl { get; }
         IEnumerable<ILink> Links();
     }
 }

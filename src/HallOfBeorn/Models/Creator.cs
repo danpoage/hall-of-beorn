@@ -8,10 +8,11 @@ namespace HallOfBeorn.Models
     public class Creator
         : ICreator
     {
-        protected Creator(string name, string url)
+        protected Creator(string name, string siteUrl, string feedUrl)
         {
             Name = name;
-            SiteUrl = url;
+            SiteUrl = siteUrl;
+            FeedUrl = feedUrl;
         }
 
         private readonly List<ILink> links = new List<ILink>();
@@ -28,6 +29,12 @@ namespace HallOfBeorn.Models
         }
 
         public string SiteUrl
+        {
+            get;
+            private set;
+        }
+
+        public string FeedUrl
         {
             get;
             private set;

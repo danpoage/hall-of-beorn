@@ -548,7 +548,7 @@
     <Compile Include="Models\LotR\EncounterCategory.cs" />
     <Compile Include="Models\LotR\EncounterSet.cs" />
     <Compile Include="Models\LotR\ViewModels\CharacterViewModel.cs" />
-    <Compile Include="Models\LotR\ViewModels\ContentSourceViewModel.cs" />
+    <Compile Include="Models\LotR\ViewModels\CreatorViewModel.cs" />
     <Compile Include="Models\LotR\ViewModels\EncounterSetViewModel.cs" />
     <Compile Include="Models\LotR\ErrataVersion.cs" />
     <Compile Include="Models\Language.cs" />

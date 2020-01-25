@@ -12,17 +12,17 @@ namespace HallOfBeorn.Handlers.LotR
     {
         private readonly IContentSourceService sourceService = new ContentSourceService();
 
-        public ContentSourceViewModel HandleCreators(string id)
+        public CreatorViewModel HandleCreators(string id)
         {
             if (string.IsNullOrEmpty(id))
             {
-                return new ContentSourceViewModel(sourceService.AllContentSources());
+                return new CreatorViewModel(sourceService.AllContentSources());
             }
 
             var source = sourceService.GetContentSource(id);
 
             return source != null
-                ? new ContentSourceViewModel(source)
+                ? new CreatorViewModel(source)
                 : null;
         }
     }

@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace HallOfBeorn.Models.LotR.ViewModels
 {
-    public class ContentSourceViewModel
+    public class CreatorViewModel
     {
-        public ContentSourceViewModel(
+        public CreatorViewModel(
             ICreator source)
         {
             this.source = source;
         }
 
-        public ContentSourceViewModel(
+        public CreatorViewModel(
             IEnumerable<ICreator> allSources)
         {
             this.allSources.AddRange(allSources);
@@ -57,6 +57,16 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             {
                 return source != null
                     ? GetPartnerLogoUrl(source)
+                    : string.Empty;
+            }
+        }
+
+        public string CreatorFeedUrl
+        {
+            get
+            {
+                return source != null
+                    ? source.FeedUrl
                     : string.Empty;
             }
         }

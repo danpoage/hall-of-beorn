@@ -9,7 +9,9 @@ namespace HallOfBeorn.Models.LotR.Community.TheGreyCompany
         : Creator
     {
         public TheGreyCompanyCreator()
-            : base("The Grey Company", "http://greycompanypodcast.wordpress.com/")
+            : base("The Grey Company", 
+            "http://greycompanypodcast.wordpress.com/",
+            "https://hallofbeorn-resources.s3.amazonaws.com/Audio/LotR/The-Grey-Company/The-Grey-Company.rss")
         {
             AddLink("00", "Pilot - The Grey Company Arrives", new DateTime(2013, 10, 29));
             AddLink("01", "1 - Outlands", new DateTime(2013, 11, 13));

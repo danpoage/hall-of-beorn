@@ -2,7 +2,7 @@
 @using HallOfBeorn.Models
 @using HallOfBeorn.Models.LotR
 @using HallOfBeorn.Models.LotR.ViewModels
-@model ContentSourceViewModel
+@model CreatorViewModel
 
 @{
     ViewBag.Title = @Model.Name;
@@ -33,6 +33,10 @@
             <img src="@Model.PartnerLogoUrl" />
         </a>
     </p>
+    if (!string.IsNullOrWhiteSpace(@Model.CreatorFeedUrl))
+    {
+        <h3><a href="@Model.CreatorFeedUrl" title="RSS Feed" target="_blank">Feed</a></h3>
+    }
     <h3>Content</h3>
     foreach (var @link in @Model.Links())
     {
