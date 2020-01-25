@@ -7,7 +7,7 @@ namespace HallOfBeorn.Services.LotR.Community
 {
     public interface IContentSourceService
     {
-        IContentSource GetContentSource(string slug);
-        IEnumerable<IContentSource> AllContentSources();
+        ICreator GetContentSource(string slug);
+        IEnumerable<ICreator> AllContentSources();
     }
 }

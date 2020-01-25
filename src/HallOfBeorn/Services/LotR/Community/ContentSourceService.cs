@@ -13,18 +13,18 @@ namespace HallOfBeorn.Services.LotR.Community
     {
         public ContentSourceService()
         {
-            AddContentSource(new TheGreyCompanyContentSource());
+            AddContentSource(new TheGreyCompanyCreator());
         }
 
-        private readonly Dictionary<string, IContentSource> sourcesBySlug 
-            = new Dictionary<string, IContentSource>();
+        private readonly Dictionary<string, ICreator> sourcesBySlug 
+            = new Dictionary<string, ICreator>();
 
-        private void AddContentSource(IContentSource source)
+        private void AddContentSource(ICreator source)
         {
             sourcesBySlug[source.Name.ToSlug()] = source;
         }
 
-        public IContentSource GetContentSource(string slug)
+        public ICreator GetContentSource(string slug)
         {
             return sourcesBySlug.ContainsKey(slug)
                 ? sourcesBySlug[slug]
@@ -32,7 +32,7 @@ namespace HallOfBeorn.Services.LotR.Community
 
         }
 
-        public IEnumerable<IContentSource> AllContentSources()
+        public IEnumerable<ICreator> AllContentSources()
         {
             return sourcesBySlug.Values;
         }

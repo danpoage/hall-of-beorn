@@ -5,13 +5,13 @@ using System.Web;
 
 namespace HallOfBeorn.Models
 {
-    public class ContentSource
-        : IContentSource
+    public class Creator
+        : ICreator
     {
-        protected ContentSource(string name, string url)
+        protected Creator(string name, string url)
         {
             Name = name;
-            Url = url;
+            SiteUrl = url;
         }
 
         private readonly List<ILink> links = new List<ILink>();
@@ -27,7 +27,7 @@ namespace HallOfBeorn.Models
             private set;
         }
 
-        public string Url
+        public string SiteUrl
         {
             get;
             private set;

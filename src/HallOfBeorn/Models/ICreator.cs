@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace HallOfBeorn.Models
 {
-    public interface IContentSource
+    public interface ICreator
     {
         string Name { get; }
-        string Url { get; }
+        string SiteUrl { get; }
         IEnumerable<ILink> Links();
     }
 }

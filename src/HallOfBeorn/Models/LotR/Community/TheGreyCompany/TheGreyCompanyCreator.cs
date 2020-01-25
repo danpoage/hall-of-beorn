@@ -5,10 +5,10 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Community.TheGreyCompany
 {
-    public class TheGreyCompanyContentSource
-        : ContentSource
+    public class TheGreyCompanyCreator
+        : Creator
     {
-        public TheGreyCompanyContentSource()
+        public TheGreyCompanyCreator()
             : base("The Grey Company", "http://greycompanypodcast.wordpress.com/")
         {
             AddLink("00", "Pilot - The Grey Company Arrives", new DateTime(2013, 10, 29));
@@ -50,6 +50,42 @@ namespace HallOfBeorn.Models.LotR.Community.TheGreyCompany
             AddLink("32", "32 - Anniversary Show", new DateTime(2015, 10, 30));
             AddLink("33", "33 - Staples and Sideboards", new DateTime(2015, 12, 3));
             AddLink("34", "34 - Book Club IV - ", new DateTime(2015, 12, 29));
+            AddLink("35", "35 - Luck vs. Skill", new DateTime(2016, 1, 15));
+            AddLink("36", "36 - Angmar Wrapup", new DateTime(2016, 2, 17));
+            AddLink("37", "37 - The Grey Havens", new DateTime(2016, 3, 9));
+            AddLink("38", "38 - Book Club V", new DateTime(2016, 3, 31));
+            AddLink("39", "39 - Alternatives to Staples", new DateTime(2016, 4, 21));
+            AddLink("40", "40 - Stormcaller", new DateTime(2016, 5, 11));
+            AddLink("41", "41 - Benchmarking", new DateTime(2016, 5, 26));
+            AddLink("42", "42 - Book Clun VI", new DateTime(2016, 6, 16));
+            AddLink("43", "43 - Hero Showdown", new DateTime(2016, 7, 8));
+            AddLink("44", "44 - Temple of the Deceived", new DateTime(2016, 7, 29));
+            AddLink("45", "45 - Ally Showdown", new DateTime(2016, 8, 26));
+            AddLink("46", "46 - Book Club VII", new DateTime(2016, 9, 19));
+            AddLink("47", "47 - Power vs Theme", new DateTime(2016, 10, 10));
+            AddLink("48", "48 - Book Club VIII", new DateTime(2016, 11, 16));
+            AddLink("49", "49 - Sands of Harad", new DateTime(2016, 12, 30));
+            AddLink("50", "50 - Deck Doctor", new DateTime(2017, 2, 14));
+            AddLink("51", "51 - Book Club IX", new DateTime(2017, 4, 4));
+            AddLink("52", "52 - Book Club X", new DateTime(2017, 6, 14));
+            AddLink("53", "53 - Book Club XI", new DateTime(2017, 7, 15));
+            AddLink("The-Grey-Company-in-Space", "The Grey Company in Space", new DateTime(2017, 10, 5));
+            AddLink("54", "Book Club XII", new DateTime(2017, 12, 13));
+            AddLink("55", "55 - Book Club XIII", new DateTime(2018, 1, 7));
+            AddLink("56", "56 - Book Club XIV", new DateTime(2018, 1, 26));
+            AddLink("57", "57 - Book Club XV", new DateTime(2018, 2, 14));
+            AddLink("58", "58 - Book Club XVI", new DateTime(2018, 3, 13));
+            AddLink("59", "59 - Book Club XVII - Rabbits and Fish", new DateTime(2018, 5, 21));
+            AddLink("60", "60 - Book Club XVIII - Shelob", new DateTime(2018, 6, 11));
+            AddLink("61", "61 - Book Club XIX - Minas Tirith", new DateTime(2018, 6, 25));
+            AddLink("62", "62 - Book Club XX - To Battle!", new DateTime(2018, 7, 23));
+            AddLink("63", "63 - Book Club XXI - Pyres and Healing", new DateTime(2018, 8, 20));
+            AddLink("64", "64 - Book Club XXII - Debate at the Gate", new DateTime(2018, 9, 3));
+            AddLink("65a", "65a - Tim and Luke of FFI", new DateTime(2018, 10, 15));
+            AddLink("65b", "65b - The Con of the Rings Recap", new DateTime(2018, 10, 22));
+            AddLink("66", "66 - Book Club XXIII - Mount Doom", new DateTime(2018, 11, 14));
+            AddLink("67", "67 - Book Club XXIV - Long live the Halflings!", new DateTime(2019, 1, 17));
+            AddLink("68", "68 - Book Club XXV - The Grey Havens", new DateTime(2018, 5, 7));
         }
 
         private const string urlFormat = 

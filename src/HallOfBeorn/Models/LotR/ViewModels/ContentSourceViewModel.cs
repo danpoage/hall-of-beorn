@@ -6,19 +6,19 @@ namespace HallOfBeorn.Models.LotR.ViewModels
     public class ContentSourceViewModel
     {
         public ContentSourceViewModel(
-            IContentSource source)
+            ICreator source)
         {
             this.source = source;
         }
 
         public ContentSourceViewModel(
-            IEnumerable<IContentSource> allSources)
+            IEnumerable<ICreator> allSources)
         {
             this.allSources.AddRange(allSources);
         }
 
-        private readonly IContentSource source;
-        private readonly List<IContentSource> allSources = new List<IContentSource>();
+        private readonly ICreator source;
+        private readonly List<ICreator> allSources = new List<ICreator>();
 
         private const string partnerLogoFormat
             = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Partners/{0}.jpg";
@@ -35,7 +35,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public bool IsListView { get { return allSources.Count > 0; } }
 
-        private static string GetPartnerLogoUrl(IContentSource source)
+        private static string GetPartnerLogoUrl(ICreator source)
         {
             return
                 string.Format(partnerLogoFormat, source.Name.ToSlug());
@@ -46,7 +46,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             get
             {
                 return source != null
-                    ? source.Url
+                    ? source.SiteUrl
                     : string.Empty;
             }
         }
