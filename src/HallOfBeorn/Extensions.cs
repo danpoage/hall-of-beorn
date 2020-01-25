@@ -50,6 +50,13 @@ namespace HallOfBeorn
             return value.Replace(' ', '+').Replace("!", string.Empty).Replace("?", string.Empty);
         }
 
+        public static string ToSlug(this string value)
+        {
+            return (string.IsNullOrEmpty(value))
+                ? string.Empty
+                : value.Replace(" ", "-");
+        }
+
         public static string ToEnumDisplayString<T>(this T self)
         {
             if (typeof(T) == typeof(Models.NumericOperator))

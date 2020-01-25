@@ -21,7 +21,15 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         
         public string Title { get { return _link.Title; } }
 
-        public string FullTitle { get { return string.Format("{0} - {1}", TypeName, _link.Title); } }
+        public string FullTitle
+        {
+            get
+            {
+                return _link.Type != LinkType.None
+                    ? string.Format("{0} - {1}", TypeName, _link.Title)
+                    : _link.Title;
+            }
+        }
 
         public bool HasThumbnail { get { return !string.IsNullOrWhiteSpace(_link.ThumbnailUrl); } }
 

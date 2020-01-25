@@ -1,0 +1,68 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace HallOfBeorn.Models.LotR.Community.TheGreyCompany
+{
+    public class TheGreyCompanyContentSource
+        : ContentSource
+    {
+        public TheGreyCompanyContentSource()
+            : base("The Grey Company", "http://greycompanypodcast.wordpress.com/")
+        {
+            AddLink("00", "Pilot - The Grey Company Arrives", new DateTime(2013, 10, 29));
+            AddLink("01", "1 - Outlands", new DateTime(2013, 11, 13));
+            AddLink("02", "2 - Deck Building Part One", new DateTime(2013, 11, 27));
+            AddLink("03", "3 - The Morgul Vale", new DateTime(2013, 12, 11));
+            AddLink("04", "4 - Gondor", new DateTime(2013, 12, 31));
+            AddLink("05", "5 - Nightmare Conflict at the Carrock", new DateTime(2014, 1, 24));
+            AddLink("06", "6 - Deck Building Part Two", new DateTime(2014, 2, 17));
+            AddLink("07", "7 - Mitril Loincloth", new DateTime(2014, 3, 13));
+            AddLink("08", "8 - Spirit", new DateTime(2014, 3, 27));
+            AddLink("09", "9 - Keeping the Game Fresh", new DateTime(2014, 4, 22));
+            AddLink("10", "10 - Thematic Decks", new DateTime(2014, 5, 16));
+            AddLink("11a", "11a - The One Deck", new DateTime(2014, 6, 6));
+            AddLink("11b", "11b - Dunland Trap Fire Impressions", new DateTime(2014, 6, 30));
+            AddLink("12", "12 - Common Mistakes", new DateTime(2014, 7, 22));
+            AddLink("13", "13 - Tactics", new DateTime(2014, 8, 12));
+            AddLink("14", "14 - GenCon", new DateTime(2014, 8, 28));
+            AddLink("15a", "15a - Tri-Sphere", new DateTime(2014, 9, 20));
+            AddLink("15b", "15b - Mirkwood Pioneer", new DateTime(2014, 9, 27));
+            AddLink("16", "16 - Roads Darken", new DateTime(2014, 10, 21));
+            AddLink("17", "17 - Rohan", new DateTime(2014, 11, 5));
+            AddLink("18", "18 - Leadership", new DateTime(2014, 11, 21));
+            AddLink("19", "19 - Year in Review 2014", new DateTime(2014, 12, 30));
+            AddLink("20a", "20a - Lore", new DateTime(2015, 1, 16));
+            AddLink("20b", "20b - More Lore", new DateTime(2015, 1, 27));
+            AddLink("21", "21 - Evolution with Matt Newman", new DateTime(2015, 2, 3));
+            AddLink("22", "22 - The Hobbit Special", new DateTime(2015, 2, 27));
+            AddLink("23", "23 - The Core Set", new DateTime(2015, 3, 19));
+            AddLink("24a", "24a - The Lost Realm (Player Cards)", new DateTime(2015, 4, 9));
+            AddLink("24b", "24b - The Lost Realm (Quests)", new DateTime(2015, 5, 13));
+            AddLink("25", "25 - Book Club I - Prologue", new DateTime(2015, 5, 31));
+            AddLink("26", "26 - Helm's Deep", new DateTime(2015, 6, 23));
+            AddLink("27", "27 - Nightmare", new DateTime(2015, 7, 23));
+            AddLink("28", "28 - Caleb Grace (GenCon 2015)", new DateTime(2015, 8, 6));
+            AddLink("29", "29 -Book Club II - Long-expected Shadows", new DateTime(2015, 8, 23));
+            AddLink("30", "30 - Over/Under", new DateTime(2015, 9, 25));
+            AddLink("31", "31 - Book Club III - Three is Company", new DateTime(2015, 10, 14));
+            AddLink("32", "32 - Anniversary Show", new DateTime(2015, 10, 30));
+            AddLink("33", "33 - Staples and Sideboards", new DateTime(2015, 12, 3));
+            AddLink("34", "34 - Book Club IV - ", new DateTime(2015, 12, 29));
+        }
+
+        private const string urlFormat = 
+            "https://hallofbeorn-resources.s3.amazonaws.com/Audio/LotR/The-Grey-Company/{0}.mp3";
+
+        private const string titleFormat =
+            "{0} [{1}]";
+
+        private void AddLink(string episodeNumber, string title, DateTime releaseDate)
+        {
+            var url = string.Format(urlFormat, episodeNumber);
+            var fullTitle = string.Format(titleFormat, title, releaseDate.ToString("MMM dd, yyyy"));
+            AddLink(new Link(LinkType.The_Grey_Company, url, fullTitle));
+        }
+    }
+}

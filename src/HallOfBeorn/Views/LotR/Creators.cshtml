@@ -1,0 +1,43 @@
+﻿@using HallOfBeorn;
+@using HallOfBeorn.Models
+@using HallOfBeorn.Models.LotR
+@using HallOfBeorn.Models.LotR.ViewModels
+@model ContentSourceViewModel
+
+@{
+    ViewBag.Title = @Model.Name;
+}
+
+@if (@Model.IsListView)
+{
+    <h2>@Model.Name</h2>
+    
+    foreach (var @creator in @Model.Creators())
+    {
+        <p>
+            <a href="@creator.Url" title="@creator.FullTitle">
+                <img src="@creator.ThumbnailUrl" height="@creator.ThumbnailHeight" width="@creator.ThumbnailWidth"/>
+            </a>
+        </p>
+    }
+}
+
+@if (!@Model.IsListView)
+{
+    <a href="/LotR/Creators" class="scenario-view-link">Back to Creator List</a>
+    <br />
+    <br />
+    <h2>@Model.Name</h2>
+    <p>
+        <a href="@Model.PartnerUrl" title="@Model.Name" target="_blank">
+            <img src="@Model.PartnerLogoUrl" />
+        </a>
+    </p>
+    <h3>Content</h3>
+    foreach (var @link in @Model.Links())
+    {
+        <p>
+            <a href="@link.Url" title="@link.FullTitle" target="_blank">@link.Title</a>
+        </p>
+    }
+}

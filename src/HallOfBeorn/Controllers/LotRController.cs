@@ -75,6 +75,7 @@ namespace HallOfBeorn.Controllers
                 playerCategoryService, encounterCategoryService, questCategoryService, 
                 ringsDbService, _translationHandler);
 
+            _creatorsHandler = new CreatorsHandler();
         }
 
         private readonly BrowseHandler _browseHandler;
@@ -84,6 +85,7 @@ namespace HallOfBeorn.Controllers
         private readonly ScenariosHandler _scenariosHandler;
         private readonly SearchHandler _searchHandler;
         private readonly TranslationHandler _translationHandler;
+        private readonly CreatorsHandler _creatorsHandler;
 
         private readonly Language defaultLang = Language.EN;
 
@@ -220,6 +222,18 @@ namespace HallOfBeorn.Controllers
                 return RedirectToAction(url);
             }
             
+            return View(model);
+        }
+
+        public ActionResult Creators(string id)
+        {
+            var model = _creatorsHandler.HandleCreators(id);
+
+            if (model == null)
+            {
+                return RedirectToAction("/Creators");
+            }
+
             return View(model);
         }
 

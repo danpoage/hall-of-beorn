@@ -198,6 +198,7 @@
     <Compile Include="Handlers\Digital\SearchHandler.cs" />
     <Compile Include="Handlers\LotR\BrowseHandler.cs" />
     <Compile Include="Handlers\LotR\CharactersHandler.cs" />
+    <Compile Include="Handlers\LotR\CreatorsHandler.cs" />
     <Compile Include="Handlers\LotR\DetailsHandler.cs" />
     <Compile Include="Handlers\LotR\RingsDbHandler.cs" />
     <Compile Include="Handlers\LotR\ScenariosHandler.cs" />
@@ -219,6 +220,7 @@
     <Compile Include="Models\Characters\Things\Orcrist.cs" />
     <Compile Include="Models\Characters\Things\Sting.cs" />
     <Compile Include="Models\Characters\ThranduilCharacter.cs" />
+    <Compile Include="Models\ContentSource.cs" />
     <Compile Include="Models\Digital\AttachmentSlot.cs" />
     <Compile Include="Models\Digital\CardSets\DwalinPack.cs" />
     <Compile Include="Models\Digital\CardSets\EowynPack.cs" />
@@ -375,9 +377,11 @@
     <Compile Include="Models\Characters\TomCottonCharacter.cs" />
     <Compile Include="Models\Characters\TreebeardCharacter.cs" />
     <Compile Include="Models\CharacterThing.cs" />
+    <Compile Include="Models\LotR\Community\TheGreyCompany\TheGreyCompanyContentSource.cs" />
     <Compile Include="Models\LotR\Community\VisionOfThePalantir\PlayerCardAnalysisLink.cs" />
     <Compile Include="Models\LotR\Compact\CardType.cs" />
     <Compile Include="Models\LotR\Compact\Trait.cs" />
+    <Compile Include="Models\IContentSource.cs" />
     <Compile Include="Models\LotR\LayoutType.cs" />
     <Compile Include="Models\LotR\ProductGroups\VengeanceOfMordorProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\EredMithrinProductGroup.cs" />
@@ -544,6 +548,7 @@
     <Compile Include="Models\LotR\EncounterCategory.cs" />
     <Compile Include="Models\LotR\EncounterSet.cs" />
     <Compile Include="Models\LotR\ViewModels\CharacterViewModel.cs" />
+    <Compile Include="Models\LotR\ViewModels\ContentSourceViewModel.cs" />
     <Compile Include="Models\LotR\ViewModels\EncounterSetViewModel.cs" />
     <Compile Include="Models\LotR\ErrataVersion.cs" />
     <Compile Include="Models\Language.cs" />
@@ -923,6 +928,8 @@
     <Compile Include="Services\ICardRepository.cs" />
     <Compile Include="Services\IProductRepository.cs" />
     <Compile Include="Services\ICharacterRepository.cs" />
+    <Compile Include="Services\LotR\Community\ContentSourceService.cs" />
+    <Compile Include="Services\LotR\Community\IContentSourceService.cs" />
     <Compile Include="Services\LotR\Links\ILinkService.cs" />
     <Compile Include="Services\LotR\Links\LinkService.cs" />
     <Compile Include="Services\LotR\LotRCardRepository.cs" />
@@ -1240,6 +1247,7 @@
     <Content Include="Views\Digital\Search.cshtml" />
     <Content Include="Views\Digital\Details.cshtml" />
     <Content Include="Views\Marvel\Search.cshtml" />
+    <Content Include="Views\LotR\Creators.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

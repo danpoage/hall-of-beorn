@@ -67,6 +67,11 @@ namespace HallOfBeorn.Models
                         _thumbnailWidth = defaultThumbnailWidth;
                         _thumbnailHeight = defaultThumbnailHeight;
                         break;
+                    case LinkType.The_Grey_Company:
+                        ThumbnailUrl = string.Format("{0}/The-Grey-Company.jpg", parterBaseUrl);
+                        _thumbnailWidth = defaultThumbnailWidth;
+                        _thumbnailHeight = defaultThumbnailHeight;
+                        break;
                     default:
                         break;
                 }
@@ -133,7 +138,9 @@ namespace HallOfBeorn.Models
 
         private static string getTitle(LinkType type)
         {
-            return type.ToString().Replace('_', ' ');
+            return type != LinkType.None
+                ? type.ToString().Replace('_', ' ')
+                : string.Empty;
         }
 
         private static string getText(LinkType type, ICard card, string title)
