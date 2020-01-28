@@ -10,19 +10,24 @@ namespace HallOfBeorn.Handlers.LotR
 {
     public class CreatorsHandler
     {
-        private readonly IContentSourceService sourceService = new ContentSourceService();
+        public CreatorsHandler(ICreatorService creatorService)
+        {
+            this.creatorService = creatorService;
+        }
+
+        private readonly ICreatorService creatorService;
 
         public CreatorViewModel HandleCreators(string id)
         {
             if (string.IsNullOrEmpty(id))
             {
-                return new CreatorViewModel(sourceService.AllContentSources());
+                return new CreatorViewModel(creatorService.AllCreators());
             }
 
-            var source = sourceService.GetContentSource(id);
+            var creator = creatorService.GetCreator(id);
 
-            return source != null
-                ? new CreatorViewModel(source)
+            return creator != null
+                ? new CreatorViewModel(creator)
                 : null;
         }
     }

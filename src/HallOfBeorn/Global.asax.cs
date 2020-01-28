@@ -10,6 +10,7 @@ using System.Web.Routing;
 using HallOfBeorn.Services;
 using HallOfBeorn.Services.LotR;
 using HallOfBeorn.Services.LotR.Categories;
+using HallOfBeorn.Services.LotR.Community;
 using HallOfBeorn.Services.LotR.Links;
 using HallOfBeorn.Services.LotR.Octgn;
 using HallOfBeorn.Services.LotR.RingsDb;
@@ -48,6 +49,9 @@ namespace HallOfBeorn
             var characterRepository = new CharacterRepository();
             System.Web.HttpContext.Current.Application[LotRServiceNames.CharacterRepository] = characterRepository;
 
+            var creatorService = new CreatorService();
+            System.Web.HttpContext.Current.Application[LotRServiceNames.CreatorService] = creatorService;
+
             var playerCategoryService = new PlayerCategoryService(cardRepository);
             System.Web.HttpContext.Current.Application[LotRServiceNames.PlayerCategoryService] = playerCategoryService;
 
@@ -64,7 +68,7 @@ namespace HallOfBeorn
                 ringsDbService, productRepository, cardRepository);
             System.Web.HttpContext.Current.Application[LotRServiceNames.ScenarioService] = scenarioService;
 
-            var linkService = new LinkService(cardRepository);
+            var linkService = new LinkService(cardRepository, creatorService);
             System.Web.HttpContext.Current.Application[LotRServiceNames.LinkService] = linkService;
 
             var noteService = new NoteService();

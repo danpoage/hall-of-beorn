@@ -5,9 +5,9 @@ using HallOfBeorn.Models;
 
 namespace HallOfBeorn.Services.LotR.Community
 {
-    public interface IContentSourceService
+    public interface ICreatorService
     {
-        ICreator GetContentSource(string slug);
-        IEnumerable<ICreator> AllContentSources();
+        ICreator GetCreator(string slug);
+        IEnumerable<ICreator> AllCreators();
     }
 }

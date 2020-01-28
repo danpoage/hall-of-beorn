@@ -6,18 +6,24 @@ using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.Community.VisionOfThePalantir;
 
+using HallOfBeorn.Services.LotR.Community;
+
 namespace HallOfBeorn.Services.LotR.Links
 {
     public class LinkService
         : ILinkService
     {
-        public LinkService(ICardRepository<LotRCard> cardRepository)
+        public LinkService(ICardRepository<LotRCard> cardRepository,
+            ICreatorService creatorService)
         {
             this.cardRepository = cardRepository;
+            this.creatorService = creatorService;
             Initialize();
         }
 
         private readonly ICardRepository<LotRCard> cardRepository;
+        private readonly ICreatorService creatorService;
+
         private readonly Dictionary<string, List<ILink>> linksBySlug
             = new Dictionary<string, List<ILink>>();
 
@@ -401,9 +407,16 @@ namespace HallOfBeorn.Services.LotR.Links
 
         public IEnumerable<ILink> GetLinks(string slug)
         {
+            var links = new List<ILink>();
+
             if (string.IsNullOrWhiteSpace(slug))
             {
-                return Enumerable.Empty<ILink>();
+                return links;
+            }
+
+            foreach (var creator in creatorService.AllCreators())
+            {
+                links.AddRange(creator.GetLinks(slug));
             }
 
             //Remove the Two Player Limited Edition Starter slug suffix
@@ -428,9 +441,12 @@ namespace HallOfBeorn.Services.LotR.Links
 
             var normalizedSlug = GetNormalizedSlug(slug);
             
-            return linksBySlug.ContainsKey(normalizedSlug) ?
-                linksBySlug[normalizedSlug]
-                : Enumerable.Empty<ILink>();
+            if (linksBySlug.ContainsKey(normalizedSlug))
+            {
+                links.AddRange(linksBySlug[normalizedSlug]);
+            }
+
+            return links;
         }
     }
 }

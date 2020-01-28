@@ -15,11 +15,24 @@ namespace HallOfBeorn.Models
             FeedUrl = feedUrl;
         }
 
-        private readonly List<ILink> links = new List<ILink>();
+        private readonly Dictionary<string, ILink> linksByUrl = new Dictionary<string, ILink>();
+
+        private readonly Dictionary<string, List<string>> urlsByCardSlug 
+            = new Dictionary<string, List<string>>();
 
         protected void AddLink(ILink link)
         {
-            links.Add(link);
+            linksByUrl[link.Url] = link;
+        }
+
+        protected void AssociateCardToUrl(string cardSlug, string url)
+        {
+            if (!urlsByCardSlug.ContainsKey(cardSlug))
+            {
+                urlsByCardSlug[cardSlug] = new List<string>();
+            }
+
+            urlsByCardSlug[cardSlug].Add(url);
         }
 
         public string Name
@@ -42,7 +55,17 @@ namespace HallOfBeorn.Models
 
         public IEnumerable<ILink> Links()
         {
-            return links;
+            return linksByUrl.Values;
+        }
+
+        public IEnumerable<ILink> GetLinks(string cardSlug)
+        {
+            return urlsByCardSlug.ContainsKey(cardSlug)
+                ? urlsByCardSlug[cardSlug]
+                    .Where(url => linksByUrl.ContainsKey(url))
+                    .Select(url => linksByUrl[url])
+                    .Distinct()
+                : new List<ILink>();
         }
     }
 }

@@ -928,8 +928,8 @@
     <Compile Include="Services\ICardRepository.cs" />
     <Compile Include="Services\IProductRepository.cs" />
     <Compile Include="Services\ICharacterRepository.cs" />
-    <Compile Include="Services\LotR\Community\ContentSourceService.cs" />
-    <Compile Include="Services\LotR\Community\IContentSourceService.cs" />
+    <Compile Include="Services\LotR\Community\CreatorService.cs" />
+    <Compile Include="Services\LotR\Community\ICreatorService.cs" />
     <Compile Include="Services\LotR\Links\ILinkService.cs" />
     <Compile Include="Services\LotR\Links\LinkService.cs" />
     <Compile Include="Services\LotR\LotRCardRepository.cs" />
