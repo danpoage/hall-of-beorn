@@ -174,7 +174,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithOppositeTextLine("Forced: At the end of the round, place 1 resource here.")
                 .WithIncludedEncounterSets(EncounterSet.ServantsOfSauron, EncounterSet.UnderGuard)
                 .WithInfo(51, 1, Artist.Drazenka_Kimpel);
-            addQuest("Trying to Blend In", EncounterSet.TheCityOfUlfast, 3, 'A', 15)
+            addQuest("Drawing Attention", EncounterSet.TheCityOfUlfast, 3, 'A', 15)
                 .WithFlavorLine("You've learned that Ulchor seeks an audience with the King of Ulfast, but your attempts to blend in with the locals have backfired: the city guard has been alerted to your presence!")
                 .WithTextLine("When Revealed: Each player must choose: either raise your threat by 5, or City Guard makes an immediate attack against you.")
                 .WithOppositeFlavorLine("You must escape the notice of the city guard if you hope to reach Ulchor.")
