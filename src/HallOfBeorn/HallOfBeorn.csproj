@@ -377,6 +377,7 @@
     <Compile Include="Models\Characters\TomCottonCharacter.cs" />
     <Compile Include="Models\Characters\TreebeardCharacter.cs" />
     <Compile Include="Models\CharacterThing.cs" />
+    <Compile Include="Models\LotR\Community\CardboardOfTheRings\CardboardOfTheRingsCreator.cs" />
     <Compile Include="Models\LotR\Community\TheGreyCompany\TheGreyCompanyCreator.cs" />
     <Compile Include="Models\LotR\Community\VisionOfThePalantir\PlayerCardAnalysisLink.cs" />
     <Compile Include="Models\LotR\Compact\CardType.cs" />
