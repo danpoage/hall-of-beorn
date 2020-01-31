@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OctgnBuilder", "OctgnBuilde
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetBuilder", "SetBuilder\SetBuilder.csproj", "{6A20157E-8AC7-4722-BC09-FE0BBF9F6EB8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RssReader", "RssReader\RssReader.csproj", "{74961FA1-F05C-41D3-8B8F-389F14EB733A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{6A20157E-8AC7-4722-BC09-FE0BBF9F6EB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A20157E-8AC7-4722-BC09-FE0BBF9F6EB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A20157E-8AC7-4722-BC09-FE0BBF9F6EB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74961FA1-F05C-41D3-8B8F-389F14EB733A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74961FA1-F05C-41D3-8B8F-389F14EB733A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74961FA1-F05C-41D3-8B8F-389F14EB733A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74961FA1-F05C-41D3-8B8F-389F14EB733A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

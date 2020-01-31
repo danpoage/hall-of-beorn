@@ -5,6 +5,7 @@ using System.Linq;
 using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.Community.CardboardOfTheRings;
+using HallOfBeorn.Models.LotR.Community.HallOfBeorn;
 using HallOfBeorn.Models.LotR.Community.TheGreyCompany;
 
 namespace HallOfBeorn.Services.LotR.Community
@@ -15,6 +16,7 @@ namespace HallOfBeorn.Services.LotR.Community
         public CreatorService()
         {
             AddCreator(new TheGreyCompanyCreator());
+            AddCreator(new HallOfBeornCreator());
             AddCreator(new CardboardOfTheRingsCreator());
         }
 
