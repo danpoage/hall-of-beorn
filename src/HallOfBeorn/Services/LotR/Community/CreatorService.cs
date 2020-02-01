@@ -5,8 +5,13 @@ using System.Linq;
 using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.Community.CardboardOfTheRings;
+using HallOfBeorn.Models.LotR.Community.CardTalk;
 using HallOfBeorn.Models.LotR.Community.HallOfBeorn;
+using HallOfBeorn.Models.LotR.Community.MasterOfLore;
+using HallOfBeorn.Models.LotR.Community.TalesFromTheCards;
 using HallOfBeorn.Models.LotR.Community.TheGreyCompany;
+using HallOfBeorn.Models.LotR.Community.ThreeIsCompany;
+using HallOfBeorn.Models.LotR.Community.VisionOfThePalantir;
 
 namespace HallOfBeorn.Services.LotR.Community
 {
@@ -15,13 +20,34 @@ namespace HallOfBeorn.Services.LotR.Community
     {
         public CreatorService()
         {
-            AddCreator(new TheGreyCompanyCreator());
-            AddCreator(new HallOfBeornCreator());
-            AddCreator(new CardboardOfTheRingsCreator());
+            AddPodcast(new TheGreyCompanyCreator());
+            AddPodcast(new CardboardOfTheRingsCreator());
+            AddPodcast(new CardTalkCreator());
+            //AddPodcast(new ThreeIsCompanyCreator());
+
+            AddBlog(new TalesFromTheCardsCreator());
+            AddBlog(new HallOfBeornCreator());
+            AddBlog(new MasterOfLoreCreator());
+            AddBlog(new VisionOfThePalantirCreator());
         }
+
+        private readonly List<ICreator> podcasts = new List<ICreator>();
+        private readonly List<ICreator> blogs = new List<ICreator>();
 
         private readonly Dictionary<string, ICreator> creatorsBySlug 
             = new Dictionary<string, ICreator>();
+
+        private void AddPodcast(ICreator creator)
+        {
+            podcasts.Add(creator);
+            AddCreator(creator);
+        }
+
+        private void AddBlog(ICreator creator)
+        {
+            blogs.Add(creator);
+            AddCreator(creator);
+        }
 
         private void AddCreator(ICreator creator)
         {
@@ -36,9 +62,19 @@ namespace HallOfBeorn.Services.LotR.Community
 
         }
 
-        public IEnumerable<ICreator> AllCreators()
+        public IEnumerable<ICreator> Creators()
         {
             return creatorsBySlug.Values;
+        }
+
+        public IEnumerable<ICreator> Podcasts()
+        {
+            return podcasts;
+        }
+
+        public IEnumerable<ICreator> Blogs()
+        {
+            return blogs;
         }
     }
 }

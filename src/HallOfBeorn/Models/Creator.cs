@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models
             FeedUrl = feedUrl;
         }
 
+        private readonly List<ILink> allLinks = new List<ILink>();
         private readonly Dictionary<string, ILink> linksByUrl = new Dictionary<string, ILink>();
 
         private readonly Dictionary<string, List<string>> urlsByCardSlug 
@@ -22,7 +23,17 @@ namespace HallOfBeorn.Models
 
         protected void AddLink(ILink link)
         {
-            linksByUrl[link.Url] = link;
+            allLinks.Add(link);
+
+            if (!string.IsNullOrWhiteSpace(link.Url))
+            {
+                linksByUrl[link.Url] = link;
+            }
+        }
+
+        protected void AddYear(int year)
+        {
+            AddLink(new Link(LinkType.None, string.Empty, year.ToString()));
         }
 
         protected void AssociateCardToUrl(string cardSlug, string url)
@@ -55,7 +66,7 @@ namespace HallOfBeorn.Models
 
         public IEnumerable<ILink> Links()
         {
-            return linksByUrl.Values;
+            return allLinks;
         }
 
         public IEnumerable<ILink> GetLinks(string cardSlug)

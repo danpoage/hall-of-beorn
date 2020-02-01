@@ -1,48 +1,53 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
+using System.IO;
 
 namespace RssReader
 {
     public class Program
     {
-        public static int Main(string[] args)
+        public static void Main(string[] args)
         {
-            var path = args.Length > 0
+            var urlFormat = args.Length > 0
                 ? args[0]
-                : "C:\\Users\\Dan\\My Documents\\Cardboard-of-the-Rings.rss";
+                : "https://masteroflore.wordpress.com/feed?paged={0}";
+                //"https://visionofthepalantir.com/feed/?paged={0}";
+                //"https://talesfromthecards.wordpress.com/feed?paged={0}";
+                //"https://hallofbeorn.wordpress.com/feed?paged={0}";
 
-            XmlDocument doc = new XmlDocument();
-            doc.Load(path);
+            var pathFormat = args.Length > 1
+                ? args[1]
+                : ".\\Master-of-Lore{0}.rss";
+                //"Vision-of-the-Palantir{0}.rss";
+                //".\\Tales-from-the-Cards{0}.rss";
+                //".\\Hall-of-Beorn{0}.rss";
 
-            const string lineFormat = "            AddLink(\"{0}\", \"{1}\", \"{2}\", \"{3}\");";
+            var downloader = new FileDownloader();
+            var reader = new XmlReader();
 
-            var items = doc.SelectNodes("/rss/channel/item");
-            foreach (XmlNode itemNode in items)
+            var page = 1;
+            var url = string.Empty;
+            var path = string.Empty;
+
+            while (true)
             {
-                var title = itemNode.SelectSingleNode("title").InnerText;
-                var titleParts = title.Split(':');
-                if (titleParts.Length < 2)
+                url = string.Format(urlFormat, page);
+                path = string.Format(pathFormat, page);
+
+                if (!downloader.FileExists(path))
                 {
-                    continue;
+                    if (!downloader.DownloadFile(url, path))
+                    {
+                        return;
+                    }
                 }
 
-                var number = titleParts[0].Replace("Episode ", string.Empty).Trim();
-                var name = titleParts[1].Trim();
+                if (!reader.ProcessRss(path))
+                {
+                    return;
+                }
 
-                var url = itemNode.SelectSingleNode("enclosure").Attributes["url"].Value;
-
-                var pubDate = itemNode.SelectSingleNode("pubDate").InnerText;
-
-                Console.WriteLine(
-                    string.Format(lineFormat, number, name, url, pubDate)
-                    );
+                page++;
             }
-
-            return 0;
         }
     }
 }

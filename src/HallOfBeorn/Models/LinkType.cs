@@ -18,7 +18,7 @@ namespace HallOfBeorn.Models
         Beorn__s_Path,
         Tales_from_the_Cards,
         
-        Cardboard_of_Rings,
+        Cardboard_of_the_Rings,
 
         The_Hive_Tyrant,
         The_Progression_Series,

@@ -21,7 +21,9 @@ namespace HallOfBeorn.Handlers.LotR
         {
             if (string.IsNullOrEmpty(id))
             {
-                return new CreatorViewModel(creatorService.AllCreators());
+                return new CreatorViewModel(
+                    creatorService.Podcasts(), 
+                    creatorService.Blogs());
             }
 
             var creator = creatorService.GetCreator(id);

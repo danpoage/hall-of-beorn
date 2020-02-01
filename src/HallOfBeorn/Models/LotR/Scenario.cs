@@ -77,7 +77,7 @@ namespace HallOfBeorn.Models.LotR
 
         protected void AddCardboardOfTheRingsLink(string url, string title, string thumbnailUrl)
         {
-            AddPlayLink(LinkType.Cardboard_of_Rings, url, title, thumbnailUrl);
+            AddPlayLink(LinkType.Cardboard_of_the_Rings, url, title, thumbnailUrl);
         }
 
         protected void AddLotRDeckTechLink(string title, string videoId)

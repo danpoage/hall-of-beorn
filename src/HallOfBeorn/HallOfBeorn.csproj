@@ -378,9 +378,14 @@
     <Compile Include="Models\Characters\TreebeardCharacter.cs" />
     <Compile Include="Models\CharacterThing.cs" />
     <Compile Include="Models\LotR\Community\CardboardOfTheRings\CardboardOfTheRingsCreator.cs" />
+    <Compile Include="Models\LotR\Community\CardTalk\CardTalkCreator.cs" />
     <Compile Include="Models\LotR\Community\HallOfBeorn\HallOfBeornCreator.cs" />
+    <Compile Include="Models\LotR\Community\MasterOfLore\MasterOfLoreCreator.cs" />
+    <Compile Include="Models\LotR\Community\TalesFromTheCards\TalesFromTheCardsCreator.cs" />
     <Compile Include="Models\LotR\Community\TheGreyCompany\TheGreyCompanyCreator.cs" />
+    <Compile Include="Models\LotR\Community\ThreeIsCompany\ThreeIsCompanyCreator.cs" />
     <Compile Include="Models\LotR\Community\VisionOfThePalantir\PlayerCardAnalysisLink.cs" />
+    <Compile Include="Models\LotR\Community\VisionOfThePalantir\VisionOfThePalantirCreator.cs" />
     <Compile Include="Models\LotR\Compact\CardType.cs" />
     <Compile Include="Models\LotR\Compact\Trait.cs" />
     <Compile Include="Models\ICreator.cs" />
@@ -1155,6 +1160,7 @@
     <Content Include="Images\Patreon.png" />
     <Content Include="Images\plus.png" />
     <Content Include="Images\RingsDB.jpg" />
+    <Content Include="Images\rss.png" />
     <Content Include="Images\sailing-success.png" />
     <Content Include="Images\ShadowDivider.png" />
     <Content Include="Images\Spirit-med.png" />

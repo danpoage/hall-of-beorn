@@ -10,15 +10,25 @@
 
 @if (@Model.IsListView)
 {
-    <h2>@Model.Name</h2>
-    
-    foreach (var @creator in @Model.Creators())
+    <h2>Podcasts</h2>
+    foreach (var @podcast in @Model.Podcasts())
     {
         <div style="display: inline-block; margin: 4px;">
-            <a href="@creator.Url" title="@creator.FullTitle">
-                <img src="@creator.ThumbnailUrl" height="@creator.ThumbnailHeight" width="@creator.ThumbnailWidth"/>
+            <a href="@podcast.Url" title="@podcast.FullTitle">
+                <img src="@podcast.ThumbnailUrl" height="@podcast.ThumbnailHeight" width="@podcast.ThumbnailWidth"/>
             </a>
-            <p style="text-align:center">@creator.FullTitle</p>
+            <p style="text-align:center">@podcast.FullTitle</p>
+        </div>
+    }
+    
+    <h2>Blogs</h2>
+    foreach (var @blog in @Model.Blogs())
+    {
+        <div style="display: inline-block; margin: 4px;">
+            <a href="@blog.Url" title="@blog.FullTitle">
+                <img src="@blog.ThumbnailUrl" height="@blog.ThumbnailHeight" width="@blog.ThumbnailWidth"/>
+            </a>
+            <p style="text-align:center">@blog.FullTitle</p>
         </div>
     }
 }
@@ -26,23 +36,28 @@
 @if (!@Model.IsListView)
 {
     <a href="/LotR/Creators" class="scenario-view-link">Back to Creator List</a>
-    <br />
-    <br />
-    <h2>@Model.Name</h2>
-    <p>
-        <a href="@Model.PartnerUrl" title="@Model.Name" target="_blank">
-            <img src="@Model.PartnerLogoUrl" />
-        </a>
-    </p>
-    if (!string.IsNullOrWhiteSpace(@Model.CreatorFeedUrl))
-    {
-        <h3><a href="@Model.CreatorFeedUrl" title="RSS Feed" target="_blank">Feed</a></h3>
-    }
-    <h3>Content</h3>
+    <h2 style="margin-bottom:6px;">
+        <a href="@Model.PartnerUrl" title="@Model.Name" target="_blank">@Model.Name</a> 
+        @if (!string.IsNullOrWhiteSpace(@Model.CreatorFeedUrl))
+        {
+            <a href="@Model.CreatorFeedUrl" title="RSS Feed" target="_blank" style="padding-top:9px;">
+                <img src="/Images/rss.png" />
+            </a>
+        }
+    </h2>
+    
+    <a href="@Model.PartnerUrl" title="@Model.Name" target="_blank">
+        <img src="@Model.PartnerLogoUrl" style="margin:3px;"/>
+    </a>
+
     foreach (var @link in @Model.Links())
     {
-        <p>
-            <a href="@link.Url" title="@link.FullTitle" target="_blank">@link.Title</a>
-        </p>
+        if (!string.IsNullOrWhiteSpace(@link.Url))
+        {
+            <p><a href="@link.Url" title="@link.FullTitle" target="_blank">@link.Title</a></p>
+        } else {
+            <br />
+            <h3>@link.Title</h3>
+        }
     }
 }

@@ -52,8 +52,28 @@ namespace HallOfBeorn.Models
             {
                 switch (type)
                 {
+                    case LinkType.The_Grey_Company:
+                        ThumbnailUrl = string.Format("{0}/The-Grey-Company.jpg", parterBaseUrl);
+                        _thumbnailWidth = defaultThumbnailWidth;
+                        _thumbnailHeight = defaultThumbnailHeight;
+                        break;
+                    case LinkType.Cardboard_of_the_Rings:
+                        ThumbnailUrl = string.Format("{0}/Cardboard-of-the-Rings.jpg", parterBaseUrl);
+                        _thumbnailWidth = defaultThumbnailWidth;
+                        _thumbnailHeight = defaultThumbnailHeight;
+                        break;
                     case LinkType.Card_Talk:
                         ThumbnailUrl = string.Format("{0}/Card-Talk.jpg", parterBaseUrl);
+                        _thumbnailWidth = defaultThumbnailWidth;
+                        _thumbnailHeight = defaultThumbnailHeight;
+                        break;
+                    case LinkType.Tales_from_the_Cards:
+                        ThumbnailUrl = string.Format("{0}/Tales-from-the-Cards.jpg", parterBaseUrl);
+                        _thumbnailWidth = defaultThumbnailWidth;
+                        _thumbnailHeight = defaultThumbnailHeight;
+                        break;
+                    case LinkType.Master_of_Lore:
+                        ThumbnailUrl = string.Format("{0}/Master-of-Lore.jpg", parterBaseUrl);
                         _thumbnailWidth = defaultThumbnailWidth;
                         _thumbnailHeight = defaultThumbnailHeight;
                         break;
@@ -67,17 +87,10 @@ namespace HallOfBeorn.Models
                         _thumbnailWidth = defaultThumbnailWidth;
                         _thumbnailHeight = defaultThumbnailHeight;
                         break;
-                    case LinkType.The_Grey_Company:
-                        ThumbnailUrl = string.Format("{0}/The-Grey-Company.jpg", parterBaseUrl);
-                        _thumbnailWidth = defaultThumbnailWidth;
-                        _thumbnailHeight = defaultThumbnailHeight;
-                        break;
                     default:
                         break;
                 }
             }
-            
-            
         }
 
         private const string defaltLanguage = "en";

@@ -9,16 +9,23 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             ICreator source)
         {
             this.source = source;
+
+            IsListView = false;
         }
 
         public CreatorViewModel(
-            IEnumerable<ICreator> allSources)
+            IEnumerable<ICreator> podcasts,
+            IEnumerable<ICreator> blogs)
         {
-            this.allSources.AddRange(allSources);
+            this.podcasts.AddRange(podcasts);
+            this.blogs.AddRange(blogs);
+
+            IsListView = true;
         }
 
         private readonly ICreator source;
-        private readonly List<ICreator> allSources = new List<ICreator>();
+        private readonly List<ICreator> podcasts = new List<ICreator>();
+        private readonly List<ICreator> blogs = new List<ICreator>();
 
         private const string partnerLogoFormat
             = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Partners/{0}.jpg";
@@ -33,7 +40,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             } 
         }
 
-        public bool IsListView { get { return allSources.Count > 0; } }
+        public bool IsListView { get; private set; }
 
         private static string GetPartnerLogoUrl(ICreator source)
         {
@@ -82,16 +89,27 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             }
         }
 
-        public IEnumerable<LinkViewModel> Creators()
+        private IEnumerable<LinkViewModel> GetCreatorLinks(
+            IEnumerable<ICreator> creators)
         {
-            foreach (var source in allSources)
+            foreach (var creator in creators)
             {
-                var url = "/LotR/Creators/" + source.Name.ToSlug();
+                var url = "/LotR/Creators/" + creator.Name.ToSlug();
 
                 yield return new LinkViewModel(
-                    new Link(LinkType.None, url, source.Name, GetPartnerLogoUrl(source))
+                    new Link(LinkType.None, url, creator.Name, GetPartnerLogoUrl(creator))
                 );
             }
+        }
+
+        public IEnumerable<LinkViewModel> Podcasts()
+        {
+            return GetCreatorLinks(podcasts);
+        }
+
+        public IEnumerable<LinkViewModel> Blogs()
+        {
+            return GetCreatorLinks(blogs);
         }
     }
 }

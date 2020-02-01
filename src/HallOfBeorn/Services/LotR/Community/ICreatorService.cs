@@ -8,6 +8,8 @@ namespace HallOfBeorn.Services.LotR.Community
     public interface ICreatorService
     {
         ICreator GetCreator(string slug);
-        IEnumerable<ICreator> AllCreators();
+        IEnumerable<ICreator> Creators();
+        IEnumerable<ICreator> Podcasts();
+        IEnumerable<ICreator> Blogs();
     }
 }

@@ -13,7 +13,10 @@ namespace HallOfBeorn.Models.LotR.Community.CardboardOfTheRings
             "https://cardboardoftherings.com",
             "http://cotr.libsyn.com/rss")
         {
+            AddYear(2020);
             AddLink("158", "Ugly Shaggy Hair", "http://traffic.libsyn.com/cotr/Episode_158_-_Ugly_Shaggy_Hair.mp3?dest-id=66353", "Sat, 25 Jan 2020 01:50:28 +0000");
+
+            AddYear(2019);
             AddLink("157", "A Noble Gift", "http://traffic.libsyn.com/cotr/Episode_157_-_A_Noble_Gift.mp3?dest-id=66353", "Sun, 22 Dec 2019 18:32:43 +0000");
             AddLink("156", "Formula One Hero", "http://traffic.libsyn.com/cotr/Episode_156_-_QC.mp3?dest-id=66353", "Mon, 09 Dec 2019 22:01:06 +0000");
             AddLink("155", "Wormtongue", "http://traffic.libsyn.com/cotr/Episode_155_-_wormtongue.mp3?dest-id=66353", "Thu, 21 Nov 2019 12:04:26 +0000");
@@ -30,6 +33,8 @@ namespace HallOfBeorn.Models.LotR.Community.CardboardOfTheRings
             AddLink("144", "Rada-guest's decks of many colors", "http://traffic.libsyn.com/cotr/Episode_144_Radaguest.mp3?dest-id=66353", "Sat, 09 Mar 2019 13:18:58 +0000");
             AddLink("143", "Thorny Finger", "http://traffic.libsyn.com/cotr/Episode_143_-_Thorny_Finger.mp3?dest-id=66353", "Wed, 13 Feb 2019 23:31:27 +0000");
             AddLink("142", "Beardagorn", "http://traffic.libsyn.com/cotr/Episode_142_-_Beardagorn.mp3?dest-id=66353", "Tue, 22 Jan 2019 17:49:07 +0000");
+
+            AddYear(2018);
             AddLink("141", "Drinking Song", "http://traffic.libsyn.com/cotr/Episode_141_Drinking_Song.mp3?dest-id=66353", "Fri, 21 Dec 2018 01:22:22 +0000");
             AddLink("140", "Fatty is Basically a Treachery", "http://traffic.libsyn.com/cotr/Episode_140_-_FattyTreachery.mp3?dest-id=66353", "Mon, 26 Nov 2018 16:45:42 +0000");
             AddLink("139.5", "Brosie Con-tton", "http://traffic.libsyn.com/cotr/Episode_139-5_-_Brosie_Con-tton.mp3?dest-id=66353", "Sun, 04 Nov 2018 14:39:02 +0000");
@@ -48,6 +53,8 @@ namespace HallOfBeorn.Models.LotR.Community.CardboardOfTheRings
             AddLink("129", "Shadow of the Past Year", "http://traffic.libsyn.com/cotr/Episode_129-ShadowofthePastYear.mp3?dest-id=66353", "Wed, 28 Feb 2018 14:05:23 +0000");
             AddLink("128", "The Nightmare After Christmas", "http://traffic.libsyn.com/cotr/Episode_128_-_The_Nightmare_After_Christmas.mp3?dest-id=66353", "Mon, 29 Jan 2018 18:21:10 +0000");
             AddLink("127", "Lore of Rhovanion", "http://traffic.libsyn.com/cotr/Episode_127_-_Working_Edit.mp3?dest-id=66353", "Tue, 16 Jan 2018 18:31:44 +0000");
+
+            AddYear(2017);
             AddLink("126", "Keyboard of the Rings", "http://traffic.libsyn.com/cotr/Episode_126_-_Keyboard_of_the_Rings.mp3?dest-id=66353", "Wed, 20 Dec 2017 01:48:51 +0000");
             AddLink("125", "ShadowFAQs", "http://traffic.libsyn.com/cotr/Episode_125_-_ShadowFAQs.mp3?dest-id=66353", "Fri, 01 Dec 2017 13:56:28 +0000");
             AddLink("124", "Don't ignore Denethor", "http://traffic.libsyn.com/cotr/Episode_124_-_Dont_Ignore_Denethor.mp3?dest-id=66353", "Wed, 22 Nov 2017 16:32:48 +0000");
@@ -64,6 +71,8 @@ namespace HallOfBeorn.Models.LotR.Community.CardboardOfTheRings
             AddLink("114", "Boromir, Erector, Galaxies", "http://traffic.libsyn.com/cotr/Epiosde_114_-_Boromir_Erector_Galaxies.mp3?dest-id=66353", "Sat, 18 Mar 2017 01:17:21 +0000");
             AddLink("112", "Lasagna Hog", "http://traffic.libsyn.com/cotr/FIXED_Episode_112_-_Lasagna_Hog.mp3?dest-id=66353", "Mon, 06 Feb 2017 05:03:55 +0000");
             AddLink("111", "The Truth about Tauriel", "http://traffic.libsyn.com/cotr/Ep111_-_The_Truth_about_Tauriel.mp3?dest-id=66353", "Wed, 04 Jan 2017 23:29:36 +0000");
+
+            AddYear(2016);
             AddLink("110", "Socks Off", "http://traffic.libsyn.com/cotr/Episode_110_-_Socks_off.mp3?dest-id=66353", "Wed, 28 Dec 2016 22:46:41 +0000");
             AddLink("109", "Man with a Gun", "http://traffic.libsyn.com/cotr/Episode_109_-_Man_With_a_Gun.mp3?dest-id=66353", "Tue, 29 Nov 2016 16:10:30 +0000");
             AddLink("108", "Mom's Spaghetti", "http://traffic.libsyn.com/cotr/Ep_108_-_Moms_Spaghetti.mp3?dest-id=66353", "Thu, 03 Nov 2016 13:25:02 +0000");
@@ -85,6 +94,8 @@ namespace HallOfBeorn.Models.LotR.Community.CardboardOfTheRings
             AddLink("94", "Coral", "http://traffic.libsyn.com/cotr/EP_94_-_Coral.mp3?dest-id=66353", "Sat, 13 Feb 2016 06:12:23 +0000");
             AddLink("9X", "Chitty Games", "http://traffic.libsyn.com/cotr/Ep_9X_-_Chitty_Games.mp3?dest-id=66353", "Wed, 03 Feb 2016 00:24:29 +0000");
             AddLink("93", "Cloak Rag", "http://traffic.libsyn.com/cotr/Episode_94_-_Cloak_Rag.mp3?dest-id=66353", "Sun, 10 Jan 2016 17:49:11 +0000");
+
+            AddYear(2015);
             AddLink("92", "Martian Shield", "http://traffic.libsyn.com/cotr/Episode_92_-_Martian_Shield.mp3?dest-id=66353", "Thu, 17 Dec 2015 01:47:15 +0000");
             AddLink("91", "Nautical Nautilus", "http://traffic.libsyn.com/cotr/Ep_91_Nautical_Nautilus.mp3?dest-id=66353", "Sat, 28 Nov 2015 02:15:18 +0000");
             AddLink("91", "Lorenaissance", "http://traffic.libsyn.com/cotr/Ep_90_-_Lorenaissance.mp3?dest-id=66353", "Thu, 05 Nov 2015 21:18:23 +0000");
@@ -105,6 +116,8 @@ namespace HallOfBeorn.Models.LotR.Community.CardboardOfTheRings
             AddLink("75", "Theoden Butter", "http://traffic.libsyn.com/cotr/Episode_75_-_Theoden_Butter.mp3?dest-id=66353", "Fri, 13 Feb 2015 04:39:30 +0000");
             AddLink("74", "Morgul Dolphin", "http://traffic.libsyn.com/cotr/Episode_74_-_Morgul_Dolphin.mp3?dest-id=66353", "Sun, 01 Feb 2015 02:14:06 +0000");
             AddLink("73", "My Neighbor Randalf My Neighbor Randalf", "http://traffic.libsyn.com/cotr/Episode_73_-_My_Neighbor_Randalf_My_Neighbor_Randalf.mp3?dest-id=66353", "Tue, 20 Jan 2015 01:12:17 +0000");
+
+            AddYear(2014);
             AddLink("72", "Higher", "http://traffic.libsyn.com/cotr/Episode_72_-_Higher.mp3?dest-id=66353", "Sat, 27 Dec 2014 03:54:22 +0000");
             AddLink("71", "Bike Spokes", "http://traffic.libsyn.com/cotr/Episode_71_-_Bike_Spokes.mp3?dest-id=66353", "Thu, 18 Dec 2014 02:32:45 +0000");
             AddLink("70", "Look at the Rope", "http://traffic.libsyn.com/cotr/Episode_70_-_Look_at_the_Rope.mp3?dest-id=66353", "Mon, 24 Nov 2014 00:54:01 +0000");
@@ -124,6 +137,8 @@ namespace HallOfBeorn.Models.LotR.Community.CardboardOfTheRings
             AddLink("56", "I Love Secrecy", "http://traffic.libsyn.com/cotr/Episode_56_-_I_Love_Secrecy.mp3?dest-id=66353", "Fri, 14 Feb 2014 13:21:40 +0000");
             AddLink("55", "See it to Believe", "http://traffic.libsyn.com/cotr/Episode_55_-_See_it_to_Believe.mp3?dest-id=66353", "Tue, 14 Jan 2014 04:31:36 +0000");
             AddLink("54", "Dwarven Jerk", "http://traffic.libsyn.com/cotr/Episode_54_-_See_it_to_Believe.mp3?dest-id=66353", "Mon, 13 Jan 2014 03:55:40 +0000");
+
+            AddYear(2013);
             AddLink("53", "Laugh Track", "http://traffic.libsyn.com/cotr/Episode_53_-_Laugh_Track.mp3?dest-id=66353", "Wed, 04 Dec 2013 03:33:10 +0000");
             AddLink("52", "Two Sides to Every Hero", "http://traffic.libsyn.com/cotr/Episode_52_-_Two_Sides_to_Every_Hero.mp3?dest-id=66353", "Sun, 10 Nov 2013 13:50:59 +0000");
             AddLink("51", "It's a B+", "http://traffic.libsyn.com/cotr/Episode_51_-_Its_a_B.mp3?dest-id=66353", "Tue, 15 Oct 2013 11:59:24 +0000");
@@ -140,6 +155,8 @@ namespace HallOfBeorn.Models.LotR.Community.CardboardOfTheRings
             AddLink("41", "The Three Hunters", "http://traffic.libsyn.com/cotr/Episode_41_-_The_Three_Hunters.mp3?dest-id=66353", "Tue, 12 Mar 2013 16:50:30 +0000");
             AddLink("40", "The Podcast Anniversary", "http://traffic.libsyn.com/cotr/Episode_40_-_The_Podcast_Anniversary.mp3?dest-id=66353", "Mon, 18 Feb 2013 04:10:14 +0000");
             AddLink("39", "Spideresque", "http://traffic.libsyn.com/cotr/Episode_39_-_Spideresque.mp3?dest-id=66353", "Sat, 19 Jan 2013 21:06:54 +0000");
+
+            AddYear(2012);
             AddLink("38", "Mirror of Galadriel", "http://traffic.libsyn.com/cotr/Episode_38_-_Mirror_of_Galadriel.mp3?dest-id=66353", "Sun, 30 Dec 2012 03:49:06 +0000");
             AddLink("37", "Double Deluxe", "http://traffic.libsyn.com/cotr/Episode_37_-_Double_Deluxe.mp3?dest-id=66353", "Tue, 04 Dec 2012 19:38:04 +0000");
             AddLink("36", "Spoiler Alert!", "http://traffic.libsyn.com/cotr/Episode_36_-_Spoiler_Alert.mp3?dest-id=66353", "Wed, 21 Nov 2012 03:22:02 +0000");
@@ -156,12 +173,14 @@ namespace HallOfBeorn.Models.LotR.Community.CardboardOfTheRings
             AddLink("25", "Ladies Love", "http://traffic.libsyn.com/cotr/Episode_25_-_Ladies_Love.mp3?dest-id=66353", "Sun, 06 May 2012 14:26:21 +0000");
             AddLink("24", "We're All Out Of Chicken", "http://traffic.libsyn.com/cotr/Episode_24_-_Were_All_Out_Of_Chicken.mp3?dest-id=66353", "Mon, 23 Apr 2012 00:38:46 +0000");
             AddLink("23", "Gorn Hole", "http://traffic.libsyn.com/cotr/Episode_23_-_Gorn_Hole.mp3?dest-id=66353", "Mon, 02 Apr 2012 22:31:43 +0000");
-            AddLink("Ep 22", "They're Taking the Hobbits to Isengard", "http://traffic.libsyn.com/cotr/Ep_22_-_.mp3?dest-id=66353", "Mon, 19 Mar 2012 02:17:17 +0000");
+            AddLink("22", "They're Taking the Hobbits to Isengard", "http://traffic.libsyn.com/cotr/Ep_22_-_.mp3?dest-id=66353", "Mon, 19 Mar 2012 02:17:17 +0000");
             AddLink("21", "Medulla Oblongoblin", "http://traffic.libsyn.com/cotr/Episode_21_-_Medulla_Oblongoblin.mp3?dest-id=66353", "Fri, 02 Mar 2012 23:11:35 +0000");
             AddLink("20", "Goblin Flavour", "http://traffic.libsyn.com/cotr/Episode_20_-_Goblin_Flavour.mp3?dest-id=66353", "Mon, 20 Feb 2012 22:01:23 +0000");
             AddLink("19", "Thunder from Down Under", "http://traffic.libsyn.com/cotr/Episode_19_-_Thunder_from_Down_Under.mp3?dest-id=66353", "Mon, 06 Feb 2012 02:42:56 +0000");
             AddLink("18", "Insane in the MemDain (Insane in the Dain)", "http://traffic.libsyn.com/cotr/Episode_18_-_Insane_in_the_MemDain_Insane_in_the_Dain.mp3?dest-id=66353", "Sat, 21 Jan 2012 23:31:22 +0000");
             AddLink("17", "Shadowing Mirkwood", "http://traffic.libsyn.com/cotr/Episode_17_-_Shadowing_Mirkwood.mp3?dest-id=66353", "Mon, 09 Jan 2012 19:49:00 +0000");
+            
+            AddYear(2011);
             AddLink("16.5", "Boromir Gets Fresh", "http://traffic.libsyn.com/cotr/Episode_16.5_-_Boromir_Gets_Fresh.mp3?dest-id=66353", "Thu, 29 Dec 2011 03:49:09 +0000");
             AddLink("16", "10th Nazgul and a Dorito", "http://traffic.libsyn.com/cotr/Episode_16_-_10th_Nazgul_and_a_Dorito.mp3?dest-id=66353", "Fri, 16 Dec 2011 21:53:32 +0000");
             AddLink("15", "Not a Dwarf", "http://traffic.libsyn.com/cotr/Episode_15_-_Not_a_Dwarf.mp3?dest-id=66353", "Mon, 05 Dec 2011 02:08:37 +0000");
@@ -196,7 +215,7 @@ namespace HallOfBeorn.Models.LotR.Community.CardboardOfTheRings
         {
             var releaseDate = DateTime.Parse(releaseDateString);
             var fullTitle = string.Format(titleFormat, episodeNumber, title, releaseDate.ToString(dateFormat));
-            AddLink(new Link(LinkType.Cardboard_of_Rings, url, fullTitle));
+            AddLink(new Link(LinkType.Cardboard_of_the_Rings, url, fullTitle));
         }
     }
 }
