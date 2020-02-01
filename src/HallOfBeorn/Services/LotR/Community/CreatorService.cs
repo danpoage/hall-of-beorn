@@ -23,7 +23,7 @@ namespace HallOfBeorn.Services.LotR.Community
             AddPodcast(new TheGreyCompanyCreator());
             AddPodcast(new CardboardOfTheRingsCreator());
             AddPodcast(new CardTalkCreator());
-            //AddPodcast(new ThreeIsCompanyCreator());
+            AddPodcast(new ThreeIsCompanyCreator());
 
             AddBlog(new TalesFromTheCardsCreator());
             AddBlog(new HallOfBeornCreator());

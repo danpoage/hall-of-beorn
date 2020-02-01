@@ -67,6 +67,11 @@ namespace HallOfBeorn.Models
                         _thumbnailWidth = defaultThumbnailWidth;
                         _thumbnailHeight = defaultThumbnailHeight;
                         break;
+                    case LinkType.Three_is_Company:
+                        ThumbnailUrl = string.Format("{0}/Three-is-Company.jpg", parterBaseUrl);
+                        _thumbnailWidth = defaultThumbnailWidth;
+                        _thumbnailHeight = defaultThumbnailHeight;
+                        break;
                     case LinkType.Tales_from_the_Cards:
                         ThumbnailUrl = string.Format("{0}/Tales-from-the-Cards.jpg", parterBaseUrl);
                         _thumbnailWidth = defaultThumbnailWidth;

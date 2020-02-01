@@ -19,6 +19,7 @@ namespace HallOfBeorn.Models
         Tales_from_the_Cards,
         
         Cardboard_of_the_Rings,
+        Three_is_Company,
 
         The_Hive_Tyrant,
         The_Progression_Series,
