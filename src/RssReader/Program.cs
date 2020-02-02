@@ -7,6 +7,36 @@ namespace RssReader
     {
         public static void Main(string[] args)
         {
+            var downloader = new FileDownloader();
+            var podcastReader = new PodcastRssReader();
+            var ytReader = new YouTubeRssReader();
+
+            var url = string.Empty;
+            var path = string.Empty;
+
+            var isSingleFeed = true;
+            if (isSingleFeed)
+            {
+                url = "https://www.youtube.com/feeds/videos.xml?channel_id=UCUgU6nIpwNlADThJKEDV3Pg";
+                path = ".\\Book-of-Elessar.rss";
+
+                if (!downloader.FileExists(path))
+                {
+                    if (!downloader.DownloadFile(url, path))
+                    {
+                        return;
+                    }
+                }
+
+                if (!ytReader.ProcessRss(path))
+                {
+                    return;
+                }
+
+                return;
+            }
+
+
             var urlFormat = args.Length > 0
                 ? args[0]
                 : "https://masteroflore.wordpress.com/feed?paged={0}";
@@ -21,12 +51,7 @@ namespace RssReader
                 //".\\Tales-from-the-Cards{0}.rss";
                 //".\\Hall-of-Beorn{0}.rss";
 
-            var downloader = new FileDownloader();
-            var reader = new XmlReader();
-
             var page = 1;
-            var url = string.Empty;
-            var path = string.Empty;
 
             while (true)
             {
@@ -41,7 +66,7 @@ namespace RssReader
                     }
                 }
 
-                if (!reader.ProcessRss(path))
+                if (!podcastReader.ProcessRss(path))
                 {
                     return;
                 }

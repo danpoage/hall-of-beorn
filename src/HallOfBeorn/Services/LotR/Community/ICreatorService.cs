@@ -11,5 +11,6 @@ namespace HallOfBeorn.Services.LotR.Community
         IEnumerable<ICreator> Creators();
         IEnumerable<ICreator> Podcasts();
         IEnumerable<ICreator> Blogs();
+        IEnumerable<ICreator> Channels();
     }
 }

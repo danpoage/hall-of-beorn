@@ -15,10 +15,12 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public CreatorViewModel(
             IEnumerable<ICreator> podcasts,
-            IEnumerable<ICreator> blogs)
+            IEnumerable<ICreator> blogs,
+            IEnumerable<ICreator> channels)
         {
             this.podcasts.AddRange(podcasts);
             this.blogs.AddRange(blogs);
+            this.channels.AddRange(channels);
 
             IsListView = true;
         }
@@ -26,6 +28,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         private readonly ICreator source;
         private readonly List<ICreator> podcasts = new List<ICreator>();
         private readonly List<ICreator> blogs = new List<ICreator>();
+        private readonly List<ICreator> channels = new List<ICreator>();
 
         private const string partnerLogoFormat
             = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Partners/{0}.jpg";
@@ -110,6 +113,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         public IEnumerable<LinkViewModel> Blogs()
         {
             return GetCreatorLinks(blogs);
+        }
+
+        public IEnumerable<LinkViewModel> Channels()
+        {
+            return GetCreatorLinks(channels);
         }
     }
 }

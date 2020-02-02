@@ -4,6 +4,7 @@ using System.Linq;
 
 using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
+using HallOfBeorn.Models.LotR.Community.TheBookOfElessar;
 using HallOfBeorn.Models.LotR.Community.CardboardOfTheRings;
 using HallOfBeorn.Models.LotR.Community.CardTalk;
 using HallOfBeorn.Models.LotR.Community.HallOfBeorn;
@@ -29,10 +30,13 @@ namespace HallOfBeorn.Services.LotR.Community
             AddBlog(new HallOfBeornCreator());
             AddBlog(new MasterOfLoreCreator());
             AddBlog(new VisionOfThePalantirCreator());
+
+            AddChannel(new TheBookOfElessarCreator());
         }
 
         private readonly List<ICreator> podcasts = new List<ICreator>();
         private readonly List<ICreator> blogs = new List<ICreator>();
+        private readonly List<ICreator> channels = new List<ICreator>();
 
         private readonly Dictionary<string, ICreator> creatorsBySlug 
             = new Dictionary<string, ICreator>();
@@ -46,6 +50,12 @@ namespace HallOfBeorn.Services.LotR.Community
         private void AddBlog(ICreator creator)
         {
             blogs.Add(creator);
+            AddCreator(creator);
+        }
+
+        private void AddChannel(ICreator creator)
+        {
+            channels.Add(creator);
             AddCreator(creator);
         }
 
@@ -75,6 +85,11 @@ namespace HallOfBeorn.Services.LotR.Community
         public IEnumerable<ICreator> Blogs()
         {
             return blogs;
+        }
+
+        public IEnumerable<ICreator> Channels()
+        {
+            return channels;
         }
     }
 }

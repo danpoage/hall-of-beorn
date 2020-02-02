@@ -44,7 +44,8 @@
     <Compile Include="FileDownloader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XmlReader.cs" />
+    <Compile Include="PodcastRssReader.cs" />
+    <Compile Include="YouTubeRssReader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

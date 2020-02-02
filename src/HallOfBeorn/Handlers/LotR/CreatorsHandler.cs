@@ -23,7 +23,8 @@ namespace HallOfBeorn.Handlers.LotR
             {
                 return new CreatorViewModel(
                     creatorService.Podcasts(), 
-                    creatorService.Blogs());
+                    creatorService.Blogs(),
+                    creatorService.Channels());
             }
 
             var creator = creatorService.GetCreator(id);

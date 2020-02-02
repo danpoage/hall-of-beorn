@@ -3,7 +3,7 @@ using System.Xml;
 
 namespace RssReader
 {
-    public class XmlReader
+    public class PodcastRssReader
     {
         private const string lineFormat = "            AddLink(\"{0}\", \"{1}\", \"{2}\");";
             //"            AddLink(\"{0}\", \"{1}\", \"{2}\", \"{3}\");";
