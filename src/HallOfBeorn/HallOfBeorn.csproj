@@ -377,6 +377,7 @@
     <Compile Include="Models\Characters\TomCottonCharacter.cs" />
     <Compile Include="Models\Characters\TreebeardCharacter.cs" />
     <Compile Include="Models\CharacterThing.cs" />
+    <Compile Include="Models\LotR\Community\BookOfElessar\BookOfElessarCreator.cs" />
     <Compile Include="Models\LotR\Community\CardboardOfTheRings\CardboardOfTheRingsCreator.cs" />
     <Compile Include="Models\LotR\Community\CardTalk\CardTalkCreator.cs" />
     <Compile Include="Models\LotR\Community\HallOfBeorn\HallOfBeornCreator.cs" />

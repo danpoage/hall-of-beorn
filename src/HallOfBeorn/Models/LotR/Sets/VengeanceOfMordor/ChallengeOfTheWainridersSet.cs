@@ -38,6 +38,11 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTextLine("Doomed 2.")
                 .WithTextLine("Action: Each player may put one ally card into play from his hand. At the end of the phase, shuffle each of those allies that are still in play into their owners' decks.")
                 .WithInfo(56, 3, Artist.Federico_Musetti);
+            addAlly("Soldier of Isengard", 2, Sphere.Lore, false, 2, 2, 2, 2)
+                .WithKeywords("Doomed 2.")
+                .WithTextLine("Doomed 2.")
+                .WithTextLine("Response: After a player raises his threat from the doomed keyword, give control of Soldier of ~Isengard to that player.")
+                .WithInfo(57, 3, Artist.Unknown);
             addEvent("Far-sighted", 0, Sphere.Lore)
                 .WithKeywords("Doomed 1.")
                 .WithTextLine("Doomed 1.")
@@ -64,6 +69,10 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithFlavorLine("Swiftly a scout rode back and reported that wolf-riders were abroad in the valley...")
                 .WithFlavorLine("-The Two Towers")
                 .WithInfo(61, 3, Artist.Federico_Musetti);
+            addEvent("The Muster of Rohan", 4, Sphere.Spirit)
+                .WithTextLine("While paying for The Muster of ~Rohan, each Rohan hero you control is considered to have a Spirit icon.")
+                .WithTextLine("Planning Action: ~Search the top 10 cards of your deck for up to 4 Rohan allies and put them into play. Shuffle your deck. If any of those allies are still in play at the end of the round, discard them.")
+                .WithInfo(62, 3, Artist.Unknown);
             addAttachment("Saruman's Staff", 2, Sphere.Neutral, true)
                 .WithTraits("Artifact.", "Item.", "Staff.")
                 .WithKeywords("Restricted.")
