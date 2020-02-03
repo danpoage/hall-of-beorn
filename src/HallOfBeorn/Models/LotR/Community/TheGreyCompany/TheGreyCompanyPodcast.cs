@@ -5,10 +5,10 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Community.TheGreyCompany
 {
-    public class TheGreyCompanyCreator
+    public class TheGreyCompanyPodcast
         : Creator
     {
-        public TheGreyCompanyCreator()
+        public TheGreyCompanyPodcast()
             : base("The Grey Company", 
             "http://greycompanypodcast.wordpress.com/",
             "https://hallofbeorn-resources.s3.amazonaws.com/Audio/LotR/The-Grey-Company/The-Grey-Company.rss")

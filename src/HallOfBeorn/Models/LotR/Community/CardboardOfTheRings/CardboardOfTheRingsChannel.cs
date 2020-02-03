@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Community.CardboardOfTheRings
         : Creator
     {
         public CardboardOfTheRingsChannel()
-            : base("Cardboard of the Rings",
+            : base("Cardboard of the Rings Channel",
             "https://www.youtube.com/channel/UCVKwveV9va6wBu1AkRIHB9w",
             "https://www.youtube.com/feeds/videos.xml?channel_id=UCVKwveV9va6wBu1AkRIHB9w")
         {

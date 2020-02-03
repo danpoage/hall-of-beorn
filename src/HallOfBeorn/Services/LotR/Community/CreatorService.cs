@@ -22,7 +22,7 @@ namespace HallOfBeorn.Services.LotR.Community
     {
         public CreatorService()
         {
-            AddPodcast(new TheGreyCompanyCreator());
+            AddPodcast(new TheGreyCompanyPodcast());
             AddPodcast(new CardboardOfTheRingsPodcast());
             AddPodcast(new CardTalkCreator());
             AddPodcast(new ThreeIsCompanyCreator());
@@ -32,6 +32,7 @@ namespace HallOfBeorn.Services.LotR.Community
             AddBlog(new MasterOfLoreCreator());
             AddBlog(new VisionOfThePalantirCreator());
 
+            AddChannel(new TheGreyCompanyChannel());
             AddChannel(new TheProgressionSeriesCreator());
             AddChannel(new CardboardOfTheRingsChannel());
             AddChannel(new TheBookOfElessarCreator());

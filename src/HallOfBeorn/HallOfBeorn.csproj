@@ -384,7 +384,8 @@
     <Compile Include="Models\LotR\Community\HallOfBeorn\HallOfBeornCreator.cs" />
     <Compile Include="Models\LotR\Community\MasterOfLore\MasterOfLoreCreator.cs" />
     <Compile Include="Models\LotR\Community\TalesFromTheCards\TalesFromTheCardsCreator.cs" />
-    <Compile Include="Models\LotR\Community\TheGreyCompany\TheGreyCompanyCreator.cs" />
+    <Compile Include="Models\LotR\Community\TheGreyCompany\TheGreyCompanyChannel.cs" />
+    <Compile Include="Models\LotR\Community\TheGreyCompany\TheGreyCompanyPodcast.cs" />
     <Compile Include="Models\LotR\Community\TheProgressionSeries\TheProgressionSeriesCreator.cs" />
     <Compile Include="Models\LotR\Community\ThreeIsCompany\ThreeIsCompanyCreator.cs" />
     <Compile Include="Models\LotR\Community\VisionOfThePalantir\PlayerCardAnalysisLink.cs" />
