@@ -11,6 +11,7 @@ using HallOfBeorn.Models.LotR.Community.HallOfBeorn;
 using HallOfBeorn.Models.LotR.Community.MasterOfLore;
 using HallOfBeorn.Models.LotR.Community.TalesFromTheCards;
 using HallOfBeorn.Models.LotR.Community.TheGreyCompany;
+using HallOfBeorn.Models.LotR.Community.TheProgressionSeries;
 using HallOfBeorn.Models.LotR.Community.ThreeIsCompany;
 using HallOfBeorn.Models.LotR.Community.VisionOfThePalantir;
 
@@ -22,7 +23,7 @@ namespace HallOfBeorn.Services.LotR.Community
         public CreatorService()
         {
             AddPodcast(new TheGreyCompanyCreator());
-            AddPodcast(new CardboardOfTheRingsCreator());
+            AddPodcast(new CardboardOfTheRingsPodcast());
             AddPodcast(new CardTalkCreator());
             AddPodcast(new ThreeIsCompanyCreator());
 
@@ -31,6 +32,8 @@ namespace HallOfBeorn.Services.LotR.Community
             AddBlog(new MasterOfLoreCreator());
             AddBlog(new VisionOfThePalantirCreator());
 
+            AddChannel(new TheProgressionSeriesCreator());
+            AddChannel(new CardboardOfTheRingsChannel());
             AddChannel(new TheBookOfElessarCreator());
         }
 

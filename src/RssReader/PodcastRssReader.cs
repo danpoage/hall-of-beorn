@@ -15,25 +15,39 @@ namespace RssReader
                 XmlDocument doc = new XmlDocument();
                 doc.Load(path);
 
+                //var nsmgr = new XmlNamespaceManager(doc.NameTable);
+                //nsmgr.AddNamespace("atom", "http://www.w3.org/2005/Atom");
+
                 var items = doc.SelectNodes("/rss/channel/item");
                 foreach (XmlNode itemNode in items)
                 {
                     var title = itemNode.SelectSingleNode("title").InnerText;
-                    //var titleParts = title.Split(':');
-                    //if (titleParts.Length < 2)
-                    //{
-                    //    continue;
-                    //}
 
-                    //var number = titleParts[0].Replace("Episode ", string.Empty).Trim();
-                    //var name = titleParts[1].Trim();
-
-                    //var url = itemNode.SelectSingleNode("enclosure").Attributes["url"].Value;
                     var url = itemNode.SelectSingleNode("link").InnerText;
 
                     var pubDate = itemNode.SelectSingleNode("pubDate").InnerText;
 
                     Console.WriteLine(string.Format(lineFormat, title, url, pubDate));
+
+                    /*
+                    if (downloader != null)
+                    {
+                        var itemPath =  ".\\" + prefix + title
+                            .Replace('"', ' ')
+                            .Replace("!", "")
+                            .Replace(".", "")
+                            .Replace(" ", "-")
+                            .Replace("---", "-")
+                            + ".mp3";
+
+                        if (!downloader.FileExists(itemPath) 
+                            && !downloader.DownloadFile(url, itemPath))
+                        {
+                            Console.WriteLine(string.Format("Error downloading item {0}", itemPath));
+                            break;
+                        }
+                    }
+                    */
                 }
                 return true;
             }

@@ -5,10 +5,10 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Community.CardboardOfTheRings
 {
-    public class CardboardOfTheRingsCreator
+    public class CardboardOfTheRingsPodcast
         : Creator
     {
-        public CardboardOfTheRingsCreator()
+        public CardboardOfTheRingsPodcast()
             : base("Cardboard of the Rings",
             "https://cardboardoftherings.com",
             "http://cotr.libsyn.com/rss")

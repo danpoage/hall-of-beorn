@@ -17,8 +17,14 @@ namespace RssReader
             var isSingleFeed = true;
             if (isSingleFeed)
             {
-                url = "https://www.youtube.com/feeds/videos.xml?channel_id=UCUgU6nIpwNlADThJKEDV3Pg";
-                path = ".\\Book-of-Elessar.rss";
+                url = "https://www.youtube.com/feeds/videos.xml?channel_id=UCVKwveV9va6wBu1AkRIHB9w";
+                    //"https://www.youtube.com/feeds/videos.xml?channel_id=UCAF06gMU013g3R2QIH5DaQQ";
+                    //"https://hallofbeorn-resources.s3.amazonaws.com/Audio/LotR/The-Grey-Company/The-Grey-Company.rss";
+                    //"https://www.youtube.com/feeds/videos.xml?channel_id=UCUgU6nIpwNlADThJKEDV3Pg";
+                path = ".\\Cardboard-of-the-Rings-Channel.rss";
+                    //".\\The-Progression-Series.rss";
+                    //".\\The-Grey-Company.rss";
+                    //".\\Book-of-Elessar.rss";
 
                 if (!downloader.FileExists(path))
                 {
