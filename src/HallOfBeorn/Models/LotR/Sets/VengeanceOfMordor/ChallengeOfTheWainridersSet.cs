@@ -18,8 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
             SetType = Models.SetType.Adventure_Pack;
             Cycle = "Vengeance of Mordor";
 
-            IsSpoiler = true;
-
             addHero("Saruman", 13, Sphere.Lore, 3, 4, 2, 4)
                 .WithTraits("Istari.", "Isengard.")
                 .WithTextLine("When a player card effect would reduce your threat by any amount, reduce that amount to 1.")
@@ -42,7 +40,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithKeywords("Doomed 2.")
                 .WithTextLine("Doomed 2.")
                 .WithTextLine("Response: After a player raises his threat from the doomed keyword, give control of Soldier of ~Isengard to that player.")
-                .WithInfo(57, 3, Artist.Unknown);
+                .WithInfo(57, 3, Artist.Stanislav_Dikolenko);
             addEvent("Far-sighted", 0, Sphere.Lore)
                 .WithKeywords("Doomed 1.")
                 .WithTextLine("Doomed 1.")
@@ -72,7 +70,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
             addEvent("The Muster of Rohan", 4, Sphere.Spirit)
                 .WithTextLine("While paying for The Muster of ~Rohan, each Rohan hero you control is considered to have a Spirit icon.")
                 .WithTextLine("Planning Action: ~Search the top 10 cards of your deck for up to 4 Rohan allies and put them into play. Shuffle your deck. If any of those allies are still in play at the end of the round, discard them.")
-                .WithInfo(62, 3, Artist.Unknown);
+                .WithInfo(62, 3, Artist.Vilius_Petrauskas);
             addAttachment("Saruman's Staff", 2, Sphere.Neutral, true)
                 .WithTraits("Artifact.", "Item.", "Staff.")
                 .WithKeywords("Restricted.")
