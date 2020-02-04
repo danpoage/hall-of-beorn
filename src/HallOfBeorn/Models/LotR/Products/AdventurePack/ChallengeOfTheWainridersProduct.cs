@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
             : base("Challenge of the Wainriders", "MEC80", ImageType.Jpg, new DateTime(2019, 12, 1))
         {
             AddCardSet(CardSet.ChallengeOfTheWainriders);
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.VengeanceOfMordor.ChallengeOfTheWainridersScenario());
         }
     }
 }

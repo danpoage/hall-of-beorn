@@ -363,6 +363,7 @@ namespace HallOfBeorn.Models.LotR
             //Vengeance of Mordor APs
             Add(WrathAndRuin);
             Add(TheCityOfUlfast);
+            Add(ChallengeOfTheWainriders);
 
             //Two Player Starter
             Add(TheOath);
@@ -719,6 +720,7 @@ namespace HallOfBeorn.Models.LotR
         //Vengeance of Mordor
         public static EncounterSet WrathAndRuin = new EncounterSet { Name = "Wrath and Ruin", Set = "Wrath and Ruin" };
         public static EncounterSet TheCityOfUlfast = new EncounterSet { Name = "The City of Ulfast", Set = "The City of Ulfast" };
+        public static EncounterSet ChallengeOfTheWainriders = new EncounterSet { Name = "Challenge of the Wainriders", Set = "Challenge of the Wainriders" };
 
         //Two Player Starter
         public static EncounterSet TheOath = new EncounterSet { Name = "The Oath", Set = "Two-Player Limited Edition Starter" };

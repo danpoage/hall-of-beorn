@@ -688,6 +688,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             }
         }
 
+        public string DirectionValue
+        {
+            get { return _card.Direction; }
+        }
+
         public string EngagementCost
         {
             get { return _card.EngagementCost.HasValue ? _card.EngagementCost.ToString() : string.Empty; }

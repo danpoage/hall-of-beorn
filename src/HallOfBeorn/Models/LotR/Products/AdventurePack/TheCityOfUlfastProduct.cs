@@ -11,6 +11,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
             : base("The City of Ulfast", "MEC79", ImageType.Jpg, new DateTime(2020, 1, 9))
         {
             AddCardSet(CardSet.TheCityOfUlfast);
+            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.VengeanceOfMordor.TheCityOfUlfastScenario());
         }
     }
 }

@@ -465,6 +465,8 @@
     <Compile Include="Models\LotR\Scenarios\TheWildsOfRhovanion\JourneyUpTheAnduinScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\TheWildsOfRhovanion\LostInMirkwoodScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\TheWildsOfRhovanion\TheKingsQuestScenario.cs" />
+    <Compile Include="Models\LotR\Scenarios\VengeanceOfMordor\ChallengeOfTheWainridersScenario.cs" />
+    <Compile Include="Models\LotR\Scenarios\VengeanceOfMordor\TheCityOfUlfastScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\VengeanceOfMordor\WrathAndRuinScenario.cs" />
     <Compile Include="Models\LotR\ScenarioView.cs" />
     <Compile Include="Models\LotR\Sets\AngmarAwakened\AcrossTheEttenmoorsNightmareSet.cs" />

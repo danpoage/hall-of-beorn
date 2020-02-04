@@ -184,6 +184,7 @@ namespace HallOfBeorn.Models.LotR
         public byte? SiegePoints { get; set; }
 
         public bool HasErrata { get; set; }
+        public string Direction { get; set; }
 
         private DeckType deckType = DeckType.None;
         public DeckType DeckType
@@ -562,6 +563,24 @@ namespace HallOfBeorn.Models.LotR
         public LotRCard WithVictoryPoints(byte victoryPoints)
         {
             this.VictoryPoints = victoryPoints;
+            return this;
+        }
+
+        public LotRCard WithTurn()
+        {
+            this.Direction = "TURN";
+            return this;
+        }
+
+        public LotRCard WithStraight()
+        {
+            this.Direction = "STRAIGHT";
+            return this;
+        }
+
+        public LotRCard WithWild()
+        {
+            this.Direction = "WILD";
             return this;
         }
 
