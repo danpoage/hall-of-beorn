@@ -38,7 +38,7 @@ namespace Palantir
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Speec recognition failed: " + ex.Message);
+                    Console.WriteLine("Speech recognition failed: " + ex.Message);
                     break;
                 }
             }
