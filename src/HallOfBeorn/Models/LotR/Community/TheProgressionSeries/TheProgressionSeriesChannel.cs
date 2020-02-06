@@ -5,10 +5,10 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Community.TheProgressionSeries
 {
-    public class TheProgressionSeriesCreator
+    public class TheProgressionSeriesChannel
         : Creator
     {
-        public TheProgressionSeriesCreator()
+        public TheProgressionSeriesChannel()
             : base("The Progression Series",
             "https://www.youtube.com/channel/UCAF06gMU013g3R2QIH5DaQQ",
             "https://www.youtube.com/feeds/videos.xml?channel_id=UCAF06gMU013g3R2QIH5DaQQ")

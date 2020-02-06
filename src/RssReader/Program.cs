@@ -14,7 +14,7 @@ namespace RssReader
             var url = string.Empty;
             var path = string.Empty;
 
-            var isSingleFeed = true;
+            var isSingleFeed = false;
             if (isSingleFeed)
             {
                 url = "https://www.youtube.com/feeds/videos.xml?channel_id=UCM8hzRbiHw4e2JJsTQPzLYw";
@@ -47,14 +47,20 @@ namespace RssReader
 
             var urlFormat = args.Length > 0
                 ? args[0]
-                : "https://masteroflore.wordpress.com/feed?paged={0}";
+                : "https://darklingdoor.wordpress.com/feed?paged={0}";
+                //"https://warriorsofthewestblog.wordpress.com/feed?paged={0}";
+                //"https://theroadlotr.wordpress.com/feed?paged={0}";
+                //"https://masteroflore.wordpress.com/feed?paged={0}";
                 //"https://visionofthepalantir.com/feed/?paged={0}";
                 //"https://talesfromthecards.wordpress.com/feed?paged={0}";
                 //"https://hallofbeorn.wordpress.com/feed?paged={0}";
 
             var pathFormat = args.Length > 1
                 ? args[1]
-                : ".\\Master-of-Lore{0}.rss";
+                : "Darkling-Door{0}.rss";
+                //"Warriors-of-the-West{0}.rss";
+                //".\\The-Road{0}.rss";
+                //".\\Master-of-Lore{0}.rss";
                 //"Vision-of-the-Palantir{0}.rss";
                 //".\\Tales-from-the-Cards{0}.rss";
                 //".\\Hall-of-Beorn{0}.rss";

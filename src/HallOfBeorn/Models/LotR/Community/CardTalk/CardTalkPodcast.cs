@@ -5,10 +5,10 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Community.CardTalk
 {
-    public class CardTalkCreator
+    public class CardTalkPodcast
         : Creator
     {
-        public CardTalkCreator()
+        public CardTalkPodcast()
             : base("Card Talk",
             "https://cardtalk2018.libsyn.com/",
             "http://cardtalk2018.libsyn.com/rss")

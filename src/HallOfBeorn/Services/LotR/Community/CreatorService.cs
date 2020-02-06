@@ -7,13 +7,16 @@ using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.Community.TheBookOfElessar;
 using HallOfBeorn.Models.LotR.Community.CardboardOfTheRings;
 using HallOfBeorn.Models.LotR.Community.CardTalk;
+using HallOfBeorn.Models.LotR.Community.DarklingDoor;
 using HallOfBeorn.Models.LotR.Community.HallOfBeorn;
 using HallOfBeorn.Models.LotR.Community.MasterOfLore;
 using HallOfBeorn.Models.LotR.Community.TalesFromTheCards;
 using HallOfBeorn.Models.LotR.Community.TheGreyCompany;
 using HallOfBeorn.Models.LotR.Community.TheProgressionSeries;
+using HallOfBeorn.Models.LotR.Community.TheRoad;
 using HallOfBeorn.Models.LotR.Community.ThreeIsCompany;
 using HallOfBeorn.Models.LotR.Community.VisionOfThePalantir;
+using HallOfBeorn.Models.LotR.Community.WarriorsOfTheWest;
 
 namespace HallOfBeorn.Services.LotR.Community
 {
@@ -24,18 +27,21 @@ namespace HallOfBeorn.Services.LotR.Community
         {
             AddPodcast(new TheGreyCompanyPodcast());
             AddPodcast(new CardboardOfTheRingsPodcast());
-            AddPodcast(new CardTalkCreator());
-            AddPodcast(new ThreeIsCompanyCreator());
+            AddPodcast(new CardTalkPodcast());
+            AddPodcast(new ThreeIsCompanyPodcast());
 
-            AddBlog(new TalesFromTheCardsCreator());
-            AddBlog(new HallOfBeornCreator());
-            AddBlog(new MasterOfLoreCreator());
-            AddBlog(new VisionOfThePalantirCreator());
+            AddBlog(new TalesFromTheCardsBlog());
+            AddBlog(new HallOfBeornBlog());
+            AddBlog(new MasterOfLoreBlog());
+            AddBlog(new VisionOfThePalantirBlog());
+            AddBlog(new DarklingDoorBlog());
+            AddBlog(new WarriorsOfTheWestBlog());
+            AddBlog(new TheRoadBlog());
 
             AddChannel(new TheGreyCompanyChannel());
-            AddChannel(new TheProgressionSeriesCreator());
+            AddChannel(new TheProgressionSeriesChannel());
             AddChannel(new CardboardOfTheRingsChannel());
-            AddChannel(new TheBookOfElessarCreator());
+            AddChannel(new TheBookOfElessarChannel());
         }
 
         private readonly List<ICreator> podcasts = new List<ICreator>();

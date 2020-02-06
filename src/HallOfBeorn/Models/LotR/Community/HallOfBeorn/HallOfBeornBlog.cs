@@ -5,10 +5,10 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Community.HallOfBeorn
 {
-    public class HallOfBeornCreator
+    public class HallOfBeornBlog
         : Creator
     {
-        public HallOfBeornCreator()
+        public HallOfBeornBlog()
             : base("Hall of Beorn Blog",
             "https://hallofbeorn.wordpress.com",
             "https://hallofbeorn.wordpress.com/feed")

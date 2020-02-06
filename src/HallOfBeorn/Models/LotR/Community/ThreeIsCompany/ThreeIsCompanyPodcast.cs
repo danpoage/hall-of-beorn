@@ -5,10 +5,10 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Community.ThreeIsCompany
 {
-    public class ThreeIsCompanyCreator
+    public class ThreeIsCompanyPodcast
         : Creator
     {
-        public ThreeIsCompanyCreator()
+        public ThreeIsCompanyPodcast()
             : base("Three is Company",
             "https://www.podbean.com/podcast-detail/wzaap-85063/Three-is-Company-Podcast",
             "https://feeds.buzzsprout.com/232796.rss")

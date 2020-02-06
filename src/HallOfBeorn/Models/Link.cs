@@ -67,6 +67,11 @@ namespace HallOfBeorn.Models
                         _thumbnailWidth = defaultThumbnailWidth;
                         _thumbnailHeight = defaultThumbnailHeight;
                         break;
+                    case LinkType.Darkling_Door:
+                        ThumbnailUrl = string.Format("{0}/Darkling-Door.jpg", parterBaseUrl);
+                        _thumbnailWidth = defaultThumbnailWidth;
+                        _thumbnailHeight = defaultThumbnailHeight;
+                        break;
                     case LinkType.Three_is_Company:
                         ThumbnailUrl = string.Format("{0}/Three-is-Company.jpg", parterBaseUrl);
                         _thumbnailWidth = defaultThumbnailWidth;

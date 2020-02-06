@@ -5,10 +5,10 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Community.MasterOfLore
 {
-    public class MasterOfLoreCreator
+    public class MasterOfLoreBlog
         : Creator
     {
-        public MasterOfLoreCreator()
+        public MasterOfLoreBlog()
             : base("Master of Lore",
             "https://masteroflore.wordpress.com/",
             "https://masteroflore.wordpress.com/feed")

@@ -5,10 +5,10 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Community.TheBookOfElessar
 {
-    public class TheBookOfElessarCreator
+    public class TheBookOfElessarChannel
         : Creator
     {
-        public TheBookOfElessarCreator()
+        public TheBookOfElessarChannel()
             : base("The Book of Elessar",
             "https://www.youtube.com/channel/UCUgU6nIpwNlADThJKEDV3Pg",
             "https://www.youtube.com/feeds/videos.xml?channel_id=UCUgU6nIpwNlADThJKEDV3Pg")

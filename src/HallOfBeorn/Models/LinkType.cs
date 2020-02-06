@@ -40,6 +40,7 @@ namespace HallOfBeorn.Models
 
         Master_of_Lore,
         Dor_Cuarthol,
+        Darkling_Door,
         Second_Hand_Took,
         The_Mirkwood_Runner,
         
