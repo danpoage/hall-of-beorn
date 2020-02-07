@@ -14,6 +14,7 @@ using HallOfBeorn.Models.LotR.Community.TalesFromTheCards;
 using HallOfBeorn.Models.LotR.Community.TheGreyCompany;
 using HallOfBeorn.Models.LotR.Community.TheProgressionSeries;
 using HallOfBeorn.Models.LotR.Community.TheRoad;
+using HallOfBeorn.Models.LotR.Community.TheWhiteTower;
 using HallOfBeorn.Models.LotR.Community.ThreeIsCompany;
 using HallOfBeorn.Models.LotR.Community.VisionOfThePalantir;
 using HallOfBeorn.Models.LotR.Community.WarriorsOfTheWest;
@@ -36,6 +37,7 @@ namespace HallOfBeorn.Services.LotR.Community
             AddBlog(new VisionOfThePalantirBlog());
             AddBlog(new DarklingDoorBlog());
             AddBlog(new WarriorsOfTheWestBlog());
+            AddBlog(new TheWhiteTowerBlog());
             AddBlog(new TheRoadBlog());
 
             AddChannel(new TheGreyCompanyChannel());

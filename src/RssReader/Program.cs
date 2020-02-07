@@ -47,7 +47,8 @@ namespace RssReader
 
             var urlFormat = args.Length > 0
                 ? args[0]
-                : "https://darklingdoor.wordpress.com/feed?paged={0}";
+                : "https://thewhitetower.wordpress.com/feed?paged={0}";
+                //"https://darklingdoor.wordpress.com/feed?paged={0}";
                 //"https://warriorsofthewestblog.wordpress.com/feed?paged={0}";
                 //"https://theroadlotr.wordpress.com/feed?paged={0}";
                 //"https://masteroflore.wordpress.com/feed?paged={0}";
@@ -57,7 +58,8 @@ namespace RssReader
 
             var pathFormat = args.Length > 1
                 ? args[1]
-                : "Darkling-Door{0}.rss";
+                : "The-White-Tower{0}.rss";
+                //"Darkling-Door{0}.rss";
                 //"Warriors-of-the-West{0}.rss";
                 //".\\The-Road{0}.rss";
                 //".\\Master-of-Lore{0}.rss";

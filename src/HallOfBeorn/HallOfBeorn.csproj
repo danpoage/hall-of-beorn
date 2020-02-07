@@ -389,6 +389,7 @@
     <Compile Include="Models\LotR\Community\TheGreyCompany\TheGreyCompanyPodcast.cs" />
     <Compile Include="Models\LotR\Community\TheProgressionSeries\TheProgressionSeriesChannel.cs" />
     <Compile Include="Models\LotR\Community\TheRoad\TheRoadBlog.cs" />
+    <Compile Include="Models\LotR\Community\TheWhiteTower\TheWhiteTowerBlog.cs" />
     <Compile Include="Models\LotR\Community\ThreeIsCompany\ThreeIsCompanyPodcast.cs" />
     <Compile Include="Models\LotR\Community\VisionOfThePalantir\PlayerCardAnalysisLink.cs" />
     <Compile Include="Models\LotR\Community\VisionOfThePalantir\VisionOfThePalantirBlog.cs" />
