@@ -16,7 +16,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AShadowInTheEast
             GroupName = "A Shadow in the East";
             Number = 3;
 
-            //RulesImageCount = 2;
+            RulesImageCount = 10;
 
             QuestCompanionSlug = "a-shadow-in-the-east-deluxe-expansion-quest-the-temple-of-doom";
             DifficultyRating = 7.6f;

@@ -13,7 +13,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AShadowInTheEast
             GroupName = "A Shadow in the East";
             Number = 2;
 
-            //RulesImageCount = 2;
+            RulesImageCount = 10;
 
             QuestCompanionSlug = "a-shadow-in-the-east-deluxe-expansion-quest-danger-in-dorwinion";
             DifficultyRating = 7.4f;

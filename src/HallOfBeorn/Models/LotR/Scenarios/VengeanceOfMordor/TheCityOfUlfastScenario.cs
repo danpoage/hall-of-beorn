@@ -18,7 +18,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.VengeanceOfMordor
             GroupName = "Vengeance of Mordor";
             Number = 2;
 
-            //RulesImageCount = 2;
+            RulesImageCount = 2;
             //QuestCompanionSlug = "a-shadow-in-the-east-deluxe-expansion-quest-danger-in-dorwinion";
             DifficultyRating = 7f;
             Votes = 1;

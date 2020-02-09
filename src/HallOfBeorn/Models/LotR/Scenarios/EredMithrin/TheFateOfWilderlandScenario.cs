@@ -16,7 +16,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
             GroupName = "Ered Mithrin";
             Number = 9;
 
-            //RulesImageCount = 2;
+            RulesImageCount = 3;
 
             QuestCompanionSlug = "ered-mithrin-quest-the-fate-of-wilderland";
             DifficultyRating = 8.0f;

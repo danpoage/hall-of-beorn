@@ -13,7 +13,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AShadowInTheEast
             GroupName = "A Shadow in the East";
             Number = 1;
 
-            //RulesImageCount = 2;
+            RulesImageCount = 10;
 
             QuestCompanionSlug = "a-shadow-in-the-east-deluxe-expansion-quest-the-river-running";
             DifficultyRating = 7.0f;
