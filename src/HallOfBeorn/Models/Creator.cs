@@ -8,11 +8,12 @@ namespace HallOfBeorn.Models
     public class Creator
         : ICreator
     {
-        protected Creator(string name, string siteUrl, string feedUrl)
+        protected Creator(string name, string siteUrl, string feedUrl, LinkType defaultLinkType)
         {
             Name = name;
             SiteUrl = siteUrl;
             FeedUrl = feedUrl;
+            DefaultLinkType = defaultLinkType;
         }
 
         private readonly List<ILink> allLinks = new List<ILink>();
@@ -29,6 +30,15 @@ namespace HallOfBeorn.Models
             {
                 linksByUrl[link.Url] = link;
             }
+        }
+
+        private const string simpleTitleFormat = "{0} [{1}]";
+
+        protected void AddLink(string title, string url, string releaseDate)
+        {
+            var date = DateTime.Parse(releaseDate);
+            var fullTitle = string.Format(simpleTitleFormat, title, date.ToString("MMM dd, yyyy"));
+            AddLink(new Link(DefaultLinkType, url, fullTitle));
         }
 
         protected void AddYear(int year)
@@ -62,6 +72,11 @@ namespace HallOfBeorn.Models
         {
             get;
             private set;
+        }
+
+        public LinkType DefaultLinkType
+        {
+            get; private set;
         }
 
         public IEnumerable<ILink> Links()

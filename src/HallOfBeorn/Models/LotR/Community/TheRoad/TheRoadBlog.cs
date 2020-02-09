@@ -10,8 +10,9 @@ namespace HallOfBeorn.Models.LotR.Community.TheRoad
     {
         public TheRoadBlog()
             : base("The Road", 
-            "",
-            "")
+            "https://theroadlotr.wordpress.com/",
+            "https://theroadlotr.wordpress.com/feed",
+            LinkType.The_Road)
         {
             AddYear(2019);
             AddLink("The Battle of the Pelennor Fields: Playthrough", "https://theroadlotr.wordpress.com/2019/11/14/the-battle-of-the-pelennor-fields-playthrough/", "Thu, 14 Nov 2019 16:42:06 +0000");
@@ -39,15 +40,6 @@ namespace HallOfBeorn.Models.LotR.Community.TheRoad
             AddLink("The Old Forest: Playthrough", "https://theroadlotr.wordpress.com/2018/04/24/the-old-forest-playthrough/", "Tue, 24 Apr 2018 11:20:54 +0000");
             AddLink("A Shadow Of The Past: Playthrough", "https://theroadlotr.wordpress.com/2018/04/04/a-shadow-of-the-past-playthrough/", "Wed, 04 Apr 2018 12:19:00 +0000");
             AddLink("\"It's a dangerous business, Frodo, going out your door.\"", "https://theroadlotr.wordpress.com/2018/02/28/the-journey-begins/", "Wed, 28 Feb 2018 15:19:32 +0000");
-        }
-
-        private const string titleFormat = "{0} [{1}]";
-
-        private void AddLink(string title, string url, string releaseDate)
-        {
-            var date = DateTime.Parse(releaseDate);
-            var fullTitle = string.Format(titleFormat, title, date.ToString("MMM dd, yyyy"));
-            AddLink(new Link(LinkType.The_Road, url, fullTitle));
         }
     }
 }

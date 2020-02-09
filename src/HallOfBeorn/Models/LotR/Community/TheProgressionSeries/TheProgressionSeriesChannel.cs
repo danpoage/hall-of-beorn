@@ -11,7 +11,8 @@ namespace HallOfBeorn.Models.LotR.Community.TheProgressionSeries
         public TheProgressionSeriesChannel()
             : base("The Progression Series",
             "https://www.youtube.com/channel/UCAF06gMU013g3R2QIH5DaQQ",
-            "https://www.youtube.com/feeds/videos.xml?channel_id=UCAF06gMU013g3R2QIH5DaQQ")
+            "https://www.youtube.com/feeds/videos.xml?channel_id=UCAF06gMU013g3R2QIH5DaQQ",
+            LinkType.The_Progression_Series)
         {
             AddYear(2017);
             AddLink("The Long Dark | LOTR LCG | Progression Series Episode 17", "https://www.youtube.com/watch?v=DlrNVcUZhnM", "2017-11-05T21:27:39+00:00");
@@ -29,15 +30,6 @@ namespace HallOfBeorn.Models.LotR.Community.TheProgressionSeries
             AddLink("The Massing at Osgiliath | LOTR LCG | Progression Series Episode 10", "https://www.youtube.com/watch?v=ggTyUxpfq8o", "2017-03-05T15:53:04+00:00");
             AddLink("Shadows of Mirkwood Cycle Review | LOTR LCG | Evaluation Series Episode 11", "https://www.youtube.com/watch?v=nQcPNNDDByw", "2017-01-08T16:16:28+00:00");
             AddLink("Channel Update! The Future of the Progression Series", "https://www.youtube.com/watch?v=96pxeT-Dzks", "2017-01-03T22:03:31+00:00");
-        }
-
-        private const string titleFormat = "{0} [{1}]";
-
-        private void AddLink(string title, string url, string releaseDate)
-        {
-            var date = DateTime.Parse(releaseDate);
-            var fullTitle = string.Format(titleFormat, title, date.ToString("MMM dd, yyyy"));
-            AddLink(new Link(LinkType.The_Progression_Series, url, fullTitle));
         }
     }
 }

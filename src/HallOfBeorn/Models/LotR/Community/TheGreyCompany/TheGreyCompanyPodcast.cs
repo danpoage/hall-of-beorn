@@ -11,7 +11,8 @@ namespace HallOfBeorn.Models.LotR.Community.TheGreyCompany
         public TheGreyCompanyPodcast()
             : base("The Grey Company", 
             "http://greycompanypodcast.wordpress.com/",
-            "https://hallofbeorn-resources.s3.amazonaws.com/Audio/LotR/The-Grey-Company/The-Grey-Company.rss")
+            "https://hallofbeorn-resources.s3.amazonaws.com/Audio/LotR/The-Grey-Company/The-Grey-Company.rss",
+            LinkType.The_Grey_Company)
         {
             AddYear(2019);
             AddLink("68", "68 - Book Club XXV - The Grey Havens", new DateTime(2019, 5, 7));

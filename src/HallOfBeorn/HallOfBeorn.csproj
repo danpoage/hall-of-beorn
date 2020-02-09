@@ -378,13 +378,17 @@
     <Compile Include="Models\Characters\TreebeardCharacter.cs" />
     <Compile Include="Models\CharacterThing.cs" />
     <Compile Include="Models\LotR\Community\CardboardOfTheRings\CardboardOfTheRingsChannel.cs" />
+    <Compile Include="Models\LotR\Community\CardTalk\CardTalkChannel.cs" />
     <Compile Include="Models\LotR\Community\DarklingDoor\DarklingDoorBlog.cs" />
+    <Compile Include="Models\LotR\Community\DorCuarthol\DorCuartholBlog.cs" />
     <Compile Include="Models\LotR\Community\TheBookOfElessar\TheBookOfElessarChannel.cs" />
     <Compile Include="Models\LotR\Community\CardboardOfTheRings\CardboardOfTheRingsPodcast.cs" />
     <Compile Include="Models\LotR\Community\CardTalk\CardTalkPodcast.cs" />
     <Compile Include="Models\LotR\Community\HallOfBeorn\HallOfBeornBlog.cs" />
     <Compile Include="Models\LotR\Community\MasterOfLore\MasterOfLoreBlog.cs" />
     <Compile Include="Models\LotR\Community\TalesFromTheCards\TalesFromTheCardsBlog.cs" />
+    <Compile Include="Models\LotR\Community\TheCardGameCooperative\TheCardGameCooperativeBlog.cs" />
+    <Compile Include="Models\LotR\Community\TheCardGameCooperative\TheCardGameCooperativePodcast.cs" />
     <Compile Include="Models\LotR\Community\TheGreyCompany\TheGreyCompanyChannel.cs" />
     <Compile Include="Models\LotR\Community\TheGreyCompany\TheGreyCompanyPodcast.cs" />
     <Compile Include="Models\LotR\Community\TheProgressionSeries\TheProgressionSeriesChannel.cs" />

@@ -11,7 +11,8 @@ namespace HallOfBeorn.Models.LotR.Community.CardboardOfTheRings
         public CardboardOfTheRingsChannel()
             : base("Cardboard of the Rings Channel",
             "https://www.youtube.com/channel/UCVKwveV9va6wBu1AkRIHB9w",
-            "https://www.youtube.com/feeds/videos.xml?channel_id=UCVKwveV9va6wBu1AkRIHB9w")
+            "https://www.youtube.com/feeds/videos.xml?channel_id=UCVKwveV9va6wBu1AkRIHB9w",
+            LinkType.Cardboard_of_the_Rings)
         {
             AddYear(2020);
             AddLink("The REAL Road to Nightmare", "https://www.youtube.com/watch?v=5SdmbtfT2C4", "2020-01-30T23:56:50+00:00");
@@ -31,15 +32,6 @@ namespace HallOfBeorn.Models.LotR.Community.CardboardOfTheRings
             AddLink("Ring goes South Nightmare mode", "https://www.youtube.com/watch?v=Qr8QQ70y7Zs", "2019-09-03T14:07:08+00:00");
             AddLink("Flightmare to the Ford", "https://www.youtube.com/watch?v=gnBst84pN84", "2019-08-27T12:29:11+00:00");
             AddLink("Epic 2019 Swag reveal", "https://www.youtube.com/watch?v=WHLSQn9fNm8", "2019-08-07T12:33:35+00:00");
-        }
-
-        private const string titleFormat = "{0} [{1}]";
-
-        private void AddLink(string title, string url, string releaseDate)
-        {
-            var date = DateTime.Parse(releaseDate);
-            var fullTitle = string.Format(titleFormat, title, date.ToString("MMM dd, yyyy"));
-            AddLink(new Link(LinkType.Cardboard_of_the_Rings, url, fullTitle));
         }
     }
 }

@@ -8,9 +8,11 @@ using HallOfBeorn.Models.LotR.Community.TheBookOfElessar;
 using HallOfBeorn.Models.LotR.Community.CardboardOfTheRings;
 using HallOfBeorn.Models.LotR.Community.CardTalk;
 using HallOfBeorn.Models.LotR.Community.DarklingDoor;
+using HallOfBeorn.Models.LotR.Community.DorCuarthol;
 using HallOfBeorn.Models.LotR.Community.HallOfBeorn;
 using HallOfBeorn.Models.LotR.Community.MasterOfLore;
 using HallOfBeorn.Models.LotR.Community.TalesFromTheCards;
+using HallOfBeorn.Models.LotR.Community.TheCardGameCooperative;
 using HallOfBeorn.Models.LotR.Community.TheGreyCompany;
 using HallOfBeorn.Models.LotR.Community.TheProgressionSeries;
 using HallOfBeorn.Models.LotR.Community.TheRoad;
@@ -30,19 +32,23 @@ namespace HallOfBeorn.Services.LotR.Community
             AddPodcast(new CardboardOfTheRingsPodcast());
             AddPodcast(new CardTalkPodcast());
             AddPodcast(new ThreeIsCompanyPodcast());
+            AddPodcast(new TheCardGameCooperativePodcast());
 
             AddBlog(new TalesFromTheCardsBlog());
             AddBlog(new HallOfBeornBlog());
             AddBlog(new MasterOfLoreBlog());
+            AddBlog(new DorCuartholBlog());
             AddBlog(new VisionOfThePalantirBlog());
             AddBlog(new DarklingDoorBlog());
             AddBlog(new WarriorsOfTheWestBlog());
             AddBlog(new TheWhiteTowerBlog());
             AddBlog(new TheRoadBlog());
+            AddBlog(new TheCardGameCooperativeBlog());
 
             AddChannel(new TheGreyCompanyChannel());
             AddChannel(new TheProgressionSeriesChannel());
             AddChannel(new CardboardOfTheRingsChannel());
+            AddChannel(new CardTalkChannel());
             AddChannel(new TheBookOfElessarChannel());
         }
 

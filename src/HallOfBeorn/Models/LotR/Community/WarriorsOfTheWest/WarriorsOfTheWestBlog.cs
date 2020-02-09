@@ -11,7 +11,8 @@ namespace HallOfBeorn.Models.LotR.Community.WarriorsOfTheWest
         public WarriorsOfTheWestBlog()
             : base("Warriors of the West",
             "https://warriorsofthewestblog.wordpress.com/",
-            "https://warriorsofthewestblog.wordpress.com/feed")
+            "https://warriorsofthewestblog.wordpress.com/feed",
+            LinkType.Warriors_of_the_West)
         {
             AddYear(2018);
             AddLink("Nightmare Dreamchaser Cycle - Spoilers!", "https://warriorsofthewestblog.wordpress.com/2018/09/24/nightmare-dreamchaser-cycle-spoilers/", "Mon, 24 Sep 2018 14:30:28 +0000");
@@ -53,15 +54,6 @@ namespace HallOfBeorn.Models.LotR.Community.WarriorsOfTheWest
             AddLink("Turn by Turn Report - The Dunland Trap", "https://warriorsofthewestblog.wordpress.com/2016/10/08/warriors-of-the-west-the-dunland-trap/", "Sat, 08 Oct 2016 03:01:02 +0000");
             AddLink("Turn by Turn Report - Trouble in Tharbad", "https://warriorsofthewestblog.wordpress.com/2016/10/03/warriors-of-the-west-trouble-in-tharbad/", "Mon, 03 Oct 2016 05:20:34 +0000");
             AddLink("Warriors Of The West - A New LOTR LCG Blog", "https://warriorsofthewestblog.wordpress.com/2016/10/03/first-blog-post/", "Mon, 03 Oct 2016 03:25:46 +0000");
-        }
-        
-        private const string titleFormat = "{0} [{1}]";
-
-        private void AddLink(string title, string url, string releaseDate)
-        {
-            var date = DateTime.Parse(releaseDate);
-            var fullTitle = string.Format(titleFormat, title, date.ToString("MMM dd, yyyy"));
-            AddLink(new Link(LinkType.Warriors_of_the_West, url, fullTitle));
         }
     }
 }

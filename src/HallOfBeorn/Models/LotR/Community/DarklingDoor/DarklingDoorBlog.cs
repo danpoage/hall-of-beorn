@@ -11,7 +11,8 @@ namespace HallOfBeorn.Models.LotR.Community.DarklingDoor
         public DarklingDoorBlog()
             : base("Darkling Door",
             "https://darklingdoor.wordpress.com/",
-            "https://darklingdoor.wordpress.com/feed")
+            "https://darklingdoor.wordpress.com/feed",
+            LinkType.Darkling_Door)
         {
             AddYear(2019);
             AddLink("Nightmare The Weather Hills", "https://darklingdoor.wordpress.com/2019/12/19/nightmare-the-weather-hills/", "Thu, 19 Dec 2019 04:48:11 +0000");
@@ -122,15 +123,6 @@ namespace HallOfBeorn.Models.LotR.Community.DarklingDoor
             AddLink("A Brief Note on Goals", "https://darklingdoor.wordpress.com/2016/10/28/a-brief-note-on-goals/", "Fri, 28 Oct 2016 04:57:12 +0000");
             AddLink("A Note on Theme", "https://darklingdoor.wordpress.com/2016/10/11/a-note-on-theme/", "Tue, 11 Oct 2016 04:59:00 +0000");
             AddLink("The Leaves Were Long.", "https://darklingdoor.wordpress.com/2016/10/08/the-leaves-were-long/", "Sat, 08 Oct 2016 06:14:07 +0000");
-        }
-
-        private const string titleFormat = "{0} [{1}]";
-
-        private void AddLink(string title, string url, string releaseDate)
-        {
-            var date = DateTime.Parse(releaseDate);
-            var fullTitle = string.Format(titleFormat, title, date.ToString("MMM dd, yyyy"));
-            AddLink(new Link(LinkType.Dor_Cuarthol, url, fullTitle));
         }
     }
 }

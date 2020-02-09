@@ -11,7 +11,8 @@ namespace HallOfBeorn.Models.LotR.Community.TalesFromTheCards
         public TalesFromTheCardsBlog()
             : base("Tales from the Cards",
             "https://talesfromthecards.wordpress.com/",
-            "https://talesfromthecards.wordpress.com/feed")
+            "https://talesfromthecards.wordpress.com/feed",
+            LinkType.Tales_from_the_Cards)
         {
             AddYear(2018);
             AddLink("Of Orcs: Part 2 - A Day in the Life", "https://talesfromthecards.wordpress.com/2018/12/21/of-orcs-part-2-a-day-in-the-life/", "Sat, 22 Dec 2018 00:57:51 +0000");
@@ -466,15 +467,6 @@ namespace HallOfBeorn.Models.LotR.Community.TalesFromTheCards
             AddLink("Hero Hall of Fame", "https://talesfromthecards.wordpress.com/2012/12/07/hero-hall-of-fame/", "Sat, 08 Dec 2012 06:17:59 +0000");
             AddLink("Where To Next?", "https://talesfromthecards.wordpress.com/2012/12/06/where-to-next/", "Fri, 07 Dec 2012 06:00:09 +0000");
             AddLink("Welcome to Tales from the Cards!", "https://talesfromthecards.wordpress.com/2012/12/06/welcome-to-tales-from-the-cards/", "Thu, 06 Dec 2012 21:58:55 +0000");
-        }
-
-        private const string titleFormat = "{0} [{1}]";
-
-        private void AddLink(string title, string url, string releaseDate)
-        {
-            var date = DateTime.Parse(releaseDate);
-            var fullTitle = string.Format(titleFormat, title, date.ToString("MMM dd, yyyy"));
-            AddLink(new Link(LinkType.Tales_from_the_Cards, url, fullTitle));
         }
     }
 }

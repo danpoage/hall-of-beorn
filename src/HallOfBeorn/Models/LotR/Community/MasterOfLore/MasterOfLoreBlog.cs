@@ -11,7 +11,8 @@ namespace HallOfBeorn.Models.LotR.Community.MasterOfLore
         public MasterOfLoreBlog()
             : base("Master of Lore",
             "https://masteroflore.wordpress.com/",
-            "https://masteroflore.wordpress.com/feed")
+            "https://masteroflore.wordpress.com/feed",
+            LinkType.Master_of_Lore)
         {
             AddYear(2018);
             AddLink("Quest Profile 081: Beneath the Sands", "https://masteroflore.wordpress.com/2018/06/26/quest-profile-081-beneath-the-sands/", "Tue, 26 Jun 2018 02:27:12 +0000");
@@ -132,15 +133,6 @@ namespace HallOfBeorn.Models.LotR.Community.MasterOfLore
             AddLink("Ungoliant's Spawn", "https://masteroflore.wordpress.com/2013/02/23/ungoliants-spawn/", "Sat, 23 Feb 2013 02:35:07 +0000");
             AddLink("Daughter of the Nimrodel", "https://masteroflore.wordpress.com/2013/02/12/daughter-of-the-nimrodel/", "Tue, 12 Feb 2013 09:34:57 +0000");
             AddLink("Greetings and Goals", "https://masteroflore.wordpress.com/2013/02/11/greetings-and-goals-from-master-of-lore/", "Tue, 12 Feb 2013 06:27:06 +0000");
-        }
-
-        private const string titleFormat = "{0} [{1}]";
-
-        private void AddLink(string title, string url, string releaseDate)
-        {
-            var date = DateTime.Parse(releaseDate);
-            var fullTitle = string.Format(titleFormat, title, date.ToString("MMM dd, yyyy"));
-            AddLink(new Link(LinkType.Master_of_Lore, url, fullTitle));
         }
     }
 }

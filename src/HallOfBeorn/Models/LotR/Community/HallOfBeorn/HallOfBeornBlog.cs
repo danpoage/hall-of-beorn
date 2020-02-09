@@ -11,7 +11,8 @@ namespace HallOfBeorn.Models.LotR.Community.HallOfBeorn
         public HallOfBeornBlog()
             : base("Hall of Beorn Blog",
             "https://hallofbeorn.wordpress.com",
-            "https://hallofbeorn.wordpress.com/feed")
+            "https://hallofbeorn.wordpress.com/feed",
+            LinkType.Hall_of_Beorn)
         {
             AddYear(2020);
             AddLink("Long are the Waves on the Last Shore", "https://hallofbeorn.wordpress.com/2020/01/19/long-are-the-waves-on-the-last-shore/", "Mon, 20 Jan 2020 01:51:00 +0000");
@@ -352,15 +353,6 @@ namespace HallOfBeorn.Models.LotR.Community.HallOfBeorn
             AddLink("Key Concepts: Synergy", "https://hallofbeorn.wordpress.com/2013/01/05/key-concepts-synergy/", "Sun, 06 Jan 2013 01:26:42 +0000");
             AddLink("Key Concepts: Pace", "https://hallofbeorn.wordpress.com/2013/01/04/key-concepts-pace/", "Fri, 04 Jan 2013 21:59:01 +0000");
             AddLink("Welcome to the Hall of Beorn", "https://hallofbeorn.wordpress.com/2013/01/04/welcome-to-the-hall-of-beorn/", "Fri, 04 Jan 2013 18:34:17 +0000");
-        }
-
-        private const string titleFormat = "{0} [{1}]";
-
-        private void AddLink(string title, string url, string releaseDate)
-        {
-            var date = DateTime.Parse(releaseDate);
-            var fullTitle = string.Format(titleFormat, title, date.ToString("MMM dd, yyyy"));
-            AddLink(new Link(LinkType.The_Grey_Company, url, fullTitle));
         }
     }
 }

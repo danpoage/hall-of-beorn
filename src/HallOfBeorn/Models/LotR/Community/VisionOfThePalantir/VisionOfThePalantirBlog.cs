@@ -11,7 +11,8 @@ namespace HallOfBeorn.Models.LotR.Community.VisionOfThePalantir
         public VisionOfThePalantirBlog()
             : base("Vision of the Palantir",
             "https://visionofthepalantir.com/",
-            "https://visionofthepalantir.com/feed")
+            "https://visionofthepalantir.com/feed",
+            LinkType.Vision_of_the_Palantir)
         {
             AddYear(2020);
             AddLink("Month in Review: January 2020", "https://visionofthepalantir.com/2020/01/31/month-in-review-january-2020/", "Fri, 31 Jan 2020 11:45:29 +0000");
@@ -295,15 +296,6 @@ namespace HallOfBeorn.Models.LotR.Community.VisionOfThePalantir
             AddLink("Dwarves", "https://visionofthepalantir.com/2018/01/20/dwarves/", "Sat, 20 Jan 2018 19:38:09 +0000");
             AddLink("Journey Along the Anduin", "https://visionofthepalantir.com/2018/01/20/journey-along-the-anduin/", "Sat, 20 Jan 2018 16:14:37 +0000");
             AddLink("Passage through Mirkwood", "https://visionofthepalantir.com/2018/01/20/ptm/", "Sat, 20 Jan 2018 10:11:53 +0000");
-        }
-
-        private const string titleFormat = "{0} [{1}]";
-
-        private void AddLink(string title, string url, string releaseDate)
-        {
-            var date = DateTime.Parse(releaseDate);
-            var fullTitle = string.Format(titleFormat, title, date.ToString("MMM dd, yyyy"));
-            AddLink(new Link(LinkType.Vision_of_the_Palantir, url, fullTitle));
         }
     }
 }

@@ -11,7 +11,8 @@ namespace HallOfBeorn.Models.LotR.Community.TheGreyCompany
         public TheGreyCompanyChannel()
             : base("The Grey Company Channel",
             "https://www.youtube.com/channel/UCM8hzRbiHw4e2JJsTQPzLYw",
-            "https://www.youtube.com/feeds/videos.xml?channel_id=UCM8hzRbiHw4e2JJsTQPzLYw")
+            "https://www.youtube.com/feeds/videos.xml?channel_id=UCM8hzRbiHw4e2JJsTQPzLYw",
+            LinkType.The_Grey_Company)
         {
             AddYear(2018);
             AddLink("\"First Look\" at The Lord of the Rings Living Card Game!", "https://www.youtube.com/watch?v=Olt5OqQUPoI", "2018-08-29T01:26:56+00:00");
@@ -35,15 +36,6 @@ namespace HallOfBeorn.Models.LotR.Community.TheGreyCompany
             AddLink("The Battle of Five Armies (Part 1)", "https://www.youtube.com/watch?v=IrevoZyubRE", "2014-12-18T02:18:07+00:00");
             AddLink("The Battle of Five Armies (Part 3)", "https://www.youtube.com/watch?v=p0F7gtyVnmQ", "2014-12-17T12:08:41+00:00");
             AddLink("The Battle of Five Armies (Part 2)", "https://www.youtube.com/watch?v=NpNiCWxf_Uo", "2014-12-17T11:41:23+00:00");
-        }
-            
-        private const string titleFormat = "{0} [{1}]";
-
-        private void AddLink(string title, string url, string releaseDate)
-        {
-            var date = DateTime.Parse(releaseDate);
-            var fullTitle = string.Format(titleFormat, title, date.ToString("MMM dd, yyyy"));
-            AddLink(new Link(LinkType.The_Progression_Series, url, fullTitle));
         }
     }
 }

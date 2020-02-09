@@ -11,7 +11,8 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
         public CardTalkPodcast()
             : base("Card Talk",
             "https://cardtalk2018.libsyn.com/",
-            "http://cardtalk2018.libsyn.com/rss")
+            "http://cardtalk2018.libsyn.com/rss",
+            LinkType.Card_Talk)
         {
             AddLink("Andrath-Guardsman-TMk", LinkType.Card_Talk, "https://cardtalk2018.libsyn.com/andrath-guardsman", "Andrath Guardsman");
             AddLink("Aragorn-Core", LinkType.Card_Talk, "https://cardtalk2018.libsyn.com/leadership-aragorn", "Leadership Aragorn");

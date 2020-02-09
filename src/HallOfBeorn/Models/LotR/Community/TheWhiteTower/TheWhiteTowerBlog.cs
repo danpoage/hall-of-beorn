@@ -11,7 +11,8 @@ namespace HallOfBeorn.Models.LotR.Community.TheWhiteTower
         public TheWhiteTowerBlog()
             : base("The White Tower",
             "https://thewhitetower.wordpress.com",
-            "https://thewhitetower.wordpress.com/feed")
+            "https://thewhitetower.wordpress.com/feed",
+            LinkType.The_White_Tower)
         {
             AddYear(2019);
             AddLink("Ancient Mathoms - Shadows of Mirkwood Part 3", "https://thewhitetower.wordpress.com/2019/09/02/ancient-mathoms-shadows-of-mirkwood-part-3/", "Tue, 03 Sep 2019 03:44:22 +0000");
@@ -67,15 +68,6 @@ namespace HallOfBeorn.Models.LotR.Community.TheWhiteTower
             AddLink("Agents of the White Council - The Lady of Gondor", "https://thewhitetower.wordpress.com/2018/02/25/agents-of-the-white-council-the-lady-of-gondor/", "Sun, 25 Feb 2018 09:03:48 +0000");
             AddLink("Agents of the White Council - Ground Rules", "https://thewhitetower.wordpress.com/2018/02/24/agents-of-the-white-council-ground-rules/", "Sat, 24 Feb 2018 10:12:31 +0000");
             AddLink("The Journey Begins", "https://thewhitetower.wordpress.com/2018/02/23/the-journey-begins/", "Fri, 23 Feb 2018 06:44:33 +0000");
-        }
-
-        private const string titleFormat = "{0} [{1}]";
-
-        private void AddLink(string title, string url, string releaseDate)
-        {
-            var date = DateTime.Parse(releaseDate);
-            var fullTitle = string.Format(titleFormat, title, date.ToString("MMM dd, yyyy"));
-            AddLink(new Link(LinkType.The_White_Tower, url, fullTitle));
         }
     }
 }

@@ -11,7 +11,8 @@ namespace HallOfBeorn.Models.LotR.Community.ThreeIsCompany
         public ThreeIsCompanyPodcast()
             : base("Three is Company",
             "https://www.podbean.com/podcast-detail/wzaap-85063/Three-is-Company-Podcast",
-            "https://feeds.buzzsprout.com/232796.rss")
+            "https://feeds.buzzsprout.com/232796.rss",
+            LinkType.Three_is_Company)
         {
             AddYear(2020);
             AddLink("Episode 11 - The City of Ulfast & Multi Faction Decks", "https://www.buzzsprout.com/232796/2550712-episode-11-the-city-of-ulfast-multi-faction-decks.mp3?blob_id=8443066", 
@@ -43,15 +44,6 @@ namespace HallOfBeorn.Models.LotR.Community.ThreeIsCompany
                 "Thu, 11 Apr 2019 00:00:00 -0700");
             AddLink("Episode 1 - Roam Across Rhovanion & Trample All Over Rohan", "https://www.buzzsprout.com/232796/948596-episode-1-roam-across-rhovanion-trample-all-over-rohan.mp3?blob_id=4493860", 
                 "Thu, 07 Feb 2019 01:00:00 -0800");
-        }
-
-        private const string titleFormat = "{0} [{1}]";
-
-        private void AddLink(string title, string url, string releaseDate)
-        {
-            var date = DateTime.Parse(releaseDate);
-            var fullTitle = string.Format(titleFormat, title, date.ToString("MMM dd, yyyy"));
-            AddLink(new Link(LinkType.Three_is_Company, url, fullTitle));
         }
     }
 }

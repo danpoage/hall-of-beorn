@@ -11,7 +11,8 @@ namespace HallOfBeorn.Models.LotR.Community.CardboardOfTheRings
         public CardboardOfTheRingsPodcast()
             : base("Cardboard of the Rings",
             "https://cardboardoftherings.com",
-            "http://cotr.libsyn.com/rss")
+            "http://cotr.libsyn.com/rss",
+            LinkType.Cardboard_of_the_Rings)
         {
             AddYear(2020);
             AddLink("158", "Ugly Shaggy Hair", "http://traffic.libsyn.com/cotr/Episode_158_-_Ugly_Shaggy_Hair.mp3?dest-id=66353", "Sat, 25 Jan 2020 01:50:28 +0000");

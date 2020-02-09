@@ -11,7 +11,8 @@ namespace HallOfBeorn.Models.LotR.Community.TheBookOfElessar
         public TheBookOfElessarChannel()
             : base("The Book of Elessar",
             "https://www.youtube.com/channel/UCUgU6nIpwNlADThJKEDV3Pg",
-            "https://www.youtube.com/feeds/videos.xml?channel_id=UCUgU6nIpwNlADThJKEDV3Pg")
+            "https://www.youtube.com/feeds/videos.xml?channel_id=UCUgU6nIpwNlADThJKEDV3Pg",
+            LinkType.The_Book_of_Elessar)
         {
             AddYear(2020);
             AddLink("Book of Elessar, Ep. 15: Shadow and Flame", "https://www.youtube.com/watch?v=H_GKqfPV3Uo", "2020-01-28T01:31:59+00:00");
@@ -31,15 +32,6 @@ namespace HallOfBeorn.Models.LotR.Community.TheBookOfElessar
             AddLink("Book of Elessar, Ep. 3: A Journey to Rhosgobel", "https://www.youtube.com/watch?v=YOab58znthI", "2019-09-27T23:08:20+00:00");
             AddLink("Book of Elessar, Ep 2: Conflict at the Carrock", "https://www.youtube.com/watch?v=GDlieGGihL8", "2019-09-21T00:01:53+00:00");
             AddLink("Book of Elessar, Ep.1: The Hunt for Gollum", "https://www.youtube.com/watch?v=mfjEwukJzAk", "2019-09-09T17:19:02+00:00");
-        }
-
-        private const string titleFormat = "{0} [{1}]";
-        
-        private void AddLink(string title, string url, string pubDate)
-        {
-            var releaseDate = DateTime.Parse(pubDate);
-            var fullTitle = string.Format(titleFormat, title, releaseDate.ToString("MMM dd, yyyy"));
-            AddLink(new Link(LinkType.The_Book_of_Elessar, url, fullTitle));
         }
     }
 }

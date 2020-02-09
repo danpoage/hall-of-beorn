@@ -53,6 +53,7 @@ namespace HallOfBeorn.Models
         Expecting_Mischief,
         Die_Manner_von_Gondor,
         The_Book_of_Elessar,
+        The_Card_Game_Cooperative,
 
         Hall_of_Beorn_LotR_Detail,
         Hall_of_Beorn_LotR_Image,
