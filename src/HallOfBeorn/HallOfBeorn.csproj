@@ -381,6 +381,8 @@
     <Compile Include="Models\LotR\Community\CardTalk\CardTalkChannel.cs" />
     <Compile Include="Models\LotR\Community\DarklingDoor\DarklingDoorBlog.cs" />
     <Compile Include="Models\LotR\Community\DorCuarthol\DorCuartholBlog.cs" />
+    <Compile Include="Models\LotR\Community\LotRDeckTestingGround\LotRDeckTestingGroundBlog.cs" />
+    <Compile Include="Models\LotR\Community\ReflectionInHennethAnnun\ReflectionInHennethAnnunBlog.cs" />
     <Compile Include="Models\LotR\Community\TheBookOfElessar\TheBookOfElessarChannel.cs" />
     <Compile Include="Models\LotR\Community\CardboardOfTheRings\CardboardOfTheRingsPodcast.cs" />
     <Compile Include="Models\LotR\Community\CardTalk\CardTalkPodcast.cs" />
@@ -393,10 +395,12 @@
     <Compile Include="Models\LotR\Community\TheGreyCompany\TheGreyCompanyPodcast.cs" />
     <Compile Include="Models\LotR\Community\TheProgressionSeries\TheProgressionSeriesChannel.cs" />
     <Compile Include="Models\LotR\Community\TheRoad\TheRoadBlog.cs" />
+    <Compile Include="Models\LotR\Community\TheSecondhandTook\TheSecondhandTookBlog.cs" />
     <Compile Include="Models\LotR\Community\TheWhiteTower\TheWhiteTowerBlog.cs" />
     <Compile Include="Models\LotR\Community\ThreeIsCompany\ThreeIsCompanyPodcast.cs" />
     <Compile Include="Models\LotR\Community\VisionOfThePalantir\PlayerCardAnalysisLink.cs" />
     <Compile Include="Models\LotR\Community\VisionOfThePalantir\VisionOfThePalantirBlog.cs" />
+    <Compile Include="Models\LotR\Community\WardenOfArnor\WardenOfArnorBlog.cs" />
     <Compile Include="Models\LotR\Community\WarriorsOfTheWest\WarriorsOfTheWestBlog.cs" />
     <Compile Include="Models\LotR\Compact\CardType.cs" />
     <Compile Include="Models\LotR\Compact\Trait.cs" />

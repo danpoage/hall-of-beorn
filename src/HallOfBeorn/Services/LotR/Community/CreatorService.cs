@@ -10,15 +10,19 @@ using HallOfBeorn.Models.LotR.Community.CardTalk;
 using HallOfBeorn.Models.LotR.Community.DarklingDoor;
 using HallOfBeorn.Models.LotR.Community.DorCuarthol;
 using HallOfBeorn.Models.LotR.Community.HallOfBeorn;
+using HallOfBeorn.Models.LotR.Community.LotRDeckTestingGround;
 using HallOfBeorn.Models.LotR.Community.MasterOfLore;
+using HallOfBeorn.Models.LotR.Community.ReflectionInHennethAnnun;
 using HallOfBeorn.Models.LotR.Community.TalesFromTheCards;
 using HallOfBeorn.Models.LotR.Community.TheCardGameCooperative;
 using HallOfBeorn.Models.LotR.Community.TheGreyCompany;
 using HallOfBeorn.Models.LotR.Community.TheProgressionSeries;
 using HallOfBeorn.Models.LotR.Community.TheRoad;
+using HallOfBeorn.Models.LotR.Community.TheSecondhandTook;
 using HallOfBeorn.Models.LotR.Community.TheWhiteTower;
 using HallOfBeorn.Models.LotR.Community.ThreeIsCompany;
 using HallOfBeorn.Models.LotR.Community.VisionOfThePalantir;
+using HallOfBeorn.Models.LotR.Community.WardenOfArnor;
 using HallOfBeorn.Models.LotR.Community.WarriorsOfTheWest;
 
 namespace HallOfBeorn.Services.LotR.Community
@@ -39,8 +43,12 @@ namespace HallOfBeorn.Services.LotR.Community
             AddBlog(new MasterOfLoreBlog());
             AddBlog(new DorCuartholBlog());
             AddBlog(new VisionOfThePalantirBlog());
+            AddBlog(new LotRDeckTestingGroundBlog());
             AddBlog(new DarklingDoorBlog());
+            AddBlog(new WardenOfArnorBlog());
             AddBlog(new WarriorsOfTheWestBlog());
+            AddBlog(new ReflectionInHennethAnnunBlog());
+            AddBlog(new TheSecondhandTookBlog());
             AddBlog(new TheWhiteTowerBlog());
             AddBlog(new TheRoadBlog());
             AddBlog(new TheCardGameCooperativeBlog());

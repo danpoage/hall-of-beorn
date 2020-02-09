@@ -14,7 +14,7 @@ namespace RssReader
             var url = string.Empty;
             var path = string.Empty;
 
-            var isSingleFeed = true;
+            var isSingleFeed = false;
             if (isSingleFeed)
             {
                 url = "https://www.youtube.com/feeds/videos.xml?channel_id=UCj-QcL_YcA_DQKe7bSe9byA";
@@ -49,7 +49,11 @@ namespace RssReader
 
             var urlFormat = args.Length > 0
                 ? args[0]
-                : "https://tcgcoop.design.blog/feed?paged={0}";
+                : "https://reflectioninhennethannun.wordpress.com/feed?paged={0}";
+                //"https://lotrdecktest.com/feed?paged={0}";
+                //"https://wardenofarnor.wordpress.com/feed?paged={0}";
+                //"https://secondhandtook.wordpress.com/feed?paged={0}";
+                //"https://tcgcoop.design.blog/feed?paged={0}";
                 //"https://dorcuarthol.wordpress.com/feed?paged={0}";
                 //"https://thewhitetower.wordpress.com/feed?paged={0}";
                 //"https://darklingdoor.wordpress.com/feed?paged={0}";
@@ -62,7 +66,11 @@ namespace RssReader
 
             var pathFormat = args.Length > 1
                 ? args[1]
-                : "TCGCoop{0}.rss";
+                : "Reflection-in-HennethAnnun{0}.rss";
+                //"LOTR-Deck-Test{0}.rss";
+                //"Warden-of-Arnor{0}.rss";
+                //"The-Secondhand-Took{0}.rss";
+                //"TCGCoop{0}.rss";
                 //"Dor-Cuarthol{0}.rss";
                 //"The-White-Tower{0}.rss";
                 //"Darkling-Door{0}.rss";

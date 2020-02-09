@@ -29,6 +29,7 @@ namespace HallOfBeorn.Models
         
         Mr_Underhill,
         LotR_Deck_Tech,
+        LOTR_Deck_Testing_Ground,
 
         The_Road,
         The_White_Tower,
@@ -43,6 +44,8 @@ namespace HallOfBeorn.Models
         Darkling_Door,
         Second_Hand_Took,
         The_Mirkwood_Runner,
+        The_Secondhand_Took,
+        Reflection_in_Henneth_Annun,
         
         Heroes_of_the_Rings,
         Very_Late_Adventurer,
