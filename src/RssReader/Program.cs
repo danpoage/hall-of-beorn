@@ -10,6 +10,7 @@ namespace RssReader
             var downloader = new FileDownloader();
             var podcastReader = new PodcastRssReader();
             var ytReader = new YouTubeRssReader();
+            var bsReader = new BlogspotRssReader();
 
             var url = string.Empty;
             var path = string.Empty;
@@ -17,7 +18,8 @@ namespace RssReader
             var isSingleFeed = false;
             if (isSingleFeed)
             {
-                url = "https://www.youtube.com/feeds/videos.xml?channel_id=UCj-QcL_YcA_DQKe7bSe9byA";
+                url = "http://susurrosdelbosqueviejo.blogspot.com/feeds/posts/default?alt=rss";
+                    //"https://www.youtube.com/feeds/videos.xml?channel_id=UCj-QcL_YcA_DQKe7bSe9byA";
                     //"https://www.youtube.com/feeds/videos.xml?channel_id=UCM8hzRbiHw4e2JJsTQPzLYw";
                     //"https://www.youtube.com/feeds/videos.xml?channel_id=UCVKwveV9va6wBu1AkRIHB9w";
                     //"https://www.youtube.com/feeds/videos.xml?channel_id=UCAF06gMU013g3R2QIH5DaQQ";
@@ -38,7 +40,7 @@ namespace RssReader
                     }
                 }
 
-                if (!ytReader.ProcessRss(path))
+                if (!podcastReader.ProcessRss(path))
                 {
                     return;
                 }
@@ -49,7 +51,10 @@ namespace RssReader
 
             var urlFormat = args.Length > 0
                 ? args[0]
-                : "https://reflectioninhennethannun.wordpress.com/feed?paged={0}";
+                : "https://www.blogger.com/feeds/7317893245431780918/posts/default?start-index={0}&max-results=25";
+                //"https://menofgondor.wordpress.com/feed?paged={0}";
+                //"https://unfinishedtrailsblog.wordpress.com/feed?paged={0}";
+                //"https://reflectioninhennethannun.wordpress.com/feed?paged={0}";
                 //"https://lotrdecktest.com/feed?paged={0}";
                 //"https://wardenofarnor.wordpress.com/feed?paged={0}";
                 //"https://secondhandtook.wordpress.com/feed?paged={0}";
@@ -66,7 +71,10 @@ namespace RssReader
 
             var pathFormat = args.Length > 1
                 ? args[1]
-                : "Reflection-in-HennethAnnun{0}.rss";
+                : "Susurros{0}.rss";
+                //"Die-Manner-von-Gondor{0}.rss";
+                //"Unfinished-Trails{0}.rss";
+                //"Reflection-in-HennethAnnun{0}.rss";
                 //"LOTR-Deck-Test{0}.rss";
                 //"Warden-of-Arnor{0}.rss";
                 //"The-Secondhand-Took{0}.rss";
@@ -82,10 +90,15 @@ namespace RssReader
                 //".\\Hall-of-Beorn{0}.rss";
 
             var page = 1;
+            const int pageSize = 25;
+            var index = 1;
+            var useIndex = true;
+            var maxPages = 7;
 
             while (true)
             {
-                url = string.Format(urlFormat, page);
+                var urlIndex = useIndex ? index : page;
+                url = string.Format(urlFormat, urlIndex);
                 path = string.Format(pathFormat, page);
 
                 if (!downloader.FileExists(path))
@@ -96,12 +109,18 @@ namespace RssReader
                     }
                 }
 
-                if (!podcastReader.ProcessRss(path))
+                if (!bsReader.ProcessRss(path))
                 {
                     return;
                 }
 
                 page++;
+                index = ((page - 1) * pageSize) + 1;
+
+                if (page > maxPages)
+                {
+                    break;
+                }
             }
         }
     }

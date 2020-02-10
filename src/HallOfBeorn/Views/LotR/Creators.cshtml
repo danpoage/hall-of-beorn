@@ -65,7 +65,16 @@
     {
         if (!string.IsNullOrWhiteSpace(@link.Url))
         {
-            <p><a href="@link.Url" title="@link.FullTitle" target="_blank">@link.Title</a></p>
+            if (@link.TypeName == "Logo") {
+                <h2 style="margin-top:24px;">
+                    <a href="@link.Url" title="@link.Title" target="_blank">@link.Title</a>
+                </h2>
+                <a href="@link.Url" title="@link.Title" target="_blank">
+                    <img src="@link.ThumbnailUrl" height="@link.ThumbnailHeight" width="@link.ThumbnailWidth" />
+                </a>
+            } else {
+                <p><a href="@link.Url" title="@link.FullTitle" target="_blank">@link.Title</a></p>
+            }
         } else {
             <br />
             <h3>@link.Title</h3>

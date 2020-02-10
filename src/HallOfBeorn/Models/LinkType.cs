@@ -8,6 +8,7 @@ namespace HallOfBeorn.Models
     public enum LinkType
     {
         None = 0,
+        Logo,
         Wikipedia,
         Lord_of_the_Rings_Wiki,
         Tolkien_Gateway,
@@ -46,6 +47,7 @@ namespace HallOfBeorn.Models
         The_Mirkwood_Runner,
         The_Secondhand_Took,
         Reflection_in_Henneth_Annun,
+        Unfinished_Trails,
         
         Heroes_of_the_Rings,
         Very_Late_Adventurer,

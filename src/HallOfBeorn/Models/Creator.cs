@@ -22,6 +22,9 @@ namespace HallOfBeorn.Models
         private readonly Dictionary<string, List<string>> urlsByCardSlug 
             = new Dictionary<string, List<string>>();
 
+        private const string partnerLogoFormat =
+            "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Partners/{0}.jpg";
+
         protected void AddLink(ILink link)
         {
             allLinks.Add(link);
@@ -44,6 +47,14 @@ namespace HallOfBeorn.Models
         protected void AddYear(int year)
         {
             AddLink(new Link(LinkType.None, string.Empty, year.ToString()));
+        }
+
+        protected void AddAlternateSource(string name, string url)
+        {
+            AddLink(
+                new Link(LinkType.Logo, url, name, 
+                    string.Format(partnerLogoFormat, name.ToSlug()), 118, 210)
+                );
         }
 
         protected void AssociateCardToUrl(string cardSlug, string url)
