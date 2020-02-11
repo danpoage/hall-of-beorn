@@ -9173,6 +9173,8 @@ namespace HallOfBeorn.Services.LotR.RingsDb
                     return 17;
                 case "Ered Mithrin":
                     return 19;
+                case "Vengeance of Mordor":
+                    return 22;
                 default:
                     break;
             }
@@ -9210,6 +9212,10 @@ namespace HallOfBeorn.Services.LotR.RingsDb
                 //The Wilds of Rhovanion
                 case "TWoR":
                     return 18;
+
+                //A Shadow in the East
+                case "ASitE":
+                    return 21;
 
                 //The Hobbit
                 case "THOHaUH":
