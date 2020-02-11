@@ -37,6 +37,27 @@ namespace HallOfBeorn.Models
         {
         }
 
+        private static string GetPartnerLogo(LinkType type)
+        {
+            return string.Format("{0}/{1}.jpg", 
+                parterBaseUrl, 
+                type.ToString().Replace("_", "-"));
+        }
+
+        private readonly static HashSet<LinkType> partnerLinkTypes = new HashSet<LinkType>
+        {
+            LinkType.The_Grey_Company,
+            LinkType.Cardboard_of_the_Rings,
+            LinkType.Card_Talk,
+            LinkType.The_Card_Game_Cooperative,
+            LinkType.Tales_from_the_Cards,
+            LinkType.Hall_of_Beorn,
+            LinkType.Master_of_Lore,
+            LinkType.Darkling_Door,
+            LinkType.Vision_of_the_Palantir,
+            LinkType.The_Book_of_Elessar,
+        };
+
         public Link(LinkType type, string url, string title, string thumbnailUrl, int? thumbnailHeight, int? thumbnailWidth)
         {
             this.Type = type;
@@ -45,60 +66,17 @@ namespace HallOfBeorn.Models
             this.Url = url;
             this.ThumbnailUrl = thumbnailUrl;
 
-            _thumbnailHeight = thumbnailHeight;
-            _thumbnailWidth = thumbnailWidth;
+            _thumbnailHeight = thumbnailHeight.HasValue 
+                ? thumbnailHeight.Value : defaultThumbnailHeight;
+
+            _thumbnailWidth = thumbnailWidth.HasValue
+                ? thumbnailWidth.Value : defaultThumbnailWidth;
 
             if (string.IsNullOrWhiteSpace(thumbnailUrl))
             {
-                switch (type)
+                if (partnerLinkTypes.Contains(type))
                 {
-                    case LinkType.The_Grey_Company:
-                        ThumbnailUrl = string.Format("{0}/The-Grey-Company.jpg", parterBaseUrl);
-                        _thumbnailWidth = defaultThumbnailWidth;
-                        _thumbnailHeight = defaultThumbnailHeight;
-                        break;
-                    case LinkType.Cardboard_of_the_Rings:
-                        ThumbnailUrl = string.Format("{0}/Cardboard-of-the-Rings.jpg", parterBaseUrl);
-                        _thumbnailWidth = defaultThumbnailWidth;
-                        _thumbnailHeight = defaultThumbnailHeight;
-                        break;
-                    case LinkType.Card_Talk:
-                        ThumbnailUrl = string.Format("{0}/Card-Talk.jpg", parterBaseUrl);
-                        _thumbnailWidth = defaultThumbnailWidth;
-                        _thumbnailHeight = defaultThumbnailHeight;
-                        break;
-                    case LinkType.Darkling_Door:
-                        ThumbnailUrl = string.Format("{0}/Darkling-Door.jpg", parterBaseUrl);
-                        _thumbnailWidth = defaultThumbnailWidth;
-                        _thumbnailHeight = defaultThumbnailHeight;
-                        break;
-                    case LinkType.Three_is_Company:
-                        ThumbnailUrl = string.Format("{0}/Three-is-Company.jpg", parterBaseUrl);
-                        _thumbnailWidth = defaultThumbnailWidth;
-                        _thumbnailHeight = defaultThumbnailHeight;
-                        break;
-                    case LinkType.Tales_from_the_Cards:
-                        ThumbnailUrl = string.Format("{0}/Tales-from-the-Cards.jpg", parterBaseUrl);
-                        _thumbnailWidth = defaultThumbnailWidth;
-                        _thumbnailHeight = defaultThumbnailHeight;
-                        break;
-                    case LinkType.Master_of_Lore:
-                        ThumbnailUrl = string.Format("{0}/Master-of-Lore.jpg", parterBaseUrl);
-                        _thumbnailWidth = defaultThumbnailWidth;
-                        _thumbnailHeight = defaultThumbnailHeight;
-                        break;
-                    case LinkType.Vision_of_the_Palantir:
-                        ThumbnailUrl = string.Format("{0}/Vision-of-the-Palantir.jpg", parterBaseUrl);
-                        _thumbnailWidth = defaultThumbnailWidth;
-                        _thumbnailHeight = defaultThumbnailHeight;
-                        break;
-                    case LinkType.The_Book_of_Elessar:
-                        ThumbnailUrl = string.Format("{0}/The-Book-of-Elessar.jpg", parterBaseUrl);
-                        _thumbnailWidth = defaultThumbnailWidth;
-                        _thumbnailHeight = defaultThumbnailHeight;
-                        break;
-                    default:
-                        break;
+                    ThumbnailUrl = GetPartnerLogo(type);
                 }
             }
         }

@@ -5,7 +5,7 @@ using HallOfBeorn.Models;
 
 namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
 {
-    public class TheBlackRiders : CardSet
+    public class TheBlackRidersSet : CardSet
     {
         protected override void Initialize()
         {

@@ -34,7 +34,11 @@ namespace HallOfBeorn.Services.LotR.Tags
             AddTag("Elrond-SaF", "<span class='hero-champ-second'>2nd - 2014</span>", "Hero Championship 2014 Runner Up", "https://community.fantasyflightgames.com/topic/127748-the-hero-championship-2014/?p=1388537");
             AddTag("Sam-Gamgee-TBR", "<span class='hero-champ-first'>1st - 2015</span>", "Hero Championship 2015 Winner", "https://community.fantasyflightgames.com/topic/89803-the-hero-championship/?p=868113");
             AddTag("Gandalf-RD", "<span class='hero-champ-second'>2nd - 2015</span>", "Hero Championship 2015 Runner Up", "https://community.fantasyflightgames.com/topic/89803-the-hero-championship/?p=868113");
- 
+            AddTag("Elrond-SaF", "<span class='hero-champ-first'>1st - 2016</span>", "Hero Championship 2016 Winner", "https://community.fantasyflightgames.com/topic/236181-the-hero-championship-2016/");
+            AddTag("Arwen-Undomiel-TDR", "<span class='hero-champ-second'>2nd - 2016</span>", "Hero Championship 2016 Runner Up", "https://community.fantasyflightgames.com/topic/236181-the-hero-championship-2016/");
+
+            AddTag("Gandalf-RD", "<span class='hero-champ-first'>1st - 2019</span>", "Hero Championship 2019 Winner", "https://challonge.com/LOTRLCGHero2019");
+            AddTag("Eowyn-TFotW", "<span class='hero-champ-second'>2nd - 2019</span>", "Hero Championship 2019 Runner Up", "https://challonge.com/LOTRLCGHero2019");
         }
 
         public IEnumerable<CardTag> GetTags(string slug)
