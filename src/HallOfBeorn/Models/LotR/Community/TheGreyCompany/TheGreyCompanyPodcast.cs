@@ -49,12 +49,15 @@ namespace HallOfBeorn.Models.LotR.Community.TheGreyCompany
             AddLink("45", "45 - Ally Showdown", new DateTime(2016, 8, 26));
             AddLink("44", "44 - Temple of the Deceived", new DateTime(2016, 7, 29));
             AddLink("43", "43 - Hero Showdown", new DateTime(2016, 7, 8));
-            AddLink("42", "42 - Book Clun VI", new DateTime(2016, 6, 16));
+            AddLink("42", "42 - Book Club VI", new DateTime(2016, 6, 16));
             AddLink("41", "41 - Benchmarking", new DateTime(2016, 5, 26));
             AddLink("40", "40 - Stormcaller", new DateTime(2016, 5, 11));
             AddLink("39", "39 - Alternatives to Staples", new DateTime(2016, 4, 21));
             AddLink("38", "38 - Book Club V", new DateTime(2016, 3, 31));
-            AddLink("37", "37 - The Grey Havens", new DateTime(2016, 3, 9));
+            AddLink("37", "37 - The Grey Havens", new DateTime(2016, 3, 9))
+                .WithAssociation("Cirdan-the-Shipwright-TGH")
+                .WithAssociation("Narya-TGH");
+
             AddLink("36", "36 - Angmar Wrapup", new DateTime(2016, 2, 17));
             AddLink("35", "35 - Luck vs. Skill", new DateTime(2016, 1, 15));
 
@@ -73,31 +76,36 @@ namespace HallOfBeorn.Models.LotR.Community.TheGreyCompany
             AddLink("24a", "24a - The Lost Realm (Player Cards)", new DateTime(2015, 4, 9));
             AddLink("23", "23 - The Core Set", new DateTime(2015, 3, 19));
 
-            AddLink("22", "22 - The Hobbit Special", new DateTime(2015, 2, 27));
-            AssociateCardToEpisodeNumber("22", "Sam-Gamgee-TBR");
-            AssociateCardToEpisodeNumber("22", "Pippin-TBR");
-            AssociateCardToEpisodeNumber("22", "Merry-TBR");
-            AssociateCardToEpisodeNumber("22", "Bill-the-Pony-TBR");
+            AddLink("22", "22 - The Hobbit Special", new DateTime(2015, 2, 27))
+                .WithAssociation("Sam-Gamgee-TBR")
+                .WithAssociation("Pippin-TBR")
+                .WithAssociation("Merry-TBR")
+                .WithAssociation("Bill-the-Pony-TBR")
+                .WithAssociation("Dagger-of-Westernesse-TBR");
             
             AddLink("21", "21 - Evolution with Matt Newman", new DateTime(2015, 2, 3));
             AddLink("20b", "20b - More Lore", new DateTime(2015, 1, 27));
-            AddLink("20a", "20a - Lore", new DateTime(2015, 1, 16));
+            AddLink("20a", "20a - Lore", new DateTime(2015, 1, 16))
+                .WithAssociation("Daeron's-Runes-FoS")
+                .WithAssociation("Warden-of-Healing-TLD")
+                .WithAssociation("A-Burning-Brand-CatC");
+
 
             AddYear(2014);
             AddLink("19", "19 - Year in Review 2014", new DateTime(2014, 12, 30));
-            
-            AddLink("18", "18 - Leadership", new DateTime(2014, 11, 21));
-            AssociateCardToEpisodeNumber("18", "Steward-of-Gondor-Core");
-            AssociateCardToEpisodeNumber("18", "Faramir-Core");
 
-            AddLink("17", "17 - Rohan", new DateTime(2014, 11, 5));
-            AssociateCardToEpisodeNumber("17", "Eowyn-Core");
-            AssociateCardToEpisodeNumber("17", "Theodred-Core");
+            AddLink("18", "18 - Leadership", new DateTime(2014, 11, 21))
+                .WithAssociation("Steward-of-Gondor-Core")
+                .WithAssociation("Faramir-Core");
+            
+            AddLink("17", "17 - Rohan", new DateTime(2014, 11, 5))
+                .WithAssociation("Eowyn-Core")
+                .WithAssociation("Theodred-Core");
 
             AddLink("16", "16 - Roads Darken", new DateTime(2014, 10, 21));
 
-            AddLink("15b", "15b - Mirkwood Pioneer", new DateTime(2014, 9, 27));
-            AssociateCardToEpisodeNumber("15b", "Mirkwood-Pioneer-NiE");
+            AddLink("15b", "15b - Mirkwood Pioneer", new DateTime(2014, 9, 27))
+                .WithAssociation("Mirkwood-Pioneer-NiE");
 
             AddLink("15a", "15a - Tri-Sphere", new DateTime(2014, 9, 20));
             AddLink("14", "14 - GenCon", new DateTime(2014, 8, 28));
@@ -144,11 +152,11 @@ namespace HallOfBeorn.Models.LotR.Community.TheGreyCompany
             AssociateCardToUrl(cardSlug, url);
         }
 
-        private void AddLink(string episodeNumber, string title, DateTime releaseDate)
+        private CreatorLink AddLink(string episodeNumber, string title, DateTime releaseDate)
         {
             var url = GetUrl(episodeNumber);
             var fullTitle = string.Format(titleFormat, title, releaseDate.ToString("MMM dd, yyyy"));
-            AddLink(new Link(LinkType.The_Grey_Company, url, fullTitle));
+            return AddLink(new Link(LinkType.The_Grey_Company, url, fullTitle));
         }
     }
 }

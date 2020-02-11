@@ -10,5 +10,6 @@ namespace HallOfBeorn.Models
         string FeedUrl { get; }
         IEnumerable<ILink> Links();
         IEnumerable<ILink> GetLinks(string cardSlug);
+        void AssociateCardToUrl(string cardSlug, string url);
     }
 }

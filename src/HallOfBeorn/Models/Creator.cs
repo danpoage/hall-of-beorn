@@ -25,7 +25,9 @@ namespace HallOfBeorn.Models
         private const string partnerLogoFormat =
             "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Partners/{0}.jpg";
 
-        protected void AddLink(ILink link)
+        private const string simpleTitleFormat = "{0} [{1}]";
+
+        protected CreatorLink AddLink(ILink link)
         {
             allLinks.Add(link);
 
@@ -33,15 +35,17 @@ namespace HallOfBeorn.Models
             {
                 linksByUrl[link.Url] = link;
             }
+
+            return new CreatorLink(this, link);
         }
 
-        private const string simpleTitleFormat = "{0} [{1}]";
-
-        protected void AddLink(string title, string url, string releaseDate)
+        protected CreatorLink AddLink(string title, string url, string releaseDate)
         {
             var date = DateTime.Parse(releaseDate);
             var fullTitle = string.Format(simpleTitleFormat, title, date.ToString("MMM dd, yyyy"));
-            AddLink(new Link(DefaultLinkType, url, fullTitle));
+            var link = new Link(DefaultLinkType, url, fullTitle);
+            AddLink(link);
+            return new CreatorLink(this, link);
         }
 
         protected void AddYear(int year)
@@ -57,7 +61,7 @@ namespace HallOfBeorn.Models
                 );
         }
 
-        protected void AssociateCardToUrl(string cardSlug, string url)
+        public void AssociateCardToUrl(string cardSlug, string url)
         {
             if (!urlsByCardSlug.ContainsKey(cardSlug))
             {

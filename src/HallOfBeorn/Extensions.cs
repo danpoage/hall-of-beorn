@@ -485,6 +485,18 @@ namespace HallOfBeorn
             return self.Value == byte.MaxValue ? "-" : self.Value.ToString();
         }
 
+        public static string Elide(this string self, int maxLength)
+        {
+            if (string.IsNullOrWhiteSpace(self))
+            {
+                return string.Empty;
+            }
+
+            return self.Length > maxLength
+                ? self.Substring(0, maxLength) + "..."
+                : self;
+        }
+
         private static Dictionary<string, string> getNormalizeMap()
         {
             return new Dictionary<string, string> {

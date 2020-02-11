@@ -37,25 +37,32 @@ namespace HallOfBeorn.Models
         {
         }
 
-        private static string GetPartnerLogo(LinkType type)
+        private static string GetPartnerLogo(LinkType type, string name)
         {
+            var image = string.IsNullOrEmpty(name)
+                ? type.ToString().Replace("_", "-")
+                : name;
+            
             return string.Format("{0}/{1}.jpg", 
                 parterBaseUrl, 
-                type.ToString().Replace("_", "-"));
+                image);
         }
 
-        private readonly static HashSet<LinkType> partnerLinkTypes = new HashSet<LinkType>
+        private readonly static Dictionary<LinkType, string> partnerLinkTypes 
+            = new Dictionary<LinkType, string>
         {
-            LinkType.The_Grey_Company,
-            LinkType.Cardboard_of_the_Rings,
-            LinkType.Card_Talk,
-            LinkType.The_Card_Game_Cooperative,
-            LinkType.Tales_from_the_Cards,
-            LinkType.Hall_of_Beorn,
-            LinkType.Master_of_Lore,
-            LinkType.Darkling_Door,
-            LinkType.Vision_of_the_Palantir,
-            LinkType.The_Book_of_Elessar,
+            { LinkType.The_Grey_Company, "" },
+            { LinkType.Cardboard_of_the_Rings, "" },
+            { LinkType.Card_Talk, "" },
+            { LinkType.The_Card_Game_Cooperative, "" },
+            { LinkType.Tales_from_the_Cards, "" },
+            { LinkType.Hall_of_Beorn, "" },
+            { LinkType.Master_of_Lore, "" },
+            { LinkType.Darkling_Door, "" },
+            { LinkType.Vision_of_the_Palantir, "" },
+            { LinkType.The_Book_of_Elessar, "" },
+            { LinkType.Die_Manner_von_Gondor, "Die-Männer-von-Gondor" },
+            { LinkType.Susurros_del_Bosque_Viejo, "" }
         };
 
         public Link(LinkType type, string url, string title, string thumbnailUrl, int? thumbnailHeight, int? thumbnailWidth)
@@ -74,9 +81,10 @@ namespace HallOfBeorn.Models
 
             if (string.IsNullOrWhiteSpace(thumbnailUrl))
             {
-                if (partnerLinkTypes.Contains(type))
+                if (partnerLinkTypes.ContainsKey(type))
                 {
-                    ThumbnailUrl = GetPartnerLogo(type);
+                    var name = partnerLinkTypes[type];
+                    ThumbnailUrl = GetPartnerLogo(type, name);
                 }
             }
         }
@@ -175,5 +183,23 @@ namespace HallOfBeorn.Models
         public string ThumbnailUrl { get; private set; }
         public int ThumbnailHeight { get { return _thumbnailHeight.HasValue ? _thumbnailHeight.Value : 118; } } 
         public int ThumbnailWidth { get { return _thumbnailWidth.HasValue ? _thumbnailWidth.Value : 210; } }
+    }
+
+    public class CreatorLink
+    {
+        public CreatorLink(ICreator creator, ILink link)
+        {
+            Creator = creator;
+            Link = link;
+        }
+
+        public ICreator Creator { get; private set; }
+        public ILink Link { get; private set; }
+
+        public CreatorLink WithAssociation(string cardSlug)
+        {
+            Creator.AssociateCardToUrl(cardSlug, Link.Url);
+            return this;
+        }
     }
 }

@@ -15,7 +15,19 @@ namespace HallOfBeorn.Models.LotR.Community.DieMannerVonGondor
             LinkType.Die_Manner_von_Gondor)
         {
             AddYear(2016);
-            AddLink("21 - Hold the gate! (Die Belagerung von Cair Andros)", "https://menofgondor.wordpress.com/2016/10/07/21-hold-the-gate-die-belagerung-von-cair-andros/", "Fri, 07 Oct 2016 06:56:41 +0000");
+            AddLink("21 - Hold the gate! (Die Belagerung von Cair Andros)", "https://menofgondor.wordpress.com/2016/10/07/21-hold-the-gate-die-belagerung-von-cair-andros/", "Fri, 07 Oct 2016 06:56:41 +0000")
+                .WithAssociation("Beregond-HoN")
+                .WithAssociation("Defender-of-Rammas-HoN")
+                .WithAssociation("Boromir-TDM")
+                .WithAssociation("Legolas-Core")
+                .WithAssociation("Citadel-Plate-Core")
+                .WithAssociation("Winged-Guardian-THfG")
+                .WithAssociation("Foe-hammer-THOHaUH")
+                .WithAssociation("Goblin-cleaver-THOHaUH")
+                .WithAssociation("Blade-of-Gondolin-Core")
+                .WithAssociation("Gondorian-Spearman-Core")
+                .WithAssociation("Hands-Upon-the-Bow-SaF");
+
             AddLink("21 - Die Belagerung von Cair Andros (Deck fr das 21. Abenteuer)", "https://menofgondor.wordpress.com/2016/09/20/21-die-belagerung-von-cair-andros-deck-fuer-das-21-abenteuer/", "Tue, 20 Sep 2016 10:25:09 +0000");
             AddLink("For the greater good! (Caldara Deck)", "https://menofgondor.wordpress.com/2016/08/26/for-the-greater-good-caldara-deck/", "Fri, 26 Aug 2016 08:57:24 +0000");
             AddLink("The Drowned Ruins bald erh„ltlich!", "https://menofgondor.wordpress.com/2016/08/24/the-drowned-ruins-bald-erhaeltlich/", "Wed, 24 Aug 2016 12:03:23 +0000");
