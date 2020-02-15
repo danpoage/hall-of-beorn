@@ -38,6 +38,7 @@ namespace HallOfBeorn.Models.LotR
         {
             Card = card;
             Title = !string.IsNullOrEmpty(card.SlugSuffix) ? string.Format("{0} ({1})", card.Title, card.SlugSuffix) : card.Title;
+            Slug = card.Slug;
             Set = card.CardSet.NormalizedName;
             EncounterSet = card.EncounterSet;
             EncounterSetNumber = card.CardSet.Number;
@@ -46,6 +47,7 @@ namespace HallOfBeorn.Models.LotR
 
         public LotRCard Card { get; private set; }
         public string Title { get; private set; }
+        public string Slug { get; private set; }
         public string Set { get; private set; }
         public string EncounterSet { get; private set; }
         public int EncounterSetNumber { get; private set; }

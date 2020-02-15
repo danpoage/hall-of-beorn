@@ -77,39 +77,76 @@ namespace HallOfBeorn.Controllers
             return result;
         }
 
-        public ActionResult Scenarios()
+        private SimpleScenario GetSimpleScenario(Scenario scenario)
+        {
+            return new SimpleScenario() 
+            { 
+                Title = scenario.Title, 
+                Slug = scenario.Title.ToSlug(),
+                Number = (uint)scenario.Number,
+                Product = scenario.ProductName
+            };
+        }
+
+        private SimpleScenario GetFullScenario(Scenario scenario)
+        {
+            var simple = GetSimpleScenario(scenario);
+
+            foreach (var quest in scenario.QuestCards.Select(x => x.Quest))
+            {
+                simple.QuestCards.Add(new SimpleCard(quest));
+            }
+
+                    
+            foreach (var card in scenario.ScenarioCards)
+            {
+                simple.ScenarioCards.Add(new SimpleScenarioCard()
+                {
+                    EncounterSet = card.EncounterSet,
+                    Title = card.Title,
+                    Slug = card.Slug,
+                    NormalQuantity = (uint)card.NormalQuantity,
+                    EasyQuantity = (uint)card.EasyQuantity,
+                    NightmareQuantity = (uint)card.NightmareQuantity
+                });
+            }
+
+            return simple;
+        }
+
+        public ActionResult Scenarios(string id)
         {
             var result = new JsonResult() { JsonRequestBehavior = JsonRequestBehavior.AllowGet };
 
-            var scenarios = new List<SimpleScenario>();
+            if (!string.IsNullOrEmpty(id))
+            {
+                foreach (var group in scenarioService.ScenarioGroups())
+                {
+                    foreach (var scenario in group.Scenarios)
+                    {
+                        if (scenario.Slug == id)
+                        {
+                            result.Data = GetFullScenario(scenario);
+                            return result;
+                        }
+                    }
+                }
+
+                return result;
+            }
+            
+            var simpleScenarios = new List<SimpleScenario>();
             foreach (var group in scenarioService.ScenarioGroups())
             {
-                foreach (var item in group.Scenarios)
+                foreach (var scenario in group.Scenarios)
                 {
-                    var scenario = new SimpleScenario() { Title = item.Title, Number = (uint)item.Number };
+                    var simple = GetSimpleScenario(scenario);
 
-                    foreach (var quest in item.QuestCards.Select(x => x.Quest))
-                    {
-                        scenario.QuestCards.Add(new SimpleCard(quest));
-                    }
-
-                    foreach (var card in item.ScenarioCards)
-                    {
-                        scenario.ScenarioCards.Add(new SimpleScenarioCard()
-                        {
-                            EncounterSet = card.EncounterSet,
-                            Title = card.Title,
-                            NormalQuantity = (uint)card.NormalQuantity,
-                            EasyQuantity = (uint)card.EasyQuantity,
-                            NightmareQuantity = (uint)card.NightmareQuantity
-                        });
-                    }
-
-                    scenarios.Add(scenario);
+                    simpleScenarios.Add(simple);
                 }
             }
 
-            result.Data = scenarios;
+            result.Data = simpleScenarios;
 
             return result;
         }

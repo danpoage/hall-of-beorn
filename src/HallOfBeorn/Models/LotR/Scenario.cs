@@ -223,6 +223,9 @@ namespace HallOfBeorn.Models.LotR
         public int Number { get; set; }
         public string GroupName { get; set; }
         public bool IsSubGroup { get; set; }
+        public string Slug { 
+            get { return Title.ToSlug(); }
+        }
         public string Title { get; set; }
         public string ProductName { get; set; }
         public string RulesUrl { get; set; }
@@ -259,12 +262,12 @@ namespace HallOfBeorn.Models.LotR
 
         public IEnumerable<ScenarioQuestCard> QuestCards
         {
-            get { return questCards.OrderBy(x => x.StageNumber).ToList(); }
+            get { return questCards.OrderBy(qc => qc.StageNumber).ThenBy(qc => qc.StageLetter).ToList(); }
         }
 
         public IEnumerable<ScenarioCard> ScenarioCards
         {
-            get { return scenarioCards.OrderBy(x => x.EncounterSet).ThenBy(x => x.Title).ToList(); }
+            get { return scenarioCards.OrderBy(sc => sc.EncounterSet).ThenBy(sc => sc.Title).ToList(); }
         }
 
         public void SetCampaignCard(LotRCard card)

@@ -38,6 +38,7 @@ namespace HallOfBeorn.Models.LotR.Simple
             InitializeText(card);
 
             this.Title = card.Title;
+            this.Slug = card.Slug;
             this.IsUnique = card.IsUnique;
             this.CardType = card.CardType.ToString();
             this.CardSubType = card.CardSubtype.ToString();
@@ -119,6 +120,7 @@ namespace HallOfBeorn.Models.LotR.Simple
         }
 
         public string Title { get; set; }
+        public string Slug { get; set; }
         public bool IsUnique { get; set; }
         public string CardType { get; set; }
         public string CardSubType { get; set; }

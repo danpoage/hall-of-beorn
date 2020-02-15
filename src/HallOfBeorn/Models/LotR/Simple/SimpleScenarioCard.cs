@@ -9,6 +9,7 @@ namespace HallOfBeorn.Models.LotR.Simple
     {
         public string EncounterSet { get; set; }
         public string Title { get; set; }
+        public string Slug { get; set; }
         public uint NormalQuantity { get; set; }
         public uint EasyQuantity { get; set; }
         public uint NightmareQuantity { get; set; }
