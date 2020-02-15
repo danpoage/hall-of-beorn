@@ -151,11 +151,43 @@ namespace HallOfBeorn.Controllers
             return result;
         }
 
-        public ActionResult CardSets()
+        private SimpleCardSet GetSimpleCardSet(CardSet cardSet)
+        {
+            return new SimpleCardSet
+            {
+                Name = cardSet.Name,
+                Abbreviation = cardSet.Abbreviation,
+                Slug = cardSet.LookupSlug,
+                Cycle = cardSet.Cycle,
+                SetType = cardSet.SetType.ToString()
+            };
+        }
+
+        public ActionResult CardSets(string id)
         {
             var result = new JsonResult() { JsonRequestBehavior = JsonRequestBehavior.AllowGet };
 
-            result.Data = scenarioService.CardSets().Select(x => new SimpleCardSet { Name = x.Name, Cycle = x.Cycle, SetType = x.SetType.ToString() }).ToList();
+            if (string.IsNullOrEmpty(id))
+            {
+                result.Data = scenarioService.CardSets().Select(cs => GetSimpleCardSet(cs)).ToList();
+            }
+            else
+            {
+                foreach (var cardSet in scenarioService.CardSets())
+                {
+                    if (cardSet.LookupSlug == id || cardSet.Abbreviation == id)
+                    {
+                        var simple = GetSimpleCardSet(cardSet);
+                        simple.Cards = new List<SimpleCard>();
+                        foreach (var card in cardSet.Cards.OrderBy(c => c.CardNumber))
+                        {
+                            simple.Cards.Add(new SimpleCard(card));
+                        }
+                        result.Data = simple;
+                        return result;
+                    }
+                }
+            }
 
             return result;
         }

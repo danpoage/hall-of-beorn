@@ -283,6 +283,8 @@ namespace HallOfBeorn.Models.LotR
 
         public string Slug { get { return PublicSlug; } }
 
+        public string LookupSlug { get { return NormalizedName.ToSlug(); } }
+
         public string Cycle { get; protected set; }
         public int Number { get; protected set; }
         public SetType SetType { get; protected set; }
