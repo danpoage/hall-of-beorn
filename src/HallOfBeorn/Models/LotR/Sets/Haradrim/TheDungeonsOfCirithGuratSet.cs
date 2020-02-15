@@ -121,7 +121,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithTraits("Dungeon.")
                 .WithTextLine("While Mines of Cirith Gurat is in the staging area, it gains: \"Forced: When a player card would reduce a player's threat by any amount, reduce that amount to 1.\"")
                 .WithTextLine("Travel: Each player discards the top 3 cards of his deck and raises his threat by 1 for each ally he discards this way.")
-                .WithInfo(127, 3, Artist.Kamila_Tzutenberg);
+                .WithInfo(127, 3, Artist.Kamila_Szutenberg);
             addLocation("Torture Room", EncounterSet.TheDungeonsOfCirithGurat, 3, 4)
                 .WithTraits("Dungeon.")
                 .WithTextLine("When Revealed: The first player discards cards from the top of his deck until he discards an ally. Attach that ally to Torture Room and discard each other copy of that ally from play.")

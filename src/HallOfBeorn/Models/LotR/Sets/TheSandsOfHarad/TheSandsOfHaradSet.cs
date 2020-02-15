@@ -162,7 +162,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheSandsOfHarad
             addTreachery("Mirage", EncounterSet.DesertCrossing)
                 .WithTraits("Weather.")
                 .WithTextLine("When Revealed: Discard a the active location. Shuffle the encounter discard pile into the encounter deck and discard cards from the top until a location is discarded. Make that location the active location.")
-                .WithInfo(22, 2, Artist.Kamila_Tzutenberg);
+                .WithInfo(22, 2, Artist.Kamila_Szutenberg);
             addEncounterSideQuest("Seek Shade", EncounterSet.DesertCrossing, 6)
                 .WithKeywords("Surge.")
                 .WithTextLine("Surge.")
@@ -384,7 +384,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheSandsOfHarad
                 .WithTextLine("Surge.")
                 .WithTextLine("When Revealed: Attach to the highest Threat location in the staging area without a copy of Overgrown attached. (Counts as a Condition attachment with the text: \"Attached location gets +1 Threat and gains 'Immune to player card effects.'\"")
                 .WithEasyModeQuantity(1)
-                .WithInfo(59, 2, Artist.Kamila_Tzutenberg);
+                .WithInfo(59, 2, Artist.Kamila_Szutenberg);
             addEncounterSideQuest("Uruks of the Eye", EncounterSet.MordorOrcs, 5)
                 .WithKeywords("Surge.")
                 .WithTextLine("Surge.")

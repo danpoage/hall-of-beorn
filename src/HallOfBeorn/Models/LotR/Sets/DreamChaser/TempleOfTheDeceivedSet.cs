@@ -50,7 +50,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithInfo(61, 3, Artist.Sebastian_Giacobino);
             addAlly("Rhovanion Outrider", 3, Sphere.Spirit, false, 1, 2, 1, 2)
                 .WithTraits("Dale.", "Scout.")
-                .WithTextLine("Response: After Rhovanion Outrider coomits to the quest, place 1 progress on a location in the staging area. If that location is not explored by this effect, give Rhovanion Outrider +1 Willpower until the end of the phase.")
+                .WithTextLine("Response: After Rhovanion Outrider commits to the quest, place 1 progress on a location in the staging area. If that location is not explored by this effect, give Rhovanion Outrider +1 Willpower until the end of the phase.")
                 .WithInfo(62, 3, Artist.Beth_Sobel);
             addEvent("Scouting Party", 2, Sphere.Spirit)
                 .WithTextLine("Response: After you commit characters to the quest, if each character you have commited to the quest is a Scout, each of these characters gets +2 Willpower until the end of the phase.")

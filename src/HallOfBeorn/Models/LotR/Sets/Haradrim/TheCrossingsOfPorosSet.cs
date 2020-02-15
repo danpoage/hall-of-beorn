@@ -141,7 +141,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithTextLine("When Revealed: Raise each player's threat by X, where X is the printed quest points of the active location. If there is no active location, Mountains of Shadow gains surge.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, raise your threat by 2.")
                 .WithEasyModeQuantity(1)
-                .WithInfo(155, 2, Artist.Kamila_Tzutenberg);
+                .WithInfo(155, 2, Artist.Kamila_Szutenberg);
             addEncounterSideQuest("Find a Way Down", EncounterSet.MountainsOfShadow, 6)
                 .WithKeywords("Surge.")
                 .WithTextLine("Surge.")
@@ -166,7 +166,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithOppositeTextLine("Forced: After a player plays an ally, he must either exhaust that ally or deal 1 damage to it.")
                 .WithOppositeFlavorLine("You set out across the desert of Harondor, but it isn't long before the heat begins to take its toll.")
                 .WithIncludedEncounterSets(EncounterSet.MountainsOfShadow, EncounterSet.DesertSands, EncounterSet.DesertCreatures, EncounterSet.HaradSoldiers, EncounterSet.MordorOrcs)
-                .WithInfo(158, 1, Artist.Kamila_Tzutenberg);
+                .WithInfo(158, 1, Artist.Kamila_Szutenberg);
             addQuest("The Ephel Dúath", EncounterSet.TheCrossingsOfPoros, 2, 'A', 10)
                 .WithTextLine("When Revealed: Shuffle the Mountains of Shadow encounter set into the encounter deck. Remove the Desert Sands encounter set and the other stage 2A from the game.")
                 .WithFlavorLine("You ask Kahliel which way you should take and he says: \"The desert offers us no place to hide, and I fear my people cannot endure another desert crossing. We will take the rocky path through the hills to Gondor.\"")

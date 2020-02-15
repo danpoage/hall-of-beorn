@@ -259,7 +259,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithUnique()
                 .WithTraits("Gondor.", "City.")
                 .WithText("Minas Tirith has 30 hit points plus 10 for each player.\r\nForced: At the end of the round, deal 1 damage to Minas Tirith for each enemy in the staging area. Then, if Minas Tirith has no hit points remaining, the players lose the game.")
-                .WithInfo(43, 1, Artist.Kamila_Tzutenberg));
+                .WithInfo(43, 1, Artist.Kamila_Szutenberg));
             addCard(LotRCard.Location("Grond", string.Empty, setTheBattleOfThePelennorFields, Card.VALUE_X, 3)
                 .WithUnique()
                 .WithTraits("Siege.")
@@ -282,7 +282,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithTraits("Pelennor.")
                 .WithText("While at least 1 enemy is in the staging area, progress cannot be placed on locations in the staging area.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if it has the Harad trait).")
-                .WithInfo(47, 4, Artist.Kamila_Tzutenberg));
+                .WithInfo(47, 4, Artist.Kamila_Szutenberg));
             Cards.Add(LotRCard.Location("Fire-filled Trench", string.Empty, setTheBattleOfThePelennorFields, 2, 3)
                 .WithTraits("Pelennor.", "Siege.")
                 .WithText("Forced: When a player plays an event that would cancel the effects of a treachery card just revealed from the encounter deck, cancel the effects of that event. Then, discard Fire-filled Trench.")
@@ -369,7 +369,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("When Revealed: Each player deals 1 damage to a hero he controls. Until the end of the round, treat the printed text box of each damaged character as if it were blank, except for Traits.")
                 .WithFlavor("...a great cloud streamed slowly westward from the Black Land, devouring light... -The Return of the King")
                 .WithEasyModeQuantity(1)
-                .WithInfo(61, 2, Artist.Kamila_Tzutenberg));
+                .WithInfo(61, 2, Artist.Kamila_Szutenberg));
             Cards.Add(LotRCard.Enemy("Wraith on Wings", string.Empty, setTheBattleOfThePelennorFields, 45, 0, 6, 4, 12)
                 .WithBurden()
                 .WithTraits("Nazgûl.")
@@ -453,7 +453,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("When Revealed: Each player adds 1 set aside ~Wraith on Wings to the staging area and reveals an encounter card. Starting with the first player, each player discards cards from the top of his deck until he discards an ally that is not in play. Put the discarded ally into play in the staging area and treat its text box as if it were blank until the end of the phase.")
                 .WithOppositeFlavor("\"Where are our own folk?\" -Men of Gondor, The Return of the King")
                 .WithOppositeText("X is the total cost of all allies in the staging area.\r\nAllies in the staging area are treated as if their text box is blank, are immune to player card effects, and are under no player's control.\r\nForced: At the end of the round, assign damage among the allies in the staging area equal to the number of enemies in the staging area.")
-                .WithInfo(74, 1, Artist.Kamila_Tzutenberg));
+                .WithInfo(74, 1, Artist.Kamila_Szutenberg));
             Cards.Add(LotRCard.Quest("The White City Besieged", 3, setTheBattleOfThePelennorFields, 4)
                 .WithKeywords("Assault.")
                 .WithFlavor("...at east the city was besieged, enclosed in a ring of foes. The Rammas was broken, and all the Pelennor was abandoned to the Enemy. -The Return of the King")

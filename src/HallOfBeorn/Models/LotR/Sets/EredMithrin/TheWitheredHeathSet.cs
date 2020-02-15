@@ -87,7 +87,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTextLine("Guarded (enemy).")
                 .WithTextLine("Attached enemy or location is immune to player card effects.")
                 .WithTextLine("When ~Dragon ~Sign is free of encounters, add it to the victory display.")
-                .WithInfo(12, 4, Artist.Kamila_Tzutenberg);
+                .WithInfo(12, 4, Artist.Kamila_Szutenberg);
             addEnemy("Snow-troll", EncounterSet.TheWitheredHeath, 35, 3, 5, 3, 9)
                 .WithTraits("Troll.")
                 .WithTextLine("Cannot have player card attachments.")
@@ -124,7 +124,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithFlavorLine("That, of course, is the dangerous part about caves: you don’t know how far they go back, sometimes, or where a passage behind may lead to, or what is waiting for you inside.")
                 .WithFlavorLine("-The Hobbit")
                 .WithEasyModeQuantity(2)
-                .WithInfo(17, 3, Artist.Kamila_Tzutenberg);
+                .WithInfo(17, 3, Artist.Kamila_Szutenberg);
             addLocation("Creature Den", EncounterSet.TheWitheredHeath, 4, 4)
                 .WithTraits("Mountain.")
                 .WithTextLine("Response: After the players travel to ~Creature Den, search the Caves deck for a ~Dragon Sign and attach it to ~Creature Den as a guarded objective. Shuffle the Caves deck.")

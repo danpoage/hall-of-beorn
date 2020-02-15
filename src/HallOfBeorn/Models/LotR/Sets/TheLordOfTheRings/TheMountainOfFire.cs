@@ -79,7 +79,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("Attach to a Rohan hero. Restricted.\r\nResponse: After attached hero is declared as an attacker, exhaust Gúthwinë to give that hero +2 Attack for this attack. If this attack destroys an enemy, return a Rohan ally from your discard pile to your hand.")
                 .WithFlavor("\"Gúthwinë!\" cried Éomer. \"Gúthwinë for the Mark!\"\r\n-The Two Towers")
                 .WithTemplate("<p class='main-text'>Attach to a {trait:Rohan.@Rohan} hero. {keyword:Restricted.}</p><p class='main-text'><b>Response:</b> After attached hero is declared as an attacker, exhaust {self} to give that hero +2 {Attack} for this attack. If this attack destroys an enemy, return a {trait-ally:Rohan.@Rohan} ally from your discard pile to your hand.</p><p class='flavor-text'>&ldquo;Gúthwinë!&rdquo; cried Éomer. &ldquo;Gúthwinë for the Mark!&rdquo;<br>&ndash;The Two Towers</p>")
-                .WithInfo(11, 3, Artist.Kamila_Tzutenberg));
+                .WithInfo(11, 3, Artist.Kamila_Szutenberg));
             addCard(LotRCard.Attachment("Friend of Friends", string.Empty, Sphere.Neutral, 1)
                 .WithTraits("Condition.")
                 .WithText("Attach to a Hobbit hero. Limit 2 copies of Friend of Friends in play.\r\nWhile another hero has Friend of Friends attached, attached hero gets +1 Willpower, +1 Attack, +1 Defense and +1 hit point.")
@@ -165,13 +165,13 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithTraits("Plains.")
                 .WithText("While Waste of Dagorlad is the active location, treat the printed text box of each ally as if it were blank (except for Traits).")
                 .WithFlavor("SO desolate were those places and so deep the horror that lay on them that some of the host were unmanned.\r\n-The Return of the King")
-                .WithInfo(27, 3, Artist.Kamila_Tzutenberg));
+                .WithInfo(27, 3, Artist.Kamila_Szutenberg));
             addCard(LotRCard.Location("Slopes of Cirith Gorgor", string.Empty, setBlackGate, 4, 1)
                 .WithTraits("Hills.")
                 .WithText("Forced: When Slopes of Cirith Gorgor leaves play. the first player shuffles the encounter discard pile into the encounter deck and discards cards from the top until an enemy is discarded. Then, he puts that enemy into play engaged with him.")
                 .WithFlavor("...they knew that all the hills and rocks about the Morannon were filled with hidden foes...\r\n-The Return of the King")
                 .WithEasyModeQuantity(1)
-                .WithInfo(28, 2, Artist.Kamila_Tzutenberg));
+                .WithInfo(28, 2, Artist.Kamila_Szutenberg));
             addCard(LotRCard.Location("Reeking Moat", string.Empty, setBlackGate, 2, 4)
                 .WithTraits("Plains.")
                 .WithText("Forced: After Reeking Moat becomes the active location, choose a non-unique, non-Nazgûl enemy in the staging area and place it facedown under Reeking Moat.\r\nForced: When Reeking Moat leaves play, put each enemy under it into play engaged with the first player.")
@@ -182,7 +182,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("While Wall of Morannon is the active location, each enemy and location in the staging area is immune to player card effects.\r\nForced: After Wall of Morannon becomes of the active location, return each enaged enemy to the staging area.")
                 .WithFlavor("...behind the Morannon were the tunnels and deep armouries that the servants of Mordor had made for the defence of the Black Gate...\r\n-The Return of the King")
                 .WithEasyModeQuantity(1)
-                .WithInfo(30, 2, Artist.Kamila_Tzutenberg));
+                .WithInfo(30, 2, Artist.Kamila_Szutenberg));
             addCard(LotRCard.Enemy("The Mouth of Sauron", string.Empty, setBlackGate, 99, 4, 6, 5, 11)
                 .WithUnique()
                 .WithTraits("Mordor.")
@@ -265,7 +265,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("While Orc-hold is in the staging area, progress cannot be placed on other locations in the staging area.\r\nForced: After Orc-hold becomes the active location, shuffle the encounter discard pile into the encounter deck. Discard cards from the top until an Orc enemy is discarded. Put that enemy into play engaged with the first player.\r\n(|)")
                 .WithEyeIcon(1)
                 .WithEasyModeQuantity(2)
-                .WithInfo(44, 3, Artist.Kamila_Tzutenberg));
+                .WithInfo(44, 3, Artist.Kamila_Szutenberg));
             addCard(LotRCard.Location("Mordor Road", string.Empty, setMountDoom, 1, 5)
                 .WithTraits("Mordor.")
                 .WithText("Mordor Road gets +1 Threat for each controlled by the player who controls the most allies.\r\nForced: After Mordor Road becomes the active location, each player discards the top card of the encounter deck. Add each enemy discarded this way to the staging area.\r\n(|)")

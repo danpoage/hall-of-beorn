@@ -95,7 +95,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithTextLine("GUarded (location).")
                 .WithTextLine("While Summons from Mordor is attached to an encounter card, each player’s threat cannot be reduced.")
                 .WithTextLine("Action: Exhaust Summons from Mordor and raise your threat by 1 to add 1 resource to attached hero's pool.")
-                .WithInfo(93, 1, Artist.Kamila_Tzutenberg);
+                .WithInfo(93, 1, Artist.Kamila_Szutenberg);
             addEnemy("The Black Serpent", EncounterSet.TheBlackSerpent, 50, 0, 2, 1, 8)
                 .WithUnique()
                 .WithTraits("Harad.")

@@ -87,7 +87,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTextLine("X is 1 more than the number of resources on the main quest.")
                 .WithTextLine("City Guard cannot leave the staging area but is considered to be engaged with each player whose threat is equal to or higher than its engagement cost.")
                 .WithVictoryPoints(5)
-                .WithInfo(37, 1, Artist.Kamila_Tzutenberg);
+                .WithInfo(37, 1, Artist.Kamila_Szutenberg);
             addEnemy("Ulfast Sentry", EncounterSet.TheCityOfUlfast, 25, 2, Card.VALUE_X, 1, 3)
                 .WithTraits("Easterling.")
                 .WithTextLine("X is 1 more than the number of resources on the main quest.")
@@ -121,7 +121,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTraits("City.")
                 .WithTextLine("While Crowded Market is the active location, City Guard gets +20 engagement cost.")
                 .WithTextLine("Travel: Shuffle the encounter discard pile into the encounter deck and discard cards from the top until an enemy is discarded. Add that enemy to the staging area.")
-                .WithInfo(43, 2, Artist.Kamila_Tzutenberg);
+                .WithInfo(43, 2, Artist.Kamila_Szutenberg);
             addLocation("Streets of Ulfast", EncounterSet.TheCityOfUlfast, Card.VALUE_X, 5)
                 .WithTraits("City.")
                 .WithTextLine("X is 1 more than the number of resources on the main quest.")

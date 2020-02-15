@@ -207,7 +207,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithKeywords("Sentinel.")
                 .WithTextLine("Sentinel.")
                 .WithTextLine("Response: After Gondorian Spearman is declared as a defender, deal 1 damage to the attacking enemy.")
-                .WithFlavor("More than a thousand were there mustered. Their spears were like a sprining wood. -The Two Towers")
+                .WithFlavor("More than a thousand were there mustered. Their spears were like a springing wood. -The Two Towers")
                 .WithInfo(29, 3, Artist.Winona_Nelson);
             addAlly("Horseback Archer", 3, Sphere.Tactics, false, 0, 2, 1, 2)
                 .WithTraits("Rohan.", "Archer.")
@@ -362,7 +362,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
             addAlly("Daughter of the Nimrodel", 3, Sphere.Lore, false, 1, 0, 0, 1)
                 .WithTraits("Silvan.")
                 .WithTextLine("Action: Exhaust Daughter of the Nimrodel to heal up to 2 damage on any 1 hero.")
-                .WithFlavor("\"Here is Nimrodel! Of this stream the Silvan Elves made many songs long ago, and still we sing them in the North...I will bate my feet, for it is said that the water is healing to the weary.\" -Legolas, The Fellowship of the Ring")
+                .WithFlavor("\"Here is Nimrodel! Of this stream the Silvan Elves made many songs long ago, and still we sing them in the North...I will bathe my feet, for it is said that the water is healing to the weary.\" -Legolas, The Fellowship of the Ring")
                 .WithInfo(58, 3, Artist.Magali_Villeneuve);
             addAlly("Erebor Hammersmith", 2, Sphere.Lore, false, 1, 1, 1, 3)
                 .WithTraits("Dwarf.", "Craftsman.")

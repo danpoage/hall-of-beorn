@@ -54,6 +54,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTextLine("Limit 1 per deck.")
                 .WithTextLine("Response: When this stage is defeated, reduce each player's threat by 5.")
                 .WithFlavorLine("He was taking a wandering course with many turns and doublings, to put off any pursuit. -The Fellowship of the Ring")
+                .WithVictoryPoints(1)
                 .WithInfo(34, 3, Artist.Jorge_Barrero);
             addEvent("Leave No Trace", 1, Sphere.Lore)
                 .WithTextLine("Limit 3 copies of Leave No Trace in the victory display.")
