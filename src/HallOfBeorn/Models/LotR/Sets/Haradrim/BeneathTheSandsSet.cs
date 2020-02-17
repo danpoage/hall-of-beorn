@@ -43,7 +43,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithInfo(58, 3, Artist.Stanislav_Dikolenko);
             addPlayerSideQuest("Keep Watch", 1, Sphere.Tactics, 6)
                 .WithTextLine("Limit 1 copy of Keep Watch in the victory display.")
-                .WithTextLine("While Keep Watch is in the victory display, each non-unique enemy engaged with a player gets -1 Attack.")
+                .WithTextLine("While this quest is in the victory display, each non-unique enemy engaged with a player gets -1 Attack.")
                 .WithFlavorLine("\"I called for the help of the Dúnedain, and their watch was doubled...\"")
                 .WithFlavorLine("-Gandalf, The Fellowship of the Ring")
                 .WithVictoryPoints(1)

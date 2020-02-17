@@ -150,6 +150,9 @@
                                 <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Attack</span><img style="margin-bottom:-3px;height:20px;" src="/Images/attack-med.png" /></span>
                                 <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Defense</span><img style="margin-bottom:-3px;height:20px;" src="/Images/defense-med.png" /></span>
                                 <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.HitPoints</span><img style="margin-bottom:-4px;height:20px;" src="/Images/heart-med.png"/></span>
+                            } else if (!string.IsNullOrEmpty(@Model.EncounterSet))
+                            {
+                                <span style="margin-left:4px;"><strong>@Model.EncounterSet</strong></span>
                             }
                         }
                         break;

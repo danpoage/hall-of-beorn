@@ -31,6 +31,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTextLine("Response: When this stage is defeated, each player may search the top 10 cards of his deck for an ally and put it into play under his control. Each player who did shuffles his deck.")
                 .WithFlavorLine("\"Often the Rohirrim have aided us, but now the Lord Denethor asks for all your strength and all your speed...\"")
                 .WithFlavorLine("-Hirgon, The Return of the King")
+                .WithVictoryPoints(1)
                 .WithInfo(86, 3, Artist.Tomasz_Jedruszek);
             addAttachment("Elven Spear", 0, Sphere.Tactics, false)
                 .WithTraits("Item.", "Weapon.")
