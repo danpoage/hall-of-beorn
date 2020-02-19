@@ -139,6 +139,7 @@ namespace HallOfBeorn.Models.LotR
         public static Product TheCityOfUlfast = new Products.AdventurePack.TheCityOfUlfastProduct();
         public static Product TheWainridersChallenge = new Products.AdventurePack.ChallengeOfTheWainridersProduct();
         public static Product UnderTheAshMountains = new Products.AdventurePack.UnderTheAshMountainsProduct();
+        public static Product TheLandOfSorrow = new Products.AdventurePack.TheLandOfSorrowProduct();
 
         //The Hobbit Saga
         public static Product TheHobbitOverHillAndUnderHill = new Products.Saga.TheHobbitOverHillAndUnderHillProduct();

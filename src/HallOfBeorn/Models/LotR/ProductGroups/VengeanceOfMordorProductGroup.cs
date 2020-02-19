@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
             AddProduct(Product.TheCityOfUlfast);
             AddProduct(Product.TheWainridersChallenge);
             AddProduct(Product.UnderTheAshMountains);
+            AddProduct(Product.TheLandOfSorrow);
         }
     }
 }

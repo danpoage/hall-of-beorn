@@ -414,6 +414,7 @@
     <Compile Include="Models\LotR\ProductGroups\StarterProductGroup.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\TheCityOfUlfastProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\ChallengeOfTheWainridersProduct.cs" />
+    <Compile Include="Models\LotR\Products\AdventurePack\TheLandOfSorrowProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\UnderTheAshMountainsProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\WrathAndRuinProduct.cs" />
     <Compile Include="Models\LotR\Products\Deluxe\AShadowInTheEastProduct.cs" />
@@ -528,6 +529,7 @@
     <Compile Include="Models\LotR\Sets\TheWildsOfRhovanion\TheWildsOfRhovanionSet.cs" />
     <Compile Include="Models\LotR\Sets\VengeanceOfMordor\TheCityOfUlfastSet.cs" />
     <Compile Include="Models\LotR\Sets\VengeanceOfMordor\ChallengeOfTheWainridersSet.cs" />
+    <Compile Include="Models\LotR\Sets\VengeanceOfMordor\TheLandOfSorrowSet.cs" />
     <Compile Include="Models\LotR\Sets\VengeanceOfMordor\UnderTheAshMountainsSet.cs" />
     <Compile Include="Models\LotR\Sets\VengeanceOfMordor\WrathAndRuinSet.cs" />
     <Compile Include="Models\LotR\TextTemplate.cs" />

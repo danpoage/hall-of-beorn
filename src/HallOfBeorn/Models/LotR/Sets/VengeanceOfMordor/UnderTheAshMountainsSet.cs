@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
         {
             Name = setName;
             Abbreviation = "UtAM";
-            Number = 59;
+            Number = 60;
             SetType = Models.SetType.Adventure_Pack;
             Cycle = "Vengeance of Mordor";
 
