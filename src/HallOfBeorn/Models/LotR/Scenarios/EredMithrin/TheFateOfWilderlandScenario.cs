@@ -19,8 +19,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
             RulesImageCount = 3;
 
             QuestCompanionSlug = "ered-mithrin-quest-the-fate-of-wilderland";
-            DifficultyRating = 8.0f;
-            Votes = 1;
+            DifficultyRating = 5.5f;
+            Votes = 8;
 
             AddEncounterSet(EncounterSet.TheFateOfWilderland);
             AddEncounterSet(EncounterSet.GreyMountainGoblins);

@@ -16,8 +16,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AShadowInTheEast
             RulesImageCount = 10;
 
             QuestCompanionSlug = "a-shadow-in-the-east-deluxe-expansion-quest-danger-in-dorwinion";
-            DifficultyRating = 7.4f;
-            Votes = 1;
+            DifficultyRating = 5.0f;
+            Votes = 7;
 
             AddEncounterSet(EncounterSet.DangerInDorwinion);
             AddEncounterSet(EncounterSet.ServantsOfSauron);

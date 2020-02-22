@@ -19,8 +19,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
             RulesImageCount = 2;
 
             QuestCompanionSlug = "ered-mithrin-quest-the-ghost-of-framsburg";
-            DifficultyRating = 6f;
-            Votes = 3;
+            DifficultyRating = 5.6f;
+            Votes = 5;
 
             AddEncounterSet(EncounterSet.TheGhostOfFramsburg);
             AddEncounterSet(EncounterSet.WildCreatures);

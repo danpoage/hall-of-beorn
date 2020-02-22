@@ -17,7 +17,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AShadowInTheEast
 
             QuestCompanionSlug = "a-shadow-in-the-east-deluxe-expansion-quest-the-river-running";
             DifficultyRating = 7.0f;
-            Votes = 1;
+            Votes = 6;
 
             AddEncounterSet(EncounterSet.TheRiverRunning);
             AddEncounterSet(EncounterSet.RidersOfRhun);

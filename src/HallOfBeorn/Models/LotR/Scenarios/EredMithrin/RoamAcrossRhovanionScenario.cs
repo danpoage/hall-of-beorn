@@ -20,7 +20,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
 
             QuestCompanionSlug = "ered-mithrin-quest-roam-across-rhovanion";
             DifficultyRating = 6f;
-            Votes = 5;
+            Votes = 10;
 
             AddEncounterSet(EncounterSet.RoamAcrossRhovanion);
             AddEncounterSet(EncounterSet.FellBeasts);

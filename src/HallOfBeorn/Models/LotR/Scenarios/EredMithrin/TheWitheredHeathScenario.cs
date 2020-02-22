@@ -17,8 +17,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
             Number = 4;
 
             QuestCompanionSlug = "ered-mithrin-quest-the-withered-heath";
-            DifficultyRating = 6.2f;
-            Votes = 6;
+            DifficultyRating = 6.6f;
+            Votes = 12;
 
             RulesImageCount = 2;
 

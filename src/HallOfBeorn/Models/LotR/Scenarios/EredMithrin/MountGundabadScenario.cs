@@ -19,8 +19,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
             RulesImageCount = 2;
 
             QuestCompanionSlug = "ered-mithrin-quest-mount-gundabad";
-            DifficultyRating = 6.0f;
-            Votes = 1;
+            DifficultyRating = 7.8f;
+            Votes = 6;
 
             AddEncounterSet(EncounterSet.MountGundabad);
             AddEncounterSet(EncounterSet.FellBeasts); 

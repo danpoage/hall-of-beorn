@@ -19,8 +19,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AShadowInTheEast
             RulesImageCount = 10;
 
             QuestCompanionSlug = "a-shadow-in-the-east-deluxe-expansion-quest-the-temple-of-doom";
-            DifficultyRating = 7.6f;
-            Votes = 1;
+            DifficultyRating = 8.2f;
+            Votes = 12;
 
             AddEncounterSet(EncounterSet.TempleOfDoom);
             AddEncounterSet(EncounterSet.UlchorsGuard);

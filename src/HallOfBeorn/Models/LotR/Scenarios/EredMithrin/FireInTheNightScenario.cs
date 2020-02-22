@@ -19,8 +19,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
             RulesImageCount = 2;
 
             QuestCompanionSlug = "ered-mithrin-quest-fire-in-the-night";
-            DifficultyRating = 7.8f;
-            Votes = 5;
+            DifficultyRating = 8.1f;
+            Votes = 11;
 
             AddEncounterSet(EncounterSet.FireInTheNight);
             AddEncounterSet(EncounterSet.GreyMountainGoblins);

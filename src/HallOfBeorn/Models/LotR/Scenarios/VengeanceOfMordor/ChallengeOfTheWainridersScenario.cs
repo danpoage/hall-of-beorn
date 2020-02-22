@@ -18,10 +18,10 @@ namespace HallOfBeorn.Models.LotR.Scenarios.VengeanceOfMordor
             GroupName = "Vengeance of Mordor";
             Number = 3;
 
-            //RulesImageCount = 2;
-            //QuestCompanionSlug = "a-shadow-in-the-east-deluxe-expansion-quest-danger-in-dorwinion";
-            DifficultyRating = 7f;
-            Votes = 1;
+            RulesImageCount = 2;
+            QuestCompanionSlug = "vengeance-of-mordor-cycle-quest-challenge-of-the-wainriders";
+            DifficultyRating = 6.7f;
+            Votes = 3;
 
             AddEncounterSet(EncounterSet.ChallengeOfTheWainriders);
             AddEncounterSet(EncounterSet.RollingPlains);
