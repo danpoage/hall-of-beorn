@@ -55,6 +55,8 @@ namespace HallOfBeorn.Handlers.LotR
                 if (cardUrls.Contains(link.Url))
                     continue;
 
+                cardUrls.Add(link.Url);
+
                 model.AddLotRCardLink(link);
             }
 
@@ -65,6 +67,8 @@ namespace HallOfBeorn.Handlers.LotR
 
                 if (link == null || cardUrls.Contains(link.Url))
                     continue;
+
+                cardUrls.Add(link.Url);
 
                 model.AddLotRCardLink(link);
             }
