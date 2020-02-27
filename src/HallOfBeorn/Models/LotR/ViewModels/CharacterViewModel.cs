@@ -17,7 +17,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         }
 
         private readonly Character character;
-        private readonly List<Link> cardLinks = new List<Link>();
+        private readonly List<ILink> cardLinks = new List<ILink>();
 
         public string Slug { get { return character.Slug; } }
         public string Title { get { return character.FullName; } }
@@ -62,16 +62,12 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public IEnumerable<ILink> CardLinks { get { return cardLinks; } }
 
-        public void AddLotRCardLink(LotRCard card)
+        public void AddLotRCardLink(ILink link)
         {
-            if (card == null) {
+            if (link == null)
                 return;
-            }
 
-            var sphere = card.Sphere != Sphere.None ? card.Sphere.ToString() + " " : string.Empty;
-            var title = string.Format("{0} ({1}{2})", card.Title, sphere, card.CardType.ToString().Replace("_", "-"));
-
-            cardLinks.Add(new Link(LinkType.Hall_of_Beorn_LotR_Image, card, title));
+            cardLinks.Add(link);
         }
 
         public void AddDigitalCardLink(DigitalCard card)

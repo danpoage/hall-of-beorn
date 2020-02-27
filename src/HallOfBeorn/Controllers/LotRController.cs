@@ -58,7 +58,8 @@ namespace HallOfBeorn.Controllers
                 new Services.Digital.DigitalProductRepository()
                 );
 
-            _charactersHandler = new CharactersHandler(cardRepository, digitalCardRepository, characterRepository);
+            _charactersHandler = new CharactersHandler(
+                cardRepository, digitalCardRepository, characterRepository, linkService);
 
             _detailsHandler = new DetailsHandler(_translationHandler, 
                 cardRepository, characterRepository, 

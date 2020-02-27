@@ -183,6 +183,17 @@ namespace HallOfBeorn.Models
         public string ThumbnailUrl { get; private set; }
         public int ThumbnailHeight { get { return _thumbnailHeight.HasValue ? _thumbnailHeight.Value : 118; } } 
         public int ThumbnailWidth { get { return _thumbnailWidth.HasValue ? _thumbnailWidth.Value : 210; } }
+
+        public static ILink CreateLotRImageLink(LotR.LotRCard card)
+        {
+            if (card == null)
+                return null;
+
+            var sphere = card.Sphere != LotR.Sphere.None ? card.Sphere.ToString() + " " : string.Empty;
+            var title = string.Format("{0} ({1}{2})", card.Title, sphere, card.CardType.ToString().Replace("_", "-"));
+
+            return new Link(LinkType.Hall_of_Beorn_LotR_Image, card, title);
+        }
     }
 
     public class CreatorLink

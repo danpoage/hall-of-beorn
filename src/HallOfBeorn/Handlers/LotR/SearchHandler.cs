@@ -103,7 +103,9 @@ namespace HallOfBeorn.Handlers.LotR
                             if (charactersByUrl.ContainsKey(memberCharacter.Url) || relatedCharactersByUrl.ContainsKey(memberCharacter.Url))
                                 continue;
 
-                            relatedCharactersByUrl[memberCharacter.Url].AddLotRCardLink(memberCard);
+                            var memberLink = Link.CreateLotRImageLink(memberCard);
+
+                            relatedCharactersByUrl[memberCharacter.Url].AddLotRCardLink(memberLink);
                         }
                     }
                 }
@@ -169,7 +171,9 @@ namespace HallOfBeorn.Handlers.LotR
                             {
                                 charactersByUrl.Add(character.Url, new CharacterViewModel(character));
                             }
-                            charactersByUrl[character.Url].AddLotRCardLink(cardViewModel.Card);
+
+                            var characterLink = Link.CreateLotRImageLink(cardViewModel.Card);
+                            charactersByUrl[character.Url].AddLotRCardLink(characterLink);
 
                             AddRelatedCharacters(character.RelatedCharacters(), charactersByUrl, relatedCharactersByUrl);
 

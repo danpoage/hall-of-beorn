@@ -19,6 +19,7 @@ namespace HallOfBeorn.Services.LotR.Links
             this.cardRepository = cardRepository;
             this.creatorService = creatorService;
             Initialize();
+            InitializeCharacterLinks();
         }
 
         private readonly ICardRepository<LotRCard> cardRepository;
@@ -354,6 +355,98 @@ namespace HallOfBeorn.Services.LotR.Links
             }
 
             return links;
+        }
+
+        private readonly Dictionary<string, Func<IEnumerable<LotRCard>>> getCharacterLinksByName
+            = new Dictionary<string, Func<IEnumerable<LotRCard>>>();
+
+        private void AddCharacterFilter(
+            string name, Func<LotRCard, bool> predicate)
+        {
+            getCharacterLinksByName[name] = () => cardRepository.Cards()
+                .Where(card => predicate(card));
+        }
+
+        private bool HasTrait(LotRCard card, string trait)
+        {
+            return card.Traits.Any(t => t == trait);
+        }
+
+        private bool IsPlayerCard(LotRCard card)
+        {
+            return card.CardType.IsPlayerCard();
+        }
+
+        private bool IsObjective(LotRCard card)
+        {
+            return card.CardType == CardType.Objective
+                || card.CardType == CardType.Objective_Ally
+                || card.CardType == CardType.Objective_Hero
+                || card.CardType == CardType.Objective_Location;
+        }
+
+        public bool HasText(LotRCard card, string text)
+        {
+            return card.Text.ContainsLower(text)
+                || card.OppositeText.ContainsLower(text);
+        }
+
+        private void InitializeCharacterLinks()
+        {
+            AddCharacterFilter("The Eagles", (card) =>
+                (IsPlayerCard(card) || IsObjective(card)) 
+                && (HasTrait(card, "Eagle.") || HasText(card, "Eagle")));
+        }
+
+        private ILink GetCharacterLink(LotRCard card)
+        {
+            var sphere = card.Sphere != Sphere.None ? card.Sphere.ToString() + " " : string.Empty;
+            var title = string.Format("{0} ({1}{2})", card.Title, sphere, card.CardType.ToString().Replace("_", "-"));
+
+            return new Link(LinkType.Hall_of_Beorn_LotR_Image, card, title);
+        }
+
+        private int CardOrder(LotRCard card)
+        {
+            var count = 0;
+            if (card.CardType.IsPlayerCard())
+                count += 1;
+
+            if (card.IsUnique)
+                count += 2;
+
+            if (card.CardType == CardType.Hero)
+                count += 8;
+
+            if (card.CardType == CardType.Ally)
+                count += 5;
+
+            if (card.CardType == CardType.Attachment 
+                || card.CardType == CardType.Player_Side_Quest)
+                count += 3;
+
+            if (card.CardType == CardType.Event)
+                count += 2;
+
+            if (IsObjective(card))
+                count += 2;
+            if (card.CardType == CardType.Objective_Ally)
+                count += 3;
+
+            return count;
+        }
+
+        public IEnumerable<ILink> GetCharacterLinks(string name)
+        {
+            var cards = getCharacterLinksByName.ContainsKey(name)
+                ? getCharacterLinksByName[name]()
+                .ToList()
+                .OrderByDescending(c => CardOrder(c))
+                : Enumerable.Empty<LotRCard>();
+
+            return cards.Any()
+                ? cards.Where(card => card != null).Select(card => Link.CreateLotRImageLink(card))
+                : Enumerable.Empty<ILink>();
         }
     }
 }
