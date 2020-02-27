@@ -90,6 +90,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithIncludedEncounterSets(EncounterSet.MistyMountainOrcs)
                 .WithInfo(67, 1, Artist.Ben_Zweifel);
             addObjectiveAlly("Nalir", EncounterSet.TroubleInTharbad, 0, 1, 2, 3)
+                .WithUnique()
                 .WithTraits("Dwarf.")
                 .WithTextLine("The first player gains control of Nalir.")
                 .WithTextLine("Forced: At the beginning of the refresh phase, raise your threat by 1 for each player in the game.")

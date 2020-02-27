@@ -34,7 +34,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
             addAttachment("Song of Healing", 0, Sphere.Lore, false)
                 .WithTraits("Song.")
                 .WithTextLine("Attach to a hero. Limit 1 per hero.")
-                .WithTextLine("Action: Discard 1 card from your hand to heal 1 daamge from attached hero. Any player may trigger this effect.")
+                .WithTextLine("Action: Discard 1 card from your hand to heal 1 damage from attached hero. Any player may trigger this effect.")
                 .WithInfo(112, 3, Artist.Magali_Villeneuve);
             addAlly("Eagle Emissary", 2, Sphere.Tactics, false, 2, 1, 0, 2)
                 .WithTraits("Creature.", "Eagle.")
