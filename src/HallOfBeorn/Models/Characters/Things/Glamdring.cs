@@ -38,10 +38,6 @@ namespace HallOfBeorn.Models.Characters.Things
             Alias("Beater");
 
             addFriend("Gandalf", "Gandalf");
-
-            LotRCard("Glamdring-RAR");
-            LotRCard("Glamdring-RD");
-            LotRCard("Glamdring-THOHaUH");
         }
     }
 }

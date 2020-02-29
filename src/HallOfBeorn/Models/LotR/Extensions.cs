@@ -92,25 +92,25 @@ namespace HallOfBeorn.Models.LotR
                 count += 1;
 
             if (self.IsUnique)
-                count += 2;
+                count += 5;
 
             if (self.CardType == CardType.Hero)
-                count += self.StatValue() + 8;
+                count += self.StatValue() + 9;
 
             if (self.CardType == CardType.Ally)
-                count += self.StatValue() + 5;
+                count += self.StatValue() + 7;
 
-            if (self.CardType == CardType.Attachment 
+            if (self.CardType == CardType.Attachment)
+                count += 5;
+
+            if (self.CardType == CardType.Treasure
                 || self.CardType == CardType.Player_Side_Quest)
                 count += 3;
 
             if (self.CardType == CardType.Event)
-                count += 2;
+                count += 1;
 
             if (self.IsObjective())
-                count += 2;
-
-            if (self.CardType == CardType.Objective_Ally)
                 count += self.StatValue() + 3;
 
             return count;

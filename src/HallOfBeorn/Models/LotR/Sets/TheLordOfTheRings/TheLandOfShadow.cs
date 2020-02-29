@@ -388,10 +388,13 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithShadow("Shadow: If attacking enemy is Shelob, she makes an additional attack against you after this one.")
                 .WithEasyModeQuantity(2)
                 .WithInfo(62, 3, Artist.Alvaro_Calvo_Escudero));
-            Cards.Add(LotRCard.Objective("The One Ring", "", "")
+            addObjective("The One Ring", "")
+                .WithUnique()
                 .WithTraits("Artifact.", "Item.", "Ring.")
-                .WithText("Setup: The first player claims The One ~Ring and attaches it to the Ring-bearer.\r\nAttached hero does not count against the hero limit. The first player gains control of attached hero.\r\nIf The One Ring leaves play, the players lose the game.")
-                .WithInfo(63, 1, Artist.Mike_Nash));
+                .WithTextLine("Setup: The first player claims The One ~Ring and attaches it to the Ring-bearer.")
+                .WithTextLine("Attached hero does not count against the hero limit. The first player gains control of attached hero.")
+                .WithTextLine("If The One Ring leaves play, the players lose the game.")
+                .WithInfo(63, 1, Artist.Mike_Nash);
             Cards.Add(LotRCard.Quest("The Taming of Sméagol", 1, "The Passage of the Marshes", 6)
                 .WithFlavor("Frodo and Sam left the Fellowship above the falls of Rauros and crossed the great river to climb the Emyn Muil upon the Eastern shore. After days of wandering through that maze of rocky crags, they have finally reached the edge of the Dead Marshes only to discover that Gollum is following them.")
                 .WithText("Setup: Put Gollum into play engaged with the first player. Each player searches the encounter deck for 1 location, reveals it, and adds it to the staging area. Shuffle the encounter deck.")

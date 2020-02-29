@@ -393,10 +393,22 @@ namespace HallOfBeorn.Services.LotR.Links
                 .ThenBy(card => card.Sphere);
         }
 
+        private Func<LotRCard, bool> GetTitleFilter(string title, params Func<LotRCard, bool>[] aliases)
+        {
+             var aliasCriteria = (aliases == null || aliases.Length == 0)
+                ? new Func<LotRCard, bool>((card) => false)
+                : new Func<LotRCard, bool>((card) => aliases.Any(opt => opt(card)));
+
+             return (card) =>
+                 ((card.IsPlayerCard() || card.IsObjective() || card.CardType == CardType.Enemy)
+                 && card.Title == title)
+                 || aliasCriteria(card);
+        }
+
         private Func<LotRCard, bool> GetTraitOrTextFilter(string text, params Func<LotRCard, bool>[] options)
         {
-            Func<LotRCard, bool> optionalCriteria = (options == null || options.Length == 0)
-                ? new Func<LotRCard, bool>((card) => true)
+            var optionalCriteria = (options == null || options.Length == 0)
+                ? new Func<LotRCard, bool>((card) => false)
                 : new Func<LotRCard, bool>((card) => options.Any(opt => opt(card)));
 
             return (card) =>
@@ -407,6 +419,8 @@ namespace HallOfBeorn.Services.LotR.Links
 
         private void InitializeCharacterLinks()
         {
+            AddCharacterFilter("Glamdring", GetTitleFilter("Glamdring", (card) => card.Title == "Foe-hammer"));
+
             AddCharacterFilter("Istari", GetTraitOrTextFilter("Istari", 
                 (card) => card.HasText("White Council"), (card) => card.Title.Contains("White Council")));
 
@@ -422,6 +436,9 @@ namespace HallOfBeorn.Services.LotR.Links
             AddCharacterFilter("The Eagles", GetTraitOrTextFilter("Eagle"));
             
             AddCharacterFilter("The Ents", GetTraitOrTextFilter("Ent"));
+
+            AddCharacterFilter("The One Ring", GetTitleFilter("The One Ring", 
+                (card) => card.Title == "Bilbo's Magic Ring", (card) => card.HasTraits("Master")));
         }
 
         public IEnumerable<ILink> GetCharacterLinks(string name)
