@@ -74,12 +74,17 @@ namespace HallOfBeorn.Models.LotR
             if (self == null)
                 return 0;
 
-            return self.ThreatCost.GetValueOrDefault(0)
-                + self.ResourceCost.GetValueOrDefault(0)
-                + self.Willpower.GetValueOrDefault(0)
-                + self.Attack.GetValueOrDefault(0)
-                + self.Defense.GetValueOrDefault(0)
-                + self.HitPoints.GetValueOrDefault(0);
+            Func<byte?, byte> normalize = (value) =>
+                 (!value.HasValue || value == Card.VALUE_NA || value == Card.VALUE_X)
+                        ? (byte)0
+                        : value.Value;
+
+            return normalize(self.ThreatCost)
+                + normalize(self.ResourceCost)
+                + normalize(self.Willpower)
+                + normalize(self.Attack)
+                + normalize(self.Defense)
+                + normalize(self.HitPoints);
         }
 
         public static int ImportanceScore(this LotRCard self)
@@ -92,7 +97,7 @@ namespace HallOfBeorn.Models.LotR
                 count += 1;
 
             if (self.IsUnique)
-                count += 5;
+                count += 6;
 
             if (self.CardType == CardType.Hero)
                 count += self.StatValue() + 9;
@@ -111,7 +116,7 @@ namespace HallOfBeorn.Models.LotR
                 count += 1;
 
             if (self.IsObjective())
-                count += self.StatValue() + 3;
+                count += self.StatValue() + 4;
 
             return count;
         }
