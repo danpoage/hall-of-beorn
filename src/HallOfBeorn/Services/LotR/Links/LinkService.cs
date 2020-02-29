@@ -367,6 +367,13 @@ namespace HallOfBeorn.Services.LotR.Links
                 .Where(card => predicate(card));
         }
 
+        private IEnumerable<ILink> GetCharacterLinks(IEnumerable<LotRCard> cards)
+        {
+            return cards
+                .Where(card => card != null)
+                .Select(card => Link.CreateLotRImageLink(card));
+        }
+
         private void InitializeCharacterLinks()
         {
             AddCharacterFilter("Rangers of Ithilien", (card) =>
@@ -388,13 +395,12 @@ namespace HallOfBeorn.Services.LotR.Links
         {
             var cards = getCharacterLinksByName.ContainsKey(name)
                 ? getCharacterLinksByName[name]()
-                .ToList()
                 .OrderByDescending(c => c.ImportanceScore())
-                : Enumerable.Empty<LotRCard>();
+                : cardRepository.Cards()
+                .Where(card => card.Title.ContainsLower(name))
+                .OrderByDescending(card => card.ImportanceScore());
 
-            return cards.Any()
-                ? cards.Where(card => card != null).Select(card => Link.CreateLotRImageLink(card))
-                : Enumerable.Empty<ILink>();
+            return GetCharacterLinks(cards);
         }
     }
 }

@@ -35,8 +35,8 @@ namespace HallOfBeorn.Models.Characters
             
             addGroup("The Eagles");
 
-            LotRCard("Gwaihir-TiT");
-            LotRCard("Gwaihir's-Debt-TFoW");
+            //LotRCard("Gwaihir-TiT");
+            //LotRCard("Gwaihir's-Debt-TFoW");
         }
     }
 }

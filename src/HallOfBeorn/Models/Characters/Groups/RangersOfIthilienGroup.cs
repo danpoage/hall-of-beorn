@@ -28,6 +28,7 @@ namespace HallOfBeorn.Models.Characters.Groups
             addMember("Damrod", "Damrod");
             addMember("Anborn", "Anborn");
 
+            /*
             LotRCard("Ranger-of-Ithilien-TMaO");
             LotRCard("Ithilien-Tracker-HoN");
             LotRCard("Ithilien-Guardian-HoN");
@@ -48,6 +49,7 @@ namespace HallOfBeorn.Models.Characters.Groups
             LotRCard("Arrows-from-the-Trees-TotD");
             LotRCard("Coney-in-a-Trap-TMk");
             LotRCard("In-the-Shadows-TLoS");
+            */
         }
     }
 }

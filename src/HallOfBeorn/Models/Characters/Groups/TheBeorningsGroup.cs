@@ -35,9 +35,11 @@ namespace HallOfBeorn.Models.Characters.Groups
 
             addArticle("https://visionofthepalantir.wordpress.com/2018/03/16/beorning/", "Vision of the Palantir Trait Review");
 
+            /*
             LotRCard("Beorning-Beekeeper-CatC");
             LotRCard("Beorning-Guardian-CoP");
             LotRCard("Beorn's-Rage-TWH");
+            */
         }
     }
 }

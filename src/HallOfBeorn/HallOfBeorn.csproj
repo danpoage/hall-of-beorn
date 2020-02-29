@@ -408,6 +408,7 @@
     <Compile Include="Models\LotR\Compact\CardType.cs" />
     <Compile Include="Models\LotR\Compact\Trait.cs" />
     <Compile Include="Models\ICreator.cs" />
+    <Compile Include="Models\LotR\Extensions.cs" />
     <Compile Include="Models\LotR\LayoutType.cs" />
     <Compile Include="Models\LotR\ProductGroups\VengeanceOfMordorProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\EredMithrinProductGroup.cs" />

@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Linq;
+
 namespace HallOfBeorn.Models.LotR
 {
     public static class Extensions
@@ -22,7 +25,7 @@ namespace HallOfBeorn.Models.LotR
 
         public static bool IsObjective(this LotRCard self)
         {
-            return self != null && objectiveCardTypes.Contains(self.Type);
+            return self != null && objectiveCardTypes.Contains(self.CardType);
         }
 
         public static bool HasText(this LotRCard self, string text)
@@ -36,7 +39,7 @@ namespace HallOfBeorn.Models.LotR
             var description = self.Sphere.ToSlug() + " " + self.CardType.ToSlug();
             var title = string.Format("{0} ({1})", self.Title, description.Trim());
 
-            return new Link(LinkType.Hall_of_Beorn_LotR_Image, card, title);
+            return new Link(LinkType.Hall_of_Beorn_LotR_Image, self, title);
         }
 
         public static string ToSlug(this Sphere self)
@@ -46,7 +49,7 @@ namespace HallOfBeorn.Models.LotR
 
         public static string ToSlug(this CardType self)
         {
-            return self.CardType.ToString().Replace("_", "-");
+            return self.ToString().Replace("_", "-");
         }
 
         public static int ImportanceScore(this LotRCard self)
@@ -62,13 +65,13 @@ namespace HallOfBeorn.Models.LotR
                 count += 2;
 
             if (self.CardType == CardType.Hero)
-                count += 8;
+                count += self.ThreatCost.HasValue ? self.ThreatCost.Value + 8 : 8;
 
             if (self.CardType == CardType.Ally)
                 count += 5;
 
             if (self.CardType == CardType.Attachment 
-                || card.CardType == CardType.Player_Side_Quest)
+                || self.CardType == CardType.Player_Side_Quest)
                 count += 3;
 
             if (self.CardType == CardType.Event)

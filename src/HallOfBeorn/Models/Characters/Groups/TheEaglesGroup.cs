@@ -65,6 +65,7 @@ namespace HallOfBeorn.Models.Characters.Groups
 
             addArticle("https://visionofthepalantir.wordpress.com/2018/01/24/the-eagles/", "Vision of the Palantir Trait Review");
 
+            /*
             LotRCard("Gwaihir-TiT");
             LotRCard("Gwaihir-TMoF");
             LotRCard("Landroval-AJtM");
@@ -80,6 +81,7 @@ namespace HallOfBeorn.Models.Characters.Groups
             LotRCard("Meneldor's-Flight-THoEM");
             LotRCard("Flight-of-the-Eagles-RAR");
             LotRCard("Gwaihir's-Debt-TFoW");
+            */
         }
     }
 }
