@@ -357,13 +357,13 @@ namespace HallOfBeorn.Services.LotR.Links
             return links;
         }
 
-        private readonly Dictionary<string, Func<IEnumerable<LotRCard>>> getCharacterLinksByName
+        private readonly Dictionary<string, Func<IEnumerable<LotRCard>>> getCardsByName
             = new Dictionary<string, Func<IEnumerable<LotRCard>>>();
 
         private void AddCharacterFilter(
             string name, Func<LotRCard, bool> predicate)
         {
-            getCharacterLinksByName[name] = () => cardRepository.Cards()
+            getCardsByName[name] = () => cardRepository.Cards()
                 .Where(card => predicate(card));
         }
 
@@ -374,31 +374,61 @@ namespace HallOfBeorn.Services.LotR.Links
                 .Select(card => Link.CreateLotRImageLink(card));
         }
 
+        private IEnumerable<LotRCard> GetCards(Func<IEnumerable<LotRCard>> generator)
+        {
+            return generator()
+                .Where(card => card.CardSet.SetType != SetType.CUSTOM)
+                .OrderByDescending(card => card.ImportanceScore())
+                .ThenBy(card => card.Title)
+                .ThenBy(card => card.Sphere);
+        }
+
+        private IEnumerable<LotRCard> GetCards(string name)
+        {
+            return cardRepository.Cards()
+                .Where(card => card.Title.ContainsLower(name)
+                    && card.CardSet.SetType != SetType.CUSTOM)
+                .OrderByDescending(card => card.ImportanceScore())
+                .ThenBy(card => card.Title)
+                .ThenBy(card => card.Sphere);
+        }
+
+        private Func<LotRCard, bool> GetTraitOrTextFilter(string text, params Func<LotRCard, bool>[] options)
+        {
+            Func<LotRCard, bool> optionalCriteria = (options == null || options.Length == 0)
+                ? new Func<LotRCard, bool>((card) => true)
+                : new Func<LotRCard, bool>((card) => options.Any(opt => opt(card)));
+
+            return (card) =>
+                ((card.IsPlayerCard() || card.IsObjective() || card.CardType == CardType.Enemy)
+                && card.HasTraitOrText(text))
+                || optionalCriteria(card);
+        }
+
         private void InitializeCharacterLinks()
         {
+            AddCharacterFilter("Istari", GetTraitOrTextFilter("Istari", 
+                (card) => card.HasText("White Council"), (card) => card.Title.Contains("White Council")));
+
             AddCharacterFilter("Rangers of Ithilien", (card) =>
                 (card.IsPlayerCard() || card.IsObjective())
-                && ((card.HasTrait("Gondor.") && card.HasTrait("Ranger.")) 
-                || card.HasTrait("Trap.") || card.HasText("Trap"))
+                && ((card.HasTraits("Gondor", "Ranger")) 
+                || card.HasTraitOrText("Trap"))
             );
-            AddCharacterFilter("The Beornings", (card) =>
-                (card.IsPlayerCard() || card.IsObjective())
-                && (card.HasTrait("Beorning.") || card.HasText("Beorning"))
-            );
-            AddCharacterFilter("The Eagles", (card) =>
-                (card.IsPlayerCard() || card.IsObjective()) 
-                && (card.HasTrait("Eagle.") || card.HasText("Eagle"))
-            );
+            
+
+            AddCharacterFilter("The Beornings", GetTraitOrTextFilter("Beorning"));
+            
+            AddCharacterFilter("The Eagles", GetTraitOrTextFilter("Eagle"));
+            
+            AddCharacterFilter("The Ents", GetTraitOrTextFilter("Ent"));
         }
 
         public IEnumerable<ILink> GetCharacterLinks(string name)
         {
-            var cards = getCharacterLinksByName.ContainsKey(name)
-                ? getCharacterLinksByName[name]()
-                .OrderByDescending(c => c.ImportanceScore())
-                : cardRepository.Cards()
-                .Where(card => card.Title.ContainsLower(name))
-                .OrderByDescending(card => card.ImportanceScore());
+            var cards = getCardsByName.ContainsKey(name)
+                ? GetCards(getCardsByName[name])
+                : GetCards(name);
 
             return GetCharacterLinks(cards);
         }

@@ -43,8 +43,6 @@ namespace HallOfBeorn.Models.Characters.Groups
             addMember("Pallando");
 
             addArticle("https://visionofthepalantir.wordpress.com/2018/03/05/istari/", "Vision of the Palantir Trait Review");
-
-            LotRCard("The-White-Council-TDT");
         }
     }
 }

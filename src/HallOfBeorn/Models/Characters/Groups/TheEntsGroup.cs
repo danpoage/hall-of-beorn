@@ -64,16 +64,6 @@ namespace HallOfBeorn.Models.Characters.Groups
             addFriend("Saruman (The White)", "Saruman");
 
             addArticle("https://visionofthepalantir.wordpress.com/2018/02/12/ents/", "Vision of the Palantir Trait Review");
-
-            LotRCard("Wandering-Ent-CS");
-            LotRCard("Booming-Ent-TAC");
-            LotRCard("Derndingle-Warrior-EfMG");
-            LotRCard("Wellinghall-Preserver-AtE");
-            LotRCard("Ent-of-Fangorn-ToS");
-            LotRCard("Entmoot-ToS");
-            LotRCard("Ent-Draught-ToS");
-            LotRCard("Boomed-and-Trumpeted-EfMG");
-            LotRCard("The-Dam-Bursts-CoP");
         }
     }
 }

@@ -24,9 +24,6 @@ namespace HallOfBeorn.Models.Characters
             addGroup("The Beornings", "The-Beornings");
 
             addFamily("Beorn (Father)", "Beorn");
-
-            LotRCard("Grimbeorn-the-Old-TWH");
-            LotRCard("Grimbeorn-the-Old-CatC");
         }
     }
 }

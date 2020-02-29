@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace HallOfBeorn.Models.LotR
 {
@@ -13,9 +15,24 @@ namespace HallOfBeorn.Models.LotR
           CardType.Objective_Location,
         };
 
-        public static bool HasTrait(this LotRCard self, string trait)
+        public static bool HasTraits(this LotRCard self, params string[] text)
         {
-            return self != null && self.Traits.Any(t => t == trait);
+            if (self == null)
+                return false;
+
+            Func<string, string> getCriteria = (criteria) => 
+                criteria.EndsWith(".") ? criteria : criteria + ".";
+
+            return text.All(
+                value => self.Traits.Any(
+                    trait => trait == getCriteria(value)));
+        }
+
+        public static bool HasTraitOrText(this LotRCard self, string text)
+        {
+            return self.HasTraits(text)
+                || self.HasText(" " + text + ".") 
+                || self.HasText(" " + text + " ");
         }
 
         public static bool IsPlayerCard(this LotRCard self)
@@ -52,6 +69,19 @@ namespace HallOfBeorn.Models.LotR
             return self.ToString().Replace("_", "-");
         }
 
+        public static int StatValue(this LotRCard self)
+        {
+            if (self == null)
+                return 0;
+
+            return self.ThreatCost.GetValueOrDefault(0)
+                + self.ResourceCost.GetValueOrDefault(0)
+                + self.Willpower.GetValueOrDefault(0)
+                + self.Attack.GetValueOrDefault(0)
+                + self.Defense.GetValueOrDefault(0)
+                + self.HitPoints.GetValueOrDefault(0);
+        }
+
         public static int ImportanceScore(this LotRCard self)
         {
             if (self == null)
@@ -65,10 +95,10 @@ namespace HallOfBeorn.Models.LotR
                 count += 2;
 
             if (self.CardType == CardType.Hero)
-                count += self.ThreatCost.HasValue ? self.ThreatCost.Value + 8 : 8;
+                count += self.StatValue() + 8;
 
             if (self.CardType == CardType.Ally)
-                count += 5;
+                count += self.StatValue() + 5;
 
             if (self.CardType == CardType.Attachment 
                 || self.CardType == CardType.Player_Side_Quest)
@@ -81,7 +111,7 @@ namespace HallOfBeorn.Models.LotR
                 count += 2;
 
             if (self.CardType == CardType.Objective_Ally)
-                count += 3;
+                count += self.StatValue() + 3;
 
             return count;
         }
