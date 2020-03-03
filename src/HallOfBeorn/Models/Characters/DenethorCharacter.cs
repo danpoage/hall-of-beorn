@@ -58,10 +58,6 @@ namespace HallOfBeorn.Models.Characters
 
             addItem("Rod of the Steward", "Rod-of-the-Steward-FotS");
             addItem("Palantir", "Palantir-AoO");
-
-            LotRCard("Denethor-Core");
-            LotRCard("Denethor-EaAD");
-            LotRCard("Denethor-FotS");
         }
     }
 }

@@ -23,9 +23,6 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Anborn", "Anborn");
 
             addGroup("Rangers of Ithilien", "Rangers-of-Ithilien");
-
-            LotRCard("Damrod-TLoS");
-            LotRCard("Damrod-HoN");
         }
     }
 }

@@ -35,9 +35,6 @@ namespace HallOfBeorn.Models.Characters
             
             addGroup("The Grey Company", "The Grey Company");
             addGroup("Rivendell", "Rivendell");
-
-            LotRCard("Elladan-RtR");
-            LotRCard("Elladan-TMoF");
         }
     }
 }

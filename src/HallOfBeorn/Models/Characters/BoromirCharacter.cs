@@ -72,11 +72,6 @@ And the Halfling forth shall stand.&rdquo;<br>
 
             addGroup("The Council of Elrond", "The-Council-of-Elrond");
             addGroup("The Fellowship", "The-Fellowship");
-
-            LotRCard("Boromir-TDM");
-            LotRCard("Boromir-HoN");
-            LotRCard("Boromir-TSoA");
-            LotRCard("Boromir-RD");
         }
     }
 }

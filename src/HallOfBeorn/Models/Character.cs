@@ -50,7 +50,14 @@ namespace HallOfBeorn.Models
 
         private readonly List<string> lotrCards = new List<string>();
         private readonly List<string> digitalCards = new List<string>();
-        
+
+        private readonly HashSet<string> traits = new HashSet<string>();
+
+        protected void Trait(string trait)
+        {
+            traits.Add(trait);
+        }
+
         protected void Alias(string alias)
         {
             this.Alias(alias, string.Empty);
@@ -264,6 +271,11 @@ namespace HallOfBeorn.Models
 
         public IEnumerable<string> LotRCards { get { return lotrCards; } }
         public IEnumerable<string> DigitalCards { get { return digitalCards; } }
+
+        public IEnumerable<string> Traits()
+        {
+            return traits;
+        }
 
         public static Character Empty()
         {

@@ -23,8 +23,6 @@ namespace HallOfBeorn.Models.Characters
 
             addFriend("Aragorn (King Elessar)", "Aragorn");
             addFriend("Thorin III Stonhelm");
-
-            LotRCard("Bard-son-of-Brand-TWoR");
         }
         
     }

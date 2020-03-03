@@ -42,7 +42,6 @@ namespace HallOfBeorn.Models.Characters
 
             addGroup("The Rohirrim", "The-Rohirrim");
 
-            LotRCard("Erkenbrand-TAC");
             DigitalCard("Erkenbrand-Valor");
         }
     }

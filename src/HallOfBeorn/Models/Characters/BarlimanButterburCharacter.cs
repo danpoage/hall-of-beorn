@@ -33,7 +33,6 @@ namespace HallOfBeorn.Models.Characters
 
             addGroup("Bree");
 
-            LotRCard("Barliman-Butterbur-TBR");
             DigitalCard("Barliman-Butterbur-Valor");
         }
     }

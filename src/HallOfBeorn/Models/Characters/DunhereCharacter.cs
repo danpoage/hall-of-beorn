@@ -33,8 +33,6 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Grimbold", "Grimbold");
 
             addGroup("The Rohirrim", "The-Rohirrim");
-
-            LotRCard("Dunhere-Core");
         }
     }
 }

@@ -30,10 +30,6 @@ namespace HallOfBeorn.Models.Characters
             addFamily("Bifur (Cousin)", "Bifur");
 
             addGroup("Thorin's Company", "Thorin's-Company");
-
-            LotRCard("Bofur-TRG");
-            LotRCard("Bofur-THOHaUH");
-            LotRCard("Bofur-TPLES");
         }
     }
 }

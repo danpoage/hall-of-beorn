@@ -86,8 +86,6 @@ namespace HallOfBeorn.Models.Characters
             addGroup("Lórien", "Lorien");
 
             addItem("O Lórien!", "O-Lorien-TiT");
-
-            LotRCard("Celeborn-TDT");
         }
     }
 }

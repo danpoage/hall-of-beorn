@@ -51,9 +51,6 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Brand son of Bain", "Brand-son-of-Bain");
             addFriend("Balin", "Balin");
             addFriend("Glóin", "Gloin");
-
-            LotRCard("Dain-Ironfoot-RtM");
-            LotRCard("Dain-Ironfoot-TGoF");
         }
     }
 }

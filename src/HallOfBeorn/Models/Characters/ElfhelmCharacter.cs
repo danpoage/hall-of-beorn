@@ -29,10 +29,6 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Éomer", "Eomer");
 
             addGroup("The Rohirrim", "The Rohirrim");
-
-            LotRCard("Elfhelm-TotD");
-            LotRCard("Elfhelm-TDM");
-            LotRCard("Elfhelm-TMoF");
         }
     }
 }

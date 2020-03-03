@@ -44,9 +44,6 @@ namespace HallOfBeorn.Models.Characters
 
             addItem("Gondorian Shield", "Gondorian-Shield-TSF");
             addItem("Livery of the Tower", "Livery-of-the-Tower-TFotW");
-
-            LotRCard("Beregond-HoN");
-            LotRCard("Beregond-TFotW");
         }
     }
 }

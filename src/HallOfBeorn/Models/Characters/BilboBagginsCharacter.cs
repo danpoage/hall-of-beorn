@@ -134,12 +134,6 @@ But Bilbo was not quite so unlearned in dragon-lore as all that, and if Smaug ho
             addItemThing("The One Ring");
             addItemThing("Sting");
             addItemThing("Mithril Shirt");
-            
-            LotRCard("Bilbo-Baggins-THfG");
-            LotRCard("Bilbo-Baggins-MG");
-            LotRCard("Bilbo-Baggins-THOHAUH");
-            LotRCard("Bilbo-Baggins-THOtD");
-            LotRCard("Bilbo-Baggins-RD");
         }
     }
 }

@@ -34,8 +34,6 @@ namespace HallOfBeorn.Models.Characters
 
             addItem("Great Yew Bow", "Great-Yew-Bow-THOtD");
             addItem("Black Arrow", "Black-Arrow-THOtD");
-
-            LotRCard("Bard-the-Bowman-THOtD");
         }
     }
 }

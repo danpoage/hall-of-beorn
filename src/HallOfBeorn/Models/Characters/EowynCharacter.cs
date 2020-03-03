@@ -62,8 +62,6 @@ namespace HallOfBeorn.Models.Characters
 
             addGroup("The Rohirrim", "The-Rohirrim");
 
-            LotRCard("Eowyn-Core");
-            LotRCard("Eowyn-TFotW");
             DigitalCard("Eowyn-EW");
         }
     }

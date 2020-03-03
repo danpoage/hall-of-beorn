@@ -40,10 +40,6 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Thorin Oakenshield", "Thorin-Oakenshield");
 
             addGroup("Thorin's Company", "Thorin's-Company");
-
-            LotRCard("Dwalin-KD");
-            LotRCard("Dwalin-THOtD");
-            DigitalCard("Dwalin-DW");
         }
     }
 }

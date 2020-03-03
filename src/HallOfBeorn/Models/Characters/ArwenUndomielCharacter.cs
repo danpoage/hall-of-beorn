@@ -53,12 +53,6 @@ namespace HallOfBeorn.Models.Characters
 
             addItem("Celebrían's Stone", "Celebrian's-Stone-Core");
 
-            LotRCard("Arwen-Undomiel-TWitW");
-            LotRCard("Arwen-Undomiel-TRG");
-            LotRCard("Arwen-Undomiel-RTR");
-            LotRCard("Arwen-Undomiel-TDR");
-            LotRCard("Arwen-Undomiel-TPLES");
-
             DigitalCard("Arwen-Starter");
         }
     }

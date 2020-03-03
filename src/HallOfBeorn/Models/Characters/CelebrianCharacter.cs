@@ -27,9 +27,6 @@ namespace HallOfBeorn.Models.Characters
 
             addGroup("Rivendell", "Rivendell");
             addGroup("Lórien", "Lorien");
-
-            LotRCard("Celebrian's-Stone-Core");
-            LotRCard("Celebrian's-Stone-TPLES");
         }
     }
 }

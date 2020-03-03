@@ -67,8 +67,6 @@ namespace HallOfBeorn.Models.Characters
             addGroup("The Grey Havens");
 
             addItem("Narya", "Narya-TGH");
-
-            LotRCard("Cirdan-the-Shipwright-TGH");
         }
     }
 }

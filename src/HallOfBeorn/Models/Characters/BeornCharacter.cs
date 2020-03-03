@@ -46,9 +46,6 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Gandalf", "Gandalf");
             addFriend("Thorin's Company", "Thorin's-Company");
 
-            //LotRCard("Beorn-THOHaUH");
-            //LotRCard("Beorn-Core");
-            //LotRCard("Beorn's-Rage-TWH");
             DigitalCard("Beorn-Valor");
         }
     }

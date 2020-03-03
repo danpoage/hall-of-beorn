@@ -29,9 +29,6 @@ namespace HallOfBeorn.Models.Characters
             addItem("Great Yew Bow", "Great-Yew-Bow-THOHaUH");
             addItem("Bow of Yew", "Bow-of-Yew-TWoR");
             addItem("Necklace of Girion", "Necklace-of-Girion-TWoR");
-
-            LotRCard("Brand-son-of-Bain-THoEM");
-            LotRCard("Brand-son-of-Bain-TWoR");
         }
     }
 }

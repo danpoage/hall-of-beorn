@@ -24,8 +24,6 @@ namespace HallOfBeorn.Models.Characters
             Alias("Lord of Lamedon");
             addFriend("Aragorn", "Aragorn");
             addGroup("Gondor", "Gondor");
-
-            LotRCard("Angbor-the-Fearless-TCoU");
         }
     }
 }

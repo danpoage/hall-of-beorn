@@ -95,17 +95,6 @@ namespace HallOfBeorn.Models.Characters
             Alias("Estel");
             Alias("Thorongil");
 
-            LotRCard("Aragorn-Core");
-            LotRCard("Aragorn-TWitW");
-            LotRCard("Aragorn-TLR");
-            LotRCard("Aragorn-ToS");
-            LotRCard("Aragorn-TLoS");
-            LotRCard("Aragorn-TFotW");
-            LotRCard("Aragorn-TMoF");
-            LotRCard("Aragorn-ToF");
-            LotRCard("Aragorn-FotBD");
-            LotRCard("Aragorn-TPLES");
-
             DigitalCard("Aragorn-Starter");
 
             addFamily("Arathorn (Father)", string.Empty);

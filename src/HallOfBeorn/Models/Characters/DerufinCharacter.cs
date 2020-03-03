@@ -19,9 +19,6 @@ namespace HallOfBeorn.Models.Characters
 
             addFamily("Duinhir (Father)");
             addFamily("Duilin (Brother)");
-
-            LotRCard("Derufin-ASitE");
-            LotRCard("Derufin-TSoE");
         }
     }
 }

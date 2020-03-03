@@ -401,7 +401,7 @@ namespace HallOfBeorn.Services.LotR.Links
 
              return (card) =>
                  ((card.IsPlayerCard() || card.IsObjective() || card.CardType == CardType.Enemy)
-                 && card.Title == title)
+                 && (card.Title == title || card.NormalizedTitle == title))
                  || aliasCriteria(card);
         }
 
@@ -417,9 +417,41 @@ namespace HallOfBeorn.Services.LotR.Links
                 || optionalCriteria(card);
         }
 
+        private void AddCharacterTitleFilter(string title, params string[] aliases)
+        {
+            var count = aliases != null ? aliases.Length : 0;
+            Func<LotRCard, bool>[] aliasFilters = new Func<LotRCard, bool>[count];
+
+            if (count > 0)
+            {
+                var index = 0;
+                foreach (var alias in aliases)
+                {
+                    aliasFilters[index] = (card) => card.Title == alias || card.NormalizedTitle == alias;
+                    index++;
+                }
+            }
+
+            AddCharacterFilter(title, GetTitleFilter(title, aliasFilters));
+        }
+
         private void InitializeCharacterLinks()
         {
-            AddCharacterFilter("Glamdring", GetTitleFilter("Glamdring", (card) => card.Title == "Foe-hammer"));
+            AddCharacterTitleFilter("Anborn");
+
+            AddCharacterTitleFilter("Angbor the Fearless");
+
+            AddCharacterTitleFilter("Aragorn", "Strider", "Wingfoot", "Heir of Valandil");
+
+            AddCharacterTitleFilter("Arwen Undomiel", "The Evening Star", "Elven-light");
+
+            AddCharacterTitleFilter("Balin", "Balin's Doom");
+
+            AddCharacterTitleFilter("Beorn", "Beorn's Rage");
+
+            AddCharacterTitleFilter("Celebrian", "Celebrian's Stone");
+
+            AddCharacterTitleFilter("Glamdring", "Foe-hammer");
 
             AddCharacterFilter("Istari", GetTraitOrTextFilter("Istari", 
                 (card) => card.HasText("White Council"), (card) => card.Title.Contains("White Council")));
@@ -429,7 +461,6 @@ namespace HallOfBeorn.Services.LotR.Links
                 && ((card.HasTraits("Gondor", "Ranger")) 
                 || card.HasTraitOrText("Trap"))
             );
-            
 
             AddCharacterFilter("The Beornings", GetTraitOrTextFilter("Beorning"));
             

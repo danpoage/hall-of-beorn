@@ -22,9 +22,6 @@ namespace HallOfBeorn.Models.Characters
 
             addGroup("The Council of Elrond", "The-Council-of-Elrond");
             addGroup("Rivendell", "Rivendell");
-
-            LotRCard("Erestor-TToR");
-            LotRCard("Erestor-TLD");
         }
     }
 }

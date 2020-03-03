@@ -34,9 +34,6 @@ namespace HallOfBeorn.Models.Characters
             addPlace("The Eyrie", "The-Eyrie");
             
             addGroup("The Eagles");
-
-            //LotRCard("Gwaihir-TiT");
-            //LotRCard("Gwaihir's-Debt-TFoW");
         }
     }
 }

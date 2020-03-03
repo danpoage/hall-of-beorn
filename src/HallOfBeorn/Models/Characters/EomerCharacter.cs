@@ -70,9 +70,6 @@ namespace HallOfBeorn.Models.Characters
 
             addItem("Firefoot", "Firefoot-TDT");
             addItem("Gúthwinë", "Guthwine-TMoF");
-
-            LotRCard("Eomer-VoI");
-            LotRCard("Eomer-TMoF");
         }
     }
 }

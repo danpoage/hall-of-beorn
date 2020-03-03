@@ -24,8 +24,6 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Éomer", "Eomer");
 
             addGroup("The Rohirrim", "The-Rohirrim");
-
-            LotRCard("Eothain-TDR");
         }
     }
 }

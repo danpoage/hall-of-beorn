@@ -42,10 +42,6 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Glóin", "Gloin");
 
             addGroup("Thorin's Company", "Thorin's-Company");
-
-            LotRCard("Bifur-KD");
-            LotRCard("Bifur-THOtD");
-            LotRCard("Bifur-TPLES");
         }
     }
 }

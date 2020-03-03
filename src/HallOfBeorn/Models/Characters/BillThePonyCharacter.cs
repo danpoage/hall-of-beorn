@@ -24,8 +24,6 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Sam Gamgee", "Sam-Gamgee");
 
             addGroup("The Fellowship", "The-Fellowship");
-
-            LotRCard("Bill-the-Pony-TBR");
         }
     }
 }

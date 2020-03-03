@@ -84,10 +84,6 @@ namespace HallOfBeorn.Models.Characters
             addGroup("The White Council", "The-White-Council");
             addGroup("The Council of Elrond", "The-Council-of-Elrond");
             addGroup("The House of Elrond");
-
-            LotRCard("Elrond-SaF");
-            LotRCard("Elrond-RD");
-            LotRCard("Elrond-TPLES");
         }
     }
 }

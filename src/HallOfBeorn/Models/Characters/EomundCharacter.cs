@@ -29,8 +29,6 @@ namespace HallOfBeorn.Models.Characters
             addFamily("Théodred (Nephew)", "Theodred");
 
             addGroup("The Rohirrim", "The-Rohirrim");
-
-            LotRCard("Eomund-CatC");
         }
     }
 }
