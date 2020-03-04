@@ -92,7 +92,6 @@
                             <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Attack</span><img style="margin-bottom:-3px;height:20px" src="/Images/attack-med.png" /></span>
                             <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Defense</span><img style="margin-bottom:-3px;height:20px" src="/Images/defense-med.png" /></span>
                             <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.HitPoints</span><img style="margin-bottom:-4px;height:20px;" src="/Images/heart-med.png"/></span>
-                            <span style="margin-left:6px;">(@Model.StatScore)</span>
                         }
                         break;
                     case CardType.Ally:
@@ -102,7 +101,6 @@
                             <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Attack</span><img style="margin-bottom:-3px;height:20px" src="/Images/attack-med.png" /></span>
                             <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Defense</span><img style="margin-bottom:-3px;height:20px" src="/Images/defense-med.png" /></span>
                             <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.HitPoints</span><img style="margin-bottom:-4px;height:20px;" src="/Images/heart-med.png"/></span>
-                            <span style="margin-left:6px;">(@Model.StatScore)</span>
                         }
                         break;
                     case CardType.Attachment:
@@ -596,6 +594,10 @@
         @if (!string.IsNullOrEmpty(@Model.PopularityHtml))
         {
             <div class="ringsdb-card-link"><span>Popularity (@Model.Popularity/5):&nbsp;&nbsp;</span>@Html.Raw(@Model.PopularityHtml)</div>
+        }
+        @if (!string.IsNullOrEmpty(@Model.StatEfficiency))
+        {
+            <div class="ringsdb-card-link"><span>Efficiency @Html.Raw(@Model.StatEfficiency) [@Model.StatScore]</span></div>
         }
         @if (@Model.HasTags())
         {

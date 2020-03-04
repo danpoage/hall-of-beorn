@@ -567,6 +567,7 @@
                                 <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Attack</span><img style="margin-bottom:-3px;height:16px;" src="/Images/attack-small.png" /></span>
                                 <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Defense</span><img style="margin-bottom:-3px;height:16px;" src="/Images/defense-small.png" /></span>
                                 <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.HitPoints</span><img style="margin-bottom:-4px;height:16px;" src="/Images/heart-small.png"/></span>
+                                <span style="margin-left:6px;" title="Stat Efficiency">@Html.Raw(@card.StatEfficiency) [@card.StatScore]</span>
                                 break;
                             case CardType.Ally:
                                 <span style="color:#616161;">[</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.ResourceCost</span><span style="color:#616161;">]</span>
@@ -574,6 +575,7 @@
                                 <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Attack</span><img style="margin-bottom:-3px;height:16px;" src="/Images/attack-small.png" /></span>
                                 <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.Defense</span><img style="margin-bottom:-3px;height:16px;" src="/Images/defense-small.png" /></span>
                                 <span style="width:24px;margin-left:14px;"><span style="margin-right:2px;font-weight:bold;">@card.HitPoints</span><img style="margin-bottom:-4px;height:16px;" src="/Images/heart-small.png"/></span>
+                                <span style="margin-left:6px;" title="Stat Efficiency">@Html.Raw(@card.StatEfficiency) [@card.StatScore]</span>
                                 break;
                             case CardType.Attachment:
                                 <span style="width:50px;color:#616161;">[</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@card.ResourceCost</span><span style="color:#616161;">]</span>

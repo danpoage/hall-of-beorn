@@ -176,39 +176,65 @@ namespace HallOfBeorn.Models.LotR
         public double StatScore()
         {
             Func<byte, byte, double> defensiveValue = (def, hp) =>
-                {
-                    return (double)(0.7272D * def) + (0.3636D * (hp - 1));
-                };
+                ((0.7272D * def) + (0.3636D * (hp - 1)));
 
             Func<byte, double> hazardInsurance = (hp) =>
-                {
-                    return Math.Log((double)hp, 2D);
-                };
+                Math.Log(hp, 2);
 
-            Func<byte, double> statValue = (stat) => Math.Pow(stat, 2);
+            Func<double, double, double, double> maxStat = (wp, atk, def) =>
+                Math.Max(wp, Math.Max(atk, def));
 
-            var willpower = Willpower.GetValueOrDefault(0);
-            var attack = Attack.GetValueOrDefault(0);
-            var defense = Defense.GetValueOrDefault(0);
+            Func<double, double, double, double> meanStat = (wp, atk, def) =>
+                new List<double>{ wp, atk, def }.OrderBy(v => v).ToArray()[1] * .5;
+
+            Func<double, double, double, double> minStat = (wp, atk, def) =>
+                Math.Min(wp, Math.Min(atk, def)) * .25;
+
+            var willpower = (double)Willpower.GetValueOrDefault(0);
+            var attack = (double)Attack.GetValueOrDefault(0);
+            var printedDef = Defense.GetValueOrDefault(0);
             var hitPoints = HitPoints.GetValueOrDefault(0);
 
+            var defense = defensiveValue(printedDef, hitPoints);
+            
             if (CardType == LotR.CardType.Hero || CardType == LotR.CardType.Objective_Hero)
             {
-                return Math.Sqrt(
-                    statValue(willpower)
-                    + statValue(attack)
-                    + defensiveValue(defense, hitPoints)
-                    + hazardInsurance(hitPoints)
-                    );
+                return maxStat(willpower, attack, defense)
+                    + meanStat(willpower, attack, defense)
+                    + minStat(willpower, attack, defense)
+                    + hazardInsurance(hitPoints);
+                    
             }
             else if (CardType == LotR.CardType.Ally || CardType == CardType.Objective_Ally)
             {
-                return Math.Sqrt(
-                    statValue(willpower)
-                    + statValue(attack)
-                    + defensiveValue(defense, hitPoints)
-                    + Math.Sqrt(hazardInsurance(hitPoints))
-                    );
+                return 
+                    maxStat(willpower, attack, defense)
+                    + meanStat(willpower, attack, defense)
+                    + minStat(willpower, attack, defense)
+                    + Math.Sqrt(hazardInsurance(hitPoints));
+            }
+            else return 0;
+        }
+
+        public double StatEfficiency()
+        {
+            var score = StatScore();
+            
+            if (CardType == LotR.CardType.Hero)
+            {
+                var cost = (double)ThreatCost;
+                if (cost == 0)
+                    return 5;
+
+                return score / cost;
+            }
+            else if (CardType == LotR.CardType.Ally)
+            {
+                var cost = (double)ResourceCost;
+                if (cost == 0)
+                    return 5;
+
+                return score / cost;
             }
             else return 0;
         }

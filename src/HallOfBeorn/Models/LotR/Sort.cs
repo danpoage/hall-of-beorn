@@ -13,6 +13,7 @@ namespace HallOfBeorn.Models.LotR
         Sphere_Type_Cost = 3,
         Released = 4,
         Popularity = 5,
-        Stat_Score = 6,
+        StatScore = 6,
+        StatEfficiency = 7,
     }
 }

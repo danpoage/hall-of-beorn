@@ -699,8 +699,34 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             {
                 return
                     (_card.StatScore() > 0D)
-                    ? string.Format("{0:0.00}", _card.StatScore())
-                    : string.Empty;
+                    ? string.Format("{0:0.0}", _card.StatScore())
+                    : "0";
+            }
+        }
+
+        public string StatEfficiency
+        {
+            get
+            {
+                var efficiency = _card.StatEfficiency();
+                if (efficiency == 0)
+                    return string.Empty;
+
+                //return string.Format("{0:00.00}", efficiency);
+
+                var max = Math.Round((efficiency - .5) * 10, MidpointRounding.AwayFromZero) + 1;
+
+                //return string.Format("{0:00.00}", max);
+
+                var html = new System.Text.StringBuilder();
+
+                for (var i=1; i<5; i++)
+                {
+                    if (i <= max)
+                        html.Append("★");
+                }
+
+                return html.ToString();
             }
         }
 
@@ -1249,7 +1275,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                         html.Append(icon);
                     }
 
-                    html.AppendFormat("<span style='color:gray;font-size:12px;margin-left:8px;margin-bottom:2px;'>({0})</span>", Votes);
+                    html.AppendFormat("<span style='color:gray;font-size:12px;margin-left:8px;margin-bottom:2px;'>[{0}]</span>", Votes);
 
                     return html.ToString();
                 }
