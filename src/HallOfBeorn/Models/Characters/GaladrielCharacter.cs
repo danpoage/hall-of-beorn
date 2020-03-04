@@ -89,10 +89,6 @@ namespace HallOfBeorn.Models.Characters
 
             addGroup("Lórien", "Lorien");
             addGroup("The White Council", "The-White-Council");
-
-            LotRCard("Galadriel-CS");
-            LotRCard("Galadriel-RD");
-            LotRCard("Galadriel-TPLES");
         }
     }
 }

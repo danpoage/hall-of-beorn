@@ -31,8 +31,6 @@ namespace HallOfBeorn.Models.Characters
             addFamily("Bowman (Son)");
             addFamily("Carl (Son)");
             addFamily("Sam Gamgee (Son in Law)", "Sam-Gamgee");
-
-            LotRCard("Tom-Cotton-TMoF");
         }
     }
 }

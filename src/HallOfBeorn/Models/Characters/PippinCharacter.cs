@@ -81,10 +81,6 @@ namespace HallOfBeorn.Models.Characters
 
             addItem("Dagger of Westernesse", "Dagger-of-Westernesse-TBR");
             addItem("Hobbit Pony", "Hobbit-Pony-TWoE");
-
-            LotRCard("Pippin-TBR");
-            LotRCard("Pippin-EaAD");
-            LotRCard("Pippin-ASitE");
         }
     }
 }

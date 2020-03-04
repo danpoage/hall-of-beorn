@@ -28,8 +28,6 @@ namespace HallOfBeorn.Models.Characters
             addItem("Dwarven Axe", "Dwarven-Axe-Core");
             addItem("Dwarven Shield", "Dwarven-Shield-TSoH");
             addItem("Dwarf Pipe", "Dwarf-Pipe-TMk");
-
-            LotRCard("Thorin-Stonehelm-TPLES");
         }
     }
 }

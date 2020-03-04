@@ -25,8 +25,6 @@ namespace HallOfBeorn.Models.Characters
             addFamily("Sam Gamgee (Cousin)", "Sam-Gamgee");
 
             addGroup("Hobbiton");
-
-            LotRCard("Halfast-Gamgee-CoP");
         }
     }
 }

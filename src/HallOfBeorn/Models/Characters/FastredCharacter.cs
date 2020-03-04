@@ -23,8 +23,6 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Horn");
 
             addGroup("The Rohirrim", "The-Rohirrim");
-
-            LotRCard("Fastred-TBS");
         }
     }
 }

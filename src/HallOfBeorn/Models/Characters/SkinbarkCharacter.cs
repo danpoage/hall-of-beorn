@@ -23,8 +23,6 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Leaflock");
 
             addGroup("The Ents", "The-Ents");
-
-            LotRCard("Skinbark-TLoS");
         }
     }
 }

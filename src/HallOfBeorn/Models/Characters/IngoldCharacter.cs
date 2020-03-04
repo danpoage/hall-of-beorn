@@ -21,8 +21,6 @@ namespace HallOfBeorn.Models.Characters
             ImageArtist = Artist.Owen_William_Weber;
 
             addGroup("Gondor", "Gondor");
-
-            LotRCard("Ingold-TWoE");
         }
     }
 }

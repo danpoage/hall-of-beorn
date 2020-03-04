@@ -26,8 +26,6 @@ namespace HallOfBeorn.Models.Characters
 
             addGroup("The Shire", "The-Shire");
             //addGroup("Shirrif");
-
-            LotRCard("Robin-Smallburrow-TDRu");
         }
     }
 }

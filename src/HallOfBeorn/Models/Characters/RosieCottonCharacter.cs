@@ -31,8 +31,6 @@ namespace HallOfBeorn.Models.Characters
             addFamily("Wilcome (Brother)");
             addFamily("Bowman (Brother)");
             addFamily("Carl (Brother)");
-
-            LotRCard("Rosie-Cotton-TMoF");
         }
     }
 }

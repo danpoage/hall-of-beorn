@@ -23,8 +23,6 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Théoden", "Theoden");
 
             addGroup("The Rohirrim", "The-Rohirrim");
-
-            LotRCard("Grimbold-TFotW");
         }
     }
 }

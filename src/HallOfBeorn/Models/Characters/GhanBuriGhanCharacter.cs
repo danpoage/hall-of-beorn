@@ -28,7 +28,6 @@ namespace HallOfBeorn.Models.Characters
 
             addGroup("Drúedain");
 
-            LotRCard("Ghan-buri-Ghan-TFotW");
             DigitalCard("Ghan-buri-Ghan-Valor");
         }
     }

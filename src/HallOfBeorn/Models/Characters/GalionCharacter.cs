@@ -25,8 +25,6 @@ namespace HallOfBeorn.Models.Characters
 
             addFriend("Thranduil (Lord)", "Thranduil");
             addFriend("Legolas (Lord)", "Legolas");
-
-            LotRCard("Galion-FitN");
         }
     }
 }

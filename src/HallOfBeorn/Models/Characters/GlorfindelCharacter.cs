@@ -72,12 +72,6 @@ namespace HallOfBeorn.Models.Characters
 
             addGroup("The Council of Elrond", "The-Council-of-Elrond");
             addGroup("Rivendell", "Rivendell");
-
-            LotRCard("Glorfindel-Core");
-            LotRCard("Glorfindel-FoS");
-            LotRCard("Glorfindel-FotS");
-            LotRCard("Glorfindel-TWQ");
-            LotRCard("Glorfindel-TPLES");
         }
     }
 }

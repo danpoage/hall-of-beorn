@@ -63,8 +63,6 @@ namespace HallOfBeorn.Models.Characters
             addItem("Ho! Tom Bombadil", "Ho-Tom-Bombadil-FotBD");
             addItem("Old Bogey Stories", "Old-Bogey-stories-TOF");
 
-            LotRCard("Tom-Bombadil-ToF");
-            LotRCard("Tom-Bombadil-FotBD");
             DigitalCard("Tom-Bombadil-Valor");
         }
     }

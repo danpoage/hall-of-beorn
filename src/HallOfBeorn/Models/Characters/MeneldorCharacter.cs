@@ -26,8 +26,6 @@ namespace HallOfBeorn.Models.Characters
 
             addFriend("Gwaihir", "Gwaihir");
             addFriend("Landroval", "Landroval");
-
-            LotRCard("Meneldor-RAR");
         }
     }
 }

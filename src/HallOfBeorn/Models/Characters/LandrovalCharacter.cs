@@ -26,8 +26,6 @@ namespace HallOfBeorn.Models.Characters
             addPlace("The Eyrie", "The-Eyrie");
 
             addGroup("The Eagles");
-
-            LotRCard("Landroval-AJtR");
         }
     }
 }

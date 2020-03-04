@@ -23,8 +23,6 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Elrond", "Elrond");
 
             addGroup("Rivendell", "Rivendell");
-
-            LotRCard("Lindir-TBoCD");
         }
     }
 }

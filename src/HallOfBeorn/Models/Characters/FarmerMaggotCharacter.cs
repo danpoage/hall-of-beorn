@@ -35,8 +35,6 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Frodo Baggins", "Frodo-Baggins");
             
             addGroup("The Shire", "The-Shire");
-
-            LotRCard("Famer-Maggot-TBR");
         }
     }
 }

@@ -21,9 +21,6 @@ namespace HallOfBeorn.Models.Characters
             ImageArtist = Artist.Christina_Wald;
 
             addGroup("Gondor", "Gondor");
-
-            LotRCard("Ioreth-ASoCH");
-            LotRCard("Ioreth-TPLES");
         }
     }
 }

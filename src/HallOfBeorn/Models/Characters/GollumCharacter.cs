@@ -76,11 +76,6 @@ namespace HallOfBeorn.Models.Characters
 
             LotRCard("Smeagol-ASitE");
             LotRCard("Smeagol-TLoS");
-            LotRCard("Gollum-ASitE");
-            LotRCard("Gollum-TDM");
-            LotRCard("Gollum-RtM");
-            LotRCard("Gollum-THOHaUH");
-            LotRCard("Gollum-TLoS");
         }
     }
 }

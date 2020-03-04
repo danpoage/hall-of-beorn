@@ -53,8 +53,6 @@ namespace HallOfBeorn.Models.Characters
             addFamily("Legolas (Son)", "Legolas");
 
             addGroup("Battle of Five Armies");
-
-            LotRCard("Thranduil-FitN");
         }
     }
 }

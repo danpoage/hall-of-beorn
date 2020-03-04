@@ -24,9 +24,6 @@ namespace HallOfBeorn.Models.Characters
 
             addGroup("The Grey Havens");
             addGroup("The Council of Elrond", "The-Council-of-Elrond");
-
-            LotRCard("Galdor-of-the-Havens-TGH");
-            LotRCard("Galdor-of-the-Havens-TToR");
         }
     }
 }

@@ -25,8 +25,6 @@ namespace HallOfBeorn.Models.Characters
             addGroup("Gondor", "Gondor");
 
             addItem("Sword of Morthond", "Sword-of-Morthond-AoO");
-
-            LotRCard("Hirluin-the-Fair-TSF");
         }
     }
 }

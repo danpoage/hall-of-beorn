@@ -40,10 +40,6 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Frodo Baggins", "Frodo-Baggins");
 
             addGroup("Rivendell", "Rivendell");
-
-            LotRCard("Gildor-Inglorion-TPLES");
-            LotRCard("Gildor-Inglorion-THoEM");
-            LotRCard("Gildor-Inglorion-TBR");
         }
     }
 }

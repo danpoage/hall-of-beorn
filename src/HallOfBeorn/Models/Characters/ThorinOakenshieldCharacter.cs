@@ -72,8 +72,6 @@ It was Thorin, but you could only have told it by his golden chain, and by the c
             addItem("Dwarf Pipe", "Dwarf-Pipe-TMk");
 
             addGroup("Thorin's Company", "Thorin's-Company");
-
-            LotRCard("Thorin-Oakenshield-THOHaUH");
         }
     }
 }

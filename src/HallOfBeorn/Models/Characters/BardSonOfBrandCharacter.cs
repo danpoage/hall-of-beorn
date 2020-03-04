@@ -24,6 +24,5 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Aragorn (King Elessar)", "Aragorn");
             addFriend("Thorin III Stonhelm");
         }
-        
     }
 }

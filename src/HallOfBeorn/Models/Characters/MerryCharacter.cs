@@ -71,10 +71,6 @@ During the following trip to Rivendell, Merry seemed to have a greater knowledge
 
             addItem("Dagger of Westernesse", "Dagger-of-Westernesse-TBR");
             addItem("Hobbit Pony", "Hobbit-Pony-TWoE");
-
-            LotRCard("Merry-TBR");
-            LotRCard("Merry-TWoE");
-            LotRCard("Merry-ASitE");
         }
     }
 }

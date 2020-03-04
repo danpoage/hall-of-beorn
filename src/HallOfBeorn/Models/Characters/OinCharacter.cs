@@ -36,8 +36,6 @@ namespace HallOfBeorn.Models.Characters
 
             addGroup("Thorin's Company", "Thorin's-Company");
             addGroup("Balin's Colony");
-
-            LotRCard("Oin-THOtD");
         }
     }
 }

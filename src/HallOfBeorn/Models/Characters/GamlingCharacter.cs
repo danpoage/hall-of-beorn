@@ -27,8 +27,6 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Erkenbrand", "Erkenbrand");
 
             addGroup("The Rohirrim", "The-Rohirrim");
-
-            LotRCard("Gamling-TLoS");
         }
     }
 }

@@ -36,8 +36,6 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Nori", "Nori");
 
             addGroup("Thorin's Company", "Thorin's-Company");
-
-            LotRCard("Ori-THOHaUH");
         }
     }
 }

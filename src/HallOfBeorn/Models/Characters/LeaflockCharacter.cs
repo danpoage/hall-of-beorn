@@ -25,8 +25,6 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Treebeard", "Treebeard");
 
             addGroup("The Ents", "The-Ents");
-
-            LotRCard("Leaflock-DoCG");
         }
     }
 }

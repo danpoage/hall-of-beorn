@@ -40,9 +40,6 @@ namespace HallOfBeorn.Models.Characters
 
             addGroup("Thorin's Company", "Thorin's-Company");
             addGroup("The Council of Elrond", "The-Council-of-Elrond");
-
-            LotRCard("Gloin-Core");
-            LotRCard("Gloin-THOtD");
         }
     }
 }

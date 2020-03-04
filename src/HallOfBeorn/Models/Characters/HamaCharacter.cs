@@ -34,9 +34,6 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Éomer", "Eomer");
 
             addGroup("The Rohirrim", "The-Rohirrim");
-
-            LotRCard("Hama-TLD");
-            LotRCard("Hama-ToS");
         }
     }
 }

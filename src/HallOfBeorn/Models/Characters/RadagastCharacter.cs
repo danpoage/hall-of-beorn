@@ -54,9 +54,6 @@ Radagast is, of course, a worthy wizard, a master of shapes and changes of hue; 
             addGroup("The Istari");
 
             addItem("Radagast's Staff", "Radagast's-Staff-TFoW");
-
-            LotRCard("Radagast-TFoW");
-            LotRCard("Radagast-AJtR");
         }
     }
 }

@@ -82,11 +82,6 @@ Thy heart shall then rest in the forest no more.
             addGroup("The Fellowship", "The-Fellowship");
             addGroup("The Three Hunters");
 
-            LotRCard("Legolas-Core");
-            LotRCard("Legolas-TSoH");
-            LotRCard("Legolas-MatPP");
-            LotRCard("Legolas-ToS");
-            LotRCard("Legolas-TPLES");
             DigitalCard("Legolas-LG");
         }
     }

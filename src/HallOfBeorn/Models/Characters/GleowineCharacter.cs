@@ -27,8 +27,6 @@ out of loss, out of life, unto long glory.
             addFriend("Théoden", "Theoden");
 
             addGroup("The Rohirrim", "The-Rohirrim");
-
-            LotRCard("Gleowine-Core");
         }
     }
 }

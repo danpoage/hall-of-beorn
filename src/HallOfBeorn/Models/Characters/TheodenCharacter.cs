@@ -73,9 +73,6 @@ His nephew Éomer succeeded him as King of Rohan. In July he returned to Minas T
             addItem("Golden Shield", "Golden-Shield-TFotW");
 
             addGroup("The Rohirrim", "The-Rohirrim");
-
-            LotRCard("Theoden-TMV");
-            LotRCard("Theoden-ToS");
         }
     }
 }

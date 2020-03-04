@@ -63,11 +63,6 @@ His final kill score number was forty-two in that battle, surpassing his friend 
             addGroup("The Fellowship", "The-Fellowship");
             addGroup("The Three Hunters");
 
-            LotRCard("Gimli-Core");
-            LotRCard("Gimli-ToS");
-            LotRCard("Gimli-TRoB");
-            LotRCard("Gimli-TSoH");
-            LotRCard("Gimli-TPLES");
             DigitalCard("Gimli-Starter");
         }
     }

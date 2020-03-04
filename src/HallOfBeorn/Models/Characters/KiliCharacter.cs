@@ -36,9 +36,6 @@ namespace HallOfBeorn.Models.Characters
             addFamily("Fili (Brother)", "Fili");
 
             addGroup("Thorin's Company", "Thorin's-Company");
-
-            LotRCard("Kili-THOHaUH");
-            LotRCard("Kili-TPLES");
         }
     }
 }

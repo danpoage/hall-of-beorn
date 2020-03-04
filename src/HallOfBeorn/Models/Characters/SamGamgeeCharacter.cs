@@ -79,9 +79,6 @@ namespace HallOfBeorn.Models.Characters
 
             addItemThing("The One Ring");
             addItem("Lórien Rope", "Lorien-Rope-RD");
-
-            LotRCard("Sam-Gamgee-TBR");
-            LotRCard("Sam-Gamgee-TTiTD");
         }
     }
 }

@@ -26,8 +26,6 @@ namespace HallOfBeorn.Models.Characters
             addItem("Cloak of Lórien", "Cloak-of-Lorien-CS");
 
             addGroup("Lórien", "Lorien");
-
-            LotRCard("Rumil-TTT");
         }
     }
 }

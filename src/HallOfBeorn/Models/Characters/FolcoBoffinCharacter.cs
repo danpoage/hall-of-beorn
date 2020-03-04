@@ -27,8 +27,6 @@ namespace HallOfBeorn.Models.Characters
 
             addGroup("The Shire", "The-Shire");
             addGroup("The Conspiracy");
-
-            LotRCard("Folco-Boffin-DoCG");
         }
     }
 }

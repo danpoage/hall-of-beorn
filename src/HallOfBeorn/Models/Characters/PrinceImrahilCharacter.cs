@@ -37,10 +37,6 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Aragorn", "Argorn");
             addFriend("Faramir", "Faramir");
             addFriend("Éomer", "Eomer");
-
-            LotRCard("Prince-Imrahil-AJtR");
-            LotRCard("Prince-Imrahil-TCoC");
-            LotRCard("Prince-Imrahil-TFotW");
         }
     }
 }

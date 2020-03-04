@@ -23,8 +23,6 @@ namespace HallOfBeorn.Models.Characters
             addGroup("Gondor", "Gondor");
 
             addItem("The Red Arrow", "The-Red-Arrow-BtS");
-
-            LotRCard("Hirgon-BtS");
         }
     }
 }

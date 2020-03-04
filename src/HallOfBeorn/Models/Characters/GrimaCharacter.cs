@@ -37,10 +37,6 @@ namespace HallOfBeorn.Models.Characters
             addItem("Keys of Orthanc", "Keys-of-Orthanc-VoI");
 
             addGroup("The Rohirrim", "The-Rohirrim");
-
-            LotRCard("Grima-Hero-VoI");
-            LotRCard("Grima-Objective-Ally-VoI");
-            LotRCard("Grima-ToS");
         }
     }
 }

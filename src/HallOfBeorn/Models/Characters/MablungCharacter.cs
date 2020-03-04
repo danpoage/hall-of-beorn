@@ -27,9 +27,6 @@ namespace HallOfBeorn.Models.Characters
             addGroup("Gondor", "Gondor");
             addGroup("Rangers of Ithilien", "Rangers-of-Ithilien");
 
-            LotRCard("Mablung-NiE");
-            LotRCard("Mablung-TLoS");
-            LotRCard("Mablung-TPLES");
             DigitalCard("Mablung-FR");
         }
     }

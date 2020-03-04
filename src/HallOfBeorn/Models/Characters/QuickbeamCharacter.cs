@@ -27,9 +27,6 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Beechbone", "Beechbone");
             addFriend("Merry", "Merry");
             addFriend("Pippin", "Pippin");
-
-            LotRCard("Quickbeam-CoP");
-            LotRCard("Quickbeam-ToS");
         }
     }
 }

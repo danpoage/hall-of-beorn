@@ -53,9 +53,6 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Pippin", "Pippin");
 
             addItem("Ent Draught", "Ent-Draught-ToS");
-
-            LotRCard("Treebeard-ToS");
-            LotRCard("Treebeard-TAC");
         }
     }
 }

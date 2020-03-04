@@ -31,8 +31,6 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Hirluin the Fair", "Hirluin-the-Fair");
 
             addGroup("Gondor", "Gondor");
-
-            LotRCard("Forlong-TDF");
         }
     }
 }

@@ -123,13 +123,6 @@ Frodo heard a sweet singing running in his mind: a song that seemed to come like
             addItemThing("Sting");
             addItemThing("Mithril Shirt");
             addItem("Phial of Galadriel", "Phial-of-Galadriel-RD");
-
-            LotRCard("Frodo-Baggins-CatC");
-            LotRCard("Frodo-Baggins-ASitE");
-            LotRCard("Frodo-Baggins-TBR");
-            LotRCard("Frodo-Baggins-RD");
-            LotRCard("Frodo-Baggins-ToS");
-            LotRCard("Frodo-Baggins-TMoF");
         }
     }
 }

@@ -32,8 +32,6 @@ namespace HallOfBeorn.Models.Characters
 
             addGroup("Gondor", "Gondor");
             addGroup("Rohan", "Rohan");
-
-            LotRCard("Lothiriel-TCoU");
         }
     }
 }

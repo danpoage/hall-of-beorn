@@ -42,8 +42,6 @@ namespace HallOfBeorn.Models.Characters
 
             addFamily("Sam Gamgee (Son)", "Sam-Gamgee");
             addFriend("Frodo Baggins", "Frodo-Baggins");
-
-            LotRCard("Gaffer-Gamgee-MG");
         }
     }
 }

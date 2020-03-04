@@ -36,8 +36,6 @@ Retreating, he appointed Grimbold in command of the western bank garrison while 
             addFamily("Éowyn (Cousin)", "Eowyn");
 
             addGroup("The Rohirrim", "The-Rohirrim");
-
-            LotRCard("Theodred-Core");
         }
     }
 }

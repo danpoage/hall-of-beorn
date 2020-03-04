@@ -23,9 +23,6 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Aragorn", "Aragorn");
 
             addGroup("The Grey Company", "The Grey Company");
-
-            LotRCard("Halbarad-TLR");
-            LotRCard("Halbarad-TFotW");
         }
     }
 }
