@@ -28,6 +28,31 @@ namespace HallOfBeorn.Services.LotR.Links
         private readonly Dictionary<string, List<ILink>> linksBySlug
             = new Dictionary<string, List<ILink>>();
 
+        private readonly Dictionary<string, string> twoPlayerStarterMap
+            = new Dictionary<string, string> {
+            { "Andrath-Guardsman-TPLES", "Andrath-Guardsman-TMk" },
+            { "Aragorn-TPLES", "Aragorn-Core"},
+            { "Arwen-Undomiel-TPLES", "Arwen-Undomiel-TWitW"},
+            { "Bifur-TPLES", "Bifur-KD" },
+            { "Blue-Mountain-Trader-TPLES", "Blue-Mountain-Trader-TDT" },
+            { "Bofur-TPLES", "Bofur-TRG" },
+            { "Defender-of-the-Naith-TPLES", "Defender-of-the-Naith-TiT" },
+            { "Faramir-TPLES", "Faramir-Core" },
+            { "Fili-TPLES", "Fili-THOHaUH" },
+            { "Galadriel-TPLES", "Galadriel-RD" },
+            { "Gandalf-TPLES", "Gandalf-Core" },
+            { "Gildor-Inglorion-TPLES", "Gildor-Inglorion-UtAM" },
+            { "Gimli-TPLES", "Gimli-ToS" },
+            { "Glorfindel-TPLES", "Glorfindel-Core" },
+            { "Kili-TPLES", "Kili-THOHaUH" },
+            { "Naith-Guide-TPLES", "Naith-Guide-TDT" },
+            { "Nori-TPLES", "Nori-THOHaUH" },
+            { "Orophin-TPLES", "Orophin-CS" },
+            { "Silverlode-Archer-TPLES", "Silverlode-Archer-Core" },
+            { "Thorin-Stonehelm-TPLES", "Thorin-Stonehelm-WaR" },
+            { "Woodland-Courier-TPLES", "Woodland-Courier-TDR" },
+        };
+
         private void Initialize()
         {
             //Vision of the Palantir
