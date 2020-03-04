@@ -352,13 +352,13 @@ namespace HallOfBeorn.Services.LotR.Links
                 links.AddRange(creator.GetLinks(slug));
             }
 
-            //Remove the Two Player Limited Edition Starter slug suffix
-            //so that we can get the links for the original version of this card
+            //Map the Two Player Limited Edition Starter versions of cards to their original release.
+            //We can share associations with original cards, as few players include the TPLES versions.
             if (slug.EndsWith("-TPLES"))
             {
-                if (slug == "Gandalf-TPLES")
+                if (twoPlayerStarterMap.ContainsKey(slug))
                 {
-                    slug = "Gandalf-Core";
+                    slug = twoPlayerStarterMap[slug];
                 }
                 else
                 {

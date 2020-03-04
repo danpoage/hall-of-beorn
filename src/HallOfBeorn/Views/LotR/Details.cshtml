@@ -597,7 +597,7 @@
         }
         @if (!string.IsNullOrEmpty(@Model.StatEfficiency))
         {
-            <div class="ringsdb-card-link"><span>Efficiency @Html.Raw(@Model.StatEfficiency) [@Model.StatScore]</span></div>
+            <div class="ringsdb-card-link"><span>Efficiency: @Html.Raw(@Model.StatEfficiency) [@Model.StatScore]</span></div>
         }
         @if (@Model.HasTags())
         {
