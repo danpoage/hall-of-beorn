@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.LotR
         Alphabetical = 2,
         Sphere_Type_Cost = 3,
         Released = 4,
-        Popularity = 5
+        Popularity = 5,
+        Stat_Score = 6,
     }
 }

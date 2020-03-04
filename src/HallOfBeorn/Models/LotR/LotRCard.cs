@@ -173,6 +173,46 @@ namespace HallOfBeorn.Models.LotR
         public byte? HitPoints { get; set; }
         public byte? QuestPoints { get; set; }
 
+        public double StatScore()
+        {
+            Func<byte, byte, double> defensiveValue = (def, hp) =>
+                {
+                    return (double)(0.7272D * def) + (0.3636D * (hp - 1));
+                };
+
+            Func<byte, double> hazardInsurance = (hp) =>
+                {
+                    return Math.Log((double)hp, 2D);
+                };
+
+            Func<byte, double> statValue = (stat) => Math.Pow(stat, 2);
+
+            var willpower = Willpower.GetValueOrDefault(0);
+            var attack = Attack.GetValueOrDefault(0);
+            var defense = Defense.GetValueOrDefault(0);
+            var hitPoints = HitPoints.GetValueOrDefault(0);
+
+            if (CardType == LotR.CardType.Hero || CardType == LotR.CardType.Objective_Hero)
+            {
+                return Math.Sqrt(
+                    statValue(willpower)
+                    + statValue(attack)
+                    + defensiveValue(defense, hitPoints)
+                    + hazardInsurance(hitPoints)
+                    );
+            }
+            else if (CardType == LotR.CardType.Ally || CardType == CardType.Objective_Ally)
+            {
+                return Math.Sqrt(
+                    statValue(willpower)
+                    + statValue(attack)
+                    + defensiveValue(defense, hitPoints)
+                    + Math.Sqrt(hazardInsurance(hitPoints))
+                    );
+            }
+            else return 0;
+        }
+
         public string Shadow { get; set; }
         public string EncounterSet { get; set; }
         public string AlternateEncounterSet { get; set; }

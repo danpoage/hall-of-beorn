@@ -693,6 +693,17 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             get { return _card.Direction; }
         }
 
+        public string StatScore
+        {
+            get
+            {
+                return
+                    (_card.StatScore() > 0D)
+                    ? string.Format("{0:0.00}", _card.StatScore())
+                    : string.Empty;
+            }
+        }
+
         public string EngagementCost
         {
             get { return _card.EngagementCost.HasValue ? _card.EngagementCost.ToString() : string.Empty; }

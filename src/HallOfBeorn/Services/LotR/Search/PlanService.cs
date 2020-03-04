@@ -122,6 +122,10 @@ namespace HallOfBeorn.Services.LotR.Search
                 AddSort(sorts, (score) => _getPopularity(score.Card.Slug), false, true);
                 AddSort(sorts, (score) => _getVotes(score.Card), false, false);
             }
+            if (model.Sort.Value == Sort.Stat_Score)
+            {
+                AddSort(sorts, (score) => score.Card.StatScore(), false, true);
+            }
             if (model.Sort.Value == Sort.Released)
                 AddSort(sorts, (score) => score.Card.CardSet.Product.Code, false, true);
             if (model.Sort.Value == Sort.Set_Number)
