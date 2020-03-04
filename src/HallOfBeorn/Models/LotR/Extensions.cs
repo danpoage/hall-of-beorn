@@ -74,17 +74,19 @@ namespace HallOfBeorn.Models.LotR
             if (self == null)
                 return 0;
 
-            Func<byte?, byte> normalize = (value) =>
-                 (!value.HasValue || value == Card.VALUE_NA || value == Card.VALUE_X)
-                        ? (byte)0
-                        : value.Value;
+            return self.ThreatCost.NormalizeStat()
+                + self.ResourceCost.NormalizeStat()
+                + self.Willpower.NormalizeStat()
+                + self.Attack.NormalizeStat()
+                + self.Defense.NormalizeStat()
+                + self.HitPoints.NormalizeStat();
+        }
 
-            return normalize(self.ThreatCost)
-                + normalize(self.ResourceCost)
-                + normalize(self.Willpower)
-                + normalize(self.Attack)
-                + normalize(self.Defense)
-                + normalize(self.HitPoints);
+        public static byte NormalizeStat(this byte? self)
+        {
+           return (!self.hasValue || self.Value == Card.VALUE_NA || self.Value == Card.VALUE_X)
+               ? (byte)0
+               : self.Value;
         }
 
         public static int ImportanceScore(this LotRCard self)

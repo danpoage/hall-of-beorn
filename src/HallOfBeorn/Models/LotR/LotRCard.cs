@@ -190,10 +190,10 @@ namespace HallOfBeorn.Models.LotR
             Func<double, double, double, double> minStat = (wp, atk, def) =>
                 Math.Min(wp, Math.Min(atk, def)) * .25;
 
-            var willpower = (double)Willpower.GetValueOrDefault(0);
-            var attack = (double)Attack.GetValueOrDefault(0);
-            var printedDef = Defense.GetValueOrDefault(0);
-            var hitPoints = HitPoints.GetValueOrDefault(0);
+            var willpower = (double)Willpower.NormalizeStat();
+            var attack = (double)Attack.NormalizeStat();
+            var printedDef = Defense.NormalizeStat();
+            var hitPoints = HitPoints.NormalizeStat();
 
             var defense = defensiveValue(printedDef, hitPoints);
             
@@ -222,7 +222,7 @@ namespace HallOfBeorn.Models.LotR
             
             if (CardType == LotR.CardType.Hero)
             {
-                var cost = (double)ThreatCost;
+                var cost = (double)ThreatCost.NormalizeStat();
                 if (cost == 0)
                     return 5;
 
@@ -230,7 +230,7 @@ namespace HallOfBeorn.Models.LotR
             }
             else if (CardType == LotR.CardType.Ally)
             {
-                var cost = (double)ResourceCost;
+                var cost = (double)ResourceCost.NormalizeStat();
                 if (cost == 0)
                     return 5;
 
