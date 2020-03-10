@@ -62,6 +62,8 @@ namespace HallOfBeorn.Models.LotR
         Cost_Reduction,
         Mono_Sphere_Bonus,
         Mono_Sphere_Required,
-        Beorn_Support
+        Beorn_Support,
+        Burglar_Treasure,
+        Messenger_of_the_King,
     }
 }

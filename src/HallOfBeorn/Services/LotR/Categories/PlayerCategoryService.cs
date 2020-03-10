@@ -124,6 +124,16 @@ namespace HallOfBeorn.Services.LotR.Categories
                 CreateCategoryFilter("reduce the cost (of|to)", PlayerCategory.Cost_Reduction),
                 CreateCategoryFilter("each hero you control with (a|the) printed (Leadership|Tactics|Spirit|Lore) resource icon|(?<!only )if each (of your heroes|hero you control) has a printed (Leadership|Tactics|Spirit|Lore) resource icon|If each hero you control belongs to the same sphere of influence", PlayerCategory.Mono_Sphere_Bonus),
                 CreateCategoryFilter("Play only if each hero you control has (a|the) printed (Leadership|Tactics|Spirit|Lore)|You must use resources from 3 different heroes' pools", PlayerCategory.Mono_Sphere_Required),
+                CreateCategoryFilter((card) => 
+                    card.IsPlayerCard() && (card.HasTraits("Item.") || card.HasTraits("Artifact.")), PlayerCategory.Burglar_Treasure),
+                CreateCategoryFilter((card) =>
+                    {
+                        return card.CardType == CardType.Ally && card.IsUnique && card.Sphere != Sphere.Neutral
+                            && card.Slug != "Elrond-RD" && card.Slug != "Elrond-TPLES" 
+                            && card.Slug != "Galadriel-RD" && card.Slug != "Galadriel-TPLES"
+                            && !card.Text.ContainsLower("cannot have attachments"); 
+                    },
+                    PlayerCategory.Messenger_of_the_King),
                 CreateCategoryFilter((card) => {
                     switch (card.Slug)
                     {
