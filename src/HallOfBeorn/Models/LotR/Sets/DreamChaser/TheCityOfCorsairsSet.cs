@@ -124,7 +124,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithShadow("Shadow: Either shift your heading off-course, or treat this attack as undefended.")
                 .WithEasyModeQuantity(1)
                 .WithInfo(155, 2, Artist.Simon_Dominic);
-            addLocation("White Tower", EncounterSet.CoastOfUmbar, 2, 3)
+            addLocation("Watch Tower", EncounterSet.CoastOfUmbar, 2, 3)
                 .WithTraits("Umbar.", "Coastland.")
                 .WithTextLine("While Watch Tower is in the staging area, it gains: \"Forced: When a Raider enemy enters play, add 1 resource to it.\"")
                 .WithShadow("Shadow: If this attack destroys an ally, add resources to a Raider enemy in play equal to that character's printed resource cost.")

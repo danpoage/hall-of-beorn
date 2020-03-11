@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
 {
-    public class TheHuntForGollumNightmare : CardSet
+    public class TheHuntForGollumNightmareSet : CardSet
     {
         protected override void Initialize()
         {
@@ -153,7 +153,7 @@ Forced: After Dark Pools becomes the active location, each player must discard a
                 CardNumber = 7,
                 Artist = Artist.Cristi_Balanescu
             });
-            addTreachery("Resltess Hunters", "The Hunt for Gollum Nightmare")
+            addTreachery("Restless Hunters", "The Hunt for Gollum Nightmare")
                 .WithKeywords("Surge.")
                 .WithTextLine("Surge.")
                 .WithTextLine("When Revealed: The first player chooses a Clue card attached to a hero and attaches it to a Mordor enemy in play, if able.")

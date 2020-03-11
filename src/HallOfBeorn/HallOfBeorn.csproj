@@ -903,7 +903,7 @@
     <Compile Include="Models\LotR\Sets\TheHobbit\OnTheDoorstepSet.cs" />
     <Compile Include="Models\LotR\Sets\TheHobbit\OverHillAndUnderHillSet.cs" />
     <Compile Include="Models\LotR\Sets\ShadowsOfMirkwood\TheHuntForGollumSet.cs" />
-    <Compile Include="Models\LotR\Sets\ShadowsOfMirkwood\TheHuntForGollumNightmare.cs" />
+    <Compile Include="Models\LotR\Sets\ShadowsOfMirkwood\TheHuntForGollumNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\Dwarrowdelf\TheLongDarkSet.cs" />
     <Compile Include="Models\LotR\Sets\Dwarrowdelf\TheLongDarkNightmare.cs" />
     <Compile Include="Models\LotR\Sets\PrintOnDemand\TheMassingAtOsgiliath.cs" />

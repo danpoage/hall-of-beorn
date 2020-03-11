@@ -148,13 +148,13 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTraits("Troll.")
                 .WithTextLine("Savage Trollspawn gets +1 Attack for each damaged character the engaged player controls.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack for each damaged character the defending player controls.")
-                .WithInfo(71, 4, Artist.Matthew_Starbuck);
+                .WithInfo(72, 4, Artist.Matthew_Starbuck);
             addEnemy("Coldfell Giant", EncounterSet.AcrossTheEttenmoors, 41, 3, 5, 4, 7)
                 .WithTraits("Giant.")
                 .WithTextLine("Forced: After Coldfell Giant engages you, deal 1 damage to 3 different characters you control.")
                 .WithShadow("Shadow: If the defending character has at least 1 damage token on it, attacking enemy makes an additional attack after this one.")
                 .WithEasyModeQuantity(0)
-                .WithInfo(72, 2, Artist.Lukasz_Jaskolski);
+                .WithInfo(73, 2, Artist.Lukasz_Jaskolski);
             addEnemy("Cruel Mountain-troll", EncounterSet.AcrossTheEttenmoors, 46, 3, 6, 2, 9)
                 .WithTraits("Troll.")
                 .WithTextLine("For each excess point of combat damage dealt by Cruel Mountain-troll (damage that is dealt beyond the remaining hit points of the character damaged by its attack) you must remove 1 progress from each quest card in play.")

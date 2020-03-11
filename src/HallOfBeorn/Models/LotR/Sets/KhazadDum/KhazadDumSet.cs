@@ -345,7 +345,7 @@ namespace HallOfBeorn.Models.LotR.Sets.KhazadDum
                 .WithTextLine("While Goblin Tunnels is in the staging area, it gains: 'Forced: After a Goblin is revealed from the encounter deck, remove a progress token from the current quest card.'")
                 .WithShadow("Shadow: attacking enemy gets +1 Attack. (+3 Attack instead if attacking enemy is a Goblin.)")
                 .WithInfo(63, 2, Artist.Michael_Rasmussen);
-            addQuest("Entering the Mines", "Into the Pit", 1, 'A', null)
+            addQuest("Entering the Mines", "Into the Pit", 1, 'A', 7)
                 .WithTextLine("Setup: Search the encounter deck for East-gate and Cave Torch. Put East-gate into play as the active location, and have the first player attach Cave Torch to a hero of his choice. Set First Hall and Bridge of Khazad-dum aside, out of play. Shuffle the encounter deck.")
                 .WithFlavorLine("You have been sent by the White Council to Moria, to deliver a message to Balin and his Dwarven colony. No one has heard from him in a while.")
                 .WithOppositeTextLine("When Revealed: Reveal 1 encounter card per player, and add it to the staging area.")
@@ -353,23 +353,23 @@ namespace HallOfBeorn.Models.LotR.Sets.KhazadDum
                 .WithOppositeFlavorLine("The doors of the East-gate hang crooked on their henges. The darkness inside the doorway is still and impenetrable, shutting out the last beams of a sinking sun.")
                 .WithIncludedEncounterSets(EncounterSet.TwistsAndTurns, EncounterSet.HazardsOfThePit, EncounterSet.GoblinsOfTheDeep)
                 .WithInfo(64, 1, Artist.Ben_Zweifel);
-            addQuest("Goblin Patrol", "Into the Pit", 2, 'A', null)
+            addQuest("Goblin Patrol", "Into the Pit", 2, 'A', 11)
                 .WithFlavorLine("The skeletons of Dwarves and Orcs lie undisturbed, but you have discovered no recent sign of the Dwarven colony. The sound of scampering feet travels to your ears, and you move in that direction to investigate. There is a patrol of Goblins, marching in a loose formation through the shadows.")
                 .WithOppositeTextLine("If there are no enemies in play, immediately advance to the next stage of the scenario. (Players can also advance by placing 11 progress tokens on ~Goblin Patrol.)")
                 .WithIncludedEncounterSets(EncounterSet.TwistsAndTurns, EncounterSet.HazardsOfThePit, EncounterSet.GoblinsOfTheDeep)
                 .WithInfo(65, 1, Artist.Ilich_Henriquez);
-            addQuest("A Way Up", "Into the Pit", 3, 'A', null)
+            addQuest("A Way Up", "Into the Pit", 3, 'A', 12)
                 .WithOppositeTextLine("If players defeat this stage, they win the game.")
                 .WithIncludedEncounterSets(EncounterSet.TwistsAndTurns, EncounterSet.HazardsOfThePit, EncounterSet.GoblinsOfTheDeep)
                 .WithInfo(66, 1, Artist.Ben_Zweifel);
-            addQuest("Search for the Chamber", "The Seventh Level", 1, 'A', null)
+            addQuest("Search for the Chamber", "The Seventh Level", 1, 'A', 15)
                 .WithTextLine("Setup: Search the encounter deck for Book of Mazarbul, and have the first player attach it to a hero of his choice. Shuffle the encounter deck.")
                 .WithFlavorLine("You are investigating the Seventh Level of Moria, searching for the Chamber of Records and any signs of Balin's Colony. In the heavy twilight of a hall, a bulky tome is discovered in the grip of a Dwarf skeleton. You carefully take possession of the book. Perhaps it will give you some answers...")
                 .WithOppositeTextLine("When Revealed: Reveal 1 encounter card per player, and add it to the staging area.")
                 .WithOppositeFlavorLine("The Dwarven runes of the book appear to hold a detailed record of the fledgling colony. But there is some Elvish script at the end which seems out of place...")
                 .WithIncludedEncounterSets(EncounterSet.GoblinsOfTheDeep, EncounterSet.PlunderingGoblins)
                 .WithInfo(67, 1, Artist.Cristi_Balanescu);
-            addQuest("The Fate of Balin", "The Seventh Level", 2, 'A', null)
+            addQuest("The Fate of Balin", "The Seventh Level", 2, 'A', 17)
                 .WithOppositeTextLine("If the players defeat this stage, they win the game.")
                 .WithIncludedEncounterSets(EncounterSet.GoblinsOfTheDeep, EncounterSet.PlunderingGoblins)
                 .WithInfo(68, 1, Artist.Ben_Zweifel);
