@@ -7,13 +7,14 @@ namespace HallOfBeorn.Models.LotR
 {
     public class ScenarioQuestCard
     {
-        public ScenarioQuestCard(LotRCard quest)
+        public ScenarioQuestCard(LotRCard quest, 
+            byte easyModeQuantity, byte normalModeQuantity, byte nightmareModeQuantity)
         {
             _quest = quest;
 
-            EasyModeQuantity = 1;
-            NormalModeQuantity = 1;
-            NightmareModeQuantity = 1;
+            EasyModeQuantity = easyModeQuantity;
+            NormalModeQuantity = normalModeQuantity;
+            NightmareModeQuantity = nightmareModeQuantity;
         }
 
         LotRCard _quest;
@@ -26,8 +27,8 @@ namespace HallOfBeorn.Models.LotR
         public char StageLetter { get { return _quest.StageLetter; } }
         public bool IsNightmare { get { return _quest.EncounterSet.EndsWith(" Nightmare"); } }
         public IEnumerable<EncounterSet> IncludedEncounterSets { get { return _quest.IncludedEncounterSets; } }
-        public byte EasyModeQuantity { get; set; }
-        public byte NormalModeQuantity { get; set; }
-        public byte NightmareModeQuantity { get; set; }
+        public byte EasyModeQuantity { get; private set; }
+        public byte NormalModeQuantity { get; private set; }
+        public byte NightmareModeQuantity { get; private set; }
     }
 }

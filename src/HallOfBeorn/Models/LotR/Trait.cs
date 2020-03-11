@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HallOfBeorn.Models
 {
-    public enum Trait : ushort
+    public enum Trait
     {
         None = 0,
         Ally,

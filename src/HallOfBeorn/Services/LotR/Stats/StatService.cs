@@ -48,7 +48,7 @@ namespace HallOfBeorn.Services.LotR.Stats
 
             if (card.VictoryPoints > 0 && !victoryPointsValues.ContainsKey(card.VictoryPoints))
             {
-                var victoryPoint = card.VictoryPoints == Models.Card.VALUE_X ? "X" : card.VictoryPoints.ToString();
+                var victoryPoint = card.VictoryPoints.IsX() ? "X" : card.VictoryPoints.ToString();
                 victoryPointsValues.Add(card.VictoryPoints, string.Format("Victory {0}.", victoryPoint));
             }
 
@@ -77,7 +77,7 @@ namespace HallOfBeorn.Services.LotR.Stats
                 defenseKey = Models.Card.VALUE_X;
                 defenseValue = "X";
             }
-            else if (card.Defense.HasValue && card.Defense.Value == byte.MaxValue)
+            else if (card.Defense.IsNA())
             {
                 defenseKey = Models.Card.VALUE_NA;
                 defenseValue = "-";
@@ -134,7 +134,7 @@ namespace HallOfBeorn.Services.LotR.Stats
                 threatKey = Models.Card.VALUE_X;
                 threatValue = "X";
             }
-            else if (card.Threat.HasValue && card.Threat.Value == byte.MaxValue)
+            else if (card.Threat.IsNA())
             {
                 threatKey = Models.Card.VALUE_NA;
                 threatValue = "-";
@@ -146,12 +146,12 @@ namespace HallOfBeorn.Services.LotR.Stats
             }
 
             byte questPointsKey = 0; var questPointsValue = string.Empty;
-            if (card.QuestPoints.HasValue && card.QuestPoints.Value == Models.Card.VALUE_X)
+            if (card.QuestPoints.IsX())
             {
                 questPointsKey = Models.Card.VALUE_X;
                 questPointsValue = "X";
             }
-            else if (card.QuestPoints.HasValue && card.QuestPoints.Value == byte.MaxValue)
+            else if (card.QuestPoints.IsNA())
             {
                 questPointsKey = byte.MaxValue;
                 questPointsValue = "-";
@@ -174,62 +174,92 @@ namespace HallOfBeorn.Services.LotR.Stats
 
         public IEnumerable<string> ResourceCosts()
         {
-            return cards.Where(x => !string.IsNullOrEmpty(x.ResourceCost.Description())).OrderBy(x => x.ResourceCost).Select(x => x.ResourceCost.Description()).Distinct();
+            return cards
+                .Where(card => !string.IsNullOrEmpty(card.ResourceCost.Description()))
+                .OrderBy(card => card.ResourceCost)
+                .Select(card => card.ResourceCost.Description())
+                .Distinct();
         }
 
         public IEnumerable<string> ThreatCosts()
         {
-            return cards.Where(x => !string.IsNullOrEmpty(x.ThreatCost.Description(false))).OrderBy(x => x.ThreatCost).Select(x => x.ThreatCost.Description(false)).Distinct();
+            return cards
+                .Where(card => !string.IsNullOrEmpty(card.ThreatCost.Description(false)))
+                .OrderBy(card => card.ThreatCost)
+                .Select(card => card.ThreatCost.Description(false))
+                .Distinct();
         }
 
         public IEnumerable<string> EngagementCosts()
         {
-            return cards.Where(x => !string.IsNullOrEmpty(x.EngagementCost.Description(false))).OrderBy(x => x.EngagementCost).Select(x => x.EngagementCost.Description(false)).Distinct();
+            return cards
+                .Where(card => !string.IsNullOrEmpty(card.EngagementCost.Description(false)))
+                .OrderBy(card => card.EngagementCost)
+                .Select(card => card.EngagementCost.Description(false))
+                .Distinct();
         }
 
         public IEnumerable<string> Keywords()
         {
-            return keywords.Values.ToList().OrderBy(x => x);
+            return keywords.Values
+                .ToList()
+                .OrderBy(keyword => keyword);
         }
 
         public IEnumerable<string> Traits()
         {
-            return traits.Values.ToList().OrderBy(x => x);
+            return traits.Values
+                .ToList()
+                .OrderBy(trait => trait);
         }
 
         public IEnumerable<string> VictoryPointsValues()
         {
-            return victoryPointsValues.Keys.OrderBy(x => x).Select(y => victoryPointsValues[y]);
+            return victoryPointsValues.Keys
+                .OrderBy(value => value)
+                .Select(value => victoryPointsValues[value]);
         }
 
         public IEnumerable<string> AttackStrengthValues()
         {
-            return attackStrengthValues.Keys.OrderBy(x => x).Select(y => attackStrengthValues[y]);
+            return attackStrengthValues.Keys
+                .OrderBy(value => value)
+                .Select(value => attackStrengthValues[value]);
         }
 
         public IEnumerable<string> DefenseStrengthValues()
         {
-            return defenseStrengthValues.Keys.OrderBy(x => x).Select(y => defenseStrengthValues[y]);
+            return defenseStrengthValues.Keys
+                .OrderBy(value => value)
+                .Select(value => defenseStrengthValues[value]);
         }
 
         public IEnumerable<string> HitPointsValues()
         {
-            return hitPointsValues.Keys.OrderBy(x => x).Select(y => hitPointsValues[y]);
+            return hitPointsValues.Keys
+                .OrderBy(value => value)
+                .Select(value => hitPointsValues[value]);
         }
 
         public IEnumerable<string> WillpowerStrengthValues()
         {
-            return willpowerStrengthValues.Keys.OrderBy(x => x).Select(y => willpowerStrengthValues[y]);
+            return willpowerStrengthValues.Keys
+                .OrderBy(value => value)
+                .Select(value => willpowerStrengthValues[value]);
         }
 
         public IEnumerable<string> ThreatStrengthValues()
         {
-            return threatStrengthValues.Keys.OrderBy(x => x).Select(y => threatStrengthValues[y]);
+            return threatStrengthValues.Keys
+                .OrderBy(value => value)
+                .Select(value => threatStrengthValues[value]);
         }
 
         public IEnumerable<string> QuestPointsValues()
         {
-            return questPointsValues.Keys.OrderBy(x => x).Select(y => questPointsValues[y]);
+            return questPointsValues.Keys
+                .OrderBy(value => value)
+                .Select(value => questPointsValues[value]);
         }
     }
 }

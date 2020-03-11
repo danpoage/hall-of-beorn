@@ -445,14 +445,28 @@ namespace HallOfBeorn
             }
         }
 
+        private const byte VALUE_X = 254;
+
         public static bool IsX(this byte? self)
         {
-            return self.HasValue && self.Value == 254;
+            return self.GetValueOrDefault(0) == VALUE_X;
         }
+
+        public static bool IsX(this byte self)
+        {
+            return self == VALUE_X;
+        }
+
+        private const byte VALUE_NA = 255;
 
         public static bool IsNA(this byte? self)
         {
-            return self.HasValue && self.Value == 255;
+            return self.GetValueOrDefault(0) == VALUE_NA;
+        }
+
+        public static bool IsNA(this byte self)
+        {
+            return self == VALUE_NA;
         }
 
         public static bool IsDefined(this byte? self)

@@ -257,7 +257,6 @@
     <Compile Include="Models\INamed.cs" />
     <Compile Include="Models\IProduct.cs" />
     <Compile Include="Models\IProductGroup.cs" />
-    <Compile Include="Models\LotR\CardCycle.cs" />
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\CharacterGroup.cs" />
     <Compile Include="Models\CharacterPlace.cs" />
@@ -409,7 +408,6 @@
     <Compile Include="Models\LotR\Compact\Trait.cs" />
     <Compile Include="Models\ICreator.cs" />
     <Compile Include="Models\LotR\Extensions.cs" />
-    <Compile Include="Models\LotR\LayoutType.cs" />
     <Compile Include="Models\LotR\ProductGroups\VengeanceOfMordorProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\EredMithrinProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\StarterProductGroup.cs" />
@@ -819,8 +817,6 @@
     <Compile Include="Models\LotR\ScenarioQuestCard.cs" />
     <Compile Include="Models\LotR\ViewModels\ScenarioQuestViewModel.cs" />
     <Compile Include="Models\LotR\ViewModels\ScenarioViewModel.cs" />
-    <Compile Include="Models\LotR\SearchRequest.cs" />
-    <Compile Include="Models\LotR\SearchResult.cs" />
     <Compile Include="Models\LotR\ViewModels\SearchViewModel.cs" />
     <Compile Include="Models\LotR\Search\QueryFilterDefinition.cs" />
     <Compile Include="Models\LotR\Search\SimpleFilterDefinition.cs" />

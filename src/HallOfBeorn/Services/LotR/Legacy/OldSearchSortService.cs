@@ -1,4 +1,5 @@
-﻿using System;
+﻿/*
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -34,14 +35,12 @@ namespace HallOfBeorn.Services.LotR
 
             var takeCount = model.HasFilter() || model.IsRandom() ? results.Count : MAX_RESULTS;
 
-            /*
-            var limit = filters.Max(x => x.Limit);
-            if (limit > 0)
-            {
-                takeCount = limit;
-            }
-            */
-
+            //var limit = filters.Max(x => x.Limit);
+            //if (limit > 0)
+            //{
+            //    takeCount = limit;
+            //}
+            
             var sort = model.Sort.HasValue ? model.Sort.Value : Models.LotR.Sort.None;
 
             if (filters.Count == 1 && model.CardSet != null && model.CardSet != "Any" && sort == Models.LotR.Sort.None)
@@ -87,3 +86,4 @@ namespace HallOfBeorn.Services.LotR
         }
     }
 }
+*/

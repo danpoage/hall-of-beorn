@@ -14,10 +14,10 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
             SetType = Models.SetType.Adventure_Pack;
             Cycle = "Shadows of Mirkwood";
 
-            addHero("Dain Ironfoot", 11, Sphere.Leadership, 1, 2, 3, 5)
+            addHero("Dáin Ironfoot", 11, Sphere.Leadership, 1, 2, 3, 5)
                 .WithTraits("Dwarf.")
-                .WithTextLine("While Dain Ironfoot is ready, Dwarf characters get +1 Attack and +1 Willpower.")
-                .WithFlavor("\"You have not heard of Dain and the dwarves of the Iron Hills?\" -Bilbo Baggins, The Hobbit")
+                .WithTextLine("While Dáin Ironfoot is ready, Dwarf characters get +1 Attack and +1 Willpower.")
+                .WithFlavor("\"You have not heard of Dáin and the dwarves of the Iron Hills?\" -Bilbo Baggins, The Hobbit")
                 .WithInfo(116, 1, Artist.Tiziano_Baracchi);
             addAttachment("Dúnedain Signal", 1, Sphere.Leadership, false)
                 .WithTraits("Signal.")

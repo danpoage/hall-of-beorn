@@ -277,15 +277,12 @@ namespace HallOfBeorn.Models.LotR
 
         public void AddQuestCard(LotRCard card)
         {
-            questCards.Add(new ScenarioQuestCard(card));
+            questCards.Add(new ScenarioQuestCard(card, 1, 1, 1));
         }
 
         public void AddQuestCard(LotRCard card, byte easyQuantity, byte normalQuantity, byte nigtmareQuantity)
         {
-            var sqc = new ScenarioQuestCard(card);
-            sqc.EasyModeQuantity = easyQuantity;
-            sqc.NormalModeQuantity = normalQuantity;
-            sqc.NightmareModeQuantity = nigtmareQuantity;
+            var sqc = new ScenarioQuestCard(card, easyQuantity, normalQuantity, nigtmareQuantity);
             questCards.Add(sqc);
         }
 

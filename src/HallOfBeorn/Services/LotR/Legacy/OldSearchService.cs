@@ -1,4 +1,5 @@
-﻿using System;
+﻿/*
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -71,14 +72,12 @@ namespace HallOfBeorn.Services.LotR
                     {
                         results[card.Slug].AddDescription(filter.Description(model, card));
                         results[card.Slug].AddScore(score);
-
-                        /*
-                        var existing = results[card.Slug].Score;
-                        if (score == 0 || existing > 0 && score > existing)
-                        {
-                            results[card.Slug].Score = score;
-                        }
-                        */
+ 
+                        //var existing = results[card.Slug].Score;
+                        //if (score == 0 || existing > 0 && score > existing)
+                        //{
+                        //    results[card.Slug].Score = score;
+                        //}
                     }
                     else
                     {
@@ -406,12 +405,11 @@ namespace HallOfBeorn.Services.LotR
                             results[card.Slug].AddDescription(filter.Description(model, card));
                             results[card.Slug].AddScore(score);
 
-                            /*
-                            var existing = results[card.Slug].Score;
-                            if (score == 0 || existing > 0 && score > existing)
-                            {
-                                results[card.Slug].Score = score;
-                            }*/
+                            //var existing = results[card.Slug].Score;
+                            //if (score == 0 || existing > 0 && score > existing)
+                            //{
+                            //    results[card.Slug].Score = score;
+                            //}
                         }
                         else
                         {
@@ -428,32 +426,31 @@ namespace HallOfBeorn.Services.LotR
                 }
             }
 
-            /*
-            if (!model.IsAdvancedSearch() && isOfficialOnly)
-            {
+            //if (!model.IsAdvancedSearch() && isOfficialOnly)
+            //{
                 //var setNames = cards.Select(x => x.CardSet.Name).Distinct().OrderBy(y => y).ToList();
                 //var sn = setNames;
 
                 //If this is not an advanced search and there are no filters then return only the heroes from the Core Set
-                foreach (var item in cards.Where(x => x.CardSet.Name == "Core Set" && x.Number < 13))
-                {
-                    results[item.Slug] = new CardScore(item, 13 - item.Number, string.Empty);
-                }
-            }*/
+                //foreach (var item in cards.Where(x => x.CardSet.Name == "Core Set" && x.Number < 13))
+                //{
+                //    results[item.Slug] = new CardScore(item, 13 - item.Number, string.Empty);
+                //}
+            //}
 
-            /*
-            if (!model.Custom && model.SetType != SetType.CUSTOM)
-            {
-                var official = new Dictionary<string, CardScore>();
+            
+            //if (!model.Custom && model.SetType != SetType.CUSTOM)
+            //{
+                //var official = new Dictionary<string, CardScore>();
 
-                foreach (var score in results)
-                {
-                    if (!model.CardIsCustom(score.Value.Card))
-                        official.Add(score.Key, score.Value);
-                }
+                //foreach (var score in results)
+                //{
+                //    if (!model.CardIsCustom(score.Value.Card))
+                //        official.Add(score.Key, score.Value);
+                //}
 
-                results = official;
-            }*/
+                //results = official;
+            //}
 
             if (model.IsRandom())
             {
@@ -481,3 +478,4 @@ namespace HallOfBeorn.Services.LotR
         }
     }
 }
+*/
