@@ -134,6 +134,7 @@ namespace HallOfBeorn.Services.LotR.Categories
                             && !card.Text.ContainsLower("cannot have attachments"); 
                     },
                     PlayerCategory.Messenger_of_the_King),
+                CreateCategoryFilter((card) => card.Text.ContainsLower("valour") || card.Text.Contains("40"), PlayerCategory.Valour),
                 CreateCategoryFilter((card) => {
                     switch (card.Slug)
                     {

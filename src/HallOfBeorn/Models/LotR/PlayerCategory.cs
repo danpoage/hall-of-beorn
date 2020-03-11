@@ -65,5 +65,6 @@ namespace HallOfBeorn.Models.LotR
         Beorn_Support,
         Burglar_Treasure,
         Messenger_of_the_King,
+        Valour,
     }
 }
