@@ -572,7 +572,6 @@
     <Compile Include="Models\LotR\CardType.cs" />
     <Compile Include="Models\LotR\ViewModels\CardViewModel.cs" />
     <Compile Include="Models\LotR\PlayerCategory.cs" />
-    <Compile Include="Models\LotR\Deck.cs" />
     <Compile Include="Models\LotR\DeckType.cs" />
     <Compile Include="Models\LotR\EncounterCategory.cs" />
     <Compile Include="Models\LotR\EncounterSet.cs" />
@@ -720,7 +719,6 @@
     <Compile Include="Models\LotR\Search\EnumFilterDefinition.cs" />
     <Compile Include="Models\LotR\Search\FilterBuilder.cs" />
     <Compile Include="Models\LotR\Search\FilterDefinition.cs" />
-    <Compile Include="Models\LotR\HasShadow.cs" />
     <Compile Include="Models\LotR\HtmlBuilder.cs" />
     <Compile Include="Models\ImageType.cs" />
     <Compile Include="Models\LotR\Keyword.cs" />

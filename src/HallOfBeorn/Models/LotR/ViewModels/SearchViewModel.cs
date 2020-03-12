@@ -114,11 +114,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             {
                 model.IsUnique = null;
             }
-            if (model.HasShadow.HasValue && model.HasShadow.Value == Models.HasShadow.Any)
-            {
-                model.HasShadow = null;
-            }
-
+            
             if (model.ThreatCostOperator.HasValue && model.ThreatCostOperator == NumericOperator.eq && (string.IsNullOrEmpty(model.ThreatCost) || model.ThreatCost == "Any"))
             {
                 model.ThreatCost = null;
@@ -701,8 +697,6 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         public string VictoryPoints { get; set; }
 
         public bool? Random { get; set; }
-
-        public HasShadow? HasShadow { get; set; }
 
         public string Quest { get; set; }
 

@@ -37,6 +37,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTextLine("Action: Each player may put one ally card into play from his hand. At the end of the phase, shuffle each of those allies that are still in play into their owners' decks.")
                 .WithInfo(56, 3, Artist.Federico_Musetti);
             addAlly("Soldier of Isengard", 2, Sphere.Lore, false, 2, 2, 2, 2)
+                .WithTraits("Isengard.")
                 .WithKeywords("Doomed 2.")
                 .WithTextLine("Doomed 2.")
                 .WithTextLine("Response: After a player raises his threat from the doomed keyword, give control of Soldier of ~Isengard to that player.")
@@ -126,6 +127,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithStraight()
                 .WithInfo(70, 3, Artist.Alyn_Spiller);
             addLocation("Crowded Track", EncounterSet.ChallengeOfTheWainriders, 0, 6)
+                .WithTraits("Plains.")
                 .WithTextLine("Crowded Track gets +1 Threat for each character controlled by the first player.")
                 .WithTextLine("Forced: After Crowded Track becomes the active location, each player searches the encounter deck and discard pile for an enemy and adds it to the staging area. Shuffle the encounter deck.")
                 .WithEasyModeQuantity(1)
