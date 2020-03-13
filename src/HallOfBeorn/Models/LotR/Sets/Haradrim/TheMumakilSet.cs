@@ -17,7 +17,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
             addHero("Kahliel", 10, Sphere.Leadership, 2, 2, 2, 4)
                 .WithTraits("Harad.", "Noble.")
                 .WithTextLine("You may use resources from Kahliel's resource pool to pay for Harad ally cards of any sphere.")
-                .WithTextLine("Action: Discard a Harad ally card from your hand to ready a Harad character in play. (Limit once per phase.)")
+                .WithTextLine("Action: Discard a Harad ally from your hand to ready a Harad character in play. (Limit once per phase.)")
                 .WithFlavorLine("...the Southrons were bold men and grim...")
                 .WithFlavorLine("-The Return of the King")
                 .WithInfo(1, 1, Artist.Ryan_Valle);
