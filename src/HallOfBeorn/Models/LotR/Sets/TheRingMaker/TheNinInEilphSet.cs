@@ -52,7 +52,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithFlavorLine("In two days going they rowed right up the Long Lake and passed out into the River Running... -The Hobbit")
                 .WithInfo(89, 3, Artist.Melanie_Maier);
             addEvent("Island Amid Perils", 0, Sphere.Spirit)
-                .WithTextLine("Action: Return a Silvan you control to your hand to reduce your threat by X where X is the printed cost of the ally returned to your hand.")
+                .WithTextLine("Action: Return a Silvan ally you control to your hand to reduce your threat by X where X is the printed cost of the ally returned to your hand.")
                 .WithFlavorLine("\"...we dare not by our own trust endanger our land. We live now upon an island amid many perils...\"")
                 .WithFlavorLine("-Haldir, The Fellowship of the Ring")
                 .WithInfo(90, 3, Artist.Magali_Villeneuve);
