@@ -67,6 +67,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithTextLine("Action: Choose an enemy with an attached Trap card. Look at the top X cards of the encounter deck, where X is that enemy's printed Threat. You may discard 1 of those cards. Return the rest to the top of the deck, in the same order.")
                 .WithInfo(90, 3, Artist.Joshua_Cairos);
             addAttachment("Strider", 1, Sphere.Neutral, true)
+                .WithTraits("Title.")
                 .WithTextLine("Attach to a hero.")
                 .WithTextLine("While you control 2 or fewer heroes, attached hero does not exhaust to commit to the quest.")
                 .WithTextLine("While you control 5 or fewer characters, attached hero gets +2 Willpower.")
