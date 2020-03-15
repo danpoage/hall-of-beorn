@@ -64,19 +64,22 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithInfo(8, 3, Artist.Marius_Bota);
             addEvent("The Master Ring", 0, Sphere.Neutral)
                 .WithTraits("Master.")
-                .WithTextLine("Response: Exhaust The One ~Ring and raise your threat by 1 to cancel the effects of an encounter card just revealed from the encounter deck and discard that card. Then, reveal an encounter card.")
+                .WithTextLine("Response: Exhaust The One Ring and raise your threat by 1 to cancel the effects of an encounter card just revealed from the encounter deck and discard that card. Then, reveal an encounter card.")
+                .WithTemplate("<p class='main-text'><b>Response:</b> Exhaust <a href='/LotR/Details/The-One-Ring-ASitE' target='_blank'>The One Ring</a> and raise your threat by 1 to cancel the effects of an encounter card just revealed from the encounter deck and discard that card. Then, reveal an encounter card.</p><p class='flavor-text'>&ldquo;If I, wearing it, were to command you, you would obey, even if it were to leap from a precipice or to cast yourself into the fire.&rdquo;<br>&ndash;Frodo, The Two Towers</p>")
                 .WithFlavorLine("\"If I, wearing it, were to command you, you would obey, even if it were to leap from a precipice or to cast yourself into the fire.\"")
                 .WithFlavorLine("-Frodo, The Two Towers")
                 .WithInfo(9, 3, Artist.Marius_Bota);
             addEvent("The Ruling Ring", 0, Sphere.Neutral)
                 .WithTraits("Master.")
                 .WithTextLine("Combat Action: Exhaust The One Ring and raise your threat by 1 to choose a non-Nazgul enemy engaged with you. Until the end of the phase, that enemy cannot attack you.")
+                .WithTemplate("<p class='main-text'><b>Combat Action:</b> Exhaust <a href='/LotR/Details/The-One-Ring-ASitE' target='_blank'>The One Ring</a> and raise your threat by 1 to choose a non-Nazgul enemy engaged with you. Until the end of the phase, that enemy cannot attack you.</p><p class='flavor-text'>&ldquo;He vanished. I have never seen such a thing happen before...&rdquo;<br>&ndash;Boromir, The Fellowship of the Ring</p>")
                 .WithFlavorLine("\"He vanished. I have never seen such a thing happen before...\"")
                 .WithFlavorLine("-Boromir, The Fellowship of the Ring")
                 .WithInfo(10, 3, Artist.Lukasz_Jaskolski);
             addEvent("The Ring of Power", 0, Sphere.Neutral)
                 .WithTraits("Master.")
                 .WithTextLine("Action: Exhaust The One Ring and raise your threat by 1 to ready the hero with The One Ring Attached. That hero gets +1 Willpower, +1 Attack, and +1 Defense until the end of the phase.")
+                .WithTemplate("<p class='main-text'><b>Action:</b> Exhaust <a href='/LotR/Details/The-One-Ring-ASitE' target='_blank'>The One Ring</a> and raise your threat by 1 to ready the hero with The One Ring Attached. That hero gets +1 {Willpower}, +1 {Attack}, and +1 {Defense} until the end of the phase.</p><p class='flavor-text'>&ldquo;And behold! in our need chance brings to light the Ring of Power.&rdquo;<br>&ndash;Boromir, The Fellowship of the Ring</p>")
                 .WithFlavorLine("\"And behold! in our need chance brings to light the Ring of Power.\"")
                 .WithFlavorLine("-Boromir, The Fellowship of the Ring")
                 .WithInfo(11, 3, Artist.Echo_Chernik);
