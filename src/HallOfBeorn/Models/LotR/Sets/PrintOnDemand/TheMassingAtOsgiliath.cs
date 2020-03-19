@@ -25,7 +25,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 Attack = 6,
                 Defense = 6,
                 HitPoints = 11,
-                Traits = new List<string>() { "Nazg�l.", " Captain." },
+                Traits = new List<string>() { "Nazgûl.", " Captain." },
                 Text = "Players cannot play attachments on The Witch-king.\r\nWhile The Witch-king is in the staging area, each character gets -1 Willpower.\r\nForced: After The Witch-king attacks, he returns to the staging area unless the defending player raises his threat by 3.",
                 Threat = 6,
                 EncounterSet = "The Massing at Osgiliath",
