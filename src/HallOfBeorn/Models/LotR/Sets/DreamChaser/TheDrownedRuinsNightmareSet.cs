@@ -67,7 +67,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithTraits("Troll.")
                 .WithTextLine("For each point of excess damage dealt by Undersea Cave Troll (damage that has been dealt beyond the remaining hit points of the character damaged by its attack) discard 1 resource from one of your objective-allies or from one of your heroes' resource pools.")
                 .WithVictoryPoints(1)
-                .WithInfo(8, 1, Artist.Guillaume_Ducos);
+                .WithInfo(8, 2, Artist.Guillaume_Ducos);
             addLocation("Flooded Caverns", EncounterSet.TheDrownedRuinsNightmare, 2, 6)
                 .WithTraits("Underground.", "Underwater.")
                 .WithTextLine("If Flooded Caverns is in the staging area and the active location is Underwater, add that location's Threat to the Threat of Flooded Caverns.")
