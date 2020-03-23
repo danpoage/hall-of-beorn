@@ -250,8 +250,10 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
             addCard(LotRCard.Objective("The Tower of Barad-dûr", string.Empty, setMountDoom)
                 .WithUnique()
                 .WithTraits("Mordor.")
-                .WithText("Players do not raise their threat at the end of the refresh phase.\r\nForced: Forced: At the end of the round, each player raises his threat by 1 for each non-Fellowship character he controls.")
-                .WithFlavor("...blacker and darker than the vast shades amid which it stood, the cruel pinnacles and iron crown of the topmost tower of Barad-dûr.\r\n-Return of the King")
+                .WithTextLine("Players do not raise their threat at the end of the refresh phase.")
+                .WithTextLine("Forced: At the end of the round, each player raises his threat by 1 for each non-Fellowship character he controls.")
+                .WithFlavorLine("...blacker and darker than the vast shades amid which it stood, the cruel pinnacles and iron crown of the topmost tower of Barad-dûr.")
+                .WithFlavorLine("-Return of the King")
                 .WithInfo(42, 1, Artist.DinoDrawing));
             addCard(LotRCard.Location("Mount Doom", string.Empty, setMountDoom, 254, 9)
                 .WithUnique()
