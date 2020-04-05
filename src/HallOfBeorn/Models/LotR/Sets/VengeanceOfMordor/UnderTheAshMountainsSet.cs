@@ -28,6 +28,15 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithFlavorLine("\"The Elves have their own labours and their own sorrows...")
                 .WithFlavorLine("-Gildor, The Fellowship of the Ring")
                 .WithInfo(82, 3, Artist.Drazenka_Kimpel);
+            addAttachment("Valiant Sword", 1, Sphere.Leadership, false)
+                .WithTraits("Item.", "Weapon.")
+                .WithKeywords("Restricted.")
+                .WithTextLine("Attach to a Noble hero. Limit 1 per hero.")
+                .WithTextLine("Restricted.")
+                .WithTextLine("Attached hero gets +1 Attack (+2 Attack if your threat is 40 or higher).")
+                .WithFlavorLine("...his sword of steel was valiant...")
+                .WithFlavorLine("-The Fellowship of the Ring")
+                .WithInfo(83, 3, Artist.Nikolas_Hagialas);
             addAttachment("Stone of Elostirion", 1, Sphere.Lore, true)
                 .WithTraits("Artifact.", "Item.")
                 .WithKeywords("Guarded (location).", "Restricted.")
@@ -43,6 +52,12 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTextLine("Limit 1 per hero. Attached hero gets + 1 hit point.")
                 .WithTextLine("Response: At the beginning of the round, exhaust The One Ring and raise your threat by 1 to heal all damage from attached hero.")
                 .WithInfo(85, 3, Artist.Torbjorn_Kallstrom);
+            addAlly("Northern Bowmaster", 1, Sphere.Tactics, false, 0, 2, 0, 1)
+                .WithTraits("Dúnedain.", "Ranger.")
+                .WithKeywords("Ranged.")
+                .WithTextLine("Ranged.")
+                .WithTextLine("You cannot play Northern Bowmaster from your hand unless you are engaged with an enemy.")
+                .WithInfo(86, 3, Artist.Aleksander_Karcz);
             addEvent("Reckless Attack", 0, Sphere.Tactics)
                 .WithKeywords("Doomed 2.")
                 .WithTextLine("Doomed 2.")
@@ -63,6 +78,10 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithFlavorLine("\"Go back to the Shadow!\"")
                 .WithFlavorLine("-Gandalf, The Fellowship of the Ring")
                 .WithInfo(89, 3, Artist.Greg_Opalinski);
+            addEvent("Helm of Secrecy", 4, Sphere.Neutral)
+                .WithTextLine("Limit 1 per deck.")
+                .WithTextLine("Action: Choose a hero you control and discard all tokens from it. Select a different non-Fellowship, non-Baggins hero from your collection with a threat cost less than or equal to the chosen hero. Swap those heroes, moving all eligible attachments and damage tokens to the hero from your collection.")
+                .WithInfo(90, 3, Artist.Unknown);
             addContract("Council of the Wise")
                 .WithTextLine("You cannot include more than 1 copy of a card, by title, in your deck.")
                 .WithTextLine("Response: After you play an event from your hand, choose one: reduce your threat by 1, draw 1 card, or add 1 resource to your hero's resource pool. You can only choose each option once per round.")

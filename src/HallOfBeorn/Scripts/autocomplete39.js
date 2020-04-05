@@ -45,6 +45,7 @@
     "Soldier of Gondor", "Pillars of the Kings", "Cautious Halfling", "Tom Bombadillo!", "Charge into Battle", "Silver Circlet", "Inner Strength", "The Burglar's Turn", "Thane Ulchor",
     "Lothiriel", "Angbor the Fearless", "Need Drives Them", "Woodland Sentry", "Keen Longbow", "War Axe", "Strength and Courage", "Knight of Belfalas", "Horn of the Mark", "Host of Galadhrim", "Forth, The Three Hunters",
     "Power of Command", "Horns! Horns! Horns!", "Soldier of Isengard", "Far-sighted", "Golden Belt", "Rohirrim Scout", "The Muster of Rohan", "The Grey Wanderer",
+    "Wandering Exile", "Valiant Sword", "Stone of Elostirion", "Well Preserved", "Northern Bowmaster", "Reckless Attack", "Odo Proudfoot", "Defiant Challenge", "Helm of Secrecy", "Council of the Wise",
           "+set:",
           "-set:",
           "+type:",
