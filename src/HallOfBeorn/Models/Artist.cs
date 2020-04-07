@@ -647,6 +647,9 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Michael_Edward_Smith);
             all.Add(Artist.Mauro_Dal_Bo);
 
+            //Under the Ash Mountains
+            all.Add(Artist.Sarah_Lindstrom);
+
             //Arkham Horrom Core
             //all.Add(Artist.Vincent_Dutrait);
             //all.Add(Artist.Jacob_Murray);
@@ -838,6 +841,7 @@ namespace HallOfBeorn.Models
         public static Artist Sarafiel = new Artist { Name = "Sarafiel", URL = "http://sarafiel.deviantart.com" };
         public static Artist Sara_Winters = new Artist { Name = "Sara Winters", URL = "https://www.google.com/search?q=sara+winters+fantasy+art" };
         public static Artist Sarah_Finnigan = new Artist { Name = "Sarah Finnigan", URL = "http://sarahfinnigan.deviantart.com" };
+        public static Artist Sarah_Lindstrom = new Artist { Name = "Sarah Lindstrom", URL = "https://www.artstation.com/sarahlindstrom" };
         public static Artist Sasha_Jones = new Artist { Name = "Sasha Jones", URL = "http://sasharjones.deviantart.com" };
         public static Artist Sattarov = new Artist { Name = "Sattarov", URL = "http://sattarov.deviantart.com" };
         public static Artist Saturnoarg = new Artist { Name = "saturnoarg", URL = "http://saturnoarg.deviantart.com" };

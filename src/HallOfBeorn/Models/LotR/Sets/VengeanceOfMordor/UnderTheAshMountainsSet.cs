@@ -96,13 +96,34 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithVictoryPoints(10)
                 .WithInfo(93, 1, Artist.Unknown);
 
+            addEnemy("Ash Mountain Werewolf", setName, 28, 2, 4, 1, 5)
+                .WithTraits("Creature.", "Werewolf.")
+                .WithTextLine("Forced: After Ash Mountain Werewolf attacks you, discard the top card of your deck (top 2 cards instead if this attack destroyed a character).")
+                .WithShadow("Shadow: If this attack destroys a character, discard the top 2 cards of your deck.")
+                .WithInfo(97, 1, Artist.Sarah_Lindstrom);
+
+            addLocation("Fiery Chasm", setName, Card.VALUE_X, 5)
+                .WithTraits("Underground.")
+                .WithTextLine("X is 1 more than the number of quest cards in play.")
+                .WithTextLine("Forced: When Fiery Chasm is explored, discard the top X cards of your deck.")
+                .WithFlavorLine("...its floor and walls on either side were cloven by a great fissure, out of which the red glare came, now leaping up, now dying down into darkness...")
+                .WithFlavorLine("-The Return of the King")
+                .WithInfo(100, 1, Artist.Unknown);
+
+            addTreachery("Burning Reek", setName)
+                .WithKeywords("Doomed 1.")
+                .WithTextLine("Doomed 1.")
+                .WithTextLine("When Revealed: Each player discard 1 card from the top of his deck for each character he controls.")
+                .WithShadow("Shadow: Either discard the top 2 cards of your deck, or return attacking enemy to the staging area after this attack.")
+                .WithInfo(104, 1, Artist.Greg_Bobrowski);
+
             addQuest("An Evil Place", setName, 2, 'A', 25)
                 .WithFlavorLine("Hope and supplies begin to run low the longer you wander through the oppresive dark of Torch Gordor. You need to find the exit before it's too late.")
                 .WithTextLine("When Revealed: Search the encounter deck and discard pile for an encounter side quest and reveal it. Shuffle the encounter discard pile into the encounter deck and discard cards from the top until X enemies are discarded, where X is the number of players. Add each enemy discarded this way to the staging area.")
                 .WithOppositeTextLine("Event cards cannot shuffle cards from a player's discard pile into his deck.")
                 .WithOppositeTextLine("Forced: At the end of the round, each player discards X cards from the top of his deck, where X is 1 more than the number of quest cards in play. If a player has no cards left in his deck, he is eliminated from the game.")
                 .WithOppositeTextLine("If the player defeat this stage, they win the game.")
-                .WithInfo(107, 1, Artist.Unknown);
+                .WithInfo(107, 1, Artist.Stanislav_Dikolenko);
         }
     }
 }
