@@ -87,6 +87,22 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTextLine("Response: After you play an event from your hand, choose one: reduce your threat by 1, draw 1 card, or add 1 resource to your hero's resource pool. You can only choose each option once per round.")
                 .WithFlavorLine("\"I must go to this lords' council and learn what I can.\"\r\n-Gandalf, The Return of the King")
                 .WithInfo(91, 1, Artist.Aleksander_Karcz);
+
+
+            addEncounterSideQuest("A Haunt for Beasts", setName, 4)
+                .WithFlavorLine("Within the tunnels of Torech Gorgor are a host of fell creatures.")
+                .WithTextLine("Each enemy cannot take more than 4 damage each round.")
+                .WithTextLine("While there is at least one enemy in the staging area, this stage cannot be chosen as the current quest.")
+                .WithVictoryPoints(10)
+                .WithInfo(93, 1, Artist.Unknown);
+
+            addQuest("An Evil Place", setName, 2, 'A', 25)
+                .WithFlavorLine("Hope and supplies begin to run low the longer you wander through the oppresive dark of Torch Gordor. You need to find the exit before it's too late.")
+                .WithTextLine("When Revealed: Search the encounter deck and discard pile for an encounter side quest and reveal it. Shuffle the encounter discard pile into the encounter deck and discard cards from the top until X enemies are discarded, where X is the number of players. Add each enemy discarded this way to the staging area.")
+                .WithOppositeTextLine("Event cards cannot shuffle cards from a player's discard pile into his deck.")
+                .WithOppositeTextLine("Forced: At the end of the round, each player discards X cards from the top of his deck, where X is 1 more than the number of quest cards in play. If a player has no cards left in his deck, he is eliminated from the game.")
+                .WithOppositeTextLine("If the player defeat this stage, they win the game.")
+                .WithInfo(107, 1, Artist.Unknown);
         }
     }
 }
