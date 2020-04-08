@@ -87,42 +87,98 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTextLine("Response: After you play an event from your hand, choose one: reduce your threat by 1, draw 1 card, or add 1 resource to your hero's resource pool. You can only choose each option once per round.")
                 .WithFlavorLine("\"I must go to this lords' council and learn what I can.\"\r\n-Gandalf, The Return of the King")
                 .WithInfo(91, 1, Artist.Aleksander_Karcz);
-
-
+            addEncounterSideQuest("The Tunnels of Torech Gorgor", setName, 3)
+                .WithFlavorLine("The tunnels under the Ash Mountains are a vast, dark maze.")
+                .WithTextLine("During the travel phase, the players must travel to a location, if able.")
+                .WithTextLine("Forced: When the active location is explored, place 1 resource here.")
+                .WithTextLine("Progress cannot be placed on this quest unless there are at least 3 resources here.")
+                .WithVictoryPoints(10)
+                .WithInfo(92, 1, Artist.Sam_White);
             addEncounterSideQuest("A Haunt for Beasts", setName, 4)
                 .WithFlavorLine("Within the tunnels of Torech Gorgor are a host of fell creatures.")
                 .WithTextLine("Each enemy cannot take more than 4 damage each round.")
                 .WithTextLine("While there is at least one enemy in the staging area, this stage cannot be chosen as the current quest.")
                 .WithVictoryPoints(10)
                 .WithInfo(93, 1, Artist.Unknown);
-
+            addEncounterSideQuest("Overwhelming Darkness", setName, 6)
+                .WithFlavorLine("As you draw closer to Mordor, the darkness around you seeps into your thought, and despair begins to take hold...")
+                .WithTextLine("Forced: After a player players a card, he discards the top card of his deck.")
+                .WithTextLine("Response: When this stage is defeated, each player shuffles the top 3 cards of his discard pile into his deck.")
+                .WithInfo(94, 1, Artist.Guillaume_Ducos);
+            addEnemy("Nameless Beast", setName, 30, 3, 3, 3, 6)
+                .WithTraits("Nameless.")
+                .WithTextLine("Forced: When Nameless Beast attacks you, discard the top card of your deck. Nameless Beast gets +X Attack for this attack, where X is that card's cost.")
+                .WithShadow("Shadow: Attacking enemy gets +X Attack, where X is the cost of the top card of your discard pile.")
+                .WithInfo(95, 2, Artist.Jon_Bosco);
+            addEnemy("Mordor Cave Troll", setName, 33, 3, 6, 3, 8)
+                .WithTraits("Troll.")
+                .WithTextLine("Cannot have attachments.")
+                .WithTextLine("Forced: After Mordor Cave Troll attacks and destroys a character, discard the top card of your deck for each point of excess damage dealt by this attack.")
+                .WithInfo(96, 1, Artist.Ivan_Dixon);
             addEnemy("Ash Mountain Werewolf", setName, 28, 2, 4, 1, 5)
                 .WithTraits("Creature.", "Werewolf.")
                 .WithTextLine("Forced: After Ash Mountain Werewolf attacks you, discard the top card of your deck (top 2 cards instead if this attack destroyed a character).")
                 .WithShadow("Shadow: If this attack destroys a character, discard the top 2 cards of your deck.")
-                .WithInfo(97, 1, Artist.Sarah_Lindstrom);
-
+                .WithInfo(97, 2, Artist.Sarah_Lindstrom);
+            addEnemy("Spawn of Shelob", setName, 12, 1, 2, 1, 2)
+                .WithTraits("Creature.", "Spider.")
+                .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
+                .WithTextLine("Forced: After Spawn of Shelob engages you, either discard the top card of your deck, or Spawn of Shelob gets +2 Attack until the end of the round.")
+                .WithShadow("Shadow: Exhaust a character you control.")
+                .WithInfo(98, 3, Artist.Guillaume_Ducos);
+            addEnemy("Torech Gorgor Patrol", setName, 45, Card.VALUE_X, 5, 4, 9)
+                .WithTraits("Orc.", "Uruk.")
+                .WithTextLine("X is 1 more than the number of quest cards in play.")
+                .WithTextLine("While Torech Gorgor Patrol is in the staging area, no more than 5 progress can be placed on the main quest each round.")
+                .WithTextLine("Forced: After Torech Gorgor Patrol engages a player, it makes an attack.")
+                .WithInfo(99, 3, Artist.Matthew_Cowdery);
             addLocation("Fiery Chasm", setName, Card.VALUE_X, 5)
                 .WithTraits("Underground.")
                 .WithTextLine("X is 1 more than the number of quest cards in play.")
                 .WithTextLine("Forced: When Fiery Chasm is explored, discard the top X cards of your deck.")
                 .WithFlavorLine("...its floor and walls on either side were cloven by a great fissure, out of which the red glare came, now leaping up, now dying down into darkness...")
                 .WithFlavorLine("-The Return of the King")
-                .WithInfo(100, 1, Artist.Unknown);
-
+                .WithInfo(100, 2, Artist.Unknown);
+            addLocation("Hideous Deeps", setName, 3, 6)
+                .WithTraits("Underground.")
+                .WithTextLine("When Revealed: Each player places the top 3 cards of his deck facedown under Hideous Deeps.")
+                .WithTextLine("Forced: When Hideous Deeps is explored as the active location, shuffle each facedown card under it into its owner's deck.")
+                .WithInfo(101, 2, Artist.Sam_White);
+            addLocation("Orc Passage", setName, 4, 4)
+                .WithTraits("Underground.")
+                .WithTextLine("While Orc Passage is in the staging area, encounter card effects cannot be canceled.")
+                .WithTextLine("Forced: When Orc Passage is explored, search the encounter deck and discard pile for a copy of Torech Gorgor Patrol and add it to the staging area.")
+                .WithInfo(102, 2, Artist.Stanislav_Dikolenko);
+            addTreachery("Ransacked Supplies", setName)
+                .WithTextLine("When Revealed: Each player discards the top card of his deck. Until the end of the phase, add the total cost of each card discarded this way to the Threat in the staging area.")
+                .WithShadow("Shadow: Discard an attachment you control. If this attack destroys a character, discard another attachment you control.")
+                .WithInfo(103, 2, Artist.Alex_Brock);
             addTreachery("Burning Reek", setName)
                 .WithKeywords("Doomed 1.")
                 .WithTextLine("Doomed 1.")
                 .WithTextLine("When Revealed: Each player discard 1 card from the top of his deck for each character he controls.")
                 .WithShadow("Shadow: Either discard the top 2 cards of your deck, or return attacking enemy to the staging area after this attack.")
-                .WithInfo(104, 1, Artist.Greg_Bobrowski);
-
+                .WithInfo(104, 2, Artist.Greg_Bobrowski);
+            addTreachery("Writing Shadows", setName)
+                .WithTextLine("When Revealed: Each player assigns X damage among character he controls, where X is 1 more than the number of quest cards in play. Exhaust each character damaged by this effect.")
+                .WithShadow("Shadow: Attacking enemy makes an additional attack against you after this one.")
+                .WithInfo(105, 2, Artist.Matthew_Cowdery);
+            addQuest("Passage into Mordor", setName, 1, 'A', 25)
+                .WithFlavorLine("The tunnels of Torech Gorgor run beneath the Ash Mountains into Mordor.")
+                .WithTextLine("Setup: Each player with more than 40 cards in his deck discards cards from the top of his deck until he has 40 cards left. The first player adds a copy of Torech Gorgor Patrol to the staging area. Each other player adds 1 different location to the staging area. Shuffle the encounter deck and discard cards from the top until a side quest is discarded. Reveal that side quest. Shuffle the encounter discard pile into the encounter deck.")
+                .WithOppositeFlavorLine("The dark passage offers you a way into Mordor, but only if you can navigate the intersecting maze of tunnels before running out of provisions.")
+                .WithOppositeTextLine("Event cards cannot shuffle cards from a player's discard pile into his deck.")
+                .WithOppositeTextLine("Forced: At the end of the round, each player discards X cards from the top of his deck, where X is 1 more than the number of quest cards in play. If a player has no cards left in his deck, he is eliminated from the game.")
+                .WithIncludedEncounterSets(EncounterSet.TwistedTunnels)
+                .WithInfo(106, 1, Artist.Guillaume_Ducos);
             addQuest("An Evil Place", setName, 2, 'A', 25)
                 .WithFlavorLine("Hope and supplies begin to run low the longer you wander through the oppresive dark of Torch Gordor. You need to find the exit before it's too late.")
                 .WithTextLine("When Revealed: Search the encounter deck and discard pile for an encounter side quest and reveal it. Shuffle the encounter discard pile into the encounter deck and discard cards from the top until X enemies are discarded, where X is the number of players. Add each enemy discarded this way to the staging area.")
                 .WithOppositeTextLine("Event cards cannot shuffle cards from a player's discard pile into his deck.")
                 .WithOppositeTextLine("Forced: At the end of the round, each player discards X cards from the top of his deck, where X is 1 more than the number of quest cards in play. If a player has no cards left in his deck, he is eliminated from the game.")
                 .WithOppositeTextLine("If the player defeat this stage, they win the game.")
+                .WithIncludedEncounterSets(EncounterSet.TwistedTunnels)
                 .WithInfo(107, 1, Artist.Stanislav_Dikolenko);
         }
     }

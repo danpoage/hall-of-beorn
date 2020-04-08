@@ -649,6 +649,7 @@ namespace HallOfBeorn.Models
 
             //Under the Ash Mountains
             all.Add(Artist.Sarah_Lindstrom);
+            all.Add(Artist.Alex_Brock);
 
             //Arkham Horrom Core
             //all.Add(Artist.Vincent_Dutrait);
@@ -681,6 +682,7 @@ namespace HallOfBeorn.Models
         public static Artist Aledin = new Artist { Name = "Aledin", URL = "http://aledin.deviantart.com" };
         public static Artist Aleksi_Briclot = new Artist { Name = "Aleksi Briclot", URL = "http://aleksi--briclot.deviantart.com" };
         public static Artist Alex_Boca = new Artist { Name = "Alex Boca", URL = "https://www.artstation.com/alexboca" };
+        public static Artist Alex_Brock = new Artist { Name = "Alex Brock", URL = "https://www.artstation.com/alexbrock" };
         public static Artist Alex_McVey = new Artist { Name = "Alex McVey", URL = "http://www.alexmcvey.com" };
         public static Artist Alex_Ruiz = new Artist { Name = "Alex Ruiz", URL = "http://www.conceptmonster.net" };
         public static Artist Alexander_Chelyshev = new Artist { Name = "Alexander Chelyshev", URL = "https://www.artstation.com/sanchiko" };
