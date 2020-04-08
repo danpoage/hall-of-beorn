@@ -144,7 +144,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithInfo(158, 3, Artist.Rafal_Hrynkiewicz);
             addLocation("Tombs of Carn Dûm", EncounterSet.TheDreadRealm, 3, 3)
                 .WithTraits("Carn Dûm.", "Underground.")
-                .WithTextLine("ForcedL At the end of the round, discard the top card of each player's deck. Each player must reanimate each ally discarded by this effect.")
+                .WithTextLine("Forced: At the end of the round, discard the top card of each player's deck. Each player must reanimate each ally discarded by this effect.")
                 .WithTextLine("Travel: Deal 1 shadow card to each Undead enemy in play to travel here.")
                 .WithFlavorLine("He could see nothing but the dim flame of the torches; but if the company halted, there seemed and endless whisper of voices all about him...")
                 .WithFlavorLine("-The Return of the King")

@@ -7,9 +7,11 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
 {
     public class TheBlackRidersSet : CardSet
     {
+        private const string setName = "The Black Riders";
+
         protected override void Initialize()
         {
-            Name = "The Black Riders";
+            Name = setName;
             Abbreviation = "TBR";
             Number = 1003;
             SetType = Models.SetType.Saga_Expansion;
@@ -941,20 +943,13 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 CardNumber = 54,
                 Artist = Artist.Jake_Murray
             });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Black Breath",
-                Id = "e6721e44-5706-4a0f-a895-ced75f9c6219",
-                CardType = CardType.Treachery,
-                Keywords = new List<string>() { "Peril." },
-                EncounterSet = "A Knife in the Dark",
-                Text = "When Revealed: Attach to a hero you control. (Counts as a Condition attachment with the text: \"Limit 1 per hero. Reduce attached hero's Willpower, Attack and Defense to 0.\")",
-                FlavorText = "",
-                Quantity = 2,
-                EasyModeQuantity = 0,
-                CardNumber = 55,
-                Artist = Artist.Mariusz_Gandzel
-            });
+            addTreachery("Black Breath", EncounterSet.AKnifeInTheDark)
+                .WithTraits("Morgul.")
+                .WithKeywords("Peril.")
+                .WithTextLine("Peril.")
+                .WithTextLine("When Revealed: Attach to a hero you control. (Counts as a Condition attachment with the text: \"Limit 1 per hero. Reduce attached hero's Willpower, Attack and Defense to 0.\")")
+                .WithEasyModeQuantity(0)
+                .WithInfo(55, 2, Artist.Mariusz_Gandzel);
             Cards.Add(new LotRCard()
             {
                 Title = "Flight to the Ford",
@@ -1176,20 +1171,15 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 CardNumber = 69,
                 Artist = Artist.Tiziano_Baracchi
             });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Pale Blade",
-                Id = "4b36df3f-d75b-4b3a-9324-9ab31c10d7b9",
-                CardType = CardType.Treachery,
-                Keywords = new List<string>() { "Surge." },
-                EncounterSet = "The Nazgûl",
-                Text = "When Revealed: Attach to a Nazgûl enemy in play, if able. (Counts as a Weapon attachment with the text: \"Limit 1 per enemy. Attached enemy gets +1 Attack and cannot take non-combat damage.\")",
-                FlavorText = "...in their haggard hands were swords of steel.\r\n-The Fellowship of the Ring",
-                Quantity = 3,
-                EasyModeQuantity = 1,
-                CardNumber = 70,
-                Artist = Artist.Darek_Zabrocki
-            });
+            addTreachery("Pale Blade", EncounterSet.TheNazgul)
+                .WithTraits("Morgul.")
+                .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
+                .WithTextLine("When Revealed: Attach to a Nazgûl enemy in play, if able. (Counts as a Weapon attachment with the text: \"Limit 1 per enemy. Attached enemy gets +1 Attack and cannot take non-combat damage.\")")
+                .WithFlavorLine("...in their haggard hands were swords of steel.")
+                .WithFlavorLine("-The Fellowship of the Ring")
+                .WithEasyModeQuantity(1)
+                .WithInfo(70, 3, Artist.Darek_Zabrocki);
             Cards.Add(new LotRCard()
             {
                 Title = "Power In Their Terror",
@@ -1233,19 +1223,13 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 CardNumber = 73,
                 Artist = Artist.Chris_Rallis
             });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Black Steed",
-                Id = "09aeff64-6e0d-4dfa-af21-2e7805441376",
-                CardType = CardType.Treachery,
-                Keywords = new List<string>() { "Surge." },
-                EncounterSet = "The Black Riders",
-                Text = "When Revealed: Attach to a Nazgûl enemy in play, if able. (Counts as a Mount attachment with the text: \"Limit 1 per enemy. Attached enemy gets -10 engagement cost and gains: 'Forced: At the end of the refresh phase, return attached enemy to the staging area.'\")",
-                Quantity = 3,
-                EasyModeQuantity = 1,
-                CardNumber = 74,
-                Artist = Artist.Sandara_Tang
-            });
+            addTreachery("Black Steed", setName)
+                .WithTraits("Morgul.")
+                .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
+                .WithTextLine("When Revealed: Attach to a Nazgûl enemy in play, if able. (Counts as a Mount attachment with the text: \"Limit 1 per enemy. Attached enemy gets -10 engagement cost and gains: 'Forced: At the end of the refresh phase, return attached enemy to the staging area.'\")")
+                .WithEasyModeQuantity(1)
+                .WithInfo(74, 3, Artist.Sandara_Tang);
             Cards.Add(new LotRCard()
             {
                 Title = "Rode Like a Gale",

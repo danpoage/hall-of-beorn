@@ -230,7 +230,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLostRealm
                 .WithInfo(36, 3, Artist.Juan_Carlos_Barquet);
             addLocation("Norbury Tombs", EncounterSet.DeadmensDike, 2, 5)
                 .WithTraits("Fornost.", "Ruins.")
-                .WithTextLine("While Norbury Tombs is the active location, it gains: \"Respnse: When Norbury Tombs is explored, each player shuffles the top 5 cards of his discard pile into his deck.\"")
+                .WithTextLine("While Norbury Tombs is the active location, it gains: \"Response: When Norbury Tombs is explored, each player shuffles the top 5 cards of his discard pile into his deck.\"")
                 .WithTextLine("Travel: Return the topmost enemy in the encounter discard pile to the staging area.")
                 .WithInfo(37, 2, Artist.Julian_Kok);
             addLocation("Fornost Square", EncounterSet.DeadmensDike, 1, 4)

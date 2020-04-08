@@ -132,12 +132,15 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithText("Forced: When the Prancing Pony is explored, the first player must choose: either look at the top 2 cards of the Investigation deck, or each player draws 2 cards.")
                 .WithFlavor("...the old inn of Bree, The Prancing Pony, that has been kept by the family of Butterbur from time beyond record.\r\n-The Fellowship of the Ring")
                 .WithInfo(15, 1, Artist.Lutful_Valeriya_Romanovna));
-            Cards.Add(LotRCard.Location("Ramshackle Manor", "", setName, 2, 3)
+            addLocation("Ramshackle Manor", setName, 2, 3)
                 .WithTraits("Bree.")
                 .WithKeywords("Investigate 2.")
-                .WithText("Investigate 2.\r\nWhen a player card effect reduces a player's threat by any amount, reducd that amount to 1.\r\nTravel: Raise each player's threat by 1 to travel here.")
-                .WithFlavor("In one of the windows he caught a glimpse of a sallow face with sly, slanting eyes; but it vanished at once.\r\n-The Fellowship of the Ring")
-                .WithInfo(16, 4, Artist.Lutful_Valeriya_Romanovna));
+                .WithTextLine("Investigate 2.")
+                .WithTextLine("When a player card effect reduces a player's threat by any amount, reduce that amount to 1.")
+                .WithTextLine("Travel: Raise each player's threat by 1 to travel here.")
+                .WithFlavorLine("In one of the windows he caught a glimpse of a sallow face with sly, slanting eyes; but it vanished at once.")
+                .WithFlavorLine("-The Fellowship of the Ring")
+                .WithInfo(16, 4, Artist.Lutful_Valeriya_Romanovna);
             Cards.Add(LotRCard.Location("Dark Alley", "", setName, 4, 3)
                 .WithTraits("Bree.")
                 .WithKeywords("Investigate 3.")

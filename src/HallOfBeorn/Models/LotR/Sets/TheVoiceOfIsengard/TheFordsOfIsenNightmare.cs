@@ -57,16 +57,17 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithTextLine("Surge.")
                 .WithTextLine("While the engaged player has 3 or more cards in hand, Savage Hillman cannot take damage.\r\nWhile the engaged player has 5 or more cards in hand, Savage Hillman gets +2 Attack.")
                 .WithInfo(4, 3, Artist.Suzanne_Helmigh));
-            Cards.Add(LotRCard.Location("Western Shore", "", setName, Card.VALUE_X, 4)
+            addLocation("Western Shore", setName, Card.VALUE_X, 4)
                 .WithTraits("River.", "Valley.")
-                .WithText("X is the number of cards in the first player's hand.\r\nWhile Western Shore is in the staging area, each enemy gets -X enegagement cost.")
+                .WithTextLine("X is the number of cards in the first player's hand.")
+                .WithTextLine("While Western Shore is in the staging area, each enemy gets -X engagement cost.")
                 .WithShadow("Shadow: If you have 5 or more cards in your hand, this attack is considered undefended.")
-                .WithInfo(5, 3, Artist.Julian_Kok));
-            Cards.Add(LotRCard.Location("Eastern Shore", "", setName, 3, 4)
+                .WithInfo(5, 3, Artist.Julian_Kok);
+            addLocation("Eastern Shore", setName, 3, 4)
                 .WithTraits("River.", "Valley.")
-                .WithText("While Eastern Shore is in the staging area, each player cannot play more than 1 even each round.")
+                .WithText("While Eastern Shore is in the staging area, each player cannot play more than 1 event each round.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, remove 1 time counter from the current quest.")
-                .WithInfo(6, 3, Artist.Julian_Kok));
+                .WithInfo(6, 3, Artist.Julian_Kok);
             Cards.Add(LotRCard.Location("Isen River", "", setName, 2, 5)
                 .WithTraits("River.")
                 .WithText("While Isen River is in the staging area, each player cannot discard cards from his hand.\r\nForced: After Isen River becomes the active location, each player draws a card")

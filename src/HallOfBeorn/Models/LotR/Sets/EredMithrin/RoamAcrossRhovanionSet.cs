@@ -110,7 +110,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithInfo(40, 2, Artist.Brendan_C_Murphy);
             addLocation("Grey Moorland", EncounterSet.RoamAcrossRhovanion, 3, 4)
                 .WithTraits("Hills.")
-                .WithTextLine("Forced: After Grey Moorland becomes the active location, shuffle the encunter discard pile into the encounter deck and discard cards from it until a treachery is discarded. Resolve the 'When Revealed' effect on that treachery.")
+                .WithTextLine("Forced: After Grey Moorland becomes the active location, shuffle the encounter discard pile into the encounter deck and discard cards from it until a treachery is discarded. Resolve the 'When Revealed' effect on that treachery.")
                 .WithShadow("Shadow: Return attacking enemy to the staging area after this attack.")
                 .WithEasyModeQuantity(1)
                 .WithInfo(41, 2, Artist.Matthew_Cowdery);

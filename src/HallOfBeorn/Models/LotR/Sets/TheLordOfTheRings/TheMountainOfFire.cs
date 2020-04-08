@@ -177,12 +177,14 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("Forced: After Reeking Moat becomes the active location, choose a non-unique, non-Nazgûl enemy in the staging area and place it facedown under Reeking Moat.\r\nForced: When Reeking Moat leaves play, put each enemy under it into play engaged with the first player.")
                 .WithFlavor("...towards Mordor lay like a moat a great mire of reeking mud and foul-smelling pools.\r\n-The Return of the King")
                 .WithInfo(29, 3, Artist.Leanna_Crossan));
-            addCard(LotRCard.Location("Wall of Morannon", string.Empty, setBlackGate, 5, 5)
+            addLocation("Wall of Morannon", setBlackGate, 5, 5)
                 .WithTraits("Plains.")
-                .WithText("While Wall of Morannon is the active location, each enemy and location in the staging area is immune to player card effects.\r\nForced: After Wall of Morannon becomes of the active location, return each enaged enemy to the staging area.")
-                .WithFlavor("...behind the Morannon were the tunnels and deep armouries that the servants of Mordor had made for the defence of the Black Gate...\r\n-The Return of the King")
+                .WithTextLine("While Wall of Morannon is the active location, each enemy and location in the staging area is immune to player card effects.")
+                .WithTextLine("Forced: After Wall of Morannon becomes of the active location, return each engaged enemy to the staging area.")
+                .WithFlavorLine("...behind the Morannon were the tunnels and deep armouries that the servants of Mordor had made for the defence of the Black Gate...")
+                .WithFlavorLine("-The Return of the King")
                 .WithEasyModeQuantity(1)
-                .WithInfo(30, 2, Artist.Kamila_Szutenberg));
+                .WithInfo(30, 2, Artist.Kamila_Szutenberg);
             addCard(LotRCard.Enemy("The Mouth of Sauron", string.Empty, setBlackGate, 99, 4, 6, 5, 11)
                 .WithUnique()
                 .WithTraits("Mordor.")

@@ -328,7 +328,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithInfo(49, 2, Artist.Carlos_Palma_Cruchaga);
             addLocation("Catacombs", EncounterSet.UnderGuard, 4, 4)
                 .WithTraits("City.")
-                .WithTextLine("While Catacombs is in the staging area, enemes in the staging area cannot take damage.")
+                .WithTextLine("While Catacombs is in the staging area, enemies in the staging area cannot take damage.")
                 .WithTextLine("Travel: Each player discards the top card of the encounter deck. If a player discards an enemy this way, he puts it into play engaged with him.")
                 .WithEasyModeQuantity(1)
                 .WithInfo(50, 2, Artist.Dimitri_Bielak);
