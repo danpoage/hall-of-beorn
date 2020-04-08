@@ -114,12 +114,12 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTraits("Troll.")
                 .WithTextLine("Cannot have attachments.")
                 .WithTextLine("Forced: After Mordor Cave Troll attacks and destroys a character, discard the top card of your deck for each point of excess damage dealt by this attack.")
-                .WithInfo(96, 1, Artist.Ivan_Dixon);
+                .WithInfo(96, 2, Artist.Ivan_Dixon);
             addEnemy("Ash Mountain Werewolf", setName, 28, 2, 4, 1, 5)
                 .WithTraits("Creature.", "Werewolf.")
                 .WithTextLine("Forced: After Ash Mountain Werewolf attacks you, discard the top card of your deck (top 2 cards instead if this attack destroyed a character).")
                 .WithShadow("Shadow: If this attack destroys a character, discard the top 2 cards of your deck.")
-                .WithInfo(97, 2, Artist.Sarah_Lindstrom);
+                .WithInfo(97, 3, Artist.Sarah_Lindstrom);
             addEnemy("Spawn of Shelob", setName, 12, 1, 2, 1, 2)
                 .WithTraits("Creature.", "Spider.")
                 .WithKeywords("Surge.")
@@ -149,7 +149,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTraits("Underground.")
                 .WithTextLine("While Orc Passage is in the staging area, encounter card effects cannot be canceled.")
                 .WithTextLine("Forced: When Orc Passage is explored, search the encounter deck and discard pile for a copy of Torech Gorgor Patrol and add it to the staging area.")
-                .WithInfo(102, 2, Artist.Stanislav_Dikolenko);
+                .WithInfo(102, 3, Artist.Stanislav_Dikolenko);
             addTreachery("Ransacked Supplies", setName)
                 .WithTextLine("When Revealed: Each player discards the top card of his deck. Until the end of the phase, add the total cost of each card discarded this way to the Threat in the staging area.")
                 .WithShadow("Shadow: Discard an attachment you control. If this attack destroys a character, discard another attachment you control.")
@@ -160,7 +160,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTextLine("When Revealed: Each player discard 1 card from the top of his deck for each character he controls.")
                 .WithShadow("Shadow: Either discard the top 2 cards of your deck, or return attacking enemy to the staging area after this attack.")
                 .WithInfo(104, 2, Artist.Greg_Bobrowski);
-            addTreachery("Writing Shadows", setName)
+            addTreachery("Writhing Shadows", setName)
                 .WithTextLine("When Revealed: Each player assigns X damage among character he controls, where X is 1 more than the number of quest cards in play. Exhaust each character damaged by this effect.")
                 .WithShadow("Shadow: Attacking enemy makes an additional attack against you after this one.")
                 .WithInfo(105, 2, Artist.Matthew_Cowdery);
