@@ -60,7 +60,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("X is the Threat of the active location.\r\nTravel Action: Discard Ghân-buri-Ghân to travel to a location without resolving its Travel effect.")
                 .WithInfo(7, 3, Artist.Piya_Wannachaiwong));
             addEvent("Sterner than Steel", 0, Sphere.Tactics)
-                .WithTextLine("Response: Exhaust a Weapon or Armor card attached to the defending character to cancel a shadow effect just triggered during combat")
+                .WithTextLine("Response: Exhaust a Weapon or Armor card attached to the defending character to cancel a shadow effect just triggered during combat.")
                 .WithFlavorLine("\"Do what you will; but I will hinder it, if I may.\"")
                 .WithFlavorLine("-Éowyn, The Return of the King")
                 .WithInfo(8, 3, Artist.Chris_Rahn);
