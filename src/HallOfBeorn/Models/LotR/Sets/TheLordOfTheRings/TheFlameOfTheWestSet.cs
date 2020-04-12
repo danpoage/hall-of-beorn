@@ -59,10 +59,11 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithTraits("Wose.")
                 .WithText("X is the Threat of the active location.\r\nTravel Action: Discard Ghân-buri-Ghân to travel to a location without resolving its Travel effect.")
                 .WithInfo(7, 3, Artist.Piya_Wannachaiwong));
-            Cards.Add(LotRCard.Event("Sterner than Steel", "", Sphere.Tactics, 0)
-                .WithText("Response: Exhaust a Weapon or Armor card attached to the defending character to cancel a shadow effect just triggered in combat")
-                .WithFlavor("\"Do what you will; but I will hinder it, if I may.\"\r\n-Éowyn, The Return of the King")
-                .WithInfo(8, 3, Artist.Chris_Rahn));
+            addEvent("Sterner than Steel", 0, Sphere.Tactics)
+                .WithTextLine("Response: Exhaust a Weapon or Armor card attached to the defending character to cancel a shadow effect just triggered during combat")
+                .WithFlavorLine("\"Do what you will; but I will hinder it, if I may.\"")
+                .WithFlavorLine("-Éowyn, The Return of the King")
+                .WithInfo(8, 3, Artist.Chris_Rahn);
             Cards.Add(LotRCard.Event("Desperate Defense", "", Sphere.Spirit, 1)
                 .WithText("Response: After a sentinel character is declared as a defender, it gets +2 Defense for this attack. If this attack deals no damage, ready the defending character.")
                 .WithFlavor("...but alone in the porch upon the topmost step stood Beregond, clad in the black and silver of the Guard; and he held the door against them.\r\n-The Return of the King")
