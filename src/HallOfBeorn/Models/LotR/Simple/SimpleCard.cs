@@ -73,30 +73,29 @@ namespace HallOfBeorn.Models.LotR.Simple
 
             switch (card.CardType)
             {
-                case Models.LotR.CardType.Hero:
+                case LotR.CardType.Hero:
                     InitializeHero(card);
                     break;
-                case Models.LotR.CardType.Ally:
+                case LotR.CardType.Ally:
                     InitializeAlly(card);
                     break;
-                case Models.LotR.CardType.Attachment:
-                    InitializeEvent(card);
+                case LotR.CardType.Attachment:
+                case LotR.CardType.Event:
+                case LotR.CardType.Player_Side_Quest:
+                    InitializePlayerCard(card);
                     break;
-                case Models.LotR.CardType.Event:
-                    InitializeEvent(card);
-                    break;
-                case Models.LotR.CardType.Treasure:
+                case LotR.CardType.Treasure:
                     InitializeBoon(card);
                     break;
-                case Models.LotR.CardType.Quest:
+                case LotR.CardType.Quest:
                     InitializeEncounterSet(card);
                     InitializeQuest(card);
                     break;
-                case Models.LotR.CardType.Enemy:
+                case LotR.CardType.Enemy:
                     InitializeEncounterSet(card);
                     InitializeEnemy(card);
                     break;
-                case Models.LotR.CardType.Location:
+                case LotR.CardType.Location:
                     InitializeEncounterSet(card);
                     InitializeLocation(card);
                     break;
@@ -134,6 +133,7 @@ namespace HallOfBeorn.Models.LotR.Simple
         public uint Quantity { get; set; }
         public string Artist { get; set; }
         public bool HasErrata { get; set; }
+        public string OctgnGuid { get; set; }
 
         public List<string> Categories { get; private set; }
 
@@ -212,12 +212,7 @@ namespace HallOfBeorn.Models.LotR.Simple
             this.Front.Stats[STAT_HIT_POINTS] = card.HitPoints.Description();
         }
 
-        private void InitializeAttachment(LotRCard card)
-        {
-            this.Front.Stats[STAT_RESOURCE_COST] = card.ResourceCost.Description();
-        }
-
-        private void InitializeEvent(LotRCard card)
+        private void InitializePlayerCard(LotRCard card)
         {
             this.Front.Stats[STAT_RESOURCE_COST] = card.ResourceCost.Description();
         }

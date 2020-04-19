@@ -9,6 +9,7 @@ using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.Simple;
 using HallOfBeorn.Models.LotR.ViewModels;
 using HallOfBeorn.Services.LotR;
+using HallOfBeorn.Services.LotR.Octgn;
 using HallOfBeorn.Services.LotR.Scenarios;
 using HallOfBeorn.Services.LotR.Search;
 
@@ -22,12 +23,14 @@ namespace HallOfBeorn.Controllers
             cardRepository = (LotRCardRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.CardRepository];
             scenarioService = (IScenarioService)System.Web.HttpContext.Current.Application[LotRServiceNames.ScenarioService];
             searchService = (SearchService)System.Web.HttpContext.Current.Application[LotRServiceNames.SearchService];
+            octgnService = (IOctgnService)System.Web.HttpContext.Current.Application[LotRServiceNames.OctgnService];
         }
 
         private readonly SearchService searchService;
         private readonly ProductRepository productRepository;
         private readonly LotRCardRepository cardRepository;
         private readonly IScenarioService scenarioService;
+        private readonly IOctgnService octgnService;
 
         public ActionResult Search(SearchViewModel model)
         {
@@ -37,7 +40,7 @@ namespace HallOfBeorn.Controllers
 
             foreach (var score in searchService.Search(model))
             {
-                cards.Add(new SimpleCard(score.Card));
+                cards.Add(GetSimpleCard(score.Card));
             }
 
             result.Data = cards.Count > 0 ?
@@ -52,7 +55,7 @@ namespace HallOfBeorn.Controllers
             var result = new JsonResult() { JsonRequestBehavior = JsonRequestBehavior.AllowGet };
 
             result.Data = cardRepository.OfficialPlayerCards()
-                .Select(card => new SimpleCard(card)).ToList();
+                .Select(card => GetSimpleCard(card)).ToList();
 
             return result;
         }
@@ -62,7 +65,7 @@ namespace HallOfBeorn.Controllers
             var result = new JsonResult() { JsonRequestBehavior = JsonRequestBehavior.AllowGet };
 
             result.Data = cardRepository.OfficialEncounterCards()
-                .Select(y => new SimpleCard(y)).ToList();
+                .Select(y => GetSimpleCard(y)).ToList();
 
             return result;
         }
@@ -72,7 +75,7 @@ namespace HallOfBeorn.Controllers
             var result = new JsonResult() { JsonRequestBehavior = JsonRequestBehavior.AllowGet };
 
             result.Data = cardRepository.OfficialQuestCards()
-                .Select(y => new SimpleCard(y)).ToList();
+                .Select(y => GetSimpleCard(y)).ToList();
 
             return result;
         }
@@ -96,8 +99,7 @@ namespace HallOfBeorn.Controllers
             {
                 simple.QuestCards.Add(new SimpleCard(quest));
             }
-
-                    
+        
             foreach (var card in scenario.ScenarioCards)
             {
                 simple.ScenarioCards.Add(new SimpleScenarioCard()
@@ -163,6 +165,13 @@ namespace HallOfBeorn.Controllers
             };
         }
 
+        private SimpleCard GetSimpleCard(LotRCard card)
+        {
+            var simpleCard = new SimpleCard(card);
+            simpleCard.OctgnGuid = octgnService.GetCardOctgnGuid(card.Slug);
+            return simpleCard;
+        }
+
         public ActionResult CardSets(string id)
         {
             var result = new JsonResult() { JsonRequestBehavior = JsonRequestBehavior.AllowGet };
@@ -181,7 +190,7 @@ namespace HallOfBeorn.Controllers
                         simple.Cards = new List<SimpleCard>();
                         foreach (var card in cardSet.Cards.OrderBy(c => c.CardNumber))
                         {
-                            simple.Cards.Add(new SimpleCard(card));
+                            simple.Cards.Add(GetSimpleCard(card));
                         }
                         result.Data = simple;
                         return result;

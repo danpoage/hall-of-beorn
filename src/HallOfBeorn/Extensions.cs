@@ -54,7 +54,8 @@ namespace HallOfBeorn
         {
             return (string.IsNullOrEmpty(value))
                 ? string.Empty
-                : value.Replace(" ", "-");
+                : value.Replace(": ", "-")
+                .Replace(" ", "-");
         }
 
         public static string ToEnumDisplayString<T>(this T self)
