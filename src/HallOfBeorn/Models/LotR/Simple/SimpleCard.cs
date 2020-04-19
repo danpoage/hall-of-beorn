@@ -134,6 +134,9 @@ namespace HallOfBeorn.Models.LotR.Simple
         public string Artist { get; set; }
         public bool HasErrata { get; set; }
         public string OctgnGuid { get; set; }
+        public string RingsDbCardId { get; set; }
+        public byte RingsDbPopularity { get; set; }
+        public ushort RingsDbVotes { get; set; }
 
         public List<string> Categories { get; private set; }
 
@@ -170,9 +173,8 @@ namespace HallOfBeorn.Models.LotR.Simple
 
         private string GetBackImagePath(LotRCard card)
         {
-            //TODO: Back image path is returning invalid JSON.
-            //Figure out how to fix this
-            return "";
+            var viewModel = new CardViewModel(card, null, null, null, null);
+            return viewModel.ImagePath2;
         }
 
         private void InitializeCategories(LotRCard card)

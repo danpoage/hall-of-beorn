@@ -10,6 +10,7 @@ using HallOfBeorn.Models.LotR.Simple;
 using HallOfBeorn.Models.LotR.ViewModels;
 using HallOfBeorn.Services.LotR;
 using HallOfBeorn.Services.LotR.Octgn;
+using HallOfBeorn.Services.LotR.RingsDb;
 using HallOfBeorn.Services.LotR.Scenarios;
 using HallOfBeorn.Services.LotR.Search;
 
@@ -24,6 +25,7 @@ namespace HallOfBeorn.Controllers
             scenarioService = (IScenarioService)System.Web.HttpContext.Current.Application[LotRServiceNames.ScenarioService];
             searchService = (SearchService)System.Web.HttpContext.Current.Application[LotRServiceNames.SearchService];
             octgnService = (IOctgnService)System.Web.HttpContext.Current.Application[LotRServiceNames.OctgnService];
+            ringsDbService = GetService<IRingsDbService>(LotRServiceNames.RingsDbService);
         }
 
         private readonly SearchService searchService;
@@ -31,6 +33,12 @@ namespace HallOfBeorn.Controllers
         private readonly LotRCardRepository cardRepository;
         private readonly IScenarioService scenarioService;
         private readonly IOctgnService octgnService;
+        private readonly IRingsDbService ringsDbService;
+
+        private static T GetService<T>(string key)
+        {
+            return (T)System.Web.HttpContext.Current.Application[key];
+        }
 
         public ActionResult Search(SearchViewModel model)
         {
@@ -168,7 +176,13 @@ namespace HallOfBeorn.Controllers
         private SimpleCard GetSimpleCard(LotRCard card)
         {
             var simpleCard = new SimpleCard(card);
+
             simpleCard.OctgnGuid = octgnService.GetCardOctgnGuid(card.Slug);
+
+            simpleCard.RingsDbCardId = ringsDbService.GetCardId(card.Slug);
+            simpleCard.RingsDbPopularity = ringsDbService.GetPopularity(card.Slug);
+            simpleCard.RingsDbVotes = ringsDbService.GetVotes(card.Slug);
+
             return simpleCard;
         }
 

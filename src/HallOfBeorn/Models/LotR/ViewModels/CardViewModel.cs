@@ -919,11 +919,20 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public string getContractCardImagePath(bool isFirst)
         {
-            var set = (_card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
-            var title = _card.Title.ToUrlSafeString();
-            var letter = isFirst ? "A" : "B";
+            if (!string.IsNullOrEmpty(_card.OppositeText))
+            {
+                var set = (_card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
+                var title = _card.Title.ToUrlSafeString();
+                var letter = isFirst ? "A" : "B";
 
-            return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}-Side{2}.jpg", set, title, letter);
+                return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}-Side{2}.jpg", set, title, letter);
+            }
+            else 
+            {
+                var set = (_card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
+                var title = _card.Title.ToUrlSafeString();
+                return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}.jpg", set, title);
+            }
         }
 
         public string getQuestCardArtImagePath(bool isFirst)
