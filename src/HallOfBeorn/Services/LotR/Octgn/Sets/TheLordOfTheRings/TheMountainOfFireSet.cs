@@ -64,7 +64,7 @@ namespace HallOfBeorn.Services.LotR.Octgn.Sets.TheLordOfTheRings
             addCard("30e352c6-4389-4ace-ab82-874294634554","ae4a4129-ed5d-4902-92e3-ae89e2795fb1","Orc Captain");
             addCard("30e352c6-4389-4ace-ab82-874294634554","6036efda-3456-45d2-817a-4ef8b310db5a","Big Uruk");
             addCard("30e352c6-4389-4ace-ab82-874294634554","ad3509b5-b4b4-4fe5-bfdc-e655cc2470d3","Little Snuffler");
-            addCard("30e352c6-4389-4ace-ab82-874294634554","2ab79807-7f6b-4b8b-8295-fb8645cdee8a",""Wicked Master!"");
+            addCard("30e352c6-4389-4ace-ab82-874294634554","2ab79807-7f6b-4b8b-8295-fb8645cdee8a","\"Wicked Master!\"");
             addCard("30e352c6-4389-4ace-ab82-874294634554","d71de165-8632-4628-94ea-793a1c20e6f8","The Lidless Eye");
             addCard("30e352c6-4389-4ace-ab82-874294634554","01a03d74-06d9-4fc8-afd7-2739fa900c32","Foul Fumes");
             addCard("30e352c6-4389-4ace-ab82-874294634554","cdf7a6c5-23f6-4314-a122-3b7df1b97501","Heavy and Tired");
