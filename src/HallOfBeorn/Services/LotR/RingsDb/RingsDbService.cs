@@ -25,6 +25,7 @@ namespace HallOfBeorn.Services.LotR.RingsDb
 
             initializeHeroPopularity();
             initializeCardPopularity();
+            initializeContractPopularity();
             initializeCardLinks();
 
             repository = new RingsDbRepository();
@@ -61,8 +62,8 @@ namespace HallOfBeorn.Services.LotR.RingsDb
         private void addHeroPopularity(string cardId, ushort votes)
         {
             const ushort hero_5 = 800;
-            const ushort hero_4 = 600;
-            const ushort hero_3 = 400;
+            const ushort hero_4 = 500;
+            const ushort hero_3 = 375;
             const ushort hero_2 = 200;
 
             if (votes > hero_5)
@@ -72,6 +73,25 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             else if (votes > hero_3)
                 addPopularity(cardId, 3, votes);
             else if (votes > hero_2)
+                addPopularity(cardId, 2, votes);
+            else
+                addPopularity(cardId, 1, votes);
+        }
+
+        private void addContractPopularity(string cardId, ushort votes)
+        {
+            const ushort contract_5 = 75;
+            const ushort contract_4 = 50;
+            const ushort contract_3 = 40;
+            const ushort contract_2 = 20;
+
+            if (votes > contract_5)
+                addPopularity(cardId, 5, votes);
+            else if (votes > contract_4)
+                addPopularity(cardId, 4, votes);
+            else if (votes > contract_3)
+                addPopularity(cardId, 3, votes);
+            else if (votes > contract_2)
                 addPopularity(cardId, 2, votes);
             else
                 addPopularity(cardId, 1, votes);
@@ -10137,7 +10157,6 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             addCardPopularity("19086", 145);
             addCardPopularity("19093", 142);
             addCardPopularity("19059", 141);
-            addCardPopularity("21074", 141);
             addCardPopularity("22008", 141);
             addCardPopularity("19146", 139);
             addCardPopularity("21004", 139);
@@ -10206,7 +10225,6 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             addCardPopularity("08144", 82);
             addCardPopularity("12109", 82);
             addCardPopularity("12140", 81);
-            addCardPopularity("22049", 80);
             addCardPopularity("08007", 79);
             addCardPopularity("22063", 78);
             addCardPopularity("17140", 76);
@@ -10227,7 +10245,6 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             addCardPopularity("143013", 66);
             addCardPopularity("19147", 65);
             addCardPopularity("19149", 65);
-            addCardPopularity("22074", 65);
             addCardPopularity("17034", 64);
             addCardPopularity("22030", 64);
             addCardPopularity("22058", 64);
@@ -10247,11 +10264,9 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             addCardPopularity("19091", 47);
             addCardPopularity("22033", 46);
             addCardPopularity("16009", 45);
-            addCardPopularity("22134", 42);
             addCardPopularity("04037", 41);
             addCardPopularity("21007", 41);
             addCardPopularity("21008", 40);
-            addCardPopularity("22024", 39);
             addCardPopularity("22006", 38);
             addCardPopularity("17063", 36);
             addCardPopularity("17111", 36);
@@ -10282,7 +10297,6 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             addCardPopularity("20015", 16);
             addCardPopularity("20025", 16);
             addCardPopularity("20056", 16);
-            addCardPopularity("22091", 16);
             addCardPopularity("20059", 15);
             addCardPopularity("20004", 14);
             addCardPopularity("19088", 14);
@@ -10377,6 +10391,16 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             addCardPopularity("9912089", 1);
             addCardPopularity("99143006", 1);
             addCardPopularity("9922059", 1);
+        }
+
+        private void initializeContractPopularity()
+        {
+            addContractPopularity("21074", 141);
+            addContractPopularity("22024", 39);
+            addContractPopularity("22049", 80);
+            addContractPopularity("22074", 65);
+            addContractPopularity("22091", 16);
+            addContractPopularity("22134", 42);
         }
 
         private uint getRingsDbSet(CardSet set)
