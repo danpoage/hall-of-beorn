@@ -288,16 +288,16 @@ namespace HallOfBeorn.Models.LotR.Simple
             
             this.Back.ImagePath = GetBackImagePath(card);
 
-            /*
-            this.Front.Stats[STAT_STAGE_NUMBER] = card.StageNumber + "A";
-            this.Back.Stats[STAT_STAGE_NUMBER] = card.StageNumber + "B";
-            this.Back.Stats[STAT_QUEST_POINTS] = card.QuestPoints.HasValue ? card.QuestPoints.Value.ToString() : "-";
+            var backStageLetter = (char)((byte)card.StageLetter + 1);
+
+            this.Front.Stats[STAT_STAGE_NUMBER] = string.Format("{0}{1}", card.StageNumber, card.StageLetter);
+            this.Back.Stats[STAT_STAGE_NUMBER] = string.Format("{0}{1}", card.StageNumber, backStageLetter);
+            this.Back.Stats[STAT_QUEST_POINTS] = card.QuestPoints.Description();
 
             foreach (var encounterSet in card.IncludedEncounterSets)
             {
                 this.EncounterInfo.IncludedEncounterSets.Add(encounterSet.Name);
             }
-            */
         }
 
         private string NormalizeText(string text)
