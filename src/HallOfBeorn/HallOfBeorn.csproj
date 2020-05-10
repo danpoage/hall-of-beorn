@@ -408,6 +408,14 @@
     <Compile Include="Models\LotR\Compact\Trait.cs" />
     <Compile Include="Models\ICreator.cs" />
     <Compile Include="Models\LotR\Extensions.cs" />
+    <Compile Include="Models\LotR\Play\CardInDeck.cs" />
+    <Compile Include="Models\LotR\Play\CardInDiscard.cs" />
+    <Compile Include="Models\LotR\Play\CardInHand.cs" />
+    <Compile Include="Models\LotR\Play\CardInPlay.cs" />
+    <Compile Include="Models\LotR\Play\Deck.cs" />
+    <Compile Include="Models\LotR\Play\EffectType.cs" />
+    <Compile Include="Models\LotR\Play\Game.cs" />
+    <Compile Include="Models\LotR\Play\Phase.cs" />
     <Compile Include="Models\LotR\ProductGroups\VengeanceOfMordorProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\EredMithrinProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\StarterProductGroup.cs" />
