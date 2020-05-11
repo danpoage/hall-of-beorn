@@ -2,9 +2,8 @@
 {
     public enum EffectType
     {
-        Framework,
+        Constant,
         Forced,
-        Passive,
         Response,
         Action,
     }
