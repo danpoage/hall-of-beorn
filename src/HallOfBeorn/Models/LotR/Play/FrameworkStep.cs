@@ -2,6 +2,8 @@
 {
     public enum FrameworkStep
     {
+        None = 0,
+
         Setup_Begin,
         Setup_Shuffle_Decks,
         Setup_Place_Heroes_And_Set_Initial_Threat_Levels,
