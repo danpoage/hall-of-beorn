@@ -10,13 +10,57 @@ namespace HallOfBeorn.Models.LotR.Play
         private List<CardInDeck> cards = new List<CardInDeck>();
         private List<CardInDiscard> discardPile = new List<CardInDiscard>();
 
+        public string Name { get; set; }
         public IEnumerable<CardInDeck> Cards { get { return cards; } }
         public IEnumerable<CardInDiscard> DiscardPile { get { return discardPile; } }
 
-        public IEnumerable<CardInHand> Draw(int numberOfCards)
+        public IEnumerable<CardInHand> Draw(int count)
         {
-            var cards = new List<CardInHand>();
-            return cards;
+            var draws = cards.Count <= count
+                ? cards.Take(count)
+                : cards.ToList();
+
+            foreach (var draw in draws)
+            {
+                cards.Remove(draw);
+                yield return new CardInHand{ Card = draw.Card, Deck = this };
+            }
+        }
+
+        public IEnumerable<CardInDeck> LookAt(int count)
+        {
+            return cards.Count <= count
+                ? cards.Take(count)
+                : cards.ToList();
+        }
+
+        public IEnumerable<CardInDiscard> MillFromTop(int count)
+        {
+            var mills = cards.Count <= count
+                ? cards.Take(count)
+                : cards.ToList();
+
+            foreach (var mill in mills)
+            {
+                cards.Remove(mill);
+                var discard = new CardInDiscard { Card = mill.Card, Deck = this };
+                discardPile.Add(discard);
+                yield return discard;
+            }
+        }
+
+        public void Load(IEnumerable<Tuple<LotRCard, int>> cardsWithCounts)
+        {
+            foreach (var entry in cardsWithCounts)
+            {
+                if (entry.Item2 > 0)
+                {
+                    for (var i=1; i<=entry.Item2; i++)
+                    {
+                        cards.Add(new CardInDeck { Card = entry.Item1, Deck = this });
+                    }
+                }
+            }
         }
 
         public void Shuffle()
