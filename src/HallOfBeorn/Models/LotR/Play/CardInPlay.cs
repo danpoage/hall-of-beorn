@@ -7,10 +7,18 @@ namespace HallOfBeorn.Models.LotR.Play
 {
     public class CardInPlay
     {
-        public LotRCard Card { get; set; }
-        public Deck Deck { get; set; }
+        public CardInPlay(Deck deck, LotRCard card)
+        {
+            Deck = deck;
+            Card = card;
+        }
 
+        public Deck Deck { get; set; }
+        public LotRCard Card { get; set; }
+        
         public bool IsExhausted { get; set; }
+        public bool IsCommitted { get; set; }
+
         public uint DamageTokens { get; set; }
         public uint ProgressTokens { get; set; }
         public uint ResourceTokens { get; set; }

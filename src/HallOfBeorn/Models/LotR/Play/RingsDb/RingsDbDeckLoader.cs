@@ -21,7 +21,7 @@ namespace HallOfBeorn.Models.LotR.Play.RingsDb
         private readonly IRingsDbService service;
         private readonly Func<string, LotRCard> lookupCard;
 
-        public Deck LoadRingsDbDeck(string deckId)
+        public Tuple<Deck, IEnumerable<LotRCard>> LoadRingsDbDeck(string deckId)
         {
             var deckList = service.GetDeckList(deckId);
             if (deckList == null)
@@ -31,12 +31,12 @@ namespace HallOfBeorn.Models.LotR.Play.RingsDb
 
             var deck = new Deck { DeckId = deckId, Name = deckList.name };
 
-            deck.Load(deckList.heroes.Select(h => new Tuple<LotRCard, byte>(lookupCard(h.Key), h.Value)));
             deck.Load(deckList.slots.Select(c => new Tuple<LotRCard, byte>(lookupCard(c.Key), c.Value)));
 
+            var heroes = deckList.heroes.Select(h => lookupCard(h.Key));
             //deck.LoadSideboard(deckList.
 
-            return deck;
+            return new Tuple<Deck,IEnumerable<LotRCard>>(deck, heroes);
         }
     }
 }

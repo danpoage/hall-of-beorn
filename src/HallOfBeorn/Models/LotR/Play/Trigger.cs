@@ -87,13 +87,16 @@ namespace HallOfBeorn.Models.LotR.Play
 
         Determine_Hero_Resources_Collected_in_Resource,
         Determine_Hero_Sphere_Match,
-
+        
         Encounter_Doomed,
         Encounter_Guarded,
         Encounter_Shadow,
         Encounter_Surge,
 
         Player_Action_Window,
+
+        Setup_Place_Hero,
+        Setup_Determine_Hero_Starting_Threat,
 
         Travel,
 

@@ -30,6 +30,11 @@ namespace HallOfBeorn.Models.LotR.Play
         private readonly Func<string, LotRCard> lookupCard;
         private readonly Func<string, CardSide, IEnumerable<Effect>> lookupEffects;
 
+        private IEnumerable<Effect> GetEffectsByTrigger(string slug, CardSide side, Trigger trigger)
+        {
+            return lookupEffects(slug, side).Where(ef => ef.Trigger == trigger);
+        }
+
         public uint RoundNumber { get; set; }
         public Phase Phase { get; set; }
         public FrameworkStep FrameworkStep { get; set; }
@@ -82,9 +87,16 @@ namespace HallOfBeorn.Models.LotR.Play
             CurrentChoice.SelectOptions(this, options);
         }
 
-        public void ExecuteEffect(Effect effect)
+        public void ExecuteAutomaticEffects(IEnumerable<Effect> effects)
         {
-
+            foreach (var effect in effects)
+            {
+                if (effect.Criteria(this) && effect.GetChoice(this) == null)
+                {
+                    foreach (var result in effect.Results)
+                        result(this);
+                }
+            }
         }
 
         public void AddScenario(Scenario scenario, GameMode mode)
@@ -116,10 +128,97 @@ namespace HallOfBeorn.Models.LotR.Play
             Log("Add Scenario: " + scenario.Title + " [" + mode.ToString() + " Mode]");
         }
 
-        public void AddPlayerDeck(Deck deck)
+        public void AddPlayer(string name, Deck deck, IEnumerable<LotRCard> heroes)
         {
-            Players.Add(new Player { Deck = deck });
-            Log(string.Format("Add Player Deck {0}", deck.Name ?? deck.DeckId));
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                name = "Player " + Players.Count + 1;
+            }
+
+            var player = new Player(name, deck, heroes);
+            Players.Add(player);
+            Log(string.Format("Add Player {0}", name));
+
+            Log(string.Format("Add Deck: {0}", deck.Name ?? deck.DeckId));
+
+            Log(string.Format("Add Heroes: {0}", 
+                string.Join(", ", heroes.Select(h => h.Title + "[" + h.Sphere.ToString() + "]").ToArray())));
+        }
+
+        private void ShuffleDecks()
+        {
+            foreach (var player in Players)
+            {
+                player.IsActivePlayer = true;
+                player.Deck.Shuffle();
+                Log(string.Format("Player {0} Shuffles their Deck", player.Name));
+            }
+        }
+
+        private void PlaceHerosAndSetInitialThreat()
+        {
+            foreach (var player in Players)
+            {
+                var placeHeroEffects = player.Heroes.SelectMany(h => 
+                    GetEffectsByTrigger(
+                        h.Card.Slug, CardSide.Front, Trigger.Setup_Place_Hero));
+
+                var determineThreatEffects = player.Heroes.SelectMany(h => 
+                    GetEffectsByTrigger(
+                        h.Card.Slug, CardSide.Front, Trigger.Setup_Determine_Hero_Starting_Threat));
+
+                player.IsActivePlayer = true;
+
+                Log(string.Format("Player {0} Places Heres and Set Initial Threat", player.Name));
+
+                foreach (var hero in player.Heroes)
+                {
+                    var placeHero = new GameEvent { Description = "Place Hero" +  hero.Card.Title };
+                    placeHero.CardsInPlay.Add(hero);
+                    ExecuteAutomaticEffects(placeHeroEffects);
+                    Log(placeHero);
+                    player.PlayArea.Add(hero);
+
+                    var determineThreat = new GameEvent{Description = "Determine Starting Threat for Hero " + hero.Card.Title};
+                    determineThreat.CardsInPlay.Add(hero);
+                    ExecuteAutomaticEffects(determineThreatEffects);
+                    Log(determineThreat);
+                    player.Threat += hero.Card.ThreatCost.Value;
+                }
+
+                Log(string.Format("Player {0} Initial Threat Set to {1}", player.Name, player.Threat));
+            }
+        }
+
+        public void DetermineFirstPlayer()
+        {
+            var first = Players.First();
+            first.IsFirstPlayer = true;
+            Log(string.Format("Player {0} is the First Player", first.Name));
+
+            //TODO: Allow Players to choose first player in multiplayer games
+        }
+
+        public void SetupGame(IEnumerable<Player> players)
+        {
+            Log("Begin Setup");
+
+            ShuffleDecks();
+
+            PlaceHerosAndSetInitialThreat();
+
+            Log("Creat Virtual Token Bank (we moved some zeroes and ones around)");
+
+            DetermineFirstPlayer();
+            //Setup_Begin,
+            //Setup_Shuffle_Decks,
+            //Setup_Place_Heroes_And_Set_Initial_Threat_Levels,
+            //Setup_Create_Token_Bank,
+            //Setup_Determine_First_Player,
+            //Setup_Draw_Setup_Hand,
+            //Setup_Quest_Cards,
+            //Setup_Follow_Scenario_Setup_Instructions,
+            //Setup_End,
         }
 
         public void SetupScenario()

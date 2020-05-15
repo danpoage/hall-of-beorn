@@ -1,9 +1,8 @@
 ﻿namespace HallOfBeorn.Models.LotR.Play
 {
-    public enum FrameworkStep
+    public enum SetupStep
     {
         None = 0,
-
         Setup_Begin,
         Setup_Shuffle_Decks,
         Setup_Place_Heroes_And_Set_Initial_Threat_Levels,
@@ -13,6 +12,11 @@
         Setup_Quest_Cards,
         Setup_Follow_Scenario_Setup_Instructions,
         Setup_End,
+    }
+
+    public enum FrameworkStep
+    {
+        None = 0,
 
         Round_Begin,// = 100,
 

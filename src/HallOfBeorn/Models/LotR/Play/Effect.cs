@@ -14,8 +14,8 @@ namespace HallOfBeorn.Models.LotR.Play
         public FrameworkStep Step  { get; set; }
         public Trigger Trigger { get; set; }
         public Func<Game, bool> Criteria { get; set; }
-        public List<Choice> Choices = new List<Choice>();
-        //public Func Cost //TOOD: How to describe a cost functionally
+        public Func<Game, Choice> GetChoice { get; set; }
+
         public List<Action<Game>> Results = new List<Action<Game>>();
 
         //public List<Action<Game>> UndoResults = new List<Action<Game>>();
