@@ -13,6 +13,6 @@ namespace HallOfBeorn.Models.LotR.Play
 
         public Deck Deck { get; set; }
 
-        public List<CardInPlay> PlayArea { get; set; }
+        public List<CardInPlay> PlayArea = new List<CardInPlay>();
     }
 }

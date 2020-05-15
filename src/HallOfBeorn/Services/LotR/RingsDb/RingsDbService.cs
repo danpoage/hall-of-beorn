@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 
 using HallOfBeorn.Models.LotR;
+using HallOfBeorn.Models.RingsDb;
 
 namespace HallOfBeorn.Services.LotR.RingsDb
 {
@@ -31,7 +32,7 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             repository = new RingsDbRepository();
         }
 
-        private readonly RingsDbRepository repository;
+        private readonly IRingsDbRepository repository;
         private readonly Dictionary<string, LotRCard> cardsBySlug = new Dictionary<string,LotRCard>();
         private readonly Dictionary<string, string> slugByCardId = new Dictionary<string, string>();
         private readonly Dictionary<string, byte> popularityByCardId = new Dictionary<string, byte>();
@@ -10570,6 +10571,11 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             {
                 return false;
             }
+        }
+
+        public RingsDbDeckList GetDeckList(string deckId)
+        {
+            return repository.GetDeckList(deckId);
         }
     }
 }

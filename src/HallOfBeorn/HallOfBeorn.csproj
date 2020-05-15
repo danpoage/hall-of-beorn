@@ -425,6 +425,7 @@
     <Compile Include="Models\LotR\Play\Phase.cs" />
     <Compile Include="Models\LotR\Play\Player.cs" />
     <Compile Include="Models\LotR\Play\Repositories\EffectRepository.cs" />
+    <Compile Include="Models\LotR\Play\RingsDb\RingsDbDeckLoader.cs" />
     <Compile Include="Models\LotR\Play\Trigger.cs" />
     <Compile Include="Models\LotR\ProductGroups\VengeanceOfMordorProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\EredMithrinProductGroup.cs" />
@@ -1076,6 +1077,7 @@
     <Compile Include="Services\LotR\Octgn\Sets\VengeanceOfMordor\ChallengeOfTheWainridersSet.cs" />
     <Compile Include="Services\LotR\Octgn\Sets\VengeanceOfMordor\TheCityOfUlfastSet.cs" />
     <Compile Include="Services\LotR\Octgn\Sets\VengeanceOfMordor\WrathAndRuinSet.cs" />
+    <Compile Include="Services\LotR\RingsDb\IRingsDbRepository.cs" />
     <Compile Include="Services\LotR\RingsDb\RingsDbRepository.cs" />
     <Compile Include="Services\LotR\Scenarios\IScenarioService.cs" />
     <Compile Include="Services\LotR\Legacy\OldAdvancedSearchService.cs" />

@@ -7,6 +7,7 @@ namespace HallOfBeorn.Models.LotR.Play
 {
     public class CardOutOfPlay
     {
+        public Deck Deck { get; set; }
         public LotRCard Card { get; set; }
     }
 }

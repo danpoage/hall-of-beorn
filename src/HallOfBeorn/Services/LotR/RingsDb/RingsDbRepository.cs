@@ -9,6 +9,7 @@ using HallOfBeorn.Models.RingsDb;
 namespace HallOfBeorn.Services.LotR.RingsDb
 {
     public class RingsDbRepository
+        : IRingsDbRepository
     {
         public RingsDbRepository()
         {

@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using HallOfBeorn.Models.RingsDb;
 
 namespace HallOfBeorn.Services.LotR.RingsDb
 {
@@ -14,5 +12,6 @@ namespace HallOfBeorn.Services.LotR.RingsDb
         ushort GetVotes(string slug);
         IEnumerable<KeyValuePair<string, int>> GetLinks(string slug);
         bool DeckIncludesCard(string deckId, string slug);
+        RingsDbDeckList GetDeckList(string deckId);
     }
 }

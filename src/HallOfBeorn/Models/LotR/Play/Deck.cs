@@ -9,10 +9,13 @@ namespace HallOfBeorn.Models.LotR.Play
     {
         private List<CardInDeck> cards = new List<CardInDeck>();
         private List<CardInDiscard> discardPile = new List<CardInDiscard>();
+        private List<CardOutOfPlay> sideboardCards = new List<CardOutOfPlay>();
 
         public string Name { get; set; }
+        public string DeckId { get; set; }
         public IEnumerable<CardInDeck> Cards { get { return cards; } }
         public IEnumerable<CardInDiscard> DiscardPile { get { return discardPile; } }
+        public IEnumerable<CardOutOfPlay> SideboardCards { get { return sideboardCards; } }
 
         public IEnumerable<CardInHand> Draw(int count)
         {
@@ -49,7 +52,7 @@ namespace HallOfBeorn.Models.LotR.Play
             }
         }
 
-        public void Load(IEnumerable<Tuple<LotRCard, int>> cardsWithCounts)
+        public void Load(IEnumerable<Tuple<LotRCard, byte>> cardsWithCounts)
         {
             foreach (var entry in cardsWithCounts)
             {
@@ -58,6 +61,20 @@ namespace HallOfBeorn.Models.LotR.Play
                     for (var i=1; i<=entry.Item2; i++)
                     {
                         cards.Add(new CardInDeck { Card = entry.Item1, Deck = this });
+                    }
+                }
+            }
+        }
+
+        public void LoadSideboard(IEnumerable<Tuple<LotRCard, byte>> cardsWithCounts)
+        {
+            foreach (var entry in cardsWithCounts)
+            {
+                if (entry.Item2 > 0)
+                {
+                    for (var i=1; i<=entry.Item2; i++)
+                    {
+                        sideboardCards.Add(new CardOutOfPlay { Card = entry.Item1, Deck = this });
                     }
                 }
             }

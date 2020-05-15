@@ -16,9 +16,9 @@ namespace HallOfBeorn.Models.LotR.Play
         public Func<Game, bool> Criteria { get; set; }
         public List<Choice> Choices = new List<Choice>();
         //public Func Cost //TOOD: How to describe a cost functionally
-        public List<Action<Game>> Effects = new List<Action<Game>>();
+        public List<Action<Game>> Results = new List<Action<Game>>();
 
-        public List<Action<Game>> UndoEffects = new List<Action<Game>>();
+        //public List<Action<Game>> UndoResults = new List<Action<Game>>();
 
         public static Effect Response(LotRCard card, Trigger trigger)
         {

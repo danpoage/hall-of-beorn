@@ -15,7 +15,7 @@ namespace RingsDbBuilder
             DatabaseName = "RingsDB.data";
 
             MinimumDeckId = 1; //2969;
-            MaximumDeckId = 15598;
+            MaximumDeckId = 16078;
 
             Verbose = false;
         }
