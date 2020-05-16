@@ -417,7 +417,6 @@
     <Compile Include="Models\LotR\Play\Deck.cs" />
     <Compile Include="Models\LotR\Play\Effect.cs" />
     <Compile Include="Models\LotR\Play\EffectSource.cs" />
-    <Compile Include="Models\LotR\Play\EffectTiming.cs" />
     <Compile Include="Models\LotR\Play\EffectType.cs" />
     <Compile Include="Models\LotR\Play\FrameworkStep.cs" />
     <Compile Include="Models\LotR\Play\Game.cs" />

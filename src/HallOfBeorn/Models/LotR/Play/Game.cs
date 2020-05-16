@@ -57,10 +57,53 @@ namespace HallOfBeorn.Models.LotR.Play
         public Deck SecondaryQuestDeck { get; set; }
         public LotRCard MainSecondaryQuest { get; set; }
 
-        public void AddEffect(Effect effect)
+        private Dictionary<EffectType, List<Effect>> FindEffects(Trigger trigger)
         {
-            Log("Add effect: " + effect.ToString());
-            //TODO: Figure out where to add each effect
+            var results = new Dictionary<EffectType, List<Effect>>{
+                { EffectType.Passive, new List<Effect>() },
+                { EffectType.Forced, new List<Effect>() },
+                { EffectType.Response, new List<Effect>() }
+            };
+
+            foreach (var effect in ConstantEffects.Where(ef => ef.Trigger == trigger))
+            {
+                results[effect.Type].Add(effect);
+            }
+            
+            foreach (var effect in EndOfPhaseEffects.Where(ef => ef.Trigger == trigger))
+            {
+                results[effect.Type].Add(effect);
+            }
+
+            foreach (var effect in EndOfRoundEffects.Where(ef => ef.Trigger == trigger))
+            {
+                results[effect.Type].Add(effect);
+            }
+
+            foreach (var card in StagingArea)
+            {
+                //TODO: Change lookupEffect to use the active side of each card
+                foreach (var effect in 
+                    lookupEffects(card.Card.Slug, CardSide.Front).Where(ef => ef.Trigger == trigger))
+                {
+                    results[effect.Type].Add(effect);
+                }
+            }
+
+            foreach (var player in Players)
+            {
+                foreach (var card in player.PlayArea)
+                {
+                    //TODO: Change lookupEffect to use the active side of each card
+                    foreach (var effect in 
+                        lookupEffects(card.Card.Slug, CardSide.Front).Where(ef => ef.Trigger == trigger))
+                    {
+                        results[effect.Type].Add(effect);
+                    }
+                }
+            }
+
+            return results;
         }
 
         public List<Effect> ConstantEffects = new List<Effect>();
@@ -68,7 +111,7 @@ namespace HallOfBeorn.Models.LotR.Play
         public List<Effect> EndOfRoundEffects = new List<Effect>();
 
         private uint eventCount = 0;
-        public void Log(string description)
+        private void Log(string description)
         {
             Log(new GameEvent { Description = description });
         }
@@ -199,6 +242,16 @@ namespace HallOfBeorn.Models.LotR.Play
             //TODO: Allow Players to choose first player in multiplayer games
         }
 
+        public void DrawSetupHand()
+        {
+            foreach (var player in Players)
+            {
+                var determineSetupHandSize = player.Heroes.SelectMany(h => 
+                    GetEffectsByTrigger(
+                        h.Card.Slug, CardSide.Front, Trigger.Setup_Determine_Hero_Starting_Threat));
+            }
+        }
+
         public void SetupGame(IEnumerable<Player> players)
         {
             Log("Begin Setup");
@@ -207,9 +260,11 @@ namespace HallOfBeorn.Models.LotR.Play
 
             PlaceHerosAndSetInitialThreat();
 
-            Log("Creat Virtual Token Bank (we moved some zeroes and ones around)");
+            Log("Create Virtual Token Bank (the Bear likes playing with tokens)");
 
             DetermineFirstPlayer();
+
+            DrawSetupHand();
             //Setup_Begin,
             //Setup_Shuffle_Decks,
             //Setup_Place_Heroes_And_Set_Initial_Threat_Levels,
@@ -237,7 +292,7 @@ namespace HallOfBeorn.Models.LotR.Play
 
             foreach (var effect in effects)
             {
-                AddEffect(effect);
+                //TODO: Create a game event and resolve it
             }
         }
 

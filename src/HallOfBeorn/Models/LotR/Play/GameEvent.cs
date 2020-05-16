@@ -41,5 +41,7 @@ namespace HallOfBeorn.Models.LotR.Play
 
         public List<CardInPlay> Attackers = new List<CardInPlay>();
         public List<CardInPlay> Defenders = new List<CardInPlay>();
+
+        public GameEvent Next { get; set; }
     }
 }

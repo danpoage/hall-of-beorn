@@ -10,7 +10,6 @@ namespace HallOfBeorn.Models.LotR.Play
         public EffectSource Source { get; set; }
         public LotRCard Card { get; set; }
         public EffectType Type { get; set; }
-        public EffectTiming Timing { get; set; }
         public FrameworkStep Step  { get; set; }
         public Trigger Trigger { get; set; }
         public Func<Game, bool> Criteria { get; set; }
@@ -38,37 +37,12 @@ namespace HallOfBeorn.Models.LotR.Play
         public static Effect WhenRevealed(LotRCard card)
         {
             return Response(card, Trigger.When_Revealed)
-                .Forced()
-                .When();
+                .Forced();
         }
 
         public Effect Forced()
         {
             this.Type = EffectType.Forced;
-            return this;
-        }
-
-        public Effect Before()
-        {
-            this.Timing = EffectTiming.Before;
-            return this;
-        }
-
-        public Effect When()
-        {
-            this.Timing = EffectTiming.When;
-            return this;
-        }
-
-        public Effect After()
-        {
-            this.Timing = EffectTiming.After;
-            return this;
-        }
-
-        public Effect InsteadOf()
-        {
-            this.Timing = EffectTiming.InsteadOf;
             return this;
         }
     }
