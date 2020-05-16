@@ -17,6 +17,14 @@ namespace HallOfBeorn.Models.LotR.Play
 
         public List<Action<Game>> Results = new List<Action<Game>>();
 
+        public void Resolve(Game game)
+        {
+            if (!Criteria(game))
+                return;
+
+            foreach (var result in Results)
+                result(game);
+        }
         //public List<Action<Game>> UndoResults = new List<Action<Game>>();
 
         public static Effect Response(LotRCard card, Trigger trigger)

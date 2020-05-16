@@ -242,13 +242,46 @@ namespace HallOfBeorn.Models.LotR.Play
             //TODO: Allow Players to choose first player in multiplayer games
         }
 
+        private void ResolveEffects(Dictionary<EffectType, List<Effect>> effects)
+        {
+            foreach (var effect in effects[EffectType.Passive])
+            {
+                if (effect.Criteria(this) && effect.GetChoice(this) == null)
+                {
+                    effect.Resolve(this);
+                }
+            }
+
+            foreach (var effect in effects[EffectType.Forced])
+            {
+                if (effect.Criteria(this) && effect.GetChoice(this) == null)
+                {
+                    effect.Resolve(this);
+                }
+            }
+
+            foreach (var effect in effects[EffectType.Response])
+            {
+                if (effect.Criteria(this) && effect.GetChoice(this) == null)
+                {
+                    effect.Resolve(this);
+                }
+            }
+        }
+
         public void DrawSetupHand()
         {
+            var effects = FindEffects(Trigger.Setup_Determine_Starting_Hand_Size);
+
             foreach (var player in Players)
             {
-                var determineSetupHandSize = player.Heroes.SelectMany(h => 
-                    GetEffectsByTrigger(
-                        h.Card.Slug, CardSide.Front, Trigger.Setup_Determine_Hero_Starting_Threat));
+                player.IsActivePlayer = true;
+
+                ResolveEffects(effects);
+
+                var hand = player.Deck.Draw(player.SetupHandSize);
+                player.Hand.AddRange(hand);
+                Log(string.Format("Player {0} Draws {1} Cards in their Setup Hand", player.Name, player.SetupHandSize));
             }
         }
 
@@ -265,6 +298,7 @@ namespace HallOfBeorn.Models.LotR.Play
             DetermineFirstPlayer();
 
             DrawSetupHand();
+
             //Setup_Begin,
             //Setup_Shuffle_Decks,
             //Setup_Place_Heroes_And_Set_Initial_Threat_Levels,
