@@ -23,7 +23,7 @@
         Resource_Begin, // = 110,
         Resource_Gain_Resources, // = 120,
         Resource_Draw_Cards, // = 130,
-        //Resource_Before_End_Player_Action_Window = 135,
+        Resource_Before_End_Player_Action_Window, //= 135,
         Resource_End, // = 140,
 
         Planning_Begin, // = 210,

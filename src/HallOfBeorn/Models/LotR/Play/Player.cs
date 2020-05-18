@@ -21,8 +21,13 @@ namespace HallOfBeorn.Models.LotR.Play
 
         public string Name { get; private set; }
         public Deck Deck { get; private set; }
+        
         public readonly List<CardInHand> Hand = new List<CardInHand>();
         public readonly List<CardInPlay> Heroes = new List<CardInPlay>();
+
+        public PlayerStatus PlayerStatus { get; set; }
+        public SetupStep SetupStep { get; set; }
+        public FrameworkStep FrameworkStep { get; set; }
 
         public bool IsFirstPlayer { get; set; }
         public bool IsActivePlayer { get; set; }

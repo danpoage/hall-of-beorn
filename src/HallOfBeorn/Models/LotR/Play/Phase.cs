@@ -2,6 +2,7 @@
 {
     public enum Phase
     {
+        None,
         Resource,
         Planning,
         Quest,

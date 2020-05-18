@@ -421,10 +421,15 @@
     <Compile Include="Models\LotR\Play\FrameworkStep.cs" />
     <Compile Include="Models\LotR\Play\Game.cs" />
     <Compile Include="Models\LotR\Play\GameEvent.cs" />
+    <Compile Include="Models\LotR\Play\GameSegment.cs" />
     <Compile Include="Models\LotR\Play\Phase.cs" />
     <Compile Include="Models\LotR\Play\Player.cs" />
+    <Compile Include="Models\LotR\Play\PlayerStatus.cs" />
     <Compile Include="Models\LotR\Play\Repositories\EffectRepository.cs" />
     <Compile Include="Models\LotR\Play\RingsDb\RingsDbDeckLoader.cs" />
+    <Compile Include="Models\LotR\Play\Runner.cs" />
+    <Compile Include="Models\LotR\Play\Setup\DrawSetupHand.cs" />
+    <Compile Include="Models\LotR\Play\Setup\SetupQuestCard.cs" />
     <Compile Include="Models\LotR\Play\Trigger.cs" />
     <Compile Include="Models\LotR\ProductGroups\VengeanceOfMordorProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\EredMithrinProductGroup.cs" />
@@ -1393,7 +1398,15 @@
     <Content Include="Views\Marvel\Search.cshtml" />
     <Content Include="Views\LotR\Creators.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Models\LotR\Play\Combat\" />
+    <Folder Include="Models\LotR\Play\Encounter\" />
+    <Folder Include="Models\LotR\Play\Planning\" />
+    <Folder Include="Models\LotR\Play\Quest\" />
+    <Folder Include="Models\LotR\Play\Refresh\" />
+    <Folder Include="Models\LotR\Play\Resource\" />
+    <Folder Include="Models\LotR\Play\Travel\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
