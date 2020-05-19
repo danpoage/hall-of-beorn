@@ -7,24 +7,24 @@ namespace HallOfBeorn.Models.LotR.Play
 {
     public class Effect
     {
+        public Effect()
+        {
+            Id = Guid.NewGuid();
+        }
+
+        public Guid Id { get; private set; }
         public EffectSource Source { get; set; }
         public LotRCard Card { get; set; }
+        public EffectTiming Timing { get; set; }
         public EffectType Type { get; set; }
+        public EffectDuration Duration { get; set; }
         public FrameworkStep Step  { get; set; }
         public Trigger Trigger { get; set; }
         public Func<Game, bool> Criteria { get; set; }
         public Func<Game, Choice> GetChoice { get; set; }
 
-        public List<Action<Game>> Results = new List<Action<Game>>();
+        public List<Func<Game, string>> Results = new List<Func<Game, string>>();
 
-        public void Resolve(Game game)
-        {
-            if (!Criteria(game))
-                return;
-
-            foreach (var result in Results)
-                result(game);
-        }
         //public List<Action<Game>> UndoResults = new List<Action<Game>>();
 
         public static Effect Response(LotRCard card, Trigger trigger)

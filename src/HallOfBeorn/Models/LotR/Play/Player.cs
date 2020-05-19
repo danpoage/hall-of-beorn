@@ -7,7 +7,8 @@ namespace HallOfBeorn.Models.LotR.Play
 {
     public class Player
     {
-        public Player(string name, Deck deck, IEnumerable<LotRCard> heroes)
+        public Player(
+            string name, Deck deck, IEnumerable<LotRCard> heroes)
         {
             Name = name;
             Deck = deck;
@@ -34,5 +35,19 @@ namespace HallOfBeorn.Models.LotR.Play
         public byte Threat { get; set; }
         public byte SetupHandSize { get; set; }
         public readonly List<CardInPlay> PlayArea = new List<CardInPlay>();
+
+        public IEnumerable<Effect> GetEffectsByTrigger(
+            Func<string, CardSide, IEnumerable<Effect>> lookupEffects, Trigger trigger)
+        {
+            var effects = new List<Effect>();
+
+            effects.AddRange(Hand.SelectMany(
+                    c => lookupEffects(c.Card.Slug, CardSide.Front)));
+
+            effects.AddRange(PlayArea.SelectMany(
+                c => lookupEffects(c.Card.Slug, CardSide.Front)));
+
+            return effects;
+        }
     }
 }

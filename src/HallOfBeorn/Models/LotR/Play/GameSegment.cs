@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Play
     {
         public Func<string, LotRCard> LookupCard { get; set; }
         public Func<string, CardSide, IEnumerable<Effect>> LookupEffects { get; set; }
-        public Func<Trigger, Dictionary<EffectType, List<Effect>>> FindEffectsByTrigger { get; set; }
+        public Func<Trigger, List<Effect>> LookupEffectsByTrigger { get; set; }
 
         public bool IsPlayerActionWindow { get; set; }
 

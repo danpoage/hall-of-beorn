@@ -9,15 +9,17 @@ namespace HallOfBeorn.Models.LotR.Play
     {
         public string Description { get; set; }
         public List<Option> Options = new List<Option>();
-        public int NumberOfOptionsRequired { get; set; }
-        public Func<Game, IEnumerable<Option>> IsFulfilled { get; set; }
-        public Action<Game, IEnumerable<Option>> SelectOptions { get; set; }
+        public uint MaxOptionsChosen { get; set; }
+        public Func<Game, bool> IsFulfilled { get; set; }
+        public Effect Effect { get; set; }
+        public SetupStep SetupStep { get; set; }
+        public FrameworkStep FrameworkStep { get; set; }
     }
 
     public class Option
     {
         public string Description { get; set; }
-        public List<Effect> Effects = new List<Effect>();
+        public string Value { get; set; }
         public bool IsChosen { get; set; }
     }
 }

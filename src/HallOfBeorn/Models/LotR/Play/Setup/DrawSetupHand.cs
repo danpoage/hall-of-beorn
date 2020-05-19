@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
     {
         public override IEnumerable<Effect> Execute(Game game)
         {
-            var effects = FindEffectsByTrigger(Trigger.Setup_Determine_Starting_Hand_Size);
+            var effects = LookupEffectsByTrigger(Trigger.Setup_Determine_Starting_Hand_Size);
 
             foreach (var player in game.Players)
             {
@@ -22,7 +22,7 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
                 game.Log(string.Format("Player {0} Draws {1} Cards in their Setup Hand", player.Name, player.SetupHandSize));
             }
 
-            return effects.SelectMany(ef => ef.Value);
+            return effects;
         }
     }
 }

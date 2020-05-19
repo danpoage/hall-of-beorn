@@ -45,10 +45,7 @@ namespace HallOfBeorn.Models.LotR.Play
         public Deck SecondaryQuestDeck { get; set; }
         public LotRCard MainSecondaryQuest { get; set; }
 
-        public List<Effect> PendingEffects = new List<Effect>();
-        public List<Effect> ConstantEffects = new List<Effect>();
-        public List<Effect> EndOfPhaseEffects = new List<Effect>();
-        public List<Effect> EndOfRoundEffects = new List<Effect>();
+        public PendingEffects PendingEffects = new PendingEffects();
 
         private uint eventCount = 0;
         public void Log(string description)
