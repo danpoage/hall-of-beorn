@@ -18,7 +18,10 @@ namespace HallOfBeorn.Models.LotR.Play.Repositories
 
         private readonly LotRCardRepository cardRepository;
 
-        private readonly Dictionary<string, List<Effect>> effectsBySlug
+        private readonly Dictionary<string, List<Effect>> frontEffects
+            = new Dictionary<string, List<Effect>>();
+
+        private readonly Dictionary<string, List<Effect>> backEffects
             = new Dictionary<string, List<Effect>>();
 
         private LotRCard GetCard(string slug)
@@ -28,17 +31,21 @@ namespace HallOfBeorn.Models.LotR.Play.Repositories
 
         private void Init()
         {
-            effectsBySlug["Aragorn-Core"] = new List<Effect>
+            frontEffects["Aragorn-Core"] = new List<Effect>
             {
                 Effect.Response(GetCard("Aragorn-Core"), Trigger.After_Self_Commits_to_Quest)
                     //TODO: Add cost choices and readying effect
             };
         }
 
-        public IEnumerable<Effect> GetEffects(string slug)
+        public IEnumerable<Effect> GetEffects(string slug, CardSide side)
         {
-            return effectsBySlug.ContainsKey(slug)
-                ? effectsBySlug[slug]
+            var map = side == CardSide.Front
+                ? frontEffects
+                : backEffects;
+
+            return map.ContainsKey(slug)
+                ? map[slug]
                 : Enumerable.Empty<Effect>();
         }
     }

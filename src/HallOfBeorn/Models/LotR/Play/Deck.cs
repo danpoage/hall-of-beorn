@@ -52,6 +52,22 @@ namespace HallOfBeorn.Models.LotR.Play
             }
         }
 
+        public void Load(Dictionary<string, byte> deckList, Func<string, LotRCard> lookupCard)
+        {
+            foreach (var item in deckList)
+            {
+                var card = lookupCard(item.Key);
+                if (card != null && item.Value > 0)
+                {
+                    for (var i=1;i<=item.Value;i++)
+                    {
+                        cards.Add(new CardInDeck { Card = card, Deck = this });
+                    }
+                }
+
+            }
+        }
+
         public void Load(IEnumerable<Tuple<LotRCard, byte>> cardsWithCounts)
         {
             foreach (var entry in cardsWithCounts)
