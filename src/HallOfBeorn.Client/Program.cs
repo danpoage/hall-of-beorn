@@ -96,7 +96,7 @@ namespace HallOfBeorn.Client
              };
             Func<string, LotRCard> lookupRingsDbCard = (id) => ringsDbHelper.GetCard(id, lookupSets);
 
-            var deck = new Deck();
+            var deck = new Deck{ DeckId = input[2] };
             deck.Load(ringsDbDeck.slots, lookupRingsDbCard);
 
             var heroes = ringsDbDeck.heroes.Select(h => lookupRingsDbCard(h.Key));

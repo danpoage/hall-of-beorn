@@ -57,7 +57,7 @@ namespace HallOfBeorn.Client
             switch (setId)
             {
                 case "01":
-                    return new Tuple<string, byte>("Core", cardNumber);
+                    return new Tuple<string, byte>("Core Set", cardNumber);
                 case "02":
                     return new Tuple<string,byte>( "Shadows of Mirkwood", cardNumber);
                 case "03":
