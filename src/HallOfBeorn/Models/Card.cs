@@ -106,7 +106,7 @@ namespace HallOfBeorn.Models
             {
                 return normalizedTitles.ContainsKey(DefaultLang) ?
                     normalizedTitles[DefaultLang]
-                    : string.Empty;
+                    : Title;
             }
         }
 

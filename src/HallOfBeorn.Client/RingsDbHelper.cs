@@ -25,7 +25,9 @@ namespace HallOfBeorn.Client
         //private readonly string connectionString;
 
         private const string connectionString = "Data Source=.\\RingsDB.data";
-        private const string getDeckSqlFormat = "select card_id, quantity from deck where id = '{0}';";
+        private const string getDeckCardSqlFormat = "select card_id, quantity from deck where id = '{0}';";
+        private const string getSideboardCardSqlFormat = "select card_id, quantity from sideboard where id = '{0}';";
+        private const string getDeckInfoSqlFormat = "select name, user_id, description from deck_info where id = '{0}';";
 
         private SQLiteConnection GetConnection()
         {
@@ -152,39 +154,71 @@ namespace HallOfBeorn.Client
             { 
                 id = parsedId, 
                 heroes = new Dictionary<string,byte>(), 
-                slots = new Dictionary<string,byte>()
+                slots = new Dictionary<string,byte>(),
+                sideslots = new Dictionary<string,byte>(),
             };
 
             using (var connection = GetConnection())
             {
                 connection.Open();
-                var command = connection.CreateCommand();
-                command.CommandText = string.Format(getDeckSqlFormat, deckId);
-
-                using (var reader = command.ExecuteReader())
-                {
-                    var count = 0;
-                    while (reader.Read())
-                    {
-                        var cardId = reader.GetString(0);
-                        var quantity = reader.GetByte(1);
-
-                        count++;
-                        if (count < 4)
-                        {
-                            if (!deck.heroes.ContainsKey(cardId))
-                                deck.heroes.Add(cardId, quantity);
-                        }
-                        else
-                        {
-                            if (!deck.slots.ContainsKey(cardId))
-                                deck.slots.Add(cardId, quantity);
-                        }
-                    }
-                }
+                AddDeckInfo(connection, deck);
+                AddDeckCards(connection, deck);
+                AddSideboardCards(connection, deck);
             }
 
             return deck;
+        }
+
+        private void AddDeckInfo(SQLiteConnection connection, RingsDbDeckList deck)
+        {
+            var deckInfoCommand = connection.CreateCommand();
+            deckInfoCommand.CommandText = string.Format(getDeckInfoSqlFormat, deck.id);
+
+            using (var reader = deckInfoCommand.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    deck.name = reader.GetString(0);
+                    deck.user_id = (uint)reader.GetInt32(1);
+                    deck.description_md = reader.GetString(2);
+                }
+            }
+        }
+
+        private void AddDeckCards(SQLiteConnection connection, RingsDbDeckList deck)
+        {
+            var deckCardCommand = connection.CreateCommand();
+            deckCardCommand.CommandText = string.Format(getDeckCardSqlFormat, deck.id);
+
+            using (var reader = deckCardCommand.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    var cardId = reader.GetString(0);
+                    var quantity = reader.GetByte(1);
+
+                    if (!deck.slots.ContainsKey(cardId))
+                        deck.slots.Add(cardId, quantity);
+                }
+            }
+        }
+
+        private void AddSideboardCards(SQLiteConnection connection, RingsDbDeckList deck)
+        {
+            var sideboardCardCommand = connection.CreateCommand();
+            sideboardCardCommand.CommandText = string.Format(getSideboardCardSqlFormat, deck.id);
+
+            using (var reader = sideboardCardCommand.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    var cardId = reader.GetString(0);
+                    var quantity = reader.GetByte(1);
+
+                    if (!deck.sideslots.ContainsKey(cardId))
+                        deck.sideslots.Add(cardId, quantity);
+                }
+            }
         }
     }
 }

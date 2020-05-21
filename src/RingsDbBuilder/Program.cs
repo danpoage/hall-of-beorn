@@ -4,14 +4,14 @@ namespace RingsDbBuilder
 {
     public class Program
     {
-        private const string title = "RingsDB Helper v1.0.9 (2019-07-28)";
+        private const string title = "RingsDB Helper v1.1.0 (2020-05-21)";
 
         public static void Main(string[] args)
         {
             Console.WriteLine(title);
 
             var helper = new RingsDbHelper();
-            var options = new Options(args) { Verbose = true };
+            var options = new Options(args) { Verbose = false };
             var cardLinkBuilder = new CardLinkBuilder(options);
             var popularityBuilder = new PopularityBuilder(options);
             var deckCardBuilder = new DeckCardBuilder(options);

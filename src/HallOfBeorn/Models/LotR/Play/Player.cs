@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.LotR.Play
     public class Player
     {
         public Player(
-            string name, Deck deck, IEnumerable<LotRCard> heroes)
+            string name, Deck deck, IEnumerable<LotRCard> heroes, LotRCard contract)
         {
             Name = name;
             Deck = deck;
@@ -18,6 +18,13 @@ namespace HallOfBeorn.Models.LotR.Play
                 var heroCard = new CardInPlay(deck, hero);
                 Heroes.Add(heroCard);
             }
+
+            if (contract != null)
+            {
+                var contractCard = new CardInPlay(deck, contract);
+                Contract = contractCard;
+                PlayArea.Add(contractCard);
+            }
         }
 
         public string Name { get; private set; }
@@ -25,6 +32,7 @@ namespace HallOfBeorn.Models.LotR.Play
         
         public readonly List<CardInHand> Hand = new List<CardInHand>();
         public readonly List<CardInPlay> Heroes = new List<CardInPlay>();
+        public readonly CardInPlay Contract;
 
         public PlayerStatus PlayerStatus { get; set; }
         public SetupStep SetupStep { get; set; }

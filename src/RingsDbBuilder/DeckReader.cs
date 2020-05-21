@@ -14,11 +14,16 @@ namespace RingsDbBuilder
     {
         private const string errorFormat = "Error deserializing Deck ID {0}: {1}";
 
+        private readonly JsonSerializerSettings settings 
+            = new JsonSerializerSettings { MissingMemberHandling = MissingMemberHandling.Ignore };
+
         public bool Execute(DeckInfo info)
         {
             try
             {
-                info.Deck = JsonConvert.DeserializeObject<RingsDbDeckList>(info.Json);
+                info.Json = info.Json.Replace("\"sideslots\":[]", "\"sideslots\":{}");
+
+                info.Deck = JsonConvert.DeserializeObject<RingsDbDeckList>(info.Json, settings);
                 return info.Deck != null;
             }
             catch (Exception ex)

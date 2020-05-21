@@ -13,6 +13,7 @@ namespace HallOfBeorn.Models.LotR.Play
 
         public string Name { get; set; }
         public string DeckId { get; set; }
+        public string Description { get; set; }
         public IEnumerable<CardInDeck> Cards { get { return cards; } }
         public IEnumerable<CardInDiscard> DiscardPile { get { return discardPile; } }
         public IEnumerable<CardOutOfPlay> SideboardCards { get { return sideboardCards; } }
@@ -52,20 +53,30 @@ namespace HallOfBeorn.Models.LotR.Play
             }
         }
 
-        public void Load(Dictionary<string, byte> deckList, Func<string, LotRCard> lookupCard)
+        public IEnumerable<LotRCard> Load(Dictionary<string, byte> deckList, Func<string, LotRCard> lookupCard)
         {
+            var inPlay = new List<LotRCard>();
+
             foreach (var item in deckList)
             {
                 var card = lookupCard(item.Key);
                 if (card != null && item.Value > 0)
                 {
-                    for (var i=1;i<=item.Value;i++)
+                    if (card.CardType == CardType.Hero || card.CardType == CardType.Contract)
                     {
-                        cards.Add(new CardInDeck { Card = card, Deck = this });
+                        inPlay.Add(card);
+                    }
+                    else 
+                    {
+                        for (var i=1;i<=item.Value;i++)
+                        {
+                            cards.Add(new CardInDeck { Card = card, Deck = this });
+                        }
                     }
                 }
-
             }
+
+            return inPlay;
         }
 
         public void Load(IEnumerable<Tuple<LotRCard, byte>> cardsWithCounts)

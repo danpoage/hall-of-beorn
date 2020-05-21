@@ -60,22 +60,22 @@ namespace HallOfBeorn.Client
         private static readonly Dictionary<string, Action<Game, List<string>>> handlers 
             = new Dictionary<string,Action<Game, List<string>>>(StringComparer.OrdinalIgnoreCase){
                 { "exit", (game, input) => run = false },
-                { "player", (game, input) => AddPlayer(game, input) }
+                { "add", (game, input) => AddPlayer(game, input) },
+                { "quest", (game, input) => AddQuest(game, input) },
         };
 
         private static void AddPlayer(Game game, List<string> input)
         {
             if (input.Count < 3)
             {
-                Write("adds a player to the game");
-                Write("usage: player {Name} {RingsDB_DeckId}");
+                Write("adds a player to the game\r\nusage: add {PlayerName} {DeckId}");
                 return;
             }
 
             var ringsDbDeck = ringsDbHelper.GetDeckList(input[2]);
             if (ringsDbDeck == null)
             {
-                Write(string.Format("RingsDB Deck not found: {0}", input[2]));
+                Write(string.Format("RingsDB deck not found: {0}", input[2]));
                 return;
             }
 
@@ -96,15 +96,46 @@ namespace HallOfBeorn.Client
              };
             Func<string, LotRCard> lookupRingsDbCard = (id) => ringsDbHelper.GetCard(id, lookupSets);
 
-            var deck = new Deck{ DeckId = input[2] };
-            deck.Load(ringsDbDeck.slots, lookupRingsDbCard);
+            var deck = new Deck{ 
+                DeckId = input[2], 
+                Name = ringsDbDeck.name.Replace("’", "'"), 
+                Description = ringsDbDeck.description_md 
+            };
+            var starters = deck.Load(ringsDbDeck.slots, lookupRingsDbCard);
 
-            var heroes = ringsDbDeck.heroes.Select(h => lookupRingsDbCard(h.Key));
+            var heroes = starters.Where(st => st.CardType == CardType.Hero);
+            var contract = starters.FirstOrDefault(st => st.CardType == CardType.Contract);
             
-            players.Add(new Player(input[0], deck, heroes));
+            players.Add(new Player(input[0], deck, heroes, contract));
             
-            Write(
-                string.Format("Added Player {0} Deck and Heroes: {1}", input[0], string.Join(", ", heroes.Select(h => h.Title))));
+            var playerName = input[1];
+            var deckName = deck.Name;
+            var contractName = contract != null ? contract.Title : "None";
+            var heroNames = string.Join(", ", heroes.Select(h => h.NormalizedTitle));
+
+            Write(string.Format("\r\nPlayer:   {0}\r\nDeck:     {1}\r\nHeroes:   {2}\r\nContract: {3}", 
+                playerName, deckName, heroNames, contractName));
+        }
+
+        private static void AddQuest(Game game, List<string> input)
+        {
+            if (input.Count < 2)
+            {
+                Write("selects a quest for the game\r\nusage: quest {name}");
+                return;
+            }
+
+            var name = string.Join(" ", input).Substring(6).Trim();
+            var scenario = productRepository.Products().SelectMany(p => p.Scenarios())
+                .FirstOrDefault(sc => sc.Title == name || sc.AlternateTitle == name || sc.Slug == name);
+            if (scenario == null)
+            {
+                Write(string.Format("Quest not found: {0}", name));
+                return;
+            }
+
+            game.Scenario = scenario;
+            Write(string.Format("Quest:   {0}\r\nProduct: {1}", scenario.Title, scenario.ProductName));
         }
 
         private static void Prompt()
