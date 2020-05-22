@@ -408,6 +408,7 @@
     <Compile Include="Models\LotR\Compact\Trait.cs" />
     <Compile Include="Models\ICreator.cs" />
     <Compile Include="Models\LotR\Extensions.cs" />
+    <Compile Include="Models\LotR\Play\CardRef.cs" />
     <Compile Include="Models\LotR\Play\CardInDeck.cs" />
     <Compile Include="Models\LotR\Play\CardInDiscard.cs" />
     <Compile Include="Models\LotR\Play\CardInHand.cs" />

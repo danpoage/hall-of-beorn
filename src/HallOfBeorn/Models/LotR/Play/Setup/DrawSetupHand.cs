@@ -28,6 +28,29 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
                 var hand = player.Deck.Draw(player.SetupHandSize);
                 player.Hand.AddRange(hand);
                 game.Log(string.Format("Player {0} Draws {1} Cards in their Setup Hand", player.Name, player.SetupHandSize));
+
+                var mulliganChoice = new Choice { 
+                    Description = string.Format("Does {0} want to take a mulligan?", player.Name),
+                    MaxOptionsChosen = 1,
+                };
+                mulliganChoice.Options.Add(new Option { Description = "Keep your starting hand", Context = player.Name, IsDecline = true });
+                mulliganChoice.Options.Add(new Option { Description = "Draw a new starting hand", Context = player.Name, IsAccept = true });
+                
+                var mulliganEffect = Effect.Create(SetupStep.Setup_Draw_Setup_Hand, EffectTiming.After, Trigger.Setup_Draw_Setup_Hand,
+                    string.Format("Player {0} may take a mulligan", player.Name))
+                    .WithCriteria((gm) => true)
+                    .WithChoice(mulliganChoice)
+                    .Result((gm) => {
+                        var mulliganPlayer = gm.Players.First(p => p.Name == player.Name);
+                        var oldHand = mulliganPlayer.Hand.ToList();
+                        mulliganPlayer.Hand.Clear();
+                        mulliganPlayer.Deck.ShuffleIntoDeck(oldHand);
+                        var newHand = mulliganPlayer.Deck.Draw(mulliganPlayer.SetupHandSize);
+                        mulliganPlayer.Hand.AddRange(newHand);
+                        return string.Format("Player {0} Takes a Mulligan, Drawing {1} Cards", mulliganPlayer.Name, mulliganPlayer.SetupHandSize);
+                    });
+
+                effects.Add(mulliganEffect);
             }
 
             return effects;

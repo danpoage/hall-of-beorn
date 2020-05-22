@@ -27,7 +27,7 @@ namespace HallOfBeorn.Models.LotR.Play
             foreach (var draw in draws)
             {
                 cards.Remove(draw);
-                yield return new CardInHand{ Card = draw.Card, Deck = this };
+                yield return new CardInHand(this, draw.Card);
             }
         }
 
@@ -47,7 +47,7 @@ namespace HallOfBeorn.Models.LotR.Play
             foreach (var mill in mills)
             {
                 cards.Remove(mill);
-                var discard = new CardInDiscard { Card = mill.Card, Deck = this };
+                var discard = new CardInDiscard(this, mill.Card);
                 discardPile.Add(discard);
                 yield return discard;
             }
@@ -70,7 +70,7 @@ namespace HallOfBeorn.Models.LotR.Play
                     {
                         for (var i=1;i<=item.Value;i++)
                         {
-                            cards.Add(new CardInDeck { Card = card, Deck = this });
+                            cards.Add(new CardInDeck(this, card));
                         }
                     }
                 }
@@ -87,7 +87,7 @@ namespace HallOfBeorn.Models.LotR.Play
                 {
                     for (var i=1; i<=entry.Item2; i++)
                     {
-                        cards.Add(new CardInDeck { Card = entry.Item1, Deck = this });
+                        cards.Add(new CardInDeck(this, entry.Item1));
                     }
                 }
             }
@@ -101,7 +101,7 @@ namespace HallOfBeorn.Models.LotR.Play
                 {
                     for (var i=1; i<=entry.Item2; i++)
                     {
-                        sideboardCards.Add(new CardOutOfPlay { Card = entry.Item1, Deck = this });
+                        sideboardCards.Add(new CardOutOfPlay(this, entry.Item1));
                     }
                 }
             }
@@ -120,11 +120,20 @@ namespace HallOfBeorn.Models.LotR.Play
             }
         }
 
+        public void ShuffleIntoDeck(IEnumerable<CardRef> shuffles)
+        {
+            foreach (var shuffle in shuffles)
+            {
+                cards.Add(new CardInDeck(shuffle.Deck, shuffle.Card));
+            }
+            Shuffle();
+        }
+
         public void ShuffleDiscardIntoDeck()
         {
             foreach (var discard in discardPile)
             {
-                cards.Add(new CardInDeck { Deck = this, Card = discard.Card });
+                cards.Add(new CardInDeck(this, discard.Card));
             }
 
             discardPile.Clear();
@@ -149,7 +158,7 @@ namespace HallOfBeorn.Models.LotR.Play
 
         public void AddCard(LotRCard card)
         {
-            cards.Add(new CardInDeck { Deck = this, Card = card });
+            cards.Add(new CardInDeck(this, card));
         }
     }
 }

@@ -20,7 +20,8 @@ namespace HallOfBeorn.Models.LotR.Play
         public EffectTiming Timing { get; set; }
         public EffectType Type { get; set; }
         public EffectDuration Duration { get; set; }
-        public FrameworkStep Step  { get; set; }
+        public SetupStep SetupStep{ get; set; }
+        public FrameworkStep FrameworkStep  { get; set; }
         public Trigger Trigger { get; set; }
         public Func<Game, bool> Criteria { get; set; }
         public Func<Game, Choice> GetChoice { get; set; }
@@ -28,6 +29,31 @@ namespace HallOfBeorn.Models.LotR.Play
         public readonly List<Func<Game, string>> Results = new List<Func<Game, string>>();
 
         //public List<Action<Game>> UndoResults = new List<Action<Game>>();
+        public static Effect Create(SetupStep step, EffectTiming timing, Trigger trigger, string text)
+        {
+            return new Effect(text)
+            {
+                Type = EffectType.Passive,
+                Timing = timing,
+                Source = EffectSource.Framework,
+                SetupStep = step,
+                Trigger = trigger,
+                Duration = EffectDuration.None,
+            };
+        }
+
+        public static Effect Create(FrameworkStep step, EffectTiming timing, Trigger trigger, string text)
+        {
+            return new Effect(text)
+            {
+                Type = EffectType.Passive,
+                Timing = timing,
+                Source = EffectSource.Framework,
+                FrameworkStep = step,
+                Trigger = trigger,
+                Duration = EffectDuration.None,
+            };
+        }
 
         public static Effect Create(LotRCard card, Trigger trigger)
         {
@@ -78,6 +104,19 @@ namespace HallOfBeorn.Models.LotR.Play
         public Effect Auto()
         {
             this.Criteria = (g) => true;
+            return this;
+        }
+
+        public Effect WithCriteria(Func<Game, bool> criteria)
+        {
+            Criteria = criteria;
+            return this;
+        }
+
+        public Effect WithChoice(Choice choice)
+        {
+            choice.Effect = this;
+            GetChoice = (gm) => choice;
             return this;
         }
 

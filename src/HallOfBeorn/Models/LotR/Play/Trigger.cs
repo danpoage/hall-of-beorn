@@ -99,6 +99,7 @@ namespace HallOfBeorn.Models.LotR.Play
         Setup_Determine_Hero_Starting_Threat,
         Setup_Determine_Starting_Hand_Size,
         Setup_Determine_First_Player,
+        Setup_Draw_Setup_Hand,
         Setup_Setup_Quest_Card,
 
         Travel,

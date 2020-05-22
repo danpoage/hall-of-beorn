@@ -51,8 +51,11 @@ namespace HallOfBeorn.Models.LotR.Play
             game.FrameworkStep = segment.FrameworkStep;
 
             game.PendingEffects.Clear();
-            game.PendingEffects.Load(segment.Execute(game));
             game.CurrentChoice = null;
+
+            var effects = segment.Execute(game);
+
+            game.PendingEffects.Load(effects);
         }
 
         private IEnumerable<Effect> GetEffectsByTrigger(string slug, CardSide side, Trigger trigger)
@@ -159,19 +162,19 @@ namespace HallOfBeorn.Models.LotR.Play
             return true;
         }
 
-        private void ExecuteSegment(GameSegment segment)
+        private bool ExecuteSegment(GameSegment segment)
         {
             if (game.Phase == Phase.None && game.RoundNumber == 0)
             {
                 if (game.SetupStep >= segment.SetupStep)
                 {
-                    return;
+                    return true;
                 }
             } else
             {
                 if (game.Phase > segment.Phase || game.FrameworkStep >= segment.FrameworkStep)
                 {
-                    return;
+                    return true;
                 }
             }
 
@@ -189,16 +192,21 @@ namespace HallOfBeorn.Models.LotR.Play
                 if (!priority())
                 {
                     //An effect at this priority requires a choice, exit
-                    return;
+                    return false;
                 }
             }
+
+            return true;
         }
 
         private void Setup()
         {
             foreach (var segment in setupSegments)
             {
-                ExecuteSegment(segment);
+                if(!ExecuteSegment(segment))
+                {
+                    return;
+                }
             }
         }
 
@@ -206,7 +214,7 @@ namespace HallOfBeorn.Models.LotR.Play
         {
             if (game.CurrentChoice != null)
             {
-                if (!game.CurrentChoice.IsFulfilled(game)
+                if (!game.CurrentChoice.IsCompleted(game)
                     || !CheckAndExecuteEffect(game.CurrentChoice.Effect))
                 {
                     return;

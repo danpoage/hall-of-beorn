@@ -6,8 +6,16 @@ using System.Web;
 namespace HallOfBeorn.Models.LotR.Play
 {
     public class CardOutOfPlay
+        : CardRef
     {
-        public Deck Deck { get; set; }
-        public LotRCard Card { get; set; }
+        public CardOutOfPlay(Deck deck, LotRCard card)
+            : base(deck, card)
+        {
+        }
+
+        public override string ToString()
+        {
+            return Card.Title + " [Out of Play]";
+        }
     }
 }

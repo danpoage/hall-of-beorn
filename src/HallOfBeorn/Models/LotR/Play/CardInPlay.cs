@@ -6,19 +6,21 @@ using System.Web;
 namespace HallOfBeorn.Models.LotR.Play
 {
     public class CardInPlay
+        : CardRef
     {
         public CardInPlay(Deck deck, LotRCard card)
+            : base(deck, card)
         {
-            Deck = deck;
-            Card = card;
         }
 
-        public Deck Deck { get; set; }
-        public LotRCard Card { get; set; }
-        public CardSide Side { get; set; }
-
-        public bool IsExhausted { get; set; }
+        public CardSide ActiveSide { get; set; }
+        
+        public bool IsAttacking { get; set; }
         public bool IsCommitted { get; set; }
+        public bool IsDefending { get; set; }
+        public bool IsEnteringPlay { get; set; }
+        public bool IsExhausted { get; set; }
+        public bool IsLeavingPlay { get; set; }
 
         public uint DamageTokens { get; set; }
         public uint ProgressTokens { get; set; }
