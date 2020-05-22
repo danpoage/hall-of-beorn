@@ -8,9 +8,14 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
     public class DetermineFirstPlayer
         : GameSegment
     {
+        public DetermineFirstPlayer()
+            : base(SetupStep.Setup_Determine_First_Player, Phase.None, FrameworkStep.None)
+        {
+        }
+
         public override IEnumerable<Effect> Execute(Game game)
         {
-            var firstPlayerEffect = new Effect{ 
+            var firstPlayerEffect = new Effect("Determine the First Player"){ 
                 Timing = EffectTiming.When,
                 Type = EffectType.Passive,
                 Trigger = Trigger.Setup_Determine_First_Player,

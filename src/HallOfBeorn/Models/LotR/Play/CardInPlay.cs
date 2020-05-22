@@ -15,7 +15,8 @@ namespace HallOfBeorn.Models.LotR.Play
 
         public Deck Deck { get; set; }
         public LotRCard Card { get; set; }
-        
+        public CardSide Side { get; set; }
+
         public bool IsExhausted { get; set; }
         public bool IsCommitted { get; set; }
 
@@ -25,5 +26,10 @@ namespace HallOfBeorn.Models.LotR.Play
 
         public List<CardInPlay> Attachments = new List<CardInPlay>();
         public CardInPlay GuardedBy { get; set; }
+
+        public override string ToString()
+        {
+            return Card.Title + " [In Play]";
+        }
     }
 }

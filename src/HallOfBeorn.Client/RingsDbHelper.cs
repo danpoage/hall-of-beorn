@@ -14,15 +14,7 @@ namespace HallOfBeorn.Client
     {
         public RingsDbHelper()
         {
-            //binPath = System.IO.Path.GetDirectoryName( 
-                    //System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase.Remove(0, 7))
-                    //.Remove(0, 1);
-
-            //connectionString = string.Format(connectionStringFormat, binPath);
         }
-
-        private readonly string binPath;
-        //private readonly string connectionString;
 
         private const string connectionString = "Data Source=.\\RingsDB.data";
         private const string getDeckCardSqlFormat = "select card_id, quantity from deck where id = '{0}';";

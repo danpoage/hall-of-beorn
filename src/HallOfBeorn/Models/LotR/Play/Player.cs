@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.LotR.Play
         {
             Name = name;
             Deck = deck;
+            SetupHandSize = 6;
 
             foreach (var hero in heroes)
             {

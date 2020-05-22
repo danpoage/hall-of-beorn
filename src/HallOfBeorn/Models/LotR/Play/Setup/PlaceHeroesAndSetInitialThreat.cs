@@ -8,6 +8,11 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
     public class PlaceHeroesAndSetInitialThreat
         : GameSegment
     {
+        public PlaceHeroesAndSetInitialThreat()
+            : base(SetupStep.Setup_Place_Heroes_And_Set_Initial_Threat_Levels, Phase.None, FrameworkStep.None)
+        {
+        }
+
         public override IEnumerable<Effect> Execute(Game game)
         {
             var effects = new List<Effect>();
@@ -26,15 +31,13 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
 
                 foreach (var hero in player.Heroes)
                 {
-                    var placeHero = new GameEvent { Description = "Place Hero" +  hero.Card.Title };
+                    var placeHero = new GameEvent { Description = "Placed Hero " +  hero.Card.NormalizedTitle };
                     placeHero.CardsInPlay.Add(hero);
-                    //ExecuteAutomaticEffects(placeHeroEffects);
                     game.Log(placeHero);
                     player.PlayArea.Add(hero);
 
-                    var determineThreat = new GameEvent{Description = "Determine Starting Threat for Hero " + hero.Card.Title};
+                    var determineThreat = new GameEvent{Description = "Determine Starting Threat for Hero " + hero.Card.NormalizedTitle};
                     determineThreat.CardsInPlay.Add(hero);
-                    //ExecuteAutomaticEffects(determineThreatEffects);
                     game.Log(determineThreat);
                     player.Threat += hero.Card.ThreatCost.Value;
                 }

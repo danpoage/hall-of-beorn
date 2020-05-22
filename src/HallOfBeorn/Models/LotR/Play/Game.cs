@@ -19,6 +19,11 @@ namespace HallOfBeorn.Models.LotR.Play
 
     public class Game
     {
+        public Game()
+        {
+            Mode = GameMode.Normal;
+        }
+
         public uint RoundNumber { get; set; }
         public Phase Phase { get; set; }
 
@@ -26,7 +31,17 @@ namespace HallOfBeorn.Models.LotR.Play
         public FrameworkStep FrameworkStep { get; set; }
         public EffectType EffectType { get; set; }
 
+        private byte GetQuantity(ScenarioCard card)
+        {
+            if (Mode == GameMode.Easy)
+                return (byte)card.EasyQuantity;
+            else if (Mode == GameMode.Nightmare)
+                return (byte)card.NightmareQuantity;
+            else return (byte)card.NormalQuantity;
+        }
+
         public Scenario Scenario { get; set; }
+
         public GameMode Mode { get; set; }
 
         public List<Player> Players = new List<Player>();
@@ -39,11 +54,11 @@ namespace HallOfBeorn.Models.LotR.Play
         public Deck EncounterDeck { get; set; }
         public Deck SecondaryEncounterDeck { get; set; }
 
-        public Deck PrimaryQuestDeck { get; set; }
-        public LotRCard MainPrimaryQuest { get; set; }
+        public Deck QuestDeck { get; set; }
+        public CardInPlay MainQuest { get; set; }
 
         public Deck SecondaryQuestDeck { get; set; }
-        public LotRCard MainSecondaryQuest { get; set; }
+        public CardInPlay MainSecondaryQuest { get; set; }
 
         public PendingEffects PendingEffects = new PendingEffects();
 
@@ -61,7 +76,7 @@ namespace HallOfBeorn.Models.LotR.Play
         public List<GameEvent> GameEvents = new List<GameEvent>();
 
         public GameSegment CurrentSegment { get; set; }
-        public GameSegment NextSegement { get; set; }
+        public List<GameSegment> Segments { get; set; }
         public Choice CurrentChoice { get; set; }
     }
 }

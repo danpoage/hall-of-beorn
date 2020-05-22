@@ -24,7 +24,9 @@ namespace HallOfBeorn.Models.LotR.Play
 
         public void Load(IEnumerable<Effect> effects)
         {
-            //TODO: Implement this with dictionaries
+            PassiveEffects.AddRange(effects.Where(ef => ef.Type == EffectType.Passive));
+            ForcedEffects.AddRange(effects.Where(ef => ef.Type == EffectType.Forced));
+            ResponseEffects.AddRange(effects.Where(ef => ef.Type == EffectType.Response));
         }
     }
 
@@ -48,7 +50,9 @@ namespace HallOfBeorn.Models.LotR.Play
 
         public void Load(IEnumerable<Effect> effects)
         {
-            //TODO: Implement this with dictionaries
+            PassiveEffects.AddRange(effects.Where(ef => ef.Type == EffectType.Passive));
+            ForcedEffects.AddRange(effects.Where(ef => ef.Type == EffectType.Forced));
+            ResponseEffects.AddRange(effects.Where(ef => ef.Type == EffectType.Response));
         }
     }
 
@@ -72,7 +76,9 @@ namespace HallOfBeorn.Models.LotR.Play
 
         public void Load(IEnumerable<Effect> effects)
         {
-            //TODO: Implement this with dictionaries
+            PassiveEffects.AddRange(effects.Where(ef => ef.Type == EffectType.Passive));
+            ForcedEffects.AddRange(effects.Where(ef => ef.Type == EffectType.Forced));
+            ResponseEffects.AddRange(effects.Where(ef => ef.Type == EffectType.Response));
         }
     }
 
@@ -92,7 +98,7 @@ namespace HallOfBeorn.Models.LotR.Play
 
         public void Load(IEnumerable<Effect> effects)
         {
-            //TODO: Implement this with dictionaries
+            ActionEffects.AddRange(effects.Where(ef => ef.Type == EffectType.Action));
         }
     }
 
@@ -121,6 +127,11 @@ namespace HallOfBeorn.Models.LotR.Play
             var whenEffects = effects.Where(ef => ef.Timing == EffectTiming.When);
             var afterEffects = effects.Where(ef => ef.Timing == EffectTiming.After);
             var playerEffects = effects.Where(ef => ef.Timing == EffectTiming.None);
+
+            Cancel.Load(cancelEffects);
+            When.Load(whenEffects);
+            After.Load(afterEffects);
+            Player.Load(playerEffects);
         }
 
         public void Remove(Guid id)

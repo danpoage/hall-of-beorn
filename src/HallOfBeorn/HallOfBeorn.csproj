@@ -436,7 +436,7 @@
     <Compile Include="Models\LotR\Play\Setup\FollowScenarioSetupInstructions.cs" />
     <Compile Include="Models\LotR\Play\Setup\PlaceHeroesAndSetInitialThreat.cs" />
     <Compile Include="Models\LotR\Play\Setup\SetupQuestCard.cs" />
-    <Compile Include="Models\LotR\Play\Setup\ShufflePlayerDecks.cs" />
+    <Compile Include="Models\LotR\Play\Setup\ShuffleDecks.cs" />
     <Compile Include="Models\LotR\Play\Trigger.cs" />
     <Compile Include="Models\LotR\ProductGroups\VengeanceOfMordorProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\EredMithrinProductGroup.cs" />

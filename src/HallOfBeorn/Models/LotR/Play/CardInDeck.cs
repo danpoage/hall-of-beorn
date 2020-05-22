@@ -9,5 +9,10 @@ namespace HallOfBeorn.Models.LotR.Play
     {
         public LotRCard Card { get; set; }
         public Deck Deck { get; set; }
+
+        public override string ToString()
+        {
+            return Card.Title + " [In Deck]";
+        }
     }
 }

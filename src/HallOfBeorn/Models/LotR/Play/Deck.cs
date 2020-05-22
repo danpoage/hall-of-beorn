@@ -21,8 +21,8 @@ namespace HallOfBeorn.Models.LotR.Play
         public IEnumerable<CardInHand> Draw(int count)
         {
             var draws = cards.Count <= count
-                ? cards.Take(count)
-                : cards.ToList();
+                ? cards.ToList()
+                : cards.Take(count).ToList();
 
             foreach (var draw in draws)
             {
@@ -130,6 +130,26 @@ namespace HallOfBeorn.Models.LotR.Play
             discardPile.Clear();
 
             Shuffle();
+        }
+
+        public LotRCard RemoveCardByTitle(string title)
+        {
+            var card = cards.FirstOrDefault(
+                c => c.Card.Title == title || c.Card.NormalizedTitle == title);
+
+            if (card == null)
+            {
+                return null;
+            }
+
+            cards.Remove(card);
+
+            return card.Card;
+        }
+
+        public void AddCard(LotRCard card)
+        {
+            cards.Add(new CardInDeck { Deck = this, Card = card });
         }
     }
 }

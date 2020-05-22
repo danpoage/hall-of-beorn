@@ -33,8 +33,22 @@ namespace HallOfBeorn.Models.LotR.Play.Repositories
         {
             frontEffects["Aragorn-Core"] = new List<Effect>
             {
-                Effect.Response(GetCard("Aragorn-Core"), Trigger.After_Self_Commits_to_Quest)
+                Effect.Create(GetCard("Aragorn-Core"), Trigger.After_Self_Commits_to_Quest)
                     //TODO: Add cost choices and readying effect
+            };
+
+            frontEffects["Flies-and-Spiders-Core"] = new List<Effect>
+            {
+                Effect.Create(GetCard("Flies-and-Spiders-Core"), Trigger.Setup_Setup_Quest_Card)
+                .Auto().Result((g) => {
+                    var spider = g.EncounterDeck.RemoveCardByTitle("Forest Spider");
+                    g.StagingArea.Add(new CardInPlay(g.EncounterDeck, spider));
+                    var road = g.EncounterDeck.RemoveCardByTitle("Old Forest Road");
+                    g.StagingArea.Add(new CardInPlay(g.EncounterDeck, road));
+                    g.EncounterDeck.Shuffle();
+                    return "Search the encounter deck for 1 copy of the Forest Spider and 1 copy of the Old Forest Road, and add them to the staging area. Then, shuffle the encounter deck.";
+                })
+                //.
             };
         }
 

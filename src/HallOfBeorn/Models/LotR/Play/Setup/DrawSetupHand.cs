@@ -8,8 +8,16 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
     public class DrawSetupHand
         : GameSegment
     {
+        public DrawSetupHand()
+            : base(SetupStep.Setup_Draw_Setup_Hand, Phase.None, FrameworkStep.None)
+        {
+        }
+
         public override IEnumerable<Effect> Execute(Game game)
         {
+            game.Phase = Phase.None;
+            game.SetupStep = SetupStep.Setup_Draw_Setup_Hand;
+
             var effects = LookupEffectsByTrigger(Trigger.Setup_Determine_Starting_Hand_Size);
 
             foreach (var player in game.Players)

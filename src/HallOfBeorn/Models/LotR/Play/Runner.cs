@@ -20,15 +20,16 @@ namespace HallOfBeorn.Models.LotR.Play
         private readonly Func<string, LotRCard> lookupCard;
         private readonly Func<string, CardSide, IEnumerable<Effect>> lookupEffects;
 
+        private readonly List<GameSegment> setupSegments = new List<GameSegment>{
+            new Setup.ShuffleDecks(),
+            new Setup.PlaceHeroesAndSetInitialThreat(),
+            new Setup.DetermineFirstPlayer(),
+            new Setup.DrawSetupHand(),
+            new Setup.SetupQuestCard(),
+            new Setup.FollowScenarioSetupInstructions() };
+
         private readonly Dictionary<Phase, List<GameSegment>> phaseSegments = new Dictionary<Phase, List<GameSegment>>
         {
-            { Phase.None, new List<GameSegment>{
-                new Setup.ShufflePlayerDecks(),
-                new Setup.PlaceHeroesAndSetInitialThreat(),
-                new Setup.DetermineFirstPlayer(),
-                new Setup.DrawSetupHand(),
-                new Setup.SetupQuestCard(),
-                new Setup.FollowScenarioSetupInstructions() } },
             { Phase.Resource, new List<GameSegment>() },
             { Phase.Planning, new List<GameSegment>() },
             { Phase.Quest, new List<GameSegment>() },
@@ -45,6 +46,10 @@ namespace HallOfBeorn.Models.LotR.Play
             segment.LookupEffectsByTrigger = (trigger) => LookupEffectsByTrigger(trigger);
 
             game.CurrentSegment = segment;
+            game.SetupStep = segment.SetupStep;
+            game.Phase = segment.Phase;
+            game.FrameworkStep = segment.FrameworkStep;
+
             game.PendingEffects.Clear();
             game.PendingEffects.Load(segment.Execute(game));
             game.CurrentChoice = null;
@@ -134,7 +139,10 @@ namespace HallOfBeorn.Models.LotR.Play
                 return true;
             }
 
-            var choice = effect.GetChoice(game);
+            var choice = effect.GetChoice != null
+            ? effect.GetChoice(game)
+            : null;
+
             if (choice != null)
             {
                 choice.Effect = effect;
@@ -151,14 +159,47 @@ namespace HallOfBeorn.Models.LotR.Play
             return true;
         }
 
-        public void Initialize(
-            IEnumerable<Player> players, Scenario scenario, GameMode mode)
+        private void ExecuteSegment(GameSegment segment)
         {
-            game.Players.Clear();
-            game.Players.AddRange(players);
+            if (game.Phase == Phase.None && game.RoundNumber == 0)
+            {
+                if (game.SetupStep >= segment.SetupStep)
+                {
+                    return;
+                }
+            } else
+            {
+                if (game.Phase > segment.Phase || game.FrameworkStep >= segment.FrameworkStep)
+                {
+                    return;
+                }
+            }
 
-            game.Scenario = scenario;
-            game.Mode = mode;
+            SetCurrentSegment(segment);
+
+            var priorities = new List<Func<bool>>{
+                () => ExecuteCancelEffects(),
+                () => ExecuteWhenEffects(),
+                () => ExecuteAfterEffects(),
+                () => ExecuteActionEffects(),
+            };
+
+            foreach (var priority in priorities)
+            {
+                if (!priority())
+                {
+                    //An effect at this priority requires a choice, exit
+                    return;
+                }
+            }
+        }
+
+        private void Setup()
+        {
+            foreach (var segment in setupSegments)
+            {
+                ExecuteSegment(segment);
+            }
         }
 
         public void Run()
@@ -175,28 +216,16 @@ namespace HallOfBeorn.Models.LotR.Play
                 game.PendingEffects.Remove(game.CurrentChoice.Effect.Id);
             }
 
-            foreach (var segment in phaseSegments[game.Phase])
+            if (game.Phase == Phase.None && game.RoundNumber == 0)
             {
-                SetCurrentSegment(segment);
+                Setup();
+                return;
+            }
 
-                var effects = segment.Execute(game);
-                game.PendingEffects.Load(effects);
-
-                var priorities = new List<Func<bool>>{
-                    () => ExecuteCancelEffects(),
-                    () => ExecuteWhenEffects(),
-                    () => ExecuteAfterEffects(),
-                    () => ExecuteActionEffects(),
-                };
-
-                foreach (var priority in priorities)
-                {
-                    if (!priority())
-                    {
-                        //An effect at this priority requires a choice, exit
-                        return;
-                    }
-                }
+            var segments = phaseSegments[game.Phase];
+            foreach (var segment in segments)
+            {
+                ExecuteSegment(segment);
             }
         }
     }
