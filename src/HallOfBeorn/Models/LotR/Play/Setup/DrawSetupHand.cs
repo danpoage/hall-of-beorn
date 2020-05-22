@@ -29,8 +29,10 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
                 player.Hand.AddRange(hand);
                 game.Log(string.Format("Player {0} Draws {1} Cards in their Setup Hand", player.Name, player.SetupHandSize));
 
+                var handList = string.Join("\r\n", player.Hand.Select(h => h.Card.NormalizedTitle));
+
                 var mulliganChoice = new Choice { 
-                    Description = string.Format("Does {0} want to take a mulligan?", player.Name),
+                    Description = string.Format("Does {0} want to take a mulligan?\r\nExisting hand:\r\n{1}", player.Name, handList),
                     MaxOptionsChosen = 1,
                 };
                 mulliganChoice.Options.Add(new Option { Description = "Keep your starting hand", Context = player.Name, IsDecline = true });

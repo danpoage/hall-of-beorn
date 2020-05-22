@@ -18,6 +18,11 @@ namespace HallOfBeorn.Models.LotR.Play
         public Effect Effect { get; set; }
         public SetupStep SetupStep { get; set; }
         public FrameworkStep FrameworkStep { get; set; }
+
+        public override string ToString()
+        {
+            return Description;
+        }
     }
 
     public class Option
@@ -29,5 +34,10 @@ namespace HallOfBeorn.Models.LotR.Play
         public bool IsDecline { get; set; }
         public bool IsAccept { get; set; }
         public bool IsSelect { get; set; }
+
+        public override string ToString()
+        {
+            return Description;
+        }
     }
 }
