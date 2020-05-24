@@ -80,10 +80,35 @@ namespace HallOfBeorn.Client
                 return;
             }
 
+            if (input.Count > 0)
+            {
+                foreach (var value in input)
+                {
+                    var index = 0;
+                    if (!int.TryParse(value, out index)
+                        || index < 1 || index > game.CurrentChoice.Options.Count)
+                    {
+                        Write("{0} is not a valid option for this choice", value);
+                    }
+                    else
+                    {
+                        game.CurrentChoice.Options[index - 1].IsChosen = true;
+                    }
+                }
+
+                var selectedCount = game.CurrentChoice.Options.Where(opt => opt.IsChosen).Count();
+                if (game.CurrentChoice.MaxOptionsChosen == selectedCount)
+                {
+                    runner.Run();
+                    return;
+                }
+            }
+
             var options = new Dictionary<string, string>();
             for (var i=0;i<game.CurrentChoice.Options.Count;i++)
             {
-                options.Add((i + 1).ToString(), game.CurrentChoice.Options[i].Description);
+                var selected = game.CurrentChoice.Options[i].IsChosen ? " [X]" : " [ ]";
+                options.Add((i + 1).ToString(), game.CurrentChoice.Options[i].Description + selected);
             }
 
             Write(game.CurrentChoice.Description, options);

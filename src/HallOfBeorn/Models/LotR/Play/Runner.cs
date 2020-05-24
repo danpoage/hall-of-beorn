@@ -210,18 +210,41 @@ namespace HallOfBeorn.Models.LotR.Play
             }
         }
 
+        private bool ResolveCurrentChoice()
+        {
+            if (game.CurrentChoice.IsCompleted(game, game.CurrentChoice))
+            {
+                if (game.CurrentChoice.ChoiceType == ChoiceType.Exclusive)
+                {
+                    if (game.CurrentChoice.IsAccepted(game, game.CurrentChoice))
+                    {
+                        if (!CheckAndExecuteEffect(game.CurrentChoice.Effect))
+                        {
+                            return false;
+                        }
+                    }
+                } else if (game.CurrentChoice.ChoiceType == ChoiceType.Selection)
+                {
+                    if (!CheckAndExecuteEffect(game.CurrentChoice.Effect))
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            game.CurrentChoice = null;
+            game.PendingEffects.Remove(game.CurrentChoice.Effect.Id);
+            return true;
+        }
+
         public void Run()
         {
             if (game.CurrentChoice != null)
             {
-                if (!game.CurrentChoice.IsCompleted(game)
-                    || !CheckAndExecuteEffect(game.CurrentChoice.Effect))
+                if (!ResolveCurrentChoice())
                 {
                     return;
                 }
-
-                game.CurrentChoice = null;
-                game.PendingEffects.Remove(game.CurrentChoice.Effect.Id);
             }
 
             if (game.Phase == Phase.None && game.RoundNumber == 0)

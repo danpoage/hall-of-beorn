@@ -33,7 +33,7 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
             } else {
                 firstPlayerEffect.GetChoice = (gm) => 
                     {
-                        var choice  = new Choice{ 
+                        var choice  = new Choice(ChoiceType.Exclusive){ 
                             SetupStep = SetupStep.Setup_Determine_First_Player, 
                             MaxOptionsChosen = 1 
                         };
