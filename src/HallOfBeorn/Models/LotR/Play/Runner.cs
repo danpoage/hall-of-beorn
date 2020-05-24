@@ -7,11 +7,14 @@ namespace HallOfBeorn.Models.LotR.Play
 {
     public class Runner
     {
-        public Runner(Game game,             
+        public Runner(Game game,
+            Action<string> onLog,
             Func<string, LotRCard> lookupCard,
             Func<string, CardSide, IEnumerable<Effect>> lookupEffects)
         {
             this.game = game;
+            game.OnLog = onLog;
+
             this.lookupCard = lookupCard;
             this.lookupEffects = lookupEffects;
         }
@@ -26,17 +29,29 @@ namespace HallOfBeorn.Models.LotR.Play
             new Setup.DetermineFirstPlayer(),
             new Setup.DrawSetupHand(),
             new Setup.SetupQuestCard(),
-            new Setup.FollowScenarioSetupInstructions() };
+            new Setup.FollowScenarioSetupInstructions(),
+            new Setup.EndOfSetup(),
+        };
 
         private readonly Dictionary<Phase, List<GameSegment>> phaseSegments = new Dictionary<Phase, List<GameSegment>>
         {
-            { Phase.Resource, new List<GameSegment>() },
-            { Phase.Planning, new List<GameSegment>() },
-            { Phase.Quest, new List<GameSegment>() },
+            { Phase.Resource, new List<GameSegment>{
+                new Resource.StartOfRound(),
+                new Resource.EndOfResourcePhase(),
+            } },
+            { Phase.Planning, new List<GameSegment>{
+                new Planning.EndOfPlanningPhase(),
+            } },
+            { Phase.Quest, new List<GameSegment>{
+                new Quest.CommitCharacters(),
+                new Quest.EndOfQuestPhase(),
+            } },
             { Phase.Travel, new List<GameSegment>() },
             { Phase.Encounter, new List<GameSegment>() },
             { Phase.Combat, new List<GameSegment>() },
-            { Phase.Refresh, new List<GameSegment>() },
+            { Phase.Refresh, new List<GameSegment>{
+                new Refresh.EndOfRound(),
+            } },
         };
 
         private void SetCurrentSegment(GameSegment segment)
@@ -153,11 +168,7 @@ namespace HallOfBeorn.Models.LotR.Play
                 return false;
             }
 
-            foreach (var result in effect.Results)
-            {
-                var message = result(game);
-                game.Log(message);
-            }
+            ResolveResults(effect.AcceptResults);
 
             return true;
         }
@@ -170,7 +181,8 @@ namespace HallOfBeorn.Models.LotR.Play
                 {
                     return true;
                 }
-            } else
+            }
+            else
             {
                 if (game.Phase > segment.Phase || game.FrameworkStep >= segment.FrameworkStep)
                 {
@@ -199,45 +211,76 @@ namespace HallOfBeorn.Models.LotR.Play
             return true;
         }
 
-        private void Setup()
+        private bool Setup()
         {
             foreach (var segment in setupSegments)
             {
                 if(!ExecuteSegment(segment))
                 {
-                    return;
+                    return false;
                 }
+            }
+            return true;
+        }
+
+        private void ResolveResults(IEnumerable<Func<Game, string>> results)
+        {
+            foreach (var result in results)
+            {
+                var message = result(game);
+                game.Log(message);
             }
         }
 
         private bool ResolveCurrentChoice()
         {
-            if (game.CurrentChoice.IsCompleted(game, game.CurrentChoice))
+            if (game.CurrentChoice.IsCompleted(game, game.CurrentChoice.Options))
             {
                 if (game.CurrentChoice.ChoiceType == ChoiceType.Exclusive)
                 {
-                    if (game.CurrentChoice.IsAccepted(game, game.CurrentChoice))
+                    if (game.CurrentChoice.IsAccepted(game, game.CurrentChoice.Options))
                     {
-                        if (!CheckAndExecuteEffect(game.CurrentChoice.Effect))
-                        {
-                            return false;
-                        }
+                        ResolveResults(game.CurrentChoice.Effect.AcceptResults);
                     }
-                } else if (game.CurrentChoice.ChoiceType == ChoiceType.Selection)
-                {
-                    if (!CheckAndExecuteEffect(game.CurrentChoice.Effect))
+                    else
                     {
-                        return false;
+                        ResolveResults(game.CurrentChoice.Effect.DeclineResults);
+                    }
+                }
+                else if (game.CurrentChoice.ChoiceType == ChoiceType.Selection)
+                {
+                    if (game.CurrentChoice.IsAccepted(game, game.CurrentChoice.Options))
+                    {
+                        ResolveResults(game.CurrentChoice.Effect.AcceptResults);
                     }
                 }
             }
 
-            game.CurrentChoice = null;
             game.PendingEffects.Remove(game.CurrentChoice.Effect.Id);
+            game.CurrentChoice = null;
+            
             return true;
         }
 
-        public void Run()
+        public void Round()
+        {
+            var run = true;
+            while (run)
+            {
+                var currentPhase = game.Phase;
+                var segments = phaseSegments[game.Phase];
+                foreach (var segment in segments)
+                {
+                    run = ExecuteSegment(segment);
+                    if (!run)
+                    {
+                        return;
+                    }
+                }
+            }
+        }
+
+        public void Play()
         {
             if (game.CurrentChoice != null)
             {
@@ -249,15 +292,13 @@ namespace HallOfBeorn.Models.LotR.Play
 
             if (game.Phase == Phase.None && game.RoundNumber == 0)
             {
-                Setup();
-                return;
+                if (!Setup())
+                {
+                    return;
+                }
             }
 
-            var segments = phaseSegments[game.Phase];
-            foreach (var segment in segments)
-            {
-                ExecuteSegment(segment);
-            }
+            Round();
         }
     }
 }

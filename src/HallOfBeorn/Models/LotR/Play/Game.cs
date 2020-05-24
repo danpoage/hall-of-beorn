@@ -62,6 +62,8 @@ namespace HallOfBeorn.Models.LotR.Play
 
         public PendingEffects PendingEffects = new PendingEffects();
 
+        public Action<string> OnLog { get; set; }
+
         private uint eventCount = 0;
         public void Log(string description)
         {
@@ -70,6 +72,10 @@ namespace HallOfBeorn.Models.LotR.Play
         public void Log(GameEvent entry)
         {
             eventCount++;
+            if (OnLog != null)
+            {
+                OnLog(entry.Description);
+            }
             entry.Number = eventCount;
             GameEvents.Add(entry);
         }

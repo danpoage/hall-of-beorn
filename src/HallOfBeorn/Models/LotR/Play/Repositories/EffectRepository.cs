@@ -40,7 +40,7 @@ namespace HallOfBeorn.Models.LotR.Play.Repositories
             frontEffects["Flies-and-Spiders-Core"] = new List<Effect>
             {
                 Effect.Create(GetCard("Flies-and-Spiders-Core"), Trigger.Setup_Setup_Quest_Card)
-                .Auto().Result((g) => {
+                .Auto().Accept((g) => {
                     var spider = g.EncounterDeck.RemoveCardByTitle("Forest Spider");
                     g.StagingArea.Add(new CardInPlay(g.EncounterDeck, spider));
                     var road = g.EncounterDeck.RemoveCardByTitle("Old Forest Road");

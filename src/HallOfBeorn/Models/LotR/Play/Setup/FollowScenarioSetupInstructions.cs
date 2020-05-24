@@ -15,14 +15,7 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
 
         public override IEnumerable<Effect> Execute(Game game)
         {
-            var effects = new List<Effect>();
-
-            //TODO: Get effects from A-side of quest card 1
-
-            game.RoundNumber = 1;
-            game.Phase = Phase.Resource;
-
-            return effects;
+            return new List<Effect>();
         }
     }
 }

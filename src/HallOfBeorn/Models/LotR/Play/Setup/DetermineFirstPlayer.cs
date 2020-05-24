@@ -24,7 +24,7 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
 
             if (game.Players.Count == 1)
             {
-                firstPlayerEffect.Results.Add((gm) =>
+                firstPlayerEffect.AcceptResults.Add((gm) =>
                 {
                     var first = gm.Players.FirstOrDefault();
                     first.IsFirstPlayer = true;
@@ -48,7 +48,7 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
                         return choice;
                     };
 
-                firstPlayerEffect.Results.Add((gm) =>
+                firstPlayerEffect.AcceptResults.Add((gm) =>
                 {
                     var first = gm.Players.FirstOrDefault(p => p.Name ==
                         gm.CurrentChoice.Options.FirstOrDefault(opt => opt.IsChosen).Value);

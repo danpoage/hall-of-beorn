@@ -427,13 +427,20 @@
     <Compile Include="Models\LotR\Play\GameSegment.cs" />
     <Compile Include="Models\LotR\Play\PendingEffects.cs" />
     <Compile Include="Models\LotR\Play\Phase.cs" />
+    <Compile Include="Models\LotR\Play\Planning\EndOfPlanningPhase.cs" />
     <Compile Include="Models\LotR\Play\Player.cs" />
     <Compile Include="Models\LotR\Play\PlayerStatus.cs" />
+    <Compile Include="Models\LotR\Play\Quest\CommitCharacters.cs" />
+    <Compile Include="Models\LotR\Play\Quest\EndOfQuestPhase.cs" />
+    <Compile Include="Models\LotR\Play\Refresh\EndOfRound.cs" />
     <Compile Include="Models\LotR\Play\Repositories\EffectRepository.cs" />
+    <Compile Include="Models\LotR\Play\Resource\EndOfResourcePhase.cs" />
+    <Compile Include="Models\LotR\Play\Resource\StartOfRound.cs" />
     <Compile Include="Models\LotR\Play\RingsDb\RingsDbDeckLoader.cs" />
     <Compile Include="Models\LotR\Play\Runner.cs" />
     <Compile Include="Models\LotR\Play\Setup\DetermineFirstPlayer.cs" />
     <Compile Include="Models\LotR\Play\Setup\DrawSetupHand.cs" />
+    <Compile Include="Models\LotR\Play\Setup\EndOfSetup.cs" />
     <Compile Include="Models\LotR\Play\Setup\FollowScenarioSetupInstructions.cs" />
     <Compile Include="Models\LotR\Play\Setup\PlaceHeroesAndSetInitialThreat.cs" />
     <Compile Include="Models\LotR\Play\Setup\SetupQuestCard.cs" />
@@ -1409,10 +1416,6 @@
   <ItemGroup>
     <Folder Include="Models\LotR\Play\Combat\" />
     <Folder Include="Models\LotR\Play\Encounter\" />
-    <Folder Include="Models\LotR\Play\Planning\" />
-    <Folder Include="Models\LotR\Play\Quest\" />
-    <Folder Include="Models\LotR\Play\Refresh\" />
-    <Folder Include="Models\LotR\Play\Resource\" />
     <Folder Include="Models\LotR\Play\Travel\" />
   </ItemGroup>
   <ItemGroup>

@@ -15,6 +15,9 @@ namespace HallOfBeorn.Models.LotR.Play
         After_Character_Leaves_Play,
         After_Character_Enters_Play,
         
+        After_End_of_Setup,
+        After_End_of_Round,
+
         After_Enemy_is_Revealed,
         After_Location_is_Revealed,
 
@@ -106,6 +109,7 @@ namespace HallOfBeorn.Models.LotR.Play
 
         When_Revealed,
 
+        When_Player_Commits_Characters_to_the_Quest,
         When_Self_Attacks,
         When_Self_is_Attached,
         When_Self_Overkills,

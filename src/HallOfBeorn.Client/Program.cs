@@ -31,6 +31,11 @@ namespace HallOfBeorn.Client
                 if (handlers.ContainsKey(command))
                 {
                     handlers[command](game, input);
+
+                    if (game.CurrentChoice != null)
+                    {
+                        ShowChoice(game, new List<string>());
+                    }
                 }
                 else
                 {
@@ -58,7 +63,7 @@ namespace HallOfBeorn.Client
         private static Func<string, CardSide, IEnumerable<Effect>> lookupEffects = (slug, side) => effectRepository.GetEffects(slug, side);
 
         private static readonly Game game = new Game();
-        private static readonly Runner runner = new Runner(game, lookupCard, lookupEffects);
+        private static readonly Runner runner = new Runner(game, (s) => Write(s), lookupCard, lookupEffects);
 
         private static readonly Dictionary<string, Action<Game, List<string>>> handlers 
             = new Dictionary<string,Action<Game, List<string>>>(StringComparer.OrdinalIgnoreCase){
@@ -69,7 +74,7 @@ namespace HallOfBeorn.Client
                 { "player", (g, input) => PlayerInfo(g, input) },
                 { "quest", (g, input) => AddQuest(g, input) },
                 { "staging", (g, input) => ShowStagingArea(g, input) },
-                { "start", (g, input) => Start(g, input) },
+                { "play", (g, input) => Play(g, input) },
         };
 
         private static void ShowChoice(Game game, List<string> input)
@@ -80,9 +85,9 @@ namespace HallOfBeorn.Client
                 return;
             }
 
-            if (input.Count > 0)
+            if (input.Count > 1)
             {
-                foreach (var value in input)
+                foreach (var value in input.Skip(1))
                 {
                     var index = 0;
                     if (!int.TryParse(value, out index)
@@ -99,7 +104,7 @@ namespace HallOfBeorn.Client
                 var selectedCount = game.CurrentChoice.Options.Where(opt => opt.IsChosen).Count();
                 if (game.CurrentChoice.MaxOptionsChosen == selectedCount)
                 {
-                    runner.Run();
+                    runner.Play();
                     return;
                 }
             }
@@ -137,7 +142,7 @@ namespace HallOfBeorn.Client
             Write("Staging Area", log);
         }
 
-        private static void Start(Game game, List<string> input)
+        private static void Play(Game game, List<string> input)
         {
             if (game.Players.Count == 0)
             {
@@ -150,12 +155,7 @@ namespace HallOfBeorn.Client
                 return;
             }
 
-            runner.Run();
-
-            if (game.CurrentChoice != null)
-            {
-                ShowChoice(game, new List<string>());
-            }
+            runner.Play();
         }
 
         private static void AddDeck(Game game, List<string> input)

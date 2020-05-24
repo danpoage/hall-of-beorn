@@ -41,14 +41,21 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
                     string.Format("Player {0} may take a mulligan", player.Name))
                     .WithCriteria((gm) => true)
                     .WithChoice(mulliganChoice)
-                    .Result((gm) => {
+                    .Accept((gm) => {
                         var mulliganPlayer = gm.Players.First(p => p.Name == player.Name);
                         var oldHand = mulliganPlayer.Hand.ToList();
                         mulliganPlayer.Hand.Clear();
                         mulliganPlayer.Deck.ShuffleIntoDeck(oldHand);
                         var newHand = mulliganPlayer.Deck.Draw(mulliganPlayer.SetupHandSize);
                         mulliganPlayer.Hand.AddRange(newHand);
-                        return string.Format("Player {0} Takes a Mulligan, Drawing {1} Cards", mulliganPlayer.Name, mulliganPlayer.SetupHandSize);
+                        mulliganPlayer.HasTakenMulligan = true;
+                        return string.Format("{0} accepts a mulligan, drawing {1} cards:\r\n{2}", 
+                            mulliganPlayer.Name, mulliganPlayer.SetupHandSize, string.Join("\r\n", newHand.Select(h => h.Card.Title)));
+                    })
+                    .Decline((gm) => {
+                        var mulliganPlayer = gm.Players.First(p => p.Name == player.Name);
+                        mulliganPlayer.HasTakenMulligan = false;
+                        return string.Format("{0} declines a mulligan, keeping their opening hand", mulliganPlayer.Name);
                     });
 
                 effects.Add(mulliganEffect);

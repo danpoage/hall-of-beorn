@@ -26,7 +26,8 @@ namespace HallOfBeorn.Models.LotR.Play
         public Func<Game, bool> Criteria { get; set; }
         public Func<Game, Choice> GetChoice { get; set; }
 
-        public readonly List<Func<Game, string>> Results = new List<Func<Game, string>>();
+        public readonly List<Func<Game, string>> AcceptResults = new List<Func<Game, string>>();
+        public readonly List<Func<Game, string>> DeclineResults = new List<Func<Game, string>>();
 
         //public List<Action<Game>> UndoResults = new List<Action<Game>>();
         public static Effect Create(SetupStep step, EffectTiming timing, Trigger trigger, string text)
@@ -120,9 +121,15 @@ namespace HallOfBeorn.Models.LotR.Play
             return this;
         }
 
-        public Effect Result(Func<Game, string> result)
+        public Effect Accept(Func<Game, string> result)
         {
-            this.Results.Add(result);
+            this.AcceptResults.Add(result);
+            return this;
+        }
+
+        public Effect Decline(Func<Game, string> result)
+        {
+            this.DeclineResults.Add(result);
             return this;
         }
 
