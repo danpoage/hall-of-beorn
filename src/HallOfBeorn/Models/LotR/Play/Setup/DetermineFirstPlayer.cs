@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
         : GameSegment
     {
         public DetermineFirstPlayer()
-            : base(SetupStep.Setup_Determine_First_Player, Phase.None, FrameworkStep.None)
+            : base(SetupStep.Setup_Determine_First_Player)
         {
         }
 

@@ -9,13 +9,13 @@ namespace HallOfBeorn.Models.LotR.Play.Resource
         : GameSegment
     {
         public EndOfResourcePhase()
-            : base(SetupStep.None, Phase.Resource, FrameworkStep.Resource_End)
+            : base(Phase.Resource, FrameworkStep.Resource_End)
         {
         }
 
         public override IEnumerable<Effect> Execute(Game game)
         {
-            var endOfPhaseEffect = Effect.Create(SetupStep.Setup_End, EffectTiming.After, Trigger.After_End_of_Setup, "End of resource phase")
+            var endOfPhaseEffect = Effect.Create(SetupStep.None, EffectTiming.After, Trigger.After_End_of_Phase, "End of resource phase")
                 .WithCriteria((gm) => true)
                 .Accept((gm) =>
                 {

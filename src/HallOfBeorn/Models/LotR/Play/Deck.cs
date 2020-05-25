@@ -31,6 +31,14 @@ namespace HallOfBeorn.Models.LotR.Play
             }
         }
 
+
+        public IEnumerable<CardInDiscard> Discard(IEnumerable<CardRef> cards)
+        {
+            var discarded = cards.Select(c => new CardInDiscard(c.Deck, c.Card));
+            discardPile.AddRange(discarded);
+            return discarded;
+        }
+
         public IEnumerable<CardInDeck> LookAt(int count)
         {
             return cards.Count <= count

@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
         : GameSegment
     {
         public FollowScenarioSetupInstructions()
-            : base(SetupStep.Setup_Follow_Scenario_Setup_Instructions, Phase.None, FrameworkStep.None)
+            : base(SetupStep.Setup_Follow_Scenario_Setup_Instructions)
         {
         }
 

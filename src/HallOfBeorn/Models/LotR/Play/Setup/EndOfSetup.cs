@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
         : GameSegment
     {
         public EndOfSetup()
-            : base(SetupStep.Setup_End, Phase.None, FrameworkStep.None)
+            : base(SetupStep.Setup_End)
         {
         }
 

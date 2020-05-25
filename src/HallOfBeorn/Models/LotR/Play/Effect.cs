@@ -9,11 +9,11 @@ namespace HallOfBeorn.Models.LotR.Play
     {
         public Effect(string text)
         {
-            Id = Guid.NewGuid();
+            Id = Guid.NewGuid().ToString("D");
             Text = text;
         }
 
-        public Guid Id { get; private set; }
+        public string Id { get; private set; }
         public string Text { get; private set; }
         public EffectSource Source { get; set; }
         public LotRCard Card { get; set; }
@@ -34,6 +34,7 @@ namespace HallOfBeorn.Models.LotR.Play
         {
             return new Effect(text)
             {
+                Criteria = (gm) => true,
                 Type = EffectType.Passive,
                 Timing = timing,
                 Source = EffectSource.Framework,
@@ -47,6 +48,7 @@ namespace HallOfBeorn.Models.LotR.Play
         {
             return new Effect(text)
             {
+                Criteria = (gm) => true,
                 Type = EffectType.Passive,
                 Timing = timing,
                 Source = EffectSource.Framework,
@@ -104,6 +106,13 @@ namespace HallOfBeorn.Models.LotR.Play
 
         public Effect Auto()
         {
+            this.Criteria = (g) => true;
+            return this;
+        }
+
+        public Effect Framework()
+        {
+            this.Source = EffectSource.Framework;
             this.Criteria = (g) => true;
             return this;
         }

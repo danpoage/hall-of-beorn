@@ -2,9 +2,9 @@
 {
     public enum EffectTiming
     {
-        None,
         Cancel,
         When,
         After,
+        Player
     }
 }

@@ -47,6 +47,8 @@ namespace HallOfBeorn.Models.LotR.Play
         After_Travel,
         After_Treachery_is_Revealed,
 
+        After_End_of_Phase,
+
         At_End_of_Phase,
         At_End_of_Round,
 
@@ -108,11 +110,13 @@ namespace HallOfBeorn.Models.LotR.Play
         Travel,
 
         When_Revealed,
+        When_Round_Begins,
+        When_Phase_Begins,
 
         When_Player_Commits_Characters_to_the_Quest,
         When_Self_Attacks,
         When_Self_is_Attached,
         When_Self_Overkills,
-        
+        When_Setup_Begins,
     }
 }

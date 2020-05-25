@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
         : GameSegment
     {
         public ShuffleDecks()
-            : base(SetupStep.Setup_Shuffle_Decks, Phase.None, FrameworkStep.None)
+            : base(SetupStep.Setup_Shuffle_Decks)
         {
         }
 

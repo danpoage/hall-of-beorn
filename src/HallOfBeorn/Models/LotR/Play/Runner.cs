@@ -24,6 +24,7 @@ namespace HallOfBeorn.Models.LotR.Play
         private readonly Func<string, CardSide, IEnumerable<Effect>> lookupEffects;
 
         private readonly List<GameSegment> setupSegments = new List<GameSegment>{
+            new Setup.BeginningOfSetup(),
             new Setup.ShuffleDecks(),
             new Setup.PlaceHeroesAndSetInitialThreat(),
             new Setup.DetermineFirstPlayer(),
@@ -36,20 +37,34 @@ namespace HallOfBeorn.Models.LotR.Play
         private readonly Dictionary<Phase, List<GameSegment>> phaseSegments = new Dictionary<Phase, List<GameSegment>>
         {
             { Phase.Resource, new List<GameSegment>{
-                new Resource.StartOfRound(),
+                new Resource.BeginningOfRound(),
+                new Resource.BeginningOfResourcePhase(),
                 new Resource.EndOfResourcePhase(),
             } },
             { Phase.Planning, new List<GameSegment>{
+                new Planning.BeginningOfPlanningPhase(),
                 new Planning.EndOfPlanningPhase(),
             } },
             { Phase.Quest, new List<GameSegment>{
+                new Quest.BeginningOfQuestPhase(),
                 new Quest.CommitCharacters(),
                 new Quest.EndOfQuestPhase(),
             } },
-            { Phase.Travel, new List<GameSegment>() },
-            { Phase.Encounter, new List<GameSegment>() },
-            { Phase.Combat, new List<GameSegment>() },
+            { Phase.Travel, new List<GameSegment>{
+                new Travel.BeginningOfTravelPhase(),
+                new Travel.EndOfTravelPhase(),
+            } },
+            { Phase.Encounter, new List<GameSegment>{
+                new Encounter.BeginningOfEncounterPhase(),
+                new Encounter.EndOfEncounterPhase(),
+            } },
+            { Phase.Combat, new List<GameSegment>{
+                new Combat.BeginningOfCombatPhase(),
+                new Combat.EndOfCombatPhase(),
+            } },
             { Phase.Refresh, new List<GameSegment>{
+                new Refresh.BeginningOfRefreshPhase(),
+                new Refresh.EndOfRefreshPhase(),
                 new Refresh.EndOfRound(),
             } },
         };
@@ -82,7 +97,7 @@ namespace HallOfBeorn.Models.LotR.Play
         {
             var effects = new List<Effect>();
 
-            effects.AddRange(game.PendingEffects.All.Where(ef => ef.Trigger == trigger));
+            effects.AddRange(game.PendingEffects.Find(ef => ef.Trigger == trigger));
             effects.AddRange(game.StagingArea.SelectMany(
                 c => lookupEffects(c.Card.Slug, CardSide.Front).Where(ef => ef.Trigger == trigger)));
             
@@ -92,11 +107,11 @@ namespace HallOfBeorn.Models.LotR.Play
         private bool ExecuteCancelEffects()
         {
             //TODO: Check for multiples at the same priority so first player can choose
-            if (!ExecuteEffects(game.PendingEffects.Cancel.PassiveEffects))
+            if (!ExecuteEffects(game.PendingEffects.Cancel.Passive))
                 return false;
-            if (!ExecuteEffects(game.PendingEffects.Cancel.ForcedEffects))
+            if (!ExecuteEffects(game.PendingEffects.Cancel.Forced))
                 return false;
-            if (!ExecuteEffects(game.PendingEffects.Cancel.ResponseEffects))
+            if (!ExecuteEffects(game.PendingEffects.Cancel.Response))
                 return false;
 
             return true;
@@ -105,11 +120,11 @@ namespace HallOfBeorn.Models.LotR.Play
         private bool ExecuteWhenEffects()
         {
             //TODO: Check for multiples at the same priority so first player can choose
-            if (!ExecuteEffects(game.PendingEffects.When.PassiveEffects))
+            if (!ExecuteEffects(game.PendingEffects.When.Passive))
                 return false;
-            if (!ExecuteEffects(game.PendingEffects.When.ForcedEffects))
+            if (!ExecuteEffects(game.PendingEffects.When.Forced))
                 return false;
-            if (!ExecuteEffects(game.PendingEffects.When.ResponseEffects))
+            if (!ExecuteEffects(game.PendingEffects.When.Response))
                 return false;
 
             return true;
@@ -118,11 +133,11 @@ namespace HallOfBeorn.Models.LotR.Play
         private bool ExecuteAfterEffects()
         {
             //TODO: Check for multiples at the same priority so first player can choose
-            if (!ExecuteEffects(game.PendingEffects.After.PassiveEffects))
+            if (!ExecuteEffects(game.PendingEffects.After.Passive))
                 return false;
-            if (!ExecuteEffects(game.PendingEffects.After.ForcedEffects))
+            if (!ExecuteEffects(game.PendingEffects.After.Forced))
                 return false;
-            if (!ExecuteEffects(game.PendingEffects.After.ResponseEffects))
+            if (!ExecuteEffects(game.PendingEffects.After.Response))
                 return false;
 
             return true;
@@ -131,7 +146,7 @@ namespace HallOfBeorn.Models.LotR.Play
         private bool ExecuteActionEffects()
         {
             //TODO: Check for multiples at the same priority so first player can choose
-            if (!ExecuteEffects(game.PendingEffects.Player.ActionEffects))
+            if (!ExecuteEffects(game.PendingEffects.Player.Action))
                 return false;
 
             return true;

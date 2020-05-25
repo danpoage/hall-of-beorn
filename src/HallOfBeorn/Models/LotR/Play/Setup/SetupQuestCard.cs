@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
     public class SetupQuestCard : GameSegment
     {
         public SetupQuestCard()
-            : base(SetupStep.Setup_Quest_Cards, Phase.None, FrameworkStep.None)
+            : base(SetupStep.Setup_Quest_Cards)
         {
         }
 

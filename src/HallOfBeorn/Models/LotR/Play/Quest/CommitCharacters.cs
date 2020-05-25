@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Play.Quest
         : GameSegment
     {
         public CommitCharacters()
-            : base(SetupStep.None, Phase.Quest, FrameworkStep.Quest_Commit_Characters)
+            : base(Phase.Quest, FrameworkStep.Quest_Commit_Characters)
         {
         }
 

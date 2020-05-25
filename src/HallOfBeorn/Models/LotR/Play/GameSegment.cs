@@ -7,9 +7,16 @@ namespace HallOfBeorn.Models.LotR.Play
 {
     public abstract class GameSegment
     {
-        protected GameSegment(SetupStep setupStep, Phase phase, FrameworkStep frameworkStep)
+        protected GameSegment(SetupStep setupStep)
         {
             SetupStep = setupStep;
+            Phase = Play.Phase.None;
+            FrameworkStep = Play.FrameworkStep.None;
+        }
+
+        protected GameSegment(Phase phase, FrameworkStep frameworkStep)
+        {
+            SetupStep = Play.SetupStep.None;
             Phase = phase;
             FrameworkStep = frameworkStep;
         }

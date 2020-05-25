@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
         : GameSegment
     {
         public DrawSetupHand()
-            : base(SetupStep.Setup_Draw_Setup_Hand, Phase.None, FrameworkStep.None)
+            : base(SetupStep.Setup_Draw_Setup_Hand)
         {
         }
 

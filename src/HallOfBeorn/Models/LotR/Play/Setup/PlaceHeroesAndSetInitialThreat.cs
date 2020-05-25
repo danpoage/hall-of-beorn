@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
         : GameSegment
     {
         public PlaceHeroesAndSetInitialThreat()
-            : base(SetupStep.Setup_Place_Heroes_And_Set_Initial_Threat_Levels, Phase.None, FrameworkStep.None)
+            : base(SetupStep.Setup_Place_Heroes_And_Set_Initial_Threat_Levels)
         {
         }
 
