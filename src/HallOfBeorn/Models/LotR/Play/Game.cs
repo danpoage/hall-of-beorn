@@ -44,6 +44,48 @@ namespace HallOfBeorn.Models.LotR.Play
 
         public GameMode Mode { get; set; }
 
+        public Player ActivePlayer()
+        {
+            return Players.First(p => p.IsActivePlayer);
+        }
+
+        public Player NextPlayer()
+        {
+            if (Players.Count == 1)
+            {
+                return null;
+            }
+            else 
+            {
+                var active = ActivePlayer();
+                for (var i=0;i<Players.Count;i++)
+                {
+                    if (Players[i] == active)
+                    {
+                        return (i < Players.Count - 1)
+                            ? Players[i + 1]
+                            : Players[0];
+                    }
+                }
+                return null;
+            }
+        }
+
+        public Player MakeNextPlayerActive()
+        {
+            var active = ActivePlayer();
+            var next = NextPlayer();
+            if (next == null)
+            {
+                return active;
+            }
+
+            active.IsActivePlayer = false;
+            next.IsActivePlayer = true;
+
+            return next;
+        }
+
         public List<Player> Players = new List<Player>();
 
         public List<CardInPlay> StagingArea = new List<CardInPlay>();

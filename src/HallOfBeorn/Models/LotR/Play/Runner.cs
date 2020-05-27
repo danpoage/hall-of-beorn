@@ -42,8 +42,9 @@ namespace HallOfBeorn.Models.LotR.Play
                 new Resource.EndOfResourcePhase(),
             } },
             { Phase.Planning, new List<GameSegment>{
-                new Planning.BeginningOfPlanningPhase(),
-                new Planning.EndOfPlanningPhase(),
+                new Planning.PlanningPhaseBegins(),
+                new Planning.SpecialPlayerActionWindow(),
+                new Planning.PlanningPhaseEnds(),
             } },
             { Phase.Quest, new List<GameSegment>{
                 new Quest.BeginningOfQuestPhase(),
@@ -199,7 +200,7 @@ namespace HallOfBeorn.Models.LotR.Play
             }
             else
             {
-                if (game.Phase > segment.Phase || game.FrameworkStep >= segment.FrameworkStep)
+                if (game.Phase > segment.Phase || game.FrameworkStep > segment.FrameworkStep)
                 {
                     return true;
                 }

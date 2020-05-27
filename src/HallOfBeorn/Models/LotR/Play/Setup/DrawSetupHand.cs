@@ -20,6 +20,11 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
 
             var effects = LookupEffectsByTrigger(Trigger.Setup_Determine_Starting_Hand_Size);
 
+            if (game.Players.All(p => p.HasKeptSetupHand || p.HasTakenMulligan))
+            {
+                return effects;
+            }
+
             foreach (var player in game.Players)
             {
                 player.IsActivePlayer = true;
@@ -54,7 +59,7 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
                     })
                     .Decline((gm) => {
                         var mulliganPlayer = gm.Players.First(p => p.Name == player.Name);
-                        mulliganPlayer.HasTakenMulligan = false;
+                        mulliganPlayer.HasKeptSetupHand = true;
                         return string.Format("{0} declines a mulligan, keeping their opening hand", mulliganPlayer.Name);
                     });
 

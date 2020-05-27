@@ -5,10 +5,10 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Play.Planning
 {
-    public class BeginningOfPlanningPhase
+    public class PlanningPhaseBegins
         : GameSegment
     {
-        public BeginningOfPlanningPhase()
+        public PlanningPhaseBegins()
             : base(Phase.Planning, FrameworkStep.Planning_Begin)
         {
         }

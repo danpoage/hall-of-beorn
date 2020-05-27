@@ -41,8 +41,16 @@ namespace HallOfBeorn.Models.LotR.Play
 
         public bool IsFirstPlayer { get; set; }
         public bool IsActivePlayer { get; set; }
+
+        //Planning Phase
+        public CardInHand CardToPlay { get; set; }
+        public bool HasKeptActionOpportunity { get; set; }
+        public bool HasPassedOnActionOpportunity { get; set; }
+        
         public byte Threat { get; set; }
         public byte SetupHandSize { get; set; }
+
+        public bool HasKeptSetupHand { get; set; }
         public bool HasTakenMulligan { get; set; }
 
         public readonly List<CardInPlay> PlayArea = new List<CardInPlay>();

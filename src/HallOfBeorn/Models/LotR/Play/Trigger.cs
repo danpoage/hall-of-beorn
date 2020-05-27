@@ -113,6 +113,9 @@ namespace HallOfBeorn.Models.LotR.Play
         When_Round_Begins,
         When_Phase_Begins,
 
+        When_Player_Passes_in_Action_Window,
+        When_Player_Takes_an_Action,
+
         When_Player_Commits_Characters_to_the_Quest,
         When_Self_Attacks,
         When_Self_is_Attached,
