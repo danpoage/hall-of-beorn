@@ -444,8 +444,10 @@
     <Compile Include="Models\LotR\Play\Refresh\EndOfRound.cs" />
     <Compile Include="Models\LotR\Play\Repositories\EffectRepository.cs" />
     <Compile Include="Models\LotR\Play\Resource\BeginningOfRound.cs" />
+    <Compile Include="Models\LotR\Play\Resource\DrawCards.cs" />
     <Compile Include="Models\LotR\Play\Resource\EndOfResourcePhase.cs" />
     <Compile Include="Models\LotR\Play\Resource\BeginningOfResourcePhase.cs" />
+    <Compile Include="Models\LotR\Play\Resource\GainResources.cs" />
     <Compile Include="Models\LotR\Play\RingsDb\RingsDbDeckLoader.cs" />
     <Compile Include="Models\LotR\Play\Runner.cs" />
     <Compile Include="Models\LotR\Play\Setup\BeginningOfSetup.cs" />

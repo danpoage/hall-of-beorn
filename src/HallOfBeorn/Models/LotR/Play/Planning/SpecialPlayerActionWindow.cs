@@ -19,53 +19,142 @@ namespace HallOfBeorn.Models.LotR.Play.Planning
 
             var activePlayer = game.ActivePlayer();
 
-            var passChoice = new Choice(ChoiceType.Exclusive){
-                Description = string.Format("Does {0} pass on their action opportunity?", activePlayer.Name),
-                FrameworkStep = Play.FrameworkStep.Planning_Special_Player_Action_Window,
-            };
-            passChoice.Options.Add(new Option{ Description = "Yes, pass on the opportunity to play actions", IsAccept = true, Context = activePlayer.Name });
-            passChoice.Options.Add(new Option{Description = "No, continue to play actions", IsDecline = true, Context = activePlayer.Name });
+            if (game.BeingPlayed != null)
+            {
+                var beingPlayedChoice = new Choice(ChoiceType.Exclusive)
+                {
+                    Description = string.Format("{0}, how do you want to pay for {1}?", activePlayer.Name, game.BeingPlayed.Card.NormalizedTitle),
+                    FrameworkStep = Play.FrameworkStep.Planning_Special_Player_Action_Window,
+                };
 
-            var passEffect = Effect.Create
-                (FrameworkStep.Planning_Special_Player_Action_Window, EffectTiming.When, Trigger.When_Player_Passes_in_Action_Window, "When player passes in Action Window")
-                .WithChoice(passChoice)
-                .Accept((gm) =>
+                //TODO: Algorithm to get payment options
+                var cost = game.BeingPlayed.Card.ResourceCost.GetValueOrDefault(0);
+                if (cost == 0)
+                {
+                    beingPlayedChoice.Options.Add(new Option
                     {
-                        var active = gm.ActivePlayer();
-                        active.HasPassedOnActionOpportunity = true;
-
-                        if (gm.Players.All(p => p.HasPassedOnActionOpportunity))
-                        {
-                            gm.FrameworkStep = Play.FrameworkStep.Planning_End;
-                            return "All players have passed on their action opportunities";
-                        } else {
-                            var next = gm.MakeNextPlayerActive();
-                            return string.Format("{0} passed on their action opportunity, {1} is now the active player",
-                                active.Name, next.Name);
-                        }
-                    })
-                .Decline((gm) =>
-                    {
-                        return gm.ActivePlayer().Name + " chooses to play more actions";
+                        Description = string.Format("Play {0} for no cost", game.BeingPlayed.Card.NormalizedTitle),
+                        IsAccept = true,
+                        Context = activePlayer.Name,
+                        Value = game.BeingPlayed.Id
                     });
+                }
+                else
+                {
+                    beingPlayedChoice.Options.Add(new Option
+                    {
+                        Description = string.Format("Play {0} for {1} resources from ...", 
+                            game.BeingPlayed.Card.NormalizedTitle, cost),
+                        IsAccept = true,
+                        Context = activePlayer.Name,
+                        Value = game.BeingPlayed.Id
+                    });
+                }
 
-            effects.Add(passEffect);
+                var beingPlayedEffect = Effect.Create(FrameworkStep.Planning_Special_Player_Action_Window, EffectTiming.When, Trigger.When_Player_Plays_a_Card, "When a player plays a card")
+                    .WithChoice(beingPlayedChoice)
+                    .Accept((gm) =>
+                        { 
+                            var beingPlayed = game.BeingPlayed;
+                            game.BeingPlayed = null;
+                            //TODO: Either move this card to discard or put it into play
+                            return string.Format("{0} plays {1}", activePlayer.Name, beingPlayed.Card.NormalizedTitle);
+                        });
+
+                effects.Add(beingPlayedEffect);
+                return effects;
+            }
 
             foreach (var player in game.Players)
             {
-                var playChoice = new Choice(ChoiceType.Exclusive)
-                {
-                    Description = string.Format("{0}, which card do you want to play?", player.Name) 
+                var resources = new Dictionary<Sphere, uint> {
+                    { Sphere.Neutral, 0},
+                    { Sphere.Leadership, 0},
+                    { Sphere.Tactics, 0 },
+                    { Sphere.Spirit, 0 },
+                    { Sphere.Lore, 0 },
+                    { Sphere.Baggins, 0 },
+                    { Sphere.Fellowship, 0 },
+                    { Sphere.Mastery, 0 }
                 };
 
-                //TODO: Only active player can play allies, attachments, and side quests
+                var spheres = new HashSet<Sphere>
+                {
+                    Sphere.Neutral, Sphere.Leadership, Sphere.Tactics, Sphere.Spirit, Sphere.Lore,
+                    Sphere.Baggins, Sphere.Fellowship, Sphere.Mastery
+                };
+
+                foreach (var hero in player.Heroes)
+                {
+                    foreach (var sphere in spheres)
+                    {
+                        if (hero.HasSphere(sphere))
+                        {
+                            resources[sphere] += hero.ResourceTokens;
+                        }
+                    }
+                }
+
+                var playChoice = new Choice(ChoiceType.Exclusive)
+                {
+                    Description = string.Format("{0}, which card do you want to play?", player.Name),
+                    FrameworkStep = Play.FrameworkStep.Planning_Special_Player_Action_Window,
+                };
+
+                //TODO: Add actions from cards in play
+
+                foreach (var card in player.Hand)
+                {
+                    //Only the active player can play allies, attachments, and side quests
+                    if (!player.IsActivePlayer && (
+                        card.Card.CardType == CardType.Ally || card.Card.CardType == CardType.Attachment || card.Card.CardType == CardType.Player_Side_Quest))
+                    {
+                        continue;
+                    }
+
+                    if (resources[card.Card.Sphere]
+                        >= card.Card.ResourceCost.GetValueOrDefault(0))
+                    {
+                        playChoice.Options.Add(new Option { 
+                            Description = string.Format("Play {0} for {1} resources ({2})", 
+                            card.Card.NormalizedTitle, card.Card.ResourceCost.GetValueOrDefault(0), card.Card.Sphere),
+                            IsAccept = true,
+                            Context = player.Name,
+                            Value = card.Id
+                        });
+                    }
+                }
+
+                playChoice.Options.Add(new Option { Description = "Pass on playing cards", IsDecline = true, Context = player.Name });
 
                 var playEffect = Effect.Create(
                     FrameworkStep.Planning_Special_Player_Action_Window, EffectTiming.When, Trigger.When_Player_Takes_an_Action, "When player takes an action")
                     .WithChoice(playChoice)
                     .Accept((gm) =>
                         {
-                            return "Play card X";
+                            var selected = gm.CurrentChoice.Options.First(opt => opt.IsAccept && opt.IsChosen);
+                            var currentPlayer = gm.Players.First(p => p.Name == selected.Context);
+
+                            //TODO: Add Status to indicate current player is playing a card
+                            currentPlayer.FrameworkStep = Play.FrameworkStep.Planning_Special_Player_Action_Window;
+                            var handCard = currentPlayer.Hand.First(h => h.Id == selected.Value);
+                            gm.BeingPlayed = new CardInPlay(handCard.Deck, handCard.Card);
+                            return string.Format("{0} will play {1}", currentPlayer.Name, handCard.Card.NormalizedTitle);
+                        })
+                    .Decline((gm) =>
+                        {
+                            var active = gm.ActivePlayer();
+                            active.HasPassedOnActionOpportunity = true;
+
+                            if (gm.Players.All(p => p.HasPassedOnActionOpportunity))
+                            {
+                                gm.FrameworkStep = Play.FrameworkStep.Planning_End;
+                                return "All players have passed on their action opportunities";
+                            } else {
+                                var next = gm.MakeNextPlayerActive();
+                                return string.Format("{0} passed on their action opportunity, {1} is now the active player",
+                                    active.Name, next.Name);
+                            }
                         });
 
                 //TODO: Only add effect is this player has cards they can play

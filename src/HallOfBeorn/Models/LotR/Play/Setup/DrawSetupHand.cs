@@ -34,10 +34,10 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
                 player.Hand.AddRange(hand);
                 game.Log(string.Format("Player {0} Draws {1} Cards in their Setup Hand", player.Name, player.SetupHandSize));
 
-                var handList = string.Join("\r\n", player.Hand.Select(h => h.Card.NormalizedTitle));
+                var handList = string.Join("\r\n", player.Hand.Select(h =>  "  " + h.Card.NormalizedTitle));
 
                 var mulliganChoice = new Choice(ChoiceType.Exclusive) { 
-                    Description = string.Format("Does {0} want to take a mulligan?\r\nExisting hand:\r\n{1}", player.Name, handList)
+                    Description = string.Format("{0}, do you want to take a mulligan?\r\n\r\nExisting hand:\r\n{1}", player.Name, handList)
                 };
                 mulliganChoice.Options.Add(new Option { Description = "Keep your starting hand", Context = player.Name, IsDecline = true });
                 mulliganChoice.Options.Add(new Option { Description = "Draw a new starting hand", Context = player.Name, IsAccept = true });
@@ -52,15 +52,16 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
                         mulliganPlayer.Hand.Clear();
                         mulliganPlayer.Deck.ShuffleIntoDeck(oldHand);
                         var newHand = mulliganPlayer.Deck.Draw(mulliganPlayer.SetupHandSize);
+                        var newHandList = string.Join("\r\n", newHand.Select(h => "  " + h.Card.NormalizedTitle));
                         mulliganPlayer.Hand.AddRange(newHand);
                         mulliganPlayer.HasTakenMulligan = true;
-                        return string.Format("{0} accepts a mulligan, drawing {1} cards:\r\n{2}", 
-                            mulliganPlayer.Name, mulliganPlayer.SetupHandSize, string.Join("\r\n", newHand.Select(h => h.Card.Title)));
+                        return string.Format("{0} accepts a mulligan, drawing {1} cards:\r\n\r\n{2}", 
+                            mulliganPlayer.Name, mulliganPlayer.SetupHandSize, newHandList);
                     })
                     .Decline((gm) => {
                         var mulliganPlayer = gm.Players.First(p => p.Name == player.Name);
                         mulliganPlayer.HasKeptSetupHand = true;
-                        return string.Format("{0} declines a mulligan, keeping their opening hand", mulliganPlayer.Name);
+                        return string.Format("{0} declines a mulligan, keeping their setup hand", mulliganPlayer.Name);
                     });
 
                 effects.Add(mulliganEffect);

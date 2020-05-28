@@ -263,7 +263,8 @@ namespace HallOfBeorn.Client
                 return;
             }
 
-            var heroList = string.Join(", ", player.Heroes.Select(h => h.Card.NormalizedTitle));
+            var heroList = player.Heroes.Select(h => 
+                string.Format("{0}: {1} resource, {2} damage", h.Card.NormalizedTitle, h.ResourceTokens, h.DamageTokens));
 
             var contractName = player.Contract != null 
                 ? player.Contract.Card.NormalizedTitle 
@@ -273,13 +274,22 @@ namespace HallOfBeorn.Client
                 ? string.Join(", ", player.Hand.Select(c => c.Card.NormalizedTitle))
                 : "[Empty]";
 
-            Write(name, new Dictionary<string, string>{
+            var status = new Dictionary<string, string>{
+                { "Active", player.IsActivePlayer.ToString() },
+                { "First", player.IsFirstPlayer.ToString() },
                 { "Deck", player.Deck.Name },
-                { "Heroes", heroList },
                 { "Contract", contractName },
                 { "Threat", player.Threat.ToString() },
                 { "Hand", handList },
-            });
+                { "Heroes", string.Empty },
+            };
+
+            foreach (var hero in player.Heroes)
+            {
+                status.Add(hero.Card.NormalizedTitle, string.Format("{0} resource(s), {1} damage", hero.ResourceTokens, hero.DamageTokens));
+            }
+
+            Write(name, status);
         }
 
         private static void Prompt()
@@ -309,6 +319,7 @@ namespace HallOfBeorn.Client
 
         public static void Write(string header, Dictionary<string, string> map)
         {
+            Console.WriteLine();
             Console.WriteLine(header);
             if (map.Count > 0)
             {

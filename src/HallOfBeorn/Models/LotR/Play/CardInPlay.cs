@@ -13,14 +13,25 @@ namespace HallOfBeorn.Models.LotR.Play
         {
         }
 
+        //TODO: Set this
+        public Player Owner { get; set; }
+
         public CardSide ActiveSide { get; set; }
         
+        //TODO: Consider a set of flags
         public bool IsAttacking { get; set; }
         public bool IsCommitted { get; set; }
         public bool IsDefending { get; set; }
         public bool IsEnteringPlay { get; set; }
         public bool IsExhausted { get; set; }
         public bool IsLeavingPlay { get; set; }
+
+        public bool HasSphere(Sphere sphere)
+        {
+            return (sphere == Sphere.Neutral)
+                ? true
+                : Card.Sphere == sphere;
+        }
 
         public uint DamageTokens { get; set; }
         public uint ProgressTokens { get; set; }

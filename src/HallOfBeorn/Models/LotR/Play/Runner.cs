@@ -39,6 +39,8 @@ namespace HallOfBeorn.Models.LotR.Play
             { Phase.Resource, new List<GameSegment>{
                 new Resource.BeginningOfRound(),
                 new Resource.BeginningOfResourcePhase(),
+                new Resource.GainResources(),
+                new Resource.DrawCards(),
                 new Resource.EndOfResourcePhase(),
             } },
             { Phase.Planning, new List<GameSegment>{
