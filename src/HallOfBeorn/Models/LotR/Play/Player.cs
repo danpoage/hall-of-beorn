@@ -68,5 +68,20 @@ namespace HallOfBeorn.Models.LotR.Play
 
             return effects;
         }
+
+        public uint GetAvailableResources(Sphere sphere)
+        {
+            uint count = 0;
+
+            foreach (var hero in Heroes)
+            {
+                if (hero.HasSphere(sphere))
+                {
+                    count += hero.ResourceTokens;
+                }
+            }
+
+            return count;
+        }
     }
 }

@@ -37,6 +37,8 @@ namespace HallOfBeorn.Models.LotR.Play
         public uint ProgressTokens { get; set; }
         public uint ResourceTokens { get; set; }
 
+        public uint ResourcesPaid { get; set; }
+
         public List<CardInPlay> Attachments = new List<CardInPlay>();
         public List<CardInPlay> ShadowCards = new List<CardInPlay>();
         public CardInPlay GuardedBy { get; set; }

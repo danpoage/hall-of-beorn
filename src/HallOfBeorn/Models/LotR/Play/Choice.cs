@@ -50,6 +50,16 @@ namespace HallOfBeorn.Models.LotR.Play
 
     public class Option
     {
+        public Option()
+        {
+        }
+
+        public Option(string context, string value)
+        {
+            Context = context;
+            Value = value;
+        }
+
         public string Description { get; set; }
         public string Context { get; set; }
         public string Value { get; set; }

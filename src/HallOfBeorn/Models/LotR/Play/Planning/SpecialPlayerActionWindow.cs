@@ -21,48 +21,7 @@ namespace HallOfBeorn.Models.LotR.Play.Planning
 
             if (game.BeingPlayed != null)
             {
-                var beingPlayedChoice = new Choice(ChoiceType.Exclusive)
-                {
-                    Description = string.Format("{0}, how do you want to pay for {1}?", activePlayer.Name, game.BeingPlayed.Card.NormalizedTitle),
-                    FrameworkStep = Play.FrameworkStep.Planning_Special_Player_Action_Window,
-                };
-
-                //TODO: Algorithm to get payment options
-                var cost = game.BeingPlayed.Card.ResourceCost.GetValueOrDefault(0);
-                if (cost == 0)
-                {
-                    beingPlayedChoice.Options.Add(new Option
-                    {
-                        Description = string.Format("Play {0} for no cost", game.BeingPlayed.Card.NormalizedTitle),
-                        IsAccept = true,
-                        Context = activePlayer.Name,
-                        Value = game.BeingPlayed.Id
-                    });
-                }
-                else
-                {
-                    beingPlayedChoice.Options.Add(new Option
-                    {
-                        Description = string.Format("Play {0} for {1} resources from ...", 
-                            game.BeingPlayed.Card.NormalizedTitle, cost),
-                        IsAccept = true,
-                        Context = activePlayer.Name,
-                        Value = game.BeingPlayed.Id
-                    });
-                }
-
-                var beingPlayedEffect = Effect.Create(FrameworkStep.Planning_Special_Player_Action_Window, EffectTiming.When, Trigger.When_Player_Plays_a_Card, "When a player plays a card")
-                    .WithChoice(beingPlayedChoice)
-                    .Accept((gm) =>
-                        { 
-                            var beingPlayed = game.BeingPlayed;
-                            game.BeingPlayed = null;
-                            //TODO: Either move this card to discard or put it into play
-                            return string.Format("{0} plays {1}", activePlayer.Name, beingPlayed.Card.NormalizedTitle);
-                        });
-
-                effects.Add(beingPlayedEffect);
-                return effects;
+                return PlayACard.PayForACard(game);
             }
 
             foreach (var player in game.Players)
