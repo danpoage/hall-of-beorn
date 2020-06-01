@@ -31,6 +31,26 @@ namespace HallOfBeorn.Models.LotR.Play
                 return options;
             }
 
+            var resourceMap = new Dictionary<int, List<int>>();
+
+            for (var i=0;i<heroes.Count;i++)
+            {
+                resourceMap[i] = new List<int>();
+                var max = heroes[i].ResourceTokens >= cost ? cost : heroes[i].ResourceTokens;
+                for (var j = 1; j <= max; j++)
+                    resourceMap[i].Add(j);
+            }
+
+            var combinations = new List<List<int>>();
+            foreach (var k in resourceMap.Keys)
+            {
+                //TODO: Add valid permutations to combinations list
+                foreach (var v in resourceMap[k])
+                {
+                    //combinations.Add(new List<int> { v })
+                }
+            }
+
             Func<Dictionary<string, int>, string> getDescription = (m) =>
                 {
                     var values = new List<string>();
@@ -58,6 +78,7 @@ namespace HallOfBeorn.Models.LotR.Play
                     return string.Join(",", values);
                 };
 
+            
             Func<Dictionary<string, int>, bool> checkForTotal = (m) =>
                 {
                     if (m.Values.Sum() == cost)
@@ -76,6 +97,7 @@ namespace HallOfBeorn.Models.LotR.Play
 
             //Func<int, int> getNext = (index) => index < (heroes.Count - 1) ? heroes.Count - 1 : 0;
 
+            /*
             for (var h = 0; h < heroes.Count - 1; h++)
             {
                 var hero = heroes[h];
@@ -96,7 +118,7 @@ namespace HallOfBeorn.Models.LotR.Play
 
                     //iternate through next heroes and add resources until checkForTotal returns true
                 }
-            }
+            }*/
 
             //TODO: Change this into a function map
             /*
