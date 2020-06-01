@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.LotR.Play
     {
         private static IEnumerable<Option> GetPaymentOptions(Game game, Player activePlayer)
         {
+            var options = new List<Option>();
+
             var beingPlayed = game.BeingPlayed;
 
             var sphere = beingPlayed.Card.Sphere;
@@ -18,9 +20,86 @@ namespace HallOfBeorn.Models.LotR.Play
 
             var available = activePlayer.GetAvailableResources(beingPlayed.Card.Sphere);
 
-            var options = new List<Option>();
+            if (available < cost)
+            {
+                options.Add(new Option
+                {
+                    Description = string.Format("{0}, you don't have the resources to pay for {1}", activePlayer.Name, beingPlayed.Card.NormalizedTitle),
+                    IsDecline = true,
+                    Context = activePlayer.Name
+                });
+                return options;
+            }
+
+            Func<Dictionary<string, int>, string> getDescription = (m) =>
+                {
+                    var values = new List<string>();
+
+                    foreach (var k in m.Keys)
+                    {
+                        if (m[k] == 1)
+                            values.Add(string.Format("1 resource from {0}'s resource pool", k));
+                        else if (m[k] > 1)
+                            values.Add(string.Format("{0} resources from {1}'s resource pool", m[k], k));
+                    }
+
+                    return "Pay " + string.Join(", ", values);
+                };
+
+            Func<Dictionary<string, int>, string> getValue = (m) =>
+                {
+                    var values = new List<string>();
+
+                    foreach (var k in m.Keys)
+                    {
+                        values.Add(string.Format("{0}={1}", k, m[k]));
+                    }
+
+                    return string.Join(",", values);
+                };
+
+            Func<Dictionary<string, int>, bool> checkForTotal = (m) =>
+                {
+                    if (m.Values.Sum() == cost)
+                    {
+                        options.Add(new Option
+                        {
+                            Description = getDescription(m),
+                            IsAccept = true,
+                            Context = activePlayer.Name,
+                            Value = getValue(m)
+                        });
+                        return true;
+                    }
+                    return false;
+                };
+
+            //Func<int, int> getNext = (index) => index < (heroes.Count - 1) ? heroes.Count - 1 : 0;
+
+            for (var h = 0; h < heroes.Count - 1; h++)
+            {
+                var hero = heroes[h];
+
+                for (var i = cost; i > 0; i--)
+                {
+                    var map = new Dictionary<string, int>();
+
+                    if (hero.ResourceTokens >= i)
+                    {
+                        map.Add(hero.Id, i);
+                    }
+
+                    if (checkForTotal(map))
+                    {
+                        continue;
+                    }
+
+                    //iternate through next heroes and add resources until checkForTotal returns true
+                }
+            }
 
             //TODO: Change this into a function map
+            /*
             switch (cost)
             {
                 case 1:
@@ -46,7 +125,7 @@ namespace HallOfBeorn.Models.LotR.Play
                 default:
                     break;
             }
-
+            */
             return options;
         }
 
