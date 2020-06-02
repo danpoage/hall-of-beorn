@@ -120,6 +120,14 @@ namespace HallOfBeorn.Models.LotR.Play
                 }
             }
 
+            //Add the optional to cancel playing the current card
+            options.Add(new Option
+            {
+                Description = string.Format("On second thought, let's not play {0}", beingPlayed.Card.NormalizedTitle),
+                IsDecline = true,
+                Context = activePlayer.Name,
+            });
+
             return options;
         }
 
