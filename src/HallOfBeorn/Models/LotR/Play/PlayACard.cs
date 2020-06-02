@@ -31,123 +31,95 @@ namespace HallOfBeorn.Models.LotR.Play
                 return options;
             }
 
-            var resourceMap = new Dictionary<int, List<int>>();
-
-            for (var i=0;i<heroes.Count;i++)
-            {
-                resourceMap[i] = new List<int>();
-                var max = heroes[i].ResourceTokens >= cost ? cost : heroes[i].ResourceTokens;
-                for (var j = 1; j <= max; j++)
-                    resourceMap[i].Add(j);
-            }
-
-            var combinations = new List<List<int>>();
-            foreach (var k in resourceMap.Keys)
-            {
-                //TODO: Add valid permutations to combinations list
-                foreach (var v in resourceMap[k])
+            
+            Func<List<int>, int, List<int>> append = (existing, item) =>
                 {
-                    //combinations.Add(new List<int> { v })
-                }
-            }
+                    var result = new List<int>(existing);
+                    result.Add(item);
+                    return result;
+                };
 
-            Func<Dictionary<string, int>, string> getDescription = (m) =>
+            Func<List<List<int>>, List<int>, List<List<int>>> permute = (existing, input) =>
+                {
+                    var permutations = new List<List<int>>();
+                    if (existing.Count == 0)
+                    {
+                        foreach (var i in input)
+                        {
+                            permutations.Add(new List<int> { i });
+                        }
+                    }
+                    else
+                    {
+                        foreach (var e in existing)
+                        {
+                            foreach (var i in input)
+                            {
+                                permutations.Add(append(e, i)); 
+                            }
+                        }
+                    }
+                    return permutations;
+                };
+
+            Func<List<int>, string> getDescription = (combo) =>
                 {
                     var values = new List<string>();
 
-                    foreach (var k in m.Keys)
+                    for (var i=0;i<combo.Count;i++)
                     {
-                        if (m[k] == 1)
-                            values.Add(string.Format("1 resource from {0}'s resource pool", k));
-                        else if (m[k] > 1)
-                            values.Add(string.Format("{0} resources from {1}'s resource pool", m[k], k));
+                        var hero = heroes[i].Card.NormalizedTitle;
+                        if (combo[i] == 1)
+                            values.Add(string.Format("1 resource from {0}'s resource pool", hero));
+                        else if (combo[i] > 1)
+                            values.Add(string.Format("{0} resources from {1}'s resource pool", combo[i], hero));
                     }
 
                     return "Pay " + string.Join(", ", values);
                 };
 
-            Func<Dictionary<string, int>, string> getValue = (m) =>
+            Func<List<int>, string> getValue = (combo) =>
                 {
                     var values = new List<string>();
 
-                    foreach (var k in m.Keys)
+                    for (var i=0;i<combo.Count;i++)
                     {
-                        values.Add(string.Format("{0}={1}", k, m[k]));
+                        if (combo[i] > 0)
+                        {
+                            var hero = heroes[i].Card.NormalizedTitle;
+                            values.Add(string.Format("{0}={1}", hero, combo[i]));
+                        }
                     }
 
                     return string.Join(",", values);
                 };
 
-            
-            Func<Dictionary<string, int>, bool> checkForTotal = (m) =>
-                {
-                    if (m.Values.Sum() == cost)
-                    {
-                        options.Add(new Option
-                        {
-                            Description = getDescription(m),
-                            IsAccept = true,
-                            Context = activePlayer.Name,
-                            Value = getValue(m)
-                        });
-                        return true;
-                    }
-                    return false;
-                };
+            var combinations = new List<List<int>>();
 
-            //Func<int, int> getNext = (index) => index < (heroes.Count - 1) ? heroes.Count - 1 : 0;
-
-            /*
-            for (var h = 0; h < heroes.Count - 1; h++)
+            for (var i=0;i<heroes.Count;i++)
             {
-                var hero = heroes[h];
+                var resources = new List<int>();
+                var max = heroes[i].ResourceTokens >= cost ? cost : heroes[i].ResourceTokens;
+                for (var j = 0; j <= max; j++)
+                    resources.Add(j);
 
-                for (var i = cost; i > 0; i--)
-                {
-                    var map = new Dictionary<string, int>();
-
-                    if (hero.ResourceTokens >= i)
-                    {
-                        map.Add(hero.Id, i);
-                    }
-
-                    if (checkForTotal(map))
-                    {
-                        continue;
-                    }
-
-                    //iternate through next heroes and add resources until checkForTotal returns true
-                }
-            }*/
-
-            //TODO: Change this into a function map
-            /*
-            switch (cost)
-            {
-                case 1:
-                    foreach (var hero in heroes)
-                    {
-                        options.Add(
-                            new Option(activePlayer.Name, hero.Id) { 
-                                Description = string.Format("Pay 1 resource from {0}'s resource pool", hero.Card.NormalizedTitle),
-                                IsAccept = true 
-                            });
-                    }
-                    break;
-                case 2:
-                    foreach (var hero in heroes)
-                    {
-                        if (hero.ResourceTokens >= 2)
-                            options.Add(
-                                new Option(activePlayer.Name, hero.Id) { 
-                                    Description = string.Format("Pay 2 resources from {0}'s resource pool", hero.Card.NormalizedTitle),
-                                    IsAccept = true });
-                    }
-                    break;
-                default:
-                    break;
+                combinations = permute(combinations, resources); 
             }
-            */
+
+            foreach (var combo in combinations)
+            {
+                if (combo.Sum() == cost)
+                {
+                    options.Add(new Option
+                    {
+                        Description = getDescription(combo),
+                        IsAccept = true,
+                        Context = activePlayer.Name,
+                        Value = getValue(combo),
+                    });
+                }
+            }
+
             return options;
         }
 
