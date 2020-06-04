@@ -459,6 +459,7 @@
     <Compile Include="Models\LotR\Play\Setup\PlaceHeroesAndSetInitialThreat.cs" />
     <Compile Include="Models\LotR\Play\Setup\SetupQuestCard.cs" />
     <Compile Include="Models\LotR\Play\Setup\ShuffleDecks.cs" />
+    <Compile Include="Models\LotR\Play\Target.cs" />
     <Compile Include="Models\LotR\Play\Travel\BeginningOfTravelPhase.cs" />
     <Compile Include="Models\LotR\Play\Travel\EndOfTravelPhase.cs" />
     <Compile Include="Models\LotR\Play\Trigger.cs" />

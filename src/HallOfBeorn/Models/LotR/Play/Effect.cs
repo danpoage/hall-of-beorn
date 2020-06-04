@@ -24,6 +24,10 @@ namespace HallOfBeorn.Models.LotR.Play
         public FrameworkStep FrameworkStep  { get; set; }
         public Trigger Trigger { get; set; }
         public Func<Game, bool> Criteria { get; set; }
+        
+        public Func<Game, IEnumerable<Target>> GetCostTargets { get; set; }
+        public Func<Game, IEnumerable<Target>> GetResultTargets { get; set; }
+        
         public Func<Game, Choice> GetChoice { get; set; }
 
         public readonly List<Func<Game, string>> AcceptResults = new List<Func<Game, string>>();
@@ -127,6 +131,24 @@ namespace HallOfBeorn.Models.LotR.Play
         {
             choice.Effect = this;
             GetChoice = (gm) => choice;
+            return this;
+        }
+
+        public Effect WithChoice(Func<Game, Choice> getChoice)
+        {
+            GetChoice = getChoice;
+            return this;
+        }
+
+        public Effect WithCostTargets(Func<Game, IEnumerable<Target>> getCostTargets)
+        {
+            GetCostTargets = getCostTargets;
+            return this;
+        }
+
+        public Effect WithResultTargets(Func<Game, IEnumerable<Target>> getTargets)
+        {
+            GetResultTargets = getTargets;
             return this;
         }
 

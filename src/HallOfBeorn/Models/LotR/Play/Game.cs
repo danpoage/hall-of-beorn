@@ -90,6 +90,10 @@ namespace HallOfBeorn.Models.LotR.Play
 
         public CardInPlay BeingRevealed { get; set; }
         public CardInPlay BeingPlayed { get; set; }
+        public List<CardInPlay> EnteringPlay = new List<CardInPlay>();
+
+        public List<Target> CurrentCostTargets = new List<Target>();
+        public List<Target> CurrentResultTargets = new List<Target>();
 
         public List<CardInPlay> StagingArea = new List<CardInPlay>();
         public List<CardInPlay> ActiveLocations = new List<CardInPlay>();

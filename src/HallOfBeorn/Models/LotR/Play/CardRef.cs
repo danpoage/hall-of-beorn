@@ -6,15 +6,15 @@ using System.Web;
 namespace HallOfBeorn.Models.LotR.Play
 {
     public abstract class CardRef
+        : Target
     {
         protected CardRef(Deck deck, LotRCard card)
+            : base(card.NormalizedTitle)
         {
-            Id = Guid.NewGuid().ToString("D");
             Deck = deck;
             Card = card;
         }
 
-        public string Id { get; private set; }
         public Deck Deck { get; private set; }
         public LotRCard Card { get; private set; }
     }

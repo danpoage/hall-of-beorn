@@ -37,6 +37,67 @@ namespace HallOfBeorn.Models.LotR.Play.Repositories
                     //TODO: Add cost choices and readying effect
             };
 
+            frontEffects["Common-Cause-Core"] = new List<Effect>
+            {
+                Effect.Create(GetCard("Common-Cause-Core"), Trigger.Player_Action_Window)
+                .WithCriteria((gm) => 
+                    gm.ActivePlayer().Heroes.Any(h => !h.IsExhausted) && gm.ActivePlayer().Heroes.Any(h => h.IsExhausted))
+                .WithCostTargets((gm) => gm.ActivePlayer().Heroes.Where(h => !h.IsExhausted))
+                .WithResultTargets((gm) => gm.ActivePlayer().Heroes.Where(h => h.IsExhausted))
+                .Accept((gm) => 
+                    {
+                        var exhaust = gm.CurrentCostTargets.First();
+                        var ready = gm.CurrentResultTargets.Last();
+                        return string.Format("Exhaust {0} to ready {1}", exhaust.Name, ready.Name);
+                    })
+            };
+
+            frontEffects["Radagast's-Cunning-Core"] = new List<Effect>
+            {
+                Effect.Create(GetCard("Radagast's-Cunning-Core"), Trigger.Player_Action_Window)
+                .WithCriteria((gm) => gm.Phase == Phase.Quest)
+                .WithResultTargets((gm) => gm.StagingArea.Where(sa => sa.Card.CardType == CardType.Enemy))
+                .Accept((gm) =>
+                {
+                    var target = gm.CurrentResultTargets.Single();
+                    var inPlay = gm.StagingArea.Single(sa => sa.Id == target.Id);
+                    var desc = string.Format("{0} does not count its threat this phase.", target.Name);
+                    gm.PendingEffects.Add(
+                        Effect.Create(FrameworkStep.Quest_Resolution, EffectTiming.When, Trigger.Determine_Card_Threat_Value,
+                            "Until the end of the phase, that enemy does not contribute its Threat.")
+                        .Accept((gm2) =>
+                        {
+                            gm2.StagingArea.Single(sa => sa.Id == target.Id).Threat = 0;
+                            return desc;
+                        }));
+                    return desc;
+                })
+            };
+
+            frontEffects["Sneak-Attack-Core"] = new List<Effect>
+            {
+                Effect.Create(GetCard("Sneak-Attack-Core"), Trigger.Player_Action_Window)
+                .WithResultTargets(gm => {
+                    return gm.ActivePlayer().Hand.Where(h => h.Card.CardType == CardType.Ally);
+                })
+                .Accept((gm) =>
+                    {
+                        var activePlayer = gm.ActivePlayer();
+                        var target = gm.CurrentResultTargets.Single();
+
+                        var inHand = activePlayer.Hand.Single(h => h.Id == target.Id);
+
+                        activePlayer.Hand.Remove(inHand);
+
+                        var enteringPlay = new CardInPlay(inHand.Deck, inHand.Card);
+                        activePlayer.PlayArea.Add(enteringPlay);
+
+                        gm.EnteringPlay.Add(enteringPlay);
+                        
+                        return string.Format("Putting {0} into play", target.Name); 
+                    })
+            };
+
             frontEffects["Flies-and-Spiders-Core"] = new List<Effect>
             {
                 Effect.Create(GetCard("Flies-and-Spiders-Core"), Trigger.Setup_Setup_Quest_Card)

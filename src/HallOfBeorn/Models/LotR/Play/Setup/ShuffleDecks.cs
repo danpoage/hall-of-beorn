@@ -33,13 +33,13 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
                 else return sc.NormalQuantity;
             };
 
-            game.QuestDeck = new Deck { Name = game.Scenario.Title + " Quest Deck" };
+            game.QuestDeck = new Deck(game.Scenario.Title + " Quest Deck");
             game.QuestDeck.Load(game.Scenario.QuestCards.Skip(1).Select(qc => 
                 new Tuple<LotRCard, byte>(qc.Quest, (byte)getQuestCardQuantity(qc)))
             );
             game.MainQuest = new CardInPlay(game.QuestDeck, game.Scenario.QuestCards.Select(qc => qc.Quest).FirstOrDefault());
 
-            game.EncounterDeck = new Deck { Name = game.Scenario.Title + " Encounter Deck" };
+            game.EncounterDeck = new Deck(game.Scenario.Title + " Encounter Deck");
             game.EncounterDeck.Load(game.Scenario.ScenarioCards.Select(qc => 
                 new Tuple<LotRCard, byte>(LookupCard(qc.Slug), (byte)getEncounterCardQuantity(qc)))
             );

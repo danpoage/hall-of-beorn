@@ -36,8 +36,14 @@ namespace HallOfBeorn.Models.LotR.Play
         public uint DamageTokens { get; set; }
         public uint ProgressTokens { get; set; }
         public uint ResourceTokens { get; set; }
-
+        
         public uint ResourcesPaid { get; set; }
+
+        public byte Threat { get; set; }
+        public byte Willpower { get; set; }
+        public byte Attack { get; set; }
+        public byte Defense { get; set; }
+        public byte HitPoints { get; set; }
 
         public List<CardInPlay> Attachments = new List<CardInPlay>();
         public List<CardInPlay> ShadowCards = new List<CardInPlay>();

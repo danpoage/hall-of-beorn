@@ -42,6 +42,54 @@ namespace HallOfBeorn.Models.LotR.Play
         public SetupStep SetupStep { get; set; }
         public FrameworkStep FrameworkStep { get; set; }
 
+        public static Choice Create(ChoiceType type, string description)
+        {
+            return new Choice(type) { Description = description };
+        }
+
+        public Choice WithAcceptOption(
+            string description, string context, string value)
+        {
+            Options.Add(new Option
+            {
+                Description = description,
+                Context = context,
+                Value = value,
+                IsAccept = true
+            });
+            return this;
+        }
+
+        /*
+        public Choice WithAcceptOptions(
+            Func<Game, IEnumerable<Target>> getTargets, Func<Game, string> getContext)
+        {
+            foreach (var target in targets)
+            {
+                Options.Add(new Option { 
+                    Description = target.Name,
+                    Value = target.Id,
+                    IsAccept = true,
+                    Context = getContext(gm)
+                });
+            }
+            return this;
+        }
+        */
+
+        public Choice WithDeclineOption(
+            string description, string context, string value)
+        {
+            Options.Add(new Option
+            {
+                Description = description,
+                Context = context,
+                Value = value,
+                IsDecline = true,
+            });
+            return this;
+        }
+
         public override string ToString()
         {
             return Description;
@@ -63,6 +111,8 @@ namespace HallOfBeorn.Models.LotR.Play
         public string Description { get; set; }
         public string Context { get; set; }
         public string Value { get; set; }
+        public string CostTarget { get; set; }
+        public string ResultTarget { get; set; }
         public bool IsChosen { get; set; }
         public bool IsDecline { get; set; }
         public bool IsAccept { get; set; }

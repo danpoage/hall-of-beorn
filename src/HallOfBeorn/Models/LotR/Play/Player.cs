@@ -6,11 +6,12 @@ using System.Web;
 namespace HallOfBeorn.Models.LotR.Play
 {
     public class Player
+        : Target
     {
         public Player(
             string name, Deck deck, IEnumerable<LotRCard> heroes, LotRCard contract)
+            : base(name)
         {
-            Name = name;
             Deck = deck;
             SetupHandSize = 6;
 
@@ -28,7 +29,6 @@ namespace HallOfBeorn.Models.LotR.Play
             }
         }
 
-        public string Name { get; private set; }
         public Deck Deck { get; private set; }
         
         public readonly List<CardInHand> Hand = new List<CardInHand>();
@@ -82,6 +82,39 @@ namespace HallOfBeorn.Models.LotR.Play
             }
 
             return count;
+        }
+
+        public Dictionary<Sphere, uint> GetResourceMap()
+        {
+            var resources = new Dictionary<Sphere, uint> {
+                    { Sphere.Neutral, 0},
+                    { Sphere.Leadership, 0},
+                    { Sphere.Tactics, 0 },
+                    { Sphere.Spirit, 0 },
+                    { Sphere.Lore, 0 },
+                    { Sphere.Baggins, 0 },
+                    { Sphere.Fellowship, 0 },
+                    { Sphere.Mastery, 0 }
+                };
+
+            var spheres = new HashSet<Sphere>
+            {
+                Sphere.Neutral, Sphere.Leadership, Sphere.Tactics, Sphere.Spirit, Sphere.Lore,
+                Sphere.Baggins, Sphere.Fellowship, Sphere.Mastery
+            };
+
+            foreach (var hero in Heroes)
+            {
+                foreach (var sphere in spheres)
+                {
+                    if (hero.HasSphere(sphere))
+                    {
+                        resources[sphere] += hero.ResourceTokens;
+                    }
+                }
+            }
+
+            return resources;
         }
     }
 }

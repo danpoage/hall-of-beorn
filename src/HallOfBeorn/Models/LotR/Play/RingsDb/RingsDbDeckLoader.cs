@@ -29,7 +29,7 @@ namespace HallOfBeorn.Models.LotR.Play.RingsDb
                 return null;
             }
 
-            var deck = new Deck { DeckId = deckId, Name = deckList.name };
+            var deck = new Deck(deckList.name) { RingsDbDeckId = deckId };
 
             deck.Load(deckList.slots.Select(c => new Tuple<LotRCard, byte>(lookupCard(c.Key), c.Value)));
 

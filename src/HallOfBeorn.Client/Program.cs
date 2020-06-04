@@ -32,7 +32,8 @@ namespace HallOfBeorn.Client
                 {
                     handlers[command](game, input);
 
-                    if (game.CurrentChoice != null)
+                    if ((command != "choice" || input.Count > 1)
+                        && game.CurrentChoice != null)
                     {
                         ShowChoice(game, new List<string>());
                     }
@@ -195,9 +196,8 @@ namespace HallOfBeorn.Client
             };
             Func<string, LotRCard> lookupRingsDbCard = (id) => ringsDbHelper.GetCard(id, lookupSets);
 
-            var deck = new Deck{ 
-                DeckId = deckId, 
-                Name = ringsDbDeck.name.Replace("’", "'"), 
+            var deck = new Deck(ringsDbDeck.name.Replace("’", "'")){ 
+                RingsDbDeckId = deckId, 
                 Description = ringsDbDeck.description_md 
             };
             var starters = deck.Load(ringsDbDeck.slots, lookupRingsDbCard);

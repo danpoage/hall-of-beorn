@@ -6,13 +6,18 @@ using System.Web;
 namespace HallOfBeorn.Models.LotR.Play
 {
     public class Deck
+        : Target
     {
+        public Deck(string name)
+            : base(name)
+        {
+        }
+
         private List<CardInDeck> cards = new List<CardInDeck>();
         private List<CardInDiscard> discardPile = new List<CardInDiscard>();
         private List<CardOutOfPlay> sideboardCards = new List<CardOutOfPlay>();
 
-        public string Name { get; set; }
-        public string DeckId { get; set; }
+        public string RingsDbDeckId { get; set; }
         public string Description { get; set; }
         public IEnumerable<CardInDeck> Cards { get { return cards; } }
         public IEnumerable<CardInDiscard> DiscardPile { get { return discardPile; } }

@@ -88,6 +88,7 @@ namespace HallOfBeorn.Models.LotR.Play
         Determine_Player_Cards_Drawn_in_Resource,
         Determine_Player_Threat_Raise_Refresh,
 
+        Determine_Resource_Cost,
         Determine_Staging_Area_Threat,
 
         Determine_Hero_Resources_Collected_in_Resource,
