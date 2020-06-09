@@ -24,7 +24,21 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTextLine("Cannot have restrited attachements. Gwaihir does not ready during the refresh phase.")
                 .WithTextLine("Response: After an Eagle ally enters or leaves play, ready Gwaihir. (Limit once per phase.)")
                 .WithInfo(108, 1, Artist.Carlos_Palma_Cruchaga);
-
+            addAlly("Hobbit Archer", 2, Sphere.Leadership, false, 1, 1, 0, 2)
+                .WithTraits("Hobbit.", "Archer.")
+                .WithKeywords("Ranged.")
+                .WithTextLine("Ranged.")
+                .WithTextLine("Hobbit Archer gets +1 Attack while attacking an enemy with a higher engagement cost thatn your threat.")
+                .WithFlavorLine("\"If you lay a finger on this farmer, or on anyone else, you will be shot at once.\"")
+                .WithFlavorLine("-Merry, The Return of the King")
+                .WithInfo(109, 3, Artist.Aleksander_Karcz);
+            addAttachment("Red Book of Westmarch", 3, Sphere.Leadership, true)
+                .WithTraits("Artifact.", "Item.")
+                .WithKeywords("Restricted.")
+                .WithTextLine("Attach to a Hobbit hero. Restricted.")
+                .WithTextLine("While attached hero is committed to the quest, each Hobbit character gets +1 Willpower.")
+                .WithTextLine("Response: After you quest successfully, exhaust Red Book of Westmarch to add 1 resource to attached hero's resource pool.")
+                .WithInfo(110, 3, Artist.Guillaume_Ducos);
             addAlly("Dale Messenger", 2, Sphere.Lore, false, 1, 1, 1, 2)
                 .WithTraits("Dale.")
                 .WithTextLine("Response: After Dale Messenger enters play, choose a player. That player heals 1 damage from each character he controls with a player card attachment.")
@@ -35,6 +49,8 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTraits("Song.")
                 .WithTextLine("Attach to a hero. Limit 1 per hero.")
                 .WithTextLine("Action: Discard 1 card from your hand to heal 1 damage from attached hero. Any player may trigger this effect.")
+                .WithFlavorLine("...behind him stood Galadriel, tall and white: a circlet of golden flowers was in her hair, and in her hand she held a hard, and she sang.")
+                .WithFlavorLine("-The Fellowship of the Ring")
                 .WithInfo(112, 3, Artist.Magali_Villeneuve);
             addAlly("Eagle Emissary", 2, Sphere.Tactics, false, 2, 1, 0, 2)
                 .WithTraits("Creature.", "Eagle.")
@@ -43,7 +59,9 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithFlavorLine("...and out of the East there came a great Eagle flying, and he bore tidings beyond hope from The Lords of the West...")
                 .WithFlavorLine("-The Return of the King")
                 .WithInfo(113, 3, Artist.Carlos_Palma_Cruchaga);
-
+            addEvent("Bilbo's Plan", 0, Sphere.Tactics)
+                .WithTextLine("Response: After you attack and destroy an enemy, shuffle the encounter discard pile into the encounter deck and discard cards from the top until an enemy is discarded. Add that enemy to the staging area to discard a non-unique location with Threat equal to or less that that enemy's Threat.")
+                .WithInfo(114, 3, Artist.Guillaume_Ducos);
             addAttachment("Spare Pipe", 1, Sphere.Spirit, false)
                 .WithTraits("Item.", "Pipe.")
                 .WithTextLine("Attach to a character.")
@@ -52,7 +70,11 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithFlavorLine("\"I have carried it a long way, though I don't know why.\"")
                 .WithFlavorLine("-Pippin, The Two Towers")
                 .WithInfo(115, 3, Artist.Unknown);
-
+            addEvent("Smoke and Think", 0, Sphere.Spirit)
+                .WithTextLine("Action: Reduce the cost of the next card you play by 1 for each Pipe you control.")
+                .WithFlavorLine("Merry smiled. \"Well then,\" he said, \"if Strider will provide what is needed, I will smoke and think.\"")
+                .WithFlavorLine("-The Return of the King")
+                .WithInfo(116, 3, Artist.David_Keen);
             addAlly("Wilyador", 1, Sphere.Neutral, true, 1, 3, 2, 3)
                 .WithTraits("Creature.", "Eagle.")
                 .WithKeywords("Ranged.", "Sentinel.")

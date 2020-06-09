@@ -13,6 +13,7 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
             AddProduct(Product.TheWainridersChallenge);
             AddProduct(Product.UnderTheAshMountains);
             AddProduct(Product.TheLandOfSorrow);
+            AddProduct(Product.TheFortressOfNurn);
         }
     }
 }
