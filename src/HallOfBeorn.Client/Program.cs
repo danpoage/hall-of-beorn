@@ -271,7 +271,12 @@ namespace HallOfBeorn.Client
                 : "None";
 
             var handList = player.Hand.Count > 1
-                ? string.Join(", ", player.Hand.Select(c => c.Card.NormalizedTitle))
+                ? string.Join(", ", player.Hand.Select(c => c.Name))
+                : "[Empty]";
+
+            var playArea = player.PlayArea.Where(pa => pa.Card.CardType != CardType.Hero).ToList();
+            var playAreaList = playArea.Count > 0
+                ? string.Join(", ", playArea.Select(pa => pa.Name + " [" + pa.Card.CardType + "]"))
                 : "[Empty]";
 
             var status = new Dictionary<string, string>{
@@ -288,6 +293,8 @@ namespace HallOfBeorn.Client
             {
                 status.Add(hero.Card.NormalizedTitle, string.Format("{0} resource(s), {1} damage", hero.ResourceTokens, hero.DamageTokens));
             }
+
+            status.Add("Play Area", playAreaList);
 
             Write(name, status);
         }

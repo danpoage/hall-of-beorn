@@ -122,6 +122,8 @@ namespace HallOfBeorn.Models.LotR.Play
 
         When_Player_Commits_Characters_to_the_Quest,
         When_Hero_Gains_Resources,
+        When_Card_is_Played,
+
         When_Self_Attacks,
         When_Self_is_Attached,
         When_Self_Overkills,

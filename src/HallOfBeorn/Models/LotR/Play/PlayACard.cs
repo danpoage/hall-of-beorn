@@ -191,7 +191,11 @@ namespace HallOfBeorn.Models.LotR.Play
                 .WithChoice(beingPlayedChoice)
                 .Accept((gm) =>
                 {
-                    game.BeingPlayed = null;
+                    var payment = gm.CurrentChoice.Options.Single(opt => opt.IsChosen).Value;
+                    PayResourceCost(game, payment);
+
+                    PutIntoPlay(game);
+
                     //TODO: Select a target for events/attachments
                     //TODO: Either move this card to discard or put it into play
                     return string.Format("{0} plays {1}", activePlayer.Name, beingPlayed.Card.NormalizedTitle);
@@ -200,6 +204,48 @@ namespace HallOfBeorn.Models.LotR.Play
             effects.Add(beingPlayedEffect);
 
             return effects;
+        }
+
+        private static void PayResourceCost(Game game, string payment)
+        {
+            foreach (var pay in payment.SafeSplit(','))
+            {
+                var tokens = pay.SafeSplit('=');
+                if (tokens.Length == 2)
+                {
+                    var name = tokens[0];
+                    uint amount = 0; uint.TryParse(tokens[1], out amount);
+
+                    var payor = game.ActivePlayer().PlayArea.Single(p => p.Name == name);
+                    payor.ResourceTokens -= amount;
+                }
+            }
+        }
+
+        //TODO: Turn this into a framework effect
+        private static void PutIntoPlay(Game game)
+        {
+            var activePlayer = game.ActivePlayer();
+            var beingPlayed = game.BeingPlayed;
+            var cardType = beingPlayed.Card.CardType;
+            if (cardType == CardType.Ally || cardType == CardType.Player_Side_Quest)
+            {
+                activePlayer.PlayArea.Add(new CardInPlay(activePlayer.Deck, beingPlayed.Card)); 
+            }
+            if (cardType == CardType.Attachment)
+            {
+                //Find target
+            }
+            if (cardType == CardType.Event)
+            {
+                //Find target
+                activePlayer.Deck.Discard(new List<CardRef> { beingPlayed });
+            }
+
+            var inHand = activePlayer.Hand.SingleOrDefault(h => h.Id == beingPlayed.Id);
+            activePlayer.Hand.Remove(inHand);
+
+            game.BeingPlayed = null;
         }
     }
 }

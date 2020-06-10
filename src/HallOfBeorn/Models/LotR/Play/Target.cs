@@ -10,6 +10,12 @@ namespace HallOfBeorn.Models.LotR.Play
             Name = name;
         }
 
+        protected Target(string name, string id)
+        {
+            Id = id;
+            Name = name;
+        }
+
         public string Id { get; private set; }
         public string Name { get; private set; }
     }

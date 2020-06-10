@@ -190,7 +190,7 @@ namespace HallOfBeorn.Models.LotR.Play.Planning
                             //TODO: Add Status to indicate current player is playing a card
                             currentPlayer.FrameworkStep = Play.FrameworkStep.Planning_Special_Player_Action_Window;
                             var handCard = currentPlayer.Hand.First(h => h.Id == selected.Value);
-                            gm.BeingPlayed = new CardInPlay(handCard.Deck, handCard.Card);
+                            gm.BeingPlayed = new CardInPlay(handCard.Deck, handCard.Card, handCard.Id);
                             return string.Format("{0} will play {1}", currentPlayer.Name, handCard.Card.NormalizedTitle);
                         })
                     .Decline((gm) =>

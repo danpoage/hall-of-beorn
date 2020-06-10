@@ -13,6 +13,11 @@ namespace HallOfBeorn.Models.LotR.Play
         {
         }
 
+        public CardInPlay(Deck deck, LotRCard card, string refId)
+            : base(deck, card, refId)
+        {
+        }
+
         //TODO: Set this
         public Player Owner { get; set; }
 

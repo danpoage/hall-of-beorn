@@ -15,6 +15,13 @@ namespace HallOfBeorn.Models.LotR.Play
             Card = card;
         }
 
+        protected CardRef(Deck deck, LotRCard card, string refId)
+            : base(card.NormalizedTitle, refId)
+        {
+            Deck = deck;
+            Card = card;
+        }
+
         public Deck Deck { get; private set; }
         public LotRCard Card { get; private set; }
     }

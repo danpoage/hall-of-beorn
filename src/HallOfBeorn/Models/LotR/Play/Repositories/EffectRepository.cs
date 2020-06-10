@@ -74,6 +74,28 @@ namespace HallOfBeorn.Models.LotR.Play.Repositories
                 })
             };
 
+            frontEffects["Secret-Paths-Core"] = new List<Effect>
+            {
+                Effect.Create(GetCard("Secret-Paths-Core"), Trigger.Player_Action_Window)
+                .WithCriteria((gm) => gm.Phase == Phase.Quest)
+                .WithResultTargets((gm) => gm.StagingArea.Where(sa => sa.Card.CardType == CardType.Location))
+                .Accept((gm) =>
+                {
+                    var target = gm.CurrentResultTargets.Single();
+                    var inPlay = gm.StagingArea.Single(sa => sa.Id == target.Id);
+                    var desc = string.Format("{0} does not count its threat this phase.", target.Name);
+                    gm.PendingEffects.Add(
+                        Effect.Create(FrameworkStep.Quest_Resolution, EffectTiming.When, Trigger.Determine_Card_Threat_Value,
+                            "Until the end of the phase, that location does not contribute its Threat.")
+                        .Accept((gm2) =>
+                        {
+                            gm2.StagingArea.Single(sa => sa.Id == target.Id).Threat = 0;
+                            return desc;
+                        }));
+                    return desc;
+                })
+            };
+
             frontEffects["Sneak-Attack-Core"] = new List<Effect>
             {
                 Effect.Create(GetCard("Sneak-Attack-Core"), Trigger.Player_Action_Window)
@@ -96,6 +118,27 @@ namespace HallOfBeorn.Models.LotR.Play.Repositories
                         
                         return string.Format("Putting {0} into play", target.Name); 
                     })
+            };
+
+            frontEffects["Snowbourn-Scout-Core"] = new List<Effect>
+            {
+                Effect.Create(GetCard("Snowbourn-Scout-Core"), Trigger.After_Self_Enters_Play)
+                .WithResultTargets(gm => {
+                    return gm.InPlay().Where(ip => ip.Card.CardType == CardType.Location);
+                })
+                .Accept((gm) => {
+                    var target = gm.CurrentResultTargets.SingleOrDefault();
+                    if (target != null)
+                    {
+                        var location = gm.InPlay().FirstOrDefault(ip => ip.Id == target.Id);
+                        if (location != null)
+                        {
+                            location.ProgressTokens += 1;
+                        }
+                    }
+
+                    return "After Snowbourn Scout enters play, choose a location. Place 1 progress token on that location.";
+                })
             };
 
             frontEffects["Flies-and-Spiders-Core"] = new List<Effect>
