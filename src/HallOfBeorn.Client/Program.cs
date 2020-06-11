@@ -71,6 +71,7 @@ namespace HallOfBeorn.Client
                 { "choice", (g, input) => ShowChoice(g, input) },
                 { "deck", (g, input) => AddDeck(g, input) },
                 { "exit", (g, input) => run = false },
+                { "round", (g, input) => ShowRoundInfo(g, input) }, 
                 { "log", (g, input) => ShowLog(g, input) },
                 { "player", (g, input) => PlayerInfo(g, input) },
                 { "quest", (g, input) => AddQuest(g, input) },
@@ -129,6 +130,18 @@ namespace HallOfBeorn.Client
             }
 
             Write("Game Log", log);
+        }
+
+        public static void ShowRoundInfo(Game game, List<string> input)
+        {
+            var info = new Dictionary<string, string>
+            {
+                { "Round Number", game.RoundNumber.ToString() },
+                { "Current Phase", game.Phase.ToString() },
+                { "Framework Step", game.FrameworkStep.ToString() },
+            };
+
+            Write("Round", info);
         }
 
         public static void ShowStagingArea(Game game, List<string> input)

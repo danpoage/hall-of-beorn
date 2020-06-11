@@ -41,6 +41,7 @@ namespace HallOfBeorn.Models.LotR.Play
                 new Resource.BeginningOfResourcePhase(),
                 new Resource.GainResources(),
                 new Resource.DrawCards(),
+                new Resource.BeforeEndPlayerActionWindow(),
                 new Resource.EndOfResourcePhase(),
             } },
             { Phase.Planning, new List<GameSegment>{
@@ -50,6 +51,7 @@ namespace HallOfBeorn.Models.LotR.Play
             } },
             { Phase.Quest, new List<GameSegment>{
                 new Quest.BeginningOfQuestPhase(),
+                new Quest.BeforeCommitPlayerActionWindow(),
                 new Quest.CommitCharacters(),
                 new Quest.EndOfQuestPhase(),
             } },

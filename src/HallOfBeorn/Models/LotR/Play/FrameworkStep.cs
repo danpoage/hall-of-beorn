@@ -32,7 +32,7 @@
         Planning_End, // = 240,
 
         Quest_Begin, // = 310,
-        //Quest_Before_Commit_Player_Action_Window,
+        Quest_Before_Commit_Player_Action_Window,
         Quest_Commit_Characters, // = 320,
         //Quest_Before_Staging_Player_Action_Window,
         Quest_Staging , //= 330,

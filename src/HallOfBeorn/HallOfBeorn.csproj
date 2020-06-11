@@ -417,6 +417,7 @@
     <Compile Include="Models\LotR\Play\Choice.cs" />
     <Compile Include="Models\LotR\Play\Combat\BeginningOfCombatPhase.cs" />
     <Compile Include="Models\LotR\Play\Combat\EndOfCombatPhase.cs" />
+    <Compile Include="Models\LotR\Play\PlayerActionWindow.cs" />
     <Compile Include="Models\LotR\Play\Deck.cs" />
     <Compile Include="Models\LotR\Play\Effect.cs" />
     <Compile Include="Models\LotR\Play\EffectDuration.cs" />
@@ -437,6 +438,7 @@
     <Compile Include="Models\LotR\Play\PlayACard.cs" />
     <Compile Include="Models\LotR\Play\Player.cs" />
     <Compile Include="Models\LotR\Play\PlayerStatus.cs" />
+    <Compile Include="Models\LotR\Play\Quest\BeforeCommitPlayerActionWindow.cs" />
     <Compile Include="Models\LotR\Play\Quest\BeginningOfQuestPhase.cs" />
     <Compile Include="Models\LotR\Play\Quest\CommitCharacters.cs" />
     <Compile Include="Models\LotR\Play\Quest\EndOfQuestPhase.cs" />
@@ -444,6 +446,7 @@
     <Compile Include="Models\LotR\Play\Refresh\EndOfRefreshPhase.cs" />
     <Compile Include="Models\LotR\Play\Refresh\EndOfRound.cs" />
     <Compile Include="Models\LotR\Play\Repositories\EffectRepository.cs" />
+    <Compile Include="Models\LotR\Play\Resource\BeforeEndPlayerActionWindow.cs" />
     <Compile Include="Models\LotR\Play\Resource\BeginningOfRound.cs" />
     <Compile Include="Models\LotR\Play\Resource\DrawCards.cs" />
     <Compile Include="Models\LotR\Play\Resource\EndOfResourcePhase.cs" />
