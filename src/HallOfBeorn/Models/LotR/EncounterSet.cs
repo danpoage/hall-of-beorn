@@ -721,6 +721,7 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet WrathAndRuin = new EncounterSet { Name = "Wrath and Ruin", Set = "Wrath and Ruin" };
         public static EncounterSet TheCityOfUlfast = new EncounterSet { Name = "The City of Ulfast", Set = "The City of Ulfast" };
         public static EncounterSet ChallengeOfTheWainriders = new EncounterSet { Name = "Challenge of the Wainriders", Set = "Challenge of the Wainriders" };
+        public static EncounterSet UnderTheAshMountains = new EncounterSet { Name = "Under the Ash Mountains", Set = "Under the Ash Mountains" };
 
         //Two Player Starter
         public static EncounterSet TheOath = new EncounterSet { Name = "The Oath", Set = "Two-Player Limited Edition Starter" };

@@ -114,6 +114,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTraits("Troll.")
                 .WithTextLine("Cannot have attachments.")
                 .WithTextLine("Forced: After Mordor Cave Troll attacks and destroys a character, discard the top card of your deck for each point of excess damage dealt by this attack.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(96, 2, Artist.Ivan_Dixon);
             addEnemy("Ash Mountain Werewolf", setName, 28, 2, 4, 1, 5)
                 .WithTraits("Creature.", "Werewolf.")
@@ -126,20 +127,23 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTextLine("Surge.")
                 .WithTextLine("Forced: After Spawn of Shelob engages you, either discard the top card of your deck, or Spawn of Shelob gets +2 Attack until the end of the round.")
                 .WithShadow("Shadow: Exhaust a character you control.")
+                .WithEasyModeQuantity(2)
                 .WithInfo(98, 3, Artist.Guillaume_Ducos);
             addEnemy("Torech Gorgor Patrol", setName, 45, Card.VALUE_X, 5, 4, 9)
                 .WithTraits("Orc.", "Uruk.")
                 .WithTextLine("X is 1 more than the number of quest cards in play.")
                 .WithTextLine("While Torech Gorgor Patrol is in the staging area, no more than 5 progress can be placed on the main quest each round.")
                 .WithTextLine("Forced: After Torech Gorgor Patrol engages a player, it makes an attack.")
-                .WithInfo(99, 3, Artist.Matthew_Cowdery);
+                .WithEasyModeQuantity(1)
+                .WithInfo(99, 2, Artist.Matthew_Cowdery);
             addLocation("Fiery Chasm", setName, Card.VALUE_X, 5)
                 .WithTraits("Underground.")
                 .WithTextLine("X is 1 more than the number of quest cards in play.")
                 .WithTextLine("Forced: When Fiery Chasm is explored, discard the top X cards of your deck.")
                 .WithFlavorLine("...its floor and walls on either side were cloven by a great fissure, out of which the red glare came, now leaping up, now dying down into darkness...")
                 .WithFlavorLine("-The Return of the King")
-                .WithInfo(100, 2, Artist.Unknown);
+                .WithEasyModeQuantity(2)
+                .WithInfo(100, 3, Artist.Unknown);
             addLocation("Hideous Deeps", setName, 3, 6)
                 .WithTraits("Underground.")
                 .WithTextLine("When Revealed: Each player places the top 3 cards of his deck facedown under Hideous Deeps.")
@@ -149,20 +153,23 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTraits("Underground.")
                 .WithTextLine("While Orc Passage is in the staging area, encounter card effects cannot be canceled.")
                 .WithTextLine("Forced: When Orc Passage is explored, search the encounter deck and discard pile for a copy of Torech Gorgor Patrol and add it to the staging area.")
-                .WithInfo(102, 3, Artist.Stanislav_Dikolenko);
+                .WithEasyModeQuantity(1)
+                .WithInfo(102, 2, Artist.Stanislav_Dikolenko);
             addTreachery("Ransacked Supplies", setName)
                 .WithTextLine("When Revealed: Each player discards the top card of his deck. Until the end of the phase, add the total cost of each card discarded this way to the Threat in the staging area.")
                 .WithShadow("Shadow: Discard an attachment you control. If this attack destroys a character, discard another attachment you control.")
-                .WithInfo(103, 2, Artist.Alex_Brock);
+                .WithInfo(103, 3, Artist.Alex_Brock);
             addTreachery("Burning Reek", setName)
                 .WithKeywords("Doomed 1.")
                 .WithTextLine("Doomed 1.")
                 .WithTextLine("When Revealed: Each player discard 1 card from the top of his deck for each character he controls.")
                 .WithShadow("Shadow: Either discard the top 2 cards of your deck, or return attacking enemy to the staging area after this attack.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(104, 2, Artist.Greg_Bobrowski);
             addTreachery("Writhing Shadows", setName)
                 .WithTextLine("When Revealed: Each player assigns X damage among character he controls, where X is 1 more than the number of quest cards in play. Exhaust each character damaged by this effect.")
                 .WithShadow("Shadow: Attacking enemy makes an additional attack against you after this one.")
+                .WithEasyModeQuantity(1)
                 .WithInfo(105, 2, Artist.Matthew_Cowdery);
             addQuest("Passage into Mordor", setName, 1, 'A', 25)
                 .WithFlavorLine("The tunnels of Torech Gorgor run beneath the Ash Mountains into Mordor.")
