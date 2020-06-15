@@ -397,6 +397,11 @@ namespace HallOfBeorn.Models.LotR
             Add(TheLandOfSorrow);
             Add(TheFortressOfNurn);
 
+            Add(WrathAndRuinPreorderPromotion);
+            Add(TheCityOfUlfastPreorderPromotion);
+            Add(ChallengeOfTheWainridersPreorderPromotion);
+            Add(UnderTheAshMountainsPreorderPromotion);
+
             Add(TheHobbitOverHillAndUnderHill);
             Add(TheHobbitOnTheDoorstep);
 
@@ -587,6 +592,11 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet UnderTheAshMountains = new Sets.VengeanceOfMordor.UnderTheAshMountainsSet();
         public static CardSet TheLandOfSorrow = new Sets.VengeanceOfMordor.TheLandOfSorrowSet();
         public static CardSet TheFortressOfNurn = new Sets.VengeanceOfMordor.TheFortressOfNurnSet();
+
+        public static CardSet WrathAndRuinPreorderPromotion = new Sets.PreorderPromotion.WrathAndRuinPreorderPromotionSet();
+        public static CardSet TheCityOfUlfastPreorderPromotion = new Sets.PreorderPromotion.TheCityOfUlfastPreorderPromotionSet();
+        public static CardSet ChallengeOfTheWainridersPreorderPromotion = new Sets.PreorderPromotion.ChallengeOfTheWainridersPreorderPromotionSet();
+        public static CardSet UnderTheAshMountainsPreorderPromotion = new Sets.PreorderPromotion.UnderTheAshMountainsPreorderPromotionSet();
 
         public static CardSet TheHobbitOverHillAndUnderHill = new Sets.TheHobbit.OverHillandUnderHillSet();
         public static CardSet TheHobbitOnTheDoorstep = new Sets.TheHobbit.OntheDoorstepSet();

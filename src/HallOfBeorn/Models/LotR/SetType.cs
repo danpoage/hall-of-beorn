@@ -10,6 +10,7 @@
         Deluxe_Expansion,
         Saga_Expansion,
         Starter,
+        Preorder_Promotion,
         PRINT_ON_DEMAND,
         GenCon_Expansion,
         GenConSaga_Expansion,

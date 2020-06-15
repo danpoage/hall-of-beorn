@@ -10,10 +10,14 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
             MainProduct = Product.AShadowInTheEast;
             AddProduct(Product.WrathAndRuin);
             AddProduct(Product.TheCityOfUlfast);
-            AddProduct(Product.TheWainridersChallenge);
+            AddProduct(Product.ChallengeOfTheWainriders);
             AddProduct(Product.UnderTheAshMountains);
             AddProduct(Product.TheLandOfSorrow);
             AddProduct(Product.TheFortressOfNurn);
+            AddProduct(Product.WrathAndRuinPreorderPromotion);
+            AddProduct(Product.TheCityOfUlfastPreorderPromotion);
+            AddProduct(Product.ChallengeOfTheWainridersPreorderPromotion);
+            AddProduct(Product.UnderTheAshMountainsPreorderPromotion);
         }
     }
 }

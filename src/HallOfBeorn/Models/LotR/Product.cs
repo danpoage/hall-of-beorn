@@ -137,10 +137,16 @@ namespace HallOfBeorn.Models.LotR
         public static Product AShadowInTheEast = new Products.Deluxe.AShadowInTheEastProduct();
         public static Product WrathAndRuin = new Products.AdventurePack.WrathAndRuinProduct();
         public static Product TheCityOfUlfast = new Products.AdventurePack.TheCityOfUlfastProduct();
-        public static Product TheWainridersChallenge = new Products.AdventurePack.ChallengeOfTheWainridersProduct();
+        public static Product ChallengeOfTheWainriders = new Products.AdventurePack.ChallengeOfTheWainridersProduct();
         public static Product UnderTheAshMountains = new Products.AdventurePack.UnderTheAshMountainsProduct();
         public static Product TheLandOfSorrow = new Products.AdventurePack.TheLandOfSorrowProduct();
         public static Product TheFortressOfNurn = new Products.AdventurePack.TheFortressOfNurnProduct();
+
+        //Vengeance of Mordor Preorder Promotion
+        public static Product WrathAndRuinPreorderPromotion = new Products.PreorderPromotion.WrathAndRuinPreorderPromotionProduct();
+        public static Product TheCityOfUlfastPreorderPromotion = new Products.PreorderPromotion.TheCityOfUlfastPreorderPromotionProduct();
+        public static Product ChallengeOfTheWainridersPreorderPromotion = new Products.PreorderPromotion.ChallengeOfTheWainridersPreorderPromotionProduct();
+        public static Product UnderTheAshMountainsPreorderPromotion = new Products.PreorderPromotion.UnderTheAshMountainsPreorderPromotionProduct();
 
         //The Hobbit Saga
         public static Product TheHobbitOverHillAndUnderHill = new Products.Saga.TheHobbitOverHillAndUnderHillProduct();

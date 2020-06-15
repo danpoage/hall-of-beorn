@@ -22,13 +22,12 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTextLine("If Éomer is in play, Lothíriel gains the Rohan trait.")
                 .WithTextLine("Response: After Lothíriel commits to a quest, choose an ally in your hand. If that ally shares a Trait with her, put that ally into play exhausted and committed to the quest. At the end of the phase, if that ally is still in play, shuffle it into your deck.")
                 .WithInfo(27, 1, Artist.Alvaro_Calvo_Escudero);
-
             addAlly("Angbor the Fearless", 2, Sphere.Leadership, true, 2, 1, 0, 2)
                 .WithTraits("Gondor.", "Warrior.")
                 .WithTextLine("While your threat is 40 or higher, Angbor the Fearless gets +2 Attack and does not exhaust to quest.")
                 .WithFlavorLine("\"Four thousands I sent marching from Pelargir through Lossarnach two days ago; and Angbor the fearless rides before them.\"")
                 .WithFlavorLine("-Aragorn, The Return of the King")
-                .WithInfo(28, 3, Artist.Unknown);
+                .WithInfo(28, 3, Artist.Vilius_Petrauskas);
             addEvent("Need Drives Them", 3, Sphere.Leadership)
                 .WithTextLine("Action: Each player whose threat is 40 or higher readies all characters he controls.")
                 .WithInfo(29, 3, Artist.Unknown);
