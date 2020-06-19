@@ -139,7 +139,7 @@ namespace HallOfBeorn.Models.LotR.Play
 
             if (game.BeingPlayed != null)
             {
-                return PlayACard.PayForACard(game);
+                return PlayACard.PayForACard(game, this);
             }
 
             foreach (var player in game.Players)
@@ -165,14 +165,24 @@ namespace HallOfBeorn.Models.LotR.Play
                         continue;
                     }
 
-                    if (resources[card.Card.Sphere]
-                        >= card.Card.ResourceCost.GetValueOrDefault(0))
+                    if (resources[card.Card.Sphere] >= card.Card.ResourceCost.GetValueOrDefault(0)
+                        || card.Card.ResourceCost.Value == Card.VALUE_X)
                     {
                         var cardEffects = LookupEffects(card.Card.Slug, CardSide.Front)
                             .Where(ef => ef.Trigger == Trigger.Player_Action_Window);
 
                         if (!MatchesCriteria(game, cardEffects))
                             continue;
+
+                        if (card.Card.ResourceCost == Card.VALUE_X)
+                        {
+                            var costEffect = LookupEffects(card.Card.Slug, CardSide.Front)
+                                .FirstOrDefault(ef => ef.Trigger == Trigger.When_Determining_Cost);
+
+                            //For cards with a cost of X ensure that there are valid targets
+                            if (costEffect == null || !costEffect.GetChoice(game).Options.Any(ch => ch.IsAccept))
+                                continue;
+                        }
 
                         var hasCostTargets = cardEffects.Any(ce => ce.GetCostTargets != null);
                         var hasResultTargets = cardEffects.Any(ce => ce.GetResultTargets != null);
@@ -184,9 +194,18 @@ namespace HallOfBeorn.Models.LotR.Play
                         }
                         else
                         {
+                            var cost = card.Card.ResourceCost == Card.VALUE_X
+                                ? "X" : card.Card.ResourceCost.ToString();
+
+                            var sphere = card.Card.Sphere == Sphere.Neutral
+                                ? "of any" : card.Card.Sphere.ToString();
+
+                            var description = card.Card.ResourceCost == 1
+                                ? "resource" : "resources";
+
                             playChoice.Options.Add(new Option { 
-                                Description = string.Format("Play {0} for {1} {2} resources", 
-                                    card.Name, card.Card.ResourceCost, card.Card.Sphere),
+                                Description = string.Format("Play {0} for {1} {2} {3}", 
+                                    card.Name, cost, sphere, description),
                                 IsAccept = true,
                                 Context = player.Name,
                                 Value = card.Id

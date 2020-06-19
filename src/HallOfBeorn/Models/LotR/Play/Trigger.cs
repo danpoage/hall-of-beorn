@@ -110,6 +110,8 @@ namespace HallOfBeorn.Models.LotR.Play
 
         Travel,
 
+        When_Determining_Cost,
+
         When_Revealed,
         When_Round_Begins,
         When_Phase_Begins,

@@ -131,7 +131,7 @@ namespace HallOfBeorn.Models.LotR.Play
             return options;
         }
 
-        public static IEnumerable<Effect> PayForACard(Game game)
+        public static IEnumerable<Effect> PayForACard(Game game, GameSegment segment)
         {
             var effects = new List<Effect>();
 
@@ -160,15 +160,20 @@ namespace HallOfBeorn.Models.LotR.Play
             {
                 //TODO: Check for target-based costs like Stand and Fight/Reforged
                 var available = activePlayer.GetAvailableResources(beingPlayed.Card.Sphere);
-                for(var i=0; i<=available; i++)
+                var costEffect = segment.LookupEffects(game.BeingPlayed.Card.Slug, CardSide.Front)
+                    .FirstOrDefault(ef => ef.Trigger == Trigger.When_Determining_Cost);
+
+                if (costEffect != null)
                 {
-                    var label = i == 1 ? "resource" : "resources";
-                    beingPlayedChoice.Options.Add(new Option
-                    {
-                        Description = string.Format("Pay {0} {1} for {2}", i, label, beingPlayed.Card.NormalizedTitle),
-                        IsAccept = true,
+                    beingPlayedChoice.Options.AddRange(costEffect.GetChoice(game).Options);
+                }
+                else
+                {
+                    //NOTE: This is an error
+                    beingPlayedChoice.Options.Add(new Option{
+                        Description = string.Format("No valid cost options for {0}", game.BeingPlayed.Name),
+                        IsDecline = true,
                         Context = activePlayer.Name,
-                        Value = i.ToString()
                     });
                 }
             }
@@ -246,6 +251,7 @@ namespace HallOfBeorn.Models.LotR.Play
             activePlayer.Hand.Remove(inHand);
 
             game.BeingPlayed = null;
+            game.BeingPlayedCostChoice = null;
         }
     }
 }

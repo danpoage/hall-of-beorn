@@ -23,7 +23,7 @@ namespace HallOfBeorn.Models.LotR.Play.Resource
                 {
                     effects.Add(Effect.Create(FrameworkStep.Resource_Gain_Resources, EffectTiming.When, Trigger.When_Hero_Gains_Resources, "When hero gains resources")
                         .Accept((gm) => {
-                            hero.ResourceTokens += 1;
+                            hero.ResourceTokens += 6;
                             return string.Format("{0} gains 1 resource", hero.Card.NormalizedTitle);
                         }));
                 }

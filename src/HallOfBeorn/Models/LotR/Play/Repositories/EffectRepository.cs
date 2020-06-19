@@ -141,6 +141,48 @@ namespace HallOfBeorn.Models.LotR.Play.Repositories
                 })
             };
 
+            frontEffects["Stand-and-Fight-Core"] = new List<Effect>
+            {
+                Effect.Create(GetCard("Stand-and-Fight-Core"), Trigger.When_Determining_Cost)
+                .Auto()
+                .WithChoice((g) => {
+                    var choice = new Choice(ChoiceType.Exclusive)
+                    {
+                        Description = "Choose a target for Stand and Fight"
+                    };
+
+                    var available = g.ActivePlayer().GetAvailableResources(Sphere.Spirit);
+
+                    foreach (var player in g.Players)
+                    {
+                        //TODO: Change this to discard pile
+                        foreach (var target in player
+                            .Hand.Where(c => c.Card.CardType == CardType.Ally))
+                        {
+                            var cost = target.Card.ResourceCost;
+                            if (cost > available)
+                            {
+                                continue;
+                            }
+
+                            var description = cost == 1 ? "resource" : "resources";
+                            choice.Options.Add(new Option
+                            {
+                                Description = string.Format("Pay {0} {1} for {2} from {3}'s hand",
+                                cost, description, target.Name, player.Name),
+                                IsAccept = true,
+                                CostTarget = target.Id
+                            });
+                        }
+                    }
+
+                    return choice;
+                })
+                .Accept((g) => {
+                    return "These are the valid targets for Stand and Fight";
+                })
+            };
+
             frontEffects["Flies-and-Spiders-Core"] = new List<Effect>
             {
                 Effect.Create(GetCard("Flies-and-Spiders-Core"), Trigger.Setup_Setup_Quest_Card)
