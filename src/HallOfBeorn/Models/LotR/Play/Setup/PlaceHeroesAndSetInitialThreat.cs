@@ -11,9 +11,10 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
         public PlaceHeroesAndSetInitialThreat()
             : base(SetupStep.Setup_Place_Heroes_And_Set_Initial_Threat_Levels)
         {
+            AddPart(SetupStep.Setup_Place_Heroes_And_Set_Initial_Threat_Levels, (gm) => PlaceHeroesPart(gm));
         }
 
-        public override IEnumerable<Effect> Execute(Game game)
+        private ExecutionResult PlaceHeroesPart(Game game)
         {
             var effects = new List<Effect>();
 
@@ -45,7 +46,7 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
                 game.Log(string.Format("Set Initial Threat for {0} to {1}", player.Name, player.Threat));
             }
 
-            return effects;
+            return ExecutionResult.Create(effects);
         }
     }
 }

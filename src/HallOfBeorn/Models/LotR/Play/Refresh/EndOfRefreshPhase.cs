@@ -11,9 +11,10 @@ namespace HallOfBeorn.Models.LotR.Play.Refresh
         public EndOfRefreshPhase()
             : base(Phase.Refresh, FrameworkStep.Refresh_End)
         {
+            AddPart(Play.FrameworkStep.Refresh_End, (gm) => EndOfPhase(gm));
         }
 
-        public override IEnumerable<Effect> Execute(Game game)
+        private static ExecutionResult EndOfPhase(Game game)
         {
             var endOfPhaseEffect = Effect.Create(FrameworkStep.Refresh_End, EffectTiming.After, Trigger.After_End_of_Phase, "End of refresh phase")
                 .Accept((gm) =>
@@ -22,7 +23,7 @@ namespace HallOfBeorn.Models.LotR.Play.Refresh
                 });
 
 
-            return new List<Effect> { endOfPhaseEffect };
+            return ExecutionResult.Create(endOfPhaseEffect);
         }
     }
 }

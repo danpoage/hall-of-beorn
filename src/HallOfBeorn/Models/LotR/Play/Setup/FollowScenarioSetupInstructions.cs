@@ -11,11 +11,13 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
         public FollowScenarioSetupInstructions()
             : base(SetupStep.Setup_Follow_Scenario_Setup_Instructions)
         {
+            AddPart(SetupStep.Setup_Follow_Scenario_Setup_Instructions, (gm) => ScenarioSetupPart(gm));
         }
 
-        public override IEnumerable<Effect> Execute(Game game)
+        private static ExecutionResult ScenarioSetupPart(Game game)
         {
-            return new List<Effect>();
+            //TODO: get setup effects
+            return new ExecutionResult();
         }
     }
 }

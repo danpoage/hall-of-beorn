@@ -11,9 +11,10 @@ namespace HallOfBeorn.Models.LotR.Play.Quest
         public CommitCharacters()
             : base(Phase.Quest, FrameworkStep.Quest_Commit_Characters)
         {
+            AddPart(Play.FrameworkStep.Quest_Commit_Characters, (gm) => CommitCharactersPart(gm));
         }
 
-        public override IEnumerable<Effect> Execute(Game game)
+        private static ExecutionResult CommitCharactersPart(Game game)
         {
             var effects = new List<Effect>();
 
@@ -57,7 +58,7 @@ namespace HallOfBeorn.Models.LotR.Play.Quest
                 effects.Add(commitEffect);
             }
 
-            return effects;
+            return ExecutionResult.Create(effects);
         }
     }
 }

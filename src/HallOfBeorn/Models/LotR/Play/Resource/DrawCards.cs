@@ -11,9 +11,10 @@ namespace HallOfBeorn.Models.LotR.Play.Resource
         public DrawCards()
             : base(Phase.Resource, FrameworkStep.Resource_Draw_Cards)
         {
+            AddPart(Play.FrameworkStep.Resource_Draw_Cards, (gm) => DrawCardsPart(gm));
         }
 
-        public override IEnumerable<Effect> Execute(Game game)
+        private static ExecutionResult DrawCardsPart(Game game)
         {
             var effects = new List<Effect>();
 
@@ -32,7 +33,7 @@ namespace HallOfBeorn.Models.LotR.Play.Resource
                         }));
             }
 
-            return effects;
+            return ExecutionResult.Create(effects);
         }
     }
 }

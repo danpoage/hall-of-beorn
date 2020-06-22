@@ -11,9 +11,10 @@ namespace HallOfBeorn.Models.LotR.Play.Combat
         public EndOfCombatPhase()
             : base(Phase.Combat, FrameworkStep.Combat_End_Discard_All_Shadow_Cards)
         {
+            AddPart(Play.FrameworkStep.Combat_End_Discard_All_Shadow_Cards, (gm) => EndOfPhase(gm));
         }
 
-        public override IEnumerable<Effect> Execute(Game game)
+        private static ExecutionResult EndOfPhase(Game game)
         {
             var endOfPhaseEffect = Effect.Create(
                 SetupStep.None, EffectTiming.After, Trigger.After_End_of_Phase, "End of combat phase discard all shadow cards")
@@ -42,7 +43,7 @@ namespace HallOfBeorn.Models.LotR.Play.Combat
                     return "End of combat phase";
                 });
 
-            return new List<Effect> { endOfPhaseEffect };
+            return ExecutionResult.Create(endOfPhaseEffect);
         }
     }
 }

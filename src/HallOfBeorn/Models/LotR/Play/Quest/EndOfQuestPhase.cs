@@ -11,9 +11,10 @@ namespace HallOfBeorn.Models.LotR.Play.Quest
         public EndOfQuestPhase()
             : base(Phase.Quest, FrameworkStep.Quest_End)
         {
+            AddPart(Play.FrameworkStep.Quest_End, (gm) => EndOfPhase(gm));
         }
 
-        public override IEnumerable<Effect> Execute(Game game)
+        public static ExecutionResult EndOfPhase(Game game)
         {
             var endOfPhaseEffect = Effect.Create(SetupStep.Setup_End, EffectTiming.After, Trigger.After_End_of_Setup, "End of quest phase")
                 .WithCriteria((gm) => true)
@@ -24,7 +25,7 @@ namespace HallOfBeorn.Models.LotR.Play.Quest
                     return "End of quest phase";
                 });
 
-            return new List<Effect> { endOfPhaseEffect };
+            return ExecutionResult.Create(endOfPhaseEffect);
         }
     }
 }

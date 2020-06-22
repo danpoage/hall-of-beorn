@@ -21,6 +21,24 @@ namespace HallOfBeorn.Models.LotR.Play
             FrameworkStep = frameworkStep;
         }
 
+        protected void AddPart(FrameworkStep step, Effect effect)
+        {
+            Parts.Add(
+                new GamePart(this, step, 
+                    (gm) => ExecutionResult.Create(effect)));
+        }
+
+        protected void AddPart(FrameworkStep step, Func<Game, ExecutionResult> getResult)
+        {
+            Parts.Add(new GamePart(this, step, getResult));
+        }
+
+        protected void AddPart(SetupStep step, Func<Game, ExecutionResult> getResult)
+        {
+            Parts.Add(new GamePart(this, step, getResult));
+        }
+
+        public List<GamePart> Parts = new List<GamePart>();
         public Func<string, LotRCard> LookupCard { get; set; }
         public Func<string, CardSide, IEnumerable<Effect>> LookupEffects { get; set; }
         public Func<Trigger, List<Effect>> LookupEffectsByTrigger { get; set; }
@@ -31,6 +49,21 @@ namespace HallOfBeorn.Models.LotR.Play
         public Phase Phase { get; private set; }
         public FrameworkStep FrameworkStep { get; private set; }
 
-        public abstract IEnumerable<Effect> Execute(Game game);
+        public ExecutionResult Execute(Game game)
+        {
+            var result = new ExecutionResult();
+
+            foreach (var part in Parts)
+            {
+                var partResult = part.Execute(game);
+                result.Append(partResult);
+                if (!partResult.IsTerminal)
+                {
+                    return result;
+                }
+            }
+
+            return result;
+        }
     }
 }

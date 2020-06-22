@@ -11,9 +11,10 @@ namespace HallOfBeorn.Models.LotR.Play.Encounter
         public BeginningOfEncounterPhase()
             : base(Phase.Encounter, FrameworkStep.Encounter_Begin)
         {
+            AddPart(Play.FrameworkStep.Encounter_Begin, (gm) => StartOfPhase(gm));
         }
 
-        public override IEnumerable<Effect> Execute(Game game)
+        private static ExecutionResult StartOfPhase(Game game)
         {
             var startOfPhaseEffect = Effect.Create(FrameworkStep.Encounter_Begin, EffectTiming.When, Trigger.When_Phase_Begins, "Beginning of encounter phase")
                 .Accept((gm) =>
@@ -21,7 +22,7 @@ namespace HallOfBeorn.Models.LotR.Play.Encounter
                     return "Beginning of encounter phase";
                 });
 
-            return new List<Effect> { startOfPhaseEffect };
+            return ExecutionResult.Create(startOfPhaseEffect);
         }
     }
 }

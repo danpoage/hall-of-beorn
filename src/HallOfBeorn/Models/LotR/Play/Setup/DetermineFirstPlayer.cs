@@ -11,9 +11,10 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
         public DetermineFirstPlayer()
             : base(SetupStep.Setup_Determine_First_Player)
         {
+            AddPart(SetupStep.Setup_Determine_First_Player, (gm) => FirstPlayerPart(gm));
         }
 
-        public override IEnumerable<Effect> Execute(Game game)
+        private static ExecutionResult FirstPlayerPart(Game game)
         {
             var firstPlayerEffect = new Effect("Determine the First Player"){ 
                 Timing = EffectTiming.When,
@@ -59,7 +60,7 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
                 
             }
 
-            return new List<Effect> { firstPlayerEffect };
+            return ExecutionResult.Create(firstPlayerEffect);
         }
     }
 }

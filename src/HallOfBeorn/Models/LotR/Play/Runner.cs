@@ -88,9 +88,9 @@ namespace HallOfBeorn.Models.LotR.Play
             game.PendingEffects.Clear();
             game.CurrentChoice = null;
 
-            var effects = segment.Execute(game);
+            var result = segment.Execute(game);
 
-            game.PendingEffects.Load(effects);
+            game.PendingEffects.Load(result.Effects);
         }
 
         private IEnumerable<Effect> GetEffectsByTrigger(string slug, CardSide side, Trigger trigger)

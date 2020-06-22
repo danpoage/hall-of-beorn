@@ -10,9 +10,10 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
         public ShuffleDecks()
             : base(SetupStep.Setup_Shuffle_Decks)
         {
+            AddPart(SetupStep.Setup_Shuffle_Decks, (gm) => ShuffleDecksPart(gm));
         }
 
-        public override IEnumerable<Effect> Execute(Game game)
+        private ExecutionResult ShuffleDecksPart(Game game)
         {
             foreach (var player in game.Players)
             {
@@ -50,7 +51,7 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
                 game.SecondaryEncounterDeck.Shuffle();
             }
 
-            return Enumerable.Empty<Effect>();
+            return new ExecutionResult();
         }
     }
 }

@@ -11,9 +11,10 @@ namespace HallOfBeorn.Models.LotR.Play.Resource
         public GainResources()
             : base(Phase.Resource, FrameworkStep.Resource_Gain_Resources)
         {
+            AddPart(Play.FrameworkStep.Resource_Gain_Resources, (gm) => GainResourcesPart(gm));
         }
 
-        public override IEnumerable<Effect> Execute(Game game)
+        private static ExecutionResult GainResourcesPart(Game game)
         {
             var effects = new List<Effect>();
 
@@ -29,7 +30,7 @@ namespace HallOfBeorn.Models.LotR.Play.Resource
                 }
             }
 
-            return effects;
+            return ExecutionResult.Create(effects);
         }
     }
 }

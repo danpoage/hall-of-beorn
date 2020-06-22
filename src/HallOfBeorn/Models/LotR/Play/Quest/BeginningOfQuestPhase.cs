@@ -13,7 +13,7 @@ namespace HallOfBeorn.Models.LotR.Play.Quest
         {
         }
 
-        public override IEnumerable<Effect> Execute(Game game)
+        public static ExecutionResult StartOfPhase(Game game)
         {
             var startOfPhaseEffect = Effect.Create(FrameworkStep.Quest_Begin, EffectTiming.When, Trigger.When_Phase_Begins, "Beginning of quest phase")
                 .Accept((gm) =>
@@ -21,7 +21,7 @@ namespace HallOfBeorn.Models.LotR.Play.Quest
                     return "Beginning of quest phase";
                 });
 
-            return new List<Effect> { startOfPhaseEffect };
+            return ExecutionResult.Create(startOfPhaseEffect);
         }
     }
 }

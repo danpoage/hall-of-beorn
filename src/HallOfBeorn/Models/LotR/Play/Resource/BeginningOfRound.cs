@@ -11,18 +11,20 @@ namespace HallOfBeorn.Models.LotR.Play.Resource
         public BeginningOfRound()
             : base(Phase.Resource, FrameworkStep.Resource_Begin)
         {
+            AddPart(Play.FrameworkStep.Round_Begin, (gm) => RoundStart(gm));
+                
         }
 
-        public override IEnumerable<Effect> Execute(Game game)
+        private static ExecutionResult RoundStart(Game game)
         {
-            var startOfRoundEffect = Effect.Create(FrameworkStep.Round_Begin, EffectTiming.When, Trigger.When_Round_Begins, "Beginning of round")
+            var effect = Effect.Create(FrameworkStep.Round_Begin, EffectTiming.When, Trigger.When_Round_Begins, "Beginning of round")
                 .Accept((gm) =>
                 {
                     gm.RoundNumber += 1;
                     return string.Format("Beginning of round {0}", gm.RoundNumber);
                 });
 
-            return new List<Effect> { startOfRoundEffect };
+            return ExecutionResult.Create(effect);
         }
     }
 }

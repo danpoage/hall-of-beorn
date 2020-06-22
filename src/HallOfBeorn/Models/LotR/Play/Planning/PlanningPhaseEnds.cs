@@ -11,9 +11,10 @@ namespace HallOfBeorn.Models.LotR.Play.Planning
         public PlanningPhaseEnds()
             : base(Phase.Planning, FrameworkStep.Planning_End)
         {
+            AddPart(Play.FrameworkStep.Planning_End, (gm) => EndOfPhase(gm));
         }
 
-        public override IEnumerable<Effect> Execute(Game game)
+        private static ExecutionResult EndOfPhase(Game game)
         {
             var endOfPhaseEffect = Effect.Create(SetupStep.Setup_End, EffectTiming.After, Trigger.After_End_of_Setup, "End of planning phase")
                 .WithCriteria((gm) => true)
@@ -24,7 +25,7 @@ namespace HallOfBeorn.Models.LotR.Play.Planning
                     return "End of planning phase";
                 });
 
-            return new List<Effect> { endOfPhaseEffect };
+            return ExecutionResult.Create(endOfPhaseEffect);
         }
     }
 }

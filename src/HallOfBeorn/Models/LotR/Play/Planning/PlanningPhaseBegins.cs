@@ -11,9 +11,10 @@ namespace HallOfBeorn.Models.LotR.Play.Planning
         public PlanningPhaseBegins()
             : base(Phase.Planning, FrameworkStep.Planning_Begin)
         {
+            AddPart(Play.FrameworkStep.Planning_Begin, (gm) => StartOfPhase(gm));
         }
 
-        public override IEnumerable<Effect> Execute(Game game)
+        private static ExecutionResult StartOfPhase(Game game)
         {
             var startOfPhaseEffect = Effect.Create(FrameworkStep.Planning_Begin, EffectTiming.When, Trigger.When_Phase_Begins, "Beginning of planning phase")
                 .Accept((gm) =>
@@ -21,7 +22,7 @@ namespace HallOfBeorn.Models.LotR.Play.Planning
                     return "Beginning of planning phase";
                 });
 
-            return new List<Effect> { startOfPhaseEffect };
+            return ExecutionResult.Create(startOfPhaseEffect);
         }
     }
 }

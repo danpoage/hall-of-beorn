@@ -11,9 +11,10 @@ namespace HallOfBeorn.Models.LotR.Play.Travel
         public EndOfTravelPhase()
             : base(Phase.Travel, FrameworkStep.Travel_End)
         {
+            AddPart(Play.FrameworkStep.Travel_End, (gm) => EndOfPhase(gm));
         }
 
-        public override IEnumerable<Effect> Execute(Game game)
+        private static ExecutionResult EndOfPhase(Game game)
         {
             var endOfPhaseEffect = Effect.Create(SetupStep.None, EffectTiming.After, Trigger.After_End_of_Phase, "End of travel phase")
                 .WithCriteria((gm) => true)
@@ -24,7 +25,7 @@ namespace HallOfBeorn.Models.LotR.Play.Travel
                     return "End of travel phase";
                 });
 
-            return new List<Effect> { endOfPhaseEffect };
+            return ExecutionResult.Create(endOfPhaseEffect);
         }
     }
 }

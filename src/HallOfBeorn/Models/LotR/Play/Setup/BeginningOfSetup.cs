@@ -11,9 +11,10 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
         public BeginningOfSetup()
             : base(SetupStep.Setup_Begin)
         {
+            AddPart(SetupStep.Setup_Begin, (gm) => StartOfSetup(gm));
         }
 
-        public override IEnumerable<Effect> Execute(Game game)
+        private static ExecutionResult StartOfSetup(Game game)
         {
             var startOfSetupEffect = Effect.Create(SetupStep.Setup_Begin, EffectTiming.When, Trigger.When_Setup_Begins, "Beginning of setup")
                 .Accept((gm) =>
@@ -21,7 +22,7 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
                     return "Beginning of setup";
                 });
 
-            return new List<Effect> { startOfSetupEffect };
+            return ExecutionResult.Create(startOfSetupEffect);
         }
     }
 }

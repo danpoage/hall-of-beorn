@@ -11,11 +11,12 @@ namespace HallOfBeorn.Models.LotR.Play.Encounter
         public EndOfEncounterPhase()
             : base(Phase.Encounter, FrameworkStep.Encounter_End)
         {
+            AddPart(Play.FrameworkStep.Encounter_End, (gm) => EndOfPhase(gm));
         }
 
-        public override IEnumerable<Effect> Execute(Game game)
+        private static ExecutionResult EndOfPhase(Game game)
         {
-            var endOfPhaseEffect = Effect.Create(SetupStep.None, EffectTiming.After, Trigger.After_End_of_Phase, "End of encounter phase")
+            var endOfPhaseEffect = Effect.Create(FrameworkStep.Encounter_End, EffectTiming.After, Trigger.After_End_of_Phase, "End of encounter phase")
                 .WithCriteria((gm) => true)
                 .Accept((gm) =>
                 {
@@ -24,7 +25,7 @@ namespace HallOfBeorn.Models.LotR.Play.Encounter
                     return "End of encounter phase";
                 });
 
-            return new List<Effect> { endOfPhaseEffect };
+            return ExecutionResult.Create(endOfPhaseEffect);
         }
     }
 }

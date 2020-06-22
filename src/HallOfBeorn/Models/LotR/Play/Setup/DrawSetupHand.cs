@@ -11,9 +11,10 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
         public DrawSetupHand()
             : base(SetupStep.Setup_Draw_Setup_Hand)
         {
+            AddPart(SetupStep.Setup_Draw_Setup_Hand, (gm) => DrawSetupHandPart(gm));
         }
 
-        public override IEnumerable<Effect> Execute(Game game)
+        private ExecutionResult DrawSetupHandPart(Game game)
         {
             game.Phase = Phase.None;
             game.SetupStep = SetupStep.Setup_Draw_Setup_Hand;
@@ -22,7 +23,8 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
 
             if (game.Players.All(p => p.HasKeptSetupHand || p.HasTakenMulligan))
             {
-                return effects;
+                //TODO: Split into a separate part
+                return ExecutionResult.Create(effects);
             }
 
             foreach (var player in game.Players)
@@ -67,7 +69,7 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
                 effects.Add(mulliganEffect);
             }
 
-            return effects;
+            return ExecutionResult.Create(effects);
         }
     }
 }

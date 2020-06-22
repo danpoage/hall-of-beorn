@@ -11,9 +11,10 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
         public EndOfSetup()
             : base(SetupStep.Setup_End)
         {
+            AddPart(SetupStep.Setup_End, (gm) => EndOfSetupPart(gm));
         }
 
-        public override IEnumerable<Effect> Execute(Game game)
+        private static ExecutionResult EndOfSetupPart(Game game)
         {
             var startFirstRoundEffect = Effect.Create(SetupStep.Setup_End, EffectTiming.After, Trigger.After_End_of_Setup, "End of Setup")
                 .WithCriteria((gm) => true)
@@ -24,7 +25,7 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
                     return string.Format("End of Setup");
                 });
 
-            return new List<Effect> { startFirstRoundEffect };
+            return ExecutionResult.Create(startFirstRoundEffect);
         }
     }
 }

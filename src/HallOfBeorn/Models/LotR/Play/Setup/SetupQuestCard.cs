@@ -10,9 +10,10 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
         public SetupQuestCard()
             : base(SetupStep.Setup_Quest_Cards)
         {
+            AddPart(SetupStep.Setup_Quest_Cards, (gm) => SetupQuestCardPart(gm));
         }
 
-        public override IEnumerable<Effect> Execute(Game game)
+        private ExecutionResult SetupQuestCardPart(Game game)
         {
             //TODO: Runner should perform this automatically
             game.PendingEffects.Clear();
@@ -21,7 +22,7 @@ namespace HallOfBeorn.Models.LotR.Play.Setup
 
             var effects = LookupEffects(game.MainQuest.Card.Slug, CardSide.Front);
 
-            return effects;
+            return ExecutionResult.Create(effects);
         }
     }
 }

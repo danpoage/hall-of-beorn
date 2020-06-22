@@ -417,6 +417,8 @@
     <Compile Include="Models\LotR\Play\Choice.cs" />
     <Compile Include="Models\LotR\Play\Combat\BeginningOfCombatPhase.cs" />
     <Compile Include="Models\LotR\Play\Combat\EndOfCombatPhase.cs" />
+    <Compile Include="Models\LotR\Play\ExecutionResult.cs" />
+    <Compile Include="Models\LotR\Play\GamePart.cs" />
     <Compile Include="Models\LotR\Play\PlayerActionWindow.cs" />
     <Compile Include="Models\LotR\Play\Deck.cs" />
     <Compile Include="Models\LotR\Play\Effect.cs" />

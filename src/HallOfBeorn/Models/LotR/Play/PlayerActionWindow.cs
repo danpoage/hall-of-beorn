@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.LotR.Play
     {
         protected PlayerActionWindow(
             Phase phase, FrameworkStep frameworkStep, FrameworkStep nextStep)
-            : base(phase, frameworkStep)
+            : this(phase, frameworkStep, nextStep, false)
         {
             this.nextStep = nextStep;
             this.isSpecial = false;
@@ -22,6 +22,9 @@ namespace HallOfBeorn.Models.LotR.Play
         {
             this.nextStep = nextStep;
             this.isSpecial = isSpecial;
+
+            AddPart(frameworkStep, (gm) => BeingPlayed(gm));
+            AddPart(frameworkStep, (gm) => ActionWindow(gm));
         }
 
         protected readonly FrameworkStep nextStep;
@@ -131,16 +134,23 @@ namespace HallOfBeorn.Models.LotR.Play
             return true;
         }
 
-        public override IEnumerable<Effect> Execute(Game game)
+        private ExecutionResult BeingPlayed(Game game)
+        {
+            if (game.BeingPlayed != null)
+            {
+                return ExecutionResult.CreateTerminal(
+                    PlayACard.PayForACard(game, this), "Card is being play");
+            }
+
+            return new ExecutionResult();
+        }
+
+        //TODO: Split this into parts
+        private ExecutionResult ActionWindow(Game game)
         {
             var effects = new List<Effect>();
 
             var activePlayer = game.ActivePlayer();
-
-            if (game.BeingPlayed != null)
-            {
-                return PlayACard.PayForACard(game, this);
-            }
 
             foreach (var player in game.Players)
             {
@@ -250,7 +260,7 @@ namespace HallOfBeorn.Models.LotR.Play
                 effects.Add(playEffect);
             }
 
-            return effects;
+            return ExecutionResult.Create(effects);
         }
     }
 }

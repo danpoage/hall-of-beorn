@@ -11,9 +11,10 @@ namespace HallOfBeorn.Models.LotR.Play.Refresh
         public EndOfRound()
             : base(Phase.Refresh, FrameworkStep.Round_End)
         {
+            AddPart(Play.FrameworkStep.Round_End, (gm) => EndOfRoundPart(gm));
         }
 
-        public override IEnumerable<Effect> Execute(Game game)
+        private static ExecutionResult EndOfRoundPart(Game game)
         {
             var endOfRoundEffect = Effect.Create(FrameworkStep.Round_End, EffectTiming.After, Trigger.After_End_of_Round, "End of round")
                 .WithCriteria((gm) => true)
@@ -24,7 +25,7 @@ namespace HallOfBeorn.Models.LotR.Play.Refresh
                     return string.Format("End of round {0}", gm.RoundNumber);
                 });
 
-            return new List<Effect> { endOfRoundEffect };
+            return ExecutionResult.Create(endOfRoundEffect);
         }
     }
 }
