@@ -57,7 +57,7 @@ namespace HallOfBeorn.Models.LotR.Play
             {
                 var partResult = part.Execute(game);
                 result.Append(partResult);
-                if (!partResult.IsTerminal)
+                if (partResult.IsTerminal)
                 {
                     return result;
                 }
