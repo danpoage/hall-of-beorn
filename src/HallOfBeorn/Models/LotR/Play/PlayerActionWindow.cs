@@ -138,8 +138,12 @@ namespace HallOfBeorn.Models.LotR.Play
         {
             if (game.BeingPlayed != null)
             {
-                return ExecutionResult.CreateTerminal(
-                    PlayACard.PayForACard(game, this), "Card is being play");
+                //TODO: Split this into discrete parts
+                var triggerPart = new TriggerAnEffect(this, this.FrameworkStep);
+
+                return new ExecutionResult()
+                    .Terminate("Card is being played")
+                    .Append(triggerPart.Execute(game));
             }
 
             return new ExecutionResult();

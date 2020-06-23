@@ -437,7 +437,7 @@
     <Compile Include="Models\LotR\Play\Planning\PlanningPhaseBegins.cs" />
     <Compile Include="Models\LotR\Play\Planning\PlanningPhaseEnds.cs" />
     <Compile Include="Models\LotR\Play\Planning\SpecialPlayerActionWindow.cs" />
-    <Compile Include="Models\LotR\Play\PlayACard.cs" />
+    <Compile Include="Models\LotR\Play\TriggerAnEffect.cs" />
     <Compile Include="Models\LotR\Play\Player.cs" />
     <Compile Include="Models\LotR\Play\PlayerStatus.cs" />
     <Compile Include="Models\LotR\Play\Quest\BeforeCommitPlayerActionWindow.cs" />

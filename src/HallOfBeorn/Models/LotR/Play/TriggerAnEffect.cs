@@ -5,9 +5,15 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Play
 {
-    public class PlayACard
+    public class TriggerAnEffect
+        : GamePart
     {
-        private static IEnumerable<Option> GetPaymentOptions(Game game, Player activePlayer)
+        public TriggerAnEffect(GameSegment segment, FrameworkStep step)
+            : base(segment, step, null)
+        {
+        }
+
+        private IEnumerable<Option> GetPaymentOptions(Game game, Player activePlayer)
         {
             var options = new List<Option>();
 
@@ -131,7 +137,7 @@ namespace HallOfBeorn.Models.LotR.Play
             return options;
         }
 
-        public static IEnumerable<Effect> PayForACard(Game game, GameSegment segment)
+        public override ExecutionResult Execute(Game game)
         {
             var effects = new List<Effect>();
 
@@ -141,7 +147,7 @@ namespace HallOfBeorn.Models.LotR.Play
             var beingPlayedChoice = new Choice(ChoiceType.Exclusive)
             {
                 Description = string.Format("{0}, how do you want to pay for {1}?", activePlayer.Name, game.BeingPlayed.Card.NormalizedTitle),
-                FrameworkStep = Play.FrameworkStep.Planning_Special_Player_Action_Window,
+                FrameworkStep = game.FrameworkStep,
             };
 
             //TODO: Algorithm to get payment options
@@ -160,7 +166,7 @@ namespace HallOfBeorn.Models.LotR.Play
             {
                 //TODO: Check for target-based costs like Stand and Fight/Reforged
                 var available = activePlayer.GetAvailableResources(beingPlayed.Card.Sphere);
-                var costEffect = segment.LookupEffects(game.BeingPlayed.Card.Slug, CardSide.Front)
+                var costEffect = Segment.LookupEffects(game.BeingPlayed.Card.Slug, CardSide.Front)
                     .FirstOrDefault(ef => ef.Trigger == Trigger.When_Determining_Cost);
 
                 if (costEffect != null)
@@ -208,7 +214,7 @@ namespace HallOfBeorn.Models.LotR.Play
 
             effects.Add(beingPlayedEffect);
 
-            return effects;
+            return ExecutionResult.Create(effects);
         }
 
         private static void PayResourceCost(Game game, string payment)
