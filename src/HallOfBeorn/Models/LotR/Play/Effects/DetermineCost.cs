@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HallOfBeorn.Models.LotR.Play
+namespace HallOfBeorn.Models.LotR.Play.Effects
 {
-    public class TriggerAnEffect
+    public class DetermineCost
         : GamePart
     {
-        public TriggerAnEffect(GameSegment segment, FrameworkStep step)
+        public DetermineCost(GameSegment segment, FrameworkStep step)
             : base(segment, step, null)
         {
         }
@@ -20,7 +20,7 @@ namespace HallOfBeorn.Models.LotR.Play
             var beingPlayed = game.BeingTriggered;
 
             var sphere = beingPlayed.Card.Sphere;
-            var cost = beingPlayed.Card.ResourceCost.GetValueOrDefault(0);
+            var cost = beingPlayed.ResourceCost;
 
             var heroes = activePlayer.Heroes.Where(h => h.HasSphere(sphere) && h.ResourceTokens > 0).ToList();
 
@@ -37,7 +37,6 @@ namespace HallOfBeorn.Models.LotR.Play
                 return options;
             }
 
-            
             Func<List<int>, int, List<int>> append = (existing, item) =>
                 {
                     var result = new List<int>(existing);
@@ -141,58 +140,32 @@ namespace HallOfBeorn.Models.LotR.Play
         {
             var effects = new List<Effect>();
 
+            if (game.BeingTriggered == null)
+            {
+                return new ExecutionResult(effects);
+            }
+
             var activePlayer = game.ActivePlayer();
-            var beingPlayed = game.BeingTriggered;
+            var beingTriggered = game.BeingTriggered;
 
             var beingPlayedChoice = new Choice(ChoiceType.Exclusive)
             {
-                Description = string.Format("{0}, how do you want to pay for {1}?", activePlayer.Name, game.BeingTriggered.Card.NormalizedTitle),
+                Description = string.Format("{0}, how do you want to pay for {1}?", activePlayer.Name, beingTriggered.Name),
                 FrameworkStep = game.FrameworkStep,
             };
 
             //TODO: Algorithm to get payment options
-            var cost = game.BeingTriggered.Card.ResourceCost.GetValueOrDefault(0);
+            var cost = beingTriggered.ResourceCost;
             if (cost == 0)
             {
                 beingPlayedChoice.Options.Add(new Option
                 {
-                    Description = string.Format("Play {0} for no cost", game.BeingTriggered.Card.NormalizedTitle),
+                    Description = string.Format("Play {0} for no cost", beingTriggered.Name),
                     IsAccept = true,
                     Context = activePlayer.Name,
-                    Value = game.BeingTriggered.Id
+                    Value = beingTriggered.Id
                 });
-            }
-            else if (game.BeingTriggered.Card.ResourceCost == Card.VALUE_X)
-            {
-                //TODO: Check for target-based costs like Stand and Fight/Reforged
-                var available = activePlayer.GetAvailableResources(beingPlayed.Card.Sphere);
-                var costEffect = Segment.LookupEffects(game.BeingTriggered.Card.Slug, CardSide.Front)
-                    .FirstOrDefault(ef => ef.Trigger == Trigger.When_Determining_Cost_Amount);
-
-                if (costEffect != null)
-                {
-                    beingPlayedChoice.Options.AddRange(costEffect.GetChoice(game).Options);
-                }
-                else
-                {
-                    //NOTE: This is an error
-                    beingPlayedChoice.Options.Add(new Option{
-                        Description = string.Format("No valid cost options for {0}", game.BeingTriggered.Name),
-                        IsDecline = true,
-                        Context = activePlayer.Name,
-                    });
-                }
-            }
-            else if (game.BeingTriggered.Card.ResourceCost == Card.VALUE_NA)
-            {
-                beingPlayedChoice.Options.Add(new Option
-                {
-                    Description = string.Format("{0} cannot be played from your hand", game.BeingTriggered.Card.NormalizedTitle),
-                    IsDecline = true,
-                    Context = activePlayer.Name,
-                    Value = game.BeingTriggered.Id
-                });
-            }
+            } 
             else
             {
                 beingPlayedChoice.Options.AddRange(GetPaymentOptions(game, activePlayer));
@@ -208,14 +181,10 @@ namespace HallOfBeorn.Models.LotR.Play
 
                     PutIntoPlay(game);
 
-                    //TODO: Select a target for events/attachments
-                    //TODO: Either move this card to discard or put it into play
-                    return string.Format("{0} plays {1}", activePlayer.Name, beingPlayed.Card.NormalizedTitle);
+                    return string.Format("{0} plays {1}", activePlayer.Name, beingTriggered.Name);
                 });
 
-            effects.Add(beingPlayedEffect);
-
-            return ExecutionResult.Create(effects);
+            return new ExecutionResult(effects);
         }
 
         private static void PayResourceCost(Game game, string payment)

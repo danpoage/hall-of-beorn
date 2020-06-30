@@ -143,7 +143,7 @@ namespace HallOfBeorn.Models.LotR.Play.Repositories
 
             frontEffects["Stand-and-Fight-Core"] = new List<Effect>
             {
-                Effect.Create(GetCard("Stand-and-Fight-Core"), Trigger.When_Determining_Cost)
+                Effect.Create(GetCard("Stand-and-Fight-Core"), Trigger.When_Determining_Cost_Amount)
                 .Auto()
                 .WithChoice((g) => {
                     var choice = new Choice(ChoiceType.Exclusive)

@@ -408,6 +408,7 @@
     <Compile Include="Models\LotR\Compact\Trait.cs" />
     <Compile Include="Models\ICreator.cs" />
     <Compile Include="Models\LotR\Extensions.cs" />
+    <Compile Include="Models\LotR\Play\TriggerRef.cs" />
     <Compile Include="Models\LotR\Play\CardRef.cs" />
     <Compile Include="Models\LotR\Play\CardInDeck.cs" />
     <Compile Include="Models\LotR\Play\CardInDiscard.cs" />
@@ -417,6 +418,9 @@
     <Compile Include="Models\LotR\Play\Choice.cs" />
     <Compile Include="Models\LotR\Play\Combat\BeginningOfCombatPhase.cs" />
     <Compile Include="Models\LotR\Play\Combat\EndOfCombatPhase.cs" />
+    <Compile Include="Models\LotR\Play\Effects\ChooseResultTargets.cs" />
+    <Compile Include="Models\LotR\Play\Effects\DetermineCost.cs" />
+    <Compile Include="Models\LotR\Play\Effects\ChooseCostTargets.cs" />
     <Compile Include="Models\LotR\Play\ExecutionResult.cs" />
     <Compile Include="Models\LotR\Play\GamePart.cs" />
     <Compile Include="Models\LotR\Play\PlayerActionWindow.cs" />

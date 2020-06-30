@@ -88,9 +88,8 @@ namespace HallOfBeorn.Models.LotR.Play
 
         public List<Player> Players = new List<Player>();
 
-        public CardInPlay BeingRevealed { get; set; }
-        public CardInPlay BeingPlayed { get; set; }
-        public List<Choice> BeingPlayedCostChoice { get; set; }
+        public TriggerRef BeingTriggered { get; set; }
+        
         public List<CardInPlay> EnteringPlay = new List<CardInPlay>();
         
         public IEnumerable<CardInPlay> InPlay()

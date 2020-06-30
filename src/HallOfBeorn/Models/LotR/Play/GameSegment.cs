@@ -21,6 +21,11 @@ namespace HallOfBeorn.Models.LotR.Play
             FrameworkStep = frameworkStep;
         }
 
+        protected void AddPart(GamePart part)
+        {
+            Parts.Add(part);
+        }
+
         protected void AddPart(FrameworkStep step, Effect effect)
         {
             Parts.Add(

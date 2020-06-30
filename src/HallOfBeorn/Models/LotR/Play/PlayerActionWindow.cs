@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+
+using HallOfBeorn.Models.LotR.Play.Effects;
 
 namespace HallOfBeorn.Models.LotR.Play
 {
@@ -23,7 +24,9 @@ namespace HallOfBeorn.Models.LotR.Play
             this.nextStep = nextStep;
             this.isSpecial = isSpecial;
 
-            AddPart(frameworkStep, (gm) => BeingPlayed(gm));
+            AddPart(new ChooseCostTargets(this, frameworkStep));
+            AddPart(new DetermineCost(this, frameworkStep));
+            AddPart(new ChooseResultTargets(this, frameworkStep));
             AddPart(frameworkStep, (gm) => ActionWindow(gm));
         }
 
@@ -134,12 +137,14 @@ namespace HallOfBeorn.Models.LotR.Play
             return true;
         }
 
+        /*
         private ExecutionResult BeingPlayed(Game game)
         {
-            if (game.BeingPlayed != null)
+            if (game.BeingTriggered != null)
             {
                 //TODO: Split this into discrete parts
-                var triggerPart = new TriggerAnEffect(this, this.FrameworkStep);
+                //var triggerPart = new TriggerAnEffect(this, this.FrameworkStep);
+                var chooseT
 
                 return new ExecutionResult()
                     .Terminate("Card is being played")
@@ -147,7 +152,7 @@ namespace HallOfBeorn.Models.LotR.Play
             }
 
             return new ExecutionResult();
-        }
+        }*/
 
         //TODO: Split this into parts
         private ExecutionResult ActionWindow(Game game)
@@ -191,7 +196,7 @@ namespace HallOfBeorn.Models.LotR.Play
                         if (card.Card.ResourceCost == Card.VALUE_X)
                         {
                             var costEffect = LookupEffects(card.Card.Slug, CardSide.Front)
-                                .FirstOrDefault(ef => ef.Trigger == Trigger.When_Determining_Cost);
+                                .FirstOrDefault(ef => ef.Trigger == Trigger.When_Determining_Cost_Amount);
 
                             //For cards with a cost of X ensure that there are valid targets
                             if (costEffect == null || !costEffect.GetChoice(game).Options.Any(ch => ch.IsAccept))
@@ -241,7 +246,7 @@ namespace HallOfBeorn.Models.LotR.Play
                             //TODO: Add Status to indicate current player is playing a card
                             currentPlayer.FrameworkStep = Play.FrameworkStep.Planning_Special_Player_Action_Window;
                             var handCard = currentPlayer.Hand.First(h => h.Id == selected.Value);
-                            gm.BeingPlayed = new CardInPlay(handCard.Deck, handCard.Card, handCard.Id);
+                            gm.BeingTriggered = new TriggerRef(handCard);
                             return string.Format("{0} will play {1}", currentPlayer.Name, handCard.Card.NormalizedTitle);
                         })
                     .Decline((gm) =>
