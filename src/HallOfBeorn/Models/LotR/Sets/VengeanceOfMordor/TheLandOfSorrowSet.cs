@@ -21,7 +21,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTraits("Creature.", "Eagle.")
                 .WithKeywords("Ranged.", "Sentinel.")
                 .WithTextLine("Ranged. Sentinel.")
-                .WithTextLine("Cannot have restrited attachements. Gwaihir does not ready during the refresh phase.")
+                .WithTextLine("Cannot have restricted attachments. Gwaihir does not ready during the refresh phase.")
                 .WithTextLine("Response: After an Eagle ally enters or leaves play, ready Gwaihir. (Limit once per phase.)")
                 .WithInfo(108, 1, Artist.Carlos_Palma_Cruchaga);
             addAlly("Hobbit Archer", 2, Sphere.Leadership, false, 1, 1, 0, 2)
