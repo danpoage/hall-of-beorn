@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8884A438-2EC4-49E8-BC2F-F105BFAF1B71}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HallOfBeorn.Play</RootNamespace>
+    <AssemblyName>HallOfBeorn.Play</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CardInDeck.cs" />
+    <Compile Include="CardInDiscard.cs" />
+    <Compile Include="CardInHand.cs" />
+    <Compile Include="CardInPlay.cs" />
+    <Compile Include="CardOutOfPlay.cs" />
+    <Compile Include="CardRef.cs" />
+    <Compile Include="Choice.cs" />
+    <Compile Include="Combat\BeginningOfCombatPhase.cs" />
+    <Compile Include="Combat\EndOfCombatPhase.cs" />
+    <Compile Include="Deck.cs" />
+    <Compile Include="Effect.cs" />
+    <Compile Include="EffectDuration.cs" />
+    <Compile Include="EffectSource.cs" />
+    <Compile Include="Effects\ChooseCostTargets.cs" />
+    <Compile Include="Effects\ChooseResultTargets.cs" />
+    <Compile Include="Effects\DetermineCost.cs" />
+    <Compile Include="EffectTiming.cs" />
+    <Compile Include="EffectType.cs" />
+    <Compile Include="Encounter\BeginningOfEncounterPhase.cs" />
+    <Compile Include="Encounter\EndOfEncounterPhase.cs" />
+    <Compile Include="ExecutionResult.cs" />
+    <Compile Include="FrameworkStep.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="GameEvent.cs" />
+    <Compile Include="GamePart.cs" />
+    <Compile Include="GameSegment.cs" />
+    <Compile Include="PendingEffects.cs" />
+    <Compile Include="Phase.cs" />
+    <Compile Include="Planning\PlanningPhaseBegins.cs" />
+    <Compile Include="Planning\PlanningPhaseEnds.cs" />
+    <Compile Include="Planning\SpecialPlayerActionWindow.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="PlayerActionWindow.cs" />
+    <Compile Include="PlayerStatus.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quest\BeforeCommitPlayerActionWindow.cs" />
+    <Compile Include="Quest\BeginningOfQuestPhase.cs" />
+    <Compile Include="Quest\CommitCharacters.cs" />
+    <Compile Include="Quest\EndOfQuestPhase.cs" />
+    <Compile Include="Refresh\BeginningOfRefreshPhase.cs" />
+    <Compile Include="Refresh\EndOfRefreshPhase.cs" />
+    <Compile Include="Refresh\EndOfRound.cs" />
+    <Compile Include="Repositories\EffectRepository.cs" />
+    <Compile Include="Resource\BeforeEndPlayerActionWindow.cs" />
+    <Compile Include="Resource\BeginningOfResourcePhase.cs" />
+    <Compile Include="Resource\BeginningOfRound.cs" />
+    <Compile Include="Resource\DrawCards.cs" />
+    <Compile Include="Resource\EndOfResourcePhase.cs" />
+    <Compile Include="Resource\GainResources.cs" />
+    <Compile Include="RingsDb\RingsDbDeckLoader.cs" />
+    <Compile Include="Runner.cs" />
+    <Compile Include="Setup\BeginningOfSetup.cs" />
+    <Compile Include="Setup\DetermineFirstPlayer.cs" />
+    <Compile Include="Setup\DrawSetupHand.cs" />
+    <Compile Include="Setup\EndOfSetup.cs" />
+    <Compile Include="Setup\FollowScenarioSetupInstructions.cs" />
+    <Compile Include="Setup\PlaceHeroesAndSetInitialThreat.cs" />
+    <Compile Include="Setup\SetupQuestCard.cs" />
+    <Compile Include="Setup\ShuffleDecks.cs" />
+    <Compile Include="Target.cs" />
+    <Compile Include="Travel\BeginningOfTravelPhase.cs" />
+    <Compile Include="Travel\EndOfTravelPhase.cs" />
+    <Compile Include="Trigger.cs" />
+    <Compile Include="TriggerAnEffect.cs" />
+    <Compile Include="TriggerRef.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HallOfBeorn\HallOfBeorn.csproj">
+      <Project>{2ab13cdf-0847-47fa-908c-ca0e7cbaa9cf}</Project>
+      <Name>HallOfBeorn</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
