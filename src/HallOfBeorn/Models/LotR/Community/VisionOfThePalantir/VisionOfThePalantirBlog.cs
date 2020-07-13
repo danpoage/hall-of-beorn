@@ -15,6 +15,19 @@ namespace HallOfBeorn.Models.LotR.Community.VisionOfThePalantir
             LinkType.Vision_of_the_Palantir)
         {
             AddYear(2020);
+            AddLink("Nightmare Conflict at the Carrock", "https://visionofthepalantir.com/2020/07/11/nightmare-conflict-at-the-carrock/", "Sat, 11 Jul 2020");
+            AddLink("Thorongil", "https://visionofthepalantir.com/2020/07/04/thorongil/", "Sat, 04 Jul 2020");
+            AddLink("Mount Gundabad", "https://visionofthepalantir.com/2020/07/03/mount-gundabad/", "Fri, 03 Jul 2020");
+            AddLink("Month in Review: June 2020", "https://visionofthepalantir.com/2020/06/30/month-in-review-june-2020/", "Jun 30 2020");
+            AddLink("Encounter Set Review: Sauron's Reach", "https://visionofthepalantir.com/2020/06/28/encounter-set-review-saurons-reach/", "Jun 28 2020");
+            AddLink("Monthly Poll: June 20202", "https://visionofthepalantir.com/2020/06/25/monthly-poll-june-2020/", "Jun 25 2020");
+            AddLink("Encounter Set Review: Journey Along the Anduin", "https://visionofthepalantir.com/2020/06/17/encounter-set-review-journey-along-the-anduin/", "Jun 17 20202");
+            AddLink("Master Cards", "https://visionofthepalantir.com/2020/06/15/master-cards/", "Jun 15 2020");
+            AddLink("Pipes", "https://visionofthepalantir.com/2020/06/11/pipes/", "Jun 11 2020");
+            AddLink("Deckbuilding: Intruders in Chetwood", "https://visionofthepalantir.com/2020/06/03/deckbuilding-intruders-in-chetwood/", "Jun 3 2020");
+            AddLink("Month in Review: May 2020", "https://visionofthepalantir.com/2020/05/31/month-in-review-may-2020/", "May 31 2020");
+            AddLink("Player Card Review: Foundations of Stone", "https://visionofthepalantir.com/2020/05/29/player-card-review-foundations-of-stone/", "May 29 2020");
+
             AddLink("Month in Review: January 2020", "https://visionofthepalantir.com/2020/01/31/month-in-review-january-2020/", "Fri, 31 Jan 2020 11:45:29 +0000");
             AddLink("First Impressions: Wrath and Ruin", "https://visionofthepalantir.com/2020/01/28/first-impressions-wrath-and-ruin/", "Tue, 28 Jan 2020 15:41:14 +0000");
             AddLink("Monthly Poll: January 2020", "https://visionofthepalantir.com/2020/01/26/monthly-poll-january-2020/", "Sun, 26 Jan 2020 13:36:06 +0000");
