@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palantir", "Palantir\Palant
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HallOfBeorn.Client", "HallOfBeorn.Client\HallOfBeorn.Client.csproj", "{FE409FC2-9CFA-4C51-BEAF-0FAE81D2FD0E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HallOfBeorn.Play", "HallOfBeorn.Play\HallOfBeorn.Play.csproj", "{8884A438-2EC4-49E8-BC2F-F105BFAF1B71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{FE409FC2-9CFA-4C51-BEAF-0FAE81D2FD0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE409FC2-9CFA-4C51-BEAF-0FAE81D2FD0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE409FC2-9CFA-4C51-BEAF-0FAE81D2FD0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8884A438-2EC4-49E8-BC2F-F105BFAF1B71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8884A438-2EC4-49E8-BC2F-F105BFAF1B71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8884A438-2EC4-49E8-BC2F-F105BFAF1B71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8884A438-2EC4-49E8-BC2F-F105BFAF1B71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

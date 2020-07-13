@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 using HallOfBeorn.Models.LotR;
-using HallOfBeorn.Models.LotR.Play;
-using HallOfBeorn.Models.LotR.Play.Repositories;
+using HallOfBeorn.Play;
+using HallOfBeorn.Play.Repositories;
 using HallOfBeorn.Services.LotR;
 using HallOfBeorn.Services.LotR.Categories;
 using HallOfBeorn.Services.LotR.RingsDb;

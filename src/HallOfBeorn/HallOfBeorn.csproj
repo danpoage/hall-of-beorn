@@ -408,70 +408,6 @@
     <Compile Include="Models\LotR\Compact\Trait.cs" />
     <Compile Include="Models\ICreator.cs" />
     <Compile Include="Models\LotR\Extensions.cs" />
-    <Compile Include="Models\LotR\Play\TriggerRef.cs" />
-    <Compile Include="Models\LotR\Play\CardRef.cs" />
-    <Compile Include="Models\LotR\Play\CardInDeck.cs" />
-    <Compile Include="Models\LotR\Play\CardInDiscard.cs" />
-    <Compile Include="Models\LotR\Play\CardInHand.cs" />
-    <Compile Include="Models\LotR\Play\CardInPlay.cs" />
-    <Compile Include="Models\LotR\Play\CardOutOfPlay.cs" />
-    <Compile Include="Models\LotR\Play\Choice.cs" />
-    <Compile Include="Models\LotR\Play\Combat\BeginningOfCombatPhase.cs" />
-    <Compile Include="Models\LotR\Play\Combat\EndOfCombatPhase.cs" />
-    <Compile Include="Models\LotR\Play\Effects\ChooseResultTargets.cs" />
-    <Compile Include="Models\LotR\Play\Effects\DetermineCost.cs" />
-    <Compile Include="Models\LotR\Play\Effects\ChooseCostTargets.cs" />
-    <Compile Include="Models\LotR\Play\ExecutionResult.cs" />
-    <Compile Include="Models\LotR\Play\GamePart.cs" />
-    <Compile Include="Models\LotR\Play\PlayerActionWindow.cs" />
-    <Compile Include="Models\LotR\Play\Deck.cs" />
-    <Compile Include="Models\LotR\Play\Effect.cs" />
-    <Compile Include="Models\LotR\Play\EffectDuration.cs" />
-    <Compile Include="Models\LotR\Play\EffectSource.cs" />
-    <Compile Include="Models\LotR\Play\EffectTiming.cs" />
-    <Compile Include="Models\LotR\Play\EffectType.cs" />
-    <Compile Include="Models\LotR\Play\Encounter\BeginningOfEncounterPhase.cs" />
-    <Compile Include="Models\LotR\Play\Encounter\EndOfEncounterPhase.cs" />
-    <Compile Include="Models\LotR\Play\FrameworkStep.cs" />
-    <Compile Include="Models\LotR\Play\Game.cs" />
-    <Compile Include="Models\LotR\Play\GameEvent.cs" />
-    <Compile Include="Models\LotR\Play\GameSegment.cs" />
-    <Compile Include="Models\LotR\Play\PendingEffects.cs" />
-    <Compile Include="Models\LotR\Play\Phase.cs" />
-    <Compile Include="Models\LotR\Play\Planning\PlanningPhaseBegins.cs" />
-    <Compile Include="Models\LotR\Play\Planning\PlanningPhaseEnds.cs" />
-    <Compile Include="Models\LotR\Play\Planning\SpecialPlayerActionWindow.cs" />
-    <Compile Include="Models\LotR\Play\TriggerAnEffect.cs" />
-    <Compile Include="Models\LotR\Play\Player.cs" />
-    <Compile Include="Models\LotR\Play\PlayerStatus.cs" />
-    <Compile Include="Models\LotR\Play\Quest\BeforeCommitPlayerActionWindow.cs" />
-    <Compile Include="Models\LotR\Play\Quest\BeginningOfQuestPhase.cs" />
-    <Compile Include="Models\LotR\Play\Quest\CommitCharacters.cs" />
-    <Compile Include="Models\LotR\Play\Quest\EndOfQuestPhase.cs" />
-    <Compile Include="Models\LotR\Play\Refresh\BeginningOfRefreshPhase.cs" />
-    <Compile Include="Models\LotR\Play\Refresh\EndOfRefreshPhase.cs" />
-    <Compile Include="Models\LotR\Play\Refresh\EndOfRound.cs" />
-    <Compile Include="Models\LotR\Play\Repositories\EffectRepository.cs" />
-    <Compile Include="Models\LotR\Play\Resource\BeforeEndPlayerActionWindow.cs" />
-    <Compile Include="Models\LotR\Play\Resource\BeginningOfRound.cs" />
-    <Compile Include="Models\LotR\Play\Resource\DrawCards.cs" />
-    <Compile Include="Models\LotR\Play\Resource\EndOfResourcePhase.cs" />
-    <Compile Include="Models\LotR\Play\Resource\BeginningOfResourcePhase.cs" />
-    <Compile Include="Models\LotR\Play\Resource\GainResources.cs" />
-    <Compile Include="Models\LotR\Play\RingsDb\RingsDbDeckLoader.cs" />
-    <Compile Include="Models\LotR\Play\Runner.cs" />
-    <Compile Include="Models\LotR\Play\Setup\BeginningOfSetup.cs" />
-    <Compile Include="Models\LotR\Play\Setup\DetermineFirstPlayer.cs" />
-    <Compile Include="Models\LotR\Play\Setup\DrawSetupHand.cs" />
-    <Compile Include="Models\LotR\Play\Setup\EndOfSetup.cs" />
-    <Compile Include="Models\LotR\Play\Setup\FollowScenarioSetupInstructions.cs" />
-    <Compile Include="Models\LotR\Play\Setup\PlaceHeroesAndSetInitialThreat.cs" />
-    <Compile Include="Models\LotR\Play\Setup\SetupQuestCard.cs" />
-    <Compile Include="Models\LotR\Play\Setup\ShuffleDecks.cs" />
-    <Compile Include="Models\LotR\Play\Target.cs" />
-    <Compile Include="Models\LotR\Play\Travel\BeginningOfTravelPhase.cs" />
-    <Compile Include="Models\LotR\Play\Travel\EndOfTravelPhase.cs" />
-    <Compile Include="Models\LotR\Play\Trigger.cs" />
     <Compile Include="Models\LotR\ProductGroups\VengeanceOfMordorProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\EredMithrinProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\StarterProductGroup.cs" />
@@ -1450,7 +1386,9 @@
     <Content Include="Views\Marvel\Search.cshtml" />
     <Content Include="Views\LotR\Creators.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Models\LotR\Play\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>

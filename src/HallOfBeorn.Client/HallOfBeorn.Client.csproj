@@ -58,6 +58,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HallOfBeorn.Play\HallOfBeorn.Play.csproj">
+      <Project>{8884a438-2ec4-49e8-bc2f-f105bfaf1b71}</Project>
+      <Name>HallOfBeorn.Play</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HallOfBeorn\HallOfBeorn.csproj">
       <Project>{2ab13cdf-0847-47fa-908c-ca0e7cbaa9cf}</Project>
       <Name>HallOfBeorn</Name>
