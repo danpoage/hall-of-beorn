@@ -101,10 +101,21 @@ namespace HallOfBeorn.Models.LotR
         
         public string Name { get; set; }
         public string AlternateName { get; set; }
-
+        
         public bool IsNightmare
         {
-            get { return !string.IsNullOrEmpty(Name) && Name.EndsWith(" Nightmare"); }
+            get
+            {
+                var specialNightmareSets = new HashSet<string>
+                {
+                    EncounterSet.QuietTheSpirits.Name,
+                    EncounterSet.SiftThroughTheDebris.Name,
+                    EncounterSet.DecipherAncientTexts.Name
+                };
+                
+                return !string.IsNullOrEmpty(Name) && 
+                    (Name.EndsWith(" Nightmare") || specialNightmareSets.Contains(Name));
+            }
         }
 
         public LotRCard Quest(string title, uint stageNumber, char stageLetter, byte? questPoints)

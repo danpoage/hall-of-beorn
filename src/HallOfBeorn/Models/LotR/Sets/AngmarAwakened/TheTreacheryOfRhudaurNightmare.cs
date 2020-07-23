@@ -65,20 +65,22 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithText("When Revealed: Remove the questing character with the higest Willpower from the quest. The player who controls that character raises his threat by an amount equal to that character's Willpower.")
                 .WithShadow("Shadow: If this attack destroys a character, heal all damage from each Undead enemy in play.")
                 .WithInfo(6, 2, Artist.Guillaume_Ducos));
-            addCard(LotRCard.Enemy("Apostate of Angmar", string.Empty, setQuietTheSpirits, 38, 5, 2, 2, 12)
+            addEnemy("Apostate of Angmar", EncounterSet.QuietTheSpirits, 38, 5, 2, 2, 12)
                 .WithTraits("Undead.")
-                .WithText("While you are engaged with Apostate of Angmar, you cannot attack Thaurdir.")
+                .WithText("While you are engaged with Apostate of ~Angmar, you cannot attack Thaurdir.")
                 .WithShadow("Shadow: Discard the top card of the encounter deck. Attacking enemy gets +X Attack, where X is that card's printed threat.")
-                .WithInfo(7, 3, Artist.Unknown));
-            addCard(LotRCard.Location("Secret Antechamber", string.Empty, setSiftThroughTheDebris, 2, 5)
+                .WithInfo(7, 3, Artist.Unknown);
+            addLocation("Secret Antechamber", EncounterSet.SiftThroughTheDebris, 2, 5)
                 .WithTraits("Ruins.")
-                .WithText("Immune to player card effects.\r\nWhile Secret Antechamber is in the staging area, no more than 5 progress can be placed on the main quest each round.\r\nTravel: Raise each player's threat by 3 to travel here.")
-                .WithInfo(8, 3, Artist.Federico_Musetti));
-            addCard(LotRCard.Treachery("Life Drain", string.Empty, setDecipherAncientTexts)
+                .WithTextLine("Immune to player card effects.")
+                .WithTextLine("While Secret Antechamber is in the staging area, no more than 5 progress can be placed on the main quest each round.")
+                .WithTextLine("Travel: Raise each player's threat by 3 to travel here.")
+                .WithInfo(8, 3, Artist.Federico_Musetti);
+            addTreachery("Life Drain", EncounterSet.DecipherAncientTexts)
                 .WithTraits("Sorcery.")
                 .WithText("When Revealed: Deal Life Drain to Thaurdir, as a shadow card.")
                 .WithShadow("Shadow: If attacking enemy is Thaurdir, he gets +3 for this attack. If this attack destroys a character, attach Life Drain to Thaurdir. (Counts as a Condition attachment with the text: \"Thaurdir gets +3 hit points.\")")
-                .WithInfo(9, 3, Artist.Unknown));
+                .WithInfo(9, 3, Artist.Unknown);
         }
     }
 }

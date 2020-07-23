@@ -21,6 +21,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             AddEncounterSet(EncounterSet.RuinsOfArnor);
             AddEncounterSet(EncounterSet.TheTreacheryOfRhudaur);
             AddEncounterSet(EncounterSet.TheTreacheryOfRhudaurNightmare);
+            AddEncounterSet(EncounterSet.QuietTheSpirits);
+            AddEncounterSet(EncounterSet.SiftThroughTheDebris);
+            AddEncounterSet(EncounterSet.DecipherAncientTexts);
 
             AddQuestCardId("Secrets-of-Rhudaur-TToR");
             AddQuestCardId("Thaurdir's-Pursuit-TToR");
