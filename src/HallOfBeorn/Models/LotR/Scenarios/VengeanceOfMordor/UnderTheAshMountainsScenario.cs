@@ -18,7 +18,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.VengeanceOfMordor
             GroupName = "Vengeance of Mordor";
             Number = 4;
 
-            //RulesImageCount = 2;
+            RulesImageCount = 2;
             QuestCompanionSlug = "vengeance-of-mordor-cycle-quest-under-the-ash-mountains";
             DifficultyRating = 7.0f;
             Votes = 1;
