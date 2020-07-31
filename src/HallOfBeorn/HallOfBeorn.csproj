@@ -432,6 +432,7 @@
     <Compile Include="Models\LotR\Products\PreorderPromotion\TheCityOfUlfastPreorderPromotionProduct.cs" />
     <Compile Include="Models\LotR\Products\PreorderPromotion\UnderTheAshMountainsPreorderPromotionProduct.cs" />
     <Compile Include="Models\LotR\Products\PreorderPromotion\WrathAndRuinPreorderPromotionProduct.cs" />
+    <Compile Include="Models\LotR\Products\PrintOnDemand\EscapeFromKhazadDumProduct.cs" />
     <Compile Include="Models\LotR\Products\PrintOnDemand\TheWizardsQuestProduct.cs" />
     <Compile Include="Models\LotR\Products\PrintOnDemand\TheWoodlandRealmProduct.cs" />
     <Compile Include="Models\LotR\Products\Starter\TwoPlayerLimitedEditionStarterProduct.cs" />
