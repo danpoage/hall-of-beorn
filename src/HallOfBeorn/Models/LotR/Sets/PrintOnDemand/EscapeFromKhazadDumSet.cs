@@ -93,6 +93,42 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithTextLine("When Revealed: Eithe raise each player's threat by 2, or reveal an additional encounter card.")
                 .WithShadow("Shadow: Either raise your threat by 2, or this attack is considered undefended.")
                 .WithInfo(12, 3, Artist.Lukasz_Jaskolski);
+            addLocation("Nest of Vermin", emptySetName, 3, 5)
+                .WithSetNumberAndCost(15, 2)
+                .WithUnique()
+                .WithTraits("Underground.")
+                .WithTextLine("While Nest of Vermin is in the staging area, each Creature enemy gets +1 Threat.")
+                .WithTextLine("Forced: When Nest of Vermin is explored, the opposing team searches the encounter deck and discard pile for a Creature enemy with cost 1 or less and adds it to the staging area. Shuffle the encounter deck.")
+                .WithInfo(13, 1, Artist.Jokubas_Uoginitas);
+            addTreachery("Swarm of Bats", emptySetName)
+                .WithSetNumberAndCost(15, 1)
+                .WithTextLine("When Revealed: Each character gets -1 Willpower until the end of the phase.")
+                .WithShadow("Shadow: Each character you control gets -1 Attack and -1 Defense until the end of the phase.")
+                .WithInfo(14, 1, Artist.Nicholas_Gregory);
+
+            addEnemy("Cave Spider", emptySetName, 28, 2, 3, 1, 5)
+                .WithSetNumberAndCost(16, 1)
+                .WithTraits("Spider.")
+                .WithTextLine("Forced: When Cave Spider attacks, either remove 2 progress from the main quest, or Cave Spider gets +2 Attack for this attack.")
+                .WithShadow("Shadow: Either remove 2 progress from the main quest or attacking enemy gets +2 Attack.")
+                .WithInfo(15, 2, Artist.Allison_Theus);
+            addLocation("The Mountain's Roots", emptySetName, Card.VALUE_X, 4)
+                .WithSetNumberAndCost(16, 0)
+                .WithTraits("Underground.")
+                .WithTextLine("X is 1 more than the stage number of the main quest.")
+                .WithTextLine("Travel: Each player discards the top X cards of his deck.")
+                .WithInfo(16, 2, Artist.Stu_Barnes);
+            addTreachery("Watchful Eyes", emptySetName)
+                .WithSetNumberAndCost(16, 1)
+                .WithTextLine("When Revealed: The opposing team attaches Watchful Eyes to a hero. (Counts as a Condition attachment with the text: \"Limit 1 per hero. Forced: If attached hero is exhausted at the end of the combat phase, reveal 1 card from the encounter deck.\")")
+                .WithInfo(17, 1, Artist.Tiziano_Baracchi);
+
+            addEnemy("Cave-troll", emptySetName, 36, 2, 5, 1, 6)
+                .WithSetNumberAndCost(17, 1)
+                .WithTraits("Troll.")
+                .WithTextLine("Cannot have non-objective player card attachments.")
+                .WithTextLine("Allies cannot be declared as attackers or defenders against Cave-troll.")
+                .WithInfo(18, 1, Artist.Timo_Karhula);
         }
     }
 }
