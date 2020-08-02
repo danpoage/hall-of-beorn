@@ -248,6 +248,7 @@ namespace HallOfBeorn.Models.LotR
         public byte? EasyModeQuantity { get; set; }
         public byte? NightmareModeQuantity { get; set; }
         public byte? SiegePoints { get; set; }
+        public bool HasHorizontalArt { get; set; }
 
         public bool HasErrata { get; set; }
         public string Direction { get; set; }
@@ -268,6 +269,7 @@ namespace HallOfBeorn.Models.LotR
                     case LotR.CardType.Event:
                     case LotR.CardType.Treasure:
                     case LotR.CardType.Player_Side_Quest:
+                    case LotR.CardType.Contract:
                         return DeckType.Player;
                     case LotR.CardType.Enemy:
                     case LotR.CardType.Location:
@@ -880,6 +882,12 @@ namespace HallOfBeorn.Models.LotR
         public LotRCard WithPassValue()
         {
             PassValue = true;
+            return this;
+        }
+
+        public LotRCard WithHorizontalArt()
+        {
+            HasHorizontalArt = true;
             return this;
         }
 

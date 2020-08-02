@@ -156,7 +156,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             get
             {
-                return IsQuest() ? "180px" : "127px";
+                return IsQuest() || Card.HasHorizontalArt ? "180px" : "127px";
             }
         }
 
@@ -164,7 +164,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             get
             {
-                return IsQuest() ? "127px" : "180px";
+                return IsQuest() || Card.HasHorizontalArt ? "127px" : "180px";
             }
         }
 

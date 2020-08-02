@@ -22,6 +22,7 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
             AddProduct(Product.TheWizardsQuest);
             AddProduct(Product.TheWoodlandRealm);
             AddProduct(Product.EscapeFromKhazadDum);
+            AddProduct(Product.EscapeFromKhazadDumPreorderPromotion);
         }
     }
 }

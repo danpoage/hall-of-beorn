@@ -429,6 +429,7 @@
     <Compile Include="Models\LotR\Products\Nightmare\TheCityOfCorsairsNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheDrownedRuinsNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\PreorderPromotion\ChallengeOfTheWainridersPreorderPromotionProduct.cs" />
+    <Compile Include="Models\LotR\Products\PreorderPromotion\EscapeFromKhazadDumPreorderPromotionProduct.cs" />
     <Compile Include="Models\LotR\Products\PreorderPromotion\TheCityOfUlfastPreorderPromotionProduct.cs" />
     <Compile Include="Models\LotR\Products\PreorderPromotion\UnderTheAshMountainsPreorderPromotionProduct.cs" />
     <Compile Include="Models\LotR\Products\PreorderPromotion\WrathAndRuinPreorderPromotionProduct.cs" />
@@ -506,6 +507,7 @@
     <Compile Include="Models\LotR\Sets\EredMithrin\TheGhostOfFramsburgSet.cs" />
     <Compile Include="Models\LotR\Sets\EredMithrin\TheWitheredHeathSet.cs" />
     <Compile Include="Models\LotR\Sets\PreorderPromotion\ChallengeOfTheWainridersPreorderPromotionSet.cs" />
+    <Compile Include="Models\LotR\Sets\PreorderPromotion\EscapeFromKhazadDumPreorderPromotionSet.cs" />
     <Compile Include="Models\LotR\Sets\PreorderPromotion\TheCityOfUlfastPreorderPromotionSet.cs" />
     <Compile Include="Models\LotR\Sets\PreorderPromotion\UnderTheAshMountainsPreorderPromotionSet.cs" />
     <Compile Include="Models\LotR\Sets\PreorderPromotion\WrathAndRuinPreorderPromotionSet.cs" />

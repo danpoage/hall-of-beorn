@@ -176,6 +176,7 @@ namespace HallOfBeorn.Models.LotR
         public static Product TheWizardsQuest = new Products.PrintOnDemand.TheWizardsQuestProduct();
         public static Product TheWoodlandRealm = new Products.PrintOnDemand.TheWoodlandRealmProduct();
         public static Product EscapeFromKhazadDum = new Products.PrintOnDemand.EscapeFromKhazadDumProduct();
+        public static Product EscapeFromKhazadDumPreorderPromotion = new Products.PreorderPromotion.EscapeFromKhazadDumPreorderPromotionProduct();
 
         //Nightmare Decks
         public static Product PassageThroughMirkwoodNightmare = new Products.Nightmare.PassageThroughMirkwoodNightmareProduct();

@@ -129,6 +129,13 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithTextLine("Cannot have non-objective player card attachments.")
                 .WithTextLine("Allies cannot be declared as attackers or defenders against Cave-troll.")
                 .WithInfo(18, 1, Artist.Timo_Karhula);
+
+            addLocation("Lightless Grotto", emptySetName, 2, 3)
+                .WithSetNumberAndCost(21, 0)
+                .WithTraits("Underground.")
+                .WithTextLine("While Lightless Grotto is in the staging area, non-unique enemies in the staging area cannot take damage.")
+                .WithTextLine("Travel: The first player chooses an enemy in the staging area and engages it.")
+                .WithInfo(31, 2, Artist.Ivan_Dixon);
         }
     }
 }

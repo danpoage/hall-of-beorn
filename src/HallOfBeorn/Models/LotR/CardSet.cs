@@ -427,6 +427,7 @@ namespace HallOfBeorn.Models.LotR
             Add(TheWizardsQuest);
             Add(TheWoodlandRealm);
             Add(EscapeFromKhazadDum);
+            Add(EscapeFromKhazadDumPreorderPromotion);
 
             Add(PassageThroughMirkwoodNightmare);
             Add(JourneyAlongTheAnduinNightmare);
@@ -620,6 +621,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheWizardsQuest = new Sets.PrintOnDemand.TheWizardsQuestSet();
         public static CardSet TheWoodlandRealm = new Sets.PrintOnDemand.TheWoodlandRealmSet();
         public static CardSet EscapeFromKhazadDum = new Sets.PrintOnDemand.EscapeFromKhazadDumSet();
+        public static CardSet EscapeFromKhazadDumPreorderPromotion = new Sets.PreorderPromotion.EscapeFromKhazadDumPreorderPromotionSet();
 
         public static CardSet PassageThroughMirkwoodNightmare = new Sets.Core.PassageThroughMirkwoodNightmareSet();
         public static CardSet JourneyAlongTheAnduinNightmare = new Sets.Core.JourneyAlongTheAnduinNightmareSet();
