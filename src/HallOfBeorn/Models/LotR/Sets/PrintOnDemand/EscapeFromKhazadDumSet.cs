@@ -129,13 +129,127 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithTextLine("Cannot have non-objective player card attachments.")
                 .WithTextLine("Allies cannot be declared as attackers or defenders against Cave-troll.")
                 .WithInfo(18, 1, Artist.Timo_Karhula);
+            addLocation("Twisting Passage", emptySetName, 2, 2)
+                .WithSetNumberAndCost(17, 0)
+                .WithTraits("Underground.")
+                .WithTextLine("When Revealed: Discard the top card of the encounter deck. If that card is a location, add it to the staging area.")
+                .WithInfo(19, 2, Artist.Ben_Zweifel);
+            addTreachery("Undisturbed Bones", emptySetName)
+                .WithSetNumberAndCost(17, 1)
+                .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
+                .WithTextLine("When Revealed: Attach to the main quest. (Counts as a Condition attachment with the text, \"Forced: When a 'when revealed' effect would be canceled, discard Undisturbed Bones instead.\")")
+                .WithInfo(20, 2, Artist.Carolina_Eade);
 
+            addEnemy("Old Stone-troll", emptySetName, 33, 1, 6, 1, 8)
+                .WithSetNumberAndCost(18, 1)
+                .WithTraits("Troll.")
+                .WithTextLine("Cannot have non-objective player card attachments.")
+                .WithTextLine("Forced: After Old Stone-troll attachs and destroys a character you control, raise your threat by 1 for each excess point of damage dealt.")
+                .WithInfo(21, 1, Artist.Sandara_Tang);
+            addLocation("Frightful Den", emptySetName, 4, 4)
+                .WithSetNumberAndCost(18, 2)
+                .WithUnique()
+                .WithTraits("Underground.")
+                .WithTextLine("While Frightful Den is in the staging area, each Troll enemy gets -10 engagement cost.")
+                .WithTextLine("Forced: When Frightful Den is explored, the opposing team searches the encounter deck and discard pile for a Troll enemy with cost 1 or less and adds it to the staging area. Shuffle the encounter deck.")
+                .WithInfo(22, 1, Artist.Jose_Vega);
+            addTreachery("Deep Deep Dark", emptySetName)
+                .WithSetNumberAndCost(18, 0)
+                .WithTextLine("When Revealed: Each player must choose: either raise your threat by 1 for each character you control, or discard a character you control.")
+                .WithShadow("Shadow: Raise your threat by 1 for each enemy engaged with you.")
+                .WithInfo(23, 3, Artist.Rafal_Hrynkiewicz);
+
+            addEnemy("Rock Adder", emptySetName, 18, 2, 1, 0, 3)
+                .WithSetNumberAndCost(19, 0)
+                .WithTraits("Creature.")
+                .WithTextLine("Players cannot declare defenders against Rock Adder.")
+                .WithShadow("Shadow: If this attack is undefended, attacking enemy gets +2 Attack.")
+                .WithInfo(24, 2, Artist.Allison_Theus);
+            addLocation("Bottomless Chasm", emptySetName, 2, 6)
+                .WithSetNumberAndCost(19, 1)
+                .WithTraits("Underground.")
+                .WithTextLine("When faced with the option to travel, the player must choose Bottomless Chasm, if able.")
+                .WithShadow("Shadow: Attacking enemy gets +2 Defense until the end of the phase.")
+                .WithInfo(25, 2, Artist.Jake_Bullock);
+            addTreachery("Lost and Alone", emptySetName)
+                .WithSetNumberAndCost(19, 1)
+                .WithTextLine("When Revealed: The opposing team chooses a questing charactert controlled by each player and removes them from the quest.")
+                .WithShadow("Shadow: Defending character cannot ready until the end of the round.")
+                .WithInfo(26, 1, Artist.David_Chen);
+
+            addEnemy("Hobgoblin", emptySetName, 30, 3, 5, 2, 5)
+                .WithSetNumberAndCost(20, 2)
+                .WithTraits("Orc.", "Goblin.")
+                .WithTextLine("Forced: After Hobgobling engages a player, it cannot take damage until the end of the round.")
+                .WithShadow("Shadow: Attacking enemy cannot take damage this phase.")
+                .WithInfo(27, 1, Artist.Martin_de_Diego_Sadaba);
+            addLocation("Western Hal;", emptySetName, 3, 4)
+                .WithSetNumberAndCost(20, 1)
+                .WithTraits("Underground.")
+                .WithTextLine("Travel: Discard the top card of the encounter deck. Raise each player's threat by X, where X is that card's printed Threat.")
+                .WithShadow("Shadow: If this attack destroys a character, reveal the top card of the encounter deck.")
+                .WithInfo(28, 1, Artist.Michael_Rasmussen);
+            addTreachery("New Devilry", emptySetName)
+                .WithSetNumberAndCost(20, 0)
+                .WithTextLine("When Revealed: Until the end of the round, treat each character's text box as if it were blank, except for Traits.")
+                .WithShadow("Shadow: Until the end of the phase, treat the defending character's text box as blank, except for Traits.")
+                .WithInfo(29, 3, Artist.Ben_Zweifel);
+
+            addEnemy("Unspeakable Thing", emptySetName, 34, 2, 2, 2, 5)
+                .WithSetNumberAndCost(21, 1)
+                .WithTextLine("Forced: When Unspeakable Thing attacks you, discard the top card of your deck. Unspeakable thing gets +X Attack for this attack, where X is the discarded card's printed cost.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack.")
+                .WithInfo(30, 2, Artist.Florian_Devos);
             addLocation("Lightless Grotto", emptySetName, 2, 3)
                 .WithSetNumberAndCost(21, 0)
                 .WithTraits("Underground.")
                 .WithTextLine("While Lightless Grotto is in the staging area, non-unique enemies in the staging area cannot take damage.")
                 .WithTextLine("Travel: The first player chooses an enemy in the staging area and engages it.")
                 .WithInfo(31, 2, Artist.Ivan_Dixon);
+            addTreachery("Many Roads", emptySetName)
+                .WithSetNumberAndCost(21, 1)
+                .WithTextLine("When Revealed: The opposing team searches the encounter deck and discard pile for a different 0-cost location per player and adds them to the staging area. Shuffle the encounter deck.")
+                .WithShadow("Shadow: The opposing team shuffles a location from the encounter discard pile into the encounter deck.")
+                .WithInfo(32, 1, Artist.Stu_Barnes);
+
+            addEnemy("Shadow Dweller", emptySetName, 36, 3, 5, 3, 6)
+                .WithSetNumberAndCost(22, 2)
+                .WithTraits("Creature.")
+                .WithTextLine("Cannot have non-objective player card attachments or take non-combat damage.")
+                .WithTextLine("Forced: When Shadow Dweller attacks you, discard the top card of your deck and assign X damage among character you control, where X is the discarded card's cost.")
+                .WithInfo(33, 1, Artist.Mark_Bulahao);
+            addLocation("Branching Paths", emptySetName, 0, 3)
+                .WithSetNumberAndCost(22, 0)
+                .WithTraits("Underground.")
+                .WithTextLine("Branching Paths gets +1 Threat for each location in the staging area. (Limit +3 Threat.)")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack.")
+                .WithInfo(34, 3, Artist.David_A_Nash);
+            addTreachery("Fatigue", emptySetName)
+                .WithSetNumberAndCost(22, 1)
+                .WithTextLine("When Revealed: Each player exhausts a character he controls. Until the end of the round, characters cannot be readied by player card effects.")
+                .WithShadow("Shadow: Remove the defending character from the attack. A different defending character may be declared.")
+                .WithInfo(35, 1, Artist.Charles_Urbach);
+
+            addEnemy("Elder Nameless Thing", emptySetName, 38, 3, 5, 3, 9)
+                .WithSetNumberAndCost(23, 3)
+                .WithUnique()
+                .WithTraits("Creature.")
+                .WithTextLine("Cannot be optionally engaged.")
+                .WithTextLine("While Elder Nameless Thing is in the staging area, it gains: \"Forced: After players have committed characters to the quest, Elder Nameless Thing makes an attack against the first player.")
+                .WithInfo(36, 1, Artist.Allison_Theus);
+            addLocation("Silent Caverns", emptySetName, 2, 3)
+                .WithSetNumberAndCost(23, 0)
+                .WithTraits("Underground.")
+                .WithTextLine("While Silent Caverns is in the staging area, each player's threat cannot be reduced by more than 1 each round.")
+                .WithTextLine("Travel: Raise each player's threat by 2.")
+                .WithInfo(37, 2, Artist.Trudi_Castle);
+            addTreachery("Dark Places", emptySetName)
+                .WithSetNumberAndCost(23, 0)
+                .WithTextLine("When Revealed: Raise each player's threat by X, where X is the threat of the active location. If there is no active location, Dark Places gains surge.")
+                .WithShadow("Shadow: Attacking enemy gets +X Attack, where X is the stage number of the main quest.")
+                .WithInfo(38, 2, Artist.Igor_Burlakov);
+
         }
     }
 }
