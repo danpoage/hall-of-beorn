@@ -250,6 +250,94 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithShadow("Shadow: Attacking enemy gets +X Attack, where X is the stage number of the main quest.")
                 .WithInfo(38, 2, Artist.Igor_Burlakov);
 
+            addEnemy("Orc Horn Blower", emptySetName, 45, 2, 4, 3, 5)
+                .WithSetNumberAndCost(24, 1)
+                .WithTraits("Orc.", "Uruk.")
+                .WithTextLine("Forced: At the beginning of the combat phase, deal each engaged enemy an additional shadow card.")
+                .WithShadow("Shadow: Deal attacking enemy 2 additional shadow cards.")
+                .WithInfo(39, 2, Artist.Ilich_Henriquez);
+            addLocation("Goblin Dungeon", emptySetName, 2, 5)
+                .WithSetNumberAndCost(24, 1)
+                .WithTraits("Underground.")
+                .WithTextLine("When Revealed: The opposing team chooses an ally, discards all tokens from it, and places it faceup as a guarded objective. When Goblin Dungeon is explored, return that ally to its owner's control exhausted.")
+                .WithInfo(40, 1, Artist.Leanna_Crossan);
+            addTreachery("Deep Fissure", emptySetName)
+                .WithSetNumberAndCost(24, 0)
+                .WithTextLine("When Revealed: Each player deals 1 damage to a questing character he controls and removes that character from the quest.")
+                .WithShadow("Shadow: Deal 1 damage to a character you control.")
+                .WithInfo(41, 2, Artist.Pedro_Amato);
+
+            addEnemy("Black Uruks", emptySetName, 30, 3, 3, 2, 5)
+                .WithSetNumberAndCost(25, 1)
+                .WithTraits("Orc.", "Uruk.")
+                .WithTextLine("While Black Uruks is attacking, it gets +1 Attack for each shadow card dealt for this attack.")
+                .WithShadow("Shadow: The opposing team searches the top 5 cards of the encounter deck for a card and deals it to attacking enemy as a shadow card.")
+                .WithInfo(42, 2, Artist.Jake_Murray);
+            addLocation("Dreadful Gap", emptySetName, 2, 4)
+                .WithSetNumberAndCost(25, 0)
+                .WithTraits("Underground.")
+                .WithTextLine("While Dreadful Gap is in the staging area, progress cannot be placed on other locations in the staging area.")
+                .WithTextLine("Travel: The opposing team chooses a card in the encounter discard pile and shuffles it into the encounter deck.")
+                .WithInfo(43, 2, Artist.Stu_Barnes);
+            addTreachery("Orcish Howls", emptySetName)
+                .WithSetNumberAndCost(25, 1)
+                .WithTextLine("When Revealed: Exhaust X characters, where X is the number of Uruk enemies in play. If there are no Uruk enemies in play, Orcish Howls gains surge.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if it is an Uruk).")
+                .WithInfo(44, 1, Artist.Noah_Bradley);
+
+            addEnemy("Orc Raiders", emptySetName, 28, 2, 2, 1, 3)
+                .WithSetNumberAndCost(26, 0)
+                .WithTraits("Orc.", "uruk.")
+                .WithTextLine("Forced: After Orc Raider engages a player, deal it a shadow card.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack. Deal it an additional shadow card.")
+                .WithInfo(45, 2, Artist.Mark_Tarrisse);
+            addLocation("The Great Bridge", emptySetName, 4, 5)
+                .WithSetNumberAndCost(26, 3)
+                .WithUnique()
+                .WithTraits("Underground.")
+                .WithTextLine("While The Great Bridge is in the staging area, no more than 1 character can be declared as an attacker against each enemy.")
+                .WithTextLine("Forced: When The Great Bridge is explored, reveal 1 encounter card per player.")
+                .WithInfo(46, 1, Artist.Emilio_Rodriguez);
+            addTreachery("Vast and Intricate", emptySetName)
+                .WithSetNumberAndCost(26, 0)
+                .WithTextLine("When Revealed: The opposing team attaches Vast and Intricate to a non-unique location in the staging area. If there are no non-unique locations in the staging area, Vast and Intricate gains surge. (Counts as a Condition attachment with the text: \"Attached location gets +2 Threat and is immune to player card effects.\")")
+                .WithInfo(47, 2, Artist.Eric_Braddock);
+
+            addEnemy("Chieftain of the Pit", emptySetName, 35, 3, 5, 3, 8)
+                .WithSetNumberAndCost(27, 3)
+                .WithUnique()
+                .WithTraits("Orc.", "Uruk.")
+                .WithTextLine("Cannot have non-objective player card attachments or take non-combat damage.")
+                .WithTextLine("Shadow effects cannot be canceled.")
+                .WithTextLine("Forced: When Chieftain of the Pit attacks, deal it an additional shadow card.")
+                .WithInfo(48, 1, Artist.John_Stanko);
+            addLocation("Forked Passage", emptySetName, 1, 5)
+                .WithSetNumberAndCost(27, 0)
+                .WithTraits("Underground.")
+                .WithTextLine("While Forked Passage is in the staging area, raise each player's threat by 1 additional point during the refresh phase.")
+                .WithTextLine("Travel: Raise each player's threat by 1.")
+                .WithInfo(49, 2, Artist.Davis_Engel);
+            addTreachery("Chance Encounter", emptySetName)
+                .WithSetNumberAndCost(27, 0)
+                .WithTextLine("When Revealed: The highest Attack enemy in the staging area makes an attack against the first player. If no attack is made this way, Chance Encounter gains surge.")
+                .WithShadow("Shadow: If attacking enemy is unique, it makes an additional attack against you after this one.")
+                .WithInfo(50, 2, Artist.Magali_Villeneuve);
+
+            addEnemy("Nameless Thing", emptySetName, 33, 1, 1, 1, 4)
+                .WithSetNumberAndCost(28, 1)
+                .WithTraits("Creature.")
+                .WithTextLine("Forced: After Nameless Thing enters play, the first player attaches the top card of his deck to it faceup as a guarded attached. Nameless Thing gets +X Threat, +X Attack, and +X Defense, where X is that card's printed cost. When Nameless Thing leaves play, discard that card.")
+                .WithInfo(51, 2, Artist.Timo_Karhula);
+            addLocation("Mitril Lode", emptySetName, 3, 5)
+                .WithSetNumberAndCost(28, 0)
+                .WithTraits("Underground.")
+                .WithTextLine("While Mitril Lode is the active location, it gains: \"Response: When Mithril Lode is explored, each player adds 1 resource to the resource pool of a hero he controls.")
+                .WithInfo(52, 2, Artist.Cristi_Balanescu);
+            addTreachery("A Foe Beyond", emptySetName)
+                .WithSetNumberAndCost(28, 1)
+                .WithTextLine("When Revealed: The opposing team chooses an attachment controlled by a player and discards it. If no attachment is discarded this way, A Foe Beyond gains surge.")
+                .WithShadow("Shadow: Discard an attachment you control.")
+                .WithInfo(53, 1, Artist.Ilich_Henriquez);
         }
     }
 }
