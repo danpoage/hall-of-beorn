@@ -431,9 +431,11 @@
     <Compile Include="Models\LotR\Products\PreorderPromotion\ChallengeOfTheWainridersPreorderPromotionProduct.cs" />
     <Compile Include="Models\LotR\Products\PreorderPromotion\EscapeFromKhazadDumPreorderPromotionProduct.cs" />
     <Compile Include="Models\LotR\Products\PreorderPromotion\TheCityOfUlfastPreorderPromotionProduct.cs" />
+    <Compile Include="Models\LotR\Products\PreorderPromotion\TheMinesOfMoriaPreorderPromotionProduct.cs" />
     <Compile Include="Models\LotR\Products\PreorderPromotion\UnderTheAshMountainsPreorderPromotionProduct.cs" />
     <Compile Include="Models\LotR\Products\PreorderPromotion\WrathAndRuinPreorderPromotionProduct.cs" />
     <Compile Include="Models\LotR\Products\PrintOnDemand\EscapeFromKhazadDumProduct.cs" />
+    <Compile Include="Models\LotR\Products\PrintOnDemand\TheMinesOfMoriaProduct.cs" />
     <Compile Include="Models\LotR\Products\PrintOnDemand\TheWizardsQuestProduct.cs" />
     <Compile Include="Models\LotR\Products\PrintOnDemand\TheWoodlandRealmProduct.cs" />
     <Compile Include="Models\LotR\Products\Starter\TwoPlayerLimitedEditionStarterProduct.cs" />
@@ -509,9 +511,11 @@
     <Compile Include="Models\LotR\Sets\PreorderPromotion\ChallengeOfTheWainridersPreorderPromotionSet.cs" />
     <Compile Include="Models\LotR\Sets\PreorderPromotion\EscapeFromKhazadDumPreorderPromotionSet.cs" />
     <Compile Include="Models\LotR\Sets\PreorderPromotion\TheCityOfUlfastPreorderPromotionSet.cs" />
+    <Compile Include="Models\LotR\Sets\PreorderPromotion\TheMinesOfMoriaPreorderPromotionSet.cs" />
     <Compile Include="Models\LotR\Sets\PreorderPromotion\UnderTheAshMountainsPreorderPromotionSet.cs" />
     <Compile Include="Models\LotR\Sets\PreorderPromotion\WrathAndRuinPreorderPromotionSet.cs" />
     <Compile Include="Models\LotR\Sets\PrintOnDemand\EscapeFromKhazadDumSet.cs" />
+    <Compile Include="Models\LotR\Sets\PrintOnDemand\TheMinesOfMoriaSet.cs" />
     <Compile Include="Models\LotR\Sets\PrintOnDemand\TheWizardsQuestSet.cs" />
     <Compile Include="Models\LotR\Sets\PrintOnDemand\TheWoodlandRealmSet.cs" />
     <Compile Include="Models\LotR\Sets\Starter\TwoPlayerLimitedEditionStarterSet.cs" />

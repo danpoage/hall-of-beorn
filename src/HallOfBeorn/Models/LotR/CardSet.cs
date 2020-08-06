@@ -426,6 +426,8 @@ namespace HallOfBeorn.Models.LotR
             Add(AttackOnDolGuldur);
             Add(TheWizardsQuest);
             Add(TheWoodlandRealm);
+            Add(TheMinesOfMoria);
+            Add(TheMinesOfMoriaPreorderPromotion);
             Add(EscapeFromKhazadDum);
             Add(EscapeFromKhazadDumPreorderPromotion);
 
@@ -620,6 +622,8 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet AttackOnDolGuldur = new Sets.PrintOnDemand.AttackOnDolGuldurSet();
         public static CardSet TheWizardsQuest = new Sets.PrintOnDemand.TheWizardsQuestSet();
         public static CardSet TheWoodlandRealm = new Sets.PrintOnDemand.TheWoodlandRealmSet();
+        public static CardSet TheMinesOfMoria = new Sets.PrintOnDemand.TheMinesOfMoriaSet();
+        public static CardSet TheMinesOfMoriaPreorderPromotion = new Sets.PreorderPromotion.TheMinesOfMoriaPreorderPromotionSet();
         public static CardSet EscapeFromKhazadDum = new Sets.PrintOnDemand.EscapeFromKhazadDumSet();
         public static CardSet EscapeFromKhazadDumPreorderPromotion = new Sets.PreorderPromotion.EscapeFromKhazadDumPreorderPromotionSet();
 

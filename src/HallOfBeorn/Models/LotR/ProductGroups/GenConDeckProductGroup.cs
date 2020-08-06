@@ -21,6 +21,8 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
             AddProduct(Product.AssaultOnDolGuldur);
             AddProduct(Product.TheWizardsQuest);
             AddProduct(Product.TheWoodlandRealm);
+            AddProduct(Product.TheMinesOfMoria);
+            AddProduct(Product.TheMinesOfMoriaPreorderPromotion);
             AddProduct(Product.EscapeFromKhazadDum);
             AddProduct(Product.EscapeFromKhazadDumPreorderPromotion);
         }

@@ -452,6 +452,7 @@ namespace HallOfBeorn.Models.LotR
             Add(AttackOnDolGuldur);
             Add(TheWizardsQuest);
             Add(TheWoodlandRealm);
+            Add(TheMinesOfMoria);
             Add(EscapeFromKhazadDum);
 
             //Core Set and Shadows of Mirkwood Nightmare Decks
@@ -814,6 +815,7 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet AttackOnDolGuldur = new EncounterSet { Name = "Attack on Dol Guldur", Set = "Attack on Dol Guldur", AlternateName = "Assault on Dol Guldur" };
         public static EncounterSet TheWizardsQuest = new EncounterSet { Name = "The Wizard's Quest", Set = "The Wizard's Quest" };
         public static EncounterSet TheWoodlandRealm = new EncounterSet { Name = "The Woodland Realm", Set = "The Woodland Realm" };
+        public static EncounterSet TheMinesOfMoria = new EncounterSet { Name = "The Mines of Moria", Set = "The Mines of Moria" };
         public static EncounterSet EscapeFromKhazadDum = new EncounterSet { Name = "Escape from Khazad-dûm", Set = "Escape from Khazad-dûm" };
 
         //Core Set and Shadows of Mirkwood Nightmare Decks
