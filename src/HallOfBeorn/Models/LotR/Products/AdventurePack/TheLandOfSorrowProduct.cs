@@ -6,7 +6,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
         : Product
     {
         public TheLandOfSorrowProduct()
-            : base("The Land of Sorrow", "MEC82", ImageType.Jpg, new DateTime(2020, 7, 1))
+            : base("The Land of Sorrow", "MEC82", ImageType.Jpg, new DateTime(2020, 8, 4))
         {
             AddCardSet(CardSet.TheLandOfSorrow);
         }

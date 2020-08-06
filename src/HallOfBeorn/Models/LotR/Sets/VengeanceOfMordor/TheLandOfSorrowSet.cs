@@ -15,8 +15,6 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
             SetType = Models.SetType.Adventure_Pack;
             Cycle = "Vengeance of Mordor";
 
-            IsSpoiler = true;
-
             addHero("Gwaihir", 13, Sphere.Tactics, 2, 4, 3, 4)
                 .WithTraits("Creature.", "Eagle.")
                 .WithKeywords("Ranged.", "Sentinel.")
@@ -82,6 +80,72 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTextLine("Cannot have restricted attachments.")
                 .WithTextLine("Forced: At the end of the round, discard Wilyador unless the players as a group spend 1 resource.")
                 .WithInfo(117, 3, Artist.Sam_White);
+            addEnemy("Ulwarth", EncounterSet.TheLandOfSorrow, 34, 3, 4, 1, 6)
+                .WithUnique()
+                .WithTraits("Easterling.", "Warden.")
+                .WithTextLine("Immune to player card effects.")
+                .WithTextLine("Only the engaged player can declare attackers or defenders against Ulwarth.")
+                .WithTextLine("Allies cannot be declared as attackers or defenders against Ulwarth.")
+                .WithVictoryPoints(1)
+                .WithInfo(118, 1, Artist.Guillaume_Ducos);
+            addEnemy("Lorgan", EncounterSet.TheLandOfSorrow, 29, 1, 5, 3, 8)
+                .WithUnique()
+                .WithTraits("Easterling.", "Warden.")
+                .WithTextLine("Immune to player card effects.")
+                .WithTextLine("Only the engaged player can declare attackers or defenders against Lorgan.")
+                .WithTextLine("Forced: After Lorgan attacks, raise each player's threat by 1 (2 instead if this attack destroys a character.")
+                .WithVictoryPoints(1)
+                .WithInfo(119, 1, Artist.Nikolas_Hagialas);
+            addEnemy("Borlach", EncounterSet.TheLandOfSorrow, 33, 2, 6, 2, 9)
+                .WithUnique()
+                .WithTraits("Easterling.", "Warden.")
+                .WithTextLine("Immune to player card effects.")
+                .WithTextLine("Only the engaged player can declare attackers or defenders against Borlach.")
+                .WithTextLine("Forced: After Borlach attacks and destroys a character, any excess damage must be assigned among characters you control.")
+                .WithVictoryPoints(1)
+                .WithInfo(120, 1, Artist.Borja_Pindado);
+            addLocation("The Barracks", EncounterSet.TheLandOfSorrow, 1, 5)
+                .WithUnique()
+                .WithTraits("Camp.")
+                .WithTextLine("Forced: After The Barracks becomes the active location, add the enemy under it to the staging area. That enemy cannot take damage this round.")
+                .WithTextLine("Forced: When The Baracks is explored, the first player gains control of the objective ally it was guarding.")
+                .WithVictoryPoints(1)
+                .WithInfo(121, 1, Artist.Federico_Musetti);
+            addLocation("Slave Quarters", EncounterSet.TheLandOfSorrow, 1, 3)
+                .WithUnique()
+                .WithTraits("Camp.")
+                .WithTextLine("Forced: After Slave Quarters becomes the active location, the enemy under it engages the first player and makes an immediate attack.")
+                .WithTextLine("Forced: When Slave Quarters is explored, the first player gains control of the objective ally it was guarding.")
+                .WithVictoryPoints(1)
+                .WithInfo(122, 1, Artist.Michael_Edward_Smith);
+            addLocation("The Storehouse", EncounterSet.TheLandOfSorrow, 1, 4)
+                .WithUnique()
+                .WithTraits("Camp.")
+                .WithTextLine("Forced: After The Storehouse becomes the active location, add the enemy under it to the staging area. That enemy gets +3 Attack and -30 engagement cost until the end of the round.")
+                .WithTextLine("Forced: When The Storehouse is explored, the first player gains control of the objective ally it was guarding.")
+                .WithVictoryPoints(1)
+                .WithInfo(123, 1, Artist.Tropa_Entertainment);
+            addObjectiveAlly("Edrahil", EncounterSet.TheLandOfSorrow, 3, 1, 0, 3)
+                .WithUnique()
+                .WithTraits("Captive.", "Silvan.")
+                .WithTextLine("Immune to player card effects.")
+                .WithTextLine("Response: After Edrahil quests successfully, choose a player to draw 1 card.")
+                .WithTextLine("If Edrahil leaves play, the players lose the game.")
+                .WithInfo(124, 1, Artist.Aleksander_Karcz);
+            addObjectiveAlly("Arador", EncounterSet.TheLandOfSorrow, 0, 1, 3, 5)
+                .WithUnique()
+                .WithTraits("Captive.", "Gondor.")
+                .WithTextLine("Immune to player card effects.")
+                .WithTextLine("Response: After Arador is declared as a defender, ready him. (Limit once per round.)")
+                .WithTextLine("If Arador leaves play, the players lose the game.")
+                .WithInfo(125, 1, Artist.Aleksander_Karcz);
+            addObjectiveAlly("Farin", EncounterSet.TheLandOfSorrow, 3, 1, 0, 3)
+                .WithUnique()
+                .WithTraits("Captive.", "Dwarf.")
+                .WithTextLine("Immune to player card effects.")
+                .WithTextLine("Response: After Farin is declared as an attacker against an enemy, deal 1 damage to an enemy engaged with a player.")
+                .WithTextLine("If Farin leaves play, the players lose the game.")
+                .WithInfo(126, 1, Artist.Aleksander_Karcz);
 
             addContract("Messenger of the King")
                 .WithTextLine("You cannot choose more than 2 heroes during setup.")
@@ -94,6 +158,22 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTemplate("<p class='main-text'>You cannot choose more than 2 heroes during setup.</p><p class='main-text'><b>Setup:</b> Choose a <a href='/LotR?Query=-sphere%3ANeutral&CardType=Ally&IsUnique=Yes' title='Search non-neutral unique allies' target='_blank'>non-neutral unique ally</a> from your deck and put it into play. Add the sum of that ally's printed {Willpower}, {Attack}, {Defense}, and hit points to your starting threat. Then, flip this card over and attach it to that ally.</p><p class='flavor-text'>&ldquo;I am a messenger of the King,&rdquo; he said. &ldquo;You are speaking to the King's friend, and one of the most renowned in all the lands of the West.&rdquo;<br>&ndash;Pippin, The Return of the King</p>")
                 .WithTemplate2("<p class='main-text'>Attached ally loses the ally card type and gains the hero card type.</p><p class='main-text'>Attached character cannot be readied more than once per phase.</p><p class='main-text'>{self} is immune to card effects while attached character is in play. <b>If attached character leaves play, remove {self} from the game.</b></p>")
                 .WithInfo(134, 1, Artist.Justin_Gerard);
+            addQuest("Slaves of the Dark Lord", EncounterSet.TheLandOfSorrow, 1, 'A', 15)
+                .WithFlavor("You've decided to risk everything to rescue Ulchor's captives from slavery.")
+                .WithTextLine("Setup: Add each Camp location to the staging area. Attach a random Captive objective-ally to each Camp location as a guarded objective. Place 1 random Warden enemy faceup (but not in play) under each Camp location. Shuffle the encounter deck and discard cards from the top until X locations are discarded, where X is 1 less than the number of players. Add each location discarded this way to the staging area.")
+                .WithOppositeTextLine("Each Camp location is immune to player card effects, and player cannot travel there while a Warden enemy is in play.")
+                .WithOppositeTextLine("Forced: At the end of the round, raise each player's threat by 1 for each Camp location in the staging area.")
+                .WithOppositeTextLine("This stage cannot be defeated unless players control all 3 Captive objective-allies.")
+                .WithIncludedEncounterSets(EncounterSet.EasterlingRaiders, EncounterSet.RollingPlains)
+                .WithInfo(135, 1, Artist.Alvaro_Calvo_Escudero);
+            addQuest("Lead the Revolt", EncounterSet.TheLandOfSorrow, 2, 'A', 10)
+                .WithFlavor("You've freed Ulchor's slaves, but his lieutenants are advancing with a garrison to recapture them. You must lead the prisoners in a desperate fight to win their freedom.")
+                .WithTextLine("When Revealed: The first player returns each Warden enemy in the victory display to the staging area. Each other player discards cards from the top of the encounter deck until he discards an enemy and adds that enemy to the staging area.")
+                .WithOppositeTextLine("This stage gets +10 quest points per player.")
+                .WithOppositeTextLine("Forced: After a player commits characters to the quest, if he is not engaged with a Warden enemy he must reveal an encounter card.")
+                .WithOppositeTextLine("This stage cannot be defeated while a Warden enemy is in play. When this stage is defeated, the players win the game.")
+                .WithIncludedEncounterSets(EncounterSet.EasterlingRaiders, EncounterSet.RollingPlains)
+                .WithInfo(136, 1, Artist.Aleksander_Karcz);
         }
     }
 }
