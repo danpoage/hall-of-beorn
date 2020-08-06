@@ -651,6 +651,9 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Sarah_Lindstrom);
             all.Add(Artist.Alex_Brock);
 
+            //The Land of Sorrow
+            all.Add(Artist.Matt_Hansen);
+
             //Arkham Horrom Core
             //all.Add(Artist.Vincent_Dutrait);
             //all.Add(Artist.Jacob_Murray);
@@ -1090,6 +1093,7 @@ namespace HallOfBeorn.Models
         public static Artist Mathias_Kollros = new Artist { Name = "Mathias Kollros", URL = "http://guterrez.deviantart.com" };
         public static Artist MartinDeDiegoSadaba = new Artist { Name = "Martin de Diego Sádaba", URL = "https://www.deviantart.com/almanegra" };
         public static Artist Matt_Bradbury = new Artist { Name = "Matt Bradbury", URL = "http://bradburydigital.deviantart.com" };
+        public static Artist Matt_Hansen = new Artist { Name = "Matt Hansen", URL = "http://www.matthansenart.com/" };
         public static Artist Matt_Smith = new Artist { Name = "Matt Smith", URL = "https://www.google.com/search?q=matt+smith+fantasy+art" };
         public static Artist Matt_Stawicki = new Artist { Name = "Matt Stawicki", URL = "http://www.mattstawicki.com" };
         public static Artist Matt_Stewart = new Artist { Name = "Matt Stewart", URL = "http://mattstewartartblog.blogspot.com" };

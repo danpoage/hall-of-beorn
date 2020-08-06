@@ -146,7 +146,52 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTextLine("Response: After Farin is declared as an attacker against an enemy, deal 1 damage to an enemy engaged with a player.")
                 .WithTextLine("If Farin leaves play, the players lose the game.")
                 .WithInfo(126, 1, Artist.Aleksander_Karcz);
-
+            addEnemy("Easterling Guard", EncounterSet.TheLandOfSorrow, 32, 3, 4, 2, 5)
+                .WithTraits("Easterling.")
+                .WithKeywords("Archery 2.")
+                .WithTextLine("Archery 2.")
+                .WithTextLine("When Revealed: Assign X damage among characters in play. X is the current archery total.")
+                .WithShadow("Shadow: Defending character cannot ready this round.")
+                .WithEasyModeQuantity(2)
+                .WithInfo(127, 3, Artist.Alvaro_Calvo_Escudero);
+            addEnemy("Nurn Slaver", EncounterSet.TheLandOfSorrow, 23, 2, 3, 2, 6)
+                .WithTraits("Easterling.")
+                .WithTextLine("While the number of Camp locations in the staging area is less than the number of players, Nurn Slavers gains surge.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack for each Camp location in the victory display.")
+                .WithEasyModeQuantity(3)
+                .WithInfo(128, 4, Artist.Michael_Edward_Smith);
+            addLocation("Working Fields", EncounterSet.TheLandOfSorrow, 3, 4)
+                .WithTraits("Plains.")
+                .WithTextLine("While Working Fields is in the staging area, characters cannot be healed.")
+                .WithTextLine("Travel: Each player deals 1 damage to a character he controls.")
+                .WithFlavorLine("Neither he nor Frodo knew anything of the great slave-worked fields away south in this wide realm...")
+                .WithFlavorLine("-The Return of the King")
+                .WithInfo(129, 3, Artist.Stanislav_Dikolenko);
+            addLocation("Watch Tower", EncounterSet.TheLandOfSorrow, Card.VALUE_X, 5)
+                .WithTraits("Plains.")
+                .WithTextLine("While Watch Tower is in the staging area, it gains archery X.")
+                .WithTextLine("X is 1 more than the number of Captive objective allies the players control.")
+                .WithTextLine("Travel: Reveal the top card of the encounter deck.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(130, 3, Artist.Sarah_Lindstrom);
+            addTreachery("Overseer's Whip", EncounterSet.TheLandOfSorrow)
+                .WithTraits("Easterling.")
+                .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
+                .WithTextLine("While attached to an enemy, counts as a Weapon attachment with the text: \"Forced: When attached enemy attacks, deal 1 damage to an exhausted character you control.")
+                .WithTextLine("When Revealed: Attach to the Easterling enemy with the lowest engagement cost.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(131, 2, Artist.Matt_Hansen);
+            addTreachery("Cruelty of Mordor", EncounterSet.TheLandOfSorrow)
+                .WithTextLine("When Revealed: Each player deals 1 damage to a character he controls. Then, each player must choose: either deal 1 damage to each damaged character you control, or raise your threat by 1 for each damaged character you control.")
+                .WithShadow("Shadow: Attacking enemy gets +2 Defense until the end of the phase.")
+                .WithEasyModeQuantity(2)
+                .WithInfo(132, 3, Artist.Michael_Edward_Smith);
+            addTreachery("Broken Captives", EncounterSet.TheLandOfSorrow)
+                .WithTextLine("When Revealed: Exhaust each damaged character. If no characters are exhausted by this effect, Broken Captives gains surge and Doomed 1.")
+                .WithShadow("Shadow: If attacking enemy is a Warden, it makes an additional attack against you after this one.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(133, 2, Artist.Sara_Biddle);
             addContract("Messenger of the King")
                 .WithTextLine("You cannot choose more than 2 heroes during setup.")
                 .WithTextLine("Setup: Choose a non-neutral unique ally from your deck and put it into play. Add the sum of that ally's printed Willpower, Attack, Defense, and hit points to your starting threat. Then, flip this card over and attach it to that ally.")
