@@ -113,6 +113,108 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithTextLine("When Revealed: Return each engaged Spider enemy to the staging area.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if it is a Spider).")
                 .WithInfo(15, 2, Artist.Guillaume_Ducos);
+            addLocation("Darkened Stairway", emptySetName, 3, 4)
+                .WithSetNumberAndCost(2, 1)
+                .WithTraits("Underground.")
+                .WithTextLine("While Darkened Stairway is in the staging area, it gains: \"Forced: After a 'when revealed' effect is canceled, reveal the top card of the encounter deck.\"")
+                .WithTextLine("Travel: Discard the top card of the encounter deck. If that card is a treachery, resolve its 'when revealed' effect.")
+                .WithInfo(16, 2, Artist.Nate_Abell);
+            addTreachery("We Cannot Get Out", emptySetName)
+                .WithSetNumberAndCost(2, 1)
+                .WithTextLine("When Revealed: Until the end of the phase, add X Threat to the staging area, where X is the number of characters controlled by the player with the most characters.")
+                .WithShadow("Shadow: Assign X damage among characters you control, where X is the number of enemies engaged with you.")
+                .WithInfo(17, 1, Artist.Nate_Abell);
+
+            addEnemy("Spider Broodling", emptySetName, 18, 2, 2, 1, 2)
+                .WithSetNumberAndCost(3, 0)
+                .WithTraits("Spider.")
+                .WithTextLine("Forced: After Spider Broodling engages you, remove 2 progress from the main quest.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, remove 2 progress from the main quest.")
+                .WithInfo(18, 3, Artist.Sergey_Glushakov);
+            addLocation("Spider Burrow", emptySetName, 4, 4)
+                .WithSetNumberAndCost(3, 2)
+                .WithUnique()
+                .WithTraits("Underground.")
+                .WithTextLine("While Spider Burrow is in the staging area, each Spider enemy gets +1 Defense.")
+                .WithTextLine("Forced: When Spider Burrow is explored, the opposing team searches the encounter deck and discard pile for a Spider enemy with cost 1 or less and adds it to the staging area. Shuffle the encounter deck.")
+                .WithInfo(19, 1, Artist.Jokubas_Uoginitas);
+            addTreachery("Grabbed by Spiders", emptySetName)
+                .WithSetNumberAndCost(3, 1)
+                .WithTextLine("When Revealed: Remove X characters from the quest, where X is the number of Spider enemies in play. If there are no Spider enemies in play, Grabbed by Spiders gains surge.")
+                .WithShadow("Shadow: Defending character cannot ready until the end of the round.")
+                .WithInfo(20, 1, Artist.Rafal_Hrynkiewicz);
+
+            addEnemy("Moria Bats", emptySetName, 13, 1, 3, 1, 3)
+                .WithSetNumberAndCost(4, 1)
+                .WithTraits("Creature.")
+                .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
+                .WithShadow("Shadow: Shuffle Moria Bats into the enocunter deck.")
+                .WithInfo(21, 2, Artist.Cristi_Balanescu);
+            addLocation("Ancient Guardroom", emptySetName, 2, 5)
+                .WithSetNumberAndCost(4, 1)
+                .WithTraits("Underground.")
+                .WithTextLine("Ancient Guardroom gets +1 Threat for each resource on it.")
+                .WithTextLine("Forced: After an event is played, place 1 resource here.")
+                .WithTextLine("Travel: Assign X damage among characters in play, where X is Ancient Guardroom's Threat.")
+                .WithInfo(22, 1, Artist.Pedro_Amato);
+            addTreachery("Denizen of the Deep", emptySetName)
+                .WithSetNumberAndCost(4, 0)
+                .WithTextLine("When Revealed: The opposing team attaches Denizen of the Deep to a non-unique enemy and returns it to the staging area. If there are no non-unique enemies in play, Denizens of the Deep gains surge. (Counts as Condition attachment with the text: \"Attached enemy gets +1 Threat, +1 Attack, +1 Defense and is immune to player card effects.)")
+                .WithInfo(23, 2, Artist.Jon_Bosco);
+
+            addEnemy("Werewolf", emptySetName, 40, 2, 4, 1, 4)
+                .WithSetNumberAndCost(5, 0)
+                .WithTraits("Creature.", "Werewolf.")
+                .WithTextLine("Werewolf gets -10 engagement cost while there is an active location.")
+                .WithInfo(24, 2, Artist.Jon_Bosco);
+            addLocation("Fouled Well", emptySetName, 3, 4)
+                .WithSetNumberAndCost(5, 1)
+                .WithTraits("Underground.")
+                .WithTextLine("While Fouled Well is in the staging area, characters cannot be readied by player card effects.")
+                .WithTextLine("Travel: Each player exhausts a character.")
+                .WithInfo(25, 1, Artist.David_Lecossu);
+            addTreachery("Cave In", emptySetName)
+                .WithSetNumberAndCost(5, 1)
+                .WithTextLine("When Revealed: Return the active location to the staging area. Each player assigns X damage among characters he controls, where X is the Threat of that location. If no location is returned to the staging area this way, Cave In gains surge.")
+                .WithShadow("Shadow: If this attack destroys a character, return the active location to the staging area.")
+                .WithInfo(26, 2, Artist.Winona_Nelson);
+
+            addEnemy("Hive Guardian", emptySetName, 30, 3, 5, 2, 6)
+                .WithSetNumberAndCost(6, 2)
+                .WithTraits("Spider.")
+                .WithTextLine("Forced: After Hive Guardian attacks and destroys an ally, return Hive Guardian to the staging area.")
+                .WithShadow("Shadow: Return attacking enemy to the staging area after this attack.")
+                .WithInfo(27, 1, Artist.Sandara_Tang);
+            addLocation("Abandoned Mines", emptySetName, 2, 2)
+                .WithSetNumberAndCost(6, 0)
+                .WithTraits("Underground.")
+                .WithTextLine("While Abandoned Mines is in the staging area, progress cannot be placed here.")
+                .WithShadow("Shadow: If attacking enemy was engaged this round, it cannot take damage this phase.")
+                .WithInfo(28, 3, Artist.Paulo_Puggioni);
+            addTreachery("Sudden Pitfall", emptySetName)
+                .WithSetNumberAndCost(6, 1)
+                .WithTextLine("When Revealed: The opposing team chooses and discards an ally. If no ally was discarded this way, Sudden Pitfall gains surge.")
+                .WithShadow("Shadow: Either discard an ally you control, or attacking enemy cannot take damage this phase.")
+                .WithInfo(29, 1, Artist.Jake_Murray);
+
+            addEnemy("Web-spinner", emptySetName, 24, 2, 4, 2, 4)
+                .WithSetNumberAndCost(7, 1)
+                .WithTraits("Spider.")
+                .WithTextLine("When Revealed: Either no more than 4 progress can be placed on the current quest this phase, or Web-spinner gains surge.")
+                .WithShadow("Shadow: If this attack destroys a character, return attacking enemy to the staging area.")
+                .WithInfo(30, 2, Artist.Aurelien_Hubert);
+            addLocation("Cobwebbed Cavern", emptySetName, 2, 4)
+                .WithSetNumberAndCost(7, 0)
+                .WithTraits("Underground.")
+                .WithTextLine("Travel: Remove 2 progress from the main quest.")
+                .WithShadow("Shadow: Remove 2 progress from the main quest.")
+                .WithInfo(31, 2, Artist.Leanna_Crossan);
+            addTreachery("Foul Air", emptySetName)
+                .WithSetNumberAndCost(7, 1)
+                .WithTextLine("When Revealed: The first player must choose: either deal 1 damage to each character committed to the quest, or raise each player's threat by 1 and end the quest phase without resolving the quest.")
+                .WithShadow("Shadow: Deal 1 damage to the defending character.")
+                .WithInfo(32, 1, Artist.Jasper_Sandner);
         }
     }
 }
