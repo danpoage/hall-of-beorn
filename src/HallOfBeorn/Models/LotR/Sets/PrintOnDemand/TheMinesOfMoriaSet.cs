@@ -215,6 +215,60 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithTextLine("When Revealed: The first player must choose: either deal 1 damage to each character committed to the quest, or raise each player's threat by 1 and end the quest phase without resolving the quest.")
                 .WithShadow("Shadow: Deal 1 damage to the defending character.")
                 .WithInfo(32, 1, Artist.Jasper_Sandner);
+
+            addEnemy("Brood Mother", emptySetName, 38, 3, 6, 4, 8)
+                .WithSetNumberAndCost(8, 3)
+                .WithUnique()
+                .WithTraits("Creature.")
+                .WithTextLine("Cannot have non-objective player card attachments or take non-combat damage.")
+                .WithTextLine("While Brood Mother is in the staging area, no more than 5 progress can be placed on the main quest each round.")
+                .WithInfo(33, 1, Artist.Dimitri_Bielak);
+            addLocation("Lightless Passage", emptySetName, 2, 4)
+                .WithSetNumberAndCost(8, 0)
+                .WithTraits("Underground.")
+                .WithTextLine("While Lightless Passage is in the staging area, no more than 1 progress can be placed on each location in the staging area each round.")
+                .WithTextLine("Travel: Each player discards 1 random card from his hand.")
+                .WithInfo(34, 2, Artist.Stu_Barnes);
+            addTreachery("Lurking Malice", emptySetName)
+                .WithSetNumberAndCost(8, 0)
+                .WithTextLine("When Revealed: Discard each resource from each hero's resource pool. Add 1 to the total Threat in the staging area for each resource discarded this way. If no resources were discarded this way, Lurking Malice gains surge.")
+                .WithShadow("Shadow: Discard a resource from the resource pool of a hero you control.")
+                .WithInfo(35, 2, Artist.Michael_Wolmarans);
+
+            addEnemy("Great Cave-troll", emptySetName, 36, 2, 6, 2, 9)
+                .WithSetNumberAndCost(9, 2)
+                .WithTraits("Troll.")
+                .WithTextLine("Cannot have non-objective player card attachments.")
+                .WithTextLine("While Great Cave-troll is in the staging area, it gains: \"Forced: At the end of the encounter phase, raise each player's threat by 2.\"")
+                .WithInfo(36, 1, Artist.David_A_Nash);
+            addLocation("Zigil Mineshaft", emptySetName, 5, 5)
+                .WithSetNumberAndCost(9, 1)
+                .WithTraits("Underground.")
+                .WithTextLine("Quest Action: Raise each player's threat by 1 to reduce the total Threat of Zigil Mineshaft by 1 until the end of the phase. The first player may trigger this effect.")
+                .WithInfo(37, 1, Artist.David_Lecossu);
+            addTreachery("Dark and Dreadful", emptySetName)
+                .WithSetNumberAndCost(9, 0)
+                .WithTextLine("When Revealed: Each player discards 1 random card from his hand. Until the end of the phase, add X Threat to the staging area, where X is the total cost of the discarded cards.")
+                .WithShadow("Shadow: Discard 1 random card from your hand.")
+                .WithInfo(38, 3, Artist.Igor_Kieryluk);
+
+            addEnemy("Goblin Follower", emptySetName, 50, 2, 2, 0, 3)
+                .WithSetNumberAndCost(10, 0)
+                .WithTraits("Orc.", "Goblin.")
+                .WithTextLine("Goblin Follower cannot be optionally engaged.")
+                .WithTextLine("While Goblin Follower is in the staging area, it gains: \"Forced: After an enemy engages a player, Goblin Follower engages that player.")
+                .WithInfo(39, 2, Artist.Salvador_Trakal);
+            addLocation("Stairs of Náin", emptySetName, 4, 6)
+                .WithSetNumberAndCost(10, 3)
+                .WithUnique()
+                .WithTraits("Underground.")
+                .WithTextLine("While Stairs of Náin is in the staging area, the first treachery revealed each round gains surge and its 'when revealed' effects cannot be canceled.")
+                .WithTextLine("Forced: When Stairs of Náin is explored, raise each player's threat by 4.")
+                .WithInfo(40, 1, Artist.Lin_Bo);
+            addTreachery("Hidden Threat", emptySetName)
+                .WithSetNumberAndCost(10, 0)
+                .WithTextLine("When Revealed: The opposing team searches the top 5 cards of the encounter deck for a card with cost X or less, where X is the stage number of the main quest, and places that card facedown under the main quest. After the next time the players quest successfully, reveal that card.")
+                .WithInfo(41, 2, Artist.Ryan_Barger);
         }
     }
 }
