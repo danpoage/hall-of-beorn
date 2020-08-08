@@ -147,6 +147,7 @@ namespace HallOfBeorn.Models.LotR
         public static Product TheCityOfUlfastPreorderPromotion = new Products.PreorderPromotion.TheCityOfUlfastPreorderPromotionProduct();
         public static Product ChallengeOfTheWainridersPreorderPromotion = new Products.PreorderPromotion.ChallengeOfTheWainridersPreorderPromotionProduct();
         public static Product UnderTheAshMountainsPreorderPromotion = new Products.PreorderPromotion.UnderTheAshMountainsPreorderPromotionProduct();
+        public static Product TheLandOfSorrowPreorderPromotion = new Products.PreorderPromotion.TheLandOfSorrowPreorderPromotionProduct();
 
         //The Hobbit Saga
         public static Product TheHobbitOverHillAndUnderHill = new Products.Saga.TheHobbitOverHillAndUnderHillProduct();

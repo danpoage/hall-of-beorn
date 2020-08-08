@@ -18,6 +18,7 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
             AddProduct(Product.TheCityOfUlfastPreorderPromotion);
             AddProduct(Product.ChallengeOfTheWainridersPreorderPromotion);
             AddProduct(Product.UnderTheAshMountainsPreorderPromotion);
+            AddProduct(Product.TheLandOfSorrowPreorderPromotion);
         }
     }
 }

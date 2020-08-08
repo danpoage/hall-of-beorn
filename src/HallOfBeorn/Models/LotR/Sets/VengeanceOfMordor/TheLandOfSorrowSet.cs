@@ -53,7 +53,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
             addAlly("Eagle Emissary", 2, Sphere.Tactics, false, 2, 1, 0, 2)
                 .WithTraits("Creature.", "Eagle.")
                 .WithTextLine("Cannot have restricted attachments.")
-                .WithTextLine("Forced: After Eagle Emissary quests successfully, pay 1 Tactics resource or discard it from play.")
+                .WithTextLine("Forced: After ~Eagle Emissary quests successfully, pay 1 Tactics resource or discard it from play.")
                 .WithFlavorLine("...and out of the East there came a great Eagle flying, and he bore tidings beyond hope from The Lords of the West...")
                 .WithFlavorLine("-The Return of the King")
                 .WithInfo(113, 3, Artist.Carlos_Palma_Cruchaga);
