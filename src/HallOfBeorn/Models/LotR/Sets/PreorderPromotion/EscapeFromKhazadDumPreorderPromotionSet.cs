@@ -11,7 +11,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
         protected override void Initialize()
         {
             Name = setName;
-            Abbreviation = "EFKD-PRM";
+            Abbreviation = "EfKD-PRM";
             Number = 8;
             SetType = Models.SetType.Preorder_Promotion;
             Cycle = "GenCon";

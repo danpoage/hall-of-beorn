@@ -11,7 +11,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
         protected override void Initialize()
         {
             Name = setName;
-            Abbreviation = "EFKD";
+            Abbreviation = "EfKD";
             SetType = Models.SetType.Fellowship_Deck;
             Cycle = "GenCon";
             Number = 3012;

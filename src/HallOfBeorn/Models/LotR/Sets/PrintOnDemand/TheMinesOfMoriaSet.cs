@@ -269,6 +269,77 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithSetNumberAndCost(10, 0)
                 .WithTextLine("When Revealed: The opposing team searches the top 5 cards of the encounter deck for a card with cost X or less, where X is the stage number of the main quest, and places that card facedown under the main quest. After the next time the players quest successfully, reveal that card.")
                 .WithInfo(41, 2, Artist.Ryan_Barger);
+
+            addEnemy("Goblin Warlord", emptySetName, 33, 2, 5, 4, 7)
+                .WithSetNumberAndCost(11, 3)
+                .WithUnique()
+                .WithTraits("Orc.", "Goblin.")
+                .WithTextLine("Cannot have non-objective player card attachments or take non-combat damage")
+                .WithTextLine("Forced: After Goblin Warlord enters play, the opposing team searches the encounter deck and discard pile for a 0-cost Goblin enemy and adds it to the staging area. Shuffle the encounter deck.")
+                .WithInfo(42, 1, Artist.Matthew_Starbuck);
+            addLocation("Dwarven Forge", emptySetName, 3, 5)
+                .WithSetNumberAndCost(11, 0)
+                .WithTraits("Underground.")
+                .WithTextLine("While Dwarven Forge is the active location, it gains: \"Response: After Dwarven Forge is explored, each player draws 1 card.\"")
+                .WithInfo(43, 2, Artist.Cristi_Balanescu);
+            addTreachery("Signs of Conflict", emptySetName)
+                .WithSetNumberAndCost(11, 0)
+                .WithTextLine("When Revealed: Each enemy and location in the staging area gets +1 Threat until the end of the phase.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if you are engaged with another enemy).")
+                .WithInfo(44, 2, Artist.Cristi_Balanescu);
+
+            addEnemy("Goblin Archer", emptySetName, 44, 2, 4, 2, 4)
+                .WithSetNumberAndCost(12, 1)
+                .WithTraits("Orc.", "Goblin.")
+                .WithTextLine("While Goblin Archer is in the staging area, it gains: \"Forced: At the end of the encounter phase, assign X damage among characters in play, where X is the number of enemies in play.\"")
+                .WithInfo(45, 2, Artist.Salvador_Trakal);
+            addLocation("Narrow Fissure", emptySetName, 2, 3)
+                .WithSetNumberAndCost(12, 0)
+                .WithTraits("Underground.")
+                .WithTextLine("While Narrow Fissure is in the staging area, characters cannot be healed by player card effects.")
+                .WithTextLine("Travel: Each player deals 1 damage to a hero he controls.")
+                .WithInfo(46, 2, Artist.Katy_Grierson);
+            addTreachery("Crumbling Ruin", emptySetName)
+                .WithSetNumberAndCost(12, 1)
+                .WithTextLine("When Revealed: Each player assigns X damage among characters he controls, where X is the number of characters he controls.")
+                .WithShadow("Shadow: Exhaust a character you control.")
+                .WithInfo(47, 1, Artist.Magali_Villeneuve);
+
+            addEnemy("Goblin Sneak", emptySetName, 22, 2, 3, 1, 3)
+                .WithSetNumberAndCost(13, 1)
+                .WithTraits("Orc.", "Goblin.")
+                .WithTextLine("When Revealed: The opposing team searches the top 5 cards of the encounter deck for a Goblin enemy with cost 1 or less and adds it to the staging area.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack.")
+                .WithInfo(48, 2, Artist.Timo_Karhula);
+            addLocation("Plundered Armoury", emptySetName, 2, 2)
+                .WithSetNumberAndCost(13, 0)
+                .WithTraits("Underground.")
+                .WithTextLine("When Revealed: Discard the top card of the encounter deck. If that card is an enemy, add it to the staging area.")
+                .WithInfo(49, 2, Artist.Michael_Rasmussen);
+            addTreachery("They Are Coming!", emptySetName)
+                .WithSetNumberAndCost(13, 1)
+                .WithTextLine("When Revealed: The opposing team searches the encounter deck and discard pile for a different 0-cost enemy per player and adds them to the staging area. Shuffle the encounter deck.")
+                .WithShadow("Shadow: The opposing team shuffles an enemy from the encounter discard pile into the encounter deck.")
+                .WithInfo(50, 1, Artist.Sara_Betsy);
+
+            addEnemy("Swarming Goblins", emptySetName, 12, 1, 2, 1, 2)
+                .WithSetNumberAndCost(14, 0)
+                .WithTraits("Orc.", "Goblin.")
+                .WithTextLine("When Revealed: Return each copy of Swarming Goblins in the encounter discard pile to the staging area.")
+                .WithShadow("Shadow: If the attacking enemy is a Goblin, put Swarming Goblins into play engaged with you.")
+                .WithInfo(51, 3, Artist.Mark_Behm);
+            addLocation("Goblin Tunnels", emptySetName, 2, 6)
+                .WithSetNumberAndCost(14, 2)
+                .WithUnique()
+                .WithTraits("Underground.")
+                .WithTextLine("While Goblin Tunnels is in the staging area, each Goblin enemy gets +1 Attack.")
+                .WithTextLine("Forced: When Goblin Tunnels is explored, the opposing team searches the encounter deck and discard pile for a Goblin enemy with cost 1 or less and adds it to the staging area. Shuffle the encounter deck.")
+                .WithInfo(52, 1, Artist.Michael_Rasmussen);
+            addTreachery("Massing in the Deep", emptySetName)
+                .WithSetNumberAndCost(14, 1)
+                .WithTextLine("When Revealed: Each engaged enemy makes an attack. If no attacks were made this way, Massing in the Deep gains surge.")
+                .WithShadow("Shadow: Each enemy engaged with you gets +1 Attack.")
+                .WithInfo(53, 1, Artist.Noah_Bradley);
         }
     }
 }
