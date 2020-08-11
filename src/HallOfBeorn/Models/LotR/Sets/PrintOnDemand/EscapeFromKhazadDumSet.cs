@@ -184,7 +184,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithTextLine("Forced: After Hobgobling engages a player, it cannot take damage until the end of the round.")
                 .WithShadow("Shadow: Attacking enemy cannot take damage this phase.")
                 .WithInfo(27, 1, Artist.Martin_de_Diego_Sadaba);
-            addLocation("Western Hal;", emptySetName, 3, 4)
+            addLocation("Western Hall", emptySetName, 3, 4)
                 .WithSetNumberAndCost(20, 1)
                 .WithTraits("Underground.")
                 .WithTextLine("Travel: Discard the top card of the encounter deck. Raise each player's threat by X, where X is that card's printed Threat.")
@@ -236,7 +236,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithUnique()
                 .WithTraits("Creature.")
                 .WithTextLine("Cannot be optionally engaged.")
-                .WithTextLine("While Elder Nameless Thing is in the staging area, it gains: \"Forced: After players have committed characters to the quest, Elder Nameless Thing makes an attack against the first player.")
+                .WithTextLine("While Elder ~Nameless Thing is in the staging area, it gains: \"Forced: After players have committed characters to the quest, Elder ~Nameless Thing makes an attack against the first player.")
                 .WithInfo(36, 1, Artist.Allison_Theus);
             addLocation("Silent Caverns", emptySetName, 2, 3)
                 .WithSetNumberAndCost(23, 0)
@@ -326,7 +326,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
             addEnemy("Nameless Thing", emptySetName, 33, 1, 1, 1, 4)
                 .WithSetNumberAndCost(28, 1)
                 .WithTraits("Creature.")
-                .WithTextLine("Forced: After Nameless Thing enters play, the first player attaches the top card of his deck to it faceup as a guarded attached. Nameless Thing gets +X Threat, +X Attack, and +X Defense, where X is that card's printed cost. When Nameless Thing leaves play, discard that card.")
+                .WithTextLine("Forced: After ~Nameless Thing enters play, the first player attaches the top card of his deck to it faceup as a guarded attached. ~Nameless Thing gets +X Threat, +X Attack, and +X Defense, where X is that card's printed cost. When ~Nameless Thing leaves play, discard that card.")
                 .WithInfo(51, 2, Artist.Timo_Karhula);
             addLocation("Mitril Lode", emptySetName, 3, 5)
                 .WithSetNumberAndCost(28, 0)
