@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace HallOfBeorn.Models
+﻿namespace HallOfBeorn.Models
 {
     public enum Language
         : byte

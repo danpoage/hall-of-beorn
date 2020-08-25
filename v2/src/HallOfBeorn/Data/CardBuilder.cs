@@ -11,31 +11,68 @@ namespace HallOfBeorn.Data
         public CardBuilder(CardSet cardSet)
         {
             this.cardSet = cardSet;
-            currentNumber = cardSet.FirstCardNumber;
         }
 
         private readonly CardSet cardSet;
         private readonly Card card = new Card();
-        private ushort currentNumber;
 
         public CardBuilder Hero(string title, byte threatCost, Sphere sphere, byte willpower, byte attack, byte defense, byte hitPoints)
         {
-            card.Title = title;
+            card.Title = new Content(title);
             card.CardType = CardType.Hero;
-            card.Number = currentNumber;
             card.Quantity = 1;
-            card.Stats.Add(new Stat(StatType.Sphere, (byte)sphere));
-            card.Stats.Add(new Stat(StatType.Threat_Cost, threatCost));
-            card.Stats.Add(new Stat(StatType.Willpower, willpower));
-            card.Stats.Add(new Stat(StatType.Attack, attack));
-            card.Stats.Add(new Stat(StatType.Defense, defense));
-            card.Stats.Add(new Stat(StatType.Hit_Points, hitPoints));
+            card.Stats.SetHeroStats(threatCost, sphere, willpower, attack, defense, hitPoints);
+            return this;
+        }
 
+        public CardBuilder Ally(string title, Sphere sphere, byte resourceCost, byte willpower, byte attack, byte defense, byte hitPoints)
+        {
+            card.Title = new Content(title);
+            card.CardType = CardType.Ally;
+            card.Quantity = 3;
+            card.Stats.SetAllyStats(resourceCost, sphere, willpower, attack, defense, hitPoints);
+            return this;
+        }
+
+        public CardBuilder Attachment(string title, Sphere sphere, byte resourceCost)
+        {
+            card.Title = new Content(title);
+            card.CardType = CardType.Ally;
+            card.Quantity = 3;
+            card.Stats.SetCostAndSphere(resourceCost, sphere);
+            return this;
+        }
+
+        public CardBuilder Event(string title, Sphere sphere, byte resourceCost)
+        {
+            card.Title = new Content(title);
+            card.CardType = CardType.Event;
+            card.Quantity = 3;
+            card.Stats.SetCostAndSphere(resourceCost, sphere);
+            return this;
+        }
+
+        public CardBuilder PlayerSideQuest(string title, Sphere sphere, byte resourceCost, byte questPoints)
+        {
+            card.Title = new Content(title);
+            card.CardType = CardType.Player_Side_Quest;
+            card.Quantity = 3;
+            card.Stats.SetCostAndSphere(resourceCost, sphere);
+            card.Stats.SetQuestPoints(questPoints);
+            return this;
+        }
+
+        public CardBuilder Contract(string title)
+        {
+            card.Title = new Content(title);
+            card.CardType = CardType.Contract;
+            card.Quantity = 1;
             return this;
         }
 
         public CardBuilder WithThumbnail()
         {
+            //NOTE: This can be removed
             return this;
         }
 
@@ -48,12 +85,7 @@ namespace HallOfBeorn.Data
         {
             foreach (var trait in traits)
             {
-                var parsed = trait.ParseTrait(Language.EN);
-                if (parsed == null)
-                {
-                    continue;
-                }
-                card.Traits.Add(parsed.Value);
+                card.Traits.Add(new Content(trait));
             }
             return this;
         }
@@ -62,29 +94,31 @@ namespace HallOfBeorn.Data
         {
             foreach (var keyword in keywords)
             {
-                var parsed = keyword.ParseKeyword(Language.EN);
-                if (parsed == null)
-                {
-                    continue;
-                }
-                card.Keywords.Add(parsed.Value);
+                card.Keywords.Add(new Content(keyword));
             }
             return this;
         }
 
         public CardBuilder WithTextLine(string text)
         {
-            var lang = Language.EN;
-
-            if (!card.Text.ContainsKey(lang))
+            if (!card.Front.TextBox.ContainsKey(TextType.Text))
             {
-                card.Text[lang] = text;
+                card.Front.TextBox[TextType.Text] = new Content(text);
             }
             else
             {
-                card.Text[lang] += Environment.NewLine + text;
+                card.Front.TextBox[TextType.Text] =
+                    card.Front.TextBox[TextType.Text].AppendLine(text);
             }
 
+            return this;
+        }
+
+        public CardBuilder WithInfo(byte number, byte quantity, Artist artist)
+        {
+            card.Number = number;
+            card.Quantity = quantity;
+            card.Front.Artists.Add(artist);
             return this;
         }
 

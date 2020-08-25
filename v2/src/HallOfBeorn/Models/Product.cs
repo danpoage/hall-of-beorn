@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace HallOfBeorn.Models
 {
     public class Product
+        : INamed
     {
         public Product(string code)
         {
@@ -12,5 +12,7 @@ namespace HallOfBeorn.Models
         }
 
         public string Code { get; }
+        public Content Name { get; set; }
+        public readonly List<CardSet> CardSets = new List<CardSet>();
     }
 }

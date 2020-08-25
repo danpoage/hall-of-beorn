@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace HallOfBeorn.Models
 {
     public class EncounterSet
+        : INamed
     {
-        public Product Product { get; set; }
-        public string Title { get; set; }
+        public Content Name { get; set; }
+        public INamed Product { get; set; }
     }
 }

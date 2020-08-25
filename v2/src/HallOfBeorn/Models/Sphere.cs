@@ -3,11 +3,11 @@
     public enum Sphere
         : byte
     {
+        Neutral = 0,
         Leadership,
         Tactics,
         Spirit,
         Lore,
-        Neutral,
         Baggins,
         Fellowship,
         Mastery,
