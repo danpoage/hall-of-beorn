@@ -9,11 +9,18 @@ namespace HallOfBeorn.Data
     public class CardBuilder
     {
         public CardBuilder(CardSet cardSet)
+            : this(cardSet, null)
+        {
+        }
+
+        public CardBuilder(CardSet cardSet, EncounterSet encounterSet)
         {
             this.cardSet = cardSet;
+            this.encounterSet = encounterSet;
         }
 
         private readonly CardSet cardSet;
+        private readonly EncounterSet encounterSet;
         private readonly Card card = new Card();
 
         public CardBuilder Hero(string title, byte threatCost, Sphere sphere, byte willpower, byte attack, byte defense, byte hitPoints)
@@ -67,6 +74,24 @@ namespace HallOfBeorn.Data
             card.Title = new Content(title);
             card.CardType = CardType.Contract;
             card.Quantity = 1;
+            return this;
+        }
+
+        public CardBuilder ObjectiveHero(string title, byte willpower, byte attack, byte defense, byte hitPoints)
+        {
+            card.Title = new Content(title);
+            card.CardType = CardType.Objective_Hero;
+            card.Quantity = 1;
+            card.Stats.SetHeroStats(null, null, willpower, attack, defense, hitPoints);
+            return this;
+        }
+
+        public CardBuilder ObjectiveAlly(string title, byte? willpower, byte? attack, byte? defense, byte hitPoints)
+        {
+            card.Title = new Content(title);
+            card.CardType = CardType.Objective_Ally;
+            card.Quantity = 1;
+            card.Stats.SetAllyStats(null, null, willpower, attack, defense, hitPoints);
             return this;
         }
 
@@ -124,6 +149,7 @@ namespace HallOfBeorn.Data
 
         public Card ToCard()
         {
+            card.EncounterSet = encounterSet;
             return card;
         }
     }

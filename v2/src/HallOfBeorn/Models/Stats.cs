@@ -22,6 +22,32 @@ namespace HallOfBeorn.Models
             map[type] = value;
         }
 
+        private void SetValue(StatType type, byte? option)
+        {
+            map[type] = option ?? VALUE_NA;
+        }
+
+        private void SetValueOrIgnore(StatType type, byte? option)
+        {
+            if (!option.HasValue)
+            {
+                return;
+            }
+
+            map[type] = option.Value;
+        }
+
+        private void SetValueOrIgnore<T>(StatType type, T? option, Func<T?, byte> convert)
+            where T: struct
+        {
+            if (!option.HasValue)
+            {
+                return;
+            }
+
+            map[type] = convert(option.Value);
+        }
+
         public Sphere? Sphere
         {
             get { return (Sphere?)GetValue(StatType.Sphere); }
@@ -57,21 +83,22 @@ namespace HallOfBeorn.Models
             SetValue(StatType.IsUnique, (byte)Uniqueness.Unique);
         }
 
-        public void SetHeroStats(byte threatCost, Sphere sphere, byte willpower, byte attack, byte defense, byte hitPoints)
+        public void SetHeroStats(byte? threatCost, Sphere? sphere, byte willpower, byte attack, byte defense, byte hitPoints)
         {
             SetUnique();
-            SetValue(StatType.Threat_Cost, threatCost);
-            SetValue(StatType.Sphere, (byte)sphere);
+
+            SetValueOrIgnore(StatType.Sphere, sphere, opt => (byte)opt.Value);
+            SetValueOrIgnore(StatType.Threat_Cost, threatCost);
             SetValue(StatType.Willpower, willpower);
             SetValue(StatType.Attack, attack);
             SetValue(StatType.Defense, defense);
             SetValue(StatType.Hit_Points, hitPoints);
         }
 
-        public void SetAllyStats(byte resourceCost, Sphere sphere, byte willpower, byte attack, byte defense, byte hitPoints)
+        public void SetAllyStats(byte? resourceCost, Sphere? sphere, byte? willpower, byte? attack, byte? defense, byte hitPoints)
         {
-            SetValue(StatType.Resource_Cost, resourceCost);
-            SetValue(StatType.Sphere, (byte)sphere);
+            SetValueOrIgnore(StatType.Resource_Cost, resourceCost);
+            SetValueOrIgnore(StatType.Sphere, sphere, opt => (byte)sphere.Value);
             SetValue(StatType.Willpower, willpower);
             SetValue(StatType.Attack, attack);
             SetValue(StatType.Defense, defense);
@@ -92,6 +119,29 @@ namespace HallOfBeorn.Models
         public void SetThreat(byte threat)
         {
             SetValue(StatType.Threat, threat);
+        }
+
+        public void SetEnemyStats(byte? engagementCost, byte threat, byte? attack, byte? defense, byte? hitPoints)
+        {
+            SetValue(StatType.Engagement_Cost, engagementCost);
+            SetValue(StatType.Threat, threat);
+            SetValue(StatType.Attack, attack);
+            SetValue(StatType.Defense, defense);
+            SetValue(StatType.Hit_Points, hitPoints);
+        }
+
+        public void SetLocationStats(byte? threat, byte questPoints)
+        {
+            SetValueOrIgnore(StatType.Threat, threat);
+            SetValue(StatType.Quest_Points, questPoints);
+        }
+
+        public void SetQuestStats(byte stageNumber, byte? oppositeStageNumber, char stageLetter, byte? questPoints)
+        {
+            SetValue(StatType.Stage_Number, stageNumber);
+            SetValueOrIgnore(StatType.Opposite_Stage_Letter, oppositeStageNumber);
+            SetValue(StatType.Stage_Letter, (byte)stageLetter);
+            SetValue(StatType.Quest_Points, questPoints);
         }
     }
 }

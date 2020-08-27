@@ -7,31 +7,43 @@ namespace HallOfBeorn.Data
 {
     public class CardSetBuilder
     {
-        public CardSetBuilder()
+        public CardSetBuilder(Product product)
         {
         }
 
-        public CardSetBuilder(string name, string abbreviation, ushort number, SetType setType)
+        public CardSetBuilder(Product product, string name, string abbreviation, ushort number, SetType setType)
         {
-            cardSet.Name = new Content(name);
-            cardSet.Abbreviation = abbreviation;
-            cardSet.Number = number;
-            cardSet.SetType = setType;
+            this.product = product;
+            this.name = new Content(name);
+            this.abbreviation = abbreviation;
+            this.number = number;
+            this.setType = setType;
         }
 
-        private readonly CardSet cardSet = new CardSet();
+        private readonly Product product;
+        private readonly Content name;
+        private readonly string abbreviation;
+        private readonly ushort number;
+        private readonly SetType setType;
+        private CardSet cardSet;
         private readonly List<CardBuilder> cardBuilders = new List<CardBuilder>();
-        
+        private readonly List<EncounterSet> encounterSets = new List<EncounterSet>();
+
         protected virtual void Initialize()
         {
+        }
+
+        private CardBuilder addCardBuilder()
+        {
+            var cardBuilder = new CardBuilder(cardSet);
+            cardBuilders.Add(cardBuilder);
+            return cardBuilder;
         }
 
         public CardBuilder addHero(
             string title, byte threatCost, Sphere sphere, byte willpower, byte attack, byte defense, byte hitPoints)
         {
-            var cardBuilder = new CardBuilder(cardSet);
-            cardBuilders.Add(cardBuilder);
-
+            var cardBuilder = addCardBuilder();
             return cardBuilder.Hero(title, threatCost, sphere, willpower, attack, defense, hitPoints);
         }
 
@@ -46,10 +58,20 @@ namespace HallOfBeorn.Data
 
         public CardSet ToCardSet()
         {
+            var playerCards = new List<Card>();
             foreach (var cardBuilder in cardBuilders)
             {
-                cardSet.Cards.Add(cardBuilder.ToCard());
+                playerCards.Add(cardBuilder.ToCard());
             }
+            var encounterSets = new List<EncounterSet>();
+
+            cardSet = new CardSet(product, playerCards, encounterSets)
+            {
+                Name = name,
+                Abbreviation = abbreviation,
+                Number = number,
+                SetType = setType,
+            };
             return cardSet;
         }
     }
