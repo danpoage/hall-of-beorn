@@ -1,43 +1,48 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace HallOfBeorn.Models
 {
     public class CardSet
         : INamed
     {
-        public CardSet(Product product, List<Card> playerCards, List<EncounterSet> encounterSets)
+        public CardSet(Product product,
+            string name, string abbreviation, ushort number, SetType setType,
+            List<Card> playerCards, List<EncounterSet> encounterSets)
         {
             Product = product;
-            this.playerCards = playerCards;
-            this.encounterSets = encounterSets;
-        }
+            Name = new Content(name);
+            Abbreviation = abbreviation;
+            Number = number;
+            SetType = setType;
 
-        public INamed Product { get; set; }
-        public Content Name { get; set; }
-        public string Abbreviation { get; set; }
-        public ushort Number { get; set; }
-        public SetType SetType { get; set; }
-
-        public readonly List<Card> playerCards;
-        public readonly List<EncounterSet> encounterSets;
-        public IEnumerable<Card> Cards
-        {
-            get
+            foreach (var card in playerCards)
             {
-                foreach (var card in playerCards)
+                playerCards.Add(card);
+                cards.Add(card);
+            }
+
+            foreach (var encounterSet in encounterSets)
+            {
+                encounterSets.Add(encounterSet);
+                foreach (var card in encounterSet.Cards)
                 {
-                    yield return card;
-                }
-                
-                foreach (var encounterSet in encounterSets)
-                {
-                    foreach (var card in encounterSet.Cards)
-                    {
-                        yield return card;
-                    }
+                    cards.Add(card);
                 }
             }
         }
+
+        private readonly List<Card> playerCards = new List<Card>();
+        private readonly List<EncounterSet> encounterSets = new List<EncounterSet>();
+        private readonly List<Card> cards = new List<Card>();
+
+        public INamed Product { get; }
+        public Content Name { get; }
+        public string Abbreviation { get; }
+        public ushort Number { get; }
+        public SetType SetType { get; }
+
+        public IReadOnlyList<Card> PlayerCards => playerCards;
+        public IReadOnlyList<EncounterSet> EncounterSets => encounterSets;
+        public IReadOnlyList<Card> Cards => cards;
     }
 }

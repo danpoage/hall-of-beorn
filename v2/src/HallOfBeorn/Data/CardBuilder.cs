@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-using HallOfBeorn.Models;
+﻿using HallOfBeorn.Models;
 
 namespace HallOfBeorn.Data
 {
@@ -27,7 +23,6 @@ namespace HallOfBeorn.Data
         {
             card.Title = new Content(title);
             card.CardType = CardType.Hero;
-            card.Quantity = 1;
             card.Stats.SetHeroStats(threatCost, sphere, willpower, attack, defense, hitPoints);
             return this;
         }
@@ -36,7 +31,6 @@ namespace HallOfBeorn.Data
         {
             card.Title = new Content(title);
             card.CardType = CardType.Ally;
-            card.Quantity = 3;
             card.Stats.SetAllyStats(resourceCost, sphere, willpower, attack, defense, hitPoints);
             return this;
         }
@@ -45,7 +39,6 @@ namespace HallOfBeorn.Data
         {
             card.Title = new Content(title);
             card.CardType = CardType.Ally;
-            card.Quantity = 3;
             card.Stats.SetCostAndSphere(resourceCost, sphere);
             return this;
         }
@@ -54,7 +47,6 @@ namespace HallOfBeorn.Data
         {
             card.Title = new Content(title);
             card.CardType = CardType.Event;
-            card.Quantity = 3;
             card.Stats.SetCostAndSphere(resourceCost, sphere);
             return this;
         }
@@ -63,7 +55,6 @@ namespace HallOfBeorn.Data
         {
             card.Title = new Content(title);
             card.CardType = CardType.Player_Side_Quest;
-            card.Quantity = 3;
             card.Stats.SetCostAndSphere(resourceCost, sphere);
             card.Stats.SetQuestPoints(questPoints);
             return this;
@@ -77,11 +68,17 @@ namespace HallOfBeorn.Data
             return this;
         }
 
+        public CardBuilder Objective(string title)
+        {
+            card.Title = new Content(title);
+            card.CardType = CardType.Objective;
+            return this;
+        }
+
         public CardBuilder ObjectiveHero(string title, byte willpower, byte attack, byte defense, byte hitPoints)
         {
             card.Title = new Content(title);
             card.CardType = CardType.Objective_Hero;
-            card.Quantity = 1;
             card.Stats.SetHeroStats(null, null, willpower, attack, defense, hitPoints);
             return this;
         }
@@ -90,8 +87,70 @@ namespace HallOfBeorn.Data
         {
             card.Title = new Content(title);
             card.CardType = CardType.Objective_Ally;
-            card.Quantity = 1;
             card.Stats.SetAllyStats(null, null, willpower, attack, defense, hitPoints);
+            return this;
+        }
+
+        public CardBuilder ObjectiveLocation(string title, byte? questPoints)
+        {
+            card.Title = new Content(title);
+            card.CardType = CardType.Objective_Location;
+            card.Stats.SetQuestPoints(questPoints);
+            return this;
+        }
+
+        public CardBuilder ShipObjective(string title, byte willpower, byte attack, byte defense, byte hitPoints)
+        {
+            card.Title = new Content(title);
+            card.CardType = CardType.Ship_Objective;
+            card.Stats.SetAllyStats(null, null, willpower, attack, defense, hitPoints);
+            return this;
+        }
+
+        public CardBuilder Enemy(string title, byte? engagementCost, byte threat, byte? attack, byte? defense, byte? hitPoints)
+        {
+            card.Title = new Content(title);
+            card.CardType = CardType.Enemy;
+            card.Stats.SetEnemyStats(engagementCost, threat, attack, defense, hitPoints);
+            return this;
+        }
+
+        public CardBuilder ShipEnemy(string title, byte? engagementCost, byte threat, byte? attack, byte? defense, byte? hitPoints)
+        {
+            card.Title = new Content(title);
+            card.CardType = CardType.Ship_Enemy;
+            card.Stats.SetEnemyStats(engagementCost, threat, attack, defense, hitPoints);
+            return this;
+        }
+
+        public CardBuilder Location(string title, byte? threat, byte? questPoints)
+        {
+            card.Title = new Content(title);
+            card.CardType = CardType.Location;
+            card.Stats.SetLocationStats(threat, questPoints);
+            return this;
+        }
+
+        public CardBuilder Treachery(string title)
+        {
+            card.Title = new Content(title);
+            card.CardType = CardType.Treachery;
+            return this;
+        }
+
+        public CardBuilder EncounterSideQuest(string title, byte? questPoints)
+        {
+            card.Title = new Content(title);
+            card.CardType = CardType.Encounter_Side_Quest;
+            card.Stats.SetQuestPoints(questPoints);
+            return this;
+        }
+
+        public CardBuilder Quest(string title, byte stageNumber, byte? oppositeStageNumber, char stageLetter, byte? questPoints)
+        {
+            card.Title = new Content(title);
+            card.CardType = CardType.Quest;
+            card.Stats.SetQuestStats(stageNumber, oppositeStageNumber, stageLetter, questPoints);
             return this;
         }
 

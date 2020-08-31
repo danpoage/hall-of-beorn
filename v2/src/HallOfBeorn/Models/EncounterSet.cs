@@ -1,21 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace HallOfBeorn.Models
 {
     public class EncounterSet
         : INamed
     {
-        public EncounterSet(CardSet cardSet, string name)
+        public EncounterSet(CardSet cardSet, string name, List<Card> cards)
         {
-            Product = cardSet.Product;
+            //Product = cardSet.Product;
             CardSet = cardSet;
             Name = new Content(name);
+            this.cards = cards;
         }
 
-        public Content Name { get; set; }
-        public INamed Product { get; }
+        private readonly List<Card> cards;
+        
+        //public INamed Product { get; }
         public INamed CardSet { get; }
-        public readonly List<Card> Cards = new List<Card>();
+        public Content Name { get; }
+        public IReadOnlyList<Card> Cards => cards;
     }
 }

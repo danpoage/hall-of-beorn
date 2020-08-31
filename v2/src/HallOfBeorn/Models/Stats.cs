@@ -111,7 +111,7 @@ namespace HallOfBeorn.Models
             SetValue(StatType.Sphere, (byte)sphere);
         }
 
-        public void SetQuestPoints(byte questPoints)
+        public void SetQuestPoints(byte? questPoints)
         {
             SetValue(StatType.Quest_Points, questPoints);
         }
@@ -130,7 +130,7 @@ namespace HallOfBeorn.Models
             SetValue(StatType.Hit_Points, hitPoints);
         }
 
-        public void SetLocationStats(byte? threat, byte questPoints)
+        public void SetLocationStats(byte? threat, byte? questPoints)
         {
             SetValueOrIgnore(StatType.Threat, threat);
             SetValue(StatType.Quest_Points, questPoints);
