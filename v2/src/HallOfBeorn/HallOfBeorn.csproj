@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <Folder Include="Data\Scenarios\" />
-    <Folder Include="Data\Products\" />
     <Folder Include="Data\ProductGroups\" />
   </ItemGroup>
 

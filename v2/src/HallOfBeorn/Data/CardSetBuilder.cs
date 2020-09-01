@@ -19,10 +19,6 @@ namespace HallOfBeorn.Data
         private readonly List<CardBuilder> playerCardBuilders = new List<CardBuilder>();
         private readonly List<EncounterSetBuilder> encounterSetBuilders = new List<EncounterSetBuilder>();
 
-        protected virtual void Initialize()
-        {
-        }
-
         private CardBuilder addCardBuilder()
         {
             var builder = new CardBuilder(cardSet);
@@ -42,6 +38,34 @@ namespace HallOfBeorn.Data
         {
             var cardBuilder = addCardBuilder();
             return cardBuilder.Ally(title, sphere, resourceCost, willpower, attack, defense, hitPoints);
+        }
+
+        public CardBuilder addAttachment(
+            string title, byte resourceCost, Sphere sphere)
+        {
+            var cardBuilder = addCardBuilder();
+            return cardBuilder.Attachment(title, sphere, resourceCost);
+        }
+
+        public CardBuilder addEvent(
+            string title, byte resourceCost, Sphere sphere)
+        {
+            var cardBuilder = addCardBuilder();
+            return cardBuilder.Event(title, sphere, resourceCost);
+        }
+
+        public CardBuilder addPlayerSideQuest(
+            string title, byte resourceCost, Sphere sphere, byte questPoints)
+        {
+            var cardBuilder = addCardBuilder();
+            return cardBuilder.PlayerSideQuest(title, sphere, resourceCost, questPoints);
+        }
+
+        public CardBuilder addContract(
+            string title)
+        {
+            var cardBuilder = addCardBuilder();
+            return cardBuilder.Contract(title);
         }
 
         public EncounterSetBuilder EncounterSet(string name)
