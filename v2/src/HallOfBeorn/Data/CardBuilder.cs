@@ -162,6 +162,13 @@ namespace HallOfBeorn.Data
 
         public CardBuilder WithYear(ushort year)
         {
+            //NOTE: This can be removed
+            return this;
+        }
+
+        public CardBuilder WithUnique()
+        {
+            card.Stats.SetUnique();
             return this;
         }
 
@@ -194,7 +201,120 @@ namespace HallOfBeorn.Data
                 card.Front.TextBox[TextType.Text] =
                     card.Front.TextBox[TextType.Text].AppendLine(text);
             }
+            return this;
+        }
 
+        public CardBuilder WithFlavor(string text)
+        {
+            if (!card.Front.TextBox.ContainsKey(TextType.Flavor))
+            {
+                card.Front.TextBox[TextType.Flavor] = new Content(text);
+            }
+            else
+            {
+                card.Front.TextBox[TextType.Flavor] =
+                    card.Front.TextBox[TextType.Flavor].AppendLine(text);
+            }
+            return this;
+        }
+
+        public CardBuilder WithShadow(string text)
+        {
+            if (!card.Front.TextBox.ContainsKey(TextType.Shadow))
+            {
+                card.Front.TextBox[TextType.Shadow] = new Content(text);
+            }
+            else
+            {
+                card.Front.TextBox[TextType.Shadow] =
+                    card.Front.TextBox[TextType.Shadow].AppendLine(text);
+            }
+            return this;
+        }
+
+        public CardBuilder WithTemplate(string text)
+        {
+            if (!card.Front.TextBox.ContainsKey(TextType.Template))
+            {
+                card.Front.TextBox[TextType.Template] = new Content(text);
+            }
+            else
+            {
+                card.Front.TextBox[TextType.Template] =
+                    card.Front.TextBox[TextType.Template].AppendLine(text);
+            }
+            return this;
+        }
+
+        public CardBuilder WithOppositeTextLine(string text)
+        {
+            if (!card.Back.TextBox.ContainsKey(TextType.Text))
+            {
+                card.Back.TextBox[TextType.Text] = new Content(text);
+            }
+            else
+            {
+                card.Back.TextBox[TextType.Text] =
+                    card.Back.TextBox[TextType.Text].AppendLine(text);
+            }
+            return this;
+        }
+
+        public CardBuilder WithOppositeFlavor(string text)
+        {
+            if (!card.Back.TextBox.ContainsKey(TextType.Flavor))
+            {
+                card.Back.TextBox[TextType.Flavor] = new Content(text);
+            }
+            else
+            {
+                card.Back.TextBox[TextType.Flavor] =
+                    card.Back.TextBox[TextType.Flavor].AppendLine(text);
+            }
+            return this;
+        }
+
+        public CardBuilder WithOppositeTemplate(string text)
+        {
+            if (!card.Back.TextBox.ContainsKey(TextType.Template))
+            {
+                card.Back.TextBox[TextType.Template] = new Content(text);
+            }
+            else
+            {
+                card.Back.TextBox[TextType.Template] =
+                    card.Back.TextBox[TextType.Template].AppendLine(text);
+            }
+            return this;
+        }
+
+        public CardBuilder WithAltnerateSlug(string slug)
+        {
+            card.AlternateSlug = slug;
+            return this;
+        }
+
+        public CardBuilder WithSlugSuffix(string suffix)
+        {
+            card.SlugSuffix = suffix;
+            return this;
+        }
+
+        public CardBuilder WithEasyModeQuantity(byte quantity)
+        {
+            card.EasyModeQuantity = quantity;
+            return this;
+        }
+
+        public CardBuilder WithVictoryPoints(byte victoryPoints)
+        {
+            card.Stats.SetVictoryPoints(victoryPoints);
+            return this;
+        }
+
+        public CardBuilder WithErrata()
+        {
+            card.Stats.SetErrata(0);
             return this;
         }
 

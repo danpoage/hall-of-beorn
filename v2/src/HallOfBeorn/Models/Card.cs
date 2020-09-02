@@ -23,6 +23,7 @@ namespace HallOfBeorn.Models
         public INamed CardSet { get; set; }
         public ushort Number { get; set; }
         public byte Quantity { get; set; }
+        public byte EasyModeQuantity { get; set; }
         public CardType CardType { get; set; }
         public CardSubtype CardSubtype { get; set; }
 

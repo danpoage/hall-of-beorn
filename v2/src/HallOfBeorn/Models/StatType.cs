@@ -23,5 +23,6 @@
         Siege_Points,
         Has_Horizontal_Art,
         Direction,
+        Errata,
     }
 }

@@ -38,7 +38,7 @@ namespace HallOfBeorn.Models
         }
 
         private void SetValueOrIgnore<T>(StatType type, T? option, Func<T?, byte> convert)
-            where T: struct
+            where T : struct
         {
             if (!option.HasValue)
             {
@@ -56,6 +56,16 @@ namespace HallOfBeorn.Models
         public bool IsUnique
         {
             get { return GetValue(StatType.IsUnique) == (byte)Uniqueness.Unique; }
+        }
+
+        public bool HasErrata
+        {
+            get { return GetValue(StatType.Errata).HasValue; }
+        }
+
+        public byte? VictoryPoints
+        {
+            get { return GetValue(StatType.Victory_Points); }
         }
 
         public byte? Willpower
@@ -81,6 +91,16 @@ namespace HallOfBeorn.Models
         public void SetUnique()
         {
             SetValue(StatType.IsUnique, (byte)Uniqueness.Unique);
+        }
+
+        public void SetErrata(byte? version)
+        {
+            SetValue(StatType.Errata, version ?? 0);
+        }
+
+        public void SetVictoryPoints(byte victoryPoints)
+        {
+            SetValue(StatType.Victory_Points, victoryPoints);
         }
 
         public void SetHeroStats(byte? threatCost, Sphere? sphere, byte willpower, byte attack, byte defense, byte hitPoints)

@@ -13,6 +13,12 @@ namespace HallOfBeorn.Data
             encounterSet = new EncounterSet(cardSet, name, cards);
         }
 
+        public EncounterSetBuilder(CardSet cardSet, string name, string alternateName)
+        {
+            this.cardSet = cardSet;
+            encounterSet = new EncounterSet(cardSet, name, alternateName, cards);
+        }
+
         private readonly CardSet cardSet;
         private readonly EncounterSet encounterSet;
         private readonly List<Card> cards = new List<Card>();
@@ -72,6 +78,12 @@ namespace HallOfBeorn.Data
         {
             var cardBuilder = addCardBuilder();
             return cardBuilder.EncounterSideQuest(title, questPoints);
+        }
+
+        public CardBuilder addQuest(string title, byte stageNumber, char stageLetter, byte? questPoints)
+        {
+            var cardBuilder = addCardBuilder();
+            return cardBuilder.Quest(title, stageNumber, null, stageLetter, questPoints);
         }
 
         public CardBuilder addQuest(string title, byte stageNumber, byte? oppositeStageNumber, char stageLetter, byte? questPoints)

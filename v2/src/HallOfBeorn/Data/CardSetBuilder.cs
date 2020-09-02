@@ -41,10 +41,12 @@ namespace HallOfBeorn.Data
         }
 
         public CardBuilder addAttachment(
-            string title, byte resourceCost, Sphere sphere)
+            string title, byte resourceCost, Sphere sphere, bool isUnique)
         {
             var cardBuilder = addCardBuilder();
-            return cardBuilder.Attachment(title, sphere, resourceCost);
+            return isUnique
+                ? cardBuilder.Attachment(title, sphere, resourceCost).WithUnique()
+                : cardBuilder.Attachment(title, sphere, resourceCost);
         }
 
         public CardBuilder addEvent(
@@ -75,6 +77,13 @@ namespace HallOfBeorn.Data
             return builder;
         }
         
+        public EncounterSetBuilder EncounterSet(string name, string alternateName)
+        {
+            var builder = new EncounterSetBuilder(cardSet, name, alternateName);
+            encounterSetBuilders.Add(builder);
+            return builder;
+        }
+
         public CardSet ToCardSet()
         {
             playerCards.AddRange(
