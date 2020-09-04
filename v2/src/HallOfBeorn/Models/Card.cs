@@ -11,8 +11,7 @@ namespace HallOfBeorn.Models
         }
         
         public string Slug { get; set; }
-
-        //Do we need these?
+        
         public string SlugSubtitle { get; set; }
         public string SlugSuffix { get; set; }
         public string AlternateSlug { get; set; }
@@ -35,6 +34,6 @@ namespace HallOfBeorn.Models
         public readonly List<Content> Keywords = new List<Content>();
         
         public EncounterSet EncounterSet { get; set; }
-        public readonly List<EncounterSet> IncludedEncounterSets = new List<EncounterSet>();
+        public readonly List<string> IncludedEncounterSets = new List<string>();
     }
 }

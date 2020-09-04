@@ -3,13 +3,24 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <ApplicationIcon />
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <StartupObject />
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Data\Cycles\DreamChaser\" />
+    <Folder Include="Data\Cycles\Haradrim\" />
+    <Folder Include="Data\Cycles\EredMithrin\" />
+    <Folder Include="Data\Cycles\VengeanceOfMordor\" />
+    <Folder Include="Data\Cycles\Dwarrowdelf\" />
+    <Folder Include="Data\Cycles\AgainstTheShadow\" />
+    <Folder Include="Data\Cycles\AngmarAwakened\" />
+    <Folder Include="Data\Cycles\TheRingMaker\" />
+    <Folder Include="Data\Customs\" />
+    <Folder Include="Data\Deluxes\" />
+    <Folder Include="Data\Pods\" />
+    <Folder Include="Data\Nightmares\" />
     <Folder Include="Data\Scenarios\" />
-    <Folder Include="Data\ProductGroups\" />
   </ItemGroup>
 
 </Project>

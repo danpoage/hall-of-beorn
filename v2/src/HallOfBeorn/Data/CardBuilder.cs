@@ -146,9 +146,15 @@ namespace HallOfBeorn.Data
             return this;
         }
 
-        public CardBuilder Quest(string title, byte stageNumber, byte? oppositeStageNumber, char stageLetter, byte? questPoints)
+        public CardBuilder Quest(string title, string oppositeTitle, byte stageNumber, byte? oppositeStageNumber, char stageLetter, byte? questPoints)
         {
             card.Title = new Content(title);
+
+            if (!string.IsNullOrWhiteSpace(oppositeTitle))
+            {
+                card.OppositeTitle = new Content(oppositeTitle);
+            }
+            
             card.CardType = CardType.Quest;
             card.Stats.SetQuestStats(stageNumber, oppositeStageNumber, stageLetter, questPoints);
             return this;
@@ -288,7 +294,7 @@ namespace HallOfBeorn.Data
             return this;
         }
 
-        public CardBuilder WithAltnerateSlug(string slug)
+        public CardBuilder WithAlternateSlug(string slug)
         {
             card.AlternateSlug = slug;
             return this;
@@ -315,6 +321,22 @@ namespace HallOfBeorn.Data
         public CardBuilder WithErrata()
         {
             card.Stats.SetErrata(0);
+            return this;
+        }
+
+        public CardBuilder WithBackArtist(Artist artist)
+        {
+            if (card.Back == null)
+            {
+                card.Back = new CardSide();
+            }
+            card.Back.Artists.Add(artist);
+            return this;
+        }
+
+        public CardBuilder WithIncludedEncounterSets(params string[] encounterSets)
+        {
+            card.IncludedEncounterSets.AddRange(encounterSets);
             return this;
         }
 

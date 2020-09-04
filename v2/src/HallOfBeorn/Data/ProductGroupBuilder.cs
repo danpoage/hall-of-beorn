@@ -10,18 +10,25 @@ namespace HallOfBeorn.Data
     {
         public ProductGroupBuilder(string name)
         {
-            productGroup = new ProductGroup(name, products);
+            productGroup = new ProductGroup(name, products, cycles);
         }
 
         private readonly ProductGroup productGroup;
         private readonly List<Product> products = new List<Product>();
-
+        private readonly List<Cycle> cycles = new List<Cycle>();
+        
         private readonly List<ProductBuilder> productBuilders = new List<ProductBuilder>();
+        private readonly List<CycleBuilder> cycleBuilders = new List<CycleBuilder>();
 
-        public ProductBuilder Product(string name, string code, DateTime releaseDate)
+        public void Product(ProductBuilder builder)
         {
-            var builder = new ProductBuilder(name, code, releaseDate);
             productBuilders.Add(builder);
+        }
+
+        public CycleBuilder Cycle(string name)
+        {
+            var builder = new CycleBuilder(productGroup, name);
+            cycleBuilders.Add(builder);
             return builder;
         }
 
@@ -29,6 +36,9 @@ namespace HallOfBeorn.Data
         {
             products.AddRange(
                 productBuilders.Select(builder => builder.ToProduct()));
+
+            cycles.AddRange(
+                cycleBuilders.Select(builder => builder.ToCycle()));
 
             return productGroup;
         }

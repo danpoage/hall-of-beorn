@@ -10,7 +10,12 @@ namespace HallOfBeorn.Data
     {
         public ProductBuilder(string name, string code, DateTime releaseDate)
         {
-            product = new Product(name, code, releaseDate, cardSets);
+            product = new Product(null, name, code, releaseDate, cardSets);
+        }
+
+        public ProductBuilder(string name, string code, DateTime releaseDate, Cycle cycle)
+        {
+            product = new Product(cycle, name, code, releaseDate, cardSets);
         }
 
         private readonly Product product;
@@ -52,7 +57,7 @@ namespace HallOfBeorn.Data
 
         public CardSetBuilder NightmareDeck(string name, string abbreviation, ushort number)
         {
-            return AddBuilder(name, abbreviation, number, SetType.Nightmare);
+            return AddBuilder(name, abbreviation, number, SetType.Nightmare_Expansion);
         }
 
         public Product ToProduct()

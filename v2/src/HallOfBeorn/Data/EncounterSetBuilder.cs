@@ -83,13 +83,19 @@ namespace HallOfBeorn.Data
         public CardBuilder addQuest(string title, byte stageNumber, char stageLetter, byte? questPoints)
         {
             var cardBuilder = addCardBuilder();
-            return cardBuilder.Quest(title, stageNumber, null, stageLetter, questPoints);
+            return cardBuilder.Quest(title, null, stageNumber, null, stageLetter, questPoints);
         }
 
         public CardBuilder addQuest(string title, byte stageNumber, byte? oppositeStageNumber, char stageLetter, byte? questPoints)
         {
             var cardBuilder = addCardBuilder();
-            return cardBuilder.Quest(title, stageNumber, oppositeStageNumber, stageLetter, questPoints);
+            return cardBuilder.Quest(title, null, stageNumber, oppositeStageNumber, stageLetter, questPoints);
+        }
+
+        public CardBuilder addQuest(string title, string oppositeTitle, byte stageNumber, byte? oppositeStageNumber, char stageLetter, byte? questPoints)
+        {
+            var cardBuilder = addCardBuilder();
+            return cardBuilder.Quest(title, oppositeTitle, stageNumber, oppositeStageNumber, stageLetter, questPoints);
         }
 
         public EncounterSet ToEncounterSet()

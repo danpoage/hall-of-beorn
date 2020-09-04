@@ -6,7 +6,7 @@
         Adventure_Pack,
         Deluxe_Expansion,
         Saga_Expansion,
-        Nightmare,
+        Nightmare_Expansion,
         Custom,
     }
 }

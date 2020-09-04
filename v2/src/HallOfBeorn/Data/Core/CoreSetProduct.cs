@@ -1,17 +1,16 @@
 ﻿using System;
 using HallOfBeorn.Models;
 
-namespace HallOfBeorn.Data.Products.Core
+namespace HallOfBeorn.Data.Core
 {
     public static class CoreSetProduct
     {
-        public static Product Data()
+        public static ProductBuilder Builder()
         {
-            var builder = new ProductBuilder("Core Set", "MEC01", new DateTime(2020, 4, 20));
+            var builder = new ProductBuilder(ProductNames.CoreSet, ProductCodes.CoreSet, new DateTime(2020, 4, 20));
 
-            var core = builder.Core("Core Set", "Core", 1);
-
-            //TODO: Make this less awkward
+            var core = builder.Core(CardSetNames.CoreSet, CardSetAbbreviations.CoreSet, 1);
+            
             core.addHero("Aragorn", 12, Sphere.Leadership, 2, 3, 2, 5)
                 .WithThumbnail()
                 .WithTraits("Dúnedain.", "Noble.", "Ranger.")
@@ -438,7 +437,7 @@ namespace HallOfBeorn.Data.Products.Core
                 .WithTextLine("Response: After Gandalf enters play, (choose 1): draw 3 cards, deal 4 damage to 1 enemy in play, or reduce your threat by 5.")
                 .WithInfo(73, 4, Artists.Lucas_Graciano);
 
-            var spiders = core.EncounterSet("Spiders of Mirkwood");
+            var spiders = core.EncounterSet(EncounterSets.SpidersOfMirkwood);
             spiders.addEnemy("King Spider", 20, 2, 3, 1, 3)
                 .WithTraits("Creature.", "Spider.")
                 .WithTextLine("When Revealed: Each player must choose and exhaust 1 character he controls.")
@@ -475,7 +474,7 @@ namespace HallOfBeorn.Data.Products.Core
                 .WithEasyModeQuantity(0)
                 .WithInfo(80, 2, Artists.Daryl_Mandryk);
 
-            var wilder = core.EncounterSet("Wilderlands");
+            var wilder = core.EncounterSet(EncounterSets.Wilderlands);
             wilder.addEnemy("Wolf Rider", 10, 1, 2, 0, 2)
                 .WithTraits("Goblin.", "Orc.")
                 .WithKeywords("Surge.")
@@ -521,7 +520,7 @@ namespace HallOfBeorn.Data.Products.Core
                 .WithFlavor("\"...to the east the lands are waste, and full of Sauron's creatures...\"\r\n-Haldir, The Fellowship of the Ring")
                 .WithInfo(88, 2, Artists.Santiago_Villa);
 
-            var dol = core.EncounterSet("Dol Guldur Orcs");
+            var dol = core.EncounterSet(EncounterSets.DolGuldurOrcs);
             dol.addEnemy("Dol Guldur Orcs", 10, 2, 2, 0, 3)
                 .WithTraits("Dol Guldur.", "Orc.")
                 .WithTextLine("When Revealed: The first player chooses 1 character currently committed to a quest. Deal 2 damage to that character.")
@@ -562,7 +561,7 @@ namespace HallOfBeorn.Data.Products.Core
                 .WithFlavor("\"There is one stream, I know, black and strong which crosses the path. That you should neither drink of, nor bathe in; for I have heard that it carries enchantment and a great drowsiness and forgetfulness.\"\r\n-Beorn, The Hobbit")
                 .WithInfo(95, 2, Artists.Ben_Zweifel);
 
-            var passage = core.EncounterSet("Passage Through Mirkwood");
+            var passage = core.EncounterSet(EncounterSets.PassageThroughMirkwood);
             passage.addEnemy("Forest Spider", 25, 2, 2, 1, 4)
                 .WithTraits("Creature.", "Spider.")
                 .WithTextLine("Forced: After Forest Spider engages a player, it gets 1 Attack until the end of the round.")
@@ -588,7 +587,7 @@ namespace HallOfBeorn.Data.Products.Core
                 .WithFlavor("The path itself was narrow and wound in and out among the trunks. Soon the light in the gate was like a little bright hole far behind, and the quiet was so deep that their feet seemed to thump along while the trees leaned over them and listened.\r\n-The Hobbit")
                 .WithInfo(100, 2, Artists.Ben_Zweifel);
 
-            var escape = core.EncounterSet("Escape from Dol Guldur");
+            var escape = core.EncounterSet(EncounterSets.EscapeFromDolGuldur);
             escape.addEnemy("Dungeon Jailor", 38, 1, 2, 3, 5)
                 .WithTraits("Dol Guldur.", "Orc.")
                 .WithTextLine("Forced: If Dungeon Jailor is in the staging area after the players have just quested unsuccessfully, shuffle 1 unclaimed objective card from the staging area back into the encounter deck.")
@@ -646,7 +645,7 @@ namespace HallOfBeorn.Data.Products.Core
                 .WithTextLine("Action: Raise your threat by 2 to claim this objective when it is free of encounters. When claimed, attach Shadow Key to a hero you control. (Counts as an attachment. If detached, return Shadow Key to the staging area.)Forced: At the end of each round, attached hero suffers 1 damage.")
                 .WithInfo(110, 1, Artists.Nicholas_Cloister);
 
-            var journey = core.EncounterSet("Journey Along the Anduin", "Journey Down the Anduin");
+            var journey = core.EncounterSet(EncounterSets.JourneyAlongTheAnduin, EncounterSets.JourneyDownTheAnduin);
             journey.addEnemy("Misty Mountain Goblins", 15, 2, 2, 1, 3)
                 .WithTraits("Goblin.", "Orc.")
                 .WithTextLine("Forced: After Misty Mountain Goblins attacks, remove 1 progress token from the current quest.")
@@ -670,8 +669,8 @@ namespace HallOfBeorn.Data.Products.Core
                 .WithEasyModeQuantity(1)
                 .WithInfo(114, 3, Artists.Ben_Zweifel);
 
-            var reach = core.EncounterSet("Sauron's Reach");
-            reach.addEnemy("Eastern Crows", 30, 1, 1, 0, 1)
+            var reach = core.EncounterSet(EncounterSets.SauronsReach);
+            reach.addEnemy("Eastern Crows", 30, 1, 1, 0, 1) 
                 .WithTraits("Creature.")
                 .WithKeywords("Surge.")
                 .WithTextLine("Surge.")
@@ -694,39 +693,37 @@ namespace HallOfBeorn.Data.Products.Core
                 .WithInfo(118, 2, Artists.David_Lecossu);
 
             passage.addQuest("Flies and Spiders", 1, 'A', 8)
-                //.WithIncludedEncounterSets(EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood)
+                .WithIncludedEncounterSets(EncounterSets.DolGuldurOrcs, EncounterSets.SpidersOfMirkwood)
                 .WithTextLine("Setup: Search the encounter deck for 1 copy of the ~Forest ~Spider and 1 copy of the Old ~Forest ~Road, and add them to the staging area. Then, shuffle the encounter deck.")
                 .WithFlavor("You are traveling through Mirkwood forest, carrying an urgent message from King Thanduil to the Lady Galadriel of Lorien. As you move along the dark trail, the spiders gather around you...")
                 .WithOppositeFlavor("The nastiest things they saw were the cobwebs; dark dense cobwebs, with threads extradionairly thick, often stretched from tree to tree, or tangled in the lower branches on either side of them. There were none stretched across the path, but whether because some magic kept it clear, or for what other reasons they could not guess. - The Hobbit")
                 .WithInfo(119, 1, Artists.Ben_Zweifel);
             passage.addQuest("A Fork in the Road", 2, 'A', 2)
-                //.WithIncludedEncounterSets(EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood)
+                .WithIncludedEncounterSets(EncounterSets.DolGuldurOrcs, EncounterSets.SpidersOfMirkwood)
                 .WithFlavor("As you move through Mirkwood, hounded by spiders, the forest path forks before you...")
                 .WithOppositeTextLine("Forced: When you defeat this stage, proceed to one of the 2 \"A Chosen ~Path\" stages, at random.")
                 .WithOppositeFlavor("Unsure of what lies ahead but spurred by the urgency of your message, you choose a path and proceed... ")
                 .WithInfo(120, 1, Artists.Ben_Zweifel);
-            passage.addQuest("A Chosen Path", 3, 'A', 0)
-                //.WithIncludedEncounterSets(EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood)
+            passage.addQuest("A Chosen Path", "Don't Leave the Path", 3, null, 'A', 0)
+                .WithIncludedEncounterSets(EncounterSets.DolGuldurOrcs, EncounterSets.SpidersOfMirkwood)
                 .WithFlavor("The trail winds into one of the darkest, most tangled parts of the forest...\r\n\r\nYou sense that foul, dark presence is hunting you, and you move quickly in an attempt to avoid its evil.")
                 .WithOppositeTextLine("When Revealed: Each player must search the encounter deck and discard pile for 1 Spider card of his choice, and add it to the staging area.")
                 .WithOppositeTextLine("The players must find and defeat Ungoliant's Spawn to win this game.")
                 .WithOppositeFlavor("The shadows grow darker, and you realize that a foul presence is aiming to draw you from the path. You must defeat it to pass this way.")
                 .WithSlugSuffix("Don't Leave the Path")
-                .WithOppositeTitle("Don't Leave the Path")
                 .WithBackArtist(Artists.Ben_Zweifel)
                 .WithInfo(121, 1, Artists.Yoann_Boissonnet);
-            passage.addQuest("A Chosen Path", 3, 'A', 10)
-                //.WithIncludedEncounterSets(EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood)
+            passage.addQuest("A Chosen Path", "Beorn's Path", 3, null, 'A', 10)
+                .WithIncludedEncounterSets(EncounterSets.DolGuldurOrcs, EncounterSets.SpidersOfMirkwood)
                 .WithFlavor("The trail winds into one of the darkest, most tangled parts of the forest...\r\n\r\nYou sense that foul, dark presence is hunting you, and you move quickly in an attempt to avoid its evil.")
                 .WithOppositeTextLine("Players cannot defeat this stage while Ungoliant's Spawn is in play. If players defeat this stage, they have won the game.")
                 .WithOppositeFlavor("You attempt to follow a secret, hidden trail to avoid the enemy...")
                 .WithSlugSuffix("Beorn's Path")
-                .WithOppositeTitle("Beorn's Path")
                 .WithBackArtist(Artists.David_Lecossu)
                 .WithInfo(122, 1, Artists.Yoann_Boissonnet);
 
             escape.addQuest("The Necromancer's Tower", 1, 'A', 9)
-                //.WithIncludedEncounterSets(EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood)
+                .WithIncludedEncounterSets(EncounterSets.DolGuldurOrcs, EncounterSets.SpidersOfMirkwood)
                 .WithTextLine("Setup: Search the encounter deck for the 3 objective cards, reveal and place them in the staging area. Also, place the Nazgul of Dol Guldur face up but out of play, alongside the quest deck. Then, shuffle the encounter deck, and attach 1 encounter to each objective card.")
                 .WithFlavor("The Lady Galadriel of Lorien has asked you to investigate the area in the vicinity of Dol Guldar. While doing so, one of your allies was ambushed by Orcs, captured, and is now held in a dungeon cell...")
                 .WithOppositeTextLine("When Revealed: Randomly select 1 hero card (among all the heroes controlled by the players) and turn it facedown. The hero is now considered a \"prisoner\", cannot be used, cannot be damaged, and does not collect resources, until it is \"rescued\" (as instructed by card effects) later in this quest.")
@@ -735,14 +732,14 @@ namespace HallOfBeorn.Data.Products.Core
                 .WithErrata()
                 .WithInfo(123, 1, Artists.Ben_Zweifel);
             escape.addQuest("Through the Caverns", 2, 'A', 15)
-                //.WithIncludedEncounterSets(EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood)
+                .WithIncludedEncounterSets(EncounterSets.DolGuldurOrcs, EncounterSets.SpidersOfMirkwood)
                 .WithFlavor("Finding a hidden entrance to the dungeons of Dol Guldur at last, you attempt to make your way through the caverns beneath the hill, searching for your imprisoned friend. The denizens of this labyrinth stand in your way, while the jailors protect the prisoner.")
                 .WithOppositeTextLine("Response: After placing any number of progress tokens on this card, flip the \"prisoner\" hero card face-up, and place 1 damage toke on it. The hero has been \"rescued\" and may now be used by its controller.")
                 .WithOppositeTextLine("The players, as a group, cannot play more than 1 ally card each round.")
                 .WithOppositeTextLine("Players cannot advance to the next stage of the quest unless they have rescued the prisoner and have all 3 \"Escape from Dol Guldur\" objective cards.")
                 .WithInfo(124, 1, Artists.Kaya);
             escape.addQuest("Out of the Dungeons", 3, 'A', 7)
-                //.WithIncludedEncounterSets(EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood)
+                .WithIncludedEncounterSets(EncounterSets.DolGuldurOrcs, EncounterSets.SpidersOfMirkwood)
                 .WithFlavor("Following a thread of sunlight, you discover a cavern opening leading out through the side of the hill. Stationed outside the cave-mouth, however, is a large group of Orcs.")
                 .WithOppositeTextLine("Forced: At the beginning of each quest phase, each player places the top card of his deck, face down in front of him as if it just engaged him from the staging area. These cards are called \"Orc Guard\" and act as enemies with: 1 hit point, 1 Attack, and 1 Defense.")
                 .WithOppositeTextLine("Players cannot defeat this stage while Nazgul of Dol Guldur is in play. If this stage is defeated and Nazgul of Dol Guldur is not in play, the players have won the game.")
@@ -750,7 +747,7 @@ namespace HallOfBeorn.Data.Products.Core
                 .WithInfo(125, 1, Artists.Kaya);
 
             journey.addQuest("To the River...", 1, 'A', 8)
-                //.WithIncludedEncounterSets(EncounterSet.DolGuldurOrcs, EncounterSet.SauronsReach, EncounterSet.Wilderlands)
+                .WithIncludedEncounterSets(EncounterSets.DolGuldurOrcs, EncounterSets.SauronsReach, EncounterSets.Wilderlands)
                 .WithTextLine("Setup: Each player reveals 1 card from the top of the encounter deck, and adds it to the staging area.")
                 .WithFlavor("Emerging from Mirkwood Forest with an urgent message from Lady Galadriel, you must make your way south along the Anduin River in order to reach the forst of Lórien. As you leave the forest behind, you notice that you are being pursued, and thus quicken your pace...")
                 .WithOppositeTextLine("When Revealed: Search the encounter deck for 1 Hill Troll is one is not already in play, and place it in the staging area. Shuffle the encounter deck.")
@@ -758,20 +755,20 @@ namespace HallOfBeorn.Data.Products.Core
                 .WithOppositeFlavor("As you approach the location of a small raft stashed on the riverbank, a fearsome Hill Troll emerges from behind a grouping of rocks, and attacks!")
                 .WithInfo(126, 1, Artists.Ben_Zweifel);
             journey.addQuest("Anduin Passage", 2, 'A', 16)
-                //.WithIncludedEncounterSets(EncounterSet.DolGuldurOrcs, EncounterSet.SauronsReach, EncounterSet.Wilderlands)
+                .WithIncludedEncounterSets(EncounterSets.DolGuldurOrcs, EncounterSets.SauronsReach, EncounterSets.Wilderlands)
                 .WithTextLine("Reveal 1 additional card from the encounter deck each quest phase. Do not make engagement checks during the encounter phase. (Each player may still optionally engage 1 enemy each encounter phase.)")
                 .WithFlavor("After defeating the Troll, you are able to board the raft and embark upon a river voyage. As you depart, your enemies pursue, harassing the small vessel as you attempt to navigate the river...")
                 .WithOppositeFlavor("As your enemies harass the raft, it is difficult to maintain balance and effectively fight them off.")
                 .WithInfo(127, 1, Artists.Ben_Zweifel);
             journey.addQuest("Ambush on the Shore", 3, 'A', 0)
-                //.WithIncludedEncounterSets(EncounterSet.DolGuldurOrcs, EncounterSet.SauronsReach, EncounterSet.Wilderlands)
+                .WithIncludedEncounterSets(EncounterSets.DolGuldurOrcs, EncounterSets.SauronsReach, EncounterSets.Wilderlands)
                 .WithTextLine("When Revealed: Reveal 2 encounter cards per player, and add them to the staging area.")
                 .WithTextLine("Skip the staging step of the quest phase for the remainder of the game.")
                 .WithTextLine("Once there are no enemies in play, the players have won the game.")
                 .WithFlavor("The ongoing harassment from your enemies has forced your raft to the shore, and you must now confront their ambush head on. If you survive this attack, your path to the Golden Wood should be open before you...")
                 .WithInfo(128, 1, Artists.David_A_Nash);
             
-            return builder.ToProduct();
+            return builder;
         }
     }
 }
