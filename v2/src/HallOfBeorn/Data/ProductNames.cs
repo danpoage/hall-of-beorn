@@ -55,7 +55,7 @@ namespace HallOfBeorn.Data
         public const string TheCityOfCorsairs = "The City of Corsairs";
 
         public const string TheSandsOfHarad = "The Sands of Harad";
-        public const string TheMumakil = "";
+        public const string TheMumakil = "The Mûmakil";
         public const string RaceAcrossHarad = "Race Across Harad";
         public const string BeneathTheSands = "Beneath the Sands";
         public const string TheBlackSerpent = "The Black Serpent";
@@ -83,5 +83,9 @@ namespace HallOfBeorn.Data
 
         public const string TheBlackRiders = "The Black Riders";
         public const string TheRoadDarkens = "The Road Darkens";
+        public const string TheTreasonOfSaruman = "The Treason of Saruman";
+        public const string TheLandOfShadow = "The Land of Shadow";
+        public const string TheFlameOfTheWest = "The Flame of the West";
+        public const string TheMountainOfFire = "The Mountain of Fire";
     }
 }
