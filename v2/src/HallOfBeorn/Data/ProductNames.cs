@@ -87,5 +87,25 @@ namespace HallOfBeorn.Data
         public const string TheLandOfShadow = "The Land of Shadow";
         public const string TheFlameOfTheWest = "The Flame of the West";
         public const string TheMountainOfFire = "The Mountain of Fire";
+
+        public const string TwoPlayerLimitedEditionStarter = "Two-Player Limited Edition Starter";
+
+        public const string TheMassingAtOsgiliath = "The Massing at Osgiliath";
+        public const string TheBattleOfLakeTown = "The Battle of Lake-town";
+        public const string TheStoneOfErech = "The Stone of Erech";
+        public const string TheOldForest = "The Old Forest";
+        public const string FogOnTheBarrowDowns = "Fog on the Barrow-downs";
+        public const string TheRuinsOfBelegost = "The Ruins of Belegost";
+        public const string MurderAtThePrancingPony = "Murder at the Prancing Pony";
+        public const string TheSiegeOfAnnuminas = "The Siege of Annúminas";
+        public const string AttackOnDolGuldur = "Attack on Dol Guldur";
+        public const string TheWizardsQuest = "The Wizard's Quest";
+        public const string TheWoodlandRealm = "The Woodland Realm";
+        public const string TheMinesOfMoria = "The Mines of Moria";
+        public const string TheMinesOfMoriaPreorderPromotion = "The Mines of Moria Preorder Promotion";
+        public const string EscapeFromKhazadDum = "Escape from Khazad-dûm";
+        public const string EscapeFromKhazadDumPreorderPromotion = "Escape from Khazad-dûm Preorder Promotion";
+
+
     }
 }
