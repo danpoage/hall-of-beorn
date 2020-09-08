@@ -16,7 +16,7 @@ namespace HallOfBeorn.Data
         public EncounterSetBuilder(CardSet cardSet, string name, string alternateName)
         {
             this.cardSet = cardSet;
-            encounterSet = new EncounterSet(cardSet, name, alternateName, cards);
+            encounterSet = new EncounterSet(cardSet, name, cards, alternateName);
         }
 
         private readonly CardSet cardSet;

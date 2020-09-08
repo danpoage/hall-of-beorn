@@ -35,5 +35,6 @@ namespace HallOfBeorn.Models
         
         public EncounterSet EncounterSet { get; set; }
         public readonly List<string> IncludedEncounterSets = new List<string>();
+        public readonly Dictionary<string, byte> NightmareQuantityMap = new Dictionary<string, byte>();
     }
 }

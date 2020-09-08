@@ -18,10 +18,9 @@ namespace HallOfBeorn.Models
         private readonly List<CardSet> cardSets;
 
         public Cycle Cycle { get; }
-        
         public Content Name { get; }
         public string Code { get; }
         public DateTime ReleaseDate { get; }
-        public IReadOnlyList<CardSet> CardSets => cardSets;
+        public IReadOnlyCollection<CardSet> CardSets => cardSets;
     }
 }

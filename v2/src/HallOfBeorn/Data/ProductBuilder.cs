@@ -22,7 +22,7 @@ namespace HallOfBeorn.Data
         private readonly List<CardSet> cardSets = new List<CardSet>();
         
         private readonly List<CardSetBuilder> cardSetBuilders = new List<CardSetBuilder>();
-
+        
         private CardSetBuilder AddBuilder(string name, string abbreviation, ushort number, SetType setType)
         {
             var builder = new CardSetBuilder(product, name, abbreviation, number, setType);
@@ -59,12 +59,12 @@ namespace HallOfBeorn.Data
         {
             return AddBuilder(name, abbreviation, number, SetType.Nightmare_Expansion);
         }
-
+        
         public Product ToProduct()
         {
             cardSets.AddRange(
                 cardSetBuilders.Select(builder => builder.ToCardSet()));
-
+            
             return product;
         }
     }

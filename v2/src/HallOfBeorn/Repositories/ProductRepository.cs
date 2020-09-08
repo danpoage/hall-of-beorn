@@ -7,7 +7,7 @@ namespace HallOfBeorn.Repositories
 {
     public class ProductRepository
     {
-        public IEnumerable<Product> AllProducts()
+        public IReadOnlyList<Product> AllProducts()
         {
             var products = new List<Product>();
 

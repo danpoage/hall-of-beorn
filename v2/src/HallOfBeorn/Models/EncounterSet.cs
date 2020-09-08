@@ -6,25 +6,20 @@ namespace HallOfBeorn.Models
         : INamed
     {
         public EncounterSet(CardSet cardSet, string name, List<Card> cards)
+            : this(cardSet, name, cards, null)
         {
-            //Product = cardSet.Product;
-            CardSet = cardSet;
-            Name = new Content(name);
-            this.cards = cards;
         }
 
-        public EncounterSet(CardSet cardSet, string name, string alternateName, List<Card> cards)
+        public EncounterSet(CardSet cardSet, string name, List<Card> cards, string alternateName)
         {
             CardSet = cardSet;
             Name = new Content(name);
-            AlternateName = new Content(alternateName);
             this.cards = cards;
-
+            AlternateName = alternateName != null ? new Content(alternateName) : null;
         }
 
         private readonly List<Card> cards;
         
-        //public INamed Product { get; }
         public INamed CardSet { get; }
         public Content Name { get; }
         public Content AlternateName { get; }
