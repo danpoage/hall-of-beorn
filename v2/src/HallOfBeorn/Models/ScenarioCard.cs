@@ -14,12 +14,12 @@ namespace HallOfBeorn.Models
             NormalQuantity = card.Quantity;
         }
         
-        public ScenarioCard(Card card, Card setup)
+        public ScenarioCard(Card card, Card nightmareSetup)
         {
             Title = card.Title;
             Slug = card.Slug;
-            NightmareQuantity = setup.NightmareQuantityMap.ContainsKey(card.Slug)
-                ? setup.NightmareQuantityMap[card.Slug]
+            NightmareQuantity = nightmareSetup.NightmareQuantityMap.ContainsKey(card.Slug)
+                ? nightmareSetup.NightmareQuantityMap[card.Slug]
                 : card.Quantity;
         }
 

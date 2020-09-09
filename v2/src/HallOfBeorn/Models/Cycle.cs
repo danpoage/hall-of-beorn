@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace HallOfBeorn.Models
 {
@@ -10,6 +11,7 @@ namespace HallOfBeorn.Models
         {
             ProductGroup = productGroup;
             Name = new Content(name);
+            Parent = productGroup.Products.First();
             this.adventurePacks = adventurePacks;
         }
 
@@ -17,6 +19,7 @@ namespace HallOfBeorn.Models
 
         public ProductGroup ProductGroup { get; }
         public Content Name { get; }
+        public Product Parent { get; }
         public IReadOnlyList<Product> AdventurePacks => adventurePacks;
     }
 }

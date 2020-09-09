@@ -103,89 +103,89 @@ namespace HallOfBeorn.Data
                 EscapeFromKhazadDum,
                 EscapeFromKhazadDumPreorderPromotion,
 
-                PassageThroughMirkwoodNightmareDeck,
-                JourneyAlongTheAnduinNightmareDeck,
-                EscapeFromDolGuldurNightmareDeck,
-                TheHuntForGollumNightmareDeck,
-                ConflictAtTheCarrockNightmareDeck,
-                AJourneyToRhosgobelNightmareDeck,
-                TheHillsOfTheEmynMuilNightmareDeck,
-                TheDeadMarshesNightmareDeck,
-                ReturnToMirkwoodNightmareDeck,
+                PassageThroughMirkwoodNightmare,
+                JourneyAlongTheAnduinNightmare,
+                EscapeFromDolGuldurNightmare,
+                TheHuntForGollumNightmare,
+                ConflictAtTheCarrockNightmare,
+                AJourneyToRhosgobelNightmare,
+                TheHillsOfTheEmynMuilNightmare,
+                TheDeadMarshesNightmare,
+                ReturnToMirkwoodNightmare,
 
-                IntoThePitNightmareDeck,
-                TheSeventhLevelNightmareDeck,
-                FlightFromMoriaNightmareDeck,
-                TheRedhornGateNightmareDeck,
-                RoadToRivendellNightmareDeck,
-                TheWatcherInTheWaterNightmareDeck,
-                TheLongDarkNightmareDeck,
-                FoundationsOfStoneNightmareDeck,
-                ShadowAndFlameNightmareDeck,
+                IntoThePitNightmare,
+                TheSeventhLevelNightmare,
+                FlightFromMoriaNightmare,
+                TheRedhornGateNightmare,
+                RoadToRivendellNightmare,
+                TheWatcherInTheWaterNightmare,
+                TheLongDarkNightmare,
+                FoundationsOfStoneNightmare,
+                ShadowAndFlameNightmare,
 
-                PerilInPelargirNightmareDeck,
-                IntoIthilienNightmareDeck,
-                TheSiegeOfCairAndrosNightmareDeck,
-                TheStewardsFearNightmareDeck,
-                TheDruadanForestNightmareDeck,
-                EncounterAtAmonDinNightmareDeck,
-                AssaultOnOsgiliathNightmareDeck,
-                TheBloodOfGondorNightmareDeck,
-                TheMorgulValeNightmareDeck,
+                PerilInPelargirNightmare,
+                IntoIthilienNightmare,
+                TheSiegeOfCairAndrosNightmare,
+                TheStewardsFearNightmare,
+                TheDruadanForestNightmare,
+                EncounterAtAmonDinNightmare,
+                AssaultOnOsgiliathNightmare,
+                TheBloodOfGondorNightmare,
+                TheMorgulValeNightmare,
 
-                TheFordsOfIsenNightmareDeck,
-                ToCatchAnOrcNightmareDeck,
-                IntoFangornNightmareDeck,
-                TheDunlandTrapNightmareDeck,
-                TheThreeTialsNightmareDeck,
-                TroubleInTharbadNightmareDeck,
-                TheNinInEilphNightmareDeck,
-                CelebrimborsSecretNightmareDeck,
-                TheAntleredCrownNightmareDeck,
+                TheFordsOfIsenNightmare,
+                ToCatchAnOrcNightmare,
+                IntoFangornNightmare,
+                TheDunlandTrapNightmare,
+                TheThreeTialsNightmare,
+                TroubleInTharbadNightmare,
+                TheNinInEilphNightmare,
+                CelebrimborsSecretNightmare,
+                TheAntleredCrownNightmare,
 
-                IntrudersInChetwoodNightmareDeck,
-                TheWeatherHillsNightmareDeck,
-                DeadmansDikeNightmareDeck,
-                TheWastesOfEriadorNightmareDeck,
-                EscapeFromMountGramNightmareDeck,
-                AcrossTheEttenmoorsNightmareDeck,
-                TheTreacheryOfRhudaurNightmareDeck,
-                TheBattleOfCarnDumNightmareDeck,
-                TheDreadRealmNightmareDeck,
+                IntrudersInChetwoodNightmare,
+                TheWeatherHillsNightmare,
+                DeadmansDikeNightmare,
+                TheWastesOfEriadorNightmare,
+                EscapeFromMountGramNightmare,
+                AcrossTheEttenmoorsNightmare,
+                TheTreacheryOfRhudaurNightmare,
+                TheBattleOfCarnDumNightmare,
+                TheDreadRealmNightmare,
 
-                VoyageAcrossBelegaerNightmareDeck,
-                TheFateOfNumenorNightmareDeck,
-                RaidOnTheGreyHavensNightmareDeck,
-                FlightOfTheStormcallerNightmareDeck,
-                TheThingInTheDepthsNightmareDeck,
-                TempleOfTheDeceivedNightmareDeck,
-                TheDrownedRuinesNightmareDeck,
-                AStormOnCobasHavenNightmareDeck,
-                TheCityOfCorsairsNightmareDeck,
+                VoyageAcrossBelegaerNightmare,
+                TheFateOfNumenorNightmare,
+                RaidOnTheGreyHavensNightmare,
+                FlightOfTheStormcallerNightmare,
+                TheThingInTheDepthsNightmare,
+                TempleOfTheDeceivedNightmare,
+                TheDrownedRuinesNightmare,
+                AStormOnCobasHavenNightmare,
+                TheCityOfCorsairsNightmare,
 
-                WeMustAwayEreBreakOfDayNightmareDeck,
-                OverTheMistyMountainsGrimNightmareDeck,
-                DungeonsDeepAndCavernsDimNightmareDeck,
+                WeMustAwayEreBreakOfDayNightmare,
+                OverTheMistyMountainsGrimNightmare,
+                DungeonsDeepAndCavernsDimNightmare,
 
-                FliesAndSpidersNightmareDeck,
-                TheLonelyMountainNightmareDeck,
-                TheBattleOfFiveArmiesNightmareDeck,
+                FliesAndSpidersNightmare,
+                TheLonelyMountainNightmare,
+                TheBattleOfFiveArmiesNightmare,
                 
-                AShadowOfThePastNightmareDeck,
-                AKnifeInTheDarkNightmareDeck,
-                FlightToTheFordNightmareDeck,
+                AShadowOfThePastNightmare,
+                AKnifeInTheDarkNightmare,
+                FlightToTheFordNightmare,
                 
-                TheRingGoesSouthNightmareDeck,
-                JourneyInTheDarkNightmareDeck,
-                BreakingTheFellowshipNightmareDeck,
+                TheRingGoesSouthNightmare,
+                JourneyInTheDarkNightmare,
+                BreakingTheFellowshipNightmare,
 
-                TheUrukHaiNightmareDeck,
-                HelmsDeepNightmareDeck,
-                TheRoadToIsengardNightmareDeck,
+                TheUrukHaiNightmare,
+                HelmsDeepNightmare,
+                TheRoadToIsengardNightmare,
 
-                ThePassageOfTheMarshesNightmareDeck,
-                JourneyInTheDarkNightmareDeck,
-                ShelobLairNightmareDeck,
+                ThePassageOfTheMarshesNightmare,
+                JourneyInTheDarkNightmare,
+                ShelobLairNightmare,
 
                 FirstAge,
                 TrialUponTheMarches,
@@ -299,88 +299,88 @@ namespace HallOfBeorn.Data
         public const string EscapeFromKhazadDum = "Escape from Khazad-dûm";
         public const string EscapeFromKhazadDumPreorderPromotion = "Escape from Khazad-dûm Preorder Promotion";
 
-        public const string PassageThroughMirkwoodNightmareDeck = "Passage Through Mirkwood Nightmare Deck";
-        public const string JourneyAlongTheAnduinNightmareDeck = "Journey Along the AnduinNightmare Deck";
-        public const string EscapeFromDolGuldurNightmareDeck = "Escape from Dol Guldur Nightmare Deck";
-        public const string TheHuntForGollumNightmareDeck = "The Hunt for Gollum Nightmare Deck";
-        public const string ConflictAtTheCarrockNightmareDeck = "Conflict at the Carrock Nightmare Deck";
-        public const string AJourneyToRhosgobelNightmareDeck = "A Journey to Rhosgobel Nightmare Deck";
-        public const string TheHillsOfTheEmynMuilNightmareDeck = "The Hills of Emyn Muil Nightmare Deck";
-        public const string TheDeadMarshesNightmareDeck = "The Dead Marshes Nightmare Deck";
-        public const string ReturnToMirkwoodNightmareDeck = "Return to Mirkwood Nightmare Deck";
+        public const string PassageThroughMirkwoodNightmare = "Passage Through Mirkwood Nightmare";
+        public const string JourneyAlongTheAnduinNightmare = "Journey Along the AnduinNightmare";
+        public const string EscapeFromDolGuldurNightmare = "Escape from Dol Guldur Nightmare";
+        public const string TheHuntForGollumNightmare = "The Hunt for Gollum Nightmare";
+        public const string ConflictAtTheCarrockNightmare = "Conflict at the Carrock Nightmare";
+        public const string AJourneyToRhosgobelNightmare = "A Journey to Rhosgobel Nightmare";
+        public const string TheHillsOfTheEmynMuilNightmare = "The Hills of Emyn Muil Nightmare";
+        public const string TheDeadMarshesNightmare = "The Dead Marshes Nightmare";
+        public const string ReturnToMirkwoodNightmare = "Return to Mirkwood Nightmare";
 
-        public const string IntoThePitNightmareDeck = "Into the Pit Nightmare Deck";
-        public const string TheSeventhLevelNightmareDeck = "The Seventh Level Nightmare Deck";
-        public const string FlightFromMoriaNightmareDeck = "Flight from Moria Nightmare Decks";
-        public const string TheRedhornGateNightmareDeck = "The Redhorn Gate Nightmare Deck";
-        public const string RoadToRivendellNightmareDeck = "Road to Rivendell Nightmare Deck";
-        public const string TheWatcherInTheWaterNightmareDeck = "The Watcher in the Water Nightmare Deck";
-        public const string TheLongDarkNightmareDeck = "The Long Dark Nightmare Deck";
-        public const string FoundationsOfStoneNightmareDeck = "Foundations of Stone Nightmare Deck";
-        public const string ShadowAndFlameNightmareDeck = "Shadow and Flame Nightmare Deck";
+        public const string IntoThePitNightmare = "Into the Pit Nightmare";
+        public const string TheSeventhLevelNightmare = "The Seventh Level Nightmare";
+        public const string FlightFromMoriaNightmare = "Flight from Moria Nightmare Decks";
+        public const string TheRedhornGateNightmare = "The Redhorn Gate Nightmare";
+        public const string RoadToRivendellNightmare = "Road to Rivendell Nightmare";
+        public const string TheWatcherInTheWaterNightmare = "The Watcher in the Water Nightmare";
+        public const string TheLongDarkNightmare = "The Long Dark Nightmare";
+        public const string FoundationsOfStoneNightmare = "Foundations of Stone Nightmare";
+        public const string ShadowAndFlameNightmare = "Shadow and Flame Nightmare";
 
-        public const string PerilInPelargirNightmareDeck = "Peril in Pelargir Nightmare Deck";
-        public const string IntoIthilienNightmareDeck = "Into Ithilien Nightmare Deck";
-        public const string TheSiegeOfCairAndrosNightmareDeck = "The Siege of Cair Andros Nightmare Deck";
-        public const string TheStewardsFearNightmareDeck = "The Steward's Fear Nightmare Deck";
-        public const string TheDruadanForestNightmareDeck = "The Drúadan Forest Nightmare Deck";
-        public const string EncounterAtAmonDinNightmareDeck = "Encounter at Amon Dîn Nightmare Deck";
-        public const string AssaultOnOsgiliathNightmareDeck = "Assault on Osgiliath Nightmare Deck";
-        public const string TheBloodOfGondorNightmareDeck = "The Blood of Gondor Nightmare Deck";
-        public const string TheMorgulValeNightmareDeck = "The Morgul Vale Nightmare Deck";
+        public const string PerilInPelargirNightmare = "Peril in Pelargir Nightmare";
+        public const string IntoIthilienNightmare = "Into Ithilien Nightmare";
+        public const string TheSiegeOfCairAndrosNightmare = "The Siege of Cair Andros Nightmare";
+        public const string TheStewardsFearNightmare = "The Steward's Fear Nightmare";
+        public const string TheDruadanForestNightmare = "The Drúadan Forest Nightmare";
+        public const string EncounterAtAmonDinNightmare = "Encounter at Amon Dîn Nightmare";
+        public const string AssaultOnOsgiliathNightmare = "Assault on Osgiliath Nightmare";
+        public const string TheBloodOfGondorNightmare = "The Blood of Gondor Nightmare";
+        public const string TheMorgulValeNightmare = "The Morgul Vale Nightmare";
 
-        public const string TheFordsOfIsenNightmareDeck = "The Fords of Isen Nightmare Deck";
-        public const string ToCatchAnOrcNightmareDeck = "To Catch an Orc Nightmare Deck";
-        public const string IntoFangornNightmareDeck = "Into Fangorn Nightmare Deck";
-        public const string TheDunlandTrapNightmareDeck = "The Dunland Trap Nightmare Deck";
-        public const string TheThreeTialsNightmareDeck = "The Three Trials Nightmare Deck";
-        public const string TroubleInTharbadNightmareDeck = "Trouble in Tharbad Nightmare Deck";
-        public const string TheNinInEilphNightmareDeck = "The Nîn-in-Eilph Nightmare Deck";
-        public const string CelebrimborsSecretNightmareDeck = "Celebrimbor's Secret Nightmare Deck";
-        public const string TheAntleredCrownNightmareDeck = "The Antlered Crown Nightmare Deck";
+        public const string TheFordsOfIsenNightmare = "The Fords of Isen Nightmare";
+        public const string ToCatchAnOrcNightmare = "To Catch an Orc Nightmare";
+        public const string IntoFangornNightmare = "Into Fangorn Nightmare";
+        public const string TheDunlandTrapNightmare = "The Dunland Trap Nightmare";
+        public const string TheThreeTialsNightmare = "The Three Trials Nightmare";
+        public const string TroubleInTharbadNightmare = "Trouble in Tharbad Nightmare";
+        public const string TheNinInEilphNightmare = "The Nîn-in-Eilph Nightmare";
+        public const string CelebrimborsSecretNightmare = "Celebrimbor's Secret Nightmare";
+        public const string TheAntleredCrownNightmare = "The Antlered Crown Nightmare";
 
-        public const string IntrudersInChetwoodNightmareDeck = "Intruders in Chetwood Nightmare Deck";
-        public const string TheWeatherHillsNightmareDeck = "The Weater Hills Nightmare Deck";
-        public const string DeadmansDikeNightmareDeck = "Deadman's Dike Nightmare Deck";
-        public const string TheWastesOfEriadorNightmareDeck = "The Wastes of Eriador Nightmare Deck";
-        public const string EscapeFromMountGramNightmareDeck = "Escape from Mount Gram Nightmare Deck";
-        public const string AcrossTheEttenmoorsNightmareDeck = "Across the Ettenmoors Nightmare Deck";
-        public const string TheTreacheryOfRhudaurNightmareDeck = "The Treachery of Rhudaur Nightmare Deck";
-        public const string TheBattleOfCarnDumNightmareDeck = "The Battle of Carn Dûm Nightmare Deck";
-        public const string TheDreadRealmNightmareDeck = "The Dread Realm Nightmare Deck";
+        public const string IntrudersInChetwoodNightmare = "Intruders in Chetwood Nightmare";
+        public const string TheWeatherHillsNightmare = "The Weater Hills Nightmare";
+        public const string DeadmansDikeNightmare = "Deadman's Dike Nightmare";
+        public const string TheWastesOfEriadorNightmare = "The Wastes of Eriador Nightmare";
+        public const string EscapeFromMountGramNightmare = "Escape from Mount Gram Nightmare";
+        public const string AcrossTheEttenmoorsNightmare = "Across the Ettenmoors Nightmare";
+        public const string TheTreacheryOfRhudaurNightmare = "The Treachery of Rhudaur Nightmare";
+        public const string TheBattleOfCarnDumNightmare = "The Battle of Carn Dûm Nightmare";
+        public const string TheDreadRealmNightmare = "The Dread Realm Nightmare";
 
-        public const string VoyageAcrossBelegaerNightmareDeck = "Voyage Across Belegaer Nightmare Deck";
-        public const string TheFateOfNumenorNightmareDeck = "The Fate of Númenor Nightmare Deck";
-        public const string RaidOnTheGreyHavensNightmareDeck = "Raid on the Grey Havens Nightmare Deck";
-        public const string FlightOfTheStormcallerNightmareDeck = "Flight of the Stormcaller Nightmare Deck";
-        public const string TheThingInTheDepthsNightmareDeck = "The Thing in the Depths Nightmare Deck";
-        public const string TempleOfTheDeceivedNightmareDeck = "Temple of the Deceived Nightmare Deck";
-        public const string TheDrownedRuinesNightmareDeck = "The Drowned Ruins Nightmare Deck";
-        public const string AStormOnCobasHavenNightmareDeck = "A Storm on Cobas Haven Nightmare Deck";
-        public const string TheCityOfCorsairsNightmareDeck = "The City of Corsairs Nightmare Deck";
+        public const string VoyageAcrossBelegaerNightmare = "Voyage Across Belegaer Nightmare";
+        public const string TheFateOfNumenorNightmare = "The Fate of Númenor Nightmare";
+        public const string RaidOnTheGreyHavensNightmare = "Raid on the Grey Havens Nightmare";
+        public const string FlightOfTheStormcallerNightmare = "Flight of the Stormcaller Nightmare";
+        public const string TheThingInTheDepthsNightmare = "The Thing in the Depths Nightmare";
+        public const string TempleOfTheDeceivedNightmare = "Temple of the Deceived Nightmare";
+        public const string TheDrownedRuinesNightmare = "The Drowned Ruins Nightmare";
+        public const string AStormOnCobasHavenNightmare = "A Storm on Cobas Haven Nightmare";
+        public const string TheCityOfCorsairsNightmare = "The City of Corsairs Nightmare";
 
-        public const string WeMustAwayEreBreakOfDayNightmareDeck = "We Must Away Ere Break of Day Nightmare Deck";
-        public const string OverTheMistyMountainsGrimNightmareDeck = "Over the Misty Mountains Grim Nightmare Deck";
-        public const string DungeonsDeepAndCavernsDimNightmareDeck = "Dungeons Deep and Caverns Dim Nightmare Deck";
-        public const string FliesAndSpidersNightmareDeck = "Flies and Spiders Nightmare Deck";
-        public const string TheLonelyMountainNightmareDeck = "The Lonely Mountain Nightmare Deck";
-        public const string TheBattleOfFiveArmiesNightmareDeck = "The Battle of Five Armies Nightmare Deck";
+        public const string WeMustAwayEreBreakOfDayNightmare = "We Must Away Ere Break of Day Nightmare";
+        public const string OverTheMistyMountainsGrimNightmare = "Over the Misty Mountains Grim Nightmare";
+        public const string DungeonsDeepAndCavernsDimNightmare = "Dungeons Deep and Caverns Dim Nightmare";
+        public const string FliesAndSpidersNightmare = "Flies and Spiders Nightmare";
+        public const string TheLonelyMountainNightmare = "The Lonely Mountain Nightmare";
+        public const string TheBattleOfFiveArmiesNightmare = "The Battle of Five Armies Nightmare";
         
-        public const string AShadowOfThePastNightmareDeck = "A Shadow of the Past Nightmare Deck";
-        public const string AKnifeInTheDarkNightmareDeck = "A Knife in the Dark Nightmare Deck";
-        public const string FlightToTheFordNightmareDeck = "Flight to the Ford Nightmare Deck";
+        public const string AShadowOfThePastNightmare = "A Shadow of the Past Nightmare";
+        public const string AKnifeInTheDarkNightmare = "A Knife in the Dark Nightmare";
+        public const string FlightToTheFordNightmare = "Flight to the Ford Nightmare";
 
-        public const string TheRingGoesSouthNightmareDeck = "The Ring Goes South Nightmare Deck";
-        public const string JourneyInTheDarkNightmareDeck = "Journey in the Dark Nightmare Deck";
-        public const string BreakingTheFellowshipNightmareDeck = "Breaking the Fellowship Nightmare Deck";
+        public const string TheRingGoesSouthNightmare = "The Ring Goes South Nightmare";
+        public const string JourneyInTheDarkNightmare = "Journey in the Dark Nightmare";
+        public const string BreakingTheFellowshipNightmare = "Breaking the Fellowship Nightmare";
 
-        public const string TheUrukHaiNightmareDeck = "The Uruk-hai Nightmare Deck";
-        public const string HelmsDeepNightmareDeck = "Helm's Deep Nightmare Deck";
-        public const string TheRoadToIsengardNightmareDeck = "The Road to Isengard Nightmare Deck";
+        public const string TheUrukHaiNightmare = "The Uruk-hai Nightmare";
+        public const string HelmsDeepNightmare = "Helm's Deep Nightmare";
+        public const string TheRoadToIsengardNightmare = "The Road to Isengard Nightmare";
 
-        public const string ThePassageOfTheMarshesNightmareDeck = "The Passage of the Marshes Nightmare Deck";
-        public const string JourneyToTheCrossRoadsNightmareDeck = "Journey to the Cross-roads Nightmare Deck";
-        public const string ShelobLairNightmareDeck = "Shelob's Lair Nightmare Deck";
+        public const string ThePassageOfTheMarshesNightmare = "The Passage of the Marshes Nightmare";
+        public const string JourneyToTheCrossRoadsNightmare = "Journey to the Cross-roads Nightmare";
+        public const string ShelobLairNightmare = "Shelob's Lair Nightmare";
 
         public const string FirstAge = "First Age";
         public const string TrialUponTheMarches = "Trial Upon the Marches";

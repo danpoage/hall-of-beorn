@@ -7,11 +7,19 @@ namespace HallOfBeorn.Repositories
 {
     public class ProductRepository
     {
-        public IReadOnlyList<Product> AllProducts()
-        {
-            var products = new List<Product>();
+        private readonly Dictionary<string, Product> all = new Dictionary<string, Product>();
 
-            return products;
+        public IReadOnlyList<Product> All()
+        {
+            return all.Values.ToListSafe();
+        }
+
+        public Product GetProduct(string name)
+        {
+            var key = name.NormalizeCaseSensitiveString();
+            return all.ContainsKey(key)
+                ? all[key]
+                : null;
         }
     }
 }
