@@ -29,7 +29,7 @@ namespace HallOfBeorn.Repositories
                     var key = cardSet.Name.Text;
                     if (cardSet.SetType == SetType.Nightmare_Expansion)
                     {
-                        var norm = key.Replace("Nightmare", string.Empty);
+                        var norm = key.Replace(" Nightmare", string.Empty);
 
                         nightmareCardSetMap[norm] = cardSet;
                     }
@@ -93,12 +93,9 @@ namespace HallOfBeorn.Repositories
         {
             var key = name.NormalizeCaseSensitiveString();
 
-            if (scenarioMap.ContainsKey(name))
-            {
-                return scenarioMap[name];
-            }
-
-            return null;
+            return scenarioMap.ContainsKey(key)
+                ? scenarioMap[key]
+                : null;
         }
     }
 }

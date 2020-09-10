@@ -98,6 +98,12 @@ namespace HallOfBeorn.Data
             return cardBuilder.Quest(title, oppositeTitle, stageNumber, oppositeStageNumber, stageLetter, questPoints);
         }
 
+        public CardBuilder addNightmareSetup()
+        {
+            var cardBuilder = addCardBuilder();
+            return cardBuilder.NightmareSetup();
+        }
+
         public EncounterSet ToEncounterSet()
         {
             cards.AddRange(cardBuilders.Select(

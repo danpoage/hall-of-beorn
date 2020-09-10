@@ -17,9 +17,7 @@
     <Folder Include="Data\Cycles\AngmarAwakened\" />
     <Folder Include="Data\Cycles\TheRingMaker\" />
     <Folder Include="Data\Customs\" />
-    <Folder Include="Data\Deluxes\" />
     <Folder Include="Data\Pods\" />
-    <Folder Include="Data\Nightmares\" />
     <Folder Include="Data\Scenarios\" />
   </ItemGroup>
 

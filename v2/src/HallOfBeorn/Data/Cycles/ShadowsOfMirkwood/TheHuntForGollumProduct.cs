@@ -64,22 +64,22 @@ namespace HallOfBeorn.Data.Cycles.ShadowsOfMirkwood
                 .WithFlavor("From the ashes a fire shall be woken,\r\nA light from the shadows shall spring:\r\nRenewed shall be blade that was broken,\r\nThe crownless again shall be king.\r\n-The Fellowship of the Ring")
                 .WithInfo(10, 3, Artists.John_Gravato);
 
-            var es = ap.EncounterSet(EncounterSets.TheHuntForGollum);
+            var es = ap.EncounterSet(EncounterSetNames.TheHuntForGollum);
             es.addQuest("The Hunt Begins", 1, 'A', 8)
-                .WithIncludedEncounterSets(EncounterSets.JourneyAlongTheAnduin, EncounterSets.SauronsReach)
+                .WithIncludedEncounterSets(EncounterSetNames.JourneyAlongTheAnduin, EncounterSetNames.SauronsReach)
                 .WithTextLine("Setup: Reveal 1 card per player from the encounter deck, and add it to the staging area.")
                 .WithFlavor("Gandalf has requested your assistance in the search for the elusive creature known as Gollum. Your search begins in the Anduin Valley between Mirkwood Forest and the Misty Mountains")
                 .WithOppositeTextLine("Forced: After the players quest successfully, the first player looks at the top 3 card fo the encounter deck. Reveal and add 1 of those cards to the staging area, and discard the other 2 cards.")
                 .WithOppositeFlavor("You make your way along the banks of the Anduin River, a likely place for Gollum to find food.")
                 .WithInfo(11, 1, Artists.Igor_Kieryluk);
             es.addQuest("A New Terror Abroad", 2, 'A', 10)
-                .WithIncludedEncounterSets(EncounterSets.JourneyAlongTheAnduin, EncounterSets.SauronsReach)
+                .WithIncludedEncounterSets(EncounterSetNames.JourneyAlongTheAnduin, EncounterSetNames.SauronsReach)
                 .WithFlavor("The wood was full of the rumor of him, dreadful tales even among beasts and birds. The Woodmen said that there was some new terror abroad, a ghost that drank blood. -The Fellowship of the Ring")
                 .WithOppositeTextLine("Forced: At the beginning of the quest phase, the first player looks at the top 2 cards of the encounter deck. Reveal and add 1 of those cards to the staging area, and discard the other.")
                 .WithOppositeFlavor("Rumors have led you to the eaves of Mirkwood Forest, where the Woodmen whisper of a new terror in the night...")
                 .WithInfo(12, 1, Artists.David_A_Nash);
             es.addQuest("On the Trail", 3, 'A', 8)
-                .WithIncludedEncounterSets(EncounterSets.JourneyAlongTheAnduin, EncounterSets.SauronsReach)
+                .WithIncludedEncounterSets(EncounterSetNames.JourneyAlongTheAnduin, EncounterSetNames.SauronsReach)
                 .WithFlavor("\"But at the western edge of Mirkwood the trail turned away. It wandered off southwards and passed out of the Wood-elves' ken, and was lost.\" -Gandalf, The Fellowship of the Ring")
                 .WithOppositeTextLine("Any player who does not control a hero with at least 1 Clue objective attached cannot commit characters to this quest. If there are ever no heroes with Clue objectives attached in play, reset the quest deck to stage 2B.")
                 .WithOppositeTextLine("If the players defeat this stage, the players have once again found a true sign of Gollum's passing, and have won the game.")

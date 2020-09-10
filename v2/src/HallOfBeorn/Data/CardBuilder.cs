@@ -160,6 +160,13 @@ namespace HallOfBeorn.Data
             return this;
         }
 
+        public CardBuilder NightmareSetup()
+        {
+            card.Title = new Content(encounterSet.Name.Text);
+            card.CardType = CardType.Nightmare_Setup;
+            return this;
+        }
+
         public CardBuilder WithThumbnail()
         {
             //NOTE: This can be removed
@@ -169,6 +176,18 @@ namespace HallOfBeorn.Data
         public CardBuilder WithYear(ushort year)
         {
             //NOTE: This can be removed
+            return this;
+        }
+
+        public CardBuilder WithBoon()
+        {
+            card.CardSubtype = CardSubtype.Boon;
+            return this;
+        }
+
+        public CardBuilder WithBurden()
+        {
+            card.CardSubtype = CardSubtype.Burden;
             return this;
         }
 
@@ -249,6 +268,12 @@ namespace HallOfBeorn.Data
                 card.Front.TextBox[TextType.Template] =
                     card.Front.TextBox[TextType.Template].AppendLine(text);
             }
+            return this;
+        }
+
+        public CardBuilder WithOppositeTitle(string title)
+        {
+            card.OppositeTitle = new Content(title);
             return this;
         }
 

@@ -12,5 +12,8 @@ namespace HallOfBeorn.Data
         public const string TheHillsOfEmynMuil = "THoEM";
         public const string TheDeadMarshes = "TDM";
         public const string ReturnToMirkwood = "RTM";
+        public const string KhazadDum = "KD";
+
+        public const string TheBlackRiders = "TBR";
     }
 }
