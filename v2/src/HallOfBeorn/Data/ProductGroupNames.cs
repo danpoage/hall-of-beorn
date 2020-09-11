@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace HallOfBeorn.Data
+﻿namespace HallOfBeorn.Data
 {
     public static class ProductGroupNames
     {
@@ -15,7 +11,10 @@ namespace HallOfBeorn.Data
         public const string HaradrimCycle = "Haradrim Cycle";
         public const string EredMithrinCycle = "Ered Mithin Cycle";
         public const string VengeanceOfMordorCycle = "Vengeance of Mordor Cycle";
+
         public const string TheHobbitSaga = "The Hobbit Saga";
         public const string TheLordOfTheRingsSaga = "The Lord of the Rings Saga";
+
+        public const string GenConAndFellowship = "GenCon & Fellowship Decks";
     }
 }

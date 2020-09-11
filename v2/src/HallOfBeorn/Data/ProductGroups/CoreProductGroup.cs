@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-using HallOfBeorn.Data.Core;
+﻿using HallOfBeorn.Data.Core;
 using HallOfBeorn.Data.Cycles.ShadowsOfMirkwood;
 
 namespace HallOfBeorn.Data.ProductGroups

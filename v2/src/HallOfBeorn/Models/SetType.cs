@@ -7,6 +7,7 @@
         Deluxe_Expansion,
         Saga_Expansion,
         Nightmare_Expansion,
+        GenCon_Expansion,
         Custom,
     }
 }

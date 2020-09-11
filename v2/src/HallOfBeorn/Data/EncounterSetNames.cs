@@ -43,8 +43,13 @@ namespace HallOfBeorn.Data
         public const string Hunted = "Hunted";
         public const string TheRing = "The Ring";
         public const string TheBlackRiders = "The Black Riders";
+
+        public const string TheMassingAtOsgiliath = "The Massing at Osgiliath";
+
         public const string TheHuntForGollumNightmare = "The Hunt for Gollum Nightmare";
 
-
+        public const string IntoThePitNightmare = "Into the Pit Nightmare";
+        public const string TheSeventhLevelNightmare = "The Seventh Level Nightmare";
+        public const string FlightFromMoriaNightmare = "Flight from Moria Nightmare";
     }
 }

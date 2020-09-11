@@ -13,7 +13,12 @@ namespace HallOfBeorn.Data
         public const string TheDeadMarshes = "TDM";
         public const string ReturnToMirkwood = "RTM";
         public const string KhazadDum = "KD";
+        public const string IntoThePitNightmare = "ItPN";
+        public const string TheSeventhLevelNightmare = "TSLN";
+        public const string FlightFromMoriaNightmare = "FFMN";
 
         public const string TheBlackRiders = "TBR";
+
+        public const string TheMassingAtOsgiliath = "TMaO";
     }
 }

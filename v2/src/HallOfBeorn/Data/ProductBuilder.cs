@@ -50,6 +50,11 @@ namespace HallOfBeorn.Data
             return AddBuilder(name, abbreviation, number, SetType.Saga_Expansion);
         }
 
+        public CardSetBuilder GenConExpansion(string name, string abbreviation, ushort number)
+        {
+            return AddBuilder(name, abbreviation, number, SetType.GenCon_Expansion);
+        }
+
         public CardSetBuilder Custom(string name, string abbreviation, ushort number)
         {
             return AddBuilder(name, abbreviation, number, SetType.Custom);
