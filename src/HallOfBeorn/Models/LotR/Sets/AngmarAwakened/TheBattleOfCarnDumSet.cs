@@ -182,7 +182,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
             addTreachery("Daechanar's Will", EncounterSet.TheBattleOfCarnDum)
                 .WithTextLine("When Revealed: Flip Thaurdir. Then, if he is Captain side faceup, Daechanar's Will gains surge.")
                 .WithShadow("Shadow: Flip Thaurdir after this attack.")
-                .WithTemplate("<p><b>When Revealed:</b> Flip {title:Thaurdir}. Then, if he is {trait:Captain.@Captain} side faceup, {self} gains {keyword:Surge.@surge.}</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Flip {title:Thaurdir} after this attack.</p>")
+                .WithTemplate("<p><b>When Revealed:</b> Flip {title:Thaurdir}. Then, if he is {trait:Captain.@Captain} side faceup, {self} gains surge.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Flip {title:Thaurdir} after this attack.</p>")
                 .WithEasyModeQuantity(1)
                 .WithInfo(138, 2, Artist.Alvaro_Calvo_Escudero);
             addEncounterSideQuest("Furious Charge", EncounterSet.TheBattleOfCarnDum, 5)

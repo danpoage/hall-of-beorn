@@ -97,7 +97,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithFlavorLine("The wide plains opened grey before them.")
                 .WithFlavorLine("-The Two Towers")
                 .WithInfo(40, 2, Artist.Sergey_Glushakov);
-            addLocation("Blistering Erg", EncounterSet.RaceAcrossHarad, Card.VALUE_NA, 4)
+            addLocation("Blistering Erg", EncounterSet.RaceAcrossHarad, Card.VALUE_X, 4)
                 .WithTraits("Desert.")
                 .WithTextLine("X is the stage number of the main quest.")
                 .WithTextLine("Forced: After Blistering Erg becomes the active location, each player assigns X damage among characters he controls.")
