@@ -554,6 +554,16 @@
         @if (@Model.HasErrata)
         {
             <span style="margin-left:10px;margin-top:10px;display:inline-block;"><a title="Official LotR FAQ" href="@Model.ErrataUrl" target="_blank">Errata</a></span>
+            
+            if (@Model.HasPreviousImages)
+            {
+                var version = 1;
+                <div style="font-weight:bold;margin-left:6px;margin-top:16px;margin-bottom:4px;">Previous Versions</div>
+                foreach (var imageUrl in @Model.PreviousImages())
+                {
+                    <span style="display:inline-block;margin: 4px;"><img title="Version @version" src="@imageUrl" style="width:200px" /></span>
+                }
+            }
         }
         @if (!string.IsNullOrEmpty(@Model.CharacterUrl))
         {

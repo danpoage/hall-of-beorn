@@ -159,7 +159,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithTextLine("Allies cannot defend while ~Snow ~Warg is attacking.")
                 .WithTextLine("Forced: After a character is declared as a defender against ~Snow ~Warg, deal 1 damage to the defending character, if able.")
                 .WithTemplate("<p>Allies cannot defend while {self} is attacking.</p><p><b>Forced:</b> After a character is declared as a defender against {self}, deal 1 damage to the defending character, if able.</p>")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(27, 3, Artist.Allison_Theus);
         }
     }

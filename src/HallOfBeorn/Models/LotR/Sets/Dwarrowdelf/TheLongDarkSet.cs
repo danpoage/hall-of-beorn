@@ -20,7 +20,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithFlavorLine("\"Yet in doubt a man of worth will trust to his own wisdom.\"")
                 .WithFlavorLine("-The Two Towers")
                 .WithTemplate("<p><b>Response:</b> After {self} is declared as an attacker, return a {sphere-event:Tactics} from your discard pile to your hand. Then, choose and discard 1 card from your hand. (Limit 3 times per game for the group.)</p><p class='flavor-text'>&quot;Yet in doubt a man of worth will trust to his own wisdom.&quot; &ndash;The Two Towers</p>")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(76, 1, Artist.Magali_Villeneuve);
             addAlly("Erestor", 4, Sphere.Leadership, true, 2, 0, 1, 3)
                 .WithTraits("Noldor.")
@@ -34,7 +34,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
             addAlly("Erebor Battle Master", 3, Sphere.Tactics, false, 0, 1, 1, 2)
                 .WithTraits("Dwarf.", "Warrior.")
                 .WithTextLine("Erebor Battle Master gets +1 Attack for each other Dwarf ally you control. (Limit +4 Attack.)")
-                .WithErrata()
+                .WithErrata(2)
                 .WithInfo(79, 3, Artist.Rafal_Hrynkiewicz);
             addAttachment("Ring Mail", 2, Sphere.Tactics, false)
                 .WithTraits("Item.", "Armor.")
@@ -49,7 +49,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithKeywords("Secrecy 3.")
                 .WithTextLine("Secrecy 3.")
                 .WithTextLine("Action: Enemies engaged with you cannot attack you this phase.")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(81, 3, Artist.Ilich_Henriquez);
             addAttachment("Ever My Heart Rises", 0, Sphere.Spirit, false)
                 .WithTraits("Condition.")
@@ -72,7 +72,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithTextLine("Response: After a Song card is played, exhaust Love of Tales to add 1 resource to attached hero's resource pool.")
                 .WithFlavorLine("\"I listened because I couldn't help myself, if you know what I mean. Lor bless me, sir, but I do love tales of that sort.\"")
                 .WithFlavorLine("-Sam Gamgee, The Fellowship of the Ring")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(85, 3, Artist.Winona_Nelson);
             addQuest("Journey in the Black Pit", "The Long Dark", 1, 'A', 13)
                 .WithTextLine("Setup: The first player attaches ~Cave Torch to a hero of his choice.")

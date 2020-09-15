@@ -66,7 +66,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithTextLine("Response: After attached hero commits to a quest, name enemy, location or treachery. If a card of the named type is revealed during this quest phase, exhaust Wingfoot to ready attached hero.")
                 .WithFlavorLine("\"Wingfoot I name you. This deed of the three friends should be sung in many a hall. Forty leagues and five you have measured ere the forth day is ended!\"")
                 .WithFlavorLine("-Éomer, The Two Towers")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(92, 3, Artist.Gabriel_Verdon);
             addAttachment("Defender of the West", 1, Sphere.Neutral, true)
                 .WithTraits("Title.")

@@ -68,7 +68,7 @@ namespace HallOfBeorn.Models.LotR.Sets.HeirsOfNumenor
                 .WithInfo(11, 3, Artist.Titus_Lunter);
             addEvent("A Watchful Peace", 1, Sphere.Spirit)
                 .WithTextLine("Response: After a location worth no victory points leaves play as an explored location, return it to the top of the encounter deck.")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(12, 3, Artist.Titus_Lunter);
             addAttachment("Blood of Númenor", 0, Sphere.Spirit, false)
                 .WithTraits("Condition.")
@@ -90,7 +90,7 @@ namespace HallOfBeorn.Models.LotR.Sets.HeirsOfNumenor
                 .WithTraits("Gondor.")
                 .WithTextLine("Action: Exhaust Master of ~Lore to name a card type. Lower the cost for you to play the next Lore card of that type by 1 until the end of the phase (to a minimum of 1).")
                 .WithFlavorLine("\"If Cirith Ungol is named, old men and masters of lore will blanch and fall silent.\" -Faramir, The Two Towers")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(16, 3, Artist.Ilich_Henriquez);
             addAttachment("Ranger Spikes", 2, Sphere.Lore, false)
                 .WithTraits("Trap.")
@@ -160,7 +160,7 @@ namespace HallOfBeorn.Models.LotR.Sets.HeirsOfNumenor
                 .WithTextLine("Surge.")
                 .WithTextLine("When Revealed: Deal 1 damage to each character committed to the quest.")
                 .WithShadow("Shadow: Deal 1 damage to the defending character.")
-                .WithErrata()
+                .WithErrata(1)
                 .WithEasyModeQuantity(2)
                 .WithInfo(29, 4, Artist.Marcia_GeorgeBogdan);
             addEnemy("Orc Scramblers", EncounterSet.TheSiegeOfCairAndros, 15, 1, 2, 1, 2)
@@ -346,7 +346,7 @@ namespace HallOfBeorn.Models.LotR.Sets.HeirsOfNumenor
                 .WithKeywords("Doomed 3.")
                 .WithTextLine("Doomed 3.")
                 .WithTextLine("When Revealed: Count the number of encounter cards in the staging area and shuffle them into the encounter deck. Reveal an equal number of cards from the encounter deck and add them to the staging area. This effect cannot be canceled.")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(61, 1, Artist.Ryan_Barger);
             addEnemy("Orc Rabble", EncounterSet.RavagingOrcs, 28, 2, 1, 1, 3)
                 .WithTraits("Mordor.", "Orc.")

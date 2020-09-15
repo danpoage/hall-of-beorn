@@ -44,7 +44,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
             addAlly("Blue Mountain Trader", 2, Sphere.Spirit, false, 1, 0, 1, 2)
                 .WithTraits("Dwarf.")
                 .WithTextLine("Action: Choose another player. That player gains control of Blue ~Mountain Trader. Then, that player moves 1 resource from the resource pool of a hero he controls to the resource pool of a hero you control, or Blue ~Mountain Trader is discarded. (Limit once per round.)")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(6, 3, Artist.Sara_Betsy);
             addAttachment("The Fall of Gil-Galad", 1, Sphere.Spirit, false)
                 .WithTraits("Song.")

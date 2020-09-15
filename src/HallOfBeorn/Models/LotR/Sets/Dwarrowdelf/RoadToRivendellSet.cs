@@ -59,7 +59,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithKeywords("Secrecy 2.")
                 .WithTextLine("Secrecy 2.")
                 .WithTextLine("Action: Search the top 5 cards of the encounter deck for any 1 non-objective card worth no victory points and add it to your victory display. Shuffle the encounter deck. Add Out of the Wild to the victory display.")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(36, 3, Artist.Magali_Villeneuve);
             addEvent("The End Comes", 0, Sphere.Neutral)
                 .WithTextLine("Response: After a Dwarf character leaves play, shuffle the encounter discard pile back into the encounter deck.")

@@ -63,7 +63,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithTextLine("While Thalin is committed to a quest, deal 1 damage to each enemy as it is revealed by the encounter deck.")
                 .WithFlavor("There hammer on the anvil smote,\r\nThere chisel clove, and graver wrote;\r\nThere forged was blade, and bound was hilt;\r\nThe delver mined, the mason built.\r\n-The Fellowship of the Ring")
                 .WithTemplate("<p>While {self} is committed to a quest, deal 1 damage to each enemy as it is revealed by the encounter deck.</p><p class='flavor-text'>There hammer on the anvil smote,<br>There chisel clove, and graver wrote;<br>There forged was blade, and bound was hilt;<br>The delver mined, the mason built.<br>&ndash;The Fellowship of the Ring</p>")
-                .WithErrata()
+                .WithErrata(0)
                 .WithYear(2010)
                 .WithInfo(6, 1, Artist.Jen_Zee);
             addHero("Éowyn", 9, Sphere.Spirit, 4, 1, 1, 3)
@@ -79,7 +79,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithTextLine("Response: Exhaust Eleanor to cancel the 'when revealed' effects of a treachery card just revealed by the encounter deck. Then, discard that card, and replace it with the next card from the encounter deck.")
                 .WithFlavor("\"Gondor wanes, you say. But Gondor stands, and even the end of its strength is very strong.\"\r\n-Boromir, The Fellowship of the Ring")
                 .WithTemplate("<p class='main-text'><b>Response:</b> Exhaust {self} to cancel the &quot;when revealed&quot; effects of a treachery card just revealed by the encounter deck. Then, discard that card, and replace it with the next card from the encounter deck.</p><p class='flavor-text'>&quot;Gondor wanes, you say. But Gondor stands, and even the end of its strength is very strong.&quot;<br>&ndash;Boromir, The Fellowship of the Ring</p>")
-                .WithErrata()
+                .WithErrata(0)
                 .WithYear(2010)
                 .WithInfo(8, 1, Artist.Magali_Villeneuve);
             addHero("Dúnhere", 8, Sphere.Spirit, 1, 2, 1, 4)
@@ -112,7 +112,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithTextLine("Action: Exhaust Beravor to choose a player. That player draws 2 cards. Limit once per round.")
                 .WithFlavor("But in the wild lands beyond Bree there were mysterious wanderers. The Bree-folk called them Rangers, and knew nothing of their origin.\r\n-The Fellowship of the Ring")
                 .WithTemplate("<p><b>Action:</b> Exhaust {self} to choose a player. That player draws 2 cards. Limit once per round.</p><p class='flavor-text'>But in the wild lands beyond Bree there were mysterious wanderers. The Bree-folk called them Rangers, and knew nothing of their origin.<br>&ndash;The Fellowship of the Ring</p>")
-                .WithErrata()
+                .WithErrata(1)
                 .WithYear(2010)
                 .WithInfo(12, 1, Artist.Tiziano_Baracchi);
             addAlly("Guard of the Citadel", 2, Sphere.Leadership, false, 1, 1, 0, 2)
@@ -232,7 +232,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
             addEvent("Feint", 1, Sphere.Tactics)
                 .WithTextLine("Combat Action: Choose an enemy engaged with a player. That enemy cannot attack that player this phase.")
                 .WithFlavor("A few brave men were strung before them to make a feint of resistance, and many there fell before the rest drew back and fled to either side. -The Hobbit")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(34, 2, Artist.Lius_Lasahido);
             addEvent("Quick Strike", 1, Sphere.Tactics)
                 .WithTextLine("Action: Exhaust a character you control to immediately declare it as an attacker (and resolve its attack) against any eligible enemy target.")
@@ -242,7 +242,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithTextLine("You must use resources from 3 different heroes' pools to pay for this card.")
                 .WithTextLine("Action: Choose a player. That player's engaged enemies cannot attack that player this phase.")
                 .WithFlavor("Without a word or cry, suddenly, the Riders halted. A thicket of spears were pointed towards the strangers...\r\n-The Two Towers")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(36, 2, Artist.David_Horne);
             addEvent("Swift Strike", 2, Sphere.Tactics)
                 .WithTextLine("Response: After a character is declared as a defender, deal 2 damage to the attacking enemy.")
@@ -280,13 +280,13 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithTextLine("Attach to a hero. Restricted.")
                 .WithTextLine("Response: After a character is destroyed, add 1 resource to attached hero's pool.")
                 .WithFlavor("'Slow should you be to wind that horn again, Boromir,' said Elrond, 'until you stand once more on the borders of your land, and dire need is on you.'\r\n-The Fellowship of the Ring")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(42, 1, Artist.Mark_Winters);
             addAlly("Wandering Took", 2, Sphere.Spirit, false, 1, 1, 1, 2)
                 .WithTraits("Hobbit.")
                 .WithTextLine("Action: Reduce your threat by 3 to give control of Wandering Took to another player. Raise that player's threat by 3. (Limit once per round.)")
                 .WithFlavor("...but certainly there was something not entirely hobbit-like about them, and once in a while members of the Took-clan would go and have adventures. -The Hobbit")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(43, 2, Artist.Tony_Foti);
             addAlly("Lórien Guide", 3, Sphere.Spirit, false, 1, 1, 0, 2)
                 .WithTraits("Silvan.", "Scout.")
@@ -314,7 +314,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithTextLine("Action: Choose a player. Shuffle that player's discard pile back into his deck. Remove Will of the West from the game.")
                 .WithFlavor("\"If Gondor has such men still in these days of fading, great must have been its glory in the days of its rising.\" -Legolas, The Return of the King")
                 .WithTemplate("<p><b>Action:</b> Choose a player. Shuffle that player's discard pile back into his deck. Remove Will of the West from the game.</p><p class='flavor-text'>&quot;If Gondor has such men still in these days of fading, great must have been its glory in the days of its rising.&quot;<br>&ndash;Legolas, The Return of the King</p>")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(49, 2, Artist.Erfian_Asafat);
             addEvent("A Test of Will", 1, Sphere.Spirit)
                 .WithTextLine("Response: Cancel the 'when revealed' effects of a card that was just revealed from the encounter deck.")
@@ -324,7 +324,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
             addEvent("Stand and Fight", 254, Sphere.Spirit)
                 .WithTextLine("Action: Choose an ally with a printed cost of X in any player's discard pile. Put that ally into play under your control. (The chosen ally can belong to any sphere of influence.)")
                 .WithFlavor("\"...we will fight on.\" -Boromir, The Fellowship of the Ring")
-                .WithErrata()
+                .WithErrata(0)
                 .WithInfo(51, 3, Artist.Rio_Sabda);
             addEvent("A Light in the Dark", 2, Sphere.Spirit)
                 .WithTextLine("Action: Choose an enemy engaged with a player. Return that enemy to the staging area.")
@@ -419,7 +419,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithTextLine("Attach to a hero.")
                 .WithTextLine("Action: Discard a card from your hand to give attached hero +1 Defense or +1 Willpower until the end of the phase. Limit 3 times per phase.")
                 .WithFlavor("'Speak no evil of the lady Galadriel!' said Aragorn sternly. 'There is in her and in this land no evil, unless a man bring it hither himself. Then let him beware.'\r\n-The Fellowship of the Ring")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(70, 2, Artist.Magali_Villeneuve);
             addAttachment("Dark Knowledge", 1, Sphere.Lore, false)
                 .WithTraits("Condition.")
@@ -533,7 +533,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
             addEnemy("Dol Guldur Beastmaster", "Dol Guldur Orcs", 35, 2, 3, 1, 5)
                 .WithTraits("Dol Guldur.", "Orc.")
                 .WithTextLine("Forced: When Dol Guldur Beastmaster attacks, deal it 1 additional shadow card.")
-                .WithErrata()
+                .WithErrata(0)
                 .WithEasyModeQuantity(1)
                 .WithInfo(91, 2, Artist.David_Lecossu);
             addTreachery("Driven by Shadow", "Dol Guldur Orcs")
@@ -591,7 +591,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithTextLine("No attachments.")
                 .WithTextLine("Forced: When the prisoner is 'rescued', move Nazgûl of Dol Guldur into the staging area.")
                 .WithTextLine("Forced: After a shadow effect dealt to Nazgûl of Dol Guldur resolves, the engaged player must choose and discard 1 character he controls.")
-                .WithErrata()
+                .WithErrata(0)
                 .WithInfo(102, 1, Artist.David_A_Nash);
             addEnemy("Cavern Guardian", "Escape from Dol Guldur", 8, 2, 2, 1, 2)
                 .WithTraits("Undead.")
@@ -721,7 +721,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithOppositeTextLine("When Revealed: Randomly select 1 hero card (among all the heroes controlled by the players) and turn it facedown. The hero is now considered a \"prisoner\", cannot be used, cannot be damaged, and does not collect resources, until it is \"rescued\" (as instructed by card effects) later in this quest.")
                 .WithOppositeTextLine("The players, as a group, cannot play more than 1 ally card each round.")
                 .WithOppositeTextLine("Players cannot advance to the next stage of this quest unless they have at least 1 objective card.")
-                .WithErrata()
+                .WithErrata(0)
                 .WithInfo(123, 1, Artist.Ben_Zweifel);
             addQuest("Through the Caverns", "Escape from Dol Guldur", 2, 'A', 15)
                 .WithIncludedEncounterSets(EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood)
@@ -735,7 +735,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithFlavor("Following a thread of sunlight, you discover a cavern opening leading out through the side of the hill. Stationed outside the cave-mouth, however, is a large group of Orcs.")
                 .WithOppositeTextLine("Forced: At the beginning of each quest phase, each player places the top card of his deck, face down in front of him as if it just engaged him from the staging area. These cards are called \"Orc Guard\" and act as enemies with: 1 hit point, 1 Attack, and 1 Defense.")
                 .WithOppositeTextLine("Players cannot defeat this stage while Nazgul of Dol Guldur is in play. If this stage is defeated and Nazgul of Dol Guldur is not in play, the players have won the game.")
-                .WithErrata()
+                .WithErrata(0)
                 .WithInfo(125, 1, Artist.Kaya);
             addQuest("To the River...", "Journey Along the Anduin", 1, 'A', 8)
                 .WithIncludedEncounterSets(EncounterSet.DolGuldurOrcs, EncounterSet.SauronsReach, EncounterSet.Wilderlands)

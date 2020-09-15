@@ -18,6 +18,8 @@ namespace HallOfBeorn.Models.LotR
             //Html2 = string.Empty;
 
             AlternateEncounterSet = string.Empty;
+
+            PreviousVersions = 0;
         }
 
         protected override string getSlug()
@@ -136,6 +138,8 @@ namespace HallOfBeorn.Models.LotR
          */
 
         public bool HasThumbnail { get; private set; }
+        public byte PreviousVersions { get; private set; }
+        public bool ErrataFront { get; private set; }
 
         public override string CardSetName { get { return cardSet != null ? cardSet.Name : string.Empty; } }
         public override bool IsCampaign { get { return this.CardType == LotR.CardType.Campaign; } }
@@ -778,9 +782,25 @@ namespace HallOfBeorn.Models.LotR
             return this;
         }
 
-        public LotRCard WithErrata()
+        //public LotRCard WithErrata()
+        //{
+        //    this.HasErrata = true;
+        //    return this;
+        //}
+
+        public LotRCard WithErrata(byte previousVersions)
         {
             this.HasErrata = true;
+            this.PreviousVersions = previousVersions;
+            this.ErrataFront = true;
+            return this;
+        }
+
+        public LotRCard WithErrataOpposite(byte previousVersions)
+        {
+            this.HasErrata = true;
+            this.PreviousVersions = previousVersions;
+            this.ErrataFront = false;
             return this;
         }
 

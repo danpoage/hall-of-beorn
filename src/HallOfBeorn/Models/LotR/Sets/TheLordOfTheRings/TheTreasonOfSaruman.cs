@@ -264,7 +264,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("When Revealed: Place 3 progress on the main quest (bypassing any active location). Until the end of the round, treat each character's text box as if it was blank (except for Traits).")
                 .WithShadow("Shadow: Attacking enemy gets +2 Attack and gains Toughness 2 until the end of the round.")
                 .WithInfo(43, 3, Artist.Alvaro_Calvo_Escudero)
-                .WithErrata()
+                .WithErrata(1)
                 .WithEasyModeQuantity(2));
             Cards.Add(LotRCard.Treachery("Reckless Hate", "DA50FA48-D71B-4557-A4CA-DD27305FCFF9", "Helm's Deep")
                 .WithKeywords("Peril.")

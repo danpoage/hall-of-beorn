@@ -63,7 +63,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 .WithTextLine("Response: Exhaust A Burning Brand to cancel a shadow effect just triggered during an attack that attached character is defending.")
                 .WithFlavor("\"Keep close to the fire, with your faces outward!\" cried Strider. \"Keep some of the longer sticks ready in your hands.\" -The Fellowship of the Ring")
                 .WithTemplate("<p>Attach to a {sphere-character:Lore}. {keyword:Restricted.}</p><p><b>Response:</b> Exhaust {self} to cancel a shadow effect just triggered during an attack that attached character is defending.</p><p class='flavor-text'>&quot;Keep close to the fire, with your faces outward!&quot; cried Strider. &quot;Keep some of the longer sticks ready in your hands.&quot;<br>&ndash;The Fellowship of the Ring</p>")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(33, 3, Artist.Toni_Justamante_Jacobs);
             addAttachment("Song of Wisdom", 1, Sphere.Neutral, false)
                 .WithTraits("Song.")

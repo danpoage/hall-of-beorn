@@ -1144,7 +1144,7 @@ The players have won the game.",
                 .WithTraits("Artifact.", "Item.")
                 .WithText("Attach to a hero.\r\nTravel Action: Discard Thrór's Map to choose a location in the staging area. Make that location the active location. (If there is another active location, return it to the staging area.)")
                 .WithFlavor("\"This was made by Thrór, your grandfather, Thorin.\" he said in answer to the dwarves' excited questions. \"It is a plan of the Mountain.\" -Gandalf, The Hobbit")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(13, 3, Artist.Jake_Murray);
             Cards.Add(new LotRCard() {
                 
@@ -1200,7 +1200,7 @@ The players have won the game.",
                 .WithTraits("Item.")
                 .WithText("If ~Troll ~Key is discarded, add it to the staging area. If ~Troll ~Key is unattached and in the staging area, attach it to a Troll enemy, if able. Response: After attached Troll enemy takes damage as the result of an attack, the first player may exhaust Bilbo ~Baggins to claim this objective and attach it to him.")
                 .WithTemplate("<p class='main-text'>If {self} is discarded, add it to the staging area.</p><p class='main-text'>If {self} is unattached and in the staging area, attach it to a {trait:Troll.@Troll} enemy, if able.</p><p class='main-text'><b>Response:</b> After attached {trait:Troll.@Troll} enemy takes damage as the result of an attack, the first player may exhaust {card:Bilbo-Baggins-THOHaUH@Bilbo Baggins} to claim this objective and attach it to him.</p>")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(43, 1, Artist.Trudi_Castle);
             Cards.Add(new LotRCard() {
                 

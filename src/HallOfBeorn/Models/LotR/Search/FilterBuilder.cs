@@ -18,6 +18,8 @@ namespace HallOfBeorn.Models.LotR.Search
             {
                 case ErrataVersion.Has_Errata:
                     return new SearchFilter((s, c) => { return hasErrata(c.Slug, 0); }, 100, "Has Errata");
+                case ErrataVersion.Has_Text_Errata:
+                    return new SearchFilter((s, c) => { return c.PreviousVersions > 0; }, 100, "Has Text Errata");
                 case ErrataVersion.No_Errata:
                     return new SearchFilter((s, c) => { return !hasErrata(c.Slug, 0); }, 100, "Does Not Have Errata");
                 case ErrataVersion.FAQ_1_1:

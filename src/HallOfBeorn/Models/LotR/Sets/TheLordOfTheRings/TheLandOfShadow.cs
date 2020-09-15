@@ -420,7 +420,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithFlavor("\"It's that Gollum! Snakes and adders! And to think that I thought that we’d puzzle him with our bit of a climb! Look at him! Like a nasty crawling spider on a wall.\" —Sam Gamgee, The Two Towers")
                 .WithOppositeText("Resolution: Each player must choose: either take a permanent +2 starting threat penalty, or earn 1 copy of The Searching Eye. Record each player's choice in the campaign log.")
                 .WithOppositeFlavor("The marshes were at an end, dying away into dead peats and wide flats of dry cracked mud. The land ahead rose in long shallow slopes, barren and pitiless, towards the desert that lay at Sauron's gate.\r\n-The Two Towers")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(67, 1, Artist.Cristina_Vela));
             Cards.Add(LotRCard.Quest("Ambush the Men of Harad", 1, "Journey to the Cross-roads", 20)
                 .WithFlavor("\"These cursed Southrons come now marching up the ancient roads to swell the hosts of the Dark Tower. Yea, up the very roads that craft of Gondor made.\" —Mablung, The Two Towers")

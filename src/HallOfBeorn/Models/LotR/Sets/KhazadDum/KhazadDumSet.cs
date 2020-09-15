@@ -26,7 +26,7 @@ namespace HallOfBeorn.Models.LotR.Sets.KhazadDum
                 .WithTraits("Item.")
                 .WithTextLine("Attach to a Dwarf hero.")
                 .WithTextLine("Action: Exhaust Narvi's Belt to give attached hero a Leadership, Lore, Tactics, or Spirit icon until the end of the phase.")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(3, 3, Artist.Carolina_Eade);
             addEvent("Durin's Song", 1, Sphere.Leadership)
                 .WithTraits("Song.")
@@ -62,7 +62,7 @@ namespace HallOfBeorn.Models.LotR.Sets.KhazadDum
             addAlly("Zigil Miner", 2, Sphere.Spirit, false, 1, 1, 1, 1)
                 .WithTraits("Dwarf.")
                 .WithTextLine("Action: Exhaust Zigil Miner and name a number to discard the top 2 cards of your deck. If at least one of those cards has cost equal to the named number, choose a hero you control. For each card that matches the named number, add 1 resource to that hero's resource pool.")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(9, 3, Artist.Magali_Villeneuve);
             addEvent("Untroubled by Darkness", 2, Sphere.Spirit)
                 .WithTextLine("Action: Each Dwarf character gets +1 Willpower until the end of the phase. (+2 Willpower instead if the active location is an Underground or Dark location.)")

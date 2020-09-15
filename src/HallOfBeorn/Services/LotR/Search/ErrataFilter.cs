@@ -32,6 +32,11 @@ namespace HallOfBeorn.Services.LotR.Search
             if (!target.HasValue || target.Value == ErrataVersion.Any)
                 return true;
 
+            if (target.Value == ErrataVersion.Has_Text_Errata)
+            {
+                return score.Card.PreviousVersions > 0;
+            }
+
             var targetValue = GetErrataValue(target);
 
             return predicate(score, targetValue);

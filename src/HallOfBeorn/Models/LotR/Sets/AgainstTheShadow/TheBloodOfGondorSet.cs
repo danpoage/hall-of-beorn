@@ -19,7 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 .WithTextLine("Action: Discard Caldara to put 1 Spirit ally from your discard pile into play for each other hero you control with a printed Spirit resource icon. (Limit once per game.)")
                 .WithFlavorLine("...there is no purpose higher in the world as it now stands than the good of Gondor...")
                 .WithFlavorLine("-Denethor, The Return of the King")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(107, 1, Artist.Magali_Villeneuve);
             addAlly("Squire of the Citadel", 1, Sphere.Leadership, false, 0, 0, 1, 1)
                 .WithTraits("Gondor.")
@@ -74,7 +74,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 .WithOppositeTextLine("At the beginning of the quest phase, each player takes 1 hidden card.")
                 .WithOppositeTextLine("At the beginning of the combat phase, each player must either turn each of his hidden cards faceup or take 1 hidden card.")
                 .WithOppositeFlavorLine("You've pursued the enemy all the way to the Crossroads when a wicked horn blares in the distance. Within minutes, a host of orcs swarms out of the trees from all sides, led by a foreboding robed figure...")
-                .WithErrata()
+                .WithErrataOpposite(1)
                 .WithIncludedEncounterSets(EncounterSet.RavagingOrcs)
                 .WithInfo(117, 1, Artist.Adam_Lane);
             addQuest("Captured!", EncounterSet.TheBloodOfGondor, 2, 'A', 15)
@@ -115,7 +115,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 .WithTextLine("The current quest card gains Siege (and loses Battle).")
                 .WithTextLine("X is the number of players in the game.")
                 .WithTextLine("Travel: The first player must take 1 hidden card to travel here.")
-                .WithErrata()
+                .WithErrata(1)
                 .WithVictoryPoints(3)
                 .WithInfo(123, 1, Artist.Cristi_Balanescu);
             addLocation("Southern Road", EncounterSet.TheBloodOfGondor, 2, 4)

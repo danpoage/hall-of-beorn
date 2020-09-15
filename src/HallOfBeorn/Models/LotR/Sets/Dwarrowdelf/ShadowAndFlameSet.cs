@@ -26,7 +26,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithTextLine("Action: Exhaust X Dwarf heroes to add X resources to a hero's resource pool and draw 1 card.")
                 .WithFlavorLine("\"You should see the stone-paved roads of many colours! And the halls and cavernous streets under the earth with arches carved like trees; and the terraces and towers upon the Mountain's sides! Then you would see that we have not been idle.\"")
                 .WithFlavorLine("-Glóin, The Fellowship of the Ring")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(129, 3, Artist.Charles_Urbach);
             addAttachment("Hardy Leadership", 2, Sphere.Leadership, true)
                 .WithTextLine("Attach to a Leadership hero.")
@@ -42,7 +42,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithKeywords("Secrecy 4.")
                 .WithTextLine("Secrecy 4.")
                 .WithTextLine("Response: After a non-unique enemy attacks you, put that enemy on the bottom of the encounter deck. If your threat is lower than that enemy's engagement cost, set your threat equal to the engagement cost of that enemy.")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(132, 3, Artist.Aaron_B_Miller);
             addAttachment("Miruvor", 1, Sphere.Spirit, false)
                 .WithTraits("Item.")

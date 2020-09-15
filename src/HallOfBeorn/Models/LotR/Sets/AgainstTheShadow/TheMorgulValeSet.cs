@@ -155,7 +155,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 .WithTextLine("When Revealed: The first player either places 3 progress tokens on To the Tower or reveals X additional cards from the encounter deck and adds them to the staging area. X is the number of players in the game.")
                 .WithFlavorLine("The air above was heavy with fog, and a reek lay on the land about them.")
                 .WithFlavorLine("-The Two Towers")
-                .WithErrata()
+                .WithErrata(1)
                 .WithEasyModeQuantity(0)
                 .WithInfo(157, 2, Artist.Oleg_Saakyan);
             addTreachery("Sleepless Malice", EncounterSet.TheMorgulVale)

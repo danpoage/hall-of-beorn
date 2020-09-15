@@ -39,7 +39,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
             addEvent("Trained for War", 2, Sphere.Tactics)
                 .WithTextLine("Play only if each hero you control has the printed Tactics resource icon.")
                 .WithTextLine("Action: Until the end of the phase, if the current quest does not have Siege, it gains Battle.")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(36, 3, Artist.Magali_Villeneuve);
             addAlly("Silvan Refugee", 1, Sphere.Spirit, false, 2, 0, 0, 1)
                 .WithTraits("Silvan.")

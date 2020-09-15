@@ -169,7 +169,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 .WithKeywords("Surge.")
                 .WithTextLine("Surge.")
                 .WithTextLine("When Revealed: Each player must either return the location he controls with the highest Threat to the staging area, or raise his threat by the total Threat of all locations he controls.")
-                .WithErrata()
+                .WithErrata(1)
                 .WithEasyModeQuantity(1)
                 .WithInfo(106, 2, Artist.Blake_Henriksen);
         }

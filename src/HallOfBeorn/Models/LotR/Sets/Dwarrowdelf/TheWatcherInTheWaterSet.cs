@@ -64,7 +64,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithTraits("Condition.")
                 .WithTextLine("Attach to a Dwarf hero.")
                 .WithTextLine("Response: After you play a Dwarf character from your hand, exhaust Legacy of Durin to draw 1 card.")
-                .WithErrata()
+                .WithErrata(1)
                 .WithInfo(61, 3, Artist.Ilich_Henriquez);
             addAttachment("Resourceful", 4, Sphere.Neutral, false)
                 .WithKeywords("Secrecy 3.")

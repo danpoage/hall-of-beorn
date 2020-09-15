@@ -800,6 +800,22 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             }
         }
 
+        public bool HasPreviousImages
+        {
+            get { return _card.PreviousVersions > 0; }
+        }
+
+        public IEnumerable<string> PreviousImages()
+        {
+            for (var i = 1; i <= _card.PreviousVersions; i++)
+            {
+                var suffix = string.Format("_{0}.jpg", i);
+                yield return _card.ErrataFront
+                    ? ImagePath1.Replace(".jpg", suffix)
+                    : ImagePath2.Replace(".jpg", suffix);
+            }
+        }
+
         public string ImagePath
         {
             get { return GetImagePathForLanguage(_lang); }

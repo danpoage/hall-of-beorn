@@ -5,6 +5,7 @@
         Any = 0,
         No_Errata = -1,
         Has_Errata = 1,
+        Has_Text_Errata = 2,
         FAQ_1_1 = 11,
         FAQ_1_2 = 12,
         FAQ_1_3 = 13,
