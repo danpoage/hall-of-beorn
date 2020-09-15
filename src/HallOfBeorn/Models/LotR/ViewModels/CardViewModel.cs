@@ -807,12 +807,23 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public IEnumerable<string> PreviousImages()
         {
+            const string ext = ".jpg";
             for (var i = 1; i <= _card.PreviousVersions; i++)
             {
                 var suffix = string.Format("_{0}.jpg", i);
-                yield return _card.ErrataFront
-                    ? ImagePath1.Replace(".jpg", suffix)
-                    : ImagePath2.Replace(".jpg", suffix);
+                var path = string.Empty;
+                if (HasSecondImage)
+                {
+                    yield return _card.ErrataFront 
+                        ? ImagePath1.Replace(ext, suffix)
+                        : ImagePath2.Replace(ext, suffix);
+                }
+                else 
+                {
+                    yield return _card.ErrataFront
+                        ? ImagePath.Replace(ext, suffix)
+                        : ImagePath2.Replace(ext, suffix);
+                }
             }
         }
 
