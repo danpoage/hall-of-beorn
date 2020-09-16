@@ -591,7 +591,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithTextLine("No attachments.")
                 .WithTextLine("Forced: When the prisoner is 'rescued', move Nazgûl of Dol Guldur into the staging area.")
                 .WithTextLine("Forced: After a shadow effect dealt to Nazgûl of Dol Guldur resolves, the engaged player must choose and discard 1 character he controls.")
-                .WithErrata(0)
+                .WithErrata(1)
                 .WithInfo(102, 1, Artist.David_A_Nash);
             addEnemy("Cavern Guardian", "Escape from Dol Guldur", 8, 2, 2, 1, 2)
                 .WithTraits("Undead.")
@@ -721,7 +721,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithOppositeTextLine("When Revealed: Randomly select 1 hero card (among all the heroes controlled by the players) and turn it facedown. The hero is now considered a \"prisoner\", cannot be used, cannot be damaged, and does not collect resources, until it is \"rescued\" (as instructed by card effects) later in this quest.")
                 .WithOppositeTextLine("The players, as a group, cannot play more than 1 ally card each round.")
                 .WithOppositeTextLine("Players cannot advance to the next stage of this quest unless they have at least 1 objective card.")
-                .WithErrata(0)
+                .WithErrata(1)
                 .WithInfo(123, 1, Artist.Ben_Zweifel);
             addQuest("Through the Caverns", "Escape from Dol Guldur", 2, 'A', 15)
                 .WithIncludedEncounterSets(EncounterSet.DolGuldurOrcs, EncounterSet.SpidersOfMirkwood)
