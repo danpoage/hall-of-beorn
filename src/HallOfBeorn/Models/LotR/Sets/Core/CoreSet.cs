@@ -588,7 +588,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithInfo(101, 2, Artist.Tiziano_Baracchi);
             addEnemy("Nazgûl of Dol Guldur", "Escape from Dol Guldur", 40, 5, 4, 3, 9)
                 .WithTraits("Nazgûl.")
-                .WithTextLine("No attachments.")
+                .WithTextLine("No attachments can be played on Nazgûl of Dol Guldur.")
                 .WithTextLine("Forced: When the prisoner is 'rescued', move Nazgûl of Dol Guldur into the staging area.")
                 .WithTextLine("Forced: After a shadow effect dealt to Nazgûl of Dol Guldur resolves, the engaged player must choose and discard 1 character he controls.")
                 .WithErrata(1)
