@@ -867,8 +867,7 @@ The players have won the game.",
                 FlavorText = "\"Nori, at your service.\" -Nori, The Hobbit",
                 CardNumber = 3,
                 Artist = Artist.Blake_Henriksen,
-                HasErrata = true
-            });
+            }.WithErrata(1));
             Cards.Add(new LotRCard() {
                 
                 Title = "Not Fair! Not Fair!",
@@ -1214,8 +1213,7 @@ The players have won the game.",
                 Text = "If ~Troll Purse is discarded, add it to the staging area.\r\n\r\nIf ~Troll Purse is unattached and in the staging area, attach it to a Troll enemy, if able.\r\n\r\nResponse: After attached Troll enemy is destroyed, the first player may spend 1 Baggins resource to claim this objective and attach it to Bilbo ~Baggins.",
                 CardNumber = 42,
                 Artist = Artist.Blake_Henriksen,
-                HasErrata = true
-            });
+            }.WithErrata(1));
             Cards.Add(new LotRCard() {
                 
                 Title = "What's In My Pocket?",

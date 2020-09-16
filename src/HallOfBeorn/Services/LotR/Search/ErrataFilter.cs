@@ -49,6 +49,8 @@ namespace HallOfBeorn.Services.LotR.Search
 
             switch (version.Value)
             {
+                case ErrataVersion.No_Errata:
+                    return -1;
                 case ErrataVersion.FAQ_1_1:
                     return 1.1;
                 case ErrataVersion.FAQ_1_2:

@@ -533,7 +533,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
             addEnemy("Dol Guldur Beastmaster", "Dol Guldur Orcs", 35, 2, 3, 1, 5)
                 .WithTraits("Dol Guldur.", "Orc.")
                 .WithTextLine("Forced: When Dol Guldur Beastmaster attacks, deal it 1 additional shadow card.")
-                .WithErrata(0)
+                .WithErrata(1)
                 .WithEasyModeQuantity(1)
                 .WithInfo(91, 2, Artist.David_Lecossu);
             addTreachery("Driven by Shadow", "Dol Guldur Orcs")

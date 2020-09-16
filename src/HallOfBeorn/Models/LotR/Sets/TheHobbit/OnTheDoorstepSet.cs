@@ -173,8 +173,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
                 Text = "Attach to a hero. Limit 1 per hero.\r\nResponse: After attached hero quests successfully, name a card type and discard the top card of your deck. If the discarded card is the named type, take it into your hand.",
                 CardNumber = 17,
                 Artist = Artist.Magali_Villeneuve,
-                HasErrata = true
-            });
+            }.WithErrata(1));
             Cards.Add(new LotRCard() {
                 Title = "Glóin",
                 Id = "6778eb01-6b07-4dbe-87f1-e854ab548813",
@@ -267,8 +266,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
                 FlavorText = "As they worked the ravens brought them constant tidings. -The Hobbit",
                 CardNumber = 11,
                 Artist = Artist.Adam_Lane,
-                HasErrata = true
-            });
+            }.WithErrata(1));
             Cards.Add(new LotRCard() {
                 
                 Title = "Straight Shot",
@@ -415,8 +413,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
                 CardNumber = 68,
                 Artist = Artist.Adam_Lane,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Wilderland },
-                HasErrata = true
-            });
+            }.WithErrataOpposite(1));
             Cards.Add(new LotRCard() {
                 
                 Title = "Captured by Spiders",
@@ -1130,8 +1127,7 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 Threat = 1,
                 CardNumber = 45,
                 Artist = Artist.Darek_Zabrocki,
-                HasErrata = true
-            });
+            }.WithErrata(1));
             Cards.Add(new LotRCard() {
                 
                 Title = "Smaug the Golden",

@@ -167,6 +167,8 @@ namespace HallOfBeorn.Services.LotR.Tags
             addClarification("Dunhere-Core", "<p>This attack is done during the normal Attack portion of the Combat phase and you must exhaust Dúnhere as usual. In other words, all aspects of the attack are normal except the choice of enemy that can be attacked. Note that this does not cause the enemy to engage the player: the enemy that is attacked remains in the staging area.</p>");
             addClarification("Eowyn-Core", "<p>This Action can be used after new Encounter cards are revealed during the Quest phase, allowing you to increase her total Willpower based on what cards came out.</p><p>If you have multiple Actions that require you to discard a card, each one requires you to discard a separate card (so you can't discard a single card to pay for multiple effects).</p>");
             addClarification("Theodred-Core", "<p>Can add resource to himself or any other Hero owned by any player. Théodred can add resource to Aragorn (CORE 1) who can use the resource to ready himself if they both are committed to the quest by the same player. If Aragorn was already committed by another player he would not be able to immediately use this resource (official FAQ). Can only commit to a quest once per game turn, even if you have a way to ready him.</p>");
+            addClarification("Stand-and-Fight-Core", "<p>Stand and Fight cannot return neutral allies from the discard pile, as neutral cards do not belong to “any sphere.”</p>");
+            addClarification("Out-of-the-Dungeons-Core", "<p>If a facedown Orc Guard would be returned to the staging area, it is instead placed in its owner’s discard pile.</p>");
             addClarification("The-Goblin's-Task-RAR", "<p>This quest card incorrectly includes the encounter set icon for <a href='/LotR/Search?EncounterSet=Gathering+Gloom' target='_blank'>Gathering Gloom</a> (a moon covered by clouds) when it should instead include <a href='/LotR/Search?EncounterSet=Lost+in+the+Wilderness' target='_blank'>Lost in the Wilderness</a> (a cloaked man). The rules insert has the correct encounter sets listed, and this card has been updated to match the rules insert. This error should be fixed in the next errata release.</p>");
             addClarification("Rescue-Tiny-RAR", "<p>This quest card incorrectly includes the encounter set icon for <a href='/LotR/Search?EncounterSet=Gathering+Gloom' target='_blank'>Gathering Gloom</a> (a moon covered by clouds) when it should instead include <a href='/LotR/Search?EncounterSet=Lost+in+the+Wilderness' target='_blank'>Lost in the Wilderness</a> (a cloaked man). The rules insert has the correct encounter sets listed, and this card has been updated to match the rules insert. This error should be fixed in the next errata release.</p>");
             addClarification("Retrieve-Urdug's-Horn-RAR", "<p>This quest card incorrectly includes the encounter set icon for <a href='/LotR/Search?EncounterSet=Gathering+Gloom' target='_blank'>Gathering Gloom</a> (a moon covered by clouds) when it should instead include <a href='/LotR/Search?EncounterSet=Lost+in+the+Wilderness' target='_blank'>Lost in the Wilderness</a> (a cloaked man). The rules insert has the correct encounter sets listed, and this card has been updated to match the rules insert. This error should be fixed in the next errata release.</p>");
@@ -224,20 +226,19 @@ namespace HallOfBeorn.Services.LotR.Tags
 
         public bool HasErrata(string slug, double version)
         {
-            if (!notesBySlug.ContainsKey(slug))
+            if (notesBySlug.ContainsKey(slug))
             {
-                return false;
-            }
-
-            foreach (var note in Notes(slug))
-            {
-                if (note.Type == CardNoteType.FAQ && (note.FaqVersion == version || version == 0))
-                {
+                if (version == 0)
                     return true;
-                }
+                else if (version == -1)
+                    return false;
+                else 
+                    return Notes(slug).Any(note => note.FaqVersion == version);
             }
-
-            return false;
+            else 
+            {
+                return version == -1;
+            }
         }
     }
 }
