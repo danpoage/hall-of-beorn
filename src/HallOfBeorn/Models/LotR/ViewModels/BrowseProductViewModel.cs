@@ -55,6 +55,41 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             get { return product.Code; }
         }
 
+        public string ImageUrl
+        {
+            get
+            {
+                var ext = product.ImageType == ImageType.Jpg ? "jpg" : "png";
+                return string.Format(
+                    "https://hallofbeorn-resources.s3.amazonaws.com/Images/Products/{0}.{1}",
+                    Code, 
+                    ext);
+            }
+        }
+
+        public string Type
+        {
+            get { 
+                var firstType = product.CardSets.First().SetType;
+                switch (firstType)
+                {
+                    case SetType.Core:
+                        return "Core Set";
+                    case SetType.Starter:
+                        return "Two Player Limited Edition Stater";
+                    case SetType.GenConSaga_Expansion:
+                        return "GenCon Saga Expansion";
+                    default:
+                        return firstType.ToString().Replace("_", " ");
+                }
+            }
+        }
+
+        public string FirstReleased
+        {
+            get { return product.FirstReleased.ToString("dd MMMM yyyy"); }
+        }
+
         public string SearchUrl
         {
             get { return searchUrl; }

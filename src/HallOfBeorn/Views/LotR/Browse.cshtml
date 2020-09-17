@@ -9,8 +9,28 @@
 
 @if (@Model.Detail != null)
 {
-    <h2 style="margin-bottom: 6px;"><a title="@Model.Detail.Name" href="@Model.Detail.SearchUrl">@Model.Detail.Name</a><span style="margin-left:8px;color:darkgray;font-size:12px;">@Model.Detail.Code</span></h2>
+    <h2 style="margin-bottom: 6px;">
+        <a title="@Model.Detail.Name" href="@Model.Detail.SearchUrl">@Model.Detail.Name</a>
+    </h2>
+    <div>
+        <span style="margin-left:12px;color:black;font-size:16px;">@Model.Detail.Type</span>
+        <span style="margin-left:12px;color:darkgray;font-size:12px;font-weight:bold;">@Model.Detail.Code</span>
+        <span style="margin-left:12px;color:darkgray;font-size:12px;font-weight:bold;">@Model.Detail.FirstReleased</span>
+    </div>
+    <div>
+        <img title="@Model.Detail.Name" src="@Model.Detail.ImageUrl" style="margin:6px 4px 16px 4px;display:inline-block;"/>
+        @*
+        <div style="margin: 6px;display:inline-block;max-height:235px;max-width:600px;vertical-align:top;">
+            @foreach (var card in @Model.Detail.Cards)
+            {
+                var quantity = string.Format("x{0}", card.Quantity);
+                <div style="display:inline-block;margin:2px 4px 2px 4px;">@card.Title @quantity </div>
+            }
+        </div>
+        *@
+    </div>
     
+       
     foreach (var card in @Model.Detail.Cards)
     {
         if (@card.HasSecondImage)
