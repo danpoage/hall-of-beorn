@@ -1143,7 +1143,7 @@ The players have won the game.",
                 .WithTraits("Artifact.", "Item.")
                 .WithText("Attach to a hero.\r\nTravel Action: Discard Thrór's Map to choose a location in the staging area. Make that location the active location. (If there is another active location, return it to the staging area.)")
                 .WithFlavor("\"This was made by Thrór, your grandfather, Thorin.\" he said in answer to the dwarves' excited questions. \"It is a plan of the Mountain.\" -Gandalf, The Hobbit")
-                .WithErrata(1)
+                .WithErrata(2)
                 .WithInfo(13, 3, Artist.Jake_Murray);
             Cards.Add(new LotRCard() {
                 
