@@ -1274,7 +1274,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("Surge.\r\nWhen Revealed: At the end of the phase, each enemy in the staging area engages the first player. If the One ~Ring is exhausted, this effect cannot be canceled.")
                 .WithFlavor("\"Also,\" he added, and his voice sank to a whisper, \"the Ring draws them\" -The Fellowship of the Ring")
                 .WithInfo(79, 1, Artist.Mike_Nash);
-            addTreachery("Weight of the Ring", EncounterSet.AShadowOfThePast.Name)
+            addTreachery("Weight of the Ring", EncounterSet.FlightToTheFord.Name)
                 .WithBurden()
                 .WithKeywords("Surge.")
                 .WithText("Surge.\r\nWhen Revealed: Attach to the Ring-bearer. (Counts as a Condition attachment with the text: \"Forced: At the beginning of each quest phase, either exhaust The One ~Ring or reveal and additional encounter card this phase.\")")
