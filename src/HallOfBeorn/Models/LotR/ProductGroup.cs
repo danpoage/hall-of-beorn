@@ -29,7 +29,7 @@ namespace HallOfBeorn.Models.LotR
 
         #region Static Members
         public static ProductGroup ShadowsOfMirkwood = new ShadowsOfMirkwoodProductGroup();
-        public static ProductGroup TheDwarrowdelf = new TheDwarrowdelfProductGroup();
+        public static ProductGroup TheDwarrowdelf = new DwarrowdelfProductGroup();
         public static ProductGroup AgainstTheShadow = new AgainstTheShadowProductGroup();
         public static ProductGroup TheRingMaker = new TheRingMakerProductGroup();
         public static ProductGroup AngmarAwakened = new AngmarAwakenedProductGroup();

@@ -122,5 +122,21 @@ namespace HallOfBeorn.Models.LotR
 
             return count;
         }
+
+        public static string ToCardTypeDescription(this CardType self)
+        {
+            switch (self)
+            {
+                case CardType.Encounter_Side_Quest:
+                    return "Encounter Side Quest";
+                case CardType.GenCon_Setup:
+                case CardType.Nightmare_Setup:
+                    return "Setup";
+                case CardType.Player_Side_Quest:
+                    return "Player Side Quest";
+                default:
+                    return self.ToString().Replace("_", "-");
+            }
+        }
     }
 }

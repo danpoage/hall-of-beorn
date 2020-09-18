@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
     public class UnderTheAshMountainsProduct : Product
     {
         public UnderTheAshMountainsProduct()
-            : base("Under the ash Mountains", "MEC81", ImageType.Jpg, new DateTime(2020, 6, 5))
+            : base("Under the Ash Mountains", "MEC81", ImageType.Jpg, new DateTime(2020, 6, 5))
         {
             AddCardSet(CardSet.UnderTheAshMountains);
             AddScenario(new Scenarios.VengeanceOfMordor.UnderTheAshMountainsScenario());

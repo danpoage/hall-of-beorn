@@ -9,25 +9,38 @@
 
 @if (@Model.Detail != null)
 {
+    <a style="display:block;margin-bottom:16px;" href="/LotR/Browse#@Model.Detail.Code" class="browse-view-link">Back to Browse</a>
     <h2 style="margin-bottom: 6px;">
         <a title="@Model.Detail.Name" href="@Model.Detail.SearchUrl">@Model.Detail.Name</a>
     </h2>
-    <div>
+    <div style="margin:4px 0px;">
         <span style="margin-left:12px;color:black;font-size:16px;">@Model.Detail.Type</span>
         <span style="margin-left:12px;color:darkgray;font-size:12px;font-weight:bold;">@Model.Detail.Code</span>
         <span style="margin-left:12px;color:darkgray;font-size:12px;font-weight:bold;">@Model.Detail.FirstReleased</span>
     </div>
-    <div>
+    <div style="margin:4px 0px;">
         <img title="@Model.Detail.Name" src="@Model.Detail.ImageUrl" style="margin:6px 4px 16px 4px;display:inline-block;"/>
         
-        <div style="margin: 6px;display:inline-block;height:235px;vertical-align:top;overflow: auto;">
-            @foreach (var card in @Model.Detail.Cards)
-            {
-                var quantity = string.Format("x{0}", card.Quantity);
-                <div style="display:block;margin:2px 4px 2px 4px;">@card.Title @quantity </div>
-            }
+        <div style="margin: 4px 0px 4px 20px;display:inline-block;vertical-align:top;">
+            <div style="margin:4px 0px 12px 4px;font-family:Georgia;font-size:12px;font-weight:bold;">Card List</div>
+            <div style="overflow: auto;height:210px;">
+                @foreach (var card in @Model.Detail.Cards)
+                {
+                    var linkDescription = string.Format("<span><span style='font-size:16px;'>{0}</span><span style='color:darkgray;margin-left:6px;'>({1})</span><span style='color:black;margin-left:4px;'>x{2}</span></span>", card.Title, card.CardType.ToCardTypeDescription(), card.Quantity);
+                    <a style="margin:2px 4px 2px 4px;font-size:14px;display:block;" target="_blank" href="@card.Url" title="@card.Title Details">@Html.Raw(@linkDescription)</a>
+                }
+            </div>
         </div>
         
+        <div style="margin: 4px 0px 4px 20px;display:inline-block;vertical-align:top;">
+            <div style="margin:4px 0px 12px 4px; font-family:Georgia;font-size:12px;font-weight:bold;">Scenarios</div>
+            <div style="overflow:auto;height:210px;">
+                @foreach (var scenario in @Model.Detail.Scenarios())
+                {
+                    <a style="margin:4px;font-size:20px;display:block;" target="_blank" href="@scenario.Link" title="@scenario.Title Details">@scenario.Title</a>
+                }
+            </div>
+        </div>
     </div>
     
        
@@ -86,7 +99,7 @@ else
         
             lastProductWasPremier = product.IsPremier;
         
-            <div style="display:inline-block;margin-left:4px;margin-right:4px;margin-top:6px;margin-bottom:6px;">
+            <div id="@product.Code" style="display:inline-block;margin-left:4px;margin-right:4px;margin-top:6px;margin-bottom:6px;">
                 <a title="@product.Name (@product.Code)" href="@product.Link">   
                 <img src="@product.ImagePath" style="height:@product.ImageHeight;width:@product.ImageWidth;"/></a>
                 @if (!string.IsNullOrEmpty(@product.PopularityHtml))

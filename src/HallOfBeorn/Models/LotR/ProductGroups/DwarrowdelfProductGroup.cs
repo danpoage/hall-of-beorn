@@ -5,10 +5,10 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.ProductGroups
 {
-    public class TheDwarrowdelfProductGroup : ProductGroup
+    public class DwarrowdelfProductGroup : ProductGroup
     {
-        public TheDwarrowdelfProductGroup()
-            : base("The Dwarrowdelf Cycle")
+        public DwarrowdelfProductGroup()
+            : base("Dwarrowdelf Cycle")
         {
             MainProduct = Product.KhazadDum;
             AddProduct(Product.TheRedhornGate);

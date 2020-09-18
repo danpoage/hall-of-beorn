@@ -99,5 +99,10 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             get { return cardViewModels; }
         }
+
+        public IEnumerable<ScenarioViewModel> Scenarios()
+        {
+            return product.Scenarios().Select(sc => new ScenarioViewModel(sc, null, null, null, null));
+        }
     }
 }

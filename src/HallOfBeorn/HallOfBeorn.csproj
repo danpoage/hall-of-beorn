@@ -798,7 +798,7 @@
     <Compile Include="Models\LotR\Products\AdventurePack\TheDeadMarshesProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\TheDruadanForestProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\TheDunlandTrapProduct.cs" />
-    <Compile Include="Models\LotR\ProductGroups\TheDwarrowdelfProductGroup.cs" />
+    <Compile Include="Models\LotR\ProductGroups\DwarrowdelfProductGroup.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheHillsOfEmynMuilNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\TheHillsOfEmynMuilProduct.cs" />
     <Compile Include="Models\LotR\Products\Saga\TheHobbitOnTheDoorstepProduct.cs" />
