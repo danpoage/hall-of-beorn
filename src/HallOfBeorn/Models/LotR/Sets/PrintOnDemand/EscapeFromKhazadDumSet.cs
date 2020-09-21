@@ -45,7 +45,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithOppositeTextLine("During the travel phase, the players must travel, if able.")
                 .WithBackArtist(Artist.Ben_Zweifel)
                 .WithInfo(5, 1, Artist.Cristi_Balanescu);
-            addQuest("Nearing the Gate", EncounterSet.EscapeFromKhazadDum, 2, 'A', 10)
+            addQuest("Nearing the Gate", EncounterSet.EscapeFromKhazadDum, 3, 'A', 10)
                 .WithOppositeTitle("The Bridge of Khazad-dûm")
                 .WithFlavorLine("Your spirits rise as you are drawing near to the East Gate of Moria. But then a huge, dark shape rises in front of you and bursts into flames: a Balrog! Durin's Bane blocks your escape.")
                 .WithTextLine("When Revealed: Add the set-aside Durin's Bane to the staging area. It cannot take damage this round. If there is more than 1 player, it makes an immediate attack against the first player.")
@@ -54,7 +54,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithOppositeTextLine("If this stage has damage on it equal to or greater than its quest points, the players lose the game. If this stage is defeated the players win the game.")
                 .WithBackArtist(Artist.Silver_Saaremael)
                 .WithInfo(7, 1, Artist.Ben_Zweifel);
-            addQuest("Nearing the Gate", EncounterSet.EscapeFromKhazadDum, 2, 'A', 15)
+            addQuest("Nearing the Gate", EncounterSet.EscapeFromKhazadDum, 3, 'A', 15)
                 .WithOppositeTitle("Last Lord of Moria")
                 .WithFlavorLine("Your spirits rise as you are drawing near to the East Gate of Moria. But then a huge, dark shape rises in front of you and bursts into flames: a Balrog! Durin's Bane blocks your escape.")
                 .WithTextLine("When Revealed: Add the set-aside Durin's Bane to the staging area. It cannot take damage this round. If there is more than 1 player, it makes an immediate attack against the first player.")
@@ -63,7 +63,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithOppositeTextLine("This stage cannot be defeated while Durin's Bane is in play. If the players defeat this stage, they win the game.")
                 .WithBackArtist(Artist.Dmitry_Burmak)
                 .WithInfo(8, 1, Artist.Ben_Zweifel);
-            addQuest("Nearing the Gate", EncounterSet.EscapeFromKhazadDum, 2, 'A', 20)
+            addQuest("Nearing the Gate", EncounterSet.EscapeFromKhazadDum, 3, 'A', 20)
                 .WithOppositeTitle("The Reat Guard")
                 .WithFlavorLine("Your spirits rise as you are drawing near to the East Gate of Moria. But then a huge, dark shape rises in front of you and bursts into flames: a Balrog! Durin's Bane blocks your escape.")
                 .WithTextLine("When Revealed: Add the set-aside Durin's Bane to the staging area. It cannot take damage this round. If there is more than 1 player, it makes an immediate attack against the first player.")
