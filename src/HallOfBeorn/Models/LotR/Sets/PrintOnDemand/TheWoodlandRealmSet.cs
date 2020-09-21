@@ -21,7 +21,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
             addHero("Éowyn", 9, Sphere.Spirit, 4, 1, 1, 3)
                 .WithTraits("Noble.", "Rohan.")
                 .WithText("Action: Discard 1 card from your hand to give Éowyn +1 Willpower until the end of the phase. This effect may be triggered by each player once each round.")
-                .WithInfo(7, 1, Artist.Audrey_Hotte);
+                .WithInfo(0, 1, Artist.Audrey_Hotte);
 
             addQuest("Captured by Spiders", setName, 1, 'A', 10)
                 .WithFlavor("You are traveling through Mirkwood forest in search of The Elvenking's hidden halls, when you hear a desperate cry for help from a dark path of woods.")
@@ -123,9 +123,9 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithText("When Revealed: The opposing team chooses a questing character. Remove that character from the quest.")
                 .WithShadow("Shadow: Shuffle Black Forest Bats into the encounter deck.")
                 .WithInfo(18, 2, Artist.Aurelien_Hubert);
-            addLocation("Enchanted Steam", emptySetName, 2, 6)
+            addLocation("Enchanted Stream", emptySetName, 2, 6)
                 .WithSetNumberAndCost(3, 3)
-                .WithText("While Enchanted Steam is in the staging area, progress cannot be placed on the main quest.\r\nTravel: Each player exhausts a hero he controls. Those heroes cannot ready while Enchanted Stream is the active location.")
+                .WithText("While Enchanted Stream is in the staging area, progress cannot be placed on the main quest.\r\nTravel: Each player exhausts a hero he controls. Those heroes cannot ready while Enchanted Stream is the active location.")
                 .WithInfo(19, 1, Artist.Ben_Zweifel);
             addTreachery("Exhaustion", emptySetName)
                 .WithSetNumberAndCost(3, 0)
@@ -154,11 +154,12 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithText("When Revealed: If there is another Orc enemy in the staging area, Wolf Rider gains surge.")
                 .WithShadow("Shadow: If attacking enemy is an Orc, put Wolf Rider into play engaged with you.")
                 .WithInfo(24, 3, Artist.Alexandru_Sabo);
-            addLocation("The Goblins' Cave", emptySetName, 3, 5)
+            addLocation("The Goblins' Caves", emptySetName, 3, 5)
                 .WithSetNumberAndCost(5, 2)
                 .WithUnique()
                 .WithTraits("Mountain.", "Cave.")
-                .WithText("While The Goblins' Cave is in the staging area, each Orc enemy gets +1 Attack.\r\nForced: When The Goblin's Cave is explored, the opposing team searches the encounter deck and discard pile for a non-unique Orc enemy and adds it to the staging area.")
+                .WithTextLine("While The Goblins' Caves is in the staging area, each Orc enemy gets +1 Attack.")
+                .WithTextLine("Forced: When The Goblin's Caves is explored, the opposing team searches the encounter deck and discard pile for a non-unique Orc enemy and adds it to the staging area.")
                 .WithInfo(25, 1, Artist.David_Demaret);
             addTreachery("Driven by Shadow", emptySetName)
                 .WithSetNumberAndCost(5, 1)
