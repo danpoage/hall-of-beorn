@@ -64,7 +64,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithBackArtist(Artist.Dmitry_Burmak)
                 .WithInfo(8, 1, Artist.Ben_Zweifel);
             addQuest("Nearing the Gate", EncounterSet.EscapeFromKhazadDum, 3, 'A', 20)
-                .WithOppositeTitle("The Reat Guard")
+                .WithOppositeTitle("The Rear Guard")
                 .WithFlavorLine("Your spirits rise as you are drawing near to the East Gate of Moria. But then a huge, dark shape rises in front of you and bursts into flames: a Balrog! Durin's Bane blocks your escape.")
                 .WithTextLine("When Revealed: Add the set-aside Durin's Bane to the staging area. It cannot take damage this round. If there is more than 1 player, it makes an immediate attack against the first player.")
                 .WithOppositeTextLine("Each player's threat cannot be reduced by player card effects.")
@@ -328,7 +328,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithTraits("Creature.")
                 .WithTextLine("Forced: After ~Nameless Thing enters play, the first player attaches the top card of his deck to it faceup as a guarded attached. ~Nameless Thing gets +X Threat, +X Attack, and +X Defense, where X is that card's printed cost. When ~Nameless Thing leaves play, discard that card.")
                 .WithInfo(51, 2, Artist.Timo_Karhula);
-            addLocation("Mitril Lode", emptySetName, 3, 5)
+            addLocation("Mithril Lode", emptySetName, 3, 5)
                 .WithSetNumberAndCost(28, 0)
                 .WithTraits("Underground.")
                 .WithTextLine("While Mitril Lode is the active location, it gains: \"Response: When Mithril Lode is explored, each player adds 1 resource to the resource pool of a hero he controls.")
