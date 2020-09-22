@@ -92,7 +92,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
             addShipEnemy("Ramming Ship", EncounterSet.TheHuntForTheDreadnaught, 28, 4, 4, 3, 8)
                 .WithTraits("Corsair.", "Ship.")
                 .WithTextLine("Cannot have attachments.")
-                .WithTextLine("Forced: After Ramming ~Ship engaged you, it gets +4 Attack until the end of the round.")
+                .WithTextLine("Forced: After Ramming ~Ship engages you, it gets +4 Attack until the end of the round.")
                 .WithShadow("Shadow: Put the top card of the Corsair deck into play engaged with you and deal it 1 shadow card.")
                 .WithInfo(30, 2, Artist.Igor_Artyomenko);
 
