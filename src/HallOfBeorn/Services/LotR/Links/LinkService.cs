@@ -402,7 +402,7 @@ namespace HallOfBeorn.Services.LotR.Links
         private IEnumerable<LotRCard> GetCards(Func<IEnumerable<LotRCard>> generator)
         {
             return generator()
-                .Where(card => card.CardSet.SetType != SetType.CUSTOM)
+                .Where(card => card.CardSet.SetType != SetType.COMMUNITY)
                 .OrderByDescending(card => card.ImportanceScore())
                 .ThenBy(card => card.Title)
                 .ThenBy(card => card.Sphere);
@@ -412,7 +412,7 @@ namespace HallOfBeorn.Services.LotR.Links
         {
             return cardRepository.Cards()
                 .Where(card => card.Title.ContainsLower(name)
-                    && card.CardSet.SetType != SetType.CUSTOM)
+                    && card.CardSet.SetType != SetType.COMMUNITY)
                 .OrderByDescending(card => card.ImportanceScore())
                 .ThenBy(card => card.Title)
                 .ThenBy(card => card.Sphere);

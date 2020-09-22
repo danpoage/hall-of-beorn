@@ -24,7 +24,8 @@ namespace HallOfBeorn.Models.Digital
         public string Abbreviation { get; protected set; }
         
         public DigitalProduct MainProduct { get; protected set; }
-        
+        public DigitalProduct SecondProduct { get; protected set; }
+
         public IEnumerable<DigitalProduct> ChildProducts
         {
             get { return childProducts; }

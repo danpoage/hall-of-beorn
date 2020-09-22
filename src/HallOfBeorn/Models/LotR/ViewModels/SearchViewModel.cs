@@ -896,7 +896,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
             return false;*/
 
-            return card.CardSet.SetType == Models.SetType.CUSTOM;
+            return card.CardSet.SetType == Models.SetType.COMMUNITY;
         }
 
         public bool VictoryPointsMatch(LotRCard card)

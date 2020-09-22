@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
             Abbreviation = "EfKD-PRM";
             Number = 8;
             SetType = Models.SetType.Preorder_Promotion;
-            Cycle = "GenCon";
+            Cycle = "Custom Scenario Kit";
 
             addQuest("Search for an Exit", EncounterSet.EscapeFromKhazadDum, 2, 'A', 20)
                 .WithOppositeTitle("A Way Up")

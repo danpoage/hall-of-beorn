@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Sets.FirstAge
             Name = setName;
             Abbreviation = "TUtM";
             Number = 9002;
-            SetType = Models.SetType.CUSTOM;
+            SetType = Models.SetType.COMMUNITY;
             Cycle = "Doom Mastered";
 
             Cards.Add(LotRCard.Objective("Deeds of Daring", "", setName)

@@ -16,6 +16,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 MainProduct = new ProductViewModel(productGroup.MainProduct, getPopularity);
             }
 
+            if (productGroup.SecondProduct != null)
+            {
+                SecondProduct = new ProductViewModel(productGroup.SecondProduct, getPopularity);
+            }
+
             ChildProducts = new List<ProductViewModel>();
 
             foreach (var product in productGroup.ChildProducts)
@@ -26,6 +31,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public string Name { get; private set; }
         public ProductViewModel MainProduct { get; private set; }
+        public ProductViewModel SecondProduct { get; private set; }
         public List<ProductViewModel> ChildProducts { get; private set; }
     }
 }

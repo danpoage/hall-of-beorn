@@ -12,8 +12,8 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
             Name = "Fog on the Barrow-downs";
             Abbreviation = "FotBD";
             Number = 3005;
-            SetType = Models.SetType.Fellowship_Deck;
-            Cycle = "GenCon";
+            SetType = Models.SetType.FellowshipSaga_Deck;
+            Cycle = "Fellowship";
 
             Cards.Add(new LotRCard()
             {

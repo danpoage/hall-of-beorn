@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
+namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
 {
     public class TheMinesOfMoriaSet
         : CardSet
@@ -15,8 +15,8 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
         {
             Name = setName;
             Abbreviation = "TMoM";
-            SetType = Models.SetType.Fellowship_Deck;
-            Cycle = "GenCon";
+            SetType = Models.SetType.Custom_Scenario_Kit;
+            Cycle = "Custom Scenario Kit";
             Number = 3011;
 
             addHero("Bilbo Baggins", 9, Sphere.Lore, 1, 1, 2, 2)

@@ -1,30 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace HallOfBeorn.Models.LotR.ProductGroups
 {
     public class GenConDeckProductGroup : ProductGroup
     {
         public GenConDeckProductGroup()
-            : base("Gen Con & Fellowship Decks")
+            : base("Gen Con Decks")
         {
             AddProduct(Product.TheMassingAtOsgiliath);
             AddProduct(Product.TheBattleOfLakeTown);
             AddProduct(Product.TheStoneOfErech);
             AddProduct(Product.TheOldForest);
-            AddProduct(Product.FogOnTheBarrowDowns);
             AddProduct(Product.TheRuinsOfBelegost);
-            AddProduct(Product.MurderAtThePrancingPony);
-            AddProduct(Product.TheSiegeOfAnnuminas);
-            AddProduct(Product.AssaultOnDolGuldur);
-            AddProduct(Product.TheWizardsQuest);
-            AddProduct(Product.TheWoodlandRealm);
-            AddProduct(Product.TheMinesOfMoria);
-            AddProduct(Product.TheMinesOfMoriaPreorderPromotion);
-            AddProduct(Product.EscapeFromKhazadDum);
-            AddProduct(Product.EscapeFromKhazadDumPreorderPromotion);
         }
     }
 }

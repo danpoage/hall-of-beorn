@@ -8,16 +8,19 @@
         Core,
         Adventure_Pack,
         Deluxe_Expansion,
+        SAGA,
         Saga_Expansion,
+        GenConSaga_Expansion,
+        FellowshipSaga_Deck,
         Starter,
         Preorder_Promotion,
-        Scenario_Deck,
+        Custom_Scenario_Kit,
+        Scenario_Pack,
         PRINT_ON_DEMAND,
         GenCon_Expansion,
-        GenConSaga_Expansion,
         Nightmare_Expansion,
         Fellowship_Deck,
         Non_Nightmare,
-        CUSTOM
+        COMMUNITY
     }
 }

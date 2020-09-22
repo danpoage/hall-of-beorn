@@ -24,9 +24,10 @@ namespace HallOfBeorn.Services.LotR
             productGroups.Add(ProductGroup.VengeanceOfMordor);
             productGroups.Add(ProductGroup.TheHobbitSaga);
             productGroups.Add(ProductGroup.TheLordOfTheRingsSaga);
-            productGroups.Add(ProductGroup.Starter);
             productGroups.Add(ProductGroup.GenConDeck);
-            productGroups.Add(ProductGroup.ScenarioDeck);
+            productGroups.Add(ProductGroup.FellowshipDeck);
+            productGroups.Add(ProductGroup.CustomScenarioKits);
+            productGroups.Add(ProductGroup.ScenarioPack);
             productGroups.Add(ProductGroup.NightmareDeck);
             productGroups.Add(ProductGroup.DoomMastered);
         }
@@ -45,6 +46,11 @@ namespace HallOfBeorn.Services.LotR
                 if (group.MainProduct != null)
                 {
                     yield return group.MainProduct;
+                }
+
+                if (group.SecondProduct != null)
+                {
+                    yield return group.SecondProduct;
                 }
 
                 foreach (var product in group.ChildProducts)

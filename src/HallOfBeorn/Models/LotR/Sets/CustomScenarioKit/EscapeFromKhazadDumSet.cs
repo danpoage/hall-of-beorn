@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
+namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
 {
     public class EscapeFromKhazadDumSet
         : CardSet
@@ -12,8 +12,8 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
         {
             Name = setName;
             Abbreviation = "EfKD";
-            SetType = Models.SetType.Fellowship_Deck;
-            Cycle = "GenCon";
+            SetType = Models.SetType.Custom_Scenario_Kit;
+            Cycle = "Custom Scenario Kit";
             Number = 3012;
 
             addQuest("Out of the Depths", EncounterSet.EscapeFromKhazadDum, 1, 'A', 10)

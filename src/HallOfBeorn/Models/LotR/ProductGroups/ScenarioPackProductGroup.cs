@@ -2,11 +2,11 @@
 
 namespace HallOfBeorn.Models.LotR.ProductGroups
 {
-    public class ScenarioDeckProductGroup
+    public class ScenarioPackProductGroup
         : ProductGroup
     {
-        public ScenarioDeckProductGroup()
-            : base("Scenario Decks")
+        public ScenarioPackProductGroup()
+            : base("Scenario Packs")
         {
             AddProduct(Product.TheHuntForTheDreadnaught);
         }

@@ -302,13 +302,16 @@ namespace HallOfBeorn.Services.LotR.Scenarios
         public bool HasSetType(LotRCard card, SetType? setType)
         {
             if (!setType.HasValue || setType.Value == SetType.None || setType.Value == SetType.OFFICIAL)
-                return card.CardSet.SetType != SetType.CUSTOM;
+                return card.CardSet.SetType != SetType.COMMUNITY;
 
             if (setType.Value == SetType.ALL_SETS)
                 return true;
 
             if (setType.Value == SetType.PRINT_ON_DEMAND)
-                return card.CardSet.SetType == SetType.Fellowship_Deck || card.CardSet.SetType == SetType.GenCon_Expansion || card.CardSet.SetType == SetType.GenConSaga_Expansion || card.CardSet.SetType == SetType.Nightmare_Expansion;
+                return card.CardSet.SetType == SetType.Fellowship_Deck || card.CardSet.SetType == SetType.GenCon_Expansion || card.CardSet.SetType == SetType.GenConSaga_Expansion || card.CardSet.SetType == SetType.Nightmare_Expansion || card.CardSet.SetType == SetType.Custom_Scenario_Kit || card.CardSet.SetType == SetType.FellowshipSaga_Deck;
+
+            if (setType.Value == SetType.SAGA)
+                return card.CardSet.SetType == SetType.Saga_Expansion || card.CardSet.SetType == SetType.GenConSaga_Expansion || card.CardSet.SetType == SetType.FellowshipSaga_Deck;
 
             if (setType.Value == SetType.Non_Nightmare)
                 return card.CardSet.SetType != SetType.Nightmare_Expansion;

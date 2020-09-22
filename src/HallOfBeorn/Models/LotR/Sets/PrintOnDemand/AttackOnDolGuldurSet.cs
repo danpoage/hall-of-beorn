@@ -16,7 +16,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
             AlternateName = alternateName;
             Abbreviation = "AoDG";
             SetType = Models.SetType.Fellowship_Deck;
-            Cycle = "GenCon";
+            Cycle = "Fellowship";
             Number = 3008;
 
             addCard(LotRCard.Quest("Assault on the Golden Wood", 1, setName, 255)

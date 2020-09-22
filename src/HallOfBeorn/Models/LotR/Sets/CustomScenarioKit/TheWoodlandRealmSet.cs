@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
-namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
+namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
 {
     public class TheWoodlandRealmSet : CardSet
     {
@@ -14,8 +11,8 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
         {
             Name = setName;
             Abbreviation = "TWR";
-            SetType = Models.SetType.Fellowship_Deck;
-            Cycle = "GenCon";
+            SetType = Models.SetType.Custom_Scenario_Kit;
+            Cycle = "Custom Scenario Kit";
             Number = 3010;
 
             addHero("Éowyn", 9, Sphere.Spirit, 4, 1, 1, 3)

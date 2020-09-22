@@ -65,28 +65,31 @@ else
         if (productGroup.MainProduct != null)
         {
             <div style="text-align:center;margin-top:20px;">
-                <a title="@productGroup.MainProduct.Name (@productGroup.MainProduct.Code)" href="@productGroup.MainProduct.Link"><img src="@productGroup.MainProduct.ImagePath" style="height:@productGroup.MainProduct.ImageHeight;width:@productGroup.MainProduct.ImageWidth;"/></a>
-                @if (!string.IsNullOrEmpty(productGroup.MainProduct.PopularityHtml))
-                {
-                    <div>
-                    @Html.Raw(productGroup.MainProduct.PopularityHtml)
-                    </div>
-                } 
-                @*
-                @if (productGroup.MainProduct.HasBuyLink) {
-                    @Html.Raw(@productGroup.MainProduct.BuyLink);
-                }
-                *@
-                @*
-                <div style="margin-top:4px;margin-bottom:4px;">
-                    @foreach (var scenario in productGroup.MainProduct.Scenarios)
+                <div style="display:inline-block">
+                    <a title="@productGroup.MainProduct.Name (@productGroup.MainProduct.Code)" href="@productGroup.MainProduct.Link"><img src="@productGroup.MainProduct.ImagePath" style="height:@productGroup.MainProduct.ImageHeight;width:@productGroup.MainProduct.ImageWidth;"/></a>
+                    @if (!string.IsNullOrEmpty(productGroup.MainProduct.PopularityHtml))
                     {
-                        <div><a title="@scenario.Title" href="@scenario.Link">@scenario.Title</a></div>
-                    }
-                </div>*@
+                        <div>
+                        @Html.Raw(productGroup.MainProduct.PopularityHtml)
+                        </div>
+                    } 
+                </div>
+                
+                @if (productGroup.SecondProduct != null)
+                {
+                    <div style="display:inline-block;margin-left:20px;">
+                        <a title="@productGroup.SecondProduct.Name (@productGroup.SecondProduct.Code)" href="@productGroup.SecondProduct.Link"><img src="@productGroup.SecondProduct.ImagePath" style="height:@productGroup.SecondProduct.ImageHeight;width:@productGroup.SecondProduct.ImageWidth;"/></a>
+                        @if (!string.IsNullOrEmpty(productGroup.SecondProduct.PopularityHtml))
+                        {
+                            <div>
+                            @Html.Raw(productGroup.SecondProduct.PopularityHtml)
+                            </div>
+                        }
+                    </div>
+                }
             </div>
         }
-    
+        
         <div style="text-align:center;"><h3>@productGroup.Name</h3></div>
     
         <div style="text-align:center;">

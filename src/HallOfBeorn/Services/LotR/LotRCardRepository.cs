@@ -33,17 +33,17 @@ namespace HallOfBeorn.Services.LotR
 
         public IEnumerable<LotRCard> OfficialPlayerCards()
         {
-            return Cards().Where(card => card.CardType.IsPlayerCard() && card.CardSet.SetType != Models.SetType.CUSTOM);
+            return Cards().Where(card => card.CardType.IsPlayerCard() && card.CardSet.SetType != Models.SetType.COMMUNITY);
         }
 
         public IEnumerable<LotRCard> OfficialEncounterCards()
         {
-            return Cards().Where(card => card.CardType.IsEncounterCard() && card.CardSet.SetType != Models.SetType.CUSTOM);
+            return Cards().Where(card => card.CardType.IsEncounterCard() && card.CardSet.SetType != Models.SetType.COMMUNITY);
         }
 
         public IEnumerable<LotRCard> OfficialQuestCards()
         {
-            return Cards().Where(card => card.CardType.IsQuestCard() && card.CardSet.SetType != Models.SetType.CUSTOM);
+            return Cards().Where(card => card.CardType.IsQuestCard() && card.CardSet.SetType != Models.SetType.COMMUNITY);
         }
     }
 }

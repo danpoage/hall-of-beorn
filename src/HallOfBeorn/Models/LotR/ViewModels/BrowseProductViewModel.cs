@@ -79,6 +79,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                         return "Two Player Limited Edition Stater";
                     case SetType.GenConSaga_Expansion:
                         return "GenCon Saga Expansion";
+                    case SetType.FellowshipSaga_Deck:
+                        return "Fellowship Saga Deck";
                     default:
                         return firstType.ToString().Replace("_", " ");
                 }

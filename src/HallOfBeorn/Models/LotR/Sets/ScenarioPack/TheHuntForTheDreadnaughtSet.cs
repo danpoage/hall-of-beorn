@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
+namespace HallOfBeorn.Models.LotR.Sets.ScenarioPack
 {
     public class TheHuntForTheDreadnaughtSet
         : CardSet
@@ -14,8 +14,8 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
         {
             Name = setName;
             Abbreviation = "THftD";
-            SetType = Models.SetType.Scenario_Deck;
-            Cycle = "Scenario Deck";
+            SetType = Models.SetType.Scenario_Pack;
+            Cycle = "Scenario Pack";
             Number = 4001;
 
             IsSpoiler = true;

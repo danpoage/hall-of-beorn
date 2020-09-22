@@ -18,7 +18,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
             Abbreviation = "TPLES";
             Number = 201;
             SetType = Models.SetType.Starter;
-
+            
             addHero("Aragorn", 12, Sphere.Leadership, 2, 3, 2, 5)
                 .WithTraits("Dúnedain.", "Noble.", "Ranger.")
                 .WithKeywords("Sentinel.")

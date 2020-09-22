@@ -15,7 +15,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
             Name = setName;
             Abbreviation = "MatPP";
             SetType = Models.SetType.Fellowship_Deck;
-            Cycle = "GenCon";
+            Cycle = "Fellowship";
             Number = 3006;
 
             Cards.Add(LotRCard.Hero("Legolas", "", Sphere.Tactics, 9, 1, 3, 1, 4)

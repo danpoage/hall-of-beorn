@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
             Name = setName;
             Abbreviation = "TSoA";
             SetType = Models.SetType.Fellowship_Deck;
-            Cycle = "GenCon";
+            Cycle = "Fellowship";
             Number = 3007;
 
             Cards.Add(LotRCard.GenConSetup("Standard Game Mode", setName)

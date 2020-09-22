@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models
         where TCard : ICard
     {
         TProduct MainProduct { get; }
+        TProduct SecondProduct { get; }
         IEnumerable<TProduct> ChildProducts { get; }
     }
 }

@@ -57,9 +57,11 @@ namespace HallOfBeorn.Models.LotR
         }
 
         #region Static Members
-        //The Core Set and Shadows of Mirkwood Cycle
+        //The Core Set and Two-Player Limited Edition Starter
         public static Product CoreSet = new Products.Core.CoreSetProduct();
+        public static Product TwoPlayerLimitedEditionStarter = new Products.Starter.TwoPlayerLimitedEditionStarterProduct();
         
+        //Shadows of Mirkwood Cycle
         public static Product TheHuntForGollum = new Products.AdventurePack.TheHuntForGollumProduct();
         public static Product ConflictAtTheCarrock = new Products.AdventurePack.ConflictAtTheCarrockProduct();
         public static Product AJourneyToRhosgobel = new Products.AdventurePack.AJourneyToRhosgobelProduct();
@@ -161,28 +163,29 @@ namespace HallOfBeorn.Models.LotR
         public static Product TheFlameOfTheWest = new Products.Saga.TheFlameOfTheWestProduct();
         public static Product TheMountainOfFire = new Products.Saga.TheMountainOfFireProduct();
 
-        //Starter
-        public static Product TwoPlayerLimitedEditionStarter = new Products.Starter.TwoPlayerLimitedEditionStarterProduct();
+        //GenCon Decks
+        public static Product TheMassingAtOsgiliath = new Products.GenCon.TheMassingAtOsgiliathProduct();
+        public static Product TheBattleOfLakeTown = new Products.GenCon.TheBattleOfLakeTownProduct();
+        public static Product TheStoneOfErech = new Products.GenCon.TheStoneOfErechProduct();
+        public static Product TheOldForest = new Products.GenCon.TheOldForestProduct();
+        public static Product TheRuinsOfBelegost = new Products.GenCon.TheRuinsOfBelegostProduct();
 
-        //GenCon and Fellowship Event Decks
-        public static Product TheMassingAtOsgiliath = new Products.PrintOnDemand.TheMassingAtOsgiliathProduct();
-        public static Product TheBattleOfLakeTown = new Products.PrintOnDemand.TheBattleOfLakeTownProduct();
-        public static Product TheStoneOfErech = new Products.PrintOnDemand.TheStoneOfErechProduct();
-        public static Product TheOldForest = new Products.PrintOnDemand.TheOldForestProduct();
-        public static Product FogOnTheBarrowDowns = new Products.PrintOnDemand.FogOnTheBarrowDownsProduct();
-        public static Product TheRuinsOfBelegost = new Products.PrintOnDemand.TheRuinsOfBelegostProduct();
-        public static Product MurderAtThePrancingPony = new Products.PrintOnDemand.MurderAtThePrancingPonyProduct();
-        public static Product TheSiegeOfAnnuminas = new Products.PrintOnDemand.TheSiegeOfAnnuminasProduct();
-        public static Product AssaultOnDolGuldur = new Products.PrintOnDemand.AttackOnDolGuldurProduct();
-        public static Product TheWizardsQuest = new Products.PrintOnDemand.TheWizardsQuestProduct();
-        public static Product TheWoodlandRealm = new Products.PrintOnDemand.TheWoodlandRealmProduct();
-        public static Product TheMinesOfMoria = new Products.PrintOnDemand.TheMinesOfMoriaProduct();
+        //Fellowship Decks
+        public static Product FogOnTheBarrowDowns = new Products.Fellowship.FogOnTheBarrowDownsProduct();
+        public static Product MurderAtThePrancingPony = new Products.Fellowship.MurderAtThePrancingPonyProduct();
+        public static Product TheSiegeOfAnnuminas = new Products.Fellowship.TheSiegeOfAnnuminasProduct();
+        public static Product AssaultOnDolGuldur = new Products.Fellowship.AttackOnDolGuldurProduct();
+
+        //Custom Scenario Kits
+        public static Product TheWizardsQuest = new Products.CustomScenarioKit.TheWizardsQuestProduct();
+        public static Product TheWoodlandRealm = new Products.CustomScenarioKit.TheWoodlandRealmProduct();
+        public static Product TheMinesOfMoria = new Products.CustomScenarioKit.TheMinesOfMoriaProduct();
         public static Product TheMinesOfMoriaPreorderPromotion = new Products.PreorderPromotion.TheMinesOfMoriaPreorderPromotionProduct();
-        public static Product EscapeFromKhazadDum = new Products.PrintOnDemand.EscapeFromKhazadDumProduct();
+        public static Product EscapeFromKhazadDum = new Products.CustomScenarioKit.EscapeFromKhazadDumProduct();
         public static Product EscapeFromKhazadDumPreorderPromotion = new Products.PreorderPromotion.EscapeFromKhazadDumPreorderPromotionProduct();
 
-        //Scenario Decks
-        public static Product TheHuntForTheDreadnaught = new Products.ScenarioDeck.TheHuntForTheDreadnaughtProduct();
+        //Scenario Packs
+        public static Product TheHuntForTheDreadnaught = new Products.ScenarioPack.TheHuntForTheDreadnaughtProduct();
 
         //Nightmare Decks
         public static Product PassageThroughMirkwoodNightmare = new Products.Nightmare.PassageThroughMirkwoodNightmareProduct();
@@ -246,7 +249,7 @@ namespace HallOfBeorn.Models.LotR
         public static Product TheTreasonOfSarumanNightmare = new Products.Nightmare.TheTreasonOfSarumanNightmareProduct();
         public static Product TheLandOfShadowNightmare = new Products.Nightmare.TheLandOfShadowNightmareProduct();
 
-        //Custom Expansions
+        //Community Expansions
         public static Product FirstAge = new Products.Custom.FirstAgeProduct();
         public static Product TrialUponTheMarches = new Products.Custom.TrialUponTheMarchesProduct();
         public static Product AmongTheOutlaws = new Products.Custom.AmongTheOutlawsProduct();

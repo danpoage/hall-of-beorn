@@ -326,6 +326,7 @@ namespace HallOfBeorn.Models.LotR
         static CardSet()
         {
             Add(CoreSet);
+            Add(TwoPlayerLimitedEditionStarter);
             Add(TheHuntForGollum);
             Add(ConflictAtTheCarrock);
             Add(AJourneyToRhosgobel);
@@ -413,26 +414,31 @@ namespace HallOfBeorn.Models.LotR
             Add(TheFlameOfTheWest);
             Add(TheMountainOfFire);
 
-            Add(TwoPlayerLimitedEditionStarter);
-
+            //GenCon
             Add(TheMassingAtOsgiliath);
             Add(TheBattleOfLakeTown);
             Add(TheStoneOfErech);
+            Add(TheOldForest);
             Add(TheRuinsOfBelegost);
 
-            Add(TheOldForest);
+            //Fellowship
             Add(FogOnTheBarrowDowns);
             Add(MurderAtThePrancingPony);
             Add(TheSiegeOfAnnuminas);
             Add(AttackOnDolGuldur);
+
+            //Custom Scenario Kits
             Add(TheWizardsQuest);
             Add(TheWoodlandRealm);
             Add(TheMinesOfMoria);
             Add(TheMinesOfMoriaPreorderPromotion);
             Add(EscapeFromKhazadDum);
             Add(EscapeFromKhazadDumPreorderPromotion);
+
+            //Scenario Packs
             Add(TheHuntForTheDreadnaught);
 
+            //Nightmare
             Add(PassageThroughMirkwoodNightmare);
             Add(JourneyAlongTheAnduinNightmare);
             Add(EscapeFromDolGuldurNightmare);
@@ -528,6 +534,7 @@ namespace HallOfBeorn.Models.LotR
 
         #region Static Members
         public static CardSet CoreSet = new Sets.Core.CoreSet();
+        public static CardSet TwoPlayerLimitedEditionStarter = new Sets.Starter.TwoPlayerLimitedEditionStarterSet();
         public static CardSet TheHuntForGollum = new Sets.ShadowsOfMirkwood.TheHuntForGollumSet();
         public static CardSet ConflictAtTheCarrock = new Sets.ShadowsOfMirkwood.ConflictAtTheCarrockSet();
         public static CardSet AJourneyToRhosgobel = new Sets.ShadowsOfMirkwood.AJourneyToRhosgobelSet();
@@ -615,21 +622,20 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheFlameOfTheWest = new Sets.TheLordOfTheRings.TheFlameOfTheWestSet();
         public static CardSet TheMountainOfFire = new Sets.TheLordOfTheRings.TheMountainOfFire();
 
-        public static CardSet TwoPlayerLimitedEditionStarter = new Sets.Starter.TwoPlayerLimitedEditionStarterSet();
-
         public static CardSet TheMassingAtOsgiliath = new Sets.PrintOnDemand.TheMassingatOsgiliath();
         public static CardSet TheBattleOfLakeTown = new Sets.PrintOnDemand.TheBattleofLakeTown();
         public static CardSet TheStoneOfErech = new Sets.PrintOnDemand.TheStoneofErech();
         public static CardSet TheRuinsOfBelegost = new Sets.PrintOnDemand.TheRuinsOfBelegost();
         public static CardSet TheSiegeOfAnnuminas = new Sets.PrintOnDemand.TheSiegeOfAnnuminas();
         public static CardSet AttackOnDolGuldur = new Sets.PrintOnDemand.AttackOnDolGuldurSet();
-        public static CardSet TheWizardsQuest = new Sets.PrintOnDemand.TheWizardsQuestSet();
-        public static CardSet TheWoodlandRealm = new Sets.PrintOnDemand.TheWoodlandRealmSet();
-        public static CardSet TheMinesOfMoria = new Sets.PrintOnDemand.TheMinesOfMoriaSet();
+        public static CardSet TheWizardsQuest = new Sets.CustomScenarioKit.TheWizardsQuestSet();
+        public static CardSet TheWoodlandRealm = new Sets.CustomScenarioKit.TheWoodlandRealmSet();
+        public static CardSet TheMinesOfMoria = new Sets.CustomScenarioKit.TheMinesOfMoriaSet();
         public static CardSet TheMinesOfMoriaPreorderPromotion = new Sets.PreorderPromotion.TheMinesOfMoriaPreorderPromotionSet();
-        public static CardSet EscapeFromKhazadDum = new Sets.PrintOnDemand.EscapeFromKhazadDumSet();
+        public static CardSet EscapeFromKhazadDum = new Sets.CustomScenarioKit.EscapeFromKhazadDumSet();
         public static CardSet EscapeFromKhazadDumPreorderPromotion = new Sets.PreorderPromotion.EscapeFromKhazadDumPreorderPromotionSet();
-        public static CardSet TheHuntForTheDreadnaught = new Sets.PrintOnDemand.TheHuntForTheDreadnaughtSet();
+        
+        public static CardSet TheHuntForTheDreadnaught = new Sets.ScenarioPack.TheHuntForTheDreadnaughtSet();
 
         public static CardSet PassageThroughMirkwoodNightmare = new Sets.Core.PassageThroughMirkwoodNightmareSet();
         public static CardSet JourneyAlongTheAnduinNightmare = new Sets.Core.JourneyAlongTheAnduinNightmareSet();

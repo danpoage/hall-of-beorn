@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.LotR.Sets.FirstAge
             Name = "First Age";
             Abbreviation = "FA";
             Number = 9001;
-            SetType = Models.SetType.CUSTOM;
+            SetType = Models.SetType.COMMUNITY;
 
             Cards.Add(new LotRCard() {
                 Title = "Aredhel",

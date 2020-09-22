@@ -25,6 +25,7 @@ namespace HallOfBeorn.Models.LotR
         public string Abbreviation { get { return Name; } }
 
         public Product MainProduct { get; protected set; }
+        public Product SecondProduct { get; protected set; }
         public IEnumerable<Product> ChildProducts { get { return childProducts; } }
 
         #region Static Members
@@ -39,9 +40,10 @@ namespace HallOfBeorn.Models.LotR
         public static ProductGroup VengeanceOfMordor = new VengeanceOfMordorProductGroup();
         public static ProductGroup TheHobbitSaga = new TheHobbitSagaProductGroup();
         public static ProductGroup TheLordOfTheRingsSaga = new TheLordOfTheRingsSagaProductGroup();
-        public static ProductGroup Starter = new StarterProductGroup();
         public static ProductGroup GenConDeck = new GenConDeckProductGroup();
-        public static ProductGroup ScenarioDeck = new ScenarioDeckProductGroup();
+        public static ProductGroup FellowshipDeck = new FellowshipDeckProductGroup();
+        public static ProductGroup CustomScenarioKits = new CustomScenarioKitProductGroup();
+        public static ProductGroup ScenarioPack = new ScenarioPackProductGroup();
         public static ProductGroup NightmareDeck = new NightmareDeckProductGroup();
         public static ProductGroup DoomMastered = new DoomMasteredProductGroup();
         #endregion

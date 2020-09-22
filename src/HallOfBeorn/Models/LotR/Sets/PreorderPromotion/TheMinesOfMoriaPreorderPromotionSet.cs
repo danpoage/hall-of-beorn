@@ -17,7 +17,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
             Abbreviation = "TMoM-PRM";
             Number = 7;
             SetType = Models.SetType.Preorder_Promotion;
-            Cycle = "GenCon";
+            Cycle = "Custom Scenario Kit";
 
             addQuest("To the West-door", EncounterSet.TheMinesOfMoria, 1, 'A', 5)
                 .WithFlavor("It has been years since there was news of Balin's expedition to Moria, but in recent months there have been rumors of growing darkness there. You traveled to the Mines to investigate these tidings. Upon reaching the Doors of Durin, you are surprised to find a foul-smelling pool at its feet, and a fell creature blocking your way.")

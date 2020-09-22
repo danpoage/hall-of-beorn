@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HallOfBeorn.Models.LotR.Products.ScenarioDeck
+namespace HallOfBeorn.Models.LotR.Products.ScenarioPack
 {
     public class TheHuntForTheDreadnaughtProduct
         : Product

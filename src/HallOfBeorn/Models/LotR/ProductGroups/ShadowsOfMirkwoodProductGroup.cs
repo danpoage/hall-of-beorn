@@ -11,6 +11,7 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
             : base("Shadows of Mirkwood Cycle")
         {
             MainProduct = Product.CoreSet;
+            SecondProduct = Product.TwoPlayerLimitedEditionStarter;
             AddProduct(Product.TheHuntForGollum);
             AddProduct(Product.ConflictAtTheCarrock);
             AddProduct(Product.AJourneyToRhosgobel);
