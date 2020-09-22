@@ -89,7 +89,12 @@ namespace HallOfBeorn.Services.LotR.Stats
             }
 
             byte hitPointsKey = 0; var hitPointsValue = string.Empty;
-            if (card.HitPoints.IsX())
+            if (card.HitPoints.IsAsterisk())
+            {
+                hitPointsKey = Models.Card.VALUE_ASTERISK;
+                hitPointsValue = "*";
+            }
+            else if (card.HitPoints.IsX())
             {
                 hitPointsKey = Models.Card.VALUE_X;
                 hitPointsValue = "X";
@@ -184,18 +189,18 @@ namespace HallOfBeorn.Services.LotR.Stats
         public IEnumerable<string> ThreatCosts()
         {
             return cards
-                .Where(card => !string.IsNullOrEmpty(card.ThreatCost.Description(false)))
+                .Where(card => !string.IsNullOrEmpty(card.ThreatCost.Description(false, false)))
                 .OrderBy(card => card.ThreatCost)
-                .Select(card => card.ThreatCost.Description(false))
+                .Select(card => card.ThreatCost.Description(false, false))
                 .Distinct();
         }
 
         public IEnumerable<string> EngagementCosts()
         {
             return cards
-                .Where(card => !string.IsNullOrEmpty(card.EngagementCost.Description(false)))
+                .Where(card => !string.IsNullOrEmpty(card.EngagementCost.Description(false, false)))
                 .OrderBy(card => card.EngagementCost)
-                .Select(card => card.EngagementCost.Description(false))
+                .Select(card => card.EngagementCost.Description(false, false))
                 .Distinct();
         }
 

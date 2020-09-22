@@ -82,9 +82,14 @@ namespace HallOfBeorn.Services.LotR.Search
             var normalizedTarget = target;
             if (target == "-") {
                 normalizedTarget = "255";
-            } else if (target == "X")
+            }
+            else if (target == "X")
             {
                 normalizedTarget = "254";
+            }
+            else if (target == "*")
+            {
+                normalizedTarget = "253";
             }
 
             byte parsed = 0;
@@ -96,21 +101,67 @@ namespace HallOfBeorn.Services.LotR.Search
             return parsed;
         }
 
+        private static bool normalizedEqualTo(byte? value, byte target)
+        {
+            return value.GetValueOrDefault(255) == target;
+        }
+
+        private static bool normalizedLessThan(byte? value, byte target)
+        {
+            var norm = value.GetValueOrDefault(255);
+            if (norm > 252 || target > 252)
+            {
+                return false;
+            }
+            return norm < target;
+        }
+
+        private static bool normalizedLessThanOrEqualTo(byte? value, byte target)
+        {
+            var norm = value.GetValueOrDefault(255);
+            if (norm > 252 || target > 252)
+            {
+                return norm == target;
+            }
+            return norm <= target;
+        }
+
+        private static bool normalizedGreaterThan(byte? value, byte target)
+        {
+            var norm = value.GetValueOrDefault(255);
+            if (norm > 252 || target > 252)
+            {
+                return false;
+            }
+            return norm > target;
+        }
+
+        private static bool normalizedGreaterThanOrEqualTo(byte? value, byte target)
+        {
+            var norm = value.GetValueOrDefault(255);
+            if (norm > 252 || target > 252)
+            {
+                return norm == target;
+            }
+            return norm >= target;
+        }
+
         private static Func<byte?, byte, bool> getComparison(CardScore score, NumericOperator op)
         {
+            
             switch (op)
             {
                 case NumericOperator.lt:
-                    return (value, target) => value.HasValue && value.Value < target;
+                    return (value, target) => normalizedLessThan(value, target);
                 case NumericOperator.lteq:
-                    return (value, target) => value.HasValue && value.Value <= target;
+                    return (value, target) => normalizedLessThanOrEqualTo(value, target);
                 case NumericOperator.gt:
-                    return (value, target) => value.HasValue && value.Value > target && value.Value < 254;
+                    return (value, target) => normalizedGreaterThan(value, target);
                 case NumericOperator.gteq:
-                    return (value, target) => value.HasValue && value.Value >= target && value.Value < 254;
+                    return (value, target) => normalizedGreaterThanOrEqualTo(value, target);
                 case NumericOperator.eq:
                 default:
-                    return (value, target) => value.HasValue && value.Value == target;
+                    return (value, target) => normalizedEqualTo(value, target);
             }
         }
 

@@ -41,6 +41,7 @@ namespace HallOfBeorn.Models.LotR
         public static ProductGroup TheLordOfTheRingsSaga = new TheLordOfTheRingsSagaProductGroup();
         public static ProductGroup Starter = new StarterProductGroup();
         public static ProductGroup GenConDeck = new GenConDeckProductGroup();
+        public static ProductGroup ScenarioDeck = new ScenarioDeckProductGroup();
         public static ProductGroup NightmareDeck = new NightmareDeckProductGroup();
         public static ProductGroup DoomMastered = new DoomMasteredProductGroup();
         #endregion

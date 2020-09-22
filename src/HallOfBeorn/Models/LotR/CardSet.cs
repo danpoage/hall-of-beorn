@@ -431,6 +431,7 @@ namespace HallOfBeorn.Models.LotR
             Add(TheMinesOfMoriaPreorderPromotion);
             Add(EscapeFromKhazadDum);
             Add(EscapeFromKhazadDumPreorderPromotion);
+            Add(TheHuntForTheDreadnaught);
 
             Add(PassageThroughMirkwoodNightmare);
             Add(JourneyAlongTheAnduinNightmare);
@@ -628,6 +629,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheMinesOfMoriaPreorderPromotion = new Sets.PreorderPromotion.TheMinesOfMoriaPreorderPromotionSet();
         public static CardSet EscapeFromKhazadDum = new Sets.PrintOnDemand.EscapeFromKhazadDumSet();
         public static CardSet EscapeFromKhazadDumPreorderPromotion = new Sets.PreorderPromotion.EscapeFromKhazadDumPreorderPromotionSet();
+        public static CardSet TheHuntForTheDreadnaught = new Sets.PrintOnDemand.TheHuntForTheDreadnaughtSet();
 
         public static CardSet PassageThroughMirkwoodNightmare = new Sets.Core.PassageThroughMirkwoodNightmareSet();
         public static CardSet JourneyAlongTheAnduinNightmare = new Sets.Core.JourneyAlongTheAnduinNightmareSet();

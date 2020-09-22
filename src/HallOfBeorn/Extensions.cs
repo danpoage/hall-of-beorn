@@ -458,6 +458,18 @@ namespace HallOfBeorn
             return self == VALUE_X;
         }
 
+        private const byte VALUE_ASTERISK = 253;
+
+        public static bool IsAsterisk(this byte? self)
+        {
+            return self.GetValueOrDefault(0) == VALUE_ASTERISK;
+        }
+
+        public static bool IsAsterisk(this byte self)
+        {
+            return self == VALUE_ASTERISK;
+        }
+
         private const byte VALUE_NA = 255;
 
         public static bool IsNA(this byte? self)
@@ -477,19 +489,24 @@ namespace HallOfBeorn
 
         public static string Description(this byte? self)
         {
-            return self.Description(self != null && self == 254, "-");
+            return self.Description(self.GetValueOrDefault(0) == 254, self.GetValueOrDefault(0) == 253, "-");
         }
 
-        public static string Description(this byte? self, bool isVariable)
+        public static string Description(this byte? self, bool isVariable, bool isAsterisk)
         {
-            return self.Description(isVariable, string.Empty);
+            return self.Description(isVariable, isAsterisk, string.Empty);
         }
 
-        public static string Description(this byte? self, bool isVariable, string defaultValue)
+        public static string Description(this byte? self, bool isVariable, bool isAsterisk, string defaultValue)
         {
             if (isVariable)
             {
                 return "X";
+            }
+
+            if (isAsterisk)
+            {
+                return "*";
             }
 
             if (!self.HasValue)

@@ -321,6 +321,8 @@ namespace HallOfBeorn.Models.LotR
             }
         }
 
+        public bool HasSideLetter { get; private set; }
+
         #region Static Fluent Helpers
 
         public static LotRCard Hero(string title, string id, Sphere sphere, byte threatCost, byte willpower, byte attack, byte defense, byte hitPoints)
@@ -908,6 +910,12 @@ namespace HallOfBeorn.Models.LotR
         public LotRCard WithHorizontalArt()
         {
             HasHorizontalArt = true;
+            return this;
+        }
+
+        public LotRCard WithSideLetter()
+        {
+            HasSideLetter = true;
             return this;
         }
 

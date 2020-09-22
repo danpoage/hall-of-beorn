@@ -26,6 +26,7 @@ namespace HallOfBeorn.Services.LotR
             productGroups.Add(ProductGroup.TheLordOfTheRingsSaga);
             productGroups.Add(ProductGroup.Starter);
             productGroups.Add(ProductGroup.GenConDeck);
+            productGroups.Add(ProductGroup.ScenarioDeck);
             productGroups.Add(ProductGroup.NightmareDeck);
             productGroups.Add(ProductGroup.DoomMastered);
         }

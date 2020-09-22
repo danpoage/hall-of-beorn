@@ -181,6 +181,9 @@ namespace HallOfBeorn.Models.LotR
         public static Product EscapeFromKhazadDum = new Products.PrintOnDemand.EscapeFromKhazadDumProduct();
         public static Product EscapeFromKhazadDumPreorderPromotion = new Products.PreorderPromotion.EscapeFromKhazadDumPreorderPromotionProduct();
 
+        //Scenario Decks
+        public static Product TheHuntForTheDreadnaught = new Products.ScenarioDeck.TheHuntForTheDreadnaughtProduct();
+
         //Nightmare Decks
         public static Product PassageThroughMirkwoodNightmare = new Products.Nightmare.PassageThroughMirkwoodNightmareProduct();
         public static Product JourneyAlongTheAnduinNightmare = new Products.Nightmare.JourneyAlongTheAnduinNightmareProduct();

@@ -11,6 +11,7 @@
         Saga_Expansion,
         Starter,
         Preorder_Promotion,
+        Scenario_Deck,
         PRINT_ON_DEMAND,
         GenCon_Expansion,
         GenConSaga_Expansion,

@@ -454,6 +454,7 @@ namespace HallOfBeorn.Models.LotR
             Add(TheWoodlandRealm);
             Add(TheMinesOfMoria);
             Add(EscapeFromKhazadDum);
+            Add(TheHuntForTheDreadnaught);
 
             //Core Set and Shadows of Mirkwood Nightmare Decks
             Add(PassageThroughMirkwoodNightmare);
@@ -817,6 +818,9 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet TheWoodlandRealm = new EncounterSet { Name = "The Woodland Realm", Set = "The Woodland Realm" };
         public static EncounterSet TheMinesOfMoria = new EncounterSet { Name = "The Mines of Moria", Set = "The Mines of Moria" };
         public static EncounterSet EscapeFromKhazadDum = new EncounterSet { Name = "Escape from Khazad-dûm", Set = "Escape from Khazad-dûm" };
+
+        //Scenario Decks
+        public static EncounterSet TheHuntForTheDreadnaught = new EncounterSet { Name = "The Hunt for the Dreadnaught", Set = "The Hunt for the Dreadnaught" };
 
         //Core Set and Shadows of Mirkwood Nightmare Decks
         public static EncounterSet PassageThroughMirkwoodNightmare = new EncounterSet { Name = "Passage Through Mirkwood Nightmare", Set = "Passage Through Mirkwood Nightmare" };

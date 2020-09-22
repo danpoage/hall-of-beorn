@@ -320,7 +320,12 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public string Number
         {
-            get { return _card.CardNumber.ToString(); }
+            get
+            { 
+                return _card.HasSideLetter
+                ? string.Format("{0}a/b", _card.CardNumber)
+                : _card.CardNumber.ToString(); 
+            }
         }
 
         public string Quantity

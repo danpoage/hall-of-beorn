@@ -223,6 +223,8 @@ namespace SetBuilder
                     return "Card.VALUE_NA";
                 case Card.VALUE_X:
                     return "Card.VALUE_X";
+                case Card.VALUE_ASTERISK:
+                    return "Card.VALUE_ASTERISK";
                 default:
                     return stat.Value.ToString();
             }

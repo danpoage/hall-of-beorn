@@ -17,6 +17,7 @@ namespace HallOfBeorn.Models
             Artist = Artist.None;
         }
 
+        public const byte VALUE_ASTERISK = 253;
         public const byte VALUE_X = 254;
         public const byte VALUE_NA = 255;
         public readonly Language DefaultLang = Language.EN;

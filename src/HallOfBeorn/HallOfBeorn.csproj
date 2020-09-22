@@ -408,6 +408,7 @@
     <Compile Include="Models\LotR\Compact\Trait.cs" />
     <Compile Include="Models\ICreator.cs" />
     <Compile Include="Models\LotR\Extensions.cs" />
+    <Compile Include="Models\LotR\ProductGroups\ScenarioDeckProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\VengeanceOfMordorProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\EredMithrinProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\StarterProductGroup.cs" />
@@ -439,6 +440,7 @@
     <Compile Include="Models\LotR\Products\PrintOnDemand\TheMinesOfMoriaProduct.cs" />
     <Compile Include="Models\LotR\Products\PrintOnDemand\TheWizardsQuestProduct.cs" />
     <Compile Include="Models\LotR\Products\PrintOnDemand\TheWoodlandRealmProduct.cs" />
+    <Compile Include="Models\LotR\Products\ScenarioDeck\TheHuntForTheDreadnaughtProduct.cs" />
     <Compile Include="Models\LotR\Products\Starter\TwoPlayerLimitedEditionStarterProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\AcrossTheEttenmoorsNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\EscapeFromMountGramNightmareProduct.cs" />
@@ -518,6 +520,7 @@
     <Compile Include="Models\LotR\Sets\PreorderPromotion\UnderTheAshMountainsPreorderPromotionSet.cs" />
     <Compile Include="Models\LotR\Sets\PreorderPromotion\WrathAndRuinPreorderPromotionSet.cs" />
     <Compile Include="Models\LotR\Sets\PrintOnDemand\EscapeFromKhazadDumSet.cs" />
+    <Compile Include="Models\LotR\Sets\PrintOnDemand\TheHuntForTheDreadnaughtSet.cs" />
     <Compile Include="Models\LotR\Sets\PrintOnDemand\TheMinesOfMoriaSet.cs" />
     <Compile Include="Models\LotR\Sets\PrintOnDemand\TheWizardsQuestSet.cs" />
     <Compile Include="Models\LotR\Sets\PrintOnDemand\TheWoodlandRealmSet.cs" />

@@ -84,7 +84,7 @@ namespace HallOfBeorn.Models.LotR
 
         public static byte NormalizeStat(this byte? self)
         {
-           return (!self.HasValue || self.Value == Card.VALUE_NA || self.Value == Card.VALUE_X)
+           return (!self.HasValue || self.Value == Card.VALUE_NA || self.Value == Card.VALUE_X || self.Value == Card.VALUE_ASTERISK)
                ? (byte)0
                : self.Value;
         }

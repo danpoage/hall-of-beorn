@@ -19,6 +19,12 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
             Cycle = "GenCon";
             Number = 3011;
 
+            addHero("Bilbo Baggins", 9, Sphere.Lore, 1, 1, 2, 2)
+                .WithTraits("Hobbit.")
+                .WithTextLine("The first player draws 1 additional card in the resource phase.")
+                .WithTemplate("<p>The first player draws 1 additional card in the resource phase.</p>")
+                .WithInfo(1, 1, Artist.Tony_Foti);
+
             addQuest("To the West-door", EncounterSet.TheMinesOfMoria, 1, 'A', 5)
                 .WithFlavor("It has been years since there was news of Balin's expedition to Moria, but in recent months there have been rumors of growing darkness there. You traveled to the Mines to investigate these tidings. Upon reaching the Doors of Durin, you are surprised to find a foul-smelling pool at its feet, and a fell creature blocking your way.")
                 .WithTextLine("Setup: Each player adds 1 resource to each of his heroes' resource pools. Add The Watcher to the staging area.")
