@@ -11,10 +11,10 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
         public FellowshipDeckProductGroup()
             : base("Fellowship Decks")
         {
-            AddProduct(Product.FogOnTheBarrowDowns);
-            AddProduct(Product.MurderAtThePrancingPony);
-            AddProduct(Product.TheSiegeOfAnnuminas);
-            AddProduct(Product.AssaultOnDolGuldur);
+            AddChildProduct(Product.FogOnTheBarrowDowns);
+            AddChildProduct(Product.MurderAtThePrancingPony);
+            AddChildProduct(Product.TheSiegeOfAnnuminas);
+            AddChildProduct(Product.AssaultOnDolGuldur);
         }
     }
 }

@@ -10,13 +10,13 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
         public DreamChaserProductGroup()
             : base("Dream-chaser Cycle")
         {
-            MainProduct = Product.TheGreyHavens;
-            AddProduct(Product.FlightOfTheStormcaller);
-            AddProduct(Product.TheThingInTheDepths);
-            AddProduct(Product.TempleOfTheDeceived);
-            AddProduct(Product.TheDrownedRuins);
-            AddProduct(Product.AStormOnCobasHaven);
-            AddProduct(Product.TheCityOfCorsairs);
+            AddMainProduct(Product.TheGreyHavens);
+            AddChildProduct(Product.FlightOfTheStormcaller);
+            AddChildProduct(Product.TheThingInTheDepths);
+            AddChildProduct(Product.TempleOfTheDeceived);
+            AddChildProduct(Product.TheDrownedRuins);
+            AddChildProduct(Product.AStormOnCobasHaven);
+            AddChildProduct(Product.TheCityOfCorsairs);
         }
     }
 }

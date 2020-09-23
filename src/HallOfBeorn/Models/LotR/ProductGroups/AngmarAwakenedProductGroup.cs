@@ -10,14 +10,13 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
         public AngmarAwakenedProductGroup()
             : base("Angmar Awakened Cycle")
         {
-            MainProduct = Product.TheLostRealm;
-
-            AddProduct(Product.TheWastesOfEriador);
-            AddProduct(Product.EscapeFromMountGram);
-            AddProduct(Product.AcrossTheEttenmoors);
-            AddProduct(Product.TheTreacheryOfRhudaur);
-            AddProduct(Product.TheBattleOfCarnDum);
-            AddProduct(Product.TheDreadRealm);
+            AddMainProduct(Product.TheLostRealm);
+            AddChildProduct(Product.TheWastesOfEriador);
+            AddChildProduct(Product.EscapeFromMountGram);
+            AddChildProduct(Product.AcrossTheEttenmoors);
+            AddChildProduct(Product.TheTreacheryOfRhudaur);
+            AddChildProduct(Product.TheBattleOfCarnDum);
+            AddChildProduct(Product.TheDreadRealm);
         }
     }
 }

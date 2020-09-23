@@ -14,23 +14,28 @@ namespace HallOfBeorn.Models.LotR
             Name = name;
         }
 
-        protected void AddProduct(Product product)
+        protected void AddMainProduct(Product product)
+        {
+            mainProducts.Add(product);
+        }
+
+        protected void AddChildProduct(Product product)
         {
             childProducts.Add(product);
         }
 
+        private readonly List<Product> mainProducts = new List<Product>();
         private readonly List<Product> childProducts = new List<Product>();
 
         public string Name { get; private set; }
         public string Abbreviation { get { return Name; } }
 
-        public Product MainProduct { get; protected set; }
-        public Product SecondProduct { get; protected set; }
+        public IEnumerable<Product> MainProducts { get { return mainProducts; } }
         public IEnumerable<Product> ChildProducts { get { return childProducts; } }
 
         #region Static Members
         public static ProductGroup ShadowsOfMirkwood = new ShadowsOfMirkwoodProductGroup();
-        public static ProductGroup TheDwarrowdelf = new DwarrowdelfProductGroup();
+        public static ProductGroup Dwarrowdelf = new DwarrowdelfProductGroup();
         public static ProductGroup AgainstTheShadow = new AgainstTheShadowProductGroup();
         public static ProductGroup TheRingMaker = new TheRingMakerProductGroup();
         public static ProductGroup AngmarAwakened = new AngmarAwakenedProductGroup();
@@ -44,7 +49,16 @@ namespace HallOfBeorn.Models.LotR
         public static ProductGroup FellowshipDeck = new FellowshipDeckProductGroup();
         public static ProductGroup CustomScenarioKits = new CustomScenarioKitProductGroup();
         public static ProductGroup ScenarioPack = new ScenarioPackProductGroup();
-        public static ProductGroup NightmareDeck = new NightmareDeckProductGroup();
+        
+        public static ProductGroup ShadowsOfMirkwoodNightmare = new ShadowsOfMirkwoodNightmareProductGroup();
+        public static ProductGroup DwarrowdelfNightmare = new DwarrowdelfNightmareProductGroup();
+        public static ProductGroup AgainstTheShadowNightmare = new AgainstTheShadowNightmareProductGroup();
+        public static ProductGroup TheRingMakerNightmare = new TheRingMakerNightmareProductGroup();
+        public static ProductGroup AngmarAwakenedNightmare = new AngmarAwakenedNightmareProductGroup();
+        public static ProductGroup DreamChaserNightmare = new DreamChaserNightmareProductGroup();
+        public static ProductGroup TheHobbitSagaNightmare = new TheHobbitSagaNightmareProductGroup();
+        public static ProductGroup TheLordOfTheRingsSagaNightmare = new TheLordOfTheRingsSagaNightmareProductGroup();
+
         public static ProductGroup DoomMastered = new DoomMasteredProductGroup();
         #endregion
     }

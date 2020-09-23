@@ -23,9 +23,9 @@ namespace HallOfBeorn.Services.Digital
         {
             productGroups.Add(group);
 
-            if (group.MainProduct != null)
-                products.Add(group.MainProduct);
-
+            foreach (var main in group.MainProducts)
+                products.Add(main);
+            
             foreach (var child in group.ChildProducts)
                 products.Add(child);
         }

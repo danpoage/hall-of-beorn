@@ -10,13 +10,13 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
         public DwarrowdelfProductGroup()
             : base("Dwarrowdelf Cycle")
         {
-            MainProduct = Product.KhazadDum;
-            AddProduct(Product.TheRedhornGate);
-            AddProduct(Product.RoadToRivendell);
-            AddProduct(Product.TheWatcherInTheWater);
-            AddProduct(Product.TheLongDark);
-            AddProduct(Product.FoundationsOfStone);
-            AddProduct(Product.ShadowAndFlame);
+            AddMainProduct(Product.KhazadDum);
+            AddChildProduct(Product.TheRedhornGate);
+            AddChildProduct(Product.RoadToRivendell);
+            AddChildProduct(Product.TheWatcherInTheWater);
+            AddChildProduct(Product.TheLongDark);
+            AddChildProduct(Product.FoundationsOfStone);
+            AddChildProduct(Product.ShadowAndFlame);
         }
     }
 }

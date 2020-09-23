@@ -7,18 +7,18 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
         public VengeanceOfMordorProductGroup()
             : base("Vengeance of Mordor Cycle")
         {
-            MainProduct = Product.AShadowInTheEast;
-            AddProduct(Product.WrathAndRuin);
-            AddProduct(Product.TheCityOfUlfast);
-            AddProduct(Product.ChallengeOfTheWainriders);
-            AddProduct(Product.UnderTheAshMountains);
-            AddProduct(Product.TheLandOfSorrow);
-            AddProduct(Product.TheFortressOfNurn);
-            AddProduct(Product.WrathAndRuinPreorderPromotion);
-            AddProduct(Product.TheCityOfUlfastPreorderPromotion);
-            AddProduct(Product.ChallengeOfTheWainridersPreorderPromotion);
-            AddProduct(Product.UnderTheAshMountainsPreorderPromotion);
-            AddProduct(Product.TheLandOfSorrowPreorderPromotion);
+            AddMainProduct(Product.AShadowInTheEast);
+            AddChildProduct(Product.WrathAndRuin);
+            AddChildProduct(Product.TheCityOfUlfast);
+            AddChildProduct(Product.ChallengeOfTheWainriders);
+            AddChildProduct(Product.UnderTheAshMountains);
+            AddChildProduct(Product.TheLandOfSorrow);
+            AddChildProduct(Product.TheFortressOfNurn);
+            AddChildProduct(Product.WrathAndRuinPreorderPromotion);
+            AddChildProduct(Product.TheCityOfUlfastPreorderPromotion);
+            AddChildProduct(Product.ChallengeOfTheWainridersPreorderPromotion);
+            AddChildProduct(Product.UnderTheAshMountainsPreorderPromotion);
+            AddChildProduct(Product.TheLandOfSorrowPreorderPromotion);
         }
     }
 }

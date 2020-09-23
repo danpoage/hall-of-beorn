@@ -10,13 +10,13 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
         public HaradrimProductGroup()
             : base("Haradrim Cycle")
         {
-            MainProduct = Product.TheSandsOfHarad;
-            AddProduct(Product.TheMumakil);
-            AddProduct(Product.RaceAcrossHarad);
-            AddProduct(Product.BeneathTheSands);
-            AddProduct(Product.TheBlackSerpent);
-            AddProduct(Product.TheDungeonsOfCirithGurat);
-            AddProduct(Product.TheCrossingsOfPoros);
+            AddMainProduct(Product.TheSandsOfHarad);
+            AddChildProduct(Product.TheMumakil);
+            AddChildProduct(Product.RaceAcrossHarad);
+            AddChildProduct(Product.BeneathTheSands);
+            AddChildProduct(Product.TheBlackSerpent);
+            AddChildProduct(Product.TheDungeonsOfCirithGurat);
+            AddChildProduct(Product.TheCrossingsOfPoros);
         }
     }
 }

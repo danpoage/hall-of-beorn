@@ -11,18 +11,13 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             Name = productGroup.Name;
 
-            if (productGroup.MainProduct != null)
+            MainProducts = new List<ProductViewModel>();
+            foreach (var product in productGroup.MainProducts)
             {
-                MainProduct = new ProductViewModel(productGroup.MainProduct, getPopularity);
+                MainProducts.Add(new ProductViewModel(product, getPopularity));
             }
-
-            if (productGroup.SecondProduct != null)
-            {
-                SecondProduct = new ProductViewModel(productGroup.SecondProduct, getPopularity);
-            }
-
+            
             ChildProducts = new List<ProductViewModel>();
-
             foreach (var product in productGroup.ChildProducts)
             {
                 ChildProducts.Add(new ProductViewModel(product, getPopularity));
@@ -30,8 +25,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         }
 
         public string Name { get; private set; }
-        public ProductViewModel MainProduct { get; private set; }
-        public ProductViewModel SecondProduct { get; private set; }
+        public List<ProductViewModel> MainProducts { get; private set; }
         public List<ProductViewModel> ChildProducts { get; private set; }
     }
 }

@@ -10,13 +10,13 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
         public AgainstTheShadowProductGroup()
             : base("Against the Shadow Cycle")
         {
-            MainProduct = Product.HeirsOfNumenor;
-            AddProduct(Product.TheStewardsFear);
-            AddProduct(Product.TheDruadanForest);
-            AddProduct(Product.EncounterAtAmonDin);
-            AddProduct(Product.AssaultOnOsgiliath);
-            AddProduct(Product.TheBloodOfGondor);
-            AddProduct(Product.TheMorgulVale);
+            AddMainProduct(Product.HeirsOfNumenor);
+            AddChildProduct(Product.TheStewardsFear);
+            AddChildProduct(Product.TheDruadanForest);
+            AddChildProduct(Product.EncounterAtAmonDin);
+            AddChildProduct(Product.AssaultOnOsgiliath);
+            AddChildProduct(Product.TheBloodOfGondor);
+            AddChildProduct(Product.TheMorgulVale);
         }
     }
 }

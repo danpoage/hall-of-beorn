@@ -10,13 +10,13 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
         public EredMithrinProductGroup()
             : base("Ered Mithrin Cycle")
         {
-            MainProduct = Product.TheWildsOfRhovanion;
-            AddProduct(Product.TheWitheredHeath);
-            AddProduct(Product.RoamAcrossRhovanion);
-            AddProduct(Product.FireInTheNight);
-            AddProduct(Product.TheGhostOfFramsburg);
-            AddProduct(Product.MountGundabad);
-            AddProduct(Product.TheFateOfWilderland);
+            AddMainProduct(Product.TheWildsOfRhovanion);
+            AddChildProduct(Product.TheWitheredHeath);
+            AddChildProduct(Product.RoamAcrossRhovanion);
+            AddChildProduct(Product.FireInTheNight);
+            AddChildProduct(Product.TheGhostOfFramsburg);
+            AddChildProduct(Product.MountGundabad);
+            AddChildProduct(Product.TheFateOfWilderland);
         }
     }
 }

@@ -10,8 +10,8 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
         public TheHobbitSagaProductGroup()
             : base("The Hobbit Saga")
         {
-            AddProduct(Product.TheHobbitOverHillAndUnderHill);
-            AddProduct(Product.TheHobbitOnTheDoorstep);
+            AddChildProduct(Product.TheHobbitOverHillAndUnderHill);
+            AddChildProduct(Product.TheHobbitOnTheDoorstep);
         }
     }
 }

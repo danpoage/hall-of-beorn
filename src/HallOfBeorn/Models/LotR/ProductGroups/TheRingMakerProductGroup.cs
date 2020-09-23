@@ -10,13 +10,13 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
         public TheRingMakerProductGroup()
             : base("The Ring-maker Cycle")
         {
-            MainProduct = Product.TheVoiceOfIsengard;
-            AddProduct(Product.TheDunlandTrap);
-            AddProduct(Product.TheThreeTrials);
-            AddProduct(Product.TroubleInTharbad);
-            AddProduct(Product.TheNinInEilph);
-            AddProduct(Product.CelebrimborsSecret);
-            AddProduct(Product.TheAntleredCrown);
+            AddMainProduct(Product.TheVoiceOfIsengard);
+            AddChildProduct(Product.TheDunlandTrap);
+            AddChildProduct(Product.TheThreeTrials);
+            AddChildProduct(Product.TroubleInTharbad);
+            AddChildProduct(Product.TheNinInEilph);
+            AddChildProduct(Product.CelebrimborsSecret);
+            AddChildProduct(Product.TheAntleredCrown);
         }
     }
 }

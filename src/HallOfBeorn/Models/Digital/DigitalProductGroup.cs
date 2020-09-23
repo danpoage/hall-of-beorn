@@ -12,7 +12,13 @@ namespace HallOfBeorn.Models.Digital
             Name = name;
         }
 
+        private readonly List<DigitalProduct> mainProducts = new List<DigitalProduct>();
         private readonly List<DigitalProduct> childProducts = new List<DigitalProduct>();
+
+        protected void AddMainProduct(DigitalProduct product)
+        {
+            mainProducts.Add(product);
+        }
 
         protected void addChildProduct(DigitalProduct product)
         {
@@ -22,9 +28,11 @@ namespace HallOfBeorn.Models.Digital
         public string Name { get; private set; }
         
         public string Abbreviation { get; protected set; }
-        
-        public DigitalProduct MainProduct { get; protected set; }
-        public DigitalProduct SecondProduct { get; protected set; }
+
+        public IEnumerable<DigitalProduct> MainProducts
+        { 
+            get { return mainProducts;  } 
+        }
 
         public IEnumerable<DigitalProduct> ChildProducts
         {

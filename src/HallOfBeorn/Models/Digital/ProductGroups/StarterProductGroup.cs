@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.Digital.ProductGroups
         public StarterProductGroup()
             : base("Starter")
         {
-            MainProduct = DigitalProduct.Starter;
+            AddMainProduct(DigitalProduct.Starter);
         }
     }
 }

@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.Digital.ProductGroups
         public ValorProductGroup()
             : base("Valor Cards")
         {
-            MainProduct = DigitalProduct.ValorCards;
+            AddMainProduct(DigitalProduct.ValorCards);
         }
     }
 }

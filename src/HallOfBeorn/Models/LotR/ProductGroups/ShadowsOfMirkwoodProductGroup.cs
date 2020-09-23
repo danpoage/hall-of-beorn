@@ -10,14 +10,14 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
         public ShadowsOfMirkwoodProductGroup()
             : base("Shadows of Mirkwood Cycle")
         {
-            MainProduct = Product.CoreSet;
-            SecondProduct = Product.TwoPlayerLimitedEditionStarter;
-            AddProduct(Product.TheHuntForGollum);
-            AddProduct(Product.ConflictAtTheCarrock);
-            AddProduct(Product.AJourneyToRhosgobel);
-            AddProduct(Product.TheHillsOfEmynMuil);
-            AddProduct(Product.TheDeadMarshes);
-            AddProduct(Product.ReturnToMirkwood);
+            AddMainProduct(Product.CoreSet);
+            AddMainProduct(Product.TwoPlayerLimitedEditionStarter);
+            AddChildProduct(Product.TheHuntForGollum);
+            AddChildProduct(Product.ConflictAtTheCarrock);
+            AddChildProduct(Product.AJourneyToRhosgobel);
+            AddChildProduct(Product.TheHillsOfEmynMuil);
+            AddChildProduct(Product.TheDeadMarshes);
+            AddChildProduct(Product.ReturnToMirkwood);
         }
     }
 }

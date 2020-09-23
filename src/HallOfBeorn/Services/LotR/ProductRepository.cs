@@ -14,7 +14,7 @@ namespace HallOfBeorn.Services.LotR
         public ProductRepository()
         {
             productGroups.Add(ProductGroup.ShadowsOfMirkwood);
-            productGroups.Add(ProductGroup.TheDwarrowdelf);
+            productGroups.Add(ProductGroup.Dwarrowdelf);
             productGroups.Add(ProductGroup.AgainstTheShadow);
             productGroups.Add(ProductGroup.TheRingMaker);
             productGroups.Add(ProductGroup.AngmarAwakened);
@@ -28,7 +28,16 @@ namespace HallOfBeorn.Services.LotR
             productGroups.Add(ProductGroup.FellowshipDeck);
             productGroups.Add(ProductGroup.CustomScenarioKits);
             productGroups.Add(ProductGroup.ScenarioPack);
-            productGroups.Add(ProductGroup.NightmareDeck);
+
+            productGroups.Add(ProductGroup.ShadowsOfMirkwoodNightmare);
+            productGroups.Add(ProductGroup.DwarrowdelfNightmare);
+            productGroups.Add(ProductGroup.AgainstTheShadowNightmare);
+            productGroups.Add(ProductGroup.TheRingMakerNightmare);
+            productGroups.Add(ProductGroup.AngmarAwakenedNightmare);
+            productGroups.Add(ProductGroup.DreamChaserNightmare);
+            productGroups.Add(ProductGroup.TheHobbitSagaNightmare);
+            productGroups.Add(ProductGroup.TheLordOfTheRingsSagaNightmare);
+
             productGroups.Add(ProductGroup.DoomMastered);
         }
 
@@ -43,14 +52,9 @@ namespace HallOfBeorn.Services.LotR
         {
             foreach (var group in productGroups)
             {
-                if (group.MainProduct != null)
+                foreach (var main in group.MainProducts)
                 {
-                    yield return group.MainProduct;
-                }
-
-                if (group.SecondProduct != null)
-                {
-                    yield return group.SecondProduct;
+                    yield return main;
                 }
 
                 foreach (var product in group.ChildProducts)
@@ -64,14 +68,14 @@ namespace HallOfBeorn.Services.LotR
         {
             foreach (var group in productGroups)
             {
-                if (group.MainProduct != null)
+                foreach (var main in group.MainProducts)
                 {
-                    foreach (var cardSet in group.MainProduct.CardSets)
+                    foreach (var cardSet in main.CardSets)
                     {
                         yield return cardSet;
                     }
                 }
-
+                
                 foreach (var product in group.ChildProducts)
                 {
                     foreach (var cardSet in product.CardSets)

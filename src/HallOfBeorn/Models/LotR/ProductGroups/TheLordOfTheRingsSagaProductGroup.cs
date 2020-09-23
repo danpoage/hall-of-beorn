@@ -10,12 +10,12 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
         public TheLordOfTheRingsSagaProductGroup()
             : base("The Lord of the Rings Saga")
         {
-            AddProduct(Product.TheBlackRiders);
-            AddProduct(Product.TheRoadDarkens);
-            AddProduct(Product.TheTreasonOfSaruman);
-            AddProduct(Product.TheLandOfShadow);
-            AddProduct(Product.TheFlameOfTheWest);
-            AddProduct(Product.TheMountainOfFire);
+            AddChildProduct(Product.TheBlackRiders);
+            AddChildProduct(Product.TheRoadDarkens);
+            AddChildProduct(Product.TheTreasonOfSaruman);
+            AddChildProduct(Product.TheLandOfShadow);
+            AddChildProduct(Product.TheFlameOfTheWest);
+            AddChildProduct(Product.TheMountainOfFire);
         }
     }
 }

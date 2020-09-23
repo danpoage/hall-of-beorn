@@ -7,11 +7,11 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
         public GenConDeckProductGroup()
             : base("Gen Con Decks")
         {
-            AddProduct(Product.TheMassingAtOsgiliath);
-            AddProduct(Product.TheBattleOfLakeTown);
-            AddProduct(Product.TheStoneOfErech);
-            AddProduct(Product.TheOldForest);
-            AddProduct(Product.TheRuinsOfBelegost);
+            AddChildProduct(Product.TheMassingAtOsgiliath);
+            AddChildProduct(Product.TheBattleOfLakeTown);
+            AddChildProduct(Product.TheStoneOfErech);
+            AddChildProduct(Product.TheOldForest);
+            AddChildProduct(Product.TheRuinsOfBelegost);
         }
     }
 }

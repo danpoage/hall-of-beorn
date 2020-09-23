@@ -38,11 +38,11 @@ namespace HallOfBeorn.Services.LotR.Scenarios
 
             foreach (var group in productRepository.ProductGroups())
             {
-                if (group.MainProduct != null)
+                foreach (var main in group.MainProducts)
                 {
-                    AddProduct(group.MainProduct, cards);
+                    AddProduct(main, cards);
                 }
-
+                
                 foreach (var product in group.ChildProducts)
                 {
                     AddProduct(product, cards);
@@ -299,6 +299,21 @@ namespace HallOfBeorn.Services.LotR.Scenarios
             return map.Values;
         }
 
+        private readonly HashSet<SetType> printOnDemand = new HashSet<SetType>
+        {
+            SetType.Nightmare_Expansion, SetType.GenCon_Expansion, SetType.GenConSaga_Expansion, SetType.Fellowship_Deck, SetType.FellowshipSaga_Deck, SetType.Custom_Scenario_Kit,
+        };
+
+        private readonly HashSet<SetType> saga = new HashSet<SetType>
+        {
+            SetType.Saga_Expansion, SetType.GenConSaga_Expansion, SetType.FellowshipSaga_Deck,
+        };
+
+        private readonly HashSet<SetType> community = new HashSet<SetType>
+        {
+            SetType.First_Age, SetType.A_Long_extended_Party,
+        };
+
         public bool HasSetType(LotRCard card, SetType? setType)
         {
             if (!setType.HasValue || setType.Value == SetType.None || setType.Value == SetType.OFFICIAL)
@@ -308,13 +323,16 @@ namespace HallOfBeorn.Services.LotR.Scenarios
                 return true;
 
             if (setType.Value == SetType.PRINT_ON_DEMAND)
-                return card.CardSet.SetType == SetType.Fellowship_Deck || card.CardSet.SetType == SetType.GenCon_Expansion || card.CardSet.SetType == SetType.GenConSaga_Expansion || card.CardSet.SetType == SetType.Nightmare_Expansion || card.CardSet.SetType == SetType.Custom_Scenario_Kit || card.CardSet.SetType == SetType.FellowshipSaga_Deck;
+                return printOnDemand.Contains(card.CardSet.SetType);
 
             if (setType.Value == SetType.SAGA)
-                return card.CardSet.SetType == SetType.Saga_Expansion || card.CardSet.SetType == SetType.GenConSaga_Expansion || card.CardSet.SetType == SetType.FellowshipSaga_Deck;
+                return saga.Contains(card.CardSet.SetType);
 
             if (setType.Value == SetType.Non_Nightmare)
                 return card.CardSet.SetType != SetType.Nightmare_Expansion;
+
+            if (setType.Value == SetType.COMMUNITY)
+                return community.Contains(card.CardSet.SetType);
 
             return card.CardSet.SetType == setType.Value;
         }

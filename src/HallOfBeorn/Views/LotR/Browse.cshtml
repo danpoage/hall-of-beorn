@@ -62,29 +62,19 @@ else
 
     foreach (var productGroup in @Model.ProductGroups)
     {
-        if (productGroup.MainProduct != null)
+        if (productGroup.MainProducts.Count > 0)
         {
             <div style="text-align:center;margin-top:20px;">
-                <div style="display:inline-block">
-                    <a title="@productGroup.MainProduct.Name (@productGroup.MainProduct.Code)" href="@productGroup.MainProduct.Link"><img src="@productGroup.MainProduct.ImagePath" style="height:@productGroup.MainProduct.ImageHeight;width:@productGroup.MainProduct.ImageWidth;"/></a>
-                    @if (!string.IsNullOrEmpty(productGroup.MainProduct.PopularityHtml))
-                    {
-                        <div>
-                        @Html.Raw(productGroup.MainProduct.PopularityHtml)
-                        </div>
-                    } 
-                </div>
-                
-                @if (productGroup.SecondProduct != null)
+                @foreach (var mainProduct in productGroup.MainProducts)
                 {
-                    <div style="display:inline-block;margin-left:20px;">
-                        <a title="@productGroup.SecondProduct.Name (@productGroup.SecondProduct.Code)" href="@productGroup.SecondProduct.Link"><img src="@productGroup.SecondProduct.ImagePath" style="height:@productGroup.SecondProduct.ImageHeight;width:@productGroup.SecondProduct.ImageWidth;"/></a>
-                        @if (!string.IsNullOrEmpty(productGroup.SecondProduct.PopularityHtml))
+                    <div style="display:inline-block;margin:0px 20px 0px 20px;">
+                        <a title="@mainProduct.Name (@mainProduct.Code)" href="@mainProduct.Link"><img src="@mainProduct.ImagePath" style="height:@mainProduct.ImageHeight;width:@mainProduct.ImageWidth;"/></a>
+                        @if (!string.IsNullOrEmpty(mainProduct.PopularityHtml))
                         {
                             <div>
-                            @Html.Raw(productGroup.SecondProduct.PopularityHtml)
+                            @Html.Raw(mainProduct.PopularityHtml)
                             </div>
-                        }
+                        } 
                     </div>
                 }
             </div>

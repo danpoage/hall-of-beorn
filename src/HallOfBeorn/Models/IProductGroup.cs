@@ -11,8 +11,7 @@ namespace HallOfBeorn.Models
         where TCardSet: ICardSet<TProduct, TCard>
         where TCard : ICard
     {
-        TProduct MainProduct { get; }
-        TProduct SecondProduct { get; }
+        IEnumerable<TProduct> MainProducts { get; }
         IEnumerable<TProduct> ChildProducts { get; }
     }
 }

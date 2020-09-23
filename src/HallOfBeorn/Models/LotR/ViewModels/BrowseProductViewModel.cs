@@ -76,11 +76,13 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                     case SetType.Core:
                         return "Core Set";
                     case SetType.Starter:
-                        return "Two Player Limited Edition Stater";
+                        return "Two-Player Limited Edition Stater";
                     case SetType.GenConSaga_Expansion:
                         return "GenCon Saga Expansion";
                     case SetType.FellowshipSaga_Deck:
                         return "Fellowship Saga Deck";
+                    case SetType.A_Long_extended_Party:
+                        return "A Long-extended Party";
                     default:
                         return firstType.ToString().Replace("_", " ");
                 }

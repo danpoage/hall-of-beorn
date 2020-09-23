@@ -10,10 +10,9 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
         public DoomMasteredProductGroup()
             : base("Doom Mastered Cycle")
         {
-            MainProduct = Product.FirstAge;
-
-            AddProduct(Product.TrialUponTheMarches);
-            AddProduct(Product.AmongTheOutlaws);
+            AddMainProduct(Product.FirstAge);
+            AddChildProduct(Product.TrialUponTheMarches);
+            AddChildProduct(Product.AmongTheOutlaws);
         }
     }
 }

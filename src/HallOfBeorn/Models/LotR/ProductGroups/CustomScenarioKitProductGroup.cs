@@ -8,12 +8,12 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
         public CustomScenarioKitProductGroup()
             : base("Custom Scenario Kits")
         {
-            AddProduct(Product.TheWizardsQuest);
-            AddProduct(Product.TheWoodlandRealm);
-            AddProduct(Product.TheMinesOfMoria);
-            AddProduct(Product.TheMinesOfMoriaPreorderPromotion);
-            AddProduct(Product.EscapeFromKhazadDum);
-            AddProduct(Product.EscapeFromKhazadDumPreorderPromotion);
+            AddChildProduct(Product.TheWizardsQuest);
+            AddChildProduct(Product.TheWoodlandRealm);
+            AddChildProduct(Product.TheMinesOfMoria);
+            AddChildProduct(Product.TheMinesOfMoriaPreorderPromotion);
+            AddChildProduct(Product.EscapeFromKhazadDum);
+            AddChildProduct(Product.EscapeFromKhazadDumPreorderPromotion);
         }
     }
 }

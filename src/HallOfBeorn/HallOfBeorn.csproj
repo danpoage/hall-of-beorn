@@ -408,9 +408,16 @@
     <Compile Include="Models\LotR\Compact\Trait.cs" />
     <Compile Include="Models\ICreator.cs" />
     <Compile Include="Models\LotR\Extensions.cs" />
+    <Compile Include="Models\LotR\ProductGroups\AngmarAwakenedNightmareProductGroup.cs" />
+    <Compile Include="Models\LotR\ProductGroups\DreamChaserNightmareProductGroup.cs" />
+    <Compile Include="Models\LotR\ProductGroups\ShadowsOfMirkwoodNightmareProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\CustomScenarioKitProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\FellowshipDeckProductGroup.cs" />
+    <Compile Include="Models\LotR\ProductGroups\AgainstTheShadowNightmareProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\ScenarioPackProductGroup.cs" />
+    <Compile Include="Models\LotR\ProductGroups\TheHobbitSagaNightmareProductGroup.cs" />
+    <Compile Include="Models\LotR\ProductGroups\TheLordOfTheRingsSagaNightmareProductGroup.cs" />
+    <Compile Include="Models\LotR\ProductGroups\TheRingMakerNightmareProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\VengeanceOfMordorProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\EredMithrinProductGroup.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\TheCityOfUlfastProduct.cs" />
@@ -777,7 +784,7 @@
     <Compile Include="Models\LotR\Products\Deluxe\HeirsOfNumenorProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\JourneyAlongTheAnduinNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Deluxe\KhazadDumProduct.cs" />
-    <Compile Include="Models\LotR\ProductGroups\NightmareDeckProductGroup.cs" />
+    <Compile Include="Models\LotR\ProductGroups\DwarrowdelfNightmareProductGroup.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheBlackRidersNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheBloodOfGondorNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheDruadanForestNightmareProduct.cs" />
