@@ -361,7 +361,7 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Nasko_Moskov);
             all.Add(Artist.WavingMonsterStudios);
             all.Add(Artist.Dechambo);
-            all.Add(Artist.StrangerToTheRain);
+            all.Add(Artist.Stranger_To_The_Rain);
             all.Add(Artist.David_J_Findlay);
             all.Add(Artist.Danny_Staten);
             all.Add(Artist.Steamey);
@@ -761,7 +761,7 @@ namespace HallOfBeorn.Models
         public static Artist HellgaZ = new Artist { Name = "Hellga-Z", URL = "http://hellga-z.deviantart.com" };
         public static Artist Horhe_Soloma = new Artist { Name = "Horhe Soloma", URL = "http://horhesoloma.deviantart.com" };
         public static Artist Bogdan_Amidzic = new Artist { Name = "Bogdan Amidzic", URL = "http://htogrom.deviantart.com" };
-        public static Artist Igor_Kordey = new Artist { Name = "Kordej", URL = "http://en.wikipedia.org/wiki/Igor_Kordey" };
+        public static Artist Igor_Kordey = new Artist { Name = "Igor Kordey", URL = "http://en.wikipedia.org/wiki/Igor_Kordey" };
         public static Artist Ilya_Nazarov = new Artist { Name = "Ilya Nazarov", URL = "http://ilyanazarov.deviantart.com" };
         public static Artist Imad_Awan = new Artist { Name = "Imad Awan", URL = "https://www.artstation.com/imadawan" };
         public static Artist J_Lantta = new Artist { Name = "J. Lantta", URL = "http://raakile.deviantart.com" };
@@ -859,7 +859,7 @@ namespace HallOfBeorn.Models
         public static Artist Stephen_Najarian = new Artist { Name = "Stephen Najarian", URL = "http://steves3511.deviantart.com" };
         public static Artist Steven_Schreiner = new Artist { Name = "Steven Schreiner", URL = "http://steven.deviantart.com" };
         public static Artist Stirzocular = new Artist { Name = "Stirzocular", URL = "http://stirzocular.deviantart.com" };
-        public static Artist StrangerToTheRain = new Artist { Name = "Stranger to the Rain", URL = "http://strangertotherain.deviantart.com" };
+        public static Artist Stranger_To_The_Rain = new Artist { Name = "Stranger to the Rain", URL = "http://strangertotherain.deviantart.com" };
         public static Artist Taina_Dos = new Artist { Name = "Tainá dOS", URL = "http://taina-dos.deviantart.com/" };
         public static Artist Tawny_Fritzinger = new Artist { Name = "Tawny Fritzinger", URL = "http://www.tawnyfritz.com" };
         public static Artist Ted_Nasmith = new Artist { Name = "Ted Nasmith", URL = "http://tednasmith.mymiddleearth.com" };

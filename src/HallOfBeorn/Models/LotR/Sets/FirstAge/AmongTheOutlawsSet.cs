@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Sets.FirstAge
             Name = "Among the Outlaws";
             Abbreviation = "AtO";
             Number = 9003;
-            SetType = Models.SetType.COMMUNITY;
+            SetType = Models.SetType.First_Age;
             Cycle = "Doom Mastered";
 
             Cards.Add(LotRCard.Scenario("Among the Outlaws", 2, setName, "Doom Mastered")

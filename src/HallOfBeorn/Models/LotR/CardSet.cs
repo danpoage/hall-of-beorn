@@ -28,6 +28,13 @@ namespace HallOfBeorn.Models.LotR
             this.Cards.Add(card);
         }
 
+        protected LotRCard addScenario(string encounterSet, int scenarioNumber, string oppositeTitle)
+        {
+            var scenario = LotRCard.Scenario(encounterSet, scenarioNumber, encounterSet, oppositeTitle);
+            addCard(scenario);
+            return scenario;
+        }
+
         protected LotRCard addHero(string title, byte threatCost, Sphere sphere, byte willpower, byte attack, byte defense, byte hitPoints)
         {
             var hero = LotRCard.Hero(title, string.Empty, sphere, threatCost, willpower, attack, defense, hitPoints);
