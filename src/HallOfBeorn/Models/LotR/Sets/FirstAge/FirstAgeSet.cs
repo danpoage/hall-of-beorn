@@ -15,7 +15,7 @@ namespace HallOfBeorn.Models.LotR.Sets.FirstAge
             Number = 9001;
             SetType = Models.SetType.First_Age;
 
-            addScenario("Hunting the Wolf", 1, setName)
+            addScenario(EncounterSet.HuntingOfTheWolf.Name, 1, setName)
                 .WithTextLine("Corruption")
                 .WithTextLine("When a character takes Corruption, place a progress token on it. If a character ever has Corruption greater than its willpower, it has become Corrupted. A Corrupted character loses the \"ally\" or \"hero\" card type and gains the \"enemy\" trait, immediately engaging the player that used to control it. The Willpower of the Corrupted character becomes its Threat and its engagement cost is 0.")
                 .WithTextLine("Relentless")
