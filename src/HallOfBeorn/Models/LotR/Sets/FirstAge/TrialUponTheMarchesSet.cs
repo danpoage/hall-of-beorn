@@ -124,12 +124,14 @@ namespace HallOfBeorn.Models.LotR.Sets.FirstAge
                 .WithText("Setup: Add Not So High Is Your Destiny to the staging area. Each player must place 1 Corruption on the hero with the lowest Willpower he controls. The player who controls the hero with Curse of Morgoth attached must place 1 Corruption on that hero instead.")
                 .WithFlavor("\"But you are overbold to speak so to the father of Lúthien. Not so high is your destiny, I think...\"\r\n-Melian, The Children of Húrin")
                 .WithInfo(209, 1, Artist.Elena_Kukanova));
-            Cards.Add(LotRCard.Attachment("Greatness is in You", "", Sphere.Neutral, 0)
+            addAttachment("Greatness is in You", 0, Sphere.Neutral, false)
                 .WithBoon()
                 .WithTraits("Doom.")
                 .WithKeywords("Permanent.")
-                .WithText("Setup: Attach to the hero with Curse of Morgoth attached.\r\nAction: Add Greatness Is In You to the victory display to ready the attached hero. That hero does not exhaust to attack or defend until the end of the round.")
-                .WithInfo(210, 1, Artist.Jason_Yong_Wee_Seng));
+                .WithTextLine("Permanent.")
+                .WithTextLine("Setup: Attach to the hero with Curse of Morgoth attached.")
+                .WithTextLine("Action: Add Greatness Is In You to the victory display to ready the attached hero. That hero does not exhaust to attack or defend until the end of the round.")
+                .WithInfo(210, 1, Artist.Jason_Yong_Wee_Seng);
             Cards.Add(LotRCard.Treachery("For Good Or For Ill", "", setName)
                 .WithBurden()
                 .WithTraits("Doom.")
@@ -185,12 +187,13 @@ namespace HallOfBeorn.Models.LotR.Sets.FirstAge
                 .WithVictoryPoints(1)
                 .WithInfo(227, 3, Artist.Catherine_Karina_Chmiel));
 
-            Cards.Add(LotRCard.Objective("Curse of Morgoth", "", setName)
+            addObjective("Curse of Morgoth", setName)
                 .WithBurden()
                 .WithTraits("Curse.")
                 .WithKeywords("Permanent.")
-                .WithText("Setup: Attach to a hero.\r\nForced: After the attached hero takes Corruption, discard the top card of the encounter deck. If it is a treachery card, the attached hero becomes corrupted until the end of the round.\r\nIf the attached hero leaves play, the players have lost the game.")
-                .WithInfo(229, 1, Artist.Alan_Lee));
+                .WithTextLine("Setup: Attach to a hero.")
+                .WithTextLine("Forced: After the attached hero takes Corruption, discard the top card of the encounter deck. If it is a treachery card, the attached hero becomes corrupted until the end of the round.\r\nIf the attached hero leaves play, the players have lost the game.")
+                .WithInfo(229, 1, Artist.Alan_Lee);
         }
     }
 }

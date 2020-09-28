@@ -18,6 +18,65 @@ namespace HallOfBeorn.Models.LotR.Sets.FirstAge
             SetType = Models.SetType.First_Age;
             Cycle = cycleName;
 
+            addHero("Bór the Faithful", 6, Sphere.Spirit, 2, 1, 1, 3)
+                .WithTraits("Easterling.")
+                .WithText("Action: Discard 1 Corruption for Bór the Faithful to ready him. He gets +2 Attack and +1 Willpower until the end of the round. (Limit once per round.)")
+                .WithFlavorLine("...and they followed Maedhros and Maglor, and cheated the hope of Morgoth, and were faithful.")
+                .WithFlavorLine("-The Silmarillion")
+                .WithInfo(13, 1, Artist.Chris_Quilliams);
+            addAlly("Brethil Hound", 3, Sphere.Spirit, false, 1, 2, 1, 2)
+                .WithTraits("Hound.", "House of Haleth.")
+                .WithTextLine("Response: After Brethil Hound participates in an attack that destroys an enemy, choose a player. That player reduces his threat by 1. (Limit once per phase.)")
+                .WithInfo(14, 3, Artist.K_LeCrone);
+            addAlly("Algund", 0, Sphere.Mastery, true, 2, 1, 1, 3)
+                .WithTraits("Gaurwaith.")
+                .WithKeywords("Ransom 3.")
+                .WithTextLine("Random 3.")
+                .WithText("Response: When the discard pile is shuffled back into the encounter deck, deal X Corruption to Algund to choose X cards in the discard pile. These cards are not shuffled back into the encounter deck.")
+                .WithFlavor("...and others also came from that land: old Algund, the oldest of the fellowship, who had fled from the Nirnaeth...\r\n-The Children of Húrin")
+                .WithInfo(15, 3, Artist.J_Lantta);
+            addAlly("Fostered Son", 1, Sphere.Leadership, false, 1, 0, 0, 1)
+                .WithTraits("Edain.", "Noble.")
+                .WithText("Action: Discard Fostered Son to reduce the cost of the next unique Edain character you play this phase by 2.")
+                .WithFlavor("Thus it was that the sons of Galdor were fostered in Brethil by Haldir their uncle, according to the custom of Men in that time...\r\n-The Silmarillion")
+                .WithInfo(16, 3, Artist.Andrew_Ryan);
+            addAlly("Elder of the Realm", 3, Sphere.Lore, false, 2, 1, 1, 2)
+                .WithTraits("Teleri.")
+                .WithText("Response: After a treachery is revealed, discard a card from hand (spend 1 Lore to discard the top card of your deck instead). If the first letter of the treachery card's title matches that of the discarded card, cancel the \"when revealed\" effects of the revealed card. (Limit once per game.)")
+                .WithInfo(17, 3, Artist.Unknown);
+            addAlly("Wolf-man", 0, Sphere.Mastery, false, 0, 3, 1, 2)
+                .WithTraits("Gaurwaith.")
+                .WithKeywords("Ransom 4.")
+                .WithTextLine("Random 4.")
+                .WithTextLine("Action: Exhaust Wolf-man to immediately declare him as an attacker (and resolve his attack) against an engaged enemy with one hit point remaining.")
+                .WithInfo(18, 3, Artist.Lane);
+            addAttachment("Neithan", 1, Sphere.Mastery, true)
+                .WithTraits("Name.")
+                .WithTextLine("Attach to Túrin Turambar. Limit 1 Name in play.")
+                .WithTextLine("Resource on Neithan can be discard to satisfy the ransom keyword.\r\nResponse: When an enemy with the ransom keyword is defeated, add 2 resources to Neithan.")
+                .WithInfo(19, 3, Artist.Thomas_Scholes);
+            addAttachment("Forge of Belegost", 1, Sphere.Lore, true)
+                .WithTraits("Item.", "Forge.")
+                .WithTextLine("Attach to a Dwarf character.")
+                .WithTextLine("Action: Exhaust Forge of Belegost and attached character to heal X damage on a character. X is the number of Item attachments on that character.")
+                .WithFlavor("...yet in the tempering of steel alone of all crafts the Dwarves were never outmatched even by the Noldor...\r\n-The Silmarillion")
+                .WithInfo(20, 3, Artist.Unknown);
+            addAttachment("Angrist", 1, Sphere.Leadership, true)
+                .WithTraits("Item.", "Weapon.")
+                .WithKeywords("Restricted.")
+                .WithText("Attach to a hero with the House of House of Bëor trait. Restricted.\r\nAttached hero gets +1 Attack.\r\nAction: Exhaust Angrist and the attached hero to choose a facedown enemy. Turn that enemy faceup and deal 4 damage to it.")
+                .WithFlavor("...and from the iron claws that held it he cut a Silmaril.\r\n-The Silmarillion")
+                .WithInfo(21, 3, Artist.Vadim);
+            addEvent("Song of Parting", 1, Sphere.Leadership)
+                .WithTraits("Song.")
+                .WithText("Response: After an encounter card with at least 3 Threat is revealed from the encounter deck, choose and ready a character. That character gets +2 Willpower, +2 Attack, and +2 Defense until the end of the round.")
+                .WithFlavor("...for he believed that he must now say farewell to both love and light.\r\n-The Silmarillion")
+                .WithInfo(22, 3, Artist.Kip_Rasmussen);
+            addEvent("None Shall Break", 2, Sphere.Mastery)
+                .WithText("Action: Ready each character with an Oath attached. (Lower the cost of None Shall Break by 2 if each character that readies takes 1 Corruption.)")
+                .WithFlavor("For so sworn, good or evil, an oath may not be broken, and it shall pursue oathkeeper and oathbreaker to the world's end.\r\n-The Silmarillion")
+                .WithInfo(23, 3, Artist.Jenny_Dolfen);
+
             addScenario(EncounterSet.AmongTheOutlaws.Name, 2, cycleName)
                 .WithTextLine("Dilemma Deck")
                 .WithTextLine("The 9 objective cards with the Dilemma trait are set aside into a separate deck at the start of the game and shuffled. When players quest unsuccessfully, the top card of the dilemma deck is revealed. Each dilemma card gives the player two options. Carrying out the first option helps the Gaurwaith while carrying out the second option, which adds the card to the victory display, helps the woodmen.")
@@ -27,27 +86,13 @@ namespace HallOfBeorn.Models.LotR.Sets.FirstAge
                 .WithOppositeTextLine("When a character with the Ransom keyword enters play, the player who controls it may discard a number of resources from the resource pools of heroes they control equal to the Ransom value. If they choose not to satisfy this requirement, then that player card loses the \"ally\" card type and gains the \"enemy\" card type, immediately engaging the player who played it. Its threat is equal to its willpower and its engagement cost is 0. If this enemy is defeated, remove all damage from it and return it its owner's control as an ally.")
                 .WithOppositeTextLine("Relentless")
                 .WithOppositeTextLine("An enemy with the Relentless keyword cannot have its attack canceled or be prevented from attacking by player card effects. It can still be targeted by other effects which do no specifically prevent attacks.")
-                .WithInfo(0, 1, Artist.Arman_Akopian);
-
-            addLocation("Foret Clearing", EncounterSet.AmongTheOutlaws, 2, 4)
-                .WithTraits("Forest.")
-                .WithTextLine("(Stage 1B) Response: After Forst Clearing is explored, reduce each player's threat by 2.")
-                .WithTextLine("(Stage 2B): While Forest Clearing is the active location, the first Gaurwaith enemy revealed each round gains surge.")
-                .WithInfo(10, 0, Artist.Unknown);
-
-            addTreachery("Horn-calls", EncounterSet.AmongTheOutlaws)
-                .WithTraits("Woodmen.")
-                .WithTextLine("When Revealed: Each player must search the encounter deck and discard pile for a Woodmen enemy and put it into play engaged with hum. Then, each engaged Woodmen enemy makes an immediate attack.")
-                .WithFlavorLine("...and there were paths from stead to stead, and men could summon help at need by horn-calls.")
-                .WithFlavorLine("-The Children of Húrin")
-                .WithInfo(16, 0, Artist.Unknown);
-
-            addTreachery("Wolf-men of the Winter", EncounterSet.AmongTheOutlaws)
-                .WithTraits("Gaurwaith.")
-                .WithTextLine("When Revealed: Each player engaged with a Gaurwaith enemy must discard all resources he controls. If a player did not discard at least 3 resources, deal 1 damage to each character he controls.")
-                .WithShadow("Shadow: The defending player must pay 1 resource of the attacking enemy gets +3 Attack.")
-                .WithInfo(18, 0, Artist.Unknown);
-
+                .WithInfo(29, 1, Artist.Unknown); //I-GUYJIN-I
+            addObjective("Fellowship with the Outlaws", EncounterSet.AmongTheOutlaws)
+                .WithTraits("Affiliation.")
+                .WithTextLine("Forced: After the 3rd Dilemma objective is added to the victory display, advance to stage 2A and remove Fellowship With The Outlaws from the game.")
+                .WithTextLine("Forced: After the players quest unsuccessfully, reveal the top card of the dilemma deck.")
+                .WithTextLine("If there are 7 cards in the dilemma deck discard pile, the player lose the game.")
+                .WithInfo(30, 1, Artist.Unknown); //(1/25)
             addEnemy("Forweg", EncounterSet.AmongTheOutlaws, 0, 2, 4, 2, 5)
                 .WithSlugSuffix("Enemy")
                 .WithUnique()
@@ -56,7 +101,7 @@ namespace HallOfBeorn.Models.LotR.Sets.FirstAge
                 .WithTextLine("Relentless.")
                 .WithTextLine("Allies cannot attack or defend against Forweg.")
                 .WithTextLine("Forced: After Forweg makes his first attack each round, he engages the next player and makes an immediate attack (discard and deal a new shadow card for this attack.")
-                .WithInfo(31, 1, Artist.Unknown); //Dragondude97
+                .WithInfo(31, 1, Artist.Unknown); //Dragondude97 (2/25)
             addObjectiveAlly("Forweg", EncounterSet.AmongTheOutlaws, 2, 4, 2, 5)
                 .WithSlugSuffix("Objective-Ally")
                 .WithUnique()
@@ -64,7 +109,7 @@ namespace HallOfBeorn.Models.LotR.Sets.FirstAge
                 .WithTextLine("The first player gains control of Forweg.")
                 .WithTextLine("Forced: Forweg declares and resolves an attack against a random Woodmen enemy engaged with the first player at the end of the combat phase.")
                 .WithTextLine("If Forweb leaves play, the players lose the game.")
-                .WithInfo(31, 1, Artist.Unknown); //Dragondude97
+                .WithInfo(31, 1, Artist.Unknown); //Dragondude97 (2/25)
             addEnemy("Androg", setName, 0, 1, 3, 2, 5)
                 .WithSlugSuffix("Enemy")
                 .WithUnique()
@@ -83,7 +128,14 @@ namespace HallOfBeorn.Models.LotR.Sets.FirstAge
                 .WithTextLine("If Androg leaves play, the players lose the game.")
                 .WithFlavorLine("\"Outlaws know no law but their needs. Look to your own, Neithan, and leave us to mind ours.\"")
                 .WithFlavorLine("-Androg, The Children of Húrin")
-                .WithInfo(32, 1, Artist.Denman_Rooke);
+                .WithInfo(32, 1, Artist.Denman_Rooke); //(3/25)
+            addObjective("Larnach's Daughter", EncounterSet.AmongTheOutlaws)
+                .WithUnique()
+                .WithTraits("Dilemma.")
+                .WithFlavorLine("A young woman is running for her life. Will you interfere with the man pursuing her or leave her to her fate?")
+                .WithTextLine("When Revealed: Forweg declares an attack on Larnach's Daughter. The first player may declare an eligible defender against this attack. If not character is destroyed by this attack, add Larnach's Daughter the the victory display. If no defender is declared, each player deal 3 Corruption among characters he controls.")
+                .WithVictoryPoints(1)
+                .WithInfo(33, 1, Artist.Unknown); //Dashinvaine (4/25)
             addEnemy("Teiglin Hunter", EncounterSet.AmongTheOutlaws, 28, 2, 2, 1, 3)
                 .WithTraits("Woodmen.")
                 .WithTextLine("While Teiglin Hunter is engaged with a player, all enemies engaged with that player get +1 Attack.")
@@ -95,97 +147,131 @@ namespace HallOfBeorn.Models.LotR.Sets.FirstAge
                 .WithFlavorLine("But they earned less gratitude so from the outlaws than from beasts and birds, and they were saved rather by their dogs and their fences...")
                 .WithFlavorLine("-The Children of Húrin")
                 .WithInfo(35, 0, Artist.Unknown);
-
+            addEnemy("Homestead Defender", EncounterSet.AmongTheOutlaws, 32, 2, 1, 3, 3)
+                .WithTraits("Woodmen.")
+                .WithTextLine("While Homestead Defender is engaged with a player, Woodmen enemies engaged with that player not named Homestead Defender cannot be attacked by non-objective characters.")
+                .WithShadow("Shadow: All enemies engaged with the defending player get +2 Defense until the end of the phase.")
+                .WithInfo(36, 0, Artist.Unknown); //LJF Hutch (7/25)
+            addEnemy("Desperate Outlaw", EncounterSet.AmongTheOutlaws, 25, 2, 4, 2, 5)
+                .WithTraits("Gaurwaith.")
+                .WithTextLine("Forced: After an attack against Desperate Outlaw resolves, Desperate Outlaw makes an immediate attack against the defending player.")
+                .WithShadow("Shadow: Attacking enemy makes an additional attack after this one.")
+                .WithInfo(37, 1, Artist.Unknown); //Idriu95 (8/25)
+            addEnemy("Cruel Robber", EncounterSet.AmongTheOutlaws, 28, 3, 4, 2, 4)
+                .WithTraits("Gaurwaith.")
+                .WithTextLine("Forced: After Cruel Robber attack, discard 1 attachment the defending player controls.")
+                .WithShadow("Shadow: Discard 1 attachment from the defending character.")
+                .WithInfo(38, 1, Artist.Unknown); //Mospineq (9/25)
+            addEnemy("Driven Outcast", EncounterSet.AmongTheOutlaws, 22, 4, 3, 3, 4)
+                .WithTraits("Gaurwaith.")
+                .WithTextLine("Forced: After Driven Outcast attacks, deal 1 damage to a defending character.")
+                .WithShadow("Shadow: After this attack resolves, deal 1 damage to the defending character.")
+                .WithInfo(39, 0, Artist.Unknown); //CubeHero (10/25)
+            addLocation("Forest Clearing", EncounterSet.AmongTheOutlaws, 2, 4)
+                .WithTraits("Forest.")
+                .WithTextLine("(Stage 1B) Response: After Forst Clearing is explored, reduce each player's threat by 2.")
+                .WithTextLine("(Stage 2B): While Forest Clearing is the active location, the first Gaurwaith enemy revealed each round gains surge.")
+                .WithInfo(40, 0, Artist.Unknown); //(11/25)
             addLocation("Scattered Homestead", EncounterSet.AmongTheOutlaws, 4, 6)
                 .WithTraits("Homestead.")
                 .WithTextLine("While Scattered Homestead is in the staging area, discard cards from the encounter deck at the end of the round until an enemy is discarded. Add that enemy to the staging area.")
                 .WithFlavorLine("...they were of Haleth's folk for the most part, but owned no lord, and they lived both by hunting and husbandry...")
                 .WithFlavorLine("-The Children of Húrin")
-                .WithInfo(41, 0, Artist.Unknown);
-
-            addTreachery("Dogs and Fenced", EncounterSet.AmongTheOutlaws)
+                .WithInfo(41, 0, Artist.Unknown); //(12/25)
+            addLocation("Tilled Field", EncounterSet.AmongTheOutlaws, 2, 4)
+                .WithTraits("Homestead.")
+                .WithTextLine("(Stage 1B) Response: After Tilled Field is explored, add 1 resource to each hero's resource pool.")
+                .WithTextLine("(Stage 2B) Whne Revealed: Each player must exhaust a hero he controls.")
+                .WithInfo(42, 1, Artist.Unknown); //LJF Hutch (13/25)
+            addLocation("Hedge and Stockade", EncounterSet.AmongTheOutlaws, 3, 5)
+                .WithTraits("Homestead.", "Fortification.")
+                .WithTextLine("(Stage 1B): While Hedge and Stockade is the active location, all Woodmen enemies get +2 Defense and 0 engagement cost.")
+                .WithTextLine("(Stage 2B): While Hedge and Stockage is the active location, all Gaurwaith enemies -1 Attack and 0 engagement cost.")
+                .WithInfo(43, 1, Artist.Unknown); //Meinarch (14/25)
+            addLocation("Woods of Teiglin", EncounterSet.AmongTheOutlaws, 1, 3)
+                .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
+                .WithTextLine("(Stage 1B) Response: After Wood of Teiglin is explored, each player draws 1 card.")
+                .WithTextLine("(Stage 2B): While Woods of Teiglin is in the staging area, all Gaurwaith enemies get +1 Threat, +1 Attack, and +1 Defense.")
+                .WithInfo(44, 2, Artist.Unknown); //(15/25)
+            addTreachery("Dogs and Fences", EncounterSet.AmongTheOutlaws)
                 .WithTraits("Woodmen.")
                 .WithTextLine("When Revealed: Each player must choose: Either deal X damage among heroes he controls, where X is equal to the number of engaged Woodmen enemies plus 2, or treat the printed text bost of each non-objective character he controls as if it were blank, except for keywords and Traits, until the end of the round.")
                 .WithFlavorLine("But when spring was come it was perilous for the Gaurwaith to linger so near the houses of the woodmen...")
                 .WithFlavorLine("-The Children of Húrin")
-                .WithInfo(45, 0, Artist.Unknown); //Michael Ivan
-
+                .WithInfo(45, 2, Artist.Unknown); //Michael Ivan (16/25)
+            addTreachery("Horn-calls", EncounterSet.AmongTheOutlaws)
+                .WithTraits("Woodmen.")
+                .WithTextLine("When Revealed: Each player must search the encounter deck and discard pile for a Woodmen enemy and put it into play engaged with hum. Then, each engaged Woodmen enemy makes an immediate attack.")
+                .WithFlavorLine("...and there were paths from stead to stead, and men could summon help at need by horn-calls.")
+                .WithFlavorLine("-The Children of Húrin")
+                .WithInfo(46, 0, Artist.Unknown); //(17/25)
             addTreachery("No Law But Their Needs", EncounterSet.AmongTheOutlaws)
                 .WithTraits("Woodmen.")
                 .WithTextLine("When Revealed: Either each player must immediately exhaust and commit 1 hero to the quest, or raise each player's threat by 4.")
                 .WithShadow("Shadow: Deal 1 damage to the attacking enemy. If that enemy is destroyed, deal 1 Corruption to the defending character.")
-                .WithInfo(47, 0, Artist.Winona_Nelson);
-
-            addHero("Bór the Faithful", 6, Sphere.Spirit, 2, 1, 1, 3)
-                .WithTraits("Easterling.")
-                .WithText("Action: Discard 1 Corruption for Bór the Faithful to ready him. He gets +2 Attack and +1 Willpower until the end of the round. (Limit once per round.)")
-                .WithFlavor("...and they followed Maedhros and Maglor, and cheated the hope of Morgoth, and were faithful.\r\n-The Silmarillion")
-                .WithInfo(53, 1, Artist.Chris_Quilliams);
-            addAlly("Brethil Hound", 3, Sphere.Spirit, false, 1, 2, 1, 2)
-                .WithTraits("Hound.", "House of Haleth.")
-                .WithText("Response: After Brethil Hound participates in an attack that destroys an enemy, choose a player. That player reduces his threat by 1. (Limit once per phase.)")
-                .WithInfo(54, 3, Artist.K_LeCrone);
-            addAlly("Algund", 0, Sphere.Mastery, true, 2, 1, 1, 3)
+                .WithInfo(47, 0, Artist.Winona_Nelson); //(18/25)
+            addTreachery("Wolf-men of the Winter", EncounterSet.AmongTheOutlaws)
                 .WithTraits("Gaurwaith.")
-                .WithKeywords("Ransom 3.")
-                .WithText("Response: When the discard pile is shuffled back into the encounter deck, deal X Corruption to Algund to choose X cards in the discard pile. These cards are not shuffled back into the encounter deck.")
-                .WithFlavor("...and others also came from that land: old Algund, the oldest of the fellowship, who had fled from the Nirnaeth...\r\n-The Children of Húrin")
-                .WithInfo(55, 3, Artist.J_Lantta);
-            addAlly("Fostered Son", 1, Sphere.Leadership, false, 1, 0, 0, 1)
-                .WithTraits("Edain.", "Noble.")
-                .WithText("Action: Discard Fostered Son to reduce the cost of the next unique Edain character you play this phase by 2.")
-                .WithFlavor("Thus it was that the sons of Galdor were fostered in Brethil by Haldir their uncle, according to the custom of Men in that time...\r\n-The Silmarillion")
-                .WithInfo(56, 3, Artist.Andrew_Ryan);
-            addAlly("Elder of the Realm", 3, Sphere.Lore, false, 2, 1, 1, 2)
-                .WithTraits("Teleri.")
-                .WithText("Response: After a treachery is revealed, discard a card from hand (spend 1 Lore to discard the top card of your deck instead). If the first letter of the treachery card's title matches that of the discarded card, cancel the \"when revealed\" effects of the revealed card. (Limit once per game.)")
-                .WithInfo(56, 3, Artist.Unknown);
-            addAlly("Wolf-man", 0, Sphere.Mastery, false, 0, 3, 1, 2)
+                .WithTextLine("When Revealed: Each player engaged with a Gaurwaith enemy must discard all resources he controls. If a player did not discard at least 3 resources, deal 1 damage to each character he controls.")
+                .WithShadow("Shadow: The defending player must pay 1 resource of the attacking enemy gets +3 Attack.")
+                .WithInfo(48, 0, Artist.Unknown); //(19/25)
+            addTreachery("Banded Attack", EncounterSet.AmongTheOutlaws)
                 .WithTraits("Gaurwaith.")
-                .WithKeywords("Ransom 4.")
-                .WithText("Action: Exhaust Wolf-man to immediately declare him as an attacker (and resolve his attack) against an engaged enemy with one hit point remaining.")
-                .WithInfo(57, 3, Artist.Lane);
-            addAttachment("Neithan", 1, Sphere.Mastery, true)
-                .WithTraits("Name.")
-                .WithTextLine("Attach to Túrin Turambar. Limit 1 Name in play.")
-                .WithTextLine("Resource on Neithan can be discard to satisfy the ransom keyword.\r\nResponse: When an enemy with the ransom keyword is defeated, add 2 resources to Neithan.")
-                .WithInfo(58, 3, Artist.Thomas_Scholes);
-            addAttachment("Forge of Belegost", 1, Sphere.Lore, true)
-                .WithTraits("Item.", "Forge.")
-                .WithTextLine("Attach to a Dwarf character.")
-                .WithTextLine("Action: Exhaust Forge of Belegost and attached character to heal X damage on a character. X is the number of Item attachments on that character.")
-                .WithFlavor("...yet in the tempering of steel alone of all crafts the Dwarves were never outmatched even by the Noldor...\r\n-The Silmarillion")
-                .WithInfo(59, 3, Artist.Unknown);
-            addAttachment("Angrist", 1, Sphere.Leadership, true)
-                .WithTraits("Item.", "Weapon.")
-                .WithKeywords("Restricted.")
-                .WithText("Attach to a hero with the House of House of Bëor trait. Restricted.\r\nAttached hero gets +1 Attack.\r\nAction: Exhaust Angrist and the attached hero to choose a facedown enemy. Turn that enemy faceup and deal 4 damage to it.")
-                .WithFlavor("...and from the iron claws that held it he cut a Silmaril.\r\n-The Silmarillion")
-                .WithInfo(60, 3, Artist.Vadim);
-            addEvent("Song of Parting", 1, Sphere.Leadership)
-                .WithTraits("Song.")
-                .WithText("Response: After an encounter card with at least 3 Threat is revealed from the encounter deck, choose and ready a character. That character gets +2 Willpower, +2 Attack, and +2 Defense until the end of the round.")
-                .WithFlavor("...for he believed that he must now say farewell to both love and light.\r\n-The Silmarillion")
-                .WithInfo(61, 3, Artist.Kip_Rasmussen);
-            addEvent("None Shall Break", 2, Sphere.Mastery)
-                .WithText("Action: Ready each character with an Oath attached. (Lower the cost of None Shall Break by 2 if each character that readies takes 1 Corruption.)")
-                .WithFlavor("For so sworn, good or evil, an oath may not be broken, and it shall pursue oathkeeper and oathbreaker to the world's end.\r\n-The Silmarillion")
-                .WithInfo(62, 3, Artist.Jenny_Dolfen);
+                .WithKeywords("Surge.")
+                .WithTextLine("Surge.")
+                .WithTextLine("When Revealed: Each player deals X damage among characters he controls, where X is the number of Gaurwaith enemies engaged with that player.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack for each enemy engaged with the defending player.")
+                .WithInfo(49, 0, Artist.Unknown); //Benjamin Von Eckartsberg (20/25)
+            addTreachery("Blood Upon the Grass", EncounterSet.AmongTheOutlaws)
+                .WithTraits("Gaurwaith.")
+                .WithTextLine("When Revealed: Each player must choose: Either raise his threat by 1 for each Corruption on characters he controls, or choose character he controls with at least 1 Corruption. That character is immediately corrupted.")
+                .WithShadow("Shadow: Exhaust all characters the defending player controls with at least 1 Corruption.")
+                .WithInfo(50, 0, Artist.Unknown); //KasperV (21/25)
+            
+            //Quests
+            addQuest("An Evil and Dangerous Way", EncounterSet.AmongTheOutlaws, 1, 'A', Card.VALUE_NA)
+                .WithFlavorLine("After several years of service on the marches you have been forced to leave Doriath after a quarrel with Saeros, one of Thingol's counselors, ended in his death. Staying would have meant facing the king's doom. Wandering aimlessly at first, you have joined a band of outlaws led by Forweg. These desperate men are called Gaurwaith by the woodmen.")
+                .WithTextLine("Setup: Set all enemy and treachery cards with the Gaurwaith trait aside, out of play. Shuffle all Dilemma cards together into a dilemma deck. Add Fellowship with the Outlaws to the staging area. Put Forweg and Androg into play, ally side faceup. Each player searches the encounter deck for a different location and adds it to the staging area. Shuffle the encounter deck.")
+                .WithOppositeFlavorLine("The Gaurwaith raid the woodmen relentless in the winter. You must choose: restrain their evil deeds or take part in them.")
+                .WithOppositeTextLine("Forced: The players must travel to a location during the travel phase, if able.")
+                .WithOppositeTextLine("Forced: After a location is explored, deal X Corruption among characters the first player controls. X is the Threat of that location.")
+                .WithOppositeTextLine("Forced: After a Woodmen enemy is destroyed, deal 1 Corruption to each character that participated in the attack. (If Forweg or Androg participated in the attack, deal 1 Corruption to each hero controlled by the engaged player.)")
+                .WithInfo(51, 1, Artist.Anke_Eissmann); //
+            addQuest("To Govern the Fellowship", EncounterSet.AmongTheOutlaws, 2, 'A', 30)
+                .WithFlavorLine("You have defended the woodmen and shed the blood of some of the outlaws. Now, you must win their respect through force of arms or persuasion and seize control of the fellowship if you hope to survive.")
+                .WithTextLine("When Revealed: Flip Forweg and Androg to their enemy sides, remove all tokens from them, and place them in the staging area. Discard all Woodmen enemies. Remove all enemy and treachery cards with the Woodmen trait from the encounter deck and discard pile and set them aside, out of play. Shuffle the set aside enemy and treachery cards with the Gaurwaith trait into the encounter deck. Reveal 1 encounter card per player.")
+                .WithOppositeTextLine("Gaurwaith enemies may be attacked with Willpower instead of Attack. If an enemy would be damaged this way, place progress tokens on it instead of damage token. When an enemy has progress equal to its hit points, add it to the victory display and place those progress tokens on the quest.")
+                .WithOppositeTextLine("When Revealed: Place 5 progress tokens on this quest stage for each card in the discard pile of the dilemma deck.")
+                .WithOppositeTextLine("The players cannot defeat this stage while Forweg is in play. If the players defeat this stage, they have won the game.")
+                .WithInfo(52, 1, Artist.Unknown); //Peet
 
+            addObjective("Cull the Weak", EncounterSet.AmongTheOutlaws)
+                .WithTraits("Dilemma.")
+                .WithFlavorLine("The weak are viewed as a hindrance by the outlaws. Will you defend the weakest among you or give in to the idea that only the strong should survive?")
+                .WithTextLine("When Revealed: Either each player must discard the character he controls with the fewest hit points to remove all damage from one character he controls, or add Cull the Weak to the victory display and each player must deal 3 damage to a hero he controls.")
+                .WithVictoryPoints(1)
+                .WithInfo(53, 1, Artist.Unknown); //(22/25)
             addObjective("Punish the Trespassers", EncounterSet.AmongTheOutlaws)
                 .WithTraits("Dilemma.")
                 .WithFlavorLine("The Gaurwaith do not allow outsiders to tread on their land. Will you join them in waylaying the trespasser or will you speak for mercy?")
                 .WithTextLine("When Revealed: Either each player must exhaust a character he controls to discard a Woodmen enemy from play, or add Punish the Trespassers to the victory display and each player must search the encounter deck and discard pile for a Woodmen enemy and put it into play engaged with him. One of these must be Hound of the Woodmen, if able.")
                 .WithVictoryPoints(1)
-                .WithInfo(64, 1, Artist.Unknown);
-
-
+                .WithInfo(54, 1, Artist.Unknown); //Anjo Salvador (23/25)
+            addObjective("Raid the Homestead", EncounterSet.AmongTheOutlaws)
+                .WithTraits("Dilemma.")
+                .WithFlavorLine("In the bitter winter, the Gaurwaith steal food and supplies from the woodmen. Will you help them take from those who are also struggling to survive?")
+                .WithTextLine("When Revealed: Either each player deals X Corruption to a hero he controls to add X resources to that heroe's resource pool, or add Raid the Homestead to the victory display and discard all resources from play (any hero that does not discard a resource takes 2 damage).")
+                .WithVictoryPoints(1)
+                .WithInfo(55, 1, Artist.Unknown); //Andre Sutherland (24/25)
             addObjective("Turn a Blind Eye", EncounterSet.AmongTheOutlaws)
                 .WithTraits("Dilemma.")
                 .WithFlavorLine("The Gaurwaith are hardened men and have committed deplorable acts in their latest ranging. Will you ignore their misdeeds or challenge them?")
                 .WithTextLine("When Revealed: Either each player must deal 1 Corruption to a hero he controls to reduce his threat by 3, or add Turn a Blind Eye to the victory display and exhaust all heroes in play.")
                 .WithVictoryPoints(1)
-                .WithInfo(66, 1, Artist.Unknown);
+                .WithInfo(56, 1, Artist.Unknown); //(25/25)
+
+            //Campaign
             addTreachery("Cruel of Heart", EncounterSet.AmongTheOutlaws)
                 .WithBurden()
                 .WithTraits("Doom.")
@@ -194,7 +280,7 @@ namespace HallOfBeorn.Models.LotR.Sets.FirstAge
                 .WithTextLine("When Revealed: Attach to the hero with Curse of Morgoth attached. (Counts as a Condition attachment with the text: \"Forced: After an ally enters play, exhaust attached hero to deal 1 damage to that ally.\")")
                 .WithFlavorLine("...but many took to robbert and became cruel.")
                 .WithFlavorLine("-The Children of Húrin")
-                .WithInfo(67, 1, Artist.Unknown);
+                .WithInfo(57, 1, Artist.Unknown);
             addTreachery("Bitterness of Exile", EncounterSet.AmongTheOutlaws)
                 .WithBurden()
                 .WithTraits("Doom.")
@@ -202,13 +288,13 @@ namespace HallOfBeorn.Models.LotR.Sets.FirstAge
                 .WithTextLine("Surge.")
                 .WithTextLine("When Revealed: Remove each character with at least 1 Corruption from the quest.")
                 .WithShadow("Shadow: Reveal the top card of the encounter deck. It it is an eney or location, add it to the staging area.")
-                .WithInfo(68, 1, Artist.Unknown);
-            addAttachment("Craft in Wood and Field", 2, Sphere.Neutral, false)
+                .WithInfo(58, 1, Artist.Unknown);
+            addAttachment("Craft In Wood and Field", 2, Sphere.Neutral, false)
                 .WithBoon()
                 .WithTraits("Skill.")
                 .WithTextLine("Attach to the hero with Curse of Morgoth attached.")
                 .WithTextLine("Response: After the players travel to a location, choose a player and exhaust attached hero to reduce that player's threat by the Threat of the active location.")
-                .WithInfo(69, 1, Artist.Hector_Hanoteau);
+                .WithInfo(59, 1, Artist.Hector_Hanoteau);
             addAttachment("Hardship of the Wild", 0, Sphere.Neutral, false)
                 .WithBoon()
                 .WithTraits("Condition.")
@@ -217,7 +303,18 @@ namespace HallOfBeorn.Models.LotR.Sets.FirstAge
                 .WithTextLine("Setup: Attach to a hero.")
                 .WithTextLine("Attached hero gets +1 Defense and +1 hit point.")
                 .WithTextLine("Response: Add Hardship of the Wild to the victory display, and remove it from the campaign pool, to cancel 2 points of damage just deal to attached hero.")
-                .WithInfo(70, 1, Artist.Unknown);
+                .WithInfo(60, 4, Artist.Unknown);
+            addCampaign(setName, EncounterSet.AmongTheOutlaws, cycleName)
+                .WithTextLine("You are playing Campaign Mode.")
+                .WithTextLine("Response: Discard the top card of the dilemma deck to cancel the \"when revealed\" effects of a card that was just revealed from the encounter deck. (Limit once per game.)")
+                .WithFlavorLine("There before the Nirnaeth many men had dwelt in scattered homesteads; they were of Haleth's folk for the most part, but owned no lord, and they lived both by hunting and husbandry, keeping swine in the mast-lands, and tilling clearings in the forest which were fenced from the wild. But most were now destroyed, or had fled into Brethil, and all that region lay under the feat of Ores, and of outlaws.")
+                .WithFlavorLine("-The Children of Húrin")
+                .WithOppositeTextLine("Resolution: Add Bitterness of Exile to the campaign pool. If there is at least 1 card in the dilemma deck discard pule, add Cruel of Heart to the campaign pool. These burdens have been earned by the players. Each player may attach a copy of Hardship of the Wild to a hero he controls. If there are no cards in the dilemma deck discard pule, add Craft In Wood And Field to the campaign pool. These boons have been earned by the players.")
+                .WithOppositeFlavorLine("All were silent. Then Turin spike again. \"Do you take me to be your captain? Then I will lead you first away into the wild, far from the homes of Men. There we may find better fortune, or not; but at least we shall earn less hatred of our own kind.\"")
+                .WithOppositeFlavorLine("Then all those that were of the Poeple of Hador gathered to him, and took him as their captain; and the others with less good will agreed.")
+                .WithOppositeFlavorLine("And at once he led them away out of that country.")
+                .WithOppositeFlavorLine("-The Children of Húrin")
+                .WithInfo(61, 1, Artist.Unknown); //Peet
         }
     }
 }
