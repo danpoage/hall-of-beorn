@@ -13,7 +13,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.FirstAge
         {
             Title = "Trial Upon the Marches";
             ProductName = "Trial Upon the Marches";
-            GroupName = "First Age";
+            GroupName = "Doom Mastered";
             Number = 4;
 
             AddEncounterSet(EncounterSet.TrialUponTheMarches);

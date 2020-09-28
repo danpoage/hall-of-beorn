@@ -13,7 +13,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.FirstAge
         {
             Title = "Among the Outlaws";
             ProductName = "Among the Outlaws";
-            GroupName = "First Age";
+            GroupName = "Doom Mastered";
             Number = 5;
 
             AddEncounterSet(EncounterSet.AmongTheOutlaws);

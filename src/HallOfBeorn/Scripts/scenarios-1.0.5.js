@@ -853,6 +853,9 @@ function loadCharts() {
     $.get("/Cards/ScenarioTotals?id=The+Wilds+of+Rhovanion,Ered+Mithrin").success(function (data) {
         loadTotals('#tworTotalsContainer', 'The Wilds of Rhovanion and Ered Mithrin', data);
     });
+    $.get("/Cards/ScenarioTotals?id=A+Shadow+in+the+East,Vengeance+of+Mordor").success(function (data) {
+        loadTotals('#asiteTotalsContainer', 'A Shadow in the East and Vengeance of Mordor', data);
+    });
     $.get("/Cards/ScenarioTotals?id=The+Hobbit").success(function (data) {
         loadTotals('#hobbitTotalsContainer', 'The Hobbit Saga', data);
     });

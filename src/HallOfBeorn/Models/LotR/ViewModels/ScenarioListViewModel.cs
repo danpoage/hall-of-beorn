@@ -22,7 +22,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 sg.Name != "The Hobbit" &&
                 sg.Name != "The Lord of the Rings" &&
                 sg.Name != "Gen Con & Fellowship" &&
-                sg.Name != "First Age");
+                sg.Name != "First Age" &&
+                sg.Name != "Doom Mastered");
         }
 
         public IEnumerable<ScenarioGroupViewModel> ScenarioSagaGroups()
@@ -31,7 +32,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 sg.Name == "The Hobbit" ||
                 sg.Name == "The Lord of the Rings" ||
                 sg.Name == "Gen Con & Fellowship" ||
-                sg.Name == "First Age");
+                sg.Name == "First Age" ||
+                sg.Name == "Doom Mastered");
         }
 
         public string QuestMapUrl
