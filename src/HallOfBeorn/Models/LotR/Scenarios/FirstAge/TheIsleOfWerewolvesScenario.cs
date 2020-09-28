@@ -7,7 +7,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.FirstAge
             Title = "The Isle of Werewolves";
             ProductName = "First Age";
             GroupName = "First Age";
-            Number = 0;
+            Number = 2;
 
             AddTheLineUnbrokenLink("F6", "A8FYpUvo9BY");
 

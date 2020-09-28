@@ -11,6 +11,7 @@ namespace HallOfBeorn.Models.LotR.Products.Custom
             : base("Among the Outlaws", "FA03", ImageType.Jpg, new DateTime(2015, 10, 1))
         {
             AddCardSet(CardSet.AmongTheOutlaws);
+            AddScenario(new Scenarios.FirstAge.AmongTheOutlawsScenario());
         }
     }
 }

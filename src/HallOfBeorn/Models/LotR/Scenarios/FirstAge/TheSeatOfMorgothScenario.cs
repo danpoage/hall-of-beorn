@@ -7,7 +7,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.FirstAge
             Title = "The Seat of Morgoth";
             ProductName = "First Age";
             GroupName = "First Age";
-            Number = 0;
+            Number = 3;
 
             AddTheLineUnbrokenLink("F7", "PcJbybgSb10");
 

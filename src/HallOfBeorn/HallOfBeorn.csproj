@@ -479,6 +479,8 @@
     <Compile Include="Models\LotR\Scenarios\EredMithrin\TheFateOfWilderlandScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\EredMithrin\TheGhostOfFramsburgScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\EredMithrin\TheWitheredHeathScenario.cs" />
+    <Compile Include="Models\LotR\Scenarios\FirstAge\AmongTheOutlawsScenario.cs" />
+    <Compile Include="Models\LotR\Scenarios\FirstAge\TrialUponTheMarchesScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\Haradrim\BeneathTheSandsScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\Haradrim\TheCrossingsOfPorosScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\Haradrim\TheBlackSerpentScenario.cs" />

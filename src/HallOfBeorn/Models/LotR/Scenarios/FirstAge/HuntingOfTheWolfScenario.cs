@@ -7,7 +7,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.FirstAge
             Title = "Hunting of the Wolf";
             ProductName = "First Age";
             GroupName = "First Age";
-            Number = 0;
+            Number = 1;
 
             AddTheLineUnbrokenLink("F8", "q4oabLrlNw4");
 

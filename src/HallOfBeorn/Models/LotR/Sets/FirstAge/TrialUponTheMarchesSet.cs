@@ -139,7 +139,37 @@ namespace HallOfBeorn.Models.LotR.Sets.FirstAge
                 .WithText("Setup: Shuffle For Good Or For Ill into the encounter deck.\r\nWhen Revealed: If there are no Corruption tokens on the hero with Curse of Morgoth attached, cancel the effects of all keywords on this card. Otherwise, resolve keywords as normal.")
                 .WithFlavor("\"...your fate is twined with that of the Elven-folk, for good or for ill. Beware of yourself, lest it be ill.\"\r\n-Melian, The Children of Húrin")
                 .WithInfo(211, 1, Artist.Neerachar_Sophol));
-
+            addQuest("Preparing for Battle", EncounterSet.TrialUponTheMarches, 1, 'A', Card.VALUE_NA)
+                .WithFlavorLine("While the Girdle of Melian has long protected Doriath, the marches are a contested region where the Elven-warriors of Thingol wage unceasing war against the Orcs of Morgoth. Since the disatrous Battle of Unnumbered Tears, the noose grows ever tighter. Every year, the Orcs grow more bold and seize upon any opportunity to waylay those who find themselves without guard or aid. Thingol has tasked you with joining the march-wardens of Doriath. It is here where you will prove your mettle by standing against those who would seek the destruction of Menegroth and all that is fair and light...")
+                .WithOppositeTextLine("When Revealed: Set the Unscated, Deeds of Daring, and Mighty in Arms objectives aside, out of play. Set Azrat, Weapon of Morgoth, and all copies of Orc Raiding Party aside, out of play. Each player searches the top 10 cards of his deck for an attachment and places it faceup, if able. The first player chooses one faceup attachment and attaches it to an eligible hero. Shuffle all other faceup attachments back into their respective decks. Then, asdvance to a random stage 2A.")
+                .WithInfo(212, 1, Artist.Unknown);
+            addQuest("Repel the Incursion", EncounterSet.TrialUponTheMarches, 2, 'A', 14)
+                .WithFlavorLine("A war party of Orcs is mounting a large assault on one of the main fortifications of the marches. You must repel their advance and prevent them from breaking through.")
+                .WithTextLine("When Revealed: Choose one of the remaining set aside objectives and attach it to the quest. Discard cards from the top of th encounter deck until X enemies are discarded. X is equal to the number of players in the game. Add each enemy discarded this way to the staging area.")
+                .WithTextLine("If there are no enemies in the staging area at the end of the quest phase, discard cards from the encounter deck until an enemy is discarded. Add that enemy to the staging area.")
+                .WithTextLine("Forced: After the first player discards any number of cards from the raid keyword, place 1 damage on this stage. If there are 6 damage tokens on this stage, the players have lost the game.")
+                .WithTextLine("While these is at least 1 enemy in play, the players cannot defeat this stage. When the players defeat this stage, remove it from play and advance to a random stage 2A. If only one stage 2 quest remains, adsvance to stage 3A, instead.")
+                .WithInfo(213, 1, Artist.Unknown);
+            addQuest("Rescue the Settlement", EncounterSet.TrialUponTheMarches, 2, 'A', 5)
+                .WithFlavorLine("A band of Orcs has launched a raid against a settlement of Thingol's people on the edge of Doriath. You must rescue those who live there from a terrible fate of death or slavery.")
+                .WithTextLine("When Revealed: Choose one of the remaining set aside objectives and attach it to the quest. Each player must add 1 copy of Orc Raiding Party to the staging area.")
+                .WithOppositeTextLine("Encounter Action: Discard 5 progress tokens from this stage to engage 1 copy of Orc Raiding Party in the staging area.")
+                .WithOppositeTextLine("Forced: After a player discards at least 1 ally from the raid keyword, deal 1 Corruption to  a hero controlled by that player.")
+                .WithOppositeTextLine("While there is at least 1 Orc Raiding Party in play, the players cannot defeat this stage. If there are no copies of Orc Raiding Party in play, immediately remove this stage from play and advance to a random stage 2A. If only one stage 2 quest remains, advance to stage 3A, instead.")
+                .WithInfo(214, 1, Artist.Unknown);
+            addQuest("Destroy the War Engine", EncounterSet.TrialUponTheMarches, 2, 'A', Card.VALUE_NA)
+                .WithFlavorLine("Scouts have reported that a huge engine of war has been brought down from Angband. This weapon could bring untold destruction to Doriath and the lands around. You must find this weapon and destroy it at all costs.")
+                .WithTextLine("When Revealed: Choose one of the remaining set aside objectives and attach it to the quest. Add Weapon of Morgoth to the staging area.")
+                .WithOppositeTextLine("Response: After the players quest successfully, Weapon of Morgoth gains the text: \"The first player may declare attacks against Weapon of Morgoth during the combat phase as if it were an enemy. When making attacks this way, treat its Threat as Defense. Limit 5 damage per round. When Weapon of Morgoth takes damage equal to or greater than its quest points, it is destroyed and removed from the game.\" This effect lasts until the end of the the round.")
+                .WithOppositeTextLine("After Weapon of Morgoth is destroyed, advance to the next stahe. When the players defeat this stage, remove it from play and advance to a random stage 2A. If only one stage 2 quest remains, advance to stage 3A, instead.")
+                .WithInfo(215, 1, Artist.Unknown); //Karl Kopinski
+            addQuest("A Final Proving", EncounterSet.TrialUponTheMarches, 3, 'A', 15)
+                .WithFlavorLine("The march-wardens speak of one Orc warrior with fear, a veteran of countless battles who has claimed many Elven lives over the years: Azrat. This orc has come to command a large band of Orcs and they have set their sights on eliminating the march-wardens once and for all...")
+                .WithTextLine("When Revealed: Choose one of the remaining set aside objective and attach it to the quest. Add Azrat to the staging area. If there are fewer than X enemies in play, discard cards from the top of the encounter deck, add each enemy discarded this way to the staging area, until X enemies are in play. X is the number of players.")
+                .WithOppositeFlavorLine("It appears your own reputation has grown among the Orcs just as Azrat's has among the Elves. The fearsome Orc seeks you out as the battle rages.")
+                .WithOppositeTextLine("Forced: At the end of the round, discard X cards from the top of the encounter deck. X is the number of players in the game. Add each enemy discarded this way to the staging area.")
+                .WithOppositeTextLine("While Azrat is in play, the players cannot defeat this stage. When the players defeat this stage, they have won the game.")
+                .WithInfo(216, 1, Artist.Unknown); //Derk Venemann
             Cards.Add(LotRCard.Hero("Beleg Strongbow", "", Sphere.Lore, 10, 2, 3, 1, 5)
                 .WithTraits("Teleri.", "Ranger.", "Scout.")
                 .WithKeywords("Ranged.")
