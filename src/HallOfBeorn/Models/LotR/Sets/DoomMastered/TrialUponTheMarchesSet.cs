@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HallOfBeorn.Models.LotR.Sets.FirstAge
+namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
 {
     public class TrialUponTheMarchesSet : CardSet
     {
         private const string setName = "Trial Upon the Marches";
+        private const string cycleName = "Doom Mastered";
 
         protected override void Initialize()
         {
@@ -15,7 +16,7 @@ namespace HallOfBeorn.Models.LotR.Sets.FirstAge
             Abbreviation = "TUtM";
             Number = 9002;
             SetType = Models.SetType.First_Age;
-            Cycle = "Doom Mastered";
+            Cycle = cycleName;
 
             Cards.Add(LotRCard.Objective("Deeds of Daring", "", setName)
                 .WithTraits("Feat.")

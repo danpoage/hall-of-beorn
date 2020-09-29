@@ -510,6 +510,7 @@
     <Compile Include="Models\LotR\ScenarioView.cs" />
     <Compile Include="Models\LotR\Sets\AngmarAwakened\AcrossTheEttenmoorsNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\AShadowInTheEast\AShadowInTheEastSet.cs" />
+    <Compile Include="Models\LotR\Sets\DoomMastered\TheBetrayalOfMim.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\AStormOnCobasHavenNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\FlightOfTheStormcallerNightmare.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\TempleOfTheDeceivedNightmareSet.cs" />
@@ -856,7 +857,7 @@
     <Compile Include="Models\LotR\Sets\AngmarAwakened\AcrossTheEttenmoorsSet.cs" />
     <Compile Include="Models\LotR\Sets\ShadowsOfMirkwood\AJourneyToRhosgobelNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\AKnifeInTheDarkNightmare.cs" />
-    <Compile Include="Models\LotR\Sets\FirstAge\AmongTheOutlawsSet.cs" />
+    <Compile Include="Models\LotR\Sets\DoomMastered\AmongTheOutlawsSet.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\AShadowOfThePastNightmare.cs" />
     <Compile Include="Models\LotR\Sets\AgainstTheShadow\AssaultOnOsgiliathSet.cs" />
     <Compile Include="Models\LotR\Sets\ShadowsOfMirkwood\AJourneyToRhosgobelSet.cs" />
@@ -959,7 +960,7 @@
     <Compile Include="Models\LotR\Sets\Dwarrowdelf\TheWatcherInTheWaterNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheVoiceOfIsengard\ToCatchAnOrcNightmare.cs" />
     <Compile Include="Models\LotR\Sets\AngmarAwakened\TheTreacheryOfRhudaurSet.cs" />
-    <Compile Include="Models\LotR\Sets\FirstAge\TrialUponTheMarchesSet.cs" />
+    <Compile Include="Models\LotR\Sets\DoomMastered\TrialUponTheMarchesSet.cs" />
     <Compile Include="Models\LotR\Sets\TheRingMaker\TroubleInTharbadSet.cs" />
     <Compile Include="Models\LotR\Sets\TheVoiceOfIsengard\TheVoiceOfIsengardSet.cs" />
     <Compile Include="Models\LotR\Sets\TheRingMaker\TroubleInTharbadNightmare.cs" />

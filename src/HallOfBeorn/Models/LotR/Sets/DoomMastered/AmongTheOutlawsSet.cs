@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HallOfBeorn.Models.LotR.Sets.FirstAge
+namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
 {
     public class AmongTheOutlawsSet : CardSet
     {

@@ -737,8 +737,8 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet MurderAtThePrancingPony = new Sets.PrintOnDemand.MurderAtThePrancingPony();
 
         public static CardSet FirstAge = new Sets.FirstAge.FirstAgeSet();
-        public static CardSet TrialUponTheMarches = new Sets.FirstAge.TrialUponTheMarchesSet();
-        public static CardSet AmongTheOutlaws = new Sets.FirstAge.AmongTheOutlawsSet();
+        public static CardSet TrialUponTheMarches = new Sets.DoomMastered.TrialUponTheMarchesSet();
+        public static CardSet AmongTheOutlaws = new Sets.DoomMastered.AmongTheOutlawsSet();
         #endregion
     }
 }

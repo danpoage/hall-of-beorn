@@ -551,12 +551,13 @@ namespace HallOfBeorn.Models.LotR
             Add(JourneyInTheDarkNightmare);
             Add(BreakingOfTheFellowshipNightmare);
 
-            //First Age
+            //First Age and Doom Mastered
             Add(HuntingOfTheWolf);
             Add(TheIsleOfWerewolves);
             Add(TheSeatOfMorgoth);
             Add(TrialUponTheMarches);
             Add(AmongTheOutlaws);
+            Add(TheBetrayalOfMim);
         }
 
         private static List<EncounterSet> all = new List<EncounterSet>();
@@ -918,11 +919,12 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet JourneyInTheDarkNightmare = new EncounterSet { Name = "Journey in the Dark Nightmare", Set = "Journey in the Dark Nightmare" };
         public static EncounterSet BreakingOfTheFellowshipNightmare = new EncounterSet { Name = "Breaking of the Fellowship Nightmare", Set = "Breaking of the Fellowship Nightmare" };
 
-        //First Age
+        //First Age and Doom Mastered
         public static EncounterSet HuntingOfTheWolf = new EncounterSet { Name = "Hunting of the Wolf", Set = "First Age" };
         public static EncounterSet TheIsleOfWerewolves = new EncounterSet { Name = "The Isle of Werewolves", Set = "First Age" };
         public static EncounterSet TheSeatOfMorgoth = new EncounterSet { Name = "The Seat of Morgoth", Set = "First Age" };
         public static EncounterSet TrialUponTheMarches = new EncounterSet { Name = "Trial Upon the Marches", Set = "Trial Upon the Marches" };
         public static EncounterSet AmongTheOutlaws = new EncounterSet { Name = "Among the Outlaws", Set = "Among the Outlaws" };
+        public static EncounterSet TheBetrayalOfMim = new EncounterSet { Name = "The Betrayal of Mîm" };
     }
 }
