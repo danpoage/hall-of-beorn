@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace HallOfBeorn.Models.LotR.ProductGroups
 {
@@ -13,6 +10,7 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
             AddMainProduct(Product.FirstAge);
             AddChildProduct(Product.TrialUponTheMarches);
             AddChildProduct(Product.AmongTheOutlaws);
+            AddChildProduct(Product.TheBetrayalOfMim);
         }
     }
 }

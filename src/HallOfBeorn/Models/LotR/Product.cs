@@ -250,9 +250,10 @@ namespace HallOfBeorn.Models.LotR
         public static Product TheLandOfShadowNightmare = new Products.Nightmare.TheLandOfShadowNightmareProduct();
 
         //Community Expansions
-        public static Product FirstAge = new Products.Custom.FirstAgeProduct();
-        public static Product TrialUponTheMarches = new Products.Custom.TrialUponTheMarchesProduct();
-        public static Product AmongTheOutlaws = new Products.Custom.AmongTheOutlawsProduct();
+        public static Product FirstAge = new Products.Community.FirstAgeProduct();
+        public static Product TrialUponTheMarches = new Products.Community.TrialUponTheMarchesProduct();
+        public static Product AmongTheOutlaws = new Products.Community.AmongTheOutlawsProduct();
+        public static Product TheBetrayalOfMim = new Products.Community.TheBetrayalOfMimProduct();
 
         #endregion
     }

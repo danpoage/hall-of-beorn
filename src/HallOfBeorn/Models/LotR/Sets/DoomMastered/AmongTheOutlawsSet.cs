@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
 
         protected override void Initialize()
         {
-            Name = "Among the Outlaws";
+            Name = setName;
             Abbreviation = "AtO";
             Number = 9003;
             SetType = Models.SetType.First_Age;
@@ -77,7 +77,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
                 .WithFlavor("For so sworn, good or evil, an oath may not be broken, and it shall pursue oathkeeper and oathbreaker to the world's end.\r\n-The Silmarillion")
                 .WithInfo(23, 3, Artist.Jenny_Dolfen);
 
-            addScenario(EncounterSet.AmongTheOutlaws.Name, 2, cycleName)
+            addScenario(setName, 2, cycleName)
                 .WithTextLine("Dilemma Deck")
                 .WithTextLine("The 9 objective cards with the Dilemma trait are set aside into a separate deck at the start of the game and shuffled. When players quest unsuccessfully, the top card of the dilemma deck is revealed. Each dilemma card gives the player two options. Carrying out the first option helps the Gaurwaith while carrying out the second option, which adds the card to the victory display, helps the woodmen.")
                 .WithTextLine("Corruption and Objective Allies")

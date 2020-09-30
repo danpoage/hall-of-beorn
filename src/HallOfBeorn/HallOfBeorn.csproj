@@ -426,6 +426,7 @@
     <Compile Include="Models\LotR\Products\AdventurePack\TheLandOfSorrowProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\UnderTheAshMountainsProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\WrathAndRuinProduct.cs" />
+    <Compile Include="Models\LotR\Products\Community\TheBetrayalOfMimProduct.cs" />
     <Compile Include="Models\LotR\Products\Deluxe\AShadowInTheEastProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\FireInTheNightProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\MountGundabadProduct.cs" />
@@ -471,6 +472,7 @@
     <Compile Include="Models\LotR\Scenarios\AShadowInTheEast\DangerInDorwinionScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\AShadowInTheEast\TempleOfDoomScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\AShadowInTheEast\TheRiverRunningScenario.cs" />
+    <Compile Include="Models\LotR\Scenarios\DoomMastered\TheBetrayalOfMimScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\DreamChaser\AStormOnCobasHavenScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\EredMithrin\EredMithrinScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\EredMithrin\FireInTheNightScenario.cs" />
@@ -479,8 +481,8 @@
     <Compile Include="Models\LotR\Scenarios\EredMithrin\TheFateOfWilderlandScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\EredMithrin\TheGhostOfFramsburgScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\EredMithrin\TheWitheredHeathScenario.cs" />
-    <Compile Include="Models\LotR\Scenarios\FirstAge\AmongTheOutlawsScenario.cs" />
-    <Compile Include="Models\LotR\Scenarios\FirstAge\TrialUponTheMarchesScenario.cs" />
+    <Compile Include="Models\LotR\Scenarios\DoomMastered\AmongTheOutlawsScenario.cs" />
+    <Compile Include="Models\LotR\Scenarios\DoomMastered\TrialUponTheMarchesScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\Haradrim\BeneathTheSandsScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\Haradrim\TheCrossingsOfPorosScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\Haradrim\TheBlackSerpentScenario.cs" />
@@ -510,7 +512,7 @@
     <Compile Include="Models\LotR\ScenarioView.cs" />
     <Compile Include="Models\LotR\Sets\AngmarAwakened\AcrossTheEttenmoorsNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\AShadowInTheEast\AShadowInTheEastSet.cs" />
-    <Compile Include="Models\LotR\Sets\DoomMastered\TheBetrayalOfMim.cs" />
+    <Compile Include="Models\LotR\Sets\DoomMastered\TheBetrayalOfMimSet.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\AStormOnCobasHavenNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\FlightOfTheStormcallerNightmare.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\TempleOfTheDeceivedNightmareSet.cs" />
@@ -622,7 +624,7 @@
     <Compile Include="Models\LotR\ProductGroups\DreamChaserProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\HaradrimProductGroup.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\AcrossTheEttenmoorsProduct.cs" />
-    <Compile Include="Models\LotR\Products\Custom\AmongTheOutlawsProduct.cs" />
+    <Compile Include="Models\LotR\Products\Community\AmongTheOutlawsProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\AStormOnCobasHavenProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\BeneathTheSandsProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\CelebrimborsSecretNightmareProoduct.cs" />
@@ -651,7 +653,7 @@
     <Compile Include="Models\LotR\Products\Nightmare\TheThreeTrialsNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheVoiceOfIsengardNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\TheTreacheryOfRhudaurProduct.cs" />
-    <Compile Include="Models\LotR\Products\Custom\TrialUponTheMarchesProduct.cs" />
+    <Compile Include="Models\LotR\Products\Community\TrialUponTheMarchesProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TroubleInTharbadNightmareProduct.cs" />
     <Compile Include="Models\LotR\ViewModels\LinkViewModel.cs" />
     <Compile Include="Models\Marvel\MarvelCard.cs" />
@@ -778,7 +780,7 @@
     <Compile Include="Models\LotR\Products\Nightmare\EncounterAtAmonDinNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\EncounterAtAmonDinProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\EscapeFromDolGuldurNightmareProduct.cs" />
-    <Compile Include="Models\LotR\Products\Custom\FirstAgeProduct.cs" />
+    <Compile Include="Models\LotR\Products\Community\FirstAgeProduct.cs" />
     <Compile Include="Models\LotR\Products\Fellowship\FogOnTheBarrowDownsProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\FoundationsOfStoneNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\FoundationsOfStoneProduct.cs" />

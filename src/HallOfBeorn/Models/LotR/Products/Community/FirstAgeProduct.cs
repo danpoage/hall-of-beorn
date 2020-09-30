@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HallOfBeorn.Models.LotR.Products.Custom
+namespace HallOfBeorn.Models.LotR.Products.Community
 {
     public class FirstAgeProduct : Product
     {

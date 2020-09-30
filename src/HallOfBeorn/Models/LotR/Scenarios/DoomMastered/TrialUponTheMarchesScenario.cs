@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HallOfBeorn.Models.LotR.Scenarios.FirstAge
+namespace HallOfBeorn.Models.LotR.Scenarios.DoomMastered
 {
     public class TrialUponTheMarchesScenario
         : Scenario

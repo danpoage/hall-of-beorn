@@ -944,9 +944,14 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             var set = (_card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
             var title = _card.Title.ToUrlSafeString();
+
+            var suffix = _card.CardType == LotR.CardType.Scenario
+                ? "Scenario"
+                : "Setup";
+            
             var letter = isFirst ? "A" : "B";
 
-            return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}-Setup{2}.jpg", set, title, letter);
+            return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}-{2}{3}.jpg", set, title, suffix, letter);
         }
 
         public string getContractCardImagePath(bool isFirst)

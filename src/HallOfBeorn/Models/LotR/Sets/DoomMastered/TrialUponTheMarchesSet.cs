@@ -171,6 +171,19 @@ namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
                 .WithOppositeTextLine("Forced: At the end of the round, discard X cards from the top of the encounter deck. X is the number of players in the game. Add each enemy discarded this way to the staging area.")
                 .WithOppositeTextLine("While Azrat is in play, the players cannot defeat this stage. When the players defeat this stage, they have won the game.")
                 .WithInfo(216, 1, Artist.Unknown); //Derk Venemann
+            addScenario(setName, 1, cycleName)
+                .WithTextLine("Raid")
+                .WithTextLine("At the end of the round, if one or more encounter cards in the staging have the raid keyword, discard the top X cards from the first player's deck. X is equal to the highest threat among these encounter cards. When an enemy with the raid keyword is engaged with a player at the end of the round, that player must discard the top X cards of his deck. X is equal to the enemy's threat strength. If a player ever has 0 cards left in his deck, he is eliminated from the game.")
+                .WithOppositeTextLine("Ransom")
+                .WithOppositeTextLine("When a character with the Ransom keyword enters play, the player who controls it may discard a number of resources from the resource pools of heroes they control equal to the Ransom value. If they choose not to satisfy this requirement, then that player card loses the \"ally\" trait and gains the \"enemy\" trait, immediately engaging the player who played it. Its threat is equal to its willpower and its engagement cost is 0. If this enemy is defeated, remove all damage from it and return it to the player's control as an ally.")
+                .WithOppositeTextLine("Relentless")
+                .WithOppositeTextLine("An enemy with Relentless cannot have its attack canceled or be prevented from attacking ny any player card effect. It still can be targeted by other effects that do not specifically prevent attacks.")
+                .WithInfo(216, 1, Artist.Unknown); //Karl Kopinski
+            addCampaign(setName, EncounterSet.TrialUponTheMarches, cycleName)
+                .WithTextLine("You are playing Campaign Mode.")
+                .WithTextLine("Setup: The players have earned the Curse of Morgoth burden. Attach Curse of Morgoth and Greatness Is In You to a hero. Add Not So High Is Your Destiny to the staging area. Shuffle For Good or For Ill into the encounter deck.")
+                .WithOppositeTextLine("Resolution: Add Curse of Morgoth to the campaign pool. If there are 3 or more victory points in the victory display, add Greatness Is In You to the campaign pool. If there are 0 victory points in the victory display, add Not So High If Your Destiny to the campaign pool. If there are 1 or 2 victory points in the victory display, add For Good or For Ill to the campaign pool. Victory points from player cards do not count for this purpose.")
+                .WithInfo(217, 1, Artist.Unknown); //Derk Venneman
             Cards.Add(LotRCard.Hero("Beleg Strongbow", "", Sphere.Lore, 10, 2, 3, 1, 5)
                 .WithTraits("Teleri.", "Ranger.", "Scout.")
                 .WithKeywords("Ranged.")
