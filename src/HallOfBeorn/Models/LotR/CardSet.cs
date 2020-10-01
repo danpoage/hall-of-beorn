@@ -740,7 +740,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet FirstAge = new Sets.FirstAge.FirstAgeSet();
         public static CardSet TrialUponTheMarches = new Sets.DoomMastered.TrialUponTheMarchesSet();
         public static CardSet AmongTheOutlaws = new Sets.DoomMastered.AmongTheOutlawsSet();
-        public static CardSet TheBetrayalOfMim = new Sets.DoomMastered.TheBetrayalOfMim();
+        public static CardSet TheBetrayalOfMim = new Sets.DoomMastered.TheBetrayalOfMimSet();
         #endregion
     }
 }

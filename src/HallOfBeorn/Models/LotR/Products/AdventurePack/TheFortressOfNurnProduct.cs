@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Products.AdventurePack
 {
@@ -9,9 +6,10 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
         : Product
     {
         public TheFortressOfNurnProduct()
-            : base("The Fortress of Nurn", "MEC83", ImageType.Jpg, new DateTime(2020, 8, 31))
+            : base("The Fortress of Nurn", "MEC83", ImageType.Jpg, new DateTime(2020, 9, 30))
         {
             AddCardSet(CardSet.TheFortressOfNurn);
+            AddScenario(new Scenarios.VengeanceOfMordor.TheFortressOfNurnScenario());
         }
     }
 }

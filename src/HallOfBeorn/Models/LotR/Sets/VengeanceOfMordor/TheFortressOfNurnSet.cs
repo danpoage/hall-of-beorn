@@ -18,8 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
             SetType = Models.SetType.Adventure_Pack;
             Cycle = "Vengeance of Mordor";
 
-            IsSpoiler = true;
-
             addHero("Aragorn", 12, Sphere.Spirit, 2, 3, 2, 5)
                 .WithTraits("Dúnedain.", "Ranger.", "Scout.")
                 .WithKeywords("Sentinel.")

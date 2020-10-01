@@ -2,7 +2,7 @@
 
 namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
 {
-    public class TheBetrayalOfMim
+    public class TheFallOfNargothrond
         : CardSet
     {
         private const string setName = "The Fall of Nargothrond";
@@ -73,7 +73,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
                 .WithFlavorLine("...nothing passed or came near that was not marked and remembered.")
                 .WithFlavorLine("-Unfinished Tales")
                 .WithInfo(344, 3, Artist.Unknown);
-            addAlly("Shieldmaiden of Haleth", 3, Sphere.Spirit, 2, 1, 2, 2)
+            addAlly("Shieldmaiden of Haleth", 3, Sphere.Spirit, false, 2, 1, 2, 2)
                 .WithTraits("Edain.", "House of Haleth.")
                 .WithTextLine("Response: After Shieldmaiden of Haleth quests successfully, place 1 resource token on it.")
                 .WithTextLine("Response: After a hero is damaged by an enemy attack, exhaust Shieldmaiden of Haleth and remove 3 progress tokens from it to cancel all damage from that attack.")

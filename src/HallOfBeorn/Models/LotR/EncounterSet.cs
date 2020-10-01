@@ -558,6 +558,7 @@ namespace HallOfBeorn.Models.LotR
             Add(TrialUponTheMarches);
             Add(AmongTheOutlaws);
             Add(TheBetrayalOfMim);
+            Add(TheFallOfNargothrond);
         }
 
         private static List<EncounterSet> all = new List<EncounterSet>();
@@ -741,6 +742,7 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet ChallengeOfTheWainriders = new EncounterSet { Name = "Challenge of the Wainriders", Set = "Challenge of the Wainriders" };
         public static EncounterSet UnderTheAshMountains = new EncounterSet { Name = "Under the Ash Mountains", Set = "Under the Ash Mountains" };
         public static EncounterSet TheLandOfSorrow = new EncounterSet { Name = "The Land of Sorrow", Set = "The Land of Sorrow" };
+        public static EncounterSet TheFortressOfNurn = new EncounterSet { Name = "The Fortress of Nurn", Set = "The Fortress of Nurn" };
 
         //Two Player Starter
         public static EncounterSet TheOath = new EncounterSet { Name = "The Oath", Set = "Two-Player Limited Edition Starter" };
@@ -925,6 +927,7 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet TheSeatOfMorgoth = new EncounterSet { Name = "The Seat of Morgoth", Set = "First Age" };
         public static EncounterSet TrialUponTheMarches = new EncounterSet { Name = "Trial Upon the Marches", Set = "Trial Upon the Marches" };
         public static EncounterSet AmongTheOutlaws = new EncounterSet { Name = "Among the Outlaws", Set = "Among the Outlaws" };
-        public static EncounterSet TheBetrayalOfMim = new EncounterSet { Name = "The Betrayal of Mîm" };
+        public static EncounterSet TheBetrayalOfMim = new EncounterSet { Name = "The Betrayal of Mîm", Set = "The Betrayal of Mîm" };
+        public static EncounterSet TheFallOfNargothrond = new EncounterSet { Name = "The Fall of Nargothrond", Set = "The Fall of Nargothrond" };
     }
 }

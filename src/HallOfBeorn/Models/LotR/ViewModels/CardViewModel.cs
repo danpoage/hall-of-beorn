@@ -997,11 +997,13 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Art/{0}/{1}-Setup{2}.jpg", set, title, letter);
         }
 
+        private readonly HashSet<CardType> canBeDoubleSided = new HashSet<CardType> { CardType.Location, CardType.Encounter_Side_Quest };
+
         public bool HasSecondImage
         {
             get
             {
-                if (_card.CardType == LotR.CardType.Location && !string.IsNullOrEmpty(_card.OppositeTitle)) {
+                if (!string.IsNullOrEmpty(_card.OppositeTitle) && canBeDoubleSided.Contains(_card.CardType)) {
                     return true;
                 }
 
@@ -1026,7 +1028,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             get
             {
-                if (_card.CardType == LotR.CardType.Location && !string.IsNullOrEmpty(_card.OppositeTitle)) {
+                if (!string.IsNullOrEmpty(_card.OppositeTitle) && canBeDoubleSided.Contains(_card.CardType)) {
                     return true;
                 }
 
@@ -1038,7 +1040,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             get
             {
-                if (_card.CardType == CardType.Location && !string.IsNullOrEmpty(_card.OppositeTitle))
+                if (!string.IsNullOrEmpty(_card.OppositeTitle) && canBeDoubleSided.Contains(_card.CardType))
                 {
                     return _card.OppositeTitle.ToUrlSafeString();
                 }
