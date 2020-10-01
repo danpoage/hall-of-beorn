@@ -654,6 +654,9 @@ namespace HallOfBeorn.Models
             //The Land of Sorrow
             all.Add(Artist.Matt_Hansen);
 
+            //The Fortress of Nurn
+            all.Add(Artist.Daniel_Zrom);
+
             //Arkham Horrom Core
             //all.Add(Artist.Vincent_Dutrait);
             //all.Add(Artist.Jacob_Murray);
@@ -954,6 +957,7 @@ namespace HallOfBeorn.Models
         public static Artist Dana_Li = new Artist { Name = "Dana Li", URL = "https://www.google.com/search?q=Dana+Li+Fantasy+Art" };
         public static Artist Dan_Howard = new Artist { Name = "Dan Howard", URL = "http://danhowardart.deviantart.com" };
         public static Artist Dan_Masso = new Artist { Name = "Dan Masso", URL = "http://danmasso.com" };
+        public static Artist Daniel_Zrom = new Artist { Name = "Daniel Zrom", URL = "https://www.artstation.com/danielzrom" };
         public static Artist Darek_Zabrocki = new Artist { Name = "Darek Zabrocki", URL = "http://daroz.deviantart.com" };
         public static Artist Daryl_Mandryk = new Artist { Name = "Daryl Mandryk", URL = "http://www.mandrykart.com" };
         public static Artist David_Chen = new Artist { Name = "David Chen", URL = "https://www.google.com/search?q=David+Chen+Fantasy+Art" };

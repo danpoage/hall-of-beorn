@@ -2,7 +2,7 @@
 
 namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
 {
-    public class TheBetrayalOfMim
+    public class TheBetrayalOfMimSet
         : CardSet
     {
         private const string setName = "The Betrayal of Mîm";

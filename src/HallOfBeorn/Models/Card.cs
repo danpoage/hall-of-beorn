@@ -168,7 +168,7 @@ namespace HallOfBeorn.Models
         public bool IsUnique { get; set; }
         public byte VictoryPoints { get; set; }
 
-        public byte CardNumber { get; set; }
+        public ushort CardNumber { get; set; }
         public byte Quantity { get; set; }
         public Artist Artist { get; set; }
         public Artist SecondArtist { get; set; }

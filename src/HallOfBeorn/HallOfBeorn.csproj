@@ -506,6 +506,7 @@
     <Compile Include="Models\LotR\Scenarios\TheWildsOfRhovanion\TheKingsQuestScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\VengeanceOfMordor\ChallengeOfTheWainridersScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\VengeanceOfMordor\TheCityOfUlfastScenario.cs" />
+    <Compile Include="Models\LotR\Scenarios\VengeanceOfMordor\TheFortressOfNurnScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\VengeanceOfMordor\TheLandOfSorrowScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\VengeanceOfMordor\UnderTheAshMountainsScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\VengeanceOfMordor\WrathAndRuinScenario.cs" />
@@ -513,6 +514,7 @@
     <Compile Include="Models\LotR\Sets\AngmarAwakened\AcrossTheEttenmoorsNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\AShadowInTheEast\AShadowInTheEastSet.cs" />
     <Compile Include="Models\LotR\Sets\DoomMastered\TheBetrayalOfMimSet.cs" />
+    <Compile Include="Models\LotR\Sets\DoomMastered\TheFallOfNargothrondSet.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\AStormOnCobasHavenNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\FlightOfTheStormcallerNightmare.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\TempleOfTheDeceivedNightmareSet.cs" />
