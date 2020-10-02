@@ -667,6 +667,9 @@ namespace HallOfBeorn.Models
             //Characters
             all.Add(Artist.Weta_Workshop);
 
+            //The Fall of Nargothrond
+            all.Add(Artist.Adele_Lorienne);
+
             all.Add(Artist.None);
         }
 
@@ -889,6 +892,7 @@ namespace HallOfBeorn.Models
         public static Artist A_M_Sartor = new Artist { Name = "A. M. Sartor", URL = "http://amsartor.com" };
         public static Artist Adam_Lane = new Artist { Name = "Adam Lane", URL = "http://www.adamlaneart.com/#home" };
         public static Artist Adam_Schumpert = new Artist { Name = "Adam Schumpert", URL = "http://aschumpert.deviantart.com" };
+        public static Artist Adele_Lorienne = new Artist { Name = "Adele Lorienne", URL = "http://www.meadowhaven.net/" };
         public static Artist Alex_Stone = new Artist { Name = "Alex Stone", URL = "http://alexstoneart.deviantart.com" };
         public static Artist Aleksander_Karcz = new Artist { Name = "Aleksander Karcz", URL = "http://aleksanderkarcz.deviantart.com" };
         public static Artist Alexander_Kozachenko = new Artist { Name = "Alexander Kozachenko", URL = "http://alexanderexorcist.deviantart.com" };

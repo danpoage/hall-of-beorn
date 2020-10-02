@@ -39,7 +39,14 @@ namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
                 .WithOppositeTextLine("When Revealed: Each player may search the top 15 cards of their deck for one Weapon or Armor attachment and one ally. These cards may be immediately played for no cost. Add Mighty Bridge to the staging area.")
                 .WithOppositeTextLine("Forced: At the end of the round, advance to stage 3A.")
                 .WithInfo(316, 1, Artist.Unknown); //Art of Juhani
-            
+            addQuest("The Doors of Felagund", EncounterSet.TheFallOfNargothrond, 3, 'A', Card.VALUE_NA)
+                .WithFlavorLine("Five years have passed since you came to Nargothrond. In that time, small victories against the forces of Morgoth have been won. However, as the year turns to autumn, reports of a great host reach your ears.")
+                .WithFlavorLine("Morgoth has finally loosed the army he has long prepared. At the ")
+                .WithOppositeTextLine("when resolving the raid keyword, divide the enemy's Threat in half (rounding up).")
+                .WithOppositeTextLine("Forced: At the end of the round, add 1 damage to this stage (add 2 damage instead if there are more non-unique enemies in play than the number of players). If the number of damage tokens is equal to or greater than 5, advance to stage 4A.")
+                .WithOppositeTextLine("Forced: At the end of the round, if there are fewer non-unique enemies in play than the number of players, search the encounter deck and discard pile for 1 enemy and add it to the staging area, if able.")
+                .WithInfo(317, 1, Artist.Unknown);
+
             addEnemy("Great Host", EncounterSet.TheFallOfNargothrond, 38, 3, 5, 3, 8)
                 .WithTraits("Orc.")
                 .WithKeywords("Raid.")
