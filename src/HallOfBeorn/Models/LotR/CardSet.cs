@@ -533,6 +533,7 @@ namespace HallOfBeorn.Models.LotR
             Add(TrialUponTheMarches);
             Add(AmongTheOutlaws);
             Add(TheBetrayalOfMim);
+            Add(TheFallOfNargothrond);
         }
 
         public static List<CardSet> All()
@@ -741,6 +742,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TrialUponTheMarches = new Sets.DoomMastered.TrialUponTheMarchesSet();
         public static CardSet AmongTheOutlaws = new Sets.DoomMastered.AmongTheOutlawsSet();
         public static CardSet TheBetrayalOfMim = new Sets.DoomMastered.TheBetrayalOfMimSet();
+        public static CardSet TheFallOfNargothrond = new Sets.DoomMastered.TheFallOfNargothrondSet();
         #endregion
     }
 }

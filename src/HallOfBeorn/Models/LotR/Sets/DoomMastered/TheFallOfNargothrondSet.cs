@@ -2,7 +2,7 @@
 
 namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
 {
-    public class TheFallOfNargothrond
+    public class TheFallOfNargothrondSet
         : CardSet
     {
         private const string setName = "The Fall of Nargothrond";
@@ -190,6 +190,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
                 .WithFlavorLine("-Glaurung, The Children of Húrin")
                 .WithInfo(341, 1, Artist.Unknown); //Indecipherable
             addObjective("Doom Mastered", EncounterSet.TheFallOfNargothrond)
+                .WithSlugSuffix("Objective")
                 .WithBurden()
                 .WithTraits("Doom.")
                 .WithTextLine("At the end of the game, record the number of damage or progress tokens on Doom Mastered in the campaign log.")
@@ -224,11 +225,11 @@ namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
                 .WithTraits("Noldor.", "Warrior.")
                 .WithTextLine("Response: After Amon Ethir Sentry enters play, choose an enemy in the staging area. Then, you may either engage that enemy or that enemy does not make engagement checks until the end of the round.")
                 .WithInfo(347, 3, Artist.Unknown);
-            addAlly("Andvir", 0, Sphere.Mastery, true, 1, 1, 1, 2)
+            addAlly("Andvír", 0, Sphere.Mastery, true, 1, 1, 1, 2)
                 .WithTraits("Gaurwaith.")
                 .WithKeywords("Ransom 3.")
                 .WithTextLine("Ransom 3.")
-                .WithTextLine("Response: After a treachery is revealed, exhaust Andvir to choose an ally. That ally readies and gets +1 Willpower until the end of the round.")
+                .WithTextLine("Response: After a treachery is revealed, exhaust Andvír to choose an ally. That ally readies and gets +1 Willpower until the end of the round.")
                 .WithInfo(348, 3, Artist.Andreia_Ugrai);
             addAttachment("Gilded Mask", 2, Sphere.Mastery, true)
                 .WithTraits("Item.", "Armor.")
@@ -290,6 +291,19 @@ namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
                 .WithTextLine("Response: At the end of the combat phase, add 1 resource to Favor of Indis if you are engaged with an enemy and did not destroy an enemy this phase. (Limit 3 resources on Favor of Indis.)")
                 .WithTextLine("Forced: After you destroy an enemy, remove 1 resource from Favor of Indis.")
                 .WithInfo(359, 3, Artist.Unknown); //Cale
+            addScenario(setName, 4, cycleName)
+                .WithTextLine("Glaurung Deck")
+                .WithTextLine("Take all treacheries with the Glaurung trait and shuffle them together to form the Glaurung deck.")
+                .WithTextLine("Additional Setup")
+                .WithTextLine("All of the non-unique enemies from the Trial Upon the Marches set are included in the encounter deck for this scenario.")
+                .WithTextLine("Raid")
+                .WithTextLine("Note: Raid in this scenario works slightly differently than it did in Trial Upon the Marches.")
+                .WithTextLine("At the end of the round, if one or more encounter cards in the staging area have the raid keyword, discard the top X cards from the encounter deck. X is equal to the highest threat among these encounter cards. When an enemy with the raid keyword is engaged with a player at the end of the round, that player must discard the top X cards of the encounter deck. X is equal to the enemy's threat strength.")
+                .WithTextLine("Relentless")
+                .WithTextLine("An enemy with Relentless cannot have its attack canceled or be prevented from attacking by any player card effect. It still can be targeted by other effects that do not specifically prevent attacks.")
+                .WithOppositeTextLine("Ransom")
+                .WithOppositeTextLine("When a character with the Ransom keyword enters play, the player who controls it may discard a number of resources from the resource pools of heroes they control equal to the Ransom value. If they choose not to satisfy this requirement, then that player card loses the \"ally\" trait and gains the \"enemy\" trait, immediately engaging the player who played it. Its threat is equal to its willpower and its engagement cost is 0. If this enemy is defeated, remove all damage from it and return it to the player's control as an ally.")
+                .WithInfo(360, 1, Artist.Unknown)
         }
     }
 }
