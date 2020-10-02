@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DoomMastered
             Title = "Trial Upon the Marches";
             ProductName = "Trial Upon the Marches";
             GroupName = "Doom Mastered";
-            Number = 4;
+            Number = 1;
 
             AddEncounterSet(EncounterSet.TrialUponTheMarches);
 

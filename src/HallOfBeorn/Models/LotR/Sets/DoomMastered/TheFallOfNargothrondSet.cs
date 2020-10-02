@@ -41,12 +41,19 @@ namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
                 .WithInfo(316, 1, Artist.Unknown); //Art of Juhani
             addQuest("The Doors of Felagund", EncounterSet.TheFallOfNargothrond, 3, 'A', Card.VALUE_NA)
                 .WithFlavorLine("Five years have passed since you came to Nargothrond. In that time, small victories against the forces of Morgoth have been won. However, as the year turns to autumn, reports of a great host reach your ears.")
-                .WithFlavorLine("Morgoth has finally loosed the army he has long prepared. At the ")
+                .WithFlavorLine("Morgoth has finally loosed the army he has long prepared. At the head of this army is Glaurung, the Father of Dragons. The warriors of Nargothrond are valiant, but they are vastly outnumbered. The proud Elven host begins to fall back upon the field of Tumhalad. Even worse, Glaurung is a fearsome force of death, beyond terror and beyond comprehension. None can withstand his approach. You must defend the Doors of Felagund to buy time for the innocent to escape.")
+                .WithTextLine("When Revealed: The first player adds Glaurung, The Hopes of Nargothrond, and The Ruin of Nargothrond to the staging area. Each other player searches the encounter deck and discard pile for a copy of Great Host and adds it to the staging area.")
                 .WithOppositeTextLine("when resolving the raid keyword, divide the enemy's Threat in half (rounding up).")
                 .WithOppositeTextLine("Forced: At the end of the round, add 1 damage to this stage (add 2 damage instead if there are more non-unique enemies in play than the number of players). If the number of damage tokens is equal to or greater than 5, advance to stage 4A.")
                 .WithOppositeTextLine("Forced: At the end of the round, if there are fewer non-unique enemies in play than the number of players, search the encounter deck and discard pile for 1 enemy and add it to the staging area, if able.")
-                .WithInfo(317, 1, Artist.Unknown);
-
+                .WithInfo(317, 1, Artist.Unknown); //Jonathan Guzi
+            addQuest("The Sack of Nargothrond", EncounterSet.TheFallOfNargothrond, 4, 'A', Card.VALUE_NA)
+                .WithFlavorLine("The Doors of Felagund have falles, and the host of Morgoth has begun pouring into Nargothrond. As the great halls and chambers are ransacked, you see Orcs herding those maidens and children that have survived into a crowd. They are destined to be slaves enduring unbearable torment in Angband unless you can rescue them from their fate.")
+                .WithTextLine("When Revealed: Return Glaurung to the staging area if he is engaged with a player. Glaurung makes an immediate attack against each playe, in turn order (do not deal a shadow card or trigger the forced effect on Glaurung for this attack).")
+                .WithOppositeTextLine("Glaurung cannot leave the staging area and is considered to be engaged with each player.")
+                .WithOppositeTextLine("Forced: At the end of the round, add 1 damage to this stage (add 2 damage instead if there are more non-unique enemies in the staging area than the number of players). If the number of damage tokens is equal to or greater than 6, the players lose.")
+                .WithOppositeTextLine("If the players complete the victory condition on The Hopes of Nargothrond, they win.")
+                .WithInfo(318, 1, Artist.Helge_C_Balzer);
             addEnemy("Great Host", EncounterSet.TheFallOfNargothrond, 38, 3, 5, 3, 8)
                 .WithTraits("Orc.")
                 .WithKeywords("Raid.")
@@ -198,6 +205,21 @@ namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
                 .WithFlavorLine("But Finarfin spoke softly, as was his wont, and sought to calm the Noldor, persuading them to pause and ponder ere deeds were done that could not be undone...")
                 .WithFlavorLine("-The Silmarillion")
                 .WithInfo(343, 1, Artist.Elena_Kukanova);
+            addAlly("Guard of the Drúedain", 2, Sphere.Lore, false, 1, 1, 2, 3)
+                .WithTraits("Drúedain.")
+                .WithTextLine("Response: After an enemy engages you, exhaust Guard of the Drúedain to lower that enemy's Attack by 1 until the end of the phase (lower its Attack by 2 instead if the attacking enemy is an Orc.) The targeted enemy cannot be targeted again by the ability of a Guard of the Drúedain this round.")
+                .WithFlavorLine("...nothing passed or came near that was not marked and remembered.")
+                .WithFlavorLine("-Unfinished Tales")
+                .WithInfo(344, 3, Artist.Unknown);
+            addAlly("Shieldmaiden of Haleth", 3, Sphere.Spirit, false, 2, 1, 2, 2)
+                .WithTraits("Edain.", "House of Haleth.")
+                .WithTextLine("Response: After Shieldmaiden of Haleth quests successfully, place 1 resource token on it.")
+                .WithTextLine("Response: After a hero is damaged by an enemy attack, exhaust Shieldmaiden of Haleth and remove 3 progress tokens from it to cancel all damage from that attack.")
+                .WithInfo(345, 3, Artist.Unknown);
+            addAlly("Noldor Oathkeeper", 4, Sphere.Mastery, false, 1, 1, 2, 3)
+                .WithTextLine("If each hero you control has at least 1 Corruption, Noldor Oathkeeper does not exhaust to defend.")
+                .WithTextLine("Response: When you play Noldor Oathkeeper from your hand, place 1 Corruption on a hero you control to reduce its cost by 1.")
+                .WithInfo(346, 3, Artist.Unknown);
             addAlly("Amon Ethir Sentry", 3, Sphere.Tactics, false, 0, 2, 2, 3)
                 .WithTraits("Noldor.", "Warrior.")
                 .WithTextLine("Response: After Amon Ethir Sentry enters play, choose an enemy in the staging area. Then, you may either engage that enemy or that enemy does not make engagement checks until the end of the round.")
@@ -214,30 +236,11 @@ namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
                 .WithTextLine("Attach to a hero. Restricted.")
                 .WithTextLine("While the attached hero is committed to the quest, Gilded Mask gains, \"Response: When an enemy with lower Threat than the number of Corruption tokens on the attached hero is revealed from the encounter deck, exhaust Gilded Mask to discard that enemy (canceling all of its effects). Reveal the next card of the encounter deck instead.\"")
                 .WithInfo(349, 3, Artist.Unknown); //Peet
-            addAlly("Guard of the Drúedain", 2, Sphere.Lore, false, 1, 1, 2, 3)
-                .WithTraits("Drúedain.")
-                .WithTextLine("Response: After an enemy engages you, exhaust Guard of the Drúedain to lower that enemy's Attack by 1 until the end of the phase (lower its Attack by 2 instead if the attacking enemy is an Orc.) The targeted enemy cannot be targeted again by the ability of a Guard of the Drúedain this round.")
-                .WithFlavorLine("...nothing passed or came near that was not marked and remembered.")
-                .WithFlavorLine("-Unfinished Tales")
-                .WithInfo(344, 3, Artist.Unknown);
-            addAlly("Shieldmaiden of Haleth", 3, Sphere.Spirit, false, 2, 1, 2, 2)
-                .WithTraits("Edain.", "House of Haleth.")
-                .WithTextLine("Response: After Shieldmaiden of Haleth quests successfully, place 1 resource token on it.")
-                .WithTextLine("Response: After a hero is damaged by an enemy attack, exhaust Shieldmaiden of Haleth and remove 3 progress tokens from it to cancel all damage from that attack.")
-                .WithInfo(345, 3, Artist.Unknown);
             addAttachment("Hidden Way", 2, Sphere.Spirit, false)
                 .WithTraits("Path.")
                 .WithTextLine("Attach to a location.")
                 .WithTextLine("Response: After attached location is explored, reduce the first player's threat by X, where X is the attached location's printed quest points (up to a limit of 5.)")
                 .WithInfo(350, 3, Artist.John_Howe);
-            addEvent("Kingly Judgement", 1, Sphere.Mastery)
-                .WithTraits("Doom.")
-                .WithTextLine("Action: Choose a character with at least 1 Corruption and choose one: deal 1 damage to that character to remove 1 Corruption from that character to play an attachment of X cost or lower on that character for free, where X is the number of Corruption tokens on that character.") 
-                .WithInfo(354, 3, Artist.Steamey);
-            addAlly("Noldor Oathkeeper", 4, Sphere.Mastery, false, 1, 1, 2, 3)
-                .WithTextLine("If each hero you control has at least 1 Corruption, Noldor Oathkeeper does not exhaust to defend.")
-                .WithTextLine("Response: When you play Noldor Oathkeeper from your hand, place 1 Corruption on a hero you control to reduce its cost by 1.")
-                .WithInfo(346, 3, Artist.Unknown);
             addAttachment("Seal of the Queen", 2, Sphere.Leadership, true)
                 .WithTraits("Item.", "Boom.")
                 .WithTextLine("Attach to a hero.")
@@ -252,7 +255,10 @@ namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
             addEvent("Friend of Birds and Beasts", 1, Sphere.Lore)
                 .WithTextLine("Action: Place the top 3 cards of the encounter deck facedown under this card. Each facedown card acts as an ally with 1 Willpower, 1 Attack, 1 Defense, 1 hit point, and the Creature trait. Discard this card and call facedown cards underneath it at the end of the round.")
                 .WithInfo(353, 3, Artist.Unknown);
-
+            addEvent("Kingly Judgement", 1, Sphere.Mastery)
+                .WithTraits("Doom.")
+                .WithTextLine("Action: Choose a character with at least 1 Corruption and choose one: deal 1 damage to that character to remove 1 Corruption from that character to play an attachment of X cost or lower on that character for free, where X is the number of Corruption tokens on that character.") 
+                .WithInfo(354, 3, Artist.Steamey);
             addAttachment("Silmaril of the Sky", 2, Sphere.Neutral, true)
                 .WithTraits("Item.", "Artifact.")
                 .WithTextLine("Attach to a hero with at least 1 Corruption. Limit 1 per deck.")

@@ -9,9 +9,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DoomMastered
             : base(false)
         {
             Title = "The Betrayal of Mîm";
-            ProductName = "Trial Upon the Marches";
+            ProductName = "The Betrayal of Mîm";
             GroupName = "Doom Mastered";
-            Number = 6;
+            Number = 3;
 
             AddEncounterSet(EncounterSet.TheBetrayalOfMim);
 

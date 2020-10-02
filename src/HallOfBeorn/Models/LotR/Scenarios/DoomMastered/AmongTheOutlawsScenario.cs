@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DoomMastered
             Title = "Among the Outlaws";
             ProductName = "Among the Outlaws";
             GroupName = "Doom Mastered";
-            Number = 5;
+            Number = 2;
 
             AddEncounterSet(EncounterSet.AmongTheOutlaws);
 
