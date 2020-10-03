@@ -254,7 +254,7 @@ namespace HallOfBeorn.Models.LotR
         public static Product TrialUponTheMarches = new Products.Community.TrialUponTheMarchesProduct();
         public static Product AmongTheOutlaws = new Products.Community.AmongTheOutlawsProduct();
         public static Product TheBetrayalOfMim = new Products.Community.TheBetrayalOfMimProduct();
-
+        public static Product TheFallOfNargothrond = new Products.Community.TheFallOfNargothrondProduct();
         #endregion
     }
 }

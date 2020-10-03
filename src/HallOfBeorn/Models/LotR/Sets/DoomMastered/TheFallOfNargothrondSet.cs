@@ -16,6 +16,19 @@ namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
             SetType = Models.SetType.First_Age;
             Cycle = cycleName;
 
+            addScenario(setName, 4, cycleName)
+                .WithTextLine("Glaurung Deck")
+                .WithTextLine("Take all treacheries with the Glaurung trait and shuffle them together to form the Glaurung deck.")
+                .WithTextLine("Additional Setup")
+                .WithTextLine("All of the non-unique enemies from the Trial Upon the Marches set are included in the encounter deck for this scenario.")
+                .WithTextLine("Raid")
+                .WithTextLine("Note: Raid in this scenario works slightly differently than it did in Trial Upon the Marches.")
+                .WithTextLine("At the end of the round, if one or more encounter cards in the staging area have the raid keyword, discard the top X cards from the encounter deck. X is equal to the highest threat among these encounter cards. When an enemy with the raid keyword is engaged with a player at the end of the round, that player must discard the top X cards of the encounter deck. X is equal to the enemy's threat strength.")
+                .WithTextLine("Relentless")
+                .WithTextLine("An enemy with Relentless cannot have its attack canceled or be prevented from attacking by any player card effect. It still can be targeted by other effects that do not specifically prevent attacks.")
+                .WithOppositeTextLine("Ransom")
+                .WithOppositeTextLine("When a character with the Ransom keyword enters play, the player who controls it may discard a number of resources from the resource pools of heroes they control equal to the Ransom value. If they choose not to satisfy this requirement, then that player card loses the \"ally\" trait and gains the \"enemy\" trait, immediately engaging the player who played it. Its threat is equal to its willpower and its engagement cost is 0. If this enemy is defeated, remove all damage from it and return it to the player's control as an ally.")
+                .WithInfo(0, 1, Artist.Unknown);
             addEnemy("Glaurung", EncounterSet.TheFallOfNargothrond, 40, 5, 8, 7, Card.VALUE_NA)
                 .WithTraits("Dragon.")
                 .WithKeywords("Indestrutible.", "Raid.", "Relentless.")
@@ -23,7 +36,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
                 .WithTextLine("Forced: After Glaurung attacks, reveal the top card of the Glaurung deck.")
                 .WithTextLine("Action: Remove X damage from Glaurung to remove an attached Innocent objective and place it under The Hopes of Nargothrond. X is 5 times the number of players. Any player may trigger this action.")
                 .WithInfo(314, 1, Artist.Unknown); //(1/24)
-            addQuest("Only In Secrecy Lies Hope", EncounterSet.TheFallOfNargothrond, 1, 'B', Card.VALUE_NA)
+            addQuest("Only In Secrecy Lies Hope", EncounterSet.TheFallOfNargothrond, 1, 'A', Card.VALUE_NA)
                 .WithFlavorLine("After surviving Mîm's betrayal, you have made your way to the Elven kingdom of Nargothrond. It is one of the three protected fortresses of the Elves, and Morgoth is seeking ever to find and destroy it. The ruler of Nargothrond, Orodreth, seeks your counsel. Should the Elves of Nargothrond continue to hide and ambush the Enemy only when prudent? Or should they gather arms and boldly assault the Enemy?")
                 .WithTextLine("Setup: Create the Glaurung deck (see rules). Set Glaurung, Deep River, Mighty Bridge, The Hopes of Nargothrond, and The Ruin of Nargothrond aise, out of play. Shuffle the 10 Innocent objectives into a separate innocent deck. The first player must choose: either trust to secrecy and advance to stage 1B, or take an aggressive approach and advance to stage 2A.")
                 .WithOppositeTextLine("You have advised Orodreth to keep his forces out of sight and only strike when necessary. With this approach, you hope to delay the hour of the Enemy's arrival. Still, his forces gather and the hammer will fall soon on Nargothrond. Hopefully, the natural defenses of the fortress will hold.")
@@ -291,19 +304,6 @@ namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
                 .WithTextLine("Response: At the end of the combat phase, add 1 resource to Favor of Indis if you are engaged with an enemy and did not destroy an enemy this phase. (Limit 3 resources on Favor of Indis.)")
                 .WithTextLine("Forced: After you destroy an enemy, remove 1 resource from Favor of Indis.")
                 .WithInfo(359, 3, Artist.Unknown); //Cale
-            addScenario(setName, 4, cycleName)
-                .WithTextLine("Glaurung Deck")
-                .WithTextLine("Take all treacheries with the Glaurung trait and shuffle them together to form the Glaurung deck.")
-                .WithTextLine("Additional Setup")
-                .WithTextLine("All of the non-unique enemies from the Trial Upon the Marches set are included in the encounter deck for this scenario.")
-                .WithTextLine("Raid")
-                .WithTextLine("Note: Raid in this scenario works slightly differently than it did in Trial Upon the Marches.")
-                .WithTextLine("At the end of the round, if one or more encounter cards in the staging area have the raid keyword, discard the top X cards from the encounter deck. X is equal to the highest threat among these encounter cards. When an enemy with the raid keyword is engaged with a player at the end of the round, that player must discard the top X cards of the encounter deck. X is equal to the enemy's threat strength.")
-                .WithTextLine("Relentless")
-                .WithTextLine("An enemy with Relentless cannot have its attack canceled or be prevented from attacking by any player card effect. It still can be targeted by other effects that do not specifically prevent attacks.")
-                .WithOppositeTextLine("Ransom")
-                .WithOppositeTextLine("When a character with the Ransom keyword enters play, the player who controls it may discard a number of resources from the resource pools of heroes they control equal to the Ransom value. If they choose not to satisfy this requirement, then that player card loses the \"ally\" trait and gains the \"enemy\" trait, immediately engaging the player who played it. Its threat is equal to its willpower and its engagement cost is 0. If this enemy is defeated, remove all damage from it and return it to the player's control as an ally.")
-                .WithInfo(360, 1, Artist.Unknown)
         }
     }
 }

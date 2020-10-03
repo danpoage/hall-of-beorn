@@ -11,6 +11,7 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
             AddChildProduct(Product.TrialUponTheMarches);
             AddChildProduct(Product.AmongTheOutlaws);
             AddChildProduct(Product.TheBetrayalOfMim);
+            AddChildProduct(Product.TheFallOfNargothrond);
         }
     }
 }
