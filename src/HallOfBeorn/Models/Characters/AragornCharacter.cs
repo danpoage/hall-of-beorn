@@ -93,7 +93,7 @@ namespace HallOfBeorn.Models.Characters
             Alias("Elessar Telcontar");
             Alias("Envinyatar");
             Alias("Estel");
-            Alias("Thorongil");
+            Alias("Thorongil", "Thorongil-TFoN");
 
             DigitalCard("Aragorn-Starter");
 

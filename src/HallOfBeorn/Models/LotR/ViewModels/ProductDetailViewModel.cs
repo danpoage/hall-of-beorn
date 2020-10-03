@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 
 using HallOfBeorn.Models.LotR;
 
 namespace HallOfBeorn.Models.LotR.ViewModels
 {
-    public class BrowseProductViewModel
+    public class ProductDetailViewModel
     {
-        public BrowseProductViewModel(Product product, Func<string, IEnumerable<PlayerCategory>> getPlayerCategories, Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, Func<string, IEnumerable<QuestCategory>> getQuestCategories)
+        public ProductDetailViewModel(Product product, Func<string, IEnumerable<PlayerCategory>> getPlayerCategories, Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, Func<string, IEnumerable<QuestCategory>> getQuestCategories)
         {
             this.product = product;
 

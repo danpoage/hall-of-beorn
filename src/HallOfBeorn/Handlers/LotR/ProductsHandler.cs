@@ -12,9 +12,9 @@ using HallOfBeorn.Services.LotR.RingsDb;
 
 namespace HallOfBeorn.Handlers.LotR
 {
-    public class BrowseHandler
+    public class ProductsHandler
     {
-        public BrowseHandler(ProductRepository productRepository,
+        public ProductsHandler(ProductRepository productRepository,
             ICategoryService<PlayerCategory> playerCategoryService,
             ICategoryService<EncounterCategory> encounterCategoryService,
             ICategoryService<QuestCategory> questCategoryService,
@@ -36,10 +36,10 @@ namespace HallOfBeorn.Handlers.LotR
         private Product getProductByIdentifier(string id)
         {
             return _productRepository.Products()
-                .Where(
-                    x => x.Name.ToUrlSafeString() == id || 
-                    x.Name.NormalizeCaseSensitiveString().ToUrlSafeString() == id ||
-                    x.Code == id
+                .Where(prod => 
+                    prod.Name.ToUrlSafeString() == id || 
+                    prod.Name.NormalizeCaseSensitiveString().ToUrlSafeString() == id ||
+                    prod.Code == id
                 ).FirstOrDefault();
         }
 
@@ -50,19 +50,19 @@ namespace HallOfBeorn.Handlers.LotR
                 var product = getProductByIdentifier(id);
                 if (product.Name.NormalizeCaseSensitiveString().ToUrlSafeString() != id)
                 {
-                    return string.Format("/LotR/Browse/{0}", product.Name.NormalizeCaseSensitiveString().ToUrlSafeString());
+                    return string.Format("/LotR/Products/{0}", product.Name.NormalizeCaseSensitiveString().ToUrlSafeString());
                 }
             }
             return string.Empty;
         }
 
-        public BrowseViewModel HandleBrowse(string id)
+        public ProductListViewModel HandleProducts(string id)
         {
             var getPlayerCategories = new Func<string, IEnumerable<PlayerCategory>>((slug) => { return _playerCategoryService.Categories(slug); });
             var getEncounterCategories = new Func<string, IEnumerable<EncounterCategory>>((slug) => { return _encounterCategoryService.Categories(slug); });
             var getQuestCategories = new Func<string, IEnumerable<QuestCategory>>((slug) => { return _questCategoryService.Categories(slug); });
 
-            var model = new BrowseViewModel();
+            var model = new ProductListViewModel();
 
             Func<string, byte> getPopularity = (slug) =>
             {
@@ -81,7 +81,7 @@ namespace HallOfBeorn.Handlers.LotR
                 var product = getProductByIdentifier(id);
                 if (product != null)
                 {
-                    model.Detail = new BrowseProductViewModel(product, getPlayerCategories, getEncounterCategories, getQuestCategories);
+                    model.Detail = new ProductDetailViewModel(product, getPlayerCategories, getEncounterCategories, getQuestCategories);
                 }
             }
 

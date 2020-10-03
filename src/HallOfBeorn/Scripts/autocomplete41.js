@@ -47,6 +47,7 @@
     "Power of Command", "Horns! Horns! Horns!", "Soldier of Isengard", "Far-sighted", "Golden Belt", "Rohirrim Scout", "The Muster of Rohan", "The Grey Wanderer",
     "Wandering Exile", "Valiant Sword", "Stone of Elostirion", "Well Preserved", "Northern Bowmaster", "Reckless Attack", "Odo Proudfoot", "Defiant Challenge", "Helm of Secrecy", "Council of the Wise",
     "Hobbit Archer", "Red Book of Westmarch", "Dale Messenger", "Song of Healing", "Eagle Emissary", "Bilbo's Plan", "Spare Pipe", "Smoke and Think", "Messenger of the King",
+    "Shining Shield", "Knowledge of the Enemy", "Haleth", "Woodman Lore", "Westfold Lancer", "Tireless Thoroughbred", "Misty Mountain Journeyman", "A Desperate Path", "Thorongil", "Bond of Friendship",
           "+set:",
           "-set:",
           "+type:",

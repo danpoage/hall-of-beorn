@@ -1,15 +1,15 @@
 ﻿@using HallOfBeorn.Models
 @using HallOfBeorn.Models.LotR
 @using HallOfBeorn.Models.LotR.ViewModels
-@model BrowseViewModel
+@model ProductListViewModel
 
 @{
-    ViewBag.Title = "Browse";
+    ViewBag.Title = "Products";
 }
 
 @if (@Model.Detail != null)
 {
-    <a style="display:block;margin-bottom:16px;" href="/LotR/Browse#@Model.Detail.Code" class="browse-view-link">Back to Browse</a>
+    <a style="display:block;margin-bottom:16px;" href="/LotR/Products#@Model.Detail.Code" class="browse-view-link">Back to Products</a>
     <h2 style="margin-bottom: 6px;">
         <a title="@Model.Detail.Name" href="@Model.Detail.SearchUrl">@Model.Detail.Name</a>
     </h2>
@@ -58,7 +58,7 @@
 }
 else
 {
-    <h2>Browse</h2>
+    <h2>Products</h2>
 
     foreach (var productGroup in @Model.ProductGroups)
     {

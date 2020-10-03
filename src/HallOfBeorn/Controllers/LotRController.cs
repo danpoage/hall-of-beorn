@@ -49,7 +49,7 @@ namespace HallOfBeorn.Controllers
 
             _translationHandler = new TranslationHandler(statService, templateService, translationService);
 
-            _browseHandler = new BrowseHandler(productRepository, 
+            _productsController = new ProductsHandler(productRepository, 
                 playerCategoryService, encounterCategoryService, questCategoryService,
                 ringsDbService);
 
@@ -81,7 +81,7 @@ namespace HallOfBeorn.Controllers
             _creatorsHandler = new CreatorsHandler(creatorService);
         }
 
-        private readonly BrowseHandler _browseHandler;
+        private readonly ProductsHandler _productsController;
         private readonly CharactersHandler _charactersHandler;
         private readonly DetailsHandler _detailsHandler;
         private readonly RingsDbHandler _ringsDbHandler;
@@ -101,25 +101,37 @@ namespace HallOfBeorn.Controllers
 
         public ActionResult Browse(string id)
         {
+            if (string.IsNullOrEmpty(id))
+            {
+                return Redirect(Url.Action("Products", "LotR"));
+            }
+            else
+            {
+                return Redirect(Url.Action("Products", "LotR", new { id }));
+            }
+        }
+
+        public ActionResult Products(string id)
+        {
             if (HttpContext.Request.Url.AbsolutePath.Contains("/Cards"))
             {
                 if (string.IsNullOrEmpty(id))
                 {
-                    return Redirect(Url.Action("Browse", "LotR"));
+                    return Redirect(Url.Action("Products", "LotR"));
                 }
                 else
                 {
-                    return Redirect(Url.Action("Browse", "LotR", new { action = id }));
+                    return Redirect(Url.Action("Products", "LotR", new { id }));
                 }
             }
 
-            var redirectUrl = _browseHandler.HandleRedirect(id);
+            var redirectUrl = _productsController.HandleRedirect(id);
             if (!string.IsNullOrEmpty(redirectUrl))
             {
                 return Redirect(redirectUrl);
             }
             
-            var model = _browseHandler.HandleBrowse(id);
+            var model = _productsController.HandleProducts(id);
 
             return View(model);
         }

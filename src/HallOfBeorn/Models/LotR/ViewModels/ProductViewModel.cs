@@ -141,7 +141,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             get
             {
-                return string.Format("/Cards/Browse/{0}", _product.Name.NormalizeCaseSensitiveString().ToUrlSafeString());
+                return string.Format("/LotR/Products/{0}", _product.Name.NormalizeCaseSensitiveString().ToUrlSafeString());
             }
         }
 

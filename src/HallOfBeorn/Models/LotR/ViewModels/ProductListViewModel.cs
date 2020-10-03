@@ -5,15 +5,15 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.ViewModels
 {
-    public class BrowseViewModel
+    public class ProductListViewModel
     {
-        public BrowseViewModel()
+        public ProductListViewModel()
         {
             ProductGroups = new List<ProductGroupViewModel>();
         }
 
         public List<ProductGroupViewModel> ProductGroups { get; private set; }
 
-        public BrowseProductViewModel Detail { get; set; }
+        public ProductDetailViewModel Detail { get; set; }
     }
 }
