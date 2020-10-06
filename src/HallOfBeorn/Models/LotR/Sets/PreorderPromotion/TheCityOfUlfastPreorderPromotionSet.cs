@@ -28,12 +28,12 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
                 .WithTextLine("While your threat is 40 or higher, Angbor the Fearless gets +2 Attack and does not exhaust to quest.")
                 .WithFlavorLine("\"Four thousands I sent marching from Pelargir through Lossarnach two days ago; and Angbor the fearless rides before them.\"")
                 .WithFlavorLine("-Aragorn, The Return of the King")
-                .WithInfo(28, 3, Artist.Vilius_Petrauskas);
+                .WithInfo(28, 1, Artist.Vilius_Petrauskas);
             addEvent("Host of Galadhrim", 4, Sphere.Neutral)
                 .WithTextLine("Planning Action: Return each Silvan ally you control to your hand. Then, play each of those allies from your hand one at a time at no cost.")
                 .WithFlavorLine("Celeborn came forth and led the host of Lórien...")
                 .WithFlavorLine("-The Return of the King")
-                .WithInfo(36, 3, Artist.Leanna_Crossan);
+                .WithInfo(36, 1, Artist.Leanna_Crossan);
         }
     }
 }

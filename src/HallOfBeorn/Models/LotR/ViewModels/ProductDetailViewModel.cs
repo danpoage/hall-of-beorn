@@ -30,13 +30,13 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                         cardSet = first.Name.Replace(' ', '+');
                     }
 
-                    searchUrl = string.Format("/Cards/Search?CardSet={0}&Sort=Set_Number", cardSet);
+                    searchUrl = string.Format("/LotR?CardSet={0}&Sort=Set_Number", cardSet);
                 }
                 else
                 {
                     var query = string.Format("%2Bproduct%3A{0}", product.Name.Replace(":", string.Empty).Replace(' ', '_'));
 
-                    searchUrl = string.Format("/Cards/Search?Query={0}&Sort=Set_Number", query);
+                    searchUrl = string.Format("/LotR?Query={0}&Sort=Set_Number", query);
                 }
         }
 
@@ -101,6 +101,61 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         public IEnumerable<CardViewModel> Cards
         {
             get { return cardViewModels; }
+        }
+
+        public IEnumerable<CardQuantityViewModel> CardQuantities()
+        {
+            var playerCardCount = 0;
+            foreach (var pc in cardViewModels.Where(c => c.CardType.IsPlayerCard()))
+            {
+                playerCardCount += pc.Card.Quantity;
+                yield return new CardQuantityViewModel(pc.Title, pc.Card.Quantity, pc.CardType, pc.Url);
+            }
+
+            if (playerCardCount > 0)
+            {
+                yield return new CardQuantityViewModel("Player Cards", playerCardCount);
+            }
+
+            var encounterCardCount = 0;
+            foreach (var ec in cardViewModels.Where(c => c.CardType.IsEncounterCard()))
+            {
+                encounterCardCount += ec.Card.Quantity;
+                yield return new CardQuantityViewModel(ec.Title, ec.Card.Quantity, ec.CardType, ec.Url);
+            }
+
+            if (encounterCardCount > 0)
+            {
+                yield return new CardQuantityViewModel("Encounter Cards", encounterCardCount);
+            }
+
+            var questCardCount = 0;
+            foreach (var qc in cardViewModels.Where(c => c.CardType.IsQuestCard()))
+            {
+                questCardCount += qc.Card.Quantity;
+                yield return new CardQuantityViewModel(qc.Title, qc.Card.Quantity, qc.CardType, qc.Url);
+            }
+
+            if (questCardCount > 0)
+            {
+                yield return new CardQuantityViewModel("Quest Cards", questCardCount);
+            }
+
+            var otherCardCount = 0;
+            foreach (var oc in cardViewModels.Where(
+                c => !c.CardType.IsPlayerCard() && !c.CardType.IsEncounterCard() && !c.CardType.IsQuestCard()))
+            {
+                otherCardCount += oc.Card.Quantity;
+                yield return new CardQuantityViewModel(oc.Title, oc.Card.Quantity, oc.CardType, oc.Url);
+            }
+
+            if (otherCardCount > 0)
+            {
+                yield return new CardQuantityViewModel("Other Cards", otherCardCount);
+            }
+
+            var totalCardCount = playerCardCount + encounterCardCount + questCardCount + otherCardCount;
+            yield return new CardQuantityViewModel("TOTAL CARDS", totalCardCount);
         }
 
         public IEnumerable<ScenarioViewModel> Scenarios()

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
 {
@@ -29,14 +26,13 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
                 .WithTextLine("Response: After Wandering Exile commits to a quest, discard a card from your hand to ready Wandering Exile.")
                 .WithFlavorLine("\"The Elves have their own labours and their own sorrows...")
                 .WithFlavorLine("-Gildor, The Fellowship of the Ring")
-                .WithInfo(82, 3, Artist.Drazenka_Kimpel);
+                .WithInfo(82, 1, Artist.Drazenka_Kimpel);
             addAlly("Northern Bowmaster", 1, Sphere.Tactics, false, 0, 2, 0, 1)
                 .WithTraits("Dúnedain.", "Ranger.")
                 .WithKeywords("Ranged.")
                 .WithTextLine("Ranged.")
                 .WithTextLine("You cannot play Northern Bowmaster from your hand unless you are engaged with an enemy.")
-                .WithInfo(86, 3, Artist.Aleksander_Karcz);
-
+                .WithInfo(86, 1, Artist.Aleksander_Karcz);
         }
     }
 }

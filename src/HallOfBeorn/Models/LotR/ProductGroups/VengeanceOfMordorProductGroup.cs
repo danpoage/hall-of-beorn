@@ -19,6 +19,7 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
             AddChildProduct(Product.ChallengeOfTheWainridersPreorderPromotion);
             AddChildProduct(Product.UnderTheAshMountainsPreorderPromotion);
             AddChildProduct(Product.TheLandOfSorrowPreorderPromotion);
+            AddChildProduct(Product.TheFortressOfNurnPreorderPromotion);
         }
     }
 }

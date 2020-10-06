@@ -30,14 +30,14 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
                 .WithTextLine("Attach to the hero with The One Ring.")
                 .WithTextLine("Limit 1 per hero. Attached hero gets +1 Willpower.")
                 .WithTextLine("Response: After attached hero commits to the quest, exhaust The One Ring and raise your threat by 1 to give each other unique character you control +1 Willpower until the end of the phase.")
-                .WithInfo(55, 3, Artist.Borja_Pindado);
+                .WithInfo(55, 1, Artist.Borja_Pindado);
             addAttachment("Golden Belt", 0, Sphere.Tactics, false)
                 .WithTraits("Item.")
                 .WithTextLine("Attach to a hero. Limit 1 per hero.")
                 .WithTextLine("Attached hero can have 1 additional restricted attachment.")
                 .WithFlavorLine("The lady bowed her head, and she turned to Boromir and to him she gave a belt of gold...")
                 .WithFlavorLine("-The Fellowship of the Ring")
-                .WithInfo(60, 3, Artist.Nino_Vecia);
+                .WithInfo(60, 1, Artist.Nino_Vecia);
         }
     }
 }

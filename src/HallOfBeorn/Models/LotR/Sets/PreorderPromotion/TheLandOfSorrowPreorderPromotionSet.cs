@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
 {
@@ -31,14 +28,14 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
                 .WithTextLine("Action: Discard 1 card from your hand to heal 1 damage from attached hero. Any player may trigger this effect.")
                 .WithFlavorLine("...behind him stood Galadriel, tall and white: a circlet of golden flowers was in her hair, and in her hand she held a hard, and she sang.")
                 .WithFlavorLine("-The Fellowship of the Ring")
-                .WithInfo(112, 3, Artist.Magali_Villeneuve);
+                .WithInfo(112, 1, Artist.Magali_Villeneuve);
             addAlly("Eagle Emissary", 2, Sphere.Tactics, false, 2, 1, 0, 2)
                 .WithTraits("Creature.", "Eagle.")
                 .WithTextLine("Cannot have restricted attachments.")
                 .WithTextLine("Forced: After ~Eagle Emissary quests successfully, pay 1 Tactics resource or discard it from play.")
                 .WithFlavorLine("...and out of the East there came a great Eagle flying, and he bore tidings beyond hope from The Lords of the West...")
                 .WithFlavorLine("-The Return of the King")
-                .WithInfo(113, 3, Artist.Carlos_Palma_Cruchaga);
+                .WithInfo(113, 1, Artist.Carlos_Palma_Cruchaga);
         }
     }
 }

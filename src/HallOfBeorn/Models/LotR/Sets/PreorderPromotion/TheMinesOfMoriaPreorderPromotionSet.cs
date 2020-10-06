@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
 {
@@ -42,13 +39,12 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
                 .WithTextLine("Travel: Each player discards 1 random card from his hand.")
                 .WithVictoryPoints(5)
                 .WithInfo(11, 1, Artist.Emilio_Rodriguez);
-
             addLocation("Many-pillared Hall", emptySetName, 1, 4)
                 .WithSetNumberAndCost(1, 0)
                 .WithTraits("Underground.")
                 .WithTextLine("Many-pillared Hall gets +1 Threat for each copy of Many-pillared Hall in the staging area.")
                 .WithShadow("Shadow: Discard an attachment from the defending character.")
-                .WithInfo(13, 3, Artist.Jose_Vega);
+                .WithInfo(13, 1, Artist.Jose_Vega);
         }
     }
 }

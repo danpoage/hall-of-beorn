@@ -442,6 +442,7 @@
     <Compile Include="Models\LotR\Products\PreorderPromotion\ChallengeOfTheWainridersPreorderPromotionProduct.cs" />
     <Compile Include="Models\LotR\Products\PreorderPromotion\EscapeFromKhazadDumPreorderPromotionProduct.cs" />
     <Compile Include="Models\LotR\Products\PreorderPromotion\TheCityOfUlfastPreorderPromotionProduct.cs" />
+    <Compile Include="Models\LotR\Products\PreorderPromotion\TheFortressOfNurnPreorderPromotionProduct.cs" />
     <Compile Include="Models\LotR\Products\PreorderPromotion\TheLandOfSorrowPreorderPromotionProduct.cs" />
     <Compile Include="Models\LotR\Products\PreorderPromotion\TheMinesOfMoriaPreorderPromotionProduct.cs" />
     <Compile Include="Models\LotR\Products\PreorderPromotion\UnderTheAshMountainsPreorderPromotionProduct.cs" />
@@ -532,6 +533,7 @@
     <Compile Include="Models\LotR\Sets\PreorderPromotion\ChallengeOfTheWainridersPreorderPromotionSet.cs" />
     <Compile Include="Models\LotR\Sets\PreorderPromotion\EscapeFromKhazadDumPreorderPromotionSet.cs" />
     <Compile Include="Models\LotR\Sets\PreorderPromotion\TheCityOfUlfastPreorderPromotionSet.cs" />
+    <Compile Include="Models\LotR\Sets\PreorderPromotion\TheFortressOfNurnPreorderPromotionSet.cs" />
     <Compile Include="Models\LotR\Sets\PreorderPromotion\TheLandOfSorrowPreorderPromotionSet.cs" />
     <Compile Include="Models\LotR\Sets\PreorderPromotion\TheMinesOfMoriaPreorderPromotionSet.cs" />
     <Compile Include="Models\LotR\Sets\PreorderPromotion\UnderTheAshMountainsPreorderPromotionSet.cs" />
@@ -601,6 +603,7 @@
     <Compile Include="Models\Arkham\ViewModels\LinkViewModel.cs" />
     <Compile Include="Models\Artist.cs" />
     <Compile Include="Models\Card.cs" />
+    <Compile Include="Models\LotR\ViewModels\CardQuantityViewModel.cs" />
     <Compile Include="Models\LotR\ViewModels\ProductDetailViewModel.cs" />
     <Compile Include="Models\LotR\ViewModels\ProductListViewModel.cs" />
     <Compile Include="Models\CardNote.cs" />

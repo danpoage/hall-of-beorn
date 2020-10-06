@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 
 namespace HallOfBeorn.Models.LotR.ViewModels
 {
@@ -58,6 +57,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         private bool hasPopularity()
         {
+            if (_product.Code.EndsWith("PRM"))
+            {
+                return false;
+            }
+
             if (!string.IsNullOrEmpty(_product.Code) && _product.Code.StartsWith("MEC"))
             {
                 switch (_product.Code)

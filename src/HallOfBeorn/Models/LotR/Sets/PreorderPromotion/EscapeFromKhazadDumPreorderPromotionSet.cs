@@ -37,14 +37,14 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
                 .WithTextLine("When Revealed: Eithe raise each player's threat by 2, or reveal an additional encounter card.")
                 .WithShadow("Shadow: Either raise your threat by 2, or this attack is considered undefended.")
                 .WithHorizontalArt()
-                .WithInfo(12, 3, Artist.Lukasz_Jaskolski);
+                .WithInfo(12, 1, Artist.Lukasz_Jaskolski);
             addLocation("Lightless Grotto", emptySetName, 2, 3)
                 .WithSetNumberAndCost(21, 0)
                 .WithTraits("Underground.")
                 .WithTextLine("While Lightless Grotto is in the staging area, non-unique enemies in the staging area cannot take damage.")
                 .WithTextLine("Travel: The first player chooses an enemy in the staging area and engages it.")
                 .WithHorizontalArt()
-                .WithInfo(31, 2, Artist.Ivan_Dixon);
+                .WithInfo(31, 1, Artist.Ivan_Dixon);
         }
     }
 }
