@@ -21,19 +21,19 @@
     <div style="margin:4px 0px;">
         <img title="@Model.Detail.Name" src="@Model.Detail.ImageUrl" style="margin:6px 4px 16px 4px;display:inline-block;"/>
         
-        <div style="margin: 4px 0px 4px 20px;display:inline-block;vertical-align:top;">
+        <div style="margin: 4px 0px 6px 20px;display:inline-block;vertical-align:top;">
             <div style="margin:4px 0px 14px 4px;font-family:Georgia;font-size:16px;font-weight:bold;">Card List</div>
             <div style="overflow: auto;height:210px;">
                 @foreach (var card in @Model.Detail.CardQuantities())
                 {
                     if (!string.IsNullOrEmpty(@card.Url))
                     {
-                        var linkDescription = string.Format("<span><span style='display:inline-block;width:330px;'><span style='font-size:16px;'>{0}</span><span style='color:darkgray;margin-left:6px;'>({1})</span></span><span style='color:black;margin-left:4px;'>{2}</span></span>", card.Title, card.CardType, card.Quantity);
-                        <a style="margin:2px 4px 2px 4px;font-size:14px;display:block;" target="_blank" href="@card.Url" title="@card.Title Details">@Html.Raw(@linkDescription)</a>
+                        var linkDescription = string.Format("<span><span style='display:inline-block;width:300px;'><span style='font-size:16px;'>{0}</span><span style='color:darkgray;margin-left:6px;'>({1})</span></span><span style='color:black;margin-left:4px;display:inline-block;text-align:right;'>{2}</span></span>", card.Title, card.CardType, card.Quantity);
+                        <a style="margin:2px 6px 2px 4px;font-size:14px;display:block;" target="_blank" href="@card.Url" title="@card.Title Details">@Html.Raw(@linkDescription)</a>
                     }
                     else
                     {
-                        <div style="font-size:16px;color:black;margin:4px 6px 14px 4px;"><span style="display:inline-block;width:350px;"><b>@card.Title</b></span><span style="margin-left:10px;">@card.Quantity</span></div>
+                        <div style="font-size:16px;color:black;margin:4px 6px 14px 4px;"><b><span style="display:inline-block;width:274px;">@card.Title</span><span style="margin-left:10px;display:inline-block;text-align:right;width:32px;">@card.Quantity</span></b></div>
                     }
                 }
             </div>
@@ -41,7 +41,7 @@
         
         @if (@Model.Detail.Scenarios().Any())
         {
-            <div style="margin: 4px 0px 4px 20px;display:inline-block;vertical-align:top;">
+            <div style="margin: 4px 0px 6px 20px;display:inline-block;vertical-align:top;">
                 <div style="margin:4px 0px 14px 4px; font-family:Georgia;font-size:16px;font-weight:bold;">Scenarios</div>
                 <div style="overflow:auto;height:210px;">
                     @foreach (var scenario in @Model.Detail.Scenarios())
