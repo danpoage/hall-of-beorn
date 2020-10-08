@@ -101,6 +101,18 @@ namespace HallOfBeorn.Models.LotR.Sets.ScenarioPack
                 .WithTextLine("Response: After Belfalas Shipyard is explored as the active location, the players as a group spend 5 resources to heal 5 damage from a Ship objective in any group. Ready that Ship and flip it to its Upgraded side.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack and gains Pillage 3.")
                 .WithInfo(34, 2, Artist.Unknown);
+
+            addContract("A Perilous Voyage")
+                .WithTextLine("Your minimum deck size is 100 cards.")
+                .WithTextLine("Your threat cannot be reduced by player card effects.")
+                .WithTextLine("Action: Exhaust this card and raise your threat by 1 to look at the top 2 cards of your deck, draw 1, and place the other on the bottom of your deck.")
+                .WithTextLine("Forced: When you would be eliminated by reaching your threat elimination level, flip this card over instead.")
+                .WithOppositeTextLine("Your threat cannot be reduced by non-contract player card effects.")
+                .WithOppositeTextLine("Heroes you control do not exhaust to quest.")
+                .WithOppositeTextLine("Forced: When this card is flipped to this side, reduce your threat by 10. ~Search your deck for a card and either add it to your hand or play it, reducing its cost by 3. Shuffle your deck.")
+                .WithOppositeFlavorLine("Thus came Aragorn... borne upon a wind from the Sea to the kingdom of Gondor...")
+                .WithOppositeFlavorLine("-The Return of the King")
+                .WithInfo(47, 1, Artist.Imad_Awan);
         }
     }
 }
