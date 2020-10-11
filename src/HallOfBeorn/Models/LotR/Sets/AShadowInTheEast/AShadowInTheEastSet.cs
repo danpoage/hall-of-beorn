@@ -50,8 +50,8 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithTraits("Gondor.", "Warrior.")
                 .WithKeywords("Ranged.")
                 .WithTextLine("Ranged.")
-                .WithTextLine("Response: After Derufin participates in an attack which destroys an enemy engaged with a player, discard Derufin to reduce the engaged player's threat by X, where X is the destroyed enemy's printed Threat.")
-                .WithTemplate("<p class='main-text'>{keyword:Ranged.}</p><p class='main-text'><b>Response:</b> After {self} participates in an attack which destroys an enemy engaged with a player, discard {self} to reduce the engaged player's threat by X, where X is the destroyed enemy's printed {Threat}.</p>")
+                .WithTextLine("Response: After Derufin participates in an attack that destroys an enemy engaged with a player, discard Derufin to reduce the engaged player's threat by X, where X is the destroyed enemy's printed Threat.")
+                .WithTemplate("<p class='main-text'>{keyword:Ranged.}</p><p class='main-text'><b>Response:</b> After {self} participates in an attack that destroys an enemy engaged with a player, discard {self} to reduce the engaged player's threat by X, where X is the destroyed enemy's printed {Threat}.</p>")
                 .WithInfo(6, 3, Artist.Greg_Bobrowski);
             addEvent("The Gathering Storm", 0, Sphere.Leadership)
                 .WithTextLine("Planning Action: Search the top 5 cards of the encounter deck for an enemy. Add that enemy to the staging area to reduce the cost of the first ally you play this phase by X, where X is that enemy's Threat. Shuffle the encounter deck.")
