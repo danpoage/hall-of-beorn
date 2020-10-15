@@ -176,6 +176,17 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
                 Artist = Artist.Chris_Rahn,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.WesternLands }
             });
+            addHero("Beorn", 12, Sphere.Tactics, 0, 5, 1, 10)
+                .WithTraits("Beorning.", "Warrior.")
+                .WithAlternateSlug("🐻")
+                .WithTextLine("Cannot have attachments. Immune to player card effects.")
+                .WithTextLine("Beorn does not exhaust to defend.")
+                .WithTemplate("<p>{keyword:Sentinel.} Cannot have attachments.</p><p>Immune to player card effects.<p><p>{self} does not exhaust to defend.</p><p class='flavor-text'>The roar of his voice was like drums and guns; and he tossed wolves and goblins from his path like straws and feathers.<br>&ndash;The Hobbit</p>")
+                .WithCommunityVersion("Beorn-Lure-2019")
+                .WithCommunityVersion("Beorn-HoB-Alt-Art")
+                .WithInfo(5, 1, Artist.Emrah_Elmasli);
+
+            /*
             Cards.Add(new LotRCard() {
                 
                 Title = "Beorn",
@@ -196,7 +207,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
                 HtmlTemplate = "<p>{keyword:Sentinel.} Cannot have attachments.</p><p>Immune to player card effects.<p><p>{self} does not exhaust to defend.</p><p class='flavor-text'>The roar of his voice was like drums and guns; and he tossed wolves and goblins from his path like straws and feathers.<br>&ndash;The Hobbit</p>",
                 CardNumber = 5,
                 Artist = Artist.Emrah_Elmasli
-            });
+            });*/
             Cards.Add(new LotRCard() {
                 
                 Title = "Bert",

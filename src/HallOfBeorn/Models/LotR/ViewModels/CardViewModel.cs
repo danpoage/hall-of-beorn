@@ -832,6 +832,21 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             }
         }
 
+        public bool HasCommunityImages
+        {
+            get { return _card.CommunityVersions.Any(); }
+        }
+
+        public IEnumerable<Tuple<string, string>> CommunityImages()
+        {
+            const string format = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Community/{0}.jpg";
+
+            Func<string, string> getTitle = (s) => s.Replace('-', ' ');
+
+            return _card.CommunityVersions.Select(
+                slug => new Tuple<string, string>(getTitle(slug), string.Format(format, slug)));
+        }
+
         public string ImagePath
         {
             get { return GetImagePathForLanguage(_lang); }

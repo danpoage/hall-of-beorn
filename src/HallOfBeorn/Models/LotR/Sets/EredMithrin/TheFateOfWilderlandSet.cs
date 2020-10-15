@@ -39,6 +39,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTraits("Creature.")
                 .WithTextLine("Cannot have attachments.")
                 .WithTextLine("Response: Discard Loyal ~Hound to cancel up to 2 damage just dealt to a hero you control.")
+                .WithCommunityVersion("Loyal-Hound-Con-of-the-Rings-2019")
                 .WithInfo(148, 3, Artist.Alvaro_Calvo_Escudero);
             addEvent("The Great Hunt", 3, Sphere.Lore)
                 .WithTextLine("You must use resources from 3 different heroes' pools to pay for this card.")

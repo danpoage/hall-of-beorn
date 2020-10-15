@@ -20,6 +20,10 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTextLine("Sentinel.")
                 .WithTextLine("Response: After Grimbeorn the Old defends an attack, spend 1 resource from his pool to declare him as an attacker against that enemy (and resolve his attack). The defending enemy gets -2 Defense for this attack.")
                 .WithTemplate("<p class='main-text'>{keyword:Sentinel.}</p><p class='main-text'><b>Response:</b> After {self} defends an attack, spend 1 resource from his pool to declare him as an attacker against that enemy (and resolve his attack). The defending enemy gets -2 {Defense} for this attack.</p>")
+                .WithCommunityVersion("Grimbeorn-the-Old-Lure-2019")
+                .WithCommunityVersion("Grimbeorn-the-Old-HoB-Alt-Art")
+                .WithCommunityVersion("Grimbeorn-the-Old-Grimbeorn's-Path")
+                .WithCommunityVersion("Grimbeorn-the-Old-All-the-Pretty-Horses")
                 .WithInfo(1, 1, Artist.Jason_Jenicke);
             addAlly("Guardian of Esgaroth", 2, Sphere.Leadership, false, 1, 1, 1, 1)
                 .WithTraits("Dale.")

@@ -177,6 +177,8 @@ namespace HallOfBeorn.Models.LotR
         public byte? HitPoints { get; set; }
         public byte? QuestPoints { get; set; }
 
+        public List<string> CommunityVersions = new List<string>();
+
         public double StatScore()
         {
             Func<byte, byte, double> defensiveValue = (def, hp) =>
@@ -916,6 +918,12 @@ namespace HallOfBeorn.Models.LotR
         public LotRCard WithSideLetter()
         {
             HasSideLetter = true;
+            return this;
+        }
+
+        public LotRCard WithCommunityVersion(string slug)
+        {
+            CommunityVersions.Add(slug);
             return this;
         }
 
