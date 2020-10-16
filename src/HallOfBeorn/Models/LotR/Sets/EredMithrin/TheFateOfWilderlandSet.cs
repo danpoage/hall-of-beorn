@@ -20,6 +20,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTextLine("Response: After you play a Creature card, Radagast does not exhaust to quest this round.")
                 .WithFlavorLine("\"..he has much lore of herbs and beasts, and birds are especially his friends.\"")
                 .WithFlavorLine("-Gandalf, The Fellowship of the Ring")
+                .WithCommunityVersion("Radagast-Nightmare-in-the-Fog")
                 .WithInfo(145, 1, Artist.Aleksander_Karcz);
             addAlly("Messenger Raven", 1, Sphere.Leadership, false, 1, 0, 0, 1)
                 .WithTraits("Creature.")

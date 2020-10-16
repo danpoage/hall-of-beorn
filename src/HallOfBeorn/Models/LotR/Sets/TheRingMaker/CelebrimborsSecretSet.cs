@@ -6,9 +6,11 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
 {
     public class CelebrimborsSecretSet : CardSet
     {
+        public const string setName = "Celebrimbor's Secret";
+
         protected override void Initialize()
         {
-            Name = "Celebrimbor's Secret";
+            Name = setName;
             Abbreviation = "CS";
             Number = 27;
             SetType = Models.SetType.Adventure_Pack;
@@ -18,6 +20,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithTraits("Noldor.", "Noble.")
                 .WithTextLine("Galadriel cannot quest, attack, or defend. Allies you control do not exhaust to commit to the quest during the round they enter play.")
                 .WithTextLine("Action: Exhaust Galadriel to choose a player. That player reduces his threat by 1 and draws 1 card. (Limit once per round.)")
+                .WithCommunityVersion("Galadriel-Grey-Company-Gen-Con-2015")
+                .WithCommunityVersion("Galadriel-Whispers-in-the-Trees")
                 .WithInfo(112, 1, Artist.Magali_Villeneuve);
             addAttachment("Heir of Mardil", 1, Sphere.Leadership, true)
                 .WithTraits("Title.")

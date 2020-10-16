@@ -20,12 +20,24 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("The first player gains control of Aragorn. If Aragorn leaves play, the players lose the game.\r\nAction: Spend 2 resources from Aragorn's resource pool to ready a hero.")
                 .WithTemplate("<p>The first player gains control of {self}. If {self} leaves play, the players lose the game.</p><p><b>Action:</b> Spend 2 resources from {self}'s resource pool to ready a {type:Hero@hero}.</p><p class='flavor-text'>&quot;I am Aragorn son of Arathorn and am called Elessar, the Elfstone, Dunadan, the heir of Isildur Elendil’s son of Gondor.&quot;<br>&ndash;The Two Towers</p>")
                 .WithInfo(1, 1, Artist.Mark_Behm));
+            addHero("Théoden", 12, Sphere.Spirit, 2, 3, 2, 4)
+                .WithAlternateSlug("Santa-Theoden")
+                .WithTraits("Noble.", "Rohan.", "Warrior.")
+                .WithKeywords("Sentinel.")
+                .WithTextLine("Sentinel.")
+                .WithTextLine("Reduce the cost of the first Rohan ally you play from your hand each round by 1 (to a minimum of 0).")
+                .WithFlavorLine("\"Arise now, arise, Riders of Théoden!\"")
+                .WithFlavorLine("-The Two Towers")
+                .WithCommunityVersion("Théoden-Grey-Company-Gen-Con-2015")
+                .WithInfo(2, 1, Artist.Tiziano_Baracchi);
+            /*
             Cards.Add(LotRCard.Hero("Théoden", "F4529F02-EE47-4FA4-A5E3-F755E3620CF3", Sphere.Spirit, 12, 2, 3, 2, 4)
                 .WithTraits("Noble.", "Rohan.", "Warrior.")
                 .WithKeywords("Sentinel.")
                 .WithText("Reduce the cost of the first Rohan ally you play from your hand each round by 1 (to a minimum of 0).")
                 .WithFlavor("\"Arise now, arise, Riders of Théoden!\" -The Two Towers")
                 .WithInfo(2, 1, Artist.Tiziano_Baracchi));
+            */
             Cards.Add(LotRCard.Hero("Treebeard", "A9CD7B5C-39B9-4446-9075-636E5F69761F", Sphere.Lore, 13, 2, 3, 3, 5)
                 .WithTraits("Ent.")
                 .WithText("Cannot have restricted attachments.\r\nAction: Deal 1 damage to Treebeard to give him +1 Willpower and +1 Attack until the end of the phase. (Limit 5 times per phase.)")

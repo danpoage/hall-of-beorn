@@ -20,6 +20,8 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 .WithTextLine("Action: Discard Boromir to deal 2 damage to each enemy engaged with a single player.")
                 .WithFlavor("\"...in Gondor we must trust to such weapons as we have.\" -The Fellowship of the Ring")
                 .WithErrata(1)
+                .WithCommunityVersion("Boromir-Grey-Company-Gen-Con-2014")
+                .WithCommunityVersion("Boromir-Grey-Company-Gen-Con-2015")
                 .WithInfo(95, 1, Artist.Tiziano_Baracchi);
             addAlly("Dúnedain Watcher", 3, Sphere.Leadership, false, 1, 1, 1, 2)
                 .WithTraits("Dúnedain.")

@@ -72,6 +72,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithTextLine("Action: Discard 1 card from your hand to give Éowyn +1 Willpower until the end of the phase. This effect may be triggered by each player once each round.")
                 .WithTemplate("<p class='main-text'><b>Action:</b> Discard 1 card from your hand to give {self} +1 {Willpower} until the end of the phase. This effect may be triggered by each player once each round.</p><p class='flavor-text'>Slender and tall she was in her white robe girt with silver; but strong she seemed and stern as steel, a daughter of kings.<br>&ndash;The Two Towers</p>")
                 .WithYear(2010)
+                .WithCommunityVersion("Éowyn-Grey-Company-Gen-Con-2014")
+                .WithCommunityVersion("Éowyn-All-the-Pretty-Horses")
                 .WithInfo(7, 1, Artist.Gabrielle_Portal);
             addHero("Eleanor", 7, Sphere.Spirit, 1, 1, 2, 3)
                 .WithThumbnail()

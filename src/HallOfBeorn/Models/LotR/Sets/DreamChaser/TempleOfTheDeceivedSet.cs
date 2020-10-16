@@ -21,6 +21,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithTextLine("Each Leadership hero with an attached Mount gets +1 Defense.")
                 .WithFlavorLine("Ahead nearer the walls Elfhelm's men were among the siege-engines, hewing, slaying, driving their foes into the fire-pits.")
                 .WithFlavorLine("-The Return of the King")
+                .WithCommunityVersion("Elfhelm-All-the-Pretty-Horses")
                 .WithInfo(57, 1, Artist.Sergey_Glushakov);
             addAlly("Ceorl", 2, Sphere.Leadership, true, 1, 2, 0, 2)
                 .WithTraits("Rohan.", "Scout.")

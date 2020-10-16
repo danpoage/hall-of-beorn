@@ -31,7 +31,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
             addAlly("Algund", 0, Sphere.Mastery, true, 2, 1, 1, 3)
                 .WithTraits("Gaurwaith.")
                 .WithKeywords("Ransom 3.")
-                .WithTextLine("Random 3.")
+                .WithTextLine("Ransom 3.")
                 .WithText("Response: When the discard pile is shuffled back into the encounter deck, deal X Corruption to Algund to choose X cards in the discard pile. These cards are not shuffled back into the encounter deck.")
                 .WithFlavor("...and others also came from that land: old Algund, the oldest of the fellowship, who had fled from the Nirnaeth...\r\n-The Children of Húrin")
                 .WithInfo(15, 3, Artist.J_Lantta);
@@ -47,7 +47,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
             addAlly("Wolf-man", 0, Sphere.Mastery, false, 0, 3, 1, 2)
                 .WithTraits("Gaurwaith.")
                 .WithKeywords("Ransom 4.")
-                .WithTextLine("Random 4.")
+                .WithTextLine("Ransom 4.")
                 .WithTextLine("Action: Exhaust Wolf-man to immediately declare him as an attacker (and resolve his attack) against an engaged enemy with one hit point remaining.")
                 .WithInfo(18, 3, Artist.Lane);
             addAttachment("Neithan", 1, Sphere.Mastery, true)

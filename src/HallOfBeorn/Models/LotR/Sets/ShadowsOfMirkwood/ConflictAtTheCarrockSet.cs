@@ -18,6 +18,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 .WithTraits("Hobbit.")
                 .WithTextLine("Response: After Frodo ~Baggins is damaged, cancel the damage and instead raise your threat by the amount of damage he would have been dealt. (Limit once per phase.)")
                 .WithFlavor("Frodo began to feel restless, and the old paths seemed too well-trodden. he looked at maps and wondered what lay beyond their edges... -The Fellowship of the Ring")
+                .WithCommunityVersion("Frodo-Baggins-Grey-Company-Gen-Con-2015")
                 .WithInfo(25, 1, Artist.John_Stanko);
             addAttachment("Dúnedain Warning", 1, Sphere.Leadership, false)
                 .WithTraits("Signal.")

@@ -201,7 +201,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
                 .WithOppositeTextLine("When the last time counter is removed, advance to the next stage.")
                 .WithInfo(198, 1, Artist.Steamey);
             addQuest("The Wrath of Angband", EncounterSet.TheBetrayalOfMim, 2, 'A', Card.VALUE_NA)
-                .WithFlavorLine("By fate or treachery, the Orcs of Morgoth have discovered the location of Bar-en-Danwedh, the House of Random. Now you must fight for your very life against the tide of foes suddenly at your door.")
+                .WithFlavorLine("By fate or treachery, the Orcs of Morgoth have discovered the location of Bar-en-Danwedh, the House of Ransom. Now you must fight for your very life against the tide of foes suddenly at your door.")
                 .WithTextLine("When Revealed: Flip Amon Rûdh and make it the active location. If Mîm's objective side is faceup, flip him.")
                 .WithOppositeTextLine("Skip the staging step of the quest phase. Encounter cards cannot be added to the staging area of non-unique locations. Players cannot travel.")
                 .WithOppositeTextLine("Forced: At the beginning of the quest phase, move all cards in a location's staging are one location to the left, if able.")

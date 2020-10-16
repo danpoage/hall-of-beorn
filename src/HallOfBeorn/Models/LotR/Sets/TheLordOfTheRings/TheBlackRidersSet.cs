@@ -37,6 +37,16 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 CardNumber = 1,
                 Artist = Artist.Jake_Murray
             });
+            addHero("Sam Gamgee", 8, Sphere.Leadership, 3, 1, 1, 3)
+                .WithAlternateSlug("Potaytoes")
+                .WithTraits("Hobbit.")
+                .WithTextLine("Response: After you engage an enemy with a higher engagement cost than your threat, ready Sam Gamgee. He gets +1 Willpower, +1 Attack and +1 Defense until the end of the round.")
+                .WithFlavorLine("\"I'm going with him...and if any of those Black Riders try to stop him, they'll have Sam Gamgee to reckon with\"")
+                .WithFlavorLine("-The Fellowship of the Ring")
+                .WithCommunityVersion("Sam-Gamgee-Grey-Company-Gen-Con-2015")
+                .WithInfo(2, 1, Artist.Alexandre_Dainche);
+
+            /*
             Cards.Add(new LotRCard() {
                 
                 Title = "Sam Gamgee",
@@ -57,6 +67,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 CardNumber = 2,
                 Artist = Artist.Alexandre_Dainche
             });
+             */
             Cards.Add(new LotRCard() {
                 
                 Title = "Merry",
