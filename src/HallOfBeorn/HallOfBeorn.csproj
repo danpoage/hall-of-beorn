@@ -563,7 +563,7 @@
     <Compile Include="Models\LotR\Sets\Haradrim\TheCrossingsOfPorosSet.cs" />
     <Compile Include="Models\LotR\Sets\AngmarAwakened\TheDreadRealmNightmare.cs" />
     <Compile Include="Models\LotR\Sets\Haradrim\TheDungeonsOfCirithGuratSet.cs" />
-    <Compile Include="Models\LotR\Sets\TheLordOfTheRings\TheMountainOfFire.cs" />
+    <Compile Include="Models\LotR\Sets\TheLordOfTheRings\TheMountainOfFireSet.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\TheRingGoesSouthNightmare.cs" />
     <Compile Include="Models\LotR\Sets\AngmarAwakened\TheTreacheryOfRhudaurNightmare.cs" />
     <Compile Include="Models\LotR\Sets\AngmarAwakened\TheWastesOfEriadorNightmare.cs" />

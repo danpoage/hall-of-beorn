@@ -631,7 +631,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheTreasonOfSaruman = new Sets.TheLordOfTheRings.TheTreasonOfSaruman();
         public static CardSet TheLandOfShadow = new Sets.TheLordOfTheRings.TheLandOfShadow();
         public static CardSet TheFlameOfTheWest = new Sets.TheLordOfTheRings.TheFlameOfTheWestSet();
-        public static CardSet TheMountainOfFire = new Sets.TheLordOfTheRings.TheMountainOfFire();
+        public static CardSet TheMountainOfFire = new Sets.TheLordOfTheRings.TheMountainOfFireSet();
 
         public static CardSet TheMassingAtOsgiliath = new Sets.PrintOnDemand.TheMassingatOsgiliath();
         public static CardSet TheBattleOfLakeTown = new Sets.PrintOnDemand.TheBattleofLakeTown();

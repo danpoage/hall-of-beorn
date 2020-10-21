@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
 {
-    public class TheMountainOfFire : CardSet
+    public class TheMountainOfFireSet : CardSet
     {
         private const string setTower = "The Tower of Cirith Ungol";
         private const string setOrcsOfMordor = "Orcs of Mordor";
@@ -246,7 +246,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithUnique()
                 .WithTraits("Creature.", "Eagle.")
                 .WithKeywords("Ranged.", "Sentinel.")
-                .WithText("When Revealed: The first player must choose: either take control of Gwaihir, or spend 1 Fellowship resource and discard Gwahir to discard a non-unique enemy in the staging area.")
+                .WithTextLine("Ranged. Sentinel.")
+                .WithTextLine("When Revealed: The first player must choose: either take control of Gwaihir, or spend 1 Fellowship resource and discard Gwaihir to discard a non-unique enemy in the staging area.")
                 .WithShadow("Shadow: This attack deals no damage.")
                 .WithInfo(41, 1, Artist.Dmitry_Prosvirnin));
             addCard(LotRCard.Objective("The Tower of Barad-dûr", string.Empty, setMountDoom)
