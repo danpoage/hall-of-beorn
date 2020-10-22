@@ -19,6 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTextLine("Action: Discard a card from your hand to add 1 resource to a Noldor hero's resource pool, or to Aragorn's resource pool. (Limit once per round.)")
                 .WithFlavorLine("...the light of stars was in her bright eyes, grey as a cloudless night; yet queenly she looked, and thought and knowledge were in her glance, as of one who has known many things that the years bring.")
                 .WithFlavorLine("-The Fellowship of the Ring")
+                .WithCommunityVersion("Arwen-Undómiel-Aggro-Caldara")
                 .WithCommunityVersion("Arwen-Undómiel-Grimbeorn's-Path")
                 .WithCommunityVersion("Arwen-Undómiel-Nouveau-Hunters")
                 .WithInfo(140, 1, Artist.Magali_Villeneuve);

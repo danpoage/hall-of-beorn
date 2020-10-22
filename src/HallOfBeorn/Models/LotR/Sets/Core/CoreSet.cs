@@ -128,6 +128,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithTextLine("Action: Exhaust Faramir to choose a player. Each character controlled by that player gets +1 Willpower until the end of the phase.")
                 .WithFlavor("\"He leads now in all perilous ventures. But his life is charmed, or fate spares him for some other end.\"\r\n-Mablung, Ranger of Ithilien,\r\nThe Two Towers")
                 .WithTemplate("<p class='main-text'><b>Action:</b> Exhaust {self} to choose a player. Each character controlled by that player gets +1 {Willpower} until the end of the phase.</p><p class='flavor-text'>&quot;He leads now in all perilous ventures. But his life is charmed, or fate spares him for some other end.&quot;<br>&ndash;Mablung, Ranger of Ithilien,<br>The Two Towers</p>")
+                .WithCommunityVersion("Faramir-Core-Set-Completion")
                 .WithInfo(14, 2, Artist.Jeff_Himmelman);
             addAlly("Son of Arnor", 3, Sphere.Leadership, false, 0, 2, 0, 2)
                 .WithTraits("Dúnedain.")
@@ -236,6 +237,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithTextLine("Combat Action: Choose an enemy engaged with a player. That enemy cannot attack that player this phase.")
                 .WithFlavor("A few brave men were strung before them to make a feint of resistance, and many there fell before the rest drew back and fled to either side. -The Hobbit")
                 .WithErrata(1)
+                .WithCommunityVersion("Feint-Core-Set-Completion")
                 .WithInfo(34, 2, Artist.Lius_Lasahido);
             addEvent("Quick Strike", 1, Sphere.Tactics)
                 .WithTextLine("Action: Exhaust a character you control to immediately declare it as an attacker (and resolve its attack) against any eligible enemy target.")
@@ -304,6 +306,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
             addEvent("The Galadhrim's Greeting", 3, Sphere.Spirit)
                 .WithTextLine("Action: Reduce one player's threat by 6, or reduce each player's threat by 2.")
                 .WithFlavor("\"Welcome to Caras Galadhan!\" he said. \"Here is the city of the Galadhrim where dwell the Lord Celeborn and Galadriel the Lady of Lórien.\" -The Fellowship of the Ring")
+                .WithCommunityVersion("The-Galadhrim's-Greeting-Core-Set-Completion")
                 .WithCommunityVersion("The-Galadhrim's-Greeting-Nouveau-Hunters")
                 .WithInfo(46, 2, Artist.Magali_Villeneuve);
             addEvent("Strength of Will", 0, Sphere.Spirit)
@@ -324,6 +327,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithTextLine("Response: Cancel the 'when revealed' effects of a card that was just revealed from the encounter deck.")
                 .WithFlavor("\"There is naught that you can do, other than to resist, with hope or without it\"\r\n-Elrond, The Fellowship of the Ring")
                 .WithTemplate("<p><b>Response:</b> Cancel the &ldquo;when revealed&rdquo; effects of a card that was just revealed from the encounter deck.</p><p class='flavor-text'>&quot;There is naught that you can do, other than to resist, with hope or without it&quot;<br>&ndash;Elrond, The Fellowship of the Ring</p>")
+                .WithCommunityVersion("A-Test-of-Will-Core-Set-Completion")
                 .WithCommunityVersion("A-Test-of-Will-Nouveau-Hunters")
                 .WithInfo(50, 2, Artist.Ryan_Barger);
             addEvent("Stand and Fight", 254, Sphere.Spirit)
@@ -363,6 +367,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithTextLine("Action: Exhaust Unexpected Courage to ready attached hero.")
                 .WithFlavor("\"Here am I, naughty little fly;\r\nyou are fat and lazy.\r\nYou cannot trap me, though you try,\r\nin your cobwebs crazy.\"\r\n-Bilbo Baggins, The Hobbit")
                 .WithTemplate("<p>Attach to a hero.</p><p><b>Action:</b> Exhaust {self} to ready attached hero.</p><p class='flavor-text'>&quot;Here am I, naughty little fly;<br>you are fat and lazy.<br>You cannot trap me, though you try,<br>in your cobwebs crazy.&quot;<br>&ndash;Bilbo Baggins, The Hobbit</p>")
+                .WithCommunityVersion("Unexpected-Courage-Core-Set-Completion")
                 .WithCommunityVersion("Unexpected-Courage-Nouveau-Hunters")
                 .WithInfo(57, 1, Artist.Angela_Sung);
             addAlly("Daughter of the Nimrodel", 3, Sphere.Lore, false, 1, 0, 0, 1)
@@ -443,6 +448,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithTraits("Istari.")
                 .WithTextLine("At the end of the round, discard Gandalf from play.")
                 .WithTextLine("Response: After Gandalf enters play, (choose 1): draw 3 cards, deal 4 damage to 1 enemy in play, or reduce your threat by 5.")
+                .WithCommunityVersion("Gandalf-Core-Set-Completion")
                 .WithInfo(73, 4, Artist.Lucas_Graciano);
             addEnemy("King Spider", "Spiders of Mirkwood", 20, 2, 3, 1, 3)
                 .WithTraits("Creature.", "Spider.")
