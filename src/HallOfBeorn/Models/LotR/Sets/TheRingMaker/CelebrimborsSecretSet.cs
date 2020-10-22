@@ -22,6 +22,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithTextLine("Action: Exhaust Galadriel to choose a player. That player reduces his threat by 1 and draws 1 card. (Limit once per round.)")
                 .WithCommunityVersion("Galadriel-Grey-Company-Gen-Con-2015")
                 .WithCommunityVersion("Galadriel-Whispers-in-the-Trees")
+                .WithCommunityVersion("Galadriel-Nouveau-Hunters")
                 .WithInfo(112, 1, Artist.Magali_Villeneuve);
             addAttachment("Heir of Mardil", 1, Sphere.Leadership, true)
                 .WithTraits("Title.")
@@ -57,6 +58,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithTextLine("Action: Exhaust Mirror of Galadriel to search the top 10 cards of your deck for a card and add it to your hand. Shuffle the rest back into your deck. Then, discard a random card from your hand.")
                 .WithFlavorLine("\"What you will see, if you leave the Mirror free to work, I cannot tell. For it shows things that were, things that are, things that yet may be.\"")
                 .WithFlavorLine("-Galadriel, The Fellowship of the Ring")
+                .WithCommunityVersion("Mirror-of-Galadriel-Nouveau-Hunters")
                 .WithInfo(118, 3, Artist.Jose_Vega);
             addAlly("Wandering Ent", 2, Sphere.Lore, false, 2, 2, 2, 3)
                 .WithTraits("Ent.")

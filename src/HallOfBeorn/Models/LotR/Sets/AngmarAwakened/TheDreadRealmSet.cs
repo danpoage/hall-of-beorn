@@ -19,6 +19,8 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTextLine("Action: Discard a card from your hand to add 1 resource to a Noldor hero's resource pool, or to Aragorn's resource pool. (Limit once per round.)")
                 .WithFlavorLine("...the light of stars was in her bright eyes, grey as a cloudless night; yet queenly she looked, and thought and knowledge were in her glance, as of one who has known many things that the years bring.")
                 .WithFlavorLine("-The Fellowship of the Ring")
+                .WithCommunityVersion("Arwen-Undómiel-Grimbeorn's-Path")
+                .WithCommunityVersion("Arwen-Undómiel-Nouveau-Hunters")
                 .WithInfo(140, 1, Artist.Magali_Villeneuve);
             addAlly("Éothain", 4, Sphere.Leadership, true, 2, 2, 1, 3)
                 .WithTraits("Rohan.", "Warrior.")
@@ -56,6 +58,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTextLine("Action: Return Elven-light to your hand from your discard pile. Then, draw 1 card.")
                 .WithFlavorLine("Then Aragorn was abashed, for he saw the elven-light in her eyes and the wisdom of many days...")
                 .WithFlavorLine("-The Return of the King")
+                .WithCommunityVersion("Elven-light-Nouveau-Hunters")
                 .WithInfo(145, 3, Artist.Magali_Villeneuve);
             addEvent("Tale of Tinúviel", 1, Sphere.Spirit)
                 .WithTraits("Song.")
