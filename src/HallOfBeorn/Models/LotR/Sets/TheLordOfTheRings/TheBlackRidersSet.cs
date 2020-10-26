@@ -684,26 +684,15 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 CardNumber = 38,
                 Artist = Artist.Sabin_Boykinov
             });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Black Rider",
-                Id = "57107fd1-0092-41d3-ae9d-8ff6c06933eb",
-                CardType = CardType.Enemy,
-                EngagementCost = 35,
-                Threat = 4,
-                Attack = 5,
-                Defense = 4,
-                HitPoints = 6,
-                Traits = new List<string>() { "Nazgûl." },
-                Keywords = new List<string>() { "Hide 2." },
-                EncounterSet = "A Shadow of the Past",
-                Text = "Cannot have non-Morgul attachments.\r\nForced: After engaged player fails a Hide test, Black Rider makes an immediate attack.",
-                FlavorText = "The riding figure sat quite still with its head bowed, as if listening. From inside the hood came a noise as of someone sniffing...-The Fellowship of the Ring",
-                Quantity = 5,
-                EasyModeQuantity = 3,
-                CardNumber = 39,
-                Artist = Artist.Mariana_Vieira
-            });
+            addEnemy("Black Rider", EncounterSet.AShadowOfThePast, 35, 4, 5, 4, 6)
+                .WithTraits("Nazgûl.")
+                .WithKeywords("Hide 2.")
+                .WithTextLine("Hide 2. Cannot have non-Morgul attachments.")
+                .WithTextLine("Forced: After engaged player fails a Hide test, Black Rider makes an immediate attack.")
+                .WithFlavorLine("The riding figure sat quite still with its head bowed, as if listening. From inside the hood came a noise as of someone sniffing...")
+                .WithFlavorLine("-The Fellowship of the Ring")
+                .WithEasyModeQuantity(3)
+                .WithInfo(39, 5, Artist.Mariana_Vieira);
             Cards.Add(new LotRCard()
             {
                 Title = "Evil Crow",
@@ -723,20 +712,13 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 CardNumber = 40,
                 Artist = Artist.Christine_Bian
             });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Crawling Towards Him",
-                Id = "79b5dd16-2427-4950-94e9-46905eebe56d",
-                CardType = CardType.Treachery,
-                Keywords = new List<string>() { "Peril.", " Hide 2." },
-                EncounterSet = "A Shadow of the Past",
-                Text = "When Revealed: If you have failed a Hide test this phase, remove each character you control from the quest.",
-                Shadow = "Shadow: Return attacking enemy to the staging area after this attack.",
-                Quantity = 3,
-                EasyModeQuantity = 2,
-                CardNumber = 41,
-                Artist = Artist.Brent_Hollowel
-            });
+            addTreachery("Crawling Towards Him", EncounterSet.AShadowOfThePast)
+                .WithKeywords("Peril.", " Hide 2.")
+                .WithTextLine("Peril. Hide 2.")
+                .WithTextLine("When Revealed: If you have failed a Hide test this phase, remove each character you control from the quest.")
+                .WithShadow("Shadow: Return attacking enemy to the staging area after this attack.")
+                .WithEasyModeQuantity(2)
+                .WithInfo(41, 3, Artist.Brent_Hollowel);
             Cards.Add(new LotRCard()
             {
                 Title = "Hunting For The Ring",
