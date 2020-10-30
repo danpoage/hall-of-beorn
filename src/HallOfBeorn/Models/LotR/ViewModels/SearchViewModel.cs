@@ -877,27 +877,14 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             //return card.CardSet.Name == this.CardSet || (!string.IsNullOrEmpty(card.CardSet.AlternateName) && card.CardSet.AlternateName == this.CardSet) || (!string.IsNullOrEmpty(card.CardSet.NormalizedName) && card.CardSet.NormalizedName == this.CardSet) || (!string.IsNullOrEmpty(card.CardSet.Cycle) && card.CardSet.Cycle.ToUpper() == this.CardSet);
         //}
 
+        /*
         public bool CardIsCustom(LotRCard card)
         {
-            /*
-            if ((this.CardSet == null || this.CardSet == "Any") 
-                && (this.EncounterSet == null || this.EncounterSet == "Any") 
-                && this.Sphere != Sphere.Mastery 
-                && (this.Trait == null || this.Trait == "Any") 
-                && (this.Keyword == null || this.Keyword == "Any")
-                && (this.Attack == null || this.Attack == "Any")
-                && (this.Defense == null || this.Defense == "Any")
-                && (this.HitPoints == null || this.HitPoints == "Any")
-                && (this.Willpower == null || this.Willpower == "Any")
-                && (this.Threat == null || this.Threat == "Any"))
-            {
-                return card.CardSet.SetType == SetType.CUSTOM;
-            }
+            var custom = new HashSet<Models.SetType> { Models.SetType.COMMUNITY, Models.SetType.First_Age, Models.SetType.A_Long_extended_Party };
 
-            return false;*/
-
-            return card.CardSet.SetType == Models.SetType.COMMUNITY;
+            return custom.Contains(card.CardSet.SetType);
         }
+        */
 
         public bool VictoryPointsMatch(LotRCard card)
         {

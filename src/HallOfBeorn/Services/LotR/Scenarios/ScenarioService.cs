@@ -317,7 +317,7 @@ namespace HallOfBeorn.Services.LotR.Scenarios
         public bool HasSetType(LotRCard card, SetType? setType)
         {
             if (!setType.HasValue || setType.Value == SetType.None || setType.Value == SetType.OFFICIAL)
-                return card.CardSet.SetType != SetType.COMMUNITY;
+                return !card.CardSet.SetType.IsCommunity();
 
             if (setType.Value == SetType.ALL_SETS)
                 return true;
@@ -332,7 +332,7 @@ namespace HallOfBeorn.Services.LotR.Scenarios
                 return card.CardSet.SetType != SetType.Nightmare_Expansion;
 
             if (setType.Value == SetType.COMMUNITY)
-                return community.Contains(card.CardSet.SetType);
+                return card.CardSet.SetType.IsCommunity();
 
             return card.CardSet.SetType == setType.Value;
         }

@@ -94,7 +94,7 @@ namespace HallOfBeorn.Services.LotR.Search
                 );
 
             Register("unique", (val, neg) => new BooleanFilter((score) => score.Card.IsUnique == true, neg));
-            Register("custom", (val, neg) => new BooleanFilter((score) => score.Card.CardSet.SetType == Models.SetType.COMMUNITY, neg));
+            Register("custom", (val, neg) => new BooleanFilter((score) => score.Card.CardSet.SetType.IsCommunity(), neg));
             Register("spoiler", (val, neg) => new BooleanFilter((score) => score.Card.CardSet.IsSpoiler, neg));
             Register("saga", (val, neg) => new BooleanFilter((score) => 
                 score.Card.Sphere == Sphere.Baggins || score.Card.Sphere == Sphere.Fellowship || score.Card.CardType == CardType.Treasure ||

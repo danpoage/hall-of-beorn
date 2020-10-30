@@ -138,5 +138,15 @@ namespace HallOfBeorn.Models.LotR
                     return self.ToString().Replace("_", "-");
             }
         }
+
+        public static bool IsCommunity(this SetType self)
+        {
+            var community = new HashSet<SetType>
+            {
+                SetType.COMMUNITY, SetType.First_Age, SetType.A_Long_extended_Party
+            };
+
+            return community.Contains(self);
+        }
     }
 }
