@@ -68,12 +68,15 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithInfo(11, 1, Artist.Jason_Juta);
             addQuest("Snowdrifts", "The Redhorn Gate", 2, 'A', 11)
                 .WithTemplate("<p class='flavor-text'>Progress slows as you meet the fury of the mountains. Sudden snows fall heavy around you, and a bitter wind howls down from the peaks. You uncover a shallow depression in the snow, filled with frozen remains. Some of them bear strange markings, as if they had been burned with flame. How many other doomed souls lie beneath the quickly rising drifts?</p>")
+                .WithOppositeTextLine("When Revealed: Shuffle 1 more copy of Snowstorm into the encounter deck than the number of players.")
                 .WithOppositeTextLine("Forced: After playing the 11th progress token on Snowdrifts, discard any active location. Caradhras becomes the active location.")
                 .WithTemplate2("<p><b>When Revealed:</b> Shuffle 1 more copy of <a title='Snowstorm (The Redhorn Gate)' target='_blank' href='/Cards/Details/Snowstorm-TRG'>Snowstorm</a> into the encounter deck than the number of players in the game.</p><p><b>Forced:</b> After placing the 11th progress on {self}, discard any active location. <a title='Caradhras (The Redhorn Gate)' target='_blank' href='/Cards/Details/Caradhras-TRG'>Caradhras</a> becomes the active location.</p>")
                 .WithIncludedEncounterSets(EncounterSet.MistyMountains)
                 .WithInfo(12, 1, Artist.Stu_Barnes);
             addQuest("The Mountains' Peaks", "The Redhorn Gate", 3, 'A', 13)
                 .WithTemplate("<p class='flavor-text'>The mountain peaks are almost in reach, but the swirling snows make it difficult to see, and your strength begins to drain away with the daunting final push to the pinnacle.")
+                .WithOppositeTextLine("When Revealed: Shuffle all copies of Snowstorm in the encounter discard pile back into the encounter deck.")
+                .WithOppositeTextLine("Characters are discarded from play if their Willpower is ever 0.")
                 .WithOppositeTextLine("Players cannot defeat this stage unless they have 5 victory points. If the players defeat this stage, they have won the game.")
                 .WithTemplate2("<p><b>When Revealed:</b> Shuffle all copies of <a title='Snowstorm (The Redhorn Gate) target='_blank' href='/Cards/Details/Snowstorm-TRG'>Snowstorm</a> in the encounter discard pile back into the encounter deck.</p><p>Characters are discarded from play if their {Willpower} is ever 0.</p><p><b>Players cannot defeat this stage unless they have 5 victory points. If the players defeat this stage, they have won the game.</b></p>")
                 .WithIncludedEncounterSets(EncounterSet.MistyMountains)

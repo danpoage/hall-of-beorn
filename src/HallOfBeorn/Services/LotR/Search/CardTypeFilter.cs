@@ -34,27 +34,53 @@ namespace HallOfBeorn.Services.LotR.Search
             };
         }
 
+        private static HashSet<CardType> playerCardTypes = new HashSet<CardType>
+        {
+            CardType.Hero, CardType.Ally, CardType.Attachment, CardType.Event, CardType.Player_Side_Quest, CardType.Contract, CardType.Treasure
+        };
+
+        private static HashSet<CardType> characterCardTypes = new HashSet<CardType>
+        {
+            CardType.Hero, CardType.Ally, CardType.Objective_Hero, CardType.Objective_Ally,
+        };
+
+        private static HashSet<CardType> encounterCardTypes = new HashSet<CardType>
+        {
+            CardType.Enemy, CardType.Ship_Enemy, CardType.Location, CardType.Treachery, CardType.Encounter_Side_Quest,
+            CardType.Objective, CardType.Objective_Hero, CardType.Objective_Ally, CardType.Objective_Location, CardType.Ship_Objective,
+        };
+
+        private static HashSet<CardType> objectiveCardTypes = new HashSet<CardType>
+        {
+            CardType.Objective, CardType.Objective_Hero, CardType.Objective_Ally, CardType.Objective_Location, CardType.Ship_Objective,
+        };
+
+        private static HashSet<CardType> setupCardTypes = new HashSet<CardType>
+        {
+            CardType.Nightmare_Setup, CardType.GenCon_Setup, CardType.Campaign, CardType.Scenario,
+        };
+
         private static bool HasCardType(LotRCard card, CardType type)
         {
             if (type == Models.LotR.CardType.Player)
             {
-                    return card.CardType == Models.LotR.CardType.Hero || card.CardType == Models.LotR.CardType.Ally || card.CardType == Models.LotR.CardType.Attachment || card.CardType == Models.LotR.CardType.Event || card.CardType == Models.LotR.CardType.Player_Side_Quest;
+                return playerCardTypes.Contains(card.CardType);
             }
             else if (type == Models.LotR.CardType.Character)
             {
-                return card.CardType == Models.LotR.CardType.Hero || card.CardType == Models.LotR.CardType.Ally || card.CardType == Models.LotR.CardType.Objective_Ally || (card.CardType == Models.LotR.CardType.Objective && card.HitPoints > 0);
+                return characterCardTypes.Contains(card.CardType) || (card.CardType == CardType.Objective && card.HitPoints > 0);
             }
             else if (type == Models.LotR.CardType.Encounter)
             {
-                return card.CardType == Models.LotR.CardType.Enemy || card.CardType == Models.LotR.CardType.Location || card.CardType == Models.LotR.CardType.Treachery || card.CardType == Models.LotR.CardType.Objective || card.CardType == Models.LotR.CardType.Objective_Hero || card.CardType == Models.LotR.CardType.Objective_Ally || card.CardType == Models.LotR.CardType.Objective_Location || card.CardType == Models.LotR.CardType.Encounter_Side_Quest || card.CardType == Models.LotR.CardType.Ship_Objective || card.CardType == Models.LotR.CardType.Ship_Enemy;
+                return encounterCardTypes.Contains(card.CardType);
             }
             else if (type == Models.LotR.CardType.Objective)
             {
-                return card.CardType == Models.LotR.CardType.Objective || card.CardType == Models.LotR.CardType.Objective_Ally;
+                return objectiveCardTypes.Contains(card.CardType);
             }
             else if (type == Models.LotR.CardType.Setup)
             {
-                return card.CardType == Models.LotR.CardType.Nightmare_Setup || card.CardType == Models.LotR.CardType.GenCon_Setup || card.CardType == Models.LotR.CardType.Campaign || card.CardType == Models.LotR.CardType.Scenario;
+                return setupCardTypes.Contains(card.CardType);
             }
             else
             {

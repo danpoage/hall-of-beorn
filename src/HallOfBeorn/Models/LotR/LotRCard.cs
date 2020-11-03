@@ -715,7 +715,7 @@ namespace HallOfBeorn.Models.LotR
 
         public LotRCard WithOppositeTextLine(string text)
         {
-            if (string.IsNullOrEmpty(this.Text))
+            if (string.IsNullOrEmpty(this.OppositeText))
                 this.OppositeText = text + Environment.NewLine;
             else
                 this.OppositeText = this.OppositeText + text + Environment.NewLine;
