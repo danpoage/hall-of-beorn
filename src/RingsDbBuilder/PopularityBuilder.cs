@@ -16,11 +16,13 @@ namespace RingsDbBuilder
         private readonly Options _options;
         private readonly Dictionary<string, int> _heroTally = new Dictionary<string, int>();
         private readonly Dictionary<string, int> _cardTally = new Dictionary<string, int>();
+        private readonly Dictionary<string, int> _contractTally = new Dictionary<string, int>();
         private readonly Dictionary<string, int> _createdTally = new Dictionary<string, int>();
         private readonly Dictionary<string, int> _unknownCards = new Dictionary<string, int>();
 
-        private const string addHeroFormat = "            addHeroPopularity(\"{0}\", {1});";
-        private const string addCardFormat = "            addCardPopularity(\"{0}\", {1});";
+        private const string addHeroFormat     = "            addHeroPopularity(\"{0}\", {1});";
+        private const string addCardFormat     = "            addCardPopularity(\"{0}\", {1});";
+        private const string addContractFormat = "            addContractPopularity(\"{0}\", {1});";
 
         public void TallyCreateDate(string createDate)
         {
@@ -57,8 +59,24 @@ namespace RingsDbBuilder
             _heroTally[cardId] += 1;
         }
 
+        private HashSet<string> contractIds = new HashSet<string>
+        {
+            "21074", //Fellowship
+            "22024", //Burglar's Turn
+            "22049", //Forth, the Three Hunters
+            "22074", //Grey Wanderer
+            "22091", //Council of the Wise
+            "22134", //Messenger of the King
+            "22147", //Bond of Friendship
+        };
+
         public void TallyPlayerCard(string cardId, int quantity)
         {
+            if (contractIds.Contains(cardId))
+            {
+                TallyContractCard(cardId, quantity);
+            }
+
             if (!_cardTally.ContainsKey(cardId))
             {
                 _cardTally[cardId] = 0;
@@ -68,6 +86,19 @@ namespace RingsDbBuilder
 
             _cardTally[cardId] += quantity;
         }
+
+        public void TallyContractCard(string cardId, int quantity)
+        {
+            if (!_contractTally.ContainsKey(cardId))
+            {
+                _contractTally[cardId] = 0;
+            }
+
+            //Console.WriteLine(string.Format("  Player Card {0} + {1}", slug, quantity));
+
+            _contractTally[cardId] += quantity;
+        }
+
 
         public void PrintHeroPopularity()
         {
@@ -88,6 +119,17 @@ namespace RingsDbBuilder
             foreach (var tally in _cardTally.Keys.OrderByDescending(x => _cardTally[x]))
             {
                 Console.WriteLine(string.Format(addCardFormat, tally, _cardTally[tally]));
+            }
+        }
+
+        public void PrintContractPopularity()
+        {
+            Console.WriteLine();
+            Console.WriteLine("CONTRACT POPULARITY");
+
+            foreach (var tally in _contractTally.Keys.OrderByDescending(x => _contractTally[x]))
+            {
+                Console.WriteLine(string.Format(addContractFormat, tally, _contractTally[tally]));
             }
         }
     }
