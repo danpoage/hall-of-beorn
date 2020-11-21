@@ -47,7 +47,7 @@ namespace RingsDbBuilder
             _unknownCards[cardId] += 1;
         }
 
-        public void TallyHeroCard(string cardId)
+        public void TallyHeroCard(string cardId, byte weight)
         {
             if (!_heroTally.ContainsKey(cardId))
             {
@@ -56,7 +56,7 @@ namespace RingsDbBuilder
             
             //Console.WriteLine(string.Format("  Hero {0} +1", slug));
 
-            _heroTally[cardId] += 1;
+            _heroTally[cardId] += 1 * weight;
         }
 
         private HashSet<string> contractIds = new HashSet<string>
@@ -70,11 +70,12 @@ namespace RingsDbBuilder
             "22147", //Bond of Friendship
         };
 
-        public void TallyPlayerCard(string cardId, int quantity)
+        public void TallyPlayerCard(string cardId, int quantity, byte weight)
         {
             if (contractIds.Contains(cardId))
             {
-                TallyContractCard(cardId, quantity);
+                TallyContractCard(cardId, quantity, weight);
+                return;
             }
 
             if (!_cardTally.ContainsKey(cardId))
@@ -82,12 +83,19 @@ namespace RingsDbBuilder
                 _cardTally[cardId] = 0;
             }
 
+            var baseline = 10;
+            if (quantity > 1)
+                baseline += 5;
+            if (quantity > 2)
+                baseline += 2;
+
+            var score = baseline * weight;
             //Console.WriteLine(string.Format("  Player Card {0} + {1}", slug, quantity));
 
-            _cardTally[cardId] += quantity;
+            _cardTally[cardId] += score;
         }
 
-        public void TallyContractCard(string cardId, int quantity)
+        public void TallyContractCard(string cardId, int quantity, byte weight)
         {
             if (!_contractTally.ContainsKey(cardId))
             {
@@ -96,7 +104,7 @@ namespace RingsDbBuilder
 
             //Console.WriteLine(string.Format("  Player Card {0} + {1}", slug, quantity));
 
-            _contractTally[cardId] += quantity;
+            _contractTally[cardId] += quantity * weight;
         }
 
 

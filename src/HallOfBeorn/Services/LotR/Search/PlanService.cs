@@ -29,7 +29,7 @@ namespace HallOfBeorn.Services.LotR.Search
             _questCategoryService = questCategoryService;
             _filterService = filterService;
             _getPopularity = (slug) => { return ringsDbService.GetPopularity(slug); };
-            _getVotes = (card) => { return card.CardType == CardType.Hero ? 10000 + ringsDbService.GetVotes(card.Slug) : ringsDbService.GetVotes(card.Slug); };
+            _getVotes = (card) => { return ringsDbService.GetVotes(card.Slug); };
         }
 
         private readonly INoteService _noteService;
@@ -39,7 +39,7 @@ namespace HallOfBeorn.Services.LotR.Search
         private readonly ICategoryService<QuestCategory> _questCategoryService;
         private readonly IFilterService _filterService;
         private readonly Func<string, byte> _getPopularity;
-        private readonly Func<LotRCard, int> _getVotes;
+        private readonly Func<LotRCard, uint> _getVotes;
 
         private const string defaultCardSet = "Core Set";
         private const CardType defaultCardType = CardType.Hero;

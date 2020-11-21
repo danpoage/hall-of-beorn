@@ -9,7 +9,7 @@ namespace HallOfBeorn.Services.LotR.RingsDb
         string GetSlug(string cardId);
         string GetCardId(string slug);
         byte GetPopularity(string slug);
-        ushort GetVotes(string slug);
+        uint GetVotes(string slug);
         IEnumerable<KeyValuePair<string, int>> GetLinks(string slug);
         bool DeckIncludesCard(string deckId, string slug);
         RingsDbDeckList GetDeckList(string deckId);

@@ -136,7 +136,7 @@ namespace HallOfBeorn.Models.LotR.Simple
         public string OctgnGuid { get; set; }
         public string RingsDbCardId { get; set; }
         public byte RingsDbPopularity { get; set; }
-        public ushort RingsDbVotes { get; set; }
+        public uint RingsDbVotes { get; set; }
 
         public List<string> Categories { get; private set; }
 

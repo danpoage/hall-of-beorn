@@ -704,7 +704,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             {
                 return
                     (_card.StatScore() > 0D)
-                    ? string.Format("{0:0.0}", _card.StatScore())
+                    ? string.Format("{0:0}", _card.StatScore())
                     : "0";
             }
         }
@@ -713,12 +713,13 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             get
             {
-                var efficiency = _card.StatEfficiency();
-                if (efficiency == 0)
-                    return string.Empty;
+                var score = _card.StatScore();
 
-                //return string.Format("{0:00.00}", efficiency);
-
+                return score > 0D
+                    ? string.Format("{0:0}★", score)
+                    : string.Empty;
+                
+                /*
                 var max = Math.Round((efficiency - .5) * 10, MidpointRounding.AwayFromZero) + 1;
 
                 //return string.Format("{0:00.00}", max);
@@ -732,6 +733,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 }
 
                 return html.ToString();
+                */
             }
         }
 
@@ -1319,7 +1321,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public byte Popularity { get; set; }
 
-        public ushort Votes { get; set; }
+        public uint Votes { get; set; }
 
         public string CharacterUrl { get; set; }
 
@@ -1329,14 +1331,15 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             {
                 if (Popularity > 0)
                 {
-                    var icon = string.Format("<img src='/Images/gold-ring.png' style='margin-bottom:-2px;' height='16' width='16' title='Popularity {0}/5  ({1} Votes)'/>", Popularity, Votes);
+                    var icon = string.Format("<b>{0}</b>&nbsp;<img src='/Images/gold-ring.png' style='margin-bottom:-2px;' height='16' width='16' title='Popularity {0}/10  (Rank {1})'/>", Popularity, Votes);
 
-                    var html = new System.Text.StringBuilder();
+                    var html = new System.Text.StringBuilder(icon);
 
+                    /*
                     for (var i = 0; i < Popularity; i++)
                     {
                         html.Append(icon);
-                    }
+                    }*/
 
                     html.AppendFormat("<span style='color:gray;font-size:12px;margin-left:8px;margin-bottom:2px;'>[{0}]</span>", Votes);
 
