@@ -27,7 +27,7 @@ namespace RingsDbBuilder
                 strategy.Execute(info);
             }
 
-            //cardLinkBuilder.PrintLinks();
+            cardLinkBuilder.PrintLinks();
             popularityBuilder.PrintHeroPopularity();
             popularityBuilder.PrintContractPopularity();
             popularityBuilder.PrintCardPopularity();
