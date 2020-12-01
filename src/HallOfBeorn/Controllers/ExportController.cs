@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
 using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.Simple;
@@ -184,6 +187,54 @@ namespace HallOfBeorn.Controllers
             simpleCard.RingsDbVotes = ringsDbService.GetVotes(card.Slug);
 
             return simpleCard;
+        }
+
+        public ActionResult Cards(string setType)
+        {
+            try
+            {
+                //var result = new JsonResult() { 
+                //    JsonRequestBehavior = JsonRequestBehavior.AllowGet,
+                //    MaxJsonLength = int.MaxValue,
+                //};
+
+                Func<string, string> getRingsDbCode = (slug) =>
+                    ringsDbService.GetCardId(slug);
+
+                Func<string, string> getOctgnId = (slug) =>
+                    octgnService.GetCardOctgnGuid(slug);
+
+                var cards = new List<Models.RingsDb.RingsDbCard>();
+                foreach (var cardSet in productRepository.CardSets())
+                {
+                    if (cardSet.SetType.IsCommunity() && setType != SetType.ALL_SETS.ToString())
+                    {
+                        continue;
+                    }
+
+                    foreach (var card in cardSet.Cards)
+                    {
+                        cards.Add(
+                            Models.RingsDb.RingsDbCard.FromCard(card, getRingsDbCode, getOctgnId));
+                    }
+                }
+
+                var content = JsonConvert.SerializeObject(cards, 
+                    Formatting.None, 
+                    new JsonSerializerSettings { 
+                        NullValueHandling = NullValueHandling.Ignore
+                    });
+
+                return new ContentResult {
+                    Content = content,
+                    ContentEncoding = System.Text.Encoding.UTF8,
+                    ContentType = "application/json",
+                };
+            }
+            catch (Exception ex)
+            {
+                return new JsonResult { JsonRequestBehavior = JsonRequestBehavior.AllowGet, Data = ex.Message };
+            }
         }
 
         public ActionResult CardSets(string id)

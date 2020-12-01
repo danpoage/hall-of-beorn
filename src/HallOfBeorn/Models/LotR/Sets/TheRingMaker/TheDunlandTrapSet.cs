@@ -54,6 +54,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithFlavorLine("in Mordor where the shadows are.")
                 .WithFlavorLine("–The Fellowship of the Ring")
                 .WithVictoryPoints(1)
+                .WithLimitOnePerDeck()
                 .WithInfo(7, 3, Artist.Arden_Beckwith);
             addAlly("Ithilien Lookout", 3, Sphere.Lore, false, 1, 2, 0, 2)
                 .WithTraits("Gondor.", "Ranger.")

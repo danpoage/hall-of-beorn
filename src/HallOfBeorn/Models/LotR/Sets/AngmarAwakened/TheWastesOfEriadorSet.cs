@@ -65,6 +65,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTextLine("Response: When this stage is defeated, the first player searches the top X cards of the encounter deck for 1 non-objective card worth no victory points and adds it to the victory display. Put the remaining cards back in any order. X is the number of players in the game plus 4.")
                 .WithFlavorLine("Strider made them take cover in a thicket at the side of the Road, while he went forward to explore. -The Fellowship of the Ring")
                 .WithVictoryPoints(1)
+                .WithLimitOnePerDeck()
                 .WithInfo(9, 3, Artist.Tomasz_Jedruszek);
             addAlly("Ranger of Cardolan", 4, Sphere.Neutral, false, 2, 2, 2, 3)
                 .WithTraits("Dúnedain.", "Ranger.")

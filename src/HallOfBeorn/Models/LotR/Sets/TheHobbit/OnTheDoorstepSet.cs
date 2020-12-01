@@ -109,6 +109,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
                 .WithText("Limit 1 per deck. Attach to a hero with Ranged.\r\nResponse: After attached hero declares an attack, add Black Arrow to the victory display to give attached hero +5 Attack for this attack.")
                 .WithFlavor("\"I have saved you to the last...\" -Bard, The Hobbit")
                 .WithVictoryPoints(1)
+                .WithLimitOnePerDeck()
                 .WithInfo(15, 3, Artist.Melissa_Findley);
             Cards.Add(new LotRCard() {
                 

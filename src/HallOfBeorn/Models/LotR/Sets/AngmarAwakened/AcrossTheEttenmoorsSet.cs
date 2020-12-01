@@ -47,6 +47,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTextLine("Battle.")
                 .WithTextLine("Response: When this stage is defeated, each player may choose and discard a non-unique enemy engaged with him.")
                 .WithVictoryPoints(1)
+                .WithLimitOnePerDeck()
                 .WithInfo(58, 3, Artist.Mark_Behm);
             addAttachment("Steed of Imladris", 1, Sphere.Spirit, false)
                 .WithTraits("Mount.")

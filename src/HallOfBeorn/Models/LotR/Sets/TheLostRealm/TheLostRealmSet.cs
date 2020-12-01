@@ -91,6 +91,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLostRealm
                 .WithTextLine("Response: After this stage is defeated, each player may search his deck for 1 card and add it to his hand. Each player shuffles his deck.")
                 .WithFlavorLine("Aragorn halted and examined the tracks closely. -The Tower Towers")
                 .WithVictoryPoints(1)
+                .WithLimitOnePerDeck()
                 .WithInfo(14, 3, Artist.Smirtouille);
             addAlly("Ranger of the North", 255, Sphere.Neutral, false, 2, 2, 2, 3)
                 .WithTraits("Dúnedain.", "Ranger.")

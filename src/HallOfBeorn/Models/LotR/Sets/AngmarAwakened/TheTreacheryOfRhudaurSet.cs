@@ -32,6 +32,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithFlavorLine("\"Often the Rohirrim have aided us, but now the Lord Denethor asks for all your strength and all your speed...\"")
                 .WithFlavorLine("-Hirgon, The Return of the King")
                 .WithVictoryPoints(1)
+                .WithLimitOnePerDeck()
                 .WithInfo(86, 3, Artist.Tomasz_Jedruszek);
             addAttachment("Elven Spear", 0, Sphere.Tactics, false)
                 .WithTraits("Item.", "Weapon.")

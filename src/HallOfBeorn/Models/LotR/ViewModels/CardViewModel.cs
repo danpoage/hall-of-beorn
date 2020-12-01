@@ -851,25 +851,25 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public string ImagePath
         {
-            get { return GetImagePathForLanguage(_lang); }
+            get { return GetImagePathForLanguage(_card, _lang); }
         }
 
-        public string GetImagePathForLanguage(Language? lang)
+        public static string GetImagePathForLanguage(LotRCard card, Language? lang = null)
         {
-            var useLang = lang.HasValue ? lang.Value : _card.DefaultLang;
+            var useLang = lang.HasValue ? lang.Value : card.DefaultLang;
 
             if (useLang == Language.EN)
             {
-                var set = !string.IsNullOrEmpty(_card.CardSet.NormalizedName) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
-                var title = _card.Title.ToUrlSafeString();
-                var suffix = !string.IsNullOrEmpty(_card.SlugSuffix) ? string.Format("-{0}", _card.SlugSuffix.ToUrlSafeString()) : string.Empty;
+                var set = !string.IsNullOrEmpty(card.CardSet.NormalizedName) ? card.CardSet.NormalizedName.ToUrlSafeString() : card.CardSet.Name.ToUrlSafeString();
+                var title = card.Title.ToUrlSafeString();
+                var suffix = !string.IsNullOrEmpty(card.SlugSuffix) ? string.Format("-{0}", card.SlugSuffix.ToUrlSafeString()) : string.Empty;
 
                 return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}{2}.jpg", set, title, suffix);
             } else
             {
-                var set = !string.IsNullOrEmpty(_card.CardSet.NormalizedName) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
-                var title = _card.Title.ToUrlSafeString();
-                var suffix = !string.IsNullOrEmpty(_card.SlugSuffix) ? string.Format("-{0}", _card.SlugSuffix.ToUrlSafeString()) : string.Empty;
+                var set = !string.IsNullOrEmpty(card.CardSet.NormalizedName) ? card.CardSet.NormalizedName.ToUrlSafeString() : card.CardSet.Name.ToUrlSafeString();
+                var title = card.Title.ToUrlSafeString();
+                var suffix = !string.IsNullOrEmpty(card.SlugSuffix) ? string.Format("-{0}", card.SlugSuffix.ToUrlSafeString()) : string.Empty;
 
                 var langDirectory = Enum.GetName(typeof(Language), useLang);
 

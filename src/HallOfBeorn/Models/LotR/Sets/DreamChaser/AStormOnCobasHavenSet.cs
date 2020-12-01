@@ -74,6 +74,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithFlavorLine("\"...it is the last move in a great jeopardy, and for one side or the other it will bring the end of the game.\"")
                 .WithFlavorLine("-Aragorn, The Return of the King")
                 .WithVictoryPoints(1)
+                .WithLimitOnePerDeck()
                 .WithInfo(119, 3, Artist.Dmitry_Prosvirnin);
             addQuest("Outmaneuver the Enemy", EncounterSet.AStormOnCobasHaven, 1, 'A', 10)
                 .WithKeywords("Sailing.")

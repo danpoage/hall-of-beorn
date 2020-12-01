@@ -30,6 +30,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithTextLine("Heroes do not exhaust to attack, defend, or commit to a quest while attached location is the active location.")
                 .WithFlavorLine("\"However it may prove, one must tread the path that need chooses!\"")
                 .WithFlavorLine("-Gandalf, The Fellowship of the Ring")
+                .WithLimitOnePerDeck()
                 .WithInfo(103, 3, Artist.Magali_Villeneuve);
             addAlly("Trollshaw Scout", 2, Sphere.Tactics, false, 0, 2, 1, 2)
                 .WithTraits("Noldor.", "Scout.")

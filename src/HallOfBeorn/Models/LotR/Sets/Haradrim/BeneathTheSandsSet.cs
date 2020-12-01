@@ -39,6 +39,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithTextLine("Valour Response: After attached hero quests successfully, add The Red Arrow to the victory display to search the top 5 cards of your deck for an ally and put it into play.")
                 .WithFlavorLine("\"The Red Arrow has not been seen in the Mark in all my years!\"")
                 .WithFlavorLine("-Théoden, The Return of the King")
+                .WithLimitOnePerDeck()
                 .WithVictoryPoints(1)
                 .WithInfo(58, 3, Artist.Stanislav_Dikolenko);
             addPlayerSideQuest("Keep Watch", 1, Sphere.Tactics, 6)

@@ -674,6 +674,7 @@
     <Compile Include="Models\Marvel\ViewModels\MarvelSearchSort.cs" />
     <Compile Include="Models\Marvel\ViewModels\MarvelSearchView.cs" />
     <Compile Include="Models\Marvel\ViewModels\MarvelSearchViewModel.cs" />
+    <Compile Include="Models\RingsDb\RingsDbCard.cs" />
     <Compile Include="Models\RingsDb\RingsDbDeck.cs" />
     <Compile Include="Models\LotR\Scenarios\AngmarAwakened\AcrossTheEttenmoorsScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\ShadowsOfMirkwood\AJourneyToRhosgobelScenario.cs" />

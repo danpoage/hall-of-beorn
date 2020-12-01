@@ -927,6 +927,12 @@ namespace HallOfBeorn.Models.LotR
             return this;
         }
 
+        public LotRCard WithLimitOnePerDeck()
+        {
+            MaxPerDeck = 1;
+            return this;
+        }
+
         #endregion
     }
 }

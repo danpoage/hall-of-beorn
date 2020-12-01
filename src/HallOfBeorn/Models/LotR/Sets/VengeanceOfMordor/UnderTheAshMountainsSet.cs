@@ -82,6 +82,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
             addEvent("Helm of Secrecy", 4, Sphere.Neutral)
                 .WithTextLine("Limit 1 per deck.")
                 .WithTextLine("Action: Choose a hero you control and discard all tokens from it. Select a different non-Fellowship, non-Baggins hero from your collection with a threat cost less than or equal to the chosen hero. Swap those heroes, moving all eligible attachments and damage tokens to the hero from your collection.")
+                .WithLimitOnePerDeck()
                 .WithInfo(90, 3, Artist.Unknown);
             addContract("Council of the Wise")
                 .WithTextLine("You cannot include more than 1 copy of a card, by title, in your deck.")
