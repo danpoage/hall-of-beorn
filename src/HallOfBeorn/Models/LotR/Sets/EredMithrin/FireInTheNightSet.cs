@@ -135,7 +135,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTextLine("While at least 3 side quests are in the victory display, Dagnir is considered to be engaged with each player.")
                 .WithVictoryPoints(5)
                 .WithInfo(74, 1, Artist.Antonio_Jose_Manzanedo);
-            addEnemy("Dragon's Thrall", EncounterSet.FireInTheNight, 30, 3, 3, 3, 4)
+            addEnemy("The Dragon's Thrall", EncounterSet.FireInTheNight, 30, 3, 3, 3, 4)
                 .WithTraits("Goblin.", "Orc.")
                 .WithTextLine("Forced: After The Dragon’s Thrall engages you, either deal 3 damage to Hrogar’s Hill, or it makes an immediate attack against you.")
                 .WithShadow("Shadow: If this attack destroys a character, deal 3 damage to Hrogar's Hill.")
