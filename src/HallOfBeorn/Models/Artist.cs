@@ -657,6 +657,10 @@ namespace HallOfBeorn.Models
             //The Fortress of Nurn
             all.Add(Artist.Daniel_Zrom);
 
+            //The Hunt for the Dreadnaught
+            all.Add(Artist.Hyungyung_Bae);
+            all.Add(Artist.David_Frasheski);
+
             //Arkham Horrom Core
             //all.Add(Artist.Vincent_Dutrait);
             //all.Add(Artist.Jacob_Murray);
@@ -731,6 +735,7 @@ namespace HallOfBeorn.Models
         public static Artist Daniel_Ljunggren = new Artist { Name = "Daniel Ljunggren", URL = "http://darylart.com" };
         public static Artist Danny_Staten = new Artist { Name = "Danny Staten", URL = "http://www.staten-illustration.com" };
         public static Artist Dardagan = new Artist { Name = "Dardagan", URL = "http://dardagan.deviantart.com" };
+        public static Artist David_Frasheski = new Artist { Name = "David Frasheski", URL = "https://www.artstation.com/davidfrasheski" };
         public static Artist David_Wuertemburg = new Artist { Name = "David Wuertemburg", URL = "http://spdmngtruper.deviantart.com" };
         public static Artist Dawn_Carlos = new Artist { Name = "Dawn Carlos", URL = "http://dawncarlosart.com" };
         public static Artist Dechambo = new Artist { Name = "Dechambo", URL = "http://www.dechambo.com/Dechambo_Artwork/www.dechambo.com.html" };
@@ -1017,6 +1022,7 @@ namespace HallOfBeorn.Models
         public static Artist Helge_C_Balzer = new Artist { Name = "Helge C. Balzer", URL = "http://helgecbalzer.deviantart.com" };
         public static Artist Helmutt = new Artist { Name = "Helmutt", URL = "http://helmuttt.deviantart.com" };
         public static Artist Henning_Ludvigsen = new Artist { Name = "Henning Ludvigsen", URL = "http://henning.deviantart.com" };
+        public static Artist Hyungyung_Bae = new Artist { Name = "Hyungyung Bae", URL = "https://www.artstation.com/brendabae88" };
         public static Artist Ignacio_Bazan_Lazcano = new Artist { Name = "Ignacio Bazan Lazcano", URL = "http://neisbeis.deviantart.com" };
         public static Artist Igor_Artyomenko = new Artist { Name = "Igor Artyomenko", URL = "https://www.artstation.com/haryarti" };
         public static Artist Igor_Burlakov = new Artist { Name = "Igor Burlakov", URL = "http://dartgarry.deviantart.com" };

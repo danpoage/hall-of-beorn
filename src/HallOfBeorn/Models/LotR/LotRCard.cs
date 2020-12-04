@@ -323,7 +323,7 @@ namespace HallOfBeorn.Models.LotR
             }
         }
 
-        public bool HasSideLetter { get; private set; }
+        public char? SideLetter { get; private set; }
 
         #region Static Fluent Helpers
 
@@ -915,9 +915,15 @@ namespace HallOfBeorn.Models.LotR
             return this;
         }
 
-        public LotRCard WithSideLetter()
+        public LotRCard WithSideA()
         {
-            HasSideLetter = true;
+            SideLetter = 'a';
+            return this;
+        }
+
+        public LotRCard WithSideB()
+        {
+            SideLetter = 'b';
             return this;
         }
 

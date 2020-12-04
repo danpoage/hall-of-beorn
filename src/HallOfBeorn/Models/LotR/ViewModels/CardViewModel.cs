@@ -322,8 +322,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             get
             { 
-                return _card.HasSideLetter
-                ? string.Format("{0}a/b", _card.CardNumber)
+                return _card.SideLetter.HasValue
+                ? string.Format("{0}{1}", _card.CardNumber, _card.SideLetter.Value)
                 : _card.CardNumber.ToString(); 
             }
         }
