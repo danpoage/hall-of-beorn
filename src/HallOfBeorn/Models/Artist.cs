@@ -660,6 +660,8 @@ namespace HallOfBeorn.Models
             //The Hunt for the Dreadnaught
             all.Add(Artist.Hyungyung_Bae);
             all.Add(Artist.David_Frasheski);
+            all.Add(Artist.Lin_Hsiang);
+            all.Add(Artist.Hai_Hoang);
 
             //Arkham Horrom Core
             //all.Add(Artist.Vincent_Dutrait);
@@ -766,6 +768,7 @@ namespace HallOfBeorn.Models
         public static Artist Greg_Bobrowski = new Artist { Name = "Greg Bobrowski", URL = "https://www.artstation.com/gregbobrowski" };
         public static Artist Greg_Taylor = new Artist { Name = "Greg Taylor", URL = "http://gregtaylorart.deviantart.com" };
         public static Artist Carlo_Pagulayan = new Artist { Name = "Carlo Pagulayan", URL = "http://guisadong-gulay.deviantart.com" };
+        public static Artist Hai_Hoang = new Artist { Name = "Hai Hoang", URL = "https://www.artstation.com/vncchildren" };
         public static Artist Han_Park = new Artist { Name = "Han Park", URL = "http://reaper78.deviantart.com" };
         public static Artist HazelFibonacci = new Artist { Name = "Hazel Fibonacci", URL = "http://hazelfibonacci.deviantart.com" };
         public static Artist Hector_Hanoteau = new Artist { Name = "Hector Hanoteau", URL = "http://en.wikipedia.org/wiki/Hector_Hanoteau" };
@@ -807,6 +810,7 @@ namespace HallOfBeorn.Models
         public static Artist Lane = new Artist { Name = "Lane", URL = "http://wildweasel339.deviantart.com" };
         public static Artist Leonid_Kozienko = new Artist { Name = "Leonid Kozienko", URL = "http://agnidevi.deviantart.com" };
         public static Artist LigaMarta = new Artist { Name = "Līga Kļaviņa", URL = "http://liga-marta.deviantart.com" };
+        public static Artist Lin_Hsiang = new Artist { Name = "Lin Hsiang", URL = "https://www.artstation.com/willhsiang" };
         public static Artist Lomacchi = new Artist { Name = "Lomacchi", URL = "http://dalomacchi.deviantart.com" };
         public static Artist Luca_Michelucci = new Artist { Name = "Luca Michelucci", URL = "http://www.councilofelrond.com/imagegallerycats/michelucci" };
         public static Artist Lutful_Valeriya_Romanovna = new Artist { Name = "Lutful Valeriya Romanovna", URL = "http://google.com/search?q=lutful+valeriya+romanova+art" };

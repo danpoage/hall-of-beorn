@@ -111,15 +111,24 @@ namespace HallOfBeorn.Models.LotR.Sets.ScenarioPack
                 .WithInfo(7, 1, Artist.David_Frasheski);
             
             addShipObjective("Pride of Lebennin", EncounterSet.TheHuntForTheDreadnaught, true, 3, 2, 5, 16)
-                .WithTraits("Basic.", "Gondor.", "Ship.")
+                .WithTraits("Gondor.", "Ship.", "Basic.")
                 .WithKeywords("Sentinel.")
                 .WithTextLine("Immune to player card effects. Sentinel.")
                 .WithTextLine("Each hero you control gets +1 Defense.")
                 .WithTextLine("Forced: When you draw your starting hand, draw 5 additional cards, then shuffle 5 cards from your hand into your deck. You cannot take a mulligan.")
                 .WithSideA()
                 .WithInfo(8, 1, Artist.JB_Casacop);
+            addShipObjective("Pride of Lebennin", EncounterSet.TheHuntForTheDreadnaught, true, 4, 3, 6, 19)
+                .WithTraits("Gondor.", "Ship.", "Upgraded.")
+                .WithKeywords("Sentinel.")
+                .WithTextLine("Immune to player card effects. Sentinel.")
+                .WithTextLine("Each hero you control gets +2 Defense.")
+                .WithTextLine("Response: After Pride of Lebennin flips, heal 2 damage from a character. Choose up to 2 cards from the encounter discard pile and add them to the victory display.")
+                .WithSideB()
+                .WithInfo(8, 1, Artist.JB_Casacop);
+
             addShipObjective("Silent Mist", EncounterSet.TheHuntForTheDreadnaught, true, 4, 3, 4, 14)
-                .WithTraits("Basic.", "Gondor.", "Ship.")
+                .WithTraits("Gondor.", "Ship.", "Basic.")
                 .WithKeywords("Sentinel.")
                 .WithTextLine("Immune to player card effects. Sentinel.")
                 .WithTextLine("Your starting hand size is 8 cards.")
@@ -127,7 +136,60 @@ namespace HallOfBeorn.Models.LotR.Sets.ScenarioPack
                 .WithFlavor("An exquisite work of elven craftsmanship, the number Silent Mist bear the symbol of the Star of Eärendil on its foresail.")
                 .WithSideA()
                 .WithInfo(9, 1, Artist.Alexander_Chelyshev);
+            addShipObjective("Silent Mist", EncounterSet.TheHuntForTheDreadnaught, true, 5, 4, 5, 17)
+                .WithTraits("Gondor.", "Ship.", "Upgraded.")
+                .WithKeywords("Sentinel.")
+                .WithTextLine("Immune to player card effects. Sentinel.")
+                .WithTextLine("Response: After Silent Mist flips, choose up to 2 events from your discard pile and/or your collection and add them to your hand (following deckbuilding rules).")
+                .WithTextLine("Action: Play an event from your hand with cost 3 or more, reducing its cost by 2.")
+                .WithSideB()
+                .WithInfo(9, 1, Artist.Alexander_Chelyshev);
 
+            addShipObjective("Swan Ship of Dol Amroth", EncounterSet.TheHuntForTheDreadnaught, true, 3, 4, 3, 17)
+                .WithTraits("Gondor.", "Ship.", "Basic.")
+                .WithKeywords("Sentinel.")
+                .WithTextLine("Immune to player card effects. Sentinel.")
+                .WithTextLine("Setup: Add 1 resource to each of your heroes' resource pools.")
+                .WithTextLine("Action: Spend 2 resources to ready a character. (Limit once per round.)")
+                .WithFlavorLine("The wealth of Gondor financed the construction of impressive ships which inspired all who sailed them.")
+                .WithSideA()
+                .WithInfo(10, 1, Artist.Carlos_Palma_Cruchaga);
+            addShipObjective("Swan Ship of Dol Amroth", EncounterSet.TheHuntForTheDreadnaught, true, 4, 5, 4, 20)
+                .WithTraits("Gondor.", "Ship.", "Upgraded.")
+                .WithKeywords("Sentinel.")
+                .WithTextLine("Immune to player card effects. Sentinel.")
+                .WithTextLine("Response: After Swan Ship of Dol Amroth flips, add 2 resources to a hero's resource pool. Ready a card.")
+                .WithTextLine("Action: Spend 1 resource to ready a card. (Limit once per round.)")
+                .WithSideB()
+                .WithInfo(10, 1, Artist.Carlos_Palma_Cruchaga);
+
+            addShipObjective("Twilight's Call", EncounterSet.TheHuntForTheDreadnaught, true, 3, 4, 4, 18)
+                .WithTraits("Grey Havens.", "Ship.", "Basic.")
+                .WithKeywords("Sentinel.")
+                .WithTextLine("Immune to player card effects. Sentinel.")
+                .WithTextLine("The first card you play each round does not require a resource match.")
+                .WithTextLine("Action: Play an ally or attachment from your hand. (Limit once per round.)")
+                .WithFlavorLine("Exceptionally agile for its size. Twilight's Call is adept at launching surprise attacks as daylight fades.")
+                .WithSideA()
+                .WithInfo(11, 1, Artist.Carlos_Palma_Cruchaga);
+            addShipObjective("Twilight's Call", EncounterSet.TheHuntForTheDreadnaught, true, 4, 5, 5, 22)
+                .WithTraits("Grey Havens.", "Ship.", "Upgraded.")
+                .WithKeywords("Sentinel.")
+                .WithTextLine("Immune to player card effects. Sentinel.")
+                .WithTextLine("Each card you play does not require a resource match.")
+                .WithTextLine("Response: After Twilight's Call flips, draw 3 cards.")
+                .WithTextLine("Action: Play an ally or attachment from your hand.")
+                .WithSideB()
+                .WithInfo(11, 1, Artist.Carlos_Palma_Cruchaga);
+
+            addShipObjective("Gondorian Warship", EncounterSet.TheHuntForTheDreadnaught, false, 3, 5, 4, 10)
+                .WithTraits("Gondor.", "Ship.")
+                .WithKeywords("Ranged.", "Sentinel.")
+                .WithTextLine("Immune to player card effects. Ranged. Sentinel.")
+                .WithTextLine("When Revealed: Choose a player. That player gains control of Gondorian Warship.")
+                .WithTextLine("Forced: When Gondorian Warship is destroyed, set it aside, out of play.")
+                .WithShadow("Shadow: Deal 5 damage to attacking enemy.")
+                .WithInfo(12, 4, Artist.Hyungyung_Bae);
             addShipEnemy("Dreadnaught", EncounterSet.TheHuntForTheDreadnaught, 0, 4, 7, 4, Card.VALUE_ASTERISK)
                 .WithUnique()
                 .WithTraits("Elite.", "Corsair.", "Ship.")
@@ -150,22 +212,94 @@ namespace HallOfBeorn.Models.LotR.Sets.ScenarioPack
                 .WithVictoryPoints(99)
                 .WithSideB()
                 .WithInfo(13, 1, Artist.Hyungyung_Bae);
-
+            addEnemy("Captain of the Haven", EncounterSet.TheHuntForTheDreadnaught, 31, 3, 8, 5, 7)
+                .WithUnique()
+                .WithTraits("Corsair.", "Pillager.", "Elite.")
+                .WithKeywords("Pillage 8.")
+                .WithTextLine("Immune to player card effects. Pillage 8.")
+                .WithTextLine("Engaged player cannot attack the Dreadnaught.")
+                .WithTextLine("Forced: At the end of the combat phase, if engaged player has no cards in their deck, that player is eliminated from the game.")
+                .WithVictoryPoints(10)
+                .WithInfo(14, 1, Artist.Borja_Pindado);
+            addEnemy("Commander of the readnaught", EncounterSet.TheHuntForTheDreadnaught, 39, 5, 5, 2, 9)
+                .WithUnique()
+                .WithTraits("Corsair.", "Elite.")
+                .WithTextLine("Immune to player card effects.")
+                .WithTextLine("Engaged player cannot attack the Dreadnaught.")
+                .WithTextLine("Forced: After Commander of the Dreadnaught attacks you, the Dreadnaught attacks you.")
+                .WithFlavorLine("If the Dreadnaught is fated to go under, its commander will surely try to take his foes down with it.")
+                .WithVictoryPoints(10)
+                .WithInfo(15, 1, Artist.Borja_Pindado);
+            addEnemy("Descendant of Castamir", EncounterSet.TheHuntForTheDreadnaught, 42, 1, 3, 2, 5)
+                .WithUnique()
+                .WithTraits("Corsair.", "Elite.")
+                .WithTextLine("Immune to player card effects.")
+                .WithTextLine("Engaged player cannot attack the Dreadnaught.")
+                .WithTextLine("Forced: After Descendant of Castamir engages you, put the top 2 cards of the Corsair deck into play engaged with you and deal each of them 1 shadow card.")
+                .WithVictoryPoints(10)
+                .WithInfo(16, 1, Artist.Tony_Foti);
+            addEnemy("Hydraken", EncounterSet.TheHuntForTheDreadnaught, 41, 4, 4, 4, 6)
+                .WithUnique()
+                .WithTraits("Corsair.", "Elite.")
+                .WithTextLine("Immune to player cards effects.")
+                .WithTextLine("Engaged player cannot attack the Dreadnaught.")
+                .WithTextLine("Forced: After Hydraken attacks, he makes an additional attack. Deal him 2 additional shadow cards for this attack and engaged player raises their threat by 4. (Limit once per round.)")
+                .WithVictoryPoints(10)
+                .WithInfo(17, 1, Artist.Martin_de_Diego_Sadaba);
+            addEnemy("Ophidian", EncounterSet.TheHuntForTheDreadnaught, 34, 2, 6, 1, 8)
+                .WithUnique()
+                .WithTraits("Corsair.", "Elite.")
+                .WithTextLine("Immune to player card effects. No more than 1 character can attack Ophidian each round.")
+                .WithTextLine("Engaged player cannot attack the Dreadnaught.")
+                .WithTextLine("Forced: When a character defends against Ophidian, deal 2 damage to that character.")
+                .WithVictoryPoints(10)
+                .WithInfo(18, 1, Artist.Tony_Foti);
+            addEnemy("Varjax", EncounterSet.TheHuntForTheDreadnaught, 35, 6, 7, 3, 6)
+                .WithUnique()
+                .WithTraits("Corsair.", "Elite.")
+                .WithKeywords("Archery 3.")
+                .WithTextLine("Archery 3. Immune to player card effects.")
+                .WithTextLine("Engaged player cannot attack the Dreadnaught.")
+                .WithTextLine("For each point of excess combat damage dealt by Varjax, defending player deals 1 damage to a Ship they control.")
+                .WithVictoryPoints(10)
+                .WithInfo(19, 1, Artist.Martin_de_Diego_Sadaba);
+            addEnemy("Brash Corsair", EncounterSet.TheHuntForTheDreadnaught, 16, 3, 3, 4, 3)
+                .WithTraits("Corsair.")
+                .WithTextLine("Forced: When engaged player exhausts a Ship objective, Brash Corsair attacks that player.")
+                .WithFlavorLine("'The Corsair of Umbar!' men shouted. 'The Corsairs of Umbar! Look! The Corsairs of Umbar are coming!'")
+                .WithFlavorLine("-The Return of the King")
+                .WithInfo(20, 1, Artist.Suzanne_Helmigh);
+            addEnemy("Corsair Plunderer", EncounterSet.TheHuntForTheDreadnaught, 12, 1, 2, 3, 1)
+                .WithTraits("Corsair.", "Pillager.")
+                .WithKeywords("Pillage 2.")
+                .WithTextLine("Pillage 2. (After this enemy attacks you, discard the top 2 cards of your deck.)")
+                .WithTextLine("Forced: After an event card is discarded from your deck by Corsair Plunderer's Pillage keyword, discard an attachment you control.")
+                .WithInfo(21, 3, Artist.Lin_Hsiang);
             addEnemy("Daring Buccaneer", EncounterSet.TheHuntForTheDreadnaught, 23, 3, 3, 2, 2)
                 .WithTraits("Corsair.", "Pillager.")
                 .WithKeywords("Pillage 3.")
                 .WithTextLine("Pillage 3. (After this enemy attacks you, discard the top 3 cards of your deck.)")
-                .WithTextLine("Forced: After an event card is discarded fro engaged player's deck by Daring Buccaneer's Pillage keyword, that player deals 1 damage to a character they control.")
-                .WithTemplate("<p class='main-text'>Pillage 3. <i>(After this enemy attacks you, discard the top 3 cards of your deck.)</i></p><p class='main-text'><b>Forced:</b> After an event card is discarded fro engaged player's deck by Daring Buccaneer's Pillage keyword, that player deals 1 damage to a character they control.</p>")
-                .WithInfo(22, 2, Artist.Unknown);
-
+                .WithTextLine("Forced: After an event card is discarded from your deck by Daring Buccaneer's Pillage keyword, deal 1 damage to a character you control.")
+                .WithTemplate("<p class='main-text'>Pillage 3. <i>(After this enemy attacks you, discard the top 3 cards of your deck.)</i></p><p class='main-text'><b>Forced:</b> After an event card is discarded from your deck by Daring Buccaneer's Pillage keyword, deal 1 damage to a character you control.</p>")
+                .WithInfo(22, 3, Artist.Lin_Hsiang);
+            addEnemy("Fierce Marauder", EncounterSet.TheHuntForTheDreadnaught, 19, 2, 3, 2, 3)
+                .WithTraits("Corsair.", "Pillager.")
+                .WithKeywords("Pillage 3.")
+                .WithTextLine("Pillage 3. (After this enemy attacks you, discard the top 3 cards of your deck.)")
+                .WithTextLine("Forced: After an event card is discarded from your deck by Fierce Marauder's Pillage keyword, discard 1 resource from the resource pool of a hero you control.")
+                .WithInfo(23, 3, Artist.Lin_Hsiang);
             addEnemy("Southron Sailor", EncounterSet.TheHuntForTheDreadnaught, 28, 0, 2, 1, 4)
                 .WithTraits("Corsair.")
                 .WithTextLine("While Southron Sailor is engaged with you, each Ship enemy engaged with you contributes its Threat to the total Threat in the staging area.")
                 .WithFlavorLine("\"There is a great fleet drawing near to the mouths of the Anduin, manned by the corsairs of Umbar in the South.\"")
                 .WithFlavorLine("-Beregond, The Return of the King")
                 .WithInfo(24, 2, Artist.Leanna_Teneycke);
-
+            addEnemy("Umbar Captain", EncounterSet.TheHuntForTheDreadnaught, 40, 4, 5, 3, 5)
+                .WithTraits("Corsair.")
+                .WithTextLine("Engaged player cannot attack Ship enemies.")
+                .WithFlavorLine("...the strength of the rebels in Umbar was a great peril to Gondor...")
+                .WithFlavorLine("-The Return of the King")
+                .WithInfo(25, 1, Artist.David_Kegg);
             addShipEnemy("Black Sails", EncounterSet.TheHuntForTheDreadnaught, 37, 4, 6, 2, 10)
                 .WithTraits("Corsair.", "Ship.")
                 .WithKeywords("Boarding 2.")
@@ -173,27 +307,116 @@ namespace HallOfBeorn.Models.LotR.Sets.ScenarioPack
                 .WithTextLine("While Black Sails is in the staging area, it gains Archery 3.")
                 .WithShadow("Shadow: If attacking enemy is a Ship, return it to the staging area after this attack.")
                 .WithInfo(26, 2, Artist.Imad_Awan);
-
+            addShipEnemy("Corsair Skiff", EncounterSet.TheHuntForTheDreadnaught, 24, 1, 2, 2, 5)
+                .WithTraits("Corsair.", "Ship.")
+                .WithKeywords("Surge.")
+                .WithTextLine("Surge. Cannot have attachments.")
+                .WithTextLine("Forced: When Corsair Skiff engages you from the staging area, eithe raise your threat by 3 or it gains Bording 1.")
+                .WithInfo(27, 2, Artist.Michael_Rasmussen);
             addShipEnemy("Corsair Skirmisher", EncounterSet.TheHuntForTheDreadnaught, 28, 3, 4, 4, 6)
                 .WithTraits("Corsair.", "Ship.")
                 .WithKeywords("Boarding 1.")
                 .WithTextLine("Boarding 1. Immune to player card effects.")
                 .WithTextLine("Response: After ~Corsair Skirmisher is destroyed as an enemy, the engaged player may discard allies they control with a total of at least 3 Willpower to take control of Corsair Skirmisher as a ship-objective with Willpower equal to its Threat. (It loses the ship-enemy card type and gaines the ship-objective card type).")
-                .WithInfo(28, 2, Artist.Mariusz_Gandzel);
-
+                .WithInfo(28, 1, Artist.Mariusz_Gandzel);
+            addShipEnemy("Corsair Warship", EncounterSet.TheHuntForTheDreadnaught, 44, 3, 8, 4, 9)
+                .WithTraits("Corsair.", "Ship.")
+                .WithKeywords("Boarding 3.")
+                .WithTextLine("Boarding 3. Cannot have attachments.")
+                .WithTextLine("While Corsair Warship is in the staging area, it cannot be damaged and gains Archery 4.")
+                .WithFlavorLine("...ships of great draught with many oars, and with black sails bellying in the breeze.")
+                .WithFlavorLine("-The Return of the King")
+                .WithVictoryPoints(6)
+                .WithInfo(29, 1, Artist.Michael_Rasmussen);
             addShipEnemy("Ramming Ship", EncounterSet.TheHuntForTheDreadnaught, 28, 4, 4, 3, 8)
                 .WithTraits("Corsair.", "Ship.")
                 .WithTextLine("Cannot have attachments.")
                 .WithTextLine("Forced: After Ramming ~Ship engages you, it gets +4 Attack until the end of the round.")
                 .WithShadow("Shadow: Put the top card of the Corsair deck into play engaged with you and deal it 1 shadow card.")
-                .WithInfo(30, 2, Artist.Igor_Artyomenko);
-
+                .WithInfo(30, 1, Artist.Igor_Artyomenko);
+            addShipEnemy("Slave Ship", EncounterSet.TheHuntForTheDreadnaught, 32, 3, 7, 5, 5)
+                .WithTraits("Corsair.", "Ship.")
+                .WithKeywords("Boarding 1.")
+                .WithTextLine("Boarding 1. Cannot have attachments.")
+                .WithTextLine("For each point of damage that is dealt to a Ship objective by Slave Ship's attack, deal 1 point of damage to a non-Ship character controlled by the defending player, as well.")
+                .WithInfo(31, 1, Artist.Lukasz_Jaskolski);
+            addShipEnemy("War Galley", EncounterSet.TheHuntForTheDreadnaught, 33, 3, 5, 2, 7)
+                .WithTraits("Corsair.", "Ship.")
+                .WithKeywords("Archery 2.", "Boarding 1.")
+                .WithTextLine("Archery 2. Boarding 1. Cannot have attachments.")
+                .WithTextLine("Forced: When War Galley engages you from the staging area, either raise your threat by 4 or it gains Boarding 1.")
+                .WithInfo(32, 3, Artist.Alexander_Chelyshev);
+            addShipEnemy("Sea Monster", EncounterSet.TheHuntForTheDreadnaught, 26, 2, 4, 0, 11)
+                .WithTraits("Creature.")
+                .WithTextLine("Ship objectives may attack and defend against Sea Monster.")
+                .WithTextLine("When Revealed: Deal 4 damage to the Ship enemy or Ship objective with the fewest remaining hit points.")
+                .WithInfo(33, 2, Artist.Logan_Feliciano);
             addLocation("Belfalas Shipyard", EncounterSet.TheHuntForTheDreadnaught, 4, 6)
                 .WithTraits("Coastland.", "Ocean.")
                 .WithTextLine("Response: After Belfalas Shipyard is explored as the active location, the players as a group spend 5 resources to heal 5 damage from a Ship objective in any group. Ready that Ship and flip it to its Upgraded side.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack and gains Pillage 3.")
-                .WithInfo(34, 2, Artist.Unknown);
-
+                .WithInfo(34, 2, Artist.Hai_Hoang);
+            addLocation("Cobas Haven", EncounterSet.TheHuntForTheDreadnaught, 2, 4)
+                .WithTraits("Coastland.", "Ocean.")
+                .WithTextLine("While Cobas Haven is the active location, reduce the Boading value on each Ship enemy by 1.")
+                .WithFlavorLine("But beyond, in the great fief of Belfalas, dwelt Prince Imrahil in his castle of Dol Amroth by the sea.")
+                .WithFlavorLine("-The Return of the King")
+                .WithInfo(35, 1, Artist.Simon_Dominic);
+            addLocation("Isle of Fortune", EncounterSet.TheHuntForTheDreadnaught, 3, 5)
+                .WithTraits("Ocean.")
+                .WithTextLine("Isle of Fortune enters play with 1 resource per player on it.")
+                .WithTextLine("Forced: After a Ship enemy enters play, discard 1 resource from Isle of Fortune.")
+                .WithTextLine("Response: When Isle of Fortune is explored as the active location, move each resource on it to a hero's resource pool.")
+                .WithInfo(36, 3, Artist.David_Frasheski);
+            addLocation("Mouths of Anduin", EncounterSet.TheHuntForTheDreadnaught, 2, 5)
+                .WithTraits("Coastland.", "Ocean.")
+                .WithTextLine("While Mouths of Anduin is in the staging area, is gains: \"Forced: After a 'when revealed' effect is canceled, reveal the top card of the encounter deck.\"")
+                .WithShadow("Shadow: If this attack is undefended, reveal the top card of the encounter deck.")
+                .WithInfo(37, 3, Artist.Logan_Feliciano);
+            addLocation("Tolfalas Landing", EncounterSet.TheHuntForTheDreadnaught, 2, 5)
+                .WithTraits("Ocean.")
+                .WithTextLine("While Tofalas Landing is in the staging area, it gains: \"Forced: After a player draws any number of cards from a player card effect, that player raises their threat by that number.\"")
+                .WithShadow("Shadow: Raise your threat by 1 (3 instead if you have 5 or more cards in hand).")
+                .WithInfo(38, 3, Artist.Logan_Feliciano);
+            addLocation("Wicked Cove", EncounterSet.TheHuntForTheDreadnaught, 2, 4)
+                .WithTraits("Coastland.", "Ocean.")
+                .WithTextLine("Each location in the staging area is immune to player card effects.")
+                .WithShadow("Shadow: Until the end of the round, attacking enemy is immune to player card effects and gets +2 Defense.")
+                .WithInfo(39, 3, Artist.Darek_Zabrocki);
+            addTreachery("Ballista Barrage", EncounterSet.TheHuntForTheDreadnaught)
+                .WithTraits("Attack.")
+                .WithKeywords("Doomed 1.")
+                .WithTextLine("Doomed 1. (Raise each players threat by 1.)")
+                .WithTextLine("When Revealed: Until the end of the round, each Ship enemy gains Archery 2.")
+                .WithShadow("Shadow: Assign 2 damage among characters you control (3 damage instead if there are 10 or more cards in your discard pile).")
+                .WithInfo(40, 3, Artist.Lin_Hsiang);
+            addTreachery("Boarding Party", EncounterSet.TheHuntForTheDreadnaught)
+                .WithTextLine("When Revealed: Each player puts the top card of the Corsair deck into play engaged with them.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if you control an exhausted Ship objective).")
+                .WithInfo(41, 1, Artist.Darek_Zabrocki);
+            addTreachery("Grappled!", EncounterSet.TheHuntForTheDreadnaught)
+                .WithTextLine("When Revealed: Attach to a Ship objective. (Counts as a Condition attachment with the text: \"Attached objective cannot ready. Action: Exhaust 3 characters to discard Grappled!\")")
+                .WithShadow("Shadow: If defending character is a Ship attach Grappled! to it.")
+                .WithInfo(42, 1, Artist.Federico_Musetti);
+            addTreachery("Out of the Mist", EncounterSet.TheHuntForTheDreadnaught)
+                .WithTraits("Attack.")
+                .WithTextLine("When Revealed: The enemy with the highest engagement cost engages the first player and attacks them. If no attack is made this way, Out of the Mist gains surge.")
+                .WithShadow("Shadow: Either raise your threat by 4 or attacking enemy makes an additional attack.")
+                .WithInfo(43, 3, Artist.Imad_Awan);
+            addTreachery("Overworked", EncounterSet.TheHuntForTheDreadnaught)
+                .WithTraits("Hazard.")
+                .WithTextLine("When Revealed: Until the end of the round, treat the text box of each non-Ship ally as blank, except for Traits. If a player controls 7 or more allies, Overworked gains surge.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack (+3 Attack instead if you control 7 or more allies).")
+                .WithInfo(44, 2, Artist.JB_Casacop);
+            addTreachery("Taking on Water", EncounterSet.TheHuntForTheDreadnaught)
+                .WithTextLine("When Revealed: Attach to a Ship objective. (Counts as a Condition attachment with the text: \"Forced: When attached objective exhausts, deal 2 damage to it. Action: Exhaust 3 characters to discard Taking on Water.\")")
+                .WithShadow("Shadow: If defending character is a Ship, attach Taking on Water to it.")
+                .WithInfo(45, 2, Artist.Ignacio_Bazan_Lazcano);
+            addTreachery("Violent Tempest", EncounterSet.TheHuntForTheDreadnaught)
+                .WithTraits("Weather.")
+                .WithTextLine("When Revealed: Deal 1 damage to each enemy. Each player assigns X among characters they control. X is the number of exhausted characters they control.")
+                .WithShadow("Shadow: Deal 1 damage to the defending character.")
+                .WithInfo(46, 3, Artist.Carlos_Palma_Cruchaga);
             addContract("A Perilous Voyage")
                 .WithTextLine("Your minimum deck size is 100 cards.")
                 .WithTextLine("Your threat cannot be reduced by player card effects.")
