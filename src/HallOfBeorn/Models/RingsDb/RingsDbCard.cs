@@ -110,7 +110,7 @@ namespace HallOfBeorn.Models.RingsDb
                 c.ResourceCost.HasValue ? c.ResourceCost.Description() : null;
 
             Func<LotR.LotRCard, string> getEngagementCost = (c) =>
-                c.EncounterCost.HasValue ? c.EncounterCost.Description() : null;
+                c.EngagementCost.HasValue ? c.EngagementCost.Description() : null;
 
             Func<LotR.LotRCard, string> getUrl = (c) =>
                 string.Format("http://hallofbeorn.com/LotR/Details/{0}", c.Slug);
