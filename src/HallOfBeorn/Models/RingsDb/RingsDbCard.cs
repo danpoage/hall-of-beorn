@@ -116,7 +116,8 @@ namespace HallOfBeorn.Models.RingsDb
                 string.Format("http://hallofbeorn.com/LotR/Details/{0}", c.Slug);
 
             Func<LotR.LotRCard, string> getImageSource = (c) =>
-                LotR.ViewModels.CardViewModel.GetImagePathForLanguage(c);
+                LotR.ViewModels.CardViewModel.GetImagePathForLanguage(c)
+                .NormalizeCaseSensitiveString().Replace("'", string.Empty);
 
             return new RingsDbCard
             {
