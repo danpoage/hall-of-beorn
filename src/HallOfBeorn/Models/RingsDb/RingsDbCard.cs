@@ -28,6 +28,7 @@ namespace HallOfBeorn.Models.RingsDb
         public byte? attack { get; set; }
         public byte? defense { get; set; }
         public byte? health { get; set; }
+        public byte? quest_points { get; set; }
         public byte quantity { get; set; }
         public byte deck_limit { get; set; }
         public string illustrator { get; set; }
@@ -143,6 +144,7 @@ namespace HallOfBeorn.Models.RingsDb
                 attack = card.Attack,
                 defense = card.Defense,
                 health = card.HitPoints,
+                quest_points = card.QuestPoints,
                 quantity = card.Quantity,
                 deck_limit = card.MaxPerDeck.GetValueOrDefault(card.Quantity),
                 illustrator = card.Artist != null ? card.Artist.Name : null,
