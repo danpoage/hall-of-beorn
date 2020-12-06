@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.RingsDb
         public string type_name { get; set; }
         public string sphere_code { get; set; }
         public string sphere_name { get; set; }
+        public string encounter_set { get; set; }
         public ushort position { get; set; }
         public string code { get; set; }
         public string name { get; set; }
@@ -20,7 +21,9 @@ namespace HallOfBeorn.Models.RingsDb
         public string flavor { get; set; }
         public bool is_unique { get; set; }
         public string cost { get; set; }
+        public string engagement_cost { get; set; }
         public byte? threat { get; set; }
+        public byte? threat_strength { get; set; }
         public byte? willpower { get; set; }
         public byte? attack { get; set; }
         public byte? defense { get; set; }
@@ -61,6 +64,7 @@ namespace HallOfBeorn.Models.RingsDb
                 { "Combat Action:", "<b>Combat Action:</b>" },
                 { "Refresh Action:", "<b>Refresh Action:</b>" },
                 { "Response:", "<b>Response:</b>" },
+                { "When Revealed:", "<b>When Revealed:</b>" },
                 { "Forced:", "<b>Forced:</b>" },
             };
 
@@ -105,11 +109,14 @@ namespace HallOfBeorn.Models.RingsDb
             Func<LotR.LotRCard, string> getCost = (c) =>
                 c.ResourceCost.HasValue ? c.ResourceCost.Description() : null;
 
+            Func<LotR.LotRCard, string> getEngagementCost = (c) =>
+                c.EncounterCost.HasValue ? c.EncounterCost.Description() : null;
+
             Func<LotR.LotRCard, string> getUrl = (c) =>
                 string.Format("http://hallofbeorn.com/LotR/Details/{0}", c.Slug);
 
             Func<LotR.LotRCard, string> getImageSource = (c) =>
-                LotR.ViewModels.CardViewModel.GetImagePathForLanguage(c);
+                string.Format("http://hallofbeorn.com/Image/CardFront/{0}", c.Slug);
 
             return new RingsDbCard
             {
@@ -119,6 +126,7 @@ namespace HallOfBeorn.Models.RingsDb
                 type_name = getTypeName(card.CardType),
                 sphere_code = getSphereCode(card.Sphere),
                 sphere_name = getSphereName(card.Sphere),
+                encounter_set = card.EncounterSet,
                 position = card.CardNumber,
                 code = getRingsDbCode(card.Slug),
                 name = card.Title,
@@ -127,7 +135,9 @@ namespace HallOfBeorn.Models.RingsDb
                 flavor = card.FlavorText,
                 is_unique = card.IsUnique,
                 cost = getCost(card),
+                engagement_cost = getEngagementCost(card),
                 threat = card.ThreatCost,
+                threat_strength = card.Threat,
                 willpower = card.Willpower,
                 attack = card.Attack,
                 defense = card.Defense,
