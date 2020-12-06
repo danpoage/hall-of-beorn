@@ -65,6 +65,7 @@ namespace HallOfBeorn.Models.RingsDb
                 { "Combat Action:", "<b>Combat Action:</b>" },
                 { "Refresh Action:", "<b>Refresh Action:</b>" },
                 { "Response:", "<b>Response:</b>" },
+                { "Setup:", "<b>Setup:</b>" },
                 { "When Revealed:", "<b>When Revealed:</b>" },
                 { "Travel:", "<b>Travel:</b>" },
                 { "Forced:", "<b>Forced:</b>" },
