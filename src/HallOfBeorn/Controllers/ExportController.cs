@@ -193,11 +193,6 @@ namespace HallOfBeorn.Controllers
         {
             try
             {
-                //var result = new JsonResult() { 
-                //    JsonRequestBehavior = JsonRequestBehavior.AllowGet,
-                //    MaxJsonLength = int.MaxValue,
-                //};
-
                 Func<string, string> getRingsDbCode = (slug) =>
                     ringsDbService.GetCardId(slug);
 

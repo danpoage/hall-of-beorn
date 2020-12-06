@@ -70,6 +70,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithThumbnail()
                 .WithTraits("Noble.", "Rohan.")
                 .WithTextLine("Action: Discard 1 card from your hand to give Éowyn +1 Willpower until the end of the phase. This effect may be triggered by each player once each round.")
+                .WithFlavorLine("Slender and tall she was in her white robe girt with silver; but strong she seemed and stern as steel, a daughter of kings.")
+                .WithFlavorLine("-The Two Towers")
                 .WithTemplate("<p class='main-text'><b>Action:</b> Discard 1 card from your hand to give {self} +1 {Willpower} until the end of the phase. This effect may be triggered by each player once each round.</p><p class='flavor-text'>Slender and tall she was in her white robe girt with silver; but strong she seemed and stern as steel, a daughter of kings.<br>&ndash;The Two Towers</p>")
                 .WithYear(2010)
                 .WithCommunityVersion("Éowyn-Grey-Company-Gen-Con-2014")

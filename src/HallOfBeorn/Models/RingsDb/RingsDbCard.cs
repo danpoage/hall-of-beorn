@@ -33,6 +33,45 @@ namespace HallOfBeorn.Models.RingsDb
         public string url { get; set; }
         public string imagesrc { get; set; }
 
+        private static string Normalize(string text)
+        {
+            if (text == null)
+            {
+                return null;
+            }
+
+            var map = new Dictionary<string, string>
+            {
+                { "Willpower", "[willpower]" },
+                { "Attack", "[attack]" },
+                { "Defense", "[defense]" },
+                { "Threat", "[threat]" },
+                { "Leadership", "[leadership]" },
+                { "Tactics", "[tactics]" },
+                { "Spirit", "[spirit]" },
+                { "Lore", "[lore]" },
+                { "Baggins", "[baggins]" },
+                { "Fellowship", "[fellowship]" },
+                { "Action:", "<b>Action:</b>" },
+                { "Resource Action:", "<b>Resource Action:</b>" },
+                { "Planning Action:", "<b>Planning Action:</b>" },
+                { "Quest Action:", "<b>Quest Action:</b>" },
+                { "Travel Action:", "<b>Travel Action:</b>" },
+                { "Encounter Action:", "<b>Encounter Action:</b>" },
+                { "Combat Action:", "<b>Combat Action:</b>" },
+                { "Refresh Action:", "<b>Refresh Action:</b>" },
+                { "Response:", "<b>Response:</b>" },
+                { "Forced:", "<b>Forced:</b>" },
+            };
+
+            var normalized = text.Trim();
+            foreach (var pair in map)
+            {
+                normalized = normalized.Replace(pair.Key, pair.Value);
+            }
+            return normalized;
+        }
+
         public static RingsDbCard FromCard(
             LotR.LotRCard card, 
             Func<string, string> getRingsDbCode, Func<string, string> getOctgnId)
@@ -58,8 +97,9 @@ namespace HallOfBeorn.Models.RingsDb
                     var back = c.BackStageLetter.HasValue ? c.BackStageLetter.Value.ToString() : "B";
 
                     return !string.IsNullOrEmpty(c.OppositeText)
-                        ? string.Format("<b>Side {0}</b> {1} <b>Side {2}</b> {3}", front, c.Text, back, c.OppositeText)
-                        : c.Text;
+                        ? string.Format("<b>Side {0}</b> {1} <b>Side {2}</b> {3}", 
+                            front, Normalize(c.Text), back, Normalize(c.OppositeText))
+                        : Normalize(c.Text);
                 };
 
             Func<LotR.LotRCard, string> getCost = (c) =>
