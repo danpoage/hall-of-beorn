@@ -8,6 +8,7 @@ namespace HallOfBeorn.Models.RingsDb
     {
         public string pack_code { get; set; }
         public string pack_name { get; set; }
+        public bool is_official { get; set; }
         public string type_code { get; set; }
         public string type_name { get; set; }
         public string sphere_code { get; set; }
@@ -79,10 +80,18 @@ namespace HallOfBeorn.Models.RingsDb
             return normalized;
         }
 
+        private static HashSet<SetType> unofficialSetTypes = new HashSet<SetType>
+        {
+            SetType.First_Age, SetType.A_Long_extended_Party
+        };
+
         public static RingsDbCard FromCard(
             LotR.LotRCard card, 
             Func<string, string> getRingsDbCode, Func<string, string> getOctgnId)
         {
+            Func<LotR.LotRCard, bool> getIsOfficial = (c) =>
+                !unofficialSetTypes.Contains(c.CardSet.SetType);
+
             Func<LotR.CardType, string> getTypeCode = (t) =>
                 t.ToString().ToLower().Replace('_', '-');
 
@@ -124,6 +133,7 @@ namespace HallOfBeorn.Models.RingsDb
 
             return new RingsDbCard
             {
+                is_official = getIsOfficial(card),
                 pack_code = card.CardSet.Abbreviation,
                 pack_name = card.CardSet.Name,
                 type_code = getTypeCode(card.CardType),
