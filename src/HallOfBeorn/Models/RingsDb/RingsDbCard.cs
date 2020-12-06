@@ -120,7 +120,7 @@ namespace HallOfBeorn.Models.RingsDb
 
             Func<LotR.LotRCard, string> getImageSource = (c) =>
                 LotR.ViewModels.CardViewModel.GetImagePathForLanguage(c)
-                .NormalizeCaseSensitiveString().Replace("'", string.Empty);
+                .NormalizeCaseSensitiveString();
 
             return new RingsDbCard
             {
