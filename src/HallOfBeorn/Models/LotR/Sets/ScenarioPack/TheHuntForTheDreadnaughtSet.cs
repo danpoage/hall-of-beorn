@@ -119,6 +119,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ScenarioPack
                 .WithSideA()
                 .WithInfo(8, 1, Artist.JB_Casacop);
             addShipObjective("Pride of Lebennin", EncounterSet.TheHuntForTheDreadnaught, true, 4, 3, 6, 19)
+                .WithSlugSuffix("Upgraded")
                 .WithTraits("Gondor.", "Ship.", "Upgraded.")
                 .WithKeywords("Sentinel.")
                 .WithTextLine("Immune to player card effects. Sentinel.")
@@ -137,6 +138,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ScenarioPack
                 .WithSideA()
                 .WithInfo(9, 1, Artist.Alexander_Chelyshev);
             addShipObjective("Silent Mist", EncounterSet.TheHuntForTheDreadnaught, true, 5, 4, 5, 17)
+                .WithSlugSuffix("Upgraded")
                 .WithTraits("Gondor.", "Ship.", "Upgraded.")
                 .WithKeywords("Sentinel.")
                 .WithTextLine("Immune to player card effects. Sentinel.")
@@ -155,6 +157,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ScenarioPack
                 .WithSideA()
                 .WithInfo(10, 1, Artist.Carlos_Palma_Cruchaga);
             addShipObjective("Swan Ship of Dol Amroth", EncounterSet.TheHuntForTheDreadnaught, true, 4, 5, 4, 20)
+                .WithSlugSuffix("Upgraded")
                 .WithTraits("Gondor.", "Ship.", "Upgraded.")
                 .WithKeywords("Sentinel.")
                 .WithTextLine("Immune to player card effects. Sentinel.")
@@ -173,6 +176,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ScenarioPack
                 .WithSideA()
                 .WithInfo(11, 1, Artist.Carlos_Palma_Cruchaga);
             addShipObjective("Twilight's Call", EncounterSet.TheHuntForTheDreadnaught, true, 4, 5, 5, 22)
+                .WithSlugSuffix("Upgraded")
                 .WithTraits("Grey Havens.", "Ship.", "Upgraded.")
                 .WithKeywords("Sentinel.")
                 .WithTextLine("Immune to player card effects. Sentinel.")
