@@ -12,7 +12,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
         {
             Title = "Murder at the Prancing Pony";
             ProductName = "2015";
-            GroupName = "Gen Con & Fellowship";
+            GroupName = ScenarioGroup.FellowshipDecks;
+            IsSubGroup = true;
             Number = 6;
 
             QuestCompanionSlug = "print-on-demand-quest-murder-at-the-prancing-pony";

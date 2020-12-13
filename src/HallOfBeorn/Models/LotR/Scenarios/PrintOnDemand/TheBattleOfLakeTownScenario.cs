@@ -7,7 +7,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             Title = "The Battle of Lake-town";
             AlternateTitle = "The Battle of Lake-Town";
             ProductName = "2012";
-            GroupName = "Gen Con & Fellowship";
+            GroupName = ScenarioGroup.GenConDecks;
             IsSubGroup = true;
             Number = 2;
 

@@ -6,7 +6,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
         {
             Title = "The Ruins of Belegost";
             ProductName = "2015";
-            GroupName = "Gen Con & Fellowship";
+            GroupName = ScenarioGroup.GenConDecks;
             IsSubGroup = true;
             Number = 6;
 

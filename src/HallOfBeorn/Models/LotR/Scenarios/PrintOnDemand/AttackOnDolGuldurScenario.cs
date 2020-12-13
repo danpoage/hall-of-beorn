@@ -14,11 +14,13 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             Title = setName;
             AlternateTitle = "Assault on Dol Guldur";
             ProductName = "2017";
-            GroupName = "Gen Con & Fellowship";
+            GroupName = ScenarioGroup.FellowshipDecks;
             IsSubGroup = true;
             Number = 8;
 
             QuestCompanionSlug = "print-on-demand-quest-the-massing-at-osgiliath";
+            DifficultyRating = 9.5f;
+            Votes = 15;
 
             AddEncounterSet(EncounterSet.AttackOnDolGuldur);
 

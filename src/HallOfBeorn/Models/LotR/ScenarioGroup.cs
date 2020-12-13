@@ -37,5 +37,13 @@ namespace HallOfBeorn.Models.LotR
         {
             scenarios.Add(scenario);
         }
+
+        public const string TheHobbit = "The Hobbit";
+        public const string TheLordOfTheRings = "The Lord of the Rings";
+        public const string GenConDecks = "Gen Con Decks";
+        public const string FellowshipDecks = "Fellowship Decks";
+        public const string ScenarioPacks = "Scenario Packs";
+        public const string FirstAge = "First Age";
+        public const string DoomMastered = "Doom Mastered";
     }
 }

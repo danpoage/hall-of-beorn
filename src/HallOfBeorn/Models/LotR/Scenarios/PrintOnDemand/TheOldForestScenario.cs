@@ -6,7 +6,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
         {
             Title = "The Old Forest";
             ProductName = "2014";
-            GroupName = "Gen Con & Fellowship";
+            GroupName = ScenarioGroup.GenConDecks;
             IsSubGroup = true;
             Number = 4;
 

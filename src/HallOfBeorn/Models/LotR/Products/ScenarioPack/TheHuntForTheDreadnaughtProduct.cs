@@ -9,6 +9,7 @@ namespace HallOfBeorn.Models.LotR.Products.ScenarioPack
             : base("The Hunt for the Dreadnaught", "MEC86", ImageType.Jpg, new DateTime(2020, 12, 1))
         {
             AddCardSet(CardSet.TheHuntForTheDreadnaught);
+            AddScenario(new Scenarios.PrintOnDemand.TheHuntForTheDreadnaughtScenario());
         }
     }
 }

@@ -301,7 +301,7 @@ namespace HallOfBeorn.Services.LotR.Scenarios
 
         private readonly HashSet<SetType> printOnDemand = new HashSet<SetType>
         {
-            SetType.Nightmare_Expansion, SetType.GenCon_Expansion, SetType.GenConSaga_Expansion, SetType.Fellowship_Deck, SetType.FellowshipSaga_Deck, SetType.Custom_Scenario_Kit,
+            SetType.Nightmare_Expansion, SetType.GenCon_Expansion, SetType.GenConSaga_Expansion, SetType.Fellowship_Deck, SetType.FellowshipSaga_Deck, SetType.Custom_Scenario_Kit, SetType.Scenario_Pack,
         };
 
         private readonly HashSet<SetType> saga = new HashSet<SetType>

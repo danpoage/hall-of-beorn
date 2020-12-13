@@ -491,6 +491,7 @@
     <Compile Include="Models\LotR\Scenarios\Haradrim\TheBlackSerpentScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\Haradrim\TheDungeonsOfCirithGuratScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\PrintOnDemand\AttackOnDolGuldurScenario.cs" />
+    <Compile Include="Models\LotR\Scenarios\PrintOnDemand\TheHuntForTheDreadnaughtScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\Starter\StarterScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\Starter\TheCavesOfNibinDumScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\Starter\TheOathScenario.cs" />

@@ -11,7 +11,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
         {
             Title = "The Siege of Annúminas";
             ProductName = "2016";
-            GroupName = "Gen Con & Fellowship";
+            GroupName = ScenarioGroup.FellowshipDecks;
             IsSubGroup = true;
             Number = 7;
 

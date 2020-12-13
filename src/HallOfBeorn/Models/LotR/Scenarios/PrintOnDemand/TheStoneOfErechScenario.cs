@@ -6,7 +6,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
         {
             Title = "The Stone of Erech";
             ProductName = "2013";
-            GroupName = "Gen Con & Fellowship";
+            GroupName = ScenarioGroup.GenConDecks;
             IsSubGroup = true;
             Number = 3;
 

@@ -6,7 +6,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
         {
             Title = "The Massing at Osgiliath";
             ProductName = "2011";
-            GroupName = "Gen Con & Fellowship";
+            GroupName = ScenarioGroup.GenConDecks;
             IsSubGroup = true;
             Number = 1;
 
