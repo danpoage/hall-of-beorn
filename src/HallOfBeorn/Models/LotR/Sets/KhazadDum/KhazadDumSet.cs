@@ -248,7 +248,7 @@ namespace HallOfBeorn.Models.LotR.Sets.KhazadDum
                 .WithTextLine("While Orc Drummer is in the staging area, each enemy gets +X Threat. X is the number of players in the game.")
                 .WithEasyModeQuantity(0)
                 .WithInfo(43, 1, Artist.David_A_Nash);
-            addEnemy("Stray Goblin", "Deeps of Moria", 29, Card.VALUE_X, 0, 2, 2)
+            addEnemy("Stray Goblin", "Deeps of Moria", 29, Card.VALUE_X, Card.VALUE_X, 2, 2)
                 .WithTraits("Goblin.", "Orc.")
                 .WithTextLine("X is the number of players in the game.")
                 .WithShadow("Shadow: attacking enemy gets +X Attack. X is the number of players in the game.")
