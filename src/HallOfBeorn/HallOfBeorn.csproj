@@ -965,7 +965,7 @@
     <Compile Include="Models\LotR\Sets\DreamChaser\TheThingInTheDepthsSet.cs" />
     <Compile Include="Models\LotR\Sets\TheRingMaker\TheThreeTrialsSet.cs" />
     <Compile Include="Models\LotR\Sets\TheRingMaker\TheThreeTrialsNightmare.cs" />
-    <Compile Include="Models\LotR\Sets\TheLordOfTheRings\TheTreasonOfSaruman.cs" />
+    <Compile Include="Models\LotR\Sets\TheLordOfTheRings\TheTreasonOfSarumanSet.cs" />
     <Compile Include="Models\LotR\Sets\AngmarAwakened\TheWastesOfEriadorSet.cs" />
     <Compile Include="Models\LotR\Sets\Dwarrowdelf\TheWatcherInTheWaterSet.cs" />
     <Compile Include="Models\LotR\Sets\Dwarrowdelf\TheWatcherInTheWaterNightmare.cs" />

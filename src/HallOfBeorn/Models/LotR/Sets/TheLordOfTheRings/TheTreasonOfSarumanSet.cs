@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
 {
-    public class TheTreasonOfSaruman : CardSet
+    public class TheTreasonOfSarumanSet : CardSet
     {
         protected override void Initialize()
         {
@@ -158,27 +158,30 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
             Cards.Add(LotRCard.Objective("To Isengard!", "F3206311-AC23-4F14-A8F5-74D01E228F87", "The Uruk-hai")
                 .WithText("Treat each Captive's text box as blank. Captives are in play but are not under any player's control. If there are no Captives in play, the players lose the game.\r\nForced: At the end of the refresh phase, increase the pursuit value by 1. Then, if the pursuit value is 30 or greater, the players lose the game.")
                 .WithInfo(22, 1, Artist.Niten));
-            Cards.Add(LotRCard.Enemy("Uglúk", "BA97CFE3-1F65-4497-8A29-EEF290EFF967", "The Uruk-hai", 10, 3, 5, 1, 6)
+            addEnemy("Uglúk", EncounterSet.TheUrukHai, 10, 3, 5, 1, 6)
                 .WithUnique()
                 .WithTraits("Orc.", "Uruk-hai.")
                 .WithKeywords("Toughness 3.")
-                .WithText("Cannot have attachments.\r\nAllies cannot be declared as attackers or defenders against Uglúk.")
+                .WithTextLine("Toughness 3. Cannot have attachments.")
+                .WithTextLine("Allies cannot be declared as attackers or defenders against Uglúk.")
                 .WithFlavor("\"I am Uglúk. I command.\" -The Two Towers")
                 .WithVictoryPoints(5)
-                .WithInfo(23, 1, Artist.Sebastian_Giacobino));
-            Cards.Add(LotRCard.Enemy("Grishnákh", "0B7B42C9-EBD0-4FF2-81E2-50C331FBA1F3", "The Uruk-hai", 40, 4, 3, 4, 5)
+                .WithInfo(23, 1, Artist.Sebastian_Giacobino);
+            addEnemy("Grishnákh", EncounterSet.TheUrukHai, 40, 4, 3, 4, 5)
                 .WithUnique()
                 .WithTraits("Orc.", "Mordor.")
-                .WithText("Forced: After Grishnákh enters play, the first player attached 1 of the Captives to him. If Grishnákh is defeated, place the attached Captive faceup underneath To Isengard!\r\nForced: At the end of the quest phase, deal 1 damage to the attached Captive.")
+                .WithTextLine("Forced: After Grishnákh enters play, the first player attached 1 of the Captives to him. If Grishnákh is defeated, place the attached Captive faceup underneath To Isengard!")
+                .WithTextLine("Forced: At the end of the quest phase, deal 1 damage to the attached Captive.")
                 .WithVictoryPoints(5)
-                .WithInfo(24, 1, Artist.Claudio_Pozas));
-            Cards.Add(LotRCard.Enemy("Uglúk's Uruk-hai", "BB6D77FC-4F47-48B2-B8FE-08FBDB5CDD83", "The Uruk-hai", 38, 2, 4, 2, 5)
+                .WithInfo(24, 1, Artist.Claudio_Pozas);
+            addEnemy("Uglúk's Uruk-hai", EncounterSet.TheUrukHai, 38, 2, 4, 2, 5)
                 .WithTraits("Orc.", "Uruk-hai")
                 .WithKeywords("Peril.", "Toughness 1.", "Archery 1.")
-                .WithText("When Revealed: Either increase the pursuit value by 3, or reveal an additional encounter card.")
+                .WithTextLine("Peril. Toughness 1. Archery 1.")
+                .WithTextLine("When Revealed: Either increase the pursuit value by 3, or reveal an additional encounter card.")
                 .WithFlavor("Uglúk shouted, and a number of other Orcs of nearly his own size ran up. -The Two Towers")
-                .WithInfo(25, 3, Artist.Aurelien_Hubert)
-                .WithEasyModeQuantity(1));
+                .WithEasyModeQuantity(1)
+                .WithInfo(25, 3, Artist.Aurelien_Hubert);
             Cards.Add(LotRCard.Location("The Wold", "C6D201E5-18DB-4FA9-8DA8-EF55E9A75F4D", "The Uruk-hai", 2, 2)
                 .WithTraits("Plains.", "Hills.")
                 .WithText("While the Wold is the active location, it gains: \"Response: After The Wold is explored, each player draws 1 card.\"\r\nTravel: Increase the pursuit value by 1.")
@@ -231,61 +234,67 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
             Cards.Add(LotRCard.Enemy("Warrior of Dunland", "07052600-1902-45B6-A502-EF82C106C951", "Helm's Deep", 44, 4, 5, 1, 5)
                 .WithTraits("Dunland.")
                 .WithKeywords("Peril.", "Archery 1.")
-                .WithText("When Revealed: Warrior of Dunland makes an immediate attack against you.\r\nForced: After Warrior of Dunland attacks and destroys a character, place 3 progress on the active location.")
+                .WithTextLine("Peril. Archery 1.")
+                .WithTextLine("When Revealed: Warrior of Dunland makes an immediate attack against you.\r\nForced: After Warrior of Dunland attacks and destroys a character, place 3 progress on the active location.")
                 .WithInfo(35, 2, Artist.Claudio_Pozas)
                 .WithEasyModeQuantity(0));
-            Cards.Add(LotRCard.Enemy("Soldier of Isengard", "F4D452F8-86C4-47F1-B362-5B32E73EC0A5", "Helm's Deep", 39, 4, 4, 1, 4)
+            addEnemy("Soldier of Isengard", EncounterSet.HelmsDeep, 39, 4, 4, 1, 4)
                 .WithTraits("Orc.", "Uruk-hai.")
                 .WithKeywords("Toughness 1.", "Archery 1.")
-                .WithText("Forced: After Soldier of Isengard attacks and destroys a character, place 1 progress on the current quest.")
+                .WithTextLine("Toughness 1. Archery 1.")
+                .WithTextLine("Forced: After Soldier of ~Isengard attacks and destroys a character, place 1 progress on the current quest.")
                 .WithShadow("Shadow: Exhaust a character you control.")
-                .WithInfo(36, 4, Artist.Guillaume_Ducos));
-            Cards.Add(LotRCard.Location("The Hornburg", "9E26553F-F2EA-4A27-BDB5-1DA6C2ADB791", "Helm's Deep", 3, 3)
+                .WithInfo(36, 4, Artist.Guillaume_Ducos);
+            addLocation("The Hornburg", EncounterSet.HelmsDeep, 3, 3)
                 .WithTraits("Helm's Deep.")
-                .WithText("While The Hornburg is the active location, reduce the archery total by 1 for each player in the game.\r\nForced: When The Hornburg is explored, assign X damage among characters in play. X is the number of enemies in play.")
+                .WithTextLine("While The Hornburg is the active location, reduce the archery total by 1 for each player in the game.")
+                .WithTextLine("Forced: When The Hornburg is explored, assign X damage among characters in play. X is the number of enemies in play.")
                 .WithFlavor("But the Hornburg still held fast, like an island in the sea. -The Two Towers")
-                .WithInfo(37, 3, Artist.Mariusz_Gandzel));
-            Cards.Add(LotRCard.Location("Deeping Wall", "D46BCD9B-D1FE-421E-BA27-9F48D2267754", "Helm's Deep", 4, 4)
+                .WithInfo(37, 3, Artist.Mariusz_Gandzel);
+            addLocation("Deeping Wall", EncounterSet.HelmsDeep, 4, 4)
                 .WithTraits("Helm's Deep.")
                 .WithText("While Deeping Wall is the active location, each hero gets +1 Defense.\r\nForced: When Deeping Wall is explored, raise each player's threat by 4.")
                 .WithFlavor("The Deeping Wall was twenty feet high, and so thick that four men could walk abreast along the top, sheltered by a parapet over which only a tall man could look. -The Two Towers")
-                .WithInfo(38, 4, Artist.Jose_Vega));
-            Cards.Add(LotRCard.Location("Deeping Culvert", "26D3320F-F710-478A-BBE6-EE8CBC3E61E6", "Helm's Deep", Card.VALUE_X, 2)
+                .WithInfo(38, 4, Artist.Jose_Vega);
+            addLocation("Deeping Culvert", EncounterSet.HelmsDeep, Card.VALUE_X, 2)
                 .WithTraits("Helm's Deep.")
                 .WithText("X is the 1 more than the number of allies controlled by the first player.\r\nForced: When Deeping Culvert is explored, each player searches the encounter deck and discard pile for an enemy, reveals it, and adds it to the staging area. Shuffle the encounter deck.")
                 .WithFlavor("Orcs had crept like rats through the culvert through which the stream flowed out. -The Two Towers")
-                .WithInfo(39, 2, Artist.Mariusz_Gandzel)
-                .WithEasyModeQuantity(1));
-            Cards.Add(LotRCard.Location("Postern Door", "65FAEBB5-E1B0-46F5-ADDE-C90CF17565DD", "Helm's Deep", 3, 2)
+                .WithEasyModeQuantity(1)
+                .WithInfo(39, 2, Artist.Mariusz_Gandzel);
+            addLocation("Postern Door",EncounterSet.HelmsDeep, 3, 2)
                 .WithTraits("Helm's Deep.")
                 .WithText("While Postern Door is the active location, each hero gets +1 Attack.\r\nForced: When Postern Door is explored, until the end of the round, players cannot declare attacks.")
                 .WithFlavor("There was a small postern-door that opened in an angle of the burg-wall on the west, where the cliff stretched out to meet it. -The Two Towers")
-                .WithInfo(40, 2, Artist.Jose_Vega));
-            Cards.Add(LotRCard.Location("Helm's Gate", "9035733E-1686-4A19-94B1-5241ED68FFA9", "Helm's Deep", 5, 3)
+                .WithInfo(40, 2, Artist.Jose_Vega);
+            addLocation("Helm's Gate", EncounterSet.HelmsDeep, 5, 3)
                 .WithTraits("Helm's Deep.")
                 .WithText("While Helm's Gate is the active location, if any player is not engaged with an enemy, the first player reveals an encounter card at the end of each staging step.\r\nForced: When Helm's Gate is explored, each enemy gets -20 engagement cost and +2 Attack until the end of the round.")
-                .WithInfo(41, 2, Artist.Ed_Mattinian)
-                .WithEasyModeQuantity(1));
+                .WithEasyModeQuantity(1)
+                .WithInfo(41, 2, Artist.Ed_Mattinian);
             Cards.Add(LotRCard.Treachery("Scaling Ladders", "4E69C4A6-39DE-4269-82D5-243FB257AB3D", "Helm's Deep")
                 .WithKeywords("Surge.")
-                .WithText("When Revealed: Attach to the active location. (Counts a Siege attachment with the text: \"Each enemy gets +1 Threat.\")")
+                .WithTextLine("Surge.")
+                .WithTextLine("When Revealed: Attach to the active location. (Counts a Siege attachment with the text: \"Each enemy gets +1 Threat.\")")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, place 1 progress on the current quest.")
                 .WithInfo(42, 3, Artist.Alvaro_Calvo_Escudero)
                 .WithEasyModeQuantity(1));
-            Cards.Add(LotRCard.Treachery("Devilry of Saruman", "41E4197E-0CA0-49FC-9D8C-EBB911EDC18A", "Helm's Deep")
-                .WithText("When Revealed: Place 3 progress on the main quest (bypassing any active location). Until the end of the round, treat each character's text box as if it was blank (except for Traits).")
+            addTreachery("Devilry of Saruman", EncounterSet.HelmsDeep)
+                .WithTextLine("When Revealed: Place 3 progress on the main quest (bypassing any active location). Until the end of the round, treat each character's text box as if it was blank (except for Traits).")
                 .WithShadow("Shadow: Attacking enemy gets +2 Attack and gains Toughness 2 until the end of the round.")
-                .WithInfo(43, 3, Artist.Alvaro_Calvo_Escudero)
                 .WithErrata(1)
-                .WithEasyModeQuantity(2));
+                .WithEasyModeQuantity(2)
+                .WithInfo(43, 3, Artist.Alvaro_Calvo_Escudero);
             Cards.Add(LotRCard.Treachery("Reckless Hate", "DA50FA48-D71B-4557-A4CA-DD27305FCFF9", "Helm's Deep")
                 .WithKeywords("Peril.")
-                .WithText("When Revealed: The enemy in the staging area with the highest Attack makes an immediate attack against you. If no attack is made this way, Reckless Hate gains surge.")
+                .WithTextLine("Peril.")
+                .WithTextLine("When Revealed: The enemy in the staging area with the highest Attack makes an immediate attack against you. If no attack is made this way, Reckless Hate gains surge.")
                 .WithShadow("Shadow: Attacking enemy makes an additional attack against you after this one.")
                 .WithInfo(44, 2, Artist.Sebastian_Giacobino));
             Cards.Add(LotRCard.Treachery("Night Without End", "FC5B7B75-8850-4A63-9B5F-4918FAE039CC", "Helm's Deep")
                 .WithKeywords("Peril.", "Doomed 2.")
-                .WithText("When Revealed: Either remove 1 resource token from The Defense of Helm's Deep, or reveal 2 additional encounter cards.")
+                .WithTextLine("Peril. Doomed 2.")
+                .WithTextLine("When Revealed: Either remove 1 resource token from The Defense of Helm's Deep, or reveal 2 additional encounter cards.")
                 .WithShadow("Shadow: Return attacking enemy to the staging area after this attack.")
                 .WithInfo(45, 2, Artist.Arden_Beckwith)
                 .WithEasyModeQuantity(1));
@@ -307,7 +316,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
             Cards.Add(LotRCard.Enemy("Gríma", "0A8093E8-3972-4794-9130-536038AD50B7", "The Road to Isengard", 1, 3, 2, 3, 3)
                 .WithUnique()
                 .WithKeywords("Doomed 2.")
-                .WithText("Forced: After Gríma attacks a player, that player shuffles Gríma back into the encounter deck and reveals an encounter card.")
+                .WithTextLine("Doomed 2.")
+                .WithTextLine("Forced: After Gríma attacks a player, that player shuffles Gríma back into the encounter deck and reveals an encounter card.")
                 .WithShadow("Shadow: This attack is considered undefended.")
                 .WithInfo(49, 1, Artist.Dleoblack)
                 .WithEasyModeQuantity(0));
@@ -319,7 +329,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
             Cards.Add(LotRCard.Enemy("Isengard Orc", "B3971C60-FA49-4794-B6D1-C183FE5EA445", "The Road to Isengard", 29, 1, 2, 1, 3)
                 .WithTraits("Orc.")
                 .WithKeywords("Peril.", "Archery 1.")
-                .WithText("When Revealed: Either discard 1 random card from your hand, or reveal an encounter card.")
+                .WithTextLine("Peril. Archery 1.")
+                .WithTextLine("When Revealed: Either discard 1 random card from your hand, or reveal an encounter card.")
                 .WithShadow("Shadow: Until the end of the round, attacking enemy gets +2 Defense.")
                 .WithInfo(51, 2, Artist.Romana_Kendelic));
             Cards.Add(LotRCard.Enemy("Wolf of Isengard", "F019467F-5D25-4B93-8832-088C592A24AF", "The Road to Isengard", 25, 2, 3, 1, 4)
@@ -371,7 +382,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithInfo(60, 3, Artist.Alvaro_Calvo_Escudero));
             Cards.Add(LotRCard.Treachery("Poisoned Vapour", "BB0B9FEA-7127-46DD-850B-0E74F5849E03", "The Road to Isengard")
                 .WithKeywords("Surge.")
-                .WithText("When Revealed: Exhaust each damaged character. Until the end of the combat phase, treat each damaged character's text box as if it were blank (except for Traits).")
+                .WithTextLine("Surge.")
+                .WithTextLine("When Revealed: Exhaust each damaged character. Until the end of the combat phase, treat each damaged character's text box as if it were blank (except for Traits).")
                 .WithShadow("Shadow: Discard a non-objective attachment you control.")
                 .WithInfo(61, 2, Artist.Romana_Kendelic)
                 .WithEasyModeQuantity(0));
@@ -379,28 +391,32 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("When Revealed: Trigger the Wizardry effect on the active location. If no Wizardry effect is triggered this way, Machines of Isengard gains surge.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, discard 1 random card from your hand.")
                 .WithInfo(62, 3, Artist.Julian_Kok));
-            Cards.Add(LotRCard.Enemy("Isengard Uruk", "163EC4D2-49F5-470D-AD11-22BEDE7028F4", "Orcs of the White Hand", 34, 2, 3, 1, 4)
+            addEnemy("Isengard Uruk", EncounterSet.OrcsOfTheWhiteHand, 34, 2, 3, 1, 4)
                 .WithTraits("Orc.", "Uruk-hai")
                 .WithKeywords("Peril.", "Toughness 1.", "Archery 2.")
-                .WithText("When Revealed: Either assign 3 damage among characters you control, or reveal an additional encounter card.")
-                .WithFlavor("\"Seldom will Orcs journey in the open under the sun, yet these have done so.\" -Legolas, The Two Towers")
-                .WithInfo(63, 3, Artist.Tey_Bartolome)
-                .WithEasyModeQuantity(2));
-            Cards.Add(LotRCard.Enemy("Uruk-hai Fighter", "932CB527-A2B5-4F10-B116-CCBEAAAB109E", "Orcs of the White Hand", 29, 3, 3, 2, 3)
+                .WithTextLine("Peril. Toughness 1. Archery 2.")
+                .WithTextLine("When Revealed: Either assign 3 damage among characters you control, or reveal an additional encounter card.")
+                .WithFlavorLine("\"Seldom will Orcs journey in the open under the sun, yet these have done so.\" -Legolas, The Two Towers")
+                .WithEasyModeQuantity(2)
+                .WithInfo(63, 3, Artist.Tey_Bartolome);
+            addEnemy("Uruk-hai Fighter", EncounterSet.OrcsOfTheWhiteHand, 29, 3, 3, 2, 3)
                 .WithTraits("Orc.", "Uruk-hai")
                 .WithKeywords("Toughness 2.")
-                .WithText("Forced: After Uruk-hai Fighter attacks and destroys a character, return it to the staging area.")
+                .WithTextLine("Toughness 2.")
+                .WithTextLine("Forced: After Uruk-hai Fighter attacks and destroys a character, return it to the staging area.")
                 .WithShadow("Shadow: Discard a non-objective attachment you control.")
-                .WithInfo(64, 3, Artist.JB_Casacop));
-            Cards.Add(LotRCard.Treachery("Fighting Uruk-hai", "B4944214-09A6-4C50-8E08-5730B1C2523F", "Orcs of the White Hand")
+                .WithInfo(64, 3, Artist.JB_Casacop);
+            addTreachery("Fighting Uruk-hai", EncounterSet.OrcsOfTheWhiteHand)
                 .WithKeywords("Peril.")
-                .WithText("When Revealed: Search the encounter deck and discard pile for an Uruk-hai enemy, reveal it, and put it into play engaged with you. Shuffle the encounter deck. Until the end of the round, each enemy engaged with you adds its Threat to the total Threat in the staging area.")
-                .WithInfo(65, 2, Artist.Anthony_Devine)
-                .WithEasyModeQuantity(1));
+                .WithTextLine("Peril.")
+                .WithTextLine("When Revealed: Search the encounter deck and discard pile for an Uruk-hai enemy, reveal it, and put it into play engaged with you. Shuffle the encounter deck. Until the end of the round, each enemy engaged with you adds its Threat to the total Threat in the staging area.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(65, 2, Artist.Anthony_Devine);
             Cards.Add(LotRCard.Enemy("Snaga", "F6632E8B-1E39-45CD-A67D-361CCED2A8AD", "Snaga Orcs", 44, 1, 3, 1, 3)
                 .WithTraits("Orc.")
                 .WithKeywords("Peril.", "Archery 1.")
-                .WithText("When Revealed: Discard 1 random card from your hand. Snaga gets +X Threat until the end of the round, where X is the discarded card's printed cost.")
+                .WithTextLine("Peril. Archery 1.")
+                .WithTextLine("When Revealed: Discard 1 random card from your hand. Snaga gets +X Threat until the end of the round, where X is the discarded card's printed cost.")
                 .WithFlavor("Round them were many smaller goblins. -The Two Towers")
                 .WithInfo(66, 3, Artist.Jake_Bullock)
                 .WithEasyModeQuantity(2));
@@ -413,7 +429,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithBurden()
                 .WithTraits("Enchantment.")
                 .WithKeywords("Peril.", "Doomed 2.")
-                .WithText("Peril. Doomed 2.\r\nWhen Revealed: Remove a hero from the quest and attach Saruman's Voice to that hero. (Counts as a Condition attachment with the text: \"Forced: When attached hero commits to a quest, is declared and attacker or defender, or triggers its ability, its controller must discard 1 card from his hand.\")")
+                .WithTextLine("Peril. Doomed 2.")
+                .WithTextLine("When Revealed: Remove a hero from the quest and attach Saruman's Voice to that hero. (Counts as a Condition attachment with the text: \"Forced: When attached hero commits to a quest, is declared and attacker or defender, or triggers its ability, its controller must discard 1 card from his hand.\")")
                 .WithInfo(68, 1, Artist.Ilich_Henriquez));
             Cards.Add(LotRCard.Quest("Follow the Orcs", 1, "The Uruk-hai", Card.VALUE_X)
                 .WithFlavor("The Orcs that attached the Fellowship at Amon Hen captured several members of the Company and are carrying them to Isengard. Aragorn and his companions decide to chase the Uruk-hai in an effort to rescue their friends...")
@@ -429,12 +446,14 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithOppositeText("X is the pursuit value.\r\nResponse: After an enemy is defeated, reduce the pursuit value by 1.\r\nThe players cannot defeat this stage while Uglúk is in play. If the players defeat this stage, they have rescued each Captive hero and won the game.")
                 .WithIncludedEncounterSets(EncounterSet.OrcsOfTheWhiteHand, EncounterSet.SnagaOrcs)
                 .WithInfo(70, 1, Artist.Romana_Kendelic));
-            Cards.Add(LotRCard.Campaign("The Uruk-hai", "The Uruk-hai", "The Lord of the Rings Part 7")
-                .WithText("You are playing campaign mode.\r\nSetup: Remove Gildor Inglorion and Mr. Underhill from the Campaign Pool. Remove each burder with the following burden set icons from the encounter deck:\r\nA ~Shadow of the Past, Flight to the Ford, The ~Ring Goes South")
-                .WithFlavor("They followed their enemies now by the clear light of day. It seemed that the Orcs had pressed on with all possible speed. -The Two Towers")
-                .WithOppositeText("Resolution: If the pursuit value is 25 or lower, the players must choose: either each player earns one of the Skill boons (Intimidation, Hands of a Healer, Forewarned, or Leader of Men) and attached it to a hero he controls, or one player ears the boon Beyond All Hope and chooses a hero from the list of fallen heroes. That player takes control of the chosen hero (removing it from the list of fallen heroes) and attaches Beyond All Hope to it. If a player controls more than 3 non-Fellowship heroes, he must remove heroes from the Campaign Log until he controls only 3 heroes. Changing heroes as a result of earning Beyond All Hope does not incur a +1 threat penalty. Add the earned cards to the Campaign Pool.")
-                .WithOppositeFlavor("Then when they had laid their fallen comrades in a mound and had sung their praises, the Riders made a great fire and scattered the ashes of their enemies. So ended the raid, and no news of it came ever back either to Mordor or Isengard; but the smoke of the burning rose hight ot heaven and was seen by many watchful eyes. -The Two Towers")
-                .WithInfo(71, 1, Artist.Nicholas_Gregory));
+            addCampaign("The Uruk-hai", "The Uruk-hai", "The Lord of the Rings Part 7")
+                .WithTextLine("You are playing campaign mode.")
+                .WithTextLine("Setup: Remove Gildor Inglorion and Mr. Underhill from the Campaign Pool. Remove each burder with the following burden set icons from the encounter deck:")
+                .WithTextLine("A ~Shadow of the Past, Flight to the Ford, The ~Ring Goes South")
+                .WithFlavorLine("They followed their enemies now by the clear light of day. It seemed that the Orcs had pressed on with all possible speed. -The Two Towers")
+                .WithOppositeTextLine("Resolution: If the pursuit value is 25 or lower, the players must choose: either each player earns one of the Skill boons (Intimidation, Hands of a Healer, Forewarned, or Leader of Men) and attached it to a hero he controls, or one player earns the boon Beyond All Hope and chooses a hero from the list of fallen heroes. That player takes control of the chosen hero (removing it from the list of fallen heroes) and attaches Beyond All Hope to it. If a player controls more than 3 non-Fellowship heroes, he must remove heroes from the Campaign Log until he controls only 3 heroes. Changing heroes as a result of earning Beyond All Hope does not incur a +1 threat penalty. Add the earned cards to the Campaign Pool.")
+                .WithOppositeFlavorLine("Then when they had laid their fallen comrades in a mound and had sung their praises, the Riders made a great fire and scattered the ashes of their enemies. So ended the raid, and no news of it came ever back either to Mordor or Isengard; but the smoke of the burning rose hight ot heaven and was seen by many watchful eyes. -The Two Towers")
+                .WithInfo(71, 1, Artist.Nicholas_Gregory);
             Cards.Add(LotRCard.Quest("The King of the Golden Hall", 1, "Helm's Deep", Card.VALUE_NA)
                 .WithFlavor("The pursuit of the Uruk-hai has brought the Heir of Elendil to Rohan just as Saruman declares war on that land. Aragorn and his companions travel to Edoras to aid King Théoden, but their arrival is met with suspicion...")
                 .WithText("Setup: Set The ~Defense of Helm's Deep and 1 copy of Deeping Wall aside, out of play. Each player sets 1 copy of Soldier of ~Isengard aside, out of play. Then, the players must choose: either each player shuffles 1 copy of Poisoned Counsels into his deck, or advance to stage 2A (bypassing stage 1B).")
