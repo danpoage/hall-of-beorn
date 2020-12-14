@@ -487,7 +487,12 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public char GetSecondStageLetter()
         {
-            return _card.BackStageLetter.HasValue ? _card.BackStageLetter.Value : (Char)(Convert.ToUInt16(_card.StageLetter) + 1);
+            return getSecondStageLetter(_card);
+        }
+
+        private static char getSecondStageLetter(LotRCard card)
+        {
+            return card.BackStageLetter.HasValue ? card.BackStageLetter.Value : (Char)(Convert.ToUInt16(card.StageLetter) + 1);
         }
 
         public string QuestPoints
@@ -854,9 +859,14 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             get { return GetImagePathForLanguage(_card, _lang); }
         }
 
-        public static string GetImagePathForLanguage(LotRCard card, Language? lang = null)
+        public static string GetImagePathForLanguage(LotRCard card, Language? lang = null, bool isFirst = true)
         {
             var useLang = lang.HasValue ? lang.Value : card.DefaultLang;
+
+            if (card.CardType == CardType.Quest)
+            {
+                return getQuestCardImagePath(card, isFirst);
+            }
 
             if (useLang == Language.EN)
             {
@@ -943,15 +953,20 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public string getQuestCardImagePath(bool isFirst)
         {
-            var set = (Card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
-            var title = Title.ToUrlSafeString();
-            var suffix = !string.IsNullOrEmpty(_card.SlugSuffix) ? string.Format("-{0}", _card.SlugSuffix.ToUrlSafeString()) : string.Empty;
-            var number = _card.StageNumber.ToString();
+            return getQuestCardImagePath(_card, isFirst);
+        }
+
+        public static string getQuestCardImagePath(LotRCard card, bool isFirst)
+        {
+            var set = (card.CardSet != null && !string.IsNullOrEmpty(card.CardSet.NormalizedName)) ? card.CardSet.NormalizedName.ToUrlSafeString() : card.CardSet.Name.ToUrlSafeString();
+            var title = card.Title.ToUrlSafeString();
+            var suffix = !string.IsNullOrEmpty( card.SlugSuffix) ? string.Format("-{0}", card.SlugSuffix.ToUrlSafeString()) : string.Empty;
+            var number = card.StageNumber.ToString();
 
             var letter = isFirst ? "A" : "B";
-            if (_card.StageLetter != 'A')
+            if (card.StageLetter != 'A')
             {
-                letter = isFirst ? _card.StageLetter.ToString() : GetSecondStageLetter().ToString();
+                letter = isFirst ? card.StageLetter.ToString() : getSecondStageLetter(card).ToString();
             }
 
             return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}{2}-{3}{4}.jpg", set, title, suffix, number, letter);
