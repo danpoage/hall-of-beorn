@@ -448,7 +448,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithInfo(70, 1, Artist.Romana_Kendelic));
             addCampaign("The Uruk-hai", "The Uruk-hai", "The Lord of the Rings Part 7")
                 .WithTextLine("You are playing campaign mode.")
-                .WithTextLine("Setup: Remove Gildor Inglorion and Mr. Underhill from the Campaign Pool. Remove each burder with the following burden set icons from the encounter deck:")
+                .WithTextLine("Setup: Remove Gildor Inglorion and Mr. Underhill from the Campaign Pool. Remove each burden with the following burden set icons from the encounter deck:")
                 .WithTextLine("A ~Shadow of the Past, Flight to the Ford, The ~Ring Goes South")
                 .WithFlavorLine("They followed their enemies now by the clear light of day. It seemed that the Orcs had pressed on with all possible speed. -The Two Towers")
                 .WithOppositeTextLine("Resolution: If the pursuit value is 25 or lower, the players must choose: either each player earns one of the Skill boons (Intimidation, Hands of a Healer, Forewarned, or Leader of Men) and attached it to a hero he controls, or one player earns the boon Beyond All Hope and chooses a hero from the list of fallen heroes. That player takes control of the chosen hero (removing it from the list of fallen heroes) and attaches Beyond All Hope to it. If a player controls more than 3 non-Fellowship heroes, he must remove heroes from the Campaign Log until he controls only 3 heroes. Changing heroes as a result of earning Beyond All Hope does not incur a +1 threat penalty. Add the earned cards to the Campaign Pool.")
