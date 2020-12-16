@@ -535,6 +535,8 @@ namespace HallOfBeorn.Models.LotR
             Add(AmongTheOutlaws);
             Add(TheBetrayalOfMim);
             Add(TheFallOfNargothrond);
+
+            Add(ChildrenOfEorl);
         }
 
         public static List<CardSet> All()
@@ -745,6 +747,8 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet AmongTheOutlaws = new Sets.DoomMastered.AmongTheOutlawsSet();
         public static CardSet TheBetrayalOfMim = new Sets.DoomMastered.TheBetrayalOfMimSet();
         public static CardSet TheFallOfNargothrond = new Sets.DoomMastered.TheFallOfNargothrondSet();
+
+        public static CardSet ChildrenOfEorl = new Sets.ChildrenOfEorl.ChildrenOfEorlSet();
         #endregion
     }
 }

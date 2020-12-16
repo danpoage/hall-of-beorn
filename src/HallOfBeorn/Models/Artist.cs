@@ -676,6 +676,9 @@ namespace HallOfBeorn.Models
             //The Fall of Nargothrond
             all.Add(Artist.Adele_Lorienne);
 
+            //Children of Eorl
+            all.Add(Artist.Howard_Lyon);
+
             all.Add(Artist.None);
         }
 
@@ -774,6 +777,7 @@ namespace HallOfBeorn.Models
         public static Artist Hector_Hanoteau = new Artist { Name = "Hector Hanoteau", URL = "http://en.wikipedia.org/wiki/Hector_Hanoteau" };
         public static Artist HellgaZ = new Artist { Name = "Hellga-Z", URL = "http://hellga-z.deviantart.com" };
         public static Artist Horhe_Soloma = new Artist { Name = "Horhe Soloma", URL = "http://horhesoloma.deviantart.com" };
+        public static Artist Howard_Lyon = new Artist { Name = "Howard Lyon", URL = "https://www.howardlyon.com/" };
         public static Artist Bogdan_Amidzic = new Artist { Name = "Bogdan Amidzic", URL = "http://htogrom.deviantart.com" };
         public static Artist Igor_Kordey = new Artist { Name = "Igor Kordey", URL = "http://en.wikipedia.org/wiki/Igor_Kordey" };
         public static Artist Ilya_Nazarov = new Artist { Name = "Ilya Nazarov", URL = "http://ilyanazarov.deviantart.com" };

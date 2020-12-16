@@ -60,6 +60,8 @@ namespace HallOfBeorn.Models.LotR
         public static ProductGroup TheLordOfTheRingsSagaNightmare = new TheLordOfTheRingsSagaNightmareProductGroup();
 
         public static ProductGroup DoomMastered = new DoomMasteredProductGroup();
+
+        public static ProductGroup OathsOfTheRohirrim = new OathsOfTheRohirrimProductGroup();
         #endregion
     }
 }

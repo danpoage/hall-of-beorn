@@ -39,6 +39,8 @@ namespace HallOfBeorn.Services.LotR
             productGroups.Add(ProductGroup.TheLordOfTheRingsSagaNightmare);
 
             productGroups.Add(ProductGroup.DoomMastered);
+
+            productGroups.Add(ProductGroup.OathsOfTheRohirrim);
         }
 
         private readonly List<ProductGroup> productGroups = new List<ProductGroup>();

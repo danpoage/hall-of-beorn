@@ -408,6 +408,7 @@
     <Compile Include="Models\LotR\Compact\Trait.cs" />
     <Compile Include="Models\ICreator.cs" />
     <Compile Include="Models\LotR\Extensions.cs" />
+    <Compile Include="Models\LotR\ProductGroups\OathsOfTheRohirrimProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\AngmarAwakenedNightmareProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\DreamChaserNightmareProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\ShadowsOfMirkwoodNightmareProductGroup.cs" />
@@ -426,6 +427,7 @@
     <Compile Include="Models\LotR\Products\AdventurePack\TheLandOfSorrowProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\UnderTheAshMountainsProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\WrathAndRuinProduct.cs" />
+    <Compile Include="Models\LotR\Products\Community\ChildrenOfEorlProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\TheBetrayalOfMimProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\TheFallOfNargothrondProduct.cs" />
     <Compile Include="Models\LotR\Products\Deluxe\AShadowInTheEastProduct.cs" />
@@ -517,6 +519,7 @@
     <Compile Include="Models\LotR\ScenarioView.cs" />
     <Compile Include="Models\LotR\Sets\AngmarAwakened\AcrossTheEttenmoorsNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\AShadowInTheEast\AShadowInTheEastSet.cs" />
+    <Compile Include="Models\LotR\Sets\ChildrenOfEorl\ChildrenOfEorlSet.cs" />
     <Compile Include="Models\LotR\Sets\DoomMastered\TheBetrayalOfMimSet.cs" />
     <Compile Include="Models\LotR\Sets\DoomMastered\TheFallOfNargothrondSet.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\AStormOnCobasHavenNightmareSet.cs" />
@@ -1424,6 +1427,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\LotR\Play\" />
+    <Folder Include="Models\LotR\Sets\OathsOfTheRohirrim\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
