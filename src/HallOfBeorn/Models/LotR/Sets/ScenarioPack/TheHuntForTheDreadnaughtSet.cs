@@ -225,7 +225,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ScenarioPack
                 .WithTextLine("Forced: At the end of the combat phase, if engaged player has no cards in their deck, that player is eliminated from the game.")
                 .WithVictoryPoints(10)
                 .WithInfo(14, 1, Artist.Borja_Pindado);
-            addEnemy("Commander of the readnaught", EncounterSet.TheHuntForTheDreadnaught, 39, 5, 5, 2, 9)
+            addEnemy("Commander of the Dreadnaught", EncounterSet.TheHuntForTheDreadnaught, 39, 5, 5, 2, 9)
                 .WithUnique()
                 .WithTraits("Corsair.", "Elite.")
                 .WithTextLine("Immune to player card effects.")

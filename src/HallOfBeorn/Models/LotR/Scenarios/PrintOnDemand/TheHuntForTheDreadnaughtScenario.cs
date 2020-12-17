@@ -13,6 +13,8 @@
             IsSubGroup = false;
             Number = 1;
 
+            RulesImageCount = 4;
+
             //QuestCompanionSlug = "print-on-demand-quest-the-stone-of-erech";
             DifficultyRating = 6f;
             Votes = 1;
