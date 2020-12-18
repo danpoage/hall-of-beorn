@@ -848,7 +848,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             const string format = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Community/{0}.jpg";
 
-            Func<string, string> getTitle = (s) => s.Replace('-', ' ');
+            Func<string, string> getTitle = (s) => s.Replace('-', ' ').Replace("/", ": ");
 
             return _card.CommunityVersions.Select(
                 slug => new Tuple<string, string>(getTitle(slug), string.Format(format, slug)));

@@ -21,6 +21,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithTextLine("Response: After Aragorn commits to a quest, spend 1 resource from his resource pool to ready him.")
                 .WithFlavor("\"I am Aragorn son of Arathorn; and if by life or death I can save you, I will.\"\r\n-The Fellowship of the Ring")
                 .WithTemplate("<p class='main-text'>{keyword:Sentinel.}</p><p class='main-text'><b>Response:</b> After {self} commits to a quest, spend 1 resource from his resource pool to ready him.</p><p class='flavor-text'>&quot;I am Aragorn son of Arathorn; and if by life or death I can save you, I will.&quot;<br>&ndash;The Fellowship of the Ring</p>")
+                .WithCommunityVersion("Autumn/Aragorn-Leadership-Hero")
                 .WithYear(2010)
                 .WithInfo(1, 1, Artist.John_Stanko);
             addHero("Théodred", 8, Sphere.Leadership, 1, 2, 1, 4)
@@ -85,6 +86,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithFlavor("\"Gondor wanes, you say. But Gondor stands, and even the end of its strength is very strong.\"\r\n-Boromir, The Fellowship of the Ring")
                 .WithTemplate("<p class='main-text'><b>Response:</b> Exhaust {self} to cancel the &quot;when revealed&quot; effects of a treachery card just revealed by the encounter deck. Then, discard that card, and replace it with the next card from the encounter deck.</p><p class='flavor-text'>&quot;Gondor wanes, you say. But Gondor stands, and even the end of its strength is very strong.&quot;<br>&ndash;Boromir, The Fellowship of the Ring</p>")
                 .WithErrata(0)
+                .WithCommunityVersion("Autumn/Eleanor")
                 .WithYear(2010)
                 .WithInfo(8, 1, Artist.Magali_Villeneuve);
             addHero("Dúnhere", 8, Sphere.Spirit, 1, 2, 1, 4)
@@ -118,6 +120,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithFlavor("But in the wild lands beyond Bree there were mysterious wanderers. The Bree-folk called them Rangers, and knew nothing of their origin.\r\n-The Fellowship of the Ring")
                 .WithTemplate("<p><b>Action:</b> Exhaust {self} to choose a player. That player draws 2 cards. Limit once per round.</p><p class='flavor-text'>But in the wild lands beyond Bree there were mysterious wanderers. The Bree-folk called them Rangers, and knew nothing of their origin.<br>&ndash;The Fellowship of the Ring</p>")
                 .WithErrata(1)
+                .WithCommunityVersion("Autumn/Beravor")
                 .WithYear(2010)
                 .WithInfo(12, 1, Artist.Tiziano_Baracchi);
             addAlly("Guard of the Citadel", 2, Sphere.Leadership, false, 1, 1, 0, 2)
@@ -131,6 +134,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithFlavor("\"He leads now in all perilous ventures. But his life is charmed, or fate spares him for some other end.\"\r\n-Mablung, Ranger of Ithilien,\r\nThe Two Towers")
                 .WithTemplate("<p class='main-text'><b>Action:</b> Exhaust {self} to choose a player. Each character controlled by that player gets +1 {Willpower} until the end of the phase.</p><p class='flavor-text'>&quot;He leads now in all perilous ventures. But his life is charmed, or fate spares him for some other end.&quot;<br>&ndash;Mablung, Ranger of Ithilien,<br>The Two Towers</p>")
                 .WithCommunityVersion("Faramir-Core-Set-Completion")
+                .WithCommunityVersion("Autumn/Faramir-Leadership-Ally")
                 .WithInfo(14, 2, Artist.Jeff_Himmelman);
             addAlly("Son of Arnor", 3, Sphere.Leadership, false, 0, 2, 0, 2)
                 .WithTraits("Dúnedain.")
@@ -304,6 +308,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithTraits("Dúnedain.", "Ranger.")
                 .WithTextLine("Response: After Northern Tracker commits to a quest, place 1 progress token on each location in the staging area.")
                 .WithFlavor("\"What roads would any dare to tread, what safety would there be in quiet lands, or in the homes of simple men at night, if the Dúnedain were asleep, or were all gone into the grave?\" -Aragorn, The Fellowship of the Ring")
+                .WithCommunityVersion("Autumn/Northern-Tracker")
                 .WithInfo(45, 2, Artist.Kristina_Gehrmann);
             addEvent("The Galadhrim's Greeting", 3, Sphere.Spirit)
                 .WithTextLine("Action: Reduce one player's threat by 6, or reduce each player's threat by 2.")

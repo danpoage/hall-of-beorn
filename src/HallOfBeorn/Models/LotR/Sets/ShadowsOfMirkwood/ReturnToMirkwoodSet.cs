@@ -18,6 +18,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 .WithTraits("Dwarf.")
                 .WithTextLine("While Dáin Ironfoot is ready, Dwarf characters get +1 Attack and +1 Willpower.")
                 .WithFlavor("\"You have not heard of Dáin and the dwarves of the Iron Hills?\" -Bilbo Baggins, The Hobbit")
+                .WithCommunityVersion("Autumn/Dain-Ironfoot-Leadership")
                 .WithInfo(116, 1, Artist.Tiziano_Baracchi);
             addAttachment("Dúnedain Signal", 1, Sphere.Leadership, false)
                 .WithTraits("Signal.")

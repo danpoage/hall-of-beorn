@@ -20,6 +20,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 .WithFlavorLine("...there is no purpose higher in the world as it now stands than the good of Gondor...")
                 .WithFlavorLine("-Denethor, The Return of the King")
                 .WithErrata(1)
+                .WithCommunityVersion("Autumn/Caldara")
                 .WithInfo(107, 1, Artist.Magali_Villeneuve);
             addAlly("Squire of the Citadel", 1, Sphere.Leadership, false, 0, 0, 1, 1)
                 .WithTraits("Gondor.")

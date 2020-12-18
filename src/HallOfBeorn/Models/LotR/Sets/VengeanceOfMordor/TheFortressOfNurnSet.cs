@@ -23,6 +23,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithKeywords("Sentinel.")
                 .WithTextLine("Sentinel.")
                 .WithTextLine("Action: Exhaust Aragorn to choose a location in the staging area. Until the end of the phase, that location gets -X Threat, where X is Aragorn's Willpower. If this effect reduces the location's Threat to 0, place 1 progress on it. (Limit once per round.)")
+                .WithCommunityVersion("Autumn/Aragorn-Spirit-Hero")
                 .WithInfo(137, 1, Artist.Aleksander_Karcz);
             addAttachment("Shining Shield", 1, Sphere.Leadership, false)
                 .WithTraits("Armor.", "Item.")

@@ -35,6 +35,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLostRealm
             addAlly("Dúnedain Hunter", 0, Sphere.Tactics, false, 1, 3, 1, 3)
                 .WithTraits("Dúnedain.", "Ranger.")
                 .WithTextLine("Forced: After Dúnedain Hunter enters play, search the top 5 cards of the encounter deck for a non-unique enemy and put it into play engaged with you. If no enemy enters play by this effect, discard Dúnedain Hunter. Shuffle the encounter deck.")
+                .WithCommunityVersion("Autumn/Dunedain-Hunter")
                 .WithInfo(4, 3, Artist.Louis_Green);
             addAlly("Sarn Ford Sentry", 3, Sphere.Lore, false, 2, 1, 0, 2)
                 .WithTraits("Dúnedain.", "Scout.")
@@ -98,6 +99,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLostRealm
                 .WithKeywords("Encounter.", "Surge.", "Ranged.", "Sentinel.")
                 .WithTextLine("Encounter. Surge. Ranged. Sentinel.")
                 .WithTextLine("When Revealed: The first player chooses a player to take control of Ranger of the North. Then, either deal 2 damage to an enemy or place 2 progress tokens on a location.")
+                .WithCommunityVersion("Autumn/Ranger-of-the-North")
                 .WithInfo(15, 3, Artist.Alvaro_Calvo_Escudero);
             addObjectiveAlly("Iârion", EncounterSet.Iarion, Card.VALUE_X, Card.VALUE_X, Card.VALUE_X, 4)
                 .WithTraits("Dúnedain.", "Ranger.")

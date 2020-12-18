@@ -28,6 +28,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithTraits("Rohan.", "Noble.")
                 .WithText("Setup: Reduce your threat by 3.\r\nAction: Raise your threat by 3 to ready Éowyn. She gets +9 Attack until the end of the phase. (Limit once per game for the group.)")
                 .WithFlavor("\"But no living man am I! You look upon a woman. Éowyn I am, Éomund's daughter.\"\r\n-The Return of the King")
+                .WithCommunityVersion("Autumn/Eowyn-Tactics-Hero")
                 .WithInfo(2, 1, Artist.Magali_Villeneuve));
             addHero("Beregond", 10, Sphere.Spirit, 0, 1, 4, 4)
                 .WithTraits("Gondor.", "Warrior.")

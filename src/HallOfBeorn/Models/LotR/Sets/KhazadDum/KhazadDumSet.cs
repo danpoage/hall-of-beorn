@@ -21,6 +21,7 @@ namespace HallOfBeorn.Models.LotR.Sets.KhazadDum
                 .WithTraits("Dwarf.")
                 .WithTextLine("Action: Pay 1 resource from a hero's resource pool to add 1 resource to Bifur's resource pool. Any player may trigger this ability. (Limit once per round.)")
                 .WithFlavorLine("\"And winter comes after autumn.\" - Bifur, The Hobbit")
+                .WithCommunityVersion("Autumn/Bifor-Lore-Hero")
                 .WithInfo(2, 1, Artist.Magali_Villeneuve);
             addAttachment("Narvi's Belt", 2, Sphere.Leadership, true)
                 .WithTraits("Item.")
