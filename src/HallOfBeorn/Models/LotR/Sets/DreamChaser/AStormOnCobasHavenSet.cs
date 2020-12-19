@@ -18,6 +18,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithTraits("Corsair.", "Warrior.")
                 .WithTextLine("Resources in Na'asiyah's resource pool cannot be used to pay for allies.")
                 .WithTextLine("Action: While Na'asiyah is attacking or defending, pay 1 resource from her resource pool to give her +2 Attack or +2 Defense for this attack.")
+                .WithCommunityVersion("Autumn/Na'asiyah")
                 .WithInfo(109, 1, Artist.Sara_Winters);
             addAttachment("Rune-master", 1, Sphere.Leadership, true)
                 .WithTraits("Title.")

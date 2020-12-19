@@ -18,6 +18,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithTraits("Dúnedain.", "Ranger.", "Scout.")
                 .WithTextLine("Response: After a location is explored, ready Idraen.")
                 .WithFlavorLine("\"Where now are the Dúnedain, Elessar, Elessar? Why do thy kinsfolk wander afar?\" -Galadriel, The Two Towers")
+                .WithCommunityVersion("Autumn/Idraen")
                 .WithInfo(25, 1, Artist.Jake_Murray);
             addAlly("Rivendell Scout", 2, Sphere.Leadership, false, 1, 1, 0, 2)
                 .WithTraits("Noldor.", "Scout.")

@@ -18,6 +18,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTraits("Woodman.", "Scout.")
                 .WithTextLine("While the active location has an attachment on it, Haldan does not exhaust to quest.")
                 .WithTextLine("Response: When the active location is explored, draw 1 card for each attachment on it.")
+                .WithCommunityVersion("Autumn/Haldan")
                 .WithInfo(26, 1, Artist.Alexander_Kozachenko);
             addAlly("Wiglaf", 5, Sphere.Leadership, true, 2, 2, 1, 3)
                 .WithTraits("Dale.", "Scout.", "Warrior.")

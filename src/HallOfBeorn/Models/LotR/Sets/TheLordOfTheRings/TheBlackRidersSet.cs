@@ -44,6 +44,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithFlavorLine("\"I'm going with him...and if any of those Black Riders try to stop him, they'll have Sam Gamgee to reckon with\"")
                 .WithFlavorLine("-The Fellowship of the Ring")
                 .WithCommunityVersion("Sam-Gamgee-Grey-Company-Gen-Con-2015")
+                .WithCommunityVersion("Autum/Sam-Gamgee-Leadership-Hero")
                 .WithInfo(2, 1, Artist.Alexandre_Dainche);
 
             /*

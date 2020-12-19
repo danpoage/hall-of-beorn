@@ -20,6 +20,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
                 .WithTextLine("Action: Pay 1 resource from Gildor Inglorion's resource pool to choose a player to draw 1 card (Limit once per round.)")
                 .WithFlavorLine("\"Gildor Inglorion of the House of Finrod. We are Exiles, and most of our kindred have long ago departed...\"")
                 .WithFlavorLine("-The Fellowship of the Ring")
+                .WithCommunityVersion("Autumn/Gildor-Inglorion-Leadership-Hero")
                 .WithInfo(81, 1, Artist.Jason_Jenicke);
             addAlly("Wandering Exile", 3, Sphere.Leadership, false, 2, 2, 0, 2)
                 .WithTraits("Noldor.")

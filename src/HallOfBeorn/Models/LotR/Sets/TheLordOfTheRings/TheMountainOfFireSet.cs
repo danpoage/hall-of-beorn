@@ -39,15 +39,15 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("Response: After Éomer commits to the quest, spend 1 resource from his resource pool to immediately declare him as an attacker (and resolve his attack) against an enemy in the staging area.")
                 .WithFlavor("...he was young, and he was king; the lord of a fell people.\r\n-The Return of the King")
                 .WithInfo(3, 1, Artist.Ryan_Valle));
-            addCard(LotRCard.Hero("Tom Cotton", string.Empty, Sphere.Tactics, 8, 1, 1, 3, 3)
+            addHero("Tom Cotton", 8, Sphere.Tactics, 1, 1, 3, 3)
                 .WithTraits("Hobbit.")
                 .WithText("While you are engaged with an enemy with an engagement cost higher than your threat, the first Hobbit ally you play each round does not require a resource match.\r\nResponse: After a Hobbit ally enters play, it gets +2 Attack until the end of the round.")
-                .WithInfo(4, 1, Artist.Nicholas_Gregory));
-            addCard(LotRCard.Ally("Rosie Cotton", Sphere.Leadership, 2, 2, 0, 0, 2)
-                .WithUnique()
+                .WithInfo(4, 1, Artist.Nicholas_Gregory);
+            addAlly("Rosie Cotton", 2, Sphere.Leadership, true, 2, 0, 0, 2)
                 .WithTraits("Hobbit.")
-                .WithText("Action: Exhaust Rosie Cotton to choose a Hobbit hero and an attribute (Willpower, Attack, Defense). Add Rosie Cotton's Willpower to that hero's chosen attribute until the end of the phase. (Limit once per phase.)")
-                .WithInfo(5, 3, Artist.Gabriela_Birchal));
+                .WithTextLine("Action: Exhaust Rosie Cotton to choose a Hobbit hero and an attribute (Willpower, Attack, Defense). Add Rosie Cotton's Willpower to that hero's chosen attribute until the end of the phase. (Limit once per phase.)")
+                .WithCommunityVersion("Autumn/Rosie-Cotton")
+                .WithInfo(5, 3, Artist.Gabriela_Birchal);
             addCard(LotRCard.Ally("Elfhelm", Sphere.Tactics, 4, 1, 2, 2, 3)
                 .WithUnique()
                 .WithTraits("Rohan.", "Warrior.")
@@ -80,11 +80,14 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithFlavor("\"Gúthwinë!\" cried Éomer. \"Gúthwinë for the Mark!\"\r\n-The Two Towers")
                 .WithTemplate("<p class='main-text'>Attach to a {trait:Rohan.@Rohan} hero. {keyword:Restricted.}</p><p class='main-text'><b>Response:</b> After attached hero is declared as an attacker, exhaust {self} to give that hero +2 {Attack} for this attack. If this attack destroys an enemy, return a {trait-ally:Rohan.@Rohan} ally from your discard pile to your hand.</p><p class='flavor-text'>&ldquo;Gúthwinë!&rdquo; cried Éomer. &ldquo;Gúthwinë for the Mark!&rdquo;<br>&ndash;The Two Towers</p>")
                 .WithInfo(11, 3, Artist.Kamila_Szutenberg));
-            addCard(LotRCard.Attachment("Friend of Friends", string.Empty, Sphere.Neutral, 1)
+            addAttachment("Friend of Friends", 1, Sphere.Neutral, false)
                 .WithTraits("Condition.")
-                .WithText("Attach to a Hobbit hero. Limit 2 copies of Friend of Friends in play.\r\nWhile another hero has Friend of Friends attached, attached hero gets +1 Willpower, +1 Attack, +1 Defense and +1 hit point.")
-                .WithFlavor("\"Come, Mr. Frodo!\" he cried, \"I can't carry it for you, but I can carry you and it as well\"\r\n-Sam Gamgee, The Return of the King")
-                .WithInfo(12, 3, Artist.Aleksander_Karcz));
+                .WithTextLine("Attach to a Hobbit hero. Limit 2 copies of Friend of Friends in play.")
+                .WithTextLine("While another hero has Friend of Friends attached, attached hero gets +1 Willpower, +1 Attack, +1 Defense and +1 hit point.")
+                .WithFlavorLine("\"Come, Mr. Frodo!\" he cried, \"I can't carry it for you, but I can carry you and it as well\"")
+                .WithFlavorLine("-Sam Gamgee, The Return of the King")
+                .WithCommunityVersion("Autumn/Friend-of-Friends")
+                .WithInfo(12, 3, Artist.Aleksander_Karcz);
             addCard(LotRCard.Attachment("Orc Disguise", string.Empty, Sphere.Fellowship, 1)
                 .WithTraits("Item.", "Armor.")
                 .WithText("Attach to the Ring-bearer. Limit 1 per hero.\r\nWhile an Orc is making an enagement check with you, it gets +5 engagement cost.\r\nResponse: After an Orc engages you, discard Orc Disguise. Until the end of the round, that enemy cannot attack you.")

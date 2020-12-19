@@ -70,6 +70,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
             addAlly("Ranger of Cardolan", 4, Sphere.Neutral, false, 2, 2, 2, 3)
                 .WithTraits("Dúnedain.", "Ranger.")
                 .WithTextLine("Response: After you engage an enemy, if you control at least 1 Dúnedain hero, spend 1 resource to put ~Ranger of Cardolan into play from your hand, under your control. At the end of the round, if ~Ranger of Cardolan is still in play, shuffle it into its owner's deck.")
+                .WithCommunityVersion("Autumn/Ranger-of-Cardolan")
                 .WithInfo(10, 3, Artist.Lukasz_Jaskolski);
             addObjective("Daybreak", EncounterSet.TheWastesOfEriador)
                 .WithTraits("Time.")

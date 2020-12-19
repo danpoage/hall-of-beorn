@@ -20,6 +20,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithFlavorLine("Thorin III Stonehelm, Dain's son, became King under the mountain.")
                 .WithFlavorLine("-The Return of the King")
                 .WithYear(2019)
+                .WithCommunityVersion("Autumn/Thorin-Stonehelm")
                 .WithInfo(1, 1, Artist.Rafal_Hrynkiewicz);
             addAlly("Soldier of Gondor", 2, Sphere.Leadership, false, 1, 1, 1, 2)
                 .WithTraits("Gondor.")

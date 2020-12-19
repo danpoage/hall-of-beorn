@@ -36,6 +36,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
             addAlly("Súlien", 4, Sphere.Spirit, true, 3, 0, 2, 2)
                 .WithTraits("Dúnedain.", "Scout.")
                 .WithTextLine("Action: Spend 1 Lore resource to exhaust Súlien. Then, each location in the staging area gets –1 Threat until the end of the phase. Any player may trigger this action.")
+                .WithCommunityVersion("Autumn/Sulien")
                 .WithInfo(142, 3, Artist.Andreia_Ugrai);
             addEvent("Inspiring Presence", 2, Sphere.Spirit)
                 .WithTextLine("Action: Choose a hero you control. Each hero with lower threat cost than the chosen hero gets +2 Defense until the end of the phase. Then, the players as a group may spend 2 Leadership resources to give +2 Attack to each hero with lower threat cost than the chosen hero until the end of the phase.")

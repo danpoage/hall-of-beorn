@@ -21,6 +21,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithTextLine("Action: Move 1 resource from Denethor's resource pool to another Gondor hero's resource pool. (Limit once per round.)")
                 .WithFlavorLine("\"...why should I sit here in my tower and think, and watch, and wait, spending even my sons? For I can still wield a brand.\"")
                 .WithFlavorLine("-The Return of the King")
+                .WithCommunityVersion("Autumn/Ivriniel")
                 .WithInfo(1, 1, Artist.Joshua_Cairos);
             addAttachment("Rod of the Steward", 0, Sphere.Leadership, true)
                 .WithTraits("Item.")

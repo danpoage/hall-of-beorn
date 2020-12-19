@@ -42,6 +42,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
             addAlly("Haleth", 4, Sphere.Lore, true, 2, 2, 1, 3)
                 .WithTraits("Woodman.", "Scout.")
                 .WithTextLine("Response: After Haleth quests successfully, search the top 5 cards of your deck for an attachment and add it to your hand. Shuffle your deck.")
+                .WithCommunityVersion("Autumn/Haleth-MotK")
                 .WithInfo(140, 3, Artist.Kevin_Zamir_Goeke);
             addEvent("Woodman Lore", 1, Sphere.Lore)
                 .WithTextLine("Action: Ready up to X Woodman characters you control, where X is the number of locations with player card attachments.")

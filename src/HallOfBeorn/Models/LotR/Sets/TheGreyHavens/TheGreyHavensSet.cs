@@ -26,6 +26,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheGreyHavens
                 .WithTextLine("Action: If you have no cards in your hand, draw 6 cards. (Limit once per game.)")
                 .WithFlavorLine("\"What power still remains lies with us...\"")
                 .WithFlavorLine("-The Fellowship of the Ring")
+                .WithCommunityVersion("Autumn/Galdor-of-the-Havens-Lore-Hero")
                 .WithInfo(2, 1, Artist.Lukasz_Jaskolski);
             addAlly("Mithlond Sea-watcher", 2, Sphere.Tactics, false, 1, 1, 0, 2)
                 .WithTraits("Noldor.", "Warrior.")

@@ -33,6 +33,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
                 .WithText("Action: Pay 1 resource from Gildor Inglorion's resource pool to choose a player to draw 1 card (Limit once per round.)")
                 .WithFlavor("\"Gildor Inglorion of the House of Finrod. We are Exiles, and most of our kindred have long ago departed...\r\n-The Fellowship of the Ring")
                 .WithYear(2018)
+                .WithCommunityVersion("Autumn/Gildor-Inglorion-Leadership-Hero")
                 .WithInfo(2, 1, Artist.Jason_Jenicke);
             addHero("Nori", 9, Sphere.Spirit, 2, 1, 2, 4)
                 .WithTraits("Dwarf.")
@@ -207,6 +208,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
                 .WithText("Response: After Thorin Stonehelm is declared as an attacker, discard the top card of your deck to deal 1 damage to an enemy engaged with you.")
                 .WithFlavor("Thorin III Stonehelm, Dain's son, became King under the mountain.\r\n-The Return of the King")
                 .WithYear(2018)
+                .WithCommunityVersion("Autumn/Thorin-Stonehelm")
                 .WithInfo(36, 1, Artist.Rafal_Hrynkiewicz);
             addAlly("Gandalf", 5, Sphere.Neutral, true, 4, 4, 4, 4)
                 .WithTraits("Istari.")

@@ -19,6 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 .WithTextLine("Each hero you control with a printed Lore resource icon gets -1 threat cost.")
                 .WithFlavorLine("\"...the Elves feared and distrusted the world outside...\"")
                 .WithFlavorLine("-The Fellowship of the Ring")
+                .WithCommunityVersion("Autumn/Mirlonde")
                 .WithInfo(32, 1, Artist.Magali_Villeneuve);
             addAlly("Forlong", 3, Sphere.Leadership, true, 1, 1, 1, 3)
                 .WithTraits("Outlands.")

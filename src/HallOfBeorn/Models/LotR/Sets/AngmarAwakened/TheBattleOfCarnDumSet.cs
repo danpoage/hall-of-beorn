@@ -28,6 +28,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTextLine("Guardian of Arnor gets +1 Defense for each enemy engaged with you.")
                 .WithFlavorLine("\"Travellers scowl at us, and countrymen give us scornful names.\" -Aragorn, The Fellowship of the Ring")
                 .WithTemplate("<p>Sentinel.</p><p>{self} gets +1 {Defense} for each enemy engaged with you.</p><p class='flavor-text'>&quot;Travellers scowl at us, and countrymen give us scornful names.&quot;<br>&ndash;Aragorn, The Fellowship of the Ring</p>")
+                .WithCommunityVersion("Autumn/Guardian-of-Arnor")
                 .WithInfo(116, 3, Artist.Adam_Lane);
             addEvent("Doom Hangs Still", 5, Sphere.Leadership)
                 .WithTextLine("Planning Action: Until the end of the round, players do not raise their threat from questing unsuccessfully.")

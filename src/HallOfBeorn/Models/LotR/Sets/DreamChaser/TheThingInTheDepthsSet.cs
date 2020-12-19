@@ -22,6 +22,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithFlavorLine("\"The Men of Dale used to have the trick of understanding their language, and used them for messengers to fly to the Men of the Lake...\"")
                 .WithFlavorLine("-Thorin, The Hobbit")
                 .WithTemplate("<p class='main-text'>{keyword:Ranged.}</p><p class='main-text'><b>Response:</b> After an encounter card with surge is revealed, either ready {self} or give her +2 {Willpower} until the end of the phase. (Limit twice per phase.)</p><p class='flavor-text'>&ldquo;The Men of Dale used to have the trick of understanding their language, and used them for messengers to fly to the Men of the Lake...&rdquo;<br>&ndash;Thorin, The Hobbit</p>")
+                .WithCommunityVersion("Autumn/Lanwyn")
                 .WithInfo(30, 1, Artist.Aleksander_Karcz);
             addAlly("Eldahir", 4, Sphere.Leadership, true, 1, 2, 2, 3)
                 .WithTraits("Dúnedain.", "Noble.")

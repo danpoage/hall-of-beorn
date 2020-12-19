@@ -73,6 +73,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithTextLine("While you control 5 or fewer characters, attached hero gets +2 Willpower.")
                 .WithFlavorLine("\"Strider can take you by paths that are seldom tridden. Will you have him?\"")
                 .WithFlavorLine("-Aragorn, The Fellowship of the Ring")
+                .WithCommunityVersion("Autumn/Strider")
                 .WithInfo(91, 3, Artist.Ken_McCuen);
             addQuest("The Grotto", EncounterSet.TheDrownedRuins, 1, 'A', 15)
                 .WithTextLine("Setup: Set Shrine to Morgoth aside, out of play. Prepare the ~Grotto deck. Add the top 2 locations from the ~Grotto deck to the staging area, Grotto side faceup (the top 3 instead if there are 3 or more players in the game). The first player takes control of ~Captain Sahír, and the last player takes control of Na'asiyah (objective-ally sides faceup).")

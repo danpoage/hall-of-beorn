@@ -22,6 +22,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithFlavorLine("\"Gildor Inglorion of the House of Finrod. We are Exiles, and most of our kindred have long ago departed...\"")
                 .WithFlavorLine("-The Fellowship of the Ring")
                 .WithCommunityVersion("Gildor-Inglorion-Grimbeorn's-Path")
+                .WithCommunityVersion("Autumn/Gildor-Inglorion-Leadership-Hero")
                 .WithInfo(81, 1, Artist.Jason_Jenicke);
             addAlly("Wandering Exile", 3, Sphere.Leadership, false, 2, 2, 0, 2)
                 .WithTraits("Noldor.")

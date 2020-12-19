@@ -20,6 +20,8 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTextLine("If the attacking enemy shares a Trait with an enemy in the victory display, Rossiel gets +2 Defense.")
                 .WithFlavorLine("\"Did you not say that you wished to see Elf-magic?\" —Galadriel, The Fellowship of the Ring")
                 .WithTemplate("<p>If the active location shares a <b><i>Trait</i></b> with a location in the victory display, {self} gets +2 {Willpower}.</p><p>If the attacking enemy shares a <b><i>Trait</i></b> with an enemy in the victory display, {self} gets +2 {Defense}.</p><p style='text-align:center;'><i>&quot;Did you not say that you wished to see Elf-magic?&quot;<br>&ndash;Galadriel, The Fellowship of the Ring</i></p>")
+                .WithCommunityVersion("Autumn/Rossiel-1")
+                .WithCommunityVersion("Autumn/Rossiel-2")
                 .WithInfo(28, 1, Artist.Alexandre_Dainche);
             addAlly("Veteran of Osgiliath", 3, Sphere.Leadership, false, 1, 2, 1, 2)
                 .WithTraits("Gondor.", "Warrior.")
