@@ -70,7 +70,7 @@ namespace HallOfBeorn.Services.LotR.Categories
         {
             return new List<Func<LotRCard, PlayerCategory>>
             {
-                CreateCategoryFilter(@"(an additional|add[\s]{1}([\d]{1}|X))[\s]{1}resource", PlayerCategory.Resource_Acceleration),
+                CreateCategoryFilter(@"(additional|add[\s]{1}([\d]{1}|X))[\s]{1}resource", PlayerCategory.Resource_Acceleration),
                 CreateCategoryFilter(@"move[\s]{1}.*[\s]{1}resource|Pay 1 resource from a hero's resource pool to add 1 resource|add 1 resource to a Gondor or Noble|give attached hero a (Leadership|Tactics|Spirit|Lore)|gains a (Leadership|Tactics|Spirit|Lore)|you can spend resources of any sphere", PlayerCategory.Resource_Smoothing),
                 CreateCategoryFilter(@"(ally|allies){1,}.*into[\s]play|put into play the revealed card for no cost", PlayerCategory.Mustering),
                 CreateCategoryFilter(@"\+[\d]*[\s]Attack|add its Attack|its Attack for this attack", PlayerCategory.Attack_Bonus),

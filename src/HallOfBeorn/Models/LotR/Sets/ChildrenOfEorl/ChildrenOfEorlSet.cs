@@ -25,6 +25,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithFlavorLine("\"My friend,\" said Gandalf, \"you had horses, and deeds of arms, and the free fields.\"")
                 .WithFlavorLine("-The Return of the King")
                 .WithInfo(3, 1, Artist.Unknown);
+
             addAlly("Morwen Steelsheen", 4, Sphere.Lore, true, 2, 0, 2, 2)
                 .WithTraits("Rohan.", "Gondor.", "Noble.")
                 .WithTextLine("Action: Put Morwen Steelsheen into play from your hand. Then, discard a Rohan or Gondor ally you control.")
@@ -32,6 +33,12 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithFlavorLine("She was clad now in mail and shone like silver in the sun.")
                 .WithFlavorLine("-The Two Towers")
                 .WithInfo(10, 3, Artist.Howard_Lyon);
+
+            addEvent("Worthy of Remembrance", 0, Sphere.Tactics)
+                .WithTextLine("Combat Action: Discard a Rohan ally you control to choose an enemy. Deal 2 damage to that enemy (4 damage instead if the ally was unique).")
+                .WithFlavorLine("Then the heart of Éowyn changed... suddenly her winter passed, and the sun shone on her.")
+                .WithFlavorLine("-The Return of the King")
+                .WithInfo(18, 3, Artist.Anato_Finnstark);
         }
     }
 }

@@ -677,6 +677,7 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Adele_Lorienne);
 
             //Children of Eorl
+            all.Add(Artist.Anato_Finnstark);
             all.Add(Artist.Howard_Lyon);
 
             all.Add(Artist.None);
@@ -708,6 +709,7 @@ namespace HallOfBeorn.Models
         public static Artist Alexander_Nanitchkov = new Artist { Name = "Alexander Nanitchkov", URL = "http://tsabo6.deviantart.com" };
         public static Artist Alexandr_Sumerky = new Artist { Name = "Alexandr Sumerky", URL = "http://sumerky.deviantart.com" };
         public static Artist Ali_Kasapoglu = new Artist { Name = "Ali Kasapoglu", URL = "http://alikasapoglu.deviantart.com/gallery" };
+        public static Artist Anato_Finnstark = new Artist { Name = "Anato Finnstark", URL = "https://www.artstation.com/anto-finnstark" };
         public static Artist Anja = new Artist { Name = "Anja", URL = "http://www.studioanja.com" };
         public static Artist Andreas_Marschall = new Artist { Name = "Andreas Marschall", URL = "http://marschall-arts.com/Website/Willkommen.html" };
         public static Artist Anke_Eissmann = new Artist { Name = "Anke Eissmann", URL = "http://www.anke.edoras-art.de" };
