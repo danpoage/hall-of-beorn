@@ -108,6 +108,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             var playerCardCount = 0;
             foreach (var pc in cardViewModels.Where(c => c.CardType.IsPlayerCard()))
             {
+                if (pc.Card.SideLetter.GetValueOrDefault('a') == 'b')
+                {
+                    continue;
+                }
+
                 playerCardCount += pc.Card.Quantity;
                 yield return new CardQuantityViewModel(pc.Title, pc.Card.Quantity, pc.CardType, pc.Url);
             }
@@ -120,6 +125,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             var encounterCardCount = 0;
             foreach (var ec in cardViewModels.Where(c => c.CardType.IsEncounterCard()))
             {
+                if (ec.Card.SideLetter.GetValueOrDefault('a') == 'b')
+                {
+                    continue;
+                }
+
                 encounterCardCount += ec.Card.Quantity;
                 yield return new CardQuantityViewModel(ec.Title, ec.Card.Quantity, ec.CardType, ec.Url);
             }
@@ -132,6 +142,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             var questCardCount = 0;
             foreach (var qc in cardViewModels.Where(c => c.CardType.IsQuestCard()))
             {
+                if (qc.Card.SideLetter.GetValueOrDefault('a') == 'b')
+                {
+                    continue;
+                }
+
                 questCardCount += qc.Card.Quantity;
                 yield return new CardQuantityViewModel(qc.Title, qc.Card.Quantity, qc.CardType, qc.Url);
             }
