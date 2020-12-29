@@ -80,7 +80,8 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
                 .WithSetNumberAndCost(15, 3)
                 .WithUnique()
                 .WithTraits("Nazgûl.")
-                .WithText("Cannot have non-objective player card attachments or take non-combat damage.\r\nForced: After Nazgûl of Dol Guldur attacks you, eithe return it to the staging area or raise your threat by 3.")
+                .WithTextLine("Cannot have non-objective player card attachments or take non-combat damage.")
+                .WithTextLine("Forced: After Nazgûl of Dol Guldur attacks you, either return it to the staging area or raise your threat by 3.")
                 .WithInfo(12, 1, Artist.David_A_Nash);
             addLocation("Necromancer's Pass", string.Empty, 2, 2)
                 .WithSetNumberAndCost(15, 0)

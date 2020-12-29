@@ -629,7 +629,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheHobbitOnTheDoorstep = new Sets.TheHobbit.OntheDoorstepSet();
 
         public static CardSet TheBlackRiders = new Sets.TheLordOfTheRings.TheBlackRidersSet();
-        public static CardSet TheRoadDarkens = new Sets.TheLordOfTheRings.TheRoadDarkens();
+        public static CardSet TheRoadDarkens = new Sets.TheLordOfTheRings.TheRoadDarkensSet();
         public static CardSet TheTreasonOfSaruman = new Sets.TheLordOfTheRings.TheTreasonOfSarumanSet();
         public static CardSet TheLandOfShadow = new Sets.TheLordOfTheRings.TheLandOfShadow();
         public static CardSet TheFlameOfTheWest = new Sets.TheLordOfTheRings.TheFlameOfTheWestSet();

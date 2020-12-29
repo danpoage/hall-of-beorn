@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
 {
-    public class TheRoadDarkens : CardSet
+    public class TheRoadDarkensSet : CardSet
     {
         private const string setSouth = "The Ring Goes South";
 
@@ -197,45 +197,22 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 Quantity = 3,
                 Artist = Artist.Michael_Komarck
             });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Sting",
-                IsUnique = true,
-                Id = "4CA6EBFE-C48F-43C9-867A-EDB7A50D37CE",
-                
-                Sphere = Models.LotR.Sphere.Neutral,
-                CardType = CardType.Attachment,
-                CardSubtype = Models.CardSubtype.Boon,
-                ResourceCost = 2,
-                Traits = new List<string> { "Artifact.", "Item.", "Weapon." },
-                Keywords = new List<string> { "Restricted." },
-                Text =
-@"Attach to a Hobbit hero.
-
-Attached hero gets +1 Willpower, +1 Attack, and +1 Defense.
-
-Response: After attached hero exhausts to defend an attack, discard the top card of the encounter deck. Deal damage to the attacking enemy equal to the discarded card's Threat.",
-                CardNumber = 11,
-                Quantity = 1,
-                Artist = Artist.Magali_Villeneuve
-            });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Mithril Shirt",
-                IsUnique = true,
-                Id = "2F44B05B-B233-414D-97AB-21EC1FE7F71D",
-                
-                Sphere = Models.LotR.Sphere.Neutral,
-                CardType = CardType.Attachment,
-                CardSubtype = Models.CardSubtype.Boon,
-                ResourceCost = 1,
-                Traits = new List<string> { "Artifact.", "Item.", "Armor." },
-                Text = "Attach to Ring-bearer.\r\nAttached hero gets +1 Defense and +1 hit point.",
-                FlavorText = "\"I should feel happier if I knew you were wearing it. I have a fancy it would turn even the knives of the Black Riders...\" -Bilbo, The Fellowship of the Ring",
-                CardNumber = 12,
-                Quantity = 1,
-                Artist = Artist.Sara_Betsy
-            });
+            addAttachment("Sting", 2, Sphere.Neutral, true)
+                .WithBoon()
+                .WithTraits("Artifact.", "Item.", "Weapon.")
+                .WithKeywords("Restricted.")
+                .WithTextLine("Attach to a Hobbit hero. Restricted.")
+                .WithTextLine("Attached hero gets +1 Willpower, +1 Attack, and +1 Defense.")
+                .WithTextLine("Response: After attached hero exhausts to defend an attack, discard the top card of the encounter deck. Deal damage to the attacking enemy equal to the discarded card's Threat.")
+                .WithInfo(11, 1, Artist.Magali_Villeneuve);
+            addAttachment("Mithril Shirt", 1, Sphere.Neutral, true)
+                .WithBoon()
+                .WithTraits("Artifact.", "Item.", "Armor.")
+                .WithTextLine("Attach to the Ring-bearer.")
+                .WithTextLine("Attached hero gets +1 Defense and +1 hit point.")
+                .WithFlavorLine("\"I should feel happier if I knew you were wearing it. I have a fancy it would turn even the knives of the Black Riders...\"")
+                .WithFlavorLine("-Bilbo, The Fellowship of the Ring")
+                .WithInfo(12, 1, Artist.Sara_Betsy);
             Cards.Add(new LotRCard()
             {
                 Title = "Glamdring",

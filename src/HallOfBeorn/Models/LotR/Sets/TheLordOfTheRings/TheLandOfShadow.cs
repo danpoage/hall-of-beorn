@@ -325,13 +325,16 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithShadow("Shadow: Attacking enemy gets +X Attack, where X is the active location's Threat.")
                 .WithEasyModeQuantity(1)
                 .WithInfo(51, 2, Artist.Jokubas_Uoginitas));
-            Cards.Add(LotRCard.Objective("A Heavy Burden", "", "Shelob's Lair")
+            addObjective("A Heavy Burden", "Shelob's Lair")
                 .WithBurden()
                 .WithTraits("Condition.")
                 .WithKeywords("Permanent.")
-                .WithText("Setup: Attach to the Ring-bearer.\r\nForced: At the end of the planning phase, either raise each player's threat by 1, or exhaust the Ring-bearer.")
-                .WithFlavor("\"It's heavy on me, Sam lad, very heavy. I wonder how far I can carry it?\" —Frodo Baggins, The Two Towers")
-                .WithInfo(52, 1, Artist.Kara_Williams));
+                .WithTextLine("Permanent.")
+                .WithTextLine("Setup: Attach to the Ring-bearer.")
+                .WithTextLine("Forced: At the end of the planning phase, either raise each player's threat by 1, or exhaust the Ring-bearer.")
+                .WithFlavorLine("\"It's heavy on me, Sam lad, very heavy. I wonder how far I can carry it?\"")
+                .WithFlavorLine("—Frodo Baggins, The Two Towers")
+                .WithInfo(52, 1, Artist.Kara_Williams);
             Cards.Add(LotRCard.Enemy("Morgul Wraith", "", "Morgul Nazgûl", 45, 4, 5, 4, 9)
                 .WithTraits("Nazgûl.")
                 .WithText("Cannot have non-Morgul attachments.\r\nWhile The One Ring is exhausted, Morgul Wraith gets -30 engagement cost and gains: \"Immune to player card effects.\"")

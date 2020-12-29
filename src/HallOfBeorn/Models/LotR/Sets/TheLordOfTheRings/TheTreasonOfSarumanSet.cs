@@ -30,19 +30,12 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithFlavorLine("-The Two Towers")
                 .WithCommunityVersion("Théoden-Grey-Company-Gen-Con-2015")
                 .WithInfo(2, 1, Artist.Tiziano_Baracchi);
-            /*
-            Cards.Add(LotRCard.Hero("Théoden", "F4529F02-EE47-4FA4-A5E3-F755E3620CF3", Sphere.Spirit, 12, 2, 3, 2, 4)
-                .WithTraits("Noble.", "Rohan.", "Warrior.")
-                .WithKeywords("Sentinel.")
-                .WithText("Reduce the cost of the first Rohan ally you play from your hand each round by 1 (to a minimum of 0).")
-                .WithFlavor("\"Arise now, arise, Riders of Théoden!\" -The Two Towers")
-                .WithInfo(2, 1, Artist.Tiziano_Baracchi));
-            */
-            Cards.Add(LotRCard.Hero("Treebeard", "A9CD7B5C-39B9-4446-9075-636E5F69761F", Sphere.Lore, 13, 2, 3, 3, 5)
+            addHero("Treebeard", 13, Sphere.Lore, 2, 3, 3, 5)
                 .WithTraits("Ent.")
-                .WithText("Cannot have restricted attachments.\r\nAction: Deal 1 damage to Treebeard to give him +1 Willpower and +1 Attack until the end of the phase. (Limit 5 times per phase.)")
+                .WithTextLine("Cannot have restricted attachments.")
+                .WithTextLine("Action: Deal 1 damage to Treebeard to give him +1 Willpower and +1 Attack until the end of the phase. (Limit 5 times per phase.)")
                 //.WithTemplate("<p><b>Action:</b> Deal 1 damage to {self} to give him +1 {Willpower} and +1 {Attack} until the end of the phase. (Limit 5 times per phase.)</p><p class='flavor-text'>&quot;I am not altogether on anybody's side, because nobody is altogether on my side...&quot;<br>&ndash;The Two Towers</p>")
-                .WithInfo(3, 1, Artist.Guillaume_Ducos));
+                .WithInfo(3, 1, Artist.Guillaume_Ducos);
             Cards.Add(LotRCard.Ally("Gimli", Sphere.Leadership, 4, 2, 2, 2, 3)
                 .WithUnique()
                 .WithTraits("Dwarf.", "Warrior.")
@@ -100,61 +93,78 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("Play only if you control Fellowship Aragorn.\r\nQuest Action: Choose 3 heroes committed to the quest. Ready those heroes. Until the end of the round, each of the chosen heroes gets +1 Willpower, +1 Attack and +1 Defense.")
                 .WithFlavor("\"We shall makes such a chase as shall be accounted a marvel among the Three Kindreds: Elves, Dwarves, and Men. Forth the Three Hunters!\" -Aragorn, The Two Towers")
                 .WithInfo(13, 3, Artist.Nicholas_Gregory));
-            Cards.Add(LotRCard.Attachment("Shadowfax", "2DA7519D-4C7F-44A5-9E6E-413A28B5B4FD", Sphere.Neutral, 3)
-                .WithUnique()
+            addAttachment("Shadowfax", 3, Sphere.Neutral, true)
                 .WithTraits("Mount.", "Mearas.")
-                .WithText("Attach to Gandalf.\r\nGandalf gains ranged and sentinel.\r\nAction: Exhaust Shadowfax to ready Gandalf.")
-                .WithFlavor("\"He is the chief of the Mearas, lords of horses, and not even Théoden, King of Rohan, has ever looked on a better.\" -Gandalf, The Two Towers")
+                .WithTextLine("Attach to Gandalf.")
+                .WithTextLine("Gandalf gains ranged and sentinel.")
+                .WithTextLine("Action: Exhaust Shadowfax to ready Gandalf.")
+                .WithFlavorLine("\"He is the chief of the Mearas, lords of horses, and not even Théoden, King of Rohan, has ever looked on a better.\"")
+                .WithFlavorLine("-Gandalf, The Two Towers")
                 .WithAlternateSlug("🐎")
-                .WithInfo(14, 3, Artist.Smirtouille));
-            Cards.Add(LotRCard.Attachment("Intimidation", "11AD2994-C7E7-4A23-99BA-E6FCA169BA48", Sphere.Neutral, 0)
+                .WithInfo(14, 3, Artist.Smirtouille);
+            addAttachment("Intimidation", 0, Sphere.Neutral, false)
                 .WithBoon()
                 .WithTraits("Skill.")
                 .WithKeywords("Permanent.")
-                .WithText("Setup: Attach to a Warrior hero.\r\nResponse: After attached hero is declared as the only attacker against a non-unique enemy, exhaust Intimidation to give that enemy -2 Defense for this attack.")
-                .WithFlavor("\"None knows what the new day shall bring him,\" said Aragorn. \"Get you gone, ere it turn to your evil!\" -Aragorn, The Two Towers")
-                .WithInfo(15, 1, Artist.Matt_Stawicki));
-            Cards.Add(LotRCard.Attachment("Hands of a Healer", "FBD87A4E-DCE0-47DB-82D5-5D94B5741467", Sphere.Neutral, 0)
+                .WithTextLine("Permanent.")
+                .WithTextLine("Setup: Attach to a Warrior hero.")
+                .WithTextLine("Response: After attached hero is declared as the only attacker against a non-unique enemy, exhaust Intimidation to give that enemy -2 Defense for this attack.")
+                .WithFlavorLine("\"None knows what the new day shall bring him,\" said Aragorn. \"Get you gone, ere it turn to your evil!\"")
+                .WithFlavorLine("-Aragorn, The Two Towers")
+                .WithInfo(15, 1, Artist.Matt_Stawicki);
+            addAttachment("Hands of a Healer", 0, Sphere.Neutral, false)
                 .WithBoon()
                 .WithTraits("Skill.")
                 .WithKeywords("Permanent.")
-                .WithText("Setup: Attach to a Healer hero.\r\nAction: Exhaust attached hero and Hands of a ~Healer to heal up to 3 damage from a hero.")
-                .WithFlavor("\"Life to the dying\r\nIn the king's hand lying!\"\r\n-Herb-master, The Return of the King")
-                .WithInfo(16, 1, Artist.Kristina_Gehrmann));
-            Cards.Add(LotRCard.Attachment("Forewarned", "BE84A618-AD39-4480-BCE2-B210C210C537", Sphere.Neutral, 0)
+                .WithTextLine("Permanent.")
+                .WithTextLine("Setup: Attach to a Healer hero.")
+                .WithTextLine("Action: Exhaust attached hero and Hands of a ~Healer to heal up to 3 damage from a hero.")
+                .WithFlavorLine("\"Life to the dying\r\nIn the king's hand lying!\"")
+                .WithFlavorLine("-Herb-master, The Return of the King")
+                .WithInfo(16, 1, Artist.Kristina_Gehrmann);
+            addAttachment("Forewarned", 0, Sphere.Neutral, false)
                 .WithBoon()
                 .WithTraits("Skill.")
                 .WithKeywords("Permanent.")
-                .WithText("Setup: Attach to a Ranger hero.\r\nResponse: After attached hero is declared as a defender against a non-unique enemy, exhaust Forewarned to discard 1 shadow card from that enemy.")
-                .WithFlavor("\"Faint and far are the feet of our enemies.\"\r\n-Aragorn, The Two Towers")
-                .WithInfo(17, 1, Artist.Carly_Janine_Mazur));
-            Cards.Add(LotRCard.Attachment("Leader of Men", "FA99DB78-E091-44D8-B3BB-F1379E9BAE27", Sphere.Neutral, 0)
+                .WithTextLine("Permanent.")
+                .WithTextLine("Setup: Attach to a Ranger hero.")
+                .WithTextLine("Response: After attached hero is declared as a defender against a non-unique enemy, exhaust Forewarned to discard 1 shadow card from that enemy.")
+                .WithFlavorLine("\"Faint and far are the feet of our enemies.\"")
+                .WithTextLine("-Aragorn, The Two Towers")
+                .WithInfo(17, 1, Artist.Carly_Janine_Mazur);
+            addAttachment("Leader of Men", 0, Sphere.Neutral, false)
                 .WithBoon()
                 .WithTraits("Skill.")
                 .WithKeywords("Permanent.")
-                .WithText("Setup: Attach to a Noble hero.\r\nResponse: After attached hero quests successfully, exhaust Leader of Men to add 1 resource to attached hero's pool.")
-                .WithFlavor("\"Take this, dear lord!\" said a clear voice. \"It was ever at your service.\" -The Two Towers")
-                .WithInfo(18, 1, Artist.Arden_Beckwith));
-            Cards.Add(LotRCard.Attachment("Beyond All Hope", "42EA5106-88D6-4E4B-B806-8684458AD7D9", Sphere.Neutral, 0)
+                .WithTextLine("Permanent.")
+                .WithTextLine("Setup: Attach to a Noble hero.")
+                .WithTextLine("Response: After attached hero quests successfully, exhaust Leader of Men to add 1 resource to attached hero's pool.")
+                .WithFlavorLine("\"Take this, dear lord!\" said a clear voice. \"It was ever at your service.\"")
+                .WithFlavorLine("-The Two Towers")
+                .WithInfo(18, 1, Artist.Arden_Beckwith);
+            addAttachment("Beyond All Hope", 0, Sphere.Neutral, false)
                 .WithBoon()
                 .WithTraits("Favor.")
                 .WithKeywords("Permanent.")
-                .WithText("Setup: Attach to a hero.\r\nAttached hero gets +1 Willpower, +1 Attack, +1 Defense and cannot have treachery card attachments.")
-                .WithFlavor("\"Beyond all hope you return to us in our need!\" -Aragorn, The Two Towers")
-                .WithInfo(19, 1, Artist.Ilich_Henriquez));
-            Cards.Add(LotRCard.Attachment("Palantír of Orthanc", "8D9A389B-C84A-48B4-9DBE-29076536B52C", Sphere.Neutral, 0)
-                .WithUnique()
+                .WithTextLine("Permanent.")
+                .WithTextLine("Setup: Attach to a hero.")
+                .WithTextLine("Attached hero gets +1 Willpower, +1 Attack, +1 Defense and cannot have treachery card attachments.")
+                .WithFlavorLine("\"Beyond all hope you return to us in our need!\"")
+                .WithFlavorLine("-Aragorn, The Two Towers")
+                .WithInfo(19, 1, Artist.Ilich_Henriquez);
+            addAttachment("Palantír of Orthanc", 0, Sphere.Neutral, true)
                 .WithBoon()
                 .WithTraits("Artifact.", "Item.")
-                .WithText("Attach to Fellowship Aragorn.\r\nQuest Action: Exhaust Aragorn and Palantír of Orthanc to discard the top card of the encounter deck. If Aragorn's Willpower is greater than the discarded card's Threat, you may add Palantír of Orthanc to the victory display and remove it from the campaign pool to choose a player. That player reveals 1 fewer encounter card this phase (to a minimum of 0).")
+                .WithTextLine("Attach to Fellowship Aragorn.")
+                .WithTextLine("Quest Action: Exhaust Aragorn and Palantír of Orthanc to discard the top card of the encounter deck. If Aragorn's Willpower is greater than the discarded card's Threat, you may add Palantír of Orthanc to the victory display and remove it from the campaign pool to choose a player. That player reveals 1 fewer encounter card this phase (to a minimum of 0).")
                 .WithVictoryPoints(5)
-                .WithInfo(20, 1, Artist.Magali_Villeneuve));
-            Cards.Add(LotRCard.Treachery("Poisoned Counsels", "C02E58E7-85D8-4CD1-A67C-09D3505B1BB0", "Helm's Deep")
+                .WithInfo(20, 1, Artist.Magali_Villeneuve);
+            addTreachery("Poisoned Counsels", "Helm's Deep")
                 .WithBurden()
                 .WithTraits("Corruption.")
                 .WithText("Poisoned Counsels functions like a player card.\r\nForced: After you draw this card, discard all other cards in your hand.")
                 .WithFlavor("\"And ever Wormtongue's whispering was in your ears, poisoning your thought, chilling your heart, weakening your limbs...\" -Gandalf, The Two Towers")
-                .WithInfo(21, 4, Artist.John_Gravato));
+                .WithInfo(21, 4, Artist.John_Gravato);
             Cards.Add(LotRCard.Objective("To Isengard!", "F3206311-AC23-4F14-A8F5-74D01E228F87", "The Uruk-hai")
                 .WithText("Treat each Captive's text box as blank. Captives are in play but are not under any player's control. If there are no Captives in play, the players lose the game.\r\nForced: At the end of the refresh phase, increase the pursuit value by 1. Then, if the pursuit value is 30 or greater, the players lose the game.")
                 .WithInfo(22, 1, Artist.Niten));
@@ -216,11 +226,11 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithFlavor("\"I am weary as I have seldom been before, weary as no Ranger should be with a clear trail to follow.\" -Aragorn, The Two Towers")
                 .WithInfo(31, 2, Artist.Romana_Kendelic)
                 .WithEasyModeQuantity(1));
-            Cards.Add(LotRCard.Treachery("Unseen Barrier", "C150E16B-74EF-4363-BA93-3F2A5CFBF32D", "The Uruk-hai")
+            addTreachery("Unseen Barrier", "The Uruk-hai")
                 .WithTraits("Enchantment.")
-                .WithText("When Revealed: The players cannot place more than 3 progress on the current quest this round. (The does not count progress placed on the active location.)")
+                .WithText("When Revealed: The players cannot place more than 3 progress on the current quest this round. (This does not count progress placed on the active location.)")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, increase the pursuit value by 1.")
-                .WithInfo(32, 2, Artist.Arden_Beckwith));
+                .WithInfo(32, 2, Artist.Arden_Beckwith);
             Cards.Add(LotRCard.Objective("The Defense of Helm's Deep", "84C8BB39-EABC-47FF-8F1E-E87C68B11395", "Helm's Deep")
                 .WithTraits("Siege.")
                 .WithText("Add 1 to the total Threat in the staging area for each resource token here.\r\nForced: At the end of the quest phase, place 1 resource token here.\r\nIf there are 8 resource tokens here, add The Defense of Helm's Deep to the victory display and advance to stage 5A.")

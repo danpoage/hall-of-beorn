@@ -289,113 +289,64 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 CardNumber = 15,
                 Artist = Artist.Mike_Nash
             });
-            Cards.Add(new LotRCard()
-            {
-                
-                Title = "Elf-stone",
-                Id = "9bb32f2c-29fb-43ba-b7ba-2227b28f7b58",
-                IsUnique = true,
-                CardType = CardType.Attachment,
-                Sphere = Sphere.Lore,
-                ResourceCost = 1,
-                Traits = new List<string>() { "Artifact.", "Item." },
-                Text = "Attach to the active location. Attached location gets +1 quest point.\r\nResponse: After attached location leaves play as an explored location, the first player puts 1 ally into play from his hand.",
-                FlavorText = "\"It is a beryl, an elf-stone. Whether it was set there, or let fall by chance, I cannot say, but it brings hope to me\"\r\n-Aragorn, The Fellowship of the Ring",
-                Quantity = 3,
-                CardNumber = 16,
-                Artist = Artist.Sandara_Tang
-            });
-            Cards.Add(new LotRCard()
-            {
-                
-                Title = "Mr. Underhill",
-                Id = "d0ed393c-162a-4715-bed4-e338c24e9e36",
-                IsUnique = true,
-                Sphere = Models.LotR.Sphere.Neutral,
-                CardType = CardType.Attachment,
-                CardSubtype = Models.CardSubtype.Boon,
-                ResourceCost = 0,
-                Traits = new List<string>() { "Title." },
-                Keywords = new List<string>() { "Permanent." },
-                Text = "Setup: Attach to the Ring-bearer.\r\nAction: Add Mr. Underhill to the victory display to choose an enemy engaged with you. Until the end of the round, that enemy cannot attack you.",
-                FlavorText = "\"I will give you a travelling name now. When you go, go as Mr. Underhill.\" -Gandalf, The Fellowship of the Ring",
-                VictoryPoints = 1,
-                Quantity = 1,
-                CardNumber = 17,
-                Artist = Artist.Sebastian_Giacobino
-            });
-            Cards.Add(new LotRCard()
-            {
-                
-                Title = "Tireless Ranger",
-                Id = "ef014a91-c2d9-44ca-acd0-cc1a339c051f",
-                IsUnique = true,
-                Sphere = Models.LotR.Sphere.Neutral,
-                CardType = CardType.Attachment,
-                CardSubtype = Models.CardSubtype.Boon,
-                ResourceCost = 0,
-                Traits = new List<string>() { "Title." },
-                Keywords = new List<string>() { "Permanent." },
-                Text = "Setup: Attach to a hero.\r\nAttached hero gets +1 defense and gains the Ranger trait.",
-                FlavorText = "\"What roads would any dare to tread, what safety would there be in quiet lands, or in the homes of simple men at night, if the Dúnedain were asleep, or were all gone into the grave?\"\r\nAragorn, The Fellowship of the Ring",
-                Quantity = 1,
-                CardNumber = 18,
-                Artist = Artist.Cristi_Balanescu
-            });
-            Cards.Add(new LotRCard()
-            {
-                
-                Title = "Skilled Healer",
-                Id = "1d1ab8a3-ad76-4992-ae5c-6a89fd0ed463",
-                IsUnique = true,
-                Sphere = Models.LotR.Sphere.Neutral,
-                CardType = CardType.Attachment,
-                CardSubtype = Models.CardSubtype.Boon,
-                ResourceCost = 0,
-                Traits = new List<string>() { "Title." },
-                Keywords = new List<string>() { "Permanent." },
-                Text = "Setup: Attach to a hero.\r\nAttached hero gets +2 hit points and gains the Healer trait.",
-                FlavorText = "\"Few now have the skill of healing to match such evil weapons. But I will do what I can.\"\r\n-Aragorn, The Fellowship of the Ring",
-                Quantity = 1,
-                CardNumber = 19,
-                Artist = Artist.Cristi_Balanescu
-            });
-            Cards.Add(new LotRCard()
-            {
-                
-                Title = "Valiant Warrior",
-                Id = "ff574390-bd68-4277-9065-dd9dbf552d00",
-                IsUnique = true,
-                Sphere = Models.LotR.Sphere.Neutral,
-                CardType = CardType.Attachment,
-                CardSubtype = Models.CardSubtype.Boon,
-                ResourceCost = 0,
-                Traits = new List<string>() { "Title." },
-                Keywords = new List<string>() { "Permanent." },
-                Text = "Setup: Attach to a hero.\r\nAttached hero gets +1 Attack and gains the Warrior trait.",
-                FlavorText = "\"Three of the servants of Sauron were upon the Bridge, but they withdrew and I pursued them westward.\" -Glorfindel, The Fellowship of the Ring",
-                Quantity = 1,
-                CardNumber = 20,
-                Artist = Artist.Magali_Villeneuve
-            });
-            Cards.Add(new LotRCard()
-            {
-                
-                Title = "Noble Hero",
-                Id = "af49e5ea-c6a2-4be4-bbf3-ac53c100e887",
-                IsUnique = true,
-                Sphere = Models.LotR.Sphere.Neutral,
-                CardType = CardType.Attachment,
-                CardSubtype = Models.CardSubtype.Boon,
-                ResourceCost = 0,
-                Traits = new List<string>() { "Title." },
-                Keywords = new List<string>() { "Permanent." },
-                Text = "Setup: Attach to a hero.\r\nAttached hero gets +1 Willpower and gainst the Noble trait.",
-                FlavorText = "Venerable he seemed as a king crowned with many winters, and yet hale as a tried warrior in the fullness of his strength\r\nThe Fellowship of the Ring",
-                Quantity = 1,
-                CardNumber = 21,
-                Artist = Artist.Magali_Villeneuve
-            });
+            addAttachment("Elf-stone", 1, Sphere.Lore, true)
+                .WithTraits("Artifact.", "Item.")
+                .WithTextLine("Attach to the active location. Attached location gets +1 quest point.")
+                .WithTextLine("Response: After attached location leaves play as an explored location, the first player puts 1 ally into play from his hand.")
+                .WithFlavorLine("\"It is a beryl, an elf-stone. Whether it was set there, or let fall by chance, I cannot say, but it brings hope to me\"")
+                .WithFlavorLine("-Aragorn, The Fellowship of the Ring")
+                .WithInfo(16, 3, Artist.Sandara_Tang);
+            addAttachment("Mr. Underhill", 0, Sphere.Neutral, true)
+                .WithBoon()
+                .WithTraits("Title.")
+                .WithKeywords("Permanent.")
+                .WithTextLine("Permanent.")
+                .WithTextLine("Setup: Attach to the Ring-bearer.")
+                .WithTextLine("Action: Add Mr. Underhill to the victory display to choose an enemy engaged with you. Until the end of the round, that enemy cannot attack you.")
+                .WithFlavorLine("\"I will give you a travelling name now. When you go, go as Mr. Underhill.\"")
+                .WithFlavorLine("-Gandalf, The Fellowship of the Ring")
+                .WithVictoryPoints(1)
+                .WithInfo(17, 1, Artist.Sebastian_Giacobino);
+            addAttachment("Tireless Ranger", 0, Sphere.Neutral, true)
+                .WithBoon()
+                .WithTraits("Title.")
+                .WithKeywords("Permanent.")
+                .WithTextLine("Permanent.")
+                .WithTextLine("Setup: Attach to a hero.")
+                .WithTextLine("Attached hero gets +1 defense and gains the Ranger trait.")
+                .WithFlavorLine("\"What roads would any dare to tread, what safety would there be in quiet lands, or in the homes of simple men at night, if the Dúnedain were asleep, or were all gone into the grave?\"")
+                .WithFlavorLine("-Aragorn, The Fellowship of the Ring")
+                .WithInfo(18, 1, Artist.Cristi_Balanescu);
+            addAttachment("Skilled Healer", 0, Sphere.Neutral, true)
+                .WithBoon()
+                .WithTraits("Title.")
+                .WithKeywords("Permanent.")
+                .WithTextLine("Permanent.")
+                .WithTextLine("Setup: Attach to a hero.")
+                .WithTextLine("Attached hero gets +2 hit points and gains the Healer trait.")
+                .WithFlavorLine("\"Few now have the skill of healing to match such evil weapons. But I will do what I can.\"")
+                .WithFlavorLine("-Aragorn, The Fellowship of the Ring")
+                .WithInfo(19, 1, Artist.Cristi_Balanescu);
+            addAttachment("Valiant Warrior", 0, Sphere.Neutral, true)
+                .WithBoon()
+                .WithTraits("Title.")
+                .WithKeywords("Permanent.")
+                .WithTextLine("Permanent.")
+                .WithTextLine("Setup: Attach to a hero.")
+                .WithTextLine("Attached hero gets +1 Attack and gains the Warrior trait.")
+                .WithFlavorLine("\"Three of the servants of Sauron were upon the Bridge, but they withdrew and I pursued them westward.\"")
+                .WithFlavorLine("-Glorfindel, The Fellowship of the Ring")
+                .WithInfo(20, 1, Artist.Magali_Villeneuve);
+            addAttachment("Noble Hero", 0, Sphere.Neutral, true)
+                .WithBoon()
+                .WithTraits("Title.")
+                .WithKeywords("Permanent.")
+                .WithTextLine("Permanent.")
+                .WithTextLine("Setup: Attach to a hero.")
+                .WithTextLine("Attached hero gets +1 Willpower and gains the Noble trait.")
+                .WithFlavorLine("Venerable he seemed as a king crowned with many winters, and yet hale as a tried warrior in the fullness of his strength.")
+                .WithFlavorLine("-The Fellowship of the Ring")
+                .WithInfo(21, 1, Artist.Magali_Villeneuve);;
             Cards.Add(new LotRCard()
             {
                 

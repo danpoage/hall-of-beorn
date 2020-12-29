@@ -956,7 +956,7 @@
     <Compile Include="Models\LotR\Sets\PrintOnDemand\TheOldForest.cs" />
     <Compile Include="Models\LotR\Sets\Dwarrowdelf\TheRedhornGateSet.cs" />
     <Compile Include="Models\LotR\Sets\Dwarrowdelf\TheRedhornGateNightmare.cs" />
-    <Compile Include="Models\LotR\Sets\TheLordOfTheRings\TheRoadDarkens.cs" />
+    <Compile Include="Models\LotR\Sets\TheLordOfTheRings\TheRoadDarkensSet.cs" />
     <Compile Include="Models\LotR\Sets\PrintOnDemand\TheRuinsOfBelegost.cs" />
     <Compile Include="Models\LotR\Sets\TheSandsOfHarad\TheSandsOfHaradSet.cs" />
     <Compile Include="Models\LotR\Sets\KhazadDum\TheSeventhLevelNightmare.cs" />
