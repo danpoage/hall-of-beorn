@@ -130,9 +130,9 @@ namespace HallOfBeorn.Models.RingsDb
                     var back = c.BackStageLetter.HasValue ? c.BackStageLetter.Value.ToString() : "B";
 
                     return !string.IsNullOrEmpty(c.OppositeText)
-                        ? string.Format("<p><b>Side {0}</b> {1}</p><p><b>Side {2}</b> {3}</p>", 
+                        ? string.Format("<b>Side {0}</b> {1} <b>Side {2}</b> {3}", 
                             front, Normalize(c.Text), back, Normalize(c.OppositeText))
-                        : FormatParagraphs(Normalize(c.Text));
+                        : Normalize(c.Text);
                 };
 
             Func<LotR.LotRCard, string> getCost = (c) =>
