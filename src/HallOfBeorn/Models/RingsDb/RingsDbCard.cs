@@ -80,6 +80,23 @@ namespace HallOfBeorn.Models.RingsDb
             return normalized;
         }
 
+        private static string FormatParagraphs(string value)
+        {
+            if (string.IsNullOrEmpty(value))
+            {
+                return "<p></p>";
+            }
+
+            var grouped = new System.Text.StringBuilder();
+
+            foreach (var line in value.SplitLines())
+            {
+                grouped.AppendFormat("<p>{0}</p>", line);
+            }
+
+            return grouped.ToString();
+        }
+
         private static HashSet<SetType> unofficialSetTypes = new HashSet<SetType>
         {
             SetType.First_Age, SetType.A_Long_extended_Party
@@ -113,9 +130,9 @@ namespace HallOfBeorn.Models.RingsDb
                     var back = c.BackStageLetter.HasValue ? c.BackStageLetter.Value.ToString() : "B";
 
                     return !string.IsNullOrEmpty(c.OppositeText)
-                        ? string.Format("<b>Side {0}</b> {1} <b>Side {2}</b> {3}", 
+                        ? string.Format("<p><b>Side {0}</b> {1}</p><p><b>Side {2}</b> {3}</p>", 
                             front, Normalize(c.Text), back, Normalize(c.OppositeText))
-                        : Normalize(c.Text);
+                        : FormatParagraphs(Normalize(c.Text));
                 };
 
             Func<LotR.LotRCard, string> getCost = (c) =>
