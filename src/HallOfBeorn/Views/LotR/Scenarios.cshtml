@@ -9,7 +9,7 @@
 
 @section scripts {
     <script type="text/javascript" src="/Scripts/highcharts.js" defer></script>
-    <script type="text/javascript" src="/Scripts/scenarios-1.0.5.js" defer></script>
+    <script type="text/javascript" src="/Scripts/scenarios-1.0.6.js" defer></script>
 }
 
 @if (@Model.Detail != null)
@@ -177,7 +177,7 @@ else {
             <a id="tooltip-link" href="/" target="_blank"><img src="/" id="tooltip-image" style="display:none;max-height:200px;padding:2px 4px 2px 4px;"/></a>
         </div>
         <!-- <img id="quest-map" alt="Middle-earth Quest Map" src="@Model.QuestMapUrl" /> -->
-        <canvas id="quest-map" width="1125" height="1125" style="background-image:url('@Model.QuestMapUrl');"></canvas>
+        <canvas id="quest-map" width="1500" height="1125" style="background-image:url('@Model.QuestMapUrl');"></canvas>
     } else if (@Model.View.HasValue && @Model.View.Value == ScenarioView.Charts) {
         <div id="chartsContainer">
             <div><button id="easyModeButton" class="inactiveButton">Easy</button><button id="normalModeButton" class="activeButton">Normal</button><button id="nightmareModeButton" class="inactiveButton">Nightmare</button></div>

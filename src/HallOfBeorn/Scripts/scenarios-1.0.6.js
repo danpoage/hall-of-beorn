@@ -76,7 +76,7 @@ function initQuestMap() {
     function addRange(map, number, code, label) {
         for (var i = number - radius; i <= number + radius; i++) {
             if (map[i] === undefined) {
-                //console.log(label + ' map not defined for value: ' + i);
+                console.log(label + ' map not defined for value: ' + i);
                 map[i] = [code];
             } else {
                 //console.log(label + ' map already defined for value: ' + i);
@@ -344,6 +344,46 @@ function initQuestMap() {
     addQuest(976, 919, 'The Crossings of Poros', 'SoH', 'The-Crossings-of-Poros', 'The-Crossings-of-Poros/Flight-to-Gondor-1A.jpg',
         'You have escaped the dungeons of Cirith Gurat with the rescued members of Kahliel\'s tribe, but it\'s still a long way to Gondor.');
 
+    //Wilds of Rhoavanion and Ered Mithrin
+    addQuest(842, 404, 'Journey Up the Anduin', 'WoR', 'Journey-Up-the-Anduin', 'The-Wilds-of-Rhovanion/Traveling-North-1A.jpg',
+        'While traveling north through the Vales of Anduin on your way to Dale, you are alarmed by the number of dangerous creatures that you encounter.');
+    addQuest(979, 284, 'Lost in Mirkwood', 'WoR', 'Lost-in-Mirkwood', 'The-Wilds-of-Rhovanion/Ambushed-at-Night-1A.jpg',
+        'After several days of traveling through Mirkwood, you awaken suddenly in the night to see dozens of hungry eyes glaring at you from the darkness.');
+    addQuest(1157, 200, 'The King\'s Quest', 'WoR', 'The-Kings-Quest', 'The-Wilds-of-Rhovanion/The-Iron-Hills-1A.jpg',
+        'You have tracked the beast that attacked the village on the border of Brand’s realm to the mines beneath the Iron Hills. The Dwarves there have been driven from the lower depths by a new terror, and the mines have become a haunt for evil creatures.');
+    addQuest(1024, 160, 'The Withered Heath', 'WoR', 'The-Withered-Heath', 'The-Withered-Heath/Searching-for-Dragon-Sign-1A.jpg',
+        'You have journeyed to the Withered Heath in search of a giant Dragon. There you discover tracks that lead you to the cold heights of the Grey Mountains.');
+    addQuest(914, 184, 'Roam Across Rhovanion', 'WoR', 'Roam Across Rhovanion', 'Roam-Across-Rhovanion/The-Goblin\'s-Task-1A.jpg',
+        'The Goblin, Urdug, has agreed to show you a secret entrance to Mount Gundabad, but only if you help him recover some things he lost in Rhovanion.');
+    addQuest(844, 187, 'Fire in the Night', 'WoR', 'Fire-in-the-Night', 'Fire-in-the-Night/Hrogar\'s-Hill-1A.jpg',
+        'The Woodmen of Hrogar’s Hill have agreed to help you in your quest, but shortly after they welcome you to their town it is attacked by the very Dragon you seek: Dagnir has come to take vengeance on Wilderland!');
+    addQuest(794, 176, 'The Ghost of Framsburg', 'WoR', 'The-Ghost-of-Framsburg', 'The-Ghost-of-Framsburg/The-Haunted-Keep-1A.jpg',
+        'The search for the legendary sword of Fram has led you to the long-forgotten city of Framsburg. There is an evil air inside the keep, and you wonder what dangers wait for you in the darkness within.');
+    addQuest(759, 156, 'Mount Gundabad', 'WoR', 'Mount-Gundabad', 'Mount-Gundabad/The-Side-Door-1A.jpg',
+        'Mount Gundabad rises before you, and the Dragon, Dagnir, waits within.');
+    addQuest(734, 156, 'The Fate of Wilderland', 'WoR', 'The-Fate-of-Wilderland', 'The-Fate-of-Wilderland/Urdug\'s-Assault-1A.jpg',
+        'Dagnir is dead. In a move long-planned, Urdug has returned with an army of Goblins to lay claim to Gundabad and the Dragon\'s Wealth.');
+
+    //A Shadow in the East and Vengeance of Mordor
+    addQuest(1089, 363, 'The River Running', 'VoM', 'The-River-Running', 'A-Shadow-in-the-East/Chased-by-Easterlings-1A.jpg',
+        'You are traveling south along the River Running on your way to Dorwinion when you are attacked by Easterling raiders in the night. The raiders set fire to your boat, trapping you on the east side of the river, and you are forced to flee south on foot.');
+    addQuest(1271, 426, 'Danger in Dorwinion', 'VoM', 'Danger-in-Dorwinion', 'A-Shadow-in-the-East/A-City-in-Turmoil-1A.jpg',
+        'A shadow hangs over the capital of Dorwinion. Fear grips the heart of the city on the Sea of Rhûn. People have been disappearing, and it is rumored that a cult of Sauron worshippers are responsible.');
+    addQuest(1257, 504, 'Temple of Doom', 'VoM', 'Temple-of-Doom', 'A-Shadow-in-the-East/The-Forgotten-Temple-1A.jpg',
+        'Your search for the missing Dorwinions has led you up the mountains of Rhûn. There you discover the remains of an ancient temple built to honor Sauron during the dark years of Middle-earth.');
+    addQuest(1288, 448, 'Wrath and Ruin', 'VoM', 'Wrath-and-Ruin', 'Wrath-and-Ruin/Inside-the-Walls-1A.jpg',
+        'Thane Ulchor has returned to Dorwinion at night with an army of Easterlings. His agents within the city slew the guards and opened the gate to let them in. You wake to find battle already raging in the streets.');
+    addQuest(1343, 538, 'The City of Ulfast', 'VoM', 'The-City-of-Ulfast', 'The-City-of-Ulfast/Searching-for-Ulchor-1A.jpg',
+        'After his defeat in Dorwinion. Ulchor fled east with the remnants of his army. You have pursued him to the City of Ulfast on the southern shore of the Sea of Rhûn. Determined to bring the villain to justice, you sneak into the city at night and begin searching for him.');
+    addQuest(1360, 628, 'Challenge of the Wainriders', 'VoM', 'Challenge-of-the-Wainriders', 'Challenge-of-the-Wainriders/Wainrider-Camp-1A.jpg',
+        'The Wainriders have challenged you to a chariot race. Win, and you earn your freedom. Lose, and the Wainriders will sell you as prisoners to Mordor.');
+    addQuest(1288, 728, 'Under the Ash Mountains', 'VoM', 'Under-the-Ash-Mountains', 'Under-the-Ash-Mountains/Passage-into-Mordor-1A.jpg',
+        'The tunnels of Torech Gorgor run beneath the Ash Mountains into Mordor.');
+    addQuest(1234, 792, 'The Land of Sorrow', 'VoM', 'The-Land-of-Sorrow', 'The-Land-of-Sorrow/Slaves-of-the-Dark-Lord-1A.jpg',
+        'You\'ve decided to risk everything to rescue Ulchor\'s captives from slavery.');
+    addQuest(1117, 887, 'The Fortress of Nurn', 'VoM', 'The-Fortress-of-Nurn', 'The-Fortress-of-Nurn/Assault-on-Dol-Rhugar-1A.jpg',
+        'Your quest to defeat Thane Ulchor has brought you to his stronghold in Mordor.');
+
     //The Hobbit Saga
     addQuest(683, 289, 'We Must Away Ere Break of Day', 'H', 'We-Must-Away-Ere-Break-of-Day', 'The-Hobbit-Over-Hill-and-Under-Hill/An-Unexpected-Party-1A.jpg',
         'The wizard Gandalf has chosen Bilbo Baggins to join Thorin and company on their quest to the Lonley Mountain.');
@@ -415,6 +455,8 @@ function initQuestMap() {
         'An army from Angmar marches on the Dúnedain capital of Annúminas. You rush to prepare the defenses as best you can before the Orcs reach the city.');
     addQuest(923, 475, 'Attack on Dol Guldur', false, 'Attack-on-Dol-Guldur', 'Attack-on-Dol-Guldur/Assault-on-the-Golden-Wood-1A.jpg',
         'The Dark Lord of Mordor has declared war across Middle-earth. His Nazgûl lead the Morgul host against Minas Tirith in the south, while Easterlings lay siege to Erebor in the north. And in a move long-prepared, the armies of Dol Guldur cross the Anduin to assault Lórien...');
+    addQuest(667, 949, 'The Hunt for the Dreadnaught', false, 'The-Hunt-for-the-Dreadnaught', 'The-Hunt-for-the-Dreadnaught/Searching-the-High-Seas-1A.jpg',
+        'The vicious Corsairs of Umbar have been pillaging the Gondorian coastline for months, and rumors are swirling that they\'ve built the most devastating and gigantic ship ever known: The Dreadnaught. Many are suspicious of such extraordinary reports but, if true, the massive enemy is unlike any you\'ve faced before. It will take an equally-colossal effort to take down such a potent foe. No others can bear such a difficult task, so it\'s up to the heroes to assemble a formidable fleet, and then scour the seas for the mighty warship.');
 
     var mapElement = document.getElementById('quest-map');
     if (mapElement) {
