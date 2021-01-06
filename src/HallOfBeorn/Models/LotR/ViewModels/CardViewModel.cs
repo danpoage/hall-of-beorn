@@ -13,8 +13,9 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             Func<string, IEnumerable<PlayerCategory>> getPlayerCategories, 
             Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, 
             Func<string, IEnumerable<QuestCategory>> getQuestCategories,
+            Func<string, IEnumerable<Region>> getRegions,
             Language? lang)
-            : this(card, 0f, string.Empty, getPlayerCategories, getEncounterCategories, getQuestCategories, lang)
+            : this(card, 0f, string.Empty, getPlayerCategories, getEncounterCategories, getQuestCategories, getRegions, lang)
         {
         }
 
@@ -22,8 +23,9 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             Func<string, IEnumerable<PlayerCategory>> getPlayerCategories, 
             Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, 
             Func<string, IEnumerable<QuestCategory>> getQuestCategories,
+            Func<string, IEnumerable<Region>> getRegions,
             Language? lang)
-            : this(score.Card, score.Score(), score.Description, getPlayerCategories, getEncounterCategories, getQuestCategories, lang)
+            : this(score.Card, score.Score(), score.Description, getPlayerCategories, getEncounterCategories, getQuestCategories, getRegions, lang)
         {
         }
 
@@ -31,6 +33,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             Func<string, IEnumerable<PlayerCategory>> getPlayerCategories, 
             Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, 
             Func<string, IEnumerable<QuestCategory>> getQuestCategories,
+            Func<string, IEnumerable<Region>> getRegions,
             Language? lang = Language.EN)
         {
             _card = card;
@@ -41,6 +44,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             this.getPlayerCategories = getPlayerCategories;
             this.getEncounterCategories = getEncounterCategories;
             this.getQuestCategories = getQuestCategories;
+            this.getRegions = getRegions;
 
             foreach (var encounterSet in _card.IncludedEncounterSets)
             {
@@ -56,6 +60,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         private Func<string, IEnumerable<PlayerCategory>> getPlayerCategories;
         private Func<string, IEnumerable<EncounterCategory>> getEncounterCategories;
         private Func<string, IEnumerable<QuestCategory>> getQuestCategories;
+        private Func<string, IEnumerable<Region>> getRegions;
 
         private readonly List<CardEffect> _keywordEffects = new List<CardEffect>();
         private readonly List<CardEffect> _textEffects = new List<CardEffect>();
@@ -1149,6 +1154,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             get { return getQuestCategories(_card.Slug).Count() > 0; }
         }
 
+        public bool HasRegions
+        {
+            get { return getRegions(_card.Slug).Any(); }
+        }
+
         public Dictionary<string, string> Categories()
         {
             var categoryMap = new Dictionary<string, string>();
@@ -1199,6 +1209,25 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
             return categoryMap;
         }
+
+
+        public Dictionary<string, string> Regions()
+        {
+            var regionMap = new Dictionary<string, string>();
+
+            foreach (var region in getRegions(_card.Slug))
+            {
+                var key = region.ToString().Replace('_', ' ');
+                var value = string.Format("/LotR?Region={0}", region.ToString().Replace('_', '+'));
+                if (!regionMap.ContainsKey(key))
+                {
+                    regionMap.Add(key, value);
+                }
+            }
+
+            return regionMap;
+        }
+
 
         public string DetailPath
         {

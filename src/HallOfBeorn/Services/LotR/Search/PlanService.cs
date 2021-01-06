@@ -18,7 +18,8 @@ namespace HallOfBeorn.Services.LotR.Search
             IScenarioService scenarioService,
             ICategoryService<PlayerCategory> playerCategoryService, 
             ICategoryService<EncounterCategory> encounterCategoryService, 
-            ICategoryService<QuestCategory> questCategoryService, 
+            ICategoryService<QuestCategory> questCategoryService,
+            ICategoryService<Region> regionService,
             IRingsDbService ringsDbService,
             IFilterService filterService)
         {
@@ -27,6 +28,7 @@ namespace HallOfBeorn.Services.LotR.Search
             _playerCategoryService = playerCategoryService;
             _encounterCategoryService = encounterCategoryService;
             _questCategoryService = questCategoryService;
+            _regionService = regionService;
             _filterService = filterService;
             _getPopularity = (slug) => { return ringsDbService.GetPopularity(slug); };
             _getVotes = (card) => { return ringsDbService.GetVotes(card.Slug); };
@@ -37,6 +39,7 @@ namespace HallOfBeorn.Services.LotR.Search
         private readonly ICategoryService<PlayerCategory> _playerCategoryService;
         private readonly ICategoryService<EncounterCategory> _encounterCategoryService;
         private readonly ICategoryService<QuestCategory> _questCategoryService;
+        private readonly ICategoryService<Region> _regionService;
         private readonly IFilterService _filterService;
         private readonly Func<string, byte> _getPopularity;
         private readonly Func<LotRCard, uint> _getVotes;
@@ -90,6 +93,7 @@ namespace HallOfBeorn.Services.LotR.Search
             AddFilter(filters, new CategoryFilter<PlayerCategory>((score, cat) => _playerCategoryService.HasCategory(score.Card, cat), model.Category));
             AddFilter(filters, new CategoryFilter<EncounterCategory>((score, cat) => _encounterCategoryService.HasCategory(score.Card, cat), model.EncounterCategory));
             AddFilter(filters, new CategoryFilter<QuestCategory>((score, cat) => _questCategoryService.HasCategory(score.Card, cat), model.QuestCategory));
+            AddFilter(filters, new CategoryFilter<Region>((score, reg) => _regionService.HasCategory(score.Card, reg), model.Region));
 
             if (filters.Count == 1 && !model.SetType.HasValue)
             {

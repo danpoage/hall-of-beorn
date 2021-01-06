@@ -57,6 +57,7 @@ namespace HallOfBeorn.Client
             new PlayerCategoryService(cardRepository),
             new EncounterCategoryService(cardRepository),
             new QuestCategoryService(cardRepository),
+            new RegionService(cardRepository),
             new RingsDbService(cardRepository), 
             productRepository, cardRepository);
 

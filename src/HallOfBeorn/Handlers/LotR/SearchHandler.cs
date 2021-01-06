@@ -28,6 +28,7 @@ namespace HallOfBeorn.Handlers.LotR
             ICategoryService<PlayerCategory> playerCategoryService,
             ICategoryService<EncounterCategory> encounterCategoryService, 
             ICategoryService<QuestCategory> questCategoryService,
+            ICategoryService<Region> regionService,
             IRingsDbService ringsDbService,
             TranslationHandler translationHandler)
         {
@@ -40,6 +41,7 @@ namespace HallOfBeorn.Handlers.LotR
             _playerCategoryService = playerCategoryService;
             _encounterCategoryService = encounterCategoryService;
             _questCategoryService = questCategoryService;
+            _regionService = regionService;
             _ringsDbService = ringsDbService;
             _translationHandler = translationHandler;
         }
@@ -53,6 +55,7 @@ namespace HallOfBeorn.Handlers.LotR
         private readonly ICategoryService<PlayerCategory> _playerCategoryService;
         private readonly ICategoryService<EncounterCategory> _encounterCategoryService;
         private readonly ICategoryService<QuestCategory> _questCategoryService;
+        private readonly ICategoryService<Region> _regionService;
         private readonly IRingsDbService _ringsDbService;
         private readonly TranslationHandler _translationHandler;
         
@@ -83,6 +86,7 @@ namespace HallOfBeorn.Handlers.LotR
             SearchViewModel.Categories = _playerCategoryService.CategoryNames().GetSelectListItems();
             SearchViewModel.EncounterCategories = _encounterCategoryService.CategoryNames().GetSelectListItems();
             SearchViewModel.QuestCategories = _questCategoryService.CategoryNames().GetSelectListItems();
+            SearchViewModel.Regions = _regionService.CategoryNames().GetSelectListItems();
         }
 
         private void AddRelatedCharacters(IEnumerable<ILink> links, Dictionary<string, CharacterViewModel> charactersByUrl, Dictionary<string, CharacterViewModel> relatedCharactersByUrl)
@@ -123,8 +127,9 @@ namespace HallOfBeorn.Handlers.LotR
                 var getPlayerCategories = new Func<string, IEnumerable<PlayerCategory>>((slug) => { return _playerCategoryService.Categories(slug); });
                 var getEncounterCategories = new Func<string, IEnumerable<EncounterCategory>>((slug) => { return _encounterCategoryService.Categories(slug); });
                 var getQuestCategories = new Func<string, IEnumerable<QuestCategory>>((slug) => { return _questCategoryService.Categories(slug); });
+                var getRegions = new Func<string, IEnumerable<Region>>((slug) => { return _regionService.Categories(slug); });
 
-                var viewModel = new CardViewModel(score, getPlayerCategories, getEncounterCategories, getQuestCategories, useLang);
+                var viewModel = new CardViewModel(score, getPlayerCategories, getEncounterCategories, getQuestCategories, getRegions, useLang);
                 viewModel.Popularity = _ringsDbService.GetPopularity(viewModel.Slug);
                 viewModel.Votes = _ringsDbService.GetVotes(viewModel.Slug);
 

@@ -36,6 +36,7 @@ namespace HallOfBeorn.Controllers
             var playerCategoryService = (ICategoryService<PlayerCategory>)System.Web.HttpContext.Current.Application[LotRServiceNames.PlayerCategoryService];
             var encounterCategoryService = (ICategoryService<EncounterCategory>)System.Web.HttpContext.Current.Application[LotRServiceNames.EncounterCategoryService];
             var questCategoryService = (ICategoryService<QuestCategory>)System.Web.HttpContext.Current.Application[LotRServiceNames.QuestCategoryService];
+            var regionService = (ICategoryService<Region>)System.Web.HttpContext.Current.Application[LotRServiceNames.RegionService];
             var linkService = (ILinkService)System.Web.HttpContext.Current.Application[LotRServiceNames.LinkService];
             var noteService = (INoteService)System.Web.HttpContext.Current.Application[LotRServiceNames.NoteService];
             var scenarioService = (IScenarioService)System.Web.HttpContext.Current.Application[LotRServiceNames.ScenarioService];
@@ -50,7 +51,7 @@ namespace HallOfBeorn.Controllers
             _translationHandler = new TranslationHandler(statService, templateService, translationService);
 
             _productsController = new ProductsHandler(productRepository, 
-                playerCategoryService, encounterCategoryService, questCategoryService,
+                playerCategoryService, encounterCategoryService, questCategoryService, regionService,
                 ringsDbService);
 
             //TODO: Move this to a CharacterController
@@ -63,19 +64,20 @@ namespace HallOfBeorn.Controllers
 
             _detailsHandler = new DetailsHandler(_translationHandler, 
                 cardRepository, characterRepository, 
-                playerCategoryService, encounterCategoryService, questCategoryService,
+                playerCategoryService, encounterCategoryService, questCategoryService, regionService,
                 ringsDbService, statService, 
                 linkService, noteService, tagService, 
                 templateService, octgnService);
 
             _ringsDbHandler = new RingsDbHandler(ringsDbService);
 
-            _scenariosHandler = new ScenariosHandler(cardRepository, playerCategoryService, encounterCategoryService,
-                questCategoryService, scenarioService);
+            _scenariosHandler = new ScenariosHandler(cardRepository, 
+                playerCategoryService, encounterCategoryService, questCategoryService, regionService,
+                scenarioService);
 
             _searchHandler = new SearchHandler(cardRepository, characterRepository,
                 searchService, scenarioService, linkService, statService, 
-                playerCategoryService, encounterCategoryService, questCategoryService, 
+                playerCategoryService, encounterCategoryService, questCategoryService, regionService,
                 ringsDbService, _translationHandler);
 
             _creatorsHandler = new CreatorsHandler(creatorService);

@@ -287,7 +287,7 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
 
             addEnemy("Orc Raiders", emptySetName, 28, 2, 2, 1, 3)
                 .WithSetNumberAndCost(26, 0)
-                .WithTraits("Orc.", "uruk.")
+                .WithTraits("Orc.", "Uruk.")
                 .WithTextLine("Forced: After Orc Raider engages a player, deal it a shadow card.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack. Deal it an additional shadow card.")
                 .WithInfo(45, 2, Artist.Mark_Tarrisse);

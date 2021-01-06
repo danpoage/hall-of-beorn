@@ -86,5 +86,20 @@
                     return false;
             }
         }
+
+        public static bool IsCharacter(this CardType self)
+        {
+            switch (self)
+            {
+                case CardType.Hero:
+                case CardType.Ally:
+                case CardType.Objective_Hero:
+                case CardType.Objective_Ally:
+                case CardType.Ship_Objective:
+                    return true;
+                default:
+                    return false;
+            }
+        }
     }
 }

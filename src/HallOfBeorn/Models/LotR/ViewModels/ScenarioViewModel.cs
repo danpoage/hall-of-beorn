@@ -7,7 +7,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 {
     public class ScenarioViewModel
     {
-        public ScenarioViewModel(Scenario scenario, Func<string, LotRCard> lookupCard, Func<string, IEnumerable<PlayerCategory>> getPlayerCategories, Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, Func<string, IEnumerable<QuestCategory>> getQuestCategories)
+        public ScenarioViewModel(Scenario scenario, Func<string, LotRCard> lookupCard, 
+            Func<string, IEnumerable<PlayerCategory>> getPlayerCategories, 
+            Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, 
+            Func<string, IEnumerable<QuestCategory>> getQuestCategories,
+            Func<string, IEnumerable<Region>> getRegions)
         {
             _scenario = scenario;
 
@@ -15,7 +19,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
             foreach (var questCard in scenario.QuestCards)
             {
-                _questCards.Add(new ScenarioQuestViewModel(questCard, getPlayerCategories, getEncounterCategories, getQuestCategories));
+                _questCards.Add(new ScenarioQuestViewModel(questCard, getPlayerCategories, getEncounterCategories, getQuestCategories, getRegions));
             }
 
             var hasCardMap = false;

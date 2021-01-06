@@ -158,7 +158,7 @@ namespace HallOfBeorn.Models.LotR.Simple
 
         private string GetFrontImagePath(LotRCard card)
         {
-            var viewModel = new CardViewModel(card, null, null, null, null);
+            var viewModel = new CardViewModel(card, null, null, null, null, null);
             return (!string.IsNullOrEmpty(viewModel.ImagePath1)) ?
                 viewModel.ImagePath1
                 : viewModel.ImagePath;
@@ -173,7 +173,7 @@ namespace HallOfBeorn.Models.LotR.Simple
 
         private string GetBackImagePath(LotRCard card)
         {
-            var viewModel = new CardViewModel(card, null, null, null, null);
+            var viewModel = new CardViewModel(card, null, null, null, null, null);
             return viewModel.ImagePath2;
         }
 

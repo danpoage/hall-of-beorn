@@ -368,6 +368,14 @@ namespace HallOfBeorn
             return self.ToLowerSafe().Contains(other.ToLowerSafe());
         }
 
+        public static bool ContainsAny(this string self, params string[] values)
+        {
+            if (string.IsNullOrEmpty(self))
+                return false;
+
+            return values.Any(v => v != null && self.ToLower().Contains(v.ToLower()));
+        }
+
         public static bool MatchesWildcard(this string self, string pattern)
         {
             if (string.IsNullOrEmpty(self) || string.IsNullOrEmpty(pattern))

@@ -105,6 +105,10 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             {
                 model.QuestCategory = null;
             }
+            if (string.IsNullOrEmpty(model.Region) || model.Region == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.Region = null;
+            }
             if (string.IsNullOrEmpty(model.VictoryPoints) || model.VictoryPoints == SearchViewModel.DEFAULT_FILTER_VALUE)
             {
                 model.VictoryPoints = null;
@@ -608,6 +612,9 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         [Display(Name = "Popularity Operator")]
         public NumericOperator? PopularityOp { get; set; }
 
+        [Display(Name = "Region")]
+        public string Region { get; set; }
+
         public static IEnumerable<SelectListItem> PopularityValues
         {
             get
@@ -974,6 +981,12 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         }
 
         public static IEnumerable<SelectListItem> QuestCategories
+        {
+            get;
+            set;
+        }
+
+        public static IEnumerable<SelectListItem> Regions
         {
             get;
             set;

@@ -610,6 +610,15 @@
                 <span style="display:inline-block;margin-top:4px;margin-bottom:4px;margin-left:8px;border-radius:6px;border-width:2px;border-style:solid;border-color:darkgrey;"><a title='@string.Format("Quest Category Search for {0}", @category.Key)' href="@category.Value" style="text-decoration:none;">@category.Key</a></span>
             }
         }
+        @if (@Model.HasRegions)
+        {
+            <br />
+            <div style="font-weight:bold;margin-left:6px;margin-top:10px;margin-bottom:4px;">Regions</div>
+            foreach (var region in @Model.Regions())
+            {
+                <span style="display:inline-block;margin-top:4px;margin-bottom:4px;margin-left:8px;border-radius:6px;border-width:2px;border-style:solid;border-color:darkgrey;"><a title='@string.Format("Region Search for {0}", @region.Key)' href="@region.Value" style="text-decoration:none;">@region.Key</a></span>
+            }
+        }
         @if (!string.IsNullOrEmpty(@Model.RingsDbUrl))
         {
             <div class="ringsdb-card-link"><a title="@Model.Title on RingsDB" href="@Model.RingsDbUrl" target="_blank"><img src="/Images/RingsDB.jpg" class="ringsdb-icon" height="16" width="16" /><span>View this card on RingsDB</span></a></div>

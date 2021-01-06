@@ -472,6 +472,7 @@
     <Compile Include="Models\LotR\Products\Nightmare\TheTreacheryOfRhudaurNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheTreasonOfSarumanNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheWastesOfEriadorNightmareProduct.cs" />
+    <Compile Include="Models\LotR\Region.cs" />
     <Compile Include="Models\LotR\Scenarios\AShadowInTheEast\AShadowInTheEastScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\AShadowInTheEast\DangerInDorwinionScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\AShadowInTheEast\TempleOfDoomScenario.cs" />
@@ -1003,6 +1004,7 @@
     <Compile Include="Services\ICardRepository.cs" />
     <Compile Include="Services\IProductRepository.cs" />
     <Compile Include="Services\ICharacterRepository.cs" />
+    <Compile Include="Services\LotR\Categories\RegionService.cs" />
     <Compile Include="Services\LotR\Community\CreatorService.cs" />
     <Compile Include="Services\LotR\Community\ICreatorService.cs" />
     <Compile Include="Services\LotR\Links\ILinkService.cs" />

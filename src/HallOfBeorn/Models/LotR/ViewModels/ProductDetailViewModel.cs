@@ -8,7 +8,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 {
     public class ProductDetailViewModel
     {
-        public ProductDetailViewModel(Product product, Func<string, IEnumerable<PlayerCategory>> getPlayerCategories, Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, Func<string, IEnumerable<QuestCategory>> getQuestCategories)
+        public ProductDetailViewModel(Product product, 
+            Func<string, IEnumerable<PlayerCategory>> getPlayerCategories, 
+            Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, 
+            Func<string, IEnumerable<QuestCategory>> getQuestCategories,
+            Func<string, IEnumerable<Region>> getRegions)
         {
             this.product = product;
 
@@ -16,7 +20,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             {
                 foreach (var card in cardSet.Cards.OrderBy(x => x.CardNumber))
                 {
-                    cardViewModels.Add(new CardViewModel(card, getPlayerCategories, getEncounterCategories, getQuestCategories, null));
+                    cardViewModels.Add(new CardViewModel(card, 
+                        getPlayerCategories, getEncounterCategories, getQuestCategories, getRegions, null));
                 }
             }
 
@@ -175,7 +180,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public IEnumerable<ScenarioViewModel> Scenarios()
         {
-            return product.Scenarios().Select(sc => new ScenarioViewModel(sc, null, null, null, null));
+            return product.Scenarios().Select(sc => new ScenarioViewModel(sc, null, null, null, null, null));
         }
     }
 }

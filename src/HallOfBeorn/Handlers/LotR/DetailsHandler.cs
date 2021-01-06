@@ -26,6 +26,7 @@ namespace HallOfBeorn.Handlers.LotR
             ICategoryService<PlayerCategory> playerCategoryService,
             ICategoryService<EncounterCategory> encounterCategoryService,
             ICategoryService<QuestCategory> questCategoryService,
+            ICategoryService<Region> regionService,
             IRingsDbService ringsDbService, IStatService statService, 
             ILinkService linkService, INoteService noteService, ITagService tagService,
             ITemplateService templateService,
@@ -37,6 +38,7 @@ namespace HallOfBeorn.Handlers.LotR
             _playerCategoryService = playerCategoryService;
             _encounterCategoryService = encounterCategoryService;
             _questCategoryService = questCategoryService;
+            _regionService = regionService;
             _ringsDbService = ringsDbService;
             _statService = statService;
             _linkService = linkService;
@@ -52,6 +54,7 @@ namespace HallOfBeorn.Handlers.LotR
         private readonly ICategoryService<PlayerCategory> _playerCategoryService;
         private readonly ICategoryService<EncounterCategory> _encounterCategoryService;
         private readonly ICategoryService<QuestCategory> _questCategoryService;
+        private readonly ICategoryService<Region> _regionService;
         private readonly IRingsDbService _ringsDbService;
         private readonly IStatService _statService;
         private readonly ILinkService _linkService;
@@ -79,7 +82,8 @@ namespace HallOfBeorn.Handlers.LotR
             var getPlayerCategories = new Func<string, IEnumerable<PlayerCategory>>((slug) => { return _playerCategoryService.Categories(slug); });
             var getEncounterCategories = new Func<string, IEnumerable<EncounterCategory>>((slug) => { return _encounterCategoryService.Categories(slug); });
             var getQuestCategories = new Func<string, IEnumerable<QuestCategory>>((slug) => { return _questCategoryService.Categories(slug); });
-            var viewModel = new CardViewModel(card, getPlayerCategories, getEncounterCategories, getQuestCategories, lang);
+            var getRegions = new Func<string, IEnumerable<Region>>((slug) => _regionService.Categories(slug));
+            var viewModel = new CardViewModel(card, getPlayerCategories, getEncounterCategories, getQuestCategories, getRegions, lang);
 
             viewModel.LinkedCards = GetLinkedCards(card);
 
