@@ -373,7 +373,15 @@ namespace HallOfBeorn
             if (string.IsNullOrEmpty(self))
                 return false;
 
-            return values.Any(v => v != null && self.ToLower().Contains(v.ToLower()));
+            return values.Any(v => v != null && self.ToLower().Contains(v.ToLowerSafe()));
+        }
+
+        public static bool StartsWithAny(this string self, params string[] values)
+        {
+            if (string.IsNullOrEmpty(self))
+                return false;
+
+            return values.Any(v => v != null && self.ToLowerSafe().StartsWith(v.ToLowerSafe()));
         }
 
         public static bool MatchesWildcard(this string self, string pattern)
