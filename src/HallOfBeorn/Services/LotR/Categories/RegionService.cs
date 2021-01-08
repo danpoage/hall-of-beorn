@@ -75,6 +75,9 @@ namespace HallOfBeorn.Services.LotR.Categories
             Func<LotRCard, bool> isRhovanion = c => new List<Func<LotRCard, bool>> {
                 isRhovanionTitle, isMirkwood, isCelduin, isCarrock }.Any(p => p(c));
 
+            Func<LotRCard, bool> isFangorn = c => c.Traits.Any(t => t == "Ent.") || c.NormalizedTitle.StartsWithAny("entmoot", "ent draught", "boomed and trumpeted", "the dam bursts");
+            Func<LotRCard, bool> isHarad = c => c.Traits.Any(t => t == "Harad.") || c.NormalizedTitle.StartsWithAny("kahliel", "haradrim");
+
             return new List<Func<LotRCard, Region>>
             {
                 CreateRegionFilter(isMistyMountains, Region.MISTY_MOUNTAINS),
@@ -112,6 +115,9 @@ namespace HallOfBeorn.Services.LotR.Categories
                 CreateRegionFilter(isEastfold, Region.Eastfold),
                 CreateRegionFilter(isEdoras, Region.Edoras),
                 CreateRegionFilter(isHornburg, Region.Hornburg),
+                CreateRegionFilter(isFangorn, Region.Fangorn),
+
+                CreateRegionFilter(isHarad, Region.HARAD),
             };
         }
     }

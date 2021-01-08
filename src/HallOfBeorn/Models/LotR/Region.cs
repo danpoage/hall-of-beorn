@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.LotR
     public enum Region
     {
         None = 0,
-        ARNOR = 1000,
+        ARNOR,
         Bree,
         ARTHEDAIN,
         Blue_Mountains,
@@ -17,7 +17,7 @@ namespace HallOfBeorn.Models.LotR
         Tower_Hills,
         RHUDAUR,
         Rivendell,
-        RHOVANION = 2000,
+        RHOVANION,
         Celduin,
         Dale,
         Elvenkings_Hall,
@@ -32,12 +32,13 @@ namespace HallOfBeorn.Models.LotR
         Moria,
         Eyrie,
         Isengard,
-        ROHAN = 3000,
+        Fangorn,
+        ROHAN,
         Eastfold,
         Edoras,
         Westfold,
         Hornburg,
-        GONDOR = 4000,
+        GONDOR,
         Dol_Amroth,
         Ithilien,
         Outlands,
@@ -45,7 +46,6 @@ namespace HallOfBeorn.Models.LotR
         Osgiliath,
         Pelargir,
         White_Mountains,
-        HARAD = 5000,
-        UMBAR = 6000,
+        HARAD,
     }
 }
