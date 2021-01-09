@@ -166,6 +166,13 @@ namespace HallOfBeorn.Controllers
 
             return View(model);
         }
+        
+        public ActionResult Settings()
+        {
+            var model = new UserSettingsViewModel();
+
+            return View(model);
+        }
 
         public JsonResult ScenarioTotals(string id)
         {
@@ -188,14 +195,18 @@ namespace HallOfBeorn.Controllers
                 return Redirect(Url.Action("Search", model));
             }
 
-            _searchHandler.HandleSearch(model);
+            var settings = UserSettings.ReadFromCookies(HttpContext.Request);
+
+            _searchHandler.HandleSearch(model, settings);
 
             return View(model);
         }
 
         public JsonResult SearchJson(SearchViewModel model)
         {
-            var jsonData = _searchHandler.HandleJsonSearch(model);
+            var settings = UserSettings.ReadFromCookies(HttpContext.Request);
+
+            var jsonData = _searchHandler.HandleJsonSearch(model, settings);
 
             return Json(jsonData, JsonRequestBehavior.AllowGet);
         }

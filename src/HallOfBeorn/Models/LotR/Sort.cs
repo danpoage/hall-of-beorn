@@ -3,11 +3,11 @@
     public enum Sort
     {
         None = 0,
-        Set_Number = 1,
-        Alphabetical = 2,
-        Sphere_Type_Cost = 3,
-        Released = 4,
-        Popularity = 5,
+        Popularity = 1,
+        Set_Number = 2,
+        Alphabetical = 3,
+        Sphere_Type_Cost = 4,
+        Released = 5,
         StatScore = 6,
         StatEfficiency = 7,
     }

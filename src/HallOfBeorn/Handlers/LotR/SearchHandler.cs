@@ -116,13 +116,13 @@ namespace HallOfBeorn.Handlers.LotR
             }
         }
 
-        public void HandleSearch(SearchViewModel model)
+        public void HandleSearch(SearchViewModel model, UserSettings settings)
         {
             InitializeSearch(model);
 
             var useLang = model.Lang.HasValue ? model.Lang.Value : default(Language);
 
-            foreach (var score in _searchService.Search(model))
+            foreach (var score in _searchService.Search(model, settings))
             {
                 var getPlayerCategories = new Func<string, IEnumerable<PlayerCategory>>((slug) => { return _playerCategoryService.Categories(slug); });
                 var getEncounterCategories = new Func<string, IEnumerable<EncounterCategory>>((slug) => { return _encounterCategoryService.Categories(slug); });
@@ -301,9 +301,9 @@ namespace HallOfBeorn.Handlers.LotR
             }
         }
 
-        public object HandleJsonSearch(SearchViewModel model)
+        public object HandleJsonSearch(SearchViewModel model, UserSettings settings)
         {
-            HandleSearch(model);
+            HandleSearch(model, settings);
 
             var cards = new List<SimpleCard>();
 

@@ -47,9 +47,8 @@ namespace HallOfBeorn.Services.LotR.Search
         private const string defaultCardSet = "Core Set";
         private const CardType defaultCardType = CardType.Hero;
         private const int defaultOffset = 0;
-        private const int defaultLimit = 200;
 
-        private IEnumerable<IComponent> CreateFilters(SearchViewModel model)
+        private IEnumerable<IComponent> CreateFilters(SearchViewModel model, UserSettings settings)
         {
             var filters = new List<IComponent>();
 
@@ -68,7 +67,7 @@ namespace HallOfBeorn.Services.LotR.Search
 
             AddFilter(filters, new EnumFilter<Sphere>((score) => score.Card.Sphere, model.Sphere));
             AddFilter(filters, new EnumFilter<Uniqueness>((score) => score.Card.IsUnique ? Uniqueness.Yes : Uniqueness.No, model.IsUnique));
-            AddFilter(filters, new Filter((score) => _scenarioService.HasSetType(score.Card, model.SetType)));
+            AddFilter(filters, new Filter((score) => _scenarioService.HasSetType(score.Card, model.SetType, settings)));
 
             AddFilter(filters, new ByteComparisonFilter((score) => score.Card.ResourceCost, model.Cost, model.CostOperator));
             AddFilter(filters, new ByteComparisonFilter((score) => score.Card.ThreatCost, model.ThreatCost, model.ThreatCostOperator));
@@ -104,44 +103,42 @@ namespace HallOfBeorn.Services.LotR.Search
             return filters;
         }
 
-        private IEnumerable<IComponent> CreateSorts(SearchViewModel model)
+        private IEnumerable<IComponent> CreateSorts(SearchViewModel model, UserSettings settings)
         {
             var sorts = new List<IComponent>();
 
             if (!model.Sort.HasValue)
             {
                 AddSort(sorts, (score) => score.Score(), false, true);
-                AddSort(sorts, (score) => _getPopularity(score.Card.Slug), false, false);
-                AddSort(sorts, (score) => _getVotes(score.Card), false, false);
-                return sorts;
             }
 
-            if (model.Sort.Value == Sort.Alphabetical)
+            if (model.Sort.GetValueOrDefault(Sort.None) == Sort.Alphabetical || settings.DefaultSort == "Alphabetical")
             {
                 AddSort(sorts, (score) => score.Card.Title, true, true);
                 AddSort(sorts, (score) => (int)score.Card.CardType, true, false);
             }
-            if (model.Sort.Value == Sort.Popularity)
+            if (model.Sort.GetValueOrDefault(Sort.None) == Sort.Popularity 
+                || settings.DefaultSort == "Popularity" || string.IsNullOrEmpty(settings.DefaultSort))
             {
                 AddSort(sorts, (score) => _getPopularity(score.Card.Slug), false, true);
                 AddSort(sorts, (score) => _getVotes(score.Card), false, false);
             }
-            if (model.Sort.Value == Sort.StatScore)
+            if (model.Sort.GetValueOrDefault(Sort.None) == Sort.StatScore || settings.DefaultSort == "StatScore")
             {
                 AddSort(sorts, (score) => score.Card.StatScore(), false, true);
             }
-            if (model.Sort.Value == Sort.StatEfficiency)
+            if (model.Sort.GetValueOrDefault(Sort.None) == Sort.StatEfficiency || settings.DefaultSort =="StatEfficiency")
             {
                 AddSort(sorts, (score) => score.Card.StatEfficiency(), false, true);
             }
-            if (model.Sort.Value == Sort.Released)
+            if (model.Sort.GetValueOrDefault(Sort.None) == Sort.Released || settings.DefaultSort == "Released")
                 AddSort(sorts, (score) => score.Card.CardSet.Product.Code, false, true);
-            if (model.Sort.Value == Sort.Set_Number)
+            if (model.Sort.GetValueOrDefault(Sort.None) == Sort.Set_Number || settings.DefaultSort == "SetNumber")
             {
                 AddSort(sorts, (score) => score.Card.CardSet.Product.Code, true, true);
                 AddSort(sorts, (score) => score.Card.CardNumber, true, false);
             }
-            if (model.Sort.Value == Sort.Sphere_Type_Cost)
+            if (model.Sort.GetValueOrDefault(Sort.None) == Sort.Sphere_Type_Cost || settings.DefaultSort == "SphereTypeCost")
             {
                 AddSort(sorts, (score) => score.Card.Sphere, true, true);
                 AddSort(sorts, (score) => score.Card.CardType, true, false);
@@ -160,9 +157,23 @@ namespace HallOfBeorn.Services.LotR.Search
             return offsets;
         }
 
-        private IEnumerable<IComponent> CreateLimits(SearchViewModel model)
+        private IEnumerable<IComponent> CreateLimits(SearchViewModel model, UserSettings settings)
         {
             var limits = new List<IComponent>();
+
+            var defaultLimit = 200;
+            switch (settings.DefaultLimit)
+            {
+                case "400":
+                    defaultLimit = 400;
+                    break;
+                case "600":
+                    defaultLimit = 600;
+                    break;
+                case "200":
+                default:
+                    break;
+            }
 
             var limit = model.Limit.HasValue ? model.Limit.Value : defaultLimit;
             AddLimit(limits, limit);
@@ -193,14 +204,14 @@ namespace HallOfBeorn.Services.LotR.Search
             limits.Add(new Limit(count));
         }
 
-        public Plan CreatePlan(SearchViewModel model)
+        public Plan CreatePlan(SearchViewModel model, UserSettings settings)
         {
             var steps = new List<IComponent>();
 
-            steps.AddRange(CreateFilters(model));
-            steps.AddRange(CreateSorts(model));
+            steps.AddRange(CreateFilters(model, settings));
+            steps.AddRange(CreateSorts(model, settings));
             steps.AddRange(CreateOffsets(model));
-            steps.AddRange(CreateLimits(model));
+            steps.AddRange(CreateLimits(model, settings));
 
             return new Plan(steps);
         }

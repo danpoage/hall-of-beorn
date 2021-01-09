@@ -28,7 +28,7 @@ namespace HallOfBeorn.Services.LotR.Search
                 .OrderBy(s => 1);
         }
 
-        public IOrderedEnumerable<CardScore> Search(SearchViewModel model)
+        public IOrderedEnumerable<CardScore> Search(SearchViewModel model, UserSettings settings)
         {
             var all = _cardRepository
                 .Cards()
@@ -36,7 +36,7 @@ namespace HallOfBeorn.Services.LotR.Search
                 .OrderBy(s => 1);
 
             var scores = _planService
-                .CreatePlan(model)
+                .CreatePlan(model, settings)
                 .Execute(all);
 
             return scores;

@@ -10,6 +10,6 @@ namespace HallOfBeorn.Services.LotR.Search
 {
     public interface ISearchService
     {
-        IOrderedEnumerable<CardScore> Search(SearchViewModel model);
+        IOrderedEnumerable<CardScore> Search(SearchViewModel model, UserSettings settings);
     }
 }

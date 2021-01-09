@@ -20,6 +20,6 @@ namespace HallOfBeorn.Services.LotR.Scenarios
         ScenarioListViewModel GetListViewModel();
         IEnumerable<Tuple<Scenario, double>> AssociatedScenarios(string cardSlug, CardType cardType, double score);
         bool BelongsToScenario(string cardSlug, CardType cardType, string scenarioTitle);
-        bool HasSetType(LotRCard card, SetType? setType);
+        bool HasSetType(LotRCard card, SetType? setType, UserSettings settings);
     }
 }

@@ -324,13 +324,26 @@ namespace HallOfBeorn.Services.LotR.Scenarios
             SetType.First_Age, SetType.A_Long_extended_Party,
         };
 
-        public bool HasSetType(LotRCard card, SetType? setType)
+        public bool HasSetType(LotRCard card, SetType? setType, UserSettings settings)
         {
-            if (!setType.HasValue || setType.Value == SetType.None || setType.Value == SetType.OFFICIAL)
-                return !card.CardSet.SetType.IsCommunity();
+            if (!setType.HasValue || setType.Value == SetType.None)
+            {
+                if (settings.IncludeCommunity) {
+                    return true;
+                } else if (settings.IncludeAlep) {
+                    return card.CardSet.SetType != SetType.First_Age;
+                } else if (settings.IncludeFirstAge) {
+                    return card.CardSet.SetType != SetType.A_Long_extended_Party;
+                } else {
+                    return !card.CardSet.SetType.IsCommunity();
+                }
+            }
 
             if (setType.Value == SetType.ALL_SETS)
                 return true;
+
+            if (setType.Value == SetType.OFFICIAL)
+                return !card.CardSet.SetType.IsCommunity();
 
             if (setType.Value == SetType.PRINT_ON_DEMAND)
                 return printOnDemand.Contains(card.CardSet.SetType);

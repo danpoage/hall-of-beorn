@@ -49,7 +49,9 @@ namespace HallOfBeorn.Controllers
 
             var cards = new List<SimpleCard>();
 
-            foreach (var score in searchService.Search(model))
+            var settings = UserSettings.ReadFromCookies(HttpContext.Request);
+
+            foreach (var score in searchService.Search(model, settings))
             {
                 cards.Add(GetSimpleCard(score.Card));
             }

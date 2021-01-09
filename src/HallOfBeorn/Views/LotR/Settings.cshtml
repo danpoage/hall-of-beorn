@@ -1,0 +1,82 @@
+﻿@{
+    ViewBag.Title = "Settings";
+}
+
+@section scripts {
+    <script type="text/javascript" src="/Scripts/settings-1.0.2.js" defer></script>
+}
+
+<h2>Settings</h2>
+
+<a title="Bear Rescue" href="https://appalachianbearrescue.org/" target="_blank"><img title="Hall of Beorn Settings" src="https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Pages/SettingsHeader.jpg" style="margin:4px;"/></a>
+
+<h3>Card Sets Included in Search</h3>
+<p>Which card sets are included in card searches. The default is Official Sets Only, select other options if you want to include community content in search results.</p>
+<table>
+    <tr>
+        <td><span style="margin:2px;">Official Sets Only (Exclude Community Sets)</span></td>
+        <td><input style="width: 20px;" type="radio" id="SearchOfficial" name="SearchSets"/></td>
+    </tr>
+    <tr>
+        <td><span style="margin:2px;">Official Sets and ALeP Sets (Exclude First Age)</span></td>
+        <td><input style="width: 20px;" type="radio" id="SearchAlep" name="SearchSets" /></td>
+    </tr>
+    <tr>
+        <td><span style="margin:2px">Official Sets and First Age Sets (Exclude ALeP Sets)</span></td>
+        <td><input style="width: 20px;" type="radio" id="SearchFirstAge" name="SearchSets" /></td>
+    </tr>
+    <tr>
+        <td><span style="margin:2px;">Official Sets and Community Sets (All Sets)</span></td>
+        <td><input style="width: 20px;" type="radio" id="SearchCommunity" name="SearchSets" /></td>
+    </tr>
+</table>
+
+<h3>Default Sort</h3>
+<p>When a specific sort is not requested, search results are ordered by relevance (how closely a card matches the search critieria). When multiple cards have the same relevance score, a second sort is performed as a "tie breaker". The default is Popularity.</p>
+<table>  
+    <tr>
+        <td><span style="margin:2px;">Popularity</span></td>
+        <td><input style="width: 20px;" type="radio" id="SortPopularity" name="DefaultSort" /></td>
+    </tr>
+    <tr>
+        <td><span style="margin:2px;">Set, Number</span></td>
+        <td><input style="width: 20px;" type="radio" id="SortSetNumber" name="DefaultSort"/></td>
+    </tr>
+    <tr>
+        <td><span style="margin:2px;">Alphabetical (Title)</span></td>
+        <td><input style="width: 20px;" type="radio" id="SortAlphabetical" name="DefaultSort" /></td>
+    </tr>
+    <tr>
+        <td><span style="margin:2px">Sphere, Type, Cost</span></td>
+        <td><input style="width: 20px;" type="radio" id="SortSphereTypeCost" name="DefaultSort" /></td>
+    </tr>
+    <tr>
+        <td><span style="margin:2px;">Released (Date)</span></td>
+        <td><input style="width: 20px;" type="radio" id="SortReleased" name="DefaultSort" /></td>
+    </tr>
+    <tr>
+        <td><span style="margin:2px;">Stat Score (Total Strength)</span></td>
+        <td><input style="width: 20px;" type="radio" id="SortStatScore" name="DefaultSort" /></td>
+    </tr>
+    <tr>
+        <td><span style="margin:2px;">Stat Efficiency (Stregth vs Cost)</span></td>
+        <td><input style="width: 20px;" type="radio" id="SortStatEfficiency" name="DefaultSort" /></td>
+    </tr>
+</table>
+
+<h3>Default Limit</h3>
+<p>Open-ended searches can return large result sets which hurt performance and cost money. If you find yourself increasing this value, please consider <a href="https://www.patreon.com/Beorn" target="_blank">donating to our Patreon</a>. The default is 200.</p>
+<table>  
+    <tr>
+        <td><span style="margin:2px;">200</span></td>
+        <td><input style="width: 20px;" type="radio" id="Limit200" name="DefaultLimit" /></td>
+    </tr>
+    <tr>
+        <td><span style="margin:2px;">400</span></td>
+        <td><input style="width: 20px;" type="radio" id="Limit400" name="DefaultLimit" /></td>
+    </tr>
+    <tr>
+        <td><span style="margin:2px;">600</span></td>
+        <td><input style="width: 20px;" type="radio" id="Limit600" name="DefaultLimit" /></td>
+    </tr>
+</table>
