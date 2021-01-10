@@ -158,7 +158,7 @@ $(function () {
 
     var productFilterCookie = getCookie('ProductFilter');
     if (productFilterCookie) {
-        console.log('Product Filter Cookie Found: ' + defaultLimitCookie);
+        console.log('Product Filter Cookie Found: ' + productFilterCookie);
         $('#' + productFilterCookie).prop('checked', true);
 
         if (productFilterCookie == 'ProductSpecific') {
@@ -188,5 +188,61 @@ $(function () {
     $('#ProductSpecific').click(function () {
         console.log('Product Filter: Specific Products');
         document.cookie = 'ProductFilter=ProductSpecific;path:/';
+    });
+
+    var ownedProductsCookie = getCookie('OwnedProducts');
+    if (ownedProductsCookie) {
+        console.log('Owned Products: ' + ownedProductsCookie);
+        $('#' + ownedProductsCookie).prop('checked', true);
+
+        if (productFilterCookie == 'ProductSpecific') {
+            $('.owned-product').prop('checked', false);
+
+            var checkedCodes = ownedProductsCookie.split(',');
+            for (var i = 0; i < checkedCodes.length; i++) {
+                console.log('Owned Product from Cookie:' + checkedCodes[i]);
+                $('#' + checkedCodes[i]).prop('checked', true);
+            }
+        }
+    }
+
+    $('.owned-product').click(function () {
+        console.log('owned product clicked');
+        var productCodes = [
+                'MEC01', 'MEC02', 'MEC03', 'MEC04', 'MEC05', 'MEC06', 'MEC07', 'MEC08', 'MEC09', 'MEC10',
+                'MEC11', 'MEC12', 'MEC13', 'MEC14', 'MEC15', 'MEC16', 'MEC17', 'MEC18', 'MEC19', 'MEC20',
+                'MEC21', 'MEC22', 'MEC23', 'MEC24', 'MEC25', 'MEC26', 'MEC27', 'MEC28', 'MEC29', 'MEC30',
+                'MEC31', 'MEC32', 'MEC33', 'MEC34', 'MEC35', 'MEC36', 'MEC37', 'MEC38', 'MEC39', 'MEC40',
+                'MEC41', 'MEC42', 'MEC43', 'MEC44', 'MEC45', 'MEC46', 'MEC47', 'MEC48', 'MEC49', 'MEC50',
+                'MEC51', 'MEC52', 'MEC53', 'MEC54', 'MEC55', 'MEC56', 'MEC57', 'MEC58', 'MEC59', 'MEC60',
+                'MEC61', 'MEC62', 'MEC65', 'MEC66', 'MEC67', 'MEC68', 'MEC69', 'MEC70',
+                'MEC71', 'MEC73', 'MEC75', 'MEC77', 'MEC78', 'MEC79', 'MEC80',
+                'MEC81', 'MEC82', 'MEC83', 'MEC86',
+                'MEN01', 'MEN02', 'MEN03', 'MEN04', 'MEN05', 'MEN06', 'MEN07', 'MEN08', 'MEN09', 'MEN10',
+                'MEN11', 'MEN12', 'MEN13', 'MEN14', 'MEN15', 'MEN16', 'MEN17', 'MEN18', 'MEN19', 'MEN20',
+                'MEN21', 'MEN22', 'MEN23', 'MEN24', 'MEN25', 'MEN26', 'MEN27', 'MEN28', 'MEN29', 'MEN30',
+                'MEN31', 'MEN32', 'MEN33', 'MEN34', 'MEN35', 'MEN36', 'MEN37', 'MEN38', 'MEN39', 'MEN40',
+                'MEN41', 'MEN42', 'MEN43', 'MEN44', 'MEN45', 'MEN46', 'MEN47', 'MEN48', 'MEN49', 'MEN50',
+                'OP014', 'OP015', 'OP016', 'OP050', 'OP075', 'OP077',
+                'UMEC84', 'UMEC85',
+                'MEC78-PRM', 'MEC79-PRM', 'MEC80-PRM', 'MEC81-PRM', 'MEC82-PRM', 'MEC83-PRM', 'UMEC84-PRM', 'UMEC85-PRM',
+        ];
+
+        var ownedProductsValue = '';
+
+        productCodes.forEach(function (item, index) {
+            
+            if ($('#' + item).attr('checked')) {
+                console.log('Product Marked Owned: ' + item);
+                if (ownedProductsValue) {
+                    ownedProductsValue += ',';
+                }
+
+                ownedProductsValue += item;
+            }
+        });
+
+        console.log('Settings Owned Products: ' + ownedProductsValue);
+        document.cookie = 'OwnedProducts=' + ownedProductsValue + ';path:/';
     });
 });

@@ -1,15 +1,21 @@
-﻿using System.Web;
+﻿using System;
+using System.Collections.Generic;
+using System.Web;
 
 namespace HallOfBeorn.Models.LotR
 {
     public class UserSettings
     {
+        private readonly HashSet<string> ownedProducts = new HashSet<string>();
+
         public string Language { get; set; }
         public bool IncludeCommunity { get; set; }
         public bool IncludeAlep { get; set; }
         public bool IncludeFirstAge { get; set; }
         public string DefaultSort { get; set; }
         public string DefaultLimit { get; set; }
+        public bool FilterOwnedProducts { get; set; }
+        public HashSet<string> OwnedProducts { get { return ownedProducts; } }
 
         public static UserSettings ReadFromCookies(HttpRequestBase request)
         {
@@ -91,6 +97,37 @@ namespace HallOfBeorn.Models.LotR
                         break;
                 }
             }
+
+            /*
+            HttpCookie productFilterCookie = request.Cookies["ProductFilter"];
+            if (defaultLimitCookie != null)
+            {
+                switch (productFilterCookie.Value)
+                {
+                    case "ProductSpecific":
+                        settings.FilterOwnedProducts = true;
+                        break;
+                    case "ProductAll":
+                    default:
+                        settings.FilterOwnedProducts = false;
+                        break;
+                }
+            }*/
+
+            /*
+            HttpCookie ownedProductsCookie = request.Cookies["OwnedProducts"];
+            if (ownedProductsCookie != null 
+                && !string.IsNullOrEmpty(ownedProductsCookie.Value))
+            {
+                foreach (var code in ownedProductsCookie.Value.Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    if (!settings.ownedProducts.Contains(code))
+                    {
+                        settings.ownedProducts.Add(code);
+                    }
+                }
+            }
+             */
 
             return settings;
         }
