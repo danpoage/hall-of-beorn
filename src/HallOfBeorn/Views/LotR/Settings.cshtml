@@ -3,7 +3,7 @@
 }
 
 @section scripts {
-    <script type="text/javascript" src="/Scripts/settings-1.0.2.js" defer></script>
+    <script type="text/javascript" src="/Scripts/settings-1.0.3.js" defer></script>
 }
 
 <h2>Settings</h2>
@@ -14,19 +14,19 @@
 <p>Which card sets are included in card searches. The default is Official Sets Only, select other options if you want to include community content in search results.</p>
 <table>
     <tr>
-        <td><span style="margin:2px;width:375px;" class="search-section">Official Sets Only (Exclude Community)</span></td>
+        <td><span style="margin:2px;width:240px;" class="search-section">Official Sets Only</span></td>
         <td><input style="width: 20px;" type="radio" id="SearchOfficial" name="SearchSets"/></td>
     </tr>
     <tr>
-        <td><span style="margin:2px;width:375px;" class="search-section">Official Sets and ALeP Sets (Exclude First Age)</span></td>
+        <td><span style="margin:2px;width:240px;" class="search-section">Include ALeP (Exclude First Age)</span></td>
         <td><input style="width: 20px;" type="radio" id="SearchAlep" name="SearchSets" /></td>
     </tr>
     <tr>
-        <td><span style="margin:2px;width:375px;" class="search-section">Official Sets and First Age Sets (Exclude ALeP)</span></td>
+        <td><span style="margin:2px;width:240px;" class="search-section">Include First Age (Exclude ALeP)</span></td>
         <td><input style="width: 20px;" type="radio" id="SearchFirstAge" name="SearchSets" /></td>
     </tr>
     <tr>
-        <td><span style="margin:2px;width:375px;" class="search-section">Official Sets and Community Sets (All Sets)</span></td>
+        <td><span style="margin:2px;width:240px;" class="search-section">Include Community (All Sets)</span></td>
         <td><input style="width: 20px;" type="radio" id="SearchCommunity" name="SearchSets" /></td>
     </tr>
 </table>
@@ -35,31 +35,31 @@
 <p>When a specific sort is not requested, search results are ordered by relevance (how closely a card matches the search critieria). When multiple cards have the same relevance score, a second sort is performed as a "tie breaker". The default is Popularity.</p>
 <table>  
     <tr>
-        <td><span style="margin:2px;width:275px;" class="search-section">Popularity</span></td>
+        <td><span style="margin:2px;width:240px;" class="search-section">Popularity</span></td>
         <td><input style="width: 20px;" type="radio" id="SortPopularity" name="DefaultSort" /></td>
     </tr>
     <tr>
-        <td><span style="margin:2px;width:275px;" class="search-section">Set, Number</span></td>
+        <td><span style="margin:2px;width:240px;" class="search-section">Set, Number</span></td>
         <td><input style="width: 20px;" type="radio" id="SortSetNumber" name="DefaultSort"/></td>
     </tr>
     <tr>
-        <td><span style="margin:2px;width:275px;" class="search-section">Alphabetical (Title)</span></td>
+        <td><span style="margin:2px;width:240px;" class="search-section">Alphabetical (Title)</span></td>
         <td><input style="width: 20px;" type="radio" id="SortAlphabetical" name="DefaultSort" /></td>
     </tr>
     <tr>
-        <td><span style="margin:2px;width:275px;" class="search-section">Sphere, Type, Cost</span></td>
+        <td><span style="margin:2px;width:240px;" class="search-section">Sphere, Type, Cost</span></td>
         <td><input style="width: 20px;" type="radio" id="SortSphereTypeCost" name="DefaultSort" /></td>
     </tr>
     <tr>
-        <td><span style="margin:2px;width:275px;" class="search-section">Released (Date)</span></td>
+        <td><span style="margin:2px;width:240px;" class="search-section">Released (Date)</span></td>
         <td><input style="width: 20px;" type="radio" id="SortReleased" name="DefaultSort" /></td>
     </tr>
     <tr>
-        <td><span style="margin:2px;width:275px;" class="search-section">Stat Score (Total Strength)</span></td>
+        <td><span style="margin:2px;width:240px;" class="search-section">Stat Score</span></td>
         <td><input style="width: 20px;" type="radio" id="SortStatScore" name="DefaultSort" /></td>
     </tr>
     <tr>
-        <td><span style="margin:2px;width:275px;" class="search-section">Stat Efficiency (Strength vs Cost)</span></td>
+        <td><span style="margin:2px;width:240px;" class="search-section">Stat Efficiency</span></td>
         <td><input style="width: 20px;" type="radio" id="SortStatEfficiency" name="DefaultSort" /></td>
     </tr>
 </table>
@@ -80,3 +80,130 @@
         <td><input style="width: 20px;" type="radio" id="Limit600" name="DefaultLimit" /></td>
     </tr>
 </table>
+<br />
+<h3>Product Filters</h3>
+<p>You can filter search results to exclude cards contained in products you do not own. The default is to Include All Products. If you choose to filter specific products, please select the products you own below (The Core Set is always included).</p>
+<table>  
+    <tr>
+        <td><span style="margin:2px;width:200px;" class="search-section">All Products</span></td>
+        <td><input style="width: 20px;" type="radio" id="ProductAll" name="ProductFilter" /></td>
+    </tr>
+    <tr>
+        <td><span style="margin:2px;width:200px;" class="search-section">Owned Products</span></td>
+        <td><input style="width: 20px;" type="radio" id="ProductSpecific" name="ProductFilter" /></td>
+    </tr>
+</table>
+<div id="ProductFilterContainer" style="display:none;margin:4px;padding: 4px 8px 4px 8px;">
+    <table>
+        <tr><td colspan="2"><b>Core Set and Shadows of Mirkwood Cycle</b></td><td>Nightmare</td></tr>
+        <tr><td class="search-label-long">Core Set</td><td><input id="MEC01" type="checkbox" checked="checked" onclick="return false;"/></td><td><input id="MEN01" type="checkbox" /><input id="MEN02" type="checkbox" /><input id="MEN03" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">Hunt for Gollum</td><td><input id="MEC02" type="checkbox" /></td><td><input id="MEN04" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">Conflict at the Carrock</td><td><input id="MEC03" type="checkbox" /></td><td><input id="MEN05" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">A Journey to Rhosgobel</td><td><input id="MEC04" type="checkbox" /></td><td><input id="MEN06" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The Hills of Emyn Muil</td><td><input id="MEC05" type="checkbox" /></td><td><input id="MEN07" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The Dead Marshes</td><td><input id="MEC06" type="checkbox" /></td><td><input id="MEN08" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">Return to Mirkwood</td><td><input id="MEC07" type="checkbox" /></td><td><input id="MEN09" type="checkbox" /></td></tr>
+        <tr><td colspan="2"><b>Khazad-dûm and Dwarrowdelf Cycle</b></td><td>Nightmare</td></tr>
+        <tr><td class="search-label-long">Khazad-dûm</td><td><input id="MEC08" type="checkbox" /></td><td><input id="MEN10" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The Redhorn Gate</td><td><input id="MEC09" type="checkbox" /></td><td><input id="MEN111" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">Road to Rivendell</td><td><input id="MEC10" type="checkbox" /></td><td><input id="MEN12" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The Watcher in the Water</td><td><input id="MEC011" type="checkbox" /></td><td><input id="MEN13" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The Long Dark</td><td><input id="MEC012" type="checkbox" /></td><td><input id="MEN14" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">Foundations of Stone</td><td><input id="MEC013" type="checkbox" /></td><td><input id="MEN15" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">Shadow and Flame</td><td><input id="MEC14" type="checkbox" /></td><td><input id="MEN16" type="checkbox" /></td></tr>
+        <tr><td colspan="2"><b>Heirs of Númenor and Against the Shadow Cycle</b></td><td>Nightmare</td></tr>
+        <tr><td class="search-label-long">Heirs of Númenor</td><td><input id="MEC17" type="checkbox" /></td><td><input id="MEN21" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The Steward's Fear</td><td><input id="MEC18" type="checkbox" /></td><td><input id="MEN22" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The Drúadan Forest</td><td><input id="MEC19" type="checkbox" /></td><td><input id="MEN23" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">Encounter at Amon Din</td><td><input id="MEC20" type="checkbox" /></td><td><input id="MEN24" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">Assault on Osgiliath</td><td><input id="MEC21" type="checkbox" /></td><td><input id="MEN25" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The Blood of Gondor</td><td><input id="MEC22" type="checkbox" /></td><td><input id="MEN26" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The Morgul Vale</td><td><input id="MEC23" type="checkbox" /></td><td><input id="MEN27" type="checkbox" /></td></tr>
+        <tr><td colspan="2"><b>The Voice of Isengard and The Ring-maker Cycle</b></td><td>Nightmare</td></tr>
+        <tr><td class="search-label-long">The Voice of Isengard</td><td><input id="MEC25" type="checkbox" /></td><td><input id="MEN28" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The Dunland Trap</td><td><input id="MEC26" type="checkbox" /></td><td><input id="MEN29" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The Three Trials</td><td><input id="MEC27" type="checkbox" /></td><td><input id="MEN30" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">Trouble in Tharbad</td><td><input id="MEC28" type="checkbox" /></td><td><input id="MEN31" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The Nin-in-Eilph</td><td><input id="MEC29" type="checkbox" /></td><td><input id="MEN32" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">Celebrimbor's Secret</td><td><input id="MEC30" type="checkbox" /></td><td><input id="MEN33" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The Antlered Crown</td><td><input id="MEC31" type="checkbox" /></td><td><input id="MEN34" type="checkbox" /></td></tr>
+        <tr><td colspan="2"><b>The Lost Realm and Angmar Awakened Cycle</b></td><td>Nightmare</td></tr>
+        <tr><td class="search-label-long">The Lost Realm</td><td><input id="MEC38" type="checkbox" /></td><td><input id="MEN35" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The Wastes of Eriador</td><td><input id="MEC39" type="checkbox" /></td><td><input id="MEN37" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">Escape from Mount Gram</td><td><input id="MEC40" type="checkbox" /></td><td><input id="MEN38" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">Across the Ettenmoors</td><td><input id="MEC41" type="checkbox" /></td><td><input id="MEN39" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The Treachery of Rhuadaur</td><td><input id="MEC42" type="checkbox" /></td><td><input id="MEN40" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The Battle of Carn Dûm</td><td><input id="MEC43" type="checkbox" /></td><td><input id="MEN41" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The Dread Realm</td><td><input id="MEC44" type="checkbox" /></td><td><input id="MEN42" type="checkbox" /></td></tr>
+        <tr><td colspan="2"><b>The Grey Havens and Dream-chaser Cycle</b></td><td>Nightmare</td></tr>
+        <tr><td class="search-label-long">The Grey Havens</td><td><input id="MEC47" type="checkbox" /></td><td><input id="MEN44" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">Flight of the Stormcaller</td><td><input id="MEC48" type="checkbox" /></td><td><input id="MEN45" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The Thing in the Depths</td><td><input id="MEC49" type="checkbox" /></td><td><input id="MEN46" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">Temple of the Deceived</td><td><input id="MEC50" type="checkbox" /></td><td><input id="MEN47" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The Drowned Ruins</td><td><input id="MEC51" type="checkbox" /></td><td><input id="MEN48" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">A Storm on Cobas Haven</td><td><input id="MEC52" type="checkbox" /></td><td><input id="MEN49" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The City of Corsairs</td><td><input id="MEC53" type="checkbox" /></td><td><input id="MEN50" type="checkbox" /></td></tr>
+        <tr><td colspan="2"><b>The Sands of Harad and Haradrim Cycle</b></td><td></td></tr>
+        <tr><td class="search-label-long">The Sands of Harad</td><td><input id="MEC55" type="checkbox" /></td><td></td></tr>
+        <tr><td class="search-label-long">The Mûmakil</td><td><input id="MEC56" type="checkbox" /></td><td></td></tr>
+        <tr><td class="search-label-long">Race Across Harad</td><td><input id="MEC57" type="checkbox" /></td><td></td></tr>
+        <tr><td class="search-label-long">Beneath the Sands</td><td><input id="MEC58" type="checkbox" /></td><td></td></tr>
+        <tr><td class="search-label-long">The Black Serpent</td><td><input id="MEC59" type="checkbox" /></td><td></td></tr>
+        <tr><td class="search-label-long">The Dungeons of Cirith Gurat</td><td><input id="MEC60" type="checkbox" /></td><td></td></tr>
+        <tr><td class="search-label-long">The Crossings of Poros</td><td><input id="MEC61" type="checkbox" /></td><td></td></tr>
+        <tr><td colspan="2"><b>The Wilds of Rhovanion and Ered Mithrin Cycle</b></td><td></td></tr>
+        <tr><td class="search-label-long">The Wilds of Rhovanion</td><td><input id="MEC65" type="checkbox" /></td><td></td></tr>
+        <tr><td class="search-label-long">The Withered Heath</td><td><input id="MEC66" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">Roam Across Rhovanion</td><td><input id="MEC67" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">Fire in the Night</td><td><input id="MEC68" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The Ghost of Framsburg</td><td><input id="MEC69" type="checkbox" /></td><td></td></tr>
+        <tr><td class="search-label-long">Mount Gundabad</td><td><input id="MEC70" type="checkbox" /></td><td></td></tr>
+        <tr><td class="search-label-long">The Fate of Wilderland</td><td><input id="MEC71" type="checkbox" /></td><td></td></tr>
+        <tr><td colspan="2"><b>A Shadow in the East and Vengeance of Mordor Cycle</b></td><td>Promo</td></tr>
+        <tr><td class="search-label-long">A Shadow in the East</td><td><input id="MEC77" type="checkbox" /></td><td></td></tr>
+        <tr><td class="search-label-long">Wrath and Ruin</td><td><input id="MEC78" type="checkbox" /></td><td><input id="MEC78-PRM" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The City of Ulfast</td><td><input id="MEC79" type="checkbox" /></td><td><input id="MEC79-PRM" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">Challenge of the Wainriders</td><td><input id="MEC80" type="checkbox" /></td><td><input id="MEC80-PRM" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">Under the Ash Mountains</td><td><input id="MEC81" type="checkbox" /></td><td><input id="MEC81-PRM" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The Land of Sorrow</td><td><input id="MEC82" type="checkbox" /></td><td><input id="MEC82-PRM" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The Fortress of Nurn</td><td><input id="MEC83" type="checkbox" /></td><td><input id="MEC83-PRM" type="checkbox" /></td></tr>
+        <tr><td colspan="2"><b>The Hobbit Saga</b></td><td>Nightmare</td></tr>
+        <tr><td class="search-label-long">The Hobbit: Over Hill and Under Hill</td><td><input id="MEC16" type="checkbox" /></td><td><input id="MEN17" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The Hobbit: On the Doorstep</td><td><input id="MEC24" type="checkbox" /></td><td><input id="MEN18" type="checkbox" /></td></tr>
+        <tr><td colspan="2"><b>The Lord of the Rings Saga</b></td><td>Nightmare</td></tr>
+        <tr><td class="search-label-long">Black Riders</td><td><input id="MEC32" type="checkbox" /></td><td><input id="MEN19" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The Road Darkens</td><td><input id="MEC34" type="checkbox" /></td><td><input id="MEN20" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The Treason of Saruman</td><td><input id="MEC45" type="checkbox" /></td><td><input id="MEN36" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">The Land of Shadow</td><td><input id="MEC46" type="checkbox" /></td><td><input id="MEN43" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">Flame of the West</td><td><input id="MEC54" type="checkbox" /></td><td></tr>
+        <tr><td class="search-label-long">The Mountain of Fire</td><td><input id="MEC62" type="checkbox" /></td><td></tr>
+        <tr><td colspan="2"><b>Gen Con Decks</b></td><td></td></tr>
+        <tr><td class="search-label-long">The Massing at Osgiliath</td><td><input id="MEC15" type="checkbox" /></td><td></td></tr>
+        <tr><td class="search-label-long">The Battle of Lake-town</td><td><input id="MEC35" type="checkbox" /></td><td></td></tr>
+        <tr><td class="search-label-long">The Stone of Erech</td><td><input id="MEC33" type="checkbox" /></td><td></td></tr>
+        <tr><td class="search-label-long">The Old Forest</td><td><input id="MEC37" type="checkbox" /></td><td></td></tr>
+        <tr><td class="search-label-long">The Ruins of Belegost</td><td><input id="OP014" type="checkbox" /></td><td></tr>
+        <tr><td colspan="2"><b>Fellowship Decks</b></td><td></td></tr>
+        <tr><td class="search-label-long">Fog on the Barrow-downs</td><td><input id="MEC36" type="checkbox" /></td><td></td></tr>
+        <tr><td class="search-label-long">Murder at the Prancing Pony</td><td><input id="OP015" type="checkbox" /></td><td></td></tr>
+        <tr><td class="search-label-long">The Siege of Annúminas</td><td><input id="OP016" type="checkbox" /></td><td></td></tr>
+        <tr><td class="search-label-long">Attack on Dol Goldur</td><td><input id="OP050" type="checkbox" /></td><td></td></tr>
+        <tr><td colspan="2"><b>Custom Scenario Kits</b></td><td>Promos</td></tr>
+        <tr><td class="search-label-long">The Wizard's Quest</td><td><input id="MEC75" type="checkbox" /></td><td></td></tr>
+        <tr><td class="search-label-long">The Woodland Realm</td><td><input id="OP077" type="checkbox" /></td><td></td></tr>
+        <tr><td class="search-label-long">The Mines of Morian</td><td><input id="UMEC84" type="checkbox" /></td><td><input id="UMEC84-PRM" type="checkbox" /></td></tr>
+        <tr><td class="search-label-long">Escape from Khazad-dûm</td><td><input id="UMEC85" type="checkbox" /></td><td><input id="UMEC85-PRM" type="checkbox" /></td></tr>
+        <tr><td colspan="2"><b>Scenario Packs</b></td><td></td><td></td></tr>
+        <tr><td class="search-label-long">The Hunt for the Dreadnaught</td><td><input id="MEC86" type="checkbox" /></td><td></td></tr>
+        <tr><td colspan="2"><b>Limited Edition</b></td><td></td><td></td></tr>
+        <tr><td class="search-label-long">Two Player Limited Edition Starter</td><td><input id="MEC73" type="checkbox" /></td><td></td></tr>
+        <tr><td colspan="2"><b>First Age and Doom Mastered Cycle</b></td><td></td><td></td></tr>
+        <tr><td class="search-label-long">First Age</td><td><input id="FA01" type="checkbox" /></td><td></td></tr>
+        <tr><td class="search-label-long">Trial Upon the Marches</td><td><input id="FA02" type="checkbox" /></td><td></td></tr>
+        <tr><td class="search-label-long">Among the Outlaws</td><td><input id="FA03" type="checkbox" /></td><td></td></tr>
+        <tr><td class="search-label-long">The Betrayal of Mim</td><td><input id="FA04" type="checkbox" /></td><td></td></tr>
+        <tr><td class="search-label-long">The Fall of Nargothrond</td><td><input id="FA05" type="checkbox" /></td><td></td></tr>
+        <tr><td colspan="2"><b>Children of Eorl and Oaths of the Rohirrim Cycle</b></td><td></td><td></td></tr>
+        <tr><td class="search-label-long">Children of Eorl</td><td><input id="ALEP01" type="checkbox" /></td><td></td></tr>
+    </table>
+</div>

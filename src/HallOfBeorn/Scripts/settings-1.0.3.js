@@ -146,4 +146,47 @@ $(function () {
         console.log('Default Limit: 600');
         document.cookie = 'DefaultLimit=Limit600;path:/';
     });
+
+    $('#ProductAll').click(function () {
+        console.log('hiding product filters');
+        $('#ProductFilterContainer').toggle();
+    });
+    $('#ProductSpecific').click(function () {
+        console.log('showing product filters');
+        $('#ProductFilterContainer').toggle();
+    });
+
+    var productFilterCookie = getCookie('ProductFilter');
+    if (productFilterCookie) {
+        console.log('Product Filter Cookie Found: ' + defaultLimitCookie);
+        $('#' + productFilterCookie).prop('checked', true);
+
+        if (productFilterCookie == 'ProductSpecific') {
+            $('#ProductFilterContainer').toggle();
+        }
+    }
+
+    var initProductFilter = true;
+    var productFilterIds = ['ProductAll', 'ProductSpecific'];
+    productFilterIds.forEach(function (item, index) {
+        if ($('#' + item).prop('checked')) {
+            initProductFilter = false;
+            console.log(item + ' product filter is selected');
+        }
+    });
+
+    if (initProductFilter) {
+        console.log('init Product Filter: All Products');
+        $('#ProductAll').prop('checked', true);
+        document.cookie = 'ProductFilter=ProductAll;path:/';
+    }
+
+    $('#ProductAll').click(function () {
+        console.log('Product Filter: All Products');
+        document.cookie = 'ProductFilter=ProductAll;path:/';
+    });
+    $('#ProductSpecific').click(function () {
+        console.log('Product Filter: Specific Products');
+        document.cookie = 'ProductFilter=ProductSpecific;path:/';
+    });
 });
