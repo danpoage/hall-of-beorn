@@ -22,6 +22,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 .WithErrata(1)
                 .WithCommunityVersion("Boromir-Grey-Company-Gen-Con-2014")
                 .WithCommunityVersion("Boromir-Grey-Company-Gen-Con-2015")
+                .WithCommunityVersion("Hrodebert/Boromir-Tactics-Hero")
                 .WithInfo(95, 1, Artist.Tiziano_Baracchi);
             addAlly("Dúnedain Watcher", 3, Sphere.Leadership, false, 1, 1, 1, 2)
                 .WithTraits("Dúnedain.")

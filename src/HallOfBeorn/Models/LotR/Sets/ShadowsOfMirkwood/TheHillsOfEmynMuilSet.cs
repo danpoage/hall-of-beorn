@@ -22,6 +22,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 .WithFlavor("\"The grandson of Bard the Bowman rules them, Brand son of Bain son of Bard.\"\r\n-Glóin, The Fellowship of the Ring")
                 .WithCommunityVersion("Brand-son-of-Bain-Grey-Company-Gen-Con-2015")
                 .WithCommunityVersion("RiddermarkLord/Brand-Son-of-Bain-Tactics-Hero")
+                .WithCommunityVersion("Hrodebert/Brand-son-of-Bain-Tactics-Hero")
                 .WithInfo(72, 1, Artist.Tiziano_Baracchi);
             addAlly("Keen-eyed Took", 2, Sphere.Leadership, false, 1, 0, 0, 2)
                 .WithTraits("Hobbit.")

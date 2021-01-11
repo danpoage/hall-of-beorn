@@ -15,11 +15,12 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
             SetType = Models.SetType.Saga_Expansion;
             Cycle = "The Lord of the Rings";
 
-            Cards.Add(LotRCard.Hero("Aragorn", "913A68C4-876B-4AD4-AF08-A291B2E3D053", Sphere.Fellowship, 0, 2, 3, 2, 5)
+            addHero("Aragorn", 0, Sphere.Fellowship, 2, 3, 2, 5)
                 .WithTraits("Dúnedain.", "Noble.", "Ranger.")
-                .WithText("The first player gains control of Aragorn. If Aragorn leaves play, the players lose the game.\r\nAction: Spend 2 resources from Aragorn's resource pool to ready a hero.")
+                .WithTextLine("The first player gains control of Aragorn. If Aragorn leaves play, the players lose the game.")
+                .WithTextLine("Action: Spend 2 resources from Aragorn's resource pool to ready a hero.")
                 .WithTemplate("<p>The first player gains control of {self}. If {self} leaves play, the players lose the game.</p><p><b>Action:</b> Spend 2 resources from {self}'s resource pool to ready a {type:Hero@hero}.</p><p class='flavor-text'>&quot;I am Aragorn son of Arathorn and am called Elessar, the Elfstone, Dunadan, the heir of Isildur Elendil’s son of Gondor.&quot;<br>&ndash;The Two Towers</p>")
-                .WithInfo(1, 1, Artist.Mark_Behm));
+                .WithInfo(1, 1, Artist.Mark_Behm);
             addHero("Théoden", 12, Sphere.Spirit, 2, 3, 2, 4)
                 .WithAlternateSlug("Santa-Theoden")
                 .WithTraits("Noble.", "Rohan.", "Warrior.")
@@ -36,19 +37,18 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithTextLine("Action: Deal 1 damage to Treebeard to give him +1 Willpower and +1 Attack until the end of the phase. (Limit 5 times per phase.)")
                 //.WithTemplate("<p><b>Action:</b> Deal 1 damage to {self} to give him +1 {Willpower} and +1 {Attack} until the end of the phase. (Limit 5 times per phase.)</p><p class='flavor-text'>&quot;I am not altogether on anybody's side, because nobody is altogether on my side...&quot;<br>&ndash;The Two Towers</p>")
                 .WithInfo(3, 1, Artist.Guillaume_Ducos);
-            Cards.Add(LotRCard.Ally("Gimli", Sphere.Leadership, 4, 2, 2, 2, 3)
-                .WithUnique()
+            addAlly("Gimli", 4, Sphere.Leadership, true, 2, 2, 2, 3)
                 .WithTraits("Dwarf.", "Warrior.")
                 .WithKeywords("Sentinel.")
                 .WithText("Response: After an enemy is revealed from the encounter deck, ready Gimli.")
-                .WithInfo(4, 3, Artist.Lukasz_Jaskolski));
-            Cards.Add(LotRCard.Ally("Legolas", Sphere.Tactics, 4, 1, 3, 1, 3)
-                .WithUnique()
+                .WithCommunityVersion("Hrodebert/Gimli-Leadership-Ally")
+                .WithInfo(4, 3, Artist.Lukasz_Jaskolski);
+            addAlly("Legolas", 4, Sphere.Tactics, true, 1, 3, 1, 3)
                 .WithTraits("Silvan.", "Warrior.")
                 .WithKeywords("Ranged.")
                 .WithText("Response: After Legolas participates in an attack that destroys an enemy, draw 1 card.")
                 .WithFlavor("\"He stands not alone,\" said Legolas, bending his bow and fitting an arrow with hands that moved quicker than sight. -The Two Towers")
-                .WithInfo(5, 3, Artist.Sebastian_Giacobino));
+                .WithInfo(5, 3, Artist.Sebastian_Giacobino);
             Cards.Add(LotRCard.Ally("Quickbeam", Sphere.Lore, 2, 2, 3, 1, 3)
                 .WithUnique()
                 .WithTraits("Ent.")

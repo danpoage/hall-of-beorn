@@ -186,6 +186,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
                 .WithCommunityVersion("Beorn-HoB-Alt-Art")
                 .WithCommunityVersion("Autumn/Beorn-Tactics-Hero")
                 .WithCommunityVersion("RiddermarkLord/Beorn-Tactics-Hero")
+                .WithCommunityVersion("Hrodebert/Beorn-Tactics-Hero")
                 .WithInfo(5, 1, Artist.Emrah_Elmasli);
 
             /*
@@ -862,25 +863,14 @@ The players have won the game.",
                 CardNumber = 55,
                 Artist = Artist.Darek_Zabrocki
             });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Nori",
-                Id = "51223bd0-ffd1-11df-a976-1801204c9062",
-                CardType = CardType.Hero,
-                Sphere = Sphere.Spirit,
-                Traits = new List<string>() { "Dwarf." },
-                Quantity = 1,
-                ThreatCost = 9,
-                IsUnique = true,
-                Attack = 1,
-                Defense = 2,
-                Willpower = 2,
-                HitPoints = 4,
-                Text = "Response: After you play a Dwarf character from your hand, reduce your threat by 1.",
-                FlavorText = "\"Nori, at your service.\" -Nori, The Hobbit",
-                CardNumber = 3,
-                Artist = Artist.Blake_Henriksen,
-            }.WithErrata(1));
+            addHero("Nori", 9, Sphere.Spirit, 2, 1, 2, 4)
+                .WithTraits("Dwarf.")
+                .WithTextLine("Response: After you play a Dwarf character from your hand, reduce your threat by 1.")
+                .WithFlavorLine("\"Nori, at your service.\"")
+                .WithFlavorLine("-Nori, The Hobbit")
+                .WithCommunityVersion("Hrodebert/Nori-Spirit-Hero")
+                .WithErrata(1)
+                .WithInfo(3, 1, Artist.Blake_Henriksen);
             Cards.Add(new LotRCard() {
                 
                 Title = "Not Fair! Not Fair!",
@@ -908,25 +898,13 @@ The players have won the game.",
                 CardNumber = 21,
                 Artist = Artist.Magali_Villeneuve
             });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Ori",
-                Id = "51223bd0-ffd1-11df-a976-1801204c9065",
-                CardType = CardType.Hero,
-                Sphere = Sphere.Lore,
-                Traits = new List<string>() { "Dwarf." },
-                Quantity = 1,
-                ThreatCost = 8,
-                IsUnique = true,
-                Attack = 2,
-                Defense = 1,
-                Willpower = 2,
-                HitPoints = 3,
-                Text = "If you control at least 5 Dwarf characters, draw 1 additional card at the beginning of the resource phase.",
-                FlavorText = "\"He could write well and speedily, and often used the Elvish characters.\" -Gimli, The Fellowship of the Ring",
-                CardNumber = 4,
-                Artist = Artist.Blake_Henriksen
-            });
+            addHero("Ori", 8, Sphere.Lore, 2, 2, 1, 3)
+                .WithTraits("Dwarf.")
+                .WithTextLine("If you control at least 5 Dwarf characters, draw 1 additional card at the beginning of the resource phase.")
+                .WithFlavorLine("\"He could write well and speedily, and often used the Elvish characters.\")
+                .WithFlavorLine("-Gimli, The Fellowship of the Ring")
+                .WithCommunityVersion("Hrodebert/Ori-Lore-Hero")
+                .WithInfo(4, 1, Artist.Blake_Henriksen);
             Cards.Add(new LotRCard() {
                 Title = "Out of the Frying Pan",
                 StageNumber = 1,
@@ -1133,25 +1111,16 @@ The players have won the game.",
                 CardNumber = 77,
                 Artist = Artist.Michael_Rasmussen
             });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Thorin Oakenshield",
-                Id = "51223bd0-ffd1-11df-a976-1801204c9083",
-                CardType = CardType.Hero,
-                Sphere = Sphere.Leadership,
-                Traits = new List<string>() { "Dwarf.", " Noble.", " Warrior." },
-                Quantity = 1,
-                ThreatCost = 12,
-                IsUnique = true,
-                Attack = 3,
-                Defense = 1,
-                Willpower = 3,
-                HitPoints = 5,
-                Text = "If you control at least 5 Dwarf characters, add 1 additional resource to Thorin Oakenshield's pool when you collect resources during the resource phase.",
-                HtmlTemplate = "<p>If you control at least 5 {trait:Dwarf.@Dwarf} characters, add 1 additional resource to {self}'s pool when you collect resources during the resource phase.</p><p class='flavor-text'>&quot;I am Thorin son of Thrain son of Thror, King under the Mountain!&quot; &ndash;Thorin, The Hobbit</p>",
-                CardNumber = 2,
-                Artist = Artist.Tiziano_Baracchi
-            });
+            addHero("Thorin Oakenshield", 12, Sphere.Leadership, 3, 3, 1, 5)
+                .WithTraits("Dwarf.", " Noble.", " Warrior.")
+                .WithTextLine("If you control at least 5 Dwarf characters, add 1 additional resource to Thorin Oakenshield's pool when you collect resources during the resource phase.")
+                .WithFlavorLine("\"I am Thorin son of Thrain son of Thror, King under the Mountain!\"")
+                .WithFlavorLine("-Thorin, The Hobbit")
+                .WithTemplate("<p>If you control at least 5 {trait:Dwarf.@Dwarf} characters, add 1 additional resource to {self}'s pool when you collect resources during the resource phase.</p><p class='flavor-text'>&quot;I am Thorin son of Thrain son of Thror, King under the Mountain!&quot; &ndash;Thorin, The Hobbit</p>")
+                .WithCommunityVersion("Hrodebert/Thorin-Oakenshield-1")
+                .WithCommunityVersion("Hrodebert/Thorin-Oakenshield-2")
+                .WithCommunityVersion("Hrodebert/Thorin-Oakenshield-3")
+                .WithInfo(2, 1, Artist.Tiziano_Baracchi);
             addAttachment("Thrór's Map", 1, Sphere.Lore, true)
                 .WithTraits("Artifact.", "Item.")
                 .WithText("Attach to a hero.\r\nTravel Action: Discard Thrór's Map to choose a location in the staging area. Make that location the active location. (If there is another active location, return it to the staging area.)")

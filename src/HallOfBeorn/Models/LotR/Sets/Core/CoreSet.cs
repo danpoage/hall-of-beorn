@@ -83,6 +83,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithCommunityVersion("RiddermarkLord/Eowyn-Spirit-Hero-1")
                 .WithCommunityVersion("RiddermarkLord/Eowyn-Spirit-Hero-2")
                 .WithCommunityVersion("RiddermarkLord/Eowyn-Spirit-Hero-3")
+                .WithCommunityVersion("Hrodebert/Eowyn-Spirit-Hero")
                 .WithInfo(7, 1, Artist.Gabrielle_Portal);
             addHero("Eleanor", 7, Sphere.Spirit, 1, 1, 2, 3)
                 .WithThumbnail()

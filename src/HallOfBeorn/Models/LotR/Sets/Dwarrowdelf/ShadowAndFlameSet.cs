@@ -25,6 +25,9 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithCommunityVersion("RiddermarkLord/Elrond-Lore-Hero-1")
                 .WithCommunityVersion("RiddermarkLord/Elrond-Lore-Hero-2")
                 .WithCommunityVersion("RiddermarkLord/Elrond-Lore-Hero-3")
+                .WithCommunityVersion("Hrodebert/Elrond-Jon-Hodgeson-1")
+                .WithCommunityVersion("Hrodebert/Elrond-Jon-Hodgeson-2")
+                .WithCommunityVersion("Hrodebert/Elrond-Magali")
                 .WithInfo(128, 1, Artist.Magali_Villeneuve);
             addEvent("We Are Not Idle", 0, Sphere.Leadership)
                 .WithTextLine("Action: Exhaust X Dwarf heroes to add X resources to a hero's resource pool and draw 1 card.")

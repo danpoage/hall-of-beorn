@@ -19,6 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTextLine("Combat Action: Play a Silvan ally from your hand. You do not need a resource match for this ally. (Limit once per round.)")
                 .WithFlavorLine("\"It is a crime to wander in my realm without leave.\"")
                 .WithFlavorLine("-The Hobbit")
+                .WithCommunityVersion("Hrodebert/Thranduil")
                 .WithInfo(56, 1, Artist.Magali_Villeneuve);
             addAttachment("The Elvenking", 1, Sphere.Leadership, true)
                 .WithTraits("Title.")

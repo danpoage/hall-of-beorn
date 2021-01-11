@@ -21,6 +21,8 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithFlavorLine("\"That is the path of despair. Of folly, I would say, if the long wisdom of Elrond did not forbid me.\"")
                 .WithFlavorLine("-The Fellowship of the Ring")
                 .WithTemplate("<p>Draw 3 additional cards at the beginning of the resource phase.</p><p>At the end of the round, discard all cards in your hand.</p><p class='flavor-text'>&quot;That is the path of despair. Of folly, I would say, if the long wisdom of Elrond did not forbid me.&quot;<br>&ndash;The Fellowship of the Ring</p>")
+                .WithCommunityVersion("Hrodebert/Erestor-Lore-Hero-1")
+                .WithCommunityVersion("Hrodebert/Erestor-Lore-Hero-2")
                 .WithInfo(84, 1, Artist.Arden_Beckwith);
             addEvent("Reinforcements", 3, Sphere.Leadership)
                 .WithTextLine("You must use resources from 3 different heroes' pools to play this card.")

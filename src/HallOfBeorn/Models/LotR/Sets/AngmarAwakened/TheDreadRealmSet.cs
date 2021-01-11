@@ -26,6 +26,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithCommunityVersion("Autumn/Arwen-Undomiel-Spirit-Hero-2")
                 .WithCommunityVersion("RiddermarkLord/Arwen-Undomiel-Spirit-Hero-1")
                 .WithCommunityVersion("RiddermarkLord/Arwen-Undomiel-Spirit-Hero-2")
+                .WithCommunityVersion("Hrodebert/Arwen-Undomiel-Spirit-Hero")
                 .WithInfo(140, 1, Artist.Magali_Villeneuve);
             addAlly("Éothain", 4, Sphere.Leadership, true, 2, 2, 1, 3)
                 .WithTraits("Rohan.", "Warrior.")

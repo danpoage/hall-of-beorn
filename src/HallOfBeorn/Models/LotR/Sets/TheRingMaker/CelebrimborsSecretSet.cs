@@ -23,6 +23,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithCommunityVersion("Galadriel-Grey-Company-Gen-Con-2015")
                 .WithCommunityVersion("Galadriel-Whispers-in-the-Trees")
                 .WithCommunityVersion("Galadriel-Nouveau-Hunters")
+                .WithCommunityVersion("Hrodebert/Galadriel-Spirit-Hero-1")
+                .WithCommunityVersion("Hrodebert/Galadriel-Spirit-Hero-2")
                 .WithInfo(112, 1, Artist.Magali_Villeneuve);
             addAttachment("Heir of Mardil", 1, Sphere.Leadership, true)
                 .WithTraits("Title.")

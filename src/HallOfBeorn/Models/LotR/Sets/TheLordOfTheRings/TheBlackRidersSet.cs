@@ -45,6 +45,10 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithFlavorLine("-The Fellowship of the Ring")
                 .WithCommunityVersion("Sam-Gamgee-Grey-Company-Gen-Con-2015")
                 .WithCommunityVersion("Autum/Sam-Gamgee-Leadership-Hero")
+                .WithCommunityVersion("Hrodebert/Sam-Gamgee-Leadership-Hero-1")
+                .WithCommunityVersion("Hrodebert/Sam-Gamgee-Leadership-Hero-2")
+                .WithCommunityVersion("Hrodebert/Sam-Gamgee-Leadership-Hero-3")
+                .WithCommunityVersion("Hrodebert/Sam-Gamgee-Leadership-Hero-4")
                 .WithInfo(2, 1, Artist.Alexandre_Dainche);
 
             /*

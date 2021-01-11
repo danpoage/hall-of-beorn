@@ -62,6 +62,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithTextLine("Response: After you travel to a location, spend 1 Spirit resource to raise the engagement cost of each enemy in play by X until the end of the round, where X is that location's quest points. Any player may trigger this response.")
                 .WithFlavorLine("\"Gave me a chance of walking round the country and seeing folk, and hearing the news, and knowing where the good beer was.\"")
                 .WithFlavorLine("-The Return of the King")
+                .WithCommunityVersion("Hrodebert/Robin-Smallburrow")
                 .WithInfo(89, 3, Artist.Aleksander_Karcz);
             addEvent("Interrogation", 1, Sphere.Lore)
                 .WithTextLine("Action: Choose an enemy with an attached Trap card. Look at the top X cards of the encounter deck, where X is that enemy's printed Threat. You may discard 1 of those cards. Return the rest to the top of the deck, in the same order.")

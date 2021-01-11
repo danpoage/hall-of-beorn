@@ -37,26 +37,14 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 Quantity = 1,
                 Artist = Artist.Sebastian_Giacobino
             });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Gandalf",
-                IsUnique = true,
-                Id = "92724E6A-0F32-4996-8C58-451858A96C36",
-                
-                CardType = CardType.Hero,
-                Sphere = Models.LotR.Sphere.Neutral,
-                ThreatCost = 14,
-                Willpower = 3,
-                Attack = 3,
-                Defense = 3,
-                HitPoints = 5,
-                Traits = new List<string> { "Istari." },
-                Text = "Play with the top card of your deck faceup. Once per phase, you may play the top card of your deck as if it was in your hand. When playing a card this way, Gandalf is considered to have the printed Leadership, Lore, Tactics, and Spirit icons.",
-                FlavorText = "\"I am a servant of the Secret Fire, wielder of the flame of Anor.\" -The Fellowship of the Ring",
-                CardNumber = 2,
-                Quantity = 1,
-                Artist = Artist.Matt_Stewart
-            });
+            addHero("Gandalf", 14, Sphere.Neutral, 3, 3, 3, 5)
+                .WithTraits("Istari.")
+                .WithTextLine("Play with the top card of your deck faceup. Once per phase, you may play the top card of your deck as if it was in your hand. When playing a card this way, Gandalf is considered to have the printed Leadership, Lore, Tactics, and Spirit icons.")
+                .WithFlavorLine("\"I am a servant of the Secret Fire, wielder of the flame of Anor.\"")
+                .WithFlavorLine("-The Fellowship of the Ring")
+                .WithCommunityVersion("Hrodebert/Gandalf-Hero-1")
+                .WithCommunityVersion("Hrodebert/Gandalf-Hero-2")
+                .WithInfo(2, 1, Artist.Matt_Stewart);
             Cards.Add(new LotRCard()
             {
                 Title = "Galadriel",

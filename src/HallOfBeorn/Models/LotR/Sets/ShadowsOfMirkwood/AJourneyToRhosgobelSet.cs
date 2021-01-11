@@ -19,6 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 .WithTextLine("Response: After a character leaves play, ready Prince Imrahil. (Limit once per round.)")
                 .WithFlavor("But beyond, in the great fief of Belfalas, dwelt Prince Imrahil in his castle of Dol Amroth by the sea, and he was of high blood, and his fold also, tall men and proud with sea-grey eyes. -The Return of the King.")
                 .WithCommunityVersion("Prince-Imrahil-Grey-Company-Gen-Con-2015")
+                .WithCommunityVersion("Hrodebert/Prince-Imrahil-Leadership-Hero")
                 .WithInfo(50, 1, Artist.David_A_Nash);
             addAttachment("Dúnedain Quest", 2, Sphere.Leadership, false)
                 .WithTraits("Signal.")

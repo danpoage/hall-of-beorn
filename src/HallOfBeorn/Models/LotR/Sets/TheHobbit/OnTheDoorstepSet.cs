@@ -23,6 +23,9 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
                 .WithFlavorLine("-The Hobbit")
                 .WithCommunityVersion("RiddermarkLord/Balin-1")
                 .WithCommunityVersion("RiddermarkLord/Balin-2")
+                .WithCommunityVersion("Hrodebert/Balin-Full-Bleed")
+                .WithCommunityVersion("Hrodebert/Balin-Standard-Layout")
+                .WithCommunityVersion("Hrodebert/Balin-Zoom-Bleed")
                 .WithInfo(2, 1, Artist.Winona_Nelson);
             Cards.Add(new LotRCard() {
                 Title = "Bard the Bowman",
@@ -226,24 +229,13 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
                 CardNumber = 21,
                 Artist = Artist.Tiziano_Baracchi
             });
-            Cards.Add(new LotRCard() {
-                Title = "Óin",
-                Id = "b21a2af5-7443-4630-9503-1b334ae51c6e",
-                CardType = CardType.Hero,
-                Sphere = Sphere.Spirit,
-                IsUnique = true,
-                ThreatCost = 8,
-                Quantity = 1,
-                Traits = new List<string>() { "Dwarf." },
-                Willpower = 2,
-                HitPoints = 4,
-                Attack = 1,
-                Defense = 1,
-                Text = "While you control at least 5 Dwarf characters, Oin gets +1 Attack and gains the Tactics resource icon.",
-                FlavorText = "Dwarves can make fire almost anywhere out of almost anything, wind or no wind... -The Hobbit",
-                CardNumber = 4,
-                Artist = Artist.Jeff_Lee_Johnson
-            });
+            addHero("Óin", 8, Sphere.Spirit, 2, 1, 1, 4)
+                .WithTraits("Dwarf.")
+                .WithTextLine("While you control at least 5 Dwarf characters, Óin gets +1 Attack and gains the Tactics resource icon.")
+                .WithFlavorLine("Dwarves can make fire almost anywhere out of almost anything, wind or no wind...")
+                .WithFlavorLine("-The Hobbit")
+                .WithCommunityVersion("Hrodebert/Oin-Spirit-Hero")
+                .WithInfo(4, 1, Artist.Jeff_Lee_Johnson);
             Cards.Add(new LotRCard() {
                 
                 Title = "Ravens of the Mountain",

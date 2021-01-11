@@ -17,6 +17,7 @@ namespace HallOfBeorn.Models.LotR.Sets.KhazadDum
                 .WithTraits("Dwarf.")
                 .WithTextLine("Response: After Dwalin attacks and destroys an Orc enemy, lower your threat by 2.")
                 .WithCommunityVersion("RiddermarkLord/Dwalin-Spirit-Hero")
+                .WithCommunityVersion("Hrodebert/Dwalin-Spirit-Hero")
                 .WithInfo(1, 1, Artist.Tony_Foti);
             addHero("Bifur", 7, Sphere.Lore, 2, 1, 2, 3)
                 .WithTraits("Dwarf.")

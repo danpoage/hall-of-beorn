@@ -22,6 +22,9 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 .WithCommunityVersion("RiddermarkLord/Dain-Ironfoot-Leadership-Hero-1")
                 .WithCommunityVersion("RiddermarkLord/Dain-Ironfoot-Leadership-Hero-2")
                 .WithCommunityVersion("RiddermarkLord/Dain-Ironfoot-Leadership-Hero-3")
+                .WithCommunityVersion("Hrodebert/Dain-Ironfoot-Leadership-Hero-1")
+                .WithCommunityVersion("Hrodebert/Dain-Ironfoot-Leadership-Hero-2")
+                .WithCommunityVersion("Hrodebert/Dain-Ironfoot-Leadership-Hero-3")
                 .WithInfo(116, 1, Artist.Tiziano_Baracchi);
             addAttachment("Dúnedain Signal", 1, Sphere.Leadership, false)
                 .WithTraits("Signal.")
