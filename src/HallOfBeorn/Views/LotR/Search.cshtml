@@ -468,7 +468,7 @@
         if (!@Model.View.HasValue || (@Model.View.HasValue && @Model.View != View.Card_Image))
         {
             <hr style="color:#616161;" />
-    
+            @* <div>[ @card.Score ]</div> *@
             if (!string.IsNullOrEmpty(@card.SearchDescription))
             {
                 <div class="search-explanation search-explanation-default" style="display: none">

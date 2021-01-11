@@ -109,40 +109,48 @@ namespace HallOfBeorn.Services.LotR.Search
 
             if (!model.Sort.HasValue)
             {
-                AddSort(sorts, (score) => score.Score(), false, true);
+                AddDescendingSort(sorts, (score) => score.Score());
             }
 
-            if (model.Sort.GetValueOrDefault(Sort.None) == Sort.Alphabetical || settings.DefaultSort == "Alphabetical")
+            if (model.Sort.GetValueOrDefault(Sort.None) == Sort.Alphabetical || 
+                (!model.Sort.HasValue && settings.DefaultSort == "Alphabetical"))
             {
-                AddSort(sorts, (score) => score.Card.Title, true, true);
-                AddSort(sorts, (score) => (int)score.Card.CardType, true, false);
+                AddAscendingSort(sorts, (score) => score.Card.Title);
+                AddDescendingSort(sorts, (score) => (int)score.Card.CardType);
             }
-            if (model.Sort.GetValueOrDefault(Sort.None) == Sort.Popularity 
-                || settings.DefaultSort == "Popularity" || string.IsNullOrEmpty(settings.DefaultSort))
+            if (model.Sort.GetValueOrDefault(Sort.None) == Sort.Popularity ||
+                (!model.Sort.HasValue && settings.DefaultSort == "Popularity"))
             {
-                AddSort(sorts, (score) => _getPopularity(score.Card.Slug), false, true);
-                AddSort(sorts, (score) => _getVotes(score.Card), false, false);
+                AddDescendingSort(sorts, (score) => _getPopularity(score.Card.Slug));
+                AddDescendingSort(sorts, (score) => _getVotes(score.Card));
             }
-            if (model.Sort.GetValueOrDefault(Sort.None) == Sort.StatScore || settings.DefaultSort == "StatScore")
+            if (model.Sort.GetValueOrDefault(Sort.None) == Sort.StatScore || 
+                (!model.Sort.HasValue && settings.DefaultSort == "StatScore"))
             {
-                AddSort(sorts, (score) => score.Card.StatScore(), false, true);
+                AddDescendingSort(sorts, (score) => score.Card.StatScore());
             }
-            if (model.Sort.GetValueOrDefault(Sort.None) == Sort.StatEfficiency || settings.DefaultSort =="StatEfficiency")
+            if (model.Sort.GetValueOrDefault(Sort.None) == Sort.StatEfficiency || 
+                (!model.Sort.HasValue && settings.DefaultSort =="StatEfficiency"))
             {
-                AddSort(sorts, (score) => score.Card.StatEfficiency(), false, true);
+                AddDescendingSort(sorts, (score) => score.Card.StatEfficiency());
             }
-            if (model.Sort.GetValueOrDefault(Sort.None) == Sort.Released || settings.DefaultSort == "Released")
-                AddSort(sorts, (score) => score.Card.CardSet.Product.Code, false, true);
-            if (model.Sort.GetValueOrDefault(Sort.None) == Sort.Set_Number || settings.DefaultSort == "SetNumber")
+            if (model.Sort.GetValueOrDefault(Sort.None) == Sort.Released || 
+                (!model.Sort.HasValue && settings.DefaultSort == "Released"))
             {
-                AddSort(sorts, (score) => score.Card.CardSet.Product.Code, true, true);
-                AddSort(sorts, (score) => score.Card.CardNumber, true, false);
+                AddDescendingSort(sorts, (score) => score.Card.CardSet.Product.Code);
             }
-            if (model.Sort.GetValueOrDefault(Sort.None) == Sort.Sphere_Type_Cost || settings.DefaultSort == "SphereTypeCost")
+            if (model.Sort.GetValueOrDefault(Sort.None) == Sort.Set_Number || 
+                (!model.Sort.HasValue && settings.DefaultSort == "SetNumber"))
             {
-                AddSort(sorts, (score) => score.Card.Sphere, true, true);
-                AddSort(sorts, (score) => score.Card.CardType, true, false);
-                AddSort(sorts, (score) => score.Card.SortCost(), true, false);
+                AddAscendingSort(sorts, (score) => score.Card.CardSet.Product.Code);
+                AddAscendingSort(sorts, (score) => score.Card.CardNumber);
+            }
+            if (model.Sort.GetValueOrDefault(Sort.None) == Sort.Sphere_Type_Cost || 
+                (!model.Sort.HasValue && settings.DefaultSort == "SphereTypeCost"))
+            {
+                AddAscendingSort(sorts, (score) => score.Card.Sphere);
+                AddAscendingSort(sorts, (score) => score.Card.CardType);
+                AddAscendingSort(sorts, (score) => score.Card.SortCost());
             }
             return sorts;
         }
@@ -189,9 +197,16 @@ namespace HallOfBeorn.Services.LotR.Search
             filters.Add(filter);
         }
 
-        private void AddSort<TKey>(ICollection<IComponent> sorts, Func<CardScore, TKey> keySelector, bool isAscending, bool isTopLevel)
+        private void AddAscendingSort<TKey>(ICollection<IComponent> sorts, Func<CardScore, TKey> keySelector)
         {
-            sorts.Add(new Sort<TKey>(keySelector, isAscending, isTopLevel));
+            var isTopLevel = sorts.Count == 0;
+            sorts.Add(new Sort<TKey>(keySelector, true, isTopLevel));
+        }
+
+        private void AddDescendingSort<TKey>(ICollection<IComponent> sorts, Func<CardScore, TKey> keySelector)
+        {
+            var isTopLevel = sorts.Count == 0;
+            sorts.Add(new Sort<TKey>(keySelector, false, isTopLevel));
         }
 
         private void AddOffset(ICollection<IComponent> offsets, int count)

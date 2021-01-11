@@ -179,35 +179,10 @@ $(function () {
         console.log('init Product Filter: All Products');
         $('#ProductAll').prop('checked', true);
         document.cookie = 'ProductFilter=ProductAll;path:/';
+        document.cookie = 'OwnedProducts=;path:/';
     }
 
-    $('#ProductAll').click(function () {
-        console.log('Product Filter: All Products');
-        document.cookie = 'ProductFilter=ProductAll;path:/';
-    });
-    $('#ProductSpecific').click(function () {
-        console.log('Product Filter: Specific Products');
-        document.cookie = 'ProductFilter=ProductSpecific;path:/';
-    });
-
-    var ownedProductsCookie = getCookie('OwnedProducts');
-    if (ownedProductsCookie) {
-        console.log('Owned Products: ' + ownedProductsCookie);
-        $('#' + ownedProductsCookie).prop('checked', true);
-
-        if (productFilterCookie == 'ProductSpecific') {
-            $('.owned-product').prop('checked', false);
-
-            var checkedCodes = ownedProductsCookie.split(',');
-            for (var i = 0; i < checkedCodes.length; i++) {
-                console.log('Owned Product from Cookie:' + checkedCodes[i]);
-                $('#' + checkedCodes[i]).prop('checked', true);
-            }
-        }
-    }
-
-    $('.owned-product').click(function () {
-        console.log('owned product clicked');
+    function checkOwnedProducts() {
         var productCodes = [
                 'MEC01', 'MEC02', 'MEC03', 'MEC04', 'MEC05', 'MEC06', 'MEC07', 'MEC08', 'MEC09', 'MEC10',
                 'MEC11', 'MEC12', 'MEC13', 'MEC14', 'MEC15', 'MEC16', 'MEC17', 'MEC18', 'MEC19', 'MEC20',
@@ -231,7 +206,7 @@ $(function () {
         var ownedProductsValue = '';
 
         productCodes.forEach(function (item, index) {
-            
+
             if ($('#' + item).attr('checked')) {
                 console.log('Product Marked Owned: ' + item);
                 if (ownedProductsValue) {
@@ -244,5 +219,37 @@ $(function () {
 
         console.log('Settings Owned Products: ' + ownedProductsValue);
         document.cookie = 'OwnedProducts=' + ownedProductsValue + ';path:/';
+    };
+
+    $('#ProductAll').click(function () {
+        console.log('Product Filter: All Products');
+        document.cookie = 'ProductFilter=ProductAll;path:/';
+        checkOwnedProducts();
+    });
+    $('#ProductSpecific').click(function () {
+        console.log('Product Filter: Specific Products');
+        document.cookie = 'ProductFilter=ProductSpecific;path:/';
+        checkOwnedProducts();
+    });
+
+    var ownedProductsCookie = getCookie('OwnedProducts');
+    if (ownedProductsCookie) {
+        console.log('Owned Products: ' + ownedProductsCookie);
+        $('#' + ownedProductsCookie).prop('checked', true);
+
+        if (productFilterCookie == 'ProductSpecific') {
+            $('.owned-product').prop('checked', false);
+
+            var checkedCodes = ownedProductsCookie.split(',');
+            for (var i = 0; i < checkedCodes.length; i++) {
+                console.log('Owned Product from Cookie:' + checkedCodes[i]);
+                $('#' + checkedCodes[i]).prop('checked', true);
+            }
+        }
+    }
+
+    $('.owned-product').click(function () {
+        console.log('owned product clicked');
+        checkOwnedProducts();
     });
 });

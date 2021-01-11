@@ -30,20 +30,21 @@ namespace HallOfBeorn.Services.LotR.Search
 
         private Func<LotRCard, bool> GetProductFilter(UserSettings settings)
         {
-            //if (!settings.FilterOwnedProducts)
-            //{
+            if (!settings.FilterOwnedProducts || settings.OwnedProducts == null || settings.OwnedProducts.Count == 0)
+            {
                 return (c) => true;
-            //}
+            }
 
-            //return (c) => settings.OwnedProducts.Contains(c.CardSet.Product.Code);
+            return (c) => c.CardSet != null && c.CardSet.Product != null && settings.OwnedProducts.Contains(c.CardSet.Product.Code);
         }
 
         public IOrderedEnumerable<CardScore> Search(SearchViewModel model, UserSettings settings)
         {
-            //Func<LotRCard, bool> productFilter = GetProductFilter(settings);
+            Func<LotRCard, bool> productFilter = GetProductFilter(settings);
 
             var all = _cardRepository
                 .Cards()
+                .Where(productFilter)
                 .Select(card => new CardScore(card, 1, string.Empty))
                 .OrderBy(s => 1);
 

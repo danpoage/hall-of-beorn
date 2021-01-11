@@ -98,9 +98,8 @@ namespace HallOfBeorn.Models.LotR
                 }
             }
 
-            /*
             HttpCookie productFilterCookie = request.Cookies["ProductFilter"];
-            if (defaultLimitCookie != null)
+            if (productFilterCookie != null)
             {
                 switch (productFilterCookie.Value)
                 {
@@ -112,22 +111,23 @@ namespace HallOfBeorn.Models.LotR
                         settings.FilterOwnedProducts = false;
                         break;
                 }
-            }*/
+            }
 
-            /*
-            HttpCookie ownedProductsCookie = request.Cookies["OwnedProducts"];
-            if (ownedProductsCookie != null 
-                && !string.IsNullOrEmpty(ownedProductsCookie.Value))
+            if (settings.FilterOwnedProducts)
             {
-                foreach (var code in ownedProductsCookie.Value.Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries))
+                HttpCookie ownedProductsCookie = request.Cookies["OwnedProducts"];
+                if (ownedProductsCookie != null 
+                    && !string.IsNullOrEmpty(ownedProductsCookie.Value))
                 {
-                    if (!settings.ownedProducts.Contains(code))
+                    foreach (var code in ownedProductsCookie.Value.Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries))
                     {
-                        settings.ownedProducts.Add(code);
+                        if (!settings.ownedProducts.Contains(code))
+                        {
+                            settings.ownedProducts.Add(code);
+                        }
                     }
                 }
             }
-             */
 
             return settings;
         }
