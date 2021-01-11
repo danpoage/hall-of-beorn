@@ -15,5 +15,6 @@ namespace HallOfBeorn.Models
         Product = 11,
         Character = 21,
         Community = 31,
+        Alt_Art = 32,
     }
 }

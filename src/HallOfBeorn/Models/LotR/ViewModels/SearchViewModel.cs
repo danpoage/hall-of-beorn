@@ -597,6 +597,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             return (View.HasValue && View == Models.View.Community);
         }
 
+        public bool IsAltArtView()
+        {
+            return View.GetValueOrDefault(Models.View.None) == Models.View.Alt_Art;
+        }
+
         [Display(Name = "Artist")]
         public string Artist { get; set; }
 

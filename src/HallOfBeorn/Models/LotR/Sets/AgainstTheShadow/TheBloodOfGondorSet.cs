@@ -21,6 +21,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 .WithFlavorLine("-Denethor, The Return of the King")
                 .WithErrata(1)
                 .WithCommunityVersion("Autumn/Caldara")
+                .WithCommunityVersion("RiddermarkLord/Caldara")
                 .WithInfo(107, 1, Artist.Magali_Villeneuve);
             addAlly("Squire of the Citadel", 1, Sphere.Leadership, false, 0, 0, 1, 1)
                 .WithTraits("Gondor.")

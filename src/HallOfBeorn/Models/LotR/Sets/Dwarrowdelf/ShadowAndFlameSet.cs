@@ -22,6 +22,9 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithFlavorLine("-The Fellowship of the Ring")
                 .WithTemplate("<p>You may spend resources from {self}'s resource pool to pay for {sphere:Spirit}, {sphere:Leadership}, and {sphere:Tactics} {type:Ally@allies.}</p><p><b>Response:</b> After a character is healed by another card effect, heal 1 damage on it.</p><p class='flavor-text'>&quot;But you do not stand alone.&quot;<br>&ndash;The Fellowship of the Ring</p>")
                 .WithCommunityVersion("Autumn/Elrond-Lore-Hero")
+                .WithCommunityVersion("RiddermarkLord/Elrond-Lore-Hero-1")
+                .WithCommunityVersion("RiddermarkLord/Elrond-Lore-Hero-2")
+                .WithCommunityVersion("RiddermarkLord/Elrond-Lore-Hero-3")
                 .WithInfo(128, 1, Artist.Magali_Villeneuve);
             addEvent("We Are Not Idle", 0, Sphere.Leadership)
                 .WithTextLine("Action: Exhaust X Dwarf heroes to add X resources to a hero's resource pool and draw 1 card.")

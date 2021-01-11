@@ -24,18 +24,22 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("The first player gains control of Aragorn. If Aragorn leaves play, the players lose the game.\r\nWhile Aragorn has an Artifact attached, he gains sentinel and does not exhaust to quest.")
                 .WithFlavor("\"I have no help to send, therefore I must go myself...\"\r\n-The Return of the King")
                 .WithInfo(1, 1, Artist.Javier_Charro_Martinez));
-            Cards.Add(LotRCard.Hero("Éowyn", "", Sphere.Tactics, 9, 4, 1, 1, 3)
+            addHero("Éowyn", 9, Sphere.Tactics, 4, 1, 1, 3)
                 .WithTraits("Rohan.", "Noble.")
                 .WithText("Setup: Reduce your threat by 3.\r\nAction: Raise your threat by 3 to ready Éowyn. She gets +9 Attack until the end of the phase. (Limit once per game for the group.)")
                 .WithFlavor("\"But no living man am I! You look upon a woman. Éowyn I am, Éomund's daughter.\"\r\n-The Return of the King")
                 .WithCommunityVersion("Autumn/Eowyn-Tactics-Hero")
-                .WithInfo(2, 1, Artist.Magali_Villeneuve));
+                .WithCommunityVersion("RiddermarkLord/Eowyn-Tactics-Hero-1")
+                .WithCommunityVersion("RiddermarkLord/Eowyn-Tactics-Hero-2")
+                .WithCommunityVersion("RiddermarkLord/Eowyn-Tactics-Hero-3")
+                .WithInfo(2, 1, Artist.Magali_Villeneuve);
             addHero("Beregond", 10, Sphere.Spirit, 0, 1, 4, 4)
                 .WithTraits("Gondor.", "Warrior.")
                 .WithKeywords("Sentinel.")
                 .WithText("Response: After Beregond defends an attack and takes no damage, reduce the defending player's threat by 1. (Limit once per round.)")
                 .WithFlavor("\"The Lord does not permit those who wear the black and silver to leave their post for any cause...\"\r\n-The Return of the King")
                 .WithTemplate("<p class='main-text'>{keyword:Sentinel.}</p><p class='main-text'><b>Response:</b> After {self} defends an attack and takes no damage, reduce the defending player's threat by 1. (Limit once per round.)</p><p class='flavor-text'>&ldquo;The Lord does not permit those who wear the black and silver to leave their post for any cause...&rdquo;<br>&ndash;The Return of the King</p>")
+                .WithCommunityVersion("RiddermarkLord/Beregond-Spirit-Hero")
                 .WithInfo(3, 1, Artist.Adam_Lane);
             Cards.Add(LotRCard.Ally("Grimbold", Sphere.Tactics, 3, 2, 1, 1, 2)
                 .WithUnique()

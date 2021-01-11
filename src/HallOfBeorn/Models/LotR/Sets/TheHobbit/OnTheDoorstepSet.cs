@@ -16,25 +16,14 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
             SetType = Models.SetType.Saga_Expansion;
             Cycle = "The Hobbit";
 
-            Cards.Add(new LotRCard() {
-                
-                Title = "Balin",
-                Id = "bf2cb5a8-2ec6-4366-89f6-7e3010686a85",
-                CardType = CardType.Hero,
-                Sphere = Sphere.Leadership,
-                IsUnique = true,
-                ThreatCost = 9,
-                Quantity = 1,
-                Traits = new List<string>() { "Dwarf." },
-                Willpower = 2,
-                HitPoints = 4,
-                Attack = 1,
-                Defense = 2,
-                Text = "Response: Pay 1 resource from Balin's resource pool to cancel a shadow effect just triggered during an attack. Then, deal the attacking enemy another shadow card. (Limit once per attack.)",
-                FlavorText = "\"Well, it is the first time that even a mouse has crept along carefully and quietly under my very nose and not been spotted.\" -The Hobbit",
-                CardNumber = 2,
-                Artist = Artist.Winona_Nelson
-            });
+            addHero("Balin", 9, Sphere.Leadership, 2, 1, 2, 4)
+                .WithTraits("Dwarf.")
+                .WithTextLine("Response: Pay 1 resource from Balin's resource pool to cancel a shadow effect just triggered during an attack. Then, deal the attacking enemy another shadow card. (Limit once per attack.)")
+                .WithFlavorLine("\"Well, it is the first time that even a mouse has crept along carefully and quietly under my very nose and not been spotted.\"")
+                .WithFlavorLine("-The Hobbit")
+                .WithCommunityVersion("RiddermarkLord/Balin-1")
+                .WithCommunityVersion("RiddermarkLord/Balin-2")
+                .WithInfo(2, 1, Artist.Winona_Nelson);
             Cards.Add(new LotRCard() {
                 Title = "Bard the Bowman",
                 Id = "e2cf87be-ccdc-48e9-8127-57bee67d4a0c",

@@ -20,11 +20,14 @@ namespace HallOfBeorn.Models.LotR.Sets.HeirsOfNumenor
                 .WithTextLine("Lower the cost to play Weapon and Armor attachments on Beregond by 2.")
                 .WithFlavorLine("\"It is over-late to send for aid when you are already besieged.\" -The Return of the King")
                 .WithTemplate("<p>{keyword:Sentinel.}</p><p>Lower the cost to play {traits-attachment:Weapon,Armor@attachments} on {self} by 2.</p><p class='flavor-text'>&quot;It is over-late to send for aid when you are already besiged.&quot; &ndash;The Return of the King</p>")
+                .WithCommunityVersion("RiddermarkLord/Beregond-Tactics-Hero-1")
+                .WithCommunityVersion("RiddermarkLord/Beregond-Tactics-Hero-2")
                 .WithInfo(1, 1, Artist.Magali_Villeneuve);
             addHero("Boromir", 11, Sphere.Leadership, 1, 3, 2, 5)
                 .WithTraits("Gondor.", "Warrior.", "Noble.")
                 .WithTextLine("While Boromir has at least 1 resource in his resource pool, Gondor allies get +1 Attack.")
                 .WithFlavorLine("\"By our valour the wild fold of the East are still restrained, and the terror of Morgul kept at bay...\" -The Fellowship of the Ring")
+                .WithCommunityVersion("RiddermarkLord/Boromir-Leadership-Hero")
                 .WithInfo(2, 1, Artist.Magali_Villeneuve);
             addAlly("Errand-rider", 1, Sphere.Leadership, false, 0, 0, 0, 2)
                 .WithTraits("Gondor.")

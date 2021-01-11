@@ -19,6 +19,8 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTextLine("While Dáin Ironfoot is defending, he gains, \"Action: Discard the top card of your deck to give Dáin Ironfoot +1 Defense for this attack. (Limit 3 times per phase.)\"")
                 .WithFlavorLine("\"The time of my thought is my own to spend.\"")
                 .WithFlavorLine("-The Fellowship of the Ring")
+                .WithCommunityVersion("RiddermarkLord/Dain-Ironfoot-Spirit-Hero-1")
+                .WithCommunityVersion("RiddermarkLord/Dain-Ironfoot-Spirit-Hero-2")
                 .WithInfo(84, 1, Artist.Alexander_Kozachenko);
             addAlly("Soldier of Erebor", 5, Sphere.Leadership, false, 0, 3, 3, 3)
                 .WithTraits("Dwarf.", "Warrior.")

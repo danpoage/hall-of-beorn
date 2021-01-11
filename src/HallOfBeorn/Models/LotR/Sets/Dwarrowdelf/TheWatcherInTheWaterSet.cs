@@ -22,6 +22,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithFlavorLine("\"I am older than I look, I might prove useful.\"")
                 .WithFlavorLine("-The Fellowship of the Ring")
                 .WithTemplate("<p>{keyword:Sentinel.}</p><p><b>Refresh Action:</b> Reduce your threat to your starting threat level. (Limit once per game.)</p><p class='flavor-text'>&quot;I am older than I look, I might prove useful.&quot;<br/>&ndash;The Fellowship of the Ring</p>")
+                .WithCommunityVersion("RiddermarkLord/Aragorn-Lore")
                 .WithInfo(53, 1, Artist.Tony_Foti);
             addEvent("Grave Cairn", 1, Sphere.Leadership)
                 .WithTextLine("Response: After a character leaves play, add its Attack to another character's Attack until the end of the round.")

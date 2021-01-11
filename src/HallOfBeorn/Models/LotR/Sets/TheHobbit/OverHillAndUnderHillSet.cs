@@ -185,6 +185,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
                 .WithCommunityVersion("Beorn-Lure-2019")
                 .WithCommunityVersion("Beorn-HoB-Alt-Art")
                 .WithCommunityVersion("Autumn/Beorn-Tactics-Hero")
+                .WithCommunityVersion("RiddermarkLord/Beorn-Tactics-Hero")
                 .WithInfo(5, 1, Artist.Emrah_Elmasli);
 
             /*

@@ -19,6 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithTextLine("While Elrohir is in play, Elladan gets +2 Attack.")
                 .WithTextLine("Response: After Elladan is declared as an attacker, pay 1 resource from his resource pool to ready him.")
                 .WithTemplate("<p>While {title:Elrohir} is in play, {self} gets +2 {Attack}.</p><p><b>Response:</b> After {self} is declared as an attacker, pay 1 resource from his resource pool to ready him.</p><p class='flavor-text'>&quot;Yes, the Dead ride behind.&quot;<br>&ndash;The Return of the King</p>")
+                .WithCommunityVersion("RiddermarkLord/Elladan-Tactics-Hero")
                 .WithInfo(28, 1, Artist.Magali_Villeneuve);
             addAlly("Dúnedain Wanderer", 5, Sphere.Leadership, false, 1, 2, 2, 2)
                 .WithTraits("Dúnedain.", "Ranger.")

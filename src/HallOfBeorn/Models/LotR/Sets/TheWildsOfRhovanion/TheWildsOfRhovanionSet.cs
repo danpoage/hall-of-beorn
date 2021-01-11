@@ -19,11 +19,13 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
                 .WithTextLine("Response: After you play an attachment on a Dale character without an attachment, draw a card.")
                 .WithFlavorLine("\"He is a strong king, and his realm now reaches south and east of Esgaroth.\"")
                 .WithFlavorLine("-Glóin, The Fellowship of the Ring")
+                .WithCommunityVersion("RiddermarkLord/Brand-Son-of-Bain-Leadership-Hero")
                 .WithInfo(1, 1, Artist.Antonio_Jose_Manzanedo);
             addHero("Bard son of Brand", 9, Sphere.Spirit, 2, 2, 2, 3)
                 .WithTraits("Dale.", "Noble.")
                 .WithTextLine("While playing an Item attachment, Bard son of Brand is considered to have the printed Leadership, Lore, and Tactics icons.")
                 .WithTextLine("Response: When a character leaves play, return each attachment attached to that character to its owners hand. (Limit once per phase.)")
+                .WithCommunityVersion("RiddermarkLord/Bard-Son-of-Brand")
                 .WithInfo(2, 1, Artist.Antonio_Jose_Manzanedo);
             addAlly("Redwater Sentry", 3, Sphere.Leadership, false, 0, 1, 2, 3)
                 .WithTraits("Dale.", "Warrior.")

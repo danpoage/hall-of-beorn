@@ -19,6 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheGreyHavens
                 .WithTextLine("Forced: After drawing cards at the beginning of the resource phase, choose and discard 1 of those cards.")
                 .WithFlavorLine("Very tall he was, and his beard was long, and he was grey and old, save that his eyes were keen as stars...")
                 .WithFlavorLine("-The Return of the King")
+                .WithCommunityVersion("RiddermarkLord/Cirdan-the-Shipwright")
                 .WithInfo(1, 1, Artist.Aleksander_Karcz);
             addHero("Galdor of the Havens", 9, Sphere.Lore, 2, 2, 1, 4)
                 .WithTraits("Noldor.")

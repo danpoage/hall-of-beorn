@@ -20,6 +20,8 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTextLine("While you are engaged with at least 2 enemies, add 1 additional resource to Amarthiúl's resource pool when you collect resources during the resource phase.")
                 .WithFlavorLine("\"The heirs of Elendil do not forget all things past...\" -Aragorn, The Return of the King")
                 .WithTemplate("<p>While you are engaged with at least 1 enemy, {self} gains the {sphere:Tactics} resource icon.</p><p>While you are engaged with at least 2 enemies, add 1 additional resource to {self}'s resource pool when you collect resources during the resource phase.</p><p class='flavor-text'>&quot;The heirs of Elendil do not forget all things past...&quot;<br>&ndash;Aragorn, The Return of the King</p>")
+                .WithCommunityVersion("RiddermarkLord/Amarthiul-1")
+                .WithCommunityVersion("RiddermakrLord/Amarthiul-2")
                 .WithInfo(115, 1, Artist.Tomasz_Jedruszek);
             addAlly("Guardian of Arnor", 3, Sphere.Leadership, false, 1, 1, 1, 3)
                 .WithTraits("Dúnedain.", "Ranger.")

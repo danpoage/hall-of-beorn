@@ -20,6 +20,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithTextLine("Sentinel.")
                 .WithTextLine("While Erkenbrand is defending, he gains: \"Response: Deal 1 damage to Erkenbrand to cancel a shadow effect just triggered.\"")
                 .WithFlavorLine("Down from the hills leaped Erkenbrand, lord of Westfold. -The Two Towers")
+                .WithCommunityVersion("RiddermarkLord/Erkenbrand-1")
+                .WithCommunityVersion("RiddermarkLord/Erkenbrand-2")
                 .WithInfo(137, 1, Artist.Sebastian_Giacobino);
             addAlly("Warden of Helm's Deep", 3, Sphere.Leadership, false, 0, 1, 3, 2)
                 .WithTraits("Rohan.", "Warrior.")

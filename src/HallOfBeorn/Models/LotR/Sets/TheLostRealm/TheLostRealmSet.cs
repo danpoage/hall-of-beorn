@@ -19,6 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLostRealm
                 .WithTextLine("Response: After Aragorn participates in an attack that destroys an enemy, choose an enemy not engaged with you and engage that enemy.")
                 .WithFlavorLine("\"I serve no man,\" said Aragorn; \"but the servants of Sauron I pursue into whatever land they may go.\" -The Two Towers")
                 .WithCommunityVersion("Aragorn-Grey-Company-Gen-Con-2015")
+                .WithCommunityVersion("RiddermarkLord/Aragorn-Tactics")
                 .WithInfo(1, 1, Artist.Sebastian_Giacobino);
             addHero("Halbarad", 10, Sphere.Leadership, 2, 2, 2, 4)
                 .WithTraits("Dúnedain.", "Ranger.")

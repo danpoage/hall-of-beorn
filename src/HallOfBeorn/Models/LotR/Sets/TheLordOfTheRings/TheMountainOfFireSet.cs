@@ -34,11 +34,13 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithFlavor("\"As I have begun, so I will go on.\"\r\n-The Return of the King")
                 .WithTemplate("<p class='main-text'>{keyword:Sentinel.} The first player gains control of {self}.</p><p class='main-text'><b>Action:</b> Spend 1 resource from {self}'s pool to ready him. (Limit once per phase.)</p><p class='main-text'><b>If {self} leaves play the players lose the game.</b></p><p class='flavor-text'>&ldquo;As I have begun, so I will go on.&rdquo;<br>&ndash;The Return of the King</p>")
                 .WithInfo(2, 1, Artist.David_A_Nash));
-            addCard(LotRCard.Hero("Éomer", string.Empty, Sphere.Leadership, 10, 1, 3, 2, 4)
+            addHero("Éomer", 10, Sphere.Leadership, 1, 3, 2, 4)
                 .WithTraits("Rohan.", "Noble.", "Warrior.")
-                .WithText("Response: After Éomer commits to the quest, spend 1 resource from his resource pool to immediately declare him as an attacker (and resolve his attack) against an enemy in the staging area.")
-                .WithFlavor("...he was young, and he was king; the lord of a fell people.\r\n-The Return of the King")
-                .WithInfo(3, 1, Artist.Ryan_Valle));
+                .WithTextLine("Response: After Éomer commits to the quest, spend 1 resource from his resource pool to immediately declare him as an attacker (and resolve his attack) against an enemy in the staging area.")
+                .WithFlavorLine("...he was young, and he was king; the lord of a fell people.")
+                .WithFlavorLine("-The Return of the King")
+                .WithCommunityVersion("RiddermarkLord/Eomer-Leadership-Hero")
+                .WithInfo(3, 1, Artist.Ryan_Valle);
             addHero("Tom Cotton", 8, Sphere.Tactics, 1, 1, 3, 3)
                 .WithTraits("Hobbit.")
                 .WithText("While you are engaged with an enemy with an engagement cost higher than your threat, the first Hobbit ally you play each round does not require a resource match.\r\nResponse: After a Hobbit ally enters play, it gets +2 Attack until the end of the round.")

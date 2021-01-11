@@ -18,6 +18,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithTraits("Silvan.", "Noble.")
                 .WithTextLine("Response: After a Silvan ally enters play, that ally gets +1 Willpower, +1 Attack and +1 Defense until the end of the round.")
                 .WithFlavorLine("\"...the lord of the Galadhrim is accounted wisest of the Elves of Middle-earth, and a giver of gifts beyond the power of kings.\" -Galadriel, The Fellowship of the Ring")
+                .WithCommunityVersion("RiddermarkLord/Celeborn-1")
+                .WithCommunityVersion("RiddermarkLord/Celeborn-2")
                 .WithInfo(1, 1, Artist.Magali_Villeneuve);
             addAlly("Naith Guide", 2, Sphere.Leadership, false, 1, 1, 0, 1)
                 .WithTraits("Silvan.", "Scout.")

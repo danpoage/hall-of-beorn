@@ -19,6 +19,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithTextLine("While Elladan is in play, Elrohir gets +2 Defense.")
                 .WithTextLine("Response: After Elrohir is declared as a defender, pay 1 resource from his resource pool to ready him.")
                 .WithTemplate("<p>While {title:Elladan} is in play, {self} gets +2 {Defense}.<p><p><b>Response:</b> After {self} is declared as a defender, pay 1 resource from his resource pool to ready him.</p><p class='flavor-text'>&quot;We will not turn back.&quot;<br>&ndash;The Return of the King</p>")
+                .WithCommunityVersion("RiddermarkLord/Elrohir-Leadership-Hero")
                 .WithInfo(1, 1, Artist.Magali_Villeneuve);
             addEvent("Taking Initiative", 0, Sphere.Leadership)
                 .WithTextLine("Action: Discard the top card of your deck. If the discarded card's printed cost is equal to or higher than the number of characters you control, draw 2 cards and deal 2 damage to any enemy.")

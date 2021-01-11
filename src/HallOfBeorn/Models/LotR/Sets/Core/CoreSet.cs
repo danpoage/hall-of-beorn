@@ -22,6 +22,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithFlavor("\"I am Aragorn son of Arathorn; and if by life or death I can save you, I will.\"\r\n-The Fellowship of the Ring")
                 .WithTemplate("<p class='main-text'>{keyword:Sentinel.}</p><p class='main-text'><b>Response:</b> After {self} commits to a quest, spend 1 resource from his resource pool to ready him.</p><p class='flavor-text'>&quot;I am Aragorn son of Arathorn; and if by life or death I can save you, I will.&quot;<br>&ndash;The Fellowship of the Ring</p>")
                 .WithCommunityVersion("Autumn/Aragorn-Leadership-Hero")
+                .WithCommunityVersion("RiddermarkLord/Aragorn-Leadership-1")
+                .WithCommunityVersion("RiddermarkLord/Aragorn-Leadership-2")
                 .WithYear(2010)
                 .WithInfo(1, 1, Artist.John_Stanko);
             addHero("Théodred", 8, Sphere.Leadership, 1, 2, 1, 4)
@@ -78,6 +80,9 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithCommunityVersion("Éowyn-Grey-Company-Gen-Con-2014")
                 .WithCommunityVersion("Éowyn-All-the-Pretty-Horses")
                 .WithCommunityVersion("Éowyn-Nouveau-Hunters")
+                .WithCommunityVersion("RiddermarkLord/Eowyn-Spirit-Hero-1")
+                .WithCommunityVersion("RiddermarkLord/Eowyn-Spirit-Hero-2")
+                .WithCommunityVersion("RiddermarkLord/Eowyn-Spirit-Hero-3")
                 .WithInfo(7, 1, Artist.Gabrielle_Portal);
             addHero("Eleanor", 7, Sphere.Spirit, 1, 1, 2, 3)
                 .WithThumbnail()
@@ -87,6 +92,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithTemplate("<p class='main-text'><b>Response:</b> Exhaust {self} to cancel the &quot;when revealed&quot; effects of a treachery card just revealed by the encounter deck. Then, discard that card, and replace it with the next card from the encounter deck.</p><p class='flavor-text'>&quot;Gondor wanes, you say. But Gondor stands, and even the end of its strength is very strong.&quot;<br>&ndash;Boromir, The Fellowship of the Ring</p>")
                 .WithErrata(0)
                 .WithCommunityVersion("Autumn/Eleanor")
+                .WithCommunityVersion("RiddermarkLord/Eleanor")
                 .WithYear(2010)
                 .WithInfo(8, 1, Artist.Magali_Villeneuve);
             addHero("Dúnhere", 8, Sphere.Spirit, 1, 2, 1, 4)
@@ -95,6 +101,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithTextLine("Dúnhere can target enemies in the staging area when he attacks alone. When doing so, he gets +1 Attack.")
                 .WithFlavor("Captains rode to meet him at the ford, bearing messages from Gandalf. Dúnhere, chieftain of the folk of Harrowdale, was at their head.\r\n-The Return of the King")
                 .WithTemplate("<p class='main-text'>{self} can target enemies in the staging area when he attacks alone. When doing so, he gets +1 {Attack}.</p><p class='flavor-text'>Captains rode to meet him at the ford, bearing messages from Gandalf. Dúnhere, chieftain of the folk of Harrowdale, was at their head.<br>&ndash;The Return of the King</p>")
+                .WithCommunityVersion("RiddermarkLord/Dunhere")
                 .WithYear(2010)
                 .WithInfo(9, 1, Artist.Jeff_Himmelman);
             addHero("Denethor", 8, Sphere.Lore, 1, 1, 3, 3)
@@ -103,6 +110,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithTextLine("Action: Exhaust Denethor to look at the top card of the encounter deck. You may move that card to the bottom of the deck.")
                 .WithFlavor("\"And the lord Denethor is unlike other men: he sees far.\"\r\n-Beregond, The Return of the King")
                 .WithTemplate("<p><b>Action:</b> Exhaust {self} to look at the top card of the encounter deck. You may move that card to the bottom of the deck.</p><p class='flavor-text'>&quot;And the lord Denethor is unlike other men: he sees far.&quot;<br>&ndash;Beregond, The Return of the King</p>")
+                .WithCommunityVersion("RiddermarkLord/Denethor-Lore-1")
+                .WithCommunityVersion("RiddermarkLord/Denethor-Lore-2")
                 .WithYear(2010)
                 .WithInfo(10, 1, Artist.Tiziano_Baracchi);
             addHero("Glorfindel", 12, Sphere.Lore, 3, 3, 1, 5)
@@ -121,6 +130,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithTemplate("<p><b>Action:</b> Exhaust {self} to choose a player. That player draws 2 cards. Limit once per round.</p><p class='flavor-text'>But in the wild lands beyond Bree there were mysterious wanderers. The Bree-folk called them Rangers, and knew nothing of their origin.<br>&ndash;The Fellowship of the Ring</p>")
                 .WithErrata(1)
                 .WithCommunityVersion("Autumn/Beravor")
+                .WithCommunityVersion("RiddermarkLord/Beravor")
                 .WithYear(2010)
                 .WithInfo(12, 1, Artist.Tiziano_Baracchi);
             addAlly("Guard of the Citadel", 2, Sphere.Leadership, false, 1, 1, 0, 2)

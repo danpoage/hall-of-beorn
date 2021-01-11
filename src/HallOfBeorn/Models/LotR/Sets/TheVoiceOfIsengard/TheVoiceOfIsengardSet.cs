@@ -17,6 +17,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheVoiceOfIsengard
                 .WithTraits("Rohan.", "Noble.", "Warrior.")
                 .WithTextLine("Response: After a character leaves play, Éomer gets +2 Attack until the end of the round. (Limit once per round.)")
                 .WithFlavorLine("\"I am named Éomer son of Éomund, and am called the Third Marshal of Riddermark.\" -The Two Towers")
+                .WithCommunityVersion("RiddermarkLord/Eomer-Tactics-Hero-1")
+                .WithCommunityVersion("RiddermarkLord/Eomer-Tactics-Hero-2")
                 .WithInfo(1, 1, Artist.Magali_Villeneuve);
             addHero("Gríma", 9, Sphere.Lore, 2, 1, 2, 3)
                 .WithSlugSuffix("Hero")

@@ -21,6 +21,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTextLine("Response: After another hero is declared as a defender, exhaust Dori to add his Defense to the defending hero's Defense for this attack.")
                 .WithFlavorLine("Dori was really a decent fellow in spite of his grumbling.")
                 .WithFlavorLine("-The Hobbit")
+                .WithCommunityVersion("RiddermarkLord/Dori-Tactics-Hero")
                 .WithInfo(54, 1, Artist.Sebastian_Giacobino);
             addAttachment("Ranger Provisions", 1, Sphere.Leadership, false)
                 .WithTraits("Item.")

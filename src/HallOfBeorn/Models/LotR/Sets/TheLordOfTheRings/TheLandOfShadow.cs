@@ -34,17 +34,21 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 Quantity = 1,
                 Artist = Artist.Melanie_Maier
             });
-            Cards.Add(LotRCard.Hero("Faramir", "", Sphere.Leadership, 11, 2, 2, 2, 5)
+            addHero("Faramir", 11, Sphere.Leadership, 2, 2, 2, 5)
                 .WithTraits("Gondor.", "Noble.", "Ranger.")
                 .WithKeywords("Ranged.")
-                .WithText("Response: After you engage an enemy, ready an ally you control. (Limit once per phase.)")
-                .WithFlavor("\"That will be the Captain: he can master both beasts and men\" -Beregond, The Return of the King")
-                .WithInfo(2, 1, Artist.Jason_Cheeseman_Meyer));
-            Cards.Add(LotRCard.Hero("Damrod", "", Sphere.Lore, 9, 2, 2, 1, 4)
+                .WithTextLine("Response: After you engage an enemy, ready an ally you control. (Limit once per phase.)")
+                .WithFlavorLine("\"That will be the Captain: he can master both beasts and men\"")
+                .WithFlavorLine("-Beregond, The Return of the King")
+                .WithInfo(2, 1, Artist.Jason_Cheeseman_Meyer);
+            addHero("Damrod", 9, Sphere.Lore, 2, 2, 1, 4)
                 .WithTraits("Gondor.", "Ranger.")
-                .WithText("Reduce the cost of the first Trap card you play each round by 1 (to a minimum of 0).\r\nResponse: After a Trap card you control is attached to an enemy, draw 1 card.")
-                .WithFlavor("\"See! Some of the Southrons have broken from the trap and are flying from the road.\" -The Two Towers")
-                .WithInfo(3, 1, Artist.Joshua_Cairos));
+                .WithTextLine("Reduce the cost of the first Trap card you play each round by 1 (to a minimum of 0).")
+                .WithTextLine("Response: After a Trap card you control is attached to an enemy, draw 1 card.")
+                .WithFlavorLine("\"See! Some of the Southrons have broken from the trap and are flying from the road.\"")
+                .WithFlavorLine("-The Two Towers")
+                .WithCommunityVersion("RiddermarkLord/Damrod-Lore-Hero")
+                .WithInfo(3, 1, Artist.Joshua_Cairos);
             Cards.Add(LotRCard.Ally("Anborn", Sphere.Leadership, 4, 1, 3, 1, 3)
                 .WithUnique()
                 .WithTraits("Gondor.", "Ranger.")
