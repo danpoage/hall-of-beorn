@@ -184,6 +184,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
                 .WithTemplate("<p>{keyword:Sentinel.} Cannot have attachments.</p><p>Immune to player card effects.<p><p>{self} does not exhaust to defend.</p><p class='flavor-text'>The roar of his voice was like drums and guns; and he tossed wolves and goblins from his path like straws and feathers.<br>&ndash;The Hobbit</p>")
                 .WithCommunityVersion("Beorn-Lure-2019")
                 .WithCommunityVersion("Beorn-HoB-Alt-Art")
+                .WithCommunityVersion("Autumn/Beorn-Tactics-Hero")
                 .WithInfo(5, 1, Artist.Emrah_Elmasli);
 
             /*
