@@ -44,7 +44,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithFlavorLine("\"I'm going with him...and if any of those Black Riders try to stop him, they'll have Sam Gamgee to reckon with\"")
                 .WithFlavorLine("-The Fellowship of the Ring")
                 .WithCommunityVersion("Sam-Gamgee-Grey-Company-Gen-Con-2015")
-                .WithCommunityVersion("Autum/Sam-Gamgee-Leadership-Hero")
+                .WithCommunityVersion("Autumn/Sam-Gamgee-Leadership-Hero")
                 .WithCommunityVersion("Hrodebert/Sam-Gamgee-Leadership-Hero-1")
                 .WithCommunityVersion("Hrodebert/Sam-Gamgee-Leadership-Hero-2")
                 .WithCommunityVersion("Hrodebert/Sam-Gamgee-Leadership-Hero-3")
