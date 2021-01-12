@@ -44,7 +44,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithTraits("Noldor.", "Healer.")
                 .WithTextLine("At the end of the round, discard Elrond from play.")
                 .WithTextLine("Response: After Elrond enters play, choose one: heal all damage on a hero, discard a Condition attachment, or each player draws 1 card.")
-                .WithInfo(5, 3, Arthur.Allen_Douglas);
+                .WithInfo(5, 3, Artist.Allen_Douglas);
             addAlly("Bilbo Baggins", 2, Sphere.Spirit, true, 2, 0, 0, 2)
                 .WithTraits("Hobbit.")
                 .WithTextLine("Response: After Bilbo ~Baggins enters play, search your deck for a Pipe attachment and add it to your hand. Shuffle your deck.")
