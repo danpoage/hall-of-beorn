@@ -20,6 +20,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 .WithTextLine("Sentinel.")
                 .WithTextLine("Each hero with a printed Tactics resource icon gets +1 Willpower.")
                 .WithFlavorLine("'To me! To me!' cried Théoden. 'Up Eorlingas! Fear no darkness!' -The Return of the King")
+                .WithCommunityVersion("RiddermarkLord/Theoden-Tactics-Hero-1")
                 .WithInfo(134, 1, Artist.Magali_Villeneuve);
             addAlly("Pelargir Ship Captain", 2, Sphere.Leadership, false, 1, 1, 0, 2)
                 .WithTraits("Gondor.")

@@ -26,6 +26,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithTextLine("Response: After Frodo commits to a quest, spend 1 resource from his resource pool to ready another questing unique character. If you quest successfully, reduce your threat by 1.")
                 .WithFlavorLine("\"Keep your tempers and hold your hands to the last possible moment!\"")
                 .WithFlavorLine("-The Return of the King")
+                .WithCommunityVersion("RiddermarkLord/Frodo-Baggins-Leadership-Hero-1")
                 .WithCommunityVersion("Hrodebert/Frodo-Baggins-Leadership-Hero-1")
                 .WithCommunityVersion("Hrodebert/Frodo-Baggins-Leadership-Hero-2")
                 .WithCommunityVersion("Hrodebert/Frodo-Baggins-Leadership-Hero-3")

@@ -25,6 +25,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 .WithTraits("Outlands.")
                 .WithTextLine("While you control Outlands allies that belong to 4 different spheres, ready Forlong at the beginning of each phase.")
                 .WithFlavorLine("\"Forlong!\" men shouted. \"True heart, true friend!\" -The Return of the King")
+                .WithCommunityVersion("RiddermarkLord/Forlong-MotK-Leadership-Hero")
                 .WithInfo(33, 3, Artist.Emile_Denis);
             addEvent("Strength of Arms", 2, Sphere.Leadership)
                 .WithTextLine("Play only if each hero you control has a printed Leadership resource icon.")

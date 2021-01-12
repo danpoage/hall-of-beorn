@@ -19,7 +19,9 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 .WithKeywords("Ranged.")
                 .WithTextLine("Ranged.")
                 .WithTextLine("Faramir gets +1 Attack for each enemy in the staging area.")
-                .WithFlavorLine("\"The road may pass, but they shall not! Not while Faramir is Captain.\" -Mablung, The Two Towers")
+                .WithFlavorLine("\"The road may pass, but they shall not! Not while Faramir is Captain.\"")
+                .WithFlavorLine("-Mablung, The Two Towers")
+                .WithCommunityVersion("RiddermarkLord/Faramir-Lore-Hero-1")
                 .WithInfo(81, 1, Artist.Magali_Villeneuve);
             addAttachment("Sword of Morthond", 1, Sphere.Leadership, true)
                 .WithTraits("Item.", "Weapon.")
@@ -42,7 +44,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 .WithInfo(84, 3, Artist.Emile_Denis);
             addAttachment("Gondorian Fire", 0, Sphere.Tactics, false)
                 .WithTraits("Gondor.")
-                .WithTextLine("Attach to a Gondor or Dúnedain hero.")
+                .WithTextLine("Attach to a Gondor or DÃºnedain hero.")
                 .WithTextLine("Action: Spend 1 resource from attached hero's resource pool to give attached hero +1 Attack for each resource in its resource pool until the end of the phase. (Limit once per phase.)")
                 .WithInfo(85, 3, Artist.Michael_Rasmussen);
             addAlly("Pelargir Shipwright", 3, Sphere.Spirit, false, 0, 1, 1, 3)

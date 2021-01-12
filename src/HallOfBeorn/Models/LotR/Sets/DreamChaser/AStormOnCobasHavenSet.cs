@@ -63,7 +63,9 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithTraits("Gondor.", "Healer.")
                 .WithTextLine("Cannot attack or defend.")
                 .WithTextLine("Action: Spend 1 Lore resource and exhaust Ioreth. Then, heal 3 points of damage on a character. Any player may trigger this action.")
-                .WithFlavorLine("Thus spake Ioreth, wise-woman of Gondor: The hands of the king are the hands of a healer, and so shall the rightful king be known. -The Return of the King")
+                .WithFlavorLine("Thus spake Ioreth, wise-woman of Gondor: The hands of the king are the hands of a healer, and so shall the rightful king be known.")
+                .WithFlavorLine("-The Return of the King")
+                .WithCommunityVersion("RiddermarkLord/Ioreth-MotK-Lore-Hero")
                 .WithInfo(117, 3, Artist.Aleksander_Karcz);
             addEvent("The Houses of Healing", 5, Sphere.Lore)
                 .WithTextLine("You may exhaust any number of Healer characters you control as part of this card's cost. Reduce the cost to play this card by 1 for each Healer character you exhaust in this way.")

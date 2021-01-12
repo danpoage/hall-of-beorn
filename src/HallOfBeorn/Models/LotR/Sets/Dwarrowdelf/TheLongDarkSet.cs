@@ -21,12 +21,14 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithFlavorLine("-The Two Towers")
                 .WithTemplate("<p><b>Response:</b> After {self} is declared as an attacker, return a {sphere-event:Tactics} from your discard pile to your hand. Then, choose and discard 1 card from your hand. (Limit 3 times per game for the group.)</p><p class='flavor-text'>&quot;Yet in doubt a man of worth will trust to his own wisdom.&quot; &ndash;The Two Towers</p>")
                 .WithErrata(1)
+                .WithCommunityVersion("RiddermarkLord/Hama-Tactics-Hero-1")
                 .WithInfo(76, 1, Artist.Magali_Villeneuve);
             addAlly("Erestor", 4, Sphere.Leadership, true, 2, 0, 1, 3)
                 .WithTraits("Noldor.")
                 .WithTextLine("Action: Choose and discard 1 card from your hand to draw 1 card. (Limit once per round.)")
                 .WithFlavorLine("Beside Glorfindel there were several other counsellors of Elrond's household, of whom Erestor was the chief...")
                 .WithFlavorLine("-The Fellowship of the Ring")
+                .WithCommunityVersion("RiddermarkLord/Erestor-MotK-Leadership-Hero")
                 .WithInfo(77, 3, Artist.Magali_Villeneuve);
             addEvent("Fresh Tracks", 1, Sphere.Leadership)
                 .WithTextLine("Response: After an enemy is added to the staging area, deal 1 damage to that enemy. Players ignore that enemy while making engagement checks this round.")

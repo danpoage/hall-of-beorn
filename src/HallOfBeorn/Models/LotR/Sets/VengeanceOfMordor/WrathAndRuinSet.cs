@@ -21,6 +21,8 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithFlavorLine("-The Return of the King")
                 .WithYear(2019)
                 .WithCommunityVersion("Autumn/Thorin-Stonehelm")
+                .WithCommunityVersion("RiddermarkLord/Thorin-Stonehelm-1")
+                .WithCommunityVersion("RiddermarkLord/Thorin-Stonehelm-2")
                 .WithInfo(1, 1, Artist.Rafal_Hrynkiewicz);
             addAlly("Soldier of Gondor", 2, Sphere.Leadership, false, 1, 1, 1, 2)
                 .WithTraits("Gondor.")

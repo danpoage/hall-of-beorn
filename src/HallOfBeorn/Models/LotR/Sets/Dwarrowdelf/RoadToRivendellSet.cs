@@ -55,6 +55,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
             addAlly("Bombur", 3, Sphere.Lore, true, 0, 0, 1, 3)
                 .WithTraits("Dwarf.")
                 .WithTextLine("Action: Exhaust Bombur to choose a location. That location gets -1 Threat until the end of the phase. (That location does not contribute its Threat instead if it is an Underground location.)")
+                .WithCommunityVersion("RiddermarkLord/Bombur-MotK-Lore-Hero")
                 .WithInfo(35, 3, Artist.Winona_Nelson);
             addEvent("Out of the Wild", 3, Sphere.Lore)
                 .WithKeywords("Secrecy 2.")

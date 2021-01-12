@@ -19,6 +19,8 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithTextLine("Forced: After Glorfindel exhausts to commit to a quest, raise your threat by 1.")
                 .WithFlavorLine("Glorfindel was tall and straight; his hair was of shining gold, his face fair and young and fearless and full of joy; his eyes were bright and keen, and has voice like music; on his brow sat wisdom, and in his hand was strength.")
                 .WithFlavorLine("-The Fellowship of the Ring")
+                .WithCommunityVersion("RiddermarkLord/Glorfindel-Spirit-Hero-1")
+                .WithCommunityVersion("RiddermarkLord/Glorfindel-Spirit-Hero-2")
                 .WithCommunityVersion("Hrodebert/Glorfindel-Spirit-Hero")
                 .WithInfo(101, 1, Artist.Magali_Villeneuve);
             addAlly("Longbeard Elder", 3, Sphere.Leadership, false, 2, 1, 1, 2)

@@ -54,6 +54,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTextLine("Response: After Nori participates in an attack that destroys an enemy, put the top card of your discard pile on the bottom of your deck.")
                 .WithFlavorLine("\"You've left the burglar behind again!\"")
                 .WithFlavorLine("-Nori, The Hobbit")
+                .WithCommunityVersion("RiddermarkLord/Nori-MotK-Tactics-Hero")
                 .WithInfo(59, 3, Artist.David_Keen);
             addAttachment("Golden Belt", 0, Sphere.Tactics, false)
                 .WithTraits("Item.")

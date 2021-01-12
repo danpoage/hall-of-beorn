@@ -24,6 +24,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithCommunityVersion("Grimbeorn-the-Old-HoB-Alt-Art")
                 .WithCommunityVersion("Grimbeorn-the-Old-Grimbeorn's-Path")
                 .WithCommunityVersion("Grimbeorn-the-Old-All-the-Pretty-Horses")
+                .WithCommunityVersion("RiddermarkLord/Grimbeorn-the-Old-1")
                 .WithInfo(1, 1, Artist.Jason_Jenicke);
             addAlly("Guardian of Esgaroth", 2, Sphere.Leadership, false, 1, 1, 1, 1)
                 .WithTraits("Dale.")

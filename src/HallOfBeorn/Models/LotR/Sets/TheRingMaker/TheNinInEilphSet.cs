@@ -20,6 +20,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithTextLine("Response: After you engage an enemy, add 1 resource to Mablung's resource pool. (Limit once per phase.)")
                 .WithFlavorLine("But the Captains of the West were well warned by their scouts, skilled men from Henneth Annûn led by Mablung...")
                 .WithFlavorLine("-The Return of the King")
+                .WithCommunityVersion("RiddermarkLord/Mablung-Tactics-Hero-1")
                 .WithInfo(84, 1, Artist.Sebastian_Giacobino);
             addEvent("Follow Me!", 1, Sphere.Leadership)
                 .WithTextLine("Action: Take control of the first player token and draw 1 card.")

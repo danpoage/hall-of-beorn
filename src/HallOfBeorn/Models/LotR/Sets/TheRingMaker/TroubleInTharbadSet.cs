@@ -19,7 +19,9 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithKeywords("Ranged.")
                 .WithTextLine("Ranged.")
                 .WithTextLine("Combat Action: If you have not engaged an enemy this round, exhaust Haldir of Lórien to declare him as an attacker (and resolve his attack) against an enemy not engaged with you. Limit once per round.")
-                .WithFlavorLine("\"We allow no strangers to spy out the secrets of the Naith...\" -The Fellowship of the Ring")
+                .WithFlavorLine("\"We allow no strangers to spy out the secrets of the Naith...\"")
+                .WithFlavorLine("-The Fellowship of the Ring")
+                .WithCommunityVersion("RiddermarkLord/Haldir-of-Lorien-Lore-Hero-1")
                 .WithInfo(56, 1, Artist.Sebastian_Giacobino);
             addAlly("Herald of Anórien", 2, Sphere.Leadership, false, 1, 0, 1, 1)
                 .WithTraits("Gondor.")

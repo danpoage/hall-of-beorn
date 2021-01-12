@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
 {
@@ -17,26 +15,12 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
             SetType = Models.SetType.Saga_Expansion;
             Cycle = "The Lord of the Rings";
 
-            Cards.Add(new LotRCard()
-            {
-                Title = "Frodo Baggins",
-                IsUnique = true,
-                Id = "BC8E79AD-1B4A-4B63-A7CA-966E28D39403",
-                
-                CardType = CardType.Hero,
-                Sphere = Models.LotR.Sphere.Fellowship,
-                ThreatCost = 0,
-                Willpower = 2,
-                Attack = 1,
-                Defense = 2,
-                HitPoints = 2,
-                Traits = new List<string> { "Hobbit.", "Ring-bearer." },
-                Text = "Response: After Frodo ~Baggins exhausts to defend an attack, exhaust The One ~Ring and spend 1 Fellowship resource to target the attacking enemy. Then, this attack deals no damage and each player raises his threat by 2.",
-                FlavorText = "\"But there is more about you now than appears on the surface.\" -Bilbo, The Fellowship of the Ring",
-                CardNumber = 1,
-                Quantity = 1,
-                Artist = Artist.Sebastian_Giacobino
-            });
+            addHero("Frodo Baggins", 0, Sphere.Fellowship, 2, 1, 2, 2)
+                .WithTraits("Hobbit.", "Ring-bearer.")
+                .WithTextLine("Response: After Frodo ~Baggins exhausts to defend an attack, exhaust The One ~Ring and spend 1 Fellowship resource to target the attacking enemy. Then, this attack deals no damage and each player raises his threat by 2.")
+                .WithFlavorLine("\"But there is more about you now than appears on the surface.\"")
+                .WithFlavorLine("-Bilbo, The Fellowship of the Ring")
+                .WithInfo(1, 1, Artist.Sebastian_Giacobino);
             addHero("Gandalf", 14, Sphere.Neutral, 3, 3, 3, 5)
                 .WithTraits("Istari.")
                 .WithTextLine("Play with the top card of your deck faceup. Once per phase, you may play the top card of your deck as if it was in your hand. When playing a card this way, Gandalf is considered to have the printed Leadership, Lore, Tactics, and Spirit icons.")
@@ -45,146 +29,56 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithCommunityVersion("Hrodebert/Gandalf-Hero-1")
                 .WithCommunityVersion("Hrodebert/Gandalf-Hero-2")
                 .WithInfo(2, 1, Artist.Matt_Stewart);
-            Cards.Add(new LotRCard()
-            {
-                Title = "Galadriel",
-                IsUnique = true,
-                Id = "B081B837-C996-4F1C-AD97-0CCBCD3D9A8C",
-                
-                CardType = CardType.Ally,
-                Sphere = Models.LotR.Sphere.Leadership,
-                ResourceCost = 3,
-                Willpower = 3,
-                Attack = 0,
-                Defense = 0,
-                HitPoints = 3,
-                Traits = new List<string> { "Noldor.", "Noble." },
-                Text = "At the end of the round, discard Galadriel from play.\r\nResponse: After you play Galadriel from your hand, search the top 5 cards of your deck for an attachment of cost 3 or less and put it into play. Put the remaining cards back in any order.",
-                CardNumber = 3,
-                Quantity = 3,
-                Artist = Artist.Sebastian_Giacobino
-            });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Boromir",
-                IsUnique = true,
-                Id = "13C3F24D-27BE-485D-8CAB-5A639802CDDF",
-                
-                CardType = CardType.Ally,
-                Sphere = Models.LotR.Sphere.Tactics,
-                ResourceCost = 4,
-                Willpower = 1,
-                Attack = 3,
-                Defense = 1,
-                HitPoints = 4,
-                Traits = new List<string> { "Gondor.", "Warrior." },
-                Text = "Boromir gets +2 Defense while defending against an enemy with an engagement cost higher than your threat.\r\nResponse: After Boromir takes any amount of damage, ready him.",
-                CardNumber = 4,
-                Quantity = 3,
-                Artist = Artist.Chris_Rahn
-            });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Elrond",
-                IsUnique = true,
-                Id = "47BF974D-65B3-4AB7-AD01-B0AC41D9ADE4",
-                
-                CardType = CardType.Ally,
-                Sphere = Sphere.Lore,
-                ResourceCost = 3,
-                Willpower = 3,
-                Attack = 2,
-                Defense = 3,
-                HitPoints = 3,
-                Traits = new List<string> { "Noldor.", "Healer." },
-                Text = "At the end of the round, discard Elrond from play.\r\nResponse: After Elrond enters play, choose one: heal all damage on a hero, discard a Condition attachment, or each player draws 1 card.",
-                CardNumber = 5,
-                Quantity = 3,
-                Artist = Artist.Allen_Douglas
-            });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Bilbo Baggins",
-                IsUnique = true,
-                Id = "8382124A-14F3-46B4-A24C-DA520299A81B",
-                
-                CardType = CardType.Ally,
-                Sphere = Models.LotR.Sphere.Spirit,
-                ResourceCost = 2,
-                Willpower = 2,
-                Attack = 0,
-                Defense = 0,
-                HitPoints = 2,
-                Traits = new List<string> { "Hobbit." },
-                Text = "Response: After Bilbo ~Baggins enters play, search your deck for a Pipe attachment and add it to your hand. Shuffle your deck.",
-                FlavorText = "\"Elves may thrive on speech alone, and Dwarves endure great weariness, but I am an old Hobbit, and I miss my meal at noon.\" -The Fellowship of the Ring",
-                CardNumber = 6,
-                Quantity = 3,
-                Artist = Artist.Sebastian_Giacobino
-            });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Flame of Anor",
-                Id = "AF117DE3-66FE-4E0E-A9FB-AD1618CFDEA9",
-                
-                CardType = CardType.Event,
-                Sphere = Models.LotR.Sphere.Neutral,
-                ResourceCost = 1,
-                Traits = new List<string> { "Spell." },
-                Text = "Action: Add Flame of Anor to the victory display and discard the top card of your deck to ready an Istari character you control. That character gets +X Attack until the end of the phase where X is the discarded card's cost.",
-                FlavorText = "\"You cannot pass!\" -Gandalf, The Fellowship of the Ring",
-                VictoryPoints = 1,
-                CardNumber = 7,
-                Quantity = 3,
-                Artist = Artist.Diego_Gisbert_Llorens 
-            });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Gandalf's Staff",
-                IsUnique = true,
-                Id = "5B66215C-663A-4F31-BD5B-34EB484F8146",
-                
-                CardType = CardType.Attachment,
-                Sphere = Sphere.Neutral,
-                ResourceCost = 2,
-                Traits = new List<string> { "Artifact.", "Item.", "Staff." },
-                Keywords = new List<string> { "Restricted." },
-                Text = "Attach to Gandalf. Restricted.\r\nAction: Exhaust Gandalf's Staff to (choose one): choose a player to draw 1 card, add 1 resource to a hero's resource pool, or discard a shadow card from a non-unique enemy.",
-                FlavorText = "...he held his staff aloft, and from its tip there came a feint radiance. -The Fellowship of the Ring",
-                CardNumber = 8,
-                Quantity = 3,
-                Artist = Artist.Victor_Maury
-            });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Wizard Pipe",
-                Id = "DD619FB9-8CCE-4306-978A-B6E89E243A5A",
-                
-                CardType = CardType.Attachment,
-                Sphere = Models.LotR.Sphere.Neutral,
-                ResourceCost = 1,
-                Traits = new List<string> { "Item.", "Pipe." },
-                Text = "Attach to an Istari character. Limit 1 per character.\r\nAction: Exhaust Wizard ~Pipe to exchange a card in your hand with the top card of your deck.",
-                FlavorText = "...there was a long silence, broken only by the soft puffs of Gandalf's pipe, as he blew white smoke-rings out of the window. -The Fellowship of the Ring",
-                CardNumber = 9,
-                Quantity = 3,
-                Artist = Artist.Tiziano_Baracchi
-            });
-            Cards.Add(new LotRCard()
-            {
-                Title = "Fellowship of the Ring",
-                IsUnique = true,
-                Id = "FC5068A4-CBD5-4831-A7AE-32DDB306DAD1",
-                
-                CardType = CardType.Attachment,
-                Sphere = Models.LotR.Sphere.Fellowship,
-                ResourceCost = 2,
-                Traits = new List<string> { "Fellowship." },
-                Text = "Attach to the Ring-bearer.\r\nEach hero gets +1 Willpower.\r\nForced: After a character is destroyed, discard Fellowship of the Ring.",
-                CardNumber = 10,
-                Quantity = 3,
-                Artist = Artist.Michael_Komarck
-            });
+            addAlly("Galadriel", 3, Sphere.Leadership, true, 3, 0, 0, 3)
+                .WithTraits("Noldor.", "Noble.")
+                .WithTextLine("At the end of the round, discard Galadriel from play.")
+                .WithTextLine("Response: After you play Galadriel from your hand, search the top 5 cards of your deck for an attachment of cost 3 or less and put it into play. Put the remaining cards back in any order.")
+                .WithInfo(3, 3, Artist.Sebastian_Giacobino);
+            addAlly("Boromir", 4, Sphere.Tactics, true, 1, 3, 1, 4)
+                .WithTraits("Gondor.", "Warrior.")
+                .WithTextLine("Boromir gets +2 Defense while defending against an enemy with an engagement cost higher than your threat.")
+                .WithTextLine("Response: After Boromir takes any amount of damage, ready him.")
+                .WithCommunityVersion("RiddermarkLord/Boromir-MotK-Tactics-Hero")
+                .WithInfo(4, 3, Artist.Chris_Rahn);
+            addAlly("Elrond", 3, Sphere.Lore, true, 3, 2, 3, 3)
+                .WithTraits("Noldor.", "Healer.")
+                .WithTextLine("At the end of the round, discard Elrond from play.")
+                .WithTextLine("Response: After Elrond enters play, choose one: heal all damage on a hero, discard a Condition attachment, or each player draws 1 card.")
+                .WithInfo(5, 3, Arthur.Allen_Douglas);
+            addAlly("Bilbo Baggins", 2, Sphere.Spirit, true, 2, 0, 0, 2)
+                .WithTraits("Hobbit.")
+                .WithTextLine("Response: After Bilbo ~Baggins enters play, search your deck for a Pipe attachment and add it to your hand. Shuffle your deck.")
+                .WithFlavorLine("\"Elves may thrive on speech alone, and Dwarves endure great weariness, but I am an old Hobbit, and I miss my meal at noon.\"")
+                .WithFlavorLine("-The Fellowship of the Ring")
+                .WithInfo(6, 3, Artist.Sebastian_Giacobino);
+            addEvent("Flame of Anor", 1, Sphere.Fellowship)
+                .WithTraits("Spell.")
+                .WithTextLine("Action: Add Flame of Anor to the victory display and discard the top card of your deck to ready an Istari character you control. That character gets +X Attack until the end of the phase where X is the discarded card's cost.")
+                .WithFlavorLine("\"You cannot pass!\"")
+                .WithFlavorLine("-Gandalf, The Fellowship of the Ring")
+                .WithVictoryPoints(1)
+                .WithInfo(7, 3, Artist.Diego_Gisbert_Llorens);
+            addAttachment("Gandalf's Staff", 2, Sphere.Neutral, true)
+                .WithTraits("Artifact.", "Item.", "Staff.")
+                .WithKeywords("Restricted.")
+                .WithTextLine("Attach to Gandalf. Restricted.")
+                .WithTextLine("Action: Exhaust Gandalf's Staff to (choose one): choose a player to draw 1 card, add 1 resource to a hero's resource pool, or discard a shadow card from a non-unique enemy.")
+                .WithFlavorLine("...he held his staff aloft, and from its tip there came a feint radiance.")
+                .WithFlavorLine(" -The Fellowship of the Ring")
+                .WithInfo(8, 3, Artist.Victor_Maury);
+            addAttachment("Wizard Pipe", 1, Sphere.Neutral, false)
+                .WithTraits("Item.", "Pipe.")
+                .WithTextLine("Attach to an Istari character. Limit 1 per character.")
+                .WithTextLine("Action: Exhaust Wizard ~Pipe to exchange a card in your hand with the top card of your deck.")
+                .WithFlavorLine("...there was a long silence, broken only by the soft puffs of Gandalf's pipe, as he blew white smoke-rings out of the window.")
+                .WithFlavorLine("-The Fellowship of the Ring")
+                .WithInfo(9, 3, Artist.Tiziano_Baracchi);
+            addAttachment("Fellowship of the Ring", 2, Sphere.Fellowship, true)
+                .WithTraits("Fellowship.")
+                .WithTextLine("Attach to the Ring-bearer.")
+                .WithTextLine("Each hero gets +1 Willpower.")
+                .WithTextLine("Forced: After a character is destroyed, discard Fellowship of the Ring.")
+                .WithInfo(10, 3, Artist.Michael_Komarck);
             addAttachment("Sting", 2, Sphere.Neutral, true)
                 .WithBoon()
                 .WithTraits("Artifact.", "Item.", "Weapon.")

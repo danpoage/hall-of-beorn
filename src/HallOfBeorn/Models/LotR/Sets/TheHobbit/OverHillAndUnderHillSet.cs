@@ -186,6 +186,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
                 .WithCommunityVersion("Beorn-HoB-Alt-Art")
                 .WithCommunityVersion("Autumn/Beorn-Tactics-Hero")
                 .WithCommunityVersion("RiddermarkLord/Beorn-Tactics-Hero")
+                .WithCommunityVersion("RiddermarkLord/Beorn-Tactics-Hero-2")
                 .WithCommunityVersion("Hrodebert/Beorn-Tactics-Hero")
                 .WithInfo(5, 1, Artist.Emrah_Elmasli);
 
@@ -868,6 +869,8 @@ The players have won the game.",
                 .WithTextLine("Response: After you play a Dwarf character from your hand, reduce your threat by 1.")
                 .WithFlavorLine("\"Nori, at your service.\"")
                 .WithFlavorLine("-Nori, The Hobbit")
+                .WithCommunityVersion("RiddermarkLord/Nori-Spirit-Hero-1")
+                .WithCommunityVersion("RiddermarkLord/Nori-Spirit-Hero-2")
                 .WithCommunityVersion("Hrodebert/Nori-Spirit-Hero")
                 .WithErrata(1)
                 .WithInfo(3, 1, Artist.Blake_Henriksen);
@@ -903,6 +906,8 @@ The players have won the game.",
                 .WithTextLine("If you control at least 5 Dwarf characters, draw 1 additional card at the beginning of the resource phase.")
                 .WithFlavorLine("\"He could write well and speedily, and often used the Elvish characters.\"")
                 .WithFlavorLine("-Gimli, The Fellowship of the Ring")
+                .WithCommunityVersion("RiddermarkLord/Ori-Lore-Hero-1")
+                .WithCommunityVersion("RiddermarkLord/Ori-Lore-Hero-2")
                 .WithCommunityVersion("Hrodebert/Ori-Lore-Hero")
                 .WithInfo(4, 1, Artist.Blake_Henriksen);
             Cards.Add(new LotRCard() {
@@ -1117,6 +1122,10 @@ The players have won the game.",
                 .WithFlavorLine("\"I am Thorin son of Thrain son of Thror, King under the Mountain!\"")
                 .WithFlavorLine("-Thorin, The Hobbit")
                 .WithTemplate("<p>If you control at least 5 {trait:Dwarf.@Dwarf} characters, add 1 additional resource to {self}'s pool when you collect resources during the resource phase.</p><p class='flavor-text'>&quot;I am Thorin son of Thrain son of Thror, King under the Mountain!&quot; &ndash;Thorin, The Hobbit</p>")
+                .WithCommunityVersion("RiddermarkLord/Thorin-Oakenshield-1")
+                .WithCommunityVersion("RiddermarkLord/Thorin-Oakenshield-2")
+                .WithCommunityVersion("RiddermarkLord/Thorin-Oakenshield-3")
+                .WithCommunityVersion("RiddermarkLord/Thorin-Oakenshield-4")
                 .WithCommunityVersion("Hrodebert/Thorin-Oakenshield-1")
                 .WithCommunityVersion("Hrodebert/Thorin-Oakenshield-2")
                 .WithCommunityVersion("Hrodebert/Thorin-Oakenshield-3")

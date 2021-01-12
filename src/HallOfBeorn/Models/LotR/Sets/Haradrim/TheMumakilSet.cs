@@ -20,6 +20,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithTextLine("Action: Discard a Harad ally from your hand to ready a Harad character in play. (Limit once per phase.)")
                 .WithFlavorLine("...the Southrons were bold men and grim...")
                 .WithFlavorLine("-The Return of the King")
+                .WithCommunityVersion("RiddermarkLord/Kahliel-1")
                 .WithInfo(1, 1, Artist.Ryan_Valle);
             addAlly("Andrath Guardsman", 2, Sphere.Leadership, false, 1, 0, 1, 2)
                 .WithTraits("Dúnedain.", "Ranger.")

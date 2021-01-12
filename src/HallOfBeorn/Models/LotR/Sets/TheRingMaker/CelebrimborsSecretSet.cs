@@ -23,6 +23,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithCommunityVersion("Galadriel-Grey-Company-Gen-Con-2015")
                 .WithCommunityVersion("Galadriel-Whispers-in-the-Trees")
                 .WithCommunityVersion("Galadriel-Nouveau-Hunters")
+                .WithCommunityVersion("RiddermarkLord/Galadriel-Spirit-Hero-1")
+                .WithCommunityVersion("RiddermarkLord/Galadriel-Spirit-Hero-2")
                 .WithCommunityVersion("Hrodebert/Galadriel-Spirit-Hero-1")
                 .WithCommunityVersion("Hrodebert/Galadriel-Spirit-Hero-2")
                 .WithInfo(112, 1, Artist.Magali_Villeneuve);
@@ -38,7 +40,9 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithKeywords("Ranged.")
                 .WithTextLine("Ranged.")
                 .WithTextLine("Response: After Orophin enters play, return a Silvan ally from your discard pile to your hand.")
-                .WithFlavorLine("\"Orophin has now gone in haste back to our dwellings to warn our people.\" -Haldir, The Fellowship of the Ring")
+                .WithFlavorLine("\"Orophin has now gone in haste back to our dwellings to warn our people.\"")
+                .WithFlavorLine("-Haldir, The Fellowship of the Ring")
+                .WithCommunityVersion("RiddermarkLord/Orophin-MotK-Leadership-Hero")
                 .WithInfo(114, 3, Artist.Magali_Villeneuve);
             addAlly("Henneth Annûn Guard", 3, Sphere.Tactics, false, 0, 2, 2, 2)
                 .WithTraits("Gondor.", "Warrior.")

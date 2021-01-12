@@ -41,6 +41,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithTraits("Dwarf.", "Warrior.")
                 .WithKeywords("Sentinel.")
                 .WithText("Response: After an enemy is revealed from the encounter deck, ready Gimli.")
+                .WithCommunityVersion("RiddermarkLord/Gimli-MotK-Leadership-Hero")
                 .WithCommunityVersion("Hrodebert/Gimli-Leadership-Ally")
                 .WithInfo(4, 3, Artist.Lukasz_Jaskolski);
             addAlly("Legolas", 4, Sphere.Tactics, true, 1, 3, 1, 3)

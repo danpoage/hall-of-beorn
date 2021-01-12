@@ -33,6 +33,8 @@ namespace HallOfBeorn.Models.LotR.Sets.TheSandsOfHarad
                 .WithFlavorLine("-The Fellowship of the Ring")
                 .WithTemplate("<p class='main-text'>{keyword:Ranged.}</p><p class='main-text'><b>Response:</b> After {self} commits to a quest, discard a card from your hand to ready another hero. If that hero is {title:Gimli}, he gets +1 {Willpower} until the end of the phase. (Limit once per phase.)</p><p class='flavor-text'>&ldquo;I go to find the Sun!&rdquo;<br>&ndash;The Fellowship of the Ring</p>")
                 .WithCommunityVersion("Autumn/Legolas-Spirit-Hero")
+                .WithCommunityVersion("RiddermarkLord/Legolas-Spirit-Hero-1")
+                .WithCommunityVersion("RiddermarkLord/Legolas-Spirit-Hero-2")
                 .WithCommunityVersion("Hrodebert/Legolas-Spirit-Hero")
                 .WithInfo(2, 1, Artist.Aleksander_Karcz);
             addAlly("Greenwood Archer", 2, Sphere.Leadership, false, 0, 2, 0, 1)

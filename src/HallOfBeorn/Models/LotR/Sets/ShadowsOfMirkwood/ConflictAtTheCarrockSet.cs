@@ -20,6 +20,8 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 .WithFlavorLine("Frodo began to feel restless, and the old paths seemed too well-trodden. he looked at maps and wondered what lay beyond their edges...")
                 .WithFlavorLine("-The Fellowship of the Ring")
                 .WithCommunityVersion("Frodo-Baggins-Grey-Company-Gen-Con-2015")
+                .WithCommunityVersion("RiddermarkLord/Frodo-Baggins-Spirit-Hero-1")
+                .WithCommunityVersion("RiddermarkLord/Frodo-Baggins-Spirit-Hero-2")
                 .WithCommunityVersion("Hrodebert/Frodo-Baggins-Spirit-Hero-1")
                 .WithCommunityVersion("Hrodebert/Frodo-Baggins-Spirit-Hero-2")
                 .WithCommunityVersion("Hrodebert/Frodo-Baggins-Spirit-Hero-3")

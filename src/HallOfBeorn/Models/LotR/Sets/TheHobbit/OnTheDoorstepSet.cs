@@ -103,25 +103,14 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
                 .WithVictoryPoints(1)
                 .WithLimitOnePerDeck()
                 .WithInfo(15, 3, Artist.Melissa_Findley);
-            Cards.Add(new LotRCard() {
-                
-                Title = "Bombur",
-                Id = "66f66c2e-36e7-4d97-aebb-1ca413f9edeb",
-                CardType = CardType.Hero,
-                Sphere = Sphere.Lore,
-                IsUnique = true,
-                ThreatCost = 8,
-                Quantity = 1,
-                Traits = new List<string>() { "Dwarf." },
-                Willpower = 0,
-                HitPoints = 5,
-                Attack = 1,
-                Defense = 2,
-                Text = "When counting the number of Dwarf characters you control, Bombur counts as two.",
-                FlavorText = "\"Bombur is fattest and will do for two, he had better come alone and last.\" -Gandalf, The Hobbit",
-                CardNumber = 5,
-                Artist = Artist.Ilich_Henriquez
-            });
+            addHero("Bombur", 8, Sphere.Lore, 0, 1, 2, 5)
+                .WithTraits("Dwarf.")
+                .WithTextLine("When counting the number of Dwarf characters you control, Bombur counts as two.")
+                .WithFlavorLine("\"Bombur is fattest and will do for two, he had better come alone and last.\"")
+                .WithFlavorLine("-Gandalf, The Hobbit")
+                .WithCommunityVersion("RiddermarkLord/Bombur-Lore-Hero-1")
+                .WithCommunityVersion("RiddermarkLord/Bombur-Lore-Hero-2")
+                .WithInfo(5, 1, Artist.Ilich_Henriquez);
             Cards.Add(new LotRCard() {
                 
                 Title = "Desperate Alliance",
@@ -135,25 +124,13 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
                 CardNumber = 10,
                 Artist = Artist.Magali_Villeneuve
             });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Dwalin",
-                Id = "c66638a7-95ae-4913-bf11-2e8dcf8d6104",
-                CardType = CardType.Ally,
-                Sphere = Sphere.Spirit,
-                IsUnique = true,
-                Keywords = new List<string>() { "Sentinel." },
-                ResourceCost = 3,
-                Quantity = 3,
-                Traits = new List<string>() { "Dwarf." },
-                Willpower = 1,
-                HitPoints = 3,
-                Attack = 1,
-                Defense = 2,
-                Text = "While you control at least 5 Dwarf characters, lower the cost to play Dwalin by 2.",
-                CardNumber = 8,
-                Artist = Artist.Melanie_Maier
-            });
+            addAlly("Dwalin", 3, Sphere.Spirit, true, 1, 1, 2, 3)
+                .WithTraits("Dwarf.")
+                .WithKeywords("Sentinel.")
+                .WithTextLine("Sentinel.")
+                .WithTextLine("While you control at least 5 Dwarf characters, lower the cost to play Dwalin by 2.")
+                .WithCommunityVersion("RiddermarkLord/Dwalin-MotK-Spirit-Hero")
+                .WithInfo(8, 3, Artist.Melanie_Maier);
             Cards.Add(new LotRCard() {
                 
                 Title = "Expert Treasure-hunter",
@@ -234,6 +211,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
                 .WithTextLine("While you control at least 5 Dwarf characters, Óin gets +1 Attack and gains the Tactics resource icon.")
                 .WithFlavorLine("Dwarves can make fire almost anywhere out of almost anything, wind or no wind...")
                 .WithFlavorLine("-The Hobbit")
+                .WithCommunityVersion("RiddermarkLord/Oin-Spirit-Hero-1")
                 .WithCommunityVersion("Hrodebert/Oin-Spirit-Hero")
                 .WithInfo(4, 1, Artist.Jeff_Lee_Johnson);
             Cards.Add(new LotRCard() {
