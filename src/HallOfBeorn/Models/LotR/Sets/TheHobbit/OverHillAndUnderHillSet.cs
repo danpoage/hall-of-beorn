@@ -901,7 +901,7 @@ The players have won the game.",
             addHero("Ori", 8, Sphere.Lore, 2, 2, 1, 3)
                 .WithTraits("Dwarf.")
                 .WithTextLine("If you control at least 5 Dwarf characters, draw 1 additional card at the beginning of the resource phase.")
-                .WithFlavorLine("\"He could write well and speedily, and often used the Elvish characters.\")
+                .WithFlavorLine("\"He could write well and speedily, and often used the Elvish characters.\"")
                 .WithFlavorLine("-Gimli, The Fellowship of the Ring")
                 .WithCommunityVersion("Hrodebert/Ori-Lore-Hero")
                 .WithInfo(4, 1, Artist.Blake_Henriksen);
