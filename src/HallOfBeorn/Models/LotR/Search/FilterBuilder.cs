@@ -61,6 +61,7 @@ namespace HallOfBeorn.Models.LotR.Search
                 : null;
         }
 
+        /*
         public static SearchFilter ProductFilter(SearchViewModel model)
         {
             var codes = new List<string>();
@@ -290,5 +291,6 @@ namespace HallOfBeorn.Models.LotR.Search
 
             return null;
         }
+        */
     }
 }

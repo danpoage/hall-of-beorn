@@ -116,6 +116,86 @@ namespace HallOfBeorn.Handlers.LotR
             }
         }
 
+        private RingsDbDeckViewModel GetDeckViewModel(
+            HashSet<string> foundSlugs,
+            Models.RingsDb.RingsDbDeckList deck)
+        {
+            var found = false;
+            var deckViewModel = new RingsDbDeckViewModel(deck.id, deck.name, deck.description_md);
+            foreach (var heroId in deck.heroes.Keys)
+            {
+                var heroSlug = _ringsDbService.GetSlug(heroId);
+                if (!string.IsNullOrEmpty(heroSlug))
+                {
+                    var heroCard = _cardRepository.FindBySlug(heroSlug);
+                    if (heroCard != null) {
+                        if (foundSlugs.Contains(heroSlug))
+                        {
+                            found = true;
+                        }
+
+                        deckViewModel.AddHero(heroCard);
+                    }
+                }
+            }
+
+            foreach (var cardId in deck.slots.Keys)
+            {
+                var cardSlug = _ringsDbService.GetSlug(cardId);
+                if (!string.IsNullOrEmpty(cardSlug)) 
+                {
+                    var card = _cardRepository.FindBySlug(cardSlug);
+                    if (card != null)
+                    {
+                        if (foundSlugs.Contains(cardSlug))
+                        {
+                            found = true;
+                        }
+
+                        deckViewModel.AddCard(card, deck.slots[cardId]);
+                    }
+                }
+            }
+
+            if (!found)
+            {
+                return null;
+            }
+
+            return deckViewModel;
+        }
+
+        private void CrossReferenceRingsDbDecks(SearchViewModel model, UserSettings settings)
+        {
+            HashSet<string> foundSlugs = new HashSet<string>();
+            foreach (var card in model.Cards)
+            {
+                if (!foundSlugs.Contains(card.Slug))
+                {
+                    foundSlugs.Add(card.Slug);
+                }
+            }
+
+            model.RingsDbDecks = new List<RingsDbDeckViewModel>();
+
+            var userId = settings.RingsDbUserId.GetValueOrDefault(0);
+            if (userId == 0)
+            {
+                return;
+            }
+
+            var decks = _ringsDbService.GetUserDecks(userId);
+
+            foreach (var deck in decks)
+            {
+                var deckViewModel = GetDeckViewModel(foundSlugs, deck);
+                if (deckViewModel != null)
+                {
+                    model.RingsDbDecks.Add(deckViewModel);
+                }
+            }
+        }
+
         public void HandleSearch(SearchViewModel model, UserSettings settings)
         {
             InitializeSearch(model);
@@ -140,6 +220,10 @@ namespace HallOfBeorn.Handlers.LotR
 
             if (model.View.HasValue)
             {
+                if (model.View.GetValueOrDefault(View.None) == View.RingsDB)
+                {
+                    CrossReferenceRingsDbDecks(model, settings);
+                }
                 if (model.View == Models.View.Product)
                 {
                     var productsByCode = new Dictionary<string, ProductViewModel>();

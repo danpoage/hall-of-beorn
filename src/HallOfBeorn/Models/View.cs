@@ -16,5 +16,6 @@ namespace HallOfBeorn.Models
         Character = 21,
         Community = 31,
         Alt_Art = 32,
+        RingsDB = 33,
     }
 }

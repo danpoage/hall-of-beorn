@@ -11196,5 +11196,10 @@ namespace HallOfBeorn.Services.LotR.RingsDb
         {
             return repository.GetDeckList(deckId);
         }
+
+        public IEnumerable<RingsDbDeckList> GetUserDecks(int userId)
+        {
+            return repository.GetUserDeckLists(userId);
+        }
     }
 }

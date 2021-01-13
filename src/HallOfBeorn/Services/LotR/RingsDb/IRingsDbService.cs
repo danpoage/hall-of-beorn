@@ -13,5 +13,6 @@ namespace HallOfBeorn.Services.LotR.RingsDb
         IEnumerable<KeyValuePair<string, int>> GetLinks(string slug);
         bool DeckIncludesCard(string deckId, string slug);
         RingsDbDeckList GetDeckList(string deckId);
+        IEnumerable<RingsDbDeckList> GetUserDecks(int userId);
     }
 }

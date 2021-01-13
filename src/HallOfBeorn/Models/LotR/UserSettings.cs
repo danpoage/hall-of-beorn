@@ -9,6 +9,7 @@ namespace HallOfBeorn.Models.LotR
         private readonly HashSet<string> ownedProducts = new HashSet<string>();
 
         public string Language { get; set; }
+        public int? RingsDbUserId { get; set; }
         public bool IncludeCommunity { get; set; }
         public bool IncludeAlep { get; set; }
         public bool IncludeFirstAge { get; set; }
@@ -24,6 +25,16 @@ namespace HallOfBeorn.Models.LotR
             if (request == null)
             {
                 return settings;
+            }
+
+            HttpCookie ringsDbUserCookie = request.Cookies["RingsDbUserId"];
+            if (ringsDbUserCookie != null)
+            {
+                var userId = 0;
+                if (int.TryParse(ringsDbUserCookie.Value, out userId))
+                {
+                    settings.RingsDbUserId = userId;
+                }
             }
 
             HttpCookie setSearchCookie = request.Cookies["SetSearch"];

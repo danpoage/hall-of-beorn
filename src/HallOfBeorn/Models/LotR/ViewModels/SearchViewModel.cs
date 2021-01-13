@@ -602,6 +602,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             return View.GetValueOrDefault(Models.View.None) == Models.View.Alt_Art;
         }
 
+        public bool IsRingsDbView()
+        {
+            return View.GetValueOrDefault(Models.View.None) == Models.View.RingsDB;
+        }
+
         [Display(Name = "Artist")]
         public string Artist { get; set; }
 
@@ -701,6 +706,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         public List<CharacterViewModel> Characters { get; set; }
 
         public List<LinkViewModel> Links { get; set; }
+
+        public List<RingsDbDeckViewModel> RingsDbDecks { get; set; }
 
         //[Display(Name = "Custom")]
         //public bool Custom { get; set; }

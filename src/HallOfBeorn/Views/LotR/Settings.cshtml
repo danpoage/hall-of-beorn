@@ -3,13 +3,19 @@
 }
 
 @section scripts {
-    <script type="text/javascript" src="/Scripts/settings-1.0.4.js" defer></script>
+    <script type="text/javascript" src="/Scripts/settings-1.0.5.js" defer></script>
 }
 
 <h2>Settings</h2>
 
 <a title="Bear Rescue" href="https://appalachianbearrescue.org/" target="_blank"><img title="Hall of Beorn Settings" src="https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Pages/SettingsHeader.jpg" style="margin:4px;"/></a>
 
+<h3>Link RingsDB User</h3>
+<p>Define your RingsDB User ID here to include your published decks in search results. You can find your by clicking on Public Profile and looking at the URL: https://ringsdb.com/user/profile/{user_id}/{user_name}</p>
+<div>
+    <span class="search-section" style="vertical-align:middle;">User ID</span><input id="RingsDbUserId" type="number" style="vertical-align:middle;" />
+</div>
+<br /><br />
 <h3>Community Set Filters</h3>
 <p>Determine whether community-designed cards should be returned in search results. The default is Official Sets Only.</p>
 <table>
@@ -30,7 +36,7 @@
         <td><input style="width: 20px;" type="radio" id="SearchCommunity" name="SearchSets" /></td>
     </tr>
 </table>
-<br />
+<br /><br />
 <h3>Default Sort</h3>
 <p>When a specific sort is not requested, search results are ordered by relevance (how closely a card matches the search critieria). When multiple cards have the same relevance score, a second sort is performed as a "tie breaker". The default is Popularity.</p>
 <table>  
@@ -63,7 +69,7 @@
         <td><input style="width: 20px;" type="radio" id="SortStatEfficiency" name="DefaultSort" /></td>
     </tr>
 </table>
-<br />
+<br /><br />
 <h3>Default Limit</h3>
 <p>Open-ended searches can return large result sets which hurt performance and cost money. If you find yourself increasing this value, please consider <a href="https://www.patreon.com/Beorn" target="_blank">donating to our Patreon</a>. The default is 200.</p>
 <table>  
@@ -80,7 +86,7 @@
         <td><input style="width: 20px;" type="radio" id="Limit600" name="DefaultLimit" /></td>
     </tr>
 </table>
-<br />
+<br /><br />
 <h3>Owned Product Filters</h3>
 <p>You can filter search results to exclude cards contained in products you do not own. The default is to Include All Products. If you choose to filter specific products, please select the products you own below (The Core Set is always included).</p>
 <table>  

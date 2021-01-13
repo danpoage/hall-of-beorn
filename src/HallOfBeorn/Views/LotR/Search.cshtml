@@ -502,6 +502,22 @@
     }
     *@
 }
+@if (@Model.IsRingsDbView())
+{
+    foreach (var deck in @Model.RingsDbDecks)
+    {
+        <div style="margin: 4px;border-width:1px;border-color:gray;border-style:solid;padding:4px;">
+            <a title="@deck.Name" href="@deck.DeckUrl" target="_blank" style="font-size:18px;margin-left: 4px;"><b>@deck.Name</b></a>
+            <div style="margin-left: 4px;">
+            @foreach (var deckHero in @deck.Heroes)
+            {
+                <img src="@deckHero.ThumbImagePath" title="@deckHero.Title" style="width:128px;margin:2px;"/>
+            }
+            </div>
+            <p style="margin-left: 8px;">@deck.Description</p>
+        </div>
+    }
+}
 @if (@Model.IsCardView())
 {
     foreach (var card in @Model.Cards)

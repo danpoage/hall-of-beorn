@@ -2,8 +2,6 @@
 $(function () {
     console.log('Settings Page Init');
 
-    console.log('checking for settings cookie');
-
     function getCookie(cname) {
 
         if (!document.cookie) {
@@ -23,6 +21,18 @@ $(function () {
         }
         return "";
     };
+
+    var ringsDbUserCookie = getCookie('RingsDbUserId');
+    if (ringsDbUserCookie) {
+        console.log('RingsDB User ID Cookie Found: ' + ringsDbUserCookie);
+        $('#RingsDbUserId').val(ringsDbUserCookie);
+    }
+
+    $('#RingsDbUserId').change(function () {
+        var userId = $('#RingsDbUserId').val();
+        console.log('RingsDB User ID entered: ' + userId);
+        document.cookie = 'RingsDbUserId=' + userId + ';path:/';
+    });
 
     var setSearchCookie = getCookie('SetSearch');
     if (setSearchCookie) {

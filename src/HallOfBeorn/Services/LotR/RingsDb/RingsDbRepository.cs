@@ -25,19 +25,23 @@ namespace HallOfBeorn.Services.LotR.RingsDb
 
         private const string connectionStringFormat = "Data Source={0}\\App_Data\\RingsDB.data";
         private const string getDeckSqlFormat = "select card_id, quantity from deck where id = '{0}';";
+        private const string getUserDeckIdsSqlFormat = "select id, name, description from deck_info where user_id = {0};";
 
         private SQLiteConnection GetConnection()
         {
             return new SQLiteConnection(connectionString);
         }
 
-        public RingsDbDeckList GetDeckList(string deckId)
+        private RingsDbDeckList GetDeck(SQLiteConnection connection, string deckId)
         {
             uint parsedId = 0;
             if (!uint.TryParse(deckId, out parsedId))
             {
                 return null;
             }
+
+            var command = connection.CreateCommand();
+            command.CommandText = string.Format(getDeckSqlFormat, deckId);
 
             var deck = new RingsDbDeckList
             { 
@@ -46,36 +50,76 @@ namespace HallOfBeorn.Services.LotR.RingsDb
                 slots = new Dictionary<string,byte>()
             };
 
-            using (var connection = GetConnection())
+            using (var reader = command.ExecuteReader())
             {
-                connection.Open();
-                var command = connection.CreateCommand();
-                command.CommandText = string.Format(getDeckSqlFormat, deckId);
-
-                using (var reader = command.ExecuteReader())
+                var count = 0;
+                while (reader.Read())
                 {
-                    var count = 0;
-                    while (reader.Read())
-                    {
-                        var cardId = reader.GetString(0);
-                        var quantity = reader.GetByte(1);
+                    var cardId = reader.GetString(0);
+                    var quantity = reader.GetByte(1);
 
-                        count++;
-                        if (count < 4)
-                        {
-                            if (!deck.heroes.ContainsKey(cardId))
-                                deck.heroes.Add(cardId, quantity);
-                        }
-                        else
-                        {
-                            if (!deck.slots.ContainsKey(cardId))
-                                deck.slots.Add(cardId, quantity);
-                        }
+                    count++;
+                    if (count < 4)
+                    {
+                        if (!deck.heroes.ContainsKey(cardId))
+                            deck.heroes.Add(cardId, quantity);
+                    }
+                    else
+                    {
+                        if (!deck.slots.ContainsKey(cardId))
+                            deck.slots.Add(cardId, quantity);
                     }
                 }
             }
 
             return deck;
+        }
+
+        public RingsDbDeckList GetDeckList(string deckId)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+
+                return GetDeck(connection, deckId);
+            }
+        }
+
+        public IEnumerable<RingsDbDeckList> GetUserDeckLists(int userId)
+        {
+            var decks = new Dictionary<string, RingsDbDeckList>();
+
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                var command = connection.CreateCommand();
+                command.CommandText = string.Format(getUserDeckIdsSqlFormat, userId);
+
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var deckId = reader.GetString(0);
+                        var name = reader.GetString(1);
+                        var description = reader.GetString(2);
+
+                        if (!string.IsNullOrEmpty(deckId) && !decks.ContainsKey(deckId))
+                        {
+                            var detailCommand = connection.CreateCommand();
+                            detailCommand.CommandText = string.Format(getDeckSqlFormat, deckId);
+                            var deck = GetDeck(connection, deckId);
+                            if (deck != null)
+                            {
+                                deck.name = name;
+                                deck.description_md = description;
+                                decks[deckId] = deck;
+                            }
+                        }
+                    }
+                }
+            }
+
+            return decks.Values;
         }
     }
 }

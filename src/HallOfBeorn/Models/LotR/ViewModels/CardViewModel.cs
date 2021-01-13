@@ -82,6 +82,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         public bool HasIncludedEncounterSets { get { return _includedEncounterSets.Count > 0; } }
         public List<EncounterSetViewModel> IncludedEncounterSets { get { return _includedEncounterSets; } }
 
+        public byte? DeckQuantity { get; set; }
+
         public string CountLabel
         {
             get
