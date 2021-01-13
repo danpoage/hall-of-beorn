@@ -506,15 +506,17 @@
 {
     foreach (var deck in @Model.RingsDbDecks)
     {
-        <div style="margin: 4px;border-width:1px;border-color:gray;border-style:solid;padding:4px;">
-            <a title="@deck.Name" href="@deck.DeckUrl" target="_blank" style="font-size:18px;margin-left: 4px;"><b>@deck.Name</b></a>
+        <div style="margin: 4px;border-width:1px;border-color:gray;border-style:solid;padding:4px;height:380px;border-radius:4px;display:inline-block;">
+            <div style="margin: 2px;">
+                <img src="/Images/RingsDB.jpg" style="width: 16px;height:16px;" /> <a title="@deck.Name" href="@deck.DeckUrl" target="_blank" style="font-size:18px;margin-left: 4px;"><b>@deck.Name</b></a>
+            </div>
             <div style="margin-left: 4px;">
             @foreach (var deckHero in @deck.Heroes)
             {
                 <img src="@deckHero.ThumbImagePath" title="@deckHero.Title" style="width:128px;margin:2px;"/>
             }
             </div>
-            <p style="margin-left: 8px;">@deck.Description</p>
+            <p style="margin-left: 8px;overflow-style:scrollbar;">@deck.Description</p>
         </div>
     }
 }
