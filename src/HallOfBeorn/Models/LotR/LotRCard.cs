@@ -371,6 +371,18 @@ namespace HallOfBeorn.Models.LotR
             };
         }
 
+        public static LotRCard Treasure(string title, Sphere sphere, byte resourceCost, bool isUnique)
+        {
+            return new LotRCard()
+            {
+                CardType = Models.LotR.CardType.Treasure,
+                Title = title,
+                Sphere = sphere,
+                ResourceCost = resourceCost,
+                IsUnique = isUnique,
+            };
+        }
+
         public static LotRCard Event(string title, string id, Sphere sphere, byte resourceCost)
         {
             return new LotRCard()

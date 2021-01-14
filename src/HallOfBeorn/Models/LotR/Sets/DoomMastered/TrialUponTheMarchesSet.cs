@@ -77,7 +77,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
                 .WithUnique()
                 .WithTraits("Orc.", "Veteran.")
                 .WithKeywords("Raid.", "Relentless.")
-                .WithTextLine("Raid.", "Relentless.")
+                .WithTextLine("Raid. Relentless.")
                 .WithTextLine("Forced: When Azrat is damaged by an attack, discard the top card of the attacking player's deck. Reduce the damage by the cost of the discarded card and deal that damage to one attacking character instead.")
                 .WithInfo(196, 1, Artist.Aleksi_Briclot);
             addEnemy("Orc Burner", EncounterSet.TrialUponTheMarches, 30, 4, 3, 2, 4)
@@ -120,7 +120,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
             addTreachery("An Ill Fate", EncounterSet.TrialUponTheMarches)
                 .WithTextLine("When Revealed: Each player must discard an ally from his hand, if able, and discard X cards from the top of his deck. X is the cost of the discarded ally. If any player did not discard an ally, An Ill Fate gains surge.")
                 .WithShadow("Shadow: If this attack destroys an ally, discard the top X cards of the defending player's deck. X is the cost of that ally.")
-                .WithInfo(205, 1, Artist.Katerina_Konstantinoudi));
+                .WithInfo(205, 1, Artist.Katerina_Konstantinoudi);
             addTreachery("Mirth of Morgoth", EncounterSet.TrialUponTheMarches)
                 .WithTextLine("When Revealed: Remove a hero from the quest and place that hero in the staging area. Each enemy in the staging area makes an attack against that hero during the combat phase. That hero can only declare attack and defend against enemies in the staging area. This effect lasts until the end of the round.")
                 .WithInfo(206, 2, Artist.Sergey_Musin);

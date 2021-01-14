@@ -41,7 +41,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
                 .WithTextLine("When Bard the Bowman makes a ranged attack, the enemy he attacks gets -2 Defense until the end of the phase.")
                 .WithFlavorLine("Now he shot with a great yew bow, till all his arrows but one were spent.")
                 .WithFlavorLine("-The Hobbit")
-                .WithInfo(3, 1 Artist.Magali_Villeneuve);
+                .WithInfo(3, 1, Artist.Magali_Villeneuve);
             addHero("Óin", 8, Sphere.Spirit, 2, 1, 1, 4)
                 .WithTraits("Dwarf.")
                 .WithTextLine("While you control at least 5 Dwarf characters, Óin gets +1 Attack and gains the Tactics resource icon.")
@@ -58,7 +58,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
                 .WithCommunityVersion("RiddermarkLord/Bombur-Lore-Hero-1")
                 .WithCommunityVersion("RiddermarkLord/Bombur-Lore-Hero-2")
                 .WithInfo(5, 1, Artist.Ilich_Henriquez);
-            addAlly("Glóin", 3, Sphere.Leadership, 2, 1, 1, 3)
+            addAlly("Glóin", 3, Sphere.Leadership, true, 2, 1, 1, 3)
                 .WithTraits("Dwarf.")
                 .WithTextLine("While you control at least 5 Dwarf characters, Glóin gains: 'Response: After you play Glóin from your hand, choose a hero. Add 2 resources to that hero's resource pool.'")
                 .WithFlavorLine("Glóin lit several more torches, and then they all crept out, one by one...")

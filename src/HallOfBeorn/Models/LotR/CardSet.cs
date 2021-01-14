@@ -58,6 +58,13 @@ namespace HallOfBeorn.Models.LotR
             return attachment;
         }
 
+        protected LotRCard addTreasure(string title, byte resourceCost, Sphere sphere, bool isUnique)
+        {
+            var treasure = LotRCard.Treasure(title, sphere, resourceCost, isUnique);
+            addCard(treasure);
+            return treasure;
+        }
+
         protected LotRCard addEvent(string title, byte resourceCost, Sphere sphere)
         {
             var card = LotRCard.Event(title, string.Empty, sphere, resourceCost);
