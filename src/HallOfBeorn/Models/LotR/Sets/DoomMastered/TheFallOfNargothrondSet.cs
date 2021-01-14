@@ -30,6 +30,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
                 .WithOppositeTextLine("When a character with the Ransom keyword enters play, the player who controls it may discard a number of resources from the resource pools of heroes they control equal to the Ransom value. If they choose not to satisfy this requirement, then that player card loses the \"ally\" trait and gains the \"enemy\" trait, immediately engaging the player who played it. Its threat is equal to its willpower and its engagement cost is 0. If this enemy is defeated, remove all damage from it and return it to the player's control as an ally.")
                 .WithInfo(0, 1, Artist.Unknown);
             addEnemy("Glaurung", EncounterSet.TheFallOfNargothrond, 40, 5, 8, 7, Card.VALUE_NA)
+                .WithUnique()
                 .WithTraits("Dragon.")
                 .WithKeywords("Indestrutible.", "Raid.", "Relentless.")
                 .WithTextLine("Indestrutible. Raid. Relentless.")

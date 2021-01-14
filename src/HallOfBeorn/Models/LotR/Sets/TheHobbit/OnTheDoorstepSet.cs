@@ -16,6 +16,13 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
             SetType = Models.SetType.Saga_Expansion;
             Cycle = "The Hobbit";
 
+            addHero("Bilbo Baggins", 0, Sphere.Baggins, 1, 1, 1, 3)
+                .WithTraits("Hobbit.", "Burglar.")
+                .WithTextLine("Bilbo ~Baggins does not count against the hero limit and cannot gain resources from non-treasure cards.")
+                .WithTextLine("The first player gains control of Bilbo ~Baggins.")
+                .WithTextLine("Action: Spend 1 Baggins resource to search your deck for a treasure card and add it to your hand.")
+                .WithTextLine("If Bilbo ~Baggins leaves play, the players have lost the game.")
+                .WithInfo(1, 1, Artist.Magali_Villeneuve);
             addHero("Balin", 9, Sphere.Leadership, 2, 1, 2, 4)
                 .WithTraits("Dwarf.")
                 .WithTextLine("Response: Pay 1 resource from Balin's resource pool to cancel a shadow effect just triggered during an attack. Then, deal the attacking enemy another shadow card. (Limit once per attack.)")
@@ -27,185 +34,14 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
                 .WithCommunityVersion("Hrodebert/Balin-Standard-Layout")
                 .WithCommunityVersion("Hrodebert/Balin-Zoom-Bleed")
                 .WithInfo(2, 1, Artist.Winona_Nelson);
-            Cards.Add(new LotRCard() {
-                Title = "Bard the Bowman",
-                Id = "e2cf87be-ccdc-48e9-8127-57bee67d4a0c",
-                CardType = CardType.Hero,
-                Sphere = Sphere.Tactics,
-                IsUnique = true,
-                ThreatCost = 11,
-                Quantity = 1,
-                Willpower = 2,
-                HitPoints = 4,
-                Attack = 3,
-                Defense = 2,
-                Text = "When Bard the Bowman makes a ranged attack, the enemy he attacks gets -2 Defense until the end of the phase.",
-                FlavorText = "Now he shot with a great yew bow, till all his arrows but one were spent. -The Hobbit",
-                CardNumber = 3,
-                Artist = Artist.Magali_Villeneuve
-            }
-            .WithTraits("Esgaroth.", "Warrior.")
-            .WithKeywords("Ranged."));
-            Cards.Add(new LotRCard() {
-                Title = "Bifur",
-                Id = "c4b959f5-92a9-4f46-8656-f9da08a5cb86",
-                CardType = CardType.Ally,
-                Sphere = Sphere.Lore,
-                IsUnique = true,
-                ResourceCost = 3,
-                Quantity = 3,
-                Traits = new List<string>() { "Dwarf." },
-                Willpower = 1,
-                HitPoints = 3,
-                Attack = 2,
-                Defense = 1,
-                Text = "While you control at least 5 Dwarf characters, Bifur gains: 'Response: After you play Bifur from your hand, draw 2 cards.'",
-                FlavorText = "\"My cousins! Bombur and Bofur - we have forgotten them, they are down in the valley!\" -The Hobbit",
-                CardNumber = 7,
-                Artist = Artist.Taylor_Ingvarsson
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Bilbo Baggins",
-                Id = "4e61b160-2104-497f-9977-4b353e54fbb7",
-                CardType = CardType.Hero,
-                Sphere = Sphere.Baggins,
-                IsUnique = true,
-                ThreatCost = 0,
-                Quantity = 1,
-                Traits = new List<string>() { "Hobbit.", " Burglar." },
-                Willpower = 1,
-                HitPoints = 3,
-                Attack = 1,
-                Defense = 1,
-                Text = "Bilbo ~Baggins does not count against the hero limit and cannot gain resources from non-treasure cards.\r\nThe first player gains control of Bilbo ~Baggins.\r\nAction: Spend 1 Baggins resource to search your deck for a treasure card and add it to your hand.\r\nIf Bilbo ~Baggins leaves play, the players have lost the game.",
-                CardNumber = 1,
-                Artist = Artist.Magali_Villeneuve
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Bilbo's Magic Ring",
-                Id = "9dd6bf3e-e090-4ebf-a056-765c94e8a199",
-                CardType = CardType.Treasure,
-                Sphere = Sphere.Neutral,
-                IsUnique = true,
-                ResourceCost = 0,
-                Quantity = 1,
-                Traits = new List<string>() { "Artifact.", "Item.", "Ring." },
-                Text = "Attach to Bilbo ~Baggins.\r\nAction: Exhaust Bilbo's Magic ~Ring and raise your threat by 1 to gain 1 Baggins resource. (Limit once per round.)\r\n\r\nResponse: After Bilbo ~Baggins exhausts to defend an attack, exhaust Bilbo's Magic ~Ring and raise your threat by 3 to cancel all damage from this attack.",
-                CardNumber = 19,
-                Artist = Artist.Magali_Villeneuve
-            });
-            addAttachment("Black Arrow", 0, Sphere.Tactics, true)
-                .WithTraits("Artifact.", "Item.")
-                .WithText("Limit 1 per deck. Attach to a hero with Ranged.\r\nResponse: After attached hero declares an attack, add Black Arrow to the victory display to give attached hero +5 Attack for this attack.")
-                .WithFlavor("\"I have saved you to the last...\" -Bard, The Hobbit")
-                .WithVictoryPoints(1)
-                .WithLimitOnePerDeck()
-                .WithInfo(15, 3, Artist.Melissa_Findley);
-            addHero("Bombur", 8, Sphere.Lore, 0, 1, 2, 5)
-                .WithTraits("Dwarf.")
-                .WithTextLine("When counting the number of Dwarf characters you control, Bombur counts as two.")
-                .WithFlavorLine("\"Bombur is fattest and will do for two, he had better come alone and last.\"")
-                .WithFlavorLine("-Gandalf, The Hobbit")
-                .WithCommunityVersion("RiddermarkLord/Bombur-Lore-Hero-1")
-                .WithCommunityVersion("RiddermarkLord/Bombur-Lore-Hero-2")
-                .WithInfo(5, 1, Artist.Ilich_Henriquez);
-            Cards.Add(new LotRCard() {
-                
-                Title = "Desperate Alliance",
-                Id = "7465c18b-440e-4a90-8ac0-c50c0de03b5d",
-                CardType = CardType.Event,
-                Sphere = Sphere.Spirit,
-                ResourceCost = 0,
-                Quantity = 3,
-                Text = "Action: Choose a hero you control. Until the end of the phase, give control of that hero and all resources in that hero's resource pool to another player. (Limit 1 per phase.)",
-                FlavorText = "\"Come!\" called Gandalf. \"There is yet time for council.\" -The Hobbit",
-                CardNumber = 10,
-                Artist = Artist.Magali_Villeneuve
-            });
-            addAlly("Dwalin", 3, Sphere.Spirit, true, 1, 1, 2, 3)
-                .WithTraits("Dwarf.")
-                .WithKeywords("Sentinel.")
-                .WithTextLine("Sentinel.")
-                .WithTextLine("While you control at least 5 Dwarf characters, lower the cost to play Dwalin by 2.")
-                .WithCommunityVersion("RiddermarkLord/Dwalin-MotK-Spirit-Hero")
-                .WithInfo(8, 3, Artist.Melanie_Maier);
-            Cards.Add(new LotRCard() {
-                
-                Title = "Expert Treasure-hunter",
-                Id = "2d550e71-f2a6-41f2-8aac-4533a965eb71",
-                CardType = CardType.Attachment,
-                Sphere = Sphere.Lore,
-                ResourceCost = 0,
-                Quantity = 3,
-                Traits = new List<string>() { "Skill." },
-                Text = "Attach to a hero. Limit 1 per hero.\r\nResponse: After attached hero quests successfully, name a card type and discard the top card of your deck. If the discarded card is the named type, take it into your hand.",
-                CardNumber = 17,
-                Artist = Artist.Magali_Villeneuve,
-            }.WithErrata(1));
-            Cards.Add(new LotRCard() {
-                Title = "Glóin",
-                Id = "6778eb01-6b07-4dbe-87f1-e854ab548813",
-                CardType = CardType.Ally,
-                Sphere = Sphere.Leadership,
-                IsUnique = true,
-                ResourceCost = 3,
-                Quantity = 3,
-                Traits = new List<string>() { "Dwarf." },
-                Willpower = 2,
-                HitPoints = 3,
-                Attack = 1,
-                Defense = 1,
-                Text = "While you control at least 5 Dwarf characters, Glóin gains: 'Response: After you play Glóin from your hand, choose a hero. Add 2 resources to that hero's resource pool.'",
-                FlavorText = "Glóin lit several more torches, and then they all crept out, one by one... - The Hobbit ",
-                CardNumber = 6,
-                Artist = Artist.Jeff_Lee_Johnson
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Great Yew Bow",
-                Id = "833664a0-6bab-4e93-b5f1-88e7b6456569",
-                CardType = CardType.Attachment,
-                Sphere = Sphere.Tactics,
-                Keywords = new List<string>() { "Restricted." },
-                ResourceCost = 2,
-                Quantity = 3,
-                Traits = new List<string>() { "Item.", "Weapon." },
-                Text = "Attach to a hero with the printed Ranged keyword. Restricted.\r\nCombat Action: Choose an enemy in the staging area. Exhaust Great Yew Bow and attached hero to make a ranged attack against that enemy. Declare attached hero as the attacker. No other attackers can be declared for this attack.",
-                CardNumber = 14,
-                Artist = Artist.Sara_Biddle
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "King Under the Mountain",
-                Id = "9152834a-5355-42ba-9592-1a3c1940d1a8",
-                CardType = CardType.Attachment,
-                Sphere = Sphere.Leadership,
-                IsUnique = true,
-                ResourceCost = 2,
-                Quantity = 3,
-                Traits = new List<string>() { "Title." },
-                Text = "Attach to a Dwarf hero.\r\nAction: Exhaust King Under the Mountain to look at the top 2 cards of your deck. Add 1 to your hand and discard the other.",
-                FlavorText = "\"Long ago in my grandfather Thror's time our family was driven out of the far North, and came back with all their wealth and tools to this Mountain on the map.\" -Thorin, The Hobbit",
-                CardNumber = 18,
-                Artist = Artist.Magali_Villeneuve
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Mithril Shirt",
-                Id = "12d51424-0edd-4977-9df1-5f6a7a5a96e1",
-                CardType = CardType.Treasure,
-                Sphere = Sphere.Neutral,
-                IsUnique = true,
-                ResourceCost = 0,
-                Quantity = 1,
-                Traits = new List<string>() { "Artifact.", "Erebor.", "Item." },
-                Text = "Attach to Bilbo ~Baggins.\r\nAttached hero gets +1 Defense and +1 hit point.",
-                FlavorText = "\"Mr. Baggins!\" he cried. \"Here is the first payment of your reward! Cast off your old coat and put on this!\" - Thorin, The Hobbit",
-                CardNumber = 21,
-                Artist = Artist.Tiziano_Baracchi
-            });
+            addHero("Bard the Bowman", 11, Sphere.Tactics, 2, 3, 2, 4)
+                .WithTraits("Esgaroth.", "Warrior.")
+                .WithKeywords("Ranged.")
+                .WithTextLine("Ranged.")
+                .WithTextLine("When Bard the Bowman makes a ranged attack, the enemy he attacks gets -2 Defense until the end of the phase.")
+                .WithFlavorLine("Now he shot with a great yew bow, till all his arrows but one were spent.")
+                .WithFlavorLine("-The Hobbit")
+                .WithInfo(3, 1 Artist.Magali_Villeneuve);
             addHero("Óin", 8, Sphere.Spirit, 2, 1, 1, 4)
                 .WithTraits("Dwarf.")
                 .WithTextLine("While you control at least 5 Dwarf characters, Óin gets +1 Attack and gains the Tactics resource icon.")
@@ -214,132 +50,138 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
                 .WithCommunityVersion("RiddermarkLord/Oin-Spirit-Hero-1")
                 .WithCommunityVersion("Hrodebert/Oin-Spirit-Hero")
                 .WithInfo(4, 1, Artist.Jeff_Lee_Johnson);
-            Cards.Add(new LotRCard() {
-                
-                Title = "Ravens of the Mountain",
-                Id = "6d442a61-e9e9-4729-bac1-da3d76af6afa",
-                CardType = CardType.Event,
-                Sphere = Sphere.Lore,
-                ResourceCost = 1,
-                Quantity = 3,
-                Text = "Action: Exhaust a hero you control to shuffle the encounter deck and look at its top card. Place progress tokens on the current quest equal to the revealed card's Threat. Then, put that card back on top of the encounter deck.",
-                FlavorText = "As they worked the ravens brought them constant tidings. -The Hobbit",
-                CardNumber = 11,
-                Artist = Artist.Adam_Lane,
-            }.WithErrata(1));
-            Cards.Add(new LotRCard() {
-                
-                Title = "Straight Shot",
-                Id = "c2a79823-e4f9-4449-b467-5916d7e58979",
-                CardType = CardType.Event,
-                Sphere = Sphere.Tactics,
-                ResourceCost = 0,
-                Quantity = 3,
-                Text = "Action: Exhaust a Weapon attachment to choose a non-unique enemy with 0 Defense. Discard the chosen enemy.",
-                FlavorText = "In it smote and vanished, barb, shaft and feather, so fierce was its flight. -The Hobbit",
-                CardNumber = 9,
-                Artist = Artist.Ilich_Henriquez
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "The Arkenstone",
-                Id = "ae774680-c6e9-49eb-96b8-fcdebe90b49d",
-                CardType = CardType.Treasure,
-                Sphere = Sphere.Neutral,
-                IsUnique = true,
-                ResourceCost = 0,
-                Quantity = 1,
-                Traits = new List<string>() { "Artifact.", " Erebor.", " Item." },
-                Text = "Attach to a hero.\r\nAction: Exhaust The Arkenstone and raise your threat by X to lower by X the cost of the next ally you play this phase that matches the attached hero's sphere.",
-                FlavorText = "\"...the Heart of the Mountain; and it is also the heart of Thorin. He values it above a rive of gold.\" -Bilbo, The Hobbit",
-                CardNumber = 20,
-                Artist = Artist.Mike_Nash
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "The Lucky Number",
-                Id = "65407141-e013-4d1c-8f70-4328e707d0cc",
-                CardType = CardType.Event,
-                Sphere = Sphere.Baggins,
-                ResourceCost = 1,
-                Quantity = 3,
-                Text = "Action: Choose a character in play (other than Bilbo ~Baggins). Add Bilbo ~Baggins' total Willpower, Attack, and Defense to that character's Willpower, Attack, and Defense respectively until the end of the phase.",
-                CardNumber = 13,
-                Artist = Artist.Magali_Villeneuve
-            });
-            Cards.Add(new LotRCard() {
-                Title = "Thrór's Battle Axe",
-                Id = "857d6dc8-ba1e-4839-8e96-a8a0136a2302",
-                CardType = CardType.Treasure,
-                Sphere = Sphere.Neutral,
-                IsUnique = true,
-                Keywords = new List<string>() { "Restricted." },
-                ResourceCost = 0,
-                Quantity = 1,
-                Traits = new List<string>() { "Artifact.", " Erebor.", " Item." },
-                Text = "Attach to a hero.\r\nAttached hero gets +2 Attack.\r\nResponse: After attached hero attacks and destroys an enemy, deal 1 damage to another enemy engaged with you.",
-                FlavorText = "Royal indeed did Thorin look, clad in a coat of gold-plated rings, with a silver hafted axe... -The Hobbit",
-                CardNumber = 22,
-                Artist = Artist.Tiziano_Baracchi
-            });
-            Cards.Add(new LotRCard() {
-                Title = "Thrór's Golden Cup",
-                Id = "ff7b0b9d-f8ae-4464-9db3-7205c5ae4db7",
-                CardType = CardType.Treasure,
-                Sphere = Sphere.Neutral,
-                IsUnique = true,
-                ResourceCost = 0,
-                Quantity = 1,
-                Traits = new List<string>() { "Artifact.", " Erebor.", " Item." },
-                Text = "Attach to a hero.\r\nAction: Add Thror's Golden Cup to the victory display to draw 3 cards.",
-                FlavorText = "...the great golden cup of Thror, two-handed, hammered and carven with birds and flowers whose eyes and petals were of jewels... -The Hobbit",
-                VictoryPoints = 3,
-                CardNumber = 24,
-                Artist = Artist.Melanie_Maier
-            });
-            Cards.Add(new LotRCard() {
-                Title = "Thrór's Hunting Bow",
-                Id = "7adc49c0-640d-4934-89c5-312ab584b77c",
-                CardType = CardType.Treasure,
-                Sphere = Sphere.Neutral,
-                IsUnique = true,
-                Keywords = new List<string>() { "Restricted." },
-                ResourceCost = 0,
-                Quantity = 1,
-                Traits = new List<string>() { "Artifact.", " Erebor.", " Item." },
-                Text = "Attach to a hero. Attached hero gains Ranged.\r\nWhen making a ranged attack, attached hero gets +2 Attack.",
-                FlavorText = "Thorin seized a bow of horn and shot an arrow at the speaker. -The Hobbit",
-                CardNumber = 23,
-                Artist = Artist.David_Horne
-            });
-            Cards.Add(new LotRCard() {
-                Title = "Thrór's Key",
-                Id = "f4490261-317e-4e9e-9440-a5c58dcddcbf",
-                CardType = CardType.Attachment,
-                Sphere = Sphere.Spirit,
-                IsUnique = true,
-                ResourceCost = 1,
-                Quantity = 3,
-                Traits = new List<string>() { "Artifact.", "Item." },
-                Text = "Attach to a hero.\r\nResponse: After a location is added to the staging area, attach Thror's Key to that location. While attached to a location, Thror's Key gains: 'Treat attached location's printed text box as blank, except for traits.'",
-                FlavorText = "\"The key that went with the map! Try it now while there is still time!\" -Bilbo, The Hobbit",
-                HtmlTemplate = "<p>Attach to a {type:hero}.</p><p><b>Response:</b> After a location is added to the staging area, attach {self} to that location. While attached to a location, {self} gains: &quot;Treat attached location's printed text box as blank, except for traits.&quot;</p><p class='flavor-text'>&quot;The key that went with the map! Try it now while there is still time!&quot; &ndash;Bilbo, The Hobbit</p>",
-                CardNumber = 16,
-                Artist = Artist.Eric_Braddock
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "To me! O my kinsfolk!",
-                Id = "16ae4f56-d8bb-41b8-a992-1da3b6ec1fdb",
-                CardType = CardType.Event,
-                Sphere = Sphere.Leadership,
-                ResourceCost = 1,
-                Quantity = 3,
-                Text = "Action: If you control at least 1 Dwarf hero, put a Dwarf ally from your discard pile into play under your control. Put that ally on the bottom of your deck at the end of the phase.",
-                FlavorText = "Out leapt the King under the Mountain, and his companions followed him. -The Hobbit",
-                CardNumber = 12,
-                Artist = Artist.Tiziano_Baracchi
-            });
+            addHero("Bombur", 8, Sphere.Lore, 0, 1, 2, 5)
+                .WithTraits("Dwarf.")
+                .WithTextLine("When counting the number of Dwarf characters you control, Bombur counts as two.")
+                .WithFlavorLine("\"Bombur is fattest and will do for two, he had better come alone and last.\"")
+                .WithFlavorLine("-Gandalf, The Hobbit")
+                .WithCommunityVersion("RiddermarkLord/Bombur-Lore-Hero-1")
+                .WithCommunityVersion("RiddermarkLord/Bombur-Lore-Hero-2")
+                .WithInfo(5, 1, Artist.Ilich_Henriquez);
+            addAlly("Glóin", 3, Sphere.Leadership, 2, 1, 1, 3)
+                .WithTraits("Dwarf.")
+                .WithTextLine("While you control at least 5 Dwarf characters, Glóin gains: 'Response: After you play Glóin from your hand, choose a hero. Add 2 resources to that hero's resource pool.'")
+                .WithFlavorLine("Glóin lit several more torches, and then they all crept out, one by one...")
+                .WithFlavorLine("-The Hobbit")
+                .WithInfo(6, 3, Artist.Jeff_Lee_Johnson);
+            addAlly("Bifur", 3, Sphere.Lore, true, 1, 2, 1, 3)
+                .WithTraits("Dwarf.")
+                .WithTextLine("While you control at least 5 Dwarf characters, Bifur gains: 'Response: After you play Bifur from your hand, draw 2 cards.'")
+                .WithFlavorLine("\"My cousins! Bombur and Bofur - we have forgotten them, they are down in the valley!\"")
+                .WithFlavorLine("-The Hobbit")
+                .WithInfo(7, 3, Artist.Taylor_Ingvarsson);
+            addAlly("Dwalin", 3, Sphere.Spirit, true, 1, 1, 2, 3)
+                .WithTraits("Dwarf.")
+                .WithKeywords("Sentinel.")
+                .WithTextLine("Sentinel.")
+                .WithTextLine("While you control at least 5 Dwarf characters, lower the cost to play Dwalin by 2.")
+                .WithCommunityVersion("RiddermarkLord/Dwalin-MotK-Spirit-Hero")
+                .WithInfo(8, 3, Artist.Melanie_Maier);
+            addEvent("Straight Shot", 0, Sphere.Tactics)
+                .WithTextLine("Action: Exhaust a Weapon attachment to choose a non-unique enemy with 0 Defense. Discard the chosen enemy.")
+                .WithFlavorLine("In it smote and vanished, barb, shaft and feather, so fierce was its flight.")
+                .WithFlavorLine("-The Hobbit")
+                .WithInfo(9, 3, Artist.Ilich_Henriquez);
+            addEvent("Desperate Alliance", 0, Sphere.Spirit)
+                .WithTextLine("Action: Choose a hero you control. Until the end of the phase, give control of that hero and all resources in that hero's resource pool to another player. (Limit 1 per phase.)")
+                .WithFlavorLine("\"Come!\" called Gandalf. \"There is yet time for council.\"")
+                .WithFlavorLine("-The Hobbit")
+                .WithInfo(10, 3, Artist.Magali_Villeneuve);
+            addEvent("Ravens of the Mountain", 1, Sphere.Lore)
+                .WithTextLine("Action: Exhaust a hero you control to shuffle the encounter deck and look at its top card. Place progress tokens on the current quest equal to the revealed card's Threat. Then, put that card back on top of the encounter deck.")
+                .WithFlavorLine("As they worked the ravens brought them constant tidings.")
+                .WithFlavorLine("-The Hobbit")
+                .WithErrata(1)
+                .WithInfo(11, 3, Artist.Adam_Lane);
+            addEvent("To me! O my kinsfolk!", 1, Sphere.Leadership)
+                .WithTextLine("Action: If you control at least 1 Dwarf hero, put a Dwarf ally from your discard pile into play under your control. Put that ally on the bottom of your deck at the end of the phase.")
+                .WithFlavorLine("Out leapt the King under the Mountain, and his companions followed him.")
+                .WithFlavorLine("-The Hobbit")
+                .WithInfo(12, 3, Artist.Tiziano_Baracchi);
+            addEvent("The Lucky Number", 1, Sphere.Baggins)
+                .WithTextLine("Action: Choose a character in play (other than Bilbo ~Baggins). Add Bilbo ~Baggins' total Willpower, Attack, and Defense to that character's Willpower, Attack, and Defense respectively until the end of the phase.")
+                .WithInfo(13, 3, Artist.Magali_Villeneuve);
+            addAttachment("Great Yew Bow", 2, Sphere.Tactics, false)
+                .WithTraits("Item.", "Weapon.")
+                .WithKeywords("Restricted.")
+                .WithTextLine("Attach to a hero with the printed Ranged keyword. Restricted.")
+                .WithTextLine("Combat Action: Choose an enemy in the staging area. Exhaust Great Yew Bow and attached hero to make a ranged attack against that enemy. Declare attached hero as the attacker. No other attackers can be declared for this attack.")
+                .WithInfo(14, 3, Artist.Sara_Biddle);
+            addAttachment("Black Arrow", 0, Sphere.Tactics, true)
+                .WithTraits("Artifact.", "Item.")
+                .WithText("Limit 1 per deck. Attach to a hero with Ranged.\r\nResponse: After attached hero declares an attack, add Black Arrow to the victory display to give attached hero +5 Attack for this attack.")
+                .WithFlavor("\"I have saved you to the last...\" -Bard, The Hobbit")
+                .WithVictoryPoints(1)
+                .WithLimitOnePerDeck()
+                .WithInfo(15, 3, Artist.Melissa_Findley);
+            addAttachment("Thrór's Key", 1, Sphere.Spirit, true)
+                .WithTraits("Artifact.", "Item.")
+                .WithTextLine("Attach to a hero.")
+                .WithTextLine("Response: After a location is added to the staging area, attach Thror's Key to that location. While attached to a location, Thror's Key gains: 'Treat attached location's printed text box as blank, except for traits.'")
+                .WithFlavorLine("\"The key that went with the map! Try it now while there is still time!\"") 
+                .WithFlavorLine("-Bilbo, The Hobbit")
+                .WithTemplate("<p>Attach to a {type:hero}.</p><p><b>Response:</b> After a location is added to the staging area, attach {self} to that location. While attached to a location, {self} gains: &quot;Treat attached location's printed text box as blank, except for traits.&quot;</p><p class='flavor-text'>&quot;The key that went with the map! Try it now while there is still time!&quot; &ndash;Bilbo, The Hobbit</p>")
+                .WithInfo(16, 3, Artist.Eric_Braddock);
+            addAttachment("Expert Treasure-hunter", 0, Sphere.Lore, false)
+                .WithTraits("Skill.")
+                .WithTextLine("Attach to a hero. Limit 1 per hero.")
+                .WithTextLine("Response: After attached hero quests successfully, name a card type and discard the top card of your deck. If the discarded card is the named type, take it into your hand.")
+                .WithErrata(1)
+                .WithInfo(17, 3, Artist.Magali_Villeneuve);
+            addAttachment("King Under the Mountain", 2, Sphere.Leadership, true)
+                .WithTraits("Title.")
+                .WithTextLine("Attach to a Dwarf hero.")
+                .WithTextLine("Action: Exhaust King Under the Mountain to look at the top 2 cards of your deck. Add 1 to your hand and discard the other.")
+                .WithFlavorLine("\"Long ago in my grandfather Thror's time our family was driven out of the far North, and came back with all their wealth and tools to this Mountain on the map.\"")
+                .WithFlavorLine("-Thorin, The Hobbit")
+                .WithInfo(18, 3, Artist.Magali_Villeneuve);
+            addTreasure("Bilbo's Magic Ring", 0, Sphere.Neutral, true)
+                .WithTraits("Artifact.", "Item.", "Ring.")
+                .WithTextLine("Attach to Bilbo ~Baggins.")
+                .WithTextLine("Action: Exhaust Bilbo's Magic ~Ring and raise your threat by 1 to gain 1 Baggins resource. (Limit once per round.)")
+                .WithTextLine("Response: After Bilbo ~Baggins exhausts to defend an attack, exhaust Bilbo's Magic ~Ring and raise your threat by 3 to cancel all damage from this attack.")
+                .WithInfo(19, 1, Artist.Magali_Villeneuve);
+            addTreasure("The Arkenstone", 0, Sphere.Neutral, true)
+                .WithTraits("Artifact.", " Erebor.", " Item.")
+                .WithTextLine("Attach to a hero.")
+                .WithTextLine("Action: Exhaust The Arkenstone and raise your threat by X to lower by X the cost of the next ally you play this phase that matches the attached hero's sphere.")
+                .WithFlavorLine("\"...the Heart of the Mountain; and it is also the heart of Thorin. He values it above a rive of gold.\"")
+                .WithFlavorLine("-Bilbo, The Hobbit")
+                .WithInfo(20, 1, Artist.Mike_Nash);
+            addTreasure("Mithril Shirt", 0, Sphere.Neutral, true)
+                .WithTraits( "Artifact.", "Erebor.", "Item.")
+                .WithTextLine("Attach to Bilbo ~Baggins.")
+                .WithTextLine("Attached hero gets +1 Defense and +1 hit point.")
+                .WithFlavorLine("\"Mr. Baggins!\" he cried. \"Here is the first payment of your reward! Cast off your old coat and put on this!\"")
+                .WithFlavorLine("-Thorin, The Hobbit")
+                .WithInfo(21, 1, Artist.Tiziano_Baracchi);
+            addTreasure("Thrór's Battle Axe", 0, Sphere.Neutral, true)
+                .WithTraits("Artifact.", " Erebor.", " Item.")
+                .WithKeywords("Restricted.")
+                .WithTextLine("Attach to a hero. Restricted.")
+                .WithTextLine("Attached hero gets +2 Attack.")
+                .WithTextLine("Response: After attached hero attacks and destroys an enemy, deal 1 damage to another enemy engaged with you.")
+                .WithFlavorLine("Royal indeed did Thorin look, clad in a coat of gold-plated rings, with a silver hafted axe...")
+                .WithFlavorLine("-The Hobbit")
+                .WithInfo(22, 1, Artist.Tiziano_Baracchi);
+            addTreasure("Thrór's Hunting Bow", 0, Sphere.Neutral, true)
+                .WithTraits("Artifact.", " Erebor.", " Item.")
+                .WithKeywords("Restricted.")
+                .WithTextLine("Attach to a hero. Restricted.")
+                .WithTextLine("Attached hero gains Ranged.")
+                .WithTextLine("When making a ranged attack, attached hero gets +2 Attack.")
+                .WithFlavorLine("Thorin seized a bow of horn and shot an arrow at the speaker.")
+                .WithFlavorLine("-The Hobbit")
+                .WithInfo(23, 1, Artist.David_Horne);
+            addTreasure("Thrór's Golden Cup", 0, Sphere.Neutral, true)
+                .WithTraits("Artifact.", " Erebor.", " Item.")
+                .WithTextLine("Attach to a hero.")
+                .WithTextLine("Action: Add Thror's Golden Cup to the victory display to draw 3 cards.")
+                .WithFlavorLine("...the great golden cup of Thror, two-handed, hammered and carven with birds and flowers whose eyes and petals were of jewels...")
+                .WithFlavorLine("-The Hobbit")
+                .WithVictoryPoints(3)
+                .WithInfo(24, 1, Artist.Melanie_Maier);
+
             Cards.Add(new LotRCard() {
                 
                 Title = "Into Mirkwood",
