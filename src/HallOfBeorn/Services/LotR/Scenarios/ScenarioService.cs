@@ -117,12 +117,15 @@ namespace HallOfBeorn.Services.LotR.Scenarios
                         nightmareCount = scenario.NightmareModeCount(card.Slug, card.Quantity);
                     }
 
-                    if (card.SideLetter.GetValueOrDefault('a') == 'b')
+                    if (card.SideLetter.GetValueOrDefault('a') != 'b')
                     {
-                        continue;
+                        scenario.MapCardCount(card.Slug, easyCount, normalCount, nightmareCount);
+                    }
+                    else 
+                    {
+                        scenario.MapCardCount(card.Slug, 0, 0, 0);
                     }
 
-                    scenario.MapCardCount(card.Slug, easyCount, normalCount, nightmareCount);
                     scenario.AddScenarioCard(card);
                 }
             }

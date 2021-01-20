@@ -677,6 +677,7 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Adele_Lorienne);
 
             //Children of Eorl
+            all.Add(Artist.Agni_Interactive);
             all.Add(Artist.Anato_Finnstark);
             all.Add(Artist.Howard_Lyon);
 
@@ -693,6 +694,7 @@ namespace HallOfBeorn.Models
         public static Artist None = new Artist { Name = "None", URL = "http://google.com/search?q=Existentialism" };
 
         public static Artist Adam_Duff = new Artist { Name = "Adam Duff", URL = "http://www.adamduff.com" };
+        public static Artist Agni_Interactive = new Artist { Name = "Agni Interactive", URL = "https://www.agniinteractive.com/home" };
         public static Artist AlaisL = new Artist { Name = "AlaisL", URL = "http://alaisl.deviantart.com" };
         public static Artist Alan_Lathwell = new Artist { Name = "Alan Lathwell", URL = "http://alanlathwell.deviantart.com" };
         public static Artist Alan_Lee = new Artist { Name = "Alan Lee", URL = "http://anduin.eldar.org/artgallery/tolkien/alee/justpixs.html" };
