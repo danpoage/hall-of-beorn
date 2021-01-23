@@ -68,11 +68,11 @@ If a quest card has the siege keyword, when characters are commited to that ques
                 .WithTraits("Carn Dûm.")
                 .WithText("While Stronghold Tower is in the staging area, shadow effects cannot be canceled.\r\nTravel: Each player must deal 2 damage to a character he controls to travel here.")
                 .WithInfo(4, 3, Artist.Jokubas_Uoginitas);
-            addTreachery("Black Mare", EncounterSet.TheBattleOfCarnDumNightmare.Name)
-                .WithUnique()
-                .WithText("When Revealed: Attach to Thaurdir. (Counts as a Mount attachment with the text: \"Black Mare remains attached even if Thaurdir flips. Thaurdir gets +3 hit points. Forced: After Thaurdir is flipped, raise each player's threat by 1.\")")
-                .WithShadow("Shadow: Attach Black Mare to Thaurdir.")
-                .WithInfo(5, 1, Artist.Guillaume_Ducos);
+            addLocation("Gates of Carn Dûm", EncounterSet.TheBattleOfCarnDumNightmare.Name, 5, 2)
+                .WithTraits("Carn Dûm.")
+                .WithTextLine("Forced: After Gates of Carn Dûm is explored, deal it as a shadow card to the enemy in the staging area with the lowest engagement cost.")
+                .WithShadow("Shadow: Attacking enemy gets +1 Attack and cannot take damage this round.")
+                .WithInfo(5, 2, Artist.Lucas_Staniec);
             addTreachery("Death and Decay", EncounterSet.TheBattleOfCarnDumNightmare.Name)
                 .WithTraits("Sorcery.")
                 .WithText("When Revealed: Discard the top 3 cards of each player's deck. Each player discards each attachment he controls that has the same title as a card in his discard pile. If no attachments are discarded from play by this effect, Death and Decay gains surge.")
@@ -81,27 +81,32 @@ If a quest card has the siege keyword, when characters are commited to that ques
                 .WithText("When Revealed: Either deal 1 shadow card to each enemy in the staging area, or search the encounter deck and discard pile for a side quest and add it to the staging area. Shuffle the encounter deck if it is searched.")
                 .WithShadow("Shadow: Deal 1 shadow card to each enemy engaged with you that has not attacked this phase.")
                 .WithInfo(7, 2, Artist.Unknown);
+            addTreachery("Black Mare", EncounterSet.TheBattleOfCarnDumNightmare.Name)
+                .WithUnique()
+                .WithText("When Revealed: Attach to Thaurdir. (Counts as a Mount attachment with the text: \"Black Mare remains attached even if Thaurdir flips. Thaurdir gets +3 hit points. Forced: After Thaurdir is flipped, raise each player's threat by 1.\")")
+                .WithShadow("Shadow: Attach Black Mare to Thaurdir.")
+                .WithInfo(8, 1, Artist.Guillaume_Ducos);
             addEncounterSideQuest("Protect the Flanks", EncounterSet.TheBattleOfCarnDumNightmare.Name, 6)
                 .WithFlavor("Orcs close in on all sides. If you do not hold them back, your forces will not survive long.")
                 .WithKeywords("Siege.")
                 .WithTextLine("Siege.")
                 .WithTextLine("Forced: At the end of the combat phase, assign X damage among characters in play, where X is the total number of shadow cards dealt to enemies in the staging area.")
                 .WithVictoryPoints(10)
-                .WithInfo(8, 1, Artist.Rafal_Hrynkiewicz);
+                .WithInfo(9, 1, Artist.Rafal_Hrynkiewicz);
             addEncounterSideQuest("Rally the Fighters", EncounterSet.TheBattleOfCarnDumNightmare.Name, 8)
                 .WithFlavor("Your task seems hopeless and your fate dire, but somehow you must inspire your companions to fight onward!")
                 .WithKeywords("Surge.")
                 .WithTextLine("Surge.")
                 .WithTextLine("~Shadow cards are immune to player card effects.\r\nResponse: After this quest is defeated, discard 1 shadow card from each enemy in play.")
                 .WithVictoryPoints(10)
-                .WithInfo(9, 1, Artist.Arden_Beckwith);
+                .WithInfo(10, 1, Artist.Arden_Beckwith);
             addEncounterSideQuest("Sever the Head", EncounterSet.TheBattleOfCarnDumNightmare.Name, 6)
                 .WithFlavor("Your adversary Thaurdir will not let you interrupt his master's ritual. Only by fighting through his ranks of Orcs can you hope to do battle with the wraith himself.")
                 .WithKeywords("Battle.")
                 .WithTextLine("Battle.")
                 .WithTextLine("Thaurdir gets +2 Threat, +2 Attack, and cannot take damage.")
                 .WithVictoryPoints(10)
-                .WithInfo(10, 1, Artist.Unknown);
+                .WithInfo(11, 1, Artist.Unknown);
         }
     }
 }
