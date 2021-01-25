@@ -1185,6 +1185,15 @@ The players have won the game.",
                 CardNumber = 37,
                 Artist = Artist.Michael_Rasmussen
             });
+
+            addObjective("Troll Purse", EncounterSet.WeMustAwayEreBreakOfDay)
+                .WithUnique()
+                .WithTraits("Item.")
+                .WithTextLine("If ~Troll Purse is discarded, add it to the staging area.")
+                .WithTextLine("If ~Troll Purse is unattached and in the staging area, attach it to a Troll enemy, if able.")
+                .WithTextLine("Response: After attached Troll enemy is destroyed, the first player may spend 1 Baggins resource to claim this objective and attach it to Bilbo ~Baggins.")
+                .WithErrata(1)
+                .WithInfo(42, 1, Artist.Blake_Henriksen);
             addObjective("Troll Key", "We Must Away, Ere Break of Day")
                 .WithUnique()
                 .WithTraits("Item.")
@@ -1192,19 +1201,7 @@ The players have won the game.",
                 .WithTemplate("<p class='main-text'>If {self} is discarded, add it to the staging area.</p><p class='main-text'>If {self} is unattached and in the staging area, attach it to a {trait:Troll.@Troll} enemy, if able.</p><p class='main-text'><b>Response:</b> After attached {trait:Troll.@Troll} enemy takes damage as the result of an attack, the first player may exhaust {card:Bilbo-Baggins-THOHaUH@Bilbo Baggins} to claim this objective and attach it to him.</p>")
                 .WithErrata(1)
                 .WithInfo(43, 1, Artist.Trudi_Castle);
-            Cards.Add(new LotRCard() {
-                
-                Title = "Troll Purse",
-                Id = "51223bd0-ffd1-11df-a976-1801204c9089",
-                CardType = CardType.Objective,
-                EncounterSet = "We Must Away, Ere Break of Day",
-                Traits = new List<string>() { "Item." },
-                Quantity = 1,
-                IsUnique = true,
-                Text = "If ~Troll Purse is discarded, add it to the staging area.\r\n\r\nIf ~Troll Purse is unattached and in the staging area, attach it to a Troll enemy, if able.\r\n\r\nResponse: After attached Troll enemy is destroyed, the first player may spend 1 Baggins resource to claim this objective and attach it to Bilbo ~Baggins.",
-                CardNumber = 42,
-                Artist = Artist.Blake_Henriksen,
-            }.WithErrata(1));
+
             Cards.Add(new LotRCard() {
                 
                 Title = "What's In My Pocket?",
