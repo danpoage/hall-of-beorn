@@ -181,24 +181,14 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
                 .WithFlavorLine("-The Hobbit")
                 .WithVictoryPoints(3)
                 .WithInfo(24, 1, Artist.Melanie_Maier);
+            addQuest("Into Mirkwood", EncounterSet.FliesAndSpiders.Name, 1, 'A', 9)
+                .WithTextLine("Setup: Each player may shuffle 1 copy Bilbo's Magic ~Ring into his deck. Search the encounter deck for The Spider's Glade and set it aside, out of play. Then, shuffle the encounter deck and reveal 1 encounter card per player.")
+                .WithFlavorLine("\"Stick to the forest-track, keep your spirits up, hope for the best, and with a tremendous slice of luck you may come out one day and see the Long Marshes lying below you, and beyond them, high in the East, the Lonely Mountain where dear old Smaug lives.\"")
+                .WithFlavorLine("-Gandalf, The Hobbit")
+                .WithOppositeTextLine("Unconscious characters cannot quest, attack, defend, collect resources, trigger abilities, be poisoned, or ready (except by effects that target unconscious character).")
+                .WithIncludedEncounterSets(EncounterSet.Wilderland)
+                .WithInfo(67, 1, Artist.Magali_Villeneuve);
 
-            Cards.Add(new LotRCard() {
-                
-                Title = "Into Mirkwood",
-                StageNumber = 1,
-                Id = "1866ce74-8552-4ac5-8b0a-1e7a6f3b4338",
-                CardType = CardType.Quest,
-                
-                Quantity = 1,
-                QuestPoints = 9,
-                Text = "Setup: Each player may shuffle 1 copy Bilbo's Magic ~Ring into his deck. Search the encounter deck for The Spider's Glade and set it aside, out of play. Then, shuffle the encounter deck and reveal 1 encounter card per player.",
-                FlavorText = "\"Stick to the forest-track, keep your spirits up, hope for the best, and with a tremendous slice of luck you may come out one day and see the Long Marshes lying below you, and beyond them, high in the East, the Lonely Mountain where dear old Smaug lives.\" -Gandalf, The Hobbit",
-                OppositeText = "Unconscious characters cannot quest, attack, defend, collect resources, trigger abilities, be poisoned, or ready (except by effects that target unconscious character).",
-                EncounterSet = "Flies and Spiders",
-                CardNumber = 67,
-                Artist = Artist.Magali_Villeneuve,
-                IncludedEncounterSets = new List<EncounterSet> { EncounterSet.Wilderland }
-            });
             Cards.Add(new LotRCard() {
                 
                 Title = "Lost in the Dark",
@@ -930,172 +920,79 @@ Forced: When this enemy attacks, deal it an additional shadow card for each ques
                 CardNumber = 45,
                 Artist = Artist.Darek_Zabrocki,
             }.WithErrata(1));
-            Cards.Add(new LotRCard() {
-                
-                Title = "Smaug the Golden",
-                Id = "81b31016-bcc3-4445-8f4d-64187e99aff3",
-                CardType = CardType.Enemy,
-                IsUnique = true,
-                Keywords = new List<string>() { "Indestructible." },
-                Quantity = 1,
-                Traits = new List<string>() { "Dragon." },
-                HitPoints = 20,
-                Attack = 6,
-                Defense = 9,
-                Text = "Immune to player card effects. Cannot be engaged.\r\nX is the number of non-Burglar characters committed to the quest.\r\nForced: After the 6th progress token is placed here, the players advance to stage 4A.",
-                EncounterSet = "The Lonely Mountain",
-                EngagementCost = 50,
-                Threat = Card.VALUE_X,
-                CardNumber = 40,
-                Artist = Artist.Christopher_Burdett
-            });
-            Cards.Add(new LotRCard() {
-                Title = "Smaug the Magnificent",
-                Id = "65ad784f-d82e-4659-8d1c-53d2e4d19336",
-                CardType = CardType.Enemy,
-                IsUnique = true,
-                Keywords = new List<string>() { "Indestructible." },
-                Quantity = 1,
-                Traits = new List<string>() { "Dragon." },
-                HitPoints = 20,
-                Attack = 8,
-                Defense = 8,
-                Text = "Immune to player card effects. Cannot leave the staging area (except by quest effect) but is considered to be engaged with the first player.\r\nForced: If Smaug the Magnificent is dealt a shadow card with a burgle effect, he makes an additional attack immediately after this one.",
-                EncounterSet = "The Lonely Mountain",
-                EngagementCost = 50,
-                Threat = 6,
-                CardNumber = 41,
-                Artist = Artist.Christopher_Burdett
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "The Front Gate",
-                Id = "19f36ec5-7ad4-4dab-80a7-4a7a6c716941",
-                CardType = CardType.Location,
-                IsUnique = true,
-                Quantity = 1,
-                Traits = new List<string>() { "Ruins.", " Mountain." },
-                Text = "Immune to player card effects.\r\nForced: Remove 2 progress from stage 2B at the end of each round, if able.Travel: Spend 3 Baggins resources to travel here. (1 Baggins resource instead if stage 2B is the current quest.)",
-                QuestPoints = 2,
-                EncounterSet = "The Battle of Five Armies",
-                Threat = 2,
-                VictoryPoints = 3,
-                CardNumber = 63,
-                Artist = Artist.Emilio_Rodriguez
-            });
-            Cards.Add(new LotRCard() {
-                Title = "The Lonely Mountain",
-                Id = "0554f2f9-c578-4644-9c28-b617e846b787",
-                CardType = CardType.Location,
-                IsUnique = true,
-                Quantity = 1,
-                Traits = new List<string>() { "Mountain." },
-                Text = "While at least 1 card is stacked underneath, The Lonely Mountain is immune to player card effects, cannot leave the staging area, and gets -2 Threat for each card stacked under it.Action: While making a burgle attempt, the first player may spend 2 Baggins resources to take the revealed card into hand and reveal the next card of his deck.",
-                QuestPoints = 4,
-                EncounterSet = "The Lonely Mountain",
-                Threat = 12,
-                VictoryPoints = 10,
-                CardNumber = 43,
-                Artist = Artist.Joel_Hustak
-            }.WithSlugSuffix("Location"));
-            Cards.Add(new LotRCard() {
-                
-                Title = "The Spider's Glade",
-                Id = "4d423c39-09c1-4c0b-b46f-6983fae4c07b",
-                CardType = CardType.Location,
-                IsUnique = true,
-                Quantity = 1,
-                Traits = new List<string>() { "Forest." },
-                Text = "Immune to player card effects.\r\nTravel: Exhaust Bilbo ~Baggins to travel here.Forced: At the start of each quest phase, search the encounter deck for 1 Spider enemy and add it to the staging area. (2 Spider enemies instead if 3 or more players are at this stage.) Shuffle the encounter deck.",
-                QuestPoints = 9,
-                EncounterSet = "Flies and Spiders",
-                Threat = 1,
-                CardNumber = 25,
-                Artist = Artist.Joel_Hustak
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Vanguard of Bolg",
-                Id = "56e98bd5-c952-436e-b552-832031d4bb20",
-                CardType = CardType.Enemy,
-                Quantity = 4,
-                EasyModeQuantity = 3,
-                Traits = new List<string>() { "Goblin.", " Orc." },
-                HitPoints = 4,
-                Attack = 1,
-                Defense = 1,
-                Text = "This enemy gets +1 Threat, +1 Attack, and +1 Defense for each quest stage in play with no progress on it.",
-                EncounterSet = "The Battle of Five Armies",
-                EngagementCost = 20,
-                Shadow = "Shadow: If this attack destroys a character, remove all progress from the current quest.",
-                Threat = 1,
-                CardNumber = 57,
-                Artist = Artist.Diego_Gisbert_Llorens
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Weighed Down",
-                Id = "10c41b09-adf9-4a78-a67a-a9a1e04d7e8d",
-                CardType = CardType.Treachery,
-                Quantity = 2,
-                EasyModeQuantity = 1,
-                Text = "When Revealed: Until the end of the round, exhausted characters get -1 Willpower, -1 Attack, and -1 Defense.",
-                EncounterSet = "Wilderland",
-                Shadow = "Shadow: If the defending character is destroyed by this attack, its controller must raise his threat by 5.",
-                CardNumber = 38,
-                Artist = Artist.Anna_Steinbauer
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Western Slopes",
-                Id = "1e54fa6e-c2a1-4456-ac48-8912ecc4722a",
-                CardType = CardType.Location,
-                Quantity = 3,
-                Traits = new List<string>() { "Mountain." },
-                Text = "Response: When Western Slopes leaves play as an explored location (choose one): the first player draws 2 cards, or remove 1 progress token from Smaug the Golden.\r\n\r\nBurgle: The first player shuffles his deck and reveals the top card. He may discard 2 cards from his hand that match the revealed card's sphere.",
-                QuestPoints = 5,
-                EncounterSet = "The Lonely Mountain",
-                Threat = 2,
-                CardNumber = 47,
-                Artist = Artist.Sara_K_Diesel
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Wicked Spider",
-                Id = "2c20ea14-e7bc-4a38-a809-8834d659adf5",
-                CardType = CardType.Enemy,
-                Keywords = new List<string>() { "Venom." },
-                Quantity = 5,
-                Traits = new List<string>() { "Creature.", " Spider." },
-                HitPoints = 3,
-                Attack = 4,
-                Defense = 1,
-                Text = "Forced: When this enemy attacks, defending player must attach 1 poison to a character he controls.",
-                EncounterSet = "Flies and Spiders",
-                EngagementCost = 25,
-                Shadow = "Shadow: Defending character gets 2 poison.",
-                Threat = 1,
-                CardNumber = 32,
-                Artist = Artist.Aurelien_Hubert
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Gundabad Archer",
-                Id = "fca6840a-ae90-42c7-b0cb-79ef8c7de099",
-                CardType = CardType.Enemy,
-                Quantity = 2,
-                Traits = new List<string>() { "Goblin.", " Orc." },
-                HitPoints = 3,
-                Attack = 2,
-                Defense = 1,
-                Text = "When Revealed: Each player must deal 2 damage to a character he controls.",
-                EncounterSet = "The Battle of Five Armies",
-                EngagementCost = 40,
-                Shadow = "Shadow: Deal 1 damage to defending character for each quest stage in play with no progress on it.",
-                Threat = 2,
-                CardNumber = 58,
-                Artist = Artist.Florian_Stitz
-            });
+            
+            
+            addLocation("The Spider's Glade", EncounterSet.FliesAndSpiders, 1, 9)
+                .WithUnique()
+                .WithTraits("Forest.")
+                .WithTextLine("Immune to player card effects.")
+                .WithTextLine("Travel: Exhaust Bilbo ~Baggins to travel here.Forced: At the start of each quest phase, search the encounter deck for 1 Spider enemy and add it to the staging area. (2 Spider enemies instead if 3 or more players are at this stage.) Shuffle the encounter deck.")
+                .WithInfo(25, 1, Artist.Joel_Hustak);
+
+            addEnemy("Wicked Spider", EncounterSet.FliesAndSpiders, 25, 1, 4, 1, 3)
+                .WithTraits("Creature.", "Spider.")
+                .WithKeywords("Venom.")
+                .WithTextLine("Venom.")
+                .WithTextLine("Forced: When this enemy attacks, defending player must attach 1 poison to a character he controls.")
+                .WithShadow("Shadow: Defending character gets 2 poison.")
+                .WithInfo(32, 5, Artist.Aurelien_Hubert);
+
+            addTreachery("Weighed Down", EncounterSet.Wilderland)
+                .WithTextLine("When Revealed: Until the end of the round, exhausted characters get -1 Willpower, -1 Attack, and -1 Defense.")
+                .WithShadow("Shadow: If the defending character is destroyed by this attack, its controller must raise his threat by 5.")
+                .WithEasyModeQuantity(1)
+                .WithInfo(38, 2, Artist.Anna_Steinbauer);
+
+            addEnemy("Smaug the Golden", EncounterSet.TheLonelyMountain, 50, Card.VALUE_X, 6, 9, 20)
+                .WithUnique()
+                .WithTraits("Dragon.")
+                .WithKeywords("Indestrutible.")
+                .WithTextLine("Indestrutible. Immune to player card effects")
+                .WithTextLine("X is the number of non-Burglar characters committed to the quest.")
+                .WithTextLine("Forced: After the 6th progress token is placed here, the players advance to stage 4A.")
+                .WithInfo(40, 1, Artist.Christopher_Burdett);
+            addEnemy("Smaug the Magnificent", EncounterSet.TheLonelyMountain, 50, 6, 8, 8, 20)
+                .WithUnique()
+                .WithTraits("Dragon.")
+                .WithKeywords("Indestrutible.")
+                .WithTextLine("Indestrutible. Immune to player card effects.")
+                .WithTextLine("Cannot leave the staging area (except by quest effect) but is considered to be engaged with the first player.")
+                .WithTextLine("Forced: If Smaug the Magnificent is dealt a shadow card with a burgle effect, he makes an additional attack immediately after this one.")
+                .WithInfo(41, 1, Artist.Christopher_Burdett);
+
+            addLocation("The Lonely Mountain", EncounterSet.TheLonelyMountain, 12, 4)
+                .WithSlugSuffix("Location")
+                .WithUnique()
+                .WithTraits("Mountain.")
+                .WithTextLine("While at least 1 card is stacked underneath, The Lonely Mountain is immune to player card effects, cannot leave the staging area, and gets -2 Threat for each card stacked under it.Action: While making a burgle attempt, the first player may spend 2 Baggins resources to take the revealed card into hand and reveal the next card of his deck.")
+                .WithVictoryPoints(10)
+                .WithInfo(43, 1, Artist.Joel_Hustak);
+
+            addLocation("Western Slopes", EncounterSet.TheLonelyMountain, 2, 5)
+                .WithTraits("Mountain.")
+                .WithTextLine("Response: When Western Slopes leaves play as an explored location (choose one): the first player draws 2 cards, or remove 1 progress token from Smaug the Golden.")
+                .WithTextLine("Burgle: The first player shuffles his deck and reveals the top card. He may discard 2 cards from his hand that match the revealed card's sphere.")
+                .WithInfo(47, 3, Artist.Sara_K_Diesel);
+
+            addEnemy("Vanguard of Bolg", EncounterSet.TheBattleOfFiveArmies, 20, 1, 1, 1, 4)
+                .WithTraits("Goblin.", "Orc.")
+                .WithTextLine("This enemy gets +1 Threat, +1 Attack, and +1 Defense for each quest stage in play with no progress on it.")
+                .WithShadow("Shadow: If this attack destroys a character, remove all progress from the current quest.")
+                .WithEasyModeQuantity(3)
+                .WithInfo(57, 4, Artist.Diego_Gisbert_Llorens);
+            addEnemy("Gundabad Archer", EncounterSet.TheBattleOfFiveArmies, 40, 2, 2, 1, 3)
+                .WithTraits("Goblin.", "Orc.")
+                .WithTextLine("When Revealed: Each player must deal 2 damage to a character he controls.")
+                .WithShadow("Shadow: Deal 1 damage to defending character for each quest stage in play with no progress on it.")
+                .WithInfo(58, 2, Artist.Florian_Stitz);
+
+            addLocation("The Front Gate", EncounterSet.TheBattleOfFiveArmies, 2, 2)
+                .WithUnique()
+                .WithTraits("Ruins.", "Mountain.")
+                .WithTextLine("Immune to player card effects.")
+                .WithTextLine("Forced: Remove 2 progress from stage 2B at the end of each round, if able.Travel: Spend 3 Baggins resources to travel here. (1 Baggins resource instead if stage 2B is the current quest.)")
+                .WithVictoryPoints(3)
+                .WithInfo(63, 1, Artist.Emilio_Rodriguez);
         }
     }
 }
