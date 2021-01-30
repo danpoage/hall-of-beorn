@@ -121,7 +121,12 @@ namespace HallOfBeorn.Handlers.LotR
             Models.RingsDb.RingsDbDeckList deck)
         {
             var found = false;
-            var deckViewModel = new RingsDbDeckViewModel(deck.id, deck.name, deck.description_md);
+
+            var description = !string.IsNullOrEmpty(deck.description_md)
+                ? new MarkdownSharp.Markdown().Transform(deck.description_md).Replace("/card/", "https://ringsdb.com/card/")
+                : "<i>No deck description</i>";
+
+            var deckViewModel = new RingsDbDeckViewModel(deck.id, deck.name, description);
             foreach (var heroId in deck.heroes.Keys)
             {
                 var heroSlug = _ringsDbService.GetSlug(heroId);

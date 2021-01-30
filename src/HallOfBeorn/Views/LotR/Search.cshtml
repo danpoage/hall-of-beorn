@@ -516,7 +516,7 @@
                 <img src="@deckHero.ThumbImagePath" title="@deckHero.Title" style="width:128px;margin:2px;"/>
             }
             </div>
-            <p style="margin-left: 8px;overflow-style:scrollbar;">@deck.Description</p>
+            <p style="margin-left: 8px;overflow-style:scrollbar;">@Html.Raw(@deck.Description)</p>
         </div>
     }
 }
