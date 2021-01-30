@@ -133,7 +133,7 @@ namespace HallOfBeorn.Handlers.LotR
                 if (!string.IsNullOrEmpty(heroSlug))
                 {
                     var heroCard = _cardRepository.FindBySlug(heroSlug);
-                    if (heroCard != null) {
+                    if (heroCard != null && heroCard.IsUnique && heroCard.IsCharacter()) {
                         if (foundSlugs.Contains(heroSlug))
                         {
                             found = true;

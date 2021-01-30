@@ -40,6 +40,13 @@ namespace HallOfBeorn.Models.LotR
             return self != null && self.CardType.IsPlayerCard();
         }
 
+        public static bool IsCharacter(this LotRCard self)
+        {
+            var characterTypes = new HashSet<CardType> { CardType.Hero, CardType.Ally, CardType.Objective_Ally, CardType.Objective_Hero, CardType.Ship_Objective };
+
+            return self != null && characterTypes.Contains(self.CardType);
+        }
+
         public static bool IsObjective(this LotRCard self)
         {
             return self != null && objectiveCardTypes.Contains(self.CardType);
