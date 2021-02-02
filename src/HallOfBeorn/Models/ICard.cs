@@ -16,10 +16,12 @@ namespace HallOfBeorn.Models
         string NormalizedTitle { get; }
         
         string Text { get; }
+        string OppositeText { get; }
 
         string CardSetName { get; }
         bool IsCampaign { get; }
         bool IsQuest { get; }
+        bool IsSetup { get; }
         uint StageNumber { get; }
         char StageLetter { get; }
     }

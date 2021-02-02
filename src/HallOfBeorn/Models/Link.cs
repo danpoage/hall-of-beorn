@@ -160,8 +160,11 @@ namespace HallOfBeorn.Models
                     slug = string.Format("{0}-SetupA", card.Title.ToUrlSafeString());
                 } else if (card.IsQuest) {
                     slug = string.Format("{0}-{1}{2}", card.Title.ToUrlSafeString(), card.StageNumber, card.StageLetter);
-                }
-                else {
+                } else if (card.IsSetup) {
+                    slug = card.Title.ToUrlSafeString() + "-SetupA";
+                } else if (!string.IsNullOrEmpty(card.OppositeText)) {
+                    slug = card.Title.ToUrlSafeString() + "-SideA";
+                } else {
                     slug = string.IsNullOrEmpty(card.SlugSuffix) ? card.Title.ToUrlSafeString() : string.Format("{0}-{1}", card.Title.ToUrlSafeString(), card.SlugSuffix);
                 }
                 return string.Format("<img src=\"https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}.jpg\" title=\"{2}\" style=\"height:180px\"></img>", card.CardSetName.NormalizeCaseSensitiveString().ToUrlSafeString(), slug, title.Replace("'", "’"));

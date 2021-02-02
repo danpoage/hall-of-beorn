@@ -59,6 +59,7 @@ namespace HallOfBeorn.Models.Characters.Groups
             addMember("Pippin", "Pippin");
             addMember("Bill the Pony", "Bill-the-Pony");
 
+            LotRCard("Fellowship-ASitE");
             LotRCard("Fellowship-of-the-Ring-RD");
         }
     }

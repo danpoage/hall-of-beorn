@@ -144,6 +144,12 @@ namespace HallOfBeorn.Models.LotR
         public override string CardSetName { get { return cardSet != null ? cardSet.Name : string.Empty; } }
         public override bool IsCampaign { get { return this.CardType == LotR.CardType.Campaign; } }
         public override bool IsQuest { get { return this.CardType == LotR.CardType.Quest; } }
+        public override bool IsSetup { 
+            get
+            {
+                return this.CardType == LotR.CardType.Setup || this.CardType == LotR.CardType.Nightmare_Setup || this.CardType == LotR.CardType.GenCon_Setup;
+            }
+        }
         public override uint StageNumber { get; set; }
         public override char StageLetter { get; protected set; }
 

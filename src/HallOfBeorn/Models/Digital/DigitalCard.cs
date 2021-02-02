@@ -33,6 +33,7 @@ namespace HallOfBeorn.Models.Digital
         public DigitalTrait? Trait { get; set; }
 
         public string Text { get; set; }
+        public string OppositeText { get { return null; } }
 
         private string _html;
         public string Html
@@ -58,6 +59,7 @@ namespace HallOfBeorn.Models.Digital
 
         public bool IsCampaign { get { return false; } }
         public bool IsQuest { get { return false; } }
+        public bool IsSetup { get { return false; } }
         public uint StageNumber { get { return 0; } }
         public char StageLetter { get { return '\0'; } }
 

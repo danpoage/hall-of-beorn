@@ -51,6 +51,7 @@ The following individuals were clearly stated to have been members of the White 
             addMember("Radagast the Brown", "Radagast");
             addMember("Círdan the Shipwright", "Cirdan-the-Shipwright");
 
+            LotRCard("Council-of-the-Wise-UtAM");
             LotRCard("The-White-Council-TDT");
         }
     }

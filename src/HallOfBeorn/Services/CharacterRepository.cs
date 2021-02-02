@@ -132,6 +132,7 @@ namespace HallOfBeorn.Services
             add(new TheGreyCompanyGroup());
             add(new TheodenCharacter());
             add(new TheShirePlace());
+            add(new TheThreeHuntersGroup());
             add(new TheWhiteCouncilGroup());
             add(new TheodredCharacter());
             add(new ThorinOakenshieldCharacter());
