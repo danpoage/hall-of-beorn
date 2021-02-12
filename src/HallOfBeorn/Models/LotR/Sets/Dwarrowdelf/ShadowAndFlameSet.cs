@@ -167,11 +167,13 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithTemplate("<p><b>When Revealed:</b> Each player must deal 1 damage to a hero he controls.</p><p><b>Forced:</b> After a character leaves play, shuffle {self} and the top card in the encounter discard pile back into the encounter deck.</p>")
                 .WithInfo(151, 3, Artist.Jasper_Sandner);
             addTreachery("Fiery Sword", "Shadow and Flame")
+                .WithUnique()
                 .WithTraits("Weapon.", "Flame.")
                 .WithTextLine("When Revealed: Attach Fiery Sword to Durin's Bane as a Weapon attachment with the text: 'Attached enemy gets +3 Attack.'")
                 .WithTemplate("<p><b>When Revealed:</b> Attach {self} to {card:Durin&#39;s-Bane-SaF@Durin&#39;s Bane} as a {trait:Weapon.@Weapon} attachment with the text:<blockquote>Attached enemy gets +3 {Attack}.</blockquote></p><p class='flavor-text'>In its right hand was a blade like a stabbing tongue of fire...<br>&ndash;The Fellowship of the Ring</p>")
                 .WithInfo(152, 2, Artist.Timo_Karhula);
             addTreachery("Many Thonged Whip", "Shadow and Flame")
+                .WithUnique()
                 .WithTraits("Weapon.", "Flame.")
                 .WithTextLine("When Revealed: Attach Many Thonged Whip to Durin's Bane as a Weapon attachment with the text: 'Forced: When Durin's Bane attacks, the defending player must discard 1 card at random from his hand.'")
                 .WithTemplate("<p><b>When Revealed:</b> Attach {self} to {card:Durin&#39;s-Bane-SaF@Durin&#39;s Bane} as a {trait:Weapon.@Weapon} attachment with the text:<blockquote><b>Forced:</b> When {card:Durin&#39;s-Bane-SaF@Durin&#39;s Bane} attacks, the defending player must discard 1 card at random from his hand.</blockquote></p><p class='flavor-text'>...in its left it held a whip of many thongs.<br>&ndash;The Fellowship of the Ring</p>'")
