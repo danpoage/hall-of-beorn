@@ -51,7 +51,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithFlavorLine("\"Elves may thrive on speech alone, and Dwarves endure great weariness, but I am an old Hobbit, and I miss my meal at noon.\"")
                 .WithFlavorLine("-The Fellowship of the Ring")
                 .WithInfo(6, 3, Artist.Sebastian_Giacobino);
-            addEvent("Flame of Anor", 1, Sphere.Fellowship)
+            addEvent("Flame of Anor", 1, Sphere.Neutral)
                 .WithTraits("Spell.")
                 .WithTextLine("Action: Add Flame of Anor to the victory display and discard the top card of your deck to ready an Istari character you control. That character gets +X Attack until the end of the phase where X is the discarded card's cost.")
                 .WithFlavorLine("\"You cannot pass!\"")
