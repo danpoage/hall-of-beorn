@@ -27,7 +27,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTraits("Hobbit.", "Archer.")
                 .WithKeywords("Ranged.")
                 .WithTextLine("Ranged.")
-                .WithTextLine("Hobbit Archer gets +1 Attack while attacking an enemy with a higher engagement cost thatn your threat.")
+                .WithTextLine("Hobbit Archer gets +1 Attack while attacking an enemy with a higher engagement cost than your threat.")
                 .WithFlavorLine("\"If you lay a finger on this farmer, or on anyone else, you will be shot at once.\"")
                 .WithFlavorLine("-Merry, The Return of the King")
                 .WithInfo(109, 3, Artist.Aleksander_Karcz);
