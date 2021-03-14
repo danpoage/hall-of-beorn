@@ -216,8 +216,13 @@
             <div class="search-section"></div>
             <div class="search-items">
                 <span class="search-filter">
-                <span class="search-label-short" title="Player Card Category">Region</span>
+                <span class="search-label-short" title="Region">Region</span>
                 @Html.DropDownListFor(model => model.Region, SearchViewModel.Regions, new { @class = "search-select" })
+                </span>
+
+                <span class="search-filter">
+                <span class="search-label-short" title="Archetype">Archetype</span>
+                @Html.DropDownListFor(model => model.Archetype, SearchViewModel.Archetypes, new { @class = "search-select" })
                 </span>
             </div>
         </div>

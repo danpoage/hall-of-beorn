@@ -19,6 +19,7 @@ namespace HallOfBeorn.Handlers.LotR
             ICategoryService<EncounterCategory> encounterCategoryService,
             ICategoryService<QuestCategory> questCategoryService,
             ICategoryService<Region> regionService,
+            ICategoryService<Archetype> archetypeService,
             IRingsDbService ringsDbService)
         {
             _productRepository = productRepository;
@@ -26,6 +27,7 @@ namespace HallOfBeorn.Handlers.LotR
             _encounterCategoryService = encounterCategoryService;
             _questCategoryService = questCategoryService;
             _regionService = regionService;
+            _archetypeService = archetypeService;
             _ringsDbService = ringsDbService;
         }
 
@@ -34,6 +36,7 @@ namespace HallOfBeorn.Handlers.LotR
         private readonly ICategoryService<EncounterCategory> _encounterCategoryService;
         private readonly ICategoryService<QuestCategory> _questCategoryService;
         private readonly ICategoryService<Region> _regionService;
+        private readonly ICategoryService<Archetype> _archetypeService;
         private readonly IRingsDbService _ringsDbService;
 
         private Product getProductByIdentifier(string id)
@@ -65,6 +68,7 @@ namespace HallOfBeorn.Handlers.LotR
             var getEncounterCategories = new Func<string, IEnumerable<EncounterCategory>>((slug) => { return _encounterCategoryService.Categories(slug); });
             var getQuestCategories = new Func<string, IEnumerable<QuestCategory>>((slug) => { return _questCategoryService.Categories(slug); });
             var getRegions = new Func<string, IEnumerable<Region>>((slug) => _regionService.Categories(slug));
+            var getArchetypes = new Func<string, IEnumerable<Archetype>>(slug => _archetypeService.Categories(slug));
 
             var model = new ProductListViewModel();
 
@@ -86,7 +90,7 @@ namespace HallOfBeorn.Handlers.LotR
                 if (product != null)
                 {
                     model.Detail = new ProductDetailViewModel(product, 
-                        getPlayerCategories, getEncounterCategories, getQuestCategories, getRegions);
+                        getPlayerCategories, getEncounterCategories, getQuestCategories, getRegions, getArchetypes);
                 }
             }
 

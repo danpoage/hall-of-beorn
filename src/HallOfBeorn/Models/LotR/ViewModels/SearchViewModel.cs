@@ -109,6 +109,10 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             {
                 model.Region = null;
             }
+            if (string.IsNullOrEmpty(model.Archetype) || model.Archetype == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.Archetype = null;
+            }
             if (string.IsNullOrEmpty(model.VictoryPoints) || model.VictoryPoints == SearchViewModel.DEFAULT_FILTER_VALUE)
             {
                 model.VictoryPoints = null;
@@ -625,6 +629,9 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         [Display(Name = "Region")]
         public string Region { get; set; }
 
+        [Display(Name="Archetype")]
+        public string Archetype { get; set; }
+
         public static IEnumerable<SelectListItem> PopularityValues
         {
             get
@@ -1003,6 +1010,12 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             get;
             set;
         }
+
+        public static IEnumerable <SelectListItem> Archetypes
+        {
+            get; set; 
+        }
+
 
         //Core Set
         public bool? MEC01 { get; set; }

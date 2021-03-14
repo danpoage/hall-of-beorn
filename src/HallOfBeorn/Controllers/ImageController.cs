@@ -33,7 +33,7 @@ namespace HallOfBeorn.Controllers
                 return HttpNotFound("Card Image Not Found");
             }
 
-            var viewModel = new CardViewModel(card, 0, null, null, null, null, null);
+            var viewModel = new CardViewModel(card, 0, null, null, null, null, null, null);
             return Redirect(viewModel.ImagePath);
         }
 

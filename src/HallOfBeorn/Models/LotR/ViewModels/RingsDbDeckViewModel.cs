@@ -24,12 +24,12 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         
         public void AddHero(LotRCard card)
         {
-            heroes.Add(new CardViewModel(card, null, null, null, null, null) { DeckQuantity = 1 });
+            heroes.Add(new CardViewModel(card, null, null, null, null, null, null) { DeckQuantity = 1 });
         }
 
         public void AddCard(LotRCard card, byte quantity)
         {
-            cards.Add(new CardViewModel(card, null, null, null, null, null) { DeckQuantity = quantity });
+            cards.Add(new CardViewModel(card, null, null, null, null, null, null) { DeckQuantity = quantity });
         }
     }
 }

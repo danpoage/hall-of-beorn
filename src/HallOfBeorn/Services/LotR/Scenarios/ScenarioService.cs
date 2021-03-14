@@ -17,6 +17,7 @@ namespace HallOfBeorn.Services.LotR.Scenarios
             ICategoryService<EncounterCategory> encounterCategoryService,
             ICategoryService<QuestCategory> questCategoryService,
             ICategoryService<Region> regionService,
+            ICategoryService<Archetype> archetypeService,
             IRingsDbService ringsDbService,
             ProductRepository productRepository, ICardRepository<LotRCard> cardRepository)
         {
@@ -24,6 +25,7 @@ namespace HallOfBeorn.Services.LotR.Scenarios
             _encounterCategoryService = encounterCategoryService;
             _questCategoryService = questCategoryService;
             _regionService = regionService;
+            _archetypeService = archetypeService;
             _ringsDbService = ringsDbService;
 
             this.cardRepository = cardRepository;
@@ -57,10 +59,12 @@ namespace HallOfBeorn.Services.LotR.Scenarios
             var getEncounterCategories = new Func<string, IEnumerable<EncounterCategory>>((slug) => { return _encounterCategoryService.Categories(slug); });
             var getQuestCategories = new Func<string, IEnumerable<QuestCategory>>((slug) => { return _questCategoryService.Categories(slug); });
             var getRegions = new Func<string, IEnumerable<Region>>(slug => _regionService.Categories(slug));
+            var getArchetypes = new Func<string, IEnumerable<Archetype>>(slug => _archetypeService.Categories(slug));
+
             foreach (var scenarioGroup in ScenarioGroups())
             {
                 listViewModel.ScenarioGroups.Add(new ScenarioGroupViewModel(scenarioGroup, lookupCard, 
-                    getPlayerCategories, getEncounterCategories, getQuestCategories, getRegions));
+                    getPlayerCategories, getEncounterCategories, getQuestCategories, getRegions, getArchetypes));
             }
         }
 
@@ -68,6 +72,7 @@ namespace HallOfBeorn.Services.LotR.Scenarios
         private readonly ICategoryService<EncounterCategory> _encounterCategoryService;
         private readonly ICategoryService<QuestCategory> _questCategoryService;
         private readonly ICategoryService<Region> _regionService;
+        private readonly ICategoryService<Archetype> _archetypeService;
         private readonly IRingsDbService _ringsDbService;
         private readonly ICardRepository<LotRCard> cardRepository;
         private readonly IList<LotRCard> cards;

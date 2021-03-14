@@ -381,6 +381,7 @@
     <Compile Include="Models\Characters\TomCottonCharacter.cs" />
     <Compile Include="Models\Characters\TreebeardCharacter.cs" />
     <Compile Include="Models\CharacterThing.cs" />
+    <Compile Include="Models\LotR\Archetype.cs" />
     <Compile Include="Models\LotR\Community\CardboardOfTheRings\CardboardOfTheRingsChannel.cs" />
     <Compile Include="Models\LotR\Community\CardTalk\CardTalkChannel.cs" />
     <Compile Include="Models\LotR\Community\DarklingDoor\DarklingDoorBlog.cs" />
@@ -1012,6 +1013,7 @@
     <Compile Include="Services\ICardRepository.cs" />
     <Compile Include="Services\IProductRepository.cs" />
     <Compile Include="Services\ICharacterRepository.cs" />
+    <Compile Include="Services\LotR\Categories\ArchetypeService.cs" />
     <Compile Include="Services\LotR\Categories\RegionService.cs" />
     <Compile Include="Services\LotR\Community\CreatorService.cs" />
     <Compile Include="Services\LotR\Community\ICreatorService.cs" />

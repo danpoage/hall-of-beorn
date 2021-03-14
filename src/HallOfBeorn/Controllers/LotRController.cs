@@ -37,6 +37,7 @@ namespace HallOfBeorn.Controllers
             var encounterCategoryService = (ICategoryService<EncounterCategory>)System.Web.HttpContext.Current.Application[LotRServiceNames.EncounterCategoryService];
             var questCategoryService = (ICategoryService<QuestCategory>)System.Web.HttpContext.Current.Application[LotRServiceNames.QuestCategoryService];
             var regionService = (ICategoryService<Region>)System.Web.HttpContext.Current.Application[LotRServiceNames.RegionService];
+            var archetypeService = (ICategoryService<Archetype>)System.Web.HttpContext.Current.Application[LotRServiceNames.ArchetypeService];
             var linkService = (ILinkService)System.Web.HttpContext.Current.Application[LotRServiceNames.LinkService];
             var noteService = (INoteService)System.Web.HttpContext.Current.Application[LotRServiceNames.NoteService];
             var scenarioService = (IScenarioService)System.Web.HttpContext.Current.Application[LotRServiceNames.ScenarioService];
@@ -51,7 +52,7 @@ namespace HallOfBeorn.Controllers
             _translationHandler = new TranslationHandler(statService, templateService, translationService);
 
             _productsController = new ProductsHandler(productRepository, 
-                playerCategoryService, encounterCategoryService, questCategoryService, regionService,
+                playerCategoryService, encounterCategoryService, questCategoryService, regionService, archetypeService,
                 ringsDbService);
 
             //TODO: Move this to a CharacterController
@@ -64,7 +65,7 @@ namespace HallOfBeorn.Controllers
 
             _detailsHandler = new DetailsHandler(_translationHandler, 
                 cardRepository, characterRepository, 
-                playerCategoryService, encounterCategoryService, questCategoryService, regionService,
+                playerCategoryService, encounterCategoryService, questCategoryService, regionService, archetypeService,
                 ringsDbService, statService, 
                 linkService, noteService, tagService, 
                 templateService, octgnService);
@@ -72,12 +73,12 @@ namespace HallOfBeorn.Controllers
             _ringsDbHandler = new RingsDbHandler(ringsDbService);
 
             _scenariosHandler = new ScenariosHandler(cardRepository, 
-                playerCategoryService, encounterCategoryService, questCategoryService, regionService,
+                playerCategoryService, encounterCategoryService, questCategoryService, regionService, archetypeService,
                 scenarioService);
 
             _searchHandler = new SearchHandler(cardRepository, characterRepository,
                 searchService, scenarioService, linkService, statService, 
-                playerCategoryService, encounterCategoryService, questCategoryService, regionService,
+                playerCategoryService, encounterCategoryService, questCategoryService, regionService, archetypeService,
                 ringsDbService, _translationHandler);
 
             _creatorsHandler = new CreatorsHandler(creatorService);

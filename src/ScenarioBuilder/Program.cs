@@ -24,9 +24,10 @@ namespace ScenarioBuilder
             var encounterCategoryService = new EncounterCategoryService(cardRepo);
             var questCategoryService = new QuestCategoryService(cardRepo);
             var regionService = new RegionService(cardRepo);
+            var archetypeService = new ArchetypeService(cardRepo);
             var ringsDbService = new RingsDbService(cardRepo);
             var scenarioService = new ScenarioService(
-                playerCategoryService, encounterCategoryService, questCategoryService, regionService,
+                playerCategoryService, encounterCategoryService, questCategoryService, regionService, archetypeService,
                 ringsDbService, productRepo, cardRepo);
 
             Console.WriteLine("Scenario Builder");

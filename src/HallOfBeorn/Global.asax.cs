@@ -64,11 +64,14 @@ namespace HallOfBeorn
             var regionService = new RegionService(cardRepository);
             System.Web.HttpContext.Current.Application[LotRServiceNames.RegionService] = regionService;
 
+            var archetypeService = new ArchetypeService(cardRepository);
+            System.Web.HttpContext.Current.Application[LotRServiceNames.ArchetypeService] = archetypeService;
+
             var ringsDbService = new RingsDbService(cardRepository);
             System.Web.HttpContext.Current.Application[LotRServiceNames.RingsDbService] = ringsDbService;
 
             var scenarioService = new ScenarioService(
-                playerCategoryService, encounterCategoryService, questCategoryService, regionService,
+                playerCategoryService, encounterCategoryService, questCategoryService, regionService, archetypeService,
                 ringsDbService, productRepository, cardRepository);
             System.Web.HttpContext.Current.Application[LotRServiceNames.ScenarioService] = scenarioService;
 
@@ -81,7 +84,9 @@ namespace HallOfBeorn
             var filterService = new FilterService(playerCategoryService, encounterCategoryService, questCategoryService);
             System.Web.HttpContext.Current.Application[LotRServiceNames.FilterService] = filterService;
 
-            var planService = new PlanService(noteService, scenarioService, playerCategoryService, encounterCategoryService, questCategoryService, regionService, ringsDbService, filterService);
+            var planService = new PlanService(noteService, scenarioService, 
+                playerCategoryService, encounterCategoryService, questCategoryService, regionService, archetypeService, 
+                ringsDbService, filterService);
             System.Web.HttpContext.Current.Application[LotRServiceNames.PlanService] = planService;
 
             var searchService = new SearchService(cardRepository, planService);
