@@ -264,6 +264,7 @@ $(document).ready(function () {
         $('#Category').val('Any');
         $('#EncounterCategory').val('Any');
         $('#Region').val('Any');
+        $('#Archetype').val('Any');
         $('#QuestCategory').val('Any');
 
         $('#Artist').val('Any');
