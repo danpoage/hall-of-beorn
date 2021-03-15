@@ -65,6 +65,13 @@ namespace HallOfBeorn.Services.LotR.Categories
                 card.NormalizedTraits.Any(cardTrait => cardTrait == trait));
         }
 
+        public CardPredicate<T> TraitAndAnyText(string trait, params string[] tokens)
+        {
+            return Or(card => 
+                card.NormalizedTraits.Any(cardTrait => cardTrait == trait)
+                && tokens.Any(token => card.Text.ContainsLower(token)));
+        }
+
         public CardPredicate<T> AllTraits(params string[] traits)
         {
             return Or(card => 
