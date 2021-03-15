@@ -90,7 +90,11 @@ namespace HallOfBeorn.Services.LotR.Categories
                 tokens.Any(token => card.Text.ContainsLower(token)));
         }
 
-
+        public CardPredicate<T> NotAnyText(params string[] tokens)
+        {
+            return Or(card =>
+                !tokens.Any(token => card.Text.ContainsLower(token)));
+        }
 
         public bool Eval(LotRCard card)
         {

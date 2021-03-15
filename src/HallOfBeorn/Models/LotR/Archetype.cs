@@ -8,12 +8,13 @@ namespace HallOfBeorn.Models.LotR
     public enum Archetype
     {
         None = 0,
-        Ent_Retaliation,
-        Fellowship_Company,
-        Grey_Wanderer_Voltron,
+        Caldara_Swarm,
+        Dunedain_Side_Quest,
         Dunedain_Siege,
         Dwarven_Mining,
         Dwarven_Swarm,
+        Eagle_Ambush,
+        Ent_Retaliation,
         Gondor_Swarm,
         Gondor_Traps,
         Gondor_Valour,
@@ -21,13 +22,12 @@ namespace HallOfBeorn.Models.LotR
         Hobbit_Ambush,
         Hobbit_Secrecy,
         Isengard_Doomed,
-        Narya_Champions,
         Noldor_Discard,
         Rohan_Mounts,
         Rohan_Sacrifice,
         Rohan_Staging_Attack,
         Silvan_Ambush,
-        Three_Hunters_Voltron,
+        Victory_Display,
         Vilya_Champions,
     }
 }
