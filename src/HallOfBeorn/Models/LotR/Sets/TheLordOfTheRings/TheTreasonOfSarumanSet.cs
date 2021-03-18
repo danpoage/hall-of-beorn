@@ -131,7 +131,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithTextLine("Setup: Attach to a Ranger hero.")
                 .WithTextLine("Response: After attached hero is declared as a defender against a non-unique enemy, exhaust Forewarned to discard 1 shadow card from that enemy.")
                 .WithFlavorLine("\"Faint and far are the feet of our enemies.\"")
-                .WithTextLine("-Aragorn, The Two Towers")
+                .WithFlavorLine("-Aragorn, The Two Towers")
                 .WithInfo(17, 1, Artist.Carly_Janine_Mazur);
             addAttachment("Leader of Men", 0, Sphere.Neutral, false)
                 .WithBoon()
