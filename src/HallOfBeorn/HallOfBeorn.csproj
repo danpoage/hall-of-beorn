@@ -478,6 +478,7 @@
     <Compile Include="Models\LotR\Products\Nightmare\TheTreacheryOfRhudaurNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheTreasonOfSarumanNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheWastesOfEriadorNightmareProduct.cs" />
+    <Compile Include="Models\LotR\ProductView.cs" />
     <Compile Include="Models\LotR\Region.cs" />
     <Compile Include="Models\LotR\Scenarios\AShadowInTheEast\AShadowInTheEastScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\AShadowInTheEast\DangerInDorwinionScenario.cs" />

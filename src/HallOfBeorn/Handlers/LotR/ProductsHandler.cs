@@ -62,7 +62,7 @@ namespace HallOfBeorn.Handlers.LotR
             return string.Empty;
         }
 
-        public ProductListViewModel HandleProducts(string id)
+        public ProductListViewModel HandleProducts(string id, ProductView? view)
         {
             var getPlayerCategories = new Func<string, IEnumerable<PlayerCategory>>((slug) => { return _playerCategoryService.Categories(slug); });
             var getEncounterCategories = new Func<string, IEnumerable<EncounterCategory>>((slug) => { return _encounterCategoryService.Categories(slug); });
@@ -83,6 +83,7 @@ namespace HallOfBeorn.Handlers.LotR
                 {
                     model.ProductGroups.Add(new ProductGroupViewModel(productGroup, getPopularity));
                 }
+                model.View = view.HasValue ? view.Value : ProductView.Browse;
             }
             else
             {

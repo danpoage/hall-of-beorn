@@ -114,7 +114,7 @@ namespace HallOfBeorn.Controllers
             }
         }
 
-        public ActionResult Products(string id)
+        public ActionResult Products(string id, ProductView? view)
         {
             if (HttpContext.Request.Url.AbsolutePath.Contains("/Cards"))
             {
@@ -134,7 +134,7 @@ namespace HallOfBeorn.Controllers
                 return Redirect(redirectUrl);
             }
             
-            var model = _productsController.HandleProducts(id);
+            var model = _productsController.HandleProducts(id, view);
 
             return View(model);
         }

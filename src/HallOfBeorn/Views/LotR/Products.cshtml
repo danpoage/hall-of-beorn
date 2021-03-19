@@ -9,7 +9,8 @@
 
 @if (@Model.Detail != null)
 {
-    <a style="display:block;margin-bottom:16px;" href="/LotR/Products#@Model.Detail.Code" class="browse-view-link">Back to Products</a>
+    <a style="display:block;margin-bottom:16px;" href="/LotR/Products?View=Browse#@Model.Detail.Code" class="browse-view-link">Back to Browse Products</a>
+    <a style="display:block;margin-bottom:16px;" href="/LotR/Products?View=Chronological#@Model.Detail.Code" class="browse-view-link">Back to Chronological Products</a>
     <h2 style="margin-bottom: 6px;">
         <a title="@Model.Detail.Name" href="@Model.Detail.SearchUrl">@Model.Detail.Name</a>
     </h2>
@@ -71,8 +72,61 @@
         }
     }
 }
+else if (@Model.View.GetValueOrDefault(ProductView.None) == ProductView.Chronological) {
+    <a href="/LotR/Products?View=Browse" class="scenario-view-link">Browse View</a>
+    
+    <h2>Official Products</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Code</th>
+                <th>Type</th>
+                <th>First Released</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var product in @Model.OfficialChronologicalProducts())
+        {
+            <tr id="@product.Code">
+                <td><a title="@product.Name (@product.Code)" href="@product.Link">@product.Name</a></td>
+                <td>@product.Code</td>
+                <td>@product.ProductType()</td>
+                <td>@product.FirstReleased.ToString("yyyy-MM-dd")</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    
+    <h2>Community Products</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Code</th>
+                <th>Type</th>
+                <th>First Released</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var product in @Model.CommunityChronologicalProducts())
+        {
+            <tr id="@product.Code">
+                <td><a title="@product.Name (@product.Code)" href="@product.Link">@product.Name</a></td>
+                <td>@product.Code</td>
+                <td>@product.ProductType()</td>
+                <td>@product.FirstReleased.ToString("yyyy-MM-dd")</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
 else
 {
+    <a href="/LotR/Products?View=Chronological" class="scenario-view-link">Chronological View</a>
+    
     <h2>Products</h2>
 
     foreach (var productGroup in @Model.ProductGroups)

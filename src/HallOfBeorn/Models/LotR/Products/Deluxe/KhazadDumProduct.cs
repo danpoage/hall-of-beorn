@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.LotR.Products.Deluxe
     public class KhazadDumProduct : Product
     {
         public KhazadDumProduct()
-            : base("Khazad-dûm", "MEC08", ImageType.Png, new DateTime(2011, 1, 6))
+            : base("Khazad-dûm", "MEC08", ImageType.Png, new DateTime(2012, 1, 6))
         {
             RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/Khazad_d%C3%BBm_rules.pdf";
 

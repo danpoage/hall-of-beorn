@@ -32,7 +32,7 @@ namespace HallOfBeorn.Services.LotR.Categories
             var aragornVoltron = new CardPredicate<Archetype>(Archetype.Aragorn_Voltron)
                 .Hero("Aragorn")
                 .AnyText("Aragorn")
-                .Titles("Wingfoot", "Heir of Mardil", "Steward of Gondor", "Gondorian Fire", "Blood of Numenor", "Sword of Numenor");
+                .Titles("Wingfoot", "Heir of Mardil", "Steward of Gondor", "Gondorian Fire", "Blood of Numenor", "Sword of Numenor", "Steed of the North");
 
             var caldaraSwarm = new CardPredicate<Archetype>(Archetype.Caldara_Swarm)
                 .Hero("Caldara", Sphere.Spirit)

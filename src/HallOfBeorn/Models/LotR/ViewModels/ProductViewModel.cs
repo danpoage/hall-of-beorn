@@ -164,6 +164,21 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             get { return _product.BuyLink; }
         }
 
+        public bool IsOfficial()
+        {
+            return !_product.CardSets.First().SetType.IsCommunity();
+        }
+
+        public DateTime FirstReleased
+        {
+            get { return _product.FirstReleased; }
+        }
+
+        public string ProductType()
+        {
+            return _product.CardSets.First().SetType.ToString().Replace("_", " ");
+        }
+
         public IEnumerable<ScenarioViewModel> Scenarios
         {
             get { return _scenarios; }

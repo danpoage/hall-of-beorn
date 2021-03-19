@@ -27,5 +27,14 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         public string Name { get; private set; }
         public List<ProductViewModel> MainProducts { get; private set; }
         public List<ProductViewModel> ChildProducts { get; private set; }
+
+        public IEnumerable<ProductViewModel> AllProducts()
+        {
+            foreach (var main in MainProducts)
+                yield return main;
+
+            foreach (var child in ChildProducts)
+                yield return child;
+        }
     }
 }
