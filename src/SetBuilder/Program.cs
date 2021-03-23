@@ -888,6 +888,30 @@ namespace SetBuilder
             //NOTE: The code page needs to be 1252 in order to handle accent characters
             Console.OutputEncoding = Encoding.GetEncoding(codePageWesternEurope);
 
+            var path = "./ALeP/Children-of-Eorl.json";
+
+            var alepCards = ALePReader.ReadFile(path);
+           
+            foreach (var alepCard in alepCards)
+            {
+                var card = alepCard.ToCard();
+
+                if (card == null || !map.ContainsKey(card.CardType))
+                {
+                    continue;
+                }
+
+                Console.WriteLine(map[card.CardType](card));
+            }
+
+            return 0;
+        }
+
+        public static int Main2(string[] args)
+        {
+            //NOTE: The code page needs to be 1252 in order to handle accent characters
+            Console.OutputEncoding = Encoding.GetEncoding(codePageWesternEurope);
+
             if (args.Length < 1)
             {
                 Console.WriteLine("usage: sb [set-abbreviation]");
