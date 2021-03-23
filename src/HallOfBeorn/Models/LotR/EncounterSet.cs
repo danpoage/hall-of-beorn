@@ -559,6 +559,17 @@ namespace HallOfBeorn.Models.LotR
             Add(AmongTheOutlaws);
             Add(TheBetrayalOfMim);
             Add(TheFallOfNargothrond);
+
+            //A Long-extended Party
+            Add(AmbushAtErelas);
+            Add(RohanWeather);
+            Add(RohanEncampment);
+            Add(TheBattleForTheBeacon);
+            Add(DunlendingWarriors);
+            Add(FaithlessRohirrim);
+            Add(TheHorseLordsIre);
+            Add(OrcHost);
+            Add(RohanLands);
         }
 
         private static List<EncounterSet> all = new List<EncounterSet>();
@@ -929,5 +940,16 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet AmongTheOutlaws = new EncounterSet { Name = "Among the Outlaws", Set = "Among the Outlaws" };
         public static EncounterSet TheBetrayalOfMim = new EncounterSet { Name = "The Betrayal of Mîm", Set = "The Betrayal of Mîm" };
         public static EncounterSet TheFallOfNargothrond = new EncounterSet { Name = "The Fall of Nargothrond", Set = "The Fall of Nargothrond" };
+
+        //ALeP Children of Eorl
+        public static EncounterSet AmbushAtErelas = new EncounterSet { Name = "Ambush at Erelas", Set = "Children of Eorl" };
+        public static EncounterSet RohanWeather = new EncounterSet { Name = "Rohan Weather", Set = "Children of Eorl" };
+        public static EncounterSet RohanEncampment = new EncounterSet { Name = "Rohan Encampment", Set = "Children of Eorl" };
+        public static EncounterSet TheBattleForTheBeacon = new EncounterSet { Name = "The Battle for the Beacon", Set = "Children of Eorl" };
+        public static EncounterSet DunlendingWarriors = new EncounterSet { Name = "Dunlending Warriors", Set = "Children of Eorl" };
+        public static EncounterSet FaithlessRohirrim = new EncounterSet { Name = "Faithless Rohirrim", Set = "Children of Eorl" };
+        public static EncounterSet TheHorseLordsIre = new EncounterSet { Name = "The Horse Lord's Ire", Set = "Children of Eorl" };
+        public static EncounterSet OrcHost = new EncounterSet { Name = "Orc-Host", Set = "Children of Eorl" };
+        public static EncounterSet RohanLands = new EncounterSet { Name = "Rohan Lands", Set = "Children of Eorl" };
     }
 }
