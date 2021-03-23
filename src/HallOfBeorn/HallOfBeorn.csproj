@@ -1340,6 +1340,7 @@
     <Content Include="Images\Mastery.png" />
     <Content Include="Images\octgn-logo.png" />
     <Content Include="Images\Patreon.png" />
+    <Content Include="Images\PerPlayer.png" />
     <Content Include="Images\plus.png" />
     <Content Include="Images\RingsDB.jpg" />
     <Content Include="Images\rss.png" />

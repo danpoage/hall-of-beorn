@@ -141,6 +141,8 @@ namespace HallOfBeorn.Models.LotR
                     return "/Images/Baggins.png";
                 case "Fellowship":
                     return "/Images/Fellowship.png";
+                case "PerPlayer":
+                    return "/Images/PerPlayer.png";
                 default:
                     return null;
             }

@@ -40,6 +40,8 @@ namespace SetBuilder
         public string threat_strength { get; set; }
         public string subtitle { get; set; }
         public string engagement_cost { get; set; }
+        public string victory_points { get; set; }
+        public byte? easy_mode_quantity { get; set; }
 
         private Tuple<string, string> ParseText()
         {
@@ -51,7 +53,7 @@ namespace SetBuilder
             var lines = text.Split(new string[] { "Side B" }, StringSplitOptions.RemoveEmptyEntries);
 
             return (lines.Length > 1)
-               ? new Tuple<string, string>(lines[0].Remove(0, 6), lines[1])
+                ? new Tuple<string, string>(lines[0].Trim().Remove(0, 6), lines[1])
                : new Tuple<string, string>(lines[0], null);
         }
 
@@ -72,6 +74,7 @@ namespace SetBuilder
             { "[tactics]", "Tactics" },
             { "[spirit]", "Spirit" },
             { "[lore]", "Lore" },
+            { "[pp]", "PerPlayer" },
         };
 
         private string ConvertHtmlToText(string html)
@@ -174,13 +177,14 @@ namespace SetBuilder
             { "[tactics]", "{sphere:Tactics}" },
             { "[spirit]", "{sphere:Spirit}" },
             { "[lore]", "{sphere:Lore}" },
+            { "[pp]", "{PerPlayer}" },
         };
 
         private string NormalizeTemplateLine(string line)
         {
             if (string.IsNullOrWhiteSpace(line))
             {
-                return line;
+                return string.Empty;
             }
 
             var normalized = line;
@@ -192,10 +196,27 @@ namespace SetBuilder
             return normalized;
         }
 
-        private string CreateTemplate(string text, string shadow)
+        private string NormalizeFlavorTemplate(string flavor)
+        {
+            if (string.IsNullOrWhiteSpace(flavor))
+            {
+                return string.Empty;
+            }
+
+            return flavor.Replace("\r\n", "<br/>");
+        }
+
+        private string CreateTemplate(CardType cardType, string text, string shadow, string flavor, string victory)
         {
             var sb = new StringBuilder();
-            
+
+            var isQuest = (cardType == CardType.Quest || cardType == CardType.Player_Side_Quest || cardType == CardType.Encounter_Side_Quest);
+
+            if (isQuest && !string.IsNullOrWhiteSpace(flavor))
+            {
+                sb.AppendFormat("<p class='flavor-text'>{0}</p>", flavor);
+            }
+
             if (!string.IsNullOrWhiteSpace(text))
             {
                 foreach (var line in text.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries))
@@ -207,9 +228,22 @@ namespace SetBuilder
 
             if (!string.IsNullOrWhiteSpace(shadow))
             {
-                sb.AppendFormat("{shadow}<p class='shadow-text'>{0}</p>", NormalizeTemplateLine(shadow));
+                sb.Append("{shadow}");
+                sb.AppendFormat("<p class='shadow-text'>{0}</p>", NormalizeTemplateLine(shadow));
             }
             
+            if (!isQuest && !string.IsNullOrWhiteSpace(flavor))
+            {
+                sb.AppendFormat("<p class='flavor-text'>{0}</p>", NormalizeFlavorTemplate(flavor));
+            }
+
+            if (!string.IsNullOrWhiteSpace(victory))
+            {
+                sb.Append("{victory:");
+                sb.Append(victory.Trim());
+                sb.Append("}");
+            }
+
             return sb.ToString();
         }
 
@@ -305,9 +339,9 @@ namespace SetBuilder
             }
 
             var parsed = ParseText();
-            card.HtmlTemplate = CreateTemplate(parsed.Item1, shadow_text);
+            card.HtmlTemplate = CreateTemplate(card.CardType, parsed.Item1, shadow_text, flavor, victory_points);
 
-            var template2 = CreateTemplate(parsed.Item2, null);
+            var template2 = CreateTemplate(card.CardType, parsed.Item2, null, null, null);
             if (!string.IsNullOrWhiteSpace(template2))
             {
                 card.HtmlTemplate2 = template2;
@@ -333,6 +367,7 @@ namespace SetBuilder
             card.FlavorText = flavor;
 
             card.Quantity = quantity;
+            card.EasyModeQuantity = easy_mode_quantity;
             card.CardNumber = (ushort)position;
             card.Title = NormalizeTitle(name);
 
@@ -345,6 +380,9 @@ namespace SetBuilder
             card.Defense = ParseStat(defense);
             card.QuestPoints = ParseStat(quest_points);
             card.HitPoints = ParseStat(health);
+            card.VictoryPoints = ParseStat(victory_points).GetValueOrDefault(0);
+
+            card.Artist = new Artist { Name = illustrator };
 
             return card;
         }

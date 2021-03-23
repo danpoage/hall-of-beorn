@@ -143,6 +143,7 @@ namespace SetBuilder
                 .Select(token =>
                     Thread.CurrentThread.CurrentCulture.TextInfo
                     .ToTitleCase(token)
+                    .Replace("’", string.Empty)
                     .Replace("'", string.Empty)
                     .Replace("-", string.Empty)
                     .Replace(" ", string.Empty)
