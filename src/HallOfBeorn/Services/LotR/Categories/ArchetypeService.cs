@@ -58,8 +58,7 @@ namespace HallOfBeorn.Services.LotR.Categories
 
             var dunedainSiege = new CardPredicate<Archetype>(Archetype.Dunedain_Siege)
                 .Trait("Dunedain.")
-                .AnyText("each enemy engaged", "put it into play engaged with you", "number of enemies engaged with you")
-                .NotAnyText("Deal 1 damage to each enemy engaged", "Deal 2 damage to each enemy engaged");
+                .AnyText("each enemy engaged", "put it into play engaged with you", "number of enemies engaged with you");
 
             var dwarfMining = new CardPredicate<Archetype>(Archetype.Dwarf_Mining)
                 .Hero("Dain Ironfoot", Sphere.Spirit)
