@@ -667,7 +667,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithOppositeTextLine("Forced: After placing any amount of progress on this stage, each player must choose: either exhaust a character you control or deal 1 damage to Erelas Beacon.")
                 .WithOppositeTextLine("This stage cannot be completed while the Dunlendings control the beacon.")
                 .WithTemplate2("<p class='main-text'></b> <b>Forced</b>: After placing any amount of progress on this stage, each player must choose: either exhaust a character you control or deal 1 damage to Erelas Beacon.</p><p class='main-text'><b>This stage cannot be completed while the Dunlendings control the beacon.</b></p>")
-                .WithIncludedEncounterSets(EncounterSet.DunlandWarriors, EncounterSet.FaithlessRohirrim)
+                .WithIncludedEncounterSets(EncounterSet.DunlendingWarriors, EncounterSet.FaithlessRohirrim)
                 .WithInfo(88, 1, Artist.Wenjun_Lin);
             addQuest("Hold the Hilltop", EncounterSet.TheBattleForTheBeacon, 2, 'A', Card.VALUE_NA)
                 .WithTextLine("When Revealed: Place progress on Defend the Beacon (bypassing the active location) until it has X progress on it, where X is equal to 2, plus 1PerPlayer. Shuffle the encounter discard pile into the encounter deck. Each player discards cards from the top of the encounter deck until an enemy is discarded and adds that enemy to the staging area.")
@@ -678,7 +678,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithOppositeTextLine("Forced: After Defend the Beacon is chosen as the current quest, reveal an encounter card.")
                 .WithOppositeTextLine("If the Dunlendings control the beacon, the players lose the game.")
                 .WithTemplate2("<p class='main-text'></b> Time 3.</p><p class='main-text'><b>Forced</b>: At the end of the round, deal 1 damage to Erelas Beacon (2 damage instead if there are 3 or more players in the game). Then, if there are no time counters on this stage, immediately advance to stage 3.</p><p class='main-text'><b>Forced</b>: After Defend the Beacon is chosen as the current quest, reveal an encounter card.</p><p class='main-text'><b>If the Dunlendings control the beacon, the players lose the game.</b></p>")
-                .WithIncludedEncounterSets(EncounterSet.DunlandWarriors, EncounterSet.FaithlessRohirrim)
+                .WithIncludedEncounterSets(EncounterSet.DunlendingWarriors, EncounterSet.FaithlessRohirrim)
                 .WithInfo(89, 1, Artist.Da_Yu);
             addQuest("The Last Push", EncounterSet.TheBattleForTheBeacon, 3, 'A', Card.VALUE_NA)
                 .WithTextLine("When Revealed: Remove all progress from Defend the Beacon and flip it over. Put Host of Rohan into play under the first player’s control. Shuffle the encounter discard pile into the encounter deck. Each player discards cards from the encounter deck until an enemy is discarded and adds that enemy to the staging area.")
@@ -689,7 +689,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithOppositeTextLine("Forced: After a character leaves play, deal 1 damage to Erelas Beacon.")
                 .WithOppositeTextLine("At the end of the round, if the Dunlendings control the beacon, the players lose the game, and if the players control the beacon, they win the game.")
                 .WithTemplate2("<p class='main-text'></b> Add 2 to the total {Threat} in the staging area for each damage on Erelas Beacon.</p><p class='main-text'><b>Forced</b>: At the beginning of the combat phase, each engaged enemy makes an immediate attack.</p><p class='main-text'><b>Forced</b>: After a character leaves play, deal 1 damage to Erelas Beacon.</p><p class='main-text'><b>At the end of the round, if the Dunlendings control the beacon, the players lose the game, and if the players control the beacon, they win the game.</b></p>")
-                .WithIncludedEncounterSets(EncounterSet.DunlandWarriors, EncounterSet.FaithlessRohirrim)
+                .WithIncludedEncounterSets(EncounterSet.DunlendingWarriors, EncounterSet.FaithlessRohirrim)
                 .WithInfo(90, 1, Artist.FeriAnimations);
             addQuest("Thieves and Coursers", EncounterSet.TheHorseLordsIre, 1, 'A', 6)
                 .WithTextLine("Setup: Add Stolen Steeds to the staging area. Set Thruk, the Mount objectives, and the 8 enemies from the Orc-host encounter set aside, out of play. Shuffle the encounter deck. The first player reveals Flinthoof and Brightmane and adds them to the staging area. Then, each other player discards cards from the encounter deck until a location or enemy is discarded and adds it to the staging area.")
