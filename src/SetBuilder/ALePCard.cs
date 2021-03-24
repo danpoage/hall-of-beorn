@@ -53,7 +53,7 @@ namespace SetBuilder
             var lines = text.Split(new string[] { "Side B" }, StringSplitOptions.RemoveEmptyEntries);
 
             return (lines.Length > 1)
-                ? new Tuple<string, string>(lines[0].Trim().Remove(0, 6), lines[1])
+                ? new Tuple<string, string>(lines[0].Trim().Replace("Side A", string.Empty), lines[1])
                : new Tuple<string, string>(lines[0], null);
         }
 

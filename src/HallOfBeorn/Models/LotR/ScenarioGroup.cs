@@ -29,7 +29,7 @@ namespace HallOfBeorn.Models.LotR
         {
             get
             {
-                return scenarios.OrderBy(x => x.Number).ToList();
+                return scenarios.OrderBy(sc => sc.Number).ToList();
             }
         }
 
@@ -45,5 +45,7 @@ namespace HallOfBeorn.Models.LotR
         public const string ScenarioPacks = "Scenario Packs";
         public const string FirstAge = "First Age";
         public const string DoomMastered = "Doom Mastered";
+        public const string ChildrenOfEorl = "Children of Eorl";
+        public const string OathsOfTheRohirrim = "Oaths of the Rohirrim";
     }
 }

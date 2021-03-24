@@ -12,6 +12,10 @@ namespace HallOfBeorn.Models.LotR.Products.Community
             : base("Children of Eorl", "ALEP01", ImageType.Png, new DateTime(2021, 4, 15))
         {
             AddCardSet(CardSet.ChildrenOfEorl);
+
+            AddScenario(new Scenarios.ChildrenOfEorl.AmbushAtErelasScenario());
+            AddScenario(new Scenarios.ChildrenOfEorl.TheBattleForTheBeaconScenario());
+            AddScenario(new Scenarios.ChildrenOfEorl.TheHorseLordsIreScenario());
         }
     }
 }
