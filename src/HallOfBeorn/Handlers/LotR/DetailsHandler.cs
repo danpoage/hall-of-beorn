@@ -129,6 +129,7 @@ namespace HallOfBeorn.Handlers.LotR
                 case CardType.Attachment:
                 case CardType.Event:
                 case CardType.Player_Side_Quest:
+                case CardType.Contract:
                     return true;
                 default:
                     return false;

@@ -124,6 +124,7 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             "22134", //Messenger of the King
             "22147", //Bond of Friendship
             "23001", //A Perilous Voyage
+            "300085", //The Last Alliance
         };
 
         private void addCardPopularity(string cardId, uint votes)
@@ -11138,6 +11139,12 @@ namespace HallOfBeorn.Services.LotR.RingsDb
                     return 145;
                 case "TMoF":
                     return 146;
+
+
+                //Community
+                case "CoE":
+                    return 300;
+
                 default:
                     return 0;
             }
