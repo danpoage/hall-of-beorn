@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Products.Community
 {
@@ -9,7 +6,7 @@ namespace HallOfBeorn.Models.LotR.Products.Community
         : Product
     {
         public ChildrenOfEorlProduct()
-            : base("Children of Eorl", "ALEP01", ImageType.Png, new DateTime(2021, 4, 15))
+            : base("Children of Eorl", "ALEP01", ImageType.Png, new DateTime(2021, 3, 22))
         {
             AddCardSet(CardSet.ChildrenOfEorl);
 

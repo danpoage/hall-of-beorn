@@ -121,6 +121,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithInfo(15, 3, Artist.Mila_Pesic);
             addAttachment("Light-footed Steed", 1, Sphere.Spirit, false)
                 .WithTraits("Mount.")
+                .WithKeywords("Restricted.")
                 .WithTextLine("Attach to a Rohan hero. Restricted.")
                 .WithTextLine("Response: After a character you control leaves play, exhaust Light-footed Steed to ready attached hero. Then, if the character that left play was unique, attached hero gets +1 Attack until the end of the round.")
                 .WithFlavorLine("“…and don’t forget their horses! They can see the night-breeze, or so it’s said.” —Ugluk, The Two Towers")
@@ -635,10 +636,10 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithTextLine("Setup: Flip this card over.")
                 .WithFlavorLine("“The strength of the Elves to resist him was greater long ago; and not all Men were estranged from them.”")
                 .WithFlavorLine("—Gandalf, The Fellowship of the Ring")
-                .WithTemplate("<p class='main-text'>e A</b> Choose two traits, <b><i>A</i></b> and <b><i>B</i></b>. Each of your starting heroes and each ally in your deck must have either the printed <b><i>A</i></b> or <b><i>B</i></b> trait, but cannot have both. You must have at least 1 starting hero and 10 allies in your deck with each trait.</p><p class='main-text'><b>Setup</b>: Flip this card over. <b></p><p class='flavor-text'>“The strength of the Elves to resist him was greater long ago; and not all Men were estranged from them.”<br/>—Gandalf, The Fellowship of the Ring</p>")
+                .WithTemplate("<p class='main-text'>Choose two traits, <b><i>A</i></b> and <b><i>B</i></b>. Each of your starting heroes and each ally in your deck must have either the printed <b><i>A</i></b> or <b><i>B</i></b> trait, but cannot have both. You must have at least 1 starting hero and 10 allies in your deck with each trait.</p><p class='main-text'><b>Setup</b>: Flip this card over.</p><p class='flavor-text'>“The strength of the Elves to resist him was greater long ago; and not all Men were estranged from them.”<br/>—Gandalf, The Fellowship of the Ring</p>")
                 .WithOppositeTextLine("While you control more A characters than B characters, reduce the cost of the first B ally you play this round by 1, and vice versa.")
                 .WithOppositeTextLine("Action: Exhaust The Last Alliance to choose a card in your hand or a card in play under your control. Replace each printed instance of “A” or “B” in that card’s ability text with “A or B” until the end of the round.")
-                .WithTemplate2("<p class='main-text'></b> While you control more <b><i>A</i></b> characters than <b><i>B</i></b> characters, reduce the cost of the first <b><i>B</i></b> ally you play this round by 1, and vice versa.</p><p class='main-text'><b>Action</b>: Exhaust The Last Alliance to choose a card in your hand or a card in play under your control. Replace each printed instance of “<b><i>A</i></b>” or “<b><i>B</i></b>” in that card’s ability text with “<b><i>A</i></b> or <b><i>B</i></b>” until the end of the round.</p>")
+                .WithTemplate2("<p class='main-text'>While you control more <b><i>A</i></b> characters than <b><i>B</i></b> characters, reduce the cost of the first <b><i>B</i></b> ally you play this round by 1, and vice versa.</p><p class='main-text'><b>Action</b>: Exhaust The Last Alliance to choose a card in your hand or a card in play under your control. Replace each printed instance of “<b><i>A</i></b>” or “<b><i>B</i></b>” in that card’s ability text with “<b><i>A</i></b> or <b><i>B</i></b>” until the end of the round.</p>")
                 .WithInfo(85, 1, Artist.Unknown);
             addQuest("Drive them Away", EncounterSet.AmbushAtErelas, 1, 'A', Card.VALUE_NA)
                 .WithTextLine("Setup: Set Brigand Ringleader aside, out of play. Add Plundered Goods to the staging area. Each player searches the encounter deck for a different enemy and adds it to the staging area. Shuffle the encounter deck.")
@@ -647,7 +648,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithOppositeTextLine("Forced: After an enemy is destroyed, place 1 resource token here.")
                 .WithOppositeTextLine("Encounter Action: Remove 5 progress from this stage to choose a card in a loot pile and discard it. Limit once per round per player.")
                 .WithOppositeTextLine("The players cannot advance unless there are X resource tokens on this stage, where X is equal to 1, plus 2PerPlayer (2 per player).")
-                .WithTemplate2("<p class='main-text'></b> <b>Forced</b>: After an enemy is destroyed, place 1 resource token here.</p><p class='main-text'><b>Encounter Action</b>: Remove 5 progress from this stage to choose a card in a loot pile and discard it. Limit once per round per player.</p><p class='main-text'><b>The players cannot advance unless there are X resource tokens on this stage, where X is equal to 1, plus 2{PerPlayer} (2 per player).</b></p>")
+                .WithTemplate2("<p class='main-text'><b>Forced</b>: After an enemy is destroyed, place 1 resource token here.</p><p class='main-text'><b>Encounter Action</b>: Remove 5 progress from this stage to choose a card in a loot pile and discard it. Limit once per round per player.</p><p class='main-text'><b>The players cannot advance unless there are X resource tokens on this stage, where X is equal to 1, plus 2{PerPlayer} (2 per player).</b></p>")
                 .WithIncludedEncounterSets(EncounterSet.RohanEncampment, EncounterSet.RohanWeather)
                 .WithInfo(86, 1, Artist.Grafit_Studio);
             addQuest("Ambush!", EncounterSet.AmbushAtErelas, 2, 'A', Card.VALUE_NA)
@@ -657,7 +658,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithOppositeTextLine("Forced: After an enemy enters play, it makes engagement checks.")
                 .WithOppositeTextLine("Planning Action: Remove 5 progress from this stage to choose a card in a loot pile. The owner of that card may either discard it or play it for no cost. Limit four times per round for the group.")
                 .WithOppositeTextLine("When Brigand Ringleader is defeated, the players win the game.")
-                .WithTemplate2("<p class='main-text'></b> <b>Forced</b>: After an enemy enters play, it makes engagement checks.</p><p class='main-text'><b>Planning Action</b>: Remove 5 progress from this stage to choose a card in a loot pile. The owner of that card may either discard it or play it for no cost. Limit four times per round for the group.</p><p class='main-text'><b>When Brigand Ringleader is defeated, the players win the game.</b></p>")
+                .WithTemplate2("<p class='main-text'><b>Forced</b>: After an enemy enters play, it makes engagement checks.</p><p class='main-text'><b>Planning Action</b>: Remove 5 progress from this stage to choose a card in a loot pile. The owner of that card may either discard it or play it for no cost. Limit four times per round for the group.</p><p class='main-text'><b>When Brigand Ringleader is defeated, the players win the game.</b></p>")
                 .WithIncludedEncounterSets(EncounterSet.RohanEncampment, EncounterSet.RohanWeather)
                 .WithInfo(87, 1, Artist.Rodrigo_Ramos);
             addQuest("Battle for the Hill", EncounterSet.TheBattleForTheBeacon, 1, 'A', 12)
@@ -666,10 +667,11 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithTemplate("<p class='flavor-text'>Dunlendings and traitorous Rohirrim have captured the beacon at Erelas. Reclaim the hill at any cost!</p><p class='main-text'>e A</b> <b>Setup</b>: Set Host of Rohan aside, out of play. Add Erelas Beacon and 1{PerPlayer} Enraged Dunlendings to the staging area. Add the double-sided side quest to the staging area, Reclaim the Beacon side faceup. Search the encounter deck for 1 copy of Surrounding Grassland and make it the active location. Shuffle the encounter deck. <b></p>")
                 .WithOppositeTextLine("Forced: After placing any amount of progress on this stage, each player must choose: either exhaust a character you control or deal 1 damage to Erelas Beacon.")
                 .WithOppositeTextLine("This stage cannot be completed while the Dunlendings control the beacon.")
-                .WithTemplate2("<p class='main-text'></b> <b>Forced</b>: After placing any amount of progress on this stage, each player must choose: either exhaust a character you control or deal 1 damage to Erelas Beacon.</p><p class='main-text'><b>This stage cannot be completed while the Dunlendings control the beacon.</b></p>")
+                .WithTemplate2("<p class='main-text'><b>Forced</b>: After placing any amount of progress on this stage, each player must choose: either exhaust a character you control or deal 1 damage to Erelas Beacon.</p><p class='main-text'><b>This stage cannot be completed while the Dunlendings control the beacon.</b></p>")
                 .WithIncludedEncounterSets(EncounterSet.DunlendingWarriors, EncounterSet.FaithlessRohirrim)
                 .WithInfo(88, 1, Artist.Wenjun_Lin);
             addQuest("Hold the Hilltop", EncounterSet.TheBattleForTheBeacon, 2, 'A', Card.VALUE_NA)
+                .WithKeywords("Time 3.")
                 .WithTextLine("When Revealed: Place progress on Defend the Beacon (bypassing the active location) until it has X progress on it, where X is equal to 2, plus 1PerPlayer. Shuffle the encounter discard pile into the encounter deck. Each player discards cards from the top of the encounter deck until an enemy is discarded and adds that enemy to the staging area.")
                 .WithFlavorLine("As your foes gather for another assault on the beacon, you can spot the torchlights of Galmod’s troops massing amid the hills below.")
                 .WithTemplate("<p class='flavor-text'>As your foes gather for another assault on the beacon, you can spot the torchlights of Galmod’s troops massing amid the hills below.</p><p class='main-text'>e A</b> <b>When Revealed</b>: Place progress on Defend the Beacon (bypassing the active location) until it has X progress on it, where X is equal to 2, plus 1{PerPlayer}. Shuffle the encounter discard pile into the encounter deck. Each player discards cards from the top of the encounter deck until an enemy is discarded and adds that enemy to the staging area. <b></p>")
@@ -677,7 +679,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithOppositeTextLine("Forced: At the end of the round, deal 1 damage to Erelas Beacon (2 damage instead if there are 3 or more players in the game). Then, if there are no time counters on this stage, immediately advance to stage 3.")
                 .WithOppositeTextLine("Forced: After Defend the Beacon is chosen as the current quest, reveal an encounter card.")
                 .WithOppositeTextLine("If the Dunlendings control the beacon, the players lose the game.")
-                .WithTemplate2("<p class='main-text'></b> Time 3.</p><p class='main-text'><b>Forced</b>: At the end of the round, deal 1 damage to Erelas Beacon (2 damage instead if there are 3 or more players in the game). Then, if there are no time counters on this stage, immediately advance to stage 3.</p><p class='main-text'><b>Forced</b>: After Defend the Beacon is chosen as the current quest, reveal an encounter card.</p><p class='main-text'><b>If the Dunlendings control the beacon, the players lose the game.</b></p>")
+                .WithTemplate2("<p class='main-text'>Time 3.</p><p class='main-text'><b>Forced</b>: At the end of the round, deal 1 damage to Erelas Beacon (2 damage instead if there are 3 or more players in the game). Then, if there are no time counters on this stage, immediately advance to stage 3.</p><p class='main-text'><b>Forced</b>: After Defend the Beacon is chosen as the current quest, reveal an encounter card.</p><p class='main-text'><b>If the Dunlendings control the beacon, the players lose the game.</b></p>")
                 .WithIncludedEncounterSets(EncounterSet.DunlendingWarriors, EncounterSet.FaithlessRohirrim)
                 .WithInfo(89, 1, Artist.Da_Yu);
             addQuest("The Last Push", EncounterSet.TheBattleForTheBeacon, 3, 'A', Card.VALUE_NA)
@@ -688,7 +690,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithOppositeTextLine("Forced: At the beginning of the combat phase, each engaged enemy makes an immediate attack.")
                 .WithOppositeTextLine("Forced: After a character leaves play, deal 1 damage to Erelas Beacon.")
                 .WithOppositeTextLine("At the end of the round, if the Dunlendings control the beacon, the players lose the game, and if the players control the beacon, they win the game.")
-                .WithTemplate2("<p class='main-text'></b> Add 2 to the total {Threat} in the staging area for each damage on Erelas Beacon.</p><p class='main-text'><b>Forced</b>: At the beginning of the combat phase, each engaged enemy makes an immediate attack.</p><p class='main-text'><b>Forced</b>: After a character leaves play, deal 1 damage to Erelas Beacon.</p><p class='main-text'><b>At the end of the round, if the Dunlendings control the beacon, the players lose the game, and if the players control the beacon, they win the game.</b></p>")
+                .WithTemplate2("<p class='main-text'>Add 2 to the total {Threat} in the staging area for each damage on Erelas Beacon.</p><p class='main-text'><b>Forced</b>: At the beginning of the combat phase, each engaged enemy makes an immediate attack.</p><p class='main-text'><b>Forced</b>: After a character leaves play, deal 1 damage to Erelas Beacon.</p><p class='main-text'><b>At the end of the round, if the Dunlendings control the beacon, the players lose the game, and if the players control the beacon, they win the game.</b></p>")
                 .WithIncludedEncounterSets(EncounterSet.DunlendingWarriors, EncounterSet.FaithlessRohirrim)
                 .WithInfo(90, 1, Artist.FeriAnimations);
             addQuest("Thieves and Coursers", EncounterSet.TheHorseLordsIre, 1, 'A', 6)
@@ -697,7 +699,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithTemplate("<p class='flavor-text'>Side A: Orcs have invaded the Eastfold, rampaging across the land and capturing King Thengel’s prized warhorses. Side B: Back_Orcs have invaded the Eastfold, rampaging across the land and capturing King Thengel’s prized warhorses.</p><p class='main-text'>e A</b> <b>Setup</b>: Add Stolen Steeds to the staging area. Set Thruk, the <b><i>Mount</i></b> objectives, and the 8 enemies from the Orc-host encounter set aside, out of play. Shuffle the encounter deck. The first player reveals Flinthoof and Brightmane and adds them to the staging area. Then, each other player discards cards from the encounter deck until a location or enemy is discarded and adds it to the staging area. <b></p>")
                 .WithOppositeTextLine("This stage cannot be defeated unless the players control 2 Mount")
                 .WithOppositeTextLine("objectives.")
-                .WithTemplate2("<p class='main-text'></b> <b>This stage cannot be defeated unless the players control 2 <b><i>Mount</i></b></p><p class='main-text'>objectives.</b></p>")
+                .WithTemplate2("<p class='main-text'><b>This stage cannot be defeated unless the players control 2 <b><i>Mount</i></b></p><p class='main-text'>objectives.</b></p>")
                 .WithIncludedEncounterSets(EncounterSet.OrcHost, EncounterSet.RohanLands)
                 .WithInfo(91, 1, Artist.James_Wolf_Stehle);
             addQuest("The King's Stallion", EncounterSet.TheHorseLordsIre, 2, 'A', 8)
@@ -707,7 +709,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithOppositeTextLine("Thruk cannot take damage unless there are at least 4 progress tokens on this stage.")
                 .WithOppositeTextLine("This stage cannot be defeated unless the players control 3 Mount")
                 .WithOppositeTextLine("objectives.")
-                .WithTemplate2("<p class='main-text'></b> Thruk cannot take damage unless there are at least 4 progress tokens on this stage.</p><p class='main-text'><b>This stage cannot be defeated unless the players control 3 <b><i>Mount</i></b></p><p class='main-text'>objectives.</b></p>")
+                .WithTemplate2("<p class='main-text'>Thruk cannot take damage unless there are at least 4 progress tokens on this stage.</p><p class='main-text'><b>This stage cannot be defeated unless the players control 3 <b><i>Mount</i></b></p><p class='main-text'>objectives.</b></p>")
                 .WithIncludedEncounterSets(EncounterSet.OrcHost, EncounterSet.RohanLands)
                 .WithInfo(92, 1, Artist.Anastasia_Bulgakova);
             addQuest("The Sweeping Tide", EncounterSet.TheHorseLordsIre, 3, 'A', Card.VALUE_NA)
@@ -717,7 +719,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithOppositeTextLine("Skip the staging step. If the encounter deck is ever empty, shuffle the encounter discard pile into the encounter deck.")
                 .WithOppositeTextLine("Forced: When an enemy makes an attack, deal it an additional shadow card.")
                 .WithOppositeTextLine("If a Mount objective is attached to an enemy, the players lose the game. If there are no enemies in play, the players win the game.")
-                .WithTemplate2("<p class='main-text'></b> Skip the staging step. If the encounter deck is ever empty, shuffle the encounter discard pile into the encounter deck.</p><p class='main-text'><b>Forced</b>: When an enemy makes an attack, deal it an additional shadow card.</p><p class='main-text'><b>If a <b><i>Mount</i></b> objective is attached to an enemy, the players lose the game. If there are no enemies in play, the players win the game.</b></p>")
+                .WithTemplate2("<p class='main-text'>Skip the staging step. If the encounter deck is ever empty, shuffle the encounter discard pile into the encounter deck.</p><p class='main-text'><b>Forced</b>: When an enemy makes an attack, deal it an additional shadow card.</p><p class='main-text'><b>If a <b><i>Mount</i></b> objective is attached to an enemy, the players lose the game. If there are no enemies in play, the players win the game.</b></p>")
                 .WithIncludedEncounterSets(EncounterSet.OrcHost, EncounterSet.RohanLands)
                 .WithInfo(93, 1, Artist.Jon_Hodgson);
         }
