@@ -80,6 +80,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithTemplate("<p class='main-text'>Devoted.</p><p class='main-text'><b>Response</b>: After Deeping Defender defends an attack, return the attacking enemy to the staging area and deal 1 damage to it.</p><p class='flavor-text'>The sunset gilded their spears and helmets, and glinted in their pale flowing hair. —The Two Towers</p>")
                 .WithInfo(9, 3, Artist.Tom_Romain);
             addAlly("Morwen Steelsheen", 4, Sphere.Lore, false, 2, 0, 2, 2)
+                .WithUnique()
                 .WithTraits("Rohan.", "Gondor.", "Noble.")
                 .WithTextLine("Action: Put Morwen Steelsheen into play from your hand. Then, discard a Rohan or Gondor ally you control.")
                 .WithTextLine("Response: After a Rohan or Gondor ally leaves play, exhaust Morwen Steelsheen to either heal 2 damage from a character or reduce your threat by 1.")
@@ -113,6 +114,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithTemplate("<p class='main-text'>Devoted.</p><p class='main-text'>While each hero you control has at least 1 resource in its resource pool, Rammas Lookout gets +1 {Willpower} and does not exhaust to quest.</p><p class='flavor-text'>“Whatever betide, you have come to the end of the Gondor that you have known. Let me pass!”<br/>—Gandalf, The Return of the King</p>")
                 .WithInfo(14, 3, Artist.Bethesda_Softworks);
             addAlly("Théodwyn", 3, Sphere.Spirit, false, 2, 1, 0, 2)
+                .WithUnique()
                 .WithTraits("Rohan.", "Noble.")
                 .WithTextLine("Response: After Théodwyn enters play, either draw 1 card or add 1 resource to a Noble hero’s resource pool.")
                 .WithFlavorLine("“She is fearless and high-hearted. All love her. Let her be as lord to Eorlingas while we are gone.”")
@@ -246,6 +248,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithEasyModeQuantity(1)
                 .WithInfo(32, 2, Artist.Murat_Khashkulov);
             addEnemy("Dunland Chieftain", EncounterSet.DunlendingWarriors, 38, 4, 4, 4, 6)
+                .WithUnique()
                 .WithTraits("Dunland.")
                 .WithTextLine("Forced: After Dunland Chieftain engages you, discard 1 random card from your hand. Then, discard each other copy of that card that is in your hand or under your control.")
                 .WithFlavorLine("“They hate us, and they are glad.”")
@@ -349,6 +352,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithVictoryPoints(10)
                 .WithInfo(46, 1, Artist.Kirill_Nedorosol);
             addEnemy("Brigand Ringleader", EncounterSet.AmbushAtErelas, 0, 3, 6, 3, 10)
+                .WithUnique()
                 .WithTraits("Brigand.")
                 .WithKeywords("Looter 3.")
                 .WithTextLine("Looter 3. Immune to player card effects. Cannot take more than 5 damage each round.")
@@ -438,6 +442,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithVictoryPoints(10)
                 .WithInfo(58, 1, Artist.Ted_Nasmith);
             addObjective("Erelas Beacon", EncounterSet.TheBattleForTheBeacon)
+                .WithUnique()
                 .WithTextLine("Forced: At the end of the combat phase, deal 1 damage to Erelas Beacon for each enemy in the staging area.")
                 .WithTextLine("Erelas Beacon has X hit points, where X is equal to 2, plus 3PerPlayer. If Erelas Beacon has no hit points remaining, the players lose the game.")
                 .WithFlavorLine("All the lands were grey and still; and ever the shadow deepened before them, and hope waned in every heart.")
@@ -534,6 +539,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithTemplate("<p class='main-text'><b><i>Mount</i></b> objectives cannot be discarded or leave play. If a <b><i>Mount</i></b> objective is not attached, a player must claim it and attach it to a hero they control.</p><p class='main-text'><b>Forced</b>: At the end of the round, add 1 progress to the main quest for each <b><i>Mount</i></b> objective the players control. Then, raise each player’s threat by 1 for each <b><i>Mount</i></b> objective in play the players do not control.</p>")
                 .WithInfo(71, 1, Artist.Georgina_DAlessandro);
             addObjective("Flinthoof", EncounterSet.TheHorseLordsIre)
+                .WithUnique()
                 .WithTraits("Mount.")
                 .WithKeywords("Guarded (enemy).", "Restricted.")
                 .WithTextLine("Guarded (enemy). Restricted.")
@@ -545,6 +551,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithTemplate("<p class='main-text'>Guarded (enemy). Restricted.</p><p class='main-text'>The enemy guarding Flinthoof gets +1 {Attack}.</p><p class='main-text'>Attached hero gets +1 {Attack}.</p><p class='main-text'><b>Combat Action</b>: Exhaust Flinthoof to deal 1 damage to an enemy in play.</p><p class='flavor-text'>Their long tails flowed in the wind, their manes were braided on their proud necks.<br/>—The Two Towers</p>")
                 .WithInfo(72, 1, Artist.Behzat_Feyzullah);
             addObjective("Brightmane", EncounterSet.TheHorseLordsIre)
+                .WithUnique()
                 .WithTraits("Mount.")
                 .WithKeywords("Guarded (location).", "Restricted.")
                 .WithTextLine("Guarded (location). Restricted.")
@@ -554,6 +561,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithTemplate("<p class='main-text'>Guarded (location). Restricted.</p><p class='main-text'>The location or enemy guarding Brightmane gets +1 {Threat}.</p><p class='main-text'>Attached hero gets +1 {Willpower}.</p><p class='main-text'><b>Quest Action</b>: Exhaust Brightmane to look at the top card of the encounter deck. If it is a location, you may discard it.</p>")
                 .WithInfo(73, 1, Artist.Behzat_Feyzullah);
             addObjective("Felaróf", EncounterSet.TheHorseLordsIre)
+                .WithUnique()
                 .WithTraits("Mount.")
                 .WithKeywords("Guarded (enemy).", "Restricted.")
                 .WithTextLine("Guarded (enemy). Restricted.")
@@ -564,6 +572,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithTemplate("<p class='main-text'>Guarded (enemy). Restricted.</p><p class='main-text'><b>Forced</b>: When the enemy guarding Felaróf attacks, deal it 2 additional shadow cards.</p><p class='main-text'><b>Combat Action</b>: Exhaust Felaróf to discard a facedown shadow card from play.</p><p class='flavor-text'>“There is another that strides ahead: a very great horse. I have not seen his like before.”<br/>—Legolas, The Two Towers</p>")
                 .WithInfo(74, 1, Artist.Dimitar_Hristov);
             addEnemy("Thruk", EncounterSet.TheHorseLordsIre, 50, 4, 5, 4, 8)
+                .WithUnique()
                 .WithTraits("Orc.")
                 .WithTextLine("Immune to player card effects. Thruk engages the first player.")
                 .WithTextLine("Forced: At the beginning of the combat phase, if Thruk is not guarding an objective, he makes an immediate attack against the engaged player.")
@@ -606,6 +615,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithTemplate("<p class='main-text'>X is equal to 2, plus 2 for each <b><i>Mount</i></b> objective the players control.</p><p class='main-text'><b>Forced</b>: After a player loses control of a <b><i>Mount</i></b> objective, raise their threat by 1.</p>{shadow}<p class='shadow-text'><b>Shadow</b>: Raise your threat by 1 for each <b><i>Mount</i></b> objective you control.</p>")
                 .WithInfo(80, 2, Artist.fourdimensional);
             addLocation("Horse Thieves' Hovel", EncounterSet.TheHorseLordsIre, 3, 3)
+                .WithUnique()
                 .WithTraits("Camp.")
                 .WithTextLine("When faced with the option to travel, the players must travel to a non-vast location.")
                 .WithTextLine("Forced: After Horse Thieves’ Hovel leaves play as an explored location, if there are fewer than 1PerPlayer enemies in play, discard cards from the top of the encounter deck until an enemy is discarded. Add that enemy to the staging area.")
@@ -613,6 +623,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithVictoryPoints(2)
                 .WithInfo(81, 1, Artist.Franklin_Chan);
             addLocation("Horse Lord's Lodge", EncounterSet.TheHorseLordsIre, 3, 5)
+                .WithUnique()
                 .WithTraits("Camp.")
                 .WithTextLine("When faced with the option to travel, the players must travel to a non-vast location.")
                 .WithTextLine("Forced: After Horse Lord’s Lodge leaves play as an explored location, if there are fewer than 1PerPlayer locations in play, discard cards from the top of the encounter deck until a location is discarded. Add that location to the staging area.")
