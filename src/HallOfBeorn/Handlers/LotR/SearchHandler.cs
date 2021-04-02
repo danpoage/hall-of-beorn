@@ -133,10 +133,17 @@ namespace HallOfBeorn.Handlers.LotR
             var deckViewModel = new RingsDbDeckViewModel(deck.id, deck.name, description);
             foreach (var heroId in deck.heroes.Keys)
             {
-                var heroSlug = _ringsDbService.GetSlug(heroId);
+                var lookupId = heroId;
+                //Remove the 99 prefix from Messenger of the King heroes
+                if (heroId.StartsWith("99"))
+                {
+                    lookupId = heroId.Remove(0, 2);
+                }
+
+                var heroSlug = _ringsDbService.GetSlug(lookupId);
                 if (!string.IsNullOrEmpty(heroSlug))
                 {
-                    var heroCard = _cardRepository.FindBySlug(heroSlug);
+                    var heroCard = _cardRepository.FindBySlug(heroSlug); //This may be a unique ally
                     if (heroCard != null && heroCard.IsUnique && heroCard.IsCharacter()) {
                         if (foundSlugs.Contains(heroSlug))
                         {

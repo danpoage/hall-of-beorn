@@ -15,9 +15,9 @@
 
             RulesImageCount = 4;
 
-            //QuestCompanionSlug = "print-on-demand-quest-the-stone-of-erech";
-            DifficultyRating = 6f;
-            Votes = 1;
+            QuestCompanionSlug = "standalone-quests-quest-the-hunt-for-the-dreadnaught";
+            DifficultyRating = 6.3f;
+            Votes = 3;
 
             AddEncounterSet(EncounterSet.TheHuntForTheDreadnaught);
 

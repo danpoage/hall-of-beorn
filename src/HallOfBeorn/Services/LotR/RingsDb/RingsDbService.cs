@@ -11112,6 +11112,10 @@ namespace HallOfBeorn.Services.LotR.RingsDb
                 case "TWoR":
                     return 18;
 
+                //Two Player Limited Edition Starter
+                case "TPLES":
+                    return 20;
+
                 //A Shadow in the East
                 case "ASitE":
                     return 21;
