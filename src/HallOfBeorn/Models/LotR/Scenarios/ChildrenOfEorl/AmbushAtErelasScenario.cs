@@ -15,9 +15,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ChildrenOfEorl
             GroupName = "Children of Eorl";
             Number = 1;
 
-            //QuestCompanionSlug = "children-of-eorl-ambush-at-erelas";
-            //DifficultyRating = 5.0f;
-            //Votes = 1;
+            QuestCompanionSlug = "the-children-of-eorl-quest-ambush-at-erelas";
+            DifficultyRating = 5.0f;
+            Votes = 1;
 
             AddEncounterSet(EncounterSet.AmbushAtErelas);
             AddEncounterSet(EncounterSet.RohanEncampment);

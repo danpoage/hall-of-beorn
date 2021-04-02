@@ -883,7 +883,7 @@ function loadCharts() {
     $.get("/LotR/ScenarioTotals?id=The+Voice+of+Isengard,The+Ring-maker").success(function (data) {
         loadTotals('#voiTotalsContainer', 'The Voice of Isengard and The Ring-maker', data);
     });
-    $.get("/LotRs/ScenarioTotals?id=The+Lost+Realm,Angmar+Awakened").success(function (data) {
+    $.get("/LotR/ScenarioTotals?id=The+Lost+Realm,Angmar+Awakened").success(function (data) {
         loadTotals('#tlrTotalsContainer', 'The Lost Realm and Angmar Awakened', data);
     });
     $.get("/LotR/ScenarioTotals?id=The+Grey+Havens,Dream-chaser").success(function (data) {
@@ -918,5 +918,8 @@ function loadCharts() {
     */
     $.get("/LotR/ScenarioTotals?id=First+Age,Doom+Mastered").success(function (data) {
         loadTotals('#firstAgeTotalsContainer', 'First Age and Doom Mastered', data);
+    });
+    $.get("/LotR/ScenarioTotals?id=Children+of+Eorl,Oaths+of+the+Rohirrim").success(function (data) {
+        loadTotals('#coeTotalsContainer', 'Children of Eorl and Oaths of the Rohirrim', data);
     });
 }

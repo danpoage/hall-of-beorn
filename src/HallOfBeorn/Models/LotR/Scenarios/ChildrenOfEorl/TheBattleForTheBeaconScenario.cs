@@ -15,9 +15,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ChildrenOfEorl
             GroupName = "Children of Eorl";
             Number = 2;
 
-            //QuestCompanionSlug = "children-of-eorl-the-battle-for-the-beacon";
-            //DifficultyRating = 5.0f;
-            //Votes = 1;
+            QuestCompanionSlug = "the-children-of-eorl-quest-the-battle-for-the-beacon";
+            DifficultyRating = 7.0f;
+            Votes = 1;
 
             AddEncounterSet(EncounterSet.TheBattleForTheBeacon);
             AddEncounterSet(EncounterSet.DunlendingWarriors);

@@ -15,9 +15,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ChildrenOfEorl
             GroupName = "Children of Eorl";
             Number = 3;
 
-            //QuestCompanionSlug = "children-of-eorl-the-horse-lords-ire";
-            //DifficultyRating = 5.0f;
-            //Votes = 1;
+            QuestCompanionSlug = "the-children-of-eorl-quest-the-horse-lords-ire";
+            DifficultyRating = 7.0f;
+            Votes = 1;
 
             AddEncounterSet(EncounterSet.TheHorseLordsIre);
             AddEncounterSet(EncounterSet.OrcHost); 
