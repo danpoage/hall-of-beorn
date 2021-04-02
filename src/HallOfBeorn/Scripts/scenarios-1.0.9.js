@@ -458,13 +458,21 @@ function initQuestMap() {
     addQuest(667, 949, 'The Hunt for the Dreadnaught', false, 'The-Hunt-for-the-Dreadnaught', 'The-Hunt-for-the-Dreadnaught/Searching-the-High-Seas-1A.jpg',
         'The vicious Corsairs of Umbar have been pillaging the Gondorian coastline for months, and rumors are swirling that they\'ve built the most devastating and gigantic ship ever known: The Dreadnaught. Many are suspicious of such extraordinary reports but, if true, the massive enemy is unlike any you\'ve faced before. It will take an equally-colossal effort to take down such a potent foe. No others can bear such a difficult task, so it\'s up to the heroes to assemble a formidable fleet, and then scour the seas for the mighty warship.');
 
+    //Children of Eorl and Oaths of the Rohirrim
+    addQuest(884, 775, 'Ambush at Erelas', 'CoE', 'Ambush-at-Erelas', 'Children-of-Eorl/Drive-them-Away-1A.jpg',
+        'Along the Great West Road, you come upon a Rohirrim camp in the shadow of the green, bald beacon hill of Erelas. But the quiet of your journey is interrupted by a sudden attack from the shadows! The clash of steel and the cries of men soon reach your ears. You must drive them away and free the camp from further destruction!');
+    addQuest(860, 775, 'The Battle for the Beacon', 'CoE', 'The-Battle-for-the-Beacon', 'Children-of-Eorl/Battle-for-the-Hill-1A.jpg',
+        'Dunlendings and traitorous Rohirrim have captured the beacon at Erelas. Reclaim the hill at any cost!');
+    addQuest(824, 743, 'The Horse Lord’s Ire', 'CoE', 'The-Horse-Lord\'s-Ire', 'Children-of-Eorl/Thieves-and-Coursers-1A.jpg',
+        'Orcs have invaded the Eastfold, rampaging across the land and capturing King Thengel’s prized warhorses.');
+
     var mapElement = document.getElementById('quest-map');
     if (mapElement) {
         //Move handler
         mapElement.addEventListener('mousemove', function (e) {
             var x = getMapX(e);
             var y = getMapY(e);
-            //console.log('move x: ' + x + ' y: ' + y);
+            console.log('move x: ' + x + ' y: ' + y);
             //console.log('page x: ' + e.pageX + ' page y: ' + e.pageY);
             var quest = getSelectedQuest(e);
             if (quest && quest.length == 1) {
