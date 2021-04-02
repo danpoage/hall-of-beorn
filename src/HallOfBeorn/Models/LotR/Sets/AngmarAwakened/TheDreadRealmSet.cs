@@ -114,7 +114,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithFlavorLine("The imposter in Iârion's body collapses in agony, and a piercing shriek echoes the halls as the sorcerer exits Iârion. \"Thank you,\" Iârion says with a pained smile before his eyes close for the last time. Before you can mourn your loss, the walls begin to shake and crack. The catacombs are collapsing!")
                 .WithOppositeTextLine("Reanimated Dead are Undead enemies with 2 Threat, 2 Attack, 2 Defense and 2 hit points.")
                 .WithOppositeTextLine("Progress that would be placed on this quest is instead placed on locations in the staging area, divided as you choose.")
-                .WithOppositeTextLine("Forced: At the end of the phase, if there are any locations in play, deal 1 damage to all characters in play. If there are no locations in play, the players have escaped Carn Dûm, and win the game.")
+                .WithOppositeTextLine("Forced: At the end of the quest phase, if there are any locations in play, deal 1 damage to all characters in play. If there are no locations in play, the players have escaped Carn Dûm, and win the game.")
                 .WithInfo(152, 1, Artist.Alvaro_Calvo_Escudero);
             addEnemy("Daechanar", EncounterSet.TheDreadRealm, 1, 5, 4, 5, 12)
                 .WithUnique()

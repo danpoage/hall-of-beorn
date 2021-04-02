@@ -20,6 +20,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 .WithFlavorLine("...there is no purpose higher in the world as it now stands than the good of Gondor...")
                 .WithFlavorLine("-Denethor, The Return of the King")
                 .WithErrata(1)
+                .WithCommunityVersion("Beorn/Aggro-Caldara-V3/Display/Caldara")
                 .WithCommunityVersion("Autumn/Caldara")
                 .WithCommunityVersion("RiddermarkLord/Caldara")
                 .WithInfo(107, 1, Artist.Magali_Villeneuve);
