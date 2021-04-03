@@ -458,6 +458,11 @@ function initQuestMap() {
     addQuest(667, 949, 'The Hunt for the Dreadnaught', false, 'The-Hunt-for-the-Dreadnaught', 'The-Hunt-for-the-Dreadnaught/Searching-the-High-Seas-1A.jpg',
         'The vicious Corsairs of Umbar have been pillaging the Gondorian coastline for months, and rumors are swirling that they\'ve built the most devastating and gigantic ship ever known: The Dreadnaught. Many are suspicious of such extraordinary reports but, if true, the massive enemy is unlike any you\'ve faced before. It will take an equally-colossal effort to take down such a potent foe. No others can bear such a difficult task, so it\'s up to the heroes to assemble a formidable fleet, and then scour the seas for the mighty warship.');
 
+    addQuest(863, 287, 'The Oath', 'TPLES', 'The-Oath', 'Two-Player-Limited-Edition-Starter/After-the-Raid-1A.jpg',
+        'Marauding Goblins have raided a woodman village on the eaves of Mirkwood forest. The Goblins killed the guards and took many of the villages captive. Those left behind beg you to rescue their loved ones.');
+    addQuest(960, 258, 'The Caves of Nibin-Dûm', 'TPLES', 'The-Caves-of-Nibin-Dûm', 'Two-Player-Limited-Edition-Starter/The-Dark-of-Nibin-Dum-1A.jpg',
+        'You have pursued the Goblins that attacked a woodman village to the mountains of Mirkwood. The trail leads over a steep ridge where you discover the forgotten Dwarf home of Nibin-Dûm. You light a torch and enter in.');
+
     //Children of Eorl and Oaths of the Rohirrim
     addQuest(884, 775, 'Ambush at Erelas', 'CoE', 'Ambush-at-Erelas', 'Children-of-Eorl/Drive-them-Away-1A.jpg',
         'Along the Great West Road, you come upon a Rohirrim camp in the shadow of the green, bald beacon hill of Erelas. But the quiet of your journey is interrupted by a sudden attack from the shadows! The clash of steel and the cries of men soon reach your ears. You must drive them away and free the camp from further destruction!');
