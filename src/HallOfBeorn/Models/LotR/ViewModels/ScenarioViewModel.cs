@@ -86,6 +86,16 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             }
         }
 
+        public string FirstAgeApprovedList
+        {
+            get
+            {
+                return _scenario.HasFirstAgeApprovedList
+                    ? "https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Rules/First-Age/First-Age-Approved-List.pdf"
+                    : null;
+            }
+        }
+
         public bool HasPlayLinks { get { return _scenario.PlayLinks.Count() > 0; } }
         public IEnumerable<LinkViewModel> PlayLinks
         { 

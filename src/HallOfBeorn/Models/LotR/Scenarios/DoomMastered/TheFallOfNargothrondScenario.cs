@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DoomMastered
             GroupName = "Doom Mastered";
             Number = 4;
 
+            HasFirstAgeApprovedList = true;
+
             AddEncounterSet(EncounterSet.TheFallOfNargothrond);
             AddEncounterSet(EncounterSet.TrialUponTheMarches);
 

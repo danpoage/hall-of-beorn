@@ -16,6 +16,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DoomMastered
             GroupName = "Doom Mastered";
             Number = 2;
 
+            HasFirstAgeApprovedList = true;
+
             AddEncounterSet(EncounterSet.AmongTheOutlaws);
 
             AddQuestCardId("An-Evil-and-Dangerous-Way-AtO");

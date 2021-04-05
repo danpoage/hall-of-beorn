@@ -44,7 +44,7 @@
     }
     </div>
     
-    if (!string.IsNullOrEmpty(@Model.Detail.RulesUrl) || !string.IsNullOrEmpty(@Model.Detail.QuestCompanionUrl) || @Model.Detail.HasRulesImages)
+    if (!string.IsNullOrEmpty(@Model.Detail.RulesUrl) || !string.IsNullOrEmpty(@Model.Detail.QuestCompanionUrl) || @Model.Detail.HasRulesImages || !string.IsNullOrWhiteSpace(@Model.Detail.FirstAgeApprovedList))
     {
         <h3>Resources</h3>
         if (@Model.Detail.HasRulesReference)
@@ -65,6 +65,10 @@
                 @: <a title="Rules Page @ruleImageNumber" href="@ruleImageLink" target="_blank" style="padding: 4px 6px 4px 6px;">Page @ruleImageNumber</a>
             }
             @: </div>
+        }
+        if (!string.IsNullOrWhiteSpace(@Model.Detail.FirstAgeApprovedList))
+        {
+            <div><a title="First Age Approved List" href="@Model.Detail.FirstAgeApprovedList" target="_blank">First Age Approved List</a></div>
         }
         if (!string.IsNullOrEmpty(@Model.Detail.QuestCompanionUrl))
         {

@@ -13,6 +13,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DoomMastered
             GroupName = "Doom Mastered";
             Number = 3;
 
+            HasFirstAgeApprovedList = true;
+
             AddEncounterSet(EncounterSet.TheBetrayalOfMim);
 
             AddQuestCardId("The-Land-of-Bow-and-Helm-TBoM");

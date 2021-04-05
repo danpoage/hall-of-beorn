@@ -255,6 +255,8 @@ namespace HallOfBeorn.Models.LotR
         public IEnumerable<Tuple<Link, HashSet<string>>> PlayLinks { get { return _playLinks.Values; } }
         public IEnumerable<string> RelatedDecks { get { return _relatedDecks.Keys; } }
 
+        public bool HasFirstAgeApprovedList { get; set; }
+
         public ScenarioCard CampaignCard
         {
             get { return campaignCard; }

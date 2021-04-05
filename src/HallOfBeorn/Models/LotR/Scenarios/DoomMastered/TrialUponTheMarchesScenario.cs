@@ -16,6 +16,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DoomMastered
             GroupName = "Doom Mastered";
             Number = 1;
 
+            HasFirstAgeApprovedList = true;
+
             AddEncounterSet(EncounterSet.TrialUponTheMarches);
 
             AddQuestCardId("Preparing-for-Battle-TUtM");

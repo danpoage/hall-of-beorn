@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.FirstAge
             GroupName = "First Age";
             Number = 1;
 
+            HasFirstAgeApprovedList = true;
+
             AddTheLineUnbrokenLink("F8", "q4oabLrlNw4");
 
             AddEncounterSet(EncounterSet.HuntingOfTheWolf);

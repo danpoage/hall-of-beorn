@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.FirstAge
             GroupName = "First Age";
             Number = 3;
 
+            HasFirstAgeApprovedList = true;
+
             AddTheLineUnbrokenLink("F7", "PcJbybgSb10");
 
             AddEncounterSet(EncounterSet.TheSeatOfMorgoth);

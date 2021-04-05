@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.FirstAge
             GroupName = "First Age";
             Number = 2;
 
+            HasFirstAgeApprovedList = true;
+
             AddTheLineUnbrokenLink("F6", "A8FYpUvo9BY");
 
             AddEncounterSet(EncounterSet.TheIsleOfWerewolves);
