@@ -2,6 +2,8 @@
 $(function () {
     console.log('Settings Page Init');
 
+    var expiration = 'expires=Tues, 31 Dec 2199 00:00:00 GMT;';
+
     function getCookie(cname) {
 
         if (!document.cookie) {
@@ -31,7 +33,7 @@ $(function () {
     $('#RingsDbUserId').change(function () {
         var userId = $('#RingsDbUserId').val();
         console.log('RingsDB User ID entered: ' + userId);
-        document.cookie = 'RingsDbUserId=' + userId + ';path:/';
+        document.cookie = 'RingsDbUserId=' + userId + ';path:/;' + expiration;
     });
 
     var setSearchCookie = getCookie('SetSearch');
@@ -52,24 +54,24 @@ $(function () {
     if (initSetSearch) {
         console.log('Default Search to Offical Sets Only');
         $('#SearchOfficial').prop('checked', true);
-        document.cookie = 'SetSearch=SearchOffical;path:/';
+        document.cookie = 'SetSearch=SearchOffical;path:/;' + expiration;
     }
 
     $('#SearchOfficial').click(function () {
         console.log('Official Sets Only');
-        document.cookie = 'SetSearch=SearchOffical;path:/';
+        document.cookie = 'SetSearch=SearchOffical;path:/;' + expiration;
     });
     $('#SearchAlep').click(function () {
         console.log('Official Sets and ALeP Sets');
-        document.cookie = 'SetSearch=SearchAlep;path:/';
+        document.cookie = 'SetSearch=SearchAlep;path:/;' + expiration
     });
     $('#SearchFirstAge').click(function () {
         console.log('Official Sets and First Age Sets');
-        document.cookie = 'SetSearch=SearchFirstAge;path:/';
+        document.cookie = 'SetSearch=SearchFirstAge;path:/;' + expiration;
     });
     $('#SearchCommunity').click(function () {
         console.log('Offical Sets and All Community Sets');
-        document.cookie = 'SetSearch=SearchCommunity;path:/';
+        document.cookie = 'SetSearch=SearchCommunity;path:/;' + expiration;
     });
 
     var defaultSortCookie = getCookie('DefaultSort');
@@ -91,36 +93,36 @@ $(function () {
     if (initDefaultSort) {
         console.log('Default Sort to Popularity');
         $('#SortPopularity').prop('checked', true);
-        document.cookie = 'DefaultSort=SortPopularity;path:/';
+        document.cookie = 'DefaultSort=SortPopularity;path:/;' + expiration;
     }
 
     $('#SortPopularity').click(function () {
         console.log('Default Sort: Popularity');
-        document.cookie = 'DefaultSort=SortPopularity;path:/';
+        document.cookie = 'DefaultSort=SortPopularity;path:/;' + expiration;
     });
     $('#SortSetNumber').click(function () {
         console.log('Default Sort: SetNumber');
-        document.cookie = 'DefaultSort=SortSetNumber;path:/';
+        document.cookie = 'DefaultSort=SortSetNumber;path:/;' + expiration;
     });
     $('#SortAlphabetical').click(function () {
         console.log('Default Sort: Alphabetical');
-        document.cookie = 'DefaultSort=SortAlphabetical;path:/';
+        document.cookie = 'DefaultSort=SortAlphabetical;path:/;' + expiration;
     });
     $('#SortSphereTypeCost').click(function () {
         console.log('Default Sort: Sphere, Type, Cost');
-        document.cookie = 'DefaultSort=SortSphereTypeCost;path:/';
+        document.cookie = 'DefaultSort=SortSphereTypeCost;path:/;' + expiration;
     });
     $('#SortReleased').click(function () {
         console.log('Offical Sets and All Community Sets');
-        document.cookie = 'DefaultSort=SortReleased;path:/';
+        document.cookie = 'DefaultSort=SortReleased;path:/;' + expiration;
     });
     $('#SortStatScore').click(function () {
         console.log('Offical Sets and All Community Sets');
-        document.cookie = 'DefaultSort=SortStatScore;path:/';
+        document.cookie = 'DefaultSort=SortStatScore;path:/;' + expiration;
     });
     $('#SortStatEfficiency').click(function () {
         console.log('Offical Sets and All Community Sets');
-        document.cookie = 'DefaultSort=SortStatEfficiency;path:/';
+        document.cookie = 'DefaultSort=SortStatEfficiency;path:/;' + expiration;
     });
 
     var defaultLimitCookie = getCookie('DefaultLimit');
@@ -141,20 +143,20 @@ $(function () {
     if (initDefaultLimit) {
         console.log('init Default Limit: 200');
         $('#Limit200').prop('checked', true);
-        document.cookie = 'DefaultLimit=Limit200;path:/';
+        document.cookie = 'DefaultLimit=Limit200;path:/;' + expiration;
     }
 
     $('#Limit200').click(function () {
         console.log('Default Limit: 200');
-        document.cookie = 'DefaultLimit=Limit200;path:/';
+        document.cookie = 'DefaultLimit=Limit200;path:/;' + expiration;
     });
     $('#Limit400').click(function () {
         console.log('Default Limit: 400');
-        document.cookie = 'DefaultLimit=Limit400;path:/';
+        document.cookie = 'DefaultLimit=Limit400;path:/;' + expiration;
     });
     $('#Limit600').click(function () {
         console.log('Default Limit: 600');
-        document.cookie = 'DefaultLimit=Limit600;path:/';
+        document.cookie = 'DefaultLimit=Limit600;path:/;' + expiration;
     });
 
     $('#ProductAll').click(function () {
@@ -188,8 +190,8 @@ $(function () {
     if (initProductFilter) {
         console.log('init Product Filter: All Products');
         $('#ProductAll').prop('checked', true);
-        document.cookie = 'ProductFilter=ProductAll;path:/';
-        document.cookie = 'OwnedProducts=;path:/';
+        document.cookie = 'ProductFilter=ProductAll;path:/;' + expiration;
+        document.cookie = 'OwnedProducts=;path:/;' + expiration;
     }
 
     function checkOwnedProducts() {
@@ -228,17 +230,17 @@ $(function () {
         });
 
         console.log('Settings Owned Products: ' + ownedProductsValue);
-        document.cookie = 'OwnedProducts=' + ownedProductsValue + ';path:/';
+        document.cookie = 'OwnedProducts=' + ownedProductsValue + ';path:/;' + expiration;
     };
 
     $('#ProductAll').click(function () {
         console.log('Product Filter: All Products');
-        document.cookie = 'ProductFilter=ProductAll;path:/';
+        document.cookie = 'ProductFilter=ProductAll;path:/;' + expiration;
         checkOwnedProducts();
     });
     $('#ProductSpecific').click(function () {
         console.log('Product Filter: Specific Products');
-        document.cookie = 'ProductFilter=ProductSpecific;path:/';
+        document.cookie = 'ProductFilter=ProductSpecific;path:/;' + expiration;
         checkOwnedProducts();
     });
 
