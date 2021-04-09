@@ -1405,5 +1405,6 @@ namespace HallOfBeorn.Models
         public static Artist Quinton_Hoover = new Artist { Name = "Quinton Hoover", URL = "https://en.wikipedia.org/wiki/Quinton_Hoover" };
         public static Artist Sceith_A = new Artist { Name = "Sceith-A", URL = "https://sceith-a.deviantart.com" };
         public static Artist The_Brothers_Hildebrandt = new Artist { Name = "The Brothers Hildebrandt", URL = "http://www.brothershildebrandt.com" };
+        public static Artist Warren_Mahy = new Artist { Name = "Warren Mahy", URL = "https://www.originalmagicart.store/collections/warren-mahy" };
     }
 }

@@ -218,8 +218,11 @@
     <Compile Include="Models\Characters\Groups\TheThreeHuntersGroup.cs" />
     <Compile Include="Models\Characters\LothirielCharacter.cs" />
     <Compile Include="Models\Characters\MeneldorCharacter.cs" />
+    <Compile Include="Models\Characters\MorwenSteelsheenCharacter.cs" />
     <Compile Include="Models\Characters\Places\FangornPlace.cs" />
     <Compile Include="Models\Characters\Places\TheEyriePlace.cs" />
+    <Compile Include="Models\Characters\ThengelCharacter.cs" />
+    <Compile Include="Models\Characters\TheodwynCharacter.cs" />
     <Compile Include="Models\Characters\Things\Glamdring.cs" />
     <Compile Include="Models\Characters\Things\MithrilShirt.cs" />
     <Compile Include="Models\Characters\Things\Orcrist.cs" />

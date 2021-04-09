@@ -65,8 +65,11 @@ namespace HallOfBeorn.Models.Characters.Places
 
             Alias("The Horse Lords of Rohan");
 
+            addLeader("Thengel", "Thengel");
             addLeader("Théoden", "Theoden");
 
+            addMember("Morwen Steelsheen", "Morwen-Steelsheen");
+            addMember("Théodwyn", "Theodwyn");
             addMember("Théodred", "Theodred");
             addMember("Éomund", "Eomund");
             addMember("Éomer", "Eomer");
@@ -91,6 +94,7 @@ namespace HallOfBeorn.Models.Characters.Places
             LotRCard("Forth-Eorlingas-TMV");
             LotRCard("Charge-of-the-Rohirrim-CS");
             LotRCard("Ride-Them-Down-TAC");
+            LotRCard("The-Muster-of-Rohan-CotW");
         }
     }
 }

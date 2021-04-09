@@ -106,6 +106,7 @@ namespace HallOfBeorn.Services
             add(new MablungCharacter());
             add(new MeneldorCharacter());
             add(new MerryCharacter());
+            add(new MorwenSteelsheenCharacter());
             add(new NoriCharacter());
             add(new OinCharacter());
             add(new OriCharacter());
@@ -130,7 +131,9 @@ namespace HallOfBeorn.Services
             add(new TheEyriePlace());
             add(new TheFellowshipOfTheRingGroup());
             add(new TheGreyCompanyGroup());
+            add(new ThengelCharacter());
             add(new TheodenCharacter());
+            add(new TheodwynCharacter());
             add(new TheShirePlace());
             add(new TheThreeHuntersGroup());
             add(new TheWhiteCouncilGroup());

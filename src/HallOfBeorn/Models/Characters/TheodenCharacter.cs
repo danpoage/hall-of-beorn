@@ -54,11 +54,11 @@ His nephew Éomer succeeded him as King of Rohan. In July he returned to Minas T
             Alias("Lord of the Mark");
             Alias("King of Rohan");
 
-            addFamily("Thengel (Father)");
-            addFamily("Morwen (Mother)");
+            addFamily("Thengel (Father)", "Thengel");
+            addFamily("Morwen Steelsheen (Mother)", "Morwen-Steelsheen");
             addFamily("Elfhild (Wife)");
             addFamily("Théodred (Son)", "Theodred");
-            addFamily("Théodwyn (Sister)");
+            addFamily("Théodwyn (Sister)", "Theodwyn");
             addFamily("Éomund (Brother-in-Law)", "Eomund");
             addFamily("Éomer (Nephew)", "Eomer");
             addFamily("Éowyn (Niece)", "Eowyn");
