@@ -18,11 +18,24 @@ namespace RingsDbBuilder
 
         private const string successFormat = "Success writing Deck ID {0} to {1}";
         private const string errorFormat = "Error writing Deck ID {0} to {1}: {2}";
+        private const string fileChangedFormat = "Deck ID {0} has different content that file {1}";
 
         public bool Execute(DeckInfo info)
         {
             if (info.FileExists)
-                return true;
+            {
+                if (info.FileMatchesJson())
+                {
+                    return true;
+                }
+                else
+                {
+                    if (_options.Verbose)
+                    {
+                        Console.WriteLine(string.Format(fileChangedFormat, info.DeckId, info.Path));
+                    }
+                }
+            }
 
             try
             {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Security.Cryptography;
 
 using HallOfBeorn.Models.RingsDb;
 
@@ -22,5 +23,18 @@ namespace RingsDbBuilder
 
         public string Json { get; set; }
         public RingsDbDeckList Deck { get; set; }
+
+        public bool FileMatchesJson()
+        {
+            if (!File.Exists(Path) || string.IsNullOrWhiteSpace(Json))
+            {
+                return false;
+            }
+
+            var jsonHash = DeckComparer.GetHashFromJson(Json);
+            var fileHash = DeckComparer.GetHashFromFile(Path);
+
+            return jsonHash == fileHash;
+        }
     }
 }

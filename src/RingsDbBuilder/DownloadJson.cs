@@ -24,6 +24,7 @@ namespace RingsDbBuilder
 
         public bool Execute(DeckInfo info)
         {
+            /*
             if (info.FileExists)
             {
                 if (_options.Verbose)
@@ -31,7 +32,7 @@ namespace RingsDbBuilder
                     Console.WriteLine(string.Format(foundFormat, info.Path));
                 }
                 return true;
-            }
+            }*/
 
             try
             {

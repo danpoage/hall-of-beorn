@@ -53,6 +53,7 @@
     <Compile Include="DeckAnalyzer.cs" />
     <Compile Include="CardLinkBuilder.cs" />
     <Compile Include="DeckCardBuilder.cs" />
+    <Compile Include="DeckComparer.cs" />
     <Compile Include="DeckInfo.cs" />
     <Compile Include="Strategy.cs" />
     <Compile Include="DeckReader.cs" />
