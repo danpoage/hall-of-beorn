@@ -18,7 +18,7 @@ namespace RingsDbBuilder
             _steps.Add((info) => { return new DownloadJson(_options).Execute(info); });
             _steps.Add((info) => { return new DeckWriter(_options).Execute(info); });
             _steps.Add((info) => { return new ReadFileJson(_options).Execute(info); });
-            _steps.Add((info) => { return new DeckReader().Execute(info); });
+            _steps.Add((info) => { return new DeckReader(_options).Execute(info); });
             _steps.Add((info) => { return _analyzer.Execute(info); });
         }
 

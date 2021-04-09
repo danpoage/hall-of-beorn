@@ -68,6 +68,7 @@ namespace RingsDbBuilder
             "22091", //Council of the Wise
             "22134", //Messenger of the King
             "22147", //Bond of Friendship
+            "300085", //The Last Alliance
         };
 
         public void TallyPlayerCard(string cardId, int quantity, byte weight)
@@ -111,34 +112,43 @@ namespace RingsDbBuilder
         public void PrintHeroPopularity()
         {
             Console.WriteLine();
-            Console.WriteLine("HERO POPULARITY");
+            Console.WriteLine("        private void initializeHeroPopularity()");
+            Console.WriteLine("        {");
 
             foreach (var tally in _heroTally.Keys.OrderByDescending(x => _heroTally[x]))
             {
                 Console.WriteLine(string.Format(addHeroFormat, tally, _heroTally[tally]));
             }
+
+            Console.WriteLine("        }");
         }
 
         public void PrintCardPopularity()
         {
             Console.WriteLine();
-            Console.WriteLine("CARD POPULARITY");
+            Console.WriteLine("        private void initializeCardPopularity()");
+            Console.WriteLine("        {");
 
             foreach (var tally in _cardTally.Keys.OrderByDescending(x => _cardTally[x]))
             {
                 Console.WriteLine(string.Format(addCardFormat, tally, _cardTally[tally]));
             }
+
+            Console.WriteLine("        }");
         }
 
         public void PrintContractPopularity()
         {
             Console.WriteLine();
-            Console.WriteLine("CONTRACT POPULARITY");
+            Console.WriteLine("        private void initializeContractPopularity()");
+            Console.WriteLine("        {");
 
             foreach (var tally in _contractTally.Keys.OrderByDescending(x => _contractTally[x]))
             {
                 Console.WriteLine(string.Format(addContractFormat, tally, _contractTally[tally]));
             }
+
+            Console.WriteLine("        }");
         }
     }
 }

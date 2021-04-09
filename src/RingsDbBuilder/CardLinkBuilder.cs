@@ -176,7 +176,8 @@ namespace RingsDbBuilder
         public void PrintLinks()
         {
             Console.WriteLine();
-            Console.WriteLine("LINKS");
+            Console.WriteLine("        private void initializeCardLinks()");
+            Console.WriteLine("        {");
 
             foreach (var parentId in _linkMap.Keys)
             {
@@ -186,6 +187,8 @@ namespace RingsDbBuilder
                     Console.WriteLine(string.Format(addCardLinkFormat, parentId, child.Key, child.Value));
                 }
             }
+
+            Console.WriteLine("        }");
         }
     }
 }

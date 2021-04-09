@@ -12,10 +12,17 @@ namespace RingsDbBuilder
 {
     public class DeckReader
     {
-        private const string errorFormat = "Error deserializing Deck ID {0}: {1}";
+        public DeckReader(Options options)
+        {
+            this.options = options;
+        }
 
+        private readonly Options options;
+        
         private readonly JsonSerializerSettings settings 
             = new JsonSerializerSettings { MissingMemberHandling = MissingMemberHandling.Ignore };
+
+        private const string errorFormat = "Error deserializing Deck ID {0}: {1}";
 
         public bool Execute(DeckInfo info)
         {
@@ -28,7 +35,10 @@ namespace RingsDbBuilder
             }
             catch (Exception ex)
             {
-                Console.WriteLine(string.Format(errorFormat, info.DeckId, ex.Message));
+                if (options.Verbose)
+                {
+                    Console.WriteLine(string.Format(errorFormat, info.DeckId, ex.Message));
+                }
                 return false;
             }
         }

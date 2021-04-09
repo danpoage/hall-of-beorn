@@ -80,7 +80,7 @@ create index if not exists sideboard_id_index
 
         public void AddDeckCards(RingsDbDeckList deck)
         {
-            if (!_options.Verbose)
+            if (_options.Verbose)
             {
                 Console.WriteLine("Deck ID: " + deck.id);
             }
