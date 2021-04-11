@@ -56,7 +56,7 @@ create index if not exists sideboard_id_index
         private const string insertSideboardSqlFormat =
 "insert into sideboard (id, card_id, quantity) values ('{0}', '{1}', {2}) on conflict do nothing;";
         private const string insertDeckInfoSqlFormat =
-"insert into deck_info (id, user_id, name, description) values ('{0}', {1}, '{2}', '{3}') on conflict do nothing;";
+"insert into deck_info (id, user_id, name, description) values ('{0}', {1}, '{2}', '{3}') on conflict(id) do update set description = excluded.description;";
 
         private void ExecuteSql(string sql)
         {
