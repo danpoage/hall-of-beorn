@@ -18,10 +18,12 @@ namespace HallOfBeorn.Models.LotR.Scenarios.VengeanceOfMordor
             GroupName = "Vengeance of Mordor";
             Number = 5;
 
+            RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/MEC82.pdf";
             //RulesImageCount = 2;
-            //QuestCompanionSlug = "vengeance-of-mordor-cycle-quest-the-land-of-sorrow";
-            DifficultyRating = 8.5f;
-            Votes = 1;
+
+            QuestCompanionSlug = "vengeance-of-mordor-cycle-quest-the-land-of-sorrow";
+            DifficultyRating = 6.7f;
+            Votes = 3;
 
             AddEncounterSet(EncounterSet.TheLandOfSorrow);
             AddEncounterSet(EncounterSet.EasterlingRaiders);

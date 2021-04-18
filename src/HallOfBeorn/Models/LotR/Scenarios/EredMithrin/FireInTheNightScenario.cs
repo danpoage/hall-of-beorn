@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
             GroupName = "Ered Mithrin";
             Number = 6;
 
+            RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/MEC68.pdf";
             RulesImageCount = 2;
 
             QuestCompanionSlug = "ered-mithrin-quest-fire-in-the-night";

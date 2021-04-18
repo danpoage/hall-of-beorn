@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
             GroupName = "Ered Mithrin";
             Number = 9;
 
+            RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/MEC71.pdf";
             RulesImageCount = 3;
 
             QuestCompanionSlug = "ered-mithrin-quest-the-fate-of-wilderland";

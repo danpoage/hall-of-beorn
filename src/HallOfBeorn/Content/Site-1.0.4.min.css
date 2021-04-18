@@ -8,6 +8,8 @@
 .difficulty-icon{margin-bottom: -2px;}
 .difficulty-votes{color:gray;font-size:12px;margin-left:8px;margin-bottom:2px;}
 .view-link {margin: 4px 8px 4px 8px; font-weight: bold; color: darkgrey;}
-.list-left {float:left; margin: 4px 4px 4px 12px;}
-.list-right {float:right; margin: 4px 12px 4px 4px;}
+.list-left {display:inline-block;
+    vertical-align:top; margin: 4px 4px 4px 12px;}
+.list-right {display:inline-block;
+    vertical-align: top; margin: 4px 12px 4px 4px;}
 .character-list-item {margin: 5px; display:block; width:320px;}

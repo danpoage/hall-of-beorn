@@ -18,10 +18,12 @@ namespace HallOfBeorn.Models.LotR.Scenarios.VengeanceOfMordor
             GroupName = "Vengeance of Mordor";
             Number = 3;
 
+            RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/MEC80.pdf";
             RulesImageCount = 2;
+
             QuestCompanionSlug = "vengeance-of-mordor-cycle-quest-challenge-of-the-wainriders";
-            DifficultyRating = 6.7f;
-            Votes = 3;
+            DifficultyRating = 6.9f;
+            Votes = 8;
 
             AddEncounterSet(EncounterSet.ChallengeOfTheWainriders);
             AddEncounterSet(EncounterSet.RollingPlains);

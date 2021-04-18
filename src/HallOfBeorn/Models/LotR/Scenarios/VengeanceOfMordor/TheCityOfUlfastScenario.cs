@@ -18,10 +18,12 @@ namespace HallOfBeorn.Models.LotR.Scenarios.VengeanceOfMordor
             GroupName = "Vengeance of Mordor";
             Number = 2;
 
+            RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/MEC79.pdf";
             RulesImageCount = 2;
+
             QuestCompanionSlug = "vengeance-of-mordor-cycle-quest-the-city-of-ulfast";
-            DifficultyRating = 6f;
-            Votes = 2;
+            DifficultyRating = 6.8f;
+            Votes = 6;
 
             AddEncounterSet(EncounterSet.TheCityOfUlfast);
             AddEncounterSet(EncounterSet.ServantsOfSauron);

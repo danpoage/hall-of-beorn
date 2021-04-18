@@ -72,6 +72,16 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             }
         }
 
+        public string RulesUrl
+        {
+            get { return product.RulesUrl; }
+        }
+
+        public string LearnToPlayUrl
+        {
+            get { return product.LearnToPlayUrl; }
+        }
+
         public string Type
         {
             get { 

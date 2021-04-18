@@ -15,6 +15,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ChildrenOfEorl
             GroupName = "Children of Eorl";
             Number = 2;
 
+            RulesImageCount = 21;
+
             QuestCompanionSlug = "the-children-of-eorl-quest-the-battle-for-the-beacon";
             DifficultyRating = 7.0f;
             Votes = 1;

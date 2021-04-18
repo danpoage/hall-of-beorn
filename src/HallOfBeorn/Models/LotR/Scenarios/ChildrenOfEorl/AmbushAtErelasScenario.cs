@@ -15,6 +15,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ChildrenOfEorl
             GroupName = "Children of Eorl";
             Number = 1;
 
+            RulesImageCount = 21;
+
             QuestCompanionSlug = "the-children-of-eorl-quest-ambush-at-erelas";
             DifficultyRating = 5.0f;
             Votes = 1;

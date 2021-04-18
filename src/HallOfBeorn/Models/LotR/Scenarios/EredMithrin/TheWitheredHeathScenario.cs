@@ -20,6 +20,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
             DifficultyRating = 6.6f;
             Votes = 12;
 
+            RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/MEC66.pdf";
             RulesImageCount = 2;
 
             AddEncounterSet(EncounterSet.TheWitheredHeath);

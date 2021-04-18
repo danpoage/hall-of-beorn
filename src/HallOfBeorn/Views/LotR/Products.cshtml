@@ -22,7 +22,7 @@
     <div style="margin:4px 0px;">
         <img title="@Model.Detail.Name" src="@Model.Detail.ImageUrl" style="margin:6px 4px 16px 4px;display:inline-block;"/>
         
-        <div style="margin: 4px 0px 6px 20px;display:inline-block;vertical-align:top;">
+        <div style="margin: 4px 0px 6px 20px;width:346px;display:inline-block;vertical-align:top;">
             <div style="margin:4px 0px 14px 4px;font-family:Georgia;font-size:16px;font-weight:bold;">Card List</div>
             <div style="overflow: auto;height:210px;">
                 @foreach (var card in @Model.Detail.CardQuantities())
@@ -42,14 +42,26 @@
         
         @if (@Model.Detail.Scenarios().Any())
         {
-            <div style="margin: 4px 0px 6px 20px;display:inline-block;vertical-align:top;">
+            <div style="margin: 4px 0px 6px 20px;width:300px;display:inline-block;vertical-align:top;">
                 <div style="margin:4px 0px 14px 4px; font-family:Georgia;font-size:16px;font-weight:bold;">Scenarios</div>
-                <div style="overflow:auto;height:210px;">
+                <div style="overflow:auto;height:110px;">
                     @foreach (var scenario in @Model.Detail.Scenarios())
                     {
                         <a style="margin:4px;font-size:20px;display:block;" target="_blank" href="@scenario.Link" title="@scenario.Title Details">@scenario.Title</a>
                     }
                 </div>
+                @if (!string.IsNullOrWhiteSpace(@Model.Detail.RulesUrl))
+                {
+                    <div style="margin:4px 0px 14px 4px; font-family:Georgia;font-size:16px;font-weight:bold;">Rules</div>
+                    <div style="overflow:auto;height:80px">
+                        
+                    <a style="margin:4px;font-size:20px;display:block;" target="_blank" href="@Model.Detail.RulesUrl" title="Rules Sheet">Rules Sheet</a>
+                        @if (!string.IsNullOrWhiteSpace(@Model.Detail.LearnToPlayUrl))
+                        {
+                            <a style="margin:4px;font-size:20px;display:block;" target="_blank" href="@Model.Detail.LearnToPlayUrl" title="Learn to Play">Learn to Play</a>
+                        }
+                    </div>
+                }
             </div>
         }
     </div>

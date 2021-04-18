@@ -1738,12 +1738,14 @@ tr.pager td {
 }
 
 .list-left {
-    float: left;
+    /*float: left; */
+    vertical-align:top;
     margin-left: 20px;
 }
 
 .list-right {
-    float: right;
+    /*float: right;*/
+    vertical-align:top;
     margin-right: 20px;
 }
 

@@ -88,6 +88,7 @@ namespace HallOfBeorn.Models.Characters.Places
             addMember("Gléowine", "Gleowine");
             addMember("Ceorl", "Ceorl");
             addMember("Guthláf", "Guthlaf");
+            addMember("Herubrand", "Herubrand");
 
             LotRCard("Mustering-the-Rohirrim-THfG");
             LotRCard("Ride-to-Ruin-THoEM");

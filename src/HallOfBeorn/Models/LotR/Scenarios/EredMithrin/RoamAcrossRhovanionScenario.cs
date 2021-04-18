@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
             GroupName = "Ered Mithrin";
             Number = 5;
 
+            RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/MEC67.pdf";
             RulesImageCount = 2;
 
             QuestCompanionSlug = "ered-mithrin-quest-roam-across-rhovanion";

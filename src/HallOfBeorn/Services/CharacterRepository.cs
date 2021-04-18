@@ -91,6 +91,7 @@ namespace HallOfBeorn.Services
             add(new HaldirOfLorienCharacter());
             add(new HalfastGamgeeCharacter());
             add(new HamaCharacter());
+            add(new HerubrandCharacter());
             add(new HirgonCharacter());
             add(new HirluinTheFairCharacter());
             add(new IngoldCharacter());

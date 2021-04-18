@@ -18,10 +18,12 @@ namespace HallOfBeorn.Models.LotR.Scenarios.VengeanceOfMordor
             GroupName = "Vengeance of Mordor";
             Number = 4;
 
+            RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/MEC81.pdf";
             RulesImageCount = 2;
+
             QuestCompanionSlug = "vengeance-of-mordor-cycle-quest-under-the-ash-mountains";
-            DifficultyRating = 7.0f;
-            Votes = 1;
+            DifficultyRating = 9.0f;
+            Votes = 5;
 
             AddEncounterSet(EncounterSet.UnderTheAshMountains);
             AddEncounterSet(EncounterSet.TwistedTunnels);

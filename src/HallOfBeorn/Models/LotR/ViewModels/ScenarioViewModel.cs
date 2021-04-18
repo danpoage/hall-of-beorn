@@ -111,14 +111,14 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             {
                 if (Difficulty > 0)
                 {
-                    var icon = string.Format("<img src='/Images/eye-small.png' class='difficulty-icon' height='16' width='16' title='Difficulty {0} / 10  ({1} Votes)'/>", _scenario.DifficultyRating, Votes);
+                    var html = string.Format("<span style='width:24px;display:inline-block;text-align:left;'>{0}</span><img src='/Images/eye-small.png' class='difficulty-icon' height='16' width='16' title='Difficulty {0} / 10  ({1} Votes)'/>", _scenario.DifficultyRating, Votes);
 
-                    var html = new System.Text.StringBuilder();
+                    //var html = new System.Text.StringBuilder();
 
-                    for (var i = 0; i < Difficulty; i++)
-                    {
-                        html.Append(icon);
-                    }
+                    //for (var i = 0; i < Difficulty; i++)
+                    //{
+                    //    html.Append(icon);
+                    //}
 
                     return !string.IsNullOrEmpty(QuestCompanionUrl) ?
                         string.Format("<a href='{0}' target='_blank'>{1}</a>", QuestCompanionUrl, html.ToString())

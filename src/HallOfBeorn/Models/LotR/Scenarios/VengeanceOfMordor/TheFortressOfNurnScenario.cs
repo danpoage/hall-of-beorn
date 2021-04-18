@@ -15,10 +15,12 @@ namespace HallOfBeorn.Models.LotR.Scenarios.VengeanceOfMordor
             GroupName = "Vengeance of Mordor";
             Number = 6;
 
+            RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/MEC83.pdf";
             //RulesImageCount = 2;
-            //QuestCompanionSlug = "vengeance-of-mordor-cycle-quest-the-fortress-of-nurn";
-            DifficultyRating = 9.0f;
-            Votes = 1;
+            QuestCompanionSlug = "vengeance-of-mordor-cycle-quest-the-fortress-of-nurn";
+
+            DifficultyRating = 7.4f;
+            Votes = 7;
             AddEncounterSet(EncounterSet.TheFortressOfNurn);
             AddEncounterSet(EncounterSet.UlchorsGuard);
             AddEncounterSet(EncounterSet.UnderGuard);

@@ -43,6 +43,7 @@ namespace HallOfBeorn.Models.LotR
         public bool IsPremier { get; protected set; }
         public bool IsNewSubGroup { get; protected set; }
         public string RulesUrl { get; protected set; }
+        public string LearnToPlayUrl { get; protected set; }
         public string BuyLink { get; protected set; }
         public DateTime FirstReleased { get; protected set; }
 
