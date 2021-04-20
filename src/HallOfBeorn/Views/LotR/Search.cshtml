@@ -384,7 +384,7 @@
     foreach (var product in @Model.Products)
     {
         <div style="display:inline-block;margin-left:4px;margin-right:4px;margin-top:6px;margin-bottom:6px;vertical-align: top;">
-                <a title="@product.Name (@product.Code)" href="@product.Link">   
+                <a title="@product.Name (@product.Code)" href="@product.BrowseLink">  
                 <img src="@product.ImagePath" style="height:@product.ImageHeight;width:@product.ImageWidth;"/></a>
 
                 @if (product.HasCards())
