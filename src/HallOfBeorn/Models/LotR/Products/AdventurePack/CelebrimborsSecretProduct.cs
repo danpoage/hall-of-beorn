@@ -10,7 +10,8 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
         public CelebrimborsSecretProduct()
             : base("Celebrimbor's Secret", "MEC30", ImageType.Png, new DateTime(2014, 11, 13))
         {
-            RulesUrl = "https://images-cdn.fantasyflightgames.com/filer_public/d5/4c/d54cf57f-de1d-4934-abfc-c0fdbc9e0f7a/celebrimbors-secret-rulesheet.pdf";
+            RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/MEC30.pdf";
+                //"https://images-cdn.fantasyflightgames.com/filer_public/d5/4c/d54cf57f-de1d-4934-abfc-c0fdbc9e0f7a/celebrimbors-secret-rulesheet.pdf";
 
             AddCardSet(CardSet.CelebrimborsSecret);
 

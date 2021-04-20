@@ -14,7 +14,7 @@
 
 @if (@Model.Detail != null)
 {
-    <a href="/LotR/Scenarios" class="scenario-view-link">Back to Scenario List</a>
+    <a href="/LotR/Scenarios#@Model.Detail.Slug" class="scenario-view-link">Back to Scenario List</a>
     <h2><a href="@Model.Detail.CardsLink" target="_blank">@Model.Detail.Title</a></h2>
     <div>
     @foreach (var questCard in @Model.Detail.QuestCards)
@@ -216,7 +216,7 @@ else {
                         }
                         lastProduct = scenario.ProductName;
                         <div>
-                            <span class="scenario-title"><a title="Details for @scenario.Title" href="@scenario.Link">@scenario.Title</a></span>
+                            <span class="scenario-title"><a id="@scenario.Slug" title="Details for @scenario.Title" href="@scenario.Link">@scenario.Title</a></span>
                             @if (!string.IsNullOrEmpty(@scenario.DifficultyHtml))
                             {
                                 <span class="scenario-difficulty">@Html.Raw(@scenario.DifficultyHtml)</span>

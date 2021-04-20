@@ -15,7 +15,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ChildrenOfEorl
             GroupName = "Children of Eorl";
             Number = 3;
 
-            RulesImageCount = 21;
+            RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/ALEP01.pdf";
+            //RulesImageCount = 21;
 
             QuestCompanionSlug = "the-children-of-eorl-quest-the-horse-lords-ire";
             DifficultyRating = 7.0f;

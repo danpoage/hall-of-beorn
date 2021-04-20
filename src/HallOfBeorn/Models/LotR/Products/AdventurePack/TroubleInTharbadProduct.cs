@@ -10,7 +10,8 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
         public TroubleInTharbadProduct()
             : base("Trouble in Tharbad", "MEC28", ImageType.Png, new DateTime(2014, 8, 21))
         {
-            RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/trouble-in-tharbad-rulesheet.pdf";
+            RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/MEC28.pdf";
+                //"http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/trouble-in-tharbad-rulesheet.pdf";
 
             AddCardSet(CardSet.TroubleInTharbad);
 

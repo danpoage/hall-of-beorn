@@ -10,13 +10,14 @@ namespace HallOfBeorn.Models.LotR.Products.Deluxe
         public TheSandsOfHaradProduct()
             : base("The Sands of Harad", "MEC55", ImageType.Jpg, new DateTime(2016, 11, 1))
         {
+            RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/MEC55.pdf";
+                //"https://images-cdn.fantasyflightgames.com/filer_public/b6/a2/b6a24632-929f-4bd5-a436-bd8c617e4bd2/mec55_rules_webready.pdf";
+
             AddCardSet(CardSet.TheSandsOfHarad);
 
             AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheSandsOfHarad.EscapeFromUmbarScenario());
             AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheSandsOfHarad.DesertCrossingScenario());
             AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheSandsOfHarad.TheLongArmOfMordorScenario());
-
-            RulesUrl = "https://images-cdn.fantasyflightgames.com/filer_public/b6/a2/b6a24632-929f-4bd5-a436-bd8c617e4bd2/mec55_rules_webready.pdf";
         }
     }
 }

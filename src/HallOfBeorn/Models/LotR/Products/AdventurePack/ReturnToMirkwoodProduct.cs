@@ -10,7 +10,8 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
         public ReturnToMirkwoodProduct()
             : base("Return to Mirkwood", "MEC07", ImageType.Png, new DateTime(2011, 11, 23))
         {
-            RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/Return_to_Mirkwood_rulesheet.pdf";
+            RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/MEC07.pdf";
+                //"http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/Return_to_Mirkwood_rulesheet.pdf";
 
             AddCardSet(CardSet.ReturnToMirkwood);
 

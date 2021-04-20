@@ -10,6 +10,8 @@ namespace HallOfBeorn.Models.LotR.Products.Community
         {
             AddCardSet(CardSet.ChildrenOfEorl);
 
+            RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/ALEP01.pdf";
+
             AddScenario(new Scenarios.ChildrenOfEorl.AmbushAtErelasScenario());
             AddScenario(new Scenarios.ChildrenOfEorl.TheBattleForTheBeaconScenario());
             AddScenario(new Scenarios.ChildrenOfEorl.TheHorseLordsIreScenario());

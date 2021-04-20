@@ -141,11 +141,19 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             }
         }
         
-        public string Link
+        public string BrowseLink
         {
             get
             {
-                return string.Format("/LotR/Products/{0}", _product.Name.NormalizeCaseSensitiveString().ToUrlSafeString());
+                return string.Format("/LotR/Products/{0}?View=Browse", _product.Name.NormalizeCaseSensitiveString().ToUrlSafeString());
+            }
+        }
+
+        public string ChronologicalLink
+        {
+            get
+            {
+                return string.Format("/LotR/Products/{0}?View=Chronological", _product.Name.NormalizeCaseSensitiveString().ToUrlSafeString());
             }
         }
 

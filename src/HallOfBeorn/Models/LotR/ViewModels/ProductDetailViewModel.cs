@@ -82,6 +82,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             get { return product.LearnToPlayUrl; }
         }
 
+        public string EasyModeUrl
+        {
+            get { return product.EasyModeUrl; }
+        }
+
         public string Type
         {
             get { 

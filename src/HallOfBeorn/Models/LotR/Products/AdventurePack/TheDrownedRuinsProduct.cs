@@ -10,7 +10,8 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
         public TheDrownedRuinsProduct()
             : base("The Drowned Ruins", "MEC51", ImageType.Jpg, new DateTime(2016, 9, 1))
         {
-            RulesUrl = "https://images-cdn.fantasyflightgames.com/filer_public/09/2f/092fb408-c906-4521-994e-031fd90b11ba/mec51_rules.pdf";
+            RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/MEC51.pdf";
+                //"https://images-cdn.fantasyflightgames.com/filer_public/09/2f/092fb408-c906-4521-994e-031fd90b11ba/mec51_rules.pdf";
 
             AddCardSet(CardSet.TheDrownedRuins);
 

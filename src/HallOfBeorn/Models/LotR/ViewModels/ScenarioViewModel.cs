@@ -57,8 +57,9 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         private readonly List<ScenarioQuestViewModel> _questCards = new List<ScenarioQuestViewModel>();
         private readonly List<ScenarioCardViewModel> _scenarioCards = new List<ScenarioCardViewModel>();
 
+        public string Slug { get { return _scenario.Title.ToUrlSafeString(); } }
         public string Title { get { return _scenario.Title; } }
-        public string Link { get { return string.Format("/Cards/Scenarios/{0}", _scenario.Title.ToUrlSafeString()); } }
+        public string Link { get { return string.Format("/LotR/Scenarios/{0}", Slug); } }
         public string CardsLink {
             get {
                 return !string.IsNullOrEmpty(_scenario.CardsLink) ? 

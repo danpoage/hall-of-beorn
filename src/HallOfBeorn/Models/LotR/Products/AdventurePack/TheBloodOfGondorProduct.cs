@@ -10,7 +10,8 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
         public TheBloodOfGondorProduct()
             : base("The Blood of Gondor", "MEC22", ImageType.Png, new DateTime(2013, 10, 17))
         {
-            RulesUrl = "http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/rulesheet-the-blood-of-gondor.pdf";
+            RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/MEC22.pdf";
+                //"http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/rulesheet-the-blood-of-gondor.pdf";
 
             AddCardSet(CardSet.TheBloodOfGondor);
 
