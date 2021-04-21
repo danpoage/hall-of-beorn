@@ -9,10 +9,33 @@
 
 @section scripts {
 <script type="text/javascript" src="~/Scripts/cardSearch-1.0.1.js" defer></script>
-<script type="text/javascript" src="~/Scripts/autocomplete42.js" defer></script>
+<script type="text/javascript" src="~/Scripts/cookie-1.0.1.js" defer></script>
+<script type="text/javascript" src="~/Scripts/autocomplete-1.0.1.js" defer></script>
 <script type="text/javascript">
     window.addEventListener('DOMContentLoaded', function() {
         $(function () {
+
+            var mode = 'SearchOfficial';
+            var setSearchCookie = getCookie('SetSearch');
+            if (setSearchCookie) {
+                console.log('SetSearch Cookie: ' + setSearchCookie);
+                mode = setSearchCookie;
+            }
+
+            var autocompleteSource = autocompleteSourceOfficial;
+
+            if (mode == 'SearchFirstAge' || mode == 'SearchCommunity') {
+                console.log('Adding First Age autocomplete');
+                autocompleteSource = autocompleteSource.concat(autocompleteSourceFirstAge);
+            }
+
+            if (mode == 'SearchAlep' || mode == 'SearchCommunity') {
+                console.log('Adding ALeP autocomplete');
+                autocompleteSource = autocompleteSource.concat(autocompleteSourceAlep);
+            }
+
+            //console.log(autocompleteSource);
+
             $("#Query").autocomplete({
                 source: autocompleteSource,
                 minLength: 2
