@@ -82,9 +82,10 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithInfo(89, 3, Artist.Greg_Opalinski);
             addEvent("Helm of Secrecy", 4, Sphere.Neutral)
                 .WithTextLine("Limit 1 per deck.")
-                .WithTextLine("Action: Choose a hero you control and discard all tokens from it. Select a different non-Fellowship, non-Baggins hero from your collection with a threat cost less than or equal to the chosen hero. Swap those heroes, moving all eligible attachments and damage tokens to the hero from your collection.")
+                .WithTextLine("Action: Choose a hero you control and discard all tokens from it. Select a different non-Fellowship, non-Baggins hero from your collection with a threat cost less than or equal to the chosen hero. Swap those heroes, moving all eligible attachments to the hero from your collection.")
                 .WithLimitOnePerDeck()
-                .WithInfo(90, 3, Artist.Unknown);
+                .WithErrata(1)
+                .WithInfo(90, 3, Artist.Andreia_Ugrai);
             addContract("Council of the Wise")
                 .WithTextLine("You cannot include more than 1 copy of a card, by title, in your deck.")
                 .WithTextLine("Response: After you play an event from your hand, choose one: reduce your threat by 1, draw 1 card, or add 1 resource to your hero's resource pool. You can only choose each option once per round.")
@@ -102,7 +103,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTextLine("Each enemy cannot take more than 4 damage each round.")
                 .WithTextLine("While there is at least one enemy in the staging area, this stage cannot be chosen as the current quest.")
                 .WithVictoryPoints(10)
-                .WithInfo(93, 1, Artist.Unknown);
+                .WithInfo(93, 1, Artist.Sarah_Lindstrom);
             addEncounterSideQuest("Overwhelming Darkness", setName, 6)
                 .WithFlavorLine("As you draw closer to Mordor, the darkness around you seeps into your thought, and despair begins to take hold...")
                 .WithTextLine("Forced: After a player players a card, he discards the top card of his deck.")
@@ -146,7 +147,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithFlavorLine("...its floor and walls on either side were cloven by a great fissure, out of which the red glare came, now leaping up, now dying down into darkness...")
                 .WithFlavorLine("-The Return of the King")
                 .WithEasyModeQuantity(2)
-                .WithInfo(100, 3, Artist.Unknown);
+                .WithInfo(100, 3, Artist.Daria_Khlebnikova);
             addLocation("Hideous Deeps", setName, 3, 6)
                 .WithTraits("Underground.")
                 .WithTextLine("When Revealed: Each player places the top 3 cards of his deck facedown under Hideous Deeps.")

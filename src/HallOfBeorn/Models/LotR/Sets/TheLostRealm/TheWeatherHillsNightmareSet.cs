@@ -49,7 +49,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             addObjectiveAlly("Captive Villager", EncounterSet.TheWeatherHillsNightmare.Name, 0, 0, 1, 2)
                 .WithTraits("Bree.")
                 .WithText("Forced: After Captive Villager enters play, reveal the top card of the Orc deck and attach it to Captie Villager, guarding it.\r\nWhile Captive Villager is free of encounters, the first player gains control of it and is considered to have +5 threat while making engagement checks.")
-                .WithInfo(12, 3, Artist.Unknown);
+                .WithInfo(12, 3, Artist.Ben_Bernardo);
             addEnemy("Rearguard Ambusher", EncounterSet.TheWeatherHillsNightmare.Name, 17, 1, 4, 2, 4)
                 .WithTraits("Orc.")
                 .WithText("Cannot be optionally engaged.\r\nForced: After Rearguard Ambusher engages you, exhaust each damaged character you control.")
@@ -73,7 +73,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithTraits("Weather.")
                 .WithText("When Revealed: Either remove 1 resource token from the Mission objective, or add 8 to the total Threat in the staging area this phase.")
                 .WithShadow("Shadow: Either remove 1 resource token from the Mission objective, or attacking enemy gets +3 Attack.")
-                .WithInfo(17, 3, Artist.Unknown);
+                .WithInfo(17, 3, Artist.Monztre);
             addEncounterSideQuest("Track the Orcs", EncounterSet.TheWeatherHillsNightmare.Name, 8)
                 .WithFlavor("The weather makes the Orcs difficult to track. It requires all of your skill to read the signs in the rough terrain.")
                 .WithText("Each enemy gets +10 enagement cost and cannot be optionally engaged.\r\nWhen Revealed: Reveal the top of card of the Orc deck (reveal the top 2 card instead if there are 3 or more players in the game).")

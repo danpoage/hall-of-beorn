@@ -593,7 +593,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheGreyHavens
                 .WithInfo(83, 1, Artist.Nele_Klumpe);
             addObjective("Navigation", EncounterSet.TheDreamChasersFleet)
                 .WithTextLine("Sunny, Cloudy, Rainy, Stormy")
-                .WithInfo(84, 1, Artist.Unknown);
+                .WithInfo(84, 1, Artist.None);
         }
     }
 }

@@ -68,7 +68,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTextLine("Response: After you play Spare Pipe, search the top 5 cards of your deck for an event and add it to your hand. Shuffle your deck.")
                 .WithFlavorLine("\"I have carried it a long way, though I don't know why.\"")
                 .WithFlavorLine("-Pippin, The Two Towers")
-                .WithInfo(115, 3, Artist.Unknown);
+                .WithInfo(115, 3, Artist.Tamires_Para);
             addEvent("Smoke and Think", 0, Sphere.Spirit)
                 .WithTextLine("Action: Reduce the cost of the next card you play by 1 for each Pipe you control.")
                 .WithFlavorLine("Merry smiled. \"Well then,\" he said, \"if Strider will provide what is needed, I will smoke and think.\"")

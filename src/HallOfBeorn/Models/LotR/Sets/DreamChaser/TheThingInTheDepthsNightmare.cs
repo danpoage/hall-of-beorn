@@ -53,7 +53,7 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithUnique()
                 .WithTraits("Ship.")
                 .WithText("While Captain's Quarters is grappled, Raider characters are considered to have no resources.\r\nTravel: Add 2 resources to Captain Sahír (even if he is out of play) and 1 resource to each other Raider card in play.")
-                .WithInfo(2, 1, Artist.Unknown));
+                .WithInfo(2, 1, Artist.Brenda_Bae));
             addCard(LotRCard.Location("Aft Cabin", string.Empty, setStormcaller, 3, 3)
                 .WithTraits("Ship.", "Deck.")
                 .WithText("While Aft Cabin is in the staging area, each enemy grappled with each Deck location adds 3 Threat instead of 2 Threat.\r\nForced: After an enemy is detached from Aft Cabin, that enemy gets +3 Defense until the end of the round.")

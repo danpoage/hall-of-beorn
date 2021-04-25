@@ -338,6 +338,7 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Cassandre_Bolan);
             all.Add(Artist.Jorge_Barrero);
             all.Add(Artist.Mikhail_Greuli);
+            all.Add(Artist.Ben_Bernardo);
 
             //First Age
             all.Add(Artist.Unknown);
@@ -652,7 +653,9 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Alex_Brock);
 
             //The Land of Sorrow
+            all.Add(Artist.Daria_Khlebnikova);
             all.Add(Artist.Matt_Hansen);
+            all.Add(Artist.Tamires_Para);
 
             //The Fortress of Nurn
             all.Add(Artist.Daniel_Zrom);
@@ -851,6 +854,7 @@ namespace HallOfBeorn.Models
         public static Artist Ashley_Lange = new Artist { Name = "Ashley Lange", URL = "http://ashlelang.tumblr.com" };
         public static Artist Atomhawk = new Artist { Name = "Atomhawk", URL = "http://www.atomhawk.com" };
         public static Artist Audrey_Hotte = new Artist { Name = "Audrey Hotte", URL = "https://www.artstation.com/ayhotte" };
+        public static Artist Ben_Bernardo = new Artist { Name = "Ben Bernardo", URL = "https://www.google.com/search?q=Ben+Bernardo+Art" };
         public static Artist Ben_Daugherty = new Artist { Name = "Ben Daugherty", URL = "https://www.google.com/search?q=Ben+Daugherty+Art" };
         public static Artist Blaz_Porenta = new Artist { Name = "Blaz Porenta", URL = "http://ninja2assn.deviantart.com" };
         public static Artist Bobby_Fieldhouse = new Artist { Name = "Bobby Fieldhouse", URL = "https://www.google.com/search?q=Bobby+Fieldhouse+Art" };
@@ -1108,6 +1112,7 @@ namespace HallOfBeorn.Models
         public static Artist Dan_Masso = new Artist { Name = "Dan Masso", URL = "http://danmasso.com" };
         public static Artist Daniel_Zrom = new Artist { Name = "Daniel Zrom", URL = "https://www.artstation.com/danielzrom" };
         public static Artist Darek_Zabrocki = new Artist { Name = "Darek Zabrocki", URL = "http://daroz.deviantart.com" };
+        public static Artist Daria_Khlebnikova = new Artist { Name = "Daria Khlebnikova", URL = "https://www.artstation.com/savagehenry" };
         public static Artist Daryl_Mandryk = new Artist { Name = "Daryl Mandryk", URL = "http://www.mandrykart.com" };
         public static Artist David_Chen = new Artist { Name = "David Chen", URL = "https://www.google.com/search?q=David+Chen+Fantasy+Art" };
         public static Artist David_Demaret = new Artist { Name = "David Demaret", URL = "http://moonxels.deviantart.com" };
@@ -1325,6 +1330,7 @@ namespace HallOfBeorn.Models
         public static Artist Stephen_M_Mabee = new Artist { Name = "Stephen M. Mabee", URL = "http://fineartamerica.com/profiles/stephen-mabee.html" };
         public static Artist Stu_Barnes = new Artist { Name = "Stu Barnes", URL = "http://stuvsillustration.blogspot.com" };
         public static Artist Suzanne_Helmigh = new Artist { Name = "Suzanne Helmigh", URL = "http://suzanne-helmigh.deviantart.com" };
+        public static Artist Tamires_Para = new Artist { Name = "Tamires Para", URL = "https://www.artstation.com/tamirespp" };
         public static Artist Taufiq = new Artist { Name = "Taufiq", URL = "http://toviz.deviantart.com" };
         public static Artist Taylor_Ingvarsson = new Artist { Name = "Taylor Ingvarsson", URL = "http://www.artoftaylor.com" };
         public static Artist Tey_Bartolome = new Artist { Name = "Tey Bartolome", URL = "http://artoftey.com" };

@@ -30,7 +30,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithInfo(28, 3, Artist.Vilius_Petrauskas);
             addEvent("Need Drives Them", 3, Sphere.Leadership)
                 .WithTextLine("Action: Each player whose threat is 40 or higher readies all characters he controls.")
-                .WithInfo(29, 3, Artist.Unknown);
+                .WithInfo(29, 3, Artist.Imad_Awan);
             addAlly("Woodland Sentry", 3, Sphere.Lore, false, 1, 1, 1, 2)
                 .WithTraits("Silvan.")
                 .WithTextLine("Response: After you play Woodland Sentry from your hand, choose an enemy or location in play. If there is a copy of that card in the victory display, discard the chosen card.")
@@ -44,7 +44,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTextLine("Restricted.")
                 .WithTextLine("Attached hero gains ranged.")
                 .WithTextLine("Response: After attached hero is declared an as attacker against an enemy, discard up to 3 cards from your hand to deal 1 damage to that enemy for each card discarded this way.")
-                .WithInfo(31, 3, Artist.Unknown);
+                .WithInfo(31, 3, Artist.Nino_Vecia);
             addAttachment("War Axe", 1, Sphere.Tactics, false)
                 .WithTraits("Item.", "Weapon.")
                 .WithKeywords("Restricted.")
@@ -52,19 +52,19 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTextLine("Attached characters gets +1 Attack for each attachment it has with the restricted keyword.")
                 .WithFlavorLine("\"Gimli Glóin's son, have you your axe ready?\"")
                 .WithFlavorLine("-Éomer, The Return of the King")
-                .WithInfo(32, 3, Artist.Unknown);
+                .WithInfo(32, 3, Artist.Tamires_Para);
             addAttachment("Strength and Courage", 1, Sphere.Tactics, false)
                 .WithTraits("Master.")
                 .WithTextLine("Attach to the hero with The One Ring.")
                 .WithTextLine("Limit 1 per hero. Attached hero gets +1 Attack.")
                 .WithTextLine("Response: After attached hero is declared as an attacker, exhaust The One Ring and raise your threat by 1 to double attached hero's printed Attack for this attack.")
-                .WithInfo(33, 3, Artist.Unknown);
+                .WithInfo(33, 3, Artist.Alvaro_Calvo_Escudero);
             addAlly("Knight of Belfalas", 2, Sphere.Spirit, false, 1, 2, 0, 2)
                 .WithTraits("Gondor.", "Warrior.")
                 .WithTextLine("Response: After Knight of Belfalas enters play, return a Gondor ally from your discard pile to your hand.")
                 .WithFlavorLine("The mounted knights returned, and at their rear the banner of Dol Amroth...")
                 .WithFlavorLine("-The Return of the King")
-                .WithInfo(34, 3, Artist.Unknown);
+                .WithInfo(34, 3, Artist.Imad_Awan);
             addAttachment("Horn of the Mark", 1, Sphere.Spirit, true)
                 .WithTraits("Artifact.", "Item.")
                 .WithKeywords("Restricted.")
@@ -72,7 +72,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTextLine("Response: When a character leaves play, if that character shares at least one trait with the attached hero, exhaust Horn of the Mark to draw 1 card.")
                 .WithFlavorLine("Then Éowyn gave to Merry an ancient horn, small but cunningly wrought all of fair silver with a baldric of green.")
                 .WithFlavorLine("-The Return of the King")
-                .WithInfo(35, 3, Artist.Unknown);
+                .WithInfo(35, 3, Artist.Derek_D_Edgell);
             addEvent("Host of Galadhrim", 4, Sphere.Neutral)
                 .WithTextLine("Planning Action: Return each Silvan ally you control to your hand. Then, play each of those allies from your hand one at a time at no cost.")
                 .WithFlavorLine("Celeborn came forth and led the host of Lórien...")

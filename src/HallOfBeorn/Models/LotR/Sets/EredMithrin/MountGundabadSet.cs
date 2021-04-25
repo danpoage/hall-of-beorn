@@ -23,7 +23,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTextLine("Response: After Greenwood Defender enters play, it does not exhaust to defend until the end of the round.")
                 .WithFlavorLine("...after the coming of Men they took ever more and more to the gloaming and the dusk.")
                 .WithFlavorLine("-The Hobbit")
-                .WithInfo(113, 3, Artist.Unknown);
+                .WithInfo(113, 3, Artist.Derek_D_Edgell);
             addEvent("Elf Guide", 0, Sphere.Leadership)
                 .WithTextLine("Action: Return a Silvan ally you control to your hand to choose a hero. Add 1 resource to that hero's pool.")
                 .WithFlavorLine("...soon Haldir turned aside into the trees and halted on the bank of the river under their shadows.")

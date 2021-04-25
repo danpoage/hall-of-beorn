@@ -140,6 +140,7 @@ namespace HallOfBeorn.Services.LotR.Tags
             addFaq("Legacy-of-Durin-TWitW", "<p>Should read: <blockquote><b>Response:</b> After you play a <b><i>Dwarf</i></b> character from your hand, exhaust Legacy of Durin to draw 1 card.</blockquote></p>", version);
             addFaq("Erebor-Battle-Master-TLD", "<p>Should read: <blockquote>Erebor Battle Master gets +1 <img src='/Images/attack-med.png' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' /> for each other <b><i>Dwarf</i></b> ally you control. (Limit +4 <img src='/Images/attack-med.png' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' />.)</blockquote></p>", version);
             addFaq("Thror's-Map-THOHaUH", "<p>Should read: <blockquote><b>Travel Action:</b> Discard Thrór's Map to choose a location in the staging area.</blockquote></p>", version);
+            addFaq("Helm-of-Secrecy-UtAM", "<p>Should read: <blockquote>Swap those heroes, moving all eligible attachments to the hero from your collection.</blockquote><br>Omit &ldquo;and damage tokens&rdquo;</p>", version);
         }
 
         private void loadFaqs()
