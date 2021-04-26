@@ -19,6 +19,11 @@ namespace HallOfBeorn.Handlers.LotR
 
         public object HandleRingsDbTopDecks(string slug)
         {
+            if (slug.Contains("?"))
+            {
+                slug = slug.Split('?')[0];
+            }
+
             var cardId = _ringsDbService.GetCardId(slug);
 
             var decks = new List<RingsDbDeck>();

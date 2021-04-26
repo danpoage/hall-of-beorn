@@ -8,7 +8,7 @@
 }
 
 @section scripts {
-<script type="text/javascript" src="~/Scripts/cardDetails1.js"></script>
+<script type="text/javascript" src="~/Scripts/cardDetails-1.0.1.js"></script>
 }
 
 <div class="titleBox" style="display:inline-block;max-width:310px;margin-right:10px;">
@@ -195,7 +195,7 @@
                 <div style="text-align:center;">
                 @foreach (var trait in Model.Traits)
                 {
-                    <a title="Trait Search" href='@string.Format("/Cards/Search?Trait={0}", @trait.Trim())'><b><i>@trait</i></b></a> @: &nbsp;
+                    <a title="Trait Search" href='@string.Format("/LotR?Trait={0}", @trait.Trim())'><b><i>@trait</i></b></a> @: &nbsp;
                 }
                 </div>
             }
@@ -733,7 +733,7 @@
                 }
             </div>
             <div id="deck-section" class="footer-section" style="display:none;">
-                <div class="footer-title"><b><a href="http://ringsdb.com" title="Top 10 Decks with this card on RingsDB" target="_blank"><img src="/Images/RingsDB.jpg" class="ringsdb-icon" height="16" width="16" />Top RingsDB Decks</a></b></div>
+                <div class="footer-title"><b><a href="https://ringsdb.com" title="Recent Decks with this card on RingsDB" target="_blank"><img src="/Images/RingsDB.jpg" class="ringsdb-icon" height="16" width="16" />Recent RingsDB Decks</a></b></div>
                 <div id="deck-list"></div>
             </div>
         <div>
