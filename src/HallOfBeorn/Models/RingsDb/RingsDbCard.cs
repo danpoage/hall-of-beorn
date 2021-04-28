@@ -22,6 +22,7 @@ namespace HallOfBeorn.Models.RingsDb
         public string flavor { get; set; }
         public bool is_unique { get; set; }
         public string cost { get; set; }
+        public byte? victory { get; set; }
         public string engagement_cost { get; set; }
         public byte? threat { get; set; }
         public byte? threat_strength { get; set; }
@@ -148,6 +149,9 @@ namespace HallOfBeorn.Models.RingsDb
                 LotR.ViewModels.CardViewModel.GetImagePathForLanguage(c)
                 .NormalizeCaseSensitiveString();
 
+            Func<LotR.LotRCard, byte?> getVictory = (c) =>
+                c.VictoryPoints > 0 ? c.VictoryPoints : (byte?)null;
+
             return new RingsDbCard
             {
                 is_official = getIsOfficial(card),
@@ -166,6 +170,7 @@ namespace HallOfBeorn.Models.RingsDb
                 flavor = card.FlavorText,
                 is_unique = card.IsUnique,
                 cost = getCost(card),
+                victory = getVictory(card), 
                 engagement_cost = getEngagementCost(card),
                 threat = card.ThreatCost,
                 threat_strength = card.Threat,
