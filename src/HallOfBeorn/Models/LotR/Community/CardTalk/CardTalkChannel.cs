@@ -14,6 +14,36 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
             "https://www.youtube.com/feeds/videos.xml?channel_id=UCj-QcL_YcA_DQKe7bSe9byA",
             LinkType.Card_Talk)
         {
+            AddYear(2021);
+            AddLink("Bywater Shiriff", "https://www.youtube.com/watch?v=bnWWzKKNvNw", "2021-04-27T19:05:12+00:00");
+            AddLink("Card Talk Saga Campgain with Matt Cirth Ungol (pt 2)", "https://www.youtube.com/watch?v=qHtlBlx8SIo", "2021-04-27T07:00:01+00:00");
+            AddLink("Card Talk Saga Campgain with Matt Cirth Ungol", "https://www.youtube.com/watch?v=fu5Zt5P8RCg", "2021-04-27T05:59:59+00:00");
+            AddLink("Dungeons Deep and Caverns Dim - 7th Attempt", "https://www.youtube.com/watch?v=O0Qb33ed0Ik", "2021-04-22T16:00:10+00:00");
+            AddLink("Envoy of Pelargir", "https://www.youtube.com/watch?v=1VAI87wUeW4", "2021-04-20T12:04:49+00:00");
+            AddLink("Warden of Healing and Ioreth", "https://www.youtube.com/watch?v=g9mYiyUtrkM", "2021-04-07T19:12:12+00:00");
+            AddLink("Ally Elrond", "https://www.youtube.com/watch?v=_gE3wz941NM", "2021-03-30T19:35:58+00:00");
+            AddLink("Magic Ring", "https://www.youtube.com/watch?v=D5yCHTKnZ00", "2021-03-23T13:34:52+00:00");
+            AddLink("Card Talk Live Saga Campaign with Matt Battle of Pelennor Fields", "https://www.youtube.com/watch?v=c5Dd7u-Vwq0", "2021-03-16T07:16:52+00:00");
+            AddLink("Healing Herbs", "https://www.youtube.com/watch?v=VkvNNws9B3w", "2021-03-09T16:05:52+00:00");
+            AddLink("Card Talk Live Campagin with Matt Siege of Gondor", "https://www.youtube.com/watch?v=cFNxRz7sq1w", "2021-03-02T04:50:21+00:00");
+            AddLink("Superlative Caleb", "https://www.youtube.com/watch?v=urRnKPd4dkM", "2021-03-01T18:15:57+00:00");
+            AddLink("Superlative February - Show 12", "https://www.youtube.com/watch?v=INxqczSBk_s", "2021-02-26T16:41:21+00:00");
+            AddLink("Superlative February - Show 11", "https://www.youtube.com/watch?v=Pn_ZkB4BroE", "2021-02-24T19:31:46+00:00");
+            AddLink("Superlative February - Show 10", "https://www.youtube.com/watch?v=fKkzf2uLxkw", "2021-02-22T17:00:19+00:00");
+            AddLink("Superlative February - Show 9", "https://www.youtube.com/watch?v=h5-0vhxANrY", "2021-02-20T00:00:00+00:00");
+            AddLink("Superlative February - Show 8", "https://www.youtube.com/watch?v=WbjeBMcO3Mk", "2021-02-18T00:00:00+00:00");
+            AddLink("Card Talk Live with Matt Passing of the Grey Company", "https://www.youtube.com/watch?v=eJDCoRlBIpw", "2021-02-16T00:00:00+00:00");
+            AddLink("Superlative February - Show 7", "https://www.youtube.com/watch?v=Zrn2UHz86_Y", "2021-02-16");
+            AddLink("Superlative February - Show 6", "https://www.youtube.com/watch?v=7cM9meK2qVE", "2021-02-14");
+            AddLink("Superlative February - Show 5", "https://www.youtube.com/watch?v=Q0MPynMonzs", "2021-02-12");
+            AddLink("Superlative February - Show 4", "https://www.youtube.com/watch?v=rLkfUYdoIHM", "2021-02-10");
+            AddLink("Superlative February - Show 3", "https://www.youtube.com/watch?v=zmj7X8hKB-Q", "2021-02-08");
+            AddLink("Superlative February - Show 2", "https://www.youtube.com/watch?v=dA0iq8joiiE", "2021-02-06");
+            AddLink("Card Talk Live Saga Campaign with Matt Battle of Pelennor Fields", "https://www.youtube.com/watch?v=_Xtmggp6Bv8", "2021-02-04");
+            AddLink("Card Talk Live Saga Campaign with Matt Siege of Gondor", "https://www.youtube.com/watch?v=-9xLCIKtr1Q", "2021-02-02");
+            AddLink("Superlative February - Show 1", "https://www.youtube.com/watch?v=uS9iWZiiOLk", "2021-02-01");
+            AddLink("Beorn's Hospitality", "https://www.youtube.com/watch?v=s0QwMnG9RQE", "2021-01-29");
+
             AddYear(2020);
             AddLink("Guest Host Chloe Walsh", "https://www.youtube.com/watch?v=SAmEgdIw-0U", "2020-02-07T17:00:08+00:00");
             AddLink("Guest Host Tolkien Road", "https://www.youtube.com/watch?v=-kSqKjSxQmc", "2020-02-05T17:00:00+00:00");
