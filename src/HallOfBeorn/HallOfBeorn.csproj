@@ -385,6 +385,7 @@
     <Compile Include="Models\Characters\TomCottonCharacter.cs" />
     <Compile Include="Models\Characters\TreebeardCharacter.cs" />
     <Compile Include="Models\CharacterThing.cs" />
+    <Compile Include="Models\LotR\Age.cs" />
     <Compile Include="Models\LotR\Archetype.cs" />
     <Compile Include="Models\LotR\Community\CardboardOfTheRings\CardboardOfTheRingsChannel.cs" />
     <Compile Include="Models\LotR\Community\CardTalk\CardTalkChannel.cs" />

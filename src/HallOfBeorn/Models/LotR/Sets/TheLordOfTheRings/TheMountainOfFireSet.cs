@@ -402,6 +402,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithUnique()
                 .WithTraits("Artifact.", "Item.", "Ring.")
                 .WithText("Setup: The first player claims The One ~Ring and attaches it to the Ring-bearer.\r\nAttached hero does not count against the hero limit. The first player gains control of attached hero.\r\nIf The One ~Ring leaves play, the players lose the game.")
+                .WithAges(Age.Second_Age, Age.Third_Age)
                 .WithInfo(65, 1, Artist.Mike_Nash));
             addCard(LotRCard.Quest("Pass the Two Watchers", 1, setTower, 0)
                 .WithFlavor("Frodo has been captured by the Orcs of Cirith Ungol and imprisoned at the top of their tower, but Sam is determined to rescue his master.")

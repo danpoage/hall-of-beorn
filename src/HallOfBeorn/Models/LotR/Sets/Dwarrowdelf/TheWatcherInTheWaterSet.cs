@@ -33,6 +33,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithTextLine("Attach to a hero. Attached hero gains a Leadership resource icon.")
                 .WithTextLine("If attached hero is Aragorn, each character you control gets +1 Willpower.")
                 .WithTemplate("<p>Attach to a hero.</p><p>Attached hero gains a {sphere:Leadership} resource icon.</p><p>If attached hero is <a title='Aragorn Hero Search' href='/Cards/Search?Query=%2Btitle%3AAragorn&CardType=Hero' target='_blank'>Aragorn</a>, each character you control gets +1 {Willpower}.</p><p class='flavor-text'>&quot;For the Sword that was Broken is the Sword of Elendil that broke beneath him when he fell.&quot;<br>&ndash;Aragorn, The Fellowship of the Ring</p>")
+                .WithAges(Age.Second_Age, Age.Third_Age)
                 .WithInfo(55, 3, Artist.Sara_Biddle);
             addAlly("Watcher of the Bruinen", 2, Sphere.Tactics, false, 0, 1, 2, 2)
                 .WithTraits("Noldor.", "Warrior.")

@@ -265,6 +265,9 @@ namespace HallOfBeorn.Models.LotR
         public bool HasErrata { get; set; }
         public string Direction { get; set; }
 
+        private readonly HashSet<Age> ages = new HashSet<Age> { Age.Third_Age };
+        public HashSet<Age> Ages { get { return ages; } }
+
         private DeckType deckType = DeckType.None;
         public DeckType DeckType
         {
@@ -308,6 +311,17 @@ namespace HallOfBeorn.Models.LotR
         public bool MatchesCardSet(string targetCardSet)
         {
             return CardSet.Name == targetCardSet || (!string.IsNullOrEmpty(CardSet.AlternateName) && CardSet.AlternateName == targetCardSet) || (!string.IsNullOrEmpty(CardSet.NormalizedName) && CardSet.NormalizedName == targetCardSet) || (!string.IsNullOrEmpty(CardSet.Cycle) && CardSet.Cycle.ToUpper() == targetCardSet);
+        }
+
+        public bool IncludesAge(string targetAge)
+        {
+            var age = Age.None;
+            if (!Enum.TryParse(targetAge, out age))
+            {
+                return false;
+            }
+
+            return ages.Contains(age);
         }
 
         public byte SortCost()
@@ -954,6 +968,22 @@ namespace HallOfBeorn.Models.LotR
         public LotRCard WithLimitOnePerDeck()
         {
             MaxPerDeck = 1;
+            return this;
+        }
+
+        public LotRCard WithAges(params Age[] ages)
+        {
+            this.ages.Clear();
+            foreach (var age in ages)
+            {
+                if (this.ages.Contains(age))
+                {
+                    continue;
+                }
+
+                this.ages.Add(age);
+            }
+            
             return this;
         }
 

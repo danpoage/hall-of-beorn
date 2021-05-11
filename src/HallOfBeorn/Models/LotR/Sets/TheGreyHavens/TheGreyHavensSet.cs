@@ -20,6 +20,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheGreyHavens
                 .WithFlavorLine("Very tall he was, and his beard was long, and he was grey and old, save that his eyes were keen as stars...")
                 .WithFlavorLine("-The Return of the King")
                 .WithCommunityVersion("RiddermarkLord/Cirdan-the-Shipwright")
+                .WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age)
                 .WithInfo(1, 1, Artist.Aleksander_Karcz);
             addHero("Galdor of the Havens", 9, Sphere.Lore, 2, 2, 1, 4)
                 .WithTraits("Noldor.")
@@ -28,6 +29,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheGreyHavens
                 .WithFlavorLine("\"What power still remains lies with us...\"")
                 .WithFlavorLine("-The Fellowship of the Ring")
                 .WithCommunityVersion("Autumn/Galdor-of-the-Havens-Lore-Hero")
+                .WithAges(Age.Second_Age, Age.Third_Age)
                 .WithInfo(2, 1, Artist.Lukasz_Jaskolski);
             addAlly("Mithlond Sea-watcher", 2, Sphere.Tactics, false, 1, 1, 0, 2)
                 .WithTraits("Noldor.", "Warrior.")
@@ -105,6 +107,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheGreyHavens
                 .WithTextLine("Action: Exhaust Narya and attached character to choose and ready up to 2 allies. Each of those allies gets +1 Attack and +1 Defense until the end of the phase.")
                 .WithFlavorLine("\"For this is the Ring of Fire, and with it you may rekindle hearts in a world that grows chill.\"")
                 .WithFlavorLine("-Círdan, The Return of the King")
+                .WithAges(Age.Second_Age, Age.Third_Age)
                 .WithInfo(15, 3, Artist.Lucas_Durham);
             addQuest("Departure from the Havens", EncounterSet.VoyageAcrossBelegaer, 1, 'A', 8)
                 .WithKeywords("Sailing.")

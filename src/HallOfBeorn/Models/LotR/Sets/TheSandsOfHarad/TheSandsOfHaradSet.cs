@@ -36,6 +36,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheSandsOfHarad
                 .WithCommunityVersion("RiddermarkLord/Legolas-Spirit-Hero-1")
                 .WithCommunityVersion("RiddermarkLord/Legolas-Spirit-Hero-2")
                 .WithCommunityVersion("Hrodebert/Legolas-Spirit-Hero")
+                .WithAges(Age.Second_Age, Age.Third_Age)
                 .WithInfo(2, 1, Artist.Aleksander_Karcz);
             addAlly("Greenwood Archer", 2, Sphere.Leadership, false, 0, 2, 0, 1)
                 .WithTraits("Silvan.")

@@ -64,6 +64,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithYear(2010)
                 .WithCommunityVersion("RiddermarkLord/Legolas-Tactics-Hero-1")
                 .WithCommunityVersion("RiddermarkLord/Legolas-Tactics-Hero-2")
+                .WithAges(Age.Second_Age, Age.Third_Age)
                 .WithInfo(5, 1, Artist.Magali_Villeneuve);
             addHero("Thalin", 9, Sphere.Tactics, 1, 2, 2, 4)
                 .WithThumbnail()
@@ -128,6 +129,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithFlavor("\"You saw him for a moment as he is upon the other side: one of the mighty of the firstborn.\"\r\n-Gandalf, The Fellowship of the Ring")
                 .WithTemplate("<p class='main-text'><b>Action:</b> Pay 1 resource from {self}'s pool to heal 1 damage on any character. (Limit once per round.)</p><p class='flavor-text'>&quot;You saw him for a moment as he is upon the other side: one of the mighty of the firstborn.&quot;<br>&ndash;Gandalf, The Fellowship of the Ring</p>")
                 .WithYear(2010)
+                .WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age)
                 .WithInfo(11, 1, Artist.Katherine_Dinger);
             addHero("Beravor", 10, Sphere.Lore, 2, 2, 2, 4)
                 .WithThumbnail()

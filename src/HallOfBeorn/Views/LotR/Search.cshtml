@@ -247,6 +247,11 @@
                 <span class="search-label-short" title="Archetype">Archetype</span>
                 @Html.DropDownListFor(model => model.Archetype, SearchViewModel.Archetypes, new { @class = "search-select" })
                 </span>
+
+                <span class="search-filter">
+                <span class="search-label-short" title="Age">Age</span>
+                @Html.DropDownListFor(model => model.Age, SearchViewModel.Ages, new { @class = "search-select" })
+                </span>
             </div>
         </div>
 

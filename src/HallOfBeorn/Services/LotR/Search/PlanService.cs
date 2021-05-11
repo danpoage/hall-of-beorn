@@ -98,6 +98,8 @@ namespace HallOfBeorn.Services.LotR.Search
             AddFilter(filters, new CategoryFilter<Region>((score, reg) => _regionService.HasCategory(score.Card, reg), model.Region));
             AddFilter(filters, new CategoryFilter<Archetype>((score, arc) => _archetypeService.HasCategory(score.Card, arc), model.Archetype));
 
+            AddFilter(filters, new GenericFilter(model.Age, (score, target) => score.Card.IncludesAge(target)));
+
             if (filters.Count == 1 && !model.SetType.HasValue)
             {
                 AddFilter(filters, new StringExactFilter((score) => score.Card.CardSet.Name, defaultCardSet));

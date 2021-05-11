@@ -266,5 +266,16 @@ namespace HallOfBeorn.Services.LotR.Stats
                 .OrderBy(value => value)
                 .Select(value => questPointsValues[value]);
         }
+
+        public IEnumerable<string> AgeValues()
+        {
+            return new List<string>
+            {
+                Enum.GetName(typeof(Age), Age.First_Age),
+                Enum.GetName(typeof(Age), Age.Second_Age),
+                Enum.GetName(typeof(Age), Age.Third_Age),
+                Enum.GetName(typeof(Age), Age.Fourth_Age),
+            };
+        }
     }
 }

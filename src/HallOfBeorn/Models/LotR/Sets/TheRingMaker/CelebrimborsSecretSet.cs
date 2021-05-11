@@ -27,6 +27,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithCommunityVersion("RiddermarkLord/Galadriel-Spirit-Hero-2")
                 .WithCommunityVersion("Hrodebert/Galadriel-Spirit-Hero-1")
                 .WithCommunityVersion("Hrodebert/Galadriel-Spirit-Hero-2")
+                .WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age)
                 .WithInfo(112, 1, Artist.Magali_Villeneuve);
             addAttachment("Heir of Mardil", 1, Sphere.Leadership, true)
                 .WithTraits("Title.")
@@ -65,6 +66,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithFlavorLine("\"What you will see, if you leave the Mirror free to work, I cannot tell. For it shows things that were, things that are, things that yet may be.\"")
                 .WithFlavorLine("-Galadriel, The Fellowship of the Ring")
                 .WithCommunityVersion("Mirror-of-Galadriel-Nouveau-Hunters")
+                .WithAges(Age.Second_Age, Age.Third_Age)
                 .WithInfo(118, 3, Artist.Jose_Vega);
             addAlly("Wandering Ent", 2, Sphere.Lore, false, 2, 2, 2, 3)
                 .WithTraits("Ent.")
@@ -84,6 +86,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithTextLine("Attach to Galadriel. She gains a Lore resource icon.")
                 .WithTextLine("Quest Action: Exhaust Nenya and Galadriel to add her Willpower to another character's Willpower until the end of the phase.")
                 .WithFlavorLine("\"The is Nenya, the Ring of Adamant, and I am its keeper.\" -Galadriel, The Fellowship of the Ring")
+                .WithAges(Age.Second_Age, Age.Third_Age)
                 .WithInfo(121, 3, Artist.Mike_Nash);
             addQuest("The Ruins of Ost-in-Edhil", EncounterSet.CelebrimborsSecret, 1, 'A', 14)
                 .WithKeywords("Time 3.")

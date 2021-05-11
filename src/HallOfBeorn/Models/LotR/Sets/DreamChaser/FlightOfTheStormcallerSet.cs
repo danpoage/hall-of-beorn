@@ -52,6 +52,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithTextLine("Action: Discard a card from your hand to ready Glorfindel. (Limit once per phase.)")
                 .WithFlavorLine("\"Glorfindel is an Elf-lord of a house of princes.\"")
                 .WithFlavorLine("-Gandalf, The Fellowship of the Ring")
+                .WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age)
                 .WithInfo(6, 3, Artist.Aleksander_Karcz);
             addEvent("Tides of Fate", 0, Sphere.Spirit)
                 .WithTextLine("Response: When a shadow card increases an enemy's Attack by any amount, increase the defending character's Defense by 3 for that attack. Then, the players as a group may spend 2 Tactics resources to ready the defending character and give it +3 Attack for its next attack this phase.")

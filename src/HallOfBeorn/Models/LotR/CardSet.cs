@@ -23,7 +23,7 @@ namespace HallOfBeorn.Models.LotR
 
         protected abstract void Initialize();
 
-        protected void addCard(LotRCard card)
+        protected virtual void addCard(LotRCard card)
         {
             this.Cards.Add(card);
         }

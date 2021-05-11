@@ -8,6 +8,12 @@ namespace HallOfBeorn.Models.LotR.Sets.FirstAge
     {
         public const string setName = "First Age";
 
+        protected override void addCard(LotRCard card)
+        {
+            card.WithAges(Age.First_Age);
+            base.addCard(card);
+        }
+
         protected override void Initialize()
         {
             Name = setName;

@@ -21,5 +21,6 @@ namespace HallOfBeorn.Services.LotR.Stats
         IEnumerable<string> WillpowerStrengthValues();
         IEnumerable<string> ThreatStrengthValues();
         IEnumerable<string> QuestPointsValues();
+        IEnumerable<string> AgeValues();
     }
 }

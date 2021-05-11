@@ -8,6 +8,12 @@ namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
         private const string setName = "Among the Outlaws";
         private const string cycleName = "Doom Mastered";
 
+        protected override void addCard(LotRCard card)
+        {
+            card.WithAges(Age.First_Age);
+            base.addCard(card);
+        }
+
         protected override void Initialize()
         {
             Name = setName;

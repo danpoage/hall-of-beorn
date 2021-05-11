@@ -28,6 +28,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithCommunityVersion("Hrodebert/Elrond-Jon-Hodgson-1")
                 .WithCommunityVersion("Hrodebert/Elrond-Jon-Hodgson-2")
                 .WithCommunityVersion("Hrodebert/Elrond-Magali")
+                .WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age)
                 .WithInfo(128, 1, Artist.Magali_Villeneuve);
             addEvent("We Are Not Idle", 0, Sphere.Leadership)
                 .WithTextLine("Action: Exhaust X Dwarf heroes to add X resources to a hero's resource pool and draw 1 card.")
@@ -76,6 +77,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithTextLine("Action: Exhaust Elrond and Vilya to reveal the top card of your deck. You can immediately play or put into play the revealed card for no cost, if able. Otherwise, move the revealed card to the bottom of your deck.")
                 .WithFlavorLine("...mightiest of the Three. -Return of the King")
                 .WithTemplate("<p>Attach to {title:Elrond}. He gains a {sphere:Spirit} resource icon.</p><p><b>Action:</b> Exhaust {title:Elrond} and {self} to reveal the top card of your deck. You can immediately play or put into play the revealed card for no cost, if able. Otherwise, move the revealed card to the bottom of your deck.</p><p class='flavor-text'>...mightiest of the Three. &ndash;The Return of the King</p>")
+                .WithAges(Age.Second_Age, Age.Third_Age)
                 .WithInfo(137, 3, Artist.Sara_Biddle);
             addQuest("Nearing the Gate", "Shadow and Flame", 1, 'A', 9)
                 .WithTextLine("Setup: Remove Dark Pit from the encounter deck and place it aside, out of play. Add Durin's Bane to the staging area. Shuffle the encounter deck.")
@@ -159,6 +161,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithTextLine("Regenerate 3. Indestructible.")
                 .WithTextLine("Players cannot play attachments on Durin's Bane.Durin's Bane cannot leave the staging area, is considered to be engaged with each player whose threat is 1 or greater, and attacks each of those players in turn during the combat phase (deal and discard a new shadow card each attack).")
                 .WithTemplate("<p>{keyword:Regenerate 3.} {keyword:Indestructible.} Players cannot play attachments on {self}.</p><p>{self} cannot leave the staging area, is considered to be engaged with each player whose threat is 1 or greater, and attacks each of those players in turn during the combat phase <i>(deal and discard a new shadow card each attack)</i>.</p>")
+                .WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age)
                 .WithInfo(150, 1, Artist.Magali_Villeneuve);
             addEnemy("Ranging Goblin", "Shadow and Flame", 35, 2, 1, 1, 2)
                 .WithTraits("Goblin.", "Orc.")

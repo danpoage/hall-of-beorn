@@ -33,6 +33,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithTraits("Noldor.", "Noble.")
                 .WithTextLine("At the end of the round, discard Galadriel from play.")
                 .WithTextLine("Response: After you play Galadriel from your hand, search the top 5 cards of your deck for an attachment of cost 3 or less and put it into play. Put the remaining cards back in any order.")
+                .WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age)
                 .WithInfo(3, 3, Artist.Sebastian_Giacobino);
             addAlly("Boromir", 4, Sphere.Tactics, true, 1, 3, 1, 4)
                 .WithTraits("Gondor.", "Warrior.")
@@ -44,6 +45,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithTraits("Noldor.", "Healer.")
                 .WithTextLine("At the end of the round, discard Elrond from play.")
                 .WithTextLine("Response: After Elrond enters play, choose one: heal all damage on a hero, discard a Condition attachment, or each player draws 1 card.")
+                .WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age)
                 .WithInfo(5, 3, Artist.Allen_Douglas);
             addAlly("Bilbo Baggins", 2, Sphere.Spirit, true, 2, 0, 0, 2)
                 .WithTraits("Hobbit.")
@@ -112,7 +114,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 CardNumber = 13,
                 Quantity = 1,
                 Artist = Artist.Magali_Villeneuve
-            });
+            }.WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age));
             Cards.Add(new LotRCard()
             {
                 Title = "Andúril",
@@ -636,7 +638,7 @@ Forced: At the end of the quest phase, The ~Balrog makes an attack if it is in p
                 CardNumber = 44,
                 Quantity = 1,
                 Artist = Artist.Jim_Pavelec
-            });
+            }.WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age));
             Cards.Add(new LotRCard()
             {
                 Title = "Orc-chieftain",
@@ -1398,7 +1400,7 @@ If The One Ring leaves play, the players lose the game.",
                 CardNumber = 91,
                 Quantity = 1,
                 Artist = Artist.Mike_Nash
-            });
+            }.WithAges(Age.Second_Age, Age.Third_Age));
         }
     }
 }

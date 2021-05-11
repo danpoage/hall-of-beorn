@@ -91,6 +91,7 @@ namespace HallOfBeorn.Handlers.LotR
             SearchViewModel.QuestCategories = _questCategoryService.CategoryNames().GetSelectListItems();
             SearchViewModel.Regions = _regionService.CategoryNames().GetSelectListItems();
             SearchViewModel.Archetypes = _archetypeService.CategoryNames().GetSelectListItems();
+            SearchViewModel.Ages = _statService.AgeValues().GetSelectListItems();
         }
 
         private void AddRelatedCharacters(IEnumerable<ILink> links, Dictionary<string, CharacterViewModel> charactersByUrl, Dictionary<string, CharacterViewModel> relatedCharactersByUrl)

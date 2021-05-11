@@ -1257,6 +1257,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithUnique()
                 .WithTraits("Artifact.", "Item.", "Ring.")
                 .WithText("Setup: The first player claims The One ~Ring and attaches it to the Ring-bearer.\r\nAttached hero does not count against the hero limit. The first player gains control of attached hero.\r\nIf The One ~Ring leaves play, the players lose the game.")
+                .WithAges(Age.Second_Age, Age.Third_Age)
                 .WithInfo(85, 1, Artist.Mike_Nash);
         }
     }

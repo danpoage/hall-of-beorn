@@ -20,6 +20,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithTextLine("The first player gains control of Aragorn. If Aragorn leaves play, the players lose the game.")
                 .WithTextLine("Action: Spend 2 resources from Aragorn's resource pool to ready a hero.")
                 .WithTemplate("<p>The first player gains control of {self}. If {self} leaves play, the players lose the game.</p><p><b>Action:</b> Spend 2 resources from {self}'s resource pool to ready a {type:Hero@hero}.</p><p class='flavor-text'>&quot;I am Aragorn son of Arathorn and am called Elessar, the Elfstone, Dunadan, the heir of Isildur Elendil’s son of Gondor.&quot;<br>&ndash;The Two Towers</p>")
+                .WithAges(Age.Third_Age, Age.Fourth_Age)
                 .WithInfo(1, 1, Artist.Mark_Behm);
             addHero("Théoden", 12, Sphere.Spirit, 2, 3, 2, 4)
                 .WithAlternateSlug("Santa-Theoden")
@@ -36,6 +37,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithTextLine("Cannot have restricted attachments.")
                 .WithTextLine("Action: Deal 1 damage to Treebeard to give him +1 Willpower and +1 Attack until the end of the phase. (Limit 5 times per phase.)")
                 //.WithTemplate("<p><b>Action:</b> Deal 1 damage to {self} to give him +1 {Willpower} and +1 {Attack} until the end of the phase. (Limit 5 times per phase.)</p><p class='flavor-text'>&quot;I am not altogether on anybody's side, because nobody is altogether on my side...&quot;<br>&ndash;The Two Towers</p>")
+                .WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age)
                 .WithInfo(3, 1, Artist.Guillaume_Ducos);
             addAlly("Gimli", 4, Sphere.Leadership, true, 2, 2, 2, 3)
                 .WithTraits("Dwarf.", "Warrior.")
@@ -49,19 +51,21 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithKeywords("Ranged.")
                 .WithText("Response: After Legolas participates in an attack that destroys an enemy, draw 1 card.")
                 .WithFlavor("\"He stands not alone,\" said Legolas, bending his bow and fitting an arrow with hands that moved quicker than sight. -The Two Towers")
+                .WithAges(Age.Second_Age, Age.Third_Age)
                 .WithInfo(5, 3, Artist.Sebastian_Giacobino);
-            Cards.Add(LotRCard.Ally("Quickbeam", Sphere.Lore, 2, 2, 3, 1, 3)
+            addAlly("Quickbeam", 2, Sphere.Lore, true, 2, 3, 1, 3)
                 .WithUnique()
                 .WithTraits("Ent.")
                 .WithText("Cannot have restricted attachments. Enters play exhausted.\r\nResponse: After Quickbeam enters play, deal 1 damage to him to ready him.")
                 .WithFlavor("\"I am Bregalad, that is Quickbeam in your language. But it is only a nickname, of course.\" -The Two Towers")
-                .WithInfo(6, 3, Artist.Mike_Nash));
-            Cards.Add(LotRCard.Ally("Háma", Sphere.Spirit, 3, 1, 2, 2, 2)
+                .WithAges(Age.Second_Age, Age.Third_Age)
+                .WithInfo(6, 3, Artist.Mike_Nash);
+            addAlly("Háma", 3, Sphere.Spirit, true, 1, 2, 2, 2)
                 .WithUnique()
                 .WithTraits("Rohan.", "Warrior.")
                 .WithText("Combat Action: Ready Háma. He gets +3 Defense until the end of the phase. At the end of the phase, discard Háma. (Limit once per round.)")
                 .WithFlavor("\"I am the Doorward of Théoden,\" he said. \"Háma is my name.\" -The Two Towers")
-                .WithInfo(7, 3, Artist.Sara_Betsy));
+                .WithInfo(7, 3, Artist.Sara_Betsy);
             Cards.Add(LotRCard.Attachment("Arod", "4CED4D30-CEDD-4FB4-8291-7C93980A2F74", Sphere.Tactics, 1)
                 .WithUnique()
                 .WithTraits("Mount.")

@@ -20,6 +20,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithFlavorLine("\"It is a crime to wander in my realm without leave.\"")
                 .WithFlavorLine("-The Hobbit")
                 .WithCommunityVersion("Hrodebert/Thranduil")
+                .WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age)
                 .WithInfo(56, 1, Artist.Magali_Villeneuve);
             addAttachment("The Elvenking", 1, Sphere.Leadership, true)
                 .WithTraits("Title.")
@@ -36,6 +37,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTextLine("Attached hero gets +2 Attack.")
                 .WithTextLine("Response: After attached hero drestroys an enemy, add 1 resource to attached hero's pool.")
                 .WithTemplate("<p class='main-text'>{keyword:Guarded+%28enemy+or+location%29.@Guarded (enemy or location).}</p><p class='main-text'>Attach to a hero. {keyword:Restricted.}</p><p class='main-text'>Attached hero gets +2 {Attack}.</p><p class='main-text'><b>Response:</b> After attach hero destroys an enemy, add 1 resource to attached hero's pool.</p>")
+                .WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age)
                 .WithInfo(58, 3, Artist.Aleksander_Karcz);
             addAlly("Forest Road Traveler", 2, Sphere.Lore, false, 1, 1, 1, 2)
                 .WithTraits("Woodman.", "Scout.")

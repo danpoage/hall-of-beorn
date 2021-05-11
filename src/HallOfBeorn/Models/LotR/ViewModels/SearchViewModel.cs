@@ -113,6 +113,10 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             {
                 model.Archetype = null;
             }
+            if (string.IsNullOrEmpty(model.Age) || model.Age == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.Age = null;
+            }
             if (string.IsNullOrEmpty(model.VictoryPoints) || model.VictoryPoints == SearchViewModel.DEFAULT_FILTER_VALUE)
             {
                 model.VictoryPoints = null;
@@ -632,6 +636,9 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         [Display(Name="Archetype")]
         public string Archetype { get; set; }
 
+        [Display(Name = "Age")]
+        public string Age { get; set; }
+
         public static IEnumerable<SelectListItem> PopularityValues
         {
             get
@@ -1011,11 +1018,12 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             set;
         }
 
-        public static IEnumerable <SelectListItem> Archetypes
+        public static IEnumerable<SelectListItem> Archetypes
         {
             get; set; 
         }
 
+        public static IEnumerable<SelectListItem> Ages { get; set; }
 
         //Core Set
         public bool? MEC01 { get; set; }

@@ -140,6 +140,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
                 .WithTextLine("Attach to Bilbo ~Baggins.")
                 .WithTextLine("Action: Exhaust Bilbo's Magic ~Ring and raise your threat by 1 to gain 1 Baggins resource. (Limit once per round.)")
                 .WithTextLine("Response: After Bilbo ~Baggins exhausts to defend an attack, exhaust Bilbo's Magic ~Ring and raise your threat by 3 to cancel all damage from this attack.")
+                .WithAges(Age.Second_Age, Age.Third_Age)
                 .WithInfo(19, 1, Artist.Magali_Villeneuve);
             addTreasure("The Arkenstone", 0, Sphere.Neutral, true)
                 .WithTraits("Artifact.", " Erebor.", " Item.")

@@ -22,6 +22,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithCommunityVersion("RiddermarkLord/Glorfindel-Spirit-Hero-1")
                 .WithCommunityVersion("RiddermarkLord/Glorfindel-Spirit-Hero-2")
                 .WithCommunityVersion("Hrodebert/Glorfindel-Spirit-Hero")
+                .WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age)
                 .WithInfo(101, 1, Artist.Magali_Villeneuve);
             addAlly("Longbeard Elder", 3, Sphere.Leadership, false, 2, 1, 1, 2)
                 .WithTraits("Dwarf.")

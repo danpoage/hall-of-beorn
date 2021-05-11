@@ -401,6 +401,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithTextLine("Setup: The first player claims The One ~Ring and attaches it to the Ring-bearer.")
                 .WithTextLine("Attached hero does not count against the hero limit. The first player gains control of attached hero.")
                 .WithTextLine("If The One Ring leaves play, the players lose the game.")
+                .WithAges(Age.Second_Age, Age.Third_Age)
                 .WithInfo(63, 1, Artist.Mike_Nash);
             Cards.Add(LotRCard.Quest("The Taming of Sméagol", 1, "The Passage of the Marshes", 6)
                 .WithFlavor("Frodo and Sam left the Fellowship above the falls of Rauros and crossed the great river to climb the Emyn Muil upon the Eastern shore. After days of wandering through that maze of rocky crags, they have finally reached the edge of the Dead Marshes only to discover that Gollum is following them.")

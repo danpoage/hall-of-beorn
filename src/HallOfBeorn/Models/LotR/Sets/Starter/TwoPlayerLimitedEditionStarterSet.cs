@@ -27,6 +27,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
                 .WithFlavor("\"I am Aragorn son of Arathorn; and if by life or death I can save you, I will.\"\r\n-The Fellowship of the Ring")
                 .WithTemplate("<p class='main-text'>{keyword:Sentinel.}</p><p class='main-text'><b>Response:</b> After {self} commits to a quest, spend 1 resource from his resource pool to ready him.</p><p class='flavor-text'>&quot;I am Aragorn son of Arathorn; and if by life or death I can save you, I will.&quot;<br>&ndash;The Fellowship of the Ring</p>")
                 .WithYear(2018)
+                .WithAges(Age.Third_Age, Age.Fourth_Age)
                 .WithInfo(1, 1, Artist.John_Stanko);
             addHero("Gildor Inglorion", 9, Sphere.Leadership, 3, 2, 1, 3)
                 .WithTraits("Noldor.", "Noble.")
@@ -34,6 +35,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
                 .WithFlavor("\"Gildor Inglorion of the House of Finrod. We are Exiles, and most of our kindred have long ago departed...\r\n-The Fellowship of the Ring")
                 .WithYear(2018)
                 .WithCommunityVersion("Autumn/Gildor-Inglorion-Leadership-Hero")
+                .WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age)
                 .WithInfo(2, 1, Artist.Jason_Jenicke);
             addHero("Nori", 9, Sphere.Spirit, 2, 1, 2, 4)
                 .WithTraits("Dwarf.")
@@ -49,6 +51,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
             addAlly("Galadriel", 3, Sphere.Leadership, true, 3, 0, 0, 3)
                 .WithTraits("Noldor.", "Noble.")
                 .WithText("At the end of the round, discard Galadriel from play.\r\nResponse: After you play Galadriel from your hand, search the top 5 cards of your deck for an attachment of cost 3 or less and put it into play. Put the remaining cards back in any order.")
+                .WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age)
                 .WithInfo(5, 2, Artist.Sebastian_Giacobino);
             addAlly("Gimli", 4, Sphere.Leadership, true, 2, 2, 2, 3)
                 .WithTraits("Dwarf.", "Warrior.")
@@ -196,6 +199,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
                 .WithFlavor("\"You saw him for a moment as he is upon the other side: one of the mighty of the firstborn.\"\r\n-Gandalf, The Fellowship of the Ring")
                 .WithTemplate("<p class='main-text'><b>Action:</b> Pay 1 resource from {self}'s pool to heal 1 damage on any character. (Limit once per round.)</p><p class='flavor-text'>&quot;You saw him for a moment as he is upon the other side: one of the mighty of the firstborn.&quot;<br>&ndash;Gandalf, The Fellowship of the Ring</p>")
                 .WithYear(2018)
+                .WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age)
                 .WithInfo(34, 1, Artist.Katherine_Dinger);
             addHero("Bifur", 7, Sphere.Lore, 2, 1, 2, 3)
                 .WithTraits("Dwarf.")
@@ -221,6 +225,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
                 .WithTextLine("Ranged.")
                 .WithTextLine("Response: After Legolas participates in an attack that destroys an enemy, draw 1 card.")
                 .WithFlavor("\"He stands not alone,\" said Legolas, bending his bow and fitting an arrow with hands that moved quicker than sight.\r\n-The Two Towers")
+                .WithAges(Age.Second_Age, Age.Third_Age)
                 .WithInfo(38, 1, Artist.Sebastian_Giacobino);
             addAlly("Haldir of Lórien", 4, Sphere.Lore, true, 2, 2, 2, 3)
                 .WithKeywords("Ranged.", "Sentinel.")
@@ -230,6 +235,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
             addAlly("Elrond", 3, Sphere.Lore, true, 3, 2, 3, 3)
                 .WithTraits("Noldor.", "Healer.")
                 .WithText("At the end of the round, discard Elrond from play.\r\nResponse: After Elrond enters play, choose one: heal all damage on a hero, discard a Condition attachment, or each player draws 1 card.")
+                .WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age)
                 .WithInfo(40, 2, Artist.Allen_Douglas);
             addAlly("Azain Silverbeard", 3, Sphere.Tactics, true, 0, 3, 2, 2)
                 .WithTraits("Dwarf.", "Warrior.")

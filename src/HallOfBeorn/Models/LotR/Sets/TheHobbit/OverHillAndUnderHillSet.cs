@@ -261,7 +261,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
                 Text = "Attach to Bilbo ~Baggins.\r\nAction: When answering a riddle, spend 1 Baggins resource to discard an additional player card from the top of your deck.\r\n\r\nAction: Exhaust Bilbo's Magic ~Ring and raise each player's threat by 2 to add 1 Baggins resource to Bilbo ~Baggins' resource pool.",
                 CardNumber = 79,
                 Artist = Artist.Magali_Villeneuve
-            });
+            }.WithAges(Age.Second_Age, Age.Third_Age));
             Cards.Add(new LotRCard() {
                 
                 Title = "Bofur",
@@ -516,7 +516,7 @@ The players have won the game.",
                 Keywords = new List<string>() { "Restricted." },
                 CardNumber = 22,
                 Artist = Artist.Magali_Villeneuve
-            });
+            }.WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age));
             Cards.Add(new LotRCard() {
                 
                 Title = "Goblin Axeman",
@@ -900,7 +900,7 @@ The players have won the game.",
                 Keywords = new List<string>() { "Restricted." },
                 CardNumber = 21,
                 Artist = Artist.Magali_Villeneuve
-            });
+            }.WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age));
             addHero("Ori", 8, Sphere.Lore, 2, 2, 1, 3)
                 .WithTraits("Dwarf.")
                 .WithTextLine("If you control at least 5 Dwarf characters, draw 1 additional card at the beginning of the resource phase.")

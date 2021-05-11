@@ -39,6 +39,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTextLine("Attached character gets +2 Attack.")
                 .WithTextLine("Response: After attached character destroys an enemy, draw 1 card.")
                 .WithTemplate("<p class='main-text'>{keyword:Guarded (enemy or location).}</p><p class='main-text'>Attach to a hero or {title:Gandalf}. {keyword:Restricted.}</p><p class='main-text'>Attached character gets +2 {Attack}.</p><b>Response:</b> After attached character destroys an enemy, draw 1 card.</p>")
+                .WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age)
                 .WithInfo(29, 3, Artist.Tropa_Entertainment);
             addAttachment("Woodmen's Path", 1, Sphere.Lore, false)
                 .WithTraits("Condition.")
