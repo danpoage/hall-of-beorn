@@ -43,6 +43,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTextLine("Cannot have restricted attachments.")
                 .WithTextLine("Enters play exhausted.")
                 .WithTextLine("Response: After Beechbone is declared as an attacker, deal 1 damage to him to deal X damage to the defending enemy. X is the amount of damage on Beechbone.")
+                .WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age)
                 .WithInfo(118, 3, Artist.Katayanagi);
             addEvent("Hold Your Ground!", 1, Sphere.Tactics)
                 .WithTextLine("Action: Choose and ready a sentinel character.")
@@ -55,6 +56,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTextLine("Response: After Lindir enters play, if you have less than 3 cards in your hand, draw until you have 3 cards in your hand.")
                 .WithFlavorLine("\"To sheep other sheep no doubt appear different,\" laughed Lindir. \"Or to shepherds. But Mortals have not been our study. We have other business.\" -The Fellowship of the Ring")
                 .WithTemplate("<p><b>Response:</b> After {self} enters play, if you have less than 3 cards in your hand, draw until you have 3 cards in your hand.</p><p class='flavor-text'>&quot;To sheep other sheep no doubt appear different,&quot; laughed Lindir. &quot;Or to shepherds. But Mortals have not been our study. We have other business.&quot;<br>&ndash;The Fellowship of the Ring</p>")
+                .WithAges(Age.Second_Age, Age.Third_Age)
                 .WithInfo(120, 3, Artist.Tawny_Fritzinger);
             addEvent("Lords of the Eldar", 3, Sphere.Spirit)
                 .WithTextLine("Lords of the Eldar can only be played from your discard pile.")

@@ -271,10 +271,10 @@ namespace HallOfBeorn.Services.LotR.Stats
         {
             return new List<string>
             {
-                Enum.GetName(typeof(Age), Age.First_Age),
-                Enum.GetName(typeof(Age), Age.Second_Age),
-                Enum.GetName(typeof(Age), Age.Third_Age),
-                Enum.GetName(typeof(Age), Age.Fourth_Age),
+                Enum.GetName(typeof(Age), Age.First_Age).Replace("_", " "),
+                Enum.GetName(typeof(Age), Age.Second_Age).Replace("_", " "),
+                Enum.GetName(typeof(Age), Age.Third_Age).Replace("_", " "),
+                Enum.GetName(typeof(Age), Age.Fourth_Age).Replace("_", " "),
             };
         }
     }

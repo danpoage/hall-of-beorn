@@ -20,6 +20,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithTextLine("Action: Deal 2 damage to Quickbeam to ready him. (Limit once per phase.)")
                 .WithFlavorLine("\"...he can move like a wind when he is roused.\"")
                 .WithFlavorLine("-Pippin, The Two Towers")
+                .WithAges(Age.Second_Age, Age.Third_Age)
                 .WithInfo(135, 1, Artist.Guillaume_Ducos);
             addAlly("Halfast Gamgee", 3, Sphere.Leadership, true, 2, 1, 0, 2)
                 .WithTraits("Hobbit.")

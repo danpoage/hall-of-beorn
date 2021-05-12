@@ -53,6 +53,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithTraits("Ent.")
                 .WithTextLine("Cannot have restricted attachments. Enters play exhausted.")
                 .WithTextLine("Leaflock gets +1 Willpower for each damaged Ent you control (limit +4 Willpower.)")
+                .WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age)
                 .WithInfo(116, 3, Artist.Piya_Wannachaiwong);
             addAttachment("Legacy Blade", 0, Sphere.Lore, false)
                 .WithTraits("Item.", "Weapon.")

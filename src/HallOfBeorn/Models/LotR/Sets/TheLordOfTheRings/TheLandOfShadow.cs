@@ -15,25 +15,12 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
             SetType = Models.SetType.Saga_Expansion;
             Cycle = "The Lord of the Rings";
 
-            Cards.Add(new LotRCard()
-            {
-                Title = "Frodo Baggins",
-                IsUnique = true,
-                
-                CardType = CardType.Hero,
-                Sphere = Models.LotR.Sphere.Fellowship,
-                ThreatCost = 0,
-                Willpower = 2,
-                Attack = 1,
-                Defense = 2,
-                HitPoints = 2,
-                Traits = new List<string> { "Hobbit.", "Ring-bearer." },
-                Text = "Action: Spend 1 Fellowship resource and exhaust The One ~Ring to give Frodo Baggins +2 Willpower and +2 Attack until the end of the round.",
-                FlavorText = "\"It's my doom, I think, to go to that Shadow yonder, so that a way will be found.\" -The Two Towers",
-                CardNumber = 1,
-                Quantity = 1,
-                Artist = Artist.Melanie_Maier
-            });
+            addHero("Frodo Baggins", 0, Sphere.Fellowship, 2, 1, 2, 2)
+                .WithTraits("Hobbit.", "Ring-bearer.")
+                .WithTextLine("Action: Spend 1 Fellowship resource and exhaust The One ~Ring to give Frodo Baggins +2 Willpower and +2 Attack until the end of the round.")
+                .WithFlavorLine("\"It's my doom, I think, to go to that Shadow yonder, so that a way will be found.\"")
+                .WithFlavorLine("-The Two Towers")
+                .WithInfo(1, 1, Artist.Melanie_Maier);
             addHero("Faramir", 11, Sphere.Leadership, 2, 2, 2, 5)
                 .WithTraits("Gondor.", "Noble.", "Ranger.")
                 .WithKeywords("Ranged.")
@@ -49,30 +36,31 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithFlavorLine("-The Two Towers")
                 .WithCommunityVersion("RiddermarkLord/Damrod-Lore-Hero")
                 .WithInfo(3, 1, Artist.Joshua_Cairos);
-            Cards.Add(LotRCard.Ally("Anborn", Sphere.Leadership, 4, 1, 3, 1, 3)
+            addAlly("Anborn", 4, Sphere.Leadership, true, 1, 3, 1, 3)
                 .WithUnique()
                 .WithTraits("Gondor.", "Ranger.")
                 .WithText("Response: After an enemy is added to the staging area, exhaust Anborn to give that enemy +5 engagement cost until the end of the round. Then, deal 1 damage to that enemy.")
                 .WithFlavor("\"Now I have him at arrow-point.\" -The Two Towers")
-                .WithInfo(4, 3, Artist.Owen_William_Weber));
-            Cards.Add(LotRCard.Ally("Mablung", Sphere.Lore, 2, 2, 1, 0, 2)
+                .WithInfo(4, 3, Artist.Owen_William_Weber);
+            addAlly("Mablung", 2, Sphere.Lore, true, 2, 1, 0, 2)
                 .WithUnique()
                 .WithTraits("Gondor.", "Ranger.")
                 .WithText("Response: After Mablung enters play, choose an enemy to get +5 engagement cost until the end of the round. Then, you may engage that enemy, or return it to the staging area.")
                 .WithFlavor("\"But still we will not sit idle and let Him do all as He would.\" -The Two Towers")
-                .WithInfo(5, 3, Artist.Beth_Sobel));
-            Cards.Add(LotRCard.Ally("Skinbark", Sphere.Tactics, 3, 0, 4, 2, 3)
+                .WithInfo(5, 3, Artist.Beth_Sobel);
+            addAlly("Skinbark", 3, Sphere.Tactics, true, 0, 4, 2, 3)
                 .WithUnique()
                 .WithTraits("Ent.")
                 .WithText("Cannot have restricted attachments. Enters play exhausted.\r\nWhile Skinbark is attacking alone against an Orc enemy, that enemy does not count its Defense.")
                 .WithFlavor("\"He was wounded by the Orcs, and many of his folk and his tree-herds have been murdered and destroyed.\" -Treebeard, The Two Towers")
-                .WithInfo(6, 3, Artist.Dimitri_Bielak));
-            Cards.Add(LotRCard.Ally("Gamling", Sphere.Spirit, 3, 1, 1, 2, 2)
+                .WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age)
+                .WithInfo(6, 3, Artist.Dimitri_Bielak);
+            addAlly("Gamling", 3, Sphere.Spirit, true, 1, 1, 2, 2)
                 .WithUnique()
                 .WithTraits("Rohan.", "Warrior.")
                 .WithText("Response: After a Rohan ally you control is discarded from play, exhaust Gamling to return that ally to your hand.")
                 .WithFlavor("\"...we have a thousand fit to fight on foot,\" said Gamling, an old man, the leader of those that watched the Dike. -The Two Towers")
-                .WithInfo(7, 3, Artist.Melanie_Maier));
+                .WithInfo(7, 3, Artist.Melanie_Maier);
             Cards.Add(LotRCard.Attachment("Staff of Lebethron", "", Sphere.Leadership, 1)
                 .WithTraits("Item.")
                 .WithKeywords("Restricted.")
@@ -462,22 +450,26 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithOppositeText("If Gollum is defeated, add him to the victory display. (Do not flip him over.)\r\nWhile Shelob has at least 1 resource on her, she gains: \"Forced: When Shelob is dealt any amount of damage, cancel that damage and discard 1 resource from Shelob instead.\"\r\nThe players cannot defeat this stage unless both Shelob and Gollum are in the victory display. If the players defeat this stage, they win the game.")
                 .WithIncludedEncounterSets(EncounterSet.Gollum, EncounterSet.MorgulNazgul, EncounterSet.TheGreatSpider)
                 .WithInfo(72, 1, Artist.Nicholas_Gregory));
-            Cards.Add(LotRCard.Campaign("Shelob's Lair", "Shelob's Lair", "The Lord of the Rings - Part 12")
+            addCampaign("Shelob's Lair", "Shelob's Lair", "The Lord of the Rings - Part 12")
                 .WithText("You are playing campaign mode.\r\nSetup: Attach A Heavy Burden to the Ring-bearer. Remove each burden with the following burden set icons from the encounter deck and each player’s deck: Helm’s Deep, The Road to Isengard")
                 .WithFlavor("\"There is another way. O yes indeed there is. Another way, darker, more difficult to find, more secret. But Sméagolnknows it. Let Sméagol show you!\" —The Two Towers")
                 .WithOppositeText("Resolution: Add a Heavy Burden to the campaign pool. The players have earned that burden.")
                 .WithOppositeFlavor("\"Master, dear master,\" he said, but Frodo did not speak. Ass hehad run forward, eager, rejoicing to be free, Shelob with hideous speed had come behind and with one swift stroke had stung him in the neck. He lay now pale, and heard no voice, and did not move.\r\n-The Two Towers")
-                .WithInfo(73, 1, Artist.Chris_Rahn));
-            Cards.Add(LotRCard.Enemy("Gollum", "", "Gollum", 30, 2, 2, 2, 5)
+                .WithInfo(73, 1, Artist.Chris_Rahn);
+            addEnemy("Gollum", "Gollum", 30, 2, 2, 2, 5)
                 .WithUnique()
                 .WithTraits("Gollum.")
-                .WithText("Immune to non-Fellowship player card effects. ~Gollum engages the first player.\r\nForced: After ~Gollum engages the first player during the refresh phase, he makes an immediate attack.\r\nForced: When ~Gollum is defeated, flip him to Sméagol exhausted.")
-                .WithInfo(75, 1, Artist.Lukasz_Jaskolski));
-            Cards.Add(LotRCard.ObjectiveAlly("Sméagol", "", "Gollum", 2, 2, 2, 5)
+                .WithTextLine("Immune to non-Fellowship player card effects. ~Gollum engages the first player.")
+                .WithTextLine("Forced: After ~Gollum engages the first player during the refresh phase, he makes an immediate attack.")
+                .WithTextLine("Forced: When ~Gollum is defeated, flip him to Sméagol exhausted.")
+                .WithInfo(75, 1, Artist.Lukasz_Jaskolski);
+            addObjectiveAlly("Sméagol", "Gollum", 2, 2, 2, 5)
                 .WithUnique()
                 .WithTraits("Gollum.")
-                .WithText("Immune to player card effects. The first player gains control of Sméagol.\r\nForced: After the players quest unsuccessfully, flip Sméagol to ~Gollum.\r\nIf Sméagol is destroyed, the players lose the game.")
-                .WithInfo(76, 1, Artist.Lukasz_Jaskolski));
+                .WithTextLine("Immune to player card effects. The first player gains control of Sméagol.")
+                .WithTextLine("Forced: After the players quest unsuccessfully, flip Sméagol to ~Gollum.")
+                .WithTextLine("If Sméagol is destroyed, the players lose the game.")
+                .WithInfo(76, 1, Artist.Lukasz_Jaskolski);
         }
     }
 }

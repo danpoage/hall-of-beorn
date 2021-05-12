@@ -316,7 +316,7 @@ namespace HallOfBeorn.Models.LotR
         public bool IncludesAge(string targetAge)
         {
             var age = Age.None;
-            if (!Enum.TryParse(targetAge, out age))
+            if (!Enum.TryParse(targetAge.Replace(" ", "_"), out age))
             {
                 return false;
             }
