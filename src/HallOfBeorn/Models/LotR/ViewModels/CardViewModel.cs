@@ -347,6 +347,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             get { return _card.Quantity.ToString(); }
         }
 
+        public byte QuantityNumber
+        {
+            get { return _card.Quantity; }
+        }
+
         public string EasyModeQuantity
         {
             get { return _card.EasyModeQuantity.HasValue ? _card.EasyModeQuantity.Value.ToString() : string.Empty; }

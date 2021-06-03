@@ -103,10 +103,12 @@ else if (@Model.View.GetValueOrDefault(ProductView.None) == ProductView.Chronolo
                 <th>Product</th>
                 <th>Code</th>
                 <th>Type</th>
-                <th>First Released</th>
+                <th>Released</th>
+                <th>Count</th>
             </tr>
         </thead>
         <tbody>
+        @{ var count = 0; }
         @foreach (var product in @Model.OfficialChronologicalProducts())
         {
             var code = @product.Code;
@@ -115,8 +117,17 @@ else if (@Model.View.GetValueOrDefault(ProductView.None) == ProductView.Chronolo
                 <td>@product.Code</td>
                 <td>@product.ProductType()</td>
                 <td>@product.FirstReleased.ToString("yyyy-MM-dd")</td>
+                <td>@product.TotalCardCount()</td>
+                @{ count += @product.TotalCardCount(); }
             </tr>
         }
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><b>@count</b></td>
+            </tr>
         </tbody>
     </table>
     
@@ -132,6 +143,7 @@ else if (@Model.View.GetValueOrDefault(ProductView.None) == ProductView.Chronolo
             </tr>
         </thead>
         <tbody>
+        @{ var comCount = 0; }
         @foreach (var product in @Model.CommunityChronologicalProducts())
         {
             var chronCode = @product.Code;
@@ -140,8 +152,17 @@ else if (@Model.View.GetValueOrDefault(ProductView.None) == ProductView.Chronolo
                 <td>@product.Code</td>
                 <td>@product.ProductType()</td>
                 <td>@product.FirstReleased.ToString("yyyy-MM-dd")</td>
+                <td>@product.TotalCardCount()</td>
+                @{ comCount += @product.TotalCardCount(); }
             </tr>
         }
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><b>@comCount</b></td>
+            </tr>
         </tbody>
     </table>
 }

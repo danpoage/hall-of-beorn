@@ -197,6 +197,24 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             get { return _cards; }
         }
 
+        public int TotalCardCount()
+        {
+            var count = 0;
+            foreach (var cardSet in _product.CardSets)
+            {
+                foreach (var card in cardSet.Cards)
+                {
+                    if (card.SideLetter.GetValueOrDefault('a') == 'b')
+                    {
+                        continue;
+                    }
+
+                    count += card.Quantity;
+                }
+            }
+            return count;
+        }
+
         public void AddCard(CardViewModel card)
         {
             _cards.Add(card);
