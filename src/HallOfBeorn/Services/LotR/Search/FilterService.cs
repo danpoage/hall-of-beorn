@@ -15,6 +15,7 @@ namespace HallOfBeorn.Services.LotR.Search
             _encounterCategoryService = encounterCategoryService;
             _questCategoryService = questCategoryService;
 
+            Register("type", (val, neg) => new CardTypeFilter(val, neg));
             Register("cardtype", (val, neg) => new CardTypeFilter(val, neg));
 
             Register("title", (val, neg) => new StringFuzzyFilter((score) => new Tuple<string, string>(score.Card.Title, score.Card.NormalizedTitle), val,
@@ -74,8 +75,8 @@ namespace HallOfBeorn.Services.LotR.Search
                 );
 
             Register("sphere", (val, neg) =>
-                new EnumFilter<Sphere>(
-                    (score) => score.Card.Sphere, val, neg)
+                new StringExactFilter(
+                    (score) => score.Card.Sphere.ToString().ToLower(), val.ToLower(), neg)
                 );
 
             Register("category", (val, neg) =>

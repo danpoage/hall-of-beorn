@@ -13,5 +13,10 @@ namespace HallOfBeorn.Services.LotR.Search
             : base(getValue, target, (s1, s2) => s1 == s2)
         {
         }
+
+        public StringExactFilter(Func<CardScore, string> getValue, string target, bool isNegation)
+            : base(getValue, target, (s1, s2) => s1 == s2, isNegation)
+        {
+        }
     }
 }

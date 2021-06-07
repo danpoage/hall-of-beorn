@@ -46,7 +46,7 @@ namespace HallOfBeorn.Services.LotR.Search
             foreach (var token in tokens)
             {
                 var parsed = default(TEnum);
-                if (Enum.TryParse<TEnum>(token, out parsed))
+                if (Enum.TryParse<TEnum>(token, true, out parsed))
                 {
                     values.Add(parsed);
                 }

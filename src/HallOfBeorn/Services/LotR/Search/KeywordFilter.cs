@@ -34,8 +34,8 @@ namespace HallOfBeorn.Services.LotR.Search
                     var match = false;
                     foreach (var target in values)
                     {
-                        match = score.Card.Keywords.All(kw => !kw.Trim().StartsWith(target)) 
-                            && score.Card.NormalizedKeywords.All(kw => !kw.Trim().StartsWith(target));
+                        match = score.Card.Keywords.All(kw => !kw.Trim().ToLowerSafe().StartsWith(target.ToLowerSafe())) 
+                            && score.Card.NormalizedKeywords.All(kw => !kw.Trim().ToLowerSafe().StartsWith(target.ToLowerSafe()));
                         if (!match)
                             break;
                     }
@@ -49,8 +49,8 @@ namespace HallOfBeorn.Services.LotR.Search
                     var match = false;
                     foreach (var target in values)
                     {
-                        match = score.Card.Keywords.Any(k => k.Trim().StartsWith(target)) 
-                            || score.Card.NormalizedKeywords.Any(k => k.Trim().StartsWith(target));
+                        match = score.Card.Keywords.Any(k => k.Trim().ToLowerSafe().StartsWith(target.ToLowerSafe())) 
+                            || score.Card.NormalizedKeywords.Any(k => k.Trim().ToLowerSafe().StartsWith(target.ToLowerSafe()));
                         if (match)
                             break;
                     }
