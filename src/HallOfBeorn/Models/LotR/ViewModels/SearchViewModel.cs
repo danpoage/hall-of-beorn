@@ -1123,35 +1123,48 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public string GetResultsCount()
         {
-            var count = 0;
+            var count = Cards.Count;
+            var label = count == 1 ? "Card" : "Cards";
 
-            if (!View.HasValue || 
-                (View != Models.View.Product && View != Models.View.Character && View != Models.View.Community))
+            var subCount = 0;
+            var subLabel = string.Empty;
+
+            if (View.GetValueOrDefault(Models.View.None) == Models.View.Alt_Art)
             {
-                count = Cards != null ? Cards.Count : 0;
+                subCount = Cards.Sum(c => c.CommunityImages().Count());
+                subLabel = subCount == 1 ? "Alt Art" : "Alt Arts";
             }
-            if (View.HasValue && View == Models.View.Product)
+            if (View.GetValueOrDefault(Models.View.None) == Models.View.Character)
             {
-                count = Products != null ? Products.Count : 0;
+                subCount = Characters != null ? Characters.Count : 0;
+                subLabel = subCount == 1 ? "Character" : "Characters";
             }
-            if (View.HasValue && View == Models.View.Character)
+            if (View.GetValueOrDefault(Models.View.None) == Models.View.Community)
             {
-                count = Characters != null ? Characters.Count : 0;
+                subCount = Links != null ? Links.Count : 0;
+                subLabel = subCount == 1 ? "Link" : "Links";
             }
-            if (View.HasValue && View == Models.View.Community)
+            if (View.GetValueOrDefault(Models.View.None) == Models.View.Product)
             {
-                count = Links != null ? Links.Count : 0;
+                subCount = Products != null ? Products.Count : 0;
+                subLabel = subCount == 1 ? "Product" : "Products";
+            }
+            if (View.GetValueOrDefault(Models.View.None) == Models.View.RingsDB)
+            {
+                subCount = RingsDbDecks != null ? RingsDbDecks.Count : 0;
+                subLabel = subCount == 1 ? "Deck" : "Decks";
             }
 
-            switch (count)
+            var results = new System.Text.StringBuilder();
+
+            results.AppendFormat("Results: {0} {1}", count, label);
+
+            if (!string.IsNullOrWhiteSpace(subLabel))
             {
-                case 0:
-                    return "No Results Found";
-                case 1:
-                    return "1 Result Found";
-                default:
-                    return string.Format("{0} Results Found", count);
+                results.AppendFormat(" - {0} {1}", subCount, subLabel);
             }
+
+            return results.ToString();
         }
 
         public static IEnumerable<SelectListItemExtends> CardSets { get; set; }
