@@ -17,8 +17,8 @@ namespace RingsDbBuilder
             //Format change: 2969
             //Sideboards as Dictionary 3463
 
-            MinimumDeckId = 1; //3463; //1; //2969;
-            MaximumDeckId = 20304; //20233; //19321; //18307; //16078;
+            MinimumDeckId = 20703; //1; //3463; //1; //2969;
+            MaximumDeckId = 21079; //20304; //20233; //19321; //18307; //16078;
 
             Verbose = false;
         }
