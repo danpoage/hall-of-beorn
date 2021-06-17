@@ -210,11 +210,12 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("X is the number of resources on The ~Corsair Fleet.\r\nThe players cannot travel here unless there are at least 3 Ship locations in the victory display.\r\nTravel: Each player searches the encounter deck and discard pile for a Corsair enemy and adds it to the staging area. One of those enemies must be ~Corsair ~Captain, if able.")
                 .WithVictoryPoints(5)
                 .WithInfo(30, 1, Artist.Johan_Tornlund));
-            Cards.Add(LotRCard.Location("Umbar War Galley", string.Empty, setTheSiegeOfGondor, 3, 3)
+            addLocation("Umbar War Galley", setTheSiegeOfGondor, 3, 3)
+                .WithTraits("Ship.")
                 .WithText("While Umbar War Galley is the active location, each Corsair enemy gets -10 engagement cost.\r\nTravel: Shuffle the encounter discard pile into the encounter deck and discard cards from the encounter deck until a Corsair enemy is discarded. Add the discarded enemy to the staging area.")
                 .WithFlavor("\"The Corsairs are upon us! It is the last stroke of doom!\"\r\n-Men of Gondor, The Return of the King")
                 .WithVictoryPoints(3)
-                .WithInfo(31, 3, Artist.Alvaro_Calvo_Escudero));
+                .WithInfo(31, 3, Artist.Alvaro_Calvo_Escudero);
             Cards.Add(LotRCard.Location("Corsair Dromon", string.Empty, setTheSiegeOfGondor, 2, 2)
                 .WithTraits("Ship.")
                 .WithText("While Corsair Dromon is the active location, each Corsair enemy gains Archery 1.\r\nTravel: Shuffle the encounter discard pile into the encounter deck and discard cards from the top until a Corsair enemy is discarded. Add the discarded enemy to the staging area.")

@@ -328,14 +328,15 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithTraits("Artifact.", "Item.", "Staff.")
                 .WithText("Forced: After a player draws any number of cards, Saruman attacks that player. Deal and resolve 2 shadow cards for this attack. Then, remove 1 damage from Saruman.\r\nWhile Saruman has any hit points remaining, the players cannot win the game.")
                 .WithInfo(48, 1, Artist.Alexandr_Elichev));
-            Cards.Add(LotRCard.Enemy("Gríma", "0A8093E8-3972-4794-9130-536038AD50B7", "The Road to Isengard", 1, 3, 2, 3, 3)
+            addEnemy("Gríma", "The Road to Isengard", 1, 3, 2, 3, 3)
                 .WithUnique()
+                .WithTraits("Rohan.", "Traitor.")
                 .WithKeywords("Doomed 2.")
                 .WithTextLine("Doomed 2.")
                 .WithTextLine("Forced: After Gríma attacks a player, that player shuffles Gríma back into the encounter deck and reveals an encounter card.")
                 .WithShadow("Shadow: This attack is considered undefended.")
                 .WithInfo(49, 1, Artist.Dleoblack)
-                .WithEasyModeQuantity(0));
+                .WithEasyModeQuantity(0);
             Cards.Add(LotRCard.Enemy("Lieutenant of Orthanc", "E803F5CF-C81A-4849-ADF9-B335D186A140", "The Road to Isengard", 36, 3, 4, 3, 5)
                 .WithTraits("Isengard.")
                 .WithText("Forced: After Lieutenant of Orthanc attacks and destroys a character, that character's controller discards 1 random card from his hand.")

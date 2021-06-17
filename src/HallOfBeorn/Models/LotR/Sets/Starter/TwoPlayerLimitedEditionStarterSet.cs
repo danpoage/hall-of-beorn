@@ -228,6 +228,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
                 .WithAges(Age.Second_Age, Age.Third_Age)
                 .WithInfo(38, 1, Artist.Sebastian_Giacobino);
             addAlly("Haldir of Lórien", 4, Sphere.Lore, true, 2, 2, 2, 3)
+                .WithTraits("Silvan.")
                 .WithKeywords("Ranged.", "Sentinel.")
                 .WithTextLine("Ranged. Sentinel.")
                 .WithFlavor("\"But there are some of use who still go abroad for the gathering of news and the watching of our enemies, and they speak the languages of other lands.\"\r\n-The Fellowship of the Ring")

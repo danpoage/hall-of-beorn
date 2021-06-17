@@ -121,8 +121,10 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
                 .WithShadow("Shadow: Shuffle Black Forest Bats into the encounter deck.")
                 .WithInfo(18, 2, Artist.Aurelien_Hubert);
             addLocation("Enchanted Stream", emptySetName, 2, 6)
+                .WithTraits("Forest.", "River,")
                 .WithSetNumberAndCost(3, 3)
-                .WithText("While Enchanted Stream is in the staging area, progress cannot be placed on the main quest.\r\nTravel: Each player exhausts a hero he controls. Those heroes cannot ready while Enchanted Stream is the active location.")
+                .WithTextLine("While Enchanted ~Stream is in the staging area, progress cannot be placed on the main quest.")
+                .WithTextLine("Travel: Each player exhausts a hero he controls. Those heroes cannot ready while Enchanted ~Stream is the active location.")
                 .WithInfo(19, 1, Artist.Ben_Zweifel);
             addTreachery("Exhaustion", emptySetName)
                 .WithSetNumberAndCost(3, 0)
@@ -231,6 +233,7 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
                 .WithShadow("Shadow: If this attack destroys a character, reveal the top card of the encounter deck.")
                 .WithInfo(38, 1, Artist.Katy_Grierson);
             addEnemy("Mirkwood Flock", emptySetName, 12, 1, 2, 1, 2)
+                .WithTraits("Creature.")
                 .WithSetNumberAndCost(10, 1)
                 .WithKeywords("Surge.")
                 .WithTextLine("Surge.")
@@ -262,6 +265,7 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
                 .WithText("When Revealed: Remove 5 progress tokens from the main quest and attach Turned Around to it. (Counts as a Condition attachment with the text: \"Attached quest gets +5 quest points.\")")
                 .WithInfo(44, 1, Artist.Darek_Zabrocki);
             addEnemy("Pack of Wargs", emptySetName, 36, 3, 4, 2, 6)
+                .WithTraits("Warg.")
                 .WithSetNumberAndCost(12, 1)
                 .WithText("Cannot have non-objective player card attachments or take non-combat damage.\r\nForced: After Pack of Wargs is dealt a shadow card with no shadow effect, it makes an additional attack after this one. Do not deal it a shadow card for this attack.")
                 .WithInfo(45, 1, Artist.Lukasz_Jaskolski);
@@ -282,6 +286,7 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
                 .WithShadow("Shadow: Attacking enemy cannot take damage this phase.")
                 .WithInfo(48, 1, Artist.Aurelien_Hubert);
             addLocation("Old Forest Road", emptySetName, 4, 4)
+                .WithTraits("Forest.")
                 .WithSetNumberAndCost(13, 1)
                 .WithText("Response: After the players travel to Old Forest Road, the first player discards the top card of his deck. If that card is an ally, he puts it into play.\r\nTravel: Discard the top card of the encounter deck, if that card is an enemy, add it to the staging area.")
                 .WithInfo(49, 2, Artist.Ben_Zweifel);

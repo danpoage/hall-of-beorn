@@ -18,13 +18,13 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
             Cycle = "Fellowship";
             Number = 3006;
 
-            Cards.Add(LotRCard.Hero("Legolas", "", Sphere.Tactics, 9, 1, 3, 1, 4)
+            addHero("Legolas", 9, Sphere.Tactics, 1, 3, 1, 4)
                 .WithTraits("Noble.", "Silvan.", "Warrior.")
                 .WithKeywords("Ranged.")
                 .WithText("Ranged.\r\nResponse: After Legolas participates in an attack that destroys an enemy, place 2 progress tokens on the current quest.")
                 .WithTemplate("<p>{keyword:Ranged.}</p><p><b>Response:</b> After {self} participates in an attack that destroys an enemy, place 2 progress tokens on the current quest.</p>")
                 .WithYear(2015)
-                .WithInfo(5, 1, Artist.Sebastian_Giacobino));
+                .WithInfo(5, 1, Artist.Sebastian_Giacobino);
             Cards.Add(LotRCard.GenConSetup("Murder at the Prancing Pony Scenario Rules 2-3", setName)
                 .WithText("Scenario Rules\r\nThe Investigation Deck\r\nBegin the game by following the Setup instructions on stage 1A. When the players are instructed to \"build the investigation deck,\" do the following: Take the 4 remaining Hideout locations, plus each copy of Taken By Surprise, and shuffle them together without looking at them. This is the Investigation deck.\r\nThe players are not allowed to look at cards in the Investigation deck except when resolving the Investigation keyword or instructed by a card effect.\r\nThe Investigation List\r\nThe Investigation List\r\nThe Investigation List on page 5 of the rules has the name of all 5 Suspect enemies and all 5 Hideout locations. During the game, players should check enemies and locations off of their Investigation list in order to help them determine the correct Suspect and HIdeout by process of elimination.\r\nPage 2/5")
                 .WithOppositeText("Investigate X\r\nInvestigate is a new keyword the represents the heroes' efforts to solve the crime. When an active location with the Investigate keyword is explored, the first player shuffles the Investigation deck and looks at the top X cards. Then, he placed those cards back on top of the Investigation deck in the same order.\r\nWhile the players are at stage 2B, the Investigate keyword on the active location is resolved before the second Forced effect on that stage.\r\nImmune to Player Card Effects\r\nCards with the text \"Immune to player card effects\" ignore the effects of all player cards. Additionally, cards that are immune to player card effects cannot be chosen as targets of player card effects.\r\nPage 3/5")
@@ -127,11 +127,13 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
             Cards.Add(LotRCard.Treachery("Taken by Surprise", "", investigationSetName)
                 .WithText("Forced: When a player looks at any number of cards from the Investigation deck, if Taken by Surprise is among the looked at cards, shuffle the encounter discard pile into the encounter deck and discard cards until an enemy is discarded. Put the discarded enemy into play engaged with the first player. Then remove Taken by Surprise from the game.")
                 .WithInfo(14, 2, Artist.Alvaro_Calvo_Escudero));
-            Cards.Add(LotRCard.Location("The Prancing Pony", "", setName, 2, 2)
+            addLocation("The Prancing Pony", setName, 2, 2)
                 .WithUnique()
+                .WithTraits("Bree.")
                 .WithText("Forced: When the Prancing Pony is explored, the first player must choose: either look at the top 2 cards of the Investigation deck, or each player draws 2 cards.")
                 .WithFlavor("...the old inn of Bree, The Prancing Pony, that has been kept by the family of Butterbur from time beyond record.\r\n-The Fellowship of the Ring")
-                .WithInfo(15, 1, Artist.Lutful_Valeriya_Romanovna));
+                .WithVictoryPoints(2)
+                .WithInfo(15, 1, Artist.Lutful_Valeriya_Romanovna);
             addLocation("Ramshackle Manor", setName, 2, 3)
                 .WithTraits("Bree.")
                 .WithKeywords("Investigate 2.")

@@ -234,6 +234,7 @@ Forced: After this stage is defeated, advance to stage 3B at the beginning of th
                 CardType = Models.LotR.CardType.Location,
                 Threat = 3,
                 QuestPoints = 3,
+                Traits = new List<string> { "Ruins.", "Downs." },
                 Text = "While Stone Ring is in the staging area, each Wight enemy engaged with a player gets +1 Attack and +1 Defense and applies the first sentence of its game text to each player at this stage as if it were engaged with him.",
                 FlavorText = "Stone rings grinned out of the ground like broken teeth in the moonlight. -The Fellowship of the Ring",
                 EncounterSet = "Fog on the Barrow-downs",

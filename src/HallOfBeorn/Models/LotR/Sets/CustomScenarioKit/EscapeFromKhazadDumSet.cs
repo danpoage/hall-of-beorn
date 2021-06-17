@@ -221,6 +221,7 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
                 .WithInfo(29, 3, Artist.Ben_Zweifel);
 
             addEnemy("Unspeakable Thing", emptySetName, 34, 2, 2, 2, 5)
+                .WithTraits("Creature.")
                 .WithSetNumberAndCost(21, 1)
                 .WithTextLine("Forced: When Unspeakable Thing attacks you, discard the top card of your deck. Unspeakable thing gets +X Attack for this attack, where X is the discarded card's printed cost.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack.")
