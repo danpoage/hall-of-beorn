@@ -25,6 +25,7 @@ using HallOfBeorn.Models.LotR.Community.TheWhiteTower;
 using HallOfBeorn.Models.LotR.Community.ThreeIsCompany;
 using HallOfBeorn.Models.LotR.Community.UnfinishedTrails;
 using HallOfBeorn.Models.LotR.Community.VisionOfThePalantir;
+using HallOfBeorn.Models.LotR.Community.WanderingTook;
 using HallOfBeorn.Models.LotR.Community.WardenOfArnor;
 using HallOfBeorn.Models.LotR.Community.WarriorsOfTheWest;
 
@@ -64,6 +65,7 @@ namespace HallOfBeorn.Services.LotR.Community
             AddChannel(new CardboardOfTheRingsChannel());
             AddChannel(new CardTalkChannel());
             AddChannel(new TheBookOfElessarChannel());
+            AddChannel(new WanderingTookChannel());
         }
 
         private readonly List<ICreator> podcasts = new List<ICreator>();

@@ -413,6 +413,7 @@
     <Compile Include="Models\LotR\Community\UnfinishedTrails\UnfinishedTrailsBlog.cs" />
     <Compile Include="Models\LotR\Community\VisionOfThePalantir\PlayerCardAnalysisLink.cs" />
     <Compile Include="Models\LotR\Community\VisionOfThePalantir\VisionOfThePalantirBlog.cs" />
+    <Compile Include="Models\LotR\Community\WanderingTook\WanderingTookChannel.cs" />
     <Compile Include="Models\LotR\Community\WardenOfArnor\WardenOfArnorBlog.cs" />
     <Compile Include="Models\LotR\Community\WarriorsOfTheWest\WarriorsOfTheWestBlog.cs" />
     <Compile Include="Models\LotR\Compact\CardType.cs" />
