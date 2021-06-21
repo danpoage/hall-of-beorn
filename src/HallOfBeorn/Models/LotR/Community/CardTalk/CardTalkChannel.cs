@@ -15,6 +15,13 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
             LinkType.Card_Talk)
         {
             AddYear(2021);
+            AddLink("Spoiler: Con of the Rings 2021", "https://www.youtube.com/watch?v=b1pwxmvdOQ8", "2021-06-15");
+            AddLink("Daeron's Runes", "https://www.youtube.com/watch?v=r4lbpR-fEME", "2021-06-08");
+            AddLink("A Test of Will", "https://www.youtube.com/watch?v=RTb8m1yJvs8", "2021-06-01");
+            AddLink("Last Stand", "https://www.youtube.com/watch?v=1YSyCRYM94I", "2021-05-25");
+            AddLink("Leadership Eomer", "https://www.youtube.com/watch?v=UfHVtHwo_Ro", "2021-05-18");
+            AddLink("Grimbeorn the Old", "https://www.youtube.com/watch?v=K7BbdSiBQtc", "2021-05-11");
+            AddLink("Tactics Beregond", "https://www.youtube.com/watch?v=K7BbdSiBQtc", "2021-05-05");
             AddLink("Bywater Shiriff", "https://www.youtube.com/watch?v=bnWWzKKNvNw", "2021-04-27T19:05:12+00:00");
             AddLink("Card Talk Saga Campgain with Matt Cirth Ungol (pt 2)", "https://www.youtube.com/watch?v=qHtlBlx8SIo", "2021-04-27T07:00:01+00:00");
             AddLink("Card Talk Saga Campgain with Matt Cirth Ungol", "https://www.youtube.com/watch?v=fu5Zt5P8RCg", "2021-04-27T05:59:59+00:00");
