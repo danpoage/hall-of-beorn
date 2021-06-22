@@ -38,6 +38,7 @@ namespace HallOfBeorn.Models.RingsDb
         public bool has_errata { get; set; }
         public string url { get; set; }
         public string imagesrc { get; set; }
+        public string imagesrc2 { get; set; }
 
         private static string Normalize(string text)
         {
@@ -149,6 +150,19 @@ namespace HallOfBeorn.Models.RingsDb
                 LotR.ViewModels.CardViewModel.GetImagePathForLanguage(c)
                 .NormalizeCaseSensitiveString();
 
+            Func<LotR.LotRCard, bool> hasSecondImage = (c) =>
+                !string.IsNullOrEmpty(c.OppositeTitle) || !string.IsNullOrEmpty(c.OppositeText);
+
+            Func<LotR.LotRCard, string> getImageSource2 = (c) =>
+                {
+                    if (hasSecondImage(c)) {
+                        return LotR.ViewModels.CardViewModel.GetImagePathForLanguage(c, null, false)
+                        .NormalizeCaseSensitiveString();
+                    } else {
+                        return null;
+                    }
+                };
+
             Func<LotR.LotRCard, byte?> getVictory = (c) =>
                 c.VictoryPoints > 0 ? c.VictoryPoints : (byte?)null;
 
@@ -186,6 +200,7 @@ namespace HallOfBeorn.Models.RingsDb
                 has_errata = card.HasErrata,
                 url = getUrl(card),
                 imagesrc = getImageSource(card),
+                imagesrc2 = getImageSource2(card)
             };
         }
     }
