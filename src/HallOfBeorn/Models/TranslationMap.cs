@@ -18,15 +18,28 @@ namespace HallOfBeorn.Models
             forwardRawMap[Language.DE] = new Dictionary<string, string>();
             forwardRawMap[Language.ES] = new Dictionary<string, string>();
             forwardRawMap[Language.FR] = new Dictionary<string, string>();
+            forwardRawMap[Language.IT] = new Dictionary<string, string>();
+            forwardRawMap[Language.PL] = new Dictionary<string, string>();
+
+
             forwardNormalMap[Language.DE] = new Dictionary<string, string>();
             forwardNormalMap[Language.ES] = new Dictionary<string, string>();
             forwardNormalMap[Language.FR] = new Dictionary<string, string>();
+            forwardNormalMap[Language.IT] = new Dictionary<string, string>();
+            forwardNormalMap[Language.PL] = new Dictionary<string, string>();
+
+
             reverseRawMap[Language.DE] = new Dictionary<string, string>();
             reverseRawMap[Language.ES] = new Dictionary<string, string>();
             reverseRawMap[Language.FR] = new Dictionary<string, string>();
+            reverseRawMap[Language.IT] = new Dictionary<string, string>();
+            reverseRawMap[Language.PL] = new Dictionary<string, string>();
+
             reverseNormalMap[Language.DE] = new Dictionary<string, string>();
             reverseNormalMap[Language.ES] = new Dictionary<string, string>();
             reverseNormalMap[Language.FR] = new Dictionary<string, string>();
+            reverseNormalMap[Language.IT] = new Dictionary<string, string>();
+            reverseNormalMap[Language.PL] = new Dictionary<string, string>();
         }
 
         private readonly Func<string, string> format;
@@ -74,9 +87,11 @@ namespace HallOfBeorn.Models
                 return getFormattedString(english);
             }
 
-            return forwardRawMap[lang].ContainsKey(english) ?
-                forwardNormalMap[lang][english]
+            var translation = forwardRawMap[lang].ContainsKey(english) ?
+                forwardRawMap[lang][english]
                 : english;
+
+            return translation;
         }
 
         public string GetNormalizedTranslation(Language lang, string english)

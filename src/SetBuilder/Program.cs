@@ -884,7 +884,7 @@ namespace SetBuilder
             { CardType.Objective_Location, objectiveLocation => addObjectiveLocation(objectiveLocation) },
         };
 
-        public static int Main(string[] args)
+        public static int Main3(string[] args)
         {
             //NOTE: The code page needs to be 1252 in order to handle accent characters
             Console.OutputEncoding = Encoding.GetEncoding(codePageWesternEurope);
@@ -904,6 +904,128 @@ namespace SetBuilder
 
                 Console.WriteLine(map[card.CardType](card));
             }
+
+            return 0;
+        }
+
+        public static int Main(string[] args)
+        {
+            if (args.Length < 2)
+            {
+                Console.WriteLine("usage: Language Set");
+                return 0;
+            }
+
+            //NOTE: The code page needs to be 1252 in order to handle accent characters
+            Console.OutputEncoding = Encoding.GetEncoding(codePageWesternEurope);
+
+            return WriteTranslations(args[0], args[1]);
+        }
+
+        private static int WriteTranslations(string language, string setName)
+        {
+            var path = string.Format("./ALeP/Children-of-Eorl.{0}.json", language);
+
+            var product = new HallOfBeorn.Models.LotR.Products.Community.ChildrenOfEorlProduct();
+
+            var alepCards = ALePReader.ReadFile(path);
+
+            const string format1 = "            AddHtml(\"{0}\", \"{1}\");";
+            const string format2 = "            AddHtml2(\"{0}\", \"{1}\");";
+            const string mapFormat = "                {{ \"{0}\", \"{1}\" }},";
+
+            Console.WriteLine("            //{0}", setName);
+
+            var titleMap = new Dictionary<string, string>();
+            var traitMap = new Dictionary<string, string>();
+            var keywordMap = new Dictionary<string, string>();
+
+            foreach (var alepCard in alepCards)
+            {
+                if (alepCard.position == 0)
+                {
+                    continue;
+                }
+
+                var enCard = product.CardSets.First().Cards.FirstOrDefault(c => c.CardNumber == alepCard.position);
+
+                if (enCard == null)
+                {
+                    continue;
+                }
+
+                var slug = enCard.Slug;
+                var card = alepCard.ToCard();
+                
+                if (!titleMap.ContainsKey(enCard.Title) &&
+                    enCard.Title != card.Title) {
+                    titleMap[enCard.Title] = card.Title;
+                }
+
+                if (card.Traits.Any())
+                {
+                    var enList = enCard.Traits.ToList();
+                    var trList = card.Traits.ToList();
+
+                    if (enList.Count == trList.Count)
+                    {
+                        for (var i = 0;i<enList.Count;i++)
+                        {
+                            if (!traitMap.ContainsKey(enList[i])
+                                && enList[i] != trList[i])
+                            {
+                                traitMap[enList[i]] = trList[i];
+                            }
+                        }
+                    }
+                }
+
+                if (card.Keywords.Any())
+                {
+                    var enList = enCard.Keywords.ToList();
+                    var trList = card.Keywords.ToList();
+
+                    if (enList.Count == trList.Count)
+                    {
+                        for (var i = 0;i<enList.Count;i++)
+                        {
+                            if (!keywordMap.ContainsKey(enList[i])
+                                && enList[i] != trList[i])
+                            {
+                                keywordMap[enList[i]] = trList[i];
+                            }
+                        }
+                    }
+                }
+
+                Console.WriteLine(format1, slug, card.HtmlTemplate);
+
+                if (!string.IsNullOrWhiteSpace(card.HtmlTemplate2))
+                {
+                    Console.WriteLine(format2, slug, card.HtmlTemplate2);
+                }
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("//Title");
+            foreach (var enTitle in titleMap.Keys)
+            {
+                Console.WriteLine(mapFormat, enTitle, titleMap[enTitle]);
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("//Traits");
+            foreach (var enTrait in traitMap.Keys)
+            {
+                Console.WriteLine(mapFormat, enTrait, traitMap[enTrait]);
+            }
+
+            Console.WriteLine("//Keywords");
+            foreach (var enKeyword in keywordMap.Keys)
+            {
+                Console.WriteLine(mapFormat, enKeyword, keywordMap[enKeyword]);
+            }
+            Console.WriteLine();
 
             return 0;
         }

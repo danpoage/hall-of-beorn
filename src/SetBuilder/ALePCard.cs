@@ -16,6 +16,7 @@ namespace SetBuilder
         public string illustrator { get; set; }
         public bool is_unique { get; set; }
         public List<string> keywords { get; set; }
+        public List<string> keywords_original { get; set; }
         public string name { get; set; }
         public string octgnid { get; set; }
         public int position { get; set; }
@@ -23,6 +24,7 @@ namespace SetBuilder
         public string sphere_name { get; set; }
         public string text { get; set; } //Side A, Side B
         public List<string> traits { get; set; }
+        public List<string> traits_original { get; set; }
         public List<string> additional_encounter_sets { get; set; }
         public string type_name { get; set; }
         public string attack { get; set; }
@@ -178,6 +180,10 @@ namespace SetBuilder
             { "[spirit]", "{sphere:Spirit}" },
             { "[lore]", "{sphere:Lore}" },
             { "[pp]", "{PerPlayer}" },
+            { "Respuesta:", "<b>Respuesta:</b>" },
+            { "Acción:", "<b>Acción:</b>" },
+            { "Obligado:", "<b>Obligado:</b>" },
+            { "Al ser revelada:", "<b>Al ser revelada:</b>" },
         };
 
         private string NormalizeTemplateLine(string line)

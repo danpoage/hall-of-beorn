@@ -11,5 +11,7 @@ namespace HallOfBeorn.Models
         DE,
         ES,
         FR,
+        IT,
+        PL,
     }
 }

@@ -884,7 +884,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
             if (card.CardType == CardType.Quest)
             {
-                return getQuestCardImagePath(card, isFirst);
+                return getQuestCardImagePath(card, isFirst, lang.GetValueOrDefault(Language.EN));
             }
 
             if (useLang == Language.EN)
@@ -970,14 +970,20 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             }
         }
 
-        public string getQuestCardImagePath(bool isFirst)
+        public string getQuestCardImagePath(bool isFirst, Language lang)
         {
-            return getQuestCardImagePath(_card, isFirst);
+            return getQuestCardImagePath(_card, isFirst, lang);
         }
 
-        public static string getQuestCardImagePath(LotRCard card, bool isFirst)
+        public static string getQuestCardImagePath(LotRCard card, bool isFirst, Language lang)
         {
             var set = (card.CardSet != null && !string.IsNullOrEmpty(card.CardSet.NormalizedName)) ? card.CardSet.NormalizedName.ToUrlSafeString() : card.CardSet.Name.ToUrlSafeString();
+
+            if (lang != Language.EN)
+            {
+                set = lang.ToString() + "/" + set;
+            }
+
             var title = card.Title.ToUrlSafeString();
             var suffix = !string.IsNullOrEmpty( card.SlugSuffix) ? string.Format("-{0}", card.SlugSuffix.ToUrlSafeString()) : string.Empty;
             var number = card.StageNumber.ToString();
@@ -991,9 +997,15 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}{2}-{3}{4}.jpg", set, title, suffix, number, letter);
         }
 
-        public string getSetupCardImagePath(bool isFirst)
+        public string getSetupCardImagePath(bool isFirst, Language lang)
         {
             var set = (_card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
+
+            if (lang != Language.EN)
+            {
+                set = lang.ToString() + "/" + set;
+            }
+
             var title = _card.Title.ToUrlSafeString();
 
             var suffix = _card.CardType == LotR.CardType.Scenario
@@ -1005,11 +1017,17 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}-{2}{3}.jpg", set, title, suffix, letter);
         }
 
-        public string getContractCardImagePath(bool isFirst)
+        public string getContractCardImagePath(bool isFirst, Language lang)
         {
             if (!string.IsNullOrEmpty(_card.OppositeText))
             {
                 var set = (_card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
+
+                if (lang != Language.EN)
+                {
+                    set = lang.ToString() + "/" + set;
+                }
+
                 var title = _card.Title.ToUrlSafeString();
                 var letter = isFirst ? "A" : "B";
 
@@ -1018,6 +1036,12 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             else 
             {
                 var set = (_card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
+
+                if (lang != Language.EN)
+                {
+                    set = lang.ToString() + "/" + set;
+                }
+
                 var title = _card.Title.ToUrlSafeString();
                 return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}.jpg", set, title);
             }
@@ -1112,14 +1136,14 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 switch (_card.CardType)
                 {
                     case Models.LotR.CardType.Quest:
-                        return getQuestCardImagePath(true); 
+                        return getQuestCardImagePath(true, _lang); 
                     case Models.LotR.CardType.Campaign:
                     case Models.LotR.CardType.Nightmare_Setup:
                     case Models.LotR.CardType.GenCon_Setup:
                     case Models.LotR.CardType.Scenario:
-                        return getSetupCardImagePath(true);
+                        return getSetupCardImagePath(true, _lang);
                     case Models.LotR.CardType.Contract:
-                        return getContractCardImagePath(true);
+                        return getContractCardImagePath(true, _lang);
                     default:
                         return null;
                 }
@@ -1139,14 +1163,14 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 switch (_card.CardType)
                 {
                     case Models.LotR.CardType.Quest:
-                        return getQuestCardImagePath(false);
+                        return getQuestCardImagePath(false, _lang);
                     case Models.LotR.CardType.Campaign:
                     case Models.LotR.CardType.Nightmare_Setup:
                     case Models.LotR.CardType.GenCon_Setup:
                     case Models.LotR.CardType.Scenario:
-                        return getSetupCardImagePath(false);
+                        return getSetupCardImagePath(false, _lang);
                     case Models.LotR.CardType.Contract:
-                        return getContractCardImagePath(false);
+                        return getContractCardImagePath(false, _lang);
                     default:
                         return null;
                 }

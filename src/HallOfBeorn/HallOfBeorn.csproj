@@ -1149,9 +1149,8 @@
     <Compile Include="Services\LotR\Search\IFilterService.cs" />
     <Compile Include="Services\LotR\Search\IPlanService.cs" />
     <Compile Include="Services\LotR\Search\NumericComparisonFilter.cs" />
-    <Compile Include="Services\LotR\Templates\DeTemplateRepository1.cs" />
-    <Compile Include="Services\LotR\Templates\EnTemplateRepository1.cs" />
-    <Compile Include="Services\LotR\Templates\EnTemplateRepository2.cs" />
+    <Compile Include="Services\LotR\Templates\GermanTemplateRepository.cs" />
+    <Compile Include="Services\LotR\Templates\EnglishTemplateRepository.cs" />
     <Compile Include="Services\LotR\Categories\ICategoryService.cs" />
     <Compile Include="Services\LotR\Tags\INoteService.cs" />
     <Compile Include="Services\LotR\Tags\ITagService.cs" />
@@ -1191,8 +1190,10 @@
     <Compile Include="Services\LotR\Stats\IStatService.cs" />
     <Compile Include="Services\LotR\Stats\StatService.cs" />
     <Compile Include="Services\LotR\Tags\TagService.cs" />
-    <Compile Include="Services\LotR\Templates\EsTemplateRepository1.cs" />
-    <Compile Include="Services\LotR\Templates\FrTemplateRepository1.cs" />
+    <Compile Include="Services\LotR\Templates\ItalianTemplateRepository.cs" />
+    <Compile Include="Services\LotR\Templates\PolishTemplateRepository.cs" />
+    <Compile Include="Services\LotR\Templates\SpanishTemplateRepository.cs" />
+    <Compile Include="Services\LotR\Templates\FrenchTemplateRepository.cs" />
     <Compile Include="Services\LotR\Templates\ITemplateRepository.cs" />
     <Compile Include="Services\LotR\Templates\ITemplateService.cs" />
     <Compile Include="Services\LotR\Templates\TemplateRepository.cs" />

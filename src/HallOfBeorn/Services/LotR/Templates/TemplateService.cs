@@ -10,26 +10,20 @@ namespace HallOfBeorn.Services.LotR.Templates
     {
         public TemplateService()
         {
-            RegisterFrontRepository(DefaultLanguage, new EnTemplateRepository1());
-            RegisterBackRepository(DefaultLanguage, new EnTemplateRepository2());
-
-            RegisterFrontRepository(Language.DE, new DeTemplateRepository1());
-            RegisterFrontRepository(Language.ES, new EsTemplateRepository1());
-            RegisterFrontRepository(Language.FR, new FrTemplateRepository1());
+            RegisterRepository(DefaultLanguage, new EnglishTemplateRepository());
+            
+            RegisterRepository(Language.DE, new GermanTemplateRepository());
+            RegisterRepository(Language.ES, new SpanishTemplateRepository());
+            RegisterRepository(Language.FR, new FrenchTemplateRepository());
+            RegisterRepository(Language.IT, new ItalianTemplateRepository());
+            RegisterRepository(Language.PL, new PolishTemplateRepository());
         }
 
-        private readonly Dictionary<Language, ITemplateRepository> _frontTemplateRepositories = new Dictionary<Language, ITemplateRepository>();
-        private readonly Dictionary<Language, ITemplateRepository> _backTemplateRepositories = new Dictionary<Language, ITemplateRepository>();
-
-        private void RegisterFrontRepository(Language lang, ITemplateRepository repository)
+        private readonly Dictionary<Language, ITemplateRepository> _templateRepositories = new Dictionary<Language, ITemplateRepository>();
+        
+        private void RegisterRepository(Language lang, ITemplateRepository repository)
         {
-
-            _frontTemplateRepositories[lang] = repository;
-        }
-
-        private void RegisterBackRepository(Language lang, ITemplateRepository repository)
-        {
-            _backTemplateRepositories[lang] = repository;
+            _templateRepositories[lang] = repository;
         }
 
         public readonly Language DefaultLanguage = Language.EN;
@@ -38,11 +32,11 @@ namespace HallOfBeorn.Services.LotR.Templates
         {
             var useLang = lang.HasValue ? lang.Value : DefaultLanguage;
 
-            if (_frontTemplateRepositories.ContainsKey(useLang))
-                return _frontTemplateRepositories[useLang].GetHtmlTemplate(slug);
+            if (_templateRepositories.ContainsKey(useLang))
+                return _templateRepositories[useLang].GetHtmlTemplate(slug);
 
-            return (_frontTemplateRepositories.ContainsKey(DefaultLanguage)) ?
-                _frontTemplateRepositories[DefaultLanguage].GetHtmlTemplate(slug)
+            return (_templateRepositories.ContainsKey(DefaultLanguage)) ?
+                _templateRepositories[DefaultLanguage].GetHtmlTemplate(slug)
                 : string.Empty;
         }
 
@@ -50,11 +44,11 @@ namespace HallOfBeorn.Services.LotR.Templates
         {
             var useLang = lang.HasValue ? lang.Value : DefaultLanguage;
 
-            if (_backTemplateRepositories.ContainsKey(useLang))
-                return _backTemplateRepositories[useLang].GetHtmlTemplate(slug);
+            if (_templateRepositories.ContainsKey(useLang))
+                return _templateRepositories[useLang].GetHtmlTemplate2(slug);
 
-            return (_backTemplateRepositories.ContainsKey(DefaultLanguage)) ?
-                _backTemplateRepositories[DefaultLanguage].GetHtmlTemplate(slug)
+            return (_templateRepositories.ContainsKey(DefaultLanguage)) ?
+                _templateRepositories[DefaultLanguage].GetHtmlTemplate2(slug)
                 : string.Empty;
         }
     }

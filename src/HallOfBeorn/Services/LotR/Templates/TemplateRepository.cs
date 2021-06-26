@@ -12,19 +12,32 @@ namespace HallOfBeorn.Services.LotR.Templates
             Initialize();
         }
 
-        private readonly Dictionary<string, string> htmlBySlug = new Dictionary<string, string>();
+        private readonly Dictionary<string, string> htmlFrontBySlug = new Dictionary<string, string>();
+        private readonly Dictionary<string, string> htmlBackBySlug = new Dictionary<string, string>();
 
         protected abstract void Initialize();
 
         protected void AddHtml(string slug, string html)
         {
-            htmlBySlug[slug] = html;
+            htmlFrontBySlug[slug] = html;
+        }
+
+        protected void AddHtml2(string slug, string html)
+        {
+            htmlBackBySlug[slug] = html;
         }
 
         public string GetHtmlTemplate(string slug)
         {
-            return htmlBySlug.ContainsKey(slug) ?
-                htmlBySlug[slug]
+            return htmlFrontBySlug.ContainsKey(slug)
+                ? htmlFrontBySlug[slug]
+                : string.Empty;
+        }
+
+        public string GetHtmlTemplate2(string slug)
+        {
+            return htmlBackBySlug.ContainsKey(slug)
+                ? htmlBackBySlug[slug]
                 : string.Empty;
         }
     }

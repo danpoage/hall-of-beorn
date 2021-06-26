@@ -151,7 +151,8 @@ namespace HallOfBeorn.Models.RingsDb
                 .NormalizeCaseSensitiveString();
 
             Func<LotR.LotRCard, bool> hasSecondImage = (c) =>
-                !string.IsNullOrEmpty(c.OppositeTitle) || !string.IsNullOrEmpty(c.OppositeText);
+                !string.IsNullOrEmpty(c.OppositeTitle) || !string.IsNullOrEmpty(c.OppositeText) 
+                || !string.IsNullOrEmpty(c.OppositeFlavorText) || c.CardType == LotR.CardType.Quest;
 
             Func<LotR.LotRCard, string> getImageSource2 = (c) =>
                 {
