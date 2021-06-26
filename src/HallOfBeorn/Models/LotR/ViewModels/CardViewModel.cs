@@ -897,27 +897,30 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             } else
             {
                 var set = !string.IsNullOrEmpty(card.CardSet.NormalizedName) ? card.CardSet.NormalizedName.ToUrlSafeString() : card.CardSet.Name.ToUrlSafeString();
-                var title = card.Title.ToUrlSafeString();
+                var title = card.GetTitle(useLang).ToUrlSafeString();
                 var suffix = !string.IsNullOrEmpty(card.SlugSuffix) ? string.Format("-{0}", card.SlugSuffix.ToUrlSafeString()) : string.Empty;
 
                 var langDirectory = Enum.GetName(typeof(Language), useLang);
 
-                return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Cards/{0}/{1}/{2}{3}.jpg", langDirectory, set, title, suffix);
+                return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Cards/{0}/{1}/{2}{3}.png", langDirectory, set, title, suffix);
             }
         }
 
         private static string getImagePath(LotRCard card, string directory, Language lang)
         {
             var set = !string.IsNullOrEmpty(card.CardSet.NormalizedName) ? card.CardSet.NormalizedName.ToUrlSafeString() : card.CardSet.Name.ToUrlSafeString();
-            var title = card.Title.ToUrlSafeString();
+            var title = card.GetTitle(lang).ToUrlSafeString();
             var suffix = !string.IsNullOrEmpty(card.SlugSuffix) ? string.Format("-{0}", card.SlugSuffix.ToUrlSafeString()) : string.Empty;
-            
+
+            var extension = "jpg";
+
             if (lang != default(Language))
             {
                 directory += "/" + Enum.GetName(typeof(Language), lang);
+                extension = "png";
             }
 
-            return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/{0}/{1}/{2}{3}.jpg", directory, set, title, suffix);
+            return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/{0}/{1}/{2}{3}.{4}", directory, set, title, suffix, extension);
         }
 
         public string ThumbImagePath
@@ -979,12 +982,15 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             var set = (card.CardSet != null && !string.IsNullOrEmpty(card.CardSet.NormalizedName)) ? card.CardSet.NormalizedName.ToUrlSafeString() : card.CardSet.Name.ToUrlSafeString();
 
+            var extension = "jpg";
+
             if (lang != Language.EN)
             {
                 set = lang.ToString() + "/" + set;
+                extension = "png";
             }
 
-            var title = card.Title.ToUrlSafeString();
+            var title = card.GetTitle(lang).ToUrlSafeString();
             var suffix = !string.IsNullOrEmpty( card.SlugSuffix) ? string.Format("-{0}", card.SlugSuffix.ToUrlSafeString()) : string.Empty;
             var number = card.StageNumber.ToString();
 
@@ -994,16 +1000,19 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 letter = isFirst ? card.StageLetter.ToString() : getSecondStageLetter(card).ToString();
             }
 
-            return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}{2}-{3}{4}.jpg", set, title, suffix, number, letter);
+            return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}{2}-{3}{4}.{5}", set, title, suffix, number, letter, extension);
         }
 
         public string getSetupCardImagePath(bool isFirst, Language lang)
         {
             var set = (_card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
 
+            var extension = "jpg";
+
             if (lang != Language.EN)
             {
                 set = lang.ToString() + "/" + set;
+                extension = "png";
             }
 
             var title = _card.Title.ToUrlSafeString();
@@ -1014,7 +1023,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             
             var letter = isFirst ? "A" : "B";
 
-            return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}-{2}{3}.jpg", set, title, suffix, letter);
+            return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}-{2}{3}.{4}", set, title, suffix, letter, extension);
         }
 
         public string getContractCardImagePath(bool isFirst, Language lang)
@@ -1023,27 +1032,33 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             {
                 var set = (_card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
 
+                var extension = "jpg";
+
                 if (lang != Language.EN)
                 {
                     set = lang.ToString() + "/" + set;
+                    extension = "png";
                 }
 
                 var title = _card.Title.ToUrlSafeString();
                 var letter = isFirst ? "A" : "B";
 
-                return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}-Side{2}.jpg", set, title, letter);
+                return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}-Side{2}.{3}", set, title, letter, extension);
             }
             else 
             {
                 var set = (_card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
 
+                var extension = "jpg";
+
                 if (lang != Language.EN)
                 {
                     set = lang.ToString() + "/" + set;
+                    extension = "png";
                 }
 
                 var title = _card.Title.ToUrlSafeString();
-                return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}.jpg", set, title);
+                return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}.{2}", set, title, extension);
             }
         }
 
