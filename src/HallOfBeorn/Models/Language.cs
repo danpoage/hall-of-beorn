@@ -5,9 +5,10 @@ using System.Web;
 
 namespace HallOfBeorn.Models
 {
-    public enum Language : byte
+    public enum Language : int
     {
-        EN = 0,
+        None = 0,
+        EN,
         DE,
         ES,
         FR,

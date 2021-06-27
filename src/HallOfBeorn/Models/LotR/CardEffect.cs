@@ -158,7 +158,7 @@ namespace HallOfBeorn.Models.LotR
             "the players cannot"
         };
 
-        public static CardEffect Parse(IStatService statService, LotRCard card, string text)
+        public static CardEffect Parse(IStatService statService, LotRCard card, string text, Language? lang)
         {
             if (text == null)
                 return null;
@@ -200,7 +200,7 @@ namespace HallOfBeorn.Models.LotR
                     if (!escaped && !statNames.Contains(normalized))
                     {
                         //NOTE: A Sphere token has priority over a Trait token
-                        if (statService.Traits().Any(x => string.Equals(x, normalized + ".")) && !statService.Spheres().Any(x => string.Equals(x, normalized)))
+                        if (statService.Traits(lang).Any(x => string.Equals(x, normalized + ".")) && !statService.Spheres().Any(x => string.Equals(x, normalized)))
                         {
                             token.IsTrait = true;
                             token.Text = token.Prefix + part.Trim(',');

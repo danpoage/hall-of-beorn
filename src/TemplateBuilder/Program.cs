@@ -11,6 +11,7 @@ using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.ViewModels;
 using HallOfBeorn.Services.LotR;
 using HallOfBeorn.Services.LotR.Stats;
+using HallOfBeorn.Services.LotR.Translation;
 
 namespace TemplateBuilder
 {
@@ -23,9 +24,12 @@ namespace TemplateBuilder
             Console.WriteLine("Hall of Beorn Card Search\r\nHTML TemplateBuilder 0.0.1");
 
             var productRepo = new ProductRepository();
+            var translationService = new TranslationService();
             var cardRepo = new LotRCardRepository(productRepo);
 
-            statService = new StatService(cardRepo);
+            statService = new StatService(cardRepo, translationService);
+
+            Language lang = Language.EN;
 
             const string file1 = "templates1.txt";
             const string file2 = "templates2.txt";
@@ -34,14 +38,14 @@ namespace TemplateBuilder
                 if (string.IsNullOrEmpty(c.HtmlTemplate))
                 {
                     Console.WriteLine("  Writing template1 for : " + c.Slug);
-                    var text = string.Format("AddHtml(\"{0}\", \"{1}\");\r\n", c.Slug, GetTemplate(c, c.Text, c.Shadow, c.FlavorText));
+                    var text = string.Format("AddHtml(\"{0}\", \"{1}\");\r\n", c.Slug, GetTemplate(c, c.Text, c.Shadow, c.FlavorText, lang));
                     File.AppendAllText(file1, text);
                 }
 
                 if (string.IsNullOrEmpty(c.HtmlTemplate2) && !string.IsNullOrEmpty(c.OppositeText))
                 {
                     Console.WriteLine("  Writing template2 for : " + c.Slug);
-                    var text = string.Format("AddHtml(\"{0}\", \"{1}\");\r\n", c.Slug, GetTemplate(c, c.OppositeText, string.Empty, c.OppositeFlavorText));
+                    var text = string.Format("AddHtml(\"{0}\", \"{1}\");\r\n", c.Slug, GetTemplate(c, c.OppositeText, string.Empty, c.OppositeFlavorText, lang));
                     File.AppendAllText(file2, text);
                 }
             }
@@ -50,14 +54,14 @@ namespace TemplateBuilder
             Console.ReadLine();
         }
 
-        private static void AddEffect(StringBuilder html, LotRCard card, string text, bool isParagraph)
+        private static void AddEffect(StringBuilder html, LotRCard card, string text, bool isParagraph, Language? lang)
         {
             if (isParagraph)
             {
                 html.Append("<p>");
             }
 
-            var effect = CardEffect.Parse(statService, card, text);
+            var effect = CardEffect.Parse(statService, card, text, lang);
 
             foreach (var token in effect.Tokens)
             {
@@ -101,7 +105,7 @@ namespace TemplateBuilder
             }
         }
 
-        private static string GetTemplate(LotRCard card, string text, string shadowText, string flavorText)
+        private static string GetTemplate(LotRCard card, string text, string shadowText, string flavorText, Language? lang)
         {
             var html = new StringBuilder();
 
@@ -110,21 +114,21 @@ namespace TemplateBuilder
                 html.Append("<p>");
                 foreach (var keyword in card.Keywords)
                 {
-                    AddEffect(html, card, keyword, false);
+                    AddEffect(html, card, keyword, false, lang);
                 }
                 html.Append("</p>");
             }
 
             foreach (var line in text.SplitLines())
             {
-                AddEffect(html, card, line, true);
+                AddEffect(html, card, line, true, lang);
             }
 
             if (!string.IsNullOrEmpty(shadowText))
             {
                 html.Append("{shadow}<p class='shadow-text'>");
 
-                AddEffect(html, card, shadowText, false);
+                AddEffect(html, card, shadowText, false, lang);
 
                 html.Append("</p>");
             }

@@ -82,6 +82,11 @@ namespace HallOfBeorn.Models
 
         public string GetTranslation(Language lang, string english)
         {
+            if (string.IsNullOrEmpty(english))
+            {
+                return english;
+            }
+
             if (lang == Language.EN)
             {
                 return getFormattedString(english);
@@ -110,6 +115,11 @@ namespace HallOfBeorn.Models
 
         public string GetEnglish(Language lang, string translation)
         {
+            if (string.IsNullOrEmpty(translation))
+            {
+                return translation;
+            }
+
             if (lang == Language.EN)
             {
                 return getFormattedString(translation);

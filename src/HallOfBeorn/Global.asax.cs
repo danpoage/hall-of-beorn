@@ -84,15 +84,18 @@ namespace HallOfBeorn
             var filterService = new FilterService(playerCategoryService, encounterCategoryService, questCategoryService);
             System.Web.HttpContext.Current.Application[LotRServiceNames.FilterService] = filterService;
 
+            var translationService = new TranslationService();
+            HttpContext.Current.Application[LotRServiceNames.TranslationService] = translationService;
+
             var planService = new PlanService(noteService, scenarioService, 
                 playerCategoryService, encounterCategoryService, questCategoryService, regionService, archetypeService, 
-                ringsDbService, filterService);
+                ringsDbService, filterService, translationService);
             System.Web.HttpContext.Current.Application[LotRServiceNames.PlanService] = planService;
 
             var searchService = new SearchService(cardRepository, planService);
             System.Web.HttpContext.Current.Application[LotRServiceNames.SearchService] = searchService;
 
-            var statService = new StatService(cardRepository);
+            var statService = new StatService(cardRepository, translationService);
             System.Web.HttpContext.Current.Application[LotRServiceNames.StatService] = statService;
 
             var octgnService = new OctgnService(productRepository, cardRepository);
@@ -104,8 +107,7 @@ namespace HallOfBeorn
             var tagService = new TagService();
             System.Web.HttpContext.Current.Application[LotRServiceNames.TagService] = tagService;
 
-            var translationService = new TranslationService();
-            HttpContext.Current.Application[LotRServiceNames.TranslationService] = translationService;
+            
 
             System.Web.HttpContext.Current.Application.UnLock();
         }

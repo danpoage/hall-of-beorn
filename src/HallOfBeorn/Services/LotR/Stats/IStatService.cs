@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using HallOfBeorn.Models;
 
 namespace HallOfBeorn.Services.LotR.Stats
 {
     public interface IStatService
     {
         IEnumerable<string> Spheres();
+        IEnumerable<string> CardTypes(Language? lang);
         IEnumerable<string> ResourceCosts();
         IEnumerable<string> ThreatCosts();
         IEnumerable<string> EngagementCosts();
-        IEnumerable<string> Keywords();
-        IEnumerable<string> Traits();
+        IEnumerable<string> Keywords(Language? lang);
+        IEnumerable<string> Traits(Language? lang);
         IEnumerable<string> VictoryPointsValues();
         IEnumerable<string> AttackStrengthValues();
         IEnumerable<string> DefenseStrengthValues();

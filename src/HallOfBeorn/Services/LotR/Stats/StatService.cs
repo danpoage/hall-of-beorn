@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
+using HallOfBeorn.Services.LotR.Translation;
 
 namespace HallOfBeorn.Services.LotR.Stats
 {
     public class StatService : IStatService
     {
-        public StatService(ICardRepository<LotRCard> cardRepository)
+        public StatService(ICardRepository<LotRCard> cardRepository, ITranslationService translationService)
         {
+            this.translationService = translationService;
             cards = cardRepository.Cards();
             foreach (var card in cards)
             {
@@ -18,6 +21,7 @@ namespace HallOfBeorn.Services.LotR.Stats
             }
         }
 
+        private readonly ITranslationService translationService;
         private readonly IEnumerable<LotRCard> cards;
         private readonly Dictionary<string, string> keywords = new Dictionary<string, string>();
         private readonly Dictionary<string, string> traits = new Dictionary<string, string>();
@@ -174,7 +178,16 @@ namespace HallOfBeorn.Services.LotR.Stats
 
         public IEnumerable<string> Spheres()
         {
-            return typeof(Sphere).GetSelectListItems().Select(x => x.Text);
+            return typeof(Sphere).GetSelectListItems().Select(s => s.Text);
+        }
+
+        public IEnumerable<string> CardTypes(Language? lang)
+        {
+            var translated = lang.GetValueOrDefault(Language.EN) == Language.EN
+                ? typeof(CardType).GetSelectListItems().Select(ct => ct.Text)
+                : typeof(CardType).GetSelectListItems().Select(ct => translationService.TranslateCardTypeName(lang.Value, ct.Text.Replace(" ", "-")));
+
+            return translated;
         }
 
         public IEnumerable<string> ResourceCosts()
@@ -204,18 +217,18 @@ namespace HallOfBeorn.Services.LotR.Stats
                 .Distinct();
         }
 
-        public IEnumerable<string> Keywords()
+        public IEnumerable<string> Keywords(Language? lang)
         {
-            return keywords.Values
-                .ToList()
-                .OrderBy(keyword => keyword);
+            return (lang.GetValueOrDefault(Language.EN) == Language.EN)
+                ? keywords.Values.ToList().OrderBy(keyword => keyword)
+                : keywords.Values.ToList().Select(k => translationService.TranslateKeyword(lang.Value, k)).OrderBy(k => k);
         }
 
-        public IEnumerable<string> Traits()
+        public IEnumerable<string> Traits(Language? lang)
         {
-            return traits.Values
-                .ToList()
-                .OrderBy(trait => trait);
+            return (lang.GetValueOrDefault(Language.EN) == Language.EN)
+                ? traits.Values.ToList().OrderBy(trait => trait)
+                : traits.Values.ToList().Select(t => translationService.TranslateTrait(lang.Value, t)).OrderBy(t => t);
         }
 
         public IEnumerable<string> VictoryPointsValues()

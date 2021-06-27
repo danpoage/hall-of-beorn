@@ -53,7 +53,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             {
                 model.Quest = null;
             }
-            if (model.CardType.HasValue && model.CardType.Value == Models.LotR.CardType.None)
+            if (string.IsNullOrEmpty(model.CardType) || model.CardType == SearchViewModel.DEFAULT_FILTER_VALUE)
             {
                 model.CardType = null;
             }
@@ -72,6 +72,10 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             if (model.View.HasValue && model.View.Value == Models.View.None)
             {
                 model.View = null;
+            }
+            if (model.Lang.HasValue && model.Lang.Value == Models.Language.None)
+            {
+                model.Lang = null;
             }
             if (model.DeckType.HasValue && model.DeckType.Value == Models.DeckType.None)
             {
@@ -487,7 +491,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         }
 
         [Display(Name = "Type")]
-        public CardType? CardType { get; set; }
+        public string CardType { get; set; }
 
         [Display(Name = "Subtype")]
         public string CardSubtype { get; set; }
@@ -745,7 +749,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public bool HasCardType()
         {
-            return this.CardType.HasValue && this.CardType.Value != Models.LotR.CardType.None;
+            return !string.IsNullOrEmpty(this.CardType) && this.CardType != "Any";
         }
 
         public bool HasCardSubtype()
@@ -879,29 +883,35 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public bool CardTypeMatches(LotRCard card)
         {
-            if (!CardType.HasValue)
+            if (string.IsNullOrEmpty(CardType) || CardType == "Any")
             {
                 return false;
             }
 
-            if (CardType.Value == Models.LotR.CardType.Player)
+            CardType parsedType;
+            if (!Enum.TryParse<CardType>(this.CardType, out parsedType))
+            {
+                return false;
+            }
+
+            if (parsedType == Models.LotR.CardType.Player)
             {
                 return card.CardType == Models.LotR.CardType.Hero || card.CardType == Models.LotR.CardType.Ally || card.CardType == Models.LotR.CardType.Attachment || card.CardType == Models.LotR.CardType.Event || card.CardType == Models.LotR.CardType.Player_Side_Quest;
             }
-            else if (CardType.Value == Models.LotR.CardType.Character)
+            else if (parsedType == Models.LotR.CardType.Character)
             {
                 return card.CardType == Models.LotR.CardType.Hero || card.CardType == Models.LotR.CardType.Ally || card.CardType == Models.LotR.CardType.Objective_Ally || (card.CardType == Models.LotR.CardType.Objective && card.HitPoints > 0);
             }
-            else if (CardType.Value == Models.LotR.CardType.Encounter)
+            else if (parsedType == Models.LotR.CardType.Encounter)
             {
                 return card.CardType == Models.LotR.CardType.Enemy || card.CardType == Models.LotR.CardType.Location || card.CardType == Models.LotR.CardType.Treachery || card.CardType == Models.LotR.CardType.Objective || card.CardType == Models.LotR.CardType.Objective_Ally || card.CardType == Models.LotR.CardType.Objective_Location || card.CardType == Models.LotR.CardType.Encounter_Side_Quest || card.CardType == Models.LotR.CardType.Ship_Objective || card.CardType == Models.LotR.CardType.Ship_Enemy;
             }
-            else if (CardType.Value == Models.LotR.CardType.Objective)
+            else if (parsedType == Models.LotR.CardType.Objective)
             {
                 return card.CardType == Models.LotR.CardType.Objective || card.CardType == Models.LotR.CardType.Objective_Ally;
             }
             else
-                return CardType == card.CardType;
+                return parsedType == card.CardType;
         }
 
         //public bool CardSetMatches(LotRCard card)
@@ -967,7 +977,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public static IEnumerable<SelectListItem> CardTypes
         {
-            get { return typeof(CardType).GetSelectListItems(); }
+            get;
+            set;
         }
 
         public static IEnumerable<SelectListItem> CardSubtypes
@@ -1202,6 +1213,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             get { return typeof(View).GetSelectListItems(); }
         }
 
+        public static IEnumerable<SelectListItem> Languages
+        {
+            get { return typeof(Language).GetSelectListItems(); }
+        }
+
         public static IEnumerable<SelectListItem> UniquenessValues
         {
             get { return typeof(Uniqueness).GetSelectListItems(); }
@@ -1247,10 +1263,5 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         }
 
         public static IEnumerable<SelectListItem> VictoryPointValues { get; set; }
-
-        public static IEnumerable<SelectListItem> LanguageValues
-        {
-            get { return typeof(Language).GetSelectListItems(); }
-        }
     }
 }

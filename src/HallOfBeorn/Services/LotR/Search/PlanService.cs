@@ -9,6 +9,7 @@ using HallOfBeorn.Services.LotR.Categories;
 using HallOfBeorn.Services.LotR.RingsDb;
 using HallOfBeorn.Services.LotR.Scenarios;
 using HallOfBeorn.Services.LotR.Tags;
+using HallOfBeorn.Services.LotR.Translation;
 
 namespace HallOfBeorn.Services.LotR.Search
 {
@@ -22,7 +23,8 @@ namespace HallOfBeorn.Services.LotR.Search
             ICategoryService<Region> regionService,
             ICategoryService<Archetype> archetypeService,
             IRingsDbService ringsDbService,
-            IFilterService filterService)
+            IFilterService filterService,
+            ITranslationService translationService)
         {
             _noteService = noteService;
             _scenarioService = scenarioService;
@@ -32,6 +34,7 @@ namespace HallOfBeorn.Services.LotR.Search
             _regionService = regionService;
             _archetypeService = archetypeService;
             _filterService = filterService;
+            _translationService = translationService;
             _getPopularity = (slug) => { return ringsDbService.GetPopularity(slug); };
             _getVotes = (card) => { return ringsDbService.GetVotes(card.Slug); };
         }
@@ -44,12 +47,43 @@ namespace HallOfBeorn.Services.LotR.Search
         private readonly ICategoryService<Region> _regionService;
         private readonly ICategoryService<Archetype> _archetypeService;
         private readonly IFilterService _filterService;
+        private readonly ITranslationService _translationService;
         private readonly Func<string, byte> _getPopularity;
         private readonly Func<LotRCard, uint> _getVotes;
 
         private const string defaultCardSet = "Core Set";
         private const CardType defaultCardType = CardType.Hero;
         private const int defaultOffset = 0;
+
+        private string getTranslatedCardType(Language? lang, string cardTypeName)
+        {
+            if (lang.GetValueOrDefault(Language.EN) == Language.EN)
+            {
+                return cardTypeName;
+            }
+
+            return _translationService.EnglishCardTypeName(lang.Value, cardTypeName);
+        }
+
+        private string getTranslatedTrait(Language? lang, string trait)
+        {
+            if (lang.GetValueOrDefault(Language.EN) == Language.EN)
+            {
+                return trait;
+            }
+
+            return _translationService.EnglishTrait(lang.Value, trait);
+        }
+
+        private string getTranslatedKeyword(Language? lang, string keyword)
+        {
+            if (lang.GetValueOrDefault(Language.EN) == Language.EN)
+            {
+                return keyword;
+            }
+
+            return _translationService.EnglishKeyword(lang.Value, keyword);
+        }
 
         private IEnumerable<IComponent> CreateFilters(SearchViewModel model, UserSettings settings)
         {
@@ -64,7 +98,7 @@ namespace HallOfBeorn.Services.LotR.Search
             AddFilter(filters, new GenericFilter(model.Scenario, (score, target) =>  _scenarioService.BelongsToScenario(score.Card.Slug, score.Card.CardType, target)));
             AddFilter(filters, new GenericFilter(model.EncounterSet, (score, target) => score.Card.EncounterSet == target, (score, target) => score.Card.AlternateEncounterSet == target));
 
-            AddFilter(filters, new CardTypeFilter(model.CardType));
+            AddFilter(filters, new CardTypeFilter(getTranslatedCardType(model.Lang, model.CardType)));
             AddFilter(filters, new EnumFilter<CardSubtype>((score) => score.Card.CardSubtype, model.CardSubtype, (target) => { return target == "No Subtype" ? "None" : target; }));
             AddFilter(filters, new EnumFilter<DeckType>((score) => score.Card.DeckType, model.DeckType));
 
@@ -88,8 +122,8 @@ namespace HallOfBeorn.Services.LotR.Search
 
             AddFilter(filters, new ErrataFilter((score, version) => _noteService.HasErrata(score.Card.Slug, version), model.Errata));
 
-            AddFilter(filters, new TraitFilter(model.Trait));
-            AddFilter(filters, new KeywordFilter(model.Keyword));
+            AddFilter(filters, new TraitFilter(getTranslatedTrait(model.Lang, model.Trait)));
+            AddFilter(filters, new KeywordFilter(getTranslatedKeyword(model.Lang, model.Keyword)));
             AddFilter(filters, new VictoryPointFilter(model.VictoryPoints));
 
             AddFilter(filters, new CategoryFilter<PlayerCategory>((score, cat) => _playerCategoryService.HasCategory(score.Card, cat), model.Category));

@@ -223,6 +223,7 @@ $(document).ready(function () {
     $('#resetButton').click(function () {
         $('#Sort').val('Any');
         $('#View').val('Any');
+        $('#Lang').val('Any');
         $('#Query').focus().val('');
 
         $('#CardSet').val('Any');

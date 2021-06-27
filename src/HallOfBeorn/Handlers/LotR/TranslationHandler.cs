@@ -27,7 +27,7 @@ namespace HallOfBeorn.Handlers.LotR
 
         private Language defaultLang = Language.EN;
 
-        private IEnumerable<CardEffect> ParseCardEffects(LotRCard card, string text)
+        private IEnumerable<CardEffect> ParseCardEffects(LotRCard card, string text, Language? lang)
         {
             if (string.IsNullOrEmpty(text))
                 return Enumerable.Empty<CardEffect>();
@@ -39,7 +39,7 @@ namespace HallOfBeorn.Handlers.LotR
                 if (string.IsNullOrEmpty(line))
                     continue;
 
-                effects.Add(CardEffect.Parse(_statService, card, line));
+                effects.Add(CardEffect.Parse(_statService, card, line, lang));
             }
 
             return effects;
@@ -50,12 +50,15 @@ namespace HallOfBeorn.Handlers.LotR
             var serviceFrontHtml = _templateService.GetFrontHtml(card.Slug, lang);
             var serviceBackHtml = _templateService.GetBackHtml(card.Slug, lang);
 
-            card.HtmlTemplate = !string.IsNullOrEmpty(serviceFrontHtml) ?
-                serviceFrontHtml : card.GetFrontHtmlTemplate(lang);
-
-            card.HtmlTemplate2 = !string.IsNullOrEmpty(serviceBackHtml) ?
-                serviceBackHtml : card.GetBackHtmlTemplate(lang);
-
+            if (!string.IsNullOrEmpty(serviceFrontHtml))
+            {
+                card.WithFrontHtmlTemplate(lang, serviceFrontHtml);
+            }
+            if (!string.IsNullOrEmpty(serviceBackHtml))
+            {
+                card.WithBackHtmlTemplate(lang, serviceBackHtml);
+            }
+            
             /*
             if (string.IsNullOrEmpty(card.GetFrontHtmlTemplate(lang)))
             {
@@ -82,16 +85,16 @@ namespace HallOfBeorn.Handlers.LotR
                     card.Keywords.Select(k =>
                     {
                         var translatedKeyword = _translationService.TranslateKeyword(lang, k);
-                        return CardEffect.Parse(_statService, card, translatedKeyword);
+                        return CardEffect.Parse(_statService, card, translatedKeyword, lang);
                     })
                 );
             }
 
-            viewModel.TextEffects.AddRange(ParseCardEffects(card, card.Text));
-            viewModel.OppositeTextEffects.AddRange(ParseCardEffects(card, card.OppositeText));
+            viewModel.TextEffects.AddRange(ParseCardEffects(card, card.Text, lang));
+            viewModel.OppositeTextEffects.AddRange(ParseCardEffects(card, card.OppositeText, lang));
 
             if (!string.IsNullOrEmpty(card.Shadow))
-                viewModel.ShadowEffects.Add(CardEffect.Parse(_statService, card, card.Shadow));
+                viewModel.ShadowEffects.Add(CardEffect.Parse(_statService, card, card.Shadow, lang));
 
             viewModel.CardTypeName = _translationService.TranslateCardTypeName(lang, viewModel.CardType);
         }

@@ -894,7 +894,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 var suffix = !string.IsNullOrEmpty(card.SlugSuffix) ? string.Format("-{0}", card.SlugSuffix.ToUrlSafeString()) : string.Empty;
 
                 return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}{2}.jpg", set, title, suffix);
-            } else
+            } 
+            else
             {
                 var set = !string.IsNullOrEmpty(card.CardSet.NormalizedName) ? card.CardSet.NormalizedName.ToUrlSafeString() : card.CardSet.Name.ToUrlSafeString();
                 var title = card.GetTitle(useLang).ToUrlSafeString();
@@ -902,7 +903,9 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
                 var langDirectory = Enum.GetName(typeof(Language), useLang);
 
-                return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Cards/{0}/{1}/{2}{3}.png", langDirectory, set, title, suffix);
+                var extension = getTranslatedImageExtension(card, useLang);
+
+                return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/Cards/{0}/{1}/{2}{3}.{4}", langDirectory, set, title, suffix, extension);
             }
         }
 
@@ -914,20 +917,29 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
             var extension = "jpg";
 
-            if (lang != default(Language))
+            if (lang != Language.EN)
             {
                 directory += "/" + Enum.GetName(typeof(Language), lang);
-                extension = "png";
+                extension = getTranslatedImageExtension(card, lang);
             }
 
             return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/{0}/{1}/{2}{3}.{4}", directory, set, title, suffix, extension);
+        }
+
+        private static string getTranslatedImageExtension(LotRCard card, Language lang)
+        {
+            return (card.CardSet != null && card.CardSet.SetType == SetType.A_Long_extended_Party)
+                ? "png"
+                : "jpg";
         }
 
         public string ThumbImagePath
         {
             get
             {
-                return getImagePath(_card, "Thumbnails", _lang);
+                return _lang == Language.EN
+                    ? getImagePath(_card, "Thumbnails", _lang)
+                    : getImagePath(_card, "Cards", _lang);
                 //var set = !string.IsNullOrEmpty(_card.CardSet.NormalizedName) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
                 //var title = _card.Title.ToUrlSafeString();
                 //var suffix = !string.IsNullOrEmpty(_card.SlugSuffix) ? string.Format("-{0}", _card.SlugSuffix.ToUrlSafeString()) : string.Empty;
@@ -982,12 +994,14 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             var set = (card.CardSet != null && !string.IsNullOrEmpty(card.CardSet.NormalizedName)) ? card.CardSet.NormalizedName.ToUrlSafeString() : card.CardSet.Name.ToUrlSafeString();
 
+            var path = "Cards";
             var extension = "jpg";
 
             if (lang != Language.EN)
             {
                 set = lang.ToString() + "/" + set;
-                extension = "png";
+                path = "LotR/Cards";
+                extension = getTranslatedImageExtension(card, lang);
             }
 
             var title = card.GetTitle(lang).ToUrlSafeString();
@@ -1000,19 +1014,21 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 letter = isFirst ? card.StageLetter.ToString() : getSecondStageLetter(card).ToString();
             }
 
-            return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}{2}-{3}{4}.{5}", set, title, suffix, number, letter, extension);
+            return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/{0}/{1}/{2}{3}-{4}{5}.{6}", path, set, title, suffix, number, letter, extension);
         }
 
         public string getSetupCardImagePath(bool isFirst, Language lang)
         {
             var set = (_card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
 
+            var path = "Cards";
             var extension = "jpg";
 
             if (lang != Language.EN)
             {
                 set = lang.ToString() + "/" + set;
-                extension = "png";
+                path = "LotR/Cards";
+                extension = getTranslatedImageExtension(_card, lang);
             }
 
             var title = _card.Title.ToUrlSafeString();
@@ -1023,7 +1039,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             
             var letter = isFirst ? "A" : "B";
 
-            return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}-{2}{3}.{4}", set, title, suffix, letter, extension);
+            return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/{0}/{1}/{2}-{3}{4}.{5}", path, set, title, suffix, letter, extension);
         }
 
         public string getContractCardImagePath(bool isFirst, Language lang)
@@ -1032,33 +1048,37 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             {
                 var set = (_card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
 
+                var path = "Cards";
                 var extension = "jpg";
 
                 if (lang != Language.EN)
                 {
                     set = lang.ToString() + "/" + set;
-                    extension = "png";
+                    path = "LotR/Cards";
+                    extension = getTranslatedImageExtension(_card, lang);
                 }
 
-                var title = _card.Title.ToUrlSafeString();
+                var title = _card.GetTitle(lang).ToUrlSafeString();
                 var letter = isFirst ? "A" : "B";
 
-                return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}-Side{2}.{3}", set, title, letter, extension);
+                return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/{0}/{1}/{2}-Side{3}.{4}", path, set, title, letter, extension);
             }
             else 
             {
                 var set = (_card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
 
+                var path = "Cards";
                 var extension = "jpg";
 
                 if (lang != Language.EN)
                 {
                     set = lang.ToString() + "/" + set;
-                    extension = "png";
+                    path = "LotR/Cards";
+                    extension = getTranslatedImageExtension(_card, lang);
                 }
 
-                var title = _card.Title.ToUrlSafeString();
-                return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}.{2}", set, title, extension);
+                var title = _card.GetTitle(lang).ToUrlSafeString();
+                return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/{0}/{1}/{2}.{3}", path, set, title, extension);
             }
         }
 

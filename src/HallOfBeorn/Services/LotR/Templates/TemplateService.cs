@@ -10,8 +10,7 @@ namespace HallOfBeorn.Services.LotR.Templates
     {
         public TemplateService()
         {
-            RegisterRepository(DefaultLanguage, new EnglishTemplateRepository());
-            
+            RegisterRepository(Language.EN, new EnglishTemplateRepository());
             RegisterRepository(Language.DE, new GermanTemplateRepository());
             RegisterRepository(Language.ES, new SpanishTemplateRepository());
             RegisterRepository(Language.FR, new FrenchTemplateRepository());

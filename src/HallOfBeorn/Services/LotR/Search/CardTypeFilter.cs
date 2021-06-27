@@ -8,14 +8,20 @@ namespace HallOfBeorn.Services.LotR.Search
 {
     public class CardTypeFilter : Filter
     {
-        public CardTypeFilter(CardType? target)
+        public CardTypeFilter(string target)
         {
-            if (!target.HasValue)
+            if (string.IsNullOrEmpty(target))
                 return;
+
+            CardType parsedType;
+            if (!Enum.TryParse<CardType>(target.Replace(" ", "_").Replace("-", "_"), out parsedType))
+            {
+                return;
+            }
 
             predicate = (score) =>
             {
-                return HasCardType(score.Card, target.Value);
+                return HasCardType(score.Card, parsedType);
             };
         }
 

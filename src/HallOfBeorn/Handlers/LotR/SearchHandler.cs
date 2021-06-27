@@ -69,8 +69,9 @@ namespace HallOfBeorn.Handlers.LotR
             model.Characters = new List<CharacterViewModel>();
             model.Links = new List<LinkViewModel>();
 
-            SearchViewModel.Keywords = _statService.Keywords().GetSelectListItems();
-            SearchViewModel.Traits = _statService.Traits().GetSelectListItems();
+            SearchViewModel.CardTypes = _statService.CardTypes(model.Lang).GetSelectListItems();
+            SearchViewModel.Keywords = _statService.Keywords(model.Lang).GetSelectListItems();
+            SearchViewModel.Traits = _statService.Traits(model.Lang).GetSelectListItems();
             SearchViewModel.ResourceCosts = _statService.ResourceCosts().GetSelectListItems();
             SearchViewModel.ThreatCosts = _statService.ThreatCosts().GetSelectListItems();
             SearchViewModel.EngagementCosts = _statService.EngagementCosts().GetSelectListItems();
@@ -217,7 +218,7 @@ namespace HallOfBeorn.Handlers.LotR
         {
             InitializeSearch(model);
 
-            var useLang = model.Lang.HasValue ? model.Lang.Value : default(Language);
+            var useLang = model.Lang.HasValue && model.Lang != Language.None ? model.Lang.Value : Language.EN;
 
             foreach (var score in _searchService.Search(model, settings))
             {
@@ -233,7 +234,7 @@ namespace HallOfBeorn.Handlers.LotR
                 viewModel.Votes = _ringsDbService.GetVotes(viewModel.Slug);
 
                 _translationHandler.Translate(useLang, score.Card, viewModel);
-
+                
                 model.Cards.Add(viewModel);
             }
 

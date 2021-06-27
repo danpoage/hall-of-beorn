@@ -842,19 +842,23 @@ namespace HallOfBeorn.Models.LotR
 
         public LotRCard WithTemplate(string htmlTemplate)
         {
-            this.HtmlTemplate = htmlTemplate;
-            return this;
+            return WithTemplate(htmlTemplate, Language.EN);
         }
 
         public LotRCard WithTemplate(string htmlTemplate, Language lang)
         {
-            this.HtmlTemplate = htmlTemplate;
+            this.frontHtmlTemplates[lang] = htmlTemplate;
             return this;
         }
 
         public LotRCard WithTemplate2(string htmlTemplate)
         {
-            this.HtmlTemplate2 = htmlTemplate;
+            return WithTemplate2(htmlTemplate, Language.EN);
+        }
+
+        public LotRCard WithTemplate2(string htmlTemplate, Language lang)
+        {
+            this.backHtmlTemplates[lang] = htmlTemplate;
             return this;
         }
 

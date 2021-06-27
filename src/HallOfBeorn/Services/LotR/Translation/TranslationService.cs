@@ -24,8 +24,15 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Hero", "Héroe" },
                 { "Ally", "Aliado" },
                 { "Attachment", "Vinculada" },
+                { "Contract", "Contrato" },
                 { "Event", "Evento" },
-                { "Enemy", "Enemigo" }
+                { "Player-Side-Quest", "Búsqueda Secundaria del Jugador" },
+                { "Enemy", "Enemigo" },
+                { "Location", "Lugar" },
+                { "Treachery", "Traición" },
+                { "Objective", "Objetivo" },
+                { "Encounter-Side-Quest", "Búsqueda Secundaria del Encruentro" },
+                { "Quest", "Búsqueda" },
             });
 
             cardTypeNameMap.Add(Language.FR, new Dictionary<string, string> {
@@ -228,6 +235,7 @@ namespace HallOfBeorn.Services.LotR.Translation
 
             titleMap.Add(Language.ES, new Dictionary<string, string> {
                 { "Guard of the Citadel", "Guardia de La Ciudadela" },
+                { "Defend the Beacon", "Defiende la Almenara" },
                 { "Deeping Bowman", "Arquero del Muro del Bajo" },
                 { "Open the Gates", "Abrir las Puertas" },
                 { "Wealth of Adventure", "Riqueza de la Aventura" },
@@ -616,7 +624,6 @@ namespace HallOfBeorn.Services.LotR.Translation
 
             traitMap.Add(Language.ES, new Dictionary<string, string> {
                 { "Beorning.", "Beórnida." },
-                { "Gondor.", "Góndor." },
                 { "Warrior.", "Guerrero." },
                 //CoE
                 { "Ranger.", "Montaraz." },
@@ -718,6 +725,11 @@ namespace HallOfBeorn.Services.LotR.Translation
             return cardTypeNameMap.GetEnglish(lang, Enum.GetName(typeof(CardType), type));
         }
 
+        public string EnglishCardTypeName(Language lang, string cardTypeName)
+        {
+            return cardTypeNameMap.GetEnglish(lang, cardTypeName);
+        }
+
         public string EnglishKeyword(Language lang, string keyword)
         {
             return keywordMap.GetEnglish(lang, keyword);
@@ -735,7 +747,12 @@ namespace HallOfBeorn.Services.LotR.Translation
 
         public string TranslateCardTypeName(Language lang, CardType type)
         {
-            return cardTypeNameMap.GetTranslation(lang, type.ToString());
+            return cardTypeNameMap.GetTranslation(lang, type.ToString().Replace("_", "-"));
+        }
+
+        public string TranslateCardTypeName(Language lang, string typeName)
+        {
+            return cardTypeNameMap.GetTranslation(lang, typeName.Replace("_", "-"));
         }
 
         public string TranslateKeyword(Language lang, string keyword)

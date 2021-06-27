@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using HallOfBeorn.Models;
 
 namespace HallOfBeorn.Services.LotR.Search
 {

@@ -8,7 +8,7 @@
 }
 
 @section scripts {
-<script type="text/javascript" src="~/Scripts/cardSearch-1.0.1.js" defer></script>
+<script type="text/javascript" src="~/Scripts/cardSearch-1.0.2.js" defer></script>
 <script type="text/javascript" src="~/Scripts/cookie-1.0.1.js" defer></script>
 <script type="text/javascript" src="~/Scripts/autocomplete-1.0.1.js" defer></script>
 <script type="text/javascript">
@@ -52,17 +52,21 @@
 {
     <div class="form-group">
         <div style="margin-bottom:10px;">
-            <div style="display:inline-block;min-width:300px;margin-right:4px;">@Html.TextBoxFor(x => x.Query, new { style = "text-align:left;width:95%;margin-right:4px;", @autofocus = "autofocus" })</div>
+            <div style="display:inline-block;min-width:280px;margin-right:4px;">@Html.TextBoxFor(x => x.Query, new { style = "text-align:left;width:95%;margin-right:4px;", @autofocus = "autofocus" })</div>
             <div style="display:inline-block;">
                 <input type="submit" value="Search" class="search-button" />
                 <a id="resetButton" href="#" class="clear-button">Clear</a>
                 <span style="display:inline-block;">
                 <span class="search-label-right">Sort</span>
-                @Html.DropDownListFor(x => x.Sort, SearchViewModel.Sorts, new { @class = "search-select-medium" })
+                @Html.DropDownListFor(x => x.Sort, SearchViewModel.Sorts, new { @class = "search-select-short" })
                 </span>
                 <span style="display:inline-block">
                 <span class="search-label-right">View</span>
-                @Html.DropDownListFor(x => x.View, SearchViewModel.Views, new { @class = "search-select-medium" })
+                @Html.DropDownListFor(x => x.View, SearchViewModel.Views, new { @class = "search-select-short" })
+                </span>
+                <span style="display:inline-block">
+                <span class="search-label-right">Lang</span>
+                @Html.DropDownListFor(v => v.Lang, SearchViewModel.Languages, new { @class = "search-select-short" })
                 </span>
             </div>
         </div>
@@ -749,19 +753,30 @@
                             @keyword @: &nbsp;
                         }
                         *@
-                        @if (!string.IsNullOrEmpty(@card.Text))
+                        @if (!string.IsNullOrEmpty(@card.Html)) 
                         {
-                            <div>@card.Text</div>
+                            <div>@Html.Raw(@card.Html)</div>
+                            if (!string.IsNullOrEmpty(@card.Html2))
+                            {
+                                <div>@Html.Raw(@card.Html2)</div>
+                            }
                         }
-                        @if (!string.IsNullOrEmpty(@card.OppositeText))
+                        else
                         {
-                            <hr style="margin-left:24px;margin-right:24px;"/>
-                            <div>@card.OppositeText</div>
-                        }
-                        @if (!string.IsNullOrEmpty(@card.Shadow))
-                        {
+                            if (!string.IsNullOrEmpty(@card.Text))
+                            {
+                                <div>@card.Text</div>
+                            }
+                            if (!string.IsNullOrEmpty(@card.OppositeText))
+                            {
+                                <hr style="margin-left:24px;margin-right:24px;"/>
+                                <div>@card.OppositeText</div>
+                            }
+                            if (!string.IsNullOrEmpty(@card.Shadow))
+                            {
                             <hr style="margin-left:24px;margin-right:24px;"/>    
                             <div>@card.Shadow</div>
+                            }
                         }
                     </div>
                 }

@@ -184,6 +184,8 @@ namespace SetBuilder
             { "Acción:", "<b>Acción:</b>" },
             { "Obligado:", "<b>Obligado:</b>" },
             { "Al ser revelada:", "<b>Al ser revelada:</b>" },
+            { "Preparación:", "<b>Preparación:</b>" },
+            { "Sombra:", "<b>Sombra:</b>" },
         };
 
         private string NormalizeTemplateLine(string line)

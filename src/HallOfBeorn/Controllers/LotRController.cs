@@ -234,7 +234,7 @@ namespace HallOfBeorn.Controllers
                 return Redirect(redirectUrl);
             }
 
-            var targetLang = lang.HasValue ? lang.Value : defaultLang;
+            var targetLang = lang.HasValue && lang != Language.None ? lang.Value : defaultLang;
 
             var model = _detailsHandler.HandleDetails(id, targetLang);
 
