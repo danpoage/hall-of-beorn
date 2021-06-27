@@ -420,6 +420,7 @@ namespace HallOfBeorn.Services.LotR.Translation
 
             titleMap.Add(Language.IT, new Dictionary<string, string>
             {
+                { "Defend the Beacon", "Difendere il Faro" },
                 { "Deeping Bowman", "Arciere del Fossato" },
                 { "Open the Gates", "Aprite i Cancelli" },
                 { "Wealth of Adventure", "Il Valore delle Avventure" },
