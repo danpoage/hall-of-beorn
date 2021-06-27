@@ -1155,7 +1155,7 @@ tr.pager td {
     text-align:right;
     font-weight:bold;
     margin-bottom:4px;
-    position:absolute;
+    position:relative;
     bottom:4px;
     right:4px;
 }
