@@ -15,7 +15,9 @@ namespace HallOfBeorn
             if (string.IsNullOrEmpty(self))
                 return string.Empty;
 
-            return self.Replace(" - ", "-")
+            return self
+                .Replace(" !", string.Empty)
+                .Replace(" - ", "-")
                 .Replace(' ', '-')
                 .Replace('_', '-')
                 .Replace("&", "and")
@@ -25,7 +27,8 @@ namespace HallOfBeorn
                 .Replace("?", string.Empty)
                 .Replace("!", string.Empty)
                 .Replace("¡", string.Empty)
-                .Replace("\"", string.Empty);
+                .Replace("\"", string.Empty)
+                .Trim();
         }
 
         public static string UrlEncode(this string self)

@@ -327,6 +327,7 @@ namespace HallOfBeorn.Services.LotR.Translation
             titleMap.Add(Language.FR, new Dictionary<string, string> {
                 { "Guard of the Citadel", "Garde de la Citadelle" },
 
+                { "Defend the Beacon", "Défendre le Feu d'Alarme" },
                 { "Deeping Bowman", "Archer du Gouffre" },
                 { "Open the Gates", "Ouvrez les Portes" },
                 { "Wealth of Adventure", "Aventure Enrichissante" },

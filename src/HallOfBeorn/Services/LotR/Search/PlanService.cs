@@ -89,7 +89,7 @@ namespace HallOfBeorn.Services.LotR.Search
         {
             var filters = new List<IComponent>();
 
-            AddFilter(filters, new StringBasicQueryFilter(model.BasicQuery()));
+            AddFilter(filters, new StringBasicQueryFilter(model.BasicQuery(), model.Lang));
             AddFilter(filters, new StringAdvancedQueryFilter(model.Query, _filterService));
 
             AddFilter(filters, new StringExactFilter((score) => score.Card.Artist != null ? score.Card.Artist.Name : string.Empty, model.Artist));

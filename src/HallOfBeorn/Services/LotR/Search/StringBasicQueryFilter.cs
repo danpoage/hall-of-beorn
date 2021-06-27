@@ -9,7 +9,7 @@ namespace HallOfBeorn.Services.LotR.Search
 {
     public class StringBasicQueryFilter : Filter
     {
-        public StringBasicQueryFilter(string query)
+        public StringBasicQueryFilter(string query, Language? lang)
         {
             if (string.IsNullOrWhiteSpace(query))
                 return;
@@ -19,6 +19,13 @@ namespace HallOfBeorn.Services.LotR.Search
                 var points = 0f;
 
                 points += Matches((card, q) => card.Title.ToLowerSafe().Split(new char[]{' ', '-'}).Any(token => token.Equals(q)), query, score, 48);
+
+                if (lang.GetValueOrDefault(Language.EN) != Language.EN) {
+                    points += Matches((card, q) => card.GetTitle(lang.Value).ToLowerSafe().Split(new char[]{' ', '-'}).Any(token => token.Equals(q)), query, score, 48);
+                    points += Matches((card, q) => card.GetTitle(lang.Value).IsEqualToLower(q), query, score, 36);
+                    points += Matches((card, q) => card.GetTitle(lang.Value).ContainsLower(q), query, score, 12);
+                }
+
                 points += Matches((card, q) => card.NormalizedTitle.ToLowerSafe().Split(new char[]{' ', '-'}).Any(token => token.Equals(q)), query, score, 48);
                 points += Matches((card, q) => card.Title.IsEqualToLower(q), query, score, 36);
                 points += Matches((card, q) => card.NormalizedTitle.IsEqualToLower(q), query, score, 36);
