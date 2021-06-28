@@ -162,7 +162,28 @@ namespace HallOfBeorn.Models
 
         public string FlavorText { get; set; }
         
-        public string OppositeText { get; set; }
+        private readonly Dictionary<Language, string> oppositeTexts = new Dictionary<Language, string>();
+        public string OppositeText
+        { 
+            get { return GetOppositeText(DefaultLang); }
+            set { SetOppositeText(DefaultLang, value); }
+        }
+
+        public void SetOppositeText(Language lang, string text)
+        {
+            oppositeTexts[lang] = text;
+        }
+
+        public string GetOppositeText(Language lang)
+        {
+            if (oppositeTexts.ContainsKey(lang))
+                return oppositeTexts[lang];
+
+            return oppositeTexts.ContainsKey(DefaultLang) ?
+                oppositeTexts[DefaultLang]
+                : string.Empty;
+        }
+
         public string OppositeFlavorText { get; set; }
 
         public bool IsUnique { get; set; }

@@ -6,19 +6,27 @@ using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.ViewModels;
 using HallOfBeorn.Services.LotR.Categories;
 using HallOfBeorn.Services.LotR.RingsDb;
+using HallOfBeorn.Services.LotR.Templates;
+using HallOfBeorn.Services.LotR.Translation;
 
 namespace HallOfBeorn.Services.LotR.Search
 {
     public class SearchService : ISearchService
     {
-        public SearchService(LotRCardRepository cardRepository, IPlanService planService)
+        public SearchService(
+            LotRCardRepository cardRepository, IPlanService planService,
+            ITranslationService translationService, ITemplateService templateService)
         {
             _cardRepository = cardRepository;
             _planService = planService;
+            _translationService = translationService;
+            _templateService = templateService;
         }
 
         private readonly LotRCardRepository _cardRepository;
         private readonly IPlanService _planService;
+        private readonly ITranslationService _translationService;
+        private readonly ITemplateService _templateService;
 
         private IOrderedEnumerable<CardScore> InitialScores()
         {
@@ -42,8 +50,28 @@ namespace HallOfBeorn.Services.LotR.Search
         {
             Func<LotRCard, bool> productFilter = GetProductFilter(settings);
 
+            var searchLang = model.Lang.GetValueOrDefault(Models.Language.EN);
+
+            Action<LotRCard, Models.Language> translate = null;
+            if (searchLang != Models.Language.EN)
+            {
+                translate = (card, lang) => {
+                    var translatedTitle = _translationService.TranslateTitle(lang, card.GetTitle(Models.Language.EN));
+                    card.SetTitle(lang, translatedTitle);
+
+                    var translatedFrontText = _templateService.GetFrontText(card.Slug, lang);
+                    card.SetText(lang, translatedFrontText);
+
+                    if (!string.IsNullOrEmpty(card.OppositeText))
+                    {
+                        var translatedBackText = _templateService.GetBackText(card.Slug, lang);
+                        card.SetOppositeText(lang, translatedBackText);
+                    }
+                };
+            }
+
             var all = _cardRepository
-                .Cards()
+                .Cards(model.Lang, translate)
                 .Where(productFilter)
                 .Select(card => new CardScore(card, 1, string.Empty))
                 .OrderBy(s => 1);

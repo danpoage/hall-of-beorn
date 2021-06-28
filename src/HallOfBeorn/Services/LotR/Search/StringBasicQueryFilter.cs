@@ -24,6 +24,12 @@ namespace HallOfBeorn.Services.LotR.Search
                     points += Matches((card, q) => card.GetTitle(lang.Value).ToLowerSafe().Split(new char[]{' ', '-'}).Any(token => token.Equals(q)), query, score, 48);
                     points += Matches((card, q) => card.GetTitle(lang.Value).IsEqualToLower(q), query, score, 36);
                     points += Matches((card, q) => card.GetTitle(lang.Value).ContainsLower(q), query, score, 12);
+                    points += Matches((card, q) => card.GetText(lang.Value).ContainsLower(q), query, score, 2);
+                    points += Matches((card, q) => card.GetOppositeText(lang.Value).ContainsLower(q), query, score, 2);
+                    points += Matches((card, q) => card.TraitsByLang(lang.Value).Any(tr => tr.ToLowerSafe().Equals(q)), query, score, 4);    
+                    points += Matches((card, q) => card.TraitsByLang(lang.Value).Any(tr => tr.ToLowerSafe().Contains(q)), query, score, 2);
+                    points += Matches((card, q) => card.KeywordsByLang(lang.Value).Any(kw => kw.ToLowerSafe().Equals(q)), query, score, 4);
+                    points += Matches((card, q) => card.KeywordsByLang(lang.Value).Any(kw => kw.ToLowerSafe().Contains(q)), query, score, 2);
                 }
 
                 points += Matches((card, q) => card.NormalizedTitle.ToLowerSafe().Split(new char[]{' ', '-'}).Any(token => token.Equals(q)), query, score, 48);

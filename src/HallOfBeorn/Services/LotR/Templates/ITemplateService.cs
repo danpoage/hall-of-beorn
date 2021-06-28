@@ -11,5 +11,7 @@ namespace HallOfBeorn.Services.LotR.Templates
     {
         string GetFrontHtml(string slug, Language? language);
         string GetBackHtml(string slug, Language? language);
+        string GetFrontText(string slug, Language? language);
+        string GetBackText(string slug, Language? language);
     }
 }

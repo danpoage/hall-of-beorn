@@ -132,6 +132,20 @@ namespace HallOfBeorn.Services
                 .ToList();
         }
 
+        public IEnumerable<TCard> Cards(Language? lang, Action<TCard, Language> translate)
+        {
+            if (lang.GetValueOrDefault(Language.EN) == Language.EN)
+            {
+                return cards;
+            }
+
+            foreach (var card in cards)
+            {
+                translate(card, lang.Value);
+            }
+            return cards;
+        }
+
         public IEnumerable<TCard> Cards()
         {
             return cards;
