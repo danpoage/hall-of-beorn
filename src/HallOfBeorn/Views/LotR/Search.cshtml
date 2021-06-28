@@ -578,7 +578,7 @@
             }
         }  
     
-        <div style="display:inline-block;margin:6px;border: 0px solid gray;border-radius: 8px;width: @Model.ItemWidth(@card.CardType)">
+        <div id="search-result-@card.Slug" style="display:inline-block;margin:6px;border: 0px solid gray;border-radius: 8px;width: @Model.ItemWidth(@card.CardType)">
             <div>
                 <div style="display:inline-block">
                     <div style="margin-bottom:2px;">
@@ -588,11 +588,11 @@
                     }
                     @if (@Model.View.HasValue && @Model.View == View.Card_Image)
                     {
-                        @Html.ActionLink(@card.TitleTrimmed, "Details", new { id = @card.Slug, Lang = @card.Lang }, new { style = "margin-bottom:2px;font-size:medium;font-weight:bold;display:inline-block;" })
+                        @Html.ActionLink(@card.TitleTrimmed, "Details", new { id = @card.Slug, Lang = @Model.Lang.GetValueOrDefault(Language.EN) }, new { style = "margin-bottom:2px;font-size:medium;font-weight:bold;display:inline-block;" })
                     }
                     else
                     {
-                        @Html.ActionLink(@card.Title, "Details", new { id = @card.Slug, Lang = @card.Lang }, new { style = "margin-bottom:2px;font-size:medium;font-weight:bold;display:inline-block;" })
+                        @Html.ActionLink(@card.Title, "Details", new { id = @card.Slug, Lang = @Model.Lang.GetValueOrDefault(Language.EN) }, new { style = "margin-bottom:2px;font-size:medium;font-weight:bold;display:inline-block;" })
                     }
                     </div>
                     <div>
@@ -626,7 +626,7 @@
                 @if (!@Model.View.HasValue || (@Model.View.HasValue && (@Model.View == View.Card || @Model.View == View.Card_Image || @Model.View == View.Card_Art)))
                 {
                     <div style="float:left;margin-right:4px;">
-                        <a href="@Href(string.Format("/LotR/Details/{0}", @card.Slug))">
+                        <a href="@Href(string.Format("/LotR/Details/{0}?&Lang={1}", @card.Slug, @Model.Lang.GetValueOrDefault(Language.EN)))">
                             @if (@card.HasSecondImage)
                             {
                                 <span style="text-align:left;">

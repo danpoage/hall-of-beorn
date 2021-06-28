@@ -25,7 +25,10 @@
             }
         }
         <div style="margin-top:4px;margin-bottom:2px;">
-            <span style="display:inline-block;max-width:154px;"><a href="@Model.SetSearchUrl" title="Search for @Model.SetName">@Model.SetName</a></span><span style="margin-left:8px;display:inline-block;">@string.Format("#{0} {1}", @Model.Number, @Model.CountLabel)</span>
+            <span style="display:inline-block;max-width:154px;">
+                <a href="@string.Format("{0}&Lang={1}&Sort=Set_Number#search-result-{2}", @Model.SetSearchUrl, @Model.Lang, @Model.Slug)" title="Search for @Model.SetName (@Model.Lang)">@Model.SetName</a>
+            </span>
+            <span style="margin-left:8px;display:inline-block;">@string.Format("#{0} {1}", @Model.Number, @Model.CountLabel)</span>
         </div>
     </div>
 
