@@ -7,6 +7,8 @@
             : base("Oaths of the Rohirrim Cycle")
         {
             AddMainProduct(Product.ChildrenOfEorl);
+
+            AddChildProduct(Product.TheAldburgPlot);
         }
     }
 }

@@ -544,6 +544,7 @@ namespace HallOfBeorn.Models.LotR
             Add(TheFallOfNargothrond);
 
             Add(ChildrenOfEorl);
+            Add(TheAldburgPlot);
         }
 
         public static List<CardSet> All()
@@ -756,6 +757,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheFallOfNargothrond = new Sets.DoomMastered.TheFallOfNargothrondSet();
 
         public static CardSet ChildrenOfEorl = new Sets.ChildrenOfEorl.ChildrenOfEorlSet();
+        public static CardSet TheAldburgPlot = new Sets.OathsOfTheRohirrim.TheAldburgPlotSet();
         #endregion
     }
 }
