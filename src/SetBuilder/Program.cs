@@ -73,7 +73,9 @@ namespace SetBuilder
 
         private const string encounterSetFormat = "EncounterSet.{0}";
 
+        private const int codePageCentralAndEasternEurope = 1250;
         private const int codePageWesternEurope = 1252;
+        private const int codePageCentralEurope = 852;
         private const string textQuote = "\\\"";
         private const string textLineBreak = "\\r\\n";
         
@@ -917,7 +919,9 @@ namespace SetBuilder
             }
 
             //NOTE: The code page needs to be 1252 in order to handle accent characters
-            Console.OutputEncoding = Encoding.GetEncoding(codePageWesternEurope);
+
+            Console.OutputEncoding = Encoding.UTF8;
+                //GetEncoding(codePageCentralAndEasternEurope); //codePageWesternEurope);
 
             return WriteTranslations(args[0], args[1]);
         }
