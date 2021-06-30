@@ -96,6 +96,126 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithTextLine("Response: After resolving the staging of an encounter card without surge, exhaust Gavin to give that card surge and add 1 resource to the pool of Scout hero you control. If the next encounter card revealed is not a location, discard it without resolving its effects.")
                 .WithTemplate("<p class='main-text'>Cannot have attachments.</p><p class='main-text'><b>Response:</b> After resolving the staging of an encounter card without surge, exhaust {self} to give that card surge and add 1 resource to the pool of {trait:Scout.@Scout} hero you control. If the next encounter card revealed is not a location, discard it without resolving its effects.</p>")
                 .WithInfo(11, 3, Artist.Unknown); //Paul Scott Camavan
+            addEncounterSideQuest("Red Harvest", EncounterSet.TheAldburgPlot, 4)
+                .WithVictoryPoints(10)
+                .WithInfo(12, 1, Artist.Unknown);
+            addEncounterSideQuest("The Prisoner in White", EncounterSet.TheAldburgPlot, 4)
+                .WithVictoryPoints(10)
+                .WithInfo(13, 1, Artist.Unknown);
+            addEncounterSideQuest("The Man with the Twisted Lip", EncounterSet.TheAldburgPlot, 8)
+                .WithVictoryPoints(10)
+                .WithInfo(14, 1, Artist.Unknown);
+            addEncounterSideQuest("A Fire Rises", EncounterSet.TheAldburgPlot, 4)
+                .WithVictoryPoints(10)
+                .WithInfo(15, 1, Artist.Unknown);
+            addEncounterSideQuest("A Case of Identity", EncounterSet.TheAldburgPlot, 6)
+                .WithVictoryPoints(10)
+                .WithInfo(16, 1, Artist.Unknown);
+            addEncounterSideQuest("Whisperer in the Darkness", EncounterSet.TheAldburgPlot, 6)
+                .WithVictoryPoints(10)
+                .WithInfo(17, 1, Artist.Unknown);
+            addObjective("Spreading Inferno", EncounterSet.TheAldburgPlot)
+                .WithTraits("Inferno.", "Suspicious.")
+                .WithKeywords("Guarded (location).")
+                .WithSideA()
+                .WithInfo(18, 1, Artist.Unknown);
+            addObjective("Ruby Cloak-pin", EncounterSet.TheAldburgPlot)
+                .WithTraits("Clue.")
+                .WithSideB()
+                .WithInfo(18, 1, Artist.Unknown);
+            addEnemy("The Whisperer", EncounterSet.TheAldburgPlot, 45, 3, 5, 3, 5)
+                .WithUnique()
+                .WithTraits("Gondor.", "Traitor.", "Suspicious.")
+                .WithSideA()
+                .WithInfo(19, 1, Artist.Unknown);
+            addObjective("Silver Dagger", EncounterSet.TheAldburgPlot)
+                .WithTraits("Clue.")
+                .WithSideB()
+                .WithInfo(19, 1, Artist.Unknown);
+            addEnemy("The Spy Master", EncounterSet.TheAldburgPlot, 0, 2, 4, 4, 6)
+                .WithUnique()
+                .WithTraits("Rohan.", "Spy.", "Suspicious.")
+                .WithSideA()
+                .WithInfo(20, 1, Artist.Unknown);
+            addObjective("Prison Key", EncounterSet.TheAldburgPlot)
+                .WithTraits("Clue.")
+                .WithSideB()
+                .WithInfo(20, 1, Artist.Unknown);
+            addEnemy("Ossian", EncounterSet.TheAldburgPlot, 50, 3, 6, 5, 7)
+                .WithTraits("Rohan.", "Assassin.", "Suspicious.")
+                .WithSideA()
+                .WithInfo(21, 1, Artist.Unknown);
+            addObjective("Traitor's Confession", EncounterSet.TheAldburgPlot)
+                .WithTraits("Clue.")
+                .WithSideB()
+                .WithInfo(21, 1, Artist.Unknown);
+            addLocation("Garrison Barracks", EncounterSet.TheAldburgPlot, Card.VALUE_X, 4)
+                .WithUnique()
+                .WithTraits("Aldburg.", "Suspicious.")
+                .WithSideA()
+                .WithInfo(22, 1, Artist.Unknown);
+            addObjective("Raven Signet Ring", EncounterSet.TheAldburgPlot)
+                .WithTraits("Clue.")
+                .WithSideB()
+                .WithInfo(22, 1, Artist.Unknown);
+            addLocation("The Horse's Tail", EncounterSet.TheAldburgPlot, Card.VALUE_X, 6)
+                .WithUnique()
+                .WithTraits("Aldburg.", "Suspicious.")
+                .WithSideA()
+                .WithInfo(23, 1, Artist.Unknown);
+            addObjective("Rohirric Coins", EncounterSet.TheAldburgPlot)
+                .WithTraits("Clue.")
+                .WithSideB()
+                .WithInfo(23, 1, Artist.Unknown);
+            addLocation("The Armoury", EncounterSet.TheAldburgPlot, 2, 4)
+                .WithUnique()
+                .WithTraits("Aldburg.", "Suspicious.")
+                .WithSideA()
+                .WithInfo(24, 1, Artist.Unknown);
+            addObjective("Red Fletched Arrow", EncounterSet.TheAldburgPlot)
+                .WithTraits("Clue.")
+                .WithSideB()
+                .WithInfo(24, 1, Artist.Aleksander_Karcz);
+            addLocation("Great Mead Hall", EncounterSet.TheAldburgPlot, 3, 5)
+                .WithUnique()
+                .WithTraits("Aldburg.", "Suspicious.")
+                .WithSideA()
+                .WithInfo(25, 1, Artist.Unknown);
+            addObjective("Letter from Dunland", EncounterSet.TheAldburgPlot)
+                .WithTraits("Clue.")
+                .WithSideB()
+                .WithInfo(25, 1, Artist.Tiziano_Baracchi);
+            addEnemy("Town Guard", EncounterSet.TheAldburgPlot, 45, 3, 4, 4, 2)
+                .WithTraits("Garrison.")
+                .WithInfo(26, 3, Artist.Bethesda_Softworks);
+            addEnemy("Dunlending Agents", EncounterSet.TheAldburgPlot, 35, 1, 4, 2, 4)
+                .WithTraits("Dunland.")
+                .WithInfo(27, 3, Artist.Grafit_Studio);
+            addEnemy("Aldburg Malcontent", EncounterSet.TheAldburgPlot, 25, 1, 3, 2, 3)
+                .WithTraits("Rohan.", "Traitor.")
+                .WithInfo(28, 2, Artist.Unknown);
+            addLocation("Misty Street", EncounterSet.TheAldburgPlot, 2, 2)
+                .WithTraits("Aldburg.")
+                .WithInfo(29, 2, Artist.Unknown);
+            addLocation("Well-lit Hall", EncounterSet.TheAldburgPlot, 2, 1)
+                .WithTraits("Aldburg.")
+                .WithInfo(30, 2, Artist.Jon_Hodgson);
+            addLocation("Decrepit Hovel", EncounterSet.TheAldburgPlot, 1, 3)
+                .WithTraits("Aldburg.")
+                .WithInfo(31, 3, Artist.Unknown);
+            addTreachery("Taken by the Night", EncounterSet.TheAldburgPlot)
+                .WithInfo(32, 2, Artist.Unknown);
+            addTreachery("False Lead", EncounterSet.TheAldburgPlot)
+                .WithKeywords("Doomed 1.")
+                .WithInfo(33, 3, Artist.Unknown);
+            addTreachery("Sudden Ambush", EncounterSet.TheAldburgPlot)
+                .WithInfo(34, 1, Artist.Unknown);
+            addQuest("Evil Under the Moon", EncounterSet.TheAldburgPlot, 1, 'A', Card.VALUE_NA)
+                .WithInfo(35, 1, Artist.Unknown);
+            addQuest("Gathering Clues", EncounterSet.TheAldburgPlot, 2, 'A', Card.VALUE_NA)
+                .WithInfo(36, 1, Artist.Igor_Kieryluk);
+            addQuest("The Uncertain Dawn", EncounterSet.TheAldburgPlot, 3, 'A', 45)
+                .WithInfo(37, 1, Artist.Unknown);
         }
     }
 }

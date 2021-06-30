@@ -570,6 +570,9 @@ namespace HallOfBeorn.Models.LotR
             Add(TheHorseLordsIre);
             Add(OrcHost);
             Add(RohanLands);
+
+            //Oaths of the Rohirrim
+            Add(TheAldburgPlot);
         }
 
         private static List<EncounterSet> all = new List<EncounterSet>();
@@ -951,5 +954,7 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet TheHorseLordsIre = new EncounterSet { Name = "The Horse Lord's Ire", Set = "Children of Eorl" };
         public static EncounterSet OrcHost = new EncounterSet { Name = "Orc-Host", Set = "Children of Eorl" };
         public static EncounterSet RohanLands = new EncounterSet { Name = "Rohan Lands", Set = "Children of Eorl" };
+
+        public static EncounterSet TheAldburgPlot = new EncounterSet { Name = "The Aldburg Plot", Set = "The Aldburg Plot" };
     }
 }
