@@ -76,10 +76,11 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithFlavorLine("-Saruman, The Two Towers")
                 .WithInfo(37, 3, Artist.Aleksander_Karcz);
             addObjectiveAlly("Tamed Mûmak", EncounterSet.RaceAcrossHarad, 2, 5, 2, 8)
-                .WithTraits("Harad.", "Creature.")
+                .WithTraits("Creature.")
                 .WithTextLine("Immune to player card effects.")
                 .WithTextLine("Damage from undefended attacks against you must be assigned to Tamed Mûmak.")
                 .WithTextLine("If Tamed Mûmak leaves play, the controlling player is eliminated.")
+                .WithTemplate("<p class='main-text'>Immune to player card effects.</p><p class='main-text'>Damage from undefended attacks against you must be assigned to {self}.</p><p class='main-text'><b>If {self} leaves play, the controlling player is eliminated.</b></p>")
                 .WithInfo(38, 4, Artist.Piya_Wannachaiwong);
             addLocation("River Harnen", EncounterSet.RaceAcrossHarad, 4, 10)
                 .WithUnique()

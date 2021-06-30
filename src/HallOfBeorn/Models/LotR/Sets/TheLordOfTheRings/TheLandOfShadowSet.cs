@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
 {
-    public class TheLandOfShadow : CardSet
+    public class TheLandOfShadowSet : CardSet
     {
         protected override void Initialize()
         {
@@ -94,12 +94,14 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("Action: Ready the Ring-bearer to choose an enemy engaged with you. If the Ring-bearer's Willpower is greater than that enemy’s Threat, lower its Attack and Defense by the difference until the end of the phase.")
                 .WithFlavor("For a moment it appeared to Sam that his master had grown and Gollum had shrunk... -The Two Towers")
                 .WithInfo(13, 3, Artist.Cristina_Vela));
-            Cards.Add(LotRCard.Event("Brace of Coneys", "", Sphere.Neutral, 0)
+            addEvent("Brace of Coneys", 0, Sphere.Neutral)
+                .WithTraits("Gift.")
                 .WithBoon()
                 .WithText("Play only if you control the Ring-bearer.\r\nPlanning Action: Add Brace of Coneys to the victory display to (choose 2): heal up to 2 damage from a hero, add 2 resources to a hero's pool, draw 2 cards, or reduce a player's threat by 2.")
                 .WithFlavor("\"'Sméagol always helps,' he said. 'He has brought rabbits, nice rabbits.'\" —Gollum, The Two Towers")
                 .WithVictoryPoints(2)
-                .WithInfo(14, 4, Artist.Cristina_Vela));
+                .WithTemplate("<p class='main-text'>Play only if you control the Ring-bearer.</p><p class='main-text'><b>Planning Action:</b> {self} to the victory display to (choose 2): heal up to 2 damage from a hero, add 2 resources to a hero's pool, draw 2 cards, or reduce a player's threat by 2.</p><p class='flavor-text'>&ldquo;'Sméagol always helps,' he said. 'He has brought rabbits, nice rabbits.'&rdquo;<br>&mdash;Gollum, The Two Towers</p>{victory:2}")
+                .WithInfo(14, 4, Artist.Cristina_Vela);
             Cards.Add(LotRCard.Treachery("The Searching Eye", "", "The Passage of the Marshes")
                 .WithBurden()
                 .WithText("The Searching Eye functions like a player card.\r\nForced: After you draw this card, either exhaust each hero you control, or reveal an encounter card.")

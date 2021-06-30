@@ -942,7 +942,7 @@
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\TheFlameOfTheWestSet.cs" />
     <Compile Include="Models\LotR\Sets\TheVoiceOfIsengard\TheFordsOfIsenNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheGreyHavens\TheGreyHavensSet.cs" />
-    <Compile Include="Models\LotR\Sets\TheLordOfTheRings\TheLandOfShadow.cs" />
+    <Compile Include="Models\LotR\Sets\TheLordOfTheRings\TheLandOfShadowSet.cs" />
     <Compile Include="Models\LotR\Sets\TheHobbit\TheLonelyMountainNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheLostRealm\TheLostRealmSet.cs" />
     <Compile Include="Models\LotR\Sets\AgainstTheShadow\TheMorgulValeNightmare.cs" />
