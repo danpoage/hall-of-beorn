@@ -109,7 +109,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
             addObjectiveAlly("Forweg", EncounterSet.AmongTheOutlaws, 2, 4, 2, 5)
                 .WithSlugSuffix("Objective-Ally")
                 .WithUnique()
-                .WithTraits("Gaurwaith.", "Captian.")
+                .WithTraits("Gaurwaith.", "Captain.")
                 .WithTextLine("The first player gains control of Forweg.")
                 .WithTextLine("Forced: Forweg declares and resolves an attack against a random Woodmen enemy engaged with the first player at the end of the combat phase.")
                 .WithTextLine("If Forweb leaves play, the players lose the game.")
