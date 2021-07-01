@@ -263,7 +263,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DoomMastered
                 .WithTextLine("Response: After attached location is explored, reduce the first player's threat by X, where X is the attached location's printed quest points (up to a limit of 5.)")
                 .WithInfo(350, 3, Artist.John_Howe);
             addAttachment("Seal of the Queen", 2, Sphere.Leadership, true)
-                .WithTraits("Item.", "Boom.")
+                .WithTraits("Item.", "Boon.")
                 .WithTextLine("Attach to a hero.")
                 .WithTextLine("Attached hero gets +1 Willpower.")
                 .WithTextLine("Action: Exhaust Seal of the Queen and name a number to search the top 3 cards of your deck. You may choose one of those cards with cost equal to the named number and add it to your hand. Shuffle the rest back into your deck.")

@@ -11,6 +11,7 @@ namespace HallOfBeorn.Models.RingsDb
         public bool is_official { get; set; }
         public string type_code { get; set; }
         public string type_name { get; set; }
+        public string subtype_code { get; set; }
         public string sphere_code { get; set; }
         public string sphere_name { get; set; }
         public string encounter_set { get; set; }
@@ -117,6 +118,9 @@ namespace HallOfBeorn.Models.RingsDb
             Func<LotR.CardType, string> getTypeName = (t) =>
                 t.ToString().Replace('_', ' ');
 
+            Func<Models.CardSubtype, string> getSubtypeCode = (st) =>
+                st == CardSubtype.None ? (string)null : st.ToString().ToLower();
+
             Func<LotR.Sphere, string> getSphereCode = (s) =>
                 s.ToString().ToLower();
 
@@ -174,6 +178,7 @@ namespace HallOfBeorn.Models.RingsDb
                 pack_name = card.CardSet.Name,
                 type_code = getTypeCode(card.CardType),
                 type_name = getTypeName(card.CardType),
+                subtype_code = getSubtypeCode(card.CardSubtype),
                 sphere_code = getSphereCode(card.Sphere),
                 sphere_name = getSphereName(card.Sphere),
                 encounter_set = card.EncounterSet,

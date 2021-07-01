@@ -176,10 +176,12 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithShadow("Shadow: Put the topmost Undead enemy in the discard pile into play engaged with you.")
                 .WithEasyModeQuantity(1)
                 .WithInfo(26, 2, Artist.Cristina_Vela));
-            Cards.Add(LotRCard.Objective("The Black Gate", "", "Journey to the Cross-roads")
+            addObjective("The Black Gate", "Journey to the Cross-roads")
                 .WithUnique()
-                .WithText("Forced: At the end of the planning phase, place each Harad enemy in the staging area facedown underneath The Black ~Gate.\r\nIf there are at least X facedown cards underneath The Black Gate, the players lose the game. X is 3 more than the number of players.")
-                .WithInfo(27, 1, Artist.Davis_Engel));
+                .WithTraits("Mordor.")
+                .WithTextLine("Forced: At the end of the planning phase, place each Harad enemy in the staging area facedown underneath The Black ~Gate.")
+                .WithTextLine("If there are at least X facedown cards underneath The Black ~Gate, the players lose the game. X is 3 more than the number of players.")
+                .WithInfo(27, 1, Artist.Davis_Engel);
             Cards.Add(LotRCard.Enemy("Man of Harad", "", "Journey to the Cross-roads", 36, 1, 3, 1, 4)
                 .WithTraits("Harad.")
                 .WithKeywords("Surge.", "Archery 1.")

@@ -174,6 +174,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithInfo(133, 2, Artist.Michael_Rasmussen);
             addObjective("Sea-ward Tower", EncounterSet.AStormOnCobasHaven)
                 .WithUnique()
+                .WithTraits("Dol Amroth.")
                 .WithKeywords("Guarded.")
                 .WithTextLine("Guarded.")
                 .WithTextLine("If Sea-ward Tower is free of encounters, add it to the staging area, controlled by the players.")
@@ -181,6 +182,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithInfo(134, 1, Artist.Michael_Rasmussen);
             addObjective("Tower of the Gull", EncounterSet.AStormOnCobasHaven)
                 .WithUnique()
+                .WithTraits("Dol Amroth.")
                 .WithKeywords("Guarded.")
                 .WithTextLine("Guarded.")
                 .WithTextLine("If Tower of the Gull is free of encounters, add it to the staging area, controlled by the players.")
@@ -188,6 +190,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithInfo(135, 1, Artist.Ryan_Yee);
             addObjective("The Beacon", EncounterSet.AStormOnCobasHaven)
                 .WithUnique()
+                .WithTraits("Dol Amroth.")
                 .WithKeywords("Guarded.")
                 .WithTextLine("Guarded.")
                 .WithTextLine("If The Beacon is free of encounters, add it to the staging area, controlled by the players.")
@@ -195,6 +198,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithInfo(136, 1, Artist.Titus_Lunter);
             addObjective("Tower of the Heron", EncounterSet.AStormOnCobasHaven)
                 .WithUnique()
+                .WithTraits("Dol Amroth.")
                 .WithKeywords("Guarded.")
                 .WithTextLine("Guarded.")
                 .WithTextLine("If Tower of the Heron is free of encounters, add it to the staging area, controlled by the players.")
