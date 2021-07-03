@@ -55,7 +55,7 @@ namespace HallOfBeorn.Models.LotR
         {
             var template = GetFrontHtmlTemplate(lang);
             return !string.IsNullOrEmpty(template) ?
-                new TextTemplate(this).RenderHtml(template)
+                new TextTemplate(this).RenderHtml(template, lang)
                 : string.Empty;
         }
 
@@ -89,7 +89,7 @@ namespace HallOfBeorn.Models.LotR
         {
             var template = GetBackHtmlTemplate(lang);
             return !string.IsNullOrEmpty(template) ?
-                new TextTemplate(this).RenderHtml(template)
+                new TextTemplate(this).RenderHtml(template, lang)
                 : string.Empty;
         }
 

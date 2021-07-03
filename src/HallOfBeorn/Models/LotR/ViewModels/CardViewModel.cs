@@ -928,7 +928,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         private static string getTranslatedImageExtension(LotRCard card, Language lang)
         {
-            return (card.CardSet != null && card.CardSet.SetType == SetType.A_Long_extended_Party)
+            return (card.CardSet != null && card.CardSet.SetType == SetType.A_Long_extended_Party || (lang == Language.ES && card.CardSet.SetType == SetType.Core))
                 ? "png"
                 : "jpg";
         }

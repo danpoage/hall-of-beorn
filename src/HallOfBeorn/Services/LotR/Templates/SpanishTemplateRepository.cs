@@ -11,7 +11,9 @@ namespace HallOfBeorn.Services.LotR.Templates
         {
             //Core
             AddHtml("Aragorn-Core", "<p class='main-text'>{keyword:Centinela.}</p><p class='main-text'><b>Respuesta:</b> Después de que Aragorn sea asignado a una misión, gasta 1 recurso de su reserva de Recursos para prepararlo.</p><p class='flavor-text'>&ldquo;Soy Aragorn hijo de Arathorn y si por la vida o por la muerte puedo salvaros, asi lo hare.&rdquo;<br>&ndash;La Comunidad del Anillo</p>");
+            AddHtml("Beravor-Core", "<p class='main-text'><b>Acción:</b> Agota a Beravor para elegir un jugador. Ese jugador roba 2 cartas.</p><p class='flavor-text'>Pero en las tierra salvajes más allá de Bree habia nómadas misteriosos. La gente de Bree los llamaba los Montaraces y no sabia de dónde venian.<br>&mdash;La Communidad del Anillo</p>");
             AddHtml("Beorn-Core", "<p class='main-text'><b>Acción:</b> {self} gana +5 {Attack} hasta el final de la fase. Al final de la fase en la que actives este efecto, devuelve a {self} a tu mazo y barajalo. Limite de una vez por ronda.</p><p class='flavor-text'>&ldquo;No necesito vuestro servicio, gracias... pero espero que vosotros necesiteis del mio.&rdquo;<br>&ndash;El Hobbit</p>");
+            AddHtml("Brok-Ironfist-Core", "<p class='main-text'><b>Respuesta:</b> Después de que un Héroe {trait:Enano.@Enano} que controles abandone el juego, pon a {self} en jeugo desde tu mano.</p><p class='flavor-text'>...nadie sabe de lo que es capaz en enano, por venganza o por recobrar lo que le pertenece.<br>&mdash;El Hobbit</p>");
             AddHtml("Guard-of-the-Citadel-Core", "<p class='flavor-text'>&ldquo;Pero los Senores de Minas Tirith continuan<br>luchando, desafiando a nuestros enemigo,<br>guardando el pasaje del rio, desde Argonath al<br>mar.&rdquo; &ndash;Elrond, La Comunidad del Anillo</p>'");
 
             //Children of Eorl

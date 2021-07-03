@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR
 
         private readonly LotRCard card;
 
-        public string RenderHtml(string template)
+        public string RenderHtml(string template, Language lang)
         {
             if (string.IsNullOrEmpty(template))
             {
@@ -57,7 +57,7 @@ namespace HallOfBeorn.Models.LotR
                                     }
                                 }
 
-                                insertHtmlToken(s, type, key, label);
+                                insertHtmlToken(s, type, key, label, lang);
                                 type = string.Empty;
                                 key = string.Empty;
                                 label = string.Empty;
@@ -98,7 +98,7 @@ namespace HallOfBeorn.Models.LotR
             return s.ToString();
         }
 
-        private void insertHtmlToken(StringBuilder sb, string type, string key, string label)
+        private void insertHtmlToken(StringBuilder sb, string type, string key, string label, Language lang)
         {
             if (string.IsNullOrEmpty(type))
             {
@@ -141,7 +141,7 @@ namespace HallOfBeorn.Models.LotR
                     sb.AppendFormat(label.Replace("%27", "'"));
                     break;
                 case "trait":
-                    sb.AppendFormat("<a title='Search: {0} Trait' href='/LotR/Search?Trait={1}' target='_blank'><b><i>{0}</i></b></a>", label, key);
+                    sb.AppendFormat("<a title='Search: {0} Trait' href='/LotR/Search?Trait={1}&Lang={2}' target='_blank'><b><i>{0}</i></b></a>", label, key, lang);
                     break;
                 case "trait-search":
                     sb.AppendFormat("<a title='Search: {0}' href='/LotR/Search?{1}' target='_blank'><b><i>{0}</i></b></a>", label, key);
@@ -304,14 +304,14 @@ namespace HallOfBeorn.Models.LotR
             }
         }
 
-        public string RenderFrontHtml()
+        public string RenderFrontHtml(Language lang)
         {
-            return RenderHtml(card.HtmlTemplate);
+            return RenderHtml(card.HtmlTemplate, lang);
         }
 
-        public string RenderBackHtml()
+        public string RenderBackHtml(Language lang)
         {
-            return RenderHtml(card.HtmlTemplate2);
+            return RenderHtml(card.HtmlTemplate2, lang);
         }
     }
 }

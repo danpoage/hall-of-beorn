@@ -1201,6 +1201,7 @@
     <Compile Include="Services\LotR\Templates\TemplateRepository.cs" />
     <Compile Include="Services\LotR\Templates\TemplateService.cs" />
     <Compile Include="Services\LotR\Translation\Core\CoreSetTranslations.cs" />
+    <Compile Include="Services\LotR\Translation\ES\SpanishTitles.cs" />
     <Compile Include="Services\LotR\Translation\Gender.cs" />
     <Compile Include="Services\LotR\Translation\ITranslationService.cs" />
     <Compile Include="Services\LotR\Translation\Phrase.cs" />

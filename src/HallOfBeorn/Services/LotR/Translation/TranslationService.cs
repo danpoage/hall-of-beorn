@@ -235,7 +235,13 @@ namespace HallOfBeorn.Services.LotR.Translation
             });
 
             titleMap.Add(Language.ES, new Dictionary<string, string> {
+                { "Brok Ironfist", "Brok Puñohierro" },
+                { "Erebor Hammersmith", "Herrero de Erebor" },
                 { "Guard of the Citadel", "Guardia de La Ciudadela" },
+                { "Longbeard Orc Slayer", "Mataorcos de Barba Larga" },
+                { "Miner of the Iron Hills", "Minero de las Colinas de Hierro" },
+                { "Veteran Axehand", "Soldado con Hacha Veterano" },
+
                 { "Defend the Beacon", "Defiende la Almenara" },
                 { "Deeping Bowman", "Arquero del Muro del Bajo" },
                 { "Open the Gates", "Abrir las Puertas" },
@@ -628,6 +634,8 @@ namespace HallOfBeorn.Services.LotR.Translation
 
             traitMap.Add(Language.ES, new Dictionary<string, string> {
                 { "Beorning.", "Beórnida." },
+                { "Craftsman.", "Artesano." },
+                { "Dwarf.", "Enano." },
                 { "Warrior.", "Guerrero." },
                 //CoE
                 { "Ranger.", "Montaraz." },
