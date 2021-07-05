@@ -19,6 +19,7 @@ namespace HallOfBeorn.Models.RingsDb
         public string code { get; set; }
         public string name { get; set; }
         public string traits { get; set; }
+        public string keywords { get; set; }
         public string text { get; set; }
         public string flavor { get; set; }
         public bool is_unique { get; set; }
@@ -130,6 +131,9 @@ namespace HallOfBeorn.Models.RingsDb
             Func<LotR.LotRCard, string> getTraits = (c) =>
                 c.Traits.Any() ? string.Join(" ", c.Traits) : string.Empty;
 
+            Func<LotR.LotRCard, string> getKeywords = (c) =>
+                c.Keywords.Any() ? string.Join(" ", c.Keywords) : null;
+
             Func<LotR.LotRCard, string> getText = (c) =>
                 {
                     var front = c.StageLetter.ToString();
@@ -187,6 +191,7 @@ namespace HallOfBeorn.Models.RingsDb
                 name = card.Title,
                 text = getText(card),
                 traits = getTraits(card),
+                keywords = getKeywords(card),
                 flavor = card.FlavorText,
                 is_unique = card.IsUnique,
                 cost = getCost(card),
