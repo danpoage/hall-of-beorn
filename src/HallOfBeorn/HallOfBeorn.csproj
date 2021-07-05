@@ -1200,9 +1200,13 @@
     <Compile Include="Services\LotR\Templates\ITemplateService.cs" />
     <Compile Include="Services\LotR\Templates\TemplateRepository.cs" />
     <Compile Include="Services\LotR\Templates\TemplateService.cs" />
-    <Compile Include="Services\LotR\Translation\Core\CoreSetTranslations.cs" />
-    <Compile Include="Services\LotR\Translation\ES\SpanishTitles.cs" />
+    <Compile Include="Services\LotR\Translation\FrenchTranslation.cs" />
+    <Compile Include="Services\LotR\Translation\GermanTranslation.cs" />
+    <Compile Include="Services\LotR\Translation\ItalianTranslation.cs" />
+    <Compile Include="Services\LotR\Translation\PolishTranslation.cs" />
+    <Compile Include="Services\LotR\Translation\SpanishTranslation.cs" />
     <Compile Include="Services\LotR\Translation\Gender.cs" />
+    <Compile Include="Services\LotR\Translation\ITranslation.cs" />
     <Compile Include="Services\LotR\Translation\ITranslationService.cs" />
     <Compile Include="Services\LotR\Translation\Phrase.cs" />
     <Compile Include="Services\LotR\Translation\TranslationService.cs" />
@@ -1397,7 +1401,7 @@
     <Content Include="Scripts\Marvel\marvelCardSearch1.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\scenarios-1.0.11.js" />
-    <Content Include="Scripts\settings-1.0.6.js" />
+    <Content Include="Scripts\settings-1.0.7.js" />
     <Content Include="Scripts\storage.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

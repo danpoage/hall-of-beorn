@@ -214,10 +214,10 @@ namespace HallOfBeorn.Models.LotR
                     sb.AppendFormat("<a title='Search: {0} Location' href='/LotR/Search?Trait={1}&CardType=Location' target='_blank'><b><i>{0}</i></b></a>", label, key);
                     break;
                 case "keyword":
-                    sb.AppendFormat("<a title='Search: {0} Keyword' href='/LotR/Search?Keyword={1}' target='_blank'>{0}</a>", label, key);
+                    sb.AppendFormat("<a title='Search: {0} Keyword' href='/LotR/Search?Keyword={1}&Lang={2}' target='_blank'>{0}</a>", label, key, lang);
                     break;
                 case "keyword-hero":
-                    sb.AppendFormat("<a title='Search: Hero with {0} Keyword' href='/LotR/Search?Keyword={1}&CardType=Hero' target='_blank'>hero with {0}</a>", label, key);
+                    sb.AppendFormat("<a title='Search: Hero with {0} Keyword' href='/LotR/Search?Keyword={1}&CardType=Hero&Lang={2}' target='_blank'>hero with {0}</a>", label, key, lang);
                     break;
                 case "type":
                     sb.AppendFormat("<a title='Search: {0} Type' href='/LotR/Search?CardType={1}' target='_blank'>{0}</a>", label, key);
