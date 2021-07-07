@@ -213,7 +213,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ScenarioPack
                 .WithTextLine("*The Dreadnaught has a global hit point value of 15 per player among all groups.")
                 .WithTextLine("Forced: After the Dreadnaught flips, each player puts 1 set-aside unique Corsair enemy into play at random engaged with them.")
                 .WithFlavorLine("With the Dreadnaught weakened and in peril, its enraged crew begins boarding your ship in a final attempt to sieze victory.")
-                .WithTemplate("<p class='main-text'>{keyword:Massive}. Immune to player card effects. Cannot take more than 5 {PerPlayer} damage each round.</p><p class='main-text'>*The Dreadnaught has a global hit point value of 15 per player among all groups.</p><p class='main-text'>Forced: After the Dreadnaught flips, each player puts 1 set-aside unique {trait:Corsair.@Corsair} enemy into play at random engaged with them.</p><p class='flavor-text'>With the Dreadnaught weakened and in peril, its enraged crew begins boarding your ship in a final attempt to sieze victory.</p>{victory:99}")
+                //.WithTemplate("<p class='main-text'>{keyword:Massive}. Immune to player card effects. Cannot take more than 5 {PerPlayer} damage each round.</p><p class='main-text'>*The Dreadnaught has a global hit point value of 15 per player among all groups.</p><p class='main-text'>Forced: After the Dreadnaught flips, each player puts 1 set-aside unique {trait:Corsair.@Corsair} enemy into play at random engaged with them.</p><p class='flavor-text'>With the Dreadnaught weakened and in peril, its enraged crew begins boarding your ship in a final attempt to sieze victory.</p>{victory:99}")
                 .WithVictoryPoints(99)
                 .WithSideB()
                 .WithInfo(13, 1, Artist.Hyungyung_Bae);
@@ -285,7 +285,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ScenarioPack
                 .WithKeywords("Pillage 3.")
                 .WithTextLine("Pillage 3. (After this enemy attacks you, discard the top 3 cards of your deck.)")
                 .WithTextLine("Forced: After an event card is discarded from your deck by Daring Buccaneer's Pillage keyword, deal 1 damage to a character you control.")
-                .WithTemplate("<p class='main-text'>Pillage 3. <i>(After this enemy attacks you, discard the top 3 cards of your deck.)</i></p><p class='main-text'><b>Forced:</b> After an event card is discarded from your deck by Daring Buccaneer's Pillage keyword, deal 1 damage to a character you control.</p>")
+                //.WithTemplate("<p class='main-text'>Pillage 3. <i>(After this enemy attacks you, discard the top 3 cards of your deck.)</i></p><p class='main-text'><b>Forced:</b> After an event card is discarded from your deck by Daring Buccaneer's Pillage keyword, deal 1 damage to a character you control.</p>")
                 .WithInfo(22, 3, Artist.Lin_Hsiang);
             addEnemy("Fierce Marauder", EncounterSet.TheHuntForTheDreadnaught, 19, 2, 3, 2, 3)
                 .WithTraits("Corsair.", "Pillager.")
