@@ -11,6 +11,7 @@ using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.ViewModels;
 using HallOfBeorn.Services.LotR;
 using HallOfBeorn.Services.LotR.Stats;
+using HallOfBeorn.Services.LotR.Templates;
 using HallOfBeorn.Services.LotR.Translation;
 
 namespace TemplateBuilder
@@ -19,9 +20,42 @@ namespace TemplateBuilder
     {
         private static IStatService statService;
 
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
-            Console.WriteLine("Hall of Beorn Card Search\r\nHTML TemplateBuilder 0.0.1");
+            Language lang = Language.EN;
+
+            var productRepo = new ProductRepository();
+            var translationService = new TranslationService();
+            var cardRepo = new LotRCardRepository(productRepo);
+            var templateService = new TemplateService();
+
+            statService = new StatService(cardRepo, translationService);
+
+            foreach (var card in cardRepo.Cards())
+            {
+                if (string.IsNullOrEmpty(card.HtmlTemplate))
+                {
+                    var front = templateService.GetFrontHtml(card.Slug, lang);
+                    if (string.IsNullOrEmpty(front))
+                    {
+                        Console.WriteLine("AddHtml(\"{0}\", \"{1}\");", 
+                            card.Slug, GetTemplate(card, card.Text, card.Shadow, card.FlavorText, lang, true));
+
+                        if (!string.IsNullOrEmpty(card.OppositeText) || !string.IsNullOrEmpty(card.OppositeFlavorText))
+                        {
+                            Console.WriteLine("AddHtml2(\"{0}\", \"{1}\");", 
+                                card.Slug, GetTemplate(card, card.OppositeText, string.Empty, card.OppositeFlavorText, lang, false));
+                        }
+                    }
+                }
+            }
+
+            return 0;
+        }
+
+        static void Main2(string[] args)
+        {
+            Console.WriteLine("Hall of Beorn Card Search: Template Builder 0.0.1");
 
             var productRepo = new ProductRepository();
             var translationService = new TranslationService();
@@ -38,14 +72,14 @@ namespace TemplateBuilder
                 if (string.IsNullOrEmpty(c.HtmlTemplate))
                 {
                     Console.WriteLine("  Writing template1 for : " + c.Slug);
-                    var text = string.Format("AddHtml(\"{0}\", \"{1}\");\r\n", c.Slug, GetTemplate(c, c.Text, c.Shadow, c.FlavorText, lang));
+                    var text = string.Format("AddHtml(\"{0}\", \"{1}\");\r\n", c.Slug, GetTemplate(c, c.Text, c.Shadow, c.FlavorText, lang, true));
                     File.AppendAllText(file1, text);
                 }
 
                 if (string.IsNullOrEmpty(c.HtmlTemplate2) && !string.IsNullOrEmpty(c.OppositeText))
                 {
                     Console.WriteLine("  Writing template2 for : " + c.Slug);
-                    var text = string.Format("AddHtml(\"{0}\", \"{1}\");\r\n", c.Slug, GetTemplate(c, c.OppositeText, string.Empty, c.OppositeFlavorText, lang));
+                    var text = string.Format("AddHtml2(\"{0}\", \"{1}\");\r\n", c.Slug, GetTemplate(c, c.OppositeText, string.Empty, c.OppositeFlavorText, lang, false));
                     File.AppendAllText(file2, text);
                 }
             }
@@ -58,7 +92,7 @@ namespace TemplateBuilder
         {
             if (isParagraph)
             {
-                html.Append("<p>");
+                html.Append("<p class='main-text'>");
             }
 
             var effect = CardEffect.Parse(statService, card, text, lang);
@@ -105,10 +139,23 @@ namespace TemplateBuilder
             }
         }
 
-        private static string GetTemplate(LotRCard card, string text, string shadowText, string flavorText, Language? lang)
+        private static string GetTemplate(LotRCard card, string text, string shadowText, string flavorText, Language? lang, bool isFront)
         {
             var html = new StringBuilder();
 
+            var isQuest = card.CardType == CardType.Quest || card.CardType == CardType.Player_Side_Quest || card.CardType == CardType.Encounter_Side_Quest;
+
+            if (isQuest)
+            {
+                if (!string.IsNullOrEmpty(flavorText))
+            {
+                html.Append("<p class='flavor=text'>");
+                html.Append(flavorText.Replace("\r\n", "<br>").Replace("-", "&ndash;"));
+                html.Append("</p>");
+            }
+            }
+
+            /*
             if (card.Keywords.Count() > 0)
             {
                 html.Append("<p>");
@@ -117,7 +164,7 @@ namespace TemplateBuilder
                     AddEffect(html, card, keyword, false, lang);
                 }
                 html.Append("</p>");
-            }
+            }*/
 
             foreach (var line in text.SplitLines())
             {
@@ -133,11 +180,15 @@ namespace TemplateBuilder
                 html.Append("</p>");
             }
 
-            if (!string.IsNullOrEmpty(flavorText))
+            if (!isQuest && !string.IsNullOrEmpty(flavorText))
             {
                 html.Append("<p class='flavor=text'>");
                 html.Append(flavorText.Replace("\r\n", "<br>").Replace("-", "&ndash;"));
                 html.Append("</p>");
+            }
+
+            if (isFront && card.VictoryPoints > 0) {
+                html.Append("{victory:" + card.VictoryPoints.ToString() + "}");
             }
 
             html.Replace("\"", "&quot;");

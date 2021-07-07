@@ -17,12 +17,12 @@ namespace HallOfBeorn.Services.LotR.Templates
 
         protected abstract void Initialize();
 
-        protected void AddHtml(string slug, string html)
+        public void AddHtml(string slug, string html)
         {
             htmlFrontBySlug[slug] = html;
         }
 
-        protected void AddHtml2(string slug, string html)
+        public void AddHtml2(string slug, string html)
         {
             htmlBackBySlug[slug] = html;
         }
