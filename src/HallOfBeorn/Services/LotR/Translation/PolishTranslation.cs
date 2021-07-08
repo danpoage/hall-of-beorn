@@ -15,18 +15,32 @@ namespace HallOfBeorn.Services.LotR.Translation
         public Dictionary<string, string> CardTypeNames()
         {
             return new Dictionary<string,string>{
-                { "Player", "Gracz" },
-                { "Hero", "Bohater" },
-                { "Ally", "Sprzymierzenieć" },
+                { "Player", "Gracza" },
                 { "Character", "Postać" },
+                { "Hero", "Bohater" },
+                { "Ally", "Sprzymierzeniec" },
                 { "Attachment", "Dodatek" },
                 { "Event", "Wydarzenie" },
-                { "Encounter", "Spotkanie" },
+                { "Treasure", "Skarb" },
+                { "Player-Side-Quest", "Poboczna wyprawa (Talia Gracza)" },
+                { "Contract", "Kontrakt" },
+                { "Quest", "Wyprawa" },
+                { "Setup", "Przygotowanie" },
+                { "Nightmare-Setup", "Przygotowanie (tryb Koszmarny)" },
+                { "Campaign", "Kampania" },
+                { "GenCon-Setup", "Przygotowanie (GenCon)" },
+                { "Scenario", "Scenariusz" },
+                { "Encounter", "Przeciwności" },
                 { "Enemy", "Wróg" },
+                { "Ship-Enemy", "Statek-Wróg" },
                 { "Location", "Obszar" },
                 { "Treachery", "Podstęp" },
+                { "Encounter-Side-Quest", "Poboczna wyprawa (Talia Przeciwności)" },
                 { "Objective", "Cel" },
-                { "Quest", "Zadanie" },
+                { "Objective-Hero", "Cel-Bohater" },
+                { "Objective-Ally", "Cel-Sprzymierzeniec" },
+                { "Objective-Location", "Cel-Obszar" },
+                { "Ship-Objective", "Statek-Cel" }
             };
         }
 

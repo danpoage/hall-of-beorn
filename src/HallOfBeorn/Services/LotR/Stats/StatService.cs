@@ -184,8 +184,8 @@ namespace HallOfBeorn.Services.LotR.Stats
         public IEnumerable<string> CardTypes(Language? lang)
         {
             var translated = lang.GetValueOrDefault(Language.EN) == Language.EN
-                ? typeof(CardType).GetSelectListItems().Select(ct => ct.Text)
-                : typeof(CardType).GetSelectListItems().Select(ct => translationService.TranslateCardTypeName(lang.Value, ct.Text.Replace(" ", "-")));
+                ? typeof(CardType).GetSelectListItems().Where(ct => ct.Text != "Any").Select(ct => ct.Text)
+                : typeof(CardType).GetSelectListItems().Where(ct => ct.Text != "Any").Select(ct => translationService.TranslateCardTypeName(lang.Value, ct.Text.Replace(" ", "-")));
 
             return translated;
         }
