@@ -928,9 +928,9 @@ namespace SetBuilder
 
         private static int WriteTranslations(string language, string setName)
         {
-            var path = string.Format("./ALeP/Children-of-Eorl.{0}.json", language);
+            var path = string.Format("./ALeP/The-Aldburg-Plot.{0}.json", language);
 
-            var product = new HallOfBeorn.Models.LotR.Products.Community.ChildrenOfEorlProduct();
+            var product = new HallOfBeorn.Models.LotR.Products.Community.TheAldburgPlotProduct();
 
             var alepCards = ALePReader.ReadFile(path);
 

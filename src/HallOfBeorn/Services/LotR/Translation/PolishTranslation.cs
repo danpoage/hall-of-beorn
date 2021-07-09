@@ -64,6 +64,9 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Guarded (enemy).", "Strzeżony (wróg)." },
                 { "Restricted.", "Ograniczenie." },
                 { "Guarded (location).", "Strzeżony (obszar)." },
+
+                { "Secrecy 1.", "Tajność 1." },
+                { "Guarded (location).", "Strzeżony (obszar)." },
             };
         }
 
@@ -159,6 +162,43 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Thieves and Coursers", "Koniokradzi" },
                 { "The King's Stallion", "Królewskie rumaki" },
                 { "The Sweeping Tide", "Nadciągające niebezpieczeństwo" },
+                //The Aldburg Plot
+                { "Fatty Bolger", "Grubas Bolger" },
+                { "Widfast", "Widfasta" },
+                { "Lily Cotton", "Lili Cotton" },
+                { "A Lesson in Caution", "Lekcja Ostrożności" },
+                { "There and Back Again", "Tam i z powrotem" },
+                { "Buckland Shirriff", "Szeryf Bucklandu" },
+                { "Weep No More!", "Otrzyjmy Łzy!" },
+                { "Fear! Fire! Foes!", "Trwoga! Gore! Do broni!" },
+                { "Horn-call of Buckland", "Sygnał Alarmowy Bucklandu" },
+                { "Young Tom", "Młody Tom" },
+                { "Red Harvest", "Krwawe Żniwo" },
+                { "The Prisoner in White", "Więzień w Bieli" },
+                { "The Man with the Twisted Lip", "Mężczyzna z Wywiniętą Wargą" },
+                { "A Fire Rises", "Ogień Płonie" },
+                { "A Case of Identity", "Sprawa Tożsamości" },
+                { "Whisperer in the Darkness", "Szepcząca w Ciemności" },
+                { "Spreading Inferno", "Szalejąca Pożoga" },
+                { "The Whisperer", "Szepcząca" },
+                { "The Spy Master", "Mistrz Szpiegów" },
+                { "Ossian", "Osjan" },
+                { "Garrison Barracks", "Koszary Garnizonu" },
+                { "The Horse's Tail", "Pod Końskim Ogonem" },
+                { "The Armoury", "Zbrojownia" },
+                { "Great Mead Hall", "Wielka Hala Miodów Pitnych" },
+                { "Town Guard", "Strażnik Miejski" },
+                { "Dunlending Agents", "Agenci Dunlendingów" },
+                { "Aldburg Malcontent", "Malkontent z Aldburga" },
+                { "Misty Street", "Mglista Ulica" },
+                { "Well-lit Hall", "Oświetlona Sala" },
+                { "Decrepit Hovel", "Zgniła Rudera" },
+                { "Taken by the Night", "Zabrany przez Noc" },
+                { "False Lead", "Fałszywy Trop" },
+                { "Sudden Ambush", "Nagła Zasadzka" },
+                { "Evil Under the Moon", "Zło Kryjące się w Blasku Księżyca" },
+                { "Gathering Clues", "Zbieranie Wskazówek" },
+                { "The Uncertain Dawn", "Niepewny Świt" },
             };
         }
 
@@ -185,6 +225,16 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Hills.", "Wzgórza." },
                 { "Stair.", "Schody." },
                 { "Camp.", "Obóz." },
+                { "Woodman.", "Leśny człowiek." },
+                
+                { "Shirriff.", "Szeryf." },
+                { "Creature.", "Istota." },
+                { "Inferno.", "Pożoga." },
+                { "Suspicious.", "Podejrzany." },
+                { "Traitor.", "Zdrajca." },
+                { "Spy.", "Szpieg." },
+                { "Assassin.", "Zabójca." },
+                { "Garrison.", "Garnizon." },
             };
         }
     }
