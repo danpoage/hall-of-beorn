@@ -464,12 +464,14 @@ function initQuestMap() {
         'You have pursued the Goblins that attacked a woodman village to the mountains of Mirkwood. The trail leads over a steep ridge where you discover the forgotten Dwarf home of Nibin-Dûm. You light a torch and enter in.');
 
     //Children of Eorl and Oaths of the Rohirrim
-    addQuest(884, 775, 'Ambush at Erelas', 'CoE', 'Ambush-at-Erelas', 'Children-of-Eorl/Drive-them-Away-1A.jpg',
+    addQuest(883, 770, 'Ambush at Erelas', 'CoE', 'Ambush-at-Erelas', 'Children-of-Eorl/Drive-them-Away-1A.jpg',
         'Along the Great West Road, you come upon a Rohirrim camp in the shadow of the green, bald beacon hill of Erelas. But the quiet of your journey is interrupted by a sudden attack from the shadows! The clash of steel and the cries of men soon reach your ears. You must drive them away and free the camp from further destruction!');
     addQuest(860, 775, 'The Battle for the Beacon', 'CoE', 'The-Battle-for-the-Beacon', 'Children-of-Eorl/Battle-for-the-Hill-1A.jpg',
         'Dunlendings and traitorous Rohirrim have captured the beacon at Erelas. Reclaim the hill at any cost!');
     addQuest(824, 743, 'The Horse Lord’s Ire', 'CoE', 'The-Horse-Lord\'s-Ire', 'Children-of-Eorl/Thieves-and-Coursers-1A.jpg',
         'Orcs have invaded the Eastfold, rampaging across the land and capturing King Thengel’s prized warhorses.');
+    addQuest(784, 713, 'The Aldburg Plot', 'CoE', 'The-Aldburg-Plot', 'The-Aldburg-Plot/Evil-Under-the-Moon-1A.jpg',
+        'With the knowledge that a faction of rebels has taken up residence in Aldburg, Ealdwulf entreats you to root them out.');
 
     var mapElement = document.getElementById('quest-map');
     if (mapElement) {
