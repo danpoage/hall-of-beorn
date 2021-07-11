@@ -90,11 +90,11 @@ namespace HallOfBeorn.Handlers.LotR
                 );
             }
 
-            viewModel.TextEffects.AddRange(ParseCardEffects(card, card.Text, lang));
-            viewModel.OppositeTextEffects.AddRange(ParseCardEffects(card, card.OppositeText, lang));
+            //viewModel.TextEffects.AddRange(ParseCardEffects(card, card.Text, lang));
+            //viewModel.OppositeTextEffects.AddRange(ParseCardEffects(card, card.OppositeText, lang));
 
-            if (!string.IsNullOrEmpty(card.Shadow))
-                viewModel.ShadowEffects.Add(CardEffect.Parse(_statService, card, card.Shadow, lang));
+            //if (!string.IsNullOrEmpty(card.Shadow))
+            //    viewModel.ShadowEffects.Add(CardEffect.Parse(_statService, card, card.Shadow, lang));
 
             viewModel.CardTypeName = _translationService.TranslateCardTypeName(lang, viewModel.CardType);
         }

@@ -412,8 +412,11 @@ Forced: After this stage is defeated, advance to stage 3B at the beginning of th
             addEvent("Ho! Tom Bombadil!", 0, Sphere.Neutral)
                 .WithBoon()
                 .WithTraits("Song.")
-                .WithText("Setup: The first player adds this card to his hand.\r\nResponse: Add this card to the victory display and remove it from the campaign pool to cancel the \"when revealed\" effects of an encounter card just revealed from the encounter deck.")
-                .WithFlavor("By fire, sun and moon, harken now and hear us!\r\nCome, Tom Bombadil, for our need is near us!\r\n-Frodo, The Fellowship of the Ring")
+                .WithTextLine("Setup: The first player adds this card to his hand.")
+                .WithTextLine("Response: Add this card to the victory display and remove it from the campaign pool to cancel the \"when revealed\" effects of an encounter card just revealed from the encounter deck.")
+                .WithFlavorLine("By fire, sun and moon, harken now and hear us!")
+                .WithFlavorLine("Come, Tom Bombadil, for our need is near us!")
+                .WithFlavorLine("-Frodo, The Fellowship of the Ring")
                 .WithVictoryPoints(1)
                 .WithInfo(21, 1, Artist.Romana_Kendelic);
         }

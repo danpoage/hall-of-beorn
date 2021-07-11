@@ -26,6 +26,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             ScenarioGroup.FirstAge,
             ScenarioGroup.DoomMastered,
             ScenarioGroup.ChildrenOfEorl,
+            ScenarioGroup.OathsOfTheRohirrim,
         };
 
         public IEnumerable<ScenarioGroupViewModel> ScenarioStandardGroups()

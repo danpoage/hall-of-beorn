@@ -96,6 +96,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithTextLine("Response: After resolving the staging of an encounter card without surge, exhaust Gavin to give that card surge and add 1 resource to the pool of a Scout hero you control. If the next encounter card revealed is not a location, discard it without resolving its effects.")
                 .WithTemplate("<p class='main-text'>Cannot have attachments.</p><p class='main-text'><b>Response:</b> After resolving the staging of an encounter card without surge, exhaust {self} to give that card surge and add 1 resource to the pool of a {trait:Scout.@Scout} hero you control. If the next encounter card revealed is not a location, discard it without resolving its effects.</p>")
                 .WithInfo(11, 3, Artist.Paul_Canavan);
+
             addEncounterSideQuest("Red Harvest", EncounterSet.TheAldburgPlot, 4)
                 .WithFlavorLine("With brutal speed, The Whisperer's men fall upon you. You'll have to fight tooth and nail to make your way to the armoury.")
                 .WithTextLine("Forced: After an enemy engages a player, that player deals 2 damage to a character they control.")
@@ -263,6 +264,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithTextLine("Forced: After Town Guard attacks and destroys a character you control. discard 1 resource from each hero you control with a Clue objective.")
                 .WithFlavorLine("\"Do I hope in vain that you have been sent to me for a help in doubt and need?\"")
                 .WithFlavorLine("-Éomer, The Two Towers")
+                .WithEasyModeQuantity(2)
                 .WithInfo(26, 3, Artist.Bethesda_Softworks);
             addEnemy("Dunlending Agents", EncounterSet.TheAldburgPlot, 35, 1, 4, 2, 4)
                 .WithTraits("Dunland.")
@@ -270,6 +272,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithTextLine("Forced: After Dunlending Agents attacks and destroys a character you control, deal 1 damage to each hero you control with a Clue objective.")
                 .WithFlavorLine("The Dunlendings and many men of the garrison of the Burg were at work.")
                 .WithFlavorLine("-The Return of the King")
+                .WithEasyModeQuantity(2)
                 .WithInfo(27, 3, Artist.Grafit_Studio);
             addEnemy("Aldburg Malcontent", EncounterSet.TheAldburgPlot, 25, 1, 3, 2, 3)
                 .WithTraits("Rohan.", "Traitor.")
@@ -304,6 +307,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithTextLine("When Revealed: Each player removes a hero they control with an attached Clue objective from the quest, if able. Then, each player exhausts a hero they control that is not committed to the quest.")
                 .WithFlavorLine("\"...are you now trying to snare me with a flasehood?\"")
                 .WithFlavorLine("-Frodo Baggins, The Two Towers")
+                .WithEasyModeQuantity(2)
                 .WithInfo(33, 3, Artist.Gunship_Revolution);
             addTreachery("Sudden Ambush", EncounterSet.TheAldburgPlot)
                 .WithTextLine("When Revealed: The first player must choose: either raise your threat by 4, or the topmost enemy in the encounter discard pile engages you and makes an immediate attack. You must declare the ready character you control with the highest Willpower as the defender for this attack, if able.")
@@ -316,11 +320,13 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithOppositeTextLine("Enemies cannot be optionally engaged.")
                 .WithOppositeTextLine("Forced: At the end of the round, raise each player's threat by 1.")
                 .WithOppositeTextLine("If the players control 1 or more Clue objectives, advance to the next stage.")
+                .WithIncludedEncounterSets(EncounterSet.RohanEncampment, EncounterSet.FaithlessRohirrim)
                 .WithInfo(35, 1, Artist.Nick_Silva);
             addQuest("Gathering Clues", EncounterSet.TheAldburgPlot, 2, 'A', Card.VALUE_NA)
                 .WithFlavorLine("The Rohirric town of Aldburg is rife with mystery. Around every corner waits a new riddle, and behind every riddle a sharpened, desperate blade. Before the sun rises, you will have to go deeper to uncover the truth.")
                 .WithOppositeFlavorLine("It appears Aldburg is playing host to a twin-headed mystery. If you can only graps a single thread, you may be able to untangle this corrupt and biter web. It is past midnight. Time is drawing thin.")
                 .WithOppositeTextLine("Response: At the end of the round, if the players contol at least 4 Clue objectives, they may advance to stage 3A.")
+                .WithIncludedEncounterSets(EncounterSet.RohanEncampment, EncounterSet.FaithlessRohirrim)
                 .WithInfo(36, 1, Artist.Igor_Kieryluk);
             addQuest("The Uncertain Dawn", EncounterSet.TheAldburgPlot, 3, 'A', 45)
                 .WithFlavorLine("As sun breaks over the streets of Aldburg, your cornered foes reveal themselves. You have gathered your clues. Now, bring them to bear as you battle for your lives - and for the soul of Rohan.")
@@ -328,6 +334,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithOppositeTextLine("The Uncertain Dawn gets -5 quest points for each Clue objective the players control.")
                 .WithOppositeTextLine("Forced: At the beginning of the quest phase, discard cards from the top of the encounter deck until an enemy is discarded. Reveal that enemy and add it to the staging area.")
                 .WithOppositeTextLine("This stage cannot be defeated except at the end of the round. If the players defeat this stage, they win the game.")
+                .WithIncludedEncounterSets(EncounterSet.RohanEncampment, EncounterSet.FaithlessRohirrim)
                 .WithInfo(37, 1, Artist.Min_Bak);
         }
     }

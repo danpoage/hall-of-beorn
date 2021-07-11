@@ -107,6 +107,7 @@ namespace HallOfBeorn.Services.LotR.Templates
             TheBattleOfLakeTown();
             TheStoneOfErech();
             TheOldForest();
+            FogOnTheBarrowDowns();
             TheRuinsOfBelegost();
             MurderAtThePrancingPony();
             TheSiegeOfAnnuminas();
