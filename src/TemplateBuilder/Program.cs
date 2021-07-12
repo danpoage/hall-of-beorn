@@ -149,7 +149,7 @@ namespace TemplateBuilder
             {
                 if (!string.IsNullOrEmpty(flavorText))
             {
-                html.Append("<p class='flavor=text'>");
+                html.Append("<p class='flavor-text'>");
                 html.Append(flavorText.Replace("\r\n", "<br>").Replace("-", "&ndash;"));
                 html.Append("</p>");
             }
@@ -182,7 +182,7 @@ namespace TemplateBuilder
 
             if (!isQuest && !string.IsNullOrEmpty(flavorText))
             {
-                html.Append("<p class='flavor=text'>");
+                html.Append("<p class='flavor-text'>");
                 html.Append(flavorText.Replace("\r\n", "<br>").Replace("-", "&ndash;"));
                 html.Append("</p>");
             }
