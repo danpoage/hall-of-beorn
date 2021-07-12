@@ -26,8 +26,9 @@ namespace HallOfBeorn.Models.Characters
             addGroup("The Shire", "The-Shire");
 
             addFamily("Tom Cotton (Father)", "Tom-Cotton");
+            addFamily("Lily Cotton (Mother)", "Lily-Cotton");
             addFamily("Sam Gamgee (Husband)", "Sam-Gamgee");
-            addFamily("Tolman 'the younger' (Brother)");
+            addFamily("Young Tom (Brother)", "Young-Tom");
             addFamily("Wilcome (Brother)");
             addFamily("Bowman (Brother)");
             addFamily("Carl (Brother)");

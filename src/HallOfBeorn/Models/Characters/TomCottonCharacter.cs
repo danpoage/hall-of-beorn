@@ -25,11 +25,12 @@ namespace HallOfBeorn.Models.Characters
 
             addGroup("The Shire", "The-Shire");
 
+            addFamily("Lily Cotton (Wife)", "Lily-Cotton");
             addFamily("Rosie Cotton (Daughter)", "Rosie-Cotton");
-            addFamily("Tolman 'the younger' (Son)");
-            addFamily("Wilcome (Son)");
-            addFamily("Bowman (Son)");
-            addFamily("Carl (Son)");
+            addFamily("Young Tom (Son)", "Young-Tom");
+            addFamily("Jolly (Son)");
+            addFamily("Nick (Son)");
+            addFamily("Nibs (Son)");
             addFamily("Sam Gamgee (Son in Law)", "Sam-Gamgee");
         }
     }

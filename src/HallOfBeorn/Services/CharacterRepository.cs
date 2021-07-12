@@ -101,6 +101,7 @@ namespace HallOfBeorn.Services
             add(new LandrovalCharacter());
             add(new LeaflockCharacter());
             add(new LegolasCharacter());
+            add(new LilyCottonCharacter());
             add(new LindirCharacter());
             add(new LorienPlace());
             add(new LothirielCharacter());
@@ -146,6 +147,7 @@ namespace HallOfBeorn.Services
             add(new TomCottonCharacter());
             add(new ThranduilCharacter());
             add(new TreebeardCharacter());
+            add(new YoungTomCharacter());
 
             //Things
             add(new Glamdring());

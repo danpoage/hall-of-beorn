@@ -33,6 +33,8 @@ namespace HallOfBeorn.Models.Characters
 
             addGroup("The Shire", "The-Shire");
             addGroup("The Conspiracy");
+
+            LotRCard("Fatty-Bolger-TAP");
         }
     }
 }

@@ -217,6 +217,7 @@
     <Compile Include="Models\Characters\GalionCharacter.cs" />
     <Compile Include="Models\Characters\Groups\TheThreeHuntersGroup.cs" />
     <Compile Include="Models\Characters\HerubrandCharacter.cs" />
+    <Compile Include="Models\Characters\LilyCottonCharacter.cs" />
     <Compile Include="Models\Characters\LothirielCharacter.cs" />
     <Compile Include="Models\Characters\MeneldorCharacter.cs" />
     <Compile Include="Models\Characters\MorwenSteelsheenCharacter.cs" />
@@ -229,6 +230,7 @@
     <Compile Include="Models\Characters\Things\Orcrist.cs" />
     <Compile Include="Models\Characters\Things\Sting.cs" />
     <Compile Include="Models\Characters\ThranduilCharacter.cs" />
+    <Compile Include="Models\Characters\YoungTomCharacter.cs" />
     <Compile Include="Models\Creator.cs" />
     <Compile Include="Models\Digital\AttachmentSlot.cs" />
     <Compile Include="Models\Digital\CardSets\DwalinPack.cs" />
@@ -1377,7 +1379,7 @@
     <Content Include="Images\willpower-small.png" />
     <Content Include="Scripts\arkhamAutocomplete1.js" />
     <Content Include="Scripts\arkhamCardSearch.js" />
-    <Content Include="Scripts\autocomplete-1.0.1.js" />
+    <Content Include="Scripts\autocomplete-1.0.2.js" />
     <Content Include="Scripts\cardDetails-1.0.1.js" />
     <Content Include="Scripts\cardSearch-1.0.2.js" />
     <Content Include="Scripts\cookie-1.0.1.js" />

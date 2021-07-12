@@ -70,6 +70,9 @@ namespace HallOfBeorn.Models.Characters
 
             addFamily("Gaffer Gamgee (Father)", "Gaffer-Gamgee");
             addFamily("Rosie Cotton (Wife)", "Rosie-Cotton");
+            addFamily("Tom Cotton (Father in Law)", "Tom-Cotton");
+            addFamily("Lily Cotton (Mother in Law)", "Lily-Cotton");
+            addFamily("Young Tom (Brother in Law)", "Young-Tom");
 
             addGroup("The Shire", "The-Shire");
             addGroup("The Fellowship", "The-Fellowship");
