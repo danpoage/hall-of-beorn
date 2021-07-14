@@ -24,7 +24,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithInfo(1, 1, Artist.Torbjorn_Kallstrom);
             addHero("Frodo Baggins", 7, Sphere.Leadership, 2, 1, 2, 2)
                 .WithTraits("Hobbit.")
-                .WithTextLine("Response: After Frodo commits to a quest, spend 1 resource from his resource pool to ready another questing unique character. If you quest successfully, reduce your threat by 1.")
+                .WithTextLine("Response: After Frodo Baggins commits to the quest, spend 1 resource from his resource pool to ready another unique character committed to the quest. If you quest successfully this phase, reduce your threat by 1.")
                 .WithFlavorLine("\"Keep your tempers and hold your hands to the last possible moment!\"")
                 .WithFlavorLine("-The Return of the King")
                 .WithCommunityVersion("RiddermarkLord/Frodo-Baggins-Leadership-Hero-1")
