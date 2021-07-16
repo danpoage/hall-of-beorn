@@ -1,15 +1,15 @@
 ﻿using System;
 
-namespace HallOfBeorn.Models.LotR.Community.LordsOfGondor
+namespace HallOfBeorn.Models.LotR.Community.TheLordsOfGondor
 {
-    public class TheGreyCompanyChannel
+    public class TheLordsOfGondorChannel
         : Creator
     {
-        public LordsOfChannel()
-            : base("Lords of Gondor Channel",
+        public TheLordsOfGondorChannel()
+            : base("The Lords of Gondor Channel",
             "https://www.youtube.com/channel/UC09txNMi_RVwmZRGLzdpYUg",
             "https://www.youtube.com/feeds/videos.xml?channel_id=UC09txNMi_RVwmZRGLzdpYUg",
-            LinkType.Lords_of_Gondor)
+            LinkType.YouTube)
         {
             AddYear(2021);
             AddLink("Nightmare Flight from Moria 2P - Lords of Gondor S2 Ep 3", 

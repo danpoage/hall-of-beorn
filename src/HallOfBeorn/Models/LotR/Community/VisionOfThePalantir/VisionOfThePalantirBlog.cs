@@ -64,7 +64,7 @@ namespace HallOfBeorn.Models.LotR.Community.VisionOfThePalantir
             AddLink("Deckbuilding: Deadmen's Dike", "https://visionofthepalantir.com/2020/12/21/deckbuilding-deadmens-dike/", "Dec 21 2020");
             AddLink("First Impressions: The Hunt for the Dreadnaught", "https://visionofthepalantir.com/2020/12/20/first-impressions-the-hunt-for-the-dreadnaught/", "Dec 20 2020");
             AddLink("A long-extended Party", "https://visionofthepalantir.com/2020/12/08/a-long-extended-party/", "Dec 8 2020");
-            AddLink("LOTR LCG: Art-icle", "https://visionofthepalantir.com/2020/12/05/lotr-lcg-art-icle/", "Dec 52020");
+            AddLink("LOTR LCG: Art-icle", "https://visionofthepalantir.com/2020/12/05/lotr-lcg-art-icle/", "Dec 5 2020");
             AddLink("Month in Review: November 2020", "https://visionofthepalantir.com/2020/12/01/month-in-review-november-2020/", "Dec 1 2020");
             AddLink("Journey Along the Anduin", "https://visionofthepalantir.com/2020/11/29/journey-along-the-anduin-2/", "Nov 29 2020");
             AddLink("Monthly Poll: November 2020", "https://visionofthepalantir.com/2020/11/27/monthly-poll-november-2020/", "Nov 27 2020");

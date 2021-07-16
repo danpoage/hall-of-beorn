@@ -407,6 +407,7 @@
     <Compile Include="Models\LotR\Community\TheCardGameCooperative\TheCardGameCooperativePodcast.cs" />
     <Compile Include="Models\LotR\Community\TheGreyCompany\TheGreyCompanyChannel.cs" />
     <Compile Include="Models\LotR\Community\TheGreyCompany\TheGreyCompanyPodcast.cs" />
+    <Compile Include="Models\LotR\Community\TheLordsOfGondor\TheLordsOfGondorChannel.cs" />
     <Compile Include="Models\LotR\Community\TheProgressionSeries\TheProgressionSeriesChannel.cs" />
     <Compile Include="Models\LotR\Community\TheRoad\TheRoadBlog.cs" />
     <Compile Include="Models\LotR\Community\TheSecondhandTook\TheSecondhandTookBlog.cs" />
