@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
 {
@@ -22,6 +19,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
 
             AddTheLineUnbrokenLink("G7", "xuK6zLmZoTc");
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2018/01/16/murder-at-the-prancing-pony/", Title);
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2020/05/22/murder-at-the-prancing-pony/");
 
             AddEncounterSet(EncounterSet.MurderAtThePrancingPony);
             AddEncounterSet(EncounterSet.Investigation);

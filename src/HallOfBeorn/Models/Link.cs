@@ -132,7 +132,6 @@ namespace HallOfBeorn.Models
                     return string.Format("https://ellibrorojodebolsoncerrado.wordpress.com/?s={0}", title);
                 case LinkType.Die_Manner_von_Gondor:
                     return string.Format("https://menofgondor.wordpress.com/?s={0}", title);
-
                 case LinkType.Hall_of_Beorn_LotR_Detail:
                 case LinkType.Hall_of_Beorn_LotR_Image:
                     //var slug = string.IsNullOrEmpty(card.SlugSuffix) ? card.Slug : card.Slug + card.SlugSuffix;

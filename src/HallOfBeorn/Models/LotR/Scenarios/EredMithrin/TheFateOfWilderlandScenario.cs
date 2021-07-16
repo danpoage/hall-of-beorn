@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
 {
@@ -22,6 +19,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
             QuestCompanionSlug = "ered-mithrin-quest-the-fate-of-wilderland";
             DifficultyRating = 5.5f;
             Votes = 8;
+
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2020/08/24/the-fate-of-wilderland/");
 
             AddEncounterSet(EncounterSet.TheFateOfWilderland);
             AddEncounterSet(EncounterSet.GreyMountainGoblins);

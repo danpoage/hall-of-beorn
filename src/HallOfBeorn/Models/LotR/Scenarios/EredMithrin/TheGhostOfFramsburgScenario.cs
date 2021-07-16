@@ -23,6 +23,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
             DifficultyRating = 5.6f;
             Votes = 5;
 
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2020/07/15/the-ghost-of-framsburg/");
+
             AddEncounterSet(EncounterSet.TheGhostOfFramsburg);
             AddEncounterSet(EncounterSet.WildCreatures);
             AddEncounterSet(EncounterSet.AfraidOfTheDark);

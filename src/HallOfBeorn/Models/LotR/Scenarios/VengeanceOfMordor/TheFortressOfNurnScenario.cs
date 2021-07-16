@@ -21,6 +21,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.VengeanceOfMordor
 
             DifficultyRating = 7.4f;
             Votes = 7;
+
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2021/02/22/deckbuilding-the-fortress-of-nurn/");
+
             AddEncounterSet(EncounterSet.TheFortressOfNurn);
             AddEncounterSet(EncounterSet.UlchorsGuard);
             AddEncounterSet(EncounterSet.UnderGuard);

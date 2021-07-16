@@ -19,6 +19,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AShadowInTheEast
             DifficultyRating = 5.0f;
             Votes = 7;
 
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2020/10/01/danger-in-dorwinion/");
+
             AddEncounterSet(EncounterSet.DangerInDorwinion);
             AddEncounterSet(EncounterSet.ServantsOfSauron);
             AddEncounterSet(EncounterSet.CityOfRhun);

@@ -495,6 +495,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithOppositeTextLine("You cannot play allies or put allies into play.")
                 .WithOppositeTextLine("Each character you control gets +1 Willpower, +1 Attack, and +1 Defense.")
                 .WithOppositeTextLine("Forced: After a character you control leaves play, flip this card over.")
+                //.WithVisionOfThePalantirLink("https://visionofthepalantir.com/2020/03/05/fellowship/")
                 .WithInfo(74, 1, Artist.Leanna_Crossan);
             addQuest("Chased by Easterlings", EncounterSet.TheRiverRunning, 1, 'A', 5)
                 .WithTextLine("Setup: Set Warriors of the East aside, out of play. Add Easterling Pursuit and 1 copy of River Running to the staging area. Each player adds 1 different Easterling enemy to the staging area. Shuffle the encounter deck.")

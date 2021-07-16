@@ -25,6 +25,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.VengeanceOfMordor
             DifficultyRating = 6.8f;
             Votes = 6;
 
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2021/07/15/the-city-of-ulfast/");
+
             AddEncounterSet(EncounterSet.TheCityOfUlfast);
             AddEncounterSet(EncounterSet.ServantsOfSauron);
             AddEncounterSet(EncounterSet.UnderGuard);

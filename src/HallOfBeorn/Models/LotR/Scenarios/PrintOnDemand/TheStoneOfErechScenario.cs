@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
 
             AddTheLineUnbrokenLink("G3", "uEJrbal-c3A");
             AddLotRDeckTechLink("Rosie's Spectral Vacation", "4bV5l9g0CO8");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2020/07/17/the-stone-of-erech/");
 
             AddEncounterSet(EncounterSet.TheStoneOfErech);
 

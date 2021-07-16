@@ -18,6 +18,7 @@ using HallOfBeorn.Models.LotR.Community.SusurrosDelBosqueViejo;
 using HallOfBeorn.Models.LotR.Community.TalesFromTheCards;
 using HallOfBeorn.Models.LotR.Community.TheCardGameCooperative;
 using HallOfBeorn.Models.LotR.Community.TheGreyCompany;
+using HallOfBeorn.Models.LotR.Community.TheLordsOfGondor;
 using HallOfBeorn.Models.LotR.Community.TheProgressionSeries;
 using HallOfBeorn.Models.LotR.Community.TheRoad;
 using HallOfBeorn.Models.LotR.Community.TheSecondhandTook;
@@ -65,6 +66,7 @@ namespace HallOfBeorn.Services.LotR.Community
             AddChannel(new CardboardOfTheRingsChannel());
             AddChannel(new CardTalkChannel());
             AddChannel(new TheBookOfElessarChannel());
+            AddChannel(new TheLordsOfGondorChannel());
             AddChannel(new WanderingTookChannel());
         }
 

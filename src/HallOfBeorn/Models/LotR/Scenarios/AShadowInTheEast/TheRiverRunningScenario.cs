@@ -19,6 +19,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AShadowInTheEast
             DifficultyRating = 7.0f;
             Votes = 6;
 
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2020/08/22/the-river-running/");
+
             AddEncounterSet(EncounterSet.TheRiverRunning);
             AddEncounterSet(EncounterSet.RidersOfRhun);
             AddEncounterSet(EncounterSet.EasterlingRaiders);

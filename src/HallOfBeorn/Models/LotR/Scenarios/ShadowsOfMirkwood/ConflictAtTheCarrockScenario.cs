@@ -25,6 +25,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
             AddThematicNightmareLink("https://darklingdoor.wordpress.com/2016/12/09/conflict-at-the-carrock/");
             AddWarriorsOfTheWestLink("https://warriorsofthewestblog.wordpress.com/2016/12/01/turn-by-turn-report-conflict-at-the-carrock/", Title);
             AddVisionOfThePalantirLink("https://visionofthepalantir.wordpress.com/2018/01/25/conflict-at-the-carrock/");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2020/07/11/nightmare-conflict-at-the-carrock/");
             AddTheBookOfElessarLink("https://bookofelessar.com/decks/shadows-of-mirkwood-decks/conflict-at-the-carrock/");
             AddYouTubeLink(LinkType.The_Book_of_Elessar, Title, "GDlieGGihL8");
 

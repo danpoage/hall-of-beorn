@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             AddTheGreyCompanyLink(Title, "OyuHE-Jvn38");
             AddTheLineUnbrokenLink("49", "3UyYN7lZJLI");
             AddVisionOfThePalantirLink("https://visionofthepalantir.com/2018/11/18/the-treachery-of-rhudaur/");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2021/02/02/nightmare-the-treachery-of-rhudaur/");
 
             AddEncounterSet(EncounterSet.CursedDead);
             AddEncounterSet(EncounterSet.RuinsOfArnor);

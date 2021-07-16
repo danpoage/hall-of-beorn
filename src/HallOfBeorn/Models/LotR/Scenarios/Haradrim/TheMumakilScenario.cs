@@ -20,6 +20,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Haradrim
             Votes = 8;
 
             AddLotRDeckTechLink("Boromir Catches a Mumak", "FX3_k2doCVM");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2020/03/27/the-mumakil/");
 
             AddEncounterSet(EncounterSet.TheMumakil);
             AddEncounterSet(EncounterSet.JungleForest);

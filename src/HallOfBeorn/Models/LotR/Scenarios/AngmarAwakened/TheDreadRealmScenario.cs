@@ -21,6 +21,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
             AddTheLineUnbrokenLink("51", "3tYbgyWscpU");
             AddMrUnderhillLink(Title + " Nightmare Mode", "IzE6Gd5-lhg");
             AddVisionOfThePalantirLink("https://visionofthepalantir.com/2018/11/11/the-dread-realm/");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2020/08/17/nightmare-the-dread-realm/");
 
             AddEncounterSet(EncounterSet.TheDreadRealm);
             AddEncounterSet(EncounterSet.TheDreadRealmNightmare);

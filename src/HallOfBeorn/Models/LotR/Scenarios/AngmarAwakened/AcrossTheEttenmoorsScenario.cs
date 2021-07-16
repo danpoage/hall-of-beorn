@@ -15,6 +15,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
 
             AddTheLineUnbrokenLink("48", "5k3ZRulOtKE");
             AddVisionOfThePalantirLink("https://visionofthepalantir.com/2018/10/27/across-the-ettenmoors/");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2020/07/11/nightmare-conflict-at-the-carrock/");
 
             AddEncounterSet(EncounterSet.AcrossTheEttenmoors);
             AddEncounterSet(EncounterSet.AcrossTheEttenmoorsNightmare);

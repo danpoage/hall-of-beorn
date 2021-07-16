@@ -21,6 +21,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Haradrim
 
             AddMrUnderhillLink(Title + " - Vigilant Dúnadan", "FWCsh8cnAY4");
             AddWanderingTookVideoLink("Twitch Recast: " + Title, "wKhhTLSemJE");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2020/07/28/beneath-the-sands/");
 
             AddEncounterSet(EncounterSet.BeneathTheSands);
             AddEncounterSet(EncounterSet.DesertCreatures);

@@ -17,6 +17,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLostRealm
             AddTheLineUnbrokenLink("45", "rEIshIfPXPY");
             AddPathLessTraveledLink("https://darklingdoor.wordpress.com/2017/09/05/path-less-traveled-deadmens-dike/");
             AddVisionOfThePalantirLink("https://visionofthepalantir.com/2018/10/08/deadmens-dike/");
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2020/12/21/deckbuilding-deadmens-dike/");
 
             AddEncounterSet(EncounterSet.CursedDead);
             AddEncounterSet(EncounterSet.DarkSorcery);

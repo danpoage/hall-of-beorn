@@ -14,6 +14,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
             DifficultyRating = 8.1f;
             Votes = 14;
 
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2021/01/04/the-ruins-of-belegost/");
+
             AddTheLineUnbrokenLink("G6", "hg-QXsiOiyE");
             AddTheLineUnbrokenLink("G6.2", "6on97G5zkRY");
             AddMrUnderhillLink(Title + " - Two Players", "vhNz23-wrqc");

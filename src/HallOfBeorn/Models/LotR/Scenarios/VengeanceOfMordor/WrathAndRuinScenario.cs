@@ -23,6 +23,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.VengeanceOfMordor
             DifficultyRating = 6.9f;
             Votes = 10;
 
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2021/04/17/wrath-and-ruin/");
+
             AddEncounterSet(EncounterSet.WrathAndRuin);
             AddEncounterSet(EncounterSet.EasterlingRaiders);
             AddEncounterSet(EncounterSet.CityOfRhun);

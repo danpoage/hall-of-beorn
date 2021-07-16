@@ -59,6 +59,7 @@ namespace HallOfBeorn.Models
         Die_Manner_von_Gondor,
         The_Book_of_Elessar,
         The_Card_Game_Cooperative,
+        Lords_of_Gondor,
 
         Hall_of_Beorn_LotR_Detail,
         Hall_of_Beorn_LotR_Image,

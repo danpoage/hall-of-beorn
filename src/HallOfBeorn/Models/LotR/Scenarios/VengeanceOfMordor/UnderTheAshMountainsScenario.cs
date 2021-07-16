@@ -25,6 +25,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.VengeanceOfMordor
             DifficultyRating = 9.0f;
             Votes = 5;
 
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2021/02/13/under-the-ash-mountains/");
+
             AddEncounterSet(EncounterSet.UnderTheAshMountains);
             AddEncounterSet(EncounterSet.TwistedTunnels);
 

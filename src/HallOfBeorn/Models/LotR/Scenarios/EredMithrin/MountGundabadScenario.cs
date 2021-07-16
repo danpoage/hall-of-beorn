@@ -23,6 +23,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
             DifficultyRating = 7.8f;
             Votes = 6;
 
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2020/07/03/mount-gundabad/");
+
             AddEncounterSet(EncounterSet.MountGundabad);
             AddEncounterSet(EncounterSet.FellBeasts); 
             AddEncounterSet(EncounterSet.DeepUnderground);

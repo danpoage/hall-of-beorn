@@ -23,6 +23,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.EredMithrin
             RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/MEC66.pdf";
             RulesImageCount = 2;
 
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2020/04/11/the-withered-heath/");
+
             AddEncounterSet(EncounterSet.TheWitheredHeath);
             AddEncounterSet(EncounterSet.LostCaves);
             AddEncounterSet(EncounterSet.WildCreatures);

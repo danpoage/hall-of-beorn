@@ -25,6 +25,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.VengeanceOfMordor
             DifficultyRating = 6.9f;
             Votes = 8;
 
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2021/05/25/challenge-of-the-wainriders/");
+
             AddEncounterSet(EncounterSet.ChallengeOfTheWainriders);
             AddEncounterSet(EncounterSet.RollingPlains);
             AddEncounterSet(EncounterSet.RidersOfRhun);

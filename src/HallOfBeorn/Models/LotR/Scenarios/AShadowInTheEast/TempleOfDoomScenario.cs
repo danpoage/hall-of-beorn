@@ -22,6 +22,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AShadowInTheEast
             DifficultyRating = 8.2f;
             Votes = 12;
 
+            AddVisionOfThePalantirLink("https://visionofthepalantir.com/2020/11/19/the-temple-of-doom/");
+
             AddEncounterSet(EncounterSet.TempleOfDoom);
             AddEncounterSet(EncounterSet.UlchorsGuard);
             AddEncounterSet(EncounterSet.TwistedTunnels);
