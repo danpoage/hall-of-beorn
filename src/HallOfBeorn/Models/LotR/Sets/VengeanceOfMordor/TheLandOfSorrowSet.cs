@@ -140,7 +140,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTextLine("Response: After Arador is declared as a defender, ready him. (Limit once per round.)")
                 .WithTextLine("If Arador leaves play, the players lose the game.")
                 .WithInfo(125, 1, Artist.Aleksander_Karcz);
-            addObjectiveAlly("Farin", EncounterSet.TheLandOfSorrow, 3, 1, 0, 3)
+            addObjectiveAlly("Farin", EncounterSet.TheLandOfSorrow, 1, 3, 0, 4)
                 .WithUnique()
                 .WithTraits("Captive.", "Dwarf.")
                 .WithTextLine("Immune to player card effects.")
