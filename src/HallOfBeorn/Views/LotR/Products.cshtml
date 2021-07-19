@@ -26,9 +26,9 @@
     <div style="margin:4px 4px 8px 4px;">
         <img title="@Model.Detail.Name" src="@Model.Detail.ImageUrl" style="margin:6px 4px 16px 4px;display:inline-block;"/>
         
-        <div style="margin: 4px 0px 6px 20px;width:346px;display:inline-block;vertical-align:top;">
+        <div style="margin: 4px 0px 6px 20px;width:350px;display:inline-block;vertical-align:top;">
             <div style="margin:4px 0px 14px 4px;font-family:Georgia;font-size:16px;font-weight:bold;">Card List</div>
-            <div style="overflow: auto;height:210px;">
+            <div style="overflow-y: scroll;height:210px;border-color:lightgray;border-width:1px;border-style:solid;">
                 @foreach (var card in @Model.Detail.CardQuantities())
                 {
                     if (!string.IsNullOrEmpty(@card.Url))
