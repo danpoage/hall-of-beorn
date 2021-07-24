@@ -34,9 +34,27 @@ namespace HallOfBeorn.Models.LotR.Community.HallOfBeorn
             AddLink("Contest: Celebrating 8 Years", "https://hallofbeorn.wordpress.com/2021/01/13/contest-celebrating-8-years/", "13 Jan 2021");
 
             AddYear(2020);
-            AddLink("Deck 2020 - It's a Trap!", "https://hallofbeorn.wordpress.com/2020/12/31/deck-2020-its-a-trap/", "31 Dec 2021");
+            AddLink("Deck 2020 - It's a Trap!", "https://hallofbeorn.wordpress.com/2020/12/31/deck-2020-its-a-trap/", "31 Dec 2020");
+            AddLink("News: A Long-extended Party - Worthy of Remembrance", "https://hallofbeorn.wordpress.com/2020/12/14/news-a-long-extended-party-worthy-of-remembrance/", "14 Dec 2020");
+            AddLink("Play Report: A Weary Pilgrim Hunts the Dreadnaught", "https://hallofbeorn.wordpress.com/2020/12/06/play-report-a-weary-pilgrim-hunts-the-dreadnaught/", "6 Dec 2020");
+            AddLink("Alternate Art: The Old Elf and the Sea", "https://hallofbeorn.wordpress.com/2020/12/01/alternate-art-the-old-elf-and-the-sea/", "1 Dec 2020");
+            AddLink("Alternate Art: The Last Temptation of Boromir", "https://hallofbeorn.wordpress.com/2020/11/17/alternate-art-the-last-temptation-of-boromir/", "17 Nov 2020");
+            AddLink("Alternate Art: Gift of the First-Beorn", "https://hallofbeorn.wordpress.com/2020/11/01/alternate-art-gift-of-the-first-beorn/", "1 Nov 2020");
+            AddLink("Alternate Art: Nouveau Hunters", "https://hallofbeorn.wordpress.com/2020/10/20/alternate-art-nouveau-hunters/", "20 Oct 2020");
+            AddLink("Custom Cards: Filling in the Gaps", "https://hallofbeorn.wordpress.com/2020/10/10/custom-cards-filling-in-the-gaps/", "10 Oct 2020");
+            AddLink("Contest Winners: Carry on the Story", "https://hallofbeorn.wordpress.com/2020/09/21/contest-winners-carry-on-the-story/", "21 Sep 2020");
+            AddLink("Alternate Art: Nightmare in the Fog", "https://hallofbeorn.wordpress.com/2020/08/12/alternate-art-nightmare-in-the-fog/", "12 Aug 2020");
+            AddLink("Contest: Carry on the Story", "https://hallofbeorn.wordpress.com/2020/08/06/contest-carry-on-the-story/", "6 Aug 2020");
+            AddLink("Vision of the Palantir: Nightmare Conflict at the Carrock", "https://hallofbeorn.wordpress.com/2020/07/11/vision-of-the-palantir-nightmare-conflict-at-the-carrock/", "11 July 2020");
+            AddLink("Discussion: Isolation and Tribalism", "https://hallofbeorn.wordpress.com/2020/06/04/isolation-and-tribalism/", "4 June 2020");
+            AddLink("Alternate Art: Grimbeorn's Path", "https://hallofbeorn.wordpress.com/2020/05/04/alternate-art-grimbeorns-path/", "4 May 2020");
+            AddLink("News: LotR Dutch Blogger", "https://hallofbeorn.wordpress.com/2020/04/12/community-news-lotr-dutch-blogger/", "12 Apr 2020");
+            AddLink("Custom Cards: Nightmare Escape from Umbar", "https://hallofbeorn.wordpress.com/2020/04/04/nightmare-escape-from-umbar/", "4 Apr 2020");
+            AddLink("Alternate Art: All the Pretty Horses", "https://hallofbeorn.wordpress.com/2020/03/15/alternate-art-all-the-pretty-horses/", "15 Mar 2020");
+            AddLink("Alternate Art: Core Set Completion", "https://hallofbeorn.wordpress.com/2020/02/28/alternate-art-core-set-completion/", "28 Feb 2020");
+            AddLink("Alternate Art: Wandering in Search of the Entwives", "https://hallofbeorn.wordpress.com/2020/02/14/alternate-art-wandering-in-search-of-the-entwives/", "14 Feb 2020");
             AddLink("Long are the Waves on the Last Shore", "https://hallofbeorn.wordpress.com/2020/01/19/long-are-the-waves-on-the-last-shore/", "Mon, 20 Jan 2020 01:51:00 +0000");
-            
+
             AddYear(2019);
             AddLink("Vengeance of Mordor: My Favorites So Far", "https://hallofbeorn.wordpress.com/2019/12/17/vengeance-of-mordor-my-favorites-so-far/", "Tue, 17 Dec 2019 07:08:37 +0000");
             AddLink("Alternate Art: Starlight on the Western Seas", "https://hallofbeorn.wordpress.com/2019/11/10/alternate-art-starlight-on-the-western-seas/", "Sun, 10 Nov 2019 18:31:18 +0000");

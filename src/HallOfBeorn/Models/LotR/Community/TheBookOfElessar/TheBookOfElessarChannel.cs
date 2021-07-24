@@ -14,7 +14,14 @@ namespace HallOfBeorn.Models.LotR.Community.TheBookOfElessar
             "https://www.youtube.com/feeds/videos.xml?channel_id=UCUgU6nIpwNlADThJKEDV3Pg",
             LinkType.The_Book_of_Elessar)
         {
+            AddYear(2021);
+            AddLink("Gondor v Peril in Pelargir & Steward's Fear (Gondor's Perilous Valour)", "https://www.youtube.com/watch?v=3ay43ScHu7g", "1 Feb 2021");
+            AddLink("The Hunt for the Dreadnaught (Gondor's Perilous Valour)", "https://www.youtube.com/watch?v=Lg5PX3eSjgs", "19 Jan 2021");
+            
             AddYear(2020);
+            AddLink("The Uruk-hai - Lord of the Rings Living Card Game Saga Campaign", "https://www.youtube.com/watch?v=n4GD0xiNPxs", "16 Dec 2020");
+            AddLink("Book of Elessar, Ep. 26 - To Catch an Orc", "https://www.youtube.com/watch?v=6H7V06JX1j8", "3 Dec 2020");
+            AddLink("Rohan vs Escape from Umbar and The Mumakil", "https://www.youtube.com/watch?v=4jLK5_GBkgo", "16 Nov 2020");
             AddLink("Book of Elessar, Ep. 15: Shadow and Flame", "https://www.youtube.com/watch?v=H_GKqfPV3Uo", "2020-01-28T01:31:59+00:00");
             AddLink("Book of Elessar, Ep. 14 - Foundations of Stone", "https://www.youtube.com/watch?v=EGergQj7FUM", "2020-01-14T21:19:05+00:00");
             AddLink("Book of Elessar, Ep. 13 - The Long Dark", "https://www.youtube.com/watch?v=fnSPLHYm67A", "2020-01-01T15:01:50+00:00");
