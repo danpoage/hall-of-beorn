@@ -14,7 +14,27 @@ namespace HallOfBeorn.Models.LotR.Community.HallOfBeorn
             "https://hallofbeorn.wordpress.com/feed",
             LinkType.Hall_of_Beorn)
         {
+            AddYear(2021);
+            AddLink("Key Concepts: Surviving the Early Game Part 1 - Leadership", "https://hallofbeorn.wordpress.com/2021/07/20/key-concepts-surviving-the-early-game-part-1-leadership/", "20 July 2021");
+            AddLink("Bear Market: The Aldburg Plot", "https://hallofbeorn.wordpress.com/2021/07/11/bear-market-the-aldburg-plot/", "11 July 2021");
+            AddLink("Play Report: Epic Helm's Deep", "https://hallofbeorn.wordpress.com/2021/06/21/play-report-epic-helms-deep/", "21 June 2021");
+            AddLink("News: Epic Helm's Deep, Streaming this Saturday", "https://hallofbeorn.wordpress.com/2021/06/15/news-epic-helms-deep-streaming-this-saturday/", "15 June 2021");
+            AddLink("Bear Market: Children of Eorl", "https://hallofbeorn.wordpress.com/2021/06/06/bear-market-children-of-eorl/", "6 June 2021");
+            AddLink("Alternate Art: Wilderland Wildlife Sanctuary", "https://hallofbeorn.wordpress.com/2021/05/30/alternate-art-wilderland-wildlife-sanctuary/", "30 May 2021");
+            AddLink("Bear Draft v6", "https://hallofbeorn.wordpress.com/2021/05/10/bear-draft-v6/", "10 May 2021");
+            AddLink("Alternate Art: Nurn Hobits", "https://hallofbeorn.wordpress.com/2021/04/17/alternate-art-nurn-hobbits/", "17 Apr 2021");
+            AddLink("News: A Long-extended Party - Beorn", "https://hallofbeorn.wordpress.com/2021/04/01/news-a-long-extended-party-beorn/", "1 Apr 2021");
+            AddLink("Deck: Ride to Bruin", "https://hallofbeorn.wordpress.com/2021/03/26/deck-ride-to-bruin/", "26 Mar 2021");
+            AddLink("Deck: The Second Coming", "https://hallofbeorn.wordpress.com/2021/03/20/deck-the-second-coming/", "20 Mar 2021");
+            AddLink("Key Concepts: Learning How to Lose", "https://hallofbeorn.wordpress.com/2021/03/06/key-concepts-learning-how-to-lose/", "6 Mar 2021");
+            AddLink("Content Winners: Celebrating 8 Years", "https://hallofbeorn.wordpress.com/2021/02/15/contest-winners-celebrating-8-years/", "15 Feb 2021");
+            AddLink("Custom Cards: A Little Help from our Friends", "https://hallofbeorn.wordpress.com/2021/02/12/custom-cards-a-little-help-from-our-friends/", "12 Feb 2021");
+            AddLink("Poll Results: Favorites from Wilds of Rhovanion and Ered Mithrin", "https://hallofbeorn.wordpress.com/2021/02/03/poll-results-favorites-from-wilds-of-rhovanion-and-ered-mithrin/", "3 Feb 2021");
+            AddLink("Bear Market: Tier 2 Favorites", "https://hallofbeorn.wordpress.com/2021/01/22/bear-market-tier-2-favorites/", "22 Jan 2021");
+            AddLink("Contest: Celebrating 8 Years", "https://hallofbeorn.wordpress.com/2021/01/13/contest-celebrating-8-years/", "13 Jan 2021");
+
             AddYear(2020);
+            AddLink("Deck 2020 - It's a Trap!", "https://hallofbeorn.wordpress.com/2020/12/31/deck-2020-its-a-trap/", "31 Dec 2021");
             AddLink("Long are the Waves on the Last Shore", "https://hallofbeorn.wordpress.com/2020/01/19/long-are-the-waves-on-the-last-shore/", "Mon, 20 Jan 2020 01:51:00 +0000");
             
             AddYear(2019);
