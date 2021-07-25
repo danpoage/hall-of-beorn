@@ -111,6 +111,43 @@ namespace HallOfBeorn.Models
             }
         }
 
+        private readonly Dictionary<Language, string> oppositeTitles = new Dictionary<Language,string>();
+        
+        public string OppositeTitle { 
+            get { return GetOppositeTitle(DefaultLang); }
+            set { SetOppositeTitle(DefaultLang, value); }
+        }
+
+        public string GetOppositeTitle(Language lang)
+        {
+            if (oppositeTitles.ContainsKey(lang))
+                return oppositeTitles[lang];
+
+            return oppositeTitles.ContainsKey(DefaultLang) ?
+                oppositeTitles[DefaultLang] :
+                string.Empty;
+        }
+
+        public void SetOppositeTitle(Language lang, string title)
+        {
+            oppositeTitles[lang] = title;
+            if (title.NormalizeCaseSensitiveString() != title) {
+                normalizedOppositeTitles[lang] = title.NormalizeCaseSensitiveString();
+            }
+        }
+
+        private readonly Dictionary<Language, string> normalizedOppositeTitles = new Dictionary<Language, string>();
+        public string NormalizedOppositeTitle
+        {
+            get
+            {
+                return normalizedOppositeTitles.ContainsKey(DefaultLang) ?
+                    normalizedOppositeTitles[DefaultLang]
+                    : OppositeTitle;
+            }
+        }
+
+        /*
         private string oppositeTitle;
         public string OppositeTitle
         {
@@ -128,7 +165,7 @@ namespace HallOfBeorn.Models
         public string NormalizedOppositeTitle {
             get { return normalizedOppositeTitle; }
             private set { normalizedOppositeTitle = value; }
-        }
+        }*/
 
         public string Slug { get { return getSlug(); } }
         

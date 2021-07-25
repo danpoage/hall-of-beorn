@@ -143,6 +143,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             _card.SetTitle(lang, title);
         }
 
+        public void SetTranslatedOppositeTitle(Language lang, string oppositeTitle)
+        {
+            _card.SetOppositeTitle(lang, oppositeTitle);
+        }
+
         public string Description
         {
             get { return string.Format("{0} ({1})", _card.Title, _card.CardSet.Abbreviation); }
@@ -819,7 +824,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public string OppositeTitle
         {
-            get { return _card.OppositeTitle; }
+            get { return _card.GetOppositeTitle(_lang); }
         }
 
         public string OppositeText
@@ -926,9 +931,15 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/{0}/{1}/{2}{3}.{4}", directory, set, title, suffix, extension);
         }
 
+        private readonly static Dictionary<SetType, HashSet<Language>> translatedSetTypes = new Dictionary<SetType, HashSet<Language>>
+        {
+            { SetType.A_Long_extended_Party, new HashSet<Language> { Language.DE, Language.ES, Language.FR, Language.IT, Language.PL } },
+            { SetType.Core, new HashSet<Language> { Language.ES, Language.FR } },
+        };
+        
         private static string getTranslatedImageExtension(LotRCard card, Language lang)
         {
-            return (card.CardSet != null && card.CardSet.SetType == SetType.A_Long_extended_Party || (lang == Language.ES && card.CardSet.SetType == SetType.Core))
+            return card.CardSet != null && translatedSetTypes.ContainsKey(card.CardSet.SetType) && translatedSetTypes[card.CardSet.SetType].Contains(lang)
                 ? "png"
                 : "jpg";
         }

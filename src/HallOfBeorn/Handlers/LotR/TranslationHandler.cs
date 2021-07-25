@@ -54,9 +54,26 @@ namespace HallOfBeorn.Handlers.LotR
             {
                 card.WithFrontHtmlTemplate(lang, serviceFrontHtml);
             }
+            else if (lang != defaultLang) 
+            {
+                var defaultFrontHtml = _templateService.GetFrontHtml(card.Slug, defaultLang);
+                if (!string.IsNullOrEmpty(defaultFrontHtml))
+                {
+                    card.WithFrontHtmlTemplate(lang, defaultFrontHtml);
+                }
+            }
+
             if (!string.IsNullOrEmpty(serviceBackHtml))
             {
                 card.WithBackHtmlTemplate(lang, serviceBackHtml);
+            } 
+            else if (lang != defaultLang)
+            {
+                var defaultBackHtml = _templateService.GetBackHtml(card.Slug, defaultLang);
+                if (!string.IsNullOrEmpty(defaultBackHtml))
+                {
+                    card.WithBackHtmlTemplate(lang, defaultBackHtml);
+                }
             }
             
             /*
@@ -75,6 +92,11 @@ namespace HallOfBeorn.Handlers.LotR
             if (lang != defaultLang)
             {
                 viewModel.SetTranslatedTitle(lang, _translationService.TranslateTitle(lang, card.Title));
+
+                if (!string.IsNullOrEmpty(card.OppositeTitle))
+                {
+                    viewModel.SetTranslatedOppositeTitle(lang, _translationService.TranslateTitle(lang, card.OppositeTitle));
+                }
 
                 viewModel.AddTranslatedTraits(
                     lang,

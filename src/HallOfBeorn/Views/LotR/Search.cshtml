@@ -755,10 +755,10 @@
                         *@
                         @if (!string.IsNullOrEmpty(@card.Html)) 
                         {
-                            <div style="max-width:700px;">@Html.Raw(@card.Html)</div>
+                            <div style="min-width:350px;max-width:700px;">@Html.Raw(@card.Html)</div>
                             if (!string.IsNullOrEmpty(@card.Html2))
                             {
-                                <div style="max-width:700px;">@Html.Raw(@card.Html2)</div>
+                                <div style="min-width:350px;max-width:700px;">@Html.Raw(@card.Html2)</div>
                             }
                         }
                         else
