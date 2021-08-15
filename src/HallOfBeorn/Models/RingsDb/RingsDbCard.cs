@@ -41,6 +41,7 @@ namespace HallOfBeorn.Models.RingsDb
         public string url { get; set; }
         public string imagesrc { get; set; }
         public string imagesrc2 { get; set; }
+        public string shadow { get; set; }
 
         private static string Normalize(string text)
         {
@@ -74,6 +75,7 @@ namespace HallOfBeorn.Models.RingsDb
                 { "When Revealed:", "<b>When Revealed:</b>" },
                 { "Travel:", "<b>Travel:</b>" },
                 { "Forced:", "<b>Forced:</b>" },
+                { "Shadow:", "<b>Shadow:</b>" },
             };
 
             var normalized = text.Trim();
@@ -145,6 +147,13 @@ namespace HallOfBeorn.Models.RingsDb
                         : Normalize(c.Text);
                 };
 
+            Func<LotR.LotRCard, string> getShadow = (c) =>
+                {
+                    return !string.IsNullOrEmpty(c.Shadow)
+                        ? Normalize(c.Shadow)
+                        : null;
+                };
+
             Func<LotR.LotRCard, string> getCost = (c) =>
                 c.ResourceCost.HasValue ? c.ResourceCost.Description() : null;
 
@@ -211,7 +220,8 @@ namespace HallOfBeorn.Models.RingsDb
                 has_errata = card.HasErrata,
                 url = getUrl(card),
                 imagesrc = getImageSource(card),
-                imagesrc2 = getImageSource2(card)
+                imagesrc2 = getImageSource2(card),
+                shadow = getShadow(card)
             };
         }
     }

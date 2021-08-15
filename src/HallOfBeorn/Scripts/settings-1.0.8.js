@@ -2,7 +2,7 @@
 $(function () {
     console.log('Settings Page Init');
 
-    var expiration = 'expires=Tues, 31 Dec 2199 00:00:00 GMT;';
+    var expiration = 'expires=Fri, 1 Jan 2038 00:00:00 GMT;';
 
     function getCookie(cname) {
 
