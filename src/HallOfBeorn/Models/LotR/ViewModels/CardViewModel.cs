@@ -897,8 +897,9 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 var set = !string.IsNullOrEmpty(card.CardSet.NormalizedName) ? card.CardSet.NormalizedName.ToUrlSafeString() : card.CardSet.Name.ToUrlSafeString();
                 var title = card.Title.ToUrlSafeString();
                 var suffix = !string.IsNullOrEmpty(card.SlugSuffix) ? string.Format("-{0}", card.SlugSuffix.ToUrlSafeString()) : string.Empty;
+                var extension = getEnglishImageExtension(card);
 
-                return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}{2}.jpg", set, title, suffix);
+                return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}{2}.{3}", set, title, suffix, extension);
             } 
             else
             {
@@ -920,7 +921,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             var title = card.GetTitle(lang).ToUrlSafeString();
             var suffix = !string.IsNullOrEmpty(card.SlugSuffix) ? string.Format("-{0}", card.SlugSuffix.ToUrlSafeString()) : string.Empty;
 
-            var extension = "jpg";
+            var extension = getEnglishImageExtension(card);
 
             if (lang != Language.EN)
             {
@@ -937,6 +938,13 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             { SetType.Core, new HashSet<Language> { Language.ES, Language.FR } },
         };
         
+        private static string getEnglishImageExtension(LotRCard card)
+        {
+            return card.CardSet.Name == CardSet.TheScouringOfTheShire.Name
+                ? "png"
+                : "jpg";
+        }
+
         private static string getTranslatedImageExtension(LotRCard card, Language lang)
         {
             return card.CardSet != null && translatedSetTypes.ContainsKey(card.CardSet.SetType) && translatedSetTypes[card.CardSet.SetType].Contains(lang)
@@ -1006,7 +1014,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             var set = (card.CardSet != null && !string.IsNullOrEmpty(card.CardSet.NormalizedName)) ? card.CardSet.NormalizedName.ToUrlSafeString() : card.CardSet.Name.ToUrlSafeString();
 
             var path = "Cards";
-            var extension = "jpg";
+            var extension = getEnglishImageExtension(card);
 
             if (lang != Language.EN)
             {
@@ -1033,7 +1041,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             var set = (_card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
 
             var path = "Cards";
-            var extension = "jpg";
+            var extension = getEnglishImageExtension(_card);
 
             if (lang != Language.EN)
             {
@@ -1060,7 +1068,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 var set = (_card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
 
                 var path = "Cards";
-                var extension = "jpg";
+                var extension = getEnglishImageExtension(_card);
 
                 if (lang != Language.EN)
                 {
@@ -1079,7 +1087,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 var set = (_card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
 
                 var path = "Cards";
-                var extension = "jpg";
+                var extension = getEnglishImageExtension(_card);
 
                 if (lang != Language.EN)
                 {

@@ -62,6 +62,7 @@ namespace HallOfBeorn.Models.LotR
         public static ProductGroup DoomMastered = new DoomMasteredProductGroup();
 
         public static ProductGroup OathsOfTheRohirrim = new OathsOfTheRohirrimProductGroup();
+        public static ProductGroup TheScouringOfTheShire = new TheScouringTheShireProductGroup();
         #endregion
     }
 }

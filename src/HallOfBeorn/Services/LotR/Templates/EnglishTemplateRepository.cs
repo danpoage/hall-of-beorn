@@ -130,6 +130,8 @@ namespace HallOfBeorn.Services.LotR.Templates
             TheFallOfNargothrond();
             ChildrenOfEorl();
             TheAldburgPlot();
+
+            TheScouringOfTheShire();
         }
 
         private void TwoPlayerLimitedEditionStarter()
@@ -3158,7 +3160,7 @@ namespace HallOfBeorn.Services.LotR.Templates
 
         private void TheGhostOfFramsburg()
         {
-            AddHtml("Dain-Ironfoot-TGoF", "<p class='main-text'>While {self} is defending, he gains,<b>&quot;Action:</b> Discard the top card of your deck to give D in Ironfoot +1 {Defense} for this attack. (Limit 3 times per phase.)&quot;</p><p class='flavor-text'>&quot;The time of my thought is my own to spend.&quot;<br>&ndash;The Fellowship of the Ring</p>");
+            AddHtml("Dain-Ironfoot-TGoF", "<p class='main-text'>While {self} is defending, he gains,<b>&quot;Action:</b> Discard the top card of your deck to give {self} +1 {Defense} for this attack. (Limit 3 times per phase.)&quot;</p><p class='flavor-text'>&quot;The time of my thought is my own to spend.&quot;<br>&ndash;The Fellowship of the Ring</p>");
             AddHtml("Soldier-of-Erebor-TGoF", "<p class='main-text'><b>Action:</b> Discard the top 3 cards from your deck to ready Soldier of Erebor. (Limit once per round.)</p>");
             AddHtml("Man-the-Walls-TGoF", "<p class='main-text'>Play only if no other copies of Man the Walls have been played this round.</p><p class='main-text'><b>Planning Action:</b> Reduce the cost of the next ally played by each player this phase by 1. Those allies cannot quest this round.</p>");
             AddHtml("Mirkwood-Hunter-TGoF", "<p class='main-text'>Ranged.</p><p class='main-text'>Reduce the cost to play Mirkwood Hunter by 1 for each attachment on the active location.</p><p class='flavor-text'>...they were brave and well&ndash;armed and even the Wargs dared not attack them if there were many together...<br>&ndash;The Hobbit</p>");
@@ -5839,6 +5841,11 @@ namespace HallOfBeorn.Services.LotR.Templates
             AddHtml2("Gathering-Clues-TAP", "<p class='flavor-text'>It appears Aldburg is playing host to a twin-headed mystery. If you can only graps a single thread, you may be able to untangle this corrupt and biter web. It is past midnight. Time is drawing thin.</p><p class='main-text'><b>Response:</b> At the end of the round, if the players contol at least 4 {trait:Clue.@Clue} objectives, they may advance to stage 3A.</p>");
             AddHtml("The-Uncertain-Dawn-TAP", "<p class='flavor-text'>As sun breaks over the streets of Aldburg, your cornered foes reveal themselves. You have gathered your clues. Now, bring them to bear as you battle for your lives - and for the soul of Rohan.</p><p class='main-text'><b>When Revealed:</b> Remove all {trait:Suspicious.@Suspicious} cards and encounter side quests from the game. Add any set aside {trait:Dunland.@Dunland} or {trait:Garrison.@Garrison} enemies to the staging area, if able.</p>");
             AddHtml2("The-Uncertain-Dawn-TAP", "<p class='main-text'>The Uncertain Dawn gets -5 quest points for each {trait:Clue.@Clue} objective the players control.</p><p class='main-text'><b>Forced:</b> At the beginning of the quest phase, discard cards from the top of the encounter deck until an enemy is discarded. Reveal that enemy and add it to the staging area.</p><p class='main-text'><b>This stage cannot be defeated except at the end of the round. If the players defeat this stage, they win the game.</b></p>");
+        }
+
+        private void TheScouringOfTheShire()
+        {
+            AddHtml("Frodo-Baggins-TSotS", "<p class='main-text'><b>Response:</b> After {self} commits to the quest, spend 1 resource from his resource pool to ready another unique character committed to the quest. If you quest successfully this phase, reduce your threat by 1.</p>");
         }
 
         private void OldTemplates()

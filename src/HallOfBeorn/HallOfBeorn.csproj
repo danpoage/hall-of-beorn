@@ -426,6 +426,7 @@
     <Compile Include="Models\LotR\ProductGroups\OathsOfTheRohirrimProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\AngmarAwakenedNightmareProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\DreamChaserNightmareProductGroup.cs" />
+    <Compile Include="Models\LotR\ProductGroups\TheScouringTheShireProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\ShadowsOfMirkwoodNightmareProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\CustomScenarioKitProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\FellowshipDeckProductGroup.cs" />
@@ -446,6 +447,7 @@
     <Compile Include="Models\LotR\Products\Community\TheAldburgPlotProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\TheBetrayalOfMimProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\TheFallOfNargothrondProduct.cs" />
+    <Compile Include="Models\LotR\Products\Community\TheScouringOfTheShireProduct.cs" />
     <Compile Include="Models\LotR\Products\Deluxe\AShadowInTheEastProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\FireInTheNightProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\MountGundabadProduct.cs" />
@@ -595,6 +597,7 @@
     <Compile Include="Models\LotR\Sets\AngmarAwakened\TheTreacheryOfRhudaurNightmare.cs" />
     <Compile Include="Models\LotR\Sets\AngmarAwakened\TheWastesOfEriadorNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheLostRealm\TheWeatherHillsNightmareSet.cs" />
+    <Compile Include="Models\LotR\Sets\TheScouringOfTheShire\TheScouringOfTheShireCardSet.cs" />
     <Compile Include="Models\LotR\Sets\TheWildsOfRhovanion\TheWildsOfRhovanionSet.cs" />
     <Compile Include="Models\LotR\Sets\VengeanceOfMordor\TheCityOfUlfastSet.cs" />
     <Compile Include="Models\LotR\Sets\VengeanceOfMordor\ChallengeOfTheWainridersSet.cs" />

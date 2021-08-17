@@ -545,6 +545,8 @@ namespace HallOfBeorn.Models.LotR
 
             Add(ChildrenOfEorl);
             Add(TheAldburgPlot);
+
+            Add(TheScouringOfTheShire);
         }
 
         public static List<CardSet> All()
@@ -758,6 +760,8 @@ namespace HallOfBeorn.Models.LotR
 
         public static CardSet ChildrenOfEorl = new Sets.ChildrenOfEorl.ChildrenOfEorlSet();
         public static CardSet TheAldburgPlot = new Sets.OathsOfTheRohirrim.TheAldburgPlotSet();
+
+        public static CardSet TheScouringOfTheShire = new Sets.TheScouringOfTheShire.TheScouringOfTheShireCardSet();
         #endregion
     }
 }
