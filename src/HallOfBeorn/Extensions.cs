@@ -62,6 +62,28 @@ namespace HallOfBeorn
                 .Replace(" ", "-");
         }
 
+        public static byte ToStat(this string self)
+        {
+            byte value = 0;
+
+            if (string.IsNullOrEmpty(self))
+            {
+                return 255;
+            }
+
+            if (self == "-")
+            {
+                return 255;
+            }
+            else if (self == "X")
+            {
+                return 254;
+            }
+            else return byte.TryParse(self, out value)
+                ? value
+                : (byte)0;
+        }
+
         public static string ToEnumDisplayString<T>(this T self)
         {
             if (typeof(T) == typeof(Models.NumericOperator))
@@ -746,6 +768,17 @@ namespace HallOfBeorn
 
                 self[key].Add(item);
             }
+        }
+
+        public static string RemoveMarkup(this string self)
+        {
+            if (string.IsNullOrEmpty(self))
+            {
+                return string.Empty;
+            }
+
+            return self.Replace("<b>", "")
+                .Replace("</b>", "");
         }
     }
 }

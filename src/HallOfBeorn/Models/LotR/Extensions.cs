@@ -155,5 +155,24 @@ namespace HallOfBeorn.Models.LotR
 
             return community.Contains(self);
         }
+
+        public static Sphere ToSphere(this string self)
+        {
+            var map = new Dictionary<string, Sphere>
+            {
+                { "Baggins", Sphere.Baggins },
+                { "Fellowship", Sphere.Fellowship },
+                { "Leadership", Sphere.Leadership },
+                { "Lore", Sphere.Lore },
+                { "Mastery", Sphere.Mastery },
+                { "Neutral", Sphere.Neutral },
+                { "Spirit", Sphere.Spirit },
+                { "Tactics", Sphere.Tactics }
+            };
+
+            return map.ContainsKey(self)
+                ? map[self]
+                : Sphere.None;
+        }
     }
 }

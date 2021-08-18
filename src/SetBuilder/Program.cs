@@ -918,22 +918,55 @@ namespace SetBuilder
                 return 0;
             }
 
-            //NOTE: The code page needs to be 1252 in order to handle accent characters
-
             Console.OutputEncoding = Encoding.UTF8;
                 //GetEncoding(codePageCentralAndEasternEurope); //codePageWesternEurope);
 
-            return WriteTranslations(args[0], args[1]);
+            if (args[0] == "English")
+            {
+                return WriteEnglishSet(args[1]);
+            }
+            else
+            {
+                return WriteTranslations(args[0], args[1]);
+            }
         }
 
-        private static int WriteTranslations(string language, string setName)
+        private static int WriteEnglishSet(string setName)
         {
-            var path = string.Format("./ALeP/The-Aldburg-Plot.{0}.json", language);
-
-            var product = new HallOfBeorn.Models.LotR.Products.Community.TheAldburgPlotProduct();
+            const string path = "./ALeP/The-Scouring-of-the-Shire.English.json";
 
             var alepCards = ALePReader.ReadFile(path);
 
+            var product = new HallOfBeorn.Models.LotR.Products.Community.TheScouringOfTheShireProduct();
+
+            Console.WriteLine("//CardSet: {0}", setName);
+            var cardSet = GetCardSet(setName, alepCards);
+            writeCardSet(cardSet);
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("private void TheScouringOfTheShire()");
+            Console.WriteLine("{");
+            WriteTemplates(product, setName, alepCards);
+            Console.WriteLine("}");
+
+            return 0;
+        }
+
+        private static CardSet GetCardSet(string setName, IEnumerable<ALePCard> alepCards)
+        {
+            var cardSet = new AlepCardSet(setName);
+
+            foreach (var alepCard in alepCards)
+            {
+                cardSet.AddCard(alepCard);
+            }
+
+            return cardSet;
+        }
+
+        private static void WriteTemplates(Product product, string setName, IEnumerable<ALePCard> alepCards)
+        {
             const string format1 = "            AddHtml(\"{0}\", \"{1}\");";
             const string format2 = "            AddHtml2(\"{0}\", \"{1}\");";
             const string mapFormat = "                {{ \"{0}\", \"{1}\" }},";
@@ -1030,14 +1063,25 @@ namespace SetBuilder
                 Console.WriteLine(mapFormat, enKeyword, keywordMap[enKeyword]);
             }
             Console.WriteLine();
+        }
+
+        private static int WriteTranslations(string language, string setName)
+        {
+            var path = string.Format("./ALeP/The-Aldburg-Plot.{0}.json", language);
+
+            var product = new HallOfBeorn.Models.LotR.Products.Community.TheAldburgPlotProduct();
+
+            var alepCards = ALePReader.ReadFile(path);
+
+            WriteTemplates(product, setName, alepCards);
 
             return 0;
         }
 
         public static int Main2(string[] args)
         {
-            //NOTE: The code page needs to be 1252 in order to handle accent characters
-            Console.OutputEncoding = Encoding.GetEncoding(codePageWesternEurope);
+            //NOTE: The code page needs to be UTF8 in order to handle accent characters
+            Console.OutputEncoding = Encoding.UTF8; //Encoding.GetEncoding(codePageWesternEurope);
 
             if (args.Length < 1)
             {

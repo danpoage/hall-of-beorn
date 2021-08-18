@@ -27,6 +27,7 @@ namespace SetBuilder
         public List<string> traits_original { get; set; }
         public List<string> additional_encounter_sets { get; set; }
         public string type_name { get; set; }
+        public string subtype_name { get; set; }
         public string attack { get; set; }
         public string cost { get; set; }
         public string defense { get; set; }
