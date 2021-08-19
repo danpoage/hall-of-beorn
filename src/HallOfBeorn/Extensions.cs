@@ -20,6 +20,7 @@ namespace HallOfBeorn
                 .Replace(" - ", "-")
                 .Replace(' ', '-')
                 .Replace('_', '-')
+                .Replace("’", "'")
                 .Replace("&", "and")
                 .Replace(".", string.Empty)
                 .Replace(",", string.Empty)
@@ -28,6 +29,8 @@ namespace HallOfBeorn
                 .Replace("!", string.Empty)
                 .Replace("¡", string.Empty)
                 .Replace("\"", string.Empty)
+                .Replace("“", string.Empty)
+                .Replace("”", string.Empty)
                 .Trim();
         }
 
@@ -59,7 +62,9 @@ namespace HallOfBeorn
             return (string.IsNullOrEmpty(value))
                 ? string.Empty
                 : value.Replace(": ", "-")
-                .Replace(" ", "-");
+                .Replace(" ", "-")
+                .Replace("“", string.Empty)
+                .Replace("”", string.Empty);
         }
 
         public static byte ToStat(this string self)

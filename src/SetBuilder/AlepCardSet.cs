@@ -9,9 +9,11 @@ namespace SetBuilder
     public class AlepCardSet
         : CardSet
     {
-        public AlepCardSet(string setName)
+        public AlepCardSet(string setName, int number, string abbreviation)
         {
             Name = setName;
+            Number = number;
+            Abbreviation = abbreviation;
             SetType = SetType.A_Long_extended_Party;
         }
 
@@ -56,7 +58,12 @@ namespace SetBuilder
 
         private LotRCard AddGenConSetup(string title, string encounterSet)
         {
-            return addGenConSetup(title, encounterSet);
+            if (encounterSet == null)
+            {
+                encounterSet = "The Scouring of the Shire";
+            }
+            var setup = addGenConSetup(title, encounterSet);
+            return setup;
         }
 
         private LotRCard AddNightmareSetup(string encounterSet)
@@ -64,9 +71,11 @@ namespace SetBuilder
             return addNightmareSetup(encounterSet);
         }
 
-        private LotRCard AddQuest(string title, string encounterSet, string stageNumber, string stageLetter, string questPoints)
+        private LotRCard AddQuest(string title, string encounterSet, uint? stageNumber, string stageLetter, string questPoints)
         {
-            return addQuest(title, encounterSet, UInt32.Parse(stageNumber), Char.Parse(stageLetter), questPoints.ToStat());
+            var quest = addQuest(title, encounterSet, stageNumber.GetValueOrDefault(0), Char.Parse(stageLetter), questPoints.ToStat());
+            quest.IncludedEncounterSets = new List<EncounterSet> { EncounterSet.TheScouringOfTheShire };
+            return quest;
         }
 
         private LotRCard AddEnemy(string title, string encounterSet, string engagementCost, string threat, string attack, string defense, string hitPoints)
@@ -119,6 +128,32 @@ namespace SetBuilder
             return addShipObjective(title, encounterSet, isUnique, willpower.ToStat(), attack.ToStat(), defense.ToStat(), hitPoints.ToStat());
         }
 
+        private static string NormalizeAlepText(string text)
+        {
+            if (string.IsNullOrEmpty(text))
+            {
+                return string.Empty;
+            }
+
+            return text
+                .Replace("<b>", string.Empty)
+                .Replace("</b>", string.Empty)
+                .Replace("<i>", string.Empty)
+                .Replace("</i>", string.Empty)
+                .Replace("[pp]", "Per Player")
+                .Replace("[fellowship]", "Fellowship")
+                .Replace("[baggins]", "Baggins")
+                .Replace("[leadership]", "Leadership")
+                .Replace("[tactics]", "Tactics")
+                .Replace("[spirit]", "Spirit")
+                .Replace("[lore]", "Lore")
+                .Replace("[mastery]", "Mastery")
+                .Replace("[threat]", "Threat")
+                .Replace("[willpower]", "Willpower")
+                .Replace("[attack]", "Attack")
+                .Replace("[defense]", "Defense");
+        }
+
         public void AddCard(ALePCard aCard)
         {
             LotRCard card = null;
@@ -144,10 +179,10 @@ namespace SetBuilder
                     card = addCampaign(aCard.name, aCard.encounter_set, aCard.subtitle);
                     break;
                 case "Setup":
-                    card = addGenConSetup(aCard.name, aCard.encounter_set);
+                    card = AddGenConSetup(aCard.name, aCard.encounter_set);
                     break;
                 case "Quest":
-                    card = addQuest(aCard.name, aCard.encounter_set, aCard.quest_stage.GetValueOrDefault(255), Char.Parse(aCard.stage_letter), aCard.quest_points.ToStat());
+                    card = AddQuest(aCard.name, aCard.encounter_set, aCard.quest_stage, aCard.stage_letter, aCard.quest_points);
                     break;
                 case "Encounter Side Quest":
                     card = addEncounterSideQuest(aCard.name, aCard.encounter_set, aCard.quest_points.ToStat());
@@ -181,44 +216,72 @@ namespace SetBuilder
                 card.WithBurden();
             }
 
-            if (card != null)
+            if (card == null)
             {
-                if (!string.IsNullOrEmpty(aCard.text))
-                {
-                    if (aCard.text.Contains("<b>Side B</b>"))
-                    {
-                        var lines = aCard.text.Split(new string[] { "<b>Side B</b>" }, StringSplitOptions.RemoveEmptyEntries);
-                        card.WithTextLine(lines[0].Replace("<b>Side A<b>", "").RemoveMarkup());
-                        card.WithOppositeTextLine(lines[1].RemoveMarkup());
-                    }
-                    else
-                    {
-                        card.WithTextLine(aCard.text.RemoveMarkup());
-                    }
-                }
-
-                if (aCard.traits != null && aCard.traits.Count > 0)
-                {
-                    card.WithTraits(aCard.traits.ToArray());
-                }
-
-                if (aCard.keywords != null && aCard.keywords.Count > 0)
-                {
-                    card.WithKeywords(aCard.keywords.ToArray());
-                }
-
-                if (aCard.is_unique)
-                {
-                    card.WithUnique();
-                }
-
-                if (!string.IsNullOrEmpty(aCard.victory_points))
-                {
-                    card.WithVictoryPoints(aCard.victory_points.ToStat());
-                }
-
-                card.WithInfo((ushort)aCard.position, aCard.quantity, Artist.Unknown);
+                return;
             }
+            
+            if (aCard.type_name != "Quest" && !string.IsNullOrEmpty(aCard.card_side))
+            {
+                if (aCard.card_side == "A")
+                {
+                    card.WithSideA();
+                }
+                if (aCard.card_side == "B")
+                {
+                    card.WithSideB();
+                }
+            }
+
+            if (!string.IsNullOrEmpty(aCard.text))
+            {
+                if (aCard.text.Contains("<b>Side B</b>"))
+                {
+                    var lines = aCard.text.Split(new string[] { "<b>Side B</b>" }, StringSplitOptions.RemoveEmptyEntries);
+                    card.WithTextLine(NormalizeAlepText(lines[0].Replace("<b>Side A<b>", "")));
+                    card.WithOppositeTextLine(NormalizeAlepText(lines[1]));
+                }
+                else
+                {
+                    card.WithTextLine(NormalizeAlepText(aCard.text));
+                }
+            }
+
+            if (!string.IsNullOrEmpty(aCard.shadow_text))
+            {
+                card.WithShadow(NormalizeAlepText(aCard.shadow_text));
+            }
+
+            if (!string.IsNullOrEmpty(aCard.flavor))
+            {
+                var flavorLines = aCard.flavor.Split(new char[] { '—' }, StringSplitOptions.RemoveEmptyEntries);
+                foreach (var flavorLine in flavorLines)
+                {
+                    card.WithFlavorLine(flavorLine);
+                }
+            }
+
+            if (aCard.traits != null && aCard.traits.Count > 0)
+            {
+                card.WithTraits(aCard.traits.ToArray());
+            }
+
+            if (aCard.keywords != null && aCard.keywords.Count > 0)
+            {
+                card.WithKeywords(aCard.keywords.ToArray());
+            }
+
+            if (aCard.is_unique)
+            {
+                card.WithUnique();
+            }
+
+            if (!string.IsNullOrEmpty(aCard.victory_points))
+            {
+                card.WithVictoryPoints(aCard.victory_points.ToStat());
+            }
+
+            card.WithInfo((ushort)aCard.position, aCard.quantity, Artist.Unknown);
         }
     }
 }

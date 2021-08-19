@@ -45,6 +45,7 @@ namespace SetBuilder
         public string engagement_cost { get; set; }
         public string victory_points { get; set; }
         public byte? easy_mode_quantity { get; set; }
+        public string card_side { get; set; }
 
         private Tuple<string, string> ParseText()
         {

@@ -141,7 +141,7 @@ namespace SetBuilder
 
         private static string normalizeSetName(string name)
         {
-            return string.Join(string.Empty, name.Split(' ')
+            return string.Join("", name.Split(' ')
                 .Select(token =>
                     Thread.CurrentThread.CurrentCulture.TextInfo
                     .ToTitleCase(token)
@@ -912,22 +912,26 @@ namespace SetBuilder
 
         public static int Main(string[] args)
         {
-            if (args.Length < 2)
-            {
-                Console.WriteLine("usage: Language Set");
-                return 0;
-            }
+            
+            //if (args.Length < 2)
+            //{
+            //    Console.WriteLine("usage: Language Set");
+            //    return 0;
+            //}
+
+            var lang = "English"; //args[0];
+            var setName = "The Scouring of the Shire"; //args[1];
 
             Console.OutputEncoding = Encoding.UTF8;
                 //GetEncoding(codePageCentralAndEasternEurope); //codePageWesternEurope);
 
-            if (args[0] == "English")
+            if (lang == "English")
             {
-                return WriteEnglishSet(args[1]);
+                return WriteEnglishSet(setName);
             }
             else
             {
-                return WriteTranslations(args[0], args[1]);
+                return WriteTranslations(lang, setName);
             }
         }
 
@@ -940,7 +944,7 @@ namespace SetBuilder
             var product = new HallOfBeorn.Models.LotR.Products.Community.TheScouringOfTheShireProduct();
 
             Console.WriteLine("//CardSet: {0}", setName);
-            var cardSet = GetCardSet(setName, alepCards);
+            var cardSet = GetCardSet(setName, 8, "TSotS", alepCards);
             writeCardSet(cardSet);
 
             Console.WriteLine();
@@ -953,9 +957,9 @@ namespace SetBuilder
             return 0;
         }
 
-        private static CardSet GetCardSet(string setName, IEnumerable<ALePCard> alepCards)
+        private static CardSet GetCardSet(string setName, int number, string abbreviation, IEnumerable<ALePCard> alepCards)
         {
-            var cardSet = new AlepCardSet(setName);
+            var cardSet = new AlepCardSet(setName, number, abbreviation);
 
             foreach (var alepCard in alepCards)
             {
