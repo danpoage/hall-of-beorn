@@ -47,22 +47,18 @@ namespace HallOfBeorn.Models.LotR.Sets.TheScouringOfTheShire
                 .WithTextLine("Page 2/2")
                 .WithInfo(0, 1, Artist.Unknown);
             */
-            addHero("Frodo Baggins", 7, Sphere.Leadership, 2, 1, 2, 2)
-                .WithTraits("Hobbit.")
-                .WithTextLine("Response: After Frodo Baggins commits to the quest, spend 1 resource from his resource pool to ready another unique character committed to the quest. If you quest successfully this phase, reduce your threat by 1.")
-                .WithInfo(2, 1, Artist.Lukasz_Jaskolski);
             addQuest("Many Partings", EncounterSet.TheScouringOfTheShire, 1, 'A', Card.VALUE_NA)
-                .WithTextLine("Side A Setup: Create the Sharkey deck (see insert). Set Saruman, Brandywine Gate, Three-Farthing Stone, and each encounter side quest aside, out of play. Shuffle the encounter deck.")
-                .WithFlavorLine("Side A: As they came out again into the open country at sundown they overtook an old man leaning on a staff, and he was clothed in rags of grey or dirty white, and at his heels went another beggar, slouching and whining.")
-                .WithFlavorLine("The Return of the King Side B: “You don't care what a beggar lacks, do you? For you have all you want, food and fine clothes, and the best weed for your pipes. Oh yes, I know! I know where it comes from. You would not give a pipeful to a beggar, would you?”")
-                .WithFlavorLine("Saruman, The Return of the King")
+                .WithFlavorLine("As they came out again into the open country at sundown they overtook an old man leaning on a staff, and he was clothed in rags of grey or dirty white, and at his heels went another beggar, slouching and whining.")
+                .WithTextLine("Setup: Create the Sharkey deck (see insert). Set Saruman, Brandywine Gate, Three-Farthing Stone, and each encounter side quest aside, out of play. Shuffle the encounter deck.")
+                .WithFlavorLine("-Saruman, The Return of the King")
+                .WithOppositeFlavorLine("“You don't care what a beggar lacks, do you? For you have all you want, food and fine clothes, and the best weed for your pipes. Oh yes, I know! I know where it comes from. You would not give a pipeful to a beggar, would you?”")
                 .WithOppositeTextLine("Action: Exhaust a non-Fellowship hero and discard a resource token from its pool. Then, add 2 resources to the set-aside Saruman.")
                 .WithOppositeTextLine("At the end of the planning phase, advance to the next quest stage.")
                 .WithIncludedEncounterSets(EncounterSet.TheScouringOfTheShire)
                 .WithInfo(1, 1, Artist.Unknown);
             addQuest("Escorted “Prisoners”", EncounterSet.TheScouringOfTheShire, 2, 'A', 12)
-                .WithTextLine("Side A When Revealed: Make Brandywine Gate the active location and add Three-Farthing Stone to the staging area.")
-                .WithFlavorLine("Side A: After a brief encounter on the road with the disgraced Saruman, Frodo and his companions encounter resistance and hostility from the Shirriffs of the Shire. Side B: “It's the Chief's orders that you're to come along quiet. We're going to take you to Bywater and hand you over to the Chief's Men.”")
+                .WithTextLine("When Revealed: Make Brandywine Gate the active location and add Three-Farthing Stone to the staging area.")
+                .WithFlavorLine("After a brief encounter on the road with the disgraced Saruman, Frodo and his companions encounter resistance and hostility from the Shirriffs of the Shire. Side B: “It's the Chief's orders that you're to come along quiet. We're going to take you to Bywater and hand you over to the Chief's Men.”")
                 .WithFlavorLine("The Return of the King")
                 .WithOppositeTextLine("This stage cannot have more than 12 progress tokens on it.")
                 .WithOppositeTextLine("Forced: At the end of the quest phase, if no progress was placed here as a result of questing successfully, the first player raises their threat by 3. If more than 3 progress was placed, each player engaged with more than 1 Shirriff enemy may discard 1 of them.")
@@ -368,6 +364,10 @@ namespace HallOfBeorn.Models.LotR.Sets.TheScouringOfTheShire
                 .WithFlavorLine("“Mortals cannot go drinking ent-draughts and expect no more to come of them than of a pot of beer.”")
                 .WithFlavorLine("Gimli, The Return of the King")
                 .WithInfo(41, 1, Artist.Unknown);
+            addHero("Frodo Baggins", 7, Sphere.Leadership, 2, 1, 2, 2)
+                .WithTraits("Hobbit.")
+                .WithTextLine("Response: After Frodo Baggins commits to the quest, spend 1 resource from his resource pool to ready another unique character committed to the quest. If you quest successfully this phase, reduce your threat by 1.")
+                .WithInfo(2, 1, Artist.Lukasz_Jaskolski);
             /*
             addGenConSetup("Back Card", EncounterSet.TheScouringOfTheShire)
                 .WithTextLine("Side A Credits")
