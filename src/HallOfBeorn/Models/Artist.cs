@@ -779,8 +779,52 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Franco_Rivolli);
             all.Add(Artist.Paolo_Puggioni);
             
+            //The Scouring of the Shire
+            all.Add(Artist.Michael_Herring);
+            all.Add(Artist.Ryan_Pancoast);
+            all.Add(Artist.Anne_Louise_P);
+            all.Add(Artist.Pavel_Firsov);
+            all.Add(Artist.Toni_DiTerlizzi);
+            all.Add(Artist.Andrei_Pervukhin);
+            all.Add(Artist.Denis_Gordeev);
+            all.Add(Artist.Tyler_Jacobson);
+            all.Add(Artist.Leo_Lasfargue);
+            all.Add(Artist.Joan_Wyatt);
+            all.Add(Artist.Inger_Edelfeldt);
+            all.Add(Artist.Jonas_Akerlund);
+            all.Add(Artist.Tyler_James);
+            all.Add(Artist.Joshua_Viers);
+            all.Add(Artist.Rastislav_Le);
+            all.Add(Artist.lucife56);
+            all.Add(Artist.Lorenzo_Mastroianni);
+            all.Add(Artist.Jeff_Porter);
+            all.Add(Artist.Gennadiy_Lysak);
+            all.Add(Artist.Christina_Goupil);
+
             all.Add(Artist.None);
         }
+
+        //TSotS
+        public static Artist Michael_Herring = new Artist { Name = "Michael Herring", URL = "https://michaelherring.net/art/" };
+        public static Artist Ryan_Pancoast = new Artist { Name = "Ryan Pancoast", URL = "https://www.ryanpancoast.com/" };
+        public static Artist Anne_Louise_P = new Artist { Name = "Anne-Louise P.", URL = "https://society6.com/annelouisep" };
+        public static Artist Pavel_Firsov = new Artist { Name = "Pavel Firsov", URL = "https://www.saatchiart.com/paintings/pavel-firsov/feature" };
+        public static Artist Toni_DiTerlizzi = new Artist { Name = "Toni DiTerlizzi", URL = "https://diterlizzi.com/" };
+        public static Artist Andrei_Pervukhin = new Artist { Name = "Andrei Pervukhin", URL = "https://www.artstation.com/firstear" };
+        public static Artist Denis_Gordeev = new Artist { Name = "Denis Gordeev", URL = "https://www.google.com/search?q=Denis+Gordeev+art" };
+        public static Artist Tyler_Jacobson = new Artist { Name = "Tyler Jacobson", URL = "http://www.tylerjacobsonart.com/" };
+        public static Artist Leo_Lasfargue = new Artist { Name = "Léo Lasfargue", URL = "https://www.artstation.com/leolasfargue" };
+        public static Artist Joan_Wyatt = new Artist { Name = "Joan Wyatt", URL = "http://www.artnet.com/artists/joan-wyatt/" };
+        public static Artist Inger_Edelfeldt = new Artist { Name = "Inger Edelfeldt", URL = "http://tolkiengateway.net/wiki/Inger_Edelfeldt" };
+        public static Artist Jonas_Akerlund = new Artist { Name = "Jonas Åkerlund", URL = "https://www.artstation.com/gerezon" };
+        public static Artist Tyler_James = new Artist { Name = "Tyler James", URL = "https://www.artstation.com/artofty" };
+        public static Artist Joshua_Viers = new Artist { Name = "Joshua Viers", URL = "https://www.artstation.com/dvsdesigner" };
+        public static Artist Rastislav_Le = new Artist { Name = "Rastislav Le", URL = "https://www.artstation.com/lerastislav" };
+        public static Artist lucife56 = new Artist { Name = "lucife56", URL = "https://www.deviantart.com/lucife56" };
+        public static Artist Lorenzo_Mastroianni = new Artist { Name = "Lorenzo Mastroianni", URL = "https://www.artstation.com/lorenzomastroianni" };
+        public static Artist Jeff_Porter = new Artist { Name = "Jeff Porter", URL = "http://jeffporterart.blogspot.com/" };
+        public static Artist Gennadiy_Lysak = new Artist { Name = "Gennadiy Lysak", URL = "https://www.russianpaintings.net/artists/artist_lysak_gennadiy_225523/" };
+        public static Artist Christina_Goupil = new Artist { Name = "Christina Goupil", URL = "https://www.google.com/search?q=christina+goupil+art" };
 
         //CoE
         public static Artist Epic_Games = new Artist { Name = "Epic Games", URL = "http://google.com/search?q=Epic+Games+art" };

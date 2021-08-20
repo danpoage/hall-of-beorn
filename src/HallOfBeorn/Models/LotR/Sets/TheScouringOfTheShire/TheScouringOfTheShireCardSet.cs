@@ -55,7 +55,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheScouringOfTheShire
                 .WithOppositeTextLine("Action: Exhaust a non-Fellowship hero and discard a resource token from its pool. Then, add 2 resources to the set-aside Saruman.")
                 .WithOppositeTextLine("At the end of the planning phase, advance to the next quest stage.")
                 .WithIncludedEncounterSets(EncounterSet.TheScouringOfTheShire)
-                .WithInfo(1, 1, Artist.Unknown);
+                .WithInfo(1, 1, Artist.Ted_Nasmith);
             addQuest("Escorted “Prisoners”", EncounterSet.TheScouringOfTheShire, 2, 'A', 12)
                 .WithTextLine("When Revealed: Make Brandywine Gate the active location and add Three-Farthing Stone to the staging area.")
                 .WithFlavorLine("After a brief encounter on the road with the disgraced Saruman, Frodo and his companions encounter resistance and hostility from the Shirriffs of the Shire. Side B: “It's the Chief's orders that you're to come along quiet. We're going to take you to Bywater and hand you over to the Chief's Men.”")
@@ -64,7 +64,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheScouringOfTheShire
                 .WithOppositeTextLine("Forced: At the end of the quest phase, if no progress was placed here as a result of questing successfully, the first player raises their threat by 3. If more than 3 progress was placed, each player engaged with more than 1 Shirriff enemy may discard 1 of them.")
                 .WithOppositeTextLine("The players cannot advance while Three-Farthing Stone is in play.")
                 .WithIncludedEncounterSets(EncounterSet.TheScouringOfTheShire)
-                .WithInfo(2, 1, Artist.Unknown);
+                .WithInfo(2, 1, Artist.Owen_William_Weber);
             addQuest("Raise the Shire", EncounterSet.TheScouringOfTheShire, 3, 'A', Card.VALUE_NA)
                 .WithTextLine("Side A When Revealed: Randomly select 3 of the set aside non-Doom side quests and put them into play (4 side quests instead if there are 3 or 4 players).")
                 .WithFlavorLine("Side A: The Shire has fallen under the sway of a gang of ruffians led by a man known as “Sharkey”. Frodo and his friends must prepare Bywater and raise support to contest him. Side B: “As soon as they saw how things were, most of them took off their feathers and joined in the revolt.”")
@@ -72,7 +72,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheScouringOfTheShire
                 .WithOppositeTextLine("Forced: After a side quest is defeated, search the encounter deck for a Shirriff enemy and add it to the staging area. Shuffle the encounter deck.")
                 .WithOppositeTextLine("Forced: At the end of the round, place 1 resource token here and raise each player's threat by the total number of resource tokens here. Then, the players may choose to advance to the next quest stage.")
                 .WithIncludedEncounterSets(EncounterSet.TheScouringOfTheShire)
-                .WithInfo(3, 1, Artist.Unknown);
+                .WithInfo(3, 1, Artist.Jonas_Akerlund);
             addQuest("The Battle of Bywater", EncounterSet.TheScouringOfTheShire, 4, 'A', Card.VALUE_NA)
                 .WithTextLine("Side A When Revealed: Shuffle the encounter discard pile into the encounter deck. Remove each Shirriff enemy in play and in the encounter deck from the game. The first player searches the encounter deck and victory display for 1 copy of Gang of Ruffians and engages it. Then, each player not engaged with a Ruffian enemy searches the encounter deck for a Ruffian enemy and engages it. Shuffle the encounter deck. Discard cards from the encounter deck until X enemies are discarded, and add those enemies to the staging area. X is the number of encounter side quests in play. Then, remove those side quests from the game.")
                 .WithFlavorLine("Side A:  Side B: The ruffians could not now be cowed so easily. A few of them obeyed, but were immediately set on by their fellows. A score or more broke back and charged the wagons.")
@@ -80,7 +80,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheScouringOfTheShire
                 .WithOppositeTextLine("While any Ruffian enemy in play has any remaining hit points, all Ruffian enemies gain indestructible.")
                 .WithOppositeTextLine("If there are no enemies in play, advance to the next quest stage.")
                 .WithIncludedEncounterSets(EncounterSet.TheScouringOfTheShire)
-                .WithInfo(4, 1, Artist.Unknown);
+                .WithInfo(4, 1, Artist.Jeff_Porter);
             addQuest("The Very Last Stroke", EncounterSet.TheScouringOfTheShire, 5, 'A', Card.VALUE_X)
                 .WithTextLine("Side A When Revealed: If it is the combat phase, end the phase. Add Saruman and Gríma's Choice to the staging area.")
                 .WithFlavorLine("Side A: With Sharkey's forces scattered, Frodo sets out to confront him. To Frodo's surprise, he is greeted by none other than Saruman, with Gríma Wormtongue cowering nearby. Side B: “You are wise, and cruel. You have robbed my revenge of sweetness, and now I must go hence in bitterness.”")
@@ -89,20 +89,20 @@ namespace HallOfBeorn.Models.LotR.Sets.TheScouringOfTheShire
                 .WithOppositeTextLine("Action: Exhaust a hero and discard 1 resource token from its pool to add 1 resource to Saruman.")
                 .WithOppositeTextLine("This stage cannot be defeated while Saruman is in play. When this stage is defeated, the players win the game.")
                 .WithIncludedEncounterSets(EncounterSet.TheScouringOfTheShire)
-                .WithInfo(5, 1, Artist.Unknown);
+                .WithInfo(5, 1, Artist.Joan_Wyatt);
             addHero("Frodo Baggins", 0, Sphere.Fellowship, 2, 1, 2, 2)
                 .WithSlugSuffix("Fellowship")
                 .WithTraits("Hobbit.")
                 .WithTextLine("The first player gains control of Frodo Baggins.")
                 .WithTextLine("Response: After Frodo Baggins is declared as a defender, spend 1 Fellowship resource to reduce your threat by the attacking enemy's Threat. Until the end of the round, that enemy cannot take damage.")
                 .WithTextLine("If Frodo Baggins leaves play, the players lose the game.")
-                .WithInfo(6, 1, Artist.Unknown);
+                .WithInfo(6, 1, Artist.Sara_Biddle);
             addEnemy("Saruman", EncounterSet.TheScouringOfTheShire, 0, 4, 5, 4, 9)
                 .WithUnique()
                 .WithTraits("Istari.", "Traitor.")
                 .WithTextLine("Immune to player card effects. Cannot be engaged. Sharkey card effects cannot be cancelled.")
                 .WithTextLine("Forced: At the end of the staging step, add 1 Per Player resource tokens to Saruman and reveal the top card of the Sharkey deck. Then, put the revealed card on the bottom of the Sharkey deck.")
-                .WithInfo(7, 1, Artist.Unknown);
+                .WithInfo(7, 1, Artist.Tyler_James);
             addLocation("Brandywine Gate", EncounterSet.TheScouringOfTheShire, 3, 1)
                 .WithUnique()
                 .WithTraits("Shire.", "Gate.")
@@ -120,25 +120,25 @@ namespace HallOfBeorn.Models.LotR.Sets.TheScouringOfTheShire
                 .WithFlavorLine("They were hungry and very footsore and they could not stand the pace.")
                 .WithFlavorLine("The Return of the King")
                 .WithVictoryPoints(1)
-                .WithInfo(9, 1, Artist.Unknown);
+                .WithInfo(9, 1, Artist.Gennadiy_Lysak);
             addTreachery("Hidden Blade", EncounterSet.TheScouringOfTheShire)
                 .WithTraits("Sharkey.")
                 .WithTextLine("When Revealed: Saruman makes an immediate attack against each player in turn order. Allies cannot defend against Saruman.")
                 .WithFlavorLine("“A knife flashed in his hand, and he stabbed swiftly.”")
                 .WithFlavorLine("The Return of the King")
-                .WithInfo(10, 1, Artist.Unknown);
+                .WithInfo(10, 1, Artist.Tyler_Jacobson);
             addTreachery("One Ill Turn", EncounterSet.TheScouringOfTheShire)
                 .WithTraits("Sharkey.")
                 .WithTextLine("When Revealed: Deal 1 damage to each exhausted character. Until the end of the round, characters cannot be healed.")
                 .WithFlavorLine("“It would have been a sharper lesson, if only you had given me a little more time.”")
                 .WithFlavorLine("Saruman, The Return of the King")
-                .WithInfo(11, 1, Artist.Unknown);
+                .WithInfo(11, 1, Artist.Inger_Edelfeldt);
             addTreachery("Voice of Saruman", EncounterSet.TheScouringOfTheShire)
                 .WithTraits("Sharkey.")
                 .WithTextLine("When Revealed: Randomly select 1 ally controlled by each player, if able. Each player deals X damage to one of their heroes, where X is their chosen ally's Attack, then discards that ally. If a player controls no allies, that player instead discards all attachments from the hero they control with the most attachments.")
                 .WithFlavorLine("“He has lost all power, save his voice that can still daunt you and deceive you, if you let it.”")
                 .WithFlavorLine("Frodo Baggins, The Return of the King")
-                .WithInfo(12, 1, Artist.Unknown);
+                .WithInfo(12, 1, Artist.Francesco_Amadio);
             addTreachery("Curse Upon the Shire", EncounterSet.TheScouringOfTheShire)
                 .WithTraits("Sharkey.")
                 .WithTextLine("When Revealed: Each player must choose: either raise your threat by 1 for each ally you control, or discard 2 allies you control.")
@@ -150,26 +150,26 @@ namespace HallOfBeorn.Models.LotR.Sets.TheScouringOfTheShire
                 .WithTextLine("When Revealed: Discard cards from the encounter deck until a location is discarded and add that location to the staging area. Deal X damage among characters in play. X is twice the number of locations in play (3 times the number of locations in play if there are 3 or more players).")
                 .WithFlavorLine("Saruman laughed. “You do what Sharkey says, always, don't you, Worm?”")
                 .WithFlavorLine("The Return of the King")
-                .WithInfo(14, 1, Artist.Unknown);
+                .WithInfo(14, 1, Artist.Christina_Goupil);
             addEncounterSideQuest("Gríma's Choice", EncounterSet.TheScouringOfTheShire, Card.VALUE_X)
                 .WithTraits("Doom.")
                 .WithTextLine("X is 3 Per Player. This stage cannot be chosen as the current quest while The Very Last Stroke has remaining quest points.")
                 .WithTextLine("Forced: When this stage is defeated, discard Saruman from play.")
                 .WithFlavorLine("“Wormtongue!” called Frodo. “You need not follow him. I know of no evil you have done to me. You can have rest and food here for a while, until you are stronger and can go your own ways.”")
                 .WithFlavorLine("The Return of the King")
-                .WithInfo(15, 1, Artist.Unknown);
+                .WithInfo(15, 1, Artist.Denis_Gordeev);
             addEncounterSideQuest("Rouse the Cottons", EncounterSet.TheScouringOfTheShire, 6)
                 .WithTextLine("While Rouse the Cottons is the current quest, allies cannot commit to the quest.")
                 .WithTextLine("Forced: When this quest is defeated, flip it over.")
                 .WithFlavorLine("“Come on now, lads! Bywater is up! We must be in it!”")
                 .WithFlavorLine("Tom Cotton, The Return of the King")
                 .WithSideA()
-                .WithInfo(16, 1, Artist.Unknown);
+                .WithInfo(16, 1, Artist.Ted_Nasmith);
             addObjective("Roused Hobbits", EncounterSet.TheScouringOfTheShire)
                 .WithTextLine("While attached, counts as a Condition attachment with the text: “Attached card loses indestructible and the enemy card type and gains the ally card type with Willpower equal to its Threat. If either attached card or Roused Hobbits would leave play, remove both cards from the game.”")
                 .WithTextLine("When Revealed: Choose 1 player to take control of a Shirriff enemy engaged with them and attach Roused Hobbits to it (if there are no engaged Shirriff enemies, remove Roused Hobbits from the game).")
                 .WithSideB()
-                .WithInfo(16, 1, Artist.Unknown);
+                .WithInfo(16, 1, Artist.Francesco_Amadio);
             addEncounterSideQuest("Awake! Fire, Foes! Awake!", EncounterSet.TheScouringOfTheShire, 12)
                 .WithTextLine("Encounter Action: Engage a Ruffian enemy in the encounter discard pile. Any player may trigger this effect.")
                 .WithTextLine("Response: After the first player destroys an enemy, place 2 progress here.")
@@ -177,12 +177,13 @@ namespace HallOfBeorn.Models.LotR.Sets.TheScouringOfTheShire
                 .WithFlavorLine("He had not gone far when he heard a sudden clear horn-call go up ringing into the sky. Far over hill and field it echoed.")
                 .WithFlavorLine("-The Return of the King")
                 .WithSideA()
-                .WithInfo(17, 1, Artist.Unknown);
+                .WithInfo(17, 1, Artist.Ryan_Pancoast);
             addObjective("Roused Hobbits", EncounterSet.TheScouringOfTheShire)
+                .WithSlugSuffix("2")
                 .WithTextLine("While attached, counts as a Condition attachment with the text: “Attached card loses indestructible and the enemy card type and gains the ally card type with Willpower equal to its Threat. If either attached card or Roused Hobbits would leave play, remove both cards from the game.”")
                 .WithTextLine("When Revealed: Choose 1 player to take control of a Shirriff enemy engaged with them and attach Roused Hobbits to it (if there are no engaged Shirriff enemies, remove Roused Hobbits from the game).")
                 .WithSideB()
-                .WithInfo(17, 1, Artist.Unknown);
+                .WithInfo(17, 1, Artist.Francesco_Amadio);
             addEncounterSideQuest("Set up Barriers", EncounterSet.TheScouringOfTheShire, 12)
                 .WithTextLine("Players cannot draw cards.")
                 .WithTextLine("Action: Spend 1 Per Player resources as a group to place 3 progress on Set up Barriers.")
@@ -190,48 +191,52 @@ namespace HallOfBeorn.Models.LotR.Sets.TheScouringOfTheShire
                 .WithFlavorLine("Others at Merry's orders were setting up barriers across the road at each end of the village.")
                 .WithFlavorLine("-The Return of the King")
                 .WithSideA()
-                .WithInfo(18, 1, Artist.Unknown);
+                .WithInfo(18, 1, Artist.Bethesda_Softworks);
             addObjective("Roused Hobbits", EncounterSet.TheScouringOfTheShire)
+                .WithSlugSuffix("3")
                 .WithTextLine("While attached, counts as a Condition attachment with the text: “Attached card loses indestructible and the enemy card type and gains the ally card type with Willpower equal to its Threat. If either attached card or Roused Hobbits would leave play, remove both cards from the game.”")
                 .WithTextLine("When Revealed: Choose 1 player to take control of a Shirriff enemy engaged with them and attach Roused Hobbits to it (if there are no engaged Shirriff enemies, remove Roused Hobbits from the game).")
                 .WithSideB()
-                .WithInfo(18, 1, Artist.Unknown);
+                .WithInfo(18, 1, Artist.Francesco_Amadio);
             addEncounterSideQuest("Muster the Tooks", EncounterSet.TheScouringOfTheShire, Card.VALUE_X)
                 .WithTextLine("X is 4 Per Player. While Muster the Tooks is the current quest, heroes cannot commit to the quest.")
                 .WithTextLine("Forced: When this quest is defeated, flip it over.")
                 .WithFlavorLine("“It's only fourteen miles or so over the fields. I'll bring you back an army of Tooks in the morning.”")
                 .WithFlavorLine("-Pippin, The Return of the King")
                 .WithSideA()
-                .WithInfo(19, 1, Artist.Unknown);
+                .WithInfo(19, 1, Artist.Ted_Nasmith);
             addObjective("Roused Hobbits", EncounterSet.TheScouringOfTheShire)
+                .WithSlugSuffix("4")
                 .WithTextLine("While attached, counts as a Condition attachment with the text: “Attached card loses indestructible and the enemy card type and gains the ally card type with Willpower equal to its Threat. If either attached card or Roused Hobbits would leave play, remove both cards from the game.”")
                 .WithTextLine("When Revealed: Choose 1 player to take control of a Shirriff enemy engaged with them and attach Roused Hobbits to it (if there are no engaged Shirriff enemies, remove Roused Hobbits from the game).")
                 .WithSideB()
-                .WithInfo(19, 1, Artist.Unknown);
+                .WithInfo(19, 1, Artist.Francesco_Amadio);
             addEncounterSideQuest("Ambush Sharkey's Men", EncounterSet.TheScouringOfTheShire, Card.VALUE_NA)
                 .WithTextLine("Forced: After a Gang of Ruffians is defeated, flip this card over.")
                 .WithTextLine("Forced: At the end of the quest phase, if no progress was placed on Ambush Sharkey's Men this round, search the encounter deck and discard pile for a Ruffian enemy and add it to the staging area. Shuffle the encounter deck.")
                 .WithFlavorLine("“I warned you not to come back here. I warn you again: you are standing in the light.”")
                 .WithFlavorLine("-Merry, The Return of the King")
                 .WithSideA()
-                .WithInfo(20, 1, Artist.Unknown);
+                .WithInfo(20, 1, Artist.Michael_Herring);
             addObjective("Roused Hobbits", EncounterSet.TheScouringOfTheShire)
+                .WithSlugSuffix("5")
                 .WithTextLine("While attached, counts as a Condition attachment with the text: “Attached card loses indestructible and the enemy card type and gains the ally card type with Willpower equal to its Threat. If either attached card or Roused Hobbits would leave play, remove both cards from the game.”")
                 .WithTextLine("When Revealed: Choose 1 player to take control of a Shirriff enemy engaged with them and attach Roused Hobbits to it (if there are no engaged Shirriff enemies, remove Roused Hobbits from the game).")
                 .WithSideB()
-                .WithInfo(20, 1, Artist.Unknown);
+                .WithInfo(20, 1, Artist.Francesco_Amadio);
             addEncounterSideQuest("Find the Gaffer", EncounterSet.TheScouringOfTheShire, 8)
                 .WithTextLine("Travel Action: Exhaust a hero you control to place 2 progress on Find the Gaffer. You cannot declare defenders or attackers this round. Any player may trigger this effect.")
                 .WithTextLine("Forced: When this quest is defeated, flip it over.")
                 .WithFlavorLine("“I want to see him. That Boss and that Sharkey, as they spoke of, they might do a mischief up there before the morning.”")
                 .WithSideA()
                 .WithFlavorLine("-Sam, The Return of the King")
-                .WithInfo(21, 1, Artist.Unknown);
+                .WithInfo(21, 1, Artist.Toni_DiTerlizzi);
             addObjective("Roused Hobbits", EncounterSet.TheScouringOfTheShire)
+                .WithSlugSuffix("6")
                 .WithTextLine("While attached, counts as a Condition attachment with the text: “Attached card loses indestructible and the enemy card type and gains the ally card type with Willpower equal to its Threat. If either attached card or Roused Hobbits would leave play, remove both cards from the game.”")
                 .WithTextLine("When Revealed: Choose 1 player to take control of a Shirriff enemy engaged with them and attach Roused Hobbits to it (if there are no engaged Shirriff enemies, remove Roused Hobbits from the game).")
                 .WithSideB()
-                .WithInfo(21, 1, Artist.Unknown);
+                .WithInfo(21, 1, Artist.Francesco_Amadio);
             addEncounterSideQuest("Watch the East Road", EncounterSet.TheScouringOfTheShire, Card.VALUE_X)
                 .WithTextLine("Cannot be chosen as the active quest. X is 1 plus 1 Per Player.")
                 .WithTextLine("Response: At the beginning of the staging step, place any number of progress here and reveal an equal number of encounter cards.")
@@ -239,35 +244,39 @@ namespace HallOfBeorn.Models.LotR.Sets.TheScouringOfTheShire
                 .WithFlavorLine("“There's a big band about four miles away… there must be close on a hundred of them; and they're fire-raising as they come.”")
                 .WithFlavorLine("-Merry, The Return of the King")
                 .WithSideA()
-                .WithInfo(22, 1, Artist.Unknown);
+                .WithInfo(22, 1, Artist.Joan_Wyatt);
             addObjective("Roused Hobbits", EncounterSet.TheScouringOfTheShire)
+                .WithSlugSuffix("7")
                 .WithTextLine("While attached, counts as a Condition attachment with the text: “Attached card loses indestructible and the enemy card type and gains the ally card type with Willpower equal to its Threat. If either attached card or Roused Hobbits would leave play, remove both cards from the game.”")
                 .WithTextLine("When Revealed: Choose 1 player to take control of a Shirriff enemy engaged with them and attach Roused Hobbits to it (if there are no engaged Shirriff enemies, remove Roused Hobbits from the game).")
                 .WithSideB()
-                .WithInfo(22, 1, Artist.Unknown);
+                .WithInfo(22, 1, Artist.Francesco_Amadio);
             addEnemy("Feather-capped Shirriff", EncounterSet.TheScouringOfTheShire, 25, 1, 2, 1, 2)
                 .WithTraits("Hobbit.", "Shirriff.")
                 .WithKeywords("Indestructible.")
                 .WithTextLine("Indestructible. Damage dealt by Feather-capped Shirriff to your characters is instead assigned as an increase to your threat.")
                 .WithTextLine("While the engaged player's threat is higher than Feather-capped Shirriff's engagement cost, Feather-capped Shirriff gets +1 Attack.")
-                .WithInfo(23, 6, Artist.Unknown);
+                .WithEasyModeQuantity(1)
+                .WithInfo(23, 6, Artist.Francesco_Amadio);
             addEnemy("Thieving Ruffian", EncounterSet.TheScouringOfTheShire, 25, 2, 3, 2, 2)
                 .WithTraits("Ruffian.")
                 .WithTextLine("Forced: When Thieving Ruffian attacks you, raise your threat by 1 for each attachment on the defending character.")
                 .WithFlavorLine("“So that's your tone, is it? Change it, or we'll change it for you.”")
                 .WithFlavorLine("The Return of the King")
-                .WithInfo(24, 4, Artist.Unknown);
+                .WithInfo(24, 4, Artist.Bethesda_Softworks);
             addEnemy("Highway Robber", EncounterSet.TheScouringOfTheShire, 30, 3, 4, 3, 3)
                 .WithTraits("Ruffian.")
                 .WithTextLine("Forced: When Highway Robber attacks you, either discard 1 resource from a hero you control or Highway Robber gets +2 Attack for this attack.")
                 .WithFlavorLine("Scaring Breeland peasants, and bullying bewildered hobbits, had been their work.")
                 .WithFlavorLine("The Return of the King")
-                .WithInfo(25, 3, Artist.Unknown);
+                .WithEasyModeQuantity(1)
+                .WithInfo(25, 3, Artist.Leo_Lasfargue);
             addEnemy("Gang of Ruffians", EncounterSet.TheScouringOfTheShire, 40, 4, 8, 3, 8)
                 .WithTraits("Ruffian.")
                 .WithTextLine("Response: When Gang of Ruffians would deal damage during an attack, instead distribute that damage among characters controlled by the defending player.")
                 .WithTextLine("Forced: After Gang of Ruffians attacks, if the attack destroyed at least 1 of your characters, discard 1 card at random from your hand and raise your threat by 1.")
-                .WithInfo(26, 3, Artist.Unknown);
+                .WithEasyModeQuantity(1)
+                .WithInfo(26, 3, Artist.Andrei_Pervukhin);
             addLocation("The Lockholes", EncounterSet.TheScouringOfTheShire, 2, 3)
                 .WithTraits("Shire.", "Underground.")
                 .WithKeywords("Peril.")
@@ -276,7 +285,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheScouringOfTheShire
                 .WithTextLine("Forced: After The Lockholes is explored, return the attached ally to its owner's control, faceup and ready.")
                 .WithFlavorLine("“Lockholes, as they call ‘em: the old storage-tunnels at Michel Delving that they've made into prisons for those as stand up to them.”")
                 .WithFlavorLine("Tom Cotton, The Return of the King")
-                .WithInfo(27, 2, Artist.Unknown);
+                .WithInfo(27, 2, Artist.Joan_Wyatt);
             addLocation("East Road", EncounterSet.TheScouringOfTheShire, 4, 2)
                 .WithTraits("Shire.", "Road.")
                 .WithKeywords("Peril.")
@@ -284,52 +293,65 @@ namespace HallOfBeorn.Models.LotR.Sets.TheScouringOfTheShire
                 .WithTextLine("When Revealed: Either raise your threat by 2 or East Road gains surge.")
                 .WithFlavorLine("Round a bend, about a furlong from the main road, they met a stout barrier of old farm-carts upturned. That halted them.")
                 .WithFlavorLine("The Return of the King")
-                .WithInfo(28, 3, Artist.Unknown);
+                .WithEasyModeQuantity(1)
+                .WithInfo(28, 3, Artist.Pavel_Firsov);
             addLocation("Shirriff House", EncounterSet.TheScouringOfTheShire, 3, 3)
                 .WithTraits("Hideout.")
                 .WithTextLine("Forced: After Shirriff House becomes the active location, exhaust each character with 2 or more printed Attack.")
                 .WithTextLine("Forced: After Shirriff House leaves play, the first player must search the encounter deck and discard pile for a Shirriff enemy and engage it, if able. Shuffle the encounter deck.")
                 .WithFlavorLine("Inside it was damp and cheerless.")
                 .WithFlavorLine("The Return of the King")
-                .WithInfo(29, 2, Artist.Unknown);
+                .WithInfo(29, 2, Artist.Owen_William_Weber);
             addLocation("Hobbiton Road", EncounterSet.TheScouringOfTheShire, 2, 1)
                 .WithTraits("Shire.", "Road.")
                 .WithTextLine("Forced: After Hobbiton Road leaves play, put a Ruffian enemy in the discard pile into play engaged with a player.")
                 .WithShadow("Shadow: Deal 1 damage to the defending character or raise your threat by 1.")
-                .WithInfo(30, 3, Artist.Unknown);
+                .WithInfo(30, 3, Artist.Owen_William_Weber);
             addLocation("Brick Building", EncounterSet.TheScouringOfTheShire, 1, 5)
                 .WithTraits("Hideout.")
                 .WithTextLine("While Brick Building is in the staging area, characters cannot be healed.")
                 .WithShadow("Shadow: Deal 2 damage to the defending character or raise your threat by 2.")
                 .WithFlavorLine("Through rows of new mean houses along each side of the road, they saw the new mill in all its frowning and dirty ugliness.")
                 .WithFlavorLine("The Return of the King")
-                .WithInfo(31, 2, Artist.Unknown);
+                .WithEasyModeQuantity(1)
+                .WithInfo(31, 2, Artist.Owen_William_Weber);
             addLocation("Wooden Shed", EncounterSet.TheScouringOfTheShire, 1, 5)
                 .WithTraits("Hideout.")
                 .WithTextLine("While Wooden Shed is in the staging area, players cannot reduce their threat by more than 1 each round.")
                 .WithShadow("Shadow: Either raise your threat by 1 or exhaust a character you control.")
                 .WithFlavorLine("There were piles of refuse everywhere. The door was scarred; the bell-chain was dangling loose, and the bell would not ring.")
                 .WithFlavorLine("The Return of the King")
-                .WithInfo(32, 2, Artist.Unknown);
+                .WithInfo(32, 2, Artist.Owen_William_Weber);
             addTreachery("Once Beloved Place", EncounterSet.TheScouringOfTheShire)
                 .WithKeywords("Surge.")
                 .WithTextLine("Surge.")
                 .WithTextLine("When Revealed: Each location gets +1 Threat until the end of the round. If there are fewer than 1 Per Player locations in the staging area, discard cards from the encounter deck until a location is discarded and add it to the staging area.")
                 .WithFlavorLine("All the chestnuts were gone. The banks and hedgerows were broken.")
                 .WithFlavorLine("The Return of the King")
-                .WithInfo(33, 2, Artist.Unknown);
+                .WithInfo(33, 2, Artist.Joan_Wyatt);
             addTreachery("Against the Rules", EncounterSet.TheScouringOfTheShire)
                 .WithTextLine("When Revealed: Exhaust each character with 3 or more printed Attack. Each player that exhausted no characters by this effect must choose and exhaust 1 character they control.")
                 .WithShadow("Shadow: If your threat is higher than the attacking enemy's engagement cost, the attacking enemy gets +2 Attack. Otherwise, raise your threat by 2.")
-                .WithInfo(34, 3, Artist.Unknown);
+                .WithEasyModeQuantity(1)
+                .WithInfo(34, 3, Artist.Michael_Herring);
             addTreachery("Take Him, Lads!", EncounterSet.TheScouringOfTheShire)
                 .WithTextLine("When Revealed: Raise each player's threat by 4. Then, each player discards an ally they control and reduces their threat by X, where X is the printed cost of their discarded ally.")
                 .WithShadow("Shadow: If your threat is higher than the attacking enemy's engagement cost, the attacking enemy gets +2 Attack. Otherwise, raise your threat by 2.")
-                .WithInfo(35, 2, Artist.Unknown);
+                .WithEasyModeQuantity(1)
+                .WithInfo(35, 2, Artist.Lorenzo_Mastroianni);
             addTreachery("Sharkey's Men", EncounterSet.TheScouringOfTheShire)
                 .WithTextLine("When Revealed: Each enemy in play gets +1 Attack until the end of the round. If there are fewer than 1 Per Player Ruffian enemies in play, discard cards from the encounter deck until a Ruffian enemy is discarded and add it to the staging area.")
                 .WithShadow("Shadow: If the attacking enemy is a Ruffian, it makes an additional attack. The defending player may discard an ally they control to cancel this effect.")
-                .WithInfo(36, 3, Artist.Unknown);
+                .WithInfo(36, 3, Artist.Rastislav_Le);
+            addCampaign(setName, EncounterSet.TheScouringOfTheShire, "The Lord of the Rings - Part 19")
+                .WithTextLine("You are playing Campaign Mode.")
+                .WithTextLine("Setup: Each player may change heroes they control without incurring the +1 threat penalty. The players have earned the boon cards Star-like Gem, Bright Mail, Scatha's Horn, and Heightened Stature. Each player chooses one and adds it to their hand. If any of these boon cards remain unchosen, one player may choose one of them and shuffle it into their deck. Remove any unchosen cards from the game. Remove Gwaihir and all burden from the campaign pool. Attach Grievous Wound from the Road Darkens to Frodo Baggins.")
+                .WithFlavorLine("It was after nightfall when, wet and tired, the travellers came at last to the Brandywine, and they found the way barred.")
+                .WithFlavorLine("-The Return of the King")
+                .WithOppositeTextLine("Resolution: Each player has earned the Into the West contract card and may now use it in their decks.")
+                .WithOppositeFlavorLine("Then Elrond and Galadriel rode on; for the Third Age was over, and the Days of the Rings were passed, and an end was come to the story and song of those times. With them went many Elves of the High Kindred who would no longer stay in Middle-earth; and among them, filled with a sadness that was yet blessed and without bitterness, rode Sam, and Frodo, and Bilbo, and the Elves delighted to honour them.")
+                .WithOppositeFlavorLine("-The Return of the King")
+                .WithInfo(37, 1, Artist.Ted_Nasmith);
             addAttachment("Star-like Gem", 0, Sphere.Neutral, true)
                 .WithBoon()
                 .WithTraits("Artifact.", "Item.", "Hobbit.")
@@ -337,24 +359,24 @@ namespace HallOfBeorn.Models.LotR.Sets.TheScouringOfTheShire
                 .WithTextLine("Attached hero gets +1 Willpower.")
                 .WithTextLine("If attached hero is a Hobbit, it does not exhaust to quest.")
                 .WithFlavorLine("“When the memory of the fear and the darkness troubles you, this will bring you aid.”")
-                .WithFlavorLine("Arwen, The Return of the King")
-                .WithInfo(38, 1, Artist.Unknown);
+                .WithFlavorLine("-Arwen, The Return of the King")
+                .WithInfo(38, 1, Artist.lucife56);
             addAttachment("Bright Mail", 0, Sphere.Neutral, true)
                 .WithBoon()
                 .WithTraits("Item.", "Armor.", "Gondor.")
                 .WithTextLine("Attach to a hero.")
                 .WithTextLine("Attached hero gets +1 Defense (+2 Defense instead if attached hero is a Hobbit).")
                 .WithFlavorLine("“They wouldn't go for armed folk, with swords and helmets and shields and all. Make them think twice, that would.”")
-                .WithFlavorLine("Barliman Butterbur, The Return of the King")
-                .WithInfo(39, 1, Artist.Unknown);
+                .WithFlavorLine("-Barliman Butterbur, The Return of the King")
+                .WithInfo(39, 1, Artist.Anne_Louise_P);
             addAttachment("Scatha's Horn", 0, Sphere.Neutral, true)
                 .WithBoon()
                 .WithTraits("Artifact.", "Item.", "Rohan.")
                 .WithTextLine("Attach to a hero.")
                 .WithTextLine("Action: Exhaust Scatha's Horn to choose an attacking enemy. Until the end of the phase, that enemy gets −1 Attack (−2 Attack instead if the defending character is a Hobbit hero).")
                 .WithFlavorLine("“He that blows it at need shall set fear in the hearts of his enemies.”")
-                .WithFlavorLine("Éowyn, The Return of the King")
-                .WithInfo(40, 1, Artist.Unknown);
+                .WithFlavorLine("-Éowyn, The Return of the King")
+                .WithInfo(40, 1, Artist.Joshua_Viers);
             addAttachment("Heightened Stature", 0, Sphere.Neutral, true)
                 .WithBoon()
                 .WithTraits("Condition.", "Ent.")
@@ -362,8 +384,18 @@ namespace HallOfBeorn.Models.LotR.Sets.TheScouringOfTheShire
                 .WithTextLine("Attached hero gains +2 hit points (+3 hit points instead if attached hero is a Hobbit).")
                 .WithTextLine("Action: Exhaust Heightened Stature to heal 1 damage from attached hero.")
                 .WithFlavorLine("“Mortals cannot go drinking ent-draughts and expect no more to come of them than of a pot of beer.”")
-                .WithFlavorLine("Gimli, The Return of the King")
-                .WithInfo(41, 1, Artist.Unknown);
+                .WithFlavorLine("-Gimli, The Return of the King")
+                .WithInfo(41, 1, Artist.Angus_McBride);
+            addContract("Into the West")
+                .WithTextLine("You cannot use this contract unless you have destroyed The One Ring and won The Scouring of the Shire in campaign mode.")
+                .WithTextLine("Your deck must contain an equal number of cards with a printed cost of 1, 2, 3, 4, and 5.")
+                .WithTextLine("Setup: Search the top 10 cards of your deck for an ally with a printed cost of 3 or less and put it into play. Shuffle your deck and flip this card over.")
+                .WithFlavorLine("“I tried to save the Shire, and it has been saved, but not for me.”")
+                .WithFlavorLine("-Frodo Baggins, The Return of the King")
+                .WithOppositeTextLine("Into the West is immune to the effects of other cards and cannot leave your control or leave play. Allies you play from your hand cannot have their cost reduced by more than 2.")
+                .WithOppositeTextLine("Forced: At the beginning of the quest phase, attach Into the West to an ally you control, if able.")
+                .WithOppositeTextLine("Forced: At the end of the refresh phase, distribute X resources among heroes you control, where X is the attached card's printed cost. Remove the attached card from the game and draw 1 card.")
+                .WithInfo(42, 1, Artist.Donato_Giancola);
             addHero("Frodo Baggins", 7, Sphere.Leadership, 2, 1, 2, 2)
                 .WithTraits("Hobbit.")
                 .WithTextLine("Response: After Frodo Baggins commits to the quest, spend 1 resource from his resource pool to ready another unique character committed to the quest. If you quest successfully this phase, reduce your threat by 1.")

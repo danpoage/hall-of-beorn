@@ -47,5 +47,6 @@ namespace HallOfBeorn.Models.LotR
         public const string DoomMastered = "Doom Mastered";
         public const string ChildrenOfEorl = "Children of Eorl";
         public const string OathsOfTheRohirrim = "Oaths of the Rohirrim";
+        public const string TheScouringOfTheShire = "The Scouring of the Shire";
     }
 }
