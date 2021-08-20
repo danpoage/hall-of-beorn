@@ -33,23 +33,28 @@ namespace HallOfBeorn.Services.LotR.Translation
         public Dictionary<string, string> Keywords()
         {
             return new Dictionary<string, string> {
-                { "Ranged.", "Fernkampf." },
-                { "Devoted.", "Treu." },
-                { "Doomed 1.", "Verflucht 1." },
-                { "Vast.", "Weitläufig." },
+                { "Archery 1.", "Bogenschießen 1." },
                 { "Archery 2.", "Bogenschießen 2." },
-                { "Surge.", "Nachrüsten." },
-                { "Looter 3.", "Erbeuten 3." },
+                { "Archery X.", "Bogenschießen X." },
+                
+                { "Devoted.", "Treu." },
+                
+                { "Doomed 1.", "Verflucht 1." },
+                
+                { "Guarded (enemy).", "Bewacht (Gegner)." },
+                { "Guarded (location).", "Bewacht (Ort)." },
+                
+                { "Looter 0.", "Erbeuten 0." },
                 { "Looter 1.", "Erbeuten 1." },
                 { "Looter 2.", "Erbeuten 2." },
-                { "Archery X.", "Bogenschießen X." },
-                { "Looter 0.", "Erbeuten 0." },
-                { "Sentinel.", "Schildwache." },
-                { "Archery 1.", "Bogenschießen 1." },
-                { "Guarded (enemy).", "Bewacht (Gegner)." },
+                { "Looter 3.", "Erbeuten 3." },
+                
+                { "Ranged.", "Fernkampf." },
                 { "Restricted.", "Eingeschränkt." },
-                { "Guarded (location).", "Bewacht (Ort)." },
-
+                { "Secrecy 1.", "Heimlichkeit 1." },
+                { "Sentinel.", "Schildwache." },
+                { "Surge.", "Nachrüsten." },
+                { "Vast.", "Weitläufig." },
             };
         }
 
@@ -145,34 +150,91 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Thieves and Coursers", "Diebe und Rennpferde" },
                 { "The King's Stallion", "Des Königs Hengst" },
                 { "The Sweeping Tide", "Die Reissende Flut" },
+
+                { "Fatty Bolger", "Dick Bolger" },
+                { "Lily Cotton", "Lily Hüttinger" },
+                { "A Lesson in Caution", "Eine Lektion in Vorsicht" },
+                { "There and Back Again", "Hin und wieder zurück" },
+                { "Buckland Shirriff", "Landbüttel von Bockland" },
+                { "Weep No More!", "Weint nicht mehr!" },
+                { "Fear! Fire! Foes!", "Gefahr! Feuer! Feinde!" },
+                { "Horn-call of Buckland", "Hornruf von Bockland" },
+                { "Young Tom", "Junger Tom" },
+                { "Red Harvest", "Rote Ernte" },
+                { "The Prisoner in White", "Der Gefangene in Weiss" },
+                { "The Man with the Twisted Lip", "Der Mann mit der entstellten Lippe" },
+                { "A Fire Rises", "Ein Feuer bricht aus" },
+                { "A Case of Identity", "Eine Frage der Identität" },
+                { "Whisperer in the Darkness", "Flüsterin in der Dunkelheit" },
+                { "Spreading Inferno", "Sich ausbreitende Feuersbrunst" },
+                { "The Whisperer", "Die Flüsterin" },
+                { "The Spy Master", "Der Meister der Spione" },
+                { "Garrison Barracks", "Garnisonskaserne" },
+                { "The Horse's Tail", "Zum Pferdeschwanz" },
+                { "The Armoury", "Die Rüstkammer" },
+                { "Great Mead Hall", "Grosse Met-Halle" },
+                { "Town Guard", "Stadtwache" },
+                { "Dunlending Agents", "Spione aus Dunland" },
+                { "Aldburg Malcontent", "Unzufriedener aus Aldburg" },
+                { "Misty Street", "Neblige Strasse" },
+                { "Well-lit Hall", "Gut beleuchtete Halle" },
+                { "Decrepit Hovel", "Heruntergekommene Hütte" },
+                { "Taken by the Night", "Von der Nacht genommen" },
+                { "False Lead", "Falsche Fährte" },
+                { "Sudden Ambush", "Plötzlicher Hinterhalt" },
+                { "Evil Under the Moon", "Böses unter dem Mond" },
+                { "Gathering Clues", "Hinweise sammeln" },
+                { "The Uncertain Dawn", "Eine ungewisse Dämmerung" },
+                { "Ossian", "Geständnis eines Verräters" },
+
+                //{ "Spreading Inferno", "Sich ausbreitende Feuersbrunst" },
+                { "Ruby Cloak-pin", "Weinrote Fibel" },
+                { "Silver Dagger", "Silberdolch" },
+                { "Prison Key", "Gefängnisschlüssel" },
+                { "Traitor's Confession", "Geständnis eines Verräters" },
+                { "Raven Signet Ring", "Rabensiegelring" },
+                { "Rohirric Coins", "Münzen der Rohirrim" },
+                { "Red Fletched Arrow", "Rotgefiederter Pfeil" },
+                { "Letter from Dunland", "Brief aus Dunland" },
             };
         }
 
         public Dictionary<string, string> Traits()
         {
             return new Dictionary<string, string> {
+                { "Assassin.", "Attentäter." },
                 { "Beorning.", "Beorninger." },
-                
-                { "Warrior.", "Krieger." },
-                { "Ranger.", "Waldläufer." },
-                { "Noble.", "Adlig." },
-                { "Skill.", "Fertigkeit." },
-                { "Servant.", "Diener." },
-                { "Scout.", "Späher." },
-                { "Mount.", "Reittier." },
-                { "Trap.", "Falle." },
-                { "Plains.", "Ebene." },
-                { "Village.", "Dorf." },
-                { "Weather.", "Wetter." },
-                { "Traitor.", "Verräter." },
-                { "Orc.", "Ork." },
                 { "Brigand.", "Gesetzloser." },
-                { "Gate.", "Tor." },
-                { "Road.", "Straße." },
-                { "Hills.", "Hügel." },
-                { "Stair.", "Treppe." },
                 { "Camp.", "Lager." },
+                { "Clue.", "Hinweis." },
+                { "Creature.", "Kreatur." },
+                { "Garrison.", "Garnison." },
+                { "Gate.", "Tor." },
+                { "Hills.", "Hügel." },
+                { "Inferno.", "Feuersbrunst." },
+                
+                { "Mount.", "Reittier." },
+                { "Noble.", "Adlig." },
+                { "Orc.", "Ork." },
+                { "Plains.", "Ebene." },
+                { "Ranger.", "Waldläufer." },
+                { "Road.", "Straße." },
+                
+                { "Scout.", "Späher." },
+                { "Servant.", "Diener." },
+                { "Shirriff.", "Landbüttel." },
+                { "Skill.", "Fertigkeit." },
+                { "Spy.", "Spion." },
+                { "Stair.", "Treppe." },
+                { "Suspicious.", "Verdächtig." },
 
+                { "Traitor.", "Verräter." },
+                { "Trap.", "Falle." },
+                
+                { "Village.", "Dorf." },
+                { "Warrior.", "Krieger." },
+                { "Weather.", "Wetter." },
+                { "Woodman.", "Waldmensch." },
             };
         }
     }

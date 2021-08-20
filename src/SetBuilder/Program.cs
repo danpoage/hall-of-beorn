@@ -913,18 +913,17 @@ namespace SetBuilder
         public static int Main(string[] args)
         {
             
-            //if (args.Length < 2)
-            //{
-            //    Console.WriteLine("usage: Language Set");
-            //    return 0;
-            //}
+            if (args.Length < 2)
+            {
+                Console.WriteLine("usage: Language Set");
+                return 0;
+            }
 
-            var lang = "English"; //args[0];
-            var setName = "The Scouring of the Shire"; //args[1];
+            var lang = args[0];
+            var setName = args[1];
 
             Console.OutputEncoding = Encoding.UTF8;
-                //GetEncoding(codePageCentralAndEasternEurope); //codePageWesternEurope);
-
+            
             if (lang == "English")
             {
                 return WriteEnglishSet(setName);
@@ -1071,8 +1070,10 @@ namespace SetBuilder
 
         private static int WriteTranslations(string language, string setName)
         {
-            var path = string.Format("./ALeP/The-Aldburg-Plot.{0}.json", language);
+            var normalizedSetName = setName.Replace(" ", "-");
+            var path = string.Format("./ALeP/{0}.{1}.json", normalizedSetName, language);
 
+            //TODO: Lookup the product using setName
             var product = new HallOfBeorn.Models.LotR.Products.Community.TheAldburgPlotProduct();
 
             var alepCards = ALePReader.ReadFile(path);

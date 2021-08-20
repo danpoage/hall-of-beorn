@@ -281,6 +281,11 @@ namespace SetBuilder
                 card.WithVictoryPoints(aCard.victory_points.ToStat());
             }
 
+            if (aCard.easy_mode_quantity.HasValue)
+            {
+                card.WithEasyModeQuantity(aCard.easy_mode_quantity.Value);
+            }
+
             card.WithInfo((ushort)aCard.position, aCard.quantity, Artist.Unknown);
         }
     }

@@ -122,15 +122,16 @@ namespace HallOfBeorn.Services.LotR.Templates
             //Scenario Pack
             TheHuntForTheDreadnaught();
 
-            //Community
+            //First Age
             FirstAge();
             TrialUponTheMarches();
             AmongTheOutlaws();
             TheBetrayalOfMim();
             TheFallOfNargothrond();
+
+            //A Long-extended Party
             ChildrenOfEorl();
             TheAldburgPlot();
-
             TheScouringOfTheShire();
         }
 
@@ -5900,7 +5901,7 @@ namespace HallOfBeorn.Services.LotR.Templates
             AddHtml("Find-the-Gaffer-TSotS", "<p class='main-text'>While attached, counts as a <b><i><b><i>Condition</i></b></i></b> attachment with the text: “Attached card loses indestructible and the enemy card type and gains the ally card type with {Willpower} equal to its {Threat}. If either attached card or Roused Hobbits would leave play, remove both cards from the game.”</p><p class='main-text'><b>When Revealed</b>: Choose 1 player to take control of a <b><i>Shirriff</i></b> enemy engaged with them and attach Roused Hobbits to it (if there are no engaged <b><i>Shirriff</i></b> enemies, remove Roused Hobbits from the game).</p>");
             AddHtml("Watch-the-East-Road-TSotS", "<p class='main-text'>While attached, counts as a <b><i><b><i>Condition</i></b></i></b> attachment with the text: “Attached card loses indestructible and the enemy card type and gains the ally card type with {Willpower} equal to its {Threat}. If either attached card or Roused Hobbits would leave play, remove both cards from the game.”</p><p class='main-text'><b>When Revealed</b>: Choose 1 player to take control of a <b><i>Shirriff</i></b> enemy engaged with them and attach Roused Hobbits to it (if there are no engaged <b><i>Shirriff</i></b> enemies, remove Roused Hobbits from the game).</p>");
             AddHtml("Into-the-West-TSotS", "<p class='main-text'>You cannot use this contract unless you have destroyed The One Ring and won <i>The Scouring of the Shire</i> in campaign mode.</p><p class='main-text'>Your deck must contain an equal number of cards with a printed cost of 1, 2, 3, 4, and 5.</p><p class='main-text'><b>Setup:</b> Search the top 10 cards of your deck for an ally with a printed cost of 3 or less and put it into play. Shuffle your deck and flip this card over.</p><p class='flavor-text'>“I tried to save the Shire, and it has been saved, but not for me.”<br>&mdash;Frodo Baggins, The Return of the King</p>");
-            AddHtml2("Into-the-West-TSotS", "<p class='main-text'>Into the West is immune to the effects of other cards and cannot leave your control or leave play. Allies you play from your hand cannot have their cost reduced by more than 2.</p><p class='main-text'>Forced: At the beginning of the quest phase, attach Into the West to an ally you control, if able.</p><p class='main-text'>Forced: At the end of the refresh phase, distribute X resources among heroes you control, where X is the attached card's printed cost. Remove the attached card from the game and draw 1 card.");
+            AddHtml2("Into-the-West-TSotS", "<p class='main-text'>Into the West is immune to the effects of other cards and cannot leave your control or leave play. Allies you play from your hand cannot have their cost reduced by more than 2.</p><p class='main-text'><b>Forced:</b> At the beginning of the quest phase, attach Into the West to an ally you control, if able.</p><p class='main-text'><b>Forced:</b> At the end of the refresh phase, distribute X resources among heroes you control, where X is the attached card's printed cost. Remove the attached card from the game and draw 1 card.");
             AddHtml("The-Scouring-of-the-Shire-Campaign-TSotS", "<p class='main-text'>You are playing Campaign Mode.</p><p class='main-text'><b>Setup:</b> Each player may change heroes they control without incurring the +1 threat penalty. The players have earned the boon cards Star-like Gem, Bright Mail, Scatha's Horn, and Heightened Stature. Each player chooses one and adds it to their hand. If any of these boon cards remain unchosen, one player may choose one of them and shuffle it into their deck. Remove any unchosen cards from the game. Remove Gwaihir and all burden from the campaign pool. Attach Grievous Wound from the Road Darkens to Frodo Baggins.<p class='flavor-text'>It was after nightfall when, wet and tired, the travellers came at last to the Brandywine, and they found the way barred.<br>&mdash;The Return of the King</p>");
             AddHtml2("The-Scouring-of-the-Shire-Campaign-TSotS", "<p class='main-text'><b>Resolution:</b> Each player has earned the Into the West contract card and may now use it in their decks.</p><p class='flavor-text'>Then Elrond and Galadriel rode on; for the Third Age was over, and the Days of the Rings were passed, and an end was come to the story and song of those times. With them went many Elves of the High Kindred who would no longer stay in Middle-earth; and among them, filled with a sadness that was yet blessed and without bitterness, rode Sam, and Frodo, and Bilbo, and the Elves delighted to honour them.<br>&mdash;The Return of the King</p>");
         }
