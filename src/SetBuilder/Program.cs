@@ -980,7 +980,7 @@ namespace SetBuilder
             var traitMap = new Dictionary<string, string>();
             var keywordMap = new Dictionary<string, string>();
 
-            foreach (var alepCard in alepCards)
+            foreach (var alepCard in alepCards.OrderBy(a => a.name))
             {
                 if (alepCard.position == 0)
                 {
@@ -1048,20 +1048,20 @@ namespace SetBuilder
             Console.WriteLine();
 
             Console.WriteLine("//Title");
-            foreach (var enTitle in titleMap.Keys)
+            foreach (var enTitle in titleMap.Keys.OrderBy(t => t))
             {
                 Console.WriteLine(mapFormat, enTitle, titleMap[enTitle]);
             }
             Console.WriteLine();
 
             Console.WriteLine("//Traits");
-            foreach (var enTrait in traitMap.Keys)
+            foreach (var enTrait in traitMap.Keys.OrderBy(t => t))
             {
                 Console.WriteLine(mapFormat, enTrait, traitMap[enTrait]);
             }
 
             Console.WriteLine("//Keywords");
-            foreach (var enKeyword in keywordMap.Keys)
+            foreach (var enKeyword in keywordMap.Keys.OrderBy(k => k))
             {
                 Console.WriteLine(mapFormat, enKeyword, keywordMap[enKeyword]);
             }

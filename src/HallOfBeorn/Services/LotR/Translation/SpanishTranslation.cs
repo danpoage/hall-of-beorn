@@ -52,6 +52,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Looter 3.", "Saqueador 3." },
                 { "Ranged.", "A distancia." },
                 { "Restricted.", "Restringido." },
+                { "Secrecy 1.", "En secreto 1." },
                 { "Sentinel.", "Centinela." },
                 { "Surge.", "Oleada." },
                 { "Vast.", "Vasto." },
@@ -160,6 +161,54 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Thieves and Coursers", "Ladrones y Corceles" },
                 { "The King's Stallion", "El Semental del Rey" },
                 { "The Sweeping Tide", "La Marea Incontrolable" },
+
+                { "A Case of Identity", "Un Caso de Identidad" },
+                { "A Fire Rises", "Un Fuego se Propaga" },
+                { "A Lesson in Caution", "Una Lección de Precaución" },
+                { "Aldburg Malcontent", "Descontento de Aldburg" },
+
+                { "Buckland Shirriff", "Oficial de los Gamos" },
+                { "Decrepit Hovel", "Choza Decrépita" },
+                { "Dunlending Agents", "Agentes Dunlendinos" },
+                { "Evil Under the Moon", "Maldad Bajo la Luna" },
+                { "False Lead", "Pista Falsa" },
+                { "Fatty Bolger", "Gordo Bolger" },
+                { "Fear! Fire! Foes!", "¡Peligro! ¡Fuego! ¡Enemigos!" },
+                { "Garrison Barracks", "Cuartel de la Guarnición" },
+                { "Gathering Clues", "Reuniendo Pistas" },
+                { "Great Mead Hall", "Gran Salón de Hidromiel" },
+                { "Horn-call of Buckland", "Cuerno de los Gamos" },
+
+                { "Letter from Dunland", "Carta de las Tierras Brunas" },
+                { "Lily Cotton", "Lily Coto" },
+                { "Misty Street", "Calle Brumosa" },
+                
+                { "Prison Key", "Llave de la Prisión" },
+                { "Raven Signet Ring", "Anillo con Sello de Cuervo" },
+                { "Red Fletched Arrow", "Flecha de Pluma Roja" },
+                { "Red Harvest", "Cosecha Roja" },
+                { "Rohirric Coins", "Monedas Rohirrim" },
+                { "Ruby Cloak-pin", "Alfiler de Capa Rubí" },
+                { "Silver Dagger", "Daga Plateada" },
+                { "Spreading Inferno", "Infierno Esparciéndose" },
+                { "Sudden Ambush", "Emboscada Repentina" },
+
+                { "Taken by the Night", "Secuestrado por la Noche" },
+                { "The Armoury", "La Armería" },
+                { "The Horse's Tail", "La Cola de Caballo" },
+                { "The Man with the Twisted Lip", "El Hombre del Labio Torcido" },
+                { "The Prisoner in White", "El Prisionero de Blanco" },
+                { "The Spy Master", "El Maestro de Espías" },
+                { "The Uncertain Dawn", "El Amanecer Incierto" },
+                { "The Whisperer", "La Susurradora" },
+                { "There and Back Again", "Una Ida y una Vuelta" },
+                { "Town Guard", "Guardia de la Ciudad" },
+                { "Traitor's Confession", "Confesión del Traidor" },
+                { "Weep No More!", "Dejemos de Llorar" },
+                { "Well-lit Hall", "Salón Bien Iluminado" },
+                { "Whisperer in the Darkness", "Susurradora en la Oscuridad" },
+                { "Young Tom", "Joven Tom" },
+                
             };
         }
 
@@ -167,11 +216,13 @@ namespace HallOfBeorn.Services.LotR.Translation
         {
             return new Dictionary<string, string> {
                 { "Archer.", "Arquero." },
+                { "Assassin.", "Asesino." },
 
                 { "Beorning.", "Beórnida." },
                 { "Brigand.", "Bandido." },
 
                 { "Camp.", "Campamento." },
+                { "Clue.", "Pista." },
                 { "Craftsman.", "Artesano." },
                 { "Creature.", "Criatura." },
                 
@@ -180,10 +231,12 @@ namespace HallOfBeorn.Services.LotR.Translation
                 
                 { "Eagle.", "Águila." },
 
+                { "Garrison.", "Guarnición." },
                 { "Gate.", "Puerta." },
 
                 { "Hills.", "Colinas." },
 
+                { "Inferno.", "Infierno." },
                 { "Item.", "Objeto." },
 
                 { "Mount.", "Montura." },
@@ -197,16 +250,20 @@ namespace HallOfBeorn.Services.LotR.Translation
                 
                 { "Scout.", "Explorador." },
                 { "Servant.", "Servidor." },
+                { "Shirriff.", "Oficial de la Comarca." },
                 { "Silvan.", "Silvano." },
                 { "Skill.", "Habilidad." },
                 { "Spider.", "Araña." },
+                { "Spy.", "Espía." },
                 { "Stair.", "Escalera." },
+                { "Suspicious.", "Sospechoso." },
                 
                 { "Traitor.", "Traidor." },
                 { "Trap.", "Trampa." },
                 { "Village.", "Aldea." },
                 { "Warrior.", "Guerrero." },
                 { "Weather.", "Tiempo atmosférico." },
+                { "Woodman.", "Leñador." },
             };
         }
     }
