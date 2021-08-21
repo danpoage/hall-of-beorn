@@ -987,7 +987,9 @@ namespace SetBuilder
                     continue;
                 }
 
-                var enCard = product.CardSets.First().Cards.FirstOrDefault(c => c.CardNumber == alepCard.position);
+                var enCard = !string.IsNullOrEmpty(alepCard.card_side)
+                    ? product.CardSets.First().Cards.FirstOrDefault(c => c.CardNumber == alepCard.position && c.SideLetter.GetValueOrDefault('A').ToString().ToUpper() == alepCard.card_side)
+                    : product.CardSets.First().Cards.FirstOrDefault(c => c.CardNumber == alepCard.position);
 
                 if (enCard == null)
                 {

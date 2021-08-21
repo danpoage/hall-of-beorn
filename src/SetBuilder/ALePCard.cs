@@ -54,10 +54,10 @@ namespace SetBuilder
                 return new Tuple<string, string>(null, null);
             }
 
-            var lines = text.Split(new string[] { "Side B" }, StringSplitOptions.RemoveEmptyEntries);
+            var lines = text.Split(new string[] { "<b>Side B</b>" }, StringSplitOptions.RemoveEmptyEntries);
 
             return (lines.Length > 1)
-                ? new Tuple<string, string>(lines[0].Trim().Replace("Side A", string.Empty), lines[1])
+                ? new Tuple<string, string>(lines[0].Trim().Replace("<b>Side A</b>", string.Empty), lines[1])
                : new Tuple<string, string>(lines[0], null);
         }
 
@@ -188,6 +188,13 @@ namespace SetBuilder
             { "Al ser revelada:", "<b>Al ser revelada:</b>" },
             { "Preparación:", "<b>Preparación:</b>" },
             { "Sombra:", "<b>Sombra:</b>" },
+            //Italian
+            { "Preparazione:", "<b>Preparazione:</b>" },
+            { "Obbligato:", "<b>Obbligato:</b>" },
+            { "Azione:", "<b>Azione:</b>" },
+            { "Risposta:", "<b>Risposta:</b>" },
+            { "Quando Rivelata:", "<b>Quando Rivelata:</b>" },
+            { "Ombra:", "<b>Ombra:</b>" },
         };
 
         private string NormalizeTemplateLine(string line)
@@ -348,10 +355,19 @@ namespace SetBuilder
                 card.WithKeywords(keywords.Select(k => k.EndsWith(".") ? k : k + ".").ToArray());
             }
 
-            var parsed = ParseText();
-            card.HtmlTemplate = CreateTemplate(card.CardType, parsed.Item1, shadow_text, flavor, victory_points);
+            var flavor1 = flavor;
+            string flavor2 = null;
+            if (!string.IsNullOrEmpty(flavor) && flavor.Contains("Side B: "))
+            {
+                var tokens = flavor.Split(new string[] {"Side B: "}, StringSplitOptions.RemoveEmptyEntries);
+                flavor1 = tokens[0].Replace("Side A: ", string.Empty);
+                flavor2 = tokens.Length > 1 ? tokens[1] : null;  
+            }
 
-            var template2 = CreateTemplate(card.CardType, parsed.Item2, null, null, null);
+            var parsed = ParseText();
+            card.HtmlTemplate = CreateTemplate(card.CardType, parsed.Item1, shadow_text, flavor1, victory_points);
+
+            var template2 = CreateTemplate(card.CardType, parsed.Item2, null, flavor2, null);
             if (!string.IsNullOrWhiteSpace(template2))
             {
                 card.HtmlTemplate2 = template2;
