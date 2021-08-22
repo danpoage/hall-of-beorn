@@ -936,22 +936,31 @@ namespace SetBuilder
 
         private static int WriteEnglishSet(string setName)
         {
-            const string path = "./ALeP/The-Scouring-of-the-Shire.English.json";
+            var normalizedSetName = setName.Replace(" ", "-");
+            var path = string.Format("./ALeP/{0}.English.json", normalizedSetName);
 
             var alepCards = ALePReader.ReadFile(path);
 
-            var product = new HallOfBeorn.Models.LotR.Products.Community.TheScouringOfTheShireProduct();
+            var nameTokens = setName.SafeSplit(' ');
+            var abbreviation = new StringBuilder();
+            foreach (var nameToken in nameTokens)
+            {
+                abbreviation.Append(nameToken[0]);
+            }
 
             Console.WriteLine("//CardSet: {0}", setName);
-            var cardSet = GetCardSet(setName, 8, "TSotS", alepCards);
+            var cardSet = GetCardSet(setName, 8, abbreviation.ToString(), alepCards);
             writeCardSet(cardSet);
 
+            /*
+            var product = new HallOfBeorn.Models.LotR.Products.Community.TheScouringOfTheShireProduct();
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("private void TheScouringOfTheShire()");
             Console.WriteLine("{");
             WriteTemplates(product, setName, alepCards);
             Console.WriteLine("}");
+            */
 
             return 0;
         }
