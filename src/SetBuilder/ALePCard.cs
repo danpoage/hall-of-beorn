@@ -182,19 +182,50 @@ namespace SetBuilder
             { "[spirit]", "{sphere:Spirit}" },
             { "[lore]", "{sphere:Lore}" },
             { "[pp]", "{PerPlayer}" },
-            { "Respuesta:", "<b>Respuesta:</b>" },
-            { "Acción:", "<b>Acción:</b>" },
-            { "Obligado:", "<b>Obligado:</b>" },
-            { "Al ser revelada:", "<b>Al ser revelada:</b>" },
-            { "Preparación:", "<b>Preparación:</b>" },
-            { "Sombra:", "<b>Sombra:</b>" },
+            
+            //French
+            { "Action:", "<b>Action:</b>" }, //Action
+            { "Réponse:", "<b>Réponse:</b>" }, //Response
+            { "Forcé:", "<b>Forcé:</b>" }, //Forced
+            { "Une fois révélée:", "<b>Une fois révélée:</b>" }, //When Revealed
+            { "Mise en place:", "<b>Mise en place:</b>" }, //Setup
+            { "Ombre:", "<b>Ombre:</b>" }, //Shadow
+
+            //German
+            { "Aktion:", "<b>Aktion:</b>" }, //Action:
+            { "Reiseaktion:", "<b>Reiseaktion:</b>" }, //Travel Action
+            { "Reaktion:", "<b>Reaktion:</b>" }, //Response
+            { "Erzwungen:", "<b>Erzwungen:</b>" }, //Forced
+            { "Wenn aufgedeckt:", "<b>Wenn aufgedeckt:</b>" }, //When Revealed
+            { "Vorbereitung:", "<b>Vorbereitung:</b>" }, //Setup
+            { "Schatten:", "<b>Schatten:</b>" }, //Shadow
+
             //Italian
-            { "Preparazione:", "<b>Preparazione:</b>" },
-            { "Obbligato:", "<b>Obbligato:</b>" },
-            { "Azione:", "<b>Azione:</b>" },
-            { "Risposta:", "<b>Risposta:</b>" },
-            { "Quando Rivelata:", "<b>Quando Rivelata:</b>" },
-            { "Ombra:", "<b>Ombra:</b>" },
+            { "Azione:", "<b>Azione:</b>" }, //Action
+            { "Azione di Viaggio:", "<b>Azione di Viaggio:</b>" }, //Travel Action
+            { "Risposta:", "<b>Risposta:</b>" }, //Response
+            { "Obbligato:", "<b>Obbligato:</b>" }, //Forced
+            { "Quando Rivelata:", "<b>Quando Rivelata:</b>" }, //When Revealed
+            { "Preparazione:", "<b>Preparazione:</b>" }, //Setup
+            { "Ombra:", "<b>Ombra:</b>" }, //Shadow
+            
+            //Polish
+            { "Akcja:", "<b>Akcja:</b>" }, //Action
+            { "Akcja Podróży:", "<b>Akcja Podróży:</b>" }, //Travel Action
+            { "Odpowiedź:", "<b>Odpowiedź:</b>" }, //Response
+            { "Wymuszony:", "<b>Wymuszony:</b>" }, //Forced
+            { "Po odkryciu:", "<b>Po odkryciu:</b>" }, //When Revealed
+            { "Przygotowanie:", "<b>Przygotowanie:</b>" }, //Setup
+            { "Cień:", "<b>Cień:</b>" }, //Shadow
+            
+            //Spanish
+            { "Acción:", "<b>Acción:</b>" }, //Action
+            { "Acción de Viaje:", "<b>Acción de Viaje:</b>" }, //Travel Action
+            { "Respuesta:", "<b>Respuesta:</b>" }, //Response
+            { "Obligado:", "<b>Obligado:</b>" }, //Forced
+            { "Al ser revelada:", "<b>Al ser revelada:</b>" }, //When Revealed
+            { "Preparación:", "<b>Preparación:</b>" }, //Setup
+            { "Sombra:", "<b>Sombra:</b>" }, //Shadow
         };
 
         private string NormalizeTemplateLine(string line)
