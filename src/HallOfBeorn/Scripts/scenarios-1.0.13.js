@@ -439,6 +439,8 @@ function initQuestMap() {
         'Aragorn has led the Men of the West to the very Gate of Mordor in a perilous gamble to keep the Eye of Sauron focused on him. After challenging the Dark Lord to come forth and face judgement, the Black Gate opens and an embassy from Barad-dûr rides out led by The Mouth of Sauron.');
     addQuest(1063, 762, 'Mount Doom', 'LotR', 'Mount-Doom', 'The-Mountain-of-Fire/The-Land-of-Mordor-1A.jpg',
         'Against all odds, the Ring-bearer has found his way into The Black Land of Modor, but a dangerous journey still lies before him and The Eye of Sauron yet searches for the spies who escaped from Cirith Ungol.');
+    addQuest(409, 337, 'The Scouring of the Shire', 'LotR', 'The-Scouring-of-the-Shire', 'The-Scouring-of-the-Shire/Many-Partings-1A.png',
+        'As they came out again into the open country at sundown they overtook an old man leaning on a staff, and he was clothed in rags of grey or dirty white, and at his heels went another beggar, slouching and whining. —The Return of the King');
 
     //GenCon and Fellowship
     addQuest(1024, 842, 'The Massing at Osgiliath', false, 'The-Massing-at-Osgiliath', 'The-Massing-at-Osgiliath/Beyond-Expectations-1A.jpg',
