@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
         : ProductGroup
     {
         public TheScouringTheShireProductGroup()
-            : base("Scouring the Shire")
+            : base("The Scouring the Shire")
         {
             AddMainProduct(Product.TheScouringOfTheShire);
         }

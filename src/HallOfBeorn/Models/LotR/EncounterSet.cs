@@ -580,6 +580,11 @@ namespace HallOfBeorn.Models.LotR
 
         private static List<EncounterSet> all = new List<EncounterSet>();
 
+        public static EncounterSet Lookup(string name)
+        {
+            return all.FirstOrDefault(es => es.Name == name);
+        }
+
         private static void Add(EncounterSet set)
         {
             all.Add(set);

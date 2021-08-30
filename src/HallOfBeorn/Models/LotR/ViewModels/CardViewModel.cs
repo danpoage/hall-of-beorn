@@ -937,10 +937,15 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             { SetType.A_Long_extended_Party, new HashSet<Language> { Language.DE, Language.ES, Language.FR, Language.IT, Language.PL } },
             { SetType.Core, new HashSet<Language> { Language.ES, Language.FR } },
         };
-        
+
+        private readonly static HashSet<string> englishSetsPng = new HashSet<string>
+        {
+            CardSet.ChildrenOfEorl.Name, CardSet.TheScouringOfTheShire.Name, 
+        };
+
         private static string getEnglishImageExtension(LotRCard card)
         {
-            return card.CardSet.Name == CardSet.TheScouringOfTheShire.Name
+            return englishSetsPng.Contains(card.CardSet.Name)
                 ? "png"
                 : "jpg";
         }

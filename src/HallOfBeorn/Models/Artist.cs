@@ -804,6 +804,14 @@ namespace HallOfBeorn.Models
             all.Add(Artist.None);
         }
 
+        public static Artist Lookup(string name)
+        {
+            var artist = all.FirstOrDefault(a => a.Name == name);
+            return artist != null
+                ? artist
+                : Artist.Unknown;
+        }
+
         //TSotS
         public static Artist Michael_Herring = new Artist { Name = "Michael Herring", URL = "https://michaelherring.net/art/" };
         public static Artist Ryan_Pancoast = new Artist { Name = "Ryan Pancoast", URL = "https://www.ryanpancoast.com/" };

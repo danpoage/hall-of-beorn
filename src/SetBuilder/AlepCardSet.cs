@@ -74,7 +74,6 @@ namespace SetBuilder
         private LotRCard AddQuest(string title, string encounterSet, uint? stageNumber, string stageLetter, string questPoints)
         {
             var quest = addQuest(title, encounterSet, stageNumber.GetValueOrDefault(0), Char.Parse(stageLetter), questPoints.ToStat());
-            quest.IncludedEncounterSets = new List<EncounterSet> { EncounterSet.TheScouringOfTheShire };
             return quest;
         }
 
@@ -233,12 +232,22 @@ namespace SetBuilder
                 }
             }
 
+            if (aCard.additional_encounter_sets != null && aCard.additional_encounter_sets.Count > 0)
+            {
+                var includedEncounterSets = new List<EncounterSet>();
+                foreach (var additionalEncounterSet in aCard.additional_encounter_sets)
+                {
+                    includedEncounterSets.Add(EncounterSet.Lookup(additionalEncounterSet));
+                }
+                card.WithIncludedEncounterSets(includedEncounterSets.ToArray());
+            }
+
             if (!string.IsNullOrEmpty(aCard.text))
             {
                 if (aCard.text.Contains("<b>Side B</b>"))
                 {
                     var lines = aCard.text.Split(new string[] { "<b>Side B</b>" }, StringSplitOptions.RemoveEmptyEntries);
-                    card.WithTextLine(NormalizeAlepText(lines[0].Replace("<b>Side A<b>", "")));
+                    card.WithTextLine(NormalizeAlepText(lines[0].Replace("<b>Side A</b>", "")));
                     card.WithOppositeTextLine(NormalizeAlepText(lines[1]));
                 }
                 else
@@ -286,7 +295,9 @@ namespace SetBuilder
                 card.WithEasyModeQuantity(aCard.easy_mode_quantity.Value);
             }
 
-            card.WithInfo((ushort)aCard.position, aCard.quantity, Artist.Unknown);
+            var artist = Artist.Lookup(aCard.illustrator);
+
+            card.WithInfo((ushort)aCard.position, aCard.quantity, artist);
         }
     }
 }
