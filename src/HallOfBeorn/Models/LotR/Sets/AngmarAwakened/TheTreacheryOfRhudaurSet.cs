@@ -206,6 +206,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTextLine("Attached character gets +1 Attack while attacking undead enemies.")
                 .WithFlavorLine("When you touch this dark blade, you can feel a cursed power coursing through it. In Tengwar, the name \"Daechanar\" is inscribed upon its handle.")
                 .WithTemplate("<p><b>Action:</b> Exhaust {card:Amarthiul-TToR@Amarthiúl} or a hero to claim {self}. Then, attach {self} to that character.</p><p>Attached character gets +1 {Attack} while attacking {trait:Undead.@Undead} enemies.</p><p class='flavor-text'>When you touch this dark blade, you can feel a cursed power coursing through it. In Tengwar, the name &quot;Daechanar&quot; is inscribed upon its handle.</p>")
+                .WithSideB()
                 .WithInfo(110, 1, Artist.Preston_Stone);
             addEncounterSideQuest("Sift through the Debris", EncounterSet.TheTreacheryOfRhudaur, 18)
                 .WithTextLine("While Sift through the Debris is the current quest, each location in the staging area gets +1 Threat.")
@@ -221,6 +222,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithFlavorLine("You find a pendant, similar to the one you've seen Iârion wearing. The inscription on the back says:")
                 .WithFlavorLine("\"Iârchon, may this pendant guide you away from the shadow that dwells within us all. -Your loving father\"")
                 .WithTemplate("<p><b>Action:</b> Exhaust Amarthiúl or a hero to claim {self}. Then, attach {self} to that character.</p><p>Attached character gets +1 {Willpower}.</p><p class='flavor-text'>You find a pendant, similar to the one you've seen Iârion wearing. The inscription on the back says:<br>&quot;Iârchon, may this pendant guide you away from the shadow that dwells within us all. &ndash;Your loving father&quot;</p>")
+                .WithSideB()
                 .WithInfo(112, 1, Artist.Romana_Kendelic);
             addEncounterSideQuest("Decipher Ancient Texts", EncounterSet.TheTreacheryOfRhudaur, 14)
                 .WithTextLine("While Decipher Ancient Texts is the current quest, allies get –2 Willpower.")
@@ -235,6 +237,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTextLine("Attached character gets +1 Defense while defending against undead enemies.")
                 .WithFlavorLine("You find a tattered, barely legible scroll dated over 1000 years ago, summong those loyal to the Witch-king of Angmar for an assault on Rivendell.")
                 .WithTemplate("<p><b>Action:</b> Exhaust Amarthiúl or a hero to claim {self}. Then, attach {self} to that character.</p><p>Attached character gets +1 {Defense} while defending against {trait:Undead.@Undead} enemies.</p><p class='flavor-text'>You find a tattered, barely legible scroll dated over 1000 years ago, summong those loyal to the Witch-king of Angmar for an assault on Rivendell.</p>")
+                .WithSideB()
                 .WithInfo(114, 1, Artist.Chris_Metcalf);
         }
     }

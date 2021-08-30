@@ -109,6 +109,7 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
                 .WithTextLine("Cannot be optionally engaged.")
                 .WithTextLine("Forced: After Durin's Bane attacks and destroys a character you control, raise your threat by 2 and heal 2 damage from Durin's Bane.")
                 .WithVictoryPoints(5)
+                .WithSideB()
                 .WithInfo(11, 1, Artist.Magali_Villeneuve);
 
             addEnemy("Black Bats", emptySetName, 23, 1, 3, 1, 2)

@@ -121,6 +121,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTextLine("Each other enemy gets -10 engagement cost.")
                 .WithTextLine("Forced: After Thaurdir is flipped or a treachery with the Sorcery trait is revealed, Thaurdir heals 3 damage and makes an immediate attack against the first player.")
                 .WithTemplate("<p>{keyword:Indestructible.} Cannot have attachments.</p><p>Each other enemy gets -10 engagement cost.</p><p><b>Forced:</b> After {self} is flipped or a treachery with the {trait:Sorcery.@Sorcery} trait is revealed, {self} heals 3 damage and makes an immediate attack against the first player.</p>")
+                .WithSideB()
                 .WithInfo(128, 1, Artist.Brian_Valenzuela);
             addEnemy("Carn Dûm Garrison", EncounterSet.TheBattleOfCarnDum, 40, 1, 4, 3, 5)
                 .WithTraits("Orc.")

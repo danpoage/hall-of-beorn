@@ -83,6 +83,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTextLine("It is ~Night. Progress cannot be placed quest cards. Encounter card effects cannot be canceled.")
                 .WithTextLine("Forced: When it becomes ~Night, reveal an encounter card.")
                 .WithTextLine("Forced: At the end of the round, flip this objective.")
+                .WithSideB()
                 .WithInfo(12, 1, Artist.Wibben);
             addQuest("Across the Wastes", EncounterSet.TheWastesOfEriador, 1, 'A', 20)
                 .WithTextLine("Setup: Set Pack Leader aside, out of play. Make Shrouded ~Hills the active location. Add the Time objective to the staging area with Daybreak faceup. The first player takes control of Amarthiúl. Shuffle the encounter deck. Reveal 1 card from the encounter deck per player.")
