@@ -461,6 +461,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
                 .WithTextLine("The first player gains control of Haldan while he is free of encounters.")
                 .WithTextLine("While there is an active location, Haldan does not exhaust to quest.")
                 .WithTextLine("If Haldan leaves play, the players lose the game.")
+                .WithSideB()
                 .WithInfo(70, 1, Artist.Alexander_Kozachenko);
             addQuest("Ambushed at Night", EncounterSet.LostInMirkwood, 1, 'A', Card.VALUE_NA)
                 .WithTextLine("Setup: Set the Spiders of Mirkwood and Dol Guldur Orcs encounter sets aside, out of play. The first player takes control of Haldan and adds Searching for a Way Out to the staging area. Each player adds 1 Forest Spider to the staging area. Shuffle the encounter deck.")

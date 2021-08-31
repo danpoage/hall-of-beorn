@@ -488,6 +488,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithTextLine("~Gollum engages the first player.")
                 .WithTextLine("Forced: When ~Gollum is defeated, flip him to Sméagol and return him to his owner's control, exhausted.")
                 .WithTemplate("<p class='main-text'>Immune to non-{trait:Gollum.@Gollum} card effects.</p><p class='main-text'>{self} engages the first player.</p><p class='main-text'><b>Forced:</b> When {self} is defeated, flip him to Sméagol and return him to his owner's control, exhausted.</p>")
+                .WithSideB()
                 .WithInfo(73, 1, Artist.Alexander_Chelyshev);
             addContract("Fellowship")
                 .WithTextLine("You cannot play non-unique allies or put non-unique allies into play.")
