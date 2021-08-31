@@ -418,22 +418,26 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithOppositeText("Resolution: Add each copy of Overcome by Fear attached to a player's threat dial to the campaign pool and record the name of each player it was attached to. If Army of the Dead is in the victory display, add the Army of the Dead boon to the campaign pool. The players have earned each card added to the campaign pool")
                 .WithOppositeFlavor("Then Aragorn said: \"The hour is come at last. Now I go to Pelargir upon Anduin, and ye shall come after me. And when all this land is clean of the servants of Sauron, I will hold the oath fulfilled, and ye shall have peace and depart for ever. For I am Elessar, Isildur's heir of Gondor.\" -The Return of the King")
                 .WithInfo(66, 1, Artist.Yoann_Boissonnet));
-            Cards.Add(LotRCard.Enemy("Army of the Dead", string.Empty, setThePassingOfTheGreyCompany, 50, Card.VALUE_X, 6, 2, 8)
+            addEnemy("Army of the Dead", setThePassingOfTheGreyCompany, 50, Card.VALUE_X, 6, 2, 8)
                 .WithSlugSuffix("Enemy")
                 .WithUnique()
                 .WithTraits("Undead.", "Oathbreaker.")
                 .WithKeywords("Phantom.")
                 .WithText("Immune to player card effects.\r\nX is twice the number of players in the game.\r\nForced: When Army of the Dead attacks, you must either attach a set aside Overcome by ~Fear to your threat dial, or discard an ally you control.")
                 .WithVictoryPoints(6)
-                .WithInfo(67, 1, Artist.Uwe_Jarling));
-            Cards.Add(LotRCard.ObjectiveAlly("Army of the Dead", string.Empty, setThePassingOfTheGreyCompany, 4, 6, 2, 8)
+                .WithInfo(67, 1, Artist.Uwe_Jarling);
+            addObjectiveAlly("Army of the Dead", setThePassingOfTheGreyCompany, 4, 6, 2, 8)
                 .WithSlugSuffix("Objective-Ally")
                 .WithBoon()
                 .WithUnique()
                 .WithTraits("Undead.")
-                .WithText("Immune to player card effects. The first player gains control of Army of the Dead.\r\nSetup: The first player takes control of Army of the Dead.\r\nIf Army of the Dead leaves play, remove it from the game.")
-                .WithFlavor("\"Now come! By the Black Stone I call you!\"\r\n-Aragorn, The Return of the King")
-                .WithInfo(68, 1, Artist.Uwe_Jarling));
+                .WithTextLine("Immune to player card effects. The first player gains control of Army of the Dead.")
+                .WithTextLine("Setup: The first player takes control of Army of the Dead.")
+                .WithTextLine("If Army of the Dead leaves play, remove it from the game.")
+                .WithFlavorLine("\"Now come! By the Black Stone I call you!\"")
+                .WithFlavorLine("-Aragorn, The Return of the King")
+                .WithSideB()
+                .WithInfo(68, 1, Artist.Uwe_Jarling);
             Cards.Add(LotRCard.Quest("Attack on Pelargir", 1, setTheSiegeOfGondor, 20)
                 .WithFlavor("\"There at Pelargir lay the main fleet of Umbar, fifty great ships and smaller vessels beyond count. Many of those that we pursued had reached the havens before us...\"\r\n-Gimli, The Return of the King")
                 .WithText("Setup: Add The ~Corsair Fleet (Corsair side faceup) and Great Corsair Ship to the staging area. Each player searches the encounter deck for a Ship location and adds it to the staging area. Shuffle the encounter deck.")
@@ -446,69 +450,72 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithOppositeText("Resolution: Count the number of resources on The Corsair Fleet and record that number in the notes section of the quest log. Remove Army of the Dead from the Campaign pool.")
                 .WithOppositeFlavor("\"But mighty indeed was Aragorn that day. Lo! all the black fleet was in his hands; and he chose the greatest ship to be his own, and he went up into it.\"\r\n-Gimli, The Return of the King")
                 .WithInfo(70, 1, Artist.Javier_Charro_Martinez));
-            Cards.Add(LotRCard.Objective("The Corsair Fleet", string.Empty, setTheSiegeOfGondor)
+            addObjective("The Corsair Fleet", setTheSiegeOfGondor)
                 .WithUnique()
                 .WithTraits("Corsair.")
                 .WithSlugSuffix("Corsair")
-                .WithText("Forced: At the beginning of the staging step, place 1 resource on this objective. Then, each player must choose: either reveal an encounter card, or assign X damage among characters he controls. X is the number of resources here.")
-                .WithFlavor("...ships of great draught with many oars, and with black sails bellying in the breeze. -The Return of the King")
-                .WithInfo(71, 1, Artist.Johan_Tornlund));
-            Cards.Add(LotRCard.Objective("The Corsair Fleet", string.Empty, setTheSiegeOfGondor)
+                .WithTextLine("Forced: At the beginning of the staging step, place 1 resource on this objective. Then, each player must choose: either reveal an encounter card, or assign X damage among characters he controls. X is the number of resources here.")
+                .WithFlavorLine("...ships of great draught with many oars, and with black sails bellying in the breeze. -The Return of the King")
+                .WithInfo(71, 1, Artist.Johan_Tornlund);
+            addObjective("The Corsair Fleet", setTheSiegeOfGondor)
                 .WithUnique()
                 .WithTraits("Gondor.")
                 .WithSlugSuffix("Gondor")
-                .WithText("Forced: At the beginning of the quest phase, remove 1 resource from The Corsair Fleet. Then, if there are no resources here, the first player takes control of Aragorn and adds The Corsair Fleet to the victory display.")
-                .WithFlavor("\"The oars were now wielded by free men, and manfully they laboured...\"\r\n-Legolas, The Return of the King")
-                .WithInfo(72, 1, Artist.Johan_Tornlund));
-            Cards.Add(LotRCard.Quest("The Garrison of Gondor", 1, setTheBattleOfThePelennorFields, 2)
+                .WithTextLine("Forced: At the beginning of the quest phase, remove 1 resource from The Corsair Fleet. Then, if there are no resources here, the first player takes control of Aragorn and adds The Corsair Fleet to the victory display.")
+                .WithFlavorLine("\"The oars were now wielded by free men, and manfully they laboured...\"")
+                .WithFlavorLine("-Legolas, The Return of the King")
+                .WithSideB()
+                .WithInfo(72, 1, Artist.Johan_Tornlund);
+            addQuest("The Garrison of Gondor", setTheBattleOfThePelennorFields, 1, 'A', 2)
                 .WithFlavor("\"Here will the hammer-stroke fall hardest. And for that reason Mithrandir came hither in such haste. For if we fall, who shall stand?\r\n-Beregond, The Return of the King")
                 .WithText("Setup: Set Minas Tirith, Grond, The Witch-king, and each copy of ~Wraith of Wings aside, out of play. Search the encounter deck for a copy of ~Pelennor Field and make it the active location. Shuffle the encounter deck. The players may attach Esquire of ~Rohan and Esquire of ~Gondor to different heroes.")
                 .WithOppositeFlavor("...companies came and were hailed and cheered and passed through the Gate, men of the Outlands marching to defend the City of Gondor in a dark hour.\r\n-The Return of the King")
                 .WithOppositeText("Skip the quest phase and combat phase.\r\nForced: At the end of the planning phase, place 1 progress here.")
-                .WithInfo(73, 1, Artist.Alvaro_Calvo_Escudero));
-            addCard(LotRCard.Quest("Retreat from Osgiliath", 2, setTheBattleOfThePelennorFields, Card.VALUE_X)
+                .WithInfo(73, 1, Artist.Alvaro_Calvo_Escudero);
+            addQuest("Retreat from Osgiliath", setTheBattleOfThePelennorFields, 2, 'A', Card.VALUE_X)
                 .WithFlavor("\"The enemy,\" men murmured. \"The dike is down. Here they come pouring through the breaches!\" -The Return of the King")
                 .WithText("When Revealed: Each player adds 1 set aside ~Wraith on Wings to the staging area and reveals an encounter card. Starting with the first player, each player discards cards from the top of his deck until he discards an ally that is not in play. Put the discarded ally into play in the staging area and treat its text box as if it were blank until the end of the phase.")
                 .WithOppositeFlavor("\"Where are our own folk?\" -Men of Gondor, The Return of the King")
                 .WithOppositeText("X is the total cost of all allies in the staging area.\r\nAllies in the staging area are treated as if their text box is blank, are immune to player card effects, and are under no player's control.\r\nForced: At the end of the round, assign damage among the allies in the staging area equal to the number of enemies in the staging area.")
-                .WithInfo(74, 1, Artist.Kamila_Szutenberg));
-            Cards.Add(LotRCard.Quest("The White City Besieged", 3, setTheBattleOfThePelennorFields, 4)
+                .WithInfo(74, 1, Artist.Kamila_Szutenberg);
+            addQuest("The White City Besieged", setTheBattleOfThePelennorFields, 3, 'A', 4)
                 .WithKeywords("Assault.")
                 .WithFlavor("...at east the city was besieged, enclosed in a ring of foes. The Rammas was broken, and all the Pelennor was abandoned to the Enemy. -The Return of the King")
                 .WithText("When Revealed: Each player takes control of each ally he owns in the staging area and exhausts it. The first player adds Minas Tirith, Grond, and The Witch-king (Captain side faceup) to the staging area. Each other player searches the encounter deck and discard pile for a different enemy and adds it to the staging area. Shuffle the encounter deck.")
                 .WithOppositeFlavor("...since the middle night the great assault had gone on. -The Return of the King")
                 .WithOppositeText("\r\nThe White ~City Besieged gets +4 quest points for each player in the game.\r\nThe players cannot travel to Pelennor locations.\r\nForced: When an enemy is destroyed, place progress on this stage equal to that enemy's total Threat (progress must be placed on the active location first).")
-                .WithInfo(75, 1, Artist.Alvaro_Calvo_Escudero));
-            Cards.Add(LotRCard.Quest("Rohan has Come!", 4, setTheBattleOfThePelennorFields, null)
+                .WithInfo(75, 1, Artist.Alvaro_Calvo_Escudero);
+            addQuest("Rohan has Come!", setTheBattleOfThePelennorFields, 4, 'A', Card.VALUE_NA)
                 .WithFlavor("Horns, horns, horns. In dark Mindolluin's sides they dimly echoed. Great horns of the North wildly blowling. Rohan had come at last.\r\n-The Return of the King")
                 .WithText("When Revealed: Set the Witch-king aside, out of play. Each player searches the top 10 cards of his deck for an ally that matches the sphere of a hero he controls and put it into play under his control. Each player shuffles his deck.")
                 .WithOppositeFlavor("...the hosts of Mordor wailed, and terror took them, and they fled, and died, and the hoofs of wrath rode over them. -The Return of the King")
                 .WithOppositeText("Progress cannot be placed on this stage by questing successfully is instead assigned as damage among enemies in play. (Progress must be placed on the active location first.)\r\nForced: At the end of the quest phase, advance to stage 5A.")
-                .WithInfo(76, 1, Artist.Sara_Biddle));
-            Cards.Add(LotRCard.Quest("Fighting in the Fields", 5, setTheBattleOfThePelennorFields, 20)
+                .WithInfo(76, 1, Artist.Sara_Biddle);
+            addQuest("Fighting in the Fields", setTheBattleOfThePelennorFields, 5, 'A', 20)
                 .WithFlavor("And now the fighting waxed furious on the fields of the Pelennor; and the din of arms rose upon high, with the crying of men and the neighing of horses.\r\n-The Return of the King")
                 .WithText("When Revealed: The first player adds The Witch-king to the staging area (Sorcerer side faceup). Then, he searches the encounter deck and discard pile for a Fell Beast and attaches it to The Witch-king, if able. Shuffle the encounter deck. Each other player reveals an encounter card.")
                 .WithOppositeText("The Witch-king and shadow cards deal to The Witch-king are immune to player card effects.\r\nForced: When an enemy attacks and destroys a character, deal 1 damage to Minas Tirith.\r\nThis stage cannot be defeated unless Aragorn is in play and The Witch-king is in the victory display. If the players defeat this stage, they win the game.")
-                .WithInfo(77, 1, Artist.Alvaro_Calvo_Escudero));
-            Cards.Add(LotRCard.Campaign("The Battle of the Pelennor Fields", setTheBattleOfThePelennorFields, "The Lord of the Rings - Part 15")
+                .WithInfo(77, 1, Artist.Alvaro_Calvo_Escudero);
+            addCampaign("The Battle of the Pelennor Fields", setTheBattleOfThePelennorFields, "The Lord of the Rings - Part 15")
                 .WithText("Setup: Set each Harad enemy recorded in the campaign log aside, out of play. The first player attaches Andúril and Banner of Elendil to Aragorn and set him aside, out of play. Add The Corsair Fleet to the staging area (Gondor side faceup) and place X resources on it, where X is the number recorded in the campaign log. Remove each burden with the following burden set icons from the encounter deck, then flip this card over.")
                 .WithOppositeText("Forced: When the players advance to stage 5B, add each set aside Harad enemy to the staging area.\r\nResolution: Add 1 copy, per player, of Wraith on Wings to the campaign pool. The players have earned those burdens. If Esquire of Gondor, or Esquire of Rohan, is attached to a hero, that hero's controller has earned that boon.")
                 .WithOppositeFlavor("Thus came Aragorn son of Arathorn, Elessar, Isildur's heir, out of the Paths of the Dead, borne upon a wind from the Sea to the kingdom of Gondor.\r\n-The Return of the King")
-                .WithInfo(78, 1, Artist.Alvaro_Calvo_Escudero));
-            Cards.Add(LotRCard.Enemy("The Witch-king", string.Empty, setTheBattleOfThePelennorFields, 50, 6, 6, 6, 14)
+                .WithInfo(78, 1, Artist.Alvaro_Calvo_Escudero);
+            addEnemy("The Witch-king", setTheBattleOfThePelennorFields, 50, 6, 6, 6, 14)
                 .WithSlugSuffix("Captain")
                 .WithUnique()
                 .WithTraits("Nazgûl.", "Captain.")
                 .WithText("Immune to player card effects.\r\nCannot be optionally engaged or take damage.\r\nForced: At the beginning of the quest phase, discard cards from the encounter deck until an enemy is discarded. Add the discarded enemy to the staging area.")
-                .WithInfo(79, 1, Artist.Rafal_Hrynkiewicz));
-            Cards.Add(LotRCard.Enemy("The Witch-king", string.Empty, setTheBattleOfThePelennorFields, 50, 6, 6, 6, 14)
+                .WithInfo(79, 1, Artist.Rafal_Hrynkiewicz);
+            addEnemy("The Witch-king", setTheBattleOfThePelennorFields, 50, 6, 6, 6, 14)
                 .WithSlugSuffix("Sorcerer")
                 .WithUnique()
                 .WithTraits("Nazgûl.", "Sorcerer.")
                 .WithText("Only the engaged player can declare attackers against the Witch-king.\r\nForced: At the beginning of the encounter phase, The Witch-king engages the first player. Then, it makes an immediate attack.")
                 .WithFlavor("\"No living man may hinder me!\" -The Return of the King")
                 .WithVictoryPoints(6)
-                .WithInfo(80, 1, Artist.Chris_Rahn));
+                .WithSideB()
+                .WithInfo(80, 1, Artist.Chris_Rahn);
         }
     }
 }

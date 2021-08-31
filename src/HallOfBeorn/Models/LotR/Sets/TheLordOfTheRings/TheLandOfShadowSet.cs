@@ -473,6 +473,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithTextLine("Immune to player card effects. The first player gains control of Sméagol.")
                 .WithTextLine("Forced: After the players quest unsuccessfully, flip Sméagol to ~Gollum.")
                 .WithTextLine("If Sméagol is destroyed, the players lose the game.")
+                .WithSideB()
                 .WithInfo(76, 1, Artist.Lukasz_Jaskolski);
         }
     }

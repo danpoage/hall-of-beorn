@@ -464,6 +464,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLostRealm
                 .WithTextLine("Forced: After Savage Counter-attack enters play, advance to stage 2A.")
                 .WithTextLine("Forced: After an enemy attacks and destroys a character, discard 1 resource token from Savage Counter-attack.")
                 .WithTextLine("If there are no resource tokens here, the players lose the game.")
+                .WithSideB()
                 .WithInfo(72, 1, Artist.Jon_Bosco);
             addQuest("The Shades of Angmar", EncounterSet.DeadmensDike, 1, 'A', 11)
                 .WithTextLine("Setup: Put Iârion into play. Set Thaurdir aside, out of play. Add 1 copy of Fornost square to the staging area. Shuffle the encounter deck.")

@@ -545,6 +545,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheGreyHavens
                 .WithTextLine("Captain Sahír gets +1 Willpower and +1 Attack for each resource on him (max +6).")
                 .WithTextLine("Action: Spend 1 resource from a hero you control to place 1 resource on Captain Sahír. (Limit once per round).")
                 .WithTextLine("If Captain Sahír leaves play, the players lose.")
+                .WithSideB()
                 .WithInfo(77, 1, Artist.Sara_Winters);
             addEnemy("Na'asiyah", EncounterSet.TheStormcallerElite, 8, 1, 2, 2, 4)
                 .WithUnique()
@@ -562,6 +563,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheGreyHavens
                 .WithTextLine("Action: While Na'asiyah is attacking or defending, spend 1 resource from her to give her +2 Attack or +2 Defense for this attack.")
                 .WithTextLine("Action: Spend 1 resource from a hero you control to place 1 resource on Na'asiyah. (Limit once per round).")
                 .WithTextLine("If Na'asiyah leaves play, the players lose.")
+                .WithSideB()
                 .WithInfo(79, 1, Artist.Ilich_Henriquez);
             addShipObjective("Dream-chaser", EncounterSet.TheDreamChasersFleet, true, 5, 4, 4, 18)
                 .WithSlugSuffix("Ship-Objective")

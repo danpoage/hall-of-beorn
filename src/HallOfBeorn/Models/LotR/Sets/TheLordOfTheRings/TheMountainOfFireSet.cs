@@ -428,20 +428,25 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithOppositeText("Forced: When the players advance to stage 3A, attach A Heavy Burden to the Ring-bearer. Attach each set aside Item boon to Shagrat as a guarded objective. When Shagrat is defeated, return each guarded boon to its owner's hand.\r\nResolution: If Shagrat is in play, remove each Item boon attached to it from the campaign pool. (The players have lost those boons.)")
                 .WithOppositeFlavor("The will of the Watchers was broken with a suddenness like the snapping of a cord, and Frodo and Sam stumbled forward. Then they ran. Through the gate and past the great seated figures with their glittering eyes. There was a crack. The keystone of the arch crashed almost on their heels, and the wall above crumbled, and fell in ruin. Only by a hair did they escape.\r\n-The Return of the King")
                 .WithInfo(69, 1, Artist.Sebastian_Giacobino));
-            addCard(LotRCard.Location("The Two Watchers", string.Empty, setTower, 254, 255)
+            addLocation("The Two Watchers", setTower, Card.VALUE_X, Card.VALUE_NA)
                 .WithSlugSuffix("Location")
                 .WithUnique()
                 .WithTraits("Mordor.")
-                .WithText("Immune to player card effects.\r\nX is twice the stage number of the main quest.\r\nForced: After the players travel here, flip The Two Watchers to its enemy side and move it to the staging area.")
-                .WithFlavor("They were like great figures seated upon thrones. Each had three joined bodies, and three heads facing outward, and inward, and across the gateway.\r\n-The Return of the King")
-                .WithInfo(70, 1, Artist.DinoDrawing));
-            addCard(LotRCard.Enemy("The Two Watchers", string.Empty, setTower, 50, 2, 5, 2, 4)
+                .WithTextLine("Immune to player card effects.")
+                .WithTextLine("X is twice the stage number of the main quest.")
+                .WithTextLine("Forced: After the players travel here, flip The Two Watchers to its enemy side and move it to the staging area.")
+                .WithFlavorLine("They were like great figures seated upon thrones. Each had three joined bodies, and three heads facing outward, and inward, and across the gateway.")
+                .WithFlavorLine("-The Return of the King")
+                .WithInfo(70, 1, Artist.DinoDrawing);
+            addEnemy("The Two Watchers", setTower, 50, 2, 5, 2, 4)
                 .WithSlugSuffix("Enemy")
                 .WithUnique()
                 .WithTraits("Mordor.")
-                .WithText("Immune to player card effects. Cannot be optionally engaged.\r\nForced: When The Two Watchers deals any amount of damage, cancel that damage and raise the defending player's threat by X instead. X is the amount of damage just canceled.")
+                .WithTextLine("Immune to player card effects. Cannot be optionally engaged.")
+                .WithTextLine("Forced: When The Two Watchers deals any amount of damage, cancel that damage and raise the defending player's threat by X instead. X is the amount of damage just canceled.")
                 .WithVictoryPoints(5)
-                .WithInfo(71, 1, Artist.DinoDrawing));
+                .WithSideB()
+                .WithInfo(71, 1, Artist.DinoDrawing);
             addCard(LotRCard.Quest("Embassy from the Dark Tower", 1, setBlackGate, 0)
                 .WithKeywords("Dire.")
                 .WithFlavor("Aragorn has led the Men of the West to the very Gate of Mordor in a perilous gamble to keep the Eye of Sauron focused on him. After challenging the Dark Lord to come forth and face judgement, the Black Gate opens and an embassy from Barad-dûr rides out led by The Mouth of Sauron.")
@@ -501,18 +506,19 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithOppositeText("Ignore the Forced effect on the Mount Doom campaign card if it is in play.\r\nForced: At the end of the round, the first player chooses a scenario (The Black Gate Opens or Mount Doom). Each player at the chosen scenario draws 1 card. Each player at the other scenario reduces his threat by 3. Then, the player who controls the Gwaihir objective-ally may give control of it to another player (at either scenario).\r\nAt the end of the round, if the last player at either scenario is defeated, both teams lose the game. If the Mount Doom scenario is defeated, both teams win the game.")
                 .WithOppositeFlavor("\"His eye is now straining towards us, blind almost to all else that is moving. So we must keep it. Therein lies all our hope.\"\r\n-Gandalf, The Return of the King")
                 .WithInfo(80, 1, Artist.Stanislav_Dikolenko));
-            addCard(LotRCard.Objective("The Eye of Sauron", string.Empty, setMountainOfFireEpicMultiplayer)
+            addObjective("The Eye of Sauron", setMountainOfFireEpicMultiplayer)
                 .WithUnique()
                 .WithSlugSuffix("Mount-Doom")
                 .WithTraits("Mordor.")
                 .WithText("Add Eye to each Fortitude test.\r\nForced: At the end of the round, flip The Eye of Sauron, then move it and each Nazgûl enemy in the staging area to The Black Gate Opens staging area. The first player may raise each player's threat by 3 to cancel this effect.")
-                .WithInfo(81, 1, Artist.Stanislav_Dikolenko));
-            addCard(LotRCard.Objective("The Eye of Sauron", string.Empty, setMountainOfFireEpicMultiplayer)
+                .WithInfo(81, 1, Artist.Stanislav_Dikolenko);
+            addObjective("The Eye of Sauron", setMountainOfFireEpicMultiplayer)
                 .WithUnique()
                 .WithSlugSuffix("The-Black-Gate-Opens")
                 .WithTraits("Mordor.")
                 .WithText("Each enemy in the staging area gets +1 Threat and -10 engagement cost.\r\nForced: At the end of the round, flip The Eye of Sauron, the move it and each Nazgûl enemy in the staging area to the Mount Doom staging area. The first player may raise each player's threat by 3 to cancel this effect.")
-                .WithInfo(82, 1, Artist.Stanislav_Dikolenko));
+                .WithSideB()
+                .WithInfo(82, 1, Artist.Stanislav_Dikolenko);
         }
     }
 }
