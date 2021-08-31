@@ -195,6 +195,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithKeywords("Indestructible.")
                 .WithTextLine("Indestructible. Immune to player card effects.")
                 .WithTextLine("While Urdug is engaged with a player, he gains, \"Forced: At the beginning of the quest phase, Urdug makes an immediate attack. If this attack deals damage, return Urdug and Tiny (if he is in play) to the staging area.\"")
+                .WithSideB()
                 .WithInfo(53, 1, Artist.Ivan_Dixon);
             addObjectiveAlly("Tiny", EncounterSet.RoamAcrossRhovanion, 1, 6, 3, 9)
                 .WithUnique()
@@ -213,6 +214,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTextLine("Urdug cannot take damage.")
                 .WithTextLine("Forced: After Urdug engages a player, Tiny engages that player.")
                 .WithVictoryPoints(6)
+                .WithSideB()
                 .WithInfo(55, 1, Artist.Guillaume_Ducos);
         }
     }
