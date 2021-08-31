@@ -287,6 +287,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTextLine("Attached hero gets +X Attack, where X is 1 more than the number of quest cards in the victory display.")
                 .WithTextLine("If attached hero leaves play, the players lose the game.")
                 .WithTemplate("<p class='main-text'>Attach to a hero. {keyword:Restricted.}</p><p class='main-text'>Attached hero gets +X {Attack}, where X is 1 more than the number of quest cards in the victory display.</p><p class='main-text'><b>If attached hero leaves play, the players lose the game.</b></p><p class='flavor-text'>...they tell that he slew Scatha, the great Dragon of Ered Mithrin, and the land had peace from the long-worms afterwards.<br>&ndash;The Return of the King</p>")
+                .WithSideB()
                 .WithInfo(144, 1, Artist.Sebastian_Zakrzewski);
         }
     }

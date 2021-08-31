@@ -186,6 +186,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithTraits("Search.")
                 .WithTextLine("Forced: At the end of the quest phase, search the top 3 cards of the encounter deck for a card with 'On Track' in the lower right corner, add it to the staging area and discard the rest. If no card enters play from this effect, flip this objective.")
                 .WithTextLine("Forced: After the players quest unsuccessfully, flip this objective.")
+                .WithSideB()
                 .WithInfo(80, 1, Artist.Jennifer_Hrabota_Lesser);
         }
     }
