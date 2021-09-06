@@ -892,6 +892,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 return getQuestCardImagePath(card, isFirst, lang.GetValueOrDefault(Language.EN));
             }
 
+            if (card.CardType == CardType.Contract)
+            {
+                return getContractCardImagePath(card, isFirst, useLang);
+            }
+
             if (useLang == Language.EN)
             {
                 var set = !string.IsNullOrEmpty(card.CardSet.NormalizedName) ? card.CardSet.NormalizedName.ToUrlSafeString() : card.CardSet.Name.ToUrlSafeString();
@@ -940,7 +945,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         private readonly static HashSet<string> englishSetsPng = new HashSet<string>
         {
-            CardSet.ChildrenOfEorl.Name, CardSet.TheScouringOfTheShire.Name, 
+            "Children of Eorl", "The Scouring of the Shire", 
         };
 
         private static string getEnglishImageExtension(LotRCard card)
@@ -1066,42 +1071,42 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/{0}/{1}/{2}-{3}{4}.{5}", path, set, title, suffix, letter, extension);
         }
 
-        public string getContractCardImagePath(bool isFirst, Language lang)
+        public static string getContractCardImagePath(LotRCard card, bool isFirst, Language lang)
         {
-            if (!string.IsNullOrEmpty(_card.OppositeText))
+            if (!string.IsNullOrEmpty(card.OppositeText))
             {
-                var set = (_card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
+                var set = (card.CardSet != null && !string.IsNullOrEmpty(card.CardSet.NormalizedName)) ? card.CardSet.NormalizedName.ToUrlSafeString() : card.CardSet.Name.ToUrlSafeString();
 
                 var path = "Cards";
-                var extension = getEnglishImageExtension(_card);
+                var extension = getEnglishImageExtension(card);
 
                 if (lang != Language.EN)
                 {
                     set = lang.ToString() + "/" + set;
                     path = "LotR/Cards";
-                    extension = getTranslatedImageExtension(_card, lang);
+                    extension = getTranslatedImageExtension(card, lang);
                 }
 
-                var title = _card.GetTitle(lang).ToUrlSafeString();
+                var title = card.GetTitle(lang).ToUrlSafeString();
                 var letter = isFirst ? "A" : "B";
 
                 return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/{0}/{1}/{2}-Side{3}.{4}", path, set, title, letter, extension);
             }
             else 
             {
-                var set = (_card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
+                var set = (card.CardSet != null && !string.IsNullOrEmpty(card.CardSet.NormalizedName)) ? card.CardSet.NormalizedName.ToUrlSafeString() : card.CardSet.Name.ToUrlSafeString();
 
                 var path = "Cards";
-                var extension = getEnglishImageExtension(_card);
+                var extension = getEnglishImageExtension(card);
 
                 if (lang != Language.EN)
                 {
                     set = lang.ToString() + "/" + set;
                     path = "LotR/Cards";
-                    extension = getTranslatedImageExtension(_card, lang);
+                    extension = getTranslatedImageExtension(card, lang);
                 }
 
-                var title = _card.GetTitle(lang).ToUrlSafeString();
+                var title = card.GetTitle(lang).ToUrlSafeString();
                 return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/{0}/{1}/{2}.{3}", path, set, title, extension);
             }
         }
@@ -1202,7 +1207,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                     case Models.LotR.CardType.Scenario:
                         return getSetupCardImagePath(true, _lang);
                     case Models.LotR.CardType.Contract:
-                        return getContractCardImagePath(true, _lang);
+                        return getContractCardImagePath(_card, true, _lang);
                     default:
                         return null;
                 }
@@ -1229,7 +1234,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                     case Models.LotR.CardType.Scenario:
                         return getSetupCardImagePath(false, _lang);
                     case Models.LotR.CardType.Contract:
-                        return getContractCardImagePath(false, _lang);
+                        return getContractCardImagePath(_card, false, _lang);
                     default:
                         return null;
                 }
