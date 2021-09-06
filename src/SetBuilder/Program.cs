@@ -7,6 +7,7 @@ using System.Threading;
 using HallOfBeorn;
 using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
+using HallOfBeorn.Services.LotR;
 
 namespace SetBuilder
 {
@@ -922,6 +923,7 @@ namespace SetBuilder
             var lang = args[0];
             var setName = args[1];
 
+            //Console.InputEncoding = Encoding.UTF8;
             Console.OutputEncoding = Encoding.UTF8;
             
             if (lang == "English")
@@ -1079,13 +1081,20 @@ namespace SetBuilder
             Console.WriteLine();
         }
 
+        private static readonly ProductRepository productRepository = new ProductRepository();
+
         private static int WriteTranslations(string language, string setName)
         {
             var normalizedSetName = setName.Replace(" ", "-");
             var path = string.Format("./ALeP/{0}.{1}.json", normalizedSetName, language);
 
-            //TODO: Lookup the product using setName
-            var product = new HallOfBeorn.Models.LotR.Products.Community.TheAldburgPlotProduct();
+            var product = productRepository.Products().FirstOrDefault(prod =>
+                prod.CardSets.Any(cs => cs.Name == setName));
+
+            if (product == null)
+            {
+                throw new Exception("Set not found: " + setName);
+            }
 
             var alepCards = ALePReader.ReadFile(path);
 

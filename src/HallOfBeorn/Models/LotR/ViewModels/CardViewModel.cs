@@ -897,6 +897,13 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 return getContractCardImagePath(card, isFirst, useLang);
             }
 
+            var setupCardTypes = new HashSet<CardType> { CardType.GenCon_Setup, CardType.Nightmare_Setup, CardType.Campaign, CardType.Scenario };
+
+            if (setupCardTypes.Contains(card.CardType))
+            {
+                return getSetupCardImagePath(card, isFirst, useLang);
+            }
+
             if (useLang == Language.EN)
             {
                 var set = !string.IsNullOrEmpty(card.CardSet.NormalizedName) ? card.CardSet.NormalizedName.ToUrlSafeString() : card.CardSet.Name.ToUrlSafeString();
@@ -1046,23 +1053,23 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/{0}/{1}/{2}{3}-{4}{5}.{6}", path, set, title, suffix, number, letter, extension);
         }
 
-        public string getSetupCardImagePath(bool isFirst, Language lang)
+        public static string getSetupCardImagePath(LotRCard card, bool isFirst, Language lang)
         {
-            var set = (_card.CardSet != null && !string.IsNullOrEmpty(_card.CardSet.NormalizedName)) ? _card.CardSet.NormalizedName.ToUrlSafeString() : _card.CardSet.Name.ToUrlSafeString();
+            var set = (card.CardSet != null && !string.IsNullOrEmpty(card.CardSet.NormalizedName)) ? card.CardSet.NormalizedName.ToUrlSafeString() : card.CardSet.Name.ToUrlSafeString();
 
             var path = "Cards";
-            var extension = getEnglishImageExtension(_card);
+            var extension = getEnglishImageExtension(card);
 
             if (lang != Language.EN)
             {
                 set = lang.ToString() + "/" + set;
                 path = "LotR/Cards";
-                extension = getTranslatedImageExtension(_card, lang);
+                extension = getTranslatedImageExtension(card, lang);
             }
 
-            var title = _card.Title.ToUrlSafeString();
+            var title = card.GetTitle(lang).ToUrlSafeString();
 
-            var suffix = _card.CardType == LotR.CardType.Scenario
+            var suffix = card.CardType == LotR.CardType.Scenario
                 ? "Scenario"
                 : "Setup";
             
@@ -1205,7 +1212,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                     case Models.LotR.CardType.Nightmare_Setup:
                     case Models.LotR.CardType.GenCon_Setup:
                     case Models.LotR.CardType.Scenario:
-                        return getSetupCardImagePath(true, _lang);
+                        return getSetupCardImagePath(_card, true, _lang);
                     case Models.LotR.CardType.Contract:
                         return getContractCardImagePath(_card, true, _lang);
                     default:
@@ -1232,7 +1239,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                     case Models.LotR.CardType.Nightmare_Setup:
                     case Models.LotR.CardType.GenCon_Setup:
                     case Models.LotR.CardType.Scenario:
-                        return getSetupCardImagePath(false, _lang);
+                        return getSetupCardImagePath(_card, false, _lang);
                     case Models.LotR.CardType.Contract:
                         return getContractCardImagePath(_card, false, _lang);
                     default:

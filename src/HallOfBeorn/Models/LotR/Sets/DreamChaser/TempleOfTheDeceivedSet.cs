@@ -144,7 +144,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
             addLocation("Jungle Path", EncounterSet.TempleOfTheDeceived, 4, 4)
                 .WithOppositeTitle("Lost Island")
                 .WithSlugSuffix("Lost Island")
-                .WithTraits("Underground.")
+                .WithTraits("Forest.")
                 .WithKeywords("Uncharted.")
                 .WithTextLine("While Jungle Path is the active location, the locations immediately above and below it are not considered to be in the staging area.")
                 .WithTextLine("Forced: When Jungle Path is flipped over while active, each player must exhaust a character with at least 2 Attack.")

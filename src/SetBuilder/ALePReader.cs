@@ -16,7 +16,7 @@ namespace SetBuilder
 
             try
             {
-                var json = File.ReadAllText(path);
+                var json = File.ReadAllText(path, Encoding.UTF8);
 
                 cards = JsonConvert.DeserializeObject<List<ALePCard>>(json);
 

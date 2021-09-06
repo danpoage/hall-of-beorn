@@ -27,6 +27,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Treachery", "Verrat" },
                 { "Objective", "Ziel" },
                 { "Quest", "Suche" },
+                { "Campaign", "Kampagne" }
             };
         }
 
@@ -44,11 +45,15 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Guarded (enemy).", "Bewacht (Gegner)." },
                 { "Guarded (location).", "Bewacht (Ort)." },
                 
+                { "Indestructible.", "Unzerstörbar." },
+                
                 { "Looter 0.", "Erbeuten 0." },
                 { "Looter 1.", "Erbeuten 1." },
                 { "Looter 2.", "Erbeuten 2." },
                 { "Looter 3.", "Erbeuten 3." },
                 
+                { "Peril.", "Wagnis." },
+
                 { "Ranged.", "Fernkampf." },
                 { "Restricted.", "Eingeschränkt." },
                 { "Secrecy 1.", "Heimlichkeit 1." },
@@ -196,22 +201,76 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Rohirric Coins", "Münzen der Rohirrim" },
                 { "Red Fletched Arrow", "Rotgefiederter Pfeil" },
                 { "Letter from Dunland", "Brief aus Dunland" },
+
+                //The Scouring of the Shire
+                { "Against the Rules", "Gegen die Regeln" },
+                { "Ambush Sharkey's Men", "Lauert Scharrers Leuten auf" },
+                { "Awake! Fire, Foes! Awake!", "Erwacht! Feuer, Feinde! Erwacht!" },
+                { "Brandywine Gate", "Brandywein-Tor" },
+                { "Brick Building", "Ziegelgebäude" },
+                { "Bright Mail", "Strahlende Rüstung" },
+                { "Curse Upon the Shire", "Fluch über das Auenland" },
+                { "East Road", "Oststrasse" },
+                { "Escorted “Prisoners”", "Eskortierte “Gefangene”" },
+                { "Feather-capped Shirriff", "Landbüttel mit Federmütze" },
+                { "Find the Gaffer", "Findet den Ohm" },
+                { "Frodo Baggins", "Frodo Beutlin" },
+                { "Gang of Ruffians", "Bande von Strolchen" },
+                { "Gríma's Choice", "Grímas Wahl" },
+                { "Heightened Stature", "Hoch gewachsen" },
+                { "Hidden Blade", "Versteckte Klinge" },
+                { "Highway Robber", "Strassenräuber" },
+                { "Hobbiton Road", "Hobbinger Strasse" },
+                { "Into the West", "In den Westen" },
+                { "Many Partings", "Viele Abschiede" },
+                { "Muster the Tooks", "Versammelt die Tuks" },
+                { "Once Beloved Place", "Einst geliebte Behausung" },
+                { "One Ill Turn", "Eine üble Wendung" },
+                { "Raise the Shire", "Das Auenland zum Widerstand aufrufen" },
+                { "Rouse the Cottons", "Rüttelt die Hüttingers auf" },
+                { "Roused Hobbits", "Aufgerüttelte Hobbits" },
+                { "Scatha's Horn", "Scathas Horn" },
+                { "Set up Barriers", "Stellt Strassensperren auf" },
+                { "Sharkey's Men", "Scharrers Leute" },
+                { "Shirriff House", "Landbüttelhaus" },
+                { "Star-like Gem", "Sternengleicher Edelstein" },
+                { "Take Him, Lads!", "Greift ihn, Jungs!" },
+                { "The Battle of Bywater", "Die Schlacht von Wasserau" },
+                { "The Lockholes", "Das Loch" },
+                { "The Scouring of the Shire", "Die Befreiung des Auenlandes" },
+                { "The Very Last Stroke", "Der Allerletzte Schlag" },
+                { "Thieving Ruffian", "Diebischer Strolch" },
+                { "Three-Farthing Stone", "Drei-Viertel-Stein" },
+                { "To the Road Again, Worm!", "Auf die Strasse, Schlange!" },
+                { "Voice of Saruman", "Sarumans Stimme" },
+                { "Watch the East Road", "Bewacht die Oststrasse" },
+                { "Wooden Shed", "Hölzerner Schuppen" },
             };
         }
 
         public Dictionary<string, string> Traits()
         {
             return new Dictionary<string, string> {
+                { "Armor.", "Rüstung." },
+                { "Artifact.", "Gegenstand." },
                 { "Assassin.", "Attentäter." },
+                
                 { "Beorning.", "Beorninger." },
                 { "Brigand.", "Gesetzloser." },
                 { "Camp.", "Lager." },
                 { "Clue.", "Hinweis." },
+                { "Condition.", "Zustand." },
                 { "Creature.", "Kreatur." },
+                { "Doom.", "Verhängnis." },
+
                 { "Garrison.", "Garnison." },
                 { "Gate.", "Tor." },
+
+                { "Hideout.", "Versteck." },
                 { "Hills.", "Hügel." },
+
                 { "Inferno.", "Feuersbrunst." },
+                { "Item.", "Artefakt." },
                 
                 { "Mount.", "Reittier." },
                 { "Noble.", "Adlig." },
@@ -219,9 +278,12 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Plains.", "Ebene." },
                 { "Ranger.", "Waldläufer." },
                 { "Road.", "Straße." },
+                { "Ruffian.", "Strolch." },
                 
                 { "Scout.", "Späher." },
                 { "Servant.", "Diener." },
+                { "Sharkey.", "Scharrer." },
+                { "Shire.", "Auenland." },
                 { "Shirriff.", "Landbüttel." },
                 { "Skill.", "Fertigkeit." },
                 { "Spy.", "Spion." },
@@ -231,6 +293,8 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Traitor.", "Verräter." },
                 { "Trap.", "Falle." },
                 
+                { "Underground.", "Unterirdisch." },
+
                 { "Village.", "Dorf." },
                 { "Warrior.", "Krieger." },
                 { "Weather.", "Wetter." },
