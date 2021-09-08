@@ -318,7 +318,23 @@ namespace HallOfBeorn.Handlers.LotR
                         var communityLinks = _linkService.GetLinks(cardViewModel.Card.Slug);
                         foreach (var link in communityLinks)
                         {
-                            linksByUrl[link.Url] = new Tuple<LinkViewModel, double>(new LinkViewModel(link), 200);
+                            linksByUrl[link.Url] = new Tuple<LinkViewModel, double>(new LinkViewModel(link), 200); 
+                        }
+
+                        foreach (var link in _linkService.Links())
+                        {
+                            if (!link.Labels.Any())
+                            {
+                                continue;
+                            }
+
+                            if (link.Labels.Any(label => cardViewModel.Title.Contains(label)))
+                            {
+                                if (!linksByUrl.ContainsKey(link.Url))
+                                {
+                                    linksByUrl[link.Url] = new Tuple<LinkViewModel,double>(new LinkViewModel(link), 100);
+                                }
+                            }
                         }
 
                         var associatedScenarios = _scenarioService.AssociatedScenarios(

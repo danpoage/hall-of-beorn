@@ -15,5 +15,8 @@ namespace HallOfBeorn.Models
         string ThumbnailUrl { get; }
         int ThumbnailHeight { get; } 
         int ThumbnailWidth { get; }
+        IEnumerable<string> Labels { get; }
+        ILink WithLabel(string label);
+        ILink WithLabels(string[] labels);
     }
 }

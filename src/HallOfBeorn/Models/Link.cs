@@ -177,7 +177,7 @@ namespace HallOfBeorn.Models
 
         private readonly int? _thumbnailHeight;
         private readonly int? _thumbnailWidth;
-
+        
         public LinkType Type { get; set; }
         public string Title { get; set; }
         public string Text { get; set; }
@@ -185,6 +185,30 @@ namespace HallOfBeorn.Models
         public string ThumbnailUrl { get; private set; }
         public int ThumbnailHeight { get { return _thumbnailHeight.HasValue ? _thumbnailHeight.Value : 118; } } 
         public int ThumbnailWidth { get { return _thumbnailWidth.HasValue ? _thumbnailWidth.Value : 210; } }
+
+        private readonly HashSet<string> labels = new HashSet<string>();
+        public IEnumerable<string> Labels { get { return labels; } }
+
+        public ILink WithLabel(string label)
+        {
+            if (!labels.Contains(label))
+            {
+                this.labels.Add(label);
+            }
+            return this;
+        }
+
+        public ILink WithLabels(params string[] labels)
+        {
+            foreach (var label in labels)
+            {
+                if (!labels.Contains(label))
+                {
+                    this.labels.Add(label);
+                }
+            }
+            return this;
+        }
 
         public static ILink CreateLotRImageLink(LotR.LotRCard card)
         {
@@ -212,6 +236,15 @@ namespace HallOfBeorn.Models
         public CreatorLink WithAssociation(string cardSlug)
         {
             Creator.AssociateCardToUrl(cardSlug, Link.Url);
+            return this;
+        }
+
+        public CreatorLink WithLabels(params string[] labels)
+        {
+            foreach (var label in labels)
+            {
+                this.Link.WithLabel(label);
+            }
             return this;
         }
     }

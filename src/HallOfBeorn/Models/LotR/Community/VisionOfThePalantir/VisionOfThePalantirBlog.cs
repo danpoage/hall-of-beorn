@@ -12,7 +12,8 @@ namespace HallOfBeorn.Models.LotR.Community.VisionOfThePalantir
             LinkType.Vision_of_the_Palantir)
         {
             AddYear(2021);
-            AddLink("The City of Ulfast", "https://visionofthepalantir.com/2021/07/15/the-city-of-ulfast/", "July 15 2021");
+            AddLink("The City of Ulfast", "https://visionofthepalantir.com/2021/07/15/the-city-of-ulfast/", "July 15 2021")
+                .WithLabels("Forth, the Three Hunters", "War Axe", "Angbor the Fearless", "Horn of the Mark", "Knight of Belfalas", "Strength and Courage", "Host of Galadhrim", "Lothíriel", "Need Drives Them", "Keen Longbow");
             AddLink("Encounter Set Review: The Hunt for Gollum", "https://visionofthepalantir.com/2021/07/09/encounter-set-review-the-hunt-for-gollum/", "July 9 2021");
             AddLink("The Redhorn Gate: There and Back Again", "https://visionofthepalantir.com/2021/07/07/the-redhorn-gate-there-and-back-again/", "July 7 2021");
             AddLink("Month in Review: June 2021", "https://visionofthepalantir.com/2021/06/30/month-in-review-june-2021/", "June 30 2021");

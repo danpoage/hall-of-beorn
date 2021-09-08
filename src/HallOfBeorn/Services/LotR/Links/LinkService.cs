@@ -338,6 +338,36 @@ namespace HallOfBeorn.Services.LotR.Links
                 : string.Empty;
         }
 
+        public IEnumerable<ILink> Links()
+        {
+            var map = new Dictionary<string, ILink>();
+
+            foreach (var links in linksBySlug.Values)
+            {
+                foreach (var link in links)
+                {
+                    if (!map.ContainsKey(link.Url))
+                    {
+                        map[link.Url] = link;
+                    }
+                }
+            }
+
+            foreach (var creator in creatorService.Creators())
+            {
+                foreach (var link in creator.Links()
+                    .Where(link => link.Labels.Any()))
+                {
+                    if (!map.ContainsKey(link.Url))
+                    {
+                        map[link.Url] = link;
+                    }
+                }
+            }
+
+            return map.Values;
+        }
+
         public IEnumerable<ILink> GetLinks(string slug)
         {
             var links = new List<ILink>();

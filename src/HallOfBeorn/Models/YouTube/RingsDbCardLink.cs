@@ -27,5 +27,29 @@ namespace HallOfBeorn.Models.YouTube
         public int ThumbnailHeight { get; private set; }
 
         public int ThumbnailWidth { get; private set; }
+
+        private readonly HashSet<string> labels = new HashSet<string>();
+        public IEnumerable<string> Labels { get { return labels; } }
+
+        public ILink WithLabel(string label)
+        {
+            if (!labels.Contains(label))
+            {
+                this.labels.Add(label);
+            }
+            return this;
+        }
+
+        public ILink WithLabels(params string[] labels)
+        {
+            foreach (var label in labels)
+            {
+                if (!labels.Contains(label))
+                {
+                    this.labels.Add(label);
+                }
+            }
+            return this;
+        }
     }
 }
