@@ -321,16 +321,6 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Well-lit Hall", "Hall Lumineux" },
                 { "Whisperer in the Darkness", "Chuchotement dans les Ténèbres" },
                 { "Young Tom", "Tom le Jeune" },
-/*
-                { "Letter from Dunland", "Lettre du Pays de Dun" },
-                { "Prison Key", "Clef de Prison" },
-                { "Raven Signet Ring", "Chevalière au Corbeau" },
-                { "Red Fletched Arrow", "Flèche aux Pennes rouges" },
-                { "Rohirric Coins", "Pièces Rohiriques" },
-                { "Ruby Cloak-pin", "Broche Rubis" },
-                { "Silver Dagger", "Dague en Argent" },
-                { "Traitor's Confession", "Confession du Traître" },
- */
             };
         }
 

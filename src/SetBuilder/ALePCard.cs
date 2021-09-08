@@ -186,21 +186,32 @@ namespace SetBuilder
             { "[pp]", "{PerPlayer}" },
             
             //French
-            { "Action:", "<b>Action:</b>" }, //Action
+            { "[Combat] Action:", "<b>[Combat] Action:</b>" }, //Combat Action
+            { "[Organisation] Action:", "<b>[Organisation] Action:</b>" }, //Planning Action
+            { "[Quête] Action:", "<b>[Quête] Action:</b>" }, //Quest Action
+            { "[Rencontre] Action:", "<b>[Rencontre] Action:</b>" }, //Encounter Action
+            { "[Voyage] Action:", "<b>[Voyage] Action:</b>" }, //Travel Action
+            { "Action: ", "<b>Action:</b> " }, //Action
             { "Réponse:", "<b>Réponse:</b>" }, //Response
             { "Forcé:", "<b>Forcé:</b>" }, //Forced
             { "Une fois révélée:", "<b>Une fois révélée:</b>" }, //When Revealed
             { "Mise en place:", "<b>Mise en place:</b>" }, //Setup
             { "Ombre:", "<b>Ombre:</b>" }, //Shadow
             { "Trajet:", "<b>Trajet:</b>" }, //Travel
-            { "Action :", "<b>Action:</b>" }, //Action
+           
+            { "[Combat] Action :", "<b>[Combat] Action:</b>" }, //Combat Action
+            { "[Organisation] Action :", "<b>[Organisation] Action:</b>" }, //Planning Action
+            { "[Quête] Action :", "<b>[Quête] Action:</b>" }, //Quest Action
+            { "[Rencontre] Action :", "<b>[Rencontre] Action:</b>" }, //Encounter Action
+            { "[Voyage] Action :", "<b>[Voyage] Action:</b>" }, //Travel Action
+            { "Action : ", "<b>Action:</b> " }, //Action
             { "Réponse :", "<b>Réponse:</b>" }, //Response
             { "Forcé :", "<b>Forcé:</b>" }, //Forced
             { "Une fois révélée :", "<b>Une fois révélée:</b>" }, //When Revealed
             { "Mise en place :", "<b>Mise en place:</b>" }, //Setup
             { "Ombre :", "<b>Ombre:</b>" }, //Shadow
             { "Trajet :", "<b>Trajet:</b>" }, //Travel
-
+            
             //German
             { "Aktion:", "<b>Aktion:</b>" }, //Action:
             { "Reiseaktion:", "<b>Reiseaktion:</b>" }, //Travel Action
