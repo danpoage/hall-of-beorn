@@ -142,6 +142,8 @@ namespace SetBuilder
                     return EncounterSet.DunlandWarriors;
                 case "Faithless Rohirrim":
                     return EncounterSet.FaithlessRohirrim;
+                case "The Aldburg Plot":
+                    return EncounterSet.TheAldburgPlot;
                 case "The Horse Lord's Ire":
                     return EncounterSet.TheHorseLordsIre;
                 case "Orc-host":
@@ -190,6 +192,14 @@ namespace SetBuilder
             { "Une fois révélée:", "<b>Une fois révélée:</b>" }, //When Revealed
             { "Mise en place:", "<b>Mise en place:</b>" }, //Setup
             { "Ombre:", "<b>Ombre:</b>" }, //Shadow
+            { "Trajet:", "<b>Trajet:</b>" }, //Travel
+            { "Action :", "<b>Action:</b>" }, //Action
+            { "Réponse :", "<b>Réponse:</b>" }, //Response
+            { "Forcé :", "<b>Forcé:</b>" }, //Forced
+            { "Une fois révélée :", "<b>Une fois révélée:</b>" }, //When Revealed
+            { "Mise en place :", "<b>Mise en place:</b>" }, //Setup
+            { "Ombre :", "<b>Ombre:</b>" }, //Shadow
+            { "Trajet :", "<b>Trajet:</b>" }, //Travel
 
             //German
             { "Aktion:", "<b>Aktion:</b>" }, //Action:
