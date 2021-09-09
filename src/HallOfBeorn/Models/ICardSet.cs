@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HallOfBeorn.Models
 {
-    public interface ICardSet<TProduct, TCard> : INamed
+    public interface ICardSet<TProduct, TCard> : INamed, ILabeled
         where TProduct: IProduct<TCard>
         where TCard: ICard
     {

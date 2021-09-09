@@ -356,7 +356,7 @@ namespace HallOfBeorn.Services.LotR.Links
             foreach (var creator in creatorService.Creators())
             {
                 foreach (var link in creator.Links()
-                    .Where(link => link.Labels.Any()))
+                    .Where(link => link.Labels().Any()))
                 {
                     if (!map.ContainsKey(link.Url))
                     {

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace HallOfBeorn.Models
 {
     public interface ILink
+        : ILabeled
     {
         LinkType Type { get; }
         string Title { get; }
@@ -15,7 +16,6 @@ namespace HallOfBeorn.Models
         string ThumbnailUrl { get; }
         int ThumbnailHeight { get; } 
         int ThumbnailWidth { get; }
-        IEnumerable<string> Labels { get; }
         ILink WithLabel(string label);
         ILink WithLabels(string[] labels);
     }

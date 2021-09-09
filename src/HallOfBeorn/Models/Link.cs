@@ -187,7 +187,7 @@ namespace HallOfBeorn.Models
         public int ThumbnailWidth { get { return _thumbnailWidth.HasValue ? _thumbnailWidth.Value : 210; } }
 
         private readonly HashSet<string> labels = new HashSet<string>();
-        public IEnumerable<string> Labels { get { return labels; } }
+        public IEnumerable<string> Labels() { return labels; }
 
         public ILink WithLabel(string label)
         {

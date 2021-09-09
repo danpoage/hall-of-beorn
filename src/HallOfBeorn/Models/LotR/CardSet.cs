@@ -330,6 +330,11 @@ namespace HallOfBeorn.Models.LotR
 
         public bool IsSpoiler { get; protected set; }
 
+        public IEnumerable<string> Labels()
+        {
+            return Cards.Select(c => c.Title);
+        }
+
         private static List<CardSet> all = new List<CardSet>();
 
         private static void Add(CardSet cardSet)

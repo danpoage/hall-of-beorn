@@ -143,6 +143,11 @@ namespace HallOfBeorn.Models.Digital
         
         public List<DigitalCard> Cards { get { return cards; } }
 
+        public IEnumerable<string> Labels()
+        {
+            return Cards.Select(c => c.Title);
+        }
+
         #region Static Properties
         public static DigitalCardSet Starter = new CardSets.StarterSet();
         public static DigitalCardSet ValorCards = new CardSets.ValorCards();

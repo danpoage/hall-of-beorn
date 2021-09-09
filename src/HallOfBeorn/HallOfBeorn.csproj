@@ -264,6 +264,7 @@
     <Compile Include="Models\Digital\ViewModels\DigitalSearchViewModel.cs" />
     <Compile Include="Models\ICard.cs" />
     <Compile Include="Models\ICardSet.cs" />
+    <Compile Include="Models\ILabeled.cs" />
     <Compile Include="Models\ILink.cs" />
     <Compile Include="Models\INamed.cs" />
     <Compile Include="Models\IProduct.cs" />

@@ -206,6 +206,15 @@ namespace HallOfBeorn.Models.LotR
             return setup;
         }
 
+        public IEnumerable<string> Labels()
+        {
+            var repo = new HallOfBeorn.Services.LotR.ProductRepository();
+            var cardSet = repo.CardSets().FirstOrDefault(cs => cs.Name == Set);
+            return cardSet != null 
+                ? cardSet.Cards.Where(card => card.EncounterSet == Name).Select(card => card.Title)
+                : Enumerable.Empty<string>();
+        }
+
         static EncounterSet()
         {
             //Core Set and Shadows of Mirkwood

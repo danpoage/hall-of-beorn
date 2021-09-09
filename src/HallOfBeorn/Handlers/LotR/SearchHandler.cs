@@ -323,12 +323,13 @@ namespace HallOfBeorn.Handlers.LotR
 
                         foreach (var link in _linkService.Links())
                         {
-                            if (!link.Labels.Any())
+                            var labels = link.Labels();
+                            if (!labels.Any())
                             {
                                 continue;
                             }
 
-                            if (link.Labels.Any(label => cardViewModel.Title.Contains(label)))
+                            if (labels.Any(label => cardViewModel.Title.Contains(label)))
                             {
                                 if (!linksByUrl.ContainsKey(link.Url))
                                 {
