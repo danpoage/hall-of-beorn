@@ -91,6 +91,9 @@
     <Content Include="ALeP\The-Aldburg-Plot.French.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="ALeP\Fire-on-the-Eastemnet.English.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>

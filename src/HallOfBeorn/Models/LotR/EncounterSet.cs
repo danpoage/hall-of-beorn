@@ -973,6 +973,7 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet RohanLands = new EncounterSet { Name = "Rohan Lands", Set = "Children of Eorl" };
 
         public static EncounterSet TheAldburgPlot = new EncounterSet { Name = "The Aldburg Plot", Set = "The Aldburg Plot" };
+        public static EncounterSet FireOnTheEastemnet = new EncounterSet { Name = "Fire on the Eastemnet", Set = "Fire on the Eastemnet" };
         
         public static EncounterSet TheScouringOfTheShire = new EncounterSet { Name = "The Scouring of the Shire", Set = "The Scouring of the Shire" };
     }

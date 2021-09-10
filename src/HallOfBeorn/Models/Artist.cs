@@ -801,6 +801,28 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Gennadiy_Lysak);
             all.Add(Artist.Christina_Goupil);
 
+            //Fire on the Eastemnet
+            all.Add(Artist.Edward_Beard_Jr);
+            all.Add(Artist.Ken_Stroud);
+            all.Add(Artist.Ferdinand_Ladera);
+            all.Add(Artist.Rob_Joseph);
+            all.Add(Artist.Veli_Nystrom);
+            all.Add(Artist.Snowblind_Studios);
+            all.Add(Artist.Jose_Derivaldo_Junior);
+            all.Add(Artist.Damian_Audino);
+            all.Add(Artist.Detlef_Ott);
+            all.Add(Artist.James_Paick);
+            all.Add(Artist.Johannes_Voss);
+            all.Add(Artist.Leo_Li);
+            all.Add(Artist.Willem_Haenraets);
+            all.Add(Artist.Marta_Grajper);
+            all.Add(Artist.Brian_Vadell);
+            all.Add(Artist.Borkur_Eiriksson);
+            all.Add(Artist.Cubicle_7);
+            all.Add(Artist.Wouter_Florusse);
+            all.Add(Artist.Gus_Hunter);
+            all.Add(Artist.Turbine);
+
             all.Add(Artist.None);
         }
 
@@ -841,7 +863,7 @@ namespace HallOfBeorn.Models
         public static Artist Tom_Romain = new Artist { Name = "Tom Romain", URL = "http://google.com/search?q=Tom+Romain+art" };
         public static Artist Adrian_Prado = new Artist { Name = "Adrian Prado", URL = "http://google.com/search?q=Adrian+Prado+art" };
         public static Artist Ekaterina_Burmak = new Artist { Name = "Ekaterina Burmak", URL = "http://google.com/search?q=Ekaterina+Burmak+art" };
-        public static Artist Bethesda_Softworks = new Artist { Name = "Bethesda_Softworks", URL = "http://google.com/search?q=Bethesda+Softworks+art" };
+        public static Artist Bethesda_Softworks = new Artist { Name = "Bethesda Softworks", URL = "http://google.com/search?q=Bethesda+Softworks+art" };
         public static Artist Mila_Pesic = new Artist { Name = "Mila Pesic", URL = "http://google.com/search?q=Mila+Pesic+art" };
         public static Artist Daniel_Eskridge = new Artist { Name = "Daniel Eskridge", URL = "http://google.com/search?q=Daniel+Eskridge+art" };
         public static Artist Alexander_Forssberg = new Artist { Name = "Alexander Forssberg", URL = "http://google.com/search?q=Alexandrer+Forssberg+art" };
@@ -881,6 +903,30 @@ namespace HallOfBeorn.Models
         public static Artist Franco_Rivolli = new Artist { Name = "Franco Rivolli", URL = "https://www.artstation.com/francorivolli79" };
         public static Artist Paolo_Puggioni = new Artist { Name = "Paolo Puggioni", URL = "https://www.artstation.com/paolopuggioni" };
         
+        //Fire on the Eastemnet
+        public static Artist Edward_Beard_Jr = new Artist { Name = "Edward Beard Jr.", URL = "https://www.edbeardjr.com/" };
+        public static Artist Ken_Stroud = new Artist { Name = "Ken Stroud", URL = "https://www.artistsandillustrators.co.uk/Ken-Stroud" };
+        public static Artist Oscar_Perez = new Artist { Name = "Oscar Perez", URL = "https://www.artstation.com/elbardo" };
+        public static Artist Ferdinand_Ladera = new Artist { Name = "Ferdinand Ladera", URL = "https://www.artstation.com/ferdinandladera" };
+        public static Artist Rob_Joseph = new Artist { Name = "Rob Joseph", URL = "https://www.artstation.com/rob-joseph" };
+        public static Artist Veli_Nystrom = new Artist { Name = "Veli Nyström", URL = "https://www.artstation.com/vablo" };
+        public static Artist Snowblind_Studios = new Artist { Name = "Snowblind Studios", URL = "https://www.snowblindstudios.com/" };
+        public static Artist Jose_Derivaldo_Junior = new Artist { Name = "José Derivaldo Júnior", URL = "https://juniorjoseds.artstation.com/" };
+        public static Artist Damian_Audino = new Artist { Name = "Damian Audino", URL = "https://www.artstation.com/damianaudino" };
+        public static Artist Detlef_Ott = new Artist { Name = "Detlef Ott", URL = "https://www.google.com/search?q=Detlef+Ott+art" };
+        public static Artist James_Paick = new Artist { Name = "James Paick", URL = "https://www.artstation.com/jamespaickart" };
+        public static Artist Johannes_Voss = new Artist { Name = "Johannes Voss", URL = "https://www.artstation.com/algenpfleger" };
+        public static Artist Leo_Li = new Artist { Name = "Leo Li", URL = "https://www.artstation.com/leoliart" };
+        public static Artist Willem_Haenraets = new Artist { Name = "Willem Haenraets", URL = "https://www.icanvas.com/canvas-art-prints/artist/willem-haenraets" };
+        public static Artist Marta_Grajper = new Artist { Name = "Marta Grajper", URL = "https://www.artstation.com/martagrajper" };
+        public static Artist Brian_Vadell = new Artist { Name = "Brian Vadell", URL = "https://www.artstation.com/brianvadell" };
+        public static Artist Borkur_Eiriksson = new Artist { Name = "Börkur Eiríksson", URL = "https://www.artstation.com/borkur" };
+        public static Artist Cubicle_7 = new Artist { Name = "Cubicle 7", URL = "https://www.cubicle7games.com" };
+        public static Artist Wouter_Florusse = new Artist { Name = "Wouter Florusse", URL = "https://www.artstation.com/woutart" };
+        public static Artist Gus_Hunter = new Artist { Name = "Gus Hunter", URL = "https://conceptartworld.com/artists/gus-hunter/" };
+        public static Artist Turbine = new Artist { Name = "Turbine", URL = "https://www.google.com/search?q=turbine+art" };
+
+        //The Scouring of the Shire
         public static Artist Studio_Ghibli = new Artist { Name = "Studio Ghibli", URL = "https://www.ghibli-museum.jp" };
         public static Artist Filip_Storch = new Artist { Name = "Filip Štorch", URL = "http://google.com/search?q=Filip+Storch+art" };
         public static Artist Kimberley_Pope = new Artist { Name = "Kimberly Pope", URL = "http://google.com/search?q=Kimberly+Pope+art" };

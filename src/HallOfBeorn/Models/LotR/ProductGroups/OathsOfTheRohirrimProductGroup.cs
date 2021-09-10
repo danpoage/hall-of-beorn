@@ -9,6 +9,7 @@
             AddMainProduct(Product.ChildrenOfEorl);
 
             AddChildProduct(Product.TheAldburgPlot);
+            AddChildProduct(Product.FireOnTheEastemnet);
         }
     }
 }

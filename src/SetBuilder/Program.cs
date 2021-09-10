@@ -495,6 +495,7 @@ namespace SetBuilder
             {
                 var includedEncounterSets = string.Join(", ",
                     card.IncludedEncounterSets
+                        .Where(es => es != null && es.Name != null)
                         .Select(es => encounterSet(es.Name))
                 );
                 s.AppendFormat(withIncludedEncounterSetsFormat,
@@ -922,6 +923,9 @@ namespace SetBuilder
 
             var lang = args[0];
             var setName = args[1];
+            
+            //var lang = "English";
+            //var setName = "Fire on the Eastemnet";
 
             //Console.InputEncoding = Encoding.UTF8;
             Console.OutputEncoding = Encoding.UTF8;
@@ -954,16 +958,17 @@ namespace SetBuilder
             var cardSet = GetCardSet(setName, 8, abbreviation.ToString(), alepCards);
             writeCardSet(cardSet);
 
-            /*
-            var product = new HallOfBeorn.Models.LotR.Products.Community.TheScouringOfTheShireProduct();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("private void TheScouringOfTheShire()");
-            Console.WriteLine("{");
-            WriteTemplates(product, setName, alepCards);
-            Console.WriteLine("}");
-            */
-
+            var product = productRepository.Products().FirstOrDefault(prod => prod.Name == setName);
+            if (product != null)
+            {
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine("private void {0}()", setName.Replace(" ", string.Empty));
+                Console.WriteLine("{");
+                WriteTemplates(product, setName, alepCards);
+                Console.WriteLine("}");
+            }
+            
             return 0;
         }
 
@@ -973,6 +978,11 @@ namespace SetBuilder
 
             foreach (var alepCard in alepCards)
             {
+                if (alepCard.position == 0)
+                {
+                    continue;
+                }
+
                 cardSet.AddCard(alepCard);
             }
 
