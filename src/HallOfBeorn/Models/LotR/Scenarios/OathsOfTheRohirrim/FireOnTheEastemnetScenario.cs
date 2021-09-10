@@ -25,6 +25,12 @@ namespace HallOfBeorn.Models.LotR.Scenarios.OathsOfTheRohirrim
             AddQuestCardId("Relentless-Forces-FotE");
             AddQuestCardId("To-the-River-FotE");
 
+            //Fire on the Eastemnet
+            ExcludeFromEasyMode("White-Mountain-Beastmaster-FotE", 1);
+            ExcludeFromEasyMode("Orcish-Wrangler-FotE", 1);
+            ExcludeFromEasyMode("Hidden-Orc-Camp-FotE", 1);
+            ExcludeFromEasyMode("Cracking-Horse-Whip-FotE", 1);
+
             //Orc-Host
             ExcludeFromEasyMode("Crimson-Banner-CoE", 1);
         }

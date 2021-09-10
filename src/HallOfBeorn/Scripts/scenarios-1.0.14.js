@@ -474,6 +474,8 @@ function initQuestMap() {
         'Orcs have invaded the Eastfold, rampaging across the land and capturing King Thengel’s prized warhorses.');
     addQuest(784, 713, 'The Aldburg Plot', 'CoE', 'The-Aldburg-Plot', 'The-Aldburg-Plot/Evil-Under-the-Moon-1A.jpg',
         'With the knowledge that a faction of rebels has taken up residence in Aldburg, Ealdwulf entreats you to root them out.');
+    addQuest(815, 644, 'Fire on the Eastemnet', 'CoE', 'Fire-on-the-Eastemnet', 'Fire-on-the-Eastemnet/Poachers-in-the-Night-1A.png',
+        'With fire and whip, the orc-host has regrouped to rob Rohan of its prized steeds.');
 
     var mapElement = document.getElementById('quest-map');
     if (mapElement) {
