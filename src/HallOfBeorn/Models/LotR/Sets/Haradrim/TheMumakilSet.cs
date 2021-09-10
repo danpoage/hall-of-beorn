@@ -84,7 +84,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithInfo(11, 1, Artist.Nikolas_Hagialas);
             addObjective("Poisoned Spear", EncounterSet.TheMumakil)
                 .WithTraits("Capture.")
-                .WithTextLine("Response: After the players quest successfully, the engaged player discards the top card of the encounter deck. If the discarded card’s [Threat] is equal to or greater than the attached enemy’s remaining hit points, add Poisoned Spear and attached enemy to the victory display.")
+                .WithTextLine("Response: After the players quest successfully, the engaged player discards the top card of the encounter deck. If the discarded card’s Threat is equal to or greater than the attached enemy’s remaining hit points, add Poisoned Spear and attached enemy to the victory display.")
                 .WithVictoryPoints(1)
                 .WithInfo(12, 1, Artist.Leanna_Crossan);
             addObjective("Pit Trap", EncounterSet.TheMumakil)

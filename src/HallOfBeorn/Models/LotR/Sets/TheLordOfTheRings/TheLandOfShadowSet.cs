@@ -190,7 +190,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithInfo(28, 4, Artist.Beth_Sobel));
             Cards.Add(LotRCard.Enemy("Captain of Harad", "", "Journey to the Cross-roads", 38, 4, 4, 3, 5)
                 .WithTraits("Harad.")
-                .WithText("Forced: After Captain of Harad engages you, each Harad enemy gets +1 [Attack] and -10 engagement cost until the end of the round.")
+                .WithText("Forced: After Captain of Harad engages you, each Harad enemy gets +1 Attack and -10 engagement cost until the end of the round.")
                 .WithShadow("Shadow: If this attack destroys a character, return attacking enemy to the staging area.")
                 .WithEasyModeQuantity(2)
                 .WithInfo(29, 3, Artist.Tiziano_Baracchi));

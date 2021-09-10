@@ -171,7 +171,7 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
             addTreachery("Powerful in Wrath", EncounterSet.FireInTheNight)
                 .WithKeywords("Doomed 1.")
                 .WithTextLine("Doomed 1.")
-                .WithTextLine("When Revealed: Discard the active location and deal X damage to Hrogar’s Hill, where X is that location’s [Threat]. If no damage is dealt this way, Powerful in Wraith gains surge.")
+                .WithTextLine("When Revealed: Discard the active location and deal X damage to Hrogar’s Hill, where X is that location’s Threat. If no damage is dealt this way, Powerful in Wraith gains surge.")
                 .WithShadow("Shadow: Excess damage from this attack must be dealt to Hrogar's Hill.")
                 .WithInfo(80, 2, Artist.Antonio_Jose_Manzanedo);
             addTreachery("The Dragon's Fury", EncounterSet.FireInTheNight)
