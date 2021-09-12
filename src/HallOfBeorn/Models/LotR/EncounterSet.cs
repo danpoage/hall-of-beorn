@@ -969,7 +969,7 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet DunlendingWarriors = new EncounterSet { Name = "Dunlending Warriors", Set = "Children of Eorl" };
         public static EncounterSet FaithlessRohirrim = new EncounterSet { Name = "Faithless Rohirrim", Set = "Children of Eorl" };
         public static EncounterSet TheHorseLordsIre = new EncounterSet { Name = "The Horse Lord's Ire", Set = "Children of Eorl" };
-        public static EncounterSet OrcHost = new EncounterSet { Name = "Orc-Host", Set = "Children of Eorl" };
+        public static EncounterSet OrcHost = new EncounterSet { Name = "Orc-host", Set = "Children of Eorl" };
         public static EncounterSet RohanLands = new EncounterSet { Name = "Rohan Lands", Set = "Children of Eorl" };
 
         public static EncounterSet TheAldburgPlot = new EncounterSet { Name = "The Aldburg Plot", Set = "The Aldburg Plot" };

@@ -686,6 +686,7 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Epic_Games);
             all.Add(Artist.Paul_Lasaine);
             all.Add(Artist.Mysilvergreen);
+            all.Add(Artist.David_T_Wenzel);
             all.Add(Artist.Tom_Romain);
             all.Add(Artist.Adrian_Prado);
             all.Add(Artist.Ekaterina_Burmak);
@@ -740,7 +741,7 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Brian_Valeza);
             all.Add(Artist.Rodrigo_Ramos);
             all.Add(Artist.Wenjun_Lin);
-            all.Add(Artist.Da_Yu);
+            all.Add(Artist.Da_YU);
             all.Add(Artist.FeriAnimations);
             all.Add(Artist.James_Wolf_Stehle);
             all.Add(Artist.Anastasia_Bulgakova);
@@ -859,15 +860,15 @@ namespace HallOfBeorn.Models
         //CoE
         public static Artist Epic_Games = new Artist { Name = "Epic Games", URL = "http://google.com/search?q=Epic+Games+art" };
         public static Artist Paul_Lasaine = new Artist { Name = "Paul Lasaine", URL = "http://google.com/search?q=Paul+Lasaine+art" };
-        public static Artist Mysilvergreen = new Artist { Name = "My Silvergreen", URL = "http://google.com/search?q=My+silvergreen+art" };
+        public static Artist Mysilvergreen = new Artist { Name = "Mysilvergreen", URL = "http://google.com/search?q=My+silvergreen+art" };
         public static Artist Tom_Romain = new Artist { Name = "Tom Romain", URL = "http://google.com/search?q=Tom+Romain+art" };
-        public static Artist Adrian_Prado = new Artist { Name = "Adrian Prado", URL = "http://google.com/search?q=Adrian+Prado+art" };
+        public static Artist Adrian_Prado = new Artist { Name = "Adrián Prado", URL = "http://google.com/search?q=Adrian+Prado+art" };
         public static Artist Ekaterina_Burmak = new Artist { Name = "Ekaterina Burmak", URL = "http://google.com/search?q=Ekaterina+Burmak+art" };
         public static Artist Bethesda_Softworks = new Artist { Name = "Bethesda Softworks", URL = "http://google.com/search?q=Bethesda+Softworks+art" };
         public static Artist Mila_Pesic = new Artist { Name = "Mila Pesic", URL = "http://google.com/search?q=Mila+Pesic+art" };
         public static Artist Daniel_Eskridge = new Artist { Name = "Daniel Eskridge", URL = "http://google.com/search?q=Daniel+Eskridge+art" };
         public static Artist Alexander_Forssberg = new Artist { Name = "Alexander Forssberg", URL = "http://google.com/search?q=Alexandrer+Forssberg+art" };
-        public static Artist Paul_Canavan = new Artist { Name = "Paul Scott Canavan", URL = "http://google.com/search?q=Paul+Canavan+art" };
+        public static Artist Paul_Canavan = new Artist { Name = "Paul Canavan", URL = "http://google.com/search?q=Paul+Canavan+art" };
         public static Artist Lukasz_Wiktorzak = new Artist { Name = "Lukasz Wiktorzak", URL = "http://google.com/search?q=Lukasz+Wiktorzak+art" };
         public static Artist Jessica_Hamilton = new Artist { Name = "Jessica Hamilton", URL = "http://google.com/search?q=Jessica+Hamilton+art" };
 
@@ -929,13 +930,13 @@ namespace HallOfBeorn.Models
         //The Scouring of the Shire
         public static Artist Studio_Ghibli = new Artist { Name = "Studio Ghibli", URL = "https://www.ghibli-museum.jp" };
         public static Artist Filip_Storch = new Artist { Name = "Filip Štorch", URL = "http://google.com/search?q=Filip+Storch+art" };
-        public static Artist Kimberley_Pope = new Artist { Name = "Kimberly Pope", URL = "http://google.com/search?q=Kimberly+Pope+art" };
+        public static Artist Kimberley_Pope = new Artist { Name = "Kimberley Pope", URL = "http://google.com/search?q=Kimberley+Pope+art" };
         public static Artist Quentin_de_Warren = new Artist { Name = "Quentin de Warren", URL = "http://google.com/search?q=Quentin+de+Warren+art" };
         public static Artist Murat_Khashkulov = new Artist { Name = "Murat Khashkulov", URL = "http://google.com/search?q=Murat+Khashkulov+art" };
         public static Artist Daria_Rashev = new Artist { Name = "Daria Rashev", URL = "http://google.com/search?q=Daria+Rashev+art" };
         public static Artist Ubisoft = new Artist { Name = "Ubisoft", URL = "http://google.com/search?q=Ubisoft+art" };
         public static Artist Matt_Forsyth = new Artist { Name = "Matt Forsyth", URL = "http://google.com/search?q=Matt+Forsyth+art" };
-        public static Artist Brenoch_Adams = new Artist { Name = "Benoch Adams", URL = "http://google.com/search?q=Benoch+Adams+art" };
+        public static Artist Brenoch_Adams = new Artist { Name = "Brenoch Adams", URL = "http://google.com/search?q=Brenoch+Adams+art" };
         public static Artist Alexandr_Malex = new Artist { Name = "Alexandr Malex", URL = "http://google.com/search?q=Alexandr+Malex+art" };
         public static Artist Remton = new Artist { Name = "Remton", URL = "http://google.com/search?q=Remton+art" };
         public static Artist CollaborationJS = new Artist { Name = "CollaborationJS", URL = "http://google.com/search?q=Collaboration+JS+art" };
@@ -957,22 +958,22 @@ namespace HallOfBeorn.Models
         public static Artist Chris_Wahl = new Artist { Name = "Chris Wahl", URL = "http://google.com/search?q=Chris+Wahl+art" };
         public static Artist Nelleke_Pieters = new Artist { Name = "Nelleke Pieters", URL = "http://google.com/search?q=Nelleke+Pieters+art" };
         public static Artist JSLArt = new Artist { Name = "JSLArt", URL = "http://google.com/search?q=JSL+art" };
-        public static Artist Rene_Aigner = new Artist { Name = "Rene Aigner", URL = "http://google.com/search?q=Rene+Aigner+art" };
+        public static Artist Rene_Aigner = new Artist { Name = "René Aigner", URL = "http://google.com/search?q=Rene+Aigner+art" };
         public static Artist Tomasz_Alen_Kopera = new Artist { Name = "Tomasz Alen Kopera", URL = "http://google.com/search?q=Tomasz+Alen+Kopera+art" };
         public static Artist Stefan_Kopinski = new Artist { Name = "Stefan Kopinski", URL = "http://google.com/search?q=Stefan+Kopinski+art" };
         public static Artist Thomas_Wievegg = new Artist { Name = "Thomas Wievegg", URL = "http://google.com/search?q=Thomas+Wievegg+art" };
-        public static Artist Georgina_DAlessandro = new Artist { Name = "Georgina D'Allesandro", URL = "http://google.com/search?q=Georgina+D%27Alessandro+art" };
+        public static Artist Georgina_DAlessandro = new Artist { Name = "Georgina D’Alessandro", URL = "http://google.com/search?q=Georgina+D%27Alessandro+art" };
         public static Artist Behzat_Feyzullah = new Artist { Name = "Behzat Feyzullah", URL = "http://google.com/search?q=Behzat+Feyzullah+art" };
         public static Artist Dimitar_Hristov = new Artist { Name = "Dimitar Hristov", URL = "http://google.com/search?q=Dimitar+Hristov+art" };
         public static Artist Diogo_Carneiro = new Artist { Name = "Diogo Carneiro", URL = "http://google.com/search?q=Diogo+Carneiro+art" };
         public static Artist Dane_Madgwick = new Artist { Name = "Dane Madgwick", URL = "http://google.com/search?q=Dane+Madgwick+art" };
-        public static Artist fourdimensional = new Artist { Name = "fourdimensional", URL = "http://google.com/search?q=4dimensional+art" };
+        public static Artist fourdimensional = new Artist { Name = "4dimensional", URL = "http://google.com/search?q=4dimensional+art" };
         public static Artist Franklin_Chan = new Artist { Name = "Franklin Chan", URL = "http://google.com/search?q=Franklin+Chan+art" };
         public static Artist Brian_Valeza = new Artist { Name = "Brian Valeza", URL = "http://google.com/search?q=Brian_Valeza+art" };
         public static Artist Rodrigo_Ramos = new Artist { Name = "Rodrigo Ramos", URL = "http://google.com/search?q=Rodrigo+Ramos+art" };
         public static Artist Wenjun_Lin = new Artist { Name = "Wenjun Lin", URL = "http://google.com/search?q=Wenjun+Lin+art" };
-        public static Artist Da_Yu = new Artist { Name = "Da Yu", URL = "http://google.com/search?q=Da+Yu+Art" };
-        public static Artist FeriAnimations = new Artist { Name = "Feri Animations", URL = "http://google.com/search?q=Feri+Animations" };
+        public static Artist Da_YU = new Artist { Name = "Da YU", URL = "http://google.com/search?q=Da+Yu+Art" };
+        public static Artist FeriAnimations = new Artist { Name = "FeriAnimations", URL = "http://google.com/search?q=Feri+Animations" };
         public static Artist James_Wolf_Stehle = new Artist { Name = "James Wolf Stehle", URL = "http://google.com/search?q=James+Wolf+Stehle+art" };
         public static Artist Anastasia_Bulgakova = new Artist { Name = "Anastasia Bulgakova", URL = "http://google.com/search?q=Anastasia+Bulgakova+art" };
         public static Artist Jon_Hodgson = new Artist { Name = "Jon Hodgson", URL = "http://google.com/search?q=Jon+Hodgson+art" };

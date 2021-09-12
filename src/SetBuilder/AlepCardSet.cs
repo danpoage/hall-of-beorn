@@ -160,7 +160,7 @@ namespace SetBuilder
             switch (aCard.type_name)
             {
                 case "Hero":
-                    card = AddHero(aCard.name, aCard.cost, aCard.sphere_name, aCard.willpower, aCard.attack, aCard.defense, aCard.health);
+                    card = AddHero(aCard.name, aCard.threat, aCard.sphere_name, aCard.willpower, aCard.attack, aCard.defense, aCard.health);
                     break;
                 case "Ally":
                     card = AddAlly(aCard.name, aCard.cost, aCard.sphere_name, aCard.is_unique, aCard.willpower, aCard.attack, aCard.defense, aCard.health);
@@ -263,10 +263,24 @@ namespace SetBuilder
 
             if (!string.IsNullOrEmpty(aCard.flavor))
             {
-                var flavorLines = aCard.flavor.Split(new char[] { '—' }, StringSplitOptions.RemoveEmptyEntries);
-                foreach (var flavorLine in flavorLines)
+                var hasSideB = aCard.flavor.Contains(" Side B: ");
+
+                if (hasSideB)
                 {
-                    card.WithFlavorLine(flavorLine);
+                    var sides = aCard.flavor.Split(new string[] { " Side B: " }, StringSplitOptions.RemoveEmptyEntries);
+                    card.WithFlavorLine(sides[0].Replace("Side A: ", string.Empty));
+                    card.WithOppositeFlavorLine(sides[1]);
+                }
+                else {
+                    var addDash = aCard.flavor.Contains("—");
+                    var flavorLines = aCard.flavor.Split(new char[] { '—' }, StringSplitOptions.RemoveEmptyEntries);
+                    for (var i = 0; i < flavorLines.Length; i++)
+                    {
+                        var flavorLine = (i == (flavorLines.Length -1) && addDash)
+                            ? "—" + flavorLines[i] 
+                            : flavorLines[i];
+                        card.WithFlavorLine(flavorLine);
+                    }
                 }
             }
 
