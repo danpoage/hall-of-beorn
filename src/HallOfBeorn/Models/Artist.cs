@@ -829,10 +829,20 @@ namespace HallOfBeorn.Models
 
         public static Artist Lookup(string name)
         {
+            if (string.IsNullOrWhiteSpace(name) || name == "Unknown Artist")
+            {
+                return Artist.Unknown;
+            }
+
             var artist = all.FirstOrDefault(a => a.Name == name);
             return artist != null
                 ? artist
-                : Artist.Unknown;
+                : Artist.Dynamic(name);
+        }
+
+        public static Artist Dynamic(string name)
+        {
+            return new Artist { Name = name, URL = string.Format("https://www.google.com/search?q={0}+art", name.Replace(" ", "+")) };
         }
 
         //TSotS

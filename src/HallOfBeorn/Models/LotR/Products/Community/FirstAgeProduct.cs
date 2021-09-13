@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Products.Community
 {
@@ -12,9 +9,9 @@ namespace HallOfBeorn.Models.LotR.Products.Community
         {
             AddCardSet(CardSet.FirstAge);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.FirstAge.HuntingOfTheWolfScenario());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.FirstAge.TheIsleOfWerewolvesScenario());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.FirstAge.TheSeatOfMorgothScenario());
+            AddScenario(Scenario.HuntingOfTheWolf);
+            AddScenario(Scenario.TheIsleOfWerewolves);
+            AddScenario(Scenario.TheSeatOfMorgoth);
         }
     }
 }

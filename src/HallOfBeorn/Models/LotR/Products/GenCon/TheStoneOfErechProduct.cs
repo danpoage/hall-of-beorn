@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Products.GenCon
 {
@@ -12,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Products.GenCon
         {
             AddCardSet(CardSet.TheStoneOfErech);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand.TheStoneOfErechScenario());
+            AddScenario(Scenario.TheStoneOfErech);
         }
     }
 }

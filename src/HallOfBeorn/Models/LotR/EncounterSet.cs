@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 
 namespace HallOfBeorn.Models.LotR
 {
     public class EncounterSet
+        : ILabeled
     {
         public EncounterSet()
         {
@@ -208,10 +208,9 @@ namespace HallOfBeorn.Models.LotR
 
         public IEnumerable<string> Labels()
         {
-            var repo = new HallOfBeorn.Services.LotR.ProductRepository();
-            var cardSet = repo.CardSets().FirstOrDefault(cs => cs.Name == Set);
+            var cardSet = HallOfBeorn.Services.LotR.ProductRepository.Instance.CardSets().FirstOrDefault(cs => cs.Name == Set);
             return cardSet != null 
-                ? cardSet.Cards.Where(card => card.EncounterSet == Name).Select(card => card.Title)
+                ? cardSet.Cards.Where(card => card.EncounterSet == Name).Select(card => card.NormalizedTitle)
                 : Enumerable.Empty<string>();
         }
 

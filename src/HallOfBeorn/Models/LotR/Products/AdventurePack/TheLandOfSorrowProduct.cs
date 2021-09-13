@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
 
             AddCardSet(CardSet.TheLandOfSorrow);
 
-            AddScenario(new Scenarios.VengeanceOfMordor.TheLandOfSorrowScenario());
+            AddScenario(Scenario.TheLandOfSorrow);
         }
     }
 }

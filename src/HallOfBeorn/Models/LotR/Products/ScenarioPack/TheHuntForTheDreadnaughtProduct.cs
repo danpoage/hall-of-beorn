@@ -10,7 +10,7 @@ namespace HallOfBeorn.Models.LotR.Products.ScenarioPack
         {
             AddCardSet(CardSet.TheHuntForTheDreadnaught);
 
-            AddScenario(new Scenarios.PrintOnDemand.TheHuntForTheDreadnaughtScenario());
+            AddScenario(Scenario.TheHuntForTheDreadnaught);
         }
     }
 }

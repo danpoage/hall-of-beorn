@@ -10,9 +10,9 @@ namespace HallOfBeorn.Models.LotR.Products.Community
         {
             AddCardSet(CardSet.TheScouringOfTheShire);
 
-            AddScenario(new Scenarios.TheScouringOfTheShire.TheScouringOfTheShireScenario());
-
             RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/ALEP08.pdf";
+
+            AddScenario(Scenario.TheScouringOfTheShire);
         }
     }
 }

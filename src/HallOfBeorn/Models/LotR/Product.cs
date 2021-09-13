@@ -58,6 +58,22 @@ namespace HallOfBeorn.Models.LotR
             return scenarios;
         }
 
+        public IEnumerable<string> Labels()
+        {
+            return cardSets.SelectMany(cs => cs.Labels()).Distinct();
+        }
+
+        public IEnumerable<string> PlayerCardLabels()
+        {
+            foreach (var cardSet in cardSets)
+            {
+                foreach (var card in cardSet.Cards.Where(card => card.IsPlayerCard()))
+                {
+                    yield return card.NormalizedTitle;
+                }
+            }
+        }
+
         #region Static Members
         //The Core Set and Two-Player Limited Edition Starter
         public static Product CoreSet = new Products.Core.CoreSetProduct();

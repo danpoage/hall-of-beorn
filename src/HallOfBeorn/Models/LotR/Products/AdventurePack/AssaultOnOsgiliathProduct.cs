@@ -11,11 +11,10 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
             : base("Assault on Osgiliath", "MEC21", ImageType.Png, new DateTime(2013, 8, 9))
         {
             RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/MEC21.pdf";
-                //"http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/rulesheet-assault-on-osgiliath.pdf";
 
             AddCardSet(CardSet.AssaultOnOsgiliath);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow.AssaultOnOsgiliathScenario());
+            AddScenario(Scenario.AssaultOnOsgiliath);
         }
     }
 }

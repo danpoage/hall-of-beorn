@@ -12,9 +12,9 @@ namespace HallOfBeorn.Models.LotR.Products.Community
 
             RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/ALEP01.pdf";
 
-            AddScenario(new Scenarios.ChildrenOfEorl.AmbushAtErelasScenario());
-            AddScenario(new Scenarios.ChildrenOfEorl.TheBattleForTheBeaconScenario());
-            AddScenario(new Scenarios.ChildrenOfEorl.TheHorseLordsIreScenario());
+            AddScenario(Scenario.AmbushAtErelas);
+            AddScenario(Scenario.TheBattleForTheBeacon);
+            AddScenario(Scenario.TheHorseLordsIre);
         }
     }
 }

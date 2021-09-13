@@ -12,7 +12,7 @@ namespace HallOfBeorn.Models
         string Code { get; }
     }
 
-    public interface IProduct<TProduct, TCardSet, TCard> : IProduct<TCard>
+    public interface IProduct<TProduct, TCardSet, TCard> : IProduct<TCard>, ILabeled
         where TProduct: IProduct<TCard>
         where TCardSet: ICardSet<TProduct, TCard>
         where TCard: ICard

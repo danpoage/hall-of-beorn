@@ -6,6 +6,7 @@ using System.Web;
 namespace HallOfBeorn.Models.LotR
 {
     public class Scenario
+        : ILabeled
     {
         protected Scenario(bool hasNightmareMode)
         {
@@ -16,7 +17,7 @@ namespace HallOfBeorn.Models.LotR
             RulesReferenceLabel = "Rules Reference 1.0";
         }
 
-        public Scenario()
+        protected Scenario()
             : this(false)
         {
         }
@@ -377,5 +378,165 @@ namespace HallOfBeorn.Models.LotR
 
             return cards;
         }
+
+        public IEnumerable<string> Labels()
+        {
+            return encounterSets.Values
+                .SelectMany(es => es.Labels()).Distinct();
+        }
+
+        public IEnumerable<string> StandardModeLabels()
+        {
+            return encounterSets.Values
+                .Where(es => !es.IsNightmare).SelectMany(es => es.Labels()).Distinct();
+        }
+
+        #region Static Members
+        public static Scenario PassageThroughMirkwood = new Scenarios.Core.PassageThroughMirkwoodScenario();
+        public static Scenario JourneyAlongTheAnduin = new Scenarios.Core.JourneyAlongTheAnduinScenario();
+        public static Scenario EscapeFromDolGuldur = new Scenarios.Core.EscapeFromDolGuldurScenario();
+        public static Scenario TheHuntForGollum = new Scenarios.ShadowsOfMirkwood.TheHuntForGollumScenario();
+        public static Scenario ConflictAtTheCarrock = new Scenarios.ShadowsOfMirkwood.ConflictAtTheCarrockScenario();
+        public static Scenario AJourneyToRhosgobel = new Scenarios.ShadowsOfMirkwood.AJourneyToRhosgobelScenario();
+        public static Scenario TheHillsOfEmynMuil = new Scenarios.ShadowsOfMirkwood.TheHillsOfEmynMuilScenario();
+        public static Scenario TheDeadMarshes = new Scenarios.ShadowsOfMirkwood.TheDeadMarshesScenario();
+        public static Scenario ReturnToMirkwood = new Scenarios.ShadowsOfMirkwood.ReturnToMirkwoodScenario();
+
+        public static Scenario TheOath = new Scenarios.Starter.TheOathScenario();
+        public static Scenario TheCavesOfNibinDum = new Scenarios.Starter.TheCavesOfNibinDumScenario();
+
+        public static Scenario IntoThePit = new Scenarios.KhazadDum.IntoThePitScenario();
+        public static Scenario TheSeventhLevel = new Scenarios.KhazadDum.TheSeventhLevelScenario();
+        public static Scenario FlightFromMoria = new Scenarios.KhazadDum.FlightFromMoriaScenario();
+        public static Scenario TheRedhornGate = new Scenarios.Dwarrowdelf.TheRedhornGateScenario();
+        public static Scenario RoadToRivendell = new Scenarios.Dwarrowdelf.RoadToRivendellScenario();
+        public static Scenario TheWatcherInTheWater = new Scenarios.Dwarrowdelf.TheWatcherInTheWaterScenario();
+        public static Scenario TheLongDark = new Scenarios.Dwarrowdelf.TheLongDarkScenario();
+        public static Scenario FoundationsOfStone = new Scenarios.Dwarrowdelf.FoundationsOfStoneScenario();
+        public static Scenario ShadowAndFlame = new Scenarios.Dwarrowdelf.ShadowAndFlameScenario();
+
+        public static Scenario PerilInPelargir = new Scenarios.HeirsOfNumenor.PerilInPelargirScenario();
+        public static Scenario IntoIthilien = new Scenarios.HeirsOfNumenor.IntoIthilienScenario();
+        public static Scenario TheSiegeOfCairAndros = new Scenarios.HeirsOfNumenor.TheSiegeOfCairAndrosScenario();
+        public static Scenario TheStewardsFear = new Scenarios.AgainstTheShadow.TheStewardsFearScenario();
+        public static Scenario TheDruadanForest = new Scenarios.AgainstTheShadow.TheDruadanForestScenario();
+        public static Scenario EncounterAtAmonDin = new Scenarios.AgainstTheShadow.EncounterAtAmonDinScenario();
+        public static Scenario AssaultOnOsgiliath = new Scenarios.AgainstTheShadow.AssaultOnOsgiliathScenario();
+        public static Scenario TheBloodOfGondor = new Scenarios.AgainstTheShadow.TheBloodOfGondorScenario();
+        public static Scenario TheMorgulVale = new Scenarios.AgainstTheShadow.TheMorgulValeScenario();
+
+        public static Scenario TheFordsOfIsen = new Scenarios.TheVoiceOfIsengard.TheFordsOfIsenScenario();
+        public static Scenario ToCatchAnOrc = new Scenarios.TheVoiceOfIsengard.ToCatchAnOrcScenario();
+        public static Scenario IntoFangorn = new Scenarios.TheVoiceOfIsengard.IntoFangornScenario();
+        public static Scenario TheDunlandTrap = new Scenarios.TheRingMaker.TheDunlandTrapScenario();
+        public static Scenario TheThreeTrials = new Scenarios.TheRingMaker.TheThreeTrialsScenario();
+        public static Scenario TroubleInTharbad = new Scenarios.TheRingMaker.TroubleInTharbadScenario();
+        public static Scenario TheNinInEilph = new Scenarios.TheRingMaker.TheNinInEilphScenario();
+        public static Scenario CelebrimborsSecret = new Scenarios.TheRingMaker.CelebrimborsSecretScenario();
+        public static Scenario TheAntleredCrown = new Scenarios.TheRingMaker.TheAntleredCrownScenario();
+
+        public static Scenario IntrudersInChetwood = new Scenarios.TheLostRealm.IntrudersInChetwoodScenario();
+        public static Scenario TheWeatherHills = new Scenarios.TheLostRealm.TheWeatherHillsScenario();
+        public static Scenario DeadmensDike = new Scenarios.TheLostRealm.DeadmensDikeScenario();
+        public static Scenario TheWastesOfEriador = new Scenarios.AngmarAwakened.TheWastesOfEriadorScenario();
+        public static Scenario EscapeFromMountGram = new Scenarios.AngmarAwakened.EscapeFromMountGramScenario();
+        public static Scenario AcrossTheEttenmoors = new Scenarios.AngmarAwakened.AcrossTheEttenmoorsScenario();
+        public static Scenario TheTreacheryOfRhudaur = new Scenarios.AngmarAwakened.TheTreacheryOfRhudaurScenario();
+        public static Scenario TheBattleOfCarnDum = new Scenarios.AngmarAwakened.TheBattleOfCarnDumScenario();
+        public static Scenario TheDreadRealm = new Scenarios.AngmarAwakened.TheDreadRealmScenario();
+
+        public static Scenario VoyageAcrossBelegaer = new Scenarios.TheGreyHavens.VoyageAcrossBelegaerScenario();
+        public static Scenario TheFateOfNumenor = new Scenarios.TheGreyHavens.TheFateOfNumenorScenario();
+        public static Scenario RaidOnTheGreyHavens = new Scenarios.TheGreyHavens.RaidOnTheGreyHavensScenario();
+        public static Scenario FlightOfTheStormcaller = new Scenarios.DreamChaser.FlightOfTheStormcallerScenario();
+        public static Scenario TheThingInTheDepths = new Scenarios.DreamChaser.TheThingInTheDepthsScenario();
+        public static Scenario TempleOfTheDeceived = new Scenarios.DreamChaser.TempleOfTheDeceivedScenario();
+        public static Scenario TheDrownedRuins = new Scenarios.DreamChaser.TheDrownedRuinsScenario();
+        public static Scenario AStormOnCobasHaven = new Scenarios.DreamChaser.AStormOnCobasHavenScenario();
+        public static Scenario TheCityOfCorsairs = new Scenarios.DreamChaser.TheCityOfCorsairsScenario();
+
+        public static Scenario EscapeFromUmbar = new Scenarios.TheSandsOfHarad.EscapeFromUmbarScenario();
+        public static Scenario DesertCrossing = new Scenarios.TheSandsOfHarad.DesertCrossingScenario();
+        public static Scenario TheLongArmOfMordor = new Scenarios.TheSandsOfHarad.TheLongArmOfMordorScenario();
+        public static Scenario TheMumakil = new Scenarios.Haradrim.TheMumakilScenario();
+        public static Scenario RaceAcrossHarad = new Scenarios.Haradrim.RaceAcrossHaradScenario();
+        public static Scenario BeneathTheSands = new Scenarios.Haradrim.BeneathTheSandsScenario();
+        public static Scenario TheBlackSerpent = new Scenarios.Haradrim.TheBlackSerpentScenario();
+        public static Scenario TheDungeonsOfCirithGurat = new Scenarios.Haradrim.TheDungeonsOfCirithGuratScenario();
+        public static Scenario TheCrossingsOfPoros = new Scenarios.Haradrim.TheCrossingsOfPorosScenario();
+
+        public static Scenario JourneyUpTheAnduin = new Scenarios.TheWildsOfRhovanion.JourneyUpTheAnduinScenario();
+        public static Scenario LostInMirkwood = new Scenarios.TheWildsOfRhovanion.LostInMirkwoodScenario();
+        public static Scenario TheKingsQuest = new Scenarios.TheWildsOfRhovanion.TheKingsQuestScenario();
+        public static Scenario TheWitheredHeath = new Scenarios.EredMithrin.TheWitheredHeathScenario();
+        public static Scenario RoamAcrossRhovanion = new Scenarios.EredMithrin.RoamAcrossRhovanionScenario();
+        public static Scenario FireInTheNight = new Scenarios.EredMithrin.FireInTheNightScenario();
+        public static Scenario TheGhostOfFramsburg = new Scenarios.EredMithrin.TheGhostOfFramsburgScenario();
+        public static Scenario MountGundabad = new Scenarios.EredMithrin.MountGundabadScenario();
+        public static Scenario TheFateOfWilderland = new Scenarios.EredMithrin.TheFateOfWilderlandScenario();
+
+        public static Scenario TheRiverRunning = new Scenarios.AShadowInTheEast.TheRiverRunningScenario();
+        public static Scenario DangerInDorwinion = new Scenarios.AShadowInTheEast.DangerInDorwinionScenario();
+        public static Scenario TempleOfDoom = new Scenarios.AShadowInTheEast.TempleOfDoomScenario();
+        public static Scenario WrathAndRuin = new Scenarios.VengeanceOfMordor.WrathAndRuinScenario();
+        public static Scenario TheCityOfUlfast = new Scenarios.VengeanceOfMordor.TheCityOfUlfastScenario();
+        public static Scenario ChallengeOfTheWainriders = new Scenarios.VengeanceOfMordor.ChallengeOfTheWainridersScenario();
+        public static Scenario UnderTheAshMountains = new Scenarios.VengeanceOfMordor.UnderTheAshMountainsScenario();
+        public static Scenario TheLandOfSorrow = new Scenarios.VengeanceOfMordor.TheLandOfSorrowScenario();
+        public static Scenario TheFortressOfNurn = new Scenarios.VengeanceOfMordor.TheFortressOfNurnScenario();
+
+        public static Scenario WeMustAwayEreBreakOfDay = new Scenarios.TheHobbit.WeMustAwayEreBreakOfDayScenario();
+        public static Scenario OverTheMistyMountainsGrim = new Scenarios.TheHobbit.OverTheMistyMountainsGrimScenario();
+        public static Scenario DungeonsDeepAndCavernsDim = new Scenarios.TheHobbit.DungeonsDeepAndCavernsDimScenario();
+        public static Scenario FliesAndSpiders = new Scenarios.TheHobbit.FliesAndSpidersScenario();
+        public static Scenario TheLonelyMountain = new Scenarios.TheHobbit.TheLonelyMountainScenario();
+        public static Scenario TheBattleOfFiveArmies = new Scenarios.TheHobbit.TheBattleOfFiveArmiesScenario();
+
+        public static Scenario AShadowOfThePast = new Scenarios.TheLordOfTheRings.AShadowOfThePastScenario();
+        public static Scenario AKnifeInTheDark = new Scenarios.TheLordOfTheRings.AKnifeInTheDarkScenario();
+        public static Scenario FlightToTheFord = new Scenarios.TheLordOfTheRings.FlightToTheFordScenario();
+        public static Scenario TheRingGoesSouth = new Scenarios.TheLordOfTheRings.TheRingGoesSouthScenario();
+        public static Scenario JourneyInTheDark = new Scenarios.TheLordOfTheRings.JourneyInTheDarkScenario();
+        public static Scenario BreakingOfTheFellowship = new Scenarios.TheLordOfTheRings.BreakingOfTheFellowshipScenario();
+        public static Scenario TheUrukHai = new Scenarios.TheLordOfTheRings.TheUrukHaiScenario();
+        public static Scenario HelmsDeep = new Scenarios.TheLordOfTheRings.HelmsDeepScenario();
+        public static Scenario TheRoadToIsengard = new Scenarios.TheLordOfTheRings.TheRoadToIsengardScenario();
+        public static Scenario ThePassageOfTheMarshes = new Scenarios.TheLordOfTheRings.ThePassageOfTheMarshesScenario();
+        public static Scenario JourneyToTheCrossRoads = new Scenarios.TheLordOfTheRings.JourneyToTheCrossRoads();
+        public static Scenario ShelobsLair = new Scenarios.TheLordOfTheRings.ShelobsLairScenario();
+        public static Scenario ThePassingOfTheGreyCompany = new Scenarios.TheLordOfTheRings.ThePassingOfTheGreyCompanyScenario();
+        public static Scenario TheSiegeOfGondor = new Scenarios.TheLordOfTheRings.TheSiegeOfGondorScenario();
+        public static Scenario TheBattleOfThePelennorFields = new Scenarios.TheLordOfTheRings.TheBattleOfThePelennorFieldsScenario();
+        public static Scenario TheTowerOfCirithUngol = new Scenarios.TheLordOfTheRings.TheTowerOfCirithUngolScenario();
+        public static Scenario TheBlackGateOpens = new Scenarios.TheLordOfTheRings.TheBlackGateOpensScenario();
+        public static Scenario MountDoom = new Scenarios.TheLordOfTheRings.MountDoomScenario();
+
+        public static Scenario TheMassingAtOsgiliath = new Scenarios.PrintOnDemand.TheMassingAtOsgiliathScenario();
+        public static Scenario TheBattleOfLakeTown = new Scenarios.PrintOnDemand.TheBattleOfLakeTownScenario();
+        public static Scenario TheStoneOfErech = new Scenarios.PrintOnDemand.TheStoneOfErechScenario();
+        public static Scenario TheOldForest = new Scenarios.PrintOnDemand.TheOldForestScenario();
+        public static Scenario TheRuinsOfBelegost = new Scenarios.PrintOnDemand.TheRuinsOfBelegostScenario();
+        public static Scenario FogOnTheBarrowDowns = new Scenarios.PrintOnDemand.FogOnTheBarrowDownsScenario();
+        public static Scenario MurderAtThePrancingPony = new Scenarios.PrintOnDemand.MurderAtThePrancingPonyScenario();
+        public static Scenario TheSiegeOfAnnuminas = new Scenarios.PrintOnDemand.TheSiegeOfAnnuminasScenario();
+        public static Scenario AttackOnDolGuldur = new Scenarios.PrintOnDemand.AttackOnDolGuldurScenario();
+        public static Scenario TheHuntForTheDreadnaught = new Scenarios.PrintOnDemand.TheHuntForTheDreadnaughtScenario();
+
+        public static Scenario HuntingOfTheWolf = new Scenarios.FirstAge.HuntingOfTheWolfScenario();
+        public static Scenario TheIsleOfWerewolves = new Scenarios.FirstAge.TheIsleOfWerewolvesScenario();
+        public static Scenario TheSeatOfMorgoth = new Scenarios.FirstAge.TheSeatOfMorgothScenario();
+        public static Scenario TrialUponTheMarches = new Scenarios.DoomMastered.TrialUponTheMarchesScenario();
+        public static Scenario AmongTheOutlaws = new Scenarios.DoomMastered.AmongTheOutlawsScenario();
+        public static Scenario TheBetrayalOfMim = new Scenarios.DoomMastered.TheBetrayalOfMimScenario();
+        public static Scenario TheFallOfNargothrond = new Scenarios.DoomMastered.TheFallOfNargothrondScenario();
+
+        public static Scenario AmbushAtErelas = new Scenarios.ChildrenOfEorl.AmbushAtErelasScenario();
+        public static Scenario TheBattleForTheBeacon = new Scenarios.ChildrenOfEorl.TheBattleForTheBeaconScenario();
+        public static Scenario TheHorseLordsIre = new Scenarios.ChildrenOfEorl.TheHorseLordsIreScenario();
+        public static Scenario TheAldburgPlot = new Scenarios.OathsOfTheRohirrim.TheAldburgPlotScenario();
+        public static Scenario FireOnTheEastemnet = new Scenarios.OathsOfTheRohirrim.FireOnTheEastemnetScenario();
+        public static Scenario TheScouringOfTheShire = new Scenarios.TheScouringOfTheShire.TheScouringOfTheShireScenario();
+        #endregion
+
     }
 }

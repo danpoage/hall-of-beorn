@@ -11,7 +11,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
 
             AddCardSet(CardSet.TheFateOfWilderland);
 
-            AddScenario(new Scenarios.EredMithrin.TheFateOfWilderlandScenario());
+            AddScenario(Scenario.TheFateOfWilderland);
         }
     }
 }

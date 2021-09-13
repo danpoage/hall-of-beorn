@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
 
             AddCardSet(CardSet.TheBattleOfCarnDum);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened.TheBattleOfCarnDumScenario());
+            AddScenario(Scenario.TheBattleOfCarnDum);
         }
     }
 }

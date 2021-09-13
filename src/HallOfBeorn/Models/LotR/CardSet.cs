@@ -332,7 +332,7 @@ namespace HallOfBeorn.Models.LotR
 
         public IEnumerable<string> Labels()
         {
-            return Cards.Select(c => c.Title);
+            return Cards.Select(c => c.NormalizedTitle);
         }
 
         private static List<CardSet> all = new List<CardSet>();

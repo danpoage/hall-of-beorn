@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Products.Core
 {
@@ -18,9 +15,9 @@ namespace HallOfBeorn.Models.LotR.Products.Core
 
             AddCardSet(CardSet.CoreSet);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.Core.PassageThroughMirkwoodScenario());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.Core.JourneyAlongTheAnduinScenario());
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.Core.EscapeFromDolGuldurScenario());
+            AddScenario(Scenario.PassageThroughMirkwood);
+            AddScenario(Scenario.JourneyAlongTheAnduin);
+            AddScenario(Scenario.EscapeFromDolGuldur);
         }
     }
 }

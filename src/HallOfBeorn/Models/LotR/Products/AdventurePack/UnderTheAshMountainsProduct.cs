@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Products.AdventurePack
 {
@@ -14,7 +11,7 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
 
             AddCardSet(CardSet.UnderTheAshMountains);
 
-            AddScenario(new Scenarios.VengeanceOfMordor.UnderTheAshMountainsScenario());
+            AddScenario(Scenario.UnderTheAshMountains);
         }
     }
 }

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Products.Fellowship
 {
@@ -12,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Products.Fellowship
         {
             AddCardSet(CardSet.TheSiegeOfAnnuminas);
 
-            AddScenario(new Scenarios.PrintOnDemand.TheSiegeOfAnnuminasScenario());
+            AddScenario(Scenario.TheSiegeOfAnnuminas);
         }
     }
 }

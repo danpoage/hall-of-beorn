@@ -88,5 +88,25 @@ namespace HallOfBeorn.Services.LotR
                 }
             }
         }
+
+        
+        public static Func<IProductRepository<ProductGroup, Product, CardSet, LotRCard>> Generator { get; set; }
+
+        private static IProductRepository<ProductGroup, Product, CardSet, LotRCard> instance;
+        
+        public static IProductRepository<ProductGroup, Product, CardSet, LotRCard> Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = Generator != null
+                        ? Generator()
+                        : new ProductRepository();
+                }
+
+                return instance;
+            }
+        }
     }
 }

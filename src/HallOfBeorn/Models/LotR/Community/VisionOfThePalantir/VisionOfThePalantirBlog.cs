@@ -13,61 +13,80 @@ namespace HallOfBeorn.Models.LotR.Community.VisionOfThePalantir
         {
             AddYear(2021);
             AddLink("The City of Ulfast", "https://visionofthepalantir.com/2021/07/15/the-city-of-ulfast/", "July 15 2021")
-                .WithLabels("Forth, the Three Hunters", "War Axe", "Angbor the Fearless", "Horn of the Mark", "Knight of Belfalas", "Strength and Courage", "Host of Galadhrim", "Lothíriel", "Need Drives Them", "Keen Longbow");
-            AddLink("Encounter Set Review: The Hunt for Gollum", "https://visionofthepalantir.com/2021/07/09/encounter-set-review-the-hunt-for-gollum/", "July 9 2021");
-            AddLink("The Redhorn Gate: There and Back Again", "https://visionofthepalantir.com/2021/07/07/the-redhorn-gate-there-and-back-again/", "July 7 2021");
+                .WithLabels(Product.TheCityOfUlfast);
+            AddLink("Encounter Set Review: The Hunt for Gollum", "https://visionofthepalantir.com/2021/07/09/encounter-set-review-the-hunt-for-gollum/", "July 9 2021")
+                .WithLabels(EncounterSet.TheHuntForGollum);
+            AddLink("The Redhorn Gate: There and Back Again", "https://visionofthepalantir.com/2021/07/07/the-redhorn-gate-there-and-back-again/", "July 7 2021")
+                .WithLabels(Product.TheRedhornGate);
             AddLink("Month in Review: June 2021", "https://visionofthepalantir.com/2021/06/30/month-in-review-june-2021/", "June 30 2021");
-            AddLink("The Battle of Lake-town", "https://visionofthepalantir.com/2021/06/26/the-battle-of-lake-town/", "June 26 2021");
+            AddLink("The Battle of Lake-town", "https://visionofthepalantir.com/2021/06/26/the-battle-of-lake-town/", "June 26 2021")
+                .WithLabels(Product.TheBattleOfLakeTown);
             AddLink("Epic Multiplayer Helm's Deep Rules", "https://visionofthepalantir.com/2021/06/19/epic-multiplayer-helms-deep/", "June 19 2021");
             AddLink("Announcement: Epic Multiplayer Helm's Deep", "https://visionofthepalantir.com/2021/06/16/announcement-epic-multiplayer-helms-deep/", "June 16 2021");
             AddLink("The LOTR: LCG Calendar", "https://visionofthepalantir.com/2021/06/15/the-lotr-lcg-calendar/", "June 15 2021");
             AddLink("Keywords", "https://visionofthepalantir.com/2021/06/09/keywords/", "June 9 2021");
             AddLink("Month in Review: May 2021", "https://visionofthepalantir.com/2021/05/31/month-in-review-may-2021/", "May 31 2021");
-            AddLink("Player card review: The Steward's Fear", "https://visionofthepalantir.com/2021/05/30/player-card-review-the-stewards-fear/", "May 30 2021");
+            AddLink("Player card review: The Steward's Fear", "https://visionofthepalantir.com/2021/05/30/player-card-review-the-stewards-fear/", "May 30 2021")
+                .WithLabels(Product.TheStewardsFear.PlayerCardLabels());
             AddLink("Monthly Poll: May 2021", "https://visionofthepalantir.com/2021/05/28/monthly-poll-may-2021/", "May 28 2021");
-            AddLink("Challenge of the Wainriders", "https://visionofthepalantir.com/2021/05/25/challenge-of-the-wainriders/", "May 25 2021");
-            AddLink("Nightmare Flight from Moria", "https://visionofthepalantir.com/2021/05/15/nightmare-flight-from-moria/", "May 15 2021");
+            AddLink("Challenge of the Wainriders", "https://visionofthepalantir.com/2021/05/25/challenge-of-the-wainriders/", "May 25 2021")
+                .WithLabels(Product.ChallengeOfTheWainriders);
+            AddLink("Nightmare Flight from Moria", "https://visionofthepalantir.com/2021/05/15/nightmare-flight-from-moria/", "May 15 2021")
+                .WithLabels(EncounterSet.FlightFromMoriaNightmare);
             AddLink("Middle Earth Tour: Angmar Awakened", "https://visionofthepalantir.com/2021/05/06/middle-earth-tour-angmar-awakened/", "May 6 2021");
             AddLink("Storage Solutions 4.5", "https://visionofthepalantir.com/2021/05/02/storage-solutions-4-5/", "May 2 2021");
             AddLink("Month in Review: April 2021", "https://visionofthepalantir.com/2021/04/30/month-in-review-april-2021/", "April 30 2021");
             AddLink("Monthly Poll: April 2021", "https://visionofthepalantir.com/2021/04/27/monthly-poll-april-2021/", "April 27 2021");
-            AddLink("Wrath and Ruin", "https://visionofthepalantir.com/2021/04/17/wrath-and-ruin/", "April 17 2021");
-            AddLink("Deckbuilding: Escape from Mount Gram", "https://visionofthepalantir.com/2021/04/11/deckbuilding-escape-from-mount-gram/", "April 11 2021");
+            AddLink("Wrath and Ruin", "https://visionofthepalantir.com/2021/04/17/wrath-and-ruin/", "April 17 2021")
+                .WithLabels(Product.WrathAndRuin);
+            AddLink("Deckbuilding: Escape from Mount Gram", "https://visionofthepalantir.com/2021/04/11/deckbuilding-escape-from-mount-gram/", "April 11 2021")
+                .WithLabels(Product.EscapeFromMountGram.PlayerCardLabels());
             AddLink("Stage Solutions IV", "https://visionofthepalantir.com/2021/04/01/storage-solutions-iv/", "April 1 2021");
             AddLink("Month in Review 2021", "https://visionofthepalantir.com/2021/03/31/month-in-review-march-2021/", "March 31 2021");
             AddLink("Monthly Poll: March 2021", "https://visionofthepalantir.com/2021/03/29/monthly-poll-march-2021/", "March 29 2021");
-            AddLink("Player card review: Heirs of Númenor", "https://visionofthepalantir.com/2021/03/28/player-card-review-heirs-of-numenor/", "March 28 2021");
-            AddLink("Deckbuilding: The Wastes of Eriador", "https://visionofthepalantir.com/2021/03/23/deckbuilding-the-wastes-of-eriador/", "March 23 2021");
-            AddLink("Nightmare The Seventh Level", "https://visionofthepalantir.com/2021/03/21/nightmare-the-seventh-level/", "March 21 2021");
+            AddLink("Player card review: Heirs of Númenor", "https://visionofthepalantir.com/2021/03/28/player-card-review-heirs-of-numenor/", "March 28 2021")
+                .WithLabels(Product.HeirsOfNumenor.PlayerCardLabels());
+            AddLink("Deckbuilding: The Wastes of Eriador", "https://visionofthepalantir.com/2021/03/23/deckbuilding-the-wastes-of-eriador/", "March 23 2021")
+                .WithLabels(Product.TheWastesOfEriador.PlayerCardLabels());
+            AddLink("Nightmare The Seventh Level", "https://visionofthepalantir.com/2021/03/21/nightmare-the-seventh-level/", "March 21 2021")
+                .WithLabels(EncounterSet.TheSeventhLevelNightmare);
             AddLink("Middle Earth Tour: Ringmaker", "https://visionofthepalantir.com/2021/03/19/middle-earth-tour-ringmaker/", "March 19 2021");
             AddLink("Community support and swag", "https://visionofthepalantir.com/2021/03/04/community-support-and-swag/", "March 4 2021");
             AddLink("Middle Earth Tour: Against the Shadow", "https://visionofthepalantir.com/2021/03/02/middle-earth-tour-against-the-shadow/", "March 2 2021");
             AddLink("Month in Review: February 2021", "https://visionofthepalantir.com/2021/02/28/month-in-review-february-2021/", "Feb 28 2021");
             AddLink("Monthly Poll: February 2021", "https://visionofthepalantir.com/2021/02/25/monthly-poll-february-2021/", "Feb 25 2021");
-            AddLink("Deckbuilding: The Fortress of Nurn", "https://visionofthepalantir.com/2021/02/22/deckbuilding-the-fortress-of-nurn/", "Feb 22 2021");
+            AddLink("Deckbuilding: The Fortress of Nurn", "https://visionofthepalantir.com/2021/02/22/deckbuilding-the-fortress-of-nurn/", "Feb 22 2021")
+                .WithLabels(Product.TheFortressOfNurn.PlayerCardLabels());
             AddLink("Middle Earth Tour: Dwarrowdelf", "https://visionofthepalantir.com/2021/02/18/middle-earth-tour-dwarrowdelf/", "Feb 18 2021");
-            AddLink("Under the Ash Mountains", "https://visionofthepalantir.com/2021/02/13/under-the-ash-mountains/", "Feb 13 2021");
+            AddLink("Under the Ash Mountains", "https://visionofthepalantir.com/2021/02/13/under-the-ash-mountains/", "Feb 13 2021")
+                .WithLabels(Product.UnderTheAshMountains);
             AddLink("Middle Earth Tour: Shadows of Mirkwood", "https://visionofthepalantir.com/2021/02/08/middle-earth-tour-shadows-of-mirkwood/", "Feb 8 2021");
             AddLink("The Middle Earth Tour Project", "https://visionofthepalantir.com/2021/02/04/the-middle-earth-tour-project/", "Feb 4 2021");
-            AddLink("Nightmare The Treachery of Rhudaur", "https://visionofthepalantir.com/2021/02/02/nightmare-the-treachery-of-rhudaur/", "Feb 2 2021");
+            AddLink("Nightmare The Treachery of Rhudaur", "https://visionofthepalantir.com/2021/02/02/nightmare-the-treachery-of-rhudaur/", "Feb 2 2021")
+                .WithLabels(EncounterSet.TheTreacheryOfRhudaurNightmare);
             AddLink("Month in Review: Janurary 2021", "https://visionofthepalantir.com/2021/01/31/month-in-review-january-2021/", "Jan 31 2021");
             AddLink("Monthly Poll: January 2021", "https://visionofthepalantir.com/2021/01/31/month-in-review-january-2021/", "Jan 27 2021");
             AddLink("Third year anniversary", "https://visionofthepalantir.com/2021/01/21/third-year-anniversary/", "Jan 21 2021");
-            AddLink("Nightmare Into the Pit", "https://visionofthepalantir.com/2021/01/17/nightmare-into-the-pit/", "Jan 17 2021");
-            AddLink("Encounter Set Review: Escape from Dol Guldur", "https://visionofthepalantir.com/2021/01/06/encounter-set-review-escape-from-dol-guldur/", "Jan 6 2021");
-            AddLink("The Ruins of Belegost", "https://visionofthepalantir.com/2021/01/04/the-ruins-of-belegost/", "Jan 4 2021");
+            AddLink("Nightmare Into the Pit", "https://visionofthepalantir.com/2021/01/17/nightmare-into-the-pit/", "Jan 17 2021")
+                .WithLabels(EncounterSet.IntoThePitNightmare);
+            AddLink("Encounter Set Review: Escape from Dol Guldur", "https://visionofthepalantir.com/2021/01/06/encounter-set-review-escape-from-dol-guldur/", "Jan 6 2021")
+                .WithLabels(EncounterSet.EscapeFromDolGuldur);
+            AddLink("The Ruins of Belegost", "https://visionofthepalantir.com/2021/01/04/the-ruins-of-belegost/", "Jan 4 2021")
+                .WithLabels(Product.TheRuinsOfBelegost);
             AddLink("2020: A year in numbers", "https://visionofthepalantir.com/2021/01/02/2020-a-year-in-numbers/", "Jan 2 2021");
             
             AddYear(2020);
             AddLink("Month in Review: December 2020", "https://visionofthepalantir.com/2020/12/31/month-in-review-december-2020/", "Dec 31 2020");
-            AddLink("Escape from Dol Guldur", "https://visionofthepalantir.com/2020/12/27/escape-from-dol-guldur-2/", "Dec 27 2020");
+            AddLink("Escape from Dol Guldur", "https://visionofthepalantir.com/2020/12/27/escape-from-dol-guldur-2/", "Dec 27 2020")
+                .WithLabels(Scenario.EscapeFromDolGuldur.StandardModeLabels());
             AddLink("Monthly Poll: December 2020", "https://visionofthepalantir.com/2020/12/23/monthly-poll-december-2020/", "Dec 23 2020");
             AddLink("Deckbuilding: Deadmen's Dike", "https://visionofthepalantir.com/2020/12/21/deckbuilding-deadmens-dike/", "Dec 21 2020");
             AddLink("First Impressions: The Hunt for the Dreadnaught", "https://visionofthepalantir.com/2020/12/20/first-impressions-the-hunt-for-the-dreadnaught/", "Dec 20 2020");
             AddLink("A long-extended Party", "https://visionofthepalantir.com/2020/12/08/a-long-extended-party/", "Dec 8 2020");
             AddLink("LOTR LCG: Art-icle", "https://visionofthepalantir.com/2020/12/05/lotr-lcg-art-icle/", "Dec 5 2020");
             AddLink("Month in Review: November 2020", "https://visionofthepalantir.com/2020/12/01/month-in-review-november-2020/", "Dec 1 2020");
-            AddLink("Journey Along the Anduin", "https://visionofthepalantir.com/2020/11/29/journey-along-the-anduin-2/", "Nov 29 2020");
+            AddLink("Journey Along the Anduin", "https://visionofthepalantir.com/2020/11/29/journey-along-the-anduin-2/", "Nov 29 2020")
+                .WithLabels(Scenario.JourneyAlongTheAnduin.StandardModeLabels());
             AddLink("Monthly Poll: November 2020", "https://visionofthepalantir.com/2020/11/27/monthly-poll-november-2020/", "Nov 27 2020");
             AddLink("Deckbuilding: The Weather Hills", "https://visionofthepalantir.com/2020/11/25/deckbuilding-the-weather-hills/", "Nov 25 2020");
             AddLink("The Temple of Doom", "https://visionofthepalantir.com/2020/11/19/the-temple-of-doom/", "Nov 19 2020");
@@ -85,7 +104,8 @@ namespace HallOfBeorn.Models.LotR.Community.VisionOfThePalantir
             AddLink("Danger in Dorwinion", "https://visionofthepalantir.com/2020/10/01/danger-in-dorwinion/", "Oct 1 2020");
             AddLink("Month in Review: September 2020", "https://visionofthepalantir.com/2020/09/30/month-in-review-september-2020/", "Sep 30 2020");
             AddLink("Dwarrowdelf cycle conclusion", "https://visionofthepalantir.com/2020/09/24/dwarrowdelf-cycle-conclusion/", "Sep 24 2020");
-            AddLink("Passage through Mirkwood", "https://visionofthepalantir.com/2020/09/05/passage-through-mirkwood/", "Sep 5 2020");
+            AddLink("Passage through Mirkwood", "https://visionofthepalantir.com/2020/09/05/passage-through-mirkwood/", "Sep 5 2020")
+                .WithLabels(Scenario.PassageThroughMirkwood.StandardModeLabels());
             AddLink("Month in Review: August 2020", "https://visionofthepalantir.com/2020/08/31/month-in-review-august-2020/", "Aug 31 2020");
             AddLink("Encounter Set Review: Wilderlands", "https://visionofthepalantir.com/2020/08/29/encounter-set-review-wilderlands/", "Aug 29 2020");
             AddLink("Monthly Poll: August 2020", "https://visionofthepalantir.com/2020/08/26/monthly-poll-august-2020/", "Aug 26 2020");

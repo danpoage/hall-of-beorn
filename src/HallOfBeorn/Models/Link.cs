@@ -239,13 +239,18 @@ namespace HallOfBeorn.Models
             return this;
         }
 
-        public CreatorLink WithLabels(params string[] labels)
+        public CreatorLink WithLabels(IEnumerable<string> labels)
         {
             foreach (var label in labels)
             {
                 this.Link.WithLabel(label);
             }
             return this;
+        }
+
+        public CreatorLink WithLabels(ILabeled labeled)
+        {
+            return WithLabels(labeled.Labels());
         }
     }
 }

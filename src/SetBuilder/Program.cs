@@ -914,7 +914,6 @@ namespace SetBuilder
 
         public static int Main(string[] args)
         {
-            
             if (args.Length < 2)
             {
                 Console.WriteLine("usage: Language Set");

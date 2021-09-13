@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Products.AdventurePack
 {
@@ -13,7 +10,8 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
             RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/MEC68.pdf";
 
             AddCardSet(CardSet.FireInTheNight);
-            AddScenario(new Scenarios.EredMithrin.FireInTheNightScenario());
+
+            AddScenario(Scenario.FireInTheNight);
         }
     }
 }

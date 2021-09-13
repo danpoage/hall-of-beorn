@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Products.AdventurePack
 {
@@ -11,11 +8,10 @@ namespace HallOfBeorn.Models.LotR.Products.AdventurePack
             : base("Trouble in Tharbad", "MEC28", ImageType.Png, new DateTime(2014, 8, 21))
         {
             RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/MEC28.pdf";
-                //"http://www.fantasyflightgames.com/ffg_content/lotr-lcg/support/rulesheets/trouble-in-tharbad-rulesheet.pdf";
-
+            
             AddCardSet(CardSet.TroubleInTharbad);
 
-            AddScenario(new HallOfBeorn.Models.LotR.Scenarios.TheRingMaker.TroubleInTharbadScenario());
+            AddScenario(Scenario.TroubleInTharbad);
         }
     }
 }

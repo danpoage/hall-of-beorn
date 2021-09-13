@@ -25,6 +25,11 @@ namespace HallOfBeorn.Models.Digital
             get { return cardSets; }
         }
 
+        public IEnumerable<string> Labels()
+        {
+            return cardSets.SelectMany(cs => cs.Labels()).Distinct();
+        }
+
         public string Name { get; private set; }
         public string Code { get; private set; }
         public string Abbreviation { get; protected set; }
