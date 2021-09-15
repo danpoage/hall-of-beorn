@@ -146,22 +146,21 @@ namespace HallOfBeorn.Models.LotR
 
         public static UserSettings ReadFromSearch(SearchViewModel model)
         {
+            /*
             var hasSettings = (model.RingsDbUserId.HasValue 
                 || model.IncludeCommunity.HasValue
                 || model.IncludeAlep.HasValue
                 || model.IncludeFirstAge.HasValue
                 || !string.IsNullOrWhiteSpace(model.DefaultSort)
                 || !string.IsNullOrWhiteSpace(model.DefaultLimit));
+            */
 
-            return hasSettings 
+            return model.Project.GetValueOrDefault(Project.None) != Project.None 
                 ? new UserSettings
                     {
-                        RingsDbUserId = model.RingsDbUserId,
-                        IncludeCommunity = model.IncludeCommunity.GetValueOrDefault(false),
-                        IncludeAlep = model.IncludeAlep.GetValueOrDefault(false),
-                        IncludeFirstAge = model.IncludeFirstAge.GetValueOrDefault(false),
-                        DefaultSort = model.DefaultSort,
-                        DefaultLimit = model.DefaultLimit
+                        IncludeCommunity = model.Project == Project.Community,
+                        IncludeAlep = model.Project == Project.ALeP,
+                        IncludeFirstAge = model.Project == Project.First_Age,
                     }
                 : null;
         }

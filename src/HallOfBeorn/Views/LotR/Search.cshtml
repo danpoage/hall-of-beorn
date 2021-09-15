@@ -8,7 +8,7 @@
 }
 
 @section scripts {
-<script type="text/javascript" src="~/Scripts/cardSearch-1.0.2.js" defer></script>
+<script type="text/javascript" src="~/Scripts/cardSearch-1.0.3.js" defer></script>
 <script type="text/javascript" src="~/Scripts/cookie-1.0.1.js" defer></script>
 <script type="text/javascript" src="~/Scripts/autocomplete-1.0.3.js" defer></script>
 <script type="text/javascript">
@@ -118,18 +118,28 @@
 
                     <span class="search-filter">
                     <span class="search-label-short">Unique</span>
+                    @*<img src="/Images/unique-card-small.png" />*@
                     @Html.DropDownListFor(x => x.IsUnique, SearchViewModel.UniquenessValues, new { @class = "search-select-short-padded" })
                     </span>
 
+                    
+                </div>
+                <div class="search-sub-section">
                     <span class="search-filter">
                     <span class="search-label-short">Set Type</span>
                     @Html.DropDownListFor(x => x.SetType, SearchViewModel.SetTypeValues, new { @class = "search-select" })
+                    </span>
+
+                    <span class="search-filter">
+                    <span class="search-label-short">Project</span>
+                    @Html.DropDownListFor(m => m.Project, SearchViewModel.Projects, new { @class = "search-select-short" })
                     </span>
                 </div>
             </div>
         </div>
 
-        <span class="centered-container">Advanced Search Options</span>
+        <hr />
+        @*<span class="centered-container">Advanced Search Options</span>*@
         @* a id="moreOptionsButton" href="#">More Search Options/a *@
         <div id="moreOptionsContainer">
         <div class="search-row">

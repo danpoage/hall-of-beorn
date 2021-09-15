@@ -186,6 +186,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 model.Errata = null;
             }
 
+            if (model.Project.HasValue && model.Project.Value == LotR.Project.None)
+            {
+                model.Project = null;
+            }
+
             if (model.MEC01.HasValue && !model.MEC01.Value)
             {
                 model.MEC01 = null;
@@ -699,13 +704,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public Language? Lang { get; set; }
 
-        //Settings
-        public int? RingsDbUserId { get; set; }
-        public bool? IncludeCommunity { get; set; }
-        public bool? IncludeAlep { get; set; }
-        public bool? IncludeFirstAge { get; set; }
-        public string DefaultSort { get; set; }
-        public string DefaultLimit { get; set; }
+        public Project? Project { get; set; }
         
         public QuestCategory GetQuestCategory()
         {
@@ -1043,6 +1042,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         }
 
         public static IEnumerable<SelectListItem> Ages { get; set; }
+
+        public static IEnumerable<SelectListItem> Projects { get; set; }
 
         //Core Set
         public bool? MEC01 { get; set; }

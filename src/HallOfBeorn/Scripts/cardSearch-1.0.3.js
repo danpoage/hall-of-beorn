@@ -237,6 +237,7 @@ $(document).ready(function () {
         $('#Sphere').val('Any');
         $('#IsUnique').val('Any');
         $('#SetType').val('Any');
+        $('#Project').val('None');
 
         $('#Cost').val('Any');
         $('#CostOperator').val('=');

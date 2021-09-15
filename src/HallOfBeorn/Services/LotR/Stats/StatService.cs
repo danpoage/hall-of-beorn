@@ -290,5 +290,10 @@ namespace HallOfBeorn.Services.LotR.Stats
                 Enum.GetName(typeof(Age), Age.Fourth_Age).Replace("_", " "),
             };
         }
+
+        public IEnumerable<string> ProjectValues()
+        {
+            return typeof(Project).GetSelectListItems("_", true).Select(item => item.Text);
+        }
     }
 }

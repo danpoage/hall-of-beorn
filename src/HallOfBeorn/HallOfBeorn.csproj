@@ -610,6 +610,7 @@
     <Compile Include="Models\LotR\Sets\VengeanceOfMordor\TheLandOfSorrowSet.cs" />
     <Compile Include="Models\LotR\Sets\VengeanceOfMordor\UnderTheAshMountainsSet.cs" />
     <Compile Include="Models\LotR\Sets\VengeanceOfMordor\WrathAndRuinSet.cs" />
+    <Compile Include="Models\LotR\Project.cs" />
     <Compile Include="Models\LotR\UserSettings.cs" />
     <Compile Include="Models\LotR\TextTemplate.cs" />
     <Compile Include="Models\LotR\ViewModels\AdvancedSearchViewModel.cs" />
@@ -1390,7 +1391,7 @@
     <Content Include="Scripts\arkhamCardSearch.js" />
     <Content Include="Scripts\autocomplete-1.0.3.js" />
     <Content Include="Scripts\cardDetails-1.0.1.js" />
-    <Content Include="Scripts\cardSearch-1.0.2.js" />
+    <Content Include="Scripts\cardSearch-1.0.3.js" />
     <Content Include="Scripts\cookie-1.0.1.js" />
     <Content Include="Scripts\Digital\digitalAutocomplete3.js" />
     <Content Include="Scripts\Digital\digitalCardDetails1.js" />
