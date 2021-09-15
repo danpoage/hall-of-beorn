@@ -129,7 +129,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithInfo(16, 1, Artist.Nele_Diel);
             addEncounterSideQuest("Whisperer in the Darkness", EncounterSet.TheAldburgPlot, 6)
                 .WithFlavorLine("The tavern was alight with rumors of an assassin called \"The Whisperer.\" If you're to unravel this mystery, you will have to seek her out, and stop her before she strikes.")
-                .WithTextLine(">Forced: After a location is explored, raise each player's threat by 1.")
+                .WithTextLine("Forced: After a location is explored, raise each player's threat by 1.")
                 .WithTextLine("Forced: After this stage is defeated, add The Whisperer to the staging area.")
                 .WithVictoryPoints(10)
                 .WithInfo(17, 1, Artist.JLIEN);

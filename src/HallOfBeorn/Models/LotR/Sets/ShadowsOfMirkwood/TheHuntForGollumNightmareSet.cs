@@ -62,7 +62,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 .WithFlavorLine("-The Fellowship of the Ring")
                 .WithInfo(6, 3, Artist.Jose_Vega);
             addTreachery("The Enemy's Trail", EncounterSet.TheHuntForGollumNightmare.Name)
-                .WithTextLine("When Revealed: Search the encounter discard pile for a Clue card and attach it to a Mordor enemy in play, if able. If no card is attached by this effect, {self} gains surge.")
+                .WithTextLine("When Revealed: Search the encounter discard pile for a Clue card and attach it to a Mordor enemy in play, if able. If no card is attached by this effect, The Enemy's Trail gains surge.")
                 .WithShadow("Shadow: Search the encounter discard pile for a Clue card and attach it to a Mordor enemy in play, if able.")
                 .WithInfo(7, 2, Artist.Cristi_Balanescu);
             addTreachery("Restless Hunters", EncounterSet.TheHuntForGollumNightmare.Name)
