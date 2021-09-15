@@ -196,11 +196,36 @@ namespace HallOfBeorn.Controllers
                 return Redirect(Url.Action("Search", model));
             }
 
-            var settings = UserSettings.ReadFromCookies(HttpContext.Request);
+            var settings = UserSettings.ReadFromSearch(model);
+            if (settings == null)
+            {
+                settings = UserSettings.ReadFromCookies(HttpContext.Request);
+            }
 
             _searchHandler.HandleSearch(model, settings);
 
             return View(model);
+        }
+
+        public ActionResult Community(SearchViewModel model)
+        {
+            model.IncludeCommunity = true;
+
+            return Redirect(Url.Action("Search", model));
+        }
+
+        public ActionResult Alep(SearchViewModel model)
+        {
+            model.IncludeAlep = true;
+
+            return Redirect(Url.Action("Search", model));
+        }
+
+        public ActionResult FirstAge(SearchViewModel model)
+        {
+            model.IncludeFirstAge = true;
+
+            return Redirect(Url.Action("Search", model));
         }
 
         public JsonResult SearchJson(SearchViewModel model)

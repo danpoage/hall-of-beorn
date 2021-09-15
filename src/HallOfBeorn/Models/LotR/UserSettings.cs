@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web;
+using HallOfBeorn.Models.LotR.ViewModels;
 
 namespace HallOfBeorn.Models.LotR
 {
@@ -141,6 +142,28 @@ namespace HallOfBeorn.Models.LotR
             }
 
             return settings;
+        }
+
+        public static UserSettings ReadFromSearch(SearchViewModel model)
+        {
+            var hasSettings = (model.RingsDbUserId.HasValue 
+                || model.IncludeCommunity.HasValue
+                || model.IncludeAlep.HasValue
+                || model.IncludeFirstAge.HasValue
+                || !string.IsNullOrWhiteSpace(model.DefaultSort)
+                || !string.IsNullOrWhiteSpace(model.DefaultLimit));
+
+            return hasSettings 
+                ? new UserSettings
+                    {
+                        RingsDbUserId = model.RingsDbUserId,
+                        IncludeCommunity = model.IncludeCommunity.GetValueOrDefault(false),
+                        IncludeAlep = model.IncludeAlep.GetValueOrDefault(false),
+                        IncludeFirstAge = model.IncludeFirstAge.GetValueOrDefault(false),
+                        DefaultSort = model.DefaultSort,
+                        DefaultLimit = model.DefaultLimit
+                    }
+                : null;
         }
     }
 }

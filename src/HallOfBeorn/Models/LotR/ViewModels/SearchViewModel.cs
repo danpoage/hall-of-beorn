@@ -699,6 +699,14 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public Language? Lang { get; set; }
 
+        //Settings
+        public int? RingsDbUserId { get; set; }
+        public bool? IncludeCommunity { get; set; }
+        public bool? IncludeAlep { get; set; }
+        public bool? IncludeFirstAge { get; set; }
+        public string DefaultSort { get; set; }
+        public string DefaultLimit { get; set; }
+        
         public QuestCategory GetQuestCategory()
         {
             var questCategory = HallOfBeorn.Models.LotR.QuestCategory.None;

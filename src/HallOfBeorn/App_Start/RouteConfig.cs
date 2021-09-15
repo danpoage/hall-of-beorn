@@ -45,6 +45,24 @@ namespace HallOfBeorn
                 "Cards/{action}/{id}",
                 new { controller = "LotR", action = "Search", id = UrlParameter.Optional }
             );
+            
+            routes.MapRoute(
+                "AlepRoute",
+                "ALeP/{id}",
+                new { controller = "LotR", action = "Alep", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                "CommunityRoute",
+                "Community/{id}",
+                new { controller = "LotR", action = "Community", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                "FirstAgeRoute",
+                "FirstAge/{id}",
+                new { controller = "LotR", action = "FirstAge", id = UrlParameter.Optional }
+            );
 
             routes.MapRoute(
                 "ArkhamDefaultRoute",
