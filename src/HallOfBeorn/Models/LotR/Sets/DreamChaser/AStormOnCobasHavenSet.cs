@@ -48,7 +48,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithInfo(114, 3, Artist.Joshua_Cairos);
             addAlly("Linhir Sea-captain", 3, Sphere.Spirit, false, 2, 0, 1, 2)
                 .WithTraits("Gondor.")
-                .WithTextLine("Response: After you play Linhir Sea-captain from your hand, if you paid all of its resouce cost from a single hero's resource pool, both that hero and Linhir Sea-captain do not exhaust to quest this round.")
+                .WithTextLine("Response: After you play Linhir Sea-captain from your hand, if you paid all of its resource cost from a single hero's resource pool, both that hero and Linhir Sea-captain do not exhaust to quest this round.")
                 .WithInfo(115, 3, Artist.Kim_Sokol);
             addAttachment("Windfola", 1, Sphere.Spirit, true)
                 .WithTraits("Mount.")
