@@ -581,6 +581,7 @@ namespace HallOfBeorn.Models.LotR
 
             //Oaths of the Rohirrim
             Add(TheAldburgPlot);
+            Add(FireOnTheEastemnet);
 
             //The Scouring of the Shire
             Add(TheScouringOfTheShire);

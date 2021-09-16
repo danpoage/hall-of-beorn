@@ -473,6 +473,7 @@
     <Compile Include="Models\LotR\Products\CustomScenarioKit\TheMinesOfMoriaProduct.cs" />
     <Compile Include="Models\LotR\Products\CustomScenarioKit\TheWizardsQuestProduct.cs" />
     <Compile Include="Models\LotR\Products\CustomScenarioKit\TheWoodlandRealmProduct.cs" />
+    <Compile Include="Models\LotR\Products\ScenarioPack\TheDarkOfMirkwoodProduct.cs" />
     <Compile Include="Models\LotR\Products\ScenarioPack\TheHuntForTheDreadnaughtProduct.cs" />
     <Compile Include="Models\LotR\Products\Starter\TwoPlayerLimitedEditionStarterProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\AcrossTheEttenmoorsNightmareProduct.cs" />
@@ -573,6 +574,7 @@
     <Compile Include="Models\LotR\Sets\PreorderPromotion\UnderTheAshMountainsPreorderPromotionSet.cs" />
     <Compile Include="Models\LotR\Sets\PreorderPromotion\WrathAndRuinPreorderPromotionSet.cs" />
     <Compile Include="Models\LotR\Sets\CustomScenarioKit\EscapeFromKhazadDumSet.cs" />
+    <Compile Include="Models\LotR\Sets\ScenarioPack\TheDarkOfMirkwoodSet.cs" />
     <Compile Include="Models\LotR\Sets\ScenarioPack\TheHuntForTheDreadnaughtSet.cs" />
     <Compile Include="Models\LotR\Sets\CustomScenarioKit\TheMinesOfMoriaSet.cs" />
     <Compile Include="Models\LotR\Sets\CustomScenarioKit\TheWizardsQuestSet.cs" />

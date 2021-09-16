@@ -205,6 +205,7 @@ namespace HallOfBeorn.Models.LotR
 
         //Scenario Packs
         public static Product TheHuntForTheDreadnaught = new Products.ScenarioPack.TheHuntForTheDreadnaughtProduct();
+        public static Product TheDarkOfMirkwood = new Products.ScenarioPack.TheDarkOfMirkwoodProduct();
 
         //Nightmare Decks
         public static Product PassageThroughMirkwoodNightmare = new Products.Nightmare.PassageThroughMirkwoodNightmareProduct();

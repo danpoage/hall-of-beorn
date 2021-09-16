@@ -457,6 +457,7 @@ namespace HallOfBeorn.Models.LotR
 
             //Scenario Packs
             Add(TheHuntForTheDreadnaught);
+            Add(TheDarkOfMirkwood);
 
             //Nightmare
             Add(PassageThroughMirkwoodNightmare);
@@ -665,6 +666,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet EscapeFromKhazadDumPreorderPromotion = new Sets.PreorderPromotion.EscapeFromKhazadDumPreorderPromotionSet();
         
         public static CardSet TheHuntForTheDreadnaught = new Sets.ScenarioPack.TheHuntForTheDreadnaughtSet();
+        public static CardSet TheDarkOfMirkwood = new Sets.ScenarioPack.TheDarkOfMirkwoodSet();
 
         public static CardSet PassageThroughMirkwoodNightmare = new Sets.Core.PassageThroughMirkwoodNightmareSet();
         public static CardSet JourneyAlongTheAnduinNightmare = new Sets.Core.JourneyAlongTheAnduinNightmareSet();

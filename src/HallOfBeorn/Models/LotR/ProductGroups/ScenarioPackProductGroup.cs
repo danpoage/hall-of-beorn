@@ -9,6 +9,7 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
             : base("Scenario Packs")
         {
             AddChildProduct(Product.TheHuntForTheDreadnaught);
+            AddChildProduct(Product.TheDarkOfMirkwood);
         }
     }
 }
