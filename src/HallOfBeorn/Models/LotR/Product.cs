@@ -78,6 +78,7 @@ namespace HallOfBeorn.Models.LotR
         //The Core Set and Two-Player Limited Edition Starter
         public static Product CoreSet = new Products.Core.CoreSetProduct();
         public static Product TwoPlayerLimitedEditionStarter = new Products.Starter.TwoPlayerLimitedEditionStarterProduct();
+        public static Product RevisedCoreSet = new Products.Core.RevisedCoreSetProduct();
         
         //Shadows of Mirkwood Cycle
         public static Product TheHuntForGollum = new Products.AdventurePack.TheHuntForGollumProduct();

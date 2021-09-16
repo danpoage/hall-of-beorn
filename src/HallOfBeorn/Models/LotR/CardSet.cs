@@ -346,6 +346,8 @@ namespace HallOfBeorn.Models.LotR
         {
             Add(CoreSet);
             Add(TwoPlayerLimitedEditionStarter);
+            Add(RevisedCore);
+
             Add(TheHuntForGollum);
             Add(ConflictAtTheCarrock);
             Add(AJourneyToRhosgobel);
@@ -771,6 +773,8 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet FireOnTheEastemnet = new Sets.OathsOfTheRohirrim.FireOnTheEastemnetSet();
 
         public static CardSet TheScouringOfTheShire = new Sets.TheScouringOfTheShire.TheScouringOfTheShireCardSet();
+
+        public static CardSet RevisedCore = new Sets.Core.RevisedCoreSet();
         #endregion
     }
 }

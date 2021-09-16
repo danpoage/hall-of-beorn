@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace HallOfBeorn.Models.LotR.ProductGroups
 {
@@ -12,6 +9,7 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
         {
             AddMainProduct(Product.CoreSet);
             AddMainProduct(Product.TwoPlayerLimitedEditionStarter);
+            AddMainProduct(Product.RevisedCoreSet);
             AddChildProduct(Product.TheHuntForGollum);
             AddChildProduct(Product.ConflictAtTheCarrock);
             AddChildProduct(Product.AJourneyToRhosgobel);

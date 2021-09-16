@@ -450,6 +450,7 @@
     <Compile Include="Models\LotR\Products\Community\TheBetrayalOfMimProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\TheFallOfNargothrondProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\TheScouringOfTheShireProduct.cs" />
+    <Compile Include="Models\LotR\Products\Core\RevisedCoreSetProduct.cs" />
     <Compile Include="Models\LotR\Products\Deluxe\AShadowInTheEastProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\FireInTheNightProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\MountGundabadProduct.cs" />
@@ -549,6 +550,7 @@
     <Compile Include="Models\LotR\Sets\AngmarAwakened\AcrossTheEttenmoorsNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\AShadowInTheEast\AShadowInTheEastSet.cs" />
     <Compile Include="Models\LotR\Sets\ChildrenOfEorl\ChildrenOfEorlSet.cs" />
+    <Compile Include="Models\LotR\Sets\Core\RevisedCoreSet.cs" />
     <Compile Include="Models\LotR\Sets\DoomMastered\TheBetrayalOfMimSet.cs" />
     <Compile Include="Models\LotR\Sets\DoomMastered\TheFallOfNargothrondSet.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\AStormOnCobasHavenNightmareSet.cs" />
