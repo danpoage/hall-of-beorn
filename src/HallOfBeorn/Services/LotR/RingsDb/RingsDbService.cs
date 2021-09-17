@@ -11567,7 +11567,10 @@ namespace HallOfBeorn.Services.LotR.RingsDb
                 //Community
                 case "CoE":
                     return 300;
-
+                case "TAP":
+                    return 301;
+                case "FotE":
+                    return 500;
                 default:
                     return 0;
             }
@@ -11668,6 +11671,79 @@ namespace HallOfBeorn.Services.LotR.RingsDb
         public IEnumerable<RingsDbDeckList> GetUserDecks(int userId)
         {
             return repository.GetUserDeckLists(userId);
+        }
+
+        private void AddDistinctLabels(string cardId, HashSet<string> labels)
+        {
+            var slug = GetSlug(cardId);
+            var card = cardsBySlug.ContainsKey(slug) ? cardsBySlug[slug] : null;
+            if (card == null)
+            {
+                return;
+            }
+            
+            if (!labels.Contains(card.NormalizedTitle))
+            {
+                labels.Add(card.NormalizedTitle);
+            }
+            if (card.Title != card.NormalizedTitle && !labels.Contains(card.Title))
+            {
+                labels.Add(card.Title);
+            }
+        }
+
+        public IEnumerable<string> GetDeckLabels(string deckId)
+        {
+            var labels = new HashSet<string>();
+
+            var deck = GetDeckList(deckId);
+
+            if (deck == null)
+            {
+                return labels;
+            }
+
+            foreach (var heroId in deck.heroes.Keys)
+            {
+                var lookupId = heroId;
+                //Remove the 99 prefix from Messenger of the King heroes
+                if (heroId.StartsWith("99"))
+                {
+                    lookupId = heroId.Remove(0, 2);
+                }
+
+                AddDistinctLabels(lookupId, labels);
+            }
+
+            foreach (var cardId in deck.slots.Keys)
+            {
+                AddDistinctLabels(cardId, labels);
+            }
+
+            if (deck.sideslots != null)
+            {
+                foreach (var cardId in deck.sideslots.Keys)
+                {
+                    AddDistinctLabels(cardId, labels);
+                }
+            }
+
+            return labels;
+        }
+
+        private static RingsDbService instance;
+
+        public static RingsDbService Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new RingsDbService(new LotRCardRepository(ProductRepository.Instance));
+                }
+
+                return instance;
+            }
         }
     }
 }

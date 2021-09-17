@@ -14,5 +14,6 @@ namespace HallOfBeorn.Services.LotR.RingsDb
         bool DeckIncludesCard(string deckId, string slug);
         RingsDbDeckList GetDeckList(string deckId);
         IEnumerable<RingsDbDeckList> GetUserDecks(int userId);
+        IEnumerable<string> GetDeckLabels(string deckId);
     }
 }

@@ -37,7 +37,8 @@ namespace HallOfBeorn.Models.LotR.Community.HallOfBeorn
             AddLink("Deck 2020 - It's a Trap!", "https://hallofbeorn.wordpress.com/2020/12/31/deck-2020-its-a-trap/", "31 Dec 2020");
             AddLink("News: A Long-extended Party - Worthy of Remembrance", "https://hallofbeorn.wordpress.com/2020/12/14/news-a-long-extended-party-worthy-of-remembrance/", "14 Dec 2020");
             AddLink("Play Report: A Weary Pilgrim Hunts the Dreadnaught", "https://hallofbeorn.wordpress.com/2020/12/06/play-report-a-weary-pilgrim-hunts-the-dreadnaught/", "6 Dec 2020");
-            AddLink("Alternate Art: The Old Elf and the Sea", "https://hallofbeorn.wordpress.com/2020/12/01/alternate-art-the-old-elf-and-the-sea/", "1 Dec 2020");
+            AddLink("Alternate Art: The Old Elf and the Sea", "https://hallofbeorn.wordpress.com/2020/12/01/alternate-art-the-old-elf-and-the-sea/", "1 Dec 2020")
+                .WithDeckLabels("18525");
             AddLink("Alternate Art: The Last Temptation of Boromir", "https://hallofbeorn.wordpress.com/2020/11/17/alternate-art-the-last-temptation-of-boromir/", "17 Nov 2020");
             AddLink("Alternate Art: Gift of the First-Beorn", "https://hallofbeorn.wordpress.com/2020/11/01/alternate-art-gift-of-the-first-beorn/", "1 Nov 2020");
             AddLink("Alternate Art: Nouveau Hunters", "https://hallofbeorn.wordpress.com/2020/10/20/alternate-art-nouveau-hunters/", "20 Oct 2020");

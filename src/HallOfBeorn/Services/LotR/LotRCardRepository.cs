@@ -45,5 +45,22 @@ namespace HallOfBeorn.Services.LotR
         {
             return Cards().Where(card => card.CardType.IsQuestCard() && !card.CardSet.SetType.IsCommunity());
         }
+
+        /*
+        private static LotRCardRepository instance;
+
+        public static LotRCardRepository Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new LotRCardRepository(ProductRepository.Instance);
+                }
+
+                return instance;
+            }
+        }
+        */
     }
 }

@@ -252,5 +252,13 @@ namespace HallOfBeorn.Models
         {
             return WithLabels(labeled.Labels());
         }
+
+        public CreatorLink WithDeckLabels(string deckId)
+        {
+            var labels = HallOfBeorn.Services.LotR.RingsDb.RingsDbService.Instance
+                .GetDeckLabels(deckId);
+
+            return WithLabels(labels);
+        }
     }
 }
