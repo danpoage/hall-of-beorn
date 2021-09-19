@@ -46,5 +46,32 @@ namespace HallOfBeorn.Services.Digital
                 foreach (var cardSet in product.CardSets)
                     yield return cardSet;
         }
+
+        public IEnumerable<string> TraitLabels(string trait, Func<DigitalCard, bool> filter)
+        {
+            DigitalTrait traitFilter = DigitalTrait.None;
+            if (!Enum.TryParse(trait, out traitFilter))
+            {
+                return Enumerable.Empty<string>();
+            }
+
+            var labels = new HashSet<string>();
+
+            foreach (var card in Products().SelectMany(p => p.CardSets).SelectMany(cs => cs.Cards)
+                .Where(card => card.Trait != null && card.Trait == traitFilter && filter(card)))
+            {
+                if (!labels.Contains(card.NormalizedTitle))
+                {
+                    labels.Add(card.NormalizedTitle);
+                }
+
+                if (card.Title != card.NormalizedTitle && !labels.Contains(card.Title))
+                {
+                    labels.Add(card.Title);
+                }
+            }
+
+            return labels;
+        }
     }
 }

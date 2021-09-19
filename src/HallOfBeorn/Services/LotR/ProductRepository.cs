@@ -89,6 +89,19 @@ namespace HallOfBeorn.Services.LotR
             }
         }
 
+        public IEnumerable<string> TraitLabels(string trait, Func<LotRCard, bool> filter)
+        {
+            foreach (var card in Products().SelectMany(p => p.CardSets).SelectMany(cs => cs.Cards)
+                .Where(card => card.HasTraits(trait) && filter(card)))
+            {
+                yield return card.NormalizedTitle;
+                if (card.Title != card.NormalizedTitle)
+                {
+                    yield return card.Title;
+                }
+            }
+        }
+
         //public static Func<IProductRepository<ProductGroup, Product, CardSet, LotRCard>> Generator { get; set; }
         
         private static ProductRepository instance;

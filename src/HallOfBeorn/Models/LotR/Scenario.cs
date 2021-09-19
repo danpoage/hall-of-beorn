@@ -391,6 +391,26 @@ namespace HallOfBeorn.Models.LotR
                 .Where(es => !es.IsNightmare).SelectMany(es => es.Labels()).Distinct();
         }
 
+        public IEnumerable<string> NightmareModeLabels()
+        {
+            foreach (var encounterSet in encounterSets.Values)
+            {
+                foreach (var card in encounterSet.Cards())
+                {
+                    var nightmareQuantity = NightmareModeCount(card.Slug, card.Quantity);
+                    if (nightmareQuantity > 0)
+                    {
+                        yield return card.NormalizedTitle;
+
+                        if (card.Title != card.NormalizedTitle)
+                        {
+                            yield return card.Title;
+                        }
+                    }
+                }
+            }
+        }
+
         #region Static Members
         public static Scenario PassageThroughMirkwood = new Scenarios.Core.PassageThroughMirkwoodScenario();
         public static Scenario JourneyAlongTheAnduin = new Scenarios.Core.JourneyAlongTheAnduinScenario();

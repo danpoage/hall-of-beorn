@@ -16,5 +16,6 @@ namespace HallOfBeorn.Services
         IEnumerable<TGroup> ProductGroups();
         IEnumerable<TProduct> Products();
         IEnumerable<TCardSet> CardSets();
+        IEnumerable<string> TraitLabels(string trait, Func<TCard, bool> filter);
     }
 }
